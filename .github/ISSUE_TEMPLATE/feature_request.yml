@@ -1,0 +1,51 @@
+name: Suggest a feature
+description: Share an idea that could make Birdr better
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing your idea. Explain the problem or opportunity first; that helps us find the best solution.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Tell us when you encounter this problem and who it affects.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like Birdr to do?
+      description: Describe your preferred solution or experience.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Bird identification games
+        - Sounds and media
+        - Bird data and names
+        - Countries and journeys
+        - Flocks and leaderboards
+        - Account and profile
+        - Accessibility
+        - Website
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or examples
+      description: Is there another app or approach that handles this well?
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched the existing requests for a similar idea.
+          required: true
