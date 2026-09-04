@@ -1,0 +1,62 @@
+name: Report a bug
+description: Tell us about something that is not working in Birdr
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Birdr. Please include enough detail for us to reproduce the problem.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected to happen.
+      placeholder: I expected… but instead…
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do before the problem occurred?
+      placeholder: |
+        1. Open…
+        2. Select…
+        3. See…
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Android app
+        - iPhone or iPad app
+        - Birdr website
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and operating system
+      placeholder: e.g. Samsung Galaxy S24, Android 16
+  - type: input
+    id: app_version
+    attributes:
+      label: Birdr version
+      description: You can find this in the app settings.
+      placeholder: e.g. 1.4.2
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or additional information
+      description: Drag screenshots or recordings into this field. Please remove personal information first.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched the existing issues for the same problem.
+          required: true

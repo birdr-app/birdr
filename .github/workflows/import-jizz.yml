@@ -1,0 +1,67 @@
+name: Import legacy Birdr repository
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/import-jizz.yml
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Check out destination repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Import Git objects and merge main histories
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          destination_main="$(git rev-parse origin/main)"
+
+          git remote add legacy https://github.com/gannetson/jizz.git
+          git fetch --prune --no-tags legacy '+refs/heads/*:refs/remotes/legacy/*'
+          git fetch legacy '+refs/tags/*:refs/tags/*'
+
+          refspecs=()
+          while IFS= read -r source_ref; do
+            branch="${source_ref#refs/remotes/legacy/}"
+            if [[ "$branch" != "main" ]]; then
+              refspecs+=("$source_ref:refs/heads/$branch")
+            fi
+          done < <(git for-each-ref --format='%(refname)' refs/remotes/legacy/)
+
+          # This upload intentionally continues when GitHub rejects branch
+          # pointers containing workflow files. The authorized GitHub app
+          # creates those pointers after the Git objects have been uploaded.
+          git push origin "${refspecs[@]}" || true
+
+          git switch --detach refs/remotes/legacy/main
+          git merge --allow-unrelated-histories --no-ff --no-commit "$destination_main" || true
+
+          while IFS= read -r -d '' path; do
+            git checkout --theirs -- "$path"
+            git add -- "$path"
+          done < <(git diff --name-only -z --diff-filter=U)
+
+          if git diff --name-only --diff-filter=U | grep -q .; then
+            echo "Unresolved merge conflicts remain."
+            exit 1
+          fi
+
+          git rm --force --ignore-unmatch             .github/workflows/android-ui-tests.yml             .github/workflows/ios-build.yml             .github/workflows/mobile-store-release.yml             .github/workflows/tests.yml
+
+          git commit -m "Import Birdr application from gannetson/jizz"
+          git push origin HEAD:refs/heads/main
