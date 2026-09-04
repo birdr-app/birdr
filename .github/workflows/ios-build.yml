@@ -1,0 +1,55 @@
+# iOS build (compile-only). Ensures Pods install and native build succeeds.
+# Add this job to your workflow or run on push to mobile/ when you need iOS CI.
+name: iOS build
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'mobile/**'
+      - '.github/workflows/ios-build.yml'
+  pull_request:
+    branches: ['**']
+    paths:
+      - 'mobile/**'
+      - '.github/workflows/ios-build.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ios-build:
+    # macos-14 defaults to Xcode 15.4; React Native 0.81+ requires Xcode >= 16.1.
+    runs-on: macos-15
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: mobile/package-lock.json
+
+      - name: Install mobile dependencies
+        working-directory: mobile
+        run: npm ci
+
+      - name: Install CocoaPods
+        working-directory: mobile/ios
+        run: |
+          pod install
+          # Ensure xcconfig exists so Xcode doesn't fail with "Unable to open base configuration reference file"
+          test -f "Pods/Target Support Files/Pods-Birdr/Pods-Birdr.release.xcconfig" || (echo "Pods xcconfig missing after pod install" && exit 1)
+
+      - name: Build iOS (Debug, simulator)
+        working-directory: mobile/ios
+        run: |
+          xcodebuild -workspace Birdr.xcworkspace -scheme Birdr \
+            -configuration Debug -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
