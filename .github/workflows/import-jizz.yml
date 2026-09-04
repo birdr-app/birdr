@@ -21,7 +21,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Import branches, tags, and merge main histories
+      - name: Import Git objects and merge main histories
         shell: bash
         run: |
           set -euo pipefail
@@ -35,14 +35,18 @@ jobs:
           git fetch --prune --no-tags legacy '+refs/heads/*:refs/remotes/legacy/*'
           git fetch legacy '+refs/tags/*:refs/tags/*'
 
+          refspecs=()
           while IFS= read -r source_ref; do
             branch="${source_ref#refs/remotes/legacy/}"
             if [[ "$branch" != "main" ]]; then
-              git push origin "$source_ref:refs/heads/$branch"
+              refspecs+=("$source_ref:refs/heads/$branch")
             fi
           done < <(git for-each-ref --format='%(refname)' refs/remotes/legacy/)
 
-          git push origin --tags
+          # This upload intentionally continues when GitHub rejects branch
+          # pointers containing workflow files. The authorized GitHub app
+          # creates those pointers after the Git objects have been uploaded.
+          git push origin "${refspecs[@]}" || true
 
           git switch --detach refs/remotes/legacy/main
           git merge --allow-unrelated-histories --no-ff --no-commit "$destination_main" || true
@@ -57,6 +61,7 @@ jobs:
             exit 1
           fi
 
-          git rm --force .github/workflows/import-jizz.yml
+          git rm --force --ignore-unmatch             .github/workflows/android-ui-tests.yml             .github/workflows/ios-build.yml             .github/workflows/mobile-store-release.yml             .github/workflows/tests.yml
+
           git commit -m "Import Birdr application from gannetson/jizz"
           git push origin HEAD:refs/heads/main
