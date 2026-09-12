@@ -32,7 +32,7 @@ import { SpeciesViewButton } from '../components/SpeciesViewButton';
 import { ComparisonButton } from '../components/ComparisonButton';
 import { apiUrl } from '../api/config';
 import { getSpeciesForCountry } from '../api/species';
-import { postQuestionMediaReady } from '../api/games';
+import { postQuestionMediaReady, postQuestionNextMedia } from '../api/games';
 import { colors } from '../theme';
 import { usePulsatingAnimation } from '../hooks/usePulsatingAnimation';
 import { useQuestionSoundPlayback } from '../hooks/useQuestionSoundPlayback';
@@ -93,7 +93,7 @@ export function GamePlayScreen() {
   const playerTokenParam = (route.params as { playerToken?: string })?.playerToken;
   const soloGameMode = dailyChallengeId != null || (flockSlug != null && flockChallengeId != null);
   const { game, player, setGame, setPlayer, loadGame } = useGame();
-  const { question, answer, players, nextQuestion, submitAnswer, joinGame, startGame, connected, endGameSession, refreshGameState } = useGameWebSocket();
+  const { question, answer, players, nextQuestion, submitAnswer, joinGame, startGame, connected, endGameSession, refreshGameState, patchQuestionMedia } = useGameWebSocket();
   const dailyChallengeStartSent = useRef(false);
   const flockCompleteSent = useRef(false);
   const [dailyChallengeLoadTimeout, setDailyChallengeLoadTimeout] = useState(false);
@@ -533,11 +533,24 @@ export function GamePlayScreen() {
     }
   };
 
-  const onFlagSuccess = () => {
+  const onFlagSuccess = async () => {
     if (!question || !game) return;
+    const excludedId = flagMediaInfo?.id;
     setFlagModalVisible(false);
     setFlagMediaInfo(null);
-    advanceToNextMedia();
+    const tok = (player as { token?: string })?.token;
+    if (question.id && tok) {
+      try {
+        const patch = await postQuestionNextMedia(question.id, tok, excludedId);
+        patchQuestionMedia(patch);
+        setMediaIndex(0);
+        setImageError(null);
+        setMediaReady(false);
+        return;
+      } catch {
+        // No alternate media or request failed — keep current clip
+      }
+    }
   };
 
   const isExpert = game.level === 'expert';

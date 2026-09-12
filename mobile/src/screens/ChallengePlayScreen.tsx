@@ -18,7 +18,7 @@ import {
   type QuestionOption,
 } from '../api/challenge';
 import { getStoredBirdrJourneyPlayerToken, getBirdrJourney, resolveBirdrJourneyPlayerToken, type BirdrJourneyGame } from '../api/birdrJourney';
-import { postQuestionMediaReady } from '../api/games';
+import { postQuestionMediaReady, postQuestionNextMedia } from '../api/games';
 import { getSpeciesForCountry } from '../api/species';
 import { apiUrl } from '../api/config';
 import type { Species } from '../types/game';
@@ -369,12 +369,25 @@ export function ChallengePlayScreen() {
     setMediaIndex(idx >= maxIndex ? 0 : idx + 1);
   }, [question, mediaType, mediaIndex]);
 
-  const onFlagSuccess = useCallback(() => {
+  const onFlagSuccess = useCallback(async () => {
     if (!question) return;
+    const excludedId = flagMediaInfo?.id;
     setFlagModalVisible(false);
     setFlagMediaInfo(null);
-    advanceToNextMedia();
-  }, [question, advanceToNextMedia]);
+    const tok = challengePlayerToken;
+    if (question.id && tok) {
+      try {
+        const patch = await postQuestionNextMedia(question.id, tok, excludedId);
+        setQuestion((q) => (q ? { ...q, ...patch } : q));
+        setMediaIndex(0);
+        setImageError(null);
+        setMediaReady(false);
+        return;
+      } catch {
+        // No alternate media or request failed — keep current clip
+      }
+    }
+  }, [question, flagMediaInfo?.id, challengePlayerToken]);
 
   const openFlagModal = useCallback(() => {
     if (!question) return;

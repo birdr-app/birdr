@@ -26,9 +26,9 @@ export type ChallengeQuestion = {
   sequence: number;
   game: { token: string; speed_seconds?: number | null; level?: string; media?: string };
   options?: QuestionOption[];
-  images: Array<{ url: string; link?: string; contributor?: string; source?: string }>;
-  sounds: Array<{ url: string; link?: string; contributor?: string; source?: string }>;
-  videos: Array<{ url: string; link?: string; contributor?: string; source?: string }>;
+  images: Array<{ id?: number; url: string; link?: string; contributor?: string; source?: string }>;
+  sounds: Array<{ id?: number; url: string; link?: string; contributor?: string; source?: string }>;
+  videos: Array<{ id?: number; url: string; link?: string; contributor?: string; source?: string }>;
 };
 
 export type AnswerPayload = {

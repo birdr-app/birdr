@@ -482,6 +482,7 @@ export function QuestionMediaView({
               ]}
             >
               <PlayableVideo
+                key={displayVideoUri}
                 uri={displayVideoUri}
                 style={styles.video}
                 autoPlay

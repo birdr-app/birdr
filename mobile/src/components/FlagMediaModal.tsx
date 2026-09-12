@@ -31,7 +31,7 @@ type Props = {
   onClose: () => void;
   media: FlagMediaInfo | null;
   playerToken: string | undefined;
-  onSuccess?: () => void;
+  onSuccess?: () => void | Promise<void>;
 };
 
 export function FlagMediaModal({ visible, onClose, media, playerToken, onSuccess }: Props) {
@@ -57,7 +57,7 @@ export function FlagMediaModal({ visible, onClose, media, playerToken, onSuccess
     setSubmitting(true);
     try {
       await flagMediaAsReview(mediaId, playerToken ?? undefined, message, isAuthenticated);
-      onSuccess?.();
+      await onSuccess?.();
       onClose();
     } catch (err: any) {
       const errMessage = err?.message ?? err?.toString?.() ?? 'Request failed';

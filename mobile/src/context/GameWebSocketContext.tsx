@@ -42,6 +42,7 @@ type GameWebSocketContextType = {
   clearRematchInvitation: () => void;
   clearRematchError: () => void;
   refreshGameState: (options?: { resyncWs?: boolean; force?: boolean }) => Promise<void>;
+  patchQuestionMedia: (patch: Pick<Question, 'number' | 'images' | 'videos' | 'sounds'>) => void;
 };
 
 type Species = { id: number; name?: string; name_nl?: string; name_latin?: string; name_translated?: string };
@@ -121,6 +122,13 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
     setGameStarted(false);
     gameStartedRef.current = false;
   }, [resetQuestionState]);
+
+  const patchQuestionMedia = useCallback(
+    (patch: Pick<Question, 'number' | 'images' | 'videos' | 'sounds'>) => {
+      setQuestion((q) => (q ? { ...q, ...patch } : q));
+    },
+    []
+  );
 
   const markGameStarted = useCallback(() => {
     gameStartedRef.current = true;
@@ -572,6 +580,7 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
         clearRematchInvitation,
         clearRematchError,
         refreshGameState,
+        patchQuestionMedia,
       }}
     >
       <RefreshQuestionOnGameLanguageChange />

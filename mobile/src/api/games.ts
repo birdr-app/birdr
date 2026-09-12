@@ -143,6 +143,30 @@ export async function updateGameLanguage(token: string, language: string): Promi
   return data as Game;
 }
 
+export type QuestionMediaPatch = Pick<Question, 'number' | 'images' | 'videos' | 'sounds'>;
+
+/** After flagging, load the next eligible media item for this question. */
+export async function postQuestionNextMedia(
+  questionId: number,
+  playerToken: string,
+  excludedMediaId?: number
+): Promise<QuestionMediaPatch> {
+  const response = await fetch(apiUrl(`/api/questions/${questionId}/next-media/`), {
+    method: 'POST',
+    headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      player_token: playerToken,
+      ...(excludedMediaId != null ? { excluded_media_id: excludedMediaId } : {}),
+    }),
+  });
+  if (!response.ok) {
+    const data = await response.json().catch(() => ({}));
+    const msg = data.error ?? data.detail ?? 'next-media failed';
+    throw new Error(typeof msg === 'string' ? msg : 'next-media failed');
+  }
+  return response.json() as Promise<QuestionMediaPatch>;
+}
+
 /** Tell the server primary media has loaded so score timing starts from now (not question.created). */
 export async function postQuestionMediaReady(questionId: number, playerToken: string): Promise<void> {
   const response = await fetch(apiUrl(`/api/questions/${questionId}/media-ready/`), {
