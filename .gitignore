@@ -26,3 +26,7 @@ node_modules
 
 # Local ML artifacts (joblib + meta JSON)
 /artifacts/
+
+# ignore db dumps
+*.sql
+*.sql.bzip
