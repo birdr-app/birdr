@@ -1,5 +1,6 @@
 from unittest.mock import patch
 
+from django.conf import settings
 from django.test import TestCase, override_settings
 from rest_framework.test import APIClient
 
@@ -23,8 +24,8 @@ class AppVersionApiTestCase(TestCase):
         response = self.client.get('/api/app-version/')
         self.assertEqual(response.status_code, 200)
         data = response.json()
-        self.assertEqual(data['min_version'], '1.79.0')
-        self.assertEqual(data['store_version'], '1.79.0')
+        self.assertEqual(data['min_version'], settings.APP_MIN_VERSION)
+        self.assertEqual(data['store_version'], settings.APP_STORE_VERSION)
         self.assertEqual(data['store_release_label_ios'], 'Common Kingfisher')
         self.assertEqual(data['store_release_label_android'], 'Common Kingfisher')
         self.assertEqual(response['Cache-Control'], 'no-store, no-cache, must-revalidate, max-age=0')

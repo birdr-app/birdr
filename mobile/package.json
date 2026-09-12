@@ -32,6 +32,7 @@
     "make-icon": "node scripts/make-icon-transparent.cjs",
     "notification-badge": "node scripts/generate-notification-badge.cjs",
     "test": "jest",
+    "release:set": "node scripts/set-release.cjs",
     "sync-release": "node scripts/sync-release-info-plist.cjs",
     "eas-build-pre-install": "node scripts/sync-release-info-plist.cjs"
   },

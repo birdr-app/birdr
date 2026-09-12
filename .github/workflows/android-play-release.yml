@@ -1,0 +1,222 @@
+# Google Play release — the Android counterpart to the Xcode Cloud workflow that
+# ships iOS builds to App Store Connect.
+#
+# Xcode Cloud builds on every push to main and App Store Connect rejects a build
+# number it has already seen. Play behaves the same way with versionCode, but a
+# rejected upload here fails the job, so this workflow only uploads when
+# mobile/app.json's expo.buildNumber actually changed in the push.
+#
+# One-time setup (repo secrets): see mobile/README.md → "Automated Google Play releases".
+name: Android Play release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'mobile/**'
+      - '.github/workflows/android-play-release.yml'
+  workflow_dispatch:
+    inputs:
+      track:
+        description: Play track to publish to
+        required: true
+        type: choice
+        options:
+          - production
+          - beta
+          - alpha
+          - internal
+        default: production
+      status:
+        description: Release status (completed = live at 100%, inProgress = staged rollout)
+        required: true
+        type: choice
+        options:
+          - completed
+          - inProgress
+          - draft
+          - halted
+        default: completed
+      user_fraction:
+        description: Rollout fraction for inProgress, e.g. 0.1 (ignored otherwise)
+        required: false
+        type: string
+        default: '0.1'
+
+concurrency:
+  group: android-play-release
+  cancel-in-progress: false
+
+env:
+  PLAY_PACKAGE_NAME: pro.birdr.app
+
+jobs:
+  # Decide whether this push carries a new versionCode. Play rejects a duplicate,
+  # so a push that only touches code (no release bump) must not reach the upload.
+  check-version:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      should-release: ${{ steps.bump.outputs.should-release }}
+      version: ${{ steps.bump.outputs.version }}
+      version-code: ${{ steps.bump.outputs.version-code }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Check for a release bump
+        id: bump
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          IS_DISPATCH: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          set -euo pipefail
+          read_build_number() { node -p "JSON.parse(require('fs').readFileSync(0,'utf8')).expo.buildNumber"; }
+
+          CURRENT="$(read_build_number < mobile/app.json)"
+          VERSION="$(node -p "require('./mobile/app.json').expo.version")"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "version-code=$CURRENT" >> "$GITHUB_OUTPUT"
+
+          if [ "$IS_DISPATCH" = "true" ]; then
+            echo "Manual run — releasing $VERSION ($CURRENT) regardless of bump."
+            echo "should-release=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # A new branch (or a force-push over a deleted history) reports an all-zero
+          # "before" SHA; there is nothing to diff against, so treat it as a bump.
+          if [ -z "$BEFORE_SHA" ] || [ "$BEFORE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            echo "No previous SHA to compare — treating as a bump."
+            echo "should-release=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          PREVIOUS="$(git show "$BEFORE_SHA:mobile/app.json" 2>/dev/null | read_build_number || echo '')"
+          if [ -z "$PREVIOUS" ]; then
+            echo "Could not read expo.buildNumber at $BEFORE_SHA — treating as a bump."
+            echo "should-release=true" >> "$GITHUB_OUTPUT"
+          elif [ "$PREVIOUS" = "$CURRENT" ]; then
+            echo "expo.buildNumber unchanged at $CURRENT — skipping the Play upload."
+            echo "Bump expo.buildNumber in mobile/app.json to ship, or run this workflow manually."
+            echo "should-release=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "expo.buildNumber $PREVIOUS -> $CURRENT — releasing $VERSION."
+            echo "should-release=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  release:
+    needs: check-version
+    if: needs.check-version.outputs.should-release == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Verify signing and Play secrets are configured
+        env:
+          KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          missing=()
+          for name in KEYSTORE_BASE64 KEYSTORE_PASSWORD KEY_ALIAS KEY_PASSWORD PLAY_SERVICE_ACCOUNT_JSON; do
+            [ -n "${!name:-}" ] || missing+=("$name")
+          done
+          if [ ${#missing[@]} -gt 0 ]; then
+            echo "Missing repo secrets: ${missing[*]}" >&2
+            echo "See mobile/README.md → 'Automated Google Play releases' for how to create them." >&2
+            exit 1
+          fi
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: mobile/package-lock.json
+
+      - name: Install mobile dependencies
+        working-directory: mobile
+        run: npm ci
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      # android/keys/ is gitignored, so CI recreates exactly what build.gradle reads:
+      # keys/keystore.properties pointing at keys/<storeFile>.
+      - name: Restore upload keystore
+        env:
+          KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          mkdir -p mobile/android/keys
+          echo "$KEYSTORE_BASE64" | base64 --decode > mobile/android/keys/upload-keystore.jks
+          cat > mobile/android/keys/keystore.properties <<PROPS
+          storeFile=upload-keystore.jks
+          storePassword=$KEYSTORE_PASSWORD
+          keyAlias=$KEY_ALIAS
+          keyPassword=$KEY_PASSWORD
+          PROPS
+          keytool -list -keystore mobile/android/keys/upload-keystore.jks \
+            -storepass "$KEYSTORE_PASSWORD" -alias "$KEY_ALIAS" > /dev/null
+          echo "Upload keystore restored and verified."
+
+      - name: Build release AAB
+        working-directory: mobile/android
+        env:
+          CI: 'true'
+        run: ./gradlew bundleRelease --no-daemon --stacktrace
+
+      # build.gradle derives versionCode from app.json's expo.buildNumber, so the
+      # bundle matches by construction; this only proves the build produced one.
+      - name: Check the AAB exists
+        env:
+          EXPECTED: ${{ needs.check-version.outputs.version-code }}
+        run: |
+          set -euo pipefail
+          AAB=mobile/android/app/build/outputs/bundle/release/app-release.aab
+          test -f "$AAB" || { echo "AAB not found at $AAB" >&2; exit 1; }
+          echo "Built a $(du -h "$AAB" | cut -f1) AAB for versionCode $EXPECTED"
+
+      - name: Upload AAB artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdr-${{ needs.check-version.outputs.version }}-${{ needs.check-version.outputs.version-code }}-aab
+          path: |
+            mobile/android/app/build/outputs/bundle/release/app-release.aab
+            mobile/android/app/build/outputs/mapping/release/mapping.txt
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish to Google Play
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: ${{ env.PLAY_PACKAGE_NAME }}
+          releaseFiles: mobile/android/app/build/outputs/bundle/release/app-release.aab
+          mappingFile: mobile/android/app/build/outputs/mapping/release/mapping.txt
+          track: ${{ inputs.track || 'production' }}
+          status: ${{ inputs.status || 'completed' }}
+          userFraction: ${{ (inputs.status == 'inProgress' && inputs.user_fraction) || '' }}
+
+      - name: Summary
+        run: |
+          {
+            echo "### Google Play release"
+            echo
+            echo "- **Version:** ${{ needs.check-version.outputs.version }} (versionCode ${{ needs.check-version.outputs.version-code }})"
+            echo "- **Track:** ${{ inputs.track || 'production' }}"
+            echo "- **Status:** ${{ inputs.status || 'completed' }}"
+          } >> "$GITHUB_STEP_SUMMARY"

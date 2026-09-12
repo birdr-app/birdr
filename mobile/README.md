@@ -115,6 +115,76 @@ Tests live in `mobile/android/app/src/androidTest/kotlin/pro/birdr/app/CountryCh
 - **CI:** Add a job that starts an Android emulator (e.g. `system-images;android-34;google_apis;x86_64`), runs `./gradlew connectedDebugAndroidTest`, and fails the build if any test fails.
 - **Firebase Test Lab:** Build the debug APK and test APK, then run `gcloud firebase test android run` with the APKs to run the same tests on multiple devices/API levels.
 
+## Automated Google Play releases
+
+The Android counterpart to the **Xcode Cloud** workflow that ships iOS builds to App Store
+Connect. `.github/workflows/android-play-release.yml` runs on `ubuntu-latest`, builds the
+release AAB with Gradle from the committed `android/` directory, and publishes it to Google
+Play — no Mac minutes, no EAS involved.
+
+### When it runs
+
+On every push to `main` that touches `mobile/**` (the same shape as the Xcode Cloud trigger),
+**but only uploads when `expo.buildNumber` in `mobile/app.json` actually changed in that push.**
+Play rejects a `versionCode` it has already seen, so a push without a release bump would fail
+the job; instead it logs why it skipped and exits green. `workflow_dispatch` always uploads.
+
+By default the release goes to the **production** track with status `completed` — live to 100%
+of users, no button to press. Run it manually to pick a different track, a `draft` release, or
+a staged `inProgress` rollout with a user fraction.
+
+### One-time setup
+
+1. **Play service account** — Play Console → *Users and permissions* → invite the Google Cloud
+   service account, grant it *Release apps to testing tracks* and *Release to production*. In
+   Google Cloud Console, create a JSON key for that service account (APIs & Services →
+   Credentials). Then in Play Console → *API access*, confirm the account is linked.
+
+2. **Base64-encode the upload keystore** (`android/keys/` is gitignored, so CI restores it from
+   secrets):
+   ```bash
+   base64 -i mobile/android/keys/upload-keystore.jks | pbcopy
+   ```
+
+3. **Add repo secrets** (GitHub → Settings → Secrets and variables → Actions):
+
+   | Secret | Value |
+   | --- | --- |
+   | `ANDROID_KEYSTORE_BASE64` | output of the `base64` command above |
+   | `ANDROID_KEYSTORE_PASSWORD` | `storePassword` from `android/keys/keystore.properties` |
+   | `ANDROID_KEY_ALIAS` | `keyAlias` from the same file |
+   | `ANDROID_KEY_PASSWORD` | `keyPassword` from the same file |
+   | `PLAY_SERVICE_ACCOUNT_JSON` | full contents of the service account JSON key |
+
+   The workflow checks all five up front and fails with the missing names rather than dying
+   halfway through a Gradle build.
+
+### Shipping a release
+
+Use the **`/birdr-release`** skill, or run it by hand:
+
+```bash
+cd mobile
+npm run release:set          # next build number
+npm run release:set -- 106   # a specific one
+```
+
+Releases are named after the bird whose species id equals the build number — build 106 is
+`Kelp Goose`, from [`/api/species/106/`](https://birdr.pro/api/species/106/) — and the version
+is always `1.<build>.0`. The script writes `expo.version`, `expo.buildNumber` and
+`expo.releaseCodename` into `app.json` and syncs `ios/Birdr/Info.plist` (Android reads
+`app.json` directly at build time, iOS does not). It refuses a build number at or below the
+current one, since both stores reject a reused one.
+
+Commit those two files and push to `main`, and both stores build: Xcode Cloud for iOS, this
+workflow for Android. Every run also
+attaches the AAB and the R8 `mapping.txt` as a GitHub artifact (30 days), and the mapping file is
+uploaded to Play so crash reports deobfuscate.
+
+> **Note:** `android/app/build.gradle` sets `versionName releaseCodename`, so Play displays the
+> codename (e.g. `Upland Goose`) where iOS shows `1.105.0`. Change it to `appJsonExpo.version` if
+> you want the two stores to agree.
+
 ## Automated store releases (GitHub Actions)
 
 Ship new versions to **TestFlight / App Store Connect** and **Google Play** without a Mac in CI. The workflow only starts an EAS build on Expo’s servers (`ubuntu-latest`), so it fits a free GitHub plan.
