@@ -168,12 +168,18 @@ export function BirdrJourneyStepIntroScreen() {
               media: step.media,
             })}
           </Text>
-          <Text style={styles.jokersLabel}>{t('jokers_this_round')}</Text>
-          <View style={styles.jokersRow}>
-            {Array.from({ length: step.jokers }).map((_, i) => (
-              <FontAwesome5 key={i} name="heart" solid size={22} color={colors.primary[500]} />
-            ))}
-          </View>
+          {step.jokers > 0 ? (
+            <>
+              <Text style={styles.jokersLabel}>{t('jokers_this_round')}</Text>
+              <View style={styles.jokersRow}>
+                {Array.from({ length: step.jokers }).map((_, i) => (
+                  <FontAwesome5 key={i} name="heart" solid size={22} color={colors.primary[500]} />
+                ))}
+              </View>
+            </>
+          ) : (
+            <Text style={styles.jokersLabel}>{t('no_jokers_this_round')}</Text>
+          )}
           <TouchableOpacity
             style={[styles.primaryButton, starting && styles.buttonDisabled]}
             onPress={handleStart}

@@ -167,14 +167,25 @@ export function BirdrJourneyStepIntroPage() {
                 values={{ length: step.length, media: step.media }}
               />
             </Text>
-            <Text fontSize="md" color="primary.700" mb={2}>
-              <FormattedMessage id="jokers this round" defaultMessage="Jokers this round:" />
-            </Text>
-            <Flex gap={1} mb={6} flexWrap="wrap">
-              {Array.from({ length: step.jokers }).map((_, i) => (
-                <FaHeart key={i} color="var(--chakra-colors-primary-500)" />
-              ))}
-            </Flex>
+            {step.jokers > 0 ? (
+              <>
+                <Text fontSize="md" color="primary.700" mb={2}>
+                  <FormattedMessage id="jokers this round" defaultMessage="Jokers this round:" />
+                </Text>
+                <Flex gap={1} mb={6} flexWrap="wrap">
+                  {Array.from({ length: step.jokers }).map((_, i) => (
+                    <FaHeart key={i} color="var(--chakra-colors-primary-500)" />
+                  ))}
+                </Flex>
+              </>
+            ) : (
+              <Text fontSize="md" color="primary.700" mb={6}>
+                <FormattedMessage
+                  id="no jokers this round"
+                  defaultMessage="No jokers this round, you're on your own"
+                />
+              </Text>
+            )}
             <Button colorPalette="primary" width="full" onClick={handleStart} loading={starting}>
               <FormattedMessage id="birdr_journey_start_step" defaultMessage="Start step" />
             </Button>

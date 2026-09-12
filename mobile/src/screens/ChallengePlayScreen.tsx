@@ -48,6 +48,7 @@ import {
   questionMediaStageHeight,
 } from '../constants/questionMediaLayout';
 import { useTranslation } from '../i18n/TranslationContext';
+import { getCountryDisplayName } from '../i18n/countryNames';
 import { useGame } from '../context/GameContext';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
@@ -87,7 +88,7 @@ function ChallengePlayAudio({
 }
 
 export function ChallengePlayScreen() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const { game } = useGame();
   const route = useRoute<RouteProp<{ ChallengePlay: ChallengePlayParams }, 'ChallengePlay'>>();
   const navigation = useNavigation();
@@ -111,7 +112,7 @@ export function ChallengePlayScreen() {
   const [answeredMediaLink, setAnsweredMediaLink] = useState<string | null>(null);
   const [levelEnded, setLevelEnded] = useState(false);
   const [journeyGame, setJourneyGame] = useState<BirdrJourneyGame | null>(null);
-  const [journeyCountryName, setJourneyCountryName] = useState<string | null>(null);
+  const [journeyCountry, setJourneyCountry] = useState<{ code: string; name: string } | null>(null);
   const [mediaSpecies, setMediaSpecies] = useState<SpeciesMediaData | null>(null);
   const [flagModalVisible, setFlagModalVisible] = useState(false);
   const [flagMediaInfo, setFlagMediaInfo] = useState<FlagMediaInfo | null>(null);
@@ -211,7 +212,7 @@ export function ChallengePlayScreen() {
         setJourneyGame(null);
         return;
       }
-      setJourneyCountryName(journey.country?.name ?? countryCode);
+      setJourneyCountry(journey.country ?? null);
       const currentGame =
         journey.current_game?.game?.token === gameToken ? journey.current_game : null;
       setJourneyGame(currentGame);
@@ -508,7 +509,7 @@ export function ChallengePlayScreen() {
           journey?.current_game?.game?.token === gameToken ? journey.current_game : null;
         if (currentGame) {
           setJourneyGame(currentGame);
-          setJourneyCountryName(journey?.country?.name ?? countryCode);
+          if (journey?.country) setJourneyCountry(journey.country);
         }
         const gameStatus = currentGame?.status ?? null;
         stepFailed = gameStatus === 'failed' || failedFromJokers;
@@ -537,6 +538,13 @@ export function ChallengePlayScreen() {
   const handleSpeedTimeout = () => {
     void giveAnswer(undefined, true);
   };
+
+  useEffect(() => {
+    const title = journeyCountry
+      ? t('country_challenge_named', { country: getCountryDisplayName(journeyCountry, locale) })
+      : t('country_challenge');
+    navigation.setOptions({ title });
+  }, [navigation, journeyCountry, locale, t]);
 
   if (!gameToken || !journeyId) {
     return (
@@ -585,8 +593,6 @@ export function ChallengePlayScreen() {
         speciesDisplayName(s, lang).toLowerCase().includes(expertQuery.trim().toLowerCase())
       )
     : expertSpecies.slice(0, 50);
-
-  const countryName = journeyCountryName ?? countryCode ?? 'Country';
 
   const totalJokers = journeyGame?.journey_step?.jokers ?? paramStepJokers ?? 0;
   const remainingJokers = journeyGame?.remaining_jokers ?? totalJokers;
@@ -642,9 +648,14 @@ export function ChallengePlayScreen() {
       {({ playSound, soundPlaying, pulsatingStyle }) => (
     <ScrollView style={styles.container} contentContainerStyle={styles.content} testID="challengePlay.screen">
       <View style={styles.row}>
-      <Text style={styles.screenTitle}>{countryName}</Text>
-      {totalJokers > 0 ? (
-        <View>
+        {levelLength > 0 && question ? (
+          <Text style={styles.questionProgress}>
+            {t('question_of', { current: String(currentQuestionNum), total: String(levelLength) })}
+          </Text>
+        ) : (
+          <View />
+        )}
+        {totalJokers > 0 ? (
           <View style={styles.jokersHearts}>
             {Array.from({ length: totalJokers }).map((_, i) =>
               i < remainingJokers ? (
@@ -654,15 +665,10 @@ export function ChallengePlayScreen() {
               )
             )}
           </View>
-        </View>
-      ) : null}
-
+        ) : (
+          <Text style={styles.noJokers}>{t('no_jokers')}</Text>
+        )}
       </View>
-      {levelLength > 0 && question ? (
-        <Text style={styles.questionProgress}>
-          {t('question_of', { current: String(currentQuestionNum), total: String(levelLength) })}
-        </Text>
-      ) : null}
       <View style={[styles.mediaWrap, { minHeight: mediaBlockHeight }]}>
         {loadingNextQuestion ? (
           <>
@@ -938,12 +944,15 @@ const styles = StyleSheet.create({
   levelCompleteTitle: { fontSize: 20, fontWeight: '700', color: colors.primary[800], marginBottom: 8 },
   levelCompleteDescription: { fontSize: 15, color: colors.primary[700], marginBottom: 16 },
   jokersRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 12 },
-  row: {     flexDirection: 'row',
+  row: {
+    flexDirection: 'row',
     width: '100%',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'space-between',
+    marginBottom: 12,
+    gap: 12,
   },
-  jokersHearts: { flexDirection: 'row', alignItems: 'flex-end', gap: 6 },
+  jokersHearts: { flexDirection: 'row', alignItems: 'center', gap: 6, flexShrink: 0 },
   primaryButton: {
     backgroundColor: colors.primary[500],
     paddingVertical: 16,
@@ -991,8 +1000,8 @@ const styles = StyleSheet.create({
   speciesListWrap: { marginBottom: 16 },
   speciesListEmpty: { fontSize: 14, color: colors.primary[500], paddingVertical: 16, paddingHorizontal: 12 },
   speciesListItem: { marginBottom: 8 },
-  screenTitle: { fontSize: 20, fontWeight: '700', color: colors.primary[800], marginBottom: 4 },
-  questionProgress: { fontSize: 16, color: colors.primary[700], marginBottom: 12 },
+  questionProgress: { fontSize: 16, color: colors.primary[700], flex: 1 },
+  noJokers: { fontSize: 14, color: colors.primary[600], flexShrink: 0 },
   progressSection: { marginTop: 24, marginBottom: 16 },
   progressHeading: { fontSize: 18, fontWeight: '600', color: colors.primary[800], marginBottom: 8 },
   progressCard: { backgroundColor: colors.primary[100], padding: 16, borderRadius: 8 },

@@ -6,6 +6,7 @@ import {
   Heading,
   Icon,
   SimpleGrid,
+  Text,
 } from '@chakra-ui/react';
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import ReactPlayer from 'react-player';
@@ -35,6 +36,7 @@ import { PLAY_IMAGE_STAGE_HEIGHT, ZoomablePlayImage } from '../../components/zoo
 import { playFullSrc, playPreviewSrc } from '../../utils/play-image-url';
 import { SpeedChallengeTimer } from '../../components/speed-challenge-timer';
 import AppContext, { Answer, Question, Species } from '../../core/app-context';
+import { getCountryDisplayName } from '../../data/country-names-nl';
 import { isStalePlayQuestion } from '../../core/apply-incoming-question';
 import {
   currentPlayMediaItem,
@@ -67,7 +69,8 @@ export function BirdrJourneyPlayPage() {
   const gameMedia = normalizeGameMedia(searchParams.get('gameMedia') ?? 'images');
   const gameLevel = searchParams.get('gameLevel') ?? 'advanced';
 
-  const { species, speciesLoading, language } = useContext(AppContext);
+  const { species, speciesLoading, language, appLanguage } = useContext(AppContext);
+  const locale = appLanguage || 'en';
   const [question, setQuestion] = useState<Question | null>(null);
   const [loading, setLoading] = useState(true);
   const [loadingNextQuestion, setLoadingNextQuestion] = useState(false);
@@ -79,6 +82,7 @@ export function BirdrJourneyPlayPage() {
   const [audioPlaying, setAudioPlaying] = useState(true);
   const [mediaIndex, setMediaIndex] = useState<number | null>(null);
   const [journeyGame, setJourneyGame] = useState<BirdrJourneyGame | null>(null);
+  const [countryName, setCountryName] = useState<string>('');
   const [journeyStepFailed, setJourneyStepFailed] = useState(false);
   const [levelEnded, setLevelEnded] = useState(false);
   const [timerExpired, setTimerExpired] = useState(false);
@@ -97,13 +101,16 @@ export function BirdrJourneyPlayPage() {
     if (!countryCode || !gameToken) return;
     try {
       const journey = await getBirdrJourney(countryCode);
+      if (journey?.country) {
+        setCountryName(getCountryDisplayName(journey.country, locale));
+      }
       const currentGame =
         journey?.current_game?.game?.token === gameToken ? journey.current_game : null;
       setJourneyGame(currentGame);
     } catch {
       setJourneyGame(null);
     }
-  }, [countryCode, gameToken]);
+  }, [countryCode, gameToken, locale]);
 
   const loadQuestion = useCallback(async () => {
     if (!gameToken) return;
@@ -347,24 +354,43 @@ export function BirdrJourneyPlayPage() {
       <Page.Header>
         <Flex direction="column" gap={2}>
           <Heading size="md">
-            <FormattedMessage
-              id="game progress"
-              defaultMessage="Game - {current} of {total}"
-              values={{
-                current: question?.sequence ?? Math.max(1, answers.length),
-                total: levelLength,
-              }}
-            />
-          </Heading>
-          <Flex gap={2}>
-            {Array.from({ length: totalJokers }).map((_, i) => (
-              <Icon
-                key={i}
-                as={i < remainingJokers ? FaHeart : FaHeartBroken}
-                color={i < remainingJokers ? 'primary.600' : 'primary.300'}
-                boxSize={6}
+            {countryName ? (
+              <FormattedMessage
+                id="country_challenge_named"
+                defaultMessage="{country} Challenge"
+                values={{ country: countryName }}
               />
-            ))}
+            ) : (
+              <FormattedMessage id="country_challenge" defaultMessage="Country challenge" />
+            )}
+          </Heading>
+          <Flex justify="space-between" align="center" gap={3} wrap="wrap">
+            <Heading size="sm" fontWeight="500" color="primary.600">
+              <FormattedMessage
+                id="game progress"
+                defaultMessage="Game - {current} of {total}"
+                values={{
+                  current: question?.sequence ?? Math.max(1, answers.length),
+                  total: levelLength,
+                }}
+              />
+            </Heading>
+            {totalJokers > 0 ? (
+              <Flex gap={2} align="center">
+                {Array.from({ length: totalJokers }).map((_, i) => (
+                  <Icon
+                    key={i}
+                    as={i < remainingJokers ? FaHeart : FaHeartBroken}
+                    color={i < remainingJokers ? 'primary.600' : 'primary.300'}
+                    boxSize={6}
+                  />
+                ))}
+              </Flex>
+            ) : (
+              <Text fontSize="sm" color="primary.600">
+                <FormattedMessage id="no jokers" defaultMessage="No jokers" />
+              </Text>
+            )}
           </Flex>
         </Flex>
       </Page.Header>

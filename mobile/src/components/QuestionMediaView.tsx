@@ -350,6 +350,9 @@ export function QuestionMediaView({
               )}
             </View>
           ) : null}
+          <Text style={styles.creditsHint}>
+            {sourceLink ? t('credits_click_to_see') : t('credits_link_after_answer')}
+          </Text>
           <TouchableOpacity
             style={styles.creditsClose}
             onPress={() => setCreditsOpen(false)}
@@ -641,6 +644,13 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: colors.primary[700],
     textDecorationLine: 'underline',
+  },
+  creditsHint: {
+    fontSize: 13,
+    color: colors.primary[600],
+    marginTop: 4,
+    marginBottom: 4,
+    lineHeight: 18,
   },
   creditsClose: {
     marginTop: 8,

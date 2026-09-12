@@ -167,6 +167,10 @@ export const QuestionComponent = () => {
   const currentImage = gameMedia === 'images' ? currentPlayMediaItem(question?.images, question) : undefined
   const currentVideo = gameMedia === 'video' ? currentPlayMediaItem(question?.videos, question) : undefined
   const currentSound = gameMedia === 'audio' ? currentPlayMediaItem(question?.sounds, question) : undefined
+  const answeredSourceLink = typeof answer?.media_link === 'string' ? answer.media_link : null
+  const imageForCredits = currentImage && answeredSourceLink ? { ...currentImage, link: answeredSourceLink } : currentImage
+  const videoForCredits = currentVideo && answeredSourceLink ? { ...currentVideo, link: answeredSourceLink } : currentVideo
+  const soundForCredits = currentSound && answeredSourceLink ? { ...currentSound, link: answeredSourceLink } : currentSound
 
   useEffect(() => {
     mediaPostedKey.current = null
@@ -450,7 +454,7 @@ export const QuestionComponent = () => {
               )}
             </Box>
             <Flex direction="row" justify="space-between" align="center" wrap="wrap" gap={2} mt={2}>
-              <MediaCredits media={currentVideo} />
+              <MediaCredits media={videoForCredits} playHint />
               {flag}
             </Flex>
           </>
@@ -479,8 +483,9 @@ export const QuestionComponent = () => {
             </Box>
             <Flex direction="row" justify="space-between" align="center" wrap="wrap" gap={2} mt={2}>
               <MediaCredits 
-                media={currentImage} 
+                media={imageForCredits} 
                 onClick={skipQuestion}
+                playHint
               />
               {flag}
             </Flex>
@@ -514,7 +519,7 @@ export const QuestionComponent = () => {
                 )}
               </Box>
               <Flex direction="row" justify="space-between" align="center" wrap="wrap" gap={2} mt={2}>
-                <MediaCredits media={currentSound} />
+                <MediaCredits media={soundForCredits} playHint />
                 {flag}
               </Flex>
             </>
