@@ -1,0 +1,24 @@
+{% if app_store_rating or play_store_rating %}
+<p class="store-score-row">
+  {% if app_store_rating %}
+  <a class="store-score" href="{{ app_store_review_url }}" target="_blank" rel="noopener noreferrer">
+    <span class="store-score-kicker">App Store</span>
+    <span class="store-score-value">{{ app_store_rating.score_label }}</span>
+    <span class="store-score-stars" style="--pct: {{ app_store_rating.star_percent }}%;" aria-hidden="true">★★★★★</span>
+    <span class="store-score-count">
+      {% if app_store_rating.count == 1 %}{% mt "1 rating" %}{% else %}{% mt "{count} ratings" count=app_store_rating.count %}{% endif %}
+    </span>
+  </a>
+  {% endif %}
+  {% if play_store_rating %}
+  <a class="store-score" href="{{ play_store_url }}" target="_blank" rel="noopener noreferrer">
+    <span class="store-score-kicker">Google Play</span>
+    <span class="store-score-value">{{ play_store_rating.score_label }}</span>
+    <span class="store-score-stars" style="--pct: {{ play_store_rating.star_percent }}%;" aria-hidden="true">★★★★★</span>
+    <span class="store-score-count">
+      {% if play_store_rating.count == 1 %}{% mt "1 rating" %}{% else %}{% mt "{count} ratings" count=play_store_rating.count %}{% endif %}
+    </span>
+  </a>
+  {% endif %}
+</p>
+{% endif %}

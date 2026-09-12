@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if missing %}
+  <title>Challenge not found · Birdr</title>
+  {% else %}
+  <title>{{ og_title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ og_title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:site_name" content="Birdr">
+  <link rel="canonical" href="{{ canonical_url }}">
+  {% endif %}
+  <style>
+    :root {
+      color-scheme: light;
+      --birdr-50: #f5ede0;
+      --birdr-100: #e8d4b8;
+      --birdr-200: #d4b88a;
+      --birdr-300: #c09c5c;
+      --birdr-500: #8b6419;
+      --birdr-600: #6d4e14;
+      --birdr-800: #31220a;
+      --birdr-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--birdr-font);
+      background: var(--birdr-50);
+      color: var(--birdr-800);
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      max-width: 760px;
+      width: 100%;
+      background: #fff;
+      border: 2px solid var(--birdr-200);
+      border-radius: 16px;
+      padding: 28px 24px 24px;
+      box-shadow: 0 12px 28px rgba(49, 34, 10, 0.12);
+    }
+    .brand {
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--birdr-500);
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 12px 0 4px;
+    }
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: var(--birdr-50);
+      border: 1px solid var(--birdr-100);
+      flex-shrink: 0;
+    }
+    h1 {
+      font-size: 1.55rem;
+      margin: 0;
+      font-weight: 700;
+      color: var(--birdr-800);
+      line-height: 1.25;
+    }
+    .lede {
+      font-size: 0.95rem;
+      color: var(--birdr-600);
+      margin: 8px 0 16px;
+    }
+    .toggle {
+      display: inline-flex;
+      flex-wrap: wrap;
+      border: 1px solid var(--birdr-200);
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0 0 16px;
+    }
+    .chart-block { margin: 0 0 28px; }
+    .chart-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 8px 0 10px;
+      color: var(--birdr-800);
+    }
+    .toggle button {
+      appearance: none;
+      border: 0;
+      background: #fff;
+      color: var(--birdr-600);
+      font: inherit;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 8px 14px;
+      cursor: pointer;
+    }
+    .toggle button + button {
+      border-left: 1px solid var(--birdr-200);
+    }
+    .toggle button.is-active {
+      background: var(--birdr-500);
+      color: var(--birdr-50);
+    }
+    .chart-wrap {
+      position: relative;
+      height: 380px;
+      margin: 0 0 8px;
+    }
+    .hint {
+      font-size: 0.82rem;
+      color: var(--birdr-600);
+      margin: 0 0 18px;
+    }
+    .empty {
+      color: var(--birdr-600);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .cta {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: var(--birdr-500);
+      color: var(--birdr-50);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .cta:hover { background: var(--birdr-600); }
+    .cta.secondary {
+      background: transparent;
+      color: var(--birdr-600);
+      border: 2px solid var(--birdr-200);
+    }
+    .cta.secondary:hover {
+      border-color: var(--birdr-300);
+      color: var(--birdr-800);
+    }
+    @media (max-width: 640px) {
+      .chart-wrap { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    {% if missing %}
+      <div class="brand">Birdr</div>
+      <h1>Challenge not found</h1>
+      <p class="empty">This share link is invalid or no longer available.</p>
+      <a class="cta" href="/">Go to Birdr</a>
+    {% else %}
+      <div class="brand">Birdr</div>
+      <div class="header">
+        {% if logo_url %}
+          <img class="logo" src="{{ logo_url }}" alt="">
+        {% endif %}
+        <h1>{{ flock_name }}</h1>
+      </div>
+      <p class="lede">Scores, rank, and cumulative correct answers across weekly challenges.</p>
+      {% if has_history %}
+        <div class="chart-block">
+          <h2 class="chart-title">Weekly score</h2>
+          <div class="toggle" role="group" aria-label="Weekly chart metric">
+            <button type="button" id="metric-correct" class="is-active">Correct answers</button>
+            <button type="button" id="metric-rank">Rank</button>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="progress-chart" aria-label="Weekly scores by player"></canvas>
+          </div>
+        </div>
+        <div class="chart-block">
+          <h2 class="chart-title">Cumulative correct answers</h2>
+          <div class="chart-wrap">
+            <canvas id="cumulative-chart" aria-label="Cumulative correct answers by player"></canvas>
+          </div>
+        </div>
+        <p class="hint">Each line is a player. Missed weeks keep the running total.</p>
+      {% else %}
+        <p class="empty">Weekly progress appears after this flock has run more than one challenge.</p>
+      {% endif %}
+      <div class="actions">
+        <a class="cta" href="{{ share_path }}">This week's scores</a>
+        {% if join_url %}
+          <a class="cta secondary" href="{{ join_url }}">Join flock &amp; play</a>
+        {% else %}
+          <a class="cta secondary" href="/flocks/">Open Birdr</a>
+        {% endif %}
+      </div>
+      {% if has_history %}
+        {{ chart_json|json_script:"flock-progress-data" }}
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+        <script>
+          (function () {
+            var data = JSON.parse(document.getElementById('flock-progress-data').textContent);
+            var canvas = document.getElementById('progress-chart');
+            var cumulativeCanvas = document.getElementById('cumulative-chart');
+            if (!canvas || !data || !data.players) return;
+            var colors = [
+              '#8b6419', '#1d4e89', '#2d6a4f', '#9b2226', '#6a4c93',
+              '#bb3e03', '#0a9396', '#3d405b', '#ca6702', '#40916c',
+              '#ae2012', '#005f73'
+            ];
+            var players = data.players;
+            var axisColor = '#6d4e14';
+            var gridColor = '#e8d4b8';
+
+            function lineDatasets(field) {
+              return players.map(function (player, i) {
+                var color = colors[i % colors.length];
+                return {
+                  label: player.display_name,
+                  data: player[field],
+                  borderColor: color,
+                  backgroundColor: color,
+                  spanGaps: field === 'cumulative',
+                  tension: 0.2,
+                  pointRadius: 4,
+                  pointHoverRadius: 6,
+                  borderWidth: 2
+                };
+              });
+            }
+
+            function scaleX() {
+              return {
+                title: { display: true, text: 'Challenge', color: axisColor },
+                ticks: { color: axisColor },
+                grid: { color: gridColor }
+              };
+            }
+
+            var chart = new Chart(canvas, {
+              type: 'line',
+              data: { labels: data.labels, datasets: lineDatasets('correct') },
+              options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: { mode: 'index', intersect: false },
+                plugins: {
+                  legend: {
+                    position: 'bottom',
+                    labels: { boxWidth: 10, usePointStyle: true, padding: 14 }
+                  },
+                  tooltip: {
+                    callbacks: {
+                      label: function (ctx) {
+                        var player = players[ctx.datasetIndex];
+                        var i = ctx.dataIndex;
+                        var correct = player.correct[i];
+                        var rank = player.rank[i];
+                        if (correct == null) {
+                          return player.display_name + ': did not play';
+                        }
+                        return player.display_name + ': ' + correct + '/' + data.max_correct + ' (#' + rank + ')';
+                      }
+                    }
+                  }
+                },
+                scales: {
+                  x: scaleX(),
+                  y: {
+                    title: { display: true, text: 'Correct answers', color: axisColor },
+                    min: 0,
+                    max: data.max_correct,
+                    ticks: { color: axisColor, precision: 0 },
+                    grid: { color: gridColor }
+                  }
+                }
+              }
+            });
+
+            function setMetric(next) {
+              document.getElementById('metric-correct').classList.toggle('is-active', next === 'correct');
+              document.getElementById('metric-rank').classList.toggle('is-active', next === 'rank');
+              chart.data.datasets.forEach(function (ds, i) {
+                ds.data = next === 'rank' ? players[i].rank : players[i].correct;
+              });
+              var y = chart.options.scales.y;
+              if (next === 'rank') {
+                y.reverse = true;
+                y.min = 1;
+                y.max = data.max_rank;
+                y.title.text = 'Rank';
+              } else {
+                y.reverse = false;
+                y.min = 0;
+                y.max = data.max_correct;
+                y.title.text = 'Correct answers';
+              }
+              chart.update();
+            }
+
+            document.getElementById('metric-correct').addEventListener('click', function () {
+              setMetric('correct');
+            });
+            document.getElementById('metric-rank').addEventListener('click', function () {
+              setMetric('rank');
+            });
+
+            if (cumulativeCanvas) {
+              new Chart(cumulativeCanvas, {
+                type: 'line',
+                data: { labels: data.labels, datasets: lineDatasets('cumulative') },
+                options: {
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  interaction: { mode: 'index', intersect: false },
+                  plugins: {
+                    legend: {
+                      position: 'bottom',
+                      labels: { boxWidth: 10, usePointStyle: true, padding: 14 }
+                    },
+                    tooltip: {
+                      callbacks: {
+                        label: function (ctx) {
+                          var player = players[ctx.datasetIndex];
+                          var total = player.cumulative[ctx.dataIndex];
+                          if (total == null) {
+                            return player.display_name + ': has not played yet';
+                          }
+                          var week = player.correct[ctx.dataIndex];
+                          if (week == null) {
+                            return player.display_name + ': ' + total + ' total (did not play)';
+                          }
+                          return player.display_name + ': ' + total + ' total (+' + week + ')';
+                        }
+                      }
+                    }
+                  },
+                  scales: {
+                    x: scaleX(),
+                    y: {
+                      title: { display: true, text: 'Cumulative correct answers', color: axisColor },
+                      min: 0,
+                      suggestedMax: data.max_cumulative || data.max_correct,
+                      ticks: { color: axisColor, precision: 0 },
+                      grid: { color: gridColor }
+                    }
+                  }
+                }
+              });
+            }
+          })();
+        </script>
+      {% endif %}
+    {% endif %}
+  </main>
+</body>
+</html>

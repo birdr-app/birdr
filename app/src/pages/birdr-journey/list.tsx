@@ -28,34 +28,23 @@ import {
   setStoredBirdrJourneyCountryCode,
   type BirdrJourneyListItem,
 } from '../../api/birdrJourney';
-import { authService } from '../../api/services/auth.service';
 import { BirdrLevelImage } from '../../components/birdr-level-image';
 import { Page } from '../../shared/components/layout';
 import AppContext from '../../core/app-context';
+import { useAuthProfile } from '../../core/auth-profile-context';
 import { getCountryDisplayName } from '../../data/country-names-nl';
 
 export function BirdrJourneyListPage() {
   const navigate = useNavigate();
   const intl = useIntl();
   const { appLanguage } = useContext(AppContext);
+  const { isAuthenticated } = useAuthProfile();
   const locale = appLanguage || 'en';
   const [journeys, setJourneys] = useState<BirdrJourneyListItem[]>([]);
   const [activeCountryCode, setActiveCountryCode] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [removingId, setRemovingId] = useState<number | null>(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(() => !!authService.getAccessToken());
-
-  useEffect(() => {
-    const syncAuth = () => setIsAuthenticated(!!authService.getAccessToken());
-    syncAuth();
-    window.addEventListener('focus', syncAuth);
-    const interval = setInterval(syncAuth, 3000);
-    return () => {
-      window.removeEventListener('focus', syncAuth);
-      clearInterval(interval);
-    };
-  }, []);
 
   const ensureAuth = useCallback(async (): Promise<boolean> => {
     if (isAuthenticated) return true;

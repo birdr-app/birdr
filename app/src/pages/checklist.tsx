@@ -15,8 +15,7 @@ import { FormattedMessage } from 'react-intl';
 import { useNavigate } from 'react-router-dom';
 import AppContext from '../core/app-context';
 import { Page } from '../shared/components/layout';
-import { authService } from '../api/services/auth.service';
-import { profileService, type UserProfile } from '../api/services/profile.service';
+import { useAuthProfile } from '../core/auth-profile-context';
 import CountryCombobox from '../components/country-combobox';
 import TaxOrderCombobox from '../components/tax-order-combobox';
 import { checklistBannerMessage } from '../components/checklist/checklist-banner';
@@ -174,6 +173,7 @@ function ChecklistCard({
 export default function ChecklistPage() {
   const navigate = useNavigate();
   const { language, speciesLanguage } = useContext(AppContext);
+  const { isAuthenticated, profile, ready } = useAuthProfile();
   const lang = speciesLanguage || language || 'en';
 
   const [data, setData] = useState<ChecklistResponse | null>(null);
@@ -185,7 +185,6 @@ export default function ChecklistPage() {
   const [sort, setSort] = useState<'recent' | 'species' | 'rarity'>('recent');
   const [taxOrder, setTaxOrder] = useState<string | undefined>();
   const [modalSpecies, setModalSpecies] = useState<Species | undefined>();
-  const [profile, setProfile] = useState<UserProfile | null>(null);
   const [countryCode, setCountryCode] = useState<string | undefined>();
   const { countries } = UseCountries();
 
@@ -193,19 +192,15 @@ export default function ChecklistPage() {
   const effectiveCountryCode = countryCode ?? profile?.country_code ?? undefined;
 
   useEffect(() => {
-    if (!authService.getAccessToken()) return;
-    profileService
-      .getProfile()
-      .then((p) => {
-        setProfile(p);
-        setCountryCode((prev) => prev ?? p.country_code ?? undefined);
-      })
-      .catch(() => {});
-  }, []);
+    if (!countryCode && profile?.country_code) {
+      setCountryCode(profile.country_code);
+    }
+  }, [countryCode, profile?.country_code]);
 
   const load = useCallback(
     async (page: number, replace: boolean) => {
-      if (!authService.getAccessToken()) {
+      if (!ready) return;
+      if (!isAuthenticated) {
         navigate('/login');
         return;
       }
@@ -235,7 +230,7 @@ export default function ChecklistPage() {
         setLoadingMore(false);
       }
     },
-    [filter, sort, taxOrder, lang, navigate, effectiveCountryCode]
+    [filter, sort, taxOrder, lang, navigate, effectiveCountryCode, isAuthenticated, ready]
   );
 
   useEffect(() => {

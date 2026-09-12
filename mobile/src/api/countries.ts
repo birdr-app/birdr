@@ -1,6 +1,6 @@
 import { apiUrl } from './config';
 
-export type Country = { code: string; name: string };
+export type Country = { code: string; name: string; parent?: string | null; kind?: string; hemisphere?: string };
 
 export async function loadCountries(): Promise<Country[]> {
   const response = await fetch(apiUrl('/api/countries/'), {

@@ -4,6 +4,9 @@ import { apiUrl } from "../api/baseUrl"
 export interface Country {
   code: string
   name: string
+  parent?: string | null
+  kind?: string
+  hemisphere?: string
 }
 
 export const UseCountries = () => {

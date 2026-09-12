@@ -106,4 +106,22 @@ def country_challenge_leaderboard(
             row['country_code'],
         ),
     )
-    return rows[:limit]
+    ranked = rows[:limit]
+    _assign_ranks(ranked)
+    return ranked
+
+
+def _score_key(row: dict[str, Any]) -> tuple:
+    return (row['level_index'], row['sort_step'])
+
+
+def _assign_ranks(rows: list[dict[str, Any]]) -> None:
+    """Players with the same level and step share a competition rank (1, 1, 3)."""
+    prev_key = None
+    rank = 0
+    for index, row in enumerate(rows):
+        key = _score_key(row)
+        if key != prev_key:
+            rank = index + 1
+            prev_key = key
+        row['rank'] = rank

@@ -5,11 +5,13 @@ import { useAuth } from '../context/AuthContext';
 import { updateProfile } from '../api/profile';
 import { getAccessToken } from '../api/auth';
 import { useProfile } from '../context/ProfileContext';
+import { useGame } from '../context/GameContext';
 import {
   APP_LOCALE_STORAGE_KEY,
   guessAppLocaleFromDevice,
   isAppLocale,
   resolveAppLocale,
+  speciesLanguageFromAppLocale,
 } from './appLocales';
 
 type TranslationContextType = {
@@ -23,28 +25,35 @@ const TranslationContext = createContext<TranslationContextType | undefined>(und
 export function TranslationProvider({ children }: { children: ReactNode }) {
   const { isAuthenticated } = useAuth();
   const { refreshProfile, profile, ready: profileReady } = useProfile();
+  const { applySpeciesLanguage } = useGame();
   const [locale, setLocaleState] = useState<Locale>(() => guessAppLocaleFromDevice());
 
   const setLocale = useCallback(
     async (l: Locale) => {
       if (!isAppLocale(l)) return;
       setLocaleState(l);
+      const speciesLang = speciesLanguageFromAppLocale(l);
       try {
         await AsyncStorage.setItem(APP_LOCALE_STORAGE_KEY, l);
       } catch {
         /* ignore */
       }
       try {
+        await applySpeciesLanguage(speciesLang);
+      } catch {
+        /* ignore */
+      }
+      try {
         const token = await getAccessToken();
         if (token) {
-          await updateProfile({ app_language: l });
+          await updateProfile({ app_language: l, language: speciesLang });
           refreshProfile();
         }
       } catch {
         /* ignore */
       }
     },
-    [refreshProfile]
+    [applySpeciesLanguage, refreshProfile]
   );
 
   useEffect(() => {

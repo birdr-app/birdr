@@ -1,4 +1,4 @@
-from jizz.models import Species, TaxonomicFamily, TaxonomicGenus, TaxonomicOrder
+from jizz.models import Species, SpeciesGroup, TaxonomicFamily, TaxonomicGenus, TaxonomicOrder
 
 
 def make_taxonomic_order(name_latin, name_en=None, name_nl=None):
@@ -33,6 +33,18 @@ def make_taxonomic_genus(name_latin, taxonomic_family=None, name_en=None, name_n
     )
 
 
+def make_species_group(slug, name_en=None, name_nl=None, ebird_name=None, sort_order=0):
+    name_en = name_en or slug.replace('-', ' ').title()
+    name_nl = name_nl or name_en
+    return SpeciesGroup.objects.create(
+        slug=slug,
+        ebird_name=ebird_name or name_en,
+        name_en=name_en,
+        name_nl=name_nl,
+        sort_order=sort_order,
+    )
+
+
 def make_species_with_taxonomy(
     *,
     name,
@@ -44,6 +56,7 @@ def make_species_with_taxonomy(
     tax_genus=None,
     name_nl=None,
     tax_ordering=None,
+    species_group=None,
     **kwargs,
 ):
     taxonomic_order = None
@@ -81,6 +94,7 @@ def make_species_with_taxonomy(
         taxonomic_order=taxonomic_order,
         taxonomic_family=taxonomic_family,
         taxonomic_genus=taxonomic_genus,
+        species_group=species_group,
         tax_ordering=tax_ordering,
         **kwargs,
     )

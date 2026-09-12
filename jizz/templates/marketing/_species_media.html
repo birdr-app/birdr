@@ -1,16 +1,16 @@
-<dialog id="all-media" class="species-media-dialog"{% if species %} data-species-id="{{ species.id }}" data-species-name="{{ species.name }}" data-species-url="/api/species/{{ species.id }}/"{% endif %} aria-labelledby="species-media-title">
+<dialog id="all-media" class="species-media-dialog"{% if species %} data-species-id="{{ species.id }}" data-species-name="{{ species_name }}" data-species-url="/api/species/{{ species.id }}/"{% endif %} aria-labelledby="species-media-title">
   <div class="species-media-panel">
     <div class="species-media-head">
-      <h2 id="species-media-title">{% if species %}{{ species.name }}{% else %}Media{% endif %}</h2>
-      <button type="button" class="species-media-close" data-close-species-media aria-label="Close">&times;</button>
+      <h2 id="species-media-title">{% if species %}{{ species_name }}{% else %}{% mt "Media" %}{% endif %}</h2>
+      <button type="button" class="species-media-close" data-close-species-media aria-label="{% mt "Close" %}">&times;</button>
     </div>
-    <div class="species-media-tabs" role="tablist" aria-label="Media type">
-      <button type="button" role="tab" data-media-tab="images" aria-selected="true">Images</button>
-      <button type="button" role="tab" data-media-tab="videos" aria-selected="false">Videos</button>
-      <button type="button" role="tab" data-media-tab="sounds" aria-selected="false">Sounds</button>
+    <div class="species-media-tabs" role="tablist" aria-label="{% mt "Media type" %}">
+      <button type="button" role="tab" data-media-tab="images" aria-selected="true">{% mt "Images" %}</button>
+      <button type="button" role="tab" data-media-tab="videos" aria-selected="false">{% mt "Videos" %}</button>
+      <button type="button" role="tab" data-media-tab="sounds" aria-selected="false">{% mt "Sounds" %}</button>
     </div>
     <div class="species-media-body" data-media-body>
-      <p class="species-media-empty">Loading…</p>
+      <p class="species-media-empty">{% mt "Loading…" %}</p>
     </div>
   </div>
 </dialog>
@@ -21,7 +21,9 @@
   var body = dialog.querySelector('[data-media-body]');
   var tabs = dialog.querySelectorAll('[data-media-tab]');
   var titleEl = document.getElementById('species-media-title');
-  var labels = { images: 'Images', videos: 'Videos', sounds: 'Sounds' };
+  var i18n = window.BIRDR_I18N || {};
+  function t(key) { return i18n[key] || key; }
+  var labels = { images: t('Images'), videos: t('Videos'), sounds: t('Sounds') };
   var cache = {};
   var currentUrl = '';
   var speciesName = dialog.getAttribute('data-species-name') || '';
@@ -52,9 +54,9 @@
   function renderItems(items, kind) {
     if (!items || !items.length) {
       var empty = {
-        images: 'No images available',
-        videos: 'No videos available',
-        sounds: 'No sounds available'
+        images: t('No images available'),
+        videos: t('No videos available'),
+        sounds: t('No sounds available')
       };
       return '<p class="species-media-empty">' + empty[kind] + '</p>';
     }
@@ -67,7 +69,7 @@
       } else if (kind === 'videos') {
         var yt = youtubeId(url);
         inner = yt
-          ? '<iframe src="https://www.youtube.com/embed/' + esc(yt) + '" title="Video" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>'
+          ? '<iframe src="https://www.youtube.com/embed/' + esc(yt) + '" title="' + esc(t('Video')) + '" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>'
           : '<video controls src="' + esc(url) + '"></video>';
       } else {
         inner = '<audio controls src="' + esc(url) + '"></audio>';
@@ -101,7 +103,7 @@
       return Promise.resolve();
     }
     if (loading) return loading;
-    body.innerHTML = '<p class="species-media-empty">Loading…</p>';
+    body.innerHTML = '<p class="species-media-empty">' + t('Loading…') + '</p>';
     loading = fetch(currentUrl)
       .then(function (res) {
         if (!res.ok) throw new Error('load failed');
@@ -116,7 +118,7 @@
       })
       .catch(function () {
         loading = null;
-        body.innerHTML = '<p class="species-media-empty">Could not load media. Try again later.</p>';
+        body.innerHTML = '<p class="species-media-empty">' + t('Could not load media. Try again later.') + '</p>';
       });
     return loading;
   }
@@ -134,10 +136,10 @@
       loading = null;
       active = 'images';
       if (!data) applyTabCounts(null);
-      body.innerHTML = '<p class="species-media-empty">Loading…</p>';
+      body.innerHTML = '<p class="species-media-empty">' + t('Loading…') + '</p>';
     }
     speciesName = name || speciesName;
-    if (titleEl) titleEl.textContent = speciesName || 'Media';
+    if (titleEl) titleEl.textContent = speciesName || t('Media');
     dialog.showModal();
     load();
   }

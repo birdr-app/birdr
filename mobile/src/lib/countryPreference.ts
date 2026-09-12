@@ -5,8 +5,7 @@ import { fetchGuessedCountryCode } from '../api/geo';
 export const COUNTRY_STORAGE_KEY = 'birdr-country-code';
 
 export function isPersistableCountryCode(code?: string | null): boolean {
-  const value = (code || '').trim();
-  return value.length > 0 && !value.includes('-');
+  return (code || '').trim().length > 0;
 }
 
 export async function readStoredCountryCode(): Promise<string> {

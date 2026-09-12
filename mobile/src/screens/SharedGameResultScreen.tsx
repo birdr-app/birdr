@@ -73,7 +73,7 @@ export function SharedGameResultScreen() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <Image source={BIRDR_MOOD_IMAGES.success} style={styles.heroImage} resizeMode="contain" />
+      <Image source={BIRDR_MOOD_IMAGES.success} style={styles.heroImage} resizeMode="contain" resizeMethod="resize" />
       <Text style={styles.country}>{result.country.name}</Text>
       <Text style={styles.subtitle}>{result.subtitle}</Text>
       <View style={styles.board}>

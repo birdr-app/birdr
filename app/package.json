@@ -1,6 +1,6 @@
 {
   "name": "birdr",
-  "version": "1.27.0",
+  "version": "1.105.0",
   "private": true,
   "dependencies": {
     "@capacitor/android": "^7.2.0",
@@ -50,11 +50,12 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "gzip": "find build -type f \\( -name '*.js' -o -name '*.css' -o -name '*.svg' -o -name '*.json' -o -name '*.html' \\) -exec gzip -9 -k -f {} \\;",
     "deploy": "scp -r build birdr.pro:/var/www/jizz/jizz/app",
-    "release": "npm run build && npm run deploy",
+    "release": "npm run build && npm run gzip && npm run deploy",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "extract-messages": "NODE_ENV=development extract-react-intl-messages -l en,nl,es,fr,de,pt-BR,ja -o src/locales -d en --flat true 'src/**/*.ts*'",
+    "extract-messages": "NODE_ENV=development extract-react-intl-messages -l en,nl,es,fr,de,it,pt-BR,ja -o src/locales -d en --flat true 'src/**/*.ts*'",
     "cap:sync": "npx cap sync",
     "cap:copy": "npx cap copy",
     "build:mobile": "npm run build && npx cap sync",

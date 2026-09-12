@@ -20,9 +20,46 @@ except ImportError:
 
 
 class Country(models.Model):
+    KIND_COUNTRY = 'country'
+    KIND_SUBNATIONAL = 'subnational'
+    KIND_AGGREGATE = 'aggregate'
+    KIND_SPECIALTY = 'specialty'
+    KIND_CHOICES = [
+        (KIND_COUNTRY, 'Country'),
+        (KIND_SUBNATIONAL, 'Subnational'),
+        (KIND_AGGREGATE, 'Aggregate'),
+        (KIND_SPECIALTY, 'Specialty'),
+    ]
+    HEMISPHERE_NORTH = 'north'
+    HEMISPHERE_SOUTH = 'south'
+    HEMISPHERE_CHOICES = [
+        (HEMISPHERE_NORTH, 'Northern'),
+        (HEMISPHERE_SOUTH, 'Southern'),
+    ]
+
     name = models.CharField(max_length=100)
     code = models.CharField(max_length=10, primary_key=True)
     codes = models.CharField(max_length=400, null=True, blank=True)
+    parent = models.ForeignKey(
+        'self',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='children',
+        help_text='Sovereign country this region belongs to (e.g. US-MA → US).',
+    )
+    kind = models.CharField(
+        max_length=16,
+        default=KIND_COUNTRY,
+        choices=KIND_CHOICES,
+        db_index=True,
+    )
+    hemisphere = models.CharField(
+        max_length=8,
+        default=HEMISPHERE_NORTH,
+        choices=HEMISPHERE_CHOICES,
+        help_text='Used to map calendar seasons to months.',
+    )
 
     @property
     def count(self):
@@ -145,6 +182,37 @@ class TaxonomicGenus(models.Model):
         return self.name_latin
 
 
+class SpeciesGroup(models.Model):
+    """Birder-facing group (shorebirds, wood-warblers), from eBird sppgroups."""
+
+    slug = models.SlugField(max_length=80, unique=True)
+    ebird_name = models.CharField(max_length=200, unique=True)
+    name_en = models.CharField(max_length=200)
+    name_nl = models.CharField(max_length=200)
+    name_es = models.CharField(max_length=200, blank=True, default='')
+    name_fr = models.CharField(max_length=200, blank=True, default='')
+    name_de = models.CharField(max_length=200, blank=True, default='')
+    name_it = models.CharField(max_length=200, blank=True, default='')
+    name_pt_br = models.CharField(max_length=200, blank=True, default='')
+    name_ja = models.CharField(max_length=200, blank=True, default='')
+    sort_order = models.PositiveIntegerField(db_index=True, default=0)
+    description_en = models.TextField(blank=True, default='')
+    description_nl = models.TextField(blank=True, default='')
+
+    class Meta:
+        ordering = ['sort_order', 'name_en']
+        verbose_name = 'species group'
+        verbose_name_plural = 'species groups'
+
+    def __str__(self):
+        return self.name_en
+
+    def display_name(self, locale: str = 'en') -> str:
+        from jizz.services.species_groups import group_name_for_locale
+
+        return group_name_for_locale(self, locale)
+
+
 class Species(models.Model):
     name = models.CharField(max_length=200)
     name_latin = models.CharField(max_length=200)
@@ -169,6 +237,13 @@ class Species(models.Model):
     )
     taxonomic_genus = models.ForeignKey(
         TaxonomicGenus,
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='species',
+    )
+    species_group = models.ForeignKey(
+        SpeciesGroup,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -336,6 +411,16 @@ def _taxonomy_tables_ready():
         return False
 
 
+def _species_group_table_ready():
+    try:
+        return 'jizz_speciesgroup' in connection.introspection.table_names()
+    except OperationalError:
+        return False
+
+
+MIN_TAX_FILTER_SPECIES = 4
+
+
 def get_tax_order_choices(country=None):
     if not _taxonomy_tables_ready():
         return []
@@ -345,7 +430,7 @@ def get_tax_order_choices(country=None):
             qs = qs.filter(species__countryspecies__country=country)
         tax_orders = (
             qs.annotate(count=Count('species', distinct=True))
-            .filter(count__gt=0)
+            .filter(count__gte=MIN_TAX_FILTER_SPECIES)
             .order_by('name_latin')
         )
         return [
@@ -365,12 +450,32 @@ def get_tax_family_choices(country=None):
             qs = qs.filter(species__countryspecies__country=country)
         families = (
             qs.annotate(count=Count('species', distinct=True))
-            .filter(count__gt=0)
+            .filter(count__gte=MIN_TAX_FILTER_SPECIES)
             .order_by('name_latin')
         )
         return [
             (f.name_latin, f"{f.name_latin} - {f.name_en} ({f.count})")
             for f in families
+        ]
+    except (ProgrammingError, OperationalError):
+        return []
+
+
+def get_species_group_choices(country=None):
+    if not _species_group_table_ready():
+        return []
+    try:
+        qs = SpeciesGroup.objects.all()
+        if country is not None:
+            qs = qs.filter(species__countryspecies__country=country)
+        groups = (
+            qs.annotate(count=Count('species', distinct=True))
+            .filter(count__gte=MIN_TAX_FILTER_SPECIES)
+            .order_by('sort_order', 'name_en')
+        )
+        return [
+            (g.slug, f"{g.name_en} ({g.count})")
+            for g in groups
         ]
     except (ProgrammingError, OperationalError):
         return []
@@ -539,6 +644,33 @@ class Game(models.Model):
         blank=True
     )
 
+    species_group = models.CharField(
+        'Species group',
+        help_text='Only show birds from this group (e.g. shorebirds, warblers)',
+        max_length=80,
+        choices=lazy(get_species_group_choices, tuple)(),
+        null=True,
+        blank=True,
+    )
+
+    SEASON_SPRING = 'spring'
+    SEASON_SUMMER = 'summer'
+    SEASON_AUTUMN = 'autumn'
+    SEASON_WINTER = 'winter'
+    SEASON_CHOICES = [
+        (SEASON_SPRING, 'Spring'),
+        (SEASON_SUMMER, 'Summer'),
+        (SEASON_AUTUMN, 'Autumn'),
+        (SEASON_WINTER, 'Winter'),
+    ]
+    season = models.CharField(
+        max_length=10,
+        null=True,
+        blank=True,
+        choices=SEASON_CHOICES,
+        help_text='When set, question selection uses monthly eBird frequency for this season.',
+    )
+
     @classmethod
     def frequency_filter_q(cls, rarity=None) -> Q:
         """Q filter for species linked to the game country with allowed frequency tiers."""
@@ -567,6 +699,7 @@ class Game(models.Model):
             length=self.length,
             media=self.media,
             rarity=self.rarity,
+            season=self.season,
         )
 
     @property
@@ -776,9 +909,25 @@ class UserProfile(models.Model):
 
 
 class PlayerScore(models.Model):
+    DEVICE_IOS = 'ios'
+    DEVICE_ANDROID = 'android'
+    DEVICE_WEB = 'web'
+    DEVICE_TYPE_CHOICES = [
+        (DEVICE_IOS, 'iOS'),
+        (DEVICE_ANDROID, 'Android'),
+        (DEVICE_WEB, 'Web'),
+    ]
+
     player = models.ForeignKey(Player, related_name='scores', on_delete=models.CASCADE)
     game = models.ForeignKey(Game, related_name='scores', blank=True, null=True, on_delete=models.CASCADE)
     score = models.IntegerField(default=0)
+    app_version = models.CharField(max_length=32, blank=True, default='')
+    device_type = models.CharField(
+        max_length=20,
+        blank=True,
+        default='',
+        choices=DEVICE_TYPE_CHOICES,
+    )
 
     @property
     def play_time(self):
@@ -796,7 +945,9 @@ class PlayerScore(models.Model):
         return f'{hours} hours and {minutes} minutes'
 
     @classmethod
-    def highscore_by_type(cls, level=None, country=None, media=None, length=None, rarity=None):
+    def highscore_by_type(
+        cls, level=None, country=None, media=None, length=None, rarity=None, season=None
+    ):
         qs = cls.objects.filter(
             game__level=level,
             game__country=country,
@@ -805,6 +956,10 @@ class PlayerScore(models.Model):
         )
         if rarity is not None:
             qs = qs.filter(game__rarity=rarity)
+        if season:
+            qs = qs.filter(game__season=season)
+        else:
+            qs = qs.filter(Q(game__season='') | Q(game__season__isnull=True))
         return qs.order_by('-score').first()
 
     @property
@@ -815,7 +970,12 @@ class PlayerScore(models.Model):
             game__media=self.game.media,
             game__length=self.game.length,
             game__rarity=self.game.rarity,
-        ).order_by('-score').all()
+        )
+        if self.game.season:
+            scores = scores.filter(game__season=self.game.season)
+        else:
+            scores = scores.filter(Q(game__season='') | Q(game__season__isnull=True))
+        scores = scores.order_by('-score').all()
         return list(scores).index(self) + 1
 
     @property
@@ -1136,14 +1296,37 @@ class Update(models.Model):
         return self.title_en
 
     def title_for_language(self, language: str) -> str:
-        if language.startswith('nl') and self.title_nl:
-            return self.title_nl
-        return self.title_en
+        from jizz.update_i18n import localized_title
+
+        return localized_title(self, language)
 
     def body_for_language(self, language: str):
-        if language.startswith('nl') and self.body_nl:
-            return self.body_nl
-        return self.body_en
+        from jizz.update_i18n import localized_body
+
+        return localized_body(self, language)
+
+
+class UpdateTranslation(models.Model):
+    """Cached auto-translation of an update for an app UI language."""
+
+    update = models.ForeignKey(Update, related_name='translations', on_delete=models.CASCADE)
+    language = models.CharField(max_length=10)
+    source_hash = models.CharField(max_length=32)
+    title = models.CharField(max_length=200)
+    body_html = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['update', 'language'], name='update_translation_lang_uniq'),
+        ]
+        indexes = [
+            models.Index(fields=['update', 'language', 'source_hash']),
+        ]
+
+    def __str__(self):
+        return f'{self.update_id} {self.language}'
 
 
 class UpdateThumbsUp(models.Model):
@@ -1701,6 +1884,9 @@ class UsageEvent(models.Model):
     )
     session_key = models.CharField(max_length=64, blank=True, default='')
     user_agent = models.TextField(blank=True, default='')
+    app_version = models.CharField(max_length=32, blank=True, default='')
+    app_build = models.CharField(max_length=32, blank=True, default='')
+    os_version = models.CharField(max_length=64, blank=True, default='')
     metadata = models.JSONField(default=dict, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
 
@@ -1710,6 +1896,8 @@ class UsageEvent(models.Model):
             models.Index(fields=['path', 'created_at']),
             models.Index(fields=['platform', 'created_at']),
             models.Index(fields=['country_code', 'created_at']),
+            models.Index(fields=['app_version', 'created_at'], name='jizz_usagee_app_ver_idx'),
+            models.Index(fields=['app_build', 'created_at'], name='jizz_usagee_app_bui_idx'),
         ]
 
     def __str__(self):

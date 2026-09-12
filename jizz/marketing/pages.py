@@ -11,9 +11,23 @@ from django.db import OperationalError, ProgrammingError
 from django.db.models import Q
 from django.utils.safestring import mark_safe
 
+from jizz.marketing.i18n import (
+    alternate_paths,
+    html_lang,
+    js_messages,
+    localize_path,
+    locale_from_request,
+    og_locale,
+    store_badge_urls,
+    strip_locale_prefix,
+    translate,
+    translate_copy,
+    translate_nav_label,
+)
 from jizz.marketing.slugs import country_is_indexable
 from jizz.marketing.testimonials import FAQ, TESTIMONIALS
 from jizz.models import Country, MarketingPage, Species
+from jizz.store_ratings import write_review_url
 
 SITE_NAME = 'Birdr'
 SITE_HOME = '/site/'
@@ -341,13 +355,13 @@ INTENT_PAGES = {
     'community': {
         'title': 'Help Birdr – Community | Birdr',
         'description': (
-            'Help Birdr by sending feedback, reviewing quiz photos, and writing '
-            'descriptions for species comparison pages.'
+            'Help Birdr by sending feedback, reviewing quiz photos, writing '
+            'species comparisons, or sharing it in a bird club newsletter.'
         ),
         'heading': 'Community',
         'lead': (
-            'Birdr is a small project. Feedback, photo review, and comparison '
-            'descriptions for lookalike birds all help.'
+            'Birdr is a small project. Feedback, photo review, comparison '
+            'descriptions, and spreading the word to other birders all help.'
         ),
         'cta_href': '/play',
         'cta_label': 'Play a quiz',
@@ -358,6 +372,27 @@ INTENT_PAGES = {
             ('/play', 'Start a quiz'),
         ],
         'show_countries': True,
+    },
+    'newsletter': {
+        'title': 'Bird club newsletter example | Birdr',
+        'description': (
+            'A ready-to-copy item for your bird club newsletter or magazine, '
+            'with screenshots. Share Birdr with other birders.'
+        ),
+        'heading': 'Add it to your bird club newsletter',
+        'lead': (
+            'A short note in a club email or magazine reaches people who already '
+            'care about identification. You are welcome to reuse the item below, '
+            'including the screenshots. Change the wording if it fits your club better.'
+        ),
+        'cta_href': '/play',
+        'cta_label': 'Play a quiz',
+        'body': [],
+        'links': [
+            ('/site/community/', 'Community'),
+            ('/site/flocks/', 'Flocks'),
+            ('/play', 'Start a quiz'),
+        ],
     },
     'faq': {
         'title': 'Birdr FAQ – Free Bird Identification Quiz',
@@ -459,18 +494,21 @@ def species_approved_image_count(species) -> int:
     )
 
 
-def application_json_ld(origin: str, app_store_url: str, play_store_url: str) -> list[dict]:
+def application_json_ld(origin: str, app_store_url: str, play_store_url: str, locale: str | None = None) -> list[dict]:
     offer = {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}
+    description = translate(DEFAULT_DESCRIPTION, locale)
+    home = origin + localize_path(SITE_HOME, locale)
     return [
         {
             '@context': 'https://schema.org',
             '@type': 'WebApplication',
             'name': SITE_NAME,
-            'url': origin + SITE_HOME,
+            'url': home,
             'applicationCategory': 'EducationalApplication',
             'operatingSystem': 'Web',
-            'description': DEFAULT_DESCRIPTION,
+            'description': description,
             'offers': offer,
+            'inLanguage': html_lang(locale),
         },
         {
             '@context': 'https://schema.org',
@@ -478,9 +516,10 @@ def application_json_ld(origin: str, app_store_url: str, play_store_url: str) ->
             'name': SITE_NAME,
             'operatingSystem': 'iOS',
             'applicationCategory': 'EducationalApplication',
-            'description': DEFAULT_DESCRIPTION,
+            'description': description,
             'offers': offer,
             'installUrl': app_store_url,
+            'inLanguage': html_lang(locale),
         },
         {
             '@context': 'https://schema.org',
@@ -488,14 +527,16 @@ def application_json_ld(origin: str, app_store_url: str, play_store_url: str) ->
             'name': SITE_NAME,
             'operatingSystem': 'Android',
             'applicationCategory': 'EducationalApplication',
-            'description': DEFAULT_DESCRIPTION,
+            'description': description,
             'offers': offer,
             'installUrl': play_store_url,
+            'inLanguage': html_lang(locale),
         },
     ]
 
 
 def faq_json_ld() -> dict:
+    items = translate_copy(FAQ)
     return {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -505,7 +546,7 @@ def faq_json_ld() -> dict:
                 'name': item['question'],
                 'acceptedAnswer': {'@type': 'Answer', 'text': item['answer']},
             }
-            for item in FAQ
+            for item in items
         ],
     }
 
@@ -538,14 +579,14 @@ def dumps_json_ld(blocks: list[dict]) -> str:
 
 def nav_section_for_path(path: str) -> str:
     """Which primary nav item the current marketing URL belongs to."""
-    current = path or ''
+    current = strip_locale_prefix(path or '')
     if current.startswith('/site/how-it-works/'):
         return 'how-it-works'
     if current.startswith('/site/birds/') or current.startswith('/site/compare/'):
         return 'species'
     if current.startswith('/site/bird-quiz-by-country/') or current.startswith('/site/countries/'):
         return 'countries'
-    if current.startswith('/site/community/'):
+    if current.startswith('/site/community/') or current.startswith('/site/newsletter/'):
         return 'community'
     return ''
 
@@ -558,33 +599,61 @@ def _nav_user_name(user) -> str:
     return display_name_for_user(user)
 
 
+def localized_intent_page(slug: str) -> dict | None:
+    page = INTENT_PAGES.get(slug)
+    if page is None:
+        return None
+    return translate_copy(page)
+
+
 def base_context(request, *, title: str, description: str, path: str, breadcrumbs=None, extra_json_ld=None, **extra):
     origin = canonical_origin(request)
+    locale = locale_from_request(request)
     app_store_url, play_store_url = store_urls()
+    apple_badge, play_badge = store_badge_urls(locale)
     og_image = canonical_url(request, OG_IMAGE_PATH)
-    json_ld = application_json_ld(origin, app_store_url, play_store_url)
-    if breadcrumbs:
-        json_ld.append(breadcrumb_json_ld(origin, breadcrumbs))
+    json_ld = application_json_ld(origin, app_store_url, play_store_url, locale)
+    crumbs = [
+        (
+            translate_nav_label(name, locale) if name else name,
+            localize_path(href, locale) if href else href,
+        )
+        for name, href in (breadcrumbs or [])
+    ]
+    if crumbs:
+        json_ld.append(breadcrumb_json_ld(origin, crumbs))
     if extra_json_ld:
         json_ld.extend(extra_json_ld)
+    logical_path = strip_locale_prefix(path) or path
+    localized = localize_path(logical_path, locale) if logical_path.startswith('/site/') else logical_path
+    alts = alternate_paths(logical_path if logical_path.startswith('/site/') else SITE_HOME)
+    for row in alts:
+        row['absolute_url'] = origin + row['url']
+        row['og'] = og_locale(row['code'])
+    request_path = strip_locale_prefix(getattr(request, 'path', '') or path)
     return {
         'site_name': SITE_NAME,
-        'page_title': title,
-        'meta_description': description,
-        'canonical_url': canonical_url(request, path),
+        'page_title': translate(title),
+        'meta_description': translate(description),
+        'canonical_url': canonical_url(request, localized),
         'og_image': og_image,
+        'og_locale': og_locale(locale),
         'app_store_url': app_store_url,
         'play_store_url': play_store_url,
+        'app_store_review_url': write_review_url(app_store_url),
+        'apple_badge_src': apple_badge,
+        'play_badge_src': play_badge,
         'json_ld': dumps_json_ld(json_ld),
-        'breadcrumbs': breadcrumbs or [],
+        'breadcrumbs': crumbs,
         'google_site_verification': getattr(settings, 'GOOGLE_SITE_VERIFICATION', '') or '',
         'bing_site_verification': getattr(settings, 'BING_SITE_VERIFICATION', '') or '',
-        'testimonials': TESTIMONIALS,
-        'faq': FAQ,
-        'home_url': SITE_HOME,
-        'cms_index_url': CMS_INDEX,
+        'testimonials': translate_copy(TESTIMONIALS),
+        'faq': translate_copy(FAQ),
+        'home_url': localize_path(SITE_HOME, locale),
+        'cms_index_url': localize_path(CMS_INDEX, locale),
+        'logout_url': localize_path('/site/logout/', locale),
         'cms_nav_pages': _cms_nav_pages(),
-        'nav_section': nav_section_for_path(path),
+        'nav_section': nav_section_for_path(logical_path),
         'feedback_started': _feedback_started_token(),
         'can_edit': bool(
             getattr(request, 'user', None)
@@ -597,7 +666,13 @@ def base_context(request, *, title: str, description: str, path: str, breadcrumb
             and request.user.is_authenticated
             and (request.user.is_staff or request.user.is_superuser)
         ),
-        'login_href': f'/login?next={quote(getattr(request, "path", path) or path)}',
+        'login_href': f'/login?next={quote(getattr(request, "path", localized) or localized)}',
+        'locale': locale,
+        'html_lang': html_lang(locale),
+        'locale_alternates': alts,
+        'locale_default_url': origin + localize_path(logical_path if logical_path.startswith('/site/') else SITE_HOME, 'en'),
+        'js_i18n': mark_safe(json.dumps(js_messages(locale), ensure_ascii=False)),
+        'request_path': request_path,
         **extra,
     }
 

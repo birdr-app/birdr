@@ -49,6 +49,32 @@ class MainApplication : Application(), ReactApplication {
     ApplicationLifecycleDispatcher.onApplicationCreate(this)
   }
 
+  override fun onTrimMemory(level: Int) {
+    super.onTrimMemory(level)
+    if (level < android.content.ComponentCallbacks2.TRIM_MEMORY_UI_HIDDEN) {
+      return
+    }
+    clearNativeImageMemoryCaches()
+  }
+
+  private fun clearNativeImageMemoryCaches() {
+    try {
+      val fresco = Class.forName("com.facebook.drawee.backends.pipeline.Fresco")
+      val initialized = fresco.getMethod("hasBeenInitialized").invoke(null) as? Boolean ?: false
+      if (initialized) {
+        val pipeline = fresco.getMethod("getImagePipeline").invoke(null)
+        pipeline.javaClass.getMethod("clearMemoryCaches").invoke(pipeline)
+      }
+    } catch (_: Throwable) {
+    }
+    try {
+      val glideClz = Class.forName("com.bumptech.glide.Glide")
+      val glide = glideClz.getMethod("get", android.content.Context::class.java).invoke(null, this)
+      glide.javaClass.getMethod("clearMemory").invoke(glide)
+    } catch (_: Throwable) {
+    }
+  }
+
   override fun onConfigurationChanged(newConfig: Configuration) {
     super.onConfigurationChanged(newConfig)
     ApplicationLifecycleDispatcher.onConfigurationChanged(this, newConfig)

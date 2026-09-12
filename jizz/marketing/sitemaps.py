@@ -6,17 +6,38 @@ from django.http import HttpResponse
 from django.urls import reverse
 
 from compare.models import SpeciesComparison
+from jizz.marketing.i18n import MARKETING_LOCALES, localize_path
 from jizz.marketing.pages import INTENT_PAGES, canonical_origin, public_species_qs
 from jizz.marketing.slugs import compare_pair_slug
 from jizz.marketing.views import _indexable_countries
 
 
-def _urlset(urls: list[str]) -> str:
-    items = '\n'.join(f'  <url><loc>{u}</loc></url>' for u in urls)
+def _urlset(paths: list[str], origin: str) -> str:
+    items = []
+    for path in paths:
+        for locale in MARKETING_LOCALES:
+            loc = origin + localize_path(path, locale)
+            alts = []
+            for other in MARKETING_LOCALES:
+                href = origin + localize_path(path, other)
+                alts.append(
+                    f'    <xhtml:link rel="alternate" hreflang="{other}" href="{href}"/>'
+                )
+            alts.append(
+                f'    <xhtml:link rel="alternate" hreflang="x-default" href="{origin + path}"/>'
+            )
+            items.append(
+                '  <url>\n'
+                f'    <loc>{loc}</loc>\n'
+                + '\n'.join(alts)
+                + '\n  </url>'
+            )
+    joined = '\n'.join(items)
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        f'{items}\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
+        '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+        f'{joined}\n'
         '</urlset>\n'
     )
 
@@ -48,35 +69,35 @@ def sitemap_index(request):
 
 def sitemap_pages(request):
     origin = canonical_origin(request)
-    urls = [origin + '/site/', origin + '/site/birds/']
+    paths = ['/site/', '/site/birds/']
     for slug in INTENT_PAGES:
-        urls.append(f'{origin}/site/{slug}/')
+        paths.append(f'/site/{slug}/')
     from jizz.models import MarketingPage
-    urls.extend(
-        origin + page.get_absolute_url()
+    paths.extend(
+        page.get_absolute_url()
         for page in MarketingPage.objects.filter(published=True)
     )
-    return _xml(_urlset(urls))
+    return _xml(_urlset(paths, origin))
 
 
 def sitemap_countries(request):
     origin = canonical_origin(request)
-    urls = [origin + row['url'] for row in _indexable_countries()]
-    return _xml(_urlset(urls))
+    paths = [row['url'] for row in _indexable_countries()]
+    return _xml(_urlset(paths, origin))
 
 
 def sitemap_birds(request):
     origin = canonical_origin(request)
-    urls = [
-        origin + reverse('marketing-bird', kwargs={'slug': slug})
+    paths = [
+        reverse('marketing-bird', kwargs={'slug': slug})
         for slug in public_species_qs().exclude(slug='').values_list('slug', flat=True)
     ]
-    return _xml(_urlset(urls))
+    return _xml(_urlset(paths, origin))
 
 
 def sitemap_compare(request):
     origin = canonical_origin(request)
-    urls = []
+    paths = []
     seen = set()
     comparisons = SpeciesComparison.objects.filter(
         comparison_type='species',
@@ -92,5 +113,5 @@ def sitemap_compare(request):
         if pair in seen:
             continue
         seen.add(pair)
-        urls.append(origin + reverse('marketing-compare', kwargs={'pair': pair}))
-    return _xml(_urlset(urls))
+        paths.append(reverse('marketing-compare', kwargs={'pair': pair}))
+    return _xml(_urlset(paths, origin))

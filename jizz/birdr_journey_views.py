@@ -326,6 +326,9 @@ class BirdrJourneyStartStepView(BirdrJourneyMixin, APIView):
             host=host,
             language=language,
         )
+        from jizz.client_info import record_player_score_client_from_request
+
+        record_player_score_client_from_request(host, game, request)
         journey_game = BirdrJourneyGame.objects.create(
             birdr_journey=journey,
             journey_step=step,

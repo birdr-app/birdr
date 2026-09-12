@@ -13,6 +13,7 @@ import nlMessages from './locales/nl.json';
 import esMessages from './locales/es.json';
 import frMessages from './locales/fr.json';
 import deMessages from './locales/de.json';
+import itMessages from './locales/it.json';
 import ptBRMessages from './locales/pt-BR.json';
 import jaMessages from './locales/ja.json';
 import MultiPlayerGame from "./pages/mpg/multi-player-game"
@@ -34,6 +35,8 @@ import TexelHiscorePage from "./pages/texel/hiscores"
 import { MyGamesPage } from "./pages/my-games"
 import ChecklistPage from "./pages/checklist"
 import TroubleSpotsPage from "./pages/trouble-spots"
+import TroubleSpotPairPage from "./pages/trouble-spot-pair"
+import TroubleSpotSpeciesPage from "./pages/trouble-spot-species"
 import SpeciesPracticePage from "./pages/practice-species"
 import PairPracticePage from "./pages/practice-pair"
 import { BirdrJourneyListPage } from "./pages/birdr-journey/list"
@@ -74,6 +77,7 @@ export const MainContent = () => {
     es: esMessages,
     fr: frMessages,
     de: deMessages,
+    it: itMessages,
     'pt-BR': ptBRMessages,
     ja: jaMessages,
   }
@@ -97,6 +101,8 @@ export const MainContent = () => {
             <Route path="/my-games" element={<MyGamesPage />} />
             <Route path="/checklist" element={<ChecklistPage />} />
             <Route path="/trouble-spots" element={<TroubleSpotsPage />} />
+            <Route path="/trouble-spots/species/:speciesId" element={<TroubleSpotSpeciesPage />} />
+            <Route path="/trouble-spots/pair/:lowId/:highId" element={<TroubleSpotPairPage />} />
             <Route path="/practice/species/:slug" element={<SpeciesPracticePage />} />
             <Route path="/practice/pair/:pair" element={<PairPracticePage />} />
             <Route path="/flocks/intro" element={<FlocksIntroPage />} />

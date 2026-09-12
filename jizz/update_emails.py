@@ -17,6 +17,7 @@ from django.utils import timezone
 import html2text
 
 from jizz.models import MailSettings, Update, UpdateEmailDelivery, UpdateEmailRecipient, UserProfile
+from jizz.update_i18n import resolve_language
 
 logger = logging.getLogger(__name__)
 
@@ -24,19 +25,6 @@ TRANSPARENT_GIF = (
     b'GIF89a\x01\x00\x01\x00\x80\x00\x00\xff\xff\xff\x00\x00\x00!\xf9\x04\x01\x00\x00\x00\x00'
     b',\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;'
 )
-
-
-def resolve_language(user, accept_language: str = '') -> str:
-    if user and user.is_authenticated:
-        try:
-            lang = (user.profile.language or 'en').lower()
-            if lang.startswith('nl'):
-                return 'nl'
-        except UserProfile.DoesNotExist:
-            pass
-    if accept_language and 'nl' in accept_language.lower():
-        return 'nl'
-    return 'en'
 
 
 def quill_value_to_html(value) -> str:

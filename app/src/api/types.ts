@@ -3,6 +3,9 @@ export interface Country {
   code: string;
   name: string;
   count?: number;
+  parent?: string | null;
+  kind?: string;
+  hemisphere?: string;
 }
 
 export interface Language {
@@ -19,6 +22,19 @@ export interface TaxOrder {
 export interface TaxFamily {
   tax_family: string;
   tax_family_en: string;
+  count: number;
+}
+
+export interface SpeciesGroup {
+  species_group: string;
+  name_en: string;
+  name_nl: string;
+  name_es?: string;
+  name_fr?: string;
+  name_de?: string;
+  name_it?: string;
+  name_pt_br?: string;
+  name_ja?: string;
   count: number;
 }
 

@@ -5,7 +5,7 @@ import type { Language } from '../api/languages';
 import type { Player } from '../api/player';
 import type { Game, Rarity } from '../api/games';
 import { settingsFromPlayLevel, type PlayLevel } from '../game/playLevel';
-import type { TaxOrderRow, TaxFamilyRow } from '../api/taxonomy';
+import type { TaxOrderRow, TaxFamilyRow, SpeciesGroupRow } from '../api/taxonomy';
 import * as playerApi from '../api/player';
 import * as gamesApi from '../api/games';
 import * as authApi from '../api/auth';
@@ -39,6 +39,10 @@ type GameContextType = {
   setTaxOrder: (v: TaxOrderRow | undefined) => void;
   taxFamily: TaxFamilyRow | undefined;
   setTaxFamily: (v: TaxFamilyRow | undefined) => void;
+  speciesGroup: SpeciesGroupRow | undefined;
+  setSpeciesGroup: (v: SpeciesGroupRow | undefined) => void;
+  season: string;
+  setSeason: (v: string) => void;
   player: Player | null;
   game: Game | null;
   loading: boolean;
@@ -53,6 +57,8 @@ type GameContextType = {
   /** Call when user picks species language so a late loadStoredPlayer response does not overwrite it. */
   markSpeciesLanguageUserChosen: () => void;
   isSpeciesLanguageUserChosen: () => boolean;
+  /** Switch bird-name language for this session, player, and in-progress game. */
+  applySpeciesLanguage: (lang: string) => Promise<void>;
   clearGame: () => Promise<void>;
 };
 
@@ -78,6 +84,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
   }, []);
   const [taxOrder, setTaxOrder] = useState<TaxOrderRow | undefined>(undefined);
   const [taxFamily, setTaxFamily] = useState<TaxFamilyRow | undefined>(undefined);
+  const [speciesGroup, setSpeciesGroup] = useState<SpeciesGroupRow | undefined>(undefined);
+  const [season, setSeason] = useState('');
   const [player, setPlayer] = useState<Player | null>(null);
   const [game, setGame] = useState<Game | null>(null);
   const [loading, setLoading] = useState(false);
@@ -111,6 +119,54 @@ export function GameProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const isSpeciesLanguageUserChosen = useCallback(() => speciesLanguageUserChosenRef.current, []);
+
+  const playerRef = useRef(player);
+  playerRef.current = player;
+  const gameRef = useRef(game);
+  gameRef.current = game;
+  const playerNameRef = useRef(playerName);
+  playerNameRef.current = playerName;
+
+  const applySpeciesLanguage = useCallback(async (speciesLang: string) => {
+    if (!speciesLang) return;
+    speciesLanguageUserChosenRef.current = true;
+    setLanguage(speciesLang);
+    const p = playerRef.current;
+    if (p?.token && p.language !== speciesLang) {
+      setPlayer({ ...p, language: speciesLang });
+      try {
+        const accessToken = await authApi.ensureFreshAccessToken();
+        const updated = await playerApi.updatePlayer(
+          p.token,
+          { name: (playerNameRef.current || p.name || '').trim() || p.name, language: speciesLang },
+          accessToken
+        );
+        if (updated) setPlayer(updated);
+      } catch {
+        /* ignore */
+      }
+    }
+    let gameToken = gameRef.current?.token;
+    if (!gameToken) {
+      try {
+        gameToken = (await AsyncStorage.getItem(GAME_TOKEN_KEY)) || undefined;
+      } catch {
+        gameToken = undefined;
+      }
+    }
+    if (gameToken) {
+      const g = gameRef.current;
+      if (g && g.token === gameToken) {
+        setGame({ ...g, language: speciesLang });
+      }
+      try {
+        const updatedGame = await gamesApi.updateGameLanguage(gameToken, speciesLang);
+        if (updatedGame) setGame(updatedGame);
+      } catch {
+        /* ignore */
+      }
+    }
+  }, []);
 
   const trySetInitialPlayerName = useCallback((name: string) => {
     const t = name?.trim();
@@ -216,7 +272,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
     try {
       await AsyncStorage.removeItem(GAME_TOKEN_KEY);
       const g = await gamesApi.createGame(p.token, {
-        multiplayer: false,
+        // Lobby games must be multiplayer so GET /question does not auto-create Q1.
+        multiplayer: true,
         country: country.code,
         language,
         level,
@@ -231,6 +288,11 @@ export function GameProvider({ children }: { children: ReactNode }) {
               : undefined
             : taxOrder?.tax_order,
         tax_family: taxFamily?.tax_family,
+        species_group:
+          mediaType === 'audio' && soundsScope === 'passerines'
+            ? undefined
+            : speciesGroup?.species_group,
+        season: season || undefined,
       });
       if (g) {
         await AsyncStorage.setItem(GAME_TOKEN_KEY, g.token);
@@ -241,7 +303,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
       setLoading(false);
     }
     return null;
-  }, [player, playerName, country, language, level, length, mediaType, soundsScope, rarity, taxOrder, taxFamily, createPlayer]);
+  }, [player, playerName, country, language, level, length, mediaType, soundsScope, rarity, taxOrder, taxFamily, speciesGroup, season, createPlayer]);
 
   const clearGame = useCallback(async () => {
     await AsyncStorage.removeItem(GAME_TOKEN_KEY);
@@ -285,6 +347,10 @@ export function GameProvider({ children }: { children: ReactNode }) {
         setTaxOrder,
         taxFamily,
         setTaxFamily,
+        speciesGroup,
+        setSpeciesGroup,
+        season,
+        setSeason,
         player,
         game,
         loading,
@@ -297,6 +363,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
         trySetInitialPlayerName,
         markSpeciesLanguageUserChosen,
         isSpeciesLanguageUserChosen,
+        applySpeciesLanguage,
         clearGame,
       }}
     >

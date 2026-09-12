@@ -1,8 +1,9 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import { Page } from "../../shared/components/layout"
-import {Box, Button, Flex, Heading, Link, ListRoot, ListItem, TagRoot, VStack, Text} from "@chakra-ui/react"
+import {Box, Button, Flex, Heading, Icon, Link, ListRoot, ListItem, TagRoot, VStack, Text} from "@chakra-ui/react"
 import {FormattedMessage} from "react-intl"
+import { FaChevronDown, FaChevronRight } from "react-icons/fa"
 import copy from "copy-to-clipboard"
 import WebsocketContext from "../../core/websocket-context"
 import AppContext from "../../core/app-context"
@@ -16,17 +17,24 @@ const Lobby: React.FC = () => {
 
   const [copied2, setCopied2] = useState(false)
   const [startingGame, setStartingGame] = useState(false)
+  const [hostRequestedStart, setHostRequestedStart] = useState(false)
+  const [shareOpenOverride, setShareOpenOverride] = useState<boolean | null>(null)
   const {players, startGame, question, gameStarted, markGameStarted} = useContext(WebsocketContext)
   const {player, game} = useContext(AppContext)
   const navigate = useNavigate()
   const gameTokenFromStorage = localStorage.getItem('game-token')
   const gameToken = game?.token ?? gameTokenFromStorage
 
+  const isHost = player?.name === game?.host?.name
+  const playerCount = players?.length ?? 0
+  const shareOpen = shareOpenOverride ?? playerCount > 1
+  const gameAlreadyInPlay = (game?.progress ?? 0) > 0
+
   useEffect(() => {
-    if ((game?.progress ?? 0) > 0) {
+    if (gameAlreadyInPlay) {
       markGameStarted()
     }
-  }, [game?.token, game?.progress, markGameStarted])
+  }, [game?.token, gameAlreadyInPlay, markGameStarted])
 
   const gameLink = `${window.location.origin}/join/${gameToken}`
 
@@ -44,6 +52,7 @@ const Lobby: React.FC = () => {
 
   useEffect(() => {
     if (!gameStarted || !question || !game) return;
+    if (isHost && !hostRequestedStart && !gameAlreadyInPlay) return;
     const currentGameToken = getCurrentGameToken(game, gameToken || null)
 
     if (validateQuestionForGame(question, currentGameToken || undefined)) {
@@ -55,7 +64,7 @@ const Lobby: React.FC = () => {
         currentGameToken
       })
     }
-  }, [question, game, gameToken, gameStarted, navigate]);
+  }, [question, game, gameToken, gameStarted, navigate, isHost, hostRequestedStart, gameAlreadyInPlay]);
 
   useEffect(() => {
     if (question) {
@@ -63,11 +72,10 @@ const Lobby: React.FC = () => {
     }
   }, [question?.id])
 
-  const isHost = player?.name === game?.host?.name
-
   const handleStartGame = () => {
     if (startingGame) return
     setStartingGame(true)
+    setHostRequestedStart(true)
     startGame()
   }
 
@@ -82,47 +90,68 @@ const Lobby: React.FC = () => {
           <FormattedMessage id={'explain mpg'}
                             defaultMessage={'You can play against other players by sharing this link with them. If you want to play solo, you can start the game right away.'}/>
         </Flex>
-        <Flex gap={4}>
-          <FormattedMessage id={'link'} defaultMessage={'Link'}/>
-          <Box><TagRoot onClick={copyLink} fontSize='18px'>{gameLink}</TagRoot></Box>
-          {copied2 ? <FormattedMessage id={'copied'} defaultMessage={'copied!'}/> : (
-            <Link onClick={copyLink}>
-              <FormattedMessage id={'copy'} defaultMessage={'copy'}/>
-            </Link>
-          )}
+        <Flex
+          as="button"
+          width="100%"
+          textAlign="left"
+          alignItems="center"
+          gap={2}
+          mt={2}
+          cursor="pointer"
+          onClick={() => setShareOpenOverride(!shareOpen)}
+          aria-expanded={shareOpen}
+        >
+          <Icon as={shareOpen ? FaChevronDown : FaChevronRight} fontSize="sm" aria-hidden />
+          <Heading size="md" as="span">
+            <FormattedMessage id={'invite players'} defaultMessage={'Invite players'}/>
+            {` (${playerCount})`}
+          </Heading>
         </Flex>
-        <VStack gap={4} align="start">
-          <Box p={4} bg="white" borderRadius="lg" boxShadow="md" border={'1px solid orange'}>
-            <QRCodeSVG 
-              value={gameLink}
-              size={200}
-              level="H"
-              imageSettings={{
-                src: "/images/birdr-logo.png",
-                height: 40,
-                width: 40,
-                excavate: true,
-              }}
-            />
-          </Box>
-          <Text fontSize="sm" color="gray.600">
-            <FormattedMessage 
-              id={'scan to join'} 
-              defaultMessage={'Scan this QR code to join the game'}
-            />
-          </Text>
-        </VStack>
-        
-        <Heading size={'md'} mt={6}>
-          <FormattedMessage id={'players joined'} defaultMessage={'Players joined'}/>
-        </Heading>
-        <ListRoot gap={4}>
-          {players && players.map((player, index) => (
-            <ListItem key={index}>
-              <PlayerItem showAnswer={false} showScore={false} showRanking={false} player={player}/>
-            </ListItem>
-          ))}
-        </ListRoot>
+        {shareOpen && (
+          <>
+            <Flex gap={4}>
+              <FormattedMessage id={'link'} defaultMessage={'Link'}/>
+              <Box><TagRoot onClick={copyLink} fontSize='18px'>{gameLink}</TagRoot></Box>
+              {copied2 ? <FormattedMessage id={'copied'} defaultMessage={'copied!'}/> : (
+                <Link onClick={copyLink}>
+                  <FormattedMessage id={'copy'} defaultMessage={'copy'}/>
+                </Link>
+              )}
+            </Flex>
+            <VStack gap={4} align="start">
+              <Box p={4} bg="white" borderRadius="lg" boxShadow="md" border={'1px solid orange'}>
+                <QRCodeSVG
+                  value={gameLink}
+                  size={200}
+                  level="H"
+                  imageSettings={{
+                    src: "/images/birdr-logo.png",
+                    height: 40,
+                    width: 40,
+                    excavate: true,
+                  }}
+                />
+              </Box>
+              <Text fontSize="sm" color="gray.600">
+                <FormattedMessage
+                  id={'scan to join'}
+                  defaultMessage={'Scan this QR code to join the game'}
+                />
+              </Text>
+            </VStack>
+
+            <Heading size={'md'} mt={6}>
+              <FormattedMessage id={'players joined'} defaultMessage={'Players joined'}/>
+            </Heading>
+            <ListRoot gap={4}>
+              {players && players.map((player, index) => (
+                <ListItem key={index}>
+                  <PlayerItem showAnswer={false} showScore={false} showRanking={false} player={player}/>
+                </ListItem>
+              ))}
+            </ListRoot>
+          </>
+        )}
         {
           isHost ? (
             <Button

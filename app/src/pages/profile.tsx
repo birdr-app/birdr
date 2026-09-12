@@ -29,13 +29,16 @@ import { ProfileLanguageSelect } from "../components/profile-language-select";
 import { ProfileCountrySelect } from "../components/profile-country-select";
 import { AppLanguageSelect } from "../components/app-language-select";
 import type { AppLocale } from "../i18n/app-locales";
+import { speciesLanguageFromAppLocale } from "../i18n/app-locales";
 import AppContext from "../core/app-context";
+import { useAuthProfile } from "../core/auth-profile-context";
 import { parseVisualStyle, type VisualStyle } from "../user/visual-style";
 
 export const ProfilePage = () => {
   const navigate = useNavigate();
   const intl = useIntl();
-  const { setAppLanguage: persistAppLanguage, visualStyle: contextVisualStyle, setVisualStyle } = useContext(AppContext);
+  const { setAppLanguage: persistAppLanguage, applySpeciesLanguage, visualStyle: contextVisualStyle, setVisualStyle } = useContext(AppContext);
+  const { applyProfile } = useAuthProfile();
   const { countries } = UseCountries();
   const { languages } = UseLanguages();
   const [profile, setProfile] = useState<UserProfile | null>(null);
@@ -163,8 +166,14 @@ export const ProfilePage = () => {
 
       const updatedProfile = await profileService.updateProfile(updateData);
       setProfile(updatedProfile);
+      applyProfile(updatedProfile);
       if (updateData.app_language) {
-        persistAppLanguage?.(updatedProfile.app_language || appLanguage);
+        persistAppLanguage?.(updatedProfile.app_language || appLanguage, {
+          syncSpeciesLanguage: false,
+        });
+      }
+      if (updateData.language || updateData.app_language) {
+        applySpeciesLanguage?.(updatedProfile.language || language);
       }
       setUsername(updatedProfile.username);
       setFirstName(updatedProfile.first_name || "");
@@ -439,7 +448,13 @@ export const ProfilePage = () => {
               <Text fontSize="sm" color="gray.500" mb={2}>
                 <FormattedMessage id="app_language_hint" defaultMessage="Menus and buttons" />
               </Text>
-              <AppLanguageSelect value={appLanguage} onChange={setAppLanguage} />
+              <AppLanguageSelect
+                value={appLanguage}
+                onChange={(locale) => {
+                  setAppLanguage(locale);
+                  setLanguage(speciesLanguageFromAppLocale(locale));
+                }}
+              />
             </Box>
 
             <Box>

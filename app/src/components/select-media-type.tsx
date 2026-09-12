@@ -88,7 +88,23 @@ export const SelectMediaType = () => {
             <RadioCard.ItemControl>
               <RadioCard.ItemContent>
                 <RcItemText>
-                  <FormattedMessage id={"videos"} defaultMessage={"Videos"} />
+                  <Flex as="span" align="center" gap={2} wrap="wrap">
+                    <FormattedMessage id={"videos"} defaultMessage={"Videos"} />
+                    <Box
+                      as="span"
+                      fontSize="2xs"
+                      fontWeight="700"
+                      letterSpacing="wider"
+                      textTransform="uppercase"
+                      px="1.5"
+                      py="0.5"
+                      borderRadius="sm"
+                      bg="primary.100"
+                      color="primary.700"
+                    >
+                      <FormattedMessage id="beta" defaultMessage="Beta" />
+                    </Box>
+                  </Flex>
                 </RcItemText>
               </RadioCard.ItemContent>
               <RadioCard.ItemIndicator />

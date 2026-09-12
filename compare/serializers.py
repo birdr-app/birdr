@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import SpeciesTrait, SpeciesComparison, ComparisonRequest
-from jizz.models import Species
+from jizz.update_i18n import resolve_request_language
 import markdown
 
 
@@ -79,6 +79,24 @@ class SpeciesComparisonSerializer(serializers.ModelSerializer):
 
     def get_species_2_slug(self, obj):
         return getattr(obj.species_2, 'slug', None) if getattr(obj, 'species_2_id', None) else None
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        request = self.context.get('request')
+        language = resolve_request_language(request) if request is not None else 'en'
+        generate = self.context.get('generate_translation', True)
+        if language == 'en':
+            return data
+        from compare.i18n import TRANSLATABLE_FIELDS, localized_fields
+
+        fields = localized_fields(instance, language, generate=generate)
+        for key in TRANSLATABLE_FIELDS:
+            value = fields.get(key) or ''
+            data[key] = value or None
+            html_key = f'{key}_html'
+            if html_key in data:
+                data[html_key] = self._markdown_to_html(value)
+        return data
     
     class Meta:
         model = SpeciesComparison

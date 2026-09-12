@@ -1,11 +1,11 @@
 {% extends "marketing/base.html" %}
 {% block content %}
 <section class="hero">
-  <h1>Page not found</h1>
-  <p class="lead">That address is not a page on Birdr.</p>
+  <h1>{% mt "Page not found" %}</h1>
+  <p class="lead">{% mt "That address is not a page on Birdr." %}</p>
   <div class="cta-row">
-    <a class="btn" href="{{ home_url }}">Birdr home</a>
-    <a class="btn secondary" href="/play">Start a quiz</a>
+    <a class="btn" href="{{ home_url }}">{% mt "Birdr home" %}</a>
+    <a class="btn secondary" href="/play">{% mt "Start a quiz" %}</a>
   </div>
 </section>
 {% endblock %}

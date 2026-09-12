@@ -1,5 +1,6 @@
 import { apiUrl } from './config';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { clientInfoHeaders } from './clientInfo';
 
 const ACCESS_TOKEN_KEY = 'access_token';
 const REFRESH_TOKEN_KEY = 'refresh_token';
@@ -233,8 +234,12 @@ export async function getAccessToken(): Promise<string | null> {
 /** Returns headers with Bearer token for authenticated API calls (refreshes access token when needed). */
 export async function getAuthHeaders(): Promise<HeadersInit> {
   const token = await ensureFreshAccessToken();
-  const headers: HeadersInit = { 'Content-Type': 'application/json', Accept: 'application/json' };
-  if (token) (headers as Record<string, string>)['Authorization'] = `Bearer ${token}`;
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+    ...clientInfoHeaders(),
+  };
+  if (token) headers.Authorization = `Bearer ${token}`;
   return headers;
 }
 

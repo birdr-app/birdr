@@ -17,8 +17,8 @@ def rotate_media_list_for_play(items: list[Media], active_index: int) -> list[Me
     """
     Return eligible media with the active item first.
 
-    Play API responses include the full list for newer clients; index 0 is always
-    the current clip so older clients that only read ``images[0]`` stay correct.
+    Play JSON only ships the current clip; index 0 is that item so older clients
+    that only read ``images[0]`` stay correct. Flagging uses ``/next-media/``.
     """
     if not items:
         return []
@@ -26,6 +26,12 @@ def rotate_media_list_for_play(items: list[Media], active_index: int) -> list[Me
     if idx == 0:
         return items
     return items[idx:] + items[:idx]
+
+
+def active_play_media(items: list[Media], active_index: int) -> list[Media]:
+    """The single media item currently shown in play (after rotation)."""
+    rotated = rotate_media_list_for_play(items, active_index)
+    return rotated[:1] if rotated else []
 
 
 def _eligible_media_list(media_rows: list[Media]) -> list[Media]:
@@ -124,9 +130,13 @@ def build_play_serializer_context(question: Question) -> dict:
     if locked_media is not None:
         media_by_species = {question.species_id: [locked_media]}
     else:
-        media_by_species = prefetch_eligible_media_by_species(
+        full = prefetch_eligible_media_by_species(
             [question.species_id], media_type
         )
+        media_by_species = {
+            sid: active_play_media(items, question.number or 0)
+            for sid, items in full.items()
+        }
 
     lang = game.language
     names: dict[tuple[int, str], str] = {}

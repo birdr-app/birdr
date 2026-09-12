@@ -19,6 +19,11 @@ const FLOCK_I18N_KEYS = [
   'flock_invite_title',
   'flock_join',
   'flock_leaderboard',
+  'flocks_weekly_progress',
+  'flocks_weekly_score',
+  'flocks_weekly_correct',
+  'flocks_weekly_rank',
+  'flocks_weekly_cumulative',
   'flock_play_challenge',
   'flock_add_logo',
   'flock_share_result',
@@ -54,6 +59,7 @@ describe('isFlockRoute', () => {
   it('recognizes flock screens', () => {
     expect(isFlockRoute('FlockList')).toBe(true);
     expect(isFlockRoute('FlockDetail')).toBe(true);
+    expect(isFlockRoute('FlockWeeklyProgress')).toBe(true);
     expect(isFlockRoute('FlockInviteLanding')).toBe(true);
     expect(isFlockRoute('FlockChallengeResult')).toBe(true);
     expect(isFlockRoute('Home')).toBe(false);

@@ -31,9 +31,12 @@ import { matchCountry, resolveDefaultCountry } from '../lib/countryPreference';
 import {
   loadTaxOrders,
   loadTaxFamilies,
+  loadSpeciesGroups,
   type TaxOrderRow,
   type TaxFamilyRow,
+  type SpeciesGroupRow,
 } from '../api/taxonomy';
+import { speciesGroupDisplayName, speciesGroupSearchHaystack } from '../lib/speciesGroupName';
 import type { PlayLevel } from '../game/playLevel';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
@@ -50,7 +53,7 @@ const LENGTHS = ['10', '20', '50', '100'];
 const MEDIA = [
   { value: 'images', labelKey: 'pictures' },
   { value: 'audio', labelKey: 'sounds' },
-  // { value: 'video', labelKey: 'videos' },
+  { value: 'video', labelKey: 'videos', beta: true },
 ];
 
 export function StartScreen() {
@@ -78,6 +81,8 @@ export function StartScreen() {
     setTaxOrder,
     taxFamily,
     setTaxFamily,
+    speciesGroup,
+    setSpeciesGroup,
     player,
     loading,
     createGame,
@@ -95,16 +100,20 @@ export function StartScreen() {
   const [languageSearch, setLanguageSearch] = useState('');
   const [taxOrders, setTaxOrders] = useState<TaxOrderRow[]>([]);
   const [taxFamilies, setTaxFamilies] = useState<TaxFamilyRow[]>([]);
+  const [speciesGroups, setSpeciesGroups] = useState<SpeciesGroupRow[]>([]);
   const [orderModalVisible, setOrderModalVisible] = useState(false);
   const [familyModalVisible, setFamilyModalVisible] = useState(false);
+  const [groupModalVisible, setGroupModalVisible] = useState(false);
   const [orderSearch, setOrderSearch] = useState('');
   const [familySearch, setFamilySearch] = useState('');
+  const [groupSearch, setGroupSearch] = useState('');
   const [saveToProfile, setSaveToProfile] = useState(false);
 
   useEffect(() => {
     if (!country?.code) {
       setTaxOrders([]);
       setTaxFamilies([]);
+      setSpeciesGroups([]);
       return;
     }
     let cancelled = false;
@@ -113,6 +122,9 @@ export function StartScreen() {
     });
     loadTaxFamilies(country.code).then((rows) => {
       if (!cancelled) setTaxFamilies(rows);
+    });
+    loadSpeciesGroups(country.code).then((rows) => {
+      if (!cancelled) setSpeciesGroups(rows);
     });
     return () => {
       cancelled = true;
@@ -183,6 +195,22 @@ export function StartScreen() {
         row.tax_family.toLowerCase().includes(q)
     );
   }, [taxFamilies, familySearch]);
+
+  const groupLabel = useCallback(
+    (row: SpeciesGroupRow) => {
+      const name = speciesGroupDisplayName(row, locale);
+      return `${name} (${row.count})`;
+    },
+    [locale]
+  );
+
+  const filteredSpeciesGroups = React.useMemo(() => {
+    if (!groupSearch.trim()) return speciesGroups;
+    const q = groupSearch.trim().toLowerCase();
+    return speciesGroups.filter(
+      (row) => speciesGroupSearchHaystack(row).includes(q)
+    );
+  }, [speciesGroups, groupSearch]);
 
   const differsFromProfile = useMemo(() => {
     if (!isAuthenticated || !profile) return false;
@@ -300,7 +328,7 @@ export function StartScreen() {
           if (c) setCountry(c);
         }}
         countries={countries}
-        excludeRegionCodes={false}
+        showStatePicker
         style={styles.countrySelect}
         testID="start.selectCountry"
       />
@@ -343,9 +371,11 @@ export function StartScreen() {
           accessibilityRole="search"
         />
         <FlatList
+          style={styles.modalList}
           data={filteredLanguages}
           keyExtractor={(l) => l.code}
           keyboardShouldPersistTaps="handled"
+          keyboardDismissMode="on-drag"
           renderItem={({ item }) => {
             const selected = language === item.code;
             const label = getLanguageDisplayName(item, locale);
@@ -432,9 +462,11 @@ export function StartScreen() {
           accessibilityRole="search"
         />
         <FlatList
+          style={styles.modalList}
           data={filteredTaxOrders}
           keyExtractor={(item) => item.tax_order}
           keyboardShouldPersistTaps="handled"
+          keyboardDismissMode="on-drag"
           renderItem={({ item }) => {
             const selected = taxOrder?.tax_order === item.tax_order;
             const label = `${item.tax_order} (${item.count})`;
@@ -444,6 +476,7 @@ export function StartScreen() {
                 onPress={() => {
                   setTaxOrder(item);
                   setTaxFamily(undefined);
+                  setSpeciesGroup(undefined);
                   setOrderModalVisible(false);
                   setOrderSearch('');
                 }}
@@ -500,9 +533,11 @@ export function StartScreen() {
           accessibilityRole="search"
         />
         <FlatList
+          style={styles.modalList}
           data={filteredTaxFamilies}
           keyExtractor={(item) => item.tax_family}
           keyboardShouldPersistTaps="handled"
+          keyboardDismissMode="on-drag"
           renderItem={({ item }) => {
             const selected = taxFamily?.tax_family === item.tax_family;
             const label = `${item.tax_family} - ${item.tax_family_en} (${item.count})`;
@@ -512,6 +547,7 @@ export function StartScreen() {
                 onPress={() => {
                   setTaxFamily(item);
                   setTaxOrder(undefined);
+                  setSpeciesGroup(undefined);
                   setFamilyModalVisible(false);
                   setFamilySearch('');
                 }}
@@ -547,17 +583,89 @@ export function StartScreen() {
         </TouchableOpacity>
       </AccessibleSheetModal>
 
+      <AccessibleSheetModal
+        visible={groupModalVisible}
+        onClose={() => {
+          setGroupModalVisible(false);
+          setGroupSearch('');
+        }}
+        backdropStyle={styles.modalBackdrop}
+        contentStyle={styles.modalContent}
+      >
+        <Text style={styles.modalTitle} accessibilityRole="header">
+          {t('species_group')}
+        </Text>
+        <TextInput
+          style={styles.searchInput}
+          placeholder={t('search')}
+          placeholderTextColor={colors.primary[400]}
+          value={groupSearch}
+          onChangeText={setGroupSearch}
+          accessibilityLabel={t('search')}
+          accessibilityRole="search"
+        />
+        <FlatList
+          style={styles.modalList}
+          data={filteredSpeciesGroups}
+          keyExtractor={(item) => item.species_group}
+          keyboardShouldPersistTaps="handled"
+          keyboardDismissMode="on-drag"
+          renderItem={({ item }) => {
+            const selected = speciesGroup?.species_group === item.species_group;
+            const label = groupLabel(item);
+            return (
+              <TouchableOpacity
+                style={[styles.modalItem, selected && styles.modalItemSelected]}
+                onPress={() => {
+                  setSpeciesGroup(item);
+                  setTaxOrder(undefined);
+                  setTaxFamily(undefined);
+                  setGroupModalVisible(false);
+                  setGroupSearch('');
+                }}
+                accessible
+                accessibilityRole="button"
+                accessibilityState={{ selected }}
+                accessibilityLabel={selected ? `${label}, ${t('picker_item_selected')}` : label}
+              >
+                <Text
+                  style={[styles.modalItemText, selected && styles.modalItemTextSelected]}
+                  numberOfLines={2}
+                  accessible={false}
+                >
+                  {label}
+                </Text>
+              </TouchableOpacity>
+            );
+          }}
+        />
+        <TouchableOpacity
+          style={styles.modalClose}
+          onPress={() => {
+            setGroupModalVisible(false);
+            setGroupSearch('');
+          }}
+          accessible
+          accessibilityRole="button"
+          accessibilityLabel={t('close')}
+        >
+          <Text style={styles.modalCloseText} accessible={false}>
+            {t('close')}
+          </Text>
+        </TouchableOpacity>
+      </AccessibleSheetModal>
+
       <TouchableOpacity
         style={[styles.startButton, (!country || !playerName.trim()) && styles.startButtonDisabled]}
         onPress={handleStart}
         disabled={loading || !country || !playerName.trim()}
         testID="start.startGame"
-        accessibilityLabel={t('start_new_game')}
+        accessibilityLabel={t('create_game')}
       >
         {loading ? (
           <ActivityIndicator color={colors.primary[50]} />
         ) : (
-          <Text style={styles.startButtonText}>{t('start_new_game')}</Text>
+          <Text style={styles.startButtonText}>{t('create_game')}</Text>
         )}
       </TouchableOpacity>
 
@@ -602,6 +710,11 @@ export function StartScreen() {
             }}
           >
             <Text style={[styles.chipText, mediaType === m.value && styles.chipTextSelected]}>{t(m.labelKey)}</Text>
+            {m.beta ? (
+              <Text style={[styles.betaBadge, mediaType === m.value && styles.betaBadgeSelected]}>
+                {t('beta')}
+              </Text>
+            ) : null}
           </TouchableOpacity>
         ))}
       </View>
@@ -674,6 +787,29 @@ export function StartScreen() {
         </TouchableOpacity>
       )}
 
+      <Text style={styles.label}>{t('species_group')}</Text>
+      <TouchableOpacity
+        style={styles.selectButton}
+        onPress={() => {
+          setGroupSearch('');
+          setGroupModalVisible(true);
+        }}
+        accessibilityLabel={t('species_group')}
+      >
+        <Text style={styles.selectButtonText} numberOfLines={2}>
+          {speciesGroup ? groupLabel(speciesGroup) : t('select_species_group')}
+        </Text>
+      </TouchableOpacity>
+      {speciesGroup != null && (
+        <TouchableOpacity
+          onPress={() => setSpeciesGroup(undefined)}
+          style={styles.clearTaxLink}
+          accessibilityLabel={t('clear_tax_filter')}
+        >
+          <Text style={styles.clearTaxLinkText}>{t('clear_tax_filter')}</Text>
+        </TouchableOpacity>
+      )}
+
       <Text style={styles.taxHint}>{t('tax_filter_hint')}</Text>
 
     </ScrollView>
@@ -699,6 +835,9 @@ const styles = StyleSheet.create({
   mediaRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 4 },
   row: { flexDirection: 'row', gap: 8, marginBottom: 4 },
   chip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
     paddingVertical: 8,
     paddingHorizontal: 14,
     borderRadius: 8,
@@ -709,6 +848,22 @@ const styles = StyleSheet.create({
   chipSelected: { backgroundColor: colors.primary[100], borderColor: colors.primary[800] },
   chipText: { fontSize: 14, color: colors.primary[800] },
   chipTextSelected: { color: colors.primary[800],fontWeight: '600',  },
+  betaBadge: {
+    fontSize: 9,
+    fontWeight: '700',
+    letterSpacing: 0.5,
+    textTransform: 'uppercase',
+    color: colors.primary[600],
+    backgroundColor: colors.primary[50],
+    paddingHorizontal: 5,
+    paddingVertical: 1,
+    borderRadius: 4,
+    overflow: 'hidden',
+  },
+  betaBadgeSelected: {
+    color: colors.primary[800],
+    backgroundColor: '#fff',
+  },
   levelRow: {
     padding: 12,
     borderRadius: 8,
@@ -785,12 +940,16 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: colors.primary[800],
     marginBottom: 8,
+    flexShrink: 0,
+  },
+  modalList: {
+    flex: 1,
   },
   modalItem: { paddingVertical: 14, paddingHorizontal: 8 },
   modalItemSelected: { backgroundColor: colors.primary[100] },
   modalItemText: { fontSize: 16, color: colors.primary[800] },
   modalItemTextSelected: { fontWeight: '600', color: colors.primary[700] },
-  modalClose: { marginTop: 12, paddingVertical: 12, alignItems: 'center' },
+  modalClose: { marginTop: 12, paddingVertical: 12, alignItems: 'center', flexShrink: 0 },
   modalCloseText: { fontSize: 16, color: colors.primary[500], fontWeight: '600' },
   clearTaxLink: { alignSelf: 'flex-start', marginTop: 4, marginBottom: 4 },
   clearTaxLinkText: { fontSize: 14, color: colors.primary[500], fontWeight: '600' },

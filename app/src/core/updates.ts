@@ -29,7 +29,7 @@ type PaginatedUpdates = {
   results: UpdateListItem[];
 };
 
-async function authHeaders(): Promise<Record<string, string>> {
+async function authHeaders(language?: string): Promise<Record<string, string>> {
   const headers: Record<string, string> = {
     Accept: 'application/json',
     'Content-Type': 'application/json',
@@ -38,15 +38,28 @@ async function authHeaders(): Promise<Record<string, string>> {
   if (token) {
     headers.Authorization = `Bearer ${token}`;
   }
+  if (language) {
+    headers['Accept-Language'] = language;
+  }
   return headers;
 }
 
-export async function loadUpdates(playerToken?: string): Promise<UpdateListItem[]> {
-  const query = playerToken ? `?player_token=${encodeURIComponent(playerToken)}` : '';
-  const response = await fetch(apiUrl(`/api/updates/${query}`), {
+function updatesQuery(playerToken?: string, language?: string): string {
+  const params = new URLSearchParams();
+  if (playerToken) params.set('player_token', playerToken);
+  if (language) {
+    params.set('app_language', language);
+    params.set('language', language);
+  }
+  const query = params.toString();
+  return query ? `?${query}` : '';
+}
+
+export async function loadUpdates(playerToken?: string, language?: string): Promise<UpdateListItem[]> {
+  const response = await fetch(apiUrl(`/api/updates/${updatesQuery(playerToken, language)}`), {
     cache: 'no-cache',
     method: 'GET',
-    headers: await authHeaders(),
+    headers: await authHeaders(language),
   });
   if (!response.ok) {
     return [];
@@ -55,12 +68,15 @@ export async function loadUpdates(playerToken?: string): Promise<UpdateListItem[
   return data.results ?? [];
 }
 
-export async function loadUpdateDetail(id: string | number, playerToken?: string): Promise<UpdateDetail | null> {
-  const query = playerToken ? `?player_token=${encodeURIComponent(playerToken)}` : '';
-  const response = await fetch(apiUrl(`/api/updates/${id}/${query}`), {
+export async function loadUpdateDetail(
+  id: string | number,
+  playerToken?: string,
+  language?: string,
+): Promise<UpdateDetail | null> {
+  const response = await fetch(apiUrl(`/api/updates/${id}/${updatesQuery(playerToken, language)}`), {
     cache: 'no-cache',
     method: 'GET',
-    headers: await authHeaders(),
+    headers: await authHeaders(language),
   });
   if (!response.ok) {
     return null;

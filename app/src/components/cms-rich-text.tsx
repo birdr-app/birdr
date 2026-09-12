@@ -22,24 +22,33 @@ function isQuillContent(content: string): boolean {
   return t.startsWith('{') && (t.includes('"ops"') || t.includes('"delta"') || t.includes('"html"'));
 }
 
+const LEGACY_GITHUB_REPO = /https?:\/\/github\.com\/gannetson\/birdr/g;
+const CURRENT_GITHUB_REPO = 'https://github.com/birdr-app/birdr';
+
+export function rewriteLegacyGithubRepo(value: string): string {
+  return value.replace(LEGACY_GITHUB_REPO, CURRENT_GITHUB_REPO);
+}
+
 /** Prefer stored HTML (same as mobile), otherwise leave Quill JSON for the delta viewer. */
 export function extractCmsHtml(raw: string | object | null | undefined): string | null {
   if (raw == null) return null;
   if (typeof raw === 'object') {
     const obj = raw as QuillPayload;
-    if (typeof obj.html === 'string' && obj.html.trim().length > 0) return obj.html;
+    if (typeof obj.html === 'string' && obj.html.trim().length > 0) {
+      return rewriteLegacyGithubRepo(obj.html);
+    }
     return null;
   }
   const bodyStr = raw.trim();
   if (!bodyStr) return null;
-  if (!bodyStr.startsWith('{')) return bodyStr;
+  if (!bodyStr.startsWith('{')) return rewriteLegacyGithubRepo(bodyStr);
   try {
     const parsed = JSON.parse(bodyStr) as QuillPayload;
     if (typeof parsed?.html === 'string' && parsed.html.trim().length > 0) {
-      return parsed.html;
+      return rewriteLegacyGithubRepo(parsed.html);
     }
   } catch {
-    return bodyStr;
+    return rewriteLegacyGithubRepo(bodyStr);
   }
   return null;
 }
@@ -58,14 +67,14 @@ export function CmsRichText({ content, className }: { content: string; className
     );
   }
   if (isQuillContent(content)) {
-    return <QuillContentViewer content={content} className={className} />;
+    return <QuillContentViewer content={rewriteLegacyGithubRepo(content)} className={className} />;
   }
   return (
     <>
       <style>{CMS_HTML_STYLES}</style>
       <div
         className={`help-page-content help-page-html ${className ?? ''}`}
-        dangerouslySetInnerHTML={{ __html: content || '' }}
+          dangerouslySetInnerHTML={{ __html: rewriteLegacyGithubRepo(content || '') }}
       />
     </>
   );

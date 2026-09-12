@@ -45,6 +45,8 @@ export type Flock = {
   is_member: boolean;
   can_leave?: boolean;
   active_challenge: FlockChallengeSummary | null;
+  challenge_count?: number;
+  history_path?: string | null;
   invite?: FlockInvite | null;
 };
 
@@ -154,6 +156,26 @@ export type FlockPublicResult = {
   country: CountryRef;
 };
 
+export type FlockProgressPlayer = {
+  user_id: number;
+  display_name: string;
+  correct: Array<number | null>;
+  rank: Array<number | null>;
+  cumulative: Array<number | null>;
+};
+
+export type FlockProgress = {
+  flock_name: string;
+  flock_slug: string;
+  logo_url: string | null;
+  labels: string[];
+  max_correct: number;
+  max_rank: number;
+  max_cumulative: number;
+  players: FlockProgressPlayer[];
+  challenge_count: number;
+};
+
 export type FlockMember = {
   user_id: number;
   display_name: string;
@@ -178,6 +200,7 @@ const FLOCK_ROUTE_NAMES = new Set([
   'FlockMembers',
   'FlockInvite',
   'FlockLeaderboard',
+  'FlockWeeklyProgress',
   'FlockInviteLanding',
   'FlockChallengeResult',
 ]);
@@ -274,6 +297,16 @@ export async function getFlock(slug: string): Promise<Flock> {
     throw new Error(parseError(data, 'Failed to load flock'));
   }
   return data as Flock;
+}
+
+/** Weekly score/rank/cumulative series (members only). */
+export async function getFlockProgress(slug: string): Promise<FlockProgress> {
+  const response = await flockRequest(apiUrl(`/api/flocks/${slug}/progress/`), { method: 'GET' });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    throw new Error(parseError(data, 'Failed to load weekly progress'));
+  }
+  return data as FlockProgress;
 }
 
 /** List flock members (members only). */

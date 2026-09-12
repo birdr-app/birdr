@@ -126,6 +126,35 @@ class SpeciesComparison(models.Model):
         return f"Comparison {self.id}"
 
 
+class ComparisonTranslation(models.Model):
+    """Cached auto-translation of a comparison for an app UI language."""
+
+    comparison = models.ForeignKey(
+        SpeciesComparison,
+        related_name='translations',
+        on_delete=models.CASCADE,
+    )
+    language = models.CharField(max_length=10)
+    source_hash = models.CharField(max_length=32)
+    fields = models.JSONField(default=dict)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['comparison', 'language'],
+                name='comparison_translation_lang_uniq',
+            ),
+        ]
+        indexes = [
+            models.Index(fields=['comparison', 'language', 'source_hash']),
+        ]
+
+    def __str__(self):
+        return f'{self.comparison_id} {self.language}'
+
+
 class ComparisonRequest(models.Model):
     """
     Tracks requests for generating comparisons (for analytics and caching).

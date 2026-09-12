@@ -12,7 +12,7 @@ import { Page } from '../shared/components/layout';
 
 export default function UpdateDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const { player } = useContext(AppContext);
+  const { player, appLanguage } = useContext(AppContext);
   const [update, setUpdate] = useState<UpdateDetail | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -21,7 +21,7 @@ export default function UpdateDetailPage() {
   useEffect(() => {
     if (!id) return;
     setLoading(true);
-    loadUpdateDetail(id, player?.token)
+    loadUpdateDetail(id, player?.token, appLanguage || 'en')
       .then((data) => {
         if (!data) {
           setError('Update not found');
@@ -31,7 +31,7 @@ export default function UpdateDetailPage() {
       })
       .catch(() => setError('Failed to load update'))
       .finally(() => setLoading(false));
-  }, [id, player?.token]);
+  }, [id, player?.token, appLanguage]);
 
   const handleToggle = async (next: boolean) => {
     if (!update || toggling) return;

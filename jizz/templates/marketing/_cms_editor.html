@@ -43,12 +43,18 @@
   }
   .cms-bar .status { font-size: 0.85rem; opacity: 0.9; }
   .cms-page-links { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-  .cms-editing [data-field] {
+  .cms-editing [data-field="title"] {
     outline: 2px dashed #8b6419;
     outline-offset: 6px;
     min-height: 1.4em;
   }
+  .cms-editing #cms-body {
+    outline: 2px dashed #8b6419;
+    outline-offset: 8px;
+    min-height: 8em;
+  }
 </style>
+{% include "includes/rich_text_editor.html" %}
 <div class="cms-bar" id="cms-bar" data-slug="{{ cms_page.slug|default:'' }}">
   {% csrf_token %}
   <span id="cms-page-links" class="cms-page-links"></span>
@@ -113,14 +119,51 @@
     document.getElementById('cms-nav-label').hidden = !on;
   }
 
+  function bodyHtml() {
+    var editor = window.tinymce && bodyEl && tinymce.get(bodyEl.id);
+    if (editor) return editor.getContent();
+    return bodyEl ? bodyEl.innerHTML : '';
+  }
+
+  function destroyBodyEditor() {
+    if (!window.tinymce || !bodyEl) return;
+    var editor = tinymce.get(bodyEl.id);
+    if (editor) editor.remove();
+  }
+
+  function startBodyEditor() {
+    if (!bodyEl || !window.BIRDR_RICH_TEXT) {
+      if (bodyEl) bodyEl.contentEditable = 'true';
+      return Promise.resolve();
+    }
+    return window.BIRDR_RICH_TEXT.load().then(function () {
+      destroyBodyEditor();
+      return tinymce.init(window.BIRDR_RICH_TEXT.options({
+        selector: '#' + bodyEl.id,
+        inline: true,
+        toolbar_persist: true,
+      })).then(function () {
+        var editor = tinymce.get(bodyEl.id);
+        if (editor) editor.focus();
+      });
+    }).catch(function () {
+      if (bodyEl) bodyEl.contentEditable = 'true';
+      setStatus('Could not load the formatting toolbar — you can still edit as plain HTML.');
+    });
+  }
+
   function setEditing(on) {
     document.body.classList.toggle('cms-editing', on);
     if (titleEl) titleEl.contentEditable = on ? 'true' : 'false';
-    if (bodyEl) bodyEl.contentEditable = on ? 'true' : 'false';
+    if (!on) {
+      destroyBodyEditor();
+      if (bodyEl) bodyEl.contentEditable = 'false';
+    }
     editBtn.hidden = on || !slug;
     saveBtn.hidden = !on;
     cancelBtn.hidden = !on;
     showPageFields(!!slug);
+    if (on) startBodyEditor();
   }
 
   function loadPage() {
@@ -188,7 +231,7 @@
   editBtn.addEventListener('click', function () {
     snapshot = {
       title: titleEl ? titleEl.innerText : '',
-      body: bodyEl ? bodyEl.innerHTML : '',
+      body: bodyHtml(),
       meta: metaEl.value,
       published: publishedEl.checked,
       nav: navEl.checked
@@ -197,6 +240,7 @@
     setStatus('Editing — change the title or body, then Save.');
   });
   cancelBtn.addEventListener('click', function () {
+    destroyBodyEditor();
     if (titleEl) titleEl.innerText = snapshot.title;
     if (bodyEl) bodyEl.innerHTML = snapshot.body;
     metaEl.value = snapshot.meta;
@@ -214,7 +258,7 @@
       headers: headers(true),
       body: JSON.stringify({
         title: titleEl ? titleEl.innerText.trim() : '',
-        body: bodyEl ? bodyEl.innerHTML : '',
+        body: bodyHtml(),
         meta_description: metaEl.value.trim(),
         published: publishedEl.checked,
         show_in_nav: navEl.checked
@@ -253,7 +297,7 @@
       if (slug) {
         snapshot = {
           title: titleEl ? titleEl.innerText : '',
-          body: bodyEl ? bodyEl.innerHTML : '',
+          body: bodyHtml(),
           meta: metaEl.value,
           published: publishedEl.checked,
           nav: navEl.checked

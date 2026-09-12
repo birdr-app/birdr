@@ -23,33 +23,22 @@ import {
   setStoredMainFlockSlug,
   type InvitePreview,
 } from '../../api/flocks';
-import { authService } from '../../api/services/auth.service';
 import { LoginModal } from '../../components/auth/login-modal';
 import { BirdrArtImage } from '../../components/birdr-art-image';
 import { Page } from '../../shared/components/layout';
+import { useAuthProfile } from '../../core/auth-profile-context';
 import AppStoreBanner from '../../components/app-store-banner';
 
 export function FlockInviteLandingPage() {
   const { token = '' } = useParams<{ token: string }>();
   const navigate = useNavigate();
+  const { isAuthenticated } = useAuthProfile();
 
   const [preview, setPreview] = useState<InvitePreview | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [joining, setJoining] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(() => !!authService.getAccessToken());
   const [loginOpen, setLoginOpen] = useState(false);
-
-  useEffect(() => {
-    const syncAuth = () => setIsAuthenticated(!!authService.getAccessToken());
-    syncAuth();
-    window.addEventListener('focus', syncAuth);
-    const interval = setInterval(syncAuth, 3000);
-    return () => {
-      window.removeEventListener('focus', syncAuth);
-      clearInterval(interval);
-    };
-  }, []);
 
   const load = useCallback(async () => {
     if (!token) {
@@ -259,12 +248,7 @@ export function FlockInviteLandingPage() {
 
       <LoginModal
         isOpen={loginOpen}
-        onClose={() => {
-          setLoginOpen(false);
-          if (authService.getAccessToken()) {
-            setIsAuthenticated(true);
-          }
-        }}
+        onClose={() => setLoginOpen(false)}
       />
     </Page>
   );

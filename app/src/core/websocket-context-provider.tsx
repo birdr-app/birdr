@@ -3,8 +3,10 @@ import AppContext, {Answer, Game, MultiPlayer, Player, Question, Species} from "
 import WebsocketContext from "./websocket-context"
 import { toaster } from "@/components/ui/toaster"
 import { validateQuestionForGame } from './game-token-validator'
-import { getWebSocketUrl } from '../api/baseUrl'
+import { apiUrl, getWebSocketUrl } from '../api/baseUrl'
+import { clientInfoPayload } from '../api/clientInfo'
 import { isStalePlayQuestion } from './apply-incoming-question'
+import { prefetchQuestionPlayMedia } from './prefetch-play-media'
 
 type Props = {
   children: ReactNode;
@@ -83,6 +85,37 @@ const WebsocketContextProvider: FC<Props> = ({children}) => {
     currentQuestionSeqRef.current = question?.sequence
   }, [question?.id, question?.sequence])
 
+  const prevGameLanguageRef = useRef<string | undefined>(game?.language)
+  useEffect(() => {
+    const next = game?.language
+    if (prevGameLanguageRef.current === next) return
+    prevGameLanguageRef.current = next
+    const token = game?.token
+    if (!token || !next || !currentQuestionIdRef.current) return
+    let cancelled = false
+    fetch(apiUrl(`/api/games/${encodeURIComponent(token)}/question?${Date.now()}`), {
+      cache: 'no-store',
+    })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data) => {
+        if (cancelled || !data?.id) return
+        if (
+          isStalePlayQuestion(
+            { id: currentQuestionIdRef.current, sequence: currentQuestionSeqRef.current },
+            data
+          )
+        ) {
+          return
+        }
+        prefetchQuestionPlayMedia(data, data?.game?.media ?? data?.media)
+        setQuestion(data)
+      })
+      .catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [game?.token, game?.language])
+
   const markGameStarted = useCallback(() => {
     setGameStarted(true)
   }, [])
@@ -137,7 +170,8 @@ const WebsocketContextProvider: FC<Props> = ({children}) => {
       ws.send(JSON.stringify({
         action: 'join_game', 
         player_token: activePlayer.token,
-        language_code: language
+        language_code: language,
+        ...clientInfoPayload(),
       }))
 
       // Flush any pending actions that were queued while socket was closed.
@@ -193,6 +227,7 @@ const WebsocketContextProvider: FC<Props> = ({children}) => {
           if (incomingQuestion?.id !== currentQuestionIdRef.current) {
             setAnswer(undefined)
           }
+          prefetchQuestionPlayMedia(incomingQuestion, incomingQuestion?.game?.media ?? incomingQuestion?.media)
           setQuestion(incomingQuestion)
           currentQuestionIdRef.current = incomingQuestion?.id
           currentQuestionSeqRef.current = incomingQuestion?.sequence
@@ -336,6 +371,7 @@ const WebsocketContextProvider: FC<Props> = ({children}) => {
     setQuestion(undefined)
     setAnswer(undefined)
     setGameStarted(false)
+    pendingActionsRef.current = []
     currentQuestionIdRef.current = undefined
     currentQuestionSeqRef.current = undefined
     
@@ -395,6 +431,7 @@ const WebsocketContextProvider: FC<Props> = ({children}) => {
       setAnswer(undefined)
       setPlayers([])
       setGameStarted(false)
+      pendingActionsRef.current = []
       currentQuestionIdRef.current = undefined
       currentQuestionSeqRef.current = undefined
       isConnectingRef.current = false
@@ -413,6 +450,7 @@ const WebsocketContextProvider: FC<Props> = ({children}) => {
       setAnswer(undefined)
       setPlayers([])
       setGameStarted(false)
+      pendingActionsRef.current = []
       currentQuestionIdRef.current = undefined
       currentQuestionSeqRef.current = undefined
       isConnectingRef.current = false

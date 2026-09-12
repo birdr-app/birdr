@@ -34,64 +34,7 @@ from jizz.ebird_st_commonness import (
     write_commonness_outputs,
 )
 from jizz.models import CountrySpecies
-
-
-_US_EAST = (
-    "US-ND",
-    "US-SD",
-    "US-NE",
-    "US-KS",
-    "US-OK",
-    "US-TX",
-    "US-MN",
-    "US-IA",
-    "US-MO",
-    "US-AR",
-    "US-LA",
-    "US-WI",
-    "US-IL",
-    "US-IN",
-    "US-OH",
-    "US-KY",
-    "US-TN",
-    "US-MS",
-    "US-MI",
-    "US-AL",
-    "US-GA",
-    "US-FL",
-    "US-SC",
-    "US-NC",
-    "US-VA",
-    "US-WV",
-    "US-PA",
-    "US-NY",
-    "US-VT",
-    "US-NH",
-    "US-ME",
-    "US-MA",
-    "US-CT",
-    "US-RI",
-    "US-NJ",
-    "US-DE",
-    "US-MD",
-    "US-DC",
-)
-
-_US_WEST = (
-    "US-CA",
-    "US-OR",
-    "US-WA",
-    "US-ID",
-    "US-NV",
-    "US-UT",
-    "US-AZ",
-    "US-MT",
-    "US-WY",
-    "US-CO",
-    "US-NM",
-)
-
-_US_SMART_EXPANSION = ("US-EAST", "US-WEST", "US-AK", "US-HI") + _US_EAST + _US_WEST
+from jizz.playable_regions import us_smart_expansion
 
 
 def _resolve_country_alias(code: str) -> str:
@@ -122,14 +65,14 @@ def _expand_country_smart(countries: List[str]) -> List[str]:
     When the run includes "US", also process:
     - aggregates: US-EAST, US-WEST
     - special: US-AK, US-HI
-    - all states listed in _US_EAST/_US_WEST
+    - all states listed in US_EAST / US_WEST
     """
     selected = [c.strip().upper() for c in countries if c and str(c).strip()]
     if "US" not in selected:
         return selected
     out: List[str] = []
     seen: set[str] = set()
-    for cc in selected + list(_US_SMART_EXPANSION):
+    for cc in selected + list(us_smart_expansion()):
         token = cc.strip().upper()
         if token and token not in seen:
             seen.add(token)
@@ -354,7 +297,6 @@ class Command(BaseCommand):
                 self.style.ERROR("No countries to process (no CountrySpecies rows in DB).")
             )
             return
-        us_clone_targets = [c for c in ("US-EAST", "US-WEST") if c in countries]
         missing_countries = [
             cc for cc in countries if not CountrySpecies.objects.filter(country_id=cc).exists()
         ]
@@ -449,32 +391,6 @@ class Command(BaseCommand):
                     f"frequency_pct={row_out['frequency_pct']:.2f}%  "
                     f"score={row_out['score']:.4f}{cap_note}{db_note}"
                 )
-
-                # Convenience: when scoring US from ST "country" rows, also fill US-EAST/US-WEST
-                # with the same values (if those app countries are part of this run).
-                if country == "US" and us_clone_targets:
-                    for target in us_clone_targets:
-                        if not options["force"] and _country_species_has_frequency(target, sp):
-                            skipped_pairs += 1
-                            continue
-                        clone_out = dict(row_out)
-                        clone_out["country_code"] = target
-                        rows_by_country[target].append(clone_out)
-
-                        n_db2 = 0
-                        if not options["skip_country_species_write"]:
-                            n_db2 = _update_country_species_frequency_one(
-                                target, sp, freq, clone_out["frequency_pct"]
-                            )
-                            total_db_updated += int(n_db2)
-                        db_note2 = ""
-                        if not options["skip_country_species_write"]:
-                            db_note2 = "  db=ok" if n_db2 else "  db=— (no CountrySpecies row)"
-                        self.stdout.write(
-                            f"    {target}: frequency={freq}  "
-                            f"frequency_pct={clone_out['frequency_pct']:.2f}%  "
-                            f"score={clone_out['score']:.4f}{cap_note}{db_note2}"
-                        )
 
         total_vagrant = 0
         total_default_rare = 0

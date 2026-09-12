@@ -6,16 +6,15 @@ import {
   TouchableOpacity,
   Text,
   Dimensions,
-  Image,
   Platform,
+  StatusBar,
 } from 'react-native';
 import { GestureHandlerRootView, Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Animated, { useSharedValue, useAnimatedStyle, clamp, withTiming } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { CachedRemoteImage, remotePlayImageSource } from './CachedRemoteImage';
 
 const { width: SCREEN_W, height: SCREEN_H } = Dimensions.get('window');
-
-const AnimatedImage = Animated.createAnimatedComponent(Image);
 
 type Props = {
   visible: boolean;
@@ -81,6 +80,9 @@ export function FullScreenImageViewerModal({ visible, imageUri, onClose, closeLa
 
   const composed = Gesture.Simultaneous(pinchGesture, panGesture);
 
+  const androidStatusBar = Platform.OS === 'android' ? (StatusBar.currentHeight ?? 0) : 0;
+  const closeBtnTop = Math.max(insets.top, androidStatusBar) + 8;
+
   const imageStyle = useAnimatedStyle(() => ({
     transform: [
       { translateX: translateX.value },
@@ -100,7 +102,7 @@ export function FullScreenImageViewerModal({ visible, imageUri, onClose, closeLa
       <GestureHandlerRootView style={styles.root}>
         <View style={[styles.backdrop, { paddingTop: insets.top }]}>
           <TouchableOpacity
-            style={[styles.closeBtn, Platform.OS === 'ios' ? { top: insets.top + 8 } : { top: 12 }]}
+            style={[styles.closeBtn, { top: closeBtnTop }]}
             onPress={onClose}
             accessibilityRole="button"
             accessibilityLabel={closeLabel}
@@ -108,18 +110,13 @@ export function FullScreenImageViewerModal({ visible, imageUri, onClose, closeLa
             <Text style={styles.closeBtnText}>{closeLabel}</Text>
           </TouchableOpacity>
           <GestureDetector gesture={composed}>
-            <Animated.View style={styles.zoomBox}>
+            <Animated.View style={[styles.zoomBox, imageStyle]}>
               {visible ? (
-                <AnimatedImage
-                  style={[styles.fullImage, imageStyle]}
-                  source={{
-                    uri: imageUri,
-                    headers: {
-                      'User-Agent': 'BirdrApp/1.0 (https://birdr.pro)',
-                    },
-                  }}
-                  resizeMode="contain"
-                  accessibilityIgnoresInvertColors
+                <CachedRemoteImage
+                  style={styles.fullImage}
+                  source={remotePlayImageSource(imageUri)}
+                  contentFit="contain"
+                  recyclingKey={imageUri}
                 />
               ) : null}
             </Animated.View>

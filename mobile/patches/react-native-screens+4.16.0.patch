@@ -1,0 +1,107 @@
+diff --git a/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt b/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt
+index 7af40fa..1099cb8 100644
+--- a/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt
++++ b/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt
+@@ -1,10 +1,7 @@
+ package com.swmansion.rnscreens
+ 
+-import android.animation.ArgbEvaluator
+-import android.animation.ValueAnimator
+ import android.app.Activity
+ import android.content.pm.ActivityInfo
+-import android.graphics.Color
+ import android.os.Build
+ import android.view.View
+ import android.view.ViewParent
+@@ -26,7 +23,6 @@ object ScreenWindowTraits {
+     private var didSetOrientation = false
+     private var didSetStatusBarAppearance = false
+     private var didSetNavigationBarAppearance = false
+-    private var defaultStatusBarColor: Int? = null
+ 
+     private var windowInsetsListener =
+         object : OnApplyWindowInsetsListener {
+@@ -91,39 +87,12 @@ object ScreenWindowTraits {
+             "edge-to-edge is enabled by default and the status bar is always translucent.",
+     )
+     internal fun setColor(
+-        screen: Screen,
+-        activity: Activity?,
+-        context: ReactContext?,
++        @Suppress("UNUSED_PARAMETER") screen: Screen,
++        @Suppress("UNUSED_PARAMETER") activity: Activity?,
++        @Suppress("UNUSED_PARAMETER") context: ReactContext?,
+     ) {
+-        if (activity == null || context == null) {
+-            return
+-        }
+-        if (defaultStatusBarColor == null) {
+-            defaultStatusBarColor = activity.window.statusBarColor
+-        }
+-        val screenForColor = findScreenForTrait(screen, WindowTraits.COLOR)
+-        val screenForAnimated = findScreenForTrait(screen, WindowTraits.ANIMATED)
+-        val color = screenForColor?.statusBarColor ?: defaultStatusBarColor
+-        val animated = screenForAnimated?.isStatusBarAnimated ?: false
+-
+-        UiThreadUtil.runOnUiThread(
+-            object : GuardedRunnable(context.exceptionHandler) {
+-                override fun runGuarded() {
+-                    val window = activity.window
+-                    val curColor: Int = window.statusBarColor
+-                    val colorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), curColor, color)
+-                    colorAnimation.addUpdateListener { animator ->
+-                        window.statusBarColor = animator.animatedValue as Int
+-                    }
+-                    if (animated) {
+-                        colorAnimation.setDuration(300).startDelay = 0
+-                    } else {
+-                        colorAnimation.setDuration(0).startDelay = 300
+-                    }
+-                    colorAnimation.start()
+-                }
+-            },
+-        )
++        // Window.get/setStatusBarColor are deprecated on Android 15+ and have no effect
++        // when edge-to-edge is enabled.
+     }
+ 
+     internal fun setStyle(
+@@ -205,23 +174,11 @@ object ScreenWindowTraits {
+         "For all apps targeting Android SDK 35 or above edge-to-edge is enabled by default. ",
+     )
+     internal fun setNavigationBarColor(
+-        screen: Screen,
+-        activity: Activity?,
++        @Suppress("UNUSED_PARAMETER") screen: Screen,
++        @Suppress("UNUSED_PARAMETER") activity: Activity?,
+     ) {
+-        if (activity == null) {
+-            return
+-        }
+-
+-        val window = activity.window
+-
+-        val screenForNavBarColor = findScreenForTrait(screen, WindowTraits.NAVIGATION_BAR_COLOR)
+-        val color = screenForNavBarColor?.navigationBarColor ?: window.navigationBarColor
+-
+-        UiThreadUtil.runOnUiThread {
+-            WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightNavigationBars =
+-                isColorLight(color)
+-        }
+-        window.navigationBarColor = color
++        // Window.get/setNavigationBarColor are deprecated on Android 15+ and have no effect
++        // when edge-to-edge is enabled.
+     }
+ 
+     @Deprecated(
+@@ -360,10 +317,4 @@ object ScreenWindowTraits {
+             WindowTraits.NAVIGATION_BAR_TRANSLUCENT -> screen.isNavigationBarTranslucent != null
+             WindowTraits.NAVIGATION_BAR_HIDDEN -> screen.isNavigationBarHidden != null
+         }
+-
+-    private fun isColorLight(color: Int): Boolean {
+-        val darkness: Double =
+-            1 - (0.299 * Color.red(color) + 0.587 * Color.green(color) + 0.114 * Color.blue(color)) / 255
+-        return darkness < 0.5
+-    }
+ }

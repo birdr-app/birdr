@@ -14,6 +14,7 @@ from jizz.usage_analytics import (
     record_usage_event,
     record_websocket_usage_event,
     resolve_country_code,
+    resolve_device_type,
     usage_stats_payload,
 )
 
@@ -24,6 +25,8 @@ class UsageAnalyticsHelpersTests(TestCase):
         self.assertEqual(parse_device_type('Mozilla/5.0 (iPad; CPU OS 17_0 like Mac OS X)'), 'tablet')
         self.assertEqual(parse_device_type('Mozilla/5.0 (Windows NT 10.0; Win64; x64)'), 'desktop')
         self.assertEqual(parse_device_type(''), 'unknown')
+        self.assertEqual(parse_device_type('okhttp/4.12.0'), 'mobile')
+        self.assertEqual(parse_device_type('Dalvik/2.1.0 (Linux; U; Android 14)'), 'mobile')
 
     def test_resolve_country_code_prefers_client_then_cf_then_profile(self):
         factory = RequestFactory()
@@ -267,4 +270,127 @@ class WebSocketUsageTests(TestCase):
         self.assertEqual(event.path, 'Game started')
         self.assertEqual(event.platform, 'android')
         self.assertEqual(event.ip_address, '203.0.113.5')
+
+    def test_okhttp_user_agent_is_android_mobile_not_desktop(self):
+        self.assertEqual(resolve_device_type('okhttp/4.12.0'), 'mobile')
+        scope = {
+            'client': ('203.0.113.8', 1),
+            'headers': [(b'user-agent', b'okhttp/4.12.0')],
+        }
+        event = record_websocket_usage_event(scope, action='join_game', metadata={'game_token': 'gtxnunih'})
+        self.assertIsNotNone(event)
+        self.assertEqual(event.platform, 'android')
+        self.assertEqual(event.device_type, 'mobile')
+        self.assertEqual(event.app_version, '')
+        self.assertEqual(event.app_build, '')
+
+    def test_app_identity_headers_are_stored_on_usage_event(self):
+        scope = {
+            'client': ('203.0.113.8', 1),
+            'headers': [
+                (b'user-agent', b'okhttp/4.12.0'),
+                (b'x-app-version', b'1.8.2'),
+                (b'x-app-build', b'87'),
+                (b'x-platform', b'android'),
+                (b'x-os-version', b'14'),
+            ],
+        }
+        event = record_websocket_usage_event(scope, action='join_game')
+        self.assertEqual(event.app_version, '1.8.2')
+        self.assertEqual(event.app_build, '87')
+        self.assertEqual(event.os_version, '14')
+        self.assertEqual(event.platform, 'android')
+        self.assertEqual(event.device_type, 'mobile')
+
+    def test_missing_app_identity_headers_do_not_error(self):
+        scope = {'headers': []}
+        event = record_websocket_usage_event(scope, action='start_game')
+        self.assertIsNotNone(event)
+        self.assertEqual(event.app_version, '')
+        self.assertEqual(event.app_build, '')
+        self.assertEqual(event.os_version, '')
+        self.assertEqual(event.platform, 'web')
+        self.assertEqual(event.device_type, 'unknown')
+
+    def test_join_payload_identity_fills_in_when_headers_absent(self):
+        scope = {
+            'headers': [(b'user-agent', b'okhttp/4.12.0')],
+        }
+        event = record_websocket_usage_event(
+            scope,
+            action='join_game',
+            app_version='1.7.0',
+            app_build='12',
+            os_version='13',
+            platform='android',
+        )
+        self.assertEqual(event.app_version, '1.7.0')
+        self.assertEqual(event.app_build, '12')
+        self.assertEqual(event.os_version, '13')
+        self.assertEqual(event.platform, 'android')
+        self.assertEqual(event.device_type, 'mobile')
+
+    def test_headers_win_over_join_payload_fallback(self):
+        scope = {
+            'headers': [
+                (b'x-app-version', b'1.8.2'),
+                (b'x-platform', b'ios'),
+            ],
+        }
+        event = record_websocket_usage_event(
+            scope,
+            action='join_game',
+            app_version='0.0.1',
+            platform='android',
+        )
+        self.assertEqual(event.app_version, '1.8.2')
+        self.assertEqual(event.platform, 'ios')
+        self.assertEqual(event.device_type, 'mobile')
+
+
+class HttpAppIdentityTests(TestCase):
+    def test_record_usage_event_stores_app_identity_headers(self):
+        request = RequestFactory().get(
+            '/',
+            HTTP_USER_AGENT='okhttp/4.12.0',
+            HTTP_X_APP_VERSION='1.8.2',
+            HTTP_X_APP_BUILD='87',
+            HTTP_X_PLATFORM='android',
+            HTTP_X_OS_VERSION='14',
+        )
+        event = record_usage_event(request, path='/api/games/', event_type='api')
+        self.assertEqual(event.app_version, '1.8.2')
+        self.assertEqual(event.app_build, '87')
+        self.assertEqual(event.os_version, '14')
+        self.assertEqual(event.platform, 'android')
+        self.assertEqual(event.device_type, 'mobile')
+
+    def test_legacy_birdr_headers_still_work(self):
+        request = RequestFactory().get(
+            '/',
+            HTTP_USER_AGENT='okhttp/4.12.0',
+            HTTP_X_BIRDR_APP_VERSION='1.4.0',
+            HTTP_X_BIRDR_DEVICE_TYPE='android',
+        )
+        event = record_usage_event(request, path='Game created', event_type='api')
+        self.assertEqual(event.app_version, '1.4.0')
+        self.assertEqual(event.platform, 'android')
+        self.assertEqual(event.device_type, 'mobile')
+
+    def test_missing_headers_are_empty_not_an_error(self):
+        request = RequestFactory().get('/', HTTP_USER_AGENT='Mozilla/5.0 (Windows NT 10.0)')
+        event = record_usage_event(request, path='/start', platform='web')
+        self.assertEqual(event.app_version, '')
+        self.assertEqual(event.app_build, '')
+        self.assertEqual(event.os_version, '')
+        self.assertEqual(event.device_type, 'desktop')
+
+
+class UsageEventAdminTests(TestCase):
+    def test_app_identity_is_filterable_in_changelist(self):
+        from jizz.admin import UsageEventAdmin
+
+        self.assertIn('app_version', UsageEventAdmin.list_filter)
+        self.assertIn('app_build', UsageEventAdmin.list_filter)
+        self.assertIn('os_version', UsageEventAdmin.list_display)
 

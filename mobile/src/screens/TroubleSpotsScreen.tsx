@@ -9,7 +9,7 @@ import {
   RefreshControl,
   Switch,
 } from 'react-native';
-import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
@@ -19,10 +19,6 @@ import {
   troubleSpotDisplayName,
   troubleSpotPairDisplayName,
 } from '../utils/troubleSpotDisplayName';
-import {
-  SpeciesMediaModal,
-  type SpeciesMediaData,
-} from '../components/SpeciesMediaModal';
 import { SpeciesCoverThumb } from '../components/SpeciesCoverThumb';
 import {
   fetchTroubleSpots,
@@ -45,6 +41,7 @@ function formatRate(rate: number | null): string {
 
 export function TroubleSpotsScreen() {
   const navigation = useNavigation<NativeStackNavigationProp<Record<string, object | undefined>>>();
+  const route = useRoute();
   const { t, locale } = useTranslation();
   const { isAuthenticated } = useAuth();
   const { profile, ready: profileReady } = useProfile();
@@ -63,7 +60,6 @@ export function TroubleSpotsScreen() {
   const [error, setError] = useState<string | null>(null);
   const [startingPairKey, setStartingPairKey] = useState<string | null>(null);
   const [startingSpeciesId, setStartingSpeciesId] = useState<number | null>(null);
-  const [modalSpecies, setModalSpecies] = useState<SpeciesMediaData | null>(null);
   const [country, setCountry] = useState<Country | null>(null);
   const [countries, setCountries] = useState<Country[]>([]);
   const [includeFixed, setIncludeFixed] = useState(false);
@@ -121,8 +117,10 @@ export function TroubleSpotsScreen() {
 
   useFocusEffect(
     useCallback(() => {
+      const tab = (route.params as { tab?: string } | undefined)?.tab;
+      if (tab === 'pairs' || tab === 'species') setActiveTab(tab);
       void load();
-    }, [load]),
+    }, [load, route.params]),
   );
 
   const handlePracticePair = async (pair: TroubleSpotPair) => {
@@ -155,7 +153,6 @@ export function TroubleSpotsScreen() {
       const game = await loadGame(result.game.token);
       if (game) {
         setGame(game);
-        setModalSpecies(null);
         navigation.navigate('GamePlay' as never);
       }
     } catch (e: unknown) {
@@ -167,13 +164,19 @@ export function TroubleSpotsScreen() {
 
   const openSpecies = (row: TroubleSpotSpecies) => {
     const displayName = troubleSpotDisplayName(row, speciesLanguage);
-    setModalSpecies({
-      id: row.species_id,
+    navigation.navigate('TroubleSpotSpecies', {
+      speciesId: row.species_id,
       name: displayName,
-      name_latin: row.name_latin,
-      name_nl: row.name_nl,
-      name_translated: displayName,
-      illustration_url: row.illustration_url,
+      latin: row.name_latin,
+      nameNl: row.name_nl,
+      code: row.code,
+      illustrationUrl: row.illustration_url,
+      timesShown: row.times_shown,
+      wronglyAnswered: row.wrongly_answered,
+      correctRate: row.correct_rate,
+      errorRate: row.error_rate,
+      fixed: row.fixed,
+      countryCode: effectiveCountryCode,
     });
   };
 
@@ -280,7 +283,29 @@ export function TroubleSpotsScreen() {
         const highName = troubleSpotPairDisplayName(pair.high_name, pair.high_name_nl, speciesLanguage);
         return (
           <View key={key} style={styles.speciesRow}>
-            <View style={styles.pairRowMain}>
+            <TouchableOpacity
+              style={styles.pairRowMain}
+              onPress={() =>
+                navigation.navigate('TroubleSpotPair', {
+                  lowId: pair.low_id,
+                  highId: pair.high_id,
+                  lowName,
+                  highName,
+                  lowLatin: pair.low_name_latin,
+                  highLatin: pair.high_name_latin,
+                  lowNl: pair.low_name_nl,
+                  highNl: pair.high_name_nl,
+                  lowCode: pair.low_code,
+                  highCode: pair.high_code,
+                  lowIllustrationUrl: pair.low_illustration_url,
+                  highIllustrationUrl: pair.high_illustration_url,
+                  totalWrong: pair.total_wrong,
+                  fixed: pair.fixed,
+                  countryCode: effectiveCountryCode,
+                })
+              }
+              accessibilityRole="button"
+            >
               <View style={styles.rowText}>
                 <Text style={styles.rowTitle} numberOfLines={1}>{lowName}</Text>
                 <Text style={styles.rowTitle} numberOfLines={1}>{highName}</Text>
@@ -293,7 +318,7 @@ export function TroubleSpotsScreen() {
                   {t('trouble_spots_pair_wrong').replace('{count}', String(pair.total_wrong))}
                 </Text>
               </View>
-            </View>
+            </TouchableOpacity>
             <TouchableOpacity
               style={[styles.practiceButtonCompact, busy && styles.practiceButtonDisabled]}
               onPress={() => void handlePracticePair(pair)}
@@ -366,16 +391,6 @@ export function TroubleSpotsScreen() {
         {error ? <Text style={styles.error}>{error}</Text> : null}
         {listBody}
       </ScrollView>
-
-      <SpeciesMediaModal
-        visible={!!modalSpecies}
-        onClose={() => setModalSpecies(null)}
-        species={modalSpecies}
-        language={speciesLanguage}
-        showPracticeButton
-        onPractice={(speciesId) => void handlePracticeSpecies(speciesId)}
-        practiceLoading={startingSpeciesId === modalSpecies?.id}
-      />
     </View>
   );
 }

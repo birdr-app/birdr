@@ -40,6 +40,15 @@ export function resolvePlayMediaType(
   return normalizeGameMedia(gameMedia);
 }
 
+export function currentPlayMediaItem<T>(
+  items: T[] | undefined,
+  question: { number?: number | string | null } | undefined
+): T | undefined {
+  if (!items?.length || !question) return undefined;
+  const idx = mediaSlotIndexFromQuestion(question, items.length);
+  return items[idx];
+}
+
 export function mediaArrayLengthForQuestion(
   question: { images?: unknown[]; videos?: unknown[]; sounds?: unknown[] },
   mediaType: string

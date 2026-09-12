@@ -8,16 +8,17 @@ import {UpdateListItemCard} from "../components/updates/update-list-item"
 import {loadUpdates, type UpdateListItem} from "../core/updates"
 
 const UpdatesPage = () => {
-  const {loading, setLoading, player} = useContext(AppContext)
+  const {loading, setLoading, player, appLanguage} = useContext(AppContext)
   const [updates, setUpdates] = useState<UpdateListItem[]>([])
 
   useEffect(() => {
     setLoading(true)
-    loadUpdates(player?.token).then((items) => {
-      setUpdates(items)
-      setLoading(false)
-    })
-  }, [player?.token, setLoading]);
+    loadUpdates(player?.token, appLanguage || 'en')
+      .then((items) => {
+        setUpdates(items)
+        setLoading(false)
+      })
+  }, [player?.token, appLanguage, setLoading]);
 
   return (
     <Page>

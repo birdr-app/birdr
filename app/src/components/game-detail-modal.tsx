@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 import { gamesService, GameDetailWithAnswers, QuestionWithAnswer } from "../api/services/games.service";
 import { startSpeciesPractice } from "../api/practice";
 import { format } from "date-fns";
-import ReactPlayer from "react-player";
+import { PlayableVideo } from "./playable-video";
 import AppContext, { Species } from "../core/app-context";
 import { getCountryDisplayName } from "../data/country-names-nl";
 import { SpeciesButton } from "./species-button";
@@ -356,9 +356,9 @@ export const GameDetailModal = ({ isOpen, onClose, gameToken, playerToken }: Gam
                                   {question.media_item.type === 'video' && (
                                     <VStack align="stretch" gap={2}>
                                       <AspectRatio ratio={16 / 9} width="100%">
-                                        <ReactPlayer
+                                        <PlayableVideo
                                           url={question.media_item.url}
-                                          controls={true}
+                                          controls
                                           width="100%"
                                           height="100%"
                                         />

@@ -1,13 +1,28 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { useAudioPlayer, useAudioPlayerStatus, setAudioModeAsync } from 'expo-audio';
 import { usePulsatingAnimation } from './usePulsatingAnimation';
 
 /** Auto-play question sound; tap toggles play/pause. */
-export function useQuestionSoundPlayback(soundUri: string | null, resetKey?: number | string) {
+export function useQuestionSoundPlayback(
+  soundUri: string | null,
+  resetKey?: number | string,
+  onCanPlay?: () => void
+) {
   const audioPlayer = useAudioPlayer(soundUri ?? null);
   const audioStatus = useAudioPlayerStatus(audioPlayer);
   const soundPlaying = audioStatus.playing;
   const pulsatingStyle = usePulsatingAnimation(soundPlaying);
+  const canPlayFired = useRef(false);
+
+  useEffect(() => {
+    canPlayFired.current = false;
+  }, [soundUri, resetKey]);
+
+  useEffect(() => {
+    if (!soundUri || !audioStatus.isLoaded || canPlayFired.current) return;
+    canPlayFired.current = true;
+    onCanPlay?.();
+  }, [soundUri, audioStatus.isLoaded, onCanPlay]);
 
   useEffect(() => {
     if (!soundUri) return;

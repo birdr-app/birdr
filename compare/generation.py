@@ -44,14 +44,20 @@ def find_species_comparison(species_a: Species, species_b: Species) -> SpeciesCo
 
 
 def comparison_cache_is_current(comparison: SpeciesComparison | None) -> bool:
-    """True when the cached row was built with the current model and prompt."""
+    """True when the cached row was built with the current model and prompt.
+
+    Handbook extracts (``botw-extract``) are leftovers from a previous credit
+    failure — never treat them as current so generation can retry.
+    """
     if comparison is None:
         return False
     stored_model = (comparison.ai_model or '').strip()
     stored_prompt = (comparison.ai_prompt_version or '').strip()
     if stored_prompt != comparison_prompt_version():
         return False
-    return stored_model == comparison_model_name() or stored_model == HANDBOOK_MODEL
+    if stored_model == HANDBOOK_MODEL:
+        return False
+    return stored_model == comparison_model_name()
 
 
 def traits_dict_for_species(species: Species) -> dict:

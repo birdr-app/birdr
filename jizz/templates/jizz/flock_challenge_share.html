@@ -144,6 +144,19 @@
     .rank { color: var(--birdr-600); min-width: 2rem; font-weight: 600; }
     .name { flex: 1; font-weight: 700; color: var(--birdr-800); }
     .score { color: var(--birdr-500); font-weight: 700; }
+    .more-link {
+      text-align: center;
+      margin: -4px 0 20px;
+      font-weight: 600;
+    }
+    .more-link a {
+      color: var(--birdr-500);
+      text-decoration: none;
+    }
+    .more-link a:hover {
+      color: var(--birdr-800);
+      text-decoration: underline;
+    }
     .empty {
       color: var(--birdr-600);
       margin-bottom: 20px;
@@ -210,8 +223,20 @@
             </li>
           {% endfor %}
         </ol>
+        {% if has_more %}
+          <p class="more-link">
+            {% if show_all %}
+              <a href="./">Show top 5</a>
+            {% else %}
+              <a href="?all=1">Show all</a>
+            {% endif %}
+          </p>
+        {% endif %}
       {% else %}
         <p class="empty">No scores yet — be the first to play!</p>
+      {% endif %}
+      {% if has_history %}
+        <p class="more-link"><a href="history/">Weekly progress</a></p>
       {% endif %}
       <div class="actions">
         {% if join_url %}

@@ -8,97 +8,103 @@
 <section class="hero">
   <div class="hero-grid">
     <div>
-      <p class="kicker">Free bird identification training</p>
+      <p class="kicker">{% mt "Free bird identification training" %}</p>
       <h1>{{ heading }}</h1>
       <p class="lead">{{ supporting }}</p>
       <div id="get-the-app" class="cta-row">
         {% include "marketing/_store_badges.html" %}
+        {% include "marketing/_support_btn.html" %}
       </div>
-      <p><a class="web-link" href="/play">Or play a quiz in the browser</a></p>
+      <p><a class="web-link" href="/play">{% mt "Or play a quiz in the browser" %}</a></p>
     </div>
     <figure class="hero-art hero-phone">
-      <img src="/images/birdr-quiz.png" width="456" height="1024" alt="Birdr quiz: identify a bird from a photo, with Black-legged Kittiwake marked as the correct answer">
+      <img src="/images/birdr-quiz.png" width="456" height="1024" alt="{% mt "Birdr quiz: identify a bird from a photo, with Black-legged Kittiwake marked as the correct answer" %}">
     </figure>
   </div>
 </section>
 
-<section>
-  <h2>How Birdr teaches</h2>
-  <div class="steps">
-    <article class="card">
-      <div class="step-num">1</div>
-      <h3>Play a quiz</h3>
-      <p>Answer 10, 20, 50 or 100 questions.</p>
-    </article>
-    <article class="card">
-      <div class="step-num">2</div>
-      <h3>Review your answers</h3>
-        <p>At the end of the game you can review all your answers.</p>
-    </article>
-    <article class="card">
-      <div class="step-num">3</div>
-      <h3>Learn what you missed</h3>
-        <p>Wrong answers become practice. <i>My Tricky Birds</i> keeps the lookalikes that will not stick.</p>
-    </article>
-  </div>
-  <p><a href="/site/how-it-works/">See how it works</a></p>
+<section id="what-is-birdr" class="prose">
+  <h2>{% mt "What is Birdr?" %}</h2>
+  <p>{% mt "Birdr is a free bird-identification training app. It helps birders learn to recognise species through photo, video and sound quizzes, personalised practice and country challenges. You can sign in with Google so Birdr can create your account and save your scores and learning progress." %}</p>
 </section>
 
 <section>
-  <h2>What you can play</h2>
+  <h2>{% mt "How Birdr teaches" %}</h2>
+  <div class="steps">
+    <article class="card">
+      <div class="step-num">1</div>
+      <h3>{% mt "Play a quiz" %}</h3>
+      <p>{% mt "Answer 10, 20, 50 or 100 questions." %}</p>
+    </article>
+    <article class="card">
+      <div class="step-num">2</div>
+      <h3>{% mt "Review your answers" %}</h3>
+        <p>{% mt "At the end of the game you can review all your answers." %}</p>
+    </article>
+    <article class="card">
+      <div class="step-num">3</div>
+      <h3>{% mt "Learn what you missed" %}</h3>
+        <p>{% mt "Wrong answers become practice. <i>My Tricky Birds</i> keeps the lookalikes that will not stick." %}</p>
+    </article>
+  </div>
+  <p><a href="{{ '/site/how-it-works/'|mpath }}">{% mt "See how it works" %}</a></p>
+</section>
+
+<section>
+  <h2>{% mt "What you can play" %}</h2>
   <div class="grid">
     <article class="card">
-      <h3>Photo quizzes</h3>
-      <p>One quick game, or a longer session. Choose a country, a level and photos, video or sound.</p>
-      <p><a href="/play">Start a quiz</a></p>
+      <h3>{% mt "Photo quizzes" %}</h3>
+      <p>{% mt "One quick game, or a longer session. Choose a country, a level and photos, video or sound." %}</p>
+      <p><a href="/play">{% mt "Start a quiz" %}</a></p>
     </article>
     <article class="card">
-      <h3>Sound quizzes</h3>
-      <p>Hear a recording and pick the species. You can also play passerine sound quizzes in the browser.</p>
-      <p><a href="/play">Play a sound quiz</a></p>
+      <h3>{% mt "Sound quizzes" %}</h3>
+      <p>{% mt "Hear a recording and pick the species. You can also play passerine sound quizzes in the browser." %}</p>
+      <p><a href="/play">{% mt "Play a sound quiz" %}</a></p>
     </article>
     <article class="card">
-      <h3>Multiplayer</h3>
-      <p>A live quiz for two or more players. Faster correct answers score more points.</p>
-      <p><a href="/play">Start a live quiz</a></p>
+      <h3>{% mt "Multiplayer" %}</h3>
+      <p>{% mt "A live quiz for two or more players. Faster correct answers score more points." %}</p>
+      <p><a href="/play">{% mt "Start a live quiz" %}</a></p>
     </article>
     <article class="card">
-      <h3>High scores</h3>
-      <p>See how you rank after a quiz.</p>
-      <p><a href="/scores/">View high scores</a></p>
+      <h3>{% mt "High scores" %}</h3>
+      <p>{% mt "See how you rank after a quiz." %}</p>
+      <p><a href="/scores/">{% mt "View high scores" %}</a></p>
     </article>
     <article class="card">
-      <h3>My checklist</h3>
-      <p>See which birds you named correctly in your country, and which ones you missed.</p>
-      <p><a href="/checklist">Open my checklist</a></p>
+      <h3>{% mt "My checklist" %}</h3>
+      <p>{% mt "See which birds you named correctly in your country, and which ones you missed." %}</p>
+      <p><a href="/checklist">{% mt "Open my checklist" %}</a></p>
     </article>
     <article class="card">
-      <h3>Country Challenges</h3>
-      <p>Structured levels for the birds of a country—from the Netherlands to Japan to Colombia.</p>
-      <p><a href="/site/bird-quiz-by-country/">Quizzes by country</a></p>
+      <h3>{% mt "Country Challenges" %}</h3>
+      <p>{% mt "Structured levels for the birds of a country—from the Netherlands to Japan to Colombia." %}</p>
+      <p><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "Quizzes by country" %}</a></p>
     </article>
     <article class="card">
-      <h3>My Tricky Birds</h3>
-      <p>Focused drills on the species and confusing pairs you actually mix up.</p>
-      <p><a href="/site/my-tricky-birds/">Practise difficult birds</a></p>
+      <h3>{% mt "My Tricky Birds" %}</h3>
+      <p>{% mt "Focused drills on the species and confusing pairs you actually mix up." %}</p>
+      <p><a href="{{ '/site/my-tricky-birds/'|mpath }}">{% mt "Practise difficult birds" %}</a></p>
     </article>
   </div>
 </section>
 
 {% if countries %}
 <section>
-  <h2>Study a country list</h2>
+  <h2>{% mt "Study a country list" %}</h2>
   <div class="country-pills">
     {% for c in countries %}
-    <a href="{{ c.url }}">{{ c.name }}</a>
+    <a href="{{ c.url|mpath }}">{{ c.name }}</a>
     {% endfor %}
   </div>
-  <p><a href="/site/bird-quiz-by-country/">All country quizzes</a></p>
+  <p><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "All country quizzes" %}</a></p>
 </section>
 {% endif %}
 
 <section>
-  <h2>What birders say</h2>
+  <h2>{% mt "What birders say" %}</h2>
   <div class="quotes">
     {% for item in testimonials %}
     <blockquote class="quote" data-typewriter>
@@ -110,25 +116,35 @@
 </section>
 
 <section>
-  <h2>Community and FAQ</h2>
+  <h2>{% mt "Community and FAQ" %}</h2>
   <div class="grid">
     <article class="card">
-      <h3>Community</h3>
-      <p>Birdr is a small project. Send feedback or review photos if you know a country’s birds.</p>
-      <p><a href="/site/community/">How you can help</a></p>
+      <h3>{% mt "Community" %}</h3>
+      <p>{% mt "Birdr is a small project. Send feedback or review photos if you know a country’s birds." %}</p>
+      <p><a href="{{ '/site/community/'|mpath }}">{% mt "How you can help" %}</a></p>
     </article>
     <article class="card">
-      <h3>FAQ</h3>
-      <p>Is Birdr free? Does it identify birds from a photo? Where can I play?</p>
-      <p><a href="/site/faq/">Read the FAQ</a></p>
+      <h3>{% mt "FAQ" %}</h3>
+      <p>{% mt "Is Birdr free? Does it identify birds from a photo? Where can I play?" %}</p>
+      <p><a href="{{ '/site/faq/'|mpath }}">{% mt "Read the FAQ" %}</a></p>
     </article>
   </div>
 </section>
 
+<section id="support-birdr">
+  <article class="card support-home">
+    <h2>{% mt "Support Birdr" %}</h2>
+    <p>{% mt "Birdr is free, open source, and built in spare time. There is no funding behind it right now. A GitHub sponsorship helps cover hosting and AI credits so the quiz can stay free." %}</p>
+    <p>{% mt "Donating is one way. If you have another idea for how to fund Birdr—a partnership, a grant, a club, a company—write to <a href=\"mailto:info@birdr.pro\">info@birdr.pro</a>. I would like to talk." %}</p>
+    <p>{% include "marketing/_support_btn.html" %}</p>
+    <p><a href="mailto:info@birdr.pro">{% mt "Write about funding or a partnership" %}</a></p>
+  </article>
+</section>
+
 <section class="band" id="download">
-  <h2>Get Birdr on your phone</h2>
-  <p>The apps are the best way to practise. The browser works too if you want to try a quiz first.</p>
+  <h2>{% mt "Get Birdr on your phone" %}</h2>
+  <p>{% mt "The apps are the best way to practise. The browser works too if you want to try a quiz first." %}</p>
   {% include "marketing/_store_badges.html" %}
-  <p><a class="web-link" href="/play">Continue in the browser</a></p>
+  <p><a class="web-link" href="/play">{% mt "Continue in the browser" %}</a></p>
 </section>
 {% endblock %}

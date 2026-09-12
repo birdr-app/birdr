@@ -165,6 +165,11 @@ class UserMistakeStatsTests(TestCase):
         row = species[0]
         self.assertIn('illustration_url', row)
         self.assertTrue(row['illustration_url'])
+        self.assertIn(row['code'], {'TA01', 'TB02'})
+        pair = response.json()['pairs'][0]
+        self.assertEqual({pair['low_code'], pair['high_code']}, {'TA01', 'TB02'})
+        self.assertTrue(pair['low_illustration_url'])
+        self.assertTrue(pair['high_illustration_url'])
 
 
 class PracticeApiTests(TestCase):

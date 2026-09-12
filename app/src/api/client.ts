@@ -1,5 +1,6 @@
 // API Client - Centralized HTTP client with configurable base URL and headers
 import { getApiBaseUrl } from './baseUrl';
+import { clientInfoHeaders } from './clientInfo';
 
 export interface ApiClientConfig {
   baseURL?: string;
@@ -30,6 +31,7 @@ export class ApiClient {
       'Cache-Control': 'no-cache, no-store, must-revalidate',
       'Pragma': 'no-cache',
       'Expires': '0',
+      ...clientInfoHeaders(),
     }));
   }
 

@@ -51,11 +51,13 @@ class QuizConsumer(AsyncWebsocketConsumer):
         self.game_group_name = f"quiz_{self.game_token}"
         # Player token from the last join_game on this connection (for send_current_answer)
         self._player_token: Optional[str] = None
+        self._app_identity: dict = {}
         await self.channel_layer.group_add(self.game_group_name, self.channel_name)
         await self.accept()
 
     async def disconnect(self, close_code):
         self._player_token = None
+        self._app_identity = {}
         await self.channel_layer.group_discard(self.game_group_name, self.channel_name)
 
     async def receive(self, text_data):
@@ -92,10 +94,15 @@ class QuizConsumer(AsyncWebsocketConsumer):
 
     async def _log_websocket_action(self, action: str):
         try:
+            identity = getattr(self, '_app_identity', None) or {}
             await database_sync_to_async(record_websocket_usage_event)(
                 self.scope,
                 action=action,
                 metadata={'game_token': self.game_token},
+                app_version=identity.get('app_version', ''),
+                app_build=identity.get('app_build', ''),
+                os_version=identity.get('os_version', ''),
+                platform=identity.get('platform', ''),
             )
         except Exception:
             logger.exception("Failed to record websocket usage for %s", action)
@@ -156,7 +163,7 @@ class QuizConsumer(AsyncWebsocketConsumer):
     async def _handle_join_game(self, data):
         from django.core.exceptions import ObjectDoesNotExist
 
-        from jizz.models import PlayerScore, Game, Player
+        from jizz.models import Game, Player
 
         player_token = (data.get("player_token") or "").strip()
         if not player_token:
@@ -170,11 +177,23 @@ class QuizConsumer(AsyncWebsocketConsumer):
         def do_join():
             game = Game.objects.get(token=self.game_token)
             player = Player.objects.get(token=player_token)
-            PlayerScore.objects.get_or_create(player=player, game=game)
-            return player.name, game.ended
+            from jizz.client_info import client_info_from_mapping, record_player_score_client
+            from jizz.usage_analytics import app_identity_from_mapping
+
+            self._app_identity = app_identity_from_mapping(data)
+            app_version, device_type = client_info_from_mapping(data)
+            record_player_score_client(player, game, app_version, device_type)
+            current = game.question
+            return (
+                player.name,
+                bool(game.ended),
+                current.id if current else None,
+            )
 
         try:
-            player_name, game_ended = await database_sync_to_async(do_join)()
+            player_name, game_ended, current_question_id = await database_sync_to_async(
+                do_join
+            )()
         except ObjectDoesNotExist:
             await self.send(
                 text_data=json.dumps(
@@ -190,14 +209,13 @@ class QuizConsumer(AsyncWebsocketConsumer):
         )
         await self._broadcast_players_update()
         await self._send_game_update_to_self()
-        if not game_ended:
-            def has_started():
-                g = Game.objects.get(token=self.game_token)
-                return g.progress > 0
-
-            if await database_sync_to_async(has_started)():
-                await self._send_current_question_to_self()
-                await self._send_current_answer_to_self()
+        # Reconnecting clients (Android Lobby → GamePlay) missed the original
+        # game_started / new_question on the dead lobby socket. Always resync
+        # the active round to this connection.
+        if not game_ended and current_question_id:
+            await self.send(text_data=json.dumps({"action": "game_started"}))
+            await self._send_question_to_self(current_question_id)
+            await self._send_current_answer_to_self()
         await self._log_websocket_action("join_game")
 
     async def _handle_start_game(self, data):
@@ -304,7 +322,9 @@ class QuizConsumer(AsyncWebsocketConsumer):
                     player, question, correct, user=checklist_user
                 )
 
-            serializer = AnswerSerializer(row, context={"game": game})
+            serializer = AnswerSerializer(
+                row, context={"game": game, "include_media_link": True}
+            )
             return serializer.data
 
         try:
@@ -425,7 +445,13 @@ class QuizConsumer(AsyncWebsocketConsumer):
         return await database_sync_to_async(get_id)()
 
     async def _send_current_question_to_self(self):
-        q = await self._serialize_current_question_for_send()
+        question_id = await self._current_question_id()
+        await self._send_question_to_self(question_id)
+
+    async def _send_question_to_self(self, question_id: Optional[int]):
+        if not question_id:
+            return
+        q = await self._serialize_question_for_send(question_id)
         if not q:
             return
         await self.send(
@@ -490,7 +516,9 @@ class QuizConsumer(AsyncWebsocketConsumer):
             ).first()
             if not answer:
                 return None
-            serializer = AnswerSerializer(answer, context={"game": game})
+            serializer = AnswerSerializer(
+                answer, context={"game": game, "include_media_link": True}
+            )
             return serializer.data
 
         data = await database_sync_to_async(load_answer_payload)()

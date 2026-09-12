@@ -111,10 +111,10 @@ export function HomeScreen() {
 
   useFocusEffect(
     useCallback(() => {
-      loadUpdates().then(setUpdates).catch(() => {});
+      loadUpdates(undefined, locale).then(setUpdates).catch(() => {});
       loadActiveJourney();
       loadFlockSummary();
-    }, [loadActiveJourney, loadFlockSummary])
+    }, [loadActiveJourney, loadFlockSummary, locale])
   );
 
   useEffect(() => {
@@ -154,7 +154,6 @@ export function HomeScreen() {
   const flag = countryCodeToFlag(countryCode);
   const currentLevelTitle = levelTitle(activeJourney?.current_level, locale);
   const flockLogoUri = resolveMediaUrl(mainFlock?.logo_url);
-  const flockCountryFlag = countryCodeToFlag(mainFlock?.default_country.code ?? '');
   const flockCountryLabel = mainFlock
     ? getCountryDisplayName(mainFlock.default_country, locale)
     : '';
@@ -187,7 +186,6 @@ export function HomeScreen() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <Text style={styles.welcome}>{t('welcome')}</Text>
       {softUpdate.available && softUpdate.storeLabel && (
         <View style={styles.softUpdateCard}>
           <View style={styles.softUpdateText}>
@@ -235,101 +233,105 @@ export function HomeScreen() {
         </View>
       </TouchableOpacity>
 
-      {journeyLoading ? (
-        <View style={styles.journeyLoadingWrap}>
-          <ActivityIndicator size="small" color={colors.primary[500]} />
-        </View>
-      ) : activeJourney ? (
-        <TouchableOpacity
-          style={styles.journeyHeroButton}
-          onPress={goJourneyProgress}
-          testID="home.birdrJourneyContinue"
-          accessibilityLabel={`${t('country_challenge')}, ${currentLevelTitle}, ${countryLabel}`}
-        >
-          <BirdrLevelImage
-            iconUrl={activeJourney.current_level?.icon_url}
-            sequence={activeJourney.current_level?.sequence}
-            variant="current"
-            size={88}
-            framed={false}
-          />
-          <View style={styles.journeyHeroText}>
-            <Text style={styles.journeyHeroLevel} numberOfLines={2}>
-              {currentLevelTitle || t('country_challenge')}
-            </Text>
-            <Text style={styles.journeyHeroCountry} numberOfLines={1}>
-              {flag ? `${flag} ` : ''}{countryLabel}
-            </Text>
-            <Text style={styles.journeyHeroHint}>{t('continue')}</Text>
+      <View style={styles.secondaryHeroColumn}>
+        {journeyLoading ? (
+          <View style={styles.secondaryLoadingWrap}>
+            <ActivityIndicator size="small" color={colors.primary[500]} />
           </View>
-        </TouchableOpacity>
-      ) : (
-        <TouchableOpacity
-          style={styles.journeyHeroButton}
-          onPress={() => navigation.navigate('BirdrJourneyIntro')}
-          testID="home.birdrJourney"
-          accessibilityLabel={`${t('country_challenge')}, ${t('country_challenge_new_improved')}`}
-        >
-          <GameArtImage source={getMoodImage('success', visualStyle)} style={styles.journeyNewHeroImage} resizeMode="contain" />
-          <View style={styles.journeyHeroText}>
-            <Text style={styles.journeyHeroLevel} numberOfLines={2}>
-              {t('country_challenge')}
-            </Text>
-            <Text style={styles.journeyHeroHint}>{t('country_challenge_new_improved')}</Text>
-          </View>
-        </TouchableOpacity>
-      )}
+        ) : activeJourney ? (
+          <TouchableOpacity
+            style={styles.journeyHeroButton}
+            onPress={goJourneyProgress}
+            testID="home.birdrJourneyContinue"
+            accessibilityLabel={`${t('country_challenge')}, ${currentLevelTitle}, ${countryLabel}`}
+          >
+            <BirdrLevelImage
+              iconUrl={activeJourney.current_level?.icon_url}
+              sequence={activeJourney.current_level?.sequence}
+              variant="current"
+              size={56}
+              framed={false}
+            />
+            <View style={styles.journeyHeroText}>
+              <Text style={styles.journeyHeroLevel} numberOfLines={2}>
+                {currentLevelTitle || t('country_challenge')}
+              </Text>
+              <Text style={styles.journeyHeroCountry} numberOfLines={1}>
+                {flag ? `${flag} ` : ''}{countryLabel}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        ) : (
+          <TouchableOpacity
+            style={styles.journeyHeroButton}
+            onPress={() => navigation.navigate('BirdrJourneyIntro')}
+            testID="home.birdrJourney"
+            accessibilityLabel={`${t('country_challenge')}, ${t('country_challenge_new_improved')}`}
+          >
+            <GameArtImage source={getMoodImage('success', visualStyle)} style={styles.journeyNewHeroImage} resizeMode="contain" />
+            <View style={styles.journeyHeroText}>
+              <Text style={styles.journeyHeroLevel} numberOfLines={2}>
+                {t('country_challenge')}
+              </Text>
+              <Text style={styles.journeyHeroHint} numberOfLines={2}>
+                {t('country_challenge_new_improved')}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        )}
 
-      {flocksLoading && !flocksReady ? (
-        <View style={styles.flocksLoadingWrap}>
-          <ActivityIndicator size="small" color={colors.primary[500]} />
-        </View>
-      ) : mainFlock ? (
-        <TouchableOpacity
-          style={styles.flocksHeroButton}
-          onPress={() => void goFlocks()}
-          testID="home.flocks"
-          accessibilityLabel={`${mainFlock.name}, ${flockCountryLabel}`}
-        >
-          {flockLogoUri ? (
-            <Image source={{ uri: flockLogoUri }} style={styles.flocksHeroLogo} resizeMode="cover" />
-          ) : (
+        {flocksLoading && !flocksReady ? (
+          <View style={styles.secondaryLoadingWrap}>
+            <ActivityIndicator size="small" color={colors.primary[500]} />
+          </View>
+        ) : mainFlock ? (
+          <TouchableOpacity
+            style={styles.flocksHeroButton}
+            onPress={() => void goFlocks()}
+            testID="home.flocks"
+            accessibilityLabel={`${mainFlock.name}, ${flockCountryLabel}`}
+          >
+            {flockLogoUri ? (
+              <Image source={{ uri: flockLogoUri }} style={styles.flocksHeroLogo} resizeMode="cover" />
+            ) : (
+              <GameArtImage
+                source={getFlockImage('leaderboard', visualStyle)}
+                style={styles.flocksHeroImage}
+                resizeMode="contain"
+              />
+            )}
+            <View style={styles.flocksHeroText}>
+              <Text style={styles.flocksHeroTitle} numberOfLines={2}>
+                {mainFlock.name}
+              </Text>
+              <Text style={styles.flocksHeroContinue} numberOfLines={1}>
+                {flockStatusLine}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        ) : (
+          <TouchableOpacity
+            style={styles.flocksHeroButton}
+            onPress={() => void goFlocks()}
+            testID="home.flocks"
+            accessibilityLabel={t('flocks_start')}
+          >
             <GameArtImage
-              source={getFlockImage('leaderboard', visualStyle)}
+              source={getFlockImage('invite', visualStyle)}
               style={styles.flocksHeroImage}
               resizeMode="contain"
             />
-          )}
-          <View style={styles.flocksHeroText}>
-            <Text style={styles.flocksHeroTitle} numberOfLines={2}>
-              {mainFlock.name}
-            </Text>
-            <Text style={styles.flocksHeroHint} numberOfLines={1}>
-              {flockCountryFlag ? `${flockCountryFlag} ` : ''}
-              {flockCountryLabel}
-              {flockChallenge ? ` · ${flockChallenge.title}` : ''}
-            </Text>
-            <Text style={styles.flocksHeroContinue}>{flockStatusLine}</Text>
-          </View>
-        </TouchableOpacity>
-      ) : (
-        <TouchableOpacity
-          style={styles.flocksHeroButton}
-          onPress={() => void goFlocks()}
-          testID="home.flocks"
-          accessibilityLabel={t('flocks_start')}
-        >
-          <GameArtImage
-            source={getFlockImage('invite', visualStyle)}
-            style={styles.flocksHeroImage}
-            resizeMode="contain"
-          />
-          <View style={styles.flocksHeroText}>
-            <Text style={styles.flocksHeroTitle}>{t('flocks_start')}</Text>
-            <Text style={styles.flocksHeroHint}>{t('flocks_home_start_cta')}</Text>
-          </View>
-        </TouchableOpacity>
-      )}
+            <View style={styles.flocksHeroText}>
+              <Text style={styles.flocksHeroTitle} numberOfLines={2}>
+                {t('flocks_start')}
+              </Text>
+              <Text style={styles.flocksHeroHint} numberOfLines={2}>
+                {t('flocks_home_start_cta')}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        )}
+      </View>
       <FeedbackForm />
       {updates.length > 0 && (
         <UpdateListItemCard
@@ -357,12 +359,6 @@ const styles = StyleSheet.create({
   content: {
     padding: 24,
     paddingTop: 16,
-  },
-  welcome: {
-    fontSize: 22,
-    fontWeight: '600',
-    color: colors.primary[800],
-    marginBottom: 24,
   },
   softUpdateCard: {
     flexDirection: 'row',
@@ -457,20 +453,26 @@ const styles = StyleSheet.create({
     color: colors.primary[100],
     lineHeight: 20,
   },
-  journeyLoadingWrap: {
-    paddingVertical: 28,
-    alignItems: 'center',
+  secondaryHeroColumn: {
+    width: '100%',
+    gap: 12,
     marginBottom: 12,
   },
+  secondaryLoadingWrap: {
+    width: '100%',
+    paddingVertical: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   journeyHeroButton: {
+    width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 16,
+    gap: 12,
     backgroundColor: colors.primary[800],
-    paddingVertical: 18,
-    paddingHorizontal: 18,
-    borderRadius: 999,
-    marginBottom: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 16,
     borderWidth: 2,
     borderColor: colors.primary[400],
   },
@@ -479,69 +481,64 @@ const styles = StyleSheet.create({
     minWidth: 0,
   },
   journeyHeroCountry: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: '600',
     color: colors.primary[100],
-    marginBottom: 4,
   },
   journeyHeroLevel: {
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: '700',
     color: colors.primary[50],
-    lineHeight: 28,
-    marginBottom: 4,
+    lineHeight: 22,
+    marginBottom: 2,
   },
   journeyHeroHint: {
     fontSize: 14,
     fontWeight: '600',
     color: colors.primary[300],
+    lineHeight: 20,
   },
   journeyNewHeroImage: {
-    width: 88,
-    height: 88,
-  },
-  flocksLoadingWrap: {
-    paddingVertical: 28,
-    alignItems: 'center',
-    marginBottom: 12,
+    width: 56,
+    height: 56,
   },
   flocksHeroButton: {
+    width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 16,
+    gap: 12,
     backgroundColor: colors.primary[600],
-    paddingVertical: 18,
-    paddingHorizontal: 18,
-    borderRadius: 999,
-    marginBottom: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 16,
     borderWidth: 2,
     borderColor: colors.primary[400],
   },
   flocksHeroImage: {
-    width: 96,
-    height: 64,
+    width: 56,
+    height: 56,
   },
   flocksHeroLogo: {
-    width: 64,
-    height: 64,
-    borderRadius: 12,
+    width: 56,
+    height: 56,
+    borderRadius: 10,
   },
   flocksHeroText: {
     flex: 1,
     minWidth: 0,
   },
   flocksHeroTitle: {
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: '700',
     color: colors.primary[50],
-    marginBottom: 4,
+    lineHeight: 22,
+    marginBottom: 2,
   },
   flocksHeroHint: {
     fontSize: 14,
     fontWeight: '600',
     color: colors.primary[200],
     lineHeight: 20,
-    marginBottom: 4,
   },
   flocksHeroContinue: {
     fontSize: 14,

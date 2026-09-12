@@ -1,0 +1,341 @@
+{% extends "jizz/data_base.html" %}
+
+{% block title %}Media reviews · Birdr data{% endblock %}
+
+{% block extra_head %}
+    <style>
+        .count-approved { color: var(--success-500); font-weight: 600; }
+        .count-rejected { color: var(--error-500); font-weight: 600; }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+            gap: 0.75rem;
+            margin: 1.1rem 0 1.75rem;
+        }
+        .stat-card {
+            background: var(--birdr-50);
+            border: 1px solid var(--birdr-100);
+            border-radius: 10px;
+            padding: 0.85rem 1rem;
+        }
+        .stat-card .value {
+            display: block;
+            font-size: 1.45rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            line-height: 1.2;
+        }
+        .stat-card .label {
+            display: block;
+            margin-top: 0.2rem;
+            font-size: 0.8rem;
+            color: #6d5c48;
+        }
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 800px) {
+            .split-grid { grid-template-columns: 1fr; }
+        }
+        .pct-cell {
+            min-width: 8.5rem;
+        }
+        .pct-bar {
+            height: 8px;
+            background: var(--birdr-100);
+            border-radius: 99px;
+            overflow: hidden;
+            margin-top: 0.3rem;
+        }
+        .pct-bar > span {
+            display: block;
+            height: 100%;
+            background: var(--birdr-500);
+        }
+        .show-more {
+            margin: 0.85rem 0 0;
+            padding: 0.45rem 0.9rem;
+            border: 1px solid var(--birdr-200);
+            border-radius: 8px;
+            background: #fff;
+            color: var(--birdr-800);
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .show-more:hover { background: var(--birdr-50); }
+        .section-note { margin: 0 0 0.85rem; }
+        .chart-wrap {
+            position: relative;
+            height: 320px;
+            margin: 1rem 0 0.5rem;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1>Media reviews</h1>
+    <p class="muted">
+        How photo review is going: who is reviewing, how much of each country’s bird photos
+        have been checked, and a few other cuts of the same data.
+        Linked accounts count as one reviewer. People with the same name are grouped.
+        Not sure is listed separately from rejected.
+    </p>
+
+    <div class="stat-grid">
+        <div class="stat-card">
+            <span class="value">{{ overview.total_reviews }}</span>
+            <span class="label">Reviews</span>
+        </div>
+        <div class="stat-card">
+            <span class="value">{{ overview.reviewers }}</span>
+            <span class="label">Reviewers</span>
+        </div>
+        <div class="stat-card">
+            <span class="value">{{ overview.photos_reviewed_pct }}%</span>
+            <span class="label">Photos reviewed ({{ overview.photos_reviewed }} / {{ overview.photos }})</span>
+        </div>
+        <div class="stat-card">
+            <span class="value">{{ overview.approval_rate }}%</span>
+            <span class="label">Approved of decided ({{ overview.approved }} of {{ overview.decided }}; {{ overview.rejected }} rejected)</span>
+        </div>
+        <div class="stat-card">
+            <span class="value">{{ overview.species_ready_pct }}%</span>
+            <span class="label">Species with 10+ approved photos, or fully reviewed if fewer ({{ overview.species_ready }} / {{ overview.species_with_photos }})</span>
+        </div>
+        <div class="stat-card">
+            <span class="value">{{ overview.reviews_last_30_days }}</span>
+            <span class="label">Reviews in the last 30 days</span>
+        </div>
+    </div>
+
+    <h2>Top reviewers</h2>
+    <p class="muted section-note">Approved, rejected, and not sure per reviewer.</p>
+    <table class="data-table" id="most-reviews">
+        <thead>
+            <tr>
+                <th class="num">#</th>
+                <th>Reviewer</th>
+                <th class="num">Reviews</th>
+                <th class="num">Approved</th>
+                <th class="num">Rejected</th>
+                <th class="num">Not sure</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in reviewers %}
+                <tr {% if forloop.counter > 10 %}class="extra-reviewer" hidden{% endif %}>
+                    <td class="num">{{ forloop.counter }}</td>
+                    <td>{{ row.name }}</td>
+                    <td class="num">{{ row.total }}</td>
+                    <td class="num count-approved">{{ row.approved }}</td>
+                    <td class="num count-rejected">{{ row.rejected }}</td>
+                    <td class="num">{{ row.not_sure }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6">No media reviews yet.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if reviewers|length > 10 %}
+        <button type="button" class="show-more" id="show-more-reviewers" data-total="{{ reviewers|length }}">
+            Show all {{ reviewers|length }} reviewers
+        </button>
+    {% endif %}
+
+    <h2>Coverage by country</h2>
+    <p class="muted section-note">
+        Visible photos of native, endemic, and rare checklist species.
+        A photo counts as reviewed when it has at least one review.
+        The same photo can appear in more than one country.
+    </p>
+    <table class="data-table" id="review-countries">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th class="num">Photos</th>
+                <th class="num">Reviewed</th>
+                <th>Photo %</th>
+                <th class="num">Species with photos</th>
+                <th>Species %</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in countries %}
+                <tr {% if forloop.counter > 15 %}class="extra-country" hidden{% endif %}>
+                    <td>
+                        <a href="/media-review/{{ row.code }}">{{ row.name }}</a>
+                        <span class="muted">({{ row.code }})</span>
+                    </td>
+                    <td class="num">{{ row.photos }}</td>
+                    <td class="num">{{ row.reviewed }}</td>
+                    <td class="pct-cell">
+                        {{ row.pct }}%
+                        <div class="pct-bar" aria-hidden="true"><span style="width: {{ row.pct }}%"></span></div>
+                    </td>
+                    <td class="num">{{ row.species_with_review }} / {{ row.species_with_photos }}</td>
+                    <td class="pct-cell">
+                        {{ row.species_pct }}%
+                        <div class="pct-bar" aria-hidden="true"><span style="width: {{ row.species_pct }}%"></span></div>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6">No checklist photos yet.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if countries|length > 15 %}
+        <button type="button" class="show-more" id="show-more-countries" data-total="{{ countries|length }}">
+            Show all {{ countries|length }} countries
+        </button>
+    {% endif %}
+
+    <div class="split-grid">
+        <div>
+            <h2>By source</h2>
+            <p class="muted section-note">Visible photos, grouped by where they were imported from.</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Source</th>
+                        <th class="num">Photos</th>
+                        <th class="num">Reviewed</th>
+                        <th>Reviewed %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in sources %}
+                        <tr>
+                            <td>{{ row.source }}</td>
+                            <td class="num">{{ row.photos }}</td>
+                            <td class="num">{{ row.reviewed }}</td>
+                            <td class="pct-cell">
+                                {{ row.pct }}%
+                                <div class="pct-bar" aria-hidden="true"><span style="width: {{ row.pct }}%"></span></div>
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="4">No photos yet.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h2>By media type</h2>
+            <p class="muted section-note">Images, video, and audio that are not hidden.</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th class="num">Items</th>
+                        <th class="num">Reviewed</th>
+                        <th>Reviewed %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in media_types %}
+                        <tr>
+                            <td>{{ row.type }}</td>
+                            <td class="num">{{ row.items }}</td>
+                            <td class="num">{{ row.reviewed }}</td>
+                            <td class="pct-cell">
+                                {{ row.pct }}%
+                                <div class="pct-bar" aria-hidden="true"><span style="width: {{ row.pct }}%"></span></div>
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="4">No media yet.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h2>Reviews by month</h2>
+    <p class="muted section-note">Number of reviews created in each of the last 12 months.</p>
+    <div class="chart-wrap">
+        <canvas id="reviews-by-month-chart"></canvas>
+    </div>
+    {{ by_month|json_script:"reviews-by-month-data" }}
+{% endblock %}
+
+{% block extra_body %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script>
+        (function () {
+            function bindShowMore(buttonId, rowClass, collapsedLabel, expandedLabel) {
+                var button = document.getElementById(buttonId);
+                if (!button) return;
+                var extra = document.querySelectorAll('.' + rowClass);
+                var total = button.getAttribute('data-total');
+                var expanded = false;
+                button.addEventListener('click', function () {
+                    expanded = !expanded;
+                    extra.forEach(function (row) {
+                        row.hidden = !expanded;
+                    });
+                    button.textContent = expanded
+                        ? collapsedLabel
+                        : expandedLabel.replace('{n}', total);
+                });
+            }
+            bindShowMore(
+                'show-more-reviewers',
+                'extra-reviewer',
+                'Show top 10',
+                'Show all {n} reviewers'
+            );
+            bindShowMore(
+                'show-more-countries',
+                'extra-country',
+                'Show top 15',
+                'Show all {n} countries'
+            );
+
+            var dataNode = document.getElementById('reviews-by-month-data');
+            var canvas = document.getElementById('reviews-by-month-chart');
+            if (dataNode && canvas) {
+                var rows = JSON.parse(dataNode.textContent);
+                var labels = rows.map(function (row) {
+                    var date = new Date(String(row.month).slice(0, 10) + 'T00:00:00');
+                    return date.toLocaleDateString(undefined, { month: 'short', year: 'numeric' });
+                });
+                new Chart(canvas, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Reviews',
+                            data: rows.map(function (row) { return row.total; }),
+                            borderColor: '#8b6419',
+                            backgroundColor: 'rgba(139, 100, 25, 0.18)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.25,
+                            pointRadius: 3,
+                            pointBackgroundColor: '#8b6419',
+                        }],
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: { precision: 0 },
+                                title: { display: true, text: 'Reviews' },
+                            },
+                        },
+                    },
+                });
+            }
+        })();
+    </script>
+{% endblock %}

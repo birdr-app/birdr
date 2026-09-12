@@ -1,2 +1,2 @@
 species_code,country_code,abundance,abundance_mean_avg,abundance_mean_max,peak_season,range_occupied_percent,range_total_percent,total_pop_percent,range_days_occupation,occupancy,score,frequency,frequency_pct,rarity_cap,commonness_basis,debug_range_occupied_max
-pacreh1,MH,0.009261047994702924,0.0093040641888167,0.0093040641888167,resident,0.0077519379844961,1.935995973128376e-05,4.97657347762693e-05,365.0,0.77519379844961,0.003862156992325676,very_rare,0.3862156992325676,,peak_abundance_with_occupancy_days_modifiers,0.0077519379844961
+eutspa,MH,0.17546476933074148,0.1918,0.1918,resident,0.0039,0.0,0.0,365.0,0.38999999999999996,0.07317449236470286,very_rare,7.317449236470286,very_rare,peak_abundance_with_occupancy_days_modifiers,0.0039

@@ -42,6 +42,13 @@ class SpeciesTraitViewSet(viewsets.ReadOnlyModelViewSet):
         return queryset
 
 
+def _serialized_comparison(comparison, request, generate_translation=True):
+    return SpeciesComparisonSerializer(
+        comparison,
+        context={'request': request, 'generate_translation': generate_translation},
+    ).data
+
+
 class SpeciesComparisonViewSet(viewsets.ReadOnlyModelViewSet):
     """
     ViewSet for viewing species comparisons.
@@ -52,7 +59,9 @@ class SpeciesComparisonViewSet(viewsets.ReadOnlyModelViewSet):
     authentication_classes = []  # No authentication required
     
     def get_queryset(self):
-        queryset = SpeciesComparison.objects.select_related('species_1', 'species_2')
+        queryset = SpeciesComparison.objects.select_related('species_1', 'species_2').prefetch_related(
+            'translations'
+        )
         
         # Filter by species
         species_1_id = self.request.query_params.get('species_1_id', None)
@@ -69,6 +78,11 @@ class SpeciesComparisonViewSet(viewsets.ReadOnlyModelViewSet):
             queryset = queryset.filter(comparison_type=comparison_type)
         
         return queryset
+
+    def get_serializer_context(self):
+        ctx = super().get_serializer_context()
+        ctx['generate_translation'] = getattr(self, 'action', None) != 'list'
+        return ctx
 
 
 class ComparisonRequestView(APIView):
@@ -115,7 +129,7 @@ class ComparisonRequestView(APIView):
         if existing_comparison:
             # Return existing comparison
             return Response(
-                SpeciesComparisonSerializer(existing_comparison).data,
+                _serialized_comparison(existing_comparison, request),
                 status=status.HTTP_200_OK
             )
         
@@ -140,7 +154,7 @@ class ComparisonRequestView(APIView):
             request_obj.save()
             
             return Response(
-                SpeciesComparisonSerializer(comparison).data,
+                _serialized_comparison(comparison, request),
                 status=status.HTTP_201_CREATED
             )
         except ComparisonGenerationError as e:
@@ -200,7 +214,11 @@ class ComparisonRequestView(APIView):
             requested_by=request.user if request.user.is_authenticated else None
         ).order_by('-requested_at')[:20]
         
-        serializer = ComparisonRequestSerializer(requests, many=True)
+        serializer = ComparisonRequestSerializer(
+            requests,
+            many=True,
+            context={'request': request, 'generate_translation': False},
+        )
         return Response(serializer.data)
 
 

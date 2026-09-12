@@ -5,7 +5,7 @@ from unittest.mock import patch
 from django.core.cache import cache
 from django.test import TestCase, override_settings
 
-from compare.ai_service import comparison_model_name, comparison_prompt_version
+from compare.ai_service import HANDBOOK_MODEL, comparison_model_name, comparison_prompt_version
 from compare.models import SpeciesComparison
 from jizz.models import (
     Answer,
@@ -20,10 +20,21 @@ from jizz.models import (
 )
 from media.models import Media, MediaReview
 
+_SAMPLE_STORE_RATINGS = {
+    'ios': {'score': 4.8, 'count': 12, 'score_label': '4.8', 'star_percent': 96},
+    'android': {'score': 4.6, 'count': 9, 'score_label': '4.6', 'star_percent': 92},
+}
+
 
 class MarketingPagesTests(TestCase):
     def setUp(self):
         cache.clear()
+        self.ratings_patcher = patch(
+            'jizz.store_ratings.get_store_ratings',
+            return_value=_SAMPLE_STORE_RATINGS,
+        )
+        self.ratings_patcher.start()
+        self.addCleanup(self.ratings_patcher.stop)
         self.nl, _ = Country.objects.get_or_create(code='NL', defaults={'name': 'Netherlands'})
         if self.nl.name != 'Netherlands':
             self.nl.name = 'Netherlands'
@@ -75,7 +86,9 @@ class MarketingPagesTests(TestCase):
         self.assertEqual(response.status_code, 200)
         html = response.content.decode()
         self.assertIn('Birdr – Free Bird Identification Quiz &amp; Training App', html)
-        self.assertIn('Learn to identify birds yourself.', html)
+        self.assertIn('Improve your birding skills.', html)
+        self.assertIn('What is Birdr?', html)
+        self.assertIn('sign in with Google so Birdr can create your account', html)
         self.assertIn('rel="canonical"', html)
         self.assertIn('https://birdr.pro/site/', html)
         self.assertIn('WebApplication', html)
@@ -83,8 +96,16 @@ class MarketingPagesTests(TestCase):
         self.assertNotIn('FAQPage', html)
         self.assertIn('href="/site/community/"', html)
         self.assertIn('href="/site/faq/"', html)
+        self.assertIn('href="/site/newsletter/"', html)
         self.assertIn('How you can help', html)
         self.assertIn('Read the FAQ', html)
+        self.assertIn('Support Birdr', html)
+        self.assertIn('https://github.com/sponsors/birdr-app', html)
+        self.assertEqual(html.count('class="btn btn-support"'), 2)
+        self.assertIn('id="support-birdr"', html)
+        self.assertIn('There is no funding behind it right now', html)
+        self.assertIn('Donating is one way', html)
+        self.assertIn('Write about funding or a partnership', html)
         self.assertIn('Kudos to the developer!', html)
         self.assertIn('data-typewriter', html)
         self.assertIn('Special+Elite', html)
@@ -93,6 +114,8 @@ class MarketingPagesTests(TestCase):
         self.assertIn('BirdLife Finland (BirdLife Suomi), Finland', html)
         self.assertIn('Japan Bird Research Association, Japan', html)
         self.assertIn('info@birdr.pro', html)
+        self.assertIn('https://www.facebook.com/groups/birdrcommunity', html)
+        self.assertIn('https://github.com/birdr-app/birdr/issues', html)
         self.assertIn('Get it on Google Play', html)
         self.assertIn('Or play a quiz in the browser', html)
         self.assertIn('href="/play"', html)
@@ -118,7 +141,7 @@ class MarketingPagesTests(TestCase):
         self.assertIn('padding: 8px 20px 0', html)
         icon = self.client.get('/images/birdr-anime.gif')
         self.assertEqual(icon.status_code, 200)
-        self.assertEqual(icon['Content-Type'], 'image/gif')
+        self.assertIn('image/gif', icon['Content-Type'])
         favicon = self.client.get('/favicon-32x32.png')
         self.assertEqual(favicon.status_code, 200)
 
@@ -176,6 +199,7 @@ class MarketingPagesTests(TestCase):
             '/site/my-tricky-birds/',
             '/site/flocks/',
             '/site/community/',
+            '/site/newsletter/',
             '/site/faq/',
         ]
         for path in paths:
@@ -228,6 +252,11 @@ class MarketingPagesTests(TestCase):
 
         community = self.client.get('/site/community/').content.decode()
         self.assertIn('How can I help?', community)
+        self.assertIn('Facebook group', community)
+        self.assertIn('the place to have discussions', community)
+        self.assertIn('https://www.facebook.com/groups/birdrcommunity', community)
+        self.assertIn('submit a ticket on GitHub', community)
+        self.assertIn('https://github.com/birdr-app/birdr/issues', community)
         self.assertIn('Flag', community)
         self.assertIn('#review-photos', community)
         self.assertIn('/media-review/', community)
@@ -235,11 +264,91 @@ class MarketingPagesTests(TestCase):
         self.assertIn('Write a better description', community)
         self.assertIn('href="/site/birds/"', community)
         self.assertRegex(community, r'href="/site/community/"[^>]*aria-current="page"')
+        self.assertIn('Spread the word', community)
+        self.assertIn('href="/site/newsletter/"', community)
+        self.assertIn('See a newsletter example', community)
+        self.assertIn('Leave a store review', community)
+        self.assertIn('helps other birders find Birdr', community)
+        self.assertIn('Review on the App Store', community)
+        self.assertIn('Review on Google Play', community)
+        self.assertIn('action=write-review', community)
+        self.assertIn('class="store-score"', community)
+        self.assertIn('>4.8<', community)
+        self.assertIn('>4.6<', community)
+        self.assertIn('12 ratings', community)
+        self.assertIn('9 ratings', community)
+        self.assertIn('Support Birdr', community)
+        self.assertIn('https://github.com/sponsors/birdr-app', community)
+        self.assertIn('btn-support', community)
+        self.assertIn('sponsor Birdr on GitHub', community)
+        self.assertIn('id="support-birdr"', community)
+        self.assertIn('Donating is one way', community)
+        self.assertIn('partnership', community)
+        self.assertNotIn('Example newsletter item', community)
+        self.assertNotIn('data-newsletter-copy', community)
+
+        newsletter = self.client.get('/site/newsletter/').content.decode()
+        self.assertIn('Add it to your bird club newsletter', newsletter)
+        self.assertIn('Example newsletter item', newsletter)
+        self.assertIn('data-newsletter-copy', newsletter)
+        self.assertIn('newsletter-copy-body', newsletter)
+        self.assertIn('A free bird ID quiz you can try yourself', newsletter)
+        self.assertIn('Want to get sharper at bird identification between outings', newsletter)
+        self.assertIn('quizzes for every level', newsletter)
+        self.assertIn('free, open source, and has no ads', newsletter)
+        self.assertIn('you practise the field marks yourself', newsletter)
+        self.assertIn('get those warblers right', newsletter)
+        self.assertIn('class="newsletter-shot"', newsletter)
+        self.assertIn('More media', newsletter)
+        self.assertIn('class="newsletter-more-grid"', newsletter)
+        self.assertIn('They are not included when you press Copy', newsletter)
+        self.assertIn('from easy to hard', newsletter)
+        self.assertIn('App Store:', newsletter)
+        self.assertIn('Google Play:', newsletter)
+        self.assertIn('apps.apple.com/us/app/birdr', newsletter)
+        self.assertIn('play.google.com/store/apps/details?id=pro.birdr.app', newsletter)
+        self.assertIn('/images/birdr-new-game.png', newsletter)
+        self.assertIn('/images/birdr-photo-quiz.png', newsletter)
+        self.assertIn('/images/birdr-species-review.png', newsletter)
+        self.assertIn('/images/birdr-country-challenge.png', newsletter)
+        self.assertIn('/images/birdr-tricky-birds.png', newsletter)
+        self.assertIn('/images/birdr-tricky-practice.png', newsletter)
+        self.assertIn('/images/birdr-tricky-results.png', newsletter)
+        copy_start = newsletter.index('id="newsletter-copy-body"')
+        copy_end = newsletter.index('id="newsletter-more-heading"')
+        copied = newsletter[copy_start:copy_end]
+        self.assertIn('/images/birdr-photo-quiz.png', copied)
+        self.assertIn('/images/birdr-new-game.png', copied)
+        self.assertIn('/images/birdr-species-review.png', copied)
+        self.assertNotIn('/images/birdr-tricky-birds.png', copied)
+        self.assertNotIn('/images/birdr-country-challenge.png', copied)
+        self.assertRegex(newsletter, r'href="/site/community/"[^>]*aria-current="page"')
+        self.assertIn('href="/site/newsletter/"', newsletter)
+        for path in (
+            '/images/birdr-new-game.png',
+            '/images/birdr-photo-quiz.png',
+            '/images/birdr-species-review.png',
+            '/images/birdr-country-challenge.png',
+        ):
+            shot = self.client.get(path)
+            self.assertEqual(shot.status_code, 200, path)
+            self.assertEqual(shot['Content-Type'], 'image/png')
 
         faq = self.client.get('/site/faq/').content.decode()
         self.assertIn('FAQPage', faq)
         self.assertIn('Is Birdr free?', faq)
         self.assertIn('What are Flocks?', faq)
+
+    def test_community_hides_store_scores_when_unavailable(self):
+        with patch(
+            'jizz.store_ratings.get_store_ratings',
+            return_value={'ios': None, 'android': None},
+        ):
+            html = self.client.get('/site/community/').content.decode()
+        self.assertIn('Leave a store review', html)
+        self.assertIn('Review on the App Store', html)
+        self.assertNotIn('class="store-score"', html)
+        self.assertNotIn('class="store-score-row"', html)
 
     def test_legacy_marketing_paths_redirect(self):
         pairs = [
@@ -248,6 +357,7 @@ class MarketingPagesTests(TestCase):
             ('/site/bird-identification-quiz/', '/play'),
             ('/flocks/', '/site/flocks/'),
             ('/community/', '/site/community/'),
+            ('/newsletter/', '/site/newsletter/'),
             ('/faq/', '/site/faq/'),
             ('/countries/netherlands/', '/site/countries/netherlands/'),
         ]
@@ -270,6 +380,9 @@ class MarketingPagesTests(TestCase):
         self.assertIn('Country Challenge', html)
         self.assertIn('/media-review/NL', html)
         self.assertIn('Review Netherlands photos', html)
+        self.assertIn('Spread the word', html)
+        self.assertIn('/site/newsletter/', html)
+        self.assertNotIn('Example newsletter item', html)
         self.assertNotIn('How people play', html)
         self.assertNotIn('High scores', html)
         self.assertEqual(self.client.get('/site/countries/world/').status_code, 404)
@@ -619,6 +732,9 @@ class MarketingPagesTests(TestCase):
         self.assertIn(f'data-species-2="{high.id}"', html)
         self.assertIn('/api/compare/request/', html)
         self.assertIn('Birds of the World', html)
+        self.assertIn('id="ai-credits-empty"', html)
+        self.assertIn('/images/birdr-stressed.png', html)
+        self.assertIn('id="ai-credits-empty" hidden', html)
         mock_generate.assert_not_called()
 
     def test_compare_page_renders_generated_markdown(self):
@@ -652,6 +768,69 @@ class MarketingPagesTests(TestCase):
         self.assertNotIn('often mixed up', html)
         self.assertNotIn('id="ai-generate"', html)
 
+    @patch('compare.i18n._translate_with_openai')
+    def test_compare_page_auto_translates_and_caches(self, mock_tr):
+        mock_tr.return_value = {
+            'summary': 'Sperwers zijn kleiner, met een vierkante staart.',
+            'detailed_comparison': 'Grootte, staartvorm en vlucht scheiden de twee Accipiters.',
+            'identification_tips': 'Kijk naar het formaat naast andere vogels, dan de staarthoeken.',
+        }
+        low, high = (
+            (self.sparrow, self.goshawk)
+            if self.sparrow.id < self.goshawk.id
+            else (self.goshawk, self.sparrow)
+        )
+        pair = f'{low.slug}-vs-{high.slug}'
+        first = self.client.get(f'/nl/site/compare/{pair}/')
+        self.assertEqual(first.status_code, 200)
+        html = first.content.decode()
+        self.assertIn('Sperwers zijn kleiner', html)
+        mock_tr.assert_called_once()
+        from compare.models import ComparisonTranslation
+
+        row = ComparisonTranslation.objects.get(language='nl')
+        self.assertEqual(
+            row.fields['summary'],
+            'Sperwers zijn kleiner, met een vierkante staart.',
+        )
+
+        second = self.client.get(f'/nl/site/compare/{pair}/')
+        self.assertIn('Sperwers zijn kleiner', second.content.decode())
+        mock_tr.assert_called_once()
+
+    def test_compare_page_retries_handbook_extract(self):
+        extra = Species.objects.create(name='Little Gull', name_latin='Hydrocoloeus minutus', code='litgul')
+        extra.refresh_from_db()
+        low, high = (
+            (self.sparrow, extra)
+            if self.sparrow.id < extra.id
+            else (extra, self.sparrow)
+        )
+        SpeciesComparison.objects.create(
+            comparison_type='species',
+            species_1=low,
+            species_2=high,
+            summary='Taken from Birds of the World identification notes.',
+            identification_tips='Primary projection long versus short.',
+            detailed_comparison='',
+            ai_model=HANDBOOK_MODEL,
+            ai_prompt_version=comparison_prompt_version(),
+        )
+        pair = f'{low.slug}-vs-{high.slug}'
+        html = self.client.get(f'/site/compare/{pair}/').content.decode()
+        self.assertIn('id="ai-generate"', html)
+        self.assertIn('/api/compare/request/', html)
+        self.assertIn('id="ai-credits-empty"', html)
+        self.assertIn('id="ai-credits-empty" hidden', html)
+        self.assertIn('/images/birdr-stressed.png', html)
+        self.assertIn('I develop Birdr in my spare time', html)
+        self.assertIn('info@birdr.pro', html)
+        self.assertNotIn('It is not a rewritten field-guide card.', html)
+        self.assertNotIn('Primary projection long versus short.', html)
+        pic = self.client.get('/images/birdr-stressed.png')
+        self.assertEqual(pic.status_code, 200)
+        self.assertTrue(pic['Content-Type'].startswith('image/'))
+
     def test_robots_and_sitemaps(self):
         robots = self.client.get('/robots.txt')
         self.assertEqual(robots.status_code, 200)
@@ -675,6 +854,7 @@ class MarketingPagesTests(TestCase):
         self.assertNotIn('https://birdr.pro/site/bird-identification-quiz/', body)
         self.assertIn('https://birdr.pro/site/flocks/', body)
         self.assertIn('https://birdr.pro/site/community/', body)
+        self.assertIn('https://birdr.pro/site/newsletter/', body)
         self.assertIn('https://birdr.pro/site/faq/', body)
         self.assertNotIn('/site/my-edits/', body)
 
@@ -687,6 +867,175 @@ class MarketingPagesTests(TestCase):
 
         compare = self.client.get('/sitemap-compare.xml').content.decode()
         self.assertIn('-vs-', compare)
+
+    def test_localized_marketing_pages(self):
+        en = self.client.get('/site/')
+        self.assertEqual(en.status_code, 200)
+        html = en.content.decode()
+        self.assertIn('lang="en"', html)
+        self.assertIn('hreflang="nl"', html)
+        self.assertIn('https://birdr.pro/nl/site/', html)
+        self.assertIn('hreflang="pt-BR"', html)
+        self.assertIn('https://birdr.pro/pt-BR/site/', html)
+        self.assertIn('hreflang="x-default"', html)
+        self.assertIn('id="nav-lang"', html)
+        self.assertIn('Nederlands', html)
+        self.assertIn('日本語', html)
+        self.assertEqual(en['Content-Language'], 'en')
+
+        nl = self.client.get('/nl/site/')
+        self.assertEqual(nl.status_code, 200)
+        dutch = nl.content.decode()
+        self.assertIn('lang="nl"', dutch)
+        self.assertIn('Verbeter je vogelkennis.', dutch)
+        self.assertIn('Hoe het werkt', dutch)
+        self.assertIn('href="/nl/site/how-it-works/"', dutch)
+        self.assertIn('href="/nl/site/community/"', dutch)
+        self.assertIn('href="/nl/site/newsletter/"', dutch)
+        self.assertIn('https://birdr.pro/nl/site/', dutch)
+        self.assertNotIn('https://birdr.pro/nl/nl/site/', dutch)
+        self.assertEqual(nl['Content-Language'], 'nl')
+
+        how_nl = self.client.get('/nl/site/how-it-works/').content.decode()
+        self.assertIn('Begin met een fotoquiz', how_nl)
+        self.assertIn('href="/nl/site/my-tricky-birds/"', how_nl)
+
+        community_nl = self.client.get('/nl/site/community/').content.decode()
+        self.assertIn('Vertel het verder', community_nl)
+        self.assertIn('href="/nl/site/newsletter/"', community_nl)
+        self.assertIn('Facebookgroep', community_nl)
+        self.assertIn('ticket in op GitHub', community_nl)
+        self.assertIn('Steun Birdr', community_nl)
+        self.assertIn('sponsoren op GitHub', community_nl)
+        self.assertIn('Zet een store-review', community_nl)
+        self.assertIn('Review in de App Store', community_nl)
+        self.assertIn('12 beoordelingen', community_nl)
+
+        newsletter_nl = self.client.get('/nl/site/newsletter/').content.decode()
+        self.assertIn('Zet het in de clubnieuwsbrief', newsletter_nl)
+        self.assertIn('Wil je tussen excursies door scherper worden in vogelherkenning', newsletter_nl)
+        self.assertIn('Maak een account als je je voortgang wilt bewaren.', newsletter_nl)
+        self.assertIn('Meer media', newsletter_nl)
+        self.assertNotIn(
+            'If you want to get sharper at identification between outings',
+            newsletter_nl,
+        )
+
+    def test_help_template_strings_are_in_catalogs(self):
+        import ast
+        import re
+        from pathlib import Path
+
+        from jizz.marketing.catalogs import CATALOGS
+
+        html_files = [
+            Path(__file__).resolve().parents[1] / 'templates' / 'marketing' / '_help.html',
+            Path(__file__).resolve().parents[1] / 'templates' / 'marketing' / '_store_scores.html',
+            Path(__file__).resolve().parents[1] / 'templates' / 'marketing' / 'community.html',
+            Path(__file__).resolve().parents[1] / 'templates' / 'marketing' / '_newsletter_example.html',
+            Path(__file__).resolve().parents[1] / 'templates' / 'marketing' / 'newsletter.html',
+        ]
+        pattern = re.compile(
+            r'\{%\s*mt\s+("(?:\\.|[^"\\])*"|\'(?:\\.|[^\'\\])*\')',
+            re.S,
+        )
+        messages = []
+        for html_path in html_files:
+            html = html_path.read_text()
+            for raw in pattern.findall(html):
+                msgid = ast.literal_eval(raw)
+                if msgid not in messages:
+                    messages.append(msgid)
+        self.assertGreater(len(messages), 20)
+        missing = [
+            msgid
+            for msgid in messages
+            if any(msgid not in catalog for catalog in CATALOGS.values())
+        ]
+        self.assertEqual(missing, [])
+
+        ja = self.client.get('/ja/site/faq/')
+        self.assertEqual(ja.status_code, 200)
+        self.assertIn('lang="ja"', ja.content.decode())
+        self.assertIn('Birdrは無料ですか？', ja.content.decode())
+
+        redirect = self.client.get('/en/site/how-it-works/')
+        self.assertEqual(redirect.status_code, 301)
+        self.assertEqual(redirect['Location'], '/site/how-it-works/')
+
+        bare = self.client.get('/de')
+        self.assertEqual(bare.status_code, 301)
+        self.assertEqual(bare['Location'], '/de/site/')
+
+        pages = self.client.get('/sitemap-pages.xml').content.decode()
+        self.assertIn('https://birdr.pro/nl/site/', pages)
+        self.assertIn('hreflang="ja"', pages)
+        self.assertIn('xmlns:xhtml', pages)
+
+    def test_localized_country_and_species_names(self):
+        from jizz.models import Language, SpeciesName, TaxonomicFamily
+
+        Language.objects.get_or_create(code='nl', defaults={'name': 'Dutch'})
+        SpeciesName.objects.create(
+            species=self.sparrow, language_id='nl', name='Sperwer',
+        )
+        SpeciesName.objects.create(
+            species=self.goshawk, language_id='nl', name='Havik',
+        )
+        family = TaxonomicFamily.objects.create(
+            name_latin='Accipitridae',
+            name_en='Hawks, eagles and kites',
+            name_nl='Haviken',
+        )
+        self.sparrow.taxonomic_family = family
+        self.sparrow.save(update_fields=['taxonomic_family'])
+
+        en_country = self.client.get('/site/countries/netherlands/').content.decode()
+        self.assertIn('Birds of Netherlands', en_country)
+        self.assertIn('>Netherlands</li>', en_country)
+        self.assertNotIn('Vogels van Nederland', en_country)
+
+        nl_country = self.client.get('/nl/site/countries/netherlands/').content.decode()
+        self.assertIn('Vogels van Nederland', nl_country)
+        self.assertIn('>Nederland</li>', nl_country)
+        self.assertNotIn('Birds of Netherlands', nl_country)
+        self.assertNotIn('Vogels van Netherlands', nl_country)
+
+        landing_nl = self.client.get('/nl/site/').content.decode()
+        self.assertIn('>Nederland</a>', landing_nl)
+        self.assertIn('Wat is Birdr?', landing_nl)
+        self.assertIn('inloggen met Google', landing_nl)
+
+        bird_en = self.client.get(f'/site/birds/{self.sparrow.slug}/').content.decode()
+        self.assertIn('Eurasian Sparrowhawk', bird_en)
+        self.assertNotIn('Sperwer', bird_en)
+
+        bird_nl = self.client.get(f'/nl/site/birds/{self.sparrow.slug}/').content.decode()
+        self.assertIn('Sperwer', bird_nl)
+        self.assertNotIn('Eurasian Sparrowhawk', bird_nl)
+        self.assertIn('Haviken', bird_nl)
+
+        search = self.client.get('/nl/site/birds/', {'q': 'sperwer'}).content.decode()
+        self.assertIn('Sperwer', search)
+        self.assertIn(f'/nl/site/birds/{self.sparrow.slug}/', search)
+
+        birds_nl = self.client.get('/nl/site/birds/').content.decode()
+        self.assertIn('Sperwer', birds_nl)
+        self.assertIn('Havik', birds_nl)
+        self.assertIn('Haviken', birds_nl)
+
+        low, high = (
+            (self.sparrow, self.goshawk)
+            if self.sparrow.id < self.goshawk.id
+            else (self.goshawk, self.sparrow)
+        )
+        compare = self.client.get(
+            f'/nl/site/compare/{low.slug}-vs-{high.slug}/'
+        ).content.decode()
+        self.assertIn('Sperwer', compare)
+        self.assertIn('Havik', compare)
+        self.assertNotIn('Eurasian Sparrowhawk', compare)
+        self.assertNotIn('Northern Goshawk', compare)
 
     @override_settings(GOOGLE_SITE_VERIFICATION='google-token', BING_SITE_VERIFICATION='bing-token')
     def test_verification_meta(self):
@@ -705,7 +1054,11 @@ class MarketingCmsTests(TestCase):
         self.assertIn('About Birdr', html)
         self.assertIn('rel="canonical"', html)
         self.assertIn('https://birdr.pro/site/page/about/', html)
-        self.assertIn('/site/page/about/', self.client.get('/site/').content.decode())
+        landing = self.client.get('/site/').content.decode()
+        self.assertIn('/site/page/about/', landing)
+        primary = landing.split('<nav class="site"', 1)[1].split('</nav>', 1)[0]
+        self.assertNotIn('/site/page/about/', primary)
+        self.assertNotIn('/site/page/privacy/', primary)
 
     def test_unpublished_is_404(self):
         from jizz.models import MarketingPage
@@ -932,6 +1285,14 @@ def _started_token(seconds_ago=3):
 
 
 class MarketingFeedbackFormTests(TestCase):
+    def setUp(self):
+        self.ratings_patcher = patch(
+            'jizz.store_ratings.get_store_ratings',
+            return_value={'ios': None, 'android': None},
+        )
+        self.ratings_patcher.start()
+        self.addCleanup(self.ratings_patcher.stop)
+
     def test_community_shows_form(self):
         html = self.client.get('/site/community/').content.decode()
         self.assertIn('name="comment"', html)

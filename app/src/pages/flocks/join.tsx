@@ -19,33 +19,23 @@ import {
   joinFlock,
   setStoredMainFlockSlug,
 } from '../../api/flocks';
-import { authService } from '../../api/services/auth.service';
 import { Page } from '../../shared/components/layout';
+import { useAuthProfile } from '../../core/auth-profile-context';
 
 export function FlocksJoinPage() {
   const navigate = useNavigate();
   const intl = useIntl();
-  const [isAuthenticated, setIsAuthenticated] = useState(() => !!authService.getAccessToken());
+  const { isAuthenticated, ready } = useAuthProfile();
   const [joinCode, setJoinCode] = useState('');
   const [joining, setJoining] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const syncAuth = () => setIsAuthenticated(!!authService.getAccessToken());
-    syncAuth();
-    window.addEventListener('focus', syncAuth);
-    const interval = setInterval(syncAuth, 3000);
-    return () => {
-      window.removeEventListener('focus', syncAuth);
-      clearInterval(interval);
-    };
-  }, []);
-
-  useEffect(() => {
+    if (!ready) return;
     if (!isAuthenticated) {
       navigate('/login', { state: { from: '/flocks/join' }, replace: true });
     }
-  }, [isAuthenticated, navigate]);
+  }, [ready, isAuthenticated, navigate]);
 
   const handleJoin = async () => {
     const code = joinCode.trim().toUpperCase();
@@ -63,7 +53,7 @@ export function FlocksJoinPage() {
     }
   };
 
-  if (!isAuthenticated) return null;
+  if (!ready || !isAuthenticated) return null;
 
   return (
     <Page>

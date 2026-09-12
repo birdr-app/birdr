@@ -1,0 +1,48 @@
+<script>
+window.BIRDR_RICH_TEXT = window.BIRDR_RICH_TEXT || (function () {
+  var BASE = 'https://cdn.jsdelivr.net/npm/tinymce@7.9.1';
+  var loading = null;
+
+  function load() {
+    if (window.tinymce) return Promise.resolve(window.tinymce);
+    if (loading) return loading;
+    loading = new Promise(function (resolve, reject) {
+      var script = document.createElement('script');
+      script.src = BASE + '/tinymce.min.js';
+      script.referrerPolicy = 'origin';
+      script.onload = function () { resolve(window.tinymce); };
+      script.onerror = function () {
+        loading = null;
+        reject(new Error('Could not load the rich text editor'));
+      };
+      document.head.appendChild(script);
+    });
+    return loading;
+  }
+
+  function options(extra) {
+    var base = {
+      license_key: 'gpl',
+      base_url: BASE,
+      suffix: '.min',
+      menubar: false,
+      branding: false,
+      promotion: false,
+      plugins: 'lists link autolink',
+      toolbar: 'undo redo | blocks | bold italic underline | bullist numlist | blockquote | link | removeformat',
+      block_formats: 'Paragraph=p; Heading 2=h2; Heading 3=h3',
+      browser_spellcheck: true,
+      convert_urls: false,
+      relative_urls: false,
+      link_default_target: '',
+      link_assume_external_targets: false,
+    };
+    Object.keys(extra || {}).forEach(function (key) {
+      base[key] = extra[key];
+    });
+    return base;
+  }
+
+  return { load: load, options: options };
+})();
+</script>

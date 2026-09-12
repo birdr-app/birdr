@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.core.cache import cache
 from django.db import transaction
 from django.db.models import Case, When, Value, Prefetch, F, Q
 from django.db.models.aggregates import Count
@@ -39,8 +40,10 @@ from django.shortcuts import get_object_or_404
 from .models import Game, Language, Page
 from .serializers import (
     GameSerializer,
+    GameLanguageSerializer,
     FamilyListSerializer,
     OrderListSerializer,
+    SpeciesGroupListSerializer,
     LanguageSerializer,
     PageSerializer,
     PageListSerializer,
@@ -51,6 +54,7 @@ from jizz.models import (
     QuestionMediaReady,
     Country,
     CountrySpecies,
+    SpeciesName,
     Feedback,
     FlagQuestion,
     Game,
@@ -60,6 +64,8 @@ from jizz.models import (
     Species,
     TaxonomicOrder,
     TaxonomicFamily,
+    SpeciesGroup,
+    MIN_TAX_FILTER_SPECIES,
     Update,
     Reaction,
     UserProfile,
@@ -160,14 +166,53 @@ class CountryViewSet(viewsets.ModelViewSet):
     )
 
 
+SPECIES_LIST_CACHE_TTL = 3600
+
+
 class SpeciesListView(ListAPIView):
     serializer_class = SpeciesListSerializer
-    queryset = Species.objects.all()
+    queryset = Species.objects.select_related('taxonomic_order', 'taxonomic_family')
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ["countryspecies__country"]
     permission_classes = [AllowAny]
     authentication_classes = []  # No authentication required for public species data
     pagination_class = None  # Disable pagination - we need all species for the combobox
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        language = (self.request.query_params.get('language') or '').strip()
+        lang = language.lower().split('-')[0].split('_')[0] if language else ''
+        if language and lang != 'la':
+            qs = qs.prefetch_related(
+                Prefetch(
+                    'speciesname_set',
+                    queryset=SpeciesName.objects.filter(language_id=language),
+                    to_attr='_translated_names',
+                )
+            )
+        return qs
+
+    def list(self, request, *args, **kwargs):
+        country = (request.query_params.get("countryspecies__country") or "").strip()
+        if not country:
+            return Response(
+                {"detail": "countryspecies__country is required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        language = (request.query_params.get("language") or "").strip()
+        cache_key = f"jizz:species_list:{country}:{language}"
+        cached = cache.get(cache_key)
+        if cached is not None:
+            response = Response(cached)
+            response["Cache-Control"] = "public, max-age=3600"
+            return response
+        queryset = self.filter_queryset(self.get_queryset()).distinct()
+        serializer = self.get_serializer(queryset, many=True)
+        data = serializer.data
+        cache.set(cache_key, data, SPECIES_LIST_CACHE_TTL)
+        response = Response(data)
+        response["Cache-Control"] = "public, max-age=3600"
+        return response
 
 
 class SpeciesDetailView(RetrieveAPIView):
@@ -256,7 +301,7 @@ class FamilyListView(ListAPIView):
 
         return (
             queryset.annotate(count=Count('species', distinct=True))
-            .filter(count__gt=0)
+            .filter(count__gte=MIN_TAX_FILTER_SPECIES)
             .order_by('name_latin')
         )
 
@@ -274,8 +319,27 @@ class OrderListView(ListAPIView):
             )
         return (
             queryset.annotate(count=Count('species', distinct=True))
-            .filter(count__gt=0)
+            .filter(count__gte=MIN_TAX_FILTER_SPECIES)
             .order_by('name_latin')
+        )
+
+
+class SpeciesGroupListView(ListAPIView):
+    serializer_class = SpeciesGroupListSerializer
+    pagination_class = None
+
+    def get_queryset(self):
+        country_id = self.request.query_params.get("country", None)
+        queryset = SpeciesGroup.objects.all()
+        if country_id:
+            queryset = queryset.filter(
+                species__countryspecies__country_id=country_id,
+                species__countryspecies__status__in=["native", "endemic", "rare"],
+            )
+        return (
+            queryset.annotate(count=Count('species', distinct=True))
+            .filter(count__gte=MIN_TAX_FILTER_SPECIES)
+            .order_by('sort_order', 'name_en')
         )
 
 
@@ -645,13 +709,30 @@ class GameListView(ListCreateAPIView, GetPlayerMixin):
 
     def perform_create(self, serializer):
         player = self.get_player_from_request(self.request)
-        serializer.save(host=player)
+        game = serializer.save(host=player)
+        from jizz.client_info import record_player_score_client_from_request
+
+        record_player_score_client_from_request(player, game, self.request)
 
 
-class GameDetailView(RetrieveAPIView):
+class GameDetailView(RetrieveUpdateAPIView):
     serializer_class = GameSerializer
     queryset = Game.objects.all()
     lookup_field = "token"
+    permission_classes = [AllowAny]
+    http_method_names = ['get', 'patch', 'head', 'options']
+
+    def get_serializer_class(self):
+        if self.request.method == 'PATCH':
+            return GameLanguageSerializer
+        return GameSerializer
+
+    def update(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = GameLanguageSerializer(instance, data=request.data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(GameSerializer(instance, context=self.get_serializer_context()).data)
 
 
 class NoSpeciesForGame(APIException):
@@ -719,6 +800,11 @@ class AnswerView(CreateAPIView):
     # Logged-in clients send a JWT; PlayerToken misses, then JWT authenticates for checklist_added.
     authentication_classes = [PlayerTokenAuthentication, JWTAuthentication]
 
+    def get_serializer_context(self):
+        ctx = super().get_serializer_context()
+        ctx['include_media_link'] = True
+        return ctx
+
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -747,6 +833,11 @@ class AnswerView(CreateAPIView):
 class AnswerDetail(RetrieveAPIView):
     serializer_class = AnswerSerializer
     queryset = Answer.objects.all()
+
+    def get_serializer_context(self):
+        ctx = super().get_serializer_context()
+        ctx['include_media_link'] = True
+        return ctx
 
     def get_object(self):
         return self.queryset.filter(
@@ -845,6 +936,7 @@ class PlayerScoreListView(ListAPIView):
             PlayerScore.objects
             .filter(Q(game__tax_order='') | Q(game__tax_order__isnull=True))
             .filter(Q(game__tax_family='') | Q(game__tax_family__isnull=True))
+            .filter(Q(game__species_group='') | Q(game__species_group__isnull=True))
             .exclude(game__game_type__in=[
                 Game.GAME_TYPE_PAIR_PRACTICE,
                 Game.GAME_TYPE_SPECIES_PRACTICE,

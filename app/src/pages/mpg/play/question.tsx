@@ -13,6 +13,7 @@ import {
 import React, {useContext, useState, useEffect, useCallback, useRef, useMemo} from "react"
 import { FaHeart, FaHeartBroken } from "react-icons/fa"
 import ReactPlayer from "react-player"
+import { PlayableVideo } from "../../../components/playable-video"
 import WebsocketContext from "../../../core/websocket-context"
 import AppContext, {Answer, Species} from "../../../core/app-context"
 import {SpeciesName} from "../../../components/species-name"
@@ -41,6 +42,7 @@ import {
   resolvePlayMediaType,
 } from "../../../core/question-media-index"
 import { QuestionLoadingFeather } from "../../../components/question-loading-feather"
+import { bindHtmlMediaCanPlay } from "../../../core/html-media-canplay"
 import {
   countWrongAnswers,
   PRACTICE_JOKERS,
@@ -49,7 +51,7 @@ import {
 } from "../../../game/jokerProgress"
 
 export const QuestionComponent = () => {
-  const {species, player, game, speciesLanguage} = useContext(AppContext)
+  const {species, speciesLoading, player, game, speciesLanguage} = useContext(AppContext)
   const {players, nextQuestion, question, submitAnswer, answer, endGame: endGameSession, patchQuestionMedia} = useContext(WebsocketContext)
   const {onOpen, onClose, open: isOpen} = useDisclosure()
   const [flagMediaInfo, setFlagMediaInfo] = useState<{
@@ -181,10 +183,9 @@ export const QuestionComponent = () => {
     postQuestionMediaReady(question.id, player.token).catch(() => {})
   }, [question?.id, player?.token, currentMediaIndex])
 
-  useEffect(() => {
-    if (gameMedia !== 'audio' || !currentSound || !question?.id) return
-    notifyMediaReady()
-  }, [gameMedia, currentSound?.url, question?.id, currentMediaIndex, notifyMediaReady])
+  const notifyAudioCanPlay = useCallback((playerInstance: { getInternalPlayer?: () => unknown } | null) => {
+    bindHtmlMediaCanPlay(playerInstance, notifyMediaReady)
+  }, [notifyMediaReady])
 
   const answersEnabled = answersEnabledForMedia(gameMedia, mediaReady)
 
@@ -430,12 +431,12 @@ export const QuestionComponent = () => {
         {gameMedia === 'video' && currentVideo && (
           <>
             <Box position="relative" minH="220px">
-              <ReactPlayer
-                width={'100%'}
-                height={'50%'}
+              <PlayableVideo
                 url={currentVideo.url}
-                controls={true}
-                playing={true}
+                playing
+                controls
+                width="100%"
+                height="50%"
                 onReady={notifyMediaReady}
               />
               {showFeedback && answer != null && (
@@ -500,7 +501,7 @@ export const QuestionComponent = () => {
                   onPlay={() => setAudioPlaying(true)}
                   onPause={() => setAudioPlaying(false)}
                   onEnded={() => setAudioPlaying(false)}
-                  onReady={notifyMediaReady}
+                  onReady={notifyAudioCanPlay}
                 />
                 {showFeedback && answer != null && (
                   <AnswerFeedback
@@ -579,6 +580,7 @@ export const QuestionComponent = () => {
             species={species || []}
             playerLanguage={speciesLanguage ?? player?.language}
             onSelect={(selected) => selectAnswer(selected)}
+            loading={speciesLoading}
             isDisabled={!answersEnabled}
             autoFocus={true}
             placeholder={<FormattedMessage id={"type species"} defaultMessage={"Start typing your answer..."}/>}

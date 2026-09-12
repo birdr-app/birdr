@@ -1,6 +1,7 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from 'axios';
 import { authService } from './services/auth.service';
 import { getApiBaseUrl } from './baseUrl';
+import { clientInfoHeaders } from './clientInfo';
 
 // Use shared API base URL so requests work in Capacitor (Android/iOS) as well as web
 axios.defaults.baseURL = getApiBaseUrl();
@@ -31,6 +32,14 @@ const processQueue = (error: any, token: string | null = null) => {
 // Request interceptor: Add Bearer token to all requests
 axios.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
+    const infoHeaders = clientInfoHeaders();
+    if (config.headers) {
+      Object.entries(infoHeaders).forEach(([key, value]) => {
+        if (!config.headers[key]) {
+          config.headers[key] = value;
+        }
+      });
+    }
     // For endpoints that allow anonymous access, only add token if we have a valid refresh token
     // This allows anonymous users to use these endpoints, but still links authenticated users
     const anonymousEndpoints = ['/api/player/', '/api/compare/'];

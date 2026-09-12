@@ -1,0 +1,1955 @@
+{
+  "Accentors": {
+    "name_de": "Braunellen",
+    "name_es": "Acentores",
+    "name_fr": "Accenteurs",
+    "name_it": "Accenti",
+    "name_ja": "イワヒバリ科",
+    "name_nl": "Heggenmussen",
+    "name_pt_br": "Ferreirinhas"
+  },
+  "African and Green Broadbills": {
+    "name_de": "Pittabreitrachen",
+    "name_es": "Eurilaimos Africanos",
+    "name_fr": "Eurylaimes africains et verts",
+    "name_it": "Broadbill africani e verdi",
+    "name_ja": "アフリカとグリーンブロードビル",
+    "name_nl": "Afrikaanse en Groene Breedbekken en Hapvogels",
+    "name_pt_br": "Bico-largo-africano e Bico-largo-verde"
+  },
+  "Albatrosses": {
+    "name_de": "Albatrosse",
+    "name_es": "Albatros",
+    "name_fr": "Albatross",
+    "name_it": "Albatros",
+    "name_ja": "アホウドリ科",
+    "name_nl": "Albatrossen",
+    "name_pt_br": "Albatrozes"
+  },
+  "Alcids": {
+    "name_de": "Alke",
+    "name_es": "Álcidos",
+    "name_fr": "Alcidés",
+    "name_it": "Alcidi",
+    "name_ja": "ウミスズメ科",
+    "name_nl": "Alken en Zeekoeten",
+    "name_pt_br": "Airos, Tordas-mergulheiras e Papagaios-do-mar"
+  },
+  "Antbirds": {
+    "name_de": "Ameisenvögel",
+    "name_es": "Hormigueros",
+    "name_fr": "Fourmiliers",
+    "name_it": "Uccelli formichieri",
+    "name_ja": "アントバード",
+    "name_nl": "Miervogels",
+    "name_pt_br": "Chocas, Formigueiros e afins"
+  },
+  "Antthrushes": {
+    "name_de": "Ameisendrosseln",
+    "name_es": "Gallitos-hormigueros",
+    "name_fr": "Tétémas",
+    "name_it": "Antthrush",
+    "name_ja": "アントスラッシュ",
+    "name_nl": "Miervogels",
+    "name_pt_br": "Tovacas e afins"
+  },
+  "Asian and Grauer's Broadbills": {
+    "name_de": "Breitrachen",
+    "name_es": "Eurilaimos Asiáticos",
+    "name_fr": "Eurylaimes asiatiques et psittacin",
+    "name_it": "Broadbill asiatici e di Grauer",
+    "name_ja": "アジアとグラウアーブロードビル",
+    "name_nl": "Grauer's Breedbek en Aziatische Breedbekken en Hapvogels",
+    "name_pt_br": "Bico-largo-asiático e Bico-largo-de-grauer"
+  },
+  "Asities": {
+    "name_de": "Jalas",
+    "name_es": "Filepitas",
+    "name_fr": "Philépittes",
+    "name_it": "Asitie",
+    "name_ja": "アシティ",
+    "name_nl": "Asities",
+    "name_pt_br": "Beija-flores-de-bico-largo"
+  },
+  "Australasian Robins": {
+    "name_de": "Südseeschnäpper",
+    "name_es": "Petroicas",
+    "name_fr": "Miros",
+    "name_it": "Robin Australasiani",
+    "name_ja": "オーストラレーシアンロビン",
+    "name_nl": "Australasian Robins",
+    "name_pt_br": "Piscos da Oceania"
+  },
+  "Australian Treecreepers": {
+    "name_de": "Baumrutscher",
+    "name_es": "Corretroncos",
+    "name_fr": "Échelets",
+    "name_it": "Creepers australiani",
+    "name_ja": "オーストラリアツリークリーパー",
+    "name_nl": "Australische Boomkruipers",
+    "name_pt_br": "Trepadeiras-australianas"
+  },
+  "Australo-Papuan Bellbirds": {
+    "name_de": "Haubendickköpfe",
+    "name_es": "Oreoicidae",
+    "name_fr": "Carillonneur huppé, Pitohui huppé ou Siffleur à nuque rousse",
+    "name_it": "Campane Australo-Papuan",
+    "name_ja": "オーストラロパプアベルバード",
+    "name_nl": "Australo-Papuan Bellbirds",
+    "name_pt_br": "Aves-campainha da Oceania"
+  },
+  "Barbets and Toucans": {
+    "name_de": "Bartvögel und Tukane",
+    "name_es": "Barbudos y Tucanes",
+    "name_fr": "Cabézons et toucans",
+    "name_it": "Barbetti e Tucani",
+    "name_ja": "バーベットとトゥーカン",
+    "name_nl": "Baardvogels en Toekans",
+    "name_pt_br": "Capitães, Tucanos e Araçaris"
+  },
+  "Bearded Reedling": {
+    "name_de": "Bartmeisen",
+    "name_es": "Bigotudo",
+    "name_fr": "Panures",
+    "name_it": "Reedling Barbuto",
+    "name_ja": "ヒゲガラ科",
+    "name_nl": "Baardman",
+    "name_pt_br": "Chapim-de-bigodes"
+  },
+  "Becards, Tityras, and Allies": {
+    "name_de": "Bekarden",
+    "name_es": "Cabezones, Titiras y Afines",
+    "name_fr": "Bécardes et tityres",
+    "name_it": "Becardi, Tityre e Affini",
+    "name_ja": "ベカード、ティティラ、関連種",
+    "name_nl": "Tityra's",
+    "name_pt_br": "Anambés, Flautins, Caneleiros e afins"
+  },
+  "Bee-eaters": {
+    "name_de": "Spinte",
+    "name_es": "Abejarucos",
+    "name_fr": "Guépiers",
+    "name_it": "Mangiafiori",
+    "name_ja": "ハチクイ科",
+    "name_nl": "Bijeneters",
+    "name_pt_br": "Abelharucos"
+  },
+  "Bellmagpies and Allies": {
+    "name_de": "Krähenstareverwandte",
+    "name_es": "Verdugos",
+    "name_fr": "Cassicans, réveilleurs, etc.",
+    "name_it": "Bellmagpie e Affini",
+    "name_ja": "ベルマグパイと関連種",
+    "name_nl": "Bellmagpies and Allies",
+    "name_pt_br": "Pegas-australasiáticas"
+  },
+  "Berrypeckers and Longbills": {
+    "name_de": "Beerenpicker",
+    "name_es": "Picabayas y Picudos",
+    "name_fr": "Piquebaies, toxoramphes, etc.",
+    "name_it": "Berrypecker e Longbill",
+    "name_ja": "ベリーペッカーとロングビル",
+    "name_nl": "Bessenpikkers",
+    "name_pt_br": "Pica-bagas e afins"
+  },
+  "Birds-of-Paradise": {
+    "name_de": "Paradiesvögel",
+    "name_es": "Aves-del-Paraíso",
+    "name_fr": "Paradisiers",
+    "name_it": "Uccelli del Paradiso",
+    "name_ja": "Paradiseの鳥",
+    "name_nl": "Paradijsvogels",
+    "name_pt_br": "Aves-do-paraíso"
+  },
+  "Blackbirds": {
+    "name_de": "Stärlinge",
+    "name_es": "Sargentos, Zanates y Bolseros",
+    "name_fr": "Ictéridés",
+    "name_it": "Merli",
+    "name_ja": "クロウタドリ",
+    "name_nl": "Troepialen en Epauletspreeuwen",
+    "name_pt_br": "Iraúnas, Japus e afins"
+  },
+  "Boatbills": {
+    "name_de": "Flachschnäbel",
+    "name_es": "Monarcas-piquiplano",
+    "name_fr": "Largebecs",
+    "name_it": "Boatbill",
+    "name_ja": "ボートビル",
+    "name_nl": "Boatbills",
+    "name_pt_br": "Bicos-de-bote"
+  },
+  "Bristlebirds": {
+    "name_de": "Borstenvögel",
+    "name_es": "Picocerdas",
+    "name_fr": "Dasyornes",
+    "name_it": "Uccelli spinosi",
+    "name_ja": "ブリストルバード",
+    "name_nl": "Borstelvogels",
+    "name_pt_br": "Bicos-cerdosos"
+  },
+  "Bristlehead": {
+    "name_de": "Warzenköpfe",
+    "name_es": "Gimnocéfalo",
+    "name_fr": "Barite",
+    "name_it": "Testa Spinoso",
+    "name_ja": "ブリストルヘッド",
+    "name_nl": "Bristlehead",
+    "name_pt_br": "Cabeça-cerdosa"
+  },
+  "Bulbuls": {
+    "name_de": "Bülbüls",
+    "name_es": "Bulbules",
+    "name_fr": "Bulbuls",
+    "name_it": "Bulbuli",
+    "name_ja": "ヒヨドリ科",
+    "name_nl": "Buulbuuls",
+    "name_pt_br": "Tutas"
+  },
+  "Bush Warblers and Allies": {
+    "name_de": "Seidensängerverwandte",
+    "name_es": "Zarzaleros y Afines",
+    "name_fr": "Bouscarles",
+    "name_it": "Silvicoline di Macchia e Affini",
+    "name_ja": "ウグイス科",
+    "name_nl": "Struikzangers en aanverwanten",
+    "name_pt_br": "Rouxinol-bravo e afins"
+  },
+  "Bushshrikes and Allies": {
+    "name_de": "Buschwürger",
+    "name_es": "Chagras y afines",
+    "name_fr": "Gonoleks, tchagras, etc.",
+    "name_it": "Bushshrike e Affini",
+    "name_ja": "ブッシュシュライクと関連種",
+    "name_nl": "Bushshrikes and Allies",
+    "name_pt_br": "Picanços-do-mato e afins"
+  },
+  "Bustards": {
+    "name_de": "Trappen",
+    "name_es": "Avutardas",
+    "name_fr": "Outardes",
+    "name_it": "Otarde",
+    "name_ja": "ノガン科",
+    "name_nl": "Trappen",
+    "name_pt_br": "Abetardas e afins"
+  },
+  "Cardinals, Grosbeaks, and Allies": {
+    "name_de": "Kardinäle",
+    "name_es": "Cardenales, Picogruesos y Afines",
+    "name_fr": "Cardinaux, passerins et dickcissel",
+    "name_it": "Cardinali, Grosbeaks e Affini",
+    "name_ja": "カーディナル、グロスビーク、及び関連種",
+    "name_nl": "Kardinalen, Dikbekken en aanverwanten",
+    "name_pt_br": "Azulão, Trinca-ferro e afins"
+  },
+  "Cassowaries and Emu": {
+    "name_de": "Kasuare und Emus",
+    "name_es": "Casuarios y Emu",
+    "name_fr": "Casoars et émeu",
+    "name_it": "Cassowari ed Emù",
+    "name_ja": "エミューとカソワリ",
+    "name_nl": "Cussuarissen en Emoes",
+    "name_pt_br": "Casuares e Emu"
+  },
+  "Catbirds, Mockingbirds, and Thrashers": {
+    "name_de": "Spottdrosseln",
+    "name_es": "Pájaros-gato, Sinsontes y Cuitlacoches",
+    "name_fr": "Moqueurs",
+    "name_it": "Catbirds, Uccelli Mocker e Thrashers",
+    "name_ja": "キャットバード、モッキングバード、及びスラッシャー",
+    "name_nl": "Spotlijsters",
+    "name_pt_br": "Sabiá-do-campo e afins"
+  },
+  "Chachalacas, Guans, and Curassows": {
+    "name_de": "Hokkoverwandte",
+    "name_es": "Crácidos",
+    "name_fr": "Ortalides, pénélopes et hoccos",
+    "name_it": "Chachalacas, Guan e Curassow",
+    "name_ja": "チャチャラカ、グアン、クラスコー",
+    "name_nl": "Sjakohoenders en Hokko's",
+    "name_pt_br": "Aracuãs, jacus e mutuns"
+  },
+  "Chat-Tanagers and Greater Antillean Tanagers": {
+    "name_de": "Schmätzertangaren und Palmtangaren",
+    "name_es": "Tángaras de Española y Tángaras Palmeras",
+    "name_fr": "Konichons et Katjes",
+    "name_it": "Chat-Tanagers e Tanagers delle Grandi Antille",
+    "name_ja": "チャットタンガーとグレーターアンティリアンタンガー",
+    "name_nl": "Chat-Tanagers and Greater Antillean Tanagers",
+    "name_pt_br": "Calyptophilidae e Phaenicophilidae"
+  },
+  "Cisticolas and Allies": {
+    "name_de": "Halmsänger",
+    "name_es": "Cistícolas y afines",
+    "name_fr": "Cisticoles, prinias, etc.",
+    "name_it": "Cisticole e Affini",
+    "name_ja": "セッカ科",
+    "name_nl": "Graszangers, Prinia's en aanverwanten",
+    "name_pt_br": "Fuinhas-dos-juncos e afins"
+  },
+  "Cockatoos": {
+    "name_de": "Kakadus",
+    "name_es": "Cacatúas",
+    "name_fr": "Cacatoès",
+    "name_it": "Cacatua",
+    "name_ja": "オウム科",
+    "name_nl": "Kaketoes",
+    "name_pt_br": "Cacatuas"
+  },
+  "Cormorants and Anhingas": {
+    "name_de": "Scharben und Schlangenhalsvögel",
+    "name_es": "Cormoranes y Anhingas",
+    "name_fr": "Cormorans et anhingas",
+    "name_it": "Cormorani e Anhinga",
+    "name_ja": "ウ科",
+    "name_nl": "Aalscholvers en Slangehalsvogels",
+    "name_pt_br": "Biguás e Biguatingas"
+  },
+  "Cotingas": {
+    "name_de": "Schmuckvögel",
+    "name_es": "Cotingas",
+    "name_fr": "Cotingas",
+    "name_it": "Cotinghe",
+    "name_ja": "コティンガ",
+    "name_nl": "Cotinga's",
+    "name_pt_br": "Galos-da-serra, Anambés (Cotinga) e afins"
+  },
+  "Cranes": {
+    "name_de": "Kraniche",
+    "name_es": "Grullas",
+    "name_fr": "Grues",
+    "name_it": "Gru",
+    "name_ja": "ツル科",
+    "name_nl": "Kraanvogels",
+    "name_pt_br": "Grous"
+  },
+  "Crescentchests": {
+    "name_de": "Bandvögel",
+    "name_es": "Pecholunas",
+    "name_fr": "Cordons-noirs",
+    "name_it": "Petti a mezzaluna",
+    "name_ja": "クレセントチェスト",
+    "name_nl": "Maansluipers",
+    "name_pt_br": "Tapaculo-de-colarinho e afins"
+  },
+  "Crested Jayshrike": {
+    "name_de": "Haubenhäher",
+    "name_es": "Arrendajo Crestado",
+    "name_fr": "Platylophe longup",
+    "name_it": "Jayshrike Crestato",
+    "name_ja": "クリステッドジェイシュライク",
+    "name_nl": "Crested Jayshrike",
+    "name_pt_br": "Platylophidae"
+  },
+  "Crombecs, Longbills, and Allies": {
+    "name_de": "Bülbülgrasmücken",
+    "name_es": "Crombecs y afines",
+    "name_fr": "Crombecs, achétopse, mélocichles, nasiques, etc.",
+    "name_it": "Crombec, Longbill e Affini",
+    "name_ja": "クロムベック、ロングビル、及び関連種",
+    "name_nl": "Crombecs, Longbills, and Allies",
+    "name_pt_br": "Felosas-africanas"
+  },
+  "Cuban Warblers": {
+    "name_de": "Kubasänger",
+    "name_es": "Reinitas Cubanas",
+    "name_fr": "Chillinas",
+    "name_it": "Warbler Cubani",
+    "name_ja": "キューバウグイス",
+    "name_nl": "Cuban Warblers",
+    "name_pt_br": "Teretistridae"
+  },
+  "Cuckoo-roller": {
+    "name_de": "Kuckucksroller",
+    "name_es": "Carraca Curol",
+    "name_fr": "Courol vouroudriou",
+    "name_it": "Cuculo-rotolatore",
+    "name_ja": "カッコウローラー",
+    "name_nl": "Koerol",
+    "name_pt_br": "Leptosomidae"
+  },
+  "Cuckoos": {
+    "name_de": "Kuckucke",
+    "name_es": "Cucos, Cuclillos y Garrapateros",
+    "name_fr": "Cuculidés",
+    "name_it": "Cuculi",
+    "name_ja": "カッコウ科",
+    "name_nl": "Koekoes",
+    "name_pt_br": "Anus, Alma-de-gato, Saci e afins"
+  },
+  "Cuckooshrikes": {
+    "name_de": "Raupenfänger",
+    "name_es": "Orugueros y Minivets",
+    "name_fr": "Échenilleurs",
+    "name_it": "Cuculidi",
+    "name_ja": "サンショウクイ科",
+    "name_nl": "Cuckooshrikes",
+    "name_pt_br": "Cucos-picanço"
+  },
+  "Cupwings": {
+    "name_de": "Zwergpfeifer",
+    "name_es": "Ratinas",
+    "name_fr": "Pnépyges",
+    "name_it": "Ali a Coppa",
+    "name_ja": "カップウィング",
+    "name_nl": "Cupwings",
+    "name_pt_br": "Tagarela-pigmeu e afins"
+  },
+  "Dapple-throats": {
+    "name_de": "Sopranisten",
+    "name_es": "Tordinas",
+    "name_fr": "Modulatrices",
+    "name_it": "Gola Maculata",
+    "name_ja": "ダップルスロート",
+    "name_nl": "Dapple-throats",
+    "name_pt_br": "Modulatricidae"
+  },
+  "Dippers": {
+    "name_de": "Wasseramseln",
+    "name_es": "Mirlos Acuáticos",
+    "name_fr": "Cincles",
+    "name_it": "Merli d'Acqua",
+    "name_ja": "カワガラス科",
+    "name_nl": "Waterspreeuwen",
+    "name_pt_br": "Melros-d’água"
+  },
+  "Donacobius": {
+    "name_de": "Rohrspötter",
+    "name_es": "Donacobio",
+    "name_fr": "Donacobe",
+    "name_it": "Donacobio",
+    "name_ja": "ドナカビウス",
+    "name_nl": "Donacobius",
+    "name_pt_br": "Japacanim"
+  },
+  "Drongos": {
+    "name_de": "Drongos",
+    "name_es": "Drongos",
+    "name_fr": "Drongos",
+    "name_it": "Drongo",
+    "name_ja": "オウチュウ科",
+    "name_nl": "Drongo's",
+    "name_pt_br": "Drongos"
+  },
+  "Elachura": {
+    "name_de": "Kurzschwänze",
+    "name_es": "Elachura",
+    "name_fr": "Turdinule tachetée",
+    "name_it": "Elachura",
+    "name_ja": "エラチュラ",
+    "name_nl": "Elachura",
+    "name_pt_br": "Zaragateiro-carriça-malhado"
+  },
+  "Estrildids": {
+    "name_de": "Prachtfinken",
+    "name_es": "Estrildas",
+    "name_fr": "Estrildidés",
+    "name_it": "Estrildidi",
+    "name_ja": "カエデチョウ科",
+    "name_nl": "Prachtvinken",
+    "name_pt_br": "Bico-de-lacre e afins"
+  },
+  "Fairy Flycatchers": {
+    "name_de": "Elfenschnäpper",
+    "name_es": "Elminias y afines",
+    "name_fr": "Mignards",
+    "name_it": "Fairy Flycatcher",
+    "name_ja": "フェアリーフライキャッチャー",
+    "name_nl": "Fairy Flycatchers",
+    "name_pt_br": "Papa-moscas-fada"
+  },
+  "Fairy-bluebirds": {
+    "name_de": "Feenvögel",
+    "name_es": "Irenas",
+    "name_fr": "Irènes",
+    "name_it": "Uccelli Blu Fatati",
+    "name_ja": "フェアリーブルーバード",
+    "name_nl": "Fairy-bluebirds",
+    "name_pt_br": "Melros-fada"
+  },
+  "Fairywrens": {
+    "name_de": "Staffelschwänze",
+    "name_es": "Maluros",
+    "name_fr": "Mérions",
+    "name_it": "Trogloditi fatati",
+    "name_ja": "フェアリーレン",
+    "name_nl": "Elfjes",
+    "name_pt_br": "Carriças-fada"
+  },
+  "Falcons and Caracaras": {
+    "name_de": "Falken",
+    "name_es": "Halcones y Caracaras",
+    "name_fr": "Faucons et caracaras",
+    "name_it": "Falchi e Caracara",
+    "name_ja": "ハヤブサ科",
+    "name_nl": "Valken en Caracaras",
+    "name_pt_br": "Falcões e Carcarás"
+  },
+  "Fantails": {
+    "name_de": "Fächerschwänze",
+    "name_es": "Abanicos",
+    "name_fr": "Rhipidures",
+    "name_it": "Fantail",
+    "name_ja": "ファンタイル",
+    "name_nl": "Fantails",
+    "name_pt_br": "Rabos-de-leque"
+  },
+  "Finches, Euphonias, and Allies": {
+    "name_de": "Finkenverwandte",
+    "name_es": "Pinzones, Eufonias y Afines",
+    "name_fr": "Fringillidés et organistes",
+    "name_it": "Fringuelli, Euphonie e Affini",
+    "name_ja": "アトリ科",
+    "name_nl": "Vinken, Euphonia's en aanverwanten",
+    "name_pt_br": "Pintassilgos, gaturamos e afins"
+  },
+  "Finfoots": {
+    "name_de": "Binsenrallen",
+    "name_es": "Avesoles",
+    "name_fr": "Grébifoulques",
+    "name_it": "Piedi di fin",
+    "name_ja": "フィンフット",
+    "name_nl": "Fuutkoeten",
+    "name_pt_br": "Picaparra e afins"
+  },
+  "Flamingos": {
+    "name_de": "Flamingos",
+    "name_es": "Flamencos",
+    "name_fr": "Flamants",
+    "name_it": "Fenicotteri",
+    "name_ja": "フラミンゴ科",
+    "name_nl": "Flamingo's",
+    "name_pt_br": "Flamingos"
+  },
+  "Flowerpeckers": {
+    "name_de": "Mistelfresser",
+    "name_es": "Picaflores",
+    "name_fr": "Dicées",
+    "name_it": "Beccafiorini",
+    "name_ja": "フラワーペッカー",
+    "name_nl": "Flowerpeckers",
+    "name_pt_br": "Pica-flores"
+  },
+  "Flufftails": {
+    "name_de": "Besenschwanzrallen",
+    "name_es": "Colicortas",
+    "name_fr": "Sarothruridés",
+    "name_it": "Code di velluto",
+    "name_ja": "フラフテイル",
+    "name_nl": "Donsstaartrallen",
+    "name_pt_br": "Frangas-d’água-africanas"
+  },
+  "Frigatebirds, Boobies, and Gannets": {
+    "name_de": "Fregattvögel und Tölpel",
+    "name_es": "Fregatas, Bobos y Alcatraces",
+    "name_fr": "Frégates et fous",
+    "name_it": "Fregate, Booby e Sula",
+    "name_ja": "グンカンドリ科",
+    "name_nl": "Fregatvogels en Genten",
+    "name_pt_br": "Tesourões e Atobás"
+  },
+  "Frogmouths": {
+    "name_de": "Eulenschwalme",
+    "name_es": "Podargos",
+    "name_fr": "Ibijaux",
+    "name_it": "Bocca di rana",
+    "name_ja": "カエルフクロウ",
+    "name_nl": "Uilnachtzwaluwen",
+    "name_pt_br": "Bocas-de-sapo"
+  },
+  "Gnatcatchers": {
+    "name_de": "Mückenfängerverwandte",
+    "name_es": "Perlitas",
+    "name_fr": "Gobemoucheron",
+    "name_it": "Cattura-Zanzare",
+    "name_ja": "ハエトリ",
+    "name_nl": "Gnatcatchers",
+    "name_pt_br": "Bicos-assovelados, Balança-rabos e afins"
+  },
+  "Gnateaters and Antpittas": {
+    "name_de": "Ameisenpittas und Mückenfresser",
+    "name_es": "Jejeneros y Tororois",
+    "name_fr": "Grallaires et conophages",
+    "name_it": "Mangiatore di insetti e Antpittas",
+    "name_ja": "ナゲートイーターとアントピッタ",
+    "name_nl": "Muggenvangers en Muggeneters",
+    "name_pt_br": "Chupa-dentes, Torons e afins"
+  },
+  "Grassbirds and Allies": {
+    "name_de": "Schwirlverwandte",
+    "name_es": "Yerberas y afines",
+    "name_fr": "Mégalures",
+    "name_it": "Uccelli delle Graminacee e Affini",
+    "name_ja": "センニュウ科",
+    "name_nl": "Grassbirds and Allies",
+    "name_pt_br": "Pássaros-da-erva e afins"
+  },
+  "Grebes": {
+    "name_de": "Lappentaucher",
+    "name_es": "Zambullidores",
+    "name_fr": "Grèbes",
+    "name_it": "Svassi",
+    "name_ja": "カイツブリ科",
+    "name_nl": "Futen",
+    "name_pt_br": "Mergulhões"
+  },
+  "Ground Babblers and Allies": {
+    "name_de": "Drosslinge",
+    "name_es": "Pellorneidos",
+    "name_fr": "Péllorneidés",
+    "name_it": "Babblers di Terra e Affini",
+    "name_ja": "グラウンドバブラー及び関連種",
+    "name_nl": "Ground Babblers and Allies",
+    "name_pt_br": "Zaragateiros-terrícolas e afins"
+  },
+  "Grouse, Quail, and Allies": {
+    "name_de": "Hühnervögel",
+    "name_es": "Codornices",
+    "name_fr": "Gallinacés",
+    "name_it": "Fagiani, Quaglie e Affini",
+    "name_ja": "キジ科",
+    "name_nl": "Hoenders, Kwartels en aanverwanten",
+    "name_pt_br": "Perdizes, Codornas e afins"
+  },
+  "Gulls, Terns, and Skimmers": {
+    "name_de": "Möwenverwandte",
+    "name_es": "Gaviotas, Gaviotines y Rayadores",
+    "name_fr": "Laridés",
+    "name_it": "Gabbiani, Sterna e Skimmer",
+    "name_ja": "カモメ科",
+    "name_nl": "Meeuwen, Sterns en Schaarbekken",
+    "name_pt_br": "Gaivotas, Trinta-réis e Talha-mar"
+  },
+  "Hawaiian Honeyeaters": {
+    "name_de": "Mohos",
+    "name_es": "Mieleros de Hawaii",
+    "name_fr": "Grimpeurs, loxopses, etc.",
+    "name_it": "Nectarivori delle Hawaii",
+    "name_ja": "ハワイミツスイ",
+    "name_nl": "Honingzuigers van Hawaii (uitgestorven)",
+    "name_pt_br": "Papa-mel-havaianos"
+  },
+  "Herons, Ibis, and Allies": {
+    "name_de": "Reiher und Ibisse",
+    "name_es": "Garzas, Ibis y Afines",
+    "name_fr": "Hérons, ibis, etc.",
+    "name_it": "Aironi, Ibis e Affini",
+    "name_ja": "サギ科",
+    "name_nl": "Reigers, Ibissen en aanverwanten",
+    "name_pt_br": "Garças, Guará e afins"
+  },
+  "Hoatzin": {
+    "name_de": "Hoatzine",
+    "name_es": "Hoatzin",
+    "name_fr": "Hoazin",
+    "name_it": "Hoatzin",
+    "name_ja": "ホアツィン",
+    "name_nl": "Hoatzins",
+    "name_pt_br": "Cigana"
+  },
+  "Honeyeaters": {
+    "name_de": "Honigfresser",
+    "name_es": "Mieleros",
+    "name_fr": "Méliphages",
+    "name_it": "Mangiatore di nettare",
+    "name_ja": "ハニーイーター",
+    "name_nl": "Honingeters",
+    "name_pt_br": "Papa-mel e Pássaros-monge"
+  },
+  "Honeyguides": {
+    "name_de": "Honiganzeiger",
+    "name_es": "Indicadores",
+    "name_fr": "Indicateurs",
+    "name_it": "Guida al miele",
+    "name_ja": "ハニガイド",
+    "name_nl": "Honingspeurders",
+    "name_pt_br": "Indicadores"
+  },
+  "Hoopoes": {
+    "name_de": "Wiedehopfe",
+    "name_es": "Abubillas",
+    "name_fr": "Huppes",
+    "name_it": "Upupe",
+    "name_ja": "ヤツガシラ科",
+    "name_nl": "Hoppen",
+    "name_pt_br": "Poupa"
+  },
+  "Hornbills": {
+    "name_de": "Hornraben und Hornvögel",
+    "name_es": "Cálaos",
+    "name_fr": "Calaos",
+    "name_it": "Buceri",
+    "name_ja": "サイチョウ",
+    "name_nl": "Hoornraven en Neushoornvogels",
+    "name_pt_br": "Calaus"
+  },
+  "Hummingbirds": {
+    "name_de": "Kolibris",
+    "name_es": "Colibríes o Picaflores",
+    "name_fr": "Colibris",
+    "name_it": "Colibrì",
+    "name_ja": "ハチドリ",
+    "name_nl": "Kolibries",
+    "name_pt_br": "Beija-flores"
+  },
+  "Hylias and Yellow Flycatchers": {
+    "name_de": "Hylias and Yellow Flycatchers",
+    "name_es": "Hylias and Yellow Flycatchers",
+    "name_fr": "Hylias and Yellow Flycatchers",
+    "name_it": "Hylii e Pispole Gialle",
+    "name_ja": "ヒリアスとキイロハエトリ",
+    "name_nl": "Hylias and Yellow Flycatchers",
+    "name_pt_br": "Hylias and Yellow Flycatchers"
+  },
+  "Hyliotas": {
+    "name_de": "Hyliotas",
+    "name_es": "Hiliotas",
+    "name_fr": "Hyliotes",
+    "name_it": "Hyliota",
+    "name_ja": "ヒリオタス",
+    "name_nl": "Hyliotas",
+    "name_pt_br": "Papa-moscas-africanos (Hyliota)"
+  },
+  "Hylocitrea": {
+    "name_de": "Waldpfeifer",
+    "name_es": "Hylocitrea",
+    "name_fr": "Siffleur à flancs jaunes",
+    "name_it": "Hylocitrea",
+    "name_ja": "ヒロシトレア",
+    "name_nl": "Hylocitrea",
+    "name_pt_br": "Assobiador-de-flancos-amarelos"
+  },
+  "Hypocolius": {
+    "name_de": "Seidenwürger",
+    "name_es": "Hipocolio",
+    "name_fr": "Hypocolius",
+    "name_it": "Ipocolio",
+    "name_ja": "ヒポコリウス",
+    "name_nl": "Zijdestaart",
+    "name_pt_br": "Hipocólio"
+  },
+  "Ifrita": {
+    "name_de": "Blaukappenflöter",
+    "name_es": "Ifrita",
+    "name_fr": "Ifrita de Kowald",
+    "name_it": "Ifrita",
+    "name_ja": "イフリタ",
+    "name_nl": "Ifrita",
+    "name_pt_br": "Ifrita"
+  },
+  "Ioras": {
+    "name_de": "Ioras",
+    "name_es": "Ioras",
+    "name_fr": "Ioras",
+    "name_it": "Iora",
+    "name_ja": "イオラス",
+    "name_nl": "Ioras",
+    "name_pt_br": "Ioras"
+  },
+  "Jays, Magpies, Crows, and Ravens": {
+    "name_de": "Krähenverwandte",
+    "name_es": "Urracas y Cuervos",
+    "name_fr": "Corvidés",
+    "name_it": "Giacche, Gazze, Corvi e Corvi",
+    "name_ja": "カラス科",
+    "name_nl": "Gaaien, Eksters, Kraaien en Raven",
+    "name_pt_br": "Gaios, Pegas, Gralhas e Corvos"
+  },
+  "Kagu": {
+    "name_de": "Kagus",
+    "name_es": "Kagu",
+    "name_fr": "Kagou huppé",
+    "name_it": "Kagu",
+    "name_ja": "カグ",
+    "name_nl": "Kagoe",
+    "name_pt_br": "Cagú"
+  },
+  "Kingfishers": {
+    "name_de": "Eisvögel",
+    "name_es": "Martines Pescadores",
+    "name_fr": "Martins-pêcheurs",
+    "name_it": "Martin pescatori",
+    "name_ja": "カワセミ科",
+    "name_nl": "IJsvogels",
+    "name_pt_br": "Martins-pescadores"
+  },
+  "Kinglets": {
+    "name_de": "Goldhähnchen",
+    "name_es": "Reyezuelos",
+    "name_fr": "Roitelets",
+    "name_it": "Regolini",
+    "name_ja": "キクイタダキ科",
+    "name_nl": "Goudhanen",
+    "name_pt_br": "Estrelinhas"
+  },
+  "Kiwis": {
+    "name_de": "Kiwis",
+    "name_es": "Kiwis",
+    "name_fr": "Kiwis",
+    "name_it": "Kiwis",
+    "name_ja": "キウイ",
+    "name_nl": "Kiwi's",
+    "name_pt_br": "Quivis"
+  },
+  "Larks": {
+    "name_de": "Lerchen",
+    "name_es": "Alondras",
+    "name_fr": "Alouettes",
+    "name_it": "Allodole",
+    "name_ja": "ヒバリ科",
+    "name_nl": "Leeuweriken",
+    "name_pt_br": "Cotovias"
+  },
+  "Laughingthrushes and Allies": {
+    "name_de": "Häherlinge",
+    "name_es": "Charlatanes y Afines",
+    "name_fr": "Garrulaxes",
+    "name_it": "Turdidi e Affini",
+    "name_ja": "チメドリ科",
+    "name_nl": "Laughingthrushes and Allies",
+    "name_pt_br": "Zaragateiros-risonhos e afins"
+  },
+  "Leaf Warblers": {
+    "name_de": "Laubsänger",
+    "name_es": "Mosquiteros",
+    "name_fr": "Pouillots",
+    "name_it": "Silvicoline",
+    "name_ja": "ムシクイ科",
+    "name_nl": "Boszangers",
+    "name_pt_br": "Felosas"
+  },
+  "Leafbirds": {
+    "name_de": "Blattvögel",
+    "name_es": "Verdines",
+    "name_fr": "Verdins",
+    "name_it": "Uccelli delle Foglie",
+    "name_ja": "リーフバード",
+    "name_nl": "Leafbirds",
+    "name_pt_br": "Aves-folha"
+  },
+  "Leaftossers and Miners": {
+    "name_de": "Laubwender und Erdhacker",
+    "name_es": "Tira-hojas y Mineros",
+    "name_fr": "Sclérures et géosittes",
+    "name_it": "Lanciatori di foglie e Minatori",
+    "name_ja": "リーフトッサーとマイナー",
+    "name_nl": "Bladkrabbers en Holengravers",
+    "name_pt_br": "Vira-folhas e afins"
+  },
+  "Limpkin": {
+    "name_de": "Rallenkraniche",
+    "name_es": "Carrao",
+    "name_fr": "Courlan",
+    "name_it": "Limpkin",
+    "name_ja": "リンピン",
+    "name_nl": "Koerlan",
+    "name_pt_br": "Carão"
+  },
+  "Logrunners": {
+    "name_de": "Stachelschwanzflöter",
+    "name_es": "Colaespinas",
+    "name_fr": "Orthonyx",
+    "name_it": "Logrunner",
+    "name_ja": "ログランナー",
+    "name_nl": "Stronklopers",
+    "name_pt_br": "Corre-troncos"
+  },
+  "Long-tailed Tits and Bushtit": {
+    "name_de": "Schwanzmeisen",
+    "name_es": "Mitos",
+    "name_fr": "Mésanges à longue queue",
+    "name_it": "Cinciallegre e Cinciarella",
+    "name_ja": "エナガ科",
+    "name_nl": "Long-tailed Tits and Bushtit",
+    "name_pt_br": "Long-tailed Tits and Bushtit"
+  },
+  "Longspurs and Snow Buntings": {
+    "name_de": "Tundraammern",
+    "name_es": "Calcáridos",
+    "name_fr": "Plectrophanes",
+    "name_it": "Pettinoni e Buntings delle Nevi",
+    "name_ja": "ツメナガホウジロ科",
+    "name_nl": "IJs- en Sneeuwgorzen",
+    "name_pt_br": "Escrevedeira-das-neves e afins"
+  },
+  "Loons": {
+    "name_de": "Seetaucher",
+    "name_es": "Colimbos",
+    "name_fr": "Plongeons",
+    "name_it": "Gavia",
+    "name_ja": "アビ科",
+    "name_nl": "Duikers",
+    "name_pt_br": "Mobelhas"
+  },
+  "Lyrebirds": {
+    "name_de": "Leierschwänze",
+    "name_es": "Aves-lira",
+    "name_fr": "Ménures",
+    "name_it": "Uccelli lira",
+    "name_ja": "リューロビード",
+    "name_nl": "Liervogels",
+    "name_pt_br": "Pássaros-lira"
+  },
+  "Malagasy Warblers": {
+    "name_de": "Madagaskarsänger",
+    "name_es": "Berniéridos",
+    "name_fr": "Tétraka malgache",
+    "name_it": "Silvicoline del Madagascar",
+    "name_ja": "マダガスカルウグイス",
+    "name_nl": "Malagasy Warblers",
+    "name_pt_br": "Felosas-de-madagáscar"
+  },
+  "Manakins": {
+    "name_de": "Schnurrvögel",
+    "name_es": "Saltarines",
+    "name_fr": "Manakins",
+    "name_it": "Manakins",
+    "name_ja": "マナキン",
+    "name_nl": "Manakins",
+    "name_pt_br": "Uirapurus, Dançarinos e afins"
+  },
+  "Martins and Swallows": {
+    "name_de": "Schwalben",
+    "name_es": "Golondrinas",
+    "name_fr": "Hirondelles",
+    "name_it": "Balestrucci e Rondini",
+    "name_ja": "ツバメ科",
+    "name_nl": "Zwaluwen",
+    "name_pt_br": "Andorinhas"
+  },
+  "Megapodes": {
+    "name_de": "Großfußhühner",
+    "name_es": "Talégalos",
+    "name_fr": "Mégapodes",
+    "name_it": "Megapodi",
+    "name_ja": "メガポッド",
+    "name_nl": "Grootpoothoenders",
+    "name_pt_br": "Megapódios"
+  },
+  "Melampittas": {
+    "name_de": "Neuguineaflöter",
+    "name_es": "Melampitas",
+    "name_fr": "Mélampittes",
+    "name_it": "Melampitta",
+    "name_ja": "メランピッタ",
+    "name_nl": "Melampittas",
+    "name_pt_br": "Melampittas"
+  },
+  "Mesites": {
+    "name_de": "Stelzenrallen",
+    "name_es": "Mesitornítidos",
+    "name_fr": "Mésites",
+    "name_it": "Mesiti",
+    "name_ja": "メシテス",
+    "name_nl": "Steltrallen",
+    "name_pt_br": "Mesites"
+  },
+  "Mitrospingid Tanagers": {
+    "name_de": "Stärlingstangaren",
+    "name_es": "Mitrospíngidos",
+    "name_fr": "Mitrospins",
+    "name_it": "Tanagers Mitrospingidi",
+    "name_ja": "ミトロスピンギッドタンガー",
+    "name_nl": "Mitrospingid Tanagers",
+    "name_pt_br": "Pipiras e afins"
+  },
+  "Monarch Flycatchers": {
+    "name_de": "Monarchenverwandte",
+    "name_es": "Mosqueros Monarcas",
+    "name_fr": "Monarques, tchitrecs, etc.",
+    "name_it": "Monarca",
+    "name_ja": "カササギヒタキ科",
+    "name_nl": "Monarch Flycatchers",
+    "name_pt_br": "Monarcas"
+  },
+  "Motmots": {
+    "name_de": "Sägeracken",
+    "name_es": "Relojeros o Burgos",
+    "name_fr": "Motmots",
+    "name_it": "Motmot",
+    "name_ja": "モットモット",
+    "name_nl": "Motmots",
+    "name_pt_br": "Udus e juruvas"
+  },
+  "Mottled Berryhunter": {
+    "name_de": "Beerenjäger",
+    "name_es": "Silbador Moteado",
+    "name_fr": "Siffleur maillé",
+    "name_it": "Cacciatore di Bacche Maculato",
+    "name_ja": "モットルドベリーハンター",
+    "name_nl": "Mottled Berryhunter",
+    "name_pt_br": "Papa-bagas-malhado"
+  },
+  "Mousebirds": {
+    "name_de": "Mausvögel",
+    "name_es": "Pájaros Ratón",
+    "name_fr": "Colious",
+    "name_it": "Uccelli topo",
+    "name_ja": "マウスバード",
+    "name_nl": "Muisvogels",
+    "name_pt_br": "Rabos-de-junco"
+  },
+  "New World Sparrows": {
+    "name_de": "Neuweltammern",
+    "name_es": "Gorriones y otros Passerellidae",
+    "name_fr": "Tohis et bruants (Passerellidés)",
+    "name_it": "Passeri del Nuovo Mondo",
+    "name_ja": "シトド科",
+    "name_nl": "Gorzen van de Nieuwe Wereld",
+    "name_pt_br": "Tico-tico e afins"
+  },
+  "New Zealand Parrots": {
+    "name_de": "Eulenpapageien",
+    "name_es": "Loros Neozelandeses",
+    "name_fr": "Strigops",
+    "name_it": "Pappagalli della Nuova Zelanda",
+    "name_ja": "ニュージーランドオウム",
+    "name_nl": "Papegaaien van Nieuw-Zeeland",
+    "name_pt_br": "Papagaios da Nova Zelândia"
+  },
+  "New Zealand Wrens": {
+    "name_de": "Stummelschwänze",
+    "name_es": "Acantisitas",
+    "name_fr": "Séricornes",
+    "name_it": "Trogloditi della Nuova Zelanda",
+    "name_ja": "ニュージーランドミソサザイ",
+    "name_nl": "Rotswinterkoningen (Winterkoningen van Nieuw-Zeeland)",
+    "name_pt_br": "Carriças da Nova Zelândia"
+  },
+  "Nicators": {
+    "name_de": "Tropfenvögel",
+    "name_es": "Conquistadores",
+    "name_fr": "Nicators",
+    "name_it": "Nicator",
+    "name_ja": "ニカトール",
+    "name_nl": "Nicators",
+    "name_pt_br": "Tutas-africanos"
+  },
+  "Nightjars": {
+    "name_de": "Nachtschwalben",
+    "name_es": "Chotacabras o Atajacaminos",
+    "name_fr": "Engoulevents",
+    "name_it": "Succiacapre",
+    "name_ja": "ヨタカ科",
+    "name_nl": "Nachtzwaluwen",
+    "name_pt_br": "Bacuraus"
+  },
+  "Nuthatches": {
+    "name_de": "Kleiber",
+    "name_es": "Trepadores",
+    "name_fr": "Sittelles",
+    "name_it": "Picchi di Nido",
+    "name_ja": "コジュウカラ科",
+    "name_nl": "Boom- en Rotsklevers",
+    "name_pt_br": "Trepadeiras-azuis"
+  },
+  "Old World Buntings": {
+    "name_de": "Ammern",
+    "name_es": "Escribanos",
+    "name_fr": "Bruants (Emberizidés)",
+    "name_it": "Buntings del Vecchio Mondo",
+    "name_ja": "ホウジロ科",
+    "name_nl": "Gorzen van de Oude Wereld",
+    "name_pt_br": "Escrevedeiras e afins"
+  },
+  "Old World Flycatchers": {
+    "name_de": "Schnäpperverwandte",
+    "name_es": "Mosqueros del Viejo Mundo",
+    "name_fr": "Gobemouches",
+    "name_it": "Pispole del Vecchio Mondo",
+    "name_ja": "ヒタキ科",
+    "name_nl": "Vliegenvangers van de Oude Wereld",
+    "name_pt_br": "Papa-moscas e Taralhões"
+  },
+  "Old World Orioles": {
+    "name_de": "Pirole",
+    "name_es": "Oropéndolas",
+    "name_fr": "Loriots",
+    "name_it": "Orioli del Vecchio Mondo",
+    "name_ja": "コウライウグイス科",
+    "name_nl": "Wielewalen",
+    "name_pt_br": "Papa-figos"
+  },
+  "Old World Pittas": {
+    "name_de": "Pittas",
+    "name_es": "Pitas",
+    "name_fr": "Brèves",
+    "name_it": "Pittas del Vecchio Mondo",
+    "name_ja": "ヤイロチョウ科",
+    "name_nl": "Pitta's",
+    "name_pt_br": "Pitas"
+  },
+  "Old World Sparrows": {
+    "name_de": "Sperlinge",
+    "name_es": "Gorriones del Viejo Mundo",
+    "name_fr": "Moineaux",
+    "name_it": "Passeri del Vecchio Mondo",
+    "name_ja": "スズメ科",
+    "name_nl": "Mussen van de Oude Wereld",
+    "name_pt_br": "Pardais"
+  },
+  "Olive Warbler": {
+    "name_de": "Trugwaldsänger",
+    "name_es": "Ocotero",
+    "name_fr": "Fauvine des pins",
+    "name_it": "Silvicolina Olivacea",
+    "name_ja": "オリーブウグイス",
+    "name_nl": "Olive Warbler",
+    "name_pt_br": "Felosa-corrupião"
+  },
+  "Ostriches": {
+    "name_de": "Strauße",
+    "name_es": "Avestruces",
+    "name_fr": "Autruches",
+    "name_it": "Struzzi",
+    "name_ja": "ダチョウ",
+    "name_nl": "Struisvogels",
+    "name_pt_br": "Avestruzes"
+  },
+  "Others": {
+    "name_de": "Andere",
+    "name_es": "Otros",
+    "name_fr": "Autres",
+    "name_it": "Altri",
+    "name_ja": "その他",
+    "name_nl": "Overige soorten",
+    "name_pt_br": "Outros"
+  },
+  "Ovenbirds": {
+    "name_de": "Töpfervögelartige",
+    "name_es": "Horneros o Furnaridos",
+    "name_fr": "Fourniers",
+    "name_it": "Uccelli forno",
+    "name_ja": "オーブンバード",
+    "name_nl": "Ovenvogels",
+    "name_pt_br": "Pedreiros, Joões e afins"
+  },
+  "Owlet-nightjars": {
+    "name_de": "Höhlenschwalme",
+    "name_es": "Egotelos",
+    "name_fr": "Égothèles",
+    "name_it": "Succiacapre notturni",
+    "name_ja": "フクロウコノハズク",
+    "name_nl": "Dwergnachtzwaluwen",
+    "name_pt_br": "Noitibós-coruja"
+  },
+  "Owls": {
+    "name_de": "Eulen",
+    "name_es": "Búhos o Lechuzas",
+    "name_fr": "Hiboux",
+    "name_it": "Gufo",
+    "name_ja": "フクロウ科",
+    "name_nl": "Uilen",
+    "name_pt_br": "Corujas"
+  },
+  "Oxpeckers": {
+    "name_de": "Madenhacker",
+    "name_es": "Picabueyes",
+    "name_fr": "Piqueboeufs",
+    "name_it": "Pettini",
+    "name_ja": "オックスペッカー",
+    "name_nl": "Oxpeckers",
+    "name_pt_br": "Pica-bois"
+  },
+  "Palmchat": {
+    "name_de": "Palmenschwätzer",
+    "name_es": "Sigua",
+    "name_fr": "Esclave palmiste",
+    "name_it": "Palmchat",
+    "name_ja": "パームチャット",
+    "name_nl": "Palmchat",
+    "name_pt_br": "Tagarela-das-palmeiras"
+  },
+  "Pardalotes": {
+    "name_de": "Panthervögel",
+    "name_es": "Pardalotes",
+    "name_fr": "Pardalotes",
+    "name_it": "Pardaloti",
+    "name_ja": "パーダロート",
+    "name_nl": "Diamantvogels",
+    "name_pt_br": "Pardalotes"
+  },
+  "Parrotbills, Wrentit, and Allies": {
+    "name_de": "Papageimeisenverwandte",
+    "name_es": "Picoloros, Camea y Afines",
+    "name_fr": "Paradoxornis, Cama, etc.",
+    "name_it": "Becco a Pappagallo, Wrentit e Affini",
+    "name_ja": "ダルマエナガ科",
+    "name_nl": "Parrotbills, Wrentit, and Allies",
+    "name_pt_br": "Bicos-de-papagaio e afins"
+  },
+  "Parrots, Parakeets, and Allies": {
+    "name_de": "Papageien",
+    "name_es": "Loros, Pericos y Afines",
+    "name_fr": "Perroquets, perruches, aras, etc.",
+    "name_it": "Pappagalli, Parrocchetti e Affini",
+    "name_ja": "インコ科 /ヨウム科",
+    "name_nl": "Papegaaien, Parkieten en aanverwanten",
+    "name_pt_br": "Papagaios, Periquitos e afins"
+  },
+  "Pelicans": {
+    "name_de": "Pelikane",
+    "name_es": "Pelícanos",
+    "name_fr": "Pélicans",
+    "name_it": "Pellicani",
+    "name_ja": "ペリカン科",
+    "name_nl": "Pelikanen",
+    "name_pt_br": "Pelicanos"
+  },
+  "Penduline-Tits and Verdin": {
+    "name_de": "Beutelmeisen",
+    "name_es": "Pájaros-moscón",
+    "name_fr": "Rémiz",
+    "name_it": "Penduline-Tit e Verdin",
+    "name_ja": "ツリスガラ科",
+    "name_nl": "Buidelmezen en Staartmezen",
+    "name_pt_br": "Chapins-de-mascarilha e Chapins-rabilongos"
+  },
+  "Penguins": {
+    "name_de": "Pinguine",
+    "name_es": "Pingüinos",
+    "name_fr": "Manchots",
+    "name_it": "Pinguini",
+    "name_ja": "ペンギン",
+    "name_nl": "Pinguins",
+    "name_pt_br": "Pinguins"
+  },
+  "Petrels, Shearwaters, and Diving-Petrels": {
+    "name_de": "Sturmvögel",
+    "name_es": "Petreles, Pardelas y Yuncos",
+    "name_fr": "Pétrels, puffins et puffinures",
+    "name_it": "Petrelli, Berta e Petrelli tuffatori",
+    "name_ja": "ミズナギドリ科",
+    "name_nl": "Stormvogels en Pijlstormvogels",
+    "name_pt_br": "Pardelas e afins"
+  },
+  "Pigeons and Doves": {
+    "name_de": "Tauben",
+    "name_es": "Palomas y Tortolitas",
+    "name_fr": "Pigeons et tourterelles",
+    "name_it": "Piccioni e Colombe",
+    "name_ja": "ハト科",
+    "name_nl": "Duiven",
+    "name_pt_br": "Pombas e Rolinhas"
+  },
+  "Ploughbill": {
+    "name_de": "Pflugschnäbel",
+    "name_es": "Silbador Picoarado",
+    "name_fr": "Écorceur",
+    "name_it": "Ploughbill",
+    "name_ja": "プラウビル",
+    "name_nl": "Ploughbill",
+    "name_pt_br": "Bico-de-arado"
+  },
+  "Potoos and Oilbird": {
+    "name_de": "Tagschläfer und Fettschwalme",
+    "name_es": "Nictibios y Guácharo",
+    "name_fr": "Ibijaus et guacharo",
+    "name_it": "Potoo e Uccello dell'olio",
+    "name_ja": "ポトーとオイルバード",
+    "name_nl": "Reuzennachtzwaluwen en Olievogel",
+    "name_pt_br": "Urutaus e Guácharo"
+  },
+  "Przevalski's Pinktail": {
+    "name_de": "Rosenschwänze",
+    "name_es": "Camachuelo de Przewalski",
+    "name_fr": "Bruselin",
+    "name_it": "Coda Rosa di Przevalski",
+    "name_ja": "プレジャルスキーのピンクテール",
+    "name_nl": "Przevalski's Pinktail",
+    "name_pt_br": "Peito-carmim-de-przevalski"
+  },
+  "Pseudo-Babblers": {
+    "name_de": "Australsäbler",
+    "name_es": "Gárrulos",
+    "name_fr": "Pomatostomes",
+    "name_it": "Pseudo-Babbler",
+    "name_ja": "擬似バブラー",
+    "name_nl": "Pseudo-Babbelaars",
+    "name_pt_br": "Zaragateiros da Oceania"
+  },
+  "Puffbirds and Jacamars": {
+    "name_de": "Faul- und Glanzvögel",
+    "name_es": "Bucos y Jacamares",
+    "name_fr": "Tamatias et jacamars",
+    "name_it": "Puffbirds e Jacamars",
+    "name_ja": "パフバードとジャカマール",
+    "name_nl": "Baardkoekoeken en Glansvogels",
+    "name_pt_br": "Barbudos, Arirambas e afins"
+  },
+  "Quail-thrushes and Jewel-babblers": {
+    "name_de": "Drosselflöter",
+    "name_es": "Cinclosomas y Ptilorrhoas",
+    "name_fr": "Cinclosomes et ptilorrhoas",
+    "name_it": "Quail-thrush e Jewel-babbler",
+    "name_ja": "ウズラツグミとジュエルバブラー",
+    "name_nl": "Kwartellijsters en Juweelbabbelaars",
+    "name_pt_br": "Tordos-codorniz e afins"
+  },
+  "Rail-babbler": {
+    "name_de": "Rallenflöter",
+    "name_es": "Zordala Colilarga",
+    "name_fr": "Eupète",
+    "name_it": "Rail-babbler",
+    "name_ja": "レイルバブラー",
+    "name_nl": "Rail-babbler",
+    "name_pt_br": "Franga-d’água-malaia"
+  },
+  "Rails, Gallinules, and Allies": {
+    "name_de": "Rallen",
+    "name_es": "Rascones, Gallinetas y Afines",
+    "name_fr": "Râles, gallinules, etc.",
+    "name_it": "Ralle, Gallinule e Affini",
+    "name_ja": "クイナ科",
+    "name_nl": "Rallen, Koeten en aanverwanten",
+    "name_pt_br": "Galinhas-d’água, Saracuras e afins"
+  },
+  "Reed Warblers and Allies": {
+    "name_de": "Rohrsängerverwandte",
+    "name_es": "Carriceros y Carricerines",
+    "name_fr": "Rousserolles",
+    "name_it": "Acrocefali e Affini",
+    "name_ja": "ヨシキリ科",
+    "name_nl": "Karekieten en aanverwanten",
+    "name_pt_br": "Rouxinóis-dos-caniços e afins"
+  },
+  "Rheas": {
+    "name_de": "Nandus",
+    "name_es": "Ñandúes",
+    "name_fr": "Nandous",
+    "name_it": "Rhea",
+    "name_ja": "レア",
+    "name_nl": "Rhea's",
+    "name_pt_br": "Emas"
+  },
+  "Rockfowl": {
+    "name_de": "Felsenhüpfer",
+    "name_es": "Picathartes",
+    "name_fr": "Picatharte",
+    "name_it": "Gallinella di mare",
+    "name_ja": "ロックファウル",
+    "name_nl": "Rockfowl",
+    "name_pt_br": "Picatartes"
+  },
+  "Rockjumpers": {
+    "name_de": "Felsenspringer",
+    "name_es": "Saltarrocas",
+    "name_fr": "Achétopses",
+    "name_it": "Rockjumper",
+    "name_ja": "ロックジャンパー",
+    "name_nl": "Rockjumpers",
+    "name_pt_br": "Salta-rochas"
+  },
+  "Rollers and Allies": {
+    "name_de": "Racken und Erdracken",
+    "name_es": "Carracas y afines",
+    "name_fr": "Rollers and Allies",
+    "name_it": "Rotolatori e Affini",
+    "name_ja": "ブッポウソウ科",
+    "name_nl": "Scharrelaars en aanverwanten",
+    "name_pt_br": "Rolieiros e afins"
+  },
+  "Sandgrouse": {
+    "name_de": "Flughühner",
+    "name_es": "Gangas",
+    "name_fr": "Syrrhaptes et gangas",
+    "name_it": "Pavoncelle",
+    "name_ja": "サケイ科",
+    "name_nl": "Zandhoenders",
+    "name_pt_br": "Cortiçóis"
+  },
+  "Sapayoa": {
+    "name_de": "Tyrannenbreitrachen",
+    "name_es": "Sapayoa",
+    "name_fr": "Sapayoa",
+    "name_it": "Sapayoa",
+    "name_ja": "サパヨア",
+    "name_nl": "Breedbekmanakins",
+    "name_pt_br": "Bico-largo-americano"
+  },
+  "Satinbirds": {
+    "name_de": "Samtvögel",
+    "name_es": "Cnemofílidos",
+    "name_fr": "Cnémophiles",
+    "name_it": "Uccelli di Seta",
+    "name_ja": "サテンバード",
+    "name_nl": "Satijnvogels",
+    "name_pt_br": "Aves-cetim"
+  },
+  "Screamers": {
+    "name_de": "Wehrvögel",
+    "name_es": "Chajaes",
+    "name_fr": "Kamichis",
+    "name_it": "Urlatori",
+    "name_ja": "スクリーマー",
+    "name_nl": "Hoenderkoeten",
+    "name_pt_br": "Anhuma e afins"
+  },
+  "Scrub-birds and Bowerbirds": {
+    "name_de": "Dickicht- und Laubenvögel",
+    "name_es": "Matorraleros y Pergoleros",
+    "name_fr": "Atrichornes",
+    "name_it": "Uccelli della macchia e Uccelli architetti",
+    "name_ja": "スクラブバードとバウアーバード",
+    "name_nl": "Doornkruipers en Prieelvogels",
+    "name_pt_br": "Pássaros-jardineiros e afins"
+  },
+  "Seriemas": {
+    "name_de": "Seriemas",
+    "name_es": "Chuñas",
+    "name_fr": "Cariamas",
+    "name_it": "Seriemas",
+    "name_ja": "セリエマ",
+    "name_nl": "Sierema's",
+    "name_pt_br": "Seriemas"
+  },
+  "Sharpbill, Royal Flycatchers, and Allies": {
+    "name_de": "Flammenkopfbekarden, Kronenbekarden und Verwandte",
+    "name_es": "Picoagudo, Mosqueros Reales, Myiobius y Otros",
+    "name_fr": "Oxyrhynque, moucherolles royaux, Myiobius, etc.",
+    "name_it": "Becco affilato, Piro pettorali reali e Affini",
+    "name_ja": "シャープビル、ロイヤルフライキャッチャー、関連種",
+    "name_nl": "Scherpsnavel, Kroontirannen en overige soorten",
+    "name_pt_br": "Araponga-do-horto, Maria-leque, Assanhadinhos e afins"
+  },
+  "Shoebill and Hammerkop": {
+    "name_de": "Schuhschnäbel und Hammerköpfe",
+    "name_es": "Picozapato y Avemartillo",
+    "name_fr": "Bec-en-sabot et ombrette",
+    "name_it": "Picozzi e Hammerkop",
+    "name_ja": "ハシビロコウとハンマコップ",
+    "name_nl": "Schoenbekoievaar en Hamerkop",
+    "name_pt_br": "Bico-de-tamanco e Pássaro-martelo"
+  },
+  "Shorebirds": {
+    "name_de": "Watvögel",
+    "name_es": "Aves Playeras",
+    "name_fr": "Oiseaux de rivage",
+    "name_it": "Uccelli di riva",
+    "name_ja": "チドリ科/セイタカシギ科/シギ科",
+    "name_nl": "Steltlopers",
+    "name_pt_br": "Limícolas"
+  },
+  "Shrike-Babblers and Erpornis": {
+    "name_de": "Würgervireos und Haubenvireos",
+    "name_es": "Timalíes-alcaudón y Erpornis",
+    "name_fr": "Allotrie et Yuhina à ventre blanc",
+    "name_it": "Shrike-Babbler e Erpornis",
+    "name_ja": "シュライクバブラーとエルポルニス",
+    "name_nl": "Shrike-Babblers and Erpornis",
+    "name_pt_br": "Picanços-zaragateiros e afins"
+  },
+  "Shrike-tits": {
+    "name_de": "Meisendickköpfe",
+    "name_es": "Silbadores Cabezón",
+    "name_fr": "Falconelles",
+    "name_it": "Shrike-tit",
+    "name_ja": "シュライクティット",
+    "name_nl": "Shrike-tits",
+    "name_pt_br": "Picanços-chapims"
+  },
+  "Shrikes": {
+    "name_de": "Würger",
+    "name_es": "Alcaudones",
+    "name_fr": "Pies-grièches",
+    "name_it": "Shrike",
+    "name_ja": "モズ科",
+    "name_nl": "Klauwieren",
+    "name_pt_br": "Picanços"
+  },
+  "Silky-flycatchers": {
+    "name_de": "Seidenschnäpper",
+    "name_es": "Capulineros",
+    "name_fr": "Ptilogons",
+    "name_it": "Pispole Setose",
+    "name_ja": "シルキー・フライキャッチャー",
+    "name_nl": "Silky-flycatchers",
+    "name_pt_br": "Papa-moscas-sedosos"
+  },
+  "Sittellas": {
+    "name_de": "Spiegelkleiber",
+    "name_es": "Neositas",
+    "name_fr": "Néosittes",
+    "name_it": "Sittella",
+    "name_ja": "シッテラ",
+    "name_nl": "Sittellas",
+    "name_pt_br": "Trepadeira-preta e Trepadeira-cinzenta"
+  },
+  "Skuas and Jaegers": {
+    "name_de": "Raubmöwen",
+    "name_es": "Págalos o Escúas",
+    "name_fr": "Labbes",
+    "name_it": "Skuas e Jaeger",
+    "name_ja": "トウゾクカモメ科",
+    "name_nl": "Jagers",
+    "name_pt_br": "Mandriões e afins"
+  },
+  "Spotted Creepers": {
+    "name_de": "Spotted Creepers",
+    "name_es": "Spotted Creepers",
+    "name_fr": "Spotted Creepers",
+    "name_it": "Creeper Maculato",
+    "name_ja": "ヒメツバメ",
+    "name_nl": "Spotted Creepers",
+    "name_pt_br": "Spotted Creepers"
+  },
+  "Starlings and Mynas": {
+    "name_de": "Starenverwandte",
+    "name_es": "Estorninos y Minas",
+    "name_fr": "Étourneaux et mainates",
+    "name_it": "Storni e Mynah",
+    "name_ja": "ムクドリ科",
+    "name_nl": "Spreeuwen en Glansspreeuwen",
+    "name_pt_br": "Estorninhos e Mainatos"
+  },
+  "Stitchbird": {
+    "name_de": "Stichvögel",
+    "name_es": "Hihi",
+    "name_fr": "Méliphage hihi",
+    "name_it": "Stitchbird",
+    "name_ja": "スティッチバード",
+    "name_nl": "Geelbandhoningeter",
+    "name_pt_br": "Hihi"
+  },
+  "Storks": {
+    "name_de": "Störche",
+    "name_es": "Cigüeñas",
+    "name_fr": "Cigognes",
+    "name_it": "Cicogne",
+    "name_ja": "コウノトリ科",
+    "name_nl": "Ooievaars",
+    "name_pt_br": "Cegonhas"
+  },
+  "Storm-Petrels": {
+    "name_de": "Wellenläufer",
+    "name_es": "Paíños",
+    "name_fr": "Océanites",
+    "name_it": "Petrelli di tempesta",
+    "name_ja": "ウミツバメ科",
+    "name_nl": "Stormvogeltjes",
+    "name_pt_br": "Painhos e afins"
+  },
+  "Sugarbirds": {
+    "name_de": "Honigvögel",
+    "name_es": "Mieleros-abejaruco",
+    "name_fr": "Promérops",
+    "name_it": "Uccelli dello Zucchero",
+    "name_ja": "シュガーバード",
+    "name_nl": "Sugarbirds",
+    "name_pt_br": "Aves-açúcar"
+  },
+  "Sunbirds and Spiderhunters": {
+    "name_de": "Nektarvögel",
+    "name_es": "Suimangas y Arañeras",
+    "name_fr": "Souimangas et arachnothères",
+    "name_it": "Uccelli del Sole e Cacciatori di Ragni",
+    "name_ja": "サンバードとクモハンター",
+    "name_nl": "Honingzuigers",
+    "name_pt_br": "Pássaros-do-sol"
+  },
+  "Sunbittern": {
+    "name_de": "Sonnenrallen",
+    "name_es": "Ave Sol o Ipequí",
+    "name_fr": "Caurale soleil",
+    "name_it": "Solecchi",
+    "name_ja": "ヒメアマツバメ",
+    "name_nl": "Zonneral",
+    "name_pt_br": "Pavãozinho-do-pará"
+  },
+  "Swifts": {
+    "name_de": "Segler",
+    "name_es": "Vencejos",
+    "name_fr": "Martinets",
+    "name_it": "Rondini",
+    "name_ja": "アマツバメ科",
+    "name_nl": "Gierzwaluwen",
+    "name_pt_br": "Andorinhões"
+  },
+  "Sylviid Warblers": {
+    "name_de": "Grasmückenverwandte",
+    "name_es": "Currucas",
+    "name_fr": "Fauvettes",
+    "name_it": "Silvicoline Sylviidi",
+    "name_ja": "ズグロムシクイ科",
+    "name_nl": "Grasmussen",
+    "name_pt_br": "Toutinegras e afins"
+  },
+  "Tanagers and Allies": {
+    "name_de": "Tangarenverwandte",
+    "name_es": "Tángaras y Afines",
+    "name_fr": "Tangaras",
+    "name_it": "Tanagers e Affini",
+    "name_ja": "タンガー及び関連種",
+    "name_nl": "Tangaren",
+    "name_pt_br": "Saíras, tiês, sanhaços e afins"
+  },
+  "Tapaculos": {
+    "name_de": "Bürzelstelzer",
+    "name_es": "Tapaculos",
+    "name_fr": "Mérulaxes",
+    "name_it": "Tapaculos",
+    "name_ja": "タパクーロ",
+    "name_nl": "Tapaculo's",
+    "name_pt_br": "Tapaculos"
+  },
+  "Thornbills and Allies": {
+    "name_de": "Südsee-Grasmücken",
+    "name_es": "Acantizas y afines",
+    "name_fr": "Acanthizes",
+    "name_it": "Thornbills e Affini",
+    "name_ja": "ソーンビルと関連種",
+    "name_nl": "Australische zangers",
+    "name_pt_br": "Gerigones e afins"
+  },
+  "Thrush-Tanager": {
+    "name_de": "Tangarenammern",
+    "name_es": "Tángara Rosada",
+    "name_fr": "Quéo rosalbin",
+    "name_it": "Tordo-Tanagers",
+    "name_ja": "ツグミタンガー",
+    "name_nl": "Thrush-Tanager",
+    "name_pt_br": "Rhodinocichlidae"
+  },
+  "Thrushes": {
+    "name_de": "Drosseln",
+    "name_es": "Zorzales",
+    "name_fr": "Merles et grives",
+    "name_it": "Turdidi",
+    "name_ja": "ツグミ科",
+    "name_nl": "Lijsters",
+    "name_pt_br": "Sabiás"
+  },
+  "Tinamous": {
+    "name_de": "Tinamus",
+    "name_es": "Tinamúes o Inambúes",
+    "name_fr": "Tinamous",
+    "name_it": "Tinami",
+    "name_ja": "ティナム",
+    "name_nl": "Tinamoes",
+    "name_pt_br": "Inambus, codornas e afins"
+  },
+  "Tit Berrypecker and Crested Berrypecker": {
+    "name_de": "Beerenfresser",
+    "name_es": "Picabayas de las Arfak y Picabayas Crestado",
+    "name_fr": "Oréochare et paramythie",
+    "name_it": "Tit Berrypecker e Crested Berrypecker",
+    "name_ja": "ティットベリーペッカーとクリステッドベリーペッカー",
+    "name_nl": "Mees- en Bergbessenpikker",
+    "name_pt_br": "Pica-bagas-chapim e Pica-bagas-de-crista"
+  },
+  "Tits, Chickadees, and Titmice": {
+    "name_de": "Meisen",
+    "name_es": "Carboneros",
+    "name_fr": "Mésanges",
+    "name_it": "Cinciallegre, Chickadee e Cinciallegra",
+    "name_ja": "シジュウカラ科",
+    "name_nl": "Mezen",
+    "name_pt_br": "Chapins"
+  },
+  "Todies": {
+    "name_de": "Todis",
+    "name_es": "Todis",
+    "name_fr": "Todiers",
+    "name_it": "Todi",
+    "name_ja": "トディ",
+    "name_nl": "Todies",
+    "name_pt_br": "Todis"
+  },
+  "Tree-Babblers, Scimitar-Babblers, and Allies": {
+    "name_de": "Timalien",
+    "name_es": "Timalíidos",
+    "name_fr": "Timaliidés",
+    "name_it": "Babblers degli Alberi, Babblers Scimitar e Affini",
+    "name_ja": "ツリーバブラー、シミターバブラー、及び関連種",
+    "name_nl": "Tree-Babblers, Scimitar-Babblers, and Allies",
+    "name_pt_br": "Zaragateiros-arborícolas, Zaragateiros-cimitarra e afins"
+  },
+  "Treecreepers": {
+    "name_de": "Baumläufer",
+    "name_es": "Agateadores",
+    "name_fr": "Grimpereaux",
+    "name_it": "Creeper degli Alberi",
+    "name_ja": "キバシリ科",
+    "name_nl": "Boomkruipers",
+    "name_pt_br": "Trepadeiras"
+  },
+  "Treeswifts": {
+    "name_de": "Baumsegler",
+    "name_es": "Vencejos Arborícolas",
+    "name_fr": "Hémiprocné",
+    "name_it": "Rondini arboricole",
+    "name_ja": "トリースウィフト",
+    "name_nl": "Boomgierzwaluwen",
+    "name_pt_br": "Andorinhões-das-árvores"
+  },
+  "Trogons and Quetzals": {
+    "name_de": "Trogone",
+    "name_es": "Trogones y Quetzales",
+    "name_fr": "Trogons et quetzals",
+    "name_it": "Trogoni e Quetzal",
+    "name_ja": "トロゴンとケツァール",
+    "name_nl": "Trogons en Quetzals",
+    "name_pt_br": "Surucuás e afins"
+  },
+  "Tropicbirds": {
+    "name_de": "Tropikvögel",
+    "name_es": "Rabijuncos",
+    "name_fr": "Phaétons",
+    "name_it": "Uccelli tropicali",
+    "name_ja": "ネッタイチョウ科",
+    "name_nl": "Keerkringvogels",
+    "name_pt_br": "Rabos-de-palha"
+  },
+  "Trumpeters": {
+    "name_de": "Trompetervögel",
+    "name_es": "Trompeteros",
+    "name_fr": "Agamis",
+    "name_it": "Trompetti",
+    "name_ja": "トランペッター",
+    "name_nl": "Trompetvogels",
+    "name_pt_br": "Jacamins"
+  },
+  "Turacos": {
+    "name_de": "Turakos",
+    "name_es": "Turacos",
+    "name_fr": "Touracos",
+    "name_it": "Turachi",
+    "name_ja": "トゥラコ",
+    "name_nl": "Toerako's",
+    "name_pt_br": "Turacos e afins"
+  },
+  "Tyrant Flycatchers: Elaenias, Tyrannulets, and Allies": {
+    "name_de": "Tyrannen: Olivtyrannen, Kleintyrannen und Verwandte",
+    "name_es": "Mosqueros Tiranos: Elaenias, Mosquetas y Afines",
+    "name_fr": "Tyranidés: élénies, tyrannulets, etc.",
+    "name_it": "Piro pettorali tiranni: Elaenias, Tyrannulets e Affini",
+    "name_ja": "タイランフライキャッチャー：エラエニア、ティラヌレット、関連種",
+    "name_nl": "Tirannen: Breekbektirannen en aanverwanten",
+    "name_pt_br": "Papa-moscas do Novo Mundo: Bico-chatos, Ferreirinhos e afins"
+  },
+  "Tyrant Flycatchers: Pewees, Kingbirds, and Allies": {
+    "name_de": "Tyrannen: Schnäppertyrannen, Königstyrannen und Verwandte",
+    "name_es": "Mosqueros Tiranos: Pibís, Tiranos y Afines",
+    "name_fr": "Tyranidés: piouis, tyrans, etc.",
+    "name_it": "Piro pettorali tiranni: Pewees, Kingbirds e Affini",
+    "name_ja": "タイランフライキャッチャー：ピューイ、キングバード、関連種",
+    "name_nl": "Tirannen: Peewees, Koningstirannen en aanverwanten",
+    "name_pt_br": "Papa-moscas do Novo Mundo: Piuís, Marias-pretas, Suiriris e afins"
+  },
+  "Vangas, Helmetshrikes, and Allies": {
+    "name_de": "Vangas",
+    "name_es": "Vangas, Prionopos y afines",
+    "name_fr": "Vangas, artamies, etc.",
+    "name_it": "Vanga, Helmetshrike e Affini",
+    "name_ja": "バンガ、ヘルメットシュライクと関連種",
+    "name_nl": "Vanga's",
+    "name_pt_br": "Poupinhas e afins"
+  },
+  "Vireos": {
+    "name_de": "Vireos",
+    "name_es": "Víreos o Chivíes",
+    "name_fr": "Viréos",
+    "name_it": "Vireo",
+    "name_ja": "ビレオ",
+    "name_nl": "Vireo's",
+    "name_pt_br": "Juruviaras e afins"
+  },
+  "Vultures, Hawks, and Allies": {
+    "name_de": "Greifvögel",
+    "name_es": "Buitres, Gavilanes y Afines",
+    "name_fr": "Vautours, rapaces, etc.",
+    "name_it": "Avvoltoi, Falchi e Affini",
+    "name_ja": "タカ科",
+    "name_nl": "Gieren, Arenden, Buizerds, Haviken en aanverwanten",
+    "name_pt_br": "Abutres, Águias e afins"
+  },
+  "Wagtails and Pipits": {
+    "name_de": "Stelzenverwandte",
+    "name_es": "Lavanderas y Bisbitas",
+    "name_fr": "Bergeronnettes et pipits",
+    "name_it": "Pispole e Pipit",
+    "name_ja": "セキレイ科",
+    "name_nl": "Kwikstaarten en Piepers",
+    "name_pt_br": "Caminheiros"
+  },
+  "Wallcreeper": {
+    "name_de": "Mauerläufer",
+    "name_es": "Treparriscos",
+    "name_fr": "Tichodrome",
+    "name_it": "Creeper delle Pareti",
+    "name_ja": "イワツバメ",
+    "name_nl": "Rotskruiper",
+    "name_pt_br": "Trepa-fragas"
+  },
+  "Waterfowl": {
+    "name_de": "Entenvögel",
+    "name_es": "Aves Acuáticas o Anátidos",
+    "name_fr": "Cygnes, oies et canards",
+    "name_it": "Anatre",
+    "name_ja": "カモ科",
+    "name_nl": "Watervogels",
+    "name_pt_br": "Marrecas, patos, tachã e afins"
+  },
+  "Wattle-eyes and Batises": {
+    "name_de": "Afrikaschnäpper",
+    "name_es": "Batis",
+    "name_fr": "Pririts",
+    "name_it": "Wattle-eye e Batis",
+    "name_ja": "ワトルアイとバティス",
+    "name_nl": "Afrikaanse Vliegenvangers",
+    "name_pt_br": "Papa-moscas-de-olheiras-africanos e afins"
+  },
+  "Wattlebirds": {
+    "name_de": "Lappenvögel",
+    "name_es": "Kokako y Tiekes",
+    "name_fr": "Glaucope, créadion et huia",
+    "name_it": "Wattlebird",
+    "name_ja": "ワトルバード",
+    "name_nl": "Nieuw-Zeelandse Lelvogels",
+    "name_pt_br": "Pássaros-carúncula"
+  },
+  "Waxwings": {
+    "name_de": "Seidenschwänze",
+    "name_es": "Ampelises",
+    "name_fr": "Jaseurs",
+    "name_it": "Ampelidi",
+    "name_ja": "レンジャク科",
+    "name_nl": "Pestvogels",
+    "name_pt_br": "Picoteiros"
+  },
+  "Weavers and Allies": {
+    "name_de": "Weber",
+    "name_es": "Tejedores y afines",
+    "name_fr": "Tisserins",
+    "name_it": "Intrecciatori e Affini",
+    "name_ja": "ハタオリドリ科",
+    "name_nl": "Wevers en aanverwanten",
+    "name_pt_br": "Tecelões e afins"
+  },
+  "Whipbirds and Wedgebills": {
+    "name_de": "Australflöter",
+    "name_es": "Zordalas",
+    "name_fr": "Psophodes",
+    "name_it": "Whipbird e Wedgebill",
+    "name_ja": "ウィップバードとウェッジビル",
+    "name_nl": "Zwiepfluiters",
+    "name_pt_br": "Pássaros-chicote e afins"
+  },
+  "Whistlers and Allies": {
+    "name_de": "Dickköpfe",
+    "name_es": "Silbadores y afines",
+    "name_fr": "Siffleurs, etc.",
+    "name_it": "Whistler e Affini",
+    "name_ja": "ウィスラーと関連種",
+    "name_nl": "Whistlers and Allies",
+    "name_pt_br": "Assobiadores e afins"
+  },
+  "White-eyes, Yuhinas, and Allies": {
+    "name_de": "Brillenvögel",
+    "name_es": "Anteojitos, Yuhinas y afines",
+    "name_fr": "Zostérops et yuhinas",
+    "name_it": "Occhi Bianchi, Yuhine e Affini",
+    "name_ja": "メジロ科",
+    "name_nl": "White-eyes, Yuhinas, and Allies",
+    "name_pt_br": "Olhos-brancos e afins"
+  },
+  "White-winged Chough and Apostlebird": {
+    "name_de": "Töpferkrähen",
+    "name_es": "Corvinos",
+    "name_fr": "Corbicrave et apôtre",
+    "name_it": "Chough Alato Bianco e Apostlebird",
+    "name_ja": "ホワイトウィングチョウとアポストルバード",
+    "name_nl": "White-winged Chough and Apostlebird",
+    "name_pt_br": "Gralhas-de-asa-branca e Pássaro-apóstolo"
+  },
+  "Whiteheads": {
+    "name_de": "Maorigrasmücken",
+    "name_es": "Mohouas",
+    "name_fr": "Mohouas",
+    "name_it": "Testa Bianca",
+    "name_ja": "ホワイトヘッド",
+    "name_nl": "Mohoua's",
+    "name_pt_br": "Cabeças-brancas"
+  },
+  "Whydahs and Indigobirds": {
+    "name_de": "Witwen",
+    "name_es": "Viudas",
+    "name_fr": "Combassous",
+    "name_it": "Whydah e Indigobirds",
+    "name_ja": "テンニンチョウ科",
+    "name_nl": "Whydahs and Indigobirds",
+    "name_pt_br": "Viúvas"
+  },
+  "Wood-Warblers": {
+    "name_de": "Waldsänger",
+    "name_es": "Reinitas",
+    "name_fr": "Parulines",
+    "name_it": "Warbler dei Boschi",
+    "name_ja": "アメリカムシクイ科",
+    "name_nl": "Amerikaanse zangers",
+    "name_pt_br": "Pula-pulas, mariquitas e afins"
+  },
+  "Woodcreepers": {
+    "name_de": "Baumsteigerartige",
+    "name_es": "Trepatroncos o Trepadores",
+    "name_fr": "Grimpars",
+    "name_it": "Creepers di legno",
+    "name_ja": "ウッドクリーパー",
+    "name_nl": "Muisspechten",
+    "name_pt_br": "Arapaçus"
+  },
+  "Woodhoopoes and Scimitarbills": {
+    "name_de": "Baumhopfe",
+    "name_es": "Abubillas Arbóreas",
+    "name_fr": "Irrisors",
+    "name_it": "Upupe di legno e Beccamorte",
+    "name_ja": "ウッドフープーとシミタービル",
+    "name_nl": "Boomhoppen",
+    "name_pt_br": "Zombeteiros e afins"
+  },
+  "Woodpeckers": {
+    "name_de": "Spechte",
+    "name_es": "Carpinteros",
+    "name_fr": "Pics",
+    "name_it": "Picchi",
+    "name_ja": "キツツキ科",
+    "name_nl": "Spechten",
+    "name_pt_br": "Pica-paus"
+  },
+  "Woodswallows": {
+    "name_de": "Schwalbenstarverwandte",
+    "name_es": "Artamos",
+    "name_fr": "Langrayens",
+    "name_it": "Woodswallow",
+    "name_ja": "モリツバメシギ科",
+    "name_nl": "Woodswallows",
+    "name_pt_br": "Andorinhas-do-mato"
+  },
+  "Wrens": {
+    "name_de": "Zaunkönige",
+    "name_es": "Cucaracheros",
+    "name_fr": "Troglodytes",
+    "name_it": "Trogloditi",
+    "name_ja": "ミソサザイ科",
+    "name_nl": "Winterkoningen",
+    "name_pt_br": "Corruíras, Garrinchões e afins"
+  },
+  "Wrenthrush": {
+    "name_de": "Zaunkönigsänger",
+    "name_es": "Reinita de Zeledon",
+    "name_fr": "Zélédonie couronnée",
+    "name_it": "Wrenthrush",
+    "name_ja": "レンスラッシュ",
+    "name_nl": "Wrenthrush",
+    "name_pt_br": "Zeledoniidae"
+  },
+  "Yellow-breasted Chat": {
+    "name_de": "Flötenstärlinge",
+    "name_es": "Reinita Grande",
+    "name_fr": "Ictérie polyglotte",
+    "name_it": "Chat dal Petto Giallo",
+    "name_ja": "キイロハラチャット",
+    "name_nl": "Yellow-breasted Chat",
+    "name_pt_br": "Icteriidae"
+  }
+}

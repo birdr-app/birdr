@@ -9,12 +9,19 @@ from django.db.models.functions import TruncDay
 from django.utils import timezone
 
 from jizz.api_event_labels import resolve_websocket_event_label
+from jizz.client_info import normalize_app_version
 from jizz.models import UsageEvent, UserProfile
 
 _PLATFORM_CHOICES = {'web', 'ios', 'android'}
 _DEVICE_CHOICES = {'desktop', 'mobile', 'tablet', 'unknown'}
 _EVENT_TYPE_CHOICES = {'page_view', 'feature', 'api', 'websocket'}
 _COUNTRY_RE = re.compile(r'^[A-Za-z]{2}$')
+_CRAWLER_UA_RE = re.compile(
+    r'googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|facebookexternalhit|'
+    r'twitterbot|linkedinbot|applebot|semrush|ahrefs|mj12bot|dotbot|petalbot|'
+    r'bytespider|gptbot|claudebot|ccbot|amazonbot|ia_archiver|pingdom|uptimerobot',
+    re.I,
+)
 
 
 def get_client_ip(request) -> str | None:
@@ -58,13 +65,26 @@ def resolve_country_code(request, client_country: str | None = None) -> str:
     return ''
 
 
+def is_crawler_user_agent(user_agent: str | None) -> bool:
+    """True for common search/preview crawlers we should not count as visitors."""
+    return bool(user_agent) and bool(_CRAWLER_UA_RE.search(user_agent))
+
+
+_NATIVE_APP_UA_TOKENS = ('okhttp', 'dalvik', 'cfnetwork', 'darwin/')
+APP_BUILD_MAX = 32
+OS_VERSION_MAX = 64
+
+
 def parse_device_type(user_agent: str) -> str:
     ua = (user_agent or '').lower()
     if not ua:
         return 'unknown'
     if 'ipad' in ua or 'tablet' in ua:
         return 'tablet'
-    if 'mobile' in ua or 'iphone' in ua or 'android' in ua:
+    if any(
+        token in ua
+        for token in ('mobile', 'iphone', 'android', 'okhttp', 'dalvik')
+    ):
         return 'mobile'
     return 'desktop'
 
@@ -78,10 +98,98 @@ def infer_platform_from_user_agent(user_agent: str) -> str:
     return 'web'
 
 
+def _header_map_get(headers: dict[str, str], *names: str) -> str:
+    for name in names:
+        value = (headers.get(name) or '').strip()
+        if value:
+            return value
+    return ''
+
+
+def headers_from_request(request) -> dict[str, str]:
+    meta = getattr(request, 'META', None) or {}
+    out: dict[str, str] = {}
+    for key, value in meta.items():
+        if not key.startswith('HTTP_') or not isinstance(value, str):
+            continue
+        header = key[5:].replace('_', '-').lower()
+        out[header] = value
+    return out
+
+
+def headers_from_scope(scope) -> dict[str, str]:
+    out: dict[str, str] = {}
+    for key, value in scope.get('headers') or []:
+        name = key.decode('latin1', errors='replace').lower()
+        out[name] = value.decode('latin1', errors='replace')
+    return out
+
+
+def app_identity_from_headers(headers: dict[str, str] | None) -> dict[str, str]:
+    """Read optional app identity headers. Missing values become empty strings."""
+    headers = headers or {}
+    platform = _header_map_get(
+        headers,
+        'x-platform',
+        'x-birdr-platform',
+        'x-birdr-device-type',
+    ).strip().lower()
+    if platform not in _PLATFORM_CHOICES:
+        platform = ''
+    return {
+        'app_version': normalize_app_version(
+            _header_map_get(headers, 'x-app-version', 'x-birdr-app-version')
+        ),
+        'app_build': _header_map_get(headers, 'x-app-build', 'x-birdr-app-build')[:APP_BUILD_MAX],
+        'os_version': _header_map_get(headers, 'x-os-version', 'x-birdr-os-version')[:OS_VERSION_MAX],
+        'platform': platform,
+    }
+
+
+def app_identity_from_mapping(data: Any) -> dict[str, str]:
+    """Optional identity on websocket join payloads. Missing keys are empty."""
+    if not isinstance(data, dict):
+        return {'app_version': '', 'app_build': '', 'os_version': '', 'platform': ''}
+    platform = str(
+        data.get('platform') or data.get('device_type') or data.get('deviceType') or ''
+    ).strip().lower()
+    if platform not in _PLATFORM_CHOICES:
+        platform = ''
+    return {
+        'app_version': normalize_app_version(
+            data.get('app_version') or data.get('appVersion')
+        ),
+        'app_build': str(data.get('app_build') or data.get('appBuild') or '').strip()[:APP_BUILD_MAX],
+        'os_version': str(data.get('os_version') or data.get('osVersion') or '').strip()[:OS_VERSION_MAX],
+        'platform': platform,
+    }
+
+
+def merge_app_identity(*identities: dict[str, str]) -> dict[str, str]:
+    """First non-empty value wins (headers first, then payload fallback)."""
+    merged = {'app_version': '', 'app_build': '', 'os_version': '', 'platform': ''}
+    for identity in identities:
+        for key in merged:
+            if not merged[key] and identity.get(key):
+                merged[key] = identity[key]
+    return merged
+
+
+def resolve_device_type(user_agent: str, platform: str = '') -> str:
+    """Native app traffic is never Desktop, even when UA is only okhttp."""
+    ua_device = parse_device_type(user_agent)
+    if platform in ('ios', 'android'):
+        return 'tablet' if ua_device == 'tablet' else 'mobile'
+    ua = (user_agent or '').lower()
+    if any(token in ua for token in _NATIVE_APP_UA_TOKENS):
+        return 'tablet' if ua_device == 'tablet' else 'mobile'
+    return ua_device
+
+
 def infer_platform_from_request(request) -> str:
-    custom = (request.META.get('HTTP_X_BIRDR_PLATFORM') or '').strip().lower()
-    if custom in _PLATFORM_CHOICES:
-        return custom
+    identity = app_identity_from_headers(headers_from_request(request))
+    if identity['platform'] in _PLATFORM_CHOICES:
+        return identity['platform']
     user_agent = request.META.get('HTTP_USER_AGENT') or ''
     return infer_platform_from_user_agent(user_agent)
 
@@ -114,7 +222,11 @@ def record_usage_event(
     metadata: dict | None = None,
 ) -> UsageEvent:
     user_agent = (request.META.get('HTTP_USER_AGENT') or '')[:2000]
-    device_type = parse_device_type(user_agent)
+    identity = app_identity_from_headers(headers_from_request(request))
+    resolved_platform = normalize_platform(
+        platform or identity['platform'] or infer_platform_from_request(request)
+    )
+    device_type = resolve_device_type(user_agent, resolved_platform)
     user = request.user if getattr(request, 'user', None) and request.user.is_authenticated else None
     merged_metadata = dict(metadata or {})
     merged_metadata['proxy'] = request_debug_meta(request)
@@ -122,13 +234,16 @@ def record_usage_event(
     return UsageEvent.objects.create(
         event_type=normalize_event_type(event_type),
         path=normalize_path(path) if event_type in ('page_view', 'feature') else path[:500],
-        platform=normalize_platform(platform or infer_platform_from_request(request)),
+        platform=resolved_platform,
         device_type=device_type,
         country_code=resolve_country_code(request, country_code),
         ip_address=get_client_ip(request),
         user=user,
         session_key=(session_key or '')[:64],
         user_agent=user_agent,
+        app_version=identity['app_version'],
+        app_build=identity['app_build'],
+        os_version=identity['os_version'],
         metadata=merged_metadata,
     )
 
@@ -164,13 +279,30 @@ def record_websocket_usage_event(
     *,
     action: str,
     metadata: dict | None = None,
+    app_version: str = '',
+    app_build: str = '',
+    os_version: str = '',
+    platform: str = '',
 ) -> UsageEvent | None:
     label = resolve_websocket_event_label(action)
     if not label:
         return None
 
-    user_agent = _scope_header(scope, 'user-agent')[:2000]
-    country = (_scope_header(scope, 'cf-ipcountry') or '').strip().upper()[:2]
+    headers = headers_from_scope(scope)
+    user_agent = (headers.get('user-agent') or '')[:2000]
+    identity = merge_app_identity(
+        app_identity_from_headers(headers),
+        {
+            'app_version': normalize_app_version(app_version),
+            'app_build': (app_build or '')[:APP_BUILD_MAX],
+            'os_version': (os_version or '')[:OS_VERSION_MAX],
+            'platform': platform if platform in _PLATFORM_CHOICES else '',
+        },
+    )
+    resolved_platform = normalize_platform(
+        identity['platform'] or infer_platform_from_user_agent(user_agent)
+    )
+    country = (headers.get('cf-ipcountry') or '').strip().upper()[:2]
     if country == 'XX':
         country = ''
 
@@ -179,13 +311,16 @@ def record_websocket_usage_event(
     return UsageEvent.objects.create(
         event_type='websocket',
         path=label[:500],
-        platform=normalize_platform(infer_platform_from_user_agent(user_agent)),
-        device_type=parse_device_type(user_agent),
+        platform=resolved_platform,
+        device_type=resolve_device_type(user_agent, resolved_platform),
         country_code=country if _COUNTRY_RE.match(country or '') else '',
         ip_address=_scope_client_ip(scope),
         user=None,
         session_key='',
         user_agent=user_agent,
+        app_version=identity['app_version'],
+        app_build=identity['app_build'],
+        os_version=identity['os_version'],
         metadata=ws_metadata,
     )
 

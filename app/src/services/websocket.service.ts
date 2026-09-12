@@ -1,5 +1,6 @@
 // WebSocket Service - Handles WebSocket connections with reconnection logic
 import { Game, Player, MultiPlayer, Question, Answer } from '../api/types';
+import { clientInfoPayload } from '../api/clientInfo';
 
 export interface WebSocketMessage {
   action: string;
@@ -46,6 +47,7 @@ export class WebSocketServiceImpl implements WebSocketService {
         action: 'join_game',
         player_token: player.token,
         language_code: language,
+        ...clientInfoPayload(),
       }));
     };
 

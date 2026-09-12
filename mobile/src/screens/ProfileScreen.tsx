@@ -31,6 +31,7 @@ import { compareSpeciesLanguages, getLanguageDisplayName } from '../i18n/languag
 import { CountrySelect } from '../components/CountrySelect';
 import { SpeciesLanguageLabel } from '../components/SpeciesLanguageLabel';
 import { AppLanguagePicker } from '../components/AppLanguagePicker';
+import { speciesLanguageFromAppLocale } from '../i18n/appLocales';
 import { colors } from '../theme';
 
 export function ProfileScreen() {
@@ -333,7 +334,13 @@ export function ProfileScreen() {
       <Text style={styles.label}>{t('app_language')}</Text>
       <Text style={styles.switchHint}>{t('app_language_hint')}</Text>
       <View style={styles.appLanguageWrap}>
-        <AppLanguagePicker value={locale} onChange={setLocale} />
+        <AppLanguagePicker
+          value={locale}
+          onChange={(next) => {
+            setLanguage(speciesLanguageFromAppLocale(next));
+            void setLocale(next);
+          }}
+        />
       </View>
       <Text style={styles.label}>{t('bird_name_language')}</Text>
       <Text style={styles.switchHint}>{t('bird_name_language_hint')}</Text>
@@ -394,6 +401,7 @@ export function ProfileScreen() {
                     source={option.source}
                     style={styles.styleChoiceImage}
                     resizeMode="contain"
+                    resizeMethod="resize"
                     accessibilityIgnoresInvertColors
                   />
                 </View>

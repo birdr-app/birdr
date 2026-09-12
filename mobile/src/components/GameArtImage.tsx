@@ -7,5 +7,5 @@ import { showsGameArt } from '../lib/visualStyle';
 export function GameArtImage(props: ImageProps) {
   const { visualStyle } = useVisualStyle();
   if (!showsGameArt(visualStyle)) return null;
-  return <Image accessibilityIgnoresInvertColors {...props} />;
+  return <Image resizeMethod="resize" accessibilityIgnoresInvertColors {...props} />;
 }

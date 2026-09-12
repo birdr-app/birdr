@@ -19,6 +19,8 @@ type Props = {
   icon?: 'correct' | 'wrong';
   /** Right-side label; defaults to "View ›" */
   viewLabel?: string;
+  /** Small chip after the label (e.g. Beta) */
+  badge?: string;
   disabled?: boolean;
   testID?: string;
   accessibilityLabel?: string;
@@ -51,9 +53,9 @@ const variantStyles: Record<SpeciesViewButtonVariant, { button: ViewStyle; text:
     viewText: { color: colors.primary[800] },
   },
   compare: {
-    button: { backgroundColor: colors.primary[200] },
-    text: { color: colors.primary[800] },
-    viewText: { color: colors.primary[800] },
+    button: { backgroundColor: colors.primary[500] },
+    text: { color: colors.primary[50] },
+    viewText: { color: 'rgba(255,255,255,0.8)' },
   },
 };
 
@@ -63,6 +65,7 @@ export function SpeciesViewButton({
   variant = 'primary',
   icon,
   viewLabel = 'View ›',
+  badge,
   disabled = false,
   testID,
   accessibilityLabel,
@@ -86,6 +89,11 @@ export function SpeciesViewButton({
         <Text style={[styles.label, vs.text]} numberOfLines={2}>
           {label}
         </Text>
+        {badge ? (
+          <View style={styles.badge}>
+            <Text style={[styles.badgeText, vs.viewText]}>{badge}</Text>
+          </View>
+        ) : null}
         <Text style={[styles.viewText, vs.viewText]}>{viewLabel}</Text>
       </View>
     </TouchableOpacity>
@@ -117,5 +125,18 @@ const styles = StyleSheet.create({
   iconWrong: { backgroundColor: 'rgba(255,255,255,0.3)' },
   iconText: { fontSize: 14, fontWeight: '700', color: '#fff' },
   label: { fontSize: 16, fontWeight: '500', flex: 1, marginRight: 8 },
+  badge: {
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+    backgroundColor: 'rgba(255,255,255,0.22)',
+    flexShrink: 0,
+  },
+  badgeText: {
+    fontSize: 10,
+    fontWeight: '800',
+    letterSpacing: 0.5,
+    textTransform: 'uppercase',
+  },
   viewText: { fontSize: 13, fontWeight: '600' },
 });

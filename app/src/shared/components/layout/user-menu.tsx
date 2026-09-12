@@ -1,83 +1,85 @@
-import { Flex, Link, Button, VStack, Text, Separator, Avatar, Box } from "@chakra-ui/react";
-import { useState, useEffect, useContext } from "react";
+import { Flex, Link, Button, VStack, Text, Separator, Avatar } from "@chakra-ui/react";
+import { useContext, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { getCountryChallengesPath, listBirdrJourneys } from "../../../api/birdrJourney";
+import { getFlocksPath, listFlocks } from "../../../api/flocks";
 import { authService } from "../../../api/services/auth.service";
-import { profileService, UserProfile, getAvatarUrl } from "../../../api/services/profile.service";
+import { getAvatarUrl } from "../../../api/services/profile.service";
 import AppContext from "../../../core/app-context";
+import { useAuthProfile } from "../../../core/auth-profile-context";
 import { AppLanguageSelect } from "../../../components/app-language-select";
 import type { AppLocale } from "../../../i18n/app-locales";
 
 type UserMenuProps = {
   onOpenLoginModal?: (mode: 'login' | 'register') => void;
+  isOpen?: boolean;
 };
 
-export const UserMenu = ({ onOpenLoginModal }: UserMenuProps) => {
+export const UserMenu = ({ onOpenLoginModal, isOpen = true }: UserMenuProps) => {
   const navigate = useNavigate();
   const { appLanguage, setAppLanguage } = useContext(AppContext);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [userEmail, setUserEmail] = useState<string | null>(null);
-  const [profile, setProfile] = useState<UserProfile | null>(null);
-
-  const checkAuth = async () => {
-    const token = authService.getAccessToken();
-    if (!token) {
-      setIsAuthenticated(false);
-      setUserEmail(null);
-      setProfile(null);
-      return;
-    }
-    const ok = await authService.ensureValidAccessToken();
-    const access = authService.getAccessToken();
-    if (!ok || !access) {
-      setIsAuthenticated(false);
-      setUserEmail(null);
-      setProfile(null);
-      return;
-    }
-    setIsAuthenticated(true);
-    try {
-      const payload = JSON.parse(atob(access.split('.')[1]));
-      setUserEmail(payload.email || payload.username || null);
-      try {
-        const profileData = await profileService.getProfile();
-        setProfile(profileData);
-      } catch {
-        setProfile(null);
-      }
-    } catch {
-      setUserEmail(null);
-      setProfile(null);
-    }
-  };
-
-  useEffect(() => {
-    checkAuth();
-    // Check auth state periodically (every 5 seconds) to catch logout from other tabs
-    const interval = setInterval(checkAuth, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  const { isAuthenticated, profile, userEmail, ready: profileReady } = useAuthProfile();
+  const [hasFlocks, setHasFlocks] = useState(false);
+  const [hasCountryChallenges, setHasCountryChallenges] = useState(false);
 
   const handleLogout = () => {
     authService.clearTokens();
-    setIsAuthenticated(false);
-    setUserEmail(null);
-    setProfile(null);
     navigate("/");
-    // Refresh the page to clear any cached state
     window.location.reload();
   };
 
+  useEffect(() => {
+    if (!profileReady || !isOpen) return;
+    let cancelled = false;
+    (async () => {
+      if (isAuthenticated) {
+        try {
+          const flocks = await listFlocks();
+          if (!cancelled) setHasFlocks(flocks.length > 0);
+        } catch {
+          if (!cancelled) setHasFlocks(false);
+        }
+      } else if (!cancelled) {
+        setHasFlocks(false);
+      }
+      try {
+        const journeys = await listBirdrJourneys();
+        if (!cancelled) setHasCountryChallenges(journeys.length > 0);
+      } catch {
+        if (!cancelled) setHasCountryChallenges(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [isAuthenticated, profileReady, isOpen]);
+
   const languageToggle = (
-    <Box>
-      <Text fontSize="sm" color="gray.600" mb={1}>
-        <FormattedMessage id="app_language" defaultMessage="App language" />
-      </Text>
-      <AppLanguageSelect
-        value={appLanguage || 'en'}
-        onChange={(locale: AppLocale) => setAppLanguage?.(locale)}
-      />
-    </Box>
+    <AppLanguageSelect
+      variant="menu"
+      value={appLanguage || 'en'}
+      onChange={(locale: AppLocale) => setAppLanguage?.(locale)}
+    />
+  );
+
+  const membershipLinks = (
+    <>
+      {hasFlocks && (
+        <Link asChild textDecoration="none">
+          <RouterLink to={getFlocksPath()}>
+            <FormattedMessage id="flocks_title" defaultMessage="Flocks" />
+          </RouterLink>
+        </Link>
+      )}
+      {hasCountryChallenges && (
+        <Link asChild textDecoration="none">
+          <RouterLink to={getCountryChallengesPath()}>
+            <FormattedMessage id="country_challenges" defaultMessage="Country challenges" />
+          </RouterLink>
+        </Link>
+      )}
+    </>
   );
 
   if (!isAuthenticated) {
@@ -88,6 +90,7 @@ export const UserMenu = ({ onOpenLoginModal }: UserMenuProps) => {
         </Text>
         {languageToggle}
         <Separator />
+        {membershipLinks}
         <Button
           variant="ghost"
           justifyContent="flex-start"
@@ -142,7 +145,7 @@ export const UserMenu = ({ onOpenLoginModal }: UserMenuProps) => {
       
       {languageToggle}
       <Separator />
-      
+      {membershipLinks}
       <Link href="/my-games" textDecoration="none">
         <FormattedMessage id="my_games" defaultMessage="My Games" />
       </Link>
@@ -193,4 +196,3 @@ export const UserMenu = ({ onOpenLoginModal }: UserMenuProps) => {
 };
 
 export default UserMenu;
-

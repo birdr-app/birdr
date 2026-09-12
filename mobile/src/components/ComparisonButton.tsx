@@ -30,8 +30,9 @@ export function ComparisonButton({
           setOpen(true);
         }}
         variant="compare"
+        badge={t('beta')}
         testID="comparison.open"
-        accessibilityLabel={t('view_comparison')}
+        accessibilityLabel={`${t('view_comparison')} (${t('beta')})`}
       />
       <ComparisonModal
         visible={open}

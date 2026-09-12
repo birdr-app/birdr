@@ -101,6 +101,7 @@ def contribution_snapshot(user) -> dict:
 
     from compare.models import CommunityComparison
     from jizz.marketing.html import html_plain_text
+    from jizz.marketing.i18n import localize_path
     from jizz.marketing.slugs import compare_pair_slug
     from media.models import MediaReview
 
@@ -127,7 +128,7 @@ def contribution_snapshot(user) -> dict:
             {
                 'left': low.name,
                 'right': high.name,
-                'url': reverse('marketing-compare', kwargs={'pair': pair}),
+                'url': localize_path(reverse('marketing-compare', kwargs={'pair': pair})),
                 'snippet': snippet,
                 'updated': date_format(row.updated, 'j M Y'),
             }

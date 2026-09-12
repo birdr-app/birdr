@@ -813,6 +813,7 @@ class FlockApiTests(TestCase):
         self.assertContains(page, '/images/birdr-leaderboard.png')
         self.assertContains(page, '#8b6419')  # Birdr primary.500
         self.assertContains(page, '/join/flock/')
+        self.assertNotContains(page, 'Weekly progress')
 
         missing = anon.get('/flocks/c/not-a-real-token/')
         self.assertEqual(missing.status_code, 404)
@@ -852,6 +853,180 @@ class FlockApiTests(TestCase):
         )
         page2 = anon.get(f'/flocks/c/{public_token}/')
         self.assertContains(page2, f'17/{CLUB_MIX_LENGTH}')
+
+    def test_public_challenge_share_page_show_all_highscores(self):
+        flock_data = self._create_flock()
+        slug = flock_data['slug']
+        with patch(
+            'jizz.flock_views.generate_club_mix_snapshot',
+            return_value=_manual_snapshot(self.species),
+        ):
+            _auth(self.client, self.admin)
+            ch = self.client.post(
+                f'/api/flocks/{slug}/challenges/',
+                {'title': 'Week Share'},
+                format='json',
+            )
+        self.assertEqual(ch.status_code, status.HTTP_201_CREATED, ch.data)
+        public_token = ch.data['public_token']
+        challenge = FlockChallenge.objects.get(pk=ch.data['id'])
+        names = [
+            'Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot',
+        ]
+        for i, name in enumerate(names):
+            user = self.admin if i == 0 else User.objects.create_user(f'share{i}', password='x')
+            user.first_name = name
+            user.save(update_fields=['first_name'])
+            player, _ = Player.objects.get_or_create(
+                user=user,
+                defaults={'name': name, 'language': 'en'},
+            )
+            game = Game.objects.create(
+                country=self.country,
+                level='advanced',
+                length=CLUB_MIX_LENGTH,
+                media='images',
+                rarity=Game.RARIT_REGULAR,
+                host=player,
+                game_type=Game.GAME_TYPE_FLOCK_CHALLENGE,
+            )
+            FlockChallengeAttempt.objects.create(
+                challenge=challenge,
+                user=user,
+                player=player,
+                game=game,
+                is_ranked=True,
+                is_practice=False,
+                correct_count=20 - i,
+                birdr_score=100 - i,
+                completed_at=timezone.now(),
+                result_token=f'share-all-token-{i:02d}-xxxx',
+            )
+
+        anon = Client()
+        page = anon.get(f'/flocks/c/{public_token}/')
+        self.assertEqual(page.status_code, 200)
+        self.assertContains(page, '6 players')
+        self.assertContains(page, 'Echo')
+        self.assertNotContains(page, 'Foxtrot')
+        self.assertContains(page, 'Show all')
+        self.assertContains(page, '?all=1')
+
+        full = anon.get(f'/flocks/c/{public_token}/?all=1')
+        self.assertEqual(full.status_code, 200)
+        self.assertContains(full, 'Foxtrot')
+        self.assertContains(full, '#6')
+        self.assertContains(full, 'Show top 5')
+        self.assertNotContains(full, 'Show all')
+
+    def test_public_challenge_history_graph_after_two_weeks(self):
+        flock_data = self._create_flock()
+        slug = flock_data['slug']
+
+        def start_challenge(title):
+            with patch(
+                'jizz.flock_views.generate_club_mix_snapshot',
+                return_value=_manual_snapshot(self.species),
+            ):
+                _auth(self.client, self.admin)
+                return self.client.post(
+                    f'/api/flocks/{slug}/challenges/',
+                    {'title': title},
+                    format='json',
+                )
+
+        def add_score(challenge, user, first_name, correct, token):
+            user.first_name = first_name
+            user.save(update_fields=['first_name'])
+            player, _ = Player.objects.get_or_create(
+                user=user,
+                defaults={'name': first_name, 'language': 'en'},
+            )
+            game = Game.objects.create(
+                country=self.country,
+                level='advanced',
+                length=CLUB_MIX_LENGTH,
+                media='images',
+                rarity=Game.RARIT_REGULAR,
+                host=player,
+                game_type=Game.GAME_TYPE_FLOCK_CHALLENGE,
+            )
+            FlockChallengeAttempt.objects.create(
+                challenge=challenge,
+                user=user,
+                player=player,
+                game=game,
+                is_ranked=True,
+                is_practice=False,
+                correct_count=correct,
+                birdr_score=correct * 10,
+                completed_at=timezone.now(),
+                result_token=token,
+            )
+
+        ch1 = start_challenge('Week 1')
+        self.assertEqual(ch1.status_code, status.HTTP_201_CREATED, ch1.data)
+        first = FlockChallenge.objects.get(pk=ch1.data['id'])
+        first.starts_at = timezone.now() - timedelta(days=14)
+        first.ends_at = timezone.now() - timedelta(hours=1)
+        first.status = FlockChallenge.STATUS_ENDED
+        first.save(update_fields=['starts_at', 'ends_at', 'status'])
+        add_score(first, self.admin, 'Ada', 20, 'hist-w1-ada-tokenxxxx')
+        add_score(first, self.member, 'Ben', 18, 'hist-w1-ben-tokenxxxx')
+
+        ch2 = start_challenge('Week 2')
+        self.assertEqual(ch2.status_code, status.HTTP_201_CREATED, ch2.data)
+        second = FlockChallenge.objects.get(pk=ch2.data['id'])
+        add_score(second, self.admin, 'Ada', 22, 'hist-w2-ada-tokenxxxx')
+        add_score(second, self.member, 'Ben', 19, 'hist-w2-ben-tokenxxxx')
+        public_token = ch2.data['public_token']
+
+        _auth(self.client, self.admin)
+        detail = self.client.get(f'/api/flocks/{slug}/')
+        self.assertEqual(detail.status_code, 200)
+        self.assertEqual(detail.data['challenge_count'], 2)
+        self.assertEqual(detail.data['history_path'], f'/flocks/c/{public_token}/history/')
+
+        anon = Client()
+        share = anon.get(f'/flocks/c/{public_token}/')
+        self.assertContains(share, 'Weekly progress')
+        self.assertContains(share, 'history/')
+
+        missing = anon.get('/flocks/c/not-a-real-token/history/')
+        self.assertEqual(missing.status_code, 404)
+
+        page = anon.get(f'/flocks/c/{public_token}/history/')
+        self.assertEqual(page.status_code, 200)
+        self.assertContains(page, 'Amsterdam Birders')
+        self.assertContains(page, 'progress-chart')
+        self.assertContains(page, 'Correct answers')
+        self.assertContains(page, 'Rank')
+        self.assertContains(page, 'Ada')
+        self.assertContains(page, 'Ben')
+        self.assertContains(page, 'flock-progress-data')
+        self.assertContains(page, '"correct": [20, 22]')
+        self.assertContains(page, '"correct": [18, 19]')
+        self.assertContains(page, '"cumulative": [20, 42]')
+        self.assertContains(page, '"cumulative": [18, 37]')
+        self.assertContains(page, 'Cumulative correct answers')
+        self.assertContains(page, 'cumulative-chart')
+        self.assertContains(page, '"rank": [1, 1]')
+        self.assertContains(page, '"rank": [2, 2]')
+
+        _auth(self.client, self.admin)
+        api = self.client.get(f'/api/flocks/{slug}/progress/')
+        self.assertEqual(api.status_code, 200)
+        self.assertEqual(api.data['challenge_count'], 2)
+        self.assertEqual(api.data['flock_name'], 'Amsterdam Birders')
+        names = {row['display_name'] for row in api.data['players']}
+        self.assertEqual(names, {'Ada', 'Ben'})
+        ada = next(row for row in api.data['players'] if row['display_name'] == 'Ada')
+        self.assertEqual(ada['correct'], [20, 22])
+        self.assertEqual(ada['cumulative'], [20, 42])
+
+        _auth(self.client, self.outsider)
+        denied = self.client.get(f'/api/flocks/{slug}/progress/')
+        self.assertEqual(denied.status_code, status.HTTP_403_FORBIDDEN)
 
     def test_flock_challenge_24h_reminder_skips_completed_members(self):
         from django.core.management import call_command

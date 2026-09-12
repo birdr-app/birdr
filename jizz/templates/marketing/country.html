@@ -1,88 +1,86 @@
 {% extends "marketing/base.html" %}
 {% block content %}
 <section class="hero">
-  <h1>Birds of {{ country.name }}</h1>
+  <h1>{% mt "Birds of {name}" name=country_name %}</h1>
   <p class="lead">
-    Learn to identify the birds of {{ country.name }} yourself.
-    The Birdr list has {{ species_count }} species—photo quizzes and a Country Challenge
-    take you from distinctive beginners to harder lookalikes.
+    {% mt "Learn to identify the birds of {name} yourself. The Birdr list has {count} species—photo quizzes and a Country Challenge take you from distinctive beginners to harder lookalikes." name=country_name count=species_count %}
   </p>
   <div class="cta-row">
-    <a class="btn" href="{{ quiz_href }}">Start a quiz</a>
-    <a class="btn secondary" href="{{ challenge_href }}">Country Challenge</a>
+    <a class="btn" href="{{ quiz_href }}">{% mt "Start a quiz" %}</a>
+    <a class="btn secondary" href="{{ challenge_href }}">{% mt "Country Challenge" %}</a>
   </div>
-  <p>Best on the <a href="{{ home_url }}#get-the-app">iPhone and Android apps</a>.</p>
+  <p>{% mt "Best on the" %} <a href="{{ home_url }}#get-the-app">{% mt "iPhone and Android apps" %}</a>.</p>
 </section>
 <section>
   <p>
-    A one-off quiz is a short session on this country’s list. A Country Challenge is
-    structured practice with levels, so you keep meeting new birds instead of repeating
-    only the easy ones.
+    {% mt "A one-off quiz is a short session on this country’s list. A Country Challenge is structured practice with levels, so you keep meeting new birds instead of repeating only the easy ones." %}
   </p>
   <p>
-    <a href="/site/bird-quiz-by-country/">More country quizzes</a> ·
-    <a href="/play">Open Birdr</a>
+    <a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "More country quizzes" %}</a> ·
+    <a href="/play">{% mt "Open Birdr" %}</a>
   </p>
 </section>
 {% if show_games or show_highscores or show_challenge or show_missed or show_pairs %}
 <section>
-  <h2>How people play in {{ country.name }}</h2>
+  <h2>{% mt "How people play in {name}" name=country_name %}</h2>
   {% if show_games %}
   <div class="card" style="margin-bottom: 16px;">
-    <p class="kicker">Quizzes played</p>
+    <p class="kicker">{% mt "Quizzes played" %}</p>
     <p class="stat-figure">{{ games_played }}</p>
     <p>
       {% if players_played == 1 %}
-      1 player has taken a Birdr quiz on the {{ country.name }} list.
+      {% mt "1 player has taken a Birdr quiz on the {name} list." name=country_name %}
       {% else %}
-      {{ players_played }} players have taken a Birdr quiz on the {{ country.name }} list.
+      {% mt "{count} players have taken a Birdr quiz on the {name} list." count=players_played name=country_name %}
       {% endif %}
     </p>
-    <p class="more-link"><a href="{{ games_href }}">Games played over time</a></p>
+    <p class="more-link"><a href="{{ games_href }}">{% mt "Games played over time" %}</a></p>
   </div>
   {% endif %}
   {% if show_highscores or show_challenge %}
   <div class="stats-grid">
     {% if show_challenge %}
     <div class="card card-alt">
-      <h3>Country Challenge</h3>
+      <h3>{% mt "Country Challenge" %}</h3>
       <table class="stats">
         <thead>
           <tr>
             <th>#</th>
-            <th>Player</th>
-            <th>Level</th>
+            <th>{% mt "Player" %}</th>
+            <th>{% mt "Level" %}</th>
           </tr>
         </thead>
         <tbody>
           {% for row in challenge_rows %}
           <tr>
-            <td>{{ forloop.counter }}</td>
+            <td>{% ifchanged row.rank %}{{ row.rank }}{% endifchanged %}</td>
             <td>{{ row.player_name }}</td>
             <td>
+              {% ifchanged row.rank %}
               <div class="level-cell">
                 {% if row.level_icon_url %}
                 <img class="level-icon" src="{{ row.level_icon_url }}" alt="" width="32" height="32" loading="lazy">
                 {% endif %}
                 <span>{{ row.level_title }}{% if row.step_label %} <span class="latin">{{ row.step_label }}{% if row.step_total %} / {{ row.step_total }}{% endif %}</span>{% endif %}</span>
               </div>
+              {% endifchanged %}
             </td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
-      <p class="more-link"><a href="{{ challenge_leaderboard_href }}">Full Country Challenge leaderboard</a></p>
+      <p class="more-link"><a href="{{ challenge_leaderboard_href }}">{% mt "Full Country Challenge leaderboard" %}</a></p>
     </div>
     {% endif %}
     {% if show_highscores %}
     <div class="card card-alt">
-      <h3>High scores</h3>
+      <h3>{% mt "High scores" %}</h3>
       <table class="stats">
         <thead>
           <tr>
             <th>#</th>
-            <th>Player</th>
-            <th class="num">Score</th>
+            <th>{% mt "Player" %}</th>
+            <th class="num">{% mt "Score" %}</th>
           </tr>
         </thead>
         <tbody>
@@ -95,7 +93,7 @@
           {% endfor %}
         </tbody>
       </table>
-      <p class="more-link"><a href="{{ highscores_href }}">Full high score list</a></p>
+      <p class="more-link"><a href="{{ highscores_href }}">{% mt "Full high score list" %}</a></p>
     </div>
     {% endif %}
   </div>
@@ -104,20 +102,20 @@
   <div class="stats-grid">
     {% if show_missed %}
     <div class="card">
-      <h3>Most missed birds</h3>
-      <p>From quizzes on the {{ country.name }} list.</p>
+      <h3>{% mt "Most missed birds" %}</h3>
+      <p>{% mt "From quizzes on the {name} list." name=country_name %}</p>
       <table class="stats">
         <thead>
           <tr>
-            <th>Species</th>
-            <th class="num">Misses</th>
+            <th>{% mt "Species" %}</th>
+            <th class="num">{% mt "Misses" %}</th>
           </tr>
         </thead>
         <tbody>
           {% for row in missed_birds %}
           <tr>
             <td>
-              {% if row.url %}<a href="{{ row.url }}">{{ row.name }}</a>{% else %}{{ row.name }}{% endif %}
+              {% if row.url %}<a href="{{ row.url|mpath }}">{{ row.name }}</a>{% else %}{{ row.name }}{% endif %}
               {% if row.name_latin %}<span class="latin">{{ row.name_latin }}</span>{% endif %}
             </td>
             <td class="num">{{ row.wrongly_answered }}{% if row.error_rate is not None %} <span class="latin">{{ row.error_rate|floatformat:0 }}%</span>{% endif %}</td>
@@ -125,32 +123,32 @@
           {% endfor %}
         </tbody>
       </table>
-      <p class="more-link"><a href="{{ missed_href }}">All missed species</a></p>
+      <p class="more-link"><a href="{{ missed_href }}">{% mt "All missed species" %}</a></p>
     </div>
     {% endif %}
     {% if show_pairs %}
     <div class="card">
-      <h3>Confusing pairs</h3>
-      <p>From quizzes on the {{ country.name }} list.</p>
+      <h3>{% mt "Confusing pairs" %}</h3>
+      <p>{% mt "From quizzes on the {name} list." name=country_name %}</p>
       <table class="stats">
         <thead>
           <tr>
-            <th>Pair</th>
-            <th class="num">Mix-ups</th>
+            <th>{% mt "Pair" %}</th>
+            <th class="num">{% mt "Mix-ups" %}</th>
           </tr>
         </thead>
         <tbody>
           {% for row in confusion_pairs %}
           <tr>
             <td>
-              {% if row.url %}<a href="{{ row.url }}">{{ row.low_name }} vs {{ row.high_name }}</a>{% else %}{{ row.low_name }} vs {{ row.high_name }}{% endif %}
+              {% if row.url %}<a href="{{ row.url|mpath }}">{{ row.low_name }} {% mt "vs" %} {{ row.high_name }}</a>{% else %}{{ row.low_name }} {% mt "vs" %} {{ row.high_name }}{% endif %}
             </td>
             <td class="num">{{ row.total_wrong }}</td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
-      <p class="more-link"><a href="{{ pairs_href }}">All confusing pairs</a></p>
+      <p class="more-link"><a href="{{ pairs_href }}">{% mt "All confusing pairs" %}</a></p>
     </div>
     {% endif %}
   </div>

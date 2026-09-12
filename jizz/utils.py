@@ -219,14 +219,47 @@ def sync_languages():
 def sync_regions(country, code):
     data = requests.get(
         f'https://{SERVER_NAME}/{API_VERSION}/product/spplist/{code}',
-        headers={'x-ebirdapitoken': settings.EBIRD_API_TOKEN}
+        headers={'X-eBirdApiToken': settings.EBIRD_API_TOKEN},
+        timeout=90,
     )
-    print('Got data')
+    data.raise_for_status()
     codes = data.json()
+    if not isinstance(codes, list):
+        raise ValueError(f'eBird spplist for {code} did not return a species list')
 
-    print('Going loopy')
-    ids = Species.objects.filter(code__in=codes).values_list('id', flat=True)
-    specs = [CountrySpecies(country_id=country.code, species_id=id) for id in ids]
+    ids = list(Species.objects.filter(code__in=codes).values_list('id', flat=True))
+    parent_attrs = {}
+    parent_id = getattr(country, 'parent_id', None)
+    if parent_id and ids:
+        parent_attrs = {
+            species_id: (status, frequency, frequency_pct)
+            for species_id, status, frequency, frequency_pct in CountrySpecies.objects.filter(
+                country_id=parent_id,
+                species_id__in=ids,
+            ).values_list('species_id', 'status', 'frequency', 'frequency_pct')
+        }
+    specs = []
+    for species_id in ids:
+        parent_row = parent_attrs.get(species_id)
+        status = 'native'
+        frequency = None
+        frequency_pct = None
+        if parent_row:
+            parent_status, parent_frequency, parent_frequency_pct = parent_row
+            if parent_status and parent_status != 'unknown':
+                status = parent_status
+            if parent_frequency:
+                frequency = parent_frequency
+                frequency_pct = parent_frequency_pct
+        specs.append(
+            CountrySpecies(
+                country_id=country.code,
+                species_id=species_id,
+                status=status,
+                frequency=frequency,
+                frequency_pct=frequency_pct,
+            )
+        )
     print('Got some work to do ', len(specs))
     CountrySpecies.objects.bulk_create(specs, ignore_conflicts=True)
 

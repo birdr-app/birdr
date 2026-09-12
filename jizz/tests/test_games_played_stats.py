@@ -120,7 +120,8 @@ class GamesPlayedStatsTests(TestCase):
         self.assertEqual(world_map_country_code("US-EAST"), "US")
         self.assertEqual(world_map_country_code("NL-NH"), "NL")
         self.assertEqual(world_map_country_code("DE"), "DE")
-        self.assertIsNone(world_map_country_code("US-CA"))
+        self.assertEqual(world_map_country_code("US-CA"), "US")
+        self.assertEqual(world_map_country_code("AR-PAMPAS"), "AR")
 
     def test_payload_includes_map_style(self):
         payload = games_played_payload(date(2026, 4, 1), date(2026, 4, 30), granularity="month")

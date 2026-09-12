@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { BsBoxArrowRight } from "react-icons/bs";
 import { FormattedMessage } from "react-intl";
+import { playVideoSources } from "../utils/play-video-url";
 import { QuestionWithAnswer } from "../api/services/games.service";
 
 type QuestionMediaModalProps = {
@@ -116,10 +117,12 @@ export const QuestionMediaModal = ({ question, gameLanguage, gameMedia, isOpen, 
                         <Box key={key}>
                           <video
                             controls
+                            playsInline
                             style={{ width: '100%', maxWidth: '600px', borderRadius: '8px' }}
-                            src={video.url}
                           >
-                            Your browser does not support the video tag.
+                            {playVideoSources(video.url).map((source) => (
+                              <source key={source.src} src={source.src} type={source.type} />
+                            ))}
                           </video>
                           {video.link && (
                             <Link href={video.link} target="_blank" rel="noopener noreferrer" fontSize="sm" color="gray.600">

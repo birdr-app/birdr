@@ -49,20 +49,32 @@ class CompareService {
    * Get or generate a comparison between two species
    * Will scrape species if traits don't exist
    */
-  async getComparison(species1Id: number, species2Id: number): Promise<SpeciesComparison> {
+  async getComparison(
+    species1Id: number,
+    species2Id: number,
+    language?: string,
+  ): Promise<SpeciesComparison> {
     try {
+      const params = new URLSearchParams();
+      if (language) {
+        params.set('app_language', language);
+        params.set('language', language);
+      }
+      const query = params.toString();
+      const headers: Record<string, string> = {
+        'Content-Type': 'application/json',
+      };
+      if (language) {
+        headers['Accept-Language'] = language;
+      }
       const response = await axios.post<SpeciesComparison>(
-        `${this.baseURL}/api/compare/request/`,
+        `${this.baseURL}/api/compare/request/${query ? `?${query}` : ''}`,
         {
           comparison_type: 'species',
           species_1_id: species1Id,
           species_2_id: species2Id,
         },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
+        { headers },
       );
       return response.data;
     } catch (error: any) {

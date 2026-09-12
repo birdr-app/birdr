@@ -5,12 +5,17 @@ import {
   TouchableOpacity,
   StyleSheet,
   ActivityIndicator,
+  Linking,
 } from 'react-native';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import { WebView } from 'react-native-webview';
 import { loadHelpPage, PageDetail } from '../api/pages';
+import { useTranslation } from '../i18n/TranslationContext';
 import { quillDeltaToHtml, isQuillContent } from '../utils/quillToHtml';
 import { colors } from '../theme';
+
+const BIRDR_GITHUB_REPO = 'https://github.com/birdr-app/birdr';
+const LEGACY_GITHUB_REPO = /https?:\/\/github\.com\/gannetson\/birdr/g;
 
 type HelpDetailScreenProps = {
   slug: string;
@@ -18,6 +23,8 @@ type HelpDetailScreenProps = {
 };
 
 export function HelpDetailScreen({ slug, onBack }: HelpDetailScreenProps) {
+  const { t } = useTranslation();
+  const navigation = useNavigation();
   const [page, setPage] = useState<PageDetail | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -28,6 +35,12 @@ export function HelpDetailScreen({ slug, onBack }: HelpDetailScreenProps) {
       .catch((e) => setError(e.message ?? 'Page not found'))
       .finally(() => setLoading(false));
   }, [slug]);
+
+  useEffect(() => {
+    if (page?.title) {
+      navigation.setOptions({ title: page.title });
+    }
+  }, [navigation, page?.title]);
 
   if (loading) {
     return (
@@ -42,7 +55,7 @@ export function HelpDetailScreen({ slug, onBack }: HelpDetailScreenProps) {
       <View style={styles.centered}>
         <Text style={styles.errorText}>{error}</Text>
         <TouchableOpacity style={styles.backButton} onPress={onBack}>
-          <Text style={styles.backButtonText}>← Help overview</Text>
+          <Text style={styles.backButtonText}>← {t('back_to_community')}</Text>
         </TouchableOpacity>
       </View>
     );
@@ -102,17 +115,26 @@ export function HelpDetailScreen({ slug, onBack }: HelpDetailScreenProps) {
         img { max-width: 100%; height: auto; border: 1px dashed #cbd5e0; border-radius: 8px; padding: 8px; margin: 12px 0; display: block; background: #f7fafc; }
       </style>
     </head>
-    <body>${htmlContent}</body>
+    <body>${htmlContent.replace(LEGACY_GITHUB_REPO, BIRDR_GITHUB_REPO)}</body>
     </html>
   `;
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={onBack} style={styles.backLink} testID="helpDetail.back" accessibilityLabel="Back to Help overview">
-          <Text style={styles.backLinkText}>← Help overview</Text>
+        <TouchableOpacity onPress={onBack} style={styles.backLink} testID="helpDetail.back" accessibilityLabel={t('back_to_community')}>
+          <Text style={styles.backLinkText}>← {t('back_to_community')}</Text>
         </TouchableOpacity>
         <Text style={styles.title}>{page!.title}</Text>
+        {slug === 'about' ? (
+          <TouchableOpacity
+            onPress={() => void Linking.openURL(BIRDR_GITHUB_REPO)}
+            accessibilityRole="link"
+            accessibilityLabel={BIRDR_GITHUB_REPO}
+          >
+            <Text style={styles.githubLink}>{BIRDR_GITHUB_REPO}</Text>
+          </TouchableOpacity>
+        ) : null}
       </View>
       <WebView
         originWhitelist={['*']}
@@ -120,6 +142,14 @@ export function HelpDetailScreen({ slug, onBack }: HelpDetailScreenProps) {
         style={styles.webView}
         scrollEnabled={true}
         showsVerticalScrollIndicator={true}
+        onShouldStartLoadWithRequest={(request) => {
+          const url = request.url ?? '';
+          if (url.startsWith('http://') || url.startsWith('https://')) {
+            Linking.openURL(url).catch(() => {});
+            return false;
+          }
+          return true;
+        }}
       />
     </View>
   );
@@ -135,6 +165,7 @@ const styles = StyleSheet.create({
   backLink: { marginBottom: 8 },
   backLinkText: { fontSize: 14, color: colors.primary[500] },
   title: { fontSize: 22, fontWeight: '600', color: colors.primary[800] },
+  githubLink: { fontSize: 15, color: colors.primary[500], marginTop: 8, textDecorationLine: 'underline' },
   webView: { flex: 1, backgroundColor: 'transparent' },
 });
 

@@ -1,10 +1,44 @@
 """
 Tests for jizz middleware (e.g. SocialAuthRedirectUriMiddleware).
 """
-from django.test import TestCase, RequestFactory
+import gzip
+
+from django.conf import settings
 from django.http import HttpResponse
+from django.test import Client, RequestFactory, SimpleTestCase, TestCase, override_settings
+from django.urls import path
 
 from jizz.middleware import SocialAuthRedirectUriMiddleware
+
+
+def _created_json_view(request):
+    return HttpResponse(
+        b'{"ok":true,"pad":"' + b'a' * 400 + b'"}',
+        status=201,
+        content_type='application/json',
+    )
+
+
+urlpatterns = [
+    path('gzip-201/', _created_json_view),
+]
+
+
+class GZipMiddlewareTestCase(SimpleTestCase):
+    """nginx gzip skips 201; Django GZipMiddleware must wrap the stack to compress it."""
+
+    def test_gzip_middleware_is_outermost(self):
+        self.assertEqual(settings.MIDDLEWARE[0], 'django.middleware.gzip.GZipMiddleware')
+
+    @override_settings(ROOT_URLCONF='jizz.tests.test_middleware')
+    def test_compresses_201_created(self):
+        response = Client().get('/gzip-201/', HTTP_ACCEPT_ENCODING='gzip')
+        self.assertEqual(response.status_code, 201)
+        self.assertEqual(response.get('Content-Encoding'), 'gzip')
+        self.assertEqual(
+            gzip.decompress(response.content),
+            b'{"ok":true,"pad":"' + b'a' * 400 + b'"}',
+        )
 
 
 class SocialAuthRedirectUriMiddlewareTestCase(TestCase):

@@ -3,45 +3,12 @@ import {Flex, Button, HStack, Avatar, Text} from "@chakra-ui/react";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {FaUserCircle} from "react-icons/fa";
 import {useMenu} from "./menu-context";
-import {useState, useEffect} from "react";
-import {authService} from "../../../api/services/auth.service";
-import {profileService, UserProfile, getAvatarUrl} from "../../../api/services/profile.service";
+import {useAuthProfile} from "../../../core/auth-profile-context";
+import {getAvatarUrl} from "../../../api/services/profile.service";
 
 const PageHeader = ({children}: {children: ReactElement | ReactNode[]} ) => {
   const {onOpenMenu, onOpenUserMenu} = useMenu();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [profile, setProfile] = useState<UserProfile | null>(null);
-  const [userEmail, setUserEmail] = useState<string | null>(null);
-
-  useEffect(() => {
-    const checkAuth = async () => {
-      const token = authService.getAccessToken();
-      setIsAuthenticated(!!token);
-      
-      if (token) {
-        try {
-          const payload = JSON.parse(atob(token.split('.')[1]));
-          setUserEmail(payload.email || payload.username || null);
-          
-          try {
-            const profileData = await profileService.getProfile();
-            setProfile(profileData);
-          } catch (e) {
-            setProfile(null);
-          }
-        } catch (e) {
-          setUserEmail(null);
-          setProfile(null);
-        }
-      } else {
-        setUserEmail(null);
-        setProfile(null);
-      }
-    };
-    checkAuth();
-    const interval = setInterval(checkAuth, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  const {isAuthenticated, profile, userEmail} = useAuthProfile();
 
   return (
     <Flex
@@ -97,4 +64,3 @@ const PageHeader = ({children}: {children: ReactElement | ReactNode[]} ) => {
 };
 
 export default PageHeader;
-

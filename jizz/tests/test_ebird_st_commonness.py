@@ -15,6 +15,7 @@ from jizz.ebird_st_commonness import (
     science_downloads_page_url,
     species_codes_for_selected_countries,
 )
+from jizz.st_subnational_regions import app_code_for_st_region
 
 
 def _nld_rows(*rows: dict) -> pd.DataFrame:
@@ -297,6 +298,10 @@ class CountriesInRegionalStatsTests(SimpleTestCase):
         self.assertEqual(app_country_for_st_region("USA"), "US")
         self.assertEqual(expand_region_codes("US"), ["US", "USA"])
 
+    def test_maps_usa_state_prefix(self):
+        self.assertEqual(app_country_for_st_region("USA-MA"), "US-MA")
+        self.assertEqual(app_country_for_st_region("CAN-ON"), "CA-ON")
+
     def test_keeps_us_state_codes(self):
         df = pd.DataFrame(
             [
@@ -305,6 +310,20 @@ class CountriesInRegionalStatsTests(SimpleTestCase):
             ]
         )
         self.assertEqual(countries_in_regional_stats(df, ["US-CA"]), ["US-CA"])
+
+    def test_maps_china_state_row_to_south_aggregate(self):
+        df = pd.DataFrame(
+            [
+                {
+                    "region_code": "CHN-1178",
+                    "region_type": "state",
+                    "region_name": "Fujian",
+                    "abundance_mean": 1.0,
+                }
+            ]
+        )
+        self.assertEqual(app_code_for_st_region("CHN-1178", "Fujian"), "CN-35")
+        self.assertEqual(countries_in_regional_stats(df, ["CN-SOUTH"]), ["CN-SOUTH"])
 
 
 class ParseSpeciesCommonnessSubnationalTests(SimpleTestCase):
@@ -322,6 +341,25 @@ class ParseSpeciesCommonnessSubnationalTests(SimpleTestCase):
             ]
         )
         parsed = parse_species_commonness(df, "US-CA")
+        self.assertIsNotNone(parsed)
+        assert parsed is not None
+        self.assertAlmostEqual(parsed["abundance_mean_max"], 1.2)
+
+    def test_parses_st_state_row_usa_ma(self):
+        df = pd.DataFrame(
+            [
+                {
+                    "region_code": "USA-MA",
+                    "region_type": "state",
+                    "region_name": "Massachusetts",
+                    "season": "breeding",
+                    "abundance_mean": 1.2,
+                    "range_occupied_percent": 0.3,
+                    "range_days_occupation": 120,
+                }
+            ]
+        )
+        parsed = parse_species_commonness(df, "US-MA")
         self.assertIsNotNone(parsed)
         assert parsed is not None
         self.assertAlmostEqual(parsed["abundance_mean_max"], 1.2)

@@ -18,7 +18,7 @@ _MISTAKE_STATS_CACHE_TTL = 6 * 60 * 60
 
 def _mistake_cache_key(kind: str, country_code: str | None, limit: int) -> str:
     scope = (country_code or 'all').lower()
-    return f'marketing-{kind}:{scope}:{limit}'
+    return f'marketing-v2-{kind}:{scope}:{limit}'
 
 
 def _hiscore_qs(country):
@@ -26,6 +26,8 @@ def _hiscore_qs(country):
         PlayerScore.objects.filter(game__country=country)
         .filter(Q(game__tax_order='') | Q(game__tax_order__isnull=True))
         .filter(Q(game__tax_family='') | Q(game__tax_family__isnull=True))
+        .filter(Q(game__species_group='') | Q(game__species_group__isnull=True))
+        .filter(Q(game__season='') | Q(game__season__isnull=True))
         .exclude(
             game__game_type__in=[
                 Game.GAME_TYPE_PAIR_PRACTICE,
@@ -72,6 +74,7 @@ def missed_birds(country_code: str | None = None, *, limit: int = TOP_N) -> list
         slug = slugs.get(row['species_id']) or ''
         out.append(
             {
+                'species_id': row['species_id'],
                 'name': row['name'],
                 'name_latin': row['name_latin'],
                 'wrongly_answered': row['wrongly_answered'],
@@ -102,6 +105,8 @@ def confusion_pairs(country_code: str | None = None, *, limit: int = TOP_N) -> l
             compare_url = f'/site/compare/{compare_pair_slug(slug_a, slug_b)}/'
         out.append(
             {
+                'low_id': row['low_id'],
+                'high_id': row['high_id'],
                 'low_name': row['low_name'],
                 'high_name': row['high_name'],
                 'total_wrong': row['total_wrong'],

@@ -1,79 +1,78 @@
 {% extends "marketing/base.html" %}
 {% block content %}
 <section class="hero">
-  <p class="kicker">Species</p>
-  <h1>Find a bird</h1>
+  <p class="kicker">{% mt "Species" %}</p>
+  <h1>{% mt "Find a bird" %}</h1>
   <p class="lead">
-    Search Birdr’s species pages, see which birds people miss most in quizzes,
-    and open the lookalikes that are hardest to tell apart.
-    {% if species_count %}{{ species_count }} species have a public page.{% endif %}
+    {% mt "Search Birdr’s species pages, see which birds people miss most in quizzes, and open the lookalikes that are hardest to tell apart." %}
+    {% if species_count %}{% mt "{count} species have a public page." count=species_count %}{% endif %}
   </p>
-  <form class="search-form" method="get" action="/site/birds/" role="search">
-    <label class="search-label" for="species-q">Search by common or scientific name</label>
+  <form class="search-form" method="get" action="{{ '/site/birds/'|mpath }}" role="search">
+    <label class="search-label" for="species-q">{% mt "Search by common or scientific name" %}</label>
     <div class="search-row">
-      <input id="species-q" type="search" name="q" value="{{ query }}" placeholder="e.g. sparrowhawk or Accipiter nisus" autocomplete="off">
+      <input id="species-q" type="search" name="q" value="{{ query }}" placeholder="{% mt "e.g. sparrowhawk or Accipiter nisus" %}" autocomplete="off">
       {% if families %}
-      <select name="family" aria-label="Family">
-        <option value="">All families</option>
+      <select name="family" aria-label="{% mt "Family" %}">
+        <option value="">{% mt "All families" %}</option>
         {% for family in families %}
-        <option value="{{ family.name_latin }}"{% if family.name_latin == family_latin %} selected{% endif %}>{{ family.name_en }} ({{ family.species_n }})</option>
+        <option value="{{ family.name_latin }}"{% if family.name_latin == family_latin %} selected{% endif %}>{{ family.display_name }} ({{ family.species_n }})</option>
         {% endfor %}
       </select>
       {% endif %}
-      <button class="btn" type="submit">Search</button>
+      <button class="btn" type="submit">{% mt "Search" %}</button>
     </div>
   </form>
   {% if query_too_short %}
-  <p class="form-note">Type at least two letters to search.</p>
+  <p class="form-note">{% mt "Type at least two letters to search." %}</p>
   {% endif %}
 </section>
 
 {% if show_results %}
 <section>
   <h2>
-    {% if query and family_name %}Results for “{{ query }}” in {{ family_name }}
-    {% elif query %}Results for “{{ query }}”
+    {% if query and family_name %}{% mt "Results for “{query}” in {family}" query=query family=family_name %}
+    {% elif query %}{% mt "Results for “{query}”" query=query %}
     {% elif family_name %}{{ family_name }}
-    {% else %}Species{% endif %}
+    {% else %}{% mt "Species" %}{% endif %}
   </h2>
   {% if results %}
   <ul class="species-results">
     {% for species in results %}
     <li>
-      {% if species.slug %}<a href="/site/birds/{{ species.slug }}/">{{ species.name }}</a>{% else %}{{ species.name }}{% endif %}
+      {% if species.slug %}<a href="{{ '/site/birds/'|mpath }}{{ species.slug }}/">{{ species.display_name }}</a>{% else %}{{ species.display_name }}{% endif %}
       {% if species.name_latin %}<span class="latin">{{ species.name_latin }}</span>{% endif %}
     </li>
     {% endfor %}
   </ul>
   {% if results|length >= result_limit %}
-  <p class="form-note">Showing the first {{ result_limit }} matches. Narrow the search to see more.</p>
+  <p class="form-note">{% mt "Showing the first {n} matches. Narrow the search to see more." n=result_limit %}</p>
   {% endif %}
   {% else %}
-  <p>No matching species with a public page. Try another name, or browse the lists below.</p>
+  <p>{% mt "No matching species with a public page. Try another name, or browse the lists below." %}</p>
   {% endif %}
 </section>
 {% endif %}
 
 {% if show_missed or show_pairs %}
 <section>
-  <h2>From quizzes</h2>
+  <h2>{% mt "From quizzes" %}</h2>
   <div class="stats-grid">
     {% if show_missed %}
     <div class="card">
-      <h3>Most missed species</h3>
-      <p>Birds players pick by mistake most often.</p>
+      <h3>{% mt "Most missed species" %}</h3>
+      <p>{% mt "Birds players pick by mistake most often." %}</p>
       <table class="stats">
         <thead>
           <tr>
-            <th>Species</th>
-            <th class="num">Misses</th>
+            <th>{% mt "Species" %}</th>
+            <th class="num">{% mt "Misses" %}</th>
           </tr>
         </thead>
         <tbody>
           {% for row in missed_birds %}
           <tr>
             <td>
-              {% if row.url %}<a href="{{ row.url }}">{{ row.name }}</a>{% else %}{{ row.name }}{% endif %}
+              {% if row.url %}<a href="{{ row.url|mpath }}">{{ row.name }}</a>{% else %}{{ row.name }}{% endif %}
               {% if row.name_latin %}<span class="latin">{{ row.name_latin }}</span>{% endif %}
             </td>
             <td class="num">{{ row.wrongly_answered }}{% if row.error_rate is not None %} <span class="latin">{{ row.error_rate|floatformat:0 }}%</span>{% endif %}</td>
@@ -81,32 +80,32 @@
           {% endfor %}
         </tbody>
       </table>
-      <p class="more-link"><a href="{{ missed_href }}">All missed species</a></p>
+      <p class="more-link"><a href="{{ missed_href }}">{% mt "All missed species" %}</a></p>
     </div>
     {% endif %}
     {% if show_pairs %}
     <div class="card">
-      <h3>Confusing pairs</h3>
-      <p>Species most often mixed up with each other.</p>
+      <h3>{% mt "Confusing pairs" %}</h3>
+      <p>{% mt "Species most often mixed up with each other." %}</p>
       <table class="stats">
         <thead>
           <tr>
-            <th>Pair</th>
-            <th class="num">Mix-ups</th>
+            <th>{% mt "Pair" %}</th>
+            <th class="num">{% mt "Mix-ups" %}</th>
           </tr>
         </thead>
         <tbody>
           {% for row in confusion_pairs %}
           <tr>
             <td>
-              {% if row.url %}<a href="{{ row.url }}">{{ row.low_name }} vs {{ row.high_name }}</a>{% else %}{{ row.low_name }} vs {{ row.high_name }}{% endif %}
+              {% if row.url %}<a href="{{ row.url|mpath }}">{{ row.low_name }} {% mt "vs" %} {{ row.high_name }}</a>{% else %}{{ row.low_name }} {% mt "vs" %} {{ row.high_name }}{% endif %}
             </td>
             <td class="num">{{ row.total_wrong }}</td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
-      <p class="more-link"><a href="{{ pairs_href }}">All confusing pairs</a></p>
+      <p class="more-link"><a href="{{ pairs_href }}">{% mt "All confusing pairs" %}</a></p>
     </div>
     {% endif %}
   </div>
@@ -115,12 +114,12 @@
 
 {% if featured_comparisons %}
 <section>
-  <h2>How to tell them apart</h2>
-  <p>Short field-mark notes for pairs that birders mix up.</p>
+  <h2>{% mt "How to tell them apart" %}</h2>
+  <p>{% mt "Short field-mark notes for pairs that birders mix up." %}</p>
   <div class="grid">
     {% for row in featured_comparisons %}
     <article class="card">
-      <h3><a href="{{ row.url }}">{{ row.left_name }} vs {{ row.right_name }}</a></h3>
+      <h3><a href="{{ row.url|mpath }}">{{ row.left_name }} {% mt "vs" %} {{ row.right_name }}</a></h3>
       <p>{{ row.summary|truncatewords:28 }}</p>
     </article>
     {% endfor %}
@@ -130,21 +129,21 @@
 
 {% if countries %}
 <section>
-  <h2>Browse by country</h2>
-  <p>Open a country list, then quiz on the birds you will actually meet.</p>
+  <h2>{% mt "Browse by country" %}</h2>
+  <p>{% mt "Open a country list, then quiz on the birds you will actually meet." %}</p>
   <div class="country-pills">
     {% for c in countries %}
-    <a href="{{ c.url }}">{{ c.name }}</a>
+    <a href="{{ c.url|mpath }}">{{ c.name }}</a>
     {% endfor %}
   </div>
-  <p><a href="/site/bird-quiz-by-country/">All country quizzes</a></p>
+  <p><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "All country quizzes" %}</a></p>
 </section>
 {% endif %}
 
 <section>
   <div class="cta-row">
-    <a class="btn" href="{{ quiz_href }}">Start a quiz</a>
-    <a class="btn secondary" href="{{ tricky_href }}">Practise tricky birds</a>
+    <a class="btn" href="{{ quiz_href }}">{% mt "Start a quiz" %}</a>
+    <a class="btn secondary" href="{{ tricky_href }}">{% mt "Practise tricky birds" %}</a>
   </div>
 </section>
 {% endblock %}

@@ -140,6 +140,7 @@ export type CountryChallengeLeaderboardRow = {
   step_total: number;
   step_label: string;
   is_champion: boolean;
+  rank?: number;
   updated: string;
 };
 

@@ -102,8 +102,37 @@ class CountryChallengeLeaderboardTests(TestCase):
         self.assertEqual(rows[0]['player_name'], 'Ahead')
         self.assertEqual(rows[0]['level_title'], 'Fledgling')
         self.assertEqual(rows[0]['step_label'], 'Step 2')
+        self.assertEqual(rows[0]['rank'], 1)
         self.assertEqual(rows[1]['player_name'], 'Behind')
         self.assertEqual(rows[1]['step_label'], 'Step 1')
+        self.assertEqual(rows[1]['rank'], 2)
+
+    def test_same_score_shares_rank(self):
+        ann = Player.objects.create(name='Ann', language='en')
+        ben = Player.objects.create(name='Ben', language='en')
+        cara = Player.objects.create(name='Cara', language='en')
+        BirdrJourney.objects.create(
+            player=ann,
+            country=self.country_nl,
+            current_sequence=1,
+            current_step_sequence=0,
+        )
+        BirdrJourney.objects.create(
+            player=ben,
+            country=self.country_de,
+            current_sequence=1,
+            current_step_sequence=0,
+        )
+        BirdrJourney.objects.create(
+            player=cara,
+            country=self.country_nl,
+            current_sequence=0,
+            current_step_sequence=0,
+        )
+
+        rows = country_challenge_leaderboard(limit=10)
+        self.assertEqual([row['player_name'] for row in rows], ['Ann', 'Ben', 'Cara'])
+        self.assertEqual([row['rank'] for row in rows], [1, 1, 3])
 
     def test_champion_row(self):
         player = Player.objects.create(name='Winner', language='en')

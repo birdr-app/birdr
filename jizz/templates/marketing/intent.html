@@ -9,11 +9,11 @@
   </div>
   <p>
     <a class="btn" href="{{ cta_href }}">{{ cta_label }}</a>
-    <a class="web-link" href="/play">Play in the browser</a>
+    <a class="web-link" href="/play">{% mt "Play in the browser" %}</a>
   </p>
 </section>
 {% if screenshots %}
-<section class="screenshot-gallery" aria-label="App screenshots">
+<section class="screenshot-gallery" aria-label="{% mt "App screenshots" %}">
   <div class="screenshot-row">
     {% for shot in screenshots %}
     <figure class="hero-art hero-phone">
@@ -31,14 +31,13 @@
 </section>
 {% if levels %}
 <section>
-  <h2>Starting a quiz</h2>
+  <h2>{% mt "Starting a quiz" %}</h2>
   <p>
-    Every quiz has a level, plus a few other settings. Start with distinctive
-    birds, then work up to rare lookalikes and typing the name yourself.
+    {% mt "Every quiz has a level, plus a few other settings. Start with distinctive birds, then work up to rare lookalikes and typing the name yourself." %}
   </p>
   <div class="start-setup">
     <div>
-      <p class="start-setup-title">Levels</p>
+      <p class="start-setup-title">{% mt "Levels" %}</p>
       <div class="grid level-grid">
         {% for level in levels %}
         <article class="card">
@@ -50,7 +49,7 @@
     </div>
     {% if start_options %}
     <aside class="start-options">
-      <h3 class="start-setup-title">Other settings</h3>
+      <h3 class="start-setup-title">{% mt "Other settings" %}</h3>
       <dl>
         {% for option in start_options %}
         <dt>{{ option.name }}</dt>
@@ -73,25 +72,25 @@
 {% endif %}
 {% if show_missed or show_pairs %}
 <section>
-  <h2>Birds people mix up most</h2>
-  <p>These are the species and pairs with the most quiz mistakes. Open a page, then practise them until they stick.</p>
+  <h2>{% mt "Birds people mix up most" %}</h2>
+  <p>{% mt "These are the species and pairs with the most quiz mistakes. Open a page, then practise them until they stick." %}</p>
   <div class="stats-grid">
     {% if show_missed %}
     <div class="card">
-      <h3>Most missed species</h3>
-      <p>Birds players pick by mistake most often.</p>
+      <h3>{% mt "Most missed species" %}</h3>
+      <p>{% mt "Birds players pick by mistake most often." %}</p>
       <table class="stats">
         <thead>
           <tr>
-            <th>Species</th>
-            <th class="num">Misses</th>
+            <th>{% mt "Species" %}</th>
+            <th class="num">{% mt "Misses" %}</th>
           </tr>
         </thead>
         <tbody>
           {% for row in missed_birds %}
           <tr>
             <td>
-              {% if row.url %}<a href="{{ row.url }}">{{ row.name }}</a>{% else %}{{ row.name }}{% endif %}
+              {% if row.url %}<a href="{{ row.url|mpath }}">{{ row.name }}</a>{% else %}{{ row.name }}{% endif %}
               {% if row.name_latin %}<span class="latin">{{ row.name_latin }}</span>{% endif %}
             </td>
             <td class="num">{{ row.wrongly_answered }}{% if row.error_rate is not None %} <span class="latin">{{ row.error_rate|floatformat:0 }}%</span>{% endif %}</td>
@@ -99,32 +98,32 @@
           {% endfor %}
         </tbody>
       </table>
-      <p class="more-link"><a href="{{ missed_href }}">All missed species</a></p>
+      <p class="more-link"><a href="{{ missed_href }}">{% mt "All missed species" %}</a></p>
     </div>
     {% endif %}
     {% if show_pairs %}
     <div class="card">
-      <h3>Confusing pairs</h3>
-      <p>Species most often mixed up with each other.</p>
+      <h3>{% mt "Confusing pairs" %}</h3>
+      <p>{% mt "Species most often mixed up with each other." %}</p>
       <table class="stats">
         <thead>
           <tr>
-            <th>Pair</th>
-            <th class="num">Mix-ups</th>
+            <th>{% mt "Pair" %}</th>
+            <th class="num">{% mt "Mix-ups" %}</th>
           </tr>
         </thead>
         <tbody>
           {% for row in confusion_pairs %}
           <tr>
             <td>
-              {% if row.url %}<a href="{{ row.url }}">{{ row.low_name }} vs {{ row.high_name }}</a>{% else %}{{ row.low_name }} vs {{ row.high_name }}{% endif %}
+              {% if row.url %}<a href="{{ row.url|mpath }}">{{ row.low_name }} {% mt "vs" %} {{ row.high_name }}</a>{% else %}{{ row.low_name }} {% mt "vs" %} {{ row.high_name }}{% endif %}
             </td>
             <td class="num">{{ row.total_wrong }}</td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
-      <p class="more-link"><a href="{{ pairs_href }}">All confusing pairs</a></p>
+      <p class="more-link"><a href="{{ pairs_href }}">{% mt "All confusing pairs" %}</a></p>
     </div>
     {% endif %}
   </div>
@@ -132,17 +131,17 @@
 {% endif %}
 {% if countries %}
 <section>
-  <h2>Countries on Birdr</h2>
+  <h2>{% mt "Countries on Birdr" %}</h2>
   <div class="country-pills">
     {% for c in countries %}
-    <a href="{{ c.url }}">{{ c.name }}</a>
+    <a href="{{ c.url|mpath }}">{{ c.name }}</a>
     {% endfor %}
   </div>
 </section>
 {% endif %}
 <section class="band">
-  <h2>Best on the app</h2>
-  <p>Install Birdr for quizzes on the go. Same account in the browser if you prefer.</p>
+  <h2>{% mt "Best on the app" %}</h2>
+  <p>{% mt "Install Birdr for quizzes on the go. Same account in the browser if you prefer." %}</p>
   {% include "marketing/_store_badges.html" %}
 </section>
 {% endblock %}

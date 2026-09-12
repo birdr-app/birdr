@@ -8,10 +8,13 @@ from django.db.models.functions import TruncDay, TruncMonth, TruncWeek
 from django.utils import timezone
 
 from jizz.models import PlayerScore
+from jizz.playable_regions import hyphen_parent_code
 
 Granularity = Literal['day', 'week', 'month']
 
 # Quiz country codes rolled up onto world-map ISO alpha-2 regions.
+# Hyphenated codes (US-MA, US-EAST, NL-NH) also roll up via prefix; this dict
+# is a fallback for any non-hyphen aliases.
 WORLD_MAP_COUNTRY_ROLLUP: dict[str, str] = {
     'US-EAST': 'US',
     'US-WEST': 'US',
@@ -168,6 +171,9 @@ def world_map_country_code(country_code: str) -> str | None:
         return None
     if code in WORLD_MAP_COUNTRY_ROLLUP:
         return WORLD_MAP_COUNTRY_ROLLUP[code]
+    prefix = hyphen_parent_code(code)
+    if prefix:
+        return prefix
     if len(code) == 2 and code.isalpha():
         return code
     return None

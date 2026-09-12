@@ -4,7 +4,10 @@ Auth/profile/my-games/scores are covered in test_auth_and_profile and test_playe
 """
 from unittest.mock import patch
 
+from django.core.cache import cache
+from django.db import connection
 from django.test import TestCase, override_settings
+from django.test.utils import CaptureQueriesContext
 from django.contrib.auth import get_user_model
 from rest_framework.test import APIClient
 from rest_framework import status
@@ -18,6 +21,7 @@ from jizz.models import (
     QuestionMediaReady,
     Answer,
     Species,
+    SpeciesName,
     CountrySpecies,
     Language,
     Feedback,
@@ -58,6 +62,9 @@ class ApiCountriesTestCase(TestCase):
         response = self.client.get(f'/api/countries/{self.country.code}/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['code'], self.country.code)
+        self.assertIn('parent', response.data)
+        self.assertIn('kind', response.data)
+        self.assertIn('hemisphere', response.data)
 
 
 class ApiGeoCountryTestCase(TestCase):
@@ -186,14 +193,69 @@ class ApiSpeciesTestCase(TestCase):
 
     def setUp(self):
         self.client = APIClient()
+        self.country = Country.objects.get_or_create(code='NL', defaults={'name': 'Netherlands'})[0]
         self.species = Species.objects.create(
             name='Test Bird', name_latin='Testus', code='TB01',
         )
+        CountrySpecies.objects.get_or_create(
+            country=self.country, species=self.species, defaults={'status': 'native'}
+        )
+
+    def test_species_list_requires_country(self):
+        response = self.client.get('/api/species/')
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_species_list_returns_200(self):
-        response = self.client.get('/api/species/')
+        response = self.client.get('/api/species/', {'countryspecies__country': 'NL'})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertIsInstance(response.data, list)
+        self.assertEqual(response['Cache-Control'], 'public, max-age=3600')
+        self.assertEqual(len(response.data), 1)
+        self.assertEqual(response.data[0]['name'], 'Test Bird')
+
+    def test_species_list_is_cached(self):
+        first = self.client.get('/api/species/', {'countryspecies__country': 'NL'})
+        self.assertEqual(first.status_code, status.HTTP_200_OK)
+        Species.objects.create(name='Other Bird', name_latin='Otherus', code='TB02')
+        second = self.client.get('/api/species/', {'countryspecies__country': 'NL'})
+        self.assertEqual(second.status_code, status.HTTP_200_OK)
+        self.assertEqual(first.data, second.data)
+
+    def test_species_list_translated_names_bounded_queries(self):
+        """Cache miss must prefetch SpeciesName so SELECT count does not grow with N."""
+        lang_nl, _ = Language.objects.get_or_create(code='nl', defaults={'name': 'Dutch'})
+        SpeciesName.objects.create(species=self.species, language=lang_nl, name='Testvogel')
+        extra = []
+        for i in range(12):
+            sp = Species.objects.create(
+                name=f'List Bird {i}',
+                name_latin=f'Listus {i}',
+                code=f'LB{i:02d}',
+            )
+            CountrySpecies.objects.create(
+                country=self.country, species=sp, status='native'
+            )
+            SpeciesName.objects.create(
+                species=sp, language=lang_nl, name=f'Lijstvogel {i}'
+            )
+            extra.append(sp)
+        cache.clear()
+        with CaptureQueriesContext(connection) as ctx:
+            response = self.client.get(
+                '/api/species/',
+                {'countryspecies__country': 'NL', 'language': 'nl'},
+            )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(response.data), 13)
+        by_id = {row['id']: row for row in response.data}
+        self.assertEqual(by_id[self.species.id]['name_translated'], 'Testvogel')
+        self.assertEqual(by_id[extra[0].id]['name_translated'], 'Lijstvogel 0')
+        selects = [
+            q for q in ctx.captured_queries
+            if q['sql'].lstrip().upper().startswith('SELECT')
+        ]
+        # Species+taxonomy JOIN + SpeciesName prefetch (must not be 1+N).
+        self.assertLessEqual(len(selects), 4)
 
     def test_species_detail_returns_200(self):
         response = self.client.get(f'/api/species/{self.species.id}/')
@@ -237,17 +299,15 @@ class ApiFamiliesOrdersTestCase(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertIsInstance(response.data, list)
 
-    def test_families_list_with_country_filter(self):
+    def test_families_list_omits_families_with_fewer_than_four_species(self):
         response = self.client.get('/api/families/', {'country': self.country.code})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertIsInstance(response.data, list)
-        if response.data:
-            self.assertIn(response.data[0].get('tax_family'), ('Family1', None))
+        self.assertEqual(response.data, [])
 
-    def test_orders_list_with_country_filter(self):
+    def test_orders_list_omits_orders_with_fewer_than_four_species(self):
         response = self.client.get('/api/orders/', {'country': self.country.code})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertIsInstance(response.data, list)
+        self.assertEqual(response.data, [])
 
 
 class ApiGamesTestCase(TestCase):
@@ -281,6 +341,43 @@ class ApiGamesTestCase(TestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertIn('token', response.data)
         self.assertEqual(response.data['level'], 'beginner')
+        score = PlayerScore.objects.get(player=self.player, game__token=response.data['token'])
+        self.assertEqual(score.app_version, '')
+        self.assertEqual(score.device_type, '')
+
+    def test_games_create_stores_optional_app_version_and_device_type(self):
+        _player_auth(self.client, self.player)
+        response = self.client.post(
+            '/api/games/',
+            {
+                'country': 'NL',
+                'level': 'beginner',
+                'length': 5,
+                'media': 'images',
+                'rarity': 'regular',
+                'app_version': '1.4.2',
+                'device_type': 'ios',
+            },
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        score = PlayerScore.objects.get(player=self.player, game__token=response.data['token'])
+        self.assertEqual(score.app_version, '1.4.2')
+        self.assertEqual(score.device_type, 'ios')
+
+    def test_games_create_reads_client_info_from_headers(self):
+        _player_auth(self.client, self.player)
+        response = self.client.post(
+            '/api/games/',
+            {'country': 'NL', 'level': 'beginner', 'length': 5, 'media': 'images', 'rarity': 'regular'},
+            format='json',
+            HTTP_X_BIRDR_APP_VERSION='1.103.0',
+            HTTP_X_BIRDR_DEVICE_TYPE='web',
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        score = PlayerScore.objects.get(player=self.player, game__token=response.data['token'])
+        self.assertEqual(score.app_version, '1.103.0')
+        self.assertEqual(score.device_type, 'web')
 
     def test_games_create_requires_auth(self):
         response = self.client.post(
@@ -294,6 +391,32 @@ class ApiGamesTestCase(TestCase):
         response = self.client.get(f'/api/games/{self.game.token}/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['token'], self.game.token)
+
+    def test_game_detail_patch_updates_language(self):
+        self.assertEqual(self.game.language, 'en')
+        response = self.client.patch(
+            f'/api/games/{self.game.token}/',
+            {'language': 'nl'},
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['token'], self.game.token)
+        self.assertEqual(response.data['language'], 'nl')
+        self.assertEqual(response.data['level'], 'beginner')
+        self.game.refresh_from_db()
+        self.assertEqual(self.game.language, 'nl')
+        self.assertEqual(self.game.level, 'beginner')
+
+    def test_game_detail_patch_ignores_level_changes(self):
+        response = self.client.patch(
+            f'/api/games/{self.game.token}/',
+            {'language': 'es', 'level': 'expert'},
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.game.refresh_from_db()
+        self.assertEqual(self.game.language, 'es')
+        self.assertEqual(self.game.level, 'beginner')
 
 
 class ApiQuestionAnswerTestCase(TestCase):
@@ -366,6 +489,51 @@ class ApiQuestionAnswerTestCase(TestCase):
         self.assertIn('id', response.data)
         self.assertEqual(response.data['id'], self.answer.id)
 
+    def test_play_question_omits_media_source_link_until_answer(self):
+        from jizz.question_play import load_question_for_play, serialize_question_for_play
+        from jizz.serializers import current_question_media
+
+        q = self.game.add_question()
+        loaded = load_question_for_play(q.id)
+        media = current_question_media(loaded)
+        self.assertIsNotNone(media)
+        source_url = 'https://commons.wikimedia.org/wiki/File:SecretSpecies.jpg'
+        media.link = source_url
+        media.contributor = 'Jane Doe'
+        media.source = 'wikimedia'
+        media.save(update_fields=['link', 'contributor', 'source'])
+
+        self.question.done = True
+        self.question.save(update_fields=['done'])
+
+        play = serialize_question_for_play(load_question_for_play(q.id))
+        item = play['images'][0]
+        self.assertIsNone(item['link'])
+        self.assertEqual(item['contributor'], 'Jane Doe')
+        self.assertEqual(item['source'], 'wikimedia')
+
+        response = self.client.get(f'/api/games/{self.game.token}/question')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertIsNone(response.data['images'][0]['link'])
+
+        _player_auth(self.client, self.player)
+        answered = self.client.post(
+            '/api/answer/',
+            {
+                'player_token': self.player.token,
+                'question_id': q.id,
+                'answer_id': q.species_id,
+            },
+            format='json',
+        )
+        self.assertEqual(answered.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(answered.data['media_link'], source_url)
+
+        from jizz.serializers import AnswerSerializer
+
+        row = Answer.objects.get(id=answered.data['id'])
+        shared = AnswerSerializer(row, context={'game': self.game}).data
+        self.assertIsNone(shared['media_link'])
 
 class ApiQuestionDetailTestCase(TestCase):
     """GET/PUT /api/questions/<pk>/."""

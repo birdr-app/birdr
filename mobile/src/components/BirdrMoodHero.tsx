@@ -42,6 +42,7 @@ export function BirdrMoodHero({
       source={getMoodImage(mood, visualStyle)}
       style={styles.image}
       resizeMode="contain"
+      resizeMethod="resize"
       accessibilityIgnoresInvertColors
     />
   ) : null;

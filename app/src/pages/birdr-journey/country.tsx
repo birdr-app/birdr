@@ -7,10 +7,9 @@ import {
   getStoredBirdrJourneyPlayerToken,
   startBirdrJourney,
 } from '../../api/birdrJourney';
-import { authService } from '../../api/services/auth.service';
-import { profileService } from '../../api/services/profile.service';
 import CountryCombobox from '../../components/country-combobox';
 import AppContext from '../../core/app-context';
+import { useAuthProfile } from '../../core/auth-profile-context';
 import { Page } from '../../shared/components/layout';
 import { UseCountries } from '../../user/use-countries';
 import { resolveDefaultCountry, writeStoredCountryCode } from '../../user/country-preference';
@@ -18,28 +17,24 @@ import { resolveDefaultCountry, writeStoredCountryCode } from '../../user/countr
 export function BirdrJourneyCountryPage() {
   const navigate = useNavigate();
   const { language } = useContext(AppContext);
+  const { isAuthenticated, profile } = useAuthProfile();
   const { countries } = UseCountries();
   const [country, setCountry] = useState<{ code: string; name: string } | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const isAuthenticated = !!authService.getAccessToken();
 
   useEffect(() => {
     if (!countries?.length) return;
     const filtered = countries.filter((c) => !c.code.includes('NL-NH'));
+    const profileCode = isAuthenticated ? profile?.country_code ?? null : null;
     let cancelled = false;
-    const profileCode = isAuthenticated
-      ? profileService.getProfile().then((profile) => profile.country_code).catch(() => null)
-      : Promise.resolve(null);
-    profileCode
-      .then((code) => resolveDefaultCountry(filtered, code))
-      .then((match) => {
-        if (!cancelled && match) setCountry(match);
-      });
+    resolveDefaultCountry(filtered, profileCode).then((match) => {
+      if (!cancelled && match) setCountry(match);
+    });
     return () => {
       cancelled = true;
     };
-  }, [countries, isAuthenticated]);
+  }, [countries, isAuthenticated, profile?.country_code]);
 
   const ensureAuth = async (): Promise<boolean> => {
     if (isAuthenticated) return true;

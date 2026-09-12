@@ -479,6 +479,21 @@ export function FlockDetailPage() {
             </Box>
           )}
 
+          {flock.history_path ? (
+            <Button
+              variant="ghost"
+              colorPalette="primary"
+              size="sm"
+              mb={4}
+              onClick={() => window.location.assign(flock.history_path as string)}
+            >
+              <FormattedMessage
+                id="flocks_weekly_progress"
+                defaultMessage="Weekly progress"
+              />
+            </Button>
+          ) : null}
+
           {flock.is_member && !flock.is_owner ? (
             <Button
               variant="ghost"

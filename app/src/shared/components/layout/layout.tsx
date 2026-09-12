@@ -1,35 +1,20 @@
 import {Outlet} from "react-router-dom";
 import {
   Box,
-  Button,
-  Container,
   DrawerRoot,
   DrawerBody,
   DrawerCloseTrigger,
   DrawerContent,
   DrawerFooter,
-  DrawerHeader,
   DrawerBackdrop,
   Flex,
-  Heading, Image, Link, Menu,
-  Text,
+  Link,
   useDisclosure,
-  Avatar,
-  HStack, ListItem, List, ListRoot
 } from "@chakra-ui/react";
-import {GiHamburgerMenu} from "react-icons/gi";
-import {FaUserCircle} from "react-icons/fa";
-import {FormattedMessage} from "react-intl";
-import {useState, useEffect} from "react";
-import SelectCountry from "../../../components/select-country";
-import SelectLevel from "../../../components/select-level";
-import {useContext} from "react";
-import AppContext from "../../../core/app-context";
+import {useState} from "react";
 import {BirdrMenu} from "./menu";
 import {UserMenu} from "./user-menu";
 import {LoginModal} from "../../../components/auth/login-modal";
-import {authService} from "../../../api/services/auth.service";
-import {profileService, UserProfile} from "../../../api/services/profile.service";
 import {MenuProvider} from "./menu-context";
 import {OpenInAppOnLoad} from "../../../components/open-in-app-on-load";
 
@@ -37,48 +22,7 @@ const Layout = () => {
   const {open: isOpen, onOpen, onClose} = useDisclosure()
   const {open: isUserMenuOpen, onOpen: onUserMenuOpen, onClose: onUserMenuClose} = useDisclosure()
   const {open: isLoginModalOpen, onOpen: onLoginModalOpen, onClose: onLoginModalClose} = useDisclosure()
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loginModalMode, setLoginModalMode] = useState<'login' | 'register'>('login');
-  const [profile, setProfile] = useState<UserProfile | null>(null);
-  const [userEmail, setUserEmail] = useState<string | null>(null);
-  const {level, setLevel} = useContext(AppContext);
-
-  useEffect(() => {
-    const checkAuth = async () => {
-      const token = authService.getAccessToken();
-      if (!token) {
-        setIsAuthenticated(false);
-        setUserEmail(null);
-        setProfile(null);
-        return;
-      }
-      const ok = await authService.ensureValidAccessToken();
-      const access = authService.getAccessToken();
-      if (!ok || !access) {
-        setIsAuthenticated(false);
-        setUserEmail(null);
-        setProfile(null);
-        return;
-      }
-      setIsAuthenticated(true);
-      try {
-        const payload = JSON.parse(atob(access.split('.')[1]));
-        setUserEmail(payload.email || payload.username || null);
-        try {
-          const profileData = await profileService.getProfile();
-          setProfile(profileData);
-        } catch {
-          setProfile(null);
-        }
-      } catch {
-        setUserEmail(null);
-        setProfile(null);
-      }
-    };
-    checkAuth();
-    const interval = setInterval(checkAuth, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   const handleUserIconClick = () => {
     onUserMenuOpen();
@@ -125,7 +69,8 @@ const Layout = () => {
         <DrawerContent height="100vh" maxHeight="100vh" display="flex" flexDirection="column" position="fixed" top={0} right={0} left="auto" bottom={0} bg="white">
           <DrawerCloseTrigger/>
           <DrawerBody flex="1" overflowY="auto" minHeight={0} bg="white" p={6}>
-            <UserMenu 
+            <UserMenu
+              isOpen={isUserMenuOpen}
               onOpenLoginModal={(mode) => {
                 setLoginModalMode(mode);
                 onLoginModalOpen();
@@ -147,4 +92,3 @@ const Layout = () => {
 };
 
 export default Layout;
-

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   Modal,
   View,
@@ -14,10 +14,6 @@ import { useNavigation } from '@react-navigation/native';
 import { useMenu } from '../context/MenuContext';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from '../i18n/TranslationContext';
-import {
-  isCountryChallengeRoute,
-} from '../api/birdrJourney';
-import { isFlockRoute } from '../api/flocks';
 import { colors } from '../theme';
 import { getAppVersionDisplay } from '../utils/appVersion';
 
@@ -28,10 +24,9 @@ const MENU_ITEMS: { route: string; labelKey: string }[] = [
   { route: 'Home', labelKey: 'home' },
   { route: 'Start', labelKey: 'new_game' },
   { route: 'Scores', labelKey: 'high_scores' },
-  { route: 'BirdrJourneyList', labelKey: 'country_challenges' },
-  { route: 'FlockList', labelKey: 'flocks' },
+  { route: 'CountryChallengeLeaderboard', labelKey: 'country_leaderboard' },
   { route: 'Updates', labelKey: 'updates' },
-  { route: 'Help', labelKey: 'help' },
+  { route: 'Help', labelKey: 'community_menu' },
   { route: 'Privacy', labelKey: 'privacy' },
   { route: 'About', labelKey: 'about_birdr' },
 ];
@@ -43,10 +38,6 @@ export function LeftMenuModal() {
   const { leftMenuVisible, closeLeftMenu, currentRouteName } = useMenu();
   const slideAnim = useRef(new Animated.Value(-PANEL_WIDTH)).current;
 
-  const openCountryChallenges = useCallback(() => {
-    (navigation as any).navigate('BirdrJourneyList');
-  }, [navigation]);
-
   useEffect(() => {
     Animated.timing(slideAnim, {
       toValue: leftMenuVisible ? 0 : -PANEL_WIDTH,
@@ -57,14 +48,6 @@ export function LeftMenuModal() {
 
   const handleItem = (routeName: string) => {
     closeLeftMenu();
-    if (routeName === 'BirdrJourneyList') {
-      void openCountryChallenges();
-      return;
-    }
-    if (routeName === 'FlockList') {
-      (navigation as any).navigate('FlockList');
-      return;
-    }
     if (routeName === 'Privacy') {
       (navigation as any).navigate('HelpDetail', { slug: 'privacy' });
     } else if (routeName === 'About') {
@@ -109,11 +92,8 @@ export function LeftMenuModal() {
               </View>
               {MENU_ITEMS.map((item) => {
                 const isFocused =
-                  item.route === 'BirdrJourneyList'
-                    ? isCountryChallengeRoute(currentRoute)
-                    : item.route === 'FlockList'
-                      ? isFlockRoute(currentRoute)
-                      : currentRoute === item.route;
+                  currentRoute === item.route ||
+                  (item.route === 'Help' && currentRoute === 'HelpDetail');
                 const label = t(item.labelKey);
                 return (
                   <TouchableOpacity

@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils.html import format_html
 from .models import Media, FlagMedia, MediaReview, MediaPrediction
+from .wikimedia_urls import wikimedia_video_playback_url
 
 
 class VisibilityFilter(admin.SimpleListFilter):
@@ -100,10 +101,8 @@ class MediaAdmin(HideableAdminMixin, admin.ModelAdmin):
             return format_html('<img src="{}" style="max-height:60px; max-width:60px;" />', url)
         elif obj.type == 'video':
             return format_html(
-                '<video controls style="max-height:60px; max-width:60px;">'
-                '<source src="{}" type="video/mp4" />'
-                '</video>',
-                url
+                '<video controls src="{}" style="max-height:60px; max-width:60px;"></video>',
+                wikimedia_video_playback_url(url) or url,
             )
         elif obj.type == 'audio':
             return format_html(
@@ -123,11 +122,8 @@ class MediaAdmin(HideableAdminMixin, admin.ModelAdmin):
             return format_html('<img src="{}" style="max-height:300px; max-width:100%;" />', url)
         elif obj.type == 'video':
             return format_html(
-                '<video controls style="max-width:100%; max-height:600px;">'
-                '<source src="{}" type="video/mp4" />'
-                'Your browser does not support the video tag.'
-                '</video>',
-                url
+                '<video controls src="{}" style="max-width:100%; max-height:600px;"></video>',
+                wikimedia_video_playback_url(url) or url,
             )
         elif obj.type == 'audio':
             return format_html(

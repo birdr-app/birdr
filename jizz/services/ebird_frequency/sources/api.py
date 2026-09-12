@@ -1,7 +1,9 @@
 """
 eBird API 2.0: species frequency by week/quarter → calendar month.
 
-Uses GET /v2/product/freqlist/{regionCode}/{speciesCode} (per-species; rate-limit friendly).
+Uses GET /v2/product/freqlist/{regionCode}/{speciesCode} if eBird ever adds it.
+That product currently 404s ("No endpoint"); the importer raises EbirdFreqlistUnavailable
+instead of looping every CountrySpecies.
 Token: settings.EBIRD_API_TOKEN (or EBIRD_API_KEY via settings alias).
 """
 
@@ -16,12 +18,20 @@ import requests
 from django.conf import settings
 
 from jizz.models import CountrySpecies
+from jizz.services.ebird_frequency.errors import EbirdFreqlistUnavailable
 from jizz.services.ebird_frequency.types import MonthlyFrequencyRow
 
 logger = logging.getLogger(__name__)
 
 EBIRD_API_ROOT = 'https://api.ebird.org/v2'
 DEFAULT_DELAY_SEC = 0.15
+
+
+def _missing_freqlist_endpoint(status_code: int, body: str) -> bool:
+    if status_code != 404:
+        return False
+    text = (body or "").lower()
+    return "no endpoint" in text or "/product/freqlist" in text
 
 
 def _token() -> str:
@@ -127,6 +137,11 @@ def fetch_freqlist_for_species(
         headers={'X-eBirdApiToken': tok},
         timeout=90,
     )
+    if _missing_freqlist_endpoint(r.status_code, r.text):
+        raise EbirdFreqlistUnavailable(
+            "eBird has no /v2/product/freqlist API "
+            f"({r.status_code} for {url})"
+        )
     if r.status_code == 404:
         return []
     r.raise_for_status()

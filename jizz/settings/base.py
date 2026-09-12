@@ -34,8 +34,9 @@ MEDIA_WIKIMEDIA_THUMB_WIDTH_PX = int(os.environ.get('MEDIA_WIKIMEDIA_THUMB_WIDTH
 # Width served to clients for Wikimedia images in game/API serializers (standard step).
 MEDIA_WIKIMEDIA_DISPLAY_WIDTH_PX = int(os.environ.get('MEDIA_WIKIMEDIA_DISPLAY_WIDTH_PX', '960'))
 # iNaturalist open-data size served to clients (original|large|medium|small).
-# `large` is typically 1024px — enough for quiz retina, much smaller than camera originals.
-MEDIA_INATURALIST_DISPLAY_SIZE = os.environ.get('MEDIA_INATURALIST_DISPLAY_SIZE', 'large')
+# `medium` is typically 500px — enough for quiz/list display; clients can still
+# request `large` (1024px) on zoom.
+MEDIA_INATURALIST_DISPLAY_SIZE = os.environ.get('MEDIA_INATURALIST_DISPLAY_SIZE', 'medium')
 
 # Optional YOLO bird detector (offline only; used by handcrafted_v2_yolo extractor).
 # Provide an ONNX file path (e.g. yolov5n.onnx exported with 640x640 input).
@@ -105,9 +106,14 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_COOKIE_SAMESITE = 'Lax'
 
 MIDDLEWARE = [
+    # Outermost so JSON 2xx (including 201 Created) is gzipped. nginx gzip only
+    # compresses 200/403/404, so POST /api/games/ would otherwise leave the
+    # full payload on the wire; nginx passes an existing Content-Encoding through.
+    'django.middleware.gzip.GZipMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'jizz.middleware.MarketingLocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'jizz.middleware.SocialAuthRedirectUriMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -133,6 +139,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'jizz.templatetags.mt',
+            ],
         },
     },
 ]
@@ -140,11 +149,40 @@ TEMPLATES = [
 WSGI_APPLICATION = 'jizz.wsgi.application'
 ASGI_APPLICATION = "jizz.asgi.application"
 
-CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels.layers.InMemoryChannelLayer",
-    },
-}
+REDIS_URL = os.environ.get('REDIS_URL', '').strip()
+
+
+def _redis_url_with_db(url: str, db: int) -> str:
+    from urllib.parse import urlparse, urlunparse
+
+    parsed = urlparse(url)
+    return urlunparse(parsed._replace(path=f'/{db}'))
+
+
+if REDIS_URL:
+    CHANNEL_LAYERS = {
+        "default": {
+            "BACKEND": "channels_redis.core.RedisChannelLayer",
+            "CONFIG": {
+                "hosts": [REDIS_URL],
+            },
+        },
+    }
+    CACHES = {
+        "default": {
+            "BACKEND": "django_redis.cache.RedisCache",
+            "LOCATION": _redis_url_with_db(REDIS_URL, 1),
+            "OPTIONS": {
+                "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            },
+        }
+    }
+else:
+    CHANNEL_LAYERS = {
+        "default": {
+            "BACKEND": "channels.layers.InMemoryChannelLayer",
+        },
+    }
 
 
 DATABASES = {
@@ -361,8 +399,16 @@ SPECIES_ILLUSTRATION_OUTPUT_FORMAT = os.environ.get('SPECIES_ILLUSTRATION_OUTPUT
 COMPARISON_AI_MODEL = os.environ.get('COMPARISON_AI_MODEL', 'gpt-4o')
 COMPARISON_AI_PROMPT_VERSION = os.environ.get('COMPARISON_AI_PROMPT_VERSION', 'v3')
 
+# Update blog auto-translation (OpenAI Chat Completions, cached on UpdateTranslation).
+UPDATE_TRANSLATION_MODEL = os.environ.get('UPDATE_TRANSLATION_MODEL', 'gpt-4o-mini')
+# Species comparison auto-translation (OpenAI Chat Completions, cached on ComparisonTranslation).
+COMPARISON_TRANSLATION_MODEL = os.environ.get(
+    'COMPARISON_TRANSLATION_MODEL',
+    UPDATE_TRANSLATION_MODEL,
+)
+
 # Native mobile app minimum semver (force-update gate in iOS/Android clients).
-APP_MIN_VERSION = os.environ.get('APP_MIN_VERSION', '1.79.0')
+APP_MIN_VERSION = os.environ.get('APP_MIN_VERSION', '1.97.0')
 # Latest public store release semver (soft-update prompt; beta builds ahead of this skip the banner).
 APP_STORE_VERSION = os.environ.get('APP_STORE_VERSION', APP_MIN_VERSION)
 APP_STORE_URL = os.environ.get(

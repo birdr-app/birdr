@@ -26,6 +26,22 @@ def alpha2_for_alpha3(alpha3: str) -> Optional[str]:
     return ALPHA3_TO_ALPHA2.get(alpha3.strip().upper())
 
 
+def rewrite_st_alpha3_prefix(region_code: str) -> Optional[str]:
+    """USA-MA → US-MA. Numeric admin ids (CHN-1178, AUS-006) are left alone."""
+    rc = region_code.strip().upper()
+    if "-" not in rc:
+        return None
+    prefix, suffix = rc.split("-", 1)
+    if not suffix or suffix.isdigit() or suffix == "EEZ":
+        return None
+    if len(prefix) == 3:
+        a2 = alpha2_for_alpha3(prefix)
+        return f"{a2}-{suffix}" if a2 else None
+    if len(prefix) == 2:
+        return rc
+    return None
+
+
 def st_region_codes_for_app_country(
     app_code: str,
     *,
@@ -40,6 +56,13 @@ def st_region_codes_for_app_country(
         regions.update(_NL_ST_REGIONS)
     elif cc in ("UK", "GB"):
         regions.update(_UK_ST_REGIONS)
+    elif "-" in cc:
+        regions.add(cc)
+        prefix, suffix = cc.split("-", 1)
+        if len(prefix) == 2 and suffix and not suffix.isdigit():
+            a3 = alpha3_for_alpha2(prefix)
+            if a3:
+                regions.add(f"{a3}-{suffix}")
     else:
         a3 = alpha3_for_alpha2(cc)
         if a3:
@@ -58,19 +81,28 @@ def app_country_for_st_region(
     *,
     st_to_app: Optional[Dict[str, str]] = None,
 ) -> Optional[str]:
-    """Map an ST country ``region_code`` to app ``Country.pk`` (e.g. USA → US)."""
-    rc = region_code.strip().upper()
-    if not rc:
+    """Map an ST country ``region_code`` to app ``Country.pk`` (e.g. USA → US, USA-MA → US-MA)."""
+    raw = region_code.strip().upper()
+    if not raw:
         return None
-    if st_to_app is not None and rc in st_to_app:
-        return st_to_app[rc]
+    rewritten = rewrite_st_alpha3_prefix(raw)
+    candidates = [raw]
+    if rewritten and rewritten not in candidates:
+        candidates.append(rewritten)
+    if st_to_app is not None:
+        for cand in candidates:
+            if cand in st_to_app:
+                return st_to_app[cand]
+    rc = rewritten or raw
     if len(rc) == 3:
         return alpha2_for_alpha3(rc)
     if len(rc) == 2 and rc in ALPHA2_TO_ALPHA3:
         return rc
-    # Preserve subregion codes like "US-CA" / "US-EAST" when they exist in the app DB.
-    # These are not ISO alpha-2/3 and should not be coerced.
-    if "-" in rc and len(rc) <= 10:
+    # Preserve subregion codes like "US-CA" / "US-EAST". Opaque numeric ids are not app PKs.
+    if "-" in rc:
+        suffix = rc.split("-", 1)[1]
+        if suffix.isdigit() or suffix == "EEZ":
+            return None
         return rc
     return None
 

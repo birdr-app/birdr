@@ -189,7 +189,7 @@ export const MediaReviewPage = () => {
     }
     let cancelled = false;
     setSpeciesListLoading(true);
-    fetch(`/api/species/?countryspecies__country=${selectedCountry}&language=${languageParam}`, { cache: 'no-cache' })
+    fetch(`/api/species/?countryspecies__country=${selectedCountry}&language=${languageParam}`)
       .then((res) => (res.ok ? res.json() : []))
       .then((data) => {
         const arr = Array.isArray(data) ? data : data?.results ?? data?.data ?? [];

@@ -38,6 +38,27 @@ function stepLabel(row: CountryChallengeLeaderboardRow): string {
   return row.step_label;
 }
 
+function rowRank(row: CountryChallengeLeaderboardRow, index: number): number {
+  return row.rank ?? index + 1;
+}
+
+function isScoreGroupStart(
+  rows: CountryChallengeLeaderboardRow[],
+  index: number
+): boolean {
+  if (index === 0) return true;
+  return rowRank(rows[index], index) !== rowRank(rows[index - 1], index - 1);
+}
+
+function scoreGroupSize(rows: CountryChallengeLeaderboardRow[], index: number): number {
+  const rank = rowRank(rows[index], index);
+  let size = 0;
+  for (let i = index; i < rows.length && rowRank(rows[i], i) === rank; i += 1) {
+    size += 1;
+  }
+  return size;
+}
+
 export function CountryChallengeLeaderboardPage() {
   const intl = useIntl();
   const { appLanguage } = useContext(AppContext);
@@ -131,20 +152,32 @@ export function CountryChallengeLeaderboardPage() {
                     { code, name: row.country_name },
                     locale
                   );
+                  const groupStart = isScoreGroupStart(rows, index);
+                  const groupSize = groupStart ? scoreGroupSize(rows, index) : 1;
                   return (
                     <TableRow key={`${row.player_name}-${code}-${index}`}>
-                      <TableCell>{index + 1}</TableCell>
+                      {groupStart ? (
+                        <TableCell rowSpan={groupSize} verticalAlign="top" fontWeight="700">
+                          {rowRank(row, index)}
+                        </TableCell>
+                      ) : null}
                       <TableCell fontWeight="600">{row.player_name}</TableCell>
                       <TableCell>
                         {countryCodeToFlag(code)} {code} · {countryLabel}
                       </TableCell>
-                      <TableCell>
-                        <Flex align="center" gap={3}>
-                          <BirdrLevelImage iconUrl={row.level_icon_url} sequence={row.level_index} variant="completed" size={44} />
-                          <Text fontWeight="600">{leaderboardLevelTitle(row, locale)}</Text>
-                        </Flex>
-                      </TableCell>
-                      <TableCell>{stepLabel(row)}</TableCell>
+                      {groupStart ? (
+                        <TableCell rowSpan={groupSize} verticalAlign="top">
+                          <Flex align="center" gap={3}>
+                            <BirdrLevelImage iconUrl={row.level_icon_url} sequence={row.level_index} variant="completed" size={44} />
+                            <Text fontWeight="600">{leaderboardLevelTitle(row, locale)}</Text>
+                          </Flex>
+                        </TableCell>
+                      ) : null}
+                      {groupStart ? (
+                        <TableCell rowSpan={groupSize} verticalAlign="top">
+                          {stepLabel(row)}
+                        </TableCell>
+                      ) : null}
                     </TableRow>
                   );
                 })}

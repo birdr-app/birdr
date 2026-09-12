@@ -11,6 +11,7 @@ import {
   getFlockInvitePath,
   getFlockInviteWebPath,
   getFlockLeaderboardPath,
+  getFlockHistoryPath,
   getFlockMembersPath,
   getFlockPlayContext,
   getFlockResultPath,
@@ -43,6 +44,7 @@ const FLOCKS_I18N_KEYS = [
   'flocks_invite_members',
   'flocks_invite_more',
   'flocks_view_leaderboard',
+  'flocks_weekly_progress',
   'flocks_invite_share',
   'flocks_result_title',
   'flocks_share_whatsapp',
@@ -89,6 +91,7 @@ describe('flocks share helpers', () => {
     expect(getFlockLeaderboardPath('my-club', 9)).toBe(
       '/flocks/my-club/challenges/9/leaderboard'
     );
+    expect(getFlockHistoryPath('abcToken')).toBe('/flocks/c/abcToken/history/');
     expect(getFlockInviteWebPath('tok')).toBe('/join/flock/tok/web');
     expect(getFlockResultPath('res')).toBe('/flocks/results/res');
     expect(buildFlockInviteWebUrl('tok', 'https://birdr.pro')).toBe(

@@ -1,0 +1,179 @@
+<div id="club-newsletter" class="club-newsletter">
+  <p>
+    {% mt "Use Copy for a club note and screenshots. Images stay on birdr.pro, so they show when you paste into email or Word." %}
+  </p>
+  <article class="newsletter-example" aria-label="{% mt "Example club newsletter item" %}">
+    <div class="newsletter-example-head">
+      <p class="kicker">{% mt "Example newsletter item" %}</p>
+      <button
+        type="button"
+        class="btn secondary newsletter-copy"
+        data-newsletter-copy
+        data-label="{% mt "Copy" %}"
+        data-copied="{% mt "Copied" %}"
+        data-failed="{% mt "Could not copy" %}"
+        aria-live="polite"
+      >{% mt "Copy" %}</button>
+    </div>
+    <div id="newsletter-copy-body">
+    <h4>{% mt "A free bird ID quiz you can try yourself" %}</h4>
+    <p>
+      {% mt "Want to get sharper at bird identification between outings? Try <a href=\"https://birdr.pro/\">Birdr</a>. You see a real photograph, pick the species, and learn from the ones you miss." %}
+    </p>
+    <table class="newsletter-shot" role="presentation" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="newsletter-shot-img" valign="top" style="padding:0 20px 16px 0;">
+          <img src="/images/birdr-photo-quiz.png" width="220" alt="{% mt "Birdr photo quiz: a gull on water and six species to choose from" %}">
+        </td>
+        <td class="newsletter-shot-copy" valign="middle" style="padding:0 0 16px 0;">
+          <p>
+            {% mt "There are quizzes for every level. Beginners start with distinctive species. If you already know your local birds, pick a harder quiz and work through the lookalikes." %}
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table class="newsletter-shot" role="presentation" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="newsletter-shot-img" valign="top" style="padding:0 20px 16px 0;">
+          <img src="/images/birdr-new-game.png" width="220" alt="{% mt "New game: pick a country, a language for species names, and a difficulty" %}">
+        </td>
+        <td class="newsletter-shot-copy" valign="middle" style="padding:0 0 16px 0;">
+          <p>
+            {% mt "Choose your country (or another list for a trip), pick a level, and start. Birdr is free, open source, and has no ads. It is not an auto-ID camera: you practise the field marks yourself." %}
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table class="newsletter-shot" role="presentation" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="newsletter-shot-img" valign="top" style="padding:0 20px 16px 0;">
+          <img src="/images/birdr-species-review.png" width="220" alt="{% mt "Species page: Gull-billed Tern with photos, videos and sounds to review after an answer" %}">
+        </td>
+        <td class="newsletter-shot-copy" valign="middle" style="padding:0 0 16px 0;">
+          <p>
+            {% mt "After each answer you can open the bird and look at more photos, videos and sounds. Review the species you missed and the pairs you confused. That is how you finally get those warblers right." %}
+          </p>
+        </td>
+      </tr>
+    </table>
+    <p>
+      {% mt "Birdr is free on iPhone, Android and at <a href=\"https://birdr.pro/\">https://birdr.pro</a>. Sign up if you want to keep your progress." %}
+    </p>
+    <p>
+      {% mt "App Store: <a href=\"{apple}\">{apple}</a>." apple=app_store_url %}
+      <br>
+      {% mt "Google Play: <a href=\"{play}\">{play}</a>." play=play_store_url %}
+    </p>
+    </div>
+  </article>
+  <section class="newsletter-more-media" aria-labelledby="newsletter-more-heading">
+    <h3 id="newsletter-more-heading">{% mt "More media" %}</h3>
+    <p>
+      {% mt "Extra screenshots if you want to show more of the app. They are not included when you press Copy." %}
+    </p>
+    <div class="newsletter-more-grid">
+    <div class="newsletter-more-item">
+      <img src="/images/birdr-tricky-birds.png" width="220" alt="{% mt "My Tricky Birds: a list of confusing pairs for the Netherlands, with Practice buttons and FIXED badges" %}">
+      <p>{% mt "My Tricky Birds keeps the lookalikes you mix up, so you can practise that pair until it sticks." %}</p>
+    </div>
+    <div class="newsletter-more-item">
+      <img src="/images/birdr-tricky-practice.png" width="220" alt="{% mt "Pair practice: Eurasian Treecreeper versus Short-toed Treecreeper, with the correct species marked" %}">
+      <p>{% mt "Practise a confusing pair until the difference sticks." %}</p>
+    </div>
+    <div class="newsletter-more-item">
+      <img src="/images/birdr-tricky-results.png" width="220" alt="{% mt "Pair practice results: 18 of 20 correct, and the two treecreepers no longer seem confusing" %}">
+      <p>{% mt "See when a confusing pair is fixed." %}</p>
+    </div>
+    <div class="newsletter-more-item">
+      <img src="/images/birdr-country-challenge.png" width="220" alt="{% mt "Country challenge: United States Eastern, question 2 of 10, identify a Yellow-rumped Warbler" %}">
+      <p>{% mt "A Country Challenge takes you through levels on one country’s list, from easy to hard." %}</p>
+    </div>
+    </div>
+  </section>
+  <script>
+  (function () {
+    var btn = document.querySelector('[data-newsletter-copy]');
+    var source = document.getElementById('newsletter-copy-body');
+    if (!btn || !source) return;
+    var idle = btn.getAttribute('data-label') || 'Copy';
+    var done = btn.getAttribute('data-copied') || 'Copied';
+    var fail = btn.getAttribute('data-failed') || 'Could not copy';
+    var timer;
+
+    function flash(text) {
+      btn.textContent = text;
+      clearTimeout(timer);
+      timer = setTimeout(function () { btn.textContent = idle; }, 2000);
+    }
+
+    function filledClone() {
+      var clone = source.cloneNode(true);
+      var imgs = clone.querySelectorAll('img');
+      for (var i = 0; i < imgs.length; i++) {
+        imgs[i].setAttribute('src', imgs[i].src);
+      }
+      var links = clone.querySelectorAll('a');
+      for (var j = 0; j < links.length; j++) {
+        links[j].setAttribute('href', links[j].href);
+      }
+      return clone;
+    }
+
+    function htmlPayload() {
+      return '<html><body><!--StartFragment-->' + filledClone().innerHTML + '<!--EndFragment--></body></html>';
+    }
+
+    function execCopy() {
+      var holder = document.createElement('div');
+      holder.setAttribute('contenteditable', 'true');
+      holder.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;opacity:0;overflow:hidden;';
+      holder.appendChild(filledClone());
+      document.body.appendChild(holder);
+      holder.focus();
+      var selection = window.getSelection();
+      var range = document.createRange();
+      range.selectNodeContents(holder);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      selection.removeAllRanges();
+      document.body.removeChild(holder);
+      btn.focus();
+      return ok;
+    }
+
+    btn.addEventListener('click', function () {
+      var text = (source.innerText || '').replace(/\n{3,}/g, '\n\n').trim();
+      var copiedOk = execCopy();
+      if (navigator.clipboard && window.ClipboardItem) {
+        var html = htmlPayload();
+        var item;
+        try {
+          item = new ClipboardItem({
+            'text/html': new Blob([html], { type: 'text/html' }),
+            'text/plain': new Blob([text], { type: 'text/plain' })
+          });
+        } catch (e) {
+          item = new ClipboardItem({
+            'text/html': Promise.resolve(new Blob([html], { type: 'text/html' })),
+            'text/plain': Promise.resolve(new Blob([text], { type: 'text/plain' }))
+          });
+        }
+        navigator.clipboard.write([item]).then(function () {
+          flash(done);
+        }).catch(function () {
+          if (copiedOk) flash(done);
+          else if (navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function () { flash(done); }).catch(function () { flash(fail); });
+          } else {
+            flash(fail);
+          }
+        });
+        return;
+      }
+      flash(copiedOk ? done : fail);
+    });
+  })();
+  </script>
+</div>

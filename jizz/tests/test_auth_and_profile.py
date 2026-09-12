@@ -1,11 +1,13 @@
 """
 Tests for sign-up, profile (get/update), and my-games endpoints.
 """
-from django.test import TestCase
+from django.test import SimpleTestCase, TestCase
 from django.contrib.auth import get_user_model
 from rest_framework.test import APIClient
 from rest_framework import status
 from rest_framework_simplejwt.tokens import RefreshToken
+
+from jizz.app_languages import species_language_from_app_language
 
 from jizz.models import (
     Country,
@@ -20,6 +22,15 @@ from jizz.models import (
 from media.models import Media
 
 User = get_user_model()
+
+
+class SpeciesLanguageFromAppTests(SimpleTestCase):
+    def test_maps_app_locales_onto_species_name_ids(self):
+        self.assertEqual(species_language_from_app_language('nl'), 'nl')
+        self.assertEqual(species_language_from_app_language('pt-BR'), 'pt_BR')
+        self.assertEqual(species_language_from_app_language('pt'), 'pt_BR')
+        self.assertEqual(species_language_from_app_language('ja-JP'), 'ja')
+        self.assertEqual(species_language_from_app_language('xx'), 'en')
 
 
 class RegisterViewTestCase(TestCase):
@@ -237,7 +248,7 @@ class ProfileViewTestCase(TestCase):
         self.assertEqual(self.user.profile.country_id, self.country.code)
         self.assertEqual(response.data.get('app_language', ''), '')
 
-    def test_profile_update_app_language_does_not_change_bird_names(self):
+    def test_profile_update_app_language_also_updates_bird_names(self):
         self.client.put('/api/profile/', {'language': 'nl'}, format='json')
         response = self.client.put(
             '/api/profile/',
@@ -246,10 +257,31 @@ class ProfileViewTestCase(TestCase):
         )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['app_language'], 'es')
-        self.assertEqual(response.data['language'], 'nl')
+        self.assertEqual(response.data['language'], 'es')
         self.user.profile.refresh_from_db()
         self.assertEqual(self.user.profile.app_language, 'es')
-        self.assertEqual(self.user.profile.language, 'nl')
+        self.assertEqual(self.user.profile.language, 'es')
+
+    def test_profile_update_app_language_keeps_explicit_bird_names(self):
+        response = self.client.put(
+            '/api/profile/',
+            {'app_language': 'nl', 'language': 'la'},
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['app_language'], 'nl')
+        self.assertEqual(response.data['language'], 'la')
+        self.user.profile.refresh_from_db()
+        self.assertEqual(self.user.profile.language, 'la')
+
+    def test_profile_update_app_language_maps_portuguese_bird_names(self):
+        response = self.client.put(
+            '/api/profile/',
+            {'app_language': 'pt-BR'},
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['language'], 'pt_BR')
 
     def test_profile_rejects_invalid_app_language(self):
         response = self.client.put(
@@ -258,6 +290,15 @@ class ProfileViewTestCase(TestCase):
             format='json',
         )
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_profile_accepts_italian_app_language(self):
+        response = self.client.put(
+            '/api/profile/',
+            {'app_language': 'it-IT'},
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['app_language'], 'it')
 
     def test_profile_update_receive_updates(self):
         response = self.client.put(
@@ -299,6 +340,22 @@ class ProfileViewTestCase(TestCase):
             format='json',
         )
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_profile_resizes_avatar_on_upload(self):
+        from io import BytesIO
+
+        from django.core.files.uploadedfile import SimpleUploadedFile
+        from PIL import Image
+
+        buf = BytesIO()
+        Image.new('RGB', (800, 600), (12, 80, 20)).save(buf, format='JPEG')
+        uploaded = SimpleUploadedFile('huge.jpg', buf.getvalue(), content_type='image/jpeg')
+        response = self.client.put('/api/profile/', {'avatar': uploaded}, format='multipart')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.user.profile.refresh_from_db()
+        self.assertTrue(self.user.profile.avatar)
+        with Image.open(self.user.profile.avatar.path) as saved:
+            self.assertLessEqual(max(saved.size), 256)
 
 
 class UserGamesViewTestCase(TestCase):

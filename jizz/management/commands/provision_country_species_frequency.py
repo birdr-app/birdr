@@ -24,6 +24,7 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 
 from jizz.models import CountrySpecies, Country, Species
+from jizz.st_subnational_regions import app_code_for_st_region
 from jizz.utils import (
     download_ebird_regional_zip,
     ebird_st_list_files,
@@ -218,6 +219,7 @@ class Command(BaseCommand):
             region_code = (row.get(region_col) or '').strip().upper()
             if not region_code:
                 continue
+            region_code = app_code_for_st_region(region_code, row.get('region_name')) or region_code
             if species_code_from_csv is None and 'species_code' in fieldnames:
                 species_code_from_csv = (row.get('species_code') or '').strip()
             try:

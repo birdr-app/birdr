@@ -1,6 +1,12 @@
 from django.test import SimpleTestCase, override_settings
 
-from media.wikimedia_urls import wikimedia_commons_thumb_url, wikimedia_display_url
+from media.wikimedia_urls import (
+    wikimedia_commons_thumb_url,
+    wikimedia_display_url,
+    wikimedia_video_ios_url,
+    wikimedia_video_original_url,
+    wikimedia_video_playback_url,
+)
 
 
 class WikimediaDisplayUrlTests(SimpleTestCase):
@@ -46,3 +52,51 @@ class WikimediaDisplayUrlTests(SimpleTestCase):
         # 900 is not a Wikimedia step; snap up to 960
         out = wikimedia_commons_thumb_url(self.ORIGINAL, 960)
         self.assertIn('/960px-', out)
+
+
+class WikimediaVideoUrlTests(SimpleTestCase):
+    ORIGINAL = (
+        'https://upload.wikimedia.org/wikipedia/commons/e/e6/'
+        'Huiszwaluw_zittend_op_schapenhek-4961660.webm'
+    )
+    OGV = (
+        'https://upload.wikimedia.org/wikipedia/commons/e/e0/'
+        'Pinicola_enucleator_CT2.ogv'
+    )
+
+    def test_rewrites_original_webm_to_480p_vp9(self):
+        out = wikimedia_video_playback_url(self.ORIGINAL)
+        self.assertEqual(
+            out,
+            'https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e6/'
+            'Huiszwaluw_zittend_op_schapenhek-4961660.webm/'
+            'Huiszwaluw_zittend_op_schapenhek-4961660.webm.480p.vp9.webm',
+        )
+
+    def test_ios_mov_from_original_and_from_480p(self):
+        mov = (
+            'https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e0/'
+            'Pinicola_enucleator_CT2.ogv/'
+            'Pinicola_enucleator_CT2.ogv.144p.mjpeg.mov'
+        )
+        self.assertEqual(wikimedia_video_ios_url(self.OGV), mov)
+        self.assertEqual(
+            wikimedia_video_ios_url(wikimedia_video_playback_url(self.OGV)),
+            mov,
+        )
+
+    def test_playback_is_stable_on_already_transcoded_url(self):
+        transcoded = wikimedia_video_playback_url(self.ORIGINAL)
+        self.assertEqual(wikimedia_video_playback_url(transcoded), transcoded)
+
+    def test_original_round_trip(self):
+        self.assertEqual(
+            wikimedia_video_original_url(wikimedia_video_playback_url(self.ORIGINAL)),
+            self.ORIGINAL,
+        )
+
+    def test_leaves_youtube_and_images_unchanged(self):
+        yt = 'https://www.youtube.com/embed/abc123'
+        jpg = 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Example_Bird.jpg'
+        self.assertEqual(wikimedia_video_playback_url(yt), yt)
+        self.assertEqual(wikimedia_video_playback_url(jpg), jpg)

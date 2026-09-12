@@ -6,17 +6,22 @@ Avoids join+distinct+ORDER BY RANDOM() on large tables; uses ID lists and random
 
 from __future__ import annotations
 
+import hashlib
 import random
 from typing import Iterable, Sequence
 
 from django.core.cache import cache
-from django.db.models import Count, Exists, Max, OuterRef, Q
+from django.db.models import Count, Exists, Max, OuterRef
 
 from jizz.models import CountrySpecies, Game, Question, QuestionOption, Species
 from media.models import Media, MediaReview
 
 _GAME_OPTION_SPECIES_CACHE_TTL = 60 * 60 * 24
 _GAME_TARGET_SPECIES_CACHE_TTL = 60 * 60 * 24
+_SPECIES_TAX_CACHE_TTL = 60 * 60 * 24
+
+# genus_id, family_id, order_id, tax_ordering
+TaxRow = tuple[int | None, int | None, int | None, float | None]
 
 _MEDIA_TYPE = {
     'images': 'image',
@@ -73,12 +78,49 @@ def game_has_candidate_species(game: Game) -> bool:
     return bool(question_target_species_ids(game))
 
 
-def _option_species_cache_key(game_id: int) -> str:
-    return f'jizz:game_option_species:{game_id}'
+def _species_pool_filter_key(game: Game) -> str:
+    """Stable key for country/rarity/media/tax/season/status filters (shared across games)."""
+    statuses = ','.join(country_statuses_for_game(game))
+    tax = game.tax_family or game.tax_order or game.species_group or ''
+    rarity = effective_rarity(game) or ''
+    season = game.season or ''
+    return (
+        f'{game.country_id or ""}:{rarity}:{game.media or ""}:{tax}:{season}:'
+        f'{statuses}:{game.game_type or ""}'
+    )
 
 
-def _target_species_cache_key(game_id: int) -> str:
-    return f'jizz:game_target_species:{game_id}'
+def _option_species_cache_key(game: Game) -> str:
+    return f'jizz:option_species:{_species_pool_filter_key(game)}'
+
+
+def _target_species_cache_key(game: Game) -> str:
+    difficult = '1' if game.dificult_species else '0'
+    return f'jizz:target_species:{_species_pool_filter_key(game)}:{difficult}'
+
+
+def _eligible_media_exists(media_type: str) -> Exists:
+    """True when the species has playable media (approved, or else not rejected)."""
+    return Exists(
+        Media.objects.filter(
+            species_id=OuterRef('pk'),
+            type=media_type,
+            hide=False,
+        ).filter(
+            Exists(
+                MediaReview.objects.filter(
+                    media_id=OuterRef('id'),
+                    review_type=MediaReview.APPROVED,
+                )
+            )
+            | ~Exists(
+                MediaReview.objects.filter(
+                    media_id=OuterRef('id'),
+                    review_type=MediaReview.REJECTED,
+                )
+            )
+        )
+    )
 
 
 def _query_option_species_ids(game: Game) -> list[int]:
@@ -86,26 +128,25 @@ def _query_option_species_ids(game: Game) -> list[int]:
     media_type = media_type_for_game(game)
     statuses = country_statuses_for_game(game)
 
+    from jizz.services.seasonal_frequency import filter_country_species_ids_for_game
+
     country_species = CountrySpecies.objects.filter(
         country_id=game.country_id,
         status__in=statuses,
-    ).filter(Game.country_species_rarity_q(effective_rarity(game)))
+    )
+    species_ids = filter_country_species_ids_for_game(game, country_species)
 
     species_qs = Species.objects.filter(
-        id__in=country_species.values('species_id'),
+        id__in=species_ids,
     ).filter(
-        Exists(
-            Media.objects.filter(
-                species_id=OuterRef('pk'),
-                type=media_type,
-                hide=False,
-            )
-        )
+        _eligible_media_exists(media_type)
     )
     if game.tax_family:
         species_qs = species_qs.filter(taxonomic_family__name_latin=game.tax_family)
     elif game.tax_order:
         species_qs = species_qs.filter(taxonomic_order__name_latin=game.tax_order)
+    elif game.species_group:
+        species_qs = species_qs.filter(species_group__slug=game.species_group)
 
     return list(species_qs.values_list('id', flat=True))
 
@@ -114,11 +155,9 @@ def candidate_species_ids(game: Game) -> list[int]:
     """
     Species IDs eligible for answer options: country list + rarity + tax filter + media.
 
-    Cached per game — filters are fixed for the lifetime of a session.
+    Cached by filter (not game id) so sessions with the same settings share the pool.
     """
-    if not game.pk:
-        return _query_option_species_ids(game)
-    cache_key = _option_species_cache_key(game.pk)
+    cache_key = _option_species_cache_key(game)
     cached = cache.get(cache_key)
     if cached is not None:
         return cached
@@ -138,11 +177,10 @@ def question_target_species_ids(
     the normal country/rarity/tax/media filters. Answer options still use the
     full candidate_species_ids pool.
     """
-    if game.pk:
-        cache_key = _target_species_cache_key(game.pk)
-        cached = cache.get(cache_key)
-        if cached is not None:
-            return cached
+    cache_key = _target_species_cache_key(game)
+    cached = cache.get(cache_key)
+    if cached is not None:
+        return cached
 
     ids = list(option_ids) if option_ids is not None else candidate_species_ids(game)
     if not game.dificult_species or not game.country_id:
@@ -161,8 +199,7 @@ def question_target_species_ids(
         else:
             target_ids = ids
 
-    if game.pk:
-        cache.set(_target_species_cache_key(game.pk), target_ids, _GAME_TARGET_SPECIES_CACHE_TTL)
+    cache.set(cache_key, target_ids, _GAME_TARGET_SPECIES_CACHE_TTL)
     return target_ids
 
 
@@ -240,7 +277,9 @@ def build_extreme_target_weights(
     game: Game,
     candidate_ids: Sequence[int],
 ) -> dict[int, float]:
-    freq_map = _species_frequency_map(game.country_id, candidate_ids)
+    from jizz.services.seasonal_frequency import frequency_map_for_game
+
+    freq_map = frequency_map_for_game(game, candidate_ids)
     weights = {
         sid: EXTREME_FREQUENCY_WEIGHTS.get(freq_map.get(sid), EXTREME_FREQUENCY_WEIGHTS[None])
         for sid in candidate_ids
@@ -356,32 +395,95 @@ def _species_map(ids: Iterable[int]) -> dict[int, Species]:
     }
 
 
+def _tax_row_from_species(species: Species) -> TaxRow:
+    return (
+        species.taxonomic_genus_id,
+        species.taxonomic_family_id,
+        species.taxonomic_order_id,
+        species.tax_ordering,
+    )
+
+
+def _species_tax_cache_key(ids: Iterable[int]) -> str:
+    payload = ','.join(str(i) for i in sorted(ids))
+    digest = hashlib.sha256(payload.encode()).hexdigest()[:32]
+    return f'jizz:species_tax:{digest}'
+
+
+def _species_tax_map(ids: Iterable[int]) -> dict[int, TaxRow]:
+    """Slim genus/family/order/ordering map; cached for a candidate ID set."""
+    id_list = list(ids)
+    if not id_list:
+        return {}
+    cache_key = _species_tax_cache_key(id_list)
+    cached = cache.get(cache_key)
+    if cached is not None:
+        missing = [sid for sid in id_list if sid not in cached]
+        if not missing:
+            return {sid: cached[sid] for sid in id_list}
+        extra = _load_species_tax_rows(missing)
+        cached.update(extra)
+        cache.set(cache_key, cached, _SPECIES_TAX_CACHE_TTL)
+        return {sid: cached[sid] for sid in id_list if sid in cached}
+    rows = _load_species_tax_rows(id_list)
+    cache.set(cache_key, rows, _SPECIES_TAX_CACHE_TTL)
+    return rows
+
+
+def _load_species_tax_rows(ids: Iterable[int]) -> dict[int, TaxRow]:
+    return {
+        s.id: (
+            s.taxonomic_genus_id,
+            s.taxonomic_family_id,
+            s.taxonomic_order_id,
+            s.tax_ordering,
+        )
+        for s in Species.objects.filter(id__in=ids).only(
+            'id',
+            'taxonomic_genus_id',
+            'taxonomic_family_id',
+            'taxonomic_order_id',
+            'tax_ordering',
+        )
+    }
+
+
+def _sort_key_for_tax_row(species_id: int, tax: TaxRow) -> tuple:
+    ordering = tax[3]
+    if ordering is not None:
+        return (0, ordering, species_id)
+    return (1, species_id)
+
+
 def _sort_key_for_taxonomic_neighbor(species: Species) -> tuple:
-    if species.tax_ordering is not None:
-        return (0, species.tax_ordering, species.id)
-    return (1, species.id)
+    return _sort_key_for_tax_row(species.id, _tax_row_from_species(species))
 
 
 ADVANCED_DISTRACTOR_COUNT = 5
 
 
 def _pick_taxonomic_neighbors(
-    answer_species: Species,
+    answer_id: int,
+    answer_tax: TaxRow,
     pool_ids: Sequence[int],
-    species_by_id: dict[int, Species],
+    tax_by_id: dict[int, TaxRow],
     count: int,
 ) -> list[int]:
     """Pick up to count species nearest to answer by tax_ordering (or id when null)."""
     if count <= 0 or not pool_ids:
         return []
 
-    answer_key = _sort_key_for_taxonomic_neighbor(answer_species)
-    sorted_ids = sorted(pool_ids, key=lambda sid: _sort_key_for_taxonomic_neighbor(species_by_id[sid]))
+    empty: TaxRow = (None, None, None, None)
+    answer_key = _sort_key_for_tax_row(answer_id, answer_tax)
+    sorted_ids = sorted(
+        pool_ids,
+        key=lambda sid: _sort_key_for_tax_row(sid, tax_by_id.get(sid, empty)),
+    )
 
     lower_ids: list[int] = []
     higher_ids: list[int] = []
     for sid in sorted_ids:
-        key = _sort_key_for_taxonomic_neighbor(species_by_id[sid])
+        key = _sort_key_for_tax_row(sid, tax_by_id.get(sid, empty))
         if key < answer_key:
             lower_ids.append(sid)
         elif key > answer_key:
@@ -414,29 +516,32 @@ def advanced_option_species(
     """Advanced MC: distractors prefer same genus, then family, then order, then global tax order."""
     answer_id = answer_species.id
     all_ids = set(candidate_ids) | {answer_id}
-    species_by_id = _species_map(all_ids)
-    answer = species_by_id.get(answer_id, answer_species)
+    tax_by_id = _species_tax_map(all_ids)
+    answer_tax = tax_by_id.get(answer_id) or _tax_row_from_species(answer_species)
+    tax_by_id[answer_id] = answer_tax
+    genus_id, family_id, order_id, _ = answer_tax
 
     candidate_set = {sid for sid in candidate_ids if sid != answer_id}
+    empty_tax: TaxRow = (None, None, None, None)
     genus_tier: set[int] = set()
-    if answer.taxonomic_genus_id:
+    if genus_id:
         genus_tier = {
             sid for sid in candidate_set
-            if species_by_id[sid].taxonomic_genus_id == answer.taxonomic_genus_id
+            if tax_by_id.get(sid, empty_tax)[0] == genus_id
         }
 
     family_tier = {
         sid for sid in candidate_set
         if sid not in genus_tier
-        and answer.taxonomic_family_id
-        and species_by_id[sid].taxonomic_family_id == answer.taxonomic_family_id
+        and family_id
+        and tax_by_id.get(sid, empty_tax)[1] == family_id
     }
     order_tier = {
         sid for sid in candidate_set
         if sid not in genus_tier
         and sid not in family_tier
-        and answer.taxonomic_order_id
-        and species_by_id[sid].taxonomic_order_id == answer.taxonomic_order_id
+        and order_id
+        and tax_by_id.get(sid, empty_tax)[2] == order_id
     }
 
     distractor_ids: list[int] = []
@@ -445,14 +550,17 @@ def advanced_option_species(
             break
         remaining = [sid for sid in tier if sid not in distractor_ids]
         need = ADVANCED_DISTRACTOR_COUNT - len(distractor_ids)
-        for sid in _pick_taxonomic_neighbors(answer, remaining, species_by_id, need):
+        for sid in _pick_taxonomic_neighbors(
+            answer_id, answer_tax, remaining, tax_by_id, need
+        ):
             if sid not in distractor_ids:
                 distractor_ids.append(sid)
             if len(distractor_ids) >= ADVANCED_DISTRACTOR_COUNT:
                 break
 
+    species_by_id = _species_map(list(distractor_ids) + [answer_id])
     options = [species_by_id[sid] for sid in distractor_ids if sid in species_by_id]
-    options.append(answer)
+    options.append(species_by_id.get(answer_id, answer_species))
     return options
 
 
@@ -495,11 +603,15 @@ def species_practice_target_pool_ids(game: Game) -> list[int]:
     if not family_mates:
         remaining = list(all_candidates - pool)
         if remaining:
+            tax_by_id = {
+                sid: _tax_row_from_species(sp) for sid, sp in species_by_id.items()
+            }
             pool |= set(
                 _pick_taxonomic_neighbors(
-                    focus,
+                    focus.id,
+                    _tax_row_from_species(focus),
                     remaining,
-                    species_by_id,
+                    tax_by_id,
                     SPECIES_PRACTICE_TAX_NEIGHBOR_COUNT,
                 )
             )

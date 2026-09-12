@@ -1,0 +1,638 @@
+{% extends "jizz/data_base.html" %}
+
+{% block title %}Marketing website · Birdr data{% endblock %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css">
+    <style>
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .summary-card {
+            background: var(--birdr-50);
+            border: 1px solid var(--birdr-100);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .summary-card .value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--birdr-800);
+        }
+
+        .summary-card .label {
+            font-size: 0.85rem;
+            color: #6d5c48;
+        }
+
+        .chart-wrap {
+            position: relative;
+            height: 420px;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .chart-wrap.paths {
+            height: 480px;
+        }
+
+        .map-wrap {
+            height: 420px;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .map-legend {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            font-size: 0.85rem;
+            color: #6d5c48;
+            margin: 0 0 1.5rem;
+            max-width: 420px;
+        }
+
+        .map-legend-bar {
+            flex: 1;
+            height: 14px;
+            border-radius: 6px;
+            border: 1px solid var(--birdr-200);
+        }
+
+        .map-legend-label {
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .granularity-group {
+            display: inline-flex;
+            border: 1px solid var(--birdr-200);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .granularity-group label {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.45rem 0.75rem;
+            margin: 0;
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            background: #fff;
+            border-right: 1px solid var(--birdr-100);
+        }
+
+        .granularity-group label:last-child { border-right: none; }
+
+        .granularity-group input { accent-color: var(--birdr-500); }
+
+        input[type="date"] {
+            padding: 0.45rem 0.65rem;
+            border: 1px solid var(--birdr-200);
+            border-radius: 8px;
+            background: #fff;
+            color: var(--birdr-800);
+        }
+
+        button.btn {
+            padding: 0.45rem 0.85rem;
+            border-radius: 8px;
+            border: 1px solid var(--birdr-500);
+            background: var(--birdr-500);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        button.btn-secondary {
+            background: #fff;
+            color: var(--birdr-800);
+            border-color: var(--birdr-200);
+        }
+
+        .legend-note {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 1.5rem;
+            font-size: 0.88rem;
+            color: #6d5c48;
+            margin-bottom: 0.5rem;
+        }
+
+        .legend-dot {
+            display: inline-block;
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 999px;
+            margin-right: 0.35rem;
+            vertical-align: middle;
+        }
+
+        .legend-dot.visits { background: #8b6419; }
+        .legend-dot.visitors { background: #2a6b8b; }
+
+        .path-cell a { word-break: break-all; }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1>Marketing website</h1>
+    <p class="muted">
+        Page views on the public Birdr site (<code>/site/</code>), excluding search crawlers
+        and private pages such as My edits.
+        Unique visitors are distinct IP addresses in the selected range.
+        Tracking of marketing pages started when this dashboard was added, so older dates may be empty.
+    </p>
+
+    <form class="toolbar" id="marketing-website-form" method="get" action="{% url 'data-marketing-website' %}">
+        <label>
+            Start
+            <input type="date" name="start" id="start-date" value="{{ start }}">
+        </label>
+        <label>
+            End
+            <input type="date" name="end" id="end-date" value="{{ end }}">
+        </label>
+        <div>
+            <div class="granularity-group">
+                <label>
+                    <input type="radio" name="granularity" value="month" {% if granularity == "month" %}checked{% endif %}>
+                    <span>Month</span>
+                </label>
+                <label>
+                    <input type="radio" name="granularity" value="week" {% if granularity == "week" %}checked{% endif %}>
+                    <span>Week</span>
+                </label>
+                <label>
+                    <input type="radio" name="granularity" value="day" {% if granularity == "day" %}checked{% endif %}>
+                    <span>Day</span>
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn">Update</button>
+        <button type="button" class="btn btn-secondary" id="reset-zoom">Reset zoom</button>
+    </form>
+
+    <div class="summary-grid">
+        <div class="summary-card">
+            <div class="value" id="total-visits">{{ chart_json.total_visits }}</div>
+            <div class="label">Page views</div>
+        </div>
+        <div class="summary-card">
+            <div class="value" id="unique-visitors">{{ chart_json.unique_visitors }}</div>
+            <div class="label">Unique visitors</div>
+        </div>
+        <div class="summary-card">
+            <div class="value" id="country-count">{{ chart_json.country_count }}</div>
+            <div class="label">Countries</div>
+        </div>
+    </div>
+
+    <div class="legend-note">
+        <span><span class="legend-dot visits"></span>Page views</span>
+        <span><span class="legend-dot visitors"></span>Unique visitors (distinct IPs)</span>
+    </div>
+
+    <div class="chart-wrap">
+        <canvas id="marketing-visits-chart"></canvas>
+    </div>
+
+    <h2>Most visited pages</h2>
+    <p class="muted">Locale prefixes are grouped, so Dutch and English home pages count as one URL.</p>
+    <div class="chart-wrap paths">
+        <canvas id="marketing-paths-chart"></canvas>
+    </div>
+    <table class="data-table" id="paths-table">
+        <thead>
+            <tr>
+                <th>Page</th>
+                <th>Path</th>
+                <th class="num">Views</th>
+                <th class="num">Visitors</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>Visitors by country</h2>
+    <p class="muted">Country comes from the visitor’s Cloudflare country header when present.</p>
+    <div id="marketing-world-map" class="map-wrap"></div>
+    <div id="marketing-map-legend" class="map-legend" hidden>
+        <span class="map-legend-label" id="marketing-map-legend-min">0</span>
+        <div class="map-legend-bar" aria-hidden="true"></div>
+        <span class="map-legend-label" id="marketing-map-legend-max">0</span>
+        <span>views</span>
+    </div>
+
+    <table class="data-table" id="countries-table">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th class="num">Views</th>
+                <th class="num">Visitors</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    {{ chart_json|json_script:"marketing-website-data" }}
+{% endblock %}
+
+{% block extra_body %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.2.0/dist/chartjs-plugin-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
+    <script>
+        (function () {
+            const apiUrl = "{% url 'data-marketing-website-api' %}";
+            const pageUrl = "{% url 'data-marketing-website' %}";
+            const initial = JSON.parse(document.getElementById("marketing-website-data").textContent);
+            const form = document.getElementById("marketing-website-form");
+            const canvas = document.getElementById("marketing-visits-chart");
+            let chart = null;
+            let pathsChart = null;
+            let worldMap = null;
+
+            const DEFAULT_MAP_STYLE = {
+                color_scale: ["#dcc19c", "#d4b88a", "#c5a470", "#b8923a", "#ae8027", "#8b6419"],
+                region_initial_fill: "#e0e0e0",
+                region_stroke: "#ffffff",
+                region_stroke_width: 0.4,
+            };
+
+            function mapStyleFromPayload(payload) {
+                const style = payload && payload.map_style ? payload.map_style : DEFAULT_MAP_STYLE;
+                return {
+                    color_scale: Array.isArray(style.color_scale) && style.color_scale.length
+                        ? style.color_scale
+                        : DEFAULT_MAP_STYLE.color_scale,
+                    region_initial_fill: style.region_initial_fill || DEFAULT_MAP_STYLE.region_initial_fill,
+                    region_stroke: style.region_stroke || DEFAULT_MAP_STYLE.region_stroke,
+                    region_stroke_width: style.region_stroke_width ?? DEFAULT_MAP_STYLE.region_stroke_width,
+                };
+            }
+
+            function normalizeCountryMap(raw) {
+                const values = {};
+                Object.entries(raw || {}).forEach(([code, count]) => {
+                    const n = Number(count);
+                    if (Number.isFinite(n) && n > 0) {
+                        values[String(code).toUpperCase()] = n;
+                    }
+                });
+                return values;
+            }
+
+            function hexToRgb(hex) {
+                const n = parseInt(hex.slice(1), 16);
+                return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+            }
+
+            function rgbToHex(r, g, b) {
+                return `#${[r, g, b].map((x) => x.toString(16).padStart(2, "0")).join("")}`;
+            }
+
+            function lerpHex(a, b, t) {
+                const c1 = hexToRgb(a);
+                const c2 = hexToRgb(b);
+                return rgbToHex(
+                    Math.round(c1[0] + (c2[0] - c1[0]) * t),
+                    Math.round(c1[1] + (c2[1] - c1[1]) * t),
+                    Math.round(c1[2] + (c2[2] - c1[2]) * t),
+                );
+            }
+
+            function colorAtRatio(ratio, colorScale) {
+                const t = Math.max(0, Math.min(1, ratio));
+                const pos = t * (colorScale.length - 1);
+                const i = Math.floor(pos);
+                const f = pos - i;
+                if (i >= colorScale.length - 1) {
+                    return colorScale[colorScale.length - 1];
+                }
+                return lerpHex(colorScale[i], colorScale[i + 1], f);
+            }
+
+            function countToRatio(count, min, max) {
+                if (max <= min) {
+                    return 1;
+                }
+                const v = Math.max(Number(count), min);
+                const logMin = Math.log(min);
+                const logMax = Math.log(max);
+                return (Math.log(v) - logMin) / (logMax - logMin || 1);
+            }
+
+            function buildCountryColors(values, min, max, colorScale) {
+                const colors = {};
+                Object.entries(values).forEach(([code, count]) => {
+                    colors[code] = colorAtRatio(countToRatio(count, min, max), colorScale);
+                });
+                return colors;
+            }
+
+            function applyRegionColors(map, colorByCode) {
+                if (!map || !map.regions) {
+                    return;
+                }
+                Object.entries(colorByCode).forEach(([code, color]) => {
+                    const entry = map.regions[code];
+                    if (entry && entry.element && typeof entry.element.setStyle === "function") {
+                        entry.element.setStyle("fill", color);
+                    }
+                });
+            }
+
+            function formatLabel(row, granularity) {
+                const start = new Date(row.period + "T00:00:00");
+                if (granularity === "month") {
+                    return start.toLocaleDateString(undefined, { month: "short", year: "numeric" });
+                }
+                if (granularity === "week") {
+                    const end = new Date(row.period_end + "T00:00:00");
+                    const fmt = { month: "short", day: "numeric" };
+                    return start.toLocaleDateString(undefined, fmt) + " – " + end.toLocaleDateString(undefined, fmt);
+                }
+                return start.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+            }
+
+            function updateSummary(payload) {
+                document.getElementById("total-visits").textContent = payload.total_visits;
+                document.getElementById("unique-visitors").textContent = payload.unique_visitors;
+                document.getElementById("country-count").textContent = payload.country_count;
+            }
+
+            function buildChart(payload) {
+                const labels = payload.series.map((row) => formatLabel(row, payload.granularity));
+                const visits = payload.series.map((row) => row.visits);
+                const visitors = payload.series.map((row) => row.visitors);
+
+                if (chart) {
+                    chart.destroy();
+                }
+
+                chart = new Chart(canvas, {
+                    type: "bar",
+                    data: {
+                        labels,
+                        datasets: [
+                            {
+                                label: "Page views",
+                                data: visits,
+                                backgroundColor: "rgba(139, 100, 25, 0.75)",
+                                borderColor: "#8b6419",
+                                borderWidth: 1,
+                                yAxisID: "y",
+                                order: 2,
+                            },
+                            {
+                                label: "Unique visitors",
+                                data: visitors,
+                                type: "line",
+                                borderColor: "#2a6b8b",
+                                backgroundColor: "rgba(42, 107, 139, 0.15)",
+                                borderWidth: 2,
+                                tension: 0.25,
+                                pointRadius: payload.granularity === "day" ? 0 : 3,
+                                yAxisID: "y1",
+                                order: 1,
+                            },
+                        ],
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: { mode: "index", intersect: false },
+                        plugins: {
+                            legend: { position: "top" },
+                            zoom: {
+                                pan: {
+                                    enabled: true,
+                                    mode: "x",
+                                    modifierKey: "shift",
+                                },
+                                zoom: {
+                                    wheel: { enabled: true },
+                                    pinch: { enabled: true },
+                                    mode: "x",
+                                },
+                                limits: {
+                                    x: { min: "original", max: "original" },
+                                },
+                            },
+                        },
+                        scales: {
+                            x: {
+                                ticks: {
+                                    maxRotation: 45,
+                                    minRotation: 0,
+                                    autoSkip: true,
+                                    maxTicksLimit: payload.granularity === "day" ? 20 : 14,
+                                },
+                            },
+                            y: {
+                                type: "linear",
+                                position: "left",
+                                title: { display: true, text: "Page views" },
+                                beginAtZero: true,
+                            },
+                            y1: {
+                                type: "linear",
+                                position: "right",
+                                title: { display: true, text: "Unique visitors" },
+                                beginAtZero: true,
+                                grid: { drawOnChartArea: false },
+                            },
+                        },
+                    },
+                });
+            }
+
+            function buildPathsChart(payload) {
+                const rows = (payload.top_paths || []).slice(0, 15);
+                if (pathsChart) {
+                    pathsChart.destroy();
+                }
+                pathsChart = new Chart(document.getElementById("marketing-paths-chart"), {
+                    type: "bar",
+                    data: {
+                        labels: rows.map((row) => row.label || row.path),
+                        datasets: [{
+                            label: "Page views",
+                            data: rows.map((row) => row.visits),
+                            backgroundColor: "rgba(139, 100, 25, 0.75)",
+                            borderColor: "#8b6419",
+                            borderWidth: 1,
+                        }],
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: "y",
+                        plugins: { legend: { display: false } },
+                        scales: { x: { beginAtZero: true } },
+                    },
+                });
+            }
+
+            function updatePathsTable(payload) {
+                const tbody = document.querySelector("#paths-table tbody");
+                tbody.innerHTML = "";
+                (payload.top_paths || []).forEach((row) => {
+                    const tr = document.createElement("tr");
+                    const page = document.createElement("td");
+                    page.textContent = row.label || row.path;
+                    const path = document.createElement("td");
+                    path.className = "path-cell";
+                    const link = document.createElement("a");
+                    link.href = row.path;
+                    link.textContent = row.path;
+                    path.appendChild(link);
+                    const visits = document.createElement("td");
+                    visits.className = "num";
+                    visits.textContent = String(row.visits);
+                    const visitors = document.createElement("td");
+                    visitors.className = "num";
+                    visitors.textContent = String(row.visitors);
+                    tr.append(page, path, visits, visitors);
+                    tbody.appendChild(tr);
+                });
+                if (!payload.top_paths || !payload.top_paths.length) {
+                    tbody.innerHTML = "<tr><td colspan=\"4\">No marketing page views in this period.</td></tr>";
+                }
+            }
+
+            function updateCountryTable(payload) {
+                const tbody = document.querySelector("#countries-table tbody");
+                tbody.innerHTML = "";
+                (payload.by_country || []).forEach((row) => {
+                    const tr = document.createElement("tr");
+                    const name = row.country_code
+                        ? `<strong>${row.country_code}</strong> · ${row.country_name}`
+                        : row.country_name;
+                    tr.innerHTML = `<td>${name}</td><td class="num">${row.visits}</td><td class="num">${row.visitors}</td>`;
+                    tbody.appendChild(tr);
+                });
+                if (!payload.by_country || !payload.by_country.length) {
+                    tbody.innerHTML = "<tr><td colspan=\"3\">No country data in this period.</td></tr>";
+                }
+            }
+
+            function updateMapLegend(values, colorScale) {
+                const legend = document.getElementById("marketing-map-legend");
+                const bar = legend.querySelector(".map-legend-bar");
+                const counts = Object.values(values);
+                if (!counts.length) {
+                    legend.hidden = true;
+                    return;
+                }
+                const min = Math.min(...counts);
+                const max = Math.max(...counts);
+                document.getElementById("marketing-map-legend-min").textContent = String(min);
+                document.getElementById("marketing-map-legend-max").textContent = String(max);
+                if (bar && colorScale.length) {
+                    bar.style.background = `linear-gradient(to right, ${colorScale.join(", ")})`;
+                }
+                legend.hidden = false;
+            }
+
+            function buildWorldMap(payload) {
+                const mapStyle = mapStyleFromPayload(payload);
+                const values = normalizeCountryMap(payload.country_map);
+                const container = document.getElementById("marketing-world-map");
+                if (worldMap && typeof worldMap.destroy === "function") {
+                    worldMap.destroy();
+                    worldMap = null;
+                }
+                container.innerHTML = "";
+                if (!Object.keys(values).length) {
+                    container.innerHTML = "<p class=\"muted\">No country data for this period.</p>";
+                    updateMapLegend({}, mapStyle.color_scale);
+                    return;
+                }
+
+                const counts = Object.values(values);
+                const min = Math.min(...counts);
+                const max = Math.max(...counts);
+                const colorByCode = buildCountryColors(values, min, max, mapStyle.color_scale);
+
+                worldMap = new jsVectorMap({
+                    selector: "#marketing-world-map",
+                    map: "world",
+                    regionStyle: {
+                        initial: {
+                            fill: mapStyle.region_initial_fill,
+                            stroke: mapStyle.region_stroke,
+                            "stroke-width": mapStyle.region_stroke_width,
+                        },
+                        hover: { fillOpacity: 0.85, cursor: "pointer" },
+                    },
+                    onLoaded(map) {
+                        applyRegionColors(map, colorByCode);
+                    },
+                    onRegionTooltipShow(event, tooltip, code) {
+                        const count = values[code] || 0;
+                        tooltip.text(`${code}: ${count} views`, true);
+                    },
+                });
+
+                applyRegionColors(worldMap, colorByCode);
+                updateMapLegend(values, mapStyle.color_scale);
+            }
+
+            function renderPayload(payload) {
+                updateSummary(payload);
+                buildChart(payload);
+                buildPathsChart(payload);
+                updatePathsTable(payload);
+                updateCountryTable(payload);
+                buildWorldMap(payload);
+            }
+
+            function readFormParams() {
+                const data = new FormData(form);
+                return {
+                    start: data.get("start"),
+                    end: data.get("end"),
+                    granularity: data.get("granularity") || "month",
+                };
+            }
+
+            async function loadChart(updateUrl) {
+                const params = readFormParams();
+                const query = new URLSearchParams(params);
+                const response = await fetch(apiUrl + "?" + query.toString(), {
+                    headers: { Accept: "application/json" },
+                });
+                if (!response.ok) {
+                    return;
+                }
+                const payload = await response.json();
+                renderPayload(payload);
+                if (updateUrl) {
+                    window.history.replaceState(null, "", pageUrl + "?" + query.toString());
+                }
+            }
+
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+                loadChart(true);
+            });
+
+            document.getElementById("reset-zoom").addEventListener("click", () => {
+                if (chart) {
+                    chart.resetZoom();
+                }
+            });
+
+            renderPayload(initial);
+        })();
+    </script>
+{% endblock %}

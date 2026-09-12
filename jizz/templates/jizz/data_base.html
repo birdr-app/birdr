@@ -294,6 +294,8 @@
             <a href="{% url 'data-index' %}" {% if active_section == 'home' %}class="nav-active"{% endif %}>Overview</a>
             <a href="{% url 'data-quiz-mistake-species' %}" {% if active_section == 'quiz-mistakes' %}class="nav-active"{% endif %}>Quiz mistakes</a>
             <a href="{% url 'data-games-played' %}" {% if active_section == 'games-played' %}class="nav-active"{% endif %}>Games played</a>
+            <a href="{% url 'data-marketing-website' %}" {% if active_section == 'marketing-website' %}class="nav-active"{% endif %}>Marketing website</a>
+            <a href="{% url 'data-most-reviews' %}" {% if active_section == 'most-reviews' %}class="nav-active"{% endif %}>Reviews</a>
             <a href="{% url 'data-country-challenge-leaderboard' %}" {% if active_section == 'country-challenge-leaderboard' %}class="nav-active"{% endif %}>Challenge leaderboard</a>
             <a href="{% url 'data-taxon-orders' %}" {% if active_section == 'taxons' %}class="nav-active"{% endif %}>Taxonomy</a>
             {% if user.is_staff %}

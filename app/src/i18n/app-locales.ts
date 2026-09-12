@@ -1,6 +1,6 @@
 /** App UI locales — distinct from bird-name / species language. */
 
-export const APP_LOCALES = ['en', 'nl', 'es', 'fr', 'de', 'pt-BR', 'ja'] as const;
+export const APP_LOCALES = ['en', 'nl', 'es', 'fr', 'de', 'it', 'pt-BR', 'ja'] as const;
 
 export type AppLocale = (typeof APP_LOCALES)[number];
 
@@ -10,6 +10,7 @@ export const APP_LOCALE_LABELS: Record<AppLocale, string> = {
   es: 'Español',
   fr: 'Français',
   de: 'Deutsch',
+  it: 'Italiano',
   'pt-BR': 'Português (Brasil)',
   ja: '日本語',
 };
@@ -49,6 +50,13 @@ export function getDeviceLanguageTag(): string {
 
 export function guessAppLocaleFromDevice(tag?: string | null): AppLocale {
   return matchAppLocale(tag ?? getDeviceLanguageTag()) ?? 'en';
+}
+
+/** App UI locale -> SpeciesName / game language id (`pt-BR` -> `pt_BR`). */
+export function speciesLanguageFromAppLocale(locale: string | null | undefined): string {
+  const next = matchAppLocale(locale);
+  if (next === 'pt-BR') return 'pt_BR';
+  return next ?? 'en';
 }
 
 /** Resolve UI locale: profile → stored → device → en. Empty profile means unset. */

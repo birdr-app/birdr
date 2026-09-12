@@ -8,7 +8,7 @@ import TaxOrderCombobox from "./tax-order-combobox";
 const SelectTaxOrder = () => {
   const intl = useIntl();
   const { taxOrders } = UseTaxOrder();
-  const { taxOrder, setTaxOrder, game } = useContext(AppContext);
+  const { taxOrder, setTaxOrder, setSpeciesGroup, game } = useContext(AppContext);
   const syncedGameToken = useRef<string | null>(null);
 
   useEffect(() => {
@@ -33,6 +33,7 @@ const SelectTaxOrder = () => {
     const orders = Array.isArray(taxOrders) ? taxOrders : [];
     const found = orders.find((t) => t.tax_order === orderName);
     setTaxOrder?.(found);
+    if (found) setSpeciesGroup?.(undefined);
   };
 
   const placeholder = intl.formatMessage({

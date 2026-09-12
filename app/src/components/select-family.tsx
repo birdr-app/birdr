@@ -8,7 +8,7 @@ import TaxFamilyCombobox from "./tax-family-combobox";
 const SelectTaxFamily = () => {
   const intl = useIntl();
   const { taxFamilies } = UseTaxFamily();
-  const { taxFamily, setTaxFamily, game } = useContext(AppContext);
+  const { taxFamily, setTaxFamily, setSpeciesGroup, game } = useContext(AppContext);
   const syncedGameToken = useRef<string | null>(null);
 
   useEffect(() => {
@@ -27,6 +27,7 @@ const SelectTaxFamily = () => {
 
   const onChange = (family: TaxFamily | undefined) => {
     setTaxFamily?.(family);
+    if (family) setSpeciesGroup?.(undefined);
   };
 
   const placeholder = intl.formatMessage({

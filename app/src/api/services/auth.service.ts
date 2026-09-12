@@ -28,6 +28,14 @@ export interface AuthError {
 /** Seconds before access token expiry to proactively refresh (clock skew + overlap). */
 const ACCESS_REFRESH_SKEW_SEC = 120;
 
+/** Same-tab login/logout. `storage` only fires in other tabs. */
+export const AUTH_CHANGED_EVENT = 'birdr-auth-changed';
+
+function notifyAuthChanged(): void {
+  if (typeof window === 'undefined') return;
+  window.dispatchEvent(new Event(AUTH_CHANGED_EVENT));
+}
+
 let ensureAccessPromise: Promise<boolean> | null = null;
 
 class AuthService {
@@ -311,6 +319,7 @@ class AuthService {
     localStorage.setItem('access_token', tokens.access);
     localStorage.setItem('refresh_token', tokens.refresh);
     localStorage.setItem('jw_token', tokens.access); // For backward compatibility
+    notifyAuthChanged();
   }
 
   /**
@@ -336,6 +345,7 @@ class AuthService {
     localStorage.removeItem('jw_token');
     clearBirdrJourneySession();
     localStorage.removeItem('player-token');
+    notifyAuthChanged();
   }
 
   /**

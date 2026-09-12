@@ -123,6 +123,18 @@
 
         .legend-dot.games { background: #8b6419; }
         .legend-dot.players { background: #2a6b8b; }
+
+        .most-games-footer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.75rem 1rem;
+            margin-top: 0.85rem;
+        }
+
+        #most-games {
+            scroll-margin-top: 1rem;
+        }
     </style>
 {% endblock %}
 
@@ -195,6 +207,54 @@
         </thead>
         <tbody></tbody>
     </table>
+
+    <h2 id="most-games-heading">Most games per user</h2>
+    <p class="muted">
+        All-time distinct games with a score, ordered by games played.
+        Linked accounts count as one user even if they used more than one player profile.
+        Players with the same name are grouped.
+    </p>
+    <table class="data-table" id="most-games">
+        <thead>
+            <tr>
+                <th class="num">#</th>
+                <th>User</th>
+                <th class="num">Games</th>
+                <th>First game</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in most_games_rows %}
+                <tr>
+                    <td class="num">{{ forloop.counter }}</td>
+                    <td>{{ row.name }}</td>
+                    <td class="num">{{ row.games }}</td>
+                    <td>{% if row.first_played %}{{ row.first_played|date:"j M Y" }}{% else %}—{% endif %}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="4">No games with scores yet.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if most_games_rest %}
+        <div class="most-games-footer">
+            <button
+                type="button"
+                class="btn btn-secondary"
+                id="most-games-load-more"
+                data-page-size="{{ most_games_page_size }}"
+                data-initial-count="{{ most_games_rows|length }}"
+            >
+                Load more
+            </button>
+            <p class="muted" id="most-games-shown-note" data-total="{{ most_games_total }}" data-initial="{{ most_games_rows|length }}">
+                Showing {{ most_games_rows|length }} of {{ most_games_total }}
+            </p>
+        </div>
+        {{ most_games_rest|json_script:"most-games-rest" }}
+    {% endif %}
 
     {{ chart_json|json_script:"games-played-data" }}
 {% endblock %}
@@ -430,6 +490,68 @@
                 }
             }
 
+            function formatFirstPlayed(iso) {
+                if (!iso) {
+                    return "—";
+                }
+                const date = new Date(String(iso).slice(0, 10) + "T00:00:00");
+                if (Number.isNaN(date.getTime())) {
+                    return "—";
+                }
+                return date.toLocaleDateString("en-GB", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                });
+            }
+
+            function setupMostGamesLoadMore() {
+                const restNode = document.getElementById("most-games-rest");
+                const button = document.getElementById("most-games-load-more");
+                const tbody = document.querySelector("#most-games tbody");
+                const shownNote = document.getElementById("most-games-shown-note");
+                if (!restNode || !button || !tbody) {
+                    return;
+                }
+                const rest = JSON.parse(restNode.textContent);
+                const pageSize = Number(button.dataset.pageSize || "20");
+                let shownExtra = 0;
+
+                function updateNote() {
+                    if (!shownNote) {
+                        return;
+                    }
+                    const total = Number(shownNote.dataset.total || "0");
+                    const initial = Number(shownNote.dataset.initial || "0");
+                    shownNote.textContent = `Showing ${initial + shownExtra} of ${total}`;
+                }
+
+                button.addEventListener("click", () => {
+                    const batch = rest.slice(shownExtra, shownExtra + pageSize);
+                    const startRank = Number(button.dataset.initialCount || "0") + shownExtra + 1;
+                    batch.forEach((row, index) => {
+                        const tr = document.createElement("tr");
+                        const rank = document.createElement("td");
+                        rank.className = "num";
+                        rank.textContent = String(startRank + index);
+                        const name = document.createElement("td");
+                        name.textContent = row.name || "";
+                        const games = document.createElement("td");
+                        games.className = "num";
+                        games.textContent = String(row.games);
+                        const first = document.createElement("td");
+                        first.textContent = formatFirstPlayed(row.first_played);
+                        tr.append(rank, name, games, first);
+                        tbody.appendChild(tr);
+                    });
+                    shownExtra += batch.length;
+                    updateNote();
+                    if (shownExtra >= rest.length) {
+                        button.hidden = true;
+                    }
+                });
+            }
+
             function updateMapLegend(values, colorScale) {
                 const legend = document.getElementById("games-map-legend");
                 const bar = document.querySelector(".map-legend-bar");
@@ -540,6 +662,7 @@
             });
 
             renderPayload(initial);
+            setupMostGamesLoadMore();
         })();
     </script>
 {% endblock %}

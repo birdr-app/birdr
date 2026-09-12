@@ -1,6 +1,22 @@
 import os
 
+# Tests stay on in-memory channels/cache even if the shell has REDIS_URL.
+os.environ.pop('REDIS_URL', None)
+
 from .base import *
+
+# Tests never talk to Redis even if REDIS_URL is set in the environment.
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+    },
+}
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "jizz-tests",
+    }
+}
 
 EBIRD_API_TOKEN = 'ebird'
 

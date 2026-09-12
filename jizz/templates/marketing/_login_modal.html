@@ -4,50 +4,50 @@
   aria-labelledby="login-dialog-title"
 >
   <div class="login-dialog-panel">
-    <button type="button" class="login-dialog-close js-close-login" aria-label="Close">&times;</button>
-    <h2 id="login-dialog-title">Log in</h2>
+    <button type="button" class="login-dialog-close js-close-login" aria-label="{% mt "Close" %}">&times;</button>
+    <h2 id="login-dialog-title">{% mt "Log in" %}</h2>
     <p class="form-error" id="login-error" hidden></p>
     <p class="form-note" id="login-info" hidden></p>
 
     <form id="login-form" class="login-form">
       <p id="login-username-wrap" hidden>
-        <label for="login-username">Username</label>
+        <label for="login-username">{% mt "Username" %}</label>
         <input id="login-username" name="username" type="text" autocomplete="username">
       </p>
       <p>
-        <label for="login-email">Email</label>
+        <label for="login-email">{% mt "Email" %}</label>
         <input id="login-email" name="email" type="email" required autocomplete="email">
       </p>
       <p id="login-password-wrap">
-        <label for="login-password">Password</label>
+        <label for="login-password">{% mt "Password" %}</label>
         <input id="login-password" name="password" type="password" required autocomplete="current-password">
-        <button type="button" class="login-text-btn" id="login-forgot-link">Forgot password?</button>
+        <button type="button" class="login-text-btn" id="login-forgot-link">{% mt "Forgot password?" %}</button>
       </p>
       <p>
-        <button class="btn" type="submit" id="login-submit">Log in</button>
+        <button class="btn" type="submit" id="login-submit">{% mt "Log in" %}</button>
       </p>
       <p class="login-switch">
-        <span id="login-switch-text">Don't have an account?</span>
-        <button type="button" class="login-text-btn" id="login-switch">Register</button>
+        <span id="login-switch-text">{% mt "Don't have an account?" %}</span>
+        <button type="button" class="login-text-btn" id="login-switch">{% mt "Register" %}</button>
       </p>
     </form>
 
     <form id="forgot-form" class="login-form" hidden>
-      <p>Enter your email address and we'll send you a link to reset your password.</p>
+      <p>{% mt "Enter your email address and we'll send you a link to reset your password." %}</p>
       <p>
-        <label for="forgot-email">Email</label>
+        <label for="forgot-email">{% mt "Email" %}</label>
         <input id="forgot-email" name="email" type="email" required autocomplete="email">
       </p>
       <p>
-        <button class="btn" type="submit" id="forgot-submit">Send reset link</button>
+        <button class="btn" type="submit" id="forgot-submit">{% mt "Send reset link" %}</button>
       </p>
       <p class="login-switch">
-        <button type="button" class="login-text-btn" id="login-back">Back to login</button>
+        <button type="button" class="login-text-btn" id="login-back">{% mt "Back to login" %}</button>
       </p>
     </form>
 
     <div id="login-social">
-      <p class="login-or">Or continue with</p>
+      <p class="login-or">{% mt "Or continue with" %}</p>
       <button type="button" class="btn login-google" id="login-google">
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
           <path fill="#fff" d="M21.6 12.23c0-.74-.07-1.45-.19-2.13H12v4.04h5.38a4.6 4.6 0 0 1-2 3.02v2.5h3.24c1.9-1.75 2.98-4.33 2.98-7.43z"/>
@@ -55,13 +55,13 @@
           <path fill="#fff" d="M6.4 13.99A6 6 0 0 1 6.08 12c0-.69.12-1.36.32-1.99V7.43H3.06A10 10 0 0 0 2 12c0 1.62.39 3.14 1.06 4.57l3.34-2.58z"/>
           <path fill="#fff" d="M12 5.88c1.47 0 2.79.5 3.83 1.5l2.87-2.87C16.96 2.9 14.7 2 12 2A10 10 0 0 0 3.06 7.43l3.34 2.58C7.19 7.64 9.4 5.88 12 5.88z"/>
         </svg>
-        Continue with Google
+        {% mt "Continue with Google" %}
       </button>
       <button type="button" class="btn secondary login-apple" id="login-apple">
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
           <path fill="currentColor" d="M16.7 12.4c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.9-3.5.9s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.3 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-.1 2.9-2.2c1.1-1.2 1.5-2.4 1.5-2.5-.1 0-2.8-1.1-2.8-4zM14.6 5.8c.6-.8 1.1-1.8 1-2.8-1 .1-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.8 1.1.1 2.1-.6 2.8-1.5z"/>
         </svg>
-        Continue with Apple
+        {% mt "Continue with Apple" %}
       </button>
     </div>
   </div>
@@ -88,7 +88,8 @@
   var mode = 'login';
   var finishing = false;
 
-  function token() {
+  var i18n = window.BIRDR_I18N || {};
+  function t(key) { return i18n[key] || key; }
     try {
       return localStorage.getItem('access_token') || localStorage.getItem('jw_token');
     } catch (e) {
@@ -175,18 +176,18 @@
     passwordInput.required = !isForgot;
     forgotLink.hidden = isRegister;
     if (isForgot) {
-      title.textContent = 'Forgot password';
+      title.textContent = t('Forgot password');
       document.getElementById('forgot-email').value = emailInput.value;
     } else if (isRegister) {
-      title.textContent = 'Register';
-      submitBtn.textContent = 'Register';
-      switchText.textContent = 'Already have an account?';
-      switchBtn.textContent = 'Log in';
+      title.textContent = t('Register');
+      submitBtn.textContent = t('Register');
+      switchText.textContent = t('Already have an account?');
+      switchBtn.textContent = t('Log in');
     } else {
-      title.textContent = 'Log in';
-      submitBtn.textContent = 'Log in';
-      switchText.textContent = "Don't have an account?";
-      switchBtn.textContent = 'Register';
+      title.textContent = t('Log in');
+      submitBtn.textContent = t('Log in');
+      switchText.textContent = t("Don't have an account?");
+      switchBtn.textContent = t('Register');
     }
   }
 
@@ -227,7 +228,7 @@
       localStorage.removeItem('refresh_token');
       localStorage.removeItem('jw_token');
     } catch (e) {}
-    window.location.href = '/site/logout/';
+    window.location.href = '{{ logout_url|escapejs }}';
   }
 
   window.birdrAuth = {
@@ -281,7 +282,7 @@
     event.preventDefault();
     clearMessages();
     if (mode === 'register' && passwordInput.value.length < 8) {
-      setMessage(errorEl, 'Password must be at least 8 characters.');
+      setMessage(errorEl, t('Password must be at least 8 characters.'));
       return;
     }
     submitBtn.disabled = true;
@@ -313,18 +314,18 @@
       });
     }).then(function (result) {
       if (!result.ok) {
-        setMessage(errorEl, apiError(result.data, 'Authentication failed. Please try again.'));
+        setMessage(errorEl, apiError(result.data, t('Authentication failed. Please try again.')));
         return;
       }
       var access = result.data && (result.data.access || result.data.access_token);
       var refresh = result.data && (result.data.refresh || result.data.refresh_token);
       if (!access) {
-        setMessage(errorEl, 'Authentication failed. Please try again.');
+        setMessage(errorEl, t('Authentication failed. Please try again.'));
         return;
       }
       finishLogin(access, refresh);
     }).catch(function () {
-      setMessage(errorEl, 'Authentication failed. Please try again.');
+      setMessage(errorEl, t('Authentication failed. Please try again.'));
     }).finally(function () {
       submitBtn.disabled = false;
     });
@@ -350,19 +351,19 @@
       });
     }).then(function (result) {
       if (!result.ok) {
-        setMessage(errorEl, apiError(result.data, 'Failed to send password reset email'));
+        setMessage(errorEl, apiError(result.data, t('Failed to send password reset email')));
         return;
       }
-      setMessage(infoEl, 'If an account with this email exists, a password reset link has been sent.');
+      setMessage(infoEl, t('If an account with this email exists, a password reset link has been sent.'));
     }).catch(function () {
-      setMessage(errorEl, 'Failed to send password reset email');
+      setMessage(errorEl, t('Failed to send password reset email'));
     }).finally(function () {
       forgotBtn.disabled = false;
     });
   });
 
   if (oauthError) {
-    setMessage(errorEl, 'Authentication failed. Please try again.');
+    setMessage(errorEl, t('Authentication failed. Please try again.'));
     openLogin();
   }
 })();

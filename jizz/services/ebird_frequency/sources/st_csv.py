@@ -19,6 +19,7 @@ from django.conf import settings
 from jizz.models import CountrySpecies, Species
 from jizz.services.ebird_frequency.constants import SOURCE_ST_PCT_RANK
 from jizz.services.ebird_frequency.types import MonthlyFrequencyRow
+from jizz.st_subnational_regions import app_code_for_st_region
 
 logger = logging.getLogger(__name__)
 
@@ -105,7 +106,10 @@ def fetch_monthly_metrics_st_csv(
     in ``frequency_pct`` and annotate via ``notes`` + ``source``.
     """
     cc = country_code.strip().upper()
-    region_code_set = {cc}
+    from jizz.country_region_codes import st_region_codes_for_app_country
+
+    region_code_set = set(st_region_codes_for_app_country(cc))
+    region_code_set.add(cc)
     if region_codes:
         region_code_set |= {c.strip().upper() for c in region_codes if str(c).strip()}
     month_set = {m for m in months if 1 <= m <= 12}
@@ -164,7 +168,8 @@ def fetch_monthly_metrics_st_csv(
 
                 for row in reader:
                     rc = (row.get(region_col) or "").strip().upper()
-                    if rc not in region_code_set:
+                    mapped = app_code_for_st_region(rc, row.get("region_name"))
+                    if rc not in region_code_set and mapped != cc:
                         continue
                     pct = _get_pct(row, fieldnames)
                     if pct is None:

@@ -2,19 +2,19 @@
 {% block content %}
 <section>
   <p class="kicker">Birdr</p>
-  <h1>Pages</h1>
-  <p class="lead">Guides and information about the app.</p>
+  <h1>{% mt "Pages" %}</h1>
+  <p class="lead">{% mt "Guides and information about the app." %}</p>
   {% if cms_pages %}
   <ul>
     {% for page in cms_pages %}
     <li>
-      <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
-      {% if not page.published %} (draft){% endif %}
+      <a href="{{ page.get_absolute_url|mpath }}">{{ page.title }}</a>
+      {% if not page.published %} ({% mt "draft" %}){% endif %}
     </li>
     {% endfor %}
   </ul>
   {% else %}
-  <p>No pages published yet.</p>
+  <p>{% mt "No pages published yet." %}</p>
   {% endif %}
 </section>
 {% endblock %}

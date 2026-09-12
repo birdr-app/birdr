@@ -10,6 +10,8 @@ export interface CreateGameRequest {
   media: string;
   tax_order?: string;
   tax_family?: string;
+  species_group?: string;
+  season?: string;
   rarity: 'familiar' | 'regular' | 'exceptional';
   include_escapes: boolean;
 }

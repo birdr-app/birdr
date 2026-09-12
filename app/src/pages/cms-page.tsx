@@ -48,6 +48,19 @@ export const CmsPage = ({ slug, headerTitle, showBackToHelp = false }: CmsPagePr
           {loading && <Spinner />}
           {error && <Text color="red">{error}</Text>}
           {!loading && !error && page && <CmsRichText content={page.content} />}
+          {!loading && !error && slug === 'about' ? (
+            <Link
+              href="https://github.com/birdr-app/birdr"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="primary.500"
+              fontWeight="600"
+              mt={4}
+              display="inline-block"
+            >
+              https://github.com/birdr-app/birdr
+            </Link>
+          ) : null}
         </Box>
       </Page.Body>
     </Page>

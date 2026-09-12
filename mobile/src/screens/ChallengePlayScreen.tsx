@@ -26,13 +26,18 @@ import { colors } from '../theme';
 import { usePulsatingAnimation } from '../hooks/usePulsatingAnimation';
 import { useQuestionSoundPlayback } from '../hooks/useQuestionSoundPlayback';
 import { answersEnabledForMedia } from '../game/mediaAnswerGate';
-import { resolvePlayMediaType } from '../utils/questionMediaIndex';
+import {
+  mediaArrayLengthForQuestion,
+  mediaSlotIndexFromQuestion,
+  resolvePlayMediaType,
+} from '../utils/questionMediaIndex';
+import { prefetchQuestionPlayMedia } from '../utils/prefetchPlayMedia';
 import { playPreviewSrc } from '../utils/playImageUrl';
 import { AnswerFeedback, normalizeSpeciesFrequency, normalizeChecklistAdded, normalizeChecklistMissed } from '../components/AnswerFeedback';
 import { SpeciesViewButton } from '../components/SpeciesViewButton';
 import { ComparisonButton } from '../components/ComparisonButton';
 import { SpeciesMediaModal, type SpeciesMediaData } from '../components/SpeciesMediaModal';
-import { FlagMediaModal, type FlagMediaInfo } from '../components/FlagMediaModal';
+import { FlagMediaModal, FlagMediaLink, type FlagMediaInfo } from '../components/FlagMediaModal';
 import { QuestionMediaView } from '../components/QuestionMediaView';
 import { QuestionLoadingFeather } from '../components/QuestionLoadingFeather';
 import { SpeedChallengeTimer } from '../components/SpeedChallengeTimer';
@@ -41,9 +46,9 @@ import { useDelayedFlag } from '../hooks/useDelayedFlag';
 import {
   questionMediaBlockHeight,
   questionMediaStageHeight,
-  QUESTION_MEDIA_CREDITS_HEIGHT,
 } from '../constants/questionMediaLayout';
 import { useTranslation } from '../i18n/TranslationContext';
+import { useGame } from '../context/GameContext';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
 type ChallengePlayParams = {
@@ -69,21 +74,25 @@ function speciesDisplayName(s: QuestionOption | Species, lang?: string): string 
 function ChallengePlayAudio({
   soundUri,
   questionId,
+  onCanPlay,
   children,
 }: {
   soundUri: string | null;
   questionId?: number;
+  onCanPlay?: () => void;
   children: (args: { playSound: () => void; soundPlaying: boolean; pulsatingStyle: ReturnType<typeof usePulsatingAnimation> }) => React.ReactNode;
 }) {
-  const { toggleSound, soundPlaying, pulsatingStyle } = useQuestionSoundPlayback(soundUri, questionId);
+  const { toggleSound, soundPlaying, pulsatingStyle } = useQuestionSoundPlayback(soundUri, questionId, onCanPlay);
   return <>{children({ playSound: toggleSound, soundPlaying, pulsatingStyle })}</>;
 }
 
 export function ChallengePlayScreen() {
   const { t } = useTranslation();
+  const { game } = useGame();
   const route = useRoute<RouteProp<{ ChallengePlay: ChallengePlayParams }, 'ChallengePlay'>>();
   const navigation = useNavigation();
   const { gameToken, journeyId, countryCode, language: paramLanguage, gameLevel, gameMedia, stepJokers: paramStepJokers, stepLength: paramStepLength } = route.params ?? {};
+  const lang = (game?.token === gameToken && game.language) || paramLanguage || 'en';
   const [question, setQuestion] = useState<ChallengeQuestion | null>(null);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
@@ -99,6 +108,7 @@ export function ChallengePlayScreen() {
     userAnswer: QuestionOption | Species;
     correctSpecies: QuestionOption | Species;
   } | null>(null);
+  const [answeredMediaLink, setAnsweredMediaLink] = useState<string | null>(null);
   const [levelEnded, setLevelEnded] = useState(false);
   const [journeyGame, setJourneyGame] = useState<BirdrJourneyGame | null>(null);
   const [journeyCountryName, setJourneyCountryName] = useState<string | null>(null);
@@ -159,6 +169,7 @@ export function ChallengePlayScreen() {
       const q = await getChallengeQuestion(gameToken, token ?? undefined, { cacheBust: true });
       if (generation !== questionFetchGenRef.current) return;
       if (q && isStalePlayQuestion(questionRef.current, q)) return;
+      prefetchQuestionPlayMedia(q, q?.media ?? gameMedia);
       setQuestion(q);
     } catch (e) {
       if (generation !== questionFetchGenRef.current) return;
@@ -167,7 +178,29 @@ export function ChallengePlayScreen() {
     } finally {
       if (generation === questionFetchGenRef.current) setLoading(false);
     }
-  }, [gameToken, getPlayPlayerToken, t]);
+  }, [gameToken, gameMedia, getPlayPlayerToken, t]);
+
+  const prevSpeciesLangRef = useRef(lang);
+  useEffect(() => {
+    if (prevSpeciesLangRef.current === lang) return;
+    prevSpeciesLangRef.current = lang;
+    if (!gameToken || !questionRef.current) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const token = await getPlayPlayerToken();
+        const q = await getChallengeQuestion(gameToken, token ?? undefined, { cacheBust: true });
+        if (cancelled || !q || isStalePlayQuestion(questionRef.current, q)) return;
+        prefetchQuestionPlayMedia(q, q?.media ?? gameMedia);
+        setQuestion(q);
+      } catch {
+        /* keep current question if names fail to refresh */
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [lang, gameToken, getPlayPlayerToken]);
 
   /** Load journey step game (jokers, progress) for Birdr Journey play. */
   const loadJourneyGame = useCallback(async () => {
@@ -209,9 +242,11 @@ export function ChallengePlayScreen() {
         return;
       }
       setAnswerResult(null);
+      setAnsweredMediaLink(null);
       setLevelEnded(false);
       setFeedback(null);
       setShowFeedback(false);
+      prefetchQuestionPlayMedia(q, q?.media ?? gameMedia);
       setQuestion(q);
       await loadJourneyGame();
     } catch (e) {
@@ -232,9 +267,16 @@ export function ChallengePlayScreen() {
 
   useEffect(() => {
     if (question) {
-      setMediaIndex(question.number ?? 0);
+      const kind = resolvePlayMediaType(question as any, gameMedia);
+      setMediaIndex(
+        mediaSlotIndexFromQuestion(
+          question,
+          mediaArrayLengthForQuestion(question, kind),
+        ),
+      );
       setLoadingNextQuestion(false);
     }
+    setAnsweredMediaLink(null);
     setJourneyStepFailed(false);
     setTimerExpired(false);
     submittingRef.current = false;
@@ -266,16 +308,15 @@ export function ChallengePlayScreen() {
   }, [question?.id, question?.sequence, gameToken, loadJourneyGame]);
 
   useEffect(() => {
-    if (question && countryCode && paramLanguage) {
-      getSpeciesForCountry(countryCode, paramLanguage).then(setExpertSpecies);
+    if (question && countryCode) {
+      getSpeciesForCountry(countryCode, lang).then(setExpertSpecies);
     }
-  }, [question?.id, countryCode, paramLanguage]);
+  }, [question?.id, countryCode, lang]);
 
   useEffect(() => {
     setExpertQuery('');
   }, [question?.id]);
 
-  const lang = paramLanguage || 'en';
   const mediaType = resolvePlayMediaType(question as any, gameMedia);
   const isExpert = gameLevel === 'expert' || (question as any)?.game?.level === 'expert';
   const options = question?.options ?? [];
@@ -284,20 +325,32 @@ export function ChallengePlayScreen() {
   const mediaStageHeight = questionMediaStageHeight(mediaType as 'images' | 'video' | 'audio');
   const mediaBlockHeight = questionMediaBlockHeight(mediaType as 'images' | 'video' | 'audio');
 
-  useEffect(() => {
-    if (mediaType !== 'audio' || !question?.id) return;
-    setMediaReady(true);
-    const run = async () => {
-      const token = challengePlayerToken ?? (await getPlayPlayerToken());
-      if (token) postQuestionMediaReady(question.id, token).catch(() => {});
-    };
-    void run();
-  }, [mediaType, question?.id, challengePlayerToken, getPlayPlayerToken]);
-
-  const currentMediaIdx = question != null ? (mediaIndex ?? question.number ?? 0) : 0;
+  const mediaLength = question ? mediaArrayLengthForQuestion(question, mediaType) : 0;
+  const currentMediaIdx =
+    question != null
+      ? mediaSlotIndexFromQuestion(
+          { number: mediaIndex ?? question.number ?? 0 },
+          mediaLength,
+        )
+      : 0;
   const image = question?.images?.[currentMediaIdx];
   const video = question?.videos?.[currentMediaIdx];
   const soundForAudio = question?.sounds?.[currentMediaIdx];
+  const imageMedia = image
+    ? answeredMediaLink
+      ? { ...image, link: answeredMediaLink }
+      : image
+    : undefined;
+  const videoMedia = video
+    ? answeredMediaLink
+      ? { ...video, link: answeredMediaLink }
+      : video
+    : undefined;
+  const soundMedia = soundForAudio
+    ? answeredMediaLink
+      ? { ...soundForAudio, link: answeredMediaLink }
+      : soundForAudio
+    : undefined;
   const soundUri = soundForAudio?.url ? (soundForAudio.url.startsWith('http') ? soundForAudio.url : apiUrl(soundForAudio.url)) : null;
   const imageUri = image?.url
     ? playPreviewSrc(image.url.startsWith('http') ? image.url : apiUrl(image.url))
@@ -429,6 +482,9 @@ export function ChallengePlayScreen() {
       });
       setShowFeedback(true);
       setAnswerResult({ correct, userAnswer, correctSpecies });
+      setAnsweredMediaLink(
+        typeof response?.media_link === 'string' ? response.media_link : null,
+      );
       const jokersBeforeAnswer = journeyGame?.remaining_jokers;
       const failedFromJokers =
         !correct && jokersBeforeAnswer !== undefined && jokersBeforeAnswer <= 0;
@@ -453,6 +509,7 @@ export function ChallengePlayScreen() {
     } catch (e) {
       setFeedback({ correct: false, species_frequency: null });
       setShowFeedback(true);
+      setAnsweredMediaLink(null);
       setAnswerResult({
         correct: false,
         userAnswer: (option ?? question?.options?.[0]) as QuestionOption | Species,
@@ -554,7 +611,21 @@ export function ChallengePlayScreen() {
   const optionsLocked = submitting || feedback !== null || timerExpired || !answersEnabled;
 
   return (
-    <ChallengePlayAudio soundUri={soundUri} questionId={question?.id}>
+    <ChallengePlayAudio
+      soundUri={soundUri}
+      questionId={question?.id}
+      onCanPlay={() => {
+        setMediaReady(true);
+        if (!question?.id) return;
+        const run = async () => {
+          const token = challengePlayerToken ?? (await getPlayPlayerToken());
+          if (token) {
+            postQuestionMediaReady(question.id, token).catch(() => {});
+          }
+        };
+        void run();
+      }}
+    >
       {({ playSound, soundPlaying, pulsatingStyle }) => (
     <ScrollView style={styles.container} contentContainerStyle={styles.content} testID="challengePlay.screen">
       <View style={styles.row}>
@@ -586,7 +657,6 @@ export function ChallengePlayScreen() {
               height={mediaStageHeight}
               testID="challengePlay.advancingLoader"
             />
-            {mediaType !== 'audio' ? <View style={styles.mediaCreditsSpacer} /> : null}
           </>
         ) : (
         <QuestionMediaView
@@ -614,11 +684,11 @@ export function ChallengePlayScreen() {
           reloadImageLabel={t('retry')}
           nextImageLabel={t('next_image')}
           showNextImageButton={(question?.images?.length ?? 0) > 1}
-          imageMedia={image}
+          imageMedia={imageMedia}
           videoUri={videoUri}
-          videoMedia={video}
+          videoMedia={videoMedia}
           soundUri={soundUri}
-          soundMedia={soundForAudio && typeof soundForAudio === 'object' ? soundForAudio : undefined}
+          soundMedia={soundMedia}
           onPlaySound={playSound}
           soundPlaying={soundPlaying}
           pulsatingStyle={pulsatingStyle}
@@ -629,6 +699,29 @@ export function ChallengePlayScreen() {
           expandImageHint={t('expand_image_fullscreen_hint')}
           closeFullScreenLabel={t('close')}
           containerStyle={styles.challengeMediaWrap}
+          actionOverlay={
+            answerResult !== null ? (
+              showStepContinue ? (
+                <TouchableOpacity
+                  style={styles.overlayActionButton}
+                  onPress={navigateJourneyResults}
+                  testID="journeyPlay.viewResults"
+                >
+                  <Text style={styles.primaryButtonText}>{t('continue')}</Text>
+                </TouchableOpacity>
+              ) : (
+                <TouchableOpacity
+                  style={styles.overlayActionButton}
+                  onPress={() => fetchNextQuestion()}
+                  disabled={loadingNextQuestion}
+                  testID="challengePlay.nextQuestion"
+                  accessibilityLabel="Next question"
+                >
+                  <Text style={styles.primaryButtonText}>{t('next_question')}</Text>
+                </TouchableOpacity>
+              )
+            ) : undefined
+          }
           onMediaReady={() => {
             setMediaReady(true);
             if (!question?.id) return;
@@ -643,30 +736,6 @@ export function ChallengePlayScreen() {
         />
         )}
       </View>
-
-      {answerResult !== null ? (
-        <View style={styles.nextSection}>
-          {showStepContinue ? (
-            <TouchableOpacity
-              style={styles.primaryButton}
-              onPress={navigateJourneyResults}
-              testID="journeyPlay.viewResults"
-            >
-              <Text style={styles.primaryButtonText}>{t('continue')}</Text>
-            </TouchableOpacity>
-          ) : (
-            <TouchableOpacity
-              style={styles.primaryButton}
-              onPress={() => fetchNextQuestion()}
-              disabled={loadingNextQuestion}
-              testID="challengePlay.nextQuestion"
-              accessibilityLabel="Next question"
-            >
-              <Text style={styles.primaryButtonText}>{t('next_question')}</Text>
-            </TouchableOpacity>
-          )}
-        </View>
-      ) : null}
 
       {isSpeedChallenge && answerResult === null ? (
         <SpeedChallengeTimer
@@ -804,6 +873,8 @@ export function ChallengePlayScreen() {
         </View>
       ) : null}
 
+      <FlagMediaLink onPress={openFlagModal} label={t('this_seems_wrong')} />
+
       <SpeciesMediaModal
         visible={!!mediaSpecies}
         onClose={() => setMediaSpecies(null)}
@@ -833,10 +904,23 @@ const styles = StyleSheet.create({
   backLink: { marginTop: 16 },
   mediaWrap: { marginBottom: 12 },
   challengeMediaWrap: { marginBottom: 0 },
-  mediaCreditsSpacer: { height: QUESTION_MEDIA_CREDITS_HEIGHT },
   mediaImage: { width: '100%', height: 240, borderRadius: 8 },
   mediaVideo: { width: '100%', height: 240, borderRadius: 8 },
   nextSection: { marginTop: 0, marginBottom: 12 },
+  overlayActionButton: {
+    backgroundColor: colors.primary[500],
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.28)',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.55,
+    shadowRadius: 8,
+    elevation: 10,
+  },
   levelFailedText: { fontSize: 18, fontWeight: '600', color: colors.primary[800], marginBottom: 12 },
   levelCompleteTitle: { fontSize: 20, fontWeight: '700', color: colors.primary[800], marginBottom: 8 },
   levelCompleteDescription: { fontSize: 15, color: colors.primary[700], marginBottom: 16 },

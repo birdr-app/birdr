@@ -1,20 +1,12 @@
 /**
- * Dutch names for languages (code -> Dutch name).
- * Used when app language is Dutch. Fallback to API name if code not in map.
+ * Species-language labels in the app UI language.
+ * Catalog covers every eBird locale in `/api/languages/` (plus Scientific Latin).
  */
-export const languageNamesNl: Record<string, string> = {
-  en: 'Engels', en_UK: 'Engels (VK)', en_US: 'Engels (VS)', nl: 'Nederlands', de: 'Duits',
-  fr: 'Frans', es: 'Spaans', it: 'Italiaans', pt: 'Portugees', pl: 'Pools', ru: 'Russisch',
-  ja: 'Japans', zh: 'Chinees', sv: 'Zweeds', da: 'Deens', no: 'Noors', fi: 'Fins', el: 'Grieks',
-  tr: 'Turks', ar: 'Arabisch', he: 'Hebreeuws', hu: 'Hongaars', ro: 'Roemeens', cs: 'Tsjechisch',
-  sk: 'Slovaaks', bg: 'Bulgaars', hr: 'Kroatisch', sr: 'Servisch', uk: 'Oekraïens', id: 'Indonesisch',
-  ms: 'Maleis', th: 'Thais', vi: 'Vietnamees', ko: 'Koreaans', ca: 'Catalaans', eu: 'Baskisch',
-  ga: 'Iers', cy: 'Welsh', lt: 'Litouws', lv: 'Letlands', et: 'Estlands', sl: 'Sloveens',
-  mk: 'Macedonisch', sq: 'Albanees', hi: 'Hindi', bn: 'Bengalees', ta: 'Tamil', te: 'Telugu',
-  mr: 'Marathi', sw: 'Swahili', af: 'Afrikaans', la: 'Wetenschappelijk (Latijn)',
-};
+import languageNamesJson from './language-names.json';
 
 export type LanguageLike = { code: string; name: string };
+
+const LANGUAGE_NAMES = languageNamesJson as Record<string, Record<string, string>>;
 
 export const SCIENTIFIC_LANGUAGE_CODE = 'la';
 export const SCIENTIFIC_LANGUAGE_NAME_EN = 'Scientific (Latin)';
@@ -26,13 +18,29 @@ const SCIENTIFIC_LANGUAGE_NAMES: Record<string, string> = {
   es: 'Científico (latín)',
   fr: 'Scientifique (latin)',
   de: 'Wissenschaftlich (Latein)',
+  it: 'Scientifico (latino)',
   'pt-BR': 'Científico (latim)',
   ja: '学名（ラテン語）',
 };
 
+export const languageNamesNl: Record<string, string> = LANGUAGE_NAMES.nl || {};
+
+function catalogLocale(locale: string | null | undefined): string {
+  const raw = (locale || '').trim();
+  if (!raw) return 'en';
+  if (raw in LANGUAGE_NAMES) return raw;
+  const lower = raw.replace(/_/g, '-');
+  if (lower.toLowerCase().startsWith('pt')) return 'pt-BR';
+  const prefix = lower.split('-')[0];
+  if (prefix in LANGUAGE_NAMES) return prefix;
+  return 'en';
+}
+
 function languageTagForDisplay(code: string): string {
   if (code === 'en_UK') return 'en-GB';
   if (code === 'en_US') return 'en-US';
+  if (code === 'in') return 'id';
+  if (code === 'zh_SIM') return 'zh-Hans';
   return code.replace(/_/g, '-');
 }
 
@@ -43,17 +51,20 @@ export function withScientificLanguage<T extends LanguageLike>(languages: T[]): 
 
 export function getLanguageDisplayName(lang: LanguageLike | null | undefined, locale: string): string {
   if (!lang) return '';
+  const loc = catalogLocale(locale);
   if (lang.code === 'la') {
-    return SCIENTIFIC_LANGUAGE_NAMES[locale] || SCIENTIFIC_LANGUAGE_NAME_EN;
+    return SCIENTIFIC_LANGUAGE_NAMES[loc] || SCIENTIFIC_LANGUAGE_NAME_EN;
   }
-  if (locale === 'nl' && languageNamesNl[lang.code]) {
-    return languageNamesNl[lang.code];
-  }
-  if (locale && locale !== 'en') {
+  const mapped = LANGUAGE_NAMES[loc]?.[lang.code];
+  if (mapped) return mapped;
+  if (loc !== 'en') {
     try {
-      const names = new Intl.DisplayNames([locale], { type: 'language' });
+      const names = new Intl.DisplayNames([loc], { type: 'language' });
       const label = names.of(languageTagForDisplay(lang.code));
-      if (label) return label;
+      if (label) {
+        if (loc === 'ja') return label;
+        return label.charAt(0).toLocaleUpperCase(loc) + label.slice(1);
+      }
     } catch {
       /* ignore */
     }
@@ -69,9 +80,10 @@ export function compareSpeciesLanguages(
 ): number {
   if (a.code === 'la' && b.code !== 'la') return -1;
   if (b.code === 'la' && a.code !== 'la') return 1;
+  const loc = catalogLocale(locale);
   return getLanguageDisplayName(a, locale).localeCompare(
     getLanguageDisplayName(b, locale),
-    undefined,
+    loc,
     { sensitivity: 'base' }
   );
 }

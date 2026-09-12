@@ -10,7 +10,7 @@ const SCREEN_TITLES: Record<string, string> = {
   Scores: 'High scores',
   Challenge: 'Country challenge',
   Updates: 'Updates',
-  Help: 'Help',
+  Help: 'Community',
   MyGames: 'My Games',
   Settings: 'Profile',
   MediaReview: 'Review media',

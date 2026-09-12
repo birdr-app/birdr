@@ -1,229 +1,111 @@
 /**
- * Dutch names for countries (ISO 3166-1 alpha-2 code -> Dutch name).
- * Used when app language is Dutch. Fallback to API name if code not in map.
+ * Country labels in the app UI language (ISO 3166-1, plus a few custom regions).
+ * Catalogs match marketing `country_names.json`. English uses the API/database name.
  */
-export const countryNamesNl: Record<string, string> = {
-  AD: 'Andorra',
-  AE: 'Verenigde Arabische Emiraten',
-  AF: 'Afghanistan',
-  AG: 'Antigua en Barbuda',
-  AI: 'Anguilla',
-  AL: 'Albanië',
-  AM: 'Armenië',
-  AO: 'Angola',
-  AR: 'Argentinië',
-  AT: 'Oostenrijk',
-  AU: 'Australië',
-  AW: 'Aruba',
-  AZ: 'Azerbeidzjan',
-  BA: 'Bosnië en Herzegovina',
-  BB: 'Barbados',
-  BD: 'Bangladesh',
-  BE: 'België',
-  BF: 'Burkina Faso',
-  BG: 'Bulgarije',
-  BH: 'Bahrein',
-  BI: 'Burundi',
-  BJ: 'Benin',
-  BN: 'Brunei',
-  BO: 'Bolivia',
-  BR: 'Brazilië',
-  BS: 'Bahama\'s',
-  BT: 'Bhutan',
-  BW: 'Botswana',
-  BY: 'Wit-Rusland',
-  BZ: 'Belize',
-  CA: 'Canada',
-  CD: 'Congo-Kinshasa',
-  CF: 'Centraal-Afrikaanse Republiek',
-  CG: 'Congo-Brazzaville',
-  CH: 'Zwitserland',
-  CI: 'Ivoorkust',
-  CL: 'Chili',
-  CM: 'Kameroen',
-  CN: 'China',
-  CO: 'Colombia',
-  CR: 'Costa Rica',
-  CU: 'Cuba',
-  CV: 'Kaapverdië',
-  CY: 'Cyprus',
-  CZ: 'Tsjechië',
-  DE: 'Duitsland',
-  DJ: 'Djibouti',
-  DK: 'Denemarken',
-  DM: 'Dominica',
-  DO: 'Dominicaanse Republiek',
-  DZ: 'Algerije',
-  EC: 'Ecuador',
-  EE: 'Estland',
-  EG: 'Egypte',
-  ER: 'Eritrea',
-  ES: 'Spanje',
-  ET: 'Ethiopië',
-  FI: 'Finland',
-  FJ: 'Fiji',
-  FK: 'Falklandeilanden',
-  FM: 'Micronesia',
-  FO: 'Faeröer',
-  FR: 'Frankrijk',
-  GA: 'Gabon',
-  GB: 'Verenigd Koninkrijk',
-  GD: 'Grenada',
-  GE: 'Georgië',
-  GF: 'Frans-Guyana',
-  GH: 'Ghana',
-  GI: 'Gibraltar',
-  GL: 'Groenland',
-  GM: 'Gambia',
-  GN: 'Guinee',
-  GQ: 'Equatoriaal-Guinea',
-  GR: 'Griekenland',
-  GT: 'Guatemala',
-  GW: 'Guinee-Bissau',
-  GY: 'Guyana',
-  HK: 'Hongkong',
-  HN: 'Honduras',
-  HR: 'Kroatië',
-  HT: 'Haïti',
-  HU: 'Hongarije',
-  ID: 'Indonesië',
-  IE: 'Ierland',
-  IL: 'Israël',
-  IN: 'India',
-  IQ: 'Irak',
-  IR: 'Iran',
-  IS: 'IJsland',
-  IT: 'Italië',
-  JM: 'Jamaica',
-  JO: 'Jordanië',
-  JP: 'Japan',
-  KE: 'Kenia',
-  KG: 'Kirgizië',
-  KH: 'Cambodja',
-  KI: 'Kiribati',
-  KM: 'Comoren',
-  KN: 'Saint Kitts en Nevis',
-  KP: 'Noord-Korea',
-  KR: 'Zuid-Korea',
-  KW: 'Koeweit',
-  KY: 'Kaaimaneilanden',
-  KZ: 'Kazachstan',
-  LA: 'Laos',
-  LB: 'Libanon',
-  LC: 'Saint Lucia',
-  LI: 'Liechtenstein',
-  LK: 'Sri Lanka',
-  LR: 'Liberia',
-  LS: 'Lesotho',
-  LT: 'Litouwen',
-  LU: 'Luxemburg',
-  LV: 'Letland',
-  LY: 'Libië',
-  MA: 'Marokko',
-  MC: 'Monaco',
-  MD: 'Moldavië',
-  ME: 'Montenegro',
-  MG: 'Madagaskar',
-  MK: 'Noord-Macedonië',
-  ML: 'Mali',
-  MM: 'Myanmar',
-  MN: 'Mongolië',
-  MO: 'Macau',
-  MR: 'Mauritanië',
-  MT: 'Malta',
-  MU: 'Mauritius',
-  MV: 'Maldiven',
-  MW: 'Malawi',
-  MX: 'Mexico',
-  MY: 'Maleisië',
-  MZ: 'Mozambique',
-  NA: 'Namibië',
-  NE: 'Niger',
-  NG: 'Nigeria',
-  NI: 'Nicaragua',
-  NL: 'Nederland',
-  NO: 'Noorwegen',
-  NP: 'Nepal',
-  NR: 'Nauru',
-  NZ: 'Nieuw-Zeeland',
-  OM: 'Oman',
-  PA: 'Panama',
-  PE: 'Peru',
-  PF: 'Frans-Polynesië',
-  PG: 'Papoea-Nieuw-Guinea',
-  PH: 'Filipijnen',
-  PK: 'Pakistan',
-  PL: 'Polen',
-  PT: 'Portugal',
-  PY: 'Paraguay',
-  QA: 'Qatar',
-  RO: 'Roemenië',
-  RS: 'Servië',
-  RU: 'Rusland',
-  RW: 'Rwanda',
-  SA: 'Saoedi-Arabië',
-  SB: 'Salomonseilanden',
-  SC: 'Seychellen',
-  SD: 'Soedan',
-  SE: 'Zweden',
-  SG: 'Singapore',
-  SI: 'Slovenië',
-  SK: 'Slowakije',
-  SL: 'Sierra Leone',
-  SM: 'San Marino',
-  SN: 'Senegal',
-  SO: 'Somalië',
-  SR: 'Suriname',
-  SS: 'Zuid-Soedan',
-  ST: 'Sao Tomé en Principe',
-  SV: 'El Salvador',
-  SY: 'Syrië',
-  SZ: 'Eswatini',
-  TD: 'Tsjaad',
-  TG: 'Togo',
-  TH: 'Thailand',
-  TJ: 'Tadzjikistan',
-  TL: 'Oost-Timor',
-  TM: 'Turkmenistan',
-  TN: 'Tunesië',
-  TO: 'Tonga',
-  TR: 'Turkije',
-  TT: 'Trinidad en Tobago',
-  TV: 'Tuvalu',
-  TW: 'Taiwan',
-  TZ: 'Tanzania',
-  UA: 'Oekraïne',
-  UG: 'Oeganda',
-  US: 'Verenigde Staten',
-  UY: 'Uruguay',
-  UZ: 'Oezbekistan',
-  VA: 'Vaticaanstad',
-  VC: 'Saint Vincent en de Grenadines',
-  VE: 'Venezuela',
-  VN: 'Vietnam',
-  VU: 'Vanuatu',
-  WS: 'Samoa',
-  XK: 'Kosovo',
-  YE: 'Jemen',
-  ZA: 'Zuid-Afrika',
-  ZM: 'Zambia',
-  ZW: 'Zimbabwe',
-};
+import countryNamesJson from './country-names.json';
 
 export type CountryLike = { code: string; name: string };
 
+const COUNTRY_NAMES = countryNamesJson as Record<string, Record<string, string>>;
+
+/** Custom checklist regions that are not ISO country codes. */
+const REGION_NAMES: Record<string, Record<string, string>> = {
+  en: {
+    'NL-NH': 'Texel Bird Week',
+    'US-AK': 'United States – Alaska',
+    'US-HI': "United States – Hawai'i",
+    'US-EAST': 'United States – Eastern',
+    'US-WEST': 'United States – Western',
+    'CN-SOUTH': 'China – South & Southwest',
+    'CN-EAST': 'China – East & Central',
+    'CN-NORTH': 'China – North & Northeast',
+    'CN-WEST': 'China – West & Plateau',
+    'AR-NW': 'Argentina – Northwest',
+    'AR-NE': 'Argentina – Northeast',
+    'AR-PAMPAS': 'Argentina – Pampas',
+    'AR-CUYO': 'Argentina – Cuyo',
+    'AR-PAT': 'Argentina – Patagonia',
+  },
+  nl: {
+    'NL-NH': 'Texel Bird Week',
+    'US-AK': 'Verenigde Staten – Alaska',
+    'US-HI': 'Verenigde Staten – Hawaï',
+    'US-EAST': 'Verenigde Staten – Oost',
+    'US-WEST': 'Verenigde Staten – West',
+  },
+  es: {
+    'NL-NH': 'Texel Bird Week',
+    'US-AK': 'Estados Unidos – Alaska',
+    'US-HI': 'Estados Unidos – Hawái',
+    'US-EAST': 'Estados Unidos – Este',
+    'US-WEST': 'Estados Unidos – Oeste',
+  },
+  fr: {
+    'NL-NH': 'Texel Bird Week',
+    'US-AK': 'États-Unis – Alaska',
+    'US-HI': 'États-Unis – Hawaï',
+    'US-EAST': 'États-Unis – Est',
+    'US-WEST': 'États-Unis – Ouest',
+  },
+  de: {
+    'NL-NH': 'Texel Bird Week',
+    'US-AK': 'Vereinigte Staaten – Alaska',
+    'US-HI': 'Vereinigte Staaten – Hawaii',
+    'US-EAST': 'Vereinigte Staaten – Osten',
+    'US-WEST': 'Vereinigte Staaten – Westen',
+  },
+  it: {
+    'NL-NH': 'Texel Bird Week',
+    'US-AK': 'Stati Uniti – Alaska',
+    'US-HI': 'Stati Uniti – Hawaii',
+    'US-EAST': 'Stati Uniti – Est',
+    'US-WEST': 'Stati Uniti – Ovest',
+  },
+  'pt-BR': {
+    'NL-NH': 'Texel Bird Week',
+    'US-AK': 'Estados Unidos – Alasca',
+    'US-HI': 'Estados Unidos – Havaí',
+    'US-EAST': 'Estados Unidos – Leste',
+    'US-WEST': 'Estados Unidos – Oeste',
+  },
+  ja: {
+    'NL-NH': 'Texel Bird Week',
+    'US-AK': 'アメリカ合衆国 – アラスカ',
+    'US-HI': 'アメリカ合衆国 – ハワイ',
+    'US-EAST': 'アメリカ合衆国 – 東部',
+    'US-WEST': 'アメリカ合衆国 – 西部',
+  },
+};
+
+export const countryNamesNl: Record<string, string> = COUNTRY_NAMES.nl || {};
+
+function catalogLocale(locale: string | null | undefined): string {
+  const raw = (locale || '').trim();
+  if (!raw) return 'en';
+  if (raw in COUNTRY_NAMES || raw in REGION_NAMES) return raw;
+  const lower = raw.replace(/_/g, '-');
+  if (lower.toLowerCase().startsWith('pt')) return 'pt-BR';
+  const prefix = lower.split('-')[0];
+  if (prefix in COUNTRY_NAMES || prefix in REGION_NAMES) return prefix;
+  return 'en';
+}
+
 export function getCountryDisplayName(country: CountryLike | null | undefined, locale: string): string {
   if (!country) return '';
-  if (locale === 'nl' && countryNamesNl[country.code]) {
-    return countryNamesNl[country.code];
-  }
-  if (locale && locale !== 'en' && country.code && !country.code.includes('-')) {
-    try {
-      const names = new Intl.DisplayNames([locale], { type: 'region' });
-      const label = names.of(country.code);
-      if (label) return label;
-    } catch {
-      /* ignore */
+  const code = (country.code || '').trim();
+  const loc = catalogLocale(locale);
+  if (REGION_NAMES[loc]?.[code]) return REGION_NAMES[loc][code];
+  if (loc !== 'en' && code) {
+    const mapped = COUNTRY_NAMES[loc]?.[code.toUpperCase()];
+    if (mapped) return mapped;
+    if (!code.includes('-')) {
+      try {
+        const names = new Intl.DisplayNames([loc], { type: 'region' });
+        const label = names.of(code.toUpperCase());
+        if (label) return label;
+      } catch {
+        /* ignore */
+      }
     }
   }
   return country.name;

@@ -15,6 +15,7 @@ import { useTranslation } from '../i18n/TranslationContext';
 import { useAuth } from '../context/AuthContext';
 import { flagMediaAsReview } from '../api/flagMedia';
 import { colors } from '../theme';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
 export type FlagMediaInfo = {
   id: number;
@@ -158,4 +159,41 @@ const styles = StyleSheet.create({
   },
   flagBtnDisabled: { opacity: 0.6 },
   flagBtnText: { color: '#fff', fontWeight: '600', fontSize: 16 },
+});
+
+export function FlagMediaLink({
+  onPress,
+  label,
+}: {
+  onPress: () => void;
+  label: string;
+}) {
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      style={linkStyles.row}
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      testID="flagMedia.link"
+    >
+      <FontAwesome5 name="flag" solid size={13} color={colors.error[500]} />
+      <Text style={linkStyles.text}>{label}</Text>
+    </TouchableOpacity>
+  );
+}
+
+const linkStyles = StyleSheet.create({
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    gap: 8,
+    marginTop: 16,
+    paddingVertical: 8,
+  },
+  text: {
+    fontSize: 14,
+    color: colors.error[500],
+    fontWeight: '500',
+  },
 });

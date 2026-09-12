@@ -5,7 +5,6 @@ import {
   StyleSheet,
   TouchableOpacity,
   FlatList,
-  Image,
   ActivityIndicator,
   Modal,
   Alert,
@@ -24,6 +23,8 @@ import type { Species } from '../types/game';
 import { apiUrl } from '../api/config';
 import { getAccessToken } from '../api/auth';
 import { colors } from '../theme';
+import { CachedRemoteImage } from '../components/CachedRemoteImage';
+import { playPreviewSrc } from '../utils/playImageUrl';
 
 type MediaTypeFilter = 'image' | 'video' | 'audio';
 
@@ -266,10 +267,11 @@ export function MediaReviewScreen() {
               <Text style={styles.thumbPlaceholderText}>No image</Text>
             </View>
           ) : (
-            <Image
-              source={{ uri: fullUrl }}
+            <CachedRemoteImage
+              source={{ uri: playPreviewSrc(fullUrl) }}
               style={styles.thumb}
-              resizeMode="cover"
+              contentFit="cover"
+              recyclingKey={String(item.id)}
               onError={() => setFailedImageIds((prev) => new Set(prev).add(item.id))}
             />
           )}
@@ -440,10 +442,11 @@ export function MediaReviewScreen() {
             <Text style={styles.modalTitle}>{t('media_details')}</Text>
             {selectedMedia && (
               <>
-                <Image
-                  source={{ uri: selectedMedia.url.startsWith('http') ? selectedMedia.url : apiUrl(selectedMedia.url) }}
+                <CachedRemoteImage
+                  source={{ uri: selectedMedia.url.startsWith('http') ? playPreviewSrc(selectedMedia.url) : apiUrl(selectedMedia.url) }}
                   style={styles.modalImage}
-                  resizeMode="contain"
+                  contentFit="contain"
+                  recyclingKey={String(selectedMedia.id)}
                 />
                 <Text style={styles.modalSpecies}>{selectedMedia.species_name}</Text>
                 {selectedMedia.contributor ? (

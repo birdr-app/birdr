@@ -35,6 +35,8 @@ import { BirdrJourneyLevelCelebrationScreen } from '../screens/BirdrJourneyLevel
 import { CountryChallengeLeaderboardScreen } from '../screens/CountryChallengeLeaderboardScreen';
 import { ChecklistScreen } from '../screens/ChecklistScreen';
 import { TroubleSpotsScreen } from '../screens/TroubleSpotsScreen';
+import { TroubleSpotPairScreen } from '../screens/TroubleSpotPairScreen';
+import { TroubleSpotSpeciesScreen } from '../screens/TroubleSpotSpeciesScreen';
 import { PairPracticeScreen, SpeciesPracticeScreen } from '../screens/PracticeStartScreen';
 import { FlockListScreen } from '../screens/FlockListScreen';
 import { FlockIntroScreen } from '../screens/FlockIntroScreen';
@@ -44,6 +46,7 @@ import { FlockDetailScreen } from '../screens/FlockDetailScreen';
 import { FlockMembersScreen } from '../screens/FlockMembersScreen';
 import { FlockInviteScreen } from '../screens/FlockInviteScreen';
 import { FlockLeaderboardScreen } from '../screens/FlockLeaderboardScreen';
+import { FlockWeeklyProgressScreen } from '../screens/FlockWeeklyProgressScreen';
 import { FlockInviteLandingScreen } from '../screens/FlockInviteLandingScreen';
 import { FlockChallengeResultScreen } from '../screens/FlockChallengeResultScreen';
 import { UpdateDetailScreen } from '../screens/UpdateDetailScreen';
@@ -73,16 +76,19 @@ const SCREENS: { name: string; titleKey: string; component: React.ComponentType<
   { name: 'FlockMembers', titleKey: 'flock_members', component: FlockMembersScreen },
   { name: 'FlockInvite', titleKey: 'flock_invite_members', component: FlockInviteScreen },
   { name: 'FlockLeaderboard', titleKey: 'flock_leaderboard', component: FlockLeaderboardScreen },
+  { name: 'FlockWeeklyProgress', titleKey: 'flocks_weekly_progress', component: FlockWeeklyProgressScreen },
   { name: 'FlockInviteLanding', titleKey: 'flock_invite_title', component: FlockInviteLandingScreen },
   { name: 'FlockChallengeResult', titleKey: 'flock_challenge_result', component: FlockChallengeResultScreen },
   { name: 'ChallengePlay', titleKey: 'country_challenge', component: ChallengePlayScreen },
   { name: 'Updates', titleKey: 'updates', component: UpdatesScreen },
   { name: 'UpdateDetail', titleKey: 'updates', component: UpdateDetailScreen },
-  { name: 'Help', titleKey: 'help', component: HelpOverviewScreen },
-  { name: 'HelpDetail', titleKey: 'help', component: HelpDetailScreenWrapper },
+  { name: 'Help', titleKey: 'community', component: HelpOverviewScreen },
+  { name: 'HelpDetail', titleKey: 'community', component: HelpDetailScreenWrapper },
   { name: 'MyGames', titleKey: 'my_games', component: MyGamesScreen },
   { name: 'Checklist', titleKey: 'checklist_title', component: ChecklistScreen },
   { name: 'TroubleSpots', titleKey: 'trouble_spots', component: TroubleSpotsScreen },
+  { name: 'TroubleSpotSpecies', titleKey: 'trouble_spots_species_title', component: TroubleSpotSpeciesScreen },
+  { name: 'TroubleSpotPair', titleKey: 'trouble_spots_pair_detail', component: TroubleSpotPairScreen },
   { name: 'SpeciesPractice', titleKey: 'practice', component: SpeciesPracticeScreen },
   { name: 'PairPractice', titleKey: 'practice', component: PairPracticeScreen },
   { name: 'GameDetail', titleKey: 'game_details', component: GameDetailScreen },

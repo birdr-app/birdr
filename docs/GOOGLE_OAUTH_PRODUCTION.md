@@ -241,6 +241,12 @@ location / {
 
 Then keep your existing `location /` (SPA) and other blocks. Reload nginx: `sudo nginx -t && sudo systemctl reload nginx`.
 
+### Compression, HTTP/2, and `/game` SPA fallback
+
+Copy [`deploy/nginx-perf.conf`](../deploy/nginx-perf.conf) onto the VPS (gzip/brotli in `http { }`, `http2` on `listen 443 ssl`, and `location ^~ /game` before Django). Without the `/game` block, a refresh on `/game/play` can hit the marketing 404 instead of the CRA app.
+
+Brotli needs the Ubuntu module: `sudo apt-get install -y libnginx-mod-brotli` (or `nginx-module-brotli`). Then `sudo nginx -t && sudo systemctl reload nginx`. Gunicorn and Daphne stay as they are.
+
 ## 1. Nginx
 
 When proxying to Django (Gunicorn/Daphne), nginx must pass scheme and host so Django builds the right callback URL (HTTPS and correct host).

@@ -75,6 +75,7 @@ export function BirdrLevelImage({ iconUrl, sequence, variant, size, style, frame
           ]}
           blurRadius={isSilhouette ? 8 : 0}
           resizeMode="contain"
+          resizeMethod="resize"
           accessibilityIgnoresInvertColors
         />
       ) : levelNumber != null ? (

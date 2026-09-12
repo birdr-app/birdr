@@ -414,6 +414,14 @@ export function FlockDetailScreen() {
         </View>
       )}
 
+      {flock.history_path ? (
+        <TouchableOpacity
+          onPress={() => (navigation as any).navigate('FlockWeeklyProgress', { slug })}
+        >
+          <Text style={styles.linkText}>{t('flocks_weekly_progress')}</Text>
+        </TouchableOpacity>
+      ) : null}
+
       {flock.is_member && !flock.is_owner ? (
         <TouchableOpacity
           style={styles.dangerButton}

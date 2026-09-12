@@ -3,7 +3,7 @@
 <section class="hero species-hero">
   <div class="species-title-row">
     <div class="species-copy">
-      <h1>{{ species.name }}</h1>
+      <h1>{{ species_name }}</h1>
       <p class="latin">{{ species.name_latin }}</p>
       {% if family_name or order_name %}
       <p>
@@ -22,61 +22,59 @@
     </div>
     {% if cover_url %}
     <figure class="species-thumb">
-      <a href="#all-media" data-open-species-media data-species-id="{{ species.id }}" data-species-name="{{ species.name }}" data-species-url="/api/species/{{ species.id }}/" aria-haspopup="dialog" aria-controls="all-media">
-        <img src="{{ cover_url }}" width="96" height="96" alt="{{ species.name }} illustration">
+      <a href="#all-media" data-open-species-media data-species-id="{{ species.id }}" data-species-name="{{ species_name }}" data-species-url="/api/species/{{ species.id }}/" aria-haspopup="dialog" aria-controls="all-media">
+        <img src="{{ cover_url }}" width="96" height="96" alt="{% mt "{name} illustration" name=species_name %}">
       </a>
     </figure>
     {% endif %}
   </div>
   <div class="cta-row">
-    <a class="btn" href="{{ practice_href }}">Practice</a>
+    <a class="btn" href="{{ practice_href }}">{% mt "Practice" %}</a>
   </div>
-  <p class="cta-note">Play a quiz with {{ species.name }} and similar species</p>
+  <p class="cta-note">{% mt "Play a quiz with {name} and similar species" name=species_name %}</p>
   <p>
-    <a class="media-all-link" href="#all-media" data-open-species-media data-species-id="{{ species.id }}" data-species-name="{{ species.name }}" data-species-url="/api/species/{{ species.id }}/" aria-haspopup="dialog" aria-controls="all-media">View all photos, video and sound</a>
+    <a class="media-all-link" href="#all-media" data-open-species-media data-species-id="{{ species.id }}" data-species-name="{{ species_name }}" data-species-url="/api/species/{{ species.id }}/" aria-haspopup="dialog" aria-controls="all-media">{% mt "View all photos, video and sound" %}</a>
   </p>
   {% if media_reviewed %}
   <p class="review-status is-ok">
     <svg class="review-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
       <path fill="currentColor" d="M6.4 12.2 2.2 8l1.4-1.4 2.8 2.8 6-6L14 4.8z"/>
     </svg>
-    Reviewed
+    {% mt "Reviewed" %}
   </p>
   {% else %}
-  <p class="review-status is-needed">Review needed</p>
+  <p class="review-status is-needed">{% mt "Review needed" %}</p>
   <p class="review-needed-note">
-    Birdr is a community-driven project, and many photos still need a human check.
-    If you know this bird, you can help by reviewing its images.
+    {% mt "Birdr is a community-driven project, and many photos still need a human check. If you know this bird, you can help by reviewing its images." %}
   </p>
   <p>
-    <a class="media-all-link" href="{{ media_review_href }}">Review photos</a>
+    <a class="media-all-link" href="{{ media_review_href }}">{% mt "Review photos" %}</a>
   </p>
   {% endif %}
 </section>
 {% include "marketing/_species_media.html" %}
 {% if confused_species %}
 <section>
-  <h2>Often mixed up with</h2>
+  <h2>{% mt "Often mixed up with" %}</h2>
   <p>
-    In quizzes, players most often confuse {{ species.name }} with these birds—
-    either this species was picked by mistake, or the other way around.
+    {% mt "In quizzes, players most often confuse {name} with these birds—either this species was picked by mistake, or the other way around." name=species_name %}
   </p>
   <div class="card">
     <table class="stats">
       <thead>
         <tr>
-          <th>Species</th>
-          <th class="num">Mix-ups</th>
+            <th>{% mt "Species" %}</th>
+            <th class="num">{% mt "Mix-ups" %}</th>
         </tr>
       </thead>
       <tbody>
         {% for row in confused_species %}
         <tr>
           <td>
-            {% if row.url %}<a href="{{ row.url }}">{{ row.name }}</a>{% else %}{{ row.name }}{% endif %}
+            {% if row.url %}<a href="{{ row.url|mpath }}">{{ row.name }}</a>{% else %}{{ row.name }}{% endif %}
             {% if row.name_latin %}<span class="latin">{{ row.name_latin }}</span>{% endif %}
             {% if row.compare_url %}
-            <p class="more-link"><a href="{{ row.compare_url }}">How to tell them apart</a></p>
+            <p class="more-link"><a href="{{ row.compare_url|mpath }}">{% mt "How to tell them apart" %}</a></p>
             {% endif %}
           </td>
           <td class="num">{{ row.total_wrong }}</td>
@@ -89,15 +87,15 @@
 {% endif %}
 {% if family_blurb %}
 <section>
-  <h2>Family</h2>
+  <h2>{% mt "Family" %}</h2>
   <p>{{ family_blurb|truncatewords:80 }}</p>
 </section>
 {% endif %}
 {% if order_blurb %}
 <section>
-  <h2>Order</h2>
+  <h2>{% mt "Order" %}</h2>
   <p>{{ order_blurb|truncatewords:80 }}</p>
 </section>
 {% endif %}
-<p><a href="/site/learn-bird-identification/">How Birdr teaches identification</a></p>
+<p><a href="{{ '/site/learn-bird-identification/'|mpath }}">{% mt "How Birdr teaches identification" %}</a></p>
 {% endblock %}

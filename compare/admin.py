@@ -1,5 +1,16 @@
 from django.contrib import admin
-from .models import CommunityComparison, SpeciesTrait, SpeciesComparison, ComparisonRequest
+from .models import CommunityComparison, ComparisonTranslation, SpeciesTrait, SpeciesComparison, ComparisonRequest
+
+
+class ComparisonTranslationInline(admin.TabularInline):
+    model = ComparisonTranslation
+    extra = 0
+    can_delete = True
+    readonly_fields = ['language', 'source_hash', 'updated']
+    fields = ['language', 'source_hash', 'updated']
+
+    def has_add_permission(self, request, obj=None):
+        return False
 
 
 @admin.register(SpeciesTrait)
@@ -18,6 +29,7 @@ class SpeciesComparisonAdmin(admin.ModelAdmin):
     search_fields = ['species_1__name', 'species_2__name', 'family_1', 'family_2', 'order_1', 'order_2']
     readonly_fields = ['generated_at', 'updated_at']
     raw_id_fields = ['species_1', 'species_2']
+    inlines = [ComparisonTranslationInline]
 
 
 @admin.register(CommunityComparison)

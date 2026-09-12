@@ -382,6 +382,9 @@ class DailyChallengeStartView(APIView):
         for p in accepted:
             pl = _get_or_create_player_for_user(p.user)
             PlayerScore.objects.get_or_create(player=pl, game=game, defaults={'score': 0})
+        from jizz.client_info import record_player_score_client_from_request
+
+        record_player_score_client_from_request(creator_player, game, request)
 
         started = now()
         closes_at = started + timedelta(hours=24)

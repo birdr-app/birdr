@@ -149,6 +149,93 @@ def _logo_url(flock: Flock, request) -> str | None:
     return absolute_media_url(flock.logo.url, request)
 
 
+def _published_challenges(flock: Flock) -> list[FlockChallenge]:
+    return list(
+        flock.challenges.exclude(status=FlockChallenge.STATUS_DRAFT).order_by(
+            'starts_at', 'id'
+        )
+    )
+
+
+def _published_challenge_count(flock: Flock) -> int:
+    return flock.challenges.exclude(status=FlockChallenge.STATUS_DRAFT).count()
+
+
+def _flock_history_path(flock: Flock) -> str | None:
+    if _published_challenge_count(flock) < 2:
+        return None
+    latest = (
+        flock.challenges.exclude(status=FlockChallenge.STATUS_DRAFT)
+        .order_by('-starts_at', '-id')
+        .first()
+    )
+    if not latest:
+        return None
+    return f'/flocks/c/{latest.public_token}/history/'
+
+
+def _challenge_week_label(challenge: FlockChallenge) -> str:
+    local = timezone.localtime(challenge.starts_at)
+    return local.strftime('%d %b').lstrip('0')
+
+
+def _flock_progress_payload(flock: Flock) -> dict:
+    """Line-chart data: x = challenges, y = correct answers / rank per player."""
+    challenges = _published_challenges(flock)
+    n = len(challenges)
+    labels = [_challenge_week_label(c) for c in challenges]
+    max_correct = max((c.length for c in challenges), default=25)
+    players: dict[int, dict] = {}
+    max_rank = 1
+    for idx, challenge in enumerate(challenges):
+        rows = _leaderboard_rows(challenge)
+        max_rank = max(max_rank, len(rows) or 1)
+        for rank, attempt in enumerate(rows, start=1):
+            entry = players.setdefault(
+                attempt.user_id,
+                {
+                    'user_id': attempt.user_id,
+                    'display_name': _display_name(attempt.user),
+                    'correct': [None] * n,
+                    'rank': [None] * n,
+                },
+            )
+            entry['correct'][idx] = attempt.correct_count
+            entry['rank'][idx] = rank
+    series = sorted(
+        players.values(),
+        key=lambda p: (
+            next((r for r in reversed(p['rank']) if r is not None), 999),
+            p['display_name'].lower(),
+        ),
+    )
+    max_cumulative = 0
+    for player in series:
+        running = 0
+        started = False
+        cumulative = []
+        for correct in player['correct']:
+            if correct is not None:
+                started = True
+                running += correct
+                cumulative.append(running)
+            elif started:
+                cumulative.append(running)
+            else:
+                cumulative.append(None)
+        player['cumulative'] = cumulative
+        if running > max_cumulative:
+            max_cumulative = running
+    return {
+        'labels': labels,
+        'max_correct': max_correct,
+        'max_rank': max_rank,
+        'max_cumulative': max_cumulative,
+        'players': series,
+        'challenge_count': n,
+    }
+
+
 def _challenge_status(challenge: FlockChallenge) -> str:
     now_ts = timezone.now()
     if challenge.status == FlockChallenge.STATUS_ENDED or now_ts > challenge.ends_at:
@@ -182,6 +269,8 @@ def _serialize_flock(flock: Flock, request, *, include_invite: bool = False) -> 
         'is_member': bool(user and flock.is_member(user)),
         'can_leave': bool(user and _can_leave_flock(flock, user)),
         'active_challenge': _serialize_challenge_summary(active, request) if active else None,
+        'challenge_count': _published_challenge_count(flock),
+        'history_path': _flock_history_path(flock),
     }
     if include_invite and user and flock.is_member(user):
         invite = _active_invite(flock)
@@ -399,6 +488,26 @@ class FlockDetailView(APIView):
                 flock.logo = logo
         flock.save()
         return Response(_serialize_flock(flock, request, include_invite=True))
+
+
+class FlockProgressView(APIView):
+    """Weekly score/rank/cumulative series for flock members."""
+
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, slug):
+        flock = get_object_or_404(
+            Flock.objects.select_related('default_country'), slug=slug
+        )
+        _require_member(flock, request.user)
+        chart = _flock_progress_payload(flock)
+        return Response({
+            'flock_name': flock.name,
+            'flock_slug': flock.slug,
+            'logo_url': _logo_url(flock, request),
+            **chart,
+        })
 
 
 class FlockMembersView(APIView):
@@ -810,7 +919,9 @@ class FlockChallengeStartView(APIView):
                     host=player,
                     language=getattr(player, 'language', 'en') or 'en',
                 )
-                PlayerScore.objects.get_or_create(player=player, game=game, defaults={'score': 0})
+                from jizz.client_info import record_player_score_client_from_request
+
+                record_player_score_client_from_request(player, game, request)
                 attempt = FlockChallengeAttempt.objects.create(
                     challenge=challenge,
                     user=request.user,
@@ -1107,8 +1218,14 @@ def flock_challenge_share_page(request, public_token: str):
             status=404,
         )
     flock = challenge.flock
-    top = _share_top_entries(challenge, 5)
-    participant_count = len(_leaderboard_rows(challenge))
+    rows = _leaderboard_rows(challenge)
+    participant_count = len(rows)
+    show_all = request.GET.get('all') in ('1', 'true', 'yes')
+    displayed = rows if show_all else rows[:5]
+    top = [
+        _serialize_leaderboard_entry(a, i)
+        for i, a in enumerate(displayed, start=1)
+    ]
     join_url = _share_join_url(request, flock)
     canonical = _absolute_url(request, f'/flocks/c/{challenge.public_token}/')
     og_image = _absolute_url(request, f'/flocks/c/{challenge.public_token}/og.png')
@@ -1133,12 +1250,53 @@ def flock_challenge_share_page(request, public_token: str):
             'ends_at': challenge.ends_at,
             'ends_at_iso': challenge.ends_at.isoformat(),
             'top': top,
+            'show_all': show_all,
+            'has_more': participant_count > 5,
             'participant_count': participant_count,
             'join_url': join_url,
             'description': description,
             'canonical_url': canonical,
             'og_image': og_image,
             'og_title': f'{flock.name} leaderboard · Birdr',
+            'has_history': _published_challenge_count(flock) > 1,
+            'history_path': f'/flocks/c/{challenge.public_token}/history/',
+        },
+    )
+
+
+def flock_challenge_history_page(request, public_token: str):
+    """Public chart of correct answers and ranks across weekly challenges."""
+    challenge = _challenge_by_public_token(public_token)
+    if not challenge:
+        return render(
+            request,
+            'jizz/flock_challenge_history.html',
+            {'missing': True},
+            status=404,
+        )
+    flock = challenge.flock
+    chart = _flock_progress_payload(flock)
+    share_path = f'/flocks/c/{challenge.public_token}/'
+    join_url = _share_join_url(request, flock)
+    canonical = _absolute_url(request, f'{share_path}history/')
+    return render(
+        request,
+        'jizz/flock_challenge_history.html',
+        {
+            'missing': False,
+            'flock_name': flock.name,
+            'logo_url': _logo_url(flock, request),
+            'chart_json': chart,
+            'has_history': chart['challenge_count'] > 1,
+            'share_path': share_path,
+            'join_url': join_url,
+            'canonical_url': canonical,
+            'og_title': f'{flock.name} weekly scores · Birdr',
+            'description': (
+                f'{flock.name} weekly challenge scores on Birdr. '
+                f'{chart["challenge_count"]} week'
+                f'{"s" if chart["challenge_count"] != 1 else ""} of club mix quizzes.'
+            ),
         },
     )
 

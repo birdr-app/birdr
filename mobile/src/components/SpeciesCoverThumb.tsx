@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { View, Image, ActivityIndicator, Text, StyleSheet } from 'react-native';
+import { View, ActivityIndicator, Text, StyleSheet } from 'react-native';
 import { fetchSpeciesCover } from '../api/fetchSpeciesCover';
 import { apiUrl } from '../api/config';
 import { colors } from '../theme';
+import { CachedRemoteImage } from './CachedRemoteImage';
 
 function resolveMediaUrl(url: string): string {
   if (url.startsWith('http://') || url.startsWith('https://')) return url;
@@ -49,7 +50,13 @@ export function SpeciesCoverThumb({ speciesId, initialUrl, size = 48, alt = '' }
   return (
     <View style={[styles.wrap, { width: size, height: size }]}>
       {url ? (
-        <Image source={{ uri: url }} style={{ width: size, height: size }} resizeMode="cover" accessibilityLabel={alt} />
+        <CachedRemoteImage
+          source={{ uri: url }}
+          style={{ width: size, height: size }}
+          contentFit="cover"
+          recyclingKey={url}
+          accessibilityLabel={alt}
+        />
       ) : loading ? (
         <ActivityIndicator size="small" color={colors.primary[400]} />
       ) : (

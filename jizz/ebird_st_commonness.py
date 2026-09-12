@@ -23,6 +23,11 @@ from jizz.country_region_codes import (
     expand_region_codes,
     resolve_app_country_for_st_region,
 )
+from jizz.playable_regions import AGGREGATE_MEMBERS, scoring_region_codes
+from jizz.st_subnational_regions import (
+    ST_PLAYABLE_REGION_TYPES,
+    app_code_for_st_region,
+)
 
 ST_DOWNLOAD_BASE = "https://st-download.ebird.org/v1"
 SCIENCE_ST_DOWNLOADS_BASE = "https://science.ebird.org"
@@ -426,9 +431,8 @@ def countries_in_regional_stats(
 
     sub = df.copy()
     if "region_type" in sub.columns:
-        # Include subnational rows (e.g. US states: region_code "US-CA", region_type "subnational1")
         rt = sub["region_type"].astype(str).str.strip().str.lower()
-        sub = sub[rt.isin(("country", "subnational1"))]
+        sub = sub[rt.isin(ST_PLAYABLE_REGION_TYPES)]
     if sub.empty:
         return []
 
@@ -438,14 +442,36 @@ def countries_in_regional_stats(
 
     out: List[str] = []
     seen: set = set()
-    for raw_rc in sub["region_code"].astype(str).str.strip().str.upper().unique():
-        app_cc = app_country_for_st_region(raw_rc)
-        if not app_cc or app_cc in seen:
+    names = sub["region_name"] if "region_name" in sub.columns else None
+    present_app: set[str] = set()
+    codes_list = list(sub["region_code"].astype(str).str.strip().str.upper())
+    for i, raw in enumerate(codes_list):
+        if not raw:
+            continue
+        rn = None
+        if names is not None:
+            val = names.iloc[i]
+            if not (isinstance(val, float) and pd.isna(val)):
+                rn = str(val)
+        app_cc = app_code_for_st_region(raw, rn)
+        if not app_cc:
+            continue
+        present_app.add(app_cc)
+        if app_cc in seen:
             continue
         if selected is not None and app_cc not in selected:
             continue
         seen.add(app_cc)
         out.append(app_cc)
+
+    for agg_code, members in AGGREGATE_MEMBERS.items():
+        if agg_code in seen:
+            continue
+        if selected is not None and agg_code not in selected:
+            continue
+        if any(member in present_app for member in members):
+            seen.add(agg_code)
+            out.append(agg_code)
     return sorted(out)
 
 
@@ -722,13 +748,21 @@ def parse_species_commonness(
     if df is None or df.empty:
         return None
 
-    codes = expand_region_codes(country_code)
+    codes = {c.upper() for c in scoring_region_codes(country_code)}
     rc = df["region_code"].astype(str).str.strip().str.upper()
-    mask = rc.isin([c.upper() for c in codes])
+    names = df["region_name"] if "region_name" in df.columns else None
+    mapped = []
+    for i, raw in enumerate(rc):
+        rn = None
+        if names is not None:
+            val = names.iloc[i]
+            if not (isinstance(val, float) and pd.isna(val)):
+                rn = str(val)
+        mapped.append(app_code_for_st_region(raw, rn) or "")
+    mask = rc.isin(codes) | pd.Series(mapped, index=df.index).isin(codes)
     if "region_type" in df.columns:
         rt = df["region_type"].astype(str).str.strip().str.lower()
-        # Same rule as countries_in_regional_stats: allow subnational1 in addition to country.
-        mask &= rt.isin(("country", "subnational1"))
+        mask &= rt.isin(ST_PLAYABLE_REGION_TYPES)
     sub = df[mask].copy()
     if sub.empty:
         return None

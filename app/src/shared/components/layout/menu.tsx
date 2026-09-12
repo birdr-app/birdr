@@ -1,8 +1,7 @@
 import {Flex, Link} from "@chakra-ui/react";
 import {FormattedMessage} from "react-intl"
 import {Link as RouterLink} from "react-router-dom";
-import { getCountryChallengesPath, getCountryChallengeLeaderboardPath } from "../../../api/birdrJourney";
-import { getFlocksPath } from "../../../api/flocks";
+import { getCountryChallengeLeaderboardPath } from "../../../api/birdrJourney";
 
 export const BirdrMenu = () => {
     return (
@@ -17,20 +16,10 @@ export const BirdrMenu = () => {
               <FormattedMessage id={'High scores'} defaultMessage={'High scores'} />
             </Link>
             <Link asChild textDecoration="none">
-              <RouterLink to={getFlocksPath()}>
-                <FormattedMessage id={'flocks_title'} defaultMessage={'Flocks'} />
-              </RouterLink>
-            </Link>
-            <Link asChild textDecoration="none">
-              <RouterLink to={getCountryChallengesPath()}>
-                <FormattedMessage id={'country_challenges'} defaultMessage={'Country challenges'} />
-              </RouterLink>
-            </Link>
-            <Link asChild textDecoration="none">
               <RouterLink to={getCountryChallengeLeaderboardPath()}>
                 <FormattedMessage
-                  id="country_challenge_leaderboard"
-                  defaultMessage="Country Challenge leaderboard"
+                  id="country_leaderboard"
+                  defaultMessage="Country leaderboard"
                 />
               </RouterLink>
             </Link>

@@ -81,6 +81,7 @@ export function FloatingFeather({ size = 60 }: Props) {
       source={FEATHER_LOADING_IMAGE}
       style={[styles.image, { width: size, height: size }, floatingStyle]}
       resizeMode="contain"
+      resizeMethod="resize"
     />
   );
 }

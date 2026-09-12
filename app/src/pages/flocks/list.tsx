@@ -25,8 +25,8 @@ import {
   setStoredMainFlockSlug,
   type Flock,
 } from '../../api/flocks';
-import { authService } from '../../api/services/auth.service';
 import { Page } from '../../shared/components/layout';
+import { useAuthProfile } from '../../core/auth-profile-context';
 import { BirdrArtImage } from '../../components/birdr-art-image';
 import { getCountryDisplayName } from '../../data/country-names-nl';
 import AppContext from '../../core/app-context';
@@ -34,26 +34,15 @@ import AppContext from '../../core/app-context';
 export function FlocksListPage() {
   const navigate = useNavigate();
   const { appLanguage } = useContext(AppContext);
+  const { isAuthenticated } = useAuthProfile();
   const locale = appLanguage || 'en';
 
   const [flocks, setFlocks] = useState<Flock[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(() => !!authService.getAccessToken());
-
-  useEffect(() => {
-    const syncAuth = () => setIsAuthenticated(!!authService.getAccessToken());
-    syncAuth();
-    window.addEventListener('focus', syncAuth);
-    const interval = setInterval(syncAuth, 3000);
-    return () => {
-      window.removeEventListener('focus', syncAuth);
-      clearInterval(interval);
-    };
-  }, []);
 
   const load = useCallback(async () => {
-    if (!authService.getAccessToken()) {
+    if (!isAuthenticated) {
       setFlocks([]);
       setLoading(false);
       return;
@@ -68,7 +57,7 @@ export function FlocksListPage() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [isAuthenticated]);
 
   useEffect(() => {
     void load();

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   Modal,
   View,
@@ -18,6 +18,8 @@ import { useNavigation } from '@react-navigation/native';
 import { useMenu } from '../context/MenuContext';
 import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
+import { listBirdrJourneys } from '../api/birdrJourney';
+import { listFlocks } from '../api/flocks';
 import { useTranslation } from '../i18n/TranslationContext';
 import { AppLanguagePicker } from './AppLanguagePicker';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -41,6 +43,8 @@ export function UserMenuModal() {
   const { t, locale, setLocale } = useTranslation();
   const insets = useSafeAreaInsets();
   const slideAnim = useRef(new Animated.Value(PANEL_WIDTH)).current;
+  const [hasFlocks, setHasFlocks] = useState(false);
+  const [hasCountryChallenges, setHasCountryChallenges] = useState(false);
 
   useEffect(() => {
     Animated.timing(slideAnim, {
@@ -49,6 +53,32 @@ export function UserMenuModal() {
       useNativeDriver: true,
     }).start();
   }, [userMenuVisible, slideAnim]);
+
+  useEffect(() => {
+    if (!userMenuVisible) return;
+    let cancelled = false;
+    (async () => {
+      if (isAuthenticated) {
+        try {
+          const flocks = await listFlocks();
+          if (!cancelled) setHasFlocks(flocks.length > 0);
+        } catch {
+          if (!cancelled) setHasFlocks(false);
+        }
+      } else if (!cancelled) {
+        setHasFlocks(false);
+      }
+      try {
+        const journeys = await listBirdrJourneys();
+        if (!cancelled) setHasCountryChallenges(journeys.length > 0);
+      } catch {
+        if (!cancelled) setHasCountryChallenges(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [userMenuVisible, isAuthenticated]);
 
   const handleItem = (route: string) => {
     closeUserMenu();
@@ -89,10 +119,11 @@ export function UserMenuModal() {
           <Pressable style={StyleSheet.absoluteFill} onPress={(e) => e.stopPropagation()}>
             <ScrollView style={styles.scroll} contentContainerStyle={[styles.content, { paddingTop: Math.max(56, insets.top) }]}>
               <Text style={styles.sectionTitle}>{t('account')}</Text>
-              <Text style={styles.languageLabel}>{t('app_language')}</Text>
-              <View style={styles.languageRow}>
-                <AppLanguagePicker value={locale} onChange={setLocale} />
-              </View>
+              <AppLanguagePicker
+                variant="menu"
+                value={locale}
+                onChange={setLocale}
+              />
               <View style={styles.separator} />
               {!isAuthenticated ? (
                 <>
@@ -123,6 +154,22 @@ export function UserMenuModal() {
                   </Text>
                   <Text style={styles.hint}>{t('you_are_logged_in')}</Text>
                 </View>
+              )}
+              {hasFlocks && (
+                <TouchableOpacity
+                  style={styles.menuItem}
+                  onPress={() => handleItem('FlockList')}
+                >
+                  <Text style={styles.menuLabel}>{t('flocks')}</Text>
+                </TouchableOpacity>
+              )}
+              {hasCountryChallenges && (
+                <TouchableOpacity
+                  style={styles.menuItem}
+                  onPress={() => handleItem('BirdrJourneyList')}
+                >
+                  <Text style={styles.menuLabel}>{t('country_challenges')}</Text>
+                </TouchableOpacity>
               )}
               {USER_MENU_ITEMS.map((item) => (
                 <TouchableOpacity

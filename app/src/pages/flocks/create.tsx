@@ -21,39 +21,29 @@ import {
   getFlocksJoinPath,
   setStoredMainFlockSlug,
 } from '../../api/flocks';
-import { authService } from '../../api/services/auth.service';
 import CountryCombobox from '../../components/country-combobox';
+import { useAuthProfile } from '../../core/auth-profile-context';
 import { Page } from '../../shared/components/layout';
 import { UseCountries, type Country } from '../../user/use-countries';
 
 export function FlocksCreatePage() {
   const navigate = useNavigate();
   const intl = useIntl();
+  const { isAuthenticated, ready } = useAuthProfile();
   const { countries } = UseCountries();
   const countriesList = Array.isArray(countries) ? countries : [];
 
-  const [isAuthenticated, setIsAuthenticated] = useState(() => !!authService.getAccessToken());
   const [name, setName] = useState('');
   const [country, setCountry] = useState<Country | null>(null);
   const [creating, setCreating] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const syncAuth = () => setIsAuthenticated(!!authService.getAccessToken());
-    syncAuth();
-    window.addEventListener('focus', syncAuth);
-    const interval = setInterval(syncAuth, 3000);
-    return () => {
-      window.removeEventListener('focus', syncAuth);
-      clearInterval(interval);
-    };
-  }, []);
-
-  useEffect(() => {
+    if (!ready) return;
     if (!isAuthenticated) {
       navigate('/login', { state: { from: '/flocks/create' }, replace: true });
     }
-  }, [isAuthenticated, navigate]);
+  }, [ready, isAuthenticated, navigate]);
 
   const handleCreate = async () => {
     if (!name.trim() || !country?.code) return;
@@ -73,7 +63,7 @@ export function FlocksCreatePage() {
     }
   };
 
-  if (!isAuthenticated) return null;
+  if (!ready || !isAuthenticated) return null;
 
   return (
     <Page>

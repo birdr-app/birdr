@@ -66,6 +66,21 @@ class ApiPagesTestCase(TestCase):
         response = self.client.get('/api/pages/nonexistent/')
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
+    def test_page_detail_rewrites_legacy_github_repo(self):
+        Page.objects.create(
+            title='About Birdr',
+            slug='about',
+            content=(
+                '{"delta": {"ops": [{"insert": "GitHub\\n"}]}, '
+                '"html": "<p><a href=\\"https://github.com/gannetson/birdr\\">GitHub</a></p>"}'
+            ),
+            show=True,
+        )
+        response = self.client.get('/api/pages/about/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertIn('https://github.com/birdr-app/birdr', response.data['content'])
+        self.assertNotIn('gannetson/birdr', response.data['content'])
+
 
 class ApiPlayerLinkTestCase(TestCase):
     """POST /api/player/link/ – link player to authenticated user."""

@@ -1,80 +1,72 @@
 <section id="help">
-  <h2>How can I help?</h2>
+  <h2>{% mt "How can I help?" %}</h2>
   <p>
-    Birdr is a small project. Honest feedback, spotting the wrong bird, and
-    writing comparison descriptions for lookalike species all help.
+    {% mt "Birdr is a small project. Honest feedback, spotting the wrong bird, writing comparison descriptions for lookalike species, and telling other birders all help. You can also donate, or get in touch if you have ideas for how to fund Birdr or want to discuss a partnership." %}
   </p>
   <p>
-    During a quiz, tap <strong>Flag</strong> if the photo, video or sound is not
-    the species shown—or is otherwise unusable. That skips the clip in your game
-    and reports it so we can take it out of the set.
+    {% mt "During a quiz, tap <strong>Flag</strong> if the photo, video or sound is not the species shown—or is otherwise unusable. That skips the clip in your game and reports it so we can take it out of the set." %}
   </p>
   <p>
-    A large part of the picture library is still waiting for review. If you know
-    a country’s birds, open <a href="#review-photos">Review photos</a> below and
-    approve or reject images a few at a time.
+    {% mt "A large part of the picture library is still waiting for review. If you know a country’s birds, open <a href=\"#review-photos\">Review photos</a> below and approve or reject images a few at a time." %}
   </p>
   <p>
-    Comparison pages still rely on AI text until someone who knows the birds
-    writes a better one. Open a lookalike pair from
-    <a href="/site/birds/">Species</a>, then use
-    <strong>Write a better description</strong>.
+    {% with birds_href='/site/birds/'|mpath %}
+    {% mt "Comparison pages still rely on AI text until someone who knows the birds writes a better one. Open a lookalike pair from <a href=\"{href}\">Species</a>, then use <strong>Write a better description</strong>." href=birds_href %}
+    {% endwith %}
   </p>
-  <div class="grid">
+  <div class="grid grid-2">
     <article class="card">
-      <h3>Send feedback</h3>
+      <h3>{% mt "Send feedback" %}</h3>
       {% if request.GET.sent == '1' %}
-      <p class="form-note">Thank you. We read every message.</p>
+      <p class="form-note">{% mt "Thank you. We read every message." %}</p>
       {% else %}
       <p>
-        Found a bug, have a suggestion, or something that worked well? Tell us here,
-        or write to <a href="mailto:info@birdr.pro">info@birdr.pro</a>.
+        {% mt "Found a bug, have a suggestion, or something that worked well? Tell us here, or write to" %}
+        <a href="mailto:info@birdr.pro">info@birdr.pro</a>.
       </p>
       {% if request.GET.sent == 'missing' %}
-      <p class="form-error">Please write a short message.</p>
+      <p class="form-error">{% mt "Please write a short message." %}</p>
       {% elif request.GET.sent == 'email' %}
-      <p class="form-error">That email address does not look valid.</p>
+      <p class="form-error">{% mt "That email address does not look valid." %}</p>
       {% endif %}
-      <form class="feedback-form" method="post" action="{% url 'marketing-feedback' %}">
+      <form class="feedback-form" method="post" action="{{ '/site/feedback/'|mpath }}">
         {% csrf_token %}
         <input type="hidden" name="next" value="{{ request.path }}">
         <input type="hidden" name="started" value="{{ feedback_started }}">
         <p class="hp-field">
-          <label for="feedback-website">Website</label>
+          <label for="feedback-website">{% mt "Website" %}</label>
           <input id="feedback-website" type="text" name="website" tabindex="-1" autocomplete="off">
         </p>
         <p>
-          <label for="feedback-comment">Message</label>
-          <textarea id="feedback-comment" name="comment" rows="5" required maxlength="5000" placeholder="Your feedback…"></textarea>
+          <label for="feedback-comment">{% mt "Message" %}</label>
+          <textarea id="feedback-comment" name="comment" rows="5" required maxlength="5000" placeholder="{% mt "Your feedback…" %}"></textarea>
         </p>
         <p>
-          <label for="feedback-name">Name <span>(optional)</span></label>
+          <label for="feedback-name">{% mt "Name" %} <span>({% mt "optional" %})</span></label>
           <input id="feedback-name" type="text" name="name" maxlength="120" autocomplete="name">
         </p>
         <p>
-          <label for="feedback-email">Email <span>(optional)</span></label>
+          <label for="feedback-email">{% mt "Email" %} <span>({% mt "optional" %})</span></label>
           <input id="feedback-email" type="email" name="email" maxlength="254" autocomplete="email">
         </p>
         <p>
-          <button class="btn secondary" type="submit">Send feedback</button>
+          <button class="btn secondary" type="submit">{% mt "Send feedback" %}</button>
         </p>
       </form>
       {% endif %}
     </article>
     <article class="card" id="review-photos">
-      <h3>Review photos</h3>
+      <h3>{% mt "Review photos" %}</h3>
       <p>
-        Quizzes are only as good as the pictures, and many still have not been
-        checked. Help by approving good photos and rejecting the wrong bird—start
-        with any country, or the birds you know best.
+        {% mt "Quizzes are only as good as the pictures, and many still have not been checked. Help by approving good photos and rejecting the wrong bird—start with any country, or the birds you know best." %}
       </p>
       {% if country %}
       <p>
-        <a class="btn" href="/media-review/{{ country.code }}">Review {{ country.name }} photos</a>
+        <a class="btn" href="/media-review/{{ country.code }}">{% mt "Review {name} photos" name=country|local_country %}</a>
       </p>
-      <p><a href="/media-review/">Review photos from any country</a></p>
+      <p><a href="/media-review/">{% mt "Review photos from any country" %}</a></p>
       {% else %}
-      <p><a class="btn" href="/media-review/">Review media</a></p>
+      <p><a class="btn" href="/media-review/">{% mt "Review media" %}</a></p>
       {% if countries %}
       <p>
         {% for c in countries %}
@@ -85,14 +77,49 @@
       {% endif %}
     </article>
     <article class="card" id="write-comparisons">
-      <h3>Write comparisons</h3>
+      <h3>{% mt "Write comparisons" %}</h3>
       <p>
-        Species pages link to lookalikes that people mix up. If you know those
-        birds, you can replace the AI text with a description that actually
-        helps others tell them apart. You need to be signed in.
+        {% mt "Species pages link to lookalikes that people mix up. If you know those birds, you can replace the AI text with a description that actually helps others tell them apart. You need to be signed in." %}
       </p>
       <p>
-        <a class="btn" href="/site/birds/">Find lookalikes</a>
+        <a class="btn" href="{{ '/site/birds/'|mpath }}">{% mt "Find lookalikes" %}</a>
+      </p>
+    </article>
+    <article class="card" id="spread-word">
+      <h3>{% mt "Spread the word" %}</h3>
+      <p>
+        {% with flocks_href='/site/flocks/'|mpath %}
+        {% mt "Birdr grows when birders tell other birders. Mention it in a club newsletter, a WhatsApp group, or after a field trip. Clubs can also start a <a href=\"{href}\">Flock</a> and play the same quiz." href=flocks_href %}
+        {% endwith %}
+      </p>
+      <p>
+        <a class="btn" href="{{ '/site/newsletter/'|mpath }}">{% mt "See a newsletter example" %}</a>
+      </p>
+    </article>
+    <article class="card" id="store-review">
+      <h3>{% mt "Leave a store review" %}</h3>
+      <p>
+        {% mt "If you use the iPhone or Android app, a rating is one of the simplest ways to help. It tells other birders the quiz is worth trying." %}
+      </p>
+      {% include "marketing/_store_scores.html" %}
+      <p class="cta-row">
+        <a class="btn" href="{{ app_store_review_url }}" target="_blank" rel="noopener noreferrer">{% mt "Review on the App Store" %}</a>
+        <a class="btn secondary" href="{{ play_store_url }}" target="_blank" rel="noopener noreferrer">{% mt "Review on Google Play" %}</a>
+      </p>
+    </article>
+    <article class="card" id="support-birdr">
+      <h3>{% mt "Support Birdr" %}</h3>
+      <p>
+        {% mt "Birdr is free, open source, and built in spare time. There is no funding behind it right now. A GitHub sponsorship helps cover hosting and AI credits so the quiz can stay free." %}
+      </p>
+      <p>
+        {% mt "Donating is one way. If you have another idea for how to fund Birdr—a partnership, a grant, a club, a company—write to <a href=\"mailto:info@birdr.pro\">info@birdr.pro</a>. I would like to talk." %}
+      </p>
+      <p>
+        {% include "marketing/_support_btn.html" %}
+      </p>
+      <p>
+        <a href="mailto:info@birdr.pro">{% mt "Write about funding or a partnership" %}</a>
       </p>
     </article>
   </div>

@@ -1,15 +1,17 @@
-import React, {FC, ReactNode, SetStateAction, useEffect, useState, useCallback} from 'react';
+import React, {FC, ReactNode, SetStateAction, useEffect, useState, useCallback, useRef} from 'react';
 import AppContext, {Answer, Country, Game, Player, Species} from "./app-context";
 import { toaster } from "@/components/ui/toaster";
 import { assignUniqueKeysToParts } from 'react-intl/src/utils';
 import {TaxOrder} from "../user/use-tax-order"
 import {TaxFamily} from "../user/use-tax-family"
+import { type SpeciesGroup } from "../user/use-species-group"
 import { useNavigate } from 'react-router-dom';
 import axios from '../api/axios-config';
 import { apiUrl } from '../api/baseUrl';
+import { clientInfoHeaders, clientInfoPayload } from '../api/clientInfo';
 import { authService } from '../api/services/auth.service';
-import { linkStoredPlayerToAccount } from '../api/player';
-import { profileService, UserProfile } from '../api/services/profile.service';
+import { profileService } from '../api/services/profile.service';
+import { useAuthProfile } from './auth-profile-context';
 import {
   playLevelFromSettings,
   settingsFromPlayLevel,
@@ -25,6 +27,7 @@ import {
   APP_LOCALE_STORAGE_KEY,
   matchAppLocale,
   resolveAppLocale,
+  speciesLanguageFromAppLocale,
   type AppLocale,
 } from '../i18n/app-locales';
 import {
@@ -39,12 +42,18 @@ type Props = {
 };
 
 const AppContextProvider: FC<Props> = ({children}) => {
+  const {
+    profile,
+    ready: profileReady,
+    isAuthenticated,
+    applyProfile,
+  } = useAuthProfile();
+  const appliedUserRef = useRef<string | null>(null);
   const [level, setLevel] = useState<string>('advanced');
   const [country, setCountryState] = useState<Country>(() => {
     const code = readStoredCountryCode();
     return code ? {code, name: code} : {code: '', name: ''};
   });
-  const [profileReady, setProfileReady] = useState(false);
   const setCountry = useCallback((update: SetStateAction<Country>) => {
     setCountryState((prev) => {
       const next = typeof update === 'function' ? update(prev) : update;
@@ -72,7 +81,10 @@ const AppContextProvider: FC<Props> = ({children}) => {
   });
   const [taxOrder, setTaxOrder] = useState<TaxOrder | undefined>();
   const [taxFamily, setTaxFamily] = useState<TaxFamily | undefined>();
+  const [speciesGroup, setSpeciesGroup] = useState<SpeciesGroup | undefined>();
+  const [season, setSeason] = useState<string>('');
   const [loading, setLoading] = useState(false)
+  const [speciesLoading, setSpeciesLoading] = useState(false)
   const [length, setLength] = useState<string>('10');
   const [player, setPlayer] = useState<Player | undefined>()
   const [playerName, setPlayerName] = useState<string | undefined>()
@@ -90,7 +102,6 @@ const AppContextProvider: FC<Props> = ({children}) => {
     setRarity(preset.rarity);
   }, []);
   const [includeEscapes, setIncludeEscapes] = useState<boolean>(false)
-  const [profile, setProfile] = useState<UserProfile | null>(null)
   const [visualStyle, setVisualStyleState] = useState<VisualStyle>(() => readStoredVisualStyle())
   const setVisualStyle = useCallback((style: VisualStyle) => {
     const next = parseVisualStyle(style);
@@ -106,7 +117,8 @@ const AppContextProvider: FC<Props> = ({children}) => {
     'Content-Type': 'application/json',
     'Cache-Control': 'no-cache, no-store, must-revalidate',
     'Pragma': 'no-cache',
-    'Expires': '0'
+    'Expires': '0',
+    ...clientInfoHeaders(),
   }), [])
 
   const createPlayer = async () => {
@@ -127,76 +139,51 @@ const AppContextProvider: FC<Props> = ({children}) => {
     }
   }
 
-  // Load profile when authenticated (for species language preference)
+  // Apply profile prefs once per login (not on every visibility refresh).
   useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      if (!authService.getAccessToken()) {
-        setProfile(null);
-        setProfileReady(true);
-        return;
+    if (!profileReady) return;
+    const userKey = isAuthenticated
+      ? (profile?.email || profile?.username || 'user')
+      : 'guest';
+    if (appliedUserRef.current === userKey) return;
+    appliedUserRef.current = userKey;
+    if (!profile) return;
+    if (profile.country_code) {
+      setCountry({
+        code: profile.country_code,
+        name: profile.country_name || profile.country_code,
+      });
+    }
+    try {
+      if (profile.language && !localStorage.getItem('birdr-language')) {
+        setLanguage(profile.language);
+        localStorage.setItem('birdr-language', profile.language);
       }
-      const ok = await authService.ensureValidAccessToken();
-      if (cancelled) return;
-      if (!ok || !authService.getAccessToken()) {
-        setProfile(null);
-        setProfileReady(true);
-        return;
-      }
-      await linkStoredPlayerToAccount();
-      if (cancelled) return;
-      profileService
-        .getProfile()
-        .then((p) => {
-          if (cancelled) return;
-          setProfile(p);
-          if (p.country_code && !p.country_code.includes('-')) {
-            setCountry({
-              code: p.country_code,
-              name: p.country_name || p.country_code,
-            });
-          }
-          try {
-            if (p.language && !localStorage.getItem('birdr-language')) {
-              setLanguage(p.language);
-              localStorage.setItem('birdr-language', p.language);
-            }
-          } catch {
-            /* ignore */
-          }
-          const nextApp = resolveAppLocale({
-            profileAppLanguage: p.app_language,
-            stored: (() => {
-              try {
-                return localStorage.getItem(APP_LOCALE_STORAGE_KEY);
-              } catch {
-                return null;
-              }
-            })(),
-          });
-          setAppLanguageState(nextApp);
-          try {
-            localStorage.setItem(APP_LOCALE_STORAGE_KEY, nextApp);
-          } catch {
-            /* ignore */
-          }
-          if (p.visual_style) {
-            const nextStyle = parseVisualStyle(p.visual_style);
-            setVisualStyleState(nextStyle);
-            writeStoredVisualStyle(nextStyle);
-          }
-        })
-        .catch(() => {
-          if (!cancelled) setProfile(null);
-        })
-        .finally(() => {
-          if (!cancelled) setProfileReady(true);
-        });
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [setCountry]);
+    } catch {
+      /* ignore */
+    }
+    const nextApp = resolveAppLocale({
+      profileAppLanguage: profile.app_language,
+      stored: (() => {
+        try {
+          return localStorage.getItem(APP_LOCALE_STORAGE_KEY);
+        } catch {
+          return null;
+        }
+      })(),
+    });
+    setAppLanguageState(nextApp);
+    try {
+      localStorage.setItem(APP_LOCALE_STORAGE_KEY, nextApp);
+    } catch {
+      /* ignore */
+    }
+    if (profile.visual_style) {
+      const nextStyle = parseVisualStyle(profile.visual_style);
+      setVisualStyleState(nextStyle);
+      writeStoredVisualStyle(nextStyle);
+    }
+  }, [profileReady, isAuthenticated, profile, setCountry]);
 
   useEffect(() => {
     if (!profileReady || country.code) return;
@@ -210,53 +197,132 @@ const AppContextProvider: FC<Props> = ({children}) => {
     };
   }, [profileReady, country.code, setCountry]);
 
-  const setAppLanguage = useCallback((lang: string) => {
+  const applySpeciesLanguage = useCallback((speciesLang: string) => {
+    if (!speciesLang) return;
+    setLanguage(speciesLang);
+    try {
+      localStorage.setItem('birdr-language', speciesLang);
+    } catch {
+      /* ignore */
+    }
+    setPlayer((p) => (p ? { ...p, language: speciesLang } : p));
+    const playerToken = (() => {
+      try {
+        return localStorage.getItem('player-token');
+      } catch {
+        return null;
+      }
+    })();
+    if (playerToken) {
+      void fetch(apiUrl(`/api/player/${playerToken}/`), {
+        cache: 'no-store',
+        method: 'PATCH',
+        headers: {
+          ...noCacheHeaders,
+          Authorization: `Token ${playerToken}`,
+        },
+        body: JSON.stringify({ language: speciesLang }),
+      })
+        .then((response) => (response.ok ? response.json() : null))
+        .then((data) => {
+          if (data?.token) {
+            try {
+              localStorage.setItem('player-token', data.token);
+            } catch {
+              /* ignore */
+            }
+            setPlayer(data);
+          }
+        })
+        .catch(() => {});
+    }
+    const token = (() => {
+      try {
+        return localStorage.getItem('game-token');
+      } catch {
+        return null;
+      }
+    })();
+    if (token) {
+      setGame((g) => (g && g.token === token ? { ...g, language: speciesLang } : g));
+      void fetch(apiUrl(`/api/games/${token}/`), {
+        cache: 'no-store',
+        method: 'PATCH',
+        headers: noCacheHeaders,
+        body: JSON.stringify({ language: speciesLang }),
+      })
+        .then((response) => (response.ok ? response.json() : null))
+        .then((data) => {
+          if (data?.token) setGame(data);
+        })
+        .catch(() => {});
+    }
+  }, [noCacheHeaders]);
+
+  const setAppLanguage = useCallback((lang: string, options?: { syncSpeciesLanguage?: boolean }) => {
     const next = matchAppLocale(lang);
     if (!next) return;
+    const syncSpecies = options?.syncSpeciesLanguage !== false;
+    const speciesLang = speciesLanguageFromAppLocale(next);
     setAppLanguageState(next);
     try {
       localStorage.setItem(APP_LOCALE_STORAGE_KEY, next);
     } catch {
       /* ignore */
     }
-    if (authService.getAccessToken()) {
-      profileService.updateProfile({ app_language: next })
-        .then((updated) => setProfile(updated))
-        .catch(() => {});
+    if (syncSpecies) {
+      applySpeciesLanguage(speciesLang);
     }
-  }, []);
+    if (authService.getAccessToken()) {
+      const payload = syncSpecies
+        ? { app_language: next, language: speciesLang }
+        : { app_language: next };
+      profileService.updateProfile(payload)
+        .then((updated) => applyProfile(updated))
+        .catch(() => {});
+    } else if (syncSpecies && profile) {
+      applyProfile({ ...profile, app_language: next, language: speciesLang });
+    }
+  }, [applySpeciesLanguage, applyProfile, profile]);
 
   const speciesLanguage = game?.language ?? profile?.language ?? language ?? 'en';
 
   useEffect(() => {
-    if (country?.code) {
-      setLoading(true)
-      fetch(apiUrl(`/api/species/?countryspecies__country=${country.code}&language=${speciesLanguage}`), {
-        cache: 'no-cache',
-        method: 'GET',
-        headers: {
-          ...noCacheHeaders,
-        },
-      })
+    if (!country?.code) {
+      setSpecies([])
+      setSpeciesLoading(false)
+      return
+    }
+    let cancelled = false
+    setSpeciesLoading(true)
+    fetch(apiUrl(`/api/species/?countryspecies__country=${country.code}&language=${speciesLanguage}`), {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+      },
+    })
       .then(response => {
+        if (cancelled) return
         if (response.status === 200) {
-          response.json().then(data => {
-            // Ensure data is always an array (handle paginated responses or other formats)
+          return response.json().then(data => {
+            if (cancelled) return
             const speciesArray = Array.isArray(data) ? data : (data?.results || data?.data || [])
             setSpecies(speciesArray)
           })
-        } else {
-          console.log('Could not load country species.')
-          setSpecies([]) // Ensure it's always an array even on error
         }
-        setLoading(false)
+        console.log('Could not load country species.')
+        setSpecies([])
       })
       .catch(error => {
+        if (cancelled) return
         console.error('Error loading species:', error)
-        setSpecies([]) // Ensure it's always an array on error
-        setLoading(false)
+        setSpecies([])
       })
-
+      .finally(() => {
+        if (!cancelled) setSpeciesLoading(false)
+      })
+    return () => {
+      cancelled = true
     }
   }, [country?.code, speciesLanguage]);
 
@@ -362,8 +428,11 @@ const AppContextProvider: FC<Props> = ({children}) => {
           media: mediaType,
           tax_order: mediaType === 'audio' ? (soundsScope === 'passerines' ? 'Passeriformes' : undefined) : taxOrder?.tax_order,
           tax_family: taxFamily?.tax_family,
+          species_group: mediaType === 'audio' && soundsScope === 'passerines' ? undefined : speciesGroup?.species_group,
+          season: season || undefined,
           rarity,
-          include_escapes: includeEscapes
+          include_escapes: includeEscapes,
+          ...clientInfoPayload(),
         })
       })
       const data = await response.json();
@@ -408,8 +477,11 @@ const AppContextProvider: FC<Props> = ({children}) => {
           media: oldGame.media,
           tax_order: oldGame.tax_order,
           tax_family: oldGame.tax_family,
+          species_group: oldGame.species_group,
+          season: oldGame.season || undefined,
           rarity: oldGame.rarity,
-          include_escapes: oldGame.include_escapes
+          include_escapes: oldGame.include_escapes,
+          ...clientInfoPayload(),
         })
       })
       const data = await response.json();
@@ -474,6 +546,10 @@ const AppContextProvider: FC<Props> = ({children}) => {
       setTaxOrder,
       taxFamily,
       setTaxFamily,
+      speciesGroup,
+      setSpeciesGroup,
+      season,
+      setSeason,
       length,
       setLength,
       country,
@@ -482,6 +558,7 @@ const AppContextProvider: FC<Props> = ({children}) => {
       setLanguage,
       appLanguage,
       setAppLanguage,
+      applySpeciesLanguage,
       setUserPreferredLanguage: setAppLanguage,
       speciesLanguage,
       visualStyle,
@@ -504,6 +581,7 @@ const AppContextProvider: FC<Props> = ({children}) => {
       playerName,
       setPlayerName,
       species,
+      speciesLoading,
       loading,
       setLoading
     }}>

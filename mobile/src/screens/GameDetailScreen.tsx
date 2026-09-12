@@ -8,10 +8,9 @@ import {
   ActivityIndicator,
   Image,
   Pressable,
-  Animated,
 } from 'react-native';
-import { useVideoPlayer, VideoView } from 'expo-video';
 import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
+import { PlayableVideo } from '../components/PlayableVideo';
 import { useRoute, useNavigation, RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { getGameDetail, type GameDetailWithAnswers, type QuestionWithAnswer } from '../api/myGames';
@@ -24,7 +23,6 @@ import { SpeciesViewButton } from '../components/SpeciesViewButton';
 import { ComparisonButton } from '../components/ComparisonButton';
 import { useGame } from '../context/GameContext';
 import { useTranslation } from '../i18n/TranslationContext';
-import { usePulsatingAnimation } from '../hooks/usePulsatingAnimation';
 import { colors } from '../theme';
 
 type GameDetailRouteParams = { token: string; playerToken?: string };
@@ -99,9 +97,30 @@ export function GameDetailScreen() {
   const [practiceSpeciesId, setPracticeSpeciesId] = useState<number | null>(null);
   const [mediaSpecies, setMediaSpecies] = useState<SpeciesMediaData | null>(null);
 
+  const loadDetail = useCallback(async () => {
+    if (!token) {
+      setError('Game token is required');
+      setLoading(false);
+      return;
+    }
+    try {
+      setLoading(true);
+      setError(null);
+      const data = await getGameDetail(
+        token,
+        playerToken ? { playerToken } : undefined
+      );
+      setGameDetail(data);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : t('failed_load'));
+    } finally {
+      setLoading(false);
+    }
+  }, [token, playerToken, t]);
+
   useEffect(() => {
-    loadGame();
-  }, [loadGame]);
+    loadDetail();
+  }, [loadDetail]);
 
   const handlePracticeSpecies = async (speciesId: number, e?: any) => {
     if (e?.stopPropagation) e.stopPropagation();
@@ -233,7 +252,7 @@ export function GameDetailScreen() {
                     />
                   )}
                   {q.media_item.type === 'video' && (
-                    <GameDetailVideo uri={q.media_item.url.startsWith('http') ? q.media_item.url : apiUrl(q.media_item.url)} />
+                    <PlayableVideo uri={q.media_item.url.startsWith('http') ? q.media_item.url : apiUrl(q.media_item.url)} style={styles.mediaVideo} />
                   )}
                   {q.media_item.type === 'audio' && (
                     <AudioPlayer uri={q.media_item.url.startsWith('http') ? q.media_item.url : apiUrl(q.media_item.url)} />
@@ -287,18 +306,6 @@ export function GameDetailScreen() {
         language={game?.language}
       />
     </ScrollView>
-  );
-}
-
-function GameDetailVideo({ uri }: { uri: string }) {
-  const player = useVideoPlayer(uri, (p) => p.play());
-  return (
-    <VideoView
-      player={player}
-      style={styles.mediaVideo}
-      nativeControls={true}
-      contentFit="contain"
-    />
   );
 }
 

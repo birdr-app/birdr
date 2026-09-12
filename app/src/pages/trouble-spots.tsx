@@ -10,15 +10,13 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import AppContext, { type Species } from '../core/app-context';
 import { Page } from '../shared/components/layout';
-import { SpeciesModal } from '../components/species-modal';
 import { SpeciesCoverThumb } from '../components/species-cover-thumb';
 import { SpeciesName } from '../components/species-name';
 import CountryCombobox from '../components/country-combobox';
-import { authService } from '../api/services/auth.service';
-import { profileService, type UserProfile } from '../api/services/profile.service';
+import { useAuthProfile } from '../core/auth-profile-context';
 import { UseCountries } from '../user/use-countries';
 import {
   fetchTroubleSpots,
@@ -75,21 +73,24 @@ function formatRate(rate: number | null): string {
   return `${Math.round(rate)}%`;
 }
 
+function tabFromSearch(value: string | null): TabKey {
+  return value === 'pairs' ? 'pairs' : 'species';
+}
+
 export default function TroubleSpotsPage() {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const intl = useIntl();
   const { loadGame, loadPlayer, setGame, speciesLanguage, species: allSpecies } =
     useContext(AppContext);
-  const [activeTab, setActiveTab] = useState<TabKey>('species');
-  const [authenticated, setAuthenticated] = useState(false);
-  const [profile, setProfile] = useState<UserProfile | null>(null);
+  const { isAuthenticated: authenticated, profile } = useAuthProfile();
+  const [activeTab, setActiveTab] = useState<TabKey>(() => tabFromSearch(searchParams.get('tab')));
   const [species, setSpecies] = useState<TroubleSpotSpecies[]>([]);
   const [pairs, setPairs] = useState<TroubleSpotPair[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [startingPairKey, setStartingPairKey] = useState<string | null>(null);
   const [startingSpeciesId, setStartingSpeciesId] = useState<number | null>(null);
-  const [modalSpecies, setModalSpecies] = useState<Species | undefined>();
   const [countryCode, setCountryCode] = useState<string | undefined>();
   const [includeFixed, setIncludeFixed] = useState(false);
   const { countries } = UseCountries();
@@ -105,20 +106,6 @@ export default function TroubleSpotsPage() {
     () => (includeFixed ? pairs : pairs.filter((pair) => !pair.fixed)),
     [pairs, includeFixed],
   );
-
-  const checkAuth = useCallback(async () => {
-    const ok = await authService.ensureValidAccessToken();
-    setAuthenticated(!!ok && !!authService.getAccessToken());
-    if (ok && authService.getAccessToken()) {
-      try {
-        setProfile(await profileService.getProfile());
-      } catch {
-        setProfile(null);
-      }
-    } else {
-      setProfile(null);
-    }
-  }, []);
 
   const load = useCallback(async () => {
     if (!authenticated) {
@@ -139,10 +126,6 @@ export default function TroubleSpotsPage() {
       setLoading(false);
     }
   }, [authenticated, effectiveCountryCode, speciesLanguage]);
-
-  useEffect(() => {
-    void checkAuth();
-  }, [checkAuth]);
 
   useEffect(() => {
     void load();
@@ -180,7 +163,6 @@ export default function TroubleSpotsPage() {
       const game = await loadGame(result.game.token);
       if (game) {
         setGame(game);
-        setModalSpecies(undefined);
         navigate('/game/play');
       }
     } catch (e: unknown) {
@@ -188,6 +170,18 @@ export default function TroubleSpotsPage() {
     } finally {
       setStartingSpeciesId(null);
     }
+  };
+
+  useEffect(() => {
+    setActiveTab(tabFromSearch(searchParams.get('tab')));
+  }, [searchParams]);
+
+  const selectTab = (key: TabKey) => {
+    setActiveTab(key);
+    const next = new URLSearchParams(searchParams);
+    if (key === 'pairs') next.set('tab', 'pairs');
+    else next.delete('tab');
+    setSearchParams(next, { replace: true });
   };
 
   const speciesTabLabel = intl.formatMessage({
@@ -299,7 +293,7 @@ export default function TroubleSpotsPage() {
                 variant={activeTab === tab.key ? 'solid' : 'outline'}
                 colorPalette="primary"
                 bg={activeTab === tab.key ? 'primary.500' : undefined}
-                onClick={() => setActiveTab(tab.key)}
+                onClick={() => selectTab(tab.key)}
               >
                 {tab.label} ({tab.count})
               </Button>
@@ -340,7 +334,16 @@ export default function TroubleSpotsPage() {
                         textAlign="left"
                         bg="transparent"
                         cursor="pointer"
-                        onClick={() => setModalSpecies(troubleSpotSpecies(row, allSpecies))}
+                        onClick={() =>
+                          navigate(
+                            `/trouble-spots/species/${row.species_id}${
+                              effectiveCountryCode
+                                ? `?country=${encodeURIComponent(effectiveCountryCode)}`
+                                : ''
+                            }`,
+                            { state: { species: row } },
+                          )
+                        }
                       >
                         <SpeciesCoverThumb
                           speciesId={row.species_id}
@@ -419,60 +422,82 @@ export default function TroubleSpotsPage() {
               {visiblePairs.map((pair) => {
                 const key = `${pair.low_id}-${pair.high_id}`;
                 const busy = startingPairKey === key;
+                const countryQuery = effectiveCountryCode
+                  ? `?country=${encodeURIComponent(effectiveCountryCode)}`
+                  : '';
                 return (
-                  <Box
+                  <Flex
                     key={key}
+                    align="flex-start"
+                    gap={3}
                     py={3}
                     borderBottomWidth="1px"
                     borderColor="primary.100"
                   >
-                    <Flex align="flex-start" gap={2} flexWrap="wrap" mb={1}>
-                      <Text fontWeight="semibold">
-                        {pairDisplayName(
-                          pair.low_name,
-                          pair.low_name_nl,
-                          pair.low_id,
-                          allSpecies,
-                          speciesLanguage || 'en',
-                        )}
-                        {' · '}
-                        {pairDisplayName(
-                          pair.high_name,
-                          pair.high_name_nl,
-                          pair.high_id,
-                          allSpecies,
-                          speciesLanguage || 'en',
-                        )}
+                    <Box
+                      as="button"
+                      flex={1}
+                      minW={0}
+                      textAlign="left"
+                      bg="transparent"
+                      cursor="pointer"
+                      border="none"
+                      p={0}
+                      onClick={() =>
+                        navigate(`/trouble-spots/pair/${pair.low_id}/${pair.high_id}${countryQuery}`, {
+                          state: { pair },
+                        })
+                      }
+                    >
+                      <Flex align="flex-start" gap={2} flexWrap="wrap" mb={1}>
+                        <Text fontWeight="semibold">
+                          {pairDisplayName(
+                            pair.low_name,
+                            pair.low_name_nl,
+                            pair.low_id,
+                            allSpecies,
+                            speciesLanguage || 'en',
+                          )}
+                          {' · '}
+                          {pairDisplayName(
+                            pair.high_name,
+                            pair.high_name_nl,
+                            pair.high_id,
+                            allSpecies,
+                            speciesLanguage || 'en',
+                          )}
+                        </Text>
+                        {pair.fixed ? (
+                          <Box
+                            as="span"
+                            px={2}
+                            py={0.5}
+                            borderRadius="md"
+                            bg="green.50"
+                            borderWidth="1px"
+                            borderColor="green.600"
+                            fontSize="xs"
+                            fontWeight="800"
+                            color="green.700"
+                            letterSpacing="0.05em"
+                            flexShrink={0}
+                          >
+                            <FormattedMessage id="trouble_spots_pair_fixed" defaultMessage="FIXED!" />
+                          </Box>
+                        ) : null}
+                      </Flex>
+                      <Text fontSize="sm" color="primary.700">
+                        <FormattedMessage
+                          id="trouble_spots_pair_wrong"
+                          defaultMessage="{count} mix-ups"
+                          values={{ count: pair.total_wrong }}
+                        />
                       </Text>
-                      {pair.fixed ? (
-                        <Box
-                          as="span"
-                          px={2}
-                          py={0.5}
-                          borderRadius="md"
-                          bg="green.50"
-                          borderWidth="1px"
-                          borderColor="green.600"
-                          fontSize="xs"
-                          fontWeight="800"
-                          color="green.700"
-                          letterSpacing="0.05em"
-                          flexShrink={0}
-                        >
-                          <FormattedMessage id="trouble_spots_pair_fixed" defaultMessage="FIXED!" />
-                        </Box>
-                      ) : null}
-                    </Flex>
-                    <Text fontSize="sm" color="primary.700" mb={2}>
-                      <FormattedMessage
-                        id="trouble_spots_pair_wrong"
-                        defaultMessage="{count} mix-ups"
-                        values={{ count: pair.total_wrong }}
-                      />
-                    </Text>
+                    </Box>
                     <Button
                       size="sm"
                       colorPalette="primary"
+                      flexShrink={0}
                       loading={busy}
                       disabled={startingPairKey != null && !busy}
                       onClick={() => void handlePracticePair(pair)}
@@ -482,22 +507,13 @@ export default function TroubleSpotsPage() {
                         defaultMessage="Practice this pair"
                       />
                     </Button>
-                  </Box>
+                  </Flex>
                 );
               })}
             </VStack>
           )}
         </VStack>
       </Page.Body>
-
-      <SpeciesModal
-        species={modalSpecies}
-        isOpen={!!modalSpecies}
-        onClose={() => setModalSpecies(undefined)}
-        showPracticeButton
-        onPractice={(speciesId) => void handlePracticeSpecies(speciesId)}
-        practiceLoading={startingSpeciesId === modalSpecies?.id}
-      />
     </Page>
   );
 }

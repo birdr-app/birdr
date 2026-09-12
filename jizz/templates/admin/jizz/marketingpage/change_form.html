@@ -1,0 +1,24 @@
+{% extends "admin/change_form.html" %}
+
+{% block extrahead %}
+  {{ block.super }}
+  {% include "includes/rich_text_editor.html" %}
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('marketingpage_form');
+    if (form) {
+      form.addEventListener('submit', function () {
+        if (window.tinymce) tinymce.triggerSave();
+      });
+    }
+    if (!document.getElementById('id_body') || !window.BIRDR_RICH_TEXT) return;
+    window.BIRDR_RICH_TEXT.load().then(function () {
+      tinymce.init(window.BIRDR_RICH_TEXT.options({
+        selector: '#id_body',
+        height: 420,
+        content_style: 'body { font-family: system-ui, sans-serif; font-size: 16px; line-height: 1.5; } h2 { font-size: 1.4em; } h3 { font-size: 1.2em; }'
+      }));
+    });
+  });
+  </script>
+{% endblock %}

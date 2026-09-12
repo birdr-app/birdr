@@ -16,7 +16,7 @@ import {BsBoxArrowRight, BsX} from "react-icons/bs";
 import AppContext, {Species} from "../core/app-context";
 import React, {useContext, useEffect, useState} from "react"
 import {FormattedMessage} from "react-intl"
-import ReactPlayer from "react-player"
+import { PlayableVideo } from "./playable-video"
 import { MediaCredits } from "./media-credits"
 import { FlagMediaButton } from "./flag-media-button"
 import { createPortal } from "react-dom"
@@ -292,9 +292,9 @@ export function SpeciesModal({
                       {videos.map((video, key) => (
                         <Box key={key}>
                           <AspectRatio ratio={16 / 9} width="100%">
-                            <ReactPlayer
+                            <PlayableVideo
                               url={video.url}
-                              controls={true}
+                              controls
                               width="100%"
                               height="100%"
                             />

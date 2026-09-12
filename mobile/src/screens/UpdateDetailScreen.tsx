@@ -37,7 +37,7 @@ function bodyToHtml(body: string): string {
 }
 
 export function UpdateDetailScreen() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
   const { player } = useGame();
@@ -58,7 +58,7 @@ export function UpdateDetailScreen() {
     setLoading(true);
     setError(null);
     try {
-      const update = await loadUpdateDetail(updateId, player?.token);
+      const update = await loadUpdateDetail(updateId, player?.token, locale);
       if (!update) {
         setError(t('error_load_updates'));
         return;
@@ -75,7 +75,7 @@ export function UpdateDetailScreen() {
     } finally {
       setLoading(false);
     }
-  }, [updateId, player?.token, t]);
+  }, [updateId, player?.token, t, locale]);
 
   useEffect(() => {
     load();

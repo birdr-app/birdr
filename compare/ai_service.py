@@ -264,26 +264,7 @@ class AIComparisonService:
             len(prompt),
         )
 
-        try:
-            raw = self._call_openai(prompt, max_tokens=3500, json_object=True)
-        except ComparisonGenerationError as exc:
-            if not _is_quota_error(exc):
-                raise
-            logger.warning(
-                'OpenAI quota exhausted; assembling handbook extract for %s vs %s',
-                species_1_name,
-                species_2_name,
-            )
-            parsed = self._handbook_extract(
-                species_1_traits,
-                species_2_traits,
-                species_1_name,
-                species_2_name,
-                similar_species_info,
-            )
-            self.model = HANDBOOK_MODEL
-            parsed['detailed_comparison'] = self._assemble_detailed(parsed)
-            return parsed
+        raw = self._call_openai(prompt, max_tokens=3500, json_object=True)
 
         if not raw:
             raise ComparisonGenerationError(

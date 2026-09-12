@@ -38,11 +38,20 @@ export type SpeciesComparison = {
  */
 export async function requestComparison(
   species1Id: number,
-  species2Id: number
+  species2Id: number,
+  language?: string,
 ): Promise<SpeciesComparison> {
-  const response = await fetch(apiUrl('/api/compare/request/'), {
+  const params = new URLSearchParams();
+  if (language) {
+    params.set('app_language', language);
+    params.set('language', language);
+  }
+  const query = params.toString();
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  if (language) headers['Accept-Language'] = language;
+  const response = await fetch(apiUrl(`/api/compare/request/${query ? `?${query}` : ''}`), {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers,
     body: JSON.stringify({
       comparison_type: 'species',
       species_1_id: species1Id,

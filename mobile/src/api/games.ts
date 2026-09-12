@@ -2,6 +2,7 @@ import { apiUrl } from './config';
 import type { Country } from './countries';
 import type { Player } from './player';
 import type { Question } from '../types/game';
+import { clientInfoHeaders, clientInfoPayload } from './clientInfo';
 
 export type GameScore = {
   id?: number;
@@ -23,6 +24,7 @@ export type Game = {
   country: Country;
   language: string;
   rarity?: Rarity;
+  season?: string | null;
   created?: string;
   host?: { id: number; name: string; token?: string };
   ended?: boolean;
@@ -56,6 +58,8 @@ type CreateGameBody = {
   include_escapes?: boolean;
   tax_order?: string;
   tax_family?: string;
+  species_group?: string;
+  season?: string;
 };
 
 const GAME_REQUEST_TIMEOUT_MS = 30000;
@@ -74,8 +78,9 @@ export async function createGame(
         Accept: 'application/json',
         'Content-Type': 'application/json',
         Authorization: `Bearer ${playerToken}`,
+        ...clientInfoHeaders(),
       },
-      body: JSON.stringify(body),
+      body: JSON.stringify({ ...body, ...clientInfoPayload() }),
     });
     clearTimeout(timeoutId);
     if (!response.ok) return null;
@@ -124,6 +129,18 @@ export async function getCurrentQuestion(
   // If API includes game.token, it must match (otherwise ignore). Missing token still allowed for fallback fetch.
   if (data.game?.token != null && String(data.game.token) !== String(gameToken)) return null;
   return data as Question;
+}
+
+export async function updateGameLanguage(token: string, language: string): Promise<Game | null> {
+  const response = await fetch(apiUrl(`/api/games/${encodeURIComponent(token)}/`), {
+    method: 'PATCH',
+    cache: 'no-store',
+    headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ language }),
+  });
+  if (!response.ok) return null;
+  const data = await response.json();
+  return data as Game;
 }
 
 /** Tell the server primary media has loaded so score timing starts from now (not question.created). */

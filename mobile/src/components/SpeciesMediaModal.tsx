@@ -4,8 +4,8 @@ import {
   Text,
   Modal,
   TouchableOpacity,
+  Pressable,
   ScrollView,
-  Image,
   StyleSheet,
   ActivityIndicator,
   Dimensions,
@@ -13,8 +13,9 @@ import {
   Animated,
   Linking,
 } from 'react-native';
-import { useVideoPlayer, VideoView } from 'expo-video';
 import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
+import { PlayableVideo } from './PlayableVideo';
+import { CachedRemoteImage } from './CachedRemoteImage';
 import { MediaCredits } from './MediaCredits';
 import { FlagMediaModal, type FlagMediaInfo } from './FlagMediaModal';
 import { apiUrl } from '../api/config';
@@ -24,6 +25,7 @@ import { fetchSpeciesCover } from '../api/fetchSpeciesCover';
 import { colors } from '../theme';
 import { usePulsatingAnimation } from '../hooks/usePulsatingAnimation';
 import { useTranslation } from '../i18n/TranslationContext';
+import { playVideoStillUrl } from '../utils/playVideoUrl';
 
 type MediaEntry = {
   id?: number;
@@ -73,17 +75,31 @@ function speciesTitle(s: SpeciesMediaData, lang?: string): string {
 }
 
 function VideoItem({ uri, width }: { uri: string; width: number }) {
-  const player = useVideoPlayer(uri, (p: { play: () => void }) => {
-    // p.play();
-  });
-  return (
-    <VideoView
-      player={player}
-      style={[styles.mediaVideo, { width }]}
-      nativeControls={true}
-      contentFit="contain"
-    />
-  );
+  const [active, setActive] = useState(false);
+  const still = playVideoStillUrl(uri);
+  if (!active) {
+    return (
+      <Pressable
+        onPress={() => setActive(true)}
+        style={[styles.mediaVideo, styles.videoPoster, { width }]}
+        accessibilityRole="button"
+        accessibilityLabel="Play video"
+      >
+        {still ? (
+          <CachedRemoteImage
+            source={{ uri: still }}
+            style={StyleSheet.absoluteFill}
+            contentFit="contain"
+            recyclingKey={still}
+          />
+        ) : null}
+        <View style={styles.playBadge}>
+          <Text style={styles.playBadgeText}>▶</Text>
+        </View>
+      </Pressable>
+    );
+  }
+  return <PlayableVideo uri={uri} style={[styles.mediaVideo, { width }]} autoPlay />;
 }
 
 function AudioPlayer({ uri }: { uri: string }) {
@@ -273,6 +289,7 @@ export function SpeciesMediaModal({
 
   return (
     <Modal visible={visible} animationType="slide" onRequestClose={onClose}>
+      {visible ? (
       <SafeAreaView style={styles.root}>
         <View style={styles.header}>
           <View style={styles.headerTitleWrap}>
@@ -293,10 +310,11 @@ export function SpeciesMediaModal({
             {showIllustration && (
               <View style={styles.illustrationBanner}>
                 {illustrationUrl ? (
-                  <Image
+                  <CachedRemoteImage
                     source={{ uri: resolveUrl(illustrationUrl) }}
                     style={styles.illustrationImage}
-                    resizeMode="contain"
+                    contentFit="contain"
+                    recyclingKey={illustrationUrl}
                   />
                 ) : (
                   <ActivityIndicator size="small" color={colors.primary[500]} />
@@ -350,10 +368,11 @@ export function SpeciesMediaModal({
                         <Text style={styles.placeholderText}>Image unavailable</Text>
                       </View>
                     ) : (
-                      <Image
+                      <CachedRemoteImage
                         source={{ uri: resolveUrl(img.url) }}
                         style={[styles.mediaImage, { width: screenWidth - 48 }]}
-                        resizeMode="contain"
+                        contentFit="contain"
+                        recyclingKey={img.url}
                         onError={() => setImageErrors((prev) => new Set(prev).add(idx))}
                       />
                     )}
@@ -434,6 +453,7 @@ export function SpeciesMediaModal({
           </View>
         ) : null}
       </SafeAreaView>
+      ) : null}
     </Modal>
   );
 }
@@ -523,6 +543,16 @@ const styles = StyleSheet.create({
   },
   placeholderText: { fontSize: 14, color: colors.primary[500] },
   mediaVideo: { height: 220, borderRadius: 8, backgroundColor: '#000' },
+  videoPoster: { overflow: 'hidden', justifyContent: 'center', alignItems: 'center' },
+  playBadge: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: 'rgba(0,0,0,0.55)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  playBadgeText: { color: '#fff', fontSize: 22, marginLeft: 3 },
   audioBtn: {
     backgroundColor: colors.primary[100],
     paddingVertical: 14,

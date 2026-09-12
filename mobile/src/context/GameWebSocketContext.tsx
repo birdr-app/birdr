@@ -12,7 +12,10 @@ import { getCurrentQuestion, type Game } from '../api/games';
 import type { Player } from '../api/player';
 import type { Question, Answer, MultiPlayer } from '../types/game';
 import { getWebSocketUrl } from '../api/config';
+import { clientInfoHeaders, clientInfoPayload } from '../api/clientInfo';
 import { isStalePlayQuestion } from '../game/applyIncomingQuestion';
+import { useGame } from './GameContext';
+import { prefetchQuestionPlayMedia } from '../utils/prefetchPlayMedia';
 
 type GameWebSocketContextType = {
   players: MultiPlayer[];
@@ -51,12 +54,13 @@ function tokensEqual(a: string | undefined | null, b: string | undefined | null)
 }
 
 function questionBelongsToSocketGame(
-  question: { game?: { token?: string } } | undefined,
+  question: { id?: number; game?: { token?: string } } | undefined,
   socketGameToken: string
 ): boolean {
   if (!question?.id) return false;
   const qt = question.game?.token;
-  if (qt == null || String(qt).trim() === '') return false;
+  // Lean payloads sometimes omit game.token; this socket is already scoped to one game.
+  if (qt == null || String(qt).trim() === '') return true;
   return tokensEqual(qt, socketGameToken);
 }
 
@@ -136,6 +140,7 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
     if (next.id !== currentQuestionIdRef.current) {
       setAnswer(undefined);
     }
+    prefetchQuestionPlayMedia(next, next.media ?? next.game?.media);
     setQuestion(next);
     currentQuestionIdRef.current = next.id;
     currentQuestionSeqRef.current = next.sequence;
@@ -148,15 +153,14 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const fetchCurrentQuestion = useCallback(
-    async (gameToken: string, ws: WebSocket | undefined, connectionGameToken: string) => {
-      if (ws && currentSocketRef.current !== ws) return;
-      fetchAbortRef.current?.abort();
-      const controller = new AbortController();
-      fetchAbortRef.current = controller;
+    async (gameToken: string, _ws: WebSocket | undefined, connectionGameToken: string) => {
+      if (!tokensEqual(gameToken, connectionGameToken)) return;
+      if (gameTokenRef.current && !tokensEqual(gameToken, gameTokenRef.current)) return;
       const generation = ++fetchGenerationRef.current;
       try {
-        const q = await getCurrentQuestion(gameToken, { signal: controller.signal });
+        const q = await getCurrentQuestion(gameToken);
         if (generation !== fetchGenerationRef.current) return;
+        if (gameTokenRef.current && !tokensEqual(gameToken, gameTokenRef.current)) return;
         applyQuestion(q, connectionGameToken);
       } catch {
         // ignore abort / network — UI keeps existing state
@@ -204,7 +208,18 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
       languageCodeRef.current = player.language || 'en';
 
       const connectionGameToken = game.token;
-      const ws = new WebSocket(getWebSocketUrl(`/mpg/${game.token}`)) as TaggedSocket;
+      const NativeWebSocket = WebSocket as unknown as {
+        new (
+          url: string,
+          protocols?: string | string[] | null,
+          options?: { headers?: Record<string, string> }
+        ): WebSocket;
+      };
+      const ws = new NativeWebSocket(
+        getWebSocketUrl(`/mpg/${game.token}`),
+        [],
+        { headers: clientInfoHeaders() }
+      ) as TaggedSocket;
       ws.gameToken = connectionGameToken;
       currentSocketRef.current = ws;
       isConnectingRef.current = true;
@@ -218,6 +233,7 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
             action: 'join_game',
             player_token: player.token,
             language_code: languageCodeRef.current,
+            ...clientInfoPayload(),
           })
         );
         flushPendingActions(ws);
@@ -417,6 +433,7 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
               action: 'join_game',
               player_token: playerToken,
               language_code: languageCodeRef.current,
+              ...clientInfoPayload(),
             })
           );
         } else {
@@ -557,9 +574,25 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
         refreshGameState,
       }}
     >
+      <RefreshQuestionOnGameLanguageChange />
       {children}
     </GameWebSocketContext.Provider>
   );
+}
+
+function RefreshQuestionOnGameLanguageChange() {
+  const { game } = useGame();
+  const { refreshGameState, question } = useGameWebSocket();
+  const prevLang = useRef<string | undefined>(game?.language);
+  useEffect(() => {
+    const next = game?.language;
+    if (prevLang.current === next) return;
+    prevLang.current = next;
+    if (next && question) {
+      void refreshGameState({ force: true });
+    }
+  }, [game?.language, question, refreshGameState]);
+  return null;
 }
 
 export function useGameWebSocket() {

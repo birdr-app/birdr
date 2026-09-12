@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import ReactPlayer from 'react-player';
+import { PlayableVideo } from '../../components/playable-video';
 import { FormattedMessage } from 'react-intl';
 import {
   FaCheckCircle,
@@ -45,6 +46,8 @@ import { SpeciesName } from '../../components/species-name';
 import { postQuestionMediaReady } from '../../api/question-media-ready';
 import { postQuestionNextMedia } from '../../api/question-next-media';
 import { answersEnabledForMedia, normalizeGameMedia } from '../../core/media-answer-gate';
+import { prefetchQuestionPlayMedia } from '../../core/prefetch-play-media';
+import { bindHtmlMediaCanPlay } from '../../core/html-media-canplay';
 
 type ResultType = 'open' | 'correct' | 'joker' | 'incorrect';
 
@@ -64,7 +67,7 @@ export function BirdrJourneyPlayPage() {
   const gameMedia = normalizeGameMedia(searchParams.get('gameMedia') ?? 'images');
   const gameLevel = searchParams.get('gameLevel') ?? 'advanced';
 
-  const { species, language } = useContext(AppContext);
+  const { species, speciesLoading, language } = useContext(AppContext);
   const [question, setQuestion] = useState<Question | null>(null);
   const [loading, setLoading] = useState(true);
   const [loadingNextQuestion, setLoadingNextQuestion] = useState(false);
@@ -112,6 +115,7 @@ export function BirdrJourneyPlayPage() {
       const q = await getChallengeQuestion(gameToken, token ?? undefined, { cacheBust: true });
       if (generation !== questionFetchGenRef.current) return;
       if (q && isStalePlayQuestion(questionRef.current, q)) return;
+      prefetchQuestionPlayMedia(q, q?.media ?? gameMedia);
       setQuestion(q);
     } catch {
       if (generation !== questionFetchGenRef.current) return;
@@ -119,7 +123,7 @@ export function BirdrJourneyPlayPage() {
     } finally {
       if (generation === questionFetchGenRef.current) setLoading(false);
     }
-  }, [gameToken]);
+  }, [gameToken, gameMedia]);
 
   useEffect(() => {
     loadQuestion();
@@ -141,16 +145,6 @@ export function BirdrJourneyPlayPage() {
     setMediaReady(false);
     setAudioPlaying(true);
   }, [question?.id, mediaIndex]);
-
-  useEffect(() => {
-    if (gameMedia !== 'audio' || !question?.id) return;
-    setMediaReady(true);
-    const token = playerTokenRef.current;
-    if (token && mediaPostedForQuestionId.current !== question.id) {
-      mediaPostedForQuestionId.current = question.id;
-      postQuestionMediaReady(question.id, token).catch(() => {});
-    }
-  }, [gameMedia, question?.id]);
 
   useEffect(() => {
     if (!loading && !question && gameToken) {
@@ -214,6 +208,10 @@ export function BirdrJourneyPlayPage() {
     postQuestionMediaReady(question.id, token).catch(() => {});
   };
 
+  const notifyAudioCanPlay = (playerInstance: { getInternalPlayer?: () => unknown } | null) => {
+    bindHtmlMediaCanPlay(playerInstance, notifyMediaReady);
+  };
+
   const answersEnabled = answersEnabledForMedia(gameMedia, mediaReady);
 
   const handleFlagSuccess = async () => {
@@ -251,6 +249,7 @@ export function BirdrJourneyPlayPage() {
       const q = await getChallengeQuestion(gameToken, token ?? undefined, { cacheBust: true });
       if (generation !== questionFetchGenRef.current) return;
       if (q && isStalePlayQuestion(questionRef.current, q)) return;
+      prefetchQuestionPlayMedia(q, q?.media ?? gameMedia);
       setQuestion(q);
       if (!q) {
         const journey = await getBirdrJourney(countryCode);
@@ -377,13 +376,13 @@ export function BirdrJourneyPlayPage() {
           <>
           {gameMedia === 'video' && currentVideo && (
             <Box position="relative" minH="220px">
-              <ReactPlayer
+              <PlayableVideo
                 key={`${question.id}-video-${currentMediaIndex}`}
+                url={currentVideo.url}
+                playing
+                controls
                 width="100%"
                 height="50%"
-                url={currentVideo.url}
-                controls
-                playing
                 onReady={notifyMediaReady}
               />
               {showFeedback && (
@@ -432,7 +431,7 @@ export function BirdrJourneyPlayPage() {
                 onPlay={() => setAudioPlaying(true)}
                 onPause={() => setAudioPlaying(false)}
                 onEnded={() => setAudioPlaying(false)}
-                onReady={notifyMediaReady}
+                onReady={notifyAudioCanPlay}
               />
               {showFeedback && (
                 <AnswerFeedback
@@ -493,7 +492,7 @@ export function BirdrJourneyPlayPage() {
             species={species || []}
             playerLanguage={language}
             onSelect={(species) => giveAnswer(species)}
-            loading={submitting}
+            loading={submitting || speciesLoading}
             isDisabled={optionsLocked}
             autoFocus
             placeholder={

@@ -1,0 +1,81 @@
+{% extends "jizz/data_base.html" %}
+{% load taxon_data %}
+
+{% block title %}Species groups — Birdr data{% endblock %}
+
+{% block content %}
+    <h1>Species groups</h1>
+    <p class="muted">Birder-facing groups from eBird (waders, warblers, raptors, and so on). With a country selected, counts include only species with native, rare, or endemic status for that country.</p>
+
+    <nav class="tabs">
+        <a href="{% url 'data-taxon-orders' %}{% if selected_country %}?country={{ selected_country }}{% endif %}">Orders</a>
+        <a href="{% url 'data-taxon-families' %}{% if selected_country %}?country={{ selected_country }}{% endif %}">Families</a>
+        <span class="tab-active">Groups</span>
+    </nav>
+
+    <form method="get" action="{% url 'data-taxon-groups' %}" class="toolbar">
+        <label for="country">Country:</label>
+        <select name="country" id="country" onchange="this.form.submit()">
+            <option value="">All countries (global species count)</option>
+            {% for c in countries %}
+            <option value="{{ c.code }}" {% if c.code == selected_country %}selected{% endif %}>{{ c.name }} ({{ c.code }})</option>
+            {% endfor %}
+        </select>
+        <input type="hidden" name="sort" value="{{ sort_col }}">
+        <input type="hidden" name="dir" value="{{ sort_dir }}">
+        <noscript><button type="submit">Apply</button></noscript>
+    </form>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th class="sortable{% if sort_col == 'name_en' %} sort-active{% endif %}">
+                    <a href="{% taxon_sort_href sort_url_name 'name_en' sort_col sort_dir selected_country %}">English name{% taxon_sort_indicator 'name_en' sort_col sort_dir %}</a>
+                </th>
+                <th class="sortable{% if sort_col == 'name_nl' %} sort-active{% endif %}">
+                    <a href="{% taxon_sort_href sort_url_name 'name_nl' sort_col sort_dir selected_country %}">Dutch name{% taxon_sort_indicator 'name_nl' sort_col sort_dir %}</a>
+                </th>
+                <th class="sortable{% if sort_col == 'slug' %} sort-active{% endif %}">
+                    <a href="{% taxon_sort_href sort_url_name 'slug' sort_col sort_dir selected_country %}">Slug{% taxon_sort_indicator 'slug' sort_col sort_dir %}</a>
+                </th>
+                {% if country_filter_active %}
+                <th class="num sortable{% if sort_col == 'species_count' %} sort-active{% endif %}">
+                    <a href="{% taxon_sort_href sort_url_name 'species_count' sort_col sort_dir selected_country %}">Total{% taxon_sort_indicator 'species_count' sort_col sort_dir %}</a>
+                </th>
+                <th class="num sortable{% if sort_col == 'count_native' %} sort-active{% endif %}">
+                    <a href="{% taxon_sort_href sort_url_name 'count_native' sort_col sort_dir selected_country %}">Native{% taxon_sort_indicator 'count_native' sort_col sort_dir %}</a>
+                </th>
+                <th class="num sortable{% if sort_col == 'count_rare' %} sort-active{% endif %}">
+                    <a href="{% taxon_sort_href sort_url_name 'count_rare' sort_col sort_dir selected_country %}">Rare{% taxon_sort_indicator 'count_rare' sort_col sort_dir %}</a>
+                </th>
+                <th class="num sortable{% if sort_col == 'count_endemic' %} sort-active{% endif %}">
+                    <a href="{% taxon_sort_href sort_url_name 'count_endemic' sort_col sort_dir selected_country %}">Endemic{% taxon_sort_indicator 'count_endemic' sort_col sort_dir %}</a>
+                </th>
+                {% else %}
+                <th class="num sortable{% if sort_col == 'species_count' %} sort-active{% endif %}">
+                    <a href="{% taxon_sort_href sort_url_name 'species_count' sort_col sort_dir selected_country %}">Species{% taxon_sort_indicator 'species_count' sort_col sort_dir %}</a>
+                </th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row.name_en }}</td>
+                <td>{{ row.name_nl }}</td>
+                <td><span class="latin">{{ row.slug }}</span></td>
+                {% if country_filter_active %}
+                <td class="num">{{ row.species_count }}</td>
+                <td class="num"><span class="badge badge-native">{{ row.count_native }}</span></td>
+                <td class="num"><span class="badge badge-rare">{{ row.count_rare }}</span></td>
+                <td class="num"><span class="badge badge-endemic">{{ row.count_endemic }}</span></td>
+                {% else %}
+                <td class="num">{{ row.species_count }}</td>
+                {% endif %}
+            </tr>
+            {% empty %}
+            <tr><td colspan="{% if country_filter_active %}7{% else %}4{% endif %}">No groups match this filter.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

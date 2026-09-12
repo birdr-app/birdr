@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import type { ChecklistSpecies } from '../../api/checklist';
 import { colors } from '../../theme';
+import { CachedRemoteImage } from '../CachedRemoteImage';
 import {
   frequencyLabel,
   isMega,
@@ -37,10 +38,11 @@ export function ChecklistSpeciesCard({ species, onPress, t }: Props) {
       <View style={styles.row}>
         <View style={[styles.imageWrap, dimmed && styles.imageDimmed]}>
           {species.illustration_url ? (
-            <Image
+            <CachedRemoteImage
               source={{ uri: species.illustration_url }}
               style={styles.image}
-              resizeMode="cover"
+              contentFit="cover"
+              recyclingKey={species.illustration_url}
             />
           ) : (
             <View style={styles.silhouette}>

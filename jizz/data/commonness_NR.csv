@@ -1,0 +1,5 @@
+species_code,country_code,abundance,abundance_mean_avg,abundance_mean_max,peak_season,range_occupied_percent,range_total_percent,total_pop_percent,range_days_occupation,occupancy,score,frequency,frequency_pct,rarity_cap,commonness_basis,debug_range_occupied_max
+rudtur,NR,0.3873690238387556,0.4731,0.4731,postbreeding_migration,0.4167,,,,41.67,0.16154543037515215,fairly_common,16.154543037515214,,peak_abundance_with_occupancy_days_modifiers,0.4167
+grcter1,NR,0.2550297401765315,0.2905,0.2905,prebreeding_migration,0.4167,0.0001,0.0,14.0,41.67,0.10635566243012311,rare,10.635566243012311,rare,peak_abundance_with_occupancy_days_modifiers,0.4167
+pagplo,NR,0.1872261761274098,0.2059,0.2059,postbreeding_migration,0.4167,0.0,0.0,35.0,41.67,0.07807937996763084,fairly_common,7.807937996763084,,peak_abundance_with_occupancy_days_modifiers,0.4167
+pacreh1,NR,0.07520023256293519,0.0781,0.0781,resident,0.4167,0.0001,0.0001,365.0,41.67,0.03136093282138036,uncommon,3.1360932821380363,,peak_abundance_with_occupancy_days_modifiers,0.4167

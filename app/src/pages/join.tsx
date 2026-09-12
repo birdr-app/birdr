@@ -8,8 +8,7 @@ import AppContext from "../core/app-context"
 import GameHeader from "./mpg/game-header"
 import {SetName} from "../components/set-name"
 import SelectLanguage from "../components/select-language"
-import {profileService} from "../api/services/profile.service"
-import {authService} from "../api/services/auth.service"
+import { useAuthProfile } from "../core/auth-profile-context"
 import AppStoreBanner from "../components/app-store-banner"
 import { getMobileOS } from "../utils/device"
 
@@ -17,6 +16,7 @@ import { getMobileOS } from "../utils/device"
 const JoinPage: React.FC = () => {
   const {joinGame} = useContext(WebsocketContext)
   const {createPlayer, player, loadGame, playerName, setPlayerName, language, setLanguage} = useContext(AppContext)
+  const { profile, isAuthenticated } = useAuthProfile()
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
   const {gameCode} = useParams<{ gameCode: string }>();
@@ -33,30 +33,15 @@ const JoinPage: React.FC = () => {
     return () => clearTimeout(t)
   }, [showOpenInApp, gameCode])
 
-  // Load user profile to prefill player name and language
   useEffect(() => {
-    const loadUserProfile = async () => {
-      if (authService.getAccessToken()) {
-        try {
-          const profile = await profileService.getProfile();
-          
-          // Prefill player name with username if not already set
-          if (!playerName && profile.username) {
-            setPlayerName && setPlayerName(profile.username);
-          }
-          
-          // Set language from profile if not already set
-          if (profile.language && (!language || language === 'en')) {
-            setLanguage && setLanguage(profile.language);
-          }
-        } catch (error) {
-          // User might not be authenticated or profile might not exist, ignore
-        }
-      }
-    };
-    
-    loadUserProfile();
-  }, [playerName, language, setPlayerName, setLanguage]);
+    if (!isAuthenticated || !profile) return
+    if (!playerName && profile.username) {
+      setPlayerName && setPlayerName(profile.username)
+    }
+    if (profile.language && (!language || language === 'en')) {
+      setLanguage && setLanguage(profile.language)
+    }
+  }, [isAuthenticated, profile, playerName, language, setPlayerName, setLanguage])
 
   const handleSubmit = async () => {
     setLoading(true)

@@ -4,8 +4,13 @@ const WIKI_THUMB = /\/\d+px-/i;
 const INAT_PHOTO = /\/photos\/(\d+)\/(original|large|medium|small)\.(jpe?g|png|gif|webp)/i;
 const CORNELL_ASSET = /\/asset\/(\d+)\/\d+\b/;
 
+function preferHttps(url: string): string {
+  return url.replace(/^http:\/\//i, 'https://');
+}
+
 export function playPreviewSrc(url: string): string {
   if (!url) return url;
+  url = preferHttps(url);
   if (/wikimedia\.org/i.test(url) && WIKI_THUMB.test(url)) {
     return url.replace(WIKI_THUMB, '/500px-');
   }
@@ -23,6 +28,7 @@ export function playPreviewSrc(url: string): string {
 
 export function playFullSrc(url: string): string {
   if (!url) return url;
+  url = preferHttps(url);
   if (/wikimedia\.org/i.test(url) && WIKI_THUMB.test(url)) {
     return url.replace(WIKI_THUMB, '/960px-');
   }

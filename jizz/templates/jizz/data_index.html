@@ -17,7 +17,15 @@
         </a>
         <a class="link-card" href="{% url 'data-games-played' %}">
             <h2>Games played</h2>
-            <p>Monthly, weekly, or daily counts of games and unique players.</p>
+            <p>Monthly, weekly, or daily counts of games and unique players, plus most games per user.</p>
+        </a>
+        <a class="link-card" href="{% url 'data-marketing-website' %}">
+            <h2>Marketing website</h2>
+            <p>Visits to birdr.pro/site: monthly traffic, countries, and the most viewed pages.</p>
+        </a>
+        <a class="link-card" href="{% url 'data-most-reviews' %}">
+            <h2>Media reviews</h2>
+            <p>Top reviewers, how much of each country’s photos are reviewed, and review mix.</p>
         </a>
         <a class="link-card" href="{% url 'data-country-challenge-leaderboard' %}">
             <h2>Country Challenge leaderboard</h2>
@@ -30,6 +38,10 @@
         <a class="link-card" href="{% url 'data-taxon-families' %}">
             <h2>Taxonomic families</h2>
             <p>Species counts per family, with optional country breakdown by status.</p>
+        </a>
+        <a class="link-card" href="{% url 'data-taxon-groups' %}">
+            <h2>Species groups</h2>
+            <p>Waders, raptors, warblers and other birder-facing groups, with optional country counts.</p>
         </a>
         {% if is_staff %}
         <a class="link-card" href="{% url 'staff-usage' %}">

@@ -3,6 +3,7 @@ import re
 
 from django.contrib import admin, messages
 from django.contrib.admin import register
+from django.contrib.admin.widgets import AdminTextareaWidget
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
@@ -24,7 +25,7 @@ from jizz.models import (Answer, BirdrJourney, BirdrJourneyGame, Country,
                          JourneyStep, MarketingPage, Page, Player,
                          PlayerScore, Question, QuestionOption, Reaction,
                          Species, SpeciesIllustration, SpeciesImage, SpeciesSound, SpeciesVideo,
-                         TaxonomicOrder, TaxonomicFamily, TaxonomicGenus,
+                         TaxonomicOrder, TaxonomicFamily, TaxonomicGenus, SpeciesGroup,
                          Update, Language, SpeciesName, UserProfile,
                          Friendship, DailyChallenge, DailyChallengeParticipant,
                          DailyChallengeInvite, DailyChallengeRound, DeviceToken, PushDevice, UsageEvent,
@@ -38,6 +39,7 @@ from media.management.commands import standardize_copyright
 from media.first_assertion.run_inference import infer_media_queryset
 from media.models import Media, MediaPrediction
 from media.utils import get_species_media, parse_copyright
+from media.wikimedia_urls import wikimedia_video_playback_url
 
 
 class UserProfileInline(admin.StackedInline):
@@ -184,7 +186,9 @@ class CountrySpeciesInline(admin.TabularInline):
 @register(Country)
 class CountryAdmin(admin.ModelAdmin):
     readonly_fields = ['species_list', 'sync_link']
-    fields = ['name', 'code', 'codes'] + readonly_fields
+    fields = ['name', 'code', 'codes', 'parent', 'kind', 'hemisphere'] + readonly_fields
+    list_filter = ['kind', 'hemisphere']
+    search_fields = ['code', 'name']
 
     def species_list(self, obj):
         return f'{obj.countryspecies.count()} species'
@@ -268,13 +272,9 @@ class MediaInline(admin.TabularInline):
                 url=obj.url
             )
         elif obj.type == 'video':
-            # Inline video player
             return format_html(
-                '<video controls style="max-width: 200px; max-height: 150px;">'
-                '<source src="{url}" type="video/mp4" />'
-                'Your browser does not support the video tag.'
-                '</video>',
-                url=obj.url
+                '<video controls src="{url}" style="max-width: 200px; max-height: 150px;"></video>',
+                url=wikimedia_video_playback_url(obj.url) or obj.url,
             )
         elif obj.type == 'audio':
             # Inline audio player (omit type: XC /download may be WAV, not MPEG)
@@ -352,14 +352,35 @@ class TaxonomicGenusAdmin(admin.ModelAdmin):
     list_filter = ['taxonomic_family']
 
 
+@register(SpeciesGroup)
+class SpeciesGroupAdmin(admin.ModelAdmin):
+    list_display = ['name_en', 'name_nl', 'name_es', 'slug', 'sort_order', 'ebird_name']
+    search_fields = [
+        'name_en', 'name_nl', 'name_es', 'name_fr', 'name_de',
+        'name_it', 'name_pt_br', 'name_ja', 'slug', 'ebird_name',
+    ]
+    ordering = ['sort_order', 'name_en']
+    prepopulated_fields = {'slug': ('name_en',)}
+    fieldsets = (
+        (None, {'fields': ('slug', 'ebird_name', 'sort_order')}),
+        ('Names', {
+            'fields': (
+                'name_en', 'name_nl', 'name_es', 'name_fr',
+                'name_de', 'name_it', 'name_pt_br', 'name_ja',
+            ),
+        }),
+        ('Descriptions', {'fields': ('description_en', 'description_nl')}),
+    )
+
+
 @register(Species)
 class SpeciesAdmin(admin.ModelAdmin):
     inlines = [SpeciesIllustrationInline, MediaInline]
     search_fields = ['name', 'name_nl', 'name_latin', 'slug']
     readonly_fields = ['sync_media', 'pic_count', 'infer_machine_predictions']
-    list_display = ['name', 'name_nl', 'slug', 'taxonomic_genus', 'tax_ordering', 'pic_count']
+    list_display = ['name', 'name_nl', 'slug', 'taxonomic_genus', 'species_group', 'tax_ordering', 'pic_count']
     prepopulated_fields = {'slug': ('name',)}
-    list_filter = ['taxonomic_order', 'taxonomic_genus']
+    list_filter = ['taxonomic_order', 'taxonomic_genus', 'species_group']
     actions = ['scrape_traits', 'generate_comparison']
 
     def pic_count(self, obj):
@@ -729,6 +750,16 @@ class MarketingPageAdmin(admin.ModelAdmin):
         'published', 'show_in_nav', 'nav_label', 'nav_order',
     ]
 
+    def formfield_for_dbfield(self, db_field, request, **kwargs):
+        if db_field.name == 'body':
+            kwargs['widget'] = AdminTextareaWidget(attrs={'rows': 22})
+        return super().formfield_for_dbfield(db_field, request, **kwargs)
+
+    def save_model(self, request, obj, form, change):
+        from jizz.marketing.html import sanitize_html
+        obj.body = sanitize_html(obj.body)
+        super().save_model(request, obj, form, change)
+
 
 @register(SpeciesName)
 class SpeciesNameAdmin(admin.ModelAdmin):
@@ -773,8 +804,8 @@ class PlayerInline(admin.TabularInline):
 class PlayerScoreInline(admin.TabularInline):
     model = PlayerScore
     can_delete = False
-    readonly_fields = ['game', 'score', 'playtime']
-    fields = ['game', 'score', 'playtime', 'player']
+    readonly_fields = ['game', 'score', 'playtime', 'app_version', 'device_type']
+    fields = ['game', 'score', 'playtime', 'player', 'app_version', 'device_type']
 
     def has_change_permission(self, request, obj=None):
         return False
@@ -791,7 +822,7 @@ class GameAdmin(admin.ModelAdmin):
     fields = [
         'country', 'language', 'host', 'created', 'token',
         'length', 'multiplayer', 'media', 'repeat', 'rarity', 'include_escapes',
-        'dificult_species', 'game_type', 'speed_seconds', 'tax_order', 'tax_family'
+        'dificult_species', 'game_type', 'speed_seconds', 'tax_order', 'tax_family', 'species_group', 'season'
     ]
     list_display = ['country', 'created', 'level', 'length', 'player_count', 'top_score']
 
@@ -840,10 +871,10 @@ class PlayerAdmin(admin.ModelAdmin):
 @register(PlayerScore)
 class PlayerScoreAdmin(admin.ModelAdmin):
     raw_id_fields = ['player', 'game']
-    list_display = ['player', 'game', 'progress', 'length', 'score']
-    list_filter = ['game__level', 'game__length', 'game__media', ('game__country', admin.RelatedOnlyFieldListFilter)]
+    list_display = ['player', 'game', 'progress', 'length', 'score', 'device_type', 'app_version']
+    list_filter = ['device_type', 'game__level', 'game__length', 'game__media', ('game__country', admin.RelatedOnlyFieldListFilter)]
     readonly_fields = ['playtime', 'order_score']
-    fields = ['player', 'game', 'score', 'playtime', 'order_score']
+    fields = ['player', 'game', 'score', 'app_version', 'device_type', 'playtime', 'order_score']
 
     def order_score(self, obj):
         results = obj.answers.values(
@@ -1506,18 +1537,42 @@ class UsageEventAdmin(admin.ModelAdmin):
         'path',
         'platform',
         'device_type',
+        'app_version',
+        'app_build',
+        'os_version',
         'country_code',
         'ip_address',
         'user',
     ]
-    list_filter = ['event_type', 'platform', 'device_type', 'country_code', 'created_at']
-    search_fields = ['path', 'session_key', 'ip_address', 'user__username', 'user_agent']
+    list_filter = [
+        'event_type',
+        'platform',
+        'device_type',
+        'app_version',
+        'app_build',
+        'os_version',
+        'country_code',
+        'created_at',
+    ]
+    search_fields = [
+        'path',
+        'session_key',
+        'ip_address',
+        'user__username',
+        'user_agent',
+        'app_version',
+        'app_build',
+        'os_version',
+    ]
     readonly_fields = [
         'created_at',
         'event_type',
         'path',
         'platform',
         'device_type',
+        'app_version',
+        'app_build',
+        'os_version',
         'country_code',
         'ip_address',
         'user',

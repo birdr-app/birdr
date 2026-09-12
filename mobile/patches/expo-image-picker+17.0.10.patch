@@ -1,0 +1,17 @@
+diff --git a/node_modules/expo-image-picker/android/src/main/java/expo/modules/imagepicker/ExpoCropImageUtils.kt b/node_modules/expo-image-picker/android/src/main/java/expo/modules/imagepicker/ExpoCropImageUtils.kt
+index a876bbc..0ee5335 100644
+--- a/node_modules/expo-image-picker/android/src/main/java/expo/modules/imagepicker/ExpoCropImageUtils.kt
++++ b/node_modules/expo-image-picker/android/src/main/java/expo/modules/imagepicker/ExpoCropImageUtils.kt
+@@ -78,10 +78,10 @@ object ExpoCropImageUtils {
+    */
+   fun applyWindowTheming(
+     window: android.view.Window,
+-    toolbarColor: Int,
++    @Suppress("UNUSED_PARAMETER") toolbarColor: Int,
+     isNight: Boolean
+   ) {
+-    window.statusBarColor = toolbarColor
++    // Window.setStatusBarColor is deprecated on Android 15+ and has no effect with edge-to-edge.
+     WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = !isNight
+   }
+ }

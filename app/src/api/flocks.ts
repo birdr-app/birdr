@@ -43,6 +43,8 @@ export type Flock = {
   is_member: boolean;
   can_leave?: boolean;
   active_challenge: FlockChallengeSummary | null;
+  challenge_count?: number;
+  history_path?: string | null;
   invite?: FlockInvite | null;
 };
 
@@ -358,6 +360,10 @@ export function buildFlockResultWebUrl(token: string, origin = 'https://birdr.pr
 
 export function getFlockChallengeSharePath(publicToken: string): string {
   return `/flocks/c/${publicToken}/`;
+}
+
+export function getFlockHistoryPath(publicToken: string): string {
+  return `/flocks/c/${publicToken}/history/`;
 }
 
 export function buildFlockChallengeShareUrl(

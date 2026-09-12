@@ -5,8 +5,7 @@ export const COUNTRY_STORAGE_KEY = 'birdr-country-code'
 export type CountryOption = { code: string; name: string }
 
 export function isPersistableCountryCode(code: string | null | undefined): boolean {
-  const value = (code || '').trim()
-  return value.length > 0 && !value.includes('-')
+  return (code || '').trim().length > 0
 }
 
 export function readStoredCountryCode(): string {

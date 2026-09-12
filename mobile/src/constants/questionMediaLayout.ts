@@ -1,8 +1,6 @@
 /** Default media stage heights — keep in sync with QuestionMediaView imageFrame / videoFrame. */
 export const QUESTION_IMAGE_HEIGHT = 280;
 export const QUESTION_VIDEO_HEIGHT = 220;
-/** Space reserved for credits + flag row below the image/video stage. */
-export const QUESTION_MEDIA_CREDITS_HEIGHT = 34;
 export const QUESTION_AUDIO_CONTROL_HEIGHT = 56;
 
 export type QuestionMediaType = 'images' | 'video' | 'audio';
@@ -20,12 +18,10 @@ export function questionMediaStageHeight(
   return options?.imageHeight ?? QUESTION_IMAGE_HEIGHT;
 }
 
-/** Total vertical space for media + credits row (matches QuestionMediaView layout). */
+/** Total vertical space for the media stage (credits/flag sit on top of the picture). */
 export function questionMediaBlockHeight(
   mediaType: QuestionMediaType,
   options?: { imageHeight?: number; videoHeight?: number }
 ): number {
-  const stage = questionMediaStageHeight(mediaType, options);
-  const credits = mediaType === 'audio' ? 0 : QUESTION_MEDIA_CREDITS_HEIGHT;
-  return stage + credits;
+  return questionMediaStageHeight(mediaType, options);
 }

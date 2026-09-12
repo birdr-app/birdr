@@ -12,31 +12,42 @@ from jizz.marketing.pages import (
 )
 from jizz.marketing.slugs import compare_pair_slug
 from jizz.models import Species, TaxonomicFamily
+from jizz.marketing.local_names import species_name_language_id
 
 SEARCH_MIN = 2
 SEARCH_LIMIT = 40
 FAMILY_LIMIT = 80
 
 
-def search_public_species(query: str, *, family_latin: str = '', limit: int = SEARCH_LIMIT):
+def search_public_species(
+    query: str,
+    *,
+    family_latin: str = '',
+    limit: int = SEARCH_LIMIT,
+    locale: str | None = None,
+):
     qs = Species.objects.filter(pk__in=public_species_ids())
     if family_latin:
         qs = qs.filter(taxonomic_family__name_latin=family_latin)
     q = (query or '').strip()
     if q:
-        qs = qs.filter(
+        name_filter = (
             Q(name__icontains=q)
             | Q(name_latin__icontains=q)
             | Q(name_nl__icontains=q)
             | Q(code__icontains=q)
         )
+        lang = species_name_language_id(locale)
+        if lang and lang != 'en':
+            name_filter |= Q(speciesname__language_id=lang, speciesname__name__icontains=q)
+        qs = qs.filter(name_filter).distinct()
     return list(
-        qs.order_by('name').only('id', 'name', 'name_latin', 'slug', 'code')[:limit]
+        qs.order_by('name').only('id', 'name', 'name_latin', 'name_nl', 'slug', 'code')[:limit]
     )
 
 
 def public_families() -> list[dict]:
-    cached = cache.get('marketing-public-families')
+    cached = cache.get('marketing-public-families-v2')
     if cached is not None:
         return cached
     rows = list(
@@ -44,9 +55,9 @@ def public_families() -> list[dict]:
         .annotate(species_n=Count('species', distinct=True))
         .filter(species_n__gt=0)
         .order_by('name_en')
-        .values('name_en', 'name_latin', 'species_n')
+        .values('name_en', 'name_nl', 'name_latin', 'species_n')
     )
-    cache.set('marketing-public-families', rows, MARKETING_QUERY_CACHE_TTL)
+    cache.set('marketing-public-families-v2', rows, MARKETING_QUERY_CACHE_TTL)
     return rows
 
 
@@ -75,6 +86,8 @@ def _featured_comparisons(*, limit: int = 6) -> list[dict]:
             continue
         rows.append(
             {
+                'left_id': left.id,
+                'right_id': right.id,
                 'left_name': left.name,
                 'right_name': right.name,
                 'summary': comparison.summary,

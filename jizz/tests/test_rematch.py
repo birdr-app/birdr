@@ -37,6 +37,12 @@ class RematchTestCase(TestCase):
         self.assertEqual(new_game.multiplayer, self.game.multiplayer)
         self.assertEqual(new_game.rarity, self.game.rarity)
 
+    def test_rematch_copies_species_group(self):
+        self.game.species_group = 'shorebirds'
+        self.game.save(update_fields=['species_group'])
+        new_game, _ = create_rematch_game(self.game.token, self.host.token)
+        self.assertEqual(new_game.species_group, 'shorebirds')
+
     def test_rematch_as_non_host_raises(self):
         with self.assertRaises(ValueError) as ctx:
             create_rematch_game(self.game.token, self.other.token)

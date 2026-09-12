@@ -18,12 +18,18 @@ import { DeepLinkHandler } from './src/components/DeepLinkHandler';
 import AppNavigator from './src/navigation/AppNavigator';
 import { AppVersionGate } from './src/components/AppVersionGate';
 import { GOOGLE_WEB_CLIENT_ID, GOOGLE_IOS_CLIENT_ID } from './src/api/config';
+import { installAppIdentityFetch } from './src/api/installAppIdentityFetch';
 import { trackScreenView } from './src/api/analytics';
+import { subscribeMemoryReleaseOnBackground } from './src/lib/releaseMemory';
+
+installAppIdentityFetch();
 
 export default function App() {
   useEffect(() => {
     return setupNotificationResponseHandler();
   }, []);
+
+  useEffect(() => subscribeMemoryReleaseOnBackground(), []);
 
   useEffect(() => {
     const webClientId = GOOGLE_WEB_CLIENT_ID?.trim() || undefined;

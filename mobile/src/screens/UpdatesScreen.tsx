@@ -14,7 +14,7 @@ import { UpdateListItemCard } from '../components/UpdateListItemCard';
 import { colors } from '../theme';
 
 export function UpdatesScreen() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const navigation = useNavigation<any>();
   const { player } = useGame();
   const [updates, setUpdates] = useState<UpdateListItem[]>([]);
@@ -23,7 +23,7 @@ export function UpdatesScreen() {
 
   const load = () => {
     setLoading(true);
-    loadUpdates(player?.token)
+    loadUpdates(player?.token, locale)
       .then(setUpdates)
       .catch((e) => setError(e.message ?? t('error_load_updates')))
       .finally(() => setLoading(false));
@@ -31,7 +31,7 @@ export function UpdatesScreen() {
 
   useEffect(() => {
     load();
-  }, [player?.token]);
+  }, [player?.token, locale]);
 
   if (loading) {
     return (

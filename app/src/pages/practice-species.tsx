@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -6,8 +6,7 @@ import AppContext from '../core/app-context';
 import { SpeciesCoverThumb } from '../components/species-cover-thumb';
 import CountryCombobox from '../components/country-combobox';
 import { PracticeStartLayout } from '../components/practice-start-layout';
-import { authService } from '../api/services/auth.service';
-import { profileService, type UserProfile } from '../api/services/profile.service';
+import { useAuthProfile } from '../core/auth-profile-context';
 import { UseCountries } from '../user/use-countries';
 import { fetchSpeciesBySlug, type SpeciesSlugInfo } from '../api/fetch-species-detail';
 import { startSpeciesPractice } from '../api/practice';
@@ -19,9 +18,8 @@ export default function SpeciesPracticePage() {
   const { loadGame, loadPlayer, setGame, speciesLanguage } = useContext(AppContext);
   const { countries } = UseCountries();
   const countriesList = Array.isArray(countries) ? countries : [];
+  const { isAuthenticated: authenticated, profile } = useAuthProfile();
 
-  const [authenticated, setAuthenticated] = useState(false);
-  const [profile, setProfile] = useState<UserProfile | null>(null);
   const [species, setSpecies] = useState<SpeciesSlugInfo | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
@@ -30,24 +28,6 @@ export default function SpeciesPracticePage() {
   const [countryCode, setCountryCode] = useState<string | undefined>();
 
   const effectiveCountryCode = countryCode ?? profile?.country_code?.trim()?.toUpperCase();
-
-  const checkAuth = useCallback(async () => {
-    const ok = await authService.ensureValidAccessToken();
-    setAuthenticated(!!ok && !!authService.getAccessToken());
-    if (ok && authService.getAccessToken()) {
-      try {
-        setProfile(await profileService.getProfile());
-      } catch {
-        setProfile(null);
-      }
-    } else {
-      setProfile(null);
-    }
-  }, []);
-
-  useEffect(() => {
-    void checkAuth();
-  }, [checkAuth]);
 
   useEffect(() => {
     if (!slug) {

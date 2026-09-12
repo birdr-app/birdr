@@ -57,6 +57,23 @@ class QuestionPerformanceTestCase(TestCase):
         self.assertGreaterEqual(len(ids), 5)
         self.assertLessEqual(len(ctx), 3)
 
+    def test_candidate_species_ids_shared_across_games(self):
+        kwargs = dict(
+            country=self.country,
+            level='beginner',
+            length=10,
+            media='images',
+            host=self.player,
+            rarity='regular',
+        )
+        game1 = Game.objects.create(**kwargs)
+        candidate_species_ids(game1)
+        game2 = Game.objects.create(**kwargs)
+        with CaptureQueriesContext(connection) as ctx:
+            ids = candidate_species_ids(game2)
+        self.assertGreaterEqual(len(ids), 5)
+        self.assertEqual(len(ctx), 0)
+
     def test_add_question_bounded_queries(self):
         game = Game.objects.create(
             country=self.country,
@@ -142,10 +159,8 @@ class QuestionPerformanceTestCase(TestCase):
         loaded = load_question_for_play(question.id)
         data = serialize_question_for_play(loaded)
         self.assertEqual(data['number'], 0)
-        self.assertEqual(len(data['images']), 3)
+        self.assertEqual(len(data['images']), 1)
         self.assertEqual(data['images'][0]['id'], m1.id)
-        self.assertEqual(data['images'][1]['id'], m2.id)
-        self.assertEqual(data['images'][2]['id'], m0.id)
 
     def test_add_question_timing_smoke(self):
         """Regression guard: small fixture should stay well under multi-second stalls."""

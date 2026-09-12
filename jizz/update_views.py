@@ -49,6 +49,7 @@ class UpdateListView(ListAPIView):
         player = _player_from_request(self.request)
         qs = Update.objects.filter(published=True).select_related('user').prefetch_related(
             'reactions__player',
+            'translations',
         ).order_by('-created')
         return _annotate_updates(qs, user, player)
 
@@ -67,6 +68,7 @@ class UpdateDetailView(RetrieveAPIView):
         player = _player_from_request(self.request)
         qs = Update.objects.filter(published=True).select_related('user').prefetch_related(
             'reactions__player',
+            'translations',
         )
         return _annotate_updates(qs, user, player)
 

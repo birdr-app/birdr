@@ -3,7 +3,7 @@
 <article class="cms-page" data-slug="{{ cms_page.slug }}">
   <p class="kicker">Page</p>
   <h1 class="cms-title" data-field="title">{{ cms_page.title }}</h1>
-  <div class="cms-body" data-field="body">
+  <div class="cms-body prose" id="cms-body" data-field="body">
     {{ cms_body|safe }}
   </div>
 </article>

@@ -46,13 +46,32 @@ const PODIUM_RANK_EMOJI: Record<number, string> = {
   3: '🥉',
 };
 
-function rankLabel(index: number): string {
-  const place = index + 1;
-  return PODIUM_RANK_EMOJI[place] ?? `#${place}`;
+function rankLabel(rank: number): string {
+  return PODIUM_RANK_EMOJI[rank] ?? `#${rank}`;
 }
 
-function isPodiumRank(index: number): boolean {
-  return index < 3;
+function isPodiumRank(rank: number): boolean {
+  return rank >= 1 && rank <= 3;
+}
+
+function rowRank(row: CountryChallengeLeaderboardRow, index: number): number {
+  return row.rank ?? index + 1;
+}
+
+function isScoreGroupStart(
+  rows: CountryChallengeLeaderboardRow[],
+  index: number
+): boolean {
+  if (index === 0) return true;
+  return rowRank(rows[index], index) !== rowRank(rows[index - 1], index - 1);
+}
+
+function isScoreGroupEnd(
+  rows: CountryChallengeLeaderboardRow[],
+  index: number
+): boolean {
+  if (index === rows.length - 1) return true;
+  return rowRank(rows[index], index) !== rowRank(rows[index + 1], index + 1);
 }
 
 export function CountryChallengeLeaderboardScreen() {
@@ -141,22 +160,36 @@ export function CountryChallengeLeaderboardScreen() {
           { code, name: row.country_name },
           locale
         );
+        const rank = rowRank(row, index);
+        const groupStart = isScoreGroupStart(rows, index);
+        const groupEnd = isScoreGroupEnd(rows, index);
         return (
-          <View key={`${row.player_name}-${code}-${index}`} style={styles.card}>
+          <View
+            key={`${row.player_name}-${code}-${index}`}
+            style={[
+              styles.card,
+              !groupStart && styles.cardContinue,
+              !groupEnd && styles.cardFollowed,
+            ]}
+          >
             <View style={styles.rankAside}>
-              <View
-                style={[
-                  styles.rankBadge,
-                  isPodiumRank(index) ? styles.rankBadgePodium : styles.rankBadgeNumeric,
-                ]}
-              >
-                <Text
-                  style={isPodiumRank(index) ? styles.rankEmoji : styles.rankNumber}
-                  numberOfLines={1}
+              {groupStart ? (
+                <View
+                  style={[
+                    styles.rankBadge,
+                    isPodiumRank(rank) ? styles.rankBadgePodium : styles.rankBadgeNumeric,
+                  ]}
                 >
-                  {rankLabel(index)}
-                </Text>
-              </View>
+                  <Text
+                    style={isPodiumRank(rank) ? styles.rankEmoji : styles.rankNumber}
+                    numberOfLines={1}
+                  >
+                    {rankLabel(rank)}
+                  </Text>
+                </View>
+              ) : (
+                <View style={styles.rankBadgeSpacer} />
+              )}
             </View>
             <View style={styles.cardBody}>
               <Text style={styles.playerName} numberOfLines={1}>
@@ -165,12 +198,18 @@ export function CountryChallengeLeaderboardScreen() {
               <Text style={styles.countryLine} numberOfLines={1}>
                 {countryCodeToFlag(code)} {code} · {countryLabel}
               </Text>
-              <Text style={styles.levelTitle}>{leaderboardLevelTitle(row, locale)}</Text>
-              <Text style={styles.stepText}>{stepLabel(row)}</Text>
+              {groupStart ? (
+                <>
+                  <Text style={styles.levelTitle}>{leaderboardLevelTitle(row, locale)}</Text>
+                  <Text style={styles.stepText}>{stepLabel(row)}</Text>
+                </>
+              ) : null}
             </View>
-            <View style={styles.levelIconAside}>
-              <BirdrLevelImage iconUrl={row.level_icon_url} sequence={row.level_index} variant="plain" size={64} />
-            </View>
+            {groupStart ? (
+              <View style={styles.levelIconAside}>
+                <BirdrLevelImage iconUrl={row.level_icon_url} sequence={row.level_index} variant="plain" size={64} />
+              </View>
+            ) : null}
           </View>
         );
       })}
@@ -211,6 +250,19 @@ const styles = StyleSheet.create({
     borderColor: colors.primary[200],
     overflow: 'visible',
   },
+  cardContinue: {
+    marginTop: -12,
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    borderTopWidth: 0,
+    paddingTop: 8,
+  },
+  cardFollowed: {
+    marginBottom: 0,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+    paddingBottom: 8,
+  },
   rankAside: {
     justifyContent: 'flex-start',
     paddingTop: 2,
@@ -231,6 +283,10 @@ const styles = StyleSheet.create({
   },
   rankBadgeNumeric: {
     backgroundColor: colors.primary[500],
+  },
+  rankBadgeSpacer: {
+    minWidth: 44,
+    minHeight: 8,
   },
   rankEmoji: {
     fontSize: 28,

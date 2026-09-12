@@ -116,6 +116,7 @@ class TroubleSpotSpeciesSerializer(serializers.Serializer):
     correct_rate = serializers.FloatField(allow_null=True)
     error_rate = serializers.FloatField(allow_null=True)
     illustration_url = serializers.SerializerMethodField()
+    code = serializers.SerializerMethodField()
     fixed = serializers.SerializerMethodField()
 
     def _species(self, row: dict) -> Species | None:
@@ -145,6 +146,10 @@ class TroubleSpotSpeciesSerializer(serializers.Serializer):
         urls = self.context.get('illustration_urls') or {}
         return urls.get(row['species_id'])
 
+    def get_code(self, row: dict) -> str:
+        species = self._species(row)
+        return (species.code or '') if species else ''
+
     def get_fixed(self, row: dict) -> bool:
         fixed_species = self.context.get('fixed_species') or set()
         return row['species_id'] in fixed_species
@@ -164,6 +169,10 @@ class TroubleSpotPairSerializer(serializers.Serializer):
     high_name_latin = serializers.SerializerMethodField()
     low_name_nl = serializers.SerializerMethodField()
     high_name_nl = serializers.SerializerMethodField()
+    low_code = serializers.SerializerMethodField()
+    high_code = serializers.SerializerMethodField()
+    low_illustration_url = serializers.SerializerMethodField()
+    high_illustration_url = serializers.SerializerMethodField()
     fixed = serializers.SerializerMethodField()
 
     def _display_name(self, species_id: int, fallback: str) -> str:
@@ -200,6 +209,22 @@ class TroubleSpotPairSerializer(serializers.Serializer):
     def get_high_name_nl(self, row: dict) -> str:
         species = self._species(row['high_id'])
         return (species.name_nl or '') if species else ''
+
+    def get_low_code(self, row: dict) -> str:
+        species = self._species(row['low_id'])
+        return (species.code or '') if species else ''
+
+    def get_high_code(self, row: dict) -> str:
+        species = self._species(row['high_id'])
+        return (species.code or '') if species else ''
+
+    def get_low_illustration_url(self, row: dict) -> str | None:
+        urls = self.context.get('illustration_urls') or {}
+        return urls.get(row['low_id'])
+
+    def get_high_illustration_url(self, row: dict) -> str | None:
+        urls = self.context.get('illustration_urls') or {}
+        return urls.get(row['high_id'])
 
     def get_fixed(self, row: dict) -> bool:
         fixed_pairs = self.context.get('fixed_pairs') or set()
@@ -316,6 +341,11 @@ class StartSpeciesPracticeSerializer(serializers.Serializer):
             language=_profile_language(user),
         )
         PlayerScore.objects.get_or_create(player=host, game=game, defaults={'score': 0})
+        request = self.context.get('request')
+        if request is not None:
+            from jizz.client_info import record_player_score_client_from_request
+
+            record_player_score_client_from_request(host, game, request)
         game.add_question()
         return {'game': game, 'player': host}
 
@@ -365,5 +395,10 @@ class StartConfusionPairPracticeSerializer(serializers.Serializer):
             language=_profile_language(user),
         )
         PlayerScore.objects.get_or_create(player=host, game=game, defaults={'score': 0})
+        request = self.context.get('request')
+        if request is not None:
+            from jizz.client_info import record_player_score_client_from_request
+
+            record_player_score_client_from_request(host, game, request)
         game.add_question()
         return {'game': game, 'player': host}

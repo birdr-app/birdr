@@ -10,6 +10,7 @@
     <nav class="tabs">
         <span class="tab-active">Orders</span>
         <a href="{% url 'data-taxon-families' %}{% if selected_country %}?country={{ selected_country }}{% endif %}">Families</a>
+        <a href="{% url 'data-taxon-groups' %}{% if selected_country %}?country={{ selected_country }}{% endif %}">Groups</a>
     </nav>
 
     <form method="get" action="{% url 'data-taxon-orders' %}" class="toolbar">

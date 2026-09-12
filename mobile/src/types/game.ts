@@ -40,6 +40,7 @@ export type Answer = {
   answer?: Species;
   species?: Species;
   species_frequency?: string | null;
+  media_link?: string | null;
   player?: { id: number; name: string; token: string };
   correct?: boolean;
   score?: number;

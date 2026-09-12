@@ -13,6 +13,7 @@ export type TroubleSpotSpecies = {
   correct_rate: number | null;
   error_rate: number | null;
   illustration_url?: string | null;
+  code?: string;
   fixed?: boolean;
 };
 
@@ -30,6 +31,10 @@ export type TroubleSpotPair = {
   high_name_latin: string;
   low_name_nl?: string;
   high_name_nl?: string;
+  low_code?: string;
+  high_code?: string;
+  low_illustration_url?: string | null;
+  high_illustration_url?: string | null;
   fixed?: boolean;
 };
 
@@ -48,6 +53,41 @@ export async function fetchTroubleSpots(
   if (language?.trim()) params.language = language.trim();
   const { data } = await axios.get<TroubleSpotsResponse>('/api/practice/trouble-spots/', { params });
   return data;
+}
+
+export type TroubleSpotMixup = {
+  pair: TroubleSpotPair;
+  otherId: number;
+  otherName: string;
+  otherLatin: string;
+  otherNl?: string;
+  otherCode?: string;
+  otherIllustrationUrl?: string | null;
+  mixups: number;
+};
+
+export function mixupsForSpecies(
+  speciesId: number,
+  pairs: TroubleSpotPair[],
+): TroubleSpotMixup[] {
+  return pairs
+    .filter((pair) => pair.low_id === speciesId || pair.high_id === speciesId)
+    .map((pair) => {
+      const otherIsLow = pair.high_id === speciesId;
+      return {
+        pair,
+        otherId: otherIsLow ? pair.low_id : pair.high_id,
+        otherName: otherIsLow
+          ? (pair.low_name_translated || pair.low_name)
+          : (pair.high_name_translated || pair.high_name),
+        otherLatin: otherIsLow ? pair.low_name_latin : pair.high_name_latin,
+        otherNl: otherIsLow ? pair.low_name_nl : pair.high_name_nl,
+        otherCode: otherIsLow ? pair.low_code : pair.high_code,
+        otherIllustrationUrl: otherIsLow ? pair.low_illustration_url : pair.high_illustration_url,
+        mixups: pair.total_wrong,
+      };
+    })
+    .sort((a, b) => b.mixups - a.mixups);
 }
 
 export type StartPairPracticeResponse = {

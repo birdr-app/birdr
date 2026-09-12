@@ -90,23 +90,27 @@ function HtmlBlock({ html, color }: { html: string; color: string }) {
 }
 
 type ComparisonModalProps = {
-  visible: boolean;
-  onClose: () => void;
+  visible?: boolean;
+  onClose?: () => void;
   species1Id: number;
   species2Id: number;
   species1Name?: string;
   species2Name?: string;
+  embedded?: boolean;
+  showSpeciesLinks?: boolean;
 };
 
 export function ComparisonModal({
-  visible,
-  onClose,
+  visible = true,
+  onClose = () => {},
   species1Id,
   species2Id,
   species1Name,
   species2Name,
+  embedded = false,
+  showSpeciesLinks = true,
 }: ComparisonModalProps) {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const { isAuthenticated } = useAuth();
   const navigation = useNavigation();
   const { height: windowHeight } = useWindowDimensions();
@@ -119,8 +123,10 @@ export function ComparisonModal({
   const [submitMessage, setSubmitMessage] = useState<string | null>(null);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
+  const active = embedded || visible;
+
   useEffect(() => {
-    if (!visible || !species1Id || !species2Id) {
+    if (!active || !species1Id || !species2Id) {
       setComparison(null);
       setError(null);
       setWriteOpen(false);
@@ -132,7 +138,7 @@ export function ComparisonModal({
     let cancelled = false;
     setLoading(true);
     setError(null);
-    requestComparison(species1Id, species2Id)
+    requestComparison(species1Id, species2Id, locale)
       .then((data) => {
         if (!cancelled) setComparison(data);
       })
@@ -145,7 +151,7 @@ export function ComparisonModal({
     return () => {
       cancelled = true;
     };
-  }, [visible, species1Id, species2Id]);
+  }, [active, species1Id, species2Id, locale]);
 
   const formatDate = (dateString: string) => {
     try {
@@ -199,148 +205,162 @@ export function ComparisonModal({
     navigation.navigate('Login' as never);
   };
 
+  const comparisonBody = loading ? (
+    <View style={styles.loadingBox}>
+      <ActivityIndicator size="large" color={colors.primary[500]} />
+      <Text style={styles.loadingText}>{t('comparison_generating')}</Text>
+    </View>
+  ) : (
+    <>
+      {error ? (
+        <View style={styles.errorBox}>
+          <Text style={styles.errorText}>{error}</Text>
+        </View>
+      ) : null}
+
+      {comparison ? (
+        <>
+          <View style={styles.disclaimer}>
+            <Text style={styles.disclaimerText}>{t('comparison_ai_disclaimer')}</Text>
+          </View>
+          {showSpeciesLinks ? (
+            <View style={styles.linksRow}>
+              <View style={styles.linksColumn}>
+                <Text style={styles.linksSpeciesName}>{displayName1}</Text>
+                <TouchableOpacity
+                  onPress={() =>
+                    void Linking.openURL(`https://ebird.org/species/${comparison.species_1_code}`)
+                  }
+                >
+                  <Text style={styles.linkText}>eBird ›</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() =>
+                    void Linking.openURL(
+                      `https://birdsoftheworld.org/bow/species/${comparison.species_1_code}/cur/introduction`
+                    )
+                  }
+                >
+                  <Text style={styles.linkText}>Birds of the World ›</Text>
+                </TouchableOpacity>
+              </View>
+              <View style={styles.linksColumn}>
+                <Text style={styles.linksSpeciesName}>{displayName2}</Text>
+                <TouchableOpacity
+                  onPress={() =>
+                    void Linking.openURL(`https://ebird.org/species/${comparison.species_2_code}`)
+                  }
+                >
+                  <Text style={styles.linkText}>eBird ›</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() =>
+                    void Linking.openURL(
+                      `https://birdsoftheworld.org/bow/species/${comparison.species_2_code}/cur/introduction`
+                    )
+                  }
+                >
+                  <Text style={styles.linkText}>Birds of the World ›</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          ) : null}
+
+          {renderHtmlSection(comparison.summary_html, comparison.summary, 'Summary')}
+          {comparison.identification_tips_html ? (
+            <View style={styles.tipsBox}>
+              <Text style={styles.tipsTitle}>Identification tips</Text>
+              <HtmlBlock html={comparison.identification_tips_html} color="#1e3a5f" />
+            </View>
+          ) : null}
+          {renderHtmlSection(comparison.size_comparison_html, comparison.size_comparison, 'Size')}
+          {renderHtmlSection(
+            comparison.plumage_comparison_html,
+            comparison.plumage_comparison,
+            'Plumage',
+          )}
+          {renderHtmlSection(
+            comparison.behavior_comparison_html,
+            comparison.behavior_comparison,
+            'Behavior',
+          )}
+          {renderHtmlSection(
+            comparison.habitat_comparison_html,
+            comparison.habitat_comparison,
+            'Habitat',
+          )}
+          {renderHtmlSection(
+            comparison.vocalization_comparison_html,
+            comparison.vocalization_comparison,
+            'Vocalization',
+          )}
+          <Text style={styles.footerText}>
+            {t('comparison_generated_with', {
+              model: comparison.ai_model,
+              date: formatDate(comparison.generated_at),
+            })}
+          </Text>
+        </>
+      ) : null}
+
+      <View style={styles.writeCard}>
+        <View style={styles.writeRow}>
+          <Text style={styles.writeTitle}>{t('comparison_write_title')}</Text>
+          <TouchableOpacity
+            style={styles.writeBtn}
+            onPress={openWrite}
+            testID="comparison.write"
+            accessibilityRole="button"
+          >
+            <Text style={styles.writeBtnText}>{t('comparison_write')}</Text>
+          </TouchableOpacity>
+        </View>
+        <Text style={styles.suggestNote}>{t('comparison_suggest_note')}</Text>
+      </View>
+    </>
+  );
+
   return (
     <>
-      <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
-        <View style={styles.backdrop}>
-          <View style={[styles.content, { maxHeight: windowHeight * 0.92 }]}>
-            <View style={styles.header}>
-              <View style={{ flex: 1, paddingRight: 8 }}>
-                <Text style={styles.title}>
-                  {comparison ? `${displayName1} vs ${displayName2}` : t('comparison_title')}
-                </Text>
-                {comparison ? (
-                  <Text style={styles.latinSubtitle}>
-                    {comparison.species_1_latin} / {comparison.species_2_latin}
+      {embedded ? (
+        comparisonBody
+      ) : (
+        <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
+          <View style={styles.backdrop}>
+            <View style={[styles.content, { maxHeight: windowHeight * 0.92 }]}>
+              <View style={styles.header}>
+                <View style={{ flex: 1, paddingRight: 8 }}>
+                  <Text style={styles.title}>
+                    {comparison ? `${displayName1} vs ${displayName2}` : t('comparison_title')}
                   </Text>
-                ) : null}
-              </View>
-              <TouchableOpacity onPress={onClose} style={styles.closeBtn} accessibilityRole="button">
-                <Text style={styles.closeBtnText}>{t('close')}</Text>
-              </TouchableOpacity>
-            </View>
-            {loading ? (
-              <View style={styles.loadingBox}>
-                <ActivityIndicator size="large" color={colors.primary[500]} />
-                <Text style={styles.loadingText}>{t('comparison_generating')}</Text>
-              </View>
-            ) : (
-              <ScrollView
-                style={[styles.scroll, { maxHeight: windowHeight * 0.72 }]}
-                contentContainerStyle={styles.scrollContent}
-                keyboardShouldPersistTaps="handled"
-              >
-                {error ? (
-                  <View style={styles.errorBox}>
-                    <Text style={styles.errorText}>{error}</Text>
-                  </View>
-                ) : null}
-
-                {comparison ? (
-                  <>
-                    <View style={styles.disclaimer}>
-                      <Text style={styles.disclaimerText}>{t('comparison_ai_disclaimer')}</Text>
-                    </View>
-                    <View style={styles.linksRow}>
-                      <View style={styles.linksColumn}>
-                        <Text style={styles.linksSpeciesName}>{displayName1}</Text>
-                        <TouchableOpacity
-                          onPress={() =>
-                            void Linking.openURL(`https://ebird.org/species/${comparison.species_1_code}`)
-                          }
-                        >
-                          <Text style={styles.linkText}>eBird ›</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                          onPress={() =>
-                            void Linking.openURL(
-                              `https://birdsoftheworld.org/bow/species/${comparison.species_1_code}/cur/introduction`
-                            )
-                          }
-                        >
-                          <Text style={styles.linkText}>Birds of the World ›</Text>
-                        </TouchableOpacity>
-                      </View>
-                      <View style={styles.linksColumn}>
-                        <Text style={styles.linksSpeciesName}>{displayName2}</Text>
-                        <TouchableOpacity
-                          onPress={() =>
-                            void Linking.openURL(`https://ebird.org/species/${comparison.species_2_code}`)
-                          }
-                        >
-                          <Text style={styles.linkText}>eBird ›</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                          onPress={() =>
-                            void Linking.openURL(
-                              `https://birdsoftheworld.org/bow/species/${comparison.species_2_code}/cur/introduction`
-                            )
-                          }
-                        >
-                          <Text style={styles.linkText}>Birds of the World ›</Text>
-                        </TouchableOpacity>
-                      </View>
-                    </View>
-
-                    {renderHtmlSection(comparison.summary_html, comparison.summary, 'Summary')}
-                    {comparison.identification_tips_html ? (
-                      <View style={styles.tipsBox}>
-                        <Text style={styles.tipsTitle}>Identification tips</Text>
-                        <HtmlBlock html={comparison.identification_tips_html} color="#1e3a5f" />
-                      </View>
-                    ) : null}
-                    {renderHtmlSection(comparison.size_comparison_html, comparison.size_comparison, 'Size')}
-                    {renderHtmlSection(
-                      comparison.plumage_comparison_html,
-                      comparison.plumage_comparison,
-                      'Plumage',
-                    )}
-                    {renderHtmlSection(
-                      comparison.behavior_comparison_html,
-                      comparison.behavior_comparison,
-                      'Behavior',
-                    )}
-                    {renderHtmlSection(
-                      comparison.habitat_comparison_html,
-                      comparison.habitat_comparison,
-                      'Habitat',
-                    )}
-                    {renderHtmlSection(
-                      comparison.vocalization_comparison_html,
-                      comparison.vocalization_comparison,
-                      'Vocalization',
-                    )}
-                    <Text style={styles.footerText}>
-                      {t('comparison_generated_with', {
-                        model: comparison.ai_model,
-                        date: formatDate(comparison.generated_at),
-                      })}
+                  {comparison ? (
+                    <Text style={styles.latinSubtitle}>
+                      {comparison.species_1_latin} / {comparison.species_2_latin}
                     </Text>
-                  </>
-                ) : null}
-
-                <View style={styles.writeCard}>
-                  <View style={styles.writeRow}>
-                    <Text style={styles.writeTitle}>{t('comparison_write_title')}</Text>
-                    <TouchableOpacity
-                      style={styles.writeBtn}
-                      onPress={openWrite}
-                      testID="comparison.write"
-                      accessibilityRole="button"
-                    >
-                      <Text style={styles.writeBtnText}>{t('comparison_write')}</Text>
-                    </TouchableOpacity>
-                  </View>
-                  <Text style={styles.suggestNote}>{t('comparison_suggest_note')}</Text>
+                  ) : null}
                 </View>
-              </ScrollView>
-            )}
+                <TouchableOpacity onPress={onClose} style={styles.closeBtn} accessibilityRole="button">
+                  <Text style={styles.closeBtnText}>{t('close')}</Text>
+                </TouchableOpacity>
+              </View>
+              {loading ? (
+                comparisonBody
+              ) : (
+                <ScrollView
+                  style={[styles.scroll, { maxHeight: windowHeight * 0.72 }]}
+                  contentContainerStyle={styles.scrollContent}
+                  keyboardShouldPersistTaps="handled"
+                >
+                  {comparisonBody}
+                </ScrollView>
+              )}
+            </View>
           </View>
-        </View>
-      </Modal>
+        </Modal>
+      )}
 
       <Modal
-        visible={visible && writeOpen}
+        visible={active && writeOpen}
         transparent
         animationType="fade"
         onRequestClose={() => setWriteOpen(false)}

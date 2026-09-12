@@ -11,22 +11,20 @@ import {
   useWindowDimensions,
   Animated,
 } from 'react-native';
-import { useNavigation, useRoute, useFocusEffect } from '@react-navigation/native';
+import { useNavigation, useRoute, useFocusEffect, useIsFocused } from '@react-navigation/native';
 import { AutocompleteDropdown } from 'react-native-autocomplete-dropdown';
 import type { IAutocompleteDropdownRef } from 'react-native-autocomplete-dropdown';
 import { useGame } from '../context/GameContext';
 import { useGameWebSocket } from '../context/GameWebSocketContext';
 import { useTranslation } from '../i18n/TranslationContext';
 import { AnswerFeedback, normalizeSpeciesFrequency, normalizeChecklistAdded, normalizeChecklistMissed } from '../components/AnswerFeedback';
-import { MediaCredits } from '../components/MediaCredits';
-import { FlagMediaModal, type FlagMediaInfo } from '../components/FlagMediaModal';
+import { FlagMediaModal, FlagMediaLink, type FlagMediaInfo } from '../components/FlagMediaModal';
 import { QuestionMediaView } from '../components/QuestionMediaView';
 import { QuestionLoadingFeather } from '../components/QuestionLoadingFeather';
 import { useDelayedFlag } from '../hooks/useDelayedFlag';
 import {
   questionMediaBlockHeight,
   questionMediaStageHeight,
-  QUESTION_MEDIA_CREDITS_HEIGHT,
 } from '../constants/questionMediaLayout';
 import { SpeciesMediaModal, type SpeciesMediaData } from '../components/SpeciesMediaModal';
 import { PracticeSpeciesLinks } from '../components/PracticeSpeciesLinks';
@@ -39,7 +37,11 @@ import { colors } from '../theme';
 import { usePulsatingAnimation } from '../hooks/usePulsatingAnimation';
 import { useQuestionSoundPlayback } from '../hooks/useQuestionSoundPlayback';
 import { answersEnabledForMedia } from '../game/mediaAnswerGate';
-import { resolvePlayMediaType } from '../utils/questionMediaIndex';
+import {
+  mediaArrayLengthForQuestion,
+  mediaSlotIndexFromQuestion,
+  resolvePlayMediaType,
+} from '../utils/questionMediaIndex';
 import { playPreviewSrc } from '../utils/playImageUrl';
 import {
   countWrongAnswers,
@@ -51,10 +53,15 @@ import type { Species } from '../types/game';
 import * as playerApi from '../api/player';
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5"
 
-function speciesDisplayName(s: Species, lang?: string): string {
+function speciesDisplayName(s: Species, lang?: string, extras?: Species[]): string {
+  const fromList = extras?.find((x) => x.id === s.id);
+  if (lang === 'la') {
+    return fromList?.name_latin || s.name_latin || fromList?.name || s.name || `Species ${s.id}`;
+  }
+  if (fromList?.name_translated) return fromList.name_translated;
+  if (lang === 'nl' && (fromList?.name_nl || s.name_nl)) return fromList?.name_nl || s.name_nl || s.name || `Species ${s.id}`;
   if (s.name_translated) return s.name_translated;
   if (lang === 'nl' && s.name_nl) return s.name_nl;
-  if (lang === 'la' && s.name_latin) return s.name_latin;
   return s.name || s.name_latin || `Species ${s.id}`;
 }
 
@@ -62,13 +69,15 @@ function speciesDisplayName(s: Species, lang?: string): string {
 function GamePlayAudio({
   soundUri,
   questionId,
+  onCanPlay,
   children,
 }: {
   soundUri: string | null;
   questionId?: number;
+  onCanPlay?: () => void;
   children: (args: { playSound: () => void; soundPlaying: boolean; pulsatingStyle: ReturnType<typeof usePulsatingAnimation> }) => React.ReactNode;
 }) {
-  const { toggleSound, soundPlaying, pulsatingStyle } = useQuestionSoundPlayback(soundUri, questionId);
+  const { toggleSound, soundPlaying, pulsatingStyle } = useQuestionSoundPlayback(soundUri, questionId, onCanPlay);
   return <>{children({ playSound: toggleSound, soundPlaying, pulsatingStyle })}</>;
 }
 
@@ -76,6 +85,7 @@ export function GamePlayScreen() {
   const { t } = useTranslation();
   const navigation = useNavigation();
   const route = useRoute();
+  const isFocused = useIsFocused();
   const dailyChallengeId = (route.params as { dailyChallengeId?: number })?.dailyChallengeId;
   const flockSlug = (route.params as { flockSlug?: string })?.flockSlug;
   const flockChallengeId = (route.params as { flockChallengeId?: number })?.flockChallengeId;
@@ -129,10 +139,24 @@ export function GamePlayScreen() {
   playerRefForPoll.current = player;
 
   useEffect(() => {
-    if (!game?.token || !player?.token) return;
+    if (!isFocused || !game?.token || !player?.token) return;
     if (!questionIdRef.current) {
       void refreshGameState({ force: true });
     }
+    const retryMs = [800, 2500, 8000];
+    const timers = retryMs.map((ms) =>
+      setTimeout(() => {
+        if (questionIdRef.current) return;
+        const gameNow = gameRefForPoll.current;
+        const playerNow = playerRefForPoll.current;
+        if (!gameNow?.token || !playerNow?.token) return;
+        if (!connectedRef.current) {
+          joinGame(gameNow, playerNow, setGame, { force: true });
+          return;
+        }
+        void refreshGameState({ force: true });
+      }, ms)
+    );
     const interval = setInterval(() => {
       const gameNow = gameRefForPoll.current;
       const playerNow = playerRefForPoll.current;
@@ -142,11 +166,14 @@ export function GamePlayScreen() {
         return;
       }
       if (!questionIdRef.current) {
-        void refreshGameState({ resyncWs: true, force: true });
+        void refreshGameState({ force: true });
       }
-    }, 8000);
-    return () => clearInterval(interval);
-  }, [game?.token, player?.token, joinGame, setGame, refreshGameState]);
+    }, 15000);
+    return () => {
+      timers.forEach(clearTimeout);
+      clearInterval(interval);
+    };
+  }, [isFocused, game?.token, player?.token, joinGame, setGame, refreshGameState]);
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -169,7 +196,8 @@ export function GamePlayScreen() {
   }, [navigation, handleRefreshQuestion, refreshingQuestion, t]);
 
   const mediaType = resolvePlayMediaType(question, game?.media);
-  const currentIndex = mediaIndex;
+  const mediaLength = question ? mediaArrayLengthForQuestion(question, mediaType) : 0;
+  const currentIndex = mediaSlotIndexFromQuestion({ number: mediaIndex }, mediaLength);
   const lang = game?.language || (player as any)?.language;
 
   const { width: screenWidth, height: screenHeight } = useWindowDimensions();
@@ -236,7 +264,15 @@ export function GamePlayScreen() {
 
   const prevQuestionIdRef = useRef<number | undefined>(undefined);
   useEffect(() => {
-    if (question) setMediaIndex(question.number ?? 0);
+    if (question) {
+      const kind = resolvePlayMediaType(question, game?.media);
+      setMediaIndex(
+        mediaSlotIndexFromQuestion(
+          question,
+          mediaArrayLengthForQuestion(question, kind),
+        ),
+      );
+    }
     if (
       prevQuestionIdRef.current !== undefined &&
       question?.id !== prevQuestionIdRef.current
@@ -288,12 +324,11 @@ export function GamePlayScreen() {
   }, [soloGameMode, question, game, player]);
 
   useEffect(() => {
-    if (!question || game?.level !== 'expert') return;
-    const countryCode = (game as any).country?.code;
+    const countryCode = (game as any)?.country?.code;
     if (!countryCode) return;
     const language = game?.language || (player as any)?.language || 'en';
     getSpeciesForCountry(countryCode, language).then(setExpertSpecies);
-  }, [question?.id, game?.level, game?.language, (game as any)?.country?.code, (player as any)?.language]);
+  }, [game?.language, (game as any)?.country?.code, (player as any)?.language]);
 
   useEffect(() => {
     setSubmittingId(null);
@@ -308,16 +343,28 @@ export function GamePlayScreen() {
     setMediaReady(false);
   }, [question?.id, mediaIndex, mediaType]);
 
-  useEffect(() => {
-    if (mediaType !== 'audio' || !question?.id) return;
-    setMediaReady(true);
-    const tok = (player as { token?: string })?.token;
-    if (tok) postQuestionMediaReady(question.id, tok).catch(() => {});
-  }, [mediaType, question?.id, player]);
-
   const image = mediaType === 'images' ? question?.images?.[currentIndex] : undefined;
   const video = mediaType === 'video' ? question?.videos?.[currentIndex] : undefined;
   const sound = mediaType === 'audio' ? question?.sounds?.[currentIndex] : undefined;
+  const answeredSourceLink = typeof answer?.media_link === 'string' ? answer.media_link : null;
+  const imageMedia =
+    image && typeof image === 'object'
+      ? answeredSourceLink
+        ? { ...image, link: answeredSourceLink }
+        : image
+      : undefined;
+  const videoMedia =
+    video && typeof video === 'object'
+      ? answeredSourceLink
+        ? { ...video, link: answeredSourceLink }
+        : video
+      : undefined;
+  const soundMedia =
+    sound && typeof sound === 'object'
+      ? answeredSourceLink
+        ? { ...sound, link: answeredSourceLink }
+        : sound
+      : undefined;
   const soundUri = sound?.url ? (sound.url.startsWith('http') ? sound.url : apiUrl(sound.url)) : null;
 
   const langForDisplay = game?.language || (player as any)?.language;
@@ -325,7 +372,7 @@ export function GamePlayScreen() {
     () =>
       expertSpecies.map((s) => ({
         id: String(s.id),
-        title: speciesDisplayName(s, langForDisplay),
+        title: speciesDisplayName(s, langForDisplay, expertSpecies),
       })),
     [expertSpecies, langForDisplay]
   );
@@ -544,7 +591,17 @@ export function GamePlayScreen() {
   }
 
   return (
-    <GamePlayAudio soundUri={soundUri} questionId={question.id}>
+    <GamePlayAudio
+      soundUri={soundUri}
+      questionId={question.id}
+      onCanPlay={() => {
+        setMediaReady(true);
+        const tok = (player as { token?: string })?.token;
+        if (question?.id && tok) {
+          postQuestionMediaReady(question.id, tok).catch(() => {});
+        }
+      }}
+    >
       {({ playSound, soundPlaying, pulsatingStyle }) => (
     <View style={styles.playRoot}>
     <ScrollView style={styles.container} contentContainerStyle={styles.content} testID="gamePlay.screen">
@@ -587,7 +644,6 @@ export function GamePlayScreen() {
             height={mediaStageHeight}
             testID="gamePlay.advancingLoader"
           />
-          {mediaType !== 'audio' ? <View style={styles.mediaCreditsSpacer} /> : null}
         </>
       ) : (
       <QuestionMediaView
@@ -614,11 +670,11 @@ export function GamePlayScreen() {
         reloadImageLabel={t('retry')}
         nextImageLabel={t('next_image')}
         showNextImageButton={(question?.images?.length ?? 0) > 1}
-        imageMedia={image && typeof image === 'object' ? image : undefined}
+        imageMedia={imageMedia}
         videoUri={videoUri}
-        videoMedia={video && typeof video === 'object' ? video : undefined}
+        videoMedia={videoMedia}
         soundUri={soundUri}
-        soundMedia={sound && typeof sound === 'object' ? sound : undefined}
+        soundMedia={soundMedia}
         onPlaySound={playSound}
         soundPlaying={soundPlaying}
         pulsatingStyle={pulsatingStyle}
@@ -634,6 +690,50 @@ export function GamePlayScreen() {
         containerStyle={styles.mediaInner}
         imageHeight={mediaHeight}
         videoHeight={videoHeight}
+        actionOverlay={
+          done && resultsReadyForCurrentQuestion ? (
+            <TouchableOpacity
+              style={styles.overlayActionButton}
+              onPress={handleEndGame}
+              testID="gamePlay.endGame"
+              accessibilityLabel="End game"
+            >
+              <Text style={styles.primaryButtonText}>{t('end_game')}</Text>
+            </TouchableOpacity>
+          ) : isHost && resultsReadyForCurrentQuestion && !advancingQuestion ? (
+            <TouchableOpacity
+              style={styles.overlayActionButton}
+              onPress={handleNext}
+              testID="gamePlay.nextQuestion"
+              accessibilityLabel="Next question"
+            >
+              <Text style={styles.primaryButtonText}>{t('next_question')}</Text>
+            </TouchableOpacity>
+          ) : waitingForHost ? (
+            <View style={styles.overlayWaitCard}>
+              <View style={styles.waitForHostRow}>
+                <Text style={styles.waitForHostText}>{t('waiting_for_host')}</Text>
+                <TouchableOpacity
+                  style={styles.waitForHostRefreshButton}
+                  onPress={() => void handleRefreshQuestion()}
+                  disabled={refreshingQuestion}
+                  testID="gamePlay.waitForHostRefresh"
+                  accessibilityRole="button"
+                  accessibilityLabel={t('refresh')}
+                >
+                  {refreshingQuestion ? (
+                    <ActivityIndicator size="small" color={colors.primary[700]} />
+                  ) : (
+                    <FontAwesome5 name="sync" size={16} color={colors.primary[700]} />
+                  )}
+                </TouchableOpacity>
+              </View>
+              {showSlowHostWait ? (
+                <Text style={styles.refreshQuestionHint}>{t('loading_taking_long')}</Text>
+              ) : null}
+            </View>
+          ) : undefined
+        }
         onMediaReady={() => {
           setMediaReady(true);
           const tok = (player as { token?: string })?.token;
@@ -650,41 +750,6 @@ export function GamePlayScreen() {
       ) : null}
       </View>
 
-      <View style={styles.nextSection}>
-        {done && resultsReadyForCurrentQuestion ? (
-          <TouchableOpacity style={styles.primaryButton} onPress={handleEndGame} testID="gamePlay.endGame" accessibilityLabel="End game">
-            <Text style={styles.primaryButtonText}>{t('end_game')}</Text>
-          </TouchableOpacity>
-        ) : isHost && resultsReadyForCurrentQuestion && !advancingQuestion ? (
-          <TouchableOpacity style={styles.primaryButton} onPress={handleNext} testID="gamePlay.nextQuestion" accessibilityLabel="Next question">
-            <Text style={styles.primaryButtonText}>{t('next_question')}</Text>
-          </TouchableOpacity>
-        ) : waitingForHost ? (
-          <View>
-            <View style={styles.waitForHostRow}>
-              <Text style={styles.waitForHostText}>{t('waiting_for_host')}</Text>
-              <TouchableOpacity
-                style={styles.waitForHostRefreshButton}
-                onPress={() => void handleRefreshQuestion()}
-                disabled={refreshingQuestion}
-                testID="gamePlay.waitForHostRefresh"
-                accessibilityRole="button"
-                accessibilityLabel={t('refresh')}
-              >
-                {refreshingQuestion ? (
-                  <ActivityIndicator size="small" color={colors.primary[700]} />
-                ) : (
-                  <FontAwesome5 name="sync" size={16} color={colors.primary[700]} />
-                )}
-              </TouchableOpacity>
-            </View>
-            {showSlowHostWait ? (
-              <Text style={styles.refreshQuestionHint}>{t('loading_taking_long')}</Text>
-            ) : null}
-          </View>
-        ) : null}
-      </View>
-
       {hasOptions ? (
         <View style={[styles.options, isWide && styles.optionsWide]}>
           {question.options!.map((opt, i) => {
@@ -693,7 +758,7 @@ export function GamePlayScreen() {
             const isWrong = answer && !answer.correct && answer.answer?.id === opt.id;
             const optionContent = answer ? (
               <SpeciesViewButton
-                label={speciesDisplayName(opt, lang)}
+                label={speciesDisplayName(opt, lang, expertSpecies)}
                 onPress={() => setMediaSpecies(opt as SpeciesMediaData)}
                 variant={isCorrect ? 'correct' : isWrong || isChosen ? 'wrong' : 'revealed'}
                 icon={isCorrect ? 'correct' : isWrong || isChosen ? 'wrong' : undefined}
@@ -707,11 +772,11 @@ export function GamePlayScreen() {
                 onPress={() => handleAnswer(opt)}
                 disabled={submittingId !== null || !answersEnabled}
                 testID={i === 0 ? 'gamePlay.firstOption' : `gamePlay.option.${opt.id}`}
-                accessibilityLabel={i === 0 ? 'First answer option' : speciesDisplayName(opt, lang)}
+                accessibilityLabel={i === 0 ? 'First answer option' : speciesDisplayName(opt, lang, expertSpecies)}
               >
                 <View style={styles.row}>
                   <Text style={[styles.optionText, styles.optionTextFlex]} numberOfLines={2}>
-                    {speciesDisplayName(opt, lang)}
+                    {speciesDisplayName(opt, lang, expertSpecies)}
                   </Text>
                   {submittingId === opt.id && <ActivityIndicator size="small" color="#fff" />}
                 </View>
@@ -730,8 +795,8 @@ export function GamePlayScreen() {
             <ComparisonButton
               species1Id={answer.species.id}
               species2Id={answer.answer.id}
-              species1Name={speciesDisplayName(answer.species, lang)}
-              species2Name={speciesDisplayName(answer.answer, lang)}
+              species1Name={speciesDisplayName(answer.species, lang, expertSpecies)}
+              species2Name={speciesDisplayName(answer.answer, lang, expertSpecies)}
             />
           ) : null}
         </View>
@@ -739,14 +804,14 @@ export function GamePlayScreen() {
         answer ? (
           <View style={styles.options}>
             <SpeciesViewButton
-              label={answer.species ? speciesDisplayName(answer.species, lang) : '—'}
+              label={answer.species ? speciesDisplayName(answer.species, lang, expertSpecies) : '—'}
               onPress={() => answer.species && setMediaSpecies(answer.species as SpeciesMediaData)}
               variant="correct"
               icon="correct"
             />
             {!answer.correct && answer.answer && (
               <SpeciesViewButton
-                label={speciesDisplayName(answer.answer, lang)}
+                label={speciesDisplayName(answer.answer, lang, expertSpecies)}
                 onPress={() => setMediaSpecies(answer.answer as SpeciesMediaData)}
                 variant="wrong"
                 icon="wrong"
@@ -756,8 +821,8 @@ export function GamePlayScreen() {
               <ComparisonButton
                 species1Id={answer.species.id}
                 species2Id={answer.answer.id}
-                species1Name={speciesDisplayName(answer.species, lang)}
-                species2Name={speciesDisplayName(answer.answer, lang)}
+                species1Name={speciesDisplayName(answer.species, lang, expertSpecies)}
+                species2Name={speciesDisplayName(answer.answer, lang, expertSpecies)}
               />
             ) : null}
           </View>
@@ -811,6 +876,10 @@ export function GamePlayScreen() {
       ) : (
         <Text style={styles.muted}>Free answer not implemented.</Text>
       )}
+
+      {!(flockSlug || game?.game_type === 'flock_challenge') ? (
+        <FlagMediaLink onPress={openFlagModal} label={t('this_seems_wrong')} />
+      ) : null}
 
 
       {isPracticeGame &&
@@ -926,6 +995,26 @@ const styles = StyleSheet.create({
   errorText: { fontSize: 14, color: colors.error[500], marginTop: 12, textAlign: 'center' },
   link: { fontSize: 16, color: colors.primary[500], marginTop: 8 },
   nextSection: { marginBottom: 12 },
+  overlayActionButton: {
+    backgroundColor: colors.primary[500],
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.28)',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.55,
+    shadowRadius: 8,
+    elevation: 10,
+  },
+  overlayWaitCard: {
+    backgroundColor: 'rgba(245, 237, 224, 0.94)',
+    borderRadius: 8,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+  },
   pairPracticeHeader: {
     flexDirection: 'row',
     alignItems: 'flex-start',
@@ -994,7 +1083,6 @@ const styles = StyleSheet.create({
     lineHeight: 18,
   },
   mediaInner: { marginBottom: 0 },
-  mediaCreditsSpacer: { height: QUESTION_MEDIA_CREDITS_HEIGHT },
   creditsRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',

@@ -12,6 +12,7 @@ from jizz.jwt_views import EmailOrUsernameTokenObtainPairView
 from jizz.marketing.views import (
     bird_page,
     birds_index,
+    cms_legacy_redirect,
     cms_index,
     cms_page,
     compare_page,
@@ -32,7 +33,7 @@ from jizz.views import CountryDetailView, CountryViewSet, SpeciesListView, Speci
     PlayerScoreListView, \
     PlayerStatsView, FeedbackListView, QuestionView, \
     ReactionView, \
-    FamilyListView, OrderListView, LanguageListView, RegisterView, ProfileView, \
+    FamilyListView, OrderListView, SpeciesGroupListView, LanguageListView, RegisterView, ProfileView, \
     PasswordResetRequestView, PasswordResetConfirmView, OAuthCompleteView, UserGamesView, UserGameDetailView, \
     MediaListView, MediaReviewSpeciesListView, ReviewMediaView, FirstAssertionReviewView, FlagMediaView, SpeciesReviewStatsView, GoogleLoginView, AppleLoginView, \
     PageListView, PageDetailView
@@ -42,8 +43,13 @@ from jizz.data_views import (
     data_games_played_api_view,
     data_games_played_view,
     data_index_view,
+    data_marketing_website_api_view,
+    data_marketing_website_view,
+    data_most_games_view,
+    data_most_reviews_view,
     data_taxon_families_view,
     data_taxon_orders_view,
+    data_taxon_groups_view,
 )
 from jizz.update_views import (
     UpdateDetailView,
@@ -100,6 +106,7 @@ from jizz.mobile_push.views import PushRegisterView
 from jizz.flock_views import (
     FlockListCreateView,
     FlockDetailView,
+    FlockProgressView,
     FlockMembersView,
     FlockLeaveView,
     FlockMemberDetailView,
@@ -115,6 +122,7 @@ from jizz.flock_views import (
     flock_result_page,
     flock_result_og_image,
     flock_challenge_share_page,
+    flock_challenge_history_page,
     flock_challenge_og_image,
 )
 from jizz.game_share_views import (
@@ -259,6 +267,7 @@ urlpatterns = [
     path('site/birding-app/', intent_page, {'slug': 'birding-app'}, name='marketing-birding-app'),
     path('site/flocks/', intent_page, {'slug': 'flocks'}, name='marketing-flocks'),
     path('site/community/', intent_page, {'slug': 'community'}, name='marketing-community'),
+    path('site/newsletter/', intent_page, {'slug': 'newsletter'}, name='marketing-newsletter'),
     path('site/faq/', intent_page, {'slug': 'faq'}, name='marketing-faq'),
     path('site/my-tricky-birds/', intent_page, {'slug': 'my-tricky-birds'}, name='marketing-my-tricky-birds'),
     path('site/my-edits/', my_edits, name='marketing-my-edits'),
@@ -271,7 +280,7 @@ urlpatterns = [
     path('site/page/', cms_index, name='marketing-cms-index'),
     path('site/page/<slug:slug>/', cms_page, name='marketing-cms-page'),
     path('site/feedback/', site_feedback, name='marketing-feedback'),
-    path('site/<slug:slug>/', RedirectView.as_view(url='/site/page/%(slug)s/', permanent=True)),
+    path('site/<slug:slug>/', cms_legacy_redirect),
     path('', RedirectView.as_view(url='/site/', permanent=True)),
     path('how-it-works/', RedirectView.as_view(url='/site/how-it-works/', permanent=True)),
     path(
@@ -289,6 +298,7 @@ urlpatterns = [
     path('birding-app/', RedirectView.as_view(url='/site/birding-app/', permanent=True)),
     path('flocks/', RedirectView.as_view(url='/site/flocks/', permanent=True)),
     path('community/', RedirectView.as_view(url='/site/community/', permanent=True)),
+    path('newsletter/', RedirectView.as_view(url='/site/newsletter/', permanent=True)),
     path('faq/', RedirectView.as_view(url='/site/faq/', permanent=True)),
     path('my-tricky-birds/', RedirectView.as_view(url='/site/my-tricky-birds/', permanent=True)),
     path(
@@ -317,6 +327,11 @@ urlpatterns = [
         name='flock-result-og',
     ),
     path(
+        'flocks/c/<str:public_token>/history/',
+        flock_challenge_history_page,
+        name='flock-challenge-history',
+    ),
+    path(
         'flocks/c/<str:public_token>/',
         flock_challenge_share_page,
         name='flock-challenge-share',
@@ -339,8 +354,13 @@ urlpatterns = [
     path('data/quiz-mistakes/pairs/', quiz_mistake_pairs_view, name='data-quiz-mistake-pairs'),
     path('data/taxons/orders/', data_taxon_orders_view, name='data-taxon-orders'),
     path('data/taxons/families/', data_taxon_families_view, name='data-taxon-families'),
+    path('data/taxons/groups/', data_taxon_groups_view, name='data-taxon-groups'),
     path('data/games-played/', data_games_played_view, name='data-games-played'),
     path('data/games-played/api/', data_games_played_api_view, name='data-games-played-api'),
+    path('data/marketing-website/', data_marketing_website_view, name='data-marketing-website'),
+    path('data/marketing-website/api/', data_marketing_website_api_view, name='data-marketing-website-api'),
+    path('data/most-games/', data_most_games_view, name='data-most-games'),
+    path('data/most-reviews/', data_most_reviews_view, name='data-most-reviews'),
     path(
         'data/country-challenge-leaderboard/',
         data_country_challenge_leaderboard_view,
@@ -407,6 +427,7 @@ urlpatterns = [
 
     re_path(r"^api/families/$", FamilyListView.as_view(), name="family-list"),
     re_path(r"^api/orders/$", OrderListView.as_view(), name="order-list"),
+    re_path(r"^api/groups/$", SpeciesGroupListView.as_view(), name="species-group-list"),
 
     re_path(r"^api/games/(?P<token>[\w-]+)/question$", QuestionView.as_view(), name="game-question-detail"),
     re_path(r"^api/answer/$", AnswerView.as_view(), name="answer-create"),
@@ -500,6 +521,7 @@ urlpatterns = [
     path('api/flocks/invite/<str:token>/', FlockInvitePreviewView.as_view(), name='flock-invite-preview'),
     path('api/flocks/results/<str:result_token>/', FlockPublicResultView.as_view(), name='flock-public-result'),
     path('api/flocks/<slug:slug>/', FlockDetailView.as_view(), name='flock-detail'),
+    path('api/flocks/<slug:slug>/progress/', FlockProgressView.as_view(), name='flock-progress'),
     path('api/flocks/<slug:slug>/members/', FlockMembersView.as_view(), name='flock-members'),
     path(
         'api/flocks/<slug:slug>/members/<int:user_id>/',
@@ -547,7 +569,7 @@ _public = settings.BASE_DIR.parent / 'app' / 'public'
 urlpatterns += [
     re_path(
         r'^(?P<path>(?:favicon\.ico|favicon-16x16\.png|favicon-32x32\.png|'
-        r'apple-touch-icon\.png|logo192\.png|logo512\.png|images/(?:stylish/)?birdr-[\w.-]+\.(?:png|gif)))$',
+        r'apple-touch-icon\.png|logo192\.png|logo512\.png|images/(?:stylish/)?birdr-[\w.-]+\.(?:png|gif|svg)))$',
         serve_static,
         {'document_root': str(_public)},
     ),

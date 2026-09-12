@@ -48,10 +48,11 @@
         <tbody>
             {% for row in leaderboard %}
                 <tr>
-                    <td class="num">{{ forloop.counter }}</td>
+                    <td class="num">{% ifchanged row.rank %}{{ row.rank }}{% endifchanged %}</td>
                     <td>{{ row.player_name }}</td>
                     <td><strong>{{ row.country_code }}</strong> · {{ row.country_name }}</td>
                     <td>
+                        {% ifchanged row.rank %}
                         <div class="level-cell">
                             {% if row.level_icon_url %}
                                 <img class="level-icon" src="{{ row.level_icon_url }}" alt="" loading="lazy">
@@ -60,13 +61,16 @@
                             {% endif %}
                             <span class="level-title">{{ row.level_title }}</span>
                         </div>
+                        {% endifchanged %}
                     </td>
                     <td>
-                        {% if row.step_total %}
-                            {{ row.step_label }} / {{ row.step_total }}
-                        {% else %}
-                            {{ row.step_label }}
-                        {% endif %}
+                        {% ifchanged row.rank %}
+                            {% if row.step_total %}
+                                {{ row.step_label }} / {{ row.step_total }}
+                            {% else %}
+                                {{ row.step_label }}
+                            {% endif %}
+                        {% endifchanged %}
                     </td>
                 </tr>
             {% empty %}

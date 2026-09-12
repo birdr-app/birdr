@@ -29,24 +29,43 @@ type UpdatesResponse = {
   results: UpdateListItem[];
 };
 
-export async function loadUpdates(playerToken?: string): Promise<UpdateListItem[]> {
-  const query = playerToken ? `?player_token=${encodeURIComponent(playerToken)}` : '';
+function updatesQuery(playerToken?: string, language?: string): string {
+  const params = new URLSearchParams();
+  if (playerToken) params.set('player_token', playerToken);
+  if (language) {
+    params.set('app_language', language);
+    params.set('language', language);
+  }
+  const query = params.toString();
+  return query ? `?${query}` : '';
+}
+
+function withLanguage(headers: HeadersInit, language?: string): Record<string, string> {
+  const next: Record<string, string> = { ...(headers as Record<string, string>), Accept: 'application/json' };
+  if (language) next['Accept-Language'] = language;
+  return next;
+}
+
+export async function loadUpdates(playerToken?: string, language?: string): Promise<UpdateListItem[]> {
   const headers = await getAuthHeaders();
-  const response = await fetch(apiUrl(`/api/updates/${query}`), {
+  const response = await fetch(apiUrl(`/api/updates/${updatesQuery(playerToken, language)}`), {
     method: 'GET',
-    headers: { ...(headers as Record<string, string>), Accept: 'application/json' },
+    headers: withLanguage(headers, language),
   });
   if (!response.ok) return [];
   const data: UpdatesResponse = await response.json();
   return data.results ?? [];
 }
 
-export async function loadUpdateDetail(id: number, playerToken?: string): Promise<UpdateDetail | null> {
-  const query = playerToken ? `?player_token=${encodeURIComponent(playerToken)}` : '';
+export async function loadUpdateDetail(
+  id: number,
+  playerToken?: string,
+  language?: string,
+): Promise<UpdateDetail | null> {
   const headers = await getAuthHeaders();
-  const response = await fetch(apiUrl(`/api/updates/${id}/${query}`), {
+  const response = await fetch(apiUrl(`/api/updates/${id}/${updatesQuery(playerToken, language)}`), {
     method: 'GET',
-    headers: { ...(headers as Record<string, string>), Accept: 'application/json' },
+    headers: withLanguage(headers, language),
   });
   if (!response.ok) return null;
   return response.json();

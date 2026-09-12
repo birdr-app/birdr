@@ -118,12 +118,13 @@
     </style>
 </head>
 <body>
-    <div class="email-container">
-        <div class="email-header">
-            {% if logo_url %}
-            <img src="{{ logo_url }}" alt="Birdr" class="logo" style="max-width:150px;height:auto;" />
-            {% else %}
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 789 788" width="150" height="150" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" class="logo">
+        <div class="email-container">
+            {% block email_header %}
+            <div class="email-header">
+                {% if logo_url %}
+                <img src="{{ logo_url }}" alt="Birdr" class="logo" style="max-width:150px;height:auto;" />
+                {% else %}
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 789 788" width="150" height="150" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" class="logo">
                 <g><path style="opacity:1" fill="#000000" d="M 356.5,-0.5 C 381.167,-0.5 405.833,-0.5 430.5,-0.5C 544.996,12.8454 637.829,65.1787 709,156.5C 759.853,226.29 786.353,304.624 788.5,391.5C 788.5,393.833 788.5,396.167 788.5,398.5C 783.349,526.972 730.349,630.805 629.5,710C 569.275,753.93 501.941,779.763 427.5,787.5C 404.5,787.5 381.5,787.5 358.5,787.5C 227.374,771.848 126.208,708.515 55,597.5C 23.959,544.03 5.459,486.363 -0.5,424.5C -0.5,401.833 -0.5,379.167 -0.5,356.5C 13.211,240.562 66.211,147.062 158.5,76C 217.68,33.1024 283.68,7.6024 356.5,-0.5 Z"/></g>
                 <g><path style="opacity:1" fill="#fefefe" d="M 390.5,18.5 C 516.285,21.1148 617.785,71.7815 695,170.5C 769.04,276.089 787.04,390.755 749,514.5C 714.388,609.125 652.555,680.292 563.5,728C 455.317,779.807 345.984,781.807 235.5,734C 124.882,679.394 55.0483,592.227 26,472.5C 4.20641,359.115 27.5397,256.448 96,164.5C 171.831,71.1459 269.998,22.4793 390.5,18.5 Z"/></g>
                 <g><path style="opacity:1" fill="#d8b165" d="M 380.5,50.5 C 421.374,49.2757 461.374,54.4424 500.5,66C 442.076,76.4334 400.576,108.6 376,162.5C 356.527,217.236 363.694,268.07 397.5,315C 397,315.5 396.5,316 396,316.5C 345.144,274.802 286.978,259.302 221.5,270C 158.74,282.632 109.907,315.799 75,369.5C 103.086,279.881 162.586,223.381 253.5,200C 283.828,193.795 314.495,190.795 345.5,191C 347.27,186.663 348.604,182.163 349.5,177.5C 287.902,171.292 229.902,183.458 175.5,214C 170.672,217.581 165.672,220.915 160.5,224C 142.485,223.237 124.485,221.904 106.5,220C 105.376,219.751 104.376,219.251 103.5,218.5C 167.553,116.289 259.886,60.2892 380.5,50.5 Z"/></g>
@@ -134,6 +135,7 @@
             </svg>
             {% endif %}
         </div>
+        {% endblock %}
         <div class="email-body">
             <div class="email-content">
                 {% block content %}{% endblock %}

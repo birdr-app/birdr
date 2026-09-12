@@ -1,0 +1,22 @@
+{% extends "marketing/base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>{{ heading }}</h1>
+  <p class="lead">{{ lead }}</p>
+  <p>
+    {% with app_href=home_url|add:'#get-the-app' %}
+    {% mt "Free on <a href=\"{app}\">iPhone and Android</a>, or play in the browser at <a href=\"https://birdr.pro/play\">birdr.pro/play</a>." app=app_href %}
+    {% endwith %}
+  </p>
+</section>
+{% include "marketing/_newsletter_example.html" %}
+{% if related_links %}
+<section>
+  <p>
+    {% for href, label in related_links %}
+    <a href="{{ href|mpath }}">{{ label }}</a>{% if not forloop.last %} · {% endif %}
+    {% endfor %}
+  </p>
+</section>
+{% endif %}
+{% endblock %}

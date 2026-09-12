@@ -7,12 +7,50 @@ When the app sends a non-HTTPS redirect_uri for apple-id, we store it as the app
 callback and use our HTTPS completion URL as the redirect_uri sent to Apple.
 """
 
+from django.http import HttpResponsePermanentRedirect
 from django.utils.deprecation import MiddlewareMixin
 
 from jizz.api_event_labels import resolve_api_event_label
-from jizz.usage_analytics import record_usage_event
+from jizz.marketing.i18n import (
+    DEFAULT_LOCALE,
+    parse_locale_prefix,
+    reset_locale,
+    set_locale,
+)
+from jizz.usage_analytics import is_crawler_user_agent, record_usage_event
 
-_SERVER_RENDERED_PREFIXES = ('/data/', '/country/', '/staff/')
+_SERVER_RENDERED_PREFIXES = ('/data/', '/country/', '/staff/', '/site/')
+
+
+class MarketingLocaleMiddleware:
+    """Serve /{locale}/site/... as /site/... and activate that marketing locale."""
+
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        path = request.path_info or ''
+        locale, remainder = parse_locale_prefix(path)
+        query = request.META.get('QUERY_STRING')
+        suffix = f'?{query}' if query else ''
+
+        if remainder is not None and path.startswith('/en'):
+            return HttpResponsePermanentRedirect(remainder + suffix)
+        if remainder is not None and locale != DEFAULT_LOCALE and not path.startswith(f'/{locale}/site'):
+            from jizz.marketing.i18n import localize_path
+            return HttpResponsePermanentRedirect(localize_path('/site/', locale) + suffix)
+
+        token = set_locale(locale)
+        request.marketing_locale = locale
+        if remainder is not None:
+            request.path_info = remainder
+        try:
+            response = self.get_response(request)
+            if remainder is not None or path.startswith('/site/'):
+                response.setdefault('Content-Language', locale or DEFAULT_LOCALE)
+            return response
+        finally:
+            reset_locale(token)
 
 
 class SocialAuthRedirectUriMiddleware:
@@ -67,6 +105,8 @@ class UsageAnalyticsMiddleware(MiddlewareMixin):
         if any(path.startswith(prefix) for prefix in self.SKIP_PREFIXES):
             return response
         if not any(path.startswith(prefix) for prefix in _SERVER_RENDERED_PREFIXES):
+            return response
+        if path.startswith('/site/') and is_crawler_user_agent(request.META.get('HTTP_USER_AGENT')):
             return response
 
         try:

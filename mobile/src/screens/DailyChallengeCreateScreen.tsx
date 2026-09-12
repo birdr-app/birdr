@@ -111,6 +111,9 @@ export function DailyChallengeCreateScreen() {
             <Text style={[styles.mediaChipText, media === opt.value && styles.mediaChipTextSelected]}>
               {opt.label}
             </Text>
+            {opt.value === 'video' ? (
+              <Text style={[styles.betaBadge, media === opt.value && styles.betaBadgeSelected]}>Beta</Text>
+            ) : null}
           </TouchableOpacity>
         ))}
       </View>
@@ -166,6 +169,9 @@ const styles = StyleSheet.create({
   countrySelect: { marginBottom: 8 },
   mediaRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   mediaChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
     borderWidth: 1,
     borderColor: colors.primary[300],
     borderRadius: 20,
@@ -175,6 +181,22 @@ const styles = StyleSheet.create({
   mediaChipSelected: { backgroundColor: colors.primary[500], borderColor: colors.primary[500] },
   mediaChipText: { fontSize: 14, color: colors.primary[800] },
   mediaChipTextSelected: { color: colors.primary[50], fontWeight: '600' },
+  betaBadge: {
+    fontSize: 9,
+    fontWeight: '700',
+    letterSpacing: 0.5,
+    textTransform: 'uppercase',
+    color: colors.primary[600],
+    backgroundColor: colors.primary[50],
+    paddingHorizontal: 5,
+    paddingVertical: 1,
+    borderRadius: 4,
+    overflow: 'hidden',
+  },
+  betaBadgeSelected: {
+    color: colors.primary[50],
+    backgroundColor: colors.primary[700],
+  },
   input: {
     borderWidth: 1,
     borderColor: colors.primary[300],
