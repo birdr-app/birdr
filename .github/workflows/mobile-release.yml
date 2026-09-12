@@ -1,20 +1,29 @@
-# Google Play release — the Android counterpart to the Xcode Cloud workflow that
-# ships iOS builds to App Store Connect.
+# Mobile release — the repo-side half of shipping Birdr.
+#
+# Xcode Cloud builds and uploads the iOS binary on its own; everything else lives
+# here: the Android AAB and its Play upload, plus the "What's New" text for BOTH
+# stores (Xcode Cloud cannot set release notes, only the App Store Connect API can).
+# The two store jobs are independent, so a credential problem on one does not
+# block the other.
 #
 # Xcode Cloud builds on every push to main and App Store Connect rejects a build
 # number it has already seen. Play behaves the same way with versionCode, but a
 # rejected upload here fails the job, so this workflow only uploads when
 # mobile/app.json's expo.buildNumber actually changed in the push.
 #
+# Builds land on the Play **internal testing** track, never straight to production:
+# promoting internal -> open testing -> production stays a human decision in Play
+# Console, mirroring how Xcode Cloud drops iOS builds into TestFlight for review.
+#
 # One-time setup (repo secrets): see mobile/README.md → "Automated Google Play releases".
-name: Android Play release
+name: Mobile release
 
 on:
   push:
     branches: [main]
     paths:
       - 'mobile/**'
-      - '.github/workflows/android-play-release.yml'
+      - '.github/workflows/mobile-release.yml'
   workflow_dispatch:
     inputs:
       track:
@@ -22,11 +31,11 @@ on:
         required: true
         type: choice
         options:
-          - production
+          - internal
           - beta
           - alpha
-          - internal
-        default: production
+          - production
+        default: internal
       status:
         description: Release status (completed = live at 100%, inProgress = staged rollout)
         required: true
@@ -44,7 +53,7 @@ on:
         default: '0.1'
 
 concurrency:
-  group: android-play-release
+  group: mobile-release
   cancel-in-progress: false
 
 env:
@@ -106,7 +115,7 @@ jobs:
             echo "should-release=true" >> "$GITHUB_OUTPUT"
           fi
 
-  release:
+  play-release:
     needs: check-version
     if: needs.check-version.outputs.should-release == 'true'
     runs-on: ubuntu-latest
@@ -132,6 +141,24 @@ jobs:
             echo "See mobile/README.md → 'Automated Google Play releases' for how to create them." >&2
             exit 1
           fi
+
+      - name: Check release notes fit Play's limit
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          files=(mobile/release-notes/whatsnew-*)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No mobile/release-notes/whatsnew-* files found." >&2
+            exit 1
+          fi
+          bad=0
+          for f in "${files[@]}"; do
+            # Play counts characters, not bytes; ja/pt text is multibyte.
+            n=$(node -p "require('fs').readFileSync('$f','utf8').trim().length")
+            printf '  %-40s %4s chars\n' "$f" "$n"
+            [ "$n" -le 500 ] || { echo "    ^ over Play's 500-character limit" >&2; bad=1; }
+          done
+          [ "$bad" -eq 0 ] || exit 1
 
       - name: Set up Node
         uses: actions/setup-node@v5
@@ -207,7 +234,8 @@ jobs:
           packageName: ${{ env.PLAY_PACKAGE_NAME }}
           releaseFiles: mobile/android/app/build/outputs/bundle/release/app-release.aab
           mappingFile: mobile/android/app/build/outputs/mapping/release/mapping.txt
-          track: ${{ inputs.track || 'production' }}
+          whatsNewDirectory: mobile/release-notes
+          track: ${{ inputs.track || 'internal' }}
           status: ${{ inputs.status || 'completed' }}
           userFraction: ${{ (inputs.status == 'inProgress' && inputs.user_fraction) || '' }}
 
@@ -217,6 +245,60 @@ jobs:
             echo "### Google Play release"
             echo
             echo "- **Version:** ${{ needs.check-version.outputs.version }} (versionCode ${{ needs.check-version.outputs.version-code }})"
-            echo "- **Track:** ${{ inputs.track || 'production' }}"
+            echo "- **Track:** ${{ inputs.track || 'internal' }}"
             echo "- **Status:** ${{ inputs.status || 'completed' }}"
           } >> "$GITHUB_STEP_SUMMARY"
+
+  # Xcode Cloud uploads the iOS binary but cannot touch release notes; those live
+  # on the App Store version record and only the ASC API can set them. Runs
+  # independently of the Play job so one store's credentials cannot block the other.
+  appstore-notes:
+    needs: check-version
+    if: needs.check-version.outputs.should-release == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Verify App Store Connect secrets are configured
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          missing=()
+          for name in ASC_KEY_ID ASC_ISSUER_ID ASC_PRIVATE_KEY; do
+            [ -n "${!name:-}" ] || missing+=("$name")
+          done
+          if [ ${#missing[@]} -gt 0 ]; then
+            echo "Missing repo secrets: ${missing[*]}" >&2
+            echo "See mobile/README.md → 'Release notes' for how to create them." >&2
+            exit 1
+          fi
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      # Apple only accepts notes once a version record exists, which appears when
+      # Xcode Cloud finishes uploading. Retry rather than fail the release outright.
+      - name: Set "What's New" on App Store Connect
+        working-directory: mobile
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            if node scripts/set-appstore-release-notes.cjs; then
+              exit 0
+            fi
+            echo "Attempt $attempt failed; the version record may not exist yet. Waiting 3 minutes."
+            sleep 180
+          done
+          echo "Could not set release notes after 30 minutes." >&2
+          echo "Set them by hand in App Store Connect, or re-run this job once the build lands." >&2
+          exit 1

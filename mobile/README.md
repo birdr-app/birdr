@@ -118,9 +118,9 @@ Tests live in `mobile/android/app/src/androidTest/kotlin/pro/birdr/app/CountryCh
 ## Automated Google Play releases
 
 The Android counterpart to the **Xcode Cloud** workflow that ships iOS builds to App Store
-Connect. `.github/workflows/android-play-release.yml` runs on `ubuntu-latest`, builds the
-release AAB with Gradle from the committed `android/` directory, and publishes it to Google
-Play — no Mac minutes, no EAS involved.
+Connect. `.github/workflows/mobile-release.yml` runs on `ubuntu-latest`, builds the
+release AAB with Gradle from the committed `android/` directory, publishes it to Google
+Play, and sets the "What's New" text on **both** stores — no Mac minutes, no EAS involved.
 
 ### When it runs
 
@@ -129,9 +129,10 @@ On every push to `main` that touches `mobile/**` (the same shape as the Xcode Cl
 Play rejects a `versionCode` it has already seen, so a push without a release bump would fail
 the job; instead it logs why it skipped and exits green. `workflow_dispatch` always uploads.
 
-By default the release goes to the **production** track with status `completed` — live to 100%
-of users, no button to press. Run it manually to pick a different track, a `draft` release, or
-a staged `inProgress` rollout with a user fraction.
+Builds land on the **internal testing** track, never straight to production. You check them,
+then promote internal → open testing → production in Play Console — the same shape as iOS,
+where Xcode Cloud drops the build into TestFlight and you submit it yourself. Run the workflow
+manually to pick another track, a `draft` release, or a staged `inProgress` rollout.
 
 ### One-time setup
 
@@ -158,6 +159,70 @@ a staged `inProgress` rollout with a user fraction.
 
    The workflow checks all five up front and fails with the missing names rather than dying
    halfway through a Gradle build.
+
+### Local build and upload (the fast route)
+
+CI rebuilds React Native's and Expo's native code from scratch every run, which is slow;
+locally Gradle reuses a warm cache. This builds the AAB and uploads it in one command, so a
+stale artifact from an earlier version cannot be what lands:
+
+```bash
+cd mobile
+npm run release:android                 # build + upload to the internal track
+npm run release:android -- --track beta # open testing
+npm run release:android -- --dry-run    # build, then stop before uploading
+```
+
+It refuses to upload an AAB that Gradle did not just rewrite, and aborts if the versionCode
+Play reports back does not match `app.json` — the two ways a wrong build reaches the store.
+Release notes and `mapping.txt` go up with it (`--no-mapping` skips the 77 MB upload).
+
+The signing key and the Play credential both stay on this machine. Put the service account
+JSON somewhere outside the repo:
+
+```bash
+mkdir -p ~/.config/birdr && mv ~/Downloads/jizz-birding-app-*.json ~/.config/birdr/play-service-account.json
+chmod 600 ~/.config/birdr/play-service-account.json
+```
+
+Or point `PLAY_SERVICE_ACCOUNT_JSON_PATH` at it. `npm run release:android:eas` still runs the
+old EAS cloud build if you ever need it.
+
+The **Mobile release** workflow does the same thing from a clean checkout and is the fallback
+for when you are away from this machine — it needs the keystore and Play secrets in GitHub,
+which the local route does not.
+
+### Release notes
+
+Store copy lives in `mobile/release-notes/whatsnew-<locale>`, one file per locale, rewritten
+each release. Eight locales are expected, matching `APP_LANGUAGES`:
+
+`en-US`, `nl-NL`, `es-ES`, `fr-FR`, `de-DE`, `it-IT`, `pt-BR`, `ja-JP`
+
+Play reads the directory directly. iOS is the awkward one: Xcode Cloud uploads the binary but
+cannot set release notes, so `scripts/set-appstore-release-notes.cjs` pushes them through the
+App Store Connect API instead, mapping each file onto the ASC locale (`it-IT` → `it`,
+`ja-JP` → `ja`). It only writes locales already present on the version's listing and skips the
+rest with a warning.
+
+Every file must stay under **500 characters** — Play's limit, counted in characters, which
+matters for Japanese and accented text. The workflow checks this and fails before building.
+
+**One-time setup for the iOS half** — App Store Connect → *Users and Access* → *Integrations* →
+*App Store Connect API* → generate a key with the **App Manager** role, download the `.p8`
+(single download, same as a Play key), and add three repo secrets:
+
+| Secret | Where to find it |
+| --- | --- |
+| `ASC_KEY_ID` | the key's ID, e.g. `2X9R4HXF34` |
+| `ASC_ISSUER_ID` | shown above the key list, a UUID |
+| `ASC_PRIVATE_KEY` | full contents of the `.p8`, `BEGIN`/`END` lines included |
+
+To check a release's notes without shipping anything:
+
+```bash
+cd mobile && node scripts/set-appstore-release-notes.cjs --dry-run
+```
 
 ### Shipping a release
 
