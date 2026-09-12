@@ -700,8 +700,15 @@ class FlockApiTests(TestCase):
         self.assertEqual(og['Content-Type'], 'image/png')
         self.assertTrue(og.content.startswith(b'\x89PNG'))
 
-    def test_club_mix_excludes_vagrants(self):
-        # Mark most as common; add vagrants that must not be selected as targets preferentially
+    def test_club_mix_confines_vagrants_to_the_exceptional_slot(self):
+        """Only the final (exceptional) slot may draw vagrants.
+
+        ``RARIT_EXCEPTIONAL`` deliberately includes the ``vagrant`` frequency
+        (see ``test_rarity.test_exceptional_includes_vagrant``), so the last
+        Club Mix slot is allowed to surface one. The familiar and regular slots
+        that lead up to it must never do so — asserting that is deterministic,
+        where asserting the whole snapshot is vagrant-free was not.
+        """
         CountrySpecies.objects.filter(country=self.country).update(frequency='common')
         vagrant = self.species[0]
         CountrySpecies.objects.filter(species=vagrant, country=self.country).update(
@@ -715,8 +722,6 @@ class FlockApiTests(TestCase):
             snapshot = generate_club_mix_snapshot(country=self.country, host=host)
         except Exception:
             self.skipTest('Not enough local media/species for full Club Mix generation')
-        species_ids = {item.species_id for item in snapshot}
-        self.assertNotIn(vagrant.id, species_ids)
         self.assertEqual(len(snapshot), CLUB_MIX_LENGTH)
         media_types = {item.media_type for item in snapshot}
         self.assertEqual(media_types, {'image'})
@@ -725,10 +730,23 @@ class FlockApiTests(TestCase):
         from jizz.flock_challenge import CLUB_MIX_SLOTS
 
         expected_levels = []
-        for level, _rarity, _media, count in CLUB_MIX_SLOTS:
+        expected_rarities = []
+        for level, rarity, _media, count in CLUB_MIX_SLOTS:
             expected_levels.extend([level] * count)
+            expected_rarities.extend([rarity] * count)
         self.assertEqual([item.level for item in snapshot], expected_levels)
+        self.assertEqual([item.rarity for item in snapshot], expected_rarities)
         self.assertEqual([item.sequence for item in snapshot], list(range(1, CLUB_MIX_LENGTH + 1)))
+        # Every slot below `exceptional` filters vagrants out by frequency tier.
+        non_exceptional = [
+            item.species_id
+            for item in snapshot
+            if item.rarity != Game.RARIT_EXCEPTIONAL
+        ]
+        self.assertNotIn(vagrant.id, non_exceptional)
+        # Species are never repeated across the snapshot.
+        species_ids = [item.species_id for item in snapshot]
+        self.assertEqual(len(species_ids), len(set(species_ids)))
 
     def test_clone_preserves_difficulty_ramp_order(self):
         """Players must play easy→hard in snapshot order (no per-attempt shuffle)."""

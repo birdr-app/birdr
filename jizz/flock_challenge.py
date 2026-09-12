@@ -26,8 +26,9 @@ from jizz.question_play import fetch_eligible_media_for_species
 from media.models import Media
 
 # Club Mix: difficulty ramps in fixed play order (never shuffled after snapshot).
-# Beginner/Novice → beginner+familiar; Advanced → advanced+regular;
-# Pro → expert+regular (no vagrants/extreme). Photos only (no audio).
+# beginner+familiar → advanced+regular → advanced+exceptional. Photos only (no audio).
+# The closing exceptional slot opens the full frequency tier, vagrants included
+# (see Game.RARIT_FREQUENCY_TIERS); the two slots before it cannot surface one.
 CLUB_MIX_SLOTS: list[tuple[str, str, str, int]] = [
     # (level, rarity, game_media, count) — sequence order = play order
     ('beginner', Game.RARIT_FAMILIAR, 'images', 5),
