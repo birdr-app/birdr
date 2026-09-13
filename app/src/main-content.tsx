@@ -1,5 +1,5 @@
 import * as React from "react"
-import {useContext, useEffect} from "react"
+import {useContext, useEffect, useState} from "react"
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import { Layout } from "./shared/components/layout";
 import HomePage from "./pages/home";
@@ -9,13 +9,7 @@ import {AboutPage} from "./pages/about";
 import {IntlProvider} from "react-intl";
 
 import enMessages from './locales/en.json';
-import nlMessages from './locales/nl.json';
-import esMessages from './locales/es.json';
-import frMessages from './locales/fr.json';
-import deMessages from './locales/de.json';
-import itMessages from './locales/it.json';
-import ptBRMessages from './locales/pt-BR.json';
-import jaMessages from './locales/ja.json';
+
 import MultiPlayerGame from "./pages/mpg/multi-player-game"
 import AppContext from "./core/app-context"
 import StartPage from "./pages/start"
@@ -64,6 +58,22 @@ import { FlockLeaderboardPage } from "./pages/flocks/leaderboard"
 import { FlockInviteLandingPage } from "./pages/flocks/invite-landing"
 import { FlockResultPage } from "./pages/flocks/result"
 import { GameShareResultPage } from "./pages/game-share-result"
+
+type Catalog = Record<string, string>;
+
+// English stays in the main bundle: every other locale is merged on top of it as
+// the fallback for untranslated keys, so it is needed whatever the user picks.
+// The other seven are ~217 KB of JSON that no single user ever reads, so they are
+// fetched on demand instead of shipped to everyone.
+const catalogLoaders: Record<string, () => Promise<{ default: Catalog }>> = {
+  nl: () => import('./locales/nl.json'),
+  es: () => import('./locales/es.json'),
+  fr: () => import('./locales/fr.json'),
+  de: () => import('./locales/de.json'),
+  it: () => import('./locales/it.json'),
+  'pt-BR': () => import('./locales/pt-BR.json'),
+  ja: () => import('./locales/ja.json'),
+};
 export const MainContent = () => {
   useEffect(() => {
     document.title = "Birdr"
@@ -71,21 +81,43 @@ export const MainContent = () => {
   }, []);
   const {appLanguage} = useContext(AppContext)
 
-  const catalogs: Record<string, Record<string, string>> = {
-    en: enMessages,
-    nl: nlMessages,
-    es: esMessages,
-    fr: frMessages,
-    de: deMessages,
-    it: itMessages,
-    'pt-BR': ptBRMessages,
-    ja: jaMessages,
-  }
-  const locale = appLanguage && catalogs[appLanguage] ? appLanguage : 'en';
-  const messages = { ...enMessages, ...(catalogs[locale] || {}) };
+  const locale =
+    appLanguage && (appLanguage === 'en' || catalogLoaders[appLanguage]) ? appLanguage : 'en';
+
+  // Holds the locale the catalog belongs to, so IntlProvider is never handed a
+  // locale whose messages have not arrived yet. `null` only on the first render
+  // for a non-English user; after that the previous catalog stays up while the
+  // next one loads, so switching language never unmounts the router.
+  const [active, setActive] = useState<{ locale: string; catalog: Catalog } | null>(
+    locale === 'en' ? { locale: 'en', catalog: {} } : null
+  );
+
+  useEffect(() => {
+    if (locale === 'en') {
+      setActive({ locale: 'en', catalog: {} });
+      return;
+    }
+    let cancelled = false;
+    catalogLoaders[locale]()
+      .then((m) => {
+        if (!cancelled) setActive({ locale, catalog: m.default });
+      })
+      .catch(() => {
+        // A missing chunk (offline, or a deploy that rotated the hash) must not
+        // white-screen the app — fall back to the English already in this bundle.
+        if (!cancelled) setActive({ locale: 'en', catalog: {} });
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [locale]);
+
+  if (!active) return null;
+
+  const messages = { ...enMessages, ...active.catalog };
 
   return (
-    <IntlProvider locale={locale} defaultLocale="en" messages={messages}>
+    <IntlProvider locale={active.locale} defaultLocale="en" messages={messages}>
       <BrowserRouter>
         <AnalyticsTracker />
         <Routes>
