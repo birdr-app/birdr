@@ -10,6 +10,7 @@ import {
 import { useFocusEffect, useRoute, RouteProp, useNavigation } from '@react-navigation/native';
 import {
   getBirdrJourney,
+  hasPlayableStep,
   startBirdrJourney,
   type BirdrJourney,
   type JourneyLevel,
@@ -165,7 +166,7 @@ export function BirdrJourneyProgressScreen() {
           currentLevel={currentLevel}
           nextLevel={journey.next_level}
           onStepPress={handleStepPress}
-          canPlay={journey.can_play_today}
+          canPlay={hasPlayableStep(journey)}
         />
       </View>
     </ScrollView>

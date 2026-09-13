@@ -100,7 +100,10 @@ export type BirdrJourney = {
   current_step_sequence: number;
   streak_days: number;
   last_played_date: string | null;
-  can_play_today: boolean;
+  /** An active step exists that can be started now. */
+  has_playable_step?: boolean;
+  /** @deprecated Renamed to `has_playable_step`; never was a daily cap. */
+  can_play_today?: boolean;
   is_champion: boolean;
   pending_level_celebration: boolean;
   current_level: JourneyLevel | null;
@@ -110,6 +113,20 @@ export type BirdrJourney = {
   created: string;
   updated: string;
 };
+
+/**
+ * Whether an active step can be started right now.
+ *
+ * Reads the canonical `has_playable_step`, falling back to the deprecated
+ * `can_play_today` alias so the client keeps working against a backend that has
+ * not been deployed yet. Defaults to `true` when neither is present: letting a
+ * step stay tappable is a softer failure than locking the player out.
+ */
+export function hasPlayableStep(
+  journey: Pick<BirdrJourney, 'has_playable_step' | 'can_play_today'>
+): boolean {
+  return journey.has_playable_step ?? journey.can_play_today ?? true;
+}
 
 export type StartStepResponse = {
   journey: BirdrJourney;

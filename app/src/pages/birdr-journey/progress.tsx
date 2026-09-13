@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { useNavigate, useParams } from 'react-router-dom';
 import {
   getBirdrJourney,
+  hasPlayableStep,
   levelTitle,
   startBirdrJourney,
   type BirdrJourney,
@@ -162,7 +163,7 @@ export function BirdrJourneyProgressPage() {
           currentLevel={currentLevel}
           nextLevel={journey.next_level}
           onStepPress={handleStepPress}
-          canPlay={journey.can_play_today}
+          canPlay={hasPlayableStep(journey)}
         />
       </Page.Body>
     </Page>

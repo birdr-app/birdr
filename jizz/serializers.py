@@ -1870,6 +1870,7 @@ class BirdrJourneySerializer(serializers.ModelSerializer):
     active_step = serializers.SerializerMethodField()
     is_champion = serializers.SerializerMethodField()
     pending_level_celebration = serializers.SerializerMethodField()
+    has_playable_step = serializers.SerializerMethodField()
     can_play_today = serializers.SerializerMethodField()
     current_game = serializers.SerializerMethodField()
 
@@ -1883,6 +1884,7 @@ class BirdrJourneySerializer(serializers.ModelSerializer):
             'current_step_sequence',
             'streak_days',
             'last_played_date',
+            'has_playable_step',
             'can_play_today',
             'is_champion',
             'pending_level_celebration',
@@ -1973,7 +1975,15 @@ class BirdrJourneySerializer(serializers.ModelSerializer):
 
         return is_pending_level_celebration(obj)
 
-    def get_can_play_today(self, obj):
+    def get_has_playable_step(self, obj):
+        """Whether an active step exists that the player can start right now.
+
+        Despite the name of the `can_play_today` alias below, this has never been a
+        daily cap — there is no limit on how often a step may be replayed, and
+        `start-step` deliberately starts a fresh game after a failed attempt. It is
+        false only while a level celebration is owed, once the journey reaches the
+        champion level, or when the level has no step left to play.
+        """
         from jizz.birdr_journey_views import get_active_journey_step, is_pending_level_celebration
 
         if is_pending_level_celebration(obj):
@@ -1982,6 +1992,14 @@ class BirdrJourneySerializer(serializers.ModelSerializer):
         if not level or level.is_champion:
             return False
         return get_active_journey_step(obj) is not None
+
+    def get_can_play_today(self, obj):
+        """Deprecated alias of `has_playable_step`, kept for builds already shipped.
+
+        The name implied a once-a-day limit that the implementation never had.
+        Remove once no supported client reads it (see APP_MIN_VERSION).
+        """
+        return self.get_has_playable_step(obj)
 
     def get_current_game(self, obj):
         from jizz.birdr_journey_views import get_current_journey_game, get_journey_game_by_token
