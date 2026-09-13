@@ -23,6 +23,7 @@ const notesDir = path.join(root, 'release-notes');
 // Play uses full language-region tags; App Store Connect uses bare codes for some.
 const ASC_LOCALE = {
   'en-US': 'en-US',
+  'en-GB': 'en-GB',
   'nl-NL': 'nl-NL',
   'es-ES': 'es-ES',
   'fr-FR': 'fr-FR',
@@ -119,9 +120,13 @@ function readNotes() {
 
 async function main() {
   const dryRun = process.argv.includes('--dry-run');
-  const version = JSON.parse(
-    fs.readFileSync(path.join(root, 'app.json'), 'utf8')
-  ).expo.version;
+  // App Store versions are named after the release bird, not numbered: the
+  // listing reads "Upland Goose", never "1.106.0". Looking up by expo.version
+  // never matched, so this always reported a missing version record. Play is the
+  // one that wants the number; iOS wants the codename.
+  const expo = JSON.parse(fs.readFileSync(path.join(root, 'app.json'), 'utf8')).expo;
+  const version = expo.releaseCodename;
+  if (!version) fail('app.json has no expo.releaseCodename to match an App Store version');
   const notes = readNotes();
   const jwt = token();
 
@@ -137,8 +142,9 @@ async function main() {
   const target = versions.data?.find((v) => v.attributes.versionString === version);
   if (!target) {
     fail(
-      `App Store Connect has no ${version} version record yet — it appears once ` +
-        'Xcode Cloud uploads a build for it, or you can add it by hand. Re-run then.'
+      `App Store Connect has no version named "${version}" yet — versions are named ` +
+        'after the release bird. It appears once Xcode Cloud uploads a build, or you ' +
+        'can add it by hand under that exact name. Re-run then.'
     );
   }
   const state = target.attributes.appStoreState;
