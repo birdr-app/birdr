@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import {
   View,
   Text,
@@ -13,6 +13,7 @@ import {
   startJourneyStep,
   getStoredBirdrJourneyPlayerToken,
   type BirdrJourney,
+  type CompleteStepResponse,
 } from '../api/birdrJourney';
 import { setStoredChallengePlayerToken } from '../api/challenge';
 import { BirdrMoodHero } from '../components/BirdrMoodHero';
@@ -24,6 +25,13 @@ type RouteParams = {
     journeyId: number;
     countryCode: string;
     gameToken: string;
+    /**
+     * Outcome the previous screen already resolved from the server. When present
+     * the result is rendered straight away: `/complete-step/` writes nothing for a
+     * failed step (it only advances the sequence when the status is `passed`), so
+     * waiting on it just to learn what we already know shows a spinner for nothing.
+     */
+    knownStatus?: 'passed' | 'failed';
   };
 };
 
@@ -31,51 +39,71 @@ export function BirdrJourneyStepResultsScreen() {
   const navigation = useNavigation();
   const { t } = useTranslation();
   const route = useRoute<RouteProp<RouteParams, 'BirdrJourneyStepResults'>>();
-  const { journeyId, countryCode, gameToken } = route.params;
-  const [loading, setLoading] = useState(true);
+  const { journeyId, countryCode, gameToken, knownStatus } = route.params;
+  const [loading, setLoading] = useState(!knownStatus);
   const [error, setError] = useState<string | null>(null);
-  const [passed, setPassed] = useState(false);
+  const [passed, setPassed] = useState(knownStatus === 'passed');
   const [levelComplete, setLevelComplete] = useState(false);
   const [syncedJourney, setSyncedJourney] = useState<BirdrJourney | null>(null);
   const [retrying, setRetrying] = useState(false);
+  const [continuing, setContinuing] = useState(false);
+  /**
+   * The in-flight finalise call. Continue awaits it rather than the screen doing
+   * so, which keeps the outcome on screen while the sync settles behind it.
+   */
+  const finaliseRef = useRef<Promise<CompleteStepResponse | null> | null>(null);
 
   useFocusEffect(
     useCallback(() => {
       let cancelled = false;
-      (async () => {
-        setLoading(true);
-        setError(null);
+      if (!knownStatus) setLoading(true);
+      setError(null);
+      // Always finalise: the passed path needs `level_complete` and the advanced
+      // journey. It just no longer gates the screen when the outcome is known.
+      const finalise = (async () => {
         try {
           let result = await completeJourneyStep(journeyId, gameToken);
-          if (
-            !cancelled
-            && (result.status === 'new' || result.status === 'running')
-            && gameToken
-          ) {
+          // One retry when the server still calls the step unfinished. The status is
+          // derived after a `refresh_from_db`, so a call racing the final answer's
+          // commit can read stale state. This only fires in that edge case — the
+          // normal path still costs a single request.
+          if (!cancelled && (result.status === 'new' || result.status === 'running') && gameToken) {
             result = await completeJourneyStep(journeyId, gameToken);
           }
-          if (cancelled) return;
-          if (result.status === 'new' || result.status === 'running') {
-            (navigation as any).replace('BirdrJourneyStepIntro', { journeyId, countryCode, gameToken });
-            return;
-          }
-          setSyncedJourney(result.journey);
-          setPassed(result.status === 'passed');
-          setLevelComplete(result.level_complete);
+          return result;
         } catch (e: unknown) {
           if (!cancelled) {
             setError(e instanceof Error ? e.message : t('failed_load'));
           }
-        } finally {
-          if (!cancelled) setLoading(false);
+          return null;
         }
       })();
+      finaliseRef.current = finalise;
+      void finalise.then((result) => {
+        if (cancelled) return;
+        setLoading(false);
+        if (!result) return;
+        if (result.status === 'new' || result.status === 'running') {
+          // The step is not actually over — the server is the authority even when
+          // the previous screen passed an outcome through.
+          (navigation as any).replace('BirdrJourneyStepIntro', { journeyId, countryCode, gameToken });
+          return;
+        }
+        setSyncedJourney(result.journey);
+        setPassed(result.status === 'passed');
+        setLevelComplete(result.level_complete);
+      });
       return () => { cancelled = true; };
-    }, [journeyId, gameToken, countryCode, navigation, t])
+    }, [journeyId, gameToken, countryCode, knownStatus, navigation, t])
   );
 
-  const handleContinue = () => {
-    if (levelComplete) {
+  const handleContinue = async () => {
+    // Resolves immediately once the background finalise has landed; only a player
+    // who taps within that window waits, and then only on the button.
+    setContinuing(true);
+    const result = await finaliseRef.current;
+    setContinuing(false);
+    if (result?.level_complete ?? levelComplete) {
       (navigation as any).replace('BirdrJourneyLevelCelebration', {
         journeyId,
         countryCode,
@@ -84,7 +112,7 @@ export function BirdrJourneyStepResultsScreen() {
     }
     (navigation as any).replace('BirdrJourneyProgress', {
       countryCode,
-      advancedJourney: syncedJourney ?? undefined,
+      advancedJourney: result?.journey ?? syncedJourney ?? undefined,
     });
   };
 
@@ -134,8 +162,17 @@ export function BirdrJourneyStepResultsScreen() {
               ? t('birdr_journey_level_complete_hint')
               : t('birdr_journey_step_complete_hint')}
           </Text>
-          <TouchableOpacity style={styles.primaryButton} onPress={handleContinue} testID="journey.continueTrail">
-            <Text style={styles.primaryButtonText}>{t('continue')}</Text>
+          <TouchableOpacity
+            style={[styles.primaryButton, continuing && styles.buttonDisabled]}
+            onPress={handleContinue}
+            disabled={continuing}
+            testID="journey.continueTrail"
+          >
+            {continuing ? (
+              <ActivityIndicator color={colors.primary[50]} />
+            ) : (
+              <Text style={styles.primaryButtonText}>{t('continue')}</Text>
+            )}
           </TouchableOpacity>
         </>
       ) : (

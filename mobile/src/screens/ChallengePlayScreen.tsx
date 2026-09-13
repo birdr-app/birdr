@@ -126,6 +126,9 @@ export function ChallengePlayScreen() {
   const [mediaIndex, setMediaIndex] = useState<number | null>(null);
   const [questionLoadError, setQuestionLoadError] = useState<string | null>(null);
   const [journeyStepFailed, setJourneyStepFailed] = useState(false);
+  // Read inside `fetchNextQuestion` without adding it to that callback's deps.
+  const journeyStepFailedRef = useRef(false);
+  journeyStepFailedRef.current = journeyStepFailed;
   const [timerExpired, setTimerExpired] = useState(false);
   const submittingRef = useRef(false);
   const questionFetchGenRef = useRef(0);
@@ -147,14 +150,23 @@ export function ChallengePlayScreen() {
     return null;
   }, [countryCode]);
 
-  const navigateJourneyResults = useCallback(() => {
-    if (!journeyId || !gameToken || !countryCode) return;
-    (navigation as any).replace('BirdrJourneyStepResults', {
-      journeyId,
-      countryCode,
-      gameToken,
-    });
-  }, [journeyId, gameToken, countryCode, navigation]);
+  /**
+   * Hand the results screen the outcome we already resolved. Without it that
+   * screen re-derives the same answer over a round trip and shows "calculating
+   * progress" while it does, which for a failed step calculates nothing.
+   */
+  const navigateJourneyResults = useCallback(
+    (knownStatus?: 'passed' | 'failed') => {
+      if (!journeyId || !gameToken || !countryCode) return;
+      (navigation as any).replace('BirdrJourneyStepResults', {
+        journeyId,
+        countryCode,
+        gameToken,
+        knownStatus,
+      });
+    },
+    [journeyId, gameToken, countryCode, navigation]
+  );
 
   const handleFeedbackComplete = useCallback(() => {
     setShowFeedback(false);
@@ -235,7 +247,7 @@ export function ChallengePlayScreen() {
       if (generation !== questionFetchGenRef.current) return;
       if (!q) {
         setLoadingNextQuestion(false);
-        navigateJourneyResults();
+        navigateJourneyResults(journeyStepFailedRef.current ? 'failed' : undefined);
         return;
       }
       if (isStalePlayQuestion(questionRef.current, q)) {
@@ -438,7 +450,7 @@ export function ChallengePlayScreen() {
       const currentGame =
         journey?.current_game?.game?.token === gameToken ? journey.current_game : null;
       if (currentGame?.status === 'failed' || currentGame?.status === 'passed') {
-        navigateJourneyResults();
+        navigateJourneyResults(currentGame.status);
       }
     } catch (_) {
       // Keep showing retry UI when journey state cannot be loaded.
@@ -723,7 +735,10 @@ export function ChallengePlayScreen() {
               showStepContinue ? (
                 <TouchableOpacity
                   style={styles.overlayActionButton}
-                  onPress={navigateJourneyResults}
+                  // Only `failed` is asserted here. A step that merely looks passed
+                  // may not be `ended` server-side yet, and celebrating a level then
+                  // bouncing back would be worse than the brief sync it replaces.
+                  onPress={() => navigateJourneyResults(journeyStepFailed ? 'failed' : undefined)}
                   testID="journeyPlay.viewResults"
                 >
                   <Text style={styles.primaryButtonText}>{t('continue')}</Text>

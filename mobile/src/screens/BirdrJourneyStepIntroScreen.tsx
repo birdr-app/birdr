@@ -35,6 +35,11 @@ type RouteParams = {
 
 function effectiveStatus(journeyGame: BirdrJourneyGame | null | undefined): string {
   if (!journeyGame) return 'new';
+  // Mirror the server's own rule (journey_game_step_status): jokers below zero is
+  // a failed step, whether or not `/complete-step/` has run to record it. Without
+  // this a spent game still reads as `running`, so "continue" drops the player
+  // into a play screen that fetches no question and bounces straight back out.
+  if (journeyGame.remaining_jokers < 0) return 'failed';
   const hasAnswers = (journeyGame.game?.scores?.[0]?.answers?.length ?? 0) > 0;
   if (journeyGame.status === 'running' && !hasAnswers) return 'new';
   return journeyGame.status;
@@ -82,6 +87,13 @@ export function BirdrJourneyStepIntroScreen() {
       : journey?.current_game;
   const step = journeyGame?.journey_step ?? journey?.active_step;
   const status = effectiveStatus(journeyGame ?? undefined);
+  /**
+   * A failed step is offered as a fresh start, not a post-mortem. The result was
+   * already shown when it happened, `start-step` creates a new game for a failed
+   * attempt, and there is no cap on replaying — so the briefing (length, media,
+   * jokers) is what a returning player actually needs.
+   */
+  const showStartBriefing = status === 'new' || status === 'failed';
 
   const handleStart = async () => {
     setStarting(true);
@@ -138,7 +150,7 @@ export function BirdrJourneyStepIntroScreen() {
         </View>
       ) : null}
 
-      {status === 'new' ? (
+      {showStartBriefing ? (
         <>
           {isFamilyJourneyStep(step) && step.resolved_family_name ? (
             <View style={styles.familyBlock}>
@@ -193,24 +205,6 @@ export function BirdrJourneyStepIntroScreen() {
             )}
           </TouchableOpacity>
         </>
-      ) : status === 'failed' ? (
-        <>
-          <BirdrMoodHero mood="stressed" />
-          <Text style={[styles.title, styles.failedTitle]}>{t('birdr_journey_step_failed')}</Text>
-          <Text style={styles.description}>{t('failed_message')}</Text>
-          <TouchableOpacity
-            style={[styles.primaryButton, starting && styles.buttonDisabled]}
-            onPress={handleStart}
-            disabled={starting}
-            testID="journey.retryStep"
-          >
-            {starting ? (
-              <ActivityIndicator color={colors.primary[50]} />
-            ) : (
-              <Text style={styles.primaryButtonText}>{t('restart_level')}</Text>
-            )}
-          </TouchableOpacity>
-        </>
       ) : status === 'passed' ? (
         <>
           <BirdrMoodHero mood="success" />
@@ -262,7 +256,6 @@ const styles = StyleSheet.create({
   errorBox: { backgroundColor: colors.error[50], padding: 12, borderRadius: 8, marginBottom: 16 },
   errorText: { fontSize: 14, color: colors.error[500] },
   title: { fontSize: 22, fontWeight: '700', color: colors.primary[800], marginBottom: 8, marginTop: 8, textAlign: 'center' },
-  failedTitle: { color: colors.error[500] },
   familyBlock: { marginBottom: 16 },
   familyTitle: { fontSize: 24, fontWeight: '700', color: colors.primary[800], marginBottom: 8 },
   familyDescription: { fontSize: 15, color: colors.primary[700], lineHeight: 22 },
