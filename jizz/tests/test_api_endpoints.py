@@ -465,6 +465,38 @@ class ApiQuestionAnswerTestCase(TestCase):
         )
         self.assertIn(response.status_code, (status.HTTP_201_CREATED, status.HTTP_200_OK))
 
+    def test_answer_create_uses_game_language_for_species_names(self):
+        lang_nl, _ = Language.objects.get_or_create(code='nl', defaults={'name': 'Dutch'})
+        correct = Species.objects.create(name='Paddyfield Warbler', name_latin='A. agricola', code='PADW')
+        wrong = Species.objects.create(name='Common Reed Warbler', name_latin='A. scirpaceus', code='CORW')
+        for sp in (correct, wrong):
+            CountrySpecies.objects.create(country=self.country, species=sp, status='native')
+            Media.objects.create(species=sp, type='image', url=f'https://x.com/{sp.code}.jpg', source='test')
+        SpeciesName.objects.create(species=correct, language=lang_nl, name='Boerenzanger')
+        SpeciesName.objects.create(species=wrong, language=lang_nl, name='Kleine karekiet')
+        game = Game.objects.create(
+            country=self.country,
+            level='expert',
+            length=5,
+            media='images',
+            host=self.player,
+            language='nl',
+        )
+        question = Question.objects.create(game=game, species=correct, sequence=1)
+        _player_auth(self.client, self.player)
+        response = self.client.post(
+            '/api/answer/',
+            {
+                'player_token': self.player.token,
+                'question_id': question.id,
+                'answer_id': wrong.id,
+            },
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(response.data['species']['name_translated'], 'Boerenzanger')
+        self.assertEqual(response.data['answer']['name_translated'], 'Kleine karekiet')
+
     def test_answer_create_with_player_bearer_not_401(self):
         """Guest journey sends Authorization: Bearer <player.token>; must not fail JWT auth first."""
         q2 = self.game.add_question()

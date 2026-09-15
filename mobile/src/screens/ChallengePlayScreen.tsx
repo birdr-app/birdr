@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import {
   View,
   Text,
@@ -6,11 +6,12 @@ import {
   ScrollView,
   StyleSheet,
   ActivityIndicator,
-  TextInput,
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
 import { useRoute, useNavigation, RouteProp } from '@react-navigation/native';
+import { AutocompleteDropdown } from 'react-native-autocomplete-dropdown';
+import type { IAutocompleteDropdownRef } from 'react-native-autocomplete-dropdown';
 import {
   getChallengeQuestion,
   submitChallengeAnswer,
@@ -63,12 +64,22 @@ type ChallengePlayParams = {
   stepLength?: number;
 };
 
-function speciesDisplayName(s: QuestionOption | Species, lang?: string): string {
-  const o = s as QuestionOption & Species;
-  if (o.name_translated) return o.name_translated;
-  if (lang === 'nl' && o.name_nl) return o.name_nl;
-  if (lang === 'la' && o.name_latin) return o.name_latin;
-  return o.name || o.name_latin || '';
+function speciesDisplayName(
+  s: QuestionOption | Species,
+  lang?: string,
+  extras?: Array<QuestionOption | Species>,
+): string {
+  const fromList = extras?.find((x) => x.id === s.id);
+  if (lang === 'la') {
+    return fromList?.name_latin || s.name_latin || fromList?.name || s.name || '';
+  }
+  if (fromList?.name_translated) return fromList.name_translated;
+  if (lang === 'nl' && (fromList?.name_nl || s.name_nl)) {
+    return fromList?.name_nl || s.name_nl || s.name || '';
+  }
+  if (s.name_translated) return s.name_translated;
+  if (lang === 'nl' && s.name_nl) return s.name_nl;
+  return s.name || s.name_latin || '';
 }
 
 /** Provides audio playback hooks only when mounted (past early returns). Avoids "fewer hooks" when restarting. */
@@ -89,11 +100,10 @@ function ChallengePlayAudio({
 
 export function ChallengePlayScreen() {
   const { t, locale } = useTranslation();
-  const { game } = useGame();
+  const { game, language: speciesLanguage, player } = useGame();
   const route = useRoute<RouteProp<{ ChallengePlay: ChallengePlayParams }, 'ChallengePlay'>>();
   const navigation = useNavigation();
   const { gameToken, journeyId, countryCode, language: paramLanguage, gameLevel, gameMedia, stepJokers: paramStepJokers, stepLength: paramStepLength } = route.params ?? {};
-  const lang = (game?.token === gameToken && game.language) || paramLanguage || 'en';
   const [question, setQuestion] = useState<ChallengeQuestion | null>(null);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
@@ -112,13 +122,21 @@ export function ChallengePlayScreen() {
   const [answeredMediaLink, setAnsweredMediaLink] = useState<string | null>(null);
   const [levelEnded, setLevelEnded] = useState(false);
   const [journeyGame, setJourneyGame] = useState<BirdrJourneyGame | null>(null);
+  const lang =
+    (game?.token === gameToken && game.language) ||
+    journeyGame?.game?.language ||
+    question?.game?.language ||
+    paramLanguage ||
+    speciesLanguage ||
+    player?.language ||
+    'en';
   const [journeyCountry, setJourneyCountry] = useState<{ code: string; name: string } | null>(null);
   const [mediaSpecies, setMediaSpecies] = useState<SpeciesMediaData | null>(null);
   const [flagModalVisible, setFlagModalVisible] = useState(false);
   const [flagMediaInfo, setFlagMediaInfo] = useState<FlagMediaInfo | null>(null);
   const [challengePlayerToken, setChallengePlayerToken] = useState<string | undefined>(undefined);
   const [expertSpecies, setExpertSpecies] = useState<Species[]>([]);
-  const [expertQuery, setExpertQuery] = useState('');
+  const expertDropdownRef = useRef<IAutocompleteDropdownRef | null>(null);
   const [mediaReady, setMediaReady] = useState(false);
   const [imageError, setImageError] = useState<string | null>(null);
   const [loadingNextQuestion, setLoadingNextQuestion] = useState(false);
@@ -321,13 +339,22 @@ export function ChallengePlayScreen() {
   }, [question?.id, question?.sequence, gameToken, loadJourneyGame]);
 
   useEffect(() => {
-    if (question && countryCode) {
+    if (countryCode) {
       getSpeciesForCountry(countryCode, lang).then(setExpertSpecies);
     }
-  }, [question?.id, countryCode, lang]);
+  }, [countryCode, lang]);
+
+  const expertDropdownDataSet = useMemo(
+    () =>
+      expertSpecies.map((s) => ({
+        id: String(s.id),
+        title: speciesDisplayName(s, lang, expertSpecies),
+      })),
+    [expertSpecies, lang]
+  );
 
   useEffect(() => {
-    setExpertQuery('');
+    expertDropdownRef.current?.clear();
   }, [question?.id]);
 
   const mediaType = resolvePlayMediaType(question as any, gameMedia);
@@ -600,12 +627,6 @@ export function ChallengePlayScreen() {
     );
   }
 
-  const filteredSpecies = expertQuery.trim()
-    ? expertSpecies.filter((s) =>
-        speciesDisplayName(s, lang).toLowerCase().includes(expertQuery.trim().toLowerCase())
-      )
-    : expertSpecies.slice(0, 50);
-
   const totalJokers = journeyGame?.journey_step?.jokers ?? paramStepJokers ?? 0;
   const remainingJokers = journeyGame?.remaining_jokers ?? totalJokers;
 
@@ -640,6 +661,8 @@ export function ChallengePlayScreen() {
   const speedSeconds = question.game?.speed_seconds ?? journeyGame?.game?.speed_seconds ?? null;
   const isSpeedChallenge = typeof speedSeconds === 'number' && speedSeconds > 0;
   const optionsLocked = submitting || feedback !== null || timerExpired || !answersEnabled;
+  const displayName = (s: QuestionOption | Species) =>
+    speciesDisplayName(s, lang, expertSpecies);
 
   return (
     <ChallengePlayAudio
@@ -791,12 +814,12 @@ export function ChallengePlayScreen() {
               return (
                 <SpeciesViewButton
                   key={opt.id}
-                  label={speciesDisplayName(opt, lang)}
+                  label={displayName(opt)}
                   onPress={() => setMediaSpecies(opt as SpeciesMediaData)}
                   variant={variant}
                   icon={icon}
                   testID={idx === 0 ? 'challengePlay.firstOption' : `challengePlay.option.${opt.id}`}
-                  accessibilityLabel={idx === 0 ? 'First answer option' : speciesDisplayName(opt, lang)}
+                  accessibilityLabel={idx === 0 ? 'First answer option' : displayName(opt)}
                 />
               );
             })
@@ -808,9 +831,9 @@ export function ChallengePlayScreen() {
                 onPress={() => giveAnswer(opt)}
                 disabled={optionsLocked}
                 testID={idx === 0 ? 'challengePlay.firstOption' : `challengePlay.option.${opt.id}`}
-                accessibilityLabel={idx === 0 ? 'First answer option' : speciesDisplayName(opt, lang)}
+                accessibilityLabel={idx === 0 ? 'First answer option' : displayName(opt)}
               >
-                <Text style={styles.optionButtonText}>{speciesDisplayName(opt, lang)}</Text>
+                <Text style={styles.optionButtonText}>{displayName(opt)}</Text>
               </TouchableOpacity>
             ))
           )}
@@ -818,91 +841,88 @@ export function ChallengePlayScreen() {
             <ComparisonButton
               species1Id={answerResult.correctSpecies.id}
               species2Id={answerResult.userAnswer.id}
-              species1Name={speciesDisplayName(answerResult.correctSpecies, lang)}
-              species2Name={speciesDisplayName(answerResult.userAnswer, lang)}
+              species1Name={displayName(answerResult.correctSpecies)}
+              species2Name={displayName(answerResult.userAnswer)}
             />
           ) : null}
         </View>
       ) : isExpert ? (
         <View style={styles.expertSection}>
           {answerResult !== null ? (
-            <>
+            <View style={styles.expertAnswerButtons}>
               <SpeciesViewButton
-                label={speciesDisplayName(answerResult.correctSpecies, lang)}
+                label={displayName(answerResult.correctSpecies)}
                 onPress={() => setMediaSpecies(answerResult.correctSpecies as SpeciesMediaData)}
                 variant="correct"
                 icon="correct"
                 testID="challengePlay.expertCorrect"
-                accessibilityLabel={speciesDisplayName(answerResult.correctSpecies, lang)}
+                accessibilityLabel={displayName(answerResult.correctSpecies)}
               />
               {!answerResult.correct && answerResult.userAnswer.id !== answerResult.correctSpecies.id && (
                 <SpeciesViewButton
-                  label={speciesDisplayName(answerResult.userAnswer, lang)}
+                  label={displayName(answerResult.userAnswer)}
                   onPress={() => setMediaSpecies(answerResult.userAnswer as SpeciesMediaData)}
                   variant="wrong"
                   icon="wrong"
                   testID="challengePlay.expertWrong"
-                  accessibilityLabel={speciesDisplayName(answerResult.userAnswer, lang)}
+                  accessibilityLabel={displayName(answerResult.userAnswer)}
                 />
               )}
               {!answerResult.correct && answerResult.correctSpecies.id !== answerResult.userAnswer.id ? (
                 <ComparisonButton
                   species1Id={answerResult.correctSpecies.id}
                   species2Id={answerResult.userAnswer.id}
-                  species1Name={speciesDisplayName(answerResult.correctSpecies, lang)}
-                  species2Name={speciesDisplayName(answerResult.userAnswer, lang)}
+                  species1Name={displayName(answerResult.correctSpecies)}
+                  species2Name={displayName(answerResult.userAnswer)}
                 />
               ) : null}
-            </>
+            </View>
           ) : (
-            <>
+            <KeyboardAvoidingView
+              behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+              style={styles.expertInputWrap}
+            >
               <Text style={styles.expertLabel}>{t('start_typing_answer')}</Text>
-              <KeyboardAvoidingView
-                behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-                style={styles.expertInputWrap}
-              >
-                <TextInput
-                  style={styles.expertInput}
-                  value={expertQuery}
-                  onChangeText={setExpertQuery}
-                  placeholder={t('species_name_placeholder')}
-                  placeholderTextColor={colors.primary[500]}
-                  autoCapitalize="none"
-                  autoCorrect={false}
-                  editable={!optionsLocked}
-                  testID="challengePlay.expertInput"
-                  accessibilityLabel="Species name"
-                />
-                {submitting && (
-                  <View style={styles.expertSubmitting}>
-                    <ActivityIndicator size="small" color={colors.primary[500]} />
-                    <Text style={styles.expertSubmittingText}>{t('submitting') || 'Submitting…'}</Text>
-                  </View>
-                )}
-                <View style={styles.speciesListWrap}>
-                  {expertSpecies.length === 0 && filteredSpecies.length === 0 ? (
-                    <Text style={styles.speciesListEmpty}>{t('loading_species')}</Text>
-                  ) : filteredSpecies.length === 0 ? (
-                    <Text style={styles.speciesListEmpty}>{t('type_to_search')}</Text>
-                  ) : (
-                    filteredSpecies.map((item) => (
-                      <TouchableOpacity
-                        key={item.id}
-                        style={[styles.optionButton, styles.speciesListItem, optionsLocked && styles.optionButtonDisabled]}
-                        onPress={() => giveAnswer(item)}
-                        disabled={optionsLocked}
-                        testID={`challengePlay.expertOption.${item.id}`}
-                        accessibilityLabel={speciesDisplayName(item, lang)}
-                      >
-                        <Text style={styles.optionButtonText} numberOfLines={1}>
-                          {speciesDisplayName(item, lang)}
-                        </Text>
-                      </TouchableOpacity>
-                    ))
-                  )}
+              <AutocompleteDropdown
+                controller={expertDropdownRef}
+                dataSet={expertDropdownDataSet}
+                onSelectItem={(item) => {
+                  if (item) {
+                    const species = expertSpecies.find((s) => String(s.id) === item.id);
+                    if (species) {
+                      void giveAnswer(species);
+                      expertDropdownRef.current?.clear();
+                    }
+                  }
+                }}
+                loading={expertSpecies.length === 0}
+                minChars={2}
+                useFilter
+                editable={!optionsLocked}
+                closeOnSubmit
+                clearOnFocus={false}
+                showClear
+                emptyResultText={t('type_to_search')}
+                suggestionsListMaxHeight={320}
+                textInputProps={{
+                  placeholder: t('species_name_placeholder'),
+                  placeholderTextColor: colors.primary[500],
+                  testID: 'challengePlay.expertInput',
+                  accessibilityLabel: 'Species name',
+                  autoCapitalize: 'none',
+                  autoCorrect: false,
+                }}
+                containerStyle={styles.expertDropdownContainer}
+                inputContainerStyle={styles.expertInput}
+                suggestionsListTextStyle={styles.expertItemText}
+              />
+              {submitting && (
+                <View style={styles.expertSubmitting}>
+                  <ActivityIndicator size="small" color={colors.primary[500]} />
+                  <Text style={styles.expertSubmittingText}>{t('submitting') || 'Submitting…'}</Text>
                 </View>
-              </KeyboardAvoidingView>
-            </>
+              )}
+            </KeyboardAvoidingView>
           )}
         </View>
       ) : null}
@@ -998,8 +1018,10 @@ const styles = StyleSheet.create({
   },
   optionButtonDisabled: { opacity: 0.7 },
   optionButtonText: { fontSize: 16, fontWeight: '600', color: colors.primary[50] },
-  expertSection: { marginTop: 24 },
+  expertSection: { marginTop: 24, gap: 10 },
+  expertAnswerButtons: { gap: 10 },
   expertInputWrap: { marginBottom: 0 },
+  expertDropdownContainer: { marginBottom: 8 },
   expertLabel: { fontSize: 16, fontWeight: '600', color: colors.primary[800], marginBottom: 8 },
   expertInput: {
     borderWidth: 1,
@@ -1010,11 +1032,9 @@ const styles = StyleSheet.create({
     color: colors.primary[800],
     marginBottom: 8,
   },
+  expertItemText: { fontSize: 16, color: colors.primary[800] },
   expertSubmitting: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 8, marginBottom: 8 },
   expertSubmittingText: { fontSize: 14, color: colors.primary[600] },
-  speciesListWrap: { marginBottom: 16 },
-  speciesListEmpty: { fontSize: 14, color: colors.primary[500], paddingVertical: 16, paddingHorizontal: 12 },
-  speciesListItem: { marginBottom: 8 },
   questionProgress: { fontSize: 16, color: colors.primary[700], flex: 1 },
   noJokers: { fontSize: 14, color: colors.primary[600], flexShrink: 0 },
   progressSection: { marginTop: 24, marginBottom: 16 },

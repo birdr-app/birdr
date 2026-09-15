@@ -818,7 +818,7 @@ class Game(models.Model):
         return self.questions.count()
 
     def __str__(self):
-        return f'{self.country} - {self.level} - {self.created.strftime("%X %x")}'
+        return f'{self.country} - {self.level}'
 
 
 class CountryBadges(models.Model):
@@ -865,8 +865,9 @@ class Player(models.Model):
             return f'{minutes} minutes'
         return f'{hours} hours and {minutes} minutes'
 
+
     def __str__(self):
-        return f"{self.name} - #{self.id}"
+        return self.name or self.id
 
 
 class UserProfile(models.Model):

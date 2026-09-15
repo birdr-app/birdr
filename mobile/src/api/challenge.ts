@@ -24,7 +24,7 @@ export type ChallengeQuestion = {
   id: number;
   number: number;
   sequence: number;
-  game: { token: string; speed_seconds?: number | null; level?: string; media?: string };
+  game: { token: string; speed_seconds?: number | null; level?: string; media?: string; language?: string };
   options?: QuestionOption[];
   images: Array<{ id?: number; url: string; link?: string; contributor?: string; source?: string }>;
   sounds: Array<{ id?: number; url: string; link?: string; contributor?: string; source?: string }>;

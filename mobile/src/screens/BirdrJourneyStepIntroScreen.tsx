@@ -22,6 +22,7 @@ import {
 import { setStoredChallengePlayerToken } from '../api/challenge';
 import { BirdrMoodHero } from '../components/BirdrMoodHero';
 import { useTranslation } from '../i18n/TranslationContext';
+import { useGame } from '../context/GameContext';
 import { colors } from '../theme';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
@@ -48,6 +49,7 @@ function effectiveStatus(journeyGame: BirdrJourneyGame | null | undefined): stri
 export function BirdrJourneyStepIntroScreen() {
   const navigation = useNavigation();
   const { t } = useTranslation();
+  const { language } = useGame();
   const route = useRoute<RouteProp<RouteParams, 'BirdrJourneyStepIntro'>>();
   const { journeyId, countryCode, gameToken: paramGameToken } = route.params;
   const [loading, setLoading] = useState(true);
@@ -110,7 +112,7 @@ export function BirdrJourneyStepIntroScreen() {
         gameToken,
         journeyId,
         countryCode,
-        language: 'en',
+        language: result.journey_game.game.language || language,
         gameLevel: stepData.level,
         gameMedia: stepData.media,
         stepJokers: stepData.jokers,

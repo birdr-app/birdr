@@ -427,6 +427,7 @@ class QuestionPlaySerializer(serializers.ModelSerializer):
         return {
             'token': game.token,
             'level': game.level,
+            'language': game.language,
             'media': self._effective_game_media(),
             'speed_seconds': game.speed_seconds,
         }
@@ -593,6 +594,13 @@ class AnswerSerializer(serializers.ModelSerializer):
             'sequence',
         )
         unique_together = ('question', 'player')
+
+    def to_representation(self, instance):
+        if isinstance(self.context, dict) and self.context.get('game') is None:
+            question = getattr(instance, 'question', None)
+            if question is not None:
+                self.context['game'] = question.game
+        return super().to_representation(instance)
 
 
 class FlagQuestionSerializer(serializers.ModelSerializer):
@@ -1928,7 +1936,7 @@ class BirdrJourneySerializer(serializers.ModelSerializer):
             ctx['level_steps'] = list(level.steps.order_by('sequence'))
 
         step_tax_families = {}
-        for journey_game in journey.games.select_related('game', 'journey_step').all():
+        for journey_game in journey.games.select_related('game', 'journey_step').order_by('created'):
             if journey_game.game.tax_family:
                 step_tax_families[journey_game.journey_step_id] = journey_game.game.tax_family
         ctx['step_tax_families'] = step_tax_families

@@ -355,6 +355,80 @@ class BirdrJourneyApiTestCase(TestCase):
         q_after = self.client.get(f'/api/games/{game.token}/question')
         self.assertEqual(q_after.status_code, status.HTTP_404_NOT_FOUND)
 
+    def test_start_step_keeps_failed_game_and_starts_new(self):
+        from jizz.models import PlayerScore, Question
+
+        for i in range(6):
+            sp = Species.objects.create(
+                name=f'Retry Bird {i}',
+                name_latin=f'Retryus birdus{i}',
+                code=f'rtb{i}',
+            )
+            CountrySpecies.objects.create(
+                country=self.country,
+                species=sp,
+                status='native',
+                frequency='common',
+            )
+            Media.objects.create(
+                species=sp,
+                type='image',
+                url=f'https://example.com/retry{i}.jpg',
+                source='test',
+            )
+
+        _player_auth(self.client, self.player)
+        create = self.client.post('/api/birdr-journey/', {'country_code': 'NL'}, format='json')
+        journey_id = create.data['id']
+        start = self.client.post(f'/api/birdr-journey/{journey_id}/start-step/', format='json')
+        failed_token = start.data['journey_game']['game']['token']
+        journey_game = BirdrJourneyGame.objects.get(id=start.data['journey_game']['id'])
+        step = journey_game.journey_step
+        step.jokers = 0
+        step.save(update_fields=['jokers'])
+
+        game = Game.objects.get(token=failed_token)
+        game.host = self.player
+        game.save(update_fields=['host'])
+
+        q_resp = self.client.get(
+            f'/api/games/{game.token}/question',
+            HTTP_AUTHORIZATION=f'Bearer {self.player.token}',
+        )
+        self.assertEqual(q_resp.status_code, status.HTTP_200_OK)
+        question = Question.objects.get(id=q_resp.data['id'])
+        wrong = question.options.exclude(id=question.species_id).first()
+        self.client.post(
+            '/api/answer/',
+            {
+                'player_token': str(self.player.token),
+                'question_id': question.id,
+                'answer_id': wrong.id,
+            },
+            format='json',
+        )
+        journey_game.refresh_from_db()
+        self.assertEqual(journey_game.status, 'failed')
+
+        retry = self.client.post(f'/api/birdr-journey/{journey_id}/start-step/', format='json')
+        self.assertEqual(retry.status_code, status.HTTP_201_CREATED)
+        new_token = retry.data['journey_game']['game']['token']
+        self.assertNotEqual(new_token, failed_token)
+        self.assertTrue(Game.objects.filter(token=failed_token).exists())
+        self.assertTrue(Game.objects.filter(token=new_token).exists())
+        self.assertEqual(
+            BirdrJourneyGame.objects.filter(birdr_journey_id=journey_id).count(),
+            2,
+        )
+        self.assertEqual(
+            PlayerScore.objects.filter(player=self.player, game__token=failed_token).count(),
+            1,
+        )
+        self.assertEqual(
+            PlayerScore.objects.filter(player=self.player, game__token=new_token).count(),
+            1,
+        )
+
     def test_champion_level(self):
         _player_auth(self.client, self.player)
         journey = BirdrJourney.objects.create(

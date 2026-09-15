@@ -123,10 +123,20 @@ def _eligible_media_exists(media_type: str) -> Exists:
     )
 
 
-def _query_option_species_ids(game: Game) -> list[int]:
+def _wider_rarity(rarity: str) -> str | None:
+    """Next broader rarity when the current tier has no playable birds."""
+    if rarity == Game.RARIT_FAMILIAR:
+        return Game.RARIT_REGULAR
+    if rarity == Game.RARIT_REGULAR:
+        return Game.RARIT_EXCEPTIONAL
+    return None
+
+
+def _query_option_species_ids(game: Game, rarity: str | None = None) -> list[int]:
     """Uncached species IDs eligible for answer options."""
     media_type = media_type_for_game(game)
     statuses = country_statuses_for_game(game)
+    rarity = rarity or effective_rarity(game)
 
     from jizz.services.seasonal_frequency import filter_country_species_ids_for_game
 
@@ -134,7 +144,7 @@ def _query_option_species_ids(game: Game) -> list[int]:
         country_id=game.country_id,
         status__in=statuses,
     )
-    species_ids = filter_country_species_ids_for_game(game, country_species)
+    species_ids = filter_country_species_ids_for_game(game, country_species, rarity=rarity)
 
     species_qs = Species.objects.filter(
         id__in=species_ids,
@@ -148,7 +158,13 @@ def _query_option_species_ids(game: Game) -> list[int]:
     elif game.species_group:
         species_qs = species_qs.filter(species_group__slug=game.species_group)
 
-    return list(species_qs.values_list('id', flat=True))
+    ids = list(species_qs.values_list('id', flat=True))
+    if ids:
+        return ids
+    wider = _wider_rarity(rarity)
+    if wider:
+        return _query_option_species_ids(game, rarity=wider)
+    return ids
 
 
 def candidate_species_ids(game: Game) -> list[int]:
@@ -159,10 +175,11 @@ def candidate_species_ids(game: Game) -> list[int]:
     """
     cache_key = _option_species_cache_key(game)
     cached = cache.get(cache_key)
-    if cached is not None:
+    if cached:
         return cached
     ids = _query_option_species_ids(game)
-    cache.set(cache_key, ids, _GAME_OPTION_SPECIES_CACHE_TTL)
+    if ids:
+        cache.set(cache_key, ids, _GAME_OPTION_SPECIES_CACHE_TTL)
     return ids
 
 
@@ -179,7 +196,7 @@ def question_target_species_ids(
     """
     cache_key = _target_species_cache_key(game)
     cached = cache.get(cache_key)
-    if cached is not None:
+    if cached:
         return cached
 
     ids = list(option_ids) if option_ids is not None else candidate_species_ids(game)
@@ -199,7 +216,8 @@ def question_target_species_ids(
         else:
             target_ids = ids
 
-    cache.set(cache_key, target_ids, _GAME_TARGET_SPECIES_CACHE_TTL)
+    if target_ids:
+        cache.set(cache_key, target_ids, _GAME_TARGET_SPECIES_CACHE_TTL)
     return target_ids
 
 

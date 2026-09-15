@@ -61,6 +61,7 @@ export type JourneyLevel = {
 export type JourneyGameRef = {
   token: string;
   level: string;
+  language?: string;
   length: number;
   media: string;
   speed_seconds?: number | null;

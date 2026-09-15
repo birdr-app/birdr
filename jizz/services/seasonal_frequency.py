@@ -75,13 +75,16 @@ def seasonal_tier_map(
     return out
 
 
-def filter_country_species_ids_for_game(game: Game, country_species_qs) -> list[int]:
+def filter_country_species_ids_for_game(
+    game: Game, country_species_qs, rarity: str | None = None
+) -> list[int]:
     """Return CountrySpecies.species_id values that pass rarity (and season, if set)."""
-    rarity = (
-        Game.RARIT_EXCEPTIONAL
-        if game.game_type == Game.GAME_TYPE_EXTREME
-        else (game.rarity or Game.RARIT_REGULAR)
-    )
+    if rarity is None:
+        rarity = (
+            Game.RARIT_EXCEPTIONAL
+            if game.game_type == Game.GAME_TYPE_EXTREME
+            else (game.rarity or Game.RARIT_REGULAR)
+        )
     months = months_for_game(game)
     if not months:
         return list(

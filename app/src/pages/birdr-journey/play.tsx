@@ -50,6 +50,7 @@ import { postQuestionNextMedia } from '../../api/question-next-media';
 import { answersEnabledForMedia, normalizeGameMedia } from '../../core/media-answer-gate';
 import { prefetchQuestionPlayMedia } from '../../core/prefetch-play-media';
 import { bindHtmlMediaCanPlay } from '../../core/html-media-canplay';
+import { fetchSpeciesByCountry } from '../../api/fetch-species-detail';
 
 type ResultType = 'open' | 'correct' | 'joker' | 'incorrect';
 
@@ -69,10 +70,11 @@ export function BirdrJourneyPlayPage() {
   const gameMedia = normalizeGameMedia(searchParams.get('gameMedia') ?? 'images');
   const gameLevel = searchParams.get('gameLevel') ?? 'advanced';
 
-  const { species, speciesLoading, language, appLanguage } = useContext(AppContext);
+  const { speciesLanguage, language, appLanguage } = useContext(AppContext);
   const locale = appLanguage || 'en';
   const [question, setQuestion] = useState<Question | null>(null);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [loadingNextQuestion, setLoadingNextQuestion] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -82,6 +84,8 @@ export function BirdrJourneyPlayPage() {
   const [audioPlaying, setAudioPlaying] = useState(true);
   const [mediaIndex, setMediaIndex] = useState<number | null>(null);
   const [journeyGame, setJourneyGame] = useState<BirdrJourneyGame | null>(null);
+  const [expertSpecies, setExpertSpecies] = useState<Species[]>([]);
+  const [expertSpeciesLoading, setExpertSpeciesLoading] = useState(false);
   const [countryName, setCountryName] = useState<string>('');
   const [journeyStepFailed, setJourneyStepFailed] = useState(false);
   const [levelEnded, setLevelEnded] = useState(false);
@@ -116,6 +120,7 @@ export function BirdrJourneyPlayPage() {
     if (!gameToken) return;
     const generation = ++questionFetchGenRef.current;
     setLoading(true);
+    setLoadError(null);
     try {
       const token = await resolveBirdrJourneyPlayerToken();
       playerTokenRef.current = token;
@@ -124,9 +129,10 @@ export function BirdrJourneyPlayPage() {
       if (q && isStalePlayQuestion(questionRef.current, q)) return;
       prefetchQuestionPlayMedia(q, q?.media ?? gameMedia);
       setQuestion(q);
-    } catch {
+    } catch (err) {
       if (generation !== questionFetchGenRef.current) return;
       setQuestion(null);
+      setLoadError(err instanceof Error ? err.message : 'Failed to load question');
     } finally {
       if (generation === questionFetchGenRef.current) setLoading(false);
     }
@@ -165,6 +171,32 @@ export function BirdrJourneyPlayPage() {
     }
   }, [loading, question, gameToken, countryCode, navigateResults]);
 
+  const birdNameLanguage =
+    journeyGame?.game?.language ||
+    question?.game?.language ||
+    speciesLanguage ||
+    language ||
+    'en';
+
+  useEffect(() => {
+    if (!countryCode) return;
+    let cancelled = false;
+    setExpertSpeciesLoading(true);
+    fetchSpeciesByCountry(countryCode, birdNameLanguage)
+      .then((list) => {
+        if (!cancelled) setExpertSpecies(list);
+      })
+      .catch(() => {
+        if (!cancelled) setExpertSpecies([]);
+      })
+      .finally(() => {
+        if (!cancelled) setExpertSpeciesLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [countryCode, birdNameLanguage]);
+
   if (!gameToken || !journeyId || !countryCode) {
     return (
       <Page>
@@ -180,6 +212,16 @@ export function BirdrJourneyPlayPage() {
       <Page>
         <Page.Body>
           <QuestionLoadingFeather />
+        </Page.Body>
+      </Page>
+    );
+  }
+
+  if (loadError && !question) {
+    return (
+      <Page>
+        <Page.Body>
+          <Text color="red.600">{loadError}</Text>
         </Page.Body>
       </Page>
     );
@@ -515,10 +557,10 @@ export function BirdrJourneyPlayPage() {
           </SimpleGrid>
         ) : question && isExpert ? (
           <SpeciesCombobox
-            species={species || []}
-            playerLanguage={language}
+            species={expertSpecies}
+            playerLanguage={birdNameLanguage}
             onSelect={(species) => giveAnswer(species)}
-            loading={submitting || speciesLoading}
+            loading={submitting || expertSpeciesLoading}
             isDisabled={optionsLocked}
             autoFocus
             placeholder={

@@ -11,7 +11,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.validators import ASCIIUsernameValidator, UnicodeUsernameValidator
 from django.core.validators import RegexValidator
 from django.utils.translation import gettext_lazy as _
-from django.db.models import Count, Sum
+from django.db.models import Count, Exists, OuterRef, Sum
 from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.template.loader import render_to_string
@@ -801,6 +801,89 @@ class PlayerInline(admin.TabularInline):
         return False
 
 
+def _country_challenge_exists(game_id_outerref):
+    return Exists(
+        BirdrJourneyGame.objects.filter(game_id=OuterRef(game_id_outerref))
+    )
+
+
+SPECIAL_GAME_TYPES = (
+    Game.GAME_TYPE_SPECIES_PRACTICE,
+    Game.GAME_TYPE_PAIR_PRACTICE,
+    Game.GAME_TYPE_FLOCK_CHALLENGE,
+)
+
+
+def game_kind_label(*, is_country_challenge, game_type):
+    if is_country_challenge:
+        return 'country challenge'
+    if game_type == Game.GAME_TYPE_FLOCK_CHALLENGE:
+        return 'flock'
+    if game_type == Game.GAME_TYPE_SPECIES_PRACTICE:
+        return 'tricky species'
+    if game_type == Game.GAME_TYPE_PAIR_PRACTICE:
+        return 'tricky pair'
+    return 'normal'
+
+
+def game_kind_for(game, is_country_challenge=None):
+    if game is None:
+        return 'normal'
+    if is_country_challenge is None:
+        is_country_challenge = game.birdr_journey_games.exists()
+    return game_kind_label(
+        is_country_challenge=bool(is_country_challenge),
+        game_type=game.game_type,
+    )
+
+
+class GameKindListFilter(admin.SimpleListFilter):
+    title = 'game type'
+    parameter_name = 'type'
+    game_id_outerref = 'pk'
+    game_type_field = 'game_type'
+
+    def lookups(self, request, model_admin):
+        return (
+            ('normal', 'normal'),
+            ('country_challenge', 'country challenge'),
+            ('tricky_species', 'tricky species'),
+            ('tricky_pair', 'tricky pair'),
+            ('flock', 'flock'),
+        )
+
+    def queryset(self, request, queryset):
+        value = self.value()
+        if not value:
+            return queryset
+        is_country_challenge = _country_challenge_exists(self.game_id_outerref)
+        game_type = self.game_type_field
+        if value == 'country_challenge':
+            return queryset.filter(is_country_challenge)
+        if value == 'tricky_species':
+            return queryset.exclude(is_country_challenge).filter(
+                **{game_type: Game.GAME_TYPE_SPECIES_PRACTICE},
+            )
+        if value == 'tricky_pair':
+            return queryset.exclude(is_country_challenge).filter(
+                **{game_type: Game.GAME_TYPE_PAIR_PRACTICE},
+            )
+        if value == 'flock':
+            return queryset.exclude(is_country_challenge).filter(
+                **{game_type: Game.GAME_TYPE_FLOCK_CHALLENGE},
+            )
+        if value == 'normal':
+            return queryset.exclude(is_country_challenge).exclude(
+                **{f'{game_type}__in': SPECIAL_GAME_TYPES}
+            )
+        return queryset
+
+
+class PlayerScoreGameKindListFilter(GameKindListFilter):
+    game_id_outerref = 'game_id'
+    game_type_field = 'game__game_type'
+
+
 class PlayerScoreInline(admin.TabularInline):
     model = PlayerScore
     can_delete = False
@@ -824,7 +907,17 @@ class GameAdmin(admin.ModelAdmin):
         'length', 'multiplayer', 'media', 'repeat', 'rarity', 'include_escapes',
         'dificult_species', 'game_type', 'speed_seconds', 'tax_order', 'tax_family', 'species_group', 'season'
     ]
-    list_display = ['country', 'created', 'level', 'length', 'player_count', 'top_score']
+    list_display = ['country', 'created', 'type', 'level', 'length', 'player_count', 'top_score']
+    list_filter = [GameKindListFilter]
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).annotate(
+            _is_country_challenge=_country_challenge_exists('pk'),
+        )
+
+    def type(self, obj):
+        return game_kind_for(obj, getattr(obj, '_is_country_challenge', None))
+    type.short_description = 'game type'
 
     def player_count(self, obj):
         return obj.scores.count()
@@ -866,15 +959,31 @@ class PlayerAdmin(admin.ModelAdmin):
     raw_id_fields = ['user']
     list_display = ['name', 'games', 'playtime']
     readonly_fields = ['token', 'created',  'games', 'playtime']
-    fields = ['user', ] + readonly_fields
+    fields = ['user', 'name'] + readonly_fields
 
 @register(PlayerScore)
 class PlayerScoreAdmin(admin.ModelAdmin):
     raw_id_fields = ['player', 'game']
-    list_display = ['player', 'game', 'progress', 'length', 'score', 'device_type', 'app_version']
-    list_filter = ['device_type', 'game__level', 'game__length', 'game__media', ('game__country', admin.RelatedOnlyFieldListFilter)]
+    list_display = ['player', 'game', 'type', 'progress', 'length', 'score', 'device_type', 'app_version']
+    list_filter = [
+        PlayerScoreGameKindListFilter,
+        'device_type',
+        'game__level',
+        'game__length',
+        'game__media',
+        ('game__country', admin.RelatedOnlyFieldListFilter),
+    ]
     readonly_fields = ['playtime', 'order_score']
     fields = ['player', 'game', 'score', 'app_version', 'device_type', 'playtime', 'order_score']
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related('game').annotate(
+            _is_country_challenge=_country_challenge_exists('game_id'),
+        )
+
+    def type(self, obj):
+        return game_kind_for(obj.game, getattr(obj, '_is_country_challenge', None))
+    type.short_description = 'game type'
 
     def order_score(self, obj):
         results = obj.answers.values(

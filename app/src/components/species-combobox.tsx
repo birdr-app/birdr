@@ -61,7 +61,13 @@ export const SpeciesCombobox = ({
       list.unshift(value)
     }
     return list.map((speciesItem) => {
-      const label = speciesItem.name_translated || speciesItem.name
+      const lang = (playerLanguage || '').toLowerCase().split('-')[0]
+      const label =
+        lang === 'la'
+          ? speciesItem.name_latin || speciesItem.name
+          : speciesItem.name_translated ||
+            (lang === 'nl' ? speciesItem.name_nl : undefined) ||
+            speciesItem.name
       return {
         label,
         value: String(speciesItem.id ?? speciesItem.name),

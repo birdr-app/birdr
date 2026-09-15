@@ -56,6 +56,7 @@ export type JourneyLevel = {
 export type JourneyGameRef = {
   token: string;
   level: string;
+  language?: string;
   length: number;
   media: string;
   speed_seconds?: number | null;
@@ -534,7 +535,9 @@ export async function getChallengeQuestion(
   const response = await fetch(url, { method: 'GET', headers, cache: 'no-store' });
   if (response.status === 204 || response.status === 404) return null;
   const data = await response.json().catch(() => ({}));
-  if (!response.ok) return null;
+  if (!response.ok) {
+    throw new Error(parseError(data as Record<string, unknown>, 'Failed to load question'));
+  }
   return data as Question;
 }
 

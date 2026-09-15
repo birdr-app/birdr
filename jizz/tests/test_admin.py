@@ -6,10 +6,16 @@ from django.test import TestCase, Client
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 
+from django.core.files.uploadedfile import SimpleUploadedFile
+
 from jizz.models import (
+    BirdrJourney,
+    BirdrJourneyGame,
     Country,
     Species,
     Game,
+    JourneyLevel,
+    JourneyStep,
     Player,
     PlayerScore,
     CountrySpecies,
@@ -437,3 +443,133 @@ class AdminUserUsernameFormTestCase(TestCase):
         self.assertTrue(form.is_valid(), form.errors)
         saved = form.save()
         self.assertEqual(saved.username, 'Loek van Gent 1')
+
+
+PNG_1X1 = (
+    b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01'
+    b'\x00\x00\x00\x01\x08\x02\x00\x00\x00\x90wS\xde\x00\x00\x00\x0cIDATx'
+    b'\x9cc\xf8\x0f\x00\x00\x01\x01\x00\x05\x18\xd8N\x00\x00\x00\x00IEND\xaeB`\x82'
+)
+
+
+class AdminGameKindFilterTestCase(TestCase):
+    def setUp(self):
+        self.user = _create_staff_user()
+        self.client = Client()
+        self.client.force_login(self.user)
+        self.country = Country.objects.get_or_create(
+            code='NL', defaults={'name': 'Netherlands'}
+        )[0]
+        self.player = Player.objects.create(name='P', language='en')
+
+        self.normal = self._make_game()
+        self.tricky_species = self._make_game(game_type=Game.GAME_TYPE_SPECIES_PRACTICE)
+        self.tricky_pair = self._make_game(game_type=Game.GAME_TYPE_PAIR_PRACTICE)
+        self.flock = self._make_game(game_type=Game.GAME_TYPE_FLOCK_CHALLENGE)
+        self.country_challenge = self._make_game()
+        self._link_country_challenge(self.country_challenge)
+
+        self.normal_score = PlayerScore.objects.create(
+            player=self.player, game=self.normal, score=1,
+        )
+        self.species_score = PlayerScore.objects.create(
+            player=self.player, game=self.tricky_species, score=2,
+        )
+        self.pair_score = PlayerScore.objects.create(
+            player=self.player, game=self.tricky_pair, score=3,
+        )
+        self.flock_score = PlayerScore.objects.create(
+            player=self.player, game=self.flock, score=5,
+        )
+        self.challenge_score = PlayerScore.objects.create(
+            player=self.player, game=self.country_challenge, score=4,
+        )
+
+    def _make_game(self, **kwargs):
+        defaults = {
+            'country': self.country,
+            'level': 'beginner',
+            'length': 5,
+            'media': 'images',
+            'host': self.player,
+        }
+        defaults.update(kwargs)
+        return Game.objects.create(**defaults)
+
+    def _link_country_challenge(self, game):
+        level = JourneyLevel.objects.create(
+            sequence=0,
+            title='Nest',
+            description='Nest',
+            icon=SimpleUploadedFile('nest.png', PNG_1X1, content_type='image/png'),
+        )
+        step = JourneyStep.objects.create(
+            journey_level=level,
+            sequence=0,
+            level='beginner',
+            length=5,
+            jokers=2,
+        )
+        journey = BirdrJourney.objects.create(
+            player=self.player,
+            country=self.country,
+        )
+        BirdrJourneyGame.objects.create(
+            birdr_journey=journey,
+            journey_step=step,
+            game=game,
+        )
+
+    def test_game_changelist_shows_calculated_types(self):
+        response = self.client.get(reverse('admin:jizz_game_changelist'))
+        self.assertEqual(response.status_code, 200)
+        html = response.content.decode()
+        self.assertIn('Game type', html)
+        self.assertIn('country challenge', html)
+        self.assertIn('tricky species', html)
+        self.assertIn('tricky pair', html)
+        self.assertIn('>flock<', html)
+        self.assertIn('>normal<', html)
+
+    def test_playerscore_changelist_shows_calculated_types(self):
+        response = self.client.get(reverse('admin:jizz_playerscore_changelist'))
+        self.assertEqual(response.status_code, 200)
+        html = response.content.decode()
+        self.assertIn('Game type', html)
+        self.assertIn('country challenge', html)
+        self.assertIn('tricky species', html)
+        self.assertIn('tricky pair', html)
+        self.assertIn('>flock<', html)
+        self.assertIn('>normal<', html)
+
+    def test_game_type_filter(self):
+        cases = [
+            ('normal', self.normal),
+            ('country_challenge', self.country_challenge),
+            ('tricky_species', self.tricky_species),
+            ('tricky_pair', self.tricky_pair),
+            ('flock', self.flock),
+        ]
+        url = reverse('admin:jizz_game_changelist')
+        for kind, game in cases:
+            with self.subTest(kind=kind):
+                response = self.client.get(url, {'type': kind})
+                self.assertEqual(response.status_code, 200)
+                self.assertEqual(response.context['cl'].queryset.count(), 1)
+                self.assertEqual(response.context['cl'].queryset.get().pk, game.pk)
+
+    def test_playerscore_type_filter(self):
+        cases = [
+            ('normal', self.normal_score),
+            ('country_challenge', self.challenge_score),
+            ('tricky_species', self.species_score),
+            ('tricky_pair', self.pair_score),
+            ('flock', self.flock_score),
+        ]
+        url = reverse('admin:jizz_playerscore_changelist')
+        for kind, score in cases:
+            with self.subTest(kind=kind):
+                response = self.client.get(url, {'type': kind})
+                self.assertEqual(response.status_code, 200)
+                self.assertEqual(response.context['cl'].queryset.count(), 1)
+                self.assertEqual(response.context['cl'].queryset.get().pk, score.pk)

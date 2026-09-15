@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ViewStyle, TextStyle } from 'react-native';
 import { colors } from '../theme';
+import { useTranslation } from '../i18n/TranslationContext';
 
 export type SpeciesViewButtonVariant =
   | 'primary'
@@ -64,13 +65,15 @@ export function SpeciesViewButton({
   onPress,
   variant = 'primary',
   icon,
-  viewLabel = 'View ›',
+  viewLabel,
   badge,
   disabled = false,
   testID,
   accessibilityLabel,
 }: Props) {
+  const { t } = useTranslation();
   const vs = variantStyles[variant];
+  const resolvedViewLabel = viewLabel ?? t('view_species');
   return (
     <TouchableOpacity
       style={[styles.button, vs.button, disabled && styles.disabled]}
@@ -94,7 +97,7 @@ export function SpeciesViewButton({
             <Text style={[styles.badgeText, vs.viewText]}>{badge}</Text>
           </View>
         ) : null}
-        <Text style={[styles.viewText, vs.viewText]}>{viewLabel}</Text>
+        <Text style={[styles.viewText, vs.viewText]}>{resolvedViewLabel}</Text>
       </View>
     </TouchableOpacity>
   );

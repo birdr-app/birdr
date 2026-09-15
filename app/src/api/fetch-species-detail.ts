@@ -18,6 +18,23 @@ export async function fetchSpeciesDetail(
   return response.json() as Promise<Species>;
 }
 
+/** Species list for a country, with names in the given bird-name language. */
+export async function fetchSpeciesByCountry(
+  countryCode: string,
+  language: string,
+): Promise<Species[]> {
+  const base = getApiBaseUrl().replace(/\/$/, '');
+  const response = await fetch(
+    `${base}/api/species/?countryspecies__country=${encodeURIComponent(countryCode)}&language=${encodeURIComponent(language)}`,
+    { headers: { Accept: 'application/json' }, cache: 'no-store' },
+  );
+  if (!response.ok) {
+    return [];
+  }
+  const data = await response.json().catch(() => []);
+  return Array.isArray(data) ? data : data?.results ?? data?.data ?? [];
+}
+
 export type SpeciesSlugInfo = {
   id: number;
   name: string;
