@@ -43,6 +43,19 @@ const EDITABLE = new Set([
   'WAITING_FOR_REVIEW',
 ]);
 
+// Apple allows only one unreleased version at a time, so a release that follows an
+// unsubmitted one cannot create its own — the previous bird still holds the slot.
+// Renaming that record is the way through, but only from states that mean "yours to
+// edit". WAITING_FOR_REVIEW is deliberately absent: it is queued at Apple, and
+// renaming it would change what reviewers are looking at.
+const RENAMABLE = new Set([
+  'PREPARE_FOR_SUBMISSION',
+  'DEVELOPER_REJECTED',
+  'REJECTED',
+  'METADATA_REJECTED',
+  'INVALID_BINARY',
+]);
+
 function fail(msg) {
   console.error(`appstore-notes: ${msg}`);
   process.exit(1);
@@ -145,11 +158,44 @@ async function main() {
     // are worth setting before that — the notes then wait for the binary rather than
     // the other way round. Creating it here keeps the release unattended; the record
     // is editable metadata, not a submission, and nothing reaches review from it.
+    const squatter = versions.data?.find((v) => RENAMABLE.has(v.attributes.appStoreState));
+    const blocked = versions.data?.find(
+      (v) => EDITABLE.has(v.attributes.appStoreState) && !RENAMABLE.has(v.attributes.appStoreState)
+    );
+    if (!squatter && blocked) {
+      fail(
+        `"${blocked.attributes.versionString}" is ${blocked.attributes.appStoreState} and holds ` +
+          `the only unreleased-version slot, so "${version}" cannot be created. Let that ` +
+          'release finish, or withdraw it, then re-run.'
+      );
+    }
     if (dryRun) {
-      console.log(`appstore-notes: would create version "${version}" (absent)`);
+      console.log(
+        squatter
+          ? `appstore-notes: would rename "${squatter.attributes.versionString}" ` +
+              `(${squatter.attributes.appStoreState}) to "${version}"`
+          : `appstore-notes: would create version "${version}" (absent)`
+      );
       console.log('appstore-notes: --dry-run, nothing written');
       return;
     }
+    if (squatter) {
+      // Reuse rather than delete: the record keeps any build already attached, and
+      // its notes are about to be overwritten with this release's copy anyway.
+      const renamed = await api(jwt, 'PATCH', `/appStoreVersions/${squatter.id}`, {
+        data: {
+          type: 'appStoreVersions',
+          id: squatter.id,
+          attributes: { versionString: version },
+        },
+      });
+      target = renamed.data;
+      if (!target) fail(`could not rename "${squatter.attributes.versionString}" to "${version}"`);
+      console.log(
+        `appstore-notes: renamed "${squatter.attributes.versionString}" to "${version}" ` +
+          '(previous release was never submitted)'
+      );
+    } else {
     const created = await api(jwt, 'POST', '/appStoreVersions', {
       data: {
         type: 'appStoreVersions',
@@ -160,6 +206,7 @@ async function main() {
     target = created.data;
     if (!target) fail(`could not create version "${version}"`);
     console.log(`appstore-notes: created version "${version}"`);
+    }
   }
   const state = target.attributes.appStoreState;
   if (!EDITABLE.has(state)) {
