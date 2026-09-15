@@ -139,13 +139,27 @@ async function main() {
     'GET',
     `/apps/${app.id}/appStoreVersions?filter[platform]=IOS&limit=10`
   );
-  const target = versions.data?.find((v) => v.attributes.versionString === version);
+  let target = versions.data?.find((v) => v.attributes.versionString === version);
   if (!target) {
-    fail(
-      `App Store Connect has no version named "${version}" yet — versions are named ` +
-        'after the release bird. It appears once Xcode Cloud uploads a build, or you ' +
-        'can add it by hand under that exact name. Re-run then.'
-    );
+    // Apple creates the version record when a build is uploaded, but release notes
+    // are worth setting before that — the notes then wait for the binary rather than
+    // the other way round. Creating it here keeps the release unattended; the record
+    // is editable metadata, not a submission, and nothing reaches review from it.
+    if (dryRun) {
+      console.log(`appstore-notes: would create version "${version}" (absent)`);
+      console.log('appstore-notes: --dry-run, nothing written');
+      return;
+    }
+    const created = await api(jwt, 'POST', '/appStoreVersions', {
+      data: {
+        type: 'appStoreVersions',
+        attributes: { platform: 'IOS', versionString: version },
+        relationships: { app: { data: { type: 'apps', id: app.id } } },
+      },
+    });
+    target = created.data;
+    if (!target) fail(`could not create version "${version}"`);
+    console.log(`appstore-notes: created version "${version}"`);
   }
   const state = target.attributes.appStoreState;
   if (!EDITABLE.has(state)) {
