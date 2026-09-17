@@ -37,7 +37,7 @@ import { getCountryDisplayName } from '../../data/country-names-nl';
 export function BirdrJourneyListPage() {
   const navigate = useNavigate();
   const intl = useIntl();
-  const { appLanguage } = useContext(AppContext);
+  const { appLanguage, language } = useContext(AppContext);
   const { isAuthenticated } = useAuthProfile();
   const locale = appLanguage || 'en';
   const [journeys, setJourneys] = useState<BirdrJourneyListItem[]>([]);
@@ -50,13 +50,13 @@ export function BirdrJourneyListPage() {
     if (isAuthenticated) return true;
     if (getStoredBirdrJourneyPlayerToken()) return true;
     try {
-      await createBirdrJourneyPlayer('Guest', locale);
+      await createBirdrJourneyPlayer('Guest', language || locale);
       return true;
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Failed to load');
       return false;
     }
-  }, [isAuthenticated, locale]);
+  }, [isAuthenticated, locale, language]);
 
   const load = useCallback(async () => {
     setError(null);
@@ -76,7 +76,7 @@ export function BirdrJourneyListPage() {
       clearStoredBirdrJourneyPlayerToken();
       try {
         if (!isAuthenticated) {
-          await createBirdrJourneyPlayer('Guest', locale);
+          await createBirdrJourneyPlayer('Guest', language || locale);
         }
         const list = await listBirdrJourneys();
         setJourneys(list);

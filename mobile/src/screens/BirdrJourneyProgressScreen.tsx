@@ -19,7 +19,10 @@ import {
 import { BirdrJourneyStepTrail } from '../components/BirdrJourneyStepTrail';
 import { BirdrLevelImage } from '../components/BirdrLevelImage';
 import { useAuth } from '../context/AuthContext';
+import { useGame } from '../context/GameContext';
 import { useTranslation } from '../i18n/TranslationContext';
+import { LanguageSelect } from '../components/LanguageSelect';
+import { persistCountryChallengeSpeciesLanguage } from '../lib/journeySpeciesLanguage';
 import { getCountryDisplayName } from '../i18n/countryNames';
 import { colors } from '../theme';
 
@@ -43,6 +46,7 @@ export function BirdrJourneyProgressScreen() {
   const { countryCode } = route.params;
   const { t, locale } = useTranslation();
   const { isAuthenticated } = useAuth();
+  const { language, applySpeciesLanguage, markSpeciesLanguageUserChosen } = useGame();
   const [loading, setLoading] = useState(true);
   const [journey, setJourney] = useState<BirdrJourney | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -84,7 +88,47 @@ export function BirdrJourneyProgressScreen() {
     }, [load])
   );
 
-  const handleStepPress = (step: JourneyStep) => {
+  const persistLanguage = useCallback(
+    (code: string) => {
+      void persistCountryChallengeSpeciesLanguage({
+        language: code,
+        applySpeciesLanguage,
+        markSpeciesLanguageUserChosen,
+        isAuthenticated,
+        journeyGameToken: journey?.current_game?.game?.token,
+      });
+    },
+    [
+      applySpeciesLanguage,
+      markSpeciesLanguageUserChosen,
+      isAuthenticated,
+      journey?.current_game?.game?.token,
+    ]
+  );
+
+  const languagePicker = (
+    <LanguageSelect
+      value={language}
+      onChange={persistLanguage}
+      title={t('select_language')}
+      renderTrigger={({ open, label }) => (
+        <TouchableOpacity
+          onPress={open}
+          accessibilityRole="button"
+          accessibilityLabel={`${t('bird_names')}, ${label}`}
+          testID="journey.selectLanguage"
+          style={styles.languageGhostWrap}
+        >
+          <Text style={styles.languageGhost}>
+            {t('bird_names')} {label}{' '}
+            <Text style={styles.languageGhostChevron}>▾</Text>
+          </Text>
+        </TouchableOpacity>
+      )}
+    />
+  );
+
+  const handleStepPress = (_step: JourneyStep) => {
     if (!journey) return;
     (navigation as any).navigate('BirdrJourneyStepIntro', {
       journeyId: journey.id,
@@ -122,6 +166,7 @@ export function BirdrJourneyProgressScreen() {
     return (
       <ScrollView style={styles.container} contentContainerStyle={styles.content}>
         <Text style={styles.countryLine}>{countryName}</Text>
+        {languagePicker}
         <View style={styles.championSection}>
           <BirdrLevelImage
             iconUrl={currentLevel.icon_url}
@@ -150,6 +195,7 @@ export function BirdrJourneyProgressScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <Text style={styles.countryLine}>{countryName}</Text>
+      {languagePicker}
       <Text style={styles.levelLine}>
         {t('birdr_journey_level_n', { n: String(currentLevel.sequence) })}
         {currentTitle ? ` — ${currentTitle}` : ''}
@@ -184,6 +230,20 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: colors.primary[600],
     textAlign: 'center',
+  },
+  languageGhostWrap: {
+    alignSelf: 'center',
+    marginTop: 4,
+    marginBottom: 4,
+  },
+  languageGhost: {
+    fontSize: 14,
+    color: colors.primary[600],
+    textAlign: 'center',
+  },
+  languageGhostChevron: {
+    fontSize: 12,
+    color: colors.primary[500],
   },
   levelLine: {
     fontSize: 20,

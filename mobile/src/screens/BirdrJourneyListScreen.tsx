@@ -25,6 +25,7 @@ import {
 import { BirdrLevelImage } from '../components/BirdrLevelImage';
 import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
+import { useGame } from '../context/GameContext';
 import { useTranslation } from '../i18n/TranslationContext';
 import { getCountryDisplayName } from '../i18n/countryNames';
 import { colors } from '../theme';
@@ -83,6 +84,7 @@ export function BirdrJourneyListScreen() {
   const navigation = useNavigation();
   const { t, locale } = useTranslation();
   const { isAuthenticated } = useAuth();
+  const { language } = useGame();
   const { profile, ready: profileReady } = useProfile();
   const [journeys, setJourneys] = useState<BirdrJourneyListItem[]>([]);
   const [homeActiveCountryCode, setHomeActiveCountryCode] = useState<string | null>(null);
@@ -95,14 +97,14 @@ export function BirdrJourneyListScreen() {
     const token = await getStoredBirdrJourneyPlayerToken();
     if (token) return true;
     try {
-      await createBirdrJourneyPlayer('Guest', locale === 'nl' ? 'nl' : 'en');
+      await createBirdrJourneyPlayer('Guest', language || 'en');
       return true;
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : t('failed_load');
       setError(msg);
       return false;
     }
-  }, [isAuthenticated, locale, t]);
+  }, [isAuthenticated, language, t]);
 
   const applyList = useCallback(
     async (list: BirdrJourneyListItem[]) => {
@@ -133,7 +135,7 @@ export function BirdrJourneyListScreen() {
       await clearStoredBirdrJourneyPlayerToken();
       try {
         if (!isAuthenticated) {
-          await createBirdrJourneyPlayer('Guest', locale === 'nl' ? 'nl' : 'en');
+          await createBirdrJourneyPlayer('Guest', language || 'en');
         }
         const list = await listBirdrJourneys();
         await applyList(list);

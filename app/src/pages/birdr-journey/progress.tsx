@@ -1,4 +1,4 @@
-import { Box, Button, Spinner, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Flex, Spinner, Text, VStack } from '@chakra-ui/react';
 import { useCallback, useContext, useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -14,15 +14,21 @@ import { authService } from '../../api/services/auth.service';
 import { BirdrJourneyStepTrail } from '../../components/birdr-journey-step-trail';
 import { BirdrLevelImage } from '../../components/birdr-level-image';
 import AppContext from '../../core/app-context';
+import { persistCountryChallengeSpeciesLanguage } from '../../core/journey-species-language';
+import { useAuthProfile } from '../../core/auth-profile-context';
 import { getCountryDisplayName } from '../../data/country-names-nl';
 import { Page } from '../../shared/components/layout';
+import { UseLanguages } from '../../user/use-languages';
+import LanguageCombobox from '../../components/language-combobox';
 
 export function BirdrJourneyProgressPage() {
   const { countryCode = '' } = useParams<{ countryCode: string }>();
   const navigate = useNavigate();
-  const { appLanguage } = useContext(AppContext);
+  const { appLanguage, language, applySpeciesLanguage } = useContext(AppContext);
   const locale = appLanguage || 'en';
   const isAuthenticated = !!authService.getAccessToken();
+  const { applyProfile } = useAuthProfile();
+  const { languages } = UseLanguages();
   const [loading, setLoading] = useState(true);
   const [journey, setJourney] = useState<BirdrJourney | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -55,6 +61,32 @@ export function BirdrJourneyProgressPage() {
     if (!journey) return;
     navigate(`/journey/${countryCode}/step`);
   };
+
+  const persistLanguage = (code: string) => {
+    void persistCountryChallengeSpeciesLanguage({
+      language: code,
+      applySpeciesLanguage,
+      isAuthenticated,
+      applyProfile,
+      journeyGameToken: journey?.current_game?.game?.token,
+    });
+  };
+
+  const languageGhost = (
+    <Flex justify="center" align="center" gap={1}>
+      <Text fontSize="sm" fontWeight="600" color="primary.600" whiteSpace="nowrap">
+        <FormattedMessage id="bird_names" defaultMessage="Bird names" />
+      </Text>
+      <Box minW="8rem" maxW="14rem">
+        <LanguageCombobox
+          languages={Array.isArray(languages) ? languages : []}
+          value={language || 'en'}
+          onChange={persistLanguage}
+          variant="ghost"
+        />
+      </Box>
+    </Flex>
+  );
 
   if (loading && !journey) {
     return (
@@ -91,7 +123,10 @@ export function BirdrJourneyProgressPage() {
     return (
       <Page>
         <Page.Header>
-          <Text>{countryName}</Text>
+          <VStack gap={1} align="center">
+            <Text>{countryName}</Text>
+            {languageGhost}
+          </VStack>
         </Page.Header>
         <Page.Body>
           <VStack gap={4} py={4}>
@@ -133,6 +168,7 @@ export function BirdrJourneyProgressPage() {
           <Text fontSize="sm" fontWeight="600" color="primary.600">
             {countryName}
           </Text>
+          {languageGhost}
           <Text fontSize="lg" fontWeight="700" color="primary.800" textAlign="center">
             <FormattedMessage
               id="birdr_journey_level_n"

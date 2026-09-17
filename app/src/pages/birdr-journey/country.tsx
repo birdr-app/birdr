@@ -8,17 +8,21 @@ import {
   startBirdrJourney,
 } from '../../api/birdrJourney';
 import CountryCombobox from '../../components/country-combobox';
+import LanguageCombobox from '../../components/language-combobox';
 import AppContext from '../../core/app-context';
+import { persistCountryChallengeSpeciesLanguage } from '../../core/journey-species-language';
 import { useAuthProfile } from '../../core/auth-profile-context';
 import { Page } from '../../shared/components/layout';
 import { UseCountries } from '../../user/use-countries';
+import { UseLanguages } from '../../user/use-languages';
 import { resolveDefaultCountry, writeStoredCountryCode } from '../../user/country-preference';
 
 export function BirdrJourneyCountryPage() {
   const navigate = useNavigate();
-  const { language } = useContext(AppContext);
-  const { isAuthenticated, profile } = useAuthProfile();
+  const { language, applySpeciesLanguage } = useContext(AppContext);
+  const { isAuthenticated, profile, applyProfile } = useAuthProfile();
   const { countries } = UseCountries();
+  const { languages } = UseLanguages();
   const [country, setCountry] = useState<{ code: string; name: string } | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -40,7 +44,7 @@ export function BirdrJourneyCountryPage() {
     if (isAuthenticated) return true;
     if (getStoredBirdrJourneyPlayerToken() || localStorage.getItem('player-token')) return true;
     try {
-      await createBirdrJourneyPlayer('Guest', language === 'nl' ? 'nl' : 'en');
+      await createBirdrJourneyPlayer('Guest', language || 'en');
       return true;
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : 'Failed to create player');
@@ -55,6 +59,12 @@ export function BirdrJourneyCountryPage() {
     }
     const ok = await ensureAuth();
     if (!ok) return;
+    await persistCountryChallengeSpeciesLanguage({
+      language: language || 'en',
+      applySpeciesLanguage,
+      isAuthenticated,
+      applyProfile,
+    });
     setSubmitting(true);
     setError(null);
     try {
@@ -99,6 +109,24 @@ export function BirdrJourneyCountryPage() {
             onChange={(c) => {
               setCountry(c);
               if (c?.code) writeStoredCountryCode(c.code);
+            }}
+          />
+        </Box>
+
+        <Text fontSize="sm" fontWeight="600" color="primary.700" mb={2}>
+          <FormattedMessage id="bird_name_language" defaultMessage="Bird name language" />
+        </Text>
+        <Box mb={4}>
+          <LanguageCombobox
+            languages={Array.isArray(languages) ? languages : []}
+            value={language || 'en'}
+            onChange={(code) => {
+              void persistCountryChallengeSpeciesLanguage({
+                language: code,
+                applySpeciesLanguage,
+                isAuthenticated,
+                applyProfile,
+              });
             }}
           />
         </Box>

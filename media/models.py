@@ -90,6 +90,16 @@ class MediaReview(models.Model):
     )
     review_type = models.CharField(max_length=20, choices=REVIEW_CHOICES)
     description = models.CharField(max_length=500, null=True, blank=True)
+    reply = models.TextField(
+        blank=True,
+        default='',
+        help_text='Explain why this review was wrong. Saving with a reply emails the reviewer once.',
+    )
+    reply_sent_at = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text='Set automatically when the reply email is sent.',
+    )
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:

@@ -17,8 +17,11 @@ import {
 } from '../api/birdrJourney';
 import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
+import { useGame } from '../context/GameContext';
 import { useTranslation } from '../i18n/TranslationContext';
 import { CountrySelect } from '../components/CountrySelect';
+import { LanguageSelect } from '../components/LanguageSelect';
+import { persistCountryChallengeSpeciesLanguage } from '../lib/journeySpeciesLanguage';
 import { colors } from '../theme';
 import { runBirdrJourneyPushOnboarding } from '../lib/notifications';
 import { matchCountry, resolveDefaultCountry, writeStoredCountryCode } from '../lib/countryPreference';
@@ -30,9 +33,10 @@ type RouteParams = {
 export function BirdrJourneyCountryScreen() {
   const navigation = useNavigation();
   const route = useRoute<RouteProp<RouteParams, 'BirdrJourneyCountry'>>();
-  const { t, locale } = useTranslation();
+  const { t } = useTranslation();
   const { isAuthenticated } = useAuth();
-  const { profile, ready: profileReady } = useProfile();
+  const { profile, ready: profileReady, refreshProfile } = useProfile();
+  const { language, applySpeciesLanguage, markSpeciesLanguageUserChosen } = useGame();
   const [countries, setCountries] = useState<Country[]>([]);
   const [country, setCountry] = useState<Country | null>(null);
   const [loadingCountries, setLoadingCountries] = useState(true);
@@ -72,7 +76,7 @@ export function BirdrJourneyCountryScreen() {
     const token = await getStoredBirdrJourneyPlayerToken();
     if (token) return true;
     try {
-      await createBirdrJourneyPlayer('Guest', locale === 'nl' ? 'nl' : 'en');
+      await createBirdrJourneyPlayer('Guest', language || 'en');
       return true;
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : t('failed_load');
@@ -90,6 +94,15 @@ export function BirdrJourneyCountryScreen() {
     if (!ok) return;
     setSubmitting(true);
     try {
+      await persistCountryChallengeSpeciesLanguage({
+        language,
+        applySpeciesLanguage,
+        markSpeciesLanguageUserChosen,
+        isAuthenticated,
+      });
+      if (isAuthenticated) {
+        void refreshProfile();
+      }
       await runBirdrJourneyPushOnboarding();
       await startBirdrJourney(country.code);
       (navigation as any).navigate('BirdrJourneyProgress', { countryCode: country.code });
@@ -123,8 +136,24 @@ export function BirdrJourneyCountryScreen() {
         }}
         countries={countries}
         excludeRegionCodes={false}
-        style={styles.countrySelect}
+        style={styles.fieldSelect}
         testID="journey.selectCountry"
+      />
+
+      <Text style={styles.label}>{t('bird_name_language')}</Text>
+      <LanguageSelect
+        value={language}
+        onChange={(code) => {
+          void persistCountryChallengeSpeciesLanguage({
+            language: code,
+            applySpeciesLanguage,
+            markSpeciesLanguageUserChosen,
+            isAuthenticated,
+          });
+        }}
+        title={t('select_language')}
+        style={styles.fieldSelect}
+        testID="journey.selectLanguage"
       />
 
       {!isAuthenticated && (
@@ -168,7 +197,7 @@ const styles = StyleSheet.create({
     color: colors.primary[700],
     marginBottom: 8,
   },
-  countrySelect: { marginBottom: 16 },
+  fieldSelect: { marginBottom: 16 },
   guestHint: {
     fontSize: 14,
     color: colors.primary[600],

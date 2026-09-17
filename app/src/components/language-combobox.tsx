@@ -6,6 +6,8 @@ import { useContext } from "react";
 import AppContext from "../core/app-context";
 import { getLanguageDisplayName } from "../data/language-names-nl";
 
+import { checklistSelectStyles } from "./checklist/checklist-select-styles";
+
 type Language = { code: string; name: string };
 
 interface OptionType {
@@ -19,6 +21,8 @@ interface LanguageComboboxProps {
   value: string;
   onChange: (code: string) => void;
   placeholder?: string;
+  size?: "default" | "large";
+  variant?: "default" | "ghost";
 }
 
 const defaultStyles: StylesConfig<OptionType, false> = {
@@ -39,6 +43,8 @@ export const LanguageCombobox = ({
   value,
   onChange,
   placeholder,
+  size = "default",
+  variant = "default",
 }: LanguageComboboxProps) => {
   const intl = useIntl();
   const { appLanguage } = useContext(AppContext);
@@ -69,8 +75,49 @@ export const LanguageCombobox = ({
     if (option?.value) onChange(option.value);
   };
 
+  const styles: StylesConfig<OptionType, false> =
+    variant === "ghost"
+      ? {
+          control: (provided) => ({
+            ...provided,
+            minHeight: "auto",
+            borderWidth: 0,
+            background: "transparent",
+            boxShadow: "none",
+            cursor: "pointer",
+            "&:hover": { borderWidth: 0, boxShadow: "none" },
+          }),
+          valueContainer: (provided) => ({
+            ...provided,
+            padding: 0,
+          }),
+          singleValue: (provided) => ({
+            ...provided,
+            fontSize: "14px",
+            fontWeight: 600,
+            color: "var(--chakra-colors-primary-600)",
+            margin: 0,
+          }),
+          input: (provided) => ({ ...provided, padding: 0, margin: 0 }),
+          indicatorsContainer: (provided) => ({
+            ...provided,
+            padding: 0,
+          }),
+          dropdownIndicator: (provided) => ({
+            ...provided,
+            padding: "0 0 0 4px",
+            color: "var(--chakra-colors-primary-500)",
+          }),
+          indicatorSeparator: () => ({ display: "none" }),
+          menu: (provided) => ({ ...provided, zIndex: 9999, minWidth: 220 }),
+          menuPortal: (provided) => ({ ...provided, zIndex: 9999 }),
+        }
+      : size === "large"
+        ? checklistSelectStyles<OptionType>()
+        : defaultStyles;
+
   return (
-    <Box>
+    <Box width={variant === "ghost" ? "fit-content" : undefined}>
       <ReactSelect<OptionType>
         options={options}
         value={selectedOption}
@@ -90,7 +137,7 @@ export const LanguageCombobox = ({
             {option.label}
           </span>
         )}
-        styles={defaultStyles}
+        styles={styles}
       />
     </Box>
   );
