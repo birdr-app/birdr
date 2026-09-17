@@ -1,0 +1,42 @@
+{% extends "emails/base.html" %}
+
+{% block title %}About the media you flagged on Birdr{% endblock %}
+
+{% block email_styles %}
+.reply-block {
+    background-color: #f9fafb;
+    border-left: 4px solid #d8b165;
+    padding: 16px 20px;
+    margin: 24px 0;
+    color: #111827;
+}
+{% endblock %}
+
+{% block content %}
+<p>Hi {{ greeting_name }},</p>
+<p>You have flagged a media on Birdr.</p>
+{% if species_name %}
+<p>Species: <strong>{{ species_name }}</strong></p>
+{% endif %}
+{% if media_link %}
+<p>Media: <a href="{{ media_link }}">{{ media_link }}</a></p>
+{% endif %}
+<div class="reply-block">{{ reply|linebreaksbr }}</div>
+<p>Thanks,<br>
+The Birdr Team</p>
+{% endblock %}
+
+{% block footer %}
+<p><strong>Birdr</strong> - Test your bird knowledge</p>
+<p class="text-muted">
+    You can reply to this email at <a href="mailto:info@birdr.pro">info@birdr.pro</a>.
+</p>
+<p class="text-muted">
+    This email was sent to {{ user_email }}.
+</p>
+<div class="divider"></div>
+<p class="text-muted">
+    <a href="{{ site_url }}">Visit Birdr</a> |
+    <a href="{{ site_url }}/privacy/">Privacy Policy</a>
+</p>
+{% endblock %}
