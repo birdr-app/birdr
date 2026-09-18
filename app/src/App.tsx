@@ -8,6 +8,7 @@ import {registerServiceWorker} from "./core/register-service-worker"
 import { ChakraProvider } from '@chakra-ui/react'
 import { system } from './theme'
 import { Toaster } from "@/components/ui/toaster";
+import { ApiAvailabilityGate } from "./components/api-availability-gate";
 
 registerServiceWorker()
 
@@ -19,13 +20,15 @@ export const App = () => {
   return (
     <ChakraProvider value={system}>
       <Toaster />
-      <AuthProfileProvider>
-        <AppContextProvider>
-          <WebsocketContextProvider>
-            <MainContent/>
-          </WebsocketContextProvider>
-        </AppContextProvider>
-      </AuthProfileProvider>
+      <ApiAvailabilityGate>
+        <AuthProfileProvider>
+          <AppContextProvider>
+            <WebsocketContextProvider>
+              <MainContent/>
+            </WebsocketContextProvider>
+          </AppContextProvider>
+        </AuthProfileProvider>
+      </ApiAvailabilityGate>
     </ChakraProvider>
   )
 }

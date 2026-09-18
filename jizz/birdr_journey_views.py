@@ -2,6 +2,7 @@
 API for Birdr Journey — solo level progression per country.
 """
 
+from django.db.models import Prefetch
 from django.http import Http404
 from django.shortcuts import get_object_or_404
 from rest_framework import status
@@ -22,7 +23,11 @@ from jizz.views import GetPlayerMixin
 
 
 def get_journey_levels_ordered():
-    return list(JourneyLevel.objects.prefetch_related('steps').order_by('sequence'))
+    return list(
+        JourneyLevel.objects.prefetch_related(
+            Prefetch('steps', queryset=JourneyStep.objects.order_by('sequence')),
+        ).order_by('sequence')
+    )
 
 
 def get_journey_level(level_index):
@@ -38,7 +43,10 @@ def get_journey_level(level_index):
 
 
 def get_level_steps_ordered(level):
-    return list(level.steps.order_by('sequence'))
+    if level is None:
+        return []
+    # Sort in Python so prefetch_related('steps') is not discarded by order_by().
+    return sorted(level.steps.all(), key=lambda step: step.sequence)
 
 
 def get_step_index(level, step):

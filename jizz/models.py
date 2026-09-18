@@ -1040,6 +1040,13 @@ class Answer(models.Model):
 
     class Meta:
         unique_together = ('player_score', 'question')
+        indexes = [
+            models.Index(
+                fields=['question', 'answer'],
+                name='jizz_answer_wrong_pair_idx',
+                condition=models.Q(correct=False),
+            ),
+        ]
 
 
 @receiver(post_save, sender=Answer)

@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.core.cache import cache
 from django.db import transaction
-from django.db.models import Case, When, Value, Prefetch, F, Q
+from django.db.models import Case, Exists, OuterRef, When, Value, Prefetch, F, Q
 from django.db.models.aggregates import Count
 from django.db.models.functions import RowNumber
 from django.db.models.expressions import Window
@@ -469,11 +469,12 @@ class MediaListView(ListAPIView):
                 _rejected_count=Count('reviews', filter=Q(reviews__review_type='rejected')),
                 _not_sure_count=Count('reviews', filter=Q(reviews__review_type='not_sure')),
             )
-            return queryset.order_by('species__id', '-created')
+            return queryset.order_by('species_id', '-created')
         else:
             # fast or full: only unreviewed media
-            reviewed_media_ids = MediaReview.objects.values_list('media_id', flat=True).distinct()
-            queryset = queryset.exclude(id__in=reviewed_media_ids)
+            queryset = queryset.filter(
+                ~Exists(MediaReview.objects.filter(media_id=OuterRef('pk')))
+            )
 
             if level == 'fast':
                 from media.review_stats import get_species_media_review_stats
@@ -485,11 +486,11 @@ class MediaListView(ListAPIView):
                     if row['approved_media'] < 10
                 ]
                 if not species_under_10:
-                    return Media.objects.none().order_by('species__id', '-created')
+                    return Media.objects.none().order_by('species_id', '-created')
                 queryset = queryset.filter(species_id__in=species_under_10)
             # full: no extra filter
 
-        return queryset.order_by('species__id', '-created')
+        return queryset.order_by('species_id', '-created')
 
 
 class ReviewMediaView(ListCreateAPIView):

@@ -1,7 +1,7 @@
 import { ImageSourcePropType } from 'react-native';
 import type { VisualStyle } from '../lib/visualStyle';
 
-export type BirdrMood = 'waiting' | 'success' | 'failed' | 'stressed' | 'noimage';
+export type BirdrMood = 'waiting' | 'success' | 'failed' | 'stressed' | 'noimage' | 'maintenance';
 
 const CLASSIC: Record<BirdrMood, ImageSourcePropType> = {
   waiting: require('../../assets/birdr-waiting.png'),
@@ -9,6 +9,7 @@ const CLASSIC: Record<BirdrMood, ImageSourcePropType> = {
   failed: require('../../assets/birdr-failed.png'),
   stressed: require('../../assets/birdr-stressed.png'),
   noimage: require('../../assets/birdr-no-image.png'),
+  maintenance: require('../../assets/birdr-maintenance.png'),
 };
 
 const STYLISH: Record<BirdrMood, ImageSourcePropType> = {
@@ -17,6 +18,7 @@ const STYLISH: Record<BirdrMood, ImageSourcePropType> = {
   failed: require('../../assets/stylish/birdr-failed.png'),
   stressed: require('../../assets/stylish/birdr-stressed.png'),
   noimage: require('../../assets/stylish/birdr-no-image.png'),
+  maintenance: require('../../assets/stylish/birdr-maintenance.png'),
 };
 
 /** @deprecated Prefer getMoodImage with the current visual style. */

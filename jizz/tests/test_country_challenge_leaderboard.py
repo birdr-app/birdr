@@ -161,3 +161,5 @@ class CountryChallengeLeaderboardTests(TestCase):
 
         journey = BirdrJourney.objects.get(user=user)
         self.assertEqual(journey_player_name(journey), 'Bird User')
+        rows = country_challenge_leaderboard(limit=10)
+        self.assertEqual(rows[0]['player_name'], 'Bird User')

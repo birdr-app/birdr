@@ -5,13 +5,14 @@ import { FormattedMessage } from 'react-intl';
 import AppContext from '../core/app-context';
 import { birdrImage, showsGameArt } from '../user/visual-style';
 
-export type BirdrMood = 'waiting' | 'success' | 'failed' | 'stressed';
+export type BirdrMood = 'waiting' | 'success' | 'failed' | 'stressed' | 'maintenance';
 
 const MOOD_FILES: Record<BirdrMood, string> = {
   waiting: 'birdr-waiting.png',
   success: 'birdr-success.png',
   failed: 'birdr-failed.png',
   stressed: 'birdr-stressed.png',
+  maintenance: 'birdr-maintenance.png',
 };
 
 const pulse = keyframes`

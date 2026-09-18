@@ -37,6 +37,12 @@ describe('getTranslation', () => {
     expect(getTranslation('de', 'community_store_review')).toBe('Im Store bewerten');
   });
 
+  it('translates the maintenance warning', () => {
+    expect(getTranslation('en', 'maintenance_title')).toBe("We'll be back soon");
+    expect(getTranslation('nl', 'maintenance_title')).toBe('We zijn zo terug');
+    expect(getTranslation('es', 'try_again')).toBe('Intentar de nuevo');
+  });
+
   it('uses Italian catalog', () => {
     expect(getTranslation('it', 'cancel')).toBe('Annulla');
     expect(getTranslation('it', 'login')).toBe('Accedi');

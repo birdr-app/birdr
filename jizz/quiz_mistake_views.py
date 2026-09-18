@@ -4,8 +4,8 @@ from django.urls import reverse
 
 from jizz.models import Country
 from jizz.quiz_mistake_stats import (
-    get_confusion_pair_rows,
-    get_species_mistake_rows,
+    cached_confusion_pair_rows,
+    cached_species_mistake_rows,
     min_times_shown_for_filter,
     normalize_country_filter,
     quiz_mistakes_pairs_csv_response,
@@ -46,7 +46,7 @@ def quiz_mistake_species_view(request):
 
     country_code = normalize_country_filter(request.GET.get("country"))
 
-    species_rows = sort_species_rows(get_species_mistake_rows(country_code), species_sort)
+    species_rows = sort_species_rows(cached_species_mistake_rows(country_code), species_sort)
 
     return render(
         request,
@@ -68,7 +68,7 @@ def quiz_mistake_pairs_view(request):
         return quiz_mistakes_pairs_csv_response(request)
 
     country_code = normalize_country_filter(request.GET.get("country"))
-    pair_rows = get_confusion_pair_rows(country_code)
+    pair_rows = cached_confusion_pair_rows(country_code)
 
     return render(
         request,

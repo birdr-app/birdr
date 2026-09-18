@@ -23,6 +23,10 @@ export const translations: Record<string, Record<string, string>> = {
     force_update_message:
       'This version of Birdr is too old to use. Please update to version {minVersion} or newer from the app store.',
     force_update_button: 'Update in store',
+    maintenance_title: "We'll be back soon",
+    maintenance_message:
+      'Birdr is undergoing a bit of maintenance. Please try again in a little while.',
+    try_again: 'Try again',
     update_available_title: 'Update available',
     update_available_message: 'Version {version} is in the store.',
     update_available_button: 'Update',
@@ -732,6 +736,10 @@ export const translations: Record<string, Record<string, string>> = {
     force_update_message:
       'Deze versie van Birdr is te oud. Werk bij naar versie {minVersion} of nieuwer via de app store.',
     force_update_button: 'Bijwerken in store',
+    maintenance_title: 'We zijn zo terug',
+    maintenance_message:
+      'Birdr is even in onderhoud. Probeer het over een paar minuten opnieuw.',
+    try_again: 'Opnieuw proberen',
     update_available_title: 'Update beschikbaar',
     update_available_message: 'Versie {version} staat in de store.',
     update_available_button: 'Bijwerken',

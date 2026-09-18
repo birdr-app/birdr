@@ -12,11 +12,17 @@ class MediaConfig(AppConfig):
         from media.review_stats import invalidate_species_media_review_stats
 
         def _invalidate_review_stats(sender, instance, **kwargs):
+            from jizz.data_review_stats import invalidate_media_review_stats_payload
+
             invalidate_species_media_review_stats()
+            invalidate_media_review_stats_payload()
 
         def _sync_hide_on_delete(sender, instance, **kwargs):
+            from jizz.data_review_stats import invalidate_media_review_stats_payload
+
             sync_media_hide(instance.media_id)
             invalidate_species_media_review_stats()
+            invalidate_media_review_stats_payload()
 
         post_save.connect(
             _invalidate_review_stats,

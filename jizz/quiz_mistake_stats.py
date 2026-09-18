@@ -9,8 +9,9 @@ from collections import defaultdict
 from io import StringIO
 from typing import Any
 
+from django.core.cache import cache
 from django.db.models import Count, F, IntegerField, OuterRef, Q, Subquery
-from django.db.models.functions import Coalesce
+from django.db.models.functions import Coalesce, Greatest, Least
 from django.http import HttpRequest, HttpResponse
 
 from jizz.models import Answer, Country, CountrySpecies, Question, QuestionOption, Species
@@ -30,6 +31,9 @@ USER_MIN_PAIR_WRONG = 2
 # Practice games with at least this many correct answers mark the target as fixed.
 PAIR_PRACTICE_PASS_CORRECT = 18
 SPECIES_PRACTICE_PASS_CORRECT = PAIR_PRACTICE_PASS_CORRECT
+
+# Data-site HTML/CSV; marketing pages keep their own longer TTL.
+MISTAKE_STATS_CACHE_TTL = 15 * 60
 
 
 def _allowed_species_ids_for_country(country_code: str) -> frozenset[int]:
@@ -106,37 +110,32 @@ def get_species_mistake_rows(country_code: str | None = None) -> list[dict[str, 
             answer_id__in=allowed,
         )
 
-    times_shown = {
-        row["answer_id"]: row["c"]
-        for row in answers.values("answer_id").annotate(c=Count("id"))
-    }
-
-    picked_correct = {
-        row["answer_id"]: row["c"]
-        for row in answers.filter(correct=True).values("answer_id").annotate(c=Count("id"))
-    }
-    picked_wrong = {
-        row["answer_id"]: row["c"]
-        for row in answers.filter(correct=False).values("answer_id").annotate(c=Count("id"))
-    }
-
-    ids = set(times_shown) | set(picked_correct) | set(picked_wrong)
-    ids.discard(None)
+    aggregated = list(
+        answers.values("answer_id").annotate(
+            times_shown=Count("id"),
+            correctly_answered=Count("id", filter=Q(correct=True)),
+            wrongly_answered=Count("id", filter=Q(correct=False)),
+        )
+    )
+    ids = {row["answer_id"] for row in aggregated if row["answer_id"] is not None}
     if not ids:
         return []
 
     species_map = Species.objects.in_bulk(ids)
 
     rows: list[dict[str, Any]] = []
-    for sid in ids:
+    for row in aggregated:
+        sid = row["answer_id"]
+        if sid is None:
+            continue
+        ts = row["times_shown"]
+        if ts < min_picks:
+            continue
         sp = species_map.get(sid)
         if sp is None:
             continue
-        ts = times_shown.get(sid, 0)
-        if ts < min_picks:
-            continue
-        cor = picked_correct.get(sid, 0)
-        wr = picked_wrong.get(sid, 0)
+        cor = row["correctly_answered"]
+        wr = row["wrongly_answered"]
         rows.append(
             {
                 "species_id": sid,
@@ -576,7 +575,12 @@ def get_confusion_pair_rows(country_code: str | None = None) -> list[dict[str, A
     (CountrySpecies excludes introduced / uncertain / unknown).
     """
     cc = normalize_country_filter(country_code)
-    pairs = Answer.objects.filter(correct=False).exclude(question__species_id=F("answer_id"))
+    pairs = (
+        Answer.objects.filter(correct=False)
+        .exclude(question__species_id=F("answer_id"))
+        .exclude(question__species_id__isnull=True)
+        .exclude(answer_id__isnull=True)
+    )
     if cc:
         allowed = _allowed_species_ids_for_country(cc)
         if not allowed:
@@ -586,51 +590,48 @@ def get_confusion_pair_rows(country_code: str | None = None) -> list[dict[str, A
             question__species_id__in=allowed,
             answer_id__in=allowed,
         )
-    directed = list(
-        pairs.values("question__species_id", "answer_id").annotate(c=Count("id"))
+    grouped = list(
+        pairs.annotate(
+            low_id=Least("question__species_id", "answer_id"),
+            high_id=Greatest("question__species_id", "answer_id"),
+        )
+        .values("low_id", "high_id")
+        .annotate(
+            total_wrong=Count("id"),
+            when_low_was_target=Count(
+                "id", filter=Q(question__species_id__lt=F("answer_id"))
+            ),
+            when_high_was_target=Count(
+                "id", filter=Q(question__species_id__gt=F("answer_id"))
+            ),
+        )
+        .order_by("-total_wrong")
     )
-
-    pair_map: dict[tuple[int, int], dict[str, Any]] = {}
-
-    for row in directed:
-        target_id = row["question__species_id"]
-        pick_id = row["answer_id"]
-        c = row["c"]
-        low_id, high_id = (target_id, pick_id) if target_id < pick_id else (pick_id, target_id)
-        key = (low_id, high_id)
-        if key not in pair_map:
-            pair_map[key] = {
-                "low_id": low_id,
-                "high_id": high_id,
-                "total_wrong": 0,
-                "when_low_was_target": 0,
-                "when_high_was_target": 0,
-            }
-        bucket = pair_map[key]
-        bucket["total_wrong"] += c
-        if target_id == low_id:
-            bucket["when_low_was_target"] += c
-        else:
-            bucket["when_high_was_target"] += c
-
-    ids = {i for p in pair_map for i in p}
+    ids = {
+        species_id
+        for row in grouped
+        for species_id in (row["low_id"], row["high_id"])
+        if species_id is not None
+    }
     species_map = Species.objects.in_bulk(ids)
 
     rows: list[dict[str, Any]] = []
-    for _key, bucket in pair_map.items():
-        low = species_map.get(bucket["low_id"])
-        high = species_map.get(bucket["high_id"])
+    for row in grouped:
+        low = species_map.get(row["low_id"])
+        high = species_map.get(row["high_id"])
         rows.append(
             {
-                **bucket,
+                "low_id": row["low_id"],
+                "high_id": row["high_id"],
+                "total_wrong": row["total_wrong"],
+                "when_low_was_target": row["when_low_was_target"],
+                "when_high_was_target": row["when_high_was_target"],
                 "low_name": low.name if low else "",
                 "high_name": high.name if high else "",
                 "low_name_latin": low.name_latin if low else "",
                 "high_name_latin": high.name_latin if high else "",
             }
         )
-
-    rows.sort(key=lambda r: r["total_wrong"], reverse=True)
     return rows
 
 
@@ -760,12 +761,38 @@ def render_pairs_mistakes_csv(pair_rows: list[dict[str, Any]]) -> str:
     return buf.getvalue()
 
 
+def _mistake_rows_cache_key(kind: str, country_code: str | None) -> str:
+    return f"quiz-mistakes:{kind}:{(country_code or 'all').lower()}"
+
+
+def cached_species_mistake_rows(country_code: str | None = None) -> list[dict[str, Any]]:
+    cc = normalize_country_filter(country_code)
+    key = _mistake_rows_cache_key("species", cc)
+    cached = cache.get(key)
+    if cached is not None:
+        return cached
+    rows = get_species_mistake_rows(cc)
+    cache.set(key, rows, MISTAKE_STATS_CACHE_TTL)
+    return rows
+
+
+def cached_confusion_pair_rows(country_code: str | None = None) -> list[dict[str, Any]]:
+    cc = normalize_country_filter(country_code)
+    key = _mistake_rows_cache_key("pairs", cc)
+    cached = cache.get(key)
+    if cached is not None:
+        return cached
+    rows = get_confusion_pair_rows(cc)
+    cache.set(key, rows, MISTAKE_STATS_CACHE_TTL)
+    return rows
+
+
 def quiz_mistakes_species_csv_response(request: HttpRequest) -> HttpResponse:
     species_sort = request.GET.get("species_sort", "error_rate")
     if species_sort not in ("error_rate", "times_shown"):
         species_sort = "error_rate"
     country_code = normalize_country_filter(request.GET.get("country"))
-    species_rows = sort_species_rows(get_species_mistake_rows(country_code), species_sort)
+    species_rows = sort_species_rows(cached_species_mistake_rows(country_code), species_sort)
     content = render_species_mistakes_csv(species_rows)
     resp = HttpResponse(content, content_type="text/csv; charset=utf-8")
     fname = "quiz-mistake-species"
@@ -777,7 +804,7 @@ def quiz_mistakes_species_csv_response(request: HttpRequest) -> HttpResponse:
 
 def quiz_mistakes_pairs_csv_response(request: HttpRequest) -> HttpResponse:
     country_code = normalize_country_filter(request.GET.get("country"))
-    pair_rows = get_confusion_pair_rows(country_code)
+    pair_rows = cached_confusion_pair_rows(country_code)
     content = render_pairs_mistakes_csv(pair_rows)
     resp = HttpResponse(content, content_type="text/csv; charset=utf-8")
     fname = "quiz-mistake-pairs"
