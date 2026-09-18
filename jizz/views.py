@@ -476,25 +476,16 @@ class MediaListView(ListAPIView):
             queryset = queryset.exclude(id__in=reviewed_media_ids)
 
             if level == 'fast':
-                # Restrict to species that have < 10 approved media (and at least one unreviewed)
-                unreviewed_species_ids = list(
-                    queryset.values_list('species_id', flat=True).distinct()
-                )
-                if not unreviewed_species_ids:
+                from media.review_stats import get_species_media_review_stats
+
+                stats = get_species_media_review_stats(media_type)
+                species_under_10 = [
+                    species_id
+                    for species_id, row in stats.items()
+                    if row['approved_media'] < 10
+                ]
+                if not species_under_10:
                     return Media.objects.none().order_by('species__id', '-created')
-                species_under_10 = list(
-                    Species.objects.filter(id__in=unreviewed_species_ids)
-                    .filter(media__type=media_type)
-                    .annotate(
-                        approved_count=Count(
-                            'media',
-                            filter=Q(media__type=media_type, media__reviews__review_type='approved'),
-                            distinct=True,
-                        ),
-                    )
-                    .filter(approved_count__lt=10)
-                    .values_list('id', flat=True)
-                )
                 queryset = queryset.filter(species_id__in=species_under_10)
             # full: no extra filter
 
@@ -533,73 +524,49 @@ class SpeciesReviewStatsView(APIView):
     permission_classes = [AllowAny]
 
     def get(self, request):
+        from media.review_stats import (
+            attach_review_stats,
+            get_species_media_review_stats,
+            summary_from_stats,
+        )
+
         country_code = request.query_params.get('country')
         media_type = request.query_params.get('type', 'image')
+        language = (request.query_params.get('language') or '').strip()
 
-        qs = (
-            Species.objects
-            .filter(media__type=media_type)
-            .distinct()
-            .annotate(
-                total_media=Count('media', filter=Q(media__type=media_type), distinct=True),
-                media_with_review=Count(
-                    'media',
-                    filter=Q(media__type=media_type, media__reviews__id__isnull=False),
-                    distinct=True,
-                ),
-                approved_media=Count(
-                    'media',
-                    filter=Q(media__type=media_type, media__reviews__review_type='approved'),
-                    distinct=True,
-                ),
-                rejected_media=Count(
-                    'media',
-                    filter=Q(media__type=media_type, media__reviews__review_type='rejected'),
-                    distinct=True,
-                ),
-                not_sure_media=Count(
-                    'media',
-                    filter=Q(media__type=media_type, media__reviews__review_type='not_sure'),
-                    distinct=True,
-                ),
-            )
-            .filter(total_media__gt=0)
-            .order_by('id')
-        )
+        stats = get_species_media_review_stats(media_type)
         if country_code:
-            qs = qs.filter(
-                countryspecies__country__code=country_code.upper(),
-                countryspecies__status__in=['native', 'endemic', 'rare'],
-            ).distinct()
+            allowed = set(
+                CountrySpecies.objects.filter(
+                    country__code=country_code.upper(),
+                    status__in=['native', 'endemic', 'rare'],
+                ).values_list('species_id', flat=True)
+            )
+            stats = {species_id: row for species_id, row in stats.items() if species_id in allowed}
 
-        species_list = list(qs)
-        total_species = len(species_list)
-        not_reviewed = sum(1 for s in species_list if s.media_with_review == 0)
-        fully_reviewed = sum(1 for s in species_list if s.media_with_review >= s.total_media)
-        # reviewed = at least 10 approved, or fully reviewed
-        reviewed = sum(
-            1 for s in species_list
-            if s.approved_media >= 10 or s.media_with_review >= s.total_media
-        )
-        # partly_reviewed = has some reviews but < 10 approved and not fully reviewed
-        partly_reviewed = sum(
-            1 for s in species_list
-            if 0 < s.media_with_review < s.total_media and s.approved_media < 10
-        )
-
+        species_ids = [
+            species_id
+            for species_id, row in stats.items()
+            if row['total_media'] > 0 or row['rejected_media'] > 0
+        ]
+        species_qs = Species.objects.filter(id__in=species_ids).order_by('id')
+        lang = language.lower().split('-')[0].split('_')[0] if language else ''
+        if language and lang != 'la':
+            species_qs = species_qs.prefetch_related(
+                Prefetch(
+                    'speciesname_set',
+                    queryset=SpeciesName.objects.filter(language_id=language),
+                    to_attr='_translated_names',
+                )
+            )
+        species_list = attach_review_stats(list(species_qs), stats)
         serializer = SpeciesReviewStatsSerializer(
             species_list,
             many=True,
             context={'request': request},
         )
         return Response({
-            'summary': {
-                'total_species': total_species,
-                'not_reviewed': not_reviewed,
-                'partly_reviewed': partly_reviewed,
-                'reviewed': reviewed,
-                'fully_reviewed': fully_reviewed,
-            },
+            'summary': summary_from_stats(stats),
             'species': serializer.data,
         })
 
@@ -612,88 +579,81 @@ class MediaReviewSpeciesListView(APIView):
     pagination_class = SpeciesReviewPagination
 
     def get(self, request):
-        from jizz.models import CountrySpecies
+        from media.review_stats import (
+            get_species_media_review_stats,
+            species_ids_for_review_level,
+        )
 
         level = request.query_params.get('level', 'fast')
         media_type = request.query_params.get('type', 'image')
         country_code = request.query_params.get('country')
         species_id_param = request.query_params.get('species')
+        language = (request.query_params.get('language') or '').strip()
 
-        qs = (
-            Species.objects
-            .filter(media__type=media_type)
-            .distinct()
-            .annotate(
-                total_media=Count('media', filter=Q(media__type=media_type), distinct=True),
-                media_with_review=Count(
-                    'media',
-                    filter=Q(media__type=media_type, media__reviews__id__isnull=False),
-                    distinct=True,
-                ),
-                approved_media=Count(
-                    'media',
-                    filter=Q(media__type=media_type, media__reviews__review_type='approved'),
-                    distinct=True,
-                ),
-                rejected_media=Count(
-                    'media',
-                    filter=Q(media__type=media_type, media__reviews__review_type='rejected'),
-                    distinct=True,
-                ),
-                not_sure_media=Count(
-                    'media',
-                    filter=Q(media__type=media_type, media__reviews__review_type='not_sure'),
-                    distinct=True,
-                ),
-            )
-            .filter(total_media__gt=0)
-            .order_by('id')
-        )
+        stats = get_species_media_review_stats(media_type)
         if country_code:
-            country_species_ids = CountrySpecies.objects.exclude(
-                status__in=['introduced', 'extirpated', 'uncertain', 'unknown']
-            ).filter(country__code=country_code.upper()).values_list('species_id', flat=True)
-            qs = qs.filter(id__in=country_species_ids)
+            country_species_ids = set(
+                CountrySpecies.objects.exclude(
+                    status__in=['introduced', 'extirpated', 'uncertain', 'unknown']
+                ).filter(country__code=country_code.upper()).values_list('species_id', flat=True)
+            )
+            stats = {
+                species_id: row
+                for species_id, row in stats.items()
+                if species_id in country_species_ids
+            }
+
+        species_ids = species_ids_for_review_level(stats, level)
         if species_id_param:
             try:
-                qs = qs.filter(id=int(species_id_param))
+                only_id = int(species_id_param)
             except (ValueError, TypeError):
-                pass
-
-        if level == 'fast':
-            qs = qs.filter(approved_media__lt=10, media_with_review__lt=F('total_media'))
-        elif level == 'full':
-            qs = qs.filter(media_with_review__lt=F('total_media'))
+                only_id = None
+            if only_id is not None:
+                species_ids = [species_id for species_id in species_ids if species_id == only_id]
 
         paginator = self.pagination_class()
-        page = paginator.paginate_queryset(qs, request, view=self)
-        if page is None:
+        page_ids = paginator.paginate_queryset(species_ids, request, view=self)
+        if page_ids is None:
             return paginator.get_paginated_response([])
 
-        species_ids = [s.id for s in page]
+        species_qs = Species.objects.filter(id__in=page_ids)
+        lang = language.lower().split('-')[0].split('_')[0] if language else ''
+        if language and lang != 'la':
+            species_qs = species_qs.prefetch_related(
+                Prefetch(
+                    'speciesname_set',
+                    queryset=SpeciesName.objects.filter(language_id=language),
+                    to_attr='_translated_names',
+                )
+            )
+        species_by_id = {species.id: species for species in species_qs}
+        page_species = [species_by_id[species_id] for species_id in page_ids if species_id in species_by_id]
+
         media_qs = (
             Media.objects
-            .filter(species_id__in=species_ids, type=media_type, hide=False)
+            .filter(species_id__in=page_ids, type=media_type, hide=False)
             .prefetch_related('reviews')
             .select_related('first_assertion_prediction')
             .order_by('species_id', '-created')
         )
         media_by_species = {}
-        for m in media_qs:
-            media_by_species.setdefault(m.species_id, []).append(m)
+        for media in media_qs:
+            media_by_species.setdefault(media.species_id, []).append(media)
 
         results = []
-        for s in page:
-            media_list = media_by_species.get(s.id, [])
-            unreviewed = s.total_media - s.media_with_review
+        for species in page_species:
+            row = stats.get(species.id) or {}
+            total_media = row.get('total_media', 0)
+            media_with_review = row.get('media_with_review', 0)
             results.append({
-                'species': s,
-                'total_media': s.total_media,
-                'unreviewed': unreviewed,
-                'approved': s.approved_media,
-                'rejected': s.rejected_media,
-                'not_sure': s.not_sure_media,
-                'media': media_list,
+                'species': species,
+                'total_media': total_media,
+                'unreviewed': total_media - media_with_review,
+                'approved': row.get('approved_media', 0),
+                'rejected': row.get('rejected_media', 0),
+                'not_sure': row.get('not_sure_media', 0),
+                'media': media_by_species.get(species.id, []),
             })
         serializer = SpeciesWithMediaReviewSerializer(
             results, many=True, context={'request': request}
