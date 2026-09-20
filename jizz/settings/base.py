@@ -396,7 +396,10 @@ SPECIES_ILLUSTRATION_QUALITY = os.environ.get('SPECIES_ILLUSTRATION_QUALITY', 'l
 SPECIES_ILLUSTRATION_OUTPUT_FORMAT = os.environ.get('SPECIES_ILLUSTRATION_OUTPUT_FORMAT', 'png')
 
 # Species comparison text (OpenAI Chat Completions, cached on SpeciesComparison).
-COMPARISON_AI_MODEL = os.environ.get('COMPARISON_AI_MODEL', 'gpt-4o')
+COMPARISON_AI_MODEL = os.environ.get(
+    'COMPARISON_AI_MODEL',
+    'gpt-5.6-luna',
+)
 COMPARISON_AI_PROMPT_VERSION = os.environ.get('COMPARISON_AI_PROMPT_VERSION', 'v3')
 
 # Update blog auto-translation (OpenAI Chat Completions, cached on UpdateTranslation).
