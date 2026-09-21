@@ -17,7 +17,7 @@ npm install
 
 - **Development:** `npm start` then press `i` for iOS or `a` for Android in the terminal, or scan the QR code with Expo Go.
 - **Android:** `npm run android` (generates native project if needed). This uses `run-android-with-node22.sh` so Node 22 is on PATH when Gradle runs (required for autolinking). If you get *Process 'command 'node'' finished with non-zero exit value 1*, run `npm run android` again (the script stops the Gradle daemon so the next run uses Node 22). To run without the wrapper: `npm run android:expo` (ensure `nvm use 22` and `cd android && ./gradlew --stop` first).
-- **iOS:** `npm run ios` (requires Mac and Xcode).
+- **iOS:** `npm run ios` (requires Mac and Xcode). Uses a Device Hub–aware Expo CLI on Xcode 27; extra args go through (`npm run ios -- --device "iPad van Loek"`).
 
 ### Opening the iOS project in Xcode
 
@@ -49,7 +49,7 @@ To run on a **physical device** (e.g. connected iPad):
 2. **iPad and Mac on the same Wi‑Fi** so the app can load the JS bundle from Metro.
 3. In another terminal, build and run on the device:
    ```bash
-   cd mobile && nvm use 22 && npx expo run:ios --device "iPad van Loek"
+   cd mobile && nvm use 22 && npm run ios -- --device "iPad van Loek"
    ```
    Use your device name (e.g. from Xcode → Window → Devices) or leave off `"iPad van Loek"` to pick from a list.
 4. **Trust the developer** on the device: Settings → General → VPN & Device Management → tap your developer profile → Trust.
