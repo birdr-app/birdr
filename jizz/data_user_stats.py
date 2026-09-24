@@ -174,9 +174,10 @@ def media_reviews_per_user_rows() -> list[dict]:
             }
         )
 
-    rows.sort(key=lambda row: (-row['total'], row['name'].lower()))
-    return _merge_rows_by_name(
+    merged = _merge_rows_by_name(
         rows,
         count_key='total',
         sum_keys=('approved', 'rejected', 'not_sure'),
     )
+    merged.sort(key=lambda row: (-row['approved'], -row['total'], row['name'].lower()))
+    return merged

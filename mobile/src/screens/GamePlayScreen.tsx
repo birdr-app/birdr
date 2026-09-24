@@ -619,7 +619,7 @@ export function GamePlayScreen() {
     <View style={styles.playRoot}>
     <ScrollView style={styles.container} contentContainerStyle={styles.content} testID="gamePlay.screen">
       <FlagMediaModal
-        visible={!flockSlug && game?.game_type !== 'flock_challenge' && flagModalVisible}
+        visible={flagModalVisible}
         onClose={() => { setFlagModalVisible(false); setFlagMediaInfo(null); }}
         media={flagMediaInfo}
         playerToken={(player as any)?.token}
@@ -691,8 +691,8 @@ export function GamePlayScreen() {
         onPlaySound={playSound}
         soundPlaying={soundPlaying}
         pulsatingStyle={pulsatingStyle}
-        onFlagPress={flockSlug || game?.game_type === 'flock_challenge' ? undefined : openFlagModal}
-        flagLabel={flockSlug || game?.game_type === 'flock_challenge' ? undefined : t('this_seems_wrong')}
+        onFlagPress={openFlagModal}
+        flagLabel={t('this_seems_wrong')}
         showLoadingPlaceholder={!!(showPlaceholder && !currentMedia)}
         loadingLabel={t('loading')}
         imageFailedLabel={currentMedia ? t('image_failed_to_load') : ''}
@@ -890,9 +890,7 @@ export function GamePlayScreen() {
         <Text style={styles.muted}>Free answer not implemented.</Text>
       )}
 
-      {!(flockSlug || game?.game_type === 'flock_challenge') ? (
-        <FlagMediaLink onPress={openFlagModal} label={t('this_seems_wrong')} />
-      ) : null}
+      <FlagMediaLink onPress={openFlagModal} label={t('this_seems_wrong')} />
 
 
       {isPracticeGame &&

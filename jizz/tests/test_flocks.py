@@ -1255,6 +1255,28 @@ class PregeneratedGameTests(TestCase):
         )
         self.assertFalse(game.can_accept_start_game())
 
+    def test_flagging_swaps_locked_media_on_flock_question(self):
+        game, items = self._fill_game(length=1)
+        question = game.questions.get()
+        original_id = items[0].media_id
+        alternate = Media.objects.create(
+            species_id=question.species_id,
+            type='image',
+            url='https://example.com/pg-alt.jpg',
+            source='test',
+        )
+        PlayerScore.objects.get_or_create(player=self.host, game=game)
+        client = APIClient()
+        response = client.post(
+            f'/api/questions/{question.id}/next-media/',
+            {'player_token': self.host.token, 'excluded_media_id': original_id},
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['images'][0]['id'], alternate.id)
+        question.refresh_from_db()
+        self.assertEqual(question.media_id, alternate.id)
+
     def test_play_serializer_uses_locked_media(self):
         from jizz.question_play import (
             load_question_for_play,

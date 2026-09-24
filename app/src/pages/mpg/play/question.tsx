@@ -299,11 +299,11 @@ export const QuestionComponent = () => {
   }
 
 
-  const flag = !isFlockChallenge ? (
+  const flag = (
     <Link onClick={flagMedia} fontSize={'sm'} color={'error.700'}>
       🚩 <FormattedMessage id={"this seems wrong"} defaultMessage={"This seems wrong"}/>
     </Link>
-  ) : null
+  )
 
   const nextButton = (
     <Box>
@@ -354,34 +354,32 @@ export const QuestionComponent = () => {
   return (
     <>
       <SpeciesModal species={showSpecies} onClose={onSpeciesClose} isOpen={isSpeciesOpen}/>
-      {!isFlockChallenge ? (
-        <FlagMedia
-          isOpen={isOpen}
-          onClose={() => {
-            setFlagMediaInfo(null)
-            onClose()
-          }}
-          media={flagMediaInfo}
-          useMediaReview
-          onSuccess={async () => {
-            if (!question?.id || !player?.token) return
-            const excludedId = flagMediaInfo?.id
-            try {
-              const patch = await postQuestionNextMedia(
-                question.id,
-                player.token,
-                excludedId
-              )
-              patchQuestionMedia(patch)
-              setMediaIndex(null)
-              mediaPostedKey.current = null
-              setMediaReady(false)
-            } catch {
-              // No alternate media or request failed — keep current question state
-            }
-          }}
-        />
-      ) : null}
+      <FlagMedia
+        isOpen={isOpen}
+        onClose={() => {
+          setFlagMediaInfo(null)
+          onClose()
+        }}
+        media={flagMediaInfo}
+        useMediaReview
+        onSuccess={async () => {
+          if (!question?.id || !player?.token) return
+          const excludedId = flagMediaInfo?.id
+          try {
+            const patch = await postQuestionNextMedia(
+              question.id,
+              player.token,
+              excludedId
+            )
+            patchQuestionMedia(patch)
+            setMediaIndex(null)
+            mediaPostedKey.current = null
+            setMediaReady(false)
+          } catch {
+            // No alternate media or request failed — keep current question state
+          }
+        }}
+      />
       {isPracticeGame ? (
         <Box mb={3}>
           <Flex justify="space-between" align="flex-start" gap={3} mb={2}>

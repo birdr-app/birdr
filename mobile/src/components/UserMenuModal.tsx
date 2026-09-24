@@ -180,6 +180,16 @@ export function UserMenuModal() {
                   <Text style={styles.menuLabel}>{t(item.labelKey)}</Text>
                 </TouchableOpacity>
               ))}
+              {isAuthenticated && (
+                <TouchableOpacity style={styles.menuItem} onPress={() => handleItem('MediaReview')}>
+                  <View style={styles.menuLabelRow}>
+                    <Text style={styles.menuLabel}>{t('review_media')}</Text>
+                    <View style={styles.newBadge}>
+                      <Text style={styles.newBadgeText}>{t('menu_new')}</Text>
+                    </View>
+                  </View>
+                </TouchableOpacity>
+              )}
               <View style={styles.separator} />
               {isAuthenticated && (
                 <TouchableOpacity
@@ -246,6 +256,24 @@ const styles = StyleSheet.create({
   menuLabel: {
     fontSize: 17,
     color: colors.primary[800],
+  },
+  menuLabelRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  newBadge: {
+    backgroundColor: colors.primary[500],
+    borderRadius: 4,
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+  },
+  newBadgeText: {
+    color: '#fff',
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 0.4,
+    textTransform: 'uppercase',
   },
   logout: {
     marginTop: 8,

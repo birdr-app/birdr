@@ -184,9 +184,16 @@ def advance_question_media_after_exclusion(
     media_type = {'images': 'image', 'video': 'video', 'audio': 'audio'}.get(
         game.media, 'image'
     )
-    # Mixed-media games (flock Club Mix) lock type on the question itself.
+    locked = None
     if question.media_id and question.media is not None:
-        media_type = question.media.type
+        locked = question.media
+    elif game.game_type == Game.GAME_TYPE_FLOCK_CHALLENGE or game.questions_pregenerated:
+        from jizz.flock_challenge import locked_media_for_question
+
+        locked = locked_media_for_question(question)
+    # Mixed-media games (flock Club Mix) lock type on the question itself.
+    if locked is not None:
+        media_type = locked.type
     full_eligible = fetch_eligible_media_for_species(question.species_id, media_type)
     if not full_eligible:
         return None
@@ -196,6 +203,22 @@ def advance_question_media_after_exclusion(
         remaining = [m for m in full_eligible if m.id != excluded_media_id]
     if not remaining:
         return None
+
+    if locked is not None:
+        if excluded_media_id and locked.id == excluded_media_id:
+            next_media = remaining[0]
+        else:
+            try:
+                pos_in_remaining = next(
+                    i for i, item in enumerate(remaining) if item.id == locked.id
+                )
+                next_media = remaining[(pos_in_remaining + 1) % len(remaining)]
+            except StopIteration:
+                next_media = remaining[0]
+        question.media = next_media
+        question.number = full_eligible.index(next_media)
+        question.save(update_fields=['media', 'number'])
+        return question
 
     if len(remaining) == 1:
         question.number = full_eligible.index(remaining[0])

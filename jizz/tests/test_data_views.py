@@ -430,6 +430,49 @@ class MostReviewsViewsTests(TestCase):
         self.assertEqual(by_name["Guest Reviewer"]["not_sure"], 1)
         self.assertLess(rows.index(by_name["Reviewer"]), rows.index(by_name["Guest Reviewer"]))
 
+    def test_reviews_ordered_by_approved_then_total(self):
+        busy = Player.objects.create(name="Busy Rejector", language="en")
+        careful = Player.objects.create(name="Careful Approver", language="en")
+        tied = Player.objects.create(name="Tied Approver", language="en")
+        for i in range(4):
+            MediaReview.objects.create(
+                media=self._media(f"busy-{i}"),
+                player=busy,
+                review_type=MediaReview.REJECTED,
+            )
+        MediaReview.objects.create(
+            media=self._media("busy-ok"),
+            player=busy,
+            review_type=MediaReview.APPROVED,
+        )
+        for i in range(2):
+            MediaReview.objects.create(
+                media=self._media(f"careful-{i}"),
+                player=careful,
+                review_type=MediaReview.APPROVED,
+            )
+        for i in range(2):
+            MediaReview.objects.create(
+                media=self._media(f"tied-{i}"),
+                player=tied,
+                review_type=MediaReview.APPROVED,
+            )
+        MediaReview.objects.create(
+            media=self._media("tied-extra"),
+            player=tied,
+            review_type=MediaReview.NOT_SURE,
+        )
+        rows = media_reviews_per_user_rows()
+        by_name = {row["name"]: row for row in rows}
+        self.assertEqual(by_name["Busy Rejector"]["total"], 5)
+        self.assertEqual(by_name["Busy Rejector"]["approved"], 1)
+        self.assertEqual(by_name["Careful Approver"]["approved"], 2)
+        self.assertEqual(by_name["Tied Approver"]["approved"], 2)
+        self.assertEqual(by_name["Tied Approver"]["total"], 3)
+        names = [row["name"] for row in rows]
+        self.assertLess(names.index("Careful Approver"), names.index("Busy Rejector"))
+        self.assertLess(names.index("Tied Approver"), names.index("Careful Approver"))
+
 
 class ReviewCoverageStatsTests(TestCase):
     def setUp(self):
