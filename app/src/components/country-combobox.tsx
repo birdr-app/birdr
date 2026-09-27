@@ -9,6 +9,7 @@ import { checklistSelectStyles } from "./checklist/checklist-select-styles";
 import {
   filterPickerCountries,
   groupCountriesForPicker,
+  isAggregate,
   isStatePickerRegion,
   type RegionCountry,
 } from "../data/country-groups";
@@ -42,6 +43,8 @@ interface CountryComboboxProps {
    * Search still matches “Massachusetts” / “US-MA”. Default true.
    */
   hideNestedStatesUntilSearch?: boolean;
+  /** Region menu: aggregates, then a divider, then states. */
+  groupRegions?: boolean;
 }
 
 const defaultStyles: StylesConfig<OptionType, false, GroupedOption> = {
@@ -111,6 +114,7 @@ export const CountryCombobox = ({
   size = 'default',
   excludeRegionCodes = false,
   hideNestedStatesUntilSearch = true,
+  groupRegions = false,
 }: CountryComboboxProps) => {
   const intl = useIntl();
   const { appLanguage } = useContext(AppContext);
@@ -119,10 +123,42 @@ export const CountryCombobox = ({
 
   const groupedOptions = useMemo(() => {
     const source = filterPickerCountries(countries, excludeRegionCodes);
-    const { groups, standalone } = groupCountriesForPicker(source);
     const collator = (a: string, b: string) =>
       a.localeCompare(b, undefined, { sensitivity: "base" });
 
+    const blocks: GroupedOption[] = [];
+    if (allowEmpty) {
+      blocks.push({
+        label: "",
+        options: [
+          {
+            label: emptyLabel ?? intl.formatMessage({ id: "all countries", defaultMessage: "All countries" }),
+            value: "",
+            original: { code: "", name: "" },
+            searchText: (emptyLabel ?? "all countries").toLowerCase(),
+          },
+        ],
+      });
+    }
+
+    if (groupRegions) {
+      const aggregates = source.filter(isAggregate).map((country) => toOption(country, locale)).sort((a, b) => collator(a.label, b.label));
+      const subnationals = source.filter((country) => !isAggregate(country)).map((country) => toOption(country, locale)).sort((a, b) => collator(a.label, b.label));
+      const options = [...aggregates];
+      if (aggregates.length > 0 && subnationals.length > 0) {
+        options.push({
+          label: "",
+          value: "__divider",
+          original: { code: "__divider", name: "" },
+          searchText: "",
+        });
+      }
+      options.push(...subnationals);
+      if (options.length) blocks.push({ label: "", options });
+      return blocks;
+    }
+
+    const { groups, standalone } = groupCountriesForPicker(source);
     const groupBlocks: GroupedOption[] = groups
       .map((group) => {
         const parentOption = toOption(group.parent, locale);
@@ -143,20 +179,6 @@ export const CountryCombobox = ({
     const worldFirst = standaloneOptions.filter((o) => o.value.toLowerCase() === "world");
     const restStandalone = standaloneOptions.filter((o) => o.value.toLowerCase() !== "world");
 
-    const blocks: GroupedOption[] = [];
-    if (allowEmpty) {
-      blocks.push({
-        label: "",
-        options: [
-          {
-            label: emptyLabel ?? intl.formatMessage({ id: "all countries", defaultMessage: "All countries" }),
-            value: "",
-            original: { code: "", name: "" },
-            searchText: (emptyLabel ?? "all countries").toLowerCase(),
-          },
-        ],
-      });
-    }
     if (worldFirst.length) {
       blocks.push({ label: "", options: worldFirst });
     }
@@ -172,7 +194,7 @@ export const CountryCombobox = ({
       blocks.push(item.block);
     }
     return blocks;
-  }, [countries, locale, allowEmpty, emptyLabel, intl, excludeRegionCodes]);
+  }, [countries, locale, allowEmpty, emptyLabel, intl, excludeRegionCodes, groupRegions]);
 
   const selectedOption = useMemo(
     () => flattenOptions(groupedOptions).find((o) => o.value === (value?.code ?? "")) ?? null,
@@ -180,6 +202,7 @@ export const CountryCombobox = ({
   );
 
   const handleChange = (option: OptionType | null) => {
+    if (option?.value === "__divider") return;
     if (option?.original && option.original.code) {
       onChange(option.original);
     } else if (allowEmpty) {
@@ -188,6 +211,7 @@ export const CountryCombobox = ({
   };
 
   const filterOption = (option: { data: OptionType }, rawInput: string) => {
+    if (option.data.value === "__divider") return !rawInput.trim();
     const q = rawInput.trim().toLowerCase();
     if (!q) {
       if (hideNestedStatesUntilSearch && isStatePickerRegion(option.data.original)) {
@@ -223,7 +247,22 @@ export const CountryCombobox = ({
         noOptionsMessage={() =>
           intl.formatMessage({ id: "no options found", defaultMessage: "No options found" })
         }
-        styles={styles}
+        isOptionDisabled={(option) => option.value === "__divider"}
+        styles={{
+          ...styles,
+          option: (provided, state) => ({
+            ...(typeof styles.option === "function" ? styles.option(provided, state) : provided),
+            ...(state.data.value === "__divider"
+              ? {
+                  minHeight: 1,
+                  padding: 0,
+                  margin: "6px 8px",
+                  background: "var(--chakra-colors-primary-200, #d4b88a)",
+                  cursor: "default",
+                }
+              : {}),
+          }),
+        }}
       />
     </Box>
   );

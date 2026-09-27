@@ -21,9 +21,12 @@ export function filterPickerCountries<T extends RegionCountry>(
   );
 }
 
+export function isAggregate<T extends RegionCountry>(country: T): boolean {
+  return (country.kind || '') === 'aggregate';
+}
+
 export function isConvenienceTopLevel<T extends RegionCountry>(country: T): boolean {
-  if (TOP_LEVEL_SUBNATIONAL.has(country.code)) return true;
-  return (country.kind || '') === 'aggregate' && (country.parent || '') === 'US';
+  return TOP_LEVEL_SUBNATIONAL.has(country.code);
 }
 
 export function isStatePickerRegion<T extends RegionCountry>(country: T): boolean {
@@ -40,6 +43,7 @@ export function statePickerParentCode<T extends RegionCountry>(
 ): string | null {
   if (!country?.code) return null;
   if (STATE_PICKER_PARENTS.has(country.code)) return country.code;
+  if (isAggregate(country) && country.parent) return country.parent;
   if (isStatePickerRegion(country)) return country.parent || null;
   return null;
 }
@@ -49,6 +53,21 @@ export function statesForParent<T extends RegionCountry>(
   parentCode: string
 ): T[] {
   return countries.filter((country) => country.parent === parentCode && isStatePickerRegion(country));
+}
+
+/** Aggregates first, then states. Aggregates are not listed in the country menu. */
+export function regionsForParent<T extends RegionCountry>(
+  countries: T[],
+  parentCode: string
+): { aggregates: T[]; subnationals: T[] } {
+  const aggregates: T[] = [];
+  const subnationals: T[] = [];
+  for (const country of countries) {
+    if (country.parent !== parentCode) continue;
+    if (isAggregate(country)) aggregates.push(country);
+    else if (isStatePickerRegion(country)) subnationals.push(country);
+  }
+  return { aggregates, subnationals };
 }
 
 export type CountryPickerGroup<T extends RegionCountry> = {
@@ -62,6 +81,7 @@ export function groupCountriesForPicker<T extends RegionCountry>(
   const byCode = new Map(countries.map((country) => [country.code, country]));
   const childrenByParent = new Map<string, T[]>();
   for (const country of countries) {
+    if (isAggregate(country)) continue;
     const parentCode = country.parent || '';
     if (!parentCode || !byCode.has(parentCode)) continue;
     if (isConvenienceTopLevel(country)) continue;
@@ -83,7 +103,10 @@ export function groupCountriesForPicker<T extends RegionCountry>(
     });
   }
   const standalone = countries.filter(
-    (country) => !groupedParentCodes.has(country.code) && !childCodes.has(country.code)
+    (country) =>
+      !isAggregate(country) &&
+      !groupedParentCodes.has(country.code) &&
+      !childCodes.has(country.code)
   );
   return { groups, standalone };
 }

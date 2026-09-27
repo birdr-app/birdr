@@ -5,9 +5,9 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { UseCountries } from "../user/use-countries";
 import CountryCombobox from "./country-combobox";
 import {
-  isStatePickerRegion,
+  isAggregate,
+  regionsForParent,
   statePickerParentCode,
-  statesForParent,
 } from "../data/country-groups";
 
 const SelectCountry = () => {
@@ -42,9 +42,13 @@ const SelectCountry = () => {
     () => (parentCode ? countries.find((c) => c.code === parentCode) : undefined),
     [countries, parentCode]
   );
-  const regionCountries = useMemo(
-    () => (parentCode ? statesForParent(countries, parentCode) : []),
+  const regionSections = useMemo(
+    () => (parentCode ? regionsForParent(countries, parentCode) : { aggregates: [], subnationals: [] }),
     [countries, parentCode]
+  );
+  const regionCountries = useMemo(
+    () => [...regionSections.aggregates, ...regionSections.subnationals],
+    [regionSections]
   );
 
   return (
@@ -54,7 +58,7 @@ const SelectCountry = () => {
       </Heading>
       <CountryCombobox
         countries={countries}
-        value={country ?? null}
+        value={parentCountry ?? country ?? null}
         onChange={(c) => c && setCountry(c)}
         excludeRegionCodes
       />
@@ -65,12 +69,13 @@ const SelectCountry = () => {
           </Heading>
           <CountryCombobox
             countries={regionCountries}
-            value={country && isStatePickerRegion(country) ? country : null}
+            value={country && (isAggregate(country) || country.code !== parentCountry.code) ? country : null}
             onChange={(c) => setCountry(c || parentCountry)}
             allowEmpty
             emptyLabel={intl.formatMessage({ id: "all_regions", defaultMessage: "All" })}
             excludeRegionCodes={false}
             hideNestedStatesUntilSearch={false}
+            groupRegions
           />
         </Box>
       ) : null}

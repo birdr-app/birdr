@@ -62,6 +62,16 @@ class VisibilityFilter(admin.SimpleListFilter):
             ('all', 'All'),
         )
 
+    def choices(self, changelist):
+        # Skip Django's implicit "All" (no param) choice: no param means "visible" here.
+        current = self.value() or 'visible'
+        for lookup, title in self.lookup_choices:
+            yield {
+                'selected': current == lookup,
+                'query_string': changelist.get_query_string({self.parameter_name: lookup}),
+                'display': title,
+            }
+
     def queryset(self, request, queryset):
         value = self.value()
         if value == 'hidden':
@@ -98,7 +108,7 @@ class ReviewStatusFilter(admin.SimpleListFilter):
         has_rejected = Exists(
             MediaReview.objects.filter(
                 media_id=OuterRef('pk'),
-                review_type__in=[MediaReview.REJECTED, MediaReview.NOT_SURE],
+                review_type=MediaReview.REJECTED,
             )
         )
 

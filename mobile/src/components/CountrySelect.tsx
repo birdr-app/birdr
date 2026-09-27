@@ -16,7 +16,7 @@ import { useTranslation } from '../i18n/TranslationContext';
 import { getCountryDisplayName } from '../i18n/countryNames';
 import { colors } from '../theme';
 import { AccessibleSheetModal } from './AccessibleSheetModal';
-import { filterPickerCountries, groupCountriesForPicker, isStatePickerRegion, statePickerParentCode, statesForParent } from '../lib/countryGroups';
+import { filterPickerCountries, groupCountriesForPicker, isAggregate, isStatePickerRegion, regionsForParent, statePickerParentCode } from '../lib/countryGroups';
 
 export type CountrySelectProps = {
   value: Country | null;
@@ -40,12 +40,15 @@ export type CountrySelectProps = {
     label: string;
     value: Country | null;
   }) => React.ReactNode;
-  /** After picking US/CA/AU/MX, show an All / state control. */
+  /** After picking US/CA/AU/MX, show an All / region control. */
   showStatePicker?: boolean;
+  /** Region menu: aggregates, then a divider, then states. */
+  groupRegions?: boolean;
 };
 
 type ListRow =
   | { type: 'header'; key: string; label: string }
+  | { type: 'divider'; key: string }
   | { type: 'item'; key: string; country: Country; indented?: boolean };
 
 /**
@@ -67,6 +70,7 @@ export function CountrySelect({
   buttonTextStyle,
   renderTrigger,
   showStatePicker = false,
+  groupRegions = false,
 }: CountrySelectProps) {
   const { t, locale } = useTranslation();
   const [loadedCountries, setLoadedCountries] = useState<Country[]>([]);
@@ -140,6 +144,26 @@ export function CountrySelect({
       }
       return rows;
     }
+    if (groupRegions) {
+      const byName = (a: Country, b: Country) =>
+        getCountryDisplayName(a, locale).localeCompare(
+          getCountryDisplayName(b, locale),
+          undefined,
+          { sensitivity: 'base' }
+        );
+      const aggregates = countries.filter(isAggregate).sort(byName);
+      const subnationals = countries.filter((country) => !isAggregate(country)).sort(byName);
+      for (const country of aggregates) {
+        rows.push({ type: 'item', key: country.code, country });
+      }
+      if (aggregates.length > 0 && subnationals.length > 0) {
+        rows.push({ type: 'divider', key: 'region-divider' });
+      }
+      for (const country of subnationals) {
+        rows.push({ type: 'item', key: country.code, country });
+      }
+      return rows;
+    }
     const { groups, standalone } = groupCountriesForPicker(countries);
     const collator = (a: string, b: string) =>
       a.localeCompare(b, undefined, { sensitivity: 'base' });
@@ -191,10 +215,20 @@ export function CountrySelect({
       rows.push(...item.rows);
     }
     return rows;
-  }, [allowEmpty, countries, emptyLabel, locale, search, t]);
+  }, [allowEmpty, countries, emptyLabel, groupRegions, locale, search, t]);
 
-  const displayLabel = value
-    ? getCountryDisplayName(value, locale)
+  const regionParentCode = showStatePicker ? statePickerParentCode(value) : null;
+  const regionParent = regionParentCode
+    ? countries.find((country) => country.code === regionParentCode)
+    : undefined;
+  const regionSections = regionParentCode ? regionsForParent(countries, regionParentCode) : null;
+  const regionCountries = regionSections
+    ? [...regionSections.aggregates, ...regionSections.subnationals]
+    : [];
+  const shownCountry = showStatePicker && regionParent ? regionParent : value;
+
+  const displayLabel = shownCountry
+    ? getCountryDisplayName(shownCountry, locale)
     : allowEmpty
       ? emptyLabel ?? t('all_countries')
       : placeholder ?? t('select_country_dots');
@@ -212,14 +246,6 @@ export function CountrySelect({
     }
     closeModal();
   };
-
-  const regionParentCode = showStatePicker ? statePickerParentCode(value) : null;
-  const regionParent = regionParentCode
-    ? countries.find((country) => country.code === regionParentCode)
-    : undefined;
-  const regionCountries = regionParentCode
-    ? statesForParent(countries, regionParentCode)
-    : [];
 
   return (
     <View style={style}>
@@ -304,8 +330,12 @@ export function CountrySelect({
                   </Text>
                 );
               }
+              if (item.type === 'divider') {
+                return <View style={styles.regionDivider} />;
+              }
+              const selectedCode = showStatePicker && regionParent ? regionParent.code : value?.code;
               const selected = item.country.code
-                ? value?.code === item.country.code
+                ? selectedCode === item.country.code
                 : !value;
               const label = item.country.code
                 ? getCountryDisplayName(item.country, locale)
@@ -347,13 +377,14 @@ export function CountrySelect({
         <View style={styles.regionBlock}>
           <Text style={styles.regionLabel}>{t('region')}</Text>
           <CountrySelect
-            value={value && isStatePickerRegion(value) ? value : null}
+            value={value && value.code !== regionParent.code ? value : null}
             onChange={(next) => onChange(next || regionParent)}
             countries={regionCountries}
             allowEmpty
             emptyLabel={t('all_regions')}
             excludeRegionCodes={false}
             showStatePicker={false}
+            groupRegions
             title={t('region')}
             testID={testID ? `${testID}.region` : undefined}
           />
@@ -428,6 +459,11 @@ const styles = StyleSheet.create({
     paddingTop: 14,
     paddingBottom: 4,
     paddingHorizontal: 4,
+  },
+  regionDivider: {
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: colors.primary[300],
+    marginVertical: 8,
   },
   modalItemSelected: {
     backgroundColor: colors.primary[50],

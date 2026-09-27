@@ -2,6 +2,7 @@ import {
   filterPickerCountries,
   groupCountriesForPicker,
   isStatePickerRegion,
+  regionsForParent,
   statePickerParentCode,
   statesForParent,
 } from '../data/country-groups';
@@ -24,23 +25,26 @@ describe('country picker grouping', () => {
     expect(filtered.map((c) => c.code)).not.toContain('NL-NH');
   });
 
-  test('nests states under the parent country and keeps convenience regions top-level', () => {
+  test('nests states under the parent country and keeps aggregates out of the country list', () => {
     const filtered = filterPickerCountries(countries, true);
     const { groups, standalone } = groupCountriesForPicker(filtered);
     const us = groups.find((group) => group.parent.code === 'US');
-    const cn = groups.find((group) => group.parent.code === 'CN');
     expect(us?.children.map((c) => c.code)).toEqual(['US-MA']);
-    expect(cn?.children.map((c) => c.code)).toEqual(['CN-SOUTH']);
-    expect(standalone.map((c) => c.code).sort()).toEqual(['NL', 'US-AK', 'US-EAST']);
+    expect(groups.find((group) => group.parent.code === 'CN')).toBeUndefined();
+    expect(standalone.map((c) => c.code).sort()).toEqual(['CN', 'NL', 'US-AK']);
   });
 
   test('identifies the All / state picker parent', () => {
     expect(statePickerParentCode(countries.find((c) => c.code === 'US'))).toBe('US');
     expect(statePickerParentCode(countries.find((c) => c.code === 'US-MA'))).toBe('US');
-    expect(statePickerParentCode(countries.find((c) => c.code === 'US-EAST'))).toBeNull();
+    expect(statePickerParentCode(countries.find((c) => c.code === 'US-EAST'))).toBe('US');
+    expect(statePickerParentCode(countries.find((c) => c.code === 'CN-SOUTH'))).toBe('CN');
     expect(isStatePickerRegion(countries.find((c) => c.code === 'US-MA')!)).toBe(true);
     expect(isStatePickerRegion(countries.find((c) => c.code === 'US-AK')!)).toBe(false);
     expect(statesForParent(countries, 'US').map((c) => c.code)).toEqual(['US-MA']);
+    const usRegions = regionsForParent(countries, 'US');
+    expect(usRegions.aggregates.map((c) => c.code)).toEqual(['US-EAST']);
+    expect(usRegions.subnationals.map((c) => c.code)).toEqual(['US-MA']);
   });
 
   test('persists hyphenated region codes', () => {
