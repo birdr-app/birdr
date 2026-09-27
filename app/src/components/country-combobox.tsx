@@ -158,20 +158,7 @@ export const CountryCombobox = ({
       return blocks;
     }
 
-    const { groups, standalone } = groupCountriesForPicker(source);
-    const groupBlocks: GroupedOption[] = groups
-      .map((group) => {
-        const parentOption = toOption(group.parent, locale);
-        const childOptions = group.children
-          .map((child) => toOption(child, locale))
-          .sort((a, b) => collator(a.label, b.label));
-        return {
-          label: parentOption.label,
-          options: [parentOption, ...childOptions],
-        };
-      })
-      .sort((a, b) => collator(a.label, b.label));
-
+    const { standalone } = groupCountriesForPicker(source);
     const standaloneOptions = standalone
       .map((country) => toOption(country, locale))
       .sort((a, b) => collator(a.label, b.label));
@@ -183,7 +170,6 @@ export const CountryCombobox = ({
       blocks.push({ label: "", options: worldFirst });
     }
     const mixed: Array<{ sortLabel: string; block: GroupedOption }> = [
-      ...groupBlocks.map((block) => ({ sortLabel: block.label ?? "", block })),
       ...restStandalone.map((option) => ({
         sortLabel: option.label,
         block: { label: "", options: [option] },

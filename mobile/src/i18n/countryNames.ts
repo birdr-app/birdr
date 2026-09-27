@@ -12,8 +12,8 @@ const COUNTRY_NAMES = countryNamesJson as Record<string, Record<string, string>>
 const REGION_NAMES: Record<string, Record<string, string>> = {
   en: {
     'NL-NH': 'Texel Bird Week',
-    'US-AK': 'United States – Alaska',
-    'US-HI': "United States – Hawai'i",
+    'US-AK': 'Alaska',
+    'US-HI': "Hawai'i",
     'US-EAST': 'United States – Eastern',
     'US-WEST': 'United States – Western',
     'CN-SOUTH': 'China – South & Southwest',

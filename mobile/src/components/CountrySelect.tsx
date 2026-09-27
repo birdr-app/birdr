@@ -16,7 +16,7 @@ import { useTranslation } from '../i18n/TranslationContext';
 import { getCountryDisplayName } from '../i18n/countryNames';
 import { colors } from '../theme';
 import { AccessibleSheetModal } from './AccessibleSheetModal';
-import { filterPickerCountries, groupCountriesForPicker, isAggregate, isStatePickerRegion, regionsForParent, statePickerParentCode } from '../lib/countryGroups';
+import { filterPickerCountries, groupCountriesForPicker, isAggregate, isCountryListEntry, regionsForParent, statePickerParentCode } from '../lib/countryGroups';
 
 export type CountrySelectProps = {
   value: Country | null;
@@ -132,7 +132,8 @@ export function CountrySelect({
       });
     }
     if (q) {
-      const filtered = countries.filter(matches).sort((a, b) =>
+      const pool = groupRegions ? countries : countries.filter(isCountryListEntry);
+      const filtered = pool.filter(matches).sort((a, b) =>
         getCountryDisplayName(a, locale).localeCompare(
           getCountryDisplayName(b, locale),
           undefined,
@@ -175,7 +176,7 @@ export function CountrySelect({
     const mixed: Array<{ sortLabel: string; rows: ListRow[] }> = [
       ...groups.map((group) => {
         const parentLabel = getCountryDisplayName(group.parent, locale);
-        const visibleChildren = group.children.filter((child) => !isStatePickerRegion(child));
+        const visibleChildren = group.children.filter((child) => isCountryListEntry(child));
         const childRows = [...visibleChildren]
           .sort((a, b) =>
             getCountryDisplayName(a, locale).localeCompare(
