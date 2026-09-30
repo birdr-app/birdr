@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Count, Exists, OuterRef
 from django.utils.html import format_html
-from .models import Media, FlagMedia, MediaReview, MediaPrediction
+from .models import Media, FlagMedia, MediaBirdDetection, MediaReview, MediaPrediction
 from .review_email import media_review_recipient, send_media_review_reply_if_needed
 from .wikimedia_urls import wikimedia_video_playback_url
 
@@ -244,6 +244,24 @@ class MediaPredictionAdmin(admin.ModelAdmin):
     ]
     list_filter = ['model_version', 'predicted_review_type', 'features_version']
     search_fields = ['media__id', 'model_version']
+    raw_id_fields = ['media']
+    readonly_fields = ['created', 'updated']
+
+
+@admin.register(MediaBirdDetection)
+class MediaBirdDetectionAdmin(admin.ModelAdmin):
+    list_display = [
+        'id',
+        'media',
+        'status',
+        'bird_confidence',
+        'bird_box_count',
+        'bird_max_area_ratio',
+        'detector_version',
+        'updated',
+    ]
+    list_filter = ['status', 'detector_version']
+    search_fields = ['media__id', 'media__species__name', 'detector_version']
     raw_id_fields = ['media']
     readonly_fields = ['created', 'updated']
 

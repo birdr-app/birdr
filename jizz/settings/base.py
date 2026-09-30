@@ -47,6 +47,10 @@ MEDIA_YOLO_CONF_THRESHOLD = float(os.environ.get('MEDIA_YOLO_CONF_THRESHOLD', '0
 MEDIA_YOLO_NMS_IOU_THRESHOLD = float(os.environ.get('MEDIA_YOLO_NMS_IOU_THRESHOLD', '0.45'))
 # COCO class id for "bird" in most common YOLO COCO exports.
 MEDIA_YOLO_BIRD_CLASS_ID = int(os.environ.get('MEDIA_YOLO_BIRD_CLASS_ID', '14'))
+# Scores below this are confidently treated as "no bird". Scores between this
+# and MEDIA_YOLO_CONF_THRESHOLD remain uncertain and must not be auto-rejected.
+MEDIA_YOLO_NO_BIRD_THRESHOLD = float(os.environ.get('MEDIA_YOLO_NO_BIRD_THRESHOLD', '0.05'))
+MEDIA_YOLO_MODEL_VERSION = os.environ.get('MEDIA_YOLO_MODEL_VERSION', 'yolov5n-coco-v1')
 # If OpenCV DNN cannot import the ONNX (e.g. unsupported ops like Floor), try onnxruntime when installed.
 MEDIA_YOLO_PREFER_ONNXRUNTIME = os.environ.get('MEDIA_YOLO_PREFER_ONNXRUNTIME', '').lower() in ('1', 'true', 'yes')
 

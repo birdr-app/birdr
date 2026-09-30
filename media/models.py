@@ -228,3 +228,47 @@ class MediaPrediction(models.Model):
 
     def __str__(self):
         return f"{self.predicted_review_type} ({self.model_version}) for {self.media_id}"
+
+
+class MediaBirdDetection(models.Model):
+    """YOLO bird-presence triage for image media.
+
+    This is intentionally separate from ``MediaPrediction``: detecting a bird
+    object is a different assertion from predicting whether an image should be
+    approved. In particular, a generic detector cannot tell whether the bird
+    is alive or whether it is the species attached to the media row.
+    """
+
+    BIRD = 'bird'
+    NO_BIRD = 'no_bird'
+    UNCERTAIN = 'uncertain'
+    STATUS_CHOICES = [
+        (BIRD, 'Bird detected'),
+        (NO_BIRD, 'No bird detected'),
+        (UNCERTAIN, 'Uncertain'),
+    ]
+
+    media = models.OneToOneField(
+        Media,
+        on_delete=models.CASCADE,
+        related_name='bird_detection',
+    )
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, db_index=True)
+    bird_confidence = models.FloatField(
+        help_text='Highest raw YOLO confidence for the COCO bird class.',
+    )
+    bird_box_count = models.PositiveSmallIntegerField(default=0)
+    bird_max_area_ratio = models.FloatField(
+        default=0.0,
+        help_text='Largest detected bird box as a fraction of image area.',
+    )
+    detector_version = models.CharField(max_length=64, db_index=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Media bird detection'
+        verbose_name_plural = 'Media bird detections'
+
+    def __str__(self):
+        return f"{self.status} ({self.detector_version}) for {self.media_id}"

@@ -62,8 +62,12 @@ def _nms_xyxy_cv2(
     import cv2  # type: ignore
 
     b = boxes_xyxy.astype(np.float32)
+    # OpenCV expects [x, y, width, height], not xyxy coordinates.
+    boxes_xywh = b.copy()
+    boxes_xywh[:, 2] = b[:, 2] - b[:, 0]
+    boxes_xywh[:, 3] = b[:, 3] - b[:, 1]
     idxs = cv2.dnn.NMSBoxes(
-        b.tolist(),
+        boxes_xywh.tolist(),
         scores.astype(float).tolist(),
         score_threshold=conf_thr,
         nms_threshold=iou_thr,
@@ -220,8 +224,10 @@ class _YoloRunner:
 
     def run(self, rgb_u8: np.ndarray) -> YoloBirdResult:
         self.configure()
-        if self._backend == 'none' or self._path is None:
+        if self._path is None:
             return YoloBirdResult(bird_max_conf=0.0, bird_num_boxes=0, bird_max_area_ratio=0.0)
+        if self._backend == 'none':
+            raise RuntimeError(f'Could not load configured YOLO model: {self._path}')
 
         import cv2  # type: ignore
 
