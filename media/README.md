@@ -183,6 +183,33 @@ Media items are stored with:
 
 5. **Handle Errors**: Errors are logged but don't stop the process
 
+## YOLO bird-presence triage
+
+Birdr can pre-screen image media with a COCO-trained YOLOv5 ONNX model. The
+detector stores one of `bird`, `no_bird`, or `uncertain` in
+`MediaBirdDetection`; it never hides media automatically.
+
+Configure the model and run a small dry run first:
+
+```bash
+export MEDIA_YOLO_ONNX_PATH=/opt/birdr/models/yolov5n.onnx
+export MEDIA_YOLO_MODEL_VERSION=yolov5n-coco-v1
+
+python manage.py detect_media_birds --limit 100 --dry-run
+python manage.py detect_media_birds --limit 100
+python manage.py detect_media_birds --only-missing
+```
+
+`MEDIA_YOLO_CONF_THRESHOLD` (default `0.25`) accepts a bird box.
+`MEDIA_YOLO_NO_BIRD_THRESHOLD` (default `0.05`) marks an image as having no
+detected bird. Scores between those thresholds remain `uncertain`.
+
+This first pass only detects the generic COCO `bird` object class. It does not
+prove that a bird is alive, identify its species, or reliably distinguish a
+real bird from every illustration or specimen. Treat `no_bird` as a review
+queue, not an automatic deletion rule, until thresholds have been validated on
+Birdr's own media.
+
 ## Troubleshooting
 
 ### API Rate Limits
@@ -208,4 +235,3 @@ Some species may not have media on certain platforms:
 - Implement caching to avoid re-scraping
 - Add progress tracking and resume capability
 - Add admin interface for manual media management
-
