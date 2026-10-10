@@ -23,15 +23,11 @@ export type JourneyStep = {
 };
 
 export function isFamilyJourneyStep(step: JourneyStep): boolean {
-  return (
-    step.step_type === 'family' ||
-    step.step_type === 'familiy' ||
-    !!step.resolved_family_name_latin
-  );
+  return step.step_type === 'family' || !!step.resolved_family_name_latin;
 }
 
 export function isDifficultJourneyStep(step: JourneyStep): boolean {
-  return step.step_type === 'difficult' || step.step_type === 'dificult';
+  return step.step_type === 'difficult';
 }
 
 export function isExtremeJourneyStep(step: JourneyStep): boolean {

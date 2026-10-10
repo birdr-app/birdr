@@ -189,7 +189,7 @@ def get_top_mistake_target_species_ids(
 
     Uses the same country game + checklist filter as get_species_mistake_rows,
     but counts misses (correct=False, question.species) rather than wrong picks (answer_id).
-    Used for Game.dificult_species question selection.
+    Used for Game.difficult_species question selection.
     """
     cc = normalize_country_filter(country_code)
     threshold = min_wrong if min_wrong is not None else min_times_shown_for_filter(country_code)

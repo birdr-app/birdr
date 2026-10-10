@@ -689,8 +689,8 @@ class BirdrJourneyFamilyStepTestCase(TestCase):
         response = self.client.post(f'/api/birdr-journey/{journey.id}/start-step/', format='json')
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
-    def test_dificult_step_sets_dificult_species_on_game(self):
-        icon = SimpleUploadedFile('dificult.png', PNG_1X1, content_type='image/png')
+    def test_difficult_step_sets_difficult_species_on_game(self):
+        icon = SimpleUploadedFile('difficult.png', PNG_1X1, content_type='image/png')
         level = JourneyLevel.objects.create(
             sequence=1,
             title='Difficult step',
@@ -718,7 +718,7 @@ class BirdrJourneyFamilyStepTestCase(TestCase):
         response = self.client.post(f'/api/birdr-journey/{journey.id}/start-step/', format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         game = Game.objects.get(token=response.data['journey_game']['game']['token'])
-        self.assertTrue(game.dificult_species)
+        self.assertTrue(game.difficult_species)
 
     def test_extreme_step_sets_extreme_game_type(self):
         icon = SimpleUploadedFile('extreme.png', PNG_1X1, content_type='image/png')
@@ -751,4 +751,4 @@ class BirdrJourneyFamilyStepTestCase(TestCase):
         game = Game.objects.get(token=response.data['journey_game']['game']['token'])
         self.assertEqual(game.game_type, Game.GAME_TYPE_EXTREME)
         self.assertEqual(game.rarity, Game.RARIT_EXCEPTIONAL)
-        self.assertFalse(game.dificult_species)
+        self.assertFalse(game.difficult_species)

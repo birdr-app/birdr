@@ -905,7 +905,7 @@ class GameAdmin(admin.ModelAdmin):
     fields = [
         'country', 'language', 'host', 'created', 'token',
         'length', 'multiplayer', 'media', 'repeat', 'rarity', 'include_escapes',
-        'dificult_species', 'game_type', 'speed_seconds', 'tax_order', 'tax_family', 'species_group', 'season'
+        'difficult_species', 'game_type', 'speed_seconds', 'tax_order', 'tax_family', 'species_group', 'season'
     ]
     list_display = ['country', 'created', 'type', 'level', 'length', 'player_count', 'top_score']
     list_filter = [GameKindListFilter]

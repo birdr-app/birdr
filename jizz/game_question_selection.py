@@ -95,7 +95,7 @@ def _option_species_cache_key(game: Game) -> str:
 
 
 def _target_species_cache_key(game: Game) -> str:
-    difficult = '1' if game.dificult_species else '0'
+    difficult = '1' if game.difficult_species else '0'
     return f'jizz:target_species:{_species_pool_filter_key(game)}:{difficult}'
 
 
@@ -190,7 +190,7 @@ def question_target_species_ids(
     """
     Species IDs eligible as question targets (the bird shown to identify).
 
-    When dificult_species is set, limits to top mistake targets that also pass
+    When difficult_species is set, limits to top mistake targets that also pass
     the normal country/rarity/tax/media filters. Answer options still use the
     full candidate_species_ids pool.
     """
@@ -200,7 +200,7 @@ def question_target_species_ids(
         return cached
 
     ids = list(option_ids) if option_ids is not None else candidate_species_ids(game)
-    if not game.dificult_species or not game.country_id:
+    if not game.difficult_species or not game.country_id:
         target_ids = ids
     else:
         from jizz.quiz_mistake_stats import get_top_mistake_target_species_ids

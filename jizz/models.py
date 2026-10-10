@@ -565,7 +565,7 @@ class Game(models.Model):
         help_text='Filter CountrySpecies by frequency tier for question selection.',
     )
     include_escapes = models.BooleanField(default=False)
-    dificult_species = models.BooleanField(
+    difficult_species = models.BooleanField(
         default=False,
         help_text='Pick question species randomly from the top 100 most often answered wrong '
         'for this country (global mistake stats).',

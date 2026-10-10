@@ -1284,7 +1284,7 @@ class GameSerializer(serializers.ModelSerializer):
             'season',
             'rarity',
             'include_escapes',
-            'dificult_species',
+            'difficult_species',
             'game_type',
             'pair_species_low_id',
             'pair_species_high_id',
@@ -1360,7 +1360,7 @@ class UserGameSerializer(serializers.ModelSerializer):
             'season',
             'rarity',
             'include_escapes',
-            'dificult_species',
+            'difficult_species',
             'user_score',
             'correct_count',
             'total_questions'
@@ -1589,7 +1589,7 @@ class GameDetailWithAnswersSerializer(serializers.ModelSerializer):
             'season',
             'rarity',
             'include_escapes',
-            'dificult_species',
+            'difficult_species',
             'questions',
             'total_score'
         )
@@ -1716,11 +1716,10 @@ class JourneyStepSerializer(serializers.ModelSerializer):
         from jizz.services.journey_family import (
             family_by_latin,
             family_display_fields,
-            is_family_step,
             resolve_family_for_step,
         )
 
-        if not is_family_step(obj):
+        if obj.step_type != 'family':
             return None
 
         journey = self.context.get('journey')

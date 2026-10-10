@@ -5,17 +5,11 @@ from django.db.models import Count, Exists, OuterRef, Q
 from jizz.models import Country, CountrySpecies, Game, JourneyStep, Species, TaxonomicFamily
 from media.models import Media
 
-FAMILY_STEP_TYPES = frozenset(('familiy', 'family'))
-
 _MEDIA_TYPE = {
     'images': 'image',
     'video': 'video',
     'audio': 'audio',
 }
-
-
-def is_family_step(step: JourneyStep) -> bool:
-    return step.step_type in FAMILY_STEP_TYPES
 
 
 def family_step_index(step: JourneyStep, level_steps) -> int:
@@ -24,7 +18,7 @@ def family_step_index(step: JourneyStep, level_steps) -> int:
     for current in level_steps:
         if current.id == step.id:
             return index
-        if is_family_step(current):
+        if current.step_type == 'family':
             index += 1
     return index
 
@@ -81,7 +75,7 @@ def resolve_family_for_step(
     country: Country,
     level_steps=None,
 ) -> TaxonomicFamily | None:
-    if not is_family_step(step):
+    if step.step_type != 'family':
         return None
     if level_steps is None:
         level_steps = list(step.journey_level.steps.order_by('sequence'))

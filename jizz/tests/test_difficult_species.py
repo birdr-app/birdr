@@ -23,7 +23,7 @@ from jizz.quiz_mistake_stats import (
 from media.models import Media
 
 
-class DificultSpeciesSelectionTests(TestCase):
+class DifficultSpeciesSelectionTests(TestCase):
     def setUp(self):
         self.country = Country.objects.get_or_create(code="DS", defaults={"name": "Difficult land"})[0]
         self.player = Player.objects.create(name="Host", language="en")
@@ -80,7 +80,7 @@ class DificultSpeciesSelectionTests(TestCase):
         top = get_top_mistake_target_species_ids("DS", limit=5)
         self.assertEqual(top, [self.hard_sp.id])
 
-    def test_dificult_species_limits_targets_not_options(self):
+    def test_difficult_species_limits_targets_not_options(self):
         all_ids = {self.hard_sp.id, self.easy_sp.id, *(sp.id for sp in self.extra_sps)}
         difficult_game = Game.objects.create(
             country=self.country,
@@ -89,13 +89,13 @@ class DificultSpeciesSelectionTests(TestCase):
             media="images",
             host=self.player,
             rarity="regular",
-            dificult_species=True,
+            difficult_species=True,
         )
 
         self.assertEqual(set(candidate_species_ids(difficult_game)), all_ids)
         self.assertEqual(set(question_target_species_ids(difficult_game)), {self.hard_sp.id})
 
-    def test_dificult_game_questions_use_hard_species(self):
+    def test_difficult_game_questions_use_hard_species(self):
         game = Game.objects.create(
             country=self.country,
             level="beginner",
@@ -103,14 +103,14 @@ class DificultSpeciesSelectionTests(TestCase):
             media="images",
             host=self.player,
             rarity="regular",
-            dificult_species=True,
+            difficult_species=True,
         )
         for _ in range(5):
             create_question_for_game(game)
         question_species = set(game.questions.values_list("species_id", flat=True))
         self.assertEqual(question_species, {self.hard_sp.id})
 
-    def test_dificult_game_options_use_full_candidate_pool(self):
+    def test_difficult_game_options_use_full_candidate_pool(self):
         game = Game.objects.create(
             country=self.country,
             level="beginner",
@@ -118,7 +118,7 @@ class DificultSpeciesSelectionTests(TestCase):
             media="images",
             host=self.player,
             rarity="regular",
-            dificult_species=True,
+            difficult_species=True,
         )
         create_question_for_game(game)
         option_species = set(

@@ -12,7 +12,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from jizz.models import BirdrJourney, BirdrJourneyGame, Country, Game, JourneyLevel, JourneyStep, Player
-from jizz.services.journey_family import is_family_step, resolve_family_for_step
+from jizz.services.journey_family import resolve_family_for_step
 from jizz.serializers import (
     BirdrJourneyGameSerializer,
     BirdrJourneyListSerializer,
@@ -308,7 +308,7 @@ class BirdrJourneyStartStepView(BirdrJourneyMixin, APIView):
                 pass
 
         tax_family = None
-        if is_family_step(step):
+        if step.step_type == 'family':
             family = resolve_family_for_step(step, journey.country)
             if not family:
                 raise ValidationError(
@@ -325,7 +325,7 @@ class BirdrJourneyStartStepView(BirdrJourneyMixin, APIView):
             media=step.media,
             rarity=Game.RARIT_EXCEPTIONAL if is_extreme else step.rarity,
             include_escapes=step.include_escapes,
-            dificult_species=step.step_type in ('difficult', 'dificult'),
+            difficult_species=step.step_type == 'difficult',
             game_type=Game.GAME_TYPE_EXTREME if is_extreme else Game.GAME_TYPE_STANDARD,
             speed_seconds=step.speed_seconds if is_speed else None,
             tax_family=tax_family,

@@ -26,7 +26,7 @@ def create_rematch_game(game_token: str, player_token: str) -> tuple:
         multiplayer=old_game.multiplayer,
         rarity=old_game.rarity,
         include_escapes=old_game.include_escapes,
-        dificult_species=old_game.dificult_species,
+        difficult_species=old_game.difficult_species,
         game_type=old_game.game_type,
         speed_seconds=old_game.speed_seconds,
         tax_order=old_game.tax_order or "",
