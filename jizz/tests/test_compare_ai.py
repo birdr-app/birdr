@@ -10,7 +10,9 @@ from compare.ai_service import (
     NO_GROUNDING_MESSAGE,
     comparison_model_name,
     comparison_prompt_version,
+    completion_token_kwargs,
     name_search_terms,
+    sampling_kwargs,
 )
 from compare.generation import comparison_cache_is_current, get_or_create_species_comparison
 from compare.models import SpeciesComparison, SpeciesTrait
@@ -30,6 +32,26 @@ class NameSearchTermsTests(TestCase):
         terms = name_search_terms("Blyth's Reed Warbler", 'Acrocephalus dumetorum')
         self.assertIn("Blyth's Reed Warbler", terms)
         self.assertTrue(any(term.lower().startswith("blyth") for term in terms))
+
+
+class CompletionTokenKwargsTests(TestCase):
+    def test_gpt5_uses_max_completion_tokens(self):
+        self.assertEqual(
+            completion_token_kwargs('gpt-5.6-luna', 3500),
+            {'max_completion_tokens': 3500},
+        )
+
+    def test_gpt41_keeps_max_tokens(self):
+        self.assertEqual(
+            completion_token_kwargs('gpt-4.1', 2000),
+            {'max_tokens': 2000},
+        )
+
+    def test_gpt5_omits_temperature(self):
+        self.assertEqual(sampling_kwargs('gpt-5.6-luna'), {})
+
+    def test_gpt41_sets_temperature(self):
+        self.assertEqual(sampling_kwargs('gpt-4.1'), {'temperature': 0.3})
 
 
 class ComparisonPromptTests(TestCase):

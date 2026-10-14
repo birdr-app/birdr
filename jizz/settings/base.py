@@ -402,7 +402,7 @@ SPECIES_ILLUSTRATION_OUTPUT_FORMAT = os.environ.get('SPECIES_ILLUSTRATION_OUTPUT
 # Species comparison text (OpenAI Chat Completions, cached on SpeciesComparison).
 COMPARISON_AI_MODEL = os.environ.get(
     'COMPARISON_AI_MODEL',
-    'gpt-5.6-luna',
+    'gpt-4.1',
 )
 COMPARISON_AI_PROMPT_VERSION = os.environ.get('COMPARISON_AI_PROMPT_VERSION', 'v3')
 

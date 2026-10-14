@@ -51,7 +51,8 @@ def _friendly_openai_error(exc: BaseException) -> str:
     return 'Could not generate the comparison. Please try again.'
 
 PROMPT_VERSION = 'v3'
-DEFAULT_MODEL = 'gpt-4o'
+# Non-reasoning chat model: low latency, temperature control, solid JSON follow-through.
+DEFAULT_MODEL = 'gpt-4.1'
 HANDBOOK_MODEL = 'botw-extract'
 GROUNDING_CATEGORIES = ('identification', 'similar_species')
 NO_GROUNDING_MESSAGE = (
@@ -116,6 +117,26 @@ def comparison_model_name() -> str:
 
 def comparison_prompt_version() -> str:
     return (getattr(settings, 'COMPARISON_AI_PROMPT_VERSION', None) or PROMPT_VERSION).strip() or PROMPT_VERSION
+
+
+def _is_reasoning_chat_model(model: str) -> bool:
+    """GPT-5 / o-series style models with restricted Chat Completions params."""
+    name = (model or '').lower()
+    return name.startswith(('gpt-5', 'o1', 'o3', 'o4'))
+
+
+def completion_token_kwargs(model: str, max_tokens: int) -> Dict[str, int]:
+    """Newer chat models reject ``max_tokens``; use ``max_completion_tokens`` instead."""
+    if _is_reasoning_chat_model(model):
+        return {'max_completion_tokens': max_tokens}
+    return {'max_tokens': max_tokens}
+
+
+def sampling_kwargs(model: str, *, temperature: float = 0.3) -> Dict[str, float]:
+    """Omit temperature when the model only allows the API default (typically 1)."""
+    if _is_reasoning_chat_model(model):
+        return {}
+    return {'temperature': temperature}
 
 
 def has_grounding_traits(traits: dict | None) -> bool:
@@ -213,8 +234,8 @@ class AIComparisonService:
                     {'role': 'system', 'content': SYSTEM_PROMPT},
                     {'role': 'user', 'content': prompt},
                 ],
-                'temperature': 0.3,
-                'max_tokens': max_tokens,
+                **sampling_kwargs(self.model, temperature=0.3),
+                **completion_token_kwargs(self.model, max_tokens),
             }
             if json_object:
                 kwargs['response_format'] = {'type': 'json_object'}

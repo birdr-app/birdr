@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["SoftwareKeyboardModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.softwarekeyboard.SoftwareKeyboardModule"]
+  }
+}

@@ -11,6 +11,7 @@ from typing import Any
 from django.conf import settings
 from django.core.cache import cache
 
+from compare.ai_service import completion_token_kwargs
 from compare.models import ComparisonTranslation, SpeciesComparison
 from jizz.app_languages import APP_LANGUAGES, normalize_app_language
 from jizz.update_i18n import (
@@ -375,8 +376,8 @@ def _translate_with_openai(
                 {'role': 'user', 'content': prompt},
             ],
             temperature=0.2,
-            max_tokens=8000,
             response_format={'type': 'json_object'},
+            **completion_token_kwargs(model, 8000),
         )
         raw = (response.choices[0].message.content or '').strip()
         data = json.loads(raw)

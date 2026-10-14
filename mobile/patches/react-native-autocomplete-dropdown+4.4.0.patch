@@ -1,0 +1,77 @@
+diff --git a/node_modules/react-native-autocomplete-dropdown/lib/commonjs/index.js b/node_modules/react-native-autocomplete-dropdown/lib/commonjs/index.js
+index e11bdfe..50a174d 100644
+--- a/node_modules/react-native-autocomplete-dropdown/lib/commonjs/index.js
++++ b/node_modules/react-native-autocomplete-dropdown/lib/commonjs/index.js
+@@ -372,6 +372,10 @@ const AutocompleteDropdown = exports.AutocompleteDropdown = /*#__PURE__*/(0, _re
+   }, [close, closeOnSubmit, onSubmitProp]);
+   const onPressOut = (0, _react.useCallback)(e => {
+     closeAll();
++    // Programmatic focus shows a cursor on iPad but does not open the keyboard.
++    if (_reactNative.Platform.OS === 'ios' && _reactNative.Platform.isPad) {
++      return;
++    }
+     if (editable) {
+       inputRef?.current?.focus();
+     } else {
+@@ -427,7 +431,7 @@ const AutocompleteDropdown = exports.AutocompleteDropdown = /*#__PURE__*/(0, _re
+       children: [LeftComponent, /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactNative.Pressable, {
+         style: styles.pressable,
+         pointerEvents: _reactNative.Platform.select({
+-          ios: 'box-only',
++          ios: _reactNative.Platform.isPad ? 'box-none' : 'box-only',
+           default: 'auto'
+         }),
+         onPressOut: onPressOut,
+diff --git a/node_modules/react-native-autocomplete-dropdown/lib/module/index.js b/node_modules/react-native-autocomplete-dropdown/lib/module/index.js
+index bf29af7..851e370 100644
+--- a/node_modules/react-native-autocomplete-dropdown/lib/module/index.js
++++ b/node_modules/react-native-autocomplete-dropdown/lib/module/index.js
+@@ -345,6 +345,10 @@ export const AutocompleteDropdown = /*#__PURE__*/memo(/*#__PURE__*/forwardRef((p
+   }, [close, closeOnSubmit, onSubmitProp]);
+   const onPressOut = useCallback(e => {
+     closeAll();
++    // Programmatic focus shows a cursor on iPad but does not open the keyboard.
++    if (Platform.OS === 'ios' && Platform.isPad) {
++      return;
++    }
+     if (editable) {
+       inputRef?.current?.focus();
+     } else {
+@@ -400,7 +404,7 @@ export const AutocompleteDropdown = /*#__PURE__*/memo(/*#__PURE__*/forwardRef((p
+       children: [LeftComponent, /*#__PURE__*/_jsx(Pressable, {
+         style: styles.pressable,
+         pointerEvents: Platform.select({
+-          ios: 'box-only',
++          ios: Platform.isPad ? 'box-none' : 'box-only',
+           default: 'auto'
+         }),
+         onPressOut: onPressOut,
+diff --git a/node_modules/react-native-autocomplete-dropdown/src/index.tsx b/node_modules/react-native-autocomplete-dropdown/src/index.tsx
+index 70b9b3e..61c0a07 100644
+--- a/node_modules/react-native-autocomplete-dropdown/src/index.tsx
++++ b/node_modules/react-native-autocomplete-dropdown/src/index.tsx
+@@ -425,6 +425,10 @@ export const AutocompleteDropdown = memo<
+     const onPressOut = useCallback(
+       (e: GestureResponderEvent) => {
+         closeAll()
++        // Programmatic focus shows a cursor on iPad but does not open the keyboard.
++        if (Platform.OS === 'ios' && Platform.isPad) {
++          return
++        }
+         if (editable) {
+           inputRef?.current?.focus()
+         } else {
+@@ -502,7 +506,12 @@ export const AutocompleteDropdown = memo<
+           {LeftComponent}
+           <Pressable
+             style={styles.pressable}
+-            pointerEvents={Platform.select({ ios: 'box-only', default: 'auto' })}
++            pointerEvents={Platform.select({
++              // box-only keeps the tap on the Pressable, which then calls focus().
++              // On iPad that shows the cursor but not the software keyboard.
++              ios: Platform.isPad ? 'box-none' : 'box-only',
++              default: 'auto',
++            })}
+             onPressOut={onPressOut}>
+             <InputComponent
+               ref={inputRef}

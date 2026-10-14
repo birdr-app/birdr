@@ -12,8 +12,7 @@ import {
   Animated,
 } from 'react-native';
 import { useNavigation, useRoute, useFocusEffect, useIsFocused } from '@react-navigation/native';
-import { AutocompleteDropdown } from 'react-native-autocomplete-dropdown';
-import type { IAutocompleteDropdownRef } from 'react-native-autocomplete-dropdown';
+import { ExpertSpeciesInput } from '../components/ExpertSpeciesInput';
 import { useGame } from '../context/GameContext';
 import { useGameWebSocket } from '../context/GameWebSocketContext';
 import { useTranslation } from '../i18n/TranslationContext';
@@ -25,6 +24,8 @@ import { useDelayedFlag } from '../hooks/useDelayedFlag';
 import {
   questionMediaBlockHeight,
   questionMediaStageHeight,
+  WIDE_PLAY_MIN_WIDTH,
+  widePlayMediaHeight,
 } from '../constants/questionMediaLayout';
 import { SpeciesMediaModal, type SpeciesMediaData } from '../components/SpeciesMediaModal';
 import { PracticeSpeciesLinks } from '../components/PracticeSpeciesLinks';
@@ -107,7 +108,6 @@ export function GamePlayScreen() {
   const [mediaReady, setMediaReady] = useState(false);
   const [mediaSpecies, setMediaSpecies] = useState<SpeciesMediaData | null>(null);
   const [submittingId, setSubmittingId] = useState<number | null>(null);
-  const expertDropdownRef = useRef<IAutocompleteDropdownRef | null>(null);
   const [refreshingQuestion, setRefreshingQuestion] = useState(false);
   const [advancingQuestion, setAdvancingQuestion] = useState(false);
   const practiceEndSent = useRef(false);
@@ -201,8 +201,8 @@ export function GamePlayScreen() {
   const lang = game?.language || (player as any)?.language;
 
   const { width: screenWidth, height: screenHeight } = useWindowDimensions();
-  const isWide = screenWidth >= 600;
-  const maxMediaHeight = isWide ? Math.round(screenHeight * 0.5) : undefined;
+  const isWide = screenWidth >= WIDE_PLAY_MIN_WIDTH;
+  const maxMediaHeight = widePlayMediaHeight(screenWidth, screenHeight);
   const mediaHeight = maxMediaHeight;
   const videoHeight = maxMediaHeight;
   const optionWidth = isWide ? (screenWidth - 24 * 2 - 12) / 2 : undefined;
@@ -332,7 +332,6 @@ export function GamePlayScreen() {
 
   useEffect(() => {
     setSubmittingId(null);
-    expertDropdownRef.current?.clear();
   }, [question?.id]);
 
   useEffect(() => {
@@ -616,8 +615,17 @@ export function GamePlayScreen() {
       }}
     >
       {({ playSound, soundPlaying, pulsatingStyle }) => (
-    <View style={styles.playRoot}>
-    <ScrollView style={styles.container} contentContainerStyle={styles.content} testID="gamePlay.screen">
+    <KeyboardAvoidingView
+      style={styles.playRoot}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+    >
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.content}
+      keyboardShouldPersistTaps="always"
+      keyboardDismissMode="none"
+      testID="gamePlay.screen"
+    >
       <FlagMediaModal
         visible={flagModalVisible}
         onClose={() => { setFlagModalVisible(false); setFlagMediaInfo(null); }}
@@ -840,43 +848,21 @@ export function GamePlayScreen() {
             ) : null}
           </View>
         ) : (
-          <KeyboardAvoidingView
-            behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-            style={styles.expertInputWrap}
-          >
+          <View style={styles.expertInputWrap}>
             <Text style={styles.label}>{t('start_typing_answer')}</Text>
-            <AutocompleteDropdown
-              controller={expertDropdownRef}
+            <ExpertSpeciesInput
               dataSet={expertDropdownDataSet}
-              onSelectItem={(item) => {
-                if (item) {
-                  const species = expertSpecies.find((s) => String(s.id) === item.id);
-                  if (species) {
-                    handleAnswer(species);
-                    expertDropdownRef.current?.clear();
-                  }
-                }
+              onSelect={(item) => {
+                const species = expertSpecies.find((s) => String(s.id) === item.id);
+                if (species) handleAnswer(species);
               }}
               loading={expertSpecies.length === 0}
               minChars={2}
-              useFilter
               editable={!answer && submittingId === null && answersEnabled}
-              closeOnSubmit
-              clearOnFocus={false}
-              showClear
+              placeholder={t('species_name_placeholder')}
               emptyResultText={t('type_to_search')}
-              suggestionsListMaxHeight={320}
-              textInputProps={{
-                placeholder: t('species_name_placeholder'),
-                placeholderTextColor: colors.primary[500],
-                testID: 'gamePlay.expertInput',
-                accessibilityLabel: 'Species name',
-                autoCapitalize: 'none',
-                autoCorrect: false,
-              }}
-              containerStyle={styles.expertDropdownContainer}
-              inputContainerStyle={styles.expertInput}
-              suggestionsListTextStyle={styles.expertItemText}
+              testID="gamePlay.expertInput"
+              accessibilityLabel="Species name"
             />
             {submittingId !== null && (
               <View style={styles.expertSubmitting}>
@@ -884,7 +870,7 @@ export function GamePlayScreen() {
                 <Text style={styles.expertSubmittingText}>{t('submitting') || 'Submitting...'}</Text>
               </View>
             )}
-          </KeyboardAvoidingView>
+          </View>
         )
       ) : (
         <Text style={styles.muted}>Free answer not implemented.</Text>
@@ -971,7 +957,7 @@ export function GamePlayScreen() {
         playerToken={(player as any)?.token}
       />
     </ScrollView>
-    </View>
+    </KeyboardAvoidingView>
       )}
     </GamePlayAudio>
   );

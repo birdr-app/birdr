@@ -8,10 +8,10 @@ import {
   ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
+  useWindowDimensions,
 } from 'react-native';
 import { useRoute, useNavigation, RouteProp } from '@react-navigation/native';
-import { AutocompleteDropdown } from 'react-native-autocomplete-dropdown';
-import type { IAutocompleteDropdownRef } from 'react-native-autocomplete-dropdown';
+import { ExpertSpeciesInput } from '../components/ExpertSpeciesInput';
 import {
   getChallengeQuestion,
   submitChallengeAnswer,
@@ -47,6 +47,7 @@ import { useDelayedFlag } from '../hooks/useDelayedFlag';
 import {
   questionMediaBlockHeight,
   questionMediaStageHeight,
+  widePlayMediaHeight,
 } from '../constants/questionMediaLayout';
 import { useTranslation } from '../i18n/TranslationContext';
 import { getCountryDisplayName } from '../i18n/countryNames';
@@ -136,7 +137,6 @@ export function ChallengePlayScreen() {
   const [flagMediaInfo, setFlagMediaInfo] = useState<FlagMediaInfo | null>(null);
   const [challengePlayerToken, setChallengePlayerToken] = useState<string | undefined>(undefined);
   const [expertSpecies, setExpertSpecies] = useState<Species[]>([]);
-  const expertDropdownRef = useRef<IAutocompleteDropdownRef | null>(null);
   const [mediaReady, setMediaReady] = useState(false);
   const [imageError, setImageError] = useState<string | null>(null);
   const [loadingNextQuestion, setLoadingNextQuestion] = useState(false);
@@ -353,17 +353,23 @@ export function ChallengePlayScreen() {
     [expertSpecies, lang]
   );
 
-  useEffect(() => {
-    expertDropdownRef.current?.clear();
-  }, [question?.id]);
 
   const mediaType = resolvePlayMediaType(question as any, gameMedia);
   const isExpert = gameLevel === 'expert' || (question as any)?.game?.level === 'expert';
   const options = question?.options ?? [];
   const hasOptions = options.length > 0;
   const answersEnabled = answersEnabledForMedia(mediaType, mediaReady);
-  const mediaStageHeight = questionMediaStageHeight(mediaType as 'images' | 'video' | 'audio');
-  const mediaBlockHeight = questionMediaBlockHeight(mediaType as 'images' | 'video' | 'audio');
+  const { width: screenWidth, height: screenHeight } = useWindowDimensions();
+  const mediaHeight = widePlayMediaHeight(screenWidth, screenHeight);
+  const videoHeight = mediaHeight;
+  const mediaStageHeight = questionMediaStageHeight(
+    mediaType as 'images' | 'video' | 'audio',
+    { imageHeight: mediaHeight, videoHeight },
+  );
+  const mediaBlockHeight = questionMediaBlockHeight(
+    mediaType as 'images' | 'video' | 'audio',
+    { imageHeight: mediaHeight, videoHeight },
+  );
 
   const mediaLength = question ? mediaArrayLengthForQuestion(question, mediaType) : 0;
   const currentMediaIdx =
@@ -681,7 +687,17 @@ export function ChallengePlayScreen() {
       }}
     >
       {({ playSound, soundPlaying, pulsatingStyle }) => (
-    <ScrollView style={styles.container} contentContainerStyle={styles.content} testID="challengePlay.screen">
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+    >
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.content}
+      keyboardShouldPersistTaps="always"
+      keyboardDismissMode="none"
+      testID="challengePlay.screen"
+    >
       <View style={styles.row}>
         {levelLength > 0 && question ? (
           <Text style={styles.questionProgress}>
@@ -753,6 +769,8 @@ export function ChallengePlayScreen() {
           expandImageHint={t('expand_image_fullscreen_hint')}
           closeFullScreenLabel={t('close')}
           containerStyle={styles.challengeMediaWrap}
+          imageHeight={mediaHeight}
+          videoHeight={videoHeight}
           actionOverlay={
             answerResult !== null ? (
               showStepContinue ? (
@@ -878,43 +896,21 @@ export function ChallengePlayScreen() {
               ) : null}
             </View>
           ) : (
-            <KeyboardAvoidingView
-              behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-              style={styles.expertInputWrap}
-            >
+            <View style={styles.expertInputWrap}>
               <Text style={styles.expertLabel}>{t('start_typing_answer')}</Text>
-              <AutocompleteDropdown
-                controller={expertDropdownRef}
+              <ExpertSpeciesInput
                 dataSet={expertDropdownDataSet}
-                onSelectItem={(item) => {
-                  if (item) {
-                    const species = expertSpecies.find((s) => String(s.id) === item.id);
-                    if (species) {
-                      void giveAnswer(species);
-                      expertDropdownRef.current?.clear();
-                    }
-                  }
+                onSelect={(item) => {
+                  const species = expertSpecies.find((s) => String(s.id) === item.id);
+                  if (species) void giveAnswer(species);
                 }}
                 loading={expertSpecies.length === 0}
                 minChars={2}
-                useFilter
                 editable={!optionsLocked}
-                closeOnSubmit
-                clearOnFocus={false}
-                showClear
+                placeholder={t('species_name_placeholder')}
                 emptyResultText={t('type_to_search')}
-                suggestionsListMaxHeight={320}
-                textInputProps={{
-                  placeholder: t('species_name_placeholder'),
-                  placeholderTextColor: colors.primary[500],
-                  testID: 'challengePlay.expertInput',
-                  accessibilityLabel: 'Species name',
-                  autoCapitalize: 'none',
-                  autoCorrect: false,
-                }}
-                containerStyle={styles.expertDropdownContainer}
-                inputContainerStyle={styles.expertInput}
-                suggestionsListTextStyle={styles.expertItemText}
+                testID="challengePlay.expertInput"
+                accessibilityLabel="Species name"
               />
               {submitting && (
                 <View style={styles.expertSubmitting}>
@@ -922,7 +918,7 @@ export function ChallengePlayScreen() {
                   <Text style={styles.expertSubmittingText}>{t('submitting') || 'Submitting…'}</Text>
                 </View>
               )}
-            </KeyboardAvoidingView>
+            </View>
           )}
         </View>
       ) : null}
@@ -944,6 +940,7 @@ export function ChallengePlayScreen() {
         onSuccess={onFlagSuccess}
       />
     </ScrollView>
+    </KeyboardAvoidingView>
       )}
     </ChallengePlayAudio>
   );

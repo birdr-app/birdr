@@ -6,7 +6,6 @@ import { navigationRef } from './src/navigation/navigationRef';
 import { setupNotificationResponseHandler } from './src/lib/notifications';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { Platform } from 'react-native';
-import { AutocompleteDropdownContextProvider } from 'react-native-autocomplete-dropdown';
 import { MenuProvider } from './src/context/MenuContext';
 import { GameProvider } from './src/context/GameContext';
 import { GameWebSocketProvider } from './src/context/GameWebSocketContext';
@@ -54,7 +53,6 @@ export default function App() {
           }
         }}
       >
-        <AutocompleteDropdownContextProvider>
         <AuthProvider>
           <ProfileProvider>
             <VisualStyleProvider>
@@ -74,7 +72,6 @@ export default function App() {
             </VisualStyleProvider>
           </ProfileProvider>
         </AuthProvider>
-        </AutocompleteDropdownContextProvider>
       </NavigationContainer>
     </SafeAreaProvider>
   );

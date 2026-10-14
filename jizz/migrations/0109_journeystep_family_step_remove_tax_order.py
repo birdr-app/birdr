@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
                 choices=[
                     ('plain', 'Plain'),
                     ('sounds', 'Sounds'),
-                    ('familiy', 'Familiy'),
+                    ('family', 'Familiy'),
                     ('family', 'Family'),
                     ('dificult', 'Dificult'),
                 ],
