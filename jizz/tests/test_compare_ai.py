@@ -96,8 +96,8 @@ class ComparisonPromptTests(TestCase):
         )
         self.assertIn('Told from Blyth', prompt)
         self.assertIn('Primary projection long', prompt)
+        self.assertIn('Reedbeds', prompt)  # habitat is useful for ID comparisons
         self.assertNotIn('Eats insects', prompt)
-        self.assertNotIn('Reedbeds', prompt)
         self.assertNotIn('Mostly seeds', prompt)
         self.assertLess(prompt.find('SIMILAR SPECIES'), prompt.find('IDENTIFICATION'))
 
@@ -170,7 +170,7 @@ class ComparisonPromptTests(TestCase):
         with patch.object(self.service, '_call_openai') as mock_call:
             with self.assertRaises(ComparisonGenerationError) as ctx:
                 self.service.generate_species_comparison(
-                    {'plumage': {'content': 'Warm brown.'}},
+                    {'diet': {'content': 'Insects.'}},
                     {'diet': {'content': 'Seeds.'}},
                     'Alpha',
                     'Beta',
@@ -202,7 +202,7 @@ class ComparisonPromptTests(TestCase):
         self.assertIn('out of credits', str(ctx.exception))
 
 
-@override_settings(COMPARISON_AI_PROMPT_VERSION='v3', COMPARISON_AI_MODEL='gpt-4o')
+@override_settings(COMPARISON_AI_PROMPT_VERSION='v4', COMPARISON_AI_MODEL='gpt-4o')
 class ComparisonGenerationTests(TestCase):
     def setUp(self):
         self.sp_a = Species.objects.create(name='Alpha', name_latin='Alpha a', code='AA01')
@@ -296,12 +296,6 @@ class ComparisonGenerationTests(TestCase):
         self.assertEqual(result.ai_model, comparison_model_name())
 
     def test_refuses_when_both_species_lack_grounding_traits(self):
-        SpeciesTrait.objects.create(
-            species=self.sp_a, category='plumage', title='Colour', content='Warm brown.',
-        )
-        SpeciesTrait.objects.create(
-            species=self.sp_b, category='diet', title='Food', content='Seeds.',
-        )
         with patch('compare.generation.AIComparisonService.generate_species_comparison') as mock_gen:
             with self.assertRaises(ComparisonGenerationError) as ctx:
                 get_or_create_species_comparison(self.sp_a, self.sp_b, scrape=False)
@@ -328,7 +322,8 @@ class ComparisonGenerationTests(TestCase):
         self.assertEqual(result.species_2_id, high.id)
         self.assertEqual(result.summary, 'Alpha is warmer.')
         self.assertEqual(result.ai_prompt_version, comparison_prompt_version())
-        self.assertEqual(result.ai_prompt_version, 'v3')
+        self.assertEqual(result.ai_prompt_version, 'v4')
+        self.assertTrue(isinstance(result.sources_used, list))
         mock_gen.assert_called_once()
 
     @patch('compare.ai_service.AIComparisonService._call_openai')

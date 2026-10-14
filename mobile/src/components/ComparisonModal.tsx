@@ -223,6 +223,25 @@ export function ComparisonModal({
           <View style={styles.disclaimer}>
             <Text style={styles.disclaimerText}>{t('comparison_ai_disclaimer')}</Text>
           </View>
+          {(comparison.sources_used?.length ?? 0) > 0 ? (
+            <View style={styles.sourcesBox}>
+              <Text style={styles.sourcesTitle}>{t('comparison_sources')}</Text>
+              {comparison.sources_used!.map((src, i) => (
+                <TouchableOpacity
+                  key={`${src.source}-${i}`}
+                  disabled={!src.url}
+                  onPress={() => {
+                    if (src.url) void Linking.openURL(src.url);
+                  }}
+                >
+                  <Text style={src.url ? styles.linkText : styles.sourcesLine}>
+                    {src.attribution || src.source}
+                    {src.license ? ` · ${src.license}` : ''}
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          ) : null}
           {showSpeciesLinks ? (
             <View style={styles.linksRow}>
               <View style={styles.linksColumn}>
@@ -560,6 +579,21 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: colors.primary[800],
     lineHeight: 18,
+  },
+  sourcesBox: {
+    marginBottom: 16,
+  },
+  sourcesTitle: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: colors.primary[800],
+    marginBottom: 6,
+  },
+  sourcesLine: {
+    fontSize: 12,
+    color: colors.primary[700],
+    marginBottom: 4,
+    lineHeight: 16,
   },
   writeCard: {
     marginTop: 4,

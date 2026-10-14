@@ -1,5 +1,12 @@
 from django.contrib import admin
-from .models import CommunityComparison, ComparisonTranslation, SpeciesTrait, SpeciesComparison, ComparisonRequest
+from .models import (
+    CommunityComparison,
+    ComparisonTranslation,
+    SpeciesFact,
+    SpeciesTrait,
+    SpeciesComparison,
+    ComparisonRequest,
+)
 
 
 class ComparisonTranslationInline(admin.TabularInline):
@@ -22,12 +29,21 @@ class SpeciesTraitAdmin(admin.ModelAdmin):
     raw_id_fields = ['species']
 
 
+@admin.register(SpeciesFact)
+class SpeciesFactAdmin(admin.ModelAdmin):
+    list_display = ['species', 'source', 'category', 'key', 'fetched_at']
+    list_filter = ['source', 'category']
+    search_fields = ['species__name', 'species__name_latin', 'key', 'value_text', 'attribution']
+    readonly_fields = ['fetched_at']
+    raw_id_fields = ['species']
+
+
 @admin.register(SpeciesComparison)
 class SpeciesComparisonAdmin(admin.ModelAdmin):
     list_display = ['__str__', 'comparison_type', 'ai_model', 'is_verified', 'generated_at']
     list_filter = ['comparison_type', 'is_verified', 'ai_model', 'generated_at']
     search_fields = ['species_1__name', 'species_2__name', 'family_1', 'family_2', 'order_1', 'order_2']
-    readonly_fields = ['generated_at', 'updated_at']
+    readonly_fields = ['generated_at', 'updated_at', 'sources_used']
     raw_id_fields = ['species_1', 'species_2']
     inlines = [ComparisonTranslationInline]
 

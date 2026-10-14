@@ -50,14 +50,14 @@ def _friendly_openai_error(exc: BaseException) -> str:
         return 'The AI comparison service is busy. Please try again in a moment.'
     return 'Could not generate the comparison. Please try again.'
 
-PROMPT_VERSION = 'v3'
+PROMPT_VERSION = 'v6'
 # Non-reasoning chat model: low latency, temperature control, solid JSON follow-through.
 DEFAULT_MODEL = 'gpt-4.1'
 HANDBOOK_MODEL = 'botw-extract'
 GROUNDING_CATEGORIES = ('identification', 'similar_species')
 NO_GROUNDING_MESSAGE = (
-    'A handbook comparison is not available for this pair yet '
-    '(no Birds of the World identification notes). '
+    'A comparison is not available for this pair yet '
+    '(no open identification notes or measurements). '
     'You can still write a better description if you are logged in.'
 )
 
@@ -79,15 +79,23 @@ _TRAIT_ORDER = (
     'vocalization',
     'plumage',
     'size',
+    'habitat',
+    'behavior',
+    'distribution',
+    'conservation',
 )
 
 _TRAIT_CHAR_LIMITS = {
-    'similar_species': 12000,
+    'similar_species': 5000,
     'identification': 5000,
     'measurements': 1400,
-    'vocalization': 1400,
-    'plumage': 800,
-    'size': 800,
+    'vocalization': 1800,
+    'plumage': 3500,
+    'size': 1200,
+    'habitat': 1500,
+    'behavior': 1200,
+    'distribution': 800,
+    'conservation': 400,
 }
 
 _JSON_KEYS = (
@@ -101,13 +109,21 @@ _JSON_KEYS = (
 )
 
 SYSTEM_PROMPT = (
-    'You are a field-guide editor for Birdr, writing for birdwatchers who need '
-    'to tell two similar species apart in the field. Be precise, practical and '
-    'honest about uncertainty. Prefer diagnostic, observable differences over '
-    'encyclopedic lists. Only contrast these two species. Do not invent '
-    'measurements, ranges, songs or field marks that are not in the notes. '
-    'If sources conflict, prefer Birds of the World similar-species passages. '
-    'Leave a section empty when it is not diagnostic. Reply with a JSON object only.'
+    'You are a field-guide editor for Birdr, writing thorough separation notes '
+    'for birdwatchers who mixed two species up in a quiz. Be precise, practical '
+    'and honest about uncertainty — but dig deep when the sources allow: cover '
+    'age, season, sex, flight vs perched views, and common pitfalls. Prefer '
+    'diagnostic, observable differences over encyclopedic life history. Only '
+    'contrast these two species. Paraphrase source notes in your own words — do '
+    'not copy long verbatim passages. Do not invent measurements, ranges, songs '
+    'or field marks that are not in the notes. When notes describe juvenile, '
+    'first-winter or immature plumage — especially upperwing pattern in flight — '
+    'treat those age-specific marks as highest priority; state which ages each '
+    'mark works for. If sources conflict: prefer AVONET/Wikidata for adult '
+    'measurements, Wikipedia for qualitative ID and age/wing pattern, eBird '
+    'stats for local abundance, community tips when present, and Birds of the '
+    'World only as temporary fallback. Leave a section empty only when it is '
+    'truly not diagnostic. Reply with a JSON object only.'
 )
 
 
@@ -227,7 +243,7 @@ class AIComparisonService:
             ) from exc
 
         try:
-            client = OpenAI(api_key=self.api_key, timeout=90.0)
+            client = OpenAI(api_key=self.api_key, timeout=120.0)
             kwargs: Dict[str, Any] = {
                 'model': self.model,
                 'messages': [
@@ -254,10 +270,23 @@ class AIComparisonService:
         species_2_name: str,
         species_1_latin: str | None = None,
         species_2_latin: str | None = None,
+        *,
+        measurement_table: str = '',
+        community_block: str = '',
+        abundance_block: str = '',
+        require_botw_grounding: bool = False,
     ) -> Dict[str, str]:
+        from compare.grounding import has_open_or_botw_grounding
+
         latin_1 = species_1_latin or species_1_traits.get('name_latin') or None
         latin_2 = species_2_latin or species_2_traits.get('name_latin') or None
-        if not has_grounding_traits(species_1_traits) and not has_grounding_traits(species_2_traits):
+        grounded = (
+            has_grounding_traits(species_1_traits) or has_grounding_traits(species_2_traits)
+            if require_botw_grounding
+            else has_open_or_botw_grounding(species_1_traits)
+            or has_open_or_botw_grounding(species_2_traits)
+        )
+        if not grounded:
             raise ComparisonGenerationError(NO_GROUNDING_MESSAGE)
 
         similar_species_info = self._extract_similar_species_mentions(
@@ -276,6 +305,9 @@ class AIComparisonService:
             similar_species_info,
             latin_1,
             latin_2,
+            measurement_table=measurement_table,
+            community_block=community_block,
+            abundance_block=abundance_block,
         )
         logger.info(
             'Generating %s vs %s comparison (%s, prompt %s chars)',
@@ -285,7 +317,7 @@ class AIComparisonService:
             len(prompt),
         )
 
-        raw = self._call_openai(prompt, max_tokens=3500, json_object=True)
+        raw = self._call_openai(prompt, max_tokens=7000, json_object=True)
 
         if not raw:
             raise ComparisonGenerationError(
@@ -456,6 +488,10 @@ class AIComparisonService:
         similar_species_info: Dict = None,
         species_1_latin: str | None = None,
         species_2_latin: str | None = None,
+        *,
+        measurement_table: str = '',
+        community_block: str = '',
+        abundance_block: str = '',
     ) -> str:
         label_1 = species_1_name + (f' ({species_1_latin})' if species_1_latin else '')
         label_2 = species_2_name + (f' ({species_2_latin})' if species_2_latin else '')
@@ -475,20 +511,33 @@ class AIComparisonService:
                     if key in seen_expert:
                         continue
                     seen_expert.add(key)
+                    # Keep cross-mention windows short to avoid pasting large BotW extracts.
+                    context = _clip(mention.get('context') or '', 500)
                     expert_bits.append(
                         f'{source_name} · {section.replace("_", " ")} mentions {other_name} '
                         f'(matched “{mention.get("matched_variation") or ""}”):\n'
-                        f'{mention.get("context") or ""}'
+                        f'{context}'
                     )
 
         expert_block = ''
         if expert_bits:
             expert_block = (
-                '\n\nEXPERT CROSS-MENTIONS FROM BIRDS OF THE WORLD (highest priority):\n'
+                '\n\nCROSS-MENTIONS (paraphrase; do not quote at length):\n'
                 + '\n\n---\n\n'.join(expert_bits)
             )
 
+        extra_blocks = []
+        if measurement_table.strip():
+            extra_blocks.append(measurement_table.strip())
+        if community_block.strip():
+            extra_blocks.append('COMMUNITY TIPS (high priority human notes):\n' + community_block.strip())
+        if abundance_block.strip():
+            extra_blocks.append(abundance_block.strip())
+        extras = ('\n\n' + '\n\n'.join(extra_blocks)) if extra_blocks else ''
+
         return f"""Compare these two species for a birdwatcher who has just mixed them up in a quiz.
+
+Source tags in the notes ([wikipedia], [avonet], [wikidata], [ebird], [community], [botw]) mark provenance. Paraphrase only.
 
 SPECIES A: {label_1}
 {species_1_text}
@@ -496,22 +545,29 @@ SPECIES A: {label_1}
 SPECIES B: {label_2}
 {species_2_text}
 {expert_block}
+{extras}
 
-Write for someone with binoculars, not a monograph. Only contrast these two species. Lead with the most reliable field mark in the summary. If they are close relatives, compare structure first (bill, primary projection / wing formula, tail length, supercilium shape) before colour tone — colour is often the least reliable mark. Then cover song and call when the notes show they differ. If a feature is similar, say so in one clause and move on.
+Write for someone with binoculars who wants a real field separation, not a one-liner. Only contrast these two species. Lead with the most reliable field mark in the summary.
 
-Do not invent measurements, songs, ranges or field marks. If the notes do not support a section, leave that JSON value empty — do not pad with generic natural history.
+Age and wing pattern first when the notes support it: if either species has distinctive juvenile / first-winter / immature upperwing marks (triangles, black W, trailing edge, primary panels), put that contrast in the summary and open plumage_comparison with it — name the ages it applies to before adult breeding plumage. Quiz mix-ups are often immature birds in flight.
 
-Identification tips should be ordered checks (most reliable first), including season, age or sex pitfalls when the sources mention them. You may cite Birds of the World once when using those expert passages. Do not use headings like "AI Field Diagnostics".
+Then work through structure (bill, primary projection / wing formula, tail shape/length, jizz in flight vs perched), plumage by age and season, voice, habitat/context, and size — but only where the notes support it. If a feature is similar, say so briefly and move on. Prefer the measurement table for size/mass (adult numbers). Do not invent measurements, songs, ranges or field marks. Leave a section empty only when it is not diagnostic — do not pad with generic natural history.
 
-Return a JSON object with these string keys (markdown allowed inside strings: bold field marks, short lists):
-- summary: 2–3 sentences
+Length targets (use the notes; do not invent filler):
+- summary: 3–5 sentences
+- plumage_comparison: a full paragraph or short multi-bullet age-by-age contrast (not one sentence)
+- size_comparison / behavior_comparison / habitat_comparison / vocalization_comparison: a solid paragraph each when supported
+- identification_tips: the main deliverable — aim for roughly 8–15 numbered checks, each with 1–3 sentences of how to use the mark, when it fails, and which ages/seasons it applies to. This section should be about five times longer than a short quiz checklist. Order: (1) age-specific wing/flight pattern when present, (2) structural marks, (3) plumage pitfalls, (4) voice, (5) season/sex/context. Do not use headings like "AI Field Diagnostics".
+
+Return a JSON object with these string keys (markdown allowed inside strings: bold field marks, numbered lists):
+- summary
 - size_comparison
 - plumage_comparison
 - behavior_comparison
 - habitat_comparison
 - vocalization_comparison
 - identification_tips
-Empty strings are allowed and preferred when a section is not diagnostic."""
+Empty strings are allowed when a section is not diagnostic."""
 
     def _parse_json_response(self, response: str) -> Dict[str, str]:
         text = (response or '').strip()

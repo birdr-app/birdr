@@ -38,6 +38,13 @@ export interface SpeciesComparison {
   identification_tips_html?: string;
   generated_at: string;
   ai_model: string;
+  ai_prompt_version?: string;
+  sources_used?: Array<{
+    source: string;
+    url?: string;
+    attribution?: string;
+    license?: string;
+  }>;
 }
 
 class CompareService {

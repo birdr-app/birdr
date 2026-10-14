@@ -403,6 +403,28 @@ export function ComparisonContent({
           </Box>
         )}
 
+        {(comparison.sources_used?.length ?? 0) > 0 ? (
+          <Box pt={2} borderTopWidth="1px">
+            <Heading size="xs" mb={1}>
+              <FormattedMessage id="comparison_sources" defaultMessage="Sources" />
+            </Heading>
+            <VStack align="stretch" gap={1}>
+              {comparison.sources_used!.map((src, i) => (
+                <Text key={`${src.source}-${i}`} fontSize="xs" color="gray.600">
+                  {src.url ? (
+                    <Link href={src.url} target="_blank" rel="noopener noreferrer">
+                      {src.attribution || src.source}
+                    </Link>
+                  ) : (
+                    src.attribution || src.source
+                  )}
+                  {src.license ? ` · ${src.license}` : ''}
+                </Text>
+              ))}
+            </VStack>
+          </Box>
+        ) : null}
+
         <Box pt={2} borderTopWidth="1px">
           <Text fontSize="xs" color="gray.600">
             Generated using {comparison.ai_model} on {format(new Date(comparison.generated_at), "PPpp")}

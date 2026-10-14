@@ -336,6 +336,25 @@ class WikipediaClient:
         self._intro_cache[cache_key] = result
         return result
 
+    def page_plain_text(self, locale: str, title: str) -> str:
+        """Full plain-text page extract (for ID/plumage section mining)."""
+        data = self._api(
+            locale,
+            {
+                'action': 'query',
+                'prop': 'extracts',
+                'explaintext': True,
+                'exsectionformat': 'plain',
+                'redirects': 1,
+                'titles': title,
+            },
+        )
+        pages = data.get('query', {}).get('pages', {})
+        page = next(iter(pages.values()), {})
+        if page.get('missing') or page.get('invalid'):
+            return ''
+        return (page.get('extract') or '').strip()
+
     def langlink_title(self, from_locale: str, to_locale: str, title: str) -> str | None:
         cache_key = (from_locale, to_locale, title)
         if cache_key in self._langlink_cache:

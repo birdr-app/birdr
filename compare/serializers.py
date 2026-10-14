@@ -109,9 +109,10 @@ class SpeciesComparisonSerializer(serializers.ModelSerializer):
             'size_comparison', 'size_comparison_html', 'plumage_comparison', 'plumage_comparison_html',
             'behavior_comparison', 'behavior_comparison_html', 'habitat_comparison', 'habitat_comparison_html',
             'vocalization_comparison', 'vocalization_comparison_html', 'identification_tips', 'identification_tips_html',
-            'generated_at', 'updated_at', 'ai_model', 'is_verified', 'quality_score'
+            'generated_at', 'updated_at', 'ai_model', 'ai_prompt_version', 'sources_used',
+            'is_verified', 'quality_score'
         ]
-        read_only_fields = ['generated_at', 'updated_at']
+        read_only_fields = ['generated_at', 'updated_at', 'sources_used', 'ai_prompt_version']
 
 
 class ComparisonRequestSerializer(serializers.ModelSerializer):

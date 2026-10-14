@@ -3,6 +3,53 @@ from django.db import models
 from jizz.models import Species
 
 
+class SpeciesFact(models.Model):
+    """Open / attributable grounding facts for AI comparisons (multi-source)."""
+
+    SOURCE_WIKIPEDIA = 'wikipedia'
+    SOURCE_WIKIDATA = 'wikidata'
+    SOURCE_AVONET = 'avonet'
+    SOURCE_EBIRD = 'ebird'
+    SOURCE_COMMUNITY = 'community'
+    SOURCE_BOTW = 'botw'
+    SOURCE_CHOICES = [
+        (SOURCE_WIKIPEDIA, 'Wikipedia'),
+        (SOURCE_WIKIDATA, 'Wikidata'),
+        (SOURCE_AVONET, 'AVONET'),
+        (SOURCE_EBIRD, 'eBird'),
+        (SOURCE_COMMUNITY, 'Community'),
+        (SOURCE_BOTW, 'Birds of the World'),
+    ]
+
+    species = models.ForeignKey(Species, on_delete=models.CASCADE, related_name='facts')
+    source = models.CharField(max_length=32, choices=SOURCE_CHOICES)
+    category = models.CharField(max_length=50, default='other')
+    key = models.CharField(max_length=80, help_text='Stable fact key, e.g. body_mass_g or intro')
+    value_text = models.TextField(blank=True, default='')
+    value_num = models.FloatField(null=True, blank=True)
+    value_json = models.JSONField(null=True, blank=True)
+    source_url = models.URLField(null=True, blank=True)
+    license = models.CharField(max_length=64, blank=True, default='')
+    attribution = models.CharField(max_length=400, blank=True, default='')
+    fetched_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['source', 'category', 'key']
+        constraints = [
+            models.UniqueConstraint(
+                fields=['species', 'source', 'category', 'key'],
+                name='species_fact_source_key_uniq',
+            ),
+        ]
+        indexes = [
+            models.Index(fields=['species', 'source']),
+            models.Index(fields=['species', 'category']),
+        ]
+
+    def __str__(self):
+        return f'{self.species_id} {self.source}:{self.category}/{self.key}'
+
+
 class SpeciesTrait(models.Model):
     """
     Stores extracted traits and characteristics of a species from Birds of the World.
@@ -104,6 +151,11 @@ class SpeciesComparison(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     ai_model = models.CharField(max_length=100, default='gpt-4o-mini', help_text="AI model used for generation")
     ai_prompt_version = models.CharField(max_length=50, default='v1', help_text="Version of the prompt used")
+    sources_used = models.JSONField(
+        default=list,
+        blank=True,
+        help_text='Attribution list: [{source, url, attribution}, ...]',
+    )
     is_verified = models.BooleanField(default=False, help_text="Whether this comparison has been manually verified")
     quality_score = models.FloatField(null=True, blank=True, help_text="Quality score (0-1) if available")
     

@@ -16,6 +16,7 @@ from compare.ai_service import (
     comparison_prompt_version,
     has_grounding_traits,
 )
+from compare.grounding import build_pair_grounding
 from compare.models import SpeciesComparison, SpeciesTrait
 from jizz.models import Species
 
@@ -112,6 +113,7 @@ def _save_scraped_traits(species: Species, scraped_data: dict) -> None:
 
 
 def ensure_species_traits(species: Species, *, scrape: bool = True) -> dict:
+    """Legacy BotW trait loader (still used by scrape admin / commands)."""
     traits = traits_dict_for_species(species)
     if has_grounding_traits(traits):
         return traits
@@ -152,11 +154,13 @@ def get_or_create_species_comparison(
     *,
     force: bool = False,
     scrape: bool = True,
+    country_code: str | None = None,
 ) -> SpeciesComparison | None:
     """
     Return a cached species comparison, generating one if needed.
 
     Pairs are stored with the lower species id as species_1.
+    Open sources first; BotW scrape only as temporary fallback.
     """
     if species_a.id == species_b.id:
         return None
@@ -166,27 +170,33 @@ def get_or_create_species_comparison(
     if existing and not force and comparison_cache_is_current(existing):
         return existing
 
-    traits_1 = ensure_species_traits(low, scrape=scrape)
-    traits_2 = ensure_species_traits(high, scrape=scrape)
-    if not has_grounding_traits(traits_1) and not has_grounding_traits(traits_2):
+    grounding = build_pair_grounding(
+        low,
+        high,
+        country_code=country_code,
+        scrape_botw=scrape,
+        # scrape=False (tests / offline) also skips Wikipedia/Wikidata network fetches.
+        fetch_remote=scrape,
+    )
+    if not grounding.is_grounded:
         logger.warning(
-            'Refusing ungrounded comparison for %s vs %s (no identification/similar_species)',
+            'Refusing ungrounded comparison for %s vs %s',
             low.name,
             high.name,
         )
         raise ComparisonGenerationError(NO_GROUNDING_MESSAGE)
 
-    traits_1['name_latin'] = low.name_latin
-    traits_2['name_latin'] = high.name_latin
-
     service = AIComparisonService()
     comparison_data = service.generate_species_comparison(
-        traits_1,
-        traits_2,
+        grounding.traits_1,
+        grounding.traits_2,
         low.name,
         high.name,
         low.name_latin,
         high.name_latin,
+        measurement_table=grounding.measurement_table,
+        community_block=grounding.community_block,
+        abundance_block=grounding.abundance_block,
     )
     if not comparison_data.get('summary'):
         logger.warning('No comparison generated for %s vs %s', low.name, high.name)
@@ -198,6 +208,7 @@ def get_or_create_species_comparison(
         **comparison_data,
         'ai_model': service.model or comparison_model_name(),
         'ai_prompt_version': service.prompt_version or comparison_prompt_version(),
+        'sources_used': grounding.sources_used,
     }
     comparison, _created = SpeciesComparison.objects.update_or_create(
         comparison_type='species',

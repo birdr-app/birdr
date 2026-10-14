@@ -404,7 +404,7 @@ COMPARISON_AI_MODEL = os.environ.get(
     'COMPARISON_AI_MODEL',
     'gpt-4.1',
 )
-COMPARISON_AI_PROMPT_VERSION = os.environ.get('COMPARISON_AI_PROMPT_VERSION', 'v3')
+COMPARISON_AI_PROMPT_VERSION = os.environ.get('COMPARISON_AI_PROMPT_VERSION', 'v6')
 
 # Update blog auto-translation (OpenAI Chat Completions, cached on UpdateTranslation).
 UPDATE_TRANSLATION_MODEL = os.environ.get('UPDATE_TRANSLATION_MODEL', 'gpt-4o-mini')
