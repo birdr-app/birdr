@@ -219,6 +219,70 @@
         <tbody></tbody>
     </table>
 
+    <h2>Where visitors came from</h2>
+    <p class="muted">
+        External <code>Referer</code> host on the first marketing hit, plus UTM tags from the landing URL
+        (<code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>).
+        Same-site and missing referers count as Direct / unknown. Only captured for new traffic after this feature shipped.
+    </p>
+    <div class="summary-grid">
+        <div class="summary-card">
+            <div class="value" id="external-referer-visits">{{ chart_json.external_referer_visits|default:0 }}</div>
+            <div class="label">Views with external referer</div>
+        </div>
+    </div>
+    <table class="data-table" id="referers-table">
+        <thead>
+            <tr>
+                <th>Referer</th>
+                <th class="num">Views</th>
+                <th class="num">Visitors</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="chart-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin:1.5rem 0;">
+        <div>
+            <h3>UTM source</h3>
+            <table class="data-table" id="utm-source-table">
+                <thead>
+                    <tr>
+                        <th>Source</th>
+                        <th class="num">Views</th>
+                        <th class="num">Visitors</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div>
+            <h3>UTM medium</h3>
+            <table class="data-table" id="utm-medium-table">
+                <thead>
+                    <tr>
+                        <th>Medium</th>
+                        <th class="num">Views</th>
+                        <th class="num">Visitors</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div>
+            <h3>UTM campaign</h3>
+            <table class="data-table" id="utm-campaign-table">
+                <thead>
+                    <tr>
+                        <th>Campaign</th>
+                        <th class="num">Views</th>
+                        <th class="num">Visitors</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
     <h2>Visitors by country</h2>
     <p class="muted">Country comes from the visitor’s Cloudflare country header when present.</p>
     <div id="marketing-world-map" class="map-wrap"></div>
@@ -525,6 +589,58 @@
                 }
             }
 
+            function fillSimpleTable(tableId, rows, emptyMessage, valueKey) {
+                const tbody = document.querySelector(`#${tableId} tbody`);
+                tbody.innerHTML = "";
+                (rows || []).forEach((row) => {
+                    const tr = document.createElement("tr");
+                    const label = document.createElement("td");
+                    label.textContent = row.label || row[valueKey] || row.value || "—";
+                    const visits = document.createElement("td");
+                    visits.className = "num";
+                    visits.textContent = String(row.visits ?? row.events ?? 0);
+                    const visitors = document.createElement("td");
+                    visitors.className = "num";
+                    visitors.textContent = String(row.visitors ?? "—");
+                    tr.append(label, visits, visitors);
+                    tbody.appendChild(tr);
+                });
+                if (!rows || !rows.length) {
+                    tbody.innerHTML = `<tr><td colspan="3">${emptyMessage}</td></tr>`;
+                }
+            }
+
+            function updateTrafficTables(payload) {
+                const external = document.getElementById("external-referer-visits");
+                if (external) {
+                    external.textContent = String(payload.external_referer_visits || 0);
+                }
+                fillSimpleTable(
+                    "referers-table",
+                    payload.top_referers,
+                    "No referer data yet in this period (only new traffic is attributed).",
+                    "referer_host"
+                );
+                fillSimpleTable(
+                    "utm-source-table",
+                    payload.top_utm_sources,
+                    "No utm_source tags in this period.",
+                    "value"
+                );
+                fillSimpleTable(
+                    "utm-medium-table",
+                    payload.top_utm_mediums,
+                    "No utm_medium tags in this period.",
+                    "value"
+                );
+                fillSimpleTable(
+                    "utm-campaign-table",
+                    payload.top_utm_campaigns,
+                    "No utm_campaign tags in this period.",
+                    "value"
+                );
+            }
+
             function updateMapLegend(values, colorScale) {
                 const legend = document.getElementById("marketing-map-legend");
                 const bar = legend.querySelector(".map-legend-bar");
@@ -592,6 +708,7 @@
                 buildChart(payload);
                 buildPathsChart(payload);
                 updatePathsTable(payload);
+                updateTrafficTables(payload);
                 updateCountryTable(payload);
                 buildWorldMap(payload);
             }

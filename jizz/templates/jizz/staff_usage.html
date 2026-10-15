@@ -98,6 +98,7 @@
         First-party analytics stored in our database: page views, API calls (REST/WSGI), and WebSocket game actions (Channels/ASGI).
         <strong>Country</strong> is not geo-IP: it comes from the client’s chosen country, Cloudflare <code>CF-IPCountry</code>, or the logged-in user’s profile — so many events show NL even when visitors are elsewhere.
         <strong>IP address</strong> is the first value in <code>X-Forwarded-For</code> (if nginx sends it) otherwise <code>REMOTE_ADDR</code> (often the proxy). New events also store proxy headers in metadata for debugging.
+        <strong>Referer / UTM</strong> are captured on new events (external Referer host + landing <code>utm_*</code> tags); older rows stay empty.
     </p>
     <p class="muted">
         <a href="{% url 'admin:jizz_usageevent_changelist' %}">Open full raw log in Django admin</a>
@@ -189,6 +190,45 @@
             <div class="chart-wrap">
                 <canvas id="usage-platform-chart"></canvas>
             </div>
+        </div>
+    </div>
+
+    <div class="chart-grid">
+        <div>
+            <h2>Top referers</h2>
+            <table class="data-table" id="referer-table">
+                <thead>
+                    <tr>
+                        <th>Referer</th>
+                        <th class="num">Events</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div>
+            <h2>Top UTM sources</h2>
+            <table class="data-table" id="utm-source-table">
+                <thead>
+                    <tr>
+                        <th>utm_source</th>
+                        <th class="num">Events</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div>
+            <h2>Top UTM campaigns</h2>
+            <table class="data-table" id="utm-campaign-table">
+                <thead>
+                    <tr>
+                        <th>utm_campaign</th>
+                        <th class="num">Events</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
         </div>
     </div>
 
@@ -378,6 +418,41 @@
                 });
             }
 
+            function fillEventsTable(tableId, rows, labelKey, emptyMessage) {
+                const tbody = document.querySelector(`#${tableId} tbody`);
+                tbody.innerHTML = "";
+                (rows || []).slice(0, 15).forEach((row) => {
+                    const tr = document.createElement("tr");
+                    const label = row.label || row[labelKey] || row.value || "—";
+                    tr.innerHTML = `<td>${label}</td><td class="num">${row.events}</td>`;
+                    tbody.appendChild(tr);
+                });
+                if (!rows || !rows.length) {
+                    tbody.innerHTML = `<tr><td colspan="2">${emptyMessage}</td></tr>`;
+                }
+            }
+
+            function updateTrafficTables(payload) {
+                fillEventsTable(
+                    "referer-table",
+                    payload.top_referers,
+                    "referer_host",
+                    "No referer data yet."
+                );
+                fillEventsTable(
+                    "utm-source-table",
+                    payload.top_utm_sources,
+                    "value",
+                    "No utm_source tags yet."
+                );
+                fillEventsTable(
+                    "utm-campaign-table",
+                    payload.top_utm_campaigns,
+                    "value",
+                    "No utm_campaign tags yet."
+                );
+            }
+
             function buildTimeline(payload) {
                 const labels = payload.series.map((row) => row.period);
                 const data = payload.series.map((row) => row.events);
@@ -506,6 +581,7 @@
             function render(payload) {
                 updateSummary(payload);
                 updateCountryTable(payload);
+                updateTrafficTables(payload);
                 buildTimeline(payload);
                 pathsChart = buildBarChart(
                     "usage-paths-chart",

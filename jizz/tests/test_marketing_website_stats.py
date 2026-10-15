@@ -18,7 +18,19 @@ class MarketingWebsiteStatsTests(TestCase):
         Country.objects.get_or_create(code="NL", defaults={"name": "Netherlands"})
         Country.objects.get_or_create(code="DE", defaults={"name": "Germany"})
 
-    def _event(self, *, path, when, ip_address="203.0.113.10", country_code="NL", user_agent="Mozilla/5.0"):
+    def _event(
+        self,
+        *,
+        path,
+        when,
+        ip_address="203.0.113.10",
+        country_code="NL",
+        user_agent="Mozilla/5.0",
+        referer_host="",
+        utm_source="",
+        utm_medium="",
+        utm_campaign="",
+    ):
         event = UsageEvent.objects.create(
             event_type="page_view",
             path=path,
@@ -26,6 +38,10 @@ class MarketingWebsiteStatsTests(TestCase):
             ip_address=ip_address,
             country_code=country_code,
             user_agent=user_agent,
+            referer_host=referer_host,
+            utm_source=utm_source,
+            utm_medium=utm_medium,
+            utm_campaign=utm_campaign,
         )
         aware = timezone.make_aware(datetime.combine(when, datetime.min.time().replace(hour=12)))
         UsageEvent.objects.filter(pk=event.pk).update(created_at=aware)
@@ -79,6 +95,33 @@ class MarketingWebsiteStatsTests(TestCase):
         self.assertTrue(is_crawler_user_agent("Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"))
         self.assertFalse(is_crawler_user_agent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"))
 
+    def test_payload_includes_referers_and_utms(self):
+        self._event(
+            path="/site/",
+            when=date(2026, 3, 1),
+            referer_host="t.co",
+            utm_source="twitter",
+            utm_medium="social",
+            utm_campaign="spring",
+        )
+        self._event(
+            path="/site/community/",
+            when=date(2026, 3, 2),
+            ip_address="203.0.113.20",
+            referer_host="t.co",
+            utm_source="twitter",
+        )
+        self._event(path="/site/faq/", when=date(2026, 3, 3), ip_address="203.0.113.30")
+
+        payload = marketing_website_payload(date(2026, 3, 1), date(2026, 3, 31), granularity="month")
+        self.assertEqual(payload["external_referer_visits"], 2)
+        referers = {row["label"]: row["visits"] for row in payload["top_referers"]}
+        self.assertEqual(referers["t.co"], 2)
+        self.assertEqual(referers["Direct / unknown"], 1)
+        self.assertEqual(payload["top_utm_sources"][0]["value"], "twitter")
+        self.assertEqual(payload["top_utm_sources"][0]["visits"], 2)
+        self.assertEqual(payload["top_utm_campaigns"][0]["value"], "spring")
+
 
 class MarketingWebsiteViewsTests(TestCase):
     def test_page_and_api_are_public(self):
@@ -87,6 +130,7 @@ class MarketingWebsiteViewsTests(TestCase):
         self.assertContains(res, "Marketing website")
         self.assertContains(res, "marketing-visits-chart")
         self.assertContains(res, "Most visited pages")
+        self.assertContains(res, "Where visitors came from")
         self.assertContains(res, reverse("data-marketing-website"), html=False)
 
         api = Client().get(
@@ -98,6 +142,8 @@ class MarketingWebsiteViewsTests(TestCase):
         self.assertEqual(data["granularity"], "month")
         self.assertIn("series", data)
         self.assertIn("top_paths", data)
+        self.assertIn("top_referers", data)
+        self.assertIn("top_utm_sources", data)
         self.assertIn("by_country", data)
         self.assertIn("total_visits", data)
 
@@ -115,6 +161,34 @@ class MarketingWebsiteTrackingTests(TestCase):
         event = UsageEvent.objects.get()
         self.assertEqual(event.path, "/site/")
         self.assertEqual(event.event_type, "page_view")
+
+    def test_site_page_view_captures_referer_and_utm(self):
+        client = Client()
+        response = client.get(
+            "/site/?utm_source=newsletter&utm_medium=email&utm_campaign=march",
+            HTTP_REFERER="https://news.ycombinator.com/item?id=1",
+            HTTP_USER_AGENT="Mozilla/5.0",
+        )
+        self.assertEqual(response.status_code, 200)
+        event = UsageEvent.objects.get()
+        self.assertEqual(event.path, "/site/")
+        self.assertEqual(event.referer_host, "news.ycombinator.com")
+        self.assertEqual(event.utm_source, "newsletter")
+        self.assertEqual(event.utm_medium, "email")
+        self.assertEqual(event.utm_campaign, "march")
+        self.assertEqual(event.metadata["traffic"]["referer"], "https://news.ycombinator.com/item?id=1")
+
+    def test_same_origin_referer_is_treated_as_direct(self):
+        client = Client()
+        response = client.get(
+            "/site/",
+            HTTP_REFERER="https://birdr.pro/site/faq/",
+            HTTP_USER_AGENT="Mozilla/5.0",
+            HTTP_HOST="birdr.pro",
+        )
+        self.assertEqual(response.status_code, 200)
+        event = UsageEvent.objects.get()
+        self.assertEqual(event.referer_host, "")
 
     def test_crawler_site_view_is_not_recorded(self):
         client = Client()

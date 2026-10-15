@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 from datetime import date, datetime, timedelta
 from typing import Any
+from urllib.parse import parse_qs, unquote, urlparse
 
 from django.db.models import Count
 from django.db.models.functions import TruncDay
@@ -11,6 +12,24 @@ from django.utils import timezone
 from jizz.api_event_labels import resolve_websocket_event_label
 from jizz.client_info import normalize_app_version
 from jizz.models import UsageEvent, UserProfile
+
+# Same-site hosts we treat as “not an external referer”.
+_OWN_REFERER_HOSTS = frozenset(
+    {
+        'birdr.pro',
+        'www.birdr.pro',
+        'jizz.be',
+        'www.jizz.be',
+        'localhost',
+        '127.0.0.1',
+    }
+)
+_UTM_KEYS = ('utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term')
+REFERER_URL_MAX = 500
+UTM_SOURCE_MAX = 120
+UTM_MEDIUM_MAX = 120
+UTM_CAMPAIGN_MAX = 180
+UTM_EXTRA_MAX = 180
 
 _PLATFORM_CHOICES = {'web', 'ios', 'android'}
 _DEVICE_CHOICES = {'desktop', 'mobile', 'tablet', 'unknown'}
@@ -40,6 +59,153 @@ def request_debug_meta(request) -> dict[str, str]:
         'x_forwarded_for': (request.META.get('HTTP_X_FORWARDED_FOR') or '')[:500],
         'cf_ipcountry': (request.META.get('HTTP_CF_IPCOUNTRY') or '')[:10],
     }
+
+
+def _clip_utm(value: str | None, limit: int) -> str:
+    return unquote((value or '').strip())[:limit]
+
+
+def parse_referer_host(referer: str | None, *, request_host: str | None = None) -> str:
+    """
+    Return the external Referer hostname, or '' for missing / same-origin / unparseable.
+    """
+    raw = (referer or '').strip()
+    if not raw:
+        return ''
+    try:
+        parsed = urlparse(raw)
+    except ValueError:
+        return ''
+    host = (parsed.hostname or '').lower().rstrip('.')
+    if not host:
+        return ''
+    if host in _OWN_REFERER_HOSTS:
+        return ''
+    if request_host:
+        own = request_host.split(':', 1)[0].lower().rstrip('.')
+        if host == own or host.endswith('.' + own):
+            return ''
+    return host[:255]
+
+
+def utm_params_from_mapping(data: Any) -> dict[str, str]:
+    if not isinstance(data, dict):
+        return {}
+    out: dict[str, str] = {}
+    for key in _UTM_KEYS:
+        raw = data.get(key)
+        if raw is None:
+            continue
+        value = _clip_utm(str(raw), UTM_CAMPAIGN_MAX if key == 'utm_campaign' else UTM_EXTRA_MAX)
+        if key == 'utm_source':
+            value = value[:UTM_SOURCE_MAX]
+        elif key == 'utm_medium':
+            value = value[:UTM_MEDIUM_MAX]
+        elif key == 'utm_campaign':
+            value = value[:UTM_CAMPAIGN_MAX]
+        if value:
+            out[key] = value
+    return out
+
+
+def utm_params_from_query_string(query: str | None) -> dict[str, str]:
+    if not query:
+        return {}
+    parsed = parse_qs(query, keep_blank_values=False)
+    flat = {key: (values[0] if values else '') for key, values in parsed.items()}
+    return utm_params_from_mapping(flat)
+
+
+def split_path_and_query(path: str | None) -> tuple[str, str]:
+    raw = (path or '/').strip() or '/'
+    if '?' not in raw:
+        return raw, ''
+    base, query = raw.split('?', 1)
+    return base or '/', query
+
+
+def traffic_attribution(
+    *,
+    referer: str | None = None,
+    request_host: str | None = None,
+    query_string: str | None = None,
+    client_utms: dict[str, str] | None = None,
+) -> dict[str, Any]:
+    """
+    Build referer_host + UTM fields for UsageEvent.
+
+    Prefer explicit client UTMs, then URL query string. Store the full Referer URL
+    (truncated) in metadata for debugging.
+    """
+    referer_url = (referer or '').strip()[:REFERER_URL_MAX]
+    host = parse_referer_host(referer_url, request_host=request_host)
+    utms = utm_params_from_query_string(query_string)
+    # Explicit client UTMs override query-string values when present.
+    for key, value in (client_utms or {}).items():
+        if value:
+            utms[key] = value
+    return {
+        'referer_host': host,
+        'utm_source': utms.get('utm_source', ''),
+        'utm_medium': utms.get('utm_medium', ''),
+        'utm_campaign': utms.get('utm_campaign', ''),
+        'traffic': {
+            'referer': referer_url,
+            **{key: utms[key] for key in _UTM_KEYS if utms.get(key)},
+        },
+    }
+
+
+def traffic_attribution_from_request(
+    request,
+    *,
+    path: str,
+    client_referer: str | None = None,
+    client_utms: dict[str, str] | None = None,
+) -> dict[str, Any]:
+    _base, path_query = split_path_and_query(path)
+    query = path_query or (request.META.get('QUERY_STRING') or '')
+    if not query and hasattr(request, 'GET'):
+        query = request.GET.urlencode()
+    referer = (client_referer or request.META.get('HTTP_REFERER') or '').strip()
+    request_host = request.get_host() if hasattr(request, 'get_host') else None
+    return traffic_attribution(
+        referer=referer,
+        request_host=request_host,
+        query_string=query,
+        client_utms=client_utms,
+    )
+
+
+def top_referer_rows(qs, *, limit: int = 20) -> list[dict[str, Any]]:
+    """Aggregate external referer hosts; always include a Direct / unknown bucket when present."""
+    rows = list(
+        qs.exclude(referer_host='')
+        .values('referer_host')
+        .annotate(events=Count('id'))
+        .order_by('-events', 'referer_host')[:limit]
+    )
+    direct = qs.filter(referer_host='').count()
+    out = [
+        {'referer_host': row['referer_host'], 'label': row['referer_host'], 'events': row['events']}
+        for row in rows
+    ]
+    if direct:
+        out.append({'referer_host': '', 'label': 'Direct / unknown', 'events': direct})
+        out.sort(key=lambda row: (-row['events'], row['label']))
+    return out
+
+
+def top_utm_rows(qs, field: str, *, limit: int = 20) -> list[dict[str, Any]]:
+    if field not in ('utm_source', 'utm_medium', 'utm_campaign'):
+        raise ValueError(f'Unsupported UTM field: {field}')
+    rows = list(
+        qs.exclude(**{field: ''})
+        .values(field)
+        .annotate(events=Count('id'))
+        .order_by('-events', field)[:limit]
+    )
+    return [{'value': row[field], 'events': row['events']} for row in rows]
 
 
 def resolve_country_code(request, client_country: str | None = None) -> str:
@@ -206,6 +372,8 @@ def normalize_event_type(value: str | None) -> str:
 
 def normalize_path(value: str | None) -> str:
     path = (value or '/').strip()
+    if '?' in path:
+        path = path.split('?', 1)[0]
     if not path.startswith('/'):
         path = f'/{path}'
     return path[:500]
@@ -220,6 +388,10 @@ def record_usage_event(
     session_key: str = '',
     country_code: str | None = None,
     metadata: dict | None = None,
+    referer: str | None = None,
+    utm_source: str = '',
+    utm_medium: str = '',
+    utm_campaign: str = '',
 ) -> UsageEvent:
     user_agent = (request.META.get('HTTP_USER_AGENT') or '')[:2000]
     identity = app_identity_from_headers(headers_from_request(request))
@@ -229,11 +401,38 @@ def record_usage_event(
     device_type = resolve_device_type(user_agent, resolved_platform)
     user = request.user if getattr(request, 'user', None) and request.user.is_authenticated else None
     merged_metadata = dict(metadata or {})
+    # Prefer dedicated kwargs; fall back to traffic keys nested in client metadata.
+    client_traffic = merged_metadata.pop('traffic', None)
+    if not isinstance(client_traffic, dict):
+        client_traffic = {}
+    client_utms = utm_params_from_mapping(
+        {
+            'utm_source': utm_source or client_traffic.get('utm_source') or merged_metadata.pop('utm_source', ''),
+            'utm_medium': utm_medium or client_traffic.get('utm_medium') or merged_metadata.pop('utm_medium', ''),
+            'utm_campaign': utm_campaign
+            or client_traffic.get('utm_campaign')
+            or merged_metadata.pop('utm_campaign', ''),
+            'utm_content': client_traffic.get('utm_content') or merged_metadata.pop('utm_content', ''),
+            'utm_term': client_traffic.get('utm_term') or merged_metadata.pop('utm_term', ''),
+        }
+    )
+    client_referer = referer or client_traffic.get('referer') or merged_metadata.pop('referer', None)
+    attribution = traffic_attribution_from_request(
+        request,
+        path=path,
+        client_referer=client_referer,
+        client_utms=client_utms,
+    )
     merged_metadata['proxy'] = request_debug_meta(request)
+    if attribution['traffic'].get('referer') or any(
+        attribution['traffic'].get(key) for key in _UTM_KEYS
+    ):
+        merged_metadata['traffic'] = attribution['traffic']
 
+    event_type_norm = normalize_event_type(event_type)
     return UsageEvent.objects.create(
-        event_type=normalize_event_type(event_type),
-        path=normalize_path(path) if event_type in ('page_view', 'feature') else path[:500],
+        event_type=event_type_norm,
+        path=normalize_path(path) if event_type_norm in ('page_view', 'feature') else path[:500],
         platform=resolved_platform,
         device_type=device_type,
         country_code=resolve_country_code(request, country_code),
@@ -244,6 +443,10 @@ def record_usage_event(
         app_version=identity['app_version'],
         app_build=identity['app_build'],
         os_version=identity['os_version'],
+        referer_host=attribution['referer_host'],
+        utm_source=attribution['utm_source'],
+        utm_medium=attribution['utm_medium'],
+        utm_campaign=attribution['utm_campaign'],
         metadata=merged_metadata,
     )
 
@@ -484,6 +687,10 @@ def usage_stats_payload(
         'by_event_type': by_event_type,
         'by_country': by_country,
         'country_map': country_map,
+        'top_referers': top_referer_rows(qs),
+        'top_utm_sources': top_utm_rows(qs, 'utm_source'),
+        'top_utm_mediums': top_utm_rows(qs, 'utm_medium'),
+        'top_utm_campaigns': top_utm_rows(qs, 'utm_campaign'),
         'map_style': games_played_map_style(),
     }
 

@@ -216,6 +216,68 @@ def marketing_website_top_paths(events: list, *, limit: int = 25) -> list[dict[s
     ]
 
 
+def _count_by_attr(events: list, attr: str, *, limit: int = 20) -> list[dict[str, Any]]:
+    counts: dict[str, int] = {}
+    ips: dict[str, set[str]] = {}
+    for event in events:
+        value = (getattr(event, attr, None) or '').strip()
+        if not value:
+            continue
+        counts[value] = counts.get(value, 0) + 1
+        ips.setdefault(value, set())
+        if event.ip_address:
+            ips[value].add(str(event.ip_address))
+    ranked = sorted(counts.items(), key=lambda item: (-item[1], item[0]))[:limit]
+    return [
+        {
+            'value': value,
+            'visits': visits,
+            'visitors': len(ips.get(value, ())),
+        }
+        for value, visits in ranked
+    ]
+
+
+def marketing_website_top_referers(events: list, *, limit: int = 20) -> list[dict[str, Any]]:
+    counts: dict[str, int] = {}
+    ips: dict[str, set[str]] = {}
+    direct_visits = 0
+    direct_ips: set[str] = set()
+    for event in events:
+        host = (getattr(event, 'referer_host', None) or '').strip()
+        ip = str(event.ip_address) if event.ip_address else ''
+        if not host:
+            direct_visits += 1
+            if ip:
+                direct_ips.add(ip)
+            continue
+        counts[host] = counts.get(host, 0) + 1
+        ips.setdefault(host, set())
+        if ip:
+            ips[host].add(ip)
+    ranked = sorted(counts.items(), key=lambda item: (-item[1], item[0]))[:limit]
+    rows = [
+        {
+            'referer_host': host,
+            'label': host,
+            'visits': visits,
+            'visitors': len(ips.get(host, ())),
+        }
+        for host, visits in ranked
+    ]
+    if direct_visits:
+        rows.append(
+            {
+                'referer_host': '',
+                'label': 'Direct / unknown',
+                'visits': direct_visits,
+                'visitors': len(direct_ips),
+            }
+        )
+        rows.sort(key=lambda row: (-row['visits'], row['label']))
+    return rows
+
+
 def marketing_website_payload(
     start: date | None = None,
     end: date | None = None,
@@ -232,6 +294,10 @@ def marketing_website_payload(
     events = _human_queryset(qs)
     country_stats = marketing_website_by_country(events)
     unique_ips = {str(event.ip_address) for event in events if event.ip_address}
+    top_referers = marketing_website_top_referers(events)
+    external_referer_visits = sum(
+        row['visits'] for row in top_referers if row.get('referer_host')
+    )
 
     return {
         'start': start.isoformat(),
@@ -242,8 +308,13 @@ def marketing_website_payload(
         'country_count': len(
             [row for row in country_stats['by_country'] if row['country_code']]
         ),
+        'external_referer_visits': external_referer_visits,
         'series': marketing_website_rows(events, start, end, granularity=granularity),
         'top_paths': marketing_website_top_paths(events),
+        'top_referers': top_referers,
+        'top_utm_sources': _count_by_attr(events, 'utm_source'),
+        'top_utm_mediums': _count_by_attr(events, 'utm_medium'),
+        'top_utm_campaigns': _count_by_attr(events, 'utm_campaign'),
         'by_country': country_stats['by_country'],
         'country_map': country_stats['country_map'],
         'map_style': games_played_map_style(),

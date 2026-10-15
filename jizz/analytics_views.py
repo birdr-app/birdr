@@ -24,6 +24,10 @@ class UsageEventCreateSerializer(serializers.Serializer):
     platform = serializers.CharField(max_length=20, required=False, default='web')
     session_key = serializers.CharField(max_length=64, required=False, allow_blank=True, default='')
     country_code = serializers.CharField(max_length=2, required=False, allow_blank=True, default='')
+    referer = serializers.CharField(max_length=500, required=False, allow_blank=True, default='')
+    utm_source = serializers.CharField(max_length=120, required=False, allow_blank=True, default='')
+    utm_medium = serializers.CharField(max_length=120, required=False, allow_blank=True, default='')
+    utm_campaign = serializers.CharField(max_length=180, required=False, allow_blank=True, default='')
     metadata = serializers.JSONField(required=False, default=dict)
 
 
@@ -42,6 +46,10 @@ class UsageEventCreateView(APIView):
             session_key=data.get('session_key', ''),
             country_code=data.get('country_code') or None,
             metadata=data.get('metadata') or {},
+            referer=data.get('referer') or None,
+            utm_source=data.get('utm_source') or '',
+            utm_medium=data.get('utm_medium') or '',
+            utm_campaign=data.get('utm_campaign') or '',
         )
         return Response(status=status.HTTP_204_NO_CONTENT)
 

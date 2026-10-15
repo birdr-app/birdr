@@ -11,6 +11,7 @@ from jizz.api_event_labels import resolve_api_event_label, resolve_websocket_eve
 from jizz.models import Country, UsageEvent, UserProfile
 from jizz.usage_analytics import (
     parse_device_type,
+    parse_referer_host,
     record_usage_event,
     record_websocket_usage_event,
     resolve_country_code,
@@ -27,6 +28,16 @@ class UsageAnalyticsHelpersTests(TestCase):
         self.assertEqual(parse_device_type(''), 'unknown')
         self.assertEqual(parse_device_type('okhttp/4.12.0'), 'mobile')
         self.assertEqual(parse_device_type('Dalvik/2.1.0 (Linux; U; Android 14)'), 'mobile')
+
+    def test_parse_referer_host(self):
+        self.assertEqual(parse_referer_host('https://t.co/abc'), 't.co')
+        self.assertEqual(parse_referer_host('https://birdr.pro/site/'), '')
+        self.assertEqual(parse_referer_host('https://www.birdr.pro/'), '')
+        self.assertEqual(
+            parse_referer_host('https://app.example.com/x', request_host='app.example.com'),
+            '',
+        )
+        self.assertEqual(parse_referer_host(''), '')
 
     def test_resolve_country_code_prefers_client_then_cf_then_profile(self):
         factory = RequestFactory()
@@ -175,6 +186,46 @@ class UsageAnalyticsApiTests(TestCase):
         self.assertEqual(event.device_type, 'mobile')
         self.assertEqual(event.ip_address, '10.0.0.1')
         self.assertEqual(event.metadata['proxy']['remote_addr'], '10.0.0.1')
+
+    def test_record_usage_event_strips_query_and_stores_attribution(self):
+        request = RequestFactory().get(
+            '/start?utm_source=google&utm_medium=cpc&utm_campaign=brand',
+            HTTP_USER_AGENT='Mozilla/5.0',
+            HTTP_REFERER='https://www.google.com/',
+            HTTP_HOST='birdr.pro',
+        )
+        event = record_usage_event(
+            request,
+            path='/start?utm_source=google&utm_medium=cpc&utm_campaign=brand',
+            platform='web',
+        )
+        self.assertEqual(event.path, '/start')
+        self.assertEqual(event.referer_host, 'www.google.com')
+        self.assertEqual(event.utm_source, 'google')
+        self.assertEqual(event.utm_medium, 'cpc')
+        self.assertEqual(event.utm_campaign, 'brand')
+
+    def test_analytics_api_accepts_client_referer_and_utm(self):
+        client = APIClient()
+        response = client.post(
+            reverse('analytics-event'),
+            {
+                'path': '/play',
+                'event_type': 'page_view',
+                'platform': 'web',
+                'referer': 'https://duckduckgo.com/',
+                'utm_source': 'ddg',
+                'utm_medium': 'organic',
+                'utm_campaign': 'search',
+            },
+            format='json',
+        )
+        self.assertEqual(response.status_code, 204)
+        event = UsageEvent.objects.get()
+        self.assertEqual(event.path, '/play')
+        self.assertEqual(event.referer_host, 'duckduckgo.com')
+        self.assertEqual(event.utm_source, 'ddg')
+        self.assertEqual(event.utm_campaign, 'search')
 
     def test_client_ip_uses_x_forwarded_for(self):
         request = RequestFactory().get(
