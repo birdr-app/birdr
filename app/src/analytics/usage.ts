@@ -5,6 +5,44 @@ const LANDING_REFERER_KEY = 'birdr_analytics_landing_referer';
 let lastTrackedPath = '';
 let lastTrackedAt = 0;
 
+type UmamiTracker = {
+  track: (payload?: Record<string, unknown> | ((props: Record<string, unknown>) => Record<string, unknown>)) => void;
+};
+
+declare global {
+  interface Window {
+    umami?: UmamiTracker;
+  }
+}
+
+function trackUmamiPageView(path: string): void {
+  if (typeof window === 'undefined') {
+    return;
+  }
+  const send = () => {
+    if (!window.umami?.track) {
+      return false;
+    }
+    window.umami.track((props) => ({
+      ...props,
+      url: path,
+      title: typeof document !== 'undefined' ? document.title : props.title,
+    }));
+    return true;
+  };
+  if (send()) {
+    return;
+  }
+  // Script is defer'd; retry briefly until it attaches to window.
+  let attempts = 0;
+  const timer = window.setInterval(() => {
+    attempts += 1;
+    if (send() || attempts >= 20) {
+      window.clearInterval(timer);
+    }
+  }, 100);
+}
+
 function getSessionId(): string {
   try {
     let sid = localStorage.getItem(SESSION_KEY);
@@ -70,6 +108,8 @@ export function trackPageView(path: string, countryCode?: string): void {
   }
   lastTrackedPath = normalized;
   lastTrackedAt = now;
+
+  trackUmamiPageView(normalized);
 
   const utm = utmFromLocation();
   const body = JSON.stringify({
