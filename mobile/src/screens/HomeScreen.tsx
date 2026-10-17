@@ -18,7 +18,7 @@ import { BirdrLevelImage } from '../components/BirdrLevelImage';
 import { GameArtImage } from '../components/GameArtImage';
 import { colors } from '../theme';
 import { getMoodImage } from '../constants/birdrMoodImages';
-import { getFlockImage, getStartGameImage } from '../constants/birdrFlockImages';
+import { getFlockImage, getStartGameImage, getSurvivalImage } from '../constants/birdrFlockImages';
 import { useVisualStyle } from '../context/VisualStyleContext';
 import { FeedbackForm } from '../components/FeedbackForm';
 import { useSoftUpdateAvailable } from '../hooks/useSoftUpdateAvailable';
@@ -288,7 +288,7 @@ export function HomeScreen() {
           testID="home.survival"
           accessibilityLabel={`${t('survival')}, ${t('survival_home_hint')}`}
         >
-          <GameArtImage source={getMoodImage('stressed', visualStyle)} style={styles.journeyNewHeroImage} resizeMode="contain" />
+          <GameArtImage source={getSurvivalImage(visualStyle)} style={styles.journeyNewHeroImage} resizeMode="contain" />
           <View style={styles.journeyHeroText}>
             <Text style={styles.journeyHeroLevel} numberOfLines={2}>
               {t('survival')}

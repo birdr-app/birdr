@@ -25,3 +25,9 @@ export function getStartGameImage(style: VisualStyle = 'classic'): ImageSourcePr
     ? require('../../assets/stylish/birdr-start-game.png')
     : require('../../assets/birdr-start-game.png');
 }
+
+export function getSurvivalImage(style: VisualStyle = 'classic'): ImageSourcePropType {
+  return style === 'stylish'
+    ? require('../../assets/stylish/birdr-survival.png')
+    : require('../../assets/birdr-survival.png');
+}

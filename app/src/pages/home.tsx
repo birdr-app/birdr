@@ -398,7 +398,7 @@ const HomePage = () => {
             >
               <Flex align="center" gap={3} width="full" textAlign="left">
                 <BirdrArtImage
-                  filename="birdr-stressed.png"
+                  filename="birdr-survival.png"
                   alt=""
                   width="56px"
                   height="56px"

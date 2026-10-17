@@ -117,7 +117,7 @@ export function SurvivalStartPage() {
         <Flex direction="column" gap={8}>
           <Flex align="center" gap={4}>
             <BirdrArtImage
-              filename="birdr-stressed.png"
+              filename="birdr-survival.png"
               alt=""
               width="88px"
               height="88px"

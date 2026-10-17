@@ -26,6 +26,9 @@ import { AccessibleSheetModal } from '../components/AccessibleSheetModal';
 import { SpeciesLanguageLabel } from '../components/SpeciesLanguageLabel';
 import { matchCountry, resolveDefaultCountry } from '../lib/countryPreference';
 import { useStartSurvival } from '../hooks/useStartSurvival';
+import { GameArtImage } from '../components/GameArtImage';
+import { getSurvivalImage } from '../constants/birdrFlockImages';
+import { useVisualStyle } from '../context/VisualStyleContext';
 import { colors } from '../theme';
 
 export function SurvivalStartScreen() {
@@ -48,6 +51,7 @@ export function SurvivalStartScreen() {
     markSpeciesLanguageUserChosen,
   } = useGame();
   const startRun = useStartSurvival();
+  const { visualStyle } = useVisualStyle();
 
   const [countries, setCountries] = useState<Country[]>([]);
   const [countriesLoaded, setCountriesLoaded] = useState(false);
@@ -154,8 +158,13 @@ export function SurvivalStartScreen() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
-      <Text style={styles.title}>{t('survival')}</Text>
-      <Text style={styles.hint}>{t('survival_intro')}</Text>
+      <View style={styles.header}>
+        <GameArtImage source={getSurvivalImage(visualStyle)} style={styles.headerImage} resizeMode="contain" />
+        <View style={styles.headerText}>
+          <Text style={styles.title}>{t('survival')}</Text>
+          <Text style={styles.hint}>{t('survival_intro')}</Text>
+        </View>
+      </View>
 
       <View style={styles.rules}>
         <Text style={styles.rule}>• {t('survival_rule_pro')}</Text>
@@ -327,6 +336,9 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#fff' },
   content: { padding: 24, paddingBottom: 48 },
   centered: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff' },
+  header: { flexDirection: 'row', alignItems: 'center', gap: 16, marginBottom: 12 },
+  headerImage: { width: 88, height: 88 },
+  headerText: { flex: 1, minWidth: 0 },
   title: { fontSize: 22, fontWeight: '700', color: colors.primary[800], marginBottom: 8 },
   hint: { fontSize: 14, color: colors.primary[600], marginBottom: 12 },
   rules: { marginBottom: 8, gap: 4 },
