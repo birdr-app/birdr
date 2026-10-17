@@ -95,6 +95,22 @@ export type StartPairPracticeResponse = {
   player_token: string;
 };
 
+/** Prefer API `error` field over generic Axios status text. */
+export function practiceApiErrorMessage(error: unknown, fallback = 'Failed to start practice'): string {
+  const data = (error as { response?: { data?: { error?: string | string[] } } })?.response?.data;
+  const apiError = data?.error;
+  if (Array.isArray(apiError) && apiError[0]) {
+    return String(apiError[0]);
+  }
+  if (typeof apiError === 'string' && apiError.trim()) {
+    return apiError;
+  }
+  if (error instanceof Error && error.message) {
+    return error.message;
+  }
+  return fallback;
+}
+
 export async function startConfusionPairPractice(
   lowId: number,
   highId: number,

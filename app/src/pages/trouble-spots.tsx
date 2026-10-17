@@ -20,6 +20,7 @@ import { useAuthProfile } from '../core/auth-profile-context';
 import { UseCountries } from '../user/use-countries';
 import {
   fetchTroubleSpots,
+  practiceApiErrorMessage,
   startConfusionPairPractice,
   startSpeciesPractice,
   type TroubleSpotPair,
@@ -146,7 +147,7 @@ export default function TroubleSpotsPage() {
         navigate('/game/play');
       }
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : 'Failed to start practice');
+      setError(practiceApiErrorMessage(e));
     } finally {
       setStartingPairKey(null);
     }
@@ -166,7 +167,7 @@ export default function TroubleSpotsPage() {
         navigate('/game/play');
       }
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : 'Failed to start practice');
+      setError(practiceApiErrorMessage(e));
     } finally {
       setStartingSpeciesId(null);
     }

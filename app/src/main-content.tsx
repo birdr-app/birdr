@@ -58,6 +58,10 @@ import { FlockLeaderboardPage } from "./pages/flocks/leaderboard"
 import { FlockInviteLandingPage } from "./pages/flocks/invite-landing"
 import { FlockResultPage } from "./pages/flocks/result"
 import { GameShareResultPage } from "./pages/game-share-result"
+import { SurvivalStartPage } from "./pages/survival/start"
+import { SurvivalPlayPage } from "./pages/survival/play"
+import { SurvivalResultPage } from "./pages/survival/result"
+import { SurvivalHiscoresPage } from "./pages/survival/hiscores"
 
 type Catalog = Record<string, string>;
 
@@ -162,6 +166,10 @@ export const MainContent = () => {
             <Route path="/journey/:countryCode/results" element={<BirdrJourneyStepResultsPage />} />
             <Route path="/journey/:countryCode" element={<BirdrJourneyProgressPage />} />
             <Route path="/my-games/:token" element={<GameDetailPage />} />
+            <Route path="/survival" element={<SurvivalStartPage />} />
+            <Route path="/survival/play" element={<SurvivalPlayPage />} />
+            <Route path="/survival/result" element={<SurvivalResultPage />} />
+            <Route path="/survival/scores" element={<SurvivalHiscoresPage />} />
             <Route path='/start/' element={<StartPage />}/>
             <Route path='/join/' element={<JoinPage />}/>
             <Route path="/join/:gameCode" element={<JoinPage/>}/>

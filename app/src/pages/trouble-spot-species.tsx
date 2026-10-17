@@ -23,6 +23,7 @@ import { fetchSpeciesDetail } from '../api/fetch-species-detail';
 import {
   fetchTroubleSpots,
   mixupsForSpecies,
+  practiceApiErrorMessage,
   startSpeciesPractice,
   type TroubleSpotSpecies,
 } from '../api/practice';
@@ -182,7 +183,7 @@ export default function TroubleSpotSpeciesPage() {
         navigate('/game/play');
       }
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : 'Failed to start practice');
+      setError(practiceApiErrorMessage(e));
     } finally {
       setStarting(false);
     }

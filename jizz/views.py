@@ -901,6 +901,7 @@ class PlayerScoreListView(ListAPIView):
             .exclude(game__game_type__in=[
                 Game.GAME_TYPE_PAIR_PRACTICE,
                 Game.GAME_TYPE_SPECIES_PRACTICE,
+                Game.GAME_TYPE_SURVIVAL,
             ])
             .select_related("player", "game", "game__country")
             .annotate(

@@ -50,6 +50,10 @@ import { FlockWeeklyProgressScreen } from '../screens/FlockWeeklyProgressScreen'
 import { FlockInviteLandingScreen } from '../screens/FlockInviteLandingScreen';
 import { FlockChallengeResultScreen } from '../screens/FlockChallengeResultScreen';
 import { UpdateDetailScreen } from '../screens/UpdateDetailScreen';
+import { SurvivalStartScreen } from '../screens/SurvivalStartScreen';
+import { SurvivalPlayScreen } from '../screens/SurvivalPlayScreen';
+import { SurvivalResultScreen } from '../screens/SurvivalResultScreen';
+import { SurvivalScoresScreen } from '../screens/SurvivalScoresScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -80,6 +84,10 @@ const SCREENS: { name: string; titleKey: string; component: React.ComponentType<
   { name: 'FlockInviteLanding', titleKey: 'flock_invite_title', component: FlockInviteLandingScreen },
   { name: 'FlockChallengeResult', titleKey: 'flock_challenge_result', component: FlockChallengeResultScreen },
   { name: 'ChallengePlay', titleKey: 'country_challenge', component: ChallengePlayScreen },
+  { name: 'SurvivalStart', titleKey: 'survival', component: SurvivalStartScreen },
+  { name: 'SurvivalPlay', titleKey: 'survival', component: SurvivalPlayScreen },
+  { name: 'SurvivalResult', titleKey: 'survival', component: SurvivalResultScreen },
+  { name: 'SurvivalScores', titleKey: 'survival_highscores', component: SurvivalScoresScreen },
   { name: 'Updates', titleKey: 'updates', component: UpdatesScreen },
   { name: 'UpdateDetail', titleKey: 'updates', component: UpdateDetailScreen },
   { name: 'Help', titleKey: 'community', component: HelpOverviewScreen },

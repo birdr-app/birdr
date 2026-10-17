@@ -13,7 +13,8 @@ import {
   parseComparePairSlug,
   type SpeciesSlugInfo,
 } from '../api/fetch-species-detail';
-import { startConfusionPairPractice } from '../api/practice';
+import { practiceApiErrorMessage, startConfusionPairPractice } from '../api/practice';
+import { readStoredCountryCode } from '../user/country-preference';
 
 export default function PairPracticePage() {
   const { pair } = useParams<{ pair: string }>();
@@ -32,7 +33,10 @@ export default function PairPracticePage() {
   const [starting, setStarting] = useState(false);
   const [countryCode, setCountryCode] = useState<string | undefined>();
 
-  const effectiveCountryCode = countryCode ?? profile?.country_code?.trim()?.toUpperCase();
+  const effectiveCountryCode =
+    countryCode
+    ?? profile?.country_code?.trim()?.toUpperCase()
+    ?? (readStoredCountryCode() || undefined);
 
   useEffect(() => {
     const parsed = pair ? parseComparePairSlug(pair) : null;
@@ -87,7 +91,7 @@ export default function PairPracticePage() {
         navigate('/game/play');
       }
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : 'Failed to start practice');
+      setError(practiceApiErrorMessage(e));
     } finally {
       setStarting(false);
     }

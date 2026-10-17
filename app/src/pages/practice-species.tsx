@@ -9,7 +9,8 @@ import { PracticeStartLayout } from '../components/practice-start-layout';
 import { useAuthProfile } from '../core/auth-profile-context';
 import { UseCountries } from '../user/use-countries';
 import { fetchSpeciesBySlug, type SpeciesSlugInfo } from '../api/fetch-species-detail';
-import { startSpeciesPractice } from '../api/practice';
+import { practiceApiErrorMessage, startSpeciesPractice } from '../api/practice';
+import { readStoredCountryCode } from '../user/country-preference';
 
 export default function SpeciesPracticePage() {
   const { slug } = useParams<{ slug: string }>();
@@ -27,7 +28,10 @@ export default function SpeciesPracticePage() {
   const [starting, setStarting] = useState(false);
   const [countryCode, setCountryCode] = useState<string | undefined>();
 
-  const effectiveCountryCode = countryCode ?? profile?.country_code?.trim()?.toUpperCase();
+  const effectiveCountryCode =
+    countryCode
+    ?? profile?.country_code?.trim()?.toUpperCase()
+    ?? (readStoredCountryCode() || undefined);
 
   useEffect(() => {
     if (!slug) {
@@ -73,7 +77,7 @@ export default function SpeciesPracticePage() {
         navigate('/game/play');
       }
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : 'Failed to start practice');
+      setError(practiceApiErrorMessage(e));
     } finally {
       setStarting(false);
     }

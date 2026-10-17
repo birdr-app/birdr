@@ -84,6 +84,12 @@ from jizz.practice_views import (
     StartSpeciesPracticeView,
     TroubleSpotsView,
 )
+from jizz.survival_views import (
+    SurvivalRecordView,
+    SurvivalResultView,
+    SurvivalScoresView,
+    SurvivalStartView,
+)
 from jizz.daily_challenge_views import (
     FriendsListView,
     FriendRequestsListView,
@@ -464,6 +470,10 @@ urlpatterns = [
         StartSpeciesPracticeView.as_view(),
         name='practice-species-start',
     ),
+    path('api/survival/start/', SurvivalStartView.as_view(), name='survival-start'),
+    path('api/survival/record/', SurvivalRecordView.as_view(), name='survival-record'),
+    path('api/survival/scores/', SurvivalScoresView.as_view(), name='survival-scores'),
+    path('api/survival/<str:token>/result/', SurvivalResultView.as_view(), name='survival-result'),
     re_path(r"^api/updates/$", UpdateListView.as_view(), name="updates"),
     re_path(r"^api/updates/(?P<pk>\d+)/$", UpdateDetailView.as_view(), name="update-detail"),
     re_path(r"^api/updates/(?P<pk>\d+)/thumbs-up/$", UpdateThumbsUpView.as_view(), name="update-thumbs-up"),

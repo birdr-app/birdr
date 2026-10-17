@@ -72,6 +72,16 @@ def canonical_pair_ids(low_id: int, high_id: int) -> tuple[int, int]:
     return (low_id, high_id) if low_id < high_id else (high_id, low_id)
 
 
+def _pair_has_eligible_media(country: Country, low_id: int, high_id: int) -> bool:
+    media_type = media_type_for_game(Game(country=country, media='images'))
+    return all(count_eligible_media(sid, media_type) > 0 for sid in (low_id, high_id))
+
+
+def _species_has_eligible_media(country: Country, species_id: int) -> bool:
+    media_type = media_type_for_game(Game(country=country, media='images'))
+    return count_eligible_media(species_id, media_type) > 0
+
+
 def validate_pair_for_country(country: Country, low_id: int, high_id: int) -> None:
     from jizz.quiz_mistake_stats import _allowed_species_ids_for_country
 
@@ -79,10 +89,8 @@ def validate_pair_for_country(country: Country, low_id: int, high_id: int) -> No
     if low_id not in allowed or high_id not in allowed:
         raise ValidationError({'error': 'Both species must be on your country checklist.'})
 
-    media_type = media_type_for_game(Game(country=country, media='images'))
-    for sid in (low_id, high_id):
-        if count_eligible_media(sid, media_type) <= 0:
-            raise ValidationError({'error': 'Both species need eligible images for this country.'})
+    if not _pair_has_eligible_media(country, low_id, high_id):
+        raise ValidationError({'error': 'Both species need eligible images for this country.'})
 
 
 def validate_species_for_country(country: Country, species_id: int) -> None:
@@ -92,9 +100,72 @@ def validate_species_for_country(country: Country, species_id: int) -> None:
     if species_id not in allowed:
         raise ValidationError({'error': 'Species must be on your country checklist.'})
 
-    media_type = media_type_for_game(Game(country=country, media='images'))
-    if count_eligible_media(species_id, media_type) <= 0:
+    if not _species_has_eligible_media(country, species_id):
         raise ValidationError({'error': 'Species needs eligible images for this country.'})
+
+
+WORLD_PRACTICE_COUNTRY_CODE = 'world'
+
+
+def world_practice_country() -> Country | None:
+    return Country.objects.filter(pk=WORLD_PRACTICE_COUNTRY_CODE).first()
+
+
+def resolve_country_for_pair_practice(
+    user,
+    country_code: str | None,
+    low_id: int,
+    high_id: int,
+) -> Country:
+    """
+    Prefer the requested/profile country when both species are on that checklist.
+
+    Otherwise use the World checklist — pair drills only need the two species and
+    eligible images, so a deep link must not fail because the user's home country
+    (e.g. NL) does not list both.
+    """
+    preferred = resolve_practice_country(user, country_code)
+    try:
+        validate_pair_for_country(preferred, low_id, high_id)
+        return preferred
+    except ValidationError:
+        pass
+
+    world = world_practice_country()
+    if world is not None and _pair_has_eligible_media(world, low_id, high_id):
+        return world
+
+    # Last resort: pair drills do not use the checklist for question selection.
+    if _pair_has_eligible_media(preferred, low_id, high_id):
+        return preferred
+
+    raise ValidationError(
+        {'error': 'Both species need eligible images before practice can start.'}
+    )
+
+
+def resolve_country_for_species_practice(
+    user,
+    country_code: str | None,
+    species_id: int,
+) -> Country:
+    preferred = resolve_practice_country(user, country_code)
+    try:
+        validate_species_for_country(preferred, species_id)
+        return preferred
+    except ValidationError:
+        pass
+
+    world = world_practice_country()
+    if world is not None and _species_has_eligible_media(world, species_id):
+        return world
+
+    if _species_has_eligible_media(preferred, species_id):
+        return preferred
+
+    raise ValidationError(
+        {'error': 'This species needs eligible images before practice can start.'}
+    )
 
 
 def _profile_language(user) -> str:
@@ -292,8 +363,9 @@ class StartSpeciesPracticeSerializer(serializers.Serializer):
         if not Species.objects.filter(pk=species_id).exists():
             raise ValidationError({'error': 'Invalid species id.'})
 
-        country = resolve_practice_country(user, attrs.get('country_code'))
-        validate_species_for_country(country, species_id)
+        country = resolve_country_for_species_practice(
+            user, attrs.get('country_code'), species_id
+        )
 
         probe = Game(
             country=country,
@@ -367,8 +439,9 @@ class StartConfusionPairPracticeSerializer(serializers.Serializer):
         if Species.objects.filter(id__in=[low_id, high_id]).count() != 2:
             raise ValidationError({'error': 'Invalid species ids.'})
 
-        country = resolve_practice_country(user, attrs.get('country_code'))
-        validate_pair_for_country(country, low_id, high_id)
+        country = resolve_country_for_pair_practice(
+            user, attrs.get('country_code'), low_id, high_id
+        )
 
         attrs['low_id'] = low_id
         attrs['high_id'] = high_id

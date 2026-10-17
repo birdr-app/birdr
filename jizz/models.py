@@ -575,12 +575,14 @@ class Game(models.Model):
     GAME_TYPE_PAIR_PRACTICE = 'pair_practice'
     GAME_TYPE_SPECIES_PRACTICE = 'species_practice'
     GAME_TYPE_FLOCK_CHALLENGE = 'flock_challenge'
+    GAME_TYPE_SURVIVAL = 'survival'
     GAME_TYPE_CHOICES = [
         (GAME_TYPE_STANDARD, 'Standard'),
         (GAME_TYPE_EXTREME, 'Extreme'),
         (GAME_TYPE_PAIR_PRACTICE, 'Pair practice'),
         (GAME_TYPE_SPECIES_PRACTICE, 'Species practice'),
         (GAME_TYPE_FLOCK_CHALLENGE, 'Flock challenge'),
+        (GAME_TYPE_SURVIVAL, 'Survival'),
     ]
     game_type = models.CharField(
         max_length=20,
@@ -706,6 +708,9 @@ class Game(models.Model):
     def ended(self):
         if self.force_ended:
             return True
+        if self.game_type == self.GAME_TYPE_SURVIVAL:
+            # Survival has no fixed length: the run lasts until the first strike.
+            return Answer.objects.filter(question__game=self, correct=False).exists()
         return self.questions.filter(done=True).count() >= self.length
 
     @property
@@ -922,6 +927,11 @@ class PlayerScore(models.Model):
     player = models.ForeignKey(Player, related_name='scores', on_delete=models.CASCADE)
     game = models.ForeignKey(Game, related_name='scores', blank=True, null=True, on_delete=models.CASCADE)
     score = models.IntegerField(default=0)
+    streak = models.PositiveIntegerField(
+        default=0,
+        db_index=True,
+        help_text='Survival games: number of correct answers before the first strike.',
+    )
     app_version = models.CharField(max_length=32, blank=True, default='')
     device_type = models.CharField(
         max_length=20,
@@ -954,7 +964,7 @@ class PlayerScore(models.Model):
             game__country=country,
             game__media=media,
             game__length=length,
-        )
+        ).exclude(game__game_type=Game.GAME_TYPE_SURVIVAL)
         if rarity is not None:
             qs = qs.filter(game__rarity=rarity)
         if season:
@@ -1052,10 +1062,18 @@ class Answer(models.Model):
 @receiver(post_save, sender=Answer)
 def update_player_score(sender, instance, created, **kwargs):
     if created:
-        instance.player_score.score = instance.player_score.answers.filter(
-            question__game=instance.question.game
-        ).aggregate(score=Sum('score'))['score']
-        instance.player_score.save()
+        game = instance.question.game
+        answers = instance.player_score.answers.filter(question__game=game)
+        instance.player_score.score = answers.aggregate(score=Sum('score'))['score']
+        update_fields = ['score']
+        if game.game_type == Game.GAME_TYPE_SURVIVAL:
+            instance.player_score.streak = answers.filter(correct=True).count()
+            update_fields.append('streak')
+        instance.player_score.save(update_fields=update_fields)
+        if game.game_type == Game.GAME_TYPE_SURVIVAL and not instance.correct and not game.force_ended:
+            # One strike and you're out (covers REST and WebSocket answers).
+            game.force_ended = True
+            game.save(update_fields=['force_ended'])
 
 
 class SpeciesImage(models.Model):

@@ -59,6 +59,8 @@ type RootStackParamList = {
   UpdateDetail: { updateId: number };
   Help: undefined;
   Login: undefined;
+  SurvivalStart: undefined;
+  SurvivalScores: { countryCode?: string } | undefined;
 };
 
 export function HomeScreen() {
@@ -279,6 +281,23 @@ export function HomeScreen() {
             </View>
           </TouchableOpacity>
         )}
+
+        <TouchableOpacity
+          style={styles.survivalHeroButton}
+          onPress={() => navigation.navigate('SurvivalStart')}
+          testID="home.survival"
+          accessibilityLabel={`${t('survival')}, ${t('survival_home_hint')}`}
+        >
+          <GameArtImage source={getMoodImage('stressed', visualStyle)} style={styles.journeyNewHeroImage} resizeMode="contain" />
+          <View style={styles.journeyHeroText}>
+            <Text style={styles.journeyHeroLevel} numberOfLines={2}>
+              {t('survival')}
+            </Text>
+            <Text style={styles.survivalHeroHint} numberOfLines={2}>
+              {t('survival_home_hint')}
+            </Text>
+          </View>
+        </TouchableOpacity>
 
         {flocksLoading && !flocksReady ? (
           <View style={styles.secondaryLoadingWrap}>
@@ -501,6 +520,24 @@ const styles = StyleSheet.create({
   journeyNewHeroImage: {
     width: 56,
     height: 56,
+  },
+  survivalHeroButton: {
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    backgroundColor: colors.primary[700],
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 16,
+    borderWidth: 2,
+    borderColor: colors.primary[400],
+  },
+  survivalHeroHint: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: colors.primary[200],
+    lineHeight: 20,
   },
   flocksHeroButton: {
     width: '100%',

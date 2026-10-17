@@ -220,6 +220,30 @@ class PracticeApiTests(TestCase):
         self.assertIsNotNone(question)
         self.assertEqual(question.options.count(), 2)
 
+    def test_start_pair_practice_falls_back_to_world_checklist(self):
+        """Deep-linked pairs often aren't on the user's home checklist (e.g. NL)."""
+        world = Country.objects.get_or_create(code="world", defaults={"name": "World"})[0]
+        home = Country.objects.get_or_create(code="NL", defaults={"name": "Netherlands"})[0]
+        self.user.profile.country = home
+        self.user.profile.save(update_fields=["country"])
+        CountrySpecies.objects.filter(species_id__in=[self.low_id, self.high_id]).delete()
+        for sp in (self.sp_low, self.sp_high):
+            CountrySpecies.objects.create(country=world, species=sp, status="native")
+
+        self.client.force_authenticate(user=self.user)
+        response = self.client.post(
+            reverse("practice-confusion-pair-start"),
+            {
+                "low_id": self.low_id,
+                "high_id": self.high_id,
+                "country_code": "NL",
+            },
+            format="json",
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        game = Game.objects.get(token=response.json()["game"]["token"])
+        self.assertEqual(game.country_id, "world")
+
     def test_pair_practice_excluded_from_scores(self):
         player = Player.objects.create(user=self.user, name="Practice", language="en")
         game = Game.objects.create(

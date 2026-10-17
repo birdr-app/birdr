@@ -22,6 +22,7 @@ import { ComparisonContent } from '../components/comparison-content';
 import { useAuthProfile } from '../core/auth-profile-context';
 import { fetchSpeciesDetail } from '../api/fetch-species-detail';
 import {
+  practiceApiErrorMessage,
   startConfusionPairPractice,
   type TroubleSpotPair,
 } from '../api/practice';
@@ -255,7 +256,7 @@ export default function TroubleSpotPairPage() {
         navigate('/game/play');
       }
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : 'Failed to start practice');
+      setError(practiceApiErrorMessage(e));
     } finally {
       setStarting(false);
     }
