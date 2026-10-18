@@ -20,6 +20,17 @@ describe('routeForNotificationData', () => {
     expect(routeForNotificationData({ type: 'signup_test' })).toEqual({ name: 'DailyChallenge' });
   });
 
+  it('routes admin pushes to the chosen screen, defaulting to Home', () => {
+    expect(routeForNotificationData({ type: 'route', screen: 'Home' })).toEqual({ name: 'Home' });
+    expect(routeForNotificationData({ type: 'route', screen: 'SurvivalStart' })).toEqual({ name: 'SurvivalStart' });
+    expect(routeForNotificationData({ type: 'route', screen: 'LeagueLeaderboard', country_code: 'lt' })).toEqual({
+      name: 'LeagueLeaderboard',
+      params: { countryCode: 'LT' },
+    });
+    expect(routeForNotificationData({ type: 'route', screen: 'GamePlay' })).toEqual({ name: 'Home' });
+    expect(routeForNotificationData({ type: 'route' })).toEqual({ name: 'Home' });
+  });
+
   it('routes flock challenges to the flock', () => {
     expect(routeForNotificationData({ type: 'flock_challenge', flock_slug: 'owls' })).toEqual({
       name: 'FlockDetail',

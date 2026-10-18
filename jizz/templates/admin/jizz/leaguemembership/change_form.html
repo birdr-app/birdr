@@ -1,0 +1,8 @@
+{% extends "admin/change_form.html" %}
+
+{% block object-tools-items %}
+    {% if original and send_push_url %}
+        <li><a href="{{ send_push_url }}" class="historylink">Send push notification</a></li>
+    {% endif %}
+    {{ block.super }}
+{% endblock %}

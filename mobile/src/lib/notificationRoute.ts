@@ -2,15 +2,36 @@
 
 export type NotificationRoute = { name: string; params?: Record<string, unknown> };
 
+/** Screens an admin push ({type: 'route', screen}) may open; anything else falls back to Home. */
+const ADMIN_PUSH_SCREENS = new Set([
+  'Home',
+  'Start',
+  'SurvivalStart',
+  'FlockList',
+  'BirdrJourneyList',
+  'Updates',
+  'Scores',
+  'LeagueLeaderboard',
+]);
+
 export function routeForNotificationData(data: unknown): NotificationRoute | null {
   if (!data || typeof data !== 'object') return null;
   const d = data as {
     type?: string;
     flock_slug?: string;
     country_code?: string;
+    screen?: string;
     challenge_id?: number | string;
   };
   switch (d.type) {
+    case 'route': {
+      const screen = typeof d.screen === 'string' && ADMIN_PUSH_SCREENS.has(d.screen) ? d.screen : 'Home';
+      if (screen === 'LeagueLeaderboard') {
+        const countryCode = typeof d.country_code === 'string' ? d.country_code.toUpperCase() : '';
+        return countryCode ? { name: screen, params: { countryCode } } : { name: 'Home' };
+      }
+      return { name: screen };
+    }
     case 'league': {
       const countryCode = typeof d.country_code === 'string' ? d.country_code.toUpperCase() : '';
       return countryCode ? { name: 'League', params: { countryCode } } : { name: 'League' };

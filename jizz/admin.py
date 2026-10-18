@@ -1830,3 +1830,7 @@ class IpGeoCacheAdmin(admin.ModelAdmin):
         if obj.country_code or obj.country_name or obj.city:
             obj.is_private = False
         super().save_model(request, obj, form, change)
+
+
+# National League admin lives in its own module.
+from jizz import league_admin  # noqa: E402,F401
