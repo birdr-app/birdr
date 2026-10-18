@@ -39,10 +39,14 @@ export async function probeAppApi(): Promise<AppApiProbeResult> {
       cache: 'no-store',
       signal,
     });
-    if (!response.ok) return { reachable: false };
+    if (!response.ok) {
+      if (__DEV__) console.warn(`[appVersion] ${url} answered HTTP ${response.status}`);
+      return { reachable: false };
+    }
     const data = (await response.json()) as AppVersionResponse;
     return { reachable: true, data };
-  } catch {
+  } catch (error) {
+    if (__DEV__) console.warn(`[appVersion] ${apiUrl('/api/app-version/')} unreachable:`, error);
     return { reachable: false };
   } finally {
     cancel();
