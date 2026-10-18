@@ -19,3 +19,6 @@ keys/*.keystore
 # Bundle artifacts
 *.jsbundle
 /keys/
+
+# Kotlin compiler daemon session files (written by Gradle builds)
+.kotlin/
