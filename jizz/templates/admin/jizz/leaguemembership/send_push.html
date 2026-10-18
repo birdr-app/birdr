@@ -6,7 +6,7 @@
   <a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
   &rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
   &rsaquo; <a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>
-  &rsaquo; <a href="{% url opts|admin_urlname:'change' original.pk %}">{{ original }}</a>
+  &rsaquo; <a href="{{ change_url }}">{{ original }}</a>
   &rsaquo; Send push notification
 </div>
 {% endblock %}
@@ -14,8 +14,8 @@
 {% block content %}
 <div id="content-main">
   <p>
-    To <strong>{{ original.user }}</strong>{% if original.user.email %} ({{ original.user.email }}){% endif %},
-    {{ original.country.name }} league.
+    To <strong>{{ recipient }}</strong>{% if recipient.email %} ({{ recipient.email }}){% endif %}.
+    {{ context_line }}
     {% if devices %}
       {{ devices|length }} enabled device(s):
       {% for device in devices %}{{ device.get_platform_display }}{% if not forloop.last %}, {% endif %}{% endfor %}.
@@ -38,7 +38,7 @@
     </fieldset>
     <div class="submit-row">
       <input type="submit" class="default" value="Send push notification">
-      <a href="{% url opts|admin_urlname:'change' original.pk %}" class="closelink">Cancel</a>
+      <a href="{{ change_url }}" class="closelink">Cancel</a>
     </div>
   </form>
 </div>

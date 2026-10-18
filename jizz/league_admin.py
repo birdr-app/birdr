@@ -20,7 +20,7 @@ from jizz.models import (
 # Screen the app opens when the push is tapped. 'League' opens the member's own league.
 PUSH_ROUTE_CHOICES = [
     ('Home', 'Home'),
-    ('League', 'National League (member\'s country)'),
+    ('League', 'National League (their country)'),
     ('LeagueLeaderboard', 'National League leaderboard'),
     ('Start', 'Start a new game'),
     ('SurvivalStart', 'Survival'),
@@ -31,12 +31,14 @@ PUSH_ROUTE_CHOICES = [
 ]
 
 
-def push_data_for_route(route: str, country_code: str) -> dict:
+def push_data_for_route(route: str, country_code: str | None) -> dict:
     """Push ``data`` payload the mobile app routes on (see mobile/src/lib/notificationRoute.ts)."""
     if route == 'League':
-        return {'type': 'league', 'country_code': country_code}
-    if route == 'LeagueLeaderboard':
+        return {'type': 'league', 'country_code': country_code} if country_code else {'type': 'league'}
+    if route == 'LeagueLeaderboard' and country_code:
         return {'type': 'route', 'screen': route, 'country_code': country_code}
+    if route == 'LeagueLeaderboard':
+        return {'type': 'league'}
     return {'type': 'route', 'screen': route}
 
 
@@ -101,44 +103,66 @@ class LeagueMembershipAdmin(admin.ModelAdmin):
         return super().change_view(request, object_id, form_url, extra_context=extra_context)
 
     def send_push_view(self, request, object_id):
-        from jizz.notifications import send_push_to_user
-
         membership = get_object_or_404(LeagueMembership.objects.select_related('user', 'country'), pk=object_id)
         if not self.has_change_permission(request, membership):
             return redirect('admin:index')
-        devices = list(PushDevice.objects.filter(user=membership.user, enabled=True))
-        form = SendPushForm(request.POST or None)
-        if request.method == 'POST' and form.is_valid():
-            data = form.cleaned_data
-            result = send_push_to_user(
-                membership.user,
-                data['title'],
-                data['body'],
-                data=push_data_for_route(data['route'], membership.country_id),
-                badge=1 if data['badge'] else None,
-            )
-            if result.skipped:
-                self.message_user(request, 'Not sent: SEND_PUSH_NOTIFICATIONS is off on this server.', messages.WARNING)
-            elif result.sent:
-                self.message_user(
-                    request,
-                    f'Push sent to {result.sent} device(s) of {membership.user} (opens {data["route"]}).',
-                    messages.SUCCESS,
-                )
-            else:
-                detail = ', '.join(sorted(set(result.per_token.values()))) or 'no enabled devices'
-                self.message_user(request, f'Push not delivered: {detail}.', messages.ERROR)
-            return redirect('admin:jizz_leaguemembership_change', object_id)
+        return render_send_push(
+            self, request,
+            obj=membership,
+            user=membership.user,
+            country_code=membership.country_id,
+            context_line=f'{membership.country.name} league.',
+        )
 
-        context = {
-            **self.admin_site.each_context(request),
-            'title': f'Send push notification to {membership.user}',
-            'opts': self.model._meta,
-            'original': membership,
-            'form': form,
-            'devices': devices,
-        }
-        return TemplateResponse(request, 'admin/jizz/leaguemembership/send_push.html', context)
+
+def favourite_country_code(user) -> str | None:
+    """Country for a 'League' push to a user: favourite country, else their first league."""
+    profile = getattr(user, 'profile', None)
+    if profile is not None and profile.country_id:
+        return profile.country_id
+    return LeagueMembership.objects.filter(user=user).values_list('country_id', flat=True).first()
+
+
+def render_send_push(model_admin, request, *, obj, user, country_code, context_line=''):
+    """Shared admin form: send one push to ``user``; redirects back to ``obj``'s change page."""
+    from jizz.notifications import send_push_to_user
+
+    opts = obj._meta
+    change_url = reverse(f'admin:{opts.app_label}_{opts.model_name}_change', args=[obj.pk])
+    devices = list(PushDevice.objects.filter(user=user, enabled=True))
+    form = SendPushForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        data = form.cleaned_data
+        result = send_push_to_user(
+            user,
+            data['title'],
+            data['body'],
+            data=push_data_for_route(data['route'], country_code),
+            badge=1 if data['badge'] else None,
+        )
+        if result.skipped:
+            model_admin.message_user(request, 'Not sent: SEND_PUSH_NOTIFICATIONS is off on this server.', messages.WARNING)
+        elif result.sent:
+            model_admin.message_user(
+                request, f'Push sent to {result.sent} device(s) of {user} (opens {data["route"]}).', messages.SUCCESS,
+            )
+        else:
+            detail = ', '.join(sorted(set(result.per_token.values()))) or 'no enabled devices'
+            model_admin.message_user(request, f'Push not delivered: {detail}.', messages.ERROR)
+        return redirect(change_url)
+
+    context = {
+        **model_admin.admin_site.each_context(request),
+        'title': f'Send push notification to {user}',
+        'opts': opts,
+        'original': obj,
+        'recipient': user,
+        'context_line': context_line,
+        'change_url': change_url,
+        'form': form,
+        'devices': devices,
+    }
+    return TemplateResponse(request, 'admin/jizz/leaguemembership/send_push.html', context)
 
 
 @admin.register(LeagueDay)

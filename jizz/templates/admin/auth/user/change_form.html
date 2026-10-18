@@ -7,4 +7,9 @@
   <a href="{% url 'admin:auth_user_resend_welcome' original.pk %}" class="historylink">Resend welcome mail</a>
 </li>
 {% endif %}
+{% if original and original.pk %}
+<li>
+  <a href="{% url 'admin:auth_user_send_push' original.pk %}" class="historylink">Send push notification</a>
+</li>
+{% endif %}
 {% endblock %}

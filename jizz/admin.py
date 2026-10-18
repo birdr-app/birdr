@@ -156,8 +156,27 @@ class UserAdmin(BaseUserAdmin):
         urls = super().get_urls()
         custom = [
             path('<int:object_id>/resend-welcome/', self.admin_site.admin_view(self.resend_welcome_view), name='auth_user_resend_welcome'),
+            path('<int:object_id>/send-push/', self.admin_site.admin_view(self.send_push_view), name='auth_user_send_push'),
         ]
         return custom + urls
+
+    def send_push_view(self, request, object_id):
+        from jizz.league_admin import favourite_country_code, render_send_push
+
+        user = get_object_or_404(User.objects.select_related('profile__country'), pk=object_id)
+        if not self.has_change_permission(request, user):
+            return redirect('admin:index')
+        country_code = favourite_country_code(user)
+        return render_send_push(
+            self, request,
+            obj=user,
+            user=user,
+            country_code=country_code,
+            context_line=(
+                f'"National League" opens the {country_code} league.' if country_code
+                else 'No favourite country or league: "National League" opens the league overview.'
+            ),
+        )
 
     def resend_welcome_view(self, request, object_id):
         from django.shortcuts import get_object_or_404

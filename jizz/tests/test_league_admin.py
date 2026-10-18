@@ -55,3 +55,44 @@ class LeagueMembershipAdminPushTestCase(TestCase):
         for name in ('leagueday', 'leagueattempt', 'leagueweekresult', 'leaguenotificationlog', 'leaguemembership'):
             res = self.client.get(reverse(f'admin:jizz_{name}_changelist'))
             self.assertEqual(res.status_code, 200, name)
+
+
+class UserAdminPushTestCase(TestCase):
+
+    def setUp(self):
+        from jizz.models import UserProfile
+
+        self.admin = User.objects.create_superuser('boss', 'boss@example.com', 'x')
+        self.client.force_login(self.admin)
+        self.country, _ = Country.objects.get_or_create(code='LT', defaults={'name': 'Lithuania'})
+        self.user = User.objects.create_user('kate', 'kate@example.com', 'x')
+        UserProfile.objects.update_or_create(user=self.user, defaults={'country': self.country})
+        PushDevice.objects.create(user=self.user, expo_push_token='ExponentPushToken[k]', platform='android')
+        self.url = reverse('admin:auth_user_send_push', args=[self.user.pk])
+
+    def test_user_page_has_button_next_to_welcome_mail(self):
+        res = self.client.get(reverse('admin:auth_user_change', args=[self.user.pk]))
+        self.assertContains(res, 'Resend welcome mail')
+        self.assertContains(res, self.url)
+
+    @patch('jizz.notifications.send_push_to_user', return_value=PushResult(sent=1))
+    def test_league_route_uses_favourite_country(self, push):
+        res = self.client.post(self.url, {'title': 'Hi', 'body': 'Labas!', 'route': 'League'})
+        self.assertRedirects(res, reverse('admin:auth_user_change', args=[self.user.pk]))
+        push.assert_called_once_with(
+            self.user, 'Hi', 'Labas!', data={'type': 'league', 'country_code': 'LT'}, badge=None,
+        )
+
+    @patch('jizz.notifications.send_push_to_user', return_value=PushResult(sent=1))
+    def test_user_without_country_gets_league_overview(self, push):
+        bare = User.objects.create_user('nocountry', 'n@example.com', 'x')
+        self.client.post(
+            reverse('admin:auth_user_send_push', args=[bare.pk]),
+            {'title': 'Hi', 'body': 'Hello', 'route': 'League'},
+        )
+        push.assert_called_once_with(bare, 'Hi', 'Hello', data={'type': 'league'}, badge=None)
+
+    def test_form_page_defaults_to_home(self):
+        res = self.client.get(self.url)
+        self.assertEqual(res.context['form']['route'].value(), 'Home')
+        self.assertContains(res, 'opens the LT league')
