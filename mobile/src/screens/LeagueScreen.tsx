@@ -429,7 +429,9 @@ export function LeagueScreen() {
                   value={!!league.membership?.reminders_enabled}
                   onValueChange={(v) => void toggleReminders(v)}
                   disabled={busy === 'reminders'}
-                  trackColor={{ true: colors.primary[500], false: colors.primary[200] }}
+                  trackColor={{ false: colors.primary[200], true: colors.primary[400] }}
+                  thumbColor={league.membership?.reminders_enabled ? colors.primary[700] : '#fff'}
+                  ios_backgroundColor={colors.primary[200]}
                   testID="league.reminders"
                 />
               </View>
