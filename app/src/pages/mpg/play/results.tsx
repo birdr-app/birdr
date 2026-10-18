@@ -14,6 +14,15 @@ import {
   getFlockPlayContext,
   getFlockResultPath,
 } from '../../../api/flocks'
+import {
+  clearLeaguePlayContext,
+  completeLeagueAttempt,
+  getLeaguePath,
+  getLeaguePlayContext,
+  LEAGUE_RESULT_PATH,
+  storeLeagueResult,
+} from '../../../api/league'
+import { trackFeature } from '../../../analytics/usage'
 import { buildHiscoresPath } from "../../../core/hiscores-link"
 import { ResultsTopScoreConfetti } from "../../../components/results-top-score-confetti"
 import { BirdrMoodHero } from "../../../components/birdr-mood-hero"
@@ -59,6 +68,8 @@ export const ResultsComponent = () => {
   const [isRematchLoading, setIsRematchLoading] = useState(false)
   const [flockCompleting, setFlockCompleting] = useState(false)
   const flockCompleteSent = useRef(false)
+  const [leagueCompleting, setLeagueCompleting] = useState(false)
+  const leagueCompleteSent = useRef(false)
 
   // Finish flock challenge (ranked/practice) and go to shareable result page
   useEffect(() => {
@@ -75,6 +86,39 @@ export const ResultsComponent = () => {
       } catch {
         clearFlockPlayContext()
         setFlockCompleting(false)
+      }
+    })()
+  }, [game?.ended, game?.token, navigate])
+
+  // Finish today's National League quiz and go to the celebration page
+  useEffect(() => {
+    if (!game?.ended || !game?.token || leagueCompleteSent.current) return
+    const ctx = getLeaguePlayContext()
+    if (!ctx || ctx.gameToken !== game.token) return
+    leagueCompleteSent.current = true
+    setLeagueCompleting(true)
+    void (async () => {
+      try {
+        const result = await completeLeagueAttempt(ctx.attemptId)
+        clearLeaguePlayContext()
+        storeLeagueResult({ ...result, countryCode: ctx.countryCode, countryName: ctx.countryName })
+        trackFeature(
+          '/league/complete',
+          {
+            score: result.score,
+            correct: result.correct,
+            length: result.length,
+            rank_today: result.rank_today,
+            week_rank: result.week_rank,
+            took_lead: result.took_lead,
+            perfect: result.perfect,
+          },
+          ctx.countryCode,
+        )
+        navigate(LEAGUE_RESULT_PATH, { replace: true })
+      } catch {
+        clearLeaguePlayContext()
+        navigate(getLeaguePath(ctx.countryCode), { replace: true })
       }
     })()
   }, [game?.ended, game?.token, navigate])
@@ -276,6 +320,20 @@ export const ResultsComponent = () => {
       window.removeEventListener('rematch_invitation', handleRematchInvitation as EventListener)
     }
   }, [isHost])
+
+  if (leagueCompleting || (!!game?.token && getLeaguePlayContext()?.gameToken === game.token)) {
+    return (
+      <Flex direction="column" align="center" gap={4} py={8}>
+        <Spinner size="lg" color="primary.500" />
+        <Text color="primary.700" textAlign="center">
+          <FormattedMessage
+            id="league_saving_result"
+            defaultMessage="Tallying your points…"
+          />
+        </Text>
+      </Flex>
+    )
+  }
 
   if (flockCompleting) {
     return (

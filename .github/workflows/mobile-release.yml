@@ -178,6 +178,21 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
+      # mobile/google-services.json is gitignored; without it the build still
+      # succeeds but Android gets no FCM token, so fail loudly instead.
+      - name: Restore google-services.json
+        env:
+          GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
+        run: |
+          set -euo pipefail
+          if [ -z "$GOOGLE_SERVICES_JSON" ]; then
+            echo "::error::GOOGLE_SERVICES_JSON secret is missing; Android push would not work."
+            exit 1
+          fi
+          printf '%s' "$GOOGLE_SERVICES_JSON" > mobile/google-services.json
+          python3 -c "import json; d=json.load(open('mobile/google-services.json')); assert any(c['client_info']['android_client_info']['package_name']=='pro.birdr.app' for c in d['client'])"
+          echo "google-services.json restored for pro.birdr.app."
+
       # android/keys/ is gitignored, so CI recreates exactly what build.gradle reads:
       # keys/keystore.properties pointing at keys/<storeFile>.
       - name: Restore upload keystore

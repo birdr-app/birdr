@@ -60,10 +60,24 @@ class Country(models.Model):
         choices=HEMISPHERE_CHOICES,
         help_text='Used to map calendar seasons to months.',
     )
+    timezone = models.CharField(
+        max_length=64,
+        blank=True,
+        default='',
+        help_text='IANA zone of the capital (National League day boundaries). Empty: parent, then UTC.',
+    )
 
     @property
     def count(self):
         return self.countryspecies.count()
+
+    @property
+    def league_timezone(self) -> str:
+        if self.timezone:
+            return self.timezone
+        if self.parent_id and self.parent.timezone:
+            return self.parent.timezone
+        return 'UTC'
 
     def __str__(self):
         return self.name
@@ -576,6 +590,7 @@ class Game(models.Model):
     GAME_TYPE_SPECIES_PRACTICE = 'species_practice'
     GAME_TYPE_FLOCK_CHALLENGE = 'flock_challenge'
     GAME_TYPE_SURVIVAL = 'survival'
+    GAME_TYPE_LEAGUE = 'league'
     GAME_TYPE_CHOICES = [
         (GAME_TYPE_STANDARD, 'Standard'),
         (GAME_TYPE_EXTREME, 'Extreme'),
@@ -583,6 +598,7 @@ class Game(models.Model):
         (GAME_TYPE_SPECIES_PRACTICE, 'Species practice'),
         (GAME_TYPE_FLOCK_CHALLENGE, 'Flock challenge'),
         (GAME_TYPE_SURVIVAL, 'Survival'),
+        (GAME_TYPE_LEAGUE, 'National league'),
     ]
     game_type = models.CharField(
         max_length=20,
@@ -964,7 +980,7 @@ class PlayerScore(models.Model):
             game__country=country,
             game__media=media,
             game__length=length,
-        ).exclude(game__game_type=Game.GAME_TYPE_SURVIVAL)
+        ).exclude(game__game_type__in=[Game.GAME_TYPE_SURVIVAL, Game.GAME_TYPE_LEAGUE])
         if rarity is not None:
             qs = qs.filter(game__rarity=rarity)
         if season:
@@ -2210,3 +2226,137 @@ class IpGeoCache(models.Model):
             'city': self.city,
         }
 
+
+
+class LeagueMembership(models.Model):
+    """A logged-in user who joined a country's National League."""
+
+    REMINDERS_NORMAL = 'normal'
+    REMINDERS_EVENING_ONLY = 'evening_only'
+    REMINDERS_PAUSED = 'paused'
+    REMINDER_MODE_CHOICES = [
+        (REMINDERS_NORMAL, 'Normal (18:00 + 20:00)'),
+        (REMINDERS_EVENING_ONLY, 'Evening only (20:00)'),
+        (REMINDERS_PAUSED, 'Paused (weekly nudge only)'),
+    ]
+
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='league_memberships')
+    country = models.ForeignKey(Country, on_delete=models.CASCADE, related_name='league_memberships')
+    joined_at = models.DateTimeField(auto_now_add=True)
+    reminders_enabled = models.BooleanField(default=True)
+    reminder_mode = models.CharField(
+        max_length=16, choices=REMINDER_MODE_CHOICES, default=REMINDERS_NORMAL,
+        help_text='Backs off automatically when the member stops playing.',
+    )
+    last_played_date = models.DateField(null=True, blank=True)
+
+    class Meta:
+        unique_together = [('user', 'country')]
+
+    def __str__(self):
+        return f'{self.user_id} in {self.country_id} league'
+
+
+class LeagueDay(models.Model):
+    """One shared quiz per country per capital-local date."""
+
+    country = models.ForeignKey(Country, on_delete=models.CASCADE, related_name='league_days')
+    date = models.DateField()
+    length = models.PositiveSmallIntegerField()
+    generated_at = models.DateTimeField(auto_now_add=True)
+    closed_at = models.DateTimeField(null=True, blank=True)
+    winner = models.ForeignKey(
+        'auth.User', null=True, blank=True, on_delete=models.SET_NULL, related_name='league_daily_wins',
+    )
+
+    class Meta:
+        unique_together = [('country', 'date')]
+        ordering = ['-date']
+
+    def __str__(self):
+        return f'{self.country_id} {self.date}'
+
+
+class LeagueDayItem(models.Model):
+    """Immutable snapshot row: same species/media/options for everyone that day."""
+
+    day = models.ForeignKey(LeagueDay, related_name='items', on_delete=models.CASCADE)
+    sequence = models.PositiveSmallIntegerField()
+    species = models.ForeignKey(Species, on_delete=models.PROTECT)
+    media = models.ForeignKey('media.Media', on_delete=models.PROTECT)
+    media_type = models.CharField(max_length=16)
+    level = models.CharField(max_length=32)
+    rarity = models.CharField(max_length=32)
+    option_species_ids = models.JSONField(default=list)
+
+    class Meta:
+        ordering = ['sequence']
+        unique_together = [('day', 'sequence')]
+
+
+class LeagueAttempt(models.Model):
+    day = models.ForeignKey(LeagueDay, related_name='attempts', on_delete=models.CASCADE)
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='league_attempts')
+    player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='league_attempts')
+    game = models.OneToOneField(Game, on_delete=models.CASCADE, related_name='league_attempt')
+    correct_count = models.PositiveSmallIntegerField(default=0)
+    score = models.IntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    completed_at = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        unique_together = [('day', 'user')]
+        indexes = [models.Index(fields=['day', '-score', '-correct_count', 'completed_at'])]
+
+    def __str__(self):
+        return f'{self.user_id} on {self.day}'
+
+
+class LeagueWeekResult(models.Model):
+    """Final standings of a closed Monday–Sunday week."""
+
+    country = models.ForeignKey(Country, on_delete=models.CASCADE, related_name='league_week_results')
+    week_start = models.DateField()
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='league_week_results')
+    total_score = models.IntegerField(default=0)
+    days_played = models.PositiveSmallIntegerField(default=0)
+    rank = models.PositiveIntegerField()
+    is_champion = models.BooleanField(default=False)
+
+    class Meta:
+        unique_together = [('country', 'week_start', 'user')]
+        ordering = ['country', '-week_start', 'rank']
+
+
+class LeagueNotificationLog(models.Model):
+    """At most one notification of each kind per user, country and local date."""
+
+    KIND_INVITE = 'invite'
+    KIND_REMINDER_18 = 'reminder_18'
+    KIND_REMINDER_20 = 'reminder_20'
+    KIND_FINAL_DAY = 'final_day'
+    KIND_WEEKLY_RECAP = 'weekly_recap'
+    KIND_FRESH_START = 'fresh_start'
+    KIND_DAILY_WIN = 'daily_win'
+    KIND_WEEK_CHAMPION = 'week_champion'
+    CELEBRATION_KINDS = (KIND_DAILY_WIN, KIND_WEEK_CHAMPION)
+    KIND_CHOICES = [
+        (KIND_INVITE, 'Invite'),
+        (KIND_REMINDER_18, 'Reminder 18:00'),
+        (KIND_REMINDER_20, 'Reminder 20:00'),
+        (KIND_FINAL_DAY, 'Final day of the week'),
+        (KIND_WEEKLY_RECAP, 'Weekly recap'),
+        (KIND_FRESH_START, 'New week, fresh start'),
+        (KIND_DAILY_WIN, 'Daily win'),
+        (KIND_WEEK_CHAMPION, 'Week champion'),
+    ]
+
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='league_notifications')
+    country = models.ForeignKey(Country, on_delete=models.CASCADE, related_name='+')
+    date = models.DateField()
+    kind = models.CharField(max_length=16, choices=KIND_CHOICES)
+    sent_at = models.DateTimeField(auto_now_add=True)
+    seen_at = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        unique_together = [('user', 'country', 'date', 'kind')]

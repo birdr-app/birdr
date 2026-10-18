@@ -33,6 +33,9 @@ import { SpeciesLanguageLabel } from '../components/SpeciesLanguageLabel';
 import { AppLanguagePicker } from '../components/AppLanguagePicker';
 import { speciesLanguageFromAppLocale } from '../i18n/appLocales';
 import { colors } from '../theme';
+import { fetchLeagueOverview, type LeagueOverview } from '../api/league';
+import { LeagueCapsBadge } from '../components/LeagueCapsBadge';
+import { leagueFlag } from '../lib/league';
 
 export function ProfileScreen() {
   const { t, locale, setLocale } = useTranslation();
@@ -61,6 +64,14 @@ export function ProfileScreen() {
   /** True after user changes species language in the modal; blocks loadProfile from overwriting before save. */
   const speciesLanguageDirtyRef = useRef(false);
   const [saveToast, setSaveToast] = useState<string | null>(null);
+  const [leagueCaps, setLeagueCaps] = useState<LeagueOverview['caps']>([]);
+
+  useEffect(() => {
+    if (!isAuthenticated) return;
+    fetchLeagueOverview()
+      .then((o) => setLeagueCaps(o.caps.filter((c) => c.week_champion > 0 || c.daily_wins > 0)))
+      .catch(() => setLeagueCaps([]));
+  }, [isAuthenticated]);
 
   const loadProfile = useCallback(async () => {
     if (!isAuthenticated) return;
@@ -314,6 +325,12 @@ export function ProfileScreen() {
         <TouchableOpacity onPress={uploadingAvatar ? undefined : showAvatarOptions} disabled={uploadingAvatar}>
           <Text style={styles.changePhotoLabel}>{t('change_avatar')}</Text>
         </TouchableOpacity>
+        {leagueCaps.map((c) => (
+          <View key={c.country_code} style={styles.leagueCapsLine}>
+            <Text style={styles.leagueCapsFlag}>{leagueFlag(c.country_code) || c.country_code}</Text>
+            <LeagueCapsBadge variant="full" weekChampion={c.week_champion} dailyWins={c.daily_wins} />
+          </View>
+        ))}
       </View>
       <Text style={styles.label}>{t('username')}</Text>
       <TextInput
@@ -506,6 +523,8 @@ export function ProfileScreen() {
 }
 
 const styles = StyleSheet.create({
+  leagueCapsLine: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 8 },
+  leagueCapsFlag: { fontSize: 20 },
   screenRoot: { flex: 1, backgroundColor: '#fff' },
   container: { flex: 1, backgroundColor: '#fff' },
   saveToast: {

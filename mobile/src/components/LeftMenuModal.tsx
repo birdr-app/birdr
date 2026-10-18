@@ -25,6 +25,7 @@ const MENU_ITEMS: { route: string; labelKey: string }[] = [
   { route: 'Start', labelKey: 'new_game' },
   { route: 'Scores', labelKey: 'high_scores' },
   { route: 'CountryChallengeLeaderboard', labelKey: 'country_leaderboard' },
+  { route: 'League', labelKey: 'league' },
   { route: 'SurvivalScores', labelKey: 'survival_highscores' },
   { route: 'Updates', labelKey: 'updates' },
   { route: 'Help', labelKey: 'community_menu' },
@@ -94,7 +95,8 @@ export function LeftMenuModal() {
               {MENU_ITEMS.map((item) => {
                 const isFocused =
                   currentRoute === item.route ||
-                  (item.route === 'Help' && currentRoute === 'HelpDetail');
+                  (item.route === 'Help' && currentRoute === 'HelpDetail') ||
+                  (item.route === 'League' && currentRoute?.startsWith('League'));
                 const label = t(item.labelKey);
                 return (
                   <TouchableOpacity

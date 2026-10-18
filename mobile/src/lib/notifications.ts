@@ -4,7 +4,8 @@ import * as Notifications from 'expo-notifications';
 import Constants from 'expo-constants';
 import { getAccessToken } from '../api/auth';
 import { registerPushWithBackend } from '../api/pushRegister';
-import { navigateToDailyChallenge, navigateToFlockDetail } from '../navigation/navigationRef';
+import { navigateWhenReady } from '../navigation/navigationRef';
+import { routeForNotificationData } from './notificationRoute';
 
 const WELCOME_TITLE = 'Birdr';
 const WELCOME_BODY = "You're good to go!";
@@ -184,7 +185,8 @@ export async function syncPushRegistrationIfPermittedAsync(): Promise<void> {
 
 /**
  * Ask for push permission and register with the API when logged in.
- * Welcome notification (local + server) only when the user newly grants permission.
+ * When the user newly grants permission they get exactly one welcome notification:
+ * the server push if the backend sent it, otherwise a local one.
  */
 export async function registerForPushNotificationsAsync(): Promise<PushOnboardingResult> {
   try {
@@ -197,11 +199,10 @@ export async function registerForPushNotificationsAsync(): Promise<PushOnboardin
       return result;
     }
 
-    if (newlyGranted) {
-      await showLocalWelcomeNotification();
-    }
-
     if (!isPhysicalDevice()) {
+      if (newlyGranted) {
+        await showLocalWelcomeNotification();
+      }
       maybeShowDevPushAlert('granted_local_only', 'simulator');
       return 'granted_local_only';
     }
@@ -215,11 +216,17 @@ export async function registerForPushNotificationsAsync(): Promise<PushOnboardin
       expoPushToken = tokenResponse.data;
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
+      if (newlyGranted) {
+        await showLocalWelcomeNotification();
+      }
       maybeShowDevPushAlert('granted_no_token', msg);
       return 'granted_no_token';
     }
 
     if (!expoPushToken) {
+      if (newlyGranted) {
+        await showLocalWelcomeNotification();
+      }
       maybeShowDevPushAlert('granted_no_token');
       return 'granted_no_token';
     }
@@ -227,6 +234,9 @@ export async function registerForPushNotificationsAsync(): Promise<PushOnboardin
     const backend = await registerTokenWithBackend(expoPushToken, {
       sendWelcome: newlyGranted,
     });
+    if (newlyGranted && !backend.testPushSent) {
+      await showLocalWelcomeNotification();
+    }
     if (backend.ok) {
       const detail = backend.testPushSent
         ? 'server test push sent'
@@ -252,34 +262,66 @@ export async function registerForPushNotificationsAsync(): Promise<PushOnboardin
   }
 }
 
+function promptOpenSettings(message: string): void {
+  Alert.alert('Notifications', message, [
+    { text: 'Not now', style: 'cancel' },
+    { text: 'Open settings', onPress: () => Linking.openSettings() },
+  ]);
+}
+
+/**
+ * Ask for permission (if needed) and register this device with the backend.
+ * Use when the user opts into something that sends pushes (e.g. joining the National League).
+ * Offers system settings when notifications were turned off earlier.
+ */
+export async function requestPushPermissionAndRegister(): Promise<PushOnboardingResult> {
+  const result = await registerForPushNotificationsAsync();
+  if (result === 'denied_can_open_settings') {
+    promptOpenSettings(
+      'Notifications are turned off for Birdr. Enable them in system settings to get your daily reminders.'
+    );
+  }
+  return result;
+}
+
 /** Call when the user starts Birdr Journey (after country is chosen). */
 export async function runBirdrJourneyPushOnboarding(): Promise<void> {
   const result = await registerForPushNotificationsAsync();
   if (result === 'denied_can_open_settings') {
-    Alert.alert(
-      'Notifications',
-      'Notifications are turned off for Birdr. Enable them in system settings to get daily challenge reminders.',
-      [
-        { text: 'Not now', style: 'cancel' },
-        { text: 'Open settings', onPress: () => Linking.openSettings() },
-      ]
+    promptOpenSettings(
+      'Notifications are turned off for Birdr. Enable them in system settings to get daily challenge reminders.'
     );
   }
 }
 
+function handleNotificationResponse(response: Notifications.NotificationResponse): void {
+  const route = routeForNotificationData(response.notification.request.content.data);
+  if (route) {
+    navigateWhenReady(route.name, route.params);
+  }
+}
+
+/**
+ * Route notification taps. Also handles the tap that launched the app from a killed
+ * state (the listener is attached too late to see it); navigation waits until the
+ * NavigationContainer is ready.
+ */
 export function setupNotificationResponseHandler(): () => void {
-  const sub = Notifications.addNotificationResponseReceivedListener((response) => {
-    const data = response.notification.request.content.data as {
-      type?: string;
-      flock_slug?: string;
-    };
-    if (data?.type === 'signup_test' || data?.type === 'daily_challenge') {
-      navigateToDailyChallenge();
-      return;
-    }
-    if (data?.type === 'flock_challenge' && data.flock_slug) {
-      navigateToFlockDetail(data.flock_slug);
-    }
-  });
+  let handledId: string | null = null;
+  const handleOnce = (response: Notifications.NotificationResponse) => {
+    const id = response.notification.request.identifier;
+    if (id && id === handledId) return;
+    handledId = id;
+    handleNotificationResponse(response);
+  };
+  const sub = Notifications.addNotificationResponseReceivedListener(handleOnce);
+  Notifications.getLastNotificationResponseAsync()
+    .then((response) => {
+      if (response) {
+        handleOnce(response);
+        Notifications.clearLastNotificationResponse();
+      }
+    })
+    .catch(() => {});
   return () => sub.remove();
 }

@@ -92,11 +92,16 @@ export function GamePlayScreen() {
   const flockChallengeId = (route.params as { flockChallengeId?: number })?.flockChallengeId;
   const gameTokenParam = (route.params as { gameToken?: string })?.gameToken;
   const playerTokenParam = (route.params as { playerToken?: string })?.playerToken;
-  const soloGameMode = dailyChallengeId != null || (flockSlug != null && flockChallengeId != null);
+  const leagueCountryCode = (route.params as { leagueCountryCode?: string })?.leagueCountryCode;
+  const leagueAttemptId = (route.params as { leagueAttemptId?: number })?.leagueAttemptId;
+  const isLeagueGame = leagueCountryCode != null && leagueAttemptId != null;
+  const soloGameMode =
+    dailyChallengeId != null || (flockSlug != null && flockChallengeId != null) || isLeagueGame;
   const { game, player, setGame, setPlayer, loadGame } = useGame();
   const { question, answer, players, nextQuestion, submitAnswer, joinGame, startGame, connected, endGameSession, refreshGameState, patchQuestionMedia } = useGameWebSocket();
   const dailyChallengeStartSent = useRef(false);
   const flockCompleteSent = useRef(false);
+  const leagueCompleteSent = useRef(false);
   const [dailyChallengeLoadTimeout, setDailyChallengeLoadTimeout] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
   const [expertSpecies, setExpertSpecies] = useState<Species[]>([]);
@@ -242,6 +247,20 @@ export function GamePlayScreen() {
 
   useEffect(() => {
     if (!game?.ended) return;
+    if (isLeagueGame && leagueCountryCode && leagueAttemptId != null) {
+      if (leagueCompleteSent.current) return;
+      leagueCompleteSent.current = true;
+      void (async () => {
+        try {
+          const { completeLeagueAttempt } = await import('../api/league');
+          const result = await completeLeagueAttempt(leagueAttemptId);
+          (navigation as any).replace('LeagueResult', { countryCode: leagueCountryCode, result });
+        } catch {
+          (navigation as any).replace('League', { countryCode: leagueCountryCode });
+        }
+      })();
+      return;
+    }
     if (flockSlug && flockChallengeId && game.token && !flockCompleteSent.current) {
       flockCompleteSent.current = true;
       void (async () => {
@@ -260,7 +279,7 @@ export function GamePlayScreen() {
       return;
     }
     (navigation as any).navigate('GameResults', { dailyChallengeId });
-  }, [game?.ended, game?.token, navigation, dailyChallengeId, flockSlug, flockChallengeId]);
+  }, [game?.ended, game?.token, navigation, dailyChallengeId, flockSlug, flockChallengeId, isLeagueGame, leagueCountryCode, leagueAttemptId]);
 
   const prevQuestionIdRef = useRef<number | undefined>(undefined);
   useEffect(() => {
@@ -910,7 +929,7 @@ export function GamePlayScreen() {
         </View>
       ) : null}
 
-      {!isPracticeGame && !flockSlug && players.length > 0 ? (
+      {!isPracticeGame && !flockSlug && !isLeagueGame && players.length > 0 ? (
         <View style={styles.playersSection}>
           <Text style={styles.sectionTitle}>{t('scores')}</Text>
           {players.map((p, i) => (

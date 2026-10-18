@@ -84,6 +84,17 @@ from jizz.practice_views import (
     StartSpeciesPracticeView,
     TroubleSpotsView,
 )
+from jizz.league_views import (
+    LeagueCelebrationsSeenView,
+    LeagueCompleteView,
+    LeagueCountryView,
+    LeagueJoinView,
+    LeagueLeaderboardView,
+    LeagueLeaveView,
+    LeagueMembershipView,
+    LeagueOverviewView,
+    LeagueStartView,
+)
 from jizz.survival_views import (
     SurvivalRecordView,
     SurvivalResultView,
@@ -470,6 +481,15 @@ urlpatterns = [
         StartSpeciesPracticeView.as_view(),
         name='practice-species-start',
     ),
+    path('api/league/', LeagueOverviewView.as_view(), name='league-overview'),
+    path('api/league/attempts/<int:attempt_id>/complete/', LeagueCompleteView.as_view(), name='league-complete'),
+    path('api/league/<str:code>/', LeagueCountryView.as_view(), name='league-country'),
+    path('api/league/<str:code>/join/', LeagueJoinView.as_view(), name='league-join'),
+    path('api/league/<str:code>/leave/', LeagueLeaveView.as_view(), name='league-leave'),
+    path('api/league/<str:code>/membership/', LeagueMembershipView.as_view(), name='league-membership'),
+    path('api/league/<str:code>/celebrations/seen/', LeagueCelebrationsSeenView.as_view(), name='league-celebrations-seen'),
+    path('api/league/<str:code>/today/start/', LeagueStartView.as_view(), name='league-start'),
+    path('api/league/<str:code>/leaderboard/', LeagueLeaderboardView.as_view(), name='league-leaderboard'),
     path('api/survival/start/', SurvivalStartView.as_view(), name='survival-start'),
     path('api/survival/record/', SurvivalRecordView.as_view(), name='survival-record'),
     path('api/survival/scores/', SurvivalScoresView.as_view(), name='survival-scores'),

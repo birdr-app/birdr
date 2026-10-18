@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
-import { navigationRef } from './src/navigation/navigationRef';
+import { flushPendingNavigation, navigationRef } from './src/navigation/navigationRef';
 import { setupNotificationResponseHandler } from './src/lib/notifications';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { Platform } from 'react-native';
@@ -46,6 +46,7 @@ export default function App() {
       <StatusBar style="dark" />
       <NavigationContainer
         ref={navigationRef}
+        onReady={flushPendingNavigation}
         onStateChange={() => {
           const route = navigationRef.getCurrentRoute();
           if (route?.name) {

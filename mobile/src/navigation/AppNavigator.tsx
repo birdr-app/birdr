@@ -54,6 +54,9 @@ import { SurvivalStartScreen } from '../screens/SurvivalStartScreen';
 import { SurvivalPlayScreen } from '../screens/SurvivalPlayScreen';
 import { SurvivalResultScreen } from '../screens/SurvivalResultScreen';
 import { SurvivalScoresScreen } from '../screens/SurvivalScoresScreen';
+import { LeagueScreen } from '../screens/LeagueScreen';
+import { LeagueLeaderboardScreen } from '../screens/LeagueLeaderboardScreen';
+import { LeagueResultScreen } from '../screens/LeagueResultScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -88,6 +91,9 @@ const SCREENS: { name: string; titleKey: string; component: React.ComponentType<
   { name: 'SurvivalPlay', titleKey: 'survival', component: SurvivalPlayScreen },
   { name: 'SurvivalResult', titleKey: 'survival', component: SurvivalResultScreen },
   { name: 'SurvivalScores', titleKey: 'survival_highscores', component: SurvivalScoresScreen },
+  { name: 'League', titleKey: 'league', component: LeagueScreen },
+  { name: 'LeagueLeaderboard', titleKey: 'league_leaderboard', component: LeagueLeaderboardScreen },
+  { name: 'LeagueResult', titleKey: 'league', component: LeagueResultScreen },
   { name: 'Updates', titleKey: 'updates', component: UpdatesScreen },
   { name: 'UpdateDetail', titleKey: 'updates', component: UpdateDetailScreen },
   { name: 'Help', titleKey: 'community', component: HelpOverviewScreen },

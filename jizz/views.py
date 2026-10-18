@@ -902,6 +902,7 @@ class PlayerScoreListView(ListAPIView):
                 Game.GAME_TYPE_PAIR_PRACTICE,
                 Game.GAME_TYPE_SPECIES_PRACTICE,
                 Game.GAME_TYPE_SURVIVAL,
+                Game.GAME_TYPE_LEAGUE,
             ])
             .select_related("player", "game", "game__country")
             .annotate(

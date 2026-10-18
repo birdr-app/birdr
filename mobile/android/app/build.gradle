@@ -4,6 +4,27 @@ apply plugin: "com.facebook.react"
 
 def projectRoot = rootDir.getAbsoluteFile().getParentFile().getAbsolutePath()
 
+// Firebase config for push (FCM). Without it Expo push tokens cannot be created on Android.
+// Looked up in: $GOOGLE_SERVICES_JSON (EAS file env var), mobile/google-services.json (app.json
+// googleServicesFile), android/app/google-services.json. Download it from the Firebase console.
+def googleServicesTarget = file("google-services.json")
+def googleServicesSources = [System.getenv("GOOGLE_SERVICES_JSON"), new File(projectRoot, "google-services.json").path]
+    .findAll { it != null && !it.trim().isEmpty() }
+    .collect { new File(it.trim()) }
+def googleServicesSource = googleServicesSources.find { it.exists() }
+if (googleServicesSource != null && googleServicesSource.canonicalPath != googleServicesTarget.canonicalPath) {
+    googleServicesTarget.bytes = googleServicesSource.bytes
+}
+if (googleServicesTarget.exists()) {
+    apply plugin: "com.google.gms.google-services"
+} else {
+    logger.warn("""
+WARNING: google-services.json not found. The build continues, but push notifications will NOT work
+on Android (getExpoPushTokenAsync fails without Firebase). Put the file from the Firebase console
+at mobile/google-services.json or set GOOGLE_SERVICES_JSON to its path.
+""")
+}
+
 // Android Studio / raw ./gradlew often pick up an old system `node` on PATH. Expo needs Node 18+ (see package.json engines).
 // Prefer: ./scripts/gradle-with-node22.sh or npm run android. Or set NODE_BINARY below or in android/gradle.properties.
 def resolveNodeExecutable() {

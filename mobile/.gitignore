@@ -63,3 +63,6 @@ coverage/
 # ios/.xcode.env.local
 # *.xcuserstate
 # xcuserdata/
+
+# Firebase Android config: CI writes it from the GOOGLE_SERVICES_JSON secret
+google-services.json

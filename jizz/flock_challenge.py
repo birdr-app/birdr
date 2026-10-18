@@ -169,12 +169,14 @@ def _build_slot_items(
     return items
 
 
-def generate_club_mix_snapshot(*, country, host) -> list[SnapshotItem]:
-    """Build the immutable Club Mix question set or raise InsufficientChallengeContent."""
+def generate_club_mix_snapshot(*, country, host, slots=None) -> list[SnapshotItem]:
+    """Build an immutable question set (Club Mix by default) or raise InsufficientChallengeContent."""
+    slots = slots or CLUB_MIX_SLOTS
+    expected_length = sum(slot[3] for slot in slots)
     used: set[int] = set()
     items: list[SnapshotItem] = []
     seq = 1
-    for level, rarity, media, count in CLUB_MIX_SLOTS:
+    for level, rarity, media, count in slots:
         slot_items = _build_slot_items(
             country=country,
             host=host,
@@ -189,10 +191,10 @@ def generate_club_mix_snapshot(*, country, host) -> list[SnapshotItem]:
             used.add(item.species_id)
         items.extend(slot_items)
         seq += count
-    if len(items) != CLUB_MIX_LENGTH:
+    if len(items) != expected_length:
         raise InsufficientChallengeContent(
-            f'Expected {CLUB_MIX_LENGTH} questions, built {len(items)}.',
-            needed=CLUB_MIX_LENGTH,
+            f'Expected {expected_length} questions, built {len(items)}.',
+            needed=expected_length,
             available=len(items),
         )
     return items

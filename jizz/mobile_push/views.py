@@ -4,9 +4,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.authentication import JWTAuthentication
 
-from jizz.mobile_push.expo import send_expo_push
 from jizz.mobile_push.serializers import PushRegisterSerializer
-from jizz.mobile_push.services import register_push_device, send_signup_test_push_async
+from jizz.mobile_push.services import register_push_device, send_signup_test_push
 
 
 class PushRegisterView(APIView):
@@ -31,13 +30,8 @@ class PushRegisterView(APIView):
         send_welcome = serializer.validated_data.get('send_welcome', False)
         test_push_sent = False
         if send_welcome:
-            test_push_sent = send_expo_push(
-                token,
-                'Birdr',
-                "You're good to go!",
-                data={'type': 'signup_test'},
-            )
-            send_signup_test_push_async(token)
+            # Exactly one welcome push; the app skips its local one when this succeeds.
+            test_push_sent = bool(send_signup_test_push(token))
 
         return Response(
             {

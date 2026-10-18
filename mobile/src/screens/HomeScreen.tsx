@@ -23,6 +23,8 @@ import { useVisualStyle } from '../context/VisualStyleContext';
 import { FeedbackForm } from '../components/FeedbackForm';
 import { useSoftUpdateAvailable } from '../hooks/useSoftUpdateAvailable';
 import { resolveMediaUrl } from '../api/config';
+import { fetchLeague, fetchLeagueOverview, type LeagueCountry, type LeagueDetail } from '../api/league';
+import { leagueFlag } from '../lib/league';
 import {
   formatChallengeCountdown,
   getChallengeTimeRemaining,
@@ -61,6 +63,7 @@ type RootStackParamList = {
   Login: undefined;
   SurvivalStart: undefined;
   SurvivalScores: { countryCode?: string } | undefined;
+  League: { countryCode?: string } | undefined;
 };
 
 export function HomeScreen() {
@@ -76,6 +79,25 @@ export function HomeScreen() {
   const [mainFlock, setMainFlock] = useState<Flock | null>(null);
   const [flocksLoading, setFlocksLoading] = useState(false);
   const [flocksReady, setFlocksReady] = useState(false);
+  const [leagueDetail, setLeagueDetail] = useState<LeagueDetail | null>(null);
+  const [leagueSuggested, setLeagueSuggested] = useState<LeagueCountry | null>(null);
+
+  const loadLeagueSummary = useCallback(async () => {
+    try {
+      const overview = await fetchLeagueOverview();
+      const joined = overview.memberships[0]?.country;
+      if (joined) {
+        setLeagueSuggested(null);
+        setLeagueDetail(await fetchLeague(joined.code));
+      } else {
+        setLeagueDetail(null);
+        setLeagueSuggested(overview.suggested[0] ?? null);
+      }
+    } catch {
+      setLeagueDetail(null);
+      setLeagueSuggested(null);
+    }
+  }, []);
 
   const loadFlockSummary = useCallback(async () => {
     if (!isAuthenticated) {
@@ -116,7 +138,8 @@ export function HomeScreen() {
       loadUpdates(undefined, locale).then(setUpdates).catch(() => {});
       loadActiveJourney();
       loadFlockSummary();
-    }, [loadActiveJourney, loadFlockSummary, locale])
+      void loadLeagueSummary();
+    }, [loadActiveJourney, loadFlockSummary, loadLeagueSummary, locale])
   );
 
   useEffect(() => {
@@ -161,10 +184,10 @@ export function HomeScreen() {
     : '';
   const flockChallenge = mainFlock?.active_challenge;
 
+  const leagueToday = leagueDetail?.today;
   const needsCountdown =
-    !!flockChallenge &&
-    flockChallenge.status === 'active' &&
-    !flockChallenge.my_completed;
+    (!!flockChallenge && flockChallenge.status === 'active' && !flockChallenge.my_completed) ||
+    (!!leagueToday && !leagueToday.played);
 
   const [nowTick, setNowTick] = useState(() => Date.now());
   useEffect(() => {
@@ -172,6 +195,27 @@ export function HomeScreen() {
     const id = setInterval(() => setNowTick(Date.now()), 1000);
     return () => clearInterval(id);
   }, [needsCountdown, flockChallenge?.id, flockChallenge?.ends_at]);
+
+  const leagueCountry = leagueDetail?.country ?? leagueSuggested;
+  const leagueCountryLabel = leagueCountry ? getCountryDisplayName(leagueCountry, locale) : '';
+  const leagueTitle = leagueCountry
+    ? `${leagueFlag(leagueCountry.code)} ${t('league_title_country', { country: leagueCountryLabel })}`.trim()
+    : t('league');
+  const leagueStatusLine = useMemo(() => {
+    if (!leagueToday) {
+      return leagueSuggested ? t('league_home_join_cta') : t('league_home_hint');
+    }
+    if (leagueToday.my_result) {
+      const rank = leagueToday.my_result.rank;
+      return rank
+        ? t('league_home_played_rank', { score: leagueToday.my_result.score, rank })
+        : t('league_points', { score: leagueToday.my_result.score });
+    }
+    const remaining = getChallengeTimeRemaining(leagueToday.closes_at, new Date(nowTick));
+    return remaining
+      ? t('league_home_play_now', { time: formatChallengeCountdown(remaining) })
+      : t('league_home_hint');
+  }, [leagueToday, leagueSuggested, nowTick, t]);
 
   const flockStatusLine = useMemo(() => {
     if (!flockChallenge) return t('flocks_no_active_challenge_short');
@@ -295,6 +339,23 @@ export function HomeScreen() {
             </Text>
             <Text style={styles.survivalHeroHint} numberOfLines={2}>
               {t('survival_home_hint')}
+            </Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.leagueHeroButton}
+          onPress={() => navigation.navigate('League', leagueCountry ? { countryCode: leagueCountry.code } : undefined)}
+          testID="home.league"
+          accessibilityLabel={`${leagueTitle}, ${leagueStatusLine}`}
+        >
+          <Text style={styles.leagueHeroEmoji}>{leagueToday?.played ? '⭐' : '🏆'}</Text>
+          <View style={styles.journeyHeroText}>
+            <Text style={styles.journeyHeroLevel} numberOfLines={2}>
+              {leagueTitle}
+            </Text>
+            <Text style={styles.survivalHeroHint} numberOfLines={2}>
+              {leagueStatusLine}
             </Text>
           </View>
         </TouchableOpacity>
@@ -532,6 +593,23 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     borderWidth: 2,
     borderColor: colors.primary[400],
+  },
+  leagueHeroButton: {
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    backgroundColor: colors.primary[900],
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 16,
+    borderWidth: 2,
+    borderColor: '#f59e0b',
+  },
+  leagueHeroEmoji: {
+    width: 56,
+    fontSize: 40,
+    textAlign: 'center',
   },
   survivalHeroHint: {
     fontSize: 14,

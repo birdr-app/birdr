@@ -9,6 +9,8 @@ buildscript {
     classpath('com.android.tools.build:gradle')
     classpath('com.facebook.react:react-native-gradle-plugin')
     classpath('org.jetbrains.kotlin:kotlin-gradle-plugin')
+    // FCM for Expo push on Android; applied in app/build.gradle only when google-services.json exists.
+    classpath('com.google.gms:google-services:4.4.2')
   }
 }
 

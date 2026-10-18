@@ -34,6 +34,7 @@ import { playFullSrc, playPreviewSrc } from "../../../utils/play-image-url"
 import { postQuestionMediaReady } from "../../../api/question-media-ready"
 import { postQuestionNextMedia } from "../../../api/question-next-media"
 import { getFlockPlayContext } from "../../../api/flocks"
+import { getLeaguePlayContext } from "../../../api/league"
 import { answersEnabledForMedia } from "../../../core/media-answer-gate"
 import {
   currentPlayMediaItem,
@@ -77,7 +78,8 @@ export const QuestionComponent = () => {
   const isPracticeGame = isPairPractice || isSpeciesPractice
   const isFlockChallenge =
     !!getFlockPlayContext() || game?.game_type === 'flock_challenge'
-  const showPlayScores = !isFlockChallenge
+  const isLeague = !!getLeaguePlayContext() || game?.game_type === 'league'
+  const showPlayScores = !isFlockChallenge && !isLeague
 
   const practiceAnswers = useMemo(
     () =>

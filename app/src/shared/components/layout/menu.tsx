@@ -12,6 +12,11 @@ export const BirdrMenu = () => {
             <Link href={'/start'} textDecoration="none">
               <FormattedMessage id={'new game'} defaultMessage={'New game'} />
             </Link>
+            <Link asChild textDecoration="none">
+              <RouterLink to={'/league'}>
+                <FormattedMessage id="league_national" defaultMessage="National League" />
+              </RouterLink>
+            </Link>
             <Link href={'/scores'} textDecoration="none">
               <FormattedMessage id={'High scores'} defaultMessage={'High scores'} />
             </Link>

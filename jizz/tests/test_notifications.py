@@ -1,11 +1,11 @@
 """
 Tests for jizz.notifications (push and email helpers).
 """
-from unittest.mock import patch, MagicMock
-from django.test import TestCase
+from unittest.mock import patch
+from django.test import TestCase, override_settings
 from django.contrib.auth import get_user_model
 
-from jizz.models import DeviceToken
+from jizz.models import DeviceToken, PushDevice
 from jizz import notifications
 
 User = get_user_model()
@@ -21,19 +21,24 @@ class SendPushToUserTestCase(TestCase):
             notifications.send_push_to_user(user, 'Title', 'Body')
             mock_post.assert_not_called()
 
-    @patch('jizz.mobile_push.expo.send_expo_push')
-    def test_tokens_exist_but_send_disabled_does_not_post(self, mock_send):
+    @override_settings(SEND_PUSH_NOTIFICATIONS=False)
+    def test_tokens_exist_but_send_disabled_does_not_post(self):
         user = User.objects.create_user(username='u', email='u@test.com', password='pass')
         DeviceToken.objects.create(user=user, token='ExponentPushToken[xxx]', platform='ios')
-        with patch('django.conf.settings', MagicMock(SEND_PUSH_NOTIFICATIONS=False)):
-            notifications.send_push_to_user(user, 'Title', 'Body')
-        mock_send.assert_called_once()
+        with patch('requests.post') as mock_post:
+            result = notifications.send_push_to_user(user, 'Title', 'Body')
+        mock_post.assert_not_called()
+        self.assertTrue(result.skipped)
 
-    @patch('jizz.mobile_push.expo.send_expo_push', return_value=True)
+    @patch('jizz.mobile_push.expo.send_expo_push_many')
     def test_tokens_and_send_enabled_posts_to_expo(self, mock_send):
         user = User.objects.create_user(username='u', email='u@test.com', password='pass')
         DeviceToken.objects.create(user=user, token='ExponentPushToken[yyy]', platform='android')
+        PushDevice.objects.create(user=user, expo_push_token='ExponentPushToken[zzz]', platform='ios')
+        PushDevice.objects.create(
+            user=user, expo_push_token='ExponentPushToken[off]', platform='ios', enabled=False
+        )
         notifications.send_push_to_user(user, 'Hi', 'Message', data={'key': 'value'})
         mock_send.assert_called_once_with(
-            'ExponentPushToken[yyy]', 'Hi', 'Message', data={'key': 'value'}
+            ['ExponentPushToken[yyy]', 'ExponentPushToken[zzz]'], 'Hi', 'Message', data={'key': 'value'}
         )

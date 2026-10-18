@@ -4,11 +4,10 @@ Register mobile push devices and optional welcome test push.
 from __future__ import annotations
 
 import logging
-import threading
 
 from django.contrib.auth.models import User
 
-from jizz.mobile_push.expo import send_expo_push
+from jizz.mobile_push.expo import PushResult, send_expo_push
 from jizz.models import PushDevice, UserProfile
 
 logger = logging.getLogger(__name__)
@@ -46,15 +45,11 @@ def register_push_device(
     return device
 
 
-def send_signup_test_push_async(expo_push_token: str) -> None:
-    """Fire-and-forget welcome push so registration never fails on delivery."""
-
-    def _send():
-        send_expo_push(
-            expo_push_token,
-            SIGNUP_TEST_TITLE,
-            SIGNUP_TEST_BODY,
-            data={'type': 'signup_test'},
-        )
-
-    threading.Thread(target=_send, daemon=True).start()
+def send_signup_test_push(expo_push_token: str) -> PushResult:
+    """Welcome push after the user grants permission. Never raises."""
+    return send_expo_push(
+        expo_push_token,
+        SIGNUP_TEST_TITLE,
+        SIGNUP_TEST_BODY,
+        data={'type': 'signup_test'},
+    )

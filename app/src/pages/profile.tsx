@@ -32,6 +32,7 @@ import type { AppLocale } from "../i18n/app-locales";
 import { speciesLanguageFromAppLocale } from "../i18n/app-locales";
 import AppContext from "../core/app-context";
 import { useAuthProfile } from "../core/auth-profile-context";
+import { ProfileLeagueCaps } from "../components/league-caps-badge";
 import { parseVisualStyle, type VisualStyle } from "../user/visual-style";
 
 export const ProfilePage = () => {
@@ -280,6 +281,8 @@ export const ProfilePage = () => {
                 </Link>
               </Box>
             </VStack>
+
+            <ProfileLeagueCaps />
 
             {/* Player Name Field */}
             <Field.Root>

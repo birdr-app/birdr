@@ -43,8 +43,12 @@ def send_welcome_email(user, site_url=None):
 
 
 def send_push_to_user(user, title, body, data=None):
-    """Send push notification to all devices of the user. Uses Expo Push API if SEND_PUSH_NOTIFICATIONS True."""
-    from jizz.mobile_push.expo import send_expo_push
+    """
+    Send a push to all enabled devices of the user in one Expo request.
+    Returns a PushResult (sent/failed/disabled counts, ticket ids for fetch_receipts).
+    Tokens Expo reports as DeviceNotRegistered are disabled automatically.
+    """
+    from jizz.mobile_push.expo import PushResult, send_expo_push_many
     from jizz.models import DeviceToken, PushDevice
 
     data = data or {}
@@ -56,9 +60,8 @@ def send_push_to_user(user, title, body, data=None):
     )
     tokens.update(DeviceToken.objects.filter(user=user).values_list('token', flat=True))
     if not tokens:
-        return
-    for token in tokens:
-        send_expo_push(token, title, body, data=data)
+        return PushResult()
+    return send_expo_push_many(sorted(tokens), title, body, data=data)
 
 
 def send_daily_challenge_reminder_email(user, challenge, round_obj, hours_left):

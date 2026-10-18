@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "django",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["manage.py", "runserver", "127.0.0.1:8050"],
+      "env": { "DJANGO_SETTINGS_MODULE": "jizz.settings.local" },
+      "port": 8050
+    },
+    {
+      "name": "web",
+      "url": "http://localhost:3000",
+      "port": 3000
+    }
+  ]
+}

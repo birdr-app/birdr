@@ -11,6 +11,7 @@ import { QuestionLoadingFeather } from "../../components/question-loading-feathe
 /** Solo modes that skip the lobby and need start_game from the play screen. */
 const SOLO_GAME_TYPES = new Set([
   'flock_challenge',
+  'league',
   'pair_practice',
   'species_practice',
 ])

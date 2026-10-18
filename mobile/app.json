@@ -54,6 +54,7 @@
         "backgroundColor": "#F5EDE0"
       },
       "package": "pro.birdr.app",
+      "googleServicesFile": "./google-services.json",
       "intentFilters": [
         {
           "action": "VIEW",

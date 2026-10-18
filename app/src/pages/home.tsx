@@ -20,6 +20,7 @@ import {
 import { BirdrArtImage } from '../components/birdr-art-image';
 import { BirdrLevelImage } from '../components/birdr-level-image';
 import { Feedback } from '../components/feedback';
+import { LeagueHomeCard } from '../components/league-home-card';
 import { UpdateListItemCard } from '../components/updates/update-list-item';
 import { Loading } from '../components/loading';
 import AppContext from '../core/app-context';
@@ -218,6 +219,8 @@ const HomePage = () => {
                 </Flex>
               </Flex>
             </Button>
+
+            <LeagueHomeCard />
 
             <Flex direction="column" gap={3} w="full">
               {journeyLoading ? (
