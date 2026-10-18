@@ -754,5 +754,12 @@
   "league_double_title": "⚡ 週末ダブルクイズ",
   "league_double_lead": "首位です。勝利を確実にしよう！🏆",
   "league_double_chase": "順位アップのチャンス：#{rank}まであと{gap}ポイント。",
-  "league_double_join": "今日はポイント2倍：一気にランキング入りしよう！"
+  "league_double_join": "今日はポイント2倍：一気にランキング入りしよう！",
+  "league_my_leagues": "参加中の国別リーグ",
+  "league_suggested": "あなたにおすすめ",
+  "league_join_cta": "参加して今日のクイズをプレイ",
+  "league_other_country": "ほかの国ものぞいてみる",
+  "league_no_leagues_yet": "まだリーグに参加していません。下で国を選んで、今日のクイズをプレイしよう！",
+  "league_last_played": "最終プレイ {date}",
+  "league_not_played_yet": "まだ未プレイ：今日のクイズが待っています"
 }

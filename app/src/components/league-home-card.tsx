@@ -6,6 +6,7 @@ import {
   getLeague,
   getLeagueOverview,
   getLeaguePath,
+  pickMainLeague,
   type LeagueCountry,
   type LeagueDetail,
 } from '../api/league';
@@ -36,9 +37,7 @@ export function LeagueHomeCard() {
       try {
         const overview = await getLeagueOverview();
         const favourite = profile?.country_code?.toUpperCase();
-        const memberships = overview.memberships ?? [];
-        const mine =
-          memberships.find((m) => m.country.code.toUpperCase() === favourite) ?? memberships[0];
+        const mine = pickMainLeague(overview.memberships ?? []);
         if (mine) {
           const league = await getLeague(mine.country.code);
           if (!cancelled) setState({ kind: 'member', league });
@@ -110,7 +109,7 @@ export function LeagueHomeCard() {
       <FormattedMessage id="league_home_join_hint" defaultMessage="One daily quiz, one country, one champion" />
     );
   } else {
-    title = <FormattedMessage id="league_national" defaultMessage="National League" />;
+    title = <FormattedMessage id="league_national" defaultMessage="National league" />;
     subtitle = (
       <FormattedMessage id="league_home_join_hint" defaultMessage="One daily quiz, one country, one champion" />
     );

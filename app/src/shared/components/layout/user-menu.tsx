@@ -65,17 +65,24 @@ export const UserMenu = ({ onOpenLoginModal, isOpen = true }: UserMenuProps) => 
 
   const membershipLinks = (
     <>
-      {hasFlocks && (
+      {(isAuthenticated || hasFlocks) && (
         <Link asChild textDecoration="none">
           <RouterLink to={getFlocksPath()}>
-            <FormattedMessage id="flocks_title" defaultMessage="Flocks" />
+            <FormattedMessage id="flocks_my_flocks" defaultMessage="My flocks" />
+          </RouterLink>
+        </Link>
+      )}
+      {isAuthenticated && (
+        <Link asChild textDecoration="none">
+          <RouterLink to="/league">
+            <FormattedMessage id="league_my_leagues" defaultMessage="My national leagues" />
           </RouterLink>
         </Link>
       )}
       {hasCountryChallenges && (
         <Link asChild textDecoration="none">
           <RouterLink to={getCountryChallengesPath()}>
-            <FormattedMessage id="country_challenges" defaultMessage="Country challenges" />
+            <FormattedMessage id="my_country_challenges" defaultMessage="My country challenges" />
           </RouterLink>
         </Link>
       )}
@@ -147,10 +154,10 @@ export const UserMenu = ({ onOpenLoginModal, isOpen = true }: UserMenuProps) => 
       <Separator />
       {membershipLinks}
       <Link href="/my-games" textDecoration="none">
-        <FormattedMessage id="my_games" defaultMessage="My Games" />
+        <FormattedMessage id="my_games" defaultMessage="My games" />
       </Link>
       <Link href="/checklist" textDecoration="none">
-        <FormattedMessage id="checklist_title" defaultMessage="My Checklist" />
+        <FormattedMessage id="checklist_title" defaultMessage="My checklist" />
       </Link>
       <Link href="/trouble-spots" textDecoration="none">
         <FormattedMessage id="trouble_spots" defaultMessage="My tricky birds" />

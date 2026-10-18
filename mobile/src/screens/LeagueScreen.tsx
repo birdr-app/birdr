@@ -24,6 +24,7 @@ import {
   type LeagueCelebration,
   type LeagueDetail,
   type LeagueRow,
+  setStoredMainLeague,
 } from '../api/league';
 import { LeagueCapsBadge } from '../components/LeagueCapsBadge';
 import { MegaConfetti } from '../components/MegaConfetti';
@@ -140,6 +141,7 @@ export function LeagueScreen() {
     try {
       const data = await fetchLeague(countryCode);
       setLeague(data);
+      if (data.membership) void setStoredMainLeague(data.country.code);
       if (data.celebrations?.length) setCelebrations(data.celebrations);
     } catch (e) {
       setError(e instanceof Error ? e.message : t('failed_load'));

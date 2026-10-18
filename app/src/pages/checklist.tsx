@@ -245,7 +245,7 @@ export default function ChecklistPage() {
     <Page>
       <Page.Header>
         <Heading color="gray.800" size="lg" m={0}>
-          <FormattedMessage id="checklist_title" defaultMessage="My Checklist" />
+          <FormattedMessage id="checklist_title" defaultMessage="My checklist" />
         </Heading>
       </Page.Header>
       <Page.Body maxW="container.xl">

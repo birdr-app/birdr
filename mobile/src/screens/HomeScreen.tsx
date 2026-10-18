@@ -23,7 +23,7 @@ import { useVisualStyle } from '../context/VisualStyleContext';
 import { FeedbackForm } from '../components/FeedbackForm';
 import { useSoftUpdateAvailable } from '../hooks/useSoftUpdateAvailable';
 import { resolveMediaUrl } from '../api/config';
-import { fetchLeague, fetchLeagueOverview, type LeagueCountry, type LeagueDetail } from '../api/league';
+import { fetchLeague, fetchLeagueOverview, pickMainLeague, type LeagueCountry, type LeagueDetail } from '../api/league';
 import { leagueFlag } from '../lib/league';
 import {
   formatChallengeCountdown,
@@ -85,7 +85,7 @@ export function HomeScreen() {
   const loadLeagueSummary = useCallback(async () => {
     try {
       const overview = await fetchLeagueOverview();
-      const joined = overview.memberships[0]?.country;
+      const joined = (await pickMainLeague(overview.memberships))?.country;
       if (joined) {
         setLeagueSuggested(null);
         setLeagueDetail(await fetchLeague(joined.code));

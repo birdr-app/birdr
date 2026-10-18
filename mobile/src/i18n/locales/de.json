@@ -754,5 +754,12 @@
   "league_double_title": "⚡ Doppel-Quiz am Wochenende",
   "league_double_lead": "Du stehst ganz oben. Mach den Sieg klar! 🏆",
   "league_double_chase": "Klettere nach oben: {gap} Punkte hinter Platz {rank}.",
-  "league_double_join": "Heute doppelte Punkte: spring direkt in die Tabelle!"
+  "league_double_join": "Heute doppelte Punkte: spring direkt in die Tabelle!",
+  "league_my_leagues": "Meine Nationalligen",
+  "league_suggested": "Wie für dich gemacht",
+  "league_join_cta": "Mitmachen und heutiges Quiz spielen",
+  "league_other_country": "In ein anderes Land spähen",
+  "league_no_leagues_yet": "Du bist noch in keiner Liga. Wähle unten dein Land und spiel das heutige Quiz!",
+  "league_last_played": "Zuletzt gespielt {date}",
+  "league_not_played_yet": "Noch nicht gespielt: das heutige Quiz wartet"
 }

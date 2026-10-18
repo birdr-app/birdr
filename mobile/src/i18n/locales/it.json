@@ -692,7 +692,7 @@
   "survival_rank": "N. {rank} in {country}",
   "survival_points": "{score} punti",
   "survival_no_scores": "Ancora nessuna partita di Sopravvivenza per questo paese. Sii il primo!",
-  "league": "Lega Nazionale",
+  "league": "Lega nazionale",
   "league_leaderboard": "Classifica",
   "league_title_country": "Lega {country}",
   "league_tagline": "Un quiz al giorno, tutto il paese in gara. Chi sarà l'uccello re di questa settimana?",
@@ -754,5 +754,12 @@
   "league_double_title": "⚡ Quiz doppio del weekend",
   "league_double_lead": "Sei in testa. Metti al sicuro la vittoria! 🏆",
   "league_double_chase": "Scala la classifica: sei a {gap} punti dal #{rank}.",
-  "league_double_join": "Oggi punti doppi: entra subito in classifica!"
+  "league_double_join": "Oggi punti doppi: entra subito in classifica!",
+  "league_my_leagues": "Le mie leghe nazionali",
+  "league_suggested": "Fatto per te",
+  "league_join_cta": "Unisciti e gioca il quiz di oggi",
+  "league_other_country": "Sbircia in un altro paese",
+  "league_no_leagues_yet": "Non sei ancora in nessuna lega. Scegli il tuo paese qui sotto e gioca il quiz di oggi!",
+  "league_last_played": "Ultima partita {date}",
+  "league_not_played_yet": "Non ancora giocato: il quiz di oggi ti aspetta"
 }

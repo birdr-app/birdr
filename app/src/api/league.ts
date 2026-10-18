@@ -9,7 +9,32 @@ export type LeagueMembership = {
   country?: LeagueCountry;
   reminders_enabled: boolean;
   joined_at?: string;
+  last_played_date?: string | null;
 };
+
+const MAIN_LEAGUE_KEY = 'birdr_main_league';
+
+/** Remember the league opened last, so the home page shows that one (like the main flock). */
+export function setStoredMainLeague(code: string): void {
+  try {
+    localStorage.setItem(MAIN_LEAGUE_KEY, code.trim().toUpperCase());
+  } catch {
+    // ignore
+  }
+}
+
+/** Last opened league if still a member, else the most recently played (the API sorts that first). */
+export function pickMainLeague<T extends { country: LeagueCountry }>(memberships: T[]): T | null {
+  if (!memberships.length) return null;
+  let stored: string | null = null;
+  try {
+    stored = localStorage.getItem(MAIN_LEAGUE_KEY);
+  } catch {
+    stored = null;
+  }
+  const match = stored ? memberships.find((m) => m.country.code.toUpperCase() === stored) : undefined;
+  return match ?? memberships[0];
+}
 
 export type LeagueCapsEntry = LeagueCaps & { country_code: string };
 

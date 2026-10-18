@@ -75,7 +75,7 @@ export const MyGamesPage = () => {
       <Page>
         <Page.Header>
           <Heading color={'gray.800'} size={'lg'} m={0}>
-            <FormattedMessage id="my_games" defaultMessage="My Games" />
+            <FormattedMessage id="my_games" defaultMessage="My games" />
           </Heading>
         </Page.Header>
         <Page.Body>
@@ -92,7 +92,7 @@ export const MyGamesPage = () => {
     <Page>
       <Page.Header>
         <Heading color={'gray.800'} size={'lg'} m={0}>
-          <FormattedMessage id="my_games" defaultMessage="My Games" />
+          <FormattedMessage id="my_games" defaultMessage="My games" />
         </Heading>
       </Page.Header>
       <Page.Body>

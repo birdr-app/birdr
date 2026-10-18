@@ -11,7 +11,34 @@ export type LeagueMembership = {
   country: LeagueCountry;
   reminders_enabled: boolean;
   joined_at: string;
+  last_played_date?: string | null;
 };
+
+const MAIN_LEAGUE_KEY = 'birdr_main_league';
+
+/** Remember the league opened last, so Home shows that one (like the main flock). */
+export async function setStoredMainLeague(code: string): Promise<void> {
+  try {
+    const { default: AsyncStorage } = await import('@react-native-async-storage/async-storage');
+    await AsyncStorage.setItem(MAIN_LEAGUE_KEY, code.trim().toUpperCase());
+  } catch {
+    // ignore
+  }
+}
+
+/** Last opened league if still a member, else the most recently played (the API sorts that first). */
+export async function pickMainLeague(memberships: LeagueMembership[]): Promise<LeagueMembership | null> {
+  if (!memberships.length) return null;
+  let stored: string | null = null;
+  try {
+    const { default: AsyncStorage } = await import('@react-native-async-storage/async-storage');
+    stored = await AsyncStorage.getItem(MAIN_LEAGUE_KEY);
+  } catch {
+    stored = null;
+  }
+  const match = stored ? memberships.find((m) => m.country.code.toUpperCase() === stored) : undefined;
+  return match ?? memberships[0];
+}
 
 export type LeagueOverview = {
   memberships: LeagueMembership[];

@@ -14,7 +14,7 @@ export const BirdrMenu = () => {
             </Link>
             <Link asChild textDecoration="none">
               <RouterLink to={'/league'}>
-                <FormattedMessage id="league_national" defaultMessage="National League" />
+                <FormattedMessage id="league_national" defaultMessage="National league" />
               </RouterLink>
             </Link>
             <Link href={'/scores'} textDecoration="none">
@@ -29,7 +29,7 @@ export const BirdrMenu = () => {
               </RouterLink>
             </Link>
             <Link href={'/checklist'} textDecoration="none">
-              <FormattedMessage id="checklist_title" defaultMessage="My Checklist" />
+              <FormattedMessage id="checklist_title" defaultMessage="My checklist" />
             </Link>
             <Link href={'/updates'} textDecoration="none">
               <FormattedMessage id={'Updates'} defaultMessage={'Updates'} />

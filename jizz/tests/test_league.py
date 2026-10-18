@@ -220,6 +220,15 @@ class LeagueTestCase(TestCase):
         self.assertEqual(self.client.post('/api/league/NL/leave/').status_code, 204)
         self.assertFalse(LeagueMembership.objects.filter(user=self.alice).exists())
 
+    def test_overview_lists_most_recently_played_league_first(self):
+        LeagueMembership.objects.create(user=self.alice, country=self.country, last_played_date=date(2026, 10, 10))
+        LeagueMembership.objects.create(user=self.alice, country=self.za, last_played_date=date(2026, 10, 15))
+        lt = Country.objects.create(code='LT', name='Lithuania')
+        LeagueMembership.objects.create(user=self.alice, country=lt)  # never played
+        _auth(self.client, self.alice)
+        codes = [m['country']['code'] for m in self.client.get('/api/league/').data['memberships']]
+        self.assertEqual(codes, ['ZA', 'NL', 'LT'])
+
     def test_overview_suggests_favourite_country(self):
         UserProfile.objects.update_or_create(user=self.alice, defaults={'country': self.country})
         _auth(self.client, self.alice)

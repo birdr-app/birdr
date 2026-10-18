@@ -5,6 +5,7 @@ from __future__ import annotations
 from datetime import timedelta
 
 from django.db import transaction
+from django.db.models import F
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from rest_framework import status
@@ -35,6 +36,7 @@ def _membership_payload(membership: LeagueMembership | None) -> dict | None:
         'reminders_enabled': membership.reminders_enabled,
         'reminder_mode': membership.reminder_mode,
         'joined_at': membership.joined_at.isoformat(),
+        'last_played_date': membership.last_played_date.isoformat() if membership.last_played_date else None,
     }
 
 
@@ -71,7 +73,11 @@ class LeagueOverviewView(APIView):
         user = request.user
         if not user.is_authenticated:
             return Response({'memberships': [], 'suggested': [], 'caps': []})
-        memberships = list(LeagueMembership.objects.filter(user=user).select_related('country'))
+        # Most recently played first: clients show memberships[0] as "your" league.
+        memberships = list(
+            LeagueMembership.objects.filter(user=user).select_related('country')
+            .order_by(F('last_played_date').desc(nulls_last=True), '-joined_at')
+        )
         member_codes = {m.country_id for m in memberships}
         suggested = []
         profile = getattr(user, 'profile', None)

@@ -11,6 +11,7 @@ import {
   leaveLeague,
   markLeagueCelebrationsSeen,
   setLeagueReminders,
+  setStoredMainLeague,
   type LeagueDetail,
   type LeagueRow,
 } from '../../api/league';
@@ -73,6 +74,7 @@ export function LeagueHomePage() {
     try {
       const data = await getLeague(countryCode);
       setLeague(data);
+      if (data.membership) setStoredMainLeague(data.country.code);
       if (!celebrationsShown.current && data.celebrations?.length) {
         celebrationsShown.current = true;
         // Biggest news first: week championships before daily wins.

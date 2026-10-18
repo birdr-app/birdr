@@ -57,6 +57,7 @@ import { SurvivalScoresScreen } from '../screens/SurvivalScoresScreen';
 import { LeagueScreen } from '../screens/LeagueScreen';
 import { LeagueLeaderboardScreen } from '../screens/LeagueLeaderboardScreen';
 import { LeagueResultScreen } from '../screens/LeagueResultScreen';
+import { LeagueListScreen } from '../screens/LeagueListScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -94,6 +95,7 @@ const SCREENS: { name: string; titleKey: string; component: React.ComponentType<
   { name: 'League', titleKey: 'league', component: LeagueScreen },
   { name: 'LeagueLeaderboard', titleKey: 'league_leaderboard', component: LeagueLeaderboardScreen },
   { name: 'LeagueResult', titleKey: 'league', component: LeagueResultScreen },
+  { name: 'LeagueList', titleKey: 'league_my_leagues', component: LeagueListScreen },
   { name: 'Updates', titleKey: 'updates', component: UpdatesScreen },
   { name: 'UpdateDetail', titleKey: 'updates', component: UpdateDetailScreen },
   { name: 'Help', titleKey: 'community', component: HelpOverviewScreen },

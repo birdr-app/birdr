@@ -87,7 +87,7 @@ export function LeagueIndexPage() {
     <Page>
       <Page.Header>
         <Heading color="gray.800" size="lg" m={0}>
-          <FormattedMessage id="league_national" defaultMessage="National League" />
+          <FormattedMessage id="league_national" defaultMessage="National league" />
         </Heading>
       </Page.Header>
       <Page.Body>
@@ -109,7 +109,7 @@ export function LeagueIndexPage() {
           {overview?.memberships.length ? (
             <Box>
               <Heading size="md" mb={3}>
-                <FormattedMessage id="league_my_leagues" defaultMessage="My leagues" />
+                <FormattedMessage id="league_my_leagues" defaultMessage="My national leagues" />
               </Heading>
               <Flex direction="column" gap={2}>
                 {overview.memberships.map((m) => (

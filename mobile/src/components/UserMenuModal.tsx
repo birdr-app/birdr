@@ -155,12 +155,22 @@ export function UserMenuModal() {
                   <Text style={styles.hint}>{t('you_are_logged_in')}</Text>
                 </View>
               )}
-              {hasFlocks && (
+              {(isAuthenticated || hasFlocks) && (
                 <TouchableOpacity
                   style={styles.menuItem}
                   onPress={() => handleItem('FlockList')}
+                  testID="userMenu.myFlocks"
                 >
-                  <Text style={styles.menuLabel}>{t('flocks')}</Text>
+                  <Text style={styles.menuLabel}>{t('my_flocks')}</Text>
+                </TouchableOpacity>
+              )}
+              {isAuthenticated && (
+                <TouchableOpacity
+                  style={styles.menuItem}
+                  onPress={() => handleItem('LeagueList')}
+                  testID="userMenu.myLeagues"
+                >
+                  <Text style={styles.menuLabel}>{t('league_my_leagues')}</Text>
                 </TouchableOpacity>
               )}
               {hasCountryChallenges && (
@@ -168,7 +178,7 @@ export function UserMenuModal() {
                   style={styles.menuItem}
                   onPress={() => handleItem('BirdrJourneyList')}
                 >
-                  <Text style={styles.menuLabel}>{t('country_challenges')}</Text>
+                  <Text style={styles.menuLabel}>{t('my_country_challenges')}</Text>
                 </TouchableOpacity>
               )}
               {USER_MENU_ITEMS.map((item) => (
