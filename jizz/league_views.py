@@ -132,6 +132,7 @@ class LeagueCountryView(APIView):
             days.append({
                 'date': d.isoformat(),
                 'length': league.length_for(d),
+                'is_double': league.is_double_day(d),
                 'played': d in played_by_date,
                 'score': played_by_date.get(d),
                 'is_today': d == today,

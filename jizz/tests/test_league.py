@@ -456,3 +456,5 @@ class LeagueTestCase(TestCase):
             data = self.client.get('/api/league/NL/').data
         self.assertTrue(data['today']['is_double'])
         self.assertEqual(data['today']['length'], 30)
+        # Only Saturday and Sunday are double days in the week strip.
+        self.assertEqual([d['is_double'] for d in data['week']['days']], [False] * 5 + [True, True])

@@ -38,6 +38,7 @@ export type LeagueCapsRow = LeagueCaps & {
 export type LeagueWeekDay = {
   date: string;
   length: number;
+  is_double: boolean;
   played: boolean;
   score: number;
   is_today: boolean;

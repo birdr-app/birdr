@@ -40,6 +40,8 @@ export type LeagueCapsRow = {
 export type LeagueDay = {
   date: string;
   length: number;
+  /** Saturday/Sunday: the 30-bird weekend double quiz. */
+  is_double: boolean;
   played: boolean;
   score: number | null;
   is_today: boolean;

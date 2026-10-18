@@ -373,7 +373,7 @@ export function LeagueScreen() {
               <Text style={[styles.dayLabel, day.is_today && styles.dayLabelToday]}>
                 {leagueWeekdayLabel(day.date, locale)}
               </Text>
-              {day.length > 10 ? <Text style={styles.dayBonus}>×2</Text> : null}
+              {day.is_double ? <Text style={styles.dayBonus}>×2</Text> : null}
             </View>
           ))}
         </View>
