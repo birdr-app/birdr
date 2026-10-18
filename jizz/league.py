@@ -35,19 +35,19 @@ from jizz.user_names import player_name_for_user, sanitize_player_name
 
 logger = logging.getLogger(__name__)
 
-WEEKDAY_LENGTH = 10
-WEEKEND_LENGTH = 20
+WEEKDAY_LENGTH = 15
+WEEKEND_LENGTH = 30  # the weekend "double quiz"
 
 # (level, rarity, media, count) in play order: easy → hard, photos only.
 LEAGUE_WEEKDAY_SLOTS = [
-    ('beginner', Game.RARIT_FAMILIAR, 'images', 3),
-    ('advanced', Game.RARIT_REGULAR, 'images', 4),
-    ('advanced', Game.RARIT_EXCEPTIONAL, 'images', 3),
+    ('beginner', Game.RARIT_FAMILIAR, 'images', 4),
+    ('advanced', Game.RARIT_REGULAR, 'images', 6),
+    ('advanced', Game.RARIT_EXCEPTIONAL, 'images', 5),
 ]
 LEAGUE_WEEKEND_SLOTS = [
-    ('beginner', Game.RARIT_FAMILIAR, 'images', 5),
-    ('advanced', Game.RARIT_REGULAR, 'images', 8),
-    ('advanced', Game.RARIT_EXCEPTIONAL, 'images', 7),
+    ('beginner', Game.RARIT_FAMILIAR, 'images', 8),
+    ('advanced', Game.RARIT_REGULAR, 'images', 12),
+    ('advanced', Game.RARIT_EXCEPTIONAL, 'images', 10),
 ]
 
 TOP_SIZE = 10
@@ -74,8 +74,12 @@ def week_start_for(day: date) -> date:
     return day - timedelta(days=day.weekday())
 
 
+def is_double_day(day: date) -> bool:
+    return day.weekday() >= 5
+
+
 def length_for(day: date) -> int:
-    return WEEKEND_LENGTH if day.weekday() >= 5 else WEEKDAY_LENGTH
+    return WEEKEND_LENGTH if is_double_day(day) else WEEKDAY_LENGTH
 
 
 def slots_for(day: date):
@@ -89,19 +93,42 @@ def closes_at(country: Country, day: date) -> datetime:
 
 # --- Days and attempts -------------------------------------------------------
 
+def _generate_snapshot(country: Country, day: date):
+    """Snapshot for ``day``; a country too small for the 30-bird weekend gets the weekday set."""
+    try:
+        return generate_club_mix_snapshot(country=country, host=None, slots=slots_for(day))
+    except InsufficientChallengeContent:
+        if not is_double_day(day):
+            raise
+        logger.warning('League %s %s: not enough species for the weekend quiz, using weekday size', country.code, day)
+        return generate_club_mix_snapshot(country=country, host=None, slots=LEAGUE_WEEKDAY_SLOTS)
+
+
+def _is_stale(league_day: LeagueDay) -> bool:
+    """Built with an old length and nobody has started it yet, so it can be rebuilt."""
+    return (
+        league_day.length not in (length_for(league_day.date), WEEKDAY_LENGTH)
+        and not league_day.attempts.exists()
+    )
+
+
 def get_or_create_league_day(country: Country, day: date) -> LeagueDay:
     """The shared quiz for a country/date, generated on first use."""
     existing = LeagueDay.objects.filter(country=country, date=day).first()
-    if existing and existing.items.exists():
+    if existing and existing.items.exists() and not _is_stale(existing):
         return existing
 
     # Generate outside the lock (slow); the unique (country, date) row decides the winner.
-    snapshot = generate_club_mix_snapshot(country=country, host=None, slots=slots_for(day))
+    snapshot = _generate_snapshot(country, day)
     try:
         with transaction.atomic():
             league_day, _ = LeagueDay.objects.select_for_update().get_or_create(
                 country=country, date=day, defaults={'length': len(snapshot)},
             )
+            if league_day.items.exists() and _is_stale(league_day):
+                league_day.items.all().delete()
+                league_day.length = len(snapshot)
+                league_day.save(update_fields=['length'])
             if not league_day.items.exists():
                 LeagueDayItem.objects.bulk_create([
                     LeagueDayItem(
@@ -396,13 +423,14 @@ def mark_celebrations_seen(user, country: Country) -> None:
 # --- Reminders ---------------------------------------------------------------
 
 REMINDER_KINDS = (
+    LeagueNotificationLog.KIND_DAILY_RESULTS,
     LeagueNotificationLog.KIND_REMINDER_18,
     LeagueNotificationLog.KIND_REMINDER_20,
     LeagueNotificationLog.KIND_FINAL_DAY,
     LeagueNotificationLog.KIND_WEEKLY_RECAP,
     LeagueNotificationLog.KIND_FRESH_START,
 )
-MAX_PUSHES_PER_DAY = 2
+MAX_PUSHES_PER_DAY = 3  # 09:00 results, 18:00 reminder, 20:00 last call
 WINDOW_MINUTES = 30
 
 
@@ -434,38 +462,112 @@ MESSAGES = {
     'en': {
         'title': '{flag} Birdr League',
         LeagueNotificationLog.KIND_REMINDER_18: "Today's {length} birds are waiting. Can you climb the {country} table?",
+        'reminder_18_double': "Today's {length}-bird double quiz is waiting: double the birds, double the points!",
         LeagueNotificationLog.KIND_REMINDER_20: '4 hours left for today\'s quiz! 🐦',
+        'reminder_20_double': '4 hours left for today\'s double quiz! 🐦',
         LeagueNotificationLog.KIND_FINAL_DAY: 'Final day! You\'re #{rank}, {gap} pts behind #{target}.',
         'final_day_lead': 'Final day! You lead the {country} league. Hold on! 🏆',
-        LeagueNotificationLog.KIND_WEEKLY_RECAP: 'You finished #{rank} in {country}. Week champion: {champion} 🏆',
-        'weekly_recap_champion': 'You are the {country} week champion! 🏆',
+        LeagueNotificationLog.KIND_WEEKLY_RECAP: 'You ended at #{rank} last week in {flag} {country}. Week champion: {champion} 🏆 A new week starts now!',
+        'weekly_recap_champion': 'You were last week\'s {country} champion! 🏆 Defend your title.',
         LeagueNotificationLog.KIND_FRESH_START: 'New week, fresh start. Today\'s birds are ready!',
         LeagueNotificationLog.KIND_INVITE: 'The {country} National League has started: one short bird quiz a day. Join in!',
+        # Morning results, assembled from parts.
+        'yesterday_played': 'Yesterday: {score} pts, #{rank} of {players}.',
+        'yesterday_missed': 'You missed yesterday\'s quiz.',
+        'week_lead': 'You lead this week by {lead} pts.',
+        'week_alone': 'You lead this week.',
+        'week_behind': 'This week you\'re #{rank}, {gap} pts behind #{target}.',
+        'today_catch_up': 'Today\'s {length} birds can pull you back up.',
+        'double_lead_sat': 'Weekend double quiz: {length} birds today. Seal the win! 🏆',
+        'double_chase_sat': 'Weekend double quiz: {length} birds = double points. Time to rank up!',
+        'double_lead_sun': 'Final double quiz! {length} birds to seal the win. 🏆',
+        'double_chase_sun': 'Final double quiz! {length} birds, last chance to rank up.',
     },
     'nl': {
         'title': '{flag} Birdr League',
         LeagueNotificationLog.KIND_REMINDER_18: 'De {length} vogels van vandaag wachten op je. Klim jij op in {country}?',
+        'reminder_18_double': 'De dubbele quiz van vandaag staat klaar: {length} vogels, dubbel zoveel punten!',
         LeagueNotificationLog.KIND_REMINDER_20: 'Nog 4 uur voor de quiz van vandaag! 🐦',
+        'reminder_20_double': 'Nog 4 uur voor de dubbele quiz van vandaag! 🐦',
         LeagueNotificationLog.KIND_FINAL_DAY: 'Laatste dag! Je staat #{rank}, {gap} punten achter #{target}.',
         'final_day_lead': 'Laatste dag! Je staat bovenaan in {country}. Volhouden! 🏆',
-        LeagueNotificationLog.KIND_WEEKLY_RECAP: 'Je eindigde #{rank} in {country}. Weekkampioen: {champion} 🏆',
-        'weekly_recap_champion': 'Jij bent weekkampioen van {country}! 🏆',
+        LeagueNotificationLog.KIND_WEEKLY_RECAP: 'Je eindigde vorige week op #{rank} in {flag} {country}. Weekkampioen: {champion} 🏆 Een nieuwe week begint nu!',
+        'weekly_recap_champion': 'Jij was vorige week kampioen van {country}! 🏆 Verdedig je titel.',
         LeagueNotificationLog.KIND_FRESH_START: 'Nieuwe week, nieuwe kansen. De vogels van vandaag staan klaar!',
         LeagueNotificationLog.KIND_INVITE: 'De nationale Birdr League voor {country} is begonnen: elke dag een korte vogelquiz. Doe mee!',
+        'yesterday_played': 'Gisteren: {score} punten, #{rank} van {players}.',
+        'yesterday_missed': 'Je hebt de quiz van gisteren gemist.',
+        'week_lead': 'Je staat deze week bovenaan met {lead} punten voorsprong.',
+        'week_alone': 'Je staat deze week bovenaan.',
+        'week_behind': 'Deze week sta je #{rank}, {gap} punten achter #{target}.',
+        'today_catch_up': 'Met de {length} vogels van vandaag kom je weer terug.',
+        'double_lead_sat': 'Dubbele weekendquiz: vandaag {length} vogels. Stel de winst veilig! 🏆',
+        'double_chase_sat': 'Dubbele weekendquiz: {length} vogels = dubbele punten. Tijd om te klimmen!',
+        'double_lead_sun': 'Laatste dubbele quiz! {length} vogels om de winst binnen te halen. 🏆',
+        'double_chase_sun': 'Laatste dubbele quiz! {length} vogels, je laatste kans om te klimmen.',
     },
 }
 
 
-def _send(user, country: Country, kind: str, body_key: str, **fmt) -> bool:
+def format_points(value: int, lang: str) -> str:
+    text = f'{int(value):,}'
+    return text.replace(',', '.') if lang == 'nl' else text
+
+
+def standing(rows: list[StandingRow], user_id) -> dict | None:
+    """Rank, gap to the player above and lead over #2 for ``user_id`` (None when unranked)."""
+    rank = rank_of(rows, user_id)
+    if rank is None:
+        return None
+    me = rows[rank - 1]
+    info = {'rank': rank, 'players': len(rows), 'score': me.score, 'gap': 0, 'target': None, 'lead': None}
+    if rank > 1:
+        above = rows[rank - 2]
+        info['gap'] = above.score - me.score
+        info['target'] = above.rank
+    elif len(rows) > 1:
+        info['lead'] = me.score - rows[1].score
+    return info
+
+
+def morning_results_body(lang: str, today: date, length: int, yesterday: dict | None, week: dict) -> str:
+    msg = MESSAGES[lang]
+    pts = lambda v: format_points(v, lang)  # noqa: E731
+    parts = []
+    if yesterday:
+        parts.append(msg['yesterday_played'].format(score=pts(yesterday['score']), rank=yesterday['rank'], players=yesterday['players']))
+    else:
+        parts.append(msg['yesterday_missed'])
+    leading = week['rank'] == 1
+    if leading and week['lead'] is not None:
+        parts.append(msg['week_lead'].format(lead=pts(week['lead'])))
+    elif leading:
+        parts.append(msg['week_alone'])
+    else:
+        parts.append(msg['week_behind'].format(rank=week['rank'], gap=pts(week['gap']), target=week['target']))
+    if is_double_day(today):
+        day_key = 'sun' if today.weekday() == 6 else 'sat'
+        parts.append(msg[f"double_{'lead' if leading else 'chase'}_{day_key}"].format(length=length))
+    elif not yesterday:
+        parts.append(msg['today_catch_up'].format(length=length))
+    return ' '.join(parts)
+
+
+def _send(user, country: Country, kind: str, body_key: str | None = None, body: str | None = None, **fmt) -> bool:
     from jizz.notifications import send_push_to_user
 
     lang = _user_language(user)
     messages = MESSAGES[lang]
     values = {'country': country.name, 'flag': flag_emoji(country.code), **fmt}
     title = messages['title'].format(**values)
-    body = messages[body_key].format(**values)
+    if body is None:
+        body = messages[body_key].format(**values)
     try:
-        send_push_to_user(user, title, body, data={'type': 'league', 'country_code': country.code, 'kind': kind})
+        send_push_to_user(
+            user, title, body,
+            data={'type': 'league', 'country_code': country.code, 'kind': kind},
+            badge=1,  # red "1" on the app icon: today's quiz is waiting
+        )
     except Exception:
         logger.exception('League push %s failed for user %s', kind, user.pk)
         return False
@@ -489,6 +591,11 @@ def _in_window(local: datetime, hour: int) -> bool:
     return start <= local < start + timedelta(minutes=WINDOW_MINUTES)
 
 
+def _today_length(country: Country, today: date) -> int:
+    league_day = LeagueDay.objects.filter(country=country, date=today).first()
+    return league_day.length if league_day else length_for(today)
+
+
 def send_due_notifications(country: Country, local: datetime) -> int:
     today = local.date()
     weekday = today.weekday()
@@ -502,6 +609,8 @@ def send_due_notifications(country: Country, local: datetime) -> int:
         LeagueAttempt.objects.filter(day__country=country, day__date=today, completed_at__isnull=False)
         .values_list('user_id', flat=True)
     )
+    length = _today_length(country, today)
+    double = is_double_day(today)
 
     for membership in members:
         mode = reminder_mode_for(membership, today)
@@ -509,21 +618,40 @@ def send_due_notifications(country: Country, local: datetime) -> int:
             membership.reminder_mode = mode
             membership.save(update_fields=['reminder_mode'])
 
-    # Monday 09:00: last week's recap, or a single "fresh start" for paused members.
-    if weekday == 0 and _in_window(local, 9):
-        last_week = week_start_for(today) - timedelta(days=7)
-        rows = week_standings(country, last_week)
-        champion = rows[0].name if rows else ''
-        for membership in members:
-            user = membership.user
-            rank = rank_of(rows, user.id)
-            if rank is not None:
-                if _claim(user, country, today, LeagueNotificationLog.KIND_WEEKLY_RECAP):
-                    key = 'weekly_recap_champion' if rank == 1 else LeagueNotificationLog.KIND_WEEKLY_RECAP
-                    sent += _send(user, country, LeagueNotificationLog.KIND_WEEKLY_RECAP, key, rank=rank, champion=champion)
-            elif membership.reminder_mode == LeagueMembership.REMINDERS_PAUSED:
-                if _claim(user, country, today, LeagueNotificationLog.KIND_FRESH_START):
-                    sent += _send(user, country, LeagueNotificationLog.KIND_FRESH_START, LeagueNotificationLog.KIND_FRESH_START)
+    if _in_window(local, 9):
+        if weekday == 0:
+            # Monday: last week's final standing, or one "fresh start" for paused members.
+            last_week = week_start_for(today) - timedelta(days=7)
+            rows = week_standings(country, last_week)
+            champion = rows[0].name if rows else ''
+            for membership in members:
+                user = membership.user
+                rank = rank_of(rows, user.id)
+                if rank is not None:
+                    if _claim(user, country, today, LeagueNotificationLog.KIND_WEEKLY_RECAP):
+                        key = 'weekly_recap_champion' if rank == 1 else LeagueNotificationLog.KIND_WEEKLY_RECAP
+                        sent += _send(user, country, LeagueNotificationLog.KIND_WEEKLY_RECAP, key, rank=rank, champion=champion)
+                elif membership.reminder_mode == LeagueMembership.REMINDERS_PAUSED:
+                    if _claim(user, country, today, LeagueNotificationLog.KIND_FRESH_START):
+                        sent += _send(user, country, LeagueNotificationLog.KIND_FRESH_START, LeagueNotificationLog.KIND_FRESH_START)
+        else:
+            # Tuesday–Sunday: yesterday's result and this week's standing, for this week's players.
+            week_rows = week_standings(country, week_start_for(today))
+            yesterday_day = LeagueDay.objects.filter(country=country, date=today - timedelta(days=1)).first()
+            yesterday_rows = day_standings(yesterday_day) if yesterday_day else []
+            for membership in members:
+                user = membership.user
+                if user.id in played_today:
+                    continue
+                week = standing(week_rows, user.id)
+                if week is None:
+                    continue
+                if not _claim(user, country, today, LeagueNotificationLog.KIND_DAILY_RESULTS):
+                    continue
+                body = morning_results_body(
+                    _user_language(user), today, length, standing(yesterday_rows, user.id), week,
+                )
+                sent += _send(user, country, LeagueNotificationLog.KIND_DAILY_RESULTS, body=body)
 
     for hour, kind in ((18, LeagueNotificationLog.KIND_REMINDER_18), (20, LeagueNotificationLog.KIND_REMINDER_20)):
         if not _in_window(local, hour):
@@ -535,30 +663,25 @@ def send_due_notifications(country: Country, local: datetime) -> int:
                 continue
             if membership.reminder_mode == LeagueMembership.REMINDERS_PAUSED:
                 continue
-            if kind == LeagueNotificationLog.KIND_REMINDER_18:
-                if membership.reminder_mode != LeagueMembership.REMINDERS_NORMAL:
-                    continue
-                # A morning recap already used one push today: save the other for "4 hours left".
-                if weekday == 0 and LeagueNotificationLog.objects.filter(
-                    user=user, country=country, date=today,
-                    kind__in=(LeagueNotificationLog.KIND_WEEKLY_RECAP, LeagueNotificationLog.KIND_FRESH_START),
-                ).exists():
-                    continue
+            if kind == LeagueNotificationLog.KIND_REMINDER_18 and membership.reminder_mode != LeagueMembership.REMINDERS_NORMAL:
+                continue
             rank = rank_of(week_rows, user.id) if week_rows else None
             if rank is not None:
                 # Sunday evening: the final-day push replaces the plain 18:00 reminder.
                 if not _claim(user, country, today, LeagueNotificationLog.KIND_FINAL_DAY):
                     continue
+                lang = _user_language(user)
                 if rank == 1:
                     sent += _send(user, country, LeagueNotificationLog.KIND_FINAL_DAY, 'final_day_lead')
                 else:
                     target = week_rows[rank - 2]
-                    gap = target.score - week_rows[rank - 1].score
+                    gap = format_points(target.score - week_rows[rank - 1].score, lang)
                     sent += _send(user, country, LeagueNotificationLog.KIND_FINAL_DAY,
                                   LeagueNotificationLog.KIND_FINAL_DAY, rank=rank, gap=gap, target=target.rank)
                 continue
             if _claim(user, country, today, kind):
-                sent += _send(user, country, kind, kind, length=length_for(today))
+                key = f'{kind}_double' if double else kind
+                sent += _send(user, country, kind, key, length=length)
     return sent
 
 

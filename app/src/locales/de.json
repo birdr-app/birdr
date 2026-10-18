@@ -649,5 +649,9 @@
   "league_home_play_now": "{count} Vögel warten · noch {time}",
   "league_home_join_title": "Tritt der Liga {country} bei",
   "league_home_join_hint": "Ein Tagesquiz, ein Land, ein Champion",
-  "league_saving_result": "Deine Punkte werden gezählt…"
+  "league_saving_result": "Deine Punkte werden gezählt…",
+  "league_double_title": "⚡ Doppel-Quiz am Wochenende",
+  "league_double_lead": "Du stehst ganz oben. Mach den Sieg klar! 🏆",
+  "league_double_chase": "Klettere nach oben: {gap} Punkte hinter Platz {rank}.",
+  "league_double_join": "Heute doppelte Punkte: spring direkt in die Tabelle!"
 }

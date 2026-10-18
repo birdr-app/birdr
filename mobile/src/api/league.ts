@@ -59,6 +59,8 @@ export type LeagueDetail = {
   today: {
     date: string;
     length: number;
+    /** Saturday/Sunday: the 30-bird weekend double quiz. */
+    is_double: boolean;
     closes_at: string;
     played: boolean;
     in_progress: boolean;

@@ -87,6 +87,19 @@ async function resolveCountryCode(profileCountry?: string | null): Promise<strin
   return region && /^[A-Za-z]{2}$/.test(region) ? region : null;
 }
 
+/** Weekend double quiz: rank up, or seal the win when you lead. */
+function doubleMessage(
+  week: LeagueDetail['week'],
+  t: (key: string, params?: Record<string, string | number>) => string,
+): string {
+  const rows = [...week.top, ...week.around_me];
+  const me = rows.find((row) => row.is_me);
+  if (!me) return t('league_double_join');
+  if (me.rank === 1) return t('league_double_lead');
+  const above = rows.find((row) => row.rank === me.rank - 1);
+  return t('league_double_chase', { gap: above ? above.score - me.score : 0, rank: me.rank - 1 });
+}
+
 export function LeagueScreen() {
   const { t, locale } = useTranslation();
   const navigation = useNavigation<NativeStackNavigationProp<Record<string, object | undefined>>>();
@@ -303,6 +316,12 @@ export function LeagueScreen() {
 
         <View style={styles.todayCard} testID="league.today">
           <Text style={styles.todayLabel}>{t('league_today_quiz', { count: today.length })}</Text>
+          {today.is_double ? (
+            <View style={styles.doubleBanner} testID="league.double">
+              <Text style={styles.doubleTitle}>{t('league_double_title')}</Text>
+              {myResult ? null : <Text style={styles.doubleText}>{doubleMessage(league.week, t)}</Text>}
+            </View>
+          ) : null}
           {myResult ? (
             <>
               <Text style={styles.todayScore}>{t('league_points', { score: myResult.score })}</Text>
@@ -509,6 +528,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   todayLabel: { fontSize: 15, fontWeight: '700', color: colors.primary[100], marginBottom: 10 },
+  doubleBanner: {
+    alignSelf: 'stretch',
+    backgroundColor: '#fcd34d',
+    borderRadius: 12,
+    paddingVertical: 10,
+    paddingHorizontal: 14,
+    marginBottom: 12,
+  },
+  doubleTitle: { fontSize: 13, fontWeight: '800', color: '#422006', textTransform: 'uppercase', letterSpacing: 0.5 },
+  doubleText: { fontSize: 14, color: '#422006', marginTop: 2 },
   todayScore: { fontSize: 36, fontWeight: '800', color: '#fcd34d' },
   todayDetail: { fontSize: 15, fontWeight: '600', color: colors.primary[100], marginTop: 4, textAlign: 'center' },
   todayHint: { fontSize: 13, color: colors.primary[300], marginTop: 6 },

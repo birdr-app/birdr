@@ -147,7 +147,8 @@ class LeagueCountryView(APIView):
             'timezone': country.league_timezone,
             'today': {
                 'date': today.isoformat(),
-                'length': league.length_for(today),
+                'length': league_day.length if league_day else league.length_for(today),
+                'is_double': league.is_double_day(today),
                 'closes_at': league.closes_at(country, today).isoformat(),
                 'played': bool(attempt and attempt.completed_at),
                 'in_progress': bool(attempt and not attempt.completed_at),

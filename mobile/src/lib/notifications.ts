@@ -1,4 +1,4 @@
-import { Alert, Linking, Platform } from 'react-native';
+import { Alert, AppState, Linking, Platform } from 'react-native';
 import { requireOptionalNativeModule } from 'expo-modules-core';
 import * as Notifications from 'expo-notifications';
 import Constants from 'expo-constants';
@@ -306,6 +306,21 @@ function handleNotificationResponse(response: Notifications.NotificationResponse
  * state (the listener is attached too late to see it); navigation waits until the
  * NavigationContainer is ready.
  */
+/**
+ * Reset the app-icon badge (the red "1" league pushes set) whenever the app is
+ * opened or comes back to the foreground. Returns an unsubscribe function.
+ */
+export function clearAppBadgeOnForeground(): () => void {
+  const clear = () => {
+    Notifications.setBadgeCountAsync(0).catch(() => {});
+  };
+  clear();
+  const sub = AppState.addEventListener('change', (state) => {
+    if (state === 'active') clear();
+  });
+  return () => sub.remove();
+}
+
 export function setupNotificationResponseHandler(): () => void {
   let handledId: string | null = null;
   const handleOnce = (response: Notifications.NotificationResponse) => {

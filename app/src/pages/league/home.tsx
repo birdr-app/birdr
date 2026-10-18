@@ -229,6 +229,7 @@ export function LeagueHomePage() {
                   values={{ count: today.length }}
                 />
               </Text>
+              {today.is_double ? <WeekendDoubleBanner week={week} played={today.played} /> : null}
               <Text fontSize="sm" color="primary.100" mb={4}>
                 <FormattedMessage
                   id="league_today_players"
@@ -446,3 +447,35 @@ export function LeagueHomePage() {
 }
 
 export default LeagueHomePage;
+
+
+/** Weekend double quiz: rank up, or seal the win when you lead. */
+function WeekendDoubleBanner({ week, played }: { week: LeagueDetail['week'] | undefined; played: boolean }) {
+  const rows = week ? [...week.top, ...week.around_me] : [];
+  const me = rows.find((row) => row.is_me);
+  const above = me ? rows.find((row) => row.rank === me.rank - 1) : undefined;
+  let message: ReactNode;
+  if (!me) {
+    message = (
+      <FormattedMessage id="league_double_join" defaultMessage="Double points today: jump straight into the table!" />
+    );
+  } else if (me.rank === 1) {
+    message = <FormattedMessage id="league_double_lead" defaultMessage="You're top of the table. Seal the win! 🏆" />;
+  } else {
+    message = (
+      <FormattedMessage
+        id="league_double_chase"
+        defaultMessage="Rank up: you're {gap} pts behind #{rank}."
+        values={{ gap: above ? above.score - me.score : 0, rank: me.rank - 1 }}
+      />
+    );
+  }
+  return (
+    <Box bg="#fcd34d" color="#422006" borderRadius="xl" px={4} py={2.5} mb={3}>
+      <Text fontWeight="800" fontSize="sm" textTransform="uppercase" letterSpacing="wide">
+        <FormattedMessage id="league_double_title" defaultMessage="⚡ Weekend double quiz" />
+      </Text>
+      {played ? null : <Text fontSize="sm">{message}</Text>}
+    </Box>
+  );
+}

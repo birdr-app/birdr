@@ -649,5 +649,9 @@
   "league_home_play_now": "{count} aves esperando · faltam {time}",
   "league_home_join_title": "Entre na Liga {country}",
   "league_home_join_hint": "Um quiz por dia, um país, um campeão",
-  "league_saving_result": "Contando seus pontos…"
+  "league_saving_result": "Contando seus pontos…",
+  "league_double_title": "⚡ Quiz duplo de fim de semana",
+  "league_double_lead": "Você está no topo. Garanta a vitória! 🏆",
+  "league_double_chase": "Suba no ranking: você está {gap} pts atrás do #{rank}.",
+  "league_double_join": "Pontos em dobro hoje: entre direto na classificação!"
 }

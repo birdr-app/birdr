@@ -157,6 +157,10 @@ class ExpoSendTestCase(TestCase):
             'channelId': 'default',
         })
 
+    def test_payload_badge_only_when_given(self):
+        self.assertEqual(build_message('ExponentPushToken[a]', 'T', 'B', badge=1)['badge'], 1)
+        self.assertNotIn('badge', build_message('ExponentPushToken[a]', 'T', 'B'))
+
     @patch('requests.post')
     def test_sends_batch_with_channel_and_priority(self, mock_post):
         mock_post.return_value = _response({'data': [

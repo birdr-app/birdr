@@ -42,7 +42,7 @@ def send_welcome_email(user, site_url=None):
         return False
 
 
-def send_push_to_user(user, title, body, data=None):
+def send_push_to_user(user, title, body, data=None, badge=None):
     """
     Send a push to all enabled devices of the user in one Expo request.
     Returns a PushResult (sent/failed/disabled counts, ticket ids for fetch_receipts).
@@ -61,7 +61,7 @@ def send_push_to_user(user, title, body, data=None):
     tokens.update(DeviceToken.objects.filter(user=user).values_list('token', flat=True))
     if not tokens:
         return PushResult()
-    return send_expo_push_many(sorted(tokens), title, body, data=data)
+    return send_expo_push_many(sorted(tokens), title, body, data=data, badge=badge)
 
 
 def send_daily_challenge_reminder_email(user, challenge, round_obj, hours_left):

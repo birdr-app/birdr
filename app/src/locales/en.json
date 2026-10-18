@@ -652,5 +652,9 @@
   "league_home_play_now": "Today's {count} birds await · {time} left",
   "league_home_join_title": "Join the {country} League",
   "league_home_join_hint": "One daily quiz, one country, one champion",
-  "league_saving_result": "Tallying your points…"
+  "league_saving_result": "Tallying your points…",
+  "league_double_title": "⚡ Weekend double quiz",
+  "league_double_lead": "You're top of the table. Seal the win! 🏆",
+  "league_double_chase": "Rank up: you're {gap} pts behind #{rank}.",
+  "league_double_join": "Double points today: jump straight into the table!"
 }

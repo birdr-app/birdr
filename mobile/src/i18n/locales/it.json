@@ -750,5 +750,9 @@
   "league_home_hint": "Un quiz al giorno per tutto il paese",
   "league_home_join_cta": "Unisciti e sfida il tuo paese",
   "league_home_played_rank": "{score} pt oggi · #{rank}",
-  "league_home_play_now": "Il quiz di oggi ti aspetta · {time}"
+  "league_home_play_now": "Il quiz di oggi ti aspetta · {time}",
+  "league_double_title": "⚡ Quiz doppio del weekend",
+  "league_double_lead": "Sei in testa. Metti al sicuro la vittoria! 🏆",
+  "league_double_chase": "Scala la classifica: sei a {gap} punti dal #{rank}.",
+  "league_double_join": "Oggi punti doppi: entra subito in classifica!"
 }

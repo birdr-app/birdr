@@ -2339,6 +2339,7 @@ class LeagueNotificationLog(models.Model):
     KIND_FRESH_START = 'fresh_start'
     KIND_DAILY_WIN = 'daily_win'
     KIND_WEEK_CHAMPION = 'week_champion'
+    KIND_DAILY_RESULTS = 'daily_results'
     CELEBRATION_KINDS = (KIND_DAILY_WIN, KIND_WEEK_CHAMPION)
     KIND_CHOICES = [
         (KIND_INVITE, 'Invite'),
@@ -2349,6 +2350,7 @@ class LeagueNotificationLog(models.Model):
         (KIND_FRESH_START, 'New week, fresh start'),
         (KIND_DAILY_WIN, 'Daily win'),
         (KIND_WEEK_CHAMPION, 'Week champion'),
+        (KIND_DAILY_RESULTS, 'Morning results'),
     ]
 
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='league_notifications')

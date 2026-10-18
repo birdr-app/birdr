@@ -750,5 +750,9 @@
   "league_home_hint": "国じゅうで挑む1日1クイズ",
   "league_home_join_cta": "参加して国じゅうと競おう",
   "league_home_played_rank": "今日 {score}pt · {rank}位",
-  "league_home_play_now": "今日のクイズが待ってます · {time}"
+  "league_home_play_now": "今日のクイズが待ってます · {time}",
+  "league_double_title": "⚡ 週末ダブルクイズ",
+  "league_double_lead": "首位です。勝利を確実にしよう！🏆",
+  "league_double_chase": "順位アップのチャンス：#{rank}まであと{gap}ポイント。",
+  "league_double_join": "今日はポイント2倍：一気にランキング入りしよう！"
 }

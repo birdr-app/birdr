@@ -87,18 +87,51 @@ class LeagueTestCase(TestCase):
     # --- days ------------------------------------------------------------
 
     def test_length_by_weekday(self):
-        self.assertEqual(league.length_for(date(2026, 10, 16)), 10)  # Friday
-        self.assertEqual(league.length_for(date(2026, 10, 17)), 20)  # Saturday
-        self.assertEqual(league.length_for(date(2026, 10, 18)), 20)  # Sunday
-        self.assertEqual(league.length_for(date(2026, 10, 19)), 10)  # Monday
+        self.assertEqual(league.length_for(date(2026, 10, 16)), 15)  # Friday
+        self.assertEqual(league.length_for(date(2026, 10, 17)), 30)  # Saturday: double quiz
+        self.assertEqual(league.length_for(date(2026, 10, 18)), 30)  # Sunday: double quiz
+        self.assertEqual(league.length_for(date(2026, 10, 19)), 15)  # Monday
 
     def test_day_generation_is_idempotent_and_sized(self):
         friday = date(2026, 10, 16)
         first = league.get_or_create_league_day(self.country, friday)
         again = league.get_or_create_league_day(self.country, friday)
         self.assertEqual(first.pk, again.pk)
-        self.assertEqual(first.items.count(), 10)
-        self.assertEqual(league.get_or_create_league_day(self.country, date(2026, 10, 17)).items.count(), 20)
+        self.assertEqual(first.items.count(), 15)
+        self.assertEqual(league.get_or_create_league_day(self.country, date(2026, 10, 17)).items.count(), 30)
+
+    def test_old_length_day_is_rebuilt_only_when_unplayed(self):
+        friday = date(2026, 10, 16)
+        old = LeagueDay.objects.create(country=self.country, date=friday, length=10)
+        old.items.create(sequence=1, species=self.species[0], media=Media.objects.filter(species=self.species[0]).first(),
+                         media_type='image', level='advanced', rarity='regular', option_species_ids=[self.species[0].id])
+        rebuilt = league.get_or_create_league_day(self.country, friday)
+        self.assertEqual(rebuilt.pk, old.pk)
+        self.assertEqual((rebuilt.length, rebuilt.items.count()), (15, 15))
+
+        saturday = date(2026, 10, 17)
+        played = LeagueDay.objects.create(country=self.country, date=saturday, length=20)
+        for i in range(20):
+            sp = self.species[i]
+            played.items.create(sequence=i + 1, species=sp, media=Media.objects.filter(species=sp).first(),
+                                media_type='image', level='advanced', rarity='regular', option_species_ids=[sp.id])
+        league.start_attempt(played, self.alice)
+        kept = league.get_or_create_league_day(self.country, saturday)
+        self.assertEqual((kept.length, kept.items.count()), (20, 20))
+
+    def test_weekend_falls_back_to_weekday_size(self):
+        from jizz.flock_challenge import InsufficientChallengeContent
+
+        def small_country(country, host, slots):
+            if sum(slot[3] for slot in slots) > 15:
+                raise InsufficientChallengeContent('too few species')
+            return _snapshot_for(self.species, 15)
+
+        with patch('jizz.league.generate_club_mix_snapshot', side_effect=small_country):
+            day = league.get_or_create_league_day(self.za, date(2026, 10, 17))
+        self.assertEqual(day.length, 15)
+        # A weekend day that fell back is not treated as stale.
+        self.assertEqual(league.get_or_create_league_day(self.za, date(2026, 10, 17)).pk, day.pk)
 
     def test_capital_timezone_day_boundary(self):
         # 22:30 UTC on a Monday is already Tuesday in Amsterdam (CEST) and Johannesburg.
@@ -261,6 +294,7 @@ class LeagueTestCase(TestCase):
         self.assertEqual(recipients, [self.alice, self.alice])
         self.assertIn('4 hours', push.call_args_list[1].args[2])
         self.assertEqual(push.call_args_list[0].kwargs['data'], {'type': 'league', 'country_code': 'NL', 'kind': 'reminder_18'})
+        self.assertEqual(push.call_args_list[0].kwargs['badge'], 1)
 
     @patch('jizz.notifications.send_push_to_user')
     def test_backoff_evening_only_then_paused(self, push):
@@ -306,7 +340,7 @@ class LeagueTestCase(TestCase):
         self.assertEqual(kinds, {LeagueNotificationLog.KIND_FINAL_DAY})
 
     @patch('jizz.notifications.send_push_to_user')
-    def test_monday_recap_keeps_budget_for_evening(self, push):
+    def test_monday_recap_then_both_reminders(self, push):
         last_week = date(2026, 10, 12)
         self._member(self.alice, last_played=last_week + timedelta(days=6))
         self._attempt(self.alice, last_week, 300)
@@ -315,8 +349,9 @@ class LeagueTestCase(TestCase):
         league.send_due_notifications(self.country, monday(16))  # 18:05
         league.send_due_notifications(self.country, monday(18))  # 20:05
         kinds = list(LeagueNotificationLog.objects.order_by('id').values_list('kind', flat=True))
-        self.assertEqual(kinds, ['weekly_recap', 'reminder_20'])
-        self.assertEqual(push.call_count, 2)
+        self.assertEqual(kinds, ['weekly_recap', 'reminder_18', 'reminder_20'])
+        self.assertEqual(push.call_count, 3)
+        self.assertIn("last week's Netherlands champion", push.call_args_list[0].args[2])
 
     # --- invites ---------------------------------------------------------
 
@@ -332,3 +367,92 @@ class LeagueTestCase(TestCase):
         call_command('league_invite', countries='NL', no_email=True)
         call_command('league_invite', countries='NL', no_email=True)
         self.assertEqual([c.args[0] for c in push.call_args_list], [self.alice])
+
+
+    # --- morning results (Tue–Sun 09:00) and weekend double quiz -----------
+
+    def at(self, day, hour_utc=7, minute=5):
+        # October 2026 is CEST until the 25th (UTC+2): 07:05 UTC = 09:05 Amsterdam.
+        return league.league_local_now(self.country, datetime(2026, 10, day, hour_utc, minute, tzinfo=dt_timezone.utc))
+
+    def bodies(self, push):
+        return {call.args[0].username: call.args[2] for call in push.call_args_list}
+
+    @patch('jizz.notifications.send_push_to_user')
+    def test_tuesday_results_for_this_weeks_players_only(self, push):
+        carol = User.objects.create_user('carol', password='x', first_name='Carol')
+        monday = date(2026, 10, 19)
+        for user in (self.alice, self.bob, carol):
+            self._member(user, last_played=monday)
+        self._attempt(self.alice, monday, 1240)
+        self._attempt(self.bob, monday, 1420)
+        league.send_due_notifications(self.country, self.at(20))
+        bodies = self.bodies(push)
+        self.assertEqual(set(bodies), {'alice', 'bob'})  # Carol has no score this week
+        self.assertIn('Yesterday: 1,240 pts, #2 of 2.', bodies['alice'])
+        self.assertIn("This week you're #2, 180 pts behind #1.", bodies['alice'])
+        self.assertIn('You lead this week by 180 pts.', bodies['bob'])
+        self.assertEqual(push.call_args_list[0].kwargs['data']['kind'], 'daily_results')
+        self.assertEqual(push.call_args_list[0].kwargs['badge'], 1)
+
+    @patch('jizz.notifications.send_push_to_user')
+    def test_missed_yesterday_gets_catch_up_line(self, push):
+        monday = date(2026, 10, 19)
+        self._member(self.alice, last_played=monday)
+        self._member(self.bob, last_played=monday + timedelta(days=1))
+        self._attempt(self.alice, monday, 900)
+        self._attempt(self.bob, monday + timedelta(days=1), 400)
+        league.send_due_notifications(self.country, self.at(22))  # Wednesday
+        body = self.bodies(push)['alice']
+        self.assertIn("You missed yesterday's quiz.", body)
+        self.assertIn("Today's 15 birds can pull you back up.", body)
+
+    @patch('jizz.notifications.send_push_to_user')
+    def test_saturday_double_quiz_incentive(self, push):
+        friday = date(2026, 10, 23)
+        self._member(self.alice, last_played=friday)
+        self._member(self.bob, last_played=friday)
+        self._attempt(self.alice, friday, 1000)
+        self._attempt(self.bob, friday, 1210)
+        league.send_due_notifications(self.country, self.at(24))
+        bodies = self.bodies(push)
+        self.assertIn('Seal the win!', bodies['bob'])
+        self.assertIn('30 birds', bodies['bob'])
+        self.assertIn('Time to rank up!', bodies['alice'])
+        self.assertIn('210 pts behind #1', bodies['alice'])
+
+    @patch('jizz.notifications.send_push_to_user')
+    def test_sunday_morning_is_final_double_quiz(self, push):
+        saturday = date(2026, 10, 24)
+        self._member(self.alice, last_played=saturday)
+        self._attempt(self.alice, saturday, 800)
+        # 25 Oct 2026: clocks go back, Amsterdam is UTC+1 → 08:05 UTC = 09:05 local.
+        league.send_due_notifications(self.country, self.at(25, hour_utc=8))
+        self.assertIn('Final double quiz!', self.bodies(push)['alice'])
+
+    @patch('jizz.notifications.send_push_to_user')
+    def test_three_pushes_a_day_then_no_more(self, push):
+        monday = date(2026, 10, 19)
+        self._member(self.alice, last_played=monday)
+        self._attempt(self.alice, monday, 500)
+        for hour in (7, 16, 18):  # 09:05, 18:05, 20:05 CEST on Tuesday
+            league.send_due_notifications(self.country, self.at(20, hour_utc=hour))
+        self.assertEqual(push.call_count, 3)
+        kinds = list(LeagueNotificationLog.objects.order_by('id').values_list('kind', flat=True))
+        self.assertEqual(kinds, ['daily_results', 'reminder_18', 'reminder_20'])
+        self.assertFalse(league._claim(self.alice, self.country, date(2026, 10, 20), LeagueNotificationLog.KIND_FINAL_DAY))
+
+    @patch('jizz.notifications.send_push_to_user')
+    def test_no_morning_push_after_playing_today(self, push):
+        monday = date(2026, 10, 19)
+        self._member(self.alice, last_played=monday)
+        self._attempt(self.alice, monday, 500)
+        self._attempt(self.alice, monday + timedelta(days=1), 500)  # early bird on Tuesday
+        league.send_due_notifications(self.country, self.at(20))
+        push.assert_not_called()
+
+    def test_api_flags_weekend_double(self):
+        with patch('jizz.league.timezone.now', return_value=datetime(2026, 10, 24, 10, 0, tzinfo=dt_timezone.utc)):
+            data = self.client.get('/api/league/NL/').data
+        self.assertTrue(data['today']['is_double'])
+        self.assertEqual(data['today']['length'], 30)

@@ -61,8 +61,9 @@ def build_message(
     title: str,
     body: str,
     data: dict[str, Any] | None = None,
+    badge: int | None = None,
 ) -> dict[str, Any]:
-    return {
+    message = {
         'to': expo_push_token.strip(),
         'title': title,
         'body': body,
@@ -71,6 +72,10 @@ def build_message(
         'priority': 'high',
         'channelId': ANDROID_CHANNEL_ID,
     }
+    if badge is not None:
+        # iOS app-icon badge count; the app resets it to 0 when opened.
+        message['badge'] = badge
+    return message
 
 
 def disable_push_token(token: str) -> int:
@@ -152,6 +157,7 @@ def send_expo_push_many(
     title: str,
     body: str,
     data: dict[str, Any] | None = None,
+    badge: int | None = None,
 ) -> PushResult:
     """Send the same notification to many tokens (chunked). Never raises."""
     clean = []
@@ -169,7 +175,7 @@ def send_expo_push_many(
         result.per_token = {t: 'skipped' for t in clean}
         return result
 
-    messages = [build_message(t, title, body, data) for t in clean]
+    messages = [build_message(t, title, body, data, badge=badge) for t in clean]
     for start in range(0, len(messages), SEND_CHUNK_SIZE):
         result.merge(_send_chunk(messages[start:start + SEND_CHUNK_SIZE]))
     return result
@@ -180,6 +186,7 @@ def send_expo_push(
     title: str,
     body: str,
     data: dict[str, Any] | None = None,
+    badge: int | None = None,
 ) -> PushResult:
     """
     Send one push via Expo. The result is truthy when Expo accepted it.
@@ -188,7 +195,7 @@ def send_expo_push(
     if not expo_push_token or not expo_push_token.strip():
         logger.warning('send_expo_push: missing token')
         return PushResult()
-    return send_expo_push_many([expo_push_token], title, body, data=data)
+    return send_expo_push_many([expo_push_token], title, body, data=data, badge=badge)
 
 
 def fetch_receipts(

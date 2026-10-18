@@ -40,5 +40,6 @@ class SendPushToUserTestCase(TestCase):
         )
         notifications.send_push_to_user(user, 'Hi', 'Message', data={'key': 'value'})
         mock_send.assert_called_once_with(
-            ['ExponentPushToken[yyy]', 'ExponentPushToken[zzz]'], 'Hi', 'Message', data={'key': 'value'}
+            ['ExponentPushToken[yyy]', 'ExponentPushToken[zzz]'], 'Hi', 'Message', data={'key': 'value'},
+            badge=None,
         )

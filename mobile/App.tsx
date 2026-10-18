@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { flushPendingNavigation, navigationRef } from './src/navigation/navigationRef';
-import { setupNotificationResponseHandler } from './src/lib/notifications';
+import { clearAppBadgeOnForeground, setupNotificationResponseHandler } from './src/lib/notifications';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { Platform } from 'react-native';
 import { MenuProvider } from './src/context/MenuContext';
@@ -29,6 +29,8 @@ export default function App() {
   }, []);
 
   useEffect(() => subscribeMemoryReleaseOnBackground(), []);
+
+  useEffect(() => clearAppBadgeOnForeground(), []);
 
   useEffect(() => {
     const webClientId = GOOGLE_WEB_CLIENT_ID?.trim() || undefined;

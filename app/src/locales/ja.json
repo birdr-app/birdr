@@ -649,5 +649,9 @@
   "league_home_play_now": "今日の{count}羽が待っています · 残り{time}",
   "league_home_join_title": "{country}リーグに参加しよう",
   "league_home_join_hint": "1日1クイズ、ひとつの国、ひとりのチャンピオン",
-  "league_saving_result": "ポイントを集計中…"
+  "league_saving_result": "ポイントを集計中…",
+  "league_double_title": "⚡ 週末ダブルクイズ",
+  "league_double_lead": "首位です。勝利を確実にしよう！🏆",
+  "league_double_chase": "順位アップのチャンス：#{rank}まであと{gap}ポイント。",
+  "league_double_join": "今日はポイント2倍：一気にランキング入りしよう！"
 }
