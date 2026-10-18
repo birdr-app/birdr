@@ -210,6 +210,9 @@ export function getLeagueLeaderboardPath(code: string, period?: LeaguePeriod): s
 
 export const LEAGUE_RESULT_PATH = '/league/result';
 
+/** Seconds per league question (matches the server's LEAGUE_SPEED_SECONDS). */
+export const LEAGUE_SPEED_SECONDS = 15;
+
 /* Play context: remembers the running league attempt so the shared game flow can complete it. */
 
 const LEAGUE_PLAY_KEY = 'birdr-league-play';

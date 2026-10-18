@@ -34,7 +34,8 @@ import { playFullSrc, playPreviewSrc } from "../../../utils/play-image-url"
 import { postQuestionMediaReady } from "../../../api/question-media-ready"
 import { postQuestionNextMedia } from "../../../api/question-next-media"
 import { getFlockPlayContext } from "../../../api/flocks"
-import { getLeaguePlayContext } from "../../../api/league"
+import { getLeaguePlayContext, LEAGUE_SPEED_SECONDS } from "../../../api/league"
+import { SpeedChallengeTimer } from "../../../components/speed-challenge-timer"
 import { answersEnabledForMedia } from "../../../core/media-answer-gate"
 import {
   currentPlayMediaItem,
@@ -80,6 +81,9 @@ export const QuestionComponent = () => {
     !!getFlockPlayContext() || game?.game_type === 'flock_challenge'
   const isLeague = !!getLeaguePlayContext() || game?.game_type === 'league'
   const showPlayScores = !isFlockChallenge && !isLeague
+  const leagueSpeedSeconds = isLeague ? game?.speed_seconds || LEAGUE_SPEED_SECONDS : null
+  const [timedOutQuestionId, setTimedOutQuestionId] = useState<number | null>(null)
+  const timedOut = !!question && timedOutQuestionId === question.id
 
   const practiceAnswers = useMemo(
     () =>
@@ -205,6 +209,14 @@ export const QuestionComponent = () => {
       }
       submitAnswer(answer)
     }
+  }
+
+  /** League timer ran out: the server records a wrong answer; the player still taps Next. */
+  const handleTimeUp = () => {
+    if (!question || answer || !player || !submitAnswer) return
+    setTimedOutQuestionId(question.id)
+    setShowFeedback(false)
+    submitAnswer({ question, player, timed_out: true })
   }
 
   const rotate = keyframes`
@@ -531,6 +543,22 @@ export const QuestionComponent = () => {
         )}
       </Box>
 
+      {leagueSpeedSeconds && !answer && !timedOut ? (
+        <Box mt={3}>
+          <SpeedChallengeTimer
+            speedSeconds={leagueSpeedSeconds}
+            active={answersEnabled}
+            questionId={question.id}
+            onExpire={handleTimeUp}
+          />
+        </Box>
+      ) : null}
+      {timedOut ? (
+        <Text mt={3} fontWeight="semibold" color="red.600">
+          <FormattedMessage id="speed_challenge_time_up" defaultMessage="Time's up!" />
+        </Text>
+      ) : null}
+
       {question.options && question.options.length ? (
         <SimpleGrid columns={{base: 1, md: 2}} gap={3} mt={3}>
           {
@@ -544,14 +572,14 @@ export const QuestionComponent = () => {
                     colorPalette={
                       answer?.species?.id === option.id
                       ? 'success'
-                      : answer?.answer?.id === option.id ? 'error' : 'warning'}
+                      : !timedOut && answer?.answer?.id === option.id ? 'error' : 'warning'}
                   >
                     <SpeciesName species={option}/>
                   </Button>
                 )
               } else {
                 return (
-                  <Button colorPalette={'primary'} key={key} onClick={() => selectAnswer(option)} disabled={!answersEnabled}>
+                  <Button colorPalette={'primary'} key={key} onClick={() => selectAnswer(option)} disabled={!answersEnabled || timedOut}>
                     <SpeciesName species={option}/>
                   </Button>
                 )
@@ -593,7 +621,7 @@ export const QuestionComponent = () => {
         )
       )}
       {nextButton}
-      {answer && answer.correct === false && answer.species && answer.answer && (
+      {answer && answer.correct === false && !timedOut && answer.species && answer.answer && (
         <ComparisonButton
           species1Id={answer.species.id}
           species2Id={answer.answer.id}

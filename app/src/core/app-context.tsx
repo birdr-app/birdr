@@ -44,6 +44,8 @@ export type Game = {
   correct_count?: number
   total_questions?: number
   game_type?: string
+  /** Seconds per question for timed games (league, survival). */
+  speed_seconds?: number | null
   pair_species_low_id?: number | null
   pair_species_high_id?: number | null
   pair_species_low_name?: string | null
@@ -153,6 +155,8 @@ export type Answer = {
   number?: number
   correct?: boolean
   score?: number
+  /** Timed games: the player ran out of time (sent instead of an answer). */
+  timed_out?: boolean
 }
 
 

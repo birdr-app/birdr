@@ -23,7 +23,8 @@ type GameWebSocketContextType = {
   answer: Answer | undefined;
   startGame: () => void;
   nextQuestion: () => void;
-  submitAnswer: (payload: { question: Question; answer: Species }) => void;
+  /** Pass `timedOut` (and no answer) when a timed question ran out. */
+  submitAnswer: (payload: { question: Question; answer?: Species; timedOut?: boolean }) => void;
   joinGame: (
     game: Game | null,
     player: Player | null,
@@ -416,10 +417,31 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
   }, [sendAction]);
 
   const submitAnswer = useCallback(
-    (payload: { question: Question; answer: Species }) => {
+    (payload: { question: Question; answer?: Species; timedOut?: boolean }) => {
+      const playerToken = playerTokenRef.current;
+      if (payload.timedOut && payload.question?.id != null && playerToken) {
+        // The HTTP answer API records time-ups on every server version (the socket only on newer ones);
+        // its reply has the same shape as answer_checked, so the result and Next button show straight away.
+        const questionId = payload.question.id;
+        void (async () => {
+          try {
+            const { submitChallengeAnswer } = await import('../api/challenge');
+            const checked = await submitChallengeAnswer(
+              { question_id: questionId, player_token: playerToken, timed_out: true },
+              playerToken
+            );
+            if (currentQuestionIdRef.current == null || currentQuestionIdRef.current === questionId) {
+              setAnswer({ ...(checked as unknown as Answer), question: payload.question });
+            }
+          } catch {
+            sendAction({ action: 'submit_answer', player_token: playerToken, question_id: questionId, timed_out: true });
+          }
+        })();
+        return;
+      }
       sendAction({
         action: 'submit_answer',
-        player_token: playerTokenRef.current,
+        player_token: playerToken,
         question_id: payload.question?.id,
         answer_id: payload.answer?.id,
       });

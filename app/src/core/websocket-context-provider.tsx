@@ -393,7 +393,7 @@ const WebsocketContextProvider: FC<Props> = ({children}) => {
       action: 'submit_answer',
       player_token: answer.player?.token,
       question_id: answer.question?.id,
-      answer_id: answer.answer?.id
+      ...(answer.timed_out ? { timed_out: true } : { answer_id: answer.answer?.id }),
     })
   }
 

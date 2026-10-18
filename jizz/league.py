@@ -161,6 +161,9 @@ def display_name(user, player: Player | None = None) -> str:
     return player_name_for_user(user)
 
 
+# Seconds per question; running out counts as a wrong answer.
+LEAGUE_SPEED_SECONDS = 15
+
 @transaction.atomic
 def clone_day_into_game(league_day: LeagueDay, host: Player, language: str = 'en') -> Game:
     from jizz.pregenerated_game import PregeneratedItem, fill_pregenerated_game
@@ -182,6 +185,7 @@ def clone_day_into_game(league_day: LeagueDay, host: Player, language: str = 'en
         language=language or 'en',
         game_type=Game.GAME_TYPE_LEAGUE,
         questions_pregenerated=True,
+        speed_seconds=LEAGUE_SPEED_SECONDS,
     )
     pregenerated = []
     for item in items:

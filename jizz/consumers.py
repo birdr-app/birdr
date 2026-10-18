@@ -24,6 +24,21 @@ from jizz.usage_analytics import record_websocket_usage_event
 logger = logging.getLogger(__name__)
 
 
+def timed_out_answer_species_id(question) -> int:
+    """A wrong option to record when a timed question runs out (same rule as the HTTP answer API)."""
+    from jizz.models import QuestionOption
+
+    wrong = (
+        QuestionOption.objects.filter(question=question)
+        .exclude(species_id=question.species_id)
+        .values_list('species_id', flat=True)
+        .first()
+    )
+    if wrong is None:
+        raise ValueError("No incorrect option available for this question")
+    return wrong
+
+
 def _as_int(value, field_name: str):
     """Coerce JSON number or numeric string for ORM / comparisons."""
     if value is None:
@@ -263,7 +278,9 @@ class QuizConsumer(AsyncWebsocketConsumer):
         try:
             player_token = (data.get("player_token") or "").strip()
             question_id = _as_int(data.get("question_id"), "question_id")
-            answer_id = _as_int(data.get("answer_id"), "answer_id")
+            # Timed questions (National League) send timed_out instead of an answer.
+            timed_out = data.get("timed_out") is True
+            answer_id = None if timed_out else _as_int(data.get("answer_id"), "answer_id")
         except ValueError as e:
             await self.send(
                 text_data=json.dumps({"action": "error", "message": str(e)})
@@ -295,6 +312,10 @@ class QuizConsumer(AsyncWebsocketConsumer):
 
             if question.game_id != game.id:
                 raise ValueError("Question does not belong to this game")
+
+            nonlocal answer_id
+            if timed_out:
+                answer_id = timed_out_answer_species_id(question)
 
             correct = answer_id == question.species_id
 

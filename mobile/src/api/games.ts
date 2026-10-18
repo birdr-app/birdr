@@ -29,6 +29,8 @@ export type Game = {
   host?: { id: number; name: string; token?: string };
   ended?: boolean;
   game_type?: string;
+  /** Seconds per question for timed games (league, survival). */
+  speed_seconds?: number | null;
   pair_species_low_id?: number | null;
   pair_species_high_id?: number | null;
   pair_species_low_name?: string | null;

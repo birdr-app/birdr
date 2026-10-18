@@ -29,3 +29,6 @@ export function leagueWeekdayLabel(isoDate: string, locale: string): string {
     return ['S', 'M', 'T', 'W', 'T', 'F', 'S'][date.getUTCDay()];
   }
 }
+
+/** Seconds per league question (matches the server's LEAGUE_SPEED_SECONDS). */
+export const LEAGUE_SPEED_SECONDS = 15;

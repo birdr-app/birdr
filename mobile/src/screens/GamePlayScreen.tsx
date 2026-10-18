@@ -53,6 +53,8 @@ import {
 import type { Species } from '../types/game';
 import * as playerApi from '../api/player';
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5"
+import { SpeedChallengeTimer } from '../components/SpeedChallengeTimer';
+import { LEAGUE_SPEED_SECONDS } from '../lib/league';
 
 function speciesDisplayName(s: Species, lang?: string, extras?: Species[]): string {
   const fromList = extras?.find((x) => x.id === s.id);
@@ -113,6 +115,7 @@ export function GamePlayScreen() {
   const [mediaReady, setMediaReady] = useState(false);
   const [mediaSpecies, setMediaSpecies] = useState<SpeciesMediaData | null>(null);
   const [submittingId, setSubmittingId] = useState<number | null>(null);
+  const [timedOutQuestionId, setTimedOutQuestionId] = useState<number | null>(null);
   const [refreshingQuestion, setRefreshingQuestion] = useState(false);
   const [advancingQuestion, setAdvancingQuestion] = useState(false);
   const practiceEndSent = useRef(false);
@@ -506,6 +509,14 @@ export function GamePlayScreen() {
     submitAnswer({ question, answer: option });
   };
 
+  /** League timer ran out: the server records a wrong answer; the player still taps Next question. */
+  const handleTimeUp = () => {
+    if (!question || answer || submittingId !== null) return;
+    setTimedOutQuestionId(question.id);
+    setShowFeedback(false);
+    submitAnswer({ question, timedOut: true });
+  };
+
   const imageUri = image?.url
     ? playPreviewSrc(image.url.startsWith('http') ? image.url : apiUrl(image.url))
     : null;
@@ -575,6 +586,8 @@ export function GamePlayScreen() {
   const hasOptions = !!(question?.options && question.options.length > 0);
   const showExpertInput = isExpert && !hasOptions;
   const answersEnabled = answersEnabledForMedia(mediaType, mediaReady);
+  const leagueSpeedSeconds = isLeagueGame ? game.speed_seconds || LEAGUE_SPEED_SECONDS : null;
+  const timedOut = !!question && timedOutQuestionId === question.id;
 
   const currentMedia = image || video || sound;
   const showPlaceholder = (mediaType === 'images' && (!imageUri || imageError)) ||
@@ -790,12 +803,23 @@ export function GamePlayScreen() {
       ) : null}
       </View>
 
+      {question && leagueSpeedSeconds && !answer && !timedOut ? (
+        <SpeedChallengeTimer
+          speedSeconds={leagueSpeedSeconds}
+          active={answersEnabled && !flagModalVisible && submittingId === null}
+          questionId={question.id}
+          onExpire={handleTimeUp}
+        />
+      ) : null}
+      {timedOut ? <Text style={styles.timeUpText}>{t('speed_challenge_time_up')}</Text> : null}
+
       {hasOptions ? (
         <View style={[styles.options, isWide && styles.optionsWide]}>
           {question.options!.map((opt, i) => {
-            const isChosen = answer?.answer?.id === opt.id;
+            // On a timeout the server stores a stand-in wrong option; don't mark it as the player's pick.
+            const isChosen = !timedOut && answer?.answer?.id === opt.id;
             const isCorrect = answer?.species?.id === opt.id;
-            const isWrong = answer && !answer.correct && answer.answer?.id === opt.id;
+            const isWrong = !timedOut && answer && !answer.correct && answer.answer?.id === opt.id;
             const optionContent = answer ? (
               <SpeciesViewButton
                 label={speciesDisplayName(opt, lang, expertSpecies)}
@@ -807,10 +831,10 @@ export function GamePlayScreen() {
               <TouchableOpacity
                 style={[
                   styles.optionButton,
-                  ((submittingId !== null && !(submittingId === opt.id)) || !answersEnabled) && styles.optionDisabled,
+                  ((submittingId !== null && !(submittingId === opt.id)) || !answersEnabled || timedOut) && styles.optionDisabled,
                 ]}
                 onPress={() => handleAnswer(opt)}
-                disabled={submittingId !== null || !answersEnabled}
+                disabled={submittingId !== null || !answersEnabled || timedOut}
                 testID={i === 0 ? 'gamePlay.firstOption' : `gamePlay.option.${opt.id}`}
                 accessibilityLabel={i === 0 ? 'First answer option' : speciesDisplayName(opt, lang, expertSpecies)}
               >
@@ -831,7 +855,7 @@ export function GamePlayScreen() {
             }
             return <React.Fragment key={i}>{optionContent}</React.Fragment>;
           })}
-          {answer && !answer.correct && answer.species && answer.answer ? (
+          {answer && !answer.correct && !timedOut && answer.species && answer.answer ? (
             <ComparisonButton
               species1Id={answer.species.id}
               species2Id={answer.answer.id}
@@ -983,6 +1007,12 @@ export function GamePlayScreen() {
 }
 
 const styles = StyleSheet.create({
+  timeUpText: {
+    color: colors.error[500],
+    fontWeight: '700',
+    fontSize: 15,
+    marginBottom: 8,
+  },
   playRoot: { flex: 1, backgroundColor: '#fff' },
   container: { flex: 1, backgroundColor: '#fff' },
   content: { padding: 24, paddingBottom: 48 },

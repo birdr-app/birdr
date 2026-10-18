@@ -164,6 +164,19 @@ class LeagueTestCase(TestCase):
         incomplete = self.client.post(f"/api/league/attempts/{first.data['attempt_id']}/complete/")
         self.assertEqual(incomplete.status_code, 400)
 
+    def test_league_games_are_timed_and_time_up_records_a_wrong_answer(self):
+        from jizz.consumers import timed_out_answer_species_id
+
+        _auth(self.client, self.alice)
+        res = self.client.post('/api/league/NL/today/start/', format='json')
+        game = Game.objects.get(token=res.data['game']['token'])
+        self.assertEqual(game.speed_seconds, league.LEAGUE_SPEED_SECONDS)
+        self.assertEqual(res.data['game']['speed_seconds'], league.LEAGUE_SPEED_SECONDS)
+        question = game.questions.order_by('sequence').first()
+        wrong = timed_out_answer_species_id(question)
+        self.assertNotEqual(wrong, question.species_id)
+        self.assertTrue(QuestionOption.objects.filter(question=question, species_id=wrong).exists())
+
     def test_everyone_gets_the_same_birds(self):
         a, _ = self.play(self.alice)
         b, _ = self.play(self.bob)
