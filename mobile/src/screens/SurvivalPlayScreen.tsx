@@ -17,7 +17,8 @@ import {
   type ChallengeQuestion,
   type QuestionOption,
 } from '../api/challenge';
-import { postQuestionMediaReady } from '../api/games';
+import { postQuestionMediaReady, postQuestionNextMedia } from '../api/games';
+import { FlagMediaModal, FlagMediaLink, type FlagMediaInfo } from '../components/FlagMediaModal';
 import { apiUrl } from '../api/config';
 import { colors } from '../theme';
 import { answersEnabledForMedia } from '../game/mediaAnswerGate';
@@ -87,6 +88,10 @@ export function SurvivalPlayScreen() {
   const [timerExpired, setTimerExpired] = useState(false);
   const [streak, setStreak] = useState(0);
   const [runOver, setRunOver] = useState(false);
+  const [flagModalVisible, setFlagModalVisible] = useState(false);
+  const [flagMediaInfo, setFlagMediaInfo] = useState<FlagMediaInfo | null>(null);
+  // Bumped when a reported photo is replaced: the new photo gets the full time again.
+  const [photoSwaps, setPhotoSwaps] = useState(0);
   const [milestone, setMilestone] = useState<{ id: number; kind: SurvivalMilestoneKind; streak: number } | null>(null);
 
   const submittingRef = useRef(false);
@@ -231,6 +236,36 @@ export function SurvivalPlayScreen() {
     if (id && playerToken) postQuestionMediaReady(id, playerToken).catch(() => {});
   }, [playerToken]);
 
+  /** Report the photo; on success swap in another photo of the same bird (like Country Challenge). */
+  const openFlagModal = useCallback(() => {
+    const q = questionRef.current;
+    if (!q) return;
+    const length = mediaArrayLengthForQuestion(q, 'images');
+    const idx = mediaSlotIndexFromQuestion({ number: mediaIndex ?? q.number ?? 0 }, length);
+    const item = q.images?.[idx] as { id?: number; url: string; link?: string; contributor?: string } | undefined;
+    if (!item?.id) return;
+    setFlagMediaInfo({ id: item.id, type: 'image', url: item.url, link: item.link, contributor: item.contributor, index: idx });
+    setFlagModalVisible(true);
+  }, [mediaIndex]);
+
+  const onFlagSuccess = useCallback(async () => {
+    const q = questionRef.current;
+    const excludedId = flagMediaInfo?.id;
+    setFlagModalVisible(false);
+    setFlagMediaInfo(null);
+    if (!q?.id || !playerToken) return;
+    try {
+      const patch = await postQuestionNextMedia(q.id, playerToken, excludedId);
+      setQuestion((current) => (current && current.id === q.id ? { ...current, ...patch } : current));
+      setMediaIndex(0);
+      setImageError(null);
+      setMediaReady(false);
+      setPhotoSwaps((n) => n + 1);
+    } catch {
+      // No other photo for this bird: keep the current one.
+    }
+  }, [flagMediaInfo?.id, playerToken]);
+
   const { width: screenWidth, height: screenHeight } = useWindowDimensions();
   const mediaHeight = widePlayMediaHeight(screenWidth, screenHeight);
   const mediaStageHeight = questionMediaStageHeight('images', { imageHeight: mediaHeight, videoHeight: mediaHeight });
@@ -326,6 +361,8 @@ export function SurvivalPlayScreen() {
               expandImageLabel={t('expand_image_fullscreen_label')}
               expandImageHint={t('expand_image_fullscreen_hint')}
               closeFullScreenLabel={t('close')}
+              onFlagPress={runOver ? undefined : openFlagModal}
+              flagLabel={t('this_seems_wrong')}
               imageHeight={mediaHeight}
               videoHeight={mediaHeight}
               onMediaReady={onMediaReady}
@@ -354,8 +391,9 @@ export function SurvivalPlayScreen() {
         {answerResult === null && !advancing ? (
           <SpeedChallengeTimer
             speedSeconds={question.game?.speed_seconds || SURVIVAL_SECONDS}
-            active={answersEnabled}
+            active={answersEnabled && !flagModalVisible}
             questionId={question.id}
+            resetKey={photoSwaps}
             onExpire={() => void giveAnswer(undefined, true)}
           />
         ) : null}
@@ -390,7 +428,18 @@ export function SurvivalPlayScreen() {
                 </TouchableOpacity>
               ))}
         </View>
+        {!runOver && !advancing ? <FlagMediaLink onPress={openFlagModal} label={t('this_seems_wrong')} /> : null}
       </ScrollView>
+      <FlagMediaModal
+        visible={flagModalVisible}
+        onClose={() => {
+          setFlagModalVisible(false);
+          setFlagMediaInfo(null);
+        }}
+        media={flagMediaInfo}
+        playerToken={playerToken}
+        onSuccess={onFlagSuccess}
+      />
       <SurvivalMilestone milestone={milestone} onDone={() => setMilestone(null)} />
     </View>
   );

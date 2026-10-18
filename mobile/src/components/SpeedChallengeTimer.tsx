@@ -8,15 +8,17 @@ type Props = {
   speedSeconds: number;
   active: boolean;
   questionId: number | null | undefined;
+  resetKey?: number | string;
   onExpire: () => void;
 };
 
-export function SpeedChallengeTimer({ speedSeconds, active, questionId, onExpire }: Props) {
+export function SpeedChallengeTimer({ speedSeconds, active, questionId, resetKey, onExpire }: Props) {
   const { t } = useTranslation();
   const { progress, expired } = useSpeedChallengeTimer({
     speedSeconds,
     active,
     questionId,
+    resetKey,
     onExpire,
   });
 
