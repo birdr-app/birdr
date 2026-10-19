@@ -328,30 +328,31 @@ const AppContextProvider: FC<Props> = ({children}) => {
 
   const loadPlayer = async (playerToken: string) => {
     setLoading(true)
-    const response = await fetch(apiUrl(`/api/player/${playerToken}/`), {
-      cache: 'no-store',
-      method: 'GET',
-      headers: {
-        ...noCacheHeaders,
-        'Authorization': `Token ${playerToken}`
+    try {
+      const response = await fetch(apiUrl(`/api/player/${playerToken}/`), {
+        cache: 'no-store',
+        method: 'GET',
+        headers: {
+          ...noCacheHeaders,
+          'Authorization': `Token ${playerToken}`
+        }
+      })
+      const data = await response.json()
+      if (response.status !== 200) {
+        localStorage.removeItem('player-token')
+        console.log('Could not load player.', response.status, data);
+        window.location.reload();
       }
-    })
-    const data = await response.json()
-    if (response.status !== 200) {
-      setLoading(false)
-      localStorage.removeItem('player-token')
-      console.log('Could not load player.', response.status, data);
-      window.location.reload();
-    }
-    if (data) {
-      setLanguage(data.language)
-      setPlayer(data)
-      setLoading(false)
-      return data as Player
-    } else {
+      if (data) {
+        setLanguage(data.language)
+        setPlayer(data)
+        return data as Player
+      }
       console.log('Could not load player.')
-      setLoading(false)
       return undefined
+    } finally {
+      // Always clear: player and game load in parallel, and a stuck flag hides the whole home page.
+      setLoading(false)
     }
   }
 
@@ -494,24 +495,27 @@ const AppContextProvider: FC<Props> = ({children}) => {
 
   const loadGame = async (gameCode: string) => {
     setLoading(true)
-    const response = await fetch(apiUrl(`/api/games/${gameCode}/`), {
-      cache: 'no-store',
-      method: 'GET',
-      headers: noCacheHeaders
-    })
-    if (response.status === 200) {
-      const data = await response.json()
-      setGame(data)
-      setLanguage(data.language)
-      return data as Game
-    } else {
+    try {
+      const response = await fetch(apiUrl(`/api/games/${gameCode}/`), {
+        cache: 'no-store',
+        method: 'GET',
+        headers: noCacheHeaders
+      })
+      if (response.status === 200) {
+        const data = await response.json()
+        setGame(data)
+        setLanguage(data.language)
+        return data as Game
+      }
       console.log('Could not load game.')
       localStorage.removeItem('game-token')
-      const data = await response.json()
-      console.log('Could not load player.', response.status, data);
+      const data = await response.json().catch(() => null)
+      console.log('Could not load game.', response.status, data);
       window.location.reload();
+    } finally {
+      // The success path used to return before clearing this, leaving home on a spinner.
+      setLoading(false)
     }
-    setLoading(false)
   }
 
   useEffect(() => {
