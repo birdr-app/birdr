@@ -1,7 +1,6 @@
 import React, {FC, ReactNode, useCallback, useContext, useEffect, useRef, useState} from 'react';
 import AppContext, {Answer, Game, MultiPlayer, Player, Question, Species} from "./app-context";
 import WebsocketContext from "./websocket-context"
-import { toaster } from "@/components/ui/toaster"
 import { validateQuestionForGame } from './game-token-validator'
 import { apiUrl, getWebSocketUrl } from '../api/baseUrl'
 import { clientInfoPayload } from '../api/clientInfo'
@@ -58,14 +57,6 @@ const WebsocketContextProvider: FC<Props> = ({children}) => {
   const gameToken = gameTokenRef.current
   const playerToken = localStorage.getItem('player-token')
 
-
-  const notify = (title: string, description?: string, colorPalette?: string) => {
-    toaster.create({
-      title: title,
-      description: description,
-      colorPalette: colorPalette || "primary"
-    })
-  }
 
   // Keep ref in sync so connectSocket/onclose always see latest socket (avoids stale closure)
   useEffect(() => {
@@ -235,7 +226,6 @@ const WebsocketContextProvider: FC<Props> = ({children}) => {
           break
         case 'game_started':
           setGameStarted(true)
-          notify('Game started')
           break
         case 'game_updated':
           const updatedGame = message.game as Game

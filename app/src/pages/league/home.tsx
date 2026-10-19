@@ -473,7 +473,7 @@ function WeekendDoubleBanner({ week, played }: { week: LeagueDetail['week'] | un
     );
   }
   return (
-    <Box bg="#fcd34d" color="#422006" borderRadius="xl" px={4} py={2.5} mb={3}>
+    <Box bg="primary.600" color="#fcd34d" borderRadius="sm" borderLeftWidth="4px" borderLeftColor="#fcd34d" px={4} py={2.5} mb={3}>
       <Text fontWeight="800" fontSize="sm" textTransform="uppercase" letterSpacing="wide">
         <FormattedMessage id="league_double_title" defaultMessage="⚡ Weekend double quiz" />
       </Text>
