@@ -273,8 +273,6 @@ const HomePage = () => {
               </Box>
             ) : null}
 
-            {vis.league === 'full' ? <LeagueHomeCard /> : null}
-
             <Flex direction="column" gap={3} w="full">
               {journeyLoading ? (
                 <Flex w="full" justify="center" align="center" py={6}>
@@ -350,6 +348,44 @@ const HomePage = () => {
                   </Flex>
                 </Button>
               )}
+
+            {vis.survival === 'full' ? (
+              <Button
+                onClick={() => navigate('/survival')}
+                colorPalette="primary"
+                height="auto"
+                py={3}
+                px={4}
+                w="full"
+                bg="primary.700"
+                borderWidth="2px"
+                borderColor="primary.400"
+                borderRadius="xl"
+                whiteSpace="normal"
+              >
+                <Flex align="center" gap={3} width="full" textAlign="left">
+                  <BirdrArtImage
+                    filename="birdr-survival.png"
+                    alt=""
+                    width="56px"
+                    height="56px"
+                    objectFit="contain"
+                    bg="transparent"
+                    overflow="visible"
+                    flexShrink={0}
+                  />
+                  <Flex direction="column" flex={1} minW={0}>
+                    <Text fontSize="lg" fontWeight="700" color="primary.50">
+                      <FormattedMessage id="survival" defaultMessage="Survival" />
+                    </Text>
+                    <Text fontSize="sm" fontWeight="600" color="primary.200">
+                      <FormattedMessage id="survival_home_hint" defaultMessage="One mistake and you're out" />
+                    </Text>
+                  </Flex>
+                </Flex>
+              </Button>
+            ) : null}
+            {vis.league === 'full' ? <LeagueHomeCard /> : null}
 
               {flocksLoading && !flocksReady ? (
                 <Flex w="full" justify="center" align="center" py={6}>
@@ -438,43 +474,6 @@ const HomePage = () => {
                 </Button>
               ) : null}
             </Flex>
-
-            {vis.survival === 'full' ? (
-              <Button
-                onClick={() => navigate('/survival')}
-                colorPalette="primary"
-                height="auto"
-                py={3}
-                px={4}
-                w="full"
-                bg="primary.700"
-                borderWidth="2px"
-                borderColor="primary.400"
-                borderRadius="xl"
-                whiteSpace="normal"
-              >
-                <Flex align="center" gap={3} width="full" textAlign="left">
-                  <BirdrArtImage
-                    filename="birdr-survival.png"
-                    alt=""
-                    width="56px"
-                    height="56px"
-                    objectFit="contain"
-                    bg="transparent"
-                    overflow="visible"
-                    flexShrink={0}
-                  />
-                  <Flex direction="column" flex={1} minW={0}>
-                    <Text fontSize="lg" fontWeight="700" color="primary.50">
-                      <FormattedMessage id="survival" defaultMessage="Survival" />
-                    </Text>
-                    <Text fontSize="sm" fontWeight="600" color="primary.200">
-                      <FormattedMessage id="survival_home_hint" defaultMessage="One mistake and you're out" />
-                    </Text>
-                  </Flex>
-                </Flex>
-              </Button>
-            ) : null}
 
             {vis.hasTiles ? (
               <Box>
