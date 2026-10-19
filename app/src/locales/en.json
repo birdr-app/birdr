@@ -656,5 +656,11 @@
   "league_double_title": "⚡ Weekend double quiz",
   "league_double_lead": "You're top of the table. Seal the win! 🏆",
   "league_double_chase": "Rank up: you're {gap} pts behind #{rank}.",
-  "league_double_join": "Double points today: jump straight into the table!"
+  "league_double_join": "Double points today: jump straight into the table!",
+  "home_more_ways_to_play": "More ways to play",
+  "home_show_all_modes": "Show all game modes",
+  "modes_unlocked_title": "🎉 New game modes unlocked!",
+  "modes_unlocked_body": "Survival and the National league are now on your home screen. Have fun!",
+  "profile_show_all_modes": "Show all game modes",
+  "profile_show_all_modes_hint": "Every game mode full size on the home screen and in the menus. Off: they appear after your first few games."
 }

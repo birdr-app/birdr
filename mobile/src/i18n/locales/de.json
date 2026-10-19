@@ -761,5 +761,9 @@
   "league_other_country": "In ein anderes Land spähen",
   "league_no_leagues_yet": "Du bist noch in keiner Liga. Wähle unten dein Land und spiel das heutige Quiz!",
   "league_last_played": "Zuletzt gespielt {date}",
-  "league_not_played_yet": "Noch nicht gespielt: das heutige Quiz wartet"
+  "league_not_played_yet": "Noch nicht gespielt: das heutige Quiz wartet",
+  "more_ways_to_play": "Weitere Spielmöglichkeiten",
+  "show_all_game_modes": "Alle Spielmodi anzeigen",
+  "show_all_game_modes_hint": "Zeigt Survival, die Nationalliga und mehr auf der Startseite und in den Menüs.",
+  "game_modes_unlocked": "🎉 Neue Spielmodi freigeschaltet: Survival und die Nationalliga!"
 }

@@ -923,6 +923,10 @@ class UserProfile(models.Model):
         default=VISUAL_STYLE_CLASSIC,
         help_text='In-app illustration style (classic comic, stylish, or none)',
     )
+    show_all_modes = models.BooleanField(
+        default=False,
+        help_text='Show every game mode full size, even before 3 finished games.',
+    )
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

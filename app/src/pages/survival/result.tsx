@@ -10,6 +10,7 @@ import { ResultsTopScoreConfetti } from '../../components/results-top-score-conf
 import { Page } from '../../shared/components/layout';
 import { useStartSurvival, survivalErrorMessage } from './use-start-survival';
 import { SurvivalRecordCard } from './start';
+import { recordGameFinished } from '../../core/game-modes';
 
 function Celebration({ kind, result }: { kind: 'record' | 'personal_best'; result: SurvivalResult }) {
   const isRecord = kind === 'record';
@@ -64,6 +65,7 @@ export function SurvivalResultPage() {
       navigate('/survival', { replace: true });
       return;
     }
+    recordGameFinished(session.gameToken);
     let cancelled = false;
     getSurvivalResult(session.gameToken, session.playerToken)
       .then((data) => {

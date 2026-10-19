@@ -10,6 +10,7 @@ import {
 } from '../../api/birdrJourney';
 import { BirdrMoodHero } from '../../components/birdr-mood-hero';
 import { Page } from '../../shared/components/layout';
+import { recordGameFinished } from '../../core/game-modes';
 
 export function BirdrJourneyStepResultsPage() {
   const { countryCode = '' } = useParams<{ countryCode: string }>();
@@ -24,6 +25,7 @@ export function BirdrJourneyStepResultsPage() {
   const [retrying, setRetrying] = useState(false);
 
   const sync = useCallback(async () => {
+    recordGameFinished(gameToken);
     if (!gameToken) {
       setError('Missing game token');
       setLoading(false);

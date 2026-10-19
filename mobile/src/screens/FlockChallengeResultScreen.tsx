@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import {
   View,
   Text,
@@ -23,6 +23,7 @@ import { colors } from '../theme';
 import { getFlockImage } from '../constants/birdrFlockImages';
 import { GameArtImage } from '../components/GameArtImage';
 import { useVisualStyle } from '../context/VisualStyleContext';
+import { useGameModes } from '../context/GameModesContext';
 
 type ResultParams = {
   resultToken?: string;
@@ -37,6 +38,12 @@ export function FlockChallengeResultScreen() {
   const { resultToken, flockSlug, result: inlineResult } = (route.params as ResultParams) ?? {};
   const { t, locale } = useTranslation();
   const { visualStyle } = useVisualStyle();
+  const { bumpGamesPlayed } = useGameModes();
+
+  // Only an inline result is the player's own just-finished game (a token can be a shared link).
+  useEffect(() => {
+    if (inlineResult) bumpGamesPlayed(resultToken ?? null);
+  }, [inlineResult, resultToken, bumpGamesPlayed]);
 
   const [loading, setLoading] = useState(!inlineResult);
   const [error, setError] = useState<string | null>(null);

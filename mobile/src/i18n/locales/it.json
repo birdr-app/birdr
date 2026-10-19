@@ -761,5 +761,9 @@
   "league_other_country": "Sbircia in un altro paese",
   "league_no_leagues_yet": "Non sei ancora in nessuna lega. Scegli il tuo paese qui sotto e gioca il quiz di oggi!",
   "league_last_played": "Ultima partita {date}",
-  "league_not_played_yet": "Non ancora giocato: il quiz di oggi ti aspetta"
+  "league_not_played_yet": "Non ancora giocato: il quiz di oggi ti aspetta",
+  "more_ways_to_play": "Altri modi per giocare",
+  "show_all_game_modes": "Mostra tutte le modalità di gioco",
+  "show_all_game_modes_hint": "Mostra Sopravvivenza, la Lega nazionale e altro nella home e nei menu.",
+  "game_modes_unlocked": "🎉 Nuove modalità di gioco sbloccate: Sopravvivenza e la Lega nazionale!"
 }

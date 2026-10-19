@@ -33,6 +33,7 @@ import {
   canShareGameResult,
   formatGameResultShareMessage,
 } from "../../../api/gameShare"
+import { recordGameFinished } from "../../../core/game-modes"
 
 const PRACTICE_PASS_CORRECT = 18;
 
@@ -70,6 +71,11 @@ export const ResultsComponent = () => {
   const flockCompleteSent = useRef(false)
   const [leagueCompleting, setLeagueCompleting] = useState(false)
   const leagueCompleteSent = useRef(false)
+
+  // Count the finished game towards unlocking more game modes.
+  useEffect(() => {
+    if (game?.ended && game?.token) recordGameFinished(game.token)
+  }, [game?.ended, game?.token])
 
   // Finish flock challenge (ranked/practice) and go to shareable result page
   useEffect(() => {

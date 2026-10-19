@@ -4,6 +4,7 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import { useGame } from '../context/GameContext';
 import { useGameWebSocket } from '../context/GameWebSocketContext';
 import { useAuth } from '../context/AuthContext';
+import { useGameModes } from '../context/GameModesContext';
 import { useTranslation } from '../i18n/TranslationContext';
 import { colors } from '../theme';
 import type { Game } from '../api/games';
@@ -65,6 +66,11 @@ export function GameResultsScreen() {
   const dailyChallengeId = (route.params as { dailyChallengeId?: number })?.dailyChallengeId;
   const { isAuthenticated } = useAuth();
   const { game, player, clearGame, setGame, loadGame } = useGame();
+  const { bumpGamesPlayed } = useGameModes();
+
+  useEffect(() => {
+    if (game?.token) bumpGamesPlayed(game.token);
+  }, [game?.token, bumpGamesPlayed]);
   const {
     players,
     joinGame,

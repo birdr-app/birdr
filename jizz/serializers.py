@@ -819,11 +819,17 @@ class UserProfileSerializer(serializers.ModelSerializer):
     avatar_url = serializers.SerializerMethodField()
     country_code = serializers.CharField(source='country.code', read_only=True, allow_null=True)
     country_name = serializers.CharField(source='country.name', read_only=True, allow_null=True)
+    games_played = serializers.SerializerMethodField()
 
     class Meta:
         model = UserProfile
-        fields = ('username', 'email', 'first_name', 'last_name', 'avatar', 'avatar_url', 'receive_updates', 'language', 'app_language', 'timezone', 'visual_style', 'country_code', 'country_name', 'is_staff', 'is_superuser')
-        read_only_fields = ('avatar_url', 'country_code', 'country_name', 'is_staff', 'is_superuser')
+        fields = ('username', 'email', 'first_name', 'last_name', 'avatar', 'avatar_url', 'receive_updates', 'language', 'app_language', 'timezone', 'visual_style', 'show_all_modes', 'games_played', 'country_code', 'country_name', 'is_staff', 'is_superuser')
+        read_only_fields = ('avatar_url', 'games_played', 'country_code', 'country_name', 'is_staff', 'is_superuser')
+
+    def get_games_played(self, obj):
+        from jizz.player_stats import completed_games_count
+
+        return completed_games_count(user=obj.user)
 
     def get_avatar_url(self, obj):
         if obj.avatar:
@@ -859,6 +865,7 @@ class UserProfileUpdateSerializer(serializers.Serializer):
         required=False,
         choices=('classic', 'stylish', 'none'),
     )
+    show_all_modes = serializers.BooleanField(required=False)
     country_code = serializers.CharField(required=False, max_length=10, allow_blank=True, allow_null=True)
 
     def validate_username(self, value):
@@ -951,6 +958,9 @@ class UserProfileUpdateSerializer(serializers.Serializer):
 
         if 'visual_style' in validated_data:
             instance.visual_style = validated_data['visual_style']
+
+        if 'show_all_modes' in validated_data:
+            instance.show_all_modes = validated_data['show_all_modes']
         
         # Update country if provided
         if 'country_code' in validated_data:
@@ -1107,10 +1117,19 @@ class UpdateDetailSerializer(UpdateListSerializer):
 
 class PlayerSerializer(serializers.ModelSerializer):
     last_answer = AnswerSerializer(read_only=True)
+    games_played = serializers.SerializerMethodField()
 
     class Meta:
         model = Player
-        fields = ('id', 'name', 'token', 'language', 'score', 'last_answer')
+        fields = ('id', 'name', 'token', 'language', 'score', 'last_answer', 'games_played')
+
+    def get_games_played(self, obj):
+        """Finished games: across the linked user's players, else this guest player's own."""
+        from jizz.player_stats import completed_games_count
+
+        if obj.user_id:
+            return completed_games_count(user=obj.user)
+        return completed_games_count(player=obj)
 
     def validate_name(self, value):
         from jizz.user_names import sanitize_player_name

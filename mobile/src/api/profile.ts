@@ -12,6 +12,10 @@ export type UserProfile = {
   app_language?: string;
   timezone: string;
   visual_style?: string;
+  /** Show every game mode on home and in the menus, not just the beginner set. */
+  show_all_modes?: boolean;
+  /** Finished games across all the user's players (read-only). */
+  games_played?: number;
   country_code: string | null;
   country_name: string | null;
   is_staff?: boolean;
@@ -27,6 +31,7 @@ export type ProfileUpdateData = {
   app_language?: string;
   timezone?: string;
   visual_style?: string;
+  show_all_modes?: boolean;
   country_code?: string | null;
 };
 

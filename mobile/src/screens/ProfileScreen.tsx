@@ -24,6 +24,7 @@ import { useTranslation } from '../i18n/TranslationContext';
 import { setSpeciesLanguageIndependent } from '../i18n/speciesLanguagePreference';
 import { getProfile, updateProfile, updateProfileAvatar, getAvatarUrl, deleteAccount, type UserProfile } from '../api/profile';
 import { useVisualStyle } from '../context/VisualStyleContext';
+import { useGameModes } from '../context/GameModesContext';
 import { parseVisualStyle, type VisualStyle } from '../lib/visualStyle';
 import { loadCountries, type Country } from '../api/countries';
 import { loadLanguages, type Language } from '../api/languages';
@@ -44,6 +45,7 @@ export function ProfileScreen() {
   const { isAuthenticated, isLoading: authLoading, logout } = useAuth();
   const { refreshProfile } = useProfile();
   const { visualStyle: contextVisualStyle, setVisualStyle } = useVisualStyle();
+  const { showAll: contextShowAll, setShowAll } = useGameModes();
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -53,6 +55,7 @@ export function ProfileScreen() {
   const [timezone, setTimezone] = useState('Europe/Amsterdam');
   const [country, setCountry] = useState<Country | null>(null);
   const [receiveUpdates, setReceiveUpdates] = useState(true);
+  const [showAllModes, setShowAllModes] = useState(contextShowAll);
   const [visualStyle, setVisualStyleLocal] = useState<VisualStyle>(contextVisualStyle);
   const [languages, setLanguages] = useState<Language[]>([]);
   const [countries, setCountries] = useState<Country[]>([]);
@@ -91,6 +94,7 @@ export function ProfileScreen() {
           : null
       );
       setReceiveUpdates(p.receive_updates ?? true);
+      setShowAllModes((current) => p.show_all_modes ?? current);
       setVisualStyleLocal(parseVisualStyle(p.visual_style));
       if (p.avatar_url) setAvatarPreviewUri(null);
     } catch (e: any) {
@@ -224,6 +228,7 @@ export function ProfileScreen() {
         country_code: country?.code ?? undefined,
         receive_updates: receiveUpdates,
         visual_style: visualStyle,
+        show_all_modes: showAllModes,
       });
       const updated = await getProfile();
       setProfile(updated);
@@ -242,6 +247,7 @@ export function ProfileScreen() {
       refreshProfile();
       setVisualStyle(parseVisualStyle(updated.visual_style));
       setVisualStyleLocal(parseVisualStyle(updated.visual_style));
+      setShowAll(updated.show_all_modes ?? showAllModes, { saveToProfile: false });
       setSaveToast(t('profile_saved'));
       setTimeout(() => {
         (navigation as any).navigate('Home');
@@ -383,6 +389,20 @@ export function ProfileScreen() {
           onValueChange={setReceiveUpdates}
           trackColor={{ false: colors.primary[200], true: colors.primary[400] }}
           thumbColor={receiveUpdates ? colors.primary[700] : '#fff'}
+        />
+      </View>
+      <View style={styles.switchRow}>
+        <View style={styles.switchCopy}>
+          <Text style={styles.label}>{t('show_all_game_modes')}</Text>
+          <Text style={styles.switchHint}>{t('show_all_game_modes_hint')}</Text>
+        </View>
+        <Switch
+          value={showAllModes}
+          onValueChange={setShowAllModes}
+          trackColor={{ false: colors.primary[200], true: colors.primary[400] }}
+          thumbColor={showAllModes ? colors.primary[700] : '#fff'}
+          testID="profile.showAllModes"
+          accessibilityLabel={t('show_all_game_modes')}
         />
       </View>
       <Text style={styles.label}>{t('visual_style')}</Text>

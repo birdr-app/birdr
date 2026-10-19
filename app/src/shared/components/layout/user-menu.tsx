@@ -4,6 +4,8 @@ import { FormattedMessage } from "react-intl";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { getCountryChallengesPath, listBirdrJourneys } from "../../../api/birdrJourney";
 import { getFlocksPath, listFlocks } from "../../../api/flocks";
+import { getLeagueOverview } from "../../../api/league";
+import { useGameModes } from "../../../core/use-game-modes";
 import { authService } from "../../../api/services/auth.service";
 import { getAvatarUrl } from "../../../api/services/profile.service";
 import AppContext from "../../../core/app-context";
@@ -22,6 +24,8 @@ export const UserMenu = ({ onOpenLoginModal, isOpen = true }: UserMenuProps) => 
   const { isAuthenticated, profile, userEmail, ready: profileReady } = useAuthProfile();
   const [hasFlocks, setHasFlocks] = useState(false);
   const [hasCountryChallenges, setHasCountryChallenges] = useState(false);
+  const [hasLeagues, setHasLeagues] = useState(false);
+  const { showMenuExtras } = useGameModes();
 
   const handleLogout = () => {
     authService.clearTokens();
@@ -39,6 +43,12 @@ export const UserMenu = ({ onOpenLoginModal, isOpen = true }: UserMenuProps) => 
           if (!cancelled) setHasFlocks(flocks.length > 0);
         } catch {
           if (!cancelled) setHasFlocks(false);
+        }
+        try {
+          const overview = await getLeagueOverview();
+          if (!cancelled) setHasLeagues((overview.memberships ?? []).length > 0);
+        } catch {
+          if (!cancelled) setHasLeagues(false);
         }
       } else if (!cancelled) {
         setHasFlocks(false);
@@ -65,14 +75,14 @@ export const UserMenu = ({ onOpenLoginModal, isOpen = true }: UserMenuProps) => 
 
   const membershipLinks = (
     <>
-      {(isAuthenticated || hasFlocks) && (
+      {(hasFlocks || (isAuthenticated && showMenuExtras)) && (
         <Link asChild textDecoration="none">
           <RouterLink to={getFlocksPath()}>
             <FormattedMessage id="flocks_my_flocks" defaultMessage="My flocks" />
           </RouterLink>
         </Link>
       )}
-      {isAuthenticated && (
+      {(hasLeagues || (isAuthenticated && showMenuExtras)) && (
         <Link asChild textDecoration="none">
           <RouterLink to="/league">
             <FormattedMessage id="league_my_leagues" defaultMessage="My national leagues" />
@@ -159,16 +169,20 @@ export const UserMenu = ({ onOpenLoginModal, isOpen = true }: UserMenuProps) => 
       <Link href="/checklist" textDecoration="none">
         <FormattedMessage id="checklist_title" defaultMessage="My checklist" />
       </Link>
-      <Link href="/trouble-spots" textDecoration="none">
-        <FormattedMessage id="trouble_spots" defaultMessage="My tricky birds" />
-      </Link>
+      {showMenuExtras && (
+        <Link href="/trouble-spots" textDecoration="none">
+          <FormattedMessage id="trouble_spots" defaultMessage="My tricky birds" />
+        </Link>
+      )}
       <Link href="/settings" textDecoration="none">
         <FormattedMessage id="settings" defaultMessage="Profile" />
       </Link>
-      <Link href="/media-review" textDecoration="none">
-        <FormattedMessage id="review_media" defaultMessage="Review media" />
-      </Link>
-      {profile?.country_code && (
+      {showMenuExtras && (
+        <Link href="/media-review" textDecoration="none">
+          <FormattedMessage id="review_media" defaultMessage="Review media" />
+        </Link>
+      )}
+      {showMenuExtras && profile?.country_code && (
         <Link href={`/media-review/${profile.country_code.toUpperCase()}`} textDecoration="none">
           <FormattedMessage
             id="review_country"

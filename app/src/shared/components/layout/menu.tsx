@@ -2,8 +2,11 @@ import {Flex, Link} from "@chakra-ui/react";
 import {FormattedMessage} from "react-intl"
 import {Link as RouterLink} from "react-router-dom";
 import { getCountryChallengeLeaderboardPath } from "../../../api/birdrJourney";
+import { useGameModes } from "../../../core/use-game-modes";
 
 export const BirdrMenu = () => {
+    // Beginners get a short menu; leagues and leaderboards appear after a few games.
+    const { showMenuExtras } = useGameModes();
     return (
         <Flex direction={'column'} gap={4} fontSize={'xl'}>
             <Link href={'/play'} textDecoration="none">
@@ -12,22 +15,26 @@ export const BirdrMenu = () => {
             <Link href={'/start'} textDecoration="none">
               <FormattedMessage id={'new game'} defaultMessage={'New game'} />
             </Link>
-            <Link asChild textDecoration="none">
-              <RouterLink to={'/league'}>
-                <FormattedMessage id="league_national" defaultMessage="National league" />
-              </RouterLink>
-            </Link>
+            {showMenuExtras && (
+              <Link asChild textDecoration="none">
+                <RouterLink to={'/league'}>
+                  <FormattedMessage id="league_national" defaultMessage="National league" />
+                </RouterLink>
+              </Link>
+            )}
             <Link href={'/scores'} textDecoration="none">
               <FormattedMessage id={'High scores'} defaultMessage={'High scores'} />
             </Link>
-            <Link asChild textDecoration="none">
-              <RouterLink to={getCountryChallengeLeaderboardPath()}>
-                <FormattedMessage
-                  id="country_leaderboard"
-                  defaultMessage="Country leaderboard"
-                />
-              </RouterLink>
-            </Link>
+            {showMenuExtras && (
+              <Link asChild textDecoration="none">
+                <RouterLink to={getCountryChallengeLeaderboardPath()}>
+                  <FormattedMessage
+                    id="country_leaderboard"
+                    defaultMessage="Country leaderboard"
+                  />
+                </RouterLink>
+              </Link>
+            )}
             <Link href={'/checklist'} textDecoration="none">
               <FormattedMessage id="checklist_title" defaultMessage="My checklist" />
             </Link>

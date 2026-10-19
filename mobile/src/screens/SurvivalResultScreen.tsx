@@ -6,6 +6,7 @@ import { getSurvivalResult, type SurvivalResult } from '../api/survival';
 import { BirdrMoodHero } from '../components/BirdrMoodHero';
 import { MegaConfetti } from '../components/MegaConfetti';
 import { useStartSurvival } from '../hooks/useStartSurvival';
+import { useGameModes } from '../context/GameModesContext';
 import { useTranslation } from '../i18n/TranslationContext';
 import { getCountryDisplayName } from '../i18n/countryNames';
 import { colors } from '../theme';
@@ -23,6 +24,13 @@ export function SurvivalResultScreen() {
   const navigation = useNavigation<NativeStackNavigationProp<Record<string, object | undefined>>>();
   const { gameToken, playerToken, countryCode, language } = route.params ?? ({} as SurvivalResultParams);
   const startRun = useStartSurvival();
+  const { bumpGamesPlayed, markSurvivalPlayed } = useGameModes();
+
+  useEffect(() => {
+    if (!gameToken) return;
+    bumpGamesPlayed(gameToken);
+    markSurvivalPlayed();
+  }, [gameToken, bumpGamesPlayed, markSurvivalPlayed]);
 
   const [result, setResult] = useState<SurvivalResult | null>(null);
   const [loading, setLoading] = useState(true);

@@ -5,6 +5,7 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { LeagueCompleteResult } from '../api/league';
 import { BirdrMoodHero } from '../components/BirdrMoodHero';
 import { MegaConfetti } from '../components/MegaConfetti';
+import { useGameModes } from '../context/GameModesContext';
 import { useTranslation } from '../i18n/TranslationContext';
 import { colors } from '../theme';
 
@@ -18,6 +19,14 @@ export function LeagueResultScreen() {
   const navigation = useNavigation<NativeStackNavigationProp<Record<string, object | undefined>>>();
   const { countryCode, result } = route.params ?? ({} as Params['LeagueResult']);
   const pop = useRef(new Animated.Value(0.5)).current;
+  const { bumpGamesPlayed } = useGameModes();
+  const counted = useRef(false);
+
+  useEffect(() => {
+    if (!result || counted.current) return;
+    counted.current = true;
+    bumpGamesPlayed();
+  }, [result, bumpGamesPlayed]);
 
   useEffect(() => {
     Animated.spring(pop, { toValue: 1, friction: 4, tension: 110, useNativeDriver: true }).start();

@@ -20,6 +20,8 @@ import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
 import { listBirdrJourneys } from '../api/birdrJourney';
 import { listFlocks } from '../api/flocks';
+import { fetchLeagueOverview } from '../api/league';
+import { useGameModes } from '../context/GameModesContext';
 import { useTranslation } from '../i18n/TranslationContext';
 import { AppLanguagePicker } from './AppLanguagePicker';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -28,9 +30,10 @@ import { colors } from '../theme';
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const PANEL_WIDTH = Math.min(SCREEN_WIDTH * 0.85, 340);
 
-const USER_MENU_ITEMS: { route: string; labelKey: string }[] = [
+/** `advanced` items only show once the player has unlocked all game modes. */
+const USER_MENU_ITEMS: { route: string; labelKey: string; advanced?: boolean }[] = [
   { route: 'Checklist', labelKey: 'checklist_title' },
-  { route: 'TroubleSpots', labelKey: 'trouble_spots' },
+  { route: 'TroubleSpots', labelKey: 'trouble_spots', advanced: true },
   { route: 'MyGames', labelKey: 'my_games' },
   { route: 'Settings', labelKey: 'profile' },
 ];
@@ -45,6 +48,8 @@ export function UserMenuModal() {
   const slideAnim = useRef(new Animated.Value(PANEL_WIDTH)).current;
   const [hasFlocks, setHasFlocks] = useState(false);
   const [hasCountryChallenges, setHasCountryChallenges] = useState(false);
+  const [hasLeagues, setHasLeagues] = useState(false);
+  const { showMenuExtras } = useGameModes();
 
   useEffect(() => {
     Animated.timing(slideAnim, {
@@ -65,8 +70,15 @@ export function UserMenuModal() {
         } catch {
           if (!cancelled) setHasFlocks(false);
         }
+        try {
+          const overview = await fetchLeagueOverview();
+          if (!cancelled) setHasLeagues(overview.memberships.length > 0);
+        } catch {
+          if (!cancelled) setHasLeagues(false);
+        }
       } else if (!cancelled) {
         setHasFlocks(false);
+        setHasLeagues(false);
       }
       try {
         const journeys = await listBirdrJourneys();
@@ -155,7 +167,7 @@ export function UserMenuModal() {
                   <Text style={styles.hint}>{t('you_are_logged_in')}</Text>
                 </View>
               )}
-              {(isAuthenticated || hasFlocks) && (
+              {(hasFlocks || (isAuthenticated && showMenuExtras)) && (
                 <TouchableOpacity
                   style={styles.menuItem}
                   onPress={() => handleItem('FlockList')}
@@ -164,7 +176,7 @@ export function UserMenuModal() {
                   <Text style={styles.menuLabel}>{t('my_flocks')}</Text>
                 </TouchableOpacity>
               )}
-              {isAuthenticated && (
+              {isAuthenticated && (hasLeagues || showMenuExtras) && (
                 <TouchableOpacity
                   style={styles.menuItem}
                   onPress={() => handleItem('LeagueList')}
@@ -173,7 +185,7 @@ export function UserMenuModal() {
                   <Text style={styles.menuLabel}>{t('league_my_leagues')}</Text>
                 </TouchableOpacity>
               )}
-              {hasCountryChallenges && (
+              {(hasCountryChallenges || showMenuExtras) && (
                 <TouchableOpacity
                   style={styles.menuItem}
                   onPress={() => handleItem('BirdrJourneyList')}
@@ -181,7 +193,7 @@ export function UserMenuModal() {
                   <Text style={styles.menuLabel}>{t('my_country_challenges')}</Text>
                 </TouchableOpacity>
               )}
-              {USER_MENU_ITEMS.map((item) => (
+              {USER_MENU_ITEMS.filter((item) => showMenuExtras || !item.advanced).map((item) => (
                 <TouchableOpacity
                   key={item.route}
                   style={styles.menuItem}
@@ -190,7 +202,7 @@ export function UserMenuModal() {
                   <Text style={styles.menuLabel}>{t(item.labelKey)}</Text>
                 </TouchableOpacity>
               ))}
-              {isAuthenticated && (
+              {isAuthenticated && showMenuExtras && (
                 <TouchableOpacity style={styles.menuItem} onPress={() => handleItem('MediaReview')}>
                   <View style={styles.menuLabelRow}>
                     <Text style={styles.menuLabel}>{t('review_media')}</Text>

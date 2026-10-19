@@ -761,5 +761,9 @@
   "league_other_country": "Jette un œil à un autre pays",
   "league_no_leagues_yet": "Tu n'as encore rejoint aucune ligue. Choisis ton pays ci-dessous et joue au quiz du jour !",
   "league_last_played": "Dernière partie {date}",
-  "league_not_played_yet": "Pas encore joué : le quiz du jour t'attend"
+  "league_not_played_yet": "Pas encore joué : le quiz du jour t'attend",
+  "more_ways_to_play": "Plus de façons de jouer",
+  "show_all_game_modes": "Afficher tous les modes de jeu",
+  "show_all_game_modes_hint": "Affiche Survie, la Ligue nationale et plus encore sur l'accueil et dans les menus.",
+  "game_modes_unlocked": "🎉 Nouveaux modes de jeu débloqués : Survie et la Ligue nationale !"
 }

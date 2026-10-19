@@ -653,5 +653,11 @@
   "league_double_title": "⚡ 週末ダブルクイズ",
   "league_double_lead": "首位です。勝利を確実にしよう！🏆",
   "league_double_chase": "順位アップのチャンス：#{rank}まであと{gap}ポイント。",
-  "league_double_join": "今日はポイント2倍：一気にランキング入りしよう！"
+  "league_double_join": "今日はポイント2倍：一気にランキング入りしよう！",
+  "home_more_ways_to_play": "ほかの遊び方",
+  "home_show_all_modes": "すべてのゲームモードを表示",
+  "modes_unlocked_title": "🎉 新しいゲームモードが解放されました！",
+  "modes_unlocked_body": "サバイバルとナショナルリーグがホーム画面に登場しました。楽しんでね！",
+  "profile_show_all_modes": "すべてのゲームモードを表示",
+  "profile_show_all_modes_hint": "すべてのゲームモードをホーム画面とメニューに大きく表示します。オフの場合は、数回プレイすると表示されます。"
 }

@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect, useMemo } from 'react';
+import React, { useCallback, useState, useEffect, useMemo, useRef } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Linking, ActivityIndicator, Image } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -20,6 +20,8 @@ import { colors } from '../theme';
 import { getMoodImage } from '../constants/birdrMoodImages';
 import { getFlockImage, getStartGameImage, getSurvivalImage } from '../constants/birdrFlockImages';
 import { useVisualStyle } from '../context/VisualStyleContext';
+import { useGameModes } from '../context/GameModesContext';
+import { modeVisibility } from '../game/gameModes';
 import { FeedbackForm } from '../components/FeedbackForm';
 import { useSoftUpdateAvailable } from '../hooks/useSoftUpdateAvailable';
 import { resolveMediaUrl } from '../api/config';
@@ -66,6 +68,35 @@ type RootStackParamList = {
   League: { countryCode?: string } | undefined;
 };
 
+function ModeTile({
+  label,
+  art,
+  tileStyle,
+  onPress,
+  testID,
+}: {
+  label: string;
+  art: React.ReactNode;
+  tileStyle: object;
+  onPress: () => void;
+  testID: string;
+}) {
+  return (
+    <TouchableOpacity
+      style={[styles.modeTile, tileStyle]}
+      onPress={onPress}
+      testID={testID}
+      accessibilityRole="button"
+      accessibilityLabel={label}
+    >
+      {art}
+      <Text style={styles.modeTileLabel} numberOfLines={2}>
+        {label}
+      </Text>
+    </TouchableOpacity>
+  );
+}
+
 export function HomeScreen() {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList, 'Home'>>();
   const { t, locale } = useTranslation();
@@ -81,6 +112,8 @@ export function HomeScreen() {
   const [flocksReady, setFlocksReady] = useState(false);
   const [leagueDetail, setLeagueDetail] = useState<LeagueDetail | null>(null);
   const [leagueSuggested, setLeagueSuggested] = useState<LeagueCountry | null>(null);
+  const [leagueLoaded, setLeagueLoaded] = useState(false);
+  const gameModes = useGameModes();
 
   const loadLeagueSummary = useCallback(async () => {
     try {
@@ -96,6 +129,8 @@ export function HomeScreen() {
     } catch {
       setLeagueDetail(null);
       setLeagueSuggested(null);
+    } finally {
+      setLeagueLoaded(true);
     }
   }, []);
 
@@ -230,6 +265,117 @@ export function HomeScreen() {
     return t('flocks_home_time_left', { time: formatChallengeCountdown(remaining) });
   }, [flockChallenge, nowTick, t]);
 
+  const modes = modeVisibility({
+    gamesPlayed: gameModes.gamesPlayed,
+    showAll: gameModes.showAll,
+    inLeague: !!leagueDetail,
+    inFlock: !!mainFlock,
+    hasJourney: !!activeJourney,
+    playedSurvival: gameModes.playedSurvival,
+    isAuthenticated,
+    unlockSeen: gameModes.unlockSeen,
+  });
+  const modesLoading = !gameModes.ready || !leagueLoaded || (flocksLoading && !flocksReady);
+  const showUnlockBanner = gameModes.ready && modes.showUnlockBanner;
+
+  // The unlock banner is a one-time moment: once seen, leaving home counts as dismissing it.
+  const unlockBannerShownRef = useRef(false);
+  unlockBannerShownRef.current = showUnlockBanner;
+  const { markUnlockSeen } = gameModes;
+  useFocusEffect(
+    useCallback(
+      () => () => {
+        if (unlockBannerShownRef.current) markUnlockSeen();
+      },
+      [markUnlockSeen]
+    )
+  );
+
+  const survivalCard = (
+    <TouchableOpacity
+      style={styles.survivalHeroButton}
+      onPress={() => navigation.navigate('SurvivalStart')}
+      testID="home.survival"
+      accessibilityLabel={`${t('survival')}, ${t('survival_home_hint')}`}
+    >
+      <GameArtImage source={getSurvivalImage(visualStyle)} style={styles.journeyNewHeroImage} resizeMode="contain" />
+      <View style={styles.journeyHeroText}>
+        <Text style={styles.journeyHeroLevel} numberOfLines={2}>
+          {t('survival')}
+        </Text>
+        <Text style={styles.survivalHeroHint} numberOfLines={2}>
+          {t('survival_home_hint')}
+        </Text>
+      </View>
+    </TouchableOpacity>
+  );
+
+  const goLeague = () =>
+    navigation.navigate('League', leagueCountry ? { countryCode: leagueCountry.code } : undefined);
+
+  const leagueCard = (
+    <TouchableOpacity
+      style={styles.leagueHeroButton}
+      onPress={goLeague}
+      testID="home.league"
+      accessibilityLabel={`${leagueTitle}, ${leagueStatusLine}`}
+    >
+      <Text style={styles.leagueHeroEmoji}>{leagueToday?.played ? '⭐' : '🏆'}</Text>
+      <View style={styles.journeyHeroText}>
+        <Text style={styles.journeyHeroLevel} numberOfLines={2}>
+          {leagueTitle}
+        </Text>
+        <Text style={styles.survivalHeroHint} numberOfLines={2}>
+          {leagueStatusLine}
+        </Text>
+      </View>
+    </TouchableOpacity>
+  );
+
+  const flockCard = mainFlock ? (
+    <TouchableOpacity
+      style={styles.flocksHeroButton}
+      onPress={() => void goFlocks()}
+      testID="home.flocks"
+      accessibilityLabel={`${mainFlock.name}, ${flockCountryLabel}`}
+    >
+      {flockLogoUri ? (
+        <Image source={{ uri: flockLogoUri }} style={styles.flocksHeroLogo} resizeMode="cover" />
+      ) : (
+        <GameArtImage
+          source={getFlockImage('leaderboard', visualStyle)}
+          style={styles.flocksHeroImage}
+          resizeMode="contain"
+        />
+      )}
+      <View style={styles.flocksHeroText}>
+        <Text style={styles.flocksHeroTitle} numberOfLines={2}>
+          {mainFlock.name}
+        </Text>
+        <Text style={styles.flocksHeroContinue} numberOfLines={1}>
+          {flockStatusLine}
+        </Text>
+      </View>
+    </TouchableOpacity>
+  ) : (
+    <TouchableOpacity
+      style={styles.flocksHeroButton}
+      onPress={() => void goFlocks()}
+      testID="home.flocks"
+      accessibilityLabel={t('flocks_start')}
+    >
+      <GameArtImage source={getFlockImage('invite', visualStyle)} style={styles.flocksHeroImage} resizeMode="contain" />
+      <View style={styles.flocksHeroText}>
+        <Text style={styles.flocksHeroTitle} numberOfLines={2}>
+          {t('flocks_start')}
+        </Text>
+        <Text style={styles.flocksHeroHint} numberOfLines={2}>
+          {t('flocks_home_start_cta')}
+        </Text>
+      </View>
+    </TouchableOpacity>
+  );
+
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       {softUpdate.available && softUpdate.storeLabel && (
@@ -260,6 +406,19 @@ export function HomeScreen() {
             <Text style={styles.primaryButtonText}>{t('sign_up')}</Text>
           </TouchableOpacity>
           <Text style={styles.signUpSubtext}>{t('sign_up_track_progress')}</Text>
+        </View>
+      )}
+      {showUnlockBanner && (
+        <View style={styles.unlockBanner} testID="home.modesUnlocked">
+          <Text style={styles.unlockBannerText}>{t('game_modes_unlocked')}</Text>
+          <TouchableOpacity
+            onPress={markUnlockSeen}
+            hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+            accessibilityRole="button"
+            accessibilityLabel={t('close')}
+          >
+            <Text style={styles.unlockBannerClose}>✕</Text>
+          </TouchableOpacity>
         </View>
       )}
       <TouchableOpacity
@@ -326,90 +485,60 @@ export function HomeScreen() {
           </TouchableOpacity>
         )}
 
-        <TouchableOpacity
-          style={styles.survivalHeroButton}
-          onPress={() => navigation.navigate('SurvivalStart')}
-          testID="home.survival"
-          accessibilityLabel={`${t('survival')}, ${t('survival_home_hint')}`}
-        >
-          <GameArtImage source={getSurvivalImage(visualStyle)} style={styles.journeyNewHeroImage} resizeMode="contain" />
-          <View style={styles.journeyHeroText}>
-            <Text style={styles.journeyHeroLevel} numberOfLines={2}>
-              {t('survival')}
-            </Text>
-            <Text style={styles.survivalHeroHint} numberOfLines={2}>
-              {t('survival_home_hint')}
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.leagueHeroButton}
-          onPress={() => navigation.navigate('League', leagueCountry ? { countryCode: leagueCountry.code } : undefined)}
-          testID="home.league"
-          accessibilityLabel={`${leagueTitle}, ${leagueStatusLine}`}
-        >
-          <Text style={styles.leagueHeroEmoji}>{leagueToday?.played ? '⭐' : '🏆'}</Text>
-          <View style={styles.journeyHeroText}>
-            <Text style={styles.journeyHeroLevel} numberOfLines={2}>
-              {leagueTitle}
-            </Text>
-            <Text style={styles.survivalHeroHint} numberOfLines={2}>
-              {leagueStatusLine}
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        {flocksLoading && !flocksReady ? (
+        {modesLoading ? (
           <View style={styles.secondaryLoadingWrap}>
             <ActivityIndicator size="small" color={colors.primary[500]} />
           </View>
-        ) : mainFlock ? (
-          <TouchableOpacity
-            style={styles.flocksHeroButton}
-            onPress={() => void goFlocks()}
-            testID="home.flocks"
-            accessibilityLabel={`${mainFlock.name}, ${flockCountryLabel}`}
-          >
-            {flockLogoUri ? (
-              <Image source={{ uri: flockLogoUri }} style={styles.flocksHeroLogo} resizeMode="cover" />
-            ) : (
-              <GameArtImage
-                source={getFlockImage('leaderboard', visualStyle)}
-                style={styles.flocksHeroImage}
-                resizeMode="contain"
-              />
-            )}
-            <View style={styles.flocksHeroText}>
-              <Text style={styles.flocksHeroTitle} numberOfLines={2}>
-                {mainFlock.name}
-              </Text>
-              <Text style={styles.flocksHeroContinue} numberOfLines={1}>
-                {flockStatusLine}
-              </Text>
-            </View>
-          </TouchableOpacity>
         ) : (
-          <TouchableOpacity
-            style={styles.flocksHeroButton}
-            onPress={() => void goFlocks()}
-            testID="home.flocks"
-            accessibilityLabel={t('flocks_start')}
-          >
-            <GameArtImage
-              source={getFlockImage('invite', visualStyle)}
-              style={styles.flocksHeroImage}
-              resizeMode="contain"
-            />
-            <View style={styles.flocksHeroText}>
-              <Text style={styles.flocksHeroTitle} numberOfLines={2}>
-                {t('flocks_start')}
-              </Text>
-              <Text style={styles.flocksHeroHint} numberOfLines={2}>
-                {t('flocks_home_start_cta')}
-              </Text>
-            </View>
-          </TouchableOpacity>
+          <>
+            {modes.survival === 'full' && survivalCard}
+            {modes.league === 'full' && leagueCard}
+            {modes.flock === 'full' && flockCard}
+            {modes.hasTiles && (
+              <View style={styles.moreModes}>
+                <Text style={styles.moreModesTitle}>{t('more_ways_to_play')}</Text>
+                <View style={styles.modeTileRow}>
+                  {modes.survival === 'tile' && (
+                    <ModeTile
+                      testID="home.survivalTile"
+                      label={t('survival')}
+                      tileStyle={styles.survivalTile}
+                      art={<GameArtImage source={getSurvivalImage(visualStyle)} style={styles.modeTileImage} resizeMode="contain" />}
+                      onPress={() => navigation.navigate('SurvivalStart')}
+                    />
+                  )}
+                  {modes.league === 'tile' && (
+                    <ModeTile
+                      testID="home.leagueTile"
+                      label={t('league')}
+                      tileStyle={styles.leagueTile}
+                      art={<Text style={styles.modeTileEmoji}>🏆</Text>}
+                      onPress={goLeague}
+                    />
+                  )}
+                  {modes.flock === 'tile' && (
+                    <ModeTile
+                      testID="home.flocksTile"
+                      label={t('flocks_start')}
+                      tileStyle={styles.flocksTile}
+                      art={<GameArtImage source={getFlockImage('invite', visualStyle)} style={styles.modeTileImage} resizeMode="contain" />}
+                      onPress={() => void goFlocks()}
+                    />
+                  )}
+                </View>
+                {modes.stage === 'beginner' && (
+                  <TouchableOpacity
+                    style={styles.showAllLink}
+                    onPress={() => gameModes.setShowAll(true)}
+                    testID="home.showAllModes"
+                    accessibilityRole="button"
+                  >
+                    <Text style={styles.showAllLinkText}>{t('show_all_game_modes')}</Text>
+                  </TouchableOpacity>
+                )}
+              </View>
+            )}
+          </>
         )}
       </View>
       <FeedbackForm />
@@ -659,6 +788,91 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     color: colors.primary[300],
+  },
+  unlockBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    backgroundColor: '#fef3c7',
+    borderWidth: 1,
+    borderColor: '#f59e0b',
+    borderRadius: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    marginBottom: 12,
+  },
+  unlockBannerText: {
+    flex: 1,
+    fontSize: 15,
+    fontWeight: '600',
+    color: '#78350f',
+    lineHeight: 20,
+  },
+  unlockBannerClose: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#92400e',
+  },
+  moreModes: {
+    width: '100%',
+    marginTop: 4,
+  },
+  moreModesTitle: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: colors.primary[700],
+    marginBottom: 8,
+  },
+  modeTileRow: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  modeTile: {
+    flex: 1,
+    alignItems: 'center',
+    gap: 6,
+    paddingVertical: 12,
+    paddingHorizontal: 6,
+    borderRadius: 14,
+    borderWidth: 2,
+    borderColor: colors.primary[400],
+  },
+  survivalTile: {
+    backgroundColor: colors.primary[700],
+  },
+  leagueTile: {
+    backgroundColor: colors.primary[900],
+    borderColor: '#f59e0b',
+  },
+  flocksTile: {
+    backgroundColor: colors.primary[600],
+  },
+  modeTileImage: {
+    width: 40,
+    height: 40,
+  },
+  modeTileEmoji: {
+    fontSize: 30,
+    lineHeight: 40,
+    textAlign: 'center',
+  },
+  modeTileLabel: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: colors.primary[50],
+    textAlign: 'center',
+  },
+  showAllLink: {
+    alignSelf: 'center',
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    marginTop: 4,
+  },
+  showAllLinkText: {
+    color: colors.primary[600],
+    fontSize: 15,
+    fontWeight: '600',
+    textDecorationLine: 'underline',
   },
   ghostButton: {
     paddingVertical: 14,

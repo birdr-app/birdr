@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import {
   View,
   Text,
@@ -17,6 +17,7 @@ import {
 } from '../api/birdrJourney';
 import { setStoredChallengePlayerToken } from '../api/challenge';
 import { BirdrMoodHero } from '../components/BirdrMoodHero';
+import { useGameModes } from '../context/GameModesContext';
 import { useTranslation } from '../i18n/TranslationContext';
 import { colors } from '../theme';
 
@@ -40,6 +41,11 @@ export function BirdrJourneyStepResultsScreen() {
   const { t } = useTranslation();
   const route = useRoute<RouteProp<RouteParams, 'BirdrJourneyStepResults'>>();
   const { journeyId, countryCode, gameToken, knownStatus } = route.params;
+  const { bumpGamesPlayed } = useGameModes();
+
+  useEffect(() => {
+    if (gameToken) bumpGamesPlayed(gameToken);
+  }, [gameToken, bumpGamesPlayed]);
   const [loading, setLoading] = useState(!knownStatus);
   const [error, setError] = useState<string | null>(null);
   const [passed, setPassed] = useState(knownStatus === 'passed');

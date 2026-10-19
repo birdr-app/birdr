@@ -761,5 +761,9 @@
   "league_other_country": "ほかの国ものぞいてみる",
   "league_no_leagues_yet": "まだリーグに参加していません。下で国を選んで、今日のクイズをプレイしよう！",
   "league_last_played": "最終プレイ {date}",
-  "league_not_played_yet": "まだ未プレイ：今日のクイズが待っています"
+  "league_not_played_yet": "まだ未プレイ：今日のクイズが待っています",
+  "more_ways_to_play": "その他の遊び方",
+  "show_all_game_modes": "すべてのゲームモードを表示",
+  "show_all_game_modes_hint": "ホームとメニューにサバイバル、ナショナルリーグなどを表示します。",
+  "game_modes_unlocked": "🎉 新しいゲームモードが解放されました：サバイバルとナショナルリーグ！"
 }

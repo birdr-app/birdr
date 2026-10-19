@@ -12,6 +12,7 @@ import { GameWebSocketProvider } from './src/context/GameWebSocketContext';
 import { AuthProvider } from './src/context/AuthContext';
 import { ProfileProvider } from './src/context/ProfileContext';
 import { VisualStyleProvider } from './src/context/VisualStyleContext';
+import { GameModesProvider } from './src/context/GameModesContext';
 import { TranslationProvider } from './src/i18n/TranslationContext';
 import { DeepLinkHandler } from './src/components/DeepLinkHandler';
 import AppNavigator from './src/navigation/AppNavigator';
@@ -59,6 +60,7 @@ export default function App() {
         <AuthProvider>
           <ProfileProvider>
             <VisualStyleProvider>
+            <GameModesProvider>
             <GameProvider>
               <TranslationProvider>
                 <GameWebSocketProvider>
@@ -72,6 +74,7 @@ export default function App() {
                 </GameWebSocketProvider>
               </TranslationProvider>
             </GameProvider>
+            </GameModesProvider>
             </VisualStyleProvider>
           </ProfileProvider>
         </AuthProvider>

@@ -1426,10 +1426,10 @@ class BirdrJourneyAdmin(admin.ModelAdmin):
 @register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
     list_display = ['user', 'avatar_preview', 'receive_updates', 'language', 'visual_style', 'country', 'created', 'updated']
-    list_filter = ['receive_updates', 'language', 'visual_style', 'country', 'created', 'updated']
+    list_filter = ['receive_updates', 'language', 'visual_style', 'show_all_modes', 'country', 'created', 'updated']
     search_fields = ['user__username', 'user__email', 'user__first_name', 'user__last_name']
     readonly_fields = ['created', 'updated', 'avatar_preview']
-    fields = ['user', 'avatar', 'avatar_preview', 'receive_updates', 'language', 'app_language', 'visual_style', 'country', 'created', 'updated']
+    fields = ['user', 'avatar', 'avatar_preview', 'receive_updates', 'language', 'app_language', 'visual_style', 'show_all_modes', 'country', 'created', 'updated']
     raw_id_fields = ['user']
     
     def avatar_preview(self, obj):

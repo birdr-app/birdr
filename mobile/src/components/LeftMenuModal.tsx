@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useMenu } from '../context/MenuContext';
+import { useGameModes } from '../context/GameModesContext';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from '../i18n/TranslationContext';
 import { colors } from '../theme';
@@ -20,13 +21,14 @@ import { getAppVersionDisplay } from '../utils/appVersion';
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const PANEL_WIDTH = Math.min(SCREEN_WIDTH * 0.85, 340);
 
-const MENU_ITEMS: { route: string; labelKey: string }[] = [
+/** `advanced` items only show once the player has unlocked all game modes. */
+const MENU_ITEMS: { route: string; labelKey: string; advanced?: boolean }[] = [
   { route: 'Home', labelKey: 'home' },
   { route: 'Start', labelKey: 'new_game' },
   { route: 'Scores', labelKey: 'high_scores' },
-  { route: 'CountryChallengeLeaderboard', labelKey: 'country_leaderboard' },
-  { route: 'League', labelKey: 'league' },
-  { route: 'SurvivalScores', labelKey: 'survival_highscores' },
+  { route: 'CountryChallengeLeaderboard', labelKey: 'country_leaderboard', advanced: true },
+  { route: 'League', labelKey: 'league', advanced: true },
+  { route: 'SurvivalScores', labelKey: 'survival_highscores', advanced: true },
   { route: 'Updates', labelKey: 'updates' },
   { route: 'Help', labelKey: 'community_menu' },
   { route: 'Privacy', labelKey: 'privacy' },
@@ -38,6 +40,8 @@ export function LeftMenuModal() {
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
   const { leftMenuVisible, closeLeftMenu, currentRouteName } = useMenu();
+  const { showMenuExtras } = useGameModes();
+  const menuItems = MENU_ITEMS.filter((item) => showMenuExtras || !item.advanced);
   const slideAnim = useRef(new Animated.Value(-PANEL_WIDTH)).current;
 
   useEffect(() => {
@@ -92,7 +96,7 @@ export function LeftMenuModal() {
               <View style={styles.menuHeader}>
                 <Text style={styles.menuHeaderTitle}>Birdr</Text>
               </View>
-              {MENU_ITEMS.map((item) => {
+              {menuItems.map((item) => {
                 const isFocused =
                   currentRoute === item.route ||
                   (item.route === 'Help' && currentRoute === 'HelpDetail') ||

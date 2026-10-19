@@ -8,6 +8,8 @@ export type Player = {
   token: string;
   name: string;
   language: string;
+  /** Finished games (GET /api/player/<token>/ only). */
+  games_played?: number;
 };
 
 const PLAYER_REQUEST_TIMEOUT_MS = 25000;

@@ -14,6 +14,10 @@ export interface UserProfile {
   app_language?: string;
   timezone?: string;
   visual_style?: string;
+  /** Show every game mode full size, even before 3 finished games. */
+  show_all_modes?: boolean;
+  /** Finished games across all of this user's players (read-only). */
+  games_played?: number;
   country_code: string | null;
   country_name: string | null;
   is_staff: boolean;
@@ -39,6 +43,7 @@ export interface ProfileUpdateData {
   app_language?: string;
   timezone?: string;
   visual_style?: string;
+  show_all_modes?: boolean;
   country_code?: string | null;
 }
 
@@ -110,6 +115,9 @@ class ProfileService {
       }
       if (data.visual_style !== undefined) {
         formData.append('visual_style', data.visual_style);
+      }
+      if (data.show_all_modes !== undefined) {
+        formData.append('show_all_modes', data.show_all_modes.toString());
       }
       if (data.country_code !== undefined) {
         formData.append('country_code', data.country_code || '');

@@ -653,5 +653,11 @@
   "league_double_title": "⚡ Quiz doppio del weekend",
   "league_double_lead": "Sei in testa. Metti al sicuro la vittoria! 🏆",
   "league_double_chase": "Scala la classifica: sei a {gap} punti dal #{rank}.",
-  "league_double_join": "Oggi punti doppi: entra subito in classifica!"
+  "league_double_join": "Oggi punti doppi: entra subito in classifica!",
+  "home_more_ways_to_play": "Altri modi di giocare",
+  "home_show_all_modes": "Mostra tutte le modalità di gioco",
+  "modes_unlocked_title": "🎉 Nuove modalità di gioco sbloccate!",
+  "modes_unlocked_body": "Sopravvivenza e la Lega nazionale sono ora nella tua schermata iniziale. Buon divertimento!",
+  "profile_show_all_modes": "Mostra tutte le modalità di gioco",
+  "profile_show_all_modes_hint": "Tutte le modalità di gioco a grandezza piena nella home e nei menu. Disattivato: compaiono dopo le prime partite."
 }
