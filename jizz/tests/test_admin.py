@@ -466,6 +466,8 @@ class AdminGameKindFilterTestCase(TestCase):
         self.tricky_species = self._make_game(game_type=Game.GAME_TYPE_SPECIES_PRACTICE)
         self.tricky_pair = self._make_game(game_type=Game.GAME_TYPE_PAIR_PRACTICE)
         self.flock = self._make_game(game_type=Game.GAME_TYPE_FLOCK_CHALLENGE)
+        self.survival = self._make_game(game_type=Game.GAME_TYPE_SURVIVAL)
+        self.league = self._make_game(game_type=Game.GAME_TYPE_LEAGUE)
         self.country_challenge = self._make_game()
         self._link_country_challenge(self.country_challenge)
 
@@ -483,6 +485,12 @@ class AdminGameKindFilterTestCase(TestCase):
         )
         self.challenge_score = PlayerScore.objects.create(
             player=self.player, game=self.country_challenge, score=4,
+        )
+        self.survival_score = PlayerScore.objects.create(
+            player=self.player, game=self.survival, score=6,
+        )
+        self.league_score = PlayerScore.objects.create(
+            player=self.player, game=self.league, score=7,
         )
 
     def _make_game(self, **kwargs):
@@ -529,6 +537,8 @@ class AdminGameKindFilterTestCase(TestCase):
         self.assertIn('tricky species', html)
         self.assertIn('tricky pair', html)
         self.assertIn('>flock<', html)
+        self.assertIn('>survival<', html)
+        self.assertIn('>national league<', html)
         self.assertIn('>normal<', html)
 
     def test_playerscore_changelist_shows_calculated_types(self):
@@ -540,6 +550,8 @@ class AdminGameKindFilterTestCase(TestCase):
         self.assertIn('tricky species', html)
         self.assertIn('tricky pair', html)
         self.assertIn('>flock<', html)
+        self.assertIn('>survival<', html)
+        self.assertIn('>national league<', html)
         self.assertIn('>normal<', html)
 
     def test_game_type_filter(self):
@@ -549,6 +561,8 @@ class AdminGameKindFilterTestCase(TestCase):
             ('tricky_species', self.tricky_species),
             ('tricky_pair', self.tricky_pair),
             ('flock', self.flock),
+            ('survival', self.survival),
+            ('national_league', self.league),
         ]
         url = reverse('admin:jizz_game_changelist')
         for kind, game in cases:
@@ -565,6 +579,8 @@ class AdminGameKindFilterTestCase(TestCase):
             ('tricky_species', self.species_score),
             ('tricky_pair', self.pair_score),
             ('flock', self.flock_score),
+            ('survival', self.survival_score),
+            ('national_league', self.league_score),
         ]
         url = reverse('admin:jizz_playerscore_changelist')
         for kind, score in cases:

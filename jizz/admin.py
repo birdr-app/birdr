@@ -830,18 +830,26 @@ SPECIAL_GAME_TYPES = (
     Game.GAME_TYPE_SPECIES_PRACTICE,
     Game.GAME_TYPE_PAIR_PRACTICE,
     Game.GAME_TYPE_FLOCK_CHALLENGE,
+    Game.GAME_TYPE_SURVIVAL,
+    Game.GAME_TYPE_LEAGUE,
 )
+
+# Filter value -> (label, game_type) for the game types that have their own label.
+GAME_KIND_BY_TYPE = {
+    'tricky_species': ('tricky species', Game.GAME_TYPE_SPECIES_PRACTICE),
+    'tricky_pair': ('tricky pair', Game.GAME_TYPE_PAIR_PRACTICE),
+    'flock': ('flock', Game.GAME_TYPE_FLOCK_CHALLENGE),
+    'survival': ('survival', Game.GAME_TYPE_SURVIVAL),
+    'national_league': ('national league', Game.GAME_TYPE_LEAGUE),
+}
 
 
 def game_kind_label(*, is_country_challenge, game_type):
     if is_country_challenge:
         return 'country challenge'
-    if game_type == Game.GAME_TYPE_FLOCK_CHALLENGE:
-        return 'flock'
-    if game_type == Game.GAME_TYPE_SPECIES_PRACTICE:
-        return 'tricky species'
-    if game_type == Game.GAME_TYPE_PAIR_PRACTICE:
-        return 'tricky pair'
+    for label, kind_type in GAME_KIND_BY_TYPE.values():
+        if game_type == kind_type:
+            return label
     return 'normal'
 
 
@@ -866,9 +874,7 @@ class GameKindListFilter(admin.SimpleListFilter):
         return (
             ('normal', 'normal'),
             ('country_challenge', 'country challenge'),
-            ('tricky_species', 'tricky species'),
-            ('tricky_pair', 'tricky pair'),
-            ('flock', 'flock'),
+            *((value, label) for value, (label, _type) in GAME_KIND_BY_TYPE.items()),
         )
 
     def queryset(self, request, queryset):
@@ -879,17 +885,9 @@ class GameKindListFilter(admin.SimpleListFilter):
         game_type = self.game_type_field
         if value == 'country_challenge':
             return queryset.filter(is_country_challenge)
-        if value == 'tricky_species':
+        if value in GAME_KIND_BY_TYPE:
             return queryset.exclude(is_country_challenge).filter(
-                **{game_type: Game.GAME_TYPE_SPECIES_PRACTICE},
-            )
-        if value == 'tricky_pair':
-            return queryset.exclude(is_country_challenge).filter(
-                **{game_type: Game.GAME_TYPE_PAIR_PRACTICE},
-            )
-        if value == 'flock':
-            return queryset.exclude(is_country_challenge).filter(
-                **{game_type: Game.GAME_TYPE_FLOCK_CHALLENGE},
+                **{game_type: GAME_KIND_BY_TYPE[value][1]},
             )
         if value == 'normal':
             return queryset.exclude(is_country_challenge).exclude(
