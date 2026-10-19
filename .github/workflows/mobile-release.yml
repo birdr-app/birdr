@@ -176,7 +176,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: 'gradle'
+
+      # Caches Gradle dependencies *and* the build cache between releases (saved from
+      # main), so unchanged tasks are reused instead of rebuilding all ~900 every time.
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
 
       # mobile/google-services.json is gitignored; without it the build still
       # succeeds but Android gets no FCM token, so fail loudly instead.
@@ -219,7 +223,11 @@ jobs:
         working-directory: mobile/android
         env:
           CI: 'true'
-        run: ./gradlew bundleRelease --no-daemon --stacktrace
+        # Only the ARM ABIs phones use: x86/x86_64 are emulators and a few Chromebooks
+        # (which run ARM apps too), and compiling them doubled the native build time.
+        run: >-
+          ./gradlew bundleRelease --no-daemon --stacktrace --build-cache
+          -PreactNativeArchitectures=armeabi-v7a,arm64-v8a
 
       # build.gradle derives versionCode from app.json's expo.buildNumber, so the
       # bundle matches by construction; this only proves the build produced one.
