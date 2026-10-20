@@ -7,6 +7,9 @@ import {
   FlatList,
   RefreshControl,
   TouchableOpacity,
+  Modal,
+  Image,
+  Pressable,
 } from 'react-native';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -26,7 +29,7 @@ export function SurvivalScoresScreen() {
   const { t, locale } = useTranslation();
   const route = useRoute<RouteProp<{ SurvivalScores: SurvivalScoresParams }, 'SurvivalScores'>>();
   const navigation = useNavigation<NativeStackNavigationProp<Record<string, object | undefined>>>();
-  const { country: gameCountry, player } = useGame();
+  const { country: gameCountry, player, language: speciesLanguage } = useGame();
   const { isAuthenticated } = useAuth();
   const { profile } = useProfile();
 
@@ -36,6 +39,7 @@ export function SurvivalScoresScreen() {
   const [loading, setLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [shownMissed, setShownMissed] = useState<SurvivalScore | null>(null);
 
   const paramCode = route.params?.countryCode;
 
@@ -67,7 +71,7 @@ export function SurvivalScoresScreen() {
       else setLoading(true);
       setError(null);
       try {
-        setScores(await fetchSurvivalScores(countryCode, playerToken));
+        setScores(await fetchSurvivalScores(countryCode, playerToken, speciesLanguage));
       } catch (e) {
         setError(e instanceof Error ? e.message : t('failed_load'));
       } finally {
@@ -75,7 +79,7 @@ export function SurvivalScoresScreen() {
         setRefreshing(false);
       }
     },
-    [countryCode, playerToken, t],
+    [countryCode, playerToken, speciesLanguage, t],
   );
 
   useEffect(() => {
@@ -95,6 +99,17 @@ export function SurvivalScoresScreen() {
             {t('survival_points', { score: item.score })}
             {item.created ? ` · ${new Date(item.created).toLocaleDateString(locale)}` : ''}
           </Text>
+          {item.missed ? (
+            <TouchableOpacity
+              onPress={() => setShownMissed(item)}
+              accessibilityRole="button"
+              testID={`survivalScores.missed.${item.ranking}`}
+            >
+              <Text style={styles.cardMissed} numberOfLines={1}>
+                {t('survival_col_missed')}: <Text style={styles.cardMissedLink}>{missedName(item.missed)}</Text>
+              </Text>
+            </TouchableOpacity>
+          ) : null}
         </View>
         <View style={styles.cardStreakWrap}>
           <Text style={[styles.cardStreak, mine && styles.cardStreakMine]}>{item.streak}</Text>
@@ -144,11 +159,73 @@ export function SurvivalScoresScreen() {
           ) : null
         }
       />
+      <MissedBirdModal score={shownMissed} onClose={() => setShownMissed(null)} />
     </View>
   );
 }
 
+function missedName(missed: NonNullable<SurvivalScore['missed']>): string {
+  return missed.species.name_translated || missed.species.name;
+}
+
+/** The photo a player's run ended on, with the right answer and what they picked. */
+function MissedBirdModal({ score, onClose }: { score: SurvivalScore | null; onClose: () => void }) {
+  const { t } = useTranslation();
+  const missed = score?.missed;
+  return (
+    <Modal visible={!!missed} transparent animationType="fade" onRequestClose={onClose}>
+      <Pressable style={styles.modalBackdrop} onPress={onClose}>
+        <Pressable style={styles.modalCard} onPress={() => {}} testID="survivalScores.missedModal">
+          {missed ? (
+            <>
+              <Text style={styles.modalTitle}>{t('survival_missed_title', { name: score?.name ?? '' })}</Text>
+              {missed.image?.url ? (
+                <>
+                  <Image source={{ uri: missed.image.url }} style={styles.modalImage} resizeMode="contain" />
+                  {missed.image.contributor ? (
+                    <Text style={styles.modalCredit}>© {missed.image.contributor}</Text>
+                  ) : null}
+                </>
+              ) : null}
+              <Text style={styles.modalLine}>
+                {t('survival_missed_correct')}: <Text style={styles.modalCorrect}>{missedName(missed)}</Text>
+                {missed.species.name_latin ? <Text style={styles.modalLatin}> ({missed.species.name_latin})</Text> : null}
+              </Text>
+              <Text style={styles.modalLine}>
+                {missed.timed_out || !missed.answer ? (
+                  t('survival_missed_timeout')
+                ) : (
+                  <>
+                    {t('survival_missed_answered')}:{' '}
+                    <Text style={styles.modalWrong}>{missed.answer.name_translated || missed.answer.name}</Text>
+                  </>
+                )}
+              </Text>
+              <TouchableOpacity style={styles.modalClose} onPress={onClose}>
+                <Text style={styles.modalCloseText}>{t('close')}</Text>
+              </TouchableOpacity>
+            </>
+          ) : null}
+        </Pressable>
+      </Pressable>
+    </Modal>
+  );
+}
+
 const styles = StyleSheet.create({
+  cardMissed: { fontSize: 13, color: colors.primary[600], marginTop: 2 },
+  cardMissedLink: { color: colors.primary[800], fontWeight: '700', textDecorationLine: 'underline' },
+  modalBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'center', padding: 20 },
+  modalCard: { backgroundColor: '#fff', borderRadius: 16, padding: 18, gap: 10 },
+  modalTitle: { fontSize: 18, fontWeight: '800', color: colors.primary[800] },
+  modalImage: { width: '100%', height: 260, borderRadius: 12, backgroundColor: colors.primary[50] },
+  modalCredit: { fontSize: 11, color: colors.primary[500] },
+  modalLine: { fontSize: 15, color: colors.primary[800] },
+  modalCorrect: { fontWeight: '800', color: '#15803d' },
+  modalLatin: { fontStyle: 'italic', color: colors.primary[500], fontSize: 13 },
+  modalWrong: { fontWeight: '800', color: '#dc2626' },
+  modalClose: { marginTop: 6, backgroundColor: colors.primary[500], borderRadius: 10, paddingVertical: 12, alignItems: 'center' },
+  modalCloseText: { color: colors.primary[50], fontWeight: '700', fontSize: 16 },
   container: { flex: 1, backgroundColor: '#fff' },
   content: { padding: 16, paddingBottom: 48 },
   title: { fontSize: 22, fontWeight: '700', color: colors.primary[800], marginBottom: 12 },

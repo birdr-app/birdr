@@ -20,6 +20,7 @@ from jizz.models import Answer, Country, Game, Player, PlayerScore
 from jizz.practice_serializers import get_or_create_player_for_user
 from jizz.serializers import GameSerializer
 from jizz.services.checklist import localized_species_names
+from media.display_urls import media_display_url
 
 SURVIVAL_SPEED_SECONDS = 15
 SURVIVAL_LEADERBOARD_SIZE = 100
@@ -73,6 +74,44 @@ def personal_best(country, player, exclude_game=None):
         qs = qs.exclude(game=exclude_game)
     best = qs.order_by('-streak').values_list('streak', flat=True).first()
     return best or 0
+
+
+def shown_media(question):
+    """The photo the player actually saw for this question (locked, else the play rotation)."""
+    if question.media_id:
+        return question.media
+    from jizz.question_play import active_play_media, fetch_eligible_media_for_species
+
+    shown = active_play_media(fetch_eligible_media_for_species(question.species_id, 'image'), question.number or 0)
+    return shown[0] if shown else None
+
+
+def missed_payload_for(wrong: Answer, game: Game, names: dict[int, str]) -> dict:
+    """The bird that ended the run: correct species, the player's answer and the photo shown."""
+    species = wrong.question.species
+    # Timeouts are stored as a wrong option; detect them by the elapsed time.
+    timed_out = bool(game.speed_seconds) and (
+        wrong.created - wrong.question.created >= timedelta(seconds=game.speed_seconds)
+    )
+    media = shown_media(wrong.question)
+    return {
+        'species': {
+            'id': species.id,
+            'name': species.name,
+            'name_translated': names.get(species.id, species.name),
+            'name_latin': species.name_latin,
+        },
+        'answer': None if timed_out else {
+            'id': wrong.answer.id,
+            'name': wrong.answer.name,
+            'name_translated': names.get(wrong.answer.id, wrong.answer.name),
+        },
+        'timed_out': timed_out,
+        'image': {
+            'url': media_display_url(media.url),
+            'contributor': media.contributor or '',
+        } if media is not None and media.url else None,
+    }
 
 
 class SurvivalPlayerMixin:
@@ -212,31 +251,15 @@ class SurvivalResultView(SurvivalPlayerMixin, APIView):
     def missed_payload(self, game, player_score):
         wrong = (
             Answer.objects.filter(player_score=player_score, correct=False)
-            .select_related('question__species', 'answer', 'question')
+            .select_related('question__species', 'question__media', 'answer')
             .first()
         )
         if wrong is None:
             return None
-        species = wrong.question.species
-        names = localized_species_names({species.id: species, wrong.answer.id: wrong.answer}, game.language)
-        # Timeouts are stored as a wrong option; detect them by the elapsed time.
-        timed_out = bool(game.speed_seconds) and (
-            wrong.created - wrong.question.created >= timedelta(seconds=game.speed_seconds)
+        names = localized_species_names(
+            {wrong.question.species_id: wrong.question.species, wrong.answer_id: wrong.answer}, game.language,
         )
-        return {
-            'species': {
-                'id': species.id,
-                'name': species.name,
-                'name_translated': names.get(species.id, species.name),
-                'name_latin': species.name_latin,
-            },
-            'answer': None if timed_out else {
-                'id': wrong.answer.id,
-                'name': wrong.answer.name,
-                'name_translated': names.get(wrong.answer.id, wrong.answer.name),
-            },
-            'timed_out': timed_out,
-        }
+        return missed_payload_for(wrong, game, names)
 
 
 class SurvivalScoresView(SurvivalPlayerMixin, APIView):
@@ -246,6 +269,7 @@ class SurvivalScoresView(SurvivalPlayerMixin, APIView):
         country = get_country(request.query_params.get('country'))
         me = self.get_player(request, required=False)
         rows = best_per_player(survival_scores(country))[:SURVIVAL_LEADERBOARD_SIZE]
+        missed = self.missed_by_score(rows, request.query_params.get('language') or 'en')
         return Response(
             {
                 'country': {'code': country.code, 'name': country.name},
@@ -258,8 +282,29 @@ class SurvivalScoresView(SurvivalPlayerMixin, APIView):
                         'score': row.score,
                         'created': row.game.created if row.game_id else None,
                         'is_mine': me is not None and row.player_id == me.id,
+                        'missed': missed.get(row.id),
                     }
                     for position, row in enumerate(rows, start=1)
                 ],
             }
         )
+
+    @staticmethod
+    def missed_by_score(rows, language: str) -> dict[int, dict]:
+        """The bird each listed run ended on, in the viewer's species language."""
+        wrong_answers = {}
+        for answer in (
+            Answer.objects.filter(player_score_id__in=[row.id for row in rows], correct=False)
+            .select_related('question__species', 'question__media', 'question__game', 'answer')
+            .order_by('created')
+        ):
+            wrong_answers.setdefault(answer.player_score_id, answer)
+        species = {}
+        for answer in wrong_answers.values():
+            species[answer.question.species_id] = answer.question.species
+            species[answer.answer_id] = answer.answer
+        names = localized_species_names(species, language)
+        return {
+            score_id: missed_payload_for(answer, answer.question.game, names)
+            for score_id, answer in wrong_answers.items()
+        }

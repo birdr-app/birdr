@@ -666,5 +666,10 @@
   "flock_notifications_settings": "Benachrichtigungen für Birdr sind auf diesem Telefon ausgeschaltet. Schalte sie in den Einstellungen ein, um von neuen Challenges und Ergebnissen zu erfahren.",
   "flock_auto_renew": "Challenges automatisch verlängern",
   "flock_auto_renew_hint": "Wenn eine Challenge endet, startet eine neue mit gleichem Titel, Land und gleicher Dauer.",
-  "flock_notifications_web_note": "Benachrichtigungen kommen in der Birdr-App auf deinem Handy an."
+  "flock_notifications_web_note": "Benachrichtigungen kommen in der Birdr-App auf deinem Handy an.",
+  "survival_col_missed": "Raus bei",
+  "survival_missed_title": "Hier endete die Serie von {name}",
+  "survival_missed_correct": "Es war",
+  "survival_missed_answered": "Geantwortet",
+  "survival_missed_timeout": "⏱ Die Zeit war um"
 }

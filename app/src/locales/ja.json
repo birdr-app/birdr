@@ -666,5 +666,10 @@
   "flock_notifications_settings": "この端末ではBirdrの通知がオフになっています。設定でオンにすると、新しいチャレンジや結果をお知らせします。",
   "flock_auto_renew": "チャレンジを自動更新",
   "flock_auto_renew_hint": "チャレンジが終わると、同じタイトル・国・期間で新しいチャレンジが始まります。",
-  "flock_notifications_web_note": "通知はBirdrのモバイルアプリに届きます。"
+  "flock_notifications_web_note": "通知はBirdrのモバイルアプリに届きます。",
+  "survival_col_missed": "ミスした鳥",
+  "survival_missed_title": "{name}さんの連続記録はここで終了",
+  "survival_missed_correct": "正解",
+  "survival_missed_answered": "回答",
+  "survival_missed_timeout": "⏱ 時間切れ"
 }

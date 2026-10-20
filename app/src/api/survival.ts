@@ -16,9 +16,11 @@ export type StartSurvivalResponse = {
 };
 
 export type SurvivalMissed = {
-  species: { id: number; name: string; name_translated?: string };
-  answer: { id: number; name: string } | null;
+  species: { id: number; name: string; name_translated?: string; name_latin?: string };
+  answer: { id: number; name: string; name_translated?: string } | null;
   timed_out: boolean;
+  /** The photo the player saw for this bird. */
+  image?: { url: string; contributor: string } | null;
 };
 
 export type SurvivalResult = {
@@ -40,6 +42,8 @@ export type SurvivalScore = {
   score: number;
   created: string;
   is_mine: boolean;
+  /** The bird this run ended on. */
+  missed?: SurvivalMissed | null;
 };
 
 export type SurvivalRecordResponse = {
@@ -78,9 +82,9 @@ export async function getSurvivalResult(
   return data;
 }
 
-export async function fetchSurvivalScores(country: string): Promise<SurvivalScore[]> {
+export async function fetchSurvivalScores(country: string, language?: string): Promise<SurvivalScore[]> {
   const { data } = await axios.get<{ results: SurvivalScore[] }>('/api/survival/scores/', {
-    params: { country },
+    params: { country, ...(language ? { language } : {}) },
     headers: survivalAuthHeaders(),
   });
   return data?.results ?? [];

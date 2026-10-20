@@ -187,6 +187,17 @@ class SurvivalTestCase(TestCase):
         self.assertTrue(rows[0]['is_mine'])
         self.assertFalse(rows[1]['is_mine'])
 
+    def test_scores_show_the_missed_bird_with_its_photo(self):
+        token = self.play_run(2)
+        wrong = Answer.objects.get(question__game__token=token, correct=False)
+        rows = self.client.get('/api/survival/scores/?country=NL&language=en', **self.auth()).data['results']
+        missed = rows[0]['missed']
+        self.assertEqual(missed['species']['id'], wrong.question.species_id)
+        self.assertEqual(missed['answer']['id'], wrong.answer_id)
+        self.assertNotEqual(missed['species']['id'], missed['answer']['id'])
+        self.assertFalse(missed['timed_out'])
+        self.assertTrue(missed['image']['url'].startswith('https://example.com/survival'))
+
     def test_record_endpoint(self):
         self.play_run(3)
         data = self.client.get('/api/survival/record/?country=NL', **self.auth()).data

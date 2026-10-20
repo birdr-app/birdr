@@ -771,5 +771,10 @@
   "flock_notifications_off_on_phone": "Désactivées sur ce téléphone. Touche l’interrupteur pour les activer.",
   "flock_notifications_settings": "Les notifications de Birdr sont désactivées sur ce téléphone. Active-les dans Réglages pour être averti des nouveaux défis et résultats.",
   "flock_auto_renew": "Renouveler les défis automatiquement",
-  "flock_auto_renew_hint": "Quand un défi se termine, un nouveau démarre avec le même titre, le même pays et la même durée."
+  "flock_auto_renew_hint": "Quand un défi se termine, un nouveau démarre avec le même titre, le même pays et la même durée.",
+  "survival_col_missed": "Raté sur",
+  "survival_missed_title": "La série de {name} s’est arrêtée ici",
+  "survival_missed_correct": "C’était",
+  "survival_missed_answered": "Réponse donnée",
+  "survival_missed_timeout": "⏱ Temps écoulé"
 }
