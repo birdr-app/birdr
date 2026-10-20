@@ -1,0 +1,59 @@
+{% extends "marketing/base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>{% mt "Survival" %}</h1>
+  <p class="lead">
+    {% mt "A quick game, always at Pro level—so rarities are included too. One wrong answer and you are out. See if you can set a nice record for your country." %}
+  </p>
+  <div class="cta-row">
+    <a class="btn" href="{{ play_href }}">{% mt "Play Survival" %}</a>
+    <a class="btn secondary" href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "Quizzes by country" %}</a>
+  </div>
+</section>
+
+<section>
+  <h2>{% mt "Country records" %}</h2>
+  <p class="lead-inline">
+    {% mt "Survival runs that made it onto the board. See the current country record, then try to beat it." %}
+  </p>
+  {% if countries %}
+  <div class="mode-countries">
+    {% for c in countries %}
+    <article class="mode-country-card">
+      <a class="mode-country-main" href="/survival/scores?country={{ c.code }}">
+        {% if c.flag %}<span class="country-flag" aria-hidden="true">{{ c.flag }}</span>{% endif %}
+        <span class="mode-country-copy">
+          <strong>{{ c.name }}</strong>
+          <span class="mode-country-meta">
+            {% mt "Record {streak}" streak=c.best_streak %}
+            {% if c.record_holder %} · {{ c.record_holder }}{% endif %}
+          </span>
+          <span class="mode-country-meta">
+            {% if c.players == 1 %}
+            {% mt "1 player" %}
+            {% else %}
+            {% mt "{count} players" count=c.players %}
+            {% endif %}
+          </span>
+        </span>
+      </a>
+      <p class="mode-country-links">
+        <a href="/survival/scores?country={{ c.code }}">{% mt "High scores" %}</a>
+        · <a href="/survival">{% mt "Play Survival" %}</a>
+        {% if c.url %}
+        · <a href="{{ c.url|mpath }}">{% mt "Country page" %}</a>
+        {% endif %}
+      </p>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card league-empty">
+    <p>{% mt "No Survival records yet. Start a run in Birdr and set the first mark for your country." %}</p>
+    <p class="cta-row" style="margin-top: 12px;">
+      <a class="btn" href="{{ play_href }}">{% mt "Play Survival" %}</a>
+    </p>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

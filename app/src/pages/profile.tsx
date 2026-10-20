@@ -34,20 +34,20 @@ import AppContext from "../core/app-context";
 import { useAuthProfile } from "../core/auth-profile-context";
 import { ProfileLeagueCaps } from "../components/league-caps-badge";
 import { parseVisualStyle, type VisualStyle } from "../user/visual-style";
-import { useGameModes } from "../core/use-game-modes";
+import { MemberStatsModal } from "../components/member-stats-modal";
 
 export const ProfilePage = () => {
   const navigate = useNavigate();
   const intl = useIntl();
   const { setAppLanguage: persistAppLanguage, applySpeciesLanguage, visualStyle: contextVisualStyle, setVisualStyle } = useContext(AppContext);
   const { applyProfile } = useAuthProfile();
-  const gameModes = useGameModes();
   const { countries } = UseCountries();
   const { languages } = UseLanguages();
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [memberStatsOpen, setMemberStatsOpen] = useState(false);
   const [success, setSuccess] = useState<string | null>(null);
   const [username, setUsername] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -286,6 +286,19 @@ export const ProfilePage = () => {
 
             <ProfileLeagueCaps />
 
+            <Button
+              type="button"
+              variant="outline"
+              colorPalette="primary"
+              onClick={() => setMemberStatsOpen(true)}
+            >
+              <FormattedMessage id="member_stats" defaultMessage="Member stats" />
+            </Button>
+            <MemberStatsModal
+              isOpen={memberStatsOpen}
+              onClose={() => setMemberStatsOpen(false)}
+            />
+
             {/* Player Name Field */}
             <Field.Root>
               <Field.Label>
@@ -364,30 +377,6 @@ export const ProfilePage = () => {
                 <Switch.Root
                   checked={receiveUpdates}
                   onCheckedChange={(e: { checked: boolean }) => setReceiveUpdates(e.checked === true)}
-                  colorPalette="primary"
-                >
-                  <Switch.HiddenInput />
-                  <Switch.Control />
-                </Switch.Root>
-              </Flex>
-            </Field.Root>
-
-            <Field.Root>
-              <Flex justify="space-between" align="center">
-                <Box>
-                  <Field.Label mb={0}>
-                    <FormattedMessage id="profile_show_all_modes" defaultMessage="Show all game modes" />
-                  </Field.Label>
-                  <Text fontSize="sm" color="gray.500">
-                    <FormattedMessage
-                      id="profile_show_all_modes_hint"
-                      defaultMessage="Every game mode full size on the home screen and in the menus. Off: they appear after your first few games."
-                    />
-                  </Text>
-                </Box>
-                <Switch.Root
-                  checked={gameModes.showAll}
-                  onCheckedChange={(e: { checked: boolean }) => gameModes.setShowAll(e.checked === true)}
                   colorPalette="primary"
                 >
                   <Switch.HiddenInput />

@@ -1,0 +1,54 @@
+{% extends "marketing/base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>{% mt "National League" %}</h1>
+  <p class="lead">
+    {% mt "Compete against other birders from your country. You play one daily quiz that starts easy and finishes harder. There is a daily winner and a weekly champion—this is the real competition." %}
+  </p>
+  <div class="cta-row">
+    <a class="btn" href="{{ play_href }}">{% mt "Open the National League" %}</a>
+    <a class="btn secondary" href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "Quizzes by country" %}</a>
+  </div>
+</section>
+
+<section>
+  <h2>{% mt "Countries with players" %}</h2>
+  <p class="lead-inline">
+    {% mt "These countries already have birders in the National League. Open a league to see this week’s standings, or join from Birdr." %}
+  </p>
+  {% if countries %}
+  <div class="mode-countries">
+    {% for c in countries %}
+    <article class="mode-country-card">
+      <a class="mode-country-main" href="/league/{{ c.code }}">
+        {% if c.flag %}<span class="country-flag" aria-hidden="true">{{ c.flag }}</span>{% endif %}
+        <span class="mode-country-copy">
+          <strong>{{ c.name }}</strong>
+          <span class="mode-country-meta">
+            {% if c.players == 1 %}
+            {% mt "1 player" %}
+            {% else %}
+            {% mt "{count} players" count=c.players %}
+            {% endif %}
+          </span>
+        </span>
+      </a>
+      <p class="mode-country-links">
+        <a href="/league/{{ c.code }}">{% mt "Open league" %}</a>
+        {% if c.url %}
+        · <a href="{{ c.url|mpath }}">{% mt "Country page" %}</a>
+        {% endif %}
+      </p>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card league-empty">
+    <p>{% mt "No countries have National League players yet. Be the first—pick your country in Birdr and play today’s quiz." %}</p>
+    <p class="cta-row" style="margin-top: 12px;">
+      <a class="btn" href="{{ play_href }}">{% mt "Open the National League" %}</a>
+    </p>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

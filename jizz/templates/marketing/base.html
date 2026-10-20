@@ -1411,6 +1411,55 @@
       margin: 8px 0 0;
       color: var(--birdr-700);
     }
+    .mode-countries {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+      gap: 12px;
+      margin: 16px 0 8px;
+    }
+    .mode-country-card {
+      background: #fff;
+      border: 1px solid rgba(212, 184, 138, 0.55);
+      border-radius: 12px;
+      padding: 12px 14px;
+      box-shadow: 0 4px 14px rgba(49, 34, 10, 0.08);
+    }
+    .mode-country-main {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .mode-country-main .country-flag {
+      font-size: 1.45rem;
+      line-height: 1.2;
+      flex: 0 0 auto;
+    }
+    .mode-country-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+    .mode-country-copy strong {
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+    .mode-country-meta {
+      color: var(--birdr-600);
+      font-size: 0.88rem;
+      line-height: 1.35;
+    }
+    .mode-country-links {
+      margin: 10px 0 0;
+      font-size: 0.88rem;
+    }
+    @media (max-width: 700px) {
+      .mode-countries {
+        grid-template-columns: 1fr;
+      }
+    }
     .quote-body {
       position: relative;
       margin: 0 0 10px;
@@ -1529,6 +1578,8 @@
           <li><a href="{{ '/site/learn-bird-identification/'|mpath }}">{% mt "Learn bird identification" %}</a></li>
           <li><a href="{{ '/site/my-tricky-birds/'|mpath }}">{% mt "My Tricky Birds" %}</a></li>
           <li><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "Quizzes by country" %}</a></li>
+          <li><a href="{{ '/site/national-league/'|mpath }}">{% mt "National League" %}</a></li>
+          <li><a href="{{ '/site/survival/'|mpath }}">{% mt "Survival" %}</a></li>
         </ul>
       </div>
       <div>

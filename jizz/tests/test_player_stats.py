@@ -4,8 +4,20 @@ from rest_framework import status
 from rest_framework.test import APIClient
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from jizz.models import Answer, Country, CountrySpecies, Game, Player, PlayerScore, Question, Species
-from jizz.player_stats import completed_games_count
+from jizz.models import (
+    Answer,
+    BirdrJourney,
+    Country,
+    CountrySpecies,
+    Game,
+    JourneyLevel,
+    LeagueMembership,
+    Player,
+    PlayerScore,
+    Question,
+    Species,
+)
+from jizz.player_stats import completed_games_count, member_stats_for_user
 
 
 class CompletedGamesTestCase(TestCase):
@@ -75,3 +87,33 @@ class CompletedGamesTestCase(TestCase):
         # games_played is read-only.
         self.client.put('/api/profile/', {'games_played': 99}, format='json')
         self.assertEqual(self.client.get('/api/profile/').data['games_played'], 1)
+
+    def test_member_stats_endpoint(self):
+        player = Player.objects.create(name='Phone', user=self.user)
+        self.game(player, answered=2)
+        survival = self.game(
+            player, length=0, answered=5, force_ended=True, game_type=Game.GAME_TYPE_SURVIVAL,
+        )
+        PlayerScore.objects.filter(game=survival, player=player).update(streak=5, score=500)
+        JourneyLevel.objects.get_or_create(sequence=1, defaults={'title': 'Beginner'})
+        BirdrJourney.objects.create(user=self.user, country=self.country, current_sequence=0)
+        LeagueMembership.objects.create(user=self.user, country=self.country)
+
+        token = RefreshToken.for_user(self.user).access_token
+        self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {token}')
+        response = self.client.get('/api/member-stats/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        data = response.data
+        self.assertIn('member_since', data)
+        self.assertEqual(data['games_played'], 2)
+        self.assertGreaterEqual(data['correct_answers'], 2)
+        self.assertEqual(data['survival']['best_streak'], 5)
+        self.assertEqual(data['national_league']['memberships'], 1)
+        self.assertEqual(len(data['country_challenges']), 1)
+        self.assertEqual(data['country_challenges'][0]['country_code'], 'NL')
+
+        payload = member_stats_for_user(self.user)
+        self.assertEqual(payload['games_played'], 2)
+
+        anon = APIClient()
+        self.assertEqual(anon.get('/api/member-stats/').status_code, status.HTTP_401_UNAUTHORIZED)

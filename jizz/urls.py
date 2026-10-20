@@ -21,9 +21,11 @@ from jizz.marketing.views import (
     intent_page,
     landing,
     my_edits,
+    national_league_page,
     robots_txt,
     site_feedback,
     site_logout,
+    survival_page,
 )
 from jizz.marketing.api import MarketingPageDetailView, MarketingPageListCreateView
 from jizz.marketing import sitemaps as marketing_sitemaps
@@ -31,7 +33,7 @@ from jizz.marketing import sitemaps as marketing_sitemaps
 from jizz.views import CountryDetailView, CountryViewSet, SpeciesListView, SpeciesDetailView, SpeciesBySlugView, SpeciesCoverView, GameListView, \
     GameDetailView, GameDetailWithAnswersByPlayerTokenView, QuestionDetailView, QuestionMediaReadyView, QuestionNextMediaView, PlayerCreateView, PlayerView, PlayerLinkView, AnswerView, AnswerDetail, \
     PlayerScoreListView, \
-    PlayerStatsView, FeedbackListView, QuestionView, \
+    PlayerStatsView, MemberStatsView, FeedbackListView, QuestionView, \
     ReactionView, \
     FamilyListView, OrderListView, SpeciesGroupListView, LanguageListView, RegisterView, ProfileView, \
     PasswordResetRequestView, PasswordResetConfirmView, OAuthCompleteView, UserGamesView, UserGameDetailView, \
@@ -288,6 +290,8 @@ urlpatterns = [
     path('site/newsletter/', intent_page, {'slug': 'newsletter'}, name='marketing-newsletter'),
     path('site/faq/', intent_page, {'slug': 'faq'}, name='marketing-faq'),
     path('site/my-tricky-birds/', intent_page, {'slug': 'my-tricky-birds'}, name='marketing-my-tricky-birds'),
+    path('site/national-league/', national_league_page, name='marketing-national-league'),
+    path('site/survival/', survival_page, name='marketing-survival'),
     path('site/my-edits/', my_edits, name='marketing-my-edits'),
     path('site/logout/', site_logout, name='marketing-logout'),
     path('site/countries/<slug:slug>/', country_page, name='marketing-country'),
@@ -319,6 +323,11 @@ urlpatterns = [
     path('newsletter/', RedirectView.as_view(url='/site/newsletter/', permanent=True)),
     path('faq/', RedirectView.as_view(url='/site/faq/', permanent=True)),
     path('my-tricky-birds/', RedirectView.as_view(url='/site/my-tricky-birds/', permanent=True)),
+    path('national-league/', RedirectView.as_view(url='/site/national-league/', permanent=True)),
+    path(
+        'survival-mode/',
+        RedirectView.as_view(url='/site/survival/', permanent=True),
+    ),
     path(
         'countries/<slug:slug>/',
         RedirectView.as_view(url='/site/countries/%(slug)s/', permanent=True),
@@ -407,6 +416,7 @@ urlpatterns = [
 
     path('api/register/', RegisterView.as_view(), name='register'),
     path('api/profile/', ProfileView.as_view(), name='profile'),
+    path('api/member-stats/', MemberStatsView.as_view(), name='member-stats'),
     path('api/analytics/event/', UsageEventCreateView.as_view(), name='analytics-event'),
     path('api/checklist/', ChecklistView.as_view(), name='checklist'),
     path('api/my-games/', UserGamesView.as_view(), name='user-games'),

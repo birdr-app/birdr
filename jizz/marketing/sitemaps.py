@@ -69,7 +69,12 @@ def sitemap_index(request):
 
 def sitemap_pages(request):
     origin = canonical_origin(request)
-    paths = ['/site/', '/site/birds/']
+    paths = [
+        '/site/',
+        '/site/birds/',
+        '/site/national-league/',
+        '/site/survival/',
+    ]
     for slug in INTENT_PAGES:
         paths.append(f'/site/{slug}/')
     from jizz.models import MarketingPage

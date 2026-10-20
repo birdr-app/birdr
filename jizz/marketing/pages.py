@@ -230,6 +230,8 @@ INTENT_PAGES = {
         'links': [
             ('/play', 'Start a quiz'),
             ('/league', 'Open the National League'),
+            ('/site/national-league/', 'Countries with players'),
+            ('/site/survival/', 'Country records'),
             ('/site/birding-app/', 'The Birdr app'),
             ('/site/how-it-works/', 'How it works'),
         ],
@@ -591,7 +593,12 @@ def nav_section_for_path(path: str) -> str:
         return 'how-it-works'
     if current.startswith('/site/birds/') or current.startswith('/site/compare/'):
         return 'species'
-    if current.startswith('/site/bird-quiz-by-country/') or current.startswith('/site/countries/'):
+    if (
+        current.startswith('/site/bird-quiz-by-country/')
+        or current.startswith('/site/countries/')
+        or current.startswith('/site/national-league/')
+        or current.startswith('/site/survival/')
+    ):
         return 'countries'
     if current.startswith('/site/community/') or current.startswith('/site/newsletter/'):
         return 'community'

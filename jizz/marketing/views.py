@@ -61,6 +61,7 @@ from jizz.marketing.slugs import (
     parse_compare_pair,
 )
 from jizz.marketing.country_stats import confusion_pairs, country_page_stats, missed_birds
+from jizz.marketing.mode_countries import national_league_countries, survival_countries
 from jizz.marketing.html import markdown_to_safe_html, sanitize_html
 from jizz.marketing.species_index import (
     FAMILY_LIMIT,
@@ -370,6 +371,64 @@ def country_page(request, slug: str):
         **store_review_context(),
     )
     return render(request, 'marketing/country.html', context)
+
+
+def _localize_mode_countries(rows: list[dict], locale: str | None) -> list[dict]:
+    """Localize country names without re-sorting (rows are ordered by activity)."""
+    out = []
+    for row in rows:
+        item = dict(row)
+        item['name'] = country_display_name(item, locale)
+        out.append(item)
+    return out
+
+
+@require_GET
+def national_league_page(request):
+    path = site_path('national-league')
+    locale = locale_from_request(request)
+    countries = _localize_mode_countries(national_league_countries(), locale)
+    context = base_context(
+        request,
+        title=translate('National League by country | Birdr'),
+        description=translate(
+            'See which countries have birders in the Birdr National League. '
+            'One daily quiz per country, a daily winner, and a weekly champion.'
+        ),
+        path=path,
+        breadcrumbs=[
+            ('Home', SITE_HOME),
+            ('National League', path),
+        ],
+        countries=countries,
+        play_href='/league',
+        **store_review_context(),
+    )
+    return render(request, 'marketing/national_league.html', context)
+
+
+@require_GET
+def survival_page(request):
+    path = site_path('survival')
+    locale = locale_from_request(request)
+    countries = _localize_mode_countries(survival_countries(), locale)
+    context = base_context(
+        request,
+        title=translate('Survival mode by country | Birdr'),
+        description=translate(
+            'Survival mode on Birdr: Pro-level quizzes where one wrong answer ends the run. '
+            'See country records and which countries have players.'
+        ),
+        path=path,
+        breadcrumbs=[
+            ('Home', SITE_HOME),
+            ('Survival', path),
+        ],
+        countries=countries,
+        play_href='/survival',
+        **store_review_context(),
+    )
+    return render(request, 'marketing/survival.html', context)
 
 
 @require_GET

@@ -128,9 +128,13 @@ class MarketingPagesTests(TestCase):
         self.assertIn('Survival', html)
         self.assertIn('One wrong answer', html)
         self.assertIn('href="/survival"', html)
+        self.assertIn('href="/site/survival/"', html)
+        self.assertIn('Country records', html)
         self.assertIn('National League', html)
         self.assertIn('daily quiz', html)
         self.assertIn('href="/league"', html)
+        self.assertIn('href="/site/national-league/"', html)
+        self.assertIn('Countries with players', html)
         self.assertIn('Flocks', html)
         self.assertIn('entire week', html)
         self.assertIn('My Tricky Birds', html)
@@ -587,6 +591,57 @@ class MarketingPagesTests(TestCase):
         self.assertIn('/league/NL/leaderboard', html)
         self.assertNotIn('No one has played this week', html)
 
+    def test_national_league_index_page(self):
+        from django.contrib.auth.models import User
+
+        from jizz.models import LeagueMembership
+
+        empty = self.client.get('/site/national-league/').content.decode()
+        self.assertIn('National League', empty)
+        self.assertIn('Countries with players', empty)
+        self.assertIn('No countries have National League players yet', empty)
+        self.assertIn('href="/league"', empty)
+        self.assertEqual(self.client.get('/national-league/').status_code, 301)
+
+        user = User.objects.create_user('league-nl', password='x')
+        LeagueMembership.objects.create(user=user, country=self.nl)
+        cache.clear()
+        html = self.client.get('/site/national-league/').content.decode()
+        self.assertIn('Netherlands', html)
+        self.assertIn('1 player', html)
+        self.assertIn('/league/NL', html)
+        self.assertIn('/site/countries/netherlands/', html)
+        self.assertNotIn('No countries have National League players yet', html)
+
+    def test_survival_index_page(self):
+        from jizz.models import Game, Player, PlayerScore
+
+        empty = self.client.get('/site/survival/').content.decode()
+        self.assertIn('Survival', empty)
+        self.assertIn('Country records', empty)
+        self.assertIn('No Survival records yet', empty)
+        self.assertIn('href="/survival"', empty)
+        self.assertEqual(self.client.get('/survival-mode/').status_code, 301)
+
+        player = Player.objects.create(name='Surv Ace', language='en')
+        game = Game.objects.create(
+            country=self.nl,
+            level='pro',
+            length=0,
+            media='images',
+            multiplayer=False,
+            game_type=Game.GAME_TYPE_SURVIVAL,
+        )
+        PlayerScore.objects.create(player=player, game=game, score=900, streak=12)
+        cache.clear()
+        html = self.client.get('/site/survival/').content.decode()
+        self.assertIn('Netherlands', html)
+        self.assertIn('Record 12', html)
+        self.assertIn('Surv Ace', html)
+        self.assertIn('1 player', html)
+        self.assertIn('/survival/scores?country=NL', html)
+        self.assertNotIn('No Survival records yet', html)
+
     def test_bird_and_compare_pages(self):
         self.sparrow.refresh_from_db()
         self.goshawk.refresh_from_db()
@@ -924,6 +979,8 @@ class MarketingPagesTests(TestCase):
         self.assertIn('https://birdr.pro/site/community/', body)
         self.assertIn('https://birdr.pro/site/newsletter/', body)
         self.assertIn('https://birdr.pro/site/faq/', body)
+        self.assertIn('https://birdr.pro/site/national-league/', body)
+        self.assertIn('https://birdr.pro/site/survival/', body)
         self.assertNotIn('/site/my-edits/', body)
 
         countries = self.client.get('/sitemap-countries.xml').content.decode()

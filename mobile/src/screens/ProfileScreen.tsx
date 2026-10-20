@@ -24,7 +24,6 @@ import { useTranslation } from '../i18n/TranslationContext';
 import { setSpeciesLanguageIndependent } from '../i18n/speciesLanguagePreference';
 import { getProfile, updateProfile, updateProfileAvatar, getAvatarUrl, deleteAccount, type UserProfile } from '../api/profile';
 import { useVisualStyle } from '../context/VisualStyleContext';
-import { useGameModes } from '../context/GameModesContext';
 import { parseVisualStyle, type VisualStyle } from '../lib/visualStyle';
 import { loadCountries, type Country } from '../api/countries';
 import { loadLanguages, type Language } from '../api/languages';
@@ -35,6 +34,7 @@ import { AppLanguagePicker } from '../components/AppLanguagePicker';
 import { speciesLanguageFromAppLocale } from '../i18n/appLocales';
 import { colors } from '../theme';
 import { fetchLeagueOverview, type LeagueOverview } from '../api/league';
+import { fetchMemberStats, type MemberStats } from '../api/memberStats';
 import { LeagueCapsBadge } from '../components/LeagueCapsBadge';
 import { leagueFlag } from '../lib/league';
 
@@ -45,7 +45,6 @@ export function ProfileScreen() {
   const { isAuthenticated, isLoading: authLoading, logout } = useAuth();
   const { refreshProfile } = useProfile();
   const { visualStyle: contextVisualStyle, setVisualStyle } = useVisualStyle();
-  const { showAll: contextShowAll, setShowAll } = useGameModes();
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -55,12 +54,15 @@ export function ProfileScreen() {
   const [timezone, setTimezone] = useState('Europe/Amsterdam');
   const [country, setCountry] = useState<Country | null>(null);
   const [receiveUpdates, setReceiveUpdates] = useState(true);
-  const [showAllModes, setShowAllModes] = useState(contextShowAll);
   const [visualStyle, setVisualStyleLocal] = useState<VisualStyle>(contextVisualStyle);
   const [languages, setLanguages] = useState<Language[]>([]);
   const [countries, setCountries] = useState<Country[]>([]);
   const [languageModalVisible, setLanguageModalVisible] = useState(false);
   const [languageSearch, setLanguageSearch] = useState('');
+  const [memberStatsVisible, setMemberStatsVisible] = useState(false);
+  const [memberStats, setMemberStats] = useState<MemberStats | null>(null);
+  const [memberStatsLoading, setMemberStatsLoading] = useState(false);
+  const [memberStatsError, setMemberStatsError] = useState<string | null>(null);
   const [avatarPreviewUri, setAvatarPreviewUri] = useState<string | null>(null);
   const [uploadingAvatar, setUploadingAvatar] = useState(false);
   const [deletingAccount, setDeletingAccount] = useState(false);
@@ -94,7 +96,6 @@ export function ProfileScreen() {
           : null
       );
       setReceiveUpdates(p.receive_updates ?? true);
-      setShowAllModes((current) => p.show_all_modes ?? current);
       setVisualStyleLocal(parseVisualStyle(p.visual_style));
       if (p.avatar_url) setAvatarPreviewUri(null);
     } catch (e: any) {
@@ -228,7 +229,6 @@ export function ProfileScreen() {
         country_code: country?.code ?? undefined,
         receive_updates: receiveUpdates,
         visual_style: visualStyle,
-        show_all_modes: showAllModes,
       });
       const updated = await getProfile();
       setProfile(updated);
@@ -247,7 +247,6 @@ export function ProfileScreen() {
       refreshProfile();
       setVisualStyle(parseVisualStyle(updated.visual_style));
       setVisualStyleLocal(parseVisualStyle(updated.visual_style));
-      setShowAll(updated.show_all_modes ?? showAllModes, { saveToProfile: false });
       setSaveToast(t('profile_saved'));
       setTimeout(() => {
         (navigation as any).navigate('Home');
@@ -337,6 +336,23 @@ export function ProfileScreen() {
             <LeagueCapsBadge variant="full" weekChampion={c.week_champion} dailyWins={c.daily_wins} />
           </View>
         ))}
+        <TouchableOpacity
+          style={styles.memberStatsButton}
+          onPress={() => {
+            setMemberStatsVisible(true);
+            setMemberStatsError(null);
+            setMemberStatsLoading(true);
+            fetchMemberStats()
+              .then(setMemberStats)
+              .catch((e: unknown) => {
+                setMemberStats(null);
+                setMemberStatsError(e instanceof Error ? e.message : t('member_stats_failed'));
+              })
+              .finally(() => setMemberStatsLoading(false));
+          }}
+        >
+          <Text style={styles.memberStatsButtonText}>{t('member_stats')}</Text>
+        </TouchableOpacity>
       </View>
       <Text style={styles.label}>{t('username')}</Text>
       <TextInput
@@ -389,20 +405,6 @@ export function ProfileScreen() {
           onValueChange={setReceiveUpdates}
           trackColor={{ false: colors.primary[200], true: colors.primary[400] }}
           thumbColor={receiveUpdates ? colors.primary[700] : '#fff'}
-        />
-      </View>
-      <View style={styles.switchRow}>
-        <View style={styles.switchCopy}>
-          <Text style={styles.label}>{t('show_all_game_modes')}</Text>
-          <Text style={styles.switchHint}>{t('show_all_game_modes_hint')}</Text>
-        </View>
-        <Switch
-          value={showAllModes}
-          onValueChange={setShowAllModes}
-          trackColor={{ false: colors.primary[200], true: colors.primary[400] }}
-          thumbColor={showAllModes ? colors.primary[700] : '#fff'}
-          testID="profile.showAllModes"
-          accessibilityLabel={t('show_all_game_modes')}
         />
       </View>
       <Text style={styles.label}>{t('visual_style')}</Text>
@@ -527,6 +529,144 @@ export function ProfileScreen() {
         </Pressable>
       </Modal>
 
+      <Modal visible={memberStatsVisible} transparent animationType="slide">
+        <Pressable style={styles.modalBackdrop} onPress={() => setMemberStatsVisible(false)}>
+          <Pressable style={[styles.modalContent, styles.memberStatsModal]} onPress={(e) => e.stopPropagation()}>
+            <Text style={styles.modalTitle}>{t('member_stats')}</Text>
+            {memberStatsLoading ? (
+              <ActivityIndicator color={colors.primary[500]} style={{ marginVertical: 24 }} />
+            ) : memberStatsError ? (
+              <Text style={styles.errorText}>{memberStatsError}</Text>
+            ) : memberStats ? (
+              <ScrollView style={styles.memberStatsScroll} contentContainerStyle={styles.memberStatsScrollContent}>
+                <View style={styles.statRow}>
+                  <Text style={styles.statLabel}>{t('member_since')}</Text>
+                  <Text style={styles.statValue}>
+                    {new Date(memberStats.member_since).toLocaleDateString(locale, {
+                      day: 'numeric',
+                      month: 'short',
+                      year: 'numeric',
+                    })}
+                  </Text>
+                </View>
+                <View style={styles.statRow}>
+                  <Text style={styles.statLabel}>{t('games_played')}</Text>
+                  <Text style={styles.statValue}>{memberStats.games_played}</Text>
+                </View>
+                <View style={styles.statRow}>
+                  <Text style={styles.statLabel}>{t('correct_answers')}</Text>
+                  <Text style={styles.statValue}>{memberStats.correct_answers}</Text>
+                </View>
+                <View style={styles.statRow}>
+                  <Text style={styles.statLabel}>{t('species_identified')}</Text>
+                  <Text style={styles.statValue}>{memberStats.species_identified}</Text>
+                </View>
+                {memberStats.best_score ? (
+                  <View style={styles.statRow}>
+                    <Text style={styles.statLabel}>{t('best_quiz_score')}</Text>
+                    <Text style={styles.statValue}>
+                      {memberStats.best_score.score.toLocaleString()}
+                      {memberStats.best_score.country_name
+                        ? ` · ${leagueFlag(memberStats.best_score.country_code)} ${memberStats.best_score.country_name}`
+                        : ''}
+                    </Text>
+                  </View>
+                ) : null}
+
+                <Text style={styles.statsSection}>{t('country_challenge')}</Text>
+                {memberStats.country_challenges.length === 0 ? (
+                  <Text style={styles.statEmpty}>{t('member_stats_no_challenge')}</Text>
+                ) : (
+                  memberStats.country_challenges.map((row) => (
+                    <View key={row.country_code} style={styles.statRow}>
+                      <View style={{ flex: 1, minWidth: 0 }}>
+                        <Text style={styles.statLabel}>
+                          {leagueFlag(row.country_code)} {row.country_name}
+                        </Text>
+                        <Text style={styles.statHint}>
+                          {row.level_title}
+                          {row.step_label ? ` · ${row.step_label}` : ''}
+                          {row.step_total ? ` / ${row.step_total}` : ''}
+                        </Text>
+                      </View>
+                    </View>
+                  ))
+                )}
+
+                <Text style={styles.statsSection}>{t('survival')}</Text>
+                {memberStats.survival.best_streak > 0 ? (
+                  <>
+                    <View style={styles.statRow}>
+                      <Text style={styles.statLabel}>{t('best_survival_streak')}</Text>
+                      <Text style={styles.statValue}>
+                        {memberStats.survival.best_streak}
+                        {memberStats.survival.best_country_name
+                          ? ` · ${leagueFlag(memberStats.survival.best_country_code)} ${memberStats.survival.best_country_name}`
+                          : ''}
+                      </Text>
+                    </View>
+                    {memberStats.survival.records.slice(0, 5).map((row) => (
+                      <View key={row.country_code} style={styles.statRow}>
+                        <Text style={styles.statLabel}>
+                          {leagueFlag(row.country_code)} {row.country_name}
+                        </Text>
+                        <Text style={styles.statValue}>{t('survival_streak_n', { count: row.streak })}</Text>
+                      </View>
+                    ))}
+                  </>
+                ) : (
+                  <Text style={styles.statEmpty}>{t('member_stats_no_survival')}</Text>
+                )}
+
+                <Text style={styles.statsSection}>{t('national_league')}</Text>
+                {memberStats.national_league.memberships === 0 ? (
+                  <Text style={styles.statEmpty}>{t('member_stats_no_league')}</Text>
+                ) : (
+                  <>
+                    <View style={styles.statRow}>
+                      <Text style={styles.statLabel}>{t('league_quizzes_played')}</Text>
+                      <Text style={styles.statValue}>{memberStats.national_league.quizzes_played}</Text>
+                    </View>
+                    <View style={styles.statRow}>
+                      <Text style={styles.statLabel}>{t('daily_wins')}</Text>
+                      <Text style={styles.statValue}>{memberStats.national_league.daily_wins}</Text>
+                    </View>
+                    <View style={styles.statRow}>
+                      <Text style={styles.statLabel}>{t('week_champions')}</Text>
+                      <Text style={styles.statValue}>{memberStats.national_league.week_champions}</Text>
+                    </View>
+                    {memberStats.national_league.leagues.map((row) => (
+                      <View key={row.country_code} style={styles.statRow}>
+                        <Text style={styles.statLabel}>
+                          {row.flag || leagueFlag(row.country_code)} {row.country_name}
+                        </Text>
+                        <Text style={styles.statValue}>
+                          {[
+                            row.daily_wins > 0 ? t('daily_wins_n', { count: row.daily_wins }) : '',
+                            row.week_champions > 0 ? t('week_champions_n', { count: row.week_champions }) : '',
+                          ]
+                            .filter(Boolean)
+                            .join(' · ') || '—'}
+                        </Text>
+                      </View>
+                    ))}
+                  </>
+                )}
+
+                <Text style={styles.statsSection}>{t('flocks')}</Text>
+                <View style={styles.statRow}>
+                  <Text style={styles.statLabel}>{t('flocks_joined')}</Text>
+                  <Text style={styles.statValue}>{memberStats.flocks_joined}</Text>
+                </View>
+              </ScrollView>
+            ) : null}
+            <TouchableOpacity style={styles.modalClose} onPress={() => setMemberStatsVisible(false)}>
+              <Text style={styles.modalCloseText}>{t('close')}</Text>
+            </TouchableOpacity>
+          </Pressable>
+        </Pressable>
+      </Modal>
+
     </ScrollView>
     {saveToast != null ? (
       <View
@@ -545,6 +685,65 @@ export function ProfileScreen() {
 const styles = StyleSheet.create({
   leagueCapsLine: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 8 },
   leagueCapsFlag: { fontSize: 20 },
+  memberStatsButton: {
+    marginTop: 14,
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: colors.primary[300],
+  },
+  memberStatsButtonText: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: colors.primary[700],
+    textAlign: 'center',
+  },
+  memberStatsModal: {
+    maxHeight: '85%',
+  },
+  memberStatsScroll: {
+    maxHeight: 420,
+  },
+  memberStatsScrollContent: {
+    paddingBottom: 8,
+  },
+  statRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    gap: 12,
+    paddingVertical: 6,
+  },
+  statLabel: {
+    flex: 1,
+    fontSize: 14,
+    color: colors.primary[700],
+  },
+  statValue: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: colors.primary[900],
+    textAlign: 'right',
+    maxWidth: '55%',
+  },
+  statHint: {
+    fontSize: 12,
+    color: colors.primary[500],
+    marginTop: 2,
+  },
+  statEmpty: {
+    fontSize: 13,
+    color: colors.primary[500],
+    marginBottom: 8,
+  },
+  statsSection: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: colors.primary[800],
+    marginTop: 14,
+    marginBottom: 4,
+  },
   screenRoot: { flex: 1, backgroundColor: '#fff' },
   container: { flex: 1, backgroundColor: '#fff' },
   saveToast: {

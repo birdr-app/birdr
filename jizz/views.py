@@ -1730,6 +1730,18 @@ class GameDetailWithAnswersByPlayerTokenView(RetrieveAPIView):
         return context
 
 
+class MemberStatsView(APIView):
+    """GET — aggregate Member stats for the authenticated user."""
+
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        from jizz.player_stats import member_stats_for_user
+
+        return Response(member_stats_for_user(request.user, request=request))
+
+
 class ProfileView(APIView):
     """
     Get and update user profile
