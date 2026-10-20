@@ -88,7 +88,7 @@ export function LeftMenuModal() {
             },
           ]}
         >
-          <Pressable style={StyleSheet.absoluteFill} onPress={(e) => e.stopPropagation()}>
+          <View style={StyleSheet.absoluteFill}>
             <ScrollView
               style={styles.scroll}
               contentContainerStyle={[styles.content, { paddingTop: Math.max(24, insets.top) }]}
@@ -124,7 +124,7 @@ export function LeftMenuModal() {
                 <Text style={styles.footerText}>{t('contact')}</Text>
               </View>
             </ScrollView>
-          </Pressable>
+          </View>
         </Animated.View>
       </View>
     </Modal>

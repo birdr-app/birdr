@@ -128,7 +128,7 @@ export function UserMenuModal() {
             },
           ]}
         >
-          <Pressable style={StyleSheet.absoluteFill} onPress={(e) => e.stopPropagation()}>
+          <View style={StyleSheet.absoluteFill}>
             <ScrollView style={styles.scroll} contentContainerStyle={[styles.content, { paddingTop: Math.max(56, insets.top) }]}>
               <Text style={styles.sectionTitle}>{t('account')}</Text>
               <AppLanguagePicker
@@ -232,7 +232,7 @@ export function UserMenuModal() {
                 <Text style={styles.exitLabel}>{t('close_app')}</Text>
               </TouchableOpacity>
             </ScrollView>
-          </Pressable>
+          </View>
         </Animated.View>
       </View>
     </Modal>

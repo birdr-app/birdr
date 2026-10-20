@@ -35,6 +35,7 @@ import { speciesLanguageFromAppLocale } from '../i18n/appLocales';
 import { colors } from '../theme';
 import { fetchLeagueOverview, type LeagueOverview } from '../api/league';
 import { fetchMemberStats, type MemberStats } from '../api/memberStats';
+import { BirdrLevelImage } from '../components/BirdrLevelImage';
 import { LeagueCapsBadge } from '../components/LeagueCapsBadge';
 import { leagueFlag } from '../lib/league';
 
@@ -487,8 +488,11 @@ export function ProfileScreen() {
       </View>
 
       <Modal visible={languageModalVisible} transparent animationType="slide">
-        <Pressable style={styles.modalBackdrop} onPress={() => { setLanguageModalVisible(false); setLanguageSearch(''); }}>
-          <Pressable style={styles.modalContent} onPress={(e) => e.stopPropagation()}>
+        <View style={styles.modalBackdrop}>
+          {/* Tap-to-close layer sits behind the card: wrapping the card in a Pressable
+              swallowed the list's scroll gestures. */}
+          <Pressable style={StyleSheet.absoluteFill} onPress={() => { setLanguageModalVisible(false); setLanguageSearch(''); }} />
+          <View style={styles.modalContent}>
             <Text style={styles.modalTitle}>{t('select_language')}</Text>
             <TextInput
               style={styles.searchInput}
@@ -525,13 +529,25 @@ export function ProfileScreen() {
             <TouchableOpacity style={styles.modalClose} onPress={() => { setLanguageModalVisible(false); setLanguageSearch(''); }}>
               <Text style={styles.modalCloseText}>{t('close')}</Text>
             </TouchableOpacity>
-          </Pressable>
-        </Pressable>
+          </View>
+        </View>
       </Modal>
 
-      <Modal visible={memberStatsVisible} transparent animationType="slide">
-        <Pressable style={styles.modalBackdrop} onPress={() => setMemberStatsVisible(false)}>
-          <Pressable style={[styles.modalContent, styles.memberStatsModal]} onPress={(e) => e.stopPropagation()}>
+      <Modal
+        visible={memberStatsVisible}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setMemberStatsVisible(false)}
+      >
+        {/* Backdrop is a sibling layer, not a parent: a Pressable around the card swallows the
+            drag gestures the stats ScrollView needs. */}
+        <View style={styles.modalBackdrop}>
+          <Pressable
+            style={StyleSheet.absoluteFill}
+            onPress={() => setMemberStatsVisible(false)}
+            accessibilityLabel={t('close')}
+          />
+          <View style={[styles.modalContent, styles.memberStatsModal]}>
             <Text style={styles.modalTitle}>{t('member_stats')}</Text>
             {memberStatsLoading ? (
               <ActivityIndicator color={colors.primary[500]} style={{ marginVertical: 24 }} />
@@ -578,17 +594,28 @@ export function ProfileScreen() {
                   <Text style={styles.statEmpty}>{t('member_stats_no_challenge')}</Text>
                 ) : (
                   memberStats.country_challenges.map((row) => (
-                    <View key={row.country_code} style={styles.statRow}>
-                      <View style={{ flex: 1, minWidth: 0 }}>
-                        <Text style={styles.statLabel}>
+                    // Same card as the Country Challenge leaderboard: country, level, step, level icon.
+                    <View key={row.country_code} style={styles.challengeCard}>
+                      <View style={styles.challengeBody}>
+                        <Text style={styles.challengeCountry} numberOfLines={1}>
                           {leagueFlag(row.country_code)} {row.country_name}
                         </Text>
-                        <Text style={styles.statHint}>
+                        <Text style={styles.challengeLevel} numberOfLines={2}>
+                          {row.is_champion ? '🏆 ' : ''}
                           {row.level_title}
-                          {row.step_label ? ` · ${row.step_label}` : ''}
-                          {row.step_total ? ` / ${row.step_total}` : ''}
                         </Text>
+                        {row.step_label ? (
+                          <Text style={styles.challengeStep}>
+                            {row.step_total ? `${row.step_label} / ${row.step_total}` : row.step_label}
+                          </Text>
+                        ) : null}
                       </View>
+                      <BirdrLevelImage
+                        iconUrl={row.level_icon_url}
+                        sequence={row.level_index}
+                        variant="plain"
+                        size={56}
+                      />
                     </View>
                   ))
                 )}
@@ -663,8 +690,8 @@ export function ProfileScreen() {
             <TouchableOpacity style={styles.modalClose} onPress={() => setMemberStatsVisible(false)}>
               <Text style={styles.modalCloseText}>{t('close')}</Text>
             </TouchableOpacity>
-          </Pressable>
-        </Pressable>
+          </View>
+        </View>
       </Modal>
 
     </ScrollView>
@@ -699,6 +726,23 @@ const styles = StyleSheet.create({
     color: colors.primary[700],
     textAlign: 'center',
   },
+  challengeCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: colors.primary[200],
+    paddingVertical: 10,
+    paddingLeft: 12,
+    paddingRight: 6,
+    marginBottom: 8,
+  },
+  challengeBody: { flex: 1, minWidth: 0 },
+  challengeCountry: { fontSize: 13, color: colors.primary[700], marginBottom: 4 },
+  challengeLevel: { fontSize: 16, fontWeight: '600', color: colors.primary[800] },
+  challengeStep: { fontSize: 14, color: colors.primary[600], marginTop: 2 },
   memberStatsModal: {
     maxHeight: '85%',
   },

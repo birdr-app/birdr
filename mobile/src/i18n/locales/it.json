@@ -776,5 +776,6 @@
   "survival_missed_title": "Qui è finita la serie di {name}",
   "survival_missed_correct": "Era",
   "survival_missed_answered": "Ha risposto",
-  "survival_missed_timeout": "⏱ Tempo scaduto"
+  "survival_missed_timeout": "⏱ Tempo scaduto",
+  "league_quizzes_played": "Quiz della lega"
 }

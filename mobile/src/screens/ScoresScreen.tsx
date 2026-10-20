@@ -85,8 +85,10 @@ function FilterSelect<T extends string>({ label, value, displayLabel, onSelect, 
         <Text style={styles.filterButtonValue} numberOfLines={1}>{displayLabel}</Text>
       </TouchableOpacity>
       <Modal visible={visible} transparent animationType="fade">
-        <Pressable style={styles.modalBackdrop} onPress={() => setVisible(false)}>
-          <Pressable style={styles.modalContent} onPress={(e) => e.stopPropagation()}>
+        <View style={styles.modalBackdrop}>
+          {/* Tap-to-close layer behind the card, so the list keeps its scroll gestures. */}
+          <Pressable style={StyleSheet.absoluteFill} onPress={() => setVisible(false)} />
+          <View style={styles.modalContent}>
             <Text style={styles.modalTitle}>{label}</Text>
             <FlatList
               data={options}
@@ -108,8 +110,8 @@ function FilterSelect<T extends string>({ label, value, displayLabel, onSelect, 
             <TouchableOpacity style={styles.modalClose} onPress={() => setVisible(false)}>
               <Text style={styles.modalCloseText}>{closeLabel ?? 'Close'}</Text>
             </TouchableOpacity>
-          </Pressable>
-        </Pressable>
+          </View>
+        </View>
       </Modal>
     </>
   );

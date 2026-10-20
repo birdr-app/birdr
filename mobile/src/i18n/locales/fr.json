@@ -776,5 +776,6 @@
   "survival_missed_title": "La série de {name} s’est arrêtée ici",
   "survival_missed_correct": "C’était",
   "survival_missed_answered": "Réponse donnée",
-  "survival_missed_timeout": "⏱ Temps écoulé"
+  "survival_missed_timeout": "⏱ Temps écoulé",
+  "league_quizzes_played": "Quiz de la ligue"
 }

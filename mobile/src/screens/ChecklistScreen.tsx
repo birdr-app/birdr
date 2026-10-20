@@ -323,11 +323,10 @@ export function ChecklistScreen() {
       )}
 
       <Modal visible={taxOrderModalVisible} transparent animationType="slide">
-        <Pressable
-          style={styles.countryModalBackdrop}
-          onPress={() => setTaxOrderModalVisible(false)}
-        >
-          <Pressable style={styles.countryModalContent} onPress={(e) => e.stopPropagation()}>
+        <View style={styles.countryModalBackdrop}>
+          {/* Tap-to-close layer behind the card, so the list keeps its scroll gestures. */}
+          <Pressable style={StyleSheet.absoluteFill} onPress={() => setTaxOrderModalVisible(false)} />
+          <View style={styles.countryModalContent}>
             <Text style={styles.countryModalTitle}>
               {t('checklist_select_order', 'Select order')}
             </Text>
@@ -368,8 +367,8 @@ export function ChecklistScreen() {
             >
               <Text style={styles.countryModalCloseText}>{t('close', 'Close')}</Text>
             </TouchableOpacity>
-          </Pressable>
-        </Pressable>
+          </View>
+        </View>
       </Modal>
 
       <SpeciesMediaModal

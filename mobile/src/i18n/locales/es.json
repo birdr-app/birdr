@@ -776,5 +776,6 @@
   "survival_missed_title": "Aquí terminó la racha de {name}",
   "survival_missed_correct": "Era",
   "survival_missed_answered": "Respondió",
-  "survival_missed_timeout": "⏱ Se acabó el tiempo"
+  "survival_missed_timeout": "⏱ Se acabó el tiempo",
+  "league_quizzes_played": "Quizzes de la liga"
 }
