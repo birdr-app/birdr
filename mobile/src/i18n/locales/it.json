@@ -765,5 +765,11 @@
   "more_ways_to_play": "Altri modi per giocare",
   "show_all_game_modes": "Mostra tutte le modalità di gioco",
   "show_all_game_modes_hint": "Mostra Sopravvivenza, la Lega nazionale e altro nella home e nei menu.",
-  "game_modes_unlocked": "🎉 Nuove modalità di gioco sbloccate: Sopravvivenza e la Lega nazionale!"
+  "game_modes_unlocked": "🎉 Nuove modalità di gioco sbloccate: Sopravvivenza e la Lega nazionale!",
+  "flock_notifications": "Notifiche",
+  "flock_notifications_hint": "Nuova sfida, ultimo giorno per giocare e i risultati.",
+  "flock_notifications_off_on_phone": "Disattivate su questo telefono. Tocca l’interruttore per attivarle.",
+  "flock_notifications_settings": "Le notifiche di Birdr sono disattivate su questo telefono. Attivale nelle Impostazioni per sapere di nuove sfide e risultati.",
+  "flock_auto_renew": "Rinnova le sfide automaticamente",
+  "flock_auto_renew_hint": "Quando una sfida finisce, ne parte una nuova con lo stesso titolo, paese e durata."
 }

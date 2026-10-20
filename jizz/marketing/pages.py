@@ -200,13 +200,14 @@ INTENT_PAGES = {
     'bird-quiz-by-country': {
         'title': 'Bird Quizzes by Country – Country Challenges | Birdr',
         'description': (
-            'Play bird quizzes by country and take Country Challenges from easy to expert. '
-            'Study the birds you will meet at home or on your next trip.'
+            'Play bird quizzes by country, take Country Challenges, and compete in the '
+            'National League. Study the birds you will meet at home or on your next trip.'
         ),
         'heading': 'Bird quizzes by country',
         'lead': (
             'Every country list is a different classroom. Quiz on the birds of the '
-            'Netherlands, Colombia, Japan or wherever you bird—then take a Country Challenge.'
+            'Netherlands, Colombia, Japan or wherever you bird—then take a Country Challenge, '
+            'or join the National League against birders from the same country.'
         ),
         'cta_href': '/journey/intro',
         'cta_label': 'Start a Country Challenge',
@@ -220,9 +221,15 @@ INTENT_PAGES = {
                 'Use a one-off quiz when you want a short session, or a challenge when you '
                 'want to work through a country properly.'
             ),
+            (
+                'National League is the real competition: one daily quiz shared with other '
+                'birders from your country. Quizzes start easy and finish harder. There is a '
+                'daily winner and a weekly champion—see how well you do against fellow birders.'
+            ),
         ],
         'links': [
             ('/play', 'Start a quiz'),
+            ('/league', 'Open the National League'),
             ('/site/birding-app/', 'The Birdr app'),
             ('/site/how-it-works/', 'How it works'),
         ],

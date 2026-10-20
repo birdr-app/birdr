@@ -104,6 +104,15 @@ async function hasNotificationPermission(): Promise<boolean> {
   return existing.status === Notifications.PermissionStatus.GRANTED;
 }
 
+/** Whether this phone currently allows Birdr notifications (re-check when the app returns to the foreground). */
+export async function isPushPermissionGranted(): Promise<boolean> {
+  try {
+    return await hasNotificationPermission();
+  } catch {
+    return false;
+  }
+}
+
 /** Show welcome banner immediately (works in foreground + background). */
 async function showLocalWelcomeNotification(): Promise<void> {
   await ensureAndroidChannel();
@@ -274,11 +283,13 @@ function promptOpenSettings(message: string): void {
  * Use when the user opts into something that sends pushes (e.g. joining the National League).
  * Offers system settings when notifications were turned off earlier.
  */
-export async function requestPushPermissionAndRegister(): Promise<PushOnboardingResult> {
+export async function requestPushPermissionAndRegister(settingsMessage?: string): Promise<PushOnboardingResult> {
   const result = await registerForPushNotificationsAsync();
   if (result === 'denied_can_open_settings') {
+    // The phone no longer shows its own prompt once notifications were denied: only Settings can undo that.
     promptOpenSettings(
-      'Notifications are turned off for Birdr. Enable them in system settings to get your daily reminders.'
+      settingsMessage ??
+        'Notifications are turned off for Birdr. Enable them in system settings to get your daily reminders.'
     );
   }
   return result;

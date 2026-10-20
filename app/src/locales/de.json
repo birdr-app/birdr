@@ -659,5 +659,12 @@
   "modes_unlocked_title": "🎉 Neue Spielmodi freigeschaltet!",
   "modes_unlocked_body": "Survival und die Nationalliga sind jetzt auf deinem Startbildschirm. Viel Spaß!",
   "profile_show_all_modes": "Alle Spielmodi anzeigen",
-  "profile_show_all_modes_hint": "Alle Spielmodi groß auf dem Startbildschirm und in den Menüs. Aus: Sie erscheinen nach deinen ersten Spielen."
+  "profile_show_all_modes_hint": "Alle Spielmodi groß auf dem Startbildschirm und in den Menüs. Aus: Sie erscheinen nach deinen ersten Spielen.",
+  "flock_notifications": "Benachrichtigungen",
+  "flock_notifications_hint": "Neue Challenge, letzter Spieltag und die Ergebnisse.",
+  "flock_notifications_off_on_phone": "Auf diesem Telefon ausgeschaltet. Tippe auf den Schalter, um sie einzuschalten.",
+  "flock_notifications_settings": "Benachrichtigungen für Birdr sind auf diesem Telefon ausgeschaltet. Schalte sie in den Einstellungen ein, um von neuen Challenges und Ergebnissen zu erfahren.",
+  "flock_auto_renew": "Challenges automatisch verlängern",
+  "flock_auto_renew_hint": "Wenn eine Challenge endet, startet eine neue mit gleichem Titel, Land und gleicher Dauer.",
+  "flock_notifications_web_note": "Benachrichtigungen kommen in der Birdr-App auf deinem Handy an."
 }

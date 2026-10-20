@@ -50,55 +50,96 @@
   <p><a href="{{ '/site/how-it-works/'|mpath }}">{% mt "See how it works" %}</a></p>
 </section>
 
-<section>
+<section id="what-you-can-play">
   <h2>{% mt "What you can play" %}</h2>
-  <div class="grid">
+  <p class="lead-inline">{% mt "Birdr is built around different ways to train. Pick a short custom quiz, grind a country list, race survival, compete in the national league, play with a flock, or drill the species you keep missing." %}</p>
+  <div class="grid game-modes">
     <article class="card">
-      <h3>{% mt "Photo quizzes" %}</h3>
-      <p>{% mt "One quick game, or a longer session. Choose a country, a level and photos, video or sound." %}</p>
+      <h3>{% mt "Normal quizzes" %}</h3>
+      <p>{% mt "Play a single game with full control: difficulty, length, and optionally a taxonomic family. Stick to photos, or switch to sound or video when you want another style of practice." %}</p>
       <p><a href="/play">{% mt "Start a quiz" %}</a></p>
     </article>
     <article class="card">
-      <h3>{% mt "Sound quizzes" %}</h3>
-      <p>{% mt "Hear a recording and pick the species. You can also play passerine sound quizzes in the browser." %}</p>
-      <p><a href="/play">{% mt "Play a sound quiz" %}</a></p>
+      <h3>{% mt "Country Challenge" %}</h3>
+      <p>{% mt "Study the birds of one country from start to finish. It begins quite easy, but as you progress through levels things get tougher—be warned, the end is really tough." %}</p>
+      <p><a href="/journey/intro">{% mt "Start a Country Challenge" %}</a> · <a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "Quizzes by country" %}</a></p>
     </article>
     <article class="card">
-      <h3>{% mt "Multiplayer" %}</h3>
-      <p>{% mt "A live quiz for two or more players. Faster correct answers score more points." %}</p>
-      <p><a href="/play">{% mt "Start a live quiz" %}</a></p>
+      <h3>{% mt "Survival" %}</h3>
+      <p>{% mt "A quick game, always at Pro level—so rarities are included too. One wrong answer and you are out. See if you can set a nice record for your country." %}</p>
+      <p><a href="/survival">{% mt "Play Survival" %}</a></p>
     </article>
     <article class="card">
-      <h3>{% mt "High scores" %}</h3>
-      <p>{% mt "See how you rank after a quiz." %}</p>
-      <p><a href="/scores/">{% mt "View high scores" %}</a></p>
+      <h3>{% mt "National League" %}</h3>
+      <p>{% mt "Compete against other birders from your country. You play one daily quiz that starts easy and finishes harder. There is a daily winner and a weekly champion—this is the real competition." %}</p>
+      <p><a href="/league">{% mt "Open the National League" %}</a></p>
     </article>
     <article class="card">
-      <h3>{% mt "My checklist" %}</h3>
-      <p>{% mt "See which birds you named correctly in your country, and which ones you missed." %}</p>
-      <p><a href="/checklist">{% mt "Open my checklist" %}</a></p>
-    </article>
-    <article class="card">
-      <h3>{% mt "Country Challenges" %}</h3>
-      <p>{% mt "Structured levels for the birds of a country—from the Netherlands to Japan to Colombia." %}</p>
-      <p><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "Quizzes by country" %}</a></p>
+      <h3>{% mt "Flocks" %}</h3>
+      <p>{% mt "Play with a group of fellow birders in a small competition. You get one shared game each week, and every member has the entire week to complete it." %}</p>
+      <p><a href="{{ '/site/flocks/'|mpath }}">{% mt "Learn about Flocks" %}</a></p>
     </article>
     <article class="card">
       <h3>{% mt "My Tricky Birds" %}</h3>
-      <p>{% mt "Focused drills on the species and confusing pairs you actually mix up." %}</p>
+      <p>{% mt "After you have played some games, open Difficult species to see what you miss most and which pairs you mix up a lot. Play focused quizzes to close those gaps in your birding knowledge." %}</p>
       <p><a href="{{ '/site/my-tricky-birds/'|mpath }}">{% mt "Practise difficult birds" %}</a></p>
     </article>
+    <article class="card">
+      <h3>{% mt "Multiplayer" %}</h3>
+      <p>{% mt "A live quiz for two or more players. Faster correct answers score more points—great for a desk duel or a club night." %}</p>
+      <p><a href="/play">{% mt "Start a live quiz" %}</a></p>
+    </article>
+    <article class="card">
+      <h3>{% mt "High scores &amp; checklist" %}</h3>
+      <p>{% mt "See how you rank after a quiz, and which birds you have named correctly in your country—plus the ones you still miss." %}</p>
+      <p><a href="/scores/">{% mt "View high scores" %}</a> · <a href="/checklist">{% mt "Open my checklist" %}</a></p>
+    </article>
   </div>
+
+  <article class="card suggest-game" id="suggest-game">
+    <h3>{% mt "Suggest a game type" %}</h3>
+    {% if request.GET.sent == '1' %}
+    <p class="form-note">{% mt "Thank you. We read every message." %}</p>
+    {% else %}
+    <p>{% mt "More game types? Can you think of other ways to train your knowledge—or just another fun mode? Leave us a message. We are very open to new ideas." %}</p>
+    {% if request.GET.sent == 'missing' %}
+    <p class="form-error">{% mt "Please write a short message." %}</p>
+    {% elif request.GET.sent == 'email' %}
+    <p class="form-error">{% mt "That email address does not look valid." %}</p>
+    {% endif %}
+    <form class="feedback-form" method="post" action="{{ '/site/feedback/'|mpath }}">
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ request.path }}">
+      <input type="hidden" name="anchor" value="suggest-game">
+      <input type="hidden" name="started" value="{{ feedback_started }}">
+      <p class="hp-field">
+        <label for="suggest-website">{% mt "Website" %}</label>
+        <input id="suggest-website" type="text" name="website" tabindex="-1" autocomplete="off">
+      </p>
+      <p>
+        <label for="suggest-comment">{% mt "Your idea" %}</label>
+        <textarea id="suggest-comment" name="comment" rows="4" required maxlength="5000" placeholder="{% mt "Describe a game type or training idea…" %}"></textarea>
+      </p>
+      <p>
+        <label for="suggest-name">{% mt "Name" %} <span>({% mt "optional" %})</span></label>
+        <input id="suggest-name" type="text" name="name" maxlength="120" autocomplete="name">
+      </p>
+      <p>
+        <label for="suggest-email">{% mt "Email" %} <span>({% mt "optional" %})</span></label>
+        <input id="suggest-email" type="email" name="email" maxlength="254" autocomplete="email">
+      </p>
+      <p>
+        <button class="btn secondary" type="submit">{% mt "Send idea" %}</button>
+      </p>
+    </form>
+    {% endif %}
+  </article>
 </section>
 
 {% if countries %}
 <section>
   <h2>{% mt "Study a country list" %}</h2>
-  <div class="country-pills">
-    {% for c in countries %}
-    <a href="{{ c.url|mpath }}">{{ c.name }}</a>
-    {% endfor %}
-  </div>
+  {% include "marketing/_country_pills.html" %}
   <p><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "All country quizzes" %}</a></p>
 </section>
 {% endif %}

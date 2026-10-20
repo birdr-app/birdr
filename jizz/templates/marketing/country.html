@@ -8,6 +8,7 @@
   <div class="cta-row">
     <a class="btn" href="{{ quiz_href }}">{% mt "Start a quiz" %}</a>
     <a class="btn secondary" href="{{ challenge_href }}">{% mt "Country Challenge" %}</a>
+    <a class="btn secondary" href="{{ league_href }}">{% mt "National League" %}</a>
   </div>
   <p>{% mt "Best on the" %} <a href="{{ home_url }}#get-the-app">{% mt "iPhone and Android apps" %}</a>.</p>
 </section>
@@ -16,11 +17,14 @@
     {% mt "A one-off quiz is a short session on this country’s list. A Country Challenge is structured practice with levels, so you keep meeting new birds instead of repeating only the easy ones." %}
   </p>
   <p>
+    {% mt "National League is where you compete against other birders from {name}: one daily quiz that starts easy and finishes harder, with a daily winner and a weekly champion." name=country_name %}
+  </p>
+  <p>
     <a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "More country quizzes" %}</a> ·
     <a href="/play">{% mt "Open Birdr" %}</a>
   </p>
 </section>
-{% if show_games or show_highscores or show_challenge or show_missed or show_pairs %}
+{% if show_games or show_highscores or show_challenge or show_league or show_missed or show_pairs %}
 <section>
   <h2>{% mt "How people play in {name}" name=country_name %}</h2>
   {% if show_games %}
@@ -37,8 +41,47 @@
     <p class="more-link"><a href="{{ games_href }}">{% mt "Games played over time" %}</a></p>
   </div>
   {% endif %}
-  {% if show_highscores or show_challenge %}
+  {% if show_highscores or show_challenge or show_league %}
   <div class="stats-grid">
+    {% if show_league %}
+    <div class="card card-alt">
+      <h3>{% mt "National League" %}</h3>
+      <p>{% mt "This week’s standings for birders competing in {name}." name=country_name %}</p>
+      {% if league_rows %}
+      <table class="stats">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>{% mt "Player" %}</th>
+            <th class="num">{% mt "Score" %}</th>
+            <th class="num">{% mt "Days" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in league_rows %}
+          <tr>
+            <td>{{ row.rank }}</td>
+            <td>{{ row.name }}</td>
+            <td class="num">{{ row.score }}</td>
+            <td class="num">{{ row.days_played }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p class="more-link">
+        <a href="{{ league_href }}">{% mt "Play today’s National League quiz" %}</a> ·
+        <a href="{{ league_leaderboard_href }}">{% mt "Full National League standings" %}</a>
+      </p>
+      {% else %}
+      <p class="league-empty">
+        {% mt "No one has played this week’s National League quiz in {name} yet. Be the first to set the pace—one daily quiz, a daily winner, and a weekly champion." name=country_name %}
+      </p>
+      <p class="cta-row" style="margin-top: 12px;">
+        <a class="btn" href="{{ league_href }}">{% mt "Play today’s National League quiz" %}</a>
+      </p>
+      {% endif %}
+    </div>
+    {% endif %}
     {% if show_challenge %}
     <div class="card card-alt">
       <h3>{% mt "Country Challenge" %}</h3>

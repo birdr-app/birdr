@@ -765,5 +765,11 @@
   "more_ways_to_play": "Plus de façons de jouer",
   "show_all_game_modes": "Afficher tous les modes de jeu",
   "show_all_game_modes_hint": "Affiche Survie, la Ligue nationale et plus encore sur l'accueil et dans les menus.",
-  "game_modes_unlocked": "🎉 Nouveaux modes de jeu débloqués : Survie et la Ligue nationale !"
+  "game_modes_unlocked": "🎉 Nouveaux modes de jeu débloqués : Survie et la Ligue nationale !",
+  "flock_notifications": "Notifications",
+  "flock_notifications_hint": "Nouveau défi, dernier jour pour jouer et les résultats.",
+  "flock_notifications_off_on_phone": "Désactivées sur ce téléphone. Touche l’interrupteur pour les activer.",
+  "flock_notifications_settings": "Les notifications de Birdr sont désactivées sur ce téléphone. Active-les dans Réglages pour être averti des nouveaux défis et résultats.",
+  "flock_auto_renew": "Renouveler les défis automatiquement",
+  "flock_auto_renew_hint": "Quand un défi se termine, un nouveau démarre avec le même titre, le même pays et la même durée."
 }

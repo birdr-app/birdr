@@ -1986,6 +1986,10 @@ class Flock(models.Model):
         help_text='Private flocks are only visible to members and invitees.',
     )
     logo = models.ImageField(upload_to='flock_logos/', null=True, blank=True)
+    auto_renew_challenges = models.BooleanField(
+        default=False,
+        help_text='Start a new challenge (same title, country and length) when one ends.',
+    )
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
@@ -2033,6 +2037,10 @@ class FlockMembership(models.Model):
     )
     role = models.CharField(max_length=16, choices=ROLE_CHOICES, default=ROLE_MEMBER)
     joined_at = models.DateTimeField(auto_now_add=True)
+    notifications_enabled = models.BooleanField(
+        default=True,
+        help_text='Push notifications for this flock (new challenge, last day, results).',
+    )
 
     class Meta:
         unique_together = [('flock', 'user')]
@@ -2097,6 +2105,10 @@ class FlockChallenge(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     public_token = models.CharField(max_length=16, unique=True, editable=False)
+    results_sent_at = models.DateTimeField(
+        null=True, blank=True,
+        help_text='When the end-of-challenge results push went out (and the challenge was closed).',
+    )
 
     class Meta:
         ordering = ['-starts_at']
@@ -2366,3 +2378,22 @@ class LeagueNotificationLog(models.Model):
 
     class Meta:
         unique_together = [('user', 'country', 'date', 'kind')]
+
+
+class FlockNotificationLog(models.Model):
+    """One push of each kind per member per challenge, so the hourly job never repeats itself."""
+
+    KIND_LAST_DAY = 'last_day'
+    KIND_RESULTS = 'results'
+    KIND_CHOICES = [
+        (KIND_LAST_DAY, 'One day left'),
+        (KIND_RESULTS, 'Results'),
+    ]
+
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='flock_notifications')
+    challenge = models.ForeignKey(FlockChallenge, on_delete=models.CASCADE, related_name='notifications')
+    kind = models.CharField(max_length=16, choices=KIND_CHOICES)
+    sent_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = [('user', 'challenge', 'kind')]

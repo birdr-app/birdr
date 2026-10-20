@@ -662,5 +662,12 @@
   "modes_unlocked_title": "🎉 New game modes unlocked!",
   "modes_unlocked_body": "Survival and the National league are now on your home screen. Have fun!",
   "profile_show_all_modes": "Show all game modes",
-  "profile_show_all_modes_hint": "Every game mode full size on the home screen and in the menus. Off: they appear after your first few games."
+  "profile_show_all_modes_hint": "Every game mode full size on the home screen and in the menus. Off: they appear after your first few games.",
+  "flock_notifications": "Notifications",
+  "flock_notifications_hint": "New challenge, last day to play, and the results.",
+  "flock_notifications_off_on_phone": "Turned off on this phone. Tap the switch to turn them on.",
+  "flock_notifications_settings": "Notifications are turned off for Birdr on this phone. Turn them on in Settings to hear about new challenges and results.",
+  "flock_auto_renew": "Auto-renew challenges",
+  "flock_auto_renew_hint": "When a challenge ends, a new one starts with the same title, country and length.",
+  "flock_notifications_web_note": "Notifications arrive in the Birdr mobile app."
 }

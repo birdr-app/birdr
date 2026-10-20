@@ -61,7 +61,7 @@ def _absolute_url(request, path: str) -> str:
 def _notify_flock_challenge(flock: Flock, challenge: FlockChallenge, exclude_user_id: int | None = None):
     """Push members to play a newly started flock challenge."""
     memberships = (
-        FlockMembership.objects.filter(flock=flock)
+        FlockMembership.objects.filter(flock=flock, notifications_enabled=True)
         .exclude(user_id=exclude_user_id)
         .select_related('user')
     )
@@ -271,11 +271,31 @@ def _serialize_flock(flock: Flock, request, *, include_invite: bool = False) -> 
         'active_challenge': _serialize_challenge_summary(active, request) if active else None,
         'challenge_count': _published_challenge_count(flock),
         'history_path': _flock_history_path(flock),
+        'auto_renew_challenges': flock.auto_renew_challenges,
+        'notifications_enabled': _my_notifications_enabled(flock, user),
     }
     if include_invite and user and flock.is_member(user):
         invite = _active_invite(flock)
         data['invite'] = _serialize_invite(invite, request, flock) if invite else None
     return data
+
+
+def _my_notifications_enabled(flock: Flock, user) -> bool | None:
+    """This member's push setting for the flock; None for non-members."""
+    if not user or not getattr(user, 'is_authenticated', False):
+        return None
+    value = (
+        FlockMembership.objects.filter(flock=flock, user=user)
+        .values_list('notifications_enabled', flat=True)
+        .first()
+    )
+    return value
+
+
+def _as_bool(value) -> bool:
+    if isinstance(value, bool):
+        return value
+    return str(value).strip().lower() in ('1', 'true', 'yes', 'on')
 
 
 def _serialize_invite(invite: FlockInvite, request, flock: Flock) -> dict:
@@ -474,6 +494,8 @@ class FlockDetailView(APIView):
         if 'country_code' in request.data:
             code = (request.data.get('country_code') or '').strip().upper()
             flock.default_country = get_object_or_404(Country, pk=code)
+        if 'auto_renew_challenges' in request.data:
+            flock.auto_renew_challenges = _as_bool(request.data.get('auto_renew_challenges'))
         # Flocks are invite-only; ignore any is_private client field.
         flock.is_private = True
         if 'logo' in request.data:
@@ -488,6 +510,23 @@ class FlockDetailView(APIView):
                 flock.logo = logo
         flock.save()
         return Response(_serialize_flock(flock, request, include_invite=True))
+
+
+class FlockMyMembershipView(APIView):
+    """PATCH {notifications_enabled} — a member's own push setting for this flock."""
+
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    def patch(self, request, slug):
+        flock = get_object_or_404(Flock, slug=slug)
+        membership = FlockMembership.objects.filter(flock=flock, user=request.user).first()
+        if membership is None:
+            raise NotFound()
+        if 'notifications_enabled' in request.data:
+            membership.notifications_enabled = _as_bool(request.data.get('notifications_enabled'))
+            membership.save(update_fields=['notifications_enabled'])
+        return Response({'notifications_enabled': membership.notifications_enabled})
 
 
 class FlockProgressView(APIView):
@@ -768,12 +807,17 @@ class FlockChallengeCreateView(APIView):
         days = max(1, min(days, 30))
         country_code = (request.data.get('country_code') or flock.default_country_id).upper()
         country = get_object_or_404(Country, pk=country_code)
-        host = _get_or_create_player_for_user(request.user)
-        starts = timezone.now()
-        ends = starts + timedelta(days=days)
+        from jizz.flock_schedule import start_challenge
 
         try:
-            snapshot = generate_club_mix_snapshot(country=country, host=host)
+            challenge = start_challenge(
+                flock,
+                created_by=request.user,
+                country=country,
+                title=title,
+                days=days,
+                exclude_user_id=request.user.id,
+            )
         except InsufficientChallengeContent as exc:
             return Response(
                 {
@@ -784,23 +828,6 @@ class FlockChallengeCreateView(APIView):
                 },
                 status=status.HTTP_422_UNPROCESSABLE_ENTITY,
             )
-
-        with transaction.atomic():
-            challenge = FlockChallenge.objects.create(
-                flock=flock,
-                title=title,
-                country=country,
-                length=CLUB_MIX_LENGTH,
-                preset=FlockChallenge.PRESET_CLUB_MIX,
-                status=FlockChallenge.STATUS_ACTIVE,
-                starts_at=starts,
-                ends_at=ends,
-                created_by=request.user,
-                public_token=_public_token(8),
-            )
-            persist_challenge_snapshot(challenge, snapshot)
-
-        _notify_flock_challenge(flock, challenge, exclude_user_id=request.user.id)
 
         return Response(
             {

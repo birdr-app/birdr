@@ -659,5 +659,12 @@
   "modes_unlocked_title": "🎉 Nuove modalità di gioco sbloccate!",
   "modes_unlocked_body": "Sopravvivenza e la Lega nazionale sono ora nella tua schermata iniziale. Buon divertimento!",
   "profile_show_all_modes": "Mostra tutte le modalità di gioco",
-  "profile_show_all_modes_hint": "Tutte le modalità di gioco a grandezza piena nella home e nei menu. Disattivato: compaiono dopo le prime partite."
+  "profile_show_all_modes_hint": "Tutte le modalità di gioco a grandezza piena nella home e nei menu. Disattivato: compaiono dopo le prime partite.",
+  "flock_notifications": "Notifiche",
+  "flock_notifications_hint": "Nuova sfida, ultimo giorno per giocare e i risultati.",
+  "flock_notifications_off_on_phone": "Disattivate su questo telefono. Tocca l’interruttore per attivarle.",
+  "flock_notifications_settings": "Le notifiche di Birdr sono disattivate su questo telefono. Attivale nelle Impostazioni per sapere di nuove sfide e risultati.",
+  "flock_auto_renew": "Rinnova le sfide automaticamente",
+  "flock_auto_renew_hint": "Quando una sfida finisce, ne parte una nuova con lo stesso titolo, paese e durata.",
+  "flock_notifications_web_note": "Le notifiche arrivano nell’app mobile di Birdr."
 }

@@ -1,0 +1,5 @@
+<div class="country-pills">
+  {% for c in countries %}
+  <a href="{{ c.url|mpath }}">{% if c.flag %}<span class="country-flag" aria-hidden="true">{{ c.flag }}</span> {% endif %}{{ c.name }}</a>
+  {% endfor %}
+</div>

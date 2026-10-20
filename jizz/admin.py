@@ -1482,7 +1482,7 @@ def _admin_site_url(path: str) -> str:
 class FlockMembershipInline(admin.TabularInline):
     model = FlockMembership
     extra = 0
-    fields = ['user', 'role', 'joined_at']
+    fields = ['user', 'role', 'notifications_enabled', 'joined_at']
     readonly_fields = ['joined_at']
     raw_id_fields = ['user']
     ordering = ['role', 'joined_at']
@@ -1577,8 +1577,9 @@ class FlockChallengeAttemptInline(admin.TabularInline):
 class FlockAdmin(admin.ModelAdmin):
     list_display = [
         'name', 'slug', 'members', 'join_code', 'owner', 'default_country',
-        'is_private', 'created',
+        'auto_renew_challenges', 'is_private', 'created',
     ]
+    list_filter = ['auto_renew_challenges']
     search_fields = ['name', 'slug', 'owner__username']
     raw_id_fields = ['owner', 'default_country']
     readonly_fields = ['join_code']
@@ -1614,7 +1615,7 @@ class FlockChallengeAdmin(admin.ModelAdmin):
     ]
     list_filter = ['status', 'preset']
     raw_id_fields = ['flock', 'country', 'created_by']
-    readonly_fields = ['public_token', 'magic_link', 'created_at']
+    readonly_fields = ['public_token', 'magic_link', 'created_at', 'results_sent_at']
     inlines = [FlockChallengeAttemptInline]
 
     def get_queryset(self, request):

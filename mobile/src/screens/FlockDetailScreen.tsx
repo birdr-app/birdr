@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import {
   View,
   Text,
@@ -10,6 +10,8 @@ import {
   RefreshControl,
   Alert,
   Share,
+  Switch,
+  AppState,
 } from 'react-native';
 import { useNavigation, useRoute, useFocusEffect } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
@@ -25,12 +27,15 @@ import {
   leaveFlock,
   flockChallengeShareUrl,
   buildFlockLeaderboardShareMessage,
+  setFlockNotifications,
+  updateFlock,
   type Flock,
   type FlockChallengeDetail,
 } from '../api/flocks';
 import { resolveMediaUrl } from '../api/config';
 import { getCountryDisplayName } from '../i18n/countryNames';
 import { colors } from '../theme';
+import { isPushPermissionGranted, requestPushPermissionAndRegister } from '../lib/notifications';
 
 export function FlockDetailScreen() {
   const navigation = useNavigation();
@@ -46,6 +51,54 @@ export function FlockDetailScreen() {
   const [actionLoading, setActionLoading] = useState(false);
   const [uploadingLogo, setUploadingLogo] = useState(false);
   const [leaving, setLeaving] = useState(false);
+  // null = not checked yet; re-checked when returning from the phone's Settings.
+  const [phonePushAllowed, setPhonePushAllowed] = useState<boolean | null>(null);
+  const [savingSetting, setSavingSetting] = useState<'notifications' | 'renew' | null>(null);
+
+  useEffect(() => {
+    const check = () => {
+      void isPushPermissionGranted().then(setPhonePushAllowed);
+    };
+    check();
+    const sub = AppState.addEventListener('change', (state) => {
+      if (state === 'active') check();
+    });
+    return () => sub.remove();
+  }, []);
+
+  const toggleNotifications = async (value: boolean) => {
+    if (!slug || !flock) return;
+    const previous = flock.notifications_enabled;
+    setSavingSetting('notifications');
+    setFlock({ ...flock, notifications_enabled: value });
+    try {
+      await setFlockNotifications(slug, value);
+      if (value) {
+        // Shows the phone's own permission prompt when possible; Settings only if it was denied before.
+        await requestPushPermissionAndRegister(t('flock_notifications_settings'));
+        setPhonePushAllowed(await isPushPermissionGranted());
+      }
+    } catch (e) {
+      setFlock((f) => (f ? { ...f, notifications_enabled: previous } : f));
+      Alert.alert(t('error'), e instanceof Error ? e.message : t('failed_load'));
+    } finally {
+      setSavingSetting(null);
+    }
+  };
+
+  const toggleAutoRenew = async (value: boolean) => {
+    if (!slug || !flock) return;
+    setSavingSetting('renew');
+    setFlock({ ...flock, auto_renew_challenges: value });
+    try {
+      setFlock(await updateFlock(slug, { auto_renew_challenges: value }));
+    } catch (e) {
+      setFlock((f) => (f ? { ...f, auto_renew_challenges: !value } : f));
+      Alert.alert(t('error'), e instanceof Error ? e.message : t('failed_load'));
+    } finally {
+      setSavingSetting(null);
+    }
+  };
 
   const load = useCallback(async () => {
     if (!slug) return;
@@ -414,6 +467,47 @@ export function FlockDetailScreen() {
         </View>
       )}
 
+      {flock.is_member ? (
+        <View style={styles.settingsCard}>
+          <View style={styles.switchRow}>
+            <View style={styles.switchText}>
+              <Text style={styles.switchTitle}>{t('flock_notifications')}</Text>
+              <Text style={styles.switchHint}>
+                {flock.notifications_enabled && phonePushAllowed === false
+                  ? t('flock_notifications_off_on_phone')
+                  : t('flock_notifications_hint')}
+              </Text>
+            </View>
+            <Switch
+              value={!!flock.notifications_enabled && phonePushAllowed !== false}
+              onValueChange={(v) => void toggleNotifications(v)}
+              disabled={savingSetting === 'notifications'}
+              trackColor={{ false: colors.primary[200], true: colors.primary[400] }}
+              thumbColor={flock.notifications_enabled && phonePushAllowed !== false ? colors.primary[700] : '#fff'}
+              ios_backgroundColor={colors.primary[200]}
+              testID="flock.notifications"
+            />
+          </View>
+          {flock.is_admin ? (
+            <View style={[styles.switchRow, styles.switchRowDivider]}>
+              <View style={styles.switchText}>
+                <Text style={styles.switchTitle}>{t('flock_auto_renew')}</Text>
+                <Text style={styles.switchHint}>{t('flock_auto_renew_hint')}</Text>
+              </View>
+              <Switch
+                value={!!flock.auto_renew_challenges}
+                onValueChange={(v) => void toggleAutoRenew(v)}
+                disabled={savingSetting === 'renew'}
+                trackColor={{ false: colors.primary[200], true: colors.primary[400] }}
+                thumbColor={flock.auto_renew_challenges ? colors.primary[700] : '#fff'}
+                ios_backgroundColor={colors.primary[200]}
+                testID="flock.autoRenew"
+              />
+            </View>
+          ) : null}
+        </View>
+      ) : null}
+
       {flock.history_path ? (
         <TouchableOpacity
           onPress={() => (navigation as any).navigate('FlockWeeklyProgress', { slug })}
@@ -440,6 +534,19 @@ export function FlockDetailScreen() {
 }
 
 const styles = StyleSheet.create({
+  settingsCard: {
+    marginTop: 16,
+    borderRadius: 14,
+    borderWidth: 2,
+    borderColor: colors.primary[200],
+    paddingHorizontal: 14,
+    backgroundColor: '#fff',
+  },
+  switchRow: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 12 },
+  switchRowDivider: { borderTopWidth: 1, borderTopColor: colors.primary[100] },
+  switchText: { flex: 1, gap: 2 },
+  switchTitle: { fontSize: 16, fontWeight: '700', color: colors.primary[800] },
+  switchHint: { fontSize: 13, color: colors.primary[600] },
   container: { flex: 1, backgroundColor: '#fff' },
   content: { padding: 24, paddingBottom: 48 },
   centered: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24 },

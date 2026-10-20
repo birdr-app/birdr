@@ -11,6 +11,7 @@ import {
   Heading,
   Image,
   Spinner,
+  Switch,
   Text,
 } from '@chakra-ui/react';
 import { FormattedMessage } from 'react-intl';
@@ -27,9 +28,11 @@ import {
   getFlockResultPath,
   getFlocksPath,
   leaveFlock,
+  setFlockNotifications,
   setFlockPlayContext,
   setStoredMainFlockSlug,
   startFlockChallenge,
+  updateFlock,
   updateFlockLogo,
   type ChallengeDetail,
   type Flock,
@@ -47,6 +50,34 @@ export function FlockDetailPage() {
   const logoInputRef = useRef<HTMLInputElement>(null);
 
   const [flock, setFlock] = useState<Flock | null>(null);
+  const [savingSetting, setSavingSetting] = useState<'notifications' | 'renew' | null>(null);
+
+  const toggleNotifications = async (value: boolean) => {
+    if (!slug || !flock) return;
+    const previous = flock.notifications_enabled;
+    setSavingSetting('notifications');
+    setFlock({ ...flock, notifications_enabled: value });
+    try {
+      await setFlockNotifications(slug, value);
+    } catch {
+      setFlock((f) => (f ? { ...f, notifications_enabled: previous } : f));
+    } finally {
+      setSavingSetting(null);
+    }
+  };
+
+  const toggleAutoRenew = async (value: boolean) => {
+    if (!slug || !flock) return;
+    setSavingSetting('renew');
+    setFlock({ ...flock, auto_renew_challenges: value });
+    try {
+      setFlock(await updateFlock(slug, { auto_renew_challenges: value }));
+    } catch {
+      setFlock((f) => (f ? { ...f, auto_renew_challenges: !value } : f));
+    } finally {
+      setSavingSetting(null);
+    }
+  };
   const [challengeDetail, setChallengeDetail] = useState<ChallengeDetail | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -478,6 +509,61 @@ export function FlockDetailPage() {
               ) : null}
             </Box>
           )}
+
+          {flock.is_member ? (
+            <Box borderWidth="2px" borderColor="primary.200" borderRadius="xl" px={4} py={2} mb={4}>
+              <Flex justify="space-between" align="center" gap={4} py={2}>
+                <Box>
+                  <Text fontWeight="700" color="primary.800">
+                    <FormattedMessage id="flock_notifications" defaultMessage="Notifications" />
+                  </Text>
+                  <Text fontSize="sm" color="primary.600">
+                    <FormattedMessage
+                      id="flock_notifications_hint"
+                      defaultMessage="New challenge, last day to play, and the results."
+                    />{' '}
+                    <FormattedMessage
+                      id="flock_notifications_web_note"
+                      defaultMessage="Notifications arrive in the Birdr mobile app."
+                    />
+                  </Text>
+                </Box>
+                <Switch.Root
+                  checked={!!flock.notifications_enabled}
+                  onCheckedChange={(e: { checked: boolean }) => void toggleNotifications(e.checked === true)}
+                  disabled={savingSetting === 'notifications'}
+                  colorPalette="primary"
+                >
+                  <Switch.HiddenInput />
+                  <Switch.Control />
+                </Switch.Root>
+              </Flex>
+              {flock.is_admin ? (
+                <Flex justify="space-between" align="center" gap={4} py={2} borderTopWidth="1px" borderColor="primary.100">
+                  <Box>
+                    <Text fontWeight="700" color="primary.800">
+                      <FormattedMessage id="flock_auto_renew" defaultMessage="Auto-renew challenges" />
+                    </Text>
+                    <Text fontSize="sm" color="primary.600">
+                      <FormattedMessage
+                        id="flock_auto_renew_hint"
+                        defaultMessage="When a challenge ends, a new one starts with the same title, country and length."
+                      />
+                    </Text>
+                  </Box>
+                  <Switch.Root
+                    checked={!!flock.auto_renew_challenges}
+                    onCheckedChange={(e: { checked: boolean }) => void toggleAutoRenew(e.checked === true)}
+                    disabled={savingSetting === 'renew'}
+                    colorPalette="primary"
+                  >
+                    <Switch.HiddenInput />
+                    <Switch.Control />
+                  </Switch.Root>
+                </Flex>
+              ) : null}
+            </Box>
+          ) : null}
 
           {flock.history_path ? (
             <Button

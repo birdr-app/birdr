@@ -765,5 +765,11 @@
   "more_ways_to_play": "その他の遊び方",
   "show_all_game_modes": "すべてのゲームモードを表示",
   "show_all_game_modes_hint": "ホームとメニューにサバイバル、ナショナルリーグなどを表示します。",
-  "game_modes_unlocked": "🎉 新しいゲームモードが解放されました：サバイバルとナショナルリーグ！"
+  "game_modes_unlocked": "🎉 新しいゲームモードが解放されました：サバイバルとナショナルリーグ！",
+  "flock_notifications": "通知",
+  "flock_notifications_hint": "新しいチャレンジ、最終日のお知らせ、結果をお届けします。",
+  "flock_notifications_off_on_phone": "この端末ではオフになっています。スイッチをタップしてオンにしてください。",
+  "flock_notifications_settings": "この端末ではBirdrの通知がオフになっています。設定でオンにすると、新しいチャレンジや結果をお知らせします。",
+  "flock_auto_renew": "チャレンジを自動更新",
+  "flock_auto_renew_hint": "チャレンジが終わると、同じタイトル・国・期間で新しいチャレンジが始まります。"
 }

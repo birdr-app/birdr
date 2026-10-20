@@ -121,6 +121,7 @@ from jizz.daily_challenge_views import (
 )
 from jizz.mobile_push.views import PushRegisterView
 from jizz.flock_views import (
+    FlockMyMembershipView,
     FlockListCreateView,
     FlockDetailView,
     FlockProgressView,
@@ -559,6 +560,7 @@ urlpatterns = [
         name='flock-member-detail',
     ),
     path('api/flocks/<slug:slug>/leave/', FlockLeaveView.as_view(), name='flock-leave'),
+    path('api/flocks/<slug:slug>/membership/', FlockMyMembershipView.as_view(), name='flock-my-membership'),
     path('api/flocks/<slug:slug>/invite/', FlockInviteRotateView.as_view(), name='flock-invite-rotate'),
     path('api/flocks/<slug:slug>/challenges/', FlockChallengeCreateView.as_view(), name='flock-challenge-create'),
     path(

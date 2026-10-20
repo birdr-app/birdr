@@ -5,6 +5,7 @@ from __future__ import annotations
 from django.core.cache import cache
 from django.db.models import Q
 
+from jizz import league
 from jizz.country_challenge_leaderboard import country_challenge_leaderboard
 from jizz.games_played_stats import games_played_for_country
 from jizz.marketing.slugs import compare_pair_slug
@@ -117,6 +118,21 @@ def confusion_pairs(country_code: str | None = None, *, limit: int = TOP_N) -> l
     return out
 
 
+def _league_week_rows(country, *, limit: int = TOP_N) -> list[dict]:
+    today = league.league_local_now(country).date()
+    week_start = league.week_start_for(today)
+    rows = league.week_standings(country, week_start)[:limit]
+    return [
+        {
+            'rank': row.rank,
+            'name': row.name,
+            'score': row.score,
+            'days_played': row.days_played,
+        }
+        for row in rows
+    ]
+
+
 def country_page_stats(country, *, request=None) -> dict:
     code = country.code
     played = games_played_for_country(code)
@@ -128,6 +144,7 @@ def country_page_stats(country, *, request=None) -> dict:
     )
     missed = missed_birds(code)
     pairs = confusion_pairs(code)
+    league_rows = _league_week_rows(country)
     return {
         'games_played': played['games'],
         'players_played': played['players'],
@@ -139,6 +156,10 @@ def country_page_stats(country, *, request=None) -> dict:
         'challenge_rows': challenge,
         'show_challenge': bool(challenge),
         'challenge_leaderboard_href': f'/data/country-challenge-leaderboard/?country={code}',
+        'league_rows': league_rows,
+        'show_league': True,
+        'league_href': f'/league/{code}',
+        'league_leaderboard_href': f'/league/{code}/leaderboard',
         'missed_birds': missed,
         'show_missed': bool(missed),
         'missed_href': f'/data/quiz-mistakes/species/?country={code}',

@@ -132,11 +132,7 @@
 {% if countries %}
 <section>
   <h2>{% mt "Countries on Birdr" %}</h2>
-  <div class="country-pills">
-    {% for c in countries %}
-    <a href="{{ c.url|mpath }}">{{ c.name }}</a>
-    {% endfor %}
-  </div>
+  {% include "marketing/_country_pills.html" %}
 </section>
 {% endif %}
 <section class="band">

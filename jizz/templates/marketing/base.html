@@ -767,6 +767,20 @@
       gap: 16px;
       margin: 24px 0 8px;
     }
+    .grid.game-modes {
+      grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+    }
+    .lead-inline {
+      max-width: 42rem;
+      color: var(--birdr-800);
+      margin: 0 0 4px;
+    }
+    .suggest-game {
+      margin: 28px 0 8px;
+    }
+    .suggest-game .feedback-form {
+      margin-top: 12px;
+    }
     .grid-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -1357,16 +1371,45 @@
     .tox-tinymce-aux { z-index: 50 !important; }
     ul.plain { padding-left: 1.2rem; columns: 2; column-gap: 32px; }
     @media (max-width: 640px) { ul.plain { columns: 1; } }
-    .country-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .country-pills {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+      gap: 10px;
+      margin: 16px 0 8px;
+    }
     .country-pills a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       text-decoration: none;
       background: #fff;
       border: 1px solid rgba(212, 184, 138, 0.55);
-      border-radius: 999px;
-      padding: 6px 12px;
+      border-radius: 12px;
+      padding: 10px 12px;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
+      line-height: 1.25;
       box-shadow: 0 4px 14px rgba(49, 34, 10, 0.08);
+      min-height: 2.75rem;
+    }
+    .country-pills .country-flag {
+      flex: 0 0 auto;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+    @media (max-width: 700px) {
+      .country-pills {
+        grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+        gap: 8px;
+      }
+      .country-pills a {
+        font-size: 0.88rem;
+        padding: 8px 10px;
+      }
+    }
+    .league-empty {
+      margin: 8px 0 0;
+      color: var(--birdr-700);
     }
     .quote-body {
       position: relative;

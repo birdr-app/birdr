@@ -113,9 +113,10 @@ def _localize_featured_comparisons(rows: list[dict], locale: str | None) -> list
 def _indexable_countries():
     from django.db.models import Count
 
+    from jizz.league import flag_emoji
     from jizz.marketing.pages import MARKETING_QUERY_CACHE_TTL
 
-    cached = cache.get('marketing-indexable-countries')
+    cached = cache.get('marketing-indexable-countries-v2')
     if cached is not None:
         return cached
     rows = []
@@ -135,11 +136,12 @@ def _indexable_countries():
         rows.append({
             'name': country.name,
             'code': country.code,
+            'flag': flag_emoji(country.code),
             'slug': slug,
             'count': country.species_n,
             'url': reverse('marketing-country', kwargs={'slug': slug}),
         })
-    cache.set('marketing-indexable-countries', rows, MARKETING_QUERY_CACHE_TTL)
+    cache.set('marketing-indexable-countries-v2', rows, MARKETING_QUERY_CACHE_TTL)
     return rows
 
 
@@ -698,9 +700,12 @@ def site_feedback(request):
     from jizz.marketing.feedback import clean_email, looks_like_spam, safe_next_path
 
     next_path = safe_next_path(request.POST.get('next'), _loc(request, SITE_HOME))
+    anchor = (request.POST.get('anchor') or 'help').strip()
+    if not anchor.replace('-', '').isalnum():
+        anchor = 'help'
 
     def done(flag='1'):
-        return redirect(f'{next_path}?sent={flag}#help')
+        return redirect(f'{next_path}?sent={flag}#{anchor}')
 
     comment = (request.POST.get('comment') or '').strip()
     name = (request.POST.get('name') or '').strip()[:120]

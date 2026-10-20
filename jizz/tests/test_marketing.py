@@ -121,17 +121,30 @@ class MarketingPagesTests(TestCase):
         self.assertIn('href="/play"', html)
         self.assertIn('/images/birdr-quiz.png', html)
         self.assertIn('What you can play', html)
-        self.assertIn('Sound quizzes', html)
-        self.assertIn('passerine sound quizzes', html)
+        self.assertIn('Normal quizzes', html)
+        self.assertIn('full control', html)
+        self.assertIn('Country Challenge', html)
+        self.assertIn('end is really tough', html)
+        self.assertIn('Survival', html)
+        self.assertIn('One wrong answer', html)
+        self.assertIn('href="/survival"', html)
+        self.assertIn('National League', html)
+        self.assertIn('daily quiz', html)
+        self.assertIn('href="/league"', html)
+        self.assertIn('Flocks', html)
+        self.assertIn('entire week', html)
+        self.assertIn('My Tricky Birds', html)
+        self.assertIn('Difficult species', html)
         self.assertIn('Multiplayer', html)
         self.assertIn('two or more players', html)
-        self.assertIn('Faster correct answers score more points', html)
         self.assertIn('High scores', html)
-        self.assertIn('See how you rank', html)
         self.assertIn('href="/scores/"', html)
-        self.assertIn('My checklist', html)
-        self.assertIn('named correctly in your country', html)
         self.assertIn('href="/checklist"', html)
+        self.assertIn('Suggest a game type', html)
+        self.assertIn('id="suggest-game"', html)
+        self.assertIn('name="anchor"', html)
+        self.assertIn('value="suggest-game"', html)
+        self.assertIn('Send idea', html)
 
     def test_header_uses_birdr_icon_and_favicon(self):
         html = self.client.get('/site/').content.decode()
@@ -249,6 +262,14 @@ class MarketingPagesTests(TestCase):
         flocks = self.client.get('/site/flocks/').content.decode()
         self.assertIn('Flocks: quizzes for bird clubs', flocks)
         self.assertIn('/flocks/intro', flocks)
+
+        by_country = self.client.get('/site/bird-quiz-by-country/').content.decode()
+        self.assertIn('National League is the real competition', by_country)
+        self.assertIn('href="/league"', by_country)
+        self.assertIn('Open the National League', by_country)
+        self.assertIn('class="country-pills"', by_country)
+        self.assertIn('class="country-flag"', by_country)
+        self.assertIn('Netherlands', by_country)
 
         community = self.client.get('/site/community/').content.decode()
         self.assertIn('How can I help?', community)
@@ -378,12 +399,16 @@ class MarketingPagesTests(TestCase):
         self.assertIn('Netherlands', html)
         self.assertIn('Start a quiz', html)
         self.assertIn('Country Challenge', html)
+        self.assertIn('National League', html)
+        self.assertIn('/league/NL', html)
+        self.assertIn('No one has played this week', html)
+        self.assertIn('Play today’s National League quiz', html)
         self.assertIn('/media-review/NL', html)
         self.assertIn('Review Netherlands photos', html)
         self.assertIn('Spread the word', html)
         self.assertIn('/site/newsletter/', html)
         self.assertNotIn('Example newsletter item', html)
-        self.assertNotIn('How people play', html)
+        self.assertIn('How people play in Netherlands', html)
         self.assertNotIn('High scores', html)
         self.assertEqual(self.client.get('/site/countries/world/').status_code, 404)
         self.assertEqual(self.client.get('/site/countries/north-holland/').status_code, 404)
@@ -512,12 +537,55 @@ class MarketingPagesTests(TestCase):
         self.assertIn('/scores/?country=NL', html)
         self.assertIn('Country Challenge', html)
         self.assertIn('/data/country-challenge-leaderboard/?country=NL', html)
+        self.assertIn('National League', html)
+        self.assertIn('/league/NL', html)
         self.assertIn('Most missed birds', html)
         self.assertIn('Eurasian Sparrowhawk', html)
         self.assertIn('Confusing pairs', html)
         self.assertIn('vs', html)
         self.assertIn('/data/quiz-mistakes/species/?country=NL', html)
         self.assertIn('/data/quiz-mistakes/pairs/?country=NL', html)
+
+    def test_country_page_national_league_standings(self):
+        from django.contrib.auth.models import User
+        from django.utils import timezone
+
+        from jizz import league
+        from jizz.models import Game, LeagueAttempt, LeagueDay, Player
+
+        CountrySpecies.objects.filter(country=self.nl).update(status='native')
+        if not self.nl.timezone:
+            self.nl.timezone = 'Europe/Amsterdam'
+            self.nl.save(update_fields=['timezone'])
+        user = User.objects.create_user('league-ada', password='x', first_name='Ada')
+        player = Player.objects.create(name='Ada League', language='en', user=user)
+        today = league.league_local_now(self.nl).date()
+        day = LeagueDay.objects.create(country=self.nl, date=today, length=10)
+        game = Game.objects.create(
+            country=self.nl,
+            level='advanced',
+            length=10,
+            media='images',
+            multiplayer=False,
+            game_type=Game.GAME_TYPE_LEAGUE,
+        )
+        LeagueAttempt.objects.create(
+            day=day,
+            user=user,
+            player=player,
+            game=game,
+            correct_count=8,
+            score=2400,
+            completed_at=timezone.now(),
+        )
+
+        html = self.client.get('/site/countries/netherlands/').content.decode()
+        self.assertIn('National League', html)
+        self.assertIn('Ada League', html)
+        self.assertIn('2400', html)
+        self.assertIn('Full National League standings', html)
+        self.assertIn('/league/NL/leaderboard', html)
+        self.assertNotIn('No one has played this week', html)
 
     def test_bird_and_compare_pages(self):
         self.sparrow.refresh_from_db()
@@ -1323,6 +1391,20 @@ class MarketingFeedbackFormTests(TestCase):
         self.assertEqual(feedback.contact_email, 'ada@example.com')
         self.assertEqual(len(mail.outbox), 1)
         self.assertEqual(mail.outbox[0].reply_to, ['Ada <ada@example.com>'])
+
+    def test_suggest_game_anchor_redirect(self):
+        response = self.client.post(
+            '/site/feedback/',
+            {
+                'comment': 'A memory game for calls',
+                'started': _started_token(),
+                'next': '/site/',
+                'anchor': 'suggest-game',
+                'website': '',
+            },
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response['Location'], '/site/?sent=1#suggest-game')
 
     def test_honeypot_is_dropped(self):
         from jizz.models import Feedback

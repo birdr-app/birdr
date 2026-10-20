@@ -659,5 +659,12 @@
   "modes_unlocked_title": "🎉 Nouveaux modes de jeu débloqués !",
   "modes_unlocked_body": "Survie et la Ligue nationale sont maintenant sur ton écran d'accueil. Amuse-toi bien !",
   "profile_show_all_modes": "Afficher tous les modes de jeu",
-  "profile_show_all_modes_hint": "Tous les modes de jeu en grand sur l'accueil et dans les menus. Désactivé : ils apparaissent après tes premières parties."
+  "profile_show_all_modes_hint": "Tous les modes de jeu en grand sur l'accueil et dans les menus. Désactivé : ils apparaissent après tes premières parties.",
+  "flock_notifications": "Notifications",
+  "flock_notifications_hint": "Nouveau défi, dernier jour pour jouer et les résultats.",
+  "flock_notifications_off_on_phone": "Désactivées sur ce téléphone. Touche l’interrupteur pour les activer.",
+  "flock_notifications_settings": "Les notifications de Birdr sont désactivées sur ce téléphone. Active-les dans Réglages pour être averti des nouveaux défis et résultats.",
+  "flock_auto_renew": "Renouveler les défis automatiquement",
+  "flock_auto_renew_hint": "Quand un défi se termine, un nouveau démarre avec le même titre, le même pays et la même durée.",
+  "flock_notifications_web_note": "Les notifications arrivent dans l’application mobile Birdr."
 }

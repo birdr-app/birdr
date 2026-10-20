@@ -131,11 +131,7 @@
 <section>
   <h2>{% mt "Browse by country" %}</h2>
   <p>{% mt "Open a country list, then quiz on the birds you will actually meet." %}</p>
-  <div class="country-pills">
-    {% for c in countries %}
-    <a href="{{ c.url|mpath }}">{{ c.name }}</a>
-    {% endfor %}
-  </div>
+  {% include "marketing/_country_pills.html" %}
   <p><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "All country quizzes" %}</a></p>
 </section>
 {% endif %}

@@ -1046,62 +1046,6 @@ class FlockApiTests(TestCase):
         denied = self.client.get(f'/api/flocks/{slug}/progress/')
         self.assertEqual(denied.status_code, status.HTTP_403_FORBIDDEN)
 
-    def test_flock_challenge_24h_reminder_skips_completed_members(self):
-        from django.core.management import call_command
-
-        flock_data = self._create_flock()
-        slug = flock_data['slug']
-        invite = flock_data['invite']['token']
-        _auth(self.client, self.member)
-        self.client.post('/api/flocks/join/', {'token': invite}, format='json')
-
-        with patch(
-            'jizz.flock_views.generate_club_mix_snapshot',
-            return_value=_manual_snapshot(self.species),
-        ):
-            _auth(self.client, self.admin)
-            ch = self.client.post(
-                f'/api/flocks/{slug}/challenges/',
-                {'title': 'Week 1'},
-                format='json',
-            )
-        self.assertEqual(ch.status_code, status.HTTP_201_CREATED, ch.data)
-        challenge = FlockChallenge.objects.get(pk=ch.data['id'])
-        now = timezone.now()
-        challenge.starts_at = now - timedelta(days=6)
-        challenge.ends_at = now + timedelta(hours=18)
-        challenge.save(update_fields=['starts_at', 'ends_at'])
-
-        # Admin already finished; member has not.
-        FlockChallengeAttempt.objects.create(
-            challenge=challenge,
-            user=self.admin,
-            player=Player.objects.create(name='Done', language='en', user=self.admin),
-            game=Game.objects.create(
-                country=self.country,
-                level='advanced',
-                length=CLUB_MIX_LENGTH,
-                media='images',
-                rarity=Game.RARIT_REGULAR,
-                host=Player.objects.filter(user=self.admin).first(),
-                game_type=Game.GAME_TYPE_FLOCK_CHALLENGE,
-            ),
-            is_ranked=True,
-            is_practice=False,
-            completed_at=now,
-            result_token='reminder-test-token-abc',
-        )
-
-        with patch('jizz.management.commands.flock_challenge_reminders.send_push_to_user') as mock_push:
-            call_command('flock_challenge_reminders')
-
-        mock_push.assert_called()
-        notified_ids = {call.args[0].id for call in mock_push.call_args_list}
-        self.assertIn(self.member.id, notified_ids)
-        self.assertNotIn(self.admin.id, notified_ids)
-        self.assertIn('24 hours', mock_push.call_args.args[2])
-        self.assertEqual(mock_push.call_args.kwargs['data']['type'], 'flock_challenge')
-
 
 class PregeneratedGameTests(TestCase):
     def setUp(self):

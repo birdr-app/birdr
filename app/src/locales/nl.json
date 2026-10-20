@@ -661,5 +661,12 @@
   "modes_unlocked_title": "🎉 Nieuwe spelvormen vrijgespeeld!",
   "modes_unlocked_body": "Survival en de nationale competitie staan nu op je beginscherm. Veel plezier!",
   "profile_show_all_modes": "Toon alle spelvormen",
-  "profile_show_all_modes_hint": "Alle spelvormen groot op het beginscherm en in de menu’s. Uit: ze verschijnen na je eerste paar spellen."
+  "profile_show_all_modes_hint": "Alle spelvormen groot op het beginscherm en in de menu’s. Uit: ze verschijnen na je eerste paar spellen.",
+  "flock_notifications": "Meldingen",
+  "flock_notifications_hint": "Nieuwe challenge, laatste dag om te spelen en de uitslag.",
+  "flock_notifications_off_on_phone": "Staat uit op deze telefoon. Tik op de schakelaar om ze aan te zetten.",
+  "flock_notifications_settings": "Meldingen voor Birdr staan uit op deze telefoon. Zet ze aan in Instellingen om te horen over nieuwe challenges en uitslagen.",
+  "flock_auto_renew": "Challenges automatisch verlengen",
+  "flock_auto_renew_hint": "Als een challenge afloopt, start er een nieuwe met dezelfde titel, hetzelfde land en dezelfde duur.",
+  "flock_notifications_web_note": "Meldingen komen binnen in de Birdr-app op je telefoon."
 }

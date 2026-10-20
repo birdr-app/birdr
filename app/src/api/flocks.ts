@@ -45,6 +45,10 @@ export type Flock = {
   active_challenge: FlockChallengeSummary | null;
   challenge_count?: number;
   history_path?: string | null;
+  /** Admins: a new challenge starts automatically when one ends. */
+  auto_renew_challenges?: boolean;
+  /** This member's push setting for the flock (null when not a member). */
+  notifications_enabled?: boolean | null;
   invite?: FlockInvite | null;
 };
 
@@ -497,9 +501,22 @@ export async function updateFlockMemberRole(
   return data as FlockMember;
 }
 
+/** A member's own push setting for this flock (pushes arrive in the mobile app). */
+export async function setFlockNotifications(slug: string, enabled: boolean): Promise<boolean> {
+  const response = await flockRequest(apiUrl(`/api/flocks/${slug}/membership/`), {
+    method: 'PATCH',
+    body: JSON.stringify({ notifications_enabled: enabled }),
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    throw new Error(parseError(data, 'Failed to update notifications'));
+  }
+  return !!data.notifications_enabled;
+}
+
 export async function updateFlock(
   slug: string,
-  patch: Partial<{ name: string; country_code: string }>
+  patch: Partial<{ name: string; country_code: string; auto_renew_challenges: boolean }>
 ): Promise<Flock> {
   const response = await flockRequest(apiUrl(`/api/flocks/${slug}/`), {
     method: 'PATCH',

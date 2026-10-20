@@ -765,5 +765,11 @@
   "more_ways_to_play": "Weitere Spielmöglichkeiten",
   "show_all_game_modes": "Alle Spielmodi anzeigen",
   "show_all_game_modes_hint": "Zeigt Survival, die Nationalliga und mehr auf der Startseite und in den Menüs.",
-  "game_modes_unlocked": "🎉 Neue Spielmodi freigeschaltet: Survival und die Nationalliga!"
+  "game_modes_unlocked": "🎉 Neue Spielmodi freigeschaltet: Survival und die Nationalliga!",
+  "flock_notifications": "Benachrichtigungen",
+  "flock_notifications_hint": "Neue Challenge, letzter Spieltag und die Ergebnisse.",
+  "flock_notifications_off_on_phone": "Auf diesem Telefon ausgeschaltet. Tippe auf den Schalter, um sie einzuschalten.",
+  "flock_notifications_settings": "Benachrichtigungen für Birdr sind auf diesem Telefon ausgeschaltet. Schalte sie in den Einstellungen ein, um von neuen Challenges und Ergebnissen zu erfahren.",
+  "flock_auto_renew": "Challenges automatisch verlängern",
+  "flock_auto_renew_hint": "Wenn eine Challenge endet, startet eine neue mit gleichem Titel, Land und gleicher Dauer."
 }

@@ -32,6 +32,7 @@
       <form class="feedback-form" method="post" action="{{ '/site/feedback/'|mpath }}">
         {% csrf_token %}
         <input type="hidden" name="next" value="{{ request.path }}">
+        <input type="hidden" name="anchor" value="help">
         <input type="hidden" name="started" value="{{ feedback_started }}">
         <p class="hp-field">
           <label for="feedback-website">{% mt "Website" %}</label>
