@@ -253,6 +253,34 @@ def open_app_redirect(request):
     })
 
 
+def _open_in_app_or_web(request, web_path, deep_link):
+    """Try the app deep link on mobile; go straight to the website on desktop."""
+    from jizz.services.species_cover import absolute_media_url
+    from jizz.usage_analytics import parse_device_type
+
+    fallback_url = absolute_media_url(web_path, request)
+    device = parse_device_type(request.META.get('HTTP_USER_AGENT', ''))
+    if device == 'desktop':
+        return HttpResponseRedirect(fallback_url)
+    return render(request, 'jizz/join_redirect.html', {
+        'deep_link': deep_link,
+        'fallback_url': fallback_url,
+    })
+
+
+def open_survival_redirect(request):
+    """Open the Survival start screen in the app on mobile, /survival on the web."""
+    return _open_in_app_or_web(request, '/survival', 'birdr://survival')
+
+
+def open_league_redirect(request, country_code=None):
+    """Open the National league (optionally a country's) in the app on mobile, /league on the web."""
+    if country_code:
+        code = country_code.upper()
+        return _open_in_app_or_web(request, f'/league/{code}', f'birdr://league/{code}')
+    return _open_in_app_or_web(request, '/league', 'birdr://league')
+
+
 urlpatterns = [
     path('robots.txt', robots_txt, name='marketing-robots'),
     path('sitemap.xml', marketing_sitemaps.sitemap_index, name='marketing-sitemap'),
@@ -372,6 +400,9 @@ urlpatterns = [
     path('g/<str:token>/og.png', game_result_og_image, name='game-result-og'),
     path('open/update/<int:pk>/', open_update_redirect, name='open-update'),
     path('open/app/', open_app_redirect, name='open-app'),
+    path('open/survival/', open_survival_redirect, name='open-survival'),
+    path('open/league/', open_league_redirect, name='open-league'),
+    re_path(r'^open/league/(?P<country_code>[A-Za-z0-9-]{2,10})/$', open_league_redirect, name='open-league-country'),
 
     path('admin/', admin.site.urls),
 

@@ -83,6 +83,16 @@
             {
               "scheme": "https",
               "host": "birdr.pro",
+              "pathPrefix": "/open/survival/"
+            },
+            {
+              "scheme": "https",
+              "host": "birdr.pro",
+              "pathPrefix": "/open/league/"
+            },
+            {
+              "scheme": "https",
+              "host": "birdr.pro",
               "pathPrefix": "/flocks/results/"
             },
             {

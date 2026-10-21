@@ -4,7 +4,7 @@
     "details": [
       {
         "appID": "Z886G5H7D2.pro.birdr.app",
-        "paths": ["/join/*", "/join/challenge/*", "/join/flock/*", "/open/update/*", "/open/app/*", "/flocks/results/*", "/flocks/c/*", "/g/*"]
+        "paths": ["/join/*", "/join/challenge/*", "/join/flock/*", "/open/update/*", "/open/app/*", "/open/survival/*", "/open/league/*", "/flocks/results/*", "/flocks/c/*", "/g/*"]
       }
     ]
   }

@@ -191,6 +191,48 @@ class JoinRedirectTestCase(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertIn(b'birdr://home', response.content)
 
+    def test_open_survival_redirect_desktop_goes_to_web(self):
+        response = self.client.get(
+            '/open/survival/',
+            HTTP_USER_AGENT='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
+        )
+        self.assertEqual(response.status_code, status.HTTP_302_FOUND)
+        self.assertTrue(response['Location'].endswith('/survival'))
+
+    def test_open_survival_redirect_mobile_tries_app(self):
+        response = self.client.get(
+            '/open/survival/',
+            HTTP_USER_AGENT='Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)',
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertIn(b'birdr://survival', response.content)
+        self.assertIn(b'/survival', response.content)
+
+    def test_open_league_redirect_desktop_goes_to_web(self):
+        response = self.client.get(
+            '/open/league/',
+            HTTP_USER_AGENT='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
+        )
+        self.assertEqual(response.status_code, status.HTTP_302_FOUND)
+        self.assertTrue(response['Location'].endswith('/league'))
+
+    def test_open_league_country_redirect_desktop_goes_to_country_league(self):
+        response = self.client.get(
+            '/open/league/nl/',
+            HTTP_USER_AGENT='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
+        )
+        self.assertEqual(response.status_code, status.HTTP_302_FOUND)
+        self.assertTrue(response['Location'].endswith('/league/NL'))
+
+    def test_open_league_redirect_mobile_tries_app(self):
+        response = self.client.get(
+            '/open/league/NL/',
+            HTTP_USER_AGENT='Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)',
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertIn(b'birdr://league/NL', response.content)
+        self.assertIn(b'/league/NL', response.content)
+
 
 class WellKnownTestCase(TestCase):
     """GET .well-known/apple-app-site-association and assetlinks.json."""
@@ -203,6 +245,9 @@ class WellKnownTestCase(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertIn('application/json', response.get('Content-Type', ''))
         self.assertIn('applinks', response.json())
+        paths = response.json()['applinks']['details'][0]['paths']
+        for path in ('/open/app/*', '/open/survival/*', '/open/league/*'):
+            self.assertIn(path, paths)
 
     def test_assetlinks_returns_200(self):
         response = self.client.get('/.well-known/assetlinks.json')

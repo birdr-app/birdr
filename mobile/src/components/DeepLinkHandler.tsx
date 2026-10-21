@@ -6,6 +6,7 @@ import { useGame } from '../context/GameContext';
 import { API_BASE_URL } from '../api/config';
 import { parseFlockJoinUrl } from '../api/flocks';
 import { parseGameShareUrl } from '../api/gameShare';
+import { routeForOpenUrl } from '../lib/deepLinkRoute';
 
 /**
  * Handles deep links:
@@ -15,6 +16,8 @@ import { parseGameShareUrl } from '../api/gameShare';
  * - Flock invite: birdr://join/flock/{token} or https://birdr.pro/join/flock/{token}/
  * - Update: birdr://updates/{id} or https://birdr.pro/open/update/{id}/
  * - Game result share: https://birdr.pro/g/{token} or birdr://g/{token}
+ * - Survival: https://birdr.pro/open/survival/ or birdr://survival
+ * - League: https://birdr.pro/open/league/[{countryCode}/] or birdr://league[/{countryCode}]
  */
 export function DeepLinkHandler({ children }: { children: React.ReactNode }) {
   const { handleOAuthRedirect, isAuthenticated } = useAuth();
@@ -43,6 +46,13 @@ export function DeepLinkHandler({ children }: { children: React.ReactNode }) {
       if (parseAppHomeUrl(url)) {
         handled.current = url;
         navigation.navigate('Home');
+        return;
+      }
+
+      const openRoute = routeForOpenUrl(url);
+      if (openRoute) {
+        handled.current = url;
+        navigation.navigate(openRoute.name, openRoute.params);
         return;
       }
 
