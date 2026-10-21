@@ -671,5 +671,10 @@
   "survival_missed_title": "Hier endete die Serie von {name}",
   "survival_missed_correct": "Es war",
   "survival_missed_answered": "Geantwortet",
-  "survival_missed_timeout": "⏱ Die Zeit war um"
+  "survival_missed_timeout": "⏱ Die Zeit war um",
+  "delete_account": "Konto löschen",
+  "delete_account_confirm_title": "Konto löschen?",
+  "delete_account_confirm_message": "Dein Konto wird dauerhaft gelöscht. Spielername, Punkte und Spiele bleiben erhalten, sind aber nicht mehr mit dir verknüpft. Du kannst dich später neu registrieren.",
+  "delete_account_button": "Mein Konto löschen",
+  "failed_delete_account": "Konto konnte nicht gelöscht werden"
 }

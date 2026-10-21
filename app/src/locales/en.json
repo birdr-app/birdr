@@ -674,5 +674,10 @@
   "survival_missed_title": "{name}'s run ended here",
   "survival_missed_correct": "It was",
   "survival_missed_answered": "They answered",
-  "survival_missed_timeout": "⏱ Ran out of time"
+  "survival_missed_timeout": "⏱ Ran out of time",
+  "delete_account": "Delete account",
+  "delete_account_confirm_title": "Delete account?",
+  "delete_account_confirm_message": "Your account will be permanently deleted. Your player name, scores and games will be kept but will no longer be linked to you. You can sign up again later.",
+  "delete_account_button": "Delete my account",
+  "failed_delete_account": "Failed to delete account"
 }

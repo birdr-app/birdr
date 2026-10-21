@@ -673,5 +673,10 @@
   "survival_missed_title": "Hier eindigde de reeks van {name}",
   "survival_missed_correct": "Het was",
   "survival_missed_answered": "Antwoord gegeven",
-  "survival_missed_timeout": "⏱ De tijd was op"
+  "survival_missed_timeout": "⏱ De tijd was op",
+  "delete_account": "Account verwijderen",
+  "delete_account_confirm_title": "Account verwijderen?",
+  "delete_account_confirm_message": "Je account wordt permanent verwijderd. Je spelersnaam, scores en spellen blijven bewaard maar worden niet meer aan jou gekoppeld. Je kunt later opnieuw registreren.",
+  "delete_account_button": "Mijn account verwijderen",
+  "failed_delete_account": "Account verwijderen mislukt"
 }

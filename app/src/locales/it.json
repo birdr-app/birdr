@@ -671,5 +671,10 @@
   "survival_missed_title": "Qui è finita la serie di {name}",
   "survival_missed_correct": "Era",
   "survival_missed_answered": "Ha risposto",
-  "survival_missed_timeout": "⏱ Tempo scaduto"
+  "survival_missed_timeout": "⏱ Tempo scaduto",
+  "delete_account": "Elimina account",
+  "delete_account_confirm_title": "Eliminare l'account?",
+  "delete_account_confirm_message": "Il tuo account verrà eliminato in modo permanente. Il nome giocatore, i punteggi e le partite resteranno, ma non saranno più collegati a te. Potrai registrarti di nuovo in seguito.",
+  "delete_account_button": "Elimina il mio account",
+  "failed_delete_account": "Eliminazione dell'account non riuscita"
 }

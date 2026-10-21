@@ -133,6 +133,18 @@ class ProfileService {
     }
   }
 
+  /**
+   * Delete the current user's account. Players, scores and games are kept but unlinked.
+   */
+  async deleteAccount(): Promise<void> {
+    try {
+      await authService.ensureValidAccessToken();
+      await axios.delete(`${this.baseURL}/api/profile/`);
+    } catch (error: any) {
+      throw this.handleError(error);
+    }
+  }
+
   private handleError(error: any): Error {
     if (axios.isAxiosError(error) && error.response) {
       const message = error.response.data?.error || 

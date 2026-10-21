@@ -671,5 +671,10 @@
   "survival_missed_title": "{name}さんの連続記録はここで終了",
   "survival_missed_correct": "正解",
   "survival_missed_answered": "回答",
-  "survival_missed_timeout": "⏱ 時間切れ"
+  "survival_missed_timeout": "⏱ 時間切れ",
+  "delete_account": "アカウントを削除",
+  "delete_account_confirm_title": "アカウントを削除しますか？",
+  "delete_account_confirm_message": "アカウントは完全に削除されます。プレイヤー名、スコア、ゲームは残りますが、あなたとは紐づかなくなります。あとから再登録できます。",
+  "delete_account_button": "アカウントを削除",
+  "failed_delete_account": "アカウントを削除できませんでした"
 }

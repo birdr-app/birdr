@@ -671,5 +671,10 @@
   "survival_missed_title": "La série de {name} s’est arrêtée ici",
   "survival_missed_correct": "C’était",
   "survival_missed_answered": "Réponse donnée",
-  "survival_missed_timeout": "⏱ Temps écoulé"
+  "survival_missed_timeout": "⏱ Temps écoulé",
+  "delete_account": "Supprimer le compte",
+  "delete_account_confirm_title": "Supprimer le compte ?",
+  "delete_account_confirm_message": "Ton compte sera définitivement supprimé. Ton nom de joueur, tes scores et tes parties seront conservés mais ne seront plus liés à toi. Tu pourras t’inscrire à nouveau plus tard.",
+  "delete_account_button": "Supprimer mon compte",
+  "failed_delete_account": "Impossible de supprimer le compte"
 }

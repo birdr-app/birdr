@@ -17,6 +17,7 @@ import {
   Switch,
   Flex,
   Image,
+  Dialog,
 } from "@chakra-ui/react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useNavigate } from "react-router-dom";
@@ -59,6 +60,8 @@ export const ProfilePage = () => {
   const [appLanguage, setAppLanguage] = useState<AppLocale>("en");
   const [timezone, setTimezone] = useState("Europe/Amsterdam");
   const [countryCode, setCountryCode] = useState<string | null>(null);
+  const [deleteOpen, setDeleteOpen] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const [visualStyle, setVisualStyleLocal] = useState<VisualStyle>(contextVisualStyle ?? "classic");
 
   useEffect(() => {
@@ -200,6 +203,21 @@ export const ProfilePage = () => {
       setError(err.message || "Failed to update profile");
     } finally {
       setSaving(false);
+    }
+  };
+
+  const handleDeleteAccount = async () => {
+    setDeleting(true);
+    setError(null);
+    try {
+      await profileService.deleteAccount();
+      authService.clearTokens();
+      navigate("/");
+      window.location.reload();
+    } catch (err: any) {
+      setError(err.message || intl.formatMessage({ id: "failed_delete_account", defaultMessage: "Failed to delete account" }));
+      setDeleteOpen(false);
+      setDeleting(false);
     }
   };
 
@@ -528,6 +546,44 @@ export const ProfilePage = () => {
             </Button>
           </VStack>
         </Box>
+
+            <Link
+              as="button"
+              alignSelf="center"
+              fontSize="sm"
+              color="red.600"
+              onClick={() => setDeleteOpen(true)}
+            >
+              <FormattedMessage id="delete_account" defaultMessage="Delete account" />
+            </Link>
+            <Dialog.Root open={deleteOpen} onOpenChange={(e: { open: boolean }) => !deleting && setDeleteOpen(e.open)} size="sm">
+              <Dialog.Backdrop />
+              <Dialog.Positioner>
+                <Dialog.Content>
+                  <Dialog.Header>
+                    <Heading size="md" m={0}>
+                      <FormattedMessage id="delete_account_confirm_title" defaultMessage="Delete account?" />
+                    </Heading>
+                  </Dialog.Header>
+                  <Dialog.Body>
+                    <Text>
+                      <FormattedMessage
+                        id="delete_account_confirm_message"
+                        defaultMessage="Your account will be permanently deleted. Your player name, scores and games will be kept but will no longer be linked to you. You can sign up again later."
+                      />
+                    </Text>
+                  </Dialog.Body>
+                  <Dialog.Footer>
+                    <Button variant="ghost" onClick={() => setDeleteOpen(false)} disabled={deleting}>
+                      <FormattedMessage id="cancel" defaultMessage="Cancel" />
+                    </Button>
+                    <Button colorPalette="red" onClick={handleDeleteAccount} loading={deleting}>
+                      <FormattedMessage id="delete_account_button" defaultMessage="Delete my account" />
+                    </Button>
+                  </Dialog.Footer>
+                </Dialog.Content>
+              </Dialog.Positioner>
+            </Dialog.Root>
           </VStack>
         </Container>
       </Page.Body>

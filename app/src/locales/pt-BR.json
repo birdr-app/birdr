@@ -671,5 +671,10 @@
   "survival_missed_title": "Aqui terminou a sequência de {name}",
   "survival_missed_correct": "Era",
   "survival_missed_answered": "Respondeu",
-  "survival_missed_timeout": "⏱ O tempo acabou"
+  "survival_missed_timeout": "⏱ O tempo acabou",
+  "delete_account": "Excluir conta",
+  "delete_account_confirm_title": "Excluir conta?",
+  "delete_account_confirm_message": "Sua conta será excluída de forma permanente. Seu nome de jogador, pontuações e jogos serão mantidos, mas não estarão mais ligados a você. Você pode se cadastrar de novo depois.",
+  "delete_account_button": "Excluir minha conta",
+  "failed_delete_account": "Não foi possível excluir a conta"
 }
