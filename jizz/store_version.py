@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import re
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -15,12 +16,15 @@ _PLAY_STORE_URL = (
 )
 _ITUNES_LOOKUP_URL = f'https://itunes.apple.com/lookup?bundleId={BUNDLE_ID}'
 _PLAY_RELEASE_LABEL_RE = re.compile(r'"141":\[\[\["([^"]+)"\]\]')
+_FETCH_TIMEOUT = 5
 _cache: dict[str, object] = {'expires': 0.0, 'ios': None, 'android': None}
+_refresh_lock = threading.Lock()
+_refresh_thread: threading.Thread | None = None
 
 
 def _fetch_itunes_release_label() -> str | None:
     try:
-        with urllib.request.urlopen(_ITUNES_LOOKUP_URL, timeout=10) as resp:
+        with urllib.request.urlopen(_ITUNES_LOOKUP_URL, timeout=_FETCH_TIMEOUT) as resp:
             data = json.loads(resp.read().decode())
     except (OSError, ValueError, json.JSONDecodeError):
         return None
@@ -40,7 +44,7 @@ def _fetch_play_release_label() -> str | None:
         headers={'User-Agent': 'Mozilla/5.0 (compatible; Birdr/1.0)'},
     )
     try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
+        with urllib.request.urlopen(req, timeout=_FETCH_TIMEOUT) as resp:
             html = resp.read().decode('utf-8', errors='replace')
     except (OSError, urllib.error.URLError):
         return None
@@ -51,22 +55,48 @@ def _fetch_play_release_label() -> str | None:
     return label or None
 
 
-def get_store_release_labels() -> dict[str, str | None]:
-    """Return cached iOS/Android store release labels, refreshing at most once per hour."""
-    now = time.time()
-    expires = float(_cache.get('expires') or 0)
-    if now < expires and _cache.get('ios') is not None:
-        return {
-            'ios': _cache.get('ios'),  # type: ignore[dict-item]
-            'android': _cache.get('android'),  # type: ignore[dict-item]
-        }
+def _refresh() -> None:
+    global _refresh_thread
+    try:
+        ios = _fetch_itunes_release_label()
+        android = _fetch_play_release_label()
+        # Keep the last known label when a store is unreachable.
+        if ios is not None:
+            _cache['ios'] = ios
+        if android is not None:
+            _cache['android'] = android
+        _cache['expires'] = time.time() + _CACHE_TTL_SECONDS
+    finally:
+        with _refresh_lock:
+            _refresh_thread = None
 
-    ios = _fetch_itunes_release_label()
-    android = _fetch_play_release_label()
-    _cache['expires'] = now + _CACHE_TTL_SECONDS
-    _cache['ios'] = ios
-    _cache['android'] = android
-    return {'ios': ios, 'android': android}
+
+def get_store_release_labels() -> dict[str, str | None]:
+    """Return cached iOS/Android store release labels without blocking the request.
+
+    The store lookups can take tens of seconds from the server, so an expired cache
+    is refreshed in a background thread (one at a time) and callers get the last
+    known labels, or None before the first fetch has finished.
+    """
+    global _refresh_thread
+    if time.time() >= float(_cache.get('expires') or 0):
+        with _refresh_lock:
+            if _refresh_thread is None:
+                _refresh_thread = threading.Thread(
+                    target=_refresh, name='store-release-labels', daemon=True
+                )
+                _refresh_thread.start()
+    return {
+        'ios': _cache.get('ios'),  # type: ignore[dict-item]
+        'android': _cache.get('android'),  # type: ignore[dict-item]
+    }
+
+
+def wait_for_store_release_label_refresh(timeout: float | None = None) -> None:
+    """Testing helper: block until a running background refresh has finished."""
+    thread = _refresh_thread
+    if thread is not None:
+        thread.join(timeout)
 
 
 def clear_store_release_label_cache() -> None:
