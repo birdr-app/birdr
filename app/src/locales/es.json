@@ -577,6 +577,7 @@
   "league_suggested": "Hecho para ti",
   "league_join_cta": "Únete y juega el quiz de hoy",
   "league_other_country": "Echa un vistazo a otro país",
+  "league_open_picked": "Abrir liga",
   "league_tab_today": "Hoy",
   "league_tab_week": "Semana",
   "league_tab_last_week": "Semana pasada",
@@ -676,5 +677,7 @@
   "delete_account_confirm_title": "¿Eliminar cuenta?",
   "delete_account_confirm_message": "Tu cuenta se eliminará de forma permanente. Tu nombre de jugador, puntuaciones y partidas se conservarán, pero ya no estarán vinculados a ti. Podrás registrarte de nuevo más adelante.",
   "delete_account_button": "Eliminar mi cuenta",
-  "failed_delete_account": "No se pudo eliminar la cuenta"
+  "failed_delete_account": "No se pudo eliminar la cuenta",
+  "region": "Región",
+  "all_regions": "Todo"
 }

@@ -126,6 +126,20 @@ class FlockApiTests(TestCase):
         self.assertIsNotNone(data['invite']['code'])
         self.assertEqual(len(data['invite']['code']), 6)
 
+    def test_flock_can_play_a_region(self):
+        Country.objects.create(code='NL-NH', name='Noord-Holland', parent=self.country, kind='subnational')
+        _auth(self.client, self.admin)
+        res = self.client.post('/api/flocks/', {'name': 'Waterland', 'country_code': 'nl-nh'}, format='json')
+        self.assertEqual(res.status_code, status.HTTP_201_CREATED, res.data)
+        self.assertEqual(res.data['default_country']['code'], 'NL-NH')
+        with patch(
+            'jizz.flock_views.generate_club_mix_snapshot',
+            return_value=_manual_snapshot(self.species),
+        ) as generate:
+            ch = self.client.post(f"/api/flocks/{res.data['slug']}/challenges/", {'title': 'W1'}, format='json')
+        self.assertEqual(ch.status_code, 201, ch.data)
+        self.assertEqual(generate.call_args.kwargs['country'].code, 'NL-NH')
+
     def test_list_challenge_includes_my_rank_when_completed(self):
         flock = self._create_flock()
         slug = flock['slug']

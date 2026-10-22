@@ -15,7 +15,7 @@ import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { fetchSurvivalScores, type SurvivalScore } from '../api/survival';
 import { loadCountries, type Country } from '../api/countries';
-import { CountrySelect } from '../components/CountrySelect';
+import { CountryRegionSelect } from '../components/CountryRegionSelect';
 import { useGame } from '../context/GameContext';
 import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
@@ -130,13 +130,12 @@ export function SurvivalScoresScreen() {
         ListHeaderComponent={
           <View>
             <Text style={styles.title}>{t('survival_highscores')}</Text>
-            <CountrySelect
+            <CountryRegionSelect
               value={country}
               onChange={(c) => {
                 if (c) setCountry(c);
               }}
               countries={countries}
-              showStatePicker
               style={styles.countrySelect}
               testID="survivalScores.selectCountry"
             />

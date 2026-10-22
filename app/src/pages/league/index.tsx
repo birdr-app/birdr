@@ -10,13 +10,12 @@ import {
   type LeagueOverview,
 } from '../../api/league';
 import { countryCodeToFlag } from '../../api/birdrJourney';
-import CountryCombobox from '../../components/country-combobox';
+import CountryRegionSelect from '../../components/country-region-select';
 import { LeagueCapsBadge } from '../../components/league-caps-badge';
 import AppContext from '../../core/app-context';
-import { isCountryListEntry } from '../../data/country-groups';
 import { getCountryDisplayName } from '../../data/country-names-nl';
 import { Page } from '../../shared/components/layout';
-import { UseCountries } from '../../user/use-countries';
+import { UseCountries, type Country } from '../../user/use-countries';
 
 function LeagueLink({
   country,
@@ -69,6 +68,7 @@ export function LeagueIndexPage() {
   const { countries } = UseCountries();
   const [overview, setOverview] = useState<LeagueOverview | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [picked, setPicked] = useState<Country | null>(null);
 
   useEffect(() => {
     getLeagueOverview()
@@ -79,9 +79,7 @@ export function LeagueIndexPage() {
   const capsFor = (code: string) => overview?.caps.find((c) => c.country_code.toUpperCase() === code.toUpperCase());
   const memberCodes = new Set(overview?.memberships.map((m) => m.country.code.toUpperCase()) ?? []);
   const suggested = overview?.suggested.filter((c) => !memberCodes.has(c.code.toUpperCase())) ?? [];
-  const pickable = (Array.isArray(countries) ? countries : []).filter(
-    (c) => isCountryListEntry(c) && c.code.toLowerCase() !== 'world',
-  );
+  const pickable = (Array.isArray(countries) ? countries : []).filter((c) => c.code.toLowerCase() !== 'world');
 
   return (
     <Page>
@@ -152,12 +150,15 @@ export function LeagueIndexPage() {
             <Heading size="md" mb={3}>
               <FormattedMessage id="league_other_country" defaultMessage="Peek at another country" />
             </Heading>
-            <CountryCombobox
-              countries={pickable}
-              value={null}
-              onChange={(c) => c && navigate(getLeaguePath(c.code))}
-              excludeRegionCodes
-            />
+            <CountryRegionSelect countries={pickable} value={picked} onChange={setPicked} />
+            <Button
+              mt={4}
+              colorPalette="primary"
+              disabled={!picked}
+              onClick={() => picked && navigate(getLeaguePath(picked.code))}
+            >
+              <FormattedMessage id="league_open_picked" defaultMessage="Open league" />
+            </Button>
           </Box>
         </Flex>
       </Page.Body>

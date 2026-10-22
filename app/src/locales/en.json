@@ -580,6 +580,7 @@
   "league_suggested": "Made for you",
   "league_join_cta": "Join and play today's quiz",
   "league_other_country": "Peek at another country",
+  "league_open_picked": "Open league",
   "league_tab_today": "Today",
   "league_tab_week": "Week",
   "league_tab_last_week": "Last week",
@@ -679,5 +680,7 @@
   "delete_account_confirm_title": "Delete account?",
   "delete_account_confirm_message": "Your account will be permanently deleted. Your player name, scores and games will be kept but will no longer be linked to you. You can sign up again later.",
   "delete_account_button": "Delete my account",
-  "failed_delete_account": "Failed to delete account"
+  "failed_delete_account": "Failed to delete account",
+  "region": "Region",
+  "all_regions": "All"
 }

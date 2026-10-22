@@ -579,6 +579,7 @@
   "league_suggested": "Speciaal voor jou",
   "league_join_cta": "Doe mee en speel de quiz van vandaag",
   "league_other_country": "Gluur bij een ander land",
+  "league_open_picked": "Open competitie",
   "league_tab_today": "Vandaag",
   "league_tab_week": "Week",
   "league_tab_last_week": "Vorige week",
@@ -678,5 +679,7 @@
   "delete_account_confirm_title": "Account verwijderen?",
   "delete_account_confirm_message": "Je account wordt permanent verwijderd. Je spelersnaam, scores en spellen blijven bewaard maar worden niet meer aan jou gekoppeld. Je kunt later opnieuw registreren.",
   "delete_account_button": "Mijn account verwijderen",
-  "failed_delete_account": "Account verwijderen mislukt"
+  "failed_delete_account": "Account verwijderen mislukt",
+  "region": "Regio",
+  "all_regions": "Alles"
 }

@@ -759,6 +759,7 @@
   "league_suggested": "あなたにおすすめ",
   "league_join_cta": "参加して今日のクイズをプレイ",
   "league_other_country": "ほかの国ものぞいてみる",
+  "league_open_picked": "リーグを開く",
   "league_no_leagues_yet": "まだリーグに参加していません。下で国を選んで、今日のクイズをプレイしよう！",
   "league_last_played": "最終プレイ {date}",
   "league_not_played_yet": "まだ未プレイ：今日のクイズが待っています",
@@ -777,5 +778,7 @@
   "survival_missed_correct": "正解",
   "survival_missed_answered": "回答",
   "survival_missed_timeout": "⏱ 時間切れ",
-  "league_quizzes_played": "リーグのクイズ"
+  "league_quizzes_played": "リーグのクイズ",
+  "region": "地域",
+  "all_regions": "すべて"
 }

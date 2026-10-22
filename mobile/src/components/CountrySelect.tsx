@@ -16,7 +16,7 @@ import { useTranslation } from '../i18n/TranslationContext';
 import { getCountryDisplayName } from '../i18n/countryNames';
 import { colors } from '../theme';
 import { AccessibleSheetModal } from './AccessibleSheetModal';
-import { filterPickerCountries, groupCountriesForPicker, isAggregate, isCountryListEntry, regionsForParent, statePickerParentCode } from '../lib/countryGroups';
+import { filterPickerCountries, groupCountriesForPicker, isAggregate, isCountryListEntry } from '../lib/countryGroups';
 
 export type CountrySelectProps = {
   value: Country | null;
@@ -40,8 +40,6 @@ export type CountrySelectProps = {
     label: string;
     value: Country | null;
   }) => React.ReactNode;
-  /** After picking US/CA/AU/MX, show an All / region control. */
-  showStatePicker?: boolean;
   /** Region menu: aggregates, then a divider, then states. */
   groupRegions?: boolean;
 };
@@ -69,7 +67,6 @@ export function CountrySelect({
   buttonStyle,
   buttonTextStyle,
   renderTrigger,
-  showStatePicker = false,
   groupRegions = false,
 }: CountrySelectProps) {
   const { t, locale } = useTranslation();
@@ -218,18 +215,8 @@ export function CountrySelect({
     return rows;
   }, [allowEmpty, countries, emptyLabel, groupRegions, locale, search, t]);
 
-  const regionParentCode = showStatePicker ? statePickerParentCode(value) : null;
-  const regionParent = regionParentCode
-    ? countries.find((country) => country.code === regionParentCode)
-    : undefined;
-  const regionSections = regionParentCode ? regionsForParent(countries, regionParentCode) : null;
-  const regionCountries = regionSections
-    ? [...regionSections.aggregates, ...regionSections.subnationals]
-    : [];
-  const shownCountry = showStatePicker && regionParent ? regionParent : value;
-
-  const displayLabel = shownCountry
-    ? getCountryDisplayName(shownCountry, locale)
+  const displayLabel = value
+    ? getCountryDisplayName(value, locale)
     : allowEmpty
       ? emptyLabel ?? t('all_countries')
       : placeholder ?? t('select_country_dots');
@@ -334,9 +321,8 @@ export function CountrySelect({
               if (item.type === 'divider') {
                 return <View style={styles.regionDivider} />;
               }
-              const selectedCode = showStatePicker && regionParent ? regionParent.code : value?.code;
               const selected = item.country.code
-                ? selectedCode === item.country.code
+                ? value?.code === item.country.code
                 : !value;
               const label = item.country.code
                 ? getCountryDisplayName(item.country, locale)
@@ -374,23 +360,6 @@ export function CountrySelect({
           />
         )}
       </AccessibleSheetModal>
-      {showStatePicker && regionCountries.length > 0 && regionParent ? (
-        <View style={styles.regionBlock}>
-          <Text style={styles.regionLabel}>{t('region')}</Text>
-          <CountrySelect
-            value={value && value.code !== regionParent.code ? value : null}
-            onChange={(next) => onChange(next || regionParent)}
-            countries={regionCountries}
-            allowEmpty
-            emptyLabel={t('all_regions')}
-            excludeRegionCodes={false}
-            showStatePicker={false}
-            groupRegions
-            title={t('region')}
-            testID={testID ? `${testID}.region` : undefined}
-          />
-        </View>
-      ) : null}
     </View>
   );
 }
@@ -468,15 +437,6 @@ const styles = StyleSheet.create({
   },
   modalItemSelected: {
     backgroundColor: colors.primary[50],
-  },
-  regionBlock: {
-    marginTop: 16,
-  },
-  regionLabel: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: colors.primary[700],
-    marginBottom: 8,
   },
   modalItemText: {
     fontSize: 16,

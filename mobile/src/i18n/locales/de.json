@@ -759,6 +759,7 @@
   "league_suggested": "Wie für dich gemacht",
   "league_join_cta": "Mitmachen und heutiges Quiz spielen",
   "league_other_country": "In ein anderes Land spähen",
+  "league_open_picked": "Liga öffnen",
   "league_no_leagues_yet": "Du bist noch in keiner Liga. Wähle unten dein Land und spiel das heutige Quiz!",
   "league_last_played": "Zuletzt gespielt {date}",
   "league_not_played_yet": "Noch nicht gespielt: das heutige Quiz wartet",
@@ -777,5 +778,7 @@
   "survival_missed_correct": "Es war",
   "survival_missed_answered": "Geantwortet",
   "survival_missed_timeout": "⏱ Die Zeit war um",
-  "league_quizzes_played": "Liga-Quizze"
+  "league_quizzes_played": "Liga-Quizze",
+  "region": "Region",
+  "all_regions": "Alle"
 }

@@ -4,7 +4,7 @@ import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { fetchLeagueOverview, type LeagueCountry, type LeagueOverview } from '../api/league';
 import { loadCountries, type Country } from '../api/countries';
-import { CountrySelect } from '../components/CountrySelect';
+import { CountryRegionSelect } from '../components/CountryRegionSelect';
 import { LeagueCapsBadge } from '../components/LeagueCapsBadge';
 import { useAuth } from '../context/AuthContext';
 import { useTranslation } from '../i18n/TranslationContext';
@@ -28,6 +28,7 @@ export function LeagueListScreen() {
   const [overview, setOverview] = useState<LeagueOverview | null>(null);
   const [loading, setLoading] = useState(true);
   const [countries, setCountries] = useState<Country[]>([]);
+  const [picked, setPicked] = useState<Country | null>(null);
 
   const load = useCallback(async () => {
     try {
@@ -120,13 +121,18 @@ export function LeagueListScreen() {
       ) : null}
 
       <Text style={styles.sectionTitle}>{t('league_other_country')}</Text>
-      <CountrySelect
-        value={null}
-        countries={countries}
-        onChange={(country) => {
-          if (country) open(country.code);
+      <CountryRegionSelect value={picked} countries={countries} onChange={setPicked} testID="leagues.pickCountry" />
+      <TouchableOpacity
+        style={[styles.openButton, !picked && styles.openButtonDisabled]}
+        onPress={() => {
+          if (picked) open(picked.code);
         }}
-      />
+        disabled={!picked}
+        accessibilityRole="button"
+        testID="leagues.openPicked"
+      >
+        <Text style={styles.openButtonText}>{t('league_open_picked')}</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 }
@@ -138,6 +144,9 @@ const styles = StyleSheet.create({
   title: { fontSize: 24, fontWeight: '800', color: colors.primary[800], marginBottom: 12 },
   empty: { fontSize: 15, color: colors.primary[600], marginBottom: 8 },
   sectionTitle: { fontSize: 18, fontWeight: '700', color: colors.primary[800], marginTop: 24, marginBottom: 8 },
+  openButton: { backgroundColor: colors.primary[500], paddingVertical: 14, borderRadius: 8, alignItems: 'center', marginTop: 16 },
+  openButtonDisabled: { opacity: 0.6 },
+  openButtonText: { color: colors.primary[50], fontSize: 16, fontWeight: '600' },
   row: {
     flexDirection: 'row',
     alignItems: 'center',

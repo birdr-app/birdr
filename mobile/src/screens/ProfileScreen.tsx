@@ -28,7 +28,7 @@ import { parseVisualStyle, type VisualStyle } from '../lib/visualStyle';
 import { loadCountries, type Country } from '../api/countries';
 import { loadLanguages, type Language } from '../api/languages';
 import { compareSpeciesLanguages, getLanguageDisplayName } from '../i18n/languageNames';
-import { CountrySelect } from '../components/CountrySelect';
+import { CountryRegionSelect } from '../components/CountryRegionSelect';
 import { SpeciesLanguageLabel } from '../components/SpeciesLanguageLabel';
 import { AppLanguagePicker } from '../components/AppLanguagePicker';
 import { speciesLanguageFromAppLocale } from '../i18n/appLocales';
@@ -388,7 +388,7 @@ export function ProfileScreen() {
         <SpeciesLanguageLabel code={language} label={languageLabel} />
       </TouchableOpacity>
       <Text style={styles.label}>{t('country_optional')}</Text>
-      <CountrySelect
+      <CountryRegionSelect
         value={country}
         onChange={setCountry}
         countries={countries}

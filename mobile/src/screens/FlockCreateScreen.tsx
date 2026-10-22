@@ -13,7 +13,7 @@ import { useAuth } from '../context/AuthContext';
 import { useTranslation } from '../i18n/TranslationContext';
 import { createFlock, setStoredMainFlockSlug } from '../api/flocks';
 import type { Country } from '../api/countries';
-import { CountrySelect } from '../components/CountrySelect';
+import { CountryRegionSelect } from '../components/CountryRegionSelect';
 import { colors } from '../theme';
 
 export function FlockCreateScreen() {
@@ -71,7 +71,7 @@ export function FlockCreateScreen() {
         autoFocus
         testID="flocks.create.name"
       />
-      <CountrySelect
+      <CountryRegionSelect
         value={selectedCountry}
         onChange={setSelectedCountry}
         style={styles.countrySelect}

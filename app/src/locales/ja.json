@@ -577,6 +577,7 @@
   "league_suggested": "あなたにおすすめ",
   "league_join_cta": "参加して今日のクイズをプレイ",
   "league_other_country": "ほかの国ものぞいてみる",
+  "league_open_picked": "リーグを開く",
   "league_tab_today": "今日",
   "league_tab_week": "今週",
   "league_tab_last_week": "先週",
@@ -676,5 +677,7 @@
   "delete_account_confirm_title": "アカウントを削除しますか？",
   "delete_account_confirm_message": "アカウントは完全に削除されます。プレイヤー名、スコア、ゲームは残りますが、あなたとは紐づかなくなります。あとから再登録できます。",
   "delete_account_button": "アカウントを削除",
-  "failed_delete_account": "アカウントを削除できませんでした"
+  "failed_delete_account": "アカウントを削除できませんでした",
+  "region": "地域",
+  "all_regions": "すべて"
 }

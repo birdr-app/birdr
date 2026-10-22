@@ -248,6 +248,12 @@ class ProfileViewTestCase(TestCase):
         self.assertEqual(self.user.profile.country_id, self.country.code)
         self.assertEqual(response.data.get('app_language', ''), '')
 
+    def test_profile_country_can_be_a_region(self):
+        Country.objects.create(code='NL-NH', name='Noord-Holland', parent=self.country, kind='subnational')
+        response = self.client.put('/api/profile/', {'country_code': 'NL-NH'}, format='json')
+        self.assertEqual(response.status_code, status.HTTP_200_OK, response.data)
+        self.assertEqual(response.data['country_code'], 'NL-NH')
+
     def test_profile_update_app_language_also_updates_bird_names(self):
         self.client.put('/api/profile/', {'language': 'nl'}, format='json')
         response = self.client.put(

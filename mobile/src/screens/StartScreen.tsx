@@ -23,7 +23,7 @@ import { updateProfile } from '../api/profile';
 import type { Country } from '../api/countries';
 import type { Language } from '../api/languages';
 import { compareSpeciesLanguages, getLanguageDisplayName } from '../i18n/languageNames';
-import { CountrySelect } from '../components/CountrySelect';
+import { CountryRegionSelect } from '../components/CountryRegionSelect';
 import { AccessibleSheetModal } from '../components/AccessibleSheetModal';
 import { SpeciesLanguageLabel } from '../components/SpeciesLanguageLabel';
 import { colors } from '../theme';
@@ -322,13 +322,12 @@ export function StartScreen() {
       />
 
       <Text style={styles.label}>{t('select_country')}</Text>
-      <CountrySelect
+      <CountryRegionSelect
         value={country ?? null}
         onChange={(c) => {
           if (c) setCountry(c);
         }}
         countries={countries}
-        showStatePicker
         style={styles.countrySelect}
         testID="start.selectCountry"
       />

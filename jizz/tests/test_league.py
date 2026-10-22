@@ -146,6 +146,14 @@ class LeagueTestCase(TestCase):
         region = Country.objects.create(code='NL-NH', name='Noord-Holland', parent=self.country, kind='subnational')
         self.assertEqual(region.league_timezone, 'Europe/Amsterdam')
 
+    def test_region_has_its_own_league(self):
+        Country.objects.create(code='NL-NH', name='Noord-Holland', parent=self.country, kind='subnational')
+        _auth(self.client, self.alice)
+        res = self.client.post('/api/league/NL-NH/today/start/', format='json')
+        self.assertIn(res.status_code, (200, 201), res.data)
+        self.assertTrue(LeagueDay.objects.filter(country_id='NL-NH').exists())
+        self.assertFalse(LeagueDay.objects.filter(country_id='NL').exists())
+
     # --- play ------------------------------------------------------------
 
     def test_start_resume_and_complete(self):

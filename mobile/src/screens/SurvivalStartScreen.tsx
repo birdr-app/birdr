@@ -21,7 +21,7 @@ import { loadCountries, type Country } from '../api/countries';
 import { loadLanguages, type Language } from '../api/languages';
 import { fetchSurvivalRecord, type SurvivalRecordResponse } from '../api/survival';
 import { compareSpeciesLanguages, getLanguageDisplayName } from '../i18n/languageNames';
-import { CountrySelect } from '../components/CountrySelect';
+import { CountryRegionSelect } from '../components/CountryRegionSelect';
 import { AccessibleSheetModal } from '../components/AccessibleSheetModal';
 import { SpeciesLanguageLabel } from '../components/SpeciesLanguageLabel';
 import { matchCountry, resolveDefaultCountry } from '../lib/countryPreference';
@@ -188,13 +188,12 @@ export function SurvivalStartScreen() {
       ) : null}
 
       <Text style={styles.label}>{t('select_country')}</Text>
-      <CountrySelect
+      <CountryRegionSelect
         value={country ?? null}
         onChange={(c) => {
           if (c) setCountry(matchCountry(countries, c.code) ?? c);
         }}
         countries={countries}
-        showStatePicker
         style={styles.countrySelect}
         testID="survivalStart.selectCountry"
       />

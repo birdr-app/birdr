@@ -21,7 +21,7 @@ import {
   getFlocksJoinPath,
   setStoredMainFlockSlug,
 } from '../../api/flocks';
-import CountryCombobox from '../../components/country-combobox';
+import CountryRegionSelect from '../../components/country-region-select';
 import { useAuthProfile } from '../../core/auth-profile-context';
 import { Page } from '../../shared/components/layout';
 import { UseCountries, type Country } from '../../user/use-countries';
@@ -101,11 +101,10 @@ export function FlocksCreatePage() {
               <Text mb={2} fontSize="sm" fontWeight="600">
                 <FormattedMessage id="country" defaultMessage="Country" />
               </Text>
-              <CountryCombobox
+              <CountryRegionSelect
                 countries={countriesList}
                 value={country}
                 onChange={setCountry}
-                excludeRegionCodes
                 placeholder={intl.formatMessage({
                   id: 'flocks_select_country',
                   defaultMessage: 'Default quiz country',
