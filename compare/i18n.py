@@ -291,25 +291,33 @@ def localize_comparison_nowait(
     comparison: SpeciesComparison | None,
     language: str,
 ) -> SpeciesComparison | LocalizedComparison | None:
-    """Like localize_comparison, but never calls OpenAI inside the request.
-
-    Serves a stored translation when there is one. Otherwise returns English
-    and translates in a background thread, so the next view gets the translation.
-    """
+    """Like localize_comparison, but never calls OpenAI inside the request."""
     if comparison is None:
         return None
     lang = normalize_app_language(language) or DEFAULT_LANGUAGE
     if lang == DEFAULT_LANGUAGE:
         return comparison
-    english = source_fields(comparison)
+    return LocalizedComparison(comparison, localized_fields_nowait(comparison, lang))
+
+
+def localized_fields_nowait(comparison: SpeciesComparison, language: str) -> dict[str, str]:
+    """Stored translation if there is one; otherwise English, translated in the background.
+
+    OpenAI translation takes 10–20 s, too long to hold a request open. The next
+    view after the background thread finishes gets the translation.
+    """
+    lang = normalize_app_language(language) or DEFAULT_LANGUAGE
     fields = localized_fields(comparison, lang, generate=False)
+    if lang == DEFAULT_LANGUAGE:
+        return fields
+    english = source_fields(comparison)
     if fields == english and any(english.values()) and comparison.pk:
         _schedule_translation(comparison.pk, lang)
-    return LocalizedComparison(comparison, fields)
+    return fields
 
 
 def _schedule_translation(comparison_id: Any, language: str) -> None:
-    # One attempt per comparison and language per lock window, across workers.
+    # One attempt per comparison and language per lock window (per process with LocMemCache).
     if not cache.add(f'{CACHE_PREFIX}-lock:{comparison_id}:{language}', 1, BACKGROUND_LOCK_TIMEOUT):
         return
     thread = threading.Thread(

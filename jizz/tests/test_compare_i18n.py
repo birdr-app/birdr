@@ -9,8 +9,21 @@ from compare.models import ComparisonTranslation, SpeciesComparison
 from jizz.models import Species
 
 
+def run_background_translations_inline(test):
+    """Run the API's background translation in the test thread (threads can't see the test transaction)."""
+    from compare.i18n import _translate_in_background
+
+    patcher = patch('compare.i18n._schedule_translation', side_effect=_translate_in_background)
+    patcher.start()
+    test.addCleanup(patcher.stop)
+
+
 class ComparisonI18nTests(TestCase):
     def setUp(self):
+        self._create_comparison()
+        run_background_translations_inline(self)
+
+    def _create_comparison(self):
         self.client = APIClient()
         self.species1 = Species.objects.create(
             name='Robin', name_latin='Erithacus rubecula', code='ROB01'
@@ -51,8 +64,8 @@ class ComparisonI18nTests(TestCase):
             HTTP_ACCEPT_LANGUAGE='es',
         )
         self.assertEqual(first.status_code, 200)
-        self.assertEqual(first.data['summary'], 'El petirrojo es más pequeño.')
-        self.assertIn('<strong>pecho</strong>', first.data['detailed_comparison_html'])
+        # Never waits for OpenAI: English now, translated in the background for next time.
+        self.assertEqual(first.data['summary'], 'Robin is smaller.')
         mock_tr.assert_called_once()
         row = ComparisonTranslation.objects.get(comparison=self.comparison, language='es')
         self.assertEqual(row.fields['summary'], 'El petirrojo es más pequeño.')
@@ -68,6 +81,7 @@ class ComparisonI18nTests(TestCase):
             HTTP_ACCEPT_LANGUAGE='es',
         )
         self.assertEqual(second.data['summary'], 'El petirrojo es más pequeño.')
+        self.assertIn('<strong>pecho</strong>', second.data['detailed_comparison_html'])
         mock_tr.assert_called_once()
 
         detail = self.client.get(
@@ -108,6 +122,11 @@ class ComparisonI18nTests(TestCase):
         self.comparison.summary = 'Robin changed.'
         self.comparison.save(update_fields=['summary'])
         cache.clear()
+        stale = self.client.get(
+            f'/api/compare/comparisons/{self.comparison.id}/',
+            {'language': 'es'},
+        )
+        self.assertEqual(stale.data['summary'], 'Robin changed.')
         response = self.client.get(
             f'/api/compare/comparisons/{self.comparison.id}/',
             {'language': 'es'},
@@ -154,11 +173,12 @@ class ComparisonI18nTests(TestCase):
             'detailed_comparison': 'Neuer Text.',
             'identification_tips': 'Tipp.',
         }
-        response = self.client.get(
-            f'/api/compare/comparisons/{self.comparison.id}/',
-            {'app_language': 'de'},
-            HTTP_ACCEPT_LANGUAGE='es',
-        )
+        for _ in range(2):
+            response = self.client.get(
+                f'/api/compare/comparisons/{self.comparison.id}/',
+                {'app_language': 'de'},
+                HTTP_ACCEPT_LANGUAGE='es',
+            )
         self.assertEqual(response.data['summary'], 'Neue Zusammenfassung.')
         self.assertEqual(mock_tr.call_args.args[1], 'de')
 
@@ -168,6 +188,7 @@ class ComparisonSpeciesNameI18nTests(TestCase):
         from jizz.models import Language, SpeciesName, TaxonomicFamily
 
         self.client = APIClient()
+        run_background_translations_inline(self)
         Language.objects.get_or_create(code='nl', defaults={'name': 'Dutch'})
         family = TaxonomicFamily.objects.create(
             name_latin='Alaudidae',
@@ -218,10 +239,11 @@ class ComparisonSpeciesNameI18nTests(TestCase):
             'detailed_comparison': 'De Boomleeuwerik heeft een kortere staart.',
             'identification_tips': 'Luister naar de Boomleeuwerik.',
         }
-        response = self.client.get(
-            f'/api/compare/comparisons/{self.comparison.id}/',
-            {'language': 'nl'},
-        )
+        for _ in range(2):
+            response = self.client.get(
+                f'/api/compare/comparisons/{self.comparison.id}/',
+                {'language': 'nl'},
+            )
         self.assertEqual(response.status_code, 200)
         glossary = mock_tr.call_args.kwargs['glossary']
         names = {row['en']: row['name'] for row in glossary}
@@ -237,10 +259,11 @@ class ComparisonSpeciesNameI18nTests(TestCase):
             'detailed_comparison': 'The Wood Lark has a shorter tail.',
             'identification_tips': 'Listen for the Woodlark.',
         }
-        response = self.client.get(
-            f'/api/compare/comparisons/{self.comparison.id}/',
-            {'language': 'nl'},
-        )
+        for _ in range(2):
+            response = self.client.get(
+                f'/api/compare/comparisons/{self.comparison.id}/',
+                {'language': 'nl'},
+            )
         self.assertEqual(response.data['summary'], 'Boomleeuwerik is kleiner dan Veldleeuwerik.')
         self.assertEqual(response.data['detailed_comparison'], 'The Boomleeuwerik has a shorter tail.')
         self.assertNotIn('Woodlark', response.data['summary'])
@@ -256,7 +279,7 @@ class ComparisonSpeciesNameI18nTests(TestCase):
 
 
 class ComparisonNowaitTests(TestCase):
-    setUp = ComparisonI18nTests.setUp
+    setUp = ComparisonI18nTests._create_comparison
     _translated = ComparisonI18nTests._translated
 
     @patch('compare.i18n._schedule_translation')

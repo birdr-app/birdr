@@ -87,9 +87,12 @@ class SpeciesComparisonSerializer(serializers.ModelSerializer):
         generate = self.context.get('generate_translation', True)
         if language == 'en':
             return data
-        from compare.i18n import TRANSLATABLE_FIELDS, localized_fields
+        from compare.i18n import TRANSLATABLE_FIELDS, localized_fields, localized_fields_nowait
 
-        fields = localized_fields(instance, language, generate=generate)
+        if generate:
+            fields = localized_fields_nowait(instance, language)
+        else:
+            fields = localized_fields(instance, language, generate=False)
         for key in TRANSLATABLE_FIELDS:
             value = fields.get(key) or ''
             data[key] = value or None
