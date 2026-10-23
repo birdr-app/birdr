@@ -60,7 +60,7 @@ export async function fetchTroubleSpots(
     { headers: { Accept: 'application/json', ...headers } },
   );
   if (!response.ok) {
-    throw new Error(await readApiErrorMessage(response));
+    throw new Error(await readApiErrorMessage(response, 'Practice request failed'));
   }
   return (await response.json()) as TroubleSpotsResponse;
 }
@@ -123,7 +123,7 @@ export async function startConfusionPairPractice(
     body: JSON.stringify(body),
   });
   if (!response.ok) {
-    throw new Error(await readApiErrorMessage(response));
+    throw new Error(await readApiErrorMessage(response, 'Practice request failed'));
   }
   return (await response.json()) as StartPairPracticeResponse;
 }
@@ -145,7 +145,7 @@ export async function startSpeciesPractice(
     body: JSON.stringify(body),
   });
   if (!response.ok) {
-    throw new Error(await readApiErrorMessage(response));
+    throw new Error(await readApiErrorMessage(response, 'Practice request failed'));
   }
   return (await response.json()) as StartPairPracticeResponse;
 }

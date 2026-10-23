@@ -51,7 +51,8 @@ def get_or_create_player_for_user(user) -> Player:
     )
 
 
-def resolve_practice_country(user, country_code: str | None) -> Country:
+def preferred_practice_country(user, country_code: str | None) -> Country | None:
+    """The requested country, else the profile country, else None."""
     code = normalize_country_filter(country_code)
     if not code:
         try:
@@ -60,10 +61,17 @@ def resolve_practice_country(user, country_code: str | None) -> Country:
             profile_country = None
         code = normalize_country_filter(profile_country)
     if not code:
+        return None
+    return Country.objects.get(pk=code)
+
+
+def resolve_practice_country(user, country_code: str | None) -> Country:
+    country = preferred_practice_country(user, country_code)
+    if country is None:
         raise ValidationError(
             {'country_code': 'Country is required (set profile country or pass country_code).'}
         )
-    return Country.objects.get(pk=code)
+    return country
 
 
 def canonical_pair_ids(low_id: int, high_id: int) -> tuple[int, int]:
@@ -122,18 +130,22 @@ def resolve_country_for_pair_practice(
 
     Otherwise use the World checklist — pair drills only need the two species and
     eligible images, so a deep link must not fail because the user's home country
-    (e.g. NL) does not list both.
+    (e.g. NL) does not list both, or because the user has no country at all.
     """
-    preferred = resolve_practice_country(user, country_code)
-    try:
-        validate_pair_for_country(preferred, low_id, high_id)
-        return preferred
-    except ValidationError:
-        pass
+    preferred = preferred_practice_country(user, country_code)
+    if preferred is not None:
+        try:
+            validate_pair_for_country(preferred, low_id, high_id)
+            return preferred
+        except ValidationError:
+            pass
 
     world = world_practice_country()
     if world is not None and _pair_has_eligible_media(world, low_id, high_id):
         return world
+
+    if preferred is None:
+        return resolve_practice_country(user, country_code)
 
     # Last resort: pair drills do not use the checklist for question selection.
     if _pair_has_eligible_media(preferred, low_id, high_id):
@@ -149,16 +161,21 @@ def resolve_country_for_species_practice(
     country_code: str | None,
     species_id: int,
 ) -> Country:
-    preferred = resolve_practice_country(user, country_code)
-    try:
-        validate_species_for_country(preferred, species_id)
-        return preferred
-    except ValidationError:
-        pass
+    """Prefer the requested/profile country; fall back to World (also without a country)."""
+    preferred = preferred_practice_country(user, country_code)
+    if preferred is not None:
+        try:
+            validate_species_for_country(preferred, species_id)
+            return preferred
+        except ValidationError:
+            pass
 
     world = world_practice_country()
     if world is not None and _species_has_eligible_media(world, species_id):
         return world
+
+    if preferred is None:
+        return resolve_practice_country(user, country_code)
 
     if _species_has_eligible_media(preferred, species_id):
         return preferred

@@ -244,6 +244,37 @@ class PracticeApiTests(TestCase):
         game = Game.objects.get(token=response.json()["game"]["token"])
         self.assertEqual(game.country_id, "world")
 
+    def test_start_pair_practice_without_country_uses_world_checklist(self):
+        """No profile country and no country_code must not 400 (Tricky birds on a fresh account)."""
+        world = Country.objects.get_or_create(code="world", defaults={"name": "World"})[0]
+        for sp in (self.sp_low, self.sp_high):
+            CountrySpecies.objects.create(country=world, species=sp, status="native")
+        self.user.profile.country = None
+        self.user.profile.save(update_fields=["country"])
+
+        self.client.force_authenticate(user=self.user)
+        response = self.client.post(
+            reverse("practice-confusion-pair-start"),
+            {"low_id": self.low_id, "high_id": self.high_id},
+            format="json",
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        game = Game.objects.get(token=response.json()["game"]["token"])
+        self.assertEqual(game.country_id, "world")
+
+    def test_start_pair_practice_without_country_or_world_requires_country(self):
+        self.user.profile.country = None
+        self.user.profile.save(update_fields=["country"])
+
+        self.client.force_authenticate(user=self.user)
+        response = self.client.post(
+            reverse("practice-confusion-pair-start"),
+            {"low_id": self.low_id, "high_id": self.high_id},
+            format="json",
+        )
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn("country_code", response.json())
+
     def test_pair_practice_excluded_from_scores(self):
         player = Player.objects.create(user=self.user, name="Practice", language="en")
         game = Game.objects.create(
@@ -564,6 +595,24 @@ class SpeciesPracticeTests(TestCase):
         option_ids = set(question.options.values_list('id', flat=True))
         self.assertTrue(option_ids.issubset({self.focus.id, self.related.id, self.unrelated.id}))
         self.assertIn(question.species_id, option_ids)
+
+    def test_start_species_practice_without_country_uses_world_checklist(self):
+        """No profile country and no country_code must not 400 (Tricky birds on a fresh account)."""
+        world = Country.objects.get_or_create(code="world", defaults={"name": "World"})[0]
+        for sp in (self.focus, self.related, self.unrelated):
+            CountrySpecies.objects.create(country=world, species=sp, status='native')
+        self.user.profile.country = None
+        self.user.profile.save(update_fields=['country'])
+
+        self.client.force_authenticate(user=self.user)
+        response = self.client.post(
+            reverse('practice-species-start'),
+            {'species_id': self.focus.id},
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        game = Game.objects.get(token=response.json()['game']['token'])
+        self.assertEqual(game.country_id, 'world')
 
     def test_species_practice_excluded_from_scores(self):
         player = Player.objects.create(user=self.user, name='Practice', language='en')

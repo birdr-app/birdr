@@ -1,19 +1,31 @@
+function messageText(value: unknown): string | null {
+  if (typeof value === 'string') return value || null;
+  if (Array.isArray(value)) {
+    const parts = value.filter((x) => typeof x === 'string' && x);
+    return parts.length ? parts.join(' ') : null;
+  }
+  return null;
+}
+
 /** Extract a user-visible message from a failed API response body. */
 export function formatApiDetail(data: unknown): string | null {
   if (!data || typeof data !== 'object') return null;
   const d = data as Record<string, unknown>;
-  if (typeof d.detail === 'string') return d.detail;
-  if (Array.isArray(d.detail)) {
-    return d.detail.map((x) => String(x)).join(' ');
+  for (const key of ['detail', 'error', 'message', 'non_field_errors']) {
+    const text = messageText(d[key]);
+    if (text) return text;
   }
-  if (typeof d.error === 'string') return d.error;
-  if (typeof d.message === 'string') return d.message;
+  // DRF field errors: {"country_code": ["Country is required ..."]}
+  for (const value of Object.values(d)) {
+    const text = messageText(value);
+    if (text) return text;
+  }
   return null;
 }
 
 export async function readApiErrorMessage(
   response: Response,
-  fallback: string
+  fallback = 'Request failed'
 ): Promise<string> {
   if (response.status === 404) {
     return (
