@@ -19,6 +19,7 @@ export function routeForNotificationData(data: unknown): NotificationRoute | nul
   const d = data as {
     type?: string;
     flock_slug?: string;
+    token?: string;
     country_code?: string;
     screen?: string;
     challenge_id?: number | string;
@@ -49,6 +50,10 @@ export function routeForNotificationData(data: unknown): NotificationRoute | nul
       return { name: 'DailyChallenge' };
     }
     case 'flock_challenge':
+      return d.flock_slug ? { name: 'FlockDetail', params: { slug: d.flock_slug } } : null;
+    case 'shared_game':
+      // A member posted a game to the flock's Extra games.
+      if (typeof d.token === 'string' && d.token) return { name: 'SharedGameDetail', params: { token: d.token } };
       return d.flock_slug ? { name: 'FlockDetail', params: { slug: d.flock_slug } } : null;
     default:
       return null;

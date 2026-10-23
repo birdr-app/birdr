@@ -25,3 +25,19 @@ export function routeForOpenUrl(url: string): NotificationRoute | null {
   if (screen === 'survival') return code ? null : { name: 'SurvivalStart' };
   return code ? { name: 'League', params: { countryCode: code.toUpperCase() } } : { name: 'League' };
 }
+
+/** Paths reserved for links that only make sense in the app (a newer app may know more of them). */
+const APP_LINK_PREFIXES = /^\/(join|open|s|practice)\//i;
+
+/**
+ * True for a Birdr app link this version could not route: a birdr:// link, or an https link
+ * under an app-only path. Such links come from a newer Birdr, so the user should update.
+ * Dev-client and OAuth callbacks are not app links.
+ */
+export function isUnsupportedAppLink(url: string): boolean {
+  if (/^birdr:\/\//i.test(url)) {
+    return !/^birdr:\/\/(expo-development-client|auth)\b/i.test(url);
+  }
+  const path = httpPath(url);
+  return path != null && APP_LINK_PREFIXES.test(path);
+}

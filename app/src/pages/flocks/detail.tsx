@@ -38,6 +38,7 @@ import {
   type Flock,
 } from '../../api/flocks';
 import { authService } from '../../api/services/auth.service';
+import { FlockExtraGames } from '../../components/flocks/extra-games';
 import { Page } from '../../shared/components/layout';
 import AppContext from '../../core/app-context';
 import { getCountryDisplayName } from '../../data/country-names-nl';
@@ -401,7 +402,7 @@ export function FlockDetailPage() {
           </Flex>
 
           <Heading size="md" mb={3}>
-            <FormattedMessage id="flocks_current_challenge" defaultMessage="Current challenge" />
+            <FormattedMessage id="flocks_weekly_challenge" defaultMessage="Weekly challenge" />
           </Heading>
 
           {challenge ? (
@@ -510,6 +511,8 @@ export function FlockDetailPage() {
             </Box>
           )}
 
+          {flock.is_member ? <FlockExtraGames games={flock.extra_games ?? []} /> : null}
+
           {flock.is_member ? (
             <Box borderWidth="2px" borderColor="primary.200" borderRadius="xl" px={4} py={2} mb={4}>
               <Flex justify="space-between" align="center" gap={4} py={2}>
@@ -520,7 +523,7 @@ export function FlockDetailPage() {
                   <Text fontSize="sm" color="primary.600">
                     <FormattedMessage
                       id="flock_notifications_hint"
-                      defaultMessage="New challenge, last day to play, and the results."
+                      defaultMessage="New challenge, last day to play, the results, and new extra games."
                     />{' '}
                     <FormattedMessage
                       id="flock_notifications_web_note"

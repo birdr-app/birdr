@@ -111,6 +111,13 @@ location ^~ /g/ {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
 }
+# Shared game links (/s/<token>/): previews for chat apps, then redirect to /join/s/<token>/web/
+location ^~ /s/ {
+    proxy_pass http://jizz;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
 
 # Public marketing HTML (Django) — /site/ is the marketing tree (landing, SEO pages, CMS).
 # Exact / and old SEO prefixes stay on Django so they can 301 to /site/.

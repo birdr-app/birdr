@@ -39,6 +39,16 @@ describe('routeForNotificationData', () => {
     expect(routeForNotificationData({ type: 'flock_challenge' })).toBeNull();
   });
 
+  it('routes a game shared to a flock to that game', () => {
+    expect(
+      routeForNotificationData({ type: 'shared_game', token: 'zw8c4zh9zu', flock_slug: 'owls' }),
+    ).toEqual({ name: 'SharedGameDetail', params: { token: 'zw8c4zh9zu' } });
+    expect(routeForNotificationData({ type: 'shared_game', flock_slug: 'owls' })).toEqual({
+      name: 'FlockDetail',
+      params: { slug: 'owls' },
+    });
+  });
+
   it('ignores unknown or empty payloads', () => {
     expect(routeForNotificationData(undefined)).toBeNull();
     expect(routeForNotificationData({ type: 'something_else' })).toBeNull();

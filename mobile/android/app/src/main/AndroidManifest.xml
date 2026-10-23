@@ -41,6 +41,7 @@
         <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/join/challenge/"/>
         <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/open/update/"/>
         <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/open/app/"/>
+        <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/s/"/>
         <category android:name="android.intent.category.BROWSABLE"/>
         <category android:name="android.intent.category.DEFAULT"/>
       </intent-filter>

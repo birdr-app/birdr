@@ -481,7 +481,11 @@ class FlockDetailView(APIView):
         )
         if flock.is_private and not flock.is_member(request.user):
             raise NotFound()
-        return Response(_serialize_flock(flock, request, include_invite=True))
+        from jizz.shared_game_views import flock_extra_games
+
+        data = _serialize_flock(flock, request, include_invite=True)
+        data['extra_games'] = flock_extra_games(flock, request.user)
+        return Response(data)
 
     def patch(self, request, slug):
         flock = get_object_or_404(Flock, slug=slug)

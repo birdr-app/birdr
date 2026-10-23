@@ -96,9 +96,13 @@ export function GamePlayScreen() {
   const playerTokenParam = (route.params as { playerToken?: string })?.playerToken;
   const leagueCountryCode = (route.params as { leagueCountryCode?: string })?.leagueCountryCode;
   const leagueAttemptId = (route.params as { leagueAttemptId?: number })?.leagueAttemptId;
+  const sharedGameToken = (route.params as { sharedGameToken?: string })?.sharedGameToken;
   const isLeagueGame = leagueCountryCode != null && leagueAttemptId != null;
   const soloGameMode =
-    dailyChallengeId != null || (flockSlug != null && flockChallengeId != null) || isLeagueGame;
+    dailyChallengeId != null ||
+    (flockSlug != null && flockChallengeId != null) ||
+    isLeagueGame ||
+    sharedGameToken != null;
   const { game, player, setGame, setPlayer, loadGame } = useGame();
   const { question, answer, players, nextQuestion, submitAnswer, joinGame, startGame, connected, endGameSession, refreshGameState, patchQuestionMedia } = useGameWebSocket();
   const dailyChallengeStartSent = useRef(false);

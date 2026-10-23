@@ -3,7 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open in Birdr</title>
+  <title>{{ og_title|default:"Open in Birdr" }}</title>
+  {% if og_title %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Birdr">
+  <meta property="og:title" content="{{ og_title }}">
+  <meta property="og:description" content="{{ og_description }}">
+  <meta property="og:url" content="{{ og_url }}">
+  <meta property="og:image" content="{{ og_image|default:'https://birdr.pro/images/birdr-logo.png' }}">
+  <meta name="description" content="{{ og_description }}">
+  {% endif %}
   <style>
     body { font-family: system-ui, sans-serif; text-align: center; padding: 2rem; max-width: 360px; margin: 0 auto; }
     a { color: #2d7d46; }
@@ -13,11 +22,15 @@
 <body>
   <p>Opening Birdr…</p>
   <p class="fallback">App not installed? <a href="{{ fallback_url }}" id="web-link">Continue in browser</a></p>
+  {% if deep_link %}
   <script>
     var d = '{{ deep_link|escapejs }}';
     var fallback = '{{ fallback_url|escapejs }}';
     window.location.href = d;
     setTimeout(function() { window.location.href = fallback; }, 2500);
   </script>
+  {% else %}
+  <script>window.location.replace('{{ fallback_url|escapejs }}');</script>
+  {% endif %}
 </body>
 </html>

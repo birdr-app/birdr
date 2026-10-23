@@ -1,12 +1,15 @@
 import React, { useEffect, useRef } from 'react';
-import { Linking } from 'react-native';
+import { Alert, Linking, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useAuth } from '../context/AuthContext';
 import { useGame } from '../context/GameContext';
 import { API_BASE_URL } from '../api/config';
 import { parseFlockJoinUrl } from '../api/flocks';
 import { parseGameShareUrl } from '../api/gameShare';
-import { routeForOpenUrl } from '../lib/deepLinkRoute';
+import { parseSharedGameUrl } from '../api/sharedGames';
+import { isUnsupportedAppLink, routeForOpenUrl } from '../lib/deepLinkRoute';
+import { APP_STORE_URL, PLAY_STORE_URL } from '../constants/storeUrls';
+import { useTranslation } from '../i18n/TranslationContext';
 
 /**
  * Handles deep links:
@@ -16,12 +19,16 @@ import { routeForOpenUrl } from '../lib/deepLinkRoute';
  * - Flock invite: birdr://join/flock/{token} or https://birdr.pro/join/flock/{token}/
  * - Update: birdr://updates/{id} or https://birdr.pro/open/update/{id}/
  * - Game result share: https://birdr.pro/g/{token} or birdr://g/{token}
+ * - Shared game: https://birdr.pro/join/s/{token}/ or birdr://join/s/{token}
  * - Survival: https://birdr.pro/open/survival/ or birdr://survival
  * - League: https://birdr.pro/open/league/[{countryCode}/] or birdr://league[/{countryCode}]
+ * - Shared game: https://birdr.pro/s/{token}/ (also /join/s/{token}/)
+ * - Any other app link (from a newer Birdr): ask the user to update.
  */
 export function DeepLinkHandler({ children }: { children: React.ReactNode }) {
   const { handleOAuthRedirect, isAuthenticated } = useAuth();
   const { loadGame, setGame } = useGame();
+  const { t } = useTranslation();
   const navigation = useNavigation<any>();
   const handled = useRef<string | null>(null);
 
@@ -116,6 +123,13 @@ export function DeepLinkHandler({ children }: { children: React.ReactNode }) {
         return;
       }
 
+      const sharedGameToken = parseSharedGameUrl(url);
+      if (sharedGameToken) {
+        handled.current = url;
+        navigation.navigate('SharedGameDetail', { token: sharedGameToken });
+        return;
+      }
+
       const gameShareToken = parseGameShareUrl(url);
       if (gameShareToken) {
         handled.current = url;
@@ -142,6 +156,21 @@ export function DeepLinkHandler({ children }: { children: React.ReactNode }) {
             playMode: undefined,
           });
         }
+        return;
+      }
+
+      // A link from a newer Birdr (new game mode or screen): say so instead of doing nothing.
+      if (isUnsupportedAppLink(url)) {
+        handled.current = url;
+        Alert.alert(t('link_needs_update_title'), t('link_needs_update_message'), [
+          { text: t('link_needs_update_later'), style: 'cancel' },
+          {
+            text: t('link_needs_update_button'),
+            onPress: () => {
+              Linking.openURL(Platform.OS === 'ios' ? APP_STORE_URL : PLAY_STORE_URL).catch(() => {});
+            },
+          },
+        ]);
       }
     };
 
@@ -151,7 +180,7 @@ export function DeepLinkHandler({ children }: { children: React.ReactNode }) {
       if (e.url !== handled.current) processUrl(e.url);
     });
     return () => sub.remove();
-  }, [handleOAuthRedirect, loadGame, setGame, navigation, isAuthenticated]);
+  }, [handleOAuthRedirect, loadGame, setGame, navigation, isAuthenticated, t]);
 
   return <>{children}</>;
 }

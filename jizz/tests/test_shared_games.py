@@ -1,0 +1,387 @@
+"""Shared games: create from normal settings, play by link, leaderboard, finish, question stats."""
+
+from datetime import timedelta
+
+from django.contrib.auth.models import User
+from django.test import TestCase
+from django.utils import timezone
+from rest_framework import status
+from rest_framework.test import APIClient
+
+from jizz.models import (
+    Country,
+    Game,
+    Player,
+    PlayerScore,
+    Question,
+    SharedGame,
+    SharedGameAttempt,
+)
+from jizz.tests.test_flocks import _auth, _seed_species
+
+SETTINGS = {
+    'country': 'NL',
+    'level': 'advanced',
+    'length': 5,
+    'media': 'images',
+    'language': 'en',
+}
+
+
+class SharedGameTests(TestCase):
+    def setUp(self):
+        self.country = Country.objects.get_or_create(code='NL', defaults={'name': 'Netherlands'})[0]
+        self.species = _seed_species(self.country, 12, prefix='sg')
+        self.owner = User.objects.create_user('sgowner', password='x')
+        self.owner_player = Player.objects.create(user=self.owner, name='Owner')
+        self.guest = Player.objects.create(name='Guest')
+        self.client = APIClient()
+
+    def _as(self, player):
+        client = APIClient()
+        client.credentials(HTTP_AUTHORIZATION=f'Bearer {player.token}')
+        return client
+
+    def _create(self, **extra):
+        res = self._as(self.owner_player).post(
+            '/api/shared-games/', {**SETTINGS, **extra}, format='json'
+        )
+        self.assertEqual(res.status_code, status.HTTP_201_CREATED, res.data)
+        return res.data
+
+    def _play_all(self, player, token, *, correct_until=None):
+        """Start an attempt and answer every question; correct for the first ``correct_until``."""
+        client = self._as(player)
+        start = client.post(f'/api/shared-games/{token}/play/')
+        self.assertIn(start.status_code, (200, 201), start.data)
+        game = Game.objects.get(token=start.data['game_token'])
+        for question in game.questions.order_by('sequence'):
+            right = correct_until is None or question.sequence <= correct_until
+            if right:
+                answer_id = question.species_id
+            else:
+                answer_id = question.questionoption_set.exclude(
+                    species_id=question.species_id
+                ).first().species_id
+            res = client.post(
+                '/api/answer/',
+                {
+                    'player_token': player.token,
+                    'question_id': question.id,
+                    'answer_id': answer_id,
+                },
+                format='json',
+            )
+            self.assertEqual(res.status_code, 201, res.data)
+        return game
+
+    def test_create_builds_frozen_template(self):
+        data = self._create(duration_hours=72)
+        shared = SharedGame.objects.get(token=data['token'])
+        template = shared.template_game
+        self.assertEqual(template.questions.count(), 5)
+        self.assertFalse(template.questions.filter(media__isnull=True).exists())
+        self.assertTrue(template.questions_pregenerated)
+        self.assertTrue(template.ended, 'template must never be playable')
+        self.assertFalse(template.multiplayer)
+        self.assertTrue(data['is_owner'])
+        self.assertTrue(data['can_finish'])
+        self.assertTrue(data['share_url'].endswith(f"/s/{data['token']}/"))
+        self.assertNotIn('/join/', data['share_url'])
+        self.assertEqual(data['game']['country']['code'], 'NL')
+        self.assertIsNotNone(data['ends_at'])
+
+    def test_create_requires_login(self):
+        res = self._as(self.guest).post('/api/shared-games/', SETTINGS, format='json')
+        self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
+
+    def test_create_with_jwt(self):
+        client = APIClient()
+        _auth(client, self.owner)
+        res = client.post('/api/shared-games/', SETTINGS, format='json')
+        self.assertEqual(res.status_code, status.HTTP_201_CREATED, res.data)
+
+    def test_create_rejects_practice_types_and_bad_duration(self):
+        client = self._as(self.owner_player)
+        res = client.post(
+            '/api/shared-games/', {**SETTINGS, 'game_type': 'survival'}, format='json'
+        )
+        self.assertEqual(res.data['error'], 'game_type_not_shareable')
+        res = client.post('/api/shared-games/', {**SETTINGS, 'duration_hours': 0}, format='json')
+        self.assertEqual(res.data['error'], 'invalid_duration')
+
+    def test_everyone_gets_the_same_questions_and_media(self):
+        data = self._create()
+        a = self._play_all(self.guest, data['token'])
+        b = self._play_all(self.owner_player, data['token'])
+        template = SharedGame.objects.get(token=data['token']).template_game
+
+        def rows(game):
+            return list(game.questions.order_by('sequence').values_list('species_id', 'media_id'))
+
+        self.assertEqual(rows(a), rows(template))
+        self.assertEqual(rows(b), rows(template))
+        self.assertNotEqual(a.token, b.token)
+
+    def test_attempt_completes_on_last_answer_and_ranks(self):
+        data = self._create()
+        self._play_all(self.guest, data['token'], correct_until=2)
+        self._play_all(self.owner_player, data['token'])
+
+        attempt = SharedGameAttempt.objects.get(player=self.guest)
+        self.assertIsNotNone(attempt.completed_at)
+        self.assertTrue(attempt.is_ranked)
+        self.assertEqual(attempt.correct_count, 2)
+
+        detail = self._as(self.guest).get(f"/api/shared-games/{data['token']}/").data
+        board = detail['leaderboard']
+        self.assertEqual(board['total_participants'], 2)
+        self.assertEqual(board['entries'][0]['name'], 'Owner')
+        self.assertEqual(board['me']['name'], 'Guest')
+        self.assertEqual(board['me']['rank'], 2)
+        self.assertFalse(detail['can_play'])
+        self.assertTrue(detail['my_attempt']['completed'])
+
+    def test_play_resumes_unfinished_and_blocks_second_attempt(self):
+        data = self._create()
+        client = self._as(self.guest)
+        first = client.post(f"/api/shared-games/{data['token']}/play/")
+        self.assertEqual(first.status_code, 201)
+        again = client.post(f"/api/shared-games/{data['token']}/play/")
+        self.assertEqual(again.status_code, 200)
+        self.assertEqual(again.data['game_token'], first.data['game_token'])
+
+        self._play_all(self.guest, data['token'])
+        done = client.post(f"/api/shared-games/{data['token']}/play/")
+        self.assertEqual(done.data['error'], 'already_played')
+
+    def test_logged_in_user_gets_one_attempt_across_devices(self):
+        data = self._create()
+        user = User.objects.create_user('sgplayer', password='x')
+        phone = Player.objects.create(user=user, name='Phone')
+        laptop = Player.objects.create(user=user, name='Laptop')
+        self._play_all(phone, data['token'])
+        res = self._as(laptop).post(f"/api/shared-games/{data['token']}/play/")
+        self.assertEqual(res.data['error'], 'already_played')
+
+    def test_owner_finishes_then_play_is_closed_and_stats_open(self):
+        data = self._create()
+        token = data['token']
+        self._play_all(self.guest, token, correct_until=3)
+
+        stats = self._as(self.guest).get(f'/api/shared-games/{token}/stats/')
+        self.assertEqual(stats.status_code, status.HTTP_403_FORBIDDEN)
+
+        not_owner = self._as(self.guest).post(f'/api/shared-games/{token}/finish/')
+        self.assertEqual(not_owner.status_code, status.HTTP_403_FORBIDDEN)
+
+        finished = self._as(self.owner_player).post(f'/api/shared-games/{token}/finish/')
+        self.assertEqual(finished.status_code, 200)
+        self.assertEqual(finished.data['status'], 'finished')
+        self.assertFalse(finished.data['can_finish'])
+
+        late = Player.objects.create(name='Late')
+        res = self._as(late).post(f'/api/shared-games/{token}/play/')
+        self.assertEqual(res.data['error'], 'finished')
+
+        stats = self.client.get(f'/api/shared-games/{token}/stats/')
+        self.assertEqual(stats.status_code, 200)
+        self.assertEqual(stats.data['participants'], 1)
+        questions = stats.data['questions']
+        self.assertEqual([q['sequence'] for q in questions], [1, 2, 3, 4, 5])
+        self.assertEqual([q['correct'] for q in questions], [1, 1, 1, 0, 0])
+        self.assertTrue(all(q['answered'] == 1 for q in questions))
+        self.assertEqual(questions[3]['wrong_answers'][0]['count'], 1)
+        self.assertTrue(questions[0]['species']['name'])
+        self.assertTrue(questions[0]['media']['url'])
+
+    def test_deadline_closes_game_lazily(self):
+        data = self._create(duration_hours=24)
+        shared = SharedGame.objects.get(token=data['token'])
+        shared.ends_at = timezone.now() - timedelta(minutes=1)
+        shared.save(update_fields=['ends_at'])
+
+        detail = self.client.get(f"/api/shared-games/{data['token']}/").data
+        self.assertEqual(detail['status'], 'finished')
+        self.assertFalse(detail['can_play'])
+        shared.refresh_from_db()
+        self.assertEqual(shared.finished_at, shared.ends_at)
+
+    def test_open_ended_game_closes_after_cap(self):
+        data = self._create()
+        shared = SharedGame.objects.get(token=data['token'])
+        SharedGame.objects.filter(pk=shared.pk).update(
+            created=timezone.now() - timedelta(days=SharedGame.MAX_OPEN_DAYS + 1)
+        )
+        shared.refresh_from_db()
+        self.assertFalse(shared.is_open)
+
+    def test_attempt_finished_after_close_is_not_ranked(self):
+        """Someone mid-game when it closes can finish (they hold the game token), unranked."""
+        data = self._create()
+        client = self._as(self.guest)
+        start = client.post(f"/api/shared-games/{data['token']}/play/")
+        SharedGame.objects.get(token=data['token']).finish()
+        game = Game.objects.get(token=start.data['game_token'])
+        for question in game.questions.order_by('sequence'):
+            client.post(
+                '/api/answer/',
+                {'player_token': self.guest.token, 'question_id': question.id,
+                 'answer_id': question.species_id},
+                format='json',
+            )
+        attempt = SharedGameAttempt.objects.get(player=self.guest)
+        self.assertIsNotNone(attempt.completed_at)
+        self.assertFalse(attempt.is_ranked)
+
+    def test_shared_attempts_stay_out_of_hiscores(self):
+        data = self._create()
+        game = self._play_all(self.guest, data['token'])
+        score = PlayerScore.objects.get(game=game)
+        self.assertIsNone(score.hiscore_rank)
+        self.assertFalse(PlayerScore.hiscore_eligible().filter(pk=score.pk).exists())
+
+    def test_my_shared_games_lists_owned_and_played(self):
+        data = self._create()
+        self._play_all(self.guest, data['token'])
+        mine = self._as(self.guest).get('/api/shared-games/')
+        self.assertEqual([g['token'] for g in mine.data], [data['token']])
+        owned = self._as(self.owner_player).get('/api/shared-games/')
+        self.assertEqual([g['token'] for g in owned.data], [data['token']])
+
+    def test_template_question_cannot_be_played(self):
+        data = self._create()
+        template = SharedGame.objects.get(token=data['token']).template_game
+        res = self.client.get(f'/api/games/{template.token}/question')
+        self.assertEqual(res.status_code, 404)
+        self.assertEqual(Question.objects.filter(game=template, done=True).count(), 0)
+
+    def test_game_payload_links_back_to_shared_game(self):
+        data = self._create()
+        game = self._play_all(self.guest, data['token'])
+        res = self.client.get(f'/api/games/{game.token}/')
+        self.assertEqual(res.data['shared_game_token'], data['token'])
+        normal = Game.objects.create(country=self.country, level='advanced', length=5)
+        self.assertIsNone(self.client.get(f'/api/games/{normal.token}/').data['shared_game_token'])
+
+    def test_join_link_redirects_desktop_and_previews_for_bots(self):
+        data = self._create()
+        path = f"/join/s/{data['token']}/"
+        desktop = self.client.get(path, HTTP_USER_AGENT='Mozilla/5.0 (Macintosh) Chrome/130')
+        self.assertEqual(desktop.status_code, 302)
+        self.assertTrue(desktop['Location'].endswith(f"/join/s/{data['token']}/web/"))
+
+        bot = self.client.get(path, HTTP_USER_AGENT='WhatsApp/2.23.20.0')
+        self.assertEqual(bot.status_code, 200)
+        self.assertContains(bot, 'og:title')
+        self.assertContains(bot, 'shared a Birdr quiz: Netherlands')
+
+        phone = self.client.get(path, HTTP_USER_AGENT='Mozilla/5.0 (iPhone) Mobile')
+        self.assertContains(phone, f"birdr://join/s/{data['token']}")
+
+    def test_join_link_for_unknown_game_still_falls_back(self):
+        res = self.client.get('/join/s/nope/', HTTP_USER_AGENT='WhatsApp/2.23')
+        self.assertEqual(res.status_code, 200)
+        self.assertNotContains(res, 'og:title')
+
+    def test_share_link_skips_the_app_but_previews_for_bots(self):
+        """/s/ never tries birdr:// (older apps own the scheme but cannot open shared games)."""
+        data = self._create()
+        path = f"/s/{data['token']}/"
+        web = f"/join/s/{data['token']}/web/"
+        for user_agent in ('Mozilla/5.0 (iPhone) Mobile', 'Mozilla/5.0 (Macintosh) Chrome/130'):
+            res = self.client.get(path, HTTP_USER_AGENT=user_agent)
+            self.assertEqual(res.status_code, 302, user_agent)
+            self.assertTrue(res['Location'].endswith(web))
+
+        bot = self.client.get(path, HTTP_USER_AGENT='WhatsApp/2.23.20.0')
+        self.assertEqual(bot.status_code, 200)
+        self.assertContains(bot, 'shared a Birdr quiz: Netherlands')
+        self.assertContains(bot, f'og:url" content="https://')
+        self.assertContains(bot, f"/s/{data['token']}/")
+        self.assertNotContains(bot, 'birdr://')
+
+
+class SharedGameFlockTests(TestCase):
+    """Any flock member can post a shared game to the flock's Extra games; members get a push."""
+
+    def setUp(self):
+        from jizz.models import Flock, FlockMembership
+
+        self.country = Country.objects.get_or_create(code='NL', defaults={'name': 'Netherlands'})[0]
+        _seed_species(self.country, 12, prefix='sf')
+        self.owner = User.objects.create_user('sfowner', password='x')
+        self.member = User.objects.create_user('sfmember', password='x')
+        self.quiet = User.objects.create_user('sfquiet', password='x')
+        self.outsider = User.objects.create_user('sfout', password='x')
+        self.flock = Flock.objects.create(name='Waders', slug='waders', owner=self.owner, default_country=self.country)
+        FlockMembership.objects.create(flock=self.flock, user=self.owner, role='owner')
+        FlockMembership.objects.create(flock=self.flock, user=self.member)
+        FlockMembership.objects.create(flock=self.flock, user=self.quiet, notifications_enabled=False)
+        self.client = APIClient()
+        _auth(self.client, self.member)
+        res = self.client.post('/api/shared-games/', SETTINGS, format='json')
+        self.assertEqual(res.status_code, 201, res.data)
+        self.token = res.data['token']
+
+    def test_payload_lists_my_flocks(self):
+        data = self.client.get(f'/api/shared-games/{self.token}/').data
+        self.assertEqual(data['my_flocks'], [{'slug': 'waders', 'name': 'Waders', 'shared': False}])
+        outsider = APIClient()
+        _auth(outsider, self.outsider)
+        self.assertEqual(outsider.get(f'/api/shared-games/{self.token}/').data['my_flocks'], [])
+
+    def test_member_adds_game_and_others_get_a_push(self):
+        from unittest.mock import patch
+
+        with patch('jizz.notifications.send_push_to_user') as push:
+            res = self.client.post(f'/api/shared-games/{self.token}/flocks/', {'flock': 'waders'}, format='json')
+        self.assertEqual(res.status_code, 201, res.data)
+        self.assertEqual(res.data['my_flocks'][0]['shared'], True)
+        pushed_to = [call.args[0] for call in push.call_args_list]
+        self.assertEqual(pushed_to, [self.owner])  # not the sharer, not muted members
+        title, body = push.call_args.args[1], push.call_args.args[2]
+        self.assertEqual(title, 'Birdr: Waders')
+        self.assertIn('sfmember shared a new game: Netherlands, 5 birds', body)
+        self.assertEqual(
+            push.call_args.kwargs['data'],
+            {'type': 'shared_game', 'token': self.token, 'flock_slug': 'waders'},
+        )
+
+        with patch('jizz.notifications.send_push_to_user') as push:
+            again = self.client.post(f'/api/shared-games/{self.token}/flocks/', {'flock': 'waders'}, format='json')
+        self.assertEqual(again.status_code, 200)
+        push.assert_not_called()
+
+    def test_only_members_can_add_and_only_open_games(self):
+        outsider = APIClient()
+        _auth(outsider, self.outsider)
+        res = outsider.post(f'/api/shared-games/{self.token}/flocks/', {'flock': 'waders'}, format='json')
+        self.assertEqual(res.status_code, 403)
+        res = self.client.post(f'/api/shared-games/{self.token}/flocks/', {'flock': 'nope'}, format='json')
+        self.assertEqual(res.status_code, 403)
+
+        SharedGame.objects.get(token=self.token).finish()
+        res = self.client.post(f'/api/shared-games/{self.token}/flocks/', {'flock': 'waders'}, format='json')
+        self.assertEqual(res.data['error'], 'finished')
+
+    def test_flock_detail_lists_extra_games(self):
+        from unittest.mock import patch
+
+        detail = self.client.get('/api/flocks/waders/').data
+        self.assertEqual(detail['extra_games'], [])
+
+        with patch('jizz.notifications.send_push_to_user'):
+            self.client.post(f'/api/shared-games/{self.token}/flocks/', {'flock': 'waders'}, format='json')
+        owner = APIClient()
+        _auth(owner, self.owner)
+        games = owner.get('/api/flocks/waders/').data['extra_games']
+        self.assertEqual(len(games), 1)
+        row = games[0]
+        self.assertEqual(row['token'], self.token)
+        self.assertEqual(row['owner_name'], 'sfmember')
+        self.assertEqual(row['added_by_name'], 'sfmember')
+        self.assertTrue(row['is_open'])
+        self.assertEqual(row['participants'], 0)
+        self.assertEqual(row['game']['country']['code'], 'NL')
+        self.assertIsNone(row['my_attempt'])

@@ -392,6 +392,23 @@ const AppContextProvider: FC<Props> = ({children}) => {
   }, [playerToken]);
 
 
+  /** Game settings as sent to POST /api/games/ (also used to create a shared game). */
+  const gameSettingsBody = () => ({
+    multiplayer: multiplayer === '1',
+    country: country.code,
+    language: language,
+    level: level,
+    length: length,
+    media: mediaType,
+    tax_order: mediaType === 'audio' ? (soundsScope === 'passerines' ? 'Passeriformes' : undefined) : taxOrder?.tax_order,
+    tax_family: taxFamily?.tax_family,
+    species_group: mediaType === 'audio' && soundsScope === 'passerines' ? undefined : speciesGroup?.species_group,
+    season: season || undefined,
+    rarity,
+    include_escapes: includeEscapes,
+    ...clientInfoPayload(),
+  })
+
   const createGame = async (myPlayer?: Player) => {
     myPlayer = myPlayer ?? player
     if (!myPlayer) {
@@ -420,21 +437,7 @@ const AppContextProvider: FC<Props> = ({children}) => {
           ...noCacheHeaders,
           'Authorization': `Token ${myPlayer.token}`
         },
-        body: JSON.stringify({
-          multiplayer: multiplayer === '1',
-          country: country.code,
-          language: language,
-          level: level,
-          length: length,
-          media: mediaType,
-          tax_order: mediaType === 'audio' ? (soundsScope === 'passerines' ? 'Passeriformes' : undefined) : taxOrder?.tax_order,
-          tax_family: taxFamily?.tax_family,
-          species_group: mediaType === 'audio' && soundsScope === 'passerines' ? undefined : speciesGroup?.species_group,
-          season: season || undefined,
-          rarity,
-          include_escapes: includeEscapes,
-          ...clientInfoPayload(),
-        })
+        body: JSON.stringify(gameSettingsBody())
       })
       const data = await response.json();
       if (data) {
@@ -576,6 +579,7 @@ const AppContextProvider: FC<Props> = ({children}) => {
       player,
       createPlayer,
       createGame,
+      gameSettingsBody,
       createRematchGame,
       loadGame,
       game,

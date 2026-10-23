@@ -58,6 +58,7 @@ import { FlockLeaderboardPage } from "./pages/flocks/leaderboard"
 import { FlockInviteLandingPage } from "./pages/flocks/invite-landing"
 import { FlockResultPage } from "./pages/flocks/result"
 import { GameShareResultPage } from "./pages/game-share-result"
+import { SharedGamePage } from "./pages/shared-game"
 import { SurvivalStartPage } from "./pages/survival/start"
 import { SurvivalPlayPage } from "./pages/survival/play"
 import { SurvivalResultPage } from "./pages/survival/result"
@@ -160,6 +161,8 @@ export const MainContent = () => {
             <Route path="/flocks/:slug" element={<FlockDetailPage />} />
             <Route path="/join/flock/:token/web" element={<FlockInviteLandingPage />} />
             <Route path="/join/flock/:token" element={<FlockInviteLandingPage />} />
+            <Route path="/join/s/:token/web" element={<SharedGamePage />} />
+            <Route path="/join/s/:token" element={<SharedGamePage />} />
             <Route path="/journey" element={<BirdrJourneyListPage />} />
             <Route path="/journey/leaderboard" element={<CountryChallengeLeaderboardPage />} />
             <Route path="/journey/intro" element={<BirdrJourneyIntroPage />} />

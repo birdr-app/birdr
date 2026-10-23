@@ -989,7 +989,9 @@ class PlayerScore(models.Model):
             game__country=country,
             game__media=media,
             game__length=length,
-        ).exclude(game__game_type__in=[Game.GAME_TYPE_SURVIVAL, Game.GAME_TYPE_LEAGUE])
+        ).exclude(
+            game__game_type__in=[Game.GAME_TYPE_SURVIVAL, Game.GAME_TYPE_LEAGUE]
+        ).filter(game__shared_attempt__isnull=True)
         if rarity is not None:
             qs = qs.filter(game__rarity=rarity)
         if season:
@@ -1007,13 +1009,15 @@ class PlayerScore(models.Model):
 
     @classmethod
     def hiscore_eligible(cls):
-        """Scores that appear in the hiscores list: no taxonomy-filtered, practice, survival or league games."""
+        """Scores that appear in the hiscores list: no taxonomy-filtered, practice, survival,
+        league or shared games (those have their own leaderboard)."""
         return (
             cls.objects
             .filter(Q(game__tax_order='') | Q(game__tax_order__isnull=True))
             .filter(Q(game__tax_family='') | Q(game__tax_family__isnull=True))
             .filter(Q(game__species_group='') | Q(game__species_group__isnull=True))
             .exclude(game__game_type__in=cls.HISCORE_EXCLUDED_GAME_TYPES)
+            .filter(game__shared_attempt__isnull=True)
         )
 
     @property
@@ -1030,6 +1034,7 @@ class PlayerScore(models.Model):
             or game.tax_family
             or game.species_group
             or game.game_type in self.HISCORE_EXCLUDED_GAME_TYPES
+            or SharedGameAttempt.objects.filter(game_id=game.pk).exists()
         ):
             return None
         better = PlayerScore.hiscore_eligible().filter(
@@ -2435,3 +2440,177 @@ class FlockNotificationLog(models.Model):
 
     class Meta:
         unique_together = [('user', 'challenge', 'kind')]
+
+
+class SharedGame(models.Model):
+    """A game shared by link: everyone plays the same frozen questions, on their own time.
+
+    ``template_game`` holds the owner's settings and the pre-built questions (with locked media);
+    every attempt is a fresh Game cloned from it. Open until ``ends_at`` (when set), until the
+    owner finishes it, or at the latest ``MAX_OPEN_DAYS`` after creation.
+    """
+
+    MAX_OPEN_DAYS = 30
+
+    STATUS_OPEN = 'open'
+    STATUS_FINISHED = 'finished'
+    STATUS_CHOICES = [
+        (STATUS_OPEN, 'Open'),
+        (STATUS_FINISHED, 'Finished'),
+    ]
+
+    token = ShortUUIDField(
+        length=10,
+        max_length=16,
+        alphabet="abcdefghijkmnpqrstuvwxyz23456789",
+        unique=True,
+        editable=False,
+    )
+    owner = models.ForeignKey(
+        'auth.User',
+        on_delete=models.CASCADE,
+        related_name='shared_games',
+    )
+    template_game = models.OneToOneField(
+        Game,
+        on_delete=models.PROTECT,
+        related_name='shared_template',
+    )
+    ends_at = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text='Closes automatically at this time; empty means the owner finishes it.',
+    )
+    status = models.CharField(max_length=16, choices=STATUS_CHOICES, default=STATUS_OPEN)
+    finished_at = models.DateTimeField(null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created']
+        indexes = [models.Index(fields=['owner', '-created'])]
+
+    def __str__(self):
+        return f'{self.token} ({self.owner_id})'
+
+    @property
+    def closes_at(self):
+        """When the game closes on its own: the deadline, or the open-ended safety cap."""
+        cap = self.created + timedelta(days=self.MAX_OPEN_DAYS)
+        return min(self.ends_at, cap) if self.ends_at else cap
+
+    @property
+    def is_open(self) -> bool:
+        return self.status == self.STATUS_OPEN and now() < self.closes_at
+
+    def refresh_status(self) -> None:
+        """Persist the finish once the deadline has passed (status is otherwise computed lazily)."""
+        if self.status == self.STATUS_OPEN and not self.is_open:
+            self.status = self.STATUS_FINISHED
+            self.finished_at = self.closes_at
+            self.save(update_fields=['status', 'finished_at'])
+
+    def finish(self) -> None:
+        if self.status == self.STATUS_OPEN:
+            self.status = self.STATUS_FINISHED
+            self.finished_at = min(now(), self.closes_at)
+            self.save(update_fields=['status', 'finished_at'])
+
+
+class SharedGameAttempt(models.Model):
+    """One player's play-through of a shared game (their own Game cloned from the template)."""
+
+    shared_game = models.ForeignKey(
+        SharedGame,
+        on_delete=models.CASCADE,
+        related_name='attempts',
+    )
+    player = models.ForeignKey(
+        Player,
+        on_delete=models.CASCADE,
+        related_name='shared_game_attempts',
+    )
+    user = models.ForeignKey(
+        'auth.User',
+        null=True,
+        blank=True,
+        on_delete=models.CASCADE,
+        related_name='shared_game_attempts',
+    )
+    game = models.OneToOneField(
+        Game,
+        on_delete=models.CASCADE,
+        related_name='shared_attempt',
+    )
+    is_ranked = models.BooleanField(
+        default=False,
+        help_text='Completed while the shared game was still open.',
+    )
+    correct_count = models.PositiveSmallIntegerField(default=0)
+    score = models.IntegerField(default=0)
+    completed_at = models.DateTimeField(null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['shared_game', '-score', 'completed_at']),
+        ]
+        constraints = [
+            # One attempt per person: per account when logged in, else per guest player.
+            models.UniqueConstraint(
+                fields=['shared_game', 'user'],
+                condition=models.Q(user__isnull=False),
+                name='shared_game_one_attempt_per_user',
+            ),
+            models.UniqueConstraint(
+                fields=['shared_game', 'player'],
+                name='shared_game_one_attempt_per_player',
+            ),
+        ]
+
+    def __str__(self):
+        return f'{self.player_id} on {self.shared_game_id}'
+
+
+class FlockSharedGame(models.Model):
+    """A shared game posted to a flock's "Extra games" (any member may add one)."""
+
+    flock = models.ForeignKey(Flock, on_delete=models.CASCADE, related_name='shared_games')
+    shared_game = models.ForeignKey(SharedGame, on_delete=models.CASCADE, related_name='flock_links')
+    added_by = models.ForeignKey(
+        'auth.User',
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name='flock_shared_games',
+    )
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created']
+        constraints = [
+            models.UniqueConstraint(fields=['flock', 'shared_game'], name='flock_shared_game_once'),
+        ]
+
+    def __str__(self):
+        return f'{self.shared_game_id} in {self.flock_id}'
+
+
+@receiver(post_save, sender=Answer)
+def complete_shared_game_attempt(sender, instance, created, **kwargs):
+    """Close a shared-game attempt on its last answer, so clients need no extra call."""
+    if not created:
+        return
+    attempt = (
+        SharedGameAttempt.objects.select_related('shared_game', 'game')
+        .filter(game_id=instance.question.game_id, completed_at__isnull=True)
+        .first()
+    )
+    if attempt is None:
+        return
+    answers = Answer.objects.filter(player_score=instance.player_score)
+    if answers.count() < attempt.game.length:
+        return
+    attempt.correct_count = answers.filter(correct=True).count()
+    attempt.score = instance.player_score.score
+    attempt.completed_at = now()
+    attempt.is_ranked = attempt.shared_game.is_open
+    attempt.save(update_fields=['correct_count', 'score', 'completed_at', 'is_ranked'])

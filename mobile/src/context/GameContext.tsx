@@ -48,6 +48,8 @@ type GameContextType = {
   loading: boolean;
   createPlayer: () => Promise<Player | null>;
   createGame: () => Promise<Game | null>;
+  /** Current Start settings as a create-game body (used to create a shared game). */
+  gameSettingsBody: () => Record<string, unknown>;
   loadGame: (token: string) => Promise<Game | null>;
   setGame: (g: Game | null) => void;
   setPlayer: (p: Player | null) => void;
@@ -247,6 +249,28 @@ export function GameProvider({ children }: { children: ReactNode }) {
     return null;
   }, [playerName, language, country]);
 
+  const settingsBody = useCallback(() => ({
+    country: country?.code ?? '',
+    language,
+    level,
+    length,
+    media: mediaType,
+    rarity,
+    include_escapes: false,
+    tax_order:
+      mediaType === 'audio'
+        ? soundsScope === 'passerines'
+          ? 'Passeriformes'
+          : undefined
+        : taxOrder?.tax_order,
+    tax_family: taxFamily?.tax_family,
+    species_group:
+      mediaType === 'audio' && soundsScope === 'passerines'
+        ? undefined
+        : speciesGroup?.species_group,
+    season: season || undefined,
+  }), [country, language, level, length, mediaType, rarity, soundsScope, taxOrder, taxFamily, speciesGroup, season]);
+
   const createGame = useCallback(async () => {
     let p = player;
     if (!p) {
@@ -274,25 +298,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
       const g = await gamesApi.createGame(p.token, {
         // Lobby games must be multiplayer so GET /question does not auto-create Q1.
         multiplayer: true,
-        country: country.code,
-        language,
-        level,
-        length,
-        media: mediaType,
-        rarity,
-        include_escapes: false,
-        tax_order:
-          mediaType === 'audio'
-            ? soundsScope === 'passerines'
-              ? 'Passeriformes'
-              : undefined
-            : taxOrder?.tax_order,
-        tax_family: taxFamily?.tax_family,
-        species_group:
-          mediaType === 'audio' && soundsScope === 'passerines'
-            ? undefined
-            : speciesGroup?.species_group,
-        season: season || undefined,
+        ...settingsBody(),
       });
       if (g) {
         await AsyncStorage.setItem(GAME_TOKEN_KEY, g.token);
@@ -303,7 +309,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
       setLoading(false);
     }
     return null;
-  }, [player, playerName, country, language, level, length, mediaType, soundsScope, rarity, taxOrder, taxFamily, speciesGroup, season, createPlayer]);
+  }, [player, playerName, country, language, level, length, mediaType, soundsScope, rarity, taxOrder, taxFamily, speciesGroup, season, createPlayer, settingsBody]);
 
   const clearGame = useCallback(async () => {
     await AsyncStorage.removeItem(GAME_TOKEN_KEY);
@@ -356,6 +362,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
         loading,
         createPlayer,
         createGame,
+        gameSettingsBody: settingsBody,
         loadGame,
         setGame,
         setPlayer,

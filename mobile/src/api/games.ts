@@ -29,6 +29,8 @@ export type Game = {
   host?: { id: number; name: string; token?: string };
   ended?: boolean;
   game_type?: string;
+  /** Set when this game is a player's attempt at a shared game. */
+  shared_game_token?: string | null;
   /** Seconds per question for timed games (league, survival). */
   speed_seconds?: number | null;
   pair_species_low_id?: number | null;

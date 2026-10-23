@@ -30,6 +30,7 @@ Als de link in de **browser** opent in plaats van in de app, controleer het volg
 2. In de app: **Associated Domains** entitlement met `applinks:birdr.pro` (staat al in `mobile/app.json` onder `ios.associatedDomains`).
 3. Apple cached de AASA; na deploy kan het 24–48 uur duren. Voor snelle test: app verwijderen en opnieuw installeren.
 4. **Paths:** `/join/*` en `/join/challenge/*` dekken zowel spel- als challenge-joinlinks.
+5. **Gedeelde spellen (`/s/*`) staan bewust nog niet in de AASA.** Oudere app-versies kunnen gedeelde spellen niet openen; zonder `/s/*` opent de link op iPhone de webversie (die volledig werkt). Voeg `"/s/*"` aan `paths` toe zodra de meeste iPhone-gebruikers op de versie met gedeelde spellen zitten. Android claimt `/s/` al via de manifest van die versie, dus oudere Android-apps openen de link in de browser.
 
 ### Handmatig testen
 

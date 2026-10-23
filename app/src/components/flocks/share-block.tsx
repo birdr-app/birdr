@@ -28,6 +28,7 @@ export function FlockShareBlock({
 }: FlockShareBlockProps) {
   const [copied, setCopied] = useState(false);
   const [copiedMessage, setCopiedMessage] = useState(false);
+  const [copiedForSignal, setCopiedForSignal] = useState(false);
 
   const copyLink = () => {
     copy(shareUrl);
@@ -51,6 +52,18 @@ export function FlockShareBlock({
     } catch {
       // user cancelled
     }
+  };
+
+  // Signal has no link that pre-fills a message (unlike wa.me): use the share sheet where
+  // Signal is listed, or copy the message to paste in Signal Desktop.
+  const shareViaSignal = () => {
+    if (canNativeShare) {
+      void nativeShare();
+      return;
+    }
+    copy(shareMessage);
+    setCopiedForSignal(true);
+    setTimeout(() => setCopiedForSignal(false), 4000);
   };
 
   return (
@@ -93,7 +106,18 @@ export function FlockShareBlock({
         <Link href={whatsAppUrl} target="_blank" rel="noopener noreferrer">
           <FormattedMessage id="flocks_share_whatsapp" defaultMessage="WhatsApp" />
         </Link>
+        <Link as="button" onClick={shareViaSignal}>
+          <FormattedMessage id="share_signal" defaultMessage="Signal" />
+        </Link>
       </Flex>
+      {copiedForSignal ? (
+        <Text fontSize="sm" color="primary.700" mt={-2} mb={4}>
+          <FormattedMessage
+            id="share_signal_copied"
+            defaultMessage="Message copied. Paste it in a Signal chat."
+          />
+        </Text>
+      ) : null}
 
       <VStack gap={4} align="start">
         <Box p={4} bg="white" borderRadius="lg" boxShadow="md" border="1px solid orange">

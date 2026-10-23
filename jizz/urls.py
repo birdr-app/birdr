@@ -145,6 +145,14 @@ from jizz.flock_views import (
     flock_challenge_history_page,
     flock_challenge_og_image,
 )
+from jizz.shared_game_views import (
+    SharedGameListCreateView,
+    SharedGameDetailView,
+    SharedGamePlayView,
+    SharedGameFinishView,
+    SharedGameStatsView,
+    SharedGameFlocksView,
+)
 from jizz.game_share_views import (
     GamePublicShareView,
     game_result_og_image,
@@ -200,6 +208,49 @@ def join_flock_redirect(request, token):
     return render(request, 'jizz/join_redirect.html', {
         'deep_link': f'birdr://join/flock/{token}',
         'fallback_url': fallback_url,
+    })
+
+
+# Crawlers that fetch a link to build a chat preview; they must get the Open Graph tags, not a redirect.
+LINK_PREVIEW_BOTS = (
+    'whatsapp', 'facebookexternalhit', 'telegrambot', 'slackbot', 'twitterbot',
+    'discordbot', 'linkedinbot', 'signal', 'skypeuripreview', 'applebot',
+)
+
+
+def join_shared_game_redirect(request, token, try_app=True):
+    """Shared game link: link-preview tags for chat apps, then the app or the web page.
+
+    The share link is /s/<token>/ (try_app=False): older app versions claim /join/ and the
+    birdr:// scheme but cannot open shared games, so people go straight to the web page.
+    New Android apps claim /s/ and never reach this view; iOS follows once /s/* is in the
+    apple-app-site-association file. /join/s/<token>/ is kept as an alias that tries the app.
+    """
+    from jizz.models import SharedGame
+    from jizz.services.species_cover import absolute_media_url
+    from jizz.shared_game import share_preview
+    from jizz.usage_analytics import parse_device_type
+
+    fallback_url = absolute_media_url(f'/join/s/{token}/web/', request)
+    shared_game = SharedGame.objects.select_related('owner', 'template_game__country').filter(token=token).first()
+    preview = share_preview(shared_game) if shared_game else {}
+    user_agent = request.META.get('HTTP_USER_AGENT', '')
+    is_preview_bot = any(bot in user_agent.lower() for bot in LINK_PREVIEW_BOTS)
+    if is_preview_bot:
+        return render(request, 'jizz/join_redirect.html', {
+            'fallback_url': fallback_url,
+            'og_title': preview.get('title'),
+            'og_description': preview.get('description'),
+            'og_url': absolute_media_url(f'/s/{token}/', request),
+        })
+    if not try_app or parse_device_type(user_agent) == 'desktop':
+        return HttpResponseRedirect(fallback_url)
+    return render(request, 'jizz/join_redirect.html', {
+        'deep_link': f'birdr://join/s/{token}',
+        'fallback_url': fallback_url,
+        'og_title': preview.get('title'),
+        'og_description': preview.get('description'),
+        'og_url': absolute_media_url(f'/s/{token}/', request),
     })
 
 
@@ -374,6 +425,8 @@ urlpatterns = [
 
     path('join/challenge/<str:token>/', join_challenge_redirect, name='join-challenge'),
     path('join/flock/<str:token>/', join_flock_redirect, name='join-flock'),
+    path('join/s/<str:token>/', join_shared_game_redirect, name='join-shared-game'),
+    path('s/<str:token>/', join_shared_game_redirect, {'try_app': False}, name='shared-game-link'),
     path('join/<str:token>/', join_game_redirect, name='join-game'),
     path('flocks/results/<str:result_token>/', flock_result_page, name='flock-result-page'),
     path(
@@ -586,6 +639,14 @@ urlpatterns = [
     path('api/daily-challenges/<int:pk>/decline/', DailyChallengeDeclineView.as_view(), name='daily-challenge-decline'),
     path('api/daily-challenges/<int:pk>/start/', DailyChallengeStartView.as_view(), name='daily-challenge-start'),
     path('api/daily-challenges/<int:pk>/rounds/<int:day>/', DailyChallengeRoundView.as_view(), name='daily-challenge-round'),
+
+    # Shared games (play by link, own leaderboard)
+    path('api/shared-games/', SharedGameListCreateView.as_view(), name='shared-game-list-create'),
+    path('api/shared-games/<str:token>/', SharedGameDetailView.as_view(), name='shared-game-detail'),
+    path('api/shared-games/<str:token>/play/', SharedGamePlayView.as_view(), name='shared-game-play'),
+    path('api/shared-games/<str:token>/finish/', SharedGameFinishView.as_view(), name='shared-game-finish'),
+    path('api/shared-games/<str:token>/stats/', SharedGameStatsView.as_view(), name='shared-game-stats'),
+    path('api/shared-games/<str:token>/flocks/', SharedGameFlocksView.as_view(), name='shared-game-flocks'),
 
     # Flocks (Phase 1)
     path('api/flocks/', FlockListCreateView.as_view(), name='flock-list-create'),

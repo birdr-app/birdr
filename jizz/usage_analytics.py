@@ -35,12 +35,13 @@ _PLATFORM_CHOICES = {'web', 'ios', 'android'}
 _DEVICE_CHOICES = {'desktop', 'mobile', 'tablet', 'unknown'}
 _EVENT_TYPE_CHOICES = {'page_view', 'feature', 'api', 'websocket'}
 _COUNTRY_RE = re.compile(r'^[A-Za-z]{2}$')
-_CRAWLER_UA_RE = re.compile(
+# Plain alternation so it also works as a case-insensitive SQL regex (``user_agent__iregex``).
+CRAWLER_UA_PATTERN = (
     r'googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|facebookexternalhit|'
     r'twitterbot|linkedinbot|applebot|semrush|ahrefs|mj12bot|dotbot|petalbot|'
-    r'bytespider|gptbot|claudebot|ccbot|amazonbot|ia_archiver|pingdom|uptimerobot',
-    re.I,
+    r'bytespider|gptbot|claudebot|ccbot|amazonbot|ia_archiver|pingdom|uptimerobot'
 )
+_CRAWLER_UA_RE = re.compile(CRAWLER_UA_PATTERN, re.I)
 
 
 def get_client_ip(request) -> str | None:

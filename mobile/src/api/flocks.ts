@@ -1,5 +1,6 @@
 import { apiUrl } from './config';
 import { getAuthHeaders } from './auth';
+import type { FlockExtraGame } from './sharedGames';
 import type { Locale } from '../i18n/translations';
 import { getTranslation } from '../i18n/translations';
 
@@ -52,6 +53,8 @@ export type Flock = {
   /** This member's push setting for the flock (null when not a member). */
   notifications_enabled?: boolean | null;
   invite?: FlockInvite | null;
+  /** Shared games members posted to this flock (detail endpoint only). */
+  extra_games?: FlockExtraGame[];
 };
 
 export type FlockLeaderboardEntry = {
