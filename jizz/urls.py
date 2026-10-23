@@ -145,6 +145,13 @@ from jizz.flock_views import (
     flock_challenge_history_page,
     flock_challenge_og_image,
 )
+from jizz.shared_game_views import (
+    SharedGameListCreateView,
+    SharedGameDetailView,
+    SharedGamePlayView,
+    SharedGameFinishView,
+    SharedGameStatsView,
+)
 from jizz.game_share_views import (
     GamePublicShareView,
     game_result_og_image,
@@ -586,6 +593,13 @@ urlpatterns = [
     path('api/daily-challenges/<int:pk>/decline/', DailyChallengeDeclineView.as_view(), name='daily-challenge-decline'),
     path('api/daily-challenges/<int:pk>/start/', DailyChallengeStartView.as_view(), name='daily-challenge-start'),
     path('api/daily-challenges/<int:pk>/rounds/<int:day>/', DailyChallengeRoundView.as_view(), name='daily-challenge-round'),
+
+    # Shared games (play by link, own leaderboard)
+    path('api/shared-games/', SharedGameListCreateView.as_view(), name='shared-game-list-create'),
+    path('api/shared-games/<str:token>/', SharedGameDetailView.as_view(), name='shared-game-detail'),
+    path('api/shared-games/<str:token>/play/', SharedGamePlayView.as_view(), name='shared-game-play'),
+    path('api/shared-games/<str:token>/finish/', SharedGameFinishView.as_view(), name='shared-game-finish'),
+    path('api/shared-games/<str:token>/stats/', SharedGameStatsView.as_view(), name='shared-game-stats'),
 
     # Flocks (Phase 1)
     path('api/flocks/', FlockListCreateView.as_view(), name='flock-list-create'),

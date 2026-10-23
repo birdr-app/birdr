@@ -20,7 +20,7 @@ from django.urls import path, re_path, reverse
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
-from jizz.models import (Answer, BirdrJourney, BirdrJourneyGame, Country,
+from jizz.models import (Answer, SharedGame, SharedGameAttempt, BirdrJourney, BirdrJourneyGame, Country,
                          CountrySpecies, CountrySpeciesFrequency, Feedback, FlagQuestion, Game, JourneyLevel,
                          JourneyStep, MarketingPage, Page, Player,
                          PlayerScore, Question, QuestionOption, Reaction,
@@ -1852,3 +1852,29 @@ class IpGeoCacheAdmin(admin.ModelAdmin):
 
 # National League admin lives in its own module.
 from jizz import league_admin  # noqa: E402,F401
+
+
+class SharedGameAttemptInline(admin.TabularInline):
+    model = SharedGameAttempt
+    extra = 0
+    fields = ['player', 'user', 'game', 'is_ranked', 'score', 'correct_count', 'completed_at']
+    readonly_fields = fields
+    can_delete = False
+
+
+@admin.register(SharedGame)
+class SharedGameAdmin(admin.ModelAdmin):
+    list_display = ['token', 'owner', 'status', 'ends_at', 'participants', 'created']
+    list_filter = ['status']
+    search_fields = ['token', 'owner__username', 'owner__email']
+    raw_id_fields = ['owner', 'template_game']
+    readonly_fields = ['token', 'created', 'finished_at']
+    inlines = [SharedGameAttemptInline]
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).annotate(_participants=Count('attempts'))
+
+    def participants(self, obj):
+        return getattr(obj, '_participants', 0)
+
+    participants.admin_order_field = '_participants'
