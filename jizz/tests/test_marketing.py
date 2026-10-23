@@ -1130,7 +1130,7 @@ class MarketingPagesTests(TestCase):
         self.assertNotIn('Vogels van Netherlands', nl_country)
 
         landing_nl = self.client.get('/nl/site/').content.decode()
-        self.assertIn('>Nederland</a>', landing_nl)
+        self.assertIn('</span> Nederland</a>', landing_nl)
         self.assertIn('Wat is Birdr?', landing_nl)
         self.assertIn('inloggen met Google', landing_nl)
 

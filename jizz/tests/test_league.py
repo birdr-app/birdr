@@ -244,7 +244,7 @@ class LeagueTestCase(TestCase):
     def test_overview_lists_most_recently_played_league_first(self):
         LeagueMembership.objects.create(user=self.alice, country=self.country, last_played_date=date(2026, 10, 10))
         LeagueMembership.objects.create(user=self.alice, country=self.za, last_played_date=date(2026, 10, 15))
-        lt = Country.objects.create(code='LT', name='Lithuania')
+        lt, _ = Country.objects.get_or_create(code='LT', defaults={'name': 'Lithuania'})
         LeagueMembership.objects.create(user=self.alice, country=lt)  # never played
         _auth(self.client, self.alice)
         codes = [m['country']['code'] for m in self.client.get('/api/league/').data['memberships']]
