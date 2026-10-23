@@ -843,12 +843,12 @@
   "link_needs_update_later": "Non ora",
   "flock_weekly_challenge": "Sfida settimanale",
   "flock_extra_games": "Partite extra",
-  "flock_extra_games_empty": "Ancora nessuna partita extra. Crea una partita, scegli Condividi e aggiungila a questo stormo. Tutti qui ricevono una notifica e possono giocarla.",
+  "flock_extra_games_empty": "Ancora nessuna partita extra. Crea una partita, scegli Condividi e aggiungila a questo flock. Tutti qui ricevono una notifica e possono giocarla.",
   "flock_extra_games_create": "Crea una partita",
   "flock_extra_game_my_score": "Tu: {correct}/{length}, {score} punti",
-  "shared_game_add_to_flock_title": "Aggiungi a uno stormo",
-  "shared_game_add_to_flock_hint": "Compare tra le Partite extra dello stormo e i membri ricevono una notifica.",
-  "shared_game_choose_flock": "Scegli uno stormo",
+  "shared_game_add_to_flock_title": "Aggiungi a un flock",
+  "shared_game_add_to_flock_hint": "Compare tra le Partite extra del flock e i membri ricevono una notifica.",
+  "shared_game_choose_flock": "Scegli un flock",
   "shared_game_add_to_named_flock": "Aggiungi a {flock}",
   "shared_game_in_flocks": "Condivisa in {flocks}"
 }
