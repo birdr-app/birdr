@@ -34,6 +34,7 @@ import {
   formatGameResultShareMessage,
 } from "../../../api/gameShare"
 import { recordGameFinished } from "../../../core/game-modes"
+import { SharedGameResultBlock } from "../../../components/shared-game-result-block"
 
 const PRACTICE_PASS_CORRECT = 18;
 
@@ -145,7 +146,8 @@ export const ResultsComponent = () => {
     [game, player, players]
   )
 
-  const hiscoresPath = game ? buildHiscoresPath(game) : undefined
+  // Shared games have their own leaderboard and stay out of the high scores.
+  const hiscoresPath = game && !game.shared_game_token ? buildHiscoresPath(game) : undefined
 
   const currentPlayerResult = useMemo(
     () => players?.find((p) => p.id === player?.id || p.name === player?.name),
@@ -154,7 +156,8 @@ export const ResultsComponent = () => {
 
   const showTopScoreCelebration = currentPlayerResult?.ranking === 1
 
-  const shareable = canShareGameResult(game)
+  const sharedGameToken = game?.shared_game_token || null
+  const shareable = !sharedGameToken && canShareGameResult(game)
   const shareUrl = game?.token ? buildGameShareUrl(game.token) : ''
   const shareScoreLabel =
     currentPlayerResult?.score != null
@@ -485,6 +488,7 @@ export const ResultsComponent = () => {
               )
             })}
           </ListRoot>
+          {sharedGameToken ? <SharedGameResultBlock token={sharedGameToken} /> : null}
           {shareable && shareUrl ? (
             <FlockShareBlock
               titleId="game_result_share"
@@ -503,7 +507,7 @@ export const ResultsComponent = () => {
                 <FormattedMessage id={'join rematch'} defaultMessage={'Join rematch'}/>
               </Button>
             )}
-            {isHost && (
+            {isHost && !sharedGameToken && (
               <Button
                 onClick={handleRematch}
                 colorPalette="primary"

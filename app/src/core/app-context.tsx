@@ -44,6 +44,8 @@ export type Game = {
   correct_count?: number
   total_questions?: number
   game_type?: string
+  /** Set when this game is a player's attempt at a shared game. */
+  shared_game_token?: string | null
   /** Seconds per question for timed games (league, survival). */
   speed_seconds?: number | null
   pair_species_low_id?: number | null
@@ -209,6 +211,8 @@ type SharedState = {
   setIncludeEscapes: Dispatch<SetStateAction<boolean>>
   game?: Game
   createGame: (player?: Player) => Promise<Game | undefined>
+  /** Current settings as the create-game request body. */
+  gameSettingsBody: () => Record<string, unknown>
   createRematchGame: (oldGame: Game, player?: Player) => Promise<Game | undefined>
   setLoading: Dispatch<SetStateAction<boolean>>
   loadGame: (gameCode: string) => Promise<Game | undefined>
@@ -260,6 +264,7 @@ type SharedState = {
 const AppContext = createContext<SharedState>({
   createPlayer: async () => undefined,
   createGame: async () => undefined,
+  gameSettingsBody: () => ({}),
   createRematchGame: async () => undefined,
   species: [],
   speciesLoading: false,

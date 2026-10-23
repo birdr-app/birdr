@@ -210,6 +210,36 @@ def join_flock_redirect(request, token):
     })
 
 
+# Crawlers that fetch a link to build a chat preview; they must get the Open Graph tags, not a redirect.
+LINK_PREVIEW_BOTS = (
+    'whatsapp', 'facebookexternalhit', 'telegrambot', 'slackbot', 'twitterbot',
+    'discordbot', 'linkedinbot', 'signal', 'skypeuripreview', 'applebot',
+)
+
+
+def join_shared_game_redirect(request, token):
+    """Shared game link: link-preview tags, then the app on mobile or the web page on desktop."""
+    from jizz.models import SharedGame
+    from jizz.services.species_cover import absolute_media_url
+    from jizz.shared_game import share_preview
+    from jizz.usage_analytics import parse_device_type
+
+    fallback_url = absolute_media_url(f'/join/s/{token}/web/', request)
+    shared_game = SharedGame.objects.select_related('owner', 'template_game__country').filter(token=token).first()
+    preview = share_preview(shared_game) if shared_game else {}
+    user_agent = request.META.get('HTTP_USER_AGENT', '')
+    is_preview_bot = any(bot in user_agent.lower() for bot in LINK_PREVIEW_BOTS)
+    if parse_device_type(user_agent) == 'desktop' and not is_preview_bot:
+        return HttpResponseRedirect(fallback_url)
+    return render(request, 'jizz/join_redirect.html', {
+        'deep_link': f'birdr://join/s/{token}',
+        'fallback_url': fallback_url,
+        'og_title': preview.get('title'),
+        'og_description': preview.get('description'),
+        'og_url': absolute_media_url(f'/join/s/{token}/', request),
+    })
+
+
 def join_game_redirect(request, token):
     """Try app deep link, then fall back to web app at /join/<token>/web/."""
     from jizz.services.species_cover import absolute_media_url
@@ -381,6 +411,7 @@ urlpatterns = [
 
     path('join/challenge/<str:token>/', join_challenge_redirect, name='join-challenge'),
     path('join/flock/<str:token>/', join_flock_redirect, name='join-flock'),
+    path('join/s/<str:token>/', join_shared_game_redirect, name='join-shared-game'),
     path('join/<str:token>/', join_game_redirect, name='join-game'),
     path('flocks/results/<str:result_token>/', flock_result_page, name='flock-result-page'),
     path(

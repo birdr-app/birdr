@@ -204,3 +204,26 @@ def question_stats(shared_game: SharedGame, language: str = 'en') -> list[dict]:
             }
         )
     return stats
+
+
+MEDIA_PREVIEW_LABELS = {'images': 'pictures', 'audio': 'sounds', 'video': 'videos'}
+
+
+def share_preview(shared_game: SharedGame) -> dict:
+    """English title + description for chat link previews (WhatsApp, Signal, …)."""
+    from jizz.user_names import player_name_for_user
+
+    template = shared_game.template_game
+    owner = player_name_for_user(shared_game.owner)
+    country = template.country.name if template.country else 'Birdr'
+    media = MEDIA_PREVIEW_LABELS.get(template.media, template.media)
+    played = SharedGameAttempt.objects.filter(shared_game=shared_game, is_ranked=True).count()
+    parts = [f'{template.length} {media}', template.level.title()]
+    if played:
+        parts.append(f'{played} played')
+    if not shared_game.is_open:
+        parts.append('finished')
+    return {
+        'title': f'{owner} shared a Birdr quiz: {country}',
+        'description': ' · '.join(parts) + '. Can you beat the others?',
+    }

@@ -1254,6 +1254,17 @@ class GameSerializer(serializers.ModelSerializer):
         many=True, 
         read_only=True
     )
+    shared_game_token = serializers.SerializerMethodField()
+
+    def get_shared_game_token(self, obj):
+        """Token of the shared game this is a player's attempt at (results link back to it)."""
+        from jizz.models import SharedGameAttempt
+
+        return (
+            SharedGameAttempt.objects.filter(game_id=obj.pk)
+            .values_list('shared_game__token', flat=True)
+            .first()
+        )
 
     def to_internal_value(self, data):
         if isinstance(data, dict) and 'rarity' not in data and 'include_rare' in data:
@@ -1341,6 +1352,7 @@ class GameSerializer(serializers.ModelSerializer):
             'include_escapes',
             'difficult_species',
             'game_type',
+            'shared_game_token',
             'pair_species_low_id',
             'pair_species_high_id',
             'focus_species_id',

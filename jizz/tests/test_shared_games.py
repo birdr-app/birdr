@@ -254,3 +254,31 @@ class SharedGameTests(TestCase):
         res = self.client.get(f'/api/games/{template.token}/question')
         self.assertEqual(res.status_code, 404)
         self.assertEqual(Question.objects.filter(game=template, done=True).count(), 0)
+
+    def test_game_payload_links_back_to_shared_game(self):
+        data = self._create()
+        game = self._play_all(self.guest, data['token'])
+        res = self.client.get(f'/api/games/{game.token}/')
+        self.assertEqual(res.data['shared_game_token'], data['token'])
+        normal = Game.objects.create(country=self.country, level='advanced', length=5)
+        self.assertIsNone(self.client.get(f'/api/games/{normal.token}/').data['shared_game_token'])
+
+    def test_join_link_redirects_desktop_and_previews_for_bots(self):
+        data = self._create()
+        path = f"/join/s/{data['token']}/"
+        desktop = self.client.get(path, HTTP_USER_AGENT='Mozilla/5.0 (Macintosh) Chrome/130')
+        self.assertEqual(desktop.status_code, 302)
+        self.assertTrue(desktop['Location'].endswith(f"/join/s/{data['token']}/web/"))
+
+        bot = self.client.get(path, HTTP_USER_AGENT='WhatsApp/2.23.20.0')
+        self.assertEqual(bot.status_code, 200)
+        self.assertContains(bot, 'og:title')
+        self.assertContains(bot, 'shared a Birdr quiz: Netherlands')
+
+        phone = self.client.get(path, HTTP_USER_AGENT='Mozilla/5.0 (iPhone) Mobile')
+        self.assertContains(phone, f"birdr://join/s/{data['token']}")
+
+    def test_join_link_for_unknown_game_still_falls_back(self):
+        res = self.client.get('/join/s/nope/', HTTP_USER_AGENT='WhatsApp/2.23')
+        self.assertEqual(res.status_code, 200)
+        self.assertNotContains(res, 'og:title')
