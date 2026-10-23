@@ -361,11 +361,20 @@ LOGGING = {
             'style': '{',
         },
     },
+    'filters': {
+        'require_debug_false': {'()': 'django.utils.log.RequireDebugFalse'},
+    },
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
             'stream': 'ext://sys.stderr',
             'formatter': 'simple',
+        },
+        # 500s and stuck/killed workers, mailed to ADMINS (once per kind per 15 min).
+        'mail_errors': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'jizz.error_mail.ThrottledAdminEmailHandler',
         },
     },
     'root': {
@@ -380,16 +389,20 @@ LOGGING = {
         },
         'django.request': {
             'level': 'WARNING',
-            'handlers': ['console'],
+            'handlers': ['console', 'mail_errors'],
             'propagate': False,
         },
         'jizz.slow': {
             'level': 'WARNING',
-            'handlers': ['slow_requests'],
+            'handlers': ['slow_requests', 'mail_errors'],
             'propagate': False,
         },
     },
 }
+
+ADMINS = [('Birdr logging', 'logging@birdr.pro')]
+EMAIL_SUBJECT_PREFIX = '[Birdr] '
+ERROR_MAIL_THROTTLE_SECONDS = 15 * 60
 
 # Requests slower than this are logged with their DB time; on the server to
 # /var/log/birdr/slow_requests.log, elsewhere to the console.
