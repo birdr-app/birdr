@@ -110,6 +110,8 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_COOKIE_SAMESITE = 'Lax'
 
 MIDDLEWARE = [
+    # Times the whole request (logs ones slower than SLOW_REQUEST_MS to jizz.slow).
+    'jizz.request_timing.RequestTimingMiddleware',
     # Outermost so JSON 2xx (including 201 Created) is gzipped. nginx gzip only
     # compresses 200/403/404, so POST /api/games/ would otherwise leave the
     # full payload on the wire; nginx passes an existing Content-Encoding through.
@@ -381,7 +383,29 @@ LOGGING = {
             'handlers': ['console'],
             'propagate': False,
         },
+        'jizz.slow': {
+            'level': 'WARNING',
+            'handlers': ['slow_requests'],
+            'propagate': False,
+        },
     },
+}
+
+# Requests slower than this are logged with their DB time; on the server to
+# /var/log/birdr/slow_requests.log, elsewhere to the console.
+SLOW_REQUEST_MS = int(os.environ.get('SLOW_REQUEST_MS', '1000'))
+SLOW_REQUEST_LOG = '/var/log/birdr/slow_requests.log'
+if os.access(os.path.dirname(SLOW_REQUEST_LOG), os.W_OK):
+    LOGGING['handlers']['slow_requests'] = {
+        'class': 'logging.handlers.WatchedFileHandler',
+        'filename': SLOW_REQUEST_LOG,
+        'formatter': 'timestamped',
+    }
+else:
+    LOGGING['handlers']['slow_requests'] = LOGGING['handlers']['console']
+LOGGING['formatters']['timestamped'] = {
+    'format': '{asctime} {levelname} {message}',
+    'style': '{',
 }
 
 DKIM_KEY = "dkim-key"
