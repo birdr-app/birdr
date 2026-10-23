@@ -29,6 +29,11 @@ def country_codes_for_game(game: Game) -> list[str]:
 def species_frequency_for_game(game: Game, species_id: int) -> Optional[str]:
     from jizz.models import CountrySpecies
 
+    from jizz.request_memo import memo
+
+    primed = (memo() or {}).get('species_frequency', {}).get(game.country_id, {})
+    if species_id in primed:
+        return primed[species_id]
     for country_code in country_codes_for_game(game):
         freq = (
             CountrySpecies.objects.filter(

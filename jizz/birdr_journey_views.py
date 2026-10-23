@@ -2,6 +2,9 @@
 API for Birdr Journey — solo level progression per country.
 """
 
+from contextlib import contextmanager
+from contextvars import ContextVar
+
 from django.db.models import Prefetch
 from django.http import Http404
 from django.shortcuts import get_object_or_404
@@ -22,12 +25,31 @@ from jizz.user_names import player_name_for_user
 from jizz.views import GetPlayerMixin
 
 
+# Levels are loaded many times while serializing one journey; within a request
+# (see BirdrJourneyMixin.dispatch) they are loaded once.
+_request_levels: ContextVar[list | None] = ContextVar('journey_levels', default=None)
+
+
 def get_journey_levels_ordered():
-    return list(
+    cached = _request_levels.get()
+    if cached is not None:
+        return cached
+    levels = list(
         JourneyLevel.objects.prefetch_related(
             Prefetch('steps', queryset=JourneyStep.objects.order_by('sequence')),
         ).order_by('sequence')
     )
+    return levels
+
+
+@contextmanager
+def journey_levels_cached():
+    token = _request_levels.set(None)
+    try:
+        _request_levels.set(get_journey_levels_ordered())
+        yield
+    finally:
+        _request_levels.reset(token)
 
 
 def get_journey_level(level_index):
@@ -142,6 +164,10 @@ def journey_game_step_status(journey_game):
 class BirdrJourneyMixin(GetPlayerMixin):
     permission_classes = (AllowAny,)
 
+    def dispatch(self, request, *args, **kwargs):
+        with journey_levels_cached():
+            return super().dispatch(request, *args, **kwargs)
+
     def _resolve_owner(self, request):
         if request.user and request.user.is_authenticated:
             return {'user': request.user, 'player': None}
@@ -163,13 +189,9 @@ class BirdrJourneyMixin(GetPlayerMixin):
             raise ValidationError({'country_code': f'Unknown country: {code}'})
 
     def _journey_queryset(self, owner):
-        qs = (
-            BirdrJourney.objects.select_related('country', 'user', 'player')
-            .prefetch_related(
-                'games__game__scores__answers',
-                'games__journey_step__journey_level',
-            )
-        )
+        # No prefetch of games: every lookup below filters journey.games, which
+        # bypasses a prefetch cache anyway.
+        qs = BirdrJourney.objects.select_related('country', 'user', 'player')
         if owner['user']:
             return qs.filter(user=owner['user'])
         return qs.filter(player=owner['player'])

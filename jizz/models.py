@@ -4,6 +4,7 @@ from datetime import timedelta
 from random import randint, shuffle, random
 
 from django.db import models, transaction, connection
+from django.utils.functional import cached_property
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db.models import Count, Sum, Q
 from django.db.utils import OperationalError, ProgrammingError
@@ -288,7 +289,11 @@ class Species(models.Model):
         """
         Media for game use: approved only, or if none approved then not rejected.
         Ordered by id so index (question.number) is stable.
+        ``jizz.services.species_prime.prime_species`` can preload this for many species.
         """
+        primed = getattr(self, '_eligible_media_cache', None)
+        if primed is not None:
+            return primed[media_type]
         approved = self.media.filter(
             type=media_type
         ).filter(reviews__review_type='approved').distinct()
@@ -709,7 +714,7 @@ class Game(models.Model):
             q |= Q(frequency__isnull=True) | Q(frequency='')
         return q
 
-    @property
+    @cached_property
     def current_highscore(self):
         return PlayerScore.highscore_by_type(
             level=self.level,

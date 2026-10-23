@@ -17,6 +17,9 @@ def _species_name_for_language(species, language: str | None) -> str:
     lang = (language or '').strip().lower().split('-')[0].split('_')[0]
     if lang == 'la':
         return species.name_latin or species.name
+    primed = getattr(species, '_name_by_language', None)
+    if primed is not None and language in primed:
+        return primed[language] or species.name
     prefetched = getattr(species, '_translated_names', None)
     if prefetched is not None:
         return prefetched[0].name if prefetched else species.name
@@ -1209,11 +1212,44 @@ class PlayerScoreListSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'country', 'media', 'level', 'length', 'rarity', 'score', 'ranking', 'is_mine')
 
 
+class LazyChoiceField(serializers.CharField):
+    """CharField that checks a computed choice list only when a value is written.
+
+    The Game taxonomy fields have choices built from aggregate queries over all
+    species. A ModelSerializer evaluates those every time it is created, so reading
+    a game paid for them; this field reads plain values and validates on input.
+    """
+
+    default_error_messages = {'invalid_choice': '"{input}" is not a valid choice.'}
+
+    def __init__(self, choices_fn, **kwargs):
+        self.choices_fn = choices_fn
+        super().__init__(**kwargs)
+
+    def to_internal_value(self, data):
+        value = super().to_internal_value(data)
+        if value and value not in {key for key, _label in self.choices_fn()}:
+            self.fail('invalid_choice', input=data)
+        return value
+
+
+def _taxonomy_fields():
+    from jizz.models import get_species_group_choices, get_tax_family_choices, get_tax_order_choices
+
+    common = {'required': False, 'allow_null': True, 'allow_blank': True}
+    return {
+        'tax_order': LazyChoiceField(get_tax_order_choices, max_length=100, **common),
+        'tax_family': LazyChoiceField(get_tax_family_choices, max_length=100, **common),
+        'species_group': LazyChoiceField(get_species_group_choices, max_length=80, **common),
+    }
+
+
 class GameSerializer(serializers.ModelSerializer):
     country = serializers.CharField(write_only=True, required=False)
     country_data = CountrySerializer(source='country', read_only=True)
     host = MultiPlayerSerializer(read_only=True)
     current_highscore = PlayerScoreSerializer(read_only=True)
+    tax_order, tax_family, species_group = _taxonomy_fields().values()
     scores = PlayerScoreSerializer(
         many=True, 
         read_only=True
@@ -1324,6 +1360,7 @@ class GameLanguageSerializer(serializers.ModelSerializer):
 class UserGameSerializer(serializers.ModelSerializer):
     """Serializer for games in user's games list, includes user's score and correct count"""
     country = CountrySerializer()
+    tax_order, tax_family, species_group = _taxonomy_fields().values()
     user_score = serializers.SerializerMethodField()
     correct_count = serializers.SerializerMethodField()
     total_questions = serializers.SerializerMethodField()
@@ -1816,7 +1853,9 @@ class JourneyLevelSerializer(serializers.ModelSerializer):
     def get_steps(self, obj):
         if not self.context.get('include_steps', True):
             return []
-        steps = list(obj.steps.order_by('sequence'))
+        from jizz.birdr_journey_views import get_level_steps_ordered
+
+        steps = get_level_steps_ordered(obj)
         ctx = dict(self.context)
         ctx['level_steps'] = steps
         return JourneyStepSerializer(steps, many=True, context=ctx).data
@@ -1940,8 +1979,21 @@ class BirdrJourneySerializer(serializers.ModelSerializer):
         return str(host.token) if host else None
 
     def _serializer_context(self):
+        # Built once per serializer: current_level, next_level, active_step and
+        # current_game all need it, and it costs several queries.
+        cached = getattr(self, '_journey_ctx', None)
+        if cached is None:
+            cached = self._journey_ctx = self._build_serializer_context()
+        return dict(cached)
+
+    def _build_serializer_context(self):
         journey = self.instance
-        from jizz.birdr_journey_views import compute_step_statuses, get_journey_host, get_journey_level
+        from jizz.birdr_journey_views import (
+            compute_step_statuses,
+            get_journey_host,
+            get_journey_level,
+            get_level_steps_ordered,
+        )
 
         ctx = dict(self.context)
         ctx['step_statuses'] = compute_step_statuses(journey)
@@ -1962,7 +2014,7 @@ class BirdrJourneySerializer(serializers.ModelSerializer):
 
         level = get_journey_level(journey.current_sequence)
         if level:
-            ctx['level_steps'] = list(level.steps.order_by('sequence'))
+            ctx['level_steps'] = get_level_steps_ordered(level)
 
         step_tax_families = {}
         for journey_game in journey.games.select_related('game', 'journey_step').order_by('created'):
@@ -1992,7 +2044,7 @@ class BirdrJourneySerializer(serializers.ModelSerializer):
         return JourneyLevelSerializer(level, context=ctx).data
 
     def get_active_step(self, obj):
-        from jizz.birdr_journey_views import get_active_journey_step, get_journey_level
+        from jizz.birdr_journey_views import get_active_journey_step, get_journey_level, get_level_steps_ordered
 
         step = get_active_journey_step(obj)
         if not step:
@@ -2000,7 +2052,7 @@ class BirdrJourneySerializer(serializers.ModelSerializer):
         ctx = self._serializer_context()
         level = get_journey_level(obj.current_sequence)
         if level:
-            ctx['level_steps'] = list(level.steps.order_by('sequence'))
+            ctx['level_steps'] = get_level_steps_ordered(level)
         return JourneyStepSerializer(step, context=ctx).data
 
     def get_is_champion(self, obj):
@@ -2044,14 +2096,14 @@ class BirdrJourneySerializer(serializers.ModelSerializer):
         ctx = self._serializer_context()
         request = self.context.get('request')
         game_token = (request.query_params.get('game_token') or '').strip() if request else ''
-        if game_token:
-            journey_game = get_journey_game_by_token(obj, game_token)
-            if journey_game:
-                return BirdrJourneyGameSerializer(journey_game, context=ctx).data
-
-        journey_game = get_current_journey_game(obj)
+        journey_game = get_journey_game_by_token(obj, game_token) if game_token else None
+        if not journey_game:
+            journey_game = get_current_journey_game(obj)
         if not journey_game:
             return None
+        from jizz.services.game_payload import prepare_game_payload
+
+        prepare_game_payload(journey_game.game, request)
         return BirdrJourneyGameSerializer(journey_game, context=ctx).data
 
 

@@ -21,6 +21,8 @@ import traceback
 from django.conf import settings
 from django.db import connection
 
+from jizz.request_memo import request_memo
+
 logger = logging.getLogger('jizz.slow')
 
 _inflight: dict[int, tuple[str, str, float]] = {}
@@ -64,7 +66,7 @@ class RequestTimingMiddleware:
         timer = _QueryTimer()
         status = 500
         try:
-            with connection.execute_wrapper(timer):
+            with request_memo(), connection.execute_wrapper(timer):
                 response = self.get_response(request)
             status = response.status_code
             return response
