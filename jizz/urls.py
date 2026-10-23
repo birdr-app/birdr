@@ -151,6 +151,7 @@ from jizz.shared_game_views import (
     SharedGamePlayView,
     SharedGameFinishView,
     SharedGameStatsView,
+    SharedGameFlocksView,
 )
 from jizz.game_share_views import (
     GamePublicShareView,
@@ -645,6 +646,7 @@ urlpatterns = [
     path('api/shared-games/<str:token>/play/', SharedGamePlayView.as_view(), name='shared-game-play'),
     path('api/shared-games/<str:token>/finish/', SharedGameFinishView.as_view(), name='shared-game-finish'),
     path('api/shared-games/<str:token>/stats/', SharedGameStatsView.as_view(), name='shared-game-stats'),
+    path('api/shared-games/<str:token>/flocks/', SharedGameFlocksView.as_view(), name='shared-game-flocks'),
 
     # Flocks (Phase 1)
     path('api/flocks/', FlockListCreateView.as_view(), name='flock-list-create'),

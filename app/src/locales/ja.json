@@ -664,7 +664,7 @@
   "profile_show_all_modes": "すべてのゲームモードを表示",
   "profile_show_all_modes_hint": "すべてのゲームモードをホーム画面とメニューに大きく表示します。オフの場合は、数回プレイすると表示されます。",
   "flock_notifications": "通知",
-  "flock_notifications_hint": "新しいチャレンジ、最終日のお知らせ、結果をお届けします。",
+  "flock_notifications_hint": "新しいチャレンジ、最終日のお知らせ、結果、新しい追加ゲーム。",
   "flock_notifications_off_on_phone": "この端末ではオフになっています。スイッチをタップしてオンにしてください。",
   "flock_notifications_settings": "この端末ではBirdrの通知がオフになっています。設定でオンにすると、新しいチャレンジや結果をお知らせします。",
   "flock_auto_renew": "チャレンジを自動更新",
@@ -734,5 +734,16 @@
   "play_modes_info_multi": "すぐに始まり、全員が同時にリアルタイムでプレイします。友だちはリンクかQRコードでロビーに参加。全員が同じ鳥を見て、全員が答えるまで次に進みません。次の鳥へはホストが進めます。",
   "play_modes_info_share": "すぐには始まりません。ゲームを作成し、リンクやQRコードをグループチャットなどで共有します。その後、あなたも他の人も、選んだ終了時刻まで（またはあなたが終了するまで）今でも後でもプレイできます。全員が同じ鳥に挑戦し、ランキングがあります。ゲーム終了後は、鳥ごとのみんなの結果が見られます。",
   "share_signal": "Signal",
-  "share_signal_copied": "メッセージをコピーしました。Signalのチャットに貼り付けてください。"
+  "share_signal_copied": "メッセージをコピーしました。Signalのチャットに貼り付けてください。",
+  "flocks_weekly_challenge": "今週のチャレンジ",
+  "flock_extra_games": "追加ゲーム",
+  "flock_extra_games_empty": "まだ追加ゲームはありません。ゲームを作成して「共有」を選び、このフロックに追加しましょう。メンバー全員に通知が届き、プレイできます。",
+  "flock_extra_games_create": "ゲームを作成",
+  "flock_extra_game_my_score": "あなた: {correct}/{length}問正解、{score}ポイント",
+  "shared_game_add_to_flock_title": "フロックに追加",
+  "shared_game_add_to_flock_hint": "フロックの「追加ゲーム」に表示され、メンバーに通知が届きます。",
+  "shared_game_choose_flock": "フロックを選択",
+  "shared_game_add_to_named_flock": "{flock}に追加",
+  "shared_game_in_flocks": "{flocks}で共有済み",
+  "flock_extra_game_meta": "{count, plural, =0 {まだ誰もプレイしていません} other {#人がプレイ}}"
 }

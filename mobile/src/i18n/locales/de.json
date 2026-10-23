@@ -772,7 +772,7 @@
   "show_all_game_modes_hint": "Zeigt Survival, die Nationalliga und mehr auf der Startseite und in den Menüs.",
   "game_modes_unlocked": "🎉 Neue Spielmodi freigeschaltet: Survival und die Nationalliga!",
   "flock_notifications": "Benachrichtigungen",
-  "flock_notifications_hint": "Neue Challenge, letzter Spieltag und die Ergebnisse.",
+  "flock_notifications_hint": "Neue Challenge, letzter Spieltag, die Ergebnisse und neue Extra-Spiele.",
   "flock_notifications_off_on_phone": "Auf diesem Telefon ausgeschaltet. Tippe auf den Schalter, um sie einzuschalten.",
   "flock_notifications_settings": "Benachrichtigungen für Birdr sind auf diesem Telefon ausgeschaltet. Schalte sie in den Einstellungen ein, um von neuen Challenges und Ergebnissen zu erfahren.",
   "flock_auto_renew": "Challenges automatisch verlängern",
@@ -840,5 +840,15 @@
   "link_needs_update_title": "Birdr aktualisieren",
   "link_needs_update_message": "Für diesen Link brauchst du eine neuere Version von Birdr. Aktualisiere die App und öffne den Link erneut.",
   "link_needs_update_button": "Aktualisieren",
-  "link_needs_update_later": "Nicht jetzt"
+  "link_needs_update_later": "Nicht jetzt",
+  "flock_weekly_challenge": "Wochen-Challenge",
+  "flock_extra_games": "Extra-Spiele",
+  "flock_extra_games_empty": "Noch keine Extra-Spiele. Erstelle ein Spiel, wähle Teilen und füge es diesem Flock hinzu. Alle hier bekommen eine Benachrichtigung und können es spielen.",
+  "flock_extra_games_create": "Spiel erstellen",
+  "flock_extra_game_my_score": "Du: {correct}/{length}, {score} Punkte",
+  "shared_game_add_to_flock_title": "Zu einem Flock hinzufügen",
+  "shared_game_add_to_flock_hint": "Es erscheint unter Extra-Spiele im Flock, und die Mitglieder bekommen eine Benachrichtigung.",
+  "shared_game_choose_flock": "Flock auswählen",
+  "shared_game_add_to_named_flock": "Zu {flock} hinzufügen",
+  "shared_game_in_flocks": "Geteilt in {flocks}"
 }

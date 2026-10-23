@@ -772,7 +772,7 @@
   "show_all_game_modes_hint": "Mostra Sobrevivência, a Liga nacional e mais no início e nos menus.",
   "game_modes_unlocked": "🎉 Novos modos de jogo desbloqueados: Sobrevivência e a Liga nacional!",
   "flock_notifications": "Notificações",
-  "flock_notifications_hint": "Novo desafio, último dia para jogar e os resultados.",
+  "flock_notifications_hint": "Novo desafio, último dia para jogar, os resultados e novos jogos extras.",
   "flock_notifications_off_on_phone": "Desligadas neste telefone. Toque no botão para ativá-las.",
   "flock_notifications_settings": "As notificações do Birdr estão desligadas neste telefone. Ative-as nos Ajustes para saber de novos desafios e resultados.",
   "flock_auto_renew": "Renovar desafios automaticamente",
@@ -840,5 +840,15 @@
   "link_needs_update_title": "Atualize o Birdr",
   "link_needs_update_message": "Este link precisa de uma versão mais nova do Birdr. Atualize o app e abra o link de novo.",
   "link_needs_update_button": "Atualizar",
-  "link_needs_update_later": "Agora não"
+  "link_needs_update_later": "Agora não",
+  "flock_weekly_challenge": "Desafio semanal",
+  "flock_extra_games": "Jogos extras",
+  "flock_extra_games_empty": "Ainda não há jogos extras. Crie um jogo, escolha Compartilhar e adicione-o a este bando. Todos aqui recebem uma notificação e podem jogar.",
+  "flock_extra_games_create": "Criar um jogo",
+  "flock_extra_game_my_score": "Você: {correct}/{length}, {score} pontos",
+  "shared_game_add_to_flock_title": "Adicionar a um bando",
+  "shared_game_add_to_flock_hint": "Aparece em Jogos extras do bando e os membros recebem uma notificação.",
+  "shared_game_choose_flock": "Escolha um bando",
+  "shared_game_add_to_named_flock": "Adicionar a {flock}",
+  "shared_game_in_flocks": "Compartilhado em {flocks}"
 }

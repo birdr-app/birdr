@@ -20,7 +20,7 @@ from django.urls import path, re_path, reverse
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
-from jizz.models import (Answer, SharedGame, SharedGameAttempt, BirdrJourney, BirdrJourneyGame, Country,
+from jizz.models import (Answer, FlockSharedGame, SharedGame, SharedGameAttempt, BirdrJourney, BirdrJourneyGame, Country,
                          CountrySpecies, CountrySpeciesFrequency, Feedback, FlagQuestion, Game, JourneyLevel,
                          JourneyStep, MarketingPage, Page, Player,
                          PlayerScore, Question, QuestionOption, Reaction,
@@ -1862,6 +1862,14 @@ class SharedGameAttemptInline(admin.TabularInline):
     can_delete = False
 
 
+class FlockSharedGameInline(admin.TabularInline):
+    model = FlockSharedGame
+    extra = 0
+    fields = ['flock', 'added_by', 'created']
+    readonly_fields = fields
+    can_delete = True
+
+
 @admin.register(SharedGame)
 class SharedGameAdmin(admin.ModelAdmin):
     list_display = ['token', 'owner', 'status', 'ends_at', 'participants', 'created']
@@ -1869,7 +1877,7 @@ class SharedGameAdmin(admin.ModelAdmin):
     search_fields = ['token', 'owner__username', 'owner__email']
     raw_id_fields = ['owner', 'template_game']
     readonly_fields = ['token', 'created', 'finished_at']
-    inlines = [SharedGameAttemptInline]
+    inlines = [SharedGameAttemptInline, FlockSharedGameInline]
 
     def get_queryset(self, request):
         return super().get_queryset(request).annotate(_participants=Count('attempts'))

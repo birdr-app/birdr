@@ -55,7 +55,12 @@ describe('shared game helpers', () => {
 
 describe('shared game i18n', () => {
   const keys = Object.keys(translations.en).filter(
-    (key) => key.startsWith('shared_game') || key.startsWith('play_mode') || key === 'share_signal',
+    (key) =>
+      key.startsWith('shared_game') ||
+      key.startsWith('play_mode') ||
+      key === 'share_signal' ||
+      key.startsWith('flock_extra_game') ||
+      key === 'flock_weekly_challenge',
   );
 
   it('covers the screens', () => {

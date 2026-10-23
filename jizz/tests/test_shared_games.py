@@ -300,3 +300,88 @@ class SharedGameTests(TestCase):
         self.assertContains(bot, f'og:url" content="https://')
         self.assertContains(bot, f"/s/{data['token']}/")
         self.assertNotContains(bot, 'birdr://')
+
+
+class SharedGameFlockTests(TestCase):
+    """Any flock member can post a shared game to the flock's Extra games; members get a push."""
+
+    def setUp(self):
+        from jizz.models import Flock, FlockMembership
+
+        self.country = Country.objects.get_or_create(code='NL', defaults={'name': 'Netherlands'})[0]
+        _seed_species(self.country, 12, prefix='sf')
+        self.owner = User.objects.create_user('sfowner', password='x')
+        self.member = User.objects.create_user('sfmember', password='x')
+        self.quiet = User.objects.create_user('sfquiet', password='x')
+        self.outsider = User.objects.create_user('sfout', password='x')
+        self.flock = Flock.objects.create(name='Waders', slug='waders', owner=self.owner, default_country=self.country)
+        FlockMembership.objects.create(flock=self.flock, user=self.owner, role='owner')
+        FlockMembership.objects.create(flock=self.flock, user=self.member)
+        FlockMembership.objects.create(flock=self.flock, user=self.quiet, notifications_enabled=False)
+        self.client = APIClient()
+        _auth(self.client, self.member)
+        res = self.client.post('/api/shared-games/', SETTINGS, format='json')
+        self.assertEqual(res.status_code, 201, res.data)
+        self.token = res.data['token']
+
+    def test_payload_lists_my_flocks(self):
+        data = self.client.get(f'/api/shared-games/{self.token}/').data
+        self.assertEqual(data['my_flocks'], [{'slug': 'waders', 'name': 'Waders', 'shared': False}])
+        outsider = APIClient()
+        _auth(outsider, self.outsider)
+        self.assertEqual(outsider.get(f'/api/shared-games/{self.token}/').data['my_flocks'], [])
+
+    def test_member_adds_game_and_others_get_a_push(self):
+        from unittest.mock import patch
+
+        with patch('jizz.notifications.send_push_to_user') as push:
+            res = self.client.post(f'/api/shared-games/{self.token}/flocks/', {'flock': 'waders'}, format='json')
+        self.assertEqual(res.status_code, 201, res.data)
+        self.assertEqual(res.data['my_flocks'][0]['shared'], True)
+        pushed_to = [call.args[0] for call in push.call_args_list]
+        self.assertEqual(pushed_to, [self.owner])  # not the sharer, not muted members
+        title, body = push.call_args.args[1], push.call_args.args[2]
+        self.assertEqual(title, 'Birdr: Waders')
+        self.assertIn('sfmember shared a new game: Netherlands, 5 birds', body)
+        self.assertEqual(
+            push.call_args.kwargs['data'],
+            {'type': 'shared_game', 'token': self.token, 'flock_slug': 'waders'},
+        )
+
+        with patch('jizz.notifications.send_push_to_user') as push:
+            again = self.client.post(f'/api/shared-games/{self.token}/flocks/', {'flock': 'waders'}, format='json')
+        self.assertEqual(again.status_code, 200)
+        push.assert_not_called()
+
+    def test_only_members_can_add_and_only_open_games(self):
+        outsider = APIClient()
+        _auth(outsider, self.outsider)
+        res = outsider.post(f'/api/shared-games/{self.token}/flocks/', {'flock': 'waders'}, format='json')
+        self.assertEqual(res.status_code, 403)
+        res = self.client.post(f'/api/shared-games/{self.token}/flocks/', {'flock': 'nope'}, format='json')
+        self.assertEqual(res.status_code, 403)
+
+        SharedGame.objects.get(token=self.token).finish()
+        res = self.client.post(f'/api/shared-games/{self.token}/flocks/', {'flock': 'waders'}, format='json')
+        self.assertEqual(res.data['error'], 'finished')
+
+    def test_flock_detail_lists_extra_games(self):
+        from unittest.mock import patch
+
+        detail = self.client.get('/api/flocks/waders/').data
+        self.assertEqual(detail['extra_games'], [])
+
+        with patch('jizz.notifications.send_push_to_user'):
+            self.client.post(f'/api/shared-games/{self.token}/flocks/', {'flock': 'waders'}, format='json')
+        owner = APIClient()
+        _auth(owner, self.owner)
+        games = owner.get('/api/flocks/waders/').data['extra_games']
+        self.assertEqual(len(games), 1)
+        row = games[0]
+        self.assertEqual(row['token'], self.token)
+        self.assertEqual(row['owner_name'], 'sfmember')
+        self.assertEqual(row['added_by_name'], 'sfmember')
+        self.assertTrue(row['is_open'])
+        self.assertEqual(row['participants'], 0)
+        self.assertEqual(row['game']['country']['code'], 'NL')
+        self.assertIsNone(row['my_attempt'])

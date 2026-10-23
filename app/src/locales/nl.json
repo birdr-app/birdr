@@ -666,7 +666,7 @@
   "profile_show_all_modes": "Toon alle spelvormen",
   "profile_show_all_modes_hint": "Alle spelvormen groot op het beginscherm en in de menu’s. Uit: ze verschijnen na je eerste paar spellen.",
   "flock_notifications": "Meldingen",
-  "flock_notifications_hint": "Nieuwe challenge, laatste dag om te spelen en de uitslag.",
+  "flock_notifications_hint": "Nieuwe challenge, laatste dag om te spelen, de uitslag en nieuwe extra spellen.",
   "flock_notifications_off_on_phone": "Staat uit op deze telefoon. Tik op de schakelaar om ze aan te zetten.",
   "flock_notifications_settings": "Meldingen voor Birdr staan uit op deze telefoon. Zet ze aan in Instellingen om te horen over nieuwe challenges en uitslagen.",
   "flock_auto_renew": "Challenges automatisch verlengen",
@@ -736,5 +736,16 @@
   "play_modes_info_multi": "Begint meteen en iedereen speelt in realtime, op hetzelfde moment. Vrienden komen in je lobby via een link of QR-code. Iedereen ziet dezelfde vogel en het spel gaat pas verder als iedereen heeft geantwoord; de host gaat door naar de volgende vogel.",
   "play_modes_info_share": "Begint niet meteen. Je maakt het spel en deelt de link of QR-code, bijvoorbeeld in een groepsapp. Daarna kunnen jij en de anderen het nu of later spelen, tot de eindtijd die je koos (of tot je het afsluit). Iedereen krijgt dezelfde vogels en er is een ranglijst. Als het spel is afgelopen, zie je hoe iedereen het per vogel deed.",
   "share_signal": "Signal",
-  "share_signal_copied": "Bericht gekopieerd. Plak het in een Signal-chat."
+  "share_signal_copied": "Bericht gekopieerd. Plak het in een Signal-chat.",
+  "flocks_weekly_challenge": "Weekchallenge",
+  "flock_extra_games": "Extra spellen",
+  "flock_extra_games_empty": "Nog geen extra spellen. Maak een spel, kies Delen en voeg het toe aan deze flock. Iedereen hier krijgt een melding en kan het spelen.",
+  "flock_extra_games_create": "Maak een spel",
+  "flock_extra_game_my_score": "Jij: {correct}/{length}, {score} punten",
+  "shared_game_add_to_flock_title": "Toevoegen aan flock",
+  "shared_game_add_to_flock_hint": "Het verschijnt onder Extra spellen in de flock, en leden krijgen een melding.",
+  "shared_game_choose_flock": "Kies een flock",
+  "shared_game_add_to_named_flock": "Toevoegen aan {flock}",
+  "shared_game_in_flocks": "Gedeeld in {flocks}",
+  "flock_extra_game_meta": "{count, plural, =0 {Nog niemand gespeeld} one {# speler} other {# spelers}}"
 }

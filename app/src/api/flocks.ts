@@ -1,5 +1,6 @@
 import { apiUrl } from './baseUrl';
 import { authService } from './services/auth.service';
+import type { FlockExtraGame } from './sharedGames';
 
 export type CountryRef = { code: string; name: string };
 
@@ -50,6 +51,8 @@ export type Flock = {
   /** This member's push setting for the flock (null when not a member). */
   notifications_enabled?: boolean | null;
   invite?: FlockInvite | null;
+  /** Shared games members posted to this flock (detail endpoint only). */
+  extra_games?: FlockExtraGame[];
 };
 
 export type LeaderboardEntry = {

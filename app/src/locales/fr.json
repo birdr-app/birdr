@@ -664,7 +664,7 @@
   "profile_show_all_modes": "Afficher tous les modes de jeu",
   "profile_show_all_modes_hint": "Tous les modes de jeu en grand sur l'accueil et dans les menus. Désactivé : ils apparaissent après tes premières parties.",
   "flock_notifications": "Notifications",
-  "flock_notifications_hint": "Nouveau défi, dernier jour pour jouer et les résultats.",
+  "flock_notifications_hint": "Nouveau défi, dernier jour pour jouer, les résultats et les nouvelles parties en plus.",
   "flock_notifications_off_on_phone": "Désactivées sur ce téléphone. Touche l’interrupteur pour les activer.",
   "flock_notifications_settings": "Les notifications de Birdr sont désactivées sur ce téléphone. Active-les dans Réglages pour être averti des nouveaux défis et résultats.",
   "flock_auto_renew": "Renouveler les défis automatiquement",
@@ -734,5 +734,16 @@
   "play_modes_info_multi": "Commence tout de suite et tout le monde joue en temps réel, au même moment. Vos amis rejoignent votre salon avec un lien ou un QR code. Tout le monde voit le même oiseau, et la partie n'avance que quand tout le monde a répondu ; l'hôte passe à l'oiseau suivant.",
   "play_modes_info_share": "Ne commence pas tout de suite. Vous créez la partie et partagez le lien ou le QR code, par exemple dans un groupe de discussion. Ensuite, vous et les autres pouvez y jouer maintenant ou plus tard, jusqu'à l'heure de fin choisie (ou jusqu'à ce que vous la terminiez). Tout le monde reçoit les mêmes oiseaux et il y a un classement. Une fois la partie terminée, vous voyez comment chacun s'en est sorti pour chaque oiseau.",
   "share_signal": "Signal",
-  "share_signal_copied": "Message copié. Collez-le dans une conversation Signal."
+  "share_signal_copied": "Message copié. Collez-le dans une conversation Signal.",
+  "flocks_weekly_challenge": "Défi de la semaine",
+  "flock_extra_games": "Parties en plus",
+  "flock_extra_games_empty": "Pas encore de parties en plus. Créez une partie, choisissez Partager et ajoutez-la à ce groupe. Tout le monde ici reçoit une notification et peut y jouer.",
+  "flock_extra_games_create": "Créer une partie",
+  "flock_extra_game_my_score": "Vous : {correct}/{length}, {score} points",
+  "shared_game_add_to_flock_title": "Ajouter à un groupe",
+  "shared_game_add_to_flock_hint": "Elle apparaît dans Parties en plus du groupe, et les membres reçoivent une notification.",
+  "shared_game_choose_flock": "Choisissez un groupe",
+  "shared_game_add_to_named_flock": "Ajouter à {flock}",
+  "shared_game_in_flocks": "Partagée dans {flocks}",
+  "flock_extra_game_meta": "{count, plural, =0 {Personne n'a encore joué} one {# joueur} other {# joueurs}}"
 }

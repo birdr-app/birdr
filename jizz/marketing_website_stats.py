@@ -21,7 +21,7 @@ from jizz.games_played_stats import (
 from jizz.marketing.i18n import MARKETING_LOCALES, strip_locale_prefix
 from jizz.marketing.pages import INTENT_PAGES
 from jizz.models import Country, UsageEvent
-from jizz.usage_analytics import is_crawler_user_agent
+from jizz.usage_analytics import CRAWLER_UA_PATTERN
 
 PRIVATE_PREFIXES = (
     '/site/my-edits/',
@@ -102,11 +102,26 @@ def _marketing_queryset(start: date, end: date):
     )
 
 
+# Only the columns the aggregations read; skips user_agent and the metadata JSON.
+_EVENT_FIELDS = (
+    'path',
+    'created_at',
+    'ip_address',
+    'country_code',
+    'referer_host',
+    'utm_source',
+    'utm_medium',
+    'utm_campaign',
+)
+
+
 def _human_queryset(qs):
+    # Crawlers are filtered in SQL so their rows never leave the database.
+    qs = qs.exclude(user_agent__iregex=CRAWLER_UA_PATTERN).only(*_EVENT_FIELDS)
     return [
         event
-        for event in qs.iterator(chunk_size=500)
-        if is_public_marketing_path(event.path) and not is_crawler_user_agent(event.user_agent)
+        for event in qs.iterator(chunk_size=2000)
+        if is_public_marketing_path(event.path)
     ]
 
 

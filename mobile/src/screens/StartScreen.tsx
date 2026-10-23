@@ -994,7 +994,7 @@ const styles = StyleSheet.create({
   playModeChip: { flex: 1, justifyContent: 'center', paddingVertical: 12 },
   playModeHint: { fontSize: 14, color: colors.primary[700], marginTop: 8 },
   moreInfoLink: { alignSelf: 'flex-start', paddingVertical: 6 },
-  moreInfoLinkText: { fontSize: 14, fontWeight: '600', color: colors.primary[700], textDecorationLine: 'underline' },
+  moreInfoLinkText: { fontSize: 14, fontWeight: '600', color: colors.primary[700]},
   modeInfoBlock: { marginBottom: 14 },
   modeInfoTitle: { fontSize: 16, fontWeight: '700', color: colors.primary[800], marginBottom: 4 },
   modeInfoBody: { fontSize: 14, lineHeight: 20, color: colors.primary[700] },

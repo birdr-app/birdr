@@ -40,7 +40,12 @@ describe('shared games', () => {
 
   it('has every shared game and play mode string in all app languages', () => {
     const keys = Object.keys(en).filter(
-      (key) => key.startsWith('shared_game') || key.startsWith('play_mode') || key.startsWith('share_signal'),
+      (key) =>
+        key.startsWith('shared_game') ||
+        key.startsWith('play_mode') ||
+        key.startsWith('share_signal') ||
+        key.startsWith('flock_extra_game') ||
+        key === 'flocks_weekly_challenge',
     );
     expect(keys.length).toBeGreaterThan(40);
     for (const messages of [nl, es, fr, de, itMessages, ptBR, ja]) {

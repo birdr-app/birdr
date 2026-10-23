@@ -10,7 +10,7 @@ from django.db.models import Count
 from django.utils import timezone
 
 from jizz.game_question_selection import create_question_for_game, media_type_for_game
-from jizz.models import Answer, Game, Player, SharedGame, SharedGameAttempt, Species
+from jizz.models import Answer, FlockSharedGame, Game, Player, SharedGame, SharedGameAttempt, Species
 from jizz.pregenerated_game import PregeneratedItem, fill_pregenerated_game
 from jizz.question_play import active_play_media, fetch_eligible_media_for_species
 
@@ -227,3 +227,62 @@ def share_preview(shared_game: SharedGame) -> dict:
         'title': f'{owner} shared a Birdr quiz: {country}',
         'description': ' · '.join(parts) + '. Can you beat the others?',
     }
+
+
+FLOCK_PUSH_MESSAGES = {
+    'en': {
+        'title': 'Birdr: {flock}',
+        'body': '{name} shared a new game: {country}, {length} birds. Tap to play!',
+    },
+    'nl': {
+        'title': 'Birdr: {flock}',
+        'body': '{name} heeft een nieuw spel gedeeld: {country}, {length} vogels. Tik om te spelen!',
+    },
+}
+
+
+def add_to_flock(shared_game: SharedGame, flock, user) -> tuple[FlockSharedGame, bool]:
+    """Post a shared game to a flock's Extra games; on first add, push the other members."""
+
+    link, created = FlockSharedGame.objects.get_or_create(
+        flock=flock, shared_game=shared_game, defaults={'added_by': user}
+    )
+    if created:
+        notify_flock_of_shared_game(link)
+    return link, created
+
+
+def notify_flock_of_shared_game(link) -> int:
+    """Push members (notifications on, not the one who shared it) about a new extra game."""
+    from jizz.flock_schedule import _lang
+    from jizz.models import FlockMembership
+    from jizz.notifications import send_push_to_user
+    from jizz.user_names import player_name_for_user
+
+    flock = link.flock
+    template = link.shared_game.template_game
+    name = player_name_for_user(link.added_by) if link.added_by else 'A member'
+    data = {'type': 'shared_game', 'token': link.shared_game.token, 'flock_slug': flock.slug}
+    memberships = (
+        FlockMembership.objects.filter(flock=flock, notifications_enabled=True)
+        .exclude(user_id=link.added_by_id)
+        .select_related('user', 'user__profile')
+    )
+    sent = 0
+    for membership in memberships:
+        msg = FLOCK_PUSH_MESSAGES[_lang(membership.user)]
+        try:
+            send_push_to_user(
+                membership.user,
+                msg['title'].format(flock=flock.name),
+                msg['body'].format(
+                    name=name,
+                    country=template.country.name if template.country else 'Birdr',
+                    length=template.length,
+                ),
+                data=data,
+            )
+            sent += 1
+        except Exception:
+            pass
+    return sent

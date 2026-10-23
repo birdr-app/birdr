@@ -33,6 +33,7 @@ import {
   type FlockChallengeDetail,
 } from '../api/flocks';
 import { resolveMediaUrl } from '../api/config';
+import { FlockExtraGames } from '../components/SharedGameFlocks';
 import { getCountryDisplayName } from '../i18n/countryNames';
 import { colors } from '../theme';
 import { isPushPermissionGranted, requestPushPermissionAndRegister } from '../lib/notifications';
@@ -385,7 +386,7 @@ export function FlockDetailScreen() {
         ) : null}
       </View>
 
-      <Text style={styles.sectionTitle}>{t('flock_active_challenge')}</Text>
+      <Text style={styles.sectionTitle}>{t('flock_weekly_challenge')}</Text>
 
       {challenge ? (
         <View style={styles.card}>
@@ -466,6 +467,8 @@ export function FlockDetailScreen() {
           ) : null}
         </View>
       )}
+
+      {flock.is_member ? <FlockExtraGames games={flock.extra_games ?? []} /> : null}
 
       {flock.is_member ? (
         <View style={styles.settingsCard}>

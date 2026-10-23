@@ -26,6 +26,38 @@ export type SharedGameAttempt = {
   completed_at: string | null;
 };
 
+export type SharedGameSettings = {
+  country: { code: string; name: string } | null;
+  level: string;
+  length: number;
+  media: string;
+  rarity: string;
+  game_type: string;
+  speed_seconds: number | null;
+  tax_order: string | null;
+  tax_family: string | null;
+  species_group: string | null;
+  season: string | null;
+  include_escapes: boolean;
+};
+
+/** One of your flocks, and whether this game is already in its Extra games. */
+export type SharedGameFlock = { slug: string; name: string; shared: boolean };
+
+/** A row in a flock's Extra games (see flock_extra_games in jizz/shared_game_views.py). */
+export type FlockExtraGame = {
+  token: string;
+  owner_name: string;
+  added_by_name: string | null;
+  added_at: string;
+  is_open: boolean;
+  ends_at: string | null;
+  closes_at: string;
+  participants: number;
+  game: SharedGameSettings;
+  my_attempt: { completed: boolean; score: number; correct_count: number } | null;
+};
+
 export type SharedGame = {
   token: string;
   share_url: string;
@@ -37,20 +69,7 @@ export type SharedGame = {
   ends_at: string | null;
   closes_at: string;
   finished_at: string | null;
-  game: {
-    country: { code: string; name: string } | null;
-    level: string;
-    length: number;
-    media: string;
-    rarity: string;
-    game_type: string;
-    speed_seconds: number | null;
-    tax_order: string | null;
-    tax_family: string | null;
-    species_group: string | null;
-    season: string | null;
-    include_escapes: boolean;
-  };
+  game: SharedGameSettings;
   my_attempt: SharedGameAttempt | null;
   can_play: boolean;
   can_finish: boolean;
@@ -59,6 +78,7 @@ export type SharedGame = {
     total_participants: number;
     me: SharedGameEntry | null;
   };
+  my_flocks: SharedGameFlock[];
 };
 
 export type SharedGameQuestionStat = {
@@ -158,6 +178,14 @@ export function finishSharedGame(token: string): Promise<SharedGame> {
     `/api/shared-games/${encodeURIComponent(token)}/finish/`,
     { method: 'POST' },
   );
+}
+
+/** Add the game to one of your flocks' Extra games; the other members get a push. */
+export function addSharedGameToFlock(token: string, flockSlug: string): Promise<SharedGame> {
+  return sharedGameRequest<SharedGame>(`/api/shared-games/${encodeURIComponent(token)}/flocks/`, {
+    method: 'POST',
+    body: JSON.stringify({ flock: flockSlug }),
+  });
 }
 
 export function getSharedGameStats(token: string, language?: string): Promise<SharedGameStats> {

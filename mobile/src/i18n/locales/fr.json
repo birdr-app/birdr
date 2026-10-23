@@ -772,7 +772,7 @@
   "show_all_game_modes_hint": "Affiche Survie, la Ligue nationale et plus encore sur l'accueil et dans les menus.",
   "game_modes_unlocked": "🎉 Nouveaux modes de jeu débloqués : Survie et la Ligue nationale !",
   "flock_notifications": "Notifications",
-  "flock_notifications_hint": "Nouveau défi, dernier jour pour jouer et les résultats.",
+  "flock_notifications_hint": "Nouveau défi, dernier jour pour jouer, les résultats et les nouvelles parties en plus.",
   "flock_notifications_off_on_phone": "Désactivées sur ce téléphone. Touche l’interrupteur pour les activer.",
   "flock_notifications_settings": "Les notifications de Birdr sont désactivées sur ce téléphone. Active-les dans Réglages pour être averti des nouveaux défis et résultats.",
   "flock_auto_renew": "Renouveler les défis automatiquement",
@@ -840,5 +840,15 @@
   "link_needs_update_title": "Mettez Birdr à jour",
   "link_needs_update_message": "Ce lien nécessite une version plus récente de Birdr. Mettez l'app à jour et rouvrez le lien.",
   "link_needs_update_button": "Mettre à jour",
-  "link_needs_update_later": "Pas maintenant"
+  "link_needs_update_later": "Pas maintenant",
+  "flock_weekly_challenge": "Défi de la semaine",
+  "flock_extra_games": "Parties en plus",
+  "flock_extra_games_empty": "Pas encore de parties en plus. Créez une partie, choisissez Partager et ajoutez-la à ce groupe. Tout le monde ici reçoit une notification et peut y jouer.",
+  "flock_extra_games_create": "Créer une partie",
+  "flock_extra_game_my_score": "Vous : {correct}/{length}, {score} points",
+  "shared_game_add_to_flock_title": "Ajouter à un groupe",
+  "shared_game_add_to_flock_hint": "Elle apparaît dans Parties en plus du groupe, et les membres reçoivent une notification.",
+  "shared_game_choose_flock": "Choisissez un groupe",
+  "shared_game_add_to_named_flock": "Ajouter à {flock}",
+  "shared_game_in_flocks": "Partagée dans {flocks}"
 }

@@ -27,6 +27,11 @@ import { useAuthProfile } from '../core/auth-profile-context';
 import { Page } from '../shared/components/layout';
 import { FlockShareBlock } from '../components/flocks/share-block';
 import { SetName } from '../components/set-name';
+import {
+  AddToFlock,
+  SharedGameStatus,
+  useSharedGameSummary,
+} from '../components/shared-games/shared-game-bits';
 import type { SharedGameLocationState } from '../components/create-game';
 import {
   finishSharedGame,
@@ -41,67 +46,6 @@ import {
   type SharedGameQuestionStat,
   type SharedGameStats,
 } from '../api/sharedGames';
-
-const MEDIA_LABEL_IDS: Record<string, { id: string; defaultMessage: string }> = {
-  images: { id: 'pictures', defaultMessage: 'Pictures' },
-  audio: { id: 'sounds', defaultMessage: 'Sounds' },
-  video: { id: 'videos', defaultMessage: 'Videos' },
-};
-
-function useSummary(game: SharedGame | null): string {
-  const intl = useIntl();
-  if (!game) return '';
-  const media = MEDIA_LABEL_IDS[game.game.media];
-  return [
-    game.game.country?.name,
-    intl.formatMessage({ id: game.game.level, defaultMessage: game.game.level }),
-    media ? intl.formatMessage(media) : game.game.media,
-    intl.formatMessage(
-      { id: 'shared_game_birds', defaultMessage: '{count} birds' },
-      { count: game.game.length },
-    ),
-  ]
-    .filter(Boolean)
-    .join(' · ');
-}
-
-function StatusLine({ game }: { game: SharedGame }) {
-  const intl = useIntl();
-  if (!game.is_open) {
-    return (
-      <Text color="primary.700" fontWeight="semibold">
-        <FormattedMessage id="shared_game_finished" defaultMessage="Finished" />
-      </Text>
-    );
-  }
-  if (game.ends_at) {
-    const when = intl.formatDate(game.ends_at, {
-      weekday: 'short',
-      day: 'numeric',
-      month: 'short',
-      hour: '2-digit',
-      minute: '2-digit',
-    });
-    return (
-      <Text color="primary.700">
-        <FormattedMessage
-          id="shared_game_open_until"
-          defaultMessage="Open until {when}"
-          values={{ when }}
-        />
-      </Text>
-    );
-  }
-  return (
-    <Text color="primary.700">
-      <FormattedMessage
-        id="shared_game_open_until_owner"
-        defaultMessage="Open until {name} finishes it"
-        values={{ name: game.owner_name }}
-      />
-    </Text>
-  );
-}
 
 function Leaderboard({ entries }: { entries: SharedGameEntry[] }) {
   if (!entries.length) {
@@ -245,7 +189,7 @@ export function SharedGamePage() {
   const [error, setError] = useState<string | null>(null);
   const [starting, setStarting] = useState(false);
   const [finishing, setFinishing] = useState(false);
-  const summary = useSummary(game);
+  const summary = useSharedGameSummary(game?.game);
 
   const load = useCallback(async () => {
     if (!token) return;
@@ -327,6 +271,7 @@ export function SharedGamePage() {
     : '';
 
   const shareBlock = game?.is_open ? (
+    <VStack align="stretch" gap={4}>
     <FlockShareBlock
       titleId="shared_game_share_title"
       titleDefault="Share this game"
@@ -337,6 +282,8 @@ export function SharedGamePage() {
       qrCaptionId="shared_game_scan"
       qrCaptionDefault="Scan to play"
     />
+    <AddToFlock game={game} onAdded={setSharedGame} />
+    </VStack>
   ) : null;
 
   const mine = game?.my_attempt;
@@ -378,7 +325,7 @@ export function SharedGamePage() {
                 <Text fontSize="lg" fontWeight="600">
                   {summary}
                 </Text>
-                <StatusLine game={game} />
+                <SharedGameStatus isOpen={game.is_open} endsAt={game.ends_at} ownerName={game.owner_name} />
                 <Text fontSize="sm" color="gray.600">
                   <FormattedMessage
                     id="shared_game_played_count"

@@ -772,7 +772,7 @@
   "show_all_game_modes_hint": "ホームとメニューにサバイバル、ナショナルリーグなどを表示します。",
   "game_modes_unlocked": "🎉 新しいゲームモードが解放されました：サバイバルとナショナルリーグ！",
   "flock_notifications": "通知",
-  "flock_notifications_hint": "新しいチャレンジ、最終日のお知らせ、結果をお届けします。",
+  "flock_notifications_hint": "新しいチャレンジ、最終日のお知らせ、結果、新しい追加ゲーム。",
   "flock_notifications_off_on_phone": "この端末ではオフになっています。スイッチをタップしてオンにしてください。",
   "flock_notifications_settings": "この端末ではBirdrの通知がオフになっています。設定でオンにすると、新しいチャレンジや結果をお知らせします。",
   "flock_auto_renew": "チャレンジを自動更新",
@@ -840,5 +840,15 @@
   "link_needs_update_title": "Birdrをアップデート",
   "link_needs_update_message": "このリンクを開くには新しいバージョンのBirdrが必要です。アプリをアップデートしてから、もう一度リンクを開いてください。",
   "link_needs_update_button": "アップデート",
-  "link_needs_update_later": "今はしない"
+  "link_needs_update_later": "今はしない",
+  "flock_weekly_challenge": "今週のチャレンジ",
+  "flock_extra_games": "追加ゲーム",
+  "flock_extra_games_empty": "まだ追加ゲームはありません。ゲームを作成して「共有」を選び、このフロックに追加しましょう。メンバー全員に通知が届き、プレイできます。",
+  "flock_extra_games_create": "ゲームを作成",
+  "flock_extra_game_my_score": "あなた: {correct}/{length}問正解、{score}ポイント",
+  "shared_game_add_to_flock_title": "フロックに追加",
+  "shared_game_add_to_flock_hint": "フロックの「追加ゲーム」に表示され、メンバーに通知が届きます。",
+  "shared_game_choose_flock": "フロックを選択",
+  "shared_game_add_to_named_flock": "{flock}に追加",
+  "shared_game_in_flocks": "{flocks}で共有済み"
 }

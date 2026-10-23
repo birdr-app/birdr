@@ -664,7 +664,7 @@
   "profile_show_all_modes": "Mostrar todos os modos de jogo",
   "profile_show_all_modes_hint": "Todos os modos de jogo em tamanho cheio no início e nos menus. Desligado: aparecem depois das suas primeiras partidas.",
   "flock_notifications": "Notificações",
-  "flock_notifications_hint": "Novo desafio, último dia para jogar e os resultados.",
+  "flock_notifications_hint": "Novo desafio, último dia para jogar, os resultados e novos jogos extras.",
   "flock_notifications_off_on_phone": "Desligadas neste telefone. Toque no botão para ativá-las.",
   "flock_notifications_settings": "As notificações do Birdr estão desligadas neste telefone. Ative-as nos Ajustes para saber de novos desafios e resultados.",
   "flock_auto_renew": "Renovar desafios automaticamente",
@@ -734,5 +734,16 @@
   "play_modes_info_multi": "Começa na hora e todos jogam em tempo real, ao mesmo tempo. Os amigos entram no seu lobby com um link ou QR code. Todos veem a mesma ave e o jogo só avança quando todos responderem; o anfitrião passa para a próxima ave.",
   "play_modes_info_share": "Não começa na hora. Você cria o jogo e compartilha o link ou o QR code, por exemplo em um grupo. Depois você e os outros podem jogar agora ou mais tarde, até o horário de término escolhido (ou até você encerrar). Todos recebem as mesmas aves e há uma classificação. Quando o jogo termina, você vê como todos se saíram em cada ave.",
   "share_signal": "Signal",
-  "share_signal_copied": "Mensagem copiada. Cole em uma conversa do Signal."
+  "share_signal_copied": "Mensagem copiada. Cole em uma conversa do Signal.",
+  "flocks_weekly_challenge": "Desafio semanal",
+  "flock_extra_games": "Jogos extras",
+  "flock_extra_games_empty": "Ainda não há jogos extras. Crie um jogo, escolha Compartilhar e adicione-o a este bando. Todos aqui recebem uma notificação e podem jogar.",
+  "flock_extra_games_create": "Criar um jogo",
+  "flock_extra_game_my_score": "Você: {correct}/{length}, {score} pontos",
+  "shared_game_add_to_flock_title": "Adicionar a um bando",
+  "shared_game_add_to_flock_hint": "Aparece em Jogos extras do bando e os membros recebem uma notificação.",
+  "shared_game_choose_flock": "Escolha um bando",
+  "shared_game_add_to_named_flock": "Adicionar a {flock}",
+  "shared_game_in_flocks": "Compartilhado em {flocks}",
+  "flock_extra_game_meta": "{count, plural, =0 {Ninguém jogou ainda} one {# jogador} other {# jogadores}}"
 }

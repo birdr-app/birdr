@@ -664,7 +664,7 @@
   "profile_show_all_modes": "Mostra tutte le modalità di gioco",
   "profile_show_all_modes_hint": "Tutte le modalità di gioco a grandezza piena nella home e nei menu. Disattivato: compaiono dopo le prime partite.",
   "flock_notifications": "Notifiche",
-  "flock_notifications_hint": "Nuova sfida, ultimo giorno per giocare e i risultati.",
+  "flock_notifications_hint": "Nuova sfida, ultimo giorno per giocare, i risultati e le nuove partite extra.",
   "flock_notifications_off_on_phone": "Disattivate su questo telefono. Tocca l’interruttore per attivarle.",
   "flock_notifications_settings": "Le notifiche di Birdr sono disattivate su questo telefono. Attivale nelle Impostazioni per sapere di nuove sfide e risultati.",
   "flock_auto_renew": "Rinnova le sfide automaticamente",
@@ -734,5 +734,16 @@
   "play_modes_info_multi": "Inizia subito e tutti giocano in tempo reale, nello stesso momento. Gli amici entrano nella tua lobby con un link o un codice QR. Tutti vedono lo stesso uccello e la partita va avanti solo quando tutti hanno risposto; chi ospita passa all'uccello successivo.",
   "play_modes_info_share": "Non inizia subito. Crei la partita e condividi il link o il codice QR, per esempio in una chat di gruppo. Poi tu e gli altri potete giocarla ora o più tardi, fino all'ora di fine scelta (o finché non la chiudi). Tutti ricevono gli stessi uccelli e c'è una classifica. Quando la partita è finita, vedi com'è andata a tutti per ogni uccello.",
   "share_signal": "Signal",
-  "share_signal_copied": "Messaggio copiato. Incollalo in una chat di Signal."
+  "share_signal_copied": "Messaggio copiato. Incollalo in una chat di Signal.",
+  "flocks_weekly_challenge": "Sfida settimanale",
+  "flock_extra_games": "Partite extra",
+  "flock_extra_games_empty": "Ancora nessuna partita extra. Crea una partita, scegli Condividi e aggiungila a questo stormo. Tutti qui ricevono una notifica e possono giocarla.",
+  "flock_extra_games_create": "Crea una partita",
+  "flock_extra_game_my_score": "Tu: {correct}/{length}, {score} punti",
+  "shared_game_add_to_flock_title": "Aggiungi a uno stormo",
+  "shared_game_add_to_flock_hint": "Compare tra le Partite extra dello stormo e i membri ricevono una notifica.",
+  "shared_game_choose_flock": "Scegli uno stormo",
+  "shared_game_add_to_named_flock": "Aggiungi a {flock}",
+  "shared_game_in_flocks": "Condivisa in {flocks}",
+  "flock_extra_game_meta": "{count, plural, =0 {Nessuno ha ancora giocato} one {# giocatore} other {# giocatori}}"
 }

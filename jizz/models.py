@@ -2571,6 +2571,29 @@ class SharedGameAttempt(models.Model):
         return f'{self.player_id} on {self.shared_game_id}'
 
 
+class FlockSharedGame(models.Model):
+    """A shared game posted to a flock's "Extra games" (any member may add one)."""
+
+    flock = models.ForeignKey(Flock, on_delete=models.CASCADE, related_name='shared_games')
+    shared_game = models.ForeignKey(SharedGame, on_delete=models.CASCADE, related_name='flock_links')
+    added_by = models.ForeignKey(
+        'auth.User',
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name='flock_shared_games',
+    )
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created']
+        constraints = [
+            models.UniqueConstraint(fields=['flock', 'shared_game'], name='flock_shared_game_once'),
+        ]
+
+    def __str__(self):
+        return f'{self.shared_game_id} in {self.flock_id}'
+
+
 @receiver(post_save, sender=Answer)
 def complete_shared_game_attempt(sender, instance, created, **kwargs):
     """Close a shared-game attempt on its last answer, so clients need no extra call."""

@@ -667,7 +667,7 @@
   "profile_show_all_modes": "Show all game modes",
   "profile_show_all_modes_hint": "Every game mode full size on the home screen and in the menus. Off: they appear after your first few games.",
   "flock_notifications": "Notifications",
-  "flock_notifications_hint": "New challenge, last day to play, and the results.",
+  "flock_notifications_hint": "New challenge, last day to play, the results, and new extra games.",
   "flock_notifications_off_on_phone": "Turned off on this phone. Tap the switch to turn them on.",
   "flock_notifications_settings": "Notifications are turned off for Birdr on this phone. Turn them on in Settings to hear about new challenges and results.",
   "flock_auto_renew": "Auto-renew challenges",
@@ -737,5 +737,16 @@
   "play_modes_info_multi": "Starts right away and everyone plays in real time, at the same moment. Friends join your lobby with a link or QR code. Everyone sees the same bird, and the game only moves on when everyone has answered; the host continues to the next bird.",
   "play_modes_info_share": "Doesn't start right away. You create the game and share the link or QR code, for example in a group chat. Then you and everyone else can play it now or later, until the end time you picked (or until you finish it). Everyone gets the same birds and there is a leaderboard. When the game is finished, you can see how everyone did on each bird.",
   "share_signal": "Signal",
-  "share_signal_copied": "Message copied. Paste it in a Signal chat."
+  "share_signal_copied": "Message copied. Paste it in a Signal chat.",
+  "flocks_weekly_challenge": "Weekly challenge",
+  "flock_extra_games": "Extra games",
+  "flock_extra_games_empty": "No extra games yet. Create a game, choose Share, and add it to this flock. Everyone here gets a notification and can play it.",
+  "flock_extra_games_create": "Create a game",
+  "flock_extra_game_my_score": "You: {correct}/{length}, {score} points",
+  "shared_game_add_to_flock_title": "Add to flock",
+  "shared_game_add_to_flock_hint": "It shows up under Extra games in the flock, and members get a notification.",
+  "shared_game_choose_flock": "Choose a flock",
+  "shared_game_add_to_named_flock": "Add to {flock}",
+  "shared_game_in_flocks": "Shared in {flocks}",
+  "flock_extra_game_meta": "{count, plural, =0 {Nobody played yet} one {# player} other {# players}}"
 }

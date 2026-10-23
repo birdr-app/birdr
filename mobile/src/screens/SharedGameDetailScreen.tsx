@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   ActivityIndicator,
   Alert,
@@ -17,7 +17,7 @@ import QRCode from 'react-native-qrcode-svg';
 import { useAuth } from '../context/AuthContext';
 import { useGame } from '../context/GameContext';
 import { useTranslation } from '../i18n/TranslationContext';
-import { getCountryDisplayName } from '../i18n/countryNames';
+import { AddToFlockCard, useSharedGameStatusText, useSharedGameSummary } from '../components/SharedGameFlocks';
 import { CachedRemoteImage, remotePlayImageSource } from '../components/CachedRemoteImage';
 import { colors } from '../theme';
 import {
@@ -31,8 +31,6 @@ import {
   type SharedGameQuestionStat,
   type SharedGameStats,
 } from '../api/sharedGames';
-
-const MEDIA_LABEL_KEYS: Record<string, string> = { images: 'pictures', audio: 'sounds', video: 'videos' };
 
 const ERROR_KEYS: Record<string, string> = {
   finished: 'shared_game_error_finished',
@@ -84,7 +82,7 @@ export function SharedGameDetailScreen() {
   const navigation = useNavigation<any>();
   const route = useRoute();
   const { token = '', justCreated = false } = (route.params as { token?: string; justCreated?: boolean }) ?? {};
-  const { t, locale } = useTranslation();
+  const { t } = useTranslation();
   const { isAuthenticated } = useAuth();
   const { player, playerName, setPlayerName, createPlayer, loadGame, setGame, language } = useGame();
   const [game, setSharedGame] = useState<SharedGame | null>(null);
@@ -122,34 +120,8 @@ export function SharedGameDetailScreen() {
     if (game) navigation.setOptions({ title: t('shared_game_title', { name: game.owner_name }) });
   }, [game?.owner_name, navigation, t]);
 
-  const summary = useMemo(() => {
-    if (!game) return '';
-    const mediaKey = MEDIA_LABEL_KEYS[game.game.media];
-    return [
-      game.game.country ? getCountryDisplayName(game.game.country, locale) : '',
-      t(game.game.level),
-      mediaKey ? t(mediaKey) : game.game.media,
-      t('shared_game_birds', { count: game.game.length }),
-    ]
-      .filter(Boolean)
-      .join(' · ');
-  }, [game, locale, t]);
-
-  const statusText = useMemo(() => {
-    if (!game) return '';
-    if (!game.is_open) return t('shared_game_finished');
-    if (game.ends_at) {
-      const when = new Date(game.ends_at).toLocaleString(locale, {
-        weekday: 'short',
-        day: 'numeric',
-        month: 'short',
-        hour: '2-digit',
-        minute: '2-digit',
-      });
-      return t('shared_game_open_until', { when });
-    }
-    return t('shared_game_open_until_owner', { name: game.owner_name });
-  }, [game, locale, t]);
+  const summary = useSharedGameSummary(game?.game);
+  const statusText = useSharedGameStatusText(!!game?.is_open, game?.ends_at ?? null, game?.owner_name ?? '');
 
   const shareMessage = game
     ? `${t('shared_game_share_message', { summary })} ${game.share_url}`
@@ -272,6 +244,14 @@ export function SharedGameDetailScreen() {
       </View>
     </View>
   ) : null;
+  const shareBlockWithFlocks = shareBlock ? (
+    <>
+      {shareBlock}
+      <View style={styles.flockCard}>
+        <AddToFlockCard game={game} onAdded={setSharedGame} />
+      </View>
+    </>
+  ) : null;
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content} testID="sharedGame.screen">
@@ -285,7 +265,7 @@ export function SharedGameDetailScreen() {
 
       {error ? <Text style={styles.error}>{t(ERROR_KEYS[error] ?? 'shared_game_error')}</Text> : null}
 
-      {justCreated && game.is_owner ? shareBlock : null}
+      {justCreated && game.is_owner ? shareBlockWithFlocks : null}
 
       {mine?.completed ? (
         <View style={styles.resultCard}>
@@ -346,7 +326,7 @@ export function SharedGameDetailScreen() {
         <Text style={styles.muted}>{t('shared_game_no_scores')}</Text>
       )}
 
-      {!justCreated || !game.is_owner ? shareBlock : null}
+      {!justCreated || !game.is_owner ? shareBlockWithFlocks : null}
 
       {game.can_finish ? (
         <View style={styles.finishBlock}>
@@ -385,6 +365,7 @@ export function SharedGameDetailScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#fff' },
   content: { padding: 24, paddingBottom: 48 },
+  flockCard: { marginTop: 12 },
   centered: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff', padding: 24 },
   summary: { fontSize: 18, fontWeight: '700', color: colors.primary[800] },
   status: { fontSize: 15, color: colors.primary[700], marginTop: 4 },

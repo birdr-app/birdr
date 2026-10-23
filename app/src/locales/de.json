@@ -664,7 +664,7 @@
   "profile_show_all_modes": "Alle Spielmodi anzeigen",
   "profile_show_all_modes_hint": "Alle Spielmodi groß auf dem Startbildschirm und in den Menüs. Aus: Sie erscheinen nach deinen ersten Spielen.",
   "flock_notifications": "Benachrichtigungen",
-  "flock_notifications_hint": "Neue Challenge, letzter Spieltag und die Ergebnisse.",
+  "flock_notifications_hint": "Neue Challenge, letzter Spieltag, die Ergebnisse und neue Extra-Spiele.",
   "flock_notifications_off_on_phone": "Auf diesem Telefon ausgeschaltet. Tippe auf den Schalter, um sie einzuschalten.",
   "flock_notifications_settings": "Benachrichtigungen für Birdr sind auf diesem Telefon ausgeschaltet. Schalte sie in den Einstellungen ein, um von neuen Challenges und Ergebnissen zu erfahren.",
   "flock_auto_renew": "Challenges automatisch verlängern",
@@ -734,5 +734,16 @@
   "play_modes_info_multi": "Startet sofort und alle spielen in Echtzeit, im selben Moment. Freunde kommen per Link oder QR-Code in deine Lobby. Alle sehen denselben Vogel, und es geht erst weiter, wenn alle geantwortet haben; der Host geht zum nächsten Vogel.",
   "play_modes_info_share": "Startet nicht sofort. Du erstellst das Spiel und teilst den Link oder QR-Code, zum Beispiel in einem Gruppenchat. Dann können du und alle anderen es jetzt oder später spielen, bis zur gewählten Endzeit (oder bis du es beendest). Alle bekommen dieselben Vögel und es gibt eine Rangliste. Ist das Spiel beendet, siehst du, wie es allen bei jedem Vogel ging.",
   "share_signal": "Signal",
-  "share_signal_copied": "Nachricht kopiert. Füge sie in einen Signal-Chat ein."
+  "share_signal_copied": "Nachricht kopiert. Füge sie in einen Signal-Chat ein.",
+  "flocks_weekly_challenge": "Wochen-Challenge",
+  "flock_extra_games": "Extra-Spiele",
+  "flock_extra_games_empty": "Noch keine Extra-Spiele. Erstelle ein Spiel, wähle Teilen und füge es diesem Flock hinzu. Alle hier bekommen eine Benachrichtigung und können es spielen.",
+  "flock_extra_games_create": "Spiel erstellen",
+  "flock_extra_game_my_score": "Du: {correct}/{length}, {score} Punkte",
+  "shared_game_add_to_flock_title": "Zu einem Flock hinzufügen",
+  "shared_game_add_to_flock_hint": "Es erscheint unter Extra-Spiele im Flock, und die Mitglieder bekommen eine Benachrichtigung.",
+  "shared_game_choose_flock": "Flock auswählen",
+  "shared_game_add_to_named_flock": "Zu {flock} hinzufügen",
+  "shared_game_in_flocks": "Geteilt in {flocks}",
+  "flock_extra_game_meta": "{count, plural, =0 {Noch niemand gespielt} one {# Spieler} other {# Spieler}}"
 }
