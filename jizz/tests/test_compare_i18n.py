@@ -253,3 +253,36 @@ class ComparisonSpeciesNameI18nTests(TestCase):
         self.assertIn('Woodlark (Lullula arborea) → Boomleeuwerik', prompt)
         self.assertIn('Eurasian Skylark (Alauda arvensis) → Veldleeuwerik', prompt)
         self.assertNotIn('Houtleeuwerik', prompt)
+
+
+class ComparisonNowaitTests(TestCase):
+    setUp = ComparisonI18nTests.setUp
+    _translated = ComparisonI18nTests._translated
+
+    @patch('compare.i18n._schedule_translation')
+    @patch('compare.i18n._translate_with_openai')
+    def test_nowait_serves_english_and_translates_later(self, mock_tr, mock_schedule):
+        from compare.i18n import _translate_in_background, localize_comparison_nowait
+
+        mock_tr.return_value = self._translated()
+        active = localize_comparison_nowait(self.comparison, 'es')
+        self.assertEqual(active.summary, 'Robin is smaller.')
+        mock_tr.assert_not_called()
+        mock_schedule.assert_called_once_with(self.comparison.pk, 'es')
+
+        _translate_in_background(self.comparison.pk, 'es')
+        mock_tr.assert_called_once()
+        fresh = SpeciesComparison.objects.get(pk=self.comparison.pk)
+        mock_schedule.reset_mock()
+        active = localize_comparison_nowait(fresh, 'es')
+        self.assertEqual(active.summary, 'El petirrojo es más pequeño.')
+        mock_schedule.assert_not_called()
+
+    @patch('compare.i18n.threading.Thread')
+    def test_schedule_runs_once_per_lock_window(self, mock_thread):
+        from compare.i18n import _background_threads, _schedule_translation
+
+        _schedule_translation(self.comparison.pk, 'fr')
+        _schedule_translation(self.comparison.pk, 'fr')
+        self.assertEqual(mock_thread.call_count, 1)
+        _background_threads.clear()

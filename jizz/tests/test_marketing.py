@@ -904,10 +904,13 @@ class MarketingPagesTests(TestCase):
             else (self.goshawk, self.sparrow)
         )
         pair = f'{low.slug}-vs-{high.slug}'
-        first = self.client.get(f'/nl/site/compare/{pair}/')
+        from compare.i18n import _translate_in_background
+
+        # The page never waits for OpenAI: English now, translated in the background.
+        with patch('compare.i18n._schedule_translation', side_effect=_translate_in_background):
+            first = self.client.get(f'/nl/site/compare/{pair}/')
         self.assertEqual(first.status_code, 200)
-        html = first.content.decode()
-        self.assertIn('Sperwers zijn kleiner', html)
+        self.assertNotIn('Sperwers zijn kleiner', first.content.decode())
         mock_tr.assert_called_once()
         from compare.models import ComparisonTranslation
 

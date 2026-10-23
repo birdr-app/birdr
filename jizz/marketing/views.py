@@ -595,9 +595,9 @@ def _compare_page_response(
     has_ai_text = has_comparison_text(comparison)
     needs_ai_generation = show_ai and not has_ai_text
     if show_ai and comparison:
-        from compare.i18n import localize_comparison
+        from compare.i18n import localize_comparison_nowait
 
-        active = localize_comparison(comparison, locale)
+        active = localize_comparison_nowait(comparison, locale)
     else:
         active = community if not show_ai else comparison
     summary_html, sections, detailed_html = rendered_parts(active)

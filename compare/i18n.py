@@ -6,6 +6,7 @@ import hashlib
 import json
 import logging
 import re
+import threading
 from typing import Any
 
 from django.conf import settings
@@ -280,6 +281,69 @@ def localize_comparison(
     if lang == DEFAULT_LANGUAGE:
         return comparison
     return LocalizedComparison(comparison, localized_fields(comparison, lang, generate=generate))
+
+
+BACKGROUND_LOCK_TIMEOUT = 60 * 15
+_background_threads: list[threading.Thread] = []
+
+
+def localize_comparison_nowait(
+    comparison: SpeciesComparison | None,
+    language: str,
+) -> SpeciesComparison | LocalizedComparison | None:
+    """Like localize_comparison, but never calls OpenAI inside the request.
+
+    Serves a stored translation when there is one. Otherwise returns English
+    and translates in a background thread, so the next view gets the translation.
+    """
+    if comparison is None:
+        return None
+    lang = normalize_app_language(language) or DEFAULT_LANGUAGE
+    if lang == DEFAULT_LANGUAGE:
+        return comparison
+    english = source_fields(comparison)
+    fields = localized_fields(comparison, lang, generate=False)
+    if fields == english and any(english.values()) and comparison.pk:
+        _schedule_translation(comparison.pk, lang)
+    return LocalizedComparison(comparison, fields)
+
+
+def _schedule_translation(comparison_id: Any, language: str) -> None:
+    # One attempt per comparison and language per lock window, across workers.
+    if not cache.add(f'{CACHE_PREFIX}-lock:{comparison_id}:{language}', 1, BACKGROUND_LOCK_TIMEOUT):
+        return
+    thread = threading.Thread(
+        target=_run_in_thread,
+        args=(comparison_id, language),
+        name=f'compare-i18n-{comparison_id}-{language}',
+        daemon=True,
+    )
+    _background_threads.append(thread)
+    thread.start()
+
+
+def _run_in_thread(comparison_id: Any, language: str) -> None:
+    from django.db import connections
+
+    try:
+        _translate_in_background(comparison_id, language)
+    finally:
+        connections.close_all()
+
+
+def _translate_in_background(comparison_id: Any, language: str) -> None:
+    try:
+        comparison = SpeciesComparison.objects.filter(pk=comparison_id).first()
+        if comparison is not None:
+            localized_fields(comparison, language, generate=True)
+    except Exception:
+        logger.exception('Background comparison translation failed (%s, %s)', comparison_id, language)
+
+
+def wait_for_background_translations(timeout: float | None = None) -> None:
+    """Testing helper: block until running background translations have finished."""
+    while _background_threads:
+        _background_threads.pop().join(timeout)
 
 
 def _merged_fields(english: dict[str, str], translated: dict[str, Any]) -> dict[str, str]:
