@@ -933,6 +933,11 @@ export const translations: Record<string, Record<string, string>> = {
     shared_game_players_count: "{count} played",
     shared_game_nobody_played: "Nobody played yet",
     shared_game_share_button: "Share…",
+    // Links from a newer Birdr
+    link_needs_update_title: "Update Birdr",
+    link_needs_update_message: "This link needs a newer version of Birdr. Update the app and open the link again.",
+    link_needs_update_button: "Update",
+    link_needs_update_later: "Not now",
   },
   nl: {
     cancel: 'Annuleren',
@@ -1845,6 +1850,11 @@ export const translations: Record<string, Record<string, string>> = {
     shared_game_players_count: "{count} gespeeld",
     shared_game_nobody_played: "Nog niemand gespeeld",
     shared_game_share_button: "Delen…",
+    // Links from a newer Birdr
+    link_needs_update_title: "Werk Birdr bij",
+    link_needs_update_message: "Voor deze link heb je een nieuwere versie van Birdr nodig. Werk de app bij en open de link opnieuw.",
+    link_needs_update_button: "Bijwerken",
+    link_needs_update_later: "Niet nu",
   },
   es: es as Record<string, string>,
   fr: fr as Record<string, string>,

@@ -217,8 +217,14 @@ LINK_PREVIEW_BOTS = (
 )
 
 
-def join_shared_game_redirect(request, token):
-    """Shared game link: link-preview tags, then the app on mobile or the web page on desktop."""
+def join_shared_game_redirect(request, token, try_app=True):
+    """Shared game link: link-preview tags for chat apps, then the app or the web page.
+
+    The share link is /s/<token>/ (try_app=False): older app versions claim /join/ and the
+    birdr:// scheme but cannot open shared games, so people go straight to the web page.
+    New Android apps claim /s/ and never reach this view; iOS follows once /s/* is in the
+    apple-app-site-association file. /join/s/<token>/ is kept as an alias that tries the app.
+    """
     from jizz.models import SharedGame
     from jizz.services.species_cover import absolute_media_url
     from jizz.shared_game import share_preview
@@ -229,14 +235,21 @@ def join_shared_game_redirect(request, token):
     preview = share_preview(shared_game) if shared_game else {}
     user_agent = request.META.get('HTTP_USER_AGENT', '')
     is_preview_bot = any(bot in user_agent.lower() for bot in LINK_PREVIEW_BOTS)
-    if parse_device_type(user_agent) == 'desktop' and not is_preview_bot:
+    if is_preview_bot:
+        return render(request, 'jizz/join_redirect.html', {
+            'fallback_url': fallback_url,
+            'og_title': preview.get('title'),
+            'og_description': preview.get('description'),
+            'og_url': absolute_media_url(f'/s/{token}/', request),
+        })
+    if not try_app or parse_device_type(user_agent) == 'desktop':
         return HttpResponseRedirect(fallback_url)
     return render(request, 'jizz/join_redirect.html', {
         'deep_link': f'birdr://join/s/{token}',
         'fallback_url': fallback_url,
         'og_title': preview.get('title'),
         'og_description': preview.get('description'),
-        'og_url': absolute_media_url(f'/join/s/{token}/', request),
+        'og_url': absolute_media_url(f'/s/{token}/', request),
     })
 
 
@@ -412,6 +425,7 @@ urlpatterns = [
     path('join/challenge/<str:token>/', join_challenge_redirect, name='join-challenge'),
     path('join/flock/<str:token>/', join_flock_redirect, name='join-flock'),
     path('join/s/<str:token>/', join_shared_game_redirect, name='join-shared-game'),
+    path('s/<str:token>/', join_shared_game_redirect, {'try_app': False}, name='shared-game-link'),
     path('join/<str:token>/', join_game_redirect, name='join-game'),
     path('flocks/results/<str:result_token>/', flock_result_page, name='flock-result-page'),
     path(

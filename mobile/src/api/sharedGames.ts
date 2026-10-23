@@ -152,13 +152,16 @@ export function getSharedGameStats(token: string, language?: string): Promise<Sh
   return request<SharedGameStats>(`/api/shared-games/${encodeURIComponent(token)}/stats/${query}`);
 }
 
-/** Token from https://birdr.pro/join/s/<token>/ (with or without /web) or birdr://join/s/<token>. */
+/**
+ * Token from the share link https://birdr.pro/s/<token>/, the older alias
+ * https://birdr.pro/join/s/<token>/ (with or without /web), or birdr://join/s/<token>.
+ */
 export function parseSharedGameUrl(url: string): string | null {
-  const schemeMatch = url.match(/^birdr:\/\/join\/s\/([a-z0-9]+)\/?$/i);
+  const schemeMatch = url.match(/^birdr:\/\/(?:join\/)?s\/([a-z0-9]+)\/?$/i);
   if (schemeMatch) return schemeMatch[1];
   try {
     const parsed = new URL(url);
-    const match = parsed.pathname.match(/^\/join\/s\/([a-z0-9]+)(?:\/web)?\/?$/i);
+    const match = parsed.pathname.match(/^\/(?:join\/)?s\/([a-z0-9]+)(?:\/web)?\/?$/i);
     if (match) return match[1];
   } catch {
     // ignore invalid URLs

@@ -21,6 +21,13 @@ const stat = (sequence: number, correct: number, answered: number): SharedGameQu
 });
 
 describe('parseSharedGameUrl', () => {
+  it('parses the /s/ share link', () => {
+    expect(parseSharedGameUrl('https://birdr.pro/s/zw8c4zh9zu/')).toBe('zw8c4zh9zu');
+    expect(parseSharedGameUrl('https://birdr.pro/s/zw8c4zh9zu')).toBe('zw8c4zh9zu');
+    expect(parseSharedGameUrl('birdr://s/zw8c4zh9zu')).toBe('zw8c4zh9zu');
+    expect(parseSharedGameUrl('https://birdr.pro/site/how-it-works/')).toBeNull();
+  });
+
   it('parses app, https and web fallback links', () => {
     expect(parseSharedGameUrl('birdr://join/s/zw8c4zh9zu')).toBe('zw8c4zh9zu');
     expect(parseSharedGameUrl('https://birdr.pro/join/s/zw8c4zh9zu/')).toBe('zw8c4zh9zu');

@@ -836,5 +836,9 @@
   "shared_game_share_title": "Dieses Spiel teilen",
   "shared_game_players_count": "{count} haben gespielt",
   "shared_game_nobody_played": "Noch niemand gespielt",
-  "shared_game_share_button": "Teilen…"
+  "shared_game_share_button": "Teilen…",
+  "link_needs_update_title": "Birdr aktualisieren",
+  "link_needs_update_message": "Für diesen Link brauchst du eine neuere Version von Birdr. Aktualisiere die App und öffne den Link erneut.",
+  "link_needs_update_button": "Aktualisieren",
+  "link_needs_update_later": "Nicht jetzt"
 }

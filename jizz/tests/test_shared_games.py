@@ -86,7 +86,8 @@ class SharedGameTests(TestCase):
         self.assertFalse(template.multiplayer)
         self.assertTrue(data['is_owner'])
         self.assertTrue(data['can_finish'])
-        self.assertTrue(data['share_url'].endswith(f"/join/s/{data['token']}/"))
+        self.assertTrue(data['share_url'].endswith(f"/s/{data['token']}/"))
+        self.assertNotIn('/join/', data['share_url'])
         self.assertEqual(data['game']['country']['code'], 'NL')
         self.assertIsNotNone(data['ends_at'])
 
@@ -282,3 +283,20 @@ class SharedGameTests(TestCase):
         res = self.client.get('/join/s/nope/', HTTP_USER_AGENT='WhatsApp/2.23')
         self.assertEqual(res.status_code, 200)
         self.assertNotContains(res, 'og:title')
+
+    def test_share_link_skips_the_app_but_previews_for_bots(self):
+        """/s/ never tries birdr:// (older apps own the scheme but cannot open shared games)."""
+        data = self._create()
+        path = f"/s/{data['token']}/"
+        web = f"/join/s/{data['token']}/web/"
+        for user_agent in ('Mozilla/5.0 (iPhone) Mobile', 'Mozilla/5.0 (Macintosh) Chrome/130'):
+            res = self.client.get(path, HTTP_USER_AGENT=user_agent)
+            self.assertEqual(res.status_code, 302, user_agent)
+            self.assertTrue(res['Location'].endswith(web))
+
+        bot = self.client.get(path, HTTP_USER_AGENT='WhatsApp/2.23.20.0')
+        self.assertEqual(bot.status_code, 200)
+        self.assertContains(bot, 'shared a Birdr quiz: Netherlands')
+        self.assertContains(bot, f'og:url" content="https://')
+        self.assertContains(bot, f"/s/{data['token']}/")
+        self.assertNotContains(bot, 'birdr://')

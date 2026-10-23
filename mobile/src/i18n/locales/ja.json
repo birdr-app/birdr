@@ -836,5 +836,9 @@
   "shared_game_share_title": "このゲームを共有",
   "shared_game_players_count": "{count}人がプレイ",
   "shared_game_nobody_played": "まだ誰もプレイしていません",
-  "shared_game_share_button": "共有…"
+  "shared_game_share_button": "共有…",
+  "link_needs_update_title": "Birdrをアップデート",
+  "link_needs_update_message": "このリンクを開くには新しいバージョンのBirdrが必要です。アプリをアップデートしてから、もう一度リンクを開いてください。",
+  "link_needs_update_button": "アップデート",
+  "link_needs_update_later": "今はしない"
 }

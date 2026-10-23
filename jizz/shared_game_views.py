@@ -51,7 +51,7 @@ def _owner_user(player: Player | None):
 
 
 def _share_url(shared_game: SharedGame, request) -> str:
-    return absolute_media_url(f'/join/s/{shared_game.token}/', request)
+    return absolute_media_url(f'/s/{shared_game.token}/', request)
 
 
 def _attempt_payload(attempt: SharedGameAttempt | None) -> dict | None:

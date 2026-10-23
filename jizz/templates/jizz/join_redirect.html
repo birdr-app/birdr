@@ -22,11 +22,15 @@
 <body>
   <p>Opening Birdr…</p>
   <p class="fallback">App not installed? <a href="{{ fallback_url }}" id="web-link">Continue in browser</a></p>
+  {% if deep_link %}
   <script>
     var d = '{{ deep_link|escapejs }}';
     var fallback = '{{ fallback_url|escapejs }}';
     window.location.href = d;
     setTimeout(function() { window.location.href = fallback; }, 2500);
   </script>
+  {% else %}
+  <script>window.location.replace('{{ fallback_url|escapejs }}');</script>
+  {% endif %}
 </body>
 </html>
