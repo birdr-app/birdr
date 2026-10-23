@@ -108,6 +108,7 @@ export function StartScreen() {
   const [familySearch, setFamilySearch] = useState('');
   const [groupSearch, setGroupSearch] = useState('');
   const [saveToProfile, setSaveToProfile] = useState(false);
+  const [playMode, setPlayMode] = useState<'single' | 'multi'>('single');
 
   useEffect(() => {
     if (!country?.code) {
@@ -283,6 +284,7 @@ export function StartScreen() {
         (navigation as any).navigate('Lobby', {
           rematch_game_token: undefined,
           rematchJoin: undefined,
+          playMode,
         });
       } else {
         Alert.alert(t('error'), t('could_not_create_game'));
@@ -654,6 +656,27 @@ export function StartScreen() {
         </TouchableOpacity>
       </AccessibleSheetModal>
 
+      <Text style={styles.label}>{t('number_of_players')}</Text>
+      <View style={styles.row} accessibilityRole="radiogroup" accessibilityLabel={t('number_of_players')}>
+        {(['single', 'multi'] as const).map((mode) => {
+          const selected = playMode === mode;
+          return (
+            <TouchableOpacity
+              key={mode}
+              style={[styles.chip, styles.playModeChip, selected && styles.chipSelected]}
+              onPress={() => setPlayMode(mode)}
+              testID={`start.playMode.${mode}`}
+              accessibilityRole="radio"
+              accessibilityState={{ selected }}
+            >
+              <Text style={[styles.chipText, selected && styles.chipTextSelected]}>
+                {t(mode === 'single' ? 'single_player' : 'multi_player')}
+              </Text>
+            </TouchableOpacity>
+          );
+        })}
+      </View>
+
       <TouchableOpacity
         style={[styles.startButton, (!country || !playerName.trim()) && styles.startButtonDisabled]}
         onPress={handleStart}
@@ -844,6 +867,7 @@ const styles = StyleSheet.create({
     borderColor: colors.primary[300],
     backgroundColor: '#fff',
   },
+  playModeChip: { flex: 1, justifyContent: 'center', paddingVertical: 12 },
   chipSelected: { backgroundColor: colors.primary[100], borderColor: colors.primary[800] },
   chipText: { fontSize: 14, color: colors.primary[800] },
   chipTextSelected: { color: colors.primary[800],fontWeight: '600',  },

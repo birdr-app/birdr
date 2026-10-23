@@ -20,6 +20,7 @@ import { useNavigate } from "react-router-dom";
 import { gamesService, GameDetailWithAnswers, QuestionWithAnswer } from "../api/services/games.service";
 import { startSpeciesPractice } from "../api/practice";
 import { format } from "date-fns";
+import { HiscoreRank } from "./hiscore-rank";
 import { PlayableVideo } from "./playable-video";
 import AppContext, { Species } from "../core/app-context";
 import { getCountryDisplayName } from "../data/country-names-nl";
@@ -254,6 +255,7 @@ export const GameDetailModal = ({ isOpen, onClose, gameToken, playerToken }: Gam
                               <FormattedMessage id="completed" defaultMessage="Completed" />
                             </Badge>
                           )}
+                          <HiscoreRank game={game} rank={game.hiscore_rank} />
                         </VStack>
                       </HStack>
                       <HStack gap={4} fontSize="sm" color="gray.600" flexWrap="wrap">

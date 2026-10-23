@@ -20,6 +20,7 @@ import { Page } from "../shared/components/layout";
 import AppContext from "../core/app-context";
 import { getCountryDisplayName } from "../data/country-names-nl";
 import { format } from "date-fns";
+import { HiscoreRank } from "../components/hiscore-rank";
 
 export const GameDetailPage = () => {
   const navigate = useNavigate();
@@ -169,6 +170,7 @@ export const GameDetailPage = () => {
                         <FormattedMessage id="completed" defaultMessage="Completed" />
                       </Badge>
                     )}
+                    <HiscoreRank game={game} rank={game.hiscore_rank} />
                   </VStack>
                 </HStack>
                 <HStack gap={4} fontSize="sm" color="gray.600" flexWrap="wrap">

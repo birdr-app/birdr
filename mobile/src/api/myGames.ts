@@ -1,5 +1,6 @@
 import { apiUrl } from './config';
 import { getAuthHeaders } from './auth';
+import type { Rarity } from './games';
 
 export type CountryRef = { code: string; name: string };
 
@@ -84,10 +85,12 @@ export type GameDetailWithAnswers = {
   ended: boolean;
   tax_order?: string;
   tax_family?: string;
-  rarity: string;
+  rarity: Rarity;
   include_escapes: boolean;
   questions: QuestionWithAnswer[];
   total_score: number;
+  /** Position in the hiscores for this game's options; null for taxonomy-filtered and unranked games. */
+  hiscore_rank?: number | null;
 };
 
 export async function getMyGames(page: number = 1): Promise<PaginatedGamesResponse> {

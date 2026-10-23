@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import { Page } from "../../shared/components/layout"
 import {Box, Button, Flex, Heading, Icon, Link, ListRoot, ListItem, TagRoot, VStack, Text} from "@chakra-ui/react"
 import {FormattedMessage} from "react-intl"
@@ -12,6 +12,7 @@ import GameHeader from "./game-header"
 import { QRCodeSVG } from 'qrcode.react'
 import { validateQuestionForGame, getCurrentGameToken } from '../../core/game-token-validator'
 import AppStoreBanner from '../../components/app-store-banner'
+import type {LobbyLocationState} from '../../components/create-game'
 
 const Lobby: React.FC = () => {
 
@@ -22,12 +23,14 @@ const Lobby: React.FC = () => {
   const {players, startGame, question, gameStarted, markGameStarted} = useContext(WebsocketContext)
   const {player, game} = useContext(AppContext)
   const navigate = useNavigate()
+  const playMode = (useLocation().state as LobbyLocationState | null)?.playMode
   const gameTokenFromStorage = localStorage.getItem('game-token')
   const gameToken = game?.token ?? gameTokenFromStorage
 
   const isHost = player?.name === game?.host?.name
   const playerCount = players?.length ?? 0
-  const shareOpen = shareOpenOverride ?? playerCount > 1
+  // Follow the single/multi player choice from the create form; joiners (no choice) open once others are in.
+  const shareOpen = shareOpenOverride ?? (playMode ? playMode === 'multi' : playerCount > 1)
   const gameAlreadyInPlay = (game?.progress ?? 0) > 0
 
   useEffect(() => {

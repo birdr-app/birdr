@@ -18,6 +18,8 @@ type LobbyRouteParams = {
   rematch_game_token?: string;
   /** Only true when navigating from GameResults rematch; stale token without this must be ignored */
   rematchJoin?: boolean;
+  /** Single/multi player choice from Start; decides whether the invite block starts open */
+  playMode?: 'single' | 'multi';
 };
 
 export function LobbyScreen() {
@@ -189,7 +191,9 @@ export function LobbyScreen() {
   const displayPlayers = useMemo(() => {
     return refreshedGameScores.length > players.length ? refreshedGameScores : players;
   }, [players, refreshedGameScores]);
-  const shareOpen = shareOpenOverride ?? displayPlayers.length > 1;
+  // Follow the single/multi player choice from Start; joiners (no choice) open once others are in.
+  const shareOpen =
+    shareOpenOverride ?? (params.playMode ? params.playMode === 'multi' : displayPlayers.length > 1);
   const isHost = !!(
     game &&
     player &&

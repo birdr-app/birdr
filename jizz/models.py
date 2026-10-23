@@ -993,21 +993,54 @@ class PlayerScore(models.Model):
             qs = qs.filter(Q(game__season='') | Q(game__season__isnull=True))
         return qs.order_by('-score').first()
 
+    HISCORE_EXCLUDED_GAME_TYPES = (
+        Game.GAME_TYPE_PAIR_PRACTICE,
+        Game.GAME_TYPE_SPECIES_PRACTICE,
+        Game.GAME_TYPE_SURVIVAL,
+        Game.GAME_TYPE_LEAGUE,
+    )
+
+    @classmethod
+    def hiscore_eligible(cls):
+        """Scores that appear in the hiscores list: no taxonomy-filtered, practice, survival or league games."""
+        return (
+            cls.objects
+            .filter(Q(game__tax_order='') | Q(game__tax_order__isnull=True))
+            .filter(Q(game__tax_family='') | Q(game__tax_family__isnull=True))
+            .filter(Q(game__species_group='') | Q(game__species_group__isnull=True))
+            .exclude(game__game_type__in=cls.HISCORE_EXCLUDED_GAME_TYPES)
+        )
+
+    @property
+    def hiscore_rank(self):
+        """Position in the hiscores list for this game's country, level, rarity, length and media.
+
+        None when the game is not in the hiscores (taxonomy filter, practice, survival, league).
+        Ties share the best position.
+        """
+        game = self.game
+        if (
+            game is None
+            or game.tax_order
+            or game.tax_family
+            or game.species_group
+            or game.game_type in self.HISCORE_EXCLUDED_GAME_TYPES
+        ):
+            return None
+        better = PlayerScore.hiscore_eligible().filter(
+            game__country_id=game.country_id,
+            game__level=game.level,
+            game__rarity=game.rarity,
+            game__length=game.length,
+            game__media=game.media,
+            score__gt=self.score,
+        ).count()
+        return better + 1
+
     @property
     def ranking(self):
-        scores = PlayerScore.objects.filter(
-            game__level=self.game.level,
-            game__country=self.game.country,
-            game__media=self.game.media,
-            game__length=self.game.length,
-            game__rarity=self.game.rarity,
-        )
-        if self.game.season:
-            scores = scores.filter(game__season=self.game.season)
-        else:
-            scores = scores.filter(Q(game__season='') | Q(game__season__isnull=True))
-        scores = scores.order_by('-score').all()
-        return list(scores).index(self) + 1
+        """Hiscore position shown on Final results; None for games that are not in the hiscores."""
+        return self.hiscore_rank
 
     @property
     def is_host(self):

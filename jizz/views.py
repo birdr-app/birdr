@@ -894,16 +894,7 @@ class PlayerScoreListView(ListAPIView):
 
     def get_queryset(self):
         return (
-            PlayerScore.objects
-            .filter(Q(game__tax_order='') | Q(game__tax_order__isnull=True))
-            .filter(Q(game__tax_family='') | Q(game__tax_family__isnull=True))
-            .filter(Q(game__species_group='') | Q(game__species_group__isnull=True))
-            .exclude(game__game_type__in=[
-                Game.GAME_TYPE_PAIR_PRACTICE,
-                Game.GAME_TYPE_SPECIES_PRACTICE,
-                Game.GAME_TYPE_SURVIVAL,
-                Game.GAME_TYPE_LEAGUE,
-            ])
+            PlayerScore.hiscore_eligible()
             .select_related("player", "game", "game__country")
             .annotate(
                 score_rank=Window(

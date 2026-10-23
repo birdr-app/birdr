@@ -22,6 +22,7 @@ import { SpeciesMediaModal, type SpeciesMediaData } from '../components/SpeciesM
 import { SpeciesViewButton } from '../components/SpeciesViewButton';
 import { ComparisonButton } from '../components/ComparisonButton';
 import { useGame } from '../context/GameContext';
+import { hiscoresParamsFromGame } from '../game/hiscoresLink';
 import { useTranslation } from '../i18n/TranslationContext';
 import { colors } from '../theme';
 
@@ -182,6 +183,18 @@ export function GameDetailScreen() {
                 <Text style={styles.badgeText}>Completed</Text>
               </View>
             )}
+            {game.hiscore_rank ? (
+              <TouchableOpacity
+                style={[styles.rankBadge, game.hiscore_rank === 1 && styles.rankBadgeTop]}
+                onPress={() => navigation.navigate('Scores', hiscoresParamsFromGame(game))}
+                accessibilityRole="button"
+                testID="gameDetail.hiscoreRank"
+              >
+                <Text style={styles.rankBadgeText}>
+                  🏆 {t('hiscore_rank').replace('{rank}', String(game.hiscore_rank))}
+                </Text>
+              </TouchableOpacity>
+            ) : null}
           </View>
         </View>
         <View style={styles.meta}>
@@ -348,6 +361,9 @@ const styles = StyleSheet.create({
   score: { fontSize: 18, fontWeight: '600', color: colors.primary[600] },
   badge: { backgroundColor: colors.success[500], paddingHorizontal: 8, paddingVertical: 4, borderRadius: 6 },
   badgeText: { fontSize: 12, fontWeight: '600', color: '#fff' },
+  rankBadge: { backgroundColor: colors.primary[100], paddingHorizontal: 8, paddingVertical: 4, borderRadius: 6 },
+  rankBadgeTop: { backgroundColor: '#fef3c7' },
+  rankBadgeText: { fontSize: 12, fontWeight: '600', color: colors.primary[800] },
   meta: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', marginTop: 12, gap: 4 },
   metaText: { fontSize: 13, color: colors.primary[600] },
   metaDot: { fontSize: 13, color: colors.primary[400] },

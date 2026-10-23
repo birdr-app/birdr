@@ -1,6 +1,6 @@
-import {useContext, useEffect, useMemo, useState} from "react"
+import {useContext, useEffect, useMemo, useState, type ComponentType, type ReactNode} from "react"
 import AppContext, {Player} from "../core/app-context"
-import {Box, Button, Checkbox, Flex, Heading, Link} from "@chakra-ui/react"
+import {Box, Button, Checkbox, Flex, Heading, Link, RadioCard} from "@chakra-ui/react"
 import {FormattedMessage} from "react-intl"
 import SelectCountry from "./select-country"
 import SelectLanguage from "./select-language"
@@ -19,6 +19,21 @@ import SelectSpeciesGroup from "./select-species-group"
 import {profileService} from "../api/services/profile.service"
 import {useAuthProfile} from "../core/auth-profile-context"
 
+
+/** Chakra RadioCard slot typings omit `children` / conflict with Ark props; runtime is fine. */
+const RcItem = RadioCard.Item as unknown as ComponentType<{
+  value: string;
+  flex?: string;
+  children?: ReactNode;
+}>;
+const RcItemText = RadioCard.ItemText as unknown as ComponentType<{
+  children?: ReactNode;
+}>;
+
+export type PlayMode = 'single' | 'multi'
+
+/** Router state passed to the lobby so it can open the invite block for multiplayer games. */
+export type LobbyLocationState = { playMode?: PlayMode }
 
 type GameProps = {
   country?: string;
@@ -55,6 +70,7 @@ export const CreateGame = ({
   const {profile, applyProfile} = useAuthProfile()
   const [loading, setLoading] = useState(false)
   const [saveToProfile, setSaveToProfile] = useState(false)
+  const [playMode, setPlayMode] = useState<PlayMode>('single')
   const navigate = useNavigate()
   const {countries} = UseCountries()
 
@@ -114,7 +130,7 @@ export const CreateGame = ({
       const myGame = await createGame(myPlayer)
       if (!myGame) return
       await joinGame(myGame, myPlayer)
-      navigate('/game/lobby')
+      navigate('/game/lobby', {state: {playMode} satisfies LobbyLocationState})
     } finally {
       setLoading(false)
     }
@@ -146,6 +162,38 @@ export const CreateGame = ({
         <SetName/>
         <SelectLanguage/>
         {!pickCountry && <SelectCountry/>}
+
+        <Box>
+          <Heading size="md" mb={4} colorPalette="primary">
+            <FormattedMessage id={'number of players'} defaultMessage={'Number of players'}/>
+          </Heading>
+          <RadioCard.Root
+            colorPalette="primary"
+            variant="surface"
+            size="md"
+            value={playMode}
+            onValueChange={(details: { value: string | null }) =>
+              details.value && setPlayMode(details.value as PlayMode)}
+          >
+            <Flex direction="row" gap={4}>
+              {(['single', 'multi'] as const).map((mode) => (
+                <RcItem key={mode} value={mode} flex="1">
+                  <RadioCard.ItemHiddenInput />
+                  <RadioCard.ItemControl>
+                    <RadioCard.ItemContent>
+                      <RcItemText>
+                        {mode === 'single'
+                          ? <FormattedMessage id={'single player'} defaultMessage={'Single player'}/>
+                          : <FormattedMessage id={'multi player'} defaultMessage={'Multi player'}/>}
+                      </RcItemText>
+                    </RadioCard.ItemContent>
+                    <RadioCard.ItemIndicator />
+                  </RadioCard.ItemControl>
+                </RcItem>
+              ))}
+            </Flex>
+          </RadioCard.Root>
+        </Box>
 
         {differsFromProfile ? (
           <Box as="label" cursor="pointer" display="flex" alignItems="center" gap={2}>

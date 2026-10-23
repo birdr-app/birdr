@@ -71,6 +71,8 @@ export interface GameDetailWithAnswers {
   include_escapes: boolean;
   questions: QuestionWithAnswer[];
   total_score: number;
+  /** Position in the hiscores for this game's options; null for taxonomy-filtered and unranked games. */
+  hiscore_rank?: number | null;
 }
 
 class GamesService {

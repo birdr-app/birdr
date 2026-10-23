@@ -1565,6 +1565,7 @@ class GameDetailWithAnswersSerializer(serializers.ModelSerializer):
     country = CountrySerializer()
     questions = serializers.SerializerMethodField()
     total_score = serializers.SerializerMethodField()
+    hiscore_rank = serializers.SerializerMethodField()
     
     def get_questions(self, obj):
         """Get questions ordered by sequence"""
@@ -1573,26 +1574,35 @@ class GameDetailWithAnswersSerializer(serializers.ModelSerializer):
         context = {**self.context, 'game': obj}
         return QuestionWithAnswerSerializer(questions, many=True, context=context).data
     
+    def _player_score(self, obj):
+        """The viewing player's score row for this game (cached per game)."""
+        cache = self.context.setdefault('_detail_player_scores', {})
+        if obj.pk in cache:
+            return cache[obj.pk]
+        player_score = None
+        detail_player = self.context.get('detail_player')
+        request = self.context.get('request')
+        if detail_player is not None:
+            player_score = PlayerScore.objects.filter(player=detail_player, game=obj).first()
+        elif request and request.user and request.user.is_authenticated:
+            player_score = PlayerScore.objects.filter(
+                player__user=request.user,
+                game=obj
+            ).first()
+        cache[obj.pk] = player_score
+        return player_score
+
     def get_total_score(self, obj):
         """Get total score for the user"""
-        detail_player = self.context.get('detail_player')
-        if detail_player is not None:
-            ps = PlayerScore.objects.filter(player=detail_player, game=obj).first()
-            return ps.score if ps else 0
+        player_score = self._player_score(obj)
+        return player_score.score if player_score else 0
 
-        request = self.context.get('request')
-        if not request or not request.user or not request.user.is_authenticated:
-            return 0
-
-        user_players = Player.objects.filter(user=request.user)
-        player_score = PlayerScore.objects.filter(
-            player__in=user_players,
-            game=obj
-        ).first()
-
-        if player_score:
-            return player_score.score
-        return 0
+    def get_hiscore_rank(self, obj):
+        """Hiscore position for this game's options; None for taxonomy-filtered and other unranked games."""
+        if not obj.ended:
+            return None
+        player_score = self._player_score(obj)
+        return player_score.hiscore_rank if player_score else None
     
     class Meta:
         model = Game
@@ -1610,7 +1620,8 @@ class GameDetailWithAnswersSerializer(serializers.ModelSerializer):
             'include_escapes',
             'difficult_species',
             'questions',
-            'total_score'
+            'total_score',
+            'hiscore_rank',
         )
 
 

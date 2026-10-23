@@ -139,6 +139,7 @@ export function DeepLinkHandler({ children }: { children: React.ReactNode }) {
           (navigation as any).navigate('Lobby', {
             rematch_game_token: undefined,
             rematchJoin: undefined,
+            playMode: undefined,
           });
         }
       }
