@@ -19,6 +19,23 @@ The React app uses **getSocialLoginBaseUrl()** so that in local dev the OAuth st
 
 For Google OAuth to work in production you need: correct **nginx** proxy headers, **Django** settings (see `jizz/settings/production.py`), and **Google Cloud Console** redirect URIs.
 
+### What birdr.pro runs
+
+The blocks below describe one way to split traffic. The live server (`/etc/nginx/sites-available/birdr`) does it with a
+single regex location that sends these prefixes to Django; everything else falls through to the SPA (`try_files $uri /index.html`):
+
+```nginx
+location ~ ^/(nl|es|pt-BR|jp|it|de|fr|site|g|s|admin|flocks|data|open|updates|staff|api|auth|token|country)(/|$) {
+    proxy_pass http://jizz;
+    # … Host / X-Forwarded-* headers and no-cache headers
+}
+location ~ ^/$ { proxy_pass http://jizz; }   # marketing home
+```
+
+- `s` is the shared game link `/s/<token>/` (added October 2026). `/site/` is not affected: the regex needs `/` or the end right after `s`.
+- `/join/` is **not** proxied there (the block is commented out), so `/join/…` links are served by the SPA, including `/join/s/<token>/web`.
+- To add a Django prefix: edit that regex, `sudo nginx -t`, then `sudo systemctl reload nginx`. Keep the file and the running config in sync; a reload (e.g. after a certificate renewal) applies whatever is on disk.
+
 ## 0. Route API traffic to Django (fix 405 on POST /token/)
 
 If the frontend and API use the same host (e.g. `birdr.pro`), nginx must send **API paths to Django** and only serve the SPA for other paths. Otherwise POST requests (e.g. `POST /token/` for login) hit the static file server and return **405 Not Allowed**.
@@ -111,7 +128,9 @@ location ^~ /g/ {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
 }
-# Shared game links (/s/<token>/): previews for chat apps, then redirect to /join/s/<token>/web/
+# Shared game links (/s/<token>/): previews for chat apps, then redirect to /join/s/<token>/web/.
+# birdr.pro does this with the `s` in its Django regex (see "What birdr.pro runs" above).
+# The SPA also has a /s/:token route, so links still open the game (without previews) if /s/ falls through.
 location ^~ /s/ {
     proxy_pass http://jizz;
     proxy_set_header Host $host;

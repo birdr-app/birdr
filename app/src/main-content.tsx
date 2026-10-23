@@ -163,6 +163,8 @@ export const MainContent = () => {
             <Route path="/join/flock/:token" element={<FlockInviteLandingPage />} />
             <Route path="/join/s/:token/web" element={<SharedGamePage />} />
             <Route path="/join/s/:token" element={<SharedGamePage />} />
+            {/* Share link; nginx normally sends /s/ to Django (previews), this is the fallback. */}
+            <Route path="/s/:token" element={<SharedGamePage />} />
             <Route path="/journey" element={<BirdrJourneyListPage />} />
             <Route path="/journey/leaderboard" element={<CountryChallengeLeaderboardPage />} />
             <Route path="/journey/intro" element={<BirdrJourneyIntroPage />} />
