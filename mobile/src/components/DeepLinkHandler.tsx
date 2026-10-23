@@ -6,6 +6,7 @@ import { useGame } from '../context/GameContext';
 import { API_BASE_URL } from '../api/config';
 import { parseFlockJoinUrl } from '../api/flocks';
 import { parseGameShareUrl } from '../api/gameShare';
+import { parseSharedGameUrl } from '../api/sharedGames';
 import { routeForOpenUrl } from '../lib/deepLinkRoute';
 
 /**
@@ -16,6 +17,7 @@ import { routeForOpenUrl } from '../lib/deepLinkRoute';
  * - Flock invite: birdr://join/flock/{token} or https://birdr.pro/join/flock/{token}/
  * - Update: birdr://updates/{id} or https://birdr.pro/open/update/{id}/
  * - Game result share: https://birdr.pro/g/{token} or birdr://g/{token}
+ * - Shared game: https://birdr.pro/join/s/{token}/ or birdr://join/s/{token}
  * - Survival: https://birdr.pro/open/survival/ or birdr://survival
  * - League: https://birdr.pro/open/league/[{countryCode}/] or birdr://league[/{countryCode}]
  */
@@ -113,6 +115,13 @@ export function DeepLinkHandler({ children }: { children: React.ReactNode }) {
           // fall through
         }
         navigation.navigate('Home');
+        return;
+      }
+
+      const sharedGameToken = parseSharedGameUrl(url);
+      if (sharedGameToken) {
+        handled.current = url;
+        navigation.navigate('SharedGameDetail', { token: sharedGameToken });
         return;
       }
 

@@ -39,6 +39,22 @@ import {
 import { speciesGroupDisplayName, speciesGroupSearchHaystack } from '../lib/speciesGroupName';
 import type { PlayLevel } from '../game/playLevel';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import {
+  createSharedGame,
+  SHARED_GAME_DURATIONS,
+  SHARED_GAME_DURATION_LABEL_KEYS,
+  SharedGameError,
+  type SharedGameDuration,
+} from '../api/sharedGames';
+
+/** single/multi: live game in the lobby. share: everyone plays the same quiz by link, on their own time. */
+type PlayMode = 'single' | 'multi' | 'share';
+
+const PLAY_MODES: { value: PlayMode; labelKey: string; hintKey: string; infoKey: string }[] = [
+  { value: 'single', labelKey: 'single_player', hintKey: 'play_mode_single_hint', infoKey: 'play_modes_info_single' },
+  { value: 'multi', labelKey: 'multi_player', hintKey: 'play_mode_multi_hint', infoKey: 'play_modes_info_multi' },
+  { value: 'share', labelKey: 'shared_game_mode', hintKey: 'shared_game_hint', infoKey: 'play_modes_info_share' },
+];
 
 const PLAY_LEVELS: { value: PlayLevel; labelKey: string; subKey: string }[] = [
   { value: 'beginner', labelKey: 'beginner', subKey: 'play_level_beginner_sub' },
@@ -90,6 +106,7 @@ export function StartScreen() {
     trySetInitialPlayerName,
     markSpeciesLanguageUserChosen,
     setGame,
+    gameSettingsBody,
   } = useGame();
   const { joinGame } = useGameWebSocket();
 
@@ -108,7 +125,10 @@ export function StartScreen() {
   const [familySearch, setFamilySearch] = useState('');
   const [groupSearch, setGroupSearch] = useState('');
   const [saveToProfile, setSaveToProfile] = useState(false);
-  const [playMode, setPlayMode] = useState<'single' | 'multi'>('single');
+  const [playMode, setPlayMode] = useState<PlayMode>('single');
+  const [duration, setDuration] = useState<SharedGameDuration>('72');
+  const [modesInfoVisible, setModesInfoVisible] = useState(false);
+  const [creatingShared, setCreatingShared] = useState(false);
 
   useEffect(() => {
     if (!country?.code) {
@@ -261,7 +281,32 @@ export function StartScreen() {
     ])
   );
 
+  const handleCreateShared = async () => {
+    if (!country || creatingShared) return;
+    setCreatingShared(true);
+    try {
+      if (isAuthenticated && saveToProfile && differsFromProfile) {
+        await updateProfile({ country_code: country.code, language: language || undefined });
+        await refreshProfile();
+      }
+      const shared = await createSharedGame(gameSettingsBody(), duration);
+      (navigation as any).navigate('SharedGameDetail', { token: shared.token, justCreated: true });
+    } catch (e: unknown) {
+      const code = e instanceof SharedGameError ? e.code : '';
+      Alert.alert(
+        t('error'),
+        code === 'insufficient_content' ? t('shared_game_not_enough_birds') : t('could_not_create_game'),
+      );
+    } finally {
+      setCreatingShared(false);
+    }
+  };
+
   const handleStart = async () => {
+    if (playMode === 'share') {
+      await handleCreateShared();
+      return;
+    }
     if (!playerName.trim()) {
       Alert.alert(t('missing_name'), t('whats_your_name'));
       return;
@@ -656,9 +701,9 @@ export function StartScreen() {
         </TouchableOpacity>
       </AccessibleSheetModal>
 
-      <Text style={styles.label}>{t('number_of_players')}</Text>
-      <View style={styles.row} accessibilityRole="radiogroup" accessibilityLabel={t('number_of_players')}>
-        {(['single', 'multi'] as const).map((mode) => {
+      <Text style={styles.label}>{t('play_mode_heading')}</Text>
+      <View style={styles.row} accessibilityRole="radiogroup" accessibilityLabel={t('play_mode_heading')}>
+        {PLAY_MODES.map(({ value: mode, labelKey }) => {
           const selected = playMode === mode;
           return (
             <TouchableOpacity
@@ -669,27 +714,106 @@ export function StartScreen() {
               accessibilityRole="radio"
               accessibilityState={{ selected }}
             >
-              <Text style={[styles.chipText, selected && styles.chipTextSelected]}>
-                {t(mode === 'single' ? 'single_player' : 'multi_player')}
-              </Text>
+              <Text style={[styles.chipText, selected && styles.chipTextSelected]}>{t(labelKey)}</Text>
             </TouchableOpacity>
           );
         })}
       </View>
-
+      <Text style={styles.playModeHint} testID="start.playModeHint">
+        {t(PLAY_MODES.find((m) => m.value === playMode)!.hintKey)}
+      </Text>
       <TouchableOpacity
-        style={[styles.startButton, (!country || !playerName.trim()) && styles.startButtonDisabled]}
-        onPress={handleStart}
-        disabled={loading || !country || !playerName.trim()}
-        testID="start.startGame"
-        accessibilityLabel={t('create_game')}
+        onPress={() => setModesInfoVisible(true)}
+        style={styles.moreInfoLink}
+        accessibilityRole="button"
+        testID="start.playModesInfo"
       >
-        {loading ? (
-          <ActivityIndicator color={colors.primary[50]} />
-        ) : (
-          <Text style={styles.startButtonText}>{t('create_game')}</Text>
-        )}
+        <Text style={styles.moreInfoLinkText}>ⓘ {t('play_modes_more_info')}</Text>
       </TouchableOpacity>
+      <AccessibleSheetModal
+        visible={modesInfoVisible}
+        onClose={() => setModesInfoVisible(false)}
+        backdropStyle={styles.modalBackdrop}
+        contentStyle={styles.modalContent}
+      >
+        <ScrollView>
+          <Text style={styles.modalTitle} accessibilityRole="header">{t('play_modes_info_title')}</Text>
+          {PLAY_MODES.map(({ value, labelKey, infoKey }) => (
+            <View key={value} style={styles.modeInfoBlock}>
+              <Text style={styles.modeInfoTitle}>{t(labelKey)}</Text>
+              <Text style={styles.modeInfoBody}>{t(infoKey)}</Text>
+            </View>
+          ))}
+        </ScrollView>
+        <TouchableOpacity
+          style={styles.modalClose}
+          onPress={() => setModesInfoVisible(false)}
+          accessibilityRole="button"
+          accessibilityLabel={t('close')}
+        >
+          <Text style={styles.modalCloseText} accessible={false}>{t('close')}</Text>
+        </TouchableOpacity>
+      </AccessibleSheetModal>
+
+      {playMode === 'share' ? (
+        isAuthenticated ? (
+          <>
+            <Text style={styles.label}>{t('shared_game_ends')}</Text>
+            <View style={styles.pickerRow} accessibilityRole="radiogroup" accessibilityLabel={t('shared_game_ends')}>
+              {SHARED_GAME_DURATIONS.map((value) => {
+                const selected = duration === value;
+                return (
+                  <TouchableOpacity
+                    key={value}
+                    style={[styles.chip, selected && styles.chipSelected]}
+                    onPress={() => setDuration(value)}
+                    testID={`start.sharedEnds.${value}`}
+                    accessibilityRole="radio"
+                    accessibilityState={{ selected }}
+                  >
+                    <Text style={[styles.chipText, selected && styles.chipTextSelected]}>
+                      {t(SHARED_GAME_DURATION_LABEL_KEYS[value])}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          </>
+        ) : (
+          <View style={styles.loginNeeded}>
+            <Text style={styles.loginNeededText}>{t('shared_game_login_needed')}</Text>
+            <TouchableOpacity
+              style={styles.loginNeededButton}
+              onPress={() => (navigation as any).navigate('Login')}
+              accessibilityRole="button"
+            >
+              <Text style={styles.loginNeededButtonText}>{t('login')}</Text>
+            </TouchableOpacity>
+          </View>
+        )
+      ) : null}
+
+      {(() => {
+        const sharing = playMode === 'share';
+        const busy = sharing ? creatingShared : loading;
+        const disabled = busy || !country || (sharing ? !isAuthenticated : !playerName.trim());
+        const label = t(sharing ? 'shared_game_create' : 'create_game');
+        return (
+          <TouchableOpacity
+            style={[styles.startButton, disabled && styles.startButtonDisabled]}
+            onPress={handleStart}
+            disabled={disabled}
+            testID="start.startGame"
+            accessibilityLabel={label}
+          >
+            {busy ? (
+              <ActivityIndicator color={colors.primary[50]} />
+            ) : (
+              <Text style={styles.startButtonText}>{label}</Text>
+            )}
+          </TouchableOpacity>
+        );
+      })()}
 
       <Text style={styles.label}>{t('questions')}</Text>
       <View style={styles.pickerRow}>
@@ -868,6 +992,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   playModeChip: { flex: 1, justifyContent: 'center', paddingVertical: 12 },
+  playModeHint: { fontSize: 14, color: colors.primary[700], marginTop: 8 },
+  moreInfoLink: { alignSelf: 'flex-start', paddingVertical: 6 },
+  moreInfoLinkText: { fontSize: 14, fontWeight: '600', color: colors.primary[700], textDecorationLine: 'underline' },
+  modeInfoBlock: { marginBottom: 14 },
+  modeInfoTitle: { fontSize: 16, fontWeight: '700', color: colors.primary[800], marginBottom: 4 },
+  modeInfoBody: { fontSize: 14, lineHeight: 20, color: colors.primary[700] },
+  loginNeeded: { marginTop: 12, gap: 8 },
+  loginNeededText: { fontSize: 14, fontWeight: '600', color: colors.primary[800] },
+  loginNeededButton: {
+    alignSelf: 'flex-start',
+    borderWidth: 1,
+    borderColor: colors.primary[500],
+    borderRadius: 8,
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+  },
+  loginNeededButtonText: { color: colors.primary[700], fontWeight: '600' },
   chipSelected: { backgroundColor: colors.primary[100], borderColor: colors.primary[800] },
   chipText: { fontSize: 14, color: colors.primary[800] },
   chipTextSelected: { color: colors.primary[800],fontWeight: '600',  },

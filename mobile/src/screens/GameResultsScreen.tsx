@@ -15,6 +15,7 @@ import { MegaConfetti } from '../components/MegaConfetti';
 import { BirdrMoodHero } from '../components/BirdrMoodHero';
 import { PracticeSpeciesLinks } from '../components/PracticeSpeciesLinks';
 import { canShareGameResult, gameShareUrl, buildGameResultShareMessage } from '../api/gameShare';
+import { SharedGameResultCard } from '../components/SharedGameResultCard';
 
 const PRACTICE_PASS_CORRECT = 18;
 
@@ -201,6 +202,8 @@ export function GameResultsScreen() {
   );
 
   const showTopScoreCelebration = currentPlayerResult?.ranking === 1;
+  // Shared games have their own leaderboard: no hiscores, result share or rematch here.
+  const sharedGameToken = game?.shared_game_token || null;
 
   const handleOpenHiscores = () => {
     if (!game) return;
@@ -384,7 +387,7 @@ export function GameResultsScreen() {
                 {p.is_host ? <Text style={styles.crown}>👑</Text> : null}
                 {isTopScore ? <Text style={styles.trophy}>🏆</Text> : null}
               </View>
-              {isCurrentPlayer && game ? (
+              {isCurrentPlayer && game && !sharedGameToken ? (
                 <TouchableOpacity
                   onPress={handleOpenHiscores}
                   activeOpacity={0.75}
@@ -403,7 +406,8 @@ export function GameResultsScreen() {
           })
         )}
       </View>
-      {canShareGameResult(game) ? (
+      {sharedGameToken ? <SharedGameResultCard token={sharedGameToken} playerToken={player?.token} /> : null}
+      {!sharedGameToken && canShareGameResult(game) ? (
         <TouchableOpacity
           style={[styles.outlineButton, styles.shareButton]}
           onPress={() => void handleShareResult()}
@@ -470,7 +474,7 @@ export function GameResultsScreen() {
             <Text style={styles.primaryButtonText}>{t('join_rematch')}</Text>
           </TouchableOpacity>
         )}
-        {!isHost && rematchInvitation == null && dailyChallengeId == null && (
+        {!isHost && rematchInvitation == null && dailyChallengeId == null && !sharedGameToken && (
           <View
             style={[styles.primaryButton, styles.buttonDisabled]}
             accessibilityRole="button"
@@ -482,7 +486,7 @@ export function GameResultsScreen() {
             <Text style={styles.waitForHostSubtext}>{t('waiting_for_host')}</Text>
           </View>
         )}
-        {isHost && (
+        {isHost && !sharedGameToken && (
           <TouchableOpacity
             style={[styles.primaryButton, isRematchLoading && styles.buttonDisabled]}
             onPress={handleRematch}
