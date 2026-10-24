@@ -76,7 +76,7 @@ from jizz.models import (
     DailyChallengeRound,
     DeviceToken,
 )
-from media.models import Media, MediaReview, FlagMedia
+from media.models import IMAGE_SOURCES, Media, MediaReview, FlagMedia
 from jizz.serializers import (
     AnswerSerializer,
     CountrySerializer,
@@ -424,6 +424,20 @@ class MediaPagination(PageNumberPagination):
     max_page_size = 100
 
 
+def _review_source_param(request):
+    """Known media source from ?source=, or '' (all sources) when missing or unknown."""
+    source = (request.query_params.get('source') or '').strip()
+    return source if source in dict(IMAGE_SOURCES) else ''
+
+
+class MediaSourceListView(APIView):
+    """Media source choices for the media review source filter."""
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        return Response([{'value': value, 'label': label} for value, label in IMAGE_SOURCES])
+
+
 class SpeciesReviewPagination(PageNumberPagination):
     """Paginate by species (default 3 per page) for media-review."""
     page_size = 3
@@ -533,9 +547,10 @@ class SpeciesReviewStatsView(APIView):
 
         country_code = request.query_params.get('country')
         media_type = request.query_params.get('type', 'image')
+        source = _review_source_param(request)
         language = (request.query_params.get('language') or '').strip()
 
-        stats = get_species_media_review_stats(media_type)
+        stats = get_species_media_review_stats(media_type, source=source)
         if country_code:
             allowed = set(
                 CountrySpecies.objects.filter(
@@ -574,7 +589,7 @@ class SpeciesReviewStatsView(APIView):
 
 class MediaReviewSpeciesListView(APIView):
     """List species for media review with all media embedded. Paginated by species (default 3 per page).
-    Filter: country, type, level (fast=species with <10 approved), optional species id.
+    Filter: country, type, source, level (fast=species with <10 approved), optional species id.
     """
     permission_classes = [AllowAny]
     pagination_class = SpeciesReviewPagination
@@ -589,9 +604,10 @@ class MediaReviewSpeciesListView(APIView):
         media_type = request.query_params.get('type', 'image')
         country_code = request.query_params.get('country')
         species_id_param = request.query_params.get('species')
+        source = _review_source_param(request)
         language = (request.query_params.get('language') or '').strip()
 
-        stats = get_species_media_review_stats(media_type)
+        stats = get_species_media_review_stats(media_type, source=source)
         if country_code:
             country_species_ids = set(
                 CountrySpecies.objects.exclude(
@@ -631,9 +647,11 @@ class MediaReviewSpeciesListView(APIView):
         species_by_id = {species.id: species for species in species_qs}
         page_species = [species_by_id[species_id] for species_id in page_ids if species_id in species_by_id]
 
+        media_qs = Media.objects.filter(species_id__in=page_ids, type=media_type, hide=False)
+        if source:
+            media_qs = media_qs.filter(source=source)
         media_qs = (
-            Media.objects
-            .filter(species_id__in=page_ids, type=media_type, hide=False)
+            media_qs
             .prefetch_related('reviews')
             .select_related('first_assertion_prediction')
             .order_by('species_id', '-created')

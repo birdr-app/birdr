@@ -8,7 +8,7 @@ from django.test import TestCase
 from rest_framework.test import APIClient
 
 from jizz.models import Player, Species
-from media.models import Media, MediaReview
+from media.models import IMAGE_SOURCES, Media, MediaReview
 from media.review_stats import (
     get_species_media_review_stats,
     invalidate_species_media_review_stats,
@@ -253,3 +253,83 @@ class MediaReviewSpeciesApiTests(TestCase):
         self.assertEqual(row['total_media'], 1)
         self.assertEqual(row['rejected'], 1)
         self.assertEqual(row['unreviewed'], 1)
+
+
+class MediaReviewSourceFilterTests(TestCase):
+    def setUp(self):
+        cache.clear()
+        self.client = APIClient()
+        self.player = Player.objects.create(name='P', language='en')
+        self.mixed = Species.objects.create(name='Mixed', name_latin='Mixed', code='SRC01')
+        self.wiki_only = Species.objects.create(name='Wiki', name_latin='Wiki', code='SRC02')
+        self.mixed_wiki = Media.objects.create(
+            species=self.mixed, type='image', url='https://example.com/mw.jpg', source='wikimedia',
+        )
+        self.mixed_inat = Media.objects.create(
+            species=self.mixed, type='image', url='https://example.com/mi.jpg', source='inaturalist',
+        )
+        self.mixed_inat_rejected = Media.objects.create(
+            species=self.mixed, type='image', url='https://example.com/mr.jpg', source='inaturalist',
+        )
+        MediaReview.objects.create(
+            media=self.mixed_inat_rejected, player=self.player, review_type=MediaReview.REJECTED,
+        )
+        self.wiki_only_media = Media.objects.create(
+            species=self.wiki_only, type='image', url='https://example.com/w.jpg', source='wikimedia',
+        )
+        invalidate_species_media_review_stats()
+
+    def _groups(self, params):
+        response = self.client.get('/api/media-review-species/', {'type': 'image', 'level': 'full', **params})
+        self.assertEqual(response.status_code, 200)
+        return {group['id']: group for group in response.data['results']}
+
+    def test_stats_filtered_by_source(self):
+        stats = get_species_media_review_stats('image', source='inaturalist')
+        self.assertNotIn(self.wiki_only.id, stats)
+        row = stats[self.mixed.id]
+        self.assertEqual(row['total_media'], 1)
+        self.assertEqual(row['rejected_media'], 1)
+
+    def test_source_stats_cached_separately(self):
+        all_sources = get_species_media_review_stats('image')
+        wikimedia = get_species_media_review_stats('image', source='wikimedia')
+        self.assertEqual(all_sources[self.mixed.id]['total_media'], 2)
+        self.assertEqual(wikimedia[self.mixed.id]['total_media'], 1)
+        self.assertEqual(get_species_media_review_stats('image', source='wikimedia'), wikimedia)
+
+    def test_review_species_only_returns_media_from_source(self):
+        groups = self._groups({'source': 'inaturalist'})
+        self.assertEqual(list(groups), [self.mixed.id])
+        self.assertEqual([m['id'] for m in groups[self.mixed.id]['media']], [self.mixed_inat.id])
+        self.assertEqual(groups[self.mixed.id]['total_media'], 1)
+        self.assertEqual(groups[self.mixed.id]['rejected'], 1)
+
+    def test_review_species_without_source_returns_all_sources(self):
+        groups = self._groups({})
+        self.assertEqual(
+            {m['id'] for m in groups[self.mixed.id]['media']},
+            {self.mixed_wiki.id, self.mixed_inat.id},
+        )
+        self.assertIn(self.wiki_only.id, groups)
+
+    def test_unknown_source_is_ignored(self):
+        groups = self._groups({'source': 'nonsense'})
+        self.assertIn(self.mixed.id, groups)
+        self.assertIn(self.wiki_only.id, groups)
+
+    def test_species_review_stats_filtered_by_source(self):
+        response = self.client.get('/api/species-review-stats/', {'type': 'image', 'source': 'wikimedia'})
+        self.assertEqual(response.status_code, 200)
+        rows = {row['id']: row for row in response.data['species']}
+        self.assertEqual(set(rows), {self.mixed.id, self.wiki_only.id})
+        self.assertEqual(rows[self.mixed.id]['total_media'], 1)
+        self.assertEqual(rows[self.mixed.id]['rejected'], 0)
+
+    def test_media_sources_lists_choices(self):
+        response = self.client.get('/api/media-sources/')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(
+            response.data,
+            [{'value': value, 'label': label} for value, label in IMAGE_SOURCES],
+        )
