@@ -81,7 +81,7 @@
         How photo review is going: who is reviewing, how much of each country’s bird photos
         have been checked, and a few other cuts of the same data.
         Linked accounts count as one reviewer. People with the same name are grouped.
-        Not sure is listed separately from rejected.
+        Not sure and mystery are listed separately from rejected.
     </p>
 
     <div class="stat-grid">
@@ -122,6 +122,7 @@
                 <th class="num">Approved</th>
                 <th class="num">Rejected</th>
                 <th class="num">Not sure</th>
+                <th class="num">Mystery</th>
             </tr>
         </thead>
         <tbody>
@@ -133,10 +134,11 @@
                     <td class="num count-approved">{{ row.approved }}</td>
                     <td class="num count-rejected">{{ row.rejected }}</td>
                     <td class="num">{{ row.not_sure }}</td>
+                    <td class="num">{{ row.mystery }}</td>
                 </tr>
             {% empty %}
                 <tr>
-                    <td colspan="6">No media reviews yet.</td>
+                    <td colspan="7">No media reviews yet.</td>
                 </tr>
             {% endfor %}
         </tbody>

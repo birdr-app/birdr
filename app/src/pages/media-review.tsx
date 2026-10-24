@@ -21,7 +21,7 @@ import { Page } from '../shared/components/layout';
 import { FormattedMessage, useIntl } from 'react-intl';
 import AppContext from '../core/app-context';
 import type { Species } from '../core/app-context';
-import { MediaServiceImpl, MediaItem, SpeciesWithMedia, SpeciesReviewStatsResponse, type MediaSourceOption, type ReviewLevel } from '../api/services/media.service';
+import { MediaServiceImpl, MediaItem, SpeciesWithMedia, SpeciesReviewStatsResponse, type MediaSourceOption, type ReviewLevel, type ReviewType } from '../api/services/media.service';
 import SpeciesCombobox from '../components/species-combobox';
 import { ApiClient, apiClient } from '../api/client';
 import { authService } from '../api/services/auth.service';
@@ -32,7 +32,7 @@ import CountryCombobox from '../components/country-combobox';
 import { useParams, useSearchParams } from 'react-router-dom';
 import { fetchSpeciesDetail } from '../api/fetch-species-detail';
 import { FaArrowAltCircleRight, FaChevronDown, FaChevronRight, FaTrophy } from "react-icons/fa";
-import { FaQuestion } from "react-icons/fa";
+import { FaQuestion, FaUserSecret } from "react-icons/fa";
 import Confetti from "react-confetti";
 import { keyframes } from "@emotion/react";
 
@@ -50,9 +50,9 @@ const mediaService = new MediaServiceImpl(apiClient);
 /** Select value for "no source filter" (Select items can't have an empty value). */
 const ALL_SOURCES = 'all';
 
-/** not_sure counts as rejected for display and overlays. */
+/** not_sure and mystery count as rejected for display and overlays. */
 function effectiveReviewType(
-  raw: 'approved' | 'rejected' | 'not_sure' | null | undefined
+  raw: ReviewType | null | undefined
 ): 'approved' | 'rejected' | undefined {
   if (raw == null) return undefined;
   if (raw === 'approved') return 'approved';
@@ -60,18 +60,19 @@ function effectiveReviewType(
 }
 
 function deltaSpeciesReviewCounts(
-  prevType: 'approved' | 'rejected' | 'not_sure' | null,
-  nextType: 'approved' | 'rejected' | 'not_sure',
+  prevType: ReviewType | null,
+  nextType: ReviewType,
   cur: { approved: number; rejected: number; not_sure: number; unreviewed: number },
   firstReview: boolean
 ) {
   let { approved, rejected, not_sure, unreviewed } = cur;
   if (firstReview) unreviewed = Math.max(0, unreviewed - 1);
+  // mystery hides the media like a rejection, so the backend counts it as rejected.
   if (prevType === 'approved') approved -= 1;
-  else if (prevType === 'rejected') rejected -= 1;
+  else if (prevType === 'rejected' || prevType === 'mystery') rejected -= 1;
   else if (prevType === 'not_sure') not_sure -= 1;
   if (nextType === 'approved') approved += 1;
-  else if (nextType === 'rejected') rejected += 1;
+  else if (nextType === 'rejected' || nextType === 'mystery') rejected += 1;
   else if (nextType === 'not_sure') not_sure += 1;
   return { approved, rejected, not_sure, unreviewed };
 }
@@ -98,10 +99,10 @@ export const MediaReviewPage = () => {
   const [modalReviewSubmitting, setModalReviewSubmitting] = useState(false);
   const [machineOverrideNotice, setMachineOverrideNotice] = useState(false);
   const modalQueue = useMemo(() => speciesWithMedia.flatMap((g) => g.media), [speciesWithMedia]);
-  const handleReviewRef = useRef<(mediaId: number, reviewType: 'approved' | 'rejected' | 'not_sure') => Promise<void>>(
+  const handleReviewRef = useRef<(mediaId: number, reviewType: ReviewType) => Promise<void>>(
     async () => {}
   );
-  const [reviewedItems, setReviewedItems] = useState<Map<number, 'approved' | 'rejected' | 'not_sure'>>(new Map());
+  const [reviewedItems, setReviewedItems] = useState<Map<number, ReviewType>>(new Map());
   const [selectedCountry, setSelectedCountry] = useState<string>(countryCode ?? '');
   const [speciesStats, setSpeciesStats] = useState<SpeciesReviewStatsResponse | null>(null);
   const [speciesStatsLoading, setSpeciesStatsLoading] = useState(true);
@@ -387,7 +388,7 @@ export const MediaReviewPage = () => {
     setMachineOverrideNotice(false);
   }, [selectedMedia?.id]);
 
-  const handleReview = async (mediaId: number, reviewType: 'approved' | 'rejected' | 'not_sure') => {
+  const handleReview = async (mediaId: number, reviewType: ReviewType) => {
     const canReview = !!player || !!authService.getAccessToken();
     if (!canReview) {
       toaster.create({
@@ -406,15 +407,11 @@ export const MediaReviewPage = () => {
     const speciesId = item.species_id;
     const speciesName = item.species_name;
 
-    const previous = (reviewedItems.get(mediaId) ?? item.review_type ?? null) as
-      | 'approved'
-      | 'rejected'
-      | 'not_sure'
-      | null;
+    const previous = (reviewedItems.get(mediaId) ?? item.review_type ?? null) as ReviewType | null;
     const isFirstReview = previous == null;
     const prevType = previous;
     const useFirstAssertion =
-      item.type === 'image' && reviewType !== 'not_sure' && (reviewType === 'approved' || reviewType === 'rejected');
+      item.type === 'image' && (reviewType === 'approved' || reviewType === 'rejected');
 
     const reviewingFromModal = isDialogOpen && selectedMedia?.id === mediaId;
     if (reviewingFromModal) setModalReviewSubmitting(true);
@@ -458,7 +455,7 @@ export const MediaReviewPage = () => {
     try {
       const playerToken = authService.getAccessToken() ? undefined : player?.token;
       if (useFirstAssertion) {
-        await mediaService.reviewMediaFirstAssertion(mediaId, playerToken, reviewType);
+        await mediaService.reviewMediaFirstAssertion(mediaId, playerToken, reviewType as 'approved' | 'rejected');
       } else {
         await mediaService.reviewMedia(mediaId, playerToken, reviewType);
       }
@@ -488,6 +485,7 @@ export const MediaReviewPage = () => {
             : intl.formatMessage({ id: 'media approved', defaultMessage: 'Media approved.' }),
         rejected: intl.formatMessage({ id: 'media rejected', defaultMessage: 'Media rejected.' }),
         not_sure: intl.formatMessage({ id: 'media not sure', defaultMessage: 'Marked as not sure.' }),
+        mystery: intl.formatMessage({ id: 'media mystery', defaultMessage: 'Marked as mystery.' }),
       };
       toaster.create({
         title: messages[reviewType],
@@ -644,6 +642,9 @@ export const MediaReviewPage = () => {
       } else if (e.key === 'r' || e.key === 'R') {
         e.preventDefault();
         void handleReviewRef.current(selectedMedia.id, 'rejected');
+      } else if (e.key === 'm' || e.key === 'M') {
+        e.preventDefault();
+        void handleReviewRef.current(selectedMedia.id, 'mystery');
       }
     };
     window.addEventListener('keydown', onKeyDown);
@@ -843,7 +844,7 @@ export const MediaReviewPage = () => {
                       {selectedMediaType === 'image' ? (
                         <FormattedMessage
                           id={'media review instructions 4 image'}
-                          defaultMessage={'Click {ok} to approve the image or {bad} to reject it (first assertion). Open a picture to use the large preview and keyboard shortcuts A / R.'}
+                          defaultMessage={'Click {ok} to approve the image or {bad} to reject it (first assertion). Open a picture to use the large preview and keyboard shortcuts A / R / M.'}
                           values={{
                             ok: (
                               <Icon as={BsCheckCircle} boxSize={5} color="green.600" display="inline" verticalAlign="middle" mx={0.5} />
@@ -1165,6 +1166,20 @@ export const MediaReviewPage = () => {
                           >
                             <Icon as={BsXCircle} boxSize={5} />
                           </Button>
+                          <Button
+                            type="button"
+                            size="sm"
+                            colorPalette="purple"
+                            onClick={() => handleReview(item.id, 'mystery')}
+                            minW="40px"
+                            h="40px"
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                            title={intl.formatMessage({ id: 'mystery', defaultMessage: 'Mystery' })}
+                          >
+                            <Icon as={FaUserSecret} boxSize={5} />
+                          </Button>
                         </Flex>
                       )}
                     </Box>
@@ -1219,6 +1234,20 @@ export const MediaReviewPage = () => {
                           justifyContent="center"
                         >
                           <Icon as={BsXCircle} boxSize={5} />
+                        </Button>
+                        <Button
+                          type="button"
+                          size="sm"
+                          colorPalette="purple"
+                          onClick={() => handleReview(item.id, 'mystery')}
+                          minW="40px"
+                          h="40px"
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center"
+                          title={intl.formatMessage({ id: 'mystery', defaultMessage: 'Mystery' })}
+                        >
+                          <Icon as={FaUserSecret} boxSize={5} />
                         </Button>
                       </Flex>
                     )}
@@ -1397,7 +1426,7 @@ export const MediaReviewPage = () => {
                       <Text fontSize="xs" color="gray.500" textAlign="center" w="100%" maxW="720px">
                         <FormattedMessage
                           id={'first assertion shortcuts'}
-                          defaultMessage={'Keyboard: A approve · R reject · Esc close · Arrow keys previous/next'}
+                          defaultMessage={'Keyboard: A approve · R reject · M mystery · Esc close · Arrow keys previous/next'}
                         />
                       </Text>
                     )}
@@ -1417,6 +1446,14 @@ export const MediaReviewPage = () => {
                         disabled={modalReviewSubmitting}
                       >
                         <FormattedMessage id={'reject'} defaultMessage={'Reject'} />
+                      </Button>
+                      <Button
+                        type="button"
+                        onClick={() => void handleReview(selectedMedia.id, 'mystery')}
+                        colorPalette="purple"
+                        disabled={modalReviewSubmitting}
+                      >
+                        <FormattedMessage id={'mystery'} defaultMessage={'Mystery'} />
                       </Button>
                       {selectedMedia.type !== 'image' && (
                         <Button
