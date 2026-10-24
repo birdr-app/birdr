@@ -34,6 +34,10 @@ location ~ ^/$ { proxy_pass http://jizz; }   # marketing home
 
 - `s` is the shared game link `/s/<token>/` (added October 2026). `/site/` is not affected: the regex needs `/` or the end right after `s`.
 - `/join/` is **not** proxied there (the block is commented out), so `/join/…` links are served by the SPA, including `/join/s/<token>/web`.
+- `http://birdr.pro` and `www` redirect to `https://birdr.pro` (a port-80 block at the end of the birdr site file).
+- `sites-available/default` is a catch-all for bare-IP and unknown Host requests (scanners): `return 444` on port 80,
+  `ssl_reject_handshake on` on 443 (with `http2`, like the other 443 listeners). Without it nginx used the birdr block as the
+  implicit 443 default, so those requests reached Django and raised `DisallowedHost` (October 2026).
 - To add a Django prefix: edit that regex, `sudo nginx -t`, then `sudo systemctl reload nginx`. Keep the file and the running config in sync; a reload (e.g. after a certificate renewal) applies whatever is on disk.
 
 ## 0. Route API traffic to Django (fix 405 on POST /token/)
