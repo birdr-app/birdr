@@ -121,8 +121,11 @@ def games_per_user_rows() -> list[dict]:
 
 def media_reviews_per_user_rows() -> list[dict]:
     """Media reviews per user (user FK or linked player) or anonymous player."""
+    from media.non_photo_sweep import exclude_auto_reviewer
+
+    reviews = exclude_auto_reviewer(MediaReview.objects.all())
     auth_rows = (
-        MediaReview.objects.filter(Q(user_id__isnull=False) | Q(player__user_id__isnull=False))
+        reviews.filter(Q(user_id__isnull=False) | Q(player__user_id__isnull=False))
         .annotate(uid=Coalesce('user_id', 'player__user_id'))
         .values('uid')
         .annotate(
@@ -133,7 +136,7 @@ def media_reviews_per_user_rows() -> list[dict]:
         )
     )
     anon_rows = (
-        MediaReview.objects.filter(user_id__isnull=True, player__user_id__isnull=True, player_id__isnull=False)
+        reviews.filter(user_id__isnull=True, player__user_id__isnull=True, player_id__isnull=False)
         .values('player_id')
         .annotate(
             total=Count('id'),
