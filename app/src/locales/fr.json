@@ -380,6 +380,8 @@
   "help_page": "Aide",
   "species review stats line": "{total} médias · {unreviewed} non relus · {approved} approuvés · {rejected} rejetés · {notSure} pas sûr",
   "login to review": "Connecte-toi pour relire les médias.",
+  "media source all": "Toutes les sources",
+  "media source placeholder": "Source...",
   "media type images": "Images",
   "media type videos": "Vidéos",
   "media type audio": "Audio",

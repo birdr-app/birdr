@@ -380,6 +380,8 @@
   "help_page": "ヘルプ",
   "species review stats line": "{total} メディア · 未レビュー {unreviewed} · 承認 {approved} · 却下 {rejected} · わからない {notSure}",
   "login to review": "メディアをレビューするにはログインしてください。",
+  "media source all": "すべてのソース",
+  "media source placeholder": "ソース...",
   "media type images": "画像",
   "media type videos": "動画",
   "media type audio": "音声",

@@ -5,6 +5,12 @@ export type ReviewLevel = 'fast' | 'full' | 'thorough';
 /** not_sure is being phased out; mystery counts as rejected in game play for now. */
 export type ReviewType = 'approved' | 'rejected' | 'not_sure' | 'mystery';
 
+/** A media source choice (from /api/media-sources/). */
+export interface MediaSourceOption {
+  value: string;
+  label: string;
+}
+
 export interface MediaItemReviewStatus {
   approved: number;
   rejected: number;
@@ -91,12 +97,13 @@ export interface SpeciesReviewStatsResponse {
 export interface MediaService {
   getMedia(type?: string, page?: number, countryCode?: string, language?: string, speciesId?: number, level?: ReviewLevel): Promise<PaginatedMediaResponse>;
   /** Species paginated by 3, each with all media embedded. Same filters as getMedia. */
-  getMediaReviewSpecies(type?: string, page?: number, countryCode?: string, language?: string, speciesId?: number, level?: ReviewLevel): Promise<PaginatedSpeciesWithMediaResponse>;
+  getMediaReviewSpecies(type?: string, page?: number, countryCode?: string, language?: string, speciesId?: number, level?: ReviewLevel, source?: string): Promise<PaginatedSpeciesWithMediaResponse>;
   /** Pass playerToken when using a game player; omit when authenticated as a user (JWT). */
   reviewMedia(mediaId: number, playerToken: string | undefined, reviewType: ReviewType, description?: string): Promise<unknown>;
   /** Image-only first assertion (approved/rejected). Same auth as reviewMedia. */
   reviewMediaFirstAssertion(mediaId: number, playerToken: string | undefined, reviewType: 'approved' | 'rejected', description?: string): Promise<unknown>;
-  getSpeciesReviewStats(countryCode?: string, mediaType?: string, language?: string): Promise<SpeciesReviewStatsResponse>;
+  getSpeciesReviewStats(countryCode?: string, mediaType?: string, language?: string, source?: string): Promise<SpeciesReviewStatsResponse>;
+  getMediaSources(): Promise<MediaSourceOption[]>;
 }
 
 export class MediaServiceImpl implements MediaService {
@@ -117,9 +124,10 @@ export class MediaServiceImpl implements MediaService {
     return response;
   }
 
-  async getMediaReviewSpecies(type: string = 'image', page: number = 1, countryCode?: string, language?: string, speciesId?: number, level: ReviewLevel = 'fast'): Promise<PaginatedSpeciesWithMediaResponse> {
+  async getMediaReviewSpecies(type: string = 'image', page: number = 1, countryCode?: string, language?: string, speciesId?: number, level: ReviewLevel = 'fast', source?: string): Promise<PaginatedSpeciesWithMediaResponse> {
     const params = new URLSearchParams({ type, page: String(page), level });
     if (countryCode) params.set('country', countryCode);
+    if (source) params.set('source', source);
     if (language) params.set('language', language);
     if (speciesId != null) params.set('species', String(speciesId));
     return this.client.get<PaginatedSpeciesWithMediaResponse>(`/api/media-review-species/?${params.toString()}`);
@@ -154,11 +162,16 @@ export class MediaServiceImpl implements MediaService {
     return this.client.post('/api/review-media/first-assertion/', body);
   }
 
-  async getSpeciesReviewStats(countryCode?: string, mediaType: string = 'image', language?: string): Promise<SpeciesReviewStatsResponse> {
+  async getSpeciesReviewStats(countryCode?: string, mediaType: string = 'image', language?: string, source?: string): Promise<SpeciesReviewStatsResponse> {
     const params = new URLSearchParams({ type: mediaType });
     if (countryCode) params.set('country', countryCode);
     if (language) params.set('language', language);
+    if (source) params.set('source', source);
     return this.client.get<SpeciesReviewStatsResponse>(`/api/species-review-stats/?${params.toString()}`);
+  }
+
+  async getMediaSources(): Promise<MediaSourceOption[]> {
+    return this.client.get<MediaSourceOption[]>('/api/media-sources/');
   }
 }
 

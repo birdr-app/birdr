@@ -21,7 +21,7 @@ import { Page } from '../shared/components/layout';
 import { FormattedMessage, useIntl } from 'react-intl';
 import AppContext from '../core/app-context';
 import type { Species } from '../core/app-context';
-import { MediaServiceImpl, MediaItem, SpeciesWithMedia, SpeciesReviewStatsResponse, type ReviewLevel, type ReviewType } from '../api/services/media.service';
+import { MediaServiceImpl, MediaItem, SpeciesWithMedia, SpeciesReviewStatsResponse, type MediaSourceOption, type ReviewLevel, type ReviewType } from '../api/services/media.service';
 import SpeciesCombobox from '../components/species-combobox';
 import { ApiClient, apiClient } from '../api/client';
 import { authService } from '../api/services/auth.service';
@@ -47,6 +47,8 @@ const {
 } = Dialog;
 
 const mediaService = new MediaServiceImpl(apiClient);
+/** Select value for "no source filter" (Select items can't have an empty value). */
+const ALL_SOURCES = 'all';
 
 /** not_sure and mystery count as rejected for display and overlays. */
 function effectiveReviewType(
@@ -105,6 +107,8 @@ export const MediaReviewPage = () => {
   const [speciesStats, setSpeciesStats] = useState<SpeciesReviewStatsResponse | null>(null);
   const [speciesStatsLoading, setSpeciesStatsLoading] = useState(true);
   const [selectedMediaType, setSelectedMediaType] = useState<'image' | 'video' | 'audio'>('image');
+  const [mediaSources, setMediaSources] = useState<MediaSourceOption[]>([]);
+  const [selectedSource, setSelectedSource] = useState<string>('');
   const [showConfetti, setShowConfetti] = useState(false);
   const [celebrationSpeciesName, setCelebrationSpeciesName] = useState<string | null>(null);
   const [speciesList, setSpeciesList] = useState<Species[]>([]);
@@ -229,6 +233,30 @@ export const MediaReviewPage = () => {
     [intl]
   );
 
+  useEffect(() => {
+    let cancelled = false;
+    mediaService
+      .getMediaSources()
+      .then((data) => {
+        if (!cancelled) setMediaSources(data);
+      })
+      .catch(() => {
+        if (!cancelled) setMediaSources([]);
+      });
+    return () => { cancelled = true; };
+  }, []);
+
+  const sourceCollection = useMemo(
+    () =>
+      createListCollection({
+        items: [
+          { label: intl.formatMessage({ id: 'media source all', defaultMessage: 'All sources' }), value: ALL_SOURCES },
+          ...mediaSources.map((s) => ({ label: s.label, value: s.value })),
+        ],
+      }),
+    [intl, mediaSources]
+  );
+
   const loadSpecies = useCallback(
     async (
       page: number = 1,
@@ -236,7 +264,8 @@ export const MediaReviewPage = () => {
       countryCode?: string,
       mediaType: 'image' | 'video' | 'audio' = 'image',
       speciesId?: number,
-      level: ReviewLevel = 'fast'
+      level: ReviewLevel = 'fast',
+      source?: string
     ) => {
       try {
         if (reset) {
@@ -246,7 +275,7 @@ export const MediaReviewPage = () => {
           setLoadingMore(true);
         }
 
-        const data = await mediaService.getMediaReviewSpecies(mediaType, page, countryCode, languageParam, speciesId, level);
+        const data = await mediaService.getMediaReviewSpecies(mediaType, page, countryCode, languageParam, speciesId, level, source);
 
         if (reset) {
           setSpeciesWithMedia(data.results);
@@ -272,14 +301,14 @@ export const MediaReviewPage = () => {
 
   useEffect(() => {
     if (!urlSpeciesReady) return;
-    loadSpecies(1, true, selectedCountry || undefined, selectedMediaType, selectedSpecies?.id, reviewLevel);
-  }, [urlSpeciesReady, selectedCountry, selectedMediaType, selectedSpecies?.id, reviewLevel, languageParam, loadSpecies]);
+    loadSpecies(1, true, selectedCountry || undefined, selectedMediaType, selectedSpecies?.id, reviewLevel, selectedSource || undefined);
+  }, [urlSpeciesReady, selectedCountry, selectedMediaType, selectedSpecies?.id, reviewLevel, selectedSource, languageParam, loadSpecies]);
 
   useEffect(() => {
     let cancelled = false;
     setSpeciesStatsLoading(true);
     mediaService
-      .getSpeciesReviewStats(selectedCountry || undefined, selectedMediaType, languageParam)
+      .getSpeciesReviewStats(selectedCountry || undefined, selectedMediaType, languageParam, selectedSource || undefined)
       .then((data) => {
         if (!cancelled) setSpeciesStats(data);
       })
@@ -290,7 +319,7 @@ export const MediaReviewPage = () => {
         if (!cancelled) setSpeciesStatsLoading(false);
       });
     return () => { cancelled = true; };
-  }, [selectedCountry, selectedMediaType, languageParam]);
+  }, [selectedCountry, selectedMediaType, selectedSource, languageParam]);
 
   // After removing a species (10 approved), scroll to review stats with offset below top menu
   useEffect(() => {
@@ -307,9 +336,9 @@ export const MediaReviewPage = () => {
 
   const loadMore = useCallback(() => {
     if (!loadingMore && hasNextPage) {
-      loadSpecies(currentPage + 1, false, selectedCountry || undefined, selectedMediaType, selectedSpecies?.id, reviewLevel);
+      loadSpecies(currentPage + 1, false, selectedCountry || undefined, selectedMediaType, selectedSpecies?.id, reviewLevel, selectedSource || undefined);
     }
-  }, [currentPage, loadingMore, hasNextPage, loadSpecies, selectedCountry, selectedMediaType, selectedSpecies?.id, reviewLevel]);
+  }, [currentPage, loadingMore, hasNextPage, loadSpecies, selectedCountry, selectedMediaType, selectedSpecies?.id, reviewLevel, selectedSource]);
 
   // Infinite scroll handler
   useEffect(() => {
@@ -903,6 +932,38 @@ export const MediaReviewPage = () => {
                   <Select.Positioner>
                     <Select.Content>
                       {levelCollection.items.map((item: any) => (
+                        <Select.Item key={item.value} item={item}>
+                          <Select.ItemIndicator />
+                          <Select.ItemText>{item.label}</Select.ItemText>
+                        </Select.Item>
+                      ))}
+                    </Select.Content>
+                  </Select.Positioner>
+                </Portal>
+              </Select.Root>
+            </Box>
+            <Box minW="160px">
+              <Select.Root
+                collection={sourceCollection}
+                value={[selectedSource || ALL_SOURCES]}
+                onValueChange={(details: { value: string[] }) => {
+                  const v = details.value[0];
+                  setSelectedSource(!v || v === ALL_SOURCES ? '' : v);
+                }}
+              >
+                <Select.HiddenSelect />
+                <Select.Control>
+                  <Select.Trigger>
+                    <Select.ValueText placeholder={intl.formatMessage({ id: 'media source placeholder', defaultMessage: 'Source...' })} />
+                  </Select.Trigger>
+                  <Select.IndicatorGroup>
+                    <Select.Indicator />
+                  </Select.IndicatorGroup>
+                </Select.Control>
+                <Portal>
+                  <Select.Positioner>
+                    <Select.Content>
+                      {sourceCollection.items.map((item: any) => (
                         <Select.Item key={item.value} item={item}>
                           <Select.ItemIndicator />
                           <Select.ItemText>{item.label}</Select.ItemText>
