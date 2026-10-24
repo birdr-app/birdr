@@ -363,12 +363,17 @@ export function LeagueScreen() {
               <View
                 style={[
                   styles.dot,
+                  day.is_double && styles.dotDouble,
                   day.played && styles.dotPlayed,
                   day.is_today && styles.dotToday,
                   day.is_future && styles.dotFuture,
                 ]}
               >
-                <Text style={[styles.dotText, day.played && styles.dotTextPlayed]}>
+                <Text
+                  style={[styles.dotText, day.played && styles.dotTextPlayed]}
+                  numberOfLines={1}
+                  adjustsFontSizeToFit
+                >
                   {day.played ? String(day.score ?? '✓') : day.is_future ? '' : day.is_today ? '?' : '–'}
                 </Text>
               </View>
@@ -572,6 +577,9 @@ const styles = StyleSheet.create({
   dotPlayed: { backgroundColor: colors.primary[500], borderColor: colors.primary[600] },
   dotToday: { borderColor: '#f59e0b', borderWidth: 3 },
   dotFuture: { borderStyle: 'dashed', opacity: 0.5 },
+  // Weekend double-quiz scores can hit 5 digits, so those dots are wider
+  // (capped by the column on narrow phones, where the text shrinks instead).
+  dotDouble: { width: '100%', maxWidth: 44 },
   dotText: { fontSize: 12, fontWeight: '700', color: colors.primary[600] },
   dotTextPlayed: { color: colors.primary[50] },
   dayLabel: { fontSize: 12, color: colors.primary[600], marginTop: 4 },
