@@ -213,17 +213,17 @@ export default function TroubleSpotsPage() {
   };
 
   const speciesTabLabel = intl.formatMessage({
-    id: 'trouble_spots_species_title',
-    defaultMessage: 'Tricky birds',
+    id: 'trouble_spots_tab_single',
+    defaultMessage: 'Single',
   });
   const pairsTabLabel = intl.formatMessage({
-    id: 'trouble_spots_pairs_title',
-    defaultMessage: 'Confusing pairs',
+    id: 'trouble_spots_tab_pairs',
+    defaultMessage: 'Pairs',
   });
 
   const flocksTabLabel = intl.formatMessage({
-    id: 'trouble_spots_flocks_title',
-    defaultMessage: 'Mixed-up flocks',
+    id: 'trouble_spots_tab_groups',
+    defaultMessage: 'Groups',
   });
   const countryQuery = effectiveCountryCode
     ? `?country=${encodeURIComponent(effectiveCountryCode)}`
@@ -329,8 +329,6 @@ export default function TroubleSpotsPage() {
                 flex={1}
                 minW={0}
                 px={2}
-                whiteSpace="normal"
-                lineHeight="short"
                 role="tab"
                 aria-selected={activeTab === tab.key}
                 variant={activeTab === tab.key ? 'solid' : 'outline'}

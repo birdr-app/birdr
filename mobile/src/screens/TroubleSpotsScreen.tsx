@@ -227,9 +227,9 @@ export function TroubleSpotsScreen() {
   };
 
   const tabs: { key: TabKey; label: string; count: number }[] = [
-    { key: 'species', label: t('trouble_spots_species_title'), count: visibleSpecies.length },
-    { key: 'pairs', label: t('trouble_spots_pairs_title'), count: visiblePairs.length },
-    { key: 'flocks', label: t('trouble_spots_flocks_title'), count: flocks.length },
+    { key: 'species', label: t('trouble_spots_tab_single'), count: visibleSpecies.length },
+    { key: 'pairs', label: t('trouble_spots_tab_pairs'), count: visiblePairs.length },
+    { key: 'flocks', label: t('trouble_spots_tab_groups'), count: flocks.length },
   ];
 
   const countryPicker = effectiveCountryCode ? (
@@ -490,7 +490,10 @@ export function TroubleSpotsScreen() {
             accessibilityRole="tab"
             accessibilityState={{ selected: activeTab === tab.key }}
           >
-            <Text style={[styles.tabText, activeTab === tab.key && styles.tabTextActive]}>
+            <Text
+              style={[styles.tabText, activeTab === tab.key && styles.tabTextActive]}
+              numberOfLines={1}
+            >
               {tab.label} ({tab.count})
             </Text>
           </TouchableOpacity>
