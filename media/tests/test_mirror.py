@@ -1,12 +1,14 @@
-from io import StringIO
+from io import BytesIO, StringIO
 from unittest import mock
+
+from PIL import Image
 
 from django.core.management import call_command
 from django.test import SimpleTestCase, TestCase, override_settings
 
 from jizz.models import Species
 from media.display_urls import media_display_url, media_object_display_url
-from media.mirror import commons_file_title, mirror_key, mirror_thumb_urls, mirrored_url
+from media.mirror import commons_file_title, mirror_key, mirror_thumb_urls, mirrored_url, shrink_image
 from media.models import Media, MediaReview
 
 ORIGINAL = 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Northern_Wheatear_%28Oenanthe%29.jpg'
@@ -61,6 +63,14 @@ class MirrorUrlTests(SimpleTestCase):
     def test_mirrored_url_off_without_base(self):
         self.assertIsNone(mirrored_url(THUMB_960))
 
+    def test_shrink_image_to_width(self):
+        with Image.open(BytesIO(shrink_image(JPEG_960, 500))) as img:
+            self.assertEqual((img.format, img.size), ('JPEG', (500, 333)))
+
+    def test_shrink_image_keeps_narrow_images(self):
+        small = _jpeg(400, 300)
+        self.assertEqual(shrink_image(small, 500), small)
+
     def test_commons_file_title(self):
         self.assertEqual(commons_file_title(ORIGINAL), 'File:Northern Wheatear (Oenanthe).jpg')
         self.assertEqual(commons_file_title(THUMB_960), 'File:Northern Wheatear (Oenanthe).jpg')
@@ -85,7 +95,16 @@ class MirrorDisplayUrlTests(SimpleTestCase):
         self.assertEqual(media_display_url(url, mirrored=True), url)
 
 
-def _response(status=200, content=b'jpeg', content_type='image/jpeg', headers=None):
+def _jpeg(width=960, height=640) -> bytes:
+    out = BytesIO()
+    Image.new('RGB', (width, height), (120, 90, 60)).save(out, format='JPEG')
+    return out.getvalue()
+
+
+JPEG_960 = _jpeg()
+
+
+def _response(status=200, content=JPEG_960, content_type='image/jpeg', headers=None):
     response = mock.Mock(status_code=status, content=content)
     response.headers = {'Content-Type': content_type, **(headers or {})}
     response.raise_for_status = mock.Mock(
@@ -115,11 +134,15 @@ class MirrorCommandTests(TestCase):
             call_command('mirror_wikimedia_media', *args, stdout=out, stderr=StringIO())
             return out.getvalue()
 
-    def test_copies_both_sizes(self):
-        self.run_command()
-        keys = [c.kwargs['Key'] for c in self.client_mock.put_object.call_args_list]
-        self.assertEqual(len(keys), 2)
-        self.assertTrue(keys[0].endswith('/500px-Northern_Wheatear_(Oenanthe).jpg'))
+    def test_copies_both_sizes_from_one_download(self):
+        downloads = []
+        self.run_command(get=lambda url, **k: downloads.append(url) or _response())
+        self.assertEqual(downloads, [THUMB_960])
+        uploads = {c.kwargs['Key'].rsplit('/', 1)[1]: c.kwargs['Body'] for c in self.client_mock.put_object.call_args_list}
+        self.assertEqual(set(uploads), {'960px-Northern_Wheatear_(Oenanthe).jpg', '500px-Northern_Wheatear_(Oenanthe).jpg'})
+        self.assertEqual(uploads['960px-Northern_Wheatear_(Oenanthe).jpg'], JPEG_960)
+        with Image.open(BytesIO(uploads['500px-Northern_Wheatear_(Oenanthe).jpg'])) as preview:
+            self.assertEqual(preview.width, 500)
         self.assertEqual(self.client_mock.put_object.call_args.kwargs['ContentType'], 'image/jpeg')
         self.media.refresh_from_db()
         self.assertIsNotNone(self.media.mirrored_at)
@@ -135,6 +158,28 @@ class MirrorCommandTests(TestCase):
         self.run_command(get=lambda *a, **k: next(responses))
         self.media.refresh_from_db()
         self.assertIsNotNone(self.media.mirrored_at)
+
+    def test_most_played_photos_first(self):
+        from jizz.models import Game
+
+        from media.management.commands.mirror_wikimedia_media import play_order
+
+        popular = Species.objects.create(name='Blackbird', name_latin='Turdus merula', code='eurbla')
+        game = Game.objects.create()
+        for _ in range(3):
+            game.questions.create(species=popular)
+        approved_species = Species.objects.create(name='Robin', name_latin='Erithacus rubecula', code='eurrob')
+        approved = Media.objects.create(species=approved_species, type='image', url=ORIGINAL)
+        unreviewed = Media.objects.create(species=approved_species, type='image', url=ORIGINAL)
+        from django.contrib.auth import get_user_model
+
+        reviewer = get_user_model().objects.create(username='reviewer')
+        MediaReview.objects.create(media=approved, user=reviewer, review_type=MediaReview.APPROVED)
+        blackbird = Media.objects.create(species=popular, type='image', url=ORIGINAL)
+
+        order = play_order(Media.objects.filter(type='image'))
+        # Plays now, most asked species first; robin's unreviewed photo does not play while one is approved.
+        self.assertEqual(order, [blackbird.id, self.media.id, approved.id, unreviewed.id])
 
     def test_failed_download_not_marked(self):
         self.run_command(get=lambda *a, **k: _response(404))

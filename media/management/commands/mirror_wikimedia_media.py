@@ -21,11 +21,13 @@ from django.utils import timezone
 
 from media.mirror import (
     CACHE_CONTROL,
+    MIRROR_STEPS,
     bucket_client,
     commons_file_title,
     mirror_key,
     mirror_thumb_urls,
     mirrored_url,
+    shrink_image,
 )
 from media.models import Media, MediaReview
 
@@ -66,14 +68,14 @@ class Command(BaseCommand):
             self.mirror(queryset.filter(mirrored_at__isnull=True, hide=False), options['limit'])
 
     def mirror(self, queryset, limit):
-        queryset = queryset.only('id', 'url').order_by('id')
+        ids = play_order(queryset)
         if limit:
-            queryset = queryset[:limit]
-        total = queryset.count()
-        self.stdout.write(f'Found {total} Wikimedia photos to copy')
+            ids = ids[:limit]
+        total = len(ids)
+        self.stdout.write(f'Found {total} Wikimedia photos to copy, most played first')
         mirrored = skipped = failed = 0
         verified_public = False
-        for media in queryset.iterator():
+        for media in _in_order(ids):
             thumbs = mirror_thumb_urls(media.url)
             if not thumbs:
                 skipped += 1
@@ -82,8 +84,7 @@ class Command(BaseCommand):
                 mirrored += 1
                 continue
             try:
-                for thumb in thumbs:
-                    self.copy(thumb)
+                self.copy(*thumbs)
                 if not verified_public:
                     # The bucket policy must make the mirror public, or players get 403s.
                     self.verify_public(thumbs[0])
@@ -101,18 +102,21 @@ class Command(BaseCommand):
                 self.stdout.flush()
         self.stdout.write(self.style.SUCCESS(f'Done. copied={mirrored} skipped={skipped} failed={failed}'))
 
-    def copy(self, thumb_url: str):
-        response = self.download(thumb_url)
+    def copy(self, preview_url: str, full_url: str):
+        """Download the full (960px) thumbnail once; the preview is scaled from it here."""
+        response = self.download(full_url)
         content_type = response.headers.get('Content-Type', '').split(';')[0]
         if not content_type.startswith('image/'):
-            raise ValueError(f'{thumb_url} is {content_type or "no content type"}, not an image')
-        self.client.put_object(
-            Bucket=self.bucket,
-            Key=mirror_key(thumb_url),
-            Body=response.content,
-            ContentType=content_type,
-            CacheControl=CACHE_CONTROL,
-        )
+            raise ValueError(f'{full_url} is {content_type or "no content type"}, not an image')
+        preview = shrink_image(response.content, MIRROR_STEPS[0])
+        for url, body in ((full_url, response.content), (preview_url, preview)):
+            self.client.put_object(
+                Bucket=self.bucket,
+                Key=mirror_key(url),
+                Body=body,
+                ContentType=content_type,
+                CacheControl=CACHE_CONTROL,
+            )
 
     def download(self, url: str):
         for attempt in range(1, MAX_TRIES + 1):
@@ -199,6 +203,46 @@ class Command(BaseCommand):
             title = redirected.get(title, title)
             missing.append(normalized.get(title, title))
         return [t for t in missing if t in titles]
+
+
+def play_order(queryset) -> list[int]:
+    """Media ids in the order players are most likely to see them.
+
+    Games show a species' approved photos, or its unrejected ones when it has
+    none approved (jizz.question_play). So: photos that play now first, by how
+    often their species is asked; photos that only play later (unreviewed, in a
+    species with approved photos) last.
+    """
+    from django.db.models import Count, Exists, OuterRef
+
+    from jizz.models import Question
+
+    approved = MediaReview.objects.filter(media=OuterRef('pk'), review_type=MediaReview.APPROVED)
+    rejected = MediaReview.objects.filter(media=OuterRef('pk'), review_type=MediaReview.REJECTED)
+    species_with_approved = set(
+        Media.objects.filter(type='image', hide=False, reviews__review_type=MediaReview.APPROVED)
+        .values_list('species_id', flat=True).distinct()
+    )
+    plays = dict(Question.objects.values_list('species_id').annotate(n=Count('id')))
+    rows = queryset.annotate(_approved=Exists(approved), _rejected=Exists(rejected)).values_list(
+        'id', 'species_id', '_approved', '_rejected'
+    )
+
+    def key(row):
+        media_id, species_id, is_approved, is_rejected = row
+        plays_now = is_approved or (species_id not in species_with_approved and not is_rejected)
+        return (0 if plays_now else 1, -plays.get(species_id, 0), media_id)
+
+    return [row[0] for row in sorted(rows, key=key)]
+
+
+def _in_order(ids: list[int], chunk_size: int = 500):
+    for start in range(0, len(ids), chunk_size):
+        chunk = ids[start:start + chunk_size]
+        by_id = Media.objects.only('id', 'url').in_bulk(chunk)
+        for media_id in chunk:
+            if media_id in by_id:
+                yield by_id[media_id]
 
 
 def _retry_after(response) -> int | None:

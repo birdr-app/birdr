@@ -52,6 +52,30 @@ def mirrored_url(thumb_url: str | None) -> str | None:
     return f'{base}/{quote(mirror_key(thumb_url))}'
 
 
+def shrink_image(data: bytes, width: int) -> bytes:
+    """Scale an image down to ``width`` px wide in its own format (unchanged if already narrower).
+
+    Lets the mirror make the 500px preview from the 960px download, so each photo
+    costs one Wikimedia request instead of two.
+    """
+    from io import BytesIO
+
+    from PIL import Image
+
+    with Image.open(BytesIO(data)) as img:
+        if img.width <= width:
+            return data
+        fmt = 'JPEG' if img.format == 'MPO' else img.format  # MPO: camera JPEG with extra frames
+        height = max(1, round(img.height * width / img.width))
+        resized = img.resize((width, height), Image.LANCZOS)
+        out = BytesIO()
+        save_kwargs = {'icc_profile': img.info.get('icc_profile')}
+        if fmt == 'JPEG':
+            save_kwargs.update(quality=85, optimize=True, progressive=True)
+        resized.save(out, format=fmt, **save_kwargs)
+        return out.getvalue()
+
+
 def commons_file_title(url: str | None) -> str | None:
     """``File:Name.jpg`` for a Commons original or thumbnail URL."""
     if not url or not is_wikimedia_upload(url):
