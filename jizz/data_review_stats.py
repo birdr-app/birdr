@@ -80,7 +80,8 @@ def review_overview(photo_stats: tuple[dict[int, int], dict[int, int], dict[int,
     approved = type_counts.get(MediaReview.APPROVED, 0)
     rejected = type_counts.get(MediaReview.REJECTED, 0)
     not_sure = type_counts.get(MediaReview.NOT_SURE, 0)
-    total = approved + rejected + not_sure
+    mystery = type_counts.get(MediaReview.MYSTERY, 0)
+    total = approved + rejected + not_sure + mystery
     decided = approved + rejected
     species_with_photos = len(photos_by)
     species_ready = sum(
@@ -94,6 +95,7 @@ def review_overview(photo_stats: tuple[dict[int, int], dict[int, int], dict[int,
         'approved': approved,
         'rejected': rejected,
         'not_sure': not_sure,
+        'mystery': mystery,
         'decided': decided,
         'approval_rate': _pct(approved, decided),
         'photos': photos,

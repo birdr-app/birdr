@@ -63,7 +63,7 @@ class Media(models.Model):
 
     @property
     def effective_review_status(self):
-        """Latest review as 'approved' or 'rejected' (not_sure counts as rejected). None if no reviews."""
+        """Latest review as 'approved' or 'rejected' (not_sure and mystery count as rejected). None if no reviews."""
         reviews = list(self.reviews.all())
         if not reviews:
             return None
@@ -78,11 +78,16 @@ class MediaReview(models.Model):
     APPROVED = 'approved'
     REJECTED = 'rejected'
     NOT_SURE = 'not_sure'
+    MYSTERY = 'mystery'
     REVIEW_CHOICES = [
         (APPROVED, 'Approved'),
         (REJECTED, 'Rejected'),
         (NOT_SURE, 'Not Sure'),
+        (MYSTERY, 'Mystery'),
     ]
+    # Review types that keep media out of game play (and hide it). Mystery is
+    # treated as rejected for now.
+    REJECTING_TYPES = (REJECTED, MYSTERY)
 
     media = models.ForeignKey(
         Media,
@@ -158,7 +163,7 @@ class MediaReview(models.Model):
 
     @property
     def is_effectively_rejected(self):
-        return self.review_type in (self.REJECTED, self.NOT_SURE)
+        return self.review_type in (self.REJECTED, self.NOT_SURE, self.MYSTERY)
 
     def __str__(self):
         reviewer = self.user or self.player
@@ -166,12 +171,12 @@ class MediaReview(models.Model):
 
 
 def sync_media_hide(media_id: int | None) -> None:
-    """hide=True when any review is rejected; otherwise hide=False."""
+    """hide=True when any review is rejected (or mystery); otherwise hide=False."""
     if not media_id:
         return
     should_hide = MediaReview.objects.filter(
         media_id=media_id,
-        review_type=MediaReview.REJECTED,
+        review_type__in=MediaReview.REJECTING_TYPES,
     ).exists()
     Media.objects.filter(pk=media_id).exclude(hide=should_hide).update(hide=should_hide)
 

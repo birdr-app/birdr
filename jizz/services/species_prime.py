@@ -33,7 +33,9 @@ def prime_species(species: Iterable, languages: Iterable[str | None] = ()) -> No
         Media.objects.filter(species_id__in=by_id, type__in=MEDIA_TYPES)
         .annotate(
             _approved=Exists(MediaReview.objects.filter(media=OuterRef('pk'), review_type='approved')),
-            _rejected=Exists(MediaReview.objects.filter(media=OuterRef('pk'), review_type='rejected')),
+            _rejected=Exists(MediaReview.objects.filter(
+                media=OuterRef('pk'), review_type__in=MediaReview.REJECTING_TYPES,
+            )),
         )
         .order_by('id')
     )

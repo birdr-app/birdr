@@ -144,7 +144,7 @@ class SpeciesReviewStatsSerializer(serializers.Serializer):
 
 
 class MediaForReviewSerializer(MediaSerializer):
-    """Media serializer with review_type for embedding in species (approved/rejected/not_sure or null)."""
+    """Media serializer with review_type for embedding in species (approved/rejected/not_sure/mystery or null)."""
     review_type = serializers.SerializerMethodField()
     machine_prediction = serializers.SerializerMethodField()
     machine_human_agreement = serializers.SerializerMethodField()

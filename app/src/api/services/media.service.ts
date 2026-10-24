@@ -2,6 +2,9 @@ import { ApiClient } from '../client';
 
 export type ReviewLevel = 'fast' | 'full' | 'thorough';
 
+/** not_sure is being phased out; mystery counts as rejected in game play for now. */
+export type ReviewType = 'approved' | 'rejected' | 'not_sure' | 'mystery';
+
 export interface MediaItemReviewStatus {
   approved: number;
   rejected: number;
@@ -26,7 +29,7 @@ export interface MediaItem {
   /** Present when level=thorough */
   review_status?: MediaItemReviewStatus | null;
   /** Present when loaded via media-review-species: single review type for this item */
-  review_type?: 'approved' | 'rejected' | 'not_sure' | null;
+  review_type?: ReviewType | null;
   /** Offline ML first assertion (from MediaPrediction); null if absent */
   machine_prediction?: {
     predicted_review_type: 'approved' | 'rejected';
@@ -90,7 +93,7 @@ export interface MediaService {
   /** Species paginated by 3, each with all media embedded. Same filters as getMedia. */
   getMediaReviewSpecies(type?: string, page?: number, countryCode?: string, language?: string, speciesId?: number, level?: ReviewLevel): Promise<PaginatedSpeciesWithMediaResponse>;
   /** Pass playerToken when using a game player; omit when authenticated as a user (JWT). */
-  reviewMedia(mediaId: number, playerToken: string | undefined, reviewType: 'approved' | 'rejected' | 'not_sure', description?: string): Promise<unknown>;
+  reviewMedia(mediaId: number, playerToken: string | undefined, reviewType: ReviewType, description?: string): Promise<unknown>;
   /** Image-only first assertion (approved/rejected). Same auth as reviewMedia. */
   reviewMediaFirstAssertion(mediaId: number, playerToken: string | undefined, reviewType: 'approved' | 'rejected', description?: string): Promise<unknown>;
   getSpeciesReviewStats(countryCode?: string, mediaType?: string, language?: string): Promise<SpeciesReviewStatsResponse>;
@@ -122,7 +125,7 @@ export class MediaServiceImpl implements MediaService {
     return this.client.get<PaginatedSpeciesWithMediaResponse>(`/api/media-review-species/?${params.toString()}`);
   }
 
-  async reviewMedia(mediaId: number, playerToken: string | undefined, reviewType: 'approved' | 'rejected' | 'not_sure', description?: string): Promise<unknown> {
+  async reviewMedia(mediaId: number, playerToken: string | undefined, reviewType: ReviewType, description?: string): Promise<unknown> {
     const body: Record<string, unknown> = {
       media_id: mediaId,
       review_type: reviewType,

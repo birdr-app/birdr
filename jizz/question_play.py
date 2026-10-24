@@ -48,7 +48,7 @@ def _eligible_media_list(media_rows: list[Media]) -> list[Media]:
         latest = max(reviews, key=lambda r: r.id)
         if latest.review_type == MediaReview.APPROVED:
             approved.append(m)
-        elif latest.review_type != MediaReview.REJECTED:
+        elif latest.review_type not in MediaReview.REJECTING_TYPES:
             fallback.append(m)
     if approved:
         return sorted(approved, key=lambda m: m.id)

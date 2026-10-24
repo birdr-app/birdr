@@ -28,6 +28,7 @@ from jizz.marketing.slugs import country_is_indexable
 from jizz.marketing.testimonials import FAQ, TESTIMONIALS
 from jizz.models import Country, MarketingPage, Species
 from jizz.store_ratings import write_review_url
+from media.models import MediaReview
 
 SITE_NAME = 'Birdr'
 SITE_HOME = '/site/'
@@ -492,7 +493,7 @@ def public_image_queryset(species):
     approved = species.media.filter(type='image', hide=False, reviews__review_type='approved').distinct()
     if approved.exists():
         return approved.order_by('id')
-    return species.media.filter(type='image', hide=False).exclude(reviews__review_type='rejected').order_by('id')
+    return species.media.filter(type='image', hide=False).exclude(reviews__review_type__in=MediaReview.REJECTING_TYPES).order_by('id')
 
 
 def species_approved_image_count(species) -> int:

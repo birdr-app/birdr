@@ -9,7 +9,7 @@ from django.conf import settings
 
 from jizz.models import SpeciesIllustration
 from jizz.services.species_illustration import get_illustration_status
-from media.models import Media
+from media.models import Media, MediaReview
 from media.display_urls import media_object_display_url
 
 if TYPE_CHECKING:
@@ -70,7 +70,7 @@ def _first_eligible_image_url(species: Species, request) -> str | None:
     )
     media = approved
     if not media:
-        media = base.exclude(reviews__review_type='rejected').order_by('id').first()
+        media = base.exclude(reviews__review_type__in=MediaReview.REJECTING_TYPES).order_by('id').first()
     if not media or not media.url:
         return None
     return media_object_display_url(media)
@@ -119,7 +119,7 @@ def species_cover_urls_bulk(species_ids: list[int], request=None) -> dict[int, s
     if still_missing:
         fallback = (
             Media.objects.filter(species_id__in=still_missing, type='image', hide=False)
-            .exclude(reviews__review_type='rejected')
+            .exclude(reviews__review_type__in=MediaReview.REJECTING_TYPES)
             .order_by('species_id', 'id')
         )
         for media in fallback:
