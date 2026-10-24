@@ -20,7 +20,7 @@ from jizz.models import Answer, Country, Game, Player, PlayerScore
 from jizz.practice_serializers import get_or_create_player_for_user
 from jizz.serializers import GameSerializer
 from jizz.services.checklist import localized_species_names
-from media.display_urls import media_display_url
+from media.display_urls import media_object_display_url
 
 SURVIVAL_SPEED_SECONDS = 15
 SURVIVAL_LEADERBOARD_SIZE = 100
@@ -108,7 +108,7 @@ def missed_payload_for(wrong: Answer, game: Game, names: dict[int, str]) -> dict
         },
         'timed_out': timed_out,
         'image': {
-            'url': media_display_url(media.url),
+            'url': media_object_display_url(media),
             'contributor': media.contributor or '',
         } if media is not None and media.url else None,
     }

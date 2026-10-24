@@ -9,7 +9,7 @@ from jizz.models import Country, CountrySpecies, Species, Game, Question, Answer
     JourneyLevel, JourneyStep, TaxonomicOrder, TaxonomicFamily, SpeciesGroup, \
     Friendship, DailyChallenge, DailyChallengeParticipant, DailyChallengeInvite, DailyChallengeRound, DeviceToken
 from media.models import Media, MediaReview, FlagMedia
-from media.display_urls import media_display_url
+from media.display_urls import media_object_display_url
 
 
 def _species_name_for_language(species, language: str | None) -> str:
@@ -48,7 +48,7 @@ class QuestionMediaSerializer(serializers.ModelSerializer):
     url = serializers.SerializerMethodField()
 
     def get_url(self, obj):
-        return media_display_url(obj.url)
+        return media_object_display_url(obj)
 
     def get_link(self, obj):
         # Full source URLs can identify the species (e.g. iNaturalist observations).
@@ -77,7 +77,7 @@ class MediaSerializer(serializers.ModelSerializer):
     url = serializers.SerializerMethodField()
 
     def get_url(self, obj):
-        return media_display_url(obj.url)
+        return media_object_display_url(obj)
 
     def get_species_name(self, obj):
         """Return species name in the requested language if available."""
@@ -1573,7 +1573,7 @@ class QuestionWithAnswerSerializer(serializers.ModelSerializer):
                 image = images[media_index]
                 return {
                     'type': 'image',
-                    'url': media_display_url(image.url),
+                    'url': media_object_display_url(image),
                     'link': image.link,
                     'contributor': image.contributor,
                 }
@@ -1583,7 +1583,7 @@ class QuestionWithAnswerSerializer(serializers.ModelSerializer):
                 video = videos[media_index]
                 return {
                     'type': 'video',
-                    'url': media_display_url(video.url),
+                    'url': media_object_display_url(video),
                     'link': video.link,
                     'contributor': video.contributor,
                 }

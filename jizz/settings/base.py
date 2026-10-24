@@ -33,6 +33,15 @@ MEDIA_HTTP_FETCH_DELAY_SECONDS = float(os.environ.get('MEDIA_HTTP_FETCH_DELAY_SE
 MEDIA_WIKIMEDIA_THUMB_WIDTH_PX = int(os.environ.get('MEDIA_WIKIMEDIA_THUMB_WIDTH_PX', '500'))
 # Width served to clients for Wikimedia images in game/API serializers (standard step).
 MEDIA_WIKIMEDIA_DISPLAY_WIDTH_PX = int(os.environ.get('MEDIA_WIKIMEDIA_DISPLAY_WIDTH_PX', '960'))
+# Object storage (Linode, S3-compatible). Set S3_HOST / S3_ACCESS_KEY / S3_SECRET_KEY in local.py.
+S3_HOST = os.environ.get('S3_HOST', '')  # de-fra-1.linodeobjects.com
+S3_ACCESS_KEY = os.environ.get('S3_ACCESS_KEY', '')
+S3_SECRET_KEY = os.environ.get('S3_SECRET_KEY', '')
+# Our own copies of Wikimedia thumbnails in that storage (see media/mirror.py). API
+# responses use them when MEDIA_MIRROR_BASE_URL is set (https://birdr.de-fra-1.linodeobjects.com);
+# `manage.py mirror_wikimedia_media` fills the bucket.
+MEDIA_MIRROR_BUCKET = os.environ.get('MEDIA_MIRROR_BUCKET', 'birdr')
+MEDIA_MIRROR_BASE_URL = os.environ.get('MEDIA_MIRROR_BASE_URL', '')
 # iNaturalist open-data size served to clients (original|large|medium|small).
 # `medium` is typically 500px — enough for quiz/list display; clients can still
 # request `large` (1024px) on zoom.

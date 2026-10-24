@@ -75,7 +75,7 @@ from jizz.models import Country, Feedback, MarketingPage, Species
 from jizz.quiz_mistake_stats import get_confused_partners_for_species
 from jizz.services.species_cover import species_cover_url
 from jizz.store_ratings import store_review_context
-from media.display_urls import media_display_url
+from media.display_urls import media_object_display_url
 
 logger = logging.getLogger(__name__)
 
@@ -210,7 +210,7 @@ def _photo_urls(request, species, limit=2):
     for media in public_image_queryset(species)[:limit]:
         if not media.url:
             continue
-        url = media_display_url(media.url) or media.url
+        url = media_object_display_url(media) or media.url
         photos.append({
             'url': url,
             'alt': f'{local_name} ({species.name_latin})',

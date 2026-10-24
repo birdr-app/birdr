@@ -13,6 +13,7 @@ from jizz.game_question_selection import create_question_for_game, media_type_fo
 from jizz.models import Answer, FlockSharedGame, Game, Player, SharedGame, SharedGameAttempt, Species
 from jizz.pregenerated_game import PregeneratedItem, fill_pregenerated_game
 from jizz.question_play import active_play_media, fetch_eligible_media_for_species
+from media.display_urls import media_object_display_url
 
 SHAREABLE_GAME_TYPES = (Game.GAME_TYPE_STANDARD, Game.GAME_TYPE_EXTREME)
 MAX_LENGTH = 100
@@ -192,7 +193,7 @@ def question_stats(shared_game: SharedGame, language: str = 'en') -> list[dict]:
                 },
                 'media': {
                     'type': question.media.type,
-                    'url': question.media.url,
+                    'url': media_object_display_url(question.media),
                     'contributor': question.media.contributor,
                 } if question.media_id else None,
                 'answered': bucket['answered'],

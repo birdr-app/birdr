@@ -12,6 +12,7 @@ from urllib.parse import urlparse, urlunparse
 
 from django.conf import settings
 
+from media.mirror import mirrored_url
 from media.wikimedia_urls import wikimedia_display_url, wikimedia_video_playback_url
 
 # Largest first. Only rewrite down, never up (a stored medium stays medium).
@@ -55,11 +56,22 @@ def inaturalist_display_url(url: str | None, size: str | None = None) -> str | N
     return urlunparse((parsed.scheme, parsed.netloc, new_path, parsed.params, parsed.query, parsed.fragment))
 
 
-def media_display_url(url: str | None) -> str | None:
+def media_display_url(url: str | None, mirrored: bool = False) -> str | None:
     """Client URL for quiz/API/marketing (Wikimedia thumb, iNat medium, Commons 480p video).
+
+    ``mirrored``: the Wikimedia thumbnails were copied to our bucket (``Media.mirrored_at``),
+    so serve them from there when MEDIA_MIRROR_BASE_URL is set.
 
     Xeno-Canto audio is not rewritten here: /download cannot be turned into an
     MP3 without the XC sono hash. Playback URLs are stored on Media.url
     (scraper + ``backfill_xeno_canto_mp3_urls``).
     """
-    return wikimedia_video_playback_url(inaturalist_display_url(wikimedia_display_url(url)))
+    display = wikimedia_display_url(url)
+    if mirrored:
+        display = mirrored_url(display) or display
+    return wikimedia_video_playback_url(inaturalist_display_url(display))
+
+
+def media_object_display_url(media) -> str | None:
+    """``media_display_url`` for a Media row, using our bucket copy when there is one."""
+    return media_display_url(media.url, mirrored=media.mirrored_at is not None)
