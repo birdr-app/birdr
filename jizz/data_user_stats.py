@@ -133,6 +133,7 @@ def media_reviews_per_user_rows() -> list[dict]:
             approved=Count('id', filter=Q(review_type=MediaReview.APPROVED)),
             rejected=Count('id', filter=Q(review_type=MediaReview.REJECTED)),
             not_sure=Count('id', filter=Q(review_type=MediaReview.NOT_SURE)),
+            mystery=Count('id', filter=Q(review_type=MediaReview.MYSTERY)),
         )
     )
     anon_rows = (
@@ -143,6 +144,7 @@ def media_reviews_per_user_rows() -> list[dict]:
             approved=Count('id', filter=Q(review_type=MediaReview.APPROVED)),
             rejected=Count('id', filter=Q(review_type=MediaReview.REJECTED)),
             not_sure=Count('id', filter=Q(review_type=MediaReview.NOT_SURE)),
+            mystery=Count('id', filter=Q(review_type=MediaReview.MYSTERY)),
         )
     )
 
@@ -160,6 +162,7 @@ def media_reviews_per_user_rows() -> list[dict]:
                 'approved': row['approved'],
                 'rejected': row['rejected'],
                 'not_sure': row['not_sure'],
+                'mystery': row['mystery'],
             }
         )
 
@@ -174,13 +177,14 @@ def media_reviews_per_user_rows() -> list[dict]:
                 'approved': row['approved'],
                 'rejected': row['rejected'],
                 'not_sure': row['not_sure'],
+                'mystery': row['mystery'],
             }
         )
 
     merged = _merge_rows_by_name(
         rows,
         count_key='total',
-        sum_keys=('approved', 'rejected', 'not_sure'),
+        sum_keys=('approved', 'rejected', 'not_sure', 'mystery'),
     )
     merged.sort(key=lambda row: (-row['approved'], -row['total'], row['name'].lower()))
     return merged

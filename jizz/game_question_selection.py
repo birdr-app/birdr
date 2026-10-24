@@ -116,7 +116,7 @@ def _eligible_media_exists(media_type: str) -> Exists:
             | ~Exists(
                 MediaReview.objects.filter(
                     media_id=OuterRef('id'),
-                    review_type=MediaReview.REJECTED,
+                    review_type__in=MediaReview.REJECTING_TYPES,
                 )
             )
         )
@@ -255,7 +255,7 @@ def count_eligible_media(species_id: int, media_type: str) -> int:
     approved = base.filter(reviews__review_type=MediaReview.APPROVED).distinct().count()
     if approved:
         return approved
-    return base.exclude(reviews__review_type=MediaReview.REJECTED).distinct().count()
+    return base.exclude(reviews__review_type__in=MediaReview.REJECTING_TYPES).distinct().count()
 
 
 def _media_count(

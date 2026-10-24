@@ -14,6 +14,8 @@ from django.utils.functional import lazy
 from django.utils.timezone import now
 from shortuuid.django_fields import ShortUUIDField
 
+from media.models import MediaReview
+
 try:
     from django_quill.fields import QuillField
 except ImportError:
@@ -283,7 +285,7 @@ class Species(models.Model):
     @property
     def filtered_media(self):
         """Media that are not rejected. Used as fallback when no approved media exist."""
-        return self.media.exclude(reviews__review_type='rejected')
+        return self.media.exclude(reviews__review_type__in=MediaReview.REJECTING_TYPES)
 
     def _eligible_media(self, media_type):
         """
@@ -301,7 +303,7 @@ class Species(models.Model):
             return approved.order_by('id')
         return self.media.filter(
             type=media_type
-        ).exclude(reviews__review_type='rejected').order_by('id')
+        ).exclude(reviews__review_type__in=MediaReview.REJECTING_TYPES).order_by('id')
 
     @property
     def images(self):
