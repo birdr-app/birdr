@@ -115,7 +115,7 @@ class WikimediaScraper(BaseMediaScraper):
                         
                         # Check if this is a wild bird photo (exclude unwanted content)
                         combined_text = f"{title_text} {description_text}"
-                        if self._should_exclude(combined_text):
+                        if self._should_exclude(combined_text) or self._is_non_photo_file(title):
                             continue
                         
                         # Validate that the file actually relates to the species being searched
@@ -176,6 +176,17 @@ class WikimediaScraper(BaseMediaScraper):
         
         return False
     
+    @staticmethod
+    def _is_non_photo_file(title: str) -> bool:
+        """Range maps, book plates, specimens and the like, judged by file name."""
+        from media.non_photo import CLEAR, classify
+
+        result = classify(title)
+        if result and result[0] == CLEAR:
+            logger.debug(f"Excluding file - {result[1]}: {title}")
+            return True
+        return False
+
     def _is_related_to_species(self, text: str, scientific_name: str, common_name: Optional[str] = None) -> bool:
         """
         Check if the text actually relates to the species being searched.

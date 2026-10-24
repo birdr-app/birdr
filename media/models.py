@@ -37,6 +37,10 @@ class Media(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     type = models.CharField(max_length=200, choices=MEDIA_TYPES, blank=True, default='image')
+    mirrored_at = models.DateTimeField(
+        null=True, blank=True,
+        help_text='When the Wikimedia thumbnails were copied to our own bucket (see media/mirror.py).',
+    )
 
     class Meta:
         verbose_name = 'Media'
