@@ -917,12 +917,14 @@ class PlayerScoreInline(admin.TabularInline):
 @register(Game)
 class GameAdmin(admin.ModelAdmin):
     inlines = [PlayerScoreInline, QuestionInline]
-    raw_id_fields = ['country', 'host']
+    raw_id_fields = ['country', 'host', 'focus_species', 'pair_species_low', 'pair_species_high']
     readonly_fields = ['token', 'created', 'correct', 'errors', 'total']
     fields = [
         'country', 'language', 'host', 'created', 'token',
         'length', 'multiplayer', 'media', 'repeat', 'rarity', 'include_escapes',
-        'difficult_species', 'game_type', 'speed_seconds', 'tax_order', 'tax_family', 'species_group', 'season'
+        'difficult_species', 'level', 'game_type', 'speed_seconds',
+        'pair_species_low', 'pair_species_high', 'focus_species',
+        'tax_order', 'tax_family', 'species_group', 'season'
     ]
     list_display = ['country', 'created', 'type', 'level', 'length', 'player_count', 'top_score']
     list_filter = [GameKindListFilter]
