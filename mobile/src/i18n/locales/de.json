@@ -850,5 +850,9 @@
   "shared_game_add_to_flock_hint": "Es erscheint unter Extra-Spiele im Flock, und die Mitglieder bekommen eine Benachrichtigung.",
   "shared_game_choose_flock": "Flock auswählen",
   "shared_game_add_to_named_flock": "Zu {flock} hinzufügen",
-  "shared_game_in_flocks": "Geteilt in {flocks}"
+  "shared_game_in_flocks": "Geteilt in {flocks}",
+  "flock_extra_games_finished": "Beendet",
+  "flock_extra_games_show_all": "Alle beendeten Spiele anzeigen ({count})",
+  "flock_extra_games_show_fewer": "Weniger anzeigen",
+  "flock_extra_games_none_open": "Gerade gibt es keine offenen Spiele. Erstelle ein Spiel, wähle Teilen und füge es diesem Flock hinzu."
 }

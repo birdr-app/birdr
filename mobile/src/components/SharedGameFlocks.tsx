@@ -169,18 +169,89 @@ function ExtraGameRow({ game }: { game: FlockExtraGame }) {
   );
 }
 
-/** Shared games members posted to the flock; the empty state explains how to add one. */
-export function FlockExtraGames({ games }: { games: FlockExtraGame[] }) {
+/** How many finished games show before "Show all". */
+const FINISHED_PREVIEW = 5;
+
+/** One compact line per finished game: title, details, and your score. */
+function FinishedGameRow({ game, last }: { game: FlockExtraGame; last: boolean }) {
+  const { t, locale } = useTranslation();
+  const navigation = useNavigation<any>();
+  const summary = useSharedGameSummary(game.game);
+  const finished = game.finished_at
+    ? new Date(game.finished_at).toLocaleDateString(locale, { day: 'numeric', month: 'short' })
+    : '';
+  const details = [
+    summary,
+    game.participants ? t('shared_game_players_count', { count: game.participants }) : t('shared_game_nobody_played'),
+    finished,
+  ]
+    .filter(Boolean)
+    .join(' · ');
+  const played = !!game.my_attempt?.completed;
+  return (
+    <TouchableOpacity
+      style={[styles.finishedRow, !last && styles.finishedRowDivider]}
+      onPress={() => navigation.navigate('SharedGameDetail', { token: game.token })}
+      accessibilityRole="button"
+      testID="flock.finishedGame"
+    >
+      <View style={styles.finishedMain}>
+        <Text style={styles.finishedTitle} numberOfLines={1}>
+          {t('shared_game_title', { name: game.owner_name })}
+        </Text>
+        <Text style={styles.finishedDetails} numberOfLines={1}>
+          {details}
+        </Text>
+      </View>
+      {played ? (
+        <Text style={styles.finishedScore}>
+          {game.my_attempt!.correct_count}/{game.game.length}
+        </Text>
+      ) : null}
+      <Text style={styles.chevron}>›</Text>
+    </TouchableOpacity>
+  );
+}
+
+function FinishedGames({ games, total }: { games: FlockExtraGame[]; total: number }) {
+  const { t } = useTranslation();
+  const [showAll, setShowAll] = useState(false);
+  const shown = showAll ? games : games.slice(0, FINISHED_PREVIEW);
+  return (
+    <View style={styles.finishedBlock}>
+      <Text style={styles.finishedHeading}>{t('flock_extra_games_finished')}</Text>
+      <View style={styles.finishedList}>
+        {shown.map((game, index) => (
+          <FinishedGameRow key={game.token} game={game} last={index === shown.length - 1} />
+        ))}
+      </View>
+      {games.length > FINISHED_PREVIEW ? (
+        <TouchableOpacity onPress={() => setShowAll(!showAll)} accessibilityRole="button" style={styles.showAll}>
+          <Text style={styles.showAllText}>
+            {showAll ? t('flock_extra_games_show_fewer') : t('flock_extra_games_show_all', { count: total })}
+          </Text>
+        </TouchableOpacity>
+      ) : null}
+    </View>
+  );
+}
+
+/** Shared games members posted to the flock: open ones as cards, finished ones compact. */
+export function FlockExtraGames({ games, finishedTotal }: { games: FlockExtraGame[]; finishedTotal?: number }) {
   const { t } = useTranslation();
   const navigation = useNavigation<any>();
+  const open = games.filter((game) => game.is_open);
+  const finished = games.filter((game) => !game.is_open);
   return (
     <View testID="flock.extraGames">
       <Text style={styles.sectionTitle}>{t('flock_extra_games')}</Text>
-      {games.length ? (
-        games.map((game) => <ExtraGameRow key={game.token} game={game} />)
+      {open.length ? (
+        open.map((game) => <ExtraGameRow key={game.token} game={game} />)
       ) : (
         <View style={[styles.card, styles.emptyCard]}>
-          <Text style={styles.text}>{t('flock_extra_games_empty')}</Text>
+          <Text style={styles.text}>
+            {t(finished.length ? 'flock_extra_games_none_open' : 'flock_extra_games_empty')}
+          </Text>
           <TouchableOpacity
             style={styles.button}
             onPress={() => navigation.navigate('Start')}
@@ -190,6 +261,9 @@ export function FlockExtraGames({ games }: { games: FlockExtraGame[] }) {
           </TouchableOpacity>
         </View>
       )}
+      {finished.length ? (
+        <FinishedGames games={finished} total={Math.max(finishedTotal ?? 0, finished.length)} />
+      ) : null}
     </View>
   );
 }
@@ -233,4 +307,16 @@ const styles = StyleSheet.create({
   modalRowText: { fontSize: 16, color: colors.primary[800] },
   modalClose: { marginTop: 12, paddingVertical: 12, alignItems: 'center' },
   modalCloseText: { fontSize: 16, color: colors.primary[500], fontWeight: '600' },
+  finishedBlock: { marginBottom: 12 },
+  finishedHeading: { fontSize: 14, fontWeight: '700', color: colors.primary[700], marginBottom: 6 },
+  finishedList: { borderWidth: 1, borderColor: colors.primary[200], borderRadius: 12, backgroundColor: '#fff', overflow: 'hidden' },
+  finishedRow: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingVertical: 10, paddingHorizontal: 12 },
+  finishedRowDivider: { borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: colors.primary[200] },
+  finishedMain: { flex: 1, minWidth: 0 },
+  finishedTitle: { fontSize: 15, fontWeight: '600', color: colors.primary[800] },
+  finishedDetails: { fontSize: 13, color: colors.primary[600], marginTop: 2 },
+  finishedScore: { fontSize: 15, fontWeight: '700', color: colors.primary[700] },
+  chevron: { fontSize: 20, color: colors.primary[400] },
+  showAll: { paddingVertical: 8 },
+  showAllText: { color: colors.primary[700], fontWeight: '600' },
 });

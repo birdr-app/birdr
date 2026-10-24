@@ -748,5 +748,9 @@
   "shared_game_choose_flock": "Choose a flock",
   "shared_game_add_to_named_flock": "Add to {flock}",
   "shared_game_in_flocks": "Shared in {flocks}",
-  "flock_extra_game_meta": "{count, plural, =0 {Nobody played yet} one {# player} other {# players}}"
+  "flock_extra_game_meta": "{count, plural, =0 {Nobody played yet} one {# player} other {# players}}",
+  "flock_extra_games_finished": "Finished",
+  "flock_extra_games_show_all": "Show all finished games ({count})",
+  "flock_extra_games_show_fewer": "Show fewer",
+  "flock_extra_games_none_open": "No open games right now. Create a game, choose Share, and add it to this flock."
 }

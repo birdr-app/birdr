@@ -55,6 +55,8 @@ export type Flock = {
   invite?: FlockInvite | null;
   /** Shared games members posted to this flock (detail endpoint only). */
   extra_games?: FlockExtraGame[];
+  /** All finished extra games; `extra_games` only holds the most recent ones. */
+  extra_games_finished_total?: number;
 };
 
 export type FlockLeaderboardEntry = {

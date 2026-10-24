@@ -745,5 +745,9 @@
   "shared_game_choose_flock": "Flockを選択",
   "shared_game_add_to_named_flock": "{flock}に追加",
   "shared_game_in_flocks": "{flocks}で共有済み",
-  "flock_extra_game_meta": "{count, plural, =0 {まだ誰もプレイしていません} other {#人がプレイ}}"
+  "flock_extra_game_meta": "{count, plural, =0 {まだ誰もプレイしていません} other {#人がプレイ}}",
+  "flock_extra_games_finished": "終了したゲーム",
+  "flock_extra_games_show_all": "終了したゲームをすべて表示（{count}）",
+  "flock_extra_games_show_fewer": "表示を減らす",
+  "flock_extra_games_none_open": "現在、参加できるゲームはありません。ゲームを作成して「共有」を選び、このFlockに追加しましょう。"
 }

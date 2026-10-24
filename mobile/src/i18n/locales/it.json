@@ -850,5 +850,9 @@
   "shared_game_add_to_flock_hint": "Compare tra le Partite extra del flock e i membri ricevono una notifica.",
   "shared_game_choose_flock": "Scegli un flock",
   "shared_game_add_to_named_flock": "Aggiungi a {flock}",
-  "shared_game_in_flocks": "Condivisa in {flocks}"
+  "shared_game_in_flocks": "Condivisa in {flocks}",
+  "flock_extra_games_finished": "Terminate",
+  "flock_extra_games_show_all": "Mostra tutte le partite terminate ({count})",
+  "flock_extra_games_show_fewer": "Mostra meno",
+  "flock_extra_games_none_open": "Al momento non ci sono partite aperte. Crea una partita, scegli Condividi e aggiungila a questo flock."
 }

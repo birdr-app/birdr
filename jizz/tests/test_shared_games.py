@@ -385,3 +385,34 @@ class SharedGameFlockTests(TestCase):
         self.assertEqual(row['participants'], 0)
         self.assertEqual(row['game']['country']['code'], 'NL')
         self.assertIsNone(row['my_attempt'])
+
+    def test_many_extra_games_open_first_and_finished_capped(self):
+        from jizz.models import FlockSharedGame
+        from jizz.shared_game_views import MAX_FINISHED_EXTRA_GAMES
+
+        def link(status, finished_minutes_ago=None):
+            template = Game.objects.create(country=self.country, level='advanced', length=5)
+            shared = SharedGame.objects.create(owner=self.member, template_game=template, status=status)
+            if finished_minutes_ago is not None:
+                shared.finished_at = timezone.now() - timedelta(minutes=finished_minutes_ago)
+                shared.save(update_fields=['finished_at'])
+            FlockSharedGame.objects.create(flock=self.flock, shared_game=shared, added_by=self.member)
+            return shared
+
+        open_game = link(SharedGame.STATUS_OPEN)  # oldest link, still open
+        finished = [link(SharedGame.STATUS_FINISHED, finished_minutes_ago=i) for i in range(55)]
+        expired = link(SharedGame.STATUS_OPEN)
+        expired.ends_at = timezone.now() - timedelta(seconds=30)
+        expired.save(update_fields=['ends_at'])
+
+        detail = self.client.get('/api/flocks/waders/').data
+        games = detail['extra_games']
+        self.assertEqual(games[0]['token'], open_game.token)
+        self.assertTrue(games[0]['is_open'])
+        self.assertTrue(all(not row['is_open'] for row in games[1:]))
+        self.assertEqual(len(games), 1 + MAX_FINISHED_EXTRA_GAMES)
+        # Most recently finished first; the game past its deadline finished at that deadline.
+        self.assertEqual(games[1]['token'], finished[0].token)
+        self.assertEqual(games[2]['token'], expired.token)
+        self.assertEqual(games[2]['finished_at'], expired.ends_at.isoformat())
+        self.assertEqual(detail['extra_games_finished_total'], 56)

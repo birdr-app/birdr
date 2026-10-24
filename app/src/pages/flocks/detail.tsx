@@ -511,7 +511,7 @@ export function FlockDetailPage() {
             </Box>
           )}
 
-          {flock.is_member ? <FlockExtraGames games={flock.extra_games ?? []} /> : null}
+          {flock.is_member ? <FlockExtraGames games={flock.extra_games ?? []} finishedTotal={flock.extra_games_finished_total} /> : null}
 
           {flock.is_member ? (
             <Box borderWidth="2px" borderColor="primary.200" borderRadius="xl" px={4} py={2} mb={4}>

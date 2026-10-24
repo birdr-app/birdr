@@ -747,5 +747,9 @@
   "shared_game_choose_flock": "Kies een flock",
   "shared_game_add_to_named_flock": "Toevoegen aan {flock}",
   "shared_game_in_flocks": "Gedeeld in {flocks}",
-  "flock_extra_game_meta": "{count, plural, =0 {Nog niemand gespeeld} one {# speler} other {# spelers}}"
+  "flock_extra_game_meta": "{count, plural, =0 {Nog niemand gespeeld} one {# speler} other {# spelers}}",
+  "flock_extra_games_finished": "Afgelopen",
+  "flock_extra_games_show_all": "Toon alle afgelopen spellen ({count})",
+  "flock_extra_games_show_fewer": "Toon minder",
+  "flock_extra_games_none_open": "Er staan nu geen open spellen. Maak een spel, kies Delen en voeg het toe aan deze flock."
 }

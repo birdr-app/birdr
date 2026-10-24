@@ -468,7 +468,7 @@ export function FlockDetailScreen() {
         </View>
       )}
 
-      {flock.is_member ? <FlockExtraGames games={flock.extra_games ?? []} /> : null}
+      {flock.is_member ? <FlockExtraGames games={flock.extra_games ?? []} finishedTotal={flock.extra_games_finished_total} /> : null}
 
       {flock.is_member ? (
         <View style={styles.settingsCard}>

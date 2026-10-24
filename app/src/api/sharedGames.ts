@@ -53,6 +53,7 @@ export type FlockExtraGame = {
   is_open: boolean;
   ends_at: string | null;
   closes_at: string;
+  finished_at: string | null;
   participants: number;
   game: SharedGameSettings;
   my_attempt: { completed: boolean; score: number; correct_count: number } | null;

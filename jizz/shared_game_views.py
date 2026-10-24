@@ -123,17 +123,30 @@ def shared_game_payload(shared_game: SharedGame, request, player: Player | None)
     }
 
 
-def flock_extra_games(flock: Flock, user, limit: int = 20) -> list[dict]:
-    """Compact rows for a flock's Extra games: newest first, with your own result if you played."""
-    links = (
-        flock.shared_games.select_related(
-            'shared_game__owner', 'shared_game__template_game__country', 'added_by'
-        )
-        .annotate(
-            participants=Count(
-                'shared_game__attempts', filter=Q(shared_game__attempts__is_ranked=True)
-            )
-        )[:limit]
+MAX_OPEN_EXTRA_GAMES = 20
+MAX_FINISHED_EXTRA_GAMES = 50
+
+
+def flock_extra_games(flock: Flock, user) -> list[dict]:
+    """Rows for a flock's Extra games: open games first (newest first), then recently finished.
+
+    Open games are shown as cards and finished ones as compact rows, so a flock with many
+    finished games never pushes an open one off the list.
+    """
+    links = flock.shared_games.select_related(
+        'shared_game__owner', 'shared_game__template_game__country', 'added_by'
+    ).annotate(
+        participants=Count('shared_game__attempts', filter=Q(shared_game__attempts__is_ranked=True))
+    )
+    # Status is otherwise computed lazily: persist the finish of games past their deadline.
+    for link in links.filter(shared_game__status=SharedGame.STATUS_OPEN):
+        link.shared_game.refresh_status()
+    open_links = list(
+        links.filter(shared_game__status=SharedGame.STATUS_OPEN).order_by('-created')[:MAX_OPEN_EXTRA_GAMES]
+    )
+    finished_links = list(
+        links.filter(shared_game__status=SharedGame.STATUS_FINISHED)
+        .order_by('-shared_game__finished_at', '-created')[:MAX_FINISHED_EXTRA_GAMES]
     )
     mine = {}
     if user is not None:
@@ -144,9 +157,8 @@ def flock_extra_games(flock: Flock, user, limit: int = 20) -> list[dict]:
             )
         }
     rows = []
-    for link in links:
+    for link in open_links + finished_links:
         shared_game = link.shared_game
-        shared_game.refresh_status()
         attempt = mine.get(shared_game.id)
         rows.append(
             {
@@ -157,6 +169,7 @@ def flock_extra_games(flock: Flock, user, limit: int = 20) -> list[dict]:
                 'is_open': shared_game.is_open,
                 'ends_at': shared_game.ends_at.isoformat() if shared_game.ends_at else None,
                 'closes_at': shared_game.closes_at.isoformat(),
+                'finished_at': shared_game.finished_at.isoformat() if shared_game.finished_at else None,
                 'participants': link.participants,
                 'game': _game_settings(shared_game.template_game),
                 'my_attempt': {
@@ -167,6 +180,10 @@ def flock_extra_games(flock: Flock, user, limit: int = 20) -> list[dict]:
             }
         )
     return rows
+
+
+def flock_finished_extra_games_total(flock: Flock) -> int:
+    return flock.shared_games.filter(shared_game__status=SharedGame.STATUS_FINISHED).count()
 
 
 class SharedGameListCreateView(APIView):

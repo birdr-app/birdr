@@ -745,5 +745,9 @@
   "shared_game_choose_flock": "Choisissez un flock",
   "shared_game_add_to_named_flock": "Ajouter à {flock}",
   "shared_game_in_flocks": "Partagée dans {flocks}",
-  "flock_extra_game_meta": "{count, plural, =0 {Personne n'a encore joué} one {# joueur} other {# joueurs}}"
+  "flock_extra_game_meta": "{count, plural, =0 {Personne n'a encore joué} one {# joueur} other {# joueurs}}",
+  "flock_extra_games_finished": "Terminées",
+  "flock_extra_games_show_all": "Voir toutes les parties terminées ({count})",
+  "flock_extra_games_show_fewer": "Voir moins",
+  "flock_extra_games_none_open": "Aucune partie ouverte pour l'instant. Créez une partie, choisissez Partager et ajoutez-la à ce flock."
 }

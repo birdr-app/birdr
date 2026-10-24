@@ -481,10 +481,12 @@ class FlockDetailView(APIView):
         )
         if flock.is_private and not flock.is_member(request.user):
             raise NotFound()
-        from jizz.shared_game_views import flock_extra_games
+        from jizz.shared_game_views import flock_extra_games, flock_finished_extra_games_total
 
         data = _serialize_flock(flock, request, include_invite=True)
         data['extra_games'] = flock_extra_games(flock, request.user)
+        # Finished games beyond the list (it holds the most recent ones only).
+        data['extra_games_finished_total'] = flock_finished_extra_games_total(flock)
         return Response(data)
 
     def patch(self, request, slug):
