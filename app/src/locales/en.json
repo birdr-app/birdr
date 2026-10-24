@@ -381,6 +381,8 @@
   "help_page": "Help",
   "species review stats line": "{total} media · {unreviewed} unreviewed · {approved} approved · {rejected} rejected · {notSure} not sure",
   "login to review": "Please log in to review media.",
+  "media source all": "All sources",
+  "media source placeholder": "Source...",
   "media type images": "Images",
   "media type videos": "Videos",
   "media type audio": "Audio",

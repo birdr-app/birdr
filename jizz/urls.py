@@ -37,7 +37,7 @@ from jizz.views import CountryDetailView, CountryViewSet, SpeciesListView, Speci
     ReactionView, \
     FamilyListView, OrderListView, SpeciesGroupListView, LanguageListView, RegisterView, ProfileView, \
     PasswordResetRequestView, PasswordResetConfirmView, OAuthCompleteView, UserGamesView, UserGameDetailView, \
-    MediaListView, MediaReviewSpeciesListView, ReviewMediaView, FirstAssertionReviewView, FlagMediaView, SpeciesReviewStatsView, GoogleLoginView, AppleLoginView, \
+    MediaListView, MediaReviewSpeciesListView, MediaSourceListView, ReviewMediaView, FirstAssertionReviewView, FlagMediaView, SpeciesReviewStatsView, GoogleLoginView, AppleLoginView, \
     PageListView, PageDetailView
 from jizz.data_views import (
     data_country_challenge_leaderboard_api_view,
@@ -548,6 +548,7 @@ urlpatterns = [
 
     re_path(r"^api/media/$", MediaListView.as_view(), name="media-list"),
     re_path(r"^api/media-review-species/$", MediaReviewSpeciesListView.as_view(), name="media-review-species"),
+    re_path(r"^api/media-sources/$", MediaSourceListView.as_view(), name="media-sources"),
     path('api/review-media/first-assertion/', FirstAssertionReviewView.as_view(), name='review-media-first-assertion'),
     re_path(r"^api/review-media/$", ReviewMediaView.as_view(), name="review-media-create"),
     re_path(r"^api/flag-media/$", FlagMediaView.as_view(), name="flag-media-create"),
