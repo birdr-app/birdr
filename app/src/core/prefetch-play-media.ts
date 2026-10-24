@@ -7,6 +7,7 @@ import {
   resolvePlayMediaType,
   type PlayMediaQuestion,
 } from './question-media-index';
+import { playPreviewSrc } from '../utils/play-image-url';
 
 export type PrefetchMediaKind = 'images' | 'video' | 'audio';
 
@@ -48,8 +49,9 @@ export function prefetchPlayMedia(url?: string | null, kind?: PrefetchMediaKind)
     video.src = url;
     return;
   }
+  // Prefetch the size the game shows, so the image is fetched from the host once.
   const img = new Image();
-  img.src = url;
+  img.src = playPreviewSrc(url);
 }
 
 export function prefetchQuestionPlayMedia(

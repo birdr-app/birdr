@@ -214,6 +214,11 @@ export function QuestionMediaView({
   const [imageProgress, setImageProgress] = React.useState<number | null>(null);
   const [videoReady, setVideoReady] = React.useState(false);
   const [imageReloadKey, setImageReloadKey] = React.useState(0);
+  // Wikimedia answers 429 when busy generating thumbnails: try the other standard
+  // size once (often already cached) before showing the error state.
+  const [useFullSize, setUseFullSize] = React.useState(false);
+  React.useEffect(() => setUseFullSize(false), [imageUri]);
+  const shownImageUri = imageUri && useFullSize ? playFullSrc(imageUri) : imageUri;
   const mediaReadyOnce = React.useRef(false);
   const fireMediaReady = React.useCallback(() => {
     if (!onMediaReady || mediaReadyOnce.current) return;
@@ -386,11 +391,11 @@ export function QuestionMediaView({
                   ]}
                 >
                   <CachedRemoteImage
-                    key={`${imageUri}-${imageReloadKey}`}
-                    recyclingKey={`${imageUri}-${imageReloadKey}`}
+                    key={`${shownImageUri}-${imageReloadKey}`}
+                    recyclingKey={`${shownImageUri}-${imageReloadKey}`}
                     style={styles.image}
                     contentFit="contain"
-                    source={remotePlayImageSource(imageUri)}
+                    source={remotePlayImageSource(shownImageUri as string)}
                     onLoadStart={() => {
                       setImageLoaded(false);
                       setImageProgress(null);
@@ -405,6 +410,10 @@ export function QuestionMediaView({
                       fireMediaReady();
                     }}
                     onError={(e) => {
+                      if (!useFullSize && imageUri && playFullSrc(imageUri) !== imageUri) {
+                        setUseFullSize(true);
+                        return;
+                      }
                       const message = e.error || 'Unknown image error';
                       onImageError?.(message);
                       setImageLoaded(true);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -32,6 +32,17 @@ export function ZoomablePlayImage({
 }: ZoomablePlayImageProps) {
   const [open, setOpen] = useState(false);
   const intl = useIntl();
+  // Wikimedia answers 429 when it is busy generating thumbnails. Try the other
+  // standard size once (often already cached) before giving up on the image.
+  const [src, setSrc] = useState(previewSrc);
+  useEffect(() => setSrc(previewSrc), [previewSrc]);
+  const handleError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    if (src === previewSrc && fullSrc && fullSrc !== previewSrc) {
+      setSrc(fullSrc);
+      return;
+    }
+    onError(e);
+  };
 
   return (
     <>
@@ -51,9 +62,9 @@ export function ZoomablePlayImage({
         })}
       >
         <Image
-          src={previewSrc}
+          src={src}
           onLoad={onLoad}
-          onError={onError}
+          onError={handleError}
           w="100%"
           h="100%"
           objectFit="contain"

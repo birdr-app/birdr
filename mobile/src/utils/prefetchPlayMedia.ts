@@ -1,4 +1,5 @@
-import { Image } from 'react-native';
+import { Image } from 'expo-image';
+import { remotePlayImageSource } from '../components/CachedRemoteImage';
 import {
   currentPlayMediaItem,
   resolvePlayMediaType,
@@ -34,7 +35,10 @@ export function prefetchPlayMedia(url?: string | null, kind?: PrefetchMediaKind)
   if (prefetched.has(url)) return;
   prefetched.add(url);
   if (kind === 'images') {
-    Image.prefetch(playPreviewSrc(url)).catch(() => {});
+    // Same URL, headers and disk cache as CachedRemoteImage in the game, so the
+    // photo is downloaded from Wikimedia/iNaturalist once, not twice.
+    const source = remotePlayImageSource(playPreviewSrc(url));
+    Image.prefetch(source.uri as string, { cachePolicy: 'disk', headers: source.headers }).catch(() => {});
     return;
   }
   fetch(url).catch(() => {});
