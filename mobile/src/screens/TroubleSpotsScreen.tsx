@@ -327,62 +327,37 @@ export function TroubleSpotsScreen() {
         flocks.map((flock) => {
           const flockKey = flock.species.map((member) => member.species_id).join('-');
           const busy = startingFlockKey === flockKey;
-          const names = new Map(
-            flock.species.map((member) => [
-              member.species_id,
-              troubleSpotPairDisplayName(
-                member.name_translated || member.name,
-                member.name_nl,
-                speciesLanguage,
-              ),
-            ]),
-          );
           return (
-            <View key={flockKey} style={styles.flockCard}>
-              <View style={styles.flockHeader}>
-                <Text style={styles.flockSummary}>
+            <View key={flockKey} style={styles.speciesRow}>
+              <View style={styles.rowText}>
+                {flock.species.map((member) => (
+                  <Text key={member.species_id} style={styles.rowTitle} numberOfLines={1}>
+                    {troubleSpotPairDisplayName(
+                      member.name_translated || member.name,
+                      member.name_nl,
+                      speciesLanguage,
+                    )}
+                  </Text>
+                ))}
+                <Text style={styles.rowStatCompact} numberOfLines={1}>
                   {t('trouble_spots_flock_summary')
                     .replace('{count}', String(flock.total_wrong))
                     .replace('{species}', String(flock.species.length))}
                 </Text>
-                <TouchableOpacity
-                  style={[styles.practiceButtonCompact, busy && styles.practiceButtonDisabled]}
-                  onPress={() => void handlePracticeFlock(flock)}
-                  disabled={busy || startingFlockKey != null}
-                >
-                  {busy ? (
-                    <ActivityIndicator size="small" color={colors.primary[50]} />
-                  ) : (
-                    <Text style={styles.practiceButtonTextCompact}>
-                      {t('trouble_spots_practice_species')}
-                    </Text>
-                  )}
-                </TouchableOpacity>
               </View>
-              <View style={styles.flockMembers}>
-                {flock.species.map((member) => {
-                  const row = species.find((s) => s.species_id === member.species_id);
-                  return (
-                    <TouchableOpacity
-                      key={member.species_id}
-                      style={styles.flockMember}
-                      onPress={row ? () => openSpecies(row) : undefined}
-                      disabled={!row}
-                      accessibilityRole={row ? 'button' : undefined}
-                    >
-                      <SpeciesCoverThumb
-                        speciesId={member.species_id}
-                        initialUrl={member.illustration_url}
-                        size={48}
-                        alt={names.get(member.species_id) || member.name}
-                      />
-                      <Text style={styles.flockMemberName} numberOfLines={2}>
-                        {names.get(member.species_id)}
-                      </Text>
-                    </TouchableOpacity>
-                  );
-                })}
-              </View>
+              <TouchableOpacity
+                style={[styles.practiceButtonCompact, busy && styles.practiceButtonDisabled]}
+                onPress={() => void handlePracticeFlock(flock)}
+                disabled={busy || startingFlockKey != null}
+              >
+                {busy ? (
+                  <ActivityIndicator size="small" color={colors.primary[50]} />
+                ) : (
+                  <Text style={styles.practiceButtonTextCompact}>
+                    {t('trouble_spots_practice_species')}
+                  </Text>
+                )}
+              </TouchableOpacity>
             </View>
           );
         })
@@ -632,25 +607,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   practiceButtonTextCompact: { color: colors.primary[50], fontSize: 13, fontWeight: '600' },
-  flockCard: {
-    paddingVertical: 12,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: colors.primary[200],
-  },
-  flockHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: 10,
-    marginBottom: 8,
-  },
-  flockSummary: { flex: 1, fontSize: 14, color: colors.primary[700] },
-  flockMembers: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
-  flockMember: { width: 72, alignItems: 'center', gap: 4 },
-  flockMemberName: {
-    fontSize: 11,
-    fontWeight: '600',
-    color: colors.primary[800],
-    textAlign: 'center',
-  },
 });

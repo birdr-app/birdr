@@ -462,71 +462,49 @@ export default function TroubleSpotsPage() {
             ) : (
               <VStack gap={3} align="stretch">
                 {flocks.map((flock) => {
-                  const names = new Map(
-                    flock.species.map((member) => [
-                      member.species_id,
-                      speciesNameById(
-                        member.species_id,
-                        member.name_translated || member.name,
-                        member.name_nl,
-                      ),
-                    ]),
-                  );
                   const flockKey = flock.species.map((member) => member.species_id).join('-');
                   const busy = startingFlockKey === flockKey;
                   return (
-                    <Box key={flockKey} py={3} borderBottomWidth="1px" borderColor="primary.100">
-                      <Flex align="center" justify="space-between" gap={3} mb={2}>
-                        <Text fontSize="sm" color="primary.700">
+                    <Flex
+                      key={flockKey}
+                      align="flex-start"
+                      gap={3}
+                      py={3}
+                      borderBottomWidth="1px"
+                      borderColor="primary.100"
+                    >
+                      <Box flex={1} minW={0}>
+                        {flock.species.map((member) => (
+                          <Text key={member.species_id} fontWeight="semibold" lineClamp={1}>
+                            {speciesNameById(
+                              member.species_id,
+                              member.name_translated || member.name,
+                              member.name_nl,
+                            )}
+                          </Text>
+                        ))}
+                        <Text fontSize="sm" color="primary.700" mt={1}>
                           <FormattedMessage
                             id="trouble_spots_flock_summary"
                             defaultMessage="{count} mix-ups between {species} birds"
                             values={{ count: flock.total_wrong, species: flock.species.length }}
                           />
                         </Text>
-                        <Button
-                          size="sm"
-                          colorPalette="primary"
-                          flexShrink={0}
-                          loading={busy}
-                          disabled={startingFlockKey != null && !busy}
-                          onClick={() => void handlePracticeFlock(flock)}
-                        >
-                          <FormattedMessage
-                            id="trouble_spots_practice_flock"
-                            defaultMessage="Practice this flock"
-                          />
-                        </Button>
-                      </Flex>
-                      <Flex gap={2} flexWrap="wrap">
-                        {flock.species.map((member) => (
-                          <Box
-                            key={member.species_id}
-                            as="button"
-                            display="flex"
-                            flexDirection="column"
-                            alignItems="center"
-                            gap={1}
-                            w="72px"
-                            bg="transparent"
-                            cursor="pointer"
-                            onClick={() =>
-                              navigate(`/trouble-spots/species/${member.species_id}${countryQuery}`)
-                            }
-                          >
-                            <SpeciesCoverThumb
-                              speciesId={member.species_id}
-                              initialUrl={member.illustration_url}
-                              size={SPECIES_THUMB}
-                              alt={names.get(member.species_id) || member.name}
-                            />
-                            <Text fontSize="2xs" fontWeight="semibold" textAlign="center" lineClamp={2}>
-                              {names.get(member.species_id)}
-                            </Text>
-                          </Box>
-                        ))}
-                      </Flex>
-                    </Box>
+                      </Box>
+                      <Button
+                        size="sm"
+                        colorPalette="primary"
+                        flexShrink={0}
+                        loading={busy}
+                        disabled={startingFlockKey != null && !busy}
+                        onClick={() => void handlePracticeFlock(flock)}
+                      >
+                        <FormattedMessage
+                          id="trouble_spots_practice_flock"
+                          defaultMessage="Practice this flock"
+                        />
+                      </Button>
+                    </Flex>
                   );
                 })}
               </VStack>
