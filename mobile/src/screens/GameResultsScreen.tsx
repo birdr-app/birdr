@@ -245,7 +245,8 @@ export function GameResultsScreen() {
 
   const isPairPractice = game?.game_type === 'pair_practice';
   const isSpeciesPractice = game?.game_type === 'species_practice';
-  const isPracticeGame = isPairPractice || isSpeciesPractice;
+  const isMixupPractice = game?.game_type === 'mixup_practice';
+  const isPracticeGame = isPairPractice || isSpeciesPractice || isMixupPractice;
   const practicePassed =
     isPracticeGame &&
     resultsStats != null &&
@@ -263,8 +264,11 @@ export function GameResultsScreen() {
       .replace('{correct}', String(resultsStats.correctCount))
       .replace('{total}', String(resultsStats.totalQuestions));
 
+    const flockSpecies = (game?.mixup_species ?? []).map((sp) => sp.name).join(', ') || '—';
     let message: string;
-    if (practicePassed) {
+    if (practicePassed && isMixupPractice) {
+      message = t('mixup_practice_fixed_message').replace('{species}', flockSpecies);
+    } else if (practicePassed) {
       if (isSpeciesPractice) {
         message = t('species_practice_fixed_message').replace(
           '{species}',
@@ -275,6 +279,8 @@ export function GameResultsScreen() {
           .replace('{species1}', game?.pair_species_low_name || '—')
           .replace('{species2}', game?.pair_species_high_name || '—');
       }
+    } else if (isMixupPractice) {
+      message = t('practice_failed_message_flock').replace('{species}', flockSpecies);
     } else if (isSpeciesPractice) {
       message = t('practice_failed_message_species').replace(
         '{species}',
@@ -288,7 +294,9 @@ export function GameResultsScreen() {
 
     const resultsTitle = isSpeciesPractice
       ? t('species_practice_results_title')
-      : t('pair_practice_results_title');
+      : isMixupPractice
+        ? t('mixup_practice_results_title')
+        : t('pair_practice_results_title');
 
     return (
       <View style={styles.wrapper}>
@@ -331,6 +339,17 @@ export function GameResultsScreen() {
                   />
                 </>
               ) : null}
+              {isMixupPractice
+                ? game?.mixup_species?.map((sp) => (
+                    <PracticeSpeciesLinks
+                      key={sp.id}
+                      speciesId={sp.id}
+                      name={sp.name}
+                      code={sp.code}
+                      illustrationUrl={sp.illustration_url}
+                    />
+                  ))
+                : null}
             </View>
           ) : null}
           <View style={styles.buttons}>

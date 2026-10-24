@@ -45,6 +45,13 @@ export type Game = {
   focus_species_name?: string | null;
   focus_species_code?: string | null;
   focus_species_illustration_url?: string | null;
+  /** Species of a mixup_practice (mixed-up flock) game. */
+  mixup_species?: {
+    id: number;
+    name: string;
+    code?: string;
+    illustration_url?: string | null;
+  }[] | null;
   current_highscore?: { name: string; score?: number };
   scores?: GameScore[];
   /** Number of questions created so far (0 = still in lobby). */

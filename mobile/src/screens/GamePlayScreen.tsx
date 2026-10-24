@@ -404,7 +404,8 @@ export function GamePlayScreen() {
 
   const isPairPractice = game?.game_type === 'pair_practice';
   const isSpeciesPractice = game?.game_type === 'species_practice';
-  const isPracticeGame = isPairPractice || isSpeciesPractice;
+  const isMixupPractice = game?.game_type === 'mixup_practice';
+  const isPracticeGame = isPairPractice || isSpeciesPractice || isMixupPractice;
 
   const practiceAnswers = useMemo(
     () =>
@@ -674,10 +675,12 @@ export function GamePlayScreen() {
         <>
           <View style={styles.pairPracticeHeader}>
             <View style={styles.pairPracticeTitleBlock}>
-                <Text style={styles.pairPracticeSpecies} numberOfLines={2}>
+                <Text style={styles.pairPracticeSpecies} numberOfLines={isMixupPractice ? 3 : 2}>
                   {isSpeciesPractice
                     ? game.focus_species_name
-                    : `${game.pair_species_low_name} · ${game.pair_species_high_name}`}
+                    : isMixupPractice
+                      ? (game.mixup_species ?? []).map((sp) => sp.name).join(' · ')
+                      : `${game.pair_species_low_name} · ${game.pair_species_high_name}`}
                 </Text>
             </View>
             <View style={styles.jokersHearts}>
@@ -928,7 +931,8 @@ export function GamePlayScreen() {
 
       {isPracticeGame &&
       ((isSpeciesPractice && game.focus_species_id) ||
-        (isPairPractice && game.pair_species_low_id && game.pair_species_high_id)) ? (
+        (isPairPractice && game.pair_species_low_id && game.pair_species_high_id) ||
+        (isMixupPractice && game.mixup_species?.length)) ? (
         <View style={styles.pairPracticeFooter}>
           {isSpeciesPractice && game.focus_species_id ? (
             <PracticeSpeciesLinks
@@ -954,6 +958,17 @@ export function GamePlayScreen() {
               />
             </>
           ) : null}
+          {isMixupPractice
+            ? game.mixup_species?.map((sp) => (
+                <PracticeSpeciesLinks
+                  key={sp.id}
+                  speciesId={sp.id}
+                  name={sp.name}
+                  code={sp.code}
+                  illustrationUrl={sp.illustration_url}
+                />
+              ))
+            : null}
         </View>
       ) : null}
 

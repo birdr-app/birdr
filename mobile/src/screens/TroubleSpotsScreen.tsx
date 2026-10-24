@@ -23,7 +23,9 @@ import { SpeciesCoverThumb } from '../components/SpeciesCoverThumb';
 import {
   fetchTroubleSpots,
   startConfusionPairPractice,
+  startMixupPractice,
   startSpeciesPractice,
+  type TroubleSpotFlock,
   type TroubleSpotPair,
   type TroubleSpotSpecies,
 } from '../api/practice';
@@ -32,7 +34,7 @@ import { CountrySelect } from '../components/CountrySelect';
 import * as playerApi from '../api/player';
 import { colors } from '../theme';
 
-type TabKey = 'species' | 'pairs';
+type TabKey = 'species' | 'pairs' | 'flocks';
 
 function formatRate(rate: number | null): string {
   if (rate == null) return '—';
@@ -55,11 +57,13 @@ export function TroubleSpotsScreen() {
   const [activeTab, setActiveTab] = useState<TabKey>('species');
   const [species, setSpecies] = useState<TroubleSpotSpecies[]>([]);
   const [pairs, setPairs] = useState<TroubleSpotPair[]>([]);
+  const [flocks, setFlocks] = useState<TroubleSpotFlock[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [startingPairKey, setStartingPairKey] = useState<string | null>(null);
   const [startingSpeciesId, setStartingSpeciesId] = useState<number | null>(null);
+  const [startingFlockKey, setStartingFlockKey] = useState<string | null>(null);
   const [country, setCountry] = useState<Country | null>(null);
   const [countries, setCountries] = useState<Country[]>([]);
   const [includeFixed, setIncludeFixed] = useState(false);
@@ -105,10 +109,12 @@ export function TroubleSpotsScreen() {
       const data = await fetchTroubleSpots(effectiveCountryCode, speciesLanguage);
       setSpecies(data.species);
       setPairs(data.pairs);
+      setFlocks(data.flocks ?? []);
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : t('failed_load'));
       setSpecies([]);
       setPairs([]);
+      setFlocks([]);
     } finally {
       setLoading(false);
       setRefreshing(false);
@@ -118,7 +124,7 @@ export function TroubleSpotsScreen() {
   useFocusEffect(
     useCallback(() => {
       const tab = (route.params as { tab?: string } | undefined)?.tab;
-      if (tab === 'pairs' || tab === 'species') setActiveTab(tab);
+      if (tab === 'pairs' || tab === 'species' || tab === 'flocks') setActiveTab(tab);
       void load();
     }, [load, route.params]),
   );
@@ -162,6 +168,46 @@ export function TroubleSpotsScreen() {
     }
   };
 
+  const handlePracticeFlock = async (flock: TroubleSpotFlock) => {
+    const speciesIds = flock.species.map((member) => member.species_id);
+    setStartingFlockKey(speciesIds.join('-'));
+    setError(null);
+    try {
+      const result = await startMixupPractice(speciesIds, effectiveCountryCode);
+      const p = await playerApi.getPlayer(result.player_token);
+      if (p) setPlayer(p);
+      const game = await loadGame(result.game.token);
+      if (game) {
+        setGame(game);
+        navigation.navigate('GamePlay' as never);
+      }
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : t('failed_load'));
+    } finally {
+      setStartingFlockKey(null);
+    }
+  };
+
+  const openPair = (pair: TroubleSpotPair) => {
+    navigation.navigate('TroubleSpotPair', {
+      lowId: pair.low_id,
+      highId: pair.high_id,
+      lowName: troubleSpotPairDisplayName(pair.low_name, pair.low_name_nl, speciesLanguage),
+      highName: troubleSpotPairDisplayName(pair.high_name, pair.high_name_nl, speciesLanguage),
+      lowLatin: pair.low_name_latin,
+      highLatin: pair.high_name_latin,
+      lowNl: pair.low_name_nl,
+      highNl: pair.high_name_nl,
+      lowCode: pair.low_code,
+      highCode: pair.high_code,
+      lowIllustrationUrl: pair.low_illustration_url,
+      highIllustrationUrl: pair.high_illustration_url,
+      totalWrong: pair.total_wrong,
+      fixed: pair.fixed,
+      countryCode: effectiveCountryCode,
+    });
+  };
+
   const openSpecies = (row: TroubleSpotSpecies) => {
     const displayName = troubleSpotDisplayName(row, speciesLanguage);
     navigation.navigate('TroubleSpotSpecies', {
@@ -183,6 +229,7 @@ export function TroubleSpotsScreen() {
   const tabs: { key: TabKey; label: string; count: number }[] = [
     { key: 'species', label: t('trouble_spots_species_title'), count: visibleSpecies.length },
     { key: 'pairs', label: t('trouble_spots_pairs_title'), count: visiblePairs.length },
+    { key: 'flocks', label: t('trouble_spots_flocks_title'), count: flocks.length },
   ];
 
   const countryPicker = effectiveCountryCode ? (
@@ -273,6 +320,93 @@ export function TroubleSpotsScreen() {
           );
         })
       )
+    ) : activeTab === 'flocks' ? (
+      flocks.length === 0 ? (
+        <Text style={styles.muted}>{t('trouble_spots_no_flocks')}</Text>
+      ) : (
+        flocks.map((flock) => {
+          const flockKey = flock.species.map((member) => member.species_id).join('-');
+          const busy = startingFlockKey === flockKey;
+          const names = new Map(
+            flock.species.map((member) => [
+              member.species_id,
+              troubleSpotPairDisplayName(
+                member.name_translated || member.name,
+                member.name_nl,
+                speciesLanguage,
+              ),
+            ]),
+          );
+          return (
+            <View key={flockKey} style={styles.flockCard}>
+              <View style={styles.flockHeader}>
+                <Text style={styles.flockSummary}>
+                  {t('trouble_spots_flock_summary')
+                    .replace('{count}', String(flock.total_wrong))
+                    .replace('{species}', String(flock.species.length))}
+                </Text>
+                <TouchableOpacity
+                  style={[styles.practiceButtonCompact, busy && styles.practiceButtonDisabled]}
+                  onPress={() => void handlePracticeFlock(flock)}
+                  disabled={busy || startingFlockKey != null}
+                >
+                  {busy ? (
+                    <ActivityIndicator size="small" color={colors.primary[50]} />
+                  ) : (
+                    <Text style={styles.practiceButtonTextCompact}>
+                      {t('trouble_spots_practice_species')}
+                    </Text>
+                  )}
+                </TouchableOpacity>
+              </View>
+              <View style={styles.flockMembers}>
+                {flock.species.map((member) => {
+                  const row = species.find((s) => s.species_id === member.species_id);
+                  return (
+                    <TouchableOpacity
+                      key={member.species_id}
+                      style={styles.flockMember}
+                      onPress={row ? () => openSpecies(row) : undefined}
+                      disabled={!row}
+                      accessibilityRole={row ? 'button' : undefined}
+                    >
+                      <SpeciesCoverThumb
+                        speciesId={member.species_id}
+                        initialUrl={member.illustration_url}
+                        size={48}
+                        alt={names.get(member.species_id) || member.name}
+                      />
+                      <Text style={styles.flockMemberName} numberOfLines={2}>
+                        {names.get(member.species_id)}
+                      </Text>
+                    </TouchableOpacity>
+                  );
+                })}
+              </View>
+              <View style={styles.flockPairs}>
+                {flock.pairs.map((flockPair) => {
+                  const pair = pairs.find(
+                    (p) => p.low_id === flockPair.low_id && p.high_id === flockPair.high_id,
+                  );
+                  return (
+                    <TouchableOpacity
+                      key={`${flockPair.low_id}-${flockPair.high_id}`}
+                      style={styles.flockPairChip}
+                      onPress={pair ? () => openPair(pair) : undefined}
+                      disabled={!pair}
+                    >
+                      <Text style={styles.flockPairChipText}>
+                        {names.get(flockPair.low_id)} · {names.get(flockPair.high_id)} (
+                        {flockPair.total_wrong})
+                      </Text>
+                    </TouchableOpacity>
+                  );
+                })}
+              </View>
+            </View>
+          );
+        })
+      )
     ) : visiblePairs.length === 0 ? (
       <Text style={styles.muted}>{t('trouble_spots_no_pairs')}</Text>
     ) : (
@@ -285,25 +419,7 @@ export function TroubleSpotsScreen() {
           <View key={key} style={styles.speciesRow}>
             <TouchableOpacity
               style={styles.pairRowMain}
-              onPress={() =>
-                navigation.navigate('TroubleSpotPair', {
-                  lowId: pair.low_id,
-                  highId: pair.high_id,
-                  lowName,
-                  highName,
-                  lowLatin: pair.low_name_latin,
-                  highLatin: pair.high_name_latin,
-                  lowNl: pair.low_name_nl,
-                  highNl: pair.high_name_nl,
-                  lowCode: pair.low_code,
-                  highCode: pair.high_code,
-                  lowIllustrationUrl: pair.low_illustration_url,
-                  highIllustrationUrl: pair.high_illustration_url,
-                  totalWrong: pair.total_wrong,
-                  fixed: pair.fixed,
-                  countryCode: effectiveCountryCode,
-                })
-              }
+              onPress={() => openPair(pair)}
               accessibilityRole="button"
             >
               <View style={styles.rowText}>
@@ -533,4 +649,34 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   practiceButtonTextCompact: { color: colors.primary[50], fontSize: 13, fontWeight: '600' },
+  flockCard: {
+    paddingVertical: 12,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: colors.primary[200],
+  },
+  flockHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 10,
+    marginBottom: 8,
+  },
+  flockSummary: { flex: 1, fontSize: 14, color: colors.primary[700] },
+  flockMembers: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 8 },
+  flockMember: { width: 72, alignItems: 'center', gap: 4 },
+  flockMemberName: {
+    fontSize: 11,
+    fontWeight: '600',
+    color: colors.primary[800],
+    textAlign: 'center',
+  },
+  flockPairs: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+  flockPairChip: {
+    borderWidth: 1,
+    borderColor: colors.primary[300],
+    borderRadius: 6,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+  },
+  flockPairChipText: { fontSize: 12, color: colors.primary[700] },
 });

@@ -40,10 +40,30 @@ export type TroubleSpotPair = {
   fixed?: boolean;
 };
 
+export type TroubleSpotFlockSpecies = {
+  species_id: number;
+  name: string;
+  name_translated?: string;
+  name_latin: string;
+  name_nl?: string;
+  code?: string;
+  illustration_url?: string | null;
+  mixups: number;
+};
+
+/** 3–6 species linked by repeated mix-ups (fixed pairs excluded). */
+export type TroubleSpotFlock = {
+  total_wrong: number;
+  species: TroubleSpotFlockSpecies[];
+  pairs: { low_id: number; high_id: number; total_wrong: number }[];
+};
+
 export type TroubleSpotsResponse = {
   country_code: string | null;
   species: TroubleSpotSpecies[];
   pairs: TroubleSpotPair[];
+  /** Missing on servers older than the mixed-up flocks release. */
+  flocks?: TroubleSpotFlock[];
 };
 
 export async function fetchTroubleSpots(
@@ -136,6 +156,28 @@ export async function startSpeciesPractice(
   const body: Record<string, unknown> = { species_id: speciesId };
   if (countryCode?.trim()) body.country_code = countryCode.trim().toUpperCase();
   const response = await fetch(apiUrl('/api/practice/species/start/'), {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      ...headers,
+    },
+    body: JSON.stringify(body),
+  });
+  if (!response.ok) {
+    throw new Error(await readApiErrorMessage(response, 'Practice request failed'));
+  }
+  return (await response.json()) as StartPairPracticeResponse;
+}
+
+export async function startMixupPractice(
+  speciesIds: number[],
+  countryCode?: string,
+): Promise<StartPairPracticeResponse> {
+  const headers = await getAuthHeaders();
+  const body: Record<string, unknown> = { species_ids: speciesIds };
+  if (countryCode?.trim()) body.country_code = countryCode.trim().toUpperCase();
+  const response = await fetch(apiUrl('/api/practice/mixup-flock/start/'), {
     method: 'POST',
     headers: {
       Accept: 'application/json',
