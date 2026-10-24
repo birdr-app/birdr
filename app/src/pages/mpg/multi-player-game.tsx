@@ -14,6 +14,7 @@ const SOLO_GAME_TYPES = new Set([
   'league',
   'pair_practice',
   'species_practice',
+  'mixup_practice',
 ])
 
 const MultiPlayerGame: React.FC = () => {

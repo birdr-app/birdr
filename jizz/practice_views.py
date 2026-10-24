@@ -10,6 +10,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 
 from jizz.practice_serializers import (
     StartConfusionPairPracticeSerializer,
+    StartMixupPracticeSerializer,
     StartPracticeResponseSerializer,
     StartSpeciesPracticeSerializer,
     TroubleSpotsResponseSerializer,
@@ -17,7 +18,7 @@ from jizz.practice_serializers import (
 
 
 class TroubleSpotsView(APIView):
-    """GET — personal mistake species and confusion pairs for the authenticated user."""
+    """GET — personal mistake species, confusion pairs and mixed-up flocks for the authenticated user."""
 
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
@@ -58,6 +59,29 @@ class StartConfusionPairPracticeView(APIView):
 
     def post(self, request):
         serializer = StartConfusionPairPracticeSerializer(
+            data=request.data,
+            context={'request': request},
+        )
+        serializer.is_valid(raise_exception=True)
+        result = serializer.save()
+        response = StartPracticeResponseSerializer(
+            {
+                'game': result['game'],
+                'player_token': result['player'].token,
+            },
+            context={'request': request},
+        )
+        return Response(response.data, status=status.HTTP_201_CREATED)
+
+
+class StartMixupPracticeView(APIView):
+    """POST — start a 20-question drill within one mixed-up flock (3–6 species, all as options)."""
+
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        serializer = StartMixupPracticeSerializer(
             data=request.data,
             context={'request': request},
         )

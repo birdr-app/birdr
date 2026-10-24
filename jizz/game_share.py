@@ -9,6 +9,7 @@ from jizz.models import Game, PlayerScore
 PRIVATE_GAME_TYPES = {
     Game.GAME_TYPE_PAIR_PRACTICE,
     Game.GAME_TYPE_SPECIES_PRACTICE,
+    Game.GAME_TYPE_MIXUP_PRACTICE,
 }
 
 MEDIA_LABELS = {

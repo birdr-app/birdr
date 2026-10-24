@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from django.test import TestCase
+from django.test import SimpleTestCase, TestCase
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APIClient
@@ -32,6 +32,7 @@ from jizz.game_question_selection import (
 from jizz.quiz_mistake_stats import (
     PAIR_PRACTICE_PASS_CORRECT,
     SPECIES_PRACTICE_PASS_CORRECT,
+    build_confusion_flocks,
     get_user_confusion_pair_rows,
     get_user_fixed_confusion_pair_keys,
     get_user_fixed_species_ids,
@@ -170,6 +171,45 @@ class UserMistakeStatsTests(TestCase):
         self.assertEqual({pair['low_code'], pair['high_code']}, {'TA01', 'TB02'})
         self.assertTrue(pair['low_illustration_url'])
         self.assertTrue(pair['high_illustration_url'])
+
+
+def _pair(a, b, wrong):
+    low_id, high_id = sorted((a, b))
+    return {"low_id": low_id, "high_id": high_id, "total_wrong": wrong}
+
+
+class ConfusionFlockTests(SimpleTestCase):
+    def test_triangle_is_a_flock(self):
+        flocks = build_confusion_flocks([_pair(1, 2, 3), _pair(2, 3, 2), _pair(1, 3, 2)])
+        self.assertEqual(len(flocks), 1)
+        self.assertEqual(flocks[0]["total_wrong"], 7)
+        self.assertEqual(flocks[0]["species_ids"], [1, 2, 3])
+        self.assertEqual(flocks[0]["member_wrong"], {1: 5, 2: 5, 3: 4})
+
+    def test_lone_pair_and_weak_links_are_not_flocks(self):
+        flocks = build_confusion_flocks([_pair(1, 2, 5), _pair(2, 3, 1), _pair(4, 5, 3)])
+        self.assertEqual(flocks, [])
+
+    def test_fixed_pairs_do_not_link_species(self):
+        rows = [_pair(1, 2, 3), _pair(2, 3, 3)]
+        self.assertEqual(len(build_confusion_flocks(rows)), 1)
+        self.assertEqual(build_confusion_flocks(rows, exclude_pairs={(2, 3)}), [])
+
+    def test_large_component_splits_on_weakest_links(self):
+        rows = [
+            _pair(1, 2, 5), _pair(2, 3, 5), _pair(1, 3, 4),
+            _pair(3, 4, 2),
+            _pair(4, 5, 6), _pair(5, 6, 6), _pair(6, 7, 3), _pair(4, 7, 3),
+        ]
+        flocks = build_confusion_flocks(rows)
+        groups = sorted(sorted(f["species_ids"]) for f in flocks)
+        self.assertEqual(groups, [[1, 2, 3], [4, 5, 6, 7]])
+        self.assertEqual(flocks[0]["total_wrong"], 18)
+
+    def test_flock_size_is_capped(self):
+        # Star of 8 equally weighted links has no weaker link to split on.
+        rows = [_pair(1, n, 2) for n in range(2, 10)]
+        self.assertEqual(build_confusion_flocks(rows), [])
 
 
 class PracticeApiTests(TestCase):
@@ -377,6 +417,139 @@ class PracticeApiTests(TestCase):
         pairs = response.json()["pairs"]
         self.assertEqual(len(pairs), 1)
         self.assertTrue(pairs[0]["fixed"])
+
+    def test_trouble_spots_includes_flocks(self):
+        sp_third = Species.objects.create(name="Third", name_latin="Third t", code="PT03")
+        CountrySpecies.objects.create(country=self.country, species=sp_third, status="native")
+        player = Player.objects.create(user=self.user, name="Trouble", language="en")
+        quiz = Game.objects.create(
+            country=self.country,
+            level="beginner",
+            length=10,
+            media="images",
+            host=player,
+        )
+        score = PlayerScore.objects.create(player=player, game=quiz)
+        mixups = [
+            (self.sp_low, self.sp_high),
+            (self.sp_high, self.sp_low),
+            (self.sp_high, sp_third),
+            (sp_third, self.sp_high),
+        ]
+        for sequence, (target, pick) in enumerate(mixups, start=1):
+            question = Question.objects.create(
+                game=quiz, species=target, number=0, sequence=sequence
+            )
+            Answer.objects.create(
+                player_score=score, question=question, answer=pick, correct=False
+            )
+
+        self.client.force_authenticate(user=self.user)
+        response = self.client.get(
+            reverse("practice-trouble-spots"),
+            {"country_code": "PZ"},
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        flocks = response.json()["flocks"]
+        self.assertEqual(len(flocks), 1)
+        self.assertEqual(flocks[0]["total_wrong"], 4)
+        members = flocks[0]["species"]
+        self.assertEqual(members[0]["species_id"], self.sp_high.id)
+        self.assertEqual(members[0]["mixups"], 4)
+        self.assertEqual(
+            {m["species_id"] for m in members},
+            {self.sp_low.id, self.sp_high.id, sp_third.id},
+        )
+        self.assertEqual(len(flocks[0]["pairs"]), 2)
+
+    def _create_third_species(self):
+        sp_third = Species.objects.create(name="Third", name_latin="Third t", code="PT03")
+        CountrySpecies.objects.create(country=self.country, species=sp_third, status="native")
+        Media.objects.create(
+            species=sp_third,
+            type="image",
+            url="https://example.com/PT03.jpg",
+            source="test",
+        )
+        return sp_third
+
+    def test_start_mixup_practice_uses_whole_flock_as_options(self):
+        sp_third = self._create_third_species()
+        flock_ids = sorted([self.low_id, self.high_id, sp_third.id])
+        self.client.force_authenticate(user=self.user)
+        response = self.client.post(
+            reverse("practice-mixup-flock-start"),
+            {"species_ids": flock_ids, "country_code": "PZ"},
+            format="json",
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        data = response.json()
+        self.assertEqual(data["game"]["game_type"], "mixup_practice")
+        self.assertEqual(data["game"]["length"], 20)
+        self.assertEqual(
+            sorted(sp["id"] for sp in data["game"]["mixup_species"]),
+            flock_ids,
+        )
+
+        game = Game.objects.get(token=data["game"]["token"])
+        question = game.questions.first()
+        self.assertIn(question.species_id, flock_ids)
+        self.assertEqual(
+            sorted(question.options.values_list("id", flat=True)),
+            flock_ids,
+        )
+
+    def test_start_mixup_practice_requires_three_species(self):
+        self.client.force_authenticate(user=self.user)
+        response = self.client.post(
+            reverse("practice-mixup-flock-start"),
+            {"species_ids": [self.low_id, self.high_id, self.high_id], "country_code": "PZ"},
+            format="json",
+        )
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_passed_mixup_practice_fixes_every_pair_in_flock(self):
+        sp_third = self._create_third_species()
+        flock = [self.sp_low, self.sp_high, sp_third]
+        player = Player.objects.create(user=self.user, name="Practice", language="en")
+        game = Game.objects.create(
+            country=self.country,
+            level="beginner",
+            length=20,
+            media="images",
+            game_type=Game.GAME_TYPE_MIXUP_PRACTICE,
+            host=player,
+            force_ended=True,
+        )
+        game.mixup_species.set(flock)
+        score = PlayerScore.objects.create(player=player, game=game, score=0)
+        for i in range(PAIR_PRACTICE_PASS_CORRECT):
+            target = flock[i % 3]
+            question = Question.objects.create(
+                game=game, species=target, number=0, sequence=i + 1, done=True
+            )
+            Answer.objects.create(player_score=score, question=question, answer=target)
+
+        ids = sorted(sp.id for sp in flock)
+        self.assertEqual(
+            get_user_fixed_confusion_pair_keys(self.user.id),
+            {(ids[0], ids[1]), (ids[0], ids[2]), (ids[1], ids[2])},
+        )
+
+    def test_mixup_practice_not_fixed_below_threshold(self):
+        sp_third = self._create_third_species()
+        player = Player.objects.create(user=self.user, name="Practice", language="en")
+        game = Game.objects.create(
+            country=self.country,
+            level="beginner",
+            length=20,
+            media="images",
+            game_type=Game.GAME_TYPE_MIXUP_PRACTICE,
+            host=player,
+            force_ended=True,
+        )
+        game.mixup_species.set([self.sp_low, self.sp_high, sp_third])
+        self.assertEqual(get_user_fixed_confusion_pair_keys(self.user.id), set())
 
 
 class SpeciesPracticeTests(TestCase):

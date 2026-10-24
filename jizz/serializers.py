@@ -1290,8 +1290,26 @@ class GameSerializer(serializers.ModelSerializer):
         if instance.game_type in (
             Game.GAME_TYPE_PAIR_PRACTICE,
             Game.GAME_TYPE_SPECIES_PRACTICE,
+            Game.GAME_TYPE_MIXUP_PRACTICE,
         ):
             representation['current_highscore'] = None
+        if instance.game_type == Game.GAME_TYPE_MIXUP_PRACTICE:
+            from jizz.services.checklist import localized_species_names, normalize_species_language
+            from jizz.services.species_cover import species_cover_url
+
+            request = self.context.get('request')
+            flock = list(instance.mixup_species.all())
+            lang = normalize_species_language(instance.language or 'en')
+            display_names = localized_species_names({sp.id: sp for sp in flock}, lang)
+            representation['mixup_species'] = [
+                {
+                    'id': sp.id,
+                    'name': display_names.get(sp.id, sp.name),
+                    'code': sp.code or '',
+                    'illustration_url': species_cover_url(sp, request),
+                }
+                for sp in flock
+            ]
         if instance.pair_species_low_id and instance.pair_species_high_id:
             from jizz.services.checklist import localized_species_names, normalize_species_language
             from jizz.services.species_cover import species_cover_url

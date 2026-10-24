@@ -67,6 +67,7 @@ def country_statuses_for_game(game: Game) -> list[str]:
     if game.game_type in (
         Game.GAME_TYPE_SPECIES_PRACTICE,
         Game.GAME_TYPE_PAIR_PRACTICE,
+        Game.GAME_TYPE_MIXUP_PRACTICE,
     ):
         # Match trouble-spots checklist (_allowed_species_ids_for_country).
         return ['native', 'endemic', 'rare', 'extirpated']
@@ -874,12 +875,40 @@ def create_pair_practice_question(game: Game) -> Question:
     return question
 
 
+def create_mixup_practice_question(game: Game) -> Question:
+    """Drill within a mixed-up flock: every flock species is an option."""
+    pool = sorted(game.mixup_species.values_list('id', flat=True))
+    if len(pool) < 2:
+        raise ValueError(f'Mixup practice game {game.id} needs at least two species')
+
+    sequence, question_count = _next_sequence_and_question_count(game)
+    pick_pool, used_ids = _pick_target_pool(game, pool, question_count)
+    species, number = pick_species_with_eligible_media(game, pick_pool, used_ids)
+
+    species_map = _species_map(pool)
+    options = [species_map[sid] for sid in pool if sid in species_map]
+    random.shuffle(options)
+
+    question = game.questions.create(
+        species=species, number=number, sequence=sequence
+    )
+    QuestionOption.objects.bulk_create(
+        [
+            QuestionOption(question=question, species=opt, order=index)
+            for index, opt in enumerate(options)
+        ]
+    )
+    return question
+
+
 def create_question_for_game(game: Game) -> Question:
     """Build next question + options; caller holds game lock."""
     if game.game_type == Game.GAME_TYPE_PAIR_PRACTICE:
         return create_pair_practice_question(game)
     if game.game_type == Game.GAME_TYPE_SPECIES_PRACTICE:
         return create_species_practice_question(game)
+    if game.game_type == Game.GAME_TYPE_MIXUP_PRACTICE:
+        return create_mixup_practice_question(game)
 
     option_ids = candidate_species_ids(game)
     target_ids = question_target_species_ids(game, option_ids)

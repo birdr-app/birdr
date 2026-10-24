@@ -181,7 +181,8 @@ export const ResultsComponent = () => {
 
   const isPairPractice = game?.game_type === 'pair_practice'
   const isSpeciesPractice = game?.game_type === 'species_practice'
-  const isPracticeGame = isPairPractice || isSpeciesPractice
+  const isMixupPractice = game?.game_type === 'mixup_practice'
+  const isPracticeGame = isPairPractice || isSpeciesPractice || isMixupPractice
   const practicePassed =
     isPracticeGame &&
     displayGame != null &&
@@ -362,10 +363,18 @@ export const ResultsComponent = () => {
     const species1 = game?.pair_species_low_name || '—'
     const species2 = game?.pair_species_high_name || '—'
     const focusSpecies = game?.focus_species_name || '—'
+    const flockSpecies = intl.formatList((game?.mixup_species ?? []).map((sp) => sp.name), {
+      type: 'conjunction',
+    })
     const correctCount = displayGame.correct_count ?? 0
     const totalQuestions = displayGame.total_questions ?? 0
     let message: string
-    if (practicePassed) {
+    if (practicePassed && isMixupPractice) {
+      message = intl.formatMessage(
+        { id: 'mixup_practice_fixed_message', defaultMessage: 'You fixed it! {species} no longer seem that confusing to you!' },
+        { species: flockSpecies },
+      )
+    } else if (practicePassed) {
       message = isSpeciesPractice
         ? intl.formatMessage(
             { id: 'species_practice_fixed_message', defaultMessage: 'Nice work! {species} is starting to stick.' },
@@ -375,6 +384,11 @@ export const ResultsComponent = () => {
             { id: 'pair_practice_fixed_message', defaultMessage: 'You fixed it! {species1} and {species2} no longer seem that confusing to you!' },
             { species1, species2 },
           )
+    } else if (isMixupPractice) {
+      message = intl.formatMessage(
+        { id: 'practice_failed_message_flock', defaultMessage: "You didn't make it. Clearly you need to practice a bit more to learn {species}." },
+        { species: flockSpecies },
+      )
     } else if (isSpeciesPractice) {
       message = intl.formatMessage(
         { id: 'practice_failed_message_species', defaultMessage: "You didn't make it. Clearly you need to practice a bit more to learn {species}." },
@@ -387,8 +401,16 @@ export const ResultsComponent = () => {
       )
     }
 
-    const titleId = isSpeciesPractice ? 'species_practice_results_title' : 'pair_practice_results_title'
-    const titleDefault = isSpeciesPractice ? 'Species practice' : 'Pair practice'
+    const titleId = isSpeciesPractice
+      ? 'species_practice_results_title'
+      : isMixupPractice
+        ? 'mixup_practice_results_title'
+        : 'pair_practice_results_title'
+    const titleDefault = isSpeciesPractice
+      ? 'Species practice'
+      : isMixupPractice
+        ? 'Flock practice'
+        : 'Pair practice'
 
     return (
       <>
@@ -442,6 +464,17 @@ export const ResultsComponent = () => {
                     />
                   </>
                 ) : null}
+                {isMixupPractice
+                  ? game?.mixup_species?.map((sp) => (
+                      <PracticeSpeciesLinks
+                        key={sp.id}
+                        speciesId={sp.id}
+                        name={sp.name}
+                        code={sp.code}
+                        illustrationUrl={sp.illustration_url}
+                      />
+                    ))
+                  : null}
               </Flex>
             ) : null}
             <Flex direction="column" gap={3} w="full">

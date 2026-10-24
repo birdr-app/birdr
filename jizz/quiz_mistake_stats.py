@@ -7,6 +7,7 @@ from __future__ import annotations
 import csv
 from collections import defaultdict
 from io import StringIO
+from itertools import combinations
 from typing import Any
 
 from django.core.cache import cache
@@ -28,6 +29,9 @@ EXCLUDED_COUNTRY_SPECIES_STATUSES = frozenset(("introduced", "uncertain", "unkno
 USER_MIN_TIMES_SHOWN = 2
 USER_MIN_WRONG = 1
 USER_MIN_PAIR_WRONG = 2
+# Mixed-up flocks: groups of species linked by confusion pairs.
+FLOCK_MIN_SIZE = 3
+FLOCK_MAX_SIZE = 6
 # Practice games with at least this many correct answers mark the target as fixed.
 PAIR_PRACTICE_PASS_CORRECT = 18
 SPECIES_PRACTICE_PASS_CORRECT = PAIR_PRACTICE_PASS_CORRECT
@@ -416,6 +420,96 @@ def get_user_trouble_spot_rows(
     return species_rows, pair_rows
 
 
+def _connected_components(edges: dict[tuple[int, int], int]) -> list[set[int]]:
+    adjacency: dict[int, set[int]] = defaultdict(set)
+    for low_id, high_id in edges:
+        adjacency[low_id].add(high_id)
+        adjacency[high_id].add(low_id)
+
+    seen: set[int] = set()
+    components: list[set[int]] = []
+    for start in adjacency:
+        if start in seen:
+            continue
+        component = {start}
+        stack = [start]
+        while stack:
+            for other in adjacency[stack.pop()]:
+                if other not in component:
+                    component.add(other)
+                    stack.append(other)
+        seen |= component
+        components.append(component)
+    return components
+
+
+def build_confusion_flocks(
+    pair_rows: list[dict[str, Any]],
+    *,
+    exclude_pairs: set[tuple[int, int]] | frozenset[tuple[int, int]] = frozenset(),
+    min_pair_wrong: int = USER_MIN_PAIR_WRONG,
+) -> list[dict[str, Any]]:
+    """
+    Groups of FLOCK_MIN_SIZE..FLOCK_MAX_SIZE species the user keeps mixing up.
+
+    Pure in-memory pass over confusion pair rows (no queries). Pairs with at least
+    min_pair_wrong mix-ups form a graph; each connected component of the right size
+    is a flock. Components that are too large are split by raising the edge
+    threshold within that component until the pieces fit, so the strongest
+    confusions stay together. Pairs in exclude_pairs (fixed) are ignored.
+
+    Each flock: species_ids (most mixed-up first), member_wrong per species,
+    pairs inside the flock, and total_wrong (sum of those pairs' mix-ups).
+    """
+    edges = {
+        (row['low_id'], row['high_id']): row['total_wrong']
+        for row in pair_rows
+        if row['total_wrong'] >= min_pair_wrong
+        and (row['low_id'], row['high_id']) not in exclude_pairs
+    }
+
+    groups: list[set[int]] = []
+    pending = [edges]
+    while pending:
+        subset = pending.pop()
+        for component in _connected_components(subset):
+            if len(component) < FLOCK_MIN_SIZE:
+                continue
+            if len(component) <= FLOCK_MAX_SIZE:
+                groups.append(component)
+                continue
+            inner = {
+                key: wrong
+                for key, wrong in subset.items()
+                if key[0] in component and key[1] in component
+            }
+            weakest = min(inner.values())
+            pending.append({key: wrong for key, wrong in inner.items() if wrong > weakest})
+
+    flocks: list[dict[str, Any]] = []
+    for group in groups:
+        pairs = [
+            {'low_id': low_id, 'high_id': high_id, 'total_wrong': wrong}
+            for (low_id, high_id), wrong in edges.items()
+            if low_id in group and high_id in group
+        ]
+        pairs.sort(key=lambda p: p['total_wrong'], reverse=True)
+        member_wrong: dict[int, int] = defaultdict(int)
+        for pair in pairs:
+            member_wrong[pair['low_id']] += pair['total_wrong']
+            member_wrong[pair['high_id']] += pair['total_wrong']
+        flocks.append(
+            {
+                'species_ids': sorted(group, key=lambda sid: (-member_wrong[sid], sid)),
+                'member_wrong': dict(member_wrong),
+                'pairs': pairs,
+                'total_wrong': sum(p['total_wrong'] for p in pairs),
+            }
+        )
+    flocks.sort(key=lambda f: (f['total_wrong'], len(f['species_ids'])), reverse=True)
+    return flocks
+
+
 def get_user_species_mistake_rows(
     user_id: int,
     country_code: str | None = None,
@@ -473,11 +567,12 @@ def get_user_confusion_pair_rows(
     return pair_rows
 
 
-def get_user_fixed_confusion_pair_keys(user_id: int) -> set[tuple[int, int]]:
-    """Canonical (low_id, high_id) pairs the user fixed via a successful pair-practice game."""
-    if not user_id:
-        return set()
-
+def _passed_practice_games(
+    user_id: int,
+    game_type: str,
+    pass_correct: int = PAIR_PRACTICE_PASS_CORRECT,
+):
+    """Ended practice games of game_type hosted by the user with a passing score."""
     from jizz.models import Game
 
     done_questions = (
@@ -499,24 +594,48 @@ def get_user_fixed_confusion_pair_keys(user_id: int) -> set[tuple[int, int]]:
         .values('c')[:1]
     )
 
-    rows = (
-        Game.objects.filter(
-            game_type=Game.GAME_TYPE_PAIR_PRACTICE,
-            host__user_id=user_id,
-        )
-        .exclude(pair_species_low_id__isnull=True)
-        .exclude(pair_species_high_id__isnull=True)
+    return (
+        Game.objects.filter(game_type=game_type, host__user_id=user_id)
         .annotate(
             done_questions=Coalesce(Subquery(done_questions, output_field=IntegerField()), 0),
             correct_answers=Coalesce(Subquery(correct_answers, output_field=IntegerField()), 0),
         )
         .filter(
             Q(force_ended=True) | Q(done_questions__gte=F('length')),
-            correct_answers__gte=PAIR_PRACTICE_PASS_CORRECT,
+            correct_answers__gte=pass_correct,
         )
+    )
+
+
+def get_user_fixed_confusion_pair_keys(user_id: int) -> set[tuple[int, int]]:
+    """
+    Canonical (low_id, high_id) pairs the user fixed via a successful pair-practice game.
+
+    Passing a mixed-up flock drill fixes every pair within that flock.
+    """
+    if not user_id:
+        return set()
+
+    from jizz.models import Game
+
+    fixed = set(
+        _passed_practice_games(user_id, Game.GAME_TYPE_PAIR_PRACTICE)
+        .exclude(pair_species_low_id__isnull=True)
+        .exclude(pair_species_high_id__isnull=True)
         .values_list('pair_species_low_id', 'pair_species_high_id')
     )
-    return {tuple(row) for row in rows}
+
+    flock_game_ids = _passed_practice_games(
+        user_id, Game.GAME_TYPE_MIXUP_PRACTICE
+    ).values('pk')
+    flock_species: dict[int, list[int]] = defaultdict(list)
+    for game_id, species_id in Game.mixup_species.through.objects.filter(
+        game_id__in=flock_game_ids
+    ).values_list('game_id', 'species_id'):
+        flock_species[game_id].append(species_id)
+    for species_ids in flock_species.values():
+        fixed.update(combinations(sorted(species_ids), 2))
+    return fixed
 
 
 def get_user_fixed_species_ids(user_id: int) -> set[int]:
@@ -526,42 +645,13 @@ def get_user_fixed_species_ids(user_id: int) -> set[int]:
 
     from jizz.models import Game
 
-    done_questions = (
-        Question.objects.filter(game_id=OuterRef('pk'), done=True)
-        .order_by()
-        .values('game_id')
-        .annotate(c=Count('id'))
-        .values('c')[:1]
-    )
-    correct_answers = (
-        Answer.objects.filter(
-            player_score__game_id=OuterRef('pk'),
-            player_score__player__user_id=user_id,
-            correct=True,
-        )
-        .order_by()
-        .values('player_score__game_id')
-        .annotate(c=Count('id'))
-        .values('c')[:1]
-    )
-
-    rows = (
-        Game.objects.filter(
-            game_type=Game.GAME_TYPE_SPECIES_PRACTICE,
-            host__user_id=user_id,
+    return set(
+        _passed_practice_games(
+            user_id, Game.GAME_TYPE_SPECIES_PRACTICE, SPECIES_PRACTICE_PASS_CORRECT
         )
         .exclude(focus_species_id__isnull=True)
-        .annotate(
-            done_questions=Coalesce(Subquery(done_questions, output_field=IntegerField()), 0),
-            correct_answers=Coalesce(Subquery(correct_answers, output_field=IntegerField()), 0),
-        )
-        .filter(
-            Q(force_ended=True) | Q(done_questions__gte=F('length')),
-            correct_answers__gte=SPECIES_PRACTICE_PASS_CORRECT,
-        )
         .values_list('focus_species_id', flat=True)
     )
-    return set(rows)
 
 
 def get_confusion_pair_rows(country_code: str | None = None) -> list[dict[str, Any]]:

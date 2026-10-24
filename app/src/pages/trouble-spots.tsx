@@ -22,7 +22,9 @@ import {
   fetchTroubleSpots,
   practiceApiErrorMessage,
   startConfusionPairPractice,
+  startMixupPractice,
   startSpeciesPractice,
+  type TroubleSpotFlock,
   type TroubleSpotPair,
   type TroubleSpotSpecies,
 } from '../api/practice';
@@ -67,7 +69,7 @@ function pairDisplayName(
   return name;
 }
 
-type TabKey = 'species' | 'pairs';
+type TabKey = 'species' | 'pairs' | 'flocks';
 
 function formatRate(rate: number | null): string {
   if (rate == null) return '—';
@@ -75,7 +77,7 @@ function formatRate(rate: number | null): string {
 }
 
 function tabFromSearch(value: string | null): TabKey {
-  return value === 'pairs' ? 'pairs' : 'species';
+  return value === 'pairs' || value === 'flocks' ? value : 'species';
 }
 
 export default function TroubleSpotsPage() {
@@ -88,10 +90,12 @@ export default function TroubleSpotsPage() {
   const [activeTab, setActiveTab] = useState<TabKey>(() => tabFromSearch(searchParams.get('tab')));
   const [species, setSpecies] = useState<TroubleSpotSpecies[]>([]);
   const [pairs, setPairs] = useState<TroubleSpotPair[]>([]);
+  const [flocks, setFlocks] = useState<TroubleSpotFlock[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [startingPairKey, setStartingPairKey] = useState<string | null>(null);
   const [startingSpeciesId, setStartingSpeciesId] = useState<number | null>(null);
+  const [startingFlockKey, setStartingFlockKey] = useState<string | null>(null);
   const [countryCode, setCountryCode] = useState<string | undefined>();
   const [includeFixed, setIncludeFixed] = useState(false);
   const { countries } = UseCountries();
@@ -119,10 +123,12 @@ export default function TroubleSpotsPage() {
       const data = await fetchTroubleSpots(effectiveCountryCode, speciesLanguage);
       setSpecies(data.species);
       setPairs(data.pairs);
+      setFlocks(data.flocks ?? []);
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : 'Failed to load');
       setSpecies([]);
       setPairs([]);
+      setFlocks([]);
     } finally {
       setLoading(false);
     }
@@ -173,6 +179,27 @@ export default function TroubleSpotsPage() {
     }
   };
 
+  const handlePracticeFlock = async (flock: TroubleSpotFlock) => {
+    const speciesIds = flock.species.map((member) => member.species_id);
+    setStartingFlockKey(speciesIds.join('-'));
+    setError(null);
+    try {
+      const result = await startMixupPractice(speciesIds, effectiveCountryCode);
+      localStorage.setItem('player-token', result.player_token);
+      localStorage.setItem('game-token', result.game.token);
+      await loadPlayer(result.player_token);
+      const game = await loadGame(result.game.token);
+      if (game) {
+        setGame(game);
+        navigate('/game/play');
+      }
+    } catch (e: unknown) {
+      setError(practiceApiErrorMessage(e));
+    } finally {
+      setStartingFlockKey(null);
+    }
+  };
+
   useEffect(() => {
     setActiveTab(tabFromSearch(searchParams.get('tab')));
   }, [searchParams]);
@@ -180,8 +207,8 @@ export default function TroubleSpotsPage() {
   const selectTab = (key: TabKey) => {
     setActiveTab(key);
     const next = new URLSearchParams(searchParams);
-    if (key === 'pairs') next.set('tab', 'pairs');
-    else next.delete('tab');
+    if (key === 'species') next.delete('tab');
+    else next.set('tab', key);
     setSearchParams(next, { replace: true });
   };
 
@@ -193,6 +220,16 @@ export default function TroubleSpotsPage() {
     id: 'trouble_spots_pairs_title',
     defaultMessage: 'Confusing pairs',
   });
+
+  const flocksTabLabel = intl.formatMessage({
+    id: 'trouble_spots_flocks_title',
+    defaultMessage: 'Mixed-up flocks',
+  });
+  const countryQuery = effectiveCountryCode
+    ? `?country=${encodeURIComponent(effectiveCountryCode)}`
+    : '';
+  const speciesNameById = (speciesId: number, fallback: string, nameNl?: string) =>
+    pairDisplayName(fallback, nameNl, speciesId, allSpecies, speciesLanguage || 'en');
 
   const pageTitle = (
     <Heading color="gray.800" size="lg" m={0}>
@@ -285,10 +322,15 @@ export default function TroubleSpotsPage() {
             {([
               { key: 'species' as const, label: speciesTabLabel, count: visibleSpecies.length },
               { key: 'pairs' as const, label: pairsTabLabel, count: visiblePairs.length },
+              { key: 'flocks' as const, label: flocksTabLabel, count: flocks.length },
             ]).map((tab) => (
               <Button
                 key={tab.key}
                 flex={1}
+                minW={0}
+                px={2}
+                whiteSpace="normal"
+                lineHeight="short"
                 role="tab"
                 aria-selected={activeTab === tab.key}
                 variant={activeTab === tab.key ? 'solid' : 'outline'}
@@ -414,6 +456,106 @@ export default function TroubleSpotsPage() {
                 })}
               </VStack>
             )
+          ) : activeTab === 'flocks' ? (
+            flocks.length === 0 ? (
+              <Text color="primary.700">
+                <FormattedMessage id="trouble_spots_no_flocks" defaultMessage="No mixed-up flocks yet." />
+              </Text>
+            ) : (
+              <VStack gap={3} align="stretch">
+                {flocks.map((flock) => {
+                  const names = new Map(
+                    flock.species.map((member) => [
+                      member.species_id,
+                      speciesNameById(
+                        member.species_id,
+                        member.name_translated || member.name,
+                        member.name_nl,
+                      ),
+                    ]),
+                  );
+                  const flockKey = flock.species.map((member) => member.species_id).join('-');
+                  const busy = startingFlockKey === flockKey;
+                  return (
+                    <Box key={flockKey} py={3} borderBottomWidth="1px" borderColor="primary.100">
+                      <Flex align="center" justify="space-between" gap={3} mb={2}>
+                        <Text fontSize="sm" color="primary.700">
+                          <FormattedMessage
+                            id="trouble_spots_flock_summary"
+                            defaultMessage="{count} mix-ups between {species} birds"
+                            values={{ count: flock.total_wrong, species: flock.species.length }}
+                          />
+                        </Text>
+                        <Button
+                          size="sm"
+                          colorPalette="primary"
+                          flexShrink={0}
+                          loading={busy}
+                          disabled={startingFlockKey != null && !busy}
+                          onClick={() => void handlePracticeFlock(flock)}
+                        >
+                          <FormattedMessage
+                            id="trouble_spots_practice_flock"
+                            defaultMessage="Practice this flock"
+                          />
+                        </Button>
+                      </Flex>
+                      <Flex gap={2} flexWrap="wrap" mb={2}>
+                        {flock.species.map((member) => (
+                          <Box
+                            key={member.species_id}
+                            as="button"
+                            display="flex"
+                            flexDirection="column"
+                            alignItems="center"
+                            gap={1}
+                            w="72px"
+                            bg="transparent"
+                            cursor="pointer"
+                            onClick={() =>
+                              navigate(`/trouble-spots/species/${member.species_id}${countryQuery}`)
+                            }
+                          >
+                            <SpeciesCoverThumb
+                              speciesId={member.species_id}
+                              initialUrl={member.illustration_url}
+                              size={SPECIES_THUMB}
+                              alt={names.get(member.species_id) || member.name}
+                            />
+                            <Text fontSize="2xs" fontWeight="semibold" textAlign="center" lineClamp={2}>
+                              {names.get(member.species_id)}
+                            </Text>
+                          </Box>
+                        ))}
+                      </Flex>
+                      <Flex gap={1} flexWrap="wrap">
+                        {flock.pairs.map((pair) => (
+                          <Box
+                            key={`${pair.low_id}-${pair.high_id}`}
+                            as="button"
+                            px={2}
+                            py={0.5}
+                            borderRadius="md"
+                            borderWidth="1px"
+                            borderColor="primary.300"
+                            bg="transparent"
+                            fontSize="xs"
+                            color="primary.700"
+                            cursor="pointer"
+                            _hover={{ bg: 'primary.50' }}
+                            onClick={() =>
+                              navigate(`/trouble-spots/pair/${pair.low_id}/${pair.high_id}${countryQuery}`)
+                            }
+                          >
+                            {names.get(pair.low_id)} · {names.get(pair.high_id)} ({pair.total_wrong})
+                          </Box>
+                        ))}
+                      </Flex>
+                    </Box>
+                  );
+                })}
+              </VStack>
+            )
           ) : visiblePairs.length === 0 ? (
             <Text color="primary.700">
               <FormattedMessage id="trouble_spots_no_pairs" defaultMessage="No pairs yet." />
@@ -423,9 +565,6 @@ export default function TroubleSpotsPage() {
               {visiblePairs.map((pair) => {
                 const key = `${pair.low_id}-${pair.high_id}`;
                 const busy = startingPairKey === key;
-                const countryQuery = effectiveCountryCode
-                  ? `?country=${encodeURIComponent(effectiveCountryCode)}`
-                  : '';
                 return (
                   <Flex
                     key={key}

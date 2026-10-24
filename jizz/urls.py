@@ -83,6 +83,7 @@ from jizz.app_version_views import AppVersionView
 from jizz.geo_views import GeoCountryView
 from jizz.practice_views import (
     StartConfusionPairPracticeView,
+    StartMixupPracticeView,
     StartSpeciesPracticeView,
     TroubleSpotsView,
 )
@@ -576,6 +577,11 @@ urlpatterns = [
         'api/practice/species/start/',
         StartSpeciesPracticeView.as_view(),
         name='practice-species-start',
+    ),
+    path(
+        'api/practice/mixup-flock/start/',
+        StartMixupPracticeView.as_view(),
+        name='practice-mixup-flock-start',
     ),
     path('api/league/', LeagueOverviewView.as_view(), name='league-overview'),
     path('api/league/attempts/<int:attempt_id>/complete/', LeagueCompleteView.as_view(), name='league-complete'),

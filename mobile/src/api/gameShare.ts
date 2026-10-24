@@ -26,7 +26,7 @@ export type PublicGameShare = {
   description: string;
 };
 
-const PRIVATE_GAME_TYPES = new Set(['pair_practice', 'species_practice']);
+const PRIVATE_GAME_TYPES = new Set(['pair_practice', 'species_practice', 'mixup_practice']);
 
 export function canShareGameResult(game: { token?: string; ended?: boolean; game_type?: string } | null | undefined): boolean {
   if (!game?.token) return false;

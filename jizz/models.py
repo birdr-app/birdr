@@ -595,6 +595,7 @@ class Game(models.Model):
     GAME_TYPE_EXTREME = 'extreme'
     GAME_TYPE_PAIR_PRACTICE = 'pair_practice'
     GAME_TYPE_SPECIES_PRACTICE = 'species_practice'
+    GAME_TYPE_MIXUP_PRACTICE = 'mixup_practice'
     GAME_TYPE_FLOCK_CHALLENGE = 'flock_challenge'
     GAME_TYPE_SURVIVAL = 'survival'
     GAME_TYPE_LEAGUE = 'league'
@@ -603,6 +604,7 @@ class Game(models.Model):
         (GAME_TYPE_EXTREME, 'Extreme'),
         (GAME_TYPE_PAIR_PRACTICE, 'Pair practice'),
         (GAME_TYPE_SPECIES_PRACTICE, 'Species practice'),
+        (GAME_TYPE_MIXUP_PRACTICE, 'Mixed-up flock practice'),
         (GAME_TYPE_FLOCK_CHALLENGE, 'Flock challenge'),
         (GAME_TYPE_SURVIVAL, 'Survival'),
         (GAME_TYPE_LEAGUE, 'National league'),
@@ -639,6 +641,12 @@ class Game(models.Model):
         related_name='species_practice_games',
         on_delete=models.SET_NULL,
         help_text='Target species for species_practice games.',
+    )
+    mixup_species = models.ManyToManyField(
+        'jizz.Species',
+        blank=True,
+        related_name='mixup_practice_games',
+        help_text='The 3-6 species of a mixup_practice (mixed-up flock) game.',
     )
     speed_seconds = models.PositiveSmallIntegerField(
         null=True,
@@ -1005,6 +1013,7 @@ class PlayerScore(models.Model):
     HISCORE_EXCLUDED_GAME_TYPES = (
         Game.GAME_TYPE_PAIR_PRACTICE,
         Game.GAME_TYPE_SPECIES_PRACTICE,
+        Game.GAME_TYPE_MIXUP_PRACTICE,
         Game.GAME_TYPE_SURVIVAL,
         Game.GAME_TYPE_LEAGUE,
     )

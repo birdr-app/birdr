@@ -829,6 +829,7 @@ def _country_challenge_exists(game_id_outerref):
 SPECIAL_GAME_TYPES = (
     Game.GAME_TYPE_SPECIES_PRACTICE,
     Game.GAME_TYPE_PAIR_PRACTICE,
+    Game.GAME_TYPE_MIXUP_PRACTICE,
     Game.GAME_TYPE_FLOCK_CHALLENGE,
     Game.GAME_TYPE_SURVIVAL,
     Game.GAME_TYPE_LEAGUE,
@@ -838,6 +839,7 @@ SPECIAL_GAME_TYPES = (
 GAME_KIND_BY_TYPE = {
     'tricky_species': ('tricky species', Game.GAME_TYPE_SPECIES_PRACTICE),
     'tricky_pair': ('tricky pair', Game.GAME_TYPE_PAIR_PRACTICE),
+    'mixed_up_flock': ('mixed-up flock', Game.GAME_TYPE_MIXUP_PRACTICE),
     'flock': ('flock', Game.GAME_TYPE_FLOCK_CHALLENGE),
     'survival': ('survival', Game.GAME_TYPE_SURVIVAL),
     'national_league': ('national league', Game.GAME_TYPE_LEAGUE),
@@ -917,13 +919,15 @@ class PlayerScoreInline(admin.TabularInline):
 @register(Game)
 class GameAdmin(admin.ModelAdmin):
     inlines = [PlayerScoreInline, QuestionInline]
-    raw_id_fields = ['country', 'host', 'focus_species', 'pair_species_low', 'pair_species_high']
+    raw_id_fields = [
+        'country', 'host', 'focus_species', 'pair_species_low', 'pair_species_high', 'mixup_species',
+    ]
     readonly_fields = ['token', 'created', 'correct', 'errors', 'total']
     fields = [
         'country', 'language', 'host', 'created', 'token',
         'length', 'multiplayer', 'media', 'repeat', 'rarity', 'include_escapes',
         'difficult_species', 'level', 'game_type', 'speed_seconds',
-        'pair_species_low', 'pair_species_high', 'focus_species',
+        'pair_species_low', 'pair_species_high', 'focus_species', 'mixup_species',
         'tax_order', 'tax_family', 'species_group', 'season'
     ]
     list_display = ['country', 'created', 'type', 'level', 'length', 'player_count', 'top_score']

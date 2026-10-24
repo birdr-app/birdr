@@ -38,10 +38,29 @@ export type TroubleSpotPair = {
   fixed?: boolean;
 };
 
+export type TroubleSpotFlockSpecies = {
+  species_id: number;
+  name: string;
+  name_translated?: string;
+  name_latin: string;
+  name_nl?: string;
+  code?: string;
+  illustration_url?: string | null;
+  mixups: number;
+};
+
+/** 3–6 species linked by repeated mix-ups (fixed pairs excluded). */
+export type TroubleSpotFlock = {
+  total_wrong: number;
+  species: TroubleSpotFlockSpecies[];
+  pairs: { low_id: number; high_id: number; total_wrong: number }[];
+};
+
 export type TroubleSpotsResponse = {
   country_code: string | null;
   species: TroubleSpotSpecies[];
   pairs: TroubleSpotPair[];
+  flocks: TroubleSpotFlock[];
 };
 
 export async function fetchTroubleSpots(
@@ -133,6 +152,19 @@ export async function startSpeciesPractice(
   if (countryCode?.trim()) body.country_code = countryCode.trim().toUpperCase();
   const { data } = await axios.post<StartPairPracticeResponse>(
     '/api/practice/species/start/',
+    body,
+  );
+  return data;
+}
+
+export async function startMixupPractice(
+  speciesIds: number[],
+  countryCode?: string,
+): Promise<StartPairPracticeResponse> {
+  const body: Record<string, unknown> = { species_ids: speciesIds };
+  if (countryCode?.trim()) body.country_code = countryCode.trim().toUpperCase();
+  const { data } = await axios.post<StartPairPracticeResponse>(
+    '/api/practice/mixup-flock/start/',
     body,
   );
   return data;

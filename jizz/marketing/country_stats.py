@@ -33,6 +33,7 @@ def _hiscore_qs(country):
             game__game_type__in=[
                 Game.GAME_TYPE_PAIR_PRACTICE,
                 Game.GAME_TYPE_SPECIES_PRACTICE,
+                Game.GAME_TYPE_MIXUP_PRACTICE,
             ]
         )
         .select_related('player', 'game')

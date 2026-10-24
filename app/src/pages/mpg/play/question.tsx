@@ -76,7 +76,8 @@ export const QuestionComponent = () => {
 
   const isPairPractice = game?.game_type === 'pair_practice'
   const isSpeciesPractice = game?.game_type === 'species_practice'
-  const isPracticeGame = isPairPractice || isSpeciesPractice
+  const isMixupPractice = game?.game_type === 'mixup_practice'
+  const isPracticeGame = isPairPractice || isSpeciesPractice || isMixupPractice
   const isFlockChallenge =
     !!getFlockPlayContext() || game?.game_type === 'flock_challenge'
   const isLeague = !!getLeaguePlayContext() || game?.game_type === 'league'
@@ -411,6 +412,11 @@ export const QuestionComponent = () => {
               {isPairPractice && game.pair_species_high_name ? (
                 <Text fontWeight="semibold" color="primary.800" lineClamp={1}>
                   {game.pair_species_high_name}
+                </Text>
+              ) : null}
+              {isMixupPractice && game.mixup_species?.length ? (
+                <Text fontWeight="semibold" color="primary.800" lineClamp={3}>
+                  {game.mixup_species.map((sp) => sp.name).join(' · ')}
                 </Text>
               ) : null}
             </Box>

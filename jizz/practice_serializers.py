@@ -13,6 +13,9 @@ from jizz.game_question_selection import (
 )
 from jizz.models import Country, Game, Player, PlayerScore, Species
 from jizz.quiz_mistake_stats import (
+    FLOCK_MAX_SIZE,
+    FLOCK_MIN_SIZE,
+    build_confusion_flocks,
     get_user_fixed_confusion_pair_keys,
     get_user_fixed_species_ids,
     get_user_trouble_spot_rows,
@@ -153,6 +156,40 @@ def resolve_country_for_pair_practice(
 
     raise ValidationError(
         {'error': 'Both species need eligible images before practice can start.'}
+    )
+
+
+def _species_have_eligible_media(country: Country, species_ids: list[int]) -> bool:
+    media_type = media_type_for_game(Game(country=country, media='images'))
+    return all(count_eligible_media(sid, media_type) > 0 for sid in species_ids)
+
+
+def resolve_country_for_mixup_practice(
+    user,
+    country_code: str | None,
+    species_ids: list[int],
+) -> Country:
+    """Same fallback order as resolve_country_for_pair_practice, for a whole flock."""
+    from jizz.quiz_mistake_stats import _allowed_species_ids_for_country
+
+    preferred = preferred_practice_country(user, country_code)
+    if preferred is not None:
+        allowed = _allowed_species_ids_for_country(preferred.code)
+        if set(species_ids) <= allowed and _species_have_eligible_media(preferred, species_ids):
+            return preferred
+
+    world = world_practice_country()
+    if world is not None and _species_have_eligible_media(world, species_ids):
+        return world
+
+    if preferred is None:
+        return resolve_practice_country(user, country_code)
+
+    if _species_have_eligible_media(preferred, species_ids):
+        return preferred
+
+    raise ValidationError(
+        {'error': 'All species need eligible images before practice can start.'}
     )
 
 
@@ -319,10 +356,47 @@ class TroubleSpotPairSerializer(serializers.Serializer):
         return (row['low_id'], row['high_id']) in fixed_pairs
 
 
+class TroubleSpotFlockPairSerializer(serializers.Serializer):
+    low_id = serializers.IntegerField()
+    high_id = serializers.IntegerField()
+    total_wrong = serializers.IntegerField()
+
+
+class TroubleSpotFlockSerializer(serializers.Serializer):
+    total_wrong = serializers.IntegerField()
+    species = serializers.SerializerMethodField()
+    pairs = TroubleSpotFlockPairSerializer(many=True)
+
+    def get_species(self, flock: dict) -> list[dict]:
+        species_by_id = self.context.get('species_by_id') or {}
+        display_names = self.context.get('display_names') or {}
+        urls = self.context.get('illustration_urls') or {}
+        members = []
+        for species_id in flock['species_ids']:
+            species = species_by_id.get(species_id)
+            if species is None:
+                continue
+            name = display_names.get(species_id, species.name)
+            members.append(
+                {
+                    'species_id': species_id,
+                    'name': name,
+                    'name_translated': name,
+                    'name_latin': species.name_latin,
+                    'name_nl': species.name_nl or '',
+                    'code': species.code or '',
+                    'illustration_url': urls.get(species_id),
+                    'mixups': flock['member_wrong'].get(species_id, 0),
+                }
+            )
+        return members
+
+
 class TroubleSpotsResponseSerializer(serializers.Serializer):
     country_code = serializers.CharField(allow_null=True)
     species = TroubleSpotSpeciesSerializer(many=True)
     pairs = TroubleSpotPairSerializer(many=True)
+    flocks = TroubleSpotFlockSerializer(many=True)
 
     @classmethod
     def for_user(cls, user, request):
@@ -345,6 +419,7 @@ class TroubleSpotsResponseSerializer(serializers.Serializer):
         illustration_urls = species_cover_urls_bulk(all_species_ids, request)
         fixed_pairs = get_user_fixed_confusion_pair_keys(user.id)
         fixed_species = get_user_fixed_species_ids(user.id)
+        flocks = build_confusion_flocks(pair_rows, exclude_pairs=fixed_pairs)
 
         context = {
             'request': request,
@@ -359,6 +434,7 @@ class TroubleSpotsResponseSerializer(serializers.Serializer):
                 'country_code': cc,
                 'species': species_rows,
                 'pairs': pair_rows,
+                'flocks': flocks,
             },
             context=context,
         )
@@ -484,6 +560,55 @@ class StartConfusionPairPracticeSerializer(serializers.Serializer):
             host=host,
             language=_profile_language(user),
         )
+        PlayerScore.objects.get_or_create(player=host, game=game, defaults={'score': 0})
+        request = self.context.get('request')
+        if request is not None:
+            from jizz.client_info import record_player_score_client_from_request
+
+            record_player_score_client_from_request(host, game, request)
+        game.add_question()
+        return {'game': game, 'player': host}
+
+
+class StartMixupPracticeSerializer(serializers.Serializer):
+    species_ids = serializers.ListField(
+        child=serializers.IntegerField(),
+        min_length=FLOCK_MIN_SIZE,
+        max_length=FLOCK_MAX_SIZE,
+    )
+    country_code = serializers.CharField(required=False, allow_blank=True, default='')
+
+    def validate(self, attrs):
+        user = self.context['request'].user
+        species_ids = sorted(set(attrs['species_ids']))
+        if len(species_ids) < FLOCK_MIN_SIZE:
+            raise ValidationError({'error': 'A flock needs at least three different species.'})
+        if Species.objects.filter(id__in=species_ids).count() != len(species_ids):
+            raise ValidationError({'error': 'Invalid species ids.'})
+
+        attrs['species_ids'] = species_ids
+        attrs['country'] = resolve_country_for_mixup_practice(
+            user, attrs.get('country_code'), species_ids
+        )
+        return attrs
+
+    def create(self, validated_data):
+        user = self.context['request'].user
+        host = get_or_create_player_for_user(user)
+
+        game = Game.objects.create(
+            country=validated_data['country'],
+            level='beginner',
+            length=20,
+            media='images',
+            rarity=Game.RARIT_REGULAR,
+            include_escapes=False,
+            multiplayer=False,
+            game_type=Game.GAME_TYPE_MIXUP_PRACTICE,
+            host=host,
+            language=_profile_language(user),
+        )
+        game.mixup_species.set(validated_data['species_ids'])
         PlayerScore.objects.get_or_create(player=host, game=game, defaults={'score': 0})
         request = self.context.get('request')
         if request is not None:
