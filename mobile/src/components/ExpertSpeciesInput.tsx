@@ -3,6 +3,7 @@ import {
   View,
   Text,
   TextInput,
+  ScrollView,
   TouchableOpacity,
   StyleSheet,
   ActivityIndicator,
@@ -120,7 +121,12 @@ export function ExpertSpeciesInput({
         <ActivityIndicator size="small" color={colors.primary[500]} style={styles.loader} />
       ) : null}
       {showList ? (
-        <View style={styles.list}>
+        // Opens above the input so the on-screen keyboard doesn't cover it.
+        <ScrollView
+          style={styles.list}
+          keyboardShouldPersistTaps="always"
+          nestedScrollEnabled
+        >
           {matches.length === 0 ? (
             <Text style={styles.empty}>{emptyResultText}</Text>
           ) : (
@@ -128,7 +134,7 @@ export function ExpertSpeciesInput({
               <TouchableOpacity
                 key={item.id}
                 style={styles.item}
-                onPressIn={() => {
+                onPress={() => {
                   Keyboard.dismiss();
                   setQuery('');
                   setFocused(false);
@@ -139,14 +145,14 @@ export function ExpertSpeciesInput({
               </TouchableOpacity>
             ))
           )}
-        </View>
+        </ScrollView>
       ) : null}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  wrap: { marginBottom: 8 },
+  wrap: { marginBottom: 8, zIndex: 10 },
   input: {
     borderWidth: 1,
     borderColor: colors.primary[300],
@@ -160,12 +166,21 @@ const styles = StyleSheet.create({
   },
   loader: { marginTop: 8 },
   list: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: '100%',
+    maxHeight: 240,
+    marginBottom: 4,
     borderWidth: 1,
     borderColor: colors.primary[200],
     borderRadius: 8,
-    marginTop: 4,
     backgroundColor: '#fff',
-    overflow: 'hidden',
+    elevation: 6,
+    shadowColor: '#000',
+    shadowOpacity: 0.15,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: -2 },
   },
   item: {
     paddingVertical: 12,
