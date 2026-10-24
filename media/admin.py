@@ -62,9 +62,15 @@ class VisibilityFilter(admin.SimpleListFilter):
             ('all', 'All'),
         )
 
+    def __init__(self, request, params, model, model_admin):
+        # Rejected reviews hide the media, so a reviews filter would come up
+        # empty under the "visible" default; show everything instead.
+        self.default = 'all' if params.get(ReviewStatusFilter.parameter_name) else 'visible'
+        super().__init__(request, params, model, model_admin)
+
     def choices(self, changelist):
-        # Skip Django's implicit "All" (no param) choice: no param means "visible" here.
-        current = self.value() or 'visible'
+        # Skip Django's implicit "All" (no param) choice: no param means the default here.
+        current = self.value() or self.default
         for lookup, title in self.lookup_choices:
             yield {
                 'selected': current == lookup,
@@ -76,9 +82,8 @@ class VisibilityFilter(admin.SimpleListFilter):
         value = self.value()
         if value == 'hidden':
             return queryset.filter(hide=True)
-        if value == 'all':
+        if value == 'all' or (not value and self.default == 'all'):
             return queryset
-        # Default to visible
         return queryset.filter(hide=False)
 
 

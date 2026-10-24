@@ -69,6 +69,9 @@ class MediaAdminReviewListTestCase(TestCase):
             reverse('admin:media_media_changelist'),
             {'visibility': 'all', **params},
         )
+        return self._ids(response)
+
+    def _ids(self, response):
         self.assertEqual(response.status_code, 200)
         return {obj.pk for obj in response.context['cl'].queryset}
 
@@ -108,3 +111,11 @@ class MediaAdminReviewListTestCase(TestCase):
     def test_filter_both(self):
         self.assertEqual(self._filter_ids('both'), {self.both.pk})
         self.assertEqual(self._changelist_ids(reviews='both'), {self.both.pk})
+
+    def test_reviews_filter_ignores_default_visibility(self):
+        # A rejected review hides the media, so "both" must not default to visible only.
+        Media.objects.filter(pk__in=[self.rejected.pk, self.both.pk]).update(hide=True)
+        response = self.client.get(reverse('admin:media_media_changelist'), {'reviews': 'both'})
+        self.assertEqual(self._ids(response), {self.both.pk})
+        response = self.client.get(reverse('admin:media_media_changelist'))
+        self.assertNotIn(self.both.pk, self._ids(response))
