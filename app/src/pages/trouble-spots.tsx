@@ -498,7 +498,7 @@ export default function TroubleSpotsPage() {
                           />
                         </Button>
                       </Flex>
-                      <Flex gap={2} flexWrap="wrap" mb={2}>
+                      <Flex gap={2} flexWrap="wrap">
                         {flock.species.map((member) => (
                           <Box
                             key={member.species_id}
@@ -523,29 +523,6 @@ export default function TroubleSpotsPage() {
                             <Text fontSize="2xs" fontWeight="semibold" textAlign="center" lineClamp={2}>
                               {names.get(member.species_id)}
                             </Text>
-                          </Box>
-                        ))}
-                      </Flex>
-                      <Flex gap={1} flexWrap="wrap">
-                        {flock.pairs.map((pair) => (
-                          <Box
-                            key={`${pair.low_id}-${pair.high_id}`}
-                            as="button"
-                            px={2}
-                            py={0.5}
-                            borderRadius="md"
-                            borderWidth="1px"
-                            borderColor="primary.300"
-                            bg="transparent"
-                            fontSize="xs"
-                            color="primary.700"
-                            cursor="pointer"
-                            _hover={{ bg: 'primary.50' }}
-                            onClick={() =>
-                              navigate(`/trouble-spots/pair/${pair.low_id}/${pair.high_id}${countryQuery}`)
-                            }
-                          >
-                            {names.get(pair.low_id)} · {names.get(pair.high_id)} ({pair.total_wrong})
                           </Box>
                         ))}
                       </Flex>

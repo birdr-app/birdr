@@ -383,26 +383,6 @@ export function TroubleSpotsScreen() {
                   );
                 })}
               </View>
-              <View style={styles.flockPairs}>
-                {flock.pairs.map((flockPair) => {
-                  const pair = pairs.find(
-                    (p) => p.low_id === flockPair.low_id && p.high_id === flockPair.high_id,
-                  );
-                  return (
-                    <TouchableOpacity
-                      key={`${flockPair.low_id}-${flockPair.high_id}`}
-                      style={styles.flockPairChip}
-                      onPress={pair ? () => openPair(pair) : undefined}
-                      disabled={!pair}
-                    >
-                      <Text style={styles.flockPairChipText}>
-                        {names.get(flockPair.low_id)} · {names.get(flockPair.high_id)} (
-                        {flockPair.total_wrong})
-                      </Text>
-                    </TouchableOpacity>
-                  );
-                })}
-              </View>
             </View>
           );
         })
@@ -665,7 +645,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   flockSummary: { flex: 1, fontSize: 14, color: colors.primary[700] },
-  flockMembers: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 8 },
+  flockMembers: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   flockMember: { width: 72, alignItems: 'center', gap: 4 },
   flockMemberName: {
     fontSize: 11,
@@ -673,13 +653,4 @@ const styles = StyleSheet.create({
     color: colors.primary[800],
     textAlign: 'center',
   },
-  flockPairs: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
-  flockPairChip: {
-    borderWidth: 1,
-    borderColor: colors.primary[300],
-    borderRadius: 6,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-  },
-  flockPairChipText: { fontSize: 12, color: colors.primary[700] },
 });
