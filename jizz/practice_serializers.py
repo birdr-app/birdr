@@ -17,6 +17,7 @@ from jizz.quiz_mistake_stats import (
     FLOCK_MIN_SIZE,
     build_confusion_flocks,
     get_user_fixed_confusion_pair_keys,
+    get_global_trouble_spot_rows,
     get_user_fixed_species_ids,
     get_user_trouble_spot_rows,
     normalize_country_filter,
@@ -438,6 +439,41 @@ class TroubleSpotsResponseSerializer(serializers.Serializer):
             },
             context=context,
         )
+
+    @classmethod
+    def for_everyone(cls, request):
+        """Tricky birds across all players; works logged out (then all countries)."""
+        user = request.user
+        authenticated = bool(user and user.is_authenticated)
+        country_code = request.query_params.get('country_code') or request.query_params.get('country')
+        cc = normalize_country_filter(country_code)
+        if not cc and authenticated:
+            try:
+                cc = normalize_country_filter(user.profile.country_id)
+            except Exception:
+                cc = None
+
+        rows = get_global_trouble_spot_rows(cc)
+
+        if authenticated:
+            language = user_preferred_language(user, request)
+        else:
+            language = normalize_species_language(
+                (request.query_params.get('language') or '').strip() or 'en'
+            )
+        species_ids = {row['species_id'] for row in rows['species']}
+        pair_ids = {i for row in rows['pairs'] for i in (row['low_id'], row['high_id'])}
+        flock_ids = {i for flock in rows['flocks'] for i in flock['species_ids']}
+        all_species_ids = list(species_ids | pair_ids | flock_ids)
+        species_by_id = Species.objects.in_bulk(all_species_ids)
+
+        context = {
+            'request': request,
+            'species_by_id': species_by_id,
+            'display_names': localized_species_names(species_by_id, language),
+            'illustration_urls': species_cover_urls_bulk(all_species_ids, request),
+        }
+        return cls({'country_code': cc, **rows}, context=context)
 
 
 class StartPracticeResponseSerializer(serializers.Serializer):

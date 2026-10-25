@@ -1,3 +1,5 @@
+from unittest import mock
+
 from django.contrib.auth import get_user_model
 from django.test import SimpleTestCase, TestCase
 from django.urls import reverse
@@ -461,6 +463,64 @@ class PracticeApiTests(TestCase):
             {self.sp_low.id, self.sp_high.id, sp_third.id},
         )
         self.assertEqual(len(flocks[0]["pairs"]), 2)
+
+    def _create_global_mixups(self, sp_third):
+        """Three players each confuse low/high/third: a global triangle flock."""
+        flock = [self.sp_low, self.sp_high, sp_third]
+        for n in range(3):
+            user = User.objects.create_user(username=f"globalplayer{n}", password="pass")
+            player = Player.objects.create(user=user, name=f"Global {n}", language="en")
+            quiz = Game.objects.create(
+                country=self.country, level="beginner", length=30, media="images", host=player
+            )
+            score = PlayerScore.objects.create(player=player, game=quiz)
+            sequence = 0
+            for target in flock:
+                for pick in flock:
+                    sequence += 1
+                    question = Question.objects.create(
+                        game=quiz, species=target, number=0, sequence=sequence
+                    )
+                    Answer.objects.create(player_score=score, question=question, answer=pick)
+
+    def test_global_trouble_spots_public_with_flocks(self):
+        from django.core.cache import cache
+        from jizz import quiz_mistake_stats
+
+        cache.clear()
+        sp_third = self._create_third_species()
+        self._create_global_mixups(sp_third)
+
+        with mock.patch.object(quiz_mistake_stats, "GLOBAL_MIN_TIMES_SHOWN_COUNTRY", 3):
+            response = self.client.get(
+                reverse("practice-trouble-spots-everyone"),
+                {"country_code": "PZ"},
+            )
+        cache.clear()
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        data = response.json()
+        self.assertEqual(data["country_code"], "PZ")
+        flock_ids = {self.sp_low.id, self.sp_high.id, sp_third.id}
+        # Each species: 9 times shown, 6 wrong.
+        self.assertEqual({row["species_id"] for row in data["species"]}, flock_ids)
+        self.assertEqual(data["species"][0]["times_shown"], 9)
+        self.assertEqual(data["species"][0]["wrongly_answered"], 6)
+        self.assertEqual(len(data["pairs"]), 3)
+        self.assertEqual(data["pairs"][0]["total_wrong"], 6)
+        self.assertEqual(len(data["flocks"]), 1)
+        self.assertEqual({m["species_id"] for m in data["flocks"][0]["species"]}, flock_ids)
+
+    def test_global_trouble_spots_ignore_practice_games(self):
+        from django.core.cache import cache
+
+        cache.clear()
+        self._create_ended_pair_practice(0)
+        response = self.client.get(reverse("practice-trouble-spots-everyone"), {"country_code": "PZ"})
+        cache.clear()
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.json()["pairs"], [])
+        self.assertEqual(response.json()["species"], [])
 
     def _create_third_species(self):
         sp_third = Species.objects.create(name="Third", name_latin="Third t", code="PT03")

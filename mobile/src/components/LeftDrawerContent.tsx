@@ -9,6 +9,7 @@ const MENU_ITEMS: { route: string; label: string }[] = [
   { route: 'Start', label: 'New game' },
   { route: 'Scores', label: 'High scores' },
   { route: 'CountryChallengeLeaderboard', label: 'Country leaderboard' },
+  { route: 'GlobalTroubleSpots', label: "Everyone's tricky birds" },
   { route: 'Updates', label: 'Updates' },
   { route: 'Help', label: 'Community & help' },
   { route: 'Privacy', label: 'Privacy' },

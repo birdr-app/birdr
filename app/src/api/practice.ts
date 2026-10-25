@@ -74,6 +74,20 @@ export async function fetchTroubleSpots(
   return data;
 }
 
+/** Tricky birds across all players; public, rows never carry `fixed`. */
+export async function fetchGlobalTroubleSpots(
+  countryCode?: string,
+  language?: string | null,
+): Promise<TroubleSpotsResponse> {
+  const params: Record<string, string> = {};
+  if (countryCode?.trim()) params.country_code = countryCode.trim().toUpperCase();
+  if (language?.trim()) params.language = language.trim();
+  const { data } = await axios.get<TroubleSpotsResponse>('/api/practice/trouble-spots/everyone/', {
+    params,
+  });
+  return data;
+}
+
 export type TroubleSpotMixup = {
   pair: TroubleSpotPair;
   otherId: number;

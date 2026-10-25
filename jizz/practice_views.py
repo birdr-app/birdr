@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from rest_framework import status
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.authentication import JWTAuthentication
@@ -25,6 +25,17 @@ class TroubleSpotsView(APIView):
 
     def get(self, request):
         serializer = TroubleSpotsResponseSerializer.for_user(request.user, request)
+        return Response(serializer.data)
+
+
+class GlobalTroubleSpotsView(APIView):
+    """GET — tricky birds across all players (species, pairs, mixed-up flocks)."""
+
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        serializer = TroubleSpotsResponseSerializer.for_everyone(request)
         return Response(serializer.data)
 
 

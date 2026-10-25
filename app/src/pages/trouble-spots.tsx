@@ -19,6 +19,7 @@ import CountryCombobox from '../components/country-combobox';
 import { useAuthProfile } from '../core/auth-profile-context';
 import { UseCountries } from '../user/use-countries';
 import {
+  fetchGlobalTroubleSpots,
   fetchTroubleSpots,
   practiceApiErrorMessage,
   startConfusionPairPractice,
@@ -80,7 +81,10 @@ function tabFromSearch(value: string | null): TabKey {
   return value === 'pairs' || value === 'flocks' ? value : 'species';
 }
 
-export default function TroubleSpotsPage() {
+type TroubleSpotsScope = 'me' | 'everyone';
+
+export default function TroubleSpotsPage({ scope = 'me' }: { scope?: TroubleSpotsScope }) {
+  const everyone = scope === 'everyone';
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const intl = useIntl();
@@ -101,7 +105,9 @@ export default function TroubleSpotsPage() {
   const { countries } = UseCountries();
 
   const countriesList = Array.isArray(countries) ? countries : [];
-  const effectiveCountryCode = countryCode ?? profile?.country_code?.trim()?.toUpperCase();
+  // '' = all countries (only selectable on the everyone page).
+  const effectiveCountryCode =
+    (countryCode ?? profile?.country_code?.trim()?.toUpperCase()) || undefined;
 
   const visibleSpecies = useMemo(
     () => (includeFixed ? species : species.filter((row) => !row.fixed)),
@@ -113,14 +119,15 @@ export default function TroubleSpotsPage() {
   );
 
   const load = useCallback(async () => {
-    if (!authenticated) {
+    if (!authenticated && !everyone) {
       setLoading(false);
       return;
     }
     setLoading(true);
     setError(null);
     try {
-      const data = await fetchTroubleSpots(effectiveCountryCode, speciesLanguage);
+      const fetchRows = everyone ? fetchGlobalTroubleSpots : fetchTroubleSpots;
+      const data = await fetchRows(effectiveCountryCode, speciesLanguage);
       setSpecies(data.species);
       setPairs(data.pairs);
       setFlocks(data.flocks ?? []);
@@ -132,13 +139,21 @@ export default function TroubleSpotsPage() {
     } finally {
       setLoading(false);
     }
-  }, [authenticated, effectiveCountryCode, speciesLanguage]);
+  }, [authenticated, everyone, effectiveCountryCode, speciesLanguage]);
 
   useEffect(() => {
     void load();
   }, [load]);
 
+  // Practice games need an account; the everyone page is open to visitors.
+  const requireLogin = () => {
+    if (authenticated) return false;
+    navigate('/login');
+    return true;
+  };
+
   const handlePracticePair = async (pair: TroubleSpotPair) => {
+    if (requireLogin()) return;
     const key = `${pair.low_id}-${pair.high_id}`;
     setStartingPairKey(key);
     setError(null);
@@ -160,6 +175,7 @@ export default function TroubleSpotsPage() {
   };
 
   const handlePracticeSpecies = async (speciesId: number) => {
+    if (requireLogin()) return;
     setStartingSpeciesId(speciesId);
     setError(null);
     try {
@@ -180,6 +196,7 @@ export default function TroubleSpotsPage() {
   };
 
   const handlePracticeFlock = async (flock: TroubleSpotFlock) => {
+    if (requireLogin()) return;
     const speciesIds = flock.species.map((member) => member.species_id);
     setStartingFlockKey(speciesIds.join('-'));
     setError(null);
@@ -233,11 +250,15 @@ export default function TroubleSpotsPage() {
 
   const pageTitle = (
     <Heading color="gray.800" size="lg" m={0}>
-      <FormattedMessage id="trouble_spots" defaultMessage="My tricky birds" />
+      {everyone ? (
+        <FormattedMessage id="trouble_spots_everyone" defaultMessage="Everyone's tricky birds" />
+      ) : (
+        <FormattedMessage id="trouble_spots" defaultMessage="My tricky birds" />
+      )}
     </Heading>
   );
 
-  if (!authenticated) {
+  if (!authenticated && !everyone) {
     return (
       <Page>
         <Page.Header>{pageTitle}</Page.Header>
@@ -276,7 +297,26 @@ export default function TroubleSpotsPage() {
       <Page.Header>{pageTitle}</Page.Header>
       <Page.Body>
         <VStack gap={6} align="stretch">
-          {effectiveCountryCode && countriesList.length > 0 ? (
+          {everyone ? (
+            <Text color="primary.700">
+              <FormattedMessage
+                id="trouble_spots_everyone_intro"
+                defaultMessage="The birds all Birdr players get wrong most often."
+              />
+            </Text>
+          ) : null}
+          {everyone && countriesList.length > 0 ? (
+            <Box>
+              <Text fontSize="sm" fontWeight="semibold" color="primary.700" mb={1}>
+                <FormattedMessage id="checklist_country" defaultMessage="Country" />
+              </Text>
+              <CountryCombobox
+                countries={countriesList}
+                value={countriesList.find((c) => c.code === effectiveCountryCode) ?? null}
+                onChange={(c) => setCountryCode(c?.code ?? '')}
+              />
+            </Box>
+          ) : everyone ? null : effectiveCountryCode && countriesList.length > 0 ? (
             <Box>
               <Text fontSize="sm" fontWeight="semibold" color="primary.700" mb={1}>
                 <FormattedMessage id="checklist_country" defaultMessage="Country" />
@@ -302,22 +342,24 @@ export default function TroubleSpotsPage() {
               />
             </Text>
           )}
-          <Flex align="center" justify="space-between" gap={4}>
-            <Text fontSize="sm" color="primary.700" flex={1}>
-              <FormattedMessage
-                id="trouble_spots_include_fixed"
-                defaultMessage="Show fixed birds & pairs"
-              />
-            </Text>
-            <Switch.Root
-              checked={includeFixed}
-              onCheckedChange={(e: { checked: boolean }) => setIncludeFixed(e.checked === true)}
-              colorPalette="primary"
-            >
-              <Switch.HiddenInput />
-              <Switch.Control />
-            </Switch.Root>
-          </Flex>
+          {everyone ? null : (
+            <Flex align="center" justify="space-between" gap={4}>
+              <Text fontSize="sm" color="primary.700" flex={1}>
+                <FormattedMessage
+                  id="trouble_spots_include_fixed"
+                  defaultMessage="Show fixed birds & pairs"
+                />
+              </Text>
+              <Switch.Root
+                checked={includeFixed}
+                onCheckedChange={(e: { checked: boolean }) => setIncludeFixed(e.checked === true)}
+                colorPalette="primary"
+              >
+                <Switch.HiddenInput />
+                <Switch.Control />
+              </Switch.Root>
+            </Flex>
+          )}
           <Flex gap={2} role="tablist">
             {([
               { key: 'species' as const, label: speciesTabLabel, count: visibleSpecies.length },
@@ -329,6 +371,8 @@ export default function TroubleSpotsPage() {
                 flex={1}
                 minW={0}
                 px={2}
+                fontSize={{ base: 'sm', md: 'md' }}
+                whiteSpace="nowrap"
                 role="tab"
                 aria-selected={activeTab === tab.key}
                 variant={activeTab === tab.key ? 'solid' : 'outline'}
@@ -366,7 +410,7 @@ export default function TroubleSpotsPage() {
                       borderColor="primary.100"
                     >
                       <Box
-                        as="button"
+                        as={everyone ? 'div' : 'button'}
                         flex={1}
                         minW={0}
                         display="flex"
@@ -374,8 +418,8 @@ export default function TroubleSpotsPage() {
                         gap={3}
                         textAlign="left"
                         bg="transparent"
-                        cursor="pointer"
-                        onClick={() =>
+                        cursor={everyone ? 'default' : 'pointer'}
+                        onClick={everyone ? undefined : () =>
                           navigate(
                             `/trouble-spots/species/${row.species_id}${
                               effectiveCountryCode
@@ -500,8 +544,8 @@ export default function TroubleSpotsPage() {
                         onClick={() => void handlePracticeFlock(flock)}
                       >
                         <FormattedMessage
-                          id="trouble_spots_practice_flock"
-                          defaultMessage="Practice this flock"
+                          id="trouble_spots_practice_species"
+                          defaultMessage="Practice"
                         />
                       </Button>
                     </Flex>
@@ -528,15 +572,15 @@ export default function TroubleSpotsPage() {
                     borderColor="primary.100"
                   >
                     <Box
-                      as="button"
+                      as={everyone ? 'div' : 'button'}
                       flex={1}
                       minW={0}
                       textAlign="left"
                       bg="transparent"
-                      cursor="pointer"
+                      cursor={everyone ? 'default' : 'pointer'}
                       border="none"
                       p={0}
-                      onClick={() =>
+                      onClick={everyone ? undefined : () =>
                         navigate(`/trouble-spots/pair/${pair.low_id}/${pair.high_id}${countryQuery}`, {
                           state: { pair },
                         })

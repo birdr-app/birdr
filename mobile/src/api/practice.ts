@@ -85,6 +85,26 @@ export async function fetchTroubleSpots(
   return (await response.json()) as TroubleSpotsResponse;
 }
 
+/** Tricky birds across all players; public, rows never carry `fixed`. */
+export async function fetchGlobalTroubleSpots(
+  countryCode?: string,
+  language?: string | null,
+): Promise<TroubleSpotsResponse> {
+  const headers = await getAuthHeaders();
+  const params = new URLSearchParams();
+  if (countryCode?.trim()) params.set('country_code', countryCode.trim().toUpperCase());
+  if (language?.trim()) params.set('language', language.trim());
+  const qs = params.toString();
+  const response = await fetch(
+    `${apiUrl('/api/practice/trouble-spots/everyone/')}${qs ? `?${qs}` : ''}`,
+    { headers: { Accept: 'application/json', ...headers } },
+  );
+  if (!response.ok) {
+    throw new Error(await readApiErrorMessage(response, 'Request failed'));
+  }
+  return (await response.json()) as TroubleSpotsResponse;
+}
+
 export type TroubleSpotMixup = {
   pair: TroubleSpotPair;
   otherId: number;

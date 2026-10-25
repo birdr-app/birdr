@@ -21,6 +21,7 @@ import {
 } from '../utils/troubleSpotDisplayName';
 import { SpeciesCoverThumb } from '../components/SpeciesCoverThumb';
 import {
+  fetchGlobalTroubleSpots,
   fetchTroubleSpots,
   startConfusionPairPractice,
   startMixupPractice,
@@ -41,7 +42,10 @@ function formatRate(rate: number | null): string {
   return `${Math.round(rate)}%`;
 }
 
-export function TroubleSpotsScreen() {
+type TroubleSpotsScope = 'me' | 'everyone';
+
+export function TroubleSpotsScreen({ scope = 'me' }: { scope?: TroubleSpotsScope }) {
+  const everyone = scope === 'everyone';
   const navigation = useNavigation<NativeStackNavigationProp<Record<string, object | undefined>>>();
   const route = useRoute();
   const { t, locale } = useTranslation();
@@ -94,7 +98,7 @@ export function TroubleSpotsScreen() {
   );
 
   const load = useCallback(async (showRefresh = false) => {
-    if (!isAuthenticated) {
+    if (!isAuthenticated && !everyone) {
       setLoading(false);
       return;
     }
@@ -106,7 +110,8 @@ export function TroubleSpotsScreen() {
     else setLoading(true);
     setError(null);
     try {
-      const data = await fetchTroubleSpots(effectiveCountryCode, speciesLanguage);
+      const fetchRows = everyone ? fetchGlobalTroubleSpots : fetchTroubleSpots;
+      const data = await fetchRows(effectiveCountryCode, speciesLanguage);
       setSpecies(data.species);
       setPairs(data.pairs);
       setFlocks(data.flocks ?? []);
@@ -119,7 +124,7 @@ export function TroubleSpotsScreen() {
       setLoading(false);
       setRefreshing(false);
     }
-  }, [isAuthenticated, profileReady, effectiveCountryCode, speciesLanguage, t]);
+  }, [isAuthenticated, everyone, profileReady, effectiveCountryCode, speciesLanguage, t]);
 
   useFocusEffect(
     useCallback(() => {
@@ -129,7 +134,15 @@ export function TroubleSpotsScreen() {
     }, [load, route.params]),
   );
 
+  // Practice games need an account; the everyone screen is open to visitors.
+  const requireLogin = () => {
+    if (isAuthenticated) return false;
+    navigation.navigate('Login' as never);
+    return true;
+  };
+
   const handlePracticePair = async (pair: TroubleSpotPair) => {
+    if (requireLogin()) return;
     const key = `${pair.low_id}-${pair.high_id}`;
     setStartingPairKey(key);
     setError(null);
@@ -150,6 +163,7 @@ export function TroubleSpotsScreen() {
   };
 
   const handlePracticeSpecies = async (speciesId: number) => {
+    if (requireLogin()) return;
     setStartingSpeciesId(speciesId);
     setError(null);
     try {
@@ -169,6 +183,7 @@ export function TroubleSpotsScreen() {
   };
 
   const handlePracticeFlock = async (flock: TroubleSpotFlock) => {
+    if (requireLogin()) return;
     const speciesIds = flock.species.map((member) => member.species_id);
     setStartingFlockKey(speciesIds.join('-'));
     setError(null);
@@ -277,7 +292,8 @@ export function TroubleSpotsScreen() {
               <TouchableOpacity
                 style={styles.speciesRowMain}
                 onPress={() => openSpecies(row)}
-                accessibilityRole="button"
+                disabled={everyone}
+                accessibilityRole={everyone ? undefined : 'button'}
               >
                 <SpeciesCoverThumb
                   speciesId={row.species_id}
@@ -375,7 +391,8 @@ export function TroubleSpotsScreen() {
             <TouchableOpacity
               style={styles.pairRowMain}
               onPress={() => openPair(pair)}
-              accessibilityRole="button"
+              disabled={everyone}
+              accessibilityRole={everyone ? undefined : 'button'}
             >
               <View style={styles.rowText}>
                 <Text style={styles.rowTitle} numberOfLines={1}>{lowName}</Text>
@@ -408,7 +425,7 @@ export function TroubleSpotsScreen() {
       })
     );
 
-  if (!isAuthenticated) {
+  if (!isAuthenticated && !everyone) {
     return (
       <View style={styles.centered}>
         <Text style={styles.muted}>{t('trouble_spots_login')}</Text>
@@ -423,17 +440,19 @@ export function TroubleSpotsScreen() {
     <View style={styles.root}>
       <View style={styles.controlsPanel}>
         <View style={styles.countryPickerWrap}>{countryPicker}</View>
-        <View style={styles.fixedToggleRow}>
-          <Text style={styles.fixedToggleLabel} numberOfLines={1}>
-            {t('trouble_spots_include_fixed')}
-          </Text>
-          <Switch
-            value={includeFixed}
-            onValueChange={setIncludeFixed}
-            trackColor={{ false: colors.primary[200], true: colors.primary[400] }}
-            thumbColor={includeFixed ? colors.primary[600] : '#f4f3f4'}
-          />
-        </View>
+        {everyone ? null : (
+          <View style={styles.fixedToggleRow}>
+            <Text style={styles.fixedToggleLabel} numberOfLines={1}>
+              {t('trouble_spots_include_fixed')}
+            </Text>
+            <Switch
+              value={includeFixed}
+              onValueChange={setIncludeFixed}
+              trackColor={{ false: colors.primary[200], true: colors.primary[400] }}
+              thumbColor={includeFixed ? colors.primary[600] : '#f4f3f4'}
+            />
+          </View>
+        )}
       </View>
 
       <View style={styles.tabBar}>
@@ -462,6 +481,7 @@ export function TroubleSpotsScreen() {
           <RefreshControl refreshing={refreshing} onRefresh={() => void load(true)} />
         }
       >
+        {everyone ? <Text style={styles.intro}>{t('trouble_spots_everyone_intro')}</Text> : null}
         {error ? <Text style={styles.error}>{error}</Text> : null}
         {listBody}
       </ScrollView>
@@ -543,6 +563,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 22,
     paddingTop: 8,
+  },
+  intro: {
+    fontSize: 14,
+    color: colors.primary[700],
+    marginBottom: 12,
   },
   error: {
     fontSize: 14,

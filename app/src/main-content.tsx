@@ -142,6 +142,7 @@ export const MainContent = () => {
             <Route path="/my-games" element={<MyGamesPage />} />
             <Route path="/checklist" element={<ChecklistPage />} />
             <Route path="/trouble-spots" element={<TroubleSpotsPage />} />
+            <Route path="/tricky-birds" element={<TroubleSpotsPage scope="everyone" />} />
             <Route path="/trouble-spots/species/:speciesId" element={<TroubleSpotSpeciesPage />} />
             <Route path="/trouble-spots/pair/:lowId/:highId" element={<TroubleSpotPairPage />} />
             <Route path="/practice/species/:slug" element={<SpeciesPracticePage />} />

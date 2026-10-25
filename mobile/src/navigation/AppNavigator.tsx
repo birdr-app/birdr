@@ -62,6 +62,10 @@ import { LeagueListScreen } from '../screens/LeagueListScreen';
 
 const Stack = createNativeStackNavigator();
 
+function GlobalTroubleSpotsScreen() {
+  return <TroubleSpotsScreen scope="everyone" />;
+}
+
 const SCREENS: { name: string; titleKey: string; component: React.ComponentType<any> }[] = [
   { name: 'Home', titleKey: 'app_name', component: HomeScreen },
   { name: 'Start', titleKey: 'new_game', component: StartScreen },
@@ -104,6 +108,7 @@ const SCREENS: { name: string; titleKey: string; component: React.ComponentType<
   { name: 'MyGames', titleKey: 'my_games', component: MyGamesScreen },
   { name: 'Checklist', titleKey: 'checklist_title', component: ChecklistScreen },
   { name: 'TroubleSpots', titleKey: 'trouble_spots', component: TroubleSpotsScreen },
+  { name: 'GlobalTroubleSpots', titleKey: 'trouble_spots_everyone', component: GlobalTroubleSpotsScreen },
   { name: 'TroubleSpotSpecies', titleKey: 'trouble_spots_species_title', component: TroubleSpotSpeciesScreen },
   { name: 'TroubleSpotPair', titleKey: 'trouble_spots_pair_detail', component: TroubleSpotPairScreen },
   { name: 'SpeciesPractice', titleKey: 'practice', component: SpeciesPracticeScreen },

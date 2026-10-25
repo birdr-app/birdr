@@ -39,6 +39,14 @@ SPECIES_PRACTICE_PASS_CORRECT = PAIR_PRACTICE_PASS_CORRECT
 # Data-site HTML/CSV; marketing pages keep their own longer TTL.
 MISTAKE_STATS_CACHE_TTL = 15 * 60
 
+# Everyone's tricky birds: target-based like the personal page, stricter sample sizes.
+GLOBAL_MIN_TIMES_SHOWN = 20
+GLOBAL_MIN_TIMES_SHOWN_COUNTRY = 10
+GLOBAL_TROUBLE_SPOTS_LIMIT = 100
+# Flocks are built from this many strongest pairs; weaker links only blur the groups.
+GLOBAL_FLOCK_PAIR_POOL = 300
+GLOBAL_TROUBLE_SPOTS_CACHE_TTL = 60 * 60
+
 
 def _allowed_species_ids_for_country(country_code: str) -> frozenset[int]:
     """Species that have a non-excluded status for this country in CountrySpecies."""
@@ -654,7 +662,21 @@ def get_user_fixed_species_ids(user_id: int) -> set[int]:
     )
 
 
-def get_confusion_pair_rows(country_code: str | None = None) -> list[dict[str, Any]]:
+def _practice_game_types() -> tuple[str, ...]:
+    from jizz.models import Game
+
+    return (
+        Game.GAME_TYPE_PAIR_PRACTICE,
+        Game.GAME_TYPE_SPECIES_PRACTICE,
+        Game.GAME_TYPE_MIXUP_PRACTICE,
+    )
+
+
+def get_confusion_pair_rows(
+    country_code: str | None = None,
+    *,
+    exclude_practice: bool = False,
+) -> list[dict[str, Any]]:
     """
     Undirected species pairs from incorrect answers, ordered by total wrong answers (desc).
 
@@ -663,6 +685,8 @@ def get_confusion_pair_rows(country_code: str | None = None) -> list[dict[str, A
     If country_code is set, only pairs from games in that country are counted,
     and only where both species are on that country's checklist
     (CountrySpecies excludes introduced / uncertain / unknown).
+
+    exclude_practice drops drill games, which repeat the same few species.
     """
     cc = normalize_country_filter(country_code)
     pairs = (
@@ -671,6 +695,8 @@ def get_confusion_pair_rows(country_code: str | None = None) -> list[dict[str, A
         .exclude(question__species_id__isnull=True)
         .exclude(answer_id__isnull=True)
     )
+    if exclude_practice:
+        pairs = pairs.exclude(question__game__game_type__in=_practice_game_types())
     if cc:
         allowed = _allowed_species_ids_for_country(cc)
         if not allowed:
@@ -723,6 +749,83 @@ def get_confusion_pair_rows(country_code: str | None = None) -> list[dict[str, A
             }
         )
     return rows
+
+
+def get_global_trouble_spot_rows(country_code: str | None = None) -> dict[str, list[dict[str, Any]]]:
+    """
+    Tricky birds across all players: species, confusion pairs and mixed-up flocks.
+
+    Same row shapes as get_user_trouble_spot_rows() and build_confusion_flocks().
+    Species are target-based (missed when they were the question), ranked by error
+    rate with a minimum sample. Practice games are excluded. With a country, only
+    games there and species on its checklist count. Cached per country.
+    """
+    cc = normalize_country_filter(country_code)
+    key = _mistake_rows_cache_key("trouble-spots", cc)
+    cached = cache.get(key)
+    if cached is not None:
+        return cached
+
+    answers = Answer.objects.exclude(question__game__game_type__in=_practice_game_types())
+    if cc:
+        allowed = _allowed_species_ids_for_country(cc)
+        if not allowed:
+            return {"species": [], "pairs": [], "flocks": []}
+        answers = answers.filter(
+            question__game__country_id=cc,
+            question__species_id__in=allowed,
+        )
+    min_shown = GLOBAL_MIN_TIMES_SHOWN_COUNTRY if cc else GLOBAL_MIN_TIMES_SHOWN
+    aggregated = list(
+        answers.values("question__species_id")
+        .annotate(
+            times_shown=Count("id"),
+            wrongly_answered=Count("id", filter=Q(correct=False)),
+        )
+        .filter(times_shown__gte=min_shown, wrongly_answered__gt=0)
+    )
+    aggregated.sort(
+        key=lambda r: (r["wrongly_answered"] / r["times_shown"], r["wrongly_answered"]),
+        reverse=True,
+    )
+    aggregated = aggregated[:GLOBAL_TROUBLE_SPOTS_LIMIT]
+    species_map = Species.objects.in_bulk([r["question__species_id"] for r in aggregated])
+
+    species_rows: list[dict[str, Any]] = []
+    for row in aggregated:
+        sp = species_map.get(row["question__species_id"])
+        if sp is None:
+            continue
+        ts = row["times_shown"]
+        wr = row["wrongly_answered"]
+        species_rows.append(
+            {
+                "species_id": sp.id,
+                "name": sp.name,
+                "name_latin": sp.name_latin,
+                "times_shown": ts,
+                "correctly_answered": ts - wr,
+                "wrongly_answered": wr,
+                "correct_rate": _target_success_rate_pct(ts - wr, ts),
+                "error_rate": _target_error_rate_pct(wr, ts),
+            }
+        )
+
+    pair_rows = get_confusion_pair_rows(cc, exclude_practice=True)
+    flock_pool = pair_rows[:GLOBAL_FLOCK_PAIR_POOL]
+    weakest_pooled = flock_pool[-1]["total_wrong"] if flock_pool else 0
+    flocks = build_confusion_flocks(
+        flock_pool,
+        min_pair_wrong=max(USER_MIN_PAIR_WRONG, weakest_pooled),
+    )
+
+    result = {
+        "species": species_rows,
+        "pairs": pair_rows[:GLOBAL_TROUBLE_SPOTS_LIMIT],
+        "flocks": flocks,
+    }
+    cache.set(key, result, GLOBAL_TROUBLE_SPOTS_CACHE_TTL)
+    return result
 
 
 def get_confused_partners_for_species(

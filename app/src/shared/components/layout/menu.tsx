@@ -35,6 +35,11 @@ export const BirdrMenu = () => {
                 </RouterLink>
               </Link>
             )}
+            <Link asChild textDecoration="none">
+              <RouterLink to={'/tricky-birds'}>
+                <FormattedMessage id="trouble_spots_everyone" defaultMessage="Everyone's tricky birds" />
+              </RouterLink>
+            </Link>
             <Link href={'/checklist'} textDecoration="none">
               <FormattedMessage id="checklist_title" defaultMessage="My checklist" />
             </Link>

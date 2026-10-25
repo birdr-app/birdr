@@ -82,6 +82,7 @@ from jizz.checklist_views import ChecklistView
 from jizz.app_version_views import AppVersionView
 from jizz.geo_views import GeoCountryView
 from jizz.practice_views import (
+    GlobalTroubleSpotsView,
     StartConfusionPairPracticeView,
     StartMixupPracticeView,
     StartSpeciesPracticeView,
@@ -568,6 +569,11 @@ urlpatterns = [
     path('api/app-version/', AppVersionView.as_view(), name='app-version'),
     path('api/geo/country/', GeoCountryView.as_view(), name='geo-country'),
     path('api/practice/trouble-spots/', TroubleSpotsView.as_view(), name='practice-trouble-spots'),
+    path(
+        'api/practice/trouble-spots/everyone/',
+        GlobalTroubleSpotsView.as_view(),
+        name='practice-trouble-spots-everyone',
+    ),
     path(
         'api/practice/confusion-pair/start/',
         StartConfusionPairPracticeView.as_view(),
