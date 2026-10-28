@@ -5,19 +5,21 @@ from django.contrib import admin, messages
 from django.contrib.admin import register
 from django.contrib.admin.widgets import AdminTextareaWidget
 from django.core.exceptions import ObjectDoesNotExist
+from django.db.models.functions import Coalesce
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth.validators import ASCIIUsernameValidator, UnicodeUsernameValidator
 from django.core.validators import RegexValidator
 from django.utils.translation import gettext_lazy as _
-from django.db.models import Count, Exists, OuterRef, Sum
+from django.db.models import Count, Exists, IntegerField, OuterRef, Q, Subquery, Sum
 from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.template.loader import render_to_string
 from django.shortcuts import redirect, get_object_or_404
-from django.urls import path, re_path, reverse
-from django.utils.html import format_html
+from django.urls import NoReverseMatch, path, re_path, reverse
+from django.utils.html import format_html, format_html_join
+from django.utils.http import urlencode
 from django.utils.safestring import mark_safe
 
 from jizz.models import (Answer, FlockSharedGame, SharedGame, SharedGameAttempt, BirdrJourney, BirdrJourneyGame, Country,
@@ -30,7 +32,8 @@ from jizz.models import (Answer, FlockSharedGame, SharedGame, SharedGameAttempt,
                          Friendship, DailyChallenge, DailyChallengeParticipant,
                          DailyChallengeInvite, DailyChallengeRound, DeviceToken, PushDevice, UsageEvent,
                          IpGeoCache, Flock, FlockChallenge, FlockChallengeAttempt,
-                         FlockInvite, FlockMembership,
+                         FlockInvite, FlockMembership, LeagueAttempt, LeagueDay, LeagueMembership,
+                         LeagueNotificationLog, LeagueWeekResult,
                          MailSettings, UpdateEmailDelivery, UpdateEmailRecipient, UpdateThumbsUp)
 from jizz.notifications import send_welcome_email
 from jizz.utils import (get_country_images, get_images, get_media_citation,
@@ -114,11 +117,196 @@ class AdminUserCreationForm(AdminUsernameFormMixin, UserCreationForm):
     pass
 
 
+def admin_change_url(obj):
+    opts = obj._meta
+    try:
+        return reverse(f'admin:{opts.app_label}_{opts.model_name}_change', args=[obj.pk])
+    except NoReverseMatch:
+        return None
+
+
+def admin_link(obj, label=None):
+    """Link to ``obj``'s admin change page (plain text when the model has no admin)."""
+    if obj is None:
+        return '—'
+    label = str(obj) if label is None else label
+    url = admin_change_url(obj)
+    if url is None:
+        return label
+    return format_html('<a href="{}">{}</a>', url, label)
+
+
+def admin_changelist_url(model, **params):
+    opts = model._meta
+    url = reverse(f'admin:{opts.app_label}_{opts.model_name}_changelist')
+    return f'{url}?{urlencode(params)}' if params else url
+
+
+def admin_changelist_link(model, label, **params):
+    return format_html('<a href="{}">{}</a>', admin_changelist_url(model, **params), label)
+
+
+def game_label(game):
+    """Short game label that needs no extra queries (``Game.__str__`` loads the country)."""
+    if game is None:
+        return '—'
+    return f'#{game.pk} {game.country_id or "?"} {game.level} ({game.created:%Y-%m-%d})'
+
+
+class ExtraLookupsMixin:
+    """Allow the deeper changelist filters the admin cross-links use (Django allows one relation hop)."""
+    extra_lookup_prefixes = ()
+
+    def lookup_allowed(self, lookup, *args, **kwargs):
+        if lookup.startswith(tuple(self.extra_lookup_prefixes)):
+            return True
+        return super().lookup_allowed(lookup, *args, **kwargs)
+
+
+class CappedInlineMixin:
+    """Show only the first ``max_rows`` rows of an inline, so heavy users stay fast."""
+    max_rows = 25
+
+    def get_formset(self, request, obj=None, **kwargs):
+        formset = super().get_formset(request, obj, **kwargs)
+        max_rows = self.max_rows
+
+        class CappedFormSet(formset):
+            def get_queryset(self):
+                if not hasattr(self, '_queryset'):
+                    self._queryset = super().get_queryset()[:max_rows]
+                return self._queryset
+
+        return CappedFormSet
+
+
+class ReadOnlyInlineMixin:
+    extra = 0
+    can_delete = False
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+
+class UserPlayerInline(ReadOnlyInlineMixin, CappedInlineMixin, admin.TabularInline):
+    model = Player
+    max_rows = 50
+    verbose_name_plural = 'Players (latest 50)'
+    fields = readonly_fields = ['name', 'created', 'scores_played']
+    ordering = ['-created']
+    show_change_link = True
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).annotate(_score_count=Count('scores'))
+
+    def scores_played(self, obj):
+        return admin_changelist_link(
+            PlayerScore, f'{obj._score_count} games', player__id__exact=obj.pk,
+        )
+    scores_played.short_description = 'Games'
+
+
+def journey_level_for_index(levels, index):
+    """``BirdrJourney.current_sequence`` is a 0-based index into levels ordered by sequence."""
+    return levels[index] if 0 <= index < len(levels) else None
+
+
+class UserBirdrJourneyInline(ReadOnlyInlineMixin, admin.TabularInline):
+    model = BirdrJourney
+    fk_name = 'user'
+    verbose_name_plural = 'Country challenges (Birdr journeys)'
+    fields = readonly_fields = [
+        'country', 'current_level', 'current_step_sequence', 'streak_days',
+        'last_played_date', 'journey_games', 'updated',
+    ]
+    ordering = ['-updated']
+    show_change_link = True
+
+    def get_queryset(self, request):
+        return (
+            super().get_queryset(request)
+            .select_related('country')
+            .annotate(_game_count=Count('games'))
+        )
+
+    def current_level(self, obj):
+        if not hasattr(self, '_levels'):
+            self._levels = list(JourneyLevel.objects.order_by('sequence'))
+        level = journey_level_for_index(self._levels, obj.current_sequence)
+        return admin_link(level) if level else f'index {obj.current_sequence} (finished)'
+    current_level.short_description = 'Current level'
+
+    def journey_games(self, obj):
+        return admin_changelist_link(
+            BirdrJourneyGame, f'{obj._game_count} games', birdr_journey__id__exact=obj.pk,
+        )
+    journey_games.short_description = 'Games'
+
+
+class UserLeagueMembershipInline(ReadOnlyInlineMixin, admin.TabularInline):
+    model = LeagueMembership
+    verbose_name_plural = 'National league memberships'
+    fields = readonly_fields = [
+        'country', 'reminders_enabled', 'reminder_mode', 'last_played_date', 'joined_at', 'attempts',
+    ]
+    ordering = ['-joined_at']
+    show_change_link = True
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related('country')
+
+    def attempts(self, obj):
+        return admin_changelist_link(
+            LeagueAttempt, 'attempts', user__id__exact=obj.user_id, day__country__code__exact=obj.country_id,
+        )
+    attempts.short_description = 'Attempts'
+
+
+class UserFlockMembershipInline(ReadOnlyInlineMixin, admin.TabularInline):
+    model = FlockMembership
+    verbose_name_plural = 'Flock memberships'
+    fields = readonly_fields = ['flock', 'role', 'notifications_enabled', 'joined_at']
+    ordering = ['-joined_at']
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related('flock')
+
+
+def _render_table(headers, rows):
+    if not rows:
+        return format_html('<p>{}</p>', '—')
+    head = format_html_join('', '<th>{}</th>', ((h,) for h in headers))
+    body = format_html_join(
+        '', '<tr>{}</tr>',
+        ((format_html_join('', '<td>{}</td>', ((cell,) for cell in row)),) for row in rows),
+    )
+    return format_html('<table><thead><tr>{}</tr></thead><tbody>{}</tbody></table>', head, body)
+
+
+def _render_section(title, summary, table=''):
+    return format_html('<h3 style="margin: 12px 0 4px">{}</h3><p>{}</p>{}', title, summary, table)
+
+
+def _join_links(links):
+    return format_html_join(' · ', '{}', ((link,) for link in links)) if links else '—'
+
+
 @admin.register(User)
 class UserAdmin(BaseUserAdmin):
     form = AdminUserChangeForm
     add_form = AdminUserCreationForm
-    inlines = [UserProfileInline]
+    inlines = [
+        UserProfileInline, UserPlayerInline, UserBirdrJourneyInline,
+        UserLeagueMembershipInline, UserFlockMembershipInline,
+    ]
+    fieldsets = BaseUserAdmin.fieldsets + (
+        ('Birdr activity', {'fields': ('activity',)}),
+    )
+    readonly_fields = ['activity']
+    recent_rows = 10
     list_display = ['username', 'email', 'first_name', 'last_name', 'avatar_preview', 'is_staff', 'date_joined']
     actions = ['resend_welcome_email']
 
@@ -134,6 +322,178 @@ class UserAdmin(BaseUserAdmin):
             pass
         return '-'
     avatar_preview.short_description = 'Avatar'
+
+    def activity(self, obj):
+        if obj is None or not obj.pk:
+            return '—'
+        return format_html_join('', '{}', ((section,) for section in (
+            self._games_section(obj),
+            self._journey_section(obj),
+            self._league_section(obj),
+            self._flock_section(obj),
+            self._shared_games_section(obj),
+            self._other_section(obj),
+        )))
+    activity.short_description = 'Related records'
+
+    def _games_section(self, user):
+        scores = PlayerScore.objects.filter(player__user=user).annotate(
+            _is_country_challenge=_country_challenge_exists('game_id'),
+        )
+        not_cc = Q(_is_country_challenge=False)
+        counts = scores.aggregate(
+            total=Count('pk'),
+            normal=Count('pk', filter=not_cc & ~Q(game__game_type__in=SPECIAL_GAME_TYPES)),
+            country_challenge=Count('pk', filter=Q(_is_country_challenge=True)),
+            **{
+                value: Count('pk', filter=not_cc & Q(game__game_type=game_type))
+                for value, (_label, game_type) in GAME_KIND_BY_TYPE.items()
+            },
+        )
+        labels = {'normal': 'normal', 'country_challenge': 'country challenge'}
+        labels.update({value: label for value, (label, _type) in GAME_KIND_BY_TYPE.items()})
+        by_kind = [
+            admin_changelist_link(
+                PlayerScore, f'{label}: {counts[value]}', player__user__id__exact=user.pk, type=value,
+            )
+            for value, label in labels.items() if counts[value]
+        ]
+        hosted = Game.objects.filter(host__user=user).count()
+        summary = format_html(
+            '{} · {}<br>By type: {}',
+            admin_changelist_link(PlayerScore, f'All {counts["total"]} games played', player__user__id__exact=user.pk),
+            admin_changelist_link(Game, f'{hosted} games hosted', host__user__id__exact=user.pk),
+            _join_links(by_kind),
+        )
+        recent = scores.select_related('game', 'player').order_by('-id')[:self.recent_rows]
+        rows = [
+            (
+                f'{score.game.created:%Y-%m-%d %H:%M}' if score.game else '—',
+                admin_link(score.game, game_label(score.game)),
+                game_kind_for(score.game, score._is_country_challenge),
+                admin_link(score, score.score),
+                admin_link(score.player, score.player.name),
+            )
+            for score in recent
+        ]
+        return _render_section(
+            f'Latest {self.recent_rows} games', summary,
+            _render_table(['Played', 'Game', 'Type', 'Score', 'Player'], rows),
+        )
+
+    def _journey_section(self, user):
+        count = BirdrJourneyGame.objects.filter(birdr_journey__user=user).count()
+        return _render_section(
+            'Country challenge', admin_changelist_link(
+                BirdrJourneyGame, f'All {count} country challenge games', birdr_journey__user__id__exact=user.pk,
+            ),
+        )
+
+    def _league_section(self, user):
+        attempts = LeagueAttempt.objects.filter(user=user)
+        count = attempts.count()
+        weeks = LeagueWeekResult.objects.filter(user=user).aggregate(
+            total=Count('pk'), champion=Count('pk', filter=Q(is_champion=True)),
+        )
+        summary = format_html(
+            '{} · {} ({} won) · {} · {}',
+            admin_changelist_link(LeagueAttempt, f'All {count} attempts', user__id__exact=user.pk),
+            admin_changelist_link(LeagueWeekResult, f'{weeks["total"]} week results', user__id__exact=user.pk),
+            weeks['champion'],
+            admin_changelist_link(
+                LeagueNotificationLog,
+                f'{LeagueNotificationLog.objects.filter(user=user).count()} notifications',
+                user__id__exact=user.pk,
+            ),
+            admin_changelist_link(
+                LeagueDay, f'{LeagueDay.objects.filter(winner=user).count()} days won', winner__id__exact=user.pk,
+            ),
+        )
+        rows = [
+            (
+                admin_link(attempt.day),
+                admin_link(attempt, attempt.score),
+                attempt.correct_count,
+                attempt.completed_at or 'not finished',
+                admin_link(attempt.game, game_label(attempt.game)),
+            )
+            for attempt in attempts.select_related('day', 'game').order_by('-id')[:self.recent_rows]
+        ]
+        return _render_section(
+            'National league', summary,
+            _render_table(['Day', 'Score', 'Correct', 'Completed', 'Game'], rows),
+        )
+
+    def _flock_section(self, user):
+        owned = [admin_link(flock) for flock in Flock.objects.filter(owner=user).order_by('name')]
+        attempts = FlockChallengeAttempt.objects.filter(user=user)
+        count = attempts.count()
+        summary = format_html(
+            'Owns: {}<br>{}',
+            _join_links(owned),
+            admin_changelist_link(FlockChallengeAttempt, f'All {count} flock challenge attempts', user__id__exact=user.pk),
+        )
+        rows = [
+            (
+                admin_link(attempt.challenge),
+                admin_link(attempt.challenge.flock),
+                'ranked' if attempt.is_ranked else 'practice',
+                attempt.correct_count,
+                admin_link(attempt, attempt.birdr_score),
+                attempt.completed_at or 'not finished',
+                admin_link(attempt.game, game_label(attempt.game)),
+            )
+            for attempt in attempts.select_related('challenge__flock', 'game').order_by('-id')[:self.recent_rows]
+        ]
+        return _render_section(
+            'Flocks', summary,
+            _render_table(['Challenge', 'Flock', 'Kind', 'Correct', 'Score', 'Completed', 'Game'], rows),
+        )
+
+    def _shared_games_section(self, user):
+        owned = SharedGame.objects.filter(owner=user).count()
+        attempts = SharedGameAttempt.objects.filter(user=user)
+        summary = format_html(
+            '{} · {} attempts',
+            admin_changelist_link(SharedGame, f'{owned} shared games created', owner__id__exact=user.pk),
+            attempts.count(),
+        )
+        rows = [
+            (
+                admin_link(attempt.shared_game, attempt.shared_game.token),
+                attempt.score,
+                attempt.correct_count,
+                attempt.completed_at or 'not finished',
+                admin_link(attempt.game, game_label(attempt.game)),
+            )
+            for attempt in attempts.select_related('shared_game', 'game').order_by('-id')[:self.recent_rows]
+        ]
+        return _render_section(
+            'Shared games played', summary,
+            _render_table(['Shared game', 'Score', 'Correct', 'Completed', 'Game'], rows),
+        )
+
+    def _other_section(self, user):
+        links = [
+            (DailyChallenge, 'daily challenges created', {'creator__id__exact': user.pk},
+             DailyChallenge.objects.filter(creator=user)),
+            (DailyChallenge, 'daily challenges joined', {'participants__user__id__exact': user.pk},
+             DailyChallengeParticipant.objects.filter(user=user)),
+            (Friendship, 'friend requests sent', {'from_user__id__exact': user.pk},
+             Friendship.objects.filter(from_user=user)),
+            (Friendship, 'friend requests received', {'to_user__id__exact': user.pk},
+             Friendship.objects.filter(to_user=user)),
+            (PushDevice, 'push devices', {'user__id__exact': user.pk}, PushDevice.objects.filter(user=user)),
+            (DeviceToken, 'device tokens', {'user__id__exact': user.pk}, DeviceToken.objects.filter(user=user)),
+            (Feedback, 'feedback', {'user__id__exact': user.pk}, Feedback.objects.filter(user=user)),
+            (UpdateEmailRecipient, 'update emails', {'user__id__exact': user.pk},
+             UpdateEmailRecipient.objects.filter(user=user)),
+            (UsageEvent, 'usage events', {'user__id__exact': user.pk}, UsageEvent.objects.filter(user=user)),
+        ]
+        return _render_section('Other', _join_links([
+            admin_changelist_link(model, f'{queryset.count()} {label}', **params)
+            for model, label, params, queryset in links
+        ]))
 
     @admin.action(description='Resend welcome mail')
     def resend_welcome_email(self, request, queryset):
@@ -903,11 +1263,21 @@ class PlayerScoreGameKindListFilter(GameKindListFilter):
     game_type_field = 'game__game_type'
 
 
-class PlayerScoreInline(admin.TabularInline):
+class PlayerScoreInline(CappedInlineMixin, admin.TabularInline):
     model = PlayerScore
     can_delete = False
-    readonly_fields = ['game', 'score', 'playtime', 'app_version', 'device_type']
-    fields = ['game', 'score', 'playtime', 'player', 'app_version', 'device_type']
+    max_rows = 100
+    verbose_name_plural = 'Scores (latest 100)'
+    readonly_fields = ['game', 'score', 'playtime', 'player', 'user', 'app_version', 'device_type']
+    fields = ['game', 'score', 'playtime', 'player', 'user', 'app_version', 'device_type']
+    ordering = ['-id']
+    show_change_link = True
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related('game__country', 'player__user')
+
+    def user(self, obj):
+        return admin_link(obj.player.user) if obj.player.user_id else '—'
 
     def has_change_permission(self, request, obj=None):
         return False
@@ -917,14 +1287,15 @@ class PlayerScoreInline(admin.TabularInline):
 
 
 @register(Game)
-class GameAdmin(admin.ModelAdmin):
+class GameAdmin(ExtraLookupsMixin, admin.ModelAdmin):
+    extra_lookup_prefixes = ['host__user__']
     inlines = [PlayerScoreInline, QuestionInline]
     raw_id_fields = [
         'country', 'host', 'focus_species', 'pair_species_low', 'pair_species_high', 'mixup_species',
     ]
-    readonly_fields = ['token', 'created', 'correct', 'errors', 'total']
+    readonly_fields = ['token', 'created', 'correct', 'errors', 'total', 'host_user', 'played_for']
     fields = [
-        'country', 'language', 'host', 'created', 'token',
+        'country', 'language', 'host', 'host_user', 'played_for', 'created', 'token',
         'length', 'multiplayer', 'media', 'repeat', 'rarity', 'include_escapes',
         'difficult_species', 'level', 'game_type', 'speed_seconds',
         'pair_species_low', 'pair_species_high', 'focus_species', 'mixup_species',
@@ -959,6 +1330,41 @@ class GameAdmin(admin.ModelAdmin):
     def errors(self, obj):
         return obj.questions.aggregate(errors=Sum('errors'))['errors']
 
+    def host_user(self, obj):
+        if obj.host_id and obj.host.user_id:
+            return admin_link(obj.host.user)
+        return '—'
+    host_user.short_description = 'Host user'
+
+    def played_for(self, obj):
+        """What this game belongs to: a country challenge step, league day, flock challenge or shared game."""
+        if obj is None or not obj.pk:
+            return '—'
+        links = [
+            format_html(
+                'Country challenge: {} · {} · {}',
+                admin_link(journey_game.birdr_journey),
+                admin_link(journey_game.journey_step.journey_level),
+                admin_link(journey_game, journey_game.journey_step),
+            )
+            for journey_game in obj.birdr_journey_games.select_related(
+                'birdr_journey', 'journey_step__journey_level',
+            )
+        ]
+        for accessor, label in (
+            ('league_attempt', 'League attempt'),
+            ('flock_challenge_attempt', 'Flock challenge attempt'),
+            ('shared_attempt', 'Shared game attempt'),
+            ('shared_template', 'Shared game'),
+        ):
+            try:
+                related = getattr(obj, accessor)
+            except ObjectDoesNotExist:
+                continue
+            links.append(format_html('{}: {}', label, admin_link(related)))
+        return format_html_join(mark_safe('<br>'), '{}', ((link,) for link in links)) if links else '—'
+    played_for.short_description = 'Played for'
+
 
 @register(Answer)
 class AnswerAdmin(admin.ModelAdmin):
@@ -981,11 +1387,18 @@ class PlayerAdmin(admin.ModelAdmin):
     search_fields = ['name', 'user__username']
     raw_id_fields = ['user']
     list_display = ['name', 'games', 'playtime']
-    readonly_fields = ['token', 'created',  'games', 'playtime']
+    readonly_fields = ['token', 'created',  'games', 'playtime', 'all_games']
     fields = ['user', 'name'] + readonly_fields
 
+    def all_games(self, obj):
+        if obj is None or not obj.pk:
+            return '—'
+        return admin_changelist_link(PlayerScore, 'All games of this player', player__id__exact=obj.pk)
+    all_games.short_description = 'All games'
+
 @register(PlayerScore)
-class PlayerScoreAdmin(admin.ModelAdmin):
+class PlayerScoreAdmin(ExtraLookupsMixin, admin.ModelAdmin):
+    extra_lookup_prefixes = ['player__user__']
     raw_id_fields = ['player', 'game']
     list_display = ['player', 'game', 'type', 'progress', 'length', 'score', 'device_type', 'app_version']
     list_filter = [
@@ -1377,6 +1790,16 @@ class JourneyLevelAdmin(admin.ModelAdmin):
     search_fields = ['title', 'description']
     ordering = ['sequence']
     inlines = [JourneyStepInline]
+    readonly_fields = ['journey_games']
+
+    def journey_games(self, obj):
+        if obj is None or not obj.pk:
+            return '—'
+        count = BirdrJourneyGame.objects.filter(journey_step__journey_level=obj).count()
+        return admin_changelist_link(
+            BirdrJourneyGame, f'{count} games played at this level', journey_step__journey_level__id__exact=obj.pk,
+        )
+    journey_games.short_description = 'Games played'
 
     def icon_preview(self, obj):
         if obj.icon:
@@ -1392,26 +1815,99 @@ class JourneyLevelAdmin(admin.ModelAdmin):
     step_count.short_description = 'Steps'
 
 
+def _count_subquery(queryset, group_field):
+    return Coalesce(
+        Subquery(
+            queryset.order_by().values(group_field).annotate(n=Count('pk')).values('n')[:1],
+            output_field=IntegerField(),
+        ),
+        0,
+    )
+
+
+def with_journey_game_status(queryset):
+    """Annotate what ``BirdrJourneyGame.status`` needs, so a list of them costs one query."""
+    return queryset.select_related('journey_step__journey_level', 'game').annotate(
+        _failed=_count_subquery(
+            Answer.objects.filter(
+                question__game_id=OuterRef('game_id'), correct=False, answer__isnull=False,
+            ),
+            'question__game_id',
+        ),
+        _questions=_count_subquery(Question.objects.filter(game_id=OuterRef('game_id')), 'game_id'),
+        _done=_count_subquery(Question.objects.filter(game_id=OuterRef('game_id'), done=True), 'game_id'),
+    )
+
+
+def journey_game_remaining_jokers(journey_game):
+    if not hasattr(journey_game, '_failed'):
+        return journey_game.remaining_jokers
+    return journey_game.journey_step.jokers - journey_game._failed
+
+
+def journey_game_status(journey_game):
+    """Same outcome as ``BirdrJourneyGame.status``, from the annotations when present."""
+    game = journey_game.game
+    if not hasattr(journey_game, '_failed') or game.game_type == Game.GAME_TYPE_SURVIVAL:
+        return journey_game.status
+    if journey_game_remaining_jokers(journey_game) < 0:
+        return 'failed'
+    if game.force_ended or journey_game._done >= game.length:
+        return 'passed'
+    if journey_game._questions:
+        return 'running'
+    return 'new'
+
+
 class BirdrJourneyGameInline(admin.TabularInline):
     model = BirdrJourneyGame
-    readonly_fields = ['journey_step', 'game', 'created', 'status', 'remaining_jokers']
+    verbose_name_plural = 'Games played (newest first)'
+    readonly_fields = ['level', 'journey_step', 'game', 'created', 'status', 'remaining_jokers']
     fields = readonly_fields
     can_delete = False
     extra = 0
+    show_change_link = True
 
     def has_add_permission(self, request, obj):
         return False
 
+    def get_queryset(self, request):
+        return with_journey_game_status(super().get_queryset(request)).select_related('game__country')
+
+    def level(self, obj):
+        return admin_link(obj.journey_step.journey_level)
+
+    def status(self, obj):
+        return journey_game_status(obj)
+
+    def remaining_jokers(self, obj):
+        return journey_game_remaining_jokers(obj)
+
 
 @admin.register(BirdrJourneyGame)
-class BirdrJourneyGameAdmin(admin.ModelAdmin):
-    list_display = ['birdr_journey', 'journey_step', 'game', 'status', 'remaining_jokers', 'created']
+class BirdrJourneyGameAdmin(ExtraLookupsMixin, admin.ModelAdmin):
+    extra_lookup_prefixes = ['birdr_journey__user__', 'journey_step__journey_level__']
+    list_display = ['birdr_journey', 'level', 'journey_step', 'game', 'status', 'remaining_jokers', 'created']
     list_filter = ['created']
     readonly_fields = ['birdr_journey', 'journey_step', 'game', 'created', 'status', 'remaining_jokers']
     raw_id_fields = ['birdr_journey', 'journey_step', 'game']
 
     def has_add_permission(self, request):
         return False
+
+    def get_queryset(self, request):
+        return with_journey_game_status(super().get_queryset(request)).select_related(
+            'birdr_journey', 'game__country',
+        )
+
+    def level(self, obj):
+        return admin_link(obj.journey_step.journey_level)
+
+    def status(self, obj):
+        return journey_game_status(obj)
+
+    def remaining_jokers(self, obj):
+        return journey_game_remaining_jokers(obj)
 
 
 @admin.register(BirdrJourney)
@@ -1422,9 +1918,46 @@ class BirdrJourneyAdmin(admin.ModelAdmin):
     ]
     list_filter = ['country', 'current_sequence']
     search_fields = ['user__username', 'player__name']
-    readonly_fields = ['created', 'updated']
+    readonly_fields = ['created', 'updated', 'level_progress']
+    fields = [
+        'user', 'player', 'country', 'current_sequence', 'current_step_sequence',
+        'streak_days', 'last_played_date', 'created', 'updated', 'level_progress',
+    ]
     raw_id_fields = ['user', 'player', 'country']
     inlines = [BirdrJourneyGameInline]
+
+    def level_progress(self, obj):
+        """Every level with its steps and the games played for each step."""
+        if obj is None or not obj.pk:
+            return '—'
+        games_by_step = defaultdict(list)
+        for journey_game in with_journey_game_status(obj.games.order_by('created', 'id')):
+            games_by_step[journey_game.journey_step_id].append(journey_game)
+        rows = []
+        for index, level in enumerate(JourneyLevel.objects.prefetch_related('steps').order_by('sequence')):
+            if index < obj.current_sequence:
+                state = 'completed'
+            elif index == obj.current_sequence:
+                state = f'current (step {obj.current_step_sequence})'
+            else:
+                state = 'locked'
+            steps = []
+            for step in level.steps.all():
+                played = games_by_step.get(step.pk, [])
+                games = format_html_join(', ', '{} {}', (
+                    (admin_link(journey_game.game, f'#{journey_game.game_id}'), journey_game_status(journey_game))
+                    for journey_game in played
+                )) if played else 'not played'
+                steps.append(format_html(
+                    '{} ({}): {}', admin_link(step, f'Step {step.sequence}'), step.step_type, games,
+                ))
+            rows.append((
+                admin_link(level),
+                state,
+                format_html_join(mark_safe('<br>'), '{}', ((step,) for step in steps)) if steps else 'champion',
+            ))
+        return _render_table(['Level', 'Status', 'Steps and games'], rows)
+    level_progress.short_description = 'Levels'
 
 
 @register(UserProfile)
@@ -1472,7 +2005,8 @@ class DailyChallengeRoundInline(admin.TabularInline):
 
 
 @admin.register(DailyChallenge)
-class DailyChallengeAdmin(admin.ModelAdmin):
+class DailyChallengeAdmin(ExtraLookupsMixin, admin.ModelAdmin):
+    extra_lookup_prefixes = ['participants__user__']
     list_display = ['id', 'token', 'creator', 'country', 'media', 'length', 'duration_days', 'status', 'started_at', 'created']
     list_filter = ['status', 'media', 'created']
     search_fields = ['creator__username', 'token']
@@ -1611,6 +2145,16 @@ class FlockAdmin(admin.ModelAdmin):
         return invite.code if invite else '—'
 
     join_code.short_description = 'Join code'
+
+
+@admin.register(FlockChallengeAttempt)
+class FlockChallengeAttemptAdmin(admin.ModelAdmin):
+    list_display = ['challenge', 'user', 'is_ranked', 'correct_count', 'birdr_score', 'completed_at', 'created_at']
+    list_filter = ['is_ranked', 'is_practice']
+    search_fields = ['user__username', 'challenge__title']
+    raw_id_fields = ['challenge', 'user', 'player', 'game']
+    readonly_fields = ['result_token', 'created_at']
+    list_select_related = ['challenge', 'user']
 
 
 @admin.register(FlockChallenge)

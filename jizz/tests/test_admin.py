@@ -589,3 +589,233 @@ class AdminGameKindFilterTestCase(TestCase):
                 self.assertEqual(response.status_code, 200)
                 self.assertEqual(response.context['cl'].queryset.count(), 1)
                 self.assertEqual(response.context['cl'].queryset.get().pk, score.pk)
+
+
+def _post_data_from_change_page(response):
+    """POST data that resubmits an admin change page as rendered (main form plus every inline)."""
+    from django.forms import SplitDateTimeWidget
+
+    forms = [response.context['adminform'].form]
+    for inline_admin_formset in response.context['inline_admin_formsets']:
+        formset = inline_admin_formset.formset
+        forms.append(formset.management_form)
+        forms.extend(formset.forms)
+    data = {}
+    for form in forms:
+        for bound_field in form:
+            value = bound_field.value()
+            widget = bound_field.field.widget
+            if value is None or bound_field.field.disabled:
+                continue
+            if isinstance(widget, SplitDateTimeWidget):
+                date_value, time_value = widget.decompress(value)
+                data[f'{bound_field.html_name}_0'] = str(date_value)
+                data[f'{bound_field.html_name}_1'] = str(time_value)
+            elif isinstance(value, bool):
+                if value:
+                    data[bound_field.html_name] = 'on'
+            elif isinstance(value, (list, tuple)):
+                data[bound_field.html_name] = [str(item) for item in value]
+            elif not hasattr(value, 'read'):
+                data[bound_field.html_name] = str(value)
+    return data
+
+
+class AdminUserCrossLinksTestCase(TestCase):
+    """User, journey and game admin pages show and link to everything tied to a user."""
+
+    def setUp(self):
+        from datetime import date
+
+        from jizz.models import (
+            Flock, FlockMembership, LeagueAttempt, LeagueDay, LeagueMembership,
+        )
+
+        self.client = Client()
+        self.client.force_login(_create_staff_user())
+        self.country = Country.objects.get_or_create(code='NL', defaults={'name': 'Netherlands'})[0]
+        self.birder = User.objects.create_user(username='birder', email='birder@test.com', password='x')
+        self.player = Player.objects.create(name='Birder', language='en', user=self.birder)
+
+        self.normal_game = self._make_game()
+        PlayerScore.objects.create(player=self.player, game=self.normal_game, score=10)
+
+        self.level = JourneyLevel.objects.create(
+            sequence=0, title='Nest', description='Nest',
+            icon=SimpleUploadedFile('nest.png', PNG_1X1, content_type='image/png'),
+        )
+        self.step = JourneyStep.objects.create(
+            journey_level=self.level, sequence=0, level='beginner', length=2, jokers=0,
+        )
+        self.journey = BirdrJourney.objects.create(user=self.birder, country=self.country)
+        self.journey_game_game = self._make_game(length=2)
+        PlayerScore.objects.create(player=self.player, game=self.journey_game_game, score=20)
+        self.journey_game = BirdrJourneyGame.objects.create(
+            birdr_journey=self.journey, journey_step=self.step, game=self.journey_game_game,
+        )
+
+        self.league_membership = LeagueMembership.objects.create(user=self.birder, country=self.country)
+        self.league_day = LeagueDay.objects.create(country=self.country, date=date(2026, 10, 1), length=5)
+        self.league_game = self._make_game(game_type=Game.GAME_TYPE_LEAGUE)
+        PlayerScore.objects.create(player=self.player, game=self.league_game, score=99)
+        self.league_attempt = LeagueAttempt.objects.create(
+            day=self.league_day, user=self.birder, player=self.player, game=self.league_game, score=99,
+        )
+        self.flock = Flock.objects.create(
+            name='Owls', slug='owls', owner=self.birder, default_country=self.country,
+        )
+        FlockMembership.objects.create(flock=self.flock, user=self.birder, role=FlockMembership.ROLE_OWNER)
+
+    def _make_game(self, **kwargs):
+        defaults = {
+            'country': self.country, 'level': 'beginner', 'length': 5, 'media': 'images', 'host': self.player,
+        }
+        defaults.update(kwargs)
+        return Game.objects.create(**defaults)
+
+    def _user_change(self):
+        return self.client.get(reverse('admin:auth_user_change', args=(self.birder.pk,)))
+
+    def test_user_change_shows_inlines_and_links(self):
+        response = self._user_change()
+        self.assertEqual(response.status_code, 200)
+        html = response.content.decode()
+        for url in [
+            reverse('admin:jizz_player_change', args=(self.player.pk,)),
+            reverse('admin:jizz_birdrjourney_change', args=(self.journey.pk,)),
+            reverse('admin:jizz_journeylevel_change', args=(self.level.pk,)),
+            reverse('admin:jizz_leaguemembership_change', args=(self.league_membership.pk,)),
+            reverse('admin:jizz_leagueday_change', args=(self.league_day.pk,)),
+            reverse('admin:jizz_leagueattempt_change', args=(self.league_attempt.pk,)),
+            reverse('admin:jizz_flock_change', args=(self.flock.pk,)),
+            reverse('admin:jizz_game_change', args=(self.normal_game.pk,)),
+            reverse('admin:jizz_game_change', args=(self.league_game.pk,)),
+            f'{reverse("admin:jizz_playerscore_changelist")}?player__user__id__exact={self.birder.pk}',
+            f'{reverse("admin:jizz_game_changelist")}?host__user__id__exact={self.birder.pk}',
+            f'{reverse("admin:jizz_birdrjourneygame_changelist")}?birdr_journey__user__id__exact={self.birder.pk}',
+        ]:
+            with self.subTest(url=url):
+                self.assertIn(url, html)
+        self.assertIn('country challenge: 1', html)
+        self.assertIn('national league: 1', html)
+        inline_models = {
+            formset.formset.model for formset in response.context['inline_admin_formsets']
+        }
+        from jizz.models import FlockMembership, LeagueMembership
+        self.assertTrue({Player, BirdrJourney, LeagueMembership, FlockMembership} <= inline_models)
+
+    def test_user_change_query_count_does_not_grow_with_games(self):
+        from django.db import connection
+        from django.test.utils import CaptureQueriesContext
+
+        with CaptureQueriesContext(connection) as few:
+            self._user_change()
+        for _ in range(30):
+            PlayerScore.objects.create(player=self.player, game=self._make_game(), score=1)
+        Player.objects.create(name='Second device', language='en', user=self.birder)
+        with CaptureQueriesContext(connection) as many:
+            response = self._user_change()
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(many), len(few))
+
+    def test_player_inline_is_capped(self):
+        from jizz.admin import UserPlayerInline
+
+        Player.objects.create(name='Second device', language='en', user=self.birder)
+        Player.objects.create(name='Third device', language='en', user=self.birder)
+        with patch.object(UserPlayerInline, 'max_rows', 2):
+            response = self._user_change()
+        players = next(
+            formset for formset in response.context['inline_admin_formsets'] if formset.formset.model is Player
+        )
+        self.assertEqual(len(players.formset.forms), 2)
+
+    def test_user_change_can_still_be_saved(self):
+        response = self._user_change()
+        data = _post_data_from_change_page(response)
+        data['first_name'] = 'Renamed'
+        response = self.client.post(reverse('admin:auth_user_change', args=(self.birder.pk,)), data)
+        self.assertEqual(response.status_code, 302, getattr(response, 'context', None) and [
+            response.context['adminform'].form.errors,
+            [formset.formset.errors for formset in response.context['inline_admin_formsets']],
+        ])
+        self.birder.refresh_from_db()
+        self.assertEqual(self.birder.first_name, 'Renamed')
+
+    def test_cross_link_changelist_filters(self):
+        from jizz.models import FlockChallengeAttempt
+
+        cases = [
+            ('admin:jizz_playerscore_changelist',
+             {'player__user__id__exact': self.birder.pk, 'type': 'country_challenge'}, 1),
+            ('admin:jizz_playerscore_changelist', {'player__user__id__exact': self.birder.pk}, 3),
+            ('admin:jizz_game_changelist', {'host__user__id__exact': self.birder.pk}, 3),
+            ('admin:jizz_birdrjourneygame_changelist', {'birdr_journey__user__id__exact': self.birder.pk}, 1),
+            ('admin:jizz_birdrjourneygame_changelist', {'journey_step__journey_level__id__exact': self.level.pk}, 1),
+            ('admin:jizz_leagueattempt_changelist',
+             {'user__id__exact': self.birder.pk, 'day__country__code__exact': 'NL'}, 1),
+            ('admin:jizz_dailychallenge_changelist', {'participants__user__id__exact': self.birder.pk}, 0),
+            ('admin:jizz_flockchallengeattempt_changelist', {'user__id__exact': self.birder.pk}, 0),
+        ]
+        for url_name, params, expected in cases:
+            with self.subTest(url=url_name, params=params):
+                response = self.client.get(reverse(url_name), params)
+                self.assertEqual(response.status_code, 200)
+                self.assertEqual(response.context['cl'].queryset.count(), expected)
+        self.assertFalse(FlockChallengeAttempt.objects.exists())
+
+    def test_journey_change_shows_levels_and_games(self):
+        response = self.client.get(reverse('admin:jizz_birdrjourney_change', args=(self.journey.pk,)))
+        self.assertEqual(response.status_code, 200)
+        html = response.content.decode()
+        self.assertIn(reverse('admin:jizz_journeylevel_change', args=(self.level.pk,)), html)
+        self.assertIn(reverse('admin:jizz_journeystep_change', args=(self.step.pk,)), html)
+        self.assertIn(reverse('admin:jizz_game_change', args=(self.journey_game_game.pk,)), html)
+        self.assertIn(reverse('admin:jizz_birdrjourneygame_change', args=(self.journey_game.pk,)), html)
+        self.assertIn(reverse('admin:auth_user_change', args=(self.birder.pk,)), html)
+        self.assertIn('current (step 0)', html)
+
+    def test_journey_level_links_to_its_games(self):
+        response = self.client.get(reverse('admin:jizz_journeylevel_change', args=(self.level.pk,)))
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('1 games played at this level', response.content.decode())
+
+    def test_game_change_links_back(self):
+        response = self.client.get(reverse('admin:jizz_game_change', args=(self.journey_game_game.pk,)))
+        self.assertEqual(response.status_code, 200)
+        html = response.content.decode()
+        self.assertIn('Country challenge:', html)
+        self.assertIn(reverse('admin:jizz_birdrjourney_change', args=(self.journey.pk,)), html)
+        self.assertIn(reverse('admin:auth_user_change', args=(self.birder.pk,)), html)
+        self.assertIn(reverse('admin:jizz_player_change', args=(self.player.pk,)), html)
+
+        response = self.client.get(reverse('admin:jizz_game_change', args=(self.league_game.pk,)))
+        self.assertIn(
+            reverse('admin:jizz_leagueattempt_change', args=(self.league_attempt.pk,)), response.content.decode(),
+        )
+
+    def test_annotated_journey_status_matches_model(self):
+        from jizz.admin import journey_game_remaining_jokers, journey_game_status, with_journey_game_status
+        from jizz.models import Answer, Question
+
+        robin = Species.objects.create(name='Robin', name_latin='Erithacus rubecula', code='ROB01')
+        wren = Species.objects.create(name='Wren', name_latin='Troglodytes', code='WRE01')
+        score = PlayerScore.objects.get(game=self.journey_game_game)
+
+        def check(expected):
+            annotated = with_journey_game_status(BirdrJourneyGame.objects.filter(pk=self.journey_game.pk)).get()
+            fresh = BirdrJourneyGame.objects.get(pk=self.journey_game.pk)
+            self.assertEqual(journey_game_status(annotated), fresh.status)
+            self.assertEqual(journey_game_remaining_jokers(annotated), fresh.remaining_jokers)
+            self.assertEqual(fresh.status, expected)
+
+        check('new')
+        first = Question.objects.create(game=self.journey_game_game, species=robin, sequence=1, done=True)
+        Answer.objects.create(question=first, player_score=score, answer=robin)
+        check('running')
+        second = Question.objects.create(game=self.journey_game_game, species=robin, sequence=2, done=True)
+        Answer.objects.create(question=second, player_score=score, answer=robin)
+        check('passed')
+        third = Question.objects.create(game=self.journey_game_game, species=robin, sequence=3, done=True)
+        Answer.objects.create(question=third, player_score=score, answer=wren)
+        check('failed')
