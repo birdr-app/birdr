@@ -120,7 +120,7 @@ class MarketingPagesTests(TestCase):
         self.assertIn('Get it on Google Play', html)
         self.assertIn('Or play a quiz in the browser', html)
         self.assertIn('href="/play"', html)
-        self.assertIn('Which bird is singing?', html)
+        self.assertIn('/images/motmot/screen-quiz-correct.webp', html)
         self.assertIn('/images/motmot/tody-hello.webp', html)
         self.assertIn('What you can play', html)
         self.assertIn('Normal quizzes', html)
@@ -184,10 +184,12 @@ class MarketingPagesTests(TestCase):
         self.assertIn('function token() {', html)
         self.assertIn('token: token,', html)
 
-    def test_home_mockups_are_translated(self):
+    def test_home_screenshots_are_served_and_alt_text_translated(self):
         html = self.client.get('/nl/site/').content.decode()
-        self.assertIn('Welke vogel zingt er?', html)
-        self.assertIn('Vraag 6 van 10', html)
+        self.assertIn('/images/motmot/screen-league.webp', html)
+        self.assertIn('Nederlandse league: de quiz van vandaag', html)
+        response = self.client.get('/images/motmot/screen-quiz-correct.webp')
+        self.assertEqual(response.status_code, 200)
 
     def test_stylish_birdr_images_are_served(self):
         response = self.client.get('/images/stylish/birdr-waiting.png')

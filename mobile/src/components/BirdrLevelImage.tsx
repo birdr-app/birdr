@@ -34,7 +34,7 @@ export function BirdrLevelImage({ iconUrl, sequence, variant, size, style, frame
   const isCompleted = variant === 'completed';
   const showArt = showsGameArt(visualStyle);
   const stylishSource =
-    showArt && visualStyle === 'stylish' && sequence != null
+    showArt && (visualStyle === 'stylish' || visualStyle === 'tody') && sequence != null
       ? getLevelAsset(Number(sequence), visualStyle)
       : null;
   const resolvedUrl = stylishSource || !showArt ? null : resolveMediaUrl(iconUrl);

@@ -335,6 +335,7 @@ export const translations: Record<string, Record<string, string>> = {
     checklist_select_order: 'Select order',
     checklist_change_order: 'Change order',
     checklist_order_all: 'All orders',
+    checklist_tax_order: 'Order',
     checklist_login_required: 'Sign in to view your checklist.',
     checklist_set_country: 'Set your preferred country in Profile to use the checklist.',
     checklist_progress: '{identified} / {total} birds identified',

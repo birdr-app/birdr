@@ -16,7 +16,7 @@
       <p><a class="web-link" href="/play">{% mt "Or play a quiz in the browser" %}</a></p>
     </div>
     <div class="hero-stage">
-      {% include "marketing/mockups/_quiz.html" %}
+      {% mt "Motmot quiz: a Common Scoter photo with Common Scoter marked as the correct answer" as alt %}{% include "marketing/mockups/_shot.html" with shot="quiz-correct" alt=alt eager=True %}
       <img class="tody" src="/images/motmot/tody-hello.webp" width="538" height="600" alt="">
     </div>
   </div>
@@ -70,7 +70,7 @@
         </div>
       </div>
       <div class="feature-art">
-        {% include "marketing/mockups/_new_game.html" %}
+        {% mt "Setting up a new game in Motmot: the number of questions and the level, from Beginner to Pro" as alt %}{% include "marketing/mockups/_shot.html" with shot="new-game" alt=alt %}
         <img class="tody" src="/images/motmot/tody-listening.webp" width="475" height="600" alt="" loading="lazy">
       </div>
     </article>
@@ -84,7 +84,7 @@
         <p><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "Quizzes by country" %}</a></p>
       </div>
       <div class="feature-art">
-        {% include "marketing/mockups/_journey.html" %}
+        {% mt "Country Challenge for Ecuador: level 3, Casual Birder, with the next step ready to play" as alt %}{% include "marketing/mockups/_shot.html" with shot="journey" alt=alt %}
         <img class="tody" src="/images/motmot/tody-explorer.webp" width="596" height="600" alt="" loading="lazy">
       </div>
     </article>
@@ -98,7 +98,7 @@
         <p><a href="{{ '/site/national-league/'|mpath }}">{% mt "Countries with players" %}</a></p>
       </div>
       <div class="feature-art">
-        {% include "marketing/mockups/_league.html" %}
+        {% mt "Netherlands League: today’s quiz, the week so far and the weekly ranking" as alt %}{% include "marketing/mockups/_shot.html" with shot="league" alt=alt %}
         <img class="tody" src="/images/motmot/tody-champion.webp" width="481" height="600" alt="" loading="lazy">
       </div>
     </article>
@@ -111,7 +111,7 @@
         <p><a class="btn" href="{{ '/site/flocks/'|mpath }}">{% mt "Learn about Flocks" %}</a></p>
       </div>
       <div class="feature-art">
-        {% include "marketing/mockups/_flock.html" %}
+        {% mt "The Motmot home screen with a quick game, the Country Challenge, Survival, the National League and your flock" as alt %}{% include "marketing/mockups/_shot.html" with shot="home" alt=alt %}
         <img class="tody" src="/images/motmot/tody-flock.webp" width="600" height="323" alt="" loading="lazy">
       </div>
     </article>
@@ -124,7 +124,7 @@
         <p><a class="btn" href="{{ '/site/my-tricky-birds/'|mpath }}">{% mt "Practise difficult birds" %}</a></p>
       </div>
       <div class="feature-art">
-        {% include "marketing/mockups/_tricky.html" %}
+        {% mt "My Tricky Birds: the species you often get wrong, each with a practice button" as alt %}{% include "marketing/mockups/_shot.html" with shot="tricky" alt=alt %}
         <img class="tody" src="/images/motmot/tody-studying.webp" width="556" height="600" alt="" loading="lazy">
       </div>
     </article>
@@ -138,7 +138,7 @@
         <p><a href="{{ '/site/survival/'|mpath }}">{% mt "Country records" %}</a></p>
       </div>
       <div class="feature-art">
-        {% include "marketing/mockups/_survival.html" %}
+        {% mt "Survival: Pro level, 15 seconds per bird, and one wrong answer ends the run" as alt %}{% include "marketing/mockups/_shot.html" with shot="survival" alt=alt %}
         <img class="tody" src="/images/motmot/tody-stressed.webp" width="600" height="565" alt="" loading="lazy">
       </div>
     </article>
@@ -152,7 +152,7 @@
         <p><a href="/checklist">{% mt "Open my checklist" %}</a></p>
       </div>
       <div class="feature-art">
-        {% include "marketing/mockups/_checklist.html" %}
+        {% mt "My Checklist: 266 of 485 Dutch birds identified, with the latest species first" as alt %}{% include "marketing/mockups/_shot.html" with shot="checklist" alt=alt %}
         <img class="tody" src="/images/motmot/tody-birding.webp" width="550" height="600" alt="" loading="lazy">
       </div>
     </article>
