@@ -302,7 +302,7 @@ def _abundance_block(
     )
     if not rows:
         return '', []
-    lines = [f'Local relative abundance in {country_code} (eBird-derived Birdr stats):']
+    lines = [f'Local relative abundance in {country_code} (eBird-derived Motmot stats):']
     facts: list[SpeciesFact] = []
     for row in rows:
         freq = row.frequency or 'unknown'

@@ -74,7 +74,7 @@ class DataViewsTests(TestCase):
     def test_data_index_public(self):
         res = Client().get(reverse("data-index"))
         self.assertEqual(res.status_code, 200)
-        self.assertContains(res, "Birdr data")
+        self.assertContains(res, "Motmot data")
         self.assertContains(res, reverse("data-taxon-orders"))
         self.assertContains(res, reverse("data-games-played"))
         self.assertContains(res, reverse("data-marketing-website"))

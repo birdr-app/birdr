@@ -23,7 +23,7 @@ class ErrorMailTests(TestCase):
         _raise_and_log()  # same error again: throttled
         self.assertEqual(len(mail.outbox), 1)
         self.assertEqual(mail.outbox[0].to, ['logging@birdr.pro'])
-        self.assertTrue(mail.outbox[0].subject.startswith('[Birdr] ERROR'))
+        self.assertTrue(mail.outbox[0].subject.startswith('[Motmot] ERROR'))
         self.assertIn('ValueError', mail.outbox[0].body)
 
     def test_a_different_error_is_mailed_too(self):

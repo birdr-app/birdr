@@ -1,5 +1,5 @@
 """
-Tests for Birdr Journey API (/api/birdr-journey/).
+Tests for Motmot Journey API (/api/birdr-journey/).
 """
 from django.contrib.auth import get_user_model
 from django.core.files.uploadedfile import SimpleUploadedFile
@@ -73,7 +73,7 @@ class BirdrJourneyApiTestCase(TestCase):
         self.user = User.objects.create_user(username='journeyuser', password='testpass123')
         self.level0 = _make_level(0, 'Nest', step_count=2)
         self.level1 = _make_level(1, 'Fledgling', step_count=1)
-        _make_level(2, 'Birdr Champion', step_count=0)
+        _make_level(2, 'Motmot Champion', step_count=0)
 
     def test_get_requires_auth(self):
         response = self.client.get('/api/birdr-journey/', {'country_code': 'NL'})
@@ -442,7 +442,7 @@ class BirdrJourneyApiTestCase(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertTrue(response.data['is_champion'])
         self.assertFalse(response.data['can_play_today'])
-        self.assertEqual(response.data['current_level']['title'], 'Birdr Champion')
+        self.assertEqual(response.data['current_level']['title'], 'Motmot Champion')
 
     def test_list_journeys_without_country_code(self):
         _player_auth(self.client, self.player)

@@ -43,7 +43,7 @@ class Command(BaseCommand):
             for p in DailyChallengeParticipant.objects.filter(challenge=challenge, status='accepted').select_related('user'):
                 send_push_to_user(
                     p.user,
-                    'Birdr: All players answered',
+                    'Motmot: All players answered',
                     'See today\'s ranking in the app.',
                     {'type': 'daily_challenge_ranking', 'challenge_id': challenge.id, 'round_id': round_obj.id},
                 )

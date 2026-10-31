@@ -12,7 +12,7 @@ from jizz.models import PushDevice, UserProfile
 
 logger = logging.getLogger(__name__)
 
-SIGNUP_TEST_TITLE = 'Birdr'
+SIGNUP_TEST_TITLE = 'Motmot'
 SIGNUP_TEST_BODY = "You're good to go!"
 
 

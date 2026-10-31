@@ -1,6 +1,6 @@
 # Game Lifecycle Documentation
 
-This document describes the complete lifecycle of a game in the Birdr application, from creation to completion, including both single-player and multiplayer scenarios.
+This document describes the complete lifecycle of a game in the Motmot application, from creation to completion, including both single-player and multiplayer scenarios.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ This document describes the complete lifecycle of a game in the Birdr applicatio
 
 ## Overview
 
-A game in Birdr consists of:
+A game in Motmot consists of:
 - **Game**: The main entity containing game settings and metadata
 - **Questions**: Individual quiz questions with species identification
 - **Answers**: Player responses to questions

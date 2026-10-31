@@ -3,7 +3,7 @@
 <section class="hero">
   <h1>{% mt "Birds of {name}" name=country_name %}</h1>
   <p class="lead">
-    {% mt "Learn to identify the birds of {name} yourself. The Birdr list has {count} species—photo quizzes and a Country Challenge take you from distinctive beginners to harder lookalikes." name=country_name count=species_count %}
+    {% mt "Learn to identify the birds of {name} yourself. The Motmot list has {count} species—photo quizzes and a Country Challenge take you from distinctive beginners to harder lookalikes." name=country_name count=species_count %}
   </p>
   <div class="cta-row">
     <a class="btn" href="{{ quiz_href }}">{% mt "Start a quiz" %}</a>
@@ -23,7 +23,7 @@
     <a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "More country quizzes" %}</a> ·
     <a href="{{ '/site/national-league/'|mpath }}">{% mt "National League" %}</a> ·
     <a href="{{ '/site/survival/'|mpath }}">{% mt "Survival" %}</a> ·
-    <a href="/play">{% mt "Open Birdr" %}</a>
+    <a href="/play">{% mt "Open Motmot" %}</a>
   </p>
 </section>
 {% if show_games or show_highscores or show_challenge or show_league or show_missed or show_pairs %}
@@ -35,9 +35,9 @@
     <p class="stat-figure">{{ games_played }}</p>
     <p>
       {% if players_played == 1 %}
-      {% mt "1 player has taken a Birdr quiz on the {name} list." name=country_name %}
+      {% mt "1 player has taken a Motmot quiz on the {name} list." name=country_name %}
       {% else %}
-      {% mt "{count} players have taken a Birdr quiz on the {name} list." count=players_played name=country_name %}
+      {% mt "{count} players have taken a Motmot quiz on the {name} list." count=players_played name=country_name %}
       {% endif %}
     </p>
     <p class="more-link"><a href="{{ games_href }}">{% mt "Games played over time" %}</a></p>

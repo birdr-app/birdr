@@ -74,25 +74,25 @@ def game_share_players(game: Game) -> list[dict]:
 
 def game_share_payload(game: Game, *, share_url: str, og_image: str) -> dict:
     players = game_share_players(game)
-    country_name = game.country.name if game.country else 'Birdr quiz'
+    country_name = game.country.name if game.country else 'Motmot quiz'
     subtitle = game_share_subtitle(game)
     winner = players[0] if players else None
     if winner and len(players) == 1:
         description = (
-            f'{winner["name"]} scored {winner["score_label"]} in a Birdr quiz '
+            f'{winner["name"]} scored {winner["score_label"]} in a Motmot quiz '
             f'({country_name}). Can you beat them?'
         )
     elif winner:
         description = (
-            f'{winner["name"]} won with {winner["score_label"]} in a Birdr quiz '
+            f'{winner["name"]} won with {winner["score_label"]} in a Motmot quiz '
             f'({country_name}). Can you beat them?'
         )
     else:
-        description = f'A Birdr quiz result from {country_name}. Can you beat this score?'
+        description = f'A Motmot quiz result from {country_name}. Can you beat this score?'
     og_title = (
         f'{winner["score_label"]} — {country_name}'
         if winner
-        else f'Birdr quiz — {country_name}'
+        else f'Motmot quiz — {country_name}'
     )
     return {
         'token': game.token,

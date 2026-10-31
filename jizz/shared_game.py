@@ -216,7 +216,7 @@ def share_preview(shared_game: SharedGame) -> dict:
 
     template = shared_game.template_game
     owner = player_name_for_user(shared_game.owner)
-    country = template.country.name if template.country else 'Birdr'
+    country = template.country.name if template.country else 'Motmot'
     media = MEDIA_PREVIEW_LABELS.get(template.media, template.media)
     played = SharedGameAttempt.objects.filter(shared_game=shared_game, is_ranked=True).count()
     parts = [f'{template.length} {media}', template.level.title()]
@@ -225,18 +225,18 @@ def share_preview(shared_game: SharedGame) -> dict:
     if not shared_game.is_open:
         parts.append('finished')
     return {
-        'title': f'{owner} shared a Birdr quiz: {country}',
+        'title': f'{owner} shared a Motmot quiz: {country}',
         'description': ' · '.join(parts) + '. Can you beat the others?',
     }
 
 
 FLOCK_PUSH_MESSAGES = {
     'en': {
-        'title': 'Birdr: {flock}',
+        'title': 'Motmot: {flock}',
         'body': '{name} shared a new game: {country}, {length} birds. Tap to play!',
     },
     'nl': {
-        'title': 'Birdr: {flock}',
+        'title': 'Motmot: {flock}',
         'body': '{name} heeft een nieuw spel gedeeld: {country}, {length} vogels. Tik om te spelen!',
     },
 }
@@ -278,7 +278,7 @@ def notify_flock_of_shared_game(link) -> int:
                 msg['title'].format(flock=flock.name),
                 msg['body'].format(
                     name=name,
-                    country=template.country.name if template.country else 'Birdr',
+                    country=template.country.name if template.country else 'Motmot',
                     length=template.length,
                 ),
                 data=data,

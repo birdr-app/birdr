@@ -16,9 +16,9 @@ WIKIPEDIA_LICENSE = 'CC BY-SA 4.0'
 WIKIPEDIA_ATTRIBUTION = 'Wikipedia contributors (CC BY-SA)'
 WIKIDATA_LICENSE = 'CC0'
 WIKIDATA_ATTRIBUTION = 'Wikidata contributors (CC0)'
-EBIRD_ATTRIBUTION = 'eBird relative abundance (Birdr country stats)'
+EBIRD_ATTRIBUTION = 'eBird relative abundance (Motmot country stats)'
 BOTW_ATTRIBUTION = 'Birds of the World (temporary grounding; link for full account)'
-COMMUNITY_ATTRIBUTION = 'Birdr community contributor'
+COMMUNITY_ATTRIBUTION = 'Motmot community contributor'
 
 
 def upsert_fact(

@@ -43,7 +43,7 @@ def push_data_for_route(route: str, country_code: str | None) -> dict:
 
 
 class SendPushForm(forms.Form):
-    title = forms.CharField(max_length=80, help_text='Shown in bold, e.g. "🇳🇱 Birdr League".')
+    title = forms.CharField(max_length=80, help_text='Shown in bold, e.g. "🇳🇱 Motmot League".')
     body = forms.CharField(max_length=240, widget=forms.Textarea(attrs={'rows': 3, 'cols': 60}))
     route = forms.ChoiceField(choices=PUSH_ROUTE_CHOICES, initial='Home', help_text='Screen that opens on tap.')
     badge = forms.BooleanField(required=False, initial=False, help_text='Show the red "1" on the iOS app icon.')

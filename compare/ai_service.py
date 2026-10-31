@@ -109,7 +109,7 @@ _JSON_KEYS = (
 )
 
 SYSTEM_PROMPT = (
-    'You are a field-guide editor for Birdr, writing thorough separation notes '
+    'You are a field-guide editor for Motmot, writing thorough separation notes '
     'for birdwatchers who mixed two species up in a quiz. Be precise, practical '
     'and honest about uncertainty — but dig deep when the sources allow: cover '
     'age, season, sex, flight vs perched views, and common pitfalls. Prefer '

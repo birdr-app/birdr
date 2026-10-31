@@ -2,7 +2,7 @@
 Aggregate per-country species checklist from games the user has played.
 
 v1: all games for the country (see ``_qualifying_game_ids``).
-Future: ``source=journey`` when Game is tagged with Birdr Journey.
+Future: ``source=journey`` when Game is tagged with Motmot Journey.
 """
 from __future__ import annotations
 

@@ -410,8 +410,8 @@ LOGGING = {
     },
 }
 
-ADMINS = [('Birdr logging', 'logging@birdr.pro')]
-EMAIL_SUBJECT_PREFIX = '[Birdr] '
+ADMINS = [('Motmot logging', 'logging@birdr.pro')]
+EMAIL_SUBJECT_PREFIX = '[Motmot] '
 ERROR_MAIL_THROTTLE_SECONDS = 15 * 60
 
 # Requests slower than this are logged with their DB time; on the server to
@@ -432,7 +432,7 @@ LOGGING['formatters']['timestamped'] = {
 }
 
 DKIM_KEY = "dkim-key"
-DEFAULT_FROM_EMAIL = "Birdr <info@birdr.pro>"
+DEFAULT_FROM_EMAIL = "Motmot <info@birdr.pro>"
 CONTACT_EMAIL = "Loek van Gent <hallo@loekvan.gent>"
 
 

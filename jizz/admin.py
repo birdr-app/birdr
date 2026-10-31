@@ -217,7 +217,7 @@ def journey_level_for_index(levels, index):
 class UserBirdrJourneyInline(ReadOnlyInlineMixin, admin.TabularInline):
     model = BirdrJourney
     fk_name = 'user'
-    verbose_name_plural = 'Country challenges (Birdr journeys)'
+    verbose_name_plural = 'Country challenges (Motmot journeys)'
     fields = readonly_fields = [
         'country', 'current_level', 'current_step_sequence', 'streak_days',
         'last_played_date', 'journey_games', 'updated',
@@ -303,7 +303,7 @@ class UserAdmin(BaseUserAdmin):
         UserLeagueMembershipInline, UserFlockMembershipInline,
     ]
     fieldsets = BaseUserAdmin.fieldsets + (
-        ('Birdr activity', {'fields': ('activity',)}),
+        ('Motmot activity', {'fields': ('activity',)}),
     )
     readonly_fields = ['activity']
     recent_rows = 10

@@ -274,7 +274,7 @@ class SharedGameTests(TestCase):
         bot = self.client.get(path, HTTP_USER_AGENT='WhatsApp/2.23.20.0')
         self.assertEqual(bot.status_code, 200)
         self.assertContains(bot, 'og:title')
-        self.assertContains(bot, 'shared a Birdr quiz: Netherlands')
+        self.assertContains(bot, 'shared a Motmot quiz: Netherlands')
 
         phone = self.client.get(path, HTTP_USER_AGENT='Mozilla/5.0 (iPhone) Mobile')
         self.assertContains(phone, f"birdr://join/s/{data['token']}")
@@ -296,7 +296,7 @@ class SharedGameTests(TestCase):
 
         bot = self.client.get(path, HTTP_USER_AGENT='WhatsApp/2.23.20.0')
         self.assertEqual(bot.status_code, 200)
-        self.assertContains(bot, 'shared a Birdr quiz: Netherlands')
+        self.assertContains(bot, 'shared a Motmot quiz: Netherlands')
         self.assertContains(bot, f'og:url" content="https://')
         self.assertContains(bot, f"/s/{data['token']}/")
         self.assertNotContains(bot, 'birdr://')
@@ -341,7 +341,7 @@ class SharedGameFlockTests(TestCase):
         pushed_to = [call.args[0] for call in push.call_args_list]
         self.assertEqual(pushed_to, [self.owner])  # not the sharer, not muted members
         title, body = push.call_args.args[1], push.call_args.args[2]
-        self.assertEqual(title, 'Birdr: Waders')
+        self.assertEqual(title, 'Motmot: Waders')
         self.assertIn('sfmember shared a new game: Netherlands, 5 birds', body)
         self.assertEqual(
             push.call_args.kwargs['data'],

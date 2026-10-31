@@ -1,4 +1,4 @@
-"""Tests for Birdr Flocks Phase 1."""
+"""Tests for Motmot Flocks Phase 1."""
 
 from datetime import timedelta
 from unittest.mock import patch
@@ -843,7 +843,7 @@ class FlockApiTests(TestCase):
         self.assertContains(page, 'og:image')
         self.assertContains(page, f'/flocks/c/{public_token}/og.png')
         self.assertContains(page, '/images/birdr-leaderboard.png')
-        self.assertContains(page, '#8b6419')  # Birdr primary.500
+        self.assertContains(page, '#8b6419')  # Motmot primary.500
         self.assertContains(page, '/join/flock/')
         self.assertNotContains(page, 'Weekly progress')
 

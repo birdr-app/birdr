@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if missing %}
-  <title>Challenge not found · Birdr</title>
+  <title>Challenge not found · Motmot</title>
   {% else %}
   <title>{{ og_title }}</title>
   <meta name="description" content="{{ description }}">
@@ -12,7 +12,7 @@
   <meta property="og:title" content="{{ og_title }}">
   <meta property="og:description" content="{{ description }}">
   <meta property="og:url" content="{{ canonical_url }}">
-  <meta property="og:site_name" content="Birdr">
+  <meta property="og:site_name" content="Motmot">
   <meta property="og:image" content="{{ og_image }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -192,13 +192,13 @@
 <body>
   <main class="card">
     {% if missing %}
-      <div class="brand">Birdr</div>
+      <div class="brand">Motmot</div>
       <img class="hero" src="/images/birdr-leaderboard.png" alt="">
       <h1>Challenge not found</h1>
       <p class="empty">This share link is invalid or no longer available.</p>
-      <a class="cta" href="/">Go to Birdr</a>
+      <a class="cta" href="/">Go to Motmot</a>
     {% else %}
-      <div class="brand">Birdr</div>
+      <div class="brand">Motmot</div>
       <img class="hero" src="/images/birdr-leaderboard.png" alt="">
       <div class="header">
         {% if logo_url %}
@@ -242,9 +242,9 @@
         {% if join_url %}
           <a class="cta" href="{{ join_url }}">Join flock &amp; play</a>
         {% else %}
-          <a class="cta" href="/flocks/">Open Birdr</a>
+          <a class="cta" href="/flocks/">Open Motmot</a>
         {% endif %}
-        <a class="cta secondary" href="/">Birdr home</a>
+        <a class="cta secondary" href="/">Motmot home</a>
       </div>
       <script>
         (function () {

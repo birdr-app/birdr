@@ -1,4 +1,4 @@
-"""Marketing-site locales — same UI languages as the Birdr app."""
+"""Marketing-site locales — same UI languages as the Motmot app."""
 
 from __future__ import annotations
 

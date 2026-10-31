@@ -18,7 +18,7 @@ from media.models import FlagMedia, Media, MediaReview
 from media.non_photo import CLEAR, classify
 
 AUTO_REVIEW_USERNAME = 'birdr-auto-review'
-AUTO_REVIEW_NAME = 'Birdr auto review'
+AUTO_REVIEW_NAME = 'Motmot auto review'
 
 
 @dataclass

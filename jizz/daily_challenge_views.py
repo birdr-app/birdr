@@ -64,7 +64,7 @@ def _send_daily_challenge_invite_email(request, invite):
         text_content = h.handle(html_content)
         from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@birdr.pro')
         msg = EmailMultiAlternatives(
-            subject='You\'re invited to a Daily Challenge on Birdr',
+            subject='You\'re invited to a Daily Challenge on Motmot',
             body=text_content,
             from_email=from_email,
             to=[invite.email],

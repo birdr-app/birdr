@@ -1,4 +1,4 @@
-# Birdr press campaign (started 24 October 2026)
+# Motmot press campaign (started 24 October 2026)
 
 Sender: Loek van Gent, loek@birdr.pro (press contact on birdr.pro is info@birdr.pro).
 Status: drafts only, nothing sent.
@@ -46,9 +46,9 @@ Subject: Free, open-source app for practising bird ID (for your apps coverage)
 
 Dear [name / editor],
 
-I'm a Dutch birder and developer, and I'd like to put a small project on your radar for your apps coverage: Birdr (birdr.pro), a free, open-source quiz app for iPhone, Android and the web.
+I'm a Dutch birder and developer, and I'd like to put a small project on your radar for your apps coverage: Motmot (birdr.pro), a free, open-source quiz app for iPhone, Android and the web.
 
-Most birding apps identify the bird for you. Birdr does the opposite: it trains you to do it yourself. You choose a country and a level, and it quizzes you with photos, video and sound recordings, from distinctive species up to tough lookalikes where you type the name yourself. It remembers which species you keep confusing and gives you extra practice on those, and bird clubs can set up a private "Flock" with a shared weekly quiz.
+Most birding apps identify the bird for you. Motmot does the opposite: it trains you to do it yourself. You choose a country and a level, and it quizzes you with photos, video and sound recordings, from distinctive species up to tough lookalikes where you type the name yourself. It remembers which species you keep confusing and gives you extra practice on those, and bird clubs can set up a private "Flock" with a shared weekly quiz.
 
 It has grown by word of mouth: in September, 1,365 players completed 15,640 games, on lists for 142 countries and territories. It's free, with no ads, and built in my spare time.
 
@@ -65,7 +65,7 @@ Outlet-specific lines:
 - BirdGuides / Birdwatch: "Pick the UK and it quizzes you on British birds, calls included, and readers who flag a dodgy photo help clean up the UK set."
 - Bird Watching (UK): "It might suit a beginners' feature: it starts with familiar garden birds and builds up to the warblers and gulls."
 - BBC Wildlife: "It might suit an apps or 'learn a new skill' piece: ten minutes a day on the sounds of British birds before spring."
-- BirdWatching (US): "I noticed your bird-song app guide covers Larkwire and Chirp!; Birdr is a free alternative that also covers photos and video, and works outside North America."
+- BirdWatching (US): "I noticed your bird-song app guide covers Larkwire and Chirp!; Motmot is a free alternative that also covers photos and video, and works outside North America."
 - Audubon: "It may interest readers who want to go beyond Sound ID and learn songs themselves, and teachers looking for a free classroom tool."
 
 ## Pitch B: newsletters
@@ -76,7 +76,7 @@ Hi [name],
 
 I enjoy [newsletter name] and thought this might be useful for your readers. Full disclosure: I made it.
 
-Birdr (birdr.pro) is a free, open-source quiz app that helps you learn to identify birds yourself, rather than having an app do it. Pick a country and a level and it quizzes you with photos, video and sounds, then gives you extra practice on the birds you keep mixing up. It works on iPhone, Android and in the browser, with no ads.
+Motmot (birdr.pro) is a free, open-source quiz app that helps you learn to identify birds yourself, rather than having an app do it. Pick a country and a level and it quizzes you with photos, video and sounds, then gives you extra practice on the birds you keep mixing up. It works on iPhone, Android and in the browser, with no ads.
 
 If you think it fits, a mention would be great. And if it doesn't, I'd still love to hear what you think of it.
 
@@ -92,7 +92,7 @@ Hi [host],
 
 I'd love to come on [podcast] to talk about learning bird ID in the age of Merlin.
 
-I'm a Dutch birder and developer, and in my spare time I built Birdr (birdr.pro), a free, open-source app that trains people to identify birds themselves with photo, video and sound quizzes. It's grown to over 1,300 players a month across 142 country lists, and running it has taught me a lot about how people learn, which lookalikes trip everyone up, and how often reference photos online are wrong.
+I'm a Dutch birder and developer, and in my spare time I built Motmot (birdr.pro), a free, open-source app that trains people to identify birds themselves with photo, video and sound quizzes. It's grown to over 1,300 players a month across 142 country lists, and running it has taught me a lot about how people learn, which lookalikes trip everyone up, and how often reference photos online are wrong.
 
 Possible angles:
 - Do ID apps make us worse birders? What actually helps you learn?
@@ -107,13 +107,13 @@ birdr.pro
 
 ## Pitch D: Dutch and Belgian outlets (Nederlands)
 
-Onderwerp: Gratis app om zelf vogels te leren herkennen (Birdr)
+Onderwerp: Gratis app om zelf vogels te leren herkennen (Motmot)
 
 Beste redactie,
 
-Ik ben vogelaar en ontwikkelaar, en in mijn vrije tijd heb ik Birdr gebouwd (birdr.pro): een gratis, open-source quiz-app voor iPhone, Android en de browser.
+Ik ben vogelaar en ontwikkelaar, en in mijn vrije tijd heb ik Motmot gebouwd (birdr.pro): een gratis, open-source quiz-app voor iPhone, Android en de browser.
 
-Waar Merlin en ObsIdentify een vogel voor je op naam brengen, helpt Birdr je om het zelf te leren. Je kiest een land en een niveau en krijgt foto's, video's en geluiden voorgeschoteld, van makkelijke tuinvogels tot lastige soorten als fitis en tjiftjaf. De app onthoudt welke soorten je door elkaar haalt en laat je die extra oefenen. Vogelclubs kunnen een eigen "Flock" aanmaken met een wekelijkse quiz.
+Waar Merlin en ObsIdentify een vogel voor je op naam brengen, helpt Motmot je om het zelf te leren. Je kiest een land en een niveau en krijgt foto's, video's en geluiden voorgeschoteld, van makkelijke tuinvogels tot lastige soorten als fitis en tjiftjaf. De app onthoudt welke soorten je door elkaar haalt en laat je die extra oefenen. Vogelclubs kunnen een eigen "Flock" aanmaken met een wekelijkse quiz.
 
 De app is volledig in het Nederlands te gebruiken en groeit snel: in september speelden 1.365 spelers 15.640 potjes, met lijsten voor 142 landen.
 
@@ -129,5 +129,5 @@ Regels per medium:
 
 - Vogels (Vogelbescherming): "Misschien iets voor een rubriek over apps of over vogels leren kennen; voor beginners begint de app bij de tuinvogels die jullie lezers kennen van de Tuinvogeltelling."
 - Natuurpunt: "Het werkt ook voor Belgische vogelaars: kies België als land en oefen met de vogels die je hier tegenkomt."
-- Natuurspotters: "Ik zag jullie overzicht van de beste vogelapps; Birdr zou daar een aanvulling kunnen zijn als app om te oefenen in plaats van te determineren."
+- Natuurspotters: "Ik zag jullie overzicht van de beste vogelapps; Motmot zou daar een aanvulling kunnen zijn als app om te oefenen in plaats van te determineren."
 - Nature Today: "Misschien een leuk bericht richting het voorjaar: met tien minuten per dag de zang van de vogels in je buurt leren."

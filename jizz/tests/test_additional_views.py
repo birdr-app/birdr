@@ -68,7 +68,7 @@ class ApiPagesTestCase(TestCase):
 
     def test_page_detail_rewrites_legacy_github_repo(self):
         Page.objects.create(
-            title='About Birdr',
+            title='About Motmot',
             slug='about',
             content=(
                 '{"delta": {"ops": [{"insert": "GitHub\\n"}]}, '

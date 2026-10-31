@@ -1,1 +1,1 @@
-"""Public crawlable marketing pages for Birdr."""
+"""Public crawlable marketing pages for Motmot."""

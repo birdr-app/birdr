@@ -339,7 +339,7 @@ def _translate_group_names_with_openai(names: list[str], language: str) -> dict[
                 {
                     'role': 'system',
                     'content': (
-                        'You translate eBird species-group names for the Birdr app. '
+                        'You translate eBird species-group names for the Motmot app. '
                         'Reply with JSON only: {"English name": "translated name", ...}.'
                     ),
                 },

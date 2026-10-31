@@ -4,7 +4,7 @@
   <p class="kicker">{% mt "Species" %}</p>
   <h1>{% mt "Find a bird" %}</h1>
   <p class="lead">
-    {% mt "Search Birdr’s species pages, see which birds people miss most in quizzes, and open the lookalikes that are hardest to tell apart." %}
+    {% mt "Search Motmot’s species pages, see which birds people miss most in quizzes, and open the lookalikes that are hardest to tell apart." %}
     {% if species_count %}{% mt "{count} species have a public page." count=species_count %}{% endif %}
   </p>
   <form class="search-form" method="get" action="{{ '/site/birds/'|mpath }}" role="search">

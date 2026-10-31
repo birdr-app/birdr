@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Birdr is under active development. Security fixes are made on the latest
+Motmot is under active development. Security fixes are made on the latest
 version of the `main` branch and are released to the live website and current
 mobile apps. Older releases are not maintained separately.
 
@@ -44,7 +44,7 @@ When investigating a possible vulnerability:
 
 Good-faith research that follows these guidelines is welcome. This policy does
 not authorize actions that violate applicable law or the terms of third-party
-services used by Birdr, and Birdr does not currently offer a bug bounty.
+services used by Motmot, and Motmot does not currently offer a bug bounty.
 
 ## Other reports
 

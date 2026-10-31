@@ -1,4 +1,4 @@
-"""API views for Birdr Flocks (Phase 1)."""
+"""API views for Motmot Flocks (Phase 1)."""
 
 from __future__ import annotations
 
@@ -65,7 +65,7 @@ def _notify_flock_challenge(flock: Flock, challenge: FlockChallenge, exclude_use
         .exclude(user_id=exclude_user_id)
         .select_related('user')
     )
-    title = f'Birdr: {flock.name}'
+    title = f'Motmot: {flock.name}'
     body = f'New challenge ready — play {challenge.title} now!'
     data = {
         'type': 'flock_challenge',
@@ -308,7 +308,7 @@ def _serialize_invite(invite: FlockInvite, request, flock: Flock) -> dict:
         'invite_url': absolute,
         'deep_link': f'birdr://join/flock/{invite.token}',
         'share_message': (
-            f'Join {flock.name} on Birdr! Play our weekly bird identification challenge '
+            f'Join {flock.name} on Motmot! Play our weekly bird identification challenge '
             f'and see how you compare with other members. Can you recognise this week’s '
             f'{CLUB_MIX_LENGTH} birds? {absolute}'
         ),
@@ -1080,7 +1080,7 @@ class FlockChallengeCompleteView(APIView):
             'share_message': (
                 f"I scored {attempt.correct_count}/{attempt.challenge.length}"
                 + (f" and ranked {rank_label}" if rank_label else '')
-                + f" in the {flock.name} Birdr Challenge. Can you beat me? {result_url}"
+                + f" in the {flock.name} Motmot Challenge. Can you beat me? {result_url}"
             ),
             'flock_name': flock.name,
             'flock_slug': flock.slug,
@@ -1165,7 +1165,7 @@ def flock_result_page(request, result_token: str):
     description = (
         f'{_display_name(attempt.user)} scored {score_label}'
         + (f' ({rank_label})' if rank_label else '')
-        + f' in the {flock.name} Birdr Challenge. Can you beat them?'
+        + f' in the {flock.name} Motmot Challenge. Can you beat them?'
     )
     absolute = _absolute_url(request, request.path)
     return render(
@@ -1264,7 +1264,7 @@ def flock_challenge_share_page(request, public_token: str):
     og_image = _absolute_url(request, f'/flocks/c/{challenge.public_token}/og.png')
     status_label = _challenge_status(challenge)
     description = (
-        f'{flock.name} flock challenge on Birdr. '
+        f'{flock.name} flock challenge on Motmot. '
         + (
             f'Top score {top[0]["score_label"]} by {top[0]["display_name"]}. '
             if top
@@ -1290,7 +1290,7 @@ def flock_challenge_share_page(request, public_token: str):
             'description': description,
             'canonical_url': canonical,
             'og_image': og_image,
-            'og_title': f'{flock.name} leaderboard · Birdr',
+            'og_title': f'{flock.name} leaderboard · Motmot',
             'has_history': _published_challenge_count(flock) > 1,
             'history_path': f'/flocks/c/{challenge.public_token}/history/',
         },
@@ -1324,9 +1324,9 @@ def flock_challenge_history_page(request, public_token: str):
             'share_path': share_path,
             'join_url': join_url,
             'canonical_url': canonical,
-            'og_title': f'{flock.name} weekly scores · Birdr',
+            'og_title': f'{flock.name} weekly scores · Motmot',
             'description': (
-                f'{flock.name} weekly challenge scores on Birdr. '
+                f'{flock.name} weekly challenge scores on Motmot. '
                 f'{chart["challenge_count"]} week'
                 f'{"s" if chart["challenge_count"] != 1 else ""} of club mix quizzes.'
             ),

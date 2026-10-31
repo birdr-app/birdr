@@ -1,11 +1,11 @@
 ---
 name: birdr-release
-description: Cut a new Birdr mobile release — set the version, build number and bird codename in app.json and Info.plist, write the store release notes in all eight app languages, commit, tag, and push so Xcode Cloud and the Play workflow build and ship it. Use when asked to "release", "cut a version", "ship a new build", "bump the version", or "build a new version" of the Birdr mobile app.
+description: Cut a new Motmot mobile release — set the version, build number and bird codename in app.json and Info.plist, write the store release notes in all eight app languages, commit, tag, and push so Xcode Cloud and the Play workflow build and ship it. Use when asked to "release", "cut a version", "ship a new build", "bump the version", or "build a new version" of the Motmot mobile app.
 ---
 
-# Cut a Birdr release
+# Cut a Motmot release
 
-Birdr names each release after the bird whose species id equals the build number:
+Motmot names each release after the bird whose species id equals the build number:
 build 106 is `Kelp Goose`, from `https://birdr.pro/api/species/106/`. Version strings
 are always `1.<build>.0`.
 

@@ -155,9 +155,9 @@ def _render_update_email(update: Update, *, user, language: str, tracking_token=
     )
     if not footer:
         footer = (
-            '<p><strong>Birdr</strong> — Test je vogelkennis</p>'
+            '<p><strong>Motmot</strong> — Test je vogelkennis</p>'
             if language == 'nl'
-            else '<p><strong>Birdr</strong> — Test your bird knowledge</p>'
+            else '<p><strong>Motmot</strong> — Test your bird knowledge</p>'
         )
     logo_url = None
     if mail_settings.logo:
@@ -180,7 +180,7 @@ def _render_update_email(update: Update, *, user, language: str, tracking_token=
     h.ignore_links = False
     h.body_width = 0
     text_content = h.handle(html_content)
-    subject = f'Birdr: {title}'
+    subject = f'Motmot: {title}'
     return subject, text_content, html_content
 
 

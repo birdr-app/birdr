@@ -759,7 +759,7 @@ class QuestionView(RetrieveAPIView):
 
 
 def _stop_game_if_jokers_exhausted(game):
-    """End Birdr Journey games after a wrong answer uses the last joker."""
+    """End Motmot Journey games after a wrong answer uses the last joker."""
     from jizz.models import BirdrJourneyGame
 
     for link in BirdrJourneyGame.objects.filter(game=game).select_related('journey_step'):
@@ -1849,7 +1849,7 @@ class PasswordResetRequestView(APIView):
                 
                 # Send HTML email
                 try:
-                    subject = 'Reset Your Birdr Password'
+                    subject = 'Reset Your Motmot Password'
                     
                     # Render HTML template
                     html_content = render_to_string('emails/password_reset.html', {
