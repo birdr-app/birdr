@@ -82,6 +82,8 @@ ALLOWED_HOSTS = [
     'www.birdr.pro',
     'birdr.nl',
     'www.birdr.nl',
+    'motmot.club',
+    'www.motmot.club',
     'goedloek.nl',
     'www.goedloek.nl',
 ]
