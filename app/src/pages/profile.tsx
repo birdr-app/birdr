@@ -34,7 +34,7 @@ import { speciesLanguageFromAppLocale } from "../i18n/app-locales";
 import AppContext from "../core/app-context";
 import { useAuthProfile } from "../core/auth-profile-context";
 import { ProfileLeagueCaps } from "../components/league-caps-badge";
-import { parseVisualStyle, type VisualStyle } from "../user/visual-style";
+import { DEFAULT_VISUAL_STYLE, parseVisualStyle, type VisualStyle } from "../user/visual-style";
 import { MemberStatsModal } from "../components/member-stats-modal";
 
 export const ProfilePage = () => {
@@ -62,7 +62,7 @@ export const ProfilePage = () => {
   const [countryCode, setCountryCode] = useState<string | null>(null);
   const [deleteOpen, setDeleteOpen] = useState(false);
   const [deleting, setDeleting] = useState(false);
-  const [visualStyle, setVisualStyleLocal] = useState<VisualStyle>(contextVisualStyle ?? "classic");
+  const [visualStyle, setVisualStyleLocal] = useState<VisualStyle>(contextVisualStyle ?? DEFAULT_VISUAL_STYLE);
 
   useEffect(() => {
     const loadProfile = async () => {
@@ -421,6 +421,7 @@ export const ProfilePage = () => {
                 })}
               >
                 {([
+                  { id: "tody" as const, src: "/images/tody/birdr-start-game.png?v=1", labelId: "visual_style_tody", labelDefault: "Tody" },
                   { id: "classic" as const, src: "/images/birdr-start-game.png", labelId: "visual_style_bertie", labelDefault: "Bertie" },
                   { id: "stylish" as const, src: "/images/stylish/birdr-start-game.png?v=2", labelId: "visual_style_classic", labelDefault: "Classic" },
                   { id: "none" as const, src: null, labelId: "visual_style_none", labelDefault: "None" },

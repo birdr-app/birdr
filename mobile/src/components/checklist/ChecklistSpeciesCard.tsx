@@ -161,5 +161,5 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   rarityVeryRare: { color: '#b8860b' },
-  rarityMega: { fontWeight: '800', color: '#b45309' },
+  rarityMega: { fontWeight: '800', color: '#8A4A12' },
 });

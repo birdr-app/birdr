@@ -604,7 +604,7 @@ const styles = StyleSheet.create({
   fixedBadge: {
     alignSelf: 'flex-start',
     backgroundColor: '#dcfce7',
-    borderColor: '#16a34a',
+    borderColor: '#17693F',
     borderWidth: 1,
     borderRadius: 6,
     paddingHorizontal: 8,
@@ -614,7 +614,7 @@ const styles = StyleSheet.create({
   fixedBadgeText: {
     fontSize: 11,
     fontWeight: '800',
-    color: '#15803d',
+    color: '#1C7A4C',
     letterSpacing: 0.5,
   },
   rowText: { flex: 1, minWidth: 0 },

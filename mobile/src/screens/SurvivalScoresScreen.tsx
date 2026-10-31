@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
   modalImage: { width: '100%', height: 260, borderRadius: 12, backgroundColor: colors.primary[50] },
   modalCredit: { fontSize: 11, color: colors.primary[500] },
   modalLine: { fontSize: 15, color: colors.primary[800] },
-  modalCorrect: { fontWeight: '800', color: '#15803d' },
+  modalCorrect: { fontWeight: '800', color: colors.success[500] },
   modalLatin: { fontStyle: 'italic', color: colors.primary[500], fontSize: 13 },
   modalWrong: { fontWeight: '800', color: '#dc2626' },
   modalClose: { marginTop: 6, backgroundColor: colors.primary[500], borderRadius: 10, paddingVertical: 12, alignItems: 'center' },

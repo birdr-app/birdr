@@ -13,11 +13,11 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#F5EDE0"
+      "backgroundColor": "#F3F8F5"
     },
     "notification": {
       "icon": "./assets/notification-icon.png",
-      "color": "#2D5A3D"
+      "color": "#1C7A4C"
     },
     "ios": {
       "infoPlist": {
@@ -46,12 +46,12 @@
       "edgeToEdgeEnabled": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#F8EEDC"
+        "backgroundColor": "#0B1813"
       },
       "splash": {
         "image": "./assets/splash-android.png",
         "resizeMode": "contain",
-        "backgroundColor": "#F5EDE0"
+        "backgroundColor": "#F3F8F5"
       },
       "package": "pro.birdr.app",
       "googleServicesFile": "./google-services.json",
@@ -159,7 +159,7 @@
         "expo-notifications",
         {
           "icon": "./assets/notification-icon.png",
-          "color": "#2D5A3D",
+          "color": "#1C7A4C",
           "defaultChannel": "default"
         }
       ],

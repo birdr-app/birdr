@@ -4,7 +4,7 @@ import Svg, { Circle, Line, Path, Text as SvgText } from 'react-native-svg';
 import { colors } from '../theme';
 
 export const FLOCK_PROGRESS_COLORS = [
-  '#8b6419',
+  '#1C7A4C',
   '#1d4e89',
   '#2d6a4f',
   '#9b2226',

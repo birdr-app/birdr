@@ -21,9 +21,25 @@ const STYLISH: Record<BirdrMood, ImageSourcePropType> = {
   maintenance: require('../../assets/stylish/birdr-maintenance.png'),
 };
 
-/** @deprecated Prefer getMoodImage with the current visual style. */
-export const BIRDR_MOOD_IMAGES = CLASSIC;
+const TODY: Record<BirdrMood, ImageSourcePropType> = {
+  waiting: require('../../assets/tody/birdr-waiting.png'),
+  success: require('../../assets/tody/birdr-success.png'),
+  failed: require('../../assets/tody/birdr-failed.png'),
+  stressed: require('../../assets/tody/birdr-stressed.png'),
+  noimage: require('../../assets/tody/birdr-no-image.png'),
+  maintenance: require('../../assets/tody/birdr-maintenance.png'),
+};
 
-export function getMoodImage(mood: BirdrMood, style: VisualStyle = 'classic'): ImageSourcePropType {
-  return style === 'stylish' ? STYLISH[mood] : CLASSIC[mood];
+/** @deprecated Prefer getMoodImage with the current visual style. */
+export const BIRDR_MOOD_IMAGES = TODY;
+
+const BY_STYLE: Record<VisualStyle, Record<BirdrMood, ImageSourcePropType>> = {
+  tody: TODY,
+  classic: CLASSIC,
+  stylish: STYLISH,
+  none: TODY,
+};
+
+export function getMoodImage(mood: BirdrMood, style: VisualStyle = 'tody'): ImageSourcePropType {
+  return BY_STYLE[style][mood];
 }

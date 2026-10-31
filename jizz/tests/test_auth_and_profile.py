@@ -216,7 +216,7 @@ class ProfileViewTestCase(TestCase):
         self.assertIn('language', response.data)
         self.assertIn('app_language', response.data)
         self.assertIn('receive_updates', response.data)
-        self.assertEqual(response.data.get('visual_style'), 'classic')
+        self.assertEqual(response.data.get('visual_style'), 'tody')
 
     def test_profile_get_unauthorized(self):
         self.client.credentials()
@@ -327,6 +327,17 @@ class ProfileViewTestCase(TestCase):
         self.assertEqual(response.data['visual_style'], 'stylish')
         self.user.profile.refresh_from_db()
         self.assertEqual(self.user.profile.visual_style, 'stylish')
+
+    def test_profile_update_visual_style_tody(self):
+        response = self.client.put(
+            '/api/profile/',
+            {'visual_style': 'tody'},
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['visual_style'], 'tody')
+        self.user.profile.refresh_from_db()
+        self.assertEqual(self.user.profile.visual_style, 'tody')
 
     def test_profile_update_visual_style_none(self):
         response = self.client.put(

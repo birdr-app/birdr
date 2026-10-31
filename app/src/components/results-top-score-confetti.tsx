@@ -40,7 +40,7 @@ export function ResultsTopScoreConfetti({ active, durationMs = 5000 }: Props) {
         numberOfPieces={320}
         gravity={0.22}
         initialVelocityY={16}
-        colors={['#fcd34d', '#fbbf24', '#f59e0b', '#8b6419', '#d4b88a', '#fff7ed', '#22c55e']}
+        colors={['#fcd34d', '#fbbf24', '#f59e0b', '#1C7A4C', '#3CC8E0', '#fff7ed', '#22c55e']}
       />
     </Box>
   );

@@ -109,6 +109,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5f0e8',
+    backgroundColor: '#F3F8F5',
   },
 });

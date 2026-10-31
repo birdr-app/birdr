@@ -3,7 +3,7 @@ import { keyframes } from '@emotion/react';
 import { useContext } from 'react';
 import { FormattedMessage } from 'react-intl';
 import AppContext from '../core/app-context';
-import { birdrImage, showsGameArt } from '../user/visual-style';
+import { DEFAULT_VISUAL_STYLE, birdrImage, showsGameArt } from '../user/visual-style';
 
 export type BirdrMood = 'waiting' | 'success' | 'failed' | 'stressed' | 'maintenance';
 
@@ -48,7 +48,7 @@ export function BirdrMoodHero({
           animation={shouldPulse ? `${pulse} 2s ease-in-out infinite` : undefined}
         >
           <Image
-            src={birdrImage(MOOD_FILES[mood], visualStyle ?? 'classic')}
+            src={birdrImage(MOOD_FILES[mood], visualStyle ?? DEFAULT_VISUAL_STYLE)}
             alt=""
             width="220px"
             height="220px"

@@ -1,12 +1,13 @@
-export type VisualStyle = 'classic' | 'stylish' | 'none';
+/** tody: Tody (default) · classic: Bertie · stylish: notebook art, shown as "Classic" · none: no art */
+export type VisualStyle = 'tody' | 'classic' | 'stylish' | 'none';
 
 export const VISUAL_STYLE_STORAGE_KEY = 'birdr-visual-style';
-export const DEFAULT_VISUAL_STYLE: VisualStyle = 'classic';
+export const DEFAULT_VISUAL_STYLE: VisualStyle = 'tody';
 export const MAX_BIRDR_LEVEL = 7;
 
 export function parseVisualStyle(value: unknown): VisualStyle {
-  if (value === 'stylish' || value === 'none') return value;
-  return 'classic';
+  if (value === 'classic' || value === 'stylish' || value === 'none') return value;
+  return 'tody';
 }
 
 export function showsGameArt(style: VisualStyle | null | undefined): boolean {
@@ -36,9 +37,13 @@ export function writeStoredVisualStyle(style: VisualStyle): void {
 }
 
 const STYLISH_ASSET_VERSION = '2';
+const TODY_ASSET_VERSION = '1';
 
 export function birdrImage(filename: string, style: VisualStyle = DEFAULT_VISUAL_STYLE): string {
   const name = filename.replace(/^\//, '').replace(/^images\//, '');
+  if (style === 'tody') {
+    return `/images/tody/${name}?v=${TODY_ASSET_VERSION}`;
+  }
   if (style === 'stylish') {
     return `/images/stylish/${name}?v=${STYLISH_ASSET_VERSION}`;
   }
@@ -51,9 +56,11 @@ export function journeyLevelIconUrl(
   style: VisualStyle = DEFAULT_VISUAL_STYLE,
 ): string | null {
   if (!showsGameArt(style)) return null;
-  if (style === 'stylish' && sequence != null && Number.isFinite(Number(sequence))) {
+  if ((style === 'stylish' || style === 'tody') && sequence != null && Number.isFinite(Number(sequence))) {
     const n = Math.max(0, Math.min(MAX_BIRDR_LEVEL, Math.trunc(Number(sequence))));
-    return `/images/stylish/birdr-level${n}.png?v=${STYLISH_ASSET_VERSION}`;
+    return style === 'tody'
+      ? `/images/tody/birdr-level${n}.png?v=${TODY_ASSET_VERSION}`
+      : `/images/stylish/birdr-level${n}.png?v=${STYLISH_ASSET_VERSION}`;
   }
   return apiIconUrl ?? null;
 }

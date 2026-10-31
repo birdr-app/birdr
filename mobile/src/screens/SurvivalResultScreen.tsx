@@ -207,8 +207,8 @@ const styles = StyleSheet.create({
     padding: 16,
     marginTop: 16,
   },
-  recordBannerCount: { fontSize: 56, fontWeight: '800', color: '#b45309' },
-  recordBannerText: { fontSize: 14, fontWeight: '600', color: '#92400e', textAlign: 'center' },
+  recordBannerCount: { fontSize: 56, fontWeight: '800', color: '#8A4A12' },
+  recordBannerText: { fontSize: 14, fontWeight: '600', color: '#8A4A12', textAlign: 'center' },
   missedCard: {
     marginTop: 16,
     padding: 16,

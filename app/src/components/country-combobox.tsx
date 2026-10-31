@@ -243,7 +243,7 @@ export const CountryCombobox = ({
                   minHeight: 1,
                   padding: 0,
                   margin: "6px 8px",
-                  background: "var(--chakra-colors-primary-200, #d4b88a)",
+                  background: "var(--chakra-colors-primary-200, #3CC8E0)",
                   cursor: "default",
                 }
               : {}),

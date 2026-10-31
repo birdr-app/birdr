@@ -42,7 +42,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <namedColor name="SplashScreenBackground">
-            <color alpha="1.000" red="0.96078431372549" green="0.92941176470588" blue="0.87843137254902" customColorSpace="sRGB" colorSpace="custom"/>
+            <color alpha="1.000" red="0.95294117647059" green="0.97254901960784" blue="0.96078431372549" customColorSpace="sRGB" colorSpace="custom"/>
         </namedColor>
     </resources>
 </document>

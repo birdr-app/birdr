@@ -866,7 +866,7 @@ class UserProfileUpdateSerializer(serializers.Serializer):
     timezone = serializers.CharField(required=False, max_length=63, allow_blank=True)
     visual_style = serializers.ChoiceField(
         required=False,
-        choices=('classic', 'stylish', 'none'),
+        choices=('tody', 'classic', 'stylish', 'none'),
     )
     show_all_modes = serializers.BooleanField(required=False)
     country_code = serializers.CharField(required=False, max_length=10, allow_blank=True, allow_null=True)

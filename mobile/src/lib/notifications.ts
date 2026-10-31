@@ -54,7 +54,7 @@ async function ensureAndroidChannel(): Promise<void> {
     name: 'Motmot',
     importance: Notifications.AndroidImportance.HIGH,
     vibrationPattern: [0, 250, 250, 250],
-    lightColor: '#2D5A3D',
+    lightColor: '#1C7A4C',
     sound: 'default',
     enableVibrate: true,
     showBadge: true,

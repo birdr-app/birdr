@@ -48,5 +48,5 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
     paddingHorizontal: 10,
   },
-  fullText: { fontSize: 13, fontWeight: '700', color: '#92400e' },
+  fullText: { fontSize: 13, fontWeight: '700', color: '#8A4A12' },
 });

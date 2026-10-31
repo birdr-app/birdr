@@ -15,7 +15,7 @@ export const MEGA_CONFETTI_COLORS = [
   '#f59e0b',
   '#eab308',
   '#d97706',
-  '#b45309',
+  '#8A4A12',
   '#fde68a',
   '#ffffff',
 ] as const;

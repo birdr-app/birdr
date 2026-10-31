@@ -924,19 +924,21 @@ class UserProfile(models.Model):
         blank=True,
         help_text='Timezone for daily challenge (e.g. Europe/Amsterdam)',
     )
+    VISUAL_STYLE_TODY = 'tody'
     VISUAL_STYLE_CLASSIC = 'classic'
     VISUAL_STYLE_STYLISH = 'stylish'
     VISUAL_STYLE_NONE = 'none'
     VISUAL_STYLE_CHOICES = [
-        (VISUAL_STYLE_CLASSIC, 'Classic'),
-        (VISUAL_STYLE_STYLISH, 'Stylish'),
+        (VISUAL_STYLE_TODY, 'Tody'),
+        (VISUAL_STYLE_CLASSIC, 'Bertie'),
+        (VISUAL_STYLE_STYLISH, 'Classic'),
         (VISUAL_STYLE_NONE, 'None'),
     ]
     visual_style = models.CharField(
         max_length=16,
         choices=VISUAL_STYLE_CHOICES,
-        default=VISUAL_STYLE_CLASSIC,
-        help_text='In-app illustration style (classic comic, stylish, or none)',
+        default=VISUAL_STYLE_TODY,
+        help_text='In-app illustration style: Tody, Bertie (classic comic), Classic (notebook art) or none',
     )
     show_all_modes = models.BooleanField(
         default=False,

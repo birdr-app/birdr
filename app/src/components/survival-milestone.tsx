@@ -13,9 +13,9 @@ const CONFETTI_COLORS = [
   '#f59e0b',
   '#eab308',
   '#d97706',
-  '#b45309',
-  '#8b6419',
-  '#d4b88a',
+  '#8A4A12',
+  '#1C7A4C',
+  '#3CC8E0',
   '#fff7ed',
   '#22c55e',
 ];
@@ -110,7 +110,7 @@ export function SurvivalMilestone({ kind, streak, onComplete }: Props) {
           <Text
             fontSize={isRecord ? '5xl' : '4xl'}
             fontWeight="900"
-            color="#b45309"
+            color="#8A4A12"
             lineHeight="1"
             mt={3}
           >

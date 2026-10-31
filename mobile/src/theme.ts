@@ -1,29 +1,30 @@
 /**
- * Colours from the React app (app/src/theme.ts) – primary/birdr ochre-brown palette.
+ * Motmot brand colours: Tody's greens on a mist ground (same scales as app/src/theme.ts).
  */
 export const colors = {
   primary: {
-    50: '#f5ede0',
-    100: '#e8d4b8',
-    200: '#d4b88a',
-    300: '#c09c5c',
-    400: '#ac802e',
-    500: '#8b6419',
-    600: '#6d4e14',
-    700: '#4f380f',
-    800: '#31220a',
-    900: '#130c05',
+    50: '#F3F8F5',
+    100: '#D9F0E3',
+    200: '#CFDFD6',
+    300: '#9DCBB1',
+    400: '#4FA87A',
+    500: '#1C7A4C',
+    600: '#17693F',
+    700: '#0D4D33',
+    800: '#0B3A27',
+    900: '#10201B',
   },
   error: {
-    500: '#990000',
-    50: '#ffe5e5',
+    500: '#B3322A',
+    50: '#FBE3E0',
   },
+  // Correct answers use the light-blue family, so the brand green never reads as "right".
   success: {
-    500: '#1a6b1a',
-    50: '#d4e8d4',
+    500: '#0A6A80',
+    50: '#D7F3F6',
   },
   warning: {
-    500: '#cc6600',
-    50: '#fff4e6',
+    500: '#C8742A',
+    50: '#FBEBDD',
   },
 } as const;

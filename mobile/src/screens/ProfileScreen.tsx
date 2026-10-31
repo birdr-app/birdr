@@ -415,6 +415,7 @@ export function ProfileScreen() {
         accessibilityLabel={t('visual_style')}
       >
         {([
+          { id: 'tody' as const, source: require('../../assets/tody/birdr-start-game.png'), labelKey: 'visual_style_tody' },
           { id: 'classic' as const, source: require('../../assets/birdr-start-game.png'), labelKey: 'visual_style_bertie' },
           { id: 'stylish' as const, source: require('../../assets/stylish/birdr-start-game.png'), labelKey: 'visual_style_classic' },
           { id: 'none' as const, source: null, labelKey: 'visual_style_none' },

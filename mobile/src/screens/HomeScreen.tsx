@@ -811,7 +811,7 @@ const styles = StyleSheet.create({
   unlockBannerClose: {
     fontSize: 16,
     fontWeight: '700',
-    color: '#92400e',
+    color: '#8A4A12',
   },
   moreModes: {
     width: '100%',

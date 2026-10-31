@@ -124,7 +124,7 @@ export function GameShareResultPage() {
           <VStack align="stretch" gap={6}>
             <Box borderWidth="1px" borderRadius="lg" p={6} bg="white" textAlign="center">
               <Image
-                src="/images/birdr-success.png"
+                src="/images/tody/birdr-success.png"
                 alt=""
                 maxW="220px"
                 mx="auto"

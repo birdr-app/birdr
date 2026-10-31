@@ -382,14 +382,14 @@ export function ChecklistScreen() {
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#f5f0e8' },
+  root: { flex: 1, backgroundColor: '#F3F8F5' },
   listContent: { paddingBottom: 24 },
   centered: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 24,
-    backgroundColor: '#f5f0e8',
+    backgroundColor: '#F3F8F5',
   },
   message: { fontSize: 16, color: colors.primary[800], textAlign: 'center', marginBottom: 16 },
   devHint: { fontSize: 12, color: colors.primary[500], textAlign: 'center', marginBottom: 12 },

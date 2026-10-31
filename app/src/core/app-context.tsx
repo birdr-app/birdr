@@ -302,7 +302,7 @@ const AppContext = createContext<SharedState>({
   country: { code: '', name: '' },
   setCountry: () => {},
   speciesLanguage: 'en',
-  visualStyle: 'classic',
+  visualStyle: 'tody',
   setVisualStyle: () => {},
   appLanguage: 'en',
   mediaType: 'images',

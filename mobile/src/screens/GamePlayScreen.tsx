@@ -1075,7 +1075,7 @@ const styles = StyleSheet.create({
     elevation: 10,
   },
   overlayWaitCard: {
-    backgroundColor: 'rgba(245, 237, 224, 0.94)',
+    backgroundColor: 'rgba(243, 248, 245, 0.94)',
     borderRadius: 8,
     paddingVertical: 8,
     paddingHorizontal: 10,

@@ -6,18 +6,18 @@ import Confetti from "react-confetti"
 import {FormattedMessage} from "react-intl"
 
 const MEGA_CONFETTI_COLORS = [
-  "#e8d4b8",
-  "#d4b88a",
+  "#B9CC5E",
+  "#3CC8E0",
   "#c09c5c",
   "#ac802e",
-  "#8b6419",
+  "#1C7A4C",
   "#cc6600",
   "#fcd34d",
   "#fbbf24",
   "#f59e0b",
   "#eab308",
   "#d97706",
-  "#b45309",
+  "#8A4A12",
 ]
 
 interface AnswerFeedbackProps {
@@ -110,7 +110,7 @@ function ChecklistMissedBadge({visible}: {visible: boolean}) {
       messageId="checklist_missed_toast"
       defaultMessage="Missed it for your checklist!"
       borderColor="#d97706"
-      textColor="#b45309"
+      textColor="#8A4A12"
     />
   )
 }
@@ -244,7 +244,7 @@ export const AnswerFeedback = ({
                     fontSize="xl"
                     fontWeight="900"
                     letterSpacing="wider"
-                    color="#b45309"
+                    color="#8A4A12"
                     mt={2}
                   >
                     <FormattedMessage id="mega" defaultMessage="MEGA!" />

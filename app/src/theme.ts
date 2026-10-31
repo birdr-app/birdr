@@ -37,65 +37,79 @@ const globalStyles = defineGlobalStyles({
  * in components that support the colorPalette prop
  */
 const customColors = {
+  // Motmot brand: Tody's greens on a mist ground (see the Motmot design system).
   birdr: {
-    50: { value: '#f5ede0' },
-    100: { value: '#e8d4b8' },
-    200: { value: '#d4b88a' },
-    300: { value: '#c09c5c' },
-    400: { value: '#ac802e' },
-    500: { value: '#8b6419' }, // Base: browner and darker ochre/brown
-    600: { value: '#6d4e14' },
-    700: { value: '#4f380f' },
-    800: { value: '#31220a' },
-    900: { value: '#130c05' },
+    50: { value: '#F3F8F5' }, // mist: page background
+    100: { value: '#D9F0E3' }, // canopy-soft: tints, selected rows
+    200: { value: '#CFDFD6' }, // line: borders
+    300: { value: '#9DCBB1' },
+    400: { value: '#4FA87A' },
+    500: { value: '#1C7A4C' }, // canopy: primary actions
+    600: { value: '#17693F' },
+    700: { value: '#0D4D33' }, // canopy-deep
+    800: { value: '#0B3A27' }, // darkest green: body text and dark cards
+    900: { value: '#10201B' }, // ink: Tody's mask
   },
   primary: {
-    50: { value: '#f5ede0' },
-    100: { value: '#e8d4b8' },
-    200: { value: '#d4b88a' },
-    300: { value: '#c09c5c' },
-    400: { value: '#ac802e' },
-    500: { value: '#8b6419' }, // Base: browner and darker ochre/brown
-    600: { value: '#6d4e14' },
-    700: { value: '#4f380f' },
-    800: { value: '#31220a' },
-    900: { value: '#130c05' },
+    50: { value: '#F3F8F5' }, // mist: page background
+    100: { value: '#D9F0E3' }, // canopy-soft: tints, selected rows
+    200: { value: '#CFDFD6' }, // line: borders
+    300: { value: '#9DCBB1' },
+    400: { value: '#4FA87A' },
+    500: { value: '#1C7A4C' }, // canopy: primary actions
+    600: { value: '#17693F' },
+    700: { value: '#0D4D33' }, // canopy-deep
+    800: { value: '#0B3A27' }, // darkest green: body text and dark cards
+    900: { value: '#10201B' }, // ink: Tody's mask
   },
   error: {
-    50: { value: '#ffe5e5' },
-    100: { value: '#ffb3b3' },
-    200: { value: '#ff8080' },
-    300: { value: '#ff4d4d' },
-    400: { value: '#cc1a1a' },
-    500: { value: '#990000' }, // Base: darker and warmer red
-    600: { value: '#7a0000' },
-    700: { value: '#5c0000' },
-    800: { value: '#3d0000' },
-    900: { value: '#1f0000' },
+    50: { value: '#FBE3E0' },
+    100: { value: '#F6C7C1' },
+    200: { value: '#EE9F96' },
+    300: { value: '#E2756A' },
+    400: { value: '#CC4C40' },
+    500: { value: '#B3322A' }, // wrong answer
+    600: { value: '#922620' },
+    700: { value: '#701C17' },
+    800: { value: '#4E130F' },
+    900: { value: '#2C0A08' },
   },
+  // Correct answers use the light-blue family, so the brand green never reads as "right".
   success: {
-    50: { value: '#d4e8d4' },
-    100: { value: '#a8d1a8' },
-    200: { value: '#7cba7c' },
-    300: { value: '#50a350' },
-    400: { value: '#248c24' },
-    500: { value: '#1a6b1a' }, // Base: darker green
-    600: { value: '#145214' },
-    700: { value: '#0e3a0e' },
-    800: { value: '#082108' },
-    900: { value: '#020902' },
+    50: { value: '#D7F3F6' },
+    100: { value: '#B4E8EF' },
+    200: { value: '#86D9E5' },
+    300: { value: '#4FC3D6' },
+    400: { value: '#1E9BB0' },
+    500: { value: '#0A6A80' }, // correct answer
+    600: { value: '#085668' },
+    700: { value: '#064250' },
+    800: { value: '#042E38' },
+    900: { value: '#021A20' },
   },
   warning: {
-    50: { value: '#fff4e6' },
-    100: { value: '#ffe0b3' },
-    200: { value: '#ffcc80' },
-    300: { value: '#ffb84d' },
-    400: { value: '#ffa31a' },
-    500: { value: '#cc6600' }, // Base: dark orange
-    600: { value: '#994d00' },
-    700: { value: '#663300' },
-    800: { value: '#331a00' },
-    900: { value: '#1a0d00' },
+    50: { value: '#FBEBDD' },
+    100: { value: '#F6D6BA' },
+    200: { value: '#EDB98A' },
+    300: { value: '#E09A5B' },
+    400: { value: '#D4843E' },
+    500: { value: '#C8742A' }, // ochre: Tody's cap
+    600: { value: '#A65E1F' },
+    700: { value: '#8A4A12' },
+    800: { value: '#5C310C' },
+    900: { value: '#2E1806' },
+  },
+  brow: {
+    50: { value: '#E3F7FB' },
+    100: { value: '#C1EEF6' },
+    200: { value: '#8FE0EE' },
+    300: { value: '#5FD3E6' },
+    400: { value: '#3CC8E0' }, // Tody's light-blue eye stripe
+    500: { value: '#1FA8C2' },
+    600: { value: '#0A6A80' },
+    700: { value: '#085668' },
+    800: { value: '#064250' },
+    900: { value: '#042E38' },
   },
 }
 
@@ -108,6 +122,11 @@ export const system = createSystem({
       colors: {
         ...defaultConfig.theme?.tokens?.colors,
         ...customColors,
+      },
+      fonts: {
+        ...defaultConfig.theme?.tokens?.fonts,
+        heading: { value: '"Baloo 2", "Arial Rounded MT Bold", system-ui, sans-serif' },
+        body: { value: 'Figtree, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif' },
       },
     },
     semanticTokens: {

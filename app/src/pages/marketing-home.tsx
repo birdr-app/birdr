@@ -94,8 +94,9 @@ export function MarketingHomePage() {
       >
         <Container maxW="1080px" py={3} px={5}>
           <Flex justify="space-between" align="center" gap={4} wrap="wrap">
-            <Link href="/" fontWeight="800" letterSpacing="0.12em" textTransform="uppercase" color="primary.600">
-              Motmot
+            <Link href="/" display="inline-flex" alignItems="center" gap={2.5} aria-label="Motmot">
+              <Image src="/images/motmot/tody-icon-128.png" alt="" w="44px" h="44px" borderRadius="12px" />
+              <Image src="/images/motmot/wordmark-ink.svg" alt="Motmot" h="25px" w="auto" />
             </Link>
             <Flex gap={4} wrap="wrap" fontWeight="600" fontSize="sm" align="center">
               <Link href="/site/how-it-works/">How it works</Link>
@@ -124,7 +125,7 @@ export function MarketingHomePage() {
             <Text fontSize="xs" fontWeight="700" letterSpacing="0.14em" textTransform="uppercase" color="primary.500" mb={2}>
               Free bird identification training
             </Text>
-            <Heading as="h1" size="4xl" lineHeight="1.1" mb={4} fontFamily="serif">
+            <Heading as="h1" size="4xl" lineHeight="1.1" mb={4}>
               Improve your birding skills.
             </Heading>
             <Text fontSize="xl" mb={6} maxW="38rem">
@@ -139,7 +140,7 @@ export function MarketingHomePage() {
           </Box>
           <Box bg="white" borderWidth="2px" borderColor="primary.200" borderRadius="3xl" p={4} textAlign="center">
             <Image
-              src="/images/birdr-start-game.png"
+              src="/images/tody/birdr-start-game.png"
               alt="Motmot quiz screen with a bird illustration"
               maxW="360px"
               mx="auto"
@@ -275,9 +276,7 @@ export function MarketingHomePage() {
         <Container maxW="1080px" px={5}>
           <Grid templateColumns={{ base: '1fr', md: '1.4fr 1fr 1fr' }} gap={8}>
             <Box>
-              <Text fontWeight="800" letterSpacing="0.12em" textTransform="uppercase" color="primary.600" mb={2}>
-                Motmot
-              </Text>
+              <Image src="/images/motmot/wordmark-canopy.svg" alt="Motmot" h="24px" w="auto" mb={3} />
               <Text mb={3}>Improve your birding skills. Free on iPhone, Android and the web.</Text>
               <StoreBadges />
             </Box>

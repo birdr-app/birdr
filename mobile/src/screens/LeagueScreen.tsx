@@ -584,7 +584,7 @@ const styles = StyleSheet.create({
   dotTextPlayed: { color: colors.primary[50] },
   dayLabel: { fontSize: 12, color: colors.primary[600], marginTop: 4 },
   dayLabelToday: { fontWeight: '800', color: colors.primary[800] },
-  dayBonus: { fontSize: 10, fontWeight: '700', color: '#b45309' },
+  dayBonus: { fontSize: 10, fontWeight: '700', color: '#8A4A12' },
   statsRow: { flexDirection: 'row', gap: 10, marginTop: 20 },
   statBox: {
     flex: 1,
@@ -664,6 +664,6 @@ const styles = StyleSheet.create({
     borderColor: '#f59e0b',
   },
   celebrationEmoji: { fontSize: 72 },
-  celebrationTitle: { fontSize: 24, fontWeight: '800', color: '#b45309', textAlign: 'center', marginTop: 8 },
+  celebrationTitle: { fontSize: 24, fontWeight: '800', color: '#8A4A12', textAlign: 'center', marginTop: 8 },
   celebrationBody: { fontSize: 15, color: colors.primary[700], textAlign: 'center', marginTop: 8 },
 });

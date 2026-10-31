@@ -149,7 +149,7 @@ export function AnswerFeedback({
         icon="times-circle"
         message={t('checklist_missed_toast')}
         borderColor="#d97706"
-        textColor="#b45309"
+        textColor="#8A4A12"
       />
       </View>
     </View>
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '900',
     letterSpacing: 2,
-    color: '#b45309',
+    color: '#8A4A12',
   },
   checklistPill: {
     marginTop: 14,

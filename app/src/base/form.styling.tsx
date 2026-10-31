@@ -37,7 +37,7 @@ export const linkTheme = defineRecipe({
       color: 'primary.600',
       textDecoration: 'underline',
       transform: 'translateY(-2px) scale(1.02)',
-      textShadow: '0 2px 4px rgba(139, 100, 25, 0.3)',
+      textShadow: '0 2px 4px rgba(28, 122, 76, 0.3)',
     },
     _active: {
       transform: 'none',

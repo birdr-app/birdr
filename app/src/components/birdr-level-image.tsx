@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { FaCheck, FaLock } from 'react-icons/fa';
 import { resolveMediaUrl } from '../api/baseUrl';
 import AppContext from '../core/app-context';
-import { journeyLevelIconUrl, journeyLevelNumber } from '../user/visual-style';
+import { DEFAULT_VISUAL_STYLE, journeyLevelIconUrl, journeyLevelNumber } from '../user/visual-style';
 
 export type BirdrLevelImageVariant = 'current' | 'next' | 'locked' | 'completed';
 
@@ -30,7 +30,7 @@ export function BirdrLevelImage({ iconUrl, sequence, variant, size, framed = tru
   const isCompleted = variant === 'completed';
   const borderRadius = framed ? '8px' : undefined;
   const resolvedUrl = resolveMediaUrl(
-    journeyLevelIconUrl(sequence, iconUrl, visualStyle ?? 'classic'),
+    journeyLevelIconUrl(sequence, iconUrl, visualStyle ?? DEFAULT_VISUAL_STYLE),
   );
   const levelNumber = journeyLevelNumber(sequence);
 

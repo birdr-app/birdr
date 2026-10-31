@@ -1,11 +1,12 @@
-export type VisualStyle = 'classic' | 'stylish' | 'none';
+/** tody: Tody (default) · classic: Bertie · stylish: notebook art, shown as "Classic" · none: no art */
+export type VisualStyle = 'tody' | 'classic' | 'stylish' | 'none';
 
 export const VISUAL_STYLE_STORAGE_KEY = 'birdr-visual-style';
-export const DEFAULT_VISUAL_STYLE: VisualStyle = 'classic';
+export const DEFAULT_VISUAL_STYLE: VisualStyle = 'tody';
 
 export function parseVisualStyle(value: unknown): VisualStyle {
-  if (value === 'stylish' || value === 'none') return value;
-  return 'classic';
+  if (value === 'classic' || value === 'stylish' || value === 'none') return value;
+  return 'tody';
 }
 
 export function showsGameArt(style: VisualStyle | null | undefined): boolean {

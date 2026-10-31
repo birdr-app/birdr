@@ -31,7 +31,7 @@ function Celebration({ kind, result }: { kind: 'record' | 'personal_best'; resul
           <FormattedMessage id="survival_new_personal_best" defaultMessage="New personal best!" />
         )}
       </Heading>
-      <Text fontSize="5xl" fontWeight="900" color="#b45309" lineHeight="1">
+      <Text fontSize="5xl" fontWeight="900" color="#8A4A12" lineHeight="1">
         {result.streak}
       </Text>
       <Text color="primary.700">

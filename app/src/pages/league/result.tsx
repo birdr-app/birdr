@@ -141,7 +141,7 @@ export function LeagueResultPage() {
               animate={{ scale: [0.4, 1.25, 1], opacity: 1 }}
               transition={{ duration: 0.7, times: [0, 0.6, 1], ease: 'easeOut' }}
             >
-              <Text fontSize="6xl" fontWeight="900" color="#b45309" lineHeight="1">
+              <Text fontSize="6xl" fontWeight="900" color="#8A4A12" lineHeight="1">
                 {result.score}
               </Text>
             </motion.div>
