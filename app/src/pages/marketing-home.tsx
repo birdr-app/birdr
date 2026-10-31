@@ -18,14 +18,14 @@ const PLAY_STORE_BADGE =
 
 const TESTIMONIALS = [
   {
-    quote: 'I gave Birdr a quick spin and immediately found it incredibly useful. Kudos to the developer!',
+    quote: 'I gave Motmot a quick spin and immediately found it incredibly useful. Kudos to the developer!',
     attribution: 'Bombay Natural History Society, India',
   },
   {
     quote: 'The bird comparisons are thorough and could really help people improve their identification skills.',
     attribution: 'Kent Ornithological Society, United Kingdom',
   },
-  { quote: 'Birdr works well—even with Finnish bird names.', attribution: 'BirdLife Finland (BirdLife Suomi), Finland' },
+  { quote: 'Motmot works well—even with Finnish bird names.', attribution: 'BirdLife Finland (BirdLife Suomi), Finland' },
   {
     quote: 'The Pro and Expert levels offer exactly the kind of serious identification training I was looking for.',
     attribution: 'Japan Bird Research Association, Japan',
@@ -36,25 +36,25 @@ const TESTIMONIALS = [
   },
   {
     quote: 'I really like the similar-species tests. They’re a great way to practise difficult birds.',
-    attribution: 'Birdr player, South Africa',
+    attribution: 'Motmot player, South Africa',
   },
   {
-    quote: 'Birdr has massively improved my bird recognition in a surprisingly short time.',
-    attribution: 'Birdr player, Germany',
+    quote: 'Motmot has massively improved my bird recognition in a surprisingly short time.',
+    attribution: 'Motmot player, Germany',
   },
-  { quote: 'A fun and educational way to sharpen your bird-identification skills.', attribution: 'Birdr player, Netherlands' },
+  { quote: 'A fun and educational way to sharpen your bird-identification skills.', attribution: 'Motmot player, Netherlands' },
   {
     quote: 'The Country Challenge is great! It’s a fun way to learn the birds of different countries.',
-    attribution: 'Birdr player, France',
+    attribution: 'Motmot player, France',
   },
-  { quote: 'A great way to study the birds you might encounter on your next trip.', attribution: 'Birdr player' },
+  { quote: 'A great way to study the birds you might encounter on your next trip.', attribution: 'Motmot player' },
   {
     quote: 'The confusing-pairs games make practising difficult species both focused and fun.',
-    attribution: 'Birdr player, South Africa',
+    attribution: 'Motmot player, South Africa',
   },
   {
-    quote: 'I’m very happy with Birdr. It’s a fantastic initiative, and it keeps getting better.',
-    attribution: 'Birdr player, Netherlands',
+    quote: 'I’m very happy with Motmot. It’s a fantastic initiative, and it keeps getting better.',
+    attribution: 'Motmot player, Netherlands',
   },
 ];
 
@@ -95,7 +95,7 @@ export function MarketingHomePage() {
         <Container maxW="1080px" py={3} px={5}>
           <Flex justify="space-between" align="center" gap={4} wrap="wrap">
             <Link href="/" fontWeight="800" letterSpacing="0.12em" textTransform="uppercase" color="primary.600">
-              Birdr
+              Motmot
             </Link>
             <Flex gap={4} wrap="wrap" fontWeight="600" fontSize="sm" align="center">
               <Link href="/site/how-it-works/">How it works</Link>
@@ -140,7 +140,7 @@ export function MarketingHomePage() {
           <Box bg="white" borderWidth="2px" borderColor="primary.200" borderRadius="3xl" p={4} textAlign="center">
             <Image
               src="/images/birdr-start-game.png"
-              alt="Birdr quiz screen with a bird illustration"
+              alt="Motmot quiz screen with a bird illustration"
               maxW="360px"
               mx="auto"
             />
@@ -151,14 +151,14 @@ export function MarketingHomePage() {
         </Grid>
 
         <Heading as="h2" size="xl" mb={4}>
-          What is Birdr?
+          What is Motmot?
         </Heading>
         <Text mb={12} maxW="46rem">
-          Birdr is a free bird-identification training app. It helps birders learn to recognise species through photo, video and sound quizzes, personalised practice and country challenges. You can sign in with Google so Birdr can create your account and save your scores and learning progress.
+          Motmot is a free bird-identification training app. It helps birders learn to recognise species through photo, video and sound quizzes, personalised practice and country challenges. You can sign in with Google so Motmot can create your account and save your scores and learning progress.
         </Text>
 
         <Heading as="h2" size="xl" mb={4}>
-          How Birdr teaches
+          How Motmot teaches
         </Heading>
         <Grid templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }} gap={4} mb={4}>
           {[
@@ -241,7 +241,7 @@ export function MarketingHomePage() {
             <Heading as="h3" size="md" mb={2}>
               Community
             </Heading>
-            <Text mb={3}>Birdr is a small project. Send feedback or review photos if you know a country’s birds.</Text>
+            <Text mb={3}>Motmot is a small project. Send feedback or review photos if you know a country’s birds.</Text>
             <Link href="/site/community/" fontWeight="600">
               How you can help
             </Link>
@@ -250,7 +250,7 @@ export function MarketingHomePage() {
             <Heading as="h3" size="md" mb={2}>
               FAQ
             </Heading>
-            <Text mb={3}>Is Birdr free? Does it identify birds from a photo? Where can I play?</Text>
+            <Text mb={3}>Is Motmot free? Does it identify birds from a photo? Where can I play?</Text>
             <Link href="/site/faq/" fontWeight="600">
               Read the FAQ
             </Link>
@@ -259,7 +259,7 @@ export function MarketingHomePage() {
 
         <Box bg="primary.800" color="primary.50" borderRadius="2xl" p={8} mt={16}>
           <Heading as="h2" size="xl" color="white" mb={3}>
-            Get Birdr on your phone
+            Get Motmot on your phone
           </Heading>
           <Text mb={4} color="primary.100">
             The apps are the best way to practise. The browser works too if you want to try a quiz first.
@@ -276,7 +276,7 @@ export function MarketingHomePage() {
           <Grid templateColumns={{ base: '1fr', md: '1.4fr 1fr 1fr' }} gap={8}>
             <Box>
               <Text fontWeight="800" letterSpacing="0.12em" textTransform="uppercase" color="primary.600" mb={2}>
-                Birdr
+                Motmot
               </Text>
               <Text mb={3}>Improve your birding skills. Free on iPhone, Android and the web.</Text>
               <StoreBadges />
@@ -295,7 +295,7 @@ export function MarketingHomePage() {
             </Box>
             <Box>
               <Text fontSize="xs" fontWeight="700" letterSpacing="0.08em" textTransform="uppercase" color="primary.500" mb={2}>
-                Birdr
+                Motmot
               </Text>
               <Flex direction="column" gap={1}>
                 <Link href="/site/birding-app/">The app</Link>

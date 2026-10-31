@@ -77,7 +77,7 @@ def _lang(user) -> str:
 
 MESSAGES = {
     'en': {
-        'title': 'Birdr: {flock}',
+        'title': 'Motmot: {flock}',
         'last_day': "1 day left to play this week's challenge, {challenge}. Tap to play!",
         'won': "🏆 You won last week's challenge with {score}! ({players} played)",
         'ranked': "Last week's challenge: {winner} won with {wscore}. You finished #{rank} of {players} ({score}).",
@@ -87,7 +87,7 @@ MESSAGES = {
         'renewed': ' New challenge is live, play now!',
     },
     'nl': {
-        'title': 'Birdr: {flock}',
+        'title': 'Motmot: {flock}',
         'last_day': 'Nog 1 dag om de challenge van deze week te spelen: {challenge}. Tik om te spelen!',
         'won': '🏆 Je hebt de challenge van vorige week gewonnen met {score}! ({players} spelers)',
         'ranked': 'Challenge van vorige week: {winner} won met {wscore}. Jij werd #{rank} van {players} ({score}).',

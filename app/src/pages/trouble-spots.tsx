@@ -301,7 +301,7 @@ export default function TroubleSpotsPage({ scope = 'me' }: { scope?: TroubleSpot
             <Text color="primary.700">
               <FormattedMessage
                 id="trouble_spots_everyone_intro"
-                defaultMessage="The birds all Birdr players get wrong most often."
+                defaultMessage="The birds all Motmot players get wrong most often."
               />
             </Text>
           ) : null}

@@ -69,7 +69,7 @@ def import_avonet_csv(path: str | Path, *, limit: int | None = None) -> dict[str
     """
     Load an AVONET eBird-taxonomy CSV and upsert SpeciesFact rows.
 
-    Matches Birdr species by eBird ``code`` when present, else by ``name_latin``.
+    Matches Motmot species by eBird ``code`` when present, else by ``name_latin``.
     """
     path = Path(path)
     created = updated = skipped = unmatched = 0

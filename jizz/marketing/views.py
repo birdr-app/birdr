@@ -1,4 +1,4 @@
-"""Django views for the public Birdr marketing site."""
+"""Django views for the public Motmot marketing site."""
 
 from __future__ import annotations
 
@@ -242,8 +242,8 @@ def cms_index(request):
     pages = MarketingPage.objects.all() if staff else MarketingPage.objects.filter(published=True)
     context = base_context(
         request,
-        title='Pages – Birdr',
-        description='Guides and information about Birdr, the bird identification training app.',
+        title='Pages – Motmot',
+        description='Guides and information about Motmot, the bird identification training app.',
         path=CMS_INDEX,
         breadcrumbs=[('Home', SITE_HOME), ('Pages', '')],
         cms_pages=pages,
@@ -260,7 +260,7 @@ def cms_page(request, slug: str):
         raise Http404()
     context = base_context(
         request,
-        title=f'{page.title} – Birdr',
+        title=f'{page.title} – Motmot',
         description=page.meta_description or DEFAULT_DESCRIPTION,
         path=page.get_absolute_url(),
         breadcrumbs=[('Home', SITE_HOME), ('Pages', CMS_INDEX), (page.title, '')],
@@ -342,10 +342,10 @@ def country_page(request, slug: str):
     path = reverse('marketing-country', kwargs={'slug': slug})
     locale = locale_from_request(request)
     country_name = country_display_name(country, locale)
-    title = translate('Bird Quiz: {name} – Identify the Birds | Birdr', name=country_name)
+    title = translate('Bird Quiz: {name} – Identify the Birds | Motmot', name=country_name)
     description = translate(
         'Learn to identify the birds of {name} with free photo quizzes and a '
-        'Country Challenge. {count} species on the Birdr list.',
+        'Country Challenge. {count} species on the Motmot list.',
         name=country_name,
         count=species_count,
     )
@@ -390,9 +390,9 @@ def national_league_page(request):
     countries = _localize_mode_countries(national_league_countries(), locale)
     context = base_context(
         request,
-        title=translate('National League by country | Birdr'),
+        title=translate('National League by country | Motmot'),
         description=translate(
-            'See which countries have birders in the Birdr National League. '
+            'See which countries have birders in the Motmot National League. '
             'One daily quiz per country, a daily winner, and a weekly champion.'
         ),
         path=path,
@@ -414,9 +414,9 @@ def survival_page(request):
     countries = _localize_mode_countries(survival_countries(), locale)
     context = base_context(
         request,
-        title=translate('Survival mode by country | Birdr'),
+        title=translate('Survival mode by country | Motmot'),
         description=translate(
-            'Survival mode on Birdr: Pro-level quizzes where one wrong answer ends the run. '
+            'Survival mode on Motmot: Pro-level quizzes where one wrong answer ends the run. '
             'See country records and which countries have players.'
         ),
         path=path,
@@ -463,9 +463,9 @@ def birds_index(request):
     pairs = _localize_pair_rows(confusion_pairs(limit=8), locale)
     context = base_context(
         request,
-        title='Bird Species – Search, Lookalikes & ID Practice | Birdr',
+        title='Bird Species – Search, Lookalikes & ID Practice | Motmot',
         description=(
-            'Search Birdr’s species pages, see the birds people miss most in quizzes, '
+            'Search Motmot’s species pages, see the birds people miss most in quizzes, '
             'and open comparisons for confusing lookalikes.'
         ),
         path=path,
@@ -507,12 +507,12 @@ def bird_page(request, slug: str):
     locale = locale_from_request(request)
     species_name = species_display_name(species, locale)
     title = translate(
-        '{name} ({latin}) – Bird ID Practice | Birdr',
+        '{name} ({latin}) – Bird ID Practice | Motmot',
         name=species_name,
         latin=species.name_latin,
     )
     description = translate(
-        'Learn to identify {name} ({latin}) with photo quizzes and personalised practice on Birdr.',
+        'Learn to identify {name} ({latin}) with photo quizzes and personalised practice on Motmot.',
         name=species_name,
         latin=species.name_latin,
     )
@@ -609,7 +609,7 @@ def _compare_page_response(
         (community.summary if community and not show_ai else '')
         or (getattr(active, 'summary', None) if active else '')
         or translate(
-            'Learn the field marks that separate {low} and {high}, then practise the pair on Birdr.',
+            'Learn the field marks that separate {low} and {high}, then practise the pair on Motmot.',
             low=left_name,
             high=right_name,
         )
@@ -624,7 +624,7 @@ def _compare_page_response(
         for field, label in FORM_FIELDS
     ]
     title = translate(
-        '{low} vs {high} – How to Tell Them Apart | Birdr',
+        '{low} vs {high} – How to Tell Them Apart | Motmot',
         low=left_name,
         high=right_name,
     )
@@ -831,8 +831,8 @@ def my_edits(request):
     }
     context = base_context(
         request,
-        title='My edits | Birdr',
-        description='Comparisons you have written and photos you have reviewed on Birdr.',
+        title='My edits | Motmot',
+        description='Comparisons you have written and photos you have reviewed on Motmot.',
         path=reverse('marketing-my-edits'),
         breadcrumbs=[('Home', SITE_HOME), ('My edits', '')],
         noindex=True,
@@ -849,8 +849,8 @@ def cms_legacy_redirect(request, slug: str):
 def marketing_404(request, exception=None):
     context = base_context(
         request,
-        title='Page not found · Birdr',
-        description='This page is not available on Birdr.',
+        title='Page not found · Motmot',
+        description='This page is not available on Motmot.',
         path=request.path,
         heading='Page not found',
     )

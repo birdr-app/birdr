@@ -1,4 +1,4 @@
-"""Localize Birdr updates into the selected app language, with a durable cache."""
+"""Localize Motmot updates into the selected app language, with a durable cache."""
 
 from __future__ import annotations
 
@@ -232,10 +232,10 @@ def _translate_with_openai(title: str, html: str, language: str) -> tuple[str, s
     language_name = LOCALE_NAMES.get(language, language)
     model = getattr(settings, 'UPDATE_TRANSLATION_MODEL', None) or 'gpt-4o-mini'
     prompt = (
-        f'Translate this Birdr product update into {language_name}.\n'
+        f'Translate this Motmot product update into {language_name}.\n'
         'Return a JSON object with keys "title" and "html".\n'
         'Keep HTML tags, attributes and URLs unchanged; translate visible text only.\n'
-        'Keep the name Birdr untranslated. Keep scientific bird names in Latin.\n\n'
+        'Keep the name Motmot untranslated. Keep scientific bird names in Latin.\n\n'
         f'Title:\n{title}\n\n'
         f'HTML:\n{html}'
     )
@@ -252,7 +252,7 @@ def _translate_with_openai(title: str, html: str, language: str) -> tuple[str, s
                 {
                     'role': 'system',
                     'content': (
-                        'You translate Birdr app updates. Reply with JSON only: '
+                        'You translate Motmot app updates. Reply with JSON only: '
                         '{"title": "...", "html": "..."}.'
                     ),
                 },

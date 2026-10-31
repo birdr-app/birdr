@@ -21,7 +21,7 @@ SECTION_FIELDS = [item for item in FORM_FIELDS if item[0] != 'summary']
 
 def display_name_for_user(user) -> str:
     if not user:
-        return 'A Birdr user'
+        return 'A Motmot user'
     full = (user.get_full_name() or '').strip()
     if full:
         return full[:80]
@@ -40,7 +40,7 @@ def display_name_for_user(user) -> str:
     username = (getattr(user, 'username', '') or '').strip()
     if username and '@' not in username:
         return username[:80]
-    return 'A Birdr user'
+    return 'A Motmot user'
 
 
 def user_from_request(request):

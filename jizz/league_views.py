@@ -301,7 +301,7 @@ class LeagueCompleteView(APIView):
         flag = league.flag_emoji(country.code)
         share = (
             f'{flag} I scored {attempt.correct_count}/{attempt.day.length} in today\'s {country.name} '
-            f'Birdr League'
+            f'Motmot League'
             + (f' and I\'m #{week_rank} this week' if week_rank else '')
             + '. Can you beat me? https://birdr.pro/league/' + country.code
         )

@@ -245,7 +245,7 @@ def games_played_for_country(country_code: str) -> dict:
 
 
 def games_played_map_style() -> dict:
-    """World map colours for jsVectorMap (Birdr browns; zero-data countries gray)."""
+    """World map colours for jsVectorMap (Motmot browns; zero-data countries gray)."""
     return {
         'color_scale': [
             '#dcc19c',

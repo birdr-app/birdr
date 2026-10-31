@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if missing %}
-  <title>Challenge not found · Birdr</title>
+  <title>Challenge not found · Motmot</title>
   {% else %}
   <title>{{ og_title }}</title>
   <meta name="description" content="{{ description }}">
@@ -12,7 +12,7 @@
   <meta property="og:title" content="{{ og_title }}">
   <meta property="og:description" content="{{ description }}">
   <meta property="og:url" content="{{ canonical_url }}">
-  <meta property="og:site_name" content="Birdr">
+  <meta property="og:site_name" content="Motmot">
   <link rel="canonical" href="{{ canonical_url }}">
   {% endif %}
   <style>
@@ -163,12 +163,12 @@
 <body>
   <main class="card">
     {% if missing %}
-      <div class="brand">Birdr</div>
+      <div class="brand">Motmot</div>
       <h1>Challenge not found</h1>
       <p class="empty">This share link is invalid or no longer available.</p>
-      <a class="cta" href="/">Go to Birdr</a>
+      <a class="cta" href="/">Go to Motmot</a>
     {% else %}
-      <div class="brand">Birdr</div>
+      <div class="brand">Motmot</div>
       <div class="header">
         {% if logo_url %}
           <img class="logo" src="{{ logo_url }}" alt="">
@@ -202,7 +202,7 @@
         {% if join_url %}
           <a class="cta secondary" href="{{ join_url }}">Join flock &amp; play</a>
         {% else %}
-          <a class="cta secondary" href="/flocks/">Open Birdr</a>
+          <a class="cta secondary" href="/flocks/">Open Motmot</a>
         {% endif %}
       </div>
       {% if has_history %}

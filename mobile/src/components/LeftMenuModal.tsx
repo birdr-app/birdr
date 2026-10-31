@@ -94,7 +94,7 @@ export function LeftMenuModal() {
               contentContainerStyle={[styles.content, { paddingTop: Math.max(24, insets.top) }]}
             >
               <View style={styles.menuHeader}>
-                <Text style={styles.menuHeaderTitle}>Birdr</Text>
+                <Text style={styles.menuHeaderTitle}>Motmot</Text>
               </View>
               {menuItems.map((item) => {
                 const isFocused =

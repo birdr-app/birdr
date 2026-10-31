@@ -115,7 +115,7 @@ If Google Sign-In works in the **emulator / local debug** but shows **DEVELOPER_
 
 **Where to get the SHA-1 for the Play Store build**
 
-1. Open [Google Play Console](https://play.google.com/console/) and select your app **Birdr**.
+1. Open [Google Play Console](https://play.google.com/console/) and select your app **Motmot**.
 2. Go to **Release** → **Setup** → **App signing** (or **Setup** → **App integrity**).
 3. Under **App signing key certificate**, copy the **SHA-1 certificate fingerprint** (and optionally **SHA-256**).
    - If you use **Google Play App Signing**, this is the key Google uses to sign the APKs/AABs that users download. This is the SHA-1 you need.

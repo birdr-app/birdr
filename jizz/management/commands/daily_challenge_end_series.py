@@ -38,7 +38,7 @@ class Command(BaseCommand):
             for p in DailyChallengeParticipant.objects.filter(challenge=challenge, status='accepted').select_related('user'):
                 send_push_to_user(
                     p.user,
-                    'Birdr: Daily Challenge finished',
+                    'Motmot: Daily Challenge finished',
                     'Your 7-day challenge has ended. See final results in the app.',
                     {'type': 'daily_challenge_ended', 'challenge_id': challenge.id},
                 )

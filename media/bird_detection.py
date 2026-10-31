@@ -1,4 +1,4 @@
-"""Conservative YOLO bird-presence triage for Birdr image media."""
+"""Conservative YOLO bird-presence triage for Motmot image media."""
 
 from __future__ import annotations
 

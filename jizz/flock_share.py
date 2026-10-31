@@ -15,7 +15,7 @@ from PIL import Image, ImageDraw, ImageFont
 OG_WIDTH = 1200
 OG_HEIGHT = 630
 
-# Birdr primary / birdr palette (app/src/theme.ts)
+# Motmot primary / birdr palette (app/src/theme.ts)
 BIRDR_50 = '#f5ede0'
 BIRDR_100 = '#e8d4b8'
 BIRDR_200 = '#d4b88a'
@@ -222,7 +222,7 @@ def render_challenge_og_image(
             font=subtitle,
         )
 
-    footer = 'Join the challenge on Birdr'
+    footer = 'Join the challenge on Motmot'
     if participant_count:
         footer = f'{participant_count} played · {footer}'
     draw.text((56, OG_HEIGHT - 62), footer, fill=BIRDR_600, font=meta)
@@ -293,7 +293,7 @@ def render_flock_result_og_image(
     if rank_label:
         draw.text((80, 440), rank_label, fill=BIRDR_800, font=rank_font)
 
-    draw.text((56, OG_HEIGHT - 62), 'Can you beat this score on Birdr?', fill=BIRDR_600, font=meta)
+    draw.text((56, OG_HEIGHT - 62), 'Can you beat this score on Motmot?', fill=BIRDR_600, font=meta)
     return _png_bytes(img)
 
 
@@ -335,7 +335,7 @@ def render_game_result_og_image(
     max_title = OG_WIDTH - (art.width + 140 if art else 112)
     draw.text(
         (56, 86),
-        _truncate(draw, country_name or 'Birdr quiz', title, max_title),
+        _truncate(draw, country_name or 'Motmot quiz', title, max_title),
         fill=BIRDR_800,
         font=title,
     )

@@ -3,7 +3,7 @@
 TESTIMONIALS = [
     {
         'quote': (
-            'I gave Birdr a quick spin and immediately found it incredibly useful. '
+            'I gave Motmot a quick spin and immediately found it incredibly useful. '
             'Kudos to the developer!'
         ),
         'attribution': 'Bombay Natural History Society, India',
@@ -16,7 +16,7 @@ TESTIMONIALS = [
         'attribution': 'Kent Ornithological Society, United Kingdom',
     },
     {
-        'quote': 'Birdr works well—even with Finnish bird names.',
+        'quote': 'Motmot works well—even with Finnish bird names.',
         'attribution': 'BirdLife Finland (BirdLife Suomi), Finland',
     },
     {
@@ -38,55 +38,55 @@ TESTIMONIALS = [
             'I really like the similar-species tests. They’re a great way to practise '
             'difficult birds.'
         ),
-        'attribution': 'Birdr player, South Africa',
+        'attribution': 'Motmot player, South Africa',
     },
     {
         'quote': (
-            'Birdr has massively improved my bird recognition in a surprisingly short time.'
+            'Motmot has massively improved my bird recognition in a surprisingly short time.'
         ),
-        'attribution': 'Birdr player, Germany',
+        'attribution': 'Motmot player, Germany',
     },
     {
         'quote': 'A fun and educational way to sharpen your bird-identification skills.',
-        'attribution': 'Birdr player, Netherlands',
+        'attribution': 'Motmot player, Netherlands',
     },
     {
         'quote': (
             'The Country Challenge is great! It’s a fun way to learn the birds of '
             'different countries.'
         ),
-        'attribution': 'Birdr player, France',
+        'attribution': 'Motmot player, France',
     },
     {
         'quote': 'A great way to study the birds you might encounter on your next trip.',
-        'attribution': 'Birdr player',
+        'attribution': 'Motmot player',
     },
     {
         'quote': (
             'The confusing-pairs games make practising difficult species both focused and fun.'
         ),
-        'attribution': 'Birdr player, South Africa',
+        'attribution': 'Motmot player, South Africa',
     },
     {
         'quote': (
-            'I’m very happy with Birdr. It’s a fantastic initiative, and it keeps getting better.'
+            'I’m very happy with Motmot. It’s a fantastic initiative, and it keeps getting better.'
         ),
-        'attribution': 'Birdr player, Netherlands',
+        'attribution': 'Motmot player, Netherlands',
     },
 ]
 
 FAQ = [
     {
-        'question': 'Is Birdr free?',
+        'question': 'Is Motmot free?',
         'answer': (
-            'Yes. Birdr is free on iPhone, Android and the web. Photo quizzes, country '
+            'Yes. Motmot is free on iPhone, Android and the web. Photo quizzes, country '
             'challenges and personalised practice do not require a paid subscription.'
         ),
     },
     {
-        'question': 'Does Birdr identify birds from a photo for me?',
+        'question': 'Does Motmot identify birds from a photo for me?',
         'answer': (
-            'No. Birdr is a training app: you learn to identify birds yourself through '
+            'No. Motmot is a training app: you learn to identify birds yourself through '
             'quizzes and practice, rather than handing a photo to an automatic identifier.'
         ),
     },
@@ -94,20 +94,20 @@ FAQ = [
         'question': 'Can I practise the birds of my country?',
         'answer': (
             'Yes. Start a photo quiz for a country list, or take a Country Challenge with '
-            'levels from easy to expert. Birdr covers birders worldwide, not only Europe.'
+            'levels from easy to expert. Motmot covers birders worldwide, not only Europe.'
         ),
     },
     {
         'question': 'What is My Tricky Birds?',
         'answer': (
-            'When you mix up species, Birdr remembers those trouble spots so you can '
+            'When you mix up species, Motmot remembers those trouble spots so you can '
             'practise the difficult birds and confusing pairs until they stick.'
         ),
     },
     {
         'question': 'What are Flocks?',
         'answer': (
-            'A Flock is a bird club or group on Birdr. Members play shared quizzes and '
+            'A Flock is a bird club or group on Motmot. Members play shared quizzes and '
             'see a leaderboard—useful for clubs, WhatsApp groups and trip companions.'
         ),
     },

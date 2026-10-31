@@ -48,7 +48,7 @@ export function FlockShareBlock({
 
   const nativeShare = async () => {
     try {
-      await navigator.share({ title: 'Birdr', text: shareMessage, url: shareUrl });
+      await navigator.share({ title: 'Motmot', text: shareMessage, url: shareUrl });
     } catch {
       // user cancelled
     }

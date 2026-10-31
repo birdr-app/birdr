@@ -283,7 +283,7 @@ def open_update_redirect(request, pk):
 
 
 def open_app_redirect(request):
-    """Open Birdr home (or a mapped path) in the app on mobile; stay on web on desktop."""
+    """Open Motmot home (or a mapped path) in the app on mobile; stay on web on desktop."""
     import re
 
     from jizz.services.species_cover import absolute_media_url

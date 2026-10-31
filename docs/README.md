@@ -1,6 +1,6 @@
-# Birdr Game Documentation
+# Motmot Game Documentation
 
-This directory contains comprehensive documentation for the Birdr game application.
+This directory contains comprehensive documentation for the Motmot game application.
 
 ## Documentation Files
 

@@ -1,12 +1,12 @@
 {% extends "emails/base.html" %}
 
-{% block title %}Welcome to Birdr!{% endblock %}
+{% block title %}Welcome to Motmot!{% endblock %}
 
 {% block content %}
-<h2>Welcome to Birdr! 🎉</h2>
+<h2>Welcome to Motmot! 🎉</h2>
 <p>Hello {{ username }},</p>
-<p>Thank you for joining Birdr! We're excited to have you on board.</p>
-<p>Birdr is a fun and challenging way to test your bird knowledge. You can:</p>
+<p>Thank you for joining Motmot! We're excited to have you on board.</p>
+<p>Motmot is a fun and challenging way to test your bird knowledge. You can:</p>
 <ul style="color: #333333; line-height: 1.8;">
     <li>Play single-player games to test your skills</li>
     <li>Challenge friends in multiplayer games</li>
@@ -21,17 +21,17 @@
 <p>If you have any questions or need help, feel free to reach out to us.</p>
 
 <p>Happy birding!</p>
-<p><strong>The Birdr Team</strong></p>
+<p><strong>The Motmot Team</strong></p>
 {% endblock %}
 
 {% block footer %}
-<p><strong>Birdr</strong> - Test your bird knowledge</p>
+<p><strong>Motmot</strong> - Test your bird knowledge</p>
 <p class="text-muted">
     This email was sent to {{ user_email }}.
 </p>
 <div class="divider"></div>
 <p class="text-muted">
-    <a href="{{ site_url }}">Visit Birdr</a> | 
+    <a href="{{ site_url }}">Visit Motmot</a> | 
     <a href="{{ site_url }}/privacy/">Privacy Policy</a>
 </p>
 {% endblock %}

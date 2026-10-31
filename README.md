@@ -1,18 +1,18 @@
-# Birdr
+# Motmot
 
 **Learn to identify birds yourself.**
 
-Birdr is a free and open-source bird identification training app for iPhone, Android and the web. Instead of identifying a bird for you, Birdr helps you practise the field marks, sounds and lookalikes needed to recognise it yourself.
+Motmot is a free and open-source bird identification training app for iPhone, Android and the web. Instead of identifying a bird for you, Motmot helps you practise the field marks, sounds and lookalikes needed to recognise it yourself.
 
-[Open Birdr](https://birdr.pro/) · [Play in your browser](https://birdr.pro/play/) · [How it works](https://birdr.pro/site/how-it-works/) · [Live usage data](https://birdr.pro/data/games-played/) · [Community](https://birdr.pro/site/community/)
+[Open Motmot](https://birdr.pro/) · [Play in your browser](https://birdr.pro/play/) · [How it works](https://birdr.pro/site/how-it-works/) · [Live usage data](https://birdr.pro/data/games-played/) · [Community](https://birdr.pro/site/community/)
 
 ## Current status
 
-Birdr is live, free to use and under active development. The mobile apps and browser version use the same account and learning progress.
+Motmot is live, free to use and under active development. The mobile apps and browser version use the same account and learning progress.
 
 The current focus is on improving media quality, accessibility and localisation; expanding personalised practice; and learning from birders and bird clubs around the world.
 
-This repository is being prepared as the public home of the Birdr source code. The project is licensed under GPL-3.0; source code and contributor documentation will be added as they are readied for publication.
+This repository is being prepared as the public home of the Motmot source code. The project is licensed under GPL-3.0; source code and contributor documentation will be added as they are readied for publication.
 
 ## Usage
 
@@ -61,7 +61,7 @@ These figures count distinct game sessions and players with scores. See the [int
 
 ## Platforms
 
-Birdr is available on:
+Motmot is available on:
 
 - iPhone and iPad
 - Android
@@ -71,18 +71,18 @@ Visit [birdr.pro](https://birdr.pro/) to play or find the mobile app links.
 
 ## How to help
 
-Birdr is a small independent project, and contributions from birders are especially valuable:
+Motmot is a small independent project, and contributions from birders are especially valuable:
 
 - [Report a bug or suggest a feature](https://github.com/birdr-app/birdr/issues).
 - Flag an incorrect or unusable photo, video or sound during a quiz.
 - Review bird photos for a country you know well.
 - Improve descriptions that explain how to distinguish lookalike species.
-- Share Birdr with a bird club or create a Flock for your group.
+- Share Motmot with a bird club or create a Flock for your group.
 
 Questions and feedback are also welcome at [info@birdr.pro](mailto:info@birdr.pro).
 
 ## License
 
-Birdr's software is licensed under the [GNU General Public License v3.0](LICENSE).
+Motmot's software is licensed under the [GNU General Public License v3.0](LICENSE).
 
 Bird names, occurrence data, photographs, recordings, video and other third-party content retain their own licences and attribution requirements. They are not automatically covered by the software licence.

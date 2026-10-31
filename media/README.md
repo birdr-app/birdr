@@ -185,7 +185,7 @@ Media items are stored with:
 
 ## YOLO bird-presence triage
 
-Birdr can pre-screen image media with a COCO-trained YOLOv5 ONNX model. The
+Motmot can pre-screen image media with a COCO-trained YOLOv5 ONNX model. The
 detector stores one of `bird`, `no_bird`, or `uncertain` in
 `MediaBirdDetection`; it never hides media automatically.
 
@@ -208,7 +208,7 @@ This first pass only detects the generic COCO `bird` object class. It does not
 prove that a bird is alive, identify its species, or reliably distinguish a
 real bird from every illustration or specimen. Treat `no_bird` as a review
 queue, not an automatic deletion rule, until thresholds have been validated on
-Birdr's own media.
+Motmot's own media.
 
 ## Troubleshooting
 

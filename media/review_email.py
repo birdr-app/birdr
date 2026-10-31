@@ -79,7 +79,7 @@ def send_media_review_reply_if_needed(review) -> bool:
         text_content = converter.handle(html_content)
         from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', REPLY_TO_EMAIL)
         msg = EmailMultiAlternatives(
-            subject='About the media you flagged on Birdr',
+            subject='About the media you flagged on Motmot',
             body=text_content,
             from_email=from_email,
             to=[user.email],

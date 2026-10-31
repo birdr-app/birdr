@@ -52,7 +52,7 @@ export function formatGameResultShareMessage(
   subtitle?: string
 ): string {
   const where = subtitle ? `${countryName} · ${subtitle}` : countryName;
-  return `I scored ${scoreLabel} in a Birdr quiz (${where}). Can you beat me? ${shareUrl}`;
+  return `I scored ${scoreLabel} in a Motmot quiz (${where}). Can you beat me? ${shareUrl}`;
 }
 
 export { buildWhatsAppShareUrl };

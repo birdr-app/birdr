@@ -280,10 +280,10 @@ class UpdateEmailTests(TestCase):
         self.assertEqual(len(mail.outbox), 1)
         html = mail.outbox[0].alternatives[0][0]
         self.assertIn('href="https://birdr.pro/"', html)
-        self.assertIn('Open Birdr App', html)
+        self.assertIn('Open Motmot App', html)
         self.assertNotIn('class="email-header"', html)
         self.assertNotIn('class="logo"', html)
-        self.assertNotIn('alt="Birdr"', html)
+        self.assertNotIn('alt="Motmot"', html)
 
     def test_broadcast_skips_users_already_emailed(self):
         user_one = User.objects.create_user('one', password='x', email='one@example.com')

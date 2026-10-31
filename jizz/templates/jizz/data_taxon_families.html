@@ -1,11 +1,11 @@
 {% extends "jizz/data_base.html" %}
 {% load taxon_data %}
 
-{% block title %}Taxonomic families — Birdr data{% endblock %}
+{% block title %}Taxonomic families — Motmot data{% endblock %}
 
 {% block content %}
     <h1>Taxonomic families</h1>
-    <p class="muted">Number of species per family in Birdr. With a country selected, counts include only species with native, rare, or endemic status for that country.</p>
+    <p class="muted">Number of species per family in Motmot. With a country selected, counts include only species with native, rare, or endemic status for that country.</p>
 
     <nav class="tabs">
         <a href="{% url 'data-taxon-orders' %}{% if selected_country %}?country={{ selected_country }}{% endif %}">Orders</a>

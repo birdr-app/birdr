@@ -1,6 +1,6 @@
-# Contributing to Birdr
+# Contributing to Motmot
 
-Thank you for helping Birdr teach people to identify birds. Contributions to
+Thank you for helping Motmot teach people to identify birds. Contributions to
 code, accessibility, translations, documentation, bird data, and media quality
 are all welcome.
 
@@ -9,7 +9,7 @@ are all welcome.
 1. Search the [existing issues](https://github.com/birdr-app/birdr/issues) to
    see whether the topic is already being discussed.
 2. For a bug, include reproducible steps, the platform, device or browser, and
-   the Birdr version. For a feature, explain the problem before proposing a
+   the Motmot version. For a feature, explain the problem before proposing a
    solution.
 3. Discuss substantial features, schema changes, or new dependencies in an
    issue before investing in an implementation.
@@ -119,7 +119,7 @@ personal data, signing keys, or generated build artifacts.
 ## Licensing and third-party content
 
 By contributing code or documentation, you agree that it may be distributed
-under Birdr's [GNU General Public License v3.0](LICENSE).
+under Motmot's [GNU General Public License v3.0](LICENSE).
 
 Bird names, occurrence data, photographs, recordings, video, illustrations,
 and other third-party material can have separate licences. Only submit content

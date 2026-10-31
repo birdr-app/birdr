@@ -419,10 +419,10 @@ def _translate_with_openai(
         return None
     name_block = _glossary_prompt(glossary or [])
     prompt = (
-        f'Translate this Birdr species comparison from English into {language_name}.\n'
+        f'Translate this Motmot species comparison from English into {language_name}.\n'
         'Return a JSON object with the same keys.\n'
         'Keep markdown syntax, headings, lists and emphasis unchanged; translate visible text only.\n'
-        'Keep scientific (Latin) bird names unchanged. Keep the name Birdr untranslated.\n'
+        'Keep scientific (Latin) bird names unchanged. Keep the name Motmot untranslated.\n'
         f'{name_block}\n'
         f'{json.dumps(source, ensure_ascii=False)}'
     )
@@ -439,7 +439,7 @@ def _translate_with_openai(
                 {
                     'role': 'system',
                     'content': (
-                        'You translate Birdr species comparisons. Reply with JSON only, '
+                        'You translate Motmot species comparisons. Reply with JSON only, '
                         'using the same keys as the source object. '
                         'Use only the official common bird names supplied in the prompt; '
                         'never invent a literal translation of an English bird name.'

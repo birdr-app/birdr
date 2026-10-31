@@ -263,7 +263,7 @@ export function SharedGamePage() {
         intl.formatMessage(
           {
             id: 'shared_game_share_message',
-            defaultMessage: 'Can you beat me? Play my Birdr quiz ({summary}):',
+            defaultMessage: 'Can you beat me? Play my Motmot quiz ({summary}):',
           },
           { summary },
         ),

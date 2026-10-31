@@ -388,7 +388,7 @@ export function formatFlockLeaderboardShareMessage(
   shareUrl: string
 ): string {
   return (
-    `Check the ${flockName} leaderboard for ${challengeTitle} on Birdr. ` +
+    `Check the ${flockName} leaderboard for ${challengeTitle} on Motmot. ` +
     `Can you climb the ranks? ${shareUrl}`
   );
 }
@@ -399,7 +399,7 @@ export function buildWhatsAppShareUrl(message: string): string {
 
 export function formatFlockInviteShareMessage(flockName: string, inviteUrl: string): string {
   return (
-    `Join ${flockName} on Birdr! Play our weekly bird identification challenge ` +
+    `Join ${flockName} on Motmot! Play our weekly bird identification challenge ` +
     `and see how you compare with other members. Can you recognise this week's ` +
     `20 birds? ${inviteUrl}`
   );
@@ -416,7 +416,7 @@ export function formatFlockResultShareMessage(
   if (rankLabel) {
     message += ` and ranked ${rankLabel}`;
   }
-  message += ` in the ${flockName} Birdr Challenge. Can you beat me? ${resultUrl}`;
+  message += ` in the ${flockName} Motmot Challenge. Can you beat me? ${resultUrl}`;
   return message;
 }
 

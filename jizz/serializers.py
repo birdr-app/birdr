@@ -1706,7 +1706,7 @@ _CURRENT_GITHUB_REPO = 'https://github.com/birdr-app/birdr'
 
 
 def _rewrite_legacy_github_repo(value):
-    """Point About/help CMS content at the public Birdr repo."""
+    """Point About/help CMS content at the public Motmot repo."""
     if not isinstance(value, str) or not value:
         return value
     updated = value
@@ -1777,7 +1777,7 @@ class FeedbackSerializer(serializers.ModelSerializer):
         fields = ('comment', 'player_token', 'rating', 'created')
 
 
-# --- Birdr Journey ---
+# --- Motmot Journey ---
 
 
 class JourneyStepSerializer(serializers.ModelSerializer):

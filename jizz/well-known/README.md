@@ -4,7 +4,7 @@ Bestanden in deze map worden geserveerd op:
 - `https://birdr.pro/.well-known/apple-app-site-association` (iOS Universal Links)
 - `https://birdr.pro/.well-known/assetlinks.json` (Android App Links)
 
-Zodat `https://birdr.pro/join/<token>` en `https://birdr.pro/join/challenge/<token>` in de Birdr-app openen in plaats van in de browser.
+Zodat `https://birdr.pro/join/<token>` en `https://birdr.pro/join/challenge/<token>` in de Motmot-app openen in plaats van in de browser.
 
 ## "Deze URL is een deep link met problemen" / Resultaat: Webbrowser
 
@@ -22,7 +22,7 @@ Als de link in de **browser** opent in plaats van in de app, controleer het volg
    - **Debug:** SHA256 van je debug-keystore.
    - Lokaal fingerprint tonen: `cd mobile/android && ./gradlew signingReport` → kopieer de SHA256 (met dubbele punten, bijvoorbeeld `EF:F1:D0:...`).
 2. Als je een **nieuwe keystore** of een **andere build-variant** gebruikt, voeg die fingerprint toe aan het `sha256_cert_fingerprints`-array in `assetlinks.json`.
-3. Na wijziging: deploy naar birdr.pro; daarna kan het even duren tot Android de file opnieuw ophaalt. Testen: Instellingen → Apps → Birdr → Open by default / Supported web addresses.
+3. Na wijziging: deploy naar birdr.pro; daarna kan het even duren tot Android de file opnieuw ophaalt. Testen: Instellingen → Apps → Motmot → Open by default / Supported web addresses.
 
 ### iOS (apple-app-site-association)
 
@@ -34,5 +34,5 @@ Als de link in de **browser** opent in plaats van in de app, controleer het volg
 
 ### Handmatig testen
 
-- **iOS:** Lange druk op link in Notes/Mail → “Open in Birdr”. Of link in Safari openen; als Universal Links goed staan, opent de app.
-- **Android:** Link in Chrome openen; als App Links geverifieerd zijn, opent de app of krijg je een keuzemenu. Controleer onder Instellingen → Apps → Birdr → “Open supported links”.
+- **iOS:** Lange druk op link in Notes/Mail → “Open in Motmot”. Of link in Safari openen; als Universal Links goed staan, opent de app.
+- **Android:** Link in Chrome openen; als App Links geverifieerd zijn, opent de app of krijg je een keuzemenu. Controleer onder Instellingen → Apps → Motmot → “Open supported links”.

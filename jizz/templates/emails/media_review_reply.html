@@ -1,6 +1,6 @@
 {% extends "emails/base.html" %}
 
-{% block title %}About the media you flagged on Birdr{% endblock %}
+{% block title %}About the media you flagged on Motmot{% endblock %}
 
 {% block email_styles %}
 .reply-block {
@@ -14,7 +14,7 @@
 
 {% block content %}
 <p>Hi {{ greeting_name }},</p>
-<p>You have flagged a media on Birdr.</p>
+<p>You have flagged a media on Motmot.</p>
 {% if species_name %}
 <p>Species: <strong>{{ species_name }}</strong></p>
 {% endif %}
@@ -23,11 +23,11 @@
 {% endif %}
 <div class="reply-block">{{ reply|linebreaksbr }}</div>
 <p>Thanks,<br>
-The Birdr Team</p>
+The Motmot Team</p>
 {% endblock %}
 
 {% block footer %}
-<p><strong>Birdr</strong> - Test your bird knowledge</p>
+<p><strong>Motmot</strong> - Test your bird knowledge</p>
 <p class="text-muted">
     You can reply to this email at <a href="mailto:info@birdr.pro">info@birdr.pro</a>.
 </p>
@@ -36,7 +36,7 @@ The Birdr Team</p>
 </p>
 <div class="divider"></div>
 <p class="text-muted">
-    <a href="{{ site_url }}">Visit Birdr</a> |
+    <a href="{{ site_url }}">Visit Motmot</a> |
     <a href="{{ site_url }}/privacy/">Privacy Policy</a>
 </p>
 {% endblock %}

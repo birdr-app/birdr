@@ -53,7 +53,7 @@ def feedback_reply_to(feedback) -> str | None:
 
 def send_feedback_notification(feedback) -> None:
     sender = feedback_sender_label(feedback)
-    subject = f'Birdr feedback from {sender}'
+    subject = f'Motmot feedback from {sender}'
     body = f'From: {sender}\n\n{feedback.comment or ""}'
 
     message = EmailMessage(

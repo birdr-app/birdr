@@ -24,8 +24,8 @@ class Command(BaseCommand):
             help='data.type sent with the push (e.g. signup_test, daily_challenge, league)',
         )
         parser.add_argument('--country', help='country_code for --type league (e.g. NL)')
-        parser.add_argument('--title', default='Birdr')
-        parser.add_argument('--body', default='Test notification from Birdr')
+        parser.add_argument('--title', default='Motmot')
+        parser.add_argument('--body', default='Test notification from Motmot')
         parser.add_argument(
             '--include-disabled',
             action='store_true',

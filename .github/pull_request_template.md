@@ -1,5 +1,5 @@
 <!--
-Thank you for contributing to Birdr.
+Thank you for contributing to Motmot.
 
 Please do not disclose security vulnerabilities in a pull request. Follow the
 private reporting process in SECURITY.md instead.

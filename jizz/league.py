@@ -464,7 +464,7 @@ def _user_language(user) -> str:
 
 MESSAGES = {
     'en': {
-        'title': '{flag} Birdr League',
+        'title': '{flag} Motmot League',
         LeagueNotificationLog.KIND_REMINDER_18: "Today's {length} birds are waiting. Can you climb the {country} table?",
         'reminder_18_double': "Today's {length}-bird double quiz is waiting: double the birds, double the points!",
         LeagueNotificationLog.KIND_REMINDER_20: '4 hours left for today\'s quiz! 🐦',
@@ -488,7 +488,7 @@ MESSAGES = {
         'double_chase_sun': 'Final double quiz! {length} birds, last chance to rank up.',
     },
     'nl': {
-        'title': '{flag} Birdr League',
+        'title': '{flag} Motmot League',
         LeagueNotificationLog.KIND_REMINDER_18: 'De {length} vogels van vandaag wachten op je. Klim jij op in {country}?',
         'reminder_18_double': 'De dubbele quiz van vandaag staat klaar: {length} vogels, dubbel zoveel punten!',
         LeagueNotificationLog.KIND_REMINDER_20: 'Nog 4 uur voor de quiz van vandaag! 🐦',
@@ -498,7 +498,7 @@ MESSAGES = {
         LeagueNotificationLog.KIND_WEEKLY_RECAP: 'Je eindigde vorige week op #{rank} in {flag} {country}. Weekkampioen: {champion} 🏆 Een nieuwe week begint nu!',
         'weekly_recap_champion': 'Jij was vorige week kampioen van {country}! 🏆 Verdedig je titel.',
         LeagueNotificationLog.KIND_FRESH_START: 'Nieuwe week, nieuwe kansen. De vogels van vandaag staan klaar!',
-        LeagueNotificationLog.KIND_INVITE: 'De nationale Birdr League voor {country} is begonnen: elke dag een korte vogelquiz. Doe mee!',
+        LeagueNotificationLog.KIND_INVITE: 'De nationale Motmot League voor {country} is begonnen: elke dag een korte vogelquiz. Doe mee!',
         'yesterday_played': 'Gisteren: {score} punten, #{rank} van {players}.',
         'yesterday_missed': 'Je hebt de quiz van gisteren gemist.',
         'week_lead': 'Je staat deze week bovenaan met {lead} punten voorsprong.',

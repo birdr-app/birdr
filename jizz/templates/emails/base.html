@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Birdr{% endblock %}</title>
+    <title>{% block title %}Motmot{% endblock %}</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -122,7 +122,7 @@
             {% block email_header %}
             <div class="email-header">
                 {% if logo_url %}
-                <img src="{{ logo_url }}" alt="Birdr" class="logo" style="max-width:150px;height:auto;" />
+                <img src="{{ logo_url }}" alt="Motmot" class="logo" style="max-width:150px;height:auto;" />
                 {% else %}
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 789 788" width="150" height="150" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" class="logo">
                 <g><path style="opacity:1" fill="#000000" d="M 356.5,-0.5 C 381.167,-0.5 405.833,-0.5 430.5,-0.5C 544.996,12.8454 637.829,65.1787 709,156.5C 759.853,226.29 786.353,304.624 788.5,391.5C 788.5,393.833 788.5,396.167 788.5,398.5C 783.349,526.972 730.349,630.805 629.5,710C 569.275,753.93 501.941,779.763 427.5,787.5C 404.5,787.5 381.5,787.5 358.5,787.5C 227.374,771.848 126.208,708.515 55,597.5C 23.959,544.03 5.459,486.363 -0.5,424.5C -0.5,401.833 -0.5,379.167 -0.5,356.5C 13.211,240.562 66.211,147.062 158.5,76C 217.68,33.1024 283.68,7.6024 356.5,-0.5 Z"/></g>
@@ -143,7 +143,7 @@
         </div>
         <div class="email-footer">
             {% block footer %}
-            <p><strong>Birdr</strong> - Test your bird knowledge</p>
+            <p><strong>Motmot</strong> - Test your bird knowledge</p>
             <p class="text-muted">
                 This email was sent to {{ user_email|default:"you" }}.
             </p>
@@ -152,7 +152,7 @@
             </p>
             <div class="divider"></div>
             <p class="text-muted">
-                <a href="https://birdr.pro">Visit Birdr</a> | 
+                <a href="https://birdr.pro">Visit Motmot</a> | 
                 <a href="https://birdr.pro/privacy/">Privacy Policy</a>
             </p>
             {% endblock %}

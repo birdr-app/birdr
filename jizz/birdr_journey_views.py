@@ -1,5 +1,5 @@
 """
-API for Birdr Journey — solo level progression per country.
+API for Motmot Journey — solo level progression per country.
 """
 
 from contextlib import contextmanager

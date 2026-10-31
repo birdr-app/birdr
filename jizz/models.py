@@ -504,7 +504,7 @@ def get_species_group_choices(country=None):
 
 class Game(models.Model):
     """
-    Represents a game session in the Birdr application.
+    Represents a game session in the Motmot application.
     
     A game contains:
     - Configuration: country, level, length, media type, filters
@@ -909,7 +909,7 @@ class Player(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField('auth.User', on_delete=models.CASCADE, related_name='profile')
     avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
-    receive_updates = models.BooleanField(default=True, help_text='Receive Birdr news and update emails')
+    receive_updates = models.BooleanField(default=True, help_text='Receive Motmot news and update emails')
     language = models.CharField(max_length=10, default='en', blank=True, help_text='Bird name language')
     app_language = models.CharField(
         max_length=10,
@@ -1567,7 +1567,7 @@ class Reaction(models.Model):
         return self.player.name
 
 
-# --- Birdr Journey ---
+# --- Motmot Journey ---
 
 
 class JourneyLevel(models.Model):
@@ -1838,7 +1838,7 @@ class DailyChallengeParticipant(models.Model):
 
 
 class DailyChallengeInvite(models.Model):
-    """Invite by email/phone for users not yet on Birdr (accept via link)."""
+    """Invite by email/phone for users not yet on Motmot (accept via link)."""
     STATUS_CHOICES = [
         ('pending', 'Pending'),
         ('accepted', 'Accepted'),

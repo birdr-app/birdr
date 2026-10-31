@@ -85,7 +85,7 @@ const catalogLoaders: Record<string, () => Promise<{ default: Catalog }>> = {
 };
 export const MainContent = () => {
   useEffect(() => {
-    document.title = "Birdr"
+    document.title = "Motmot"
 
   }, []);
   const {appLanguage} = useContext(AppContext)

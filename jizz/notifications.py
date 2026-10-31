@@ -17,7 +17,7 @@ def send_welcome_email(user, site_url=None):
         return False
     site_url = site_url or getattr(settings, 'SITE_URL', 'https://birdr.pro')
     try:
-        subject = 'Welcome to Birdr!'
+        subject = 'Welcome to Motmot!'
         html_content = render_to_string('emails/welcome.html', {
             'username': user.username,
             'user_email': user.email,
@@ -67,7 +67,7 @@ def send_push_to_user(user, title, body, data=None, badge=None):
 def send_daily_challenge_reminder_email(user, challenge, round_obj, hours_left):
     """Send reminder email (4h or 1h left)."""
     try:
-        subject = f'Birdr: {hours_left} hour{"s" if hours_left != 1 else ""} left for today\'s challenge'
+        subject = f'Motmot: {hours_left} hour{"s" if hours_left != 1 else ""} left for today\'s challenge'
         html_content = render_to_string('emails/daily_challenge_reminder.html', {
             'challenge': challenge,
             'round': round_obj,
@@ -93,7 +93,7 @@ def send_daily_challenge_reminder_email(user, challenge, round_obj, hours_left):
 def send_daily_challenge_all_answered_email(user, challenge, round_obj, ranking_data):
     """Notify user that all players answered and show ranking."""
     try:
-        subject = 'Birdr: All players answered – see today\'s ranking'
+        subject = 'Motmot: All players answered – see today\'s ranking'
         html_content = render_to_string('emails/daily_challenge_all_answered.html', {
             'challenge': challenge,
             'round': round_obj,
@@ -119,7 +119,7 @@ def send_daily_challenge_all_answered_email(user, challenge, round_obj, ranking_
 def send_daily_challenge_final_results_email(user, challenge, ranking_data):
     """Send 7-day final results."""
     try:
-        subject = 'Birdr: Your Daily Challenge has ended – final results'
+        subject = 'Motmot: Your Daily Challenge has ended – final results'
         html_content = render_to_string('emails/daily_challenge_final_results.html', {
             'challenge': challenge,
             'ranking': ranking_data,

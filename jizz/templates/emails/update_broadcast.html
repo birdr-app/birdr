@@ -25,7 +25,7 @@
 <h2>{{ title }}</h2>
 <div class="button-container">
     <a href="{{ site_url }}/" class="button">
-        {% if language == "nl" %}Open Birdr-app{% else %}Open Birdr App{% endif %}
+        {% if language == "nl" %}Open Motmot-app{% else %}Open Motmot App{% endif %}
     </a>
 </div>
 <div class="update-body">
@@ -33,7 +33,7 @@
 </div>
 <div class="button-container">
     <a href="{{ site_url }}/" class="button">
-        {% if language == "nl" %}Open Birdr-app{% else %}Open Birdr App{% endif %}
+        {% if language == "nl" %}Open Motmot-app{% else %}Open Motmot App{% endif %}
     </a>
 </div>
 {% if tracking_pixel_url %}
@@ -45,9 +45,9 @@
 {{ footer_html|safe }}
 <p class="text-muted">
     {% if language == "nl" %}
-    Deze e-mail is verstuurd naar {{ user_email|default:"jou" }} omdat je updates van Birdr ontvangt.
+    Deze e-mail is verstuurd naar {{ user_email|default:"jou" }} omdat je updates van Motmot ontvangt.
     {% else %}
-    This email was sent to {{ user_email|default:"you" }} because you receive Birdr updates.
+    This email was sent to {{ user_email|default:"you" }} because you receive Motmot updates.
     {% endif %}
 </p>
 <p class="text-muted">

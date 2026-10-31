@@ -30,10 +30,10 @@ from jizz.models import Country, MarketingPage, Species
 from jizz.store_ratings import write_review_url
 from media.models import MediaReview
 
-SITE_NAME = 'Birdr'
+SITE_NAME = 'Motmot'
 SITE_HOME = '/site/'
 CMS_INDEX = '/site/page/'
-DEFAULT_TITLE = 'Birdr – Free Bird Identification Quiz & Training App'
+DEFAULT_TITLE = 'Motmot – Free Bird Identification Quiz & Training App'
 # Species media is treated as reviewed once this many images are accepted.
 MEDIA_REVIEWED_APPROVED_COUNT = 10
 
@@ -54,20 +54,20 @@ def cms_path(slug: str | None = None) -> str:
 
 DEFAULT_DESCRIPTION = (
     'Learn to identify birds through photo quizzes, country challenges and '
-    'personalised training. Birdr is free on iPhone, Android and the web.'
+    'personalised training. Motmot is free on iPhone, Android and the web.'
 )
 OG_IMAGE_PATH = '/images/birdr-start-game.png'
 
 INTENT_PAGES = {
     'how-it-works': {
-        'title': 'How Birdr Works – Quizzes, Practice & Country Challenges',
+        'title': 'How Motmot Works – Quizzes, Practice & Country Challenges',
         'description': (
-            'See how Birdr teaches bird identification: photo quizzes, My Tricky Birds '
+            'See how Motmot teaches bird identification: photo quizzes, My Tricky Birds '
             'and Country Challenges. Free on iPhone, Android and the web.'
         ),
-        'heading': 'How Birdr works',
+        'heading': 'How Motmot works',
         'lead': (
-            'Birdr is a training loop, not a camera that names the bird for you. '
+            'Motmot is a training loop, not a camera that names the bird for you. '
             'You look, you guess, you learn the field marks—then the hard species come back.'
         ),
         'cta_href': '/play',
@@ -170,14 +170,14 @@ INTENT_PAGES = {
         ],
     },
     'learn-bird-identification': {
-        'title': 'Learn Bird Identification – Practice That Sticks | Birdr',
+        'title': 'Learn Bird Identification – Practice That Sticks | Motmot',
         'description': (
             'Learn bird identification with personalised practice, confusing-pair drills '
             'and country challenges. Free on iPhone, Android and the web.'
         ),
         'heading': 'Learn bird identification yourself',
         'lead': (
-            'Automatic photo IDs are useful in the field. Birdr is for the other skill: '
+            'Automatic photo IDs are useful in the field. Motmot is for the other skill: '
             'recognising birds when you next see them, without handing the photo to an app.'
         ),
         'cta_href': '/play',
@@ -199,7 +199,7 @@ INTENT_PAGES = {
         ],
     },
     'bird-quiz-by-country': {
-        'title': 'Bird Quizzes by Country – Country Challenges | Birdr',
+        'title': 'Bird Quizzes by Country – Country Challenges | Motmot',
         'description': (
             'Play bird quizzes by country, take Country Challenges, and compete in the '
             'National League. Study the birds you will meet at home or on your next trip.'
@@ -233,24 +233,24 @@ INTENT_PAGES = {
             ('/league', 'Open the National League'),
             ('/site/national-league/', 'Countries with players'),
             ('/site/survival/', 'Country records'),
-            ('/site/birding-app/', 'The Birdr app'),
+            ('/site/birding-app/', 'The Motmot app'),
             ('/site/how-it-works/', 'How it works'),
         ],
         'show_countries': True,
     },
     'birding-app': {
-        'title': 'Birding Training App – Free on iPhone, Android & Web | Birdr',
+        'title': 'Birding Training App – Free on iPhone, Android & Web | Motmot',
         'description': (
-            'Birdr is a free birding training app: photo quizzes, country challenges and '
+            'Motmot is a free birding training app: photo quizzes, country challenges and '
             'personalised practice so you learn to identify birds yourself.'
         ),
         'heading': 'A birding app for learning, not auto-ID',
         'lead': (
-            'Birdr is a training app for birders. Free photo quizzes, personalised practice '
+            'Motmot is a training app for birders. Free photo quizzes, personalised practice '
             'and country challenges on iPhone, Android and the web.'
         ),
         'cta_href': '/play',
-        'cta_label': 'Open Birdr',
+        'cta_label': 'Open Motmot',
         'body': [
             (
                 'Use it on a commute, before a trip, or after a confusing day in the field. '
@@ -263,19 +263,19 @@ INTENT_PAGES = {
         ],
         'links': [
             ('/play', 'Start a quiz'),
-            ('/site/learn-bird-identification/', 'How Birdr teaches'),
+            ('/site/learn-bird-identification/', 'How Motmot teaches'),
             ('/site/how-it-works/', 'How it works'),
         ],
     },
     'my-tricky-birds': {
-        'title': 'Practise Difficult Bird Species – My Tricky Birds | Birdr',
+        'title': 'Practise Difficult Bird Species – My Tricky Birds | Motmot',
         'description': (
             'Practise the bird species you mix up. My Tricky Birds and confusing-pair '
             'drills turn mistakes into focused training.'
         ),
         'heading': 'My Tricky Birds',
         'lead': (
-            'Everyone has a handful of species that will not stick. Birdr keeps those '
+            'Everyone has a handful of species that will not stick. Motmot keeps those '
             'trouble spots and the confusing pairs you mix up, so practice stays focused.'
         ),
         'cta_href': '/trouble-spots',
@@ -287,7 +287,7 @@ INTENT_PAGES = {
                 'feel obvious.'
             ),
             (
-                'That is the point of Birdr: not a high score on birds you already know, '
+                'That is the point of Motmot: not a high score on birds you already know, '
                 'but time spent on the difficult ones.'
             ),
         ],
@@ -330,14 +330,14 @@ INTENT_PAGES = {
         ],
     },
     'flocks': {
-        'title': 'Bird Club Quiz & Leaderboard – Flocks | Birdr',
+        'title': 'Bird Club Quiz & Leaderboard – Flocks | Motmot',
         'description': (
             'Create a Flock for your bird club or group. Shared quizzes and a leaderboard '
-            'keep everyone practising together. Free on Birdr.'
+            'keep everyone practising together. Free on Motmot.'
         ),
         'heading': 'Flocks: quizzes for bird clubs',
         'lead': (
-            'A Flock is your club, WhatsApp group or trip companions on Birdr. Play the '
+            'A Flock is your club, WhatsApp group or trip companions on Motmot. Play the '
             'same quiz, compare scores, and keep a leaderboard.'
         ),
         'cta_href': '/flocks/intro',
@@ -363,14 +363,14 @@ INTENT_PAGES = {
         ],
     },
     'community': {
-        'title': 'Help Birdr – Community | Birdr',
+        'title': 'Help Motmot – Community | Motmot',
         'description': (
-            'Help Birdr by sending feedback, reviewing quiz photos, writing '
+            'Help Motmot by sending feedback, reviewing quiz photos, writing '
             'species comparisons, or sharing it in a bird club newsletter.'
         ),
         'heading': 'Community',
         'lead': (
-            'Birdr is a small project. Feedback, photo review, comparison '
+            'Motmot is a small project. Feedback, photo review, comparison '
             'descriptions, and spreading the word to other birders all help.'
         ),
         'cta_href': '/play',
@@ -384,10 +384,10 @@ INTENT_PAGES = {
         'show_countries': True,
     },
     'newsletter': {
-        'title': 'Bird club newsletter example | Birdr',
+        'title': 'Bird club newsletter example | Motmot',
         'description': (
             'A ready-to-copy item for your bird club newsletter or magazine, '
-            'with screenshots. Share Birdr with other birders.'
+            'with screenshots. Share Motmot with other birders.'
         ),
         'heading': 'Add it to your bird club newsletter',
         'lead': (
@@ -405,14 +405,14 @@ INTENT_PAGES = {
         ],
     },
     'faq': {
-        'title': 'Birdr FAQ – Free Bird Identification Quiz',
+        'title': 'Motmot FAQ – Free Bird Identification Quiz',
         'description': (
-            'Answers about Birdr: is it free, does it identify birds from a photo, and '
+            'Answers about Motmot: is it free, does it identify birds from a photo, and '
             'where you can play photo quizzes and country challenges.'
         ),
         'heading': 'Frequently asked questions',
         'lead': (
-            'Is Birdr free? Does it identify birds from a photo? Where can you play?'
+            'Is Motmot free? Does it identify birds from a photo? Where can you play?'
         ),
         'cta_href': '/play',
         'cta_label': 'Try a quiz',

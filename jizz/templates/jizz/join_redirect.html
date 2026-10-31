@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ og_title|default:"Open in Birdr" }}</title>
+  <title>{{ og_title|default:"Open in Motmot" }}</title>
   {% if og_title %}
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Birdr">
+  <meta property="og:site_name" content="Motmot">
   <meta property="og:title" content="{{ og_title }}">
   <meta property="og:description" content="{{ og_description }}">
   <meta property="og:url" content="{{ og_url }}">
@@ -20,7 +20,7 @@
   </style>
 </head>
 <body>
-  <p>Opening Birdr…</p>
+  <p>Opening Motmot…</p>
   <p class="fallback">App not installed? <a href="{{ fallback_url }}" id="web-link">Continue in browser</a></p>
   {% if deep_link %}
   <script>

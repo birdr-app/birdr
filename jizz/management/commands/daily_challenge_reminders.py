@@ -43,7 +43,7 @@ class Command(BaseCommand):
                         continue
                     send_push_to_user(
                         p.user,
-                        f'Birdr: {hours_left}h left',
+                        f'Motmot: {hours_left}h left',
                         'Complete today\'s challenge round before time runs out.',
                         {'type': 'daily_challenge_reminder', 'challenge_id': challenge.id, 'round_id': round_obj.id},
                     )

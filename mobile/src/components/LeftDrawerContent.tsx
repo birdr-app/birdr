@@ -13,7 +13,7 @@ const MENU_ITEMS: { route: string; label: string }[] = [
   { route: 'Updates', label: 'Updates' },
   { route: 'Help', label: 'Community & help' },
   { route: 'Privacy', label: 'Privacy' },
-  { route: 'About', label: 'About Birdr' },
+  { route: 'About', label: 'About Motmot' },
 ];
 
 export function LeftDrawerContent(props: DrawerContentComponentProps) {
@@ -27,7 +27,7 @@ export function LeftDrawerContent(props: DrawerContentComponentProps) {
   return (
     <View style={styles.container}>
       <View style={styles.menuHeader}>
-        <Text style={styles.menuHeaderTitle}>Birdr</Text>
+        <Text style={styles.menuHeaderTitle}>Motmot</Text>
         <Text style={styles.menuHeaderVersion}>Version {versionLine}</Text>
       </View>
       <View style={styles.footerSpacer}>

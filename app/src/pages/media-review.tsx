@@ -808,7 +808,7 @@ export const MediaReviewPage = () => {
             {!instructionsCollapsed && (
               <>
                 <Text fontWeight={'bold'} pt={2}>
-                  <FormattedMessage id={'media review intro'} defaultMessage={"Great that you are here and thank you for helping out improving the Birdr app!"} />
+                  <FormattedMessage id={'media review intro'} defaultMessage={"Great that you are here and thank you for helping out improving the Motmot app!"} />
                 </Text>
                 <Text pt={2}>
                   <FormattedMessage

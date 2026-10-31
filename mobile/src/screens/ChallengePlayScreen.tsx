@@ -233,7 +233,7 @@ export function ChallengePlayScreen() {
     };
   }, [lang, gameToken, getPlayPlayerToken]);
 
-  /** Load journey step game (jokers, progress) for Birdr Journey play. */
+  /** Load journey step game (jokers, progress) for Motmot Journey play. */
   const loadJourneyGame = useCallback(async () => {
     if (!gameToken || !countryCode) return;
     try {

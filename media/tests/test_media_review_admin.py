@@ -92,10 +92,10 @@ class MediaReviewAdminTests(TestCase):
         self.assertEqual(msg.to, ['flagger@example.com'])
         self.assertEqual(msg.reply_to, ['info@birdr.pro'])
         self.assertIn('Hi Ada,', msg.body)
-        self.assertIn('You have flagged a media on Birdr', msg.body)
+        self.assertIn('You have flagged a media on Motmot', msg.body)
         self.assertIn('https://commons.wikimedia.org/wiki/File:Robin.jpg', msg.body)
         self.assertIn('This is actually a European Robin.', msg.body)
-        self.assertIn('The Birdr Team', msg.body)
+        self.assertIn('The Motmot Team', msg.body)
         self.assertIsNotNone(review.reply_sent_at)
 
         self.assertFalse(send_media_review_reply_if_needed(review))

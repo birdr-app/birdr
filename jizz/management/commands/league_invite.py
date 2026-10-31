@@ -50,8 +50,8 @@ class Command(BaseCommand):
         site = getattr(settings, 'SITE_URL', 'https://birdr.pro').rstrip('/')
         body = MESSAGES[lang][LeagueNotificationLog.KIND_INVITE].format(country=country.name)
         subject = (
-            f'De Birdr League voor {country.name} is begonnen' if lang == 'nl'
-            else f'The {country.name} Birdr League has started'
+            f'De Motmot League voor {country.name} is begonnen' if lang == 'nl'
+            else f'The {country.name} Motmot League has started'
         )
         try:
             send_mail(
