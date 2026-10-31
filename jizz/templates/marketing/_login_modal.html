@@ -90,6 +90,8 @@
 
   var i18n = window.BIRDR_I18N || {};
   function t(key) { return i18n[key] || key; }
+
+  function token() {
     try {
       return localStorage.getItem('access_token') || localStorage.getItem('jw_token');
     } catch (e) {

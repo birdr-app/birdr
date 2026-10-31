@@ -30,6 +30,8 @@ from compare.generation import comparison_cache_is_current, find_species_compari
 from compare.models import CommunityComparison
 from jizz.marketing.pages import (
     CMS_INDEX,
+    INTENT_MASCOTS,
+    tody_image,
     DEFAULT_DESCRIPTION,
     DEFAULT_TITLE,
     MEDIA_REVIEWED_APPROVED_COUNT,
@@ -278,6 +280,8 @@ def intent_page(request, slug: str):
         raise Http404()
     path = site_path(slug)
     extra = {}
+    if slug in INTENT_MASCOTS:
+        extra['mascot'] = tody_image(INTENT_MASCOTS[slug])
     if page.get('levels'):
         extra['levels'] = page['levels']
     if page.get('start_options'):

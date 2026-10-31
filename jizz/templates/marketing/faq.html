@@ -1,6 +1,7 @@
 {% extends "marketing/base.html" %}
 {% block content %}
-<section class="hero">
+<section class="hero{% if mascot %} has-mascot{% endif %}">
+  {% if mascot %}<img class="tody hero-mascot" src="{{ mascot.src }}" width="{{ mascot.width }}" height="{{ mascot.height }}" alt="">{% endif %}
   <h1>{{ heading }}</h1>
   <p class="lead">{{ lead }}</p>
 </section>

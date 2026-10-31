@@ -1,11 +1,9 @@
 {% extends "marketing/base.html" %}
 {% block extra_head %}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  {% include "marketing/mockups/_styles.html" %}
 {% endblock %}
 {% block content %}
-<section class="hero">
+<section class="hero home-hero bleed">
   <div class="hero-grid">
     <div>
       <p class="kicker">{% mt "Free bird identification training" %}</p>
@@ -17,34 +15,40 @@
       </div>
       <p><a class="web-link" href="/play">{% mt "Or play a quiz in the browser" %}</a></p>
     </div>
-    <figure class="hero-art hero-phone">
-      <img src="/images/birdr-quiz.png" width="456" height="1024" alt="{% mt "Motmot quiz: identify a bird from a photo, with Black-legged Kittiwake marked as the correct answer" %}">
-    </figure>
+    <div class="hero-stage">
+      {% include "marketing/mockups/_quiz.html" %}
+      <img class="tody" src="/images/motmot/tody-hello.webp" width="538" height="600" alt="">
+    </div>
   </div>
 </section>
 
 <section id="what-is-birdr" class="prose">
-  <h2>{% mt "What is Motmot?" %}</h2>
-  <p>{% mt "Motmot is a free bird-identification training app. It helps birders learn to recognise species through photo, video and sound quizzes, personalised practice and country challenges. You can sign in with Google so Motmot can create your account and save your scores and learning progress." %}</p>
+  <div class="intro-row">
+    <div>
+      <h2>{% mt "What is Motmot?" %}</h2>
+      <p>{% mt "Motmot is a free bird-identification training app. It helps birders learn to recognise species through photo, video and sound quizzes, personalised practice and country challenges. You can sign in with Google so Motmot can create your account and save your scores and learning progress." %}</p>
+    </div>
+    <img class="tody" src="/images/motmot/tody-flying.webp" width="600" height="523" alt="" loading="lazy">
+  </div>
 </section>
 
 <section>
   <h2>{% mt "How Motmot teaches" %}</h2>
   <div class="steps">
     <article class="card">
-      <div class="step-num">1</div>
+      <div class="step-art"><div class="step-num">1</div><img class="tody" src="/images/motmot/tody-correct.webp" width="527" height="600" alt="" loading="lazy"></div>
       <h3>{% mt "Play a quiz" %}</h3>
       <p>{% mt "Answer 10, 20, 50 or 100 questions." %}</p>
     </article>
     <article class="card">
-      <div class="step-num">2</div>
+      <div class="step-art"><div class="step-num">2</div><img class="tody" src="/images/motmot/tody-thinking.webp" width="587" height="600" alt="" loading="lazy"></div>
       <h3>{% mt "Review your answers" %}</h3>
-        <p>{% mt "At the end of the game you can review all your answers." %}</p>
+      <p>{% mt "At the end of the game you can review all your answers." %}</p>
     </article>
     <article class="card">
-      <div class="step-num">3</div>
+      <div class="step-art"><div class="step-num">3</div><img class="tody" src="/images/motmot/tody-wrong.webp" width="600" height="572" alt="" loading="lazy"></div>
       <h3>{% mt "Learn what you missed" %}</h3>
-        <p>{% mt "Wrong answers become practice. <i>My Tricky Birds</i> keeps the lookalikes that will not stick." %}</p>
+      <p>{% mt "Wrong answers become practice. <i>My Tricky Birds</i> keeps the lookalikes that will not stick." %}</p>
     </article>
   </div>
   <p><a href="{{ '/site/how-it-works/'|mpath }}">{% mt "See how it works" %}</a></p>
@@ -53,46 +57,104 @@
 <section id="what-you-can-play">
   <h2>{% mt "What you can play" %}</h2>
   <p class="lead-inline">{% mt "Motmot is built around different ways to train. Pick a short custom quiz, grind a country list, race survival, compete in the national league, play with a flock, or drill the species you keep missing." %}</p>
-  <div class="grid game-modes">
-    <article class="card">
-      <h3>{% mt "Normal quizzes" %}</h3>
-      <p>{% mt "Play a single game with full control: difficulty, length, and optionally a taxonomic family. Stick to photos, or switch to sound or video when you want another style of practice." %}</p>
-      <p><a href="/play">{% mt "Start a quiz" %}</a></p>
+  <div class="features">
+    <article class="feature tint-brow" id="feature-quizzes">
+      <div class="feature-text">
+        <p class="kicker">{% mt "Photos, sounds and video" %}</p>
+        <h3 class="feature-title">{% mt "Normal quizzes" %}</h3>
+        <p>{% mt "Play a single game with full control: difficulty, length, and optionally a taxonomic family. Stick to photos, or switch to sound or video when you want another style of practice." %}</p>
+        <p><a class="btn" href="/play">{% mt "Start a quiz" %}</a></p>
+        <div class="feature-more">
+          <p><strong>{% mt "Multiplayer" %}.</strong> {% mt "A live quiz for two or more players. Faster correct answers score more points—great for a desk duel or a club night." %}</p>
+          <p><a href="/play">{% mt "Start a live quiz" %}</a></p>
+        </div>
+      </div>
+      <div class="feature-art">
+        {% include "marketing/mockups/_new_game.html" %}
+        <img class="tody" src="/images/motmot/tody-listening.webp" width="475" height="600" alt="" loading="lazy">
+      </div>
     </article>
-    <article class="card">
-      <h3>{% mt "Country Challenge" %}</h3>
-      <p>{% mt "Study the birds of one country from start to finish. It begins quite easy, but as you progress through levels things get tougher—be warned, the end is really tough." %}</p>
-      <p><a href="/journey/intro">{% mt "Start a Country Challenge" %}</a> · <a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "Quizzes by country" %}</a></p>
+
+    <article class="feature tint-ochre" id="feature-country-challenge">
+      <div class="feature-text">
+        <p class="kicker">{% mt "Learn a whole country" %}</p>
+        <h3 class="feature-title">{% mt "Country Challenge" %}</h3>
+        <p>{% mt "Study the birds of one country from start to finish. It begins quite easy, but as you progress through levels things get tougher—be warned, the end is really tough." %}</p>
+        <p><a class="btn" href="/journey/intro">{% mt "Start a Country Challenge" %}</a></p>
+        <p><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "Quizzes by country" %}</a></p>
+      </div>
+      <div class="feature-art">
+        {% include "marketing/mockups/_journey.html" %}
+        <img class="tody" src="/images/motmot/tody-explorer.webp" width="596" height="600" alt="" loading="lazy">
+      </div>
     </article>
-    <article class="card">
-      <h3>{% mt "Survival" %}</h3>
-      <p>{% mt "A quick game, always at Pro level—so rarities are included too. One wrong answer and you are out. See if you can set a nice record for your country." %}</p>
-      <p><a href="/survival">{% mt "Play Survival" %}</a> · <a href="{{ '/site/survival/'|mpath }}">{% mt "Country records" %}</a></p>
+
+    <article class="feature" id="feature-league">
+      <div class="feature-text">
+        <p class="kicker">{% mt "Compete with your country" %}</p>
+        <h3 class="feature-title">{% mt "National League" %}</h3>
+        <p>{% mt "Compete against other birders from your country. You play one daily quiz that starts easy and finishes harder. There is a daily winner and a weekly champion—this is the real competition." %}</p>
+        <p><a class="btn" href="/league">{% mt "Open the National League" %}</a></p>
+        <p><a href="{{ '/site/national-league/'|mpath }}">{% mt "Countries with players" %}</a></p>
+      </div>
+      <div class="feature-art">
+        {% include "marketing/mockups/_league.html" %}
+        <img class="tody" src="/images/motmot/tody-champion.webp" width="481" height="600" alt="" loading="lazy">
+      </div>
     </article>
-    <article class="card">
-      <h3>{% mt "National League" %}</h3>
-      <p>{% mt "Compete against other birders from your country. You play one daily quiz that starts easy and finishes harder. There is a daily winner and a weekly champion—this is the real competition." %}</p>
-      <p><a href="/league">{% mt "Open the National League" %}</a> · <a href="{{ '/site/national-league/'|mpath }}">{% mt "Countries with players" %}</a></p>
+
+    <article class="feature tint-olive" id="feature-flocks">
+      <div class="feature-text">
+        <p class="kicker">{% mt "Play with friends" %}</p>
+        <h3 class="feature-title">{% mt "Flocks" %}</h3>
+        <p>{% mt "Play with a group of fellow birders in a small competition. You get one shared game each week, and every member has the entire week to complete it." %}</p>
+        <p><a class="btn" href="{{ '/site/flocks/'|mpath }}">{% mt "Learn about Flocks" %}</a></p>
+      </div>
+      <div class="feature-art">
+        {% include "marketing/mockups/_flock.html" %}
+        <img class="tody" src="/images/motmot/tody-flock.webp" width="600" height="323" alt="" loading="lazy">
+      </div>
     </article>
-    <article class="card">
-      <h3>{% mt "Flocks" %}</h3>
-      <p>{% mt "Play with a group of fellow birders in a small competition. You get one shared game each week, and every member has the entire week to complete it." %}</p>
-      <p><a href="{{ '/site/flocks/'|mpath }}">{% mt "Learn about Flocks" %}</a></p>
+
+    <article class="feature tint-brow" id="feature-tricky-birds">
+      <div class="feature-text">
+        <p class="kicker">{% mt "Fix your weak spots" %}</p>
+        <h3 class="feature-title">{% mt "My Tricky Birds" %}</h3>
+        <p>{% mt "After you have played some games, open Difficult species to see what you miss most and which pairs you mix up a lot. Play focused quizzes to close those gaps in your birding knowledge." %}</p>
+        <p><a class="btn" href="{{ '/site/my-tricky-birds/'|mpath }}">{% mt "Practise difficult birds" %}</a></p>
+      </div>
+      <div class="feature-art">
+        {% include "marketing/mockups/_tricky.html" %}
+        <img class="tody" src="/images/motmot/tody-studying.webp" width="556" height="600" alt="" loading="lazy">
+      </div>
     </article>
-    <article class="card">
-      <h3>{% mt "My Tricky Birds" %}</h3>
-      <p>{% mt "After you have played some games, open Difficult species to see what you miss most and which pairs you mix up a lot. Play focused quizzes to close those gaps in your birding knowledge." %}</p>
-      <p><a href="{{ '/site/my-tricky-birds/'|mpath }}">{% mt "Practise difficult birds" %}</a></p>
+
+    <article class="feature tint-ochre" id="feature-survival">
+      <div class="feature-text">
+        <p class="kicker">{% mt "One life" %}</p>
+        <h3 class="feature-title">{% mt "Survival" %}</h3>
+        <p>{% mt "A quick game, always at Pro level—so rarities are included too. One wrong answer and you are out. See if you can set a nice record for your country." %}</p>
+        <p><a class="btn" href="/survival">{% mt "Play Survival" %}</a></p>
+        <p><a href="{{ '/site/survival/'|mpath }}">{% mt "Country records" %}</a></p>
+      </div>
+      <div class="feature-art">
+        {% include "marketing/mockups/_survival.html" %}
+        <img class="tody" src="/images/motmot/tody-stressed.webp" width="600" height="565" alt="" loading="lazy">
+      </div>
     </article>
-    <article class="card">
-      <h3>{% mt "Multiplayer" %}</h3>
-      <p>{% mt "A live quiz for two or more players. Faster correct answers score more points—great for a desk duel or a club night." %}</p>
-      <p><a href="/play">{% mt "Start a live quiz" %}</a></p>
-    </article>
-    <article class="card">
-      <h3>{% mt "High scores &amp; checklist" %}</h3>
-      <p>{% mt "See how you rank after a quiz, and which birds you have named correctly in your country—plus the ones you still miss." %}</p>
-      <p><a href="/scores/">{% mt "View high scores" %}</a> · <a href="/checklist">{% mt "Open my checklist" %}</a></p>
+
+    <article class="feature tint-olive" id="feature-checklist">
+      <div class="feature-text">
+        <p class="kicker">{% mt "Track your progress" %}</p>
+        <h3 class="feature-title">{% mt "High scores &amp; checklist" %}</h3>
+        <p>{% mt "See how you rank after a quiz, and which birds you have named correctly in your country—plus the ones you still miss." %}</p>
+        <p><a class="btn" href="/scores/">{% mt "View high scores" %}</a></p>
+        <p><a href="/checklist">{% mt "Open my checklist" %}</a></p>
+      </div>
+      <div class="feature-art">
+        {% include "marketing/mockups/_checklist.html" %}
+        <img class="tody" src="/images/motmot/tody-birding.webp" width="550" height="600" alt="" loading="lazy">
+      </div>
     </article>
   </div>
 
@@ -182,7 +244,8 @@
   </article>
 </section>
 
-<section class="band" id="download">
+<section class="band download-band" id="download">
+  <img class="tody tody-peek" src="/images/motmot/tody-peeking.webp" width="600" height="416" alt="" loading="lazy">
   <h2>{% mt "Get Motmot on your phone" %}</h2>
   <p>{% mt "The apps are the best way to practise. The browser works too if you want to try a quiz first." %}</p>
   {% include "marketing/_store_badges.html" %}

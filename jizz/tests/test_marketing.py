@@ -108,7 +108,8 @@ class MarketingPagesTests(TestCase):
         self.assertIn('Write about funding or a partnership', html)
         self.assertIn('Kudos to the developer!', html)
         self.assertIn('data-typewriter', html)
-        self.assertIn('Special+Elite', html)
+        self.assertIn('Baloo+2', html)
+        self.assertIn('Figtree', html)
         self.assertIn('Bombay Natural History Society, India', html)
         self.assertIn('Kent Ornithological Society, United Kingdom', html)
         self.assertIn('BirdLife Finland (BirdLife Suomi), Finland', html)
@@ -119,7 +120,8 @@ class MarketingPagesTests(TestCase):
         self.assertIn('Get it on Google Play', html)
         self.assertIn('Or play a quiz in the browser', html)
         self.assertIn('href="/play"', html)
-        self.assertIn('/images/birdr-quiz.png', html)
+        self.assertIn('Which bird is singing?', html)
+        self.assertIn('/images/motmot/tody-hello.webp', html)
         self.assertIn('What you can play', html)
         self.assertIn('Normal quizzes', html)
         self.assertIn('full control', html)
@@ -150,17 +152,42 @@ class MarketingPagesTests(TestCase):
         self.assertIn('value="suggest-game"', html)
         self.assertIn('Send idea', html)
 
-    def test_header_uses_birdr_icon_and_favicon(self):
+    def test_header_uses_tody_icon_wordmark_and_favicon(self):
         html = self.client.get('/site/').content.decode()
         self.assertIn('favicon-32x32.png', html)
-        self.assertIn('/images/birdr-anime.gif', html)
-        self.assertIn('class="brand-icon"', html)
-        self.assertIn('padding: 8px 20px 0', html)
-        icon = self.client.get('/images/birdr-anime.gif')
+        self.assertIn('class="brand-icon" src="/images/motmot/tody-icon-128.png"', html)
+        self.assertIn('class="brand-wordmark" src="/images/motmot/wordmark-ink.svg"', html)
+        self.assertIn('--canopy: #1C7A4C', html)
+        self.assertNotIn('#f7f1e6', html)
+        icon = self.client.get('/images/motmot/tody-icon-128.png')
         self.assertEqual(icon.status_code, 200)
-        self.assertIn('image/gif', icon['Content-Type'])
+        self.assertIn('image/png', icon['Content-Type'])
         favicon = self.client.get('/favicon-32x32.png')
         self.assertEqual(favicon.status_code, 200)
+
+    def test_motmot_brand_images_are_served(self):
+        response = self.client.get('/images/motmot/tody-hello.webp')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response['Content-Type'], 'image/webp')
+        wordmark = self.client.get('/images/motmot/wordmark-ink.svg')
+        self.assertEqual(wordmark.status_code, 200)
+        self.assertNotEqual(self.client.get('/images/motmot/../../package.json').status_code, 200)
+        self.assertNotEqual(self.client.get('/images/motmot/tody-hello.txt').status_code, 200)
+
+    def test_intent_and_mode_pages_show_tody(self):
+        self.assertIn('/images/motmot/tody-flock.webp', self.client.get('/site/flocks/').content.decode())
+        self.assertIn('/images/motmot/tody-champion.webp', self.client.get('/site/national-league/').content.decode())
+        self.assertIn('/images/motmot/tody-stressed.webp', self.client.get('/site/survival/').content.decode())
+
+    def test_login_script_defines_token_helper(self):
+        html = self.client.get('/site/').content.decode()
+        self.assertIn('function token() {', html)
+        self.assertIn('token: token,', html)
+
+    def test_home_mockups_are_translated(self):
+        html = self.client.get('/nl/site/').content.decode()
+        self.assertIn('Welke vogel zingt er?', html)
+        self.assertIn('Vraag 6 van 10', html)
 
     def test_stylish_birdr_images_are_served(self):
         response = self.client.get('/images/stylish/birdr-waiting.png')

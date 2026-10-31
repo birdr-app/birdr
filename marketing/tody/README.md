@@ -21,6 +21,20 @@ Motmot design system artifact; the source images also live in the Figma file
 | Champion | `tody-champion` | leaderboard |
 | Asleep | `tody-sleeping` | maintenance |
 
+Website poses, used on the marketing site:
+
+| Pose | File | Used for |
+| --- | --- | --- |
+| Listening (headphones) | `tody-listening` | Photo, sound and video quizzes |
+| Explorer (map and globe) | `tody-explorer` | Country Challenge, quizzes by country |
+| Studying (field guide) | `tody-studying` | My Tricky Birds |
+| Flock (three Todys) | `tody-flock` | Flocks and multiplayer |
+| Peeking | `tody-peeking` | Decoration on the edge of a band or card |
+| Flying | `tody-flying` | Decoration |
+
+Web copies (600px WebP, plus the app icon at 64/128/256px and the wordmark SVGs) are in
+`app/public/images/motmot/`, served at `/images/motmot/`.
+
 ## Making a new mood
 
 Generate with this description word for word and only change the pose:

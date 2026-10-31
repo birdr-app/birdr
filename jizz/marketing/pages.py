@@ -58,6 +58,42 @@ DEFAULT_DESCRIPTION = (
 )
 OG_IMAGE_PATH = '/images/birdr-start-game.png'
 
+# Tody illustrations served from app/public/images/motmot/, with their pixel size.
+TODY_IMAGE_SIZES = {
+    'birding': (550, 600),
+    'champion': (481, 600),
+    'correct': (527, 600),
+    'explorer': (596, 600),
+    'flock': (600, 323),
+    'flying': (600, 523),
+    'hello': (538, 600),
+    'listening': (475, 600),
+    'peeking': (600, 416),
+    'sleeping': (575, 600),
+    'stressed': (600, 565),
+    'studying': (556, 600),
+    'thinking': (587, 600),
+    'wrong': (600, 572),
+}
+
+# Which Tody sits beside the heading of each intent page.
+INTENT_MASCOTS = {
+    'how-it-works': 'birding',
+    'learn-bird-identification': 'listening',
+    'bird-quiz-by-country': 'explorer',
+    'birding-app': 'hello',
+    'my-tricky-birds': 'studying',
+    'flocks': 'flock',
+    'community': 'correct',
+    'newsletter': 'flying',
+    'faq': 'thinking',
+}
+
+
+def tody_image(name: str) -> dict:
+    width, height = TODY_IMAGE_SIZES[name]
+    return {'src': f'/images/motmot/tody-{name}.webp', 'width': width, 'height': height}
+
 INTENT_PAGES = {
     'how-it-works': {
         'title': 'How Motmot Works – Quizzes, Practice & Country Challenges',
