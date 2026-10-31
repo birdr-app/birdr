@@ -591,15 +591,15 @@ EXTRA_ENTRIES: list[tuple[str, tuple[str, ...]]] = [
     ('Track your progress', ('Volg je voortgang', 'Sigue tu progreso', 'Suis tes progrès', 'Verfolge deinen Fortschritt', 'Segui i tuoi progressi', 'Acompanhe seu progresso', '進歩を記録する')),
     # Home page screenshots: alt texts.
     (
-        'Motmot quiz: a Common Greenshank photo, with Ruff marked as the wrong answer and Common Greenshank as the correct one',
+        'Motmot quiz: a photo of a Trinidad Motmot, with Lesson’s Motmot marked as the wrong answer and Trinidad Motmot as the correct one',
         (
-            'Motmot-quiz: een foto van een groenpootruiter, met kemphaan gemarkeerd als fout antwoord en groenpootruiter als het juiste',
-            'Quiz de Motmot: una foto de un archibebe claro, con combatiente marcado como respuesta incorrecta y archibebe claro como la correcta',
-            'Quiz Motmot : une photo de chevalier aboyeur, avec combattant varié indiqué comme mauvaise réponse et chevalier aboyeur comme la bonne',
-            'Motmot-Quiz: ein Foto eines Grünschenkels, Kampfläufer ist als falsche und Grünschenkel als richtige Antwort markiert',
-            'Quiz di Motmot: una foto di pantana, con combattente indicato come risposta sbagliata e pantana come quella corretta',
-            'Quiz do Motmot: uma foto de perna-verde, com combatente marcado como resposta errada e perna-verde como a correta',
-            'Motmotのクイズ：アオアシシギの写真。エリマキシギが不正解、アオアシシギが正解として表示されています',
+            'Motmot-quiz: een foto van een motmot, met één fout antwoord en het juiste antwoord gemarkeerd',
+            'Quiz de Motmot: una foto de un momoto, con una respuesta incorrecta y la respuesta correcta marcadas',
+            'Quiz Motmot : une photo de motmot, avec une mauvaise réponse et la bonne réponse indiquées',
+            'Motmot-Quiz: ein Foto eines Motmots, eine falsche und die richtige Antwort sind markiert',
+            'Quiz di Motmot: una foto di un motmot, con una risposta sbagliata e quella corretta evidenziate',
+            'Quiz do Motmot: uma foto de um udu, com uma resposta errada e a resposta correta marcadas',
+            'Motmotのクイズ：ハチクイモドキの写真。不正解と正解の答えが表示されています',
         ),
     ),
     (
