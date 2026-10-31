@@ -30,8 +30,8 @@ export function routeForOpenUrl(url: string): NotificationRoute | null {
 const APP_LINK_PREFIXES = /^\/(join|open|s|practice)\//i;
 
 /**
- * True for a Birdr app link this version could not route: a birdr:// link, or an https link
- * under an app-only path. Such links come from a newer Birdr, so the user should update.
+ * True for a Motmot app link this version could not route: a birdr:// link, or an https link
+ * under an app-only path. Such links come from a newer Motmot, so the user should update.
  * Dev-client and OAuth callbacks are not app links.
  */
 export function isUnsupportedAppLink(url: string): boolean {

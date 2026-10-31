@@ -7,7 +7,7 @@ import { registerPushWithBackend } from '../api/pushRegister';
 import { navigateWhenReady } from '../navigation/navigationRef';
 import { routeForNotificationData } from './notificationRoute';
 
-const WELCOME_TITLE = 'Birdr';
+const WELCOME_TITLE = 'Motmot';
 const WELCOME_BODY = "You're good to go!";
 const ANDROID_CHANNEL_ID = 'default';
 
@@ -51,7 +51,7 @@ function getExpoProjectId(): string | undefined {
 async function ensureAndroidChannel(): Promise<void> {
   if (Platform.OS !== 'android') return;
   await Notifications.setNotificationChannelAsync(ANDROID_CHANNEL_ID, {
-    name: 'Birdr',
+    name: 'Motmot',
     importance: Notifications.AndroidImportance.HIGH,
     vibrationPattern: [0, 250, 250, 250],
     lightColor: '#2D5A3D',
@@ -104,7 +104,7 @@ async function hasNotificationPermission(): Promise<boolean> {
   return existing.status === Notifications.PermissionStatus.GRANTED;
 }
 
-/** Whether this phone currently allows Birdr notifications (re-check when the app returns to the foreground). */
+/** Whether this phone currently allows Motmot notifications (re-check when the app returns to the foreground). */
 export async function isPushPermissionGranted(): Promise<boolean> {
   try {
     return await hasNotificationPermission();
@@ -289,18 +289,18 @@ export async function requestPushPermissionAndRegister(settingsMessage?: string)
     // The phone no longer shows its own prompt once notifications were denied: only Settings can undo that.
     promptOpenSettings(
       settingsMessage ??
-        'Notifications are turned off for Birdr. Enable them in system settings to get your daily reminders.'
+        'Notifications are turned off for Motmot. Enable them in system settings to get your daily reminders.'
     );
   }
   return result;
 }
 
-/** Call when the user starts Birdr Journey (after country is chosen). */
+/** Call when the user starts Motmot Journey (after country is chosen). */
 export async function runBirdrJourneyPushOnboarding(): Promise<void> {
   const result = await registerForPushNotificationsAsync();
   if (result === 'denied_can_open_settings') {
     promptOpenSettings(
-      'Notifications are turned off for Birdr. Enable them in system settings to get daily challenge reminders.'
+      'Notifications are turned off for Motmot. Enable them in system settings to get daily challenge reminders.'
     );
   }
 }

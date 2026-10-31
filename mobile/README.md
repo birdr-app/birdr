@@ -1,8 +1,10 @@
-# Birdr Mobile
+# Motmot Mobile
 
-React Native (Expo) app for Birdr, with the same structure as the web app in `/app`: home page, top bar with left drawer (main menu) and right user menu.
+React Native (Expo) app for Motmot, with the same structure as the web app in `/app`: home page, top bar with left drawer (main menu) and right user menu.
 
 **Expo SDK 54** (React 19.1, React Native 0.81). Use **Node 22+** for install and builds.
+
+> **Naming:** the app shows as **Motmot**, but the native projects keep their old internal names (`ios/Birdr.xcodeproj`, target `Birdr`, bundle ID `pro.birdr.app`, `birdr://` scheme). The `ios/` and `android/` folders are committed, so **don't run `expo prebuild`**: with `expo.name` set to Motmot it would generate a new `Motmot.xcodeproj`.
 
 ## Setup
 
@@ -56,7 +58,7 @@ To run on a **physical device** (e.g. connected iPad):
 
 **“No bundle URL present”:** The app loads JavaScript from Metro on your Mac. Ensure Metro is running (`npm start`) and the device is on the same network; the app uses your Mac’s IP (embedded at build time) to connect to `http://<mac-ip>:8081`.
 
-**Sign in with Apple (error 1000 / ERR_REQUEST_UNKNOWN):** This often happens on the **iOS Simulator**. Sign in with Apple is unreliable in the simulator; test it on a **physical device**. On the device, ensure the app has the “Sign in with Apple” capability (it’s in `Birdr.entitlements` and enabled via `usesAppleSignIn` in `app.json`) and that the App ID in the Apple Developer portal has Sign in with Apple enabled.
+**Sign in with Apple (error 1000 / ERR_REQUEST_UNKNOWN):** This often happens on the **iOS Simulator**. Sign in with Apple is unreliable in the simulator; test it on a **physical device**. On the device, ensure the app has the “Sign in with Apple” capability (it’s in `Motmot.entitlements` and enabled via `usesAppleSignIn` in `app.json`) and that the App ID in the Apple Developer portal has Sign in with Apple enabled.
 
 ## Generate native projects (Android + iOS)
 
@@ -385,7 +387,7 @@ Full steps: see **`GOOGLE_CONSOLE_SETUP.md`**.
 
 ## Opening game links in the app (QR code / share link)
 
-When someone scans the lobby QR code or taps a shared game link (`https://birdr.pro/join/<game_token>`), the link should open in the Birdr app instead of the browser.
+When someone scans the lobby QR code or taps a shared game link (`https://birdr.pro/join/<game_token>`), the link should open in the Motmot app instead of the browser.
 
 **What’s already in place**
 
@@ -404,12 +406,12 @@ When someone scans the lobby QR code or taps a shared game link (`https://birdr.
    ```
    Use the same signing key you use for Play Store builds. The `package_name` is already `pro.birdr.app`.
 
-After deploying the updated `.well-known` files, install the app and tap `https://birdr.pro/join/<token>` (e.g. from Notes or Messages). If verification succeeds, the link should open directly in the app. If not, the server redirect still sends `birdr://join/<token>`, so the system may show “Open in Birdr?” once.
+After deploying the updated `.well-known` files, install the app and tap `https://birdr.pro/join/<token>` (e.g. from Notes or Messages). If verification succeeds, the link should open directly in the app. If not, the server redirect still sends `birdr://join/<token>`, so the system may show “Open in Motmot?” once.
 
 ## Structure
 
 - **Top bar:** Left = open main (left) drawer; center = title; right = open user menu.
-- **Left drawer:** Home, New game, High scores, Country challenge, Updates, Help, Privacy, About Birdr + footer (data/media credits, contact).
+- **Left drawer:** Home, New game, High scores, Country challenge, Updates, Help, Privacy, About Motmot + footer (data/media credits, contact).
 - **Right user menu (modal):** Account, Login, Register, My Games, Profile, Review media, Logout.
 
 Screens beyond Home are placeholders; wire them to your API and logic as in the web app.

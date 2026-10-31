@@ -11,7 +11,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>$(DEVELOPMENT_LANGUAGE)</string>
     <key>CFBundleDisplayName</key>
-    <string>Birdr</string>
+    <string>Motmot</string>
     <key>CFBundleExecutable</key>
     <string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleIdentifier</key>
@@ -62,11 +62,11 @@
       <true/>
     </dict>
     <key>NSCameraUsageDescription</key>
-    <string>Birdr needs access to your camera to take a profile picture.</string>
+    <string>Motmot needs access to your camera to take a profile picture.</string>
     <key>NSMicrophoneUsageDescription</key>
     <string>Allow $(PRODUCT_NAME) to access your microphone</string>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string>Birdr needs access to your photo library to set your profile picture.</string>
+    <string>Motmot needs access to your photo library to set your profile picture.</string>
     <key>RCTNewArchEnabled</key>
     <true/>
     <key>UIApplicationSceneManifest</key>

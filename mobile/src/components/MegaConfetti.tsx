@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { Animated, LayoutChangeEvent, StyleSheet, View } from 'react-native';
 import { colors } from '../theme';
 
-/** Ochre / amber palette aligned with Birdr primary + celebration gold. */
+/** Ochre / amber palette aligned with Motmot primary + celebration gold. */
 export const MEGA_CONFETTI_COLORS = [
   colors.primary[100],
   colors.primary[200],

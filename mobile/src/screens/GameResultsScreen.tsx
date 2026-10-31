@@ -230,7 +230,7 @@ export function GameResultsScreen() {
     const message = buildGameResultShareMessage(
       {
         scoreLabel,
-        countryName: game.country?.name || 'Birdr',
+        countryName: game.country?.name || 'Motmot',
         subtitle,
         shareUrl,
       },

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Birdr",
+    "name": "Motmot",
     "slug": "birdr",
     "scheme": "birdr",
     "version": "1.130.0",
@@ -142,8 +142,8 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Birdr needs access to your photo library to set your profile picture.",
-          "cameraPermission": "Birdr needs access to your camera to take a profile picture."
+          "photosPermission": "Motmot needs access to your photo library to set your profile picture.",
+          "cameraPermission": "Motmot needs access to your camera to take a profile picture."
         }
       ],
       [

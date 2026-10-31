@@ -23,7 +23,7 @@ import { useTranslation } from '../i18n/TranslationContext';
  * - Survival: https://birdr.pro/open/survival/ or birdr://survival
  * - League: https://birdr.pro/open/league/[{countryCode}/] or birdr://league[/{countryCode}]
  * - Shared game: https://birdr.pro/s/{token}/ (also /join/s/{token}/)
- * - Any other app link (from a newer Birdr): ask the user to update.
+ * - Any other app link (from a newer Motmot): ask the user to update.
  */
 export function DeepLinkHandler({ children }: { children: React.ReactNode }) {
   const { handleOAuthRedirect, isAuthenticated } = useAuth();
@@ -159,7 +159,7 @@ export function DeepLinkHandler({ children }: { children: React.ReactNode }) {
         return;
       }
 
-      // A link from a newer Birdr (new game mode or screen): say so instead of doing nothing.
+      // A link from a newer Motmot (new game mode or screen): say so instead of doing nothing.
       if (isUnsupportedAppLink(url)) {
         handled.current = url;
         Alert.alert(t('link_needs_update_title'), t('link_needs_update_message'), [
