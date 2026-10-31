@@ -120,7 +120,7 @@ class MarketingPagesTests(TestCase):
         self.assertIn('Get it on Google Play', html)
         self.assertIn('Or play a quiz in the browser', html)
         self.assertIn('href="/play"', html)
-        self.assertIn('/images/motmot/screen-quiz-correct.webp', html)
+        self.assertIn('/images/motmot/screen-quiz-answer.webp', html)
         self.assertIn('/images/motmot/tody-hello.webp', html)
         self.assertIn('What you can play', html)
         self.assertIn('Normal quizzes', html)
@@ -188,7 +188,7 @@ class MarketingPagesTests(TestCase):
         html = self.client.get('/nl/site/').content.decode()
         self.assertIn('/images/motmot/screen-league.webp', html)
         self.assertIn('Nederlandse league: de quiz van vandaag', html)
-        response = self.client.get('/images/motmot/screen-quiz-correct.webp')
+        response = self.client.get('/images/motmot/screen-quiz-answer.webp')
         self.assertEqual(response.status_code, 200)
 
     def test_stylish_birdr_images_are_served(self):

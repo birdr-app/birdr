@@ -591,15 +591,15 @@ EXTRA_ENTRIES: list[tuple[str, tuple[str, ...]]] = [
     ('Track your progress', ('Volg je voortgang', 'Sigue tu progreso', 'Suis tes progrès', 'Verfolge deinen Fortschritt', 'Segui i tuoi progressi', 'Acompanhe seu progresso', '進歩を記録する')),
     # Home page screenshots: alt texts.
     (
-        'Motmot quiz: a Common Scoter photo with Common Scoter marked as the correct answer',
+        'Motmot quiz: a Common Greenshank photo, with Ruff marked as the wrong answer and Common Greenshank as the correct one',
         (
-            'Motmot-quiz: een foto van een zwarte zee-eend, met zwarte zee-eend gemarkeerd als het juiste antwoord',
-            'Quiz de Motmot: una foto de un negrón común, con negrón común marcado como respuesta correcta',
-            'Quiz Motmot : une photo de macreuse noire, avec macreuse noire indiquée comme bonne réponse',
-            'Motmot-Quiz: ein Foto einer Trauerente, Trauerente ist als richtige Antwort markiert',
-            'Quiz di Motmot: una foto di orchetto marino, con orchetto marino indicato come risposta corretta',
-            'Quiz do Motmot: uma foto de negrola, com negrola marcada como resposta correta',
-            'Motmotのクイズ：クロガモの写真。クロガモが正解として表示されています',
+            'Motmot-quiz: een foto van een groenpootruiter, met kemphaan gemarkeerd als fout antwoord en groenpootruiter als het juiste',
+            'Quiz de Motmot: una foto de un archibebe claro, con combatiente marcado como respuesta incorrecta y archibebe claro como la correcta',
+            'Quiz Motmot : une photo de chevalier aboyeur, avec combattant varié indiqué comme mauvaise réponse et chevalier aboyeur comme la bonne',
+            'Motmot-Quiz: ein Foto eines Grünschenkels, Kampfläufer ist als falsche und Grünschenkel als richtige Antwort markiert',
+            'Quiz di Motmot: una foto di pantana, con combattente indicato come risposta sbagliata e pantana come quella corretta',
+            'Quiz do Motmot: uma foto de perna-verde, com combatente marcado como resposta errada e perna-verde como a correta',
+            'Motmotのクイズ：アオアシシギの写真。エリマキシギが不正解、アオアシシギが正解として表示されています',
         ),
     ),
     (
