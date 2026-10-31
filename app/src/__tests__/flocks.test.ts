@@ -54,7 +54,7 @@ const FLOCKS_I18N_KEYS = [
 
 describe('flocks share helpers', () => {
   it('builds WhatsApp share URL with encoded message', () => {
-    const message = 'Join My Club on Birdr! https://birdr.pro/join/flock/abc/web';
+    const message = 'Join My Club on Motmot! https://birdr.pro/join/flock/abc/web';
     expect(buildWhatsAppShareUrl(message)).toBe(
       `https://wa.me/?text=${encodeURIComponent(message)}`
     );

@@ -406,7 +406,7 @@ export function LeagueHomePage() {
                     <Text fontSize="xs" color="gray.600">
                       <FormattedMessage
                         id="league_reminders_note"
-                        defaultMessage="Reminders arrive as push notifications in the Birdr mobile app."
+                        defaultMessage="Reminders arrive as push notifications in the Motmot mobile app."
                       />
                     </Text>
                     <Button

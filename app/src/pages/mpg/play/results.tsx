@@ -173,7 +173,7 @@ export const ResultsComponent = () => {
   const shareMessage = shareUrl
     ? formatGameResultShareMessage(
         shareScoreLabel,
-        game?.country?.name || 'Birdr',
+        game?.country?.name || 'Motmot',
         shareUrl,
         shareSubtitle
       )
@@ -529,7 +529,7 @@ export const ResultsComponent = () => {
               shareUrl={shareUrl}
               shareMessage={shareMessage}
               hintId="game_result_share_hint"
-              hintDefault="Share this result so friends can play or install Birdr."
+              hintDefault="Share this result so friends can play or install Motmot."
               qrCaptionId="scan_game_result"
               qrCaptionDefault="Scan this QR code to view the result"
             />

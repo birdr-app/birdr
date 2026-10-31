@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'pro.birdr',
-  appName: 'Birdr',
+  appName: 'Motmot',
   webDir: 'build',
   server: {
     url: 'https://birdr.pro',

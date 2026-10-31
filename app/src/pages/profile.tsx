@@ -382,13 +382,13 @@ export const ProfilePage = () => {
                   <Field.Label mb={0}>
                     <FormattedMessage
                       id="receive_updates"
-                      defaultMessage="Receive Birdr updates by email"
+                      defaultMessage="Receive Motmot updates by email"
                     />
                   </Field.Label>
                   <Text fontSize="sm" color="gray.500">
                     <FormattedMessage
                       id="receive_updates_hint"
-                      defaultMessage="News and product updates from Birdr."
+                      defaultMessage="News and product updates from Motmot."
                     />
                   </Text>
                 </Box>

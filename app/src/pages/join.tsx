@@ -83,7 +83,7 @@ const JoinPage: React.FC = () => {
               <Text fontWeight="600" fontSize="md" textAlign="center">
                 <FormattedMessage
                   id="open_in_app_prompt"
-                  defaultMessage="Open in Birdr app to join this game"
+                  defaultMessage="Open in Motmot app to join this game"
                 />
               </Text>
               <Link
@@ -95,7 +95,7 @@ const JoinPage: React.FC = () => {
               >
                 <FormattedMessage
                   id="open_in_birdr_app"
-                  defaultMessage="Open in Birdr app"
+                  defaultMessage="Open in Motmot app"
                 />
               </Link>
             </Flex>

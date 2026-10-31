@@ -527,7 +527,7 @@ export function FlockDetailPage() {
                     />{' '}
                     <FormattedMessage
                       id="flock_notifications_web_note"
-                      defaultMessage="Notifications arrive in the Birdr mobile app."
+                      defaultMessage="Notifications arrive in the Motmot mobile app."
                     />
                   </Text>
                 </Box>

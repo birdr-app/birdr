@@ -14,7 +14,7 @@ registerServiceWorker()
 
 export const App = () => {
   useEffect(() => {
-    document.title = "Birdr"
+    document.title = "Motmot"
   }, [])
 
   return (

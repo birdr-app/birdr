@@ -23,7 +23,7 @@ export function shouldTryOpenInApp(pathname: string): boolean {
   return true;
 }
 
-/** Map a web path to a Birdr app deep link, or null to skip. */
+/** Map a web path to a Motmot app deep link, or null to skip. */
 export function buildAppDeepLink(pathname: string): string | null {
   const path = pathname.replace(/\/+$/, '') || '/';
 

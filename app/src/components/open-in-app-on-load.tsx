@@ -7,7 +7,7 @@ import {
 } from '../utils/openInApp';
 
 /**
- * On mobile browsers, try opening the native Birdr app once per session.
+ * On mobile browsers, try opening the native Motmot app once per session.
  * If the app is not installed, the user stays on the website.
  */
 export function OpenInAppOnLoad() {

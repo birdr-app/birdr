@@ -167,7 +167,7 @@ export function GameShareResultPage() {
               shareUrl={shareUrl}
               shareMessage={shareMessage}
               hintId="game_result_share_hint"
-              hintDefault="Share this result so friends can play or install Birdr."
+              hintDefault="Share this result so friends can play or install Motmot."
               qrCaptionId="scan_game_result"
               qrCaptionDefault="Scan this QR code to view the result"
             />
@@ -177,7 +177,7 @@ export function GameShareResultPage() {
                 <FormattedMessage id="start_a_game" defaultMessage="Start a game" />
               </Button>
               <Button variant="outline" onClick={() => navigate('/play')}>
-                <FormattedMessage id="birdr_home" defaultMessage="Birdr home" />
+                <FormattedMessage id="birdr_home" defaultMessage="Motmot home" />
               </Button>
             </Flex>
 

@@ -29,7 +29,7 @@ export function ApiUnavailableScreen({ onRetry, retrying = false }: Props) {
         <Text fontSize="md" color="primary.600" lineHeight="tall">
           <FormattedMessage
             id="maintenance_message"
-            defaultMessage="Birdr is undergoing a bit of maintenance. Please try again in a little while."
+            defaultMessage="Motmot is undergoing a bit of maintenance. Please try again in a little while."
           />
         </Text>
         <Button colorPalette="primary" onClick={onRetry} loading={retrying}>

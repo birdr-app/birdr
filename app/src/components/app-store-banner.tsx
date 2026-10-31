@@ -36,7 +36,7 @@ const AppStoreBanner: React.FC = () => {
         <Text fontWeight="600" fontSize="md" textAlign="center">
           <FormattedMessage
             id="get_the_app"
-            defaultMessage="Get the Birdr app for a better experience"
+            defaultMessage="Get the Motmot app for a better experience"
           />
         </Text>
         <Link

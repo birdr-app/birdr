@@ -53,7 +53,7 @@ export const BirdrMenu = () => {
               <FormattedMessage id={'privacy'} defaultMessage={'Privacy'} />
             </Link>
             <Link href={'/about'} textDecoration="none">
-              <FormattedMessage id={'about birdr'} defaultMessage={'About Birdr'} />
+              <FormattedMessage id={'about birdr'} defaultMessage={'About Motmot'} />
             </Link>
         </Flex>
     );

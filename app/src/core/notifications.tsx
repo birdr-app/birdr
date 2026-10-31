@@ -15,7 +15,7 @@
 export const sendNotification = async ({title, body}: {title: string, body: string}): Promise<void> => {
   if ('serviceWorker' in navigator) {
     const registration = await navigator.serviceWorker.ready;
-    registration.showNotification('Birdr - Bird quiz', {
+    registration.showNotification('Motmot - Bird quiz', {
       body: 'Ready to identify some birds?',
       icon: '/images/logo.png',
       badge: '/images/badge.png',
