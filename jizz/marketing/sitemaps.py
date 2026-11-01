@@ -74,6 +74,7 @@ def sitemap_pages(request):
         '/site/birds/',
         '/site/national-league/',
         '/site/survival/',
+        '/site/updates/',
     ]
     for slug in INTENT_PAGES:
         paths.append(f'/site/{slug}/')
@@ -81,6 +82,11 @@ def sitemap_pages(request):
     paths.extend(
         page.get_absolute_url()
         for page in MarketingPage.objects.filter(published=True)
+    )
+    from jizz.models import Update
+    paths.extend(
+        reverse('marketing-update', kwargs={'pk': pk})
+        for pk in Update.objects.filter(published=True).values_list('pk', flat=True)
     )
     return _xml(_urlset(paths, origin))
 

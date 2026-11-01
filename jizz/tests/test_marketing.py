@@ -1553,3 +1553,64 @@ class MarketingFeedbackFormTests(TestCase):
         self.assertEqual(response['Location'], '/site/?sent=email#help')
         self.assertEqual(Feedback.objects.count(), 0)
 
+
+
+class MarketingUpdatesTests(TestCase):
+    def setUp(self):
+        from django.contrib.auth.models import User
+        from jizz.models import Update
+
+        author = User.objects.create_user(username='author', password='x')
+        self.update = Update.objects.create(
+            title_en='Birdr is now Motmot!',
+            title_nl='Birdr heet nu Motmot!',
+            body_en='{"delta":"","html":"<p>A new name.</p><script>alert(1)</script>"}',
+            body_nl='{"delta":"","html":"<p>Een nieuwe naam.</p>"}',
+            user=author,
+        )
+        self.draft = Update.objects.create(
+            title_en='Secret draft',
+            body_en='{"delta":"","html":"<p>Not yet.</p>"}',
+            user=author,
+            published=False,
+        )
+
+    def test_index_lists_published_updates_only(self):
+        response = self.client.get('/site/updates/')
+        self.assertEqual(response.status_code, 200)
+        html = response.content.decode()
+        self.assertIn('Birdr is now Motmot!', html)
+        self.assertIn('A new name.', html)
+        self.assertIn(f'/site/updates/{self.update.pk}/', html)
+        self.assertNotIn('Secret draft', html)
+        self.assertNotIn('<script>alert(1)</script>', html)
+        self.assertIn('/site/updates/', self.client.get('/site/').content.decode())
+
+    def test_dutch_index_uses_the_dutch_text(self):
+        html = self.client.get('/nl/site/updates/').content.decode()
+        self.assertIn('Birdr heet nu Motmot!', html)
+        self.assertIn('Een nieuwe naam.', html)
+        self.assertIn('november', html)
+
+    @patch('jizz.update_i18n._translate_with_openai')
+    def test_missing_translation_falls_back_to_english_without_calling_openai(self, translate):
+        html = self.client.get('/de/site/updates/').content.decode()
+        self.assertIn('Birdr is now Motmot!', html)
+        translate.assert_not_called()
+
+    def test_update_page(self):
+        response = self.client.get(f'/site/updates/{self.update.pk}/')
+        self.assertEqual(response.status_code, 200)
+        html = response.content.decode()
+        self.assertIn('<h1>Birdr is now Motmot!</h1>', html)
+        self.assertIn(f'https://motmot.club/site/updates/{self.update.pk}/', html)
+        self.assertIn(f'/open/update/{self.update.pk}/', html)
+
+    def test_draft_update_page_is_not_found(self):
+        self.assertEqual(self.client.get(f'/site/updates/{self.draft.pk}/').status_code, 404)
+
+    def test_sitemap_lists_updates(self):
+        body = self.client.get('/sitemap-pages.xml').content.decode()
+        self.assertIn('https://motmot.club/site/updates/', body)
+        self.assertIn(f'https://motmot.club/site/updates/{self.update.pk}/', body)
+        self.assertNotIn(f'/site/updates/{self.draft.pk}/', body)

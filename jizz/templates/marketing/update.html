@@ -1,0 +1,12 @@
+{% extends "marketing/base.html" %}
+{% block content %}
+<article class="update-page">
+  <p class="kicker"><a href="{{ '/site/updates/'|mpath }}">{% mt "Updates" %}</a> · <time datetime="{{ update.date|date:'Y-m-d' }}">{{ update.date_label }}</time></p>
+  <h1>{{ update.title }}</h1>
+  <div class="prose update-body">{{ update.html|safe }}</div>
+  <p class="cta-row update-cta">
+    <a class="btn" href="/open/update/{{ update.pk }}/">{% mt "Open in the app" %}</a>
+    <a class="btn secondary" href="{{ '/site/updates/'|mpath }}">{% mt "All updates" %}</a>
+  </p>
+</article>
+{% endblock %}

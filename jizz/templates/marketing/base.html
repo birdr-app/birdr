@@ -1398,6 +1398,15 @@
     .login-google { background: #c5221f; }
     .login-google:hover { background: #a50d0b; }
     .form-hint { color: var(--birdr-600); font-size: 0.92rem; }
+    .updates-list { display: grid; gap: var(--space-4, 16px); max-width: 760px; }
+    .update-card h2 { margin: 0 0 10px; font-size: 1.5rem; }
+    .update-card h2 a { color: inherit; text-decoration: none; }
+    .update-card h2 a:hover { color: var(--canopy); }
+    .update-date { margin: 0 0 4px; color: var(--ink-muted); font-size: 0.9rem; }
+    .update-page { max-width: 760px; }
+    .update-page .kicker a { color: inherit; }
+    .update-body img { max-width: 100%; height: auto; border-radius: 12px; }
+    .update-cta { margin-top: 24px; }
     .prose p { margin: 0 0 12px; }
     .prose p:last-child { margin-bottom: 0; }
     .prose ul, .prose ol { margin: 0 0 12px; padding-left: 1.2rem; }
@@ -1645,6 +1654,7 @@
           <li><a href="{{ '/site/flocks/'|mpath }}">{% mt "Flocks" %}</a></li>
           <li><a href="{{ '/site/faq/'|mpath }}">{% mt "FAQ" %}</a></li>
           <li><a href="{{ '/site/community/'|mpath }}">{% mt "Community" %}</a></li>
+          <li><a href="{{ '/site/updates/'|mpath }}">{% mt "Updates" %}</a></li>
           <li><a href="{{ '/site/newsletter/'|mpath }}">{% mt "Newsletter example" %}</a></li>
           <li><a href="https://www.facebook.com/groups/birdrcommunity" target="_blank" rel="noopener noreferrer">{% mt "Facebook group" %}</a></li>
           <li><a href="https://github.com/sponsors/birdr-app" target="_blank" rel="noopener noreferrer">{% mt "Support Motmot" %}</a></li>

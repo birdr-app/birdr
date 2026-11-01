@@ -80,7 +80,9 @@ def localized_body(update: Update, language: str) -> str:
     return json.dumps({'delta': '', 'html': html})
 
 
-def localized_copy(update: Update, language: str) -> dict[str, str]:
+def localized_copy(update: Update, language: str, *, translate: bool = True) -> dict[str, str]:
+    """Title and HTML in `language`. With translate=False, never call OpenAI: missing
+    translations fall back to English (for public pages that crawlers may hit)."""
     lang = normalize_app_language(language) or DEFAULT_LANGUAGE
     title_en = (update.title_en or '').strip()
     html_en = _english_html(update)
@@ -114,6 +116,9 @@ def localized_copy(update: Update, language: str) -> dict[str, str]:
         cache.set(mem_key, payload, timeout=CACHE_TIMEOUT)
         setattr(update, memo_attr, payload)
         return payload
+
+    if not translate:
+        return english
 
     translated = _translate_with_openai(title_en, html_en, lang)
     if translated is None:

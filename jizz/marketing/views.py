@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import re
 
 from urllib.parse import quote
 
@@ -271,6 +272,64 @@ def cms_page(request, slug: str):
         can_edit=staff,
     )
     return render(request, 'marketing/cms_page.html', context)
+
+
+UPDATES_INDEX = '/site/updates/'
+UPDATES_PER_PAGE = 20
+
+
+def _site_update(update, locale: str) -> dict:
+    """Title, safe HTML and a localized date for one update; never triggers a translation call."""
+    from django.utils import translation
+    from django.utils.formats import date_format
+    from jizz.update_i18n import localized_copy
+
+    copy = localized_copy(update, locale, translate=False)
+    with translation.override((locale or 'en').lower()):
+        date_label = date_format(update.created.date(), 'j F Y')
+    return {
+        'pk': update.pk,
+        'title': copy['title'],
+        'html': sanitize_html(copy['html']),
+        'date': update.created.date(),
+        'date_label': date_label,
+        'url': reverse('marketing-update', kwargs={'pk': update.pk}),
+    }
+
+
+@require_GET
+def updates_index(request):
+    from jizz.models import Update
+
+    locale = locale_from_request(request)
+    rows = Update.objects.filter(published=True).order_by('-created')[:UPDATES_PER_PAGE]
+    context = base_context(
+        request,
+        title=translate('Updates | Motmot'),
+        description=translate('News about Motmot: new features, game modes and improvements to the bird ID quiz.'),
+        path=UPDATES_INDEX,
+        breadcrumbs=[('Home', SITE_HOME), ('Updates', UPDATES_INDEX)],
+        updates=[_site_update(u, locale) for u in rows],
+    )
+    return render(request, 'marketing/updates.html', context)
+
+
+@require_GET
+def update_page(request, pk: int):
+    from jizz.models import Update
+
+    update = get_object_or_404(Update, pk=pk, published=True)
+    item = _site_update(update, locale_from_request(request))
+    excerpt = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', item['html'])).strip()
+    context = base_context(
+        request,
+        title=f"{item['title']} | Motmot",
+        description=excerpt[:155] or DEFAULT_DESCRIPTION,
+        path=item['url'],
+        breadcrumbs=[('Home', SITE_HOME), ('Updates', UPDATES_INDEX), (item['title'], '')],
+        update=item,
+    )
+    return render(request, 'marketing/update.html', context)
 
 
 @require_GET

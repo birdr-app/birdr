@@ -1,0 +1,21 @@
+{% extends "marketing/base.html" %}
+{% block content %}
+<section class="hero has-mascot">
+  <img class="tody hero-mascot" src="/images/motmot/tody-hello.webp" width="538" height="600" alt="">
+  <p class="kicker">Motmot</p>
+  <h1>{% mt "Updates" %}</h1>
+  <p class="lead">{% mt "News from Motmot: new features, game modes and improvements. You see the same updates on the home screen of the app." %}</p>
+</section>
+
+<section class="updates-list">
+  {% for update in updates %}
+  <article class="card update-card">
+    <p class="update-date"><time datetime="{{ update.date|date:'Y-m-d' }}">{{ update.date_label }}</time></p>
+    <h2><a href="{{ update.url|mpath }}">{{ update.title }}</a></h2>
+    <div class="prose update-body">{{ update.html|safe }}</div>
+  </article>
+  {% empty %}
+  <p>{% mt "No updates yet." %}</p>
+  {% endfor %}
+</section>
+{% endblock %}
