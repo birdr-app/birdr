@@ -1,7 +1,9 @@
 """Public marketing pages, sitemap and robots."""
 
+from pathlib import Path
 from unittest.mock import patch
 
+from django.conf import settings
 from django.core.cache import cache
 from django.test import TestCase, override_settings
 
@@ -989,6 +991,11 @@ class MarketingPagesTests(TestCase):
         pic = self.client.get('/images/birdr-stressed.png')
         self.assertEqual(pic.status_code, 200)
         self.assertTrue(pic['Content-Type'].startswith('image/'))
+
+    def test_spa_robots_txt_points_at_marketing_sitemap(self):
+        # nginx serves this file instead of Django's robots.txt when /robots.txt isn't proxied.
+        spa_robots = Path(__file__).resolve().parents[2] / 'app' / 'public' / 'robots.txt'
+        self.assertIn(f'Sitemap: {settings.MARKETING_URL}/sitemap.xml', spa_robots.read_text())
 
     def test_robots_and_sitemaps(self):
         robots = self.client.get('/robots.txt')

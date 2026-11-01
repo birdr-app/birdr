@@ -482,8 +482,9 @@ PLAY_STORE_URL = os.environ.get(
 SITE_URL = os.environ.get('SITE_URL', 'https://birdr.pro')
 # Origin of the marketing website, for canonical URLs, sitemaps and Open Graph.
 MARKETING_URL = os.environ.get('MARKETING_URL', 'https://motmot.club')
-# Marketing pages requested on these hosts are redirected to MARKETING_URL.
-MARKETING_REDIRECT_HOSTS = ('birdr.pro', 'www.birdr.pro')
+# Marketing pages requested on these hosts are redirected to MARKETING_URL, so Google
+# indexes one host: the old birdr.pro and the www variant of motmot.club.
+MARKETING_REDIRECT_HOSTS = ('birdr.pro', 'www.birdr.pro', 'www.motmot.club')
 # Optional Search Console / Bing verification meta tags (leave empty until you have a token).
 GOOGLE_SITE_VERIFICATION = os.environ.get('GOOGLE_SITE_VERIFICATION', '')
 BING_SITE_VERIFICATION = os.environ.get('BING_SITE_VERIFICATION', '')

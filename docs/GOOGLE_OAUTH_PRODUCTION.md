@@ -32,6 +32,20 @@ location ~ ^/(nl|es|pt-BR|jp|it|de|fr|site|g|s|admin|flocks|data|open|updates|st
 location ~ ^/$ { proxy_pass http://jizz; }   # marketing home
 ```
 
+**Search engines (November 2026):** the regex above lists `jp`, but the Japanese pages live under `/ja/`, so
+`/ja/site/…` falls through to the SPA, which sends `noindex`. `/robots.txt` and `/sitemap*.xml` are not proxied
+either: Google gets `app/public/robots.txt` and the SPA's `noindex` `index.html` instead of the sitemap. Add `ja` to
+the regex and proxy the robots and sitemap files (same headers as the block above), in every server block that serves
+motmot.club, www.motmot.club, birdr.pro and www.birdr.pro:
+
+```nginx
+location ~ ^/(nl|es|pt-BR|ja|jp|it|de|fr|site|g|s|admin|flocks|data|open|updates|staff|api|auth|token|country)(/|$) { … }
+location ~ ^/(robots\.txt|sitemap(-[a-z]+)?\.xml)$ { proxy_pass http://jizz; … }
+```
+
+Check afterwards: `curl -sI https://motmot.club/sitemap.xml` must say `content-type: application/xml`, and
+`curl -s https://motmot.club/ja/site/ | grep canonical` must print the canonical link.
+
 - `s` is the shared game link `/s/<token>/` (added October 2026). `/site/` is not affected: the regex needs `/` or the end right after `s`.
 - `/join/` is **not** proxied there (the block is commented out), so `/join/…` links are served by the SPA, including `/join/s/<token>/web`.
 - `http://birdr.pro` and `www` redirect to `https://birdr.pro` (a port-80 block at the end of the birdr site file).

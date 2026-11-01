@@ -79,8 +79,8 @@ class SocialAuthRedirectUriMiddlewareTestCase(TestCase):
 @override_settings(
     SITE_URL='https://birdr.pro',
     MARKETING_URL='https://motmot.club',
-    MARKETING_REDIRECT_HOSTS=('birdr.pro', 'www.birdr.pro'),
-    ALLOWED_HOSTS=['birdr.pro', 'www.birdr.pro', 'motmot.club', 'testserver'],
+    MARKETING_REDIRECT_HOSTS=('birdr.pro', 'www.birdr.pro', 'www.motmot.club'),
+    ALLOWED_HOSTS=['birdr.pro', 'www.birdr.pro', 'motmot.club', 'www.motmot.club', 'testserver'],
 )
 class MarketingHostRedirectMiddlewareTestCase(TestCase):
     """The website moves to motmot.club; the API, OAuth and share links stay on birdr.pro."""
@@ -96,6 +96,11 @@ class MarketingHostRedirectMiddlewareTestCase(TestCase):
         for path in ['/', '/site/', '/site/flocks/', '/nl/site/', '/nl/site/birds/', '/sitemap.xml']:
             with self.subTest(path=path):
                 self.assertRedirectsTo(self.get(path, 'birdr.pro'), f'https://motmot.club{path}')
+
+    def test_marketing_pages_on_www_motmot_redirect_to_motmot(self):
+        for path in ['/', '/site/', '/nl/site/birds/', '/sitemap.xml']:
+            with self.subTest(path=path):
+                self.assertRedirectsTo(self.get(path, 'www.motmot.club'), f'https://motmot.club{path}')
 
     def test_query_string_is_kept(self):
         self.assertRedirectsTo(
