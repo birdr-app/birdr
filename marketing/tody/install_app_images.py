@@ -82,6 +82,9 @@ for rel, shape in (
     ('app/public/apple-touch-icon.png', 'square'),
     ('app/public/favicon-32x32.png', 'square'),
     ('app/public/favicon-16x16.png', 'square'),
+    ('app/public/android-chrome-192x192.png', 'square'),
+    ('app/public/android-chrome-512x512.png', 'square'),
+    ('app/public/mstile-150x150.png', 'square'),
     ('mobile/assets/birdr-512.png', 'square'),
 ):
     path = os.path.join(ROOT, rel)
