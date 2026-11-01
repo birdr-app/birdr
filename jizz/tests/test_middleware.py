@@ -74,3 +74,73 @@ class SocialAuthRedirectUriMiddlewareTestCase(TestCase):
         middleware(request)
 
         self.assertNotIn('social_auth_redirect_uri', request.session)
+
+
+@override_settings(
+    SITE_URL='https://birdr.pro',
+    MARKETING_URL='https://motmot.club',
+    MARKETING_REDIRECT_HOSTS=('birdr.pro', 'www.birdr.pro'),
+    ALLOWED_HOSTS=['birdr.pro', 'www.birdr.pro', 'motmot.club', 'testserver'],
+)
+class MarketingHostRedirectMiddlewareTestCase(TestCase):
+    """The website moves to motmot.club; the API, OAuth and share links stay on birdr.pro."""
+
+    def get(self, path, host):
+        return self.client.get(path, HTTP_HOST=host)
+
+    def assertRedirectsTo(self, response, url, status=301):
+        self.assertEqual(response.status_code, status)
+        self.assertEqual(response['Location'], url)
+
+    def test_marketing_pages_on_birdr_redirect_to_motmot(self):
+        for path in ['/', '/site/', '/site/flocks/', '/nl/site/', '/nl/site/birds/', '/sitemap.xml']:
+            with self.subTest(path=path):
+                self.assertRedirectsTo(self.get(path, 'birdr.pro'), f'https://motmot.club{path}')
+
+    def test_query_string_is_kept(self):
+        self.assertRedirectsTo(
+            self.get('/site/?utm_source=x&edit=1', 'www.birdr.pro'),
+            'https://motmot.club/site/?utm_source=x&edit=1',
+        )
+
+    def test_api_auth_and_share_links_stay_on_birdr(self):
+        for path in [
+            '/api/',
+            '/auth/login/google-oauth2/',
+            '/admin/',
+            '/join/abc123/',
+            '/s/abc123/',
+            '/g/abc123/',
+            '/flocks/c/abc123/',
+            '/open/app/',
+            '/.well-known/apple-app-site-association',
+            '/robots.txt',
+            '/login',
+        ]:
+            with self.subTest(path=path):
+                response = self.get(path, 'birdr.pro')
+                location = response.get('Location', '')
+                self.assertFalse(location.startswith('https://motmot.club'), f'{path} -> {location}')
+
+    def test_post_is_not_redirected(self):
+        response = self.client.post('/site/feedback/', {}, HTTP_HOST='birdr.pro')
+        self.assertFalse(response.get('Location', '').startswith('https://motmot.club'))
+
+    def test_marketing_pages_on_motmot_are_served(self):
+        response = self.get('/site/', 'motmot.club')
+        self.assertNotIn(response.status_code, (301, 302))
+
+    def test_oauth_start_on_motmot_goes_to_birdr(self):
+        response = self.get(
+            '/auth/login/google-oauth2/?redirect_uri=https%3A%2F%2Fmotmot.club%2Fsite%2F',
+            'motmot.club',
+        )
+        self.assertRedirectsTo(
+            response,
+            'https://birdr.pro/auth/login/google-oauth2/?redirect_uri=https%3A%2F%2Fmotmot.club%2Fsite%2F',
+            status=302,
+        )
+
+    @override_settings(MARKETING_URL='')
+    def test_no_redirect_without_marketing_url(self):
+        self.assertNotEqual(self.get('/site/', 'birdr.pro').get('Location', ''), 'https://motmot.club/site/')

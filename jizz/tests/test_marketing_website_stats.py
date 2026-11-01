@@ -182,9 +182,9 @@ class MarketingWebsiteTrackingTests(TestCase):
         client = Client()
         response = client.get(
             "/site/",
-            HTTP_REFERER="https://birdr.pro/site/faq/",
+            HTTP_REFERER="https://motmot.club/site/faq/",
             HTTP_USER_AGENT="Mozilla/5.0",
-            HTTP_HOST="birdr.pro",
+            HTTP_HOST="motmot.club",
         )
         self.assertEqual(response.status_code, 200)
         event = UsageEvent.objects.get()

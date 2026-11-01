@@ -463,7 +463,7 @@ INTENT_PAGES = {
 
 
 def canonical_origin(request) -> str:
-    site = (getattr(settings, 'SITE_URL', None) or '').rstrip('/')
+    site = (getattr(settings, 'MARKETING_URL', None) or getattr(settings, 'SITE_URL', None) or '').rstrip('/')
     if site:
         return site
     return request.build_absolute_uri('/').rstrip('/')

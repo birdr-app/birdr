@@ -130,6 +130,8 @@ MIDDLEWARE = [
     'jizz.request_timing.RequestTimingMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    # Website on motmot.club, API and share links on birdr.pro.
+    'jizz.middleware.MarketingHostRedirectMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'jizz.middleware.MarketingLocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -475,8 +477,13 @@ PLAY_STORE_URL = os.environ.get(
     'https://play.google.com/store/apps/details?id=pro.birdr.app',
 )
 
-# Public site origin for canonical URLs, sitemaps and Open Graph.
+# Origin of the API, OAuth and share/invite links. The apps' universal links are
+# on birdr.pro, so links that should open the app stay here.
 SITE_URL = os.environ.get('SITE_URL', 'https://birdr.pro')
+# Origin of the marketing website, for canonical URLs, sitemaps and Open Graph.
+MARKETING_URL = os.environ.get('MARKETING_URL', 'https://motmot.club')
+# Marketing pages requested on these hosts are redirected to MARKETING_URL.
+MARKETING_REDIRECT_HOSTS = ('birdr.pro', 'www.birdr.pro')
 # Optional Search Console / Bing verification meta tags (leave empty until you have a token).
 GOOGLE_SITE_VERIFICATION = os.environ.get('GOOGLE_SITE_VERIFICATION', '')
 BING_SITE_VERIFICATION = os.environ.get('BING_SITE_VERIFICATION', '')

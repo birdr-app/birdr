@@ -7,7 +7,10 @@ When the app sends a non-HTTPS redirect_uri for apple-id, we store it as the app
 callback and use our HTTPS completion URL as the redirect_uri sent to Apple.
 """
 
-from django.http import HttpResponsePermanentRedirect
+from urllib.parse import urlsplit
+
+from django.conf import settings
+from django.http import HttpResponsePermanentRedirect, HttpResponseRedirect
 from django.utils.deprecation import MiddlewareMixin
 
 from jizz.api_event_labels import resolve_api_event_label
@@ -20,6 +23,69 @@ from jizz.marketing.i18n import (
 from jizz.usage_analytics import is_crawler_user_agent, record_usage_event
 
 _SERVER_RENDERED_PREFIXES = ('/data/', '/country/', '/staff/', '/site/')
+
+
+_MARKETING_SITEMAP_PATHS = frozenset({
+    '/sitemap.xml',
+    '/sitemap-pages.xml',
+    '/sitemap-countries.xml',
+    '/sitemap-birds.xml',
+    '/sitemap-compare.xml',
+})
+
+
+def _host_of(url: str) -> str:
+    return urlsplit(url or '').netloc.lower()
+
+
+def is_marketing_path(path: str) -> bool:
+    """The website's own pages, as opposed to the API, OAuth, share links and the web app."""
+    if path == '/' or path.startswith('/site/') or path in _MARKETING_SITEMAP_PATHS:
+        return True
+    _, remainder = parse_locale_prefix(path)
+    return remainder is not None
+
+
+class MarketingHostRedirectMiddleware:
+    """Move the website to MARKETING_URL and keep OAuth on SITE_URL.
+
+    On the old hosts (birdr.pro) marketing pages redirect permanently to MARKETING_URL.
+    Everything else stays: the apps call /api/ there, and share and invite links must
+    stay on the apps' universal-link domain.
+
+    On the marketing host, OAuth starts are sent to SITE_URL, because Google and Apple
+    only accept callbacks on that host. The redirect_uri back to the marketing host
+    is kept, so the tokens still land there.
+    """
+
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        if request.method in ('GET', 'HEAD'):
+            target = self._redirect_target(request)
+            if target:
+                url, permanent = target
+                return HttpResponsePermanentRedirect(url) if permanent else HttpResponseRedirect(url)
+        return self.get_response(request)
+
+    def _redirect_target(self, request):
+        marketing_url = (getattr(settings, 'MARKETING_URL', '') or '').rstrip('/')
+        site_url = (getattr(settings, 'SITE_URL', '') or '').rstrip('/')
+        if not marketing_url:
+            return None
+        host = request.get_host().split(':')[0].lower()
+        path = request.path_info or '/'
+        query = request.META.get('QUERY_STRING')
+        suffix = f'?{query}' if query else ''
+
+        if host in getattr(settings, 'MARKETING_REDIRECT_HOSTS', ()) and host != _host_of(marketing_url):
+            if is_marketing_path(path):
+                return marketing_url + path + suffix, True
+        elif host == _host_of(marketing_url) and site_url and _host_of(site_url) != host:
+            if path.startswith('/auth/login/'):
+                return site_url + path + suffix, False
+        return None
 
 
 class MarketingLocaleMiddleware:

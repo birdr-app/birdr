@@ -18,6 +18,8 @@ _OWN_REFERER_HOSTS = frozenset(
     {
         'birdr.pro',
         'www.birdr.pro',
+        'motmot.club',
+        'www.motmot.club',
         'jizz.be',
         'www.jizz.be',
         'localhost',
