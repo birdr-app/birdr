@@ -147,9 +147,8 @@
       height: 2.75rem;
       flex-shrink: 0;
     }
-    .brand-tody { display: none; }
-    /* On a one-row menu bar Tody pokes up over the bar's bottom edge: he scans with his
-       binoculars, spots something and jumps. The bar's edge hides his log and grass. */
+    header.site .brand-icon { width: auto; }
+    /* On a one-row menu bar Tody stands on the bar's bottom edge and pokes up over it */
     @media (min-width: 961px) {
       header.site .wrap { padding-bottom: 0; }
       header.site nav.site { margin-bottom: 10px; }
@@ -158,73 +157,14 @@
         align-self: stretch;
         box-sizing: border-box;
         min-height: 4.4rem;
-        padding: 0 0 10px 5.4rem;
+        padding: 0 0 10px 5.7rem;
       }
-      header.site .brand-icon { display: none; }
-      .brand-tody {
-        display: block;
+      header.site .brand-icon {
         position: absolute;
-        left: -4px;
+        left: 0;
         bottom: 0;
-        width: 5.6rem;
-        height: 6.5rem;
-        overflow: hidden;
-        pointer-events: none;
+        height: 4.4rem;
       }
-      .brand-tody img {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        width: auto;
-        max-width: none;
-        height: 6rem;
-        translate: -50% 26px;
-        transform-origin: 50% 75%;
-      }
-      .tody-scan { animation: tody-scan 10s ease-in-out infinite; }
-      .tody-jump { opacity: 0; animation: tody-jump 10s ease-in-out infinite; }
-      .tody-spot {
-        position: absolute;
-        top: 2.1rem;
-        right: 0;
-        font-family: var(--font);
-        font-weight: 800;
-        font-size: 1.35rem;
-        line-height: 1;
-        color: var(--brand);
-        opacity: 0;
-        animation: tody-spot 10s ease-out infinite;
-      }
-    }
-    @keyframes tody-scan {
-      0%, 8% { opacity: 1; rotate: 0deg; translate: -50% 26px; }
-      16%, 22% { rotate: 5deg; translate: -47% 26px; }
-      32%, 37% { rotate: -5deg; translate: -53% 26px; }
-      40% { rotate: -4deg; translate: -53% 22px; }
-      44% { rotate: -5deg; translate: -53% 26px; }
-      50% { rotate: 0deg; translate: -50% 26px; }
-      55%, 62% { opacity: 1; rotate: 7deg; translate: -44% 24px; }
-      62.1%, 87.9% { opacity: 0; rotate: 0deg; translate: -50% 26px; }
-      88%, 100% { opacity: 1; rotate: 0deg; translate: -50% 26px; }
-    }
-    @keyframes tody-jump {
-      0%, 62% { opacity: 0; translate: -50% 26px; scale: 1 1; }
-      62.1% { opacity: 1; translate: -50% 26px; scale: 1 1; }
-      66% { translate: -50% 26px; scale: 1.06 0.92; }
-      70% { translate: -50% 12px; scale: 0.97 1.04; }
-      74% { translate: -50% 26px; scale: 1.05 0.94; }
-      78% { translate: -50% 14px; scale: 1 1; }
-      82%, 87.9% { opacity: 1; translate: -50% 26px; scale: 1 1; }
-      88%, 100% { opacity: 0; }
-    }
-    @keyframes tody-spot {
-      0%, 54% { opacity: 0; scale: 0; }
-      57% { opacity: 1; scale: 1.35; }
-      59%, 63% { opacity: 1; scale: 1; }
-      66%, 100% { opacity: 0; scale: 1; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .tody-scan, .tody-jump, .tody-spot { animation: none; }
     }
     .brand-wordmark {
       display: block;
@@ -1663,12 +1603,7 @@
   <header class="site">
     <div class="wrap">
       <a class="brand" href="{{ home_url }}">
-        <img class="brand-icon" src="/images/motmot/tody-icon-128.png" width="128" height="128" alt="">
-        <span class="brand-tody" aria-hidden="true">
-          <img class="tody-scan" src="/images/motmot/tody-header-birding.webp" width="183" height="200" alt="">
-          <img class="tody-jump" src="/images/motmot/tody-header-correct.webp" width="175" height="200" alt="">
-          <span class="tody-spot">!</span>
-        </span>
+        <img class="brand-icon" src="/images/motmot/tody-header-binoculars.webp" width="243" height="200" alt="">
         <img class="brand-wordmark" src="/images/motmot/wordmark-ink.svg" width="140" height="26" alt="Motmot">
       </a>
       <nav class="site" aria-label="{% mt "Primary" %}">

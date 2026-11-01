@@ -113,11 +113,12 @@ if os.path.exists(ico):
     icon(64, 'head').save(ico, sizes=[(16, 16), (32, 32), (48, 48), (64, 64)])
     print('icon app/public/favicon.ico')
 
-# Small poses for the animated Tody in the marketing site's menu bar
-for mood in ('birding', 'correct'):
-    art = Image.open(os.path.join(CUT, f'tody-{mood}.png')).convert('RGBA')
-    art = art.crop(art.getbbox())
-    art = art.resize((round(art.width * 200 / art.height), 200), Image.LANCZOS)
-    out = os.path.join(ROOT, f'app/public/images/motmot/tody-header-{mood}.webp')
-    art.save(out, quality=88, method=6)
-    print('header', os.path.relpath(out, ROOT), art.size)
+# Tody with binoculars for the marketing site's menu bar, cut at the chest where the bar's edge is
+art = Image.open(os.path.join(CUT, 'tody-birding.png')).convert('RGBA')
+art = art.crop(art.getbbox())
+art = art.crop((0, 0, art.width, int(art.height * 0.68)))
+art = art.crop(art.getbbox())
+art = art.resize((round(art.width * 200 / art.height), 200), Image.LANCZOS)
+out = os.path.join(ROOT, 'app/public/images/motmot/tody-header-binoculars.webp')
+art.save(out, quality=88, method=6)
+print('header', os.path.relpath(out, ROOT), art.size)
