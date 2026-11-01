@@ -62,7 +62,7 @@ def _send_daily_challenge_invite_email(request, invite):
         h.ignore_links = False
         h.body_width = 0
         text_content = h.handle(html_content)
-        from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@birdr.pro')
+        from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@motmot.club')
         msg = EmailMultiAlternatives(
             subject='You\'re invited to a Daily Challenge on Motmot',
             body=text_content,

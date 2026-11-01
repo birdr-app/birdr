@@ -886,7 +886,21 @@
     .card p { margin: 0 0 10px; }
     .card p:last-child { margin-bottom: 0; }
     .support-home {
-      max-width: 40rem;
+      display: grid;
+      gap: 8px 32px;
+      align-items: start;
+    }
+    @media (min-width: 860px) {
+      .support-home { grid-template-columns: minmax(0, 1fr) 360px; }
+      .support-home .support-form { grid-column: 2; grid-row: 1 / span 10; }
+    }
+    .support-form iframe {
+      display: block;
+      width: 100%;
+      height: 500px;
+      border: 0;
+      border-radius: var(--radius-lg);
+      background: #fff;
     }
     .support-home h2 {
       font-family: var(--font);
@@ -1657,13 +1671,13 @@
           <li><a href="{{ '/site/updates/'|mpath }}">{% mt "Updates" %}</a></li>
           <li><a href="{{ '/site/newsletter/'|mpath }}">{% mt "Newsletter example" %}</a></li>
           <li><a href="https://www.facebook.com/groups/birdrcommunity" target="_blank" rel="noopener noreferrer">{% mt "Facebook group" %}</a></li>
-          <li><a href="https://buymeacoffee.com/loekd" target="_blank" rel="noopener noreferrer">{% mt "Support Motmot" %}</a></li>
+          <li><a href="https://buymeacoffee.com/loekd" target="_blank" rel="noopener noreferrer">{% mt "Buy Motmot a coffee" %}</a></li>
           <li><a href="https://github.com/birdr-app/birdr/issues" target="_blank" rel="noopener noreferrer">{% mt "GitHub issues" %}</a></li>
           {% for page in cms_nav_pages %}
           <li><a href="{{ page.get_absolute_url|mpath }}">{{ page.nav_text }}</a></li>
           {% endfor %}
           <li><a href="{{ cms_index_url }}">{% mt "All pages" %}</a></li>
-          <li><a href="mailto:info@birdr.pro">{% mt "Contact" %}</a></li>
+          <li><a href="mailto:info@motmot.club">{% mt "Contact" %}</a></li>
         </ul>
       </div>
     </div>

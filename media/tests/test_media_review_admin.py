@@ -90,7 +90,7 @@ class MediaReviewAdminTests(TestCase):
         self.assertEqual(len(mail.outbox), 1)
         msg = mail.outbox[0]
         self.assertEqual(msg.to, ['flagger@example.com'])
-        self.assertEqual(msg.reply_to, ['info@birdr.pro'])
+        self.assertEqual(msg.reply_to, ['info@motmot.club'])
         self.assertIn('Hi Ada,', msg.body)
         self.assertIn('You have flagged a media on Motmot', msg.body)
         self.assertIn('https://commons.wikimedia.org/wiki/File:Robin.jpg', msg.body)
@@ -147,7 +147,7 @@ class MediaReviewAdminTests(TestCase):
         self.assertEqual(review.reply, 'This photo is correctly identified.')
         self.assertIsNotNone(review.reply_sent_at)
         self.assertEqual(len(mail.outbox), 1)
-        self.assertEqual(mail.outbox[0].reply_to, ['info@birdr.pro'])
+        self.assertEqual(mail.outbox[0].reply_to, ['info@motmot.club'])
 
         response = self.client.post(
             url,

@@ -37,7 +37,7 @@ _ENTRIES: list[tuple[str, tuple[str, ...]]] = [
     ('Facebook group', ('Facebookgroep', 'Grupo de Facebook', 'Groupe Facebook', 'Facebook-Gruppe', 'Gruppo Facebook', 'Grupo do Facebook', 'Facebookグループ')),
     ('GitHub issues', ('GitHub-issues', 'Incidencias de GitHub', 'Tickets GitHub', 'GitHub-Issues', 'Issue GitHub', 'Issues no GitHub', 'GitHubのissue')),
     ('Support Motmot', ('Steun Motmot', 'Apoya Motmot', 'Soutenir Motmot', 'Motmot unterstützen', 'Sostieni Motmot', 'Apoie o Motmot', 'Motmotを支援')),
-    ('Sponsor on GitHub', ('Sponsor op GitHub', 'Patrocina en GitHub', 'Sponsoriser sur GitHub', 'Auf GitHub sponsern', 'Sponsor su GitHub', 'Patrocine no GitHub', 'GitHubでスポンサーになる')),
+    ('Buy Motmot a coffee', ('Trakteer Motmot op koffie', 'Invita a Motmot a un café', 'Offrir un café à Motmot', 'Motmot einen Kaffee spendieren', 'Offri un caffè a Motmot', 'Pague um café para o Motmot', 'Motmotにコーヒーをおごる')),
     ('Write about funding or a partnership', ('Schrijf over financiering of een partnership', 'Escribe sobre financiación o una colaboración', 'Écrire au sujet d’un financement ou d’un partenariat', 'Über Finanzierung oder eine Partnerschaft schreiben', 'Scrivi su finanziamenti o una partnership', 'Escreva sobre financiamento ou uma parceria', '資金やパートナーシップについて書く')),
     ('Join the Facebook group', ('Word lid van de Facebookgroep', 'Únete al grupo de Facebook', 'Rejoindre le groupe Facebook', 'Der Facebook-Gruppe beitreten', 'Unisciti al gruppo Facebook', 'Entre no grupo do Facebook', 'Facebookグループに参加')),
     ('Submit a ticket', ('Ticket indienen', 'Enviar un ticket', 'Ouvrir un ticket', 'Ticket einreichen', 'Apri un ticket', 'Abrir um ticket', 'チケットを送る')),

@@ -27,7 +27,7 @@ def send_welcome_email(user, site_url=None):
         h.ignore_links = False
         h.body_width = 0
         text_content = h.handle(html_content)
-        from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@birdr.pro')
+        from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@motmot.club')
         msg = EmailMultiAlternatives(
             subject=subject,
             body=text_content,
@@ -77,7 +77,7 @@ def send_daily_challenge_reminder_email(user, challenge, round_obj, hours_left):
         h.ignore_links = False
         h.body_width = 0
         text_content = h.handle(html_content)
-        from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@birdr.pro')
+        from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@motmot.club')
         msg = EmailMultiAlternatives(
             subject=subject,
             body=text_content,
@@ -103,7 +103,7 @@ def send_daily_challenge_all_answered_email(user, challenge, round_obj, ranking_
         h.ignore_links = False
         h.body_width = 0
         text_content = h.handle(html_content)
-        from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@birdr.pro')
+        from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@motmot.club')
         msg = EmailMultiAlternatives(
             subject=subject,
             body=text_content,
@@ -128,7 +128,7 @@ def send_daily_challenge_final_results_email(user, challenge, ranking_data):
         h.ignore_links = False
         h.body_width = 0
         text_content = h.handle(html_content)
-        from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@birdr.pro')
+        from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@motmot.club')
         msg = EmailMultiAlternatives(
             subject=subject,
             body=text_content,

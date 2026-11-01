@@ -1,6 +1,6 @@
 # Motmot press campaign (started 24 October 2026)
 
-Sender: Loek van Gent, loek@birdr.pro (press contact on birdr.pro is info@birdr.pro).
+Sender: Loek van Gent, loek@birdr.pro (press contact on birdr.pro is info@motmot.club).
 Status: drafts only, nothing sent.
 
 Key facts used in the pitches (check before sending):

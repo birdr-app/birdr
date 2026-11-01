@@ -79,7 +79,7 @@ Motmot is a small independent project, and contributions from birders are especi
 - Improve descriptions that explain how to distinguish lookalike species.
 - Share Motmot with a bird club or create a Flock for your group.
 
-Questions and feedback are also welcome at [info@birdr.pro](mailto:info@birdr.pro).
+Questions and feedback are also welcome at [info@motmot.club](mailto:info@motmot.club).
 
 ## License
 

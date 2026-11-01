@@ -40,7 +40,7 @@ function ComparisonCreditsEmpty() {
       <Text fontSize="md" textAlign="center" lineHeight="tall">
         <FormattedMessage
           id="comparison_out_of_credits"
-          defaultMessage="O-o, we ran out of AI credits. I develop Motmot in my spare time, and there is no funding behind it right now. If you would like to help it grow, write to me at info@birdr.pro"
+          defaultMessage="O-o, we ran out of AI credits. I develop Motmot in my spare time, and there is no funding behind it right now. If you would like to help it grow, write to me at info@motmot.club"
         />
       </Text>
     </VStack>

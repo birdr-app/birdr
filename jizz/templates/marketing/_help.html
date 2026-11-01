@@ -22,7 +22,7 @@
       {% else %}
       <p>
         {% mt "Found a bug, have a suggestion, or something that worked well? Tell us here, or write to" %}
-        <a href="mailto:info@birdr.pro">info@birdr.pro</a>.
+        <a href="mailto:info@motmot.club">info@motmot.club</a>.
       </p>
       {% if request.GET.sent == 'missing' %}
       <p class="form-error">{% mt "Please write a short message." %}</p>
@@ -114,13 +114,11 @@
         {% mt "Motmot is free, open source, and built in spare time. There is no funding behind it right now. A donation via Buy Me a Coffee helps cover hosting and AI credits so the quiz can stay free." %}
       </p>
       <p>
-        {% mt "Donating is one way. If you have another idea for how to fund Motmot—a partnership, a grant, a club, a company—write to <a href=\"mailto:info@birdr.pro\">info@birdr.pro</a>. I would like to talk." %}
+        {% mt "Donating is one way. If you have another idea for how to fund Motmot—a partnership, a grant, a club, a company—write to <a href=\"mailto:info@motmot.club\">info@motmot.club</a>. I would like to talk." %}
       </p>
+      {% include "marketing/_support_form.html" %}
       <p>
-        {% include "marketing/_support_btn.html" %}
-      </p>
-      <p>
-        <a href="mailto:info@birdr.pro">{% mt "Write about funding or a partnership" %}</a>
+        <a href="mailto:info@motmot.club">{% mt "Write about funding or a partnership" %}</a>
       </p>
     </article>
   </div>

@@ -1868,7 +1868,7 @@ class PasswordResetRequestView(APIView):
                     email_message = EmailMultiAlternatives(
                         subject=subject,
                         body=text_content,
-                        from_email=settings.DEFAULT_FROM_EMAIL if hasattr(settings, 'DEFAULT_FROM_EMAIL') else 'info@birdr.pro',
+                        from_email=settings.DEFAULT_FROM_EMAIL if hasattr(settings, 'DEFAULT_FROM_EMAIL') else 'info@motmot.club',
                         to=[email],
                     )
                     email_message.attach_alternative(html_content, "text/html")

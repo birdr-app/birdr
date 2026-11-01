@@ -134,4 +134,4 @@ common names vary across regions and languages; treat that expertise and lived
 experience with respect.
 
 If you are unsure where to begin, open an issue or contact
-[info@birdr.pro](mailto:info@birdr.pro).
+[info@motmot.club](mailto:info@motmot.club).

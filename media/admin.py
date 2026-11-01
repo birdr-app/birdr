@@ -300,7 +300,7 @@ class MediaReviewAdmin(admin.ModelAdmin):
             'fields': ('reply', 'reply_sent_at'),
             'description': (
                 'If you fill in a reply, the reviewer is emailed once '
-                '(when they have an email address). Replies go to info@birdr.pro.'
+                '(when they have an email address). Replies go to info@motmot.club.'
             ),
         }),
         ('Timestamps', {

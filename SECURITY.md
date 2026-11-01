@@ -11,7 +11,7 @@ mobile apps. Older releases are not maintained separately.
 Please do not report security vulnerabilities in a public GitHub issue,
 discussion, pull request, or social-media post.
 
-Email [info@birdr.pro](mailto:info@birdr.pro) with the subject **Security
+Email [info@motmot.club](mailto:info@motmot.club) with the subject **Security
 report**. Include, where possible:
 
 - the affected URL, app version, API endpoint, or commit;
@@ -50,4 +50,4 @@ services used by Motmot, and Motmot does not currently offer a bug bounty.
 
 For ordinary bugs and feature requests, use the
 [GitHub issue tracker](https://github.com/birdr-app/birdr/issues). Questions
-and general feedback can also be sent to [info@birdr.pro](mailto:info@birdr.pro).
+and general feedback can also be sent to [info@motmot.club](mailto:info@motmot.club).

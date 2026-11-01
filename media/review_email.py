@@ -11,7 +11,7 @@ from django.utils import timezone
 
 logger = logging.getLogger(__name__)
 
-REPLY_TO_EMAIL = 'info@birdr.pro'
+REPLY_TO_EMAIL = 'info@motmot.club'
 
 
 def media_review_recipient(review):

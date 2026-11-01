@@ -57,7 +57,7 @@ class Command(BaseCommand):
             send_mail(
                 subject,
                 f'{body}\n\n{site}/league/{country.code}',
-                getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@birdr.pro'),
+                getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@motmot.club'),
                 [user.email],
             )
         except Exception as exc:  # never let one bad address stop the batch

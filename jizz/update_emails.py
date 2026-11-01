@@ -207,7 +207,7 @@ def send_update_email_to_user(
         language=language,
         tracking_token=tracking_token,
     )
-    from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@birdr.pro')
+    from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@motmot.club')
     msg = EmailMultiAlternatives(
         subject=subject,
         body=text_content,
