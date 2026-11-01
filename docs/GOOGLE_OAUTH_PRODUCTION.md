@@ -32,19 +32,17 @@ location ~ ^/(nl|es|pt-BR|jp|it|de|fr|site|g|s|admin|flocks|data|open|updates|st
 location ~ ^/$ { proxy_pass http://jizz; }   # marketing home
 ```
 
-**Search engines (November 2026):** the regex above lists `jp`, but the Japanese pages live under `/ja/`, so
-`/ja/site/…` falls through to the SPA, which sends `noindex`. `/robots.txt` and `/sitemap*.xml` are not proxied
-either: Google gets `app/public/robots.txt` and the SPA's `noindex` `index.html` instead of the sitemap. Add `ja` to
-the regex and proxy the robots and sitemap files (same headers as the block above), in every server block that serves
-motmot.club, www.motmot.club, birdr.pro and www.birdr.pro:
+**Search engines (November 2026):** the regex used to list only `jp`, but the Japanese pages live under `/ja/`, and
+`/robots.txt` and `/sitemap*.xml` were not proxied. Those requests fell through to the SPA, so Google got
+`app/public/robots.txt` and the SPA's `noindex` `index.html` instead of the sitemap. Since 1 November 2026 the live
+regex (one server block for motmot.club, birdr.pro and their www hosts) reads:
 
 ```nginx
-location ~ ^/(nl|es|pt-BR|ja|jp|it|de|fr|site|g|s|admin|flocks|data|open|updates|staff|api|auth|token|country)(/|$) { … }
-location ~ ^/(robots\.txt|sitemap(-[a-z]+)?\.xml)$ { proxy_pass http://jizz; … }
+location ~ ^/(nl|es|pt-BR|ja|jp|it|de|fr|site|g|s|admin|flocks|data|open|updates|staff|api|auth|token|country|robots\.txt|sitemap(-[a-z]+)?\.xml)(/|$) {
 ```
 
-Check afterwards: `curl -sI https://motmot.club/sitemap.xml` must say `content-type: application/xml`, and
-`curl -s https://motmot.club/ja/site/ | grep canonical` must print the canonical link.
+Check after any nginx change: `curl -sI https://motmot.club/sitemap.xml` must say `content-type: application/xml`,
+and `curl -s https://motmot.club/ja/site/ | grep canonical` must print the canonical link.
 
 - `s` is the shared game link `/s/<token>/` (added October 2026). `/site/` is not affected: the regex needs `/` or the end right after `s`.
 - `/join/` is **not** proxied there (the block is commented out), so `/join/…` links are served by the SPA, including `/join/s/<token>/web`.
