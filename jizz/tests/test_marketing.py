@@ -83,6 +83,13 @@ class MarketingPagesTests(TestCase):
         self.assertEqual(response.status_code, 301)
         self.assertEqual(response['Location'], '/site/')
 
+    def test_legacy_redirects_keep_query_string(self):
+        # Campaign links like the t-shirt QR code must keep their utm tags
+        response = self.client.get('/?utm_source=tshirt')
+        self.assertEqual(response['Location'], '/site/?utm_source=tshirt')
+        response = self.client.get('/community/?utm_source=club')
+        self.assertEqual(response['Location'], '/site/community/?utm_source=club')
+
     def test_landing_title_canonical_and_json_ld(self):
         response = self.client.get('/site/')
         self.assertEqual(response.status_code, 200)
