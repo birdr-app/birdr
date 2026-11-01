@@ -78,9 +78,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 8,
     paddingBottom: 12,
-    backgroundColor: colors.primary[200],
+    backgroundColor: colors.secondary[200],
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: colors.primary[300],
+    borderBottomColor: colors.secondary[300],
   },
   sideButton: {
     width: 44,

@@ -37,29 +37,42 @@ const globalStyles = defineGlobalStyles({
  * in components that support the colorPalette prop
  */
 const customColors = {
-  // Motmot brand: Tody's greens on a mist ground (see the Motmot design system).
+  // Motmot brand: Tody's ochres as the main colour (see the Motmot design system).
   birdr: {
-    50: { value: '#F3F8F5' }, // mist: page background
-    100: { value: '#D9F0E3' }, // canopy-soft: tints, selected rows
-    200: { value: '#CFDFD6' }, // line: borders
-    300: { value: '#9DCBB1' },
-    400: { value: '#4FA87A' },
-    500: { value: '#1C7A4C' }, // canopy: primary actions
-    600: { value: '#17693F' },
-    700: { value: '#0D4D33' }, // canopy-deep
-    800: { value: '#0B3A27' }, // darkest green: body text and dark cards
-    900: { value: '#10201B' }, // ink: Tody's mask
+    50: { value: '#FAF7F2' }, // off-white: page background
+    100: { value: '#FBEBDD' }, // ochre-soft: tints, selected rows
+    200: { value: '#EADFD0' }, // line: borders
+    300: { value: '#EDB98A' },
+    400: { value: '#C8742A' }, // ochre: Tody's cap
+    500: { value: '#A85B1B' }, // primary actions (white text passes AA)
+    600: { value: '#94501A' },
+    700: { value: '#7A4214' }, // ochre-deep
+    800: { value: '#10201B' }, // ink: body text and dark cards
+    900: { value: '#08110E' },
   },
   primary: {
-    50: { value: '#F3F8F5' }, // mist: page background
-    100: { value: '#D9F0E3' }, // canopy-soft: tints, selected rows
-    200: { value: '#CFDFD6' }, // line: borders
+    50: { value: '#FAF7F2' }, // off-white: page background
+    100: { value: '#FBEBDD' }, // ochre-soft: tints, selected rows
+    200: { value: '#EADFD0' }, // line: borders
+    300: { value: '#EDB98A' },
+    400: { value: '#C8742A' }, // ochre: Tody's cap
+    500: { value: '#A85B1B' }, // primary actions (white text passes AA)
+    600: { value: '#94501A' },
+    700: { value: '#7A4214' }, // ochre-deep
+    800: { value: '#10201B' }, // ink: body text and dark cards
+    900: { value: '#08110E' },
+  },
+  // Tody's greens: the header bar and other secondary accents.
+  secondary: {
+    50: { value: '#F3F8F5' }, // mist
+    100: { value: '#D9F0E3' }, // canopy-soft
+    200: { value: '#CFDFD6' }, // sage: header bar
     300: { value: '#9DCBB1' },
     400: { value: '#4FA87A' },
-    500: { value: '#1C7A4C' }, // canopy: primary actions
+    500: { value: '#1C7A4C' }, // canopy
     600: { value: '#17693F' },
     700: { value: '#0D4D33' }, // canopy-deep
-    800: { value: '#0B3A27' }, // darkest green: body text and dark cards
+    800: { value: '#0B3A27' },
     900: { value: '#10201B' }, // ink: Tody's mask
   },
   error: {
@@ -74,18 +87,18 @@ const customColors = {
     800: { value: '#4E130F' },
     900: { value: '#2C0A08' },
   },
-  // Correct answers use the light-blue family, so the brand green never reads as "right".
+  // Correct answers are green.
   success: {
-    50: { value: '#D7F3F6' },
-    100: { value: '#B4E8EF' },
-    200: { value: '#86D9E5' },
-    300: { value: '#4FC3D6' },
-    400: { value: '#1E9BB0' },
-    500: { value: '#0A6A80' }, // correct answer
-    600: { value: '#085668' },
-    700: { value: '#064250' },
-    800: { value: '#042E38' },
-    900: { value: '#021A20' },
+    50: { value: '#D9F0E3' },
+    100: { value: '#BFE3CD' },
+    200: { value: '#9DCBB1' },
+    300: { value: '#6FB58F' },
+    400: { value: '#4FA87A' },
+    500: { value: '#1C7A4C' }, // correct answer
+    600: { value: '#17693F' },
+    700: { value: '#0D4D33' },
+    800: { value: '#0B3A27' },
+    900: { value: '#10201B' },
   },
   warning: {
     50: { value: '#FBEBDD' },
@@ -141,6 +154,15 @@ export const system = createSystem({
           subtle: { value: '{colors.primary.200}' },
           emphasized: { value: '{colors.primary.300}' },
           focusRing: { value: '{colors.primary.500}' },
+        },
+        secondary: {
+          solid: { value: '{colors.secondary.500}' },
+          contrast: { value: '{colors.secondary.50}' },
+          fg: { value: '{colors.secondary.800}' },
+          muted: { value: '{colors.secondary.100}' },
+          subtle: { value: '{colors.secondary.200}' },
+          emphasized: { value: '{colors.secondary.300}' },
+          focusRing: { value: '{colors.secondary.500}' },
         },
         error: {
           solid: { value: '{colors.error.500}' },

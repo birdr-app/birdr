@@ -281,14 +281,14 @@ const HomePage = () => {
               ) : activeJourney ? (
                 <Button
                   onClick={goJourneyProgress}
-                  colorPalette="primary"
+                  colorPalette="secondary"
                   height="auto"
                   py={3}
                   px={4}
                   w="full"
-                  bg="primary.800"
+                  bg="secondary.700"
                   borderWidth="2px"
-                  borderColor="primary.400"
+                  borderColor="secondary.400"
                   borderRadius="xl"
                   whiteSpace="normal"
                 >
@@ -315,14 +315,14 @@ const HomePage = () => {
               ) : (
                 <Button
                   onClick={() => navigate('/journey/intro')}
-                  colorPalette="primary"
+                  colorPalette="secondary"
                   height="auto"
                   py={3}
                   px={4}
                   w="full"
-                  bg="primary.800"
+                  bg="secondary.700"
                   borderWidth="2px"
-                  borderColor="primary.400"
+                  borderColor="secondary.400"
                   borderRadius="xl"
                   whiteSpace="normal"
                 >

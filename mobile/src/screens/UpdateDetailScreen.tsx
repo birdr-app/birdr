@@ -93,7 +93,7 @@ export function UpdateDetailScreen() {
     setToggling(false);
   };
 
-  const html = `<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{font-family:system-ui;font-size:16px;color:#0B3A27;margin:0;padding:0;line-height:1.6;} img{max-width:100%;height:auto;border-radius:8px;}</style></head><body>${htmlContent}</body></html>`;
+  const html = `<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{font-family:system-ui;font-size:16px;color:#10201B;margin:0;padding:0;line-height:1.6;} img{max-width:100%;height:auto;border-radius:8px;}</style></head><body>${htmlContent}</body></html>`;
 
   const webViewHeightScript = `
     (function () {

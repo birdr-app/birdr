@@ -186,7 +186,7 @@ export function ComparisonModal({
     return (
       <View key={title} style={styles.section}>
         <Text style={styles.sectionTitle}>{title}</Text>
-        <HtmlBlock html={content} color="#0B3A27" />
+        <HtmlBlock html={content} color="#10201B" />
       </View>
     );
   };

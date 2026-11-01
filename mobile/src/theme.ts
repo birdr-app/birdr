@@ -1,8 +1,22 @@
 /**
- * Motmot brand colours: Tody's greens on a mist ground (same scales as app/src/theme.ts).
+ * Motmot brand colours: Tody's ochres as the main colour, his greens as secondary
+ * (same scales as app/src/theme.ts).
  */
 export const colors = {
   primary: {
+    50: '#FAF7F2', // off-white: page background
+    100: '#FBEBDD', // ochre-soft: tints, selected rows
+    200: '#EADFD0', // line: borders
+    300: '#EDB98A',
+    400: '#C8742A', // ochre: Tody's cap
+    500: '#A85B1B', // primary actions (white text passes AA)
+    600: '#94501A',
+    700: '#7A4214', // ochre-deep
+    800: '#10201B', // ink: body text and dark cards
+    900: '#08110E',
+  },
+  // Tody's greens: the header bar and other secondary accents.
+  secondary: {
     50: '#F3F8F5',
     100: '#D9F0E3',
     200: '#CFDFD6',
@@ -18,10 +32,10 @@ export const colors = {
     500: '#B3322A',
     50: '#FBE3E0',
   },
-  // Correct answers use the light-blue family, so the brand green never reads as "right".
+  // Correct answers are green.
   success: {
-    500: '#0A6A80',
-    50: '#D7F3F6',
+    500: '#1C7A4C',
+    50: '#D9F0E3',
   },
   warning: {
     500: '#C8742A',

@@ -249,7 +249,7 @@ export default function ChecklistPage() {
         </Heading>
       </Page.Header>
       <Page.Body maxW="container.xl">
-        <Box bg="#F3F8F5" minH="calc(100vh - 5rem)" py={6}>
+        <Box bg="#FAF7F2" minH="calc(100vh - 5rem)" py={6}>
           {loading && !data ? (
             <Flex justify="center" py={20}>
               <Spinner size="lg" color="primary.600" />

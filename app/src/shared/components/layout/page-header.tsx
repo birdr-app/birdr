@@ -16,7 +16,7 @@ const PageHeader = ({children}: {children: ReactElement | ReactNode[]} ) => {
       justifyContent='space-between'
       alignItems={'center'}
       pl={2} pr={2} py={2}
-      backgroundColor={'primary.200'}
+      backgroundColor={'secondary.200'}
       position={'fixed'}
       width={'full'}
       zIndex={10}

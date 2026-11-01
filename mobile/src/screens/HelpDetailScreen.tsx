@@ -106,12 +106,12 @@ export function HelpDetailScreen({ slug, onBack }: HelpDetailScreenProps) {
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
       <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; line-height: 1.6; color: #0B3A27; padding: 16px 20px 32px; margin: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; line-height: 1.6; color: #10201B; padding: 16px 20px 32px; margin: 0; box-sizing: border-box; }
         p { margin-bottom: 12px; }
         h2 { font-size: 1.125rem; font-weight: bold; margin-top: 16px; margin-bottom: 8px; }
         h3 { font-size: 1rem; font-weight: bold; margin-top: 12px; margin-bottom: 8px; }
         ul { padding-left: 24px; margin-bottom: 12px; }
-        a { color: #1C7A4C; text-decoration: underline; }
+        a { color: #94501A; text-decoration: underline; }
         img { max-width: 100%; height: auto; border: 1px dashed #cbd5e0; border-radius: 8px; padding: 8px; margin: 12px 0; display: block; background: #f7fafc; }
       </style>
     </head>

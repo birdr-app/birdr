@@ -17,7 +17,7 @@
     },
     "notification": {
       "icon": "./assets/notification-icon.png",
-      "color": "#1C7A4C"
+      "color": "#A85B1B"
     },
     "ios": {
       "infoPlist": {
@@ -159,7 +159,7 @@
         "expo-notifications",
         {
           "icon": "./assets/notification-icon.png",
-          "color": "#1C7A4C",
+          "color": "#A85B1B",
           "defaultChannel": "default"
         }
       ],
