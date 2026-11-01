@@ -16,7 +16,7 @@ import { colors } from '../theme';
 
 const FACEBOOK_GROUP_URL = 'https://www.facebook.com/groups/birdrcommunity';
 const GITHUB_ISSUES_URL = 'https://github.com/birdr-app/birdr/issues';
-const GITHUB_SPONSORS_URL = 'https://github.com/sponsors/birdr-app';
+const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/loekd';
 const NEWSLETTER_EXAMPLE_URL = 'https://birdr.pro/site/newsletter/';
 const CONTACT_EMAIL = 'info@birdr.pro';
 const APP_STORE_REVIEW_URL = `${APP_STORE_URL}?action=write-review`;
@@ -61,7 +61,7 @@ export function HelpOverviewScreen({ onPageSelect }: { onPageSelect?: (slug: str
 
       <View style={styles.ctaRow}>
         <Cta label={t('community_facebook_cta')} onPress={() => openUrl(FACEBOOK_GROUP_URL)} primary />
-        <Cta label={t('community_support')} onPress={() => openUrl(GITHUB_SPONSORS_URL)} />
+        <Cta label={t('community_support')} onPress={() => openUrl(BUY_ME_A_COFFEE_URL)} />
         <Cta label={t('community_github_cta')} onPress={() => openUrl(GITHUB_ISSUES_URL)} />
       </View>
 
@@ -135,7 +135,7 @@ export function HelpOverviewScreen({ onPageSelect }: { onPageSelect?: (slug: str
         <View style={styles.ctaRow}>
           <Cta
             label={t('community_sponsor_cta')}
-            onPress={() => openUrl(GITHUB_SPONSORS_URL)}
+            onPress={() => openUrl(BUY_ME_A_COFFEE_URL)}
             primary
           />
           <Cta

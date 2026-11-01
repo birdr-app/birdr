@@ -223,7 +223,7 @@ export const translations: Record<string, Record<string, string>> = {
     community_github: 'To report a bug or request a feature, submit a ticket on GitHub.',
     community_github_cta: 'Submit a ticket',
     community_sponsor:
-      'You can also sponsor Motmot on GitHub, or write to info@birdr.pro about funding or a partnership.',
+      'You can also buy Motmot a coffee, or write to info@birdr.pro about funding or a partnership.',
     how_can_i_help: 'How can I help?',
     community_help_intro:
       'Motmot is a small project. Honest feedback, spotting the wrong bird, writing comparison descriptions for lookalike species, and telling other birders all help. You can also donate, or get in touch if you have ideas for how to fund Motmot or want to discuss a partnership.',
@@ -252,10 +252,10 @@ export const translations: Record<string, Record<string, string>> = {
     community_review_play: 'Review on Google Play',
     community_support: 'Support Motmot',
     community_support_body:
-      'Motmot is free, open source, and built in spare time. There is no funding behind it right now. A GitHub sponsorship helps cover hosting and AI credits so the quiz can stay free.',
+      'Motmot is free, open source, and built in spare time. There is no funding behind it right now. A donation via Buy Me a Coffee helps cover hosting and AI credits so the quiz can stay free.',
     community_support_donate:
       'Donating is one way. If you have another idea for how to fund Motmot—a partnership, a grant, a club, a company—write to info@birdr.pro. I would like to talk.',
-    community_sponsor_cta: 'Sponsor on GitHub',
+    community_sponsor_cta: 'Buy Motmot a coffee',
     community_partnership: 'Email about partnership',
     community_more_pages: 'More pages',
     back_to_community: 'Back to Community',
@@ -1172,7 +1172,7 @@ export const translations: Record<string, Record<string, string>> = {
     community_github: 'Om een bug te melden of een functie te vragen, dien een ticket in op GitHub.',
     community_github_cta: 'Ticket indienen',
     community_sponsor:
-      'Je kunt Motmot ook sponsoren op GitHub, of schrijven naar info@birdr.pro over financiering of een partnership.',
+      'Je kunt Motmot ook trakteren op een kopje koffie, of schrijven naar info@birdr.pro over financiering of een partnership.',
     how_can_i_help: 'Hoe kan ik helpen?',
     community_help_intro:
       'Motmot is een klein project. Eerlijke feedback, de verkeerde vogel herkennen, vergelijkingen schrijven voor lookalikes, en het doorvertellen aan andere vogelaars: alles helpt. Je kunt ook doneren, of contact opnemen als je ideeën hebt om Motmot te financieren of een partnership wilt bespreken.',
@@ -1201,10 +1201,10 @@ export const translations: Record<string, Record<string, string>> = {
     community_review_play: 'Review op Google Play',
     community_support: 'Steun Motmot',
     community_support_body:
-      'Motmot is gratis, open source, en gemaakt in vrije tijd. Er is nu geen financiering. Een GitHub-sponsorship helpt hosting en AI-credits te betalen, zodat de quiz gratis kan blijven.',
+      'Motmot is gratis, open source, en gemaakt in vrije tijd. Er is nu geen financiering. Een donatie via Buy Me a Coffee helpt hosting en AI-credits te betalen, zodat de quiz gratis kan blijven.',
     community_support_donate:
       'Doneren is één manier. Heb je een ander idee om Motmot te financieren—een partnership, een grant, een club, een bedrijf—schrijf dan naar info@birdr.pro. Ik praat er graag over.',
-    community_sponsor_cta: 'Sponsor op GitHub',
+    community_sponsor_cta: 'Trakteer Motmot op koffie',
     community_partnership: 'Mail over een partnership',
     community_more_pages: 'Meer pagina’s',
     back_to_community: 'Terug naar Community',
