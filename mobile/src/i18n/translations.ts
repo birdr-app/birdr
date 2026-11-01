@@ -255,7 +255,7 @@ export const translations: Record<string, Record<string, string>> = {
       'Motmot is free, open source, and built in spare time. There is no funding behind it right now. A donation via Buy Me a Coffee helps cover hosting and AI credits so the quiz can stay free.',
     community_support_donate:
       'Donating is one way. If you have another idea for how to fund Motmot—a partnership, a grant, a club, a company—write to info@motmot.club. I would like to talk.',
-    community_sponsor_cta: 'Buy Motmot a coffee',
+    community_sponsor_cta: 'Buy me a coffee',
     community_partnership: 'Email about partnership',
     community_more_pages: 'More pages',
     back_to_community: 'Back to Community',
@@ -1204,7 +1204,7 @@ export const translations: Record<string, Record<string, string>> = {
       'Motmot is gratis, open source, en gemaakt in vrije tijd. Er is nu geen financiering. Een donatie via Buy Me a Coffee helpt hosting en AI-credits te betalen, zodat de quiz gratis kan blijven.',
     community_support_donate:
       'Doneren is één manier. Heb je een ander idee om Motmot te financieren—een partnership, een grant, een club, een bedrijf—schrijf dan naar info@motmot.club. Ik praat er graag over.',
-    community_sponsor_cta: 'Trakteer Motmot op koffie',
+    community_sponsor_cta: 'Trakteer me op koffie',
     community_partnership: 'Mail over een partnership',
     community_more_pages: 'Meer pagina’s',
     back_to_community: 'Terug naar Community',
