@@ -424,6 +424,32 @@ EXTRA_ENTRIES: list[tuple[str, tuple[str, ...]]] = [
             'アプリの「苦手な鳥」：オランダの似たペア一覧。練習ボタンと FIXED バッジ付き',
         ),
     ),
+    ('Your tricky birds', ('Jouw lastige vogels', 'Tus aves difíciles', 'Tes oiseaux difficiles', 'Deine schwierigen Vögel', 'I tuoi uccelli difficili', 'Suas aves difíceis', 'あなたの苦手な鳥')),
+    (
+        'My Tricky Birds, Pairs tab: lookalike pairs you mix up in the Netherlands, such as Tundra Swan and Whooper Swan, each with a Practice button',
+        (
+            'Mijn lastige vogels, tabblad Paren: lookalike-paren die je in Nederland verwart, zoals kleine zwaan en wilde zwaan, elk met een Oefen-knop',
+            'Mis aves difíciles, pestaña Pares: pares parecidos que confundes en Países Bajos, como el cisne chico y el cisne cantor, cada uno con un botón Practicar',
+            'Mes oiseaux difficiles, onglet Paires : les paires sosies que tu confonds aux Pays-Bas, comme le cygne de Bewick et le cygne chanteur, chacune avec un bouton Pratiquer',
+            'Meine schwierigen Vögel, Reiter Paare: Doppelgänger-Paare, die du in den Niederlanden verwechselst, etwa Zwergschwan und Singschwan, jeweils mit Üben-Button',
+            'I miei uccelli difficili, scheda Coppie: coppie simili che confondi nei Paesi Bassi, come il cigno minore e il cigno selvatico, ognuna con un pulsante Pratica',
+            'Minhas aves difíceis, aba Pares: pares parecidos que você confunde nos Países Baixos, como o cisne-pequeno e o cisne-bravo, cada um com um botão Praticar',
+            'アプリの「苦手な鳥」ペアタブ：オランダで混同しやすいペア（コハクチョウとオオハクチョウなど）。それぞれに練習ボタン付き',
+        ),
+    ),
+    (
+        'Comparison of Tundra Swan and Whooper Swan: identification tips on bill pattern, size, head shape and neck length',
+        (
+            'Vergelijking van kleine zwaan en wilde zwaan: determinatietips over snavelpatroon, grootte, kopvorm en halslengte',
+            'Comparación del cisne chico y el cisne cantor: claves de identificación sobre el dibujo del pico, el tamaño, la forma de la cabeza y la longitud del cuello',
+            'Comparaison du cygne de Bewick et du cygne chanteur : conseils d’identification sur le motif du bec, la taille, la forme de la tête et la longueur du cou',
+            'Vergleich von Zwergschwan und Singschwan: Bestimmungstipps zu Schnabelmuster, Größe, Kopfform und Halslänge',
+            'Confronto tra cigno minore e cigno selvatico: consigli di identificazione su disegno del becco, dimensioni, forma della testa e lunghezza del collo',
+            'Comparação entre cisne-pequeno e cisne-bravo: dicas de identificação sobre o padrão do bico, o tamanho, o formato da cabeça e o comprimento do pescoço',
+            'コハクチョウとオオハクチョウの比較：くちばしの模様、大きさ、頭の形、首の長さによる識別のポイント',
+        ),
+    ),
+    ('Compare a pair', ('Vergelijk een paar', 'Compara un par', 'Comparer une paire', 'Ein Paar vergleichen', 'Confronta una coppia', 'Compare um par', 'ペアを比較')),
     ('Your tricky pairs', ('Jouw lastige paren', 'Tus pares difíciles', 'Tes paires difficiles', 'Deine schwierigen Paare', 'Le tue coppie difficili', 'Seus pares difíceis', '苦手なペア')),
     (
         'Pair practice quiz: Eurasian Treecreeper versus Short-toed Treecreeper, with the correct species marked',
@@ -591,7 +617,7 @@ EXTRA_ENTRIES: list[tuple[str, tuple[str, ...]]] = [
     ('Track your progress', ('Volg je voortgang', 'Sigue tu progreso', 'Suis tes progrès', 'Verfolge deinen Fortschritt', 'Segui i tuoi progressi', 'Acompanhe seu progresso', '進歩を記録する')),
     # Home page screenshots: alt texts.
     (
-        'Motmot quiz: a photo of a Trinidad Motmot, with Lesson’s Motmot marked as the wrong answer and Trinidad Motmot as the correct one',
+        'Motmot quiz: a photo of a Whooping Motmot, with Trinidad Motmot marked as the wrong answer and Whooping Motmot as the correct one',
         (
             'Motmot-quiz: een foto van een motmot, met één fout antwoord en het juiste antwoord gemarkeerd',
             'Quiz de Motmot: una foto de un momoto, con una respuesta incorrecta y la respuesta correcta marcadas',

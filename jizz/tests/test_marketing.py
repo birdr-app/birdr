@@ -274,6 +274,12 @@ class MarketingPagesTests(TestCase):
                 self.assertIn('<title>', html)
 
         how = self.client.get('/site/how-it-works/').content.decode()
+        # Play together: multiplayer and shared quizzes, with the lobby screenshot
+        self.assertIn('id="play-together"', how)
+        self.assertIn('/images/motmot/screen-lobby.webp', how)
+        self.assertEqual(self.client.get('/images/motmot/screen-lobby.webp').status_code, 200)
+        # The CTA already goes to /play, so no second browser link beside it
+        self.assertNotIn('</a>\n    <a class="web-link" href="/play">', how)
         self.assertRegex(how, r'href="/site/how-it-works/"[^>]*aria-current="page"')
         self.assertNotRegex(how, r'href="/site/birds/"[^>]*aria-current="page"')
         self.assertIn('Beginner', how)
@@ -293,20 +299,21 @@ class MarketingPagesTests(TestCase):
         tricky = self.client.get('/site/my-tricky-birds/').content.decode()
         self.assertNotIn('Most missed species', tricky)
         self.assertNotIn('Confusing pairs', tricky)
-        self.assertIn('/images/birdr-tricky-birds.png', tricky)
-        self.assertIn('/images/birdr-tricky-practice.png', tricky)
-        self.assertIn('/images/birdr-tricky-results.png', tricky)
+        self.assertIn('/images/motmot/screen-tricky.webp', tricky)
+        self.assertIn('/images/motmot/screen-tricky-pairs.webp', tricky)
+        self.assertIn('/images/motmot/screen-tricky-comparison.webp', tricky)
+        self.assertNotIn('/images/birdr-tricky-', tricky)
+        self.assertIn('Your tricky birds', tricky)
         self.assertIn('Your tricky pairs', tricky)
-        self.assertIn('Practise a pair', tricky)
-        self.assertIn('See when a pair is fixed', tricky)
+        self.assertIn('Compare a pair', tricky)
         for path in (
-            '/images/birdr-tricky-birds.png',
-            '/images/birdr-tricky-practice.png',
-            '/images/birdr-tricky-results.png',
+            '/images/motmot/screen-tricky.webp',
+            '/images/motmot/screen-tricky-pairs.webp',
+            '/images/motmot/screen-tricky-comparison.webp',
         ):
             shot = self.client.get(path)
             self.assertEqual(shot.status_code, 200, path)
-            self.assertEqual(shot['Content-Type'], 'image/png')
+            self.assertEqual(shot['Content-Type'], 'image/webp')
 
         flocks = self.client.get('/site/flocks/').content.decode()
         self.assertIn('Flocks: quizzes for bird clubs', flocks)

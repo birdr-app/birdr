@@ -1,4 +1,5 @@
 {% extends "marketing/base.html" %}
+{% block extra_head %}{% if levels %}{% include "marketing/mockups/_styles.html" %}{% endif %}{% endblock %}
 {% block content %}
 <section class="hero{% if mascot %} has-mascot{% endif %}">
   {% if mascot %}<img class="tody hero-mascot" src="{{ mascot.src }}" width="{{ mascot.width }}" height="{{ mascot.height }}" alt="">{% endif %}
@@ -10,7 +11,7 @@
   </div>
   <p>
     <a class="btn" href="{{ cta_href }}">{{ cta_label }}</a>
-    <a class="web-link" href="/play">{% mt "Play in the browser" %}</a>
+    {% if cta_href != '/play' %}<a class="web-link" href="/play">{% mt "Play in the browser" %}</a>{% endif %}
   </p>
 </section>
 {% if screenshots %}
@@ -59,6 +60,20 @@
       </dl>
     </aside>
     {% endif %}
+  </div>
+  <div class="features">
+  <article class="feature tint-brow" id="play-together">
+    <div class="feature-text">
+      <p class="kicker">{% mt "Multiplayer and shared quizzes" %}</p>
+      <h3 class="feature-title">{% mt "Play together" %}</h3>
+      <p><strong>{% mt "Multiplayer" %}.</strong> {% mt "A live quiz for two or more players. Faster correct answers score more points—great for a desk duel or a club night." %}</p>
+      <p><strong>{% mt "Shared games" %}.</strong> {% mt "Invite friends to play the very same quiz, each on their own time. Everyone has 3 days—or whatever limit you set—and then you compare scores." %}</p>
+      <p>{% mt "Friends join with the game link, a WhatsApp invite or by scanning the QR code in the lobby." %}</p>
+    </div>
+    <div class="feature-art">
+      {% mt "The Motmot game lobby: the game link, a QR code to join, and four players ready to start" as alt %}{% include "marketing/mockups/_shot.html" with shot="lobby" alt=alt %}
+    </div>
+  </article>
   </div>
 </section>
 {% endif %}

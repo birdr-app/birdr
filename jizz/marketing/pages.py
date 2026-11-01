@@ -334,34 +334,31 @@ INTENT_PAGES = {
         ],
         'screenshots': [
             {
-                'src': '/images/birdr-tricky-birds.png',
-                'width': 456,
-                'height': 1024,
+                'src': '/images/motmot/screen-tricky.webp',
+                'width': 600,
+                'height': 1304,
+                'alt': 'My Tricky Birds: the species you often get wrong, each with a practice button',
+                'caption': 'Your tricky birds',
+            },
+            {
+                'src': '/images/motmot/screen-tricky-pairs.webp',
+                'width': 600,
+                'height': 1304,
                 'alt': (
-                    'My Tricky Birds in the app: a list of lookalike pairs for the '
-                    'Netherlands, with Practice buttons and FIXED badges'
+                    'My Tricky Birds, Pairs tab: lookalike pairs you mix up in the Netherlands, '
+                    'such as Tundra Swan and Whooper Swan, each with a Practice button'
                 ),
                 'caption': 'Your tricky pairs',
             },
             {
-                'src': '/images/birdr-tricky-practice.png',
-                'width': 456,
-                'height': 1024,
+                'src': '/images/motmot/screen-tricky-comparison.webp',
+                'width': 600,
+                'height': 1304,
                 'alt': (
-                    'Pair practice quiz: Eurasian Treecreeper versus Short-toed '
-                    'Treecreeper, with the correct species marked'
+                    'Comparison of Tundra Swan and Whooper Swan: identification tips on bill '
+                    'pattern, size, head shape and neck length'
                 ),
-                'caption': 'Practise a pair',
-            },
-            {
-                'src': '/images/birdr-tricky-results.png',
-                'width': 456,
-                'height': 1024,
-                'alt': (
-                    'Pair practice results: 18 of 20 correct, and the treecreepers '
-                    'no longer seem confusing'
-                ),
-                'caption': 'See when a pair is fixed',
+                'caption': 'Compare a pair',
             },
         ],
     },
