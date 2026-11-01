@@ -35,6 +35,9 @@
   {% if bing_site_verification %}
   <meta name="msvalidate.01" content="{{ bing_site_verification }}">
   {% endif %}
+  {% if yandex_verification %}
+  <meta name="yandex-verification" content="{{ yandex_verification }}">
+  {% endif %}
   {% if noindex %}
   <meta name="robots" content="noindex, nofollow">
   {% endif %}

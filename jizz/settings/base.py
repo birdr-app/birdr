@@ -485,9 +485,14 @@ MARKETING_URL = os.environ.get('MARKETING_URL', 'https://motmot.club')
 # Marketing pages requested on these hosts are redirected to MARKETING_URL, so Google
 # indexes one host: the old birdr.pro and the www variant of motmot.club.
 MARKETING_REDIRECT_HOSTS = ('birdr.pro', 'www.birdr.pro', 'www.motmot.club')
-# Optional Search Console / Bing verification meta tags (leave empty until you have a token).
+# Optional Search Console / Bing / Yandex verification meta tags (leave empty until you have a token).
 GOOGLE_SITE_VERIFICATION = os.environ.get('GOOGLE_SITE_VERIFICATION', '')
 BING_SITE_VERIFICATION = os.environ.get('BING_SITE_VERIFICATION', '')
+YANDEX_VERIFICATION = os.environ.get('YANDEX_VERIFICATION', '')
+# IndexNow tells Bing, Yandex, Seznam, Naver and Yep about new and changed pages
+# (manage.py indexnow_submit). The key is public by design: nginx serves it from
+# app/public/<key>.txt at the site root, which lets it vouch for every URL there.
+INDEXNOW_KEY = os.environ.get('INDEXNOW_KEY', '8e743f8dc9801973f11d858d59a58d74')
 
 # Optional MaxMind GeoLite2-Country.mmdb for offline IP geolocation (staff usage dashboard).
 # When unset, staff IP lookup falls back to ip-api.com for public addresses.

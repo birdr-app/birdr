@@ -718,6 +718,7 @@ def base_context(request, *, title: str, description: str, path: str, breadcrumb
         'breadcrumbs': crumbs,
         'google_site_verification': getattr(settings, 'GOOGLE_SITE_VERIFICATION', '') or '',
         'bing_site_verification': getattr(settings, 'BING_SITE_VERIFICATION', '') or '',
+        'yandex_verification': getattr(settings, 'YANDEX_VERIFICATION', '') or '',
         'testimonials': translate_copy(TESTIMONIALS),
         'faq': translate_copy(FAQ),
         'home_url': localize_path(SITE_HOME, locale),

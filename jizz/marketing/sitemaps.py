@@ -67,8 +67,7 @@ def sitemap_index(request):
     return _xml(_index(locs))
 
 
-def sitemap_pages(request):
-    origin = canonical_origin(request)
+def pages_paths() -> list[str]:
     paths = [
         '/site/',
         '/site/birds/',
@@ -88,26 +87,21 @@ def sitemap_pages(request):
         reverse('marketing-update', kwargs={'pk': pk})
         for pk in Update.objects.filter(published=True).values_list('pk', flat=True)
     )
-    return _xml(_urlset(paths, origin))
+    return paths
 
 
-def sitemap_countries(request):
-    origin = canonical_origin(request)
-    paths = [row['url'] for row in _indexable_countries()]
-    return _xml(_urlset(paths, origin))
+def countries_paths() -> list[str]:
+    return [row['url'] for row in _indexable_countries()]
 
 
-def sitemap_birds(request):
-    origin = canonical_origin(request)
-    paths = [
+def birds_paths() -> list[str]:
+    return [
         reverse('marketing-bird', kwargs={'slug': slug})
         for slug in public_species_qs().exclude(slug='').values_list('slug', flat=True)
     ]
-    return _xml(_urlset(paths, origin))
 
 
-def sitemap_compare(request):
-    origin = canonical_origin(request)
+def compare_paths() -> list[str]:
     paths = []
     seen = set()
     comparisons = SpeciesComparison.objects.filter(
@@ -125,4 +119,38 @@ def sitemap_compare(request):
             continue
         seen.add(pair)
         paths.append(reverse('marketing-compare', kwargs={'pair': pair}))
-    return _xml(_urlset(paths, origin))
+    return paths
+
+
+# Each sitemap section, for the sitemap views and for IndexNow submissions.
+SECTIONS = {
+    'pages': pages_paths,
+    'countries': countries_paths,
+    'birds': birds_paths,
+    'compare': compare_paths,
+}
+
+
+def localized_urls(paths: list[str], origin: str) -> list[str]:
+    """Every locale's absolute URL for each path, as the sitemaps list them."""
+    return [
+        origin + localize_path(path, locale)
+        for path in paths
+        for locale in MARKETING_LOCALES
+    ]
+
+
+def sitemap_pages(request):
+    return _xml(_urlset(pages_paths(), canonical_origin(request)))
+
+
+def sitemap_countries(request):
+    return _xml(_urlset(countries_paths(), canonical_origin(request)))
+
+
+def sitemap_birds(request):
+    return _xml(_urlset(birds_paths(), canonical_origin(request)))
+
+
+def sitemap_compare(request):
+    return _xml(_urlset(compare_paths(), canonical_origin(request)))

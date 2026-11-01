@@ -1232,13 +1232,24 @@ class MarketingPagesTests(TestCase):
         self.assertNotIn('Eurasian Sparrowhawk', compare)
         self.assertNotIn('Northern Goshawk', compare)
 
-    @override_settings(GOOGLE_SITE_VERIFICATION='google-token', BING_SITE_VERIFICATION='bing-token')
+    @override_settings(
+        GOOGLE_SITE_VERIFICATION='google-token',
+        BING_SITE_VERIFICATION='bing-token',
+        YANDEX_VERIFICATION='yandex-token',
+    )
     def test_verification_meta(self):
         html = self.client.get('/site/').content.decode()
         self.assertIn('google-site-verification', html)
         self.assertIn('google-token', html)
         self.assertIn('msvalidate.01', html)
         self.assertIn('bing-token', html)
+        self.assertIn('yandex-verification', html)
+        self.assertIn('yandex-token', html)
+
+    def test_indexnow_key_file_is_in_the_spa_root(self):
+        # nginx serves app/public at the site root; IndexNow fetches the key from there.
+        key_file = Path(__file__).resolve().parents[2] / 'app' / 'public' / f'{settings.INDEXNOW_KEY}.txt'
+        self.assertEqual(key_file.read_text().strip(), settings.INDEXNOW_KEY)
 
 
 class MarketingCmsTests(TestCase):
@@ -1649,3 +1660,29 @@ class MarketingUpdatesTests(TestCase):
         self.assertIn('https://motmot.club/site/updates/', body)
         self.assertIn(f'https://motmot.club/site/updates/{self.update.pk}/', body)
         self.assertNotIn(f'/site/updates/{self.draft.pk}/', body)
+
+
+class IndexNowSubmitTests(TestCase):
+    def test_submits_every_locale_of_the_pages(self):
+        from io import StringIO
+
+        from django.core.management import call_command
+
+        with patch('jizz.management.commands.indexnow_submit.requests.post') as post:
+            post.return_value.status_code = 202
+            call_command('indexnow_submit', '--section', 'pages', stdout=StringIO())
+        payload = post.call_args.kwargs['json']
+        self.assertEqual(payload['host'], 'motmot.club')
+        self.assertEqual(payload['key'], settings.INDEXNOW_KEY)
+        self.assertEqual(payload['keyLocation'], f'https://motmot.club/{settings.INDEXNOW_KEY}.txt')
+        self.assertIn('https://motmot.club/site/', payload['urlList'])
+        self.assertIn('https://motmot.club/nl/site/', payload['urlList'])
+
+    def test_dry_run_sends_nothing(self):
+        from io import StringIO
+
+        from django.core.management import call_command
+
+        with patch('jizz.management.commands.indexnow_submit.requests.post') as post:
+            call_command('indexnow_submit', '--dry-run', stdout=StringIO())
+        post.assert_not_called()
