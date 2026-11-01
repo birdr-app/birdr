@@ -1,0 +1,8 @@
+{% load mt %}<dialog id="support-dialog" class="login-dialog support-dialog" aria-labelledby="support-dialog-title">
+  <div class="login-dialog-panel support-dialog-panel">
+    <button type="button" class="login-dialog-close js-close-support" aria-label="{% mt "Close" %}">&times;</button>
+    <h2 id="support-dialog-title">{% mt "Support Motmot" %}</h2>
+    {# Loaded when the dialog opens, so pages don't pull in Buy Me a Coffee up front #}
+    <iframe class="support-frame" data-src="https://buymeacoffee.com/widget/page/loekd?color=%23A85B1B" title="{% mt "Buy me a coffee" %}"></iframe>
+  </div>
+</dialog>

@@ -106,8 +106,11 @@ class MarketingPagesTests(TestCase):
         self.assertIn('Read the FAQ', html)
         self.assertIn('Support Motmot', html)
         self.assertIn('https://buymeacoffee.com/loekd', html)
-        self.assertEqual(html.count('class="btn btn-support"'), 1)
-        self.assertIn('https://buymeacoffee.com/widget/page/loekd', html)
+        # Hero and support box buttons both open the Buy Me a Coffee dialog
+        self.assertEqual(html.count('class="btn btn-support"'), 2)
+        self.assertIn('id="support-dialog"', html)
+        self.assertIn('data-src="https://buymeacoffee.com/widget/page/loekd', html)
+        self.assertNotIn('<iframe src="https://buymeacoffee.com', html)
         self.assertIn('id="support-birdr"', html)
         self.assertIn('There is no funding behind it right now', html)
         self.assertIn('Donating is one way', html)

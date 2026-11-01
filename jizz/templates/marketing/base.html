@@ -911,14 +911,13 @@
       .support-home { grid-template-columns: minmax(0, 1fr) 360px; }
       .support-home .support-form { grid-column: 2; grid-row: 1 / span 10; }
     }
-    .support-form iframe {
-      display: block;
-      width: 100%;
-      height: 500px;
-      border: 0;
-      border-radius: var(--radius-lg);
-      background: #fff;
+    .support-form {
+      display: grid;
+      justify-items: center;
+      gap: 14px;
+      padding: 8px 0 4px;
     }
+    .support-tody { width: 150px; height: auto; }
     .support-home h2 {
       font-family: var(--font);
       font-size: 1.7rem;
@@ -1377,6 +1376,29 @@
       cursor: pointer;
     }
     .login-dialog-close:hover { background: var(--birdr-50); }
+    .support-dialog {
+      width: min(460px, calc(100vw - 24px));
+      max-height: calc(100dvh - 24px);
+      overflow: hidden;
+    }
+    .support-dialog-panel { padding: 48px 12px 12px; }
+    /* The widget shows its own title; keep ours for screen readers only */
+    .support-dialog-panel h2 {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    .support-frame {
+      display: block;
+      width: 100%;
+      height: min(820px, calc(100dvh - 96px));
+      border: 0;
+      border-radius: 14px;
+      background: #fff;
+    }
     .login-form p { margin: 0 0 12px; }
     .login-form label { display: block; font-size: 0.85rem; font-weight: 600; margin: 0 0 4px; }
     .login-form input {
@@ -1651,6 +1673,7 @@
     </nav>
     {% endif %}
     {% include "marketing/_login_modal.html" %}
+    {% include "marketing/_support_dialog.html" %}
     {% block content %}{% endblock %}
   </main>
   <footer class="site">
@@ -1687,7 +1710,7 @@
           <li><a href="{{ '/site/updates/'|mpath }}">{% mt "Updates" %}</a></li>
           <li><a href="{{ '/site/newsletter/'|mpath }}">{% mt "Newsletter example" %}</a></li>
           <li><a href="https://www.facebook.com/groups/birdrcommunity" target="_blank" rel="noopener noreferrer">{% mt "Facebook group" %}</a></li>
-          <li><a href="https://buymeacoffee.com/loekd" target="_blank" rel="noopener noreferrer">{% mt "Buy me a coffee" %}</a></li>
+          <li><a href="https://buymeacoffee.com/loekd" target="_blank" rel="noopener noreferrer" data-support-open aria-haspopup="dialog" aria-controls="support-dialog">{% mt "Buy me a coffee" %}</a></li>
           <li><a href="https://github.com/birdr-app/birdr/issues" target="_blank" rel="noopener noreferrer">{% mt "GitHub issues" %}</a></li>
           {% for page in cms_nav_pages %}
           <li><a href="{{ page.get_absolute_url|mpath }}">{{ page.nav_text }}</a></li>
@@ -1699,6 +1722,25 @@
     </div>
   </footer>
   {% include "marketing/_cms_editor.html" %}
+  <script>
+  (function () {
+    // Buy Me a Coffee opens in a dialog; without it the links just go to buymeacoffee.com
+    var dialog = document.getElementById('support-dialog');
+    if (!dialog || !dialog.showModal) return;
+    var frame = dialog.querySelector('iframe');
+    document.addEventListener('click', function (e) {
+      var opener = e.target.closest('[data-support-open]');
+      if (!opener) return;
+      e.preventDefault();
+      if (!frame.getAttribute('src')) frame.setAttribute('src', frame.dataset.src);
+      dialog.showModal();
+    });
+    dialog.querySelector('.js-close-support').addEventListener('click', function () { dialog.close(); });
+    dialog.addEventListener('click', function (e) {
+      if (e.target === dialog) dialog.close();
+    });
+  })();
+  </script>
   <script>
   (function () {
     var login = document.getElementById('nav-login');
