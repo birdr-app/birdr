@@ -447,6 +447,20 @@ _ENTRIES: list[tuple[str, tuple[str, ...]]] = [
             '2人以上のライブクイズ。正解が早いほど高得点。机上の勝負やクラブの集まりにも。',
         ),
     ),
+    ('Shared games', ('Gedeelde spellen', 'Partidas compartidas', 'Parties partagées', 'Geteilte Spiele', 'Partite condivise', 'Jogos compartilhados', 'シェアゲーム')),
+    (
+        'Invite friends to play the very same quiz, each on their own time. Everyone has 3 days—or whatever limit you set—and then you compare scores.',
+        (
+            'Nodig vrienden uit om precies dezelfde quiz te spelen, ieder wanneer het uitkomt. Iedereen heeft 3 dagen—of de termijn die jij kiest—en daarna vergelijk je de scores.',
+            'Invita a tus amigos a jugar exactamente el mismo quiz, cada uno cuando quiera. Todos tienen 3 días—o el plazo que elijas—y luego comparáis puntuaciones.',
+            'Invite tes amis à jouer exactement le même quiz, chacun à son rythme. Tout le monde a 3 jours—ou le délai que tu choisis—puis vous comparez les scores.',
+            'Lade Freunde ein, genau dasselbe Quiz zu spielen, jeder wann er will. Alle haben 3 Tage—oder die Frist, die du festlegst—und dann vergleicht ihr die Punkte.',
+            'Invita gli amici a giocare lo stesso identico quiz, ognuno quando vuole. Tutti hanno 3 giorni—o il limite che scegli—e poi confrontate i punteggi.',
+            'Convide amigos para jogar exatamente o mesmo quiz, cada um no seu tempo. Todos têm 3 dias—ou o prazo que você definir—e depois vocês comparam as pontuações.',
+            '友達を招待して、まったく同じクイズをそれぞれ好きな時にプレイ。期限は3日間(または設定した期間)で、終わったらスコアを比べましょう。',
+        ),
+    ),
+    ('Share a quiz', ('Deel een quiz', 'Compartir un quiz', 'Partager un quiz', 'Quiz teilen', 'Condividi un quiz', 'Compartilhar um quiz', 'クイズをシェア')),
     ('High scores &amp; checklist', ('High scores &amp; checklist', 'Puntuaciones y lista', 'Scores et liste', 'Highscores &amp; Checkliste', 'Punteggi e lista', 'Recordes e lista', 'ハイスコアとチェックリスト')),
     (
         'See how you rank after a quiz, and which birds you have named correctly in your country—plus the ones you still miss.',
