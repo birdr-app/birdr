@@ -139,7 +139,7 @@ export function SurvivalResultPage() {
                     <FormattedMessage
                       id="survival_you_answered"
                       defaultMessage="You answered {name}"
-                      values={{ name: missed.answer.name }}
+                      values={{ name: missed.answer.name_translated || missed.answer.name }}
                     />
                   ) : null}
                 </Text>

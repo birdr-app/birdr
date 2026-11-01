@@ -136,7 +136,7 @@ export function SurvivalResultScreen() {
             </Text>
             <Text style={styles.missedName}>{missedName}</Text>
             {missed?.answer && !missed.timed_out ? (
-              <Text style={styles.missedAnswer}>{t('survival_you_answered', { name: missed.answer.name })}</Text>
+              <Text style={styles.missedAnswer}>{t('survival_you_answered', { name: missed.answer.name_translated || missed.answer.name })}</Text>
             ) : null}
           </View>
         ) : null}

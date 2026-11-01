@@ -12,6 +12,7 @@ import { SpeedChallengeTimer } from '../../components/speed-challenge-timer';
 import { SurvivalMilestone, type SurvivalMilestoneKind } from '../../components/survival-milestone';
 import { PLAY_IMAGE_STAGE_HEIGHT, ZoomablePlayImage } from '../../components/zoomable-play-image';
 import { SpeciesName } from '../../components/species-name';
+import { ComparisonButton } from '../../components/comparison-button';
 import { Answer, Question, Species } from '../../core/app-context';
 import { isStalePlayQuestion } from '../../core/apply-incoming-question';
 import { currentPlayMediaItem } from '../../core/question-media-index';
@@ -23,8 +24,6 @@ import { Page } from '../../shared/components/layout';
 import { trackFeature } from '../../analytics/usage';
 
 const SURVIVAL_SPEED_SECONDS = 15;
-/** Extra time on the failed question so the player can see the correct answer. */
-const FAILED_REVIEW_MS = 1600;
 
 function HeaderStat({
   icon,
@@ -76,7 +75,6 @@ export function SurvivalPlayPage() {
   const runOverRef = useRef(false);
   const pbCelebratedRef = useRef(false);
   const recordCelebratedRef = useRef(false);
-  const leaveTimerRef = useRef<number | null>(null);
 
   const goToResult = useCallback(() => {
     navigate('/survival/result', { replace: true });
@@ -85,13 +83,6 @@ export function SurvivalPlayPage() {
   useEffect(() => {
     if (!session) navigate('/survival', { replace: true });
   }, [session, navigate]);
-
-  useEffect(
-    () => () => {
-      if (leaveTimerRef.current) window.clearTimeout(leaveTimerRef.current);
-    },
-    [],
-  );
 
   const fetchQuestion = useCallback(async (): Promise<Question | null | undefined> => {
     const generation = ++questionFetchGenRef.current;
@@ -153,10 +144,8 @@ export function SurvivalPlayPage() {
     setShowFeedback(false);
     setSubmitting(false);
     submittingRef.current = false;
-    if (runOverRef.current) {
-      leaveTimerRef.current = window.setTimeout(goToResult, FAILED_REVIEW_MS);
-      return;
-    }
+    // After the run-ending answer, stay so the player can study it; Continue opens the result.
+    if (runOverRef.current) return;
     const pending = pendingMilestoneRef.current;
     pendingMilestoneRef.current = null;
     if (pending) {
@@ -164,7 +153,7 @@ export function SurvivalPlayPage() {
       return;
     }
     void loadNextQuestion();
-  }, [goToResult, loadNextQuestion]);
+  }, [loadNextQuestion]);
 
   const handleMilestoneComplete = useCallback(() => {
     setMilestone(null);
@@ -377,9 +366,20 @@ export function SurvivalPlayPage() {
         ) : null}
 
         {runOver && !showFeedback ? (
-          <Button colorPalette="primary" width="full" mb={5} onClick={goToResult}>
+          <Button colorPalette="primary" width="full" mb={3} onClick={goToResult}>
             <FormattedMessage id="continue" defaultMessage="Continue" />
           </Button>
+        ) : null}
+        {runOver && !showFeedback && response?.species && response.answer && response.species.id !== response.answer.id ? (
+          <Box mb={5}>
+            <ComparisonButton
+              species1Id={response.species.id}
+              species2Id={response.answer.id}
+              species1Name={response.species.name_translated || response.species.name}
+              species2Name={response.answer.name_translated || response.answer.name}
+              buttonLabel={<FormattedMessage id="view_comparison" defaultMessage="Comparison" />}
+            />
+          </Box>
         ) : null}
       </Page.Body>
       {milestone ? (

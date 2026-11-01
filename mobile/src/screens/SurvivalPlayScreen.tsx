@@ -32,6 +32,7 @@ import {
   normalizeChecklistMissed,
 } from '../components/AnswerFeedback';
 import { SpeciesViewButton } from '../components/SpeciesViewButton';
+import { ComparisonButton } from '../components/ComparisonButton';
 import { QuestionMediaView } from '../components/QuestionMediaView';
 import { QuestionLoadingFeather } from '../components/QuestionLoadingFeather';
 import { SpeedChallengeTimer } from '../components/SpeedChallengeTimer';
@@ -46,8 +47,6 @@ const SURVIVAL_SECONDS = 15;
 const NEXT_DELAY_MS = 1100;
 const NEXT_DELAY_CELEBRATION_MS = 2200;
 const NEXT_DELAY_RECORD_MS = 3200;
-/** Pause after the run-ending answer so the player sees which species it was. */
-const RESULT_DELAY_MS = 2200;
 
 function displayName(s: QuestionOption, lang: string): string {
   if (lang === 'la') return s.name_latin || s.name || '';
@@ -217,8 +216,8 @@ export function SurvivalPlayScreen() {
           void fetchQuestion();
         }, delay);
       } else {
+        // Stay on the answer so the player can study it; Continue opens the result.
         setRunOver(true);
-        schedule(goResult, RESULT_DELAY_MS);
       }
     } catch {
       // Without a confirmed answer the run can't continue; the result screen reads the server state.
@@ -427,6 +426,14 @@ export function SurvivalPlayScreen() {
                   <Text style={styles.optionButtonText}>{displayName(opt, lang)}</Text>
                 </TouchableOpacity>
               ))}
+          {answerResult && !answerResult.correct && answerResult.correctSpecies && answerResult.userAnswer ? (
+            <ComparisonButton
+              species1Id={answerResult.correctSpecies.id}
+              species2Id={answerResult.userAnswer.id}
+              species1Name={displayName(answerResult.correctSpecies, lang)}
+              species2Name={displayName(answerResult.userAnswer, lang)}
+            />
+          ) : null}
         </View>
         {!runOver && !advancing ? <FlagMediaLink onPress={openFlagModal} label={t('this_seems_wrong')} /> : null}
       </ScrollView>

@@ -1,0 +1,95 @@
+{
+  "order": ["quiz-motmot", "league", "journey", "tricky", "survival", "new-game", "home", "checklist"],
+  "tody": {
+    "quiz-motmot": "tody-correct",
+    "league": "tody-champion",
+    "journey": "tody-explorer",
+    "tricky": "tody-listening",
+    "survival": "tody-stressed",
+    "new-game": "tody-hello",
+    "home": "tody-flock",
+    "checklist": "tody-birding"
+  },
+  "captions": {
+    "en": {
+      "quiz-motmot": ["Test your bird ID", "Name birds from photos, sounds and videos"],
+      "league": ["Play the national league", "One quiz a day, with the whole country"],
+      "journey": ["Become a top birder", "Level up through your country's birds"],
+      "tricky": ["Master your tricky birds", "See which birds you mix up, then practise them"],
+      "survival": ["How long can you survive?", "One wrong answer and you're out"],
+      "new-game": ["Play your way", "Pick your level, media and bird group"],
+      "home": ["Play with friends", "Weekly flock challenges with your birding friends"],
+      "checklist": ["Build your checklist", "Every bird you identify is ticked off"]
+    },
+    "nl": {
+      "quiz-motmot": ["Test je vogelkennis", "Herken vogels op foto, geluid en video"],
+      "league": ["Speel de nationale competitie", "Eén quiz per dag, met het hele land"],
+      "journey": ["Word een topvogelaar", "Stijg in level met de vogels van jouw land"],
+      "tricky": ["Beheers je lastige vogels", "Zie welke vogels je verwart en oefen ze"],
+      "survival": ["Hoe lang hou jij het vol?", "Eén fout antwoord en je ligt eruit"],
+      "new-game": ["Speel zoals jij wilt", "Kies je level, media en vogelgroep"],
+      "home": ["Speel met vrienden", "Wekelijkse groepsuitdagingen met je vogelvrienden"],
+      "checklist": ["Bouw je soortenlijst", "Elke vogel die je herkent, wordt afgevinkt"]
+    },
+    "es": {
+      "quiz-motmot": ["Pon a prueba tu ojo", "Identifica aves por fotos, sonidos y vídeos"],
+      "league": ["Juega la liga nacional", "Un quiz al día, con todo el país"],
+      "journey": ["Conviértete en experto", "Sube de nivel con las aves de tu país"],
+      "tricky": ["Domina tus aves difíciles", "Mira qué aves confundes y practícalas"],
+      "survival": ["¿Cuánto aguantarás?", "Una respuesta mal y quedas fuera"],
+      "new-game": ["Juega a tu manera", "Elige nivel, medios y grupo de aves"],
+      "home": ["Juega con amigos", "Retos semanales en grupo con tus amigos pajareros"],
+      "checklist": ["Crea tu lista de especies", "Cada ave que identificas queda marcada"]
+    },
+    "fr": {
+      "quiz-motmot": ["Teste ton œil d’ornitho", "Reconnais les oiseaux en photo, son et vidéo"],
+      "league": ["Joue la ligue nationale", "Un quiz par jour, avec tout le pays"],
+      "journey": ["Deviens un pro", "Monte de niveau avec les oiseaux de ton pays"],
+      "tricky": ["Maîtrise tes oiseaux pièges", "Vois ceux que tu confonds et entraîne-toi"],
+      "survival": ["Combien de temps tiendras-tu ?", "Une seule erreur et c’est fini"],
+      "new-game": ["Joue à ta façon", "Choisis ton niveau, tes médias et ton groupe"],
+      "home": ["Joue avec tes amis", "Défis hebdo en groupe avec tes amis ornithos"],
+      "checklist": ["Construis ta liste", "Chaque oiseau reconnu est coché"]
+    },
+    "de": {
+      "quiz-motmot": ["Teste dein Vogelwissen", "Erkenne Vögel auf Fotos, an Stimmen und in Videos"],
+      "league": ["Spiel die nationale Liga", "Ein Quiz am Tag, mit dem ganzen Land"],
+      "journey": ["Werde Top-Birder", "Steig auf mit den Vögeln deines Landes"],
+      "tricky": ["Meistere schwierige Vögel", "Sieh, welche du verwechselst, und übe sie"],
+      "survival": ["Wie lange hältst du durch?", "Eine falsche Antwort und du bist raus"],
+      "new-game": ["Spiel, wie du willst", "Wähle Level, Medien und Vogelgruppe"],
+      "home": ["Spiel mit Freunden", "Wöchentliche Gruppen-Challenges mit Birding-Freunden"],
+      "checklist": ["Bau deine Artenliste", "Jeder erkannte Vogel wird abgehakt"]
+    },
+    "it": {
+      "quiz-motmot": ["Metti alla prova il tuo occhio", "Riconosci gli uccelli da foto, suoni e video"],
+      "league": ["Gioca la lega nazionale", "Un quiz al giorno, con tutto il paese"],
+      "journey": ["Diventa un top birder", "Sali di livello con gli uccelli del tuo paese"],
+      "tricky": ["Domina gli uccelli difficili", "Scopri quali confondi ed esercitati"],
+      "survival": ["Quanto resisti?", "Una risposta sbagliata e sei fuori"],
+      "new-game": ["Gioca a modo tuo", "Scegli livello, media e gruppo di uccelli"],
+      "home": ["Gioca con gli amici", "Sfide settimanali di gruppo con i tuoi amici birder"],
+      "checklist": ["Crea la tua lista", "Ogni uccello che riconosci viene spuntato"]
+    },
+    "pt-BR": {
+      "quiz-motmot": ["Teste seu olho de birder", "Identifique aves por fotos, sons e vídeos"],
+      "league": ["Jogue a liga nacional", "Um quiz por dia, com o país inteiro"],
+      "journey": ["Vire um top birder", "Suba de nível com as aves do seu país"],
+      "tricky": ["Domine as aves difíceis", "Veja quais você confunde e pratique"],
+      "survival": ["Quanto tempo você aguenta?", "Uma resposta errada e você está fora"],
+      "new-game": ["Jogue do seu jeito", "Escolha nível, mídia e grupo de aves"],
+      "home": ["Jogue com amigos", "Desafios semanais em grupo com seus amigos"],
+      "checklist": ["Monte sua lista", "Cada ave que você identifica é marcada"]
+    },
+    "ja": {
+      "quiz-motmot": ["鳥の識別力をテスト", "写真・鳴き声・動画で鳥を当てよう"],
+      "league": ["全国リーグに挑戦", "1日1回のクイズを、国じゅうのみんなと"],
+      "journey": ["トップバーダーを目指そう", "自分の国の鳥でレベルアップ"],
+      "tricky": ["苦手な鳥を克服", "間違えやすい鳥を見つけて練習しよう"],
+      "survival": ["どこまで続けられる？", "1問でも間違えたら終わり"],
+      "new-game": ["自分のペースで", "レベル・メディア・鳥のグループを選べる"],
+      "home": ["友だちと遊ぼう", "バード仲間と毎週グループで対戦"],
+      "checklist": ["自分のリストを作ろう", "識別した鳥がどんどんチェックされる"]
+    }
+  }
+}
