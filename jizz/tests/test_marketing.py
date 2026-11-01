@@ -173,6 +173,12 @@ class MarketingPagesTests(TestCase):
         self.assertIn('image/png', icon['Content-Type'])
         favicon = self.client.get('/favicon-32x32.png')
         self.assertEqual(favicon.status_code, 200)
+        # Animated Tody in the menu bar: scans with binoculars, spots something, jumps
+        self.assertIn('class="tody-scan" src="/images/motmot/tody-header-birding.webp"', html)
+        self.assertIn('class="tody-jump" src="/images/motmot/tody-header-correct.webp"', html)
+        for pose in ('birding', 'correct'):
+            response = self.client.get(f'/images/motmot/tody-header-{pose}.webp')
+            self.assertEqual(response.status_code, 200)
         # Google search only shows favicons of at least 48x48
         self.assertIn('sizes="192x192" href="/android-chrome-192x192.png"', html)
         self.assertEqual(self.client.get('/android-chrome-192x192.png').status_code, 200)
