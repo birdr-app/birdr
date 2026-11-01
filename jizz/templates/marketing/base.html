@@ -147,6 +147,25 @@
       height: 2.75rem;
       flex-shrink: 0;
     }
+    /* On a one-row menu bar Tody stands on the bar's bottom edge and pokes up over it */
+    @media (min-width: 961px) {
+      header.site .wrap { padding-bottom: 0; }
+      header.site nav.site { margin-bottom: 10px; }
+      header.site .brand {
+        position: relative;
+        align-self: stretch;
+        box-sizing: border-box;
+        min-height: 4.4rem;
+        padding: 0 0 10px calc(4.4rem + 0.3rem);
+      }
+      header.site .brand-icon {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 4.4rem;
+        height: 4.4rem;
+      }
+    }
     .brand-wordmark {
       display: block;
       height: 1.55rem;
