@@ -262,8 +262,8 @@ if not DEBUG:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email configuration (can be overridden in local.py or production.py)
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'info@birdr.pro')
-SERVER_EMAIL = os.environ.get('SERVER_EMAIL', 'info@birdr.pro')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'Motmot <info@motmot.club>')
+SERVER_EMAIL = os.environ.get('SERVER_EMAIL', 'Motmot <info@motmot.club>')
 
 # Password reset link expiry (seconds; default_token_generator uses this)
 PASSWORD_RESET_TIMEOUT = 86400  # 24 hours
@@ -434,7 +434,6 @@ LOGGING['formatters']['timestamped'] = {
 }
 
 DKIM_KEY = "dkim-key"
-DEFAULT_FROM_EMAIL = "Motmot <info@birdr.pro>"
 CONTACT_EMAIL = "Loek van Gent <hallo@loekvan.gent>"
 
 
