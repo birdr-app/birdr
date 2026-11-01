@@ -95,7 +95,7 @@ export function MarketingHomePage() {
         <Container maxW="1080px" py={3} px={5}>
           <Flex justify="space-between" align="center" gap={4} wrap="wrap">
             <Link href="/" display="inline-flex" alignItems="center" gap={2.5} aria-label="Motmot">
-              <Image src="/images/motmot/tody-icon-128.png" alt="" w="44px" h="44px" borderRadius="12px" />
+              <Image src="/images/motmot/tody-icon-128.png" alt="" w="44px" h="44px" />
               <Image src="/images/motmot/wordmark-ink.svg" alt="Motmot" h="25px" w="auto" />
             </Link>
             <Flex gap={4} wrap="wrap" fontWeight="600" fontSize="sm" align="center">

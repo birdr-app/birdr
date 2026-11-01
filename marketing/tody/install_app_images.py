@@ -9,6 +9,8 @@ from PIL import Image, ImageDraw, ImageFilter
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CUT = os.path.join(ROOT, 'marketing/tody/cutout')
 ICON = os.path.join(ROOT, 'marketing/tody/masters/tody-app-icon.png')
+HEAD = os.path.join(ROOT, 'marketing/tody/masters/tody-head.png')
+SURFACE = (250, 247, 242, 255)
 
 MOODS = {
     'success': 'correct', 'failed': 'wrong', 'stressed': 'stressed', 'waiting': 'thinking',
@@ -40,6 +42,14 @@ def silhouette(img):
 
 
 def icon(size, shape='square'):
+    """square/circle: the app icon on dark green; head: Tody without background; head-surface: on the site's mist."""
+    if shape.startswith('head'):
+        im = Image.open(HEAD).convert('RGBA').resize((size, size), Image.LANCZOS)
+        if shape == 'head-surface':
+            bg = Image.new('RGBA', (size, size), SURFACE)
+            bg.alpha_composite(im)
+            im = bg
+        return im
     im = Image.open(ICON).convert('RGBA').resize((size, size), Image.LANCZOS)
     if shape == 'circle':
         mask = Image.new('L', (size, size), 0)
@@ -77,14 +87,17 @@ for rel, shape in (
     ('app/public/images/badge.png', 'circle'),
     ('app/public/images/logo.png', 'square'),
     ('app/public/images/birdr-icon.png', 'square'),
-    ('app/public/logo192.png', 'square'),
-    ('app/public/logo512.png', 'square'),
-    ('app/public/apple-touch-icon.png', 'square'),
-    ('app/public/favicon-32x32.png', 'square'),
-    ('app/public/favicon-16x16.png', 'square'),
-    ('app/public/android-chrome-192x192.png', 'square'),
-    ('app/public/android-chrome-512x512.png', 'square'),
-    ('app/public/mstile-150x150.png', 'square'),
+    ('app/public/logo192.png', 'head'),
+    ('app/public/logo512.png', 'head'),
+    ('app/public/apple-touch-icon.png', 'head-surface'),
+    ('app/public/favicon-32x32.png', 'head'),
+    ('app/public/favicon-16x16.png', 'head'),
+    ('app/public/android-chrome-192x192.png', 'head'),
+    ('app/public/android-chrome-512x512.png', 'head'),
+    ('app/public/mstile-150x150.png', 'head'),
+    ('app/public/images/motmot/tody-icon-64.png', 'head'),
+    ('app/public/images/motmot/tody-icon-128.png', 'head'),
+    ('app/public/images/motmot/tody-icon-256.png', 'head'),
     ('mobile/assets/birdr-512.png', 'square'),
 ):
     path = os.path.join(ROOT, rel)
@@ -97,5 +110,5 @@ for rel, shape in (
 
 ico = os.path.join(ROOT, 'app/public/favicon.ico')
 if os.path.exists(ico):
-    icon(64).save(ico, sizes=[(16, 16), (32, 32), (48, 48), (64, 64)])
+    icon(64, 'head').save(ico, sizes=[(16, 16), (32, 32), (48, 48), (64, 64)])
     print('icon app/public/favicon.ico')

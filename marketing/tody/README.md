@@ -7,6 +7,8 @@ Motmot design system artifact; the source images also live in the Figma file
 
 - `masters/` — the generated 1024×1024 originals on white, plus `tody-app-icon.png`
   (head and shoulders on #10201B, square; the stores round the corners).
+  `tody-head.png` is the same head without the background, used for the favicons,
+  web app icons and the site header (the apple-touch-icon puts it on #FAF7F2).
 - `cutout/` — the moods with the background removed: PNG (768px on the long side)
   and WebP for the app and the web.
 
