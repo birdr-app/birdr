@@ -581,6 +581,27 @@ def application_json_ld(origin: str, app_store_url: str, play_store_url: str, lo
     ]
 
 
+def site_identity_json_ld(origin: str) -> list[dict]:
+    """WebSite and Organization blocks Google uses for the site name and logo in results."""
+    root = origin + '/'
+    return [
+        {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            'name': SITE_NAME,
+            'alternateName': ['Motmot Bird Quiz', 'motmot.club'],
+            'url': root,
+        },
+        {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            'name': SITE_NAME,
+            'url': root,
+            'logo': origin + '/android-chrome-512x512.png',
+        },
+    ]
+
+
 def faq_json_ld() -> dict:
     items = translate_copy(FAQ)
     return {
@@ -676,6 +697,8 @@ def base_context(request, *, title: str, description: str, path: str, breadcrumb
     if extra_json_ld:
         json_ld.extend(extra_json_ld)
     logical_path = strip_locale_prefix(path) or path
+    if logical_path == SITE_HOME:
+        json_ld.extend(site_identity_json_ld(origin))
     localized = localize_path(logical_path, locale) if logical_path.startswith('/site/') else logical_path
     alts = alternate_paths(logical_path if logical_path.startswith('/site/') else SITE_HOME)
     for row in alts:

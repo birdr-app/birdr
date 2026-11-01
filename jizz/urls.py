@@ -720,7 +720,7 @@ _public = settings.BASE_DIR.parent / 'app' / 'public'
 urlpatterns += [
     re_path(
         r'^(?P<path>(?:favicon\.ico|favicon-16x16\.png|favicon-32x32\.png|'
-        r'apple-touch-icon\.png|logo192\.png|logo512\.png|images/(?:stylish/)?birdr-[\w.-]+\.(?:png|gif|svg)|'
+        r'apple-touch-icon\.png|android-chrome-(?:192x192|512x512)\.png|logo192\.png|logo512\.png|images/(?:stylish/)?birdr-[\w.-]+\.(?:png|gif|svg)|'
         r'images/motmot/[\w-]+\.(?:png|svg|webp)))$',
         serve_static,
         {'document_root': str(_public)},

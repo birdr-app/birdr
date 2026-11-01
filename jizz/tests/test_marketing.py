@@ -95,6 +95,9 @@ class MarketingPagesTests(TestCase):
         self.assertIn('https://motmot.club/site/', html)
         self.assertIn('WebApplication', html)
         self.assertIn('MobileApplication', html)
+        self.assertIn('"@type": "WebSite"', html)
+        self.assertIn('"@type": "Organization"', html)
+        self.assertIn('"url": "https://motmot.club/"', html)
         self.assertNotIn('FAQPage', html)
         self.assertIn('href="/site/community/"', html)
         self.assertIn('href="/site/faq/"', html)
@@ -170,6 +173,10 @@ class MarketingPagesTests(TestCase):
         self.assertIn('image/png', icon['Content-Type'])
         favicon = self.client.get('/favicon-32x32.png')
         self.assertEqual(favicon.status_code, 200)
+        # Google search only shows favicons of at least 48x48
+        self.assertIn('sizes="192x192" href="/android-chrome-192x192.png"', html)
+        self.assertEqual(self.client.get('/android-chrome-192x192.png').status_code, 200)
+        self.assertEqual(self.client.get('/android-chrome-512x512.png').status_code, 200)
 
     def test_motmot_brand_images_are_served(self):
         response = self.client.get('/images/motmot/tody-hello.webp')
