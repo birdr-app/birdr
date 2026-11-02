@@ -3,7 +3,7 @@ from __future__ import annotations
 from django.db.models import Count, Exists, OuterRef, Value
 from django.db.models.fields import BooleanField
 from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from rest_framework import status
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.permissions import AllowAny
@@ -12,7 +12,8 @@ from rest_framework.views import APIView
 
 from jizz.models import Player, Update, UpdateThumbsUp
 from jizz.serializers import UpdateDetailSerializer, UpdateListSerializer
-from jizz.update_emails import mark_email_opened, TRANSPARENT_GIF
+from jizz.update_emails import mark_email_opened, TRANSPARENT_GIF, unsubscribe_by_token
+from jizz.update_i18n import resolve_language
 from jizz.views import UpdatePagination
 
 
@@ -127,3 +128,31 @@ class UpdateEmailOpenTrackingView(APIView):
     def get(self, request, token):
         mark_email_opened(token)
         return HttpResponse(TRANSPARENT_GIF, content_type='image/gif')
+
+
+class UpdateEmailUnsubscribeView(APIView):
+    """Unsubscribe link and List-Unsubscribe target. GET only asks, because mail scanners
+    follow links; POST (the button, or a mail client's one-click request) unsubscribes."""
+    authentication_classes = []
+    permission_classes = [AllowAny]
+
+    def get(self, request, token):
+        return self._page(request, token, done=False)
+
+    def post(self, request, token):
+        return self._page(request, token, done=True)
+
+    def _page(self, request, token, *, done):
+        from jizz.models import UpdateEmailRecipient
+
+        if done:
+            recipient = unsubscribe_by_token(token)
+        else:
+            recipient = UpdateEmailRecipient.objects.filter(tracking_token=token).select_related('user').first()
+        if not recipient:
+            return HttpResponse(status=404)
+        return render(request, 'emails/unsubscribe_page.html', {
+            'done': done,
+            'email': recipient.email,
+            'language': resolve_language(recipient.user),
+        })

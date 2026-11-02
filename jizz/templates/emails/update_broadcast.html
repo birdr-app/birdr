@@ -52,6 +52,7 @@
 </p>
 <p class="text-muted">
     <a href="{{ site_url }}/profile">{% if language == "nl" %}Profiel{% else %}Profile{% endif %}</a> |
-    <a href="{{ site_url }}/privacy/">{% if language == "nl" %}Privacy{% else %}Privacy{% endif %}</a>
+    <a href="{{ site_url }}/privacy/">{% if language == "nl" %}Privacy{% else %}Privacy{% endif %}</a>{% if unsubscribe_url %} |
+    <a href="{{ unsubscribe_url }}">{% if language == "nl" %}Afmelden{% else %}Unsubscribe{% endif %}</a>{% endif %}
 </p>
 {% endblock %}

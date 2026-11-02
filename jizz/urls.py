@@ -58,6 +58,7 @@ from jizz.data_views import (
 from jizz.update_views import (
     UpdateDetailView,
     UpdateEmailOpenTrackingView,
+    UpdateEmailUnsubscribeView,
     UpdateListView,
     UpdateThumbsUpView,
 )
@@ -610,6 +611,7 @@ urlpatterns = [
     re_path(r"^api/updates/(?P<pk>\d+)/$", UpdateDetailView.as_view(), name="update-detail"),
     re_path(r"^api/updates/(?P<pk>\d+)/thumbs-up/$", UpdateThumbsUpView.as_view(), name="update-thumbs-up"),
     path('api/updates/email-open/<uuid:token>/', UpdateEmailOpenTrackingView.as_view(), name='update-email-open'),
+    path('api/updates/unsubscribe/<uuid:token>/', UpdateEmailUnsubscribeView.as_view(), name='update-email-unsubscribe'),
     re_path(r"^api/updates/reactions/$", ReactionView.as_view(), name="reactions"),
 
     path('api/birdr-journey/', BirdrJourneyView.as_view(), name='birdr-journey'),

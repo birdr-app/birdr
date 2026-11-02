@@ -10,6 +10,7 @@ from html import unescape
 
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
+from email.utils import make_msgid, parseaddr
 from django.db import connection
 from django.db.models import QuerySet
 from django.template.loader import render_to_string
@@ -88,6 +89,21 @@ def _site_url() -> str:
 
 def _tracking_pixel_url(token) -> str:
     return f'{_site_url()}/api/updates/email-open/{token}/'
+
+
+def _unsubscribe_url(token) -> str:
+    return f'{_site_url()}/api/updates/unsubscribe/{token}/'
+
+
+def _list_headers(from_email: str, unsubscribe_url: str) -> dict[str, str]:
+    """Headers Gmail and Yahoo expect on bulk mail: one-click unsubscribe (RFC 8058) and a
+    Message-ID on the sender's domain rather than the server's hostname (which is localhost)."""
+    address = parseaddr(from_email)[1]
+    return {
+        'List-Unsubscribe': f'<{unsubscribe_url}>, <mailto:{address}?subject=unsubscribe>',
+        'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
+        'Message-ID': make_msgid(domain=address.rpartition('@')[2] or None),
+    }
 
 
 def get_update_subscribers() -> QuerySet[UserProfile]:
@@ -173,6 +189,7 @@ def _render_update_email(update: Update, *, user, language: str, tracking_token=
         'logo_url': logo_url,
         'footer_html': footer,
         'tracking_pixel_url': _tracking_pixel_url(tracking_token) if tracking_token else None,
+        'unsubscribe_url': _unsubscribe_url(tracking_token) if tracking_token else None,
         'language': language,
     }
     html_content = render_to_string('emails/update_broadcast.html', context)
@@ -213,6 +230,7 @@ def send_update_email_to_user(
         body=text_content,
         from_email=from_email,
         to=[user.email],
+        headers=_list_headers(from_email, _unsubscribe_url(tracking_token)),
     )
     msg.attach_alternative(html_content, 'text/html')
     msg.send()
@@ -320,3 +338,10 @@ def mark_email_opened(tracking_token) -> bool:
         recipient.opened_at = timezone.now()
         recipient.save(update_fields=['opened_at'])
     return True
+
+
+def unsubscribe_by_token(tracking_token) -> UpdateEmailRecipient | None:
+    recipient = UpdateEmailRecipient.objects.filter(tracking_token=tracking_token).select_related('user').first()
+    if recipient:
+        UserProfile.objects.filter(user=recipient.user).update(receive_updates=False)
+    return recipient

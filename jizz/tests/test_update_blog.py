@@ -285,6 +285,38 @@ class UpdateEmailTests(TestCase):
         self.assertNotIn('class="logo"', html)
         self.assertNotIn('alt="Motmot"', html)
 
+    def test_email_has_one_click_unsubscribe_and_sender_message_id(self):
+        from django.conf import settings
+        from django.core import mail
+
+        send_test_update_email(self.update, self.admin)
+        recipient = UpdateEmailRecipient.objects.get(user=self.admin)
+        message = mail.outbox[0].message()
+        url = f'{settings.SITE_URL}/api/updates/unsubscribe/{recipient.tracking_token}/'
+        self.assertIn(f'<{url}>', message['List-Unsubscribe'])
+        self.assertEqual(message['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click')
+        self.assertTrue(message['Message-ID'].endswith('@motmot.club>'))
+        self.assertIn(f'href="{url}"', mail.outbox[0].alternatives[0][0])
+
+    def test_unsubscribe_get_asks_and_post_unsubscribes(self):
+        send_test_update_email(self.update, self.admin)
+        recipient = UpdateEmailRecipient.objects.get(user=self.admin)
+        url = f'/api/updates/unsubscribe/{recipient.tracking_token}/'
+
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, '<form method="post"')
+        self.assertTrue(UserProfile.objects.get(user=self.admin).receive_updates)
+
+        response = self.client.post(url, {'List-Unsubscribe': 'One-Click'})
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "You're unsubscribed")
+        self.assertFalse(UserProfile.objects.get(user=self.admin).receive_updates)
+
+    def test_unsubscribe_unknown_token_is_404(self):
+        response = self.client.post('/api/updates/unsubscribe/00000000-0000-0000-0000-000000000000/')
+        self.assertEqual(response.status_code, 404)
+
     def test_broadcast_skips_users_already_emailed(self):
         user_one = User.objects.create_user('one', password='x', email='one@example.com')
         user_two = User.objects.create_user('two', password='x', email='two@example.com')

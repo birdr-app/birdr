@@ -1,0 +1,34 @@
+{% extends "emails/base.html" %}
+
+{% block title %}{% if language == "nl" %}Afmelden{% else %}Unsubscribe{% endif %}{% endblock %}
+
+{% block content %}
+{% if done %}
+<h2>{% if language == "nl" %}Je bent afgemeld{% else %}You're unsubscribed{% endif %}</h2>
+<p>
+    {% if language == "nl" %}
+    {{ email }} krijgt geen nieuws en updates van Motmot meer. Je kunt dit altijd weer aanzetten in je profiel.
+    {% else %}
+    {{ email }} won't get Motmot news and updates any more. You can turn them back on in your profile at any time.
+    {% endif %}
+</p>
+{% else %}
+<h2>{% if language == "nl" %}Afmelden voor Motmot-updates?{% else %}Unsubscribe from Motmot updates?{% endif %}</h2>
+<p>
+    {% if language == "nl" %}
+    {{ email }} krijgt dan geen nieuws en updates van Motmot meer.
+    {% else %}
+    {{ email }} will no longer get Motmot news and updates.
+    {% endif %}
+</p>
+<form method="post" class="button-container">
+    <button type="submit" class="button" style="border:0;">
+        {% if language == "nl" %}Afmelden{% else %}Unsubscribe{% endif %}
+    </button>
+</form>
+{% endif %}
+{% endblock %}
+
+{% block footer %}
+<p><strong>Motmot</strong> — {% if language == "nl" %}Test je vogelkennis{% else %}Test your bird knowledge{% endif %}</p>
+{% endblock %}
