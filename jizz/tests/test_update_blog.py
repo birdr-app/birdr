@@ -279,7 +279,7 @@ class UpdateEmailTests(TestCase):
         send_test_update_email(self.update, self.admin)
         self.assertEqual(len(mail.outbox), 1)
         html = mail.outbox[0].alternatives[0][0]
-        self.assertIn('href="https://birdr.pro/"', html)
+        self.assertIn('href="https://motmot.club/"', html)
         self.assertIn('Open Motmot App', html)
         self.assertNotIn('class="email-header"', html)
         self.assertNotIn('class="logo"', html)

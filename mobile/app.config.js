@@ -30,7 +30,7 @@ module.exports = ({ config: e }) => {
       extra: {
         ...e.extra,
         releaseCodename: releaseCodename ?? '',
-        apiBaseUrl: process.env.EXPO_PUBLIC_API_URL || 'https://birdr.pro',
+        apiBaseUrl: process.env.EXPO_PUBLIC_API_URL || 'https://motmot.club',
       },
     },
   };

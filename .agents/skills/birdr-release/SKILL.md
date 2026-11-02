@@ -6,7 +6,7 @@ description: Cut a new Motmot mobile release — set the version, build number a
 # Cut a Motmot release
 
 Motmot names each release after the bird whose species id equals the build number:
-build 106 is `Kelp Goose`, from `https://birdr.pro/api/species/106/`. Version strings
+build 106 is `Kelp Goose`, from `https://motmot.club/api/species/106/`. Version strings
 are always `1.<build>.0`.
 
 `mobile/app.json` is the single source of truth. Android reads `versionCode` and

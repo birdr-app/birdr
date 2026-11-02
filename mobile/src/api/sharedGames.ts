@@ -182,8 +182,8 @@ export function getSharedGameStats(token: string, language?: string): Promise<Sh
 }
 
 /**
- * Token from the share link https://birdr.pro/s/<token>/, the older alias
- * https://birdr.pro/join/s/<token>/ (with or without /web), or birdr://join/s/<token>.
+ * Token from the share link https://motmot.club/s/<token>/, the older alias
+ * https://motmot.club/join/s/<token>/ (with or without /web), or birdr://join/s/<token>.
  */
 export function parseSharedGameUrl(url: string): string | null {
   const schemeMatch = url.match(/^birdr:\/\/(?:join\/)?s\/([a-z0-9]+)\/?$/i);

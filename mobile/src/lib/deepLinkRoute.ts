@@ -10,8 +10,8 @@ function httpPath(url: string): string | null {
 
 /**
  * Survival and league links:
- * - https://birdr.pro/open/survival/ or birdr://survival → SurvivalStart
- * - https://birdr.pro/open/league/[{countryCode}/] or birdr://league[/{countryCode}] → League
+ * - https://motmot.club/open/survival/ or birdr://survival → SurvivalStart
+ * - https://motmot.club/open/league/[{countryCode}/] or birdr://league[/{countryCode}] → League
  */
 export function routeForOpenUrl(url: string): NotificationRoute | null {
   const path = httpPath(url);

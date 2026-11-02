@@ -256,7 +256,7 @@ export async function isAuthenticated(): Promise<boolean> {
   return !!t;
 }
 
-/** Request password reset email. Link in email goes to frontend_url (e.g. https://birdr.pro for web reset page). */
+/** Request password reset email. Link in email goes to frontend_url (e.g. https://motmot.club for web reset page). */
 export async function requestPasswordReset(
   email: string,
   frontendUrl?: string

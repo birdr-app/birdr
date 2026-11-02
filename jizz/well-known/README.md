@@ -1,10 +1,10 @@
 # Deep links: App Links / Universal Links
 
-Bestanden in deze map worden geserveerd op:
-- `https://birdr.pro/.well-known/apple-app-site-association` (iOS Universal Links)
-- `https://birdr.pro/.well-known/assetlinks.json` (Android App Links)
+Bestanden in deze map worden geserveerd op beide domeinen, motmot.club en het oude birdr.pro:
+- `https://motmot.club/.well-known/apple-app-site-association` (iOS Universal Links)
+- `https://motmot.club/.well-known/assetlinks.json` (Android App Links)
 
-Zodat `https://birdr.pro/join/<token>` en `https://birdr.pro/join/challenge/<token>` in de Motmot-app openen in plaats van in de browser.
+Zodat `https://motmot.club/join/<token>` en `https://motmot.club/join/challenge/<token>` in de Motmot-app openen in plaats van in de browser. Oude links op birdr.pro blijven werken.
 
 ## "Deze URL is een deep link met problemen" / Resultaat: Webbrowser
 
@@ -22,12 +22,12 @@ Als de link in de **browser** opent in plaats van in de app, controleer het volg
    - **Debug:** SHA256 van je debug-keystore.
    - Lokaal fingerprint tonen: `cd mobile/android && ./gradlew signingReport` → kopieer de SHA256 (met dubbele punten, bijvoorbeeld `EF:F1:D0:...`).
 2. Als je een **nieuwe keystore** of een **andere build-variant** gebruikt, voeg die fingerprint toe aan het `sha256_cert_fingerprints`-array in `assetlinks.json`.
-3. Na wijziging: deploy naar birdr.pro; daarna kan het even duren tot Android de file opnieuw ophaalt. Testen: Instellingen → Apps → Motmot → Open by default / Supported web addresses.
+3. Na wijziging: deploy; daarna kan het even duren tot Android de file opnieuw ophaalt. Testen: Instellingen → Apps → Motmot → Open by default / Supported web addresses.
 
 ### iOS (apple-app-site-association)
 
 1. **appID** in het bestand moet `TEAM_ID.bundleIdentifier` zijn (bijv. `Z886G5H7D2.pro.birdr.app`). Team ID staat in Apple Developer.
-2. In de app: **Associated Domains** entitlement met `applinks:birdr.pro` (staat al in `mobile/app.json` onder `ios.associatedDomains`).
+2. In de app: **Associated Domains** entitlement met `applinks:motmot.club` en `applinks:birdr.pro` (in `mobile/app.json` onder `ios.associatedDomains` en in `mobile/ios/Birdr/Birdr.entitlements`).
 3. Apple cached de AASA; na deploy kan het 24–48 uur duren. Voor snelle test: app verwijderen en opnieuw installeren.
 4. **Paths:** `/join/*` en `/join/challenge/*` dekken zowel spel- als challenge-joinlinks.
 5. **Gedeelde spellen (`/s/*`) staan bewust nog niet in de AASA.** Oudere app-versies kunnen gedeelde spellen niet openen; zonder `/s/*` opent de link op iPhone de webversie (die volledig werkt). Voeg `"/s/*"` aan `paths` toe zodra de meeste iPhone-gebruikers op de versie met gedeelde spellen zitten. Android claimt `/s/` al via de manifest van die versie, dus oudere Android-apps openen de link in de browser.

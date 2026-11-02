@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 WIKIDATA_API = 'https://www.wikidata.org/w/api.php'
 WIKIDATA_SPARQL = 'https://query.wikidata.org/sparql'
-USER_AGENT = 'BirdrCompareBot/1.0 (https://birdr.pro; species comparison grounding)'
+USER_AGENT = 'BirdrCompareBot/1.0 (https://motmot.club; species comparison grounding)'
 
 # Property IDs
 P_MASS = 'P2067'  # mass

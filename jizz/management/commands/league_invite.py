@@ -47,7 +47,7 @@ class Command(BaseCommand):
         from django.core.mail import send_mail
 
         lang = _user_language(user)
-        site = getattr(settings, 'SITE_URL', 'https://birdr.pro').rstrip('/')
+        site = getattr(settings, 'SITE_URL', 'https://motmot.club').rstrip('/')
         body = MESSAGES[lang][LeagueNotificationLog.KIND_INVITE].format(country=country.name)
         subject = (
             f'De Motmot League voor {country.name} is begonnen' if lang == 'nl'

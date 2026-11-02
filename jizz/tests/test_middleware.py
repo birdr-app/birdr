@@ -77,13 +77,14 @@ class SocialAuthRedirectUriMiddlewareTestCase(TestCase):
 
 
 @override_settings(
-    SITE_URL='https://birdr.pro',
+    SITE_URL='https://motmot.club',
+    OAUTH_URL='https://birdr.pro',
     MARKETING_URL='https://motmot.club',
     MARKETING_REDIRECT_HOSTS=('birdr.pro', 'www.birdr.pro', 'www.motmot.club'),
     ALLOWED_HOSTS=['birdr.pro', 'www.birdr.pro', 'motmot.club', 'www.motmot.club', 'testserver'],
 )
 class MarketingHostRedirectMiddlewareTestCase(TestCase):
-    """The website moves to motmot.club; the API, OAuth and share links stay on birdr.pro."""
+    """The website moves to motmot.club; birdr.pro keeps the API, OAuth and old share links working."""
 
     def get(self, path, host):
         return self.client.get(path, HTTP_HOST=host)
@@ -114,7 +115,6 @@ class MarketingHostRedirectMiddlewareTestCase(TestCase):
             '/auth/login/google-oauth2/',
             '/admin/',
             '/join/abc123/',
-            '/s/abc123/',
             '/g/abc123/',
             '/flocks/c/abc123/',
             '/open/app/',
@@ -126,6 +126,10 @@ class MarketingHostRedirectMiddlewareTestCase(TestCase):
                 response = self.get(path, 'birdr.pro')
                 location = response.get('Location', '')
                 self.assertFalse(location.startswith('https://motmot.club'), f'{path} -> {location}')
+
+    def test_shared_game_link_on_birdr_opens_web_page_on_site_url(self):
+        response = self.get('/s/abc123/', 'birdr.pro')
+        self.assertEqual(response['Location'], 'https://motmot.club/join/s/abc123/web/')
 
     def test_post_is_not_redirected(self):
         response = self.client.post('/site/feedback/', {}, HTTP_HOST='birdr.pro')
@@ -145,6 +149,11 @@ class MarketingHostRedirectMiddlewareTestCase(TestCase):
             'https://birdr.pro/auth/login/google-oauth2/?redirect_uri=https%3A%2F%2Fmotmot.club%2Fsite%2F',
             status=302,
         )
+
+    @override_settings(OAUTH_URL='https://motmot.club')
+    def test_oauth_start_stays_on_motmot_once_registered_there(self):
+        response = self.get('/auth/login/google-oauth2/', 'motmot.club')
+        self.assertFalse(response.get('Location', '').startswith('https://birdr.pro'))
 
     @override_settings(MARKETING_URL='')
     def test_no_redirect_without_marketing_url(self):

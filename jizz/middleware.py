@@ -47,15 +47,15 @@ def is_marketing_path(path: str) -> bool:
 
 
 class MarketingHostRedirectMiddleware:
-    """Move the website to MARKETING_URL and keep OAuth on SITE_URL.
+    """Move the website to MARKETING_URL and keep OAuth on OAUTH_URL.
 
     On the old hosts (birdr.pro) marketing pages redirect permanently to MARKETING_URL.
-    Everything else stays: the apps call /api/ there, and share and invite links must
-    stay on the apps' universal-link domain.
+    Everything else stays: older app builds call /api/ there, and old share and invite
+    links must keep opening the app.
 
-    On the marketing host, OAuth starts are sent to SITE_URL, because Google and Apple
-    only accept callbacks on that host. The redirect_uri back to the marketing host
-    is kept, so the tokens still land there.
+    On the marketing host, OAuth starts are sent to OAUTH_URL, because Google and Apple
+    only accept callbacks on the hosts registered with them. The redirect_uri back to
+    the marketing host is kept, so the tokens still land there.
     """
 
     def __init__(self, get_response):
@@ -71,7 +71,7 @@ class MarketingHostRedirectMiddleware:
 
     def _redirect_target(self, request):
         marketing_url = (getattr(settings, 'MARKETING_URL', '') or '').rstrip('/')
-        site_url = (getattr(settings, 'SITE_URL', '') or '').rstrip('/')
+        oauth_url = (getattr(settings, 'OAUTH_URL', '') or '').rstrip('/')
         if not marketing_url:
             return None
         host = request.get_host().split(':')[0].lower()
@@ -82,9 +82,9 @@ class MarketingHostRedirectMiddleware:
         if host in getattr(settings, 'MARKETING_REDIRECT_HOSTS', ()) and host != _host_of(marketing_url):
             if is_marketing_path(path):
                 return marketing_url + path + suffix, True
-        elif host == _host_of(marketing_url) and site_url and _host_of(site_url) != host:
+        elif host == _host_of(marketing_url) and oauth_url and _host_of(oauth_url) != host:
             if path.startswith('/auth/login/'):
-                return site_url + path + suffix, False
+                return oauth_url + path + suffix, False
         return None
 
 

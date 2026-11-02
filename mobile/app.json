@@ -39,6 +39,7 @@
       "usesAppleSignIn": true,
       "icon": "./assets/icon.png",
       "associatedDomains": [
+        "applinks:motmot.club",
         "applinks:birdr.pro"
       ]
     },
@@ -60,6 +61,66 @@
           "action": "VIEW",
           "autoVerify": true,
           "data": [
+            {
+              "scheme": "https",
+              "host": "motmot.club",
+              "pathPrefix": "/join/"
+            },
+            {
+              "scheme": "https",
+              "host": "motmot.club",
+              "pathPrefix": "/join/challenge/"
+            },
+            {
+              "scheme": "https",
+              "host": "motmot.club",
+              "pathPrefix": "/open/update/"
+            },
+            {
+              "scheme": "https",
+              "host": "motmot.club",
+              "pathPrefix": "/open/app/"
+            },
+            {
+              "scheme": "https",
+              "host": "motmot.club",
+              "pathPrefix": "/open/survival/"
+            },
+            {
+              "scheme": "https",
+              "host": "motmot.club",
+              "pathPrefix": "/open/league/"
+            },
+            {
+              "scheme": "https",
+              "host": "motmot.club",
+              "pathPrefix": "/flocks/results/"
+            },
+            {
+              "scheme": "https",
+              "host": "motmot.club",
+              "pathPrefix": "/flocks/c/"
+            },
+            {
+              "scheme": "https",
+              "host": "motmot.club",
+              "pathPrefix": "/join/flock/"
+            },
+            {
+              "scheme": "https",
+              "host": "motmot.club",
+              "pathPrefix": "/g/"
+            },
+            {
+              "scheme": "https",
+              "host": "motmot.club",
+              "pathPrefix": "/practice/"
+            },
+            {
+              "scheme": "https",
+              "host": "motmot.club",
+              "pathPrefix": "/s/"
+            },
             {
               "scheme": "https",
               "host": "birdr.pro",

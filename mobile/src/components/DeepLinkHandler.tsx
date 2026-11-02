@@ -14,15 +14,15 @@ import { useTranslation } from '../i18n/TranslationContext';
 /**
  * Handles deep links:
  * - OAuth redirects: birdr://auth/google, birdr://auth/apple
- * - Game join: https://birdr.pro/join/{token} or birdr://join/{token}
- * - Daily challenge invite: birdr://join/challenge/{invite_token} or https://birdr.pro/join/challenge/{invite_token}
- * - Flock invite: birdr://join/flock/{token} or https://birdr.pro/join/flock/{token}/
- * - Update: birdr://updates/{id} or https://birdr.pro/open/update/{id}/
- * - Game result share: https://birdr.pro/g/{token} or birdr://g/{token}
- * - Shared game: https://birdr.pro/join/s/{token}/ or birdr://join/s/{token}
- * - Survival: https://birdr.pro/open/survival/ or birdr://survival
- * - League: https://birdr.pro/open/league/[{countryCode}/] or birdr://league[/{countryCode}]
- * - Shared game: https://birdr.pro/s/{token}/ (also /join/s/{token}/)
+ * - Game join: https://motmot.club/join/{token} or birdr://join/{token}
+ * - Daily challenge invite: birdr://join/challenge/{invite_token} or https://motmot.club/join/challenge/{invite_token}
+ * - Flock invite: birdr://join/flock/{token} or https://motmot.club/join/flock/{token}/
+ * - Update: birdr://updates/{id} or https://motmot.club/open/update/{id}/
+ * - Game result share: https://motmot.club/g/{token} or birdr://g/{token}
+ * - Shared game: https://motmot.club/join/s/{token}/ or birdr://join/s/{token}
+ * - Survival: https://motmot.club/open/survival/ or birdr://survival
+ * - League: https://motmot.club/open/league/[{countryCode}/] or birdr://league[/{countryCode}]
+ * - Shared game: https://motmot.club/s/{token}/ (also /join/s/{token}/)
  * - Any other app link (from a newer Motmot): ask the user to update.
  */
 export function DeepLinkHandler({ children }: { children: React.ReactNode }) {
@@ -269,7 +269,7 @@ function parseGameJoinUrl(url: string): string | null {
   const schemeMatch = url.match(/^birdr:\/\/join\/([a-z0-9-]+)$/);
   if (schemeMatch && tokenRegex.test(schemeMatch[1])) return schemeMatch[1];
 
-  // https://birdr.pro/join/{token} or https://birdr.pro/join/{token}/
+  // https://motmot.club/join/{token} or https://motmot.club/join/{token}/
   const base = API_BASE_URL.replace(/\/$/, '');
   if (url.startsWith(base + '/join/')) {
     const path = url.slice(base.length).replace(/[?#].*$/, '').replace(/\/+$/, '');
@@ -292,7 +292,7 @@ function parseResetPasswordUrl(url: string): { uid: string; token: string } | nu
   const schemeMatch = url.match(/^birdr:\/\/reset-password\/([^/]+)\/([^/?#]+)/);
   if (schemeMatch) return { uid: schemeMatch[1], token: schemeMatch[2] };
 
-  // https://birdr.pro/reset-password/{uid}/{token}/
+  // https://motmot.club/reset-password/{uid}/{token}/
   const base = API_BASE_URL.replace(/\/$/, '');
   if (url.startsWith(base + '/reset-password/')) {
     const path = url.slice(base.length).replace(/[?#].*$/, '').replace(/\/+$/, '');

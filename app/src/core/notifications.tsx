@@ -19,7 +19,7 @@ export const sendNotification = async ({title, body}: {title: string, body: stri
       body: 'Ready to identify some birds?',
       icon: '/images/logo.png',
       badge: '/images/badge.png',
-      data: { url: 'https://birdr.pro/journey/intro' },
+      data: { url: 'https://motmot.club/journey/intro' },
       actions: [
         { action: 'open', title: 'Open App' },
         { action: 'dismiss', title: 'Dismiss' },

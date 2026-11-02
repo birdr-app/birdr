@@ -19,7 +19,7 @@ from django.conf import settings
 EBIRD_TAXONOMY_URL = 'https://api.ebird.org/v2/ref/taxonomy/ebird'
 EBIRD_SPPGROUP_URL = 'https://api.ebird.org/v2/ref/sppgroup/ebird'
 EBIRD_LOCALE_EN = 'en_UK'
-WIKI_USER_AGENT = 'BirdrTaxonomyBot/1.0 (https://birdr.pro; taxonomy fill script)'
+WIKI_USER_AGENT = 'BirdrTaxonomyBot/1.0 (https://motmot.club; taxonomy fill script)'
 WIKI_BATCH_SIZE = 20
 WIKI_DEFAULT_MIN_INTERVAL = 0.35
 WIKI_MAX_RETRIES = 6

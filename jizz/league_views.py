@@ -303,7 +303,7 @@ class LeagueCompleteView(APIView):
             f'{flag} I scored {attempt.correct_count}/{attempt.day.length} in today\'s {country.name} '
             f'Motmot League'
             + (f' and I\'m #{week_rank} this week' if week_rank else '')
-            + '. Can you beat me? https://birdr.pro/league/' + country.code
+            + '. Can you beat me? https://motmot.club/league/' + country.code
         )
         return Response({
             'attempt_id': attempt.id,

@@ -169,7 +169,7 @@ router.register(r'countries', CountryViewSet, 'countries')
 
 
 def apple_app_site_association(request):
-    """iOS Universal Links: so https://birdr.pro/join/* opens in the app.
+    """iOS Universal Links: so https://motmot.club/join/* (and the old birdr.pro links) open in the app.
     Content is read from jizz/well-known/apple-app-site-association so nginx can alias to the same file."""
     import json
     from pathlib import Path
@@ -180,7 +180,7 @@ def apple_app_site_association(request):
 
 
 def android_asset_links(request):
-    """Android App Links: so https://birdr.pro/join/* opens in the app.
+    """Android App Links: so https://motmot.club/join/* (and the old birdr.pro links) open in the app.
     Content is read from jizz/well-known/assetlinks.json so nginx can alias to the same file."""
     import json
     from pathlib import Path

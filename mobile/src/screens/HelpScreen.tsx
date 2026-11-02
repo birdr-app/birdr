@@ -17,7 +17,7 @@ import { colors } from '../theme';
 const FACEBOOK_GROUP_URL = 'https://www.facebook.com/groups/birdrcommunity';
 const GITHUB_ISSUES_URL = 'https://github.com/birdr-app/birdr/issues';
 const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/loekd';
-const NEWSLETTER_EXAMPLE_URL = 'https://birdr.pro/site/newsletter/';
+const NEWSLETTER_EXAMPLE_URL = 'https://motmot.club/site/newsletter/';
 const CONTACT_EMAIL = 'info@motmot.club';
 const APP_STORE_REVIEW_URL = `${APP_STORE_URL}?action=write-review`;
 const MENU_PAGE_SLUGS = new Set(['privacy', 'about']);

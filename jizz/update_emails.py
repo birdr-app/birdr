@@ -84,7 +84,7 @@ def user_display_name(user) -> str:
 
 
 def _site_url() -> str:
-    return getattr(settings, 'SITE_URL', 'https://birdr.pro').rstrip('/')
+    return getattr(settings, 'SITE_URL', 'https://motmot.club').rstrip('/')
 
 
 def _tracking_pixel_url(token) -> str:

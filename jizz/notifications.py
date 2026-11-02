@@ -15,7 +15,7 @@ def send_welcome_email(user, site_url=None):
     if not user.email:
         logger.warning('Cannot send welcome email: user %s has no email', user.username)
         return False
-    site_url = site_url or getattr(settings, 'SITE_URL', 'https://birdr.pro')
+    site_url = site_url or getattr(settings, 'SITE_URL', 'https://motmot.club')
     try:
         subject = 'Welcome to Motmot!'
         html_content = render_to_string('emails/welcome.html', {

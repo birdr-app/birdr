@@ -40,7 +40,7 @@ export function getGameSharePath(token: string): string {
 
 export function buildGameShareUrl(
   token: string,
-  origin = typeof window !== 'undefined' ? window.location.origin : 'https://birdr.pro'
+  origin = typeof window !== 'undefined' ? window.location.origin : 'https://motmot.club'
 ): string {
   return `${origin.replace(/\/$/, '')}${getGameSharePath(token)}`;
 }

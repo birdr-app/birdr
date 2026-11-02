@@ -3,7 +3,7 @@ import Constants from 'expo-constants';
 const extra = Constants.expoConfig?.extra as { apiBaseUrl?: string } | undefined;
 
 /** Override with EXPO_PUBLIC_API_URL in mobile/.env for local Django (e.g. http://10.0.2.2:8000). */
-export const API_BASE_URL = (extra?.apiBaseUrl || 'https://birdr.pro').replace(/\/$/, '');
+export const API_BASE_URL = (extra?.apiBaseUrl || 'https://motmot.club').replace(/\/$/, '');
 
 /**
  * Web OAuth 2.0 client ID from Google Console (type "Web application").

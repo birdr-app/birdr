@@ -14,11 +14,11 @@ declare global {
 
 export function getApiBaseUrl(): string {
   if (typeof window === 'undefined') {
-    return process.env.REACT_APP_API_URL || 'https://birdr.pro';
+    return process.env.REACT_APP_API_URL || 'https://motmot.club';
   }
   // Capacitor: app runs from capacitor://localhost; API must be absolute
   if (window.Capacitor?.isNativePlatform?.()) {
-    return process.env.REACT_APP_API_URL || 'https://birdr.pro';
+    return process.env.REACT_APP_API_URL || 'https://motmot.club';
   }
   return process.env.REACT_APP_API_URL || window.location.origin;
 }
@@ -30,10 +30,10 @@ export function getApiBaseUrl(): string {
  */
 export function getSocialLoginBaseUrl(): string {
   if (typeof window === 'undefined') {
-    return process.env.REACT_APP_API_URL || 'https://birdr.pro';
+    return process.env.REACT_APP_API_URL || 'https://motmot.club';
   }
   if (window.Capacitor?.isNativePlatform?.()) {
-    return process.env.REACT_APP_API_URL || 'https://birdr.pro';
+    return process.env.REACT_APP_API_URL || 'https://motmot.club';
   }
   const isLocalDev =
     window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';

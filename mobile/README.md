@@ -237,7 +237,7 @@ npm run release:set -- 106   # a specific one
 ```
 
 Releases are named after the bird whose species id equals the build number — build 106 is
-`Kelp Goose`, from [`/api/species/106/`](https://birdr.pro/api/species/106/) — and the version
+`Kelp Goose`, from [`/api/species/106/`](https://motmot.club/api/species/106/) — and the version
 is always `1.<build>.0`. The script writes `expo.version`, `expo.buildNumber` and
 `expo.releaseCodename` into `app.json` and syncs `ios/Birdr/Info.plist` (Android reads
 `app.json` directly at build time, iOS does not). It refuses a build number at or below the
@@ -387,11 +387,11 @@ Full steps: see **`GOOGLE_CONSOLE_SETUP.md`**.
 
 ## Opening game links in the app (QR code / share link)
 
-When someone scans the lobby QR code or taps a shared game link (`https://birdr.pro/join/<game_token>`), the link should open in the Motmot app instead of the browser.
+When someone scans the lobby QR code or taps a shared game link (`https://motmot.club/join/<game_token>`), the link should open in the Motmot app instead of the browser.
 
 **What’s already in place**
 
-- **App:** Custom scheme `birdr://` and (on Android) an App Link intent for `https://birdr.pro/join/`. `DeepLinkHandler` loads the game and navigates to Lobby.
+- **App:** Custom scheme `birdr://` and (on Android) an App Link intent for `https://motmot.club/join/`. `DeepLinkHandler` loads the game and navigates to Lobby.
 - **Server:** `GET /join/<token>/` redirects to `birdr://join/<token>`, so opening the HTTPS link in a browser sends the user into the app. The same backend serves `.well-known/apple-app-site-association` (iOS) and `.well-known/assetlinks.json` (Android) for verified App Links.
 
 **To get “Open in app” without a disambiguation dialog**
@@ -406,7 +406,7 @@ When someone scans the lobby QR code or taps a shared game link (`https://birdr.
    ```
    Use the same signing key you use for Play Store builds. The `package_name` is already `pro.birdr.app`.
 
-After deploying the updated `.well-known` files, install the app and tap `https://birdr.pro/join/<token>` (e.g. from Notes or Messages). If verification succeeds, the link should open directly in the app. If not, the server redirect still sends `birdr://join/<token>`, so the system may show “Open in Motmot?” once.
+After deploying the updated `.well-known` files, install the app and tap `https://motmot.club/join/<token>` (e.g. from Notes or Messages). If verification succeeds, the link should open directly in the app. If not, the server redirect still sends `birdr://join/<token>`, so the system may show “Open in Motmot?” once.
 
 ## Structure
 

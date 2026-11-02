@@ -114,7 +114,7 @@ FAQ = [
     {
         'question': 'Where can I play?',
         'answer': (
-            'In the free iOS and Android apps, or in the browser at birdr.pro. Your '
+            'In the free iOS and Android apps, or in the browser at motmot.club. Your '
             'progress stays with your account across devices.'
         ),
     },

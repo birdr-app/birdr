@@ -342,6 +342,13 @@ The **Authorized redirect URI** that Google uses is your **backend** callback UR
 
 If the redirect URI in the console does not match exactly (including trailing slash and `https`), Google will show “redirect_uri_mismatch” and login will fail.
 
+**Moving OAuth to motmot.club.** `OAUTH_URL` (default `https://birdr.pro`) is the host that runs OAuth; login started on motmot.club is sent there first. To move it, register both callbacks first, keeping the birdr.pro ones for older app builds:
+
+- Google: redirect URI `https://motmot.club/auth/complete/google-oauth2/`, JavaScript origin `https://motmot.club`.
+- Apple (Services ID `pro.birdr.login`): domain `motmot.club`, return URL `https://motmot.club/auth/complete/apple-id/`.
+
+Then set `OAUTH_URL=https://motmot.club` in production and restart.
+
 **Fixing "Error 400: redirect_uri_mismatch"**
 
 1. In [Google Cloud Console](https://console.cloud.google.com/) → APIs & Services → Credentials → your OAuth 2.0 Client ID, open **Authorized redirect URIs**.

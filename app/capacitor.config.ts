@@ -5,7 +5,7 @@ const config: CapacitorConfig = {
   appName: 'Motmot',
   webDir: 'build',
   server: {
-    url: 'https://birdr.pro',
+    url: 'https://motmot.club',
     cleartext: false
   }
 };

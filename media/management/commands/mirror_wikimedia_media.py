@@ -31,7 +31,7 @@ from media.mirror import (
 )
 from media.models import Media, MediaReview
 
-USER_AGENT = 'BirdrBot/1.0 (https://birdr.pro; media mirror)'
+USER_AGENT = 'BirdrBot/1.0 (https://motmot.club; media mirror)'
 COMMONS_API = 'https://commons.wikimedia.org/w/api.php'
 MAX_TRIES = 5
 

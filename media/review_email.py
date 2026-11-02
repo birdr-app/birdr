@@ -61,7 +61,7 @@ def send_media_review_reply_if_needed(review) -> bool:
     if media and getattr(media, 'species_id', None):
         species_name = media.species.name
     media_link = media_source_link(media)
-    site_url = getattr(settings, 'SITE_URL', 'https://birdr.pro').rstrip('/')
+    site_url = getattr(settings, 'SITE_URL', 'https://motmot.club').rstrip('/')
     greeting_name = media_review_greeting_name(review, user)
 
     try:

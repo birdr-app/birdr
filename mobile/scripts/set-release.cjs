@@ -3,7 +3,7 @@
  * Set the release fields in app.json, then sync ios/Birdr/Info.plist.
  *
  * Birdr names each release after the species whose database id equals the build
- * number, so build 106 is "Kelp Goose" (https://birdr.pro/api/species/106/).
+ * number, so build 106 is "Kelp Goose" (https://motmot.club/api/species/106/).
  * Android reads versionCode/versionName straight out of app.json, so app.json +
  * the Info.plist sync are the only files a release touches.
  *
@@ -15,7 +15,7 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 
-const API = process.env.BIRDR_API_BASE || 'https://birdr.pro';
+const API = process.env.BIRDR_API_BASE || 'https://motmot.club';
 const root = path.join(__dirname, '..');
 const appJsonPath = path.join(root, 'app.json');
 

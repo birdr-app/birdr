@@ -37,10 +37,29 @@
       </intent-filter>
       <intent-filter android:autoVerify="true" data-generated="true">
         <action android:name="android.intent.action.VIEW"/>
+        <data android:scheme="https" android:host="motmot.club" android:pathPrefix="/join/"/>
+        <data android:scheme="https" android:host="motmot.club" android:pathPrefix="/join/challenge/"/>
+        <data android:scheme="https" android:host="motmot.club" android:pathPrefix="/open/update/"/>
+        <data android:scheme="https" android:host="motmot.club" android:pathPrefix="/open/app/"/>
+        <data android:scheme="https" android:host="motmot.club" android:pathPrefix="/open/survival/"/>
+        <data android:scheme="https" android:host="motmot.club" android:pathPrefix="/open/league/"/>
+        <data android:scheme="https" android:host="motmot.club" android:pathPrefix="/flocks/results/"/>
+        <data android:scheme="https" android:host="motmot.club" android:pathPrefix="/flocks/c/"/>
+        <data android:scheme="https" android:host="motmot.club" android:pathPrefix="/join/flock/"/>
+        <data android:scheme="https" android:host="motmot.club" android:pathPrefix="/g/"/>
+        <data android:scheme="https" android:host="motmot.club" android:pathPrefix="/practice/"/>
+        <data android:scheme="https" android:host="motmot.club" android:pathPrefix="/s/"/>
         <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/join/"/>
         <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/join/challenge/"/>
         <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/open/update/"/>
         <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/open/app/"/>
+        <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/open/survival/"/>
+        <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/open/league/"/>
+        <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/flocks/results/"/>
+        <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/flocks/c/"/>
+        <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/join/flock/"/>
+        <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/g/"/>
+        <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/practice/"/>
         <data android:scheme="https" android:host="birdr.pro" android:pathPrefix="/s/"/>
         <category android:name="android.intent.category.BROWSABLE"/>
         <category android:name="android.intent.category.DEFAULT"/>

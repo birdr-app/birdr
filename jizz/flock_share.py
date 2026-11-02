@@ -371,5 +371,5 @@ def render_game_result_og_image(
     else:
         draw.text((80, 330), 'No scores yet', fill=BIRDR_600, font=row_font)
 
-    draw.text((56, OG_HEIGHT - 62), 'Play on birdr.pro', fill=BIRDR_600, font=meta)
+    draw.text((56, OG_HEIGHT - 62), 'Play on motmot.club', fill=BIRDR_600, font=meta)
     return _png_bytes(img)

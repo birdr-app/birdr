@@ -130,7 +130,7 @@ MIDDLEWARE = [
     'jizz.request_timing.RequestTimingMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    # Website on motmot.club, API and share links on birdr.pro.
+    # Website on motmot.club; birdr.pro sends its old marketing pages there, and OAuth to OAUTH_URL.
     'jizz.middleware.MarketingHostRedirectMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'jizz.middleware.MarketingLocaleMiddleware',
@@ -477,9 +477,13 @@ PLAY_STORE_URL = os.environ.get(
     'https://play.google.com/store/apps/details?id=pro.birdr.app',
 )
 
-# Origin of the API, OAuth and share/invite links. The apps' universal links are
-# on birdr.pro, so links that should open the app stay here.
-SITE_URL = os.environ.get('SITE_URL', 'https://birdr.pro')
+# Origin of the API and of share/invite links in emails and the apps. birdr.pro keeps
+# serving everything for app builds that still call it, but nothing new links there.
+SITE_URL = os.environ.get('SITE_URL', 'https://motmot.club')
+# Where OAuth runs: Google and Apple only send the user back to callbacks registered in
+# their consoles, which is birdr.pro until motmot.club is added there. Set it to
+# https://motmot.club once both accept https://motmot.club/auth/complete/<backend>/.
+OAUTH_URL = os.environ.get('OAUTH_URL', 'https://birdr.pro')
 # Origin of the marketing website, for canonical URLs, sitemaps and Open Graph.
 MARKETING_URL = os.environ.get('MARKETING_URL', 'https://motmot.club')
 # Marketing pages requested on these hosts are redirected to MARKETING_URL, so Google

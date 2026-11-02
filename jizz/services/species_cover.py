@@ -39,7 +39,7 @@ def absolute_media_url(url: str, request=None) -> str:
         return _upgrade(request.build_absolute_uri(url))
 
     if url.startswith('/'):
-        fallback = (site or 'https://birdr.pro').rstrip('/')
+        fallback = (site or 'https://motmot.club').rstrip('/')
         return _upgrade(fallback + url)
     return url
 

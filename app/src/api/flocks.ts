@@ -359,11 +359,11 @@ export function getFlockResultPath(token: string): string {
   return `/flocks/results/${token}`;
 }
 
-export function buildFlockInviteWebUrl(token: string, origin = 'https://birdr.pro'): string {
+export function buildFlockInviteWebUrl(token: string, origin = 'https://motmot.club'): string {
   return `${origin.replace(/\/$/, '')}${getFlockInviteWebPath(token)}`;
 }
 
-export function buildFlockResultWebUrl(token: string, origin = 'https://birdr.pro'): string {
+export function buildFlockResultWebUrl(token: string, origin = 'https://motmot.club'): string {
   return `${origin.replace(/\/$/, '')}${getFlockResultPath(token)}`;
 }
 
@@ -377,7 +377,7 @@ export function getFlockHistoryPath(publicToken: string): string {
 
 export function buildFlockChallengeShareUrl(
   publicToken: string,
-  origin = typeof window !== 'undefined' ? window.location.origin : 'https://birdr.pro'
+  origin = typeof window !== 'undefined' ? window.location.origin : 'https://motmot.club'
 ): string {
   return `${origin.replace(/\/$/, '')}${getFlockChallengeSharePath(publicToken)}`;
 }

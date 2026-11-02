@@ -4,7 +4,7 @@
 
 Motmot is a free and open-source bird identification training app for iPhone, Android and the web. Instead of identifying a bird for you, Motmot helps you practise the field marks, sounds and lookalikes needed to recognise it yourself.
 
-[Open Motmot](https://birdr.pro/) · [Play in your browser](https://birdr.pro/play/) · [How it works](https://birdr.pro/site/how-it-works/) · [Live usage data](https://birdr.pro/data/games-played/) · [Community](https://birdr.pro/site/community/)
+[Open Motmot](https://motmot.club/) · [Play in your browser](https://motmot.club/play/) · [How it works](https://motmot.club/site/how-it-works/) · [Live usage data](https://motmot.club/data/games-played/) · [Community](https://motmot.club/site/community/)
 
 ## Current status
 
@@ -23,7 +23,7 @@ Usage is growing quickly:
 - In the first four days of September 2026, players completed **1,334 games**.
 - Games have been played using **142 country and territory lists**.
 
-These figures count distinct game sessions and players with scores. See the [interactive games-played dashboard](https://birdr.pro/data/games-played/) for the latest figures, trends and geographic spread.
+These figures count distinct game sessions and players with scores. See the [interactive games-played dashboard](https://motmot.club/data/games-played/) for the latest figures, trends and geographic spread.
 
 ## Features
 
@@ -67,7 +67,7 @@ Motmot is available on:
 - Android
 - Any modern web browser
 
-Visit [birdr.pro](https://birdr.pro/) to play or find the mobile app links.
+Visit [motmot.club](https://motmot.club/) to play or find the mobile app links.
 
 ## How to help
 

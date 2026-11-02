@@ -22,7 +22,7 @@ from media.xeno_canto_urls import (
     xeno_canto_recording_id,
 )
 
-USER_AGENT = 'BirdrBot/1.0 (https://birdr.pro; xeno-canto mp3 backfill)'
+USER_AGENT = 'BirdrBot/1.0 (https://motmot.club; xeno-canto mp3 backfill)'
 MAX_URL_LENGTH = 2000
 
 

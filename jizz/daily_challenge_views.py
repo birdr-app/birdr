@@ -50,7 +50,7 @@ def _send_daily_challenge_invite_email(request, invite):
     """Send invite email with accept link (join/challenge/<token>)."""
     base_url = request.build_absolute_uri('/').rstrip('/')
     if 'localhost' in base_url or '127.0.0.1' in base_url:
-        base_url = getattr(settings, 'DAILY_CHALLENGE_BASE_URL', 'https://birdr.pro')
+        base_url = getattr(settings, 'DAILY_CHALLENGE_BASE_URL', 'https://motmot.club')
     accept_url = f"{base_url}/join/challenge/{invite.invite_token}"
     inviter_username = invite.challenge.creator.get_username()
     try:
