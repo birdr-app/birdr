@@ -7,9 +7,9 @@ from PIL import Image, ImageDraw, ImageFilter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 M = os.path.join(ROOT, 'mobile')
-ICON = Image.open(os.path.join(ROOT, 'marketing/tody/masters/tody-app-icon.png')).convert('RGB')
+ICON = Image.open(os.path.join(ROOT, 'marketing/tody/masters/tody-app-icon-light.png')).convert('RGB')
 HELLO = Image.open(os.path.join(ROOT, 'marketing/tody/cutout/tody-hello.png')).convert('RGBA')
-MASK_INK = (11, 24, 19)  # background of the icon artwork
+GROUND = (220, 236, 226)  # sage ground of the icon artwork, #DCECE2
 MIST = (243, 248, 245)
 
 
@@ -18,10 +18,11 @@ def square_icon(size):
 
 
 def adaptive_foreground(size):
-    """The icon scaled into Android's safe zone on the same dark ground, so any launcher mask looks right."""
-    canvas = Image.new('RGB', (size, size), MASK_INK)
+    """The icon scaled into Android's safe zone on the same sage ground, so any launcher mask looks right.
+    It rests on the bottom edge, so Tody's body runs off the icon instead of ending in a straight line."""
+    canvas = Image.new('RGB', (size, size), GROUND)
     inner = int(size * 0.76)
-    canvas.paste(ICON.resize((inner, inner), Image.LANCZOS), ((size - inner) // 2, (size - inner) // 2))
+    canvas.paste(ICON.resize((inner, inner), Image.LANCZOS), ((size - inner) // 2, size - inner))
     return canvas
 
 
@@ -29,7 +30,7 @@ def round_icon(size):
     im = square_icon(size).convert('RGBA')
     mask = Image.new('L', (size, size), 0)
     ImageDraw.Draw(mask).ellipse((0, 0, size - 1, size - 1), fill=255)
-    out = Image.new('RGB', (size, size), MASK_INK)
+    out = Image.new('RGB', (size, size), GROUND)
     out.paste(im, (0, 0), mask)
     return out
 

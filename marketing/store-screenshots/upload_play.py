@@ -4,7 +4,11 @@
     python3 marketing/store-screenshots/upload_play.py --commit   # upload and commit the edit
 
 Phone screenshots come from out/android/<lang>/, 7" and 10" tablet screenshots from
-out/ipad/<lang>/. Uses the same service account as mobile/scripts/release-android.cjs.
+out/ipad/<lang>/. The icon and feature graphic (from feature_graphic.py) go up only when asked:
+
+    python3 marketing/store-screenshots/upload_play.py --types icon,featureGraphic --commit
+
+Uses the same service account as mobile/scripts/release-android.cjs.
 """
 import argparse
 import json
@@ -20,6 +24,16 @@ API = f'https://androidpublisher.googleapis.com/androidpublisher/v3/applications
 UPLOAD = f'https://androidpublisher.googleapis.com/upload/androidpublisher/v3/applications/{PACKAGE}'
 OUT = Path(__file__).resolve().parent / 'out'
 SETS = {'phoneScreenshots': 'android', 'sevenInchScreenshots': 'ipad', 'tenInchScreenshots': 'ipad'}
+SINGLES = ('icon', 'featureGraphic')
+
+
+def image_files(image_type, lang):
+    if image_type == 'icon':
+        return [OUT / 'play' / 'icon-512.png']
+    if image_type == 'featureGraphic':
+        f = OUT / 'play' / f'feature-{lang}.png'
+        return [f if f.exists() else OUT / 'play' / 'feature-en.png']
+    return sorted((OUT / SETS[image_type] / lang).glob('*.png'))
 
 
 def credentials():
@@ -74,11 +88,11 @@ def main():
             if args.language and language != args.language:
                 continue
             lang = caption_lang(language)
-            for image_type, device in SETS.items():
+            for image_type in (*SETS, *SINGLES):
                 if image_type not in args.types.split(','):
                     continue
-                files = sorted((OUT / device / lang).glob('*.png'))
-                print(f'{language}: {image_type} <- {device}/{lang} ({len(files)} images)')
+                files = image_files(image_type, lang)
+                print(f'{language}: {image_type} <- {", ".join(f.relative_to(OUT).as_posix() for f in files)}')
                 if not args.commit:
                     continue
                 session.delete(f'{API}/edits/{edit}/listings/{language}/{image_type}').raise_for_status()

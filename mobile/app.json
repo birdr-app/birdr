@@ -46,7 +46,7 @@
       "edgeToEdgeEnabled": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0B1813"
+        "backgroundColor": "#DCECE2"
       },
       "splash": {
         "image": "./assets/splash-android.png",

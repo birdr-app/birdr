@@ -51,7 +51,7 @@ def feature(lang):
     canvas.alpha_composite(tody, (w - tody.width + 10, h - th - 6))
 
     # Icon, wordmark, subtitle and tagline on the left
-    icon = Image.open(ROOT / 'tody' / 'masters' / 'tody-app-icon.png').convert('RGB').resize((112, 112), Image.LANCZOS)
+    icon = Image.open(ROOT / 'tody' / 'masters' / 'tody-app-icon-light.png').convert('RGB').resize((112, 112), Image.LANCZOS)
     canvas.alpha_composite(rounded(icon, 26), (64, 92))
     draw.text((196, 84), 'Motmot', font=font('Baloo2.ttf', 92, 800), fill=WHITE)
     draw.text((200, 176), SUBTITLE[lang], font=font('Baloo2.ttf', 40, 700), fill=SUN)
@@ -67,7 +67,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     for lang in TAGLINES:
         feature(lang).save(OUT / f'feature-{lang}.png', optimize=True)
-    icon = Image.open(ROOT / 'tody' / 'masters' / 'tody-app-icon.png').convert('RGB').resize((512, 512), Image.LANCZOS)
+    icon = Image.open(ROOT / 'tody' / 'masters' / 'tody-app-icon-light.png').convert('RGB').resize((512, 512), Image.LANCZOS)
     icon.save(OUT / 'icon-512.png', optimize=True)
     print('written to', OUT)
 

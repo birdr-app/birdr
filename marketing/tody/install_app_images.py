@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFilter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CUT = os.path.join(ROOT, 'marketing/tody/cutout')
-ICON = os.path.join(ROOT, 'marketing/tody/masters/tody-app-icon.png')
+ICON = os.path.join(ROOT, 'marketing/tody/masters/tody-app-icon-light.png')
 HEAD = os.path.join(ROOT, 'marketing/tody/masters/tody-head.png')
 SURFACE = (250, 247, 242, 255)
 
@@ -42,7 +42,7 @@ def silhouette(img):
 
 
 def icon(size, shape='square'):
-    """square/circle: the app icon on dark green; head: Tody without background; head-surface: on the site's mist."""
+    """square/circle: the app icon on sage; head: Tody without background; head-surface: on the site's mist."""
     if shape.startswith('head'):
         im = Image.open(HEAD).convert('RGBA').resize((size, size), Image.LANCZOS)
         if shape == 'head-surface':

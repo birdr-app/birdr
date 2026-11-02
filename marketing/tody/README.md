@@ -6,7 +6,10 @@ Motmot design system artifact; the source images also live in the Figma file
 "Mottie – Motmot mascot".
 
 - `masters/` — the generated 1024×1024 originals on white, plus `tody-app-icon.png`
-  (head and shoulders on #10201B, square; the stores round the corners).
+  (head and shoulders on #10201B, square; the stores round the corners) and
+  `tody-app-icon-light.png`, the same on sage #DCECE2. The light one is the app icon;
+  make it with `python3 marketing/tody/light_icon.py`, then run `install_app_icons.py`
+  and `install_app_images.py`.
   `tody-head.png` is the same head without the background, used for the favicons,
   web app icons and the site header (the apple-touch-icon puts it on #FAF7F2).
 - `cutout/` — the moods with the background removed: PNG (768px on the long side)
