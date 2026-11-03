@@ -1782,7 +1782,9 @@ class ProfileView(APIView):
         if 'avatar' in data and data['avatar'] == '':
             data['avatar'] = None
         
-        serializer = UserProfileUpdateSerializer(profile, data=data, context={'request': request})
+        # partial: with multipart data DRF reads an unsent BooleanField as False,
+        # which switched off receive_updates whenever the web app saved anything else.
+        serializer = UserProfileUpdateSerializer(profile, data=data, partial=True, context={'request': request})
         
         if serializer.is_valid():
             serializer.save()

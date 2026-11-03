@@ -18,6 +18,7 @@ from jizz.models import (
     Answer,
     Species,
     CountrySpecies,
+    UserProfile,
 )
 from media.models import Media
 
@@ -316,6 +317,19 @@ class ProfileViewTestCase(TestCase):
         self.assertTrue(response.data['receive_updates'])
         self.user.profile.refresh_from_db()
         self.assertTrue(self.user.profile.receive_updates)
+
+    def test_profile_multipart_update_keeps_unsent_booleans(self):
+        # The web app sends multipart; DRF reads a missing checkbox there as False.
+        profile = UserProfile.objects.create(user=self.user, receive_updates=True, show_all_modes=True)
+        response = self.client.put(
+            '/api/profile/',
+            {'app_language': 'nl'},
+            format='multipart',
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        profile.refresh_from_db()
+        self.assertTrue(profile.receive_updates)
+        self.assertTrue(profile.show_all_modes)
 
     def test_profile_update_visual_style(self):
         response = self.client.put(
