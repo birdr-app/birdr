@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from django.http import HttpResponse
+from django.http import Http404, HttpResponse
 from django.urls import reverse
 
 from compare.models import SpeciesComparison
@@ -56,13 +56,29 @@ def _xml(body: str) -> HttpResponse:
     return HttpResponse(body, content_type='application/xml; charset=utf-8')
 
 
+# Google reads at most 50,000 URLs and 50 MB per sitemap. Each path becomes one <url> per
+# locale with hreflang links to all the others (about 1.3 kB each), so 2,000 paths make
+# 16,000 URLs and roughly 21 MB.
+PATHS_PER_SITEMAP = 2_000
+
+
+def _page_count(paths: list[str]) -> int:
+    return max(1, -(-len(paths) // PATHS_PER_SITEMAP))
+
+
+def _section_url(section: str, page: int) -> str:
+    """Page 1 keeps the plain section URL; later pages get a -N suffix."""
+    if page == 1:
+        return reverse('marketing-sitemap-section', kwargs={'section': section})
+    return reverse('marketing-sitemap-section-page', kwargs={'section': section, 'page': page})
+
+
 def sitemap_index(request):
     origin = canonical_origin(request)
     locs = [
-        origin + reverse('marketing-sitemap-pages'),
-        origin + reverse('marketing-sitemap-countries'),
-        origin + reverse('marketing-sitemap-birds'),
-        origin + reverse('marketing-sitemap-compare'),
+        origin + _section_url(name, page)
+        for name, paths_fn in SECTIONS.items()
+        for page in range(1, _page_count(paths_fn()) + 1)
     ]
     return _xml(_index(locs))
 
@@ -94,10 +110,11 @@ def countries_paths() -> list[str]:
     return [row['url'] for row in _indexable_countries()]
 
 
+# Both lists are ordered, so each sitemap page keeps the same URLs between fetches.
 def birds_paths() -> list[str]:
     return [
         reverse('marketing-bird', kwargs={'slug': slug})
-        for slug in public_species_qs().exclude(slug='').values_list('slug', flat=True)
+        for slug in public_species_qs().exclude(slug='').order_by('slug').values_list('slug', flat=True)
     ]
 
 
@@ -108,13 +125,12 @@ def compare_paths() -> list[str]:
         comparison_type='species',
         species_1__isnull=False,
         species_2__isnull=False,
-    ).select_related('species_1', 'species_2')
-    for row in comparisons:
-        a, b = row.species_1, row.species_2
-        if not a.slug or not b.slug:
+    ).order_by('id').values_list('species_1_id', 'species_1__slug', 'species_2_id', 'species_2__slug')
+    for a_id, a_slug, b_id, b_slug in comparisons:
+        if not a_slug or not b_slug:
             continue
-        low, high = (a, b) if a.id < b.id else (b, a)
-        pair = compare_pair_slug(low.slug, high.slug)
+        low, high = (a_slug, b_slug) if a_id < b_id else (b_slug, a_slug)
+        pair = compare_pair_slug(low, high)
         if pair in seen:
             continue
         seen.add(pair)
@@ -140,17 +156,12 @@ def localized_urls(paths: list[str], origin: str) -> list[str]:
     ]
 
 
-def sitemap_pages(request):
-    return _xml(_urlset(pages_paths(), canonical_origin(request)))
-
-
-def sitemap_countries(request):
-    return _xml(_urlset(countries_paths(), canonical_origin(request)))
-
-
-def sitemap_birds(request):
-    return _xml(_urlset(birds_paths(), canonical_origin(request)))
-
-
-def sitemap_compare(request):
-    return _xml(_urlset(compare_paths(), canonical_origin(request)))
+def sitemap_section(request, section: str, page: int = 1):
+    paths_fn = SECTIONS.get(section)
+    if paths_fn is None:
+        raise Http404
+    paths = paths_fn()
+    if not 1 <= page <= _page_count(paths):
+        raise Http404
+    start = (page - 1) * PATHS_PER_SITEMAP
+    return _xml(_urlset(paths[start:start + PATHS_PER_SITEMAP], canonical_origin(request)))

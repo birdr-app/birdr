@@ -94,7 +94,10 @@ class MarketingHostRedirectMiddlewareTestCase(TestCase):
         self.assertEqual(response['Location'], url)
 
     def test_marketing_pages_on_birdr_redirect_to_motmot(self):
-        for path in ['/', '/site/', '/site/flocks/', '/nl/site/', '/nl/site/birds/', '/sitemap.xml']:
+        for path in [
+            '/', '/site/', '/site/flocks/', '/nl/site/', '/nl/site/birds/', '/sitemap.xml',
+            '/sitemap-birds.xml', '/sitemap-birds-2.xml',
+        ]:
             with self.subTest(path=path):
                 self.assertRedirectsTo(self.get(path, 'birdr.pro'), f'https://motmot.club{path}')
 

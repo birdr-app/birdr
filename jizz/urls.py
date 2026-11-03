@@ -340,10 +340,12 @@ def open_league_redirect(request, country_code=None):
 urlpatterns = [
     path('robots.txt', robots_txt, name='marketing-robots'),
     path('sitemap.xml', marketing_sitemaps.sitemap_index, name='marketing-sitemap'),
-    path('sitemap-pages.xml', marketing_sitemaps.sitemap_pages, name='marketing-sitemap-pages'),
-    path('sitemap-countries.xml', marketing_sitemaps.sitemap_countries, name='marketing-sitemap-countries'),
-    path('sitemap-birds.xml', marketing_sitemaps.sitemap_birds, name='marketing-sitemap-birds'),
-    path('sitemap-compare.xml', marketing_sitemaps.sitemap_compare, name='marketing-sitemap-compare'),
+    path(
+        'sitemap-<slug:section>-<int:page>.xml',
+        marketing_sitemaps.sitemap_section,
+        name='marketing-sitemap-section-page',
+    ),
+    path('sitemap-<slug:section>.xml', marketing_sitemaps.sitemap_section, name='marketing-sitemap-section'),
     path('site/', landing, name='marketing-landing'),
     path(
         'site/how-it-works/',
