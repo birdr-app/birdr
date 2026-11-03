@@ -796,4 +796,34 @@ EXTRA_ENTRIES: list[tuple[str, tuple[str, ...]]] = [
             'すべてのお知らせ',
         ),
     ),
+    # World list and regions on the quiz-by-country page.
+    ('All the birds of the world', ('Alle vogels van de wereld', 'Todas las aves del mundo', 'Tous les oiseaux du monde', 'Alle Vögel der Welt', 'Tutti gli uccelli del mondo', 'Todas as aves do mundo', '世界のすべての鳥')),
+    (
+        'Not tied to one country? Choose the World list and play with every bird species on Earth, from penguins to hummingbirds.',
+        (
+            'Niet aan één land gebonden? Kies de wereldlijst en speel met elke vogelsoort op aarde, van pinguïns tot kolibries.',
+            '¿No te limitas a un país? Elige la lista mundial y juega con todas las especies de aves de la Tierra, desde pingüinos hasta colibríes.',
+            'Pas attaché à un seul pays ? Choisis la liste mondiale et joue avec toutes les espèces d’oiseaux de la planète, des manchots aux colibris.',
+            'Nicht an ein Land gebunden? Wähle die Weltliste und spiele mit jeder Vogelart der Erde, von Pinguinen bis Kolibris.',
+            'Non sei legato a un solo paese? Scegli la lista mondiale e gioca con tutte le specie di uccelli della Terra, dai pinguini ai colibrì.',
+            'Não está preso a um país? Escolha a lista mundial e jogue com todas as espécies de aves da Terra, dos pinguins aos beija-flores.',
+            '一つの国にこだわらない？ 世界リストを選べば、ペンギンからハチドリまで、地球上のすべての鳥でプレイできます。',
+        ),
+    ),
+    ('Play the World list', ('Speel de wereldlijst', 'Juega la lista mundial', 'Jouer la liste mondiale', 'Weltliste spielen', 'Gioca la lista mondiale', 'Jogar a lista mundial', '世界リストでプレイ')),
+    ('Browse all birds', ('Bekijk alle vogels', 'Ver todas las aves', 'Voir tous les oiseaux', 'Alle Vögel ansehen', 'Sfoglia tutti gli uccelli', 'Ver todas as aves', 'すべての鳥を見る')),
+    ('States, provinces and regions', ('Staten, provincies en regio’s', 'Estados, provincias y regiones', 'États, provinces et régions', 'Bundesstaaten, Provinzen und Regionen', 'Stati, province e regioni', 'Estados, províncias e regiões', '州・県・地域')),
+    (
+        'Big countries are easier to learn one region at a time. Play the birds of a single US state, Canadian province or Australian state, or of another region of a large country.',
+        (
+            'Grote landen leer je makkelijker regio voor regio. Speel met de vogels van één Amerikaanse staat, Canadese provincie of Australische staat, of van een andere regio van een groot land.',
+            'Los países grandes se aprenden mejor región por región. Juega con las aves de un solo estado de EE. UU., una provincia de Canadá o un estado de Australia, o de otra región de un país grande.',
+            'Les grands pays s’apprennent mieux une région à la fois. Joue avec les oiseaux d’un seul État américain, d’une province canadienne ou d’un État australien, ou d’une autre région d’un grand pays.',
+            'Große Länder lernst du leichter Region für Region. Spiele mit den Vögeln eines einzelnen US-Bundesstaats, einer kanadischen Provinz oder eines australischen Bundesstaats, oder einer anderen Region eines großen Landes.',
+            'I paesi grandi si imparano meglio una regione alla volta. Gioca con gli uccelli di un solo stato degli USA, di una provincia canadese o di uno stato australiano, o di un’altra regione di un grande paese.',
+            'Países grandes são mais fáceis de aprender uma região de cada vez. Jogue com as aves de um único estado dos EUA, província do Canadá ou estado da Austrália, ou de outra região de um país grande.',
+            '大きな国は地域ごとに覚えるのが近道です。アメリカの州、カナダの州、オーストラリアの州など、大きな国の一つの地域の鳥でプレイしましょう。',
+        ),
+    ),
+    ('Quizzes for regions of {name}', ('Quizzen per regio van {name}', 'Quizzes por región de {name}', 'Quiz par région : {name}', 'Quiz nach Regionen: {name}', 'Quiz per regione: {name}', 'Quizzes por região de {name}', '{name}の地域別クイズ')),
 ]

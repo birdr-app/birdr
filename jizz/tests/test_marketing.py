@@ -1066,6 +1066,50 @@ class MarketingPagesTests(TestCase):
         self.assertEqual(self.client.get('/sitemap-nope.xml').status_code, 404)
         self.assertEqual(self.client.get('/sitemap-birds.xml?page=2').status_code, 404)
 
+    def test_region_pages_world_and_sitemap(self):
+        def country(code, name, **fields):
+            row, _ = Country.objects.update_or_create(code=code, defaults={'name': name, **fields})
+            CountrySpecies.objects.get_or_create(country=row, species=self.sparrow)
+            return row
+
+        us = country('US', 'United States')
+        country('GE', 'Georgia')
+        country('US-GA', 'Georgia', kind='subnational', parent=us)
+        country('US-AK', 'United States - Alaska', kind='subnational', parent=us)
+        country('US-EAST', 'United States - Eastern', kind='aggregate', parent=us)
+        country('NL-TX', 'Texel Bird Week', kind='specialty', parent=self.nl)
+
+        page = self.client.get('/site/bird-quiz-by-country/').content.decode()
+        self.assertIn('All the birds of the world', page)
+        self.assertIn('States, provinces and regions', page)
+        self.assertIn('href="/site/countries/united-states/georgia/"', page)
+        self.assertIn('href="/site/countries/united-states/alaska/"', page)
+        self.assertIn('href="/site/countries/united-states/eastern/"', page)
+        self.assertNotIn('Texel Bird Week', page)
+
+        state = self.client.get('/site/countries/united-states/georgia/')
+        self.assertEqual(state.status_code, 200)
+        html = state.content.decode()
+        self.assertIn('Birds of Georgia, United States', html)
+        self.assertIn('href="/site/countries/united-states/"', html)
+        self.assertNotIn('href="/league/US-GA"', html)
+        self.assertIn(
+            'Birds of United States - Eastern',
+            self.client.get('/site/countries/united-states/eastern/').content.decode(),
+        )
+        self.assertIn('Birds of Georgia', self.client.get('/site/countries/georgia/').content.decode())
+        self.assertEqual(self.client.get('/site/countries/united-states/nowhere/').status_code, 404)
+        self.assertEqual(self.client.get('/site/countries/netherlands/texel-bird-week/').status_code, 404)
+
+        us_page = self.client.get('/site/countries/united-states/').content.decode()
+        self.assertIn('Quizzes for regions of United States', us_page)
+        self.assertIn('href="/site/countries/united-states/alaska/"', us_page)
+
+        countries = self.client.get('/sitemap-countries.xml').content.decode()
+        self.assertIn('https://motmot.club/site/countries/united-states/georgia/', countries)
+        self.assertIn('https://motmot.club/nl/site/countries/united-states/alaska/', countries)
+        self.assertNotIn('texel', countries)
+
     def test_large_sitemap_sections_are_split_into_pages(self):
         paths = [f'/site/birds/bird-{i}/' for i in range(5)]
         with patch.dict('jizz.marketing.sitemaps.SECTIONS', {'birds': lambda: paths}), \

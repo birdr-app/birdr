@@ -145,6 +145,26 @@
   </div>
 </section>
 {% endif %}
+{% if show_world %}
+<section>
+  <h2>{% mt "All the birds of the world" %}</h2>
+  <p>{% mt "Not tied to one country? Choose the World list and play with every bird species on Earth, from penguins to hummingbirds." %}</p>
+  <div class="cta-row">
+    <a class="btn" href="/start/">{% mt "Play the World list" %}</a>
+    <a class="btn secondary" href="{{ '/site/birds/'|mpath }}">{% mt "Browse all birds" %}</a>
+  </div>
+</section>
+{% endif %}
+{% if region_groups %}
+<section>
+  <h2>{% mt "States, provinces and regions" %}</h2>
+  <p>{% mt "Big countries are easier to learn one region at a time. Play the birds of a single US state, Canadian province or Australian state, or of another region of a large country." %}</p>
+  {% for group in region_groups %}
+  <h3><a href="{{ group.url|mpath }}">{% if group.flag %}<span aria-hidden="true">{{ group.flag }}</span> {% endif %}{{ group.name }}</a></h3>
+  {% include "marketing/_country_pills.html" with countries=group.regions %}
+  {% endfor %}
+</section>
+{% endif %}
 {% if countries %}
 <section>
   <h2>{% mt "Countries on Motmot" %}</h2>

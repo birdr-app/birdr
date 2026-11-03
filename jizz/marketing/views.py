@@ -58,10 +58,13 @@ from jizz.marketing.local_names import (
     taxonomy_display_name,
 )
 from jizz.marketing.slugs import (
+    REGION_KINDS,
     compare_pair_slug,
     country_is_indexable,
     country_slug,
     parse_compare_pair,
+    region_short_name,
+    region_slug,
 )
 from jizz.marketing.country_stats import confusion_pairs, country_page_stats, missed_birds
 from jizz.marketing.mode_countries import national_league_countries, survival_countries
@@ -147,6 +150,54 @@ def _indexable_countries():
         })
     cache.set('marketing-indexable-countries-v2', rows, MARKETING_QUERY_CACHE_TTL)
     return rows
+
+
+def _indexable_regions():
+    """States, provinces and regional lists, grouped under their indexable country.
+
+    Each group is the country's row from _indexable_countries plus a 'regions' list.
+    """
+    from django.db.models import Count
+
+    from jizz.marketing.pages import MARKETING_QUERY_CACHE_TTL
+
+    cached = cache.get('marketing-indexable-regions')
+    if cached is not None:
+        return cached
+    countries = {row['code']: row for row in _indexable_countries()}
+    qs = (
+        Country.objects.filter(kind__in=REGION_KINDS, parent_id__in=list(countries))
+        .select_related('parent')
+        .annotate(species_n=Count('countryspecies'))
+        .filter(species_n__gt=0)
+    )
+    by_parent: dict[str, list[dict]] = {}
+    for region in qs:
+        parent = countries[region.parent_id]
+        rows = by_parent.setdefault(parent['code'], [])
+        slug = region_slug(region)
+        if any(row['slug'] == slug for row in rows):
+            slug = f'{slug}-{region.code.lower()}'
+        rows.append({
+            'name': region_short_name(region),
+            'full_name': region.name,
+            'kind': region.kind,
+            'code': region.code,
+            'slug': slug,
+            'count': region.species_n,
+            'url': reverse('marketing-region', kwargs={'country': parent['slug'], 'slug': slug}),
+        })
+    groups = []
+    for code, rows in by_parent.items():
+        rows.sort(key=lambda r: r['name'].casefold())
+        groups.append({**countries[code], 'regions': rows})
+    groups.sort(key=lambda g: g['name'].casefold())
+    cache.set('marketing-indexable-regions', groups, MARKETING_QUERY_CACHE_TTL)
+    return groups
+
+
+def _region_groups_for_request(request) -> list[dict]:
+    return localize_country_rows(_indexable_regions(), locale_from_request(request))
 
 
 def _country_by_slug(slug: str):
@@ -352,6 +403,8 @@ def intent_page(request, slug: str):
         extra.update(store_review_context())
     elif page.get('show_countries'):
         extra['countries'] = _countries_for_request(request)
+        extra['region_groups'] = _region_groups_for_request(request)
+        extra['show_world'] = True
     if slug == 'my-tricky-birds':
         locale = locale_from_request(request)
         missed = _localize_species_rows(missed_birds(limit=8), locale)
@@ -405,6 +458,59 @@ def country_page(request, slug: str):
     path = reverse('marketing-country', kwargs={'slug': slug})
     locale = locale_from_request(request)
     country_name = country_display_name(country, locale)
+    group = next((g for g in _region_groups_for_request(request) if g['code'] == country.code), None)
+    return _country_response(
+        request,
+        country,
+        species_count,
+        country_name=country_name,
+        path=path,
+        breadcrumbs=[
+            ('Home', SITE_HOME),
+            ('Quizzes by country', site_path('bird-quiz-by-country')),
+            (country_name, path),
+        ],
+        regions=group['regions'] if group else [],
+    )
+
+
+def region_page(request, country: str, slug: str):
+    group = next((g for g in _region_groups_for_request(request) if g['slug'] == country), None)
+    row = next((r for r in group['regions'] if r['slug'] == slug), None) if group else None
+    if row is None:
+        raise Http404()
+    region = get_object_or_404(Country, code=row['code'])
+    species_count = region.countryspecies.count()
+    if species_count < 1:
+        raise Http404()
+    path = row['url']
+    parent_path = group['url']
+    # A state needs its country to be unambiguous (Georgia); regional lists already name it.
+    if region.kind == Country.KIND_SUBNATIONAL:
+        region_name = f"{row['name']}, {group['name']}"
+    else:
+        region_name = row['full_name']
+    return _country_response(
+        request,
+        region,
+        species_count,
+        country_name=region_name,
+        path=path,
+        breadcrumbs=[
+            ('Home', SITE_HOME),
+            ('Quizzes by country', site_path('bird-quiz-by-country')),
+            (group['name'], parent_path),
+            (row['name'], path),
+        ],
+        parent_name=group['name'],
+        parent_href=parent_path,
+    )
+
+
+def _country_response(request, country, species_count, *, country_name, path, breadcrumbs, **extra):
+    """The quiz page of a country, or of a region with parent_name and parent_href."""
+    locale = locale_from_request(request)
+    is_region = 'parent_href' in extra
     title = translate('Bird Quiz: {name} – Identify the Birds | Motmot', name=country_name)
     description = translate(
         'Learn to identify the birds of {name} with free photo quizzes and a '
@@ -415,21 +521,22 @@ def country_page(request, slug: str):
     stats = country_page_stats(country, request=request)
     stats['missed_birds'] = _localize_species_rows(stats['missed_birds'], locale)
     stats['confusion_pairs'] = _localize_pair_rows(stats['confusion_pairs'], locale)
+    if is_region:
+        # The National League is played per country, not per state or region.
+        stats['show_league'] = False
     context = base_context(
         request,
         title=title,
         description=description,
         path=path,
-        breadcrumbs=[
-            ('Home', SITE_HOME),
-            ('Quizzes by country', site_path('bird-quiz-by-country')),
-            (country_name, path),
-        ],
+        breadcrumbs=breadcrumbs,
         country=country,
         country_name=country_name,
         species_count=species_count,
         quiz_href='/start/',
         challenge_href='/journey/intro',
+        is_region=is_region,
+        **extra,
         **stats,
         **store_review_context(),
     )

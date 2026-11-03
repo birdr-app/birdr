@@ -9,7 +9,7 @@ from compare.models import SpeciesComparison
 from jizz.marketing.i18n import MARKETING_LOCALES, localize_path
 from jizz.marketing.pages import INTENT_PAGES, canonical_origin, public_species_qs
 from jizz.marketing.slugs import compare_pair_slug
-from jizz.marketing.views import _indexable_countries
+from jizz.marketing.views import _indexable_countries, _indexable_regions
 
 
 def _urlset(paths: list[str], origin: str) -> str:
@@ -110,7 +110,9 @@ def pages_paths() -> list[str]:
 
 
 def countries_paths() -> list[str]:
-    return [row['url'] for row in _indexable_countries()]
+    paths = [row['url'] for row in _indexable_countries()]
+    paths.extend(region['url'] for group in _indexable_regions() for region in group['regions'])
+    return paths
 
 
 # Both lists are ordered, so each sitemap page keeps the same URLs between fetches.

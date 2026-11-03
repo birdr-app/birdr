@@ -19,6 +19,29 @@ def country_is_indexable(country) -> bool:
     return True
 
 
+# States, provinces and regional lists that get their own page under their country.
+REGION_KINDS = ('subnational', 'aggregate')
+
+
+def region_short_name(region) -> str:
+    """Region name without its country prefix: 'United States - Alaska' → 'Alaska'."""
+    name = getattr(region, 'name', '') or ''
+    parent = getattr(region, 'parent', None)
+    parent_name = getattr(parent, 'name', '') or ''
+    rest = name[len(parent_name):] if parent_name and name.startswith(parent_name) else ''
+    # Only a separated prefix: 'Australian Capital Territory' keeps its name.
+    if rest[:1] in (' ', '-', '–', '—') and rest.strip(' -–—'):
+        name = rest.strip(' -–—')
+    return name or (getattr(region, 'code', '') or '')
+
+
+def region_slug(region) -> str:
+    slug = slugify(region_short_name(region))
+    if slug:
+        return slug
+    return (getattr(region, 'code', '') or 'region').lower()
+
+
 def country_slug(country) -> str:
     name = getattr(country, 'name', '') or ''
     slug = slugify(name)

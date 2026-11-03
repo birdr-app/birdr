@@ -8,7 +8,9 @@
   <div class="cta-row">
     <a class="btn" href="{{ quiz_href }}">{% mt "Start a quiz" %}</a>
     <a class="btn secondary" href="{{ challenge_href }}">{% mt "Country Challenge" %}</a>
+    {% if not is_region %}
     <a class="btn secondary" href="{{ league_href }}">{% mt "National League" %}</a>
+    {% endif %}
   </div>
   <p>{% mt "Best on the" %} <a href="{{ home_url }}#get-the-app">{% mt "iPhone and Android apps" %}</a>.</p>
 </section>
@@ -16,16 +18,27 @@
   <p>
     {% mt "A one-off quiz is a short session on this country’s list. A Country Challenge is structured practice with levels, so you keep meeting new birds instead of repeating only the easy ones." %}
   </p>
+  {% if not is_region %}
   <p>
     {% mt "National League is where you compete against other birders from {name}: one daily quiz that starts easy and finishes harder, with a daily winner and a weekly champion." name=country_name %}
   </p>
+  {% endif %}
   <p>
+    {% if parent_href %}
+    <a href="{{ parent_href|mpath }}">{% mt "Birds of {name}" name=parent_name %}</a> ·
+    {% endif %}
     <a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "More country quizzes" %}</a> ·
     <a href="{{ '/site/national-league/'|mpath }}">{% mt "National League" %}</a> ·
     <a href="{{ '/site/survival/'|mpath }}">{% mt "Survival" %}</a> ·
     <a href="/play">{% mt "Open Motmot" %}</a>
   </p>
 </section>
+{% if regions %}
+<section>
+  <h2>{% mt "Quizzes for regions of {name}" name=country_name %}</h2>
+  {% include "marketing/_country_pills.html" with countries=regions %}
+</section>
+{% endif %}
 {% if show_games or show_highscores or show_challenge or show_league or show_missed or show_pairs %}
 <section>
   <h2>{% mt "How people play in {name}" name=country_name %}</h2>
