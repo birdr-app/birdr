@@ -1064,7 +1064,7 @@ class MarketingPagesTests(TestCase):
         self.assertIn('-vs-', compare)
 
         self.assertEqual(self.client.get('/sitemap-nope.xml').status_code, 404)
-        self.assertEqual(self.client.get('/sitemap-birds-2.xml').status_code, 404)
+        self.assertEqual(self.client.get('/sitemap-birds.xml?page=2').status_code, 404)
 
     def test_large_sitemap_sections_are_split_into_pages(self):
         paths = [f'/site/birds/bird-{i}/' for i in range(5)]
@@ -1072,17 +1072,17 @@ class MarketingPagesTests(TestCase):
                 patch('jizz.marketing.sitemaps.PATHS_PER_SITEMAP', 2):
             index = self.client.get('/sitemap.xml').content.decode()
             self.assertIn('https://motmot.club/sitemap-birds.xml', index)
-            self.assertIn('https://motmot.club/sitemap-birds-2.xml', index)
-            self.assertIn('https://motmot.club/sitemap-birds-3.xml', index)
-            self.assertNotIn('sitemap-birds-4.xml', index)
+            self.assertIn('https://motmot.club/sitemap-birds.xml?page=2', index)
+            self.assertIn('https://motmot.club/sitemap-birds.xml?page=3', index)
+            self.assertNotIn('sitemap-birds.xml?page=4', index)
 
             first = self.client.get('/sitemap-birds.xml').content.decode()
             self.assertIn('/site/birds/bird-1/', first)
             self.assertNotIn('/site/birds/bird-2/', first)
-            last = self.client.get('/sitemap-birds-3.xml').content.decode()
+            last = self.client.get('/sitemap-birds.xml?page=3').content.decode()
             self.assertIn('/site/birds/bird-4/', last)
             self.assertNotIn('/site/birds/bird-3/', last)
-            self.assertEqual(self.client.get('/sitemap-birds-4.xml').status_code, 404)
+            self.assertEqual(self.client.get('/sitemap-birds.xml?page=4').status_code, 404)
 
     def test_localized_marketing_pages(self):
         en = self.client.get('/site/')

@@ -7,7 +7,6 @@ When the app sends a non-HTTPS redirect_uri for apple-id, we store it as the app
 callback and use our HTTPS completion URL as the redirect_uri sent to Apple.
 """
 
-import re
 from urllib.parse import urlsplit
 
 from django.conf import settings
@@ -26,8 +25,13 @@ from jizz.usage_analytics import is_crawler_user_agent, record_usage_event
 _SERVER_RENDERED_PREFIXES = ('/data/', '/country/', '/staff/', '/site/')
 
 
-# /sitemap.xml, its sections (/sitemap-birds.xml) and their later pages (/sitemap-birds-2.xml).
-_MARKETING_SITEMAP_RE = re.compile(r'/sitemap(-[a-z]+(-\d+)?)?\.xml')
+_MARKETING_SITEMAP_PATHS = frozenset({
+    '/sitemap.xml',
+    '/sitemap-pages.xml',
+    '/sitemap-countries.xml',
+    '/sitemap-birds.xml',
+    '/sitemap-compare.xml',
+})
 
 
 def _host_of(url: str) -> str:
@@ -36,7 +40,7 @@ def _host_of(url: str) -> str:
 
 def is_marketing_path(path: str) -> bool:
     """The website's own pages, as opposed to the API, OAuth, share links and the web app."""
-    if path == '/' or path.startswith('/site/') or _MARKETING_SITEMAP_RE.fullmatch(path):
+    if path == '/' or path.startswith('/site/') or path in _MARKETING_SITEMAP_PATHS:
         return True
     _, remainder = parse_locale_prefix(path)
     return remainder is not None

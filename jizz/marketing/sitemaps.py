@@ -67,10 +67,13 @@ def _page_count(paths: list[str]) -> int:
 
 
 def _section_url(section: str, page: int) -> str:
-    """Page 1 keeps the plain section URL; later pages get a -N suffix."""
-    if page == 1:
-        return reverse('marketing-sitemap-section', kwargs={'section': section})
-    return reverse('marketing-sitemap-section-page', kwargs={'section': section, 'page': page})
+    """Page 1 keeps the plain section URL; later pages add ?page=N.
+
+    A query string rather than a new path, because nginx only proxies the known sitemap
+    paths to Django and ignores the query when matching them.
+    """
+    url = reverse('marketing-sitemap-section', kwargs={'section': section})
+    return url if page == 1 else f'{url}?page={page}'
 
 
 def sitemap_index(request):
@@ -156,10 +159,12 @@ def localized_urls(paths: list[str], origin: str) -> list[str]:
     ]
 
 
-def sitemap_section(request, section: str, page: int = 1):
+def sitemap_section(request, section: str):
     paths_fn = SECTIONS.get(section)
-    if paths_fn is None:
+    page = request.GET.get('page', '1')
+    if paths_fn is None or not page.isdigit():
         raise Http404
+    page = int(page)
     paths = paths_fn()
     if not 1 <= page <= _page_count(paths):
         raise Http404
