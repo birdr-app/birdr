@@ -161,7 +161,7 @@ def _indexable_regions():
 
     from jizz.marketing.pages import MARKETING_QUERY_CACHE_TTL
 
-    cached = cache.get('marketing-indexable-regions')
+    cached = cache.get('marketing-indexable-regions-v2')
     if cached is not None:
         return cached
     countries = {row['code']: row for row in _indexable_countries()}
@@ -189,15 +189,35 @@ def _indexable_regions():
         })
     groups = []
     for code, rows in by_parent.items():
-        rows.sort(key=lambda r: r['name'].casefold())
+        # Regional lists (Eastern, Western) before the states and provinces.
+        rows.sort(key=lambda r: (r['kind'] != Country.KIND_AGGREGATE, r['name'].casefold()))
         groups.append({**countries[code], 'regions': rows})
     groups.sort(key=lambda g: g['name'].casefold())
-    cache.set('marketing-indexable-regions', groups, MARKETING_QUERY_CACHE_TTL)
+    cache.set('marketing-indexable-regions-v2', groups, MARKETING_QUERY_CACHE_TTL)
     return groups
 
 
 def _region_groups_for_request(request) -> list[dict]:
     return localize_country_rows(_indexable_regions(), locale_from_request(request))
+
+
+def _country_picker_data(countries: list[dict], region_groups: list[dict], locale: str) -> dict:
+    """Page URL and regions per country code, for the country picker's script."""
+    regions = {group['code']: group['regions'] for group in region_groups}
+    return {
+        row['code']: {
+            'url': localize_path(row['url'], locale),
+            'regions': [
+                {
+                    'name': region['name'],
+                    'kind': region['kind'],
+                    'url': localize_path(region['url'], locale),
+                }
+                for region in regions.get(row['code'], [])
+            ],
+        }
+        for row in countries
+    }
 
 
 def _country_by_slug(slug: str):
@@ -405,6 +425,9 @@ def intent_page(request, slug: str):
         extra['countries'] = _countries_for_request(request)
         extra['region_groups'] = _region_groups_for_request(request)
         extra['show_world'] = True
+        extra['picker'] = _country_picker_data(
+            extra['countries'], extra['region_groups'], locale_from_request(request)
+        )
     if slug == 'my-tricky-birds':
         locale = locale_from_request(request)
         missed = _localize_species_rows(missed_birds(limit=8), locale)

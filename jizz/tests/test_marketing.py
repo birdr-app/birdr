@@ -1086,6 +1086,13 @@ class MarketingPagesTests(TestCase):
         self.assertIn('href="/site/countries/united-states/alaska/"', page)
         self.assertIn('href="/site/countries/united-states/eastern/"', page)
         self.assertNotIn('Texel Bird Week', page)
+        self.assertIn('id="picker-country"', page)
+        self.assertIn('<option value="US">', page)
+        self.assertIn('"US": {"url": "/site/countries/united-states/"', page)
+        self.assertIn('"url": "/site/countries/united-states/alaska/"', page)
+        self.assertIn('Show all', page)
+        nl_page = self.client.get('/nl/site/bird-quiz-by-country/').content.decode()
+        self.assertIn('"url": "/nl/site/countries/united-states/alaska/"', nl_page)
 
         state = self.client.get('/site/countries/united-states/georgia/')
         self.assertEqual(state.status_code, 200)
@@ -1104,6 +1111,10 @@ class MarketingPagesTests(TestCase):
         us_page = self.client.get('/site/countries/united-states/').content.decode()
         self.assertIn('Quizzes for regions of United States', us_page)
         self.assertIn('href="/site/countries/united-states/alaska/"', us_page)
+        # Regional lists come first, then a divider, then the states.
+        eastern = us_page.index('/site/countries/united-states/eastern/')
+        divider = us_page.index('class="pill-divider"', eastern)
+        self.assertLess(divider, us_page.index('/site/countries/united-states/alaska/'))
 
         countries = self.client.get('/sitemap-countries.xml').content.decode()
         self.assertIn('https://motmot.club/site/countries/united-states/georgia/', countries)

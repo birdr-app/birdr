@@ -1079,7 +1079,16 @@
       color: var(--ink);
     }
     .search-row input[type="search"] { flex: 1 1 16rem; min-width: 0; }
-    .search-row select { flex: 0 1 14rem; }
+    .search-row select {
+      flex: 0 1 14rem;
+      /* Own chevron, so it sits clear of the rounded edge in every browser. */
+      appearance: none;
+      -webkit-appearance: none;
+      padding-right: 40px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%2310201B' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+    }
     .species-results { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 32px; }
     .species-results li { margin: 0 0 10px; break-inside: avoid; }
     .species-results .latin { display: block; font-size: 0.9rem; }
@@ -1509,6 +1518,13 @@
       line-height: 1.25;
       box-shadow: 0 4px 14px rgba(16, 32, 27, 0.08);
       min-height: 2.75rem;
+    }
+    .country-pills .pill-divider {
+      grid-column: 1 / -1;
+      width: 100%;
+      margin: 4px 0;
+      border: 0;
+      border-top: 1px solid var(--line);
     }
     .country-pills .country-flag {
       flex: 0 0 auto;

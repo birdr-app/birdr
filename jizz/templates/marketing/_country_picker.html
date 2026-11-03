@@ -1,0 +1,70 @@
+<section class="country-picker">
+  <h2>{% mt "Find your country or region" %}</h2>
+  <div class="search-row">
+    <select id="picker-country" aria-label="{% mt "Country" %}">
+      <option value="">{% mt "Choose a country" %}</option>
+      {% for c in countries %}
+      <option value="{{ c.code }}">{% if c.flag %}{{ c.flag }} {% endif %}{{ c.name }}</option>
+      {% endfor %}
+    </select>
+    <select id="picker-region" aria-label="{% mt "Region" %}" hidden>
+      <option value="">{% mt "Whole country" %}</option>
+    </select>
+    <a class="btn" id="picker-go" href="#all-countries">{% mt "Show quizzes" %}</a>
+  </div>
+</section>
+{{ picker|json_script:"picker-data" }}
+<script>
+(function () {
+  var data = JSON.parse(document.getElementById('picker-data').textContent);
+  var country = document.getElementById('picker-country');
+  var region = document.getElementById('picker-region');
+  var go = document.getElementById('picker-go');
+  var touched = false;
+
+  function update() {
+    var entry = data[country.value];
+    while (region.options.length > 1) region.remove(1);
+    region.value = '';
+    region.hidden = !(entry && entry.regions.length);
+    if (entry) {
+      entry.regions.forEach(function (r, i) {
+        // A divider between the regional lists and the states or provinces.
+        if (i && r.kind !== entry.regions[i - 1].kind) {
+          var divider = new Option('──────────', '');
+          divider.disabled = true;
+          region.add(divider);
+        }
+        region.add(new Option(r.name, r.url));
+      });
+    }
+    go.href = entry ? entry.url : '#all-countries';
+  }
+
+  function select(code) {
+    if (touched || !code || !data[code]) return false;
+    country.value = code;
+    update();
+    return true;
+  }
+
+  country.addEventListener('change', function () { touched = true; update(); });
+  region.addEventListener('change', function () {
+    touched = true;
+    go.href = region.value || data[country.value].url;
+  });
+
+  // Best guess first from the browser's languages (nl-NL → NL), then from the IP address.
+  // English is often a default (en-US for a Dutch birder), so other languages go first.
+  var langs = (navigator.languages || [navigator.language || '']).slice();
+  langs.sort(function (a, b) { return (/^en\b/i.test(a) ? 1 : 0) - (/^en\b/i.test(b) ? 1 : 0); });
+  for (var i = 0; i < langs.length; i++) {
+    var m = /-([A-Za-z]{2})\b/.exec(langs[i] || '');
+    if (m && select(m[1].toUpperCase())) break;
+  }
+  fetch('/api/geo/country/', { credentials: 'omit' })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .then(function (body) { select(body.country_code); })
+    .catch(function () {});
+})();
+</script>

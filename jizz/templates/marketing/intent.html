@@ -14,6 +14,7 @@
     {% if cta_href != '/play' %}<a class="web-link" href="/play">{% mt "Play in the browser" %}</a>{% endif %}
   </p>
 </section>
+{% if picker %}{% include "marketing/_country_picker.html" %}{% endif %}
 {% if screenshots %}
 <section class="screenshot-gallery" aria-label="{% mt "App screenshots" %}">
   <div class="screenshot-row">
@@ -160,15 +161,25 @@
   <h2>{% mt "States, provinces and regions" %}</h2>
   <p>{% mt "Big countries are easier to learn one region at a time. Play the birds of a single US state, Canadian province or Australian state, or of another region of a large country." %}</p>
   {% for group in region_groups %}
-  <h3><a href="{{ group.url|mpath }}">{% if group.flag %}<span aria-hidden="true">{{ group.flag }}</span> {% endif %}{{ group.name }}</a></h3>
-  {% include "marketing/_country_pills.html" with countries=group.regions %}
+  <details>
+    <summary>{% if group.flag %}<span aria-hidden="true">{{ group.flag }}</span> {% endif %}{{ group.name }} ({{ group.regions|length }})</summary>
+    <p><a href="{{ group.url|mpath }}">{% mt "Birds of {name}" name=group.name %}</a></p>
+    {% include "marketing/_country_pills.html" with countries=group.regions %}
+  </details>
   {% endfor %}
 </section>
 {% endif %}
 {% if countries %}
-<section>
+<section id="all-countries">
   <h2>{% mt "Countries on Motmot" %}</h2>
+  {% if picker %}
+  <details>
+    <summary>{% mt "Show all {count} countries" count=countries|length %}</summary>
+    {% include "marketing/_country_pills.html" %}
+  </details>
+  {% else %}
   {% include "marketing/_country_pills.html" %}
+  {% endif %}
 </section>
 {% endif %}
 <section class="band">

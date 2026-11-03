@@ -826,4 +826,11 @@ EXTRA_ENTRIES: list[tuple[str, tuple[str, ...]]] = [
         ),
     ),
     ('Quizzes for regions of {name}', ('Quizzen per regio van {name}', 'Quizzes por región de {name}', 'Quiz par région : {name}', 'Quiz nach Regionen: {name}', 'Quiz per regione: {name}', 'Quizzes por região de {name}', '{name}の地域別クイズ')),
+    # Country picker on the quiz-by-country page.
+    ('Find your country or region', ('Vind je land of regio', 'Encuentra tu país o región', 'Trouve ton pays ou ta région', 'Finde dein Land oder deine Region', 'Trova il tuo paese o la tua regione', 'Encontre seu país ou região', '国や地域を探す')),
+    ('Choose a country', ('Kies een land', 'Elige un país', 'Choisis un pays', 'Wähle ein Land', 'Scegli un paese', 'Escolha um país', '国を選択')),
+    ('Region', ('Regio', 'Región', 'Région', 'Region', 'Regione', 'Região', '地域')),
+    ('Whole country', ('Heel het land', 'Todo el país', 'Tout le pays', 'Ganzes Land', 'Tutto il paese', 'País inteiro', '国全体')),
+    ('Show quizzes', ('Toon quizzen', 'Ver quizzes', 'Voir les quiz', 'Quiz anzeigen', 'Mostra i quiz', 'Ver quizzes', 'クイズを見る')),
+    ('Show all {count} countries', ('Toon alle {count} landen', 'Ver los {count} países', 'Voir les {count} pays', 'Alle {count} Länder anzeigen', 'Mostra tutti i {count} paesi', 'Ver todos os {count} países', '全{count}か国を表示')),
 ]

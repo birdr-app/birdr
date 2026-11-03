@@ -1,5 +1,6 @@
 <div class="country-pills">
   {% for c in countries %}
+  {% ifchanged c.kind %}{% if not forloop.first %}<hr class="pill-divider">{% endif %}{% endifchanged %}
   <a href="{{ c.url|mpath }}">{% if c.flag %}<span class="country-flag" aria-hidden="true">{{ c.flag }}</span> {% endif %}{{ c.name }}</a>
   {% endfor %}
 </div>
