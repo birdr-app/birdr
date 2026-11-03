@@ -98,6 +98,10 @@
   </div>
   <p class="ai-generate-note">{% mt "This looks up Birds of the World identification notes, then asks the model to contrast the pair. It can take a minute." %}</p>
   <p class="ai-generate-error js-generate-error" hidden></p>
+  <div class="ai-generate-login js-generate-login" hidden>
+    <p>{% mt "Log in to generate an AI comparison for this pair." %}</p>
+    <p><button class="btn js-generate-login-btn" type="button">{% mt "Log in" %}</button></p>
+  </div>
 </section>
 <noscript>
   <section>
@@ -231,12 +235,41 @@
     var errorEl = root.querySelector('.js-generate-error');
     var spinner = root.querySelector('.ai-spinner');
     var language = root.getAttribute('data-language') || '';
+    var auth = window.birdrAuth;
+    var loginBox = root.querySelector('.js-generate-login');
+    // Generating costs AI credits, so only logged-in users may start one.
+    function showLogin() {
+      root.querySelector('.ai-generate-row').hidden = true;
+      root.querySelector('.ai-generate-note').hidden = true;
+      if (errorEl) errorEl.hidden = true;
+      if (loginBox) loginBox.hidden = false;
+    }
+    var loginBtn = root.querySelector('.js-generate-login-btn');
+    if (loginBtn) {
+      loginBtn.addEventListener('click', function () {
+        if (auth && typeof auth.open === 'function') {
+          auth.open();
+        } else {
+          window.location.href = '{{ login_href|escapejs }}';
+        }
+      });
+    }
+    if (!auth || !auth.isLoggedIn()) {
+      showLogin();
+      return;
+    }
     var requestUrl = '/api/compare/request/';
     if (language) {
       requestUrl += '?app_language=' + encodeURIComponent(language) + '&language=' + encodeURIComponent(language);
     }
-    var headers = { 'Content-Type': 'application/json', 'Accept': 'application/json' };
+    var headers = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'X-CSRFToken': '{{ csrf_token }}'
+    };
     if (language) headers['Accept-Language'] = language;
+    var token = auth.token();
+    if (token) headers['Authorization'] = 'Bearer ' + token;
     fetch(requestUrl, {
       method: 'POST',
       headers: headers,
@@ -254,6 +287,10 @@
     }).then(function (result) {
       var data = result.data;
       var message = data.error || data.detail || data.message;
+      if (data.login_required) {
+        showLogin();
+        return;
+      }
       if (!result.ok) {
         throw new Error(typeof message === 'string' ? message : t('Could not generate the comparison.'));
       }

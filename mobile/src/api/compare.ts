@@ -41,7 +41,7 @@ export type SpeciesComparison = {
 
 /**
  * Request or fetch a comparison between two species.
- * POST /api/compare/request/ (React app uses anonymous; add getAuthHeaders() here if backend requires auth).
+ * POST /api/compare/request/. Cached comparisons are public; generating a new one requires login.
  */
 export async function requestComparison(
   species1Id: number,
@@ -54,7 +54,7 @@ export async function requestComparison(
     params.set('language', language);
   }
   const query = params.toString();
-  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  const headers = (await getAuthHeaders()) as Record<string, string>;
   if (language) headers['Accept-Language'] = language;
   const response = await fetch(apiUrl(`/api/compare/request/${query ? `?${query}` : ''}`), {
     method: 'POST',

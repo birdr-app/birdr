@@ -2,6 +2,8 @@ from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.authentication import SessionAuthentication
+from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from django.shortcuts import get_object_or_404
@@ -15,6 +17,18 @@ from .serializers import (
 from .ai_service import AIComparisonService, ComparisonGenerationError
 from .scraper import BirdsOfTheWorldScraper
 from jizz.models import Species
+
+LOGIN_REQUIRED_MESSAGE = 'Log in to generate a comparison for this pair.'
+
+
+class OptionalJWTAuthentication(JWTAuthentication):
+    """JWT auth that treats a bad or expired token as anonymous instead of a 401."""
+
+    def authenticate(self, request):
+        try:
+            return super().authenticate(request)
+        except AuthenticationFailed:
+            return None
 
 
 class SpeciesTraitViewSet(viewsets.ReadOnlyModelViewSet):
@@ -88,9 +102,10 @@ class SpeciesComparisonViewSet(viewsets.ReadOnlyModelViewSet):
 class ComparisonRequestView(APIView):
     """
     API endpoint for creating and retrieving comparison requests.
+    Anyone may fetch a cached comparison; generating a new one requires login.
     """
     permission_classes = [AllowAny]
-    authentication_classes = []  # No authentication required
+    authentication_classes = [OptionalJWTAuthentication, SessionAuthentication]
     
     def post(self, request):
         """
@@ -133,6 +148,15 @@ class ComparisonRequestView(APIView):
                 status=status.HTTP_200_OK
             )
         
+        # Generating calls OpenAI, so only logged-in users may start one.
+        # 403 rather than 401 so the React app does not bounce anonymous users to /.
+        user = request.user if request.user.is_authenticated else None
+        if user is None:
+            return Response(
+                {'error': LOGIN_REQUIRED_MESSAGE, 'login_required': True},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+
         # Create new comparison request
         request_obj = ComparisonRequest.objects.create(
             comparison_type=comparison_type,
@@ -142,7 +166,7 @@ class ComparisonRequestView(APIView):
             family_2=data.get('family_2'),
             order_1=data.get('order_1'),
             order_2=data.get('order_2'),
-            requested_by=request.user if request.user.is_authenticated else None,
+            requested_by=user,
             status='processing'
         )
         

@@ -159,6 +159,9 @@ class ComparisonRequestViewTestCase(TestCase):
         self.species2 = Species.objects.create(
             name='Sparrow', name_latin='Passer', code='SPA01'
         )
+        from django.contrib.auth import get_user_model
+
+        self.user = get_user_model().objects.create_user('requester', password='x')
 
     def test_request_post_species_validation_missing_ids(self):
         response = self.client.post(
@@ -231,6 +234,7 @@ class ComparisonRequestViewTestCase(TestCase):
 
     @patch('compare.views.ComparisonRequestView._generate_comparison')
     def test_request_post_family_creates_new_comparison(self, mock_generate):
+        self.client.force_login(self.user)
         # Create comparison only when the view calls _generate_comparison (after existing check)
         def create_comparison(*args, **kwargs):
             return SpeciesComparison.objects.create(
@@ -257,6 +261,7 @@ class ComparisonRequestViewTestCase(TestCase):
 
     @patch('compare.views.ComparisonRequestView._generate_comparison')
     def test_request_post_returns_503_when_generation_unavailable(self, mock_generate):
+        self.client.force_login(self.user)
         from compare.ai_service import ComparisonGenerationError
 
         mock_generate.side_effect = ComparisonGenerationError(
@@ -276,6 +281,7 @@ class ComparisonRequestViewTestCase(TestCase):
 
     @patch('compare.views.ComparisonRequestView._generate_comparison')
     def test_request_post_returns_500_when_generate_raises(self, mock_generate):
+        self.client.force_login(self.user)
         mock_generate.side_effect = ValueError('AI service unavailable')
         response = self.client.post(
             '/api/compare/request/',
@@ -295,6 +301,61 @@ class ComparisonRequestViewTestCase(TestCase):
         self.assertIsNotNone(req)
         self.assertEqual(req.status, 'failed')
         self.assertIn('AI service unavailable', (req.error_message or ''))
+
+    @patch('compare.views.ComparisonRequestView._generate_comparison')
+    def test_request_post_anonymous_cannot_generate(self, mock_generate):
+        response = self.client.post(
+            '/api/compare/request/',
+            {
+                'comparison_type': 'species',
+                'species_1_id': self.species1.id,
+                'species_2_id': self.species2.id,
+            },
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+        self.assertTrue(response.data['login_required'])
+        mock_generate.assert_not_called()
+        self.assertFalse(ComparisonRequest.objects.exists())
+
+    @patch('compare.views.ComparisonRequestView._generate_comparison')
+    def test_request_post_invalid_token_cannot_generate(self, mock_generate):
+        self.client.credentials(HTTP_AUTHORIZATION='Bearer not-a-token')
+        response = self.client.post(
+            '/api/compare/request/',
+            {
+                'comparison_type': 'species',
+                'species_1_id': self.species1.id,
+                'species_2_id': self.species2.id,
+            },
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+        mock_generate.assert_not_called()
+
+    @patch('compare.views.ComparisonRequestView._generate_comparison')
+    def test_request_post_jwt_user_generates(self, mock_generate):
+        from rest_framework_simplejwt.tokens import RefreshToken
+
+        mock_generate.return_value = SpeciesComparison.objects.create(
+            comparison_type='species',
+            species_1=self.species1,
+            species_2=self.species2,
+            summary='Generated.',
+        )
+        token = str(RefreshToken.for_user(self.user).access_token)
+        self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {token}')
+        response = self.client.post(
+            '/api/compare/request/',
+            {
+                'comparison_type': 'species',
+                'species_1_id': self.species1.id,
+                'species_2_id': self.species2.id,
+            },
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(ComparisonRequest.objects.get().requested_by, self.user)
 
     def test_request_get_returns_list_anonymous(self):
         response = self.client.get('/api/compare/request/')
