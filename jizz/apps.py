@@ -5,4 +5,9 @@ class JizzConfig(AppConfig):
     name = 'jizz'
 
     def ready(self):
-        import jizz.signals  # noqa 
+        import jizz.signals  # noqa
+        from django.conf import settings
+        from django.core.mail.utils import DNS_NAME
+
+        # make_msgid() reads this cached name; set it so it skips socket.getfqdn().
+        DNS_NAME._fqdn = settings.EMAIL_MESSAGE_ID_DOMAIN 

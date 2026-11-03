@@ -266,6 +266,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Email configuration (can be overridden in local.py or production.py)
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'Motmot <info@motmot.club>')
 SERVER_EMAIL = os.environ.get('SERVER_EMAIL', 'Motmot <info@motmot.club>')
+# Domain in Message-ID headers. Django would take the server's FQDN, which
+# resolves to localhost on the server.
+EMAIL_MESSAGE_ID_DOMAIN = os.environ.get('EMAIL_MESSAGE_ID_DOMAIN', 'mail.motmot.club')
 
 # Password reset link expiry (seconds; default_token_generator uses this)
 PASSWORD_RESET_TIMEOUT = 86400  # 24 hours
