@@ -30,8 +30,9 @@ from jizz.marketing.views import (
     site_logout,
     survival_page,
 )
-from jizz.marketing.api import MarketingPageDetailView, MarketingPageListCreateView
+from jizz.marketing.api import MarketingPageDetailView, MarketingPageListCreateView, SpeciesDescriptionView
 from jizz.marketing import sitemaps as marketing_sitemaps
+from jizz.marketing import taxa as marketing_taxa
 
 from jizz.views import CountryDetailView, CountryViewSet, SpeciesListView, SpeciesDetailView, SpeciesBySlugView, SpeciesCoverView, GameListView, \
     GameDetailView, GameDetailWithAnswersByPlayerTokenView, QuestionDetailView, QuestionMediaReadyView, QuestionNextMediaView, PlayerCreateView, PlayerView, PlayerLinkView, AnswerView, AnswerDetail, \
@@ -379,6 +380,12 @@ urlpatterns = [
     path('site/countries/<slug:slug>/', country_page, name='marketing-country'),
     path('site/countries/<slug:country>/<slug:slug>/', region_page, name='marketing-region'),
     path('site/birds/', birds_index, name='marketing-birds'),
+    path('site/orders/', marketing_taxa.orders_index, name='marketing-orders'),
+    path('site/orders/<slug:slug>/', marketing_taxa.order_page, name='marketing-order'),
+    path('site/families/', RedirectView.as_view(url='/site/orders/', permanent=True)),
+    path('site/families/<slug:slug>/', marketing_taxa.family_page, name='marketing-family'),
+    path('site/groups/', marketing_taxa.groups_index, name='marketing-groups'),
+    path('site/groups/<slug:slug>/', marketing_taxa.group_page, name='marketing-group'),
     path('site/birds/<slug:slug>/', bird_page, name='marketing-bird'),
     path('site/compare/<slug:pair>/community/', compare_community, name='marketing-compare-community'),
     path('site/compare/<slug:pair>/', compare_page, name='marketing-compare'),
@@ -563,6 +570,7 @@ urlpatterns = [
     path('api/pages/<slug:slug>/', PageDetailView.as_view(), name='page-detail'),
     path('api/marketing-pages/', MarketingPageListCreateView.as_view(), name='marketing-page-list'),
     path('api/marketing-pages/<slug:slug>/', MarketingPageDetailView.as_view(), name='marketing-page-detail'),
+    path('api/species/<int:species_id>/description/', SpeciesDescriptionView.as_view(), name='species-description'),
 
     re_path(r"^api/questions/(?P<pk>\d+)/next-media/$", QuestionNextMediaView.as_view(), name="question-next-media"),
     re_path(r"^api/questions/(?P<pk>\d+)/media-ready/$", QuestionMediaReadyView.as_view(), name="question-media-ready"),

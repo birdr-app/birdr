@@ -7,6 +7,10 @@
     {% mt "Search Motmot’s species pages, see which birds people miss most in quizzes, and open the lookalikes that are hardest to tell apart." %}
     {% if species_count %}{% mt "{count} species have a public page." count=species_count %}{% endif %}
   </p>
+  <p>
+    <a href="{{ '/site/orders/'|mpath }}">{% mt "Browse by order and family" %}</a> ·
+    <a href="{{ '/site/groups/'|mpath }}">{% mt "Browse by group" %}</a>
+  </p>
   <form class="search-form" method="get" action="{{ '/site/birds/'|mpath }}" role="search">
     <label class="search-label" for="species-q">{% mt "Search by common or scientific name" %}</label>
     <div class="search-row">

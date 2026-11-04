@@ -323,6 +323,69 @@ def _abundance_block(
     return '\n'.join(lines), facts
 
 
+def _dedupe_sources(sources: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Dedupe sources by source+url."""
+    seen: set[tuple[str, str]] = set()
+    deduped = []
+    for row in sources:
+        key = (row.get('source', ''), row.get('url', ''))
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(row)
+    return deduped
+
+
+def _botw_attribution() -> dict[str, str]:
+    return {
+        'source': SpeciesFact.SOURCE_BOTW,
+        'url': '',
+        'attribution': BOTW_ATTRIBUTION,
+        'license': '',
+    }
+
+
+@dataclass
+class SpeciesGrounding:
+    species: Species
+    traits: dict[str, Any] = field(default_factory=dict)
+    sources_used: list[dict[str, str]] = field(default_factory=list)
+
+    @property
+    def is_grounded(self) -> bool:
+        return has_open_or_botw_grounding(self.traits)
+
+
+def build_species_grounding(
+    species: Species,
+    *,
+    scrape_botw: bool = True,
+    fetch_remote: bool = True,
+) -> SpeciesGrounding:
+    """Notes for one species: open sources first, BotW only when they lack identification."""
+    facts = _ensure_open_facts(species, fetch_remote=fetch_remote)
+    open_facts = [f for f in facts if f.source != SpeciesFact.SOURCE_BOTW]
+    traits = _facts_to_traits(open_facts)
+    botw_attrs: list[dict[str, str]] = []
+    if not has_open_identification(open_facts):
+        botw = _ensure_botw_fallback(species, scrape=scrape_botw)
+        if botw:
+            traits = _merge_traits(traits, botw)
+            for key in ('identification', 'similar_species'):
+                content = _trait_content(traits.get(key))
+                if len(content) > 6000:
+                    traits[key] = {
+                        'title': key.replace('_', ' ').title(),
+                        'content': content[:6000] + '…',
+                    }
+            botw_attrs.append(_botw_attribution())
+    return SpeciesGrounding(
+        species=species,
+        traits=traits,
+        sources_used=_dedupe_sources(attributions_from_facts(open_facts) + botw_attrs),
+    )
+
+
 def build_pair_grounding(
     species_1: Species,
     species_2: Species,
@@ -362,14 +425,7 @@ def build_pair_grounding(
                         'title': key.replace('_', ' ').title(),
                         'content': content[:6000] + '…',
                     }
-        botw_attrs.append(
-            {
-                'source': SpeciesFact.SOURCE_BOTW,
-                'url': '',
-                'attribution': BOTW_ATTRIBUTION,
-                'license': '',
-            }
-        )
+        botw_attrs.append(_botw_attribution())
 
     traits_1['name_latin'] = species_1.name_latin
     traits_2['name_latin'] = species_2.name_latin
@@ -379,16 +435,7 @@ def build_pair_grounding(
     )
 
     all_facts = list(open_1) + list(open_2) + community_facts + abundance_facts
-    sources = attributions_from_facts(all_facts) + botw_attrs
-    # Dedupe sources by source+url
-    seen: set[tuple[str, str]] = set()
-    deduped = []
-    for row in sources:
-        key = (row.get('source', ''), row.get('url', ''))
-        if key in seen:
-            continue
-        seen.add(key)
-        deduped.append(row)
+    deduped = _dedupe_sources(attributions_from_facts(all_facts) + botw_attrs)
 
     return PairGrounding(
         species_1=species_1,

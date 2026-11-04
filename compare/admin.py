@@ -6,6 +6,8 @@ from .models import (
     SpeciesTrait,
     SpeciesComparison,
     ComparisonRequest,
+    SpeciesDescription,
+    SpeciesDescriptionTranslation,
 )
 
 
@@ -69,3 +71,23 @@ class ComparisonRequestAdmin(admin.ModelAdmin):
     readonly_fields = ['requested_at', 'completed_at']
     raw_id_fields = ['comparison', 'requested_by']
 
+
+
+class SpeciesDescriptionTranslationInline(admin.TabularInline):
+    model = SpeciesDescriptionTranslation
+    extra = 0
+    readonly_fields = ['language', 'source_hash', 'updated']
+    fields = ['language', 'source_hash', 'updated']
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+
+@admin.register(SpeciesDescription)
+class SpeciesDescriptionAdmin(admin.ModelAdmin):
+    list_display = ['species', 'ai_model', 'ai_prompt_version', 'updated']
+    list_filter = ['ai_model', 'ai_prompt_version']
+    search_fields = ['species__name', 'species__name_latin']
+    readonly_fields = ['generated_at', 'updated', 'sources_used']
+    raw_id_fields = ['species']
+    inlines = [SpeciesDescriptionTranslationInline]

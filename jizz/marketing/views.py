@@ -69,6 +69,8 @@ from jizz.marketing.slugs import (
 from jizz.marketing.country_stats import confusion_pairs, country_page_stats, missed_birds
 from jizz.marketing.mode_countries import national_league_countries, survival_countries
 from jizz.marketing.html import markdown_to_safe_html, sanitize_html
+from compare.descriptions import description_context, generation_unavailable
+from jizz.marketing.taxa import taxon_links
 from jizz.marketing.species_index import (
     FAMILY_LIMIT,
     SEARCH_LIMIT,
@@ -704,7 +706,8 @@ def bird_page(request, slug: str):
         name=species_name,
         latin=species.name_latin,
     )
-    description = translate(
+    ai_text = description_context(species, locale)
+    description = ai_text.get('ai_summary') or translate(
         'Learn to identify {name} ({latin}) with photo quizzes and personalised practice on Motmot.',
         name=species_name,
         latin=species.name_latin,
@@ -742,8 +745,12 @@ def bird_page(request, slug: str):
         approved_image_count=approved_image_count,
         media_reviewed=approved_image_count >= MEDIA_REVIEWED_APPROVED_COUNT,
         media_review_href=f'/media-review/?species={species.id}',
+        **ai_text,
+        **taxon_links(species, locale),
+        needs_ai_description=not ai_text and not generation_unavailable(species.id),
     )
     return render(request, 'marketing/bird.html', context)
+
 
 
 def _compare_pair_species(pair: str):

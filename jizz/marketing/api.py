@@ -2,16 +2,20 @@
 
 from __future__ import annotations
 
+from django.shortcuts import get_object_or_404
 from django.utils.text import slugify
 from rest_framework import serializers, status
 from rest_framework.authentication import SessionAuthentication
-from rest_framework.permissions import BasePermission, SAFE_METHODS
+from rest_framework.permissions import SAFE_METHODS, AllowAny, BasePermission
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.authentication import JWTAuthentication
 
+from compare.descriptions import generation_status, start_generation, take_generation_slot
+from compare.views import OptionalJWTAuthentication
 from jizz.marketing.html import sanitize_html
-from jizz.models import MarketingPage
+from jizz.marketing.i18n import is_marketing_locale
+from jizz.models import MarketingPage, Species
 
 
 class IsStaffForWrites(BasePermission):
@@ -112,3 +116,30 @@ class MarketingPageDetailView(APIView):
             return Response({'detail': 'Not found.'}, status=status.HTTP_404_NOT_FOUND)
         page.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class SpeciesDescriptionView(APIView):
+    """Status of a species' AI text (GET), or start writing it (POST, logged-in users only)."""
+
+    authentication_classes = [OptionalJWTAuthentication, SessionAuthentication]
+    permission_classes = [AllowAny]
+
+    def get(self, request, species_id: int):
+        species = get_object_or_404(Species, pk=species_id)
+        return Response(generation_status(species))
+
+    def post(self, request, species_id: int):
+        species = get_object_or_404(Species, pk=species_id)
+        state = generation_status(species)
+        if state.get('ready') or state.get('pending') or state.get('error') == 'unavailable':
+            return Response(state)
+        # Writing calls OpenAI, so it is for logged-in users only, and rationed per hour.
+        # 403 rather than 401, like comparisons, so the React app does not log anyone out.
+        if not request.user.is_authenticated:
+            return Response({'login_required': True}, status=status.HTTP_403_FORBIDDEN)
+        if not take_generation_slot(request.user):
+            return Response({'rate_limited': True}, status=status.HTTP_429_TOO_MANY_REQUESTS)
+        language = request.data.get('language') or 'en'
+        if not is_marketing_locale(language):
+            language = 'en'
+        return Response(start_generation(species, language), status=status.HTTP_202_ACCEPTED)

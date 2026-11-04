@@ -302,3 +302,49 @@ class CommunityComparison(models.Model):
     def __str__(self):
         return f'{self.species_low} vs {self.species_high} (community)'
 
+
+
+class SpeciesDescription(models.Model):
+    """AI field-guide text for one species, focused on telling it from lookalikes.
+
+    Other species appear as [[<species id>|<English name>]] tokens, rendered as the
+    localized name linked to that bird's page.
+    """
+
+    species = models.OneToOneField(Species, related_name='description', on_delete=models.CASCADE)
+    summary = models.TextField(help_text='One or two sentences with the most distinctive marks')
+    identification = models.TextField(blank=True, default='')
+    similar_species = models.TextField(blank=True, default='')
+    ai_model = models.CharField(max_length=100)
+    ai_prompt_version = models.CharField(max_length=50)
+    sources_used = models.JSONField(default=list, blank=True)
+    generated_at = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    TEXT_FIELDS = ('summary', 'identification', 'similar_species')
+
+    def __str__(self):
+        return f'{self.species} description'
+
+
+class SpeciesDescriptionTranslation(models.Model):
+    description = models.ForeignKey(
+        SpeciesDescription,
+        related_name='translations',
+        on_delete=models.CASCADE,
+    )
+    language = models.CharField(max_length=10)
+    source_hash = models.CharField(max_length=32)
+    fields = models.JSONField(default=dict)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['description', 'language'],
+                name='species_description_translation_lang_uniq',
+            ),
+        ]
+
+    def __str__(self):
+        return f'{self.description.species_id} {self.language}'

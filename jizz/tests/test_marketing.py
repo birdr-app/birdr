@@ -5,7 +5,7 @@ from unittest.mock import patch
 
 from django.conf import settings
 from django.core.cache import cache
-from django.test import TestCase, override_settings
+from django.test import SimpleTestCase, TestCase, override_settings
 
 from compare.ai_service import HANDBOOK_MODEL, comparison_model_name, comparison_prompt_version
 from compare.models import SpeciesComparison
@@ -1121,6 +1121,54 @@ class MarketingPagesTests(TestCase):
         self.assertIn('https://motmot.club/nl/site/countries/united-states/alaska/', countries)
         self.assertNotIn('texel', countries)
 
+    def test_order_family_and_group_pages(self):
+        from jizz.models import SpeciesGroup, TaxonomicFamily, TaxonomicOrder
+
+        order = TaxonomicOrder.objects.create(
+            name_latin='Accipitriformes', name_en='Accipitriformes', name_nl='Accipitriformes',
+            description_en='Birds of prey that hunt by day.',
+        )
+        family = TaxonomicFamily.objects.create(
+            taxonomic_order=order, name_latin='Accipitridae', name_en='Hawks and Eagles', name_nl='Havikachtigen',
+        )
+        group = SpeciesGroup.objects.create(
+            slug='hawks', ebird_name='Hawks', name_en='Hawks', name_nl='Haviken', sort_order=1,
+        )
+        Species.objects.filter(pk__in=[self.sparrow.pk, self.goshawk.pk]).update(
+            taxonomic_family=family, taxonomic_order=order, species_group=group,
+        )
+        cache.clear()
+
+        family_page = self.client.get('/site/families/accipitridae/').content.decode()
+        self.assertIn('Hawks and Eagles (Accipitridae) – Bird Family | Motmot', family_page)
+        self.assertIn(f'href="/site/birds/{self.sparrow.slug}/"', family_page)
+        self.assertIn('href="/site/orders/accipitriformes/"', family_page)
+        # The AI comparison from setUp links the two hawks.
+        self.assertIn('/site/compare/', family_page)
+
+        order_page = self.client.get('/site/orders/accipitriformes/').content.decode()
+        self.assertIn('<title>Accipitriformes – Bird Order | Motmot</title>', order_page)
+        self.assertIn('Birds of prey that hunt by day.', order_page)
+        self.assertIn('href="/site/families/accipitridae/"', order_page)
+
+        nl_group = self.client.get('/nl/site/groups/hawks/').content.decode()
+        self.assertIn('Haviken – vogelgroep | Motmot', nl_group)
+        self.assertIn(f'href="/nl/site/birds/{self.goshawk.slug}/"', nl_group)
+
+        self.assertIn('href="/site/groups/hawks/"', self.client.get('/site/groups/').content.decode())
+        self.assertEqual(self.client.get('/site/families/').status_code, 301)
+        self.assertEqual(self.client.get('/site/families/nope/').status_code, 404)
+
+        bird = self.client.get(f'/site/birds/{self.sparrow.slug}/').content.decode()
+        self.assertIn('href="/site/families/accipitridae/"', bird)
+        self.assertIn('href="/site/groups/hawks/"', bird)
+
+        index = self.client.get('/sitemap.xml').content.decode()
+        self.assertIn('https://motmot.club/sitemap-taxa.xml', index)
+        taxa = self.client.get('/sitemap-taxa.xml').content.decode()
+        self.assertIn('https://motmot.club/site/families/accipitridae/', taxa)
+        self.assertIn('https://motmot.club/nl/site/groups/hawks/', taxa)
+
     def test_large_sitemap_sections_are_split_into_pages(self):
         paths = [f'/site/birds/bird-{i}/' for i in range(5)]
         with patch.dict('jizz.marketing.sitemaps.SECTIONS', {'birds': lambda: paths}), \
@@ -1762,3 +1810,32 @@ class IndexNowSubmitTests(TestCase):
         with patch('jizz.management.commands.indexnow_submit.requests.post') as post:
             call_command('indexnow_submit', '--dry-run', stdout=StringIO())
         post.assert_not_called()
+
+
+class MarketingTranslationCoverageTests(SimpleTestCase):
+    def test_translate_calls_have_every_locale(self):
+        # A missing msgid falls back to English, which went unnoticed on page titles.
+        import ast
+        import re
+
+        from jizz.marketing.catalogs import CATALOGS
+
+        root = Path(__file__).resolve().parents[2]
+        sources = [*sorted((root / 'jizz' / 'marketing').glob('*.py')), root / 'compare' / 'views.py']
+        missing = []
+        for path in sources:
+            for node in ast.walk(ast.parse(path.read_text())):
+                if not isinstance(node, ast.Call) or not node.args:
+                    continue
+                name = getattr(node.func, 'id', None) or getattr(node.func, 'attr', None)
+                msg = node.args[0]
+                if name not in ('translate', 'lookup') or not isinstance(msg, ast.Constant):
+                    continue
+                if not isinstance(msg.value, str):
+                    continue
+                placeholders = set(re.findall(r'\{(\w+)\}', msg.value))
+                for locale, catalog in CATALOGS.items():
+                    text = catalog.get(msg.value)
+                    if text is None or set(re.findall(r'\{(\w+)\}', text)) != placeholders:
+                        missing.append(f'{path.name}:{node.lineno} {locale} {msg.value[:60]!r}')
+        self.assertEqual(missing, [])

@@ -1,0 +1,48 @@
+{% extends "marketing/base.html" %}
+{% block content %}
+<section class="hero">
+  <p class="kicker">{% if kind == 'order' %}{% mt "Order" %}{% elif kind == 'family' %}{% mt "Family" %}{% else %}{% mt "Group" %}{% endif %}</p>
+  <h1>{{ taxon_name }}</h1>
+  {% if taxon_latin %}<p class="latin">{{ taxon_latin }}</p>{% endif %}
+  <p class="lead">{% mt "{count} species with a page on Motmot." count=species_count %}</p>
+  {% if parent_href %}<p>{% mt "Order" %}: <a href="{{ parent_href|mpath }}">{{ parent_name }}</a></p>{% endif %}
+  <div class="cta-row">
+    <a class="btn" href="{{ quiz_href }}">{% mt "Start a quiz" %}</a>
+    <a class="btn secondary" href="{% if kind == 'group' %}{{ '/site/groups/'|mpath }}{% else %}{{ '/site/orders/'|mpath }}{% endif %}">{% if kind == 'group' %}{% mt "All bird groups" %}{% else %}{% mt "All orders and families" %}{% endif %}</a>
+  </div>
+</section>
+{% if description_text %}
+<section>
+  <p>{{ description_text }}</p>
+</section>
+{% endif %}
+{% if children %}
+<section>
+  <h2>{% mt "Families in this order" %}</h2>
+  {% include "marketing/_country_pills.html" with countries=children %}
+</section>
+{% endif %}
+{% if species_rows %}
+<section>
+  <h2>{% if kind == 'group' %}{% mt "Species in this group" %}{% else %}{% mt "Species in this family" %}{% endif %}</h2>
+  <ul class="species-results">
+    {% for species in species_rows %}
+    <li>
+      <a href="{{ '/site/birds/'|mpath }}{{ species.slug }}/">{{ species.display_name }}</a>
+      <span class="latin">{{ species.name_latin }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% if comparisons %}
+<section>
+  <h2>{% mt "Lookalikes compared" %}</h2>
+  <ul class="species-results">
+    {% for row in comparisons %}
+    <li><a href="{{ row.url|mpath }}">{{ row.low_name }} {% mt "vs" %} {{ row.high_name }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endblock %}

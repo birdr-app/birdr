@@ -143,10 +143,17 @@ def compare_paths() -> list[str]:
     return paths
 
 
+def taxa_paths() -> list[str]:
+    from jizz.marketing.taxa import taxa_paths as paths
+
+    return paths()
+
+
 # Each sitemap section, for the sitemap views and for IndexNow submissions.
 SECTIONS = {
     'pages': pages_paths,
     'countries': countries_paths,
+    'taxa': taxa_paths,
     'birds': birds_paths,
     'compare': compare_paths,
 }

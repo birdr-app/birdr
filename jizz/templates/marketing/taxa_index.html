@@ -1,0 +1,29 @@
+{% extends "marketing/base.html" %}
+{% block content %}
+<section class="hero">
+  <p class="kicker">{% mt "Species" %}</p>
+  {% if orders %}
+  <h1>{% mt "Bird orders and families" %}</h1>
+  <p class="lead">{% mt "Every bird order on Motmot with its families. Open a family to see its species and the lookalikes that are hardest to tell apart." %}</p>
+  {% else %}
+  <h1>{% mt "Bird groups" %}</h1>
+  <p class="lead">{% mt "Birds grouped the way birders talk about them, from shorebirds to wood-warblers. Open a group to see its species and the lookalikes that are hardest to tell apart." %}</p>
+  {% endif %}
+  <p>
+    <a href="{{ '/site/birds/'|mpath }}">{% mt "Find a bird" %}</a> ·
+    {% if orders %}<a href="{{ '/site/groups/'|mpath }}">{% mt "All bird groups" %}</a>{% else %}<a href="{{ '/site/orders/'|mpath }}">{% mt "All orders and families" %}</a>{% endif %}
+  </p>
+</section>
+{% if orders %}
+<section>
+  {% for order in orders %}
+  <h2><a href="{{ order.url|mpath }}">{{ order.name }}</a>{% if order.latin != order.name %} <span class="latin">{{ order.latin }}</span>{% endif %}</h2>
+  {% include "marketing/_country_pills.html" with countries=order.families %}
+  {% endfor %}
+</section>
+{% else %}
+<section>
+  {% include "marketing/_country_pills.html" with countries=groups %}
+</section>
+{% endif %}
+{% endblock %}
