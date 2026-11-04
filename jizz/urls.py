@@ -13,8 +13,6 @@ from jizz.marketing.views import (
     bird_page,
     birds_index,
     cms_legacy_redirect,
-    cms_index,
-    cms_page,
     update_page,
     updates_index,
     compare_page,
@@ -30,7 +28,8 @@ from jizz.marketing.views import (
     site_logout,
     survival_page,
 )
-from jizz.marketing.api import MarketingPageDetailView, MarketingPageListCreateView, SpeciesDescriptionView
+from jizz.marketing import static_pages
+from jizz.marketing.api import SpeciesDescriptionView
 from jizz.marketing import sitemaps as marketing_sitemaps
 from jizz.marketing import taxa as marketing_taxa
 
@@ -389,8 +388,9 @@ urlpatterns = [
     path('site/birds/<slug:slug>/', bird_page, name='marketing-bird'),
     path('site/compare/<slug:pair>/community/', compare_community, name='marketing-compare-community'),
     path('site/compare/<slug:pair>/', compare_page, name='marketing-compare'),
-    path('site/page/', cms_index, name='marketing-cms-index'),
-    path('site/page/<slug:slug>/', cms_page, name='marketing-cms-page'),
+    path('site/page/', static_pages.pages_index_redirect, name='marketing-cms-index'),
+    path('site/page/about/', static_pages.static_page, {'slug': 'about'}, name='marketing-about'),
+    path('site/page/privacy/', static_pages.static_page, {'slug': 'privacy'}, name='marketing-privacy'),
     path('site/updates/', updates_index, name='marketing-updates'),
     path('site/updates/<int:pk>/', update_page, name='marketing-update'),
     path('site/feedback/', site_feedback, name='marketing-feedback'),
@@ -568,8 +568,6 @@ urlpatterns = [
     re_path(r"^api/species-review-stats/$", SpeciesReviewStatsView.as_view(), name="species-review-stats"),
     path('api/pages/', PageListView.as_view(), name='page-list'),
     path('api/pages/<slug:slug>/', PageDetailView.as_view(), name='page-detail'),
-    path('api/marketing-pages/', MarketingPageListCreateView.as_view(), name='marketing-page-list'),
-    path('api/marketing-pages/<slug:slug>/', MarketingPageDetailView.as_view(), name='marketing-page-detail'),
     path('api/species/<int:species_id>/description/', SpeciesDescriptionView.as_view(), name='species-description'),
 
     re_path(r"^api/questions/(?P<pk>\d+)/next-media/$", QuestionNextMediaView.as_view(), name="question-next-media"),
@@ -730,7 +728,7 @@ urlpatterns += [
     re_path(
         r'^(?P<path>(?:favicon\.ico|favicon-16x16\.png|favicon-32x32\.png|'
         r'apple-touch-icon\.png|android-chrome-(?:192x192|512x512)\.png|logo192\.png|logo512\.png|images/(?:stylish/)?birdr-[\w.-]+\.(?:png|gif|svg)|'
-        r'images/motmot/[\w-]+\.(?:png|svg|webp)))$',
+        r'images/motmot/[\w-]+\.(?:png|svg|webp)|images/newsletter/[\w-]+\.png))$',
         serve_static,
         {'document_root': str(_public)},
     ),

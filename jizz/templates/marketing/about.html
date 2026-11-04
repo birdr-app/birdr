@@ -1,0 +1,38 @@
+{% extends "marketing/base.html" %}
+{% block content %}
+<section class="hero">
+  <p class="kicker">Motmot</p>
+  <h1>{% mt "About Motmot" %}</h1>
+  <p class="lead">{% mt "Motmot helps you learn to identify birds yourself. It is a quiz and practice app, not a camera that names the bird for you." %}</p>
+  <p>{% mt "You look at a photo, video or sound, pick the species, and see what to notice next time. Misses come back in My Tricky Birds. Country Challenges take you from distinctive beginners to expert lookalikes." %}</p>
+  <p>{% mt "Motmot is free on iPhone, Android and the web. It is a small project: feedback and photo review help more than anything else." %}</p>
+  <div class="cta-row">
+    <a class="btn" href="/play">{% mt "Open Motmot" %}</a>
+    <a class="btn secondary" href="mailto:info@motmot.club">{% mt "Contact" %}</a>
+  </div>
+</section>
+<section class="prose">
+  <h2>{% mt "Hi, I’m Loek!" %}</h2>
+  <p>{% mt "I started building Motmot while planning a trip to Costa Rica. I wanted to prepare well and make the most of the few birding days I would have there." %}</p>
+  <p>{% mt "I found that <a href=\"https://ebird.org/\">eBird</a> has a wonderful collection of data. Its API offers all kinds of information, such as the species list of every country. eBird also has an excellent collection of photos, but we can’t use them in Motmot. Luckily, other sources have photos of almost every bird species in the world." %}</p>
+  <p>{% mt "With my background in programming, I started putting the app together. The back end and API are built with Django, the front end with React. All code is open source and available on <a href=\"https://github.com/birdr-app/birdr\">GitHub</a>." %}</p>
+</section>
+<section class="prose">
+  <h2>{% mt "Data and media" %}</h2>
+  <p>{% mt "Distribution data and species names come from <a href=\"https://ebird.org/\">eBird</a>." %}</p>
+  <p>{% mt "Photos, videos and sounds come from several sources. Motmot only uses media with a Creative Commons licence:" %}</p>
+  <ul>
+    <li><a href="https://www.inaturalist.org/">iNaturalist</a></li>
+    <li><a href="https://commons.wikimedia.org/">Wikimedia Commons</a></li>
+    <li><a href="https://www.gbif.org/">GBIF</a></li>
+    <li><a href="https://observation.org/">Observation.org</a></li>
+    <li><a href="https://xeno-canto.org/">Xeno-canto</a></li>
+  </ul>
+</section>
+<section class="prose">
+  <h2>{% mt "Contact and feedback" %}</h2>
+  <p>{% mt "Please feel free to contact me with questions, suggestions, bugs or anything else! I have plans to extend Motmot with more features, and I would love to hear your ideas and feedback." %}</p>
+  <p>{% mt "You can email me at <a href=\"mailto:info@motmot.club\">info@motmot.club</a>." %}</p>
+  <p><a href="{{ '/site/page/privacy/'|mpath }}">{% mt "Privacy Policy" %}</a></p>
+</section>
+{% endblock %}

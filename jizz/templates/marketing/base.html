@@ -1493,7 +1493,6 @@
       border-left: 3px solid var(--birdr-200);
       color: var(--birdr-800);
     }
-    .cms-body { max-width: 42rem; min-height: 4em; }
     .tox-tinymce-inline { z-index: 40 !important; }
     .tox-tinymce-aux { z-index: 50 !important; }
     ul.plain { padding-left: 1.2rem; columns: 2; column-gap: 32px; }
@@ -1731,16 +1730,13 @@
           <li><a href="https://www.facebook.com/groups/birdrcommunity" target="_blank" rel="noopener noreferrer">{% mt "Facebook group" %}</a></li>
           <li><a href="https://buymeacoffee.com/loekd" target="_blank" rel="noopener noreferrer" data-support-open aria-haspopup="dialog" aria-controls="support-dialog">{% mt "Buy me a coffee" %}</a></li>
           <li><a href="https://github.com/birdr-app/birdr/issues" target="_blank" rel="noopener noreferrer">{% mt "GitHub issues" %}</a></li>
-          {% for page in cms_nav_pages %}
-          <li><a href="{{ page.get_absolute_url|mpath }}">{{ page.nav_text }}</a></li>
-          {% endfor %}
-          <li><a href="{{ cms_index_url }}">{% mt "All pages" %}</a></li>
+          <li><a href="{{ '/site/page/about/'|mpath }}">{% mt "About Motmot" %}</a></li>
+          <li><a href="{{ '/site/page/privacy/'|mpath }}">{% mt "Privacy Policy" %}</a></li>
           <li><a href="mailto:info@motmot.club">{% mt "Contact" %}</a></li>
         </ul>
       </div>
     </div>
   </footer>
-  {% include "marketing/_cms_editor.html" %}
   <script>
   (function () {
     // Buy Me a Coffee opens in a dialog; without it the links just go to buymeacoffee.com

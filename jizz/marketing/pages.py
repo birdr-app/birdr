@@ -7,7 +7,6 @@ from urllib.parse import quote
 
 from django.conf import settings
 from django.core.cache import cache
-from django.db import OperationalError, ProgrammingError
 from django.db.models import Q
 from django.utils.safestring import mark_safe
 
@@ -26,7 +25,7 @@ from jizz.marketing.i18n import (
 )
 from jizz.marketing.slugs import country_is_indexable
 from jizz.marketing.testimonials import FAQ, TESTIMONIALS
-from jizz.models import Country, MarketingPage, Species
+from jizz.models import Country, Species
 from jizz.store_ratings import write_review_url
 from media.models import MediaReview
 
@@ -722,9 +721,7 @@ def base_context(request, *, title: str, description: str, path: str, breadcrumb
         'testimonials': translate_copy(TESTIMONIALS),
         'faq': translate_copy(FAQ),
         'home_url': localize_path(SITE_HOME, locale),
-        'cms_index_url': localize_path(CMS_INDEX, locale),
         'logout_url': localize_path('/site/logout/', locale),
-        'cms_nav_pages': _cms_nav_pages(),
         'nav_section': nav_section_for_path(logical_path),
         'feedback_started': _feedback_started_token(),
         'can_edit': bool(
@@ -747,17 +744,6 @@ def base_context(request, *, title: str, description: str, path: str, breadcrumb
         'request_path': request_path,
         **extra,
     }
-
-
-def _cms_nav_pages():
-    try:
-        return list(
-            MarketingPage.objects.filter(published=True, show_in_nav=True).order_by(
-                'nav_order', 'title'
-            )
-        )
-    except (OperationalError, ProgrammingError):
-        return []
 
 
 def _feedback_started_token():

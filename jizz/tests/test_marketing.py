@@ -394,21 +394,21 @@ class MarketingPagesTests(TestCase):
         self.assertIn('Google Play:', newsletter)
         self.assertIn('apps.apple.com/us/app/birdr', newsletter)
         self.assertIn('play.google.com/store/apps/details?id=pro.birdr.app', newsletter)
-        self.assertIn('/images/birdr-new-game.png', newsletter)
-        self.assertIn('/images/birdr-photo-quiz.png', newsletter)
-        self.assertIn('/images/birdr-species-review.png', newsletter)
-        self.assertIn('/images/birdr-country-challenge.png', newsletter)
-        self.assertIn('/images/birdr-tricky-birds.png', newsletter)
-        self.assertIn('/images/birdr-tricky-practice.png', newsletter)
-        self.assertIn('/images/birdr-tricky-results.png', newsletter)
+        # Current screenshots, as PNG so they show when pasted into email or Word.
+        shots = ['quiz', 'new-game', 'comparison', 'tricky-birds', 'tricky-pairs', 'country-challenge', 'league']
+        public = Path(__file__).resolve().parents[2] / 'app' / 'public'
+        for name in shots:
+            self.assertIn(f'/images/newsletter/{name}.png', newsletter)
+            self.assertTrue((public / 'images' / 'newsletter' / f'{name}.png').is_file(), name)
+        club_section = newsletter[newsletter.index('id="club-newsletter"'):]
+        self.assertNotIn('/images/birdr-', club_section.split('</section>\n  <script>')[0])
         copy_start = newsletter.index('id="newsletter-copy-body"')
         copy_end = newsletter.index('id="newsletter-more-heading"')
         copied = newsletter[copy_start:copy_end]
-        self.assertIn('/images/birdr-photo-quiz.png', copied)
-        self.assertIn('/images/birdr-new-game.png', copied)
-        self.assertIn('/images/birdr-species-review.png', copied)
-        self.assertNotIn('/images/birdr-tricky-birds.png', copied)
-        self.assertNotIn('/images/birdr-country-challenge.png', copied)
+        for name in shots[:3]:
+            self.assertIn(f'/images/newsletter/{name}.png', copied)
+        for name in shots[3:]:
+            self.assertNotIn(f'/images/newsletter/{name}.png', copied)
         self.assertRegex(newsletter, r'href="/site/community/"[^>]*aria-current="page"')
         self.assertIn('href="/site/newsletter/"', newsletter)
         for path in (
@@ -1385,13 +1385,16 @@ class MarketingPagesTests(TestCase):
         self.assertEqual(key_file.read_text().strip(), settings.INDEXNOW_KEY)
 
 
-class MarketingCmsTests(TestCase):
-    def test_seeded_about_page(self):
+class MarketingStaticPagesTests(TestCase):
+    def test_about_page_tells_the_story(self):
         response = self.client.get('/site/page/about/')
         self.assertEqual(response.status_code, 200)
         html = response.content.decode()
         self.assertIn('About Motmot', html)
-        self.assertIn('rel="canonical"', html)
+        self.assertIn('Hi, I’m Loek!', html)
+        self.assertIn('Costa Rica', html)
+        self.assertIn('href="https://github.com/birdr-app/birdr"', html)
+        self.assertIn('Xeno-canto', html)
         self.assertIn('https://motmot.club/site/page/about/', html)
         landing = self.client.get('/site/').content.decode()
         self.assertIn('/site/page/about/', landing)
@@ -1399,43 +1402,28 @@ class MarketingCmsTests(TestCase):
         self.assertNotIn('/site/page/about/', primary)
         self.assertNotIn('/site/page/privacy/', primary)
 
-    def test_unpublished_is_404(self):
-        from jizz.models import MarketingPage
-        MarketingPage.objects.create(
-            title='Draft',
-            slug='draft',
-            body='<p>Secret</p>',
-            published=False,
-        )
-        self.assertEqual(self.client.get('/site/page/draft/').status_code, 404)
+    def test_privacy_page_in_dutch(self):
+        html = self.client.get('/nl/site/page/privacy/').content.decode()
+        self.assertIn('Privacybeleid', html)
+        self.assertIn('mailto:info@motmot.club', html)
+        self.assertNotIn('birdr.pro', html)
+        self.assertIn('Engelse versie', html)
+        self.assertNotIn('If a translation differs', self.client.get('/site/page/privacy/').content.decode())
 
-    def test_staff_can_see_unpublished(self):
-        from django.contrib.auth import get_user_model
-        from jizz.models import MarketingPage
-        MarketingPage.objects.create(
-            title='Draft',
-            slug='draft',
-            body='<p>Secret</p>',
-            published=False,
-        )
-        user = get_user_model().objects.create_user('cms-staff', password='x', is_staff=True)
-        self.client.force_login(user)
-        response = self.client.get('/site/page/draft/')
-        self.assertEqual(response.status_code, 200)
-        self.assertIn('Secret', response.content.decode())
-        self.assertIn('canEditServer = true', response.content.decode())
-
-    def test_staff_sees_editor_flag_on_landing(self):
+    def test_no_editor_for_staff(self):
         from django.contrib.auth import get_user_model
         user = get_user_model().objects.create_user('cms-home', password='x', is_staff=True)
         self.client.force_login(user)
-        html = self.client.get('/site/').content.decode()
-        self.assertIn('canEditServer = true', html)
-        self.assertIn('id="cms-bar"', html)
+        for path in ('/site/', '/site/page/about/'):
+            html = self.client.get(path).content.decode()
+            self.assertNotIn('id="cms-bar"', html)
+            self.assertNotIn('canEditServer', html)
+        self.assertEqual(self.client.get('/api/marketing-pages/').status_code, 404)
 
-    def test_page_index_and_sitemap(self):
-        html = self.client.get('/site/page/').content.decode()
-        self.assertIn('/site/page/about/', html)
+    def test_old_page_addresses(self):
+        self.assertEqual(self.client.get('/site/page/draft/').status_code, 404)
+        self.assertEqual(self.client.get('/site/page/')['Location'], '/site/')
+        self.assertEqual(self.client.get('/nl/site/page/')['Location'], '/nl/site/')
         sitemap = self.client.get('/sitemap-pages.xml').content.decode()
         self.assertIn('https://motmot.club/site/page/about/', sitemap)
         self.assertIn('https://motmot.club/site/page/privacy/', sitemap)

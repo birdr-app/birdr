@@ -30,7 +30,6 @@ from compare.community import (
 from compare.generation import comparison_cache_is_current, find_species_comparison
 from compare.models import CommunityComparison
 from jizz.marketing.pages import (
-    CMS_INDEX,
     INTENT_MASCOTS,
     tody_image,
     DEFAULT_DESCRIPTION,
@@ -79,7 +78,7 @@ from jizz.marketing.species_index import (
     public_families,
     search_public_species,
 )
-from jizz.models import Country, Feedback, MarketingPage, Species
+from jizz.models import Country, Feedback, Species
 from jizz.quiz_mistake_stats import get_confused_partners_for_species
 from jizz.services.species_cover import species_cover_url
 from jizz.store_ratings import store_review_context
@@ -310,41 +309,6 @@ def landing(request):
         countries=_countries_for_request(request, 12),
     )
     return render(request, 'marketing/landing.html', context)
-
-
-@require_GET
-def cms_index(request):
-    staff = request.user.is_authenticated and request.user.is_staff
-    pages = MarketingPage.objects.all() if staff else MarketingPage.objects.filter(published=True)
-    context = base_context(
-        request,
-        title='Pages – Motmot',
-        description='Guides and information about Motmot, the bird identification training app.',
-        path=CMS_INDEX,
-        breadcrumbs=[('Home', SITE_HOME), ('Pages', '')],
-        cms_pages=pages,
-        can_edit=staff,
-    )
-    return render(request, 'marketing/cms_index.html', context)
-
-
-@require_GET
-def cms_page(request, slug: str):
-    page = get_object_or_404(MarketingPage, slug=slug)
-    staff = request.user.is_authenticated and request.user.is_staff
-    if not page.published and not staff:
-        raise Http404()
-    context = base_context(
-        request,
-        title=f'{page.title} – Motmot',
-        description=page.meta_description or DEFAULT_DESCRIPTION,
-        path=page.get_absolute_url(),
-        breadcrumbs=[('Home', SITE_HOME), ('Pages', CMS_INDEX), (page.title, '')],
-        cms_page=page,
-        cms_body=sanitize_html(page.body),
-        can_edit=staff,
-    )
-    return render(request, 'marketing/cms_page.html', context)
 
 
 UPDATES_INDEX = '/site/updates/'

@@ -96,11 +96,8 @@ def pages_paths() -> list[str]:
     ]
     for slug in INTENT_PAGES:
         paths.append(f'/site/{slug}/')
-    from jizz.models import MarketingPage
-    paths.extend(
-        page.get_absolute_url()
-        for page in MarketingPage.objects.filter(published=True)
-    )
+    from jizz.marketing.static_pages import STATIC_PAGE_PATHS
+    paths.extend(STATIC_PAGE_PATHS)
     from jizz.models import Update
     paths.extend(
         reverse('marketing-update', kwargs={'pk': pk})

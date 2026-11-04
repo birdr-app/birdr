@@ -3,7 +3,6 @@ import re
 
 from django.contrib import admin, messages
 from django.contrib.admin import register
-from django.contrib.admin.widgets import AdminTextareaWidget
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models.functions import Coalesce
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
@@ -24,7 +23,7 @@ from django.utils.safestring import mark_safe
 
 from jizz.models import (Answer, FlockSharedGame, SharedGame, SharedGameAttempt, BirdrJourney, BirdrJourneyGame, Country,
                          CountrySpecies, CountrySpeciesFrequency, Feedback, FlagQuestion, Game, JourneyLevel,
-                         JourneyStep, MarketingPage, Page, Player,
+                         JourneyStep, Page, Player,
                          PlayerScore, Question, QuestionOption, Reaction,
                          Species, SpeciesIllustration, SpeciesImage, SpeciesSound, SpeciesVideo,
                          TaxonomicOrder, TaxonomicFamily, TaxonomicGenus, SpeciesGroup,
@@ -1116,28 +1115,6 @@ class PageAdmin(admin.ModelAdmin):
     list_editable = ['show']
     prepopulated_fields = {'slug': ('title',)}
     fields = ['title', 'slug', 'content', 'show']
-
-
-@register(MarketingPage)
-class MarketingPageAdmin(admin.ModelAdmin):
-    list_display = ['title', 'slug', 'published', 'show_in_nav', 'nav_order', 'updated_at']
-    list_editable = ['published', 'show_in_nav', 'nav_order']
-    prepopulated_fields = {'slug': ('title',)}
-    search_fields = ['title', 'slug', 'body']
-    fields = [
-        'title', 'slug', 'meta_description', 'body',
-        'published', 'show_in_nav', 'nav_label', 'nav_order',
-    ]
-
-    def formfield_for_dbfield(self, db_field, request, **kwargs):
-        if db_field.name == 'body':
-            kwargs['widget'] = AdminTextareaWidget(attrs={'rows': 22})
-        return super().formfield_for_dbfield(db_field, request, **kwargs)
-
-    def save_model(self, request, obj, form, change):
-        from jizz.marketing.html import sanitize_html
-        obj.body = sanitize_html(obj.body)
-        super().save_model(request, obj, form, change)
 
 
 @register(SpeciesName)

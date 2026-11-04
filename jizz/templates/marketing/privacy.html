@@ -1,0 +1,56 @@
+{% extends "marketing/base.html" %}
+{% block content %}
+<section class="hero">
+  <p class="kicker">Motmot</p>
+  <h1>{% mt "Privacy Policy" %}</h1>
+  <p>{% mt "Last updated: 4 November 2026" %}</p>
+  <p class="lead">{% mt "Motmot is a free bird-identification training application available on the web, Android and iOS. This privacy policy explains what personal information Motmot collects, why it is used, how it is protected, and how you can request its deletion." %}</p>
+  {% if locale != 'en' %}<p>{% mt "This policy was written in English. If a translation differs, the English version applies." %}</p>{% endif %}
+</section>
+<section class="prose">
+  <h2>{% mt "Information we collect" %}</h2>
+  <p>{% mt "When you create a Motmot account, we store your email address, username and any optional profile information you provide." %}</p>
+  <p>{% mt "When you sign in with Google, Motmot receives your Google account identifier, name, email address and profile picture. Motmot does not receive or store your Google password and does not access your Gmail, Google Drive, contacts, calendar or other Google account content." %}</p>
+  <p>{% mt "Motmot also stores information generated through your use of the application, including quiz answers, scores, difficult species, checklists and country progress. Basic technical information may be recorded in server logs for security, maintenance and troubleshooting." %}</p>
+
+  <h2>{% mt "How we use your information" %}</h2>
+  <p>{% mt "We use account information to:" %}</p>
+  <ul>
+    <li>{% mt "create and identify your Motmot account;" %}</li>
+    <li>{% mt "let you sign in securely, including through Google Sign-In;" %}</li>
+    <li>{% mt "save and display your quiz results, progress and preferences;" %}</li>
+    <li>{% mt "provide personalised bird-identification practice;" %}</li>
+    <li>{% mt "operate, secure and improve Motmot;" %}</li>
+    <li>{% mt "respond to questions or support requests." %}</li>
+  </ul>
+  <p>{% mt "Google user data is used only to authenticate you, create or connect your Motmot account, and display the name or profile picture associated with that account." %}</p>
+
+  <h2>{% mt "Sharing of information" %}</h2>
+  <p>{% mt "Motmot does not sell personal information or Google user data. We do not use it for advertising." %}</p>
+  <p>{% mt "Information is disclosed only to service providers needed to operate Motmot, such as hosting and authentication providers, or when disclosure is legally required. These providers may process information only for the services they provide to Motmot." %}</p>
+  <p>{% mt "Quiz scores or profile information are visible to other users only where a Motmot feature explicitly makes them public, such as a leaderboard or flock." %}</p>
+
+  <h2>{% mt "Data storage and security" %}</h2>
+  <p>{% mt "Motmot uses appropriate technical and organisational measures to protect personal information. Connections to Motmot use encrypted HTTPS communication. Access to production systems and personal information is restricted." %}</p>
+  <p>{% mt "No online service can guarantee absolute security, but we take reasonable steps to prevent unauthorised access, loss or misuse." %}</p>
+
+  <h2>{% mt "Data retention and deletion" %}</h2>
+  <p>{% mt "We retain your account information and game progress while your Motmot account remains active. Server logs and backups may be retained temporarily for security, troubleshooting and recovery." %}</p>
+  <p>{% mt "You may request deletion of your Motmot account and associated personal information by emailing <a href=\"mailto:info@motmot.club\">info@motmot.club</a>. We will delete or anonymise the information unless retention is required for legal or security reasons. Information may remain in encrypted backups for a limited period until those backups are replaced." %}</p>
+  <p>{% mt "You can also revoke Motmot’s access to your Google account through your Google Account security settings. Revoking access prevents future Google authentication but does not automatically delete your Motmot account; contact us if you also want that account deleted." %}</p>
+
+  <h2>{% mt "Children" %}</h2>
+  <p>{% mt "Motmot is not intended to knowingly collect personal information from children below the minimum age required to consent to online services in their country without appropriate parental permission." %}</p>
+
+  <h2>{% mt "Changes" %}</h2>
+  <p>{% mt "We may update this privacy policy when Motmot or its data practices change. The latest version and its revision date will remain available on this page." %}</p>
+
+  <h2>{% mt "Contact" %}</h2>
+  <p>{% mt "For privacy questions or deletion requests, contact:" %}</p>
+  <p>
+    Motmot<br>
+    {% mt "Email:" %} <a href="mailto:info@motmot.club">info@motmot.club</a><br>
+    {% mt "Website:" %} <a href="{{ home_url }}">https://motmot.club/site/</a>
+  </p>
+</section>
+{% endblock %}

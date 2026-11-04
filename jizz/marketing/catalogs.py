@@ -657,10 +657,11 @@ _ENTRIES: list[tuple[str, tuple[str, ...]]] = [
 ]
 
 from jizz.marketing.catalogs_extra import EXTRA_ENTRIES
+from jizz.marketing.catalogs_pages import PAGES_ENTRIES
 from jizz.marketing.catalogs_ui import UI_ENTRIES
 
 CATALOGS: dict[str, dict[str, str]] = {code: {} for code in _LOCALES}
-for msgid, translations in (*_ENTRIES, *EXTRA_ENTRIES, *UI_ENTRIES):
+for msgid, translations in (*_ENTRIES, *EXTRA_ENTRIES, *PAGES_ENTRIES, *UI_ENTRIES):
     if len(translations) != len(_LOCALES):
         raise ValueError(f'Bad translation count for {msgid!r}')
     for code, text in zip(_LOCALES, translations):
