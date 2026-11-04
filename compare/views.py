@@ -1,3 +1,5 @@
+import re
+
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -19,6 +21,59 @@ from .scraper import BirdsOfTheWorldScraper
 from jizz.models import Species
 
 LOGIN_REQUIRED_MESSAGE = 'Log in to generate a comparison for this pair.'
+
+NATIVE_APP_PLATFORMS = {'ios', 'android'}
+# New AI comparisons an anonymous app user may start per IP address per day.
+APP_GENERATIONS_PER_IP_PER_DAY = 30
+
+
+# React Native's fetch: OkHttp on Android, CFNetwork on iOS ("Motmot/123 CFNetwork/... Darwin/...").
+NATIVE_APP_USER_AGENT_RE = re.compile(r'^okhttp/|\bCFNetwork/', re.I)
+
+
+def _is_native_app_request(request) -> bool:
+    """The iOS or Android app rather than a browser or crawler.
+
+    Newer builds send X-Platform and X-App-Version; 1.134.0 and older send no client
+    headers on this call, so the native HTTP client's user agent counts too. Browsers,
+    including crawlers running the compare page's JavaScript, send Origin or Sec-Fetch
+    headers on a fetch() POST and never get through.
+    """
+    from jizz.usage_analytics import is_crawler_user_agent
+
+    meta = request.META
+    if meta.get('HTTP_ORIGIN') or meta.get('HTTP_SEC_FETCH_SITE') or meta.get('HTTP_SEC_FETCH_MODE'):
+        return False
+    user_agent = meta.get('HTTP_USER_AGENT') or ''
+    if is_crawler_user_agent(user_agent):
+        return False
+    platform = (
+        meta.get('HTTP_X_PLATFORM')
+        or meta.get('HTTP_X_BIRDR_PLATFORM')
+        or meta.get('HTTP_X_BIRDR_DEVICE_TYPE')
+        or ''
+    ).strip().lower()
+    version = (meta.get('HTTP_X_APP_VERSION') or meta.get('HTTP_X_BIRDR_APP_VERSION') or '').strip()
+    if platform in NATIVE_APP_PLATFORMS and version:
+        return True
+    return bool(NATIVE_APP_USER_AGENT_RE.search(user_agent))
+
+
+def _take_app_generation_slot(request) -> bool:
+    """Count one anonymous app generation for this IP; False once today's cap is reached."""
+    from django.core.cache import cache
+    from django.utils import timezone
+
+    from jizz.usage_analytics import get_client_ip
+
+    key = f'compare-app-generations:{get_client_ip(request) or "unknown"}:{timezone.now():%Y-%m-%d}'
+    cache.add(key, 0, 60 * 60 * 24)
+    try:
+        used = cache.incr(key)
+    except ValueError:
+        cache.set(key, 1, 60 * 60 * 24)
+        used = 1
+    return used <= APP_GENERATIONS_PER_IP_PER_DAY
 
 
 class OptionalJWTAuthentication(JWTAuthentication):
@@ -102,7 +157,8 @@ class SpeciesComparisonViewSet(viewsets.ReadOnlyModelViewSet):
 class ComparisonRequestView(APIView):
     """
     API endpoint for creating and retrieving comparison requests.
-    Anyone may fetch a cached comparison; generating a new one requires login.
+    Anyone may fetch a cached comparison. Generating a new one needs a login, or the
+    iOS or Android app, where most players have no account.
     """
     permission_classes = [AllowAny]
     authentication_classes = [OptionalJWTAuthentication, SessionAuthentication]
@@ -148,14 +204,20 @@ class ComparisonRequestView(APIView):
                 status=status.HTTP_200_OK
             )
         
-        # Generating calls OpenAI, so only logged-in users may start one.
+        # Generating calls OpenAI, so only logged-in users and the native app may start one.
         # 403 rather than 401 so the React app does not bounce anonymous users to /.
         user = request.user if request.user.is_authenticated else None
         if user is None:
-            return Response(
-                {'error': LOGIN_REQUIRED_MESSAGE, 'login_required': True},
-                status=status.HTTP_403_FORBIDDEN,
-            )
+            if not _is_native_app_request(request):
+                return Response(
+                    {'error': LOGIN_REQUIRED_MESSAGE, 'login_required': True},
+                    status=status.HTTP_403_FORBIDDEN,
+                )
+            if not _take_app_generation_slot(request):
+                return Response(
+                    {'error': 'Too many new comparisons today. Try again tomorrow.'},
+                    status=status.HTTP_429_TOO_MANY_REQUESTS,
+                )
 
         # Create new comparison request
         request_obj = ComparisonRequest.objects.create(

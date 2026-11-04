@@ -333,6 +333,91 @@ class ComparisonRequestViewTestCase(TestCase):
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
         mock_generate.assert_not_called()
 
+    def _post_species(self, **headers):
+        return self.client.post(
+            '/api/compare/request/',
+            {
+                'comparison_type': 'species',
+                'species_1_id': self.species1.id,
+                'species_2_id': self.species2.id,
+            },
+            format='json',
+            **headers,
+        )
+
+    def _generated(self):
+        return SpeciesComparison.objects.create(
+            comparison_type='species',
+            species_1=self.species1,
+            species_2=self.species2,
+            summary='Generated.',
+        )
+
+    APP_HEADERS = {
+        'HTTP_X_PLATFORM': 'ios',
+        'HTTP_X_APP_VERSION': '1.134.0',
+        'HTTP_USER_AGENT': 'Motmot/1.134.0 CFNetwork/1568 Darwin/24.0.0',
+    }
+
+    @patch('compare.views.ComparisonRequestView._generate_comparison')
+    def test_request_post_anonymous_app_generates(self, mock_generate):
+        from django.core.cache import cache
+
+        cache.clear()
+        mock_generate.return_value = self._generated()
+        response = self._post_species(**self.APP_HEADERS)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertIsNone(ComparisonRequest.objects.get().requested_by)
+
+    @patch('compare.views.ComparisonRequestView._generate_comparison')
+    def test_request_post_app_with_player_token_generates(self, mock_generate):
+        """A player token is not a JWT; the app still counts as the app."""
+        from django.core.cache import cache
+
+        cache.clear()
+        mock_generate.return_value = self._generated()
+        response = self._post_species(HTTP_AUTHORIZATION='Bearer player-token', **self.APP_HEADERS)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+    @patch('compare.views.ComparisonRequestView._generate_comparison')
+    def test_request_post_released_app_without_client_headers_generates(self, mock_generate):
+        """1.134.0 sends only Content-Type on this call; its HTTP client gives it away."""
+        from django.core.cache import cache
+
+        for user_agent in ('okhttp/4.12.0', 'Motmot/42 CFNetwork/1568.100.1 Darwin/24.0.0'):
+            cache.clear()
+            SpeciesComparison.objects.all().delete()
+            mock_generate.return_value = self._generated()
+            response = self._post_species(HTTP_USER_AGENT=user_agent)
+            self.assertEqual(response.status_code, status.HTTP_201_CREATED, user_agent)
+
+    @patch('compare.views.ComparisonRequestView._generate_comparison')
+    def test_request_post_web_or_crawler_headers_cannot_generate(self, mock_generate):
+        for headers in (
+            {'HTTP_X_PLATFORM': 'web', 'HTTP_X_APP_VERSION': '1.0.0'},
+            {'HTTP_X_PLATFORM': 'android'},
+            {'HTTP_USER_AGENT': 'Mozilla/5.0 (Linux; Android 14) Chrome/130.0 Mobile Safari/537.36'},
+            {**self.APP_HEADERS, 'HTTP_ORIGIN': 'https://motmot.club'},
+            {'HTTP_USER_AGENT': 'okhttp/4.12.0', 'HTTP_SEC_FETCH_MODE': 'cors'},
+            {**self.APP_HEADERS, 'HTTP_USER_AGENT': 'Mozilla/5.0 (compatible; Googlebot/2.1)'},
+        ):
+            response = self._post_species(**headers)
+            self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN, headers)
+        mock_generate.assert_not_called()
+
+    @patch('compare.views.ComparisonRequestView._generate_comparison')
+    def test_request_post_app_generations_are_capped_per_ip(self, mock_generate):
+        from django.core.cache import cache
+
+        from compare import views as compare_views
+
+        cache.clear()
+        mock_generate.side_effect = ValueError('boom')
+        with patch.object(compare_views, 'APP_GENERATIONS_PER_IP_PER_DAY', 2):
+            codes = [self._post_species(**self.APP_HEADERS).status_code for _ in range(3)]
+        self.assertEqual(codes[-1], status.HTTP_429_TOO_MANY_REQUESTS)
+        self.assertEqual(mock_generate.call_count, 2)
+
     @patch('compare.views.ComparisonRequestView._generate_comparison')
     def test_request_post_jwt_user_generates(self, mock_generate):
         from rest_framework_simplejwt.tokens import RefreshToken

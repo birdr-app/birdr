@@ -41,7 +41,8 @@ export type SpeciesComparison = {
 
 /**
  * Request or fetch a comparison between two species.
- * POST /api/compare/request/. Cached comparisons are public; generating a new one requires login.
+ * POST /api/compare/request/. Cached comparisons are public; generating a new one needs a login
+ * or the app's client headers (getAuthHeaders sends both).
  */
 export async function requestComparison(
   species1Id: number,
