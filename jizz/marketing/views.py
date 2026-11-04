@@ -712,23 +712,28 @@ def bird_page(request, slug: str):
         name=species_name,
         latin=species.name_latin,
     )
+    family_name = taxonomy_display_name(family.name_en, family.name_nl, locale) if family else ''
+    order_name = taxonomy_display_name(order.name_en, order.name_nl, locale) if order else ''
+    links = taxon_links(species, locale)
+    crumbs = [('Home', SITE_HOME), ('Species', reverse('marketing-birds'))]
+    if links.get('order_href'):
+        crumbs.append((order_name or order.name_latin, links['order_href']))
+    if links.get('family_href'):
+        crumbs.append((family_name or family.name_latin, links['family_href']))
+    crumbs.append((species_name, path))
     context = base_context(
         request,
         title=title,
         description=description,
         path=path,
-        breadcrumbs=[
-            ('Home', SITE_HOME),
-            ('Species', reverse('marketing-birds')),
-            (species_name, path),
-        ],
+        breadcrumbs=crumbs,
         species=species,
         species_name=species_name,
         photos=photos,
         cover_url=cover,
-        family_name=taxonomy_display_name(family.name_en, family.name_nl, locale) if family else '',
+        family_name=family_name,
         family_latin=family.name_latin if family else '',
-        order_name=taxonomy_display_name(order.name_en, order.name_nl, locale) if order else '',
+        order_name=order_name,
         order_latin=order.name_latin if order else '',
         family_blurb=(
             (family.description_nl if locale == 'nl' and family.description_nl else family.description_en)
@@ -746,7 +751,7 @@ def bird_page(request, slug: str):
         media_reviewed=approved_image_count >= MEDIA_REVIEWED_APPROVED_COUNT,
         media_review_href=f'/media-review/?species={species.id}',
         **ai_text,
-        **taxon_links(species, locale),
+        **links,
         needs_ai_description=not ai_text and not generation_unavailable(species.id),
     )
     return render(request, 'marketing/bird.html', context)

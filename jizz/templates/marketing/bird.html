@@ -7,9 +7,9 @@
       <p class="latin">{{ species.name_latin }}</p>
       {% if family_name or order_name %}
       <p>
-        {% if family_name %}{% if family_href %}<a href="{{ family_href|mpath }}">{{ family_name }}</a>{% else %}{{ family_name }}{% endif %}{% if family_latin %} (<span class="latin">{{ family_latin }}</span>){% endif %}{% endif %}
+        {% if family_name %}{% if family_href %}<a href="{{ family_href|mpath }}">{{ family_name }}</a>{% else %}{{ family_name }}{% endif %}{% if family_latin and family_latin != family_name %} (<span class="latin">{{ family_latin }}</span>){% endif %}{% endif %}
         {% if family_name and order_name %} · {% endif %}
-        {% if order_name %}{% if order_href %}<a href="{{ order_href|mpath }}">{{ order_name }}</a>{% else %}{{ order_name }}{% endif %}{% if order_latin %} (<span class="latin">{{ order_latin }}</span>){% endif %}{% endif %}
+        {% if order_name %}{% if order_href %}<a href="{{ order_href|mpath }}">{{ order_name }}</a>{% else %}{{ order_name }}{% endif %}{% if order_latin and order_latin != order_name %} (<span class="latin">{{ order_latin }}</span>){% endif %}{% endif %}
         {% if group_href %} · <a href="{{ group_href|mpath }}">{{ group_name }}</a>{% endif %}
       </p>
       {% endif %}

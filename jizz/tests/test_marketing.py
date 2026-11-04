@@ -1162,6 +1162,15 @@ class MarketingPagesTests(TestCase):
         bird = self.client.get(f'/site/birds/{self.sparrow.slug}/').content.decode()
         self.assertIn('href="/site/families/accipitridae/"', bird)
         self.assertIn('href="/site/groups/hawks/"', bird)
+        # Breadcrumbs run Home › Species › order › family › bird, also in the structured data.
+        trail = [
+            '"item": "https://motmot.club/site/birds/"',
+            '"name": "Accipitriformes", "item": "https://motmot.club/site/orders/accipitriformes/"',
+            '"name": "Hawks and Eagles", "item": "https://motmot.club/site/families/accipitridae/"',
+            f'"item": "https://motmot.club/site/birds/{self.sparrow.slug}/"',
+        ]
+        positions = [bird.index(step) for step in trail]
+        self.assertEqual(positions, sorted(positions))
 
         index = self.client.get('/sitemap.xml').content.decode()
         self.assertIn('https://motmot.club/sitemap-taxa.xml', index)

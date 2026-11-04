@@ -346,8 +346,59 @@ def description_context(species: Species, locale: str) -> dict:
     return {
         'ai_summary': render_tokens(fields['summary'], locale, links=False),
         'ai_identification_html': html(fields['identification']),
-        'ai_similar_html': html(fields['similar_species']),
+        'ai_similar_html': html(_with_comparison_links(fields['similar_species'], species, locale)),
     }
+
+
+_LOOKALIKE_BULLET_RE = re.compile(r'^(\s*[-*]\s+\*\*\[\[(\d+)\|[^\]]+\]\]\*\*.*?)\s*$')
+
+
+def _compared_species(species: Species, ids: set[int]) -> dict[int, str]:
+    """Lookalike id -> compare page path, for pairs with a written comparison."""
+    from compare.models import CommunityComparison
+    from jizz.marketing.slugs import compare_pair_slug
+
+    others: set[int] = set()
+    ai_pairs = (
+        SpeciesComparison.objects.filter(comparison_type='species')
+        .filter(
+            Q(species_1=species, species_2_id__in=ids) | Q(species_2=species, species_1_id__in=ids)
+        )
+        .exclude(Q(summary='') | Q(summary__isnull=True))
+        .values_list('species_1_id', 'species_2_id')
+    )
+    community_pairs = CommunityComparison.objects.filter(published=True).filter(
+        Q(species_low=species, species_high_id__in=ids) | Q(species_high=species, species_low_id__in=ids)
+    ).values_list('species_low_id', 'species_high_id')
+    for a, b in [*ai_pairs, *community_pairs]:
+        others.add(b if a == species.id else a)
+    slugs = dict(Species.objects.filter(id__in=others | {species.id}).values_list('id', 'slug'))
+    paths = {}
+    for other in others:
+        if not slugs.get(other) or not species.slug:
+            continue
+        low, high = (species.id, other) if species.id < other else (other, species.id)
+        paths[other] = f'/site/compare/{compare_pair_slug(slugs[low], slugs[high])}/'
+    return paths
+
+
+def _with_comparison_links(markdown: str, species: Species, locale: str) -> str:
+    """End each lookalike bullet with a link to its comparison page, when one is written."""
+    from jizz.marketing.i18n import localize_path, translate
+
+    matches = [_LOOKALIKE_BULLET_RE.match(line) for line in (markdown or '').splitlines()]
+    ids = {int(m.group(2)) for m in matches if m}
+    paths = _compared_species(species, ids) if ids else {}
+    if not paths:
+        return markdown
+    label = _markdown_escape(translate('How to tell them apart', locale))
+    lines = []
+    for line, match in zip(markdown.splitlines(), matches):
+        path = paths.get(int(match.group(2))) if match else None
+        if path:
+            line = f'{match.group(1)} → [{label}]({localize_path(path, locale)})'
+        lines.append(line)
+    return '\n'.join(lines)
 
 
 # On-demand generation from the species page: a background job, polled by the page.
