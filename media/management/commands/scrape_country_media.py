@@ -5,6 +5,7 @@ Limits to 10 items per media type per species and reports success rates.
 from django.core.management.base import BaseCommand
 from django.db.models import Q, Count
 from jizz.models import Species, Country
+from media.duplicates import image_url_exists
 from media.models import Media
 from media.utils import normalize_contributor, parse_copyright, safe_truncate
 from media.scrapers.xeno_canto import XenoCantoScraper
@@ -140,7 +141,7 @@ class Command(BaseCommand):
             
             # Check if we should skip
             if options.get('skip_existing'):
-                has_enough_images = Media.objects.filter(species=species, type='image').count() >= MAX_ITEMS_PER_TYPE if 'image' in media_types else True
+                has_enough_images = Media.objects.filter(species=species, type='image', duplicate_of__isnull=True).count() >= MAX_ITEMS_PER_TYPE if 'image' in media_types else True
                 has_enough_videos = Media.objects.filter(species=species, type='video').count() >= MAX_ITEMS_PER_TYPE if 'video' in media_types else True
                 has_enough_audio = Media.objects.filter(species=species, type='audio').count() >= MAX_ITEMS_PER_TYPE if 'audio' in media_types else True
                 
@@ -289,7 +290,7 @@ class Command(BaseCommand):
     
     def _add_images_from_items(self, species, media_items, stats):
         """Add images from a sorted list of items, tracking by source."""
-        existing_count = Media.objects.filter(species=species, type='image').count()
+        existing_count = Media.objects.filter(species=species, type='image', duplicate_of__isnull=True).count()
         if existing_count >= MAX_ITEMS_PER_TYPE:
             return 0
         
@@ -298,9 +299,11 @@ class Command(BaseCommand):
         
         for item in media_items[:needed]:
             source = item.get('source', 'unknown')
-            
-            # Check if already exists (by link and source)
+
+            # Check if already exists (by link and source, or the same file from any source)
             if Media.objects.filter(species=species, link=item.get('link'), source=source, type='image').exists():
+                continue
+            if image_url_exists(species, item.get('url')):
                 continue
             
             copyright_text = safe_truncate(item.get('copyright_text'), 500)
@@ -321,7 +324,7 @@ class Command(BaseCommand):
             stats['images_by_source'][source] = stats['images_by_source'].get(source, 0) + 1
             
             # Stop if we've reached the limit
-            if Media.objects.filter(species=species, type='image').count() >= MAX_ITEMS_PER_TYPE:
+            if Media.objects.filter(species=species, type='image', duplicate_of__isnull=True).count() >= MAX_ITEMS_PER_TYPE:
                 break
         
         if created_count > 0:
@@ -380,7 +383,7 @@ class Command(BaseCommand):
         self.stdout.write(f'  Scraping images from {scraper.__class__.__name__}...')
         
         # Check how many we already have
-        existing_count = Media.objects.filter(species=species, type='image').count()
+        existing_count = Media.objects.filter(species=species, type='image', duplicate_of__isnull=True).count()
         if existing_count >= MAX_ITEMS_PER_TYPE:
             self.stdout.write(f'    Already have {existing_count} images (limit: {MAX_ITEMS_PER_TYPE})')
             return 0
@@ -398,8 +401,10 @@ class Command(BaseCommand):
         
         created_count = 0
         for item in media_items[:needed]:
-            # Check if already exists (by link and source)
+            # Check if already exists (by link and source, or the same file from any source)
             if Media.objects.filter(species=species, link=item.get('link'), source=source, type='image').exists():
+                continue
+            if image_url_exists(species, item.get('url')):
                 continue
             
             copyright_text = safe_truncate(item.get('copyright_text'), 500)
@@ -419,7 +424,7 @@ class Command(BaseCommand):
             created_count += 1
             
             # Stop if we've reached the limit
-            if Media.objects.filter(species=species, type='image').count() >= MAX_ITEMS_PER_TYPE:
+            if Media.objects.filter(species=species, type='image', duplicate_of__isnull=True).count() >= MAX_ITEMS_PER_TYPE:
                 break
         
         if created_count > 0:

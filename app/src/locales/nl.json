@@ -767,5 +767,8 @@
   "flock_extra_games_finished": "Afgelopen",
   "flock_extra_games_show_all": "Toon alle afgelopen spellen ({count})",
   "flock_extra_games_show_fewer": "Toon minder",
-  "flock_extra_games_none_open": "Er staan nu geen open spellen. Maak een spel, kies Delen en voeg het toe aan deze flock."
+  "flock_extra_games_none_open": "Er staan nu geen open spellen. Maak een spel, kies Delen en voeg het toe aan deze flock.",
+  "no other media": "Er is geen andere foto van deze vogel.",
+  "no media left for question": "Er is op dit moment geen bruikbare foto van deze vogel.",
+  "skip question": "Deze vraag overslaan"
 }

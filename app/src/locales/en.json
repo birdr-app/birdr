@@ -768,5 +768,8 @@
   "flock_extra_games_finished": "Finished",
   "flock_extra_games_show_all": "Show all finished games ({count})",
   "flock_extra_games_show_fewer": "Show fewer",
-  "flock_extra_games_none_open": "No open games right now. Create a game, choose Share, and add it to this flock."
+  "flock_extra_games_none_open": "No open games right now. Create a game, choose Share, and add it to this flock.",
+  "no other media": "There is no other picture of this bird.",
+  "no media left for question": "There is no usable picture of this bird right now.",
+  "skip question": "Skip this question"
 }

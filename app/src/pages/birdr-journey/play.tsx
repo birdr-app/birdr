@@ -467,7 +467,7 @@ export function BirdrJourneyPlayPage() {
           {gameMedia === 'images' && currentImage && (
             <Box position="relative" h={PLAY_IMAGE_STAGE_HEIGHT}>
               <ZoomablePlayImage
-                key={`${question.id}-img-${currentMediaIndex}`}
+                key={`${question.id}-img-${currentImage.id ?? currentMediaIndex}`}
                 previewSrc={playPreviewSrc(currentImage.url)}
                 fullSrc={playFullSrc(currentImage.url)}
                 onLoad={notifyMediaReady}

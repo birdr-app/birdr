@@ -765,5 +765,8 @@
   "flock_extra_games_finished": "Terminate",
   "flock_extra_games_show_all": "Mostra tutte le partite terminate ({count})",
   "flock_extra_games_show_fewer": "Mostra meno",
-  "flock_extra_games_none_open": "Al momento non ci sono partite aperte. Crea una partita, scegli Condividi e aggiungila a questo flock."
+  "flock_extra_games_none_open": "Al momento non ci sono partite aperte. Crea una partita, scegli Condividi e aggiungila a questo flock.",
+  "no other media": "Non c'è un'altra foto di questo uccello.",
+  "no media left for question": "Al momento non c'è una foto utilizzabile di questo uccello.",
+  "skip question": "Salta questa domanda"
 }

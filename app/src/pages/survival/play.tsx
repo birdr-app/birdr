@@ -306,7 +306,7 @@ export function SurvivalPlayPage() {
             <>
               <Box position="relative" h={PLAY_IMAGE_STAGE_HEIGHT}>
                 <ZoomablePlayImage
-                  key={`${question.id}-img-${mediaIndex ?? 0}`}
+                  key={`${question.id}-img-${currentImage.id ?? mediaIndex ?? 0}`}
                   previewSrc={playPreviewSrc(currentImage.url)}
                   fullSrc={playFullSrc(currentImage.url)}
                   onLoad={notifyMediaReady}

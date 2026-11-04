@@ -166,7 +166,7 @@ class MediaAdmin(HideableAdminMixin, admin.ModelAdmin):
 
     list_filter = [VisibilityFilter, ReviewStatusFilter, 'type', 'created', 'source', 'copyright_standardized', 'non_commercial_only', 'species']
     search_fields = ['species__name', 'contributor', 'copyright_text', 'copyright_standardized', 'url']
-    raw_id_fields = ['species']
+    raw_id_fields = ['species', 'duplicate_of']
     readonly_fields = ['created', 'updated', 'image_preview', 'machine_assertion_summary']
     date_hierarchy = 'created'
     list_per_page = 25
@@ -177,7 +177,7 @@ class MediaAdmin(HideableAdminMixin, admin.ModelAdmin):
             'fields': ('species',)
         }),
         ('Media Information', {
-            'fields': ('source', 'type', 'contributor', 'url', 'link', 'hide', 'image_preview')
+            'fields': ('source', 'type', 'contributor', 'url', 'link', 'hide', 'duplicate_of', 'image_preview')
         }),
         ('Machine first assertion', {
             'fields': ('machine_assertion_summary',),

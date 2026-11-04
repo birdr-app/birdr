@@ -4,6 +4,7 @@ Management command to scrape media for species from various platforms.
 from django.core.management.base import BaseCommand
 from django.db import transaction
 from jizz.models import Species
+from media.duplicates import image_url_exists
 from media.models import Media
 from media.utils import normalize_contributor, parse_copyright, safe_truncate
 from media.scrapers.xeno_canto import XenoCantoScraper
@@ -220,8 +221,8 @@ class Command(BaseCommand):
         created_count = 0
         print(f"{len(media_items)} plaatjes found")
         for item in media_items:
-            # Check if already exists (by URL)
-            if Media.objects.filter(species=species, url=item.get('url'), source=source, type='image').exists():
+            # Check if already exists (by URL, any source: GBIF often re-serves iNaturalist photos)
+            if image_url_exists(species, item.get('url')):
                 continue
             if 'sounds' in item.get('link'):
                 continue

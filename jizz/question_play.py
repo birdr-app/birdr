@@ -50,9 +50,19 @@ def _eligible_media_list(media_rows: list[Media]) -> list[Media]:
             approved.append(m)
         elif latest.review_type not in MediaReview.REJECTING_TYPES:
             fallback.append(m)
-    if approved:
-        return sorted(approved, key=lambda m: m.id)
-    return sorted(fallback, key=lambda m: m.id)
+    return _distinct_urls(sorted(approved or fallback, key=lambda m: m.id))
+
+
+def _distinct_urls(media_rows: list[Media]) -> list[Media]:
+    """Drop later rows that show the same file as an earlier one."""
+    seen = set()
+    distinct = []
+    for m in media_rows:
+        if m.url and m.url in seen:
+            continue
+        seen.add(m.url)
+        distinct.append(m)
+    return distinct
 
 
 def fetch_eligible_media_for_species(species_id: int, media_type: str) -> list[Media]:
@@ -200,7 +210,14 @@ def advance_question_media_after_exclusion(
 
     remaining = full_eligible
     if excluded_media_id:
-        remaining = [m for m in full_eligible if m.id != excluded_media_id]
+        # Also skip other rows for the same file, or the flagged photo comes straight back.
+        excluded_url = (
+            Media.objects.filter(pk=excluded_media_id).values_list('url', flat=True).first()
+        )
+        remaining = [
+            m for m in full_eligible
+            if m.id != excluded_media_id and not (excluded_url and m.url == excluded_url)
+        ]
     if not remaining:
         return None
 

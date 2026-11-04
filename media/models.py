@@ -41,6 +41,14 @@ class Media(models.Model):
         null=True, blank=True,
         help_text='When the Wikimedia thumbnails were copied to our own bucket (see media/mirror.py).',
     )
+    duplicate_of = models.ForeignKey(
+        'self',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='duplicates',
+        help_text='Same file as another media item of this species (e.g. an iNaturalist photo also scraped via GBIF). Always hidden.',
+    )
 
     class Meta:
         verbose_name = 'Media'
@@ -171,14 +179,31 @@ class MediaReview(models.Model):
 
 
 def sync_media_hide(media_id: int | None) -> None:
-    """hide=True when any review is rejected (or mystery); otherwise hide=False."""
+    """
+    hide=True when any review is rejected (or mystery), or when the item is a
+    duplicate; otherwise hide=False. A rejection also hides visible copies of
+    the same file, so a flagged photo cannot come back under another row.
+    """
     if not media_id:
         return
-    should_hide = MediaReview.objects.filter(
+    media = Media.objects.filter(pk=media_id).only(
+        'id', 'species_id', 'type', 'url', 'duplicate_of_id'
+    ).first()
+    if media is None:
+        return
+    rejected = MediaReview.objects.filter(
         media_id=media_id,
         review_type__in=MediaReview.REJECTING_TYPES,
     ).exists()
+    should_hide = rejected or media.duplicate_of_id is not None
     Media.objects.filter(pk=media_id).exclude(hide=should_hide).update(hide=should_hide)
+    if rejected and media.url:
+        Media.objects.filter(
+            species_id=media.species_id,
+            type=media.type,
+            url=media.url,
+            hide=False,
+        ).exclude(pk=media.pk).update(duplicate_of=media, hide=True)
 
 
 class FlagMedia(models.Model):

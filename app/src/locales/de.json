@@ -765,5 +765,8 @@
   "flock_extra_games_finished": "Beendet",
   "flock_extra_games_show_all": "Alle beendeten Spiele anzeigen ({count})",
   "flock_extra_games_show_fewer": "Weniger anzeigen",
-  "flock_extra_games_none_open": "Gerade gibt es keine offenen Spiele. Erstelle ein Spiel, wähle Teilen und füge es diesem Flock hinzu."
+  "flock_extra_games_none_open": "Gerade gibt es keine offenen Spiele. Erstelle ein Spiel, wähle Teilen und füge es diesem Flock hinzu.",
+  "no other media": "Es gibt kein anderes Bild von diesem Vogel.",
+  "no media left for question": "Von diesem Vogel gibt es gerade kein brauchbares Bild.",
+  "skip question": "Diese Frage überspringen"
 }

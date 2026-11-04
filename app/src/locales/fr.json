@@ -765,5 +765,8 @@
   "flock_extra_games_finished": "Terminées",
   "flock_extra_games_show_all": "Voir toutes les parties terminées ({count})",
   "flock_extra_games_show_fewer": "Voir moins",
-  "flock_extra_games_none_open": "Aucune partie ouverte pour l'instant. Créez une partie, choisissez Partager et ajoutez-la à ce flock."
+  "flock_extra_games_none_open": "Aucune partie ouverte pour l'instant. Créez une partie, choisissez Partager et ajoutez-la à ce flock.",
+  "no other media": "Il n'y a pas d'autre photo de cet oiseau.",
+  "no media left for question": "Il n'y a pas de photo utilisable de cet oiseau pour le moment.",
+  "skip question": "Passer cette question"
 }
