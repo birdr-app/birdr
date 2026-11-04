@@ -21,6 +21,12 @@ class SpeciesDescriptionView(APIView):
     authentication_classes = [OptionalJWTAuthentication, SessionAuthentication]
     permission_classes = [AllowAny]
 
+    def finalize_response(self, request, response, *args, **kwargs):
+        # The page polls this until the text is ready, so no cache may keep an old status.
+        response = super().finalize_response(request, response, *args, **kwargs)
+        response['Cache-Control'] = 'no-store'
+        return response
+
     def get(self, request, species_id: int):
         species = get_object_or_404(Species, pk=species_id)
         return Response(generation_status(species))

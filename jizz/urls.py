@@ -568,7 +568,8 @@ urlpatterns = [
     re_path(r"^api/species-review-stats/$", SpeciesReviewStatsView.as_view(), name="species-review-stats"),
     path('api/pages/', PageListView.as_view(), name='page-list'),
     path('api/pages/<slug:slug>/', PageDetailView.as_view(), name='page-detail'),
-    path('api/species/<int:species_id>/description/', SpeciesDescriptionView.as_view(), name='species-description'),
+    # Not under /api/species/: nginx caches that prefix for an hour, which froze the polling.
+    path('api/compare/species-description/<int:species_id>/', SpeciesDescriptionView.as_view(), name='species-description'),
 
     re_path(r"^api/questions/(?P<pk>\d+)/next-media/$", QuestionNextMediaView.as_view(), name="question-next-media"),
     re_path(r"^api/questions/(?P<pk>\d+)/media-ready/$", QuestionMediaReadyView.as_view(), name="question-media-ready"),

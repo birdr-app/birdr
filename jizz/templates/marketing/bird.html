@@ -81,7 +81,7 @@
 <section
   class="ai-generate"
   id="ai-describe"
-  data-url="/api/species/{{ species.id }}/description/"
+  data-url="{% url 'species-description' species.id %}"
   data-language="{{ html_lang }}"
   data-msg-failed="{% mt "Could not write the identification notes. Try again later." %}"
   data-msg-unavailable="{% mt "No identification notes are available for this bird yet." %}"
@@ -129,6 +129,7 @@
     if (token) headers['Authorization'] = 'Bearer ' + token;
     return fetch(url, {
       method: method,
+      cache: 'no-store',
       headers: headers,
       body: method === 'POST' ? JSON.stringify({ language: root.getAttribute('data-language') }) : undefined,
     }).then(function (res) {

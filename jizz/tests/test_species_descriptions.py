@@ -131,7 +131,7 @@ class SpeciesDescriptionOnDemandTests(TestCase):
         self.species = Species.objects.create(name='Smew', name_latin='Mergellus albellus', code='smew')
         Media.objects.create(species=self.species, type='image', hide=False, url='https://example.org/smew.jpg')
         CountrySpecies.objects.get_or_create(country=nl, species=self.species)
-        self.url = f'/api/species/{self.species.id}/description/'
+        self.url = f'/api/compare/species-description/{self.species.id}/'
         from django.contrib.auth import get_user_model
         self.user = get_user_model().objects.create_user('birder', password='x')
 
@@ -167,7 +167,9 @@ class SpeciesDescriptionOnDemandTests(TestCase):
         languages = [c.args[1] for c in translate.call_args_list]
         self.assertEqual(languages[0], 'nl')
         self.assertEqual(len(languages), 7)
-        self.assertEqual(self.client.get(self.url).json(), {'ready': True})
+        status = self.client.get(self.url)
+        self.assertEqual(status.json(), {'ready': True})
+        self.assertEqual(status['Cache-Control'], 'no-store')
 
     def test_species_without_notes_stops_offering_it(self):
         from compare.ai_service import ComparisonGenerationError, NO_GROUNDING_MESSAGE
@@ -196,6 +198,6 @@ class SpeciesDescriptionOnDemandTests(TestCase):
         with patch('compare.descriptions.generate_species_description', side_effect=self._fake_generate), \
                 patch('compare.descriptions.translate_description'):
             self.assertEqual(self.client.post(self.url, {}, content_type='application/json').status_code, 202)
-            response = self.client.post(f'/api/species/{other.id}/description/', {}, content_type='application/json')
+            response = self.client.post(f'/api/compare/species-description/{other.id}/', {}, content_type='application/json')
         self.assertEqual(response.status_code, 429)
         self.assertTrue(response.json()['rate_limited'])
