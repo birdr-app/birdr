@@ -151,6 +151,20 @@ def is_broadcast_in_progress(update: Update) -> bool:
     ).exists()
 
 
+def forget_unopened_recipients(update: Update) -> int:
+    """Count broadcast recipients who never opened this update as pending again.
+
+    The next broadcast then resends it to them, e.g. after a send that mostly bounced or
+    landed in spam. Returns how many recipients were reset.
+    """
+    deleted, _ = UpdateEmailRecipient.objects.filter(
+        delivery__update=update,
+        delivery__is_test=False,
+        opened_at__isnull=True,
+    ).delete()
+    return deleted
+
+
 def clear_stale_broadcasts(update: Update, *, max_age_minutes: int = 60) -> int:
     """Mark abandoned in-progress deliveries as failed so broadcasts can be resumed."""
     cutoff = timezone.now() - timedelta(minutes=max_age_minutes)
@@ -261,9 +275,20 @@ def send_test_update_email(update: Update, user) -> bool:
         return False
 
 
-def send_update_email_broadcast(update: Update, sent_by, *, delivery: UpdateEmailDelivery | None = None) -> UpdateEmailDelivery | None:
-    """Send to subscribers who have not received this update yet. Safe to call again to resume."""
+def send_update_email_broadcast(
+    update: Update,
+    sent_by,
+    *,
+    delivery: UpdateEmailDelivery | None = None,
+    limit: int | None = None,
+) -> UpdateEmailDelivery | None:
+    """Send to subscribers who have not received this update yet. Safe to call again to resume.
+
+    With a limit, sends to at most that many, so a large resend can go out in batches.
+    """
     pending = get_pending_subscribers(update)
+    if limit:
+        pending = pending.order_by('pk')[:limit]
     pending_count = pending.count()
     if pending_count == 0:
         return None
@@ -301,7 +326,7 @@ def send_update_email_broadcast(update: Update, sent_by, *, delivery: UpdateEmai
     return delivery
 
 
-def start_update_email_broadcast_async(update: Update, sent_by) -> bool:
+def start_update_email_broadcast_async(update: Update, sent_by, *, limit: int | None = None) -> bool:
     """Start a background thread so admin HTTP requests do not time out."""
     if is_broadcast_in_progress(update):
         return False
@@ -320,7 +345,7 @@ def start_update_email_broadcast_async(update: Update, sent_by) -> bool:
 
     def _run():
         try:
-            send_update_email_broadcast(update, sent_by, delivery=delivery)
+            send_update_email_broadcast(update, sent_by, delivery=delivery, limit=limit)
         except Exception:
             logger.exception('Background update email broadcast failed for update %s', update.pk)
         finally:

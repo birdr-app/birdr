@@ -18,6 +18,7 @@ from jizz.models import (
     UserProfile,
 )
 from jizz.update_emails import (
+    forget_unopened_recipients,
     get_update_email_stats,
     mark_email_opened,
     send_test_update_email,
@@ -336,6 +337,36 @@ class UpdateEmailTests(TestCase):
 
         second_delivery = send_update_email_broadcast(self.update, self.admin)
         self.assertIsNone(second_delivery)
+
+    def test_broadcast_limit_sends_in_batches(self):
+        for name in ('one', 'two', 'three'):
+            user = User.objects.create_user(name, password='x', email=f'{name}@example.com')
+            UserProfile.objects.create(user=user, receive_updates=True)
+
+        delivery = send_update_email_broadcast(self.update, self.admin, limit=2)
+        self.assertEqual(delivery.recipient_count, 2)
+        self.assertEqual(get_update_email_stats(self.update)['pending'], 2)
+
+        send_update_email_broadcast(self.update, self.admin, limit=2)
+        self.assertEqual(get_update_email_stats(self.update)['pending'], 0)
+
+    def test_forget_unopened_recipients_makes_them_pending_again(self):
+        from django.core import mail
+
+        reader = User.objects.create_user('reader', password='x', email='reader@example.com')
+        UserProfile.objects.create(user=reader, receive_updates=True)
+        send_test_update_email(self.update, self.admin)
+        send_update_email_broadcast(self.update, self.admin)
+        mark_email_opened(UpdateEmailRecipient.objects.get(user=reader).tracking_token)
+
+        self.assertEqual(forget_unopened_recipients(self.update), 1)
+        # The test send and the opened broadcast email stay recorded.
+        self.assertTrue(UpdateEmailRecipient.objects.filter(user=self.admin, delivery__is_test=True).exists())
+        self.assertTrue(UpdateEmailRecipient.objects.filter(user=reader).exists())
+
+        mail.outbox = []
+        send_update_email_broadcast(self.update, self.admin)
+        self.assertEqual([m.to for m in mail.outbox], [['staff@example.com']])
 
     def test_failed_send_does_not_record_recipient(self):
         UserProfile.objects.filter(user=self.admin).update(receive_updates=False)
