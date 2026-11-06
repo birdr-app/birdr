@@ -350,6 +350,17 @@ class UpdateEmailTests(TestCase):
         send_update_email_broadcast(self.update, self.admin, limit=2)
         self.assertEqual(get_update_email_stats(self.update)['pending'], 0)
 
+    def test_stats_pending_ignores_recipients_who_unsubscribed(self):
+        leaver = User.objects.create_user('leaver', password='x', email='leaver@example.com')
+        UserProfile.objects.create(user=leaver, receive_updates=True)
+        send_update_email_broadcast(self.update, self.admin)
+        UserProfile.objects.filter(user=leaver).update(receive_updates=False)
+        newcomer = User.objects.create_user('newcomer', password='x', email='newcomer@example.com')
+        UserProfile.objects.create(user=newcomer, receive_updates=True)
+
+        stats = get_update_email_stats(self.update)
+        self.assertEqual(stats, {'subscribers_total': 2, 'sent': 2, 'pending': 1})
+
     def test_forget_unopened_recipients_makes_them_pending_again(self):
         from django.core import mail
 

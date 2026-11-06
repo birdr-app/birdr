@@ -132,13 +132,12 @@ def get_pending_subscribers(update: Update) -> QuerySet[UserProfile]:
 
 
 def get_update_email_stats(update: Update) -> dict[str, int]:
-    already_sent = get_users_already_emailed(update)
-    subscribers_total = get_update_subscribers().count()
-    sent = len(already_sent)
+    # Pending counts current subscribers only; people emailed before they unsubscribed
+    # still count as sent, so subscribers minus sent would undercount it.
     return {
-        'subscribers_total': subscribers_total,
-        'sent': sent,
-        'pending': max(subscribers_total - sent, 0),
+        'subscribers_total': get_update_subscribers().count(),
+        'sent': len(get_users_already_emailed(update)),
+        'pending': get_pending_subscribers(update).count(),
     }
 
 
