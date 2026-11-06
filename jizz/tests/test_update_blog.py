@@ -295,7 +295,7 @@ class UpdateEmailTests(TestCase):
         url = f'{settings.SITE_URL}/api/updates/unsubscribe/{recipient.tracking_token}/'
         self.assertIn(f'<{url}>', message['List-Unsubscribe'])
         self.assertEqual(message['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click')
-        self.assertTrue(message['Message-ID'].endswith('@motmot.club>'))
+        self.assertTrue(message['Message-ID'].endswith('@birdr.pro>'))
         self.assertIn(f'href="{url}"', mail.outbox[0].alternatives[0][0])
 
     def test_unsubscribe_get_asks_and_post_unsubscribes(self):

@@ -4,8 +4,8 @@ from django.test import SimpleTestCase
 
 class MessageIdDomainTests(SimpleTestCase):
     def test_message_id_uses_mail_domain(self):
-        msg = EmailMessage('Subject', 'Body', 'info@motmot.club', ['a@example.com']).message()
-        self.assertTrue(msg['Message-ID'].endswith('@mail.motmot.club>'))
+        msg = EmailMessage('Subject', 'Body', 'info@birdr.pro', ['a@example.com']).message()
+        self.assertTrue(msg['Message-ID'].endswith('@mail.birdr.pro>'))
 
     def test_date_header_has_a_real_offset(self):
         # -0000 means "time zone unknown" (RFC 5322) and counts against us in spam filters.
