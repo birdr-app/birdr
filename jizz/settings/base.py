@@ -269,6 +269,11 @@ SERVER_EMAIL = os.environ.get('SERVER_EMAIL', 'Motmot <info@birdr.pro>')
 # Domain in Message-ID headers. Django would take the server's FQDN, which
 # resolves to localhost on the server.
 EMAIL_MESSAGE_ID_DOMAIN = os.environ.get('EMAIL_MESSAGE_ID_DOMAIN', 'mail.birdr.pro')
+# motmot.club is on the Spamhaus DBL (Nov 2026) and GMX rejects mail that mentions it.
+# birdr.pro serves the same site, so outgoing mail links there instead. Drop this (and
+# the backend) once motmot.club is delisted.
+EMAIL_BACKEND = 'jizz.mail_backend.DomainRewritingEmailBackend'
+EMAIL_DOMAIN_REWRITES = {'motmot.club': 'birdr.pro'}
 # Date header with a real offset (+0000). Without it Django writes -0000, which RFC 5322
 # reads as "time zone unknown" and spam filters count against the message.
 EMAIL_USE_LOCALTIME = True
