@@ -67,7 +67,7 @@
       "ebird_code": "cowpig1",
       "latin": "Columba palumbus",
       "name": {
-        "en": "Common Wood-Pigeon",
+        "en": "Common Woodpigeon",
         "nl": "Houtduif"
       },
       "plumage": {
@@ -98,7 +98,8 @@
           "en": "A soft, five-note \"roo-COO-coo, coo-coo\", repeated a few times.",
           "nl": "Een zacht, vijftonig \"roe-KOE-koe, koe-koe\", een paar keer herhaald."
         },
-        "pick": "xeno-canto song, NL/BE, quality A"
+        "pick": "xeno-canto song, NL/BE, quality A",
+        "available": 18
       },
       "media": {
         "card": [
@@ -121,7 +122,7 @@
       "ebird_code": "rocpig",
       "latin": "Columba livia",
       "name": {
-        "en": "Rock Pigeon",
+        "en": "Rock Dove",
         "nl": "Stadsduif"
       },
       "plumage": {
@@ -152,7 +153,8 @@
           "en": "A rolling, purring \"oo-roo-coo\".",
           "nl": "Een rollend, rommelend \"oeroe-koe\"."
         },
-        "pick": "xeno-canto song, town recording, quality A"
+        "pick": "xeno-canto song, town recording, quality A",
+        "available": 19
       },
       "media": {
         "card": [
@@ -170,8 +172,8 @@
         ]
       },
       "note": {
-        "en": "All those different colours are one species, descended from the wild Rock Dove of sea cliffs.",
-        "nl": "Al die verschillende kleuren zijn één soort, afstammend van de wilde rotsduif van zeekliffen."
+        "en": "All those different colours are one species, descended from the wild Rock Dove of sea cliffs. In the quiz it is called Rock Dove.",
+        "nl": "Al die verschillende kleuren zijn één soort, afstammend van de wilde rotsduif van zeekliffen. In de quiz heet hij daarom rotsduif."
       }
     },
     {
@@ -179,7 +181,7 @@
       "ebird_code": "eucdov",
       "latin": "Streptopelia decaocto",
       "name": {
-        "en": "Eurasian Collared-Dove",
+        "en": "Collared Dove",
         "nl": "Turkse tortel"
       },
       "plumage": {
@@ -210,7 +212,8 @@
           "en": "Three notes, the middle one stressed: \"koo-KOO-koo\".",
           "nl": "Drie tonen, de middelste met nadruk: \"koe-KOE-koe\"."
         },
-        "pick": "xeno-canto song, NL, quality A"
+        "pick": "xeno-canto song, NL, quality A",
+        "available": 19
       },
       "note": {
         "en": "It arrived from the Balkans and bred in the Netherlands for the first time in 1950.",
@@ -238,7 +241,7 @@
       "ebird_code": "eurmag1",
       "latin": "Pica pica",
       "name": {
-        "en": "Eurasian Magpie",
+        "en": "Common Magpie",
         "nl": "Ekster"
       },
       "plumage": {
@@ -269,7 +272,8 @@
           "en": "A dry, rattling \"chak-chak-chak-chak\".",
           "nl": "Een droog, ratelend \"tsjak-tsjak-tsjak-tsjak\"."
         },
-        "pick": "xeno-canto call, rattle, NL, quality A"
+        "pick": "xeno-canto call, rattle, NL, quality A",
+        "available": 20
       },
       "media": {
         "card": [
@@ -325,7 +329,8 @@
           "en": "A hoarse \"kraa, kraa, kraa\".",
           "nl": "Een hees \"kraa, kraa, kraa\"."
         },
-        "pick": "xeno-canto call, NL, quality A"
+        "pick": "xeno-canto call, NL, quality A",
+        "available": 20
       },
       "note": {
         "en": "In the north and east you may meet a grey-and-black Hooded Crow, a close relative.",
@@ -356,7 +361,7 @@
     {
       "species_id": 6956,
       "ebird_code": "eurjac",
-      "latin": "Corvus monedula",
+      "latin": "Coloeus monedula",
       "name": {
         "en": "Eurasian Jackdaw",
         "nl": "Kauw"
@@ -389,7 +394,8 @@
           "en": "A short, bright \"kyak!\".",
           "nl": "Een kort, helder \"kjak!\"."
         },
-        "pick": "xeno-canto call, NL, quality A"
+        "pick": "xeno-canto call, NL, quality A",
+        "available": 17
       },
       "media": {
         "card": [

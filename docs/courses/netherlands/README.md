@@ -182,8 +182,12 @@ media review regardless of the course, since these photos show up in normal quiz
 ## Data notes
 
 - **Species ids** in the lesson files were matched through the Wikimedia file names in the local
-  media dump and checked by eye against the photos. They should be checked against the database
-  once more before import.
+  media dump, checked by eye against the photos, and confirmed against motmot.club: all 16 are
+  right. Names follow the database (Coloeus monedula for the Jackdaw, Rock Dove / rotsduif for the
+  Feral Pigeon, which the lesson calls stadsduif and explains).
+- **Sounds:** every lesson bird has 17-20 xeno-canto recordings in the database (`sound.available`),
+  but the API gives no song/call type, country or quality. Picking per the `sound.pick` spec needs
+  the xeno-canto metadata.
 - **The Netherlands commonness list includes Caribbean species.** `jizz/data/commonness_NL.csv`
   ranks Antillean Crested Hummingbird at #80, with American Flamingo, Laughing Gull and Audubon's
   Shearwater also on it: the eBird data for "NL" includes the Caribbean Netherlands. The course

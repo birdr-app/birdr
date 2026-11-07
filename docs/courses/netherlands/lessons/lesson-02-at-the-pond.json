@@ -98,7 +98,8 @@
           "en": "The famous \"quack\" is the female; the male gives a soft, nasal \"rhaeb\".",
           "nl": "Het bekende \"kwak\" is het vrouwtje; het mannetje roept zacht en nasaal \"rhaeb\"."
         },
-        "pick": "xeno-canto call, female quacking, NL, quality A"
+        "pick": "xeno-canto call, female quacking, NL, quality A",
+        "available": 20
       },
       "note": {
         "en": "Ducks with odd white patches in parks are usually farmyard Mallards. Leave them for later. The brown female comes in week 5.",
@@ -164,7 +165,8 @@
           "en": "A short, sharp \"pjik!\", like a cork leaving a bottle.",
           "nl": "Een kort, scherp \"pjik!\", als een kurk uit een fles."
         },
-        "pick": "xeno-canto call, single \"pjik\", NL, quality A"
+        "pick": "xeno-canto call, single \"pjik\", NL, quality A",
+        "available": 20
       },
       "media": {
         "card": [
@@ -197,7 +199,7 @@
       "ebird_code": "commoo3",
       "latin": "Gallinula chloropus",
       "name": {
-        "en": "Eurasian Moorhen",
+        "en": "Common Moorhen",
         "nl": "Waterhoen"
       },
       "plumage": {
@@ -228,7 +230,8 @@
           "en": "A sudden, gurgling \"krrruk\" from the reeds.",
           "nl": "Een plotseling, borrelend \"krrruk\" uit het riet."
         },
-        "pick": "xeno-canto call, NL, quality A"
+        "pick": "xeno-canto call, NL, quality A",
+        "available": 20
       },
       "media": {
         "card": [
@@ -290,7 +293,8 @@
           "en": "Not a voice: listen to the throbbing \"wing-wing-wing\" of its wings in flight.",
           "nl": "Geen stem: luister naar het zoemende \"wiew-wiew-wiew\" van de vleugels in de vlucht."
         },
-        "pick": "xeno-canto \"flight\" or wing sound, quality A"
+        "pick": "xeno-canto \"flight\" or wing sound, quality A",
+        "available": 20
       },
       "note": {
         "en": "Grey-brown swans are this year's young: week 5.",
@@ -326,7 +330,7 @@
       "ebird_code": "graher1",
       "latin": "Ardea cinerea",
       "name": {
-        "en": "Gray Heron",
+        "en": "Grey Heron",
         "nl": "Blauwe reiger"
       },
       "plumage": {
@@ -357,7 +361,8 @@
           "en": "A loud, hoarse \"kraak\" in flight.",
           "nl": "Een luid, hees \"kraak\" in de vlucht."
         },
-        "pick": "xeno-canto flight call, NL, quality A"
+        "pick": "xeno-canto flight call, NL, quality A",
+        "available": 20
       },
       "media": {
         "card": [

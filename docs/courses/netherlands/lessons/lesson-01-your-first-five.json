@@ -108,7 +108,8 @@
           "en": "Slow, relaxed, fluting phrases from a rooftop or treetop, at dawn and dusk from February to July.",
           "nl": "Langzame, ontspannen fluitende zinnen vanaf een dak of boomtop, bij zonsopkomst en schemer van februari tot juli."
         },
-        "pick": "xeno-canto song, NL/BE/DE, quality A, under 30 s, no other birds"
+        "pick": "xeno-canto song, NL/BE/DE, quality A, under 30 s, no other birds",
+        "available": 20
       },
       "note": {
         "en": "Only the male is black. A brown \"blackbird\" is a female: week 5.",
@@ -182,7 +183,8 @@
           "en": "Endless \"chilp, chilp\" chirping from a hedge full of sparrows.",
           "nl": "Eindeloos \"tjilp, tjilp\" uit een heg vol mussen."
         },
-        "pick": "xeno-canto call, group chirping, NL/BE, quality A"
+        "pick": "xeno-canto call, group chirping, NL/BE, quality A",
+        "available": 19
       },
       "note": {
         "en": "Far fewer than 40 years ago, but still in almost every town.",
@@ -249,7 +251,8 @@
           "en": "A loud, see-sawing \"tee-chu, tee-chu\", already from January.",
           "nl": "Een luid, zagend \"tie-tuu, tie-tuu\", al vanaf januari."
         },
-        "pick": "xeno-canto song, classic two-note, NL/BE, quality A"
+        "pick": "xeno-canto song, classic two-note, NL/BE, quality A",
+        "available": 17
       },
       "note": {
         "en": "Tip: a broad tie running down between the legs is a male; a thin one that stops halfway is a female.",
@@ -310,7 +313,8 @@
           "en": "A high \"tsee-tsee-tsirrrr\": two thin notes and a trill.",
           "nl": "Een hoog \"tsie-tsie-tsirrrr\": twee dunne tonen en een trilletje."
         },
-        "pick": "xeno-canto song, NL/BE, quality A"
+        "pick": "xeno-canto song, NL/BE, quality A",
+        "available": 20
       },
       "media": {
         "card": [
@@ -366,7 +370,8 @@
           "en": "A wistful, rippling song with long pauses; one of the few birds singing in November.",
           "nl": "Een weemoedig, kabbelend liedje met lange pauzes; een van de weinige vogels die in november zingt."
         },
-        "pick": "xeno-canto song, autumn or winter recording, NL/BE, quality A"
+        "pick": "xeno-canto song, autumn or winter recording, NL/BE, quality A",
+        "available": 19
       },
       "note": {
         "en": "Young robins in summer are brown with pale spots and no orange at all: week 5.",
