@@ -1,8 +1,7 @@
 # Store listings
 
-The App Store and Google Play texts for Motmot, one file per app language. See
-Status below for what is live where. Release
-notes live separately in `../release-notes/`.
+The App Store and Google Play texts for Motmot, one file per app language. See Status
+below for what is live where. Release notes live separately in `../release-notes/`.
 
 | Field | Store | Limit |
 |---|---|---|
@@ -31,9 +30,9 @@ notes live separately in `../release-notes/`.
 
 - **Google Play** has these texts in all nine listings (en-US, it-IT and ja-JP were
   new), uploaded through the Play API.
-- **App Store** still has older texts in seven languages (no en-US, no Japanese), and
-  its keywords are the same English list in every language
-  (`bird,quiz,birds,game,birding,nature`). Version text can only change while a version
-  is being prepared, so these files go in with the next version.
+- **App Store** has these texts in all nine languages from version Blue Duck (en-US and
+  Japanese were new, and use the en-GB screenshots), uploaded through the App Store
+  Connect API. Version text can only change while a version is being prepared, so later
+  edits here go in with the next version.
 - **Categories.** App Store: Education, then Entertainment, from version Blue Duck.
   Play: Entertainment; the category can only be changed by hand in Play Console.
