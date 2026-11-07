@@ -1,5 +1,7 @@
 """Public marketing pages, sitemap and robots."""
 
+import re
+from datetime import datetime, timezone as dt_timezone
 from pathlib import Path
 from unittest.mock import patch
 
@@ -21,6 +23,16 @@ from jizz.models import (
     Species,
 )
 from media.models import Media, MediaReview
+
+def _sitemap_lastmods(body: str) -> dict[str, str | None]:
+    """<loc> -> <lastmod> (or None) for each <url> or <sitemap> entry."""
+    entries = re.findall(r'<(?:url|sitemap)>(.*?)</(?:url|sitemap)>', body, re.S)
+    result = {}
+    for entry in entries:
+        lastmod = re.search(r'<lastmod>(.*?)</lastmod>', entry)
+        result[re.search(r'<loc>(.*?)</loc>', entry).group(1)] = lastmod.group(1) if lastmod else None
+    return result
+
 
 _SAMPLE_STORE_RATINGS = {
     'ios': {'score': 4.8, 'count': 12, 'score_label': '4.8', 'star_percent': 96},
@@ -1178,6 +1190,60 @@ class MarketingPagesTests(TestCase):
         self.assertIn('https://motmot.club/site/families/accipitridae/', taxa)
         self.assertIn('https://motmot.club/nl/site/groups/hawks/', taxa)
 
+    def test_sitemaps_list_lastmod_from_page_content(self):
+        from django.contrib.auth.models import User
+
+        from compare.models import CommunityComparison, SpeciesDescription
+
+        def at(day):
+            return datetime(2026, 10, day, 12, tzinfo=dt_timezone.utc)
+
+        description = SpeciesDescription.objects.create(
+            species=self.sparrow, summary='Small hawk.', ai_model='m', ai_prompt_version='v1',
+        )
+        SpeciesDescription.objects.filter(pk=description.pk).update(updated=at(3))
+        SpeciesComparison.objects.update(updated_at=at(5))
+
+        origin = 'https://motmot.club'
+        sparrow_path = f'/site/birds/{self.sparrow.slug}/'
+        birds = _sitemap_lastmods(self.client.get('/sitemap-birds.xml').content.decode())
+        self.assertEqual(birds[origin + sparrow_path], '2026-10-03')
+        self.assertEqual(birds[f'{origin}/nl{sparrow_path}'], '2026-10-03')
+        # No description, no timestamp: leave it out rather than make one up.
+        self.assertIsNone(birds[f'{origin}/site/birds/{self.goshawk.slug}/'])
+
+        low, high = sorted([self.sparrow, self.goshawk], key=lambda s: s.id)
+        compare_loc = f'{origin}/site/compare/{low.slug}-vs-{high.slug}/'
+        compare = _sitemap_lastmods(self.client.get('/sitemap-compare.xml').content.decode())
+        self.assertEqual(compare[compare_loc], '2026-10-05')
+
+        community = CommunityComparison.objects.create(
+            species_low=low,
+            species_high=high,
+            author=User.objects.create_user(username='writer', password='x'),
+            author_name='Writer',
+            summary='Tail corners.',
+        )
+        CommunityComparison.objects.filter(pk=community.pk).update(updated=at(9))
+        compare = _sitemap_lastmods(self.client.get('/sitemap-compare.xml').content.decode())
+        self.assertEqual(compare[compare_loc], '2026-10-09')
+
+        index = _sitemap_lastmods(self.client.get('/sitemap.xml').content.decode())
+        self.assertEqual(index[f'{origin}/sitemap-birds.xml'], '2026-10-03')
+        self.assertEqual(index[f'{origin}/sitemap-compare.xml'], '2026-10-09')
+        self.assertIsNone(index[f'{origin}/sitemap-countries.xml'])
+        self.assertIsNone(index[f'{origin}/sitemap-taxa.xml'])
+
+    def test_sitemap_index_lastmod_is_per_page(self):
+        paths = [f'/site/birds/bird-{i}/' for i in range(3)]
+        lastmods = {paths[0]: datetime(2026, 10, 1).date(), paths[1]: datetime(2026, 10, 7).date()}
+        with patch.dict('jizz.marketing.sitemaps.SECTIONS', {'birds': lambda: paths}), \
+                patch.dict('jizz.marketing.sitemaps.LASTMODS', {'birds': lambda: lastmods}), \
+                patch('jizz.marketing.sitemaps.PATHS_PER_SITEMAP', 2):
+            index = _sitemap_lastmods(self.client.get('/sitemap.xml').content.decode())
+            self.assertEqual(index['https://motmot.club/sitemap-birds.xml'], '2026-10-07')
+            self.assertIsNone(index['https://motmot.club/sitemap-birds.xml?page=2'])
+
     def test_large_sitemap_sections_are_split_into_pages(self):
         paths = [f'/site/birds/bird-{i}/' for i in range(5)]
         with patch.dict('jizz.marketing.sitemaps.SECTIONS', {'birds': lambda: paths}), \
@@ -1781,6 +1847,19 @@ class MarketingUpdatesTests(TestCase):
         self.assertIn('https://motmot.club/site/updates/', body)
         self.assertIn(f'https://motmot.club/site/updates/{self.update.pk}/', body)
         self.assertNotIn(f'/site/updates/{self.draft.pk}/', body)
+
+    def test_sitemap_lastmod_for_updates(self):
+        from jizz.models import Update
+
+        Update.objects.filter(pk=self.update.pk).update(created=datetime(2026, 10, 4, 9, tzinfo=dt_timezone.utc))
+        Update.objects.filter(pk=self.draft.pk).update(created=datetime(2026, 10, 30, 9, tzinfo=dt_timezone.utc))
+        lastmods = _sitemap_lastmods(self.client.get('/sitemap-pages.xml').content.decode())
+        self.assertEqual(lastmods[f'https://motmot.club/site/updates/{self.update.pk}/'], '2026-10-04')
+        # The draft is not on the index page, so it does not date it.
+        self.assertEqual(lastmods['https://motmot.club/site/updates/'], '2026-10-04')
+        self.assertIsNone(lastmods['https://motmot.club/site/'])
+        index = _sitemap_lastmods(self.client.get('/sitemap.xml').content.decode())
+        self.assertEqual(index['https://motmot.club/sitemap-pages.xml'], '2026-10-04')
 
 
 class IndexNowSubmitTests(TestCase):
