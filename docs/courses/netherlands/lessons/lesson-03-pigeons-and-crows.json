@@ -1,0 +1,443 @@
+{
+  "course": "netherlands-year",
+  "week": 3,
+  "slug": "pigeons-and-crows",
+  "part": 1,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "en": "Pigeons and crows",
+    "nl": "Duiven en kraaien"
+  },
+  "subtitle": {
+    "en": "Six town birds that everybody sees and few can name",
+    "nl": "Zes stadsvogels die iedereen ziet en weinigen kunnen benoemen"
+  },
+  "intro": {
+    "en": "\"Just a pigeon\", \"just a crow\": that is what most people say. But there are three pigeons and three crow-like birds you will see this week, often on the same street. Look for one detail per bird and you will never mix them up again.",
+    "nl": "\"Gewoon een duif\", \"gewoon een kraai\": dat zeggen de meeste mensen. Maar deze week zie je drie duiven en drie kraaiachtigen, vaak in dezelfde straat. Let per vogel op één detail en je haalt ze nooit meer door elkaar."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "neck patch",
+        "nl": "halsvlek"
+      },
+      "explain": {
+        "en": "A coloured patch on the side of the neck.",
+        "nl": "Een gekleurde vlek op de zijkant van de hals."
+      }
+    },
+    {
+      "term": {
+        "en": "wing bar",
+        "nl": "vleugelstreep"
+      },
+      "explain": {
+        "en": "A stripe across the folded wing.",
+        "nl": "Een streep dwars over de gevouwen vleugel."
+      }
+    },
+    {
+      "term": {
+        "en": "nape",
+        "nl": "nek"
+      },
+      "explain": {
+        "en": "The back of the neck.",
+        "nl": "De achterkant van de hals."
+      }
+    },
+    {
+      "term": {
+        "en": "iris",
+        "nl": "iris"
+      },
+      "explain": {
+        "en": "The coloured part of the eye.",
+        "nl": "Het gekleurde deel van het oog."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 579,
+      "ebird_code": "cowpig1",
+      "latin": "Columba palumbus",
+      "name": {
+        "en": "Common Wood-Pigeon",
+        "nl": "Houtduif"
+      },
+      "plumage": {
+        "en": "adult",
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "en": "Big, grey, with a pinkish breast",
+          "nl": "Groot en grijs, met een roze borst"
+        },
+        {
+          "en": "White **neck patch**",
+          "nl": "Witte **halsvlek**"
+        },
+        {
+          "en": "A white band across the wing in flight",
+          "nl": "Een witte band over de vleugel in de vlucht"
+        }
+      ],
+      "where_when": {
+        "en": "Everywhere: fields, parks and gardens. Takes off with a loud clatter of wings.",
+        "nl": "Overal: akkers, parken en tuinen. Vliegt op met luid vleugelgeklapper."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A soft, five-note \"roo-COO-coo, coo-coo\", repeated a few times.",
+          "nl": "Een zacht, vijftonig \"roe-KOE-koe, koe-koe\", een paar keer herhaald."
+        },
+        "pick": "xeno-canto song, NL/BE, quality A"
+      },
+      "media": {
+        "card": [
+          176009,
+          175886,
+          175861
+        ],
+        "quiz": [
+          175896,
+          175981,
+          175957,
+          175893,
+          175948,
+          175887
+        ]
+      }
+    },
+    {
+      "species_id": 571,
+      "ebird_code": "rocpig",
+      "latin": "Columba livia",
+      "name": {
+        "en": "Rock Pigeon",
+        "nl": "Stadsduif"
+      },
+      "plumage": {
+        "en": "feral pigeon, any colour",
+        "nl": "verwilderde duif, elke kleur"
+      },
+      "look_for": [
+        {
+          "en": "Every colour possible: grey, white, brown, chequered",
+          "nl": "Elke kleur mogelijk: grijs, wit, bruin, geblokt"
+        },
+        {
+          "en": "Grey ones have two black **wing bars**",
+          "nl": "Grijze hebben twee zwarte **vleugelstrepen**"
+        },
+        {
+          "en": "Often a white rump, visible in flight",
+          "nl": "Vaak een witte stuit, te zien in de vlucht"
+        }
+      ],
+      "where_when": {
+        "en": "Squares, stations and bridges, in flocks. Rarely far from people.",
+        "nl": "Pleinen, stations en bruggen, in groepen. Zelden ver van mensen."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A rolling, purring \"oo-roo-coo\".",
+          "nl": "Een rollend, rommelend \"oeroe-koe\"."
+        },
+        "pick": "xeno-canto song, town recording, quality A"
+      },
+      "media": {
+        "card": [
+          174909,
+          174890,
+          174921
+        ],
+        "quiz": [
+          174886,
+          174928,
+          174880,
+          174863,
+          174809,
+          174844
+        ]
+      },
+      "note": {
+        "en": "All those different colours are one species, descended from the wild Rock Dove of sea cliffs.",
+        "nl": "Al die verschillende kleuren zijn één soort, afstammend van de wilde rotsduif van zeekliffen."
+      }
+    },
+    {
+      "species_id": 635,
+      "ebird_code": "eucdov",
+      "latin": "Streptopelia decaocto",
+      "name": {
+        "en": "Eurasian Collared-Dove",
+        "nl": "Turkse tortel"
+      },
+      "plumage": {
+        "en": "adult",
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "en": "Slim and sandy-beige",
+          "nl": "Slank en zandkleurig"
+        },
+        {
+          "en": "Thin black half-collar on the **nape**",
+          "nl": "Smal zwart halsbandje in de **nek**"
+        },
+        {
+          "en": "Long tail with white tips underneath",
+          "nl": "Lange staart met witte punten aan de onderkant"
+        }
+      ],
+      "where_when": {
+        "en": "Villages and towns, on roof aerials and wires. Usually in pairs.",
+        "nl": "Dorpen en steden, op antennes en draden. Meestal per twee."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "Three notes, the middle one stressed: \"koo-KOO-koo\".",
+          "nl": "Drie tonen, de middelste met nadruk: \"koe-KOE-koe\"."
+        },
+        "pick": "xeno-canto song, NL, quality A"
+      },
+      "note": {
+        "en": "It arrived from the Balkans and bred in the Netherlands for the first time in 1950.",
+        "nl": "Hij kwam uit de Balkan en broedde in 1950 voor het eerst in Nederland."
+      },
+      "media": {
+        "card": [
+          181609,
+          181620,
+          181737
+        ],
+        "quiz": [
+          181690,
+          181677,
+          181732,
+          181616,
+          181709,
+          181718,
+          181720
+        ]
+      }
+    },
+    {
+      "species_id": 6942,
+      "ebird_code": "eurmag1",
+      "latin": "Pica pica",
+      "name": {
+        "en": "Eurasian Magpie",
+        "nl": "Ekster"
+      },
+      "plumage": {
+        "en": "adult",
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "en": "Black and white",
+          "nl": "Zwart-wit"
+        },
+        {
+          "en": "Very long tail",
+          "nl": "Heel lange staart"
+        },
+        {
+          "en": "Blue-green gloss on wings and tail in the sun",
+          "nl": "Blauwgroene glans op vleugels en staart in de zon"
+        }
+      ],
+      "where_when": {
+        "en": "Gardens, parks and roadsides. Bold and noisy.",
+        "nl": "Tuinen, parken en bermen. Brutaal en luidruchtig."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A dry, rattling \"chak-chak-chak-chak\".",
+          "nl": "Een droog, ratelend \"tsjak-tsjak-tsjak-tsjak\"."
+        },
+        "pick": "xeno-canto call, rattle, NL, quality A"
+      },
+      "media": {
+        "card": [
+          786043,
+          786068,
+          786117
+        ],
+        "quiz": [
+          786044,
+          786146,
+          786162,
+          786108,
+          786143,
+          786144,
+          786170,
+          786151
+        ]
+      }
+    },
+    {
+      "species_id": 6985,
+      "ebird_code": "carcro1",
+      "latin": "Corvus corone",
+      "name": {
+        "en": "Carrion Crow",
+        "nl": "Zwarte kraai"
+      },
+      "plumage": {
+        "en": "adult",
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "en": "All black, also the legs and bill",
+          "nl": "Helemaal zwart, ook poten en snavel"
+        },
+        {
+          "en": "Heavy bill",
+          "nl": "Zware snavel"
+        },
+        {
+          "en": "Usually alone or in a pair",
+          "nl": "Meestal alleen of met z'n tweeën"
+        }
+      ],
+      "where_when": {
+        "en": "Meadows, parks and streets. Walks calmly, looking for anything edible.",
+        "nl": "Weilanden, parken en straten. Loopt rustig rond op zoek naar alles wat eetbaar is."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A hoarse \"kraa, kraa, kraa\".",
+          "nl": "Een hees \"kraa, kraa, kraa\"."
+        },
+        "pick": "xeno-canto call, NL, quality A"
+      },
+      "note": {
+        "en": "In the north and east you may meet a grey-and-black Hooded Crow, a close relative.",
+        "nl": "In het noorden en oosten zie je soms een grijs-zwarte bonte kraai, een naaste familielid."
+      },
+      "media": {
+        "card": [
+          790396,
+          790397,
+          790297
+        ],
+        "quiz": [
+          790332,
+          790414,
+          790329,
+          790344,
+          790377,
+          790378,
+          790399
+        ]
+      },
+      "media_for_later": {
+        "Hooded Crow alongside (lesson 3 note)": [
+          790412
+        ]
+      }
+    },
+    {
+      "species_id": 6956,
+      "ebird_code": "eurjac",
+      "latin": "Corvus monedula",
+      "name": {
+        "en": "Eurasian Jackdaw",
+        "nl": "Kauw"
+      },
+      "plumage": {
+        "en": "adult",
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "en": "Small crow, black with a grey **nape**",
+          "nl": "Kleine kraai, zwart met een grijze **nek**"
+        },
+        {
+          "en": "Pale, almost white **iris**",
+          "nl": "Lichte, bijna witte **iris**"
+        },
+        {
+          "en": "In noisy groups, often on chimneys",
+          "nl": "In luidruchtige groepen, vaak op schoorstenen"
+        }
+      ],
+      "where_when": {
+        "en": "Towns and villages, nesting in chimneys and old trees.",
+        "nl": "Steden en dorpen, broedt in schoorstenen en oude bomen."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, bright \"kyak!\".",
+          "nl": "Een kort, helder \"kjak!\"."
+        },
+        "pick": "xeno-canto call, NL, quality A"
+      },
+      "media": {
+        "card": [
+          787749,
+          787731,
+          787750
+        ],
+        "quiz": [
+          787739,
+          787830,
+          787721,
+          787834,
+          787818,
+          787796,
+          787831
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "species_ids": [
+      6985,
+      6956
+    ],
+    "title": {
+      "en": "Crow or Jackdaw?",
+      "nl": "Zwarte kraai of kauw?"
+    },
+    "text": {
+      "en": "A Jackdaw is clearly smaller, has a grey nape and a pale eye that you can see from far away. A Carrion Crow is black all over, with a dark eye and a heavier bill.",
+      "nl": "Een kauw is duidelijk kleiner, heeft een grijze nek en een licht oog dat je van ver ziet. Een zwarte kraai is overal zwart, met een donker oog en een zwaardere snavel."
+    }
+  },
+  "quiz": {
+    "questions": 10,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      1,
+      2
+    ],
+    "review_questions": 3
+  },
+  "outside": {
+    "en": "Look at the pigeons around you. Can you find the white neck patch of a Wood Pigeon? And listen for a Collared Dove calling its three notes from an aerial.",
+    "nl": "Bekijk de duiven om je heen. Zie je de witte halsvlek van een houtduif? En luister naar een Turkse tortel die vanaf een antenne zijn drie tonen roept."
+  },
+  "next": {
+    "en": "Next week: how to look at a bird.",
+    "nl": "Volgende week: hoe kijk je naar een vogel?"
+  }
+}
