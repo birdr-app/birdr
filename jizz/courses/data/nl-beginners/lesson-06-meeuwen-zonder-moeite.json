@@ -1,0 +1,377 @@
+{
+  "course": "nl-beginners",
+  "week": 6,
+  "slug": "meeuwen-zonder-moeite",
+  "part": 1,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "nl": "Meeuwen zonder moeite"
+  },
+  "subtitle": {
+    "nl": "De vier meeuwen die je overal ziet"
+  },
+  "intro": {
+    "nl": "Vandaag gaan we naar de kust, of gewoon naar het grasveld achter de supermarkt: meeuwen zijn overal. Veel mensen noemen ze allemaal \"zeemeeuw\", en dat is begrijpelijk. Ze zijn wit en grijs, ze komen met veel tegelijk en ze lijken op elkaar.\n\nToch zijn er maar vier soorten die je bijna overal ziet. Met de stappen uit week 4 kom je een heel eind: kijk eerst naar de grootte, dan naar de kleur van de mantel, en tot slot naar de snavel en de poten. We kijken alleen naar volwassen meeuwen. Bruine, gevlekte meeuwen zijn jonge vogels; die zijn lastig en bewaren we voor later.\n\nAan het eind volgt een quiz van acht vragen, met twee vogels uit eerdere lessen ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "kap"
+      },
+      "explain": {
+        "nl": "Een donker gekleurde kop, als een capuchon."
+      }
+    },
+    {
+      "term": {
+        "nl": "oorvlek"
+      },
+      "explain": {
+        "nl": "Een donkere vlek achter het oog, waar het oor zit."
+      }
+    },
+    {
+      "term": {
+        "nl": "vleugelpunt"
+      },
+      "explain": {
+        "nl": "Het uiteinde van de vleugel. Bij een zittende meeuw steekt het achter de staart uit."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2241,
+      "latin": "Chroicocephalus ridibundus",
+      "name": {
+        "nl": "Kokmeeuw"
+      },
+      "plumage": {
+        "nl": "volwassen, zomer en winter"
+      },
+      "look_for": [
+        {
+          "nl": "Zomer: chocoladebruine **kap**"
+        },
+        {
+          "nl": "Winter: witte kop met donkere **oorvlek**"
+        },
+        {
+          "nl": "Klein en slank, rode snavel en poten"
+        }
+      ],
+      "where_when": {
+        "nl": "Overal: in het park, bij de vijver, achter de trekker op het land. De meeuw die je in het binnenland het vaakst ziet. De kap heeft hij in voorjaar en zomer; in herfst en winter is de kop wit."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een schel, krassend \"krrieèh\", vaak met een hele groep door elkaar."
+        },
+        "chosen": [
+          {
+            "media_id": 1220919,
+            "xeno_canto": "XC992784",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 33.9,
+            "background_species": 0,
+            "recordist": "Kelle Moreau"
+          },
+          {
+            "media_id": 1220929,
+            "xeno_canto": "XC792490",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 40.0,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "In de vlucht zie je een witte voorrand aan de punt van de vleugel. Die heeft van deze vier alleen de kokmeeuw."
+      },
+      "media": {
+        "card": [
+          343145,
+          343200
+        ],
+        "quiz": [
+          343109,
+          343144,
+          343107,
+          343234,
+          343197,
+          343122
+        ]
+      }
+    },
+    {
+      "species_id": 2261,
+      "latin": "Larus canus",
+      "name": {
+        "nl": "Stormmeeuw"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Middelgroot, ronde kop en donker oog"
+        },
+        {
+          "nl": "Dunne gele snavel, zonder rode vlek"
+        },
+        {
+          "nl": "Zwarte **vleugelpunt** met grote witte vlekken"
+        }
+      ],
+      "where_when": {
+        "nl": "Vooral in de winter, in groepen op weilanden, sportvelden en akkers. Broedt ook langs de kust."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Hoger en schriller dan de zilvermeeuw: een miauwend \"kiejaa\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1221241,
+            "xeno_canto": "XC801975",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 42.2,
+            "background_species": 0,
+            "recordist": "guus van duin"
+          },
+          {
+            "media_id": 1221240,
+            "xeno_canto": "XC801979",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 57.1,
+            "background_species": 0,
+            "recordist": "guus van duin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "De poten zijn geelgroen. In de winter heeft hij grijze streepjes op kop en hals, en soms een donker bandje op de snavel."
+      },
+      "media": {
+        "card": [
+          346535,
+          346446,
+          346448
+        ],
+        "quiz": [
+          346556,
+          346597,
+          346532,
+          346582,
+          346587,
+          346534,
+          346581,
+          346552
+        ]
+      }
+    },
+    {
+      "species_id": 2268,
+      "latin": "Larus argentatus",
+      "name": {
+        "nl": "Zilvermeeuw"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Groot en grof, met lichtgrijze mantel"
+        },
+        {
+          "nl": "Gele snavel met een rode vlek"
+        },
+        {
+          "nl": "Roze poten"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar langs de kust, in havens en op daken in de stad. Pakt brutaal patat en broodjes."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Het bekende \"lachen\" van de kust: een luid \"kjauw-kjauw-kjauw-kjau\" met de kop in de nek."
+        },
+        "chosen": [
+          {
+            "media_id": 1221373,
+            "xeno_canto": "XC953928",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 55.9,
+            "background_species": 0,
+            "recordist": "Sonothèque ADVL"
+          },
+          {
+            "media_id": 1221369,
+            "xeno_canto": "XC1025218",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 38.5,
+            "background_species": 0,
+            "recordist": "Colm Philpott"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Bruine, gevlekte meeuwen van dit formaat zijn jonge zilvermeeuwen of mantelmeeuwen. Die bewaren we voor later."
+      },
+      "media": {
+        "card": [
+          347808,
+          347777,
+          347819
+        ],
+        "quiz": [
+          347729,
+          347698,
+          347726,
+          347723,
+          347677,
+          347739,
+          347727,
+          347671
+        ]
+      }
+    },
+    {
+      "species_id": 2273,
+      "latin": "Larus fuscus",
+      "name": {
+        "nl": "Kleine mantelmeeuw"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Iets kleiner en slanker dan een zilvermeeuw"
+        },
+        {
+          "nl": "Donkergrijze mantel"
+        },
+        {
+          "nl": "Gele poten"
+        }
+      ],
+      "where_when": {
+        "nl": "Van maart tot oktober langs de kust, in havens, op akkers en steeds vaker op daken in de stad. In de winter zitten de meeste in het zuiden."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Lijkt op de zilvermeeuw, maar lager en rauwer."
+        },
+        "chosen": [
+          {
+            "media_id": 1221471,
+            "xeno_canto": "XC281182",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 76.4,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1221458,
+            "xeno_canto": "XC1023979",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 73.5,
+            "background_species": 0,
+            "recordist": "Anthony McGeehan"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "dont_confuse": {
+        "nl": "Grote mantelmeeuw: nog groter en zwaarder, met een zwarte mantel en roze poten."
+      },
+      "media": {
+        "card": [
+          348676,
+          348673,
+          348684
+        ],
+        "quiz": [
+          348685,
+          348689,
+          348699,
+          348700,
+          348698,
+          348629,
+          348656
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 2273,
+    "species_ids": [
+      2268,
+      2273
+    ],
+    "title": {
+      "nl": "Zilvermeeuw of kleine mantelmeeuw?"
+    },
+    "text": {
+      "nl": "Ze zijn bijna even groot en hebben allebei een gele snavel met een rode vlek. Kijk naar de mantel en de poten. Lichtgrijs met roze poten: zilvermeeuw. Donkergrijs met gele poten: kleine mantelmeeuw."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      4,
+      5
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Zoek deze week een groep meeuwen: op een grasveld, een parkeerplaats of bij het water. Kijk eerst naar de grootte, dan naar de kleur van de mantel en de poten. Welke van de vier zie je? En hebben de kokmeeuwen een bruine kap, of een witte kop met een oorvlek?"
+  },
+  "next": {
+    "nl": "Volgende week: ganzen in de winter."
+  },
+  "flow": [
+    "intro",
+    "bird:2241",
+    "bird:2261",
+    "bird:2268",
+    "bird:2273",
+    "quiz",
+    "done"
+  ]
+}

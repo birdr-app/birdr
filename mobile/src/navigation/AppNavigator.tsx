@@ -52,6 +52,8 @@ import { FlockInviteLandingScreen } from '../screens/FlockInviteLandingScreen';
 import { FlockChallengeResultScreen } from '../screens/FlockChallengeResultScreen';
 import { UpdateDetailScreen } from '../screens/UpdateDetailScreen';
 import { SurvivalStartScreen } from '../screens/SurvivalStartScreen';
+import { CourseScreen } from '../screens/CourseScreen';
+import { CourseLessonScreen } from '../screens/CourseLessonScreen';
 import { SurvivalPlayScreen } from '../screens/SurvivalPlayScreen';
 import { SurvivalResultScreen } from '../screens/SurvivalResultScreen';
 import { SurvivalScoresScreen } from '../screens/SurvivalScoresScreen';
@@ -69,6 +71,8 @@ function GlobalTroubleSpotsScreen() {
 const SCREENS: { name: string; titleKey: string; component: React.ComponentType<any> }[] = [
   { name: 'Home', titleKey: 'app_name', component: HomeScreen },
   { name: 'Start', titleKey: 'new_game', component: StartScreen },
+  { name: 'Course', titleKey: 'course_title', component: CourseScreen },
+  { name: 'CourseLesson', titleKey: 'course_title', component: CourseLessonScreen },
   { name: 'Scores', titleKey: 'high_scores', component: ScoresScreen },
   { name: 'BirdrJourneyList', titleKey: 'country_challenge', component: BirdrJourneyListScreen },
   { name: 'CountryChallengeLeaderboard', titleKey: 'country_challenge_leaderboard', component: CountryChallengeLeaderboardScreen },

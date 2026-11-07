@@ -1,0 +1,370 @@
+{
+  "course": "nl-beginners",
+  "week": 15,
+  "slug": "zwaluwen-en-gierzwaluwen",
+  "part": 2,
+  "kind": "species",
+  "season": "summer",
+  "minutes": 10,
+  "title": {
+    "nl": "Zwaluwen en gierzwaluwen"
+  },
+  "subtitle": {
+    "nl": "Vier snelle vliegers, en één ervan is geen zwaluw"
+  },
+  "intro": {
+    "nl": "Vandaag kijken we naar de zomerlucht. Boven weilanden, boerderijen en daken schieten kleine vogels heen en weer, op jacht naar insecten. Ze zijn snel en zitten bijna nooit stil, dus je leert ze vooral in de vlucht herkennen: aan de staart, de kleur van de buik en de vorm van de vleugels.\n\nJe leert vier vogels: drie zwaluwen en de gierzwaluw, die erop lijkt maar geen familie is. Alle vier zijn ze hier alleen in de zomer; de winter brengen ze door in Afrika.\n\nAan het eind volgt een quiz van acht vragen, met twee vogels uit eerdere lessen ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "staartsprieten"
+      },
+      "explain": {
+        "nl": "De twee lange, dunne punten aan de staart van de boerenzwaluw."
+      }
+    },
+    {
+      "term": {
+        "nl": "voorhoofd"
+      },
+      "explain": {
+        "nl": "Het stukje kop tussen de snavel en de kruin."
+      }
+    },
+    {
+      "term": {
+        "nl": "keelvlek"
+      },
+      "explain": {
+        "nl": "Een vlek van een andere kleur op de keel."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 7643,
+      "latin": "Hirundo rustica",
+      "name": {
+        "nl": "Boerenzwaluw"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Lange **staartsprieten**, diep gevorkte staart"
+        },
+        {
+          "nl": "Roodbruin **voorhoofd** en roodbruine keel"
+        },
+        {
+          "nl": "Blauwzwart van boven, lichte buik"
+        }
+      ],
+      "where_when": {
+        "nl": "Van april tot oktober boven weilanden en sloten. Broedt binnen, in stallen, schuren en garages. Vliegt laag en zwierig over het gras en zit graag op draden."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Een vrolijk, snel gekwetter met een krassend rolletje erin, vaak vanaf een draad."
+        },
+        "chosen": [
+          {
+            "media_id": 1295416,
+            "xeno_canto": "XC1043386",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 78.5,
+            "background_species": 0,
+            "recordist": "Beatrix Saadi-Varchmin"
+          },
+          {
+            "media_id": 1295424,
+            "xeno_canto": "XC1029397",
+            "type": "call, song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 80.5,
+            "background_species": 0,
+            "recordist": "João Tomás"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "media": {
+        "card": [
+          846528,
+          846542,
+          846540
+        ],
+        "quiz": [
+          846589,
+          846604,
+          846573,
+          846647,
+          846652,
+          846606,
+          846605
+        ]
+      }
+    },
+    {
+      "species_id": 7651,
+      "latin": "Delichon urbicum",
+      "name": {
+        "nl": "Huiszwaluw"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Helderwitte stuit"
+        },
+        {
+          "nl": "Korte, gevorkte staart zonder sprieten"
+        },
+        {
+          "nl": "Blauwzwart boven, helemaal wit onder"
+        }
+      ],
+      "where_when": {
+        "nl": "Van april tot september. Bouwt een bolvormig nest van modder onder de dakrand, buiten aan het huis, vaak meerdere naast elkaar."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een droog, kort \"prrt\", vaak in de vlucht."
+        },
+        "chosen": [
+          {
+            "media_id": 1345444,
+            "xeno_canto": "XC1022103",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 46.8,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1345458,
+            "xeno_canto": "XC727373",
+            "type": "call",
+            "country": "Switzerland",
+            "quality": "A",
+            "seconds": 53.5,
+            "background_species": 0,
+            "recordist": "Nicolas Martinez"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 18
+      },
+      "dont_confuse": {
+        "nl": "Boerenzwaluw: lange staartsprieten, roodbruine keel en geen witte stuit."
+      },
+      "media": {
+        "card": [
+          847730,
+          847595,
+          847611
+        ],
+        "quiz": [
+          847621,
+          847668,
+          847715,
+          847705,
+          847718,
+          847594,
+          847722
+        ]
+      }
+    },
+    {
+      "species_id": 7601,
+      "latin": "Riparia riparia",
+      "name": {
+        "nl": "Oeverzwaluw"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Klein, bruin van boven"
+        },
+        {
+          "nl": "Bruine borstband over een witte onderkant"
+        },
+        {
+          "nl": "Kort, licht gevorkt staartje"
+        }
+      ],
+      "where_when": {
+        "nl": "Van april tot september, vaak boven water. Graaft nestgangen in steile zandwanden: langs rivieren, in zandafgravingen en in speciale oeverzwaluwwanden."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een droog, schor \"trrsj\", vaak in koor bij de kolonie."
+        },
+        "chosen": [
+          {
+            "media_id": 1345265,
+            "xeno_canto": "XC281322",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 44.1,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1345262,
+            "xeno_canto": "XC426148",
+            "type": "alarm call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 74.2,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "nl": "De enige van de vier die bruin is van boven, niet blauwzwart."
+      },
+      "media": {
+        "card": [
+          841581,
+          841584,
+          841580
+        ],
+        "quiz": [
+          841591,
+          841585,
+          841590
+        ]
+      }
+    },
+    {
+      "species_id": 1352,
+      "latin": "Apus apus",
+      "name": {
+        "nl": "Gierzwaluw"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Helemaal donkerbruin, lijkt zwart"
+        },
+        {
+          "nl": "Lange, smalle sikkelvleugels"
+        },
+        {
+          "nl": "Lichte **keelvlek**, alleen van dichtbij"
+        }
+      ],
+      "where_when": {
+        "nl": "Van eind april tot begin augustus boven steden en dorpen. Broedt onder dakpannen en in gaten in muren. Landt bijna nooit: hij eet, drinkt en slaapt in de lucht."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Snerpend gegil, \"srieee\", van groepjes die op zomeravonden laag tussen de huizen door jagen."
+        },
+        "chosen": [
+          {
+            "media_id": 1209950,
+            "xeno_canto": "XC935410",
+            "type": "call, flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 60.6,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          },
+          {
+            "media_id": 1209964,
+            "xeno_canto": "XC493899",
+            "type": "call",
+            "country": "Italy",
+            "quality": "A",
+            "seconds": 34.2,
+            "background_species": 0,
+            "recordist": "Gianluca Congi"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "nl": "Geen zwaluw: hij is verre familie van de kolibries. Hij zit nooit op een draad en komt van de grond moeilijk weer omhoog."
+      },
+      "media": {
+        "card": [
+          240295,
+          240293,
+          240270
+        ],
+        "quiz": [
+          240304,
+          240216,
+          240212,
+          240294,
+          240306,
+          240192,
+          240303
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 1352,
+    "species_ids": [
+      7643,
+      1352
+    ],
+    "title": {
+      "nl": "Zwaluw of gierzwaluw?"
+    },
+    "text": {
+      "nl": "Kijk naar de onderkant en de vleugels. Een gierzwaluw is helemaal donker, ook van onderen, met lange sikkelvormige vleugels die stijf lijken. Een boerenzwaluw heeft een lichte buik en een roodbruine keel, en slaat soepel met de vleugels. Zit hij op een draad? Dan is het nooit een gierzwaluw."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      13,
+      14
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Kijk deze week omhoog bij een boerderij, een oude dorpskern of een plas. Zie je zwaluwen op een draad? Kijk naar de staart: lange sprieten of niet? Ga op een warme avond even buiten zitten en luister of je gierzwaluwen hoort gillen."
+  },
+  "next": {
+    "nl": "Volgende week: vinken."
+  },
+  "flow": [
+    "intro",
+    "bird:7643",
+    "bird:7651",
+    "bird:7601",
+    "bird:1352",
+    "quiz",
+    "done"
+  ]
+}

@@ -113,7 +113,6 @@ export function GameModesProvider({ children }: { children: ReactNode }) {
     gamesPlayed,
     showAll,
     inLeague: false,
-    inFlock: false,
     playedSurvival,
   });
 

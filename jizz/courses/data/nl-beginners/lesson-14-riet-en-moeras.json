@@ -1,0 +1,446 @@
+{
+  "course": "nl-beginners",
+  "week": 14,
+  "slug": "riet-en-moeras",
+  "part": 2,
+  "kind": "species",
+  "season": "spring",
+  "minutes": 12,
+  "title": {
+    "nl": "Riet en moeras"
+  },
+  "subtitle": {
+    "nl": "Vijf vogels uit de rietkraag en van het open water"
+  },
+  "intro": {
+    "nl": "Vandaag gaan we naar het riet. Langs bijna elke sloot, plas en vaart staat een rietkraag, en in het voorjaar zit die vol leven. Het lastige is dat de meeste vogels zich verstoppen. Je hoort ze veel vaker dan je ze ziet.\n\nJe leert vijf vogels herkennen: drie zangvogels uit het riet en twee watervogels uit de familie van de futen, op het open water ervoor. Alle vijf in hun broedkleed, zoals je ze in het voorjaar en de zomer ziet. Bij de kleine karekiet draait het vooral om het geluid, dus zet je geluid aan.\n\nAan het eind volgt een quiz van tien vragen, met drie vogels uit eerdere lessen ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "halsband"
+      },
+      "explain": {
+        "nl": "Een smalle ring van een andere kleur om de hals."
+      }
+    },
+    {
+      "term": {
+        "nl": "kraag"
+      },
+      "explain": {
+        "nl": "Een rand van uitstaande veren rond de kop en de hals."
+      }
+    },
+    {
+      "term": {
+        "nl": "mondhoek"
+      },
+      "explain": {
+        "nl": "De hoek waar de boven- en de ondersnavel bij elkaar komen."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 10200,
+      "latin": "Emberiza schoeniclus",
+      "name": {
+        "nl": "Rietgors"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje, zomer"
+      },
+      "look_for": [
+        {
+          "nl": "Zwarte kop en zwarte bef"
+        },
+        {
+          "nl": "Witte baardstreep en witte **halsband**"
+        },
+        {
+          "nl": "Bruin gestreepte rug"
+        }
+      ],
+      "where_when": {
+        "nl": "Rietkragen, ruigtes en natte bermen, het hele jaar. In het voorjaar zingt hij vanaf de top van een rietstengel of struikje."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Een kort, aarzelend liedje van een paar noten, zoals \"tsjiep-tsjiep-tsja-tsirrr\", eindeloos herhaald."
+        },
+        "chosen": [
+          {
+            "media_id": 1330076,
+            "xeno_canto": "XC810337",
+            "type": "song",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 36.0,
+            "background_species": 0,
+            "recordist": "Dries Van de Loock"
+          },
+          {
+            "media_id": 1330074,
+            "xeno_canto": "XC897913",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 87.1,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "In de winter is de zwarte kop van het mannetje grotendeels bruin. Het vrouwtje heeft een bruin gestreepte kop."
+      },
+      "dont_confuse": {
+        "nl": "Huismus (week 1): ook een zwarte bef, maar een grijze kruin en geen wit op de kop. Zit bij huizen, niet in het riet."
+      },
+      "media": {
+        "card": [
+          1079534,
+          1079503,
+          1079533
+        ],
+        "quiz": [
+          1079546,
+          1079523,
+          1079520
+        ]
+      }
+    },
+    {
+      "species_id": 7471,
+      "latin": "Acrocephalus scirpaceus",
+      "name": {
+        "nl": "Kleine karekiet"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Effen warmbruin, zonder streepjes"
+        },
+        {
+          "nl": "Lichte keel, lange spitse snavel"
+        },
+        {
+          "nl": "Klemt zich vast aan rietstengels"
+        }
+      ],
+      "where_when": {
+        "nl": "Van eind april tot september in bijna elke rietkraag, ook langs smalle sloten. Overwintert in Afrika. Je hoort er tien voordat je er één ziet."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Een eindeloos, ritmisch gekeuvel: \"tjet-tjet-tjet, tjerre-tjerre, tiri-tiri\". Elke noot komt twee of drie keer, op een rustig, gelijkmatig tempo."
+        },
+        "chosen": [
+          {
+            "media_id": 1293055,
+            "xeno_canto": "XC1009419",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 31.4,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1293068,
+            "xeno_canto": "XC987076",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 53.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "In een vervolgcursus leer je hem onderscheiden van zijn familie: de rietzanger, de bosrietzanger en de grote karekiet."
+      },
+      "media": {
+        "card": [
+          834582,
+          834541,
+          834562
+        ],
+        "quiz": [
+          834475,
+          834507,
+          834506,
+          834539,
+          834550,
+          834511
+        ]
+      }
+    },
+    {
+      "species_id": 9128,
+      "latin": "Luscinia svecica",
+      "name": {
+        "nl": "Blauwborst"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Helderblauwe keel met een witte ster"
+        },
+        {
+          "nl": "Onder het blauw een zwarte en roestrode band"
+        },
+        {
+          "nl": "Roestrood aan de basis van de staart"
+        }
+      ],
+      "where_when": {
+        "nl": "Van maart tot september in rietland en ruige slootkanten met struikjes. Zingt vanaf een rietpluim of struik, soms in een korte zangvlucht."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Begint met heldere tonen die steeds sneller gaan, en gaat dan over in een vrolijk, wisselend gekwetter, vaak met nagedane geluiden van andere vogels."
+        },
+        "chosen": [
+          {
+            "media_id": 1316233,
+            "xeno_canto": "XC1005155",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 35.6,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1316231,
+            "xeno_canto": "XC1005709",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 77.7,
+            "background_species": 0,
+            "recordist": "Dag Österlund"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Het vrouwtje heeft meestal weinig of geen blauw."
+      },
+      "media": {
+        "card": [
+          973381,
+          973315,
+          973304
+        ],
+        "quiz": [
+          973275,
+          973280,
+          973282,
+          973299,
+          973397,
+          973402
+        ]
+      }
+    },
+    {
+      "species_id": 563,
+      "latin": "Podiceps cristatus",
+      "name": {
+        "nl": "Fuut"
+      },
+      "plumage": {
+        "nl": "volwassen, broedkleed"
+      },
+      "look_for": [
+        {
+          "nl": "Lange witte hals, spitse snavel"
+        },
+        {
+          "nl": "Oranjebruine **kraag** met zwarte rand"
+        },
+        {
+          "nl": "Twee zwarte kuifjes op de kop"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar op plassen, meren en brede kanalen. In het voorjaar baltsen paren met kopschudden en een 'pinguïndans' met waterplanten in de snavel. De jongen rijden mee op de rug."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Luide, rauwe en knorrende roepen over het water, vooral in het voorjaar."
+        },
+        "chosen": [
+          {
+            "media_id": 1200468,
+            "xeno_canto": "XC280993",
+            "type": "call (call pulli)",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 38.2,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1200477,
+            "xeno_canto": "XC473226",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 10.6,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 18
+      },
+      "note": {
+        "nl": "In de winter zijn kraag en kuifjes weg en is de fuut grijs en wit: dat komt in een vervolgcursus."
+      },
+      "media": {
+        "card": [
+          173751,
+          173760,
+          173887
+        ],
+        "quiz": [
+          173756,
+          173733,
+          173761,
+          173734,
+          173765,
+          173749,
+          173743,
+          173766
+        ]
+      }
+    },
+    {
+      "species_id": 552,
+      "latin": "Tachybaptus ruficollis",
+      "name": {
+        "nl": "Dodaars"
+      },
+      "plumage": {
+        "nl": "volwassen, broedkleed"
+      },
+      "look_for": [
+        {
+          "nl": "Klein en rond, als een donzig balletje"
+        },
+        {
+          "nl": "Kastanjebruine wangen en hals"
+        },
+        {
+          "nl": "Lichtgele vlek bij de **mondhoek**"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar op sloten, vijvers en kleine plassen met veel planten. Duikt bij onraad en komt een eind verderop weer boven, vaak vlak onder de oever."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een hinnikend, lang trillertje, \"bibibibibi...\", als een klein paardje."
+        },
+        "chosen": [
+          {
+            "media_id": 1200294,
+            "xeno_canto": "XC727068",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 45.0,
+            "background_species": 0,
+            "recordist": "Olivier SWIFT"
+          },
+          {
+            "media_id": 1200303,
+            "xeno_canto": "XC572376",
+            "type": "call (copulation)",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 69.1,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          172171,
+          172255,
+          172167
+        ],
+        "quiz": [
+          172143,
+          172245,
+          172139,
+          172235,
+          172159,
+          172144,
+          172147
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 552,
+    "species_ids": [
+      563,
+      552
+    ],
+    "title": {
+      "nl": "Fuut of dodaars?"
+    },
+    "text": {
+      "nl": "Kijk naar de grootte en de hals. Een fuut is groot, met een lange witte hals en een oranje kraag, en ligt op open water. Een dodaars is klein en rond als een badeendje, met een korte hals en bruine wangen, en blijft dicht bij de oever en de planten."
+    }
+  },
+  "quiz": {
+    "questions": 10,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      12,
+      13
+    ],
+    "review_questions": 3,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Zoek deze week een rietkraag langs een sloot of plas, het liefst vroeg in de ochtend. Blijf vijf minuten staan en luister. Hoor je een ritmisch gekeuvel uit het riet? Dat is de kleine karekiet. Kijk ook naar de toppen van de rietstengels: zit daar een zingend vogeltje met een zwarte kop?"
+  },
+  "next": {
+    "nl": "Volgende week: zwaluwen en gierzwaluwen."
+  },
+  "flow": [
+    "intro",
+    "bird:10200",
+    "bird:7471",
+    "bird:9128",
+    "bird:563",
+    "bird:552",
+    "quiz",
+    "done"
+  ]
+}

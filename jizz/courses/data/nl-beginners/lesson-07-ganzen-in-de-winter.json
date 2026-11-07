@@ -1,0 +1,462 @@
+{
+  "course": "nl-beginners",
+  "week": 7,
+  "slug": "ganzen-in-de-winter",
+  "part": 1,
+  "kind": "species",
+  "season": "winter",
+  "minutes": 12,
+  "title": {
+    "nl": "Ganzen in de winter"
+  },
+  "subtitle": {
+    "nl": "Vijf ganzen van de Nederlandse weilanden"
+  },
+  "intro": {
+    "nl": "Het is winter. We rijden over een dijk door de polder, en op het weiland staan honderden ganzen te grazen. Soms gaan ze ineens allemaal tegelijk de lucht in, met veel lawaai.\n\nNederland is in de winter een van de belangrijkste plekken in Europa voor wilde ganzen. Een deel komt uit het noorden van Rusland, andere soorten wonen hier het hele jaar. In deze les leer je vijf ganzen herkennen. Twee zijn grijsbruin en lijken op elkaar, twee hebben zwart en wit aan de kop, en de laatste is eigenlijk geen echte gans.\n\nAan het eind volgt een quiz van acht vragen, met twee vogels uit eerdere lessen ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "voorvleugel"
+      },
+      "explain": {
+        "nl": "Het voorste deel van de vleugel, goed te zien in de vlucht."
+      }
+    },
+    {
+      "term": {
+        "nl": "bles"
+      },
+      "explain": {
+        "nl": "Een witte vlek op het voorhoofd, boven de snavel."
+      }
+    },
+    {
+      "term": {
+        "nl": "kinband"
+      },
+      "explain": {
+        "nl": "Een witte band van wang tot wang, onder de kin door."
+      }
+    },
+    {
+      "term": {
+        "nl": "oogvlek"
+      },
+      "explain": {
+        "nl": "Een gekleurde vlek rond het oog."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 77,
+      "latin": "Anser anser",
+      "name": {
+        "nl": "Grauwe gans"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Groot en grijsbruin, met dikke hals"
+        },
+        {
+          "nl": "Dikke oranje snavel, roze poten"
+        },
+        {
+          "nl": "Lichtgrijze **voorvleugel** in de vlucht"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar, in weilanden, langs plassen en in parken. In de winter komen er nog veel bij uit het noorden."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Het geluid van de boerderijgans: een luid, laag \"gaa-gaa-gaa\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1193698,
+            "xeno_canto": "XC1037394",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 36.6,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1193701,
+            "xeno_canto": "XC1031817",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35.0,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "nl": "De grauwe gans is de stamvader van de witte boerderijgans."
+      },
+      "media": {
+        "card": [
+          116886,
+          117001,
+          116998
+        ],
+        "quiz": [
+          116952,
+          116953,
+          116985,
+          117013,
+          116960,
+          117007,
+          117032,
+          116963
+        ]
+      }
+    },
+    {
+      "species_id": 79,
+      "latin": "Anser albifrons",
+      "name": {
+        "nl": "Kolgans"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Witte **bles** boven de snavel"
+        },
+        {
+          "nl": "Zwarte dwarsstrepen op de buik"
+        },
+        {
+          "nl": "Roze snavel, oranje poten"
+        }
+      ],
+      "where_when": {
+        "nl": "Van oktober tot maart, in grote groepen op weilanden. Ze broeden op de toendra in Noord-Rusland."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Hoger en vrolijker dan de grauwe gans: een kakelend \"kli-lik, kli-lik\". Een grote groep klinkt als gelach in de verte."
+        },
+        "chosen": [
+          {
+            "media_id": 1193748,
+            "xeno_canto": "XC989209",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 31.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1193736,
+            "xeno_canto": "XC1073870",
+            "type": "nocturnal flight call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 46.0,
+            "background_species": 0,
+            "recordist": "Astrid Cervantes"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 18
+      },
+      "note": {
+        "nl": "Kol is een oud woord voor bles. Jonge kolganzen hebben nog geen bles en geen buikstrepen: dat komt in een vervolgcursus."
+      },
+      "media": {
+        "card": [
+          117329,
+          117327,
+          117342
+        ],
+        "quiz": [
+          117360,
+          117338,
+          117368,
+          117283,
+          117372,
+          117341
+        ]
+      }
+    },
+    {
+      "species_id": 85,
+      "latin": "Branta leucopsis",
+      "name": {
+        "nl": "Brandgans"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Wit gezicht, zwarte hals en borst"
+        },
+        {
+          "nl": "Grijze rug met zwart-witte bandjes"
+        },
+        {
+          "nl": "Klein, met een kort zwart snaveltje"
+        }
+      ],
+      "where_when": {
+        "nl": "Vooral van oktober tot april, in grote groepen op graslanden bij de kust en in Friesland. Een deel blijft hier ook broeden."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Kort en blaffend \"kef-kef\", als een groep kleine hondjes."
+        },
+        "chosen": [
+          {
+            "media_id": 1193867,
+            "xeno_canto": "XC589833",
+            "type": "flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 37.0,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1193861,
+            "xeno_canto": "XC691722",
+            "type": "flight call, nocturnal flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 50.4,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "dont_confuse": {
+        "nl": "Grote Canadese gans: veel groter, met een bruin lijf en alleen een witte band onder de kin."
+      },
+      "media": {
+        "card": [
+          118299,
+          118303,
+          118328
+        ],
+        "quiz": [
+          118363,
+          118378,
+          118333,
+          118335,
+          118311,
+          118359,
+          118296,
+          118309
+        ]
+      }
+    },
+    {
+      "species_id": 87,
+      "latin": "Branta canadensis",
+      "name": {
+        "nl": "Grote Canadese gans"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Groot, met lange zwarte hals"
+        },
+        {
+          "nl": "Witte **kinband** onder de kop"
+        },
+        {
+          "nl": "Bruin lijf, lichte borst"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar, in parken, op plassen en langs grote wateren. Oorspronkelijk uit Noord-Amerika, nu een vaste broedvogel."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een luid, trompetterend \"a-honk\", de tweede toon hoger."
+        },
+        "chosen": [
+          {
+            "media_id": 1193903,
+            "xeno_canto": "XC994358",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 32.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1193907,
+            "xeno_canto": "XC879215",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 40.0,
+            "background_species": 0,
+            "recordist": "Agris Celmins"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "dont_confuse": {
+        "nl": "Brandgans: veel kleiner, met een helemaal wit gezicht en een zwarte borst."
+      },
+      "media": {
+        "card": [
+          118712,
+          118771,
+          118643
+        ],
+        "quiz": [
+          118644,
+          118719,
+          118728,
+          118786,
+          118770,
+          118711,
+          118739,
+          118781
+        ]
+      }
+    },
+    {
+      "species_id": 110,
+      "latin": "Alopochen aegyptiaca",
+      "name": {
+        "nl": "Nijlgans"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Zandkleurig, met lange roze poten"
+        },
+        {
+          "nl": "Donkerbruine **oogvlek**"
+        },
+        {
+          "nl": "Bruine vlek midden op de borst"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar, overal: parken, weilanden en sloten, soms op daken en in boomtoppen. In de vlucht veel wit in de vleugel. Oorspronkelijk uit Afrika."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Luid en schor: het vrouwtje kakelt en toetert, het mannetje sist hees."
+        },
+        "chosen": [
+          {
+            "media_id": 1194206,
+            "xeno_canto": "XC1054324",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 49.6,
+            "background_species": 0,
+            "recordist": "Jorge Leitão"
+          },
+          {
+            "media_id": 1194217,
+            "xeno_canto": "XC985128",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 40.0,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Eigenlijk geen echte gans, maar familie van de bergeend."
+      },
+      "media": {
+        "card": [
+          122556,
+          122638,
+          122555
+        ],
+        "quiz": [
+          122657,
+          122583,
+          122537,
+          122521,
+          122519,
+          122580,
+          122530,
+          122600
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 79,
+    "species_ids": [
+      77,
+      79
+    ],
+    "title": {
+      "nl": "Grauwe gans of kolgans?"
+    },
+    "text": {
+      "nl": "Kijk naar de kop en de buik. De kolgans heeft een brede witte bles boven de snavel en zwarte dwarsstrepen op de buik. De grauwe gans is groter, met een dikke oranje snavel, roze poten en hooguit een smal wit randje aan de snavel."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      5,
+      6
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Fiets of rijd deze week langs weilanden buiten de bebouwde kom en zoek een groep ganzen. Bekijk ze rustig, met een verrekijker als je die hebt. Zie je een witte bles en zwarte strepen op de buik? Hoeveel soorten tel je in één groep? Blijf op afstand: ganzen die opvliegen, verspillen energie die ze in de winter hard nodig hebben."
+  },
+  "next": {
+    "nl": "Volgende week: eenden, de mannetjes."
+  },
+  "flow": [
+    "intro",
+    "bird:77",
+    "bird:79",
+    "bird:85",
+    "bird:87",
+    "bird:110",
+    "quiz",
+    "done"
+  ]
+}

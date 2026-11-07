@@ -1,6 +1,6 @@
 /**
  * Gradual disclosure of game modes: new players see one big "Start a game" button and the
- * Country Challenge, with Survival / National league / Flocks as small tiles. After
+ * Country Challenge, with Survival and the National league as small tiles. After
  * EXPERIENCED_AFTER finished games (or when they choose "Show all game modes") those become
  * full cards and the menus show their extras. Modes a player already uses always stay full.
  */
@@ -13,7 +13,6 @@ export type ModeVisibilityInput = {
   gamesPlayed: number;
   showAll: boolean;
   inLeague: boolean;
-  inFlock: boolean;
   playedSurvival: boolean;
   /** One-time "unlocked" banner already dismissed or shown. */
   unlockSeen?: boolean;
@@ -23,8 +22,6 @@ export type ModeVisibility = {
   stage: 'beginner' | 'full';
   league: ModeSize;
   survival: ModeSize;
-  /** Full once modes are disclosed, or straight away when you are in a flock. */
-  flock: ModeSize;
   /** Extra items in the menus (leaderboards, tricky birds, review media, …). */
   showMenuExtras: boolean;
   /** Small "More ways to play" tiles exist and the "Show all game modes" link applies. */
@@ -38,14 +35,12 @@ export function modeVisibility(input: ModeVisibilityInput): ModeVisibility {
   const full = experienced || input.showAll;
   const league: ModeSize = full || input.inLeague ? 'full' : 'tile';
   const survival: ModeSize = full || input.playedSurvival ? 'full' : 'tile';
-  const flock: ModeSize = full || input.inFlock ? 'full' : 'tile';
   return {
     stage: full ? 'full' : 'beginner',
     league,
     survival,
-    flock,
     showMenuExtras: full,
-    hasTiles: league === 'tile' || survival === 'tile' || flock === 'tile',
+    hasTiles: league === 'tile' || survival === 'tile',
     // Only an earned unlock is celebrated; flipping the switch yourself needs no banner.
     showUnlockBanner: experienced && !input.unlockSeen,
   };

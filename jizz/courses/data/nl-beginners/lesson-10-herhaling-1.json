@@ -1,0 +1,50 @@
+{
+  "course": "nl-beginners",
+  "week": 10,
+  "slug": "herhaling-1",
+  "part": 1,
+  "kind": "review",
+  "season": "any",
+  "minutes": 15,
+  "title": {
+    "nl": "Herhaling"
+  },
+  "subtitle": {
+    "nl": "Alles van de eerste negen weken in één quiz"
+  },
+  "intro": {
+    "nl": "Gefeliciteerd: je hebt deel 1 van de cursus bijna af! Negen weken geleden begon je met vijf tuinvogels. Nu herken je merels, mussen en mezen, eenden, ganzen en meeuwen, en een paar vogels zelfs aan hun lied. Je kent 35 soorten, plus de vrouwtjes en jongen uit week 5. Bij elkaar zijn dat zo'n veertig vogels.\n\nDeze week leer je niets nieuws. In plaats daarvan doe je een langere quiz van vijftien vragen, met vogels uit alle negen lessen door elkaar. Dat is lastiger dan een gewone quiz, want nu kan elke vogel langskomen. Neem de tijd en kijk zoals je in week 4 hebt geleerd: eerst grootte en vorm, dan de snavel, dan de kleuren.\n\nVogels die je fout hebt, kun je daarna nog eens oefenen. Geen zorgen als dat er een paar zijn: ervaren vogelaars twijfelen ook."
+  },
+  "words": [],
+  "birds": [],
+  "compare": null,
+  "quiz": {
+    "questions": 15,
+    "photos_from": "quiz",
+    "answers_from": "review",
+    "review_from": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "review_questions": 15,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Maak deze week een wandeling van een half uur door je buurt, het park of langs het water. Hoeveel soorten uit deel 1 zie of hoor je? Vink ze af in de app. Twintig is heel goed. Bonus: kies een vogel die je in de quiz fout had, en ga die deze week bewust zoeken."
+  },
+  "next": {
+    "nl": "Volgende week begint deel 2: weidevogels."
+  },
+  "flow": [
+    "intro",
+    "quiz",
+    "done"
+  ]
+}

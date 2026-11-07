@@ -22,9 +22,6 @@ export const BirdrMenu = () => {
                 </RouterLink>
               </Link>
             )}
-            <Link href={'/scores'} textDecoration="none">
-              <FormattedMessage id={'High scores'} defaultMessage={'High scores'} />
-            </Link>
             {showMenuExtras && (
               <Link asChild textDecoration="none">
                 <RouterLink to={getCountryChallengeLeaderboardPath()}>

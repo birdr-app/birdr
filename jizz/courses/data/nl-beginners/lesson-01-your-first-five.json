@@ -1,0 +1,554 @@
+{
+  "course": "nl-beginners",
+  "week": 1,
+  "slug": "your-first-five",
+  "part": 1,
+  "kind": "species",
+  "season": "any",
+  "minutes": 10,
+  "title": {
+    "en": "Your first five",
+    "nl": "Je eerste vijf"
+  },
+  "subtitle": {
+    "en": "Garden birds you can see from your window",
+    "nl": "Tuinvogels die je vanuit je raam ziet"
+  },
+  "intro": {
+    "en": "We're taking a look in the back garden. Make a coffee, sit by the window and look outside. There's a good chance that within ten minutes you'll see at least three of the five birds in this lesson. They live all over the Netherlands, all year round, and nearly all of them visit gardens.\n\nIn this lesson you learn to recognise five birds. For each bird you get three things to look for. Words in bold are parts of a bird; you'll find what they mean right there on the card. For the Blackbird and the House Sparrow we only look at the male; the females look very different and get their own lesson in week 5.\n\nAt the end of the lesson there's a short quiz of eight questions.",
+    "nl": "We nemen een kijkje in de achtertuin. Zet een kop koffie, ga bij het raam zitten en kijk naar buiten. Grote kans dat je binnen tien minuten minstens drie van de vijf vogels uit deze les ziet. Ze leven het hele jaar door in heel Nederland, en bijna allemaal komen ze in tuinen.\n\nIn deze les leer je vijf vogels herkennen. Bij elke vogel krijg je drie dingen waar je op let. Vetgedrukte woorden zijn lichaamsdelen van een vogel; wat ze betekenen staat er meteen bij. Bij de merel en de huismus kijken we alleen naar het mannetje; de vrouwtjes zien er heel anders uit en krijgen in week 5 een eigen les.\n\nAan het eind van de les volgt een korte quiz van acht vragen."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "crown",
+        "nl": "kruin"
+      },
+      "explain": {
+        "en": "The top of the head.",
+        "nl": "De bovenkant van de kop."
+      }
+    },
+    {
+      "term": {
+        "en": "cheek",
+        "nl": "wang"
+      },
+      "explain": {
+        "en": "The side of the face, below the eye.",
+        "nl": "De zijkant van de kop, onder het oog."
+      }
+    },
+    {
+      "term": {
+        "en": "bib",
+        "nl": "bef"
+      },
+      "explain": {
+        "en": "A dark patch on the throat.",
+        "nl": "Een donkere vlek op de keel."
+      }
+    },
+    {
+      "term": {
+        "en": "breast",
+        "nl": "borst"
+      },
+      "explain": {
+        "en": "The front, between throat and belly.",
+        "nl": "De voorkant, tussen keel en buik."
+      }
+    },
+    {
+      "term": {
+        "en": "eye-ring",
+        "nl": "oogring"
+      },
+      "explain": {
+        "en": "A ring of bare skin or feathers around the eye.",
+        "nl": "Een ring van kale huid of veren rond het oog."
+      }
+    }
+  ],
+  "words_shown": "inline: bold on the bird cards, with the explanation under the look-for lines",
+  "birds": [
+    {
+      "species_id": 8861,
+      "ebird_code": "eurbla",
+      "latin": "Turdus merula",
+      "name": {
+        "en": "Eurasian Blackbird",
+        "nl": "Merel"
+      },
+      "plumage": {
+        "en": "adult male",
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "en": "All black",
+          "nl": "Helemaal zwart"
+        },
+        {
+          "en": "Orange-yellow bill",
+          "nl": "Oranjegele snavel"
+        },
+        {
+          "en": "Yellow **eye-ring**",
+          "nl": "Gele **oogring**"
+        }
+      ],
+      "where_when": {
+        "en": "Lawns and borders everywhere. Hops, stops, tilts its head and listens for worms.",
+        "nl": "Op gazons en in borders, overal. Huppelt, stopt, houdt de kop schuin en luistert naar wormen."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "Slow, relaxed, fluting phrases from a rooftop or treetop, at dawn and dusk from February to July.",
+          "nl": "Langzame, ontspannen fluitende zinnen vanaf een dak of boomtop, bij zonsopkomst en schemer van februari tot juli."
+        },
+        "pick": "xeno-canto song, NL/BE/DE, quality A, under 30 s, no other birds",
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1312715,
+            "xeno_canto": "XC1075814",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 51.5,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          },
+          {
+            "media_id": 1312716,
+            "xeno_canto": "XC1075796",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 82.9,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "Only the male is black. A brown \"blackbird\" is a female: week 5.",
+        "nl": "Alleen het mannetje is zwart. Een bruine merel is een vrouwtje: week 5."
+      },
+      "dont_confuse": {
+        "en": "Starling (week 4): shorter tail, speckled, walks instead of hopping.",
+        "nl": "Spreeuw (week 4): kortere staart, gespikkeld, loopt in plaats van te huppelen."
+      },
+      "media": {
+        "card": [
+          948633,
+          948634,
+          948763
+        ],
+        "quiz": [
+          948653,
+          948768,
+          948651,
+          948736,
+          948750,
+          948770,
+          948769
+        ]
+      },
+      "media_for_later": {
+        "female (lesson 5)": [
+          948748,
+          948755,
+          948657
+        ],
+        "juvenile (lesson 5)": [
+          948708,
+          948667
+        ]
+      }
+    },
+    {
+      "species_id": 9815,
+      "ebird_code": "houspa",
+      "latin": "Passer domesticus",
+      "name": {
+        "en": "House Sparrow",
+        "nl": "Huismus"
+      },
+      "plumage": {
+        "en": "adult male",
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "en": "Grey **crown**",
+          "nl": "Grijze **kruin**"
+        },
+        {
+          "en": "Black **bib**",
+          "nl": "Zwarte **bef**"
+        },
+        {
+          "en": "Chestnut-brown sides of the head",
+          "nl": "Kastanjebruine zijkanten van de kop"
+        }
+      ],
+      "where_when": {
+        "en": "Always near houses, in groups. Chirps from hedges and gutters, bathes in dust.",
+        "nl": "Altijd bij huizen, in groepjes. Tjilpt vanuit heggen en dakgoten, neemt stofbaden."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Endless \"chilp, chilp\" chirping from a hedge full of sparrows.",
+          "nl": "Eindeloos \"tjilp, tjilp\" uit een heg vol mussen."
+        },
+        "pick": "xeno-canto call, group chirping, NL/BE, quality A",
+        "available": 19,
+        "chosen": [
+          {
+            "media_id": 1324533,
+            "xeno_canto": "XC1047608",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 69.3,
+            "background_species": 0,
+            "recordist": "Esperanza Poveda"
+          },
+          {
+            "media_id": 1324531,
+            "xeno_canto": "XC1047611",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 111.5,
+            "background_species": 0,
+            "recordist": "Esperanza Poveda"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "Far fewer than 40 years ago, but still in almost every town.",
+        "nl": "Veel minder dan 40 jaar geleden, maar nog in bijna elk dorp en elke stad."
+      },
+      "media": {
+        "card": [
+          1037869,
+          1037880,
+          1037899
+        ],
+        "quiz": [
+          1037898,
+          1037988,
+          1037938,
+          1037876
+        ]
+      },
+      "media_for_later": {
+        "female (lesson 5)": [
+          1038014,
+          1037897,
+          1038012
+        ],
+        "flock (lesson 5)": [
+          1038011,
+          1037945
+        ]
+      }
+    },
+    {
+      "species_id": 7132,
+      "ebird_code": "gretit1",
+      "latin": "Parus major",
+      "name": {
+        "en": "Great Tit",
+        "nl": "Koolmees"
+      },
+      "plumage": {
+        "en": "adult",
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "en": "Black head with white **cheeks**",
+          "nl": "Zwarte kop met witte **wangen**"
+        },
+        {
+          "en": "Yellow **breast** with a black stripe down the middle, like a tie",
+          "nl": "Gele **borst** met een zwarte streep in het midden, als een stropdas"
+        },
+        {
+          "en": "Bigger than a Blue Tit",
+          "nl": "Groter dan een pimpelmees"
+        }
+      ],
+      "where_when": {
+        "en": "Gardens, parks and woods. The most common visitor to a peanut feeder.",
+        "nl": "Tuinen, parken en bossen. De vaste klant aan het pindanetje."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A loud, see-sawing \"tee-chu, tee-chu\", already from January.",
+          "nl": "Een luid, zagend \"tie-tuu, tie-tuu\", al vanaf januari."
+        },
+        "pick": "xeno-canto song, classic two-note, NL/BE, quality A",
+        "available": 17,
+        "chosen": [
+          {
+            "media_id": 1288063,
+            "xeno_canto": "XC996274",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 79.1,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1288057,
+            "xeno_canto": "XC1046158",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 63.8,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "Tip: a broad tie running down between the legs is a male; a thin one that stops halfway is a female.",
+        "nl": "Tip: een brede das tot tussen de poten is een mannetje; een smalle die halverwege stopt is een vrouwtje."
+      },
+      "media": {
+        "card": [
+          805368,
+          805387,
+          805456
+        ],
+        "quiz": [
+          805393,
+          805391,
+          805392,
+          805444,
+          805438,
+          805405,
+          805362,
+          805376,
+          805493
+        ]
+      }
+    },
+    {
+      "species_id": 7122,
+      "ebird_code": "blutit",
+      "latin": "Cyanistes caeruleus",
+      "name": {
+        "en": "Eurasian Blue Tit",
+        "nl": "Pimpelmees"
+      },
+      "plumage": {
+        "en": "adult",
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "en": "Blue **crown**",
+          "nl": "Blauwe **kruin**"
+        },
+        {
+          "en": "White face with a dark line through the eye",
+          "nl": "Wit gezicht met een donkere streep door het oog"
+        },
+        {
+          "en": "Small, yellow underneath, blue wings",
+          "nl": "Klein, geel van onderen, blauwe vleugels"
+        }
+      ],
+      "where_when": {
+        "en": "Gardens and woods, hanging upside down on thin twigs and feeders.",
+        "nl": "Tuinen en bossen, hangt ondersteboven aan dunne takjes en voederhuisjes."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A high \"tsee-tsee-tsirrrr\": two thin notes and a trill.",
+          "nl": "Een hoog \"tsie-tsie-tsirrrr\": twee dunne tonen en een trilletje."
+        },
+        "pick": "xeno-canto song, NL/BE, quality A",
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1287848,
+            "xeno_canto": "XC1070960",
+            "type": "song",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 42.1,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          },
+          {
+            "media_id": 1287865,
+            "xeno_canto": "XC964470",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 36.8,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "media": {
+        "card": [
+          803705,
+          803702,
+          803831
+        ],
+        "quiz": [
+          803822,
+          803814,
+          803713,
+          803724,
+          803714,
+          803815,
+          803741,
+          803800
+        ]
+      }
+    },
+    {
+      "species_id": 9078,
+      "ebird_code": "eurrob1",
+      "latin": "Erithacus rubecula",
+      "name": {
+        "en": "European Robin",
+        "nl": "Roodborst"
+      },
+      "plumage": {
+        "en": "adult",
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "en": "Orange face and **breast**",
+          "nl": "Oranje gezicht en **borst**"
+        },
+        {
+          "en": "Grey border around the orange",
+          "nl": "Grijze rand om het oranje"
+        },
+        {
+          "en": "Round, with a plain brown back",
+          "nl": "Rond, met een effen bruine rug"
+        }
+      ],
+      "where_when": {
+        "en": "Alone, never in groups. Follows gardeners for worms and sings in autumn and winter too.",
+        "nl": "Altijd alleen, nooit in groepjes. Volgt tuiniers voor wormen en zingt ook in herfst en winter."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A wistful, rippling song with long pauses; one of the few birds singing in November.",
+          "nl": "Een weemoedig, kabbelend liedje met lange pauzes; een van de weinige vogels die in november zingt."
+        },
+        "pick": "xeno-canto song, autumn or winter recording, NL/BE, quality A",
+        "available": 19,
+        "chosen": [
+          {
+            "media_id": 1315592,
+            "xeno_canto": "XC1080724",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 41.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1315603,
+            "xeno_canto": "XC1072480",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 37.9,
+            "background_species": 0,
+            "recordist": "Pablo Guillemaud"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "Young robins in summer are brown with pale spots and no orange at all: week 5.",
+        "nl": "Jonge roodborsten zijn in de zomer bruin met lichte vlekjes en hebben nog geen oranje: week 5."
+      },
+      "media": {
+        "card": [
+          970534,
+          970437,
+          970472
+        ],
+        "quiz": [
+          970462,
+          970448,
+          970445,
+          970557,
+          970463,
+          970542,
+          970505,
+          970567
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 7122,
+    "species_ids": [
+      7132,
+      7122
+    ],
+    "title": {
+      "en": "Great Tit or Blue Tit?",
+      "nl": "Koolmees of pimpelmees?"
+    },
+    "text": {
+      "en": "Look at the head first. Black cap: Great Tit. Blue cap: Blue Tit. The Great Tit is also clearly bigger and has the black tie.",
+      "nl": "Kijk eerst naar de kop. Zwarte pet: koolmees. Blauwe pet: pimpelmees. De koolmees is ook duidelijk groter en heeft de zwarte das."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Spend ten minutes at a window this week. Which of the five do you see? Tick them off in the app. Bonus: look at every blackbird. Is one of them brown? Then you have already found a female.",
+    "nl": "Kijk deze week tien minuten uit het raam. Welke van de vijf zie je? Vink ze af in de app. Bonus: bekijk elke merel. Is er een bruin? Dan heb je al een vrouwtje gevonden."
+  },
+  "next": {
+    "en": "Next week: at the pond.",
+    "nl": "Volgende week: aan de vijver."
+  },
+  "outside_shown": "on the done screen, after the quiz",
+  "flow": [
+    "intro",
+    "bird:8861",
+    "bird:9815",
+    "bird:7132",
+    "bird:7122",
+    "bird:9078",
+    "quiz",
+    "done"
+  ]
+}

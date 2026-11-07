@@ -1,0 +1,381 @@
+{
+  "course": "nl-beginners",
+  "week": 19,
+  "slug": "grote-vogels-van-nat-land",
+  "part": 2,
+  "kind": "species",
+  "season": "any",
+  "minutes": 10,
+  "title": {
+    "nl": "Grote vogels van nat land"
+  },
+  "subtitle": {
+    "nl": "Vier reuzen van moeras, weiland en wad"
+  },
+  "intro": {
+    "nl": "Vandaag zoeken we de grote vogels op. In natte weilanden, moerassen en langs rivieren staan vogels die je van honderden meters afstand al ziet. Eén ken je al: de blauwe reiger uit week 2.\n\nJe leert vier grote vogels herkennen: twee witte, een zwart-witte en een zwarte. Je leert ook een handige truc: kijk hoe ze vliegen. Reigers trekken in de vlucht hun hals in. Lepelaar, ooievaar en aalscholver steken hun hals recht naar voren.\n\nAan het eind volgt een quiz van acht vragen, met twee vogels uit eerdere lessen ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "slagpennen"
+      },
+      "explain": {
+        "nl": "De grote, lange veren van de vleugel, aan de achterrand en de punt. Daarmee vliegt de vogel."
+      }
+    },
+    {
+      "term": {
+        "nl": "dijvlek"
+      },
+      "explain": {
+        "nl": "Een vlek op de dij, net boven de poot."
+      }
+    },
+    {
+      "term": {
+        "nl": "snavelpunt"
+      },
+      "explain": {
+        "nl": "Het uiterste puntje van de snavel."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2691,
+      "latin": "Platalea leucorodia",
+      "name": {
+        "nl": "Lepelaar"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Groot en helemaal wit"
+        },
+        {
+          "nl": "Lange, platte snavel als een lepel"
+        },
+        {
+          "nl": "Zwarte snavel met gele **snavelpunt**"
+        }
+      ],
+      "where_when": {
+        "nl": "Van maart tot oktober in ondiep water, op het wad en langs plassen. Zwaait zijn snavel zoekend heen en weer door het water. Slaapt veel, met de snavel onder de vleugel."
+      },
+      "sound": {
+        "type": "other",
+        "describe": {
+          "nl": "Bijna altijd stil. Je herkent hem aan het zwaaien met de snavel, niet aan zijn geluid."
+        },
+        "chosen": [
+          {
+            "media_id": 1225521,
+            "xeno_canto": "XC380956",
+            "type": "call (calls while feeding)",
+            "country": "France",
+            "quality": "A",
+            "seconds": 41.6,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1225523,
+            "xeno_canto": "XC333845",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 44.2,
+            "background_species": 0,
+            "recordist": "José Carlos Sires"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Een slapende lepelaar lijkt op een zilverreiger. Wacht tot hij zijn snavel laat zien."
+      },
+      "media": {
+        "card": [
+          405133,
+          405145,
+          405151
+        ],
+        "quiz": [
+          405227,
+          405234,
+          405203,
+          405258,
+          405172,
+          405222,
+          405219,
+          405174
+        ]
+      }
+    },
+    {
+      "species_id": 2648,
+      "latin": "Ardea alba",
+      "name": {
+        "nl": "Grote zilverreiger"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Wit, zo groot als een blauwe reiger"
+        },
+        {
+          "nl": "Lange snavel, meestal geel"
+        },
+        {
+          "nl": "Lange zwarte poten, lange dunne hals"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar, het meest van september tot maart. In weilanden, langs sloten en in rietvelden. Dertig jaar geleden was hij nog zeldzaam; nu zie je hem in het hele land."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Meestal stil. Opgeschrikt een laag, rauw \"krrraa\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1224942,
+            "xeno_canto": "XC1045560",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 15.2,
+            "background_species": 0,
+            "recordist": "Erik Hansson"
+          },
+          {
+            "media_id": 1224944,
+            "xeno_canto": "XC1039212",
+            "type": "call, flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 11.8,
+            "background_species": 0,
+            "recordist": "Kasper Wieck"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "In de broedtijd wordt de snavel zwart. De veel kleinere kleine zilverreiger, met een zwarte snavel en gele tenen, komt in een vervolgcursus."
+      },
+      "media": {
+        "card": [
+          399122,
+          399201,
+          399138
+        ],
+        "quiz": [
+          399125,
+          399119,
+          399115,
+          399137,
+          399130,
+          399248,
+          399265,
+          399236
+        ]
+      }
+    },
+    {
+      "species_id": 2509,
+      "latin": "Ciconia ciconia",
+      "name": {
+        "nl": "Ooievaar"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Wit met zwarte **slagpennen**"
+        },
+        {
+          "nl": "Lange rode snavel en rode poten"
+        },
+        {
+          "nl": "Vliegt met gestrekte hals"
+        }
+      ],
+      "where_when": {
+        "nl": "Vooral van februari tot augustus, bij nesten op palen, daken en schoorstenen. Zoekt kikkers, muizen en wormen in weilanden. Steeds meer ooievaars blijven ook in de winter."
+      },
+      "sound": {
+        "type": "other",
+        "describe": {
+          "nl": "Geen roep: ooievaars klepperen met hun snavel, de kop ver achterover."
+        },
+        "chosen": [
+          {
+            "media_id": 1223728,
+            "xeno_canto": "XC957783",
+            "type": "not specified (bill clapping)",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 39.2,
+            "background_species": 0,
+            "recordist": "Esperanza Poveda"
+          },
+          {
+            "media_id": 1223742,
+            "xeno_canto": "XC707157",
+            "type": "not specified (bill clapping)",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 33.6,
+            "background_species": 0,
+            "recordist": "SonoNatura"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "nl": "In de jaren 80 was de ooievaar bijna verdwenen uit Nederland. Nu broedt hij weer in het hele land."
+      },
+      "media": {
+        "card": [
+          378785,
+          378844,
+          378806
+        ],
+        "quiz": [
+          378779,
+          378870,
+          378853,
+          378845,
+          378791,
+          378847,
+          378820,
+          378818
+        ]
+      }
+    },
+    {
+      "species_id": 2552,
+      "latin": "Phalacrocorax carbo",
+      "name": {
+        "nl": "Aalscholver"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Zwart, in het voorjaar witte **dijvlek**"
+        },
+        {
+          "nl": "Witte wang, geel bij de mondhoek"
+        },
+        {
+          "nl": "Zit met gespreide vleugels te drogen"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar op meren, rivieren, havens en langs de kust. Duikt naar vis en ligt diep in het water, met de snavel schuin omhoog. Vliegt in V's of lange lijnen, met gestrekte hals."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Bij het nest diep, rauw gegrom; verder meestal stil."
+        },
+        "chosen": [
+          {
+            "media_id": 1224134,
+            "xeno_canto": "XC1059525",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 33.6,
+            "background_species": 0,
+            "recordist": "Sonothèque ADVL"
+          },
+          {
+            "media_id": 1224151,
+            "xeno_canto": "XC771643",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 42.1,
+            "background_species": 0,
+            "recordist": "SonoNatura"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "nl": "Broedt in kolonies in bomen. Die worden na een paar jaar wit van de poep en sterven af."
+      },
+      "media": {
+        "card": [
+          385786,
+          385711,
+          385769
+        ],
+        "quiz": [
+          385808,
+          385768,
+          385788,
+          385817,
+          385829,
+          385697,
+          385701,
+          385820
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 2648,
+    "species_ids": [
+      2691,
+      2648
+    ],
+    "title": {
+      "nl": "Lepelaar of grote zilverreiger?"
+    },
+    "text": {
+      "nl": "Allebei groot en wit. Kijk naar de snavel: een lepelaar heeft een zwarte lepel, de zilverreiger een spitse gele dolk. En in de vlucht steekt de lepelaar zijn hals recht naar voren, terwijl de zilverreiger hem intrekt, net als de blauwe reiger."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      17,
+      18
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Kijk deze week bij elke grote vogel die overvliegt naar de hals. Ingetrokken? Een reiger. Recht naar voren? Een lepelaar, ooievaar of aalscholver. Zoek ook een aalscholver die met gespreide vleugels zit te drogen, op een paal, een boei of een dode boom."
+  },
+  "next": {
+    "nl": "Volgende week: de eindtoets."
+  },
+  "flow": [
+    "intro",
+    "bird:2691",
+    "bird:2648",
+    "bird:2509",
+    "bird:2552",
+    "quiz",
+    "done"
+  ]
+}

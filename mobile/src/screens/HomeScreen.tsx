@@ -13,18 +13,17 @@ import {
   getStoredBirdrJourneyCountryCode,
   type BirdrJourneyListItem,
 } from '../api/birdrJourney';
-import { listFlocks, pickMainFlock, setStoredMainFlockSlug, type Flock } from '../api/flocks';
+import { COURSE_LOCALES } from '../api/course';
 import { BirdrLevelImage } from '../components/BirdrLevelImage';
 import { GameArtImage } from '../components/GameArtImage';
 import { colors } from '../theme';
 import { getMoodImage } from '../constants/birdrMoodImages';
-import { getFlockImage, getStartGameImage, getSurvivalImage } from '../constants/birdrFlockImages';
+import { getStartGameImage, getSurvivalImage } from '../constants/birdrFlockImages';
 import { useVisualStyle } from '../context/VisualStyleContext';
 import { useGameModes } from '../context/GameModesContext';
 import { modeVisibility } from '../game/gameModes';
 import { FeedbackForm } from '../components/FeedbackForm';
 import { useSoftUpdateAvailable } from '../hooks/useSoftUpdateAvailable';
-import { resolveMediaUrl } from '../api/config';
 import { fetchLeague, fetchLeagueOverview, pickMainLeague, type LeagueCountry, type LeagueDetail } from '../api/league';
 import { leagueFlag } from '../lib/league';
 import {
@@ -56,9 +55,7 @@ type RootStackParamList = {
   Scores: undefined;
   BirdrJourneyIntro: undefined;
   BirdrJourneyProgress: { countryCode: string };
-  FlockIntro: undefined;
-  FlockList: undefined;
-  FlockDetail: { slug: string };
+  Course: undefined;
   Updates: undefined;
   UpdateDetail: { updateId: number };
   Help: undefined;
@@ -107,9 +104,6 @@ export function HomeScreen() {
   const [updates, setUpdates] = useState<UpdateListItem[]>([]);
   const [activeJourney, setActiveJourney] = useState<BirdrJourneyListItem | null>(null);
   const [journeyLoading, setJourneyLoading] = useState(true);
-  const [mainFlock, setMainFlock] = useState<Flock | null>(null);
-  const [flocksLoading, setFlocksLoading] = useState(false);
-  const [flocksReady, setFlocksReady] = useState(false);
   const [leagueDetail, setLeagueDetail] = useState<LeagueDetail | null>(null);
   const [leagueSuggested, setLeagueSuggested] = useState<LeagueCountry | null>(null);
   const [leagueLoaded, setLeagueLoaded] = useState(false);
@@ -134,24 +128,6 @@ export function HomeScreen() {
     }
   }, []);
 
-  const loadFlockSummary = useCallback(async () => {
-    if (!isAuthenticated) {
-      setMainFlock(null);
-      setFlocksReady(true);
-      return;
-    }
-    setFlocksLoading(true);
-    try {
-      const flocks = await listFlocks();
-      setMainFlock(await pickMainFlock(flocks));
-    } catch {
-      setMainFlock(null);
-    } finally {
-      setFlocksLoading(false);
-      setFlocksReady(true);
-    }
-  }, [isAuthenticated]);
-
   const loadActiveJourney = useCallback(async () => {
     setJourneyLoading(true);
     try {
@@ -172,39 +148,22 @@ export function HomeScreen() {
     useCallback(() => {
       loadUpdates(undefined, locale).then(setUpdates).catch(() => {});
       loadActiveJourney();
-      loadFlockSummary();
       void loadLeagueSummary();
-    }, [loadActiveJourney, loadFlockSummary, loadLeagueSummary, locale])
+    }, [loadActiveJourney, loadLeagueSummary, locale])
   );
 
   useEffect(() => {
     if (!isAuthenticated) {
       setActiveJourney(null);
-      setMainFlock(null);
-      setFlocksReady(true);
-    } else {
-      setFlocksReady(false);
     }
     if (profileReady || !isAuthenticated) {
       loadActiveJourney();
     }
-    if (isAuthenticated) {
-      loadFlockSummary();
-    }
-  }, [isAuthenticated, profileReady, profile?.country_code, loadActiveJourney, loadFlockSummary]);
+  }, [isAuthenticated, profileReady, profile?.country_code, loadActiveJourney]);
 
   const goJourneyProgress = () => {
     if (!activeJourney?.country?.code) return;
     navigation.navigate('BirdrJourneyProgress', { countryCode: activeJourney.country.code });
-  };
-
-  const goFlocks = async () => {
-    if (mainFlock) {
-      await setStoredMainFlockSlug(mainFlock.slug);
-      navigation.navigate('FlockDetail', { slug: mainFlock.slug });
-      return;
-    }
-    navigation.navigate('FlockIntro');
   };
 
   const countryCode = activeJourney?.country?.code ?? '';
@@ -213,23 +172,18 @@ export function HomeScreen() {
     : '';
   const flag = countryCodeToFlag(countryCode);
   const currentLevelTitle = levelTitle(activeJourney?.current_level, locale);
-  const flockLogoUri = resolveMediaUrl(mainFlock?.logo_url);
-  const flockCountryLabel = mainFlock
-    ? getCountryDisplayName(mainFlock.default_country, locale)
-    : '';
-  const flockChallenge = mainFlock?.active_challenge;
+  // The beginners course is written in Dutch, so only the Dutch app offers it for now.
+  const showCourse = COURSE_LOCALES.includes(locale);
 
   const leagueToday = leagueDetail?.today;
-  const needsCountdown =
-    (!!flockChallenge && flockChallenge.status === 'active' && !flockChallenge.my_completed) ||
-    (!!leagueToday && !leagueToday.played);
+  const needsCountdown = !!leagueToday && !leagueToday.played;
 
   const [nowTick, setNowTick] = useState(() => Date.now());
   useEffect(() => {
     if (!needsCountdown) return undefined;
     const id = setInterval(() => setNowTick(Date.now()), 1000);
     return () => clearInterval(id);
-  }, [needsCountdown, flockChallenge?.id, flockChallenge?.ends_at]);
+  }, [needsCountdown]);
 
   const leagueCountry = leagueDetail?.country ?? leagueSuggested;
   const leagueCountryLabel = leagueCountry ? getCountryDisplayName(leagueCountry, locale) : '';
@@ -252,30 +206,17 @@ export function HomeScreen() {
       : t('league_home_hint');
   }, [leagueToday, leagueSuggested, nowTick, t]);
 
-  const flockStatusLine = useMemo(() => {
-    if (!flockChallenge) return t('flocks_no_active_challenge_short');
-    if (flockChallenge.my_completed) {
-      if (flockChallenge.my_rank_label) {
-        return t('flocks_home_rank', { rank: flockChallenge.my_rank_label });
-      }
-      return t('flocks_home_completed');
-    }
-    const remaining = getChallengeTimeRemaining(flockChallenge.ends_at, new Date(nowTick));
-    if (!remaining) return t('flocks_home_challenge_ended');
-    return t('flocks_home_time_left', { time: formatChallengeCountdown(remaining) });
-  }, [flockChallenge, nowTick, t]);
 
   const modes = modeVisibility({
     gamesPlayed: gameModes.gamesPlayed,
     showAll: gameModes.showAll,
     inLeague: !!leagueDetail,
-    inFlock: !!mainFlock,
     hasJourney: !!activeJourney,
     playedSurvival: gameModes.playedSurvival,
     isAuthenticated,
     unlockSeen: gameModes.unlockSeen,
   });
-  const modesLoading = !gameModes.ready || !leagueLoaded || (flocksLoading && !flocksReady);
+  const modesLoading = !gameModes.ready || !leagueLoaded;
   const showUnlockBanner = gameModes.ready && modes.showUnlockBanner;
 
   // The unlock banner is a one-time moment: once seen, leaving home counts as dismissing it.
@@ -332,49 +273,6 @@ export function HomeScreen() {
     </TouchableOpacity>
   );
 
-  const flockCard = mainFlock ? (
-    <TouchableOpacity
-      style={styles.flocksHeroButton}
-      onPress={() => void goFlocks()}
-      testID="home.flocks"
-      accessibilityLabel={`${mainFlock.name}, ${flockCountryLabel}`}
-    >
-      {flockLogoUri ? (
-        <Image source={{ uri: flockLogoUri }} style={styles.flocksHeroLogo} resizeMode="cover" />
-      ) : (
-        <GameArtImage
-          source={getFlockImage('leaderboard', visualStyle)}
-          style={styles.flocksHeroImage}
-          resizeMode="contain"
-        />
-      )}
-      <View style={styles.flocksHeroText}>
-        <Text style={styles.flocksHeroTitle} numberOfLines={2}>
-          {mainFlock.name}
-        </Text>
-        <Text style={styles.flocksHeroContinue} numberOfLines={1}>
-          {flockStatusLine}
-        </Text>
-      </View>
-    </TouchableOpacity>
-  ) : (
-    <TouchableOpacity
-      style={styles.flocksHeroButton}
-      onPress={() => void goFlocks()}
-      testID="home.flocks"
-      accessibilityLabel={t('flocks_start')}
-    >
-      <GameArtImage source={getFlockImage('invite', visualStyle)} style={styles.flocksHeroImage} resizeMode="contain" />
-      <View style={styles.flocksHeroText}>
-        <Text style={styles.flocksHeroTitle} numberOfLines={2}>
-          {t('flocks_start')}
-        </Text>
-        <Text style={styles.flocksHeroHint} numberOfLines={2}>
-          {t('flocks_home_start_cta')}
-        </Text>
-      </View>
-    </TouchableOpacity>
-  );
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
@@ -439,6 +337,29 @@ export function HomeScreen() {
       </TouchableOpacity>
 
       <View style={styles.secondaryHeroColumn}>
+        {showCourse && (
+          <TouchableOpacity
+            style={styles.courseHeroButton}
+            onPress={() => navigation.navigate('Course')}
+            testID="home.course"
+            accessibilityLabel={`${t('course_title')} (${t('beta')}), ${t('course_home_hint')}`}
+          >
+            <GameArtImage source={getMoodImage('waiting', visualStyle)} style={styles.journeyNewHeroImage} resizeMode="contain" />
+            <View style={styles.journeyHeroText}>
+              <View style={styles.courseTitleRow}>
+                <Text style={styles.courseHeroTitle} numberOfLines={2}>
+                  {t('course_title')}
+                </Text>
+                <View style={styles.betaBadge}>
+                  <Text style={styles.betaBadgeText}>{t('beta')}</Text>
+                </View>
+              </View>
+              <Text style={styles.courseHeroHint} numberOfLines={2}>
+                {t('course_home_hint')}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        )}
         {journeyLoading ? (
           <View style={styles.secondaryLoadingWrap}>
             <ActivityIndicator size="small" color={colors.primary[500]} />
@@ -493,7 +414,6 @@ export function HomeScreen() {
           <>
             {modes.survival === 'full' && survivalCard}
             {modes.league === 'full' && leagueCard}
-            {modes.flock === 'full' && flockCard}
             {modes.hasTiles && (
               <View style={styles.moreModes}>
                 <Text style={styles.moreModesTitle}>{t('more_ways_to_play')}</Text>
@@ -514,15 +434,6 @@ export function HomeScreen() {
                       tileStyle={styles.leagueTile}
                       art={<Text style={styles.modeTileEmoji}>🏆</Text>}
                       onPress={goLeague}
-                    />
-                  )}
-                  {modes.flock === 'tile' && (
-                    <ModeTile
-                      testID="home.flocksTile"
-                      label={t('flocks_start')}
-                      tileStyle={styles.flocksTile}
-                      art={<GameArtImage source={getFlockImage('invite', visualStyle)} style={styles.modeTileImage} resizeMode="contain" />}
-                      onPress={() => void goFlocks()}
                     />
                   )}
                 </View>
@@ -746,48 +657,50 @@ const styles = StyleSheet.create({
     color: colors.primary[200],
     lineHeight: 20,
   },
-  flocksHeroButton: {
+  courseHeroButton: {
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
-    backgroundColor: colors.primary[600],
+    backgroundColor: colors.secondary[500],
     paddingVertical: 12,
     paddingHorizontal: 16,
     borderRadius: 16,
     borderWidth: 2,
-    borderColor: colors.primary[400],
+    borderColor: colors.secondary[300],
   },
-  flocksHeroImage: {
-    width: 56,
-    height: 56,
-  },
-  flocksHeroLogo: {
-    width: 56,
-    height: 56,
-    borderRadius: 10,
-  },
-  flocksHeroText: {
-    flex: 1,
-    minWidth: 0,
-  },
-  flocksHeroTitle: {
+  courseHeroTitle: {
     fontSize: 18,
     fontWeight: '700',
-    color: colors.primary[50],
+    color: '#fff',
     lineHeight: 22,
+    flexShrink: 1,
+  },
+  courseTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: 8,
     marginBottom: 2,
   },
-  flocksHeroHint: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: colors.primary[200],
-    lineHeight: 20,
+  betaBadge: {
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+    backgroundColor: 'rgba(255,255,255,0.22)',
   },
-  flocksHeroContinue: {
+  betaBadgeText: {
+    fontSize: 10,
+    fontWeight: '800',
+    letterSpacing: 0.5,
+    textTransform: 'uppercase',
+    color: '#fff',
+  },
+  courseHeroHint: {
     fontSize: 14,
     fontWeight: '600',
-    color: colors.primary[300],
+    color: colors.secondary[100],
+    lineHeight: 20,
   },
   unlockBanner: {
     flexDirection: 'row',
@@ -843,9 +756,6 @@ const styles = StyleSheet.create({
   leagueTile: {
     backgroundColor: colors.primary[900],
     borderColor: '#f59e0b',
-  },
-  flocksTile: {
-    backgroundColor: colors.primary[600],
   },
   modeTileImage: {
     width: 40,

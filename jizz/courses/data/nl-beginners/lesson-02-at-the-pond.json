@@ -1,0 +1,545 @@
+{
+  "course": "nl-beginners",
+  "week": 2,
+  "slug": "at-the-pond",
+  "part": 1,
+  "kind": "species",
+  "season": "any",
+  "minutes": 10,
+  "title": {
+    "en": "At the pond",
+    "nl": "Aan de vijver"
+  },
+  "subtitle": {
+    "en": "Five birds of every Dutch canal and park pond",
+    "nl": "Vijf vogels van elke sloot en parkvijver"
+  },
+  "intro": {
+    "en": "Today we walk to the pond in the park. The Netherlands is a country of water, and the five birds in this lesson live on almost all of it: from the canal in town to the ditch along the meadow.\n\nWater birds are the perfect place to train your eye. They are big, they sit still, and they let you look closely. We start with the most familiar duck in the country and end with a bird that can stand still for half an hour.\n\nAt the end there's a quiz of eight questions, with two birds from last week mixed in.",
+    "nl": "Vandaag lopen we naar de vijver in het park. Nederland is een waterland, en de vijf vogels uit deze les leven op bijna al dat water: van de gracht in de stad tot de sloot langs het weiland.\n\nWatervogels zijn perfect om je oog te trainen. Ze zijn groot, ze zitten stil en je kunt ze rustig bekijken. We beginnen met de bekendste eend van het land en eindigen met een vogel die een half uur stil kan staan.\n\nAan het eind volgt een quiz van acht vragen, met twee vogels van vorige week ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "bill",
+        "nl": "snavel"
+      },
+      "explain": {
+        "en": "The beak.",
+        "nl": "De bek van een vogel."
+      }
+    },
+    {
+      "term": {
+        "en": "frontal shield",
+        "nl": "voorhoofdsschild"
+      },
+      "explain": {
+        "en": "A bare, coloured plate above the bill.",
+        "nl": "Een kale, gekleurde plaat boven de snavel."
+      }
+    },
+    {
+      "term": {
+        "en": "flank",
+        "nl": "flank"
+      },
+      "explain": {
+        "en": "The side of the body, below the wing.",
+        "nl": "De zijkant van het lijf, onder de vleugel."
+      }
+    },
+    {
+      "term": {
+        "en": "undertail",
+        "nl": "onderstaart"
+      },
+      "explain": {
+        "en": "The feathers under the tail.",
+        "nl": "De veren onder de staart."
+      }
+    }
+  ],
+  "words_shown": "inline: bold on the bird cards, with the explanation under the look-for lines",
+  "birds": [
+    {
+      "species_id": 165,
+      "ebird_code": "mallar3",
+      "latin": "Anas platyrhynchos",
+      "name": {
+        "en": "Mallard",
+        "nl": "Wilde eend"
+      },
+      "plumage": {
+        "en": "adult male",
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "en": "Shiny green head",
+          "nl": "Glanzend groene kop"
+        },
+        {
+          "en": "Thin white neck ring",
+          "nl": "Smalle witte halsring"
+        },
+        {
+          "en": "Yellow **bill**, and a little black curl on the tail",
+          "nl": "Gele **snavel**, en een zwart krulletje op de staart"
+        }
+      ],
+      "where_when": {
+        "en": "Every pond, canal and ditch, all year.",
+        "nl": "Elke vijver, gracht en sloot, het hele jaar."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "The famous \"quack\" is the female; the male gives a soft, nasal \"rhaeb\".",
+          "nl": "Het bekende \"kwak\" is het vrouwtje; het mannetje roept zacht en nasaal \"rhaeb\"."
+        },
+        "pick": "xeno-canto call, female quacking, NL, quality A",
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1194961,
+            "xeno_canto": "XC1029063",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 81.1,
+            "background_species": 0,
+            "recordist": "Xavier Riera"
+          },
+          {
+            "media_id": 1194970,
+            "xeno_canto": "XC705240",
+            "type": "call (take-off call)",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35.8,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "Ducks with odd white patches in parks are usually farmyard Mallards. Leave them for later. The brown female comes in week 5.",
+        "nl": "Eenden met rare witte vlekken in het park zijn meestal soepeenden. Die bewaren we voor later. Het bruine vrouwtje komt in week 5."
+      },
+      "media": {
+        "card": [
+          130461,
+          130413,
+          130495
+        ],
+        "quiz": [
+          130479,
+          130478,
+          130492,
+          130521,
+          130532
+        ]
+      },
+      "media_for_later": {
+        "female (lesson 5)": [
+          130414,
+          130511
+        ],
+        "duckling family (lesson 5)": [
+          130395
+        ]
+      }
+    },
+    {
+      "species_id": 1851,
+      "ebird_code": "eurcoo",
+      "latin": "Fulica atra",
+      "name": {
+        "en": "Eurasian Coot",
+        "nl": "Meerkoet"
+      },
+      "plumage": {
+        "en": "adult",
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "en": "All black, round body",
+          "nl": "Helemaal zwart, rond lijf"
+        },
+        {
+          "en": "White **bill** and white **frontal shield**",
+          "nl": "Witte **snavel** en wit **voorhoofdsschild**"
+        },
+        {
+          "en": "Dives and pops back up like a cork",
+          "nl": "Duikt en ploept weer boven als een kurk"
+        }
+      ],
+      "where_when": {
+        "en": "Open water, often in groups in winter. Quarrels loudly in spring.",
+        "nl": "Open water, in de winter vaak in groepen. Maakt luid ruzie in het voorjaar."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, sharp \"pjik!\", like a cork leaving a bottle.",
+          "nl": "Een kort, scherp \"pjik!\", als een kurk uit een fles."
+        },
+        "pick": "xeno-canto call, single \"pjik\", NL, quality A",
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1215918,
+            "xeno_canto": "XC747271",
+            "type": "call (various calls)",
+            "country": "Denmark",
+            "quality": "A",
+            "seconds": 84.5,
+            "background_species": 0,
+            "recordist": "Agris Celmins"
+          },
+          {
+            "media_id": 1215903,
+            "xeno_canto": "XC993311",
+            "type": "call",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 42.7,
+            "background_species": 0,
+            "recordist": "Uku Paal"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "media": {
+        "card": [
+          291407,
+          291278,
+          291296
+        ],
+        "quiz": [
+          291419,
+          291277,
+          291337,
+          291408,
+          291340
+        ]
+      },
+      "media_for_later": {
+        "chick (lesson 5)": [
+          291274,
+          291282,
+          291253
+        ],
+        "juvenile (lesson 5)": [
+          291288,
+          291266
+        ]
+      }
+    },
+    {
+      "species_id": 1843,
+      "ebird_code": "commoo3",
+      "latin": "Gallinula chloropus",
+      "name": {
+        "en": "Common Moorhen",
+        "nl": "Waterhoen"
+      },
+      "plumage": {
+        "en": "adult",
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "en": "Red **frontal shield** and bill with a yellow tip",
+          "nl": "Rood **voorhoofdsschild** en rode snavel met gele punt"
+        },
+        {
+          "en": "White line along the **flank**",
+          "nl": "Witte streep langs de **flank**"
+        },
+        {
+          "en": "Flicks its white **undertail** as it walks",
+          "nl": "Wipt met de witte **onderstaart** tijdens het lopen"
+        }
+      ],
+      "where_when": {
+        "en": "Edges of ditches and ponds, often on the grass. Nods its head while swimming.",
+        "nl": "Langs slootkanten en vijvers, vaak op het gras. Knikt met de kop tijdens het zwemmen."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A sudden, gurgling \"krrruk\" from the reeds.",
+          "nl": "Een plotseling, borrelend \"krrruk\" uit het riet."
+        },
+        "pick": "xeno-canto call, NL, quality A",
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1215784,
+            "xeno_canto": "XC792811",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 32.4,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          },
+          {
+            "media_id": 1215790,
+            "xeno_canto": "XC655648",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 47.0,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "media": {
+        "card": [
+          290130,
+          290129,
+          290191
+        ],
+        "quiz": [
+          290192,
+          290253,
+          290111,
+          290185,
+          290246,
+          290248
+        ]
+      },
+      "media_for_later": {
+        "chick (lesson 5)": [
+          290103
+        ],
+        "juvenile (lesson 5)": [
+          290261
+        ]
+      }
+    },
+    {
+      "species_id": 93,
+      "ebird_code": "mutswa",
+      "latin": "Cygnus olor",
+      "name": {
+        "en": "Mute Swan",
+        "nl": "Knobbelzwaan"
+      },
+      "plumage": {
+        "en": "adult",
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "en": "Big and all white",
+          "nl": "Groot en helemaal wit"
+        },
+        {
+          "en": "Orange **bill** with a black knob at the base",
+          "nl": "Oranje **snavel** met een zwarte knobbel"
+        },
+        {
+          "en": "Swims with the neck in an elegant S-curve",
+          "nl": "Zwemt met de hals in een sierlijke S"
+        }
+      ],
+      "where_when": {
+        "en": "Canals, lakes and wet meadows, all year.",
+        "nl": "Grachten, plassen en natte weilanden, het hele jaar."
+      },
+      "sound": {
+        "type": "other",
+        "describe": {
+          "en": "Not a voice: listen to the throbbing \"wing-wing-wing\" of its wings in flight.",
+          "nl": "Geen stem: luister naar het zoemende \"wiew-wiew-wiew\" van de vleugels in de vlucht."
+        },
+        "pick": "xeno-canto \"flight\" or wing sound, quality A",
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1193992,
+            "xeno_canto": "XC780323",
+            "type": "flight call (wingbeats)",
+            "country": "France",
+            "quality": "A",
+            "seconds": 45.3,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1193997,
+            "xeno_canto": "XC706444",
+            "type": "not specified (wingbeats)",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 40.7,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "Grey-brown swans are this year's young: week 5.",
+        "nl": "Grijsbruine zwanen zijn jongen van dit jaar: week 5."
+      },
+      "media": {
+        "card": [
+          119769,
+          119695,
+          119784
+        ],
+        "quiz": [
+          119699,
+          119737,
+          119733,
+          119785,
+          119672,
+          119729,
+          119783
+        ]
+      },
+      "media_for_later": {
+        "juvenile (lesson 5)": [
+          119639
+        ],
+        "family (lesson 5)": [
+          119629
+        ]
+      }
+    },
+    {
+      "species_id": 2652,
+      "ebird_code": "graher1",
+      "latin": "Ardea cinerea",
+      "name": {
+        "en": "Grey Heron",
+        "nl": "Blauwe reiger"
+      },
+      "plumage": {
+        "en": "adult",
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "en": "Tall and grey, with a long neck and legs",
+          "nl": "Lang en grijs, met lange hals en poten"
+        },
+        {
+          "en": "Black stripe from the eye ending in a thin plume",
+          "nl": "Zwarte streep vanaf het oog die eindigt in een dunne pluim"
+        },
+        {
+          "en": "Flies with the neck pulled in, legs sticking out behind",
+          "nl": "Vliegt met ingetrokken hals en uitgestoken poten"
+        }
+      ],
+      "where_when": {
+        "en": "Stands motionless at the water's edge, in meadows, and on the fish stall at the market.",
+        "nl": "Staat doodstil aan de waterkant, in weilanden, en bij de viskraam op de markt."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, hoarse \"kraak\" in flight.",
+          "nl": "Een luid, hees \"kraak\" in de vlucht."
+        },
+        "pick": "xeno-canto flight call, NL, quality A",
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1224971,
+            "xeno_canto": "XC947557",
+            "type": "call, flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 41.1,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1224968,
+            "xeno_canto": "XC996264",
+            "type": "flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 88.2,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "media": {
+        "card": [
+          399944,
+          399818,
+          399832
+        ],
+        "quiz": [
+          399827,
+          399811,
+          399855,
+          399894,
+          399951,
+          399949,
+          399837,
+          399958
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 1843,
+    "species_ids": [
+      1851,
+      1843
+    ],
+    "title": {
+      "en": "Coot or Moorhen?",
+      "nl": "Meerkoet of waterhoen?"
+    },
+    "text": {
+      "en": "Look at the face. White shield: Coot. Red shield with a yellow tip: Moorhen. The Moorhen also has that white line along its side and walks on the grass much more.",
+      "nl": "Kijk naar het gezicht. Wit schild: meerkoet. Rood schild met gele punt: waterhoen. Het waterhoen heeft ook die witte streep langs de zij en loopt veel vaker op het gras."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      1
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Walk past a pond or canal. Coots or Moorhens: which do you see more? Find a heron and time how long it stands still.",
+    "nl": "Loop langs een vijver of gracht. Meerkoeten of waterhoentjes: wat zie je meer? Zoek een reiger en kijk hoe lang hij stil blijft staan."
+  },
+  "next": {
+    "en": "Next week: pigeons and crows.",
+    "nl": "Volgende week: duiven en kraaien."
+  },
+  "outside_shown": "on the done screen, after the quiz",
+  "flow": [
+    "intro",
+    "bird:165",
+    "bird:1851",
+    "bird:1843",
+    "bird:93",
+    "bird:2652",
+    "quiz",
+    "done"
+  ]
+}

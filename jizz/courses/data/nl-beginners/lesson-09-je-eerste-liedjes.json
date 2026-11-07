@@ -1,0 +1,521 @@
+{
+  "course": "nl-beginners",
+  "week": 9,
+  "slug": "je-eerste-liedjes",
+  "part": 1,
+  "kind": "sound",
+  "season": "spring",
+  "minutes": 12,
+  "title": {
+    "nl": "Je eerste liedjes"
+  },
+  "subtitle": {
+    "nl": "Zes vogels die je aan hun lied herkent"
+  },
+  "intro": {
+    "nl": "Het is voorjaar. Zet vroeg in de ochtend het raam open, of ga even in de tuin staan. Je hoort veel meer vogels dan je ziet: de meeste zitten verstopt tussen de blaadjes. Wie de liedjes kent, weet toch wie er zit.\n\nVandaag luisteren we naar zes vogels. Vijf ken je al van gezicht, één is nieuw: de tjiftjaf, een klein groenig vogeltje dat je het makkelijkst aan zijn lied herkent. Bij elke vogel krijg je drie dingen om op te letten: het ritme, de toonhoogte en een manier om het te onthouden. Doe de les als het kan met oordopjes of een koptelefoon.\n\nDe quiz aan het eind is anders dan anders: acht vragen, alleen geluid, geen foto's."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "zang"
+      },
+      "explain": {
+        "nl": "Het liedje van een vogel, vooral in het voorjaar. Meestal zingt het mannetje, om een plek te claimen en een vrouwtje te lokken."
+      }
+    },
+    {
+      "term": {
+        "nl": "roep"
+      },
+      "explain": {
+        "nl": "Een kort geluidje om contact te houden of te waarschuwen. Vogels roepen het hele jaar."
+      }
+    },
+    {
+      "term": {
+        "nl": "strofe"
+      },
+      "explain": {
+        "nl": "Eén liedje van begin tot eind, tot de vogel even stopt."
+      }
+    },
+    {
+      "term": {
+        "nl": "triller"
+      },
+      "explain": {
+        "nl": "Een reeks heel snelle, gelijke tonen, als een rollende r."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 8861,
+      "latin": "Turdus merula",
+      "name": {
+        "nl": "Merel"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Laag, warm en fluitend"
+        },
+        {
+          "nl": "Elke **strofe** anders, met pauzes ertussen"
+        },
+        {
+          "nl": "Klinkt ontspannen, alsof hij alle tijd heeft"
+        }
+      ],
+      "where_when": {
+        "nl": "Zingt van februari tot juli vanaf een dak, antenne of boomtop, vooral bij zonsopkomst en in de avond."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Rustige, fluitende zinnen, elke keer een beetje anders. Aan het eind vaak een zacht, krasserig staartje."
+        },
+        "chosen": [
+          {
+            "media_id": 1312715,
+            "xeno_canto": "XC1075814",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 51.5,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          },
+          {
+            "media_id": 1312716,
+            "xeno_canto": "XC1075796",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 82.9,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          948633,
+          948634,
+          948763
+        ],
+        "quiz": [
+          948653,
+          948768,
+          948651,
+          948736,
+          948750,
+          948770,
+          948769
+        ]
+      }
+    },
+    {
+      "species_id": 9078,
+      "latin": "Erithacus rubecula",
+      "name": {
+        "nl": "Roodborst"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Hoog, dun en weemoedig"
+        },
+        {
+          "nl": "Kabbelt op en neer, met korte pauzes"
+        },
+        {
+          "nl": "Zingt ook in herfst en winter"
+        }
+      ],
+      "where_when": {
+        "nl": "Zingt bijna het hele jaar vanuit een struik of lage boom. Soms zelfs 's nachts, onder een lantaarnpaal."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Heldere, parelende zinnetjes, nu eens snel dan weer langzaam, hoog en een beetje treurig."
+        },
+        "chosen": [
+          {
+            "media_id": 1315592,
+            "xeno_canto": "XC1080724",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 41.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1315603,
+            "xeno_canto": "XC1072480",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 37.9,
+            "background_species": 0,
+            "recordist": "Pablo Guillemaud"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "media": {
+        "card": [
+          970534,
+          970437,
+          970472
+        ],
+        "quiz": [
+          970462,
+          970448,
+          970445,
+          970557,
+          970463,
+          970542,
+          970505,
+          970567
+        ]
+      }
+    },
+    {
+      "species_id": 8529,
+      "latin": "Troglodytes troglodytes",
+      "name": {
+        "nl": "Winterkoning"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Oorverdovend hard voor zo'n kleintje"
+        },
+        {
+          "nl": "Snel en helder, zo'n vijf seconden"
+        },
+        {
+          "nl": "Met een ratelende **triller** erin"
+        }
+      ],
+      "where_when": {
+        "nl": "Zingt bijna het hele jaar, laag uit een struik, heg of takkenhoop. Je hoort hem veel vaker dan je hem ziet."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Een snelle, krachtige stroom van heldere tonen met een of twee ratelende trillers erin. Je schrikt ervan, zo hard."
+        },
+        "chosen": [
+          {
+            "media_id": 1308225,
+            "xeno_canto": "XC1055856",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 62.1,
+            "background_species": 0,
+            "recordist": "François Guibert"
+          },
+          {
+            "media_id": 1308207,
+            "xeno_canto": "XC1079264",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 34.0,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          916216,
+          916142,
+          916148
+        ],
+        "quiz": [
+          916156,
+          916168,
+          916223,
+          916210,
+          916144,
+          916287,
+          916179,
+          916260
+        ]
+      }
+    },
+    {
+      "species_id": 7132,
+      "latin": "Parus major",
+      "name": {
+        "nl": "Koolmees"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "De **zang**: twee tonen, \"tie-tuu\""
+        },
+        {
+          "nl": "Steeds herhaald, als een fietspomp"
+        },
+        {
+          "nl": "Luid en zagend, al vanaf januari"
+        }
+      ],
+      "where_when": {
+        "nl": "Tuinen, parken en bossen. Zingt al op zonnige dagen in januari en gaat door tot in de zomer."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "\"Tie-tuu, tie-tuu, tie-tuu\": twee tonen, steeds hetzelfde ritme. De koolmees kent veel varianten. Hoor je iets wat je niet kent? Grote kans dat het een koolmees is."
+        },
+        "chosen": [
+          {
+            "media_id": 1288063,
+            "xeno_canto": "XC996274",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 79.1,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1288057,
+            "xeno_canto": "XC1046158",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 63.8,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 16
+      },
+      "media": {
+        "card": [
+          805368,
+          805387,
+          805456
+        ],
+        "quiz": [
+          805393,
+          805391,
+          805392,
+          805444,
+          805438,
+          805405,
+          805362,
+          805376,
+          805493
+        ]
+      }
+    },
+    {
+      "species_id": 7854,
+      "latin": "Phylloscopus collybita",
+      "name": {
+        "nl": "Tjiftjaf"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Klein en groenbruin, zonder opvallende tekening"
+        },
+        {
+          "nl": "Donkere poten, korte lichte wenkbrauwstreep"
+        },
+        {
+          "nl": "Wipt steeds met zijn staart"
+        }
+      ],
+      "where_when": {
+        "nl": "Van half maart tot oktober in bossen, parken en tuinen met hoge bomen. Een van de eerste trekvogels die in het voorjaar terugkomt. Zoekt rusteloos tussen de blaadjes naar insecten."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Hij zegt zijn eigen naam: \"tjif-tjaf-tjif-tjif-tjaf\". Twee tonen die zonder vast ritme op en neer springen, minutenlang."
+        },
+        "chosen": [
+          {
+            "media_id": 1298458,
+            "xeno_canto": "XC985808",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 73.8,
+            "background_species": 0,
+            "recordist": "Abe Bakker"
+          },
+          {
+            "media_id": 1298460,
+            "xeno_canto": "XC985275",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 127.5,
+            "background_species": 0,
+            "recordist": "Olivier SWIFT"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "nl": "Zijn tweelingbroer de fitis ziet er bijna hetzelfde uit, maar zingt heel anders: dat komt in een vervolgcursus."
+      },
+      "media": {
+        "card": [
+          866074,
+          866072,
+          866083
+        ],
+        "quiz": [
+          865987,
+          866081,
+          865971,
+          866035,
+          866104,
+          865996,
+          865978,
+          865990
+        ]
+      }
+    },
+    {
+      "species_id": 9925,
+      "latin": "Fringilla coelebs",
+      "name": {
+        "nl": "Vink"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Een vrolijke roffel die naar beneden loopt"
+        },
+        {
+          "nl": "Eindigt met een krulletje"
+        },
+        {
+          "nl": "Zijn **roep**: een helder \"pink\""
+        }
+      ],
+      "where_when": {
+        "nl": "Zingt van februari tot juli vanuit bomen in bossen, parken en tuinen, steeds hetzelfde liedje."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Zo'n twee seconden: een reeks tonen die steeds sneller gaat en daalt, als een aanloop, en aan het eind een sprongetje met een krul."
+        },
+        "chosen": [
+          {
+            "media_id": 1326230,
+            "xeno_canto": "XC1013520",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 76.0,
+            "background_species": 0,
+            "recordist": "Romuald Mikusek"
+          },
+          {
+            "media_id": 1326214,
+            "xeno_canto": "XC1079234",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 68.2,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "media": {
+        "card": [
+          1050523,
+          1050520,
+          1050504
+        ],
+        "quiz": [
+          1050481,
+          1050596,
+          1050586,
+          1050521,
+          1050486,
+          1050551,
+          1050518,
+          1050554
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 7854,
+    "species_ids": [
+      7132,
+      7854
+    ],
+    "title": {
+      "nl": "Koolmees of tjiftjaf?"
+    },
+    "text": {
+      "nl": "Allebei twee tonen. De koolmees zingt luid en zagend, in een vast ritme: \"tie-tuu, tie-tuu, tie-tuu\". De tjiftjaf is zachter en onregelmatig: \"tjif-tjaf-tjif-tjif-tjaf\", de tonen springen zomaar op en neer."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "kind": "sound",
+    "answers_from": "this lesson",
+    "review_from": [],
+    "review_questions": 0,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Ga deze week één keer vroeg naar buiten, liefst tussen zes en acht uur 's ochtends, of zet het raam open. Luister vijf minuten met je ogen dicht. Welke van de zes hoor je? Vink ze af in de app. Hoor je \"tjif-tjaf\"? Dan is het voorjaar echt begonnen."
+  },
+  "next": {
+    "nl": "Volgende week: de grote herhaling van deel 1."
+  },
+  "flow": [
+    "intro",
+    "bird:8861",
+    "bird:9078",
+    "bird:8529",
+    "bird:7132",
+    "bird:7854",
+    "bird:9925",
+    "quiz",
+    "done"
+  ]
+}

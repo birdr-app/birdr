@@ -1,0 +1,445 @@
+{
+  "course": "nl-beginners",
+  "week": 8,
+  "slug": "eenden-de-mannetjes",
+  "part": 1,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "nl": "Eenden: de mannetjes"
+  },
+  "subtitle": {
+    "nl": "Vijf eenden, elk met één opvallend kenmerk"
+  },
+  "intro": {
+    "nl": "Vandaag gaan we naar een grote plas. Tussen de wilde eenden en de meerkoeten dobberen eenden die je misschien nog nooit goed hebt bekeken.\n\nVan de herfst tot het voorjaar zien eendenmannetjes er op hun mooist uit: dan zoeken ze een partner. Daarom kijken we vandaag alleen naar de mannetjes. De bruine vrouwtjes lijken veel meer op elkaar en komen later in de cursus.\n\nVijf eenden, elk met iets wat je meteen opvalt: een kuif, een gele bles, een groene streep, een zwart achtereind of een enorme snavel. Aan het eind volgt een quiz van acht vragen, met twee vogels uit eerdere lessen ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "kuif"
+      },
+      "explain": {
+        "nl": "Lange veren op de kop die rechtop staan of naar achteren hangen."
+      }
+    },
+    {
+      "term": {
+        "nl": "oogstreep"
+      },
+      "explain": {
+        "nl": "Een streep door of achter het oog."
+      }
+    },
+    {
+      "term": {
+        "nl": "stuit"
+      },
+      "explain": {
+        "nl": "Het stuk tussen de rug en de staart."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 202,
+      "latin": "Aythya fuligula",
+      "name": {
+        "nl": "Kuifeend"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Zwart met hagelwitte flanken"
+        },
+        {
+          "nl": "Hangende **kuif** achter op de kop"
+        },
+        {
+          "nl": "Felgeel oog"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar op vijvers, grachten en plassen, in de winter in grote groepen. Duikt naar mosseltjes en slakjes."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Meestal stil. Je hoort vooral het lage, knorrende \"kerr-kerr\" van het vrouwtje."
+        },
+        "chosen": [
+          {
+            "media_id": 1195388,
+            "xeno_canto": "XC1001514",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 36.8,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1195390,
+            "xeno_canto": "XC736695",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 53.9,
+            "background_species": 0,
+            "recordist": "Alan Dalton"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          135672,
+          135677,
+          135611
+        ],
+        "quiz": [
+          135604,
+          135537,
+          135519,
+          135518,
+          135635,
+          135638
+        ]
+      }
+    },
+    {
+      "species_id": 175,
+      "latin": "Anas crecca",
+      "name": {
+        "nl": "Wintertaling"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Klein: veel kleiner dan een wilde eend"
+        },
+        {
+          "nl": "Roodbruine kop met groene **oogstreep**"
+        },
+        {
+          "nl": "Gele driehoek bij de staart"
+        }
+      ],
+      "where_when": {
+        "nl": "Vooral van september tot april, op ondiepe plassen en langs slootranden. Vaak in groepjes, dicht bij het riet."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een helder, fluitend \"kriek\", vaak van een paar mannetjes tegelijk."
+        },
+        "chosen": [
+          {
+            "media_id": 1195118,
+            "xeno_canto": "XC698774",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 66.4,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          },
+          {
+            "media_id": 1195108,
+            "xeno_canto": "XC998356",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 49.4,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "In de zomer en het begin van de herfst lijken eendenmannetjes een tijdje op de bruine vrouwtjes. Dat heet het eclipskleed. Daar kijken we naar in een vervolgcursus."
+      },
+      "media": {
+        "card": [
+          132066,
+          132048,
+          131951
+        ],
+        "quiz": [
+          131965,
+          131970,
+          132019,
+          131991,
+          132086,
+          131957,
+          132065
+        ]
+      }
+    },
+    {
+      "species_id": 152,
+      "latin": "Mareca penelope",
+      "name": {
+        "nl": "Smient"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Roodbruine kop met gele bles"
+        },
+        {
+          "nl": "Roze-grijze borst"
+        },
+        {
+          "nl": "Kort, blauwgrijs snaveltje"
+        }
+      ],
+      "where_when": {
+        "nl": "Van oktober tot maart, met duizenden tegelijk grazend op natte weilanden."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een helder, fluitend \"wie-joe!\" van de mannetjes. Een grote groep klinkt als een feestje vol fluitjes."
+        },
+        "chosen": [
+          {
+            "media_id": 1194774,
+            "xeno_canto": "XC994797",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 43.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1194775,
+            "xeno_canto": "XC994796",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 34.8,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          128595,
+          128645,
+          128560
+        ],
+        "quiz": [
+          128600,
+          128680,
+          128662,
+          128574,
+          128687,
+          128714,
+          128724
+        ]
+      }
+    },
+    {
+      "species_id": 150,
+      "latin": "Mareca strepera",
+      "name": {
+        "nl": "Krakeend"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Grijs, met fijne golflijntjes van dichtbij"
+        },
+        {
+          "nl": "Zwarte **stuit** en onderstaart"
+        },
+        {
+          "nl": "Kleine witte spiegel op de vleugel"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar op vijvers, sloten en plassen. Zwemt vaak tussen de wilde eenden en wordt makkelijk over het hoofd gezien."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Het mannetje roept een laag, kort \"rep\"; het vrouwtje kwaakt als een wilde eend."
+        },
+        "chosen": [
+          {
+            "media_id": 1194731,
+            "xeno_canto": "XC995001",
+            "type": "alarm call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 37.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1194748,
+            "xeno_canto": "XC323621",
+            "type": "alarm call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 33.9,
+            "background_species": 0,
+            "recordist": "Ashley Fisher"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Van ver een saaie grijze eend. Juist dat zwarte achtereind maakt hem herkenbaar."
+      },
+      "media": {
+        "card": [
+          128233,
+          128247,
+          128262
+        ],
+        "quiz": [
+          128242,
+          128255,
+          128254,
+          128379,
+          128299,
+          128336,
+          128383,
+          128374
+        ]
+      }
+    },
+    {
+      "species_id": 149,
+      "latin": "Spatula clypeata",
+      "name": {
+        "nl": "Slobeend"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Enorme snavel, breed als een schepje"
+        },
+        {
+          "nl": "Groene kop met geel oog"
+        },
+        {
+          "nl": "Witte borst, roodbruine flanken"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar op ondiepe sloten en plassen. Zwemt met de snavel door het water om voedsel uit te zeven."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een zacht, hol \"tuk-tuk\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1194729,
+            "xeno_canto": "XC992752",
+            "type": "flight call, nocturnal flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 12.7,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1194726,
+            "xeno_canto": "XC996356",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 10.0,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 16
+      },
+      "dont_confuse": {
+        "nl": "Wilde eend (week 2): ook een groene kop, maar een bruine borst en een gewone gele snavel."
+      },
+      "media": {
+        "card": [
+          128168,
+          128054,
+          128088
+        ],
+        "quiz": [
+          128186,
+          128214,
+          128064,
+          128152,
+          128085,
+          128162,
+          128139
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 152,
+    "species_ids": [
+      175,
+      152
+    ],
+    "title": {
+      "nl": "Wintertaling of smient?"
+    },
+    "text": {
+      "nl": "Allebei een roodbruine kop. Gele bles en een roze borst: smient. Een groene streep door het oog en een gele driehoek achteraan: wintertaling. De wintertaling is ook veel kleiner."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      6,
+      7
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Zoek deze week een plas, haven of grote vijver en bekijk elk eendenmannetje dat geen wilde eend is. Heeft hij een kuif, een gele bles, een groene oogstreep, een zwart achtereind of een schepsnavel? Vink af welke je vindt. Bonus: hoor je ergens smienten fluiten?"
+  },
+  "next": {
+    "nl": "Volgende week: je eerste liedjes. Dan gebruik je je oren."
+  },
+  "flow": [
+    "intro",
+    "bird:202",
+    "bird:175",
+    "bird:152",
+    "bird:150",
+    "bird:149",
+    "quiz",
+    "done"
+  ]
+}

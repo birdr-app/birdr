@@ -1,0 +1,454 @@
+{
+  "course": "nl-beginners",
+  "week": 16,
+  "slug": "vinken",
+  "part": 2,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "nl": "Vinken"
+  },
+  "subtitle": {
+    "nl": "Vijf zaadeters met een stevige snavel"
+  },
+  "intro": {
+    "nl": "Vandaag kijken we naar vinken. Eén ken je al: de vink uit week 4. Vinken hebben allemaal een korte, dikke snavel om zaadjes mee te kraken. Je vindt ze in de tuin bij de zonnebloempitten, in de berm op distels en in de winter in groepjes in de bomen langs het water.\n\nJe leert vijf vinken herkennen. Bij de meeste kijken we naar het mannetje, omdat dat de duidelijkste kleuren heeft. Let vooral op de kop en op de kleur in de vleugel.\n\nAan het eind volgt een quiz van tien vragen, met drie vogels uit eerdere lessen ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "kegelsnavel"
+      },
+      "explain": {
+        "nl": "Een korte, dikke snavel in de vorm van een puntzakje: handig om zaadjes te kraken."
+      }
+    },
+    {
+      "term": {
+        "nl": "masker"
+      },
+      "explain": {
+        "nl": "Een vlek van een andere kleur rond de snavel, als een maskertje."
+      }
+    },
+    {
+      "term": {
+        "nl": "kin"
+      },
+      "explain": {
+        "nl": "Het stukje direct onder de snavel, boven de keel."
+      }
+    },
+    {
+      "term": {
+        "nl": "vleugelrand"
+      },
+      "explain": {
+        "nl": "De buitenrand van de gevouwen vleugel."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 10129,
+      "latin": "Carduelis carduelis",
+      "name": {
+        "nl": "Putter"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Rood **masker** rond de snavel"
+        },
+        {
+          "nl": "Zwart-witte kop"
+        },
+        {
+          "nl": "Brede gele streep over de zwarte vleugel"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar in tuinen, bermen en ruigtes. Eet zaadjes uit distels en kaardebollen, vaak in groepjes."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Een vrolijk, vloeiend getinkel met snelle \"tiedeliet\"-roepjes."
+        },
+        "chosen": [
+          {
+            "media_id": 1328825,
+            "xeno_canto": "XC1052341",
+            "type": "song (Traffic Noise, light aircraft, industrial noise)",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 52.0,
+            "background_species": 0,
+            "recordist": "Lee Alder"
+          },
+          {
+            "media_id": 1328833,
+            "xeno_canto": "XC819266",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 46.9,
+            "background_species": 0,
+            "recordist": "Alain Malengreau"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Mannetje en vrouwtje zien er bijna hetzelfde uit."
+      },
+      "media": {
+        "card": [
+          1070237,
+          1070151,
+          1070283
+        ],
+        "quiz": [
+          1070209,
+          1070139,
+          1070256,
+          1070173,
+          1070168,
+          1070184,
+          1070179,
+          1070205
+        ]
+      }
+    },
+    {
+      "species_id": 10072,
+      "latin": "Chloris chloris",
+      "name": {
+        "nl": "Groenling"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Olijfgroen, dikke lichte **kegelsnavel**"
+        },
+        {
+          "nl": "Gele streep langs de **vleugelrand**"
+        },
+        {
+          "nl": "Geel aan de zijkanten van de staart"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar in tuinen, parken en bosranden, vaak bij de zonnebloempitten. Veel minder talrijk dan vroeger, door een ziekte die zich verspreidt via vuile voederplekken."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Een lang, nasaal \"dzjweeee\", afgewisseld met vrolijk gekwetter en trillertjes."
+        },
+        "chosen": [
+          {
+            "media_id": 1328022,
+            "xeno_canto": "XC937275",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 39.1,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1328033,
+            "xeno_canto": "XC707458",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 42.7,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Houd je voederplek schoon: daarmee help je de groenling."
+      },
+      "media": {
+        "card": [
+          1064700,
+          1064678,
+          1064719
+        ],
+        "quiz": [
+          1064717,
+          1064718,
+          1064687,
+          1064727,
+          1064680,
+          1064726,
+          1064722,
+          1064699
+        ]
+      }
+    },
+    {
+      "species_id": 10116,
+      "latin": "Linaria cannabina",
+      "name": {
+        "nl": "Kneu"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje, zomer"
+      },
+      "look_for": [
+        {
+          "nl": "Rood voorhoofd en rode borst"
+        },
+        {
+          "nl": "Grijze kop, warmbruine rug"
+        },
+        {
+          "nl": "Witte randjes in vleugel en staart"
+        }
+      ],
+      "where_when": {
+        "nl": "Dijken, duinen, akkerranden en ruige bermen met struikjes. Vaak in groepjes, ook buiten de broedtijd."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Een snel, vrolijk gekwetter; in de vlucht een droog \"tet-tet-teret\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1328621,
+            "xeno_canto": "XC793053",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 34.2,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1328614,
+            "xeno_canto": "XC917311",
+            "type": "song",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 43.1,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "nl": "In de winter en bij het vrouwtje is het rood bijna weg. In een vervolgcursus vergelijken we hem met de frater."
+      },
+      "media": {
+        "card": [
+          1068700,
+          1068748
+        ],
+        "quiz": [
+          1068673,
+          1068672,
+          1068748
+        ]
+      }
+    },
+    {
+      "species_id": 10141,
+      "latin": "Spinus spinus",
+      "name": {
+        "nl": "Sijs"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Geelgroen, met een zwarte kruin"
+        },
+        {
+          "nl": "Klein zwart vlekje op de **kin**"
+        },
+        {
+          "nl": "Gele strepen op een zwarte vleugel"
+        }
+      ],
+      "where_when": {
+        "nl": "Vooral van oktober tot april, in groepjes in elzen en berken langs het water. Hangt als een mees aan de dunne takjes. Een klein aantal broedt in naaldbossen."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een helder, klagend \"tluu-ie\", vaak vanuit een groepje in een boomtop."
+        },
+        "chosen": [
+          {
+            "media_id": 1329045,
+            "xeno_canto": "XC711220",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 39.8,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1329042,
+            "xeno_canto": "XC780084",
+            "type": "call (chatter)",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 58.0,
+            "background_species": 0,
+            "recordist": "Frode Falkenberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          1071757,
+          1071649,
+          1071623
+        ],
+        "quiz": [
+          1071651,
+          1071765,
+          1071631,
+          1071710,
+          1071669,
+          1071748,
+          1071630
+        ]
+      }
+    },
+    {
+      "species_id": 10051,
+      "latin": "Pyrrhula pyrrhula",
+      "name": {
+        "nl": "Goudvink"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Roze-rode borst en wangen"
+        },
+        {
+          "nl": "Zwarte pet, grijze rug"
+        },
+        {
+          "nl": "Witte stuit, goed te zien in de vlucht"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar in bossen, parken en tuinen met dichte struiken. Stil en een beetje schuw, meestal per paartje. Eet in het voorjaar knoppen van struiken en fruitbomen."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een zacht, fluitend \"pjuu\", als een klagende toon. Makkelijk te missen."
+        },
+        "chosen": [
+          {
+            "media_id": 1327686,
+            "xeno_canto": "XC704729",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 33.0,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          },
+          {
+            "media_id": 1327683,
+            "xeno_canto": "XC938052",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 39.3,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Het vrouwtje lijkt erop, maar is grijsbruin waar het mannetje rood is."
+      },
+      "media": {
+        "card": [
+          1062074,
+          1062039,
+          1062158
+        ],
+        "quiz": [
+          1062046,
+          1062049,
+          1062073,
+          1062072,
+          1062173,
+          1062034,
+          1062152,
+          1062114
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 10141,
+    "species_ids": [
+      10072,
+      10141
+    ],
+    "title": {
+      "nl": "Groenling of sijs?"
+    },
+    "text": {
+      "nl": "Allebei groen met geel. Een sijs is kleiner, heeft een zwarte kruin, een zwart vlekje op de kin en gele strepen over de vleugel. Een groenling is groter, heeft geen zwart op de kop en een dikke, lichte snavel, en het geel zit langs de rand van de vleugel."
+    }
+  },
+  "quiz": {
+    "questions": 10,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      14,
+      15
+    ],
+    "review_questions": 3,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Hang deze week zonnebloempitten op in je tuin of op je balkon, of loop langs een berm met distels of langs elzen aan het water. Welke vinken zie je? Kijk bij elke groene vogel naar de kop: zwarte kruin of niet?"
+  },
+  "next": {
+    "nl": "Volgende week: lijsters."
+  },
+  "flow": [
+    "intro",
+    "bird:10129",
+    "bird:10072",
+    "bird:10116",
+    "bird:10141",
+    "bird:10051",
+    "quiz",
+    "done"
+  ]
+}
