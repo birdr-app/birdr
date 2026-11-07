@@ -74,6 +74,25 @@ describe('buildCourseQuiz', () => {
     }
   });
 
+  it('always offers known look-alikes as wrong answers, and never untaught birds', () => {
+    const l = lesson({
+      quiz: { questions: 12, kind: 'photo', review_questions: 0 },
+      known_species: [
+        ...['Wilde eend', 'Meerkoet', 'Waterhoen', 'Knobbelzwaan', 'Blauwe reiger'].map((name, i) => ({ species_id: i + 1, name })),
+        ...['Merel', 'Huismus', 'Koolmees'].map((name, i) => ({ species_id: 100 + i, name })),
+      ],
+      // Meerkoet (2) and Waterhoen (3); Blauwe reiger (5) with an untaught bird (999).
+      lookalikes: [[2, 3], [5, 999]],
+    });
+    const quiz = buildCourseQuiz(l, random);
+    for (const q of quiz) {
+      if (q.answer === 'Meerkoet') expect(q.options).toContain('Waterhoen');
+      if (q.answer === 'Waterhoen') expect(q.options).toContain('Meerkoet');
+      expect(q.options).toHaveLength(4);
+    }
+    expect(quiz.some((q) => q.answer === 'Meerkoet')).toBe(true);
+  });
+
   it('plays sounds in a sound lesson', () => {
     const quiz = buildCourseQuiz(lesson({ quiz: { questions: 6, kind: 'sound', review_questions: 0 } }), random);
     expect(quiz.every((q) => q.sound && !q.image)).toBe(true);

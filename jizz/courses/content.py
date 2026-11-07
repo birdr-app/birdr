@@ -43,6 +43,16 @@ def course_lessons(slug: str) -> tuple[dict, ...]:
     return tuple(sorted(lessons, key=lambda lesson: lesson['week']))
 
 
+@lru_cache(maxsize=None)
+def lookalike_groups(slug: str) -> tuple[tuple[int, ...], ...]:
+    """Groups of species that beginners mix up (data/<course>/lookalikes.json)."""
+    path = DATA_DIR / slug / 'lookalikes.json'
+    if not path.exists():
+        return ()
+    groups = json.loads(path.read_text(encoding='utf-8')).get('groups', [])
+    return tuple(tuple(g['ids']) for g in groups)
+
+
 def lesson_by_week(slug: str, week: int) -> dict:
     for lesson in course_lessons(slug):
         if lesson['week'] == week:
@@ -173,6 +183,18 @@ def lesson_payload(slug: str, week: int, lang: str = 'nl') -> dict:
                 'sounds': full['sounds'],
             })
 
+    # Every bird taught up to and including this lesson: the quiz takes its wrong answers from
+    # these, look-alikes of the right answer first.
+    known = {}
+    for other in lessons:
+        if other['week'] <= week:
+            for bird in other.get('birds', []):
+                known.setdefault(bird['species_id'], text(bird['name'], lang))
+    lookalikes = [
+        [sid for sid in group if sid in known]
+        for group in lookalike_groups(slug)
+    ]
+
     compare = lesson.get('compare')
     quiz = lesson.get('quiz', {})
     return {
@@ -202,6 +224,8 @@ def lesson_payload(slug: str, week: int, lang: str = 'nl') -> dict:
             'review_questions': quiz.get('review_questions', 0),
         },
         'review_birds': review_birds,
+        'known_species': [{'species_id': sid, 'name': name} for sid, name in known.items()],
+        'lookalikes': [group for group in lookalikes if len(group) > 1],
         'outside': text(lesson.get('outside'), lang),
         'next': text(lesson.get('next'), lang),
     }

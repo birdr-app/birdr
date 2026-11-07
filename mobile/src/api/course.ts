@@ -52,6 +52,10 @@ export type CourseLesson = {
   compare: { after_species_id: number; species_ids: number[]; title: string; text: string } | null;
   quiz: { questions: number; kind: 'photo' | 'sound'; review_questions: number };
   review_birds: ReviewBird[];
+  /** Every bird taught up to this lesson; wrong answers come from these. */
+  known_species?: { species_id: number; name: string }[];
+  /** Groups of known birds that look alike; offered as wrong answers for each other first. */
+  lookalikes?: number[][];
   outside: string;
   next: string;
 };

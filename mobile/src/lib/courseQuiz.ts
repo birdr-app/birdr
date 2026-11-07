@@ -9,7 +9,7 @@ export type CourseQuizQuestion = {
   review: boolean;
 };
 
-type PoolBird = { name: string; images: CourseMedia[]; sounds: CourseMedia[]; review: boolean };
+type PoolBird = { speciesId: number; name: string; images: CourseMedia[]; sounds: CourseMedia[]; review: boolean };
 
 function shuffle<T>(items: T[], random: () => number): T[] {
   const out = [...items];
@@ -25,6 +25,9 @@ function shuffle<T>(items: T[], random: () => number): T[] {
  * rest spread over the lesson's birds, and `review_questions` from earlier lessons. A review
  * lesson asks only about earlier birds. Answers are the four names; a sound lesson plays the
  * bird instead of showing it.
+ *
+ * Wrong answers: look-alikes of the bird first (gulls with gulls, Coot with Moorhen), then other
+ * birds of this lesson, then anything taught before. Only birds already taught are offered.
  */
 export function buildCourseQuiz(lesson: CourseLesson, random: () => number = Math.random): CourseQuizQuestion[] {
   const bySound = lesson.quiz.kind === 'sound';
@@ -32,6 +35,7 @@ export function buildCourseQuiz(lesson: CourseLesson, random: () => number = Mat
 
   const lessonBirds: PoolBird[] = lesson.birds
     .map((b) => ({
+      speciesId: b.species_id,
       name: b.name,
       images: b.quiz_images.length ? b.quiz_images : b.images,
       sounds: b.sounds,
@@ -39,7 +43,7 @@ export function buildCourseQuiz(lesson: CourseLesson, random: () => number = Mat
     }))
     .filter(usable);
   const reviewBirds: PoolBird[] = lesson.review_birds
-    .map((b) => ({ name: b.name, images: b.quiz_images, sounds: b.sounds, review: true }))
+    .map((b) => ({ speciesId: b.species_id, name: b.name, images: b.quiz_images, sounds: b.sounds, review: true }))
     .filter(usable);
 
   const total = lesson.quiz.questions;
@@ -59,8 +63,14 @@ export function buildCourseQuiz(lesson: CourseLesson, random: () => number = Mat
     picks.push(...shuffle(reviewBirds, random).slice(0, missing));
   }
 
-  const names = Array.from(new Set([...lessonBirds, ...reviewBirds].map((b) => b.name)));
-  const lessonNames = Array.from(new Set(lessonBirds.map((b) => b.name)));
+  // Names of every bird the learner knows, by species.
+  const nameOf = new Map<number, string>();
+  for (const k of lesson.known_species ?? []) nameOf.set(k.species_id, k.name);
+  for (const b of [...lessonBirds, ...reviewBirds]) if (!nameOf.has(b.speciesId)) nameOf.set(b.speciesId, b.name);
+  const lessonSpecies = Array.from(new Set(lessonBirds.map((b) => b.speciesId)));
+  const groups = lesson.lookalikes ?? [];
+  const lookalikesOf = (sid: number) =>
+    Array.from(new Set(groups.filter((g) => g.includes(sid)).flat())).filter((x) => x !== sid && nameOf.has(x));
   const used = new Map<string, number>();
 
   const questions = picks.map((bird) => {
@@ -68,10 +78,19 @@ export function buildCourseQuiz(lesson: CourseLesson, random: () => number = Mat
     const n = used.get(bird.name) ?? 0;
     used.set(bird.name, n + 1);
     const item = media[(n + Math.floor(random() * media.length)) % media.length];
-    // Wrong answers: birds from this lesson first, then earlier ones.
-    const others = shuffle(lessonNames.filter((x) => x !== bird.name), random);
-    const older = shuffle(names.filter((x) => x !== bird.name && !others.includes(x)), random);
-    const options = shuffle([bird.name, ...[...others, ...older].slice(0, 3)], random);
+    const candidates = [
+      ...shuffle(lookalikesOf(bird.speciesId), random),
+      ...shuffle(lessonSpecies, random),
+      ...shuffle(Array.from(nameOf.keys()), random),
+    ];
+    const wrong: string[] = [];
+    for (const sid of candidates) {
+      const name = nameOf.get(sid);
+      if (sid === bird.speciesId || !name || name === bird.name || wrong.includes(name)) continue;
+      wrong.push(name);
+      if (wrong.length === 3) break;
+    }
+    const options = shuffle([bird.name, ...wrong], random);
     return {
       answer: bird.name,
       image: bySound ? null : item,

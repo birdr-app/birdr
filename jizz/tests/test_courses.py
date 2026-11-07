@@ -96,6 +96,16 @@ class CourseApiTestCase(TestCase):
         self.assertIn('Merel', names)
         self.assertNotIn('Meerkoet', names)
 
+    def test_lookalikes_only_name_birds_already_taught(self):
+        week1 = self.client.get('/api/courses/nl-beginners/lessons/1/').data
+        known1 = {b['species_id'] for b in week1['known_species']}
+        self.assertIn(7132, known1)  # Koolmees
+        self.assertNotIn(9925, known1)  # Vink comes in week 4
+        self.assertIn([7132, 7122], week1['lookalikes'])  # Koolmees and Pimpelmees
+        self.assertFalse(any(9925 in g for g in week1['lookalikes']))
+        week4 = self.client.get('/api/courses/nl-beginners/lessons/4/').data
+        self.assertTrue(any({9815, 9925} <= set(g) for g in week4['lookalikes']))  # Huismus and Vink
+
     def test_unknown_course_or_week_is_404(self):
         self.assertEqual(self.client.get('/api/courses/nope/').status_code, 404)
         self.assertEqual(self.client.get('/api/courses/nl-beginners/lessons/99/').status_code, 404)

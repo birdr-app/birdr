@@ -1,0 +1,33 @@
+{
+  "about": "Groups of birds in this course that beginners mix up. The quiz offers them as wrong answers for each other first, once both have been taught. Names are only for reading; the ids count.",
+  "groups": [
+    {"name": "meeuwen", "ids": [2241, 2261, 2268, 2273]},
+    {"name": "kleine bruine vogels in de tuin", "ids": [9815, 9925, 9810, 8529]},
+    {"name": "mussen en gorzen", "ids": [9815, 10200, 7249]},
+    {"name": "meerkoet en waterhoen", "ids": [1851, 1843]},
+    {"name": "mezen", "ids": [7132, 7122, 7948]},
+    {"name": "kraaien", "ids": [6985, 6956, 6942, 6914]},
+    {"name": "duiven", "ids": [579, 571, 635]},
+    {"name": "zwarte vogels", "ids": [8861, 8649, 6985, 6956]},
+    {"name": "lijsters", "ids": [8861, 8855, 8854, 8859, 8929]},
+    {"name": "grauwe ganzen", "ids": [77, 79, 110]},
+    {"name": "zwart-witte ganzen", "ids": [85, 87]},
+    {"name": "eenden met een groene kop", "ids": [165, 149, 175]},
+    {"name": "eenden met een roodbruine kop", "ids": [175, 152]},
+    {"name": "grijze en zwart-witte eenden", "ids": [150, 202, 165]},
+    {"name": "zwanen en grote witte vogels", "ids": [93, 2648, 2691, 2509]},
+    {"name": "reigers", "ids": [2652, 2648, 2509]},
+    {"name": "weidevogels met lange snavel", "ids": [2072, 2071, 2122, 2070]},
+    {"name": "zwart-witte steltlopers", "ids": [1997, 1965]},
+    {"name": "kleine steltlopers", "ids": [2149, 2148, 2133]},
+    {"name": "roofvogels", "ids": [2944, 2824, 2874, 3980]},
+    {"name": "zwaluwen", "ids": [7643, 7651, 7601, 1352]},
+    {"name": "vinken", "ids": [9925, 10129, 10072, 10141, 10116, 10051]},
+    {"name": "groene en gele vogeltjes", "ids": [10072, 10141, 7854, 7122]},
+    {"name": "boomklimmers", "ids": [8474, 8481, 3813]},
+    {"name": "kleine zangers", "ids": [7854, 7471, 8529]},
+    {"name": "futen", "ids": [563, 552]},
+    {"name": "roodborst en rode borsten", "ids": [9078, 10051, 10116, 9128]},
+    {"name": "donkere watervogels", "ids": [2552, 1851]}
+  ]
+}
