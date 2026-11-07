@@ -99,7 +99,30 @@
           "nl": "Het bekende \"kwak\" is het vrouwtje; het mannetje roept zacht en nasaal \"rhaeb\"."
         },
         "pick": "xeno-canto call, female quacking, NL, quality A",
-        "available": 20
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1194961,
+            "xeno_canto": "XC1029063",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 81.1,
+            "background_species": 0,
+            "recordist": "Xavier Riera"
+          },
+          {
+            "media_id": 1194970,
+            "xeno_canto": "XC705240",
+            "type": "call (take-off call)",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35.8,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "note": {
         "en": "Ducks with odd white patches in parks are usually farmyard Mallards. Leave them for later. The brown female comes in week 5.",
@@ -166,7 +189,30 @@
           "nl": "Een kort, scherp \"pjik!\", als een kurk uit een fles."
         },
         "pick": "xeno-canto call, single \"pjik\", NL, quality A",
-        "available": 20
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1215918,
+            "xeno_canto": "XC747271",
+            "type": "call (various calls)",
+            "country": "Denmark",
+            "quality": "A",
+            "seconds": 84.5,
+            "background_species": 0,
+            "recordist": "Agris Celmins"
+          },
+          {
+            "media_id": 1215903,
+            "xeno_canto": "XC993311",
+            "type": "call",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 42.7,
+            "background_species": 0,
+            "recordist": "Uku Paal"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "media": {
         "card": [
@@ -231,7 +277,30 @@
           "nl": "Een plotseling, borrelend \"krrruk\" uit het riet."
         },
         "pick": "xeno-canto call, NL, quality A",
-        "available": 20
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1215784,
+            "xeno_canto": "XC792811",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 32.4,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          },
+          {
+            "media_id": 1215790,
+            "xeno_canto": "XC655648",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 47.0,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "media": {
         "card": [
@@ -294,7 +363,30 @@
           "nl": "Geen stem: luister naar het zoemende \"wiew-wiew-wiew\" van de vleugels in de vlucht."
         },
         "pick": "xeno-canto \"flight\" or wing sound, quality A",
-        "available": 20
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1193992,
+            "xeno_canto": "XC780323",
+            "type": "flight call (wingbeats)",
+            "country": "France",
+            "quality": "A",
+            "seconds": 45.3,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1193997,
+            "xeno_canto": "XC706444",
+            "type": "not specified (wingbeats)",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 40.7,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "note": {
         "en": "Grey-brown swans are this year's young: week 5.",
@@ -362,7 +454,30 @@
           "nl": "Een luid, hees \"kraak\" in de vlucht."
         },
         "pick": "xeno-canto flight call, NL, quality A",
-        "available": 20
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1224971,
+            "xeno_canto": "XC947557",
+            "type": "call, flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 41.1,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1224968,
+            "xeno_canto": "XC996264",
+            "type": "flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 88.2,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "media": {
         "card": [

@@ -99,7 +99,30 @@
           "nl": "Een zacht, vijftonig \"roe-KOE-koe, koe-koe\", een paar keer herhaald."
         },
         "pick": "xeno-canto song, NL/BE, quality A",
-        "available": 18
+        "available": 18,
+        "chosen": [
+          {
+            "media_id": 1200697,
+            "xeno_canto": "XC1032301",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 60.0,
+            "background_species": 0,
+            "recordist": "Grégoire Chauvot"
+          },
+          {
+            "media_id": 1200693,
+            "xeno_canto": "XC1038261",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 36.0,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "media": {
         "card": [
@@ -154,7 +177,30 @@
           "nl": "Een rollend, rommelend \"oeroe-koe\"."
         },
         "pick": "xeno-canto song, town recording, quality A",
-        "available": 19
+        "available": 19,
+        "chosen": [
+          {
+            "media_id": 1200612,
+            "xeno_canto": "XC270097",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 12.7,
+            "background_species": 0,
+            "recordist": "Timo Schnabel"
+          },
+          {
+            "media_id": 1200610,
+            "xeno_canto": "XC342145",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 13.9,
+            "background_species": 0,
+            "recordist": "Patrik Åberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "media": {
         "card": [
@@ -213,7 +259,30 @@
           "nl": "Drie tonen, de middelste met nadruk: \"koe-KOE-koe\"."
         },
         "pick": "xeno-canto song, NL, quality A",
-        "available": 19
+        "available": 19,
+        "chosen": [
+          {
+            "media_id": 1201307,
+            "xeno_canto": "XC1015828",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 47.6,
+            "background_species": 0,
+            "recordist": "Romuald Mikusek"
+          },
+          {
+            "media_id": 1201318,
+            "xeno_canto": "XC951676",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 66.0,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "note": {
         "en": "It arrived from the Balkans and bred in the Netherlands for the first time in 1950.",
@@ -273,7 +342,30 @@
           "nl": "Een droog, ratelend \"tsjak-tsjak-tsjak-tsjak\"."
         },
         "pick": "xeno-canto call, rattle, NL, quality A",
-        "available": 20
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1285372,
+            "xeno_canto": "XC1059919",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 31.3,
+            "background_species": 0,
+            "recordist": "Mark Plummer"
+          },
+          {
+            "media_id": 1285368,
+            "xeno_canto": "XC1079336",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 61.7,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "media": {
         "card": [
@@ -330,7 +422,30 @@
           "nl": "Een hees \"kraa, kraa, kraa\"."
         },
         "pick": "xeno-canto call, NL, quality A",
-        "available": 20
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1286086,
+            "xeno_canto": "XC783785",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 36.0,
+            "background_species": 0,
+            "recordist": "Bernard Collet"
+          },
+          {
+            "media_id": 1286088,
+            "xeno_canto": "XC758246",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 74.4,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "note": {
         "en": "In the north and east you may meet a grey-and-black Hooded Crow, a close relative.",
@@ -395,7 +510,30 @@
           "nl": "Een kort, helder \"kjak!\"."
         },
         "pick": "xeno-canto call, NL, quality A",
-        "available": 17
+        "available": 17,
+        "chosen": [
+          {
+            "media_id": 1285620,
+            "xeno_canto": "XC770931",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 83.9,
+            "background_species": 0,
+            "recordist": "Michel Veldt"
+          },
+          {
+            "media_id": 1285605,
+            "xeno_canto": "XC894175",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 31.5,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "media": {
         "card": [

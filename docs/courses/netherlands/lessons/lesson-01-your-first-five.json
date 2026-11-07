@@ -109,7 +109,30 @@
           "nl": "Langzame, ontspannen fluitende zinnen vanaf een dak of boomtop, bij zonsopkomst en schemer van februari tot juli."
         },
         "pick": "xeno-canto song, NL/BE/DE, quality A, under 30 s, no other birds",
-        "available": 20
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1312715,
+            "xeno_canto": "XC1075814",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 51.5,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          },
+          {
+            "media_id": 1312716,
+            "xeno_canto": "XC1075796",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 82.9,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "note": {
         "en": "Only the male is black. A brown \"blackbird\" is a female: week 5.",
@@ -184,7 +207,30 @@
           "nl": "Eindeloos \"tjilp, tjilp\" uit een heg vol mussen."
         },
         "pick": "xeno-canto call, group chirping, NL/BE, quality A",
-        "available": 19
+        "available": 19,
+        "chosen": [
+          {
+            "media_id": 1324533,
+            "xeno_canto": "XC1047608",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 69.3,
+            "background_species": 0,
+            "recordist": "Esperanza Poveda"
+          },
+          {
+            "media_id": 1324531,
+            "xeno_canto": "XC1047611",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 111.5,
+            "background_species": 0,
+            "recordist": "Esperanza Poveda"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "note": {
         "en": "Far fewer than 40 years ago, but still in almost every town.",
@@ -252,7 +298,30 @@
           "nl": "Een luid, zagend \"tie-tuu, tie-tuu\", al vanaf januari."
         },
         "pick": "xeno-canto song, classic two-note, NL/BE, quality A",
-        "available": 17
+        "available": 17,
+        "chosen": [
+          {
+            "media_id": 1288063,
+            "xeno_canto": "XC996274",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 79.1,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1288057,
+            "xeno_canto": "XC1046158",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 63.8,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "note": {
         "en": "Tip: a broad tie running down between the legs is a male; a thin one that stops halfway is a female.",
@@ -314,7 +383,30 @@
           "nl": "Een hoog \"tsie-tsie-tsirrrr\": twee dunne tonen en een trilletje."
         },
         "pick": "xeno-canto song, NL/BE, quality A",
-        "available": 20
+        "available": 20,
+        "chosen": [
+          {
+            "media_id": 1287848,
+            "xeno_canto": "XC1070960",
+            "type": "song",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 42.1,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          },
+          {
+            "media_id": 1287865,
+            "xeno_canto": "XC964470",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 36.8,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "media": {
         "card": [
@@ -371,7 +463,30 @@
           "nl": "Een weemoedig, kabbelend liedje met lange pauzes; een van de weinige vogels die in november zingt."
         },
         "pick": "xeno-canto song, autumn or winter recording, NL/BE, quality A",
-        "available": 19
+        "available": 19,
+        "chosen": [
+          {
+            "media_id": 1315592,
+            "xeno_canto": "XC1080724",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 41.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1315603,
+            "xeno_canto": "XC1072480",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 37.9,
+            "background_species": 0,
+            "recordist": "Pablo Guillemaud"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
       },
       "note": {
         "en": "Young robins in summer are brown with pale spots and no orange at all: week 5.",

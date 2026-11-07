@@ -160,10 +160,25 @@ Lessons can then ask for "adult male Blackbird" instead of listing ids.
 
 ### Sounds
 
-The local media dump has no audio, so sounds are not picked yet. Each bird has a `sound` block
-saying what to pick (`song` or `call`, region, quality), for example *"xeno-canto song, NL/BE/DE,
-quality A, under 30 s, no other birds"*. Choosing them needs the production media table, where the
-xeno-canto recordings are.
+Each bird's `sound` block says what the lesson needs (`pick`) and lists two recordings in
+`chosen`, the first one to use and a spare. They were chosen from the xeno-canto recordings
+already in the database (17-20 per bird), using the details on each recording's xeno-canto page:
+
+- the right kind: song, call, or for the Mute Swan the sound of its wingbeats;
+- quality A;
+- recorded as close to the Netherlands as possible (Netherlands, then Belgium and Germany, then
+  the rest of north-west Europe; nothing from outside Europe);
+- no other bird species in the background;
+- as short as possible.
+
+They were chosen on those details only; nobody has listened to them yet. Two more things before
+they are used:
+
+- **They are long.** Most are 30-90 seconds. A lesson wants the 5-10 seconds that matter, so
+  `LessonBird` should store a start and end time per recording, or the course gets trimmed copies.
+- **Few are Dutch.** Only 17 of the 306 recordings for these 16 birds are from the Netherlands.
+  Scraping more Dutch recordings for the course species would help, especially for songs, where
+  regional dialects differ.
 
 ### What picking the photos turned up
 
@@ -185,9 +200,6 @@ media review regardless of the course, since these photos show up in normal quiz
   media dump, checked by eye against the photos, and confirmed against motmot.club: all 16 are
   right. Names follow the database (Coloeus monedula for the Jackdaw, Rock Dove / rotsduif for the
   Feral Pigeon, which the lesson calls stadsduif and explains).
-- **Sounds:** every lesson bird has 17-20 xeno-canto recordings in the database (`sound.available`),
-  but the API gives no song/call type, country or quality. Picking per the `sound.pick` spec needs
-  the xeno-canto metadata.
 - **The Netherlands commonness list includes Caribbean species.** `jizz/data/commonness_NL.csv`
   ranks Antillean Crested Hummingbird at #80, with American Flamingo, Laughing Gull and Audubon's
   Shearwater also on it: the eBird data for "NL" includes the Caribbean Netherlands. The course
