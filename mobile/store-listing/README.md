@@ -29,9 +29,11 @@ notes live separately in `../release-notes/`.
 
 ## Still to do by hand
 
-- **Google Play still says "Birdr"** in the title and description of every language.
-  Searching "Motmot" on Play does not find the app until this is changed.
-- **The App Store listing is English only.** Add the other seven languages.
+- **The live names are not these.** As of 7 November 2026 both stores show the older
+  "Motmot – Bird ID Quiz" / "Motmot – Vogel ID Quiz" names. Paste the keyword-richer
+  names, subtitles, keywords and descriptions from these files.
+- **The App Store has no Japanese listing.** The other six languages are there, but the
+  Japanese store shows English, and Motmot is not in the top 50 for 野鳥 クイズ there.
 - **Categories.** App Store: Games › Trivia. Play: Entertainment. Education is less
   crowded and is where people look for learning apps; consider it as the primary
   category on both.

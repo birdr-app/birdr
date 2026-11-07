@@ -9,7 +9,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 
-const APP_STORE_URL = 'https://apps.apple.com/us/app/birdr/id6745144189';
+const APP_STORE_URL = 'https://apps.apple.com/us/app/motmot-bird-id-quiz/id6745144189';
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=pro.birdr.app';
 const APP_STORE_BADGE =
   'https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83';

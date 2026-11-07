@@ -7,10 +7,13 @@ When the app sends a non-HTTPS redirect_uri for apple-id, we store it as the app
 callback and use our HTTPS completion URL as the redirect_uri sent to Apple.
 """
 
+import re
 from urllib.parse import urlsplit
 
 from django.conf import settings
 from django.http import HttpResponsePermanentRedirect, HttpResponseRedirect
+from django.urls import Resolver404, resolve
+from django.views.generic import RedirectView
 from django.utils.deprecation import MiddlewareMixin
 
 from jizz.api_event_labels import resolve_api_event_label
@@ -25,13 +28,8 @@ from jizz.usage_analytics import is_crawler_user_agent, record_usage_event
 _SERVER_RENDERED_PREFIXES = ('/data/', '/country/', '/staff/', '/site/')
 
 
-_MARKETING_SITEMAP_PATHS = frozenset({
-    '/sitemap.xml',
-    '/sitemap-pages.xml',
-    '/sitemap-countries.xml',
-    '/sitemap-birds.xml',
-    '/sitemap-compare.xml',
-})
+# Same pattern as the nginx location that proxies sitemaps to Django.
+_MARKETING_SITEMAP_RE = re.compile(r'/sitemap(-[a-z]+)?\.xml')
 
 
 def _host_of(url: str) -> str:
@@ -40,10 +38,22 @@ def _host_of(url: str) -> str:
 
 def is_marketing_path(path: str) -> bool:
     """The website's own pages, as opposed to the API, OAuth, share links and the web app."""
-    if path == '/' or path.startswith('/site/') or path in _MARKETING_SITEMAP_PATHS:
+    if path == '/' or path.startswith('/site/') or _MARKETING_SITEMAP_RE.fullmatch(path):
         return True
     _, remainder = parse_locale_prefix(path)
     return remainder is not None
+
+
+def legacy_site_path(path: str) -> str | None:
+    """Where a pre-/site/ page (/birds/<slug>/, /faq/, ...) moved to, from its redirect in urls.py."""
+    try:
+        match = resolve(path)
+    except Resolver404:
+        return None
+    if getattr(match.func, 'view_class', None) is not RedirectView:
+        return None
+    url = match.func.view_initkwargs.get('url') or ''
+    return url % match.kwargs if url.startswith('/site/') else None
 
 
 class MarketingHostRedirectMiddleware:
@@ -82,6 +92,10 @@ class MarketingHostRedirectMiddleware:
         if host in getattr(settings, 'MARKETING_REDIRECT_HOSTS', ()) and host != _host_of(marketing_url):
             if is_marketing_path(path):
                 return marketing_url + path + suffix, True
+            # Straight to the new page, not via a second redirect on this host.
+            legacy = legacy_site_path(path)
+            if legacy:
+                return marketing_url + legacy + suffix, True
         elif host == _host_of(marketing_url) and oauth_url and _host_of(oauth_url) != host:
             if path.startswith('/auth/login/'):
                 return oauth_url + path + suffix, False

@@ -98,6 +98,27 @@ class MarketingHostRedirectMiddlewareTestCase(TestCase):
             with self.subTest(path=path):
                 self.assertRedirectsTo(self.get(path, 'birdr.pro'), f'https://motmot.club{path}')
 
+    def test_all_sitemap_sections_on_birdr_redirect_to_motmot(self):
+        for path in ['/sitemap-taxa.xml', '/sitemap-birds.xml']:
+            with self.subTest(path=path):
+                self.assertRedirectsTo(self.get(path, 'birdr.pro'), f'https://motmot.club{path}')
+
+    def test_legacy_pages_on_birdr_redirect_to_motmot_site_in_one_hop(self):
+        for old, new in [
+            ('/birds/white-tern/', '/site/birds/white-tern/'),
+            ('/countries/ghana/', '/site/countries/ghana/'),
+            ('/compare/a-vs-b/', '/site/compare/a-vs-b/'),
+            ('/faq/', '/site/faq/'),
+            ('/flocks/', '/site/flocks/'),
+            ('/survival-mode/', '/site/survival/'),
+        ]:
+            with self.subTest(path=old):
+                self.assertRedirectsTo(self.get(old, 'birdr.pro'), f'https://motmot.club{new}')
+
+    def test_legacy_redirect_to_the_web_app_stays_on_birdr(self):
+        location = self.get('/bird-identification-quiz/', 'birdr.pro').get('Location', '')
+        self.assertFalse(location.startswith('https://motmot.club'), location)
+
     def test_marketing_pages_on_www_motmot_redirect_to_motmot(self):
         for path in ['/', '/site/', '/nl/site/birds/', '/sitemap.xml']:
             with self.subTest(path=path):
