@@ -204,9 +204,25 @@ const HomePage = () => {
                       flexShrink={0}
                     />
                     <Flex direction="column" flex={1} minW={0}>
-                      <Text fontSize="lg" fontWeight="700" color="white" lineClamp={2}>
-                        <FormattedMessage id="course_title" defaultMessage="Birds of the Netherlands" />
-                      </Text>
+                      <Flex align="center" gap={2} wrap="wrap">
+                        <Text fontSize="lg" fontWeight="700" color="white" lineClamp={2}>
+                          <FormattedMessage id="course_title" defaultMessage="Birds of the Netherlands" />
+                        </Text>
+                        <Box
+                          as="span"
+                          fontSize="2xs"
+                          fontWeight="800"
+                          letterSpacing="wider"
+                          textTransform="uppercase"
+                          px="1.5"
+                          py="0.5"
+                          borderRadius="sm"
+                          bg="whiteAlpha.300"
+                          color="white"
+                        >
+                          <FormattedMessage id="beta" defaultMessage="Beta" />
+                        </Box>
+                      </Flex>
                       <Text fontSize="sm" fontWeight="600" color="secondary.100">
                         <FormattedMessage id="course_home_hint" defaultMessage="A beginners course: one short lesson a week" />
                       </Text>

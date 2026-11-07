@@ -342,13 +342,18 @@ export function HomeScreen() {
             style={styles.courseHeroButton}
             onPress={() => navigation.navigate('Course')}
             testID="home.course"
-            accessibilityLabel={`${t('course_title')}, ${t('course_home_hint')}`}
+            accessibilityLabel={`${t('course_title')} (${t('beta')}), ${t('course_home_hint')}`}
           >
             <GameArtImage source={getMoodImage('waiting', visualStyle)} style={styles.journeyNewHeroImage} resizeMode="contain" />
             <View style={styles.journeyHeroText}>
-              <Text style={styles.courseHeroTitle} numberOfLines={2}>
-                {t('course_title')}
-              </Text>
+              <View style={styles.courseTitleRow}>
+                <Text style={styles.courseHeroTitle} numberOfLines={2}>
+                  {t('course_title')}
+                </Text>
+                <View style={styles.betaBadge}>
+                  <Text style={styles.betaBadgeText}>{t('beta')}</Text>
+                </View>
+              </View>
               <Text style={styles.courseHeroHint} numberOfLines={2}>
                 {t('course_home_hint')}
               </Text>
@@ -669,7 +674,27 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#fff',
     lineHeight: 22,
+    flexShrink: 1,
+  },
+  courseTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: 8,
     marginBottom: 2,
+  },
+  betaBadge: {
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+    backgroundColor: 'rgba(255,255,255,0.22)',
+  },
+  betaBadgeText: {
+    fontSize: 10,
+    fontWeight: '800',
+    letterSpacing: 0.5,
+    textTransform: 'uppercase',
+    color: '#fff',
   },
   courseHeroHint: {
     fontSize: 14,
