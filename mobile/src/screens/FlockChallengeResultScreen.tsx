@@ -24,6 +24,8 @@ import { getFlockImage } from '../constants/birdrFlockImages';
 import { GameArtImage } from '../components/GameArtImage';
 import { useVisualStyle } from '../context/VisualStyleContext';
 import { useGameModes } from '../context/GameModesContext';
+import { useReviewPrompt } from '../hooks/useReviewPrompt';
+import { isGoodAccuracy } from '../game/reviewPrompt';
 
 type ResultParams = {
   resultToken?: string;
@@ -44,6 +46,12 @@ export function FlockChallengeResultScreen() {
   useEffect(() => {
     if (inlineResult) bumpGamesPlayed(resultToken ?? null);
   }, [inlineResult, resultToken, bumpGamesPlayed]);
+
+  useReviewPrompt(
+    !!inlineResult &&
+      ((inlineResult.rank === 1 && inlineResult.total_participants > 1) ||
+        isGoodAccuracy(inlineResult.correct_count, inlineResult.length))
+  );
 
   const [loading, setLoading] = useState(!inlineResult);
   const [error, setError] = useState<string | null>(null);
