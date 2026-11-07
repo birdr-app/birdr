@@ -163,3 +163,21 @@ class CoursePhotoAdminTestCase(TestCase):
         for body in bad:
             self.assertEqual(self.client.put(url, body, format='json').status_code, 400, body)
         self.assertEqual(self.client.put('/api/courses/nl-beginners/photos/2/%d/' % self.species.id, {}, format='json').status_code, 404)
+
+    def test_admin_pages_open(self):
+        from django.contrib.auth import get_user_model
+
+        from jizz.models import CoursePhotoPick
+
+        admin_user = get_user_model().objects.create_superuser('boss', 'boss@example.org', 'x')
+        pick = CoursePhotoPick.objects.create(
+            course='nl-beginners', week=1, species=self.species,
+            card=[self.photos[0].id, 999999], quiz=[self.photos[1].id], reject=[],
+        )
+        self.client.force_login(admin_user)
+        changelist = self.client.get('/admin/jizz/coursephotopick/')
+        self.assertEqual(changelist.status_code, 200)
+        self.assertContains(changelist, 'medium.jpg')
+        change = self.client.get(f'/admin/jizz/coursephotopick/{pick.id}/change/')
+        self.assertEqual(change.status_code, 200)
+        self.assertContains(change, '999999')  # a hidden or missing photo is shown as a gap with its id

@@ -21,6 +21,7 @@ from django.utils.html import format_html, format_html_join
 from django.utils.http import urlencode
 from django.utils.safestring import mark_safe
 
+from jizz.models import CoursePhotoPick
 from jizz.models import (Answer, FlockSharedGame, SharedGame, SharedGameAttempt, BirdrJourney, BirdrJourneyGame, Country,
                          CountrySpecies, CountrySpeciesFrequency, Feedback, FlagQuestion, Game, JourneyLevel,
                          JourneyStep, Page, Player,
@@ -2413,3 +2414,99 @@ class SharedGameAdmin(admin.ModelAdmin):
         return getattr(obj, '_participants', 0)
 
     participants.admin_order_field = '_participants'
+
+
+@admin.register(CoursePhotoPick)
+class CoursePhotoPickAdmin(admin.ModelAdmin):
+    """Photos chosen for the course lessons. Easiest to edit on /course-photos in the web app."""
+
+    list_display = ['week', 'species_name', 'main_photo', 'card_count', 'quiz_count', 'reject_count', 'done', 'updated_by', 'updated_at']
+    list_display_links = ['week', 'species_name']
+    list_filter = ['course', 'week', 'done']
+    search_fields = ['species__name', 'species__name_nl', 'species__name_latin']
+    list_select_related = ['species', 'updated_by']
+    raw_id_fields = ['species']
+    readonly_fields = ['photos', 'updated_by', 'updated_at', 'edit_link']
+    ordering = ['course', 'week', 'species__name']
+    fields = ['course', 'week', 'species', 'done', 'edit_link', 'photos', 'card', 'quiz', 'reject', 'updated_by', 'updated_at']
+
+    @admin.display(description='Bird', ordering='species__name')
+    def species_name(self, obj):
+        return obj.species.name_nl or obj.species.name
+
+    @admin.display(description='Card')
+    def card_count(self, obj):
+        return len(obj.card or [])
+
+    @admin.display(description='Quiz')
+    def quiz_count(self, obj):
+        return len(obj.quiz or [])
+
+    @admin.display(description='Not used')
+    def reject_count(self, obj):
+        return len(obj.reject or [])
+
+    def _urls(self, ids):
+        from media.display_urls import media_object_display_url
+
+        media = {m.id: m for m in Media.objects.filter(id__in=ids or [])}
+        return [(i, media_object_display_url(media[i]) if i in media else None) for i in ids or []]
+
+    @admin.display(description='Main photo')
+    def main_photo(self, obj):
+        if not obj.card:
+            return '–'
+        (_, url), = self._urls(obj.card[:1])
+        if not url:
+            return format_html('<span style="color:#b3322a">{} hidden</span>', obj.card[0])
+        return format_html('<img src="{}" style="height:48px;border-radius:4px" alt="">', url)
+
+    @admin.display(description='Photos')
+    def photos(self, obj):
+        def row(label, ids):
+            items = format_html_join(
+                '',
+                '<figure style="margin:0 6px 6px 0;display:inline-block;text-align:center">{}<figcaption style="font-size:11px">{}</figcaption></figure>',
+                (
+                    (
+                        format_html('<img src="{}" style="height:90px;border-radius:4px" alt="">', url)
+                        if url else format_html('<div style="width:120px;height:90px;border:2px dashed #b3322a"></div>'),
+                        mid,
+                    )
+                    for mid, url in self._urls(ids)
+                ),
+            )
+            return format_html('<p style="margin:8px 0 4px"><b>{}</b></p><div>{}</div>', label, items or '–')
+
+        return format_html(
+            '{}{}{}',
+            row('Card (first = main photo)', obj.card),
+            row('Quiz', obj.quiz),
+            row('Not used', obj.reject),
+        )
+
+    @admin.display(description='Choose photos')
+    def edit_link(self, obj):
+        return format_html('<a href="/course-photos" target="_blank">Open "Select course photos" in the web app</a>')
+
+    def save_model(self, request, obj, form, change):
+        from jizz.courses.content import clear_cache
+
+        obj.updated_by = request.user
+        super().save_model(request, obj, form, change)
+        clear_cache(obj.course)
+
+    def delete_model(self, request, obj):
+        from jizz.courses.content import clear_cache
+
+        super().delete_model(request, obj)
+        clear_cache(obj.course)
+
+    def delete_queryset(self, request, queryset):
+        from jizz.courses.content import clear_cache
+
+        courses = set(queryset.values_list('course', flat=True))
+        super().delete_queryset(request, queryset)
+        for course in courses:
+            clear_cache(course)
+
