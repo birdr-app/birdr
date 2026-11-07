@@ -7,6 +7,7 @@ import { BirdrMoodHero } from '../components/BirdrMoodHero';
 import { MegaConfetti } from '../components/MegaConfetti';
 import { useStartSurvival } from '../hooks/useStartSurvival';
 import { useGameModes } from '../context/GameModesContext';
+import { useReviewPrompt } from '../hooks/useReviewPrompt';
 import { useTranslation } from '../i18n/TranslationContext';
 import { getCountryDisplayName } from '../i18n/countryNames';
 import { colors } from '../theme';
@@ -53,6 +54,12 @@ export function SurvivalResultScreen() {
   useEffect(() => {
     void load();
   }, [load]);
+
+  // A first run is always a personal best; only beating an earlier best counts.
+  useReviewPrompt(
+    !!result &&
+      (result.is_country_record || (result.is_personal_best && result.previous_personal_best > 0))
+  );
 
   const tryAgain = async () => {
     setRestarting(true);

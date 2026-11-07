@@ -6,6 +6,8 @@ import type { LeagueCompleteResult } from '../api/league';
 import { BirdrMoodHero } from '../components/BirdrMoodHero';
 import { MegaConfetti } from '../components/MegaConfetti';
 import { useGameModes } from '../context/GameModesContext';
+import { useReviewPrompt } from '../hooks/useReviewPrompt';
+import { isGoodAccuracy } from '../game/reviewPrompt';
 import { useTranslation } from '../i18n/TranslationContext';
 import { colors } from '../theme';
 
@@ -27,6 +29,13 @@ export function LeagueResultScreen() {
     counted.current = true;
     bumpGamesPlayed();
   }, [result, bumpGamesPlayed]);
+
+  useReviewPrompt(
+    !!result &&
+      (result.took_lead ||
+        (result.rank_today != null && result.rank_today <= 3) ||
+        isGoodAccuracy(result.correct, result.length))
+  );
 
   useEffect(() => {
     Animated.spring(pop, { toValue: 1, friction: 4, tension: 110, useNativeDriver: true }).start();

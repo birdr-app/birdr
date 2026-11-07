@@ -38,7 +38,7 @@ GROUP BY m.species_id
 _HIDDEN_STATS_SQL = """
 SELECT species_id, COUNT(*)::int
 FROM media_media
-WHERE type = %s AND hide = TRUE
+WHERE type = %s AND hide = TRUE AND duplicate_of_id IS NULL
 {source_clause}
 {species_clause}
 GROUP BY species_id

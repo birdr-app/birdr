@@ -2,19 +2,25 @@
 
 from __future__ import annotations
 
+from datetime import date, datetime
+
+from django.db.models import Q
 from django.http import Http404, HttpResponse
 from django.urls import reverse
 
-from compare.models import SpeciesComparison
+from compare.models import CommunityComparison, SpeciesComparison, SpeciesDescription
 from jizz.marketing.i18n import MARKETING_LOCALES, localize_path
 from jizz.marketing.pages import INTENT_PAGES, canonical_origin, public_species_qs
 from jizz.marketing.slugs import compare_pair_slug
 from jizz.marketing.views import _indexable_countries, _indexable_regions
 
 
-def _urlset(paths: list[str], origin: str) -> str:
+def _urlset(paths: list[str], origin: str, lastmods: dict[str, date] | None = None) -> str:
+    lastmods = lastmods or {}
     items = []
     for path in paths:
+        lastmod = lastmods.get(path)
+        lastmod_line = f'    <lastmod>{lastmod.isoformat()}</lastmod>\n' if lastmod else ''
         for locale in MARKETING_LOCALES:
             loc = origin + localize_path(path, locale)
             alts = []
@@ -29,6 +35,7 @@ def _urlset(paths: list[str], origin: str) -> str:
             items.append(
                 '  <url>\n'
                 f'    <loc>{loc}</loc>\n'
+                + lastmod_line
                 + '\n'.join(alts)
                 + '\n  </url>'
             )
@@ -42,8 +49,12 @@ def _urlset(paths: list[str], origin: str) -> str:
     )
 
 
-def _index(locs: list[str]) -> str:
-    items = '\n'.join(f'  <sitemap><loc>{u}</loc></sitemap>' for u in locs)
+def _index(entries: list[tuple[str, date | None]]) -> str:
+    items = '\n'.join(
+        f'  <sitemap><loc>{u}</loc><lastmod>{lastmod.isoformat()}</lastmod></sitemap>'
+        if lastmod else f'  <sitemap><loc>{u}</loc></sitemap>'
+        for u, lastmod in entries
+    )
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -76,14 +87,21 @@ def _section_url(section: str, page: int) -> str:
     return url if page == 1 else f'{url}?page={page}'
 
 
+def _page_paths(paths: list[str], page: int) -> list[str]:
+    start = (page - 1) * PATHS_PER_SITEMAP
+    return paths[start:start + PATHS_PER_SITEMAP]
+
+
 def sitemap_index(request):
     origin = canonical_origin(request)
-    locs = [
-        origin + _section_url(name, page)
-        for name, paths_fn in SECTIONS.items()
-        for page in range(1, _page_count(paths_fn()) + 1)
-    ]
-    return _xml(_index(locs))
+    entries = []
+    for name, paths_fn in SECTIONS.items():
+        paths = paths_fn()
+        lastmods = section_lastmods(name)
+        for page in range(1, _page_count(paths) + 1):
+            dates = [lastmods[p] for p in _page_paths(paths, page) if p in lastmods]
+            entries.append((origin + _section_url(name, page), max(dates, default=None)))
+    return _xml(_index(entries))
 
 
 def pages_paths() -> list[str]:
@@ -106,6 +124,18 @@ def pages_paths() -> list[str]:
     return paths
 
 
+def pages_lastmods() -> dict[str, date]:
+    from jizz.models import Update
+
+    lastmods = {
+        reverse('marketing-update', kwargs={'pk': pk}): created.date()
+        for pk, created in Update.objects.filter(published=True).values_list('pk', 'created')
+    }
+    if lastmods:
+        lastmods['/site/updates/'] = max(lastmods.values())
+    return lastmods
+
+
 def countries_paths() -> list[str]:
     paths = [row['url'] for row in _indexable_countries()]
     paths.extend(region['url'] for group in _indexable_regions() for region in group['regions'])
@@ -120,24 +150,59 @@ def birds_paths() -> list[str]:
     ]
 
 
-def compare_paths() -> list[str]:
-    paths = []
-    seen = set()
+# The page text comes from the source records; their translations are made in the
+# background on a visitor's first request, so their timestamps follow crawls, not edits.
+def birds_lastmods() -> dict[str, date]:
+    descriptions = (
+        SpeciesDescription.objects.exclude(Q(species__slug='') | Q(species__slug__isnull=True))
+        .values_list('species__slug', 'updated')
+    )
+    return {
+        reverse('marketing-bird', kwargs={'slug': slug}): updated.date()
+        for slug, updated in descriptions
+    }
+
+
+def _compare_path(a_id: int, a_slug: str, b_id: int, b_slug: str) -> str:
+    low, high = (a_slug, b_slug) if a_id < b_id else (b_slug, a_slug)
+    return reverse('marketing-compare', kwargs={'pair': compare_pair_slug(low, high)})
+
+
+def _comparisons() -> dict[str, datetime]:
+    """Compare page path -> latest AI comparison update, in order of first comparison."""
+    latest: dict[str, datetime] = {}
     comparisons = SpeciesComparison.objects.filter(
         comparison_type='species',
         species_1__isnull=False,
         species_2__isnull=False,
-    ).order_by('id').values_list('species_1_id', 'species_1__slug', 'species_2_id', 'species_2__slug')
-    for a_id, a_slug, b_id, b_slug in comparisons:
+    ).order_by('id').values_list(
+        'species_1_id', 'species_1__slug', 'species_2_id', 'species_2__slug', 'updated_at',
+    )
+    for a_id, a_slug, b_id, b_slug, updated in comparisons:
         if not a_slug or not b_slug:
             continue
-        low, high = (a_slug, b_slug) if a_id < b_id else (b_slug, a_slug)
-        pair = compare_pair_slug(low, high)
-        if pair in seen:
+        path = _compare_path(a_id, a_slug, b_id, b_slug)
+        if path not in latest or updated > latest[path]:
+            latest[path] = updated
+    return latest
+
+
+def compare_paths() -> list[str]:
+    return list(_comparisons())
+
+
+def compare_lastmods() -> dict[str, date]:
+    latest = _comparisons()
+    community = CommunityComparison.objects.filter(published=True).values_list(
+        'species_low_id', 'species_low__slug', 'species_high_id', 'species_high__slug', 'updated',
+    )
+    for a_id, a_slug, b_id, b_slug, updated in community:
+        if not a_slug or not b_slug:
             continue
-        seen.add(pair)
-        paths.append(reverse('marketing-compare', kwargs={'pair': pair}))
-    return paths
+        path = _compare_path(a_id, a_slug, b_id, b_slug)
+        if path in latest and updated > latest[path]:
+            latest[path] = updated
+    return {path: updated.date() for path, updated in latest.items()}
 
 
 def taxa_paths() -> list[str]:
@@ -154,6 +219,20 @@ SECTIONS = {
     'birds': birds_paths,
     'compare': compare_paths,
 }
+
+
+# Last modification date per path, for the sections whose pages have one. Countries and
+# taxa pages are lists built from many records without a timestamp of their own.
+LASTMODS = {
+    'pages': pages_lastmods,
+    'birds': birds_lastmods,
+    'compare': compare_lastmods,
+}
+
+
+def section_lastmods(section: str) -> dict[str, date]:
+    lastmods_fn = LASTMODS.get(section)
+    return lastmods_fn() if lastmods_fn else {}
 
 
 def localized_urls(paths: list[str], origin: str) -> list[str]:
@@ -174,5 +253,4 @@ def sitemap_section(request, section: str):
     paths = paths_fn()
     if not 1 <= page <= _page_count(paths):
         raise Http404
-    start = (page - 1) * PATHS_PER_SITEMAP
-    return _xml(_urlset(paths[start:start + PATHS_PER_SITEMAP], canonical_origin(request)))
+    return _xml(_urlset(_page_paths(paths, page), canonical_origin(request), section_lastmods(section)))

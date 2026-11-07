@@ -765,5 +765,8 @@
   "flock_extra_games_finished": "Terminados",
   "flock_extra_games_show_all": "Ver todos los juegos terminados ({count})",
   "flock_extra_games_show_fewer": "Ver menos",
-  "flock_extra_games_none_open": "Ahora no hay juegos abiertos. Crea un juego, elige Compartir y añádelo a este flock."
+  "flock_extra_games_none_open": "Ahora no hay juegos abiertos. Crea un juego, elige Compartir y añádelo a este flock.",
+  "no other media": "No hay otra foto de esta ave.",
+  "no media left for question": "Ahora mismo no hay ninguna foto utilizable de esta ave.",
+  "skip question": "Saltar esta pregunta"
 }

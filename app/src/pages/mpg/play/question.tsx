@@ -17,7 +17,8 @@ import { PlayableVideo } from "../../../components/playable-video"
 import WebsocketContext from "../../../core/websocket-context"
 import AppContext, {Answer, Species} from "../../../core/app-context"
 import {SpeciesName} from "../../../components/species-name"
-import {FormattedMessage} from "react-intl"
+import {FormattedMessage, useIntl} from "react-intl"
+import { toaster } from "@/components/ui/toaster"
 import {FlagMedia} from "./flag-media"
 import { MediaCredits } from "../../../components/media-credits"
 import {keyframes} from "@emotion/react"
@@ -56,6 +57,7 @@ export const QuestionComponent = () => {
   const {species, speciesLoading, player, game, speciesLanguage} = useContext(AppContext)
   const {players, nextQuestion, question, submitAnswer, answer, endGame: endGameSession, patchQuestionMedia} = useContext(WebsocketContext)
   const {onOpen, onClose, open: isOpen} = useDisclosure()
+  const intl = useIntl()
   const [flagMediaInfo, setFlagMediaInfo] = useState<{
     id?: number
     type: 'image' | 'video' | 'audio'
@@ -199,6 +201,8 @@ export const QuestionComponent = () => {
   }, [notifyMediaReady])
 
   const answersEnabled = answersEnabledForMedia(gameMedia, mediaReady)
+  // Every picture of this bird was rejected: nothing will load, so offer a skip instead.
+  const noMediaLeft = !!question && !answer && !advancingQuestion && gameMedia !== 'audio' && mediaLength === 0
 
   const selectAnswer = async (species?: Species) => {
     setShowFeedback(false)
@@ -392,6 +396,13 @@ export const QuestionComponent = () => {
             setMediaReady(false)
           } catch {
             // No alternate media or request failed — keep current question state
+            toaster.create({
+              title: intl.formatMessage({
+                id: 'no other media',
+                defaultMessage: 'There is no other picture of this bird.',
+              }),
+              duration: 4000,
+            })
           }
         }}
       />
@@ -454,6 +465,7 @@ export const QuestionComponent = () => {
           <>
             <Box position="relative" minH="220px">
               <PlayableVideo
+                key={currentVideo.id ?? currentVideo.url}
                 url={currentVideo.url}
                 playing
                 controls
@@ -481,6 +493,7 @@ export const QuestionComponent = () => {
           <>
             <Box position="relative" h={PLAY_IMAGE_STAGE_HEIGHT}>
               <ZoomablePlayImage
+                key={currentImage.id ?? currentImage.url}
                 previewSrc={playPreviewSrc(currentImage.url)}
                 fullSrc={playFullSrc(currentImage.url)}
                 onLoad={notifyMediaReady}
@@ -515,7 +528,7 @@ export const QuestionComponent = () => {
             <>
               <Box position="relative" minH="80px">
                 <ReactPlayer
-                  key={`${question.id}-audio-${currentMediaIndex}`}
+                  key={`${question.id}-audio-${currentSound.id ?? currentMediaIndex}`}
                   width={'100%'}
                   height={'50px'}
                   url={currentSound.url}
@@ -543,6 +556,26 @@ export const QuestionComponent = () => {
             </>
           </Box>
 
+        )}
+        {noMediaLeft && (
+          <Flex
+            direction="column"
+            align="center"
+            justify="center"
+            gap={3}
+            minH={mediaLoaderHeight}
+            textAlign="center"
+          >
+            <Text>
+              <FormattedMessage
+                id="no media left for question"
+                defaultMessage="There is no usable picture of this bird right now."
+              />
+            </Text>
+            <Button colorPalette={'primary'} variant="outline" onClick={skipQuestion}>
+              <FormattedMessage id="skip question" defaultMessage="Skip this question" />
+            </Button>
+          </Flex>
         )}
 
         </>

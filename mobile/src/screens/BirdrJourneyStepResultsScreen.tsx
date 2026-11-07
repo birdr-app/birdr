@@ -18,6 +18,7 @@ import {
 import { setStoredChallengePlayerToken } from '../api/challenge';
 import { BirdrMoodHero } from '../components/BirdrMoodHero';
 import { useGameModes } from '../context/GameModesContext';
+import { useReviewPrompt } from '../hooks/useReviewPrompt';
 import { useTranslation } from '../i18n/TranslationContext';
 import { colors } from '../theme';
 
@@ -58,6 +59,8 @@ export function BirdrJourneyStepResultsScreen() {
    * so, which keeps the outcome on screen while the sync settles behind it.
    */
   const finaliseRef = useRef<Promise<CompleteStepResponse | null> | null>(null);
+
+  useReviewPrompt(passed && !loading);
 
   useFocusEffect(
     useCallback(() => {

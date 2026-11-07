@@ -765,5 +765,8 @@
   "flock_extra_games_finished": "終了したゲーム",
   "flock_extra_games_show_all": "終了したゲームをすべて表示（{count}）",
   "flock_extra_games_show_fewer": "表示を減らす",
-  "flock_extra_games_none_open": "現在、参加できるゲームはありません。ゲームを作成して「共有」を選び、このFlockに追加しましょう。"
+  "flock_extra_games_none_open": "現在、参加できるゲームはありません。ゲームを作成して「共有」を選び、このFlockに追加しましょう。",
+  "no other media": "この鳥の別の写真はありません。",
+  "no media left for question": "現在、この鳥の使える写真がありません。",
+  "skip question": "この問題をスキップ"
 }

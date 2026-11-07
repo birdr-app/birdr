@@ -16,6 +16,8 @@ import { BirdrMoodHero } from '../components/BirdrMoodHero';
 import { PracticeSpeciesLinks } from '../components/PracticeSpeciesLinks';
 import { canShareGameResult, gameShareUrl, buildGameResultShareMessage } from '../api/gameShare';
 import { SharedGameResultCard } from '../components/SharedGameResultCard';
+import { useReviewPrompt } from '../hooks/useReviewPrompt';
+import { isGoodAccuracy } from '../game/reviewPrompt';
 
 const PRACTICE_PASS_CORRECT = 18;
 
@@ -251,6 +253,13 @@ export function GameResultsScreen() {
     isPracticeGame &&
     resultsStats != null &&
     resultsStats.correctCount >= PRACTICE_PASS_CORRECT;
+  const wonMultiplayer = sortedPlayers.length > 1 && !!showTopScoreCelebration;
+  useReviewPrompt(
+    isPracticeGame
+      ? practicePassed
+      : wonMultiplayer ||
+          (resultsStats != null && isGoodAccuracy(resultsStats.correctCount, resultsStats.totalQuestions))
+  );
 
   const handleBackToTroubleSpots = () => {
     (navigation as any).replace('TroubleSpots');
