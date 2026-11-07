@@ -2627,3 +2627,28 @@ def complete_shared_game_attempt(sender, instance, created, **kwargs):
     attempt.completed_at = now()
     attempt.is_ranked = attempt.shared_game.is_open
     attempt.save(update_fields=['correct_count', 'score', 'completed_at', 'is_ranked'])
+
+
+class CoursePhotoPick(models.Model):
+    """Photos an admin chose for one bird of one course lesson.
+
+    Overrides the photo ids in the lesson file (jizz/courses/data/<course>/), so photos can be
+    swapped without a deploy. `card[0]` is the main photo on the bird card.
+    """
+
+    course = models.SlugField(max_length=64)
+    week = models.PositiveSmallIntegerField()
+    species = models.ForeignKey(Species, on_delete=models.CASCADE, related_name='course_photo_picks')
+    card = models.JSONField(default=list, blank=True)
+    quiz = models.JSONField(default=list, blank=True)
+    reject = models.JSONField(default=list, blank=True)
+    done = models.BooleanField(default=False)
+    updated_by = models.ForeignKey('auth.User', null=True, blank=True, on_delete=models.SET_NULL, related_name='+')
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = [('course', 'week', 'species')]
+        ordering = ['course', 'week', 'species_id']
+
+    def __str__(self):
+        return f'{self.course} week {self.week}: {self.species_id}'

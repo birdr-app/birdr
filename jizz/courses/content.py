@@ -7,6 +7,7 @@ display URLs, plus the birds of earlier lessons the quiz may repeat.
 
 from __future__ import annotations
 
+import copy
 import json
 from functools import lru_cache
 from pathlib import Path
@@ -47,6 +48,42 @@ def lesson_by_week(slug: str, week: int) -> dict:
         if lesson['week'] == week:
             return lesson
     raise LessonNotFound(f'{slug} week {week}')
+
+
+def photo_picks(slug: str) -> dict[tuple[int, int], dict]:
+    """Photos chosen by admins, keyed by (week, species_id)."""
+    from jizz.models import CoursePhotoPick
+
+    return {
+        (p.week, p.species_id): {'card': p.card, 'quiz': p.quiz, 'reject': p.reject, 'done': p.done}
+        for p in CoursePhotoPick.objects.filter(course=slug)
+    }
+
+
+def effective_lessons(slug: str) -> list[dict]:
+    """The lessons with admin-chosen photos in place of the ones in the files."""
+    picks = photo_picks(slug)
+    lessons = []
+    for lesson in course_lessons(slug):
+        if any((lesson['week'], b['species_id']) in picks for b in lesson.get('birds', [])):
+            lesson = copy.deepcopy(lesson)
+            for bird in lesson['birds']:
+                pick = picks.get((lesson['week'], bird['species_id']))
+                if pick and (pick['card'] or pick['quiz']):
+                    bird['media'] = {'card': list(pick['card']), 'quiz': list(pick['quiz'])}
+        lessons.append(lesson)
+    return lessons
+
+
+def clear_cache(slug: str) -> None:
+    """Forget the cached course and lesson payloads, e.g. after photos were changed."""
+    from django.core.cache import cache
+
+    keys = []
+    for lang in COURSES[slug]['languages']:
+        keys.append(f'course:{slug}:{lang}')
+        keys.extend(f'course:{slug}:{lesson["week"]}:{lang}' for lesson in course_lessons(slug))
+    cache.delete_many(keys)
 
 
 def text(value, lang: str) -> str:
@@ -110,14 +147,12 @@ def _bird(bird: dict, rows: dict, lang: str) -> dict:
     }
 
 
-def _review_lessons(slug: str, lesson: dict) -> list[dict]:
-    weeks = set(lesson.get('quiz', {}).get('review_from') or [])
-    return [other for other in course_lessons(slug) if other['week'] in weeks]
-
-
 def lesson_payload(slug: str, week: int, lang: str = 'nl') -> dict:
-    lesson = lesson_by_week(slug, week)
-    review_lessons = _review_lessons(slug, lesson)
+    lesson_by_week(slug, week)  # raises LessonNotFound
+    lessons = effective_lessons(slug)
+    lesson = next(l for l in lessons if l['week'] == week)
+    weeks = set(lesson.get('quiz', {}).get('review_from') or [])
+    review_lessons = [other for other in lessons if other['week'] in weeks]
     rows = _media_rows(_media_ids([lesson, *review_lessons]))
 
     review_birds = []
@@ -174,7 +209,7 @@ def lesson_payload(slug: str, week: int, lang: str = 'nl') -> dict:
 
 def course_payload(slug: str, lang: str = 'nl') -> dict:
     meta = COURSES[slug]
-    lessons = course_lessons(slug)
+    lessons = effective_lessons(slug)
     first_card = {}
     for lesson in lessons:
         birds = lesson.get('birds', [])

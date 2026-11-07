@@ -99,3 +99,67 @@ class CourseApiTestCase(TestCase):
     def test_unknown_course_or_week_is_404(self):
         self.assertEqual(self.client.get('/api/courses/nope/').status_code, 404)
         self.assertEqual(self.client.get('/api/courses/nl-beginners/lessons/99/').status_code, 404)
+
+
+class CoursePhotoAdminTestCase(TestCase):
+    def setUp(self):
+        cache.clear()
+        from django.contrib.auth import get_user_model
+
+        User = get_user_model()
+        self.staff = User.objects.create_user('staff', password='x', is_staff=True)
+        self.player = User.objects.create_user('player', password='x')
+        self.client = APIClient()
+        self.blackbird = course_lessons('nl-beginners')[0]['birds'][0]
+        self.species = Species.objects.create(
+            id=self.blackbird['species_id'], name='Eurasian Blackbird', name_latin='Turdus merula', code='eurbla'
+        )
+        self.photos = [
+            Media.objects.create(
+                species=self.species, type='image', source='inaturalist',
+                url=f'https://inaturalist-open-data.s3.amazonaws.com/photos/{i}/original.jpg',
+            )
+            for i in range(1, 5)
+        ]
+        self.other = Species.objects.create(name='Other', name_latin='Other other', code='oth')
+        self.foreign = Media.objects.create(species=self.other, type='image', url='https://example.org/x.jpg')
+
+    def test_only_staff_can_open_the_photo_tools(self):
+        self.client.force_authenticate(self.player)
+        self.assertEqual(self.client.get('/api/courses/nl-beginners/photos/').status_code, 403)
+        self.client.force_authenticate(self.staff)
+        response = self.client.get('/api/courses/nl-beginners/photos/')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data['lessons'][0]['birds'][0]['name'], 'Merel')
+
+    def test_candidates_are_the_visible_photos_of_the_species(self):
+        self.photos[3].hide = True
+        self.photos[3].save()
+        self.client.force_authenticate(self.staff)
+        response = self.client.get(f'/api/courses/nl-beginners/photos/species/{self.species.id}/')
+        ids = {m['id'] for m in response.data['media']}
+        self.assertEqual(ids, {p.id for p in self.photos[:3]})
+        self.assertTrue(response.data['media'][0]['thumb'].endswith('/small.jpg'))
+
+    def test_a_saved_pick_replaces_the_lesson_photos(self):
+        self.client.force_authenticate(self.staff)
+        url = f'/api/courses/nl-beginners/photos/1/{self.species.id}/'
+        self.client.get('/api/courses/nl-beginners/lessons/1/')  # fills the cache
+        response = self.client.put(url, {'card': [self.photos[1].id], 'quiz': [self.photos[2].id], 'reject': [], 'done': True}, format='json')
+        self.assertEqual(response.status_code, 200)
+        lesson = self.client.get('/api/courses/nl-beginners/lessons/1/').data
+        self.assertEqual([i['id'] for i in lesson['birds'][0]['images']], [self.photos[1].id])
+        self.assertEqual([i['id'] for i in lesson['birds'][0]['quiz_images']], [self.photos[2].id])
+
+    def test_pick_is_validated(self):
+        self.client.force_authenticate(self.staff)
+        url = f'/api/courses/nl-beginners/photos/1/{self.species.id}/'
+        bad = [
+            {'card': [self.foreign.id]},
+            {'card': [p.id for p in self.photos]},
+            {'card': [self.photos[0].id], 'quiz': [self.photos[0].id]},
+            {'card': ['x']},
+        ]
+        for body in bad:
+            self.assertEqual(self.client.put(url, body, format='json').status_code, 400, body)
+        self.assertEqual(self.client.put('/api/courses/nl-beginners/photos/2/%d/' % self.species.id, {}, format='json').status_code, 404)

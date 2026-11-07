@@ -198,6 +198,9 @@ export const UserMenu = ({ onOpenLoginModal, isOpen = true }: UserMenuProps) => 
           <Link href="/admin" target="_blank" textDecoration="none">
             <FormattedMessage id="admin" defaultMessage="Admin" />
           </Link>
+          <Link href="/course-photos" textDecoration="none">
+            <FormattedMessage id="course_photos_title" defaultMessage="Select course photos" />
+          </Link>
         </>
       )}
       

@@ -61,6 +61,7 @@ import { GameShareResultPage } from "./pages/game-share-result"
 import { SharedGamePage } from "./pages/shared-game"
 import { SurvivalStartPage } from "./pages/survival/start"
 import { CoursePage } from "./pages/course"
+import { CoursePhotosPage } from "./pages/course-photos"
 import { CourseLessonPage } from "./pages/course/lesson"
 import { SurvivalPlayPage } from "./pages/survival/play"
 import { SurvivalResultPage } from "./pages/survival/result"
@@ -179,6 +180,7 @@ export const MainContent = () => {
             <Route path="/journey/:countryCode" element={<BirdrJourneyProgressPage />} />
             <Route path="/my-games/:token" element={<GameDetailPage />} />
             <Route path="/course" element={<CoursePage />} />
+            <Route path="/course-photos" element={<CoursePhotosPage />} />
             <Route path="/course/:week" element={<CourseLessonPage />} />
             <Route path="/survival" element={<SurvivalStartPage />} />
             <Route path="/survival/play" element={<SurvivalPlayPage />} />
