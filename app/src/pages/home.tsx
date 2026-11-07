@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Image, Link, SimpleGrid, Spinner, Text } from '@chakra-ui/react';
-import { useContext, useEffect, useState, useCallback, useMemo, type ReactNode } from 'react';
+import { useContext, useEffect, useState, useCallback, type ReactNode } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -9,14 +9,7 @@ import {
   levelTitle,
   type BirdrJourneyListItem,
 } from '../api/birdrJourney';
-import {
-  getFlockDetailPath,
-  getFlocksIntroPath,
-  listFlocks,
-  pickMainFlock,
-  setStoredMainFlockSlug,
-  type Flock,
-} from '../api/flocks';
+import { COURSE_LOCALES } from '../api/course';
 import { BirdrArtImage } from '../components/birdr-art-image';
 import { BirdrLevelImage } from '../components/birdr-level-image';
 import { Feedback } from '../components/feedback';
@@ -29,10 +22,6 @@ import { UpdateListItemCard } from '../components/updates/update-list-item';
 import { Loading } from '../components/loading';
 import AppContext from '../core/app-context';
 import { useAuthProfile } from '../core/auth-profile-context';
-import {
-  formatChallengeCountdown,
-  getChallengeTimeRemaining,
-} from '../core/challenge-countdown';
 import { loadUpdates, type UpdateListItem } from '../core/updates';
 import { getCountryDisplayName } from '../data/country-names-nl';
 import { Page } from '../shared/components/layout';
@@ -50,9 +39,6 @@ const HomePage = () => {
   const [updates, setUpdates] = useState<UpdateListItem[]>([]);
   const [activeJourney, setActiveJourney] = useState<BirdrJourneyListItem | null>(null);
   const [journeyLoading, setJourneyLoading] = useState(true);
-  const [mainFlock, setMainFlock] = useState<Flock | null>(null);
-  const [flocksLoading, setFlocksLoading] = useState(false);
-  const [flocksReady, setFlocksReady] = useState(false);
   const modes = useGameModes();
   const [inLeague, setInLeague] = useState(false);
 
@@ -89,24 +75,6 @@ const HomePage = () => {
     }
   }, [profile?.country_code, isAuthenticated]);
 
-  const loadFlockSummary = useCallback(async () => {
-    if (!isAuthenticated) {
-      setMainFlock(null);
-      setFlocksReady(true);
-      return;
-    }
-    setFlocksLoading(true);
-    try {
-      const flocks = await listFlocks();
-      setMainFlock(pickMainFlock(flocks));
-    } catch {
-      setMainFlock(null);
-    } finally {
-      setFlocksLoading(false);
-      setFlocksReady(true);
-    }
-  }, [isAuthenticated]);
-
   useEffect(() => {
     loadUpdates(player?.token, locale).then(setUpdates).catch(() => {});
   }, [player?.token, locale]);
@@ -115,27 +83,13 @@ const HomePage = () => {
     if (!profileReady) return;
     if (!isAuthenticated) {
       setActiveJourney(null);
-      setMainFlock(null);
-      setFlocksReady(true);
-    } else {
-      setFlocksReady(false);
     }
     loadActiveJourney();
-    loadFlockSummary();
-  }, [loadActiveJourney, loadFlockSummary, profile?.country_code, isAuthenticated, profileReady]);
+  }, [loadActiveJourney, profile?.country_code, isAuthenticated, profileReady]);
 
   const goJourneyProgress = () => {
     if (!activeJourney?.country?.code) return;
     navigate(`/journey/${activeJourney.country.code}`);
-  };
-
-  const goFlocks = () => {
-    if (mainFlock) {
-      setStoredMainFlockSlug(mainFlock.slug);
-      navigate(getFlockDetailPath(mainFlock.slug));
-      return;
-    }
-    navigate(getFlocksIntroPath());
   };
 
   const countryCode = activeJourney?.country?.code ?? '';
@@ -144,64 +98,13 @@ const HomePage = () => {
     : '';
   const flag = countryCodeToFlag(countryCode);
   const currentLevelTitle = levelTitle(activeJourney?.current_level, locale);
-  const flockChallenge = mainFlock?.active_challenge;
-
-  const needsCountdown =
-    !!flockChallenge &&
-    flockChallenge.status === 'active' &&
-    !flockChallenge.my_completed;
-
-  const [nowTick, setNowTick] = useState(() => Date.now());
-  useEffect(() => {
-    if (!needsCountdown) return undefined;
-    const id = window.setInterval(() => setNowTick(Date.now()), 1000);
-    return () => window.clearInterval(id);
-  }, [needsCountdown, flockChallenge?.id, flockChallenge?.ends_at]);
-
-  const flockStatusLine = useMemo(() => {
-    if (!flockChallenge) {
-      return (
-        <FormattedMessage
-          id="flocks_no_active_challenge_short"
-          defaultMessage="No active challenge"
-        />
-      );
-    }
-    if (flockChallenge.my_completed) {
-      const label = flockChallenge.my_rank_label;
-      if (label) {
-        return (
-          <FormattedMessage
-            id="flocks_home_rank"
-            defaultMessage="Rank {rank}"
-            values={{ rank: label }}
-          />
-        );
-      }
-      return (
-        <FormattedMessage id="flocks_home_completed" defaultMessage="Challenge completed" />
-      );
-    }
-    const remaining = getChallengeTimeRemaining(flockChallenge.ends_at, new Date(nowTick));
-    if (!remaining) {
-      return (
-        <FormattedMessage id="flocks_home_challenge_ended" defaultMessage="Challenge ended" />
-      );
-    }
-    return (
-      <FormattedMessage
-        id="flocks_home_time_left"
-        defaultMessage="{time} left"
-        values={{ time: formatChallengeCountdown(remaining) }}
-      />
-    );
-  }, [flockChallenge, nowTick]);
+  // The beginners course is written in Dutch, so only the Dutch app offers it for now.
+  const showCourse = COURSE_LOCALES.includes(locale);
 
   const vis = modeVisibility({
     gamesPlayed: modes.gamesPlayed,
     showAll: modes.showAll,
     inLeague,
-    inFlock: !!mainFlock,
     playedSurvival: !!readSurvivalSession(),
     unlockSeen: modes.unlockSeen,
   });
@@ -274,6 +177,43 @@ const HomePage = () => {
             ) : null}
 
             <Flex direction="column" gap={3} w="full">
+              {showCourse ? (
+                <Button
+                  onClick={() => navigate('/course')}
+                  colorPalette="secondary"
+                  height="auto"
+                  py={3}
+                  px={4}
+                  w="full"
+                  bg="secondary.500"
+                  borderWidth="2px"
+                  borderColor="secondary.300"
+                  borderRadius="xl"
+                  whiteSpace="normal"
+                  data-testid="home-course"
+                >
+                  <Flex align="center" gap={3} width="full" textAlign="left">
+                    <BirdrArtImage
+                      filename="birdr-waiting.png"
+                      alt=""
+                      width="56px"
+                      height="56px"
+                      objectFit="contain"
+                      bg="transparent"
+                      overflow="visible"
+                      flexShrink={0}
+                    />
+                    <Flex direction="column" flex={1} minW={0}>
+                      <Text fontSize="lg" fontWeight="700" color="white" lineClamp={2}>
+                        <FormattedMessage id="course_title" defaultMessage="Birds of the Netherlands" />
+                      </Text>
+                      <Text fontSize="sm" fontWeight="600" color="secondary.100">
+                        <FormattedMessage id="course_home_hint" defaultMessage="A beginners course: one short lesson a week" />
+                      </Text>
+                    </Flex>
+                  </Flex>
+                </Button>
+              ) : null}
               {journeyLoading ? (
                 <Flex w="full" justify="center" align="center" py={6}>
                   <Spinner size="sm" color="primary.500" />
@@ -387,92 +327,6 @@ const HomePage = () => {
             ) : null}
             {vis.league === 'full' ? <LeagueHomeCard /> : null}
 
-              {flocksLoading && !flocksReady ? (
-                <Flex w="full" justify="center" align="center" py={6}>
-                  <Spinner size="sm" color="primary.500" />
-                </Flex>
-              ) : mainFlock ? (
-                <Button
-                  onClick={goFlocks}
-                  colorPalette="primary"
-                  height="auto"
-                  py={3}
-                  px={4}
-                  w="full"
-                  bg="primary.600"
-                  borderWidth="2px"
-                  borderColor="primary.400"
-                  borderRadius="xl"
-                  whiteSpace="normal"
-                >
-                  <Flex align="center" gap={3} width="full" textAlign="left">
-                    {mainFlock.logo_url ? (
-                      <Image
-                        src={mainFlock.logo_url}
-                        alt=""
-                        width="56px"
-                        height="56px"
-                        objectFit="cover"
-                        borderRadius="md"
-                        flexShrink={0}
-                      />
-                    ) : (
-                      <BirdrArtImage
-                        filename="birdr-leaderboard.png"
-                        alt=""
-                        width="56px"
-                        height="56px"
-                        objectFit="contain"
-                        flexShrink={0}
-                      />
-                    )}
-                    <Flex direction="column" flex={1} minW={0}>
-                      <Text fontSize="lg" fontWeight="700" color="primary.50" lineClamp={2}>
-                        {mainFlock.name}
-                      </Text>
-                      <Text fontSize="sm" fontWeight="600" color="primary.300" truncate>
-                        {flockStatusLine}
-                      </Text>
-                    </Flex>
-                  </Flex>
-                </Button>
-              ) : vis.flock === 'full' ? (
-                <Button
-                  onClick={goFlocks}
-                  colorPalette="primary"
-                  height="auto"
-                  py={3}
-                  px={4}
-                  w="full"
-                  bg="primary.600"
-                  borderWidth="2px"
-                  borderColor="primary.400"
-                  borderRadius="xl"
-                  whiteSpace="normal"
-                >
-                  <Flex align="center" gap={3} width="full" textAlign="left">
-                    <BirdrArtImage
-                      filename="birdr-flock-invite.png"
-                      alt=""
-                      width="56px"
-                      height="56px"
-                      objectFit="contain"
-                      flexShrink={0}
-                    />
-                    <Flex direction="column" flex={1} minW={0}>
-                      <Text fontSize="lg" fontWeight="700" color="primary.50">
-                        <FormattedMessage id="flocks_start" defaultMessage="Start flock" />
-                      </Text>
-                      <Text fontSize="sm" fontWeight="600" color="primary.200">
-                        <FormattedMessage
-                          id="flocks_home_start_cta"
-                          defaultMessage="Start a club and compete with friends"
-                        />
-                      </Text>
-                    </Flex>
-                  </Flex>
-                </Button>
-              ) : null}
             </Flex>
 
             {vis.hasTiles ? (
@@ -491,11 +345,6 @@ const HomePage = () => {
                       <FormattedMessage id="survival" defaultMessage="Survival" />
                     </GameModeTile>
                   ) : null}
-                  {vis.flock === 'tile' ? (
-                    <GameModeTile image="birdr-flock-invite.png" onClick={goFlocks}>
-                      <FormattedMessage id="flocks_title" defaultMessage="Flocks" />
-                    </GameModeTile>
-                  ) : null}
                 </SimpleGrid>
                 {vis.stage === 'beginner' && (vis.league === 'tile' || vis.survival === 'tile') ? (
                   <Flex justify="center" mt={1}>
@@ -506,10 +355,6 @@ const HomePage = () => {
                 ) : null}
               </Box>
             ) : null}
-
-            <Button variant="ghost" colorPalette="primary" onClick={() => navigate('/scores')}>
-              <FormattedMessage id="high scores" defaultMessage="High scores" />
-            </Button>
 
             <Flex
               gap={3}

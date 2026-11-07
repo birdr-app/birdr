@@ -1,0 +1,376 @@
+{
+  "course": "nl-beginners",
+  "week": 12,
+  "slug": "roofvogels",
+  "part": 2,
+  "kind": "species",
+  "season": "any",
+  "minutes": 10,
+  "title": {
+    "nl": "Roofvogels"
+  },
+  "subtitle": {
+    "nl": "Vier jagers die je langs elke weg kunt zien"
+  },
+  "intro": {
+    "nl": "Vandaag kijken we omhoog. Fiets of rij door het Nederlandse platteland en je ziet ze overal: op een paaltje langs de weg, stil hangend boven de berm, laag boven het riet.\n\nRoofvogels zijn lastig op kleur te herkennen. De ene buizerd is bijna wit, de volgende chocoladebruin. Daarom leer je in deze les vooral kijken naar vorm en gedrag: hoe zit hij, hoe vliegt hij, en waar jaagt hij? Je leert vier roofvogels herkennen, van de buizerd op het hek tot de sperwer die plotseling in je tuin toeslaat.\n\nAan het eind volgt een quiz van acht vragen, met twee vogels uit de vorige les ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "polsvlek"
+      },
+      "explain": {
+        "nl": "Een donkere vlek aan de onderkant van de vleugel, bij de knik."
+      }
+    },
+    {
+      "term": {
+        "nl": "haaksnavel"
+      },
+      "explain": {
+        "nl": "Een snavel met een scherpe, omlaag gebogen haak aan de punt, om vlees te scheuren."
+      }
+    },
+    {
+      "term": {
+        "nl": "washuid"
+      },
+      "explain": {
+        "nl": "Een stukje kale, vaak gele huid bovenaan de snavel, waar de neusgaten zitten."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2944,
+      "latin": "Buteo buteo",
+      "name": {
+        "nl": "Buizerd"
+      },
+      "plumage": {
+        "nl": "volwassen, van licht tot donker"
+      },
+      "look_for": [
+        {
+          "nl": "Gedrongen, brede vleugels, korte staart"
+        },
+        {
+          "nl": "Vaak een lichte borstband"
+        },
+        {
+          "nl": "In de vlucht: donkere **polsvlek** onder de vleugel"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar, in het hele land. Zit rechtop op paaltjes en lantaarnpalen langs de weg, of cirkelt hoog boven bos en weiland."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een klagend, miauwend \"pieeuw\", vaak hoog in de lucht."
+        },
+        "chosen": [
+          {
+            "media_id": 1228099,
+            "xeno_canto": "XC1019332",
+            "type": "call, flight call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 33.4,
+            "background_species": 0,
+            "recordist": "Beatrix Saadi-Varchmin"
+          },
+          {
+            "media_id": 1228092,
+            "xeno_canto": "XC1052241",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 47.4,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Geen twee buizerds zijn hetzelfde: sommige zijn bijna wit, andere bijna zwart. Let daarom op de vorm, niet op de kleur."
+      },
+      "media": {
+        "card": [
+          439662,
+          439739,
+          439800
+        ],
+        "quiz": [
+          439723,
+          439721,
+          439661,
+          439762,
+          439675,
+          439775,
+          439722
+        ]
+      }
+    },
+    {
+      "species_id": 3980,
+      "latin": "Falco tinnunculus",
+      "name": {
+        "nl": "Torenvalk"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Bidt: hangt fladderend stil in de lucht"
+        },
+        {
+          "nl": "Grijze kop, roodbruine rug met zwarte stipjes"
+        },
+        {
+          "nl": "Grijze staart, zwarte staartband bij de punt"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar, boven bermen, dijken en weilanden. Hangt biddend op één plek met de kop doodstil en duikt dan op een muis. Spitse vleugels en een lange staart."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een snel, schel \"kie-kie-kie-kie\", vooral bij het nest."
+        },
+        "chosen": [
+          {
+            "media_id": 1242175,
+            "xeno_canto": "XC1012105",
+            "type": "alarm call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 34.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1242178,
+            "xeno_canto": "XC1004092",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 46.7,
+            "background_species": 0,
+            "recordist": "Thierry THOMAS"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Het vrouwtje heeft een bruine kop en een bruine, gestreepte staart. Bidden doet ze net zo goed."
+      },
+      "media": {
+        "card": [
+          548588,
+          548643
+        ],
+        "quiz": [
+          548671,
+          548564,
+          548597,
+          548692,
+          548638,
+          548559
+        ]
+      }
+    },
+    {
+      "species_id": 2874,
+      "latin": "Accipiter nisus",
+      "name": {
+        "nl": "Sperwer"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Korte, ronde vleugels en lange staart"
+        },
+        {
+          "nl": "Grijze rug, fijne dwarsstreepjes eronder"
+        },
+        {
+          "nl": "Gele **washuid** boven een kleine **haaksnavel**"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar, ook in dorpen en steden. Schiet laag langs een heg of over het dak en grijpt een mus of mees bij het voederhuisje. Daarna is het even doodstil in de tuin."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Meestal stil. Bij het nest in het voorjaar een snel, scherp \"kek-kek-kek\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1227193,
+            "xeno_canto": "XC1024300",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 35.9,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1227194,
+            "xeno_canto": "XC1015205",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 37.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Het mannetje heeft een blauwgrijze rug, oranje dwarsstreepjes en oranje wangen. Het vrouwtje is veel groter, met een bruingrijze rug en grijze dwarsstreepjes."
+      },
+      "dont_confuse": {
+        "nl": "Torenvalk: spitse vleugels, bidt boven open land. Een sperwer bidt nooit en jaagt tussen huizen en bomen."
+      },
+      "media": {
+        "card": [
+          430445,
+          430472,
+          430401
+        ],
+        "quiz": [
+          430386,
+          430449,
+          430364,
+          430429,
+          430491,
+          430459,
+          430358
+        ]
+      }
+    },
+    {
+      "species_id": 2824,
+      "latin": "Circus aeruginosus",
+      "name": {
+        "nl": "Bruine kiekendief"
+      },
+      "plumage": {
+        "nl": "vrouwtje"
+      },
+      "look_for": [
+        {
+          "nl": "Donker chocoladebruin, roomgele kruin en keel"
+        },
+        {
+          "nl": "Lange, smalle vleugels en lange staart"
+        },
+        {
+          "nl": "Vliegt laag, vleugels in een ondiepe V"
+        }
+      ],
+      "where_when": {
+        "nl": "Van maart tot oktober boven rietvelden, moerassen en akkers. Zweeft langzaam en wiegend vlak boven het riet en laat zich dan plots vallen. De meeste trekken in de winter naar het zuiden."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Meestal stil. In het voorjaar hoor je soms hoge, miauwende roepjes boven het riet."
+        },
+        "chosen": [
+          {
+            "media_id": 1226990,
+            "xeno_canto": "XC782713",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 46.9,
+            "background_species": 0,
+            "recordist": "Pere Josa"
+          },
+          {
+            "media_id": 1226994,
+            "xeno_canto": "XC709822",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 46.0,
+            "background_species": 0,
+            "recordist": "SonoNatura"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "nl": "Het mannetje heeft een bruin lijf, grijze vleugels met zwarte punten en een grijze staart."
+      },
+      "media": {
+        "card": [
+          423899,
+          423920,
+          423919
+        ],
+        "quiz": [
+          424014,
+          423917,
+          424007,
+          424000,
+          423992,
+          423980
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 2824,
+    "species_ids": [
+      2944,
+      2824
+    ],
+    "title": {
+      "nl": "Buizerd of bruine kiekendief?"
+    },
+    "text": {
+      "nl": "Allebei groot en bruin, dus kijk naar vorm en gedrag. Een buizerd is gedrongen, met brede vleugels en een korte staart, en zit op een paaltje of cirkelt hoog. Een bruine kiekendief is slanker, met lange smalle vleugels en een lange staart, en zweeft laag en zoekend over riet en akkers."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      11
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Kijk deze week naar paaltjes en lantaarnpalen langs de weg, vanaf de fiets, uit de auto of uit de trein. Hoeveel buizerds tel je? Hangt er een vogel stil in de lucht boven een berm? Dan heb je een torenvalk. Bonus: wordt het opeens doodstil bij je voederplek? Misschien kwam er net een sperwer langs."
+  },
+  "next": {
+    "nl": "Volgende week: in het bos."
+  },
+  "flow": [
+    "intro",
+    "bird:2944",
+    "bird:3980",
+    "bird:2874",
+    "bird:2824",
+    "quiz",
+    "done"
+  ]
+}

@@ -1,0 +1,384 @@
+{
+  "course": "nl-beginners",
+  "week": 4,
+  "slug": "hoe-kijk-je-naar-een-vogel",
+  "part": 1,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "nl": "Hoe kijk je naar een vogel?"
+  },
+  "subtitle": {
+    "nl": "Vier vogels en een vaste volgorde om te kijken"
+  },
+  "intro": {
+    "nl": "Vandaag gaan we op een bankje bij een heg in het park zitten. Er schiet een vogeltje de struiken in, en weg is hij. Een vogel zit vaak maar een paar seconden stil. Wie dan meteen naar de kleuren kijkt, ziet vaak te weinig. Ervaren vogelaars kijken daarom in een vaste volgorde.\n\nEerst grootte en vorm: kleiner dan een mus, zo groot als een merel, of groter? Rond of slank, met een lange of een korte staart? Dan de snavel: dik om zaadjes te kraken, of dun om insecten te pakken? Pas daarna de kleuren en de tekening. En tot slot het gedrag: huppelt hij, loopt hij, wipt hij met zijn staart?\n\nWe oefenen dat met vier vogels uit de tuin en het park. Bij elke vogel staan de dingen om op te letten in die volgorde. Aan het eind volgt een quiz van acht vragen, met twee vogels uit eerdere lessen ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "mantel"
+      },
+      "explain": {
+        "nl": "De bovenrug, tussen de vleugels."
+      }
+    },
+    {
+      "term": {
+        "nl": "keel"
+      },
+      "explain": {
+        "nl": "De voorkant van de hals, onder de snavel."
+      }
+    },
+    {
+      "term": {
+        "nl": "wenkbrauwstreep"
+      },
+      "explain": {
+        "nl": "Een lichte streep boven het oog, als een wenkbrauw."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 8649,
+      "latin": "Sturnus vulgaris",
+      "name": {
+        "nl": "Spreeuw"
+      },
+      "plumage": {
+        "nl": "volwassen, gespikkeld (winter) of glanzend (zomer)"
+      },
+      "look_for": [
+        {
+          "nl": "Kort en stevig, met een korte staart"
+        },
+        {
+          "nl": "Lange, puntige snavel, in de zomer geel"
+        },
+        {
+          "nl": "Zomer: glanzend groen-paars. Winter: wit gespikkeld"
+        }
+      ],
+      "where_when": {
+        "nl": "Overal, het hele jaar. Loopt in groepjes over het gras en prikt met de snavel in de grond. In de herfst soms in enorme zwermen."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Een rommelig gekwebbel vol klikjes, fluitjes en nagedane geluiden: van een buizerd tot een autoalarm."
+        },
+        "chosen": [
+          {
+            "media_id": 1309991,
+            "xeno_canto": "XC1079535",
+            "type": "imitation, song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 89.7,
+            "background_species": 0,
+            "recordist": "Jorge Leitão"
+          },
+          {
+            "media_id": 1310005,
+            "xeno_canto": "XC946413",
+            "type": "alarm call, call, flight call, song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 423.5,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "nl": "De witte spikkels zijn de puntjes van nieuwe veren. In de loop van de winter slijten ze af, en in het voorjaar is de spreeuw glanzend zwart."
+      },
+      "dont_confuse": {
+        "nl": "Merel (week 1): langere staart, huppelt in plaats van te lopen, en zit vaak alleen."
+      },
+      "media": {
+        "card": [
+          927133,
+          927131,
+          927124
+        ],
+        "quiz": [
+          927220,
+          927136,
+          927125,
+          927204,
+          927119,
+          927277,
+          927278,
+          927266
+        ]
+      }
+    },
+    {
+      "species_id": 9925,
+      "latin": "Fringilla coelebs",
+      "name": {
+        "nl": "Vink"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Zo groot als een mus, langere staart"
+        },
+        {
+          "nl": "Korte, dikke snavel: een zaadeter"
+        },
+        {
+          "nl": "Blauwgrijze kop, zalmroze borst, bruine **mantel**"
+        }
+      ],
+      "where_when": {
+        "nl": "Overal waar bomen staan: bossen, parken en tuinen. Scharrelt onder de voedertafel naar zaadjes. In de vlucht zie je veel wit in vleugel en staart. Een van de talrijkste vogels van Nederland."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Een vrolijke roffel die naar beneden loopt en eindigt met een krulletje, van februari tot juli. Zijn roep is een helder \"pink\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1326230,
+            "xeno_canto": "XC1013520",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 76.0,
+            "background_species": 0,
+            "recordist": "Romuald Mikusek"
+          },
+          {
+            "media_id": 1326214,
+            "xeno_canto": "XC1079234",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 68.2,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "nl": "Het vrouwtje is veel valer: week 5."
+      },
+      "media": {
+        "card": [
+          1050523,
+          1050520,
+          1050504
+        ],
+        "quiz": [
+          1050481,
+          1050596,
+          1050586,
+          1050521,
+          1050486,
+          1050551,
+          1050518,
+          1050554
+        ]
+      }
+    },
+    {
+      "species_id": 9810,
+      "latin": "Prunella modularis",
+      "name": {
+        "nl": "Heggenmus"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Zo groot als een mus, maar slanker"
+        },
+        {
+          "nl": "Dunne, spitse snavel: een insecteneter"
+        },
+        {
+          "nl": "Grijze kop en **keel**, gestreepte bruine rug"
+        }
+      ],
+      "where_when": {
+        "nl": "Onder heggen en struiken in tuinen en parken, het hele jaar. Schuifelt als een muisje over de grond en trekt vaak even met de vleugels."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Een snel, piepend riedeltje van een paar seconden, steeds bijna hetzelfde, vaak vanaf de top van een struik."
+        },
+        "chosen": [
+          {
+            "media_id": 1324457,
+            "xeno_canto": "XC982393",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 37.4,
+            "background_species": 0,
+            "recordist": "Benjamin Drillat"
+          },
+          {
+            "media_id": 1324451,
+            "xeno_canto": "XC1011603",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 35.4,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Ondanks de naam is het geen mus. De dunne snavel verraadt het."
+      },
+      "dont_confuse": {
+        "nl": "Huismus vrouwtje (week 5): dikke snavel, geen grijze kop en keel."
+      },
+      "media": {
+        "card": [
+          1037380,
+          1037394,
+          1037435
+        ],
+        "quiz": [
+          1037361,
+          1037507,
+          1037489,
+          1037445,
+          1037502,
+          1037523,
+          1037384,
+          1037439
+        ]
+      }
+    },
+    {
+      "species_id": 8529,
+      "latin": "Troglodytes troglodytes",
+      "name": {
+        "nl": "Winterkoning"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Piepklein en rond, staartje rechtop"
+        },
+        {
+          "nl": "Dun, iets gebogen snaveltje"
+        },
+        {
+          "nl": "Warm bruin, lichte **wenkbrauwstreep**"
+        }
+      ],
+      "where_when": {
+        "nl": "Overal, het hele jaar: laag in struiken, klimop en takkenhopen. Schiet als een muis tussen de takken door."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Oorverdovend hard voor zo'n kleintje: een snelle stroom heldere tonen met een ratelend trillertje erin. Zingt bijna het hele jaar."
+        },
+        "chosen": [
+          {
+            "media_id": 1308225,
+            "xeno_canto": "XC1055856",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 62.1,
+            "background_species": 0,
+            "recordist": "François Guibert"
+          },
+          {
+            "media_id": 1308207,
+            "xeno_canto": "XC1079264",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 34.0,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          916216,
+          916142,
+          916148
+        ],
+        "quiz": [
+          916156,
+          916168,
+          916223,
+          916210,
+          916144,
+          916287,
+          916179,
+          916260
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 8529,
+    "species_ids": [
+      9810,
+      8529
+    ],
+    "title": {
+      "nl": "Heggenmus of winterkoning?"
+    },
+    "text": {
+      "nl": "Allebei klein, bruin en laag in de struiken. Kijk eerst naar de vorm. De winterkoning is veel kleiner, rond, met een staartje dat rechtop staat. De heggenmus is zo groot als een mus, heeft een grijze kop en keel, en houdt zijn staart gewoon omlaag."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      2,
+      3
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Kies deze week één vogel die je niet meteen herkent en loop de vier stappen af. Hoe groot is hij, en welke vorm? Wat voor snavel? Welke kleuren? Wat doet hij? Bonus: bekijk een groepje spreeuwen op het gras. Lopen ze, of huppelen ze?"
+  },
+  "next": {
+    "nl": "Volgende week: de andere helft. Vrouwtjes en jongen."
+  },
+  "flow": [
+    "intro",
+    "bird:8649",
+    "bird:9925",
+    "bird:9810",
+    "bird:8529",
+    "quiz",
+    "done"
+  ]
+}

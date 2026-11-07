@@ -1,0 +1,60 @@
+{
+  "course": "nl-beginners",
+  "week": 20,
+  "slug": "eindtoets",
+  "part": 2,
+  "kind": "review",
+  "season": "any",
+  "minutes": 15,
+  "title": {
+    "nl": "Eindtoets"
+  },
+  "subtitle": {
+    "nl": "Twintig weken vogels in één quiz"
+  },
+  "intro": {
+    "nl": "Twintig weken geleden begon je bij het raam, met een kop koffie en vijf tuinvogels. Sindsdien ben je naar de vijver, de straat, het weiland, het bos, het riet en het wad geweest. Je kent nu meer dan zeventig vogels, en je weet waar je op let: de kruin, de bef, de vleugelstreep, de vorm van de snavel en de manier waarop een vogel vliegt.\n\nVandaag zet je alles op een rij. De eindtoets heeft twintig vragen, met vogels uit alle negentien lessen door elkaar. Er komen geen nieuwe vogels bij. Twijfel je? Kijk eerst naar de vorm, dan naar de kop, en dan pas naar de details.\n\nFouten zijn niet erg: die vogels komen bij Mijn lastige vogels, zodat je ze later nog eens kunt oefenen. Succes!"
+  },
+  "words": [],
+  "birds": [],
+  "compare": null,
+  "quiz": {
+    "questions": 20,
+    "photos_from": "quiz",
+    "answers_from": "lessons 1-19",
+    "review_from": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "review_questions": 20,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Kies deze week een vaste wandelroute van een half uur bij je in de buurt. Loop hem en vink alle vogels af die je herkent. Loop dezelfde route over een maand nog eens: welke vogels zijn erbij gekomen en welke zijn weg? Zo zie je de seizoenen veranderen."
+  },
+  "next": {
+    "nl": "De beginnerscursus zit erop, gefeliciteerd! Blijf oefenen met de dagelijkse uitdaging, of speel de landenuitdaging voor Nederland."
+  },
+  "flow": [
+    "intro",
+    "quiz",
+    "done"
+  ]
+}

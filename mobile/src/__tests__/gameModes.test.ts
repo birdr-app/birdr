@@ -5,7 +5,6 @@ const beginner = {
   gamesPlayed: 0,
   showAll: false,
   inLeague: false,
-  inFlock: false,
   hasJourney: false,
   playedSurvival: false,
   isAuthenticated: false,
@@ -17,7 +16,6 @@ describe('modeVisibility', () => {
       stage: 'beginner',
       league: 'tile',
       survival: 'tile',
-      flock: 'tile',
       showMenuExtras: false,
       hasTiles: true,
       showUnlockBanner: false,
@@ -25,11 +23,10 @@ describe('modeVisibility', () => {
   });
 
   it('keeps modes the player already uses as full cards', () => {
-    const v = modeVisibility({ ...beginner, isAuthenticated: true, inLeague: true, inFlock: true, playedSurvival: true });
+    const v = modeVisibility({ ...beginner, isAuthenticated: true, inLeague: true, playedSurvival: true });
     expect(v.stage).toBe('beginner');
     expect(v.league).toBe('full');
     expect(v.survival).toBe('full');
-    expect(v.flock).toBe('full');
     expect(v.hasTiles).toBe(false);
     expect(v.showMenuExtras).toBe(false);
   });
@@ -54,12 +51,9 @@ describe('modeVisibility', () => {
     expect(v.showUnlockBanner).toBe(false);
   });
 
-  it('makes flocks big once modes are disclosed, like league and survival', () => {
-    expect(modeVisibility({ ...beginner, gamesPlayed: 2 }).flock).toBe('tile');
-    expect(modeVisibility({ ...beginner, gamesPlayed: 10 }).flock).toBe('full');
-    expect(modeVisibility({ ...beginner, showAll: true }).flock).toBe('full');
+  it('has no tiles left once modes are disclosed', () => {
+    expect(modeVisibility({ ...beginner, gamesPlayed: 2 }).hasTiles).toBe(true);
     expect(modeVisibility({ ...beginner, gamesPlayed: 10 }).hasTiles).toBe(false);
-    expect(modeVisibility({ ...beginner, inFlock: true }).flock).toBe('full');
   });
 });
 

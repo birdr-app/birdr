@@ -84,6 +84,7 @@ from jizz.birdr_journey_views import (
 )
 from jizz.checklist_views import ChecklistView
 from jizz.app_version_views import AppVersionView
+from jizz.courses.views import CourseDetailView, CourseLessonView
 from jizz.geo_views import GeoCountryView
 from jizz.practice_views import (
     GlobalTroubleSpotsView,
@@ -578,6 +579,8 @@ urlpatterns = [
 
     re_path(r"^api/feedback/$", FeedbackListView.as_view(), name="feedback"),
     path('api/app-version/', AppVersionView.as_view(), name='app-version'),
+    path('api/courses/<slug:slug>/', CourseDetailView.as_view(), name='course-detail'),
+    path('api/courses/<slug:slug>/lessons/<int:week>/', CourseLessonView.as_view(), name='course-lesson'),
     path('api/geo/country/', GeoCountryView.as_view(), name='geo-country'),
     path('api/practice/trouble-spots/', TroubleSpotsView.as_view(), name='practice-trouble-spots'),
     path(

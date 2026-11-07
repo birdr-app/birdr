@@ -25,7 +25,6 @@ const PANEL_WIDTH = Math.min(SCREEN_WIDTH * 0.85, 340);
 const MENU_ITEMS: { route: string; labelKey: string; advanced?: boolean }[] = [
   { route: 'Home', labelKey: 'home' },
   { route: 'Start', labelKey: 'new_game' },
-  { route: 'Scores', labelKey: 'high_scores' },
   { route: 'CountryChallengeLeaderboard', labelKey: 'country_leaderboard', advanced: true },
   { route: 'League', labelKey: 'league', advanced: true },
   { route: 'SurvivalScores', labelKey: 'survival_highscores', advanced: true },

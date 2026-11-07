@@ -1,0 +1,457 @@
+{
+  "course": "nl-beginners",
+  "week": 18,
+  "slug": "wadvogels",
+  "part": 2,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "nl": "Wadvogels"
+  },
+  "subtitle": {
+    "nl": "Vijf steltlopers aan de Waddenkust bij hoogwater"
+  },
+  "intro": {
+    "nl": "Vandaag gaan we naar de Waddenzee. Bij laagwater zoeken hier honderdduizenden steltlopers (vogels met lange poten die in ondiep water en op slik lopen) naar voedsel, verspreid over het wad en zo ver weg dat je ze nauwelijks ziet. Maar als het water opkomt, worden ze naar de kust gedreven. Bij hoogwater zitten ze dicht op elkaar op een paar droge plekken: de hoogwatervluchtplaatsen. Dat is je kans.\n\nJe leert vijf steltlopers herkennen, van de grote wulp tot de kleine drieteenstrandloper. Kijk vooral naar de snavel: lang of kort, recht, omhoog of omlaag gebogen. Bij de bonte strandloper leer je twee kleden tegelijk: de zomer en de winter.\n\nAan het eind volgt een quiz van tien vragen, met drie vogels uit eerdere lessen ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "buikvlek"
+      },
+      "explain": {
+        "nl": "Een vlek midden op de buik."
+      }
+    },
+    {
+      "term": {
+        "nl": "bovendelen"
+      },
+      "explain": {
+        "nl": "De hele bovenkant van de vogel: kruin, nek, rug en vleugels samen."
+      }
+    },
+    {
+      "term": {
+        "nl": "onderdelen"
+      },
+      "explain": {
+        "nl": "De hele onderkant van de vogel: keel, borst, buik en onderstaart samen."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2070,
+      "latin": "Numenius arquata",
+      "name": {
+        "nl": "Wulp"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Groot en bruin gespikkeld"
+        },
+        {
+          "nl": "Heel lange, omlaag gebogen snavel"
+        },
+        {
+          "nl": "Witte wig op de rug in de vlucht"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar op het wad en op weilanden langs de kust, in de winter in grote aantallen. Broedt op heide en in graslanden."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een weemoedig, fluitend \"tuu-ie\", ver over het wad te horen. In het voorjaar ook een borrelende triller die steeds sneller gaat."
+        },
+        "chosen": [
+          {
+            "media_id": 1218618,
+            "xeno_canto": "XC996167",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 44.4,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1218633,
+            "xeno_canto": "XC731275",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 32.7,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "De grootste steltloper van Europa. De regenwulp lijkt erop, maar is kleiner, met een kortere snavel en strepen op de kop."
+      },
+      "media": {
+        "card": [
+          321035,
+          321101,
+          321073
+        ],
+        "quiz": [
+          321010,
+          320997,
+          321064,
+          321096,
+          321108,
+          321081,
+          321014,
+          321021
+        ]
+      }
+    },
+    {
+      "species_id": 2071,
+      "latin": "Limosa lapponica",
+      "name": {
+        "nl": "Rosse grutto"
+      },
+      "plumage": {
+        "nl": "winterkleed"
+      },
+      "look_for": [
+        {
+          "nl": "Lange, licht omhoog gebogen snavel"
+        },
+        {
+          "nl": "Grijsbruine **bovendelen** met lichte streepjes"
+        },
+        {
+          "nl": "Kortere poten dan de grutto"
+        }
+      ],
+      "where_when": {
+        "nl": "Vooral van augustus tot mei op het wad. Zoekt wormen diep in het slik en zit bij hoogwater in grote, dichte groepen op de vluchtplaats."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Meestal stil; in de vlucht soms korte, nasale roepjes."
+        },
+        "chosen": [
+          {
+            "media_id": 1218647,
+            "xeno_canto": "XC742406",
+            "type": "nocturnal flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 74.0,
+            "background_species": 0,
+            "recordist": "Gosse Hoekstra"
+          },
+          {
+            "media_id": 1218650,
+            "xeno_canto": "XC596909",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 33.2,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "In het voorjaar krijgt het mannetje een steenrode kop, borst en buik: daar komt de naam vandaan."
+      },
+      "dont_confuse": {
+        "nl": "Grutto (week 11): langere poten, een rechte snavel en in de vlucht een zwarte staartband en een witte vleugelstreep. Wulp: de snavel buigt omlaag, niet omhoog."
+      },
+      "media": {
+        "card": [
+          321181,
+          321258,
+          321261
+        ],
+        "quiz": [
+          321187,
+          321319,
+          321266,
+          321286,
+          321201,
+          321185,
+          321299,
+          321312
+        ]
+      }
+    },
+    {
+      "species_id": 2149,
+      "latin": "Calidris alpina",
+      "name": {
+        "nl": "Bonte strandloper"
+      },
+      "plumage": {
+        "nl": "zomer- en winterkleed"
+      },
+      "look_for": [
+        {
+          "nl": "Snavel buigt aan de punt iets omlaag"
+        },
+        {
+          "nl": "Zomer: zwarte **buikvlek**, roodbruine rug"
+        },
+        {
+          "nl": "Winter: grijs boven, witte **onderdelen**"
+        }
+      ],
+      "where_when": {
+        "nl": "De talrijkste steltloper op het wad, vooral van augustus tot mei. Bij hoogwater in dichte groepen; vliegt in zwermen die draaien als één vogel."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een schor, gerekt \"trrieh\" in de vlucht."
+        },
+        "chosen": [
+          {
+            "media_id": 1219878,
+            "xeno_canto": "XC282218",
+            "type": "call (social calls)",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 34.6,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1219883,
+            "xeno_canto": "XC172379",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 58.9,
+            "background_species": 0,
+            "recordist": "Michele Peron"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "In het voorjaar en aan het eind van de zomer zie je ook bonte strandlopers die half in zomer- en half in winterkleed zijn."
+      },
+      "media": {
+        "card": [
+          330962,
+          330975,
+          330987
+        ],
+        "quiz": [
+          330945,
+          330984,
+          330986,
+          331046,
+          331015,
+          331025,
+          331055,
+          331048
+        ]
+      }
+    },
+    {
+      "species_id": 2148,
+      "latin": "Calidris alba",
+      "name": {
+        "nl": "Drieteenstrandloper"
+      },
+      "plumage": {
+        "nl": "winterkleed"
+      },
+      "look_for": [
+        {
+          "nl": "Heel licht: zilvergrijs boven, sneeuwwit onder"
+        },
+        {
+          "nl": "Zwarte snavel en zwarte poten"
+        },
+        {
+          "nl": "Rent als een opwindspeeltje langs de golven"
+        }
+      ],
+      "where_when": {
+        "nl": "Van augustus tot mei op zandstranden langs de Noordzeekust en op de Waddeneilanden. Rent achter elke terugtrekkende golf aan en vlucht weer voor de volgende."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een kort, scherp \"twik\", vaak in de vlucht."
+        },
+        "chosen": [
+          {
+            "media_id": 1219867,
+            "xeno_canto": "XC938622",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 14.4,
+            "background_species": 0,
+            "recordist": "Sonothèque ADVL"
+          },
+          {
+            "media_id": 1219855,
+            "xeno_canto": "XC589109",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 31.2,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Hij heeft geen achterteen, alleen drie tenen naar voren: vandaar de naam."
+      },
+      "media": {
+        "card": [
+          330859,
+          330909,
+          330927
+        ],
+        "quiz": [
+          330861,
+          330845,
+          330777,
+          330790,
+          330885,
+          330796,
+          330776,
+          330903
+        ]
+      }
+    },
+    {
+      "species_id": 2133,
+      "latin": "Arenaria interpres",
+      "name": {
+        "nl": "Steenloper"
+      },
+      "plumage": {
+        "nl": "volwassen, winter"
+      },
+      "look_for": [
+        {
+          "nl": "Gedrongen, met korte oranje poten"
+        },
+        {
+          "nl": "Kort, puntig snaveltje"
+        },
+        {
+          "nl": "Donker op de borst, witte buik"
+        }
+      ],
+      "where_when": {
+        "nl": "Vooral van augustus tot mei, op stenen dijken, pieren en havenhoofden langs de hele kust. Keert stenen en wier om, op zoek naar kleine diertjes."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een snel, ratelend \"tukketuk-tuk\" in de vlucht."
+        },
+        "chosen": [
+          {
+            "media_id": 1219588,
+            "xeno_canto": "XC1031757",
+            "type": "nocturnal flight call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 35.3,
+            "background_species": 0,
+            "recordist": "Christophe Gruwier"
+          },
+          {
+            "media_id": 1219590,
+            "xeno_canto": "XC673874",
+            "type": "nocturnal flight call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 55.6,
+            "background_species": 0,
+            "recordist": "Mathis Pfreundt"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "In de zomer heeft hij een oranjebruine rug en een zwart-witte kop."
+      },
+      "media": {
+        "card": [
+          328266,
+          328362
+        ],
+        "quiz": [
+          328388,
+          328391,
+          328245,
+          328240,
+          328302,
+          328328,
+          328392
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 2148,
+    "species_ids": [
+      2149,
+      2148
+    ],
+    "title": {
+      "nl": "Bonte strandloper of drieteenstrandloper?"
+    },
+    "text": {
+      "nl": "In de winter zijn ze allebei klein en grijs. Een drieteenstrandloper is veel lichter, bijna wit, heeft een korte rechte snavel en rent heen en weer langs de golven. Een bonte strandloper is grijzer, heeft een langere snavel die aan de punt omlaag buigt, en prikt rustig in het slik."
+    }
+  },
+  "quiz": {
+    "questions": 10,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      16,
+      17
+    ],
+    "review_questions": 3,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Zoek een dijk aan de Waddenzee of in Zeeland en kijk op een getijdentabel wanneer het hoogwater is. Kom een uur van tevoren, met een verrekijker. Welke snavels zie je: lang en omlaag, lang en omhoog, of kort? Lukt een dagje kust deze week niet? Bekijk dan de snavels in deze les nog eens goed; de wadvogels lopen niet weg."
+  },
+  "next": {
+    "nl": "Volgende week: grote vogels van nat land."
+  },
+  "flow": [
+    "intro",
+    "bird:2070",
+    "bird:2071",
+    "bird:2149",
+    "bird:2148",
+    "bird:2133",
+    "quiz",
+    "done"
+  ]
+}

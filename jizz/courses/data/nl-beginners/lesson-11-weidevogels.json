@@ -1,0 +1,446 @@
+{
+  "course": "nl-beginners",
+  "week": 11,
+  "slug": "weidevogels",
+  "part": 2,
+  "kind": "species",
+  "season": "spring",
+  "minutes": 12,
+  "title": {
+    "nl": "Weidevogels"
+  },
+  "subtitle": {
+    "nl": "Vijf vogels van de Hollandse polder in het voorjaar"
+  },
+  "intro": {
+    "nl": "Welkom in deel 2! Vanaf nu gaan we elke week naar een ander landschap. We beginnen met het meest Hollandse landschap dat er is. Het is april en we fietsen door de polder: links en rechts natte weilanden, sloten en in de verte een boerderij. Hoog uit de lucht klinkt een eindeloos liedje, en een zwart-witte vogel tuimelt roepend over het gras.\n\nNederland is beroemd om zijn weidevogels. Ze broeden op de grond, midden in het gras, en hun jongen lopen al snel zelf rond op zoek naar insecten. In deze les leer je vijf weidevogels herkennen, waaronder onze nationale vogel. Blijf in het voorjaar wel op de weg of het pad: in het gras zitten nesten en kuikens.\n\nAan het eind volgt een quiz van acht vragen, met twee vogels uit eerdere lessen ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "borstband"
+      },
+      "explain": {
+        "nl": "Een donkere band dwars over de borst."
+      }
+    },
+    {
+      "term": {
+        "nl": "staartband"
+      },
+      "explain": {
+        "nl": "Een donkere band dwars over de staart, het best te zien in de vlucht."
+      }
+    },
+    {
+      "term": {
+        "nl": "achterrand"
+      },
+      "explain": {
+        "nl": "De achterkant van de vleugel, goed te zien in de vlucht."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 1997,
+      "latin": "Vanellus vanellus",
+      "name": {
+        "nl": "Kievit"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Zwart-wit, met een lange dunne kuif"
+        },
+        {
+          "nl": "Groene glans op de rug"
+        },
+        {
+          "nl": "Zwarte **borstband**, witte buik"
+        }
+      ],
+      "where_when": {
+        "nl": "Weilanden en akkers in het hele land. In het voorjaar tuimelt en duikelt het mannetje roepend door de lucht. In de winter vaak in groepen."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Hij roept zijn eigen naam: een schor, klagend \"kie-wiet!\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1217857,
+            "xeno_canto": "XC803319",
+            "type": "call (wing beats)",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 38.7,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1217850,
+            "xeno_canto": "XC972650",
+            "type": "call, flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 32.0,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          310184,
+          310160,
+          310189
+        ],
+        "quiz": [
+          310165,
+          310267,
+          310262,
+          310271,
+          310287,
+          310244,
+          310227,
+          310152
+        ]
+      }
+    },
+    {
+      "species_id": 1965,
+      "latin": "Haematopus ostralegus",
+      "name": {
+        "nl": "Scholekster"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Zwart-wit en stevig gebouwd"
+        },
+        {
+          "nl": "Lange, rechte oranjerode snavel"
+        },
+        {
+          "nl": "Roze poten en een rood oog"
+        }
+      ],
+      "where_when": {
+        "nl": "Weilanden, de kust en zelfs platte daken in de stad. In de winter met duizenden op het wad."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een luid, doordringend \"kliep-kliep-kliep\", vaak met een paar tegelijk in een lang piepconcert."
+        },
+        "chosen": [
+          {
+            "media_id": 1217426,
+            "xeno_canto": "XC879409",
+            "type": "flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 38.1,
+            "background_species": 0,
+            "recordist": "Jorge Leitão"
+          },
+          {
+            "media_id": 1217425,
+            "xeno_canto": "XC881081",
+            "type": "flight call, nocturnal flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 42.9,
+            "background_species": 0,
+            "recordist": "Steve Flynn"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          305031,
+          305052,
+          305103
+        ],
+        "quiz": [
+          305034,
+          305015,
+          305083,
+          305044,
+          305013,
+          305007,
+          305037
+        ]
+      }
+    },
+    {
+      "species_id": 2072,
+      "latin": "Limosa limosa",
+      "name": {
+        "nl": "Grutto"
+      },
+      "plumage": {
+        "nl": "volwassen, broedkleed"
+      },
+      "look_for": [
+        {
+          "nl": "Lange rechte snavel en lange poten"
+        },
+        {
+          "nl": "Oranjebruine hals en borst"
+        },
+        {
+          "nl": "In de vlucht: zwarte **staartband**"
+        }
+      ],
+      "where_when": {
+        "nl": "Van maart tot juli in natte, bloemrijke weilanden. Staat graag op een hek of paaltje. Overwintert in het zuiden, tot in West-Afrika."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een luid, nasaal \"grutto, grutto, grutto\", vaak vanaf een paaltje of vlak boven je hoofd als je te dicht bij de jongen komt."
+        },
+        "chosen": [
+          {
+            "media_id": 1218664,
+            "xeno_canto": "XC931049",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 35.0,
+            "background_species": 0,
+            "recordist": "David Bissett"
+          },
+          {
+            "media_id": 1218672,
+            "xeno_canto": "XC767968",
+            "type": "alarm call (interaction calls, hissing)",
+            "country": "France",
+            "quality": "B",
+            "seconds": 38.7,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "De grutto is sinds 2015 de nationale vogel van Nederland. Het gaat niet goed met hem: er zijn veel minder grutto's dan vroeger."
+      },
+      "media": {
+        "card": [
+          321372,
+          321359
+        ],
+        "quiz": [
+          321358,
+          321364,
+          321390,
+          321377,
+          321379,
+          321378,
+          321361
+        ]
+      }
+    },
+    {
+      "species_id": 2122,
+      "latin": "Tringa totanus",
+      "name": {
+        "nl": "Tureluur"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Feloranje-rode poten"
+        },
+        {
+          "nl": "Bruin met fijne vlekjes"
+        },
+        {
+          "nl": "In de vlucht: brede witte **achterrand**"
+        }
+      ],
+      "where_when": {
+        "nl": "Natte weilanden, kwelders en het wad. Roept luid als je in de buurt komt en zit graag op een paaltje."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een fluitend, klagend \"tjuu-tjuu-tjuu\". In de baltsvlucht roept hij zijn naam: \"tureluur, tureluur\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1219453,
+            "xeno_canto": "XC922571",
+            "type": "call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 32.2,
+            "background_species": 0,
+            "recordist": "Markus Jacobs"
+          },
+          {
+            "media_id": 1219458,
+            "xeno_canto": "XC859544",
+            "type": "alarm call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 73.7,
+            "background_species": 0,
+            "recordist": "Maarten Sluijter"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "dont_confuse": {
+        "nl": "Zwarte ruiter: langere snavel en poten, en geen witte achterrand op de vleugel."
+      },
+      "media": {
+        "card": [
+          327054,
+          327020,
+          327123
+        ],
+        "quiz": [
+          327015,
+          327103,
+          327112,
+          327162,
+          327165,
+          327136,
+          327027
+        ]
+      }
+    },
+    {
+      "species_id": 7249,
+      "latin": "Alauda arvensis",
+      "name": {
+        "nl": "Veldleeuwerik"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Bruin gestreept, iets groter dan een mus"
+        },
+        {
+          "nl": "Kort kuifje, dat hij kan opzetten"
+        },
+        {
+          "nl": "Wit langs de zijkanten van de staart"
+        }
+      ],
+      "where_when": {
+        "nl": "Open weilanden en akkers. Stijgt zingend op tot een stipje in de lucht en blijft daar hangen. Zingt van februari tot in de zomer."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Een eindeloze stroom tjirpende, trillende tonen, minutenlang zonder pauze, hoog in de lucht. Je hoort hem vaak voordat je hem ziet."
+        },
+        "chosen": [
+          {
+            "media_id": 1289587,
+            "xeno_canto": "XC971992",
+            "type": "call, song",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 35.3,
+            "background_species": 0,
+            "recordist": "Bram Piot"
+          },
+          {
+            "media_id": 1289580,
+            "xeno_canto": "XC1008315",
+            "type": "song (Ocean.)",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 64.9,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 18
+      },
+      "dont_confuse": {
+        "nl": "Graspieper: slanker, met een dunnere snavel en zonder kuifje."
+      },
+      "media": {
+        "card": [
+          817216,
+          817168,
+          817178
+        ],
+        "quiz": [
+          817210,
+          817189,
+          817111,
+          817112,
+          817176,
+          817209,
+          817132,
+          817172
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 2122,
+    "species_ids": [
+      2072,
+      2122
+    ],
+    "title": {
+      "nl": "Grutto of tureluur?"
+    },
+    "text": {
+      "nl": "Allebei op een paaltje in het weiland. De grutto is veel groter, met een heel lange rechte snavel, donkere poten en een oranjebruine hals. De tureluur is kleiner, bruin gevlekt en heeft feloranje-rode poten. In de vlucht: zwarte staartband bij de grutto, witte achterrand aan de vleugel bij de tureluur."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      8,
+      9
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Fiets of wandel deze week een uur door een polder of langs weilanden, en blijf op de weg of het pad. Welke van de vijf zie je? Zoek een grutto of tureluur op een paaltje. En luister naar de veldleeuwerik: lukt het je om het stipje hoog in de lucht te vinden?"
+  },
+  "next": {
+    "nl": "Volgende week: roofvogels."
+  },
+  "flow": [
+    "intro",
+    "bird:1997",
+    "bird:1965",
+    "bird:2072",
+    "bird:2122",
+    "bird:7249",
+    "quiz",
+    "done"
+  ]
+}

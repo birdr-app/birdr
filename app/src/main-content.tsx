@@ -60,6 +60,8 @@ import { FlockResultPage } from "./pages/flocks/result"
 import { GameShareResultPage } from "./pages/game-share-result"
 import { SharedGamePage } from "./pages/shared-game"
 import { SurvivalStartPage } from "./pages/survival/start"
+import { CoursePage } from "./pages/course"
+import { CourseLessonPage } from "./pages/course/lesson"
 import { SurvivalPlayPage } from "./pages/survival/play"
 import { SurvivalResultPage } from "./pages/survival/result"
 import { SurvivalHiscoresPage } from "./pages/survival/hiscores"
@@ -176,6 +178,8 @@ export const MainContent = () => {
             <Route path="/journey/:countryCode/results" element={<BirdrJourneyStepResultsPage />} />
             <Route path="/journey/:countryCode" element={<BirdrJourneyProgressPage />} />
             <Route path="/my-games/:token" element={<GameDetailPage />} />
+            <Route path="/course" element={<CoursePage />} />
+            <Route path="/course/:week" element={<CourseLessonPage />} />
             <Route path="/survival" element={<SurvivalStartPage />} />
             <Route path="/survival/play" element={<SurvivalPlayPage />} />
             <Route path="/survival/result" element={<SurvivalResultPage />} />

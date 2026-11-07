@@ -1,9 +1,13 @@
 # Birds of the Netherlands in a year
 
 A course that teaches a beginner the birds of one country, one lesson a week for a year. This
-folder holds the plan, the first lessons as content files, and notes on the photos they use.
+folder holds the plan and notes on the photos. The first part is built:
 
-- `lessons/lesson-NN-*.json`: lesson content in English and Dutch, with the chosen media ids.
+- **"Vogels van Nederland", the beginners course:** lessons 1-20, in the phone app and the web app
+  for players who use the app in Dutch (the texts of lessons 4-20 are Dutch only). Weeks 1-20 below,
+  with Part 2 trimmed to what a beginner needs; the rest of the year is a follow-up course.
+- Lesson files: `jizz/courses/data/nl-beginners/lesson-NN-*.json` (texts, chosen photo ids and
+  sounds). Served by `/api/courses/nl-beginners/` and `/api/courses/nl-beginners/lessons/<week>/`.
 - `media-flags.csv`: photos found while picking that should not be quiz material.
 
 ## Who it is for, and the idea
@@ -208,7 +212,12 @@ media review regardless of the course, since these photos show up in normal quiz
   the Netherlands while it is one of the most-seen birds in any town. Familiarity has to come from
   the course author, not only from the data.
 
-## What it would take to build
+## What is built, and what is not yet
+
+Built: the lesson files, the read-only API, the course screens in both apps, and the home button
+(Dutch app only). Progress is kept on the device: a lesson opens when the one before it is done.
+
+The original plan for building it:
 
 1. **Content model.** `Course` (country, title, languages), `Lesson` (course, week, kind, season,
    texts), `LessonBird` (lesson, species, plumage label, look-for lines, sound, card and quiz

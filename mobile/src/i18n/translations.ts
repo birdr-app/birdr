@@ -49,6 +49,8 @@ export const translations: Record<string, Record<string, string>> = {
     // Game
     new_game: 'New game',
     high_scores: 'High scores',
+    course_title: 'Birds of the Netherlands',
+    course_home_hint: 'A beginners course: one short lesson a week',
     end_game: 'End game',
     next_question: 'Next question',
     end_level: 'End level',
@@ -1003,6 +1005,8 @@ export const translations: Record<string, Record<string, string>> = {
     back_to_login: 'Terug naar inloggen',
     new_game: 'Nieuw spel',
     high_scores: 'Hoogste scores',
+    course_title: 'Vogels van Nederland',
+    course_home_hint: 'Cursus voor beginners: elke week een korte les',
     end_game: 'Spel beëindigen',
     next_question: 'Volgende vraag',
     end_level: 'Level beëindigen',

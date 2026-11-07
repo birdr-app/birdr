@@ -768,5 +768,7 @@
   "flock_extra_games_finished": "Finished",
   "flock_extra_games_show_all": "Show all finished games ({count})",
   "flock_extra_games_show_fewer": "Show fewer",
-  "flock_extra_games_none_open": "No open games right now. Create a game, choose Share, and add it to this flock."
+  "flock_extra_games_none_open": "No open games right now. Create a game, choose Share, and add it to this flock.",
+  "course_title": "Birds of the Netherlands",
+  "course_home_hint": "A beginners course: one short lesson a week"
 }

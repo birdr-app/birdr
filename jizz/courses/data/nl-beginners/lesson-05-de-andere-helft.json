@@ -1,0 +1,440 @@
+{
+  "course": "nl-beginners",
+  "week": 5,
+  "slug": "de-andere-helft",
+  "part": 1,
+  "kind": "species",
+  "season": "any",
+  "minutes": 14,
+  "title": {
+    "nl": "De andere helft"
+  },
+  "subtitle": {
+    "nl": "Vrouwtjes en jongen van vogels die je al kent"
+  },
+  "intro": {
+    "nl": "We gaan terug naar de tuin en de vijver, naar vogels die je al kent. Of toch niet? In week 1 en 2 leerde je alleen de mannetjes en de volwassen vogels. Maar de helft van alle merels is bruin, en ongeveer de helft van de wilde eenden ook.\n\nVrouwtjes en jonge vogels hebben vaak een ander kleed: zo noemen we alle veren samen. Ze zijn meestal bruiner en minder opvallend, zodat ze op het nest niet snel gezien worden. Vorm, snavel en gedrag blijven wel hetzelfde: precies de dingen waar je vorige week naar leerde kijken.\n\nIn deze les zie je vijf vogels: vier vrouwtjes en een jonge knobbelzwaan. In de quiz van tien vragen zie je alleen deze kleden, met drie vogels uit eerdere lessen ertussen. Het antwoord is gewoon de naam van de soort."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "jeugdkleed"
+      },
+      "explain": {
+        "nl": "Het eerste verenpak van een jonge vogel."
+      }
+    },
+    {
+      "term": {
+        "nl": "schoudervlek"
+      },
+      "explain": {
+        "nl": "Een lichte vlek bovenaan de gevouwen vleugel."
+      }
+    },
+    {
+      "term": {
+        "nl": "spiegel"
+      },
+      "explain": {
+        "nl": "Een gekleurde, vaak glanzende vlek op de vleugel van een eend."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 8861,
+      "latin": "Turdus merula",
+      "name": {
+        "nl": "Merel"
+      },
+      "plumage": {
+        "nl": "volwassen vrouwtje"
+      },
+      "look_for": [
+        {
+          "nl": "Donkerbruin, niet zwart"
+        },
+        {
+          "nl": "Lichtere keel met vage streepjes"
+        },
+        {
+          "nl": "Lange staart, huppelt net als het mannetje"
+        }
+      ],
+      "where_when": {
+        "nl": "Overal waar ook mannetjes zijn: op gazons, in borders en parken. Vaak met z'n tweeën in dezelfde tuin."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Net als het mannetje een opgewonden, ratelend \"tsjak-tsjak-tsjak\" als er een kat in de buurt is. Zingen doet bijna alleen het mannetje."
+        },
+        "chosen": [
+          {
+            "media_id": 1312714,
+            "xeno_canto": "XC1075815",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 43.8,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          },
+          {
+            "media_id": 1312717,
+            "xeno_canto": "XC1075795",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 48.8,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "dont_confuse": {
+        "nl": "Zanglijster (week 17): kleiner, met scherpe zwarte stippen op een lichte borst."
+      },
+      "media": {
+        "card": [
+          948755,
+          948748,
+          948667
+        ],
+        "quiz": [
+          948738,
+          948707,
+          948659,
+          948710,
+          948657
+        ]
+      }
+    },
+    {
+      "species_id": 9815,
+      "latin": "Passer domesticus",
+      "name": {
+        "nl": "Huismus"
+      },
+      "plumage": {
+        "nl": "vrouwtje"
+      },
+      "look_for": [
+        {
+          "nl": "Grijsbruin, zonder bef of grijze kruin"
+        },
+        {
+          "nl": "Lichte wenkbrauwstreep achter het oog"
+        },
+        {
+          "nl": "Gestreepte bruine rug, dikke snavel"
+        }
+      ],
+      "where_when": {
+        "nl": "Altijd bij huizen, samen met de mannetjes in een groepje."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Hetzelfde \"tjilp, tjilp\" als het mannetje."
+        },
+        "chosen": [
+          {
+            "media_id": 1324533,
+            "xeno_canto": "XC1047608",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 69.3,
+            "background_species": 0,
+            "recordist": "Esperanza Poveda"
+          },
+          {
+            "media_id": 1324531,
+            "xeno_canto": "XC1047611",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 111.5,
+            "background_species": 0,
+            "recordist": "Esperanza Poveda"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "dont_confuse": {
+        "nl": "Heggenmus (week 4): dunne snavel, grijze kop en keel."
+      },
+      "media": {
+        "card": [
+          1038014,
+          1037897,
+          1037961
+        ],
+        "quiz": [
+          1038012,
+          1037866,
+          1038013,
+          1037932,
+          1038008,
+          1037935
+        ]
+      }
+    },
+    {
+      "species_id": 9925,
+      "latin": "Fringilla coelebs",
+      "name": {
+        "nl": "Vink"
+      },
+      "plumage": {
+        "nl": "vrouwtje"
+      },
+      "look_for": [
+        {
+          "nl": "Effen grijsbruin, zonder roze of blauw"
+        },
+        {
+          "nl": "Witte **schoudervlek** en vleugelstreep, net als hij"
+        },
+        {
+          "nl": "Wit langs de staart in de vlucht"
+        }
+      ],
+      "where_when": {
+        "nl": "Overal waar ook mannetjes zijn: tuinen, parken en bossen. Scharrelt vaak op de grond naar zaadjes."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een helder \"pink, pink\". Dat roepen mannetjes en vrouwtjes allebei."
+        },
+        "chosen": [
+          {
+            "media_id": 1326228,
+            "xeno_canto": "XC1023759",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 62.2,
+            "background_species": 0,
+            "recordist": "Paul Driver"
+          },
+          {
+            "media_id": 1326223,
+            "xeno_canto": "XC1031054",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 46.3,
+            "background_species": 2,
+            "recordist": "Manuel Grosselet"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "media": {
+        "card": [
+          1050585,
+          1050634,
+          1050623
+        ],
+        "quiz": [
+          1050615,
+          1050490,
+          1050618,
+          1050575,
+          1050628,
+          1050612
+        ]
+      }
+    },
+    {
+      "species_id": 165,
+      "latin": "Anas platyrhynchos",
+      "name": {
+        "nl": "Wilde eend"
+      },
+      "plumage": {
+        "nl": "vrouwtje"
+      },
+      "look_for": [
+        {
+          "nl": "Bruin met donkere vlekjes"
+        },
+        {
+          "nl": "Oranje snavel met een donkere vlek"
+        },
+        {
+          "nl": "Blauwe **spiegel** met witte randjes"
+        }
+      ],
+      "where_when": {
+        "nl": "Op elke vijver en sloot, meestal vlak bij een mannetje. In het voorjaar zwemt ze met een rij donzige kuikens achter zich aan."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Het bekende, luide \"kwaak-kwaak-kwak-kwak\" dat steeds zachter wordt: dat is altijd een vrouwtje."
+        },
+        "chosen": [
+          {
+            "media_id": 1194961,
+            "xeno_canto": "XC1029063",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 81.1,
+            "background_species": 0,
+            "recordist": "Xavier Riera"
+          },
+          {
+            "media_id": 1194970,
+            "xeno_canto": "XC705240",
+            "type": "call (take-off call)",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35.8,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Veel eendenvrouwtjes zijn bruin. Kijk dan naar de snavel en de spiegel. De andere bruine eenden komen in een vervolgcursus."
+      },
+      "media": {
+        "card": [
+          130414,
+          130511,
+          130523
+        ],
+        "quiz": [
+          130542,
+          130396,
+          130472,
+          130485,
+          130395
+        ]
+      }
+    },
+    {
+      "species_id": 93,
+      "latin": "Cygnus olor",
+      "name": {
+        "nl": "Knobbelzwaan"
+      },
+      "plumage": {
+        "nl": "jong, grijsbruin"
+      },
+      "look_for": [
+        {
+          "nl": "Grijsbruin **jeugdkleed**, later met witte plekken"
+        },
+        {
+          "nl": "Grijzige snavel, nog zonder knobbel"
+        },
+        {
+          "nl": "Vorm van een zwaan, vaak bij de ouders"
+        }
+      ],
+      "where_when": {
+        "nl": "Op grachten, plassen en weilanden, de eerste maanden bij de ouders. Pas in hun tweede jaar zijn ze helemaal wit."
+      },
+      "sound": {
+        "type": "other",
+        "describe": {
+          "nl": "Net als bij de ouders: het zoemende \"wiew-wiew-wiew\" van de vleugels in de vlucht."
+        },
+        "chosen": [
+          {
+            "media_id": 1193992,
+            "xeno_canto": "XC780323",
+            "type": "flight call (wingbeats)",
+            "country": "France",
+            "quality": "A",
+            "seconds": 45.3,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1193997,
+            "xeno_canto": "XC706444",
+            "type": "not specified (wingbeats)",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 40.7,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Het lelijke jonge eendje uit het sprookje van Andersen was een jonge zwaan."
+      },
+      "media": {
+        "card": [
+          119640,
+          119773,
+          119745
+        ],
+        "quiz": [
+          119639,
+          119638,
+          119713,
+          119703,
+          119776
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 9925,
+    "species_ids": [
+      9815,
+      9925
+    ],
+    "title": {
+      "nl": "Huismus of vink?"
+    },
+    "text": {
+      "nl": "Allebei bruinig, met een dikke snavel. Het vinkenvrouwtje heeft een effen grijsbruine kop en veel wit in de vleugel: een witte schoudervlek en vleugelstreep. Het huismusvrouwtje heeft een gestreepte rug, een lichte streep achter het oog en maar een smal licht streepje op de vleugel."
+    }
+  },
+  "quiz": {
+    "questions": 10,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      3,
+      4
+    ],
+    "review_questions": 3,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Ga deze week naar een vijver of sloot en tel de wilde eenden: hoeveel bruine vrouwtjes zie je, en hoeveel mannetjes? Lukt het om bij een vrouwtje de blauwe spiegel te zien? En zoek in je tuin of het park een bruine merel."
+  },
+  "next": {
+    "nl": "Volgende week: meeuwen zonder moeite."
+  },
+  "flow": [
+    "intro",
+    "bird:8861",
+    "bird:9815",
+    "bird:9925",
+    "bird:165",
+    "bird:93",
+    "quiz",
+    "done"
+  ]
+}

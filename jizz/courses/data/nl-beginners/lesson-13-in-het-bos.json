@@ -1,0 +1,447 @@
+{
+  "course": "nl-beginners",
+  "week": 13,
+  "slug": "in-het-bos",
+  "part": 2,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "nl": "In het bos"
+  },
+  "subtitle": {
+    "nl": "Vijf vogels van de stam, de takken en de boomtoppen"
+  },
+  "intro": {
+    "nl": "Vandaag lopen we het bos in. Het is er stiller dan in de tuin, en de vogels zitten hoger en verder weg. Daarom leer je vandaag niet alleen kijken, maar ook luisteren: getik op een stam, een schor gekrijs, het zachte gepiep van een groepje dat voorbijtrekt.\n\nJe leert vijf vogels herkennen. Twee ervan klimmen langs boomstammen, elk op een eigen manier. Let vooral op hoe ze bewegen: dat zie je vaak eerder dan de kleuren.\n\nAan het eind volgt een quiz van tien vragen, met drie vogels uit eerdere lessen ertussen."
+  },
+  "words": [
+    {
+      "term": {
+        "nl": "achterhoofd"
+      },
+      "explain": {
+        "nl": "De achterkant van de kop, tussen de kruin en de nek."
+      }
+    },
+    {
+      "term": {
+        "nl": "baardstreep"
+      },
+      "explain": {
+        "nl": "Een streep die vanaf de snavel schuin naar beneden loopt, langs de zijkant van de keel."
+      }
+    },
+    {
+      "term": {
+        "nl": "staartpennen"
+      },
+      "explain": {
+        "nl": "De lange, stevige veren van de staart."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 3813,
+      "latin": "Dendrocopos major",
+      "name": {
+        "nl": "Grote bonte specht"
+      },
+      "plumage": {
+        "nl": "volwassen mannetje"
+      },
+      "look_for": [
+        {
+          "nl": "Zwart-wit, grote witte schoudervlekken"
+        },
+        {
+          "nl": "Felrode onderstaart"
+        },
+        {
+          "nl": "Mannetje: rood vlekje op het **achterhoofd**"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar in bossen, parken en tuinen met bomen. Hakt in stammen, komt aan vetbollen en pindanetjes, en vliegt in golven."
+      },
+      "sound": {
+        "type": "other",
+        "describe": {
+          "nl": "In het voorjaar roffelt hij op een droge tak: een kort, snel \"trrrrt\" van nog geen seconde. Roept ook een scherp, kort \"kik!\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1239975,
+            "xeno_canto": "XC1079930",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 39.8,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          },
+          {
+            "media_id": 1239978,
+            "xeno_canto": "XC1061195",
+            "type": "song (feeding)",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 49.4,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Er bestaan ook een middelste en een kleine bonte specht. Die komen in een vervolgcursus."
+      },
+      "media": {
+        "card": [
+          529602,
+          529631,
+          529558
+        ],
+        "quiz": [
+          529610,
+          529599,
+          529526,
+          529576,
+          529513,
+          529556,
+          529502
+        ]
+      }
+    },
+    {
+      "species_id": 8474,
+      "latin": "Sitta europaea",
+      "name": {
+        "nl": "Boomklever"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Blauwgrijze rug, oranjebeige buik"
+        },
+        {
+          "nl": "Zwarte oogstreep"
+        },
+        {
+          "nl": "Klimt ook met de kop omlaag"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar in bossen en parken met oude bomen, ook aan de voederplek. Maakt de opening van zijn nestholte met modder kleiner, tot hij er net door past."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een luid, helder \"twiet-twiet-twiet\", en in het voorjaar een snelle reeks fluittonen."
+        },
+        "chosen": [
+          {
+            "media_id": 1307305,
+            "xeno_canto": "XC883622",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 41.6,
+            "background_species": 0,
+            "recordist": "SonoNatura"
+          },
+          {
+            "media_id": 1307294,
+            "xeno_canto": "XC972628",
+            "type": "call",
+            "country": "Italy",
+            "quality": "A",
+            "seconds": 63.1,
+            "background_species": 0,
+            "recordist": "Francesco Sottile"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          911352,
+          911317,
+          911336
+        ],
+        "quiz": [
+          911337,
+          911316,
+          911401,
+          911322,
+          911360,
+          911358,
+          911459
+        ]
+      }
+    },
+    {
+      "species_id": 6914,
+      "latin": "Garrulus glandarius",
+      "name": {
+        "nl": "Gaai"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Roze-bruin lijf, zwarte staart"
+        },
+        {
+          "nl": "Blauw-zwart geblokt vlakje op de vleugel"
+        },
+        {
+          "nl": "Zwarte **baardstreep** bij de snavel"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar in bossen, parken en tuinen. In de herfst sjouwt hij eikels rond en verstopt ze in de grond. In de vlucht zie je een witte vlek boven de staart."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een rauw, krassend \"rèèèk!\": het alarm van het bos. Hij kan ook goed een buizerd nadoen."
+        },
+        "chosen": [
+          {
+            "media_id": 1284927,
+            "xeno_canto": "XC1075821",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 36.0,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          },
+          {
+            "media_id": 1284929,
+            "xeno_canto": "XC1063204",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 40.4,
+            "background_species": 0,
+            "recordist": "Jacobo Ramil Millarengo"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Familie van de kraaien uit week 3, al zou je het niet zeggen."
+      },
+      "media": {
+        "card": [
+          782723,
+          782811,
+          782827
+        ],
+        "quiz": [
+          782740,
+          782714,
+          782829,
+          782828,
+          782796,
+          782778,
+          782732
+        ]
+      }
+    },
+    {
+      "species_id": 8481,
+      "latin": "Certhia brachydactyla",
+      "name": {
+        "nl": "Boomkruiper"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Klein, bruin gevlekt, witte buik"
+        },
+        {
+          "nl": "Dunne, gebogen snavel"
+        },
+        {
+          "nl": "Steunt op stijve **staartpennen** tegen de stam"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar in bossen, parken en lanen. Kruipt als een muisje in een spiraal omhoog langs de stam en vliegt dan naar de voet van de volgende boom."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "nl": "Een kort, hoog en opgewekt liedje: \"tiet-tiet-tieteroi-tiet\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1307430,
+            "xeno_canto": "XC1044169",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 81.7,
+            "background_species": 0,
+            "recordist": "Adam Gruszczyński"
+          },
+          {
+            "media_id": 1307431,
+            "xeno_canto": "XC1044156",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 45.3,
+            "background_species": 0,
+            "recordist": "Adam Gruszczyński"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 18
+      },
+      "note": {
+        "nl": "Er is ook een taigaboomkruiper, die er bijna precies hetzelfde uitziet. Die is in Nederland veel zeldzamer en herken je vooral aan zijn zang."
+      },
+      "media": {
+        "card": [
+          912230,
+          912136,
+          912132
+        ],
+        "quiz": [
+          912167,
+          912137,
+          912144,
+          912158,
+          912213,
+          912216,
+          912231
+        ]
+      }
+    },
+    {
+      "species_id": 7948,
+      "latin": "Aegithalos caudatus",
+      "name": {
+        "nl": "Staartmees"
+      },
+      "plumage": {
+        "nl": "volwassen"
+      },
+      "look_for": [
+        {
+          "nl": "Rond balletje met een heel lange staart"
+        },
+        {
+          "nl": "Roze, zwart en wit"
+        },
+        {
+          "nl": "Witte kop, brede zwarte streep boven het oog"
+        }
+      ],
+      "where_when": {
+        "nl": "Het hele jaar in bossen, parken en tuinen. Bijna altijd in groepjes van vijf tot vijftien, die achter elkaar van boom naar boom trekken."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een zacht, rollend \"tsrrr\" en hoge \"sie-sie-sie\"-roepjes: zo houdt de groep elkaar bij elkaar."
+        },
+        "chosen": [
+          {
+            "media_id": 1300074,
+            "xeno_canto": "XC973579",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35.1,
+            "background_species": 0,
+            "recordist": "Esteban Vilboux"
+          },
+          {
+            "media_id": 1300070,
+            "xeno_canto": "XC1067264",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 56.7,
+            "background_species": 0,
+            "recordist": "Laura Martin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "nl": "Sommige winters komen er staartmezen uit het noorden met een helemaal witte kop."
+      },
+      "media": {
+        "card": [
+          872951,
+          872987,
+          872944
+        ],
+        "quiz": [
+          872945,
+          872989,
+          873054,
+          872941,
+          872927,
+          872922
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 8481,
+    "species_ids": [
+      8474,
+      8481
+    ],
+    "title": {
+      "nl": "Boomklever of boomkruiper?"
+    },
+    "text": {
+      "nl": "Kijk hoe ze klimmen. Een boomkruiper is klein en bruin, kruipt in een spiraal omhoog en steunt op zijn staart. Een boomklever is groter, blauwgrijs met oranje, en klimt net zo makkelijk omlaag, met de kop naar beneden."
+    }
+  },
+  "quiz": {
+    "questions": 10,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      11,
+      12
+    ],
+    "review_questions": 3,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "nl": "Ga deze week een half uur naar een bos of park met oude bomen. Blijf af en toe stilstaan en luister. Hoor je getik of geroffel? Zoek dan de specht. Zie je iets langs een stam bewegen: klimt het omhoog of omlaag? Bonus: hoor je een buizerd miauwen tussen de bomen? Kijk goed, misschien is het een gaai."
+  },
+  "next": {
+    "nl": "Volgende week: riet en moeras."
+  },
+  "flow": [
+    "intro",
+    "bird:3813",
+    "bird:8474",
+    "bird:6914",
+    "bird:8481",
+    "bird:7948",
+    "quiz",
+    "done"
+  ]
+}
