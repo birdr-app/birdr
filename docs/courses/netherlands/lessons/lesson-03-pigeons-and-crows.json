@@ -15,8 +15,8 @@
     "nl": "Zes stadsvogels die iedereen ziet en weinigen kunnen benoemen"
   },
   "intro": {
-    "en": "\"Just a pigeon\", \"just a crow\": that is what most people say. But there are three pigeons and three crow-like birds you will see this week, often on the same street. Look for one detail per bird and you will never mix them up again.",
-    "nl": "\"Gewoon een duif\", \"gewoon een kraai\": dat zeggen de meeste mensen. Maar deze week zie je drie duiven en drie kraaiachtigen, vaak in dezelfde straat. Let per vogel op één detail en je haalt ze nooit meer door elkaar."
+    "en": "Today we go out into the street. \"Just a pigeon\", \"just a crow\": that's what most people say. But walk through any Dutch town and you'll find three kinds of pigeon and three kinds of crow, often on the same roof.\n\nFor each bird you learn the one detail that gives it away: a white patch on the neck, a black collar, a pale eye. Once you've seen it, you won't mix them up again.\n\nAt the end there's a quiz of ten questions, with birds from the first two lessons mixed in.",
+    "nl": "Vandaag gaan we de straat op. \"Gewoon een duif\", \"gewoon een kraai\": dat zeggen de meeste mensen. Maar loop door een willekeurige Nederlandse stad en je vindt drie soorten duiven en drie soorten kraaien, vaak op hetzelfde dak.\n\nBij elke vogel leer je het ene detail dat hem verraadt: een witte vlek in de hals, een zwart bandje, een licht oog. Heb je het eenmaal gezien, dan haal je ze nooit meer door elkaar.\n\nAan het eind volgt een quiz van tien vragen, met vogels uit de eerste twee lessen ertussen."
   },
   "words": [
     {
@@ -60,6 +60,7 @@
       }
     }
   ],
+  "words_shown": "inline: bold on the bird cards, with the explanation under the look-for lines",
   "birds": [
     {
       "species_id": 579,
@@ -409,6 +410,7 @@
     }
   ],
   "compare": {
+    "after_species_id": 6956,
     "species_ids": [
       6985,
       6956
@@ -430,7 +432,8 @@
       1,
       2
     ],
-    "review_questions": 3
+    "review_questions": 3,
+    "position": "last step of the lesson"
   },
   "outside": {
     "en": "Look at the pigeons around you. Can you find the white neck patch of a Wood Pigeon? And listen for a Collared Dove calling its three notes from an aerial.",
@@ -439,5 +442,17 @@
   "next": {
     "en": "Next week: how to look at a bird.",
     "nl": "Volgende week: hoe kijk je naar een vogel?"
-  }
+  },
+  "outside_shown": "on the done screen, after the quiz",
+  "flow": [
+    "intro",
+    "bird:579",
+    "bird:571",
+    "bird:635",
+    "bird:6942",
+    "bird:6985",
+    "bird:6956",
+    "quiz",
+    "done"
+  ]
 }

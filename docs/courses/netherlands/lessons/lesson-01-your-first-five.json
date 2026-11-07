@@ -15,8 +15,8 @@
     "nl": "Tuinvogels die je vanuit je raam ziet"
   },
   "intro": {
-    "en": "Almost every birder started at a window. These five live all over the Netherlands, all year round, and most of them visit gardens. Learn them well: every bird you meet later in this course gets compared to one of them.\n\nThis week you learn one version of each bird. For the Blackbird and the House Sparrow that is the male; the females look quite different and get their own lesson in week 5.",
-    "nl": "Bijna iedere vogelaar begon bij het raam. Deze vijf leven door heel Nederland, het hele jaar, en de meeste komen in tuinen. Leer ze goed: elke vogel die je later in deze cursus tegenkomt, vergelijk je met een van deze vijf.\n\nDeze week leer je één versie van elke vogel. Bij de merel en de huismus is dat het mannetje; de vrouwtjes zien er heel anders uit en krijgen in week 5 een eigen les."
+    "en": "We're taking a look in the back garden. Make a coffee, sit by the window and look outside. There's a good chance that within ten minutes you'll see at least three of the five birds in this lesson. They live all over the Netherlands, all year round, and nearly all of them visit gardens.\n\nIn this lesson you learn to recognise five birds. For each bird you get three things to look for. Words in bold are parts of a bird; you'll find what they mean right there on the card. For the Blackbird and the House Sparrow we only look at the male; the females look very different and get their own lesson in week 5.\n\nAt the end of the lesson there's a short quiz of eight questions.",
+    "nl": "We nemen een kijkje in de achtertuin. Zet een kop koffie, ga bij het raam zitten en kijk naar buiten. Grote kans dat je binnen tien minuten minstens drie van de vijf vogels uit deze les ziet. Ze leven het hele jaar door in heel Nederland, en bijna allemaal komen ze in tuinen.\n\nIn deze les leer je vijf vogels herkennen. Bij elke vogel krijg je drie dingen waar je op let. Vetgedrukte woorden zijn lichaamsdelen van een vogel; wat ze betekenen staat er meteen bij. Bij de merel en de huismus kijken we alleen naar het mannetje; de vrouwtjes zien er heel anders uit en krijgen in week 5 een eigen les.\n\nAan het eind van de les volgt een korte quiz van acht vragen."
   },
   "words": [
     {
@@ -70,6 +70,7 @@
       }
     }
   ],
+  "words_shown": "inline: bold on the bird cards, with the explanation under the look-for lines",
   "birds": [
     {
       "species_id": 8861,
@@ -391,6 +392,7 @@
     }
   ],
   "compare": {
+    "after_species_id": 7122,
     "species_ids": [
       7132,
       7122
@@ -407,7 +409,8 @@
   "quiz": {
     "questions": 8,
     "photos_from": "quiz",
-    "answers_from": "this lesson"
+    "answers_from": "this lesson",
+    "position": "last step of the lesson"
   },
   "outside": {
     "en": "Spend ten minutes at a window this week. Which of the five do you see? Tick them off in the app. Bonus: look at every blackbird. Is one of them brown? Then you have already found a female.",
@@ -416,5 +419,16 @@
   "next": {
     "en": "Next week: at the pond.",
     "nl": "Volgende week: aan de vijver."
-  }
+  },
+  "outside_shown": "on the done screen, after the quiz",
+  "flow": [
+    "intro",
+    "bird:8861",
+    "bird:9815",
+    "bird:7132",
+    "bird:7122",
+    "bird:9078",
+    "quiz",
+    "done"
+  ]
 }

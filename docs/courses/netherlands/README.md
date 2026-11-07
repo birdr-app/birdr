@@ -110,22 +110,25 @@ features that separate similar birds.
 
 ## Lesson format
 
-Each lesson takes ten to fifteen minutes and has the same steps, so the learner always knows where
-they are:
+Each lesson takes ten to fifteen minutes and always runs the same way: an introduction, then the
+birds one by one, and the quiz only at the very end. The `flow` field in each lesson file lists the
+screens in order.
 
-1. **Cover.** Week, title, "5 new birds · 10 min", and Tody.
-2. **Intro.** Three or four sentences: why these birds belong together.
-3. **New words.** Three to five topography terms, each with a small labelled drawing.
-4. **Bird cards.** One per bird: a hand-picked photo of the taught version (labelled "adult male"),
-   the name in the app language with the scientific name, three "look for" lines with the new
-   words in bold, where and when, a play button for the sound, and sometimes a "don't confuse
-   with" or a note pointing to a later lesson.
-5. **Spot the difference.** The two birds in the lesson that people mix up, side by side. Reuses the
-   compare screen.
-6. **Practice.** Eight to ten photo questions. Answers come from this lesson's birds; from week 2
-   onwards two or three questions repeat birds from earlier lessons. Mistakes go to *My tricky birds*.
-7. **This week outside.** One small task, with a checklist of the lesson's birds to tick off when seen.
-8. **Done.** Score, streak, and when the next lesson opens.
+1. **Introduction.** Where we are and what we will look at: "We nemen een kijkje in de
+   achtertuin." Two or three short paragraphs that set the scene, say how many birds the lesson
+   has, and say what comes at the end. Thumbnails of the birds you are about to meet.
+2. **The birds, one screen each.** A hand-picked photo of the taught version (labelled "adult
+   male"), the name in the app language with the scientific name, three "look for" lines, where and
+   when, a play button for the sound, and sometimes a note pointing to a later lesson. Words for
+   parts of a bird are in bold, with their meaning right under the look-for lines; there is no
+   separate vocabulary step.
+3. **Spot the difference** sits on the card of the second bird of a confusing pair (Blue Tit after
+   Great Tit, Moorhen after Coot): a small side-by-side with the bird you just saw.
+4. **Quiz, at the end.** Eight to ten photo questions. Answers come from this lesson's birds; from
+   week 2 onwards two or three questions repeat birds from earlier lessons. Mistakes go to *My
+   tricky birds*. Nothing is tested before this point.
+5. **Done.** Score, the task for this week outside with a checklist of the lesson's birds to tick
+   off when seen, and when the next lesson opens.
 
 A new lesson opens every week (Monday morning, with a push notification). Earlier lessons stay
 open for review, and a learner who is behind can do two in one week. Nobody can run ahead more
@@ -196,9 +199,9 @@ media review regardless of the course, since these photos show up in normal quiz
    media), `LessonProgress` (player, lesson, started, completed, score). Texts as per-language JSON
    like the files here, so a course can be written once and translated.
 2. **Import.** A management command that loads `docs/courses/<country>/lessons/*.json`.
-3. **App screens.** Course overview (the year as a path), lesson flow (cover, words, cards,
-   compare, practice, outside, done), and a home-screen card for "this week's lesson". The practice
-   step reuses the quiz engine with a fixed species list and media list.
+3. **App screens.** Course overview (the year as a path), lesson flow (introduction, one screen
+   per bird, quiz, done), and a home-screen card for "this week's lesson". The quiz at the end
+   reuses the quiz engine with a fixed species list and media list.
 4. **Weekly rhythm.** Unlock on Monday, push notification, streak.
 5. **Media tags** as above, so later lessons do not need hand-picked ids.
 

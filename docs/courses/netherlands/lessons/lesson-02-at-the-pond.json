@@ -15,8 +15,8 @@
     "nl": "Vijf vogels van elke sloot en parkvijver"
   },
   "intro": {
-    "en": "The Netherlands is a country of water, and these five live on almost all of it: from the canal in town to the ditch along the meadow. They are big, they sit still, and they let you look closely. The perfect place to train your eye.",
-    "nl": "Nederland is een waterland, en deze vijf leven op bijna al dat water: van de gracht in de stad tot de sloot langs het weiland. Ze zijn groot, ze zitten stil en je kunt ze goed bekijken. De perfecte plek om je oog te trainen."
+    "en": "Today we walk to the pond in the park. The Netherlands is a country of water, and the five birds in this lesson live on almost all of it: from the canal in town to the ditch along the meadow.\n\nWater birds are the perfect place to train your eye. They are big, they sit still, and they let you look closely. We start with the most familiar duck in the country and end with a bird that can stand still for half an hour.\n\nAt the end there's a quiz of eight questions, with two birds from last week mixed in.",
+    "nl": "Vandaag lopen we naar de vijver in het park. Nederland is een waterland, en de vijf vogels uit deze les leven op bijna al dat water: van de gracht in de stad tot de sloot langs het weiland.\n\nWatervogels zijn perfect om je oog te trainen. Ze zijn groot, ze zitten stil en je kunt ze rustig bekijken. We beginnen met de bekendste eend van het land en eindigen met een vogel die een half uur stil kan staan.\n\nAan het eind volgt een quiz van acht vragen, met twee vogels van vorige week ertussen."
   },
   "words": [
     {
@@ -60,6 +60,7 @@
       }
     }
   ],
+  "words_shown": "inline: bold on the bird cards, with the explanation under the look-for lines",
   "birds": [
     {
       "species_id": 165,
@@ -378,6 +379,7 @@
     }
   ],
   "compare": {
+    "after_species_id": 1843,
     "species_ids": [
       1851,
       1843
@@ -398,7 +400,8 @@
     "review_from": [
       1
     ],
-    "review_questions": 2
+    "review_questions": 2,
+    "position": "last step of the lesson"
   },
   "outside": {
     "en": "Walk past a pond or canal. Coots or Moorhens: which do you see more? Find a heron and time how long it stands still.",
@@ -407,5 +410,16 @@
   "next": {
     "en": "Next week: pigeons and crows.",
     "nl": "Volgende week: duiven en kraaien."
-  }
+  },
+  "outside_shown": "on the done screen, after the quiz",
+  "flow": [
+    "intro",
+    "bird:165",
+    "bird:1851",
+    "bird:1843",
+    "bird:93",
+    "bird:2652",
+    "quiz",
+    "done"
+  ]
 }
