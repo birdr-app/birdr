@@ -1,0 +1,22 @@
+{
+  "code": "stthum1",
+  "name": {
+    "en": "Stripe-tailed Hummingbird",
+    "nl": "Streepstaartkolibrie"
+  },
+  "latin": "Eupherusa eximia",
+  "look_for": [
+    {
+      "en": "Green with a rufous patch in the **wing**",
+      "nl": "Groen met een roestbruine vlek in de **vleugel**"
+    },
+    {
+      "en": "White stripes in the dark outer **tail**",
+      "nl": "Witte strepen in de donkere buitenste **staartveren**"
+    },
+    {
+      "en": "Female greyish below, with the same wing and tail",
+      "nl": "Vrouwtje grijzig van onderen, met dezelfde vleugel en staart"
+    }
+  ]
+}

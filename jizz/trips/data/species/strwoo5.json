@@ -1,0 +1,22 @@
+{
+  "code": "strwoo5",
+  "name": {
+    "en": "Western Woodhaunter",
+    "nl": "Westelijke bosbladspeurder"
+  },
+  "latin": "Automolus virgatus",
+  "look_for": [
+    {
+      "en": "Brown, with fine buff streaks on head and back",
+      "nl": "Bruin, met fijne okerkleurige streepjes op kop en rug"
+    },
+    {
+      "en": "Buffy **throat**, blurry streaks on the breast",
+      "nl": "Okerkleurige **keel**, vage strepen op de borst"
+    },
+    {
+      "en": "Rufous **tail**; probes dead leaves in epiphytes and vines",
+      "nl": "Roestbruine **staart**; doorzoekt dode bladeren in epifyten en lianen"
+    }
+  ]
+}

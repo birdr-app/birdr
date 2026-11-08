@@ -1,0 +1,22 @@
+{
+  "code": "gocspa1",
+  "name": {
+    "en": "Golden-crowned Spadebill",
+    "nl": "Goudkruinbreedbektiran"
+  },
+  "latin": "Platyrinchus coronatus",
+  "look_for": [
+    {
+      "en": "Tiny and stub-tailed, with a very broad **bill**",
+      "nl": "Piepklein met korte staart en een zeer brede **snavel**"
+    },
+    {
+      "en": "Rufous **crown** with a golden centre, black edges",
+      "nl": "Roodbruine **kruin** met goudgeel midden, zwarte randen"
+    },
+    {
+      "en": "Busy black-and-yellow pattern on the **face**",
+      "nl": "Druk zwart-geel patroon op het **gezicht**"
+    }
+  ]
+}

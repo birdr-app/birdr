@@ -1,0 +1,22 @@
+{
+  "code": "rottan2",
+  "name": {
+    "en": "Rosy Thrush-Tanager",
+    "nl": "Troepiaaltangare"
+  },
+  "latin": "Rhodinocichla rosea",
+  "look_for": [
+    {
+      "en": "Male: rose-pink **eyebrow**, throat and breast",
+      "nl": "Mannetje: rozerode **wenkbrauwstreep**, keel en borst"
+    },
+    {
+      "en": "Female: same pattern in tawny orange",
+      "nl": "Vrouwtje: hetzelfde patroon in oranjebruin"
+    },
+    {
+      "en": "Dark grey above; tosses leaves on the ground",
+      "nl": "Donkergrijs van boven; woelt in bladeren op de grond"
+    }
+  ]
+}

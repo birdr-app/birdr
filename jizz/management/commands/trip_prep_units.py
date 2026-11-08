@@ -16,7 +16,7 @@ from __future__ import annotations
 
 from django.core.management.base import BaseCommand, CommandError
 
-from jizz.trips.content import country_dir, load_scope, read_json, scope_species, write_json
+from jizz.trips.content import country_dir, is_region, load_scope, read_json, scope_species, write_json
 from jizz.trips.units import build_units
 
 
@@ -38,7 +38,7 @@ class Command(BaseCommand):
             raise CommandError(f'No species in scope for {country}')
 
         scope = load_scope(country)
-        data = build_units(species, scope['first_day'])
+        data = build_units(species, scope['first_day'], region=is_region(country))
 
         path = country_dir(country) / 'units.json'
         old = read_json(path, {}) or {}
@@ -55,11 +55,14 @@ class Command(BaseCommand):
         )
         for unit in data['units']:
             self.stdout.write(f'  {unit["slug"]:40} {len(unit["species"])}  {", ".join(names[c] for c in unit["species"])}')
-        if not scope['first_day']:
+        if is_region(country):
+            pass
+        elif not scope['first_day']:
             self.stdout.write('First day (suggested; set first_day in scope.json to choose):')
         else:
             self.stdout.write('First day:')
-        self.stdout.write('  ' + ', '.join(names[c] for c in data['first_day']))
+        if data['first_day']:
+            self.stdout.write('  ' + ', '.join(names[c] for c in data['first_day']))
         missing = [c for c in scope['first_day'] if c not in names]
         if missing:
             self.stdout.write(self.style.WARNING(f'first_day codes not in scope: {", ".join(missing)}'))

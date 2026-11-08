@@ -1,0 +1,18 @@
+{
+  "slug": "antthrushes",
+  "about": {
+    "en": "Thrush-sized birds of the forest floor in dark brown and chestnut, often with a black throat. They walk with slow, deliberate steps, the short tail cocked up like a small rail's. Shy and well hidden, they give themselves away with a clear, whistled song.",
+    "nl": "Vogels zo groot als een lijster, die over de bosbodem lopen, donkerbruin en kastanjebruin, vaak met een zwarte keel. Ze stappen langzaam en bedachtzaam rond, met het korte staartje omhoog zoals een kleine ral. Ze zijn schuw en goed verborgen, en verraden zich door hun heldere, gefloten zang."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "thrushes"
+      ],
+      "text": {
+        "en": "Antthrushes are not thrushes. They walk instead of hop, hold the tail cocked like a rail and hardly ever leave the forest floor.",
+        "nl": "Mierlijsters zijn geen lijsters. Ze lopen in plaats van te hippen, houden de staart omhoog als een ral en komen bijna nooit van de bosbodem af."
+      }
+    }
+  ]
+}

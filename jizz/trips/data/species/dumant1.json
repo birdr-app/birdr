@@ -1,0 +1,22 @@
+{
+  "code": "dumant1",
+  "name": {
+    "en": "Dull-mantled Antbird",
+    "nl": "Grijskruinmiervogel"
+  },
+  "latin": "Sipia laemosticta",
+  "look_for": [
+    {
+      "en": "Slate-grey head and breast, deep red **eye**",
+      "nl": "Leigrijze kop en borst, dieprode **iris**"
+    },
+    {
+      "en": "Chestnut-brown back and **flanks**",
+      "nl": "Kastanjebruine rug en **flanken**"
+    },
+    {
+      "en": "Female: black **throat** dotted with white",
+      "nl": "Vrouwtje: zwarte **keel** met witte stippen"
+    }
+  ]
+}

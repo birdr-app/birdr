@@ -1,0 +1,22 @@
+{
+  "code": "grhkit1",
+  "name": {
+    "en": "Grey-headed Kite",
+    "nl": "Grijskopwouw"
+  },
+  "latin": "Leptodon cayanensis",
+  "look_for": [
+    {
+      "en": "Pale grey **head**, white below",
+      "nl": "Lichtgrijze **kop**, wit van onder"
+    },
+    {
+      "en": "Black back and wings",
+      "nl": "Zwarte rug en vleugels"
+    },
+    {
+      "en": "In flight black **wing linings**, barred feathers",
+      "nl": "In vlucht zwarte **ondervleugel**, gebandeerde slagpennen"
+    }
+  ]
+}

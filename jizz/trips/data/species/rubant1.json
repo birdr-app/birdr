@@ -1,0 +1,22 @@
+{
+  "code": "rubant1",
+  "name": {
+    "en": "Rufous-breasted Antthrush",
+    "nl": "Roodborstmierlijster"
+  },
+  "latin": "Formicarius rufipectus",
+  "look_for": [
+    {
+      "en": "Walks the forest floor with **tail** cocked",
+      "nl": "Loopt over de bosbodem met opgewipte **staart**"
+    },
+    {
+      "en": "Chestnut **crown**, blackish face and throat",
+      "nl": "Kastanjebruine **kruin**, zwartig gezicht en keel"
+    },
+    {
+      "en": "Rich rufous-chestnut **breast**",
+      "nl": "Diep roodbruine **borst**"
+    }
+  ]
+}

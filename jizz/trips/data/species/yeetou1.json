@@ -1,0 +1,22 @@
+{
+  "code": "yeetou1",
+  "name": {
+    "en": "Yellow-eared Toucanet",
+    "nl": "Geeloorpepervreter"
+  },
+  "latin": "Selenidera spectabilis",
+  "look_for": [
+    {
+      "en": "Male black below with a yellow **ear** tuft",
+      "nl": "Man zwart van onder met geel plukje bij het **oor**"
+    },
+    {
+      "en": "Female has a chestnut **crown** and nape",
+      "nl": "Vrouw heeft een kastanjebruine **kruin** en nek"
+    },
+    {
+      "en": "Green back and **wings**, yellow flank patch",
+      "nl": "Groene rug en **vleugels**, gele vlek op de flank"
+    }
+  ]
+}

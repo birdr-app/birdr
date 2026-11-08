@@ -1,0 +1,22 @@
+{
+  "code": "scbtan1",
+  "name": {
+    "en": "Sooty-capped Chlorospingus",
+    "nl": "Witbrauwtangare"
+  },
+  "latin": "Chlorospingus pileatus",
+  "look_for": [
+    {
+      "en": "Sooty head with a bold white **eyebrow**",
+      "nl": "Roetkleurige kop met opvallende witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Olive back, travels in noisy flocks",
+      "nl": "Olijfgroene rug, trekt rond in luidruchtige groepjes"
+    },
+    {
+      "en": "Pale speckled **throat**, olive-yellow sides",
+      "nl": "Lichte gespikkelde **keel**, olijfgele flanken"
+    }
+  ]
+}

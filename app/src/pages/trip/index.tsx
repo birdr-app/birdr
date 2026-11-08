@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { countryCodeToFlag } from '../../api/birdrJourney';
 import { unitKnown } from '../../core/trip-quiz';
-import { fetchTrips, type TripSummary, type TripUnit } from '../../api/trip';
+import { fetchTrips, fetchTripProgress, loadTripState, type TripRegion, type TripSummary, type TripUnit } from '../../api/trip';
 import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
 import { ProgressRing, TripLoading, UnitRow } from './parts';
@@ -38,7 +38,7 @@ export function TripListPage() {
           <Text color="primary.800">
             {t('trip_list_intro', "Going abroad? Learn the birds before you go: first the kinds of birds, then the species, group by group. Birds you already know from other games count straight away.")}
           </Text>
-          {trips.map((trip) => (
+          {trips.filter((trip) => !trip.parent).map((trip) => (
             <Button
               key={trip.country}
               variant="outline"
@@ -75,6 +75,27 @@ export function TripListPage() {
   );
 }
 
+/** How many birds of each region pack the player knows: from their answers anywhere, plus this device. */
+function useRegionKnown(regions: TripRegion[]): Record<string, number> {
+  const [known, setKnown] = useState<Record<string, number>>({});
+  const key = regions.map((r) => r.country).join(',');
+  useEffect(() => {
+    let live = true;
+    regions.forEach((region) => {
+      fetchTripProgress(region.country).then((progress) => {
+        const right = loadTripState(region.country).right;
+        const count = new Set([...progress.known, ...right]).size;
+        if (live) setKnown((old) => ({ ...old, [region.country]: count }));
+      });
+    });
+    return () => {
+      live = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
+  return known;
+}
+
 /** /trips/:country: the trip's home, with the main progress number and what to do next. */
 export function TripHomePage() {
   const { country: countryParam = '' } = useParams();
@@ -83,6 +104,7 @@ export function TripHomePage() {
   const navigate = useNavigate();
   const { trip, error, reload, local, known, knownGroups, progress } = useTrip(country);
   const [showKnown, setShowKnown] = useState(false);
+  const regionKnown = useRegionKnown(trip?.regions ?? []);
 
   if (!trip) return <TripLoading error={error} onRetry={reload} />;
 
@@ -100,6 +122,9 @@ export function TripHomePage() {
   const knownUnits = units.filter((u) => unitKnown(u.species, known));
   const knownUnitBirds = knownUnits.reduce((n, u) => n + u.species.length, 0);
   const familiesDone = local.families_done || trip.groups.every((g) => knownGroups.has(g.slug));
+  // A region pack adds birds to the country's trip: no families, first day or endemics of its own.
+  const isPack = !!trip.parent;
+  const regions = trip.regions ?? [];
   const lookalikes = trip.lookalikes ?? [];
   const lookalikesKnown = lookalikes.filter((p) => known.has(p.here)).length;
   const lookalikeImage = lookalikes.length
@@ -108,11 +133,11 @@ export function TripHomePage() {
 
   // What to do next: the families, the first day, the lookalikes, then the next unit.
   let next: { label: string; title: string; go: () => void } | null = null;
-  if (!familiesDone) {
+  if (!isPack && !familiesDone) {
     next = { label: t('trip_start_here', 'Start here'), title: t('trip_families_title', 'Meet the families'), go: () => navigate(`/trips/${country}/families`) };
-  } else if (!isDone(trip.first_day)) {
+  } else if (!isPack && !isDone(trip.first_day)) {
     next = { label: t('trip_next', 'Next'), title: trip.first_day.title, go: () => navigate(`/trips/${country}/units/${trip.first_day.slug}`) };
-  } else if (lookalikes.length && !local.lookalikes_done) {
+  } else if (!isPack && lookalikes.length && !local.lookalikes_done) {
     next = { label: t('trip_next', 'Next'), title: t('trip_lookalikes_title', 'Lookalikes from home'), go: () => navigate(`/trips/${country}/lookalikes`) };
   } else {
     const unit = units.find((u) => !isDone(u));
@@ -123,7 +148,8 @@ export function TripHomePage() {
     <Page>
       <Page.Header>
         <Heading color="gray.800" size="2xl">
-          {countryCodeToFlag(country)} {t('trip_get_ready', 'Get ready for {country}', { country: trip.name })}
+          {countryCodeToFlag(trip.parent || country)}{' '}
+          {t('trip_get_ready', 'Get ready for {country}', { country: isPack ? `${trip.parent_name}: ${trip.name}` : trip.name })}
         </Heading>
       </Page.Header>
       <Page.Body>
@@ -135,8 +161,7 @@ export function TripHomePage() {
                 {t('trip_known_count', '{known} of {total} species', { known: knownCount, total: codes.length })}
               </Text>
               <Text color="secondary.100" fontSize="sm">
-                {t('trip_endemics_count', 'Endemics {known}/{total}', { known: endemicsKnown, total: endemicCodes.length })}
-                {' · '}
+                {endemicCodes.length ? `${t('trip_endemics_count', 'Endemics {known}/{total}', { known: endemicsKnown, total: endemicCodes.length })} · ` : ''}
                 {t('trip_units_count', 'Units {done}/{total}', {
                   done: trip.units.filter(isDone).length,
                   total: trip.units.length,
@@ -170,10 +195,12 @@ export function TripHomePage() {
 
           {trip.intro ? <Text color="primary.800">{trip.intro}</Text> : null}
 
-          <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
-            {t('trip_start_section', 'Get started')}
-          </Text>
-          <UnitRow
+          {!isPack ? (
+            <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
+              {t('trip_start_section', 'Get started')}
+            </Text>
+          ) : null}
+          {!isPack ? <UnitRow
             title={t('trip_families_title', 'Meet the families')}
             subtitle={t('trip_groups_count', '{count} groups', { count: trip.groups.length })}
             image={trip.species[trip.groups[0]?.species[0]]?.images[0]?.url}
@@ -181,8 +208,8 @@ export function TripHomePage() {
             total={trip.groups.length}
             done={familiesDone}
             onClick={() => navigate(`/trips/${country}/families`)}
-          />
-          <UnitRow
+          /> : null}
+          {!isPack ? <UnitRow
             title={trip.first_day.title}
             subtitle={`${knownIn(trip.first_day)}/${trip.first_day.species.length}`}
             image={unitImage(trip.first_day)}
@@ -190,7 +217,7 @@ export function TripHomePage() {
             total={trip.first_day.species.length}
             done={isDone(trip.first_day)}
             onClick={() => navigate(`/trips/${country}/units/${trip.first_day.slug}`)}
-          />
+          /> : null}
           {lookalikes.length ? (
             <UnitRow
               title={t('trip_lookalikes_title', 'Lookalikes from home')}
@@ -212,6 +239,29 @@ export function TripHomePage() {
               done={trip.endemics.units.every((u) => done.has(u.slug))}
               onClick={() => navigate(`/trips/${country}/endemics`)}
             />
+          ) : null}
+
+          {regions.length ? (
+            <>
+              <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
+                {t('trip_regions_section', 'Regions')}
+              </Text>
+              <Text fontSize="sm" color="primary.700">
+                {t('trip_regions_hint', 'More birds for the places you visit. They come on top of the {country} list.', { country: trip.name })}
+              </Text>
+              {regions.map((region) => (
+                <UnitRow
+                  key={region.country}
+                  title={region.name}
+                  image={region.image ?? undefined}
+                  subtitle={t('trip_region_species', '{count} extra species', { count: region.species_count })}
+                  known={regionKnown[region.country] ?? 0}
+                  total={region.species_count}
+                  done={(regionKnown[region.country] ?? 0) >= region.species_count}
+                  onClick={() => navigate(`/trips/${region.country}`)}
+                />
+              ))}
+            </>
           ) : null}
 
           <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>

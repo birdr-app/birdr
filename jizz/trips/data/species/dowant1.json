@@ -1,0 +1,22 @@
+{
+  "code": "dowant1",
+  "name": {
+    "en": "Dot-winged Antwren",
+    "nl": "Spikkelvleugelmiersluiper"
+  },
+  "latin": "Microrhopias quixensis",
+  "look_for": [
+    {
+      "en": "Male black with white-dotted **wings**",
+      "nl": "Man zwart met wit gestippelde **vleugels**"
+    },
+    {
+      "en": "Female rusty-orange below, dark above, same wing dots",
+      "nl": "Vrouw roestoranje van onder, donker van boven, dezelfde stippen"
+    },
+    {
+      "en": "Long, white-tipped **tail**, often fanned",
+      "nl": "Lange **staart** met witte punten, vaak gespreid"
+    }
+  ]
+}

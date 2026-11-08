@@ -1,0 +1,22 @@
+{
+  "code": "lobsta1",
+  "name": {
+    "en": "Long-billed Starthroat",
+    "nl": "Langsnavelsterkeelkolibrie"
+  },
+  "latin": "Heliomaster longirostris",
+  "look_for": [
+    {
+      "en": "Very long, straight black **bill**",
+      "nl": "Zeer lange, rechte zwarte **snavel**"
+    },
+    {
+      "en": "Magenta **throat** framed by white stripes",
+      "nl": "Magentarode **keel** omlijst door witte strepen"
+    },
+    {
+      "en": "White spot behind the **eye**, perches on bare twigs",
+      "nl": "Witte vlek achter het **oog**, zit op kale takjes"
+    }
+  ]
+}

@@ -67,6 +67,26 @@ class BuildUnitsTestCase(SimpleTestCase):
         self.assertEqual(build_units(species, ['b', 'zzz'])['first_day'], ['b'])
 
 
+    def test_region_pack_has_no_first_day_and_no_endemics_chapter(self):
+        species = [_species(f'a{i}', 'g', 1, i, status='endemic' if i == 0 else 'native') for i in range(5)]
+        data = build_units(species, ['a1'], region=True)
+        self.assertEqual(data['first_day'], [])
+        self.assertEqual(data['endemic_units'], [])
+        self.assertEqual(len(data['units']), 1)
+
+
+class RegionHelpersTestCase(SimpleTestCase):
+    def test_region_ids_name_their_country(self):
+        from jizz.trips.content import db_country, is_region, parent_trip
+
+        self.assertEqual(db_country('CR-CARIBBEAN'), 'CR')
+        self.assertEqual(db_country('cr'), 'CR')
+        self.assertTrue(is_region('CR-CARIBBEAN'))
+        self.assertFalse(is_region('CR'))
+        self.assertEqual(parent_trip('CR-CARIBBEAN'), 'CR')
+        self.assertIsNone(parent_trip('CR'))
+
+
 class TripFilesTestCase(SimpleTestCase):
     """Every country folder with a units.json must be complete before it ships."""
 
@@ -160,3 +180,35 @@ class TripApiTestCase(TestCase):
     def test_answers_need_a_player(self):
         res = self.client.post('/api/trips/LK/answers/', {'answers': [{'species_id': 1, 'answer_id': 1}]}, format='json')
         self.assertEqual(res.status_code, 401)
+
+
+class TripRegionApiTestCase(TestCase):
+    """A region pack hangs off its country's trip and is served like a trip."""
+
+    def setUp(self):
+        cache.clear()
+        self.client = APIClient()
+
+    def test_list_shows_countries_only(self):
+        codes = [t['country'] for t in self.client.get('/api/trips/').json()]
+        self.assertIn('CR', codes)
+        self.assertNotIn('CR-CARIBBEAN', codes)
+
+    def test_country_payload_lists_its_regions(self):
+        data = self.client.get('/api/trips/CR/?lang=nl').json()
+        self.assertEqual([r['country'] for r in data['regions']], ['CR-CARIBBEAN'])
+        region = data['regions'][0]
+        self.assertEqual(region['name'], 'Caribisch laagland')
+        self.assertTrue(region['intro'])
+        self.assertIsNone(data['parent'])
+
+    def test_region_payload_names_its_parent_and_repeats_no_country_bird(self):
+        country = self.client.get('/api/trips/CR/').json()
+        data = self.client.get('/api/trips/cr-caribbean/?lang=nl').json()
+        self.assertEqual(data['parent'], 'CR')
+        self.assertEqual(data['parent_name'], 'Costa Rica')
+        self.assertEqual(data['regions'], [])
+        self.assertEqual(data['first_day']['species'], [])
+        self.assertEqual(data['endemics']['units'], [])
+        self.assertFalse(set(data['species']) & set(country['species']))
+        self.assertTrue(all(u['title'] and u['intro'] for u in data['units']))

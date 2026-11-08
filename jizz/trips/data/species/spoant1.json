@@ -1,0 +1,22 @@
+{
+  "code": "spoant1",
+  "name": {
+    "en": "Spotted Antbird",
+    "nl": "Vlekborstmiervogel"
+  },
+  "latin": "Hylophylax naevioides",
+  "look_for": [
+    {
+      "en": "White **breast** with a necklace of black spots",
+      "nl": "Witte **borst** met een ketting van zwarte vlekken"
+    },
+    {
+      "en": "Chestnut back, grey face, buff spots on **wings**",
+      "nl": "Kastanjebruine rug, grijs gezicht, okerkleurige stippen op de **vleugels**"
+    },
+    {
+      "en": "Small; follows army ant swarms low in forest",
+      "nl": "Klein; volgt zwermen trekmieren laag in het bos"
+    }
+  ]
+}

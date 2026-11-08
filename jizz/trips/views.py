@@ -1,6 +1,6 @@
 """Trip prep API.
 
-GET  /api/trips/                      trips on offer
+GET  /api/trips/                      countries on offer (region packs hang off their country's trip)
 GET  /api/trips/<cc>/?lang=           everything the screens show (public, cached)
 GET  /api/trips/<cc>/progress/        the player's known species and groups (JWT user or player token)
 POST /api/trips/<cc>/answers/         store a unit quiz as a trip_prep game
@@ -20,7 +20,7 @@ from jizz.trips.api import (
     trip_progress,
     trip_summary,
 )
-from jizz.trips.content import TRIPS
+from jizz.trips.content import TRIPS, is_region
 
 CACHE_SECONDS = 10 * 60
 MAX_ANSWERS = 60
@@ -39,7 +39,7 @@ class TripListView(APIView):
 
     def get(self, request):
         lang = (request.query_params.get('lang') or 'en').lower()[:2]
-        return Response([trip_summary(code, trip_language(code, lang)) for code in TRIPS])
+        return Response([trip_summary(code, trip_language(code, lang)) for code in TRIPS if not is_region(code)])
 
 
 class TripDetailView(APIView):

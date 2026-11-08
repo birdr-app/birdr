@@ -1,0 +1,22 @@
+{
+  "code": "strsal1",
+  "name": {
+    "en": "Streaked Saltator",
+    "nl": "Gestreepte saltator"
+  },
+  "latin": "Saltator striatipectus",
+  "look_for": [
+    {
+      "en": "Thick **bill** and short white eyebrow",
+      "nl": "Dikke **snavel** en korte witte wenkbrauwstreep"
+    },
+    {
+      "en": "Olive back, pale underparts with dusky streaks",
+      "nl": "Olijfgroene rug, lichte onderkant met donkere strepen"
+    },
+    {
+      "en": "Streaked **breast** sets it apart from other saltators",
+      "nl": "Gestreepte **borst** onderscheidt hem van andere saltators"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "finfoots",
+  "about": {
+    "en": "Slim, long-necked waterbirds that swim low along quiet, shaded rivers, keeping close under overhanging branches. They have a long body, a pointed bill and a long, stiff tail, and their lobed feet are boldly coloured. Shy and easy to miss, they slip into cover when a boat comes near.",
+    "nl": "Slanke watervogels met een lange hals die laag in het water langs rustige, schaduwrijke rivieren zwemmen, dicht onder overhangende takken. Ze hebben een lang lijf, een spitse snavel en een lange, stijve staart, en hun gelobde poten zijn fel gekleurd. Ze zijn schuw en glippen weg in de begroeiing als er een boot nadert."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "grebes"
+      ],
+      "text": {
+        "en": "Finfoots swim like a grebe but are related to rails. Look for the long tail, the striped head and neck, and the bright legs; they rarely dive and stay under the bank vegetation.",
+        "nl": "Fuutkoeten zwemmen als een fuut, maar ze zijn verwant aan de rallen. Let op de lange staart, de gestreepte kop en hals en de felgekleurde poten; ze duiken zelden en blijven onder de oeverbegroeiing."
+      }
+    }
+  ]
+}

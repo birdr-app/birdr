@@ -58,8 +58,13 @@ export type TripSummary = {
   species_count: number;
   endemic_count: number;
   group_count: number;
-  languages: string[];
+  languages: string[];  /** A region pack names the country trip it adds to (e.g. CR for CR-CARIBBEAN). */
+  parent?: string | null;
+  parent_name?: string | null;
 };
+
+/** A region pack as the country trip lists it: extra birds for one part of the country. */
+export type TripRegion = TripSummary & { intro: string; image?: string | null };
 
 export type Trip = TripSummary & {
   lang: string;
@@ -72,7 +77,9 @@ export type Trip = TripSummary & {
     where: { title: string; text: string }[];
     families: { title: string; text: string }[];
     units: TripUnit[];
-  };
+    /** Region packs of this country; empty on a pack itself. */
+  regions?: TripRegion[];
+};
   species: Record<string, TripSpecies>;
 };
 

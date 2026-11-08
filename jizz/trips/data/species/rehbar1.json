@@ -1,0 +1,22 @@
+{
+  "code": "rehbar1",
+  "name": {
+    "en": "Red-headed Barbet",
+    "nl": "Roodkopbaardvogel"
+  },
+  "latin": "Eubucco bourcierii",
+  "look_for": [
+    {
+      "en": "Male: bright red head and **throat**",
+      "nl": "Mannetje: felrode kop en **keel**"
+    },
+    {
+      "en": "Female: black **forehead** and blue-grey cheek",
+      "nl": "Vrouwtje: zwart **voorhoofd** en blauwgrijze wang"
+    },
+    {
+      "en": "Thick pale yellow **bill**, green back",
+      "nl": "Dikke lichtgele **snavel**, groene rug"
+    }
+  ]
+}

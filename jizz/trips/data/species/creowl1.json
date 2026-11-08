@@ -1,0 +1,22 @@
+{
+  "code": "creowl1",
+  "name": {
+    "en": "Crested Owl",
+    "nl": "Kuifuil"
+  },
+  "latin": "Lophostrix cristata",
+  "look_for": [
+    {
+      "en": "Long white **eyebrows** sweep up into tall ear tufts",
+      "nl": "Lange witte **wenkbrauwen** lopen door in hoge oorpluimen"
+    },
+    {
+      "en": "Dark chestnut **facial disc**",
+      "nl": "Donker kastanjebruine **gezichtssluier**"
+    },
+    {
+      "en": "Roosts by day in dense tangles, often in pairs",
+      "nl": "Rust overdag in dichte begroeiing, vaak met zijn tweeën"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "blheag1",
+  "name": {
+    "en": "Black Hawk-Eagle",
+    "nl": "Zwarte kuifarend"
+  },
+  "latin": "Spizaetus tyrannus",
+  "look_for": [
+    {
+      "en": "Mostly black with a short **crest**",
+      "nl": "Grotendeels zwart met een korte **kuif**"
+    },
+    {
+      "en": "White-barred **thighs** and a banded tail",
+      "nl": "Wit gebandeerde **dijen** en een gebandeerde staart"
+    },
+    {
+      "en": "Broad wings heavily barred black and white below",
+      "nl": "Brede vleugels, van onderen zwaar zwart-wit gebandeerd"
+    }
+  ]
+}

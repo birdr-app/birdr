@@ -1,0 +1,22 @@
+{
+  "code": "woothr",
+  "name": {
+    "en": "Wood Thrush",
+    "nl": "Amerikaanse boslijster"
+  },
+  "latin": "Hylocichla mustelina",
+  "look_for": [
+    {
+      "en": "Warm rufous **crown** and nape",
+      "nl": "Warm roodbruine **kruin** en nek"
+    },
+    {
+      "en": "Big round black spots on white",
+      "nl": "Grote ronde zwarte vlekken op wit"
+    },
+    {
+      "en": "Thin white **eye-ring**",
+      "nl": "Smalle witte **oogring**"
+    }
+  ]
+}

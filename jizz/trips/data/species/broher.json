@@ -1,0 +1,22 @@
+{
+  "code": "broher",
+  "name": {
+    "en": "Bronzy Hermit",
+    "nl": "Bronzen heremietkolibrie"
+  },
+  "latin": "Glaucis aeneus",
+  "look_for": [
+    {
+      "en": "Long, curved **bill**, yellow below",
+      "nl": "Lange gebogen **snavel**, onderkant geel"
+    },
+    {
+      "en": "Bronze-green back, warm rufous **underparts**",
+      "nl": "Bronsgroene rug, warm roestbruine **onderkant**"
+    },
+    {
+      "en": "Rufous **tail** with black band, white tips",
+      "nl": "Roestbruine **staart** met zwarte band, witte puntjes"
+    }
+  ]
+}

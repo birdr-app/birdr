@@ -15,7 +15,7 @@ from pathlib import Path
 
 from django.core.management.base import BaseCommand, CommandError
 
-from jizz.trips.content import DATA_DIR, LANGUAGES, country_dir, read_json, scope_species
+from jizz.trips.content import DATA_DIR, LANGUAGES, country_dir, is_region, read_json, scope_species
 
 
 def has_text(value) -> bool:
@@ -44,8 +44,9 @@ def missing_texts(country: str) -> dict:
     country_missing = []
     if not has_text(texts.get('intro')):
         country_missing.append('intro')
+    region = is_region(country)
     for group in units_data['groups']:
-        if not has_text(texts.get('groups', {}).get(group['slug'], {}).get('here')):
+        if not region and not has_text(texts.get('groups', {}).get(group['slug'], {}).get('here')):
             country_missing.append(f'groups.{group["slug"]}.here')
     for unit in units_data['units']:
         entry = texts.get('units', {}).get(unit['slug'], {})
@@ -53,7 +54,7 @@ def missing_texts(country: str) -> dict:
             if not has_text(entry.get(part)):
                 country_missing.append(f'units.{unit["slug"]}.{part}')
     for part in ('title', 'intro'):
-        if not has_text(texts.get('first_day', {}).get(part)):
+        if not region and not has_text(texts.get('first_day', {}).get(part)):
             country_missing.append(f'first_day.{part}')
     endemics = texts.get('endemics', {})
     if units_data['endemic_units']:

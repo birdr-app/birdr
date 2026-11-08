@@ -1,0 +1,18 @@
+{
+  "slug": "gnateaters-and-antpittas",
+  "about": {
+    "en": "Round, almost tail-less birds on long legs that live on or near the floor of humid forest. Most are brown or rufous, often with a streaked or scaly breast. They hop, stop dead and stand upright, and you hear their loud, whistled songs far more often than you see them.",
+    "nl": "Ronde vogels met bijna geen staart op lange poten, die op of vlak boven de bodem van vochtig bos leven. De meeste zijn bruin of roestbruin, vaak met een gestreepte of geschubde borst. Ze hippen, staan dan stokstijf rechtop, en je hoort hun luide, gefloten zang veel vaker dan je ze ziet."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "old-world-pittas"
+      ],
+      "text": {
+        "en": "Antpittas have the plump, short-tailed shape of a pitta but are unrelated and far duller, in brown, buff and grey. They stand still for long spells instead of hopping about in the open.",
+        "nl": "Mierpitta's hebben de mollige vorm met korte staart van een pitta, maar ze zijn niet verwant en veel doffer, in bruin, zandkleur en grijs. Ze staan lang stil in plaats van in het open rond te hippen."
+      }
+    }
+  ]
+}

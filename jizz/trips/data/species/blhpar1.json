@@ -1,0 +1,22 @@
+{
+  "code": "blhpar1",
+  "name": {
+    "en": "Blue-headed Parrot",
+    "nl": "Zwartoormargrietje"
+  },
+  "latin": "Pionus menstruus",
+  "look_for": [
+    {
+      "en": "Bright blue **head** and neck, green body",
+      "nl": "Felblauwe **kop** en hals, groen lijf"
+    },
+    {
+      "en": "Red feathers under the **tail**",
+      "nl": "Rode veren onder de **staart**"
+    },
+    {
+      "en": "Deep **wingbeats** that dip below the body in flight",
+      "nl": "Diepe **vleugelslagen** tot onder het lijf in vlucht"
+    }
+  ]
+}

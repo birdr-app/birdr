@@ -1,0 +1,22 @@
+{
+  "code": "piepuf1",
+  "name": {
+    "en": "Pied Puffbird",
+    "nl": "Bonte baardkoekoek"
+  },
+  "latin": "Notharchus tectus",
+  "look_for": [
+    {
+      "en": "Black above, white below with a black **breast** band",
+      "nl": "Zwart van boven, wit van onder met een zwarte **borstband**"
+    },
+    {
+      "en": "Thin white **eyebrow**, white bar on the wing",
+      "nl": "Dunne witte **wenkbrauwstreep**, witte streep op de vleugel"
+    },
+    {
+      "en": "Sits still on bare branches high in the canopy",
+      "nl": "Zit stil op kale takken hoog in de bomen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "crctan1",
+  "name": {
+    "en": "Crimson-collared Tanager",
+    "nl": "Vuurkraagtangare"
+  },
+  "latin": "Ramphocelus sanguinolentus",
+  "look_for": [
+    {
+      "en": "Black face; crimson **collar** and breast",
+      "nl": "Zwart gezicht; karmijnrode **kraag** en borst"
+    },
+    {
+      "en": "Crimson **rump** above a black tail",
+      "nl": "Karmijnrode **stuit** boven een zwarte staart"
+    },
+    {
+      "en": "Pale silvery-blue **bill**, striking against the black face",
+      "nl": "Licht zilverblauwe **snavel**, opvallend tegen het zwarte gezicht"
+    }
+  ]
+}

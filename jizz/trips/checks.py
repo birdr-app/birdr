@@ -8,7 +8,17 @@ from __future__ import annotations
 
 from collections import Counter
 
-from jizz.trips.content import DATA_DIR, LANGUAGES, country_dir, home_codes, load_scope, lookalike_path, read_json
+from jizz.trips.content import (
+    DATA_DIR,
+    LANGUAGES,
+    country_dir,
+    home_codes,
+    is_region,
+    load_scope,
+    lookalike_path,
+    parent_codes,
+    read_json,
+)
 from jizz.trips.units import MAX_UNIT
 
 MIN_PHOTOS = 6
@@ -31,6 +41,7 @@ def check_files(country: str) -> tuple[list[str], list[str]]:
     if not units_data:
         return [f'{country}: no units.json'], warnings
     texts = read_json(folder / 'texts.json', {}) or {}
+    region = is_region(country)
 
     group_species = [c for g in units_data['groups'] for c in g['species']]
     all_codes = set(group_species)
@@ -54,10 +65,18 @@ def check_files(country: str) -> tuple[list[str], list[str]]:
         if n > 1:
             errors.append(f'unit slug {slug} is used {n} times')
 
-    endemics = {c for g in units_data['groups'] for c in g.get('endemics', [])}
-    in_endemic_units = [c for u in units_data['endemic_units'] for c in u['species']]
-    if set(in_endemic_units) != endemics or len(in_endemic_units) != len(endemics):
-        errors.append('endemics units do not hold every endemic exactly once')
+    if region:
+        # A region pack adds birds to the country's trip; it has no first day or endemics chapter.
+        own = set(parent_codes(country))
+        for code in sorted(all_codes & own):
+            errors.append(f'{code} is already in the trip of {country.split("-")[0]}')
+        if units_data['first_day'] or units_data['endemic_units']:
+            errors.append('a region pack has no first_day and no endemics units')
+    else:
+        endemics = {c for g in units_data['groups'] for c in g.get('endemics', [])}
+        in_endemic_units = [c for u in units_data['endemic_units'] for c in u['species']]
+        if set(in_endemic_units) != endemics or len(in_endemic_units) != len(endemics):
+            errors.append('endemics units do not hold every endemic exactly once')
     for code in units_data['first_day']:
         if code not in all_codes:
             errors.append(f'first_day species {code} is not in scope')
@@ -86,7 +105,8 @@ def check_files(country: str) -> tuple[list[str], list[str]]:
     if not _has_text(texts.get('intro')):
         errors.append('texts: no intro')
     for group in units_data['groups']:
-        if not _has_text(texts.get('groups', {}).get(group['slug'], {}).get('here')):
+        # A region pack leans on the country's group texts; its own unit intros say what is new.
+        if not region and not _has_text(texts.get('groups', {}).get(group['slug'], {}).get('here')):
             errors.append(f'texts: group {group["slug"]} has no here text')
     for unit in units_data['units']:
         entry = texts.get('units', {}).get(unit['slug'], {})
@@ -97,7 +117,7 @@ def check_files(country: str) -> tuple[list[str], list[str]]:
     for code in set(texts.get('species', {})) - all_codes:
         warnings.append(f'texts: species {code} is not in scope')
     first_day = texts.get('first_day', {})
-    if not _has_text(first_day.get('title')) or not _has_text(first_day.get('intro')):
+    if not region and (not _has_text(first_day.get('title')) or not _has_text(first_day.get('intro'))):
         errors.append('texts: first_day needs a title and an intro')
     if units_data['endemic_units']:
         endemic_texts = texts.get('endemics', {})

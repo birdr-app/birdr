@@ -1,0 +1,22 @@
+{
+  "code": "banumb1",
+  "name": {
+    "en": "Bare-necked Umbrellabird",
+    "nl": "Penseelparasolvogel"
+  },
+  "latin": "Cephalopterus glabricollis",
+  "look_for": [
+    {
+      "en": "Big black bird with an umbrella-like **crest**",
+      "nl": "Grote zwarte vogel met parapluvormige **kuif**"
+    },
+    {
+      "en": "Male has a bare scarlet **throat** sac",
+      "nl": "Man heeft een kale scharlakenrode **keelzak**"
+    },
+    {
+      "en": "Female has a small, flat **crest**, no throat sac",
+      "nl": "Vrouw heeft een kleine, platte **kuif**, geen keelzak"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "smbwoo1",
+  "name": {
+    "en": "Smoky-brown Woodpecker",
+    "nl": "Roetspecht"
+  },
+  "latin": "Leuconotopicus fumigatus",
+  "look_for": [
+    {
+      "en": "Small, plain smoky-brown woodpecker",
+      "nl": "Kleine, effen roetbruine specht"
+    },
+    {
+      "en": "Paler face, no bars or spots",
+      "nl": "Lichter gezicht, zonder bandjes of vlekken"
+    },
+    {
+      "en": "Male has a red **crown**",
+      "nl": "Man heeft een rode **kruin**"
+    }
+  ]
+}

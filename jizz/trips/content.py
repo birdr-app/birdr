@@ -6,6 +6,8 @@ Layout under ``jizz/trips/data/``:
 - ``groups/<group-slug>.json``: ``about`` and ``false_friend`` texts, shared by every country.
 - ``<cc>/scope.json``: hand-made changes to the species list (``add``, ``drop``), ``first_day``,
   ``group_overrides`` and regional specialities.
+- ``<cc>-<region>/``: a region pack, the same files as a country (see ``is_region``). Its species
+  are hand-picked in ``scope.json`` (``"manual": true``) and never repeat the country's own.
 - ``<cc>/units.json``: groups, units and the endemics units, written by ``trip_prep_units``.
 - ``<cc>/texts.json``: ``here`` texts for groups and species, and the endemics chapter.
 - ``lookalikes/<here>__<home>.json``: how to tell a local bird from a lookalike at home (for a
@@ -29,9 +31,33 @@ TRIPS: dict[str, dict] = {
     'SC': {'name': {'en': 'Seychelles', 'nl': 'Seychellen'}, 'languages': ('en', 'nl')},
     'UG': {'name': {'en': 'Uganda', 'nl': 'Oeganda'}, 'languages': ('en', 'nl')},
     'CR': {'name': {'en': 'Costa Rica', 'nl': 'Costa Rica'}, 'languages': ('en', 'nl')},
+    'CR-CARIBBEAN': {
+        'name': {'en': 'Caribbean lowlands', 'nl': 'Caribisch laagland'},
+        'languages': ('en', 'nl'),
+        'parent': 'CR',
+    },
 }
 
 LANGUAGES = ('en', 'nl')
+
+
+def db_country(trip: str) -> str:
+    """The country behind a trip id: ``CR`` for ``CR`` and for the region pack ``CR-CARIBBEAN``."""
+    return trip.upper().split('-')[0]
+
+
+def is_region(trip: str) -> bool:
+    """A region pack: extra birds for one part of a country, on top of the country's own trip."""
+    return '-' in trip
+
+
+def parent_trip(trip: str) -> str | None:
+    return db_country(trip) if is_region(trip) else None
+
+
+def region_ids(country: str) -> list[str]:
+    """The published region packs of a country, in the order of ``TRIPS``."""
+    return [code for code, meta in TRIPS.items() if meta.get('parent') == country]
 
 # Frequencies that count as "regular": the cut used for the main percentage.
 REGULAR_FREQUENCIES = ('abundant', 'very_common', 'common', 'fairly_common', 'uncommon')
@@ -88,6 +114,8 @@ def load_scope(country: str) -> dict:
     scope.setdefault('group_overrides', {})
     scope.setdefault('regional_specialities', [])
     scope.setdefault('lookalikes', [])
+    # A region pack lists its species by hand: the country's frequency cut doesn't apply.
+    scope.setdefault('manual', is_region(country))
     return scope
 
 
@@ -104,25 +132,44 @@ def home_codes(scope: dict, in_scope) -> list[str]:
     return out
 
 
+def parent_codes(trip: str) -> list[str]:
+    """The species of the country trip behind a region pack (from its units.json)."""
+    parent = parent_trip(trip)
+    units = read_json(country_dir(parent) / 'units.json') if parent else None
+    return [c for g in (units or {}).get('groups', []) for c in g['species']]
+
+
 def scope_species(country: str) -> list[ScopeSpecies]:
     """The species a trip to ``country`` covers, in taxonomic order.
 
     Native, endemic and introduced species from ``CountrySpecies``, regular ones only (abundant to
     uncommon) plus every endemic, then ``scope.json``'s ``add`` and ``drop`` (eBird codes).
-    Species without an eBird group take the group of another species in their family.
+    A region pack (``CR-CARIBBEAN``) takes only its ``add`` list, minus the birds the country's own
+    trip already has. Species without an eBird group take the group of another species in their
+    family.
     """
     from django.db.models import Q
 
     from jizz.models import CountrySpecies, Species
 
     scope = load_scope(country)
-    regular = Q(status__in=('native', 'introduced'), frequency__in=REGULAR_FREQUENCIES) | Q(status='endemic')
-    rows = list(
-        CountrySpecies.objects.filter(country_id=country.upper())
-        .filter(regular | Q(species__code__in=scope['add']))
-        .exclude(species__code__in=scope['drop'])
-        .select_related('species', 'species__species_group')
-    )
+    if scope['manual']:
+        wanted = Q(species__code__in=scope['add'])
+        own = set(parent_codes(country))
+        rows = list(
+            CountrySpecies.objects.filter(country_id=db_country(country))
+            .filter(wanted)
+            .exclude(species__code__in=list(scope['drop']) + sorted(own))
+            .select_related('species', 'species__species_group')
+        )
+    else:
+        regular = Q(status__in=('native', 'introduced'), frequency__in=REGULAR_FREQUENCIES) | Q(status='endemic')
+        rows = list(
+            CountrySpecies.objects.filter(country_id=db_country(country))
+            .filter(regular | Q(species__code__in=scope['add']))
+            .exclude(species__code__in=scope['drop'])
+            .select_related('species', 'species__species_group')
+        )
 
     family_group = {}
     family_ids = {cs.species.taxonomic_family_id for cs in rows if cs.species.species_group_id is None}

@@ -1,0 +1,22 @@
+{
+  "code": "magwar",
+  "name": {
+    "en": "Magnolia Warbler",
+    "nl": "Magnoliazanger"
+  },
+  "latin": "Setophaga magnolia",
+  "look_for": [
+    {
+      "en": "Yellow below, black streaks on the **flanks**",
+      "nl": "Geel van onder, zwarte strepen op de **flanken**"
+    },
+    {
+      "en": "White band across the middle of the **tail**",
+      "nl": "Witte band halverwege de **staart**"
+    },
+    {
+      "en": "Grey head, white **eye-ring**, yellow rump",
+      "nl": "Grijze kop, witte **oogring**, gele stuit"
+    }
+  ]
+}

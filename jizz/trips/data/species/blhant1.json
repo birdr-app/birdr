@@ -1,0 +1,22 @@
+{
+  "code": "blhant1",
+  "name": {
+    "en": "Black-headed Antthrush",
+    "nl": "Zwartkopmierlijster"
+  },
+  "latin": "Formicarius nigricapillus",
+  "look_for": [
+    {
+      "en": "Walks the forest floor with **tail** cocked",
+      "nl": "Loopt over de bosbodem met opgewipte **staart**"
+    },
+    {
+      "en": "Black head, bluish-white skin round the **eye**",
+      "nl": "Zwarte kop, blauwwitte huid rond het **oog**"
+    },
+    {
+      "en": "Chestnut back, rufous under the **tail**",
+      "nl": "Kastanjebruine rug, roodbruin onder de **staart**"
+    }
+  ]
+}

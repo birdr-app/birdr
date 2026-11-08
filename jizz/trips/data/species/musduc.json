@@ -1,0 +1,22 @@
+{
+  "code": "musduc",
+  "name": {
+    "en": "Muscovy Duck",
+    "nl": "Muskuseend"
+  },
+  "latin": "Cairina moschata",
+  "look_for": [
+    {
+      "en": "Big black duck with a green **gloss**",
+      "nl": "Grote zwarte eend met groene **glans**"
+    },
+    {
+      "en": "White **wing** patch, bright in flight",
+      "nl": "Witte vlek op de **vleugel**, opvallend in vlucht"
+    },
+    {
+      "en": "Male has a **knob** above the bill",
+      "nl": "Man heeft een **knobbel** boven op de snavel"
+    }
+  ]
+}

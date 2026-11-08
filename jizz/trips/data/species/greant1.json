@@ -1,0 +1,22 @@
+{
+  "code": "greant1",
+  "name": {
+    "en": "Great Antshrike",
+    "nl": "Grote mierklauwier"
+  },
+  "latin": "Taraba major",
+  "look_for": [
+    {
+      "en": "Big antshrike with a shaggy **crest**",
+      "nl": "Grote mierklauwier met een ruige **kuif**"
+    },
+    {
+      "en": "Male black above, white below, red **eye**",
+      "nl": "Man zwart van boven, wit van onder, rood **oog**"
+    },
+    {
+      "en": "Female rufous above, white below",
+      "nl": "Vrouw roestbruin van boven, wit van onder"
+    }
+  ]
+}

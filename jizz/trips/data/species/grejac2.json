@@ -1,0 +1,22 @@
+{
+  "code": "grejac2",
+  "name": {
+    "en": "Great Jacamar",
+    "nl": "Grote glansvogel"
+  },
+  "latin": "Jacamerops aureus",
+  "look_for": [
+    {
+      "en": "Big jacamar with a heavy, slightly curved **bill**",
+      "nl": "Grote glansvogel met zware, licht gebogen **snavel**"
+    },
+    {
+      "en": "Metallic green back, rufous **underparts**",
+      "nl": "Metaalgroene rug, roestbruine **onderkant**"
+    },
+    {
+      "en": "Male has a white band across the **throat**",
+      "nl": "Man heeft een witte band over de **keel**"
+    }
+  ]
+}

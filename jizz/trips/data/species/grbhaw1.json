@@ -1,0 +1,22 @@
+{
+  "code": "grbhaw1",
+  "name": {
+    "en": "Great Black Hawk",
+    "nl": "Zwarte arendbuizerd"
+  },
+  "latin": "Buteogallus urubitinga",
+  "look_for": [
+    {
+      "en": "All black with long yellow **legs**",
+      "nl": "Helemaal zwart met lange gele **poten**"
+    },
+    {
+      "en": "White **rump** and tail base, broad black tip",
+      "nl": "Witte **stuit** en staartbasis, brede zwarte eindband"
+    },
+    {
+      "en": "Longer legs than Common Black Hawk, greyish **lores**",
+      "nl": "Langere poten dan de zwarte buizerd, grijze **teugel**"
+    }
+  ]
+}

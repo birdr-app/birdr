@@ -1,0 +1,22 @@
+{
+  "code": "snocot1",
+  "name": {
+    "en": "Snowy Cotinga",
+    "nl": "Sneeuwcotinga"
+  },
+  "latin": "Carpodectes nitidus",
+  "look_for": [
+    {
+      "en": "Male pure white, dove-like with a round **head**",
+      "nl": "Man spierwit, duifachtig met ronde **kop**"
+    },
+    {
+      "en": "Dark **eye** in a plain white face",
+      "nl": "Donker **oog** in een effen wit gezicht"
+    },
+    {
+      "en": "Female pale grey, white edges on the **wings**",
+      "nl": "Vrouw lichtgrijs, witte randjes op de **vleugels**"
+    }
+  ]
+}

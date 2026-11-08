@@ -1,0 +1,22 @@
+{
+  "code": "woewar1",
+  "name": {
+    "en": "Worm-eating Warbler",
+    "nl": "Streepkopzanger"
+  },
+  "latin": "Helmitheros vermivorum",
+  "look_for": [
+    {
+      "en": "Buff **head** with bold black stripes",
+      "nl": "Okerkleurige **kop** met brede zwarte strepen"
+    },
+    {
+      "en": "Plain olive back, unstreaked buffy breast",
+      "nl": "Effen olijfgroene rug, ongestreepte okerkleurige borst"
+    },
+    {
+      "en": "Probes hanging clumps of dead leaves",
+      "nl": "Peutert in hangende plukken dode bladeren"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "agaher1",
+  "name": {
+    "en": "Agami Heron",
+    "nl": "Agamireiger"
+  },
+  "latin": "Agamia agami",
+  "look_for": [
+    {
+      "en": "Very long, thin **bill** on a short-legged heron",
+      "nl": "Zeer lange, dunne **snavel** op een kortpotige reiger"
+    },
+    {
+      "en": "Chestnut **neck** and belly, dark green back",
+      "nl": "Kastanjebruine **hals** en buik, donkergroene rug"
+    },
+    {
+      "en": "Silvery-blue plumes; hides along shady forest streams",
+      "nl": "Zilverblauwe sierveren; verstopt zich langs schaduwrijke bosbeken"
+    }
+  ]
+}

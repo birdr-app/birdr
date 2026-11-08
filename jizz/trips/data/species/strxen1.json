@@ -1,0 +1,22 @@
+{
+  "code": "strxen1",
+  "name": {
+    "en": "Streaked Xenops",
+    "nl": "Gestreepte xenops"
+  },
+  "latin": "Xenops rutilans",
+  "look_for": [
+    {
+      "en": "Short **bill** with an upturned lower half",
+      "nl": "Korte **snavel** met opgewipte onderkant"
+    },
+    {
+      "en": "White crescent on the **cheek**",
+      "nl": "Witte halve maan op de **wang**"
+    },
+    {
+      "en": "Streaked head and **breast**, rufous tail",
+      "nl": "Gestreepte kop en **borst**, roestbruine staart"
+    }
+  ]
+}

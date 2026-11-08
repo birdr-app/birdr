@@ -1,0 +1,22 @@
+{
+  "code": "bawowl1",
+  "name": {
+    "en": "Black-and-white Owl",
+    "nl": "Zwart-witte bosuil"
+  },
+  "latin": "Strix nigrolineata",
+  "look_for": [
+    {
+      "en": "Round head, no **ear tufts**",
+      "nl": "Ronde kop zonder **oorpluimen**"
+    },
+    {
+      "en": "Black face and back, dark eyes",
+      "nl": "Zwart gezicht en zwarte rug, donkere ogen"
+    },
+    {
+      "en": "White **underparts** with fine black bars",
+      "nl": "Witte **onderkant** met fijne zwarte bandjes"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "goowoo1",
+  "name": {
+    "en": "Golden-olive Woodpecker",
+    "nl": "Olijfrugspecht"
+  },
+  "latin": "Colaptes rubiginosus",
+  "look_for": [
+    {
+      "en": "Golden-olive back, barred pale yellow underparts",
+      "nl": "Goudolijfgroene rug, gebandeerde lichtgele onderkant"
+    },
+    {
+      "en": "Grey **crown** edged red, pale face",
+      "nl": "Grijze **kruin** met rode rand, licht gezicht"
+    },
+    {
+      "en": "Male has a red **moustache** stripe",
+      "nl": "Man heeft een rode **baardstreep**"
+    }
+  ]
+}

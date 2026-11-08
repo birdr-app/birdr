@@ -36,7 +36,7 @@ export function TripListScreen() {
       automaticallyAdjustKeyboardInsets
     >
       <Text style={tripStyles.body}>{t('trip_list_intro')}</Text>
-      {trips.map((trip) => (
+      {trips.filter((trip) => !trip.parent).map((trip) => (
         <TouchableOpacity
           key={trip.country}
           style={styles.trip}

@@ -1,0 +1,22 @@
+{
+  "code": "norben1",
+  "name": {
+    "en": "Northern Bentbill",
+    "nl": "Mexicaanse krombektiran"
+  },
+  "latin": "Oncostoma cinereigulare",
+  "look_for": [
+    {
+      "en": "Tiny, with a sharply down-bent **bill**",
+      "nl": "Piepklein, met een scherp omlaag geknikte **snavel**"
+    },
+    {
+      "en": "Pale **eye**, grey throat, yellowish belly",
+      "nl": "Licht **oog**, grijze keel, geelachtige buik"
+    },
+    {
+      "en": "Olive above with two yellowish **wing** bars",
+      "nl": "Olijfgroen van boven met twee gelige strepen op de **vleugel**"
+    }
+  ]
+}

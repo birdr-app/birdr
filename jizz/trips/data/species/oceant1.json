@@ -1,0 +1,22 @@
+{
+  "code": "oceant1",
+  "name": {
+    "en": "Ocellated Antbird",
+    "nl": "McLeannanmiervogel"
+  },
+  "latin": "Phaenostictus mcleannani",
+  "look_for": [
+    {
+      "en": "Bare blue skin round the **eye**",
+      "nl": "Kale blauwe huid rond het **oog**"
+    },
+    {
+      "en": "Black **throat**, chestnut body with black scales",
+      "nl": "Zwarte **keel**, kastanjebruin lijf met zwarte schubben"
+    },
+    {
+      "en": "Follows army ant swarms on the ground",
+      "nl": "Volgt zwermen legermieren over de grond"
+    }
+  ]
+}

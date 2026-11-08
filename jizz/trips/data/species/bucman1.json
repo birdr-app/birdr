@@ -1,0 +1,22 @@
+{
+  "code": "bucman1",
+  "name": {
+    "en": "Velvety Manakin",
+    "nl": "Fluweelmanakin"
+  },
+  "latin": "Lepidothrix velutina",
+  "look_for": [
+    {
+      "en": "Male: velvety black with a bright blue **crown**",
+      "nl": "Mannetje: fluweelzwart met een felblauwe **kruin**"
+    },
+    {
+      "en": "Female: plain green, greyer on the belly",
+      "nl": "Vrouwtje: effen groen, grijzer op de buik"
+    },
+    {
+      "en": "Tiny and short-tailed, low in the forest",
+      "nl": "Piepklein met een korte staart, laag in het bos"
+    }
+  ]
+}

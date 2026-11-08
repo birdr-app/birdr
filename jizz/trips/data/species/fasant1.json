@@ -1,0 +1,22 @@
+{
+  "code": "fasant1",
+  "name": {
+    "en": "Fasciated Antshrike",
+    "nl": "Zebramierklauwier"
+  },
+  "latin": "Cymbilaimus lineatus",
+  "look_for": [
+    {
+      "en": "Male: fine black-and-white bars all over",
+      "nl": "Mannetje: overal fijn zwart-wit gebandeerd"
+    },
+    {
+      "en": "Female: barred buff and black, chestnut **crown**",
+      "nl": "Vrouwtje: beige-zwart gebandeerd, kastanjebruine **kruin**"
+    },
+    {
+      "en": "Red **eye** and no crest, unlike Barred Antshrike",
+      "nl": "Rode **iris** en geen kuif, anders dan de Gebandeerde mierklauwier"
+    }
+  ]
+}

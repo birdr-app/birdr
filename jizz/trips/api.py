@@ -10,7 +10,17 @@ from __future__ import annotations
 from functools import lru_cache
 
 from jizz.courses.content import text
-from jizz.trips.content import DATA_DIR, TRIPS, country_dir, load_scope, lookalike_path, read_json
+from jizz.trips.content import (
+    DATA_DIR,
+    TRIPS,
+    country_dir,
+    db_country,
+    load_scope,
+    lookalike_path,
+    parent_trip,
+    read_json,
+    region_ids,
+)
 
 QUIZ_PHOTOS = 8
 
@@ -78,7 +88,38 @@ def trip_summary(country: str, lang: str) -> dict:
         'lookalike_count': len(files['lookalikes']),
         'group_count': len(units['groups']),
         'languages': list(meta['languages']),
+        # A region pack names its country trip; the country trip lists its packs in trip_payload.
+        'parent': parent_trip(country),
+        'parent_name': text(TRIPS[parent_trip(country)]['name'], lang) if parent_trip(country) in TRIPS else None,
     }
+
+
+def region_summaries(country: str, lang: str) -> list[dict]:
+    """The region packs of a country: name, size and a short intro, for the trip home."""
+    out = []
+    for region in region_ids(country):
+        try:
+            files = _files(region)
+        except TripNotFound:
+            continue
+        out.append({
+            **trip_summary(region, lang),
+            'intro': text(files['texts'].get('intro'), lang),
+            'image': _region_image(files),
+        })
+    return out
+
+
+def _region_image(files: dict) -> str | None:
+    """A photo for the region's row: the first card photo of the first unit's first bird."""
+    for unit in files['units']['units']:
+        for code in unit['species']:
+            card = files['media'].get(code, {}).get('card') or []
+            if card:
+                row = _media_rows(card[:1]).get(card[0])
+                if row:
+                    return row['url']
+    return None
 
 
 def trip_payload(country: str, lang: str) -> dict:
@@ -177,6 +218,7 @@ def trip_payload(country: str, lang: str) -> dict:
         'species': species,
         'lookalikes': lookalikes,
         'home_species': home_species,
+        'regions': region_summaries(country, lang),
     }
 
 
@@ -271,7 +313,7 @@ def record_answers(country: str, player, answers: list[dict]) -> int:
 
     with transaction.atomic():
         game = Game.objects.create(
-            country=Country.objects.filter(code=country).first(),
+            country=Country.objects.filter(code=db_country(country)).first(),
             language=player.language or 'en',
             level='beginner',
             length=len(rows),

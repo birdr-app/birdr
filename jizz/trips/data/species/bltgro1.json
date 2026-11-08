@@ -1,0 +1,22 @@
+{
+  "code": "bltgro1",
+  "name": {
+    "en": "Black-thighed Grosbeak",
+    "nl": "Zwartdijkardinaal"
+  },
+  "latin": "Pheucticus tibialis",
+  "look_for": [
+    {
+      "en": "Bright yellow head and underparts",
+      "nl": "Felgele kop en onderkant"
+    },
+    {
+      "en": "Black back and **wings** with a white patch",
+      "nl": "Zwarte rug en **vleugels** met een witte vlek"
+    },
+    {
+      "en": "Huge dark **bill**; black thighs hard to see",
+      "nl": "Enorme donkere **snavel**; zwarte dijen lastig te zien"
+    }
+  ]
+}

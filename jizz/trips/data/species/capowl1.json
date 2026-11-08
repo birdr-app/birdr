@@ -1,0 +1,22 @@
+{
+  "code": "capowl1",
+  "name": {
+    "en": "Central American Pygmy-Owl",
+    "nl": "Grijskopdwerguil"
+  },
+  "latin": "Glaucidium griseiceps",
+  "look_for": [
+    {
+      "en": "Tiny owl with a greyish, lightly spotted **head**",
+      "nl": "Piepklein uiltje met een grijze, licht gestippelde **kop**"
+    },
+    {
+      "en": "Two black eye-like spots on the **nape**",
+      "nl": "Twee zwarte oogvlekken achter op de **nek**"
+    },
+    {
+      "en": "Streaked flanks, few pale bars on the **tail**",
+      "nl": "Gestreepte flanken, weinig lichte bandjes op de **staart**"
+    }
+  ]
+}

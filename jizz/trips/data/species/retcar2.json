@@ -1,0 +1,22 @@
+{
+  "code": "retcar2",
+  "name": {
+    "en": "Red-throated Caracara",
+    "nl": "Roodkeelcaracara"
+  },
+  "latin": "Ibycter americanus",
+  "look_for": [
+    {
+      "en": "Glossy black with a white **belly**",
+      "nl": "Glanzend zwart met een witte **buik**"
+    },
+    {
+      "en": "Bare red **throat** and face, yellow bill",
+      "nl": "Kale rode **keel** en gezicht, gele snavel"
+    },
+    {
+      "en": "Noisy groups raid wasp nests in the canopy",
+      "nl": "Luidruchtige groepjes plunderen wespennesten hoog in de bomen"
+    }
+  ]
+}

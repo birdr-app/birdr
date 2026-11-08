@@ -1,0 +1,22 @@
+{
+  "code": "lovcot1",
+  "name": {
+    "en": "Lovely Cotinga",
+    "nl": "Azuurcotinga"
+  },
+  "latin": "Cotinga amabilis",
+  "look_for": [
+    {
+      "en": "Male: shining turquoise-blue, blackish **wings**",
+      "nl": "Mannetje: glanzend turquoiseblauw, zwartige **vleugels**"
+    },
+    {
+      "en": "Male: deep purple **throat** and belly patch",
+      "nl": "Mannetje: dieppaarse **keel** en buikvlek"
+    },
+    {
+      "en": "Female: grey-brown with pale scaling",
+      "nl": "Vrouwtje: grijsbruin met lichte schubben"
+    }
+  ]
+}

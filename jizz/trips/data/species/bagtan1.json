@@ -1,0 +1,22 @@
+{
+  "code": "bagtan1",
+  "name": {
+    "en": "Blue-and-gold Tanager",
+    "nl": "Blauw-gouden tangare"
+  },
+  "latin": "Bangsia arcaei",
+  "look_for": [
+    {
+      "en": "Deep blue head and back",
+      "nl": "Diepblauwe kop en rug"
+    },
+    {
+      "en": "Bright yellow **breast** and belly",
+      "nl": "Felgele **borst** en buik"
+    },
+    {
+      "en": "Red **eye**, chunky with a short tail",
+      "nl": "Rood **oog**, gedrongen met korte staart"
+    }
+  ]
+}

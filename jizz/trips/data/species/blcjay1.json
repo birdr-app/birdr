@@ -1,0 +1,22 @@
+{
+  "code": "blcjay1",
+  "name": {
+    "en": "Black-chested Jay",
+    "nl": "Zwartborstgaai"
+  },
+  "latin": "Cyanocorax affinis",
+  "look_for": [
+    {
+      "en": "Black head and chest, creamy white belly",
+      "nl": "Zwarte kop en borst, roomwitte buik"
+    },
+    {
+      "en": "Bright blue spots above and below the **eye**",
+      "nl": "Felblauwe vlekjes boven en onder het **oog**"
+    },
+    {
+      "en": "Dark blue back, broad white **tail** tip",
+      "nl": "Donkerblauwe rug, brede witte **staartpunt**"
+    }
+  ]
+}

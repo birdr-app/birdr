@@ -9,6 +9,7 @@ import {
   type Trip,
   type TripLocalState,
   type TripProgress,
+  type TripRegion,
 } from '../api/trip';
 import { useTranslation } from '../i18n/TranslationContext';
 
@@ -64,4 +65,26 @@ export function useTrip(country: string): TripData {
   }, [progress, known, trip]);
 
   return { trip, progress, local, error, reload, setLocal, setProgress, known, knownGroups };
+}
+
+/** How many birds of each region pack the player knows: their answers anywhere plus this device. */
+export function useRegionKnown(regions: TripRegion[]): Record<string, number> {
+  const [known, setKnown] = useState<Record<string, number>>({});
+  const key = regions.map((r) => r.country).join(',');
+  useFocusEffect(
+    useCallback(() => {
+      let active = true;
+      regions.forEach((region) => {
+        Promise.all([fetchTripProgress(region.country), loadTripState(region.country)]).then(([progress, state]) => {
+          const count = new Set([...progress.known, ...state.right]).size;
+          if (active) setKnown((old) => ({ ...old, [region.country]: count }));
+        });
+      });
+      return () => {
+        active = false;
+      };
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [key])
+  );
+  return known;
 }

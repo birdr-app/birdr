@@ -1,0 +1,22 @@
+{
+  "code": "yetori1",
+  "name": {
+    "en": "Yellow-tailed Oriole",
+    "nl": "Geelstaarttroepiaal"
+  },
+  "latin": "Icterus mesomelas",
+  "look_for": [
+    {
+      "en": "Yellow body, black back and **bib**",
+      "nl": "Geel lijf, zwarte rug en **bef**"
+    },
+    {
+      "en": "Yellow **shoulder** patch on black wings",
+      "nl": "Gele vlek op de **schouder** van de zwarte vleugels"
+    },
+    {
+      "en": "Yellow outer **tail** feathers",
+      "nl": "Gele buitenste **staartveren**"
+    }
+  ]
+}

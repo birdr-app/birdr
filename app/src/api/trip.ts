@@ -64,7 +64,13 @@ export type TripSummary = {
   lookalike_count?: number;
   group_count: number;
   languages: string[];
+  /** A region pack names the country trip it adds to (e.g. CR for CR-CARIBBEAN). */
+  parent?: string | null;
+  parent_name?: string | null;
 };
+
+/** A region pack as the country trip lists it: extra birds for one part of the country. */
+export type TripRegion = TripSummary & { intro: string; image?: string | null };
 
 export type Trip = TripSummary & {
   lang: string;
@@ -82,6 +88,8 @@ export type Trip = TripSummary & {
   lookalikes?: TripLookalike[];
   /** Home birds of the lookalike pairs that aren't trip birds themselves. */
   home_species?: Record<string, TripHomeSpecies>;
+  /** Region packs of this country; empty on a pack itself. */
+  regions?: TripRegion[];
 };
 
 export type TripProgress = {

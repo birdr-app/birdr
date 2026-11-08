@@ -1,0 +1,22 @@
+{
+  "code": "watjac1",
+  "name": {
+    "en": "Wattled Jacana",
+    "nl": "Leljaçana"
+  },
+  "latin": "Jacana jacana",
+  "look_for": [
+    {
+      "en": "Black with dark chestnut back and **wings**",
+      "nl": "Zwart met donker kastanjebruine rug en **vleugels**"
+    },
+    {
+      "en": "Red forehead **shield** and lobes by the bill",
+      "nl": "Rood **voorhoofdsschild** en lellen bij de snavel"
+    },
+    {
+      "en": "Lime-yellow **flight feathers**; walks on lily pads",
+      "nl": "Geelgroene **slagpennen**; loopt over waterlelies"
+    }
+  ]
+}

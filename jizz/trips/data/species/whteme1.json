@@ -1,0 +1,22 @@
+{
+  "code": "whteme1",
+  "name": {
+    "en": "White-tailed Emerald",
+    "nl": "Witstaartsmaragdkolibrie"
+  },
+  "latin": "Microchera chionura",
+  "look_for": [
+    {
+      "en": "Tiny, short straight black **bill**",
+      "nl": "Piepklein, korte rechte zwarte **snavel**"
+    },
+    {
+      "en": "Male green with white outer **tail** feathers",
+      "nl": "Man groen met witte buitenste **staartveren**"
+    },
+    {
+      "en": "Female pale below, white tail with dark band",
+      "nl": "Vrouw licht van onder, witte staart met donkere band"
+    }
+  ]
+}

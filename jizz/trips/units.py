@@ -52,7 +52,9 @@ def _unit(slug: str, groups: list[list[ScopeSpecies]]) -> dict:
     }
 
 
-def build_units(species: list[ScopeSpecies], first_day: list[str] | None = None) -> dict:
+def build_units(species: list[ScopeSpecies], first_day: list[str] | None = None, region: bool = False) -> dict:
+    """Groups, units, the first day and the endemics units. A region pack (``region=True``) has no
+    first day and no endemics chapter of its own: those belong to the country's trip."""
     by_group = []
     for _, members in groupby(sorted(species, key=lambda s: (s.group_sort, s.tax_ordering)), key=lambda s: s.group_slug):
         by_group.append(list(members))
@@ -112,14 +114,16 @@ def build_units(species: list[ScopeSpecies], first_day: list[str] | None = None)
         seen_slugs[base] = seen_slugs.get(base, 0) + 1
         units.append(_unit(f'{base}-{seen_slugs[base]}' if seen_slugs[base] > 1 or _splits(unit, by_group) else base, unit))
 
-    endemics = [s for s in species if s.endemic]
+    endemics = [] if region else [s for s in species if s.endemic]
     endemic_units = [
         {'slug': f'endemics-{i + 1}', 'species': [s.code for s in chunk]}
         for i, chunk in enumerate(split_evenly(endemics, ENDEMIC_UNIT))
     ]
 
     codes = {s.code for s in species}
-    if first_day:
+    if region:
+        day = []
+    elif first_day:
         day = [c for c in first_day if c in codes]
     else:
         day = [s.code for s in sorted(species, key=lambda s: s.commonness)[:FIRST_DAY_SIZE]]

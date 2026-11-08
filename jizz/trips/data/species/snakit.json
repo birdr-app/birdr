@@ -1,0 +1,22 @@
+{
+  "code": "snakit",
+  "name": {
+    "en": "Snail Kite",
+    "nl": "Slakkenwouw"
+  },
+  "latin": "Rostrhamus sociabilis",
+  "look_for": [
+    {
+      "en": "Thin, strongly hooked **bill** for snails",
+      "nl": "Dunne, sterk gehaakte **snavel** voor slakken"
+    },
+    {
+      "en": "Male slate grey, red **legs** and face",
+      "nl": "Man leigrijs, rode **poten** en gezicht"
+    },
+    {
+      "en": "White base to the **tail**, flies low over marsh",
+      "nl": "Witte basis van de **staart**, vliegt laag boven moeras"
+    }
+  ]
+}

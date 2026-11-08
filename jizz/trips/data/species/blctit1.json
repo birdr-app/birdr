@@ -1,0 +1,22 @@
+{
+  "code": "blctit1",
+  "name": {
+    "en": "Black-crowned Tityra",
+    "nl": "Zwartkruintityra"
+  },
+  "latin": "Tityra inquisitor",
+  "look_for": [
+    {
+      "en": "Pale grey-white with a black **cap**",
+      "nl": "Lichtgrijs-wit met een zwarte **kap**"
+    },
+    {
+      "en": "All-black **bill** and no red face, unlike Masked Tityra",
+      "nl": "Zwarte **snavel**, geen rood gezicht zoals de Maskertityra"
+    },
+    {
+      "en": "Female: chestnut **cheeks** below the black cap",
+      "nl": "Vrouwtje: kastanjebruine **wangen** onder de zwarte kap"
+    }
+  ]
+}

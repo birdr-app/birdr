@@ -1,0 +1,22 @@
+{
+  "code": "batbar1",
+  "name": {
+    "en": "Band-tailed Barbthroat",
+    "nl": "Bandstaartbaardkolibrie"
+  },
+  "latin": "Threnetes ruckeri",
+  "look_for": [
+    {
+      "en": "Curved **bill**, dark throat, cinnamon breast band",
+      "nl": "Gebogen **snavel**, donkere keel, kaneelkleurige borstband"
+    },
+    {
+      "en": "White-based **tail** with a black band, white tips",
+      "nl": "**Staart** met witte basis, zwarte band en witte punten"
+    },
+    {
+      "en": "Visits Heliconia flowers in shady undergrowth",
+      "nl": "Bezoekt heliconiabloemen in schaduwrijke ondergroei"
+    }
+  ]
+}

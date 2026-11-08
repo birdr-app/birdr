@@ -1,0 +1,22 @@
+{
+  "code": "shtnig1",
+  "name": {
+    "en": "Short-tailed Nighthawk",
+    "nl": "Kortstaartnachtzwaluw"
+  },
+  "latin": "Lurocalis semitorquatus",
+  "look_for": [
+    {
+      "en": "Very short **tail**, long pointed wings",
+      "nl": "Heel korte **staart**, lange spitse vleugels"
+    },
+    {
+      "en": "Dark brown, no white patches in **wing** or tail",
+      "nl": "Donkerbruin, geen witte vlekken in **vleugel** of staart"
+    },
+    {
+      "en": "Flits bat-like over the canopy at dusk",
+      "nl": "Fladdert als een vleermuis boven de boomtoppen in de schemering"
+    }
+  ]
+}

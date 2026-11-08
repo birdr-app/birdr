@@ -1,0 +1,22 @@
+{
+  "code": "secfly1",
+  "name": {
+    "en": "Sepia-capped Flycatcher",
+    "nl": "Bruinkopoortiran"
+  },
+  "latin": "Leptopogon amaurocephalus",
+  "look_for": [
+    {
+      "en": "Dark brown **cap** over a grizzled face",
+      "nl": "Donkerbruine **kap** boven een gespikkeld gezicht"
+    },
+    {
+      "en": "Dark crescent on the **ear coverts**",
+      "nl": "Donkere halvemaan op de **oorstreek**"
+    },
+    {
+      "en": "Buff wing bars; lifts one wing at a time",
+      "nl": "Beige vleugelstrepen; tilt steeds één vleugel op"
+    }
+  ]
+}
