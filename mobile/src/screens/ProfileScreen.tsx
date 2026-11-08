@@ -20,6 +20,7 @@ import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
 import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
+import { useGame } from '../context/GameContext';
 import { useTranslation } from '../i18n/TranslationContext';
 import { setSpeciesLanguageIndependent } from '../i18n/speciesLanguagePreference';
 import { getProfile, updateProfile, updateProfileAvatar, getAvatarUrl, deleteAccount, type UserProfile } from '../api/profile';
@@ -45,6 +46,7 @@ export function ProfileScreen() {
   const navigation = useNavigation();
   const { isAuthenticated, isLoading: authLoading, logout } = useAuth();
   const { refreshProfile } = useProfile();
+  const { setPlayerName } = useGame();
   const { visualStyle: contextVisualStyle, setVisualStyle } = useVisualStyle();
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
@@ -234,6 +236,9 @@ export function ProfileScreen() {
       const updated = await getProfile();
       setProfile(updated);
       setUsername(updated.username);
+      // Keep the in-memory player name in step, or the next game would
+      // write the old name back onto the renamed player.
+      if (updated.username?.trim()) setPlayerName(updated.username.trim());
       setLanguage(updated.language || 'en');
       setTimezone(updated.timezone ?? 'Europe/Amsterdam');
       setCountry(

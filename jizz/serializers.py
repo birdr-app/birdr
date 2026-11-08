@@ -911,7 +911,9 @@ class UserProfileUpdateSerializer(serializers.Serializer):
 
     def update(self, instance, validated_data):
         # Update username if provided
+        username_changed = False
         if 'username' in validated_data and validated_data['username']:
+            username_changed = instance.user.username != validated_data['username']
             instance.user.username = validated_data['username']
         
         # Update first_name if provided
@@ -925,6 +927,13 @@ class UserProfileUpdateSerializer(serializers.Serializer):
         # Save user if any user fields were updated
         if 'username' in validated_data or 'first_name' in validated_data or 'last_name' in validated_data:
             instance.user.save()
+
+        # The username is the player name: carry it over to every game, league
+        # and flock row that still shows the old one.
+        if username_changed:
+            from jizz.user_names import sync_player_names
+
+            sync_player_names(instance.user)
         
         # Update avatar if provided
         if 'avatar' in validated_data:

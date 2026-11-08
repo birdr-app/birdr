@@ -81,3 +81,14 @@ def player_name_for_user(user, fallback: str = 'Player') -> str:
     if email:
         return sanitize_player_name(email)
     return fallback
+
+
+def sync_player_names(user, name: str | None = None) -> int:
+    """Rename every Player linked to ``user`` so past games, league rows and
+    leaderboards show the new player name. Returns the number of rows changed."""
+    from jizz.models import Player
+
+    if not user or not getattr(user, 'pk', None):
+        return 0
+    new_name = sanitize_player_name(name if name is not None else user.username)
+    return Player.objects.filter(user=user).exclude(name=new_name).update(name=new_name)

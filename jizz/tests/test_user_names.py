@@ -11,6 +11,7 @@ from jizz.user_names import (
     sanitize_player_name,
     sanitize_username,
     strip_email_local_part,
+    sync_player_names,
     username_from_oauth,
 )
 
@@ -98,3 +99,27 @@ class JourneyPlayerNameEmailStripTests(TestCase):
         )
         journey = BirdrJourney.objects.create(user=user, country=self.country)
         self.assertEqual(journey_player_name(journey), 'bird')
+
+
+class SyncPlayerNamesTests(TestCase):
+    def test_renames_only_the_users_players(self):
+        user = User.objects.create_user(username='New Name', email='n@example.com', password='pass12345')
+        other = User.objects.create_user(username='other', email='o@example.com', password='pass12345')
+        mine = [Player.objects.create(user=user, name='Old'), Player.objects.create(user=user, name='New Name')]
+        theirs = Player.objects.create(user=other, name='other')
+        guest = Player.objects.create(name='Old')
+
+        self.assertEqual(sync_player_names(user), 1)
+        self.assertEqual(set(Player.objects.filter(user=user).values_list('name', flat=True)), {'New Name'})
+        theirs.refresh_from_db()
+        guest.refresh_from_db()
+        self.assertEqual(theirs.name, 'other')
+        self.assertEqual(guest.name, 'Old')
+        self.assertEqual(len(mine), 2)
+
+    def test_strips_email_from_name(self):
+        user = User.objects.create_user(username='someone', email='s@example.com', password='pass12345')
+        player = Player.objects.create(user=user, name='Old')
+        sync_player_names(user, 'someone@example.com')
+        player.refresh_from_db()
+        self.assertEqual(player.name, 'someone')

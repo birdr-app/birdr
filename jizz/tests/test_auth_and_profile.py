@@ -235,6 +235,36 @@ class ProfileViewTestCase(TestCase):
         self.user.refresh_from_db()
         self.assertEqual(self.user.username, 'newname')
 
+    def test_profile_update_username_renames_players(self):
+        from jizz.league import display_name
+        from jizz.models import Player
+
+        game_player = Player.objects.create(user=self.user, name='profileuser')
+        league_player = Player.objects.create(user=self.user, name='Old League Name')
+        other = User.objects.create_user(username='other', email='o@example.com', password='x' * 10)
+        other_player = Player.objects.create(user=other, name='other')
+        guest_player = Player.objects.create(name='profileuser')
+
+        response = self.client.put('/api/profile/', {'username': 'Fresh Name'}, format='json')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        for player in (game_player, league_player, other_player, guest_player):
+            player.refresh_from_db()
+        self.assertEqual(game_player.name, 'Fresh Name')
+        self.assertEqual(league_player.name, 'Fresh Name')
+        self.assertEqual(display_name(self.user, league_player), 'Fresh Name')
+        self.assertEqual(other_player.name, 'other')
+        self.assertEqual(guest_player.name, 'profileuser')
+
+    def test_profile_update_without_username_keeps_player_names(self):
+        from jizz.models import Player
+
+        player = Player.objects.create(user=self.user, name='Custom Game Name')
+        response = self.client.put('/api/profile/', {'language': 'nl'}, format='json')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        player.refresh_from_db()
+        self.assertEqual(player.name, 'Custom Game Name')
+
     def test_profile_update_language_and_country(self):
         response = self.client.put(
             '/api/profile/',
