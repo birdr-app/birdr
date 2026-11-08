@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
 import { useMemo, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { postTripAnswers, updateTripState, type Trip, type TripAnswer, type TripSpecies, type TripUnit } from '../../api/trip';
@@ -6,7 +6,7 @@ import { BirdrArtImage } from '../../components/birdr-art-image';
 import { buildUnitQuiz, focusCodes, makeQuestion, remaining, type TripQuestion } from '../../core/trip-quiz';
 import { Page } from '../../shared/components/layout';
 import { BoldText, Kicker, StepBar } from '../course/parts';
-import { EndemicBadge, TripLoading, TripPhoto, credit } from './parts';
+import { EndemicBadge, TripLoading, TripPhoto, TripThumb, credit } from './parts';
 import { findUnit, useTrip, useTripText, type TripData } from './use-trip';
 
 type Step = { kind: 'intro' } | { kind: 'card'; index: number } | { kind: 'quiz' } | { kind: 'done'; asked: number; wrong: number; saved: boolean | null };
@@ -159,7 +159,7 @@ function Intro({
       {unit.intro ? <Text fontSize="md" lineHeight="1.6" color="primary.800">{unit.intro}</Text> : null}
       <Kicker>{t('trip_unit_birds', '{count} birds', { count: birds.length })}</Kicker>
       <Flex gap={2} wrap="wrap">
-        {birds.map((b) => (b.images[0] ? <Image key={b.code} src={b.images[0].url} alt={b.name} w="64px" h="64px" objectFit="cover" borderRadius="md" /> : null))}
+        {birds.map((b) => (b.images[0] ? <TripThumb key={b.code} media={b.images[0]} alt={b.name} /> : null))}
       </Flex>
       {testOut ? (
         <Box bg="secondary.50" borderRadius="lg" p={3}>

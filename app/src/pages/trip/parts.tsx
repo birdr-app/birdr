@@ -1,6 +1,8 @@
-import { Box, Button, Flex, Image, Spinner, Text } from '@chakra-ui/react';
-import type { ReactNode } from 'react';
+import { Box, Button, Dialog, Flex, Image, Portal, Spinner, Text } from '@chakra-ui/react';
+import { useState, type ReactNode } from 'react';
+import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 import type { TripMedia } from '../../api/trip';
+import { playFullSrc } from '../../utils/play-image-url';
 import { Page } from '../../shared/components/layout';
 import { useTripText } from './use-trip';
 
@@ -10,16 +12,98 @@ export function credit(media: TripMedia | undefined, photoLabel: string): string
   return [who && `${photoLabel}: ${who}`, media.license].filter(Boolean).join(' · ');
 }
 
-export function TripPhoto({ media, ratio = 4 / 3, label }: { media: TripMedia; ratio?: number; label?: string }) {
+/** Full-screen photo with pinch, scroll-wheel zoom and drag; double-click resets. */
+function ZoomDialog({ media, alt, open, onClose }: { media: TripMedia; alt: string; open: boolean; onClose: () => void }) {
+  const t = useTripText();
   return (
-    <Box position="relative" borderRadius="xl" overflow="hidden" bg="primary.100" aspectRatio={ratio} w="full">
-      <Image src={media.url} alt="" w="full" h="full" objectFit="cover" />
-      {label ? (
-        <Text position="absolute" left={2} bottom={2} bg="white" borderRadius="full" px={3} py={1} fontSize="sm" fontWeight="700" color="primary.800">
-          {label}
-        </Text>
-      ) : null}
-    </Box>
+    <Dialog.Root open={open} onOpenChange={(e: { open: boolean }) => !e.open && onClose()} size="full">
+      <Portal>
+        <Dialog.Backdrop bg="blackAlpha.900" />
+        <Dialog.Positioner display="flex" alignItems="center" justifyContent="center" p={0}>
+          <Dialog.Content maxW="100vw" maxH="100vh" w="100vw" h="100vh" m={0} rounded="none" bg="transparent" borderWidth={0} shadow="none" display="flex" flexDirection="column">
+            <Dialog.Header flexShrink={0} borderBottomWidth={0} py={3} px={4}>
+              <Flex justify="flex-end" align="center" gap={3} w="100%">
+                <Button size="sm" variant="outline" colorPalette="gray" borderColor="whiteAlpha.500" color="white" onClick={onClose}>
+                  {t('close', 'Close')}
+                </Button>
+                <Dialog.CloseTrigger color="white" />
+              </Flex>
+            </Dialog.Header>
+            <Dialog.Body flex="1" p={0} overflow="hidden" display="flex" alignItems="center" justifyContent="center">
+              <Box w="100%" h="100%" px={2} pb={4}>
+                <TransformWrapper initialScale={1} minScale={1} maxScale={5} centerOnInit doubleClick={{ mode: 'reset' }}>
+                  <TransformComponent
+                    wrapperStyle={{ width: '100%', height: '100%', maxHeight: 'calc(100vh - 5rem)' }}
+                    contentStyle={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                  >
+                    {open ? <img src={playFullSrc(media.url)} alt={alt} style={{ maxWidth: '100%', maxHeight: 'calc(100vh - 5rem)', objectFit: 'contain' }} /> : null}
+                  </TransformComponent>
+                </TransformWrapper>
+              </Box>
+            </Dialog.Body>
+          </Dialog.Content>
+        </Dialog.Positioner>
+      </Portal>
+    </Dialog.Root>
+  );
+}
+
+/** A rounded, cropped photo. Click it to see the whole photo, zoomable. */
+export function TripPhoto({ media, ratio = 4 / 3, label, alt = '' }: { media: TripMedia; ratio?: number; label?: string; alt?: string }) {
+  const t = useTripText();
+  const [open, setOpen] = useState(false);
+  const title = t('tap_image_fullscreen', 'Click to open full screen. Pinch or scroll wheel to zoom');
+  return (
+    <>
+      <Box
+        position="relative"
+        borderRadius="xl"
+        overflow="hidden"
+        bg="primary.100"
+        aspectRatio={ratio}
+        w="full"
+        cursor="zoom-in"
+        role="button"
+        tabIndex={0}
+        title={title}
+        aria-label={alt || title}
+        onClick={() => setOpen(true)}
+        onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setOpen(true)}
+      >
+        <Image src={media.url} alt={alt} w="full" h="full" objectFit="cover" />
+        {label ? (
+          <Text position="absolute" left={2} bottom={2} bg="white" borderRadius="full" px={3} py={1} fontSize="sm" fontWeight="700" color="primary.800">
+            {label}
+          </Text>
+        ) : null}
+      </Box>
+      <ZoomDialog media={media} alt={alt} open={open} onClose={() => setOpen(false)} />
+    </>
+  );
+}
+
+/** A small square photo, for rows of birds. Click it to see the whole photo. */
+export function TripThumb({ media, alt, size = '64px' }: { media: TripMedia; alt: string; size?: string }) {
+  const t = useTripText();
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <Image
+        src={media.url}
+        alt={alt}
+        w={size}
+        h={size}
+        objectFit="cover"
+        borderRadius="md"
+        cursor="zoom-in"
+        role="button"
+        tabIndex={0}
+        title={t('tap_image_fullscreen', 'Click to open full screen. Pinch or scroll wheel to zoom')}
+        onClick={() => setOpen(true)}
+        onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setOpen(true)}
+      />
+      <ZoomDialog media={media} alt={alt} open={open} onClose={() => setOpen(false)} />
+    </>
   );
 }
 

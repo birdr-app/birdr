@@ -1,10 +1,11 @@
-import React, { type ReactNode } from 'react';
+import React, { useState, type ReactNode } from 'react';
 import { ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import type { TripMedia } from '../api/trip';
 import { useTranslation } from '../i18n/TranslationContext';
 import { colors } from '../theme';
 import { ProgressRing } from './ProgressRing';
 import { playFullSrc, playPreviewSrc } from '../utils/playImageUrl';
+import { FullScreenImageViewerModal } from './FullScreenImageViewerModal';
 
 /** Shared look of the trip screens, close to the course screens. */
 export const tripStyles = StyleSheet.create({
@@ -47,17 +48,49 @@ export const tripStyles = StyleSheet.create({
   credit: { fontSize: 11, color: colors.primary[700], marginTop: -6 },
 });
 
-/** A rounded photo, optionally with a label on it. */
-export function TripPhoto({ media, ratio = 4 / 3, label }: { media: TripMedia; ratio?: number; label?: string }) {
+/** A rounded photo, optionally with a label on it. Tap it to see the whole photo, zoomable. */
+export function TripPhoto({ media, ratio = 4 / 3, label, alt }: { media: TripMedia; ratio?: number; label?: string; alt?: string }) {
+  const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
   return (
-    <View style={[styles.photoFrame, { aspectRatio: ratio }]}>
-      <Image source={{ uri: ratio === 1 ? playPreviewSrc(media.url) : playFullSrc(media.url) }} style={styles.photo} resizeMode="cover" accessibilityIgnoresInvertColors />
-      {label ? (
-        <View style={styles.photoLabel}>
-          <Text style={styles.photoLabelText}>{label}</Text>
-        </View>
-      ) : null}
-    </View>
+    <>
+      <TouchableOpacity
+        activeOpacity={0.85}
+        onPress={() => setOpen(true)}
+        accessibilityRole="imagebutton"
+        accessibilityLabel={alt || t('expand_image_fullscreen_label')}
+        accessibilityHint={t('expand_image_fullscreen_hint')}
+        style={[styles.photoFrame, { aspectRatio: ratio }]}
+      >
+        <Image source={{ uri: ratio === 1 ? playPreviewSrc(media.url) : playFullSrc(media.url) }} style={styles.photo} resizeMode="cover" accessibilityIgnoresInvertColors />
+        {label ? (
+          <View style={styles.photoLabel}>
+            <Text style={styles.photoLabelText}>{label}</Text>
+          </View>
+        ) : null}
+      </TouchableOpacity>
+      <FullScreenImageViewerModal visible={open} imageUri={playFullSrc(media.url)} onClose={() => setOpen(false)} closeLabel={t('close')} />
+    </>
+  );
+}
+
+/** A small square photo, for rows of birds. Tap it to see the whole photo. */
+export function TripThumb({ media, alt, size = 64 }: { media: TripMedia; alt: string; size?: number }) {
+  const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <TouchableOpacity
+        activeOpacity={0.85}
+        onPress={() => setOpen(true)}
+        accessibilityRole="imagebutton"
+        accessibilityLabel={alt}
+        accessibilityHint={t('expand_image_fullscreen_hint')}
+      >
+        <Image source={{ uri: playPreviewSrc(media.url) }} style={{ width: size, height: size, borderRadius: 8 }} accessibilityIgnoresInvertColors />
+      </TouchableOpacity>
+      <FullScreenImageViewerModal visible={open} imageUri={playFullSrc(media.url)} onClose={() => setOpen(false)} closeLabel={t('close')} />
+    </>
   );
 }
 

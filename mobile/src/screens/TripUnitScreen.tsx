@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation, useRoute, type RouteProp } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { postTripAnswers, updateTripState, type Trip, type TripAnswer, type TripSpecies, type TripUnit } from '../api/trip';
 import { BoldText, StepBar } from '../components/CourseParts';
 import { GameArtImage } from '../components/GameArtImage';
-import { EndemicBadge, Kicker, TripLoading, TripPhoto, tripStyles } from '../components/TripParts';
+import { EndemicBadge, Kicker, TripLoading, TripPhoto, TripThumb, tripStyles } from '../components/TripParts';
 import { getMoodImage } from '../constants/birdrMoodImages';
 import { useVisualStyle } from '../context/VisualStyleContext';
 import { useTrip, type TripData } from '../hooks/useTrip';
@@ -22,7 +22,6 @@ import {
   type TripQuestion,
 } from '../lib/tripQuiz';
 import { colors } from '../theme';
-import { playPreviewSrc } from '../utils/playImageUrl';
 import type { TripRoutes } from './TripHomeScreen';
 
 type Step =
@@ -157,7 +156,7 @@ function Intro({
       <Kicker>{t('trip_unit_birds', { count: birds.length })}</Kicker>
       <View style={styles.thumbs}>
         {birds.map((b) =>
-          b.images[0] ? <Image key={b.code} source={{ uri: playPreviewSrc(b.images[0].url) }} style={styles.thumb} accessibilityLabel={b.name} /> : null
+          b.images[0] ? <TripThumb key={b.code} media={b.images[0]} alt={b.name} /> : null
         )}
       </View>
       {testOut ? (
@@ -375,7 +374,6 @@ function Quiz({
 
 const styles = StyleSheet.create({
   thumbs: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
-  thumb: { width: 64, height: 64, borderRadius: 8 },
   nameRow: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: 8 },
   name: { fontSize: 24, fontWeight: '700', color: colors.primary[800] },
   latin: { fontSize: 15, fontStyle: 'italic', color: colors.primary[700], marginTop: 2 },
