@@ -1,0 +1,22 @@
+{
+  "code": "rutjac1",
+  "name": {
+    "en": "Rufous-tailed Jacamar",
+    "nl": "Roodstaartglansvogel"
+  },
+  "latin": "Galbula ruficauda",
+  "look_for": [
+    {
+      "en": "Glittering green, long needle-like **bill**",
+      "nl": "Glanzend groen, lange naaldvormige **snavel**"
+    },
+    {
+      "en": "Rufous **belly** and rufous under the **tail**",
+      "nl": "Roodbruine **buik** en roodbruin onder de **staart**"
+    },
+    {
+      "en": "Male white **throat**, female buff **throat**",
+      "nl": "Mannetje witte **keel**, vrouwtje geelbruine **keel**"
+    }
+  ]
+}

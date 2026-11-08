@@ -1,0 +1,22 @@
+{
+  "code": "roahaw",
+  "name": {
+    "en": "Roadside Hawk",
+    "nl": "Wegbuizerd"
+  },
+  "latin": "Rupornis magnirostris",
+  "look_for": [
+    {
+      "en": "Grey **head** and **breast**, pale eye",
+      "nl": "Grijze **kop** en **borst**, licht oog"
+    },
+    {
+      "en": "**Belly** barred brown and white",
+      "nl": "**Buik** bruin-wit gebandeerd"
+    },
+    {
+      "en": "Rufous patch in the **wings** in flight",
+      "nl": "Roestbruine vlek in de **vleugels** in vlucht"
+    }
+  ]
+}

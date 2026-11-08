@@ -1,0 +1,22 @@
+{
+  "code": "rebpig1",
+  "name": {
+    "en": "Red-billed Pigeon",
+    "nl": "Roodsnavelduif"
+  },
+  "latin": "Patagioenas flavirostris",
+  "look_for": [
+    {
+      "en": "Pale **bill** with a red base",
+      "nl": "Lichte **snavel** met een rode basis"
+    },
+    {
+      "en": "Dark wine-red **head** and **breast**",
+      "nl": "Donker wijnrode **kop** en **borst**"
+    },
+    {
+      "en": "Grey **belly** and **tail**; often in dry, open country",
+      "nl": "Grijze **buik** en **staart**; vaak in droog, open land"
+    }
+  ]
+}

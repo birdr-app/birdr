@@ -1,0 +1,22 @@
+{
+  "code": "snoegr",
+  "name": {
+    "en": "Snowy Egret",
+    "nl": "Amerikaanse kleine zilverreiger"
+  },
+  "latin": "Egretta thula",
+  "look_for": [
+    {
+      "en": "Small white heron, black **bill**",
+      "nl": "Kleine witte reiger met een zwarte **snavel**"
+    },
+    {
+      "en": "Black legs with bright yellow **feet**",
+      "nl": "Zwarte poten met felgele **voeten**"
+    },
+    {
+      "en": "Yellow bare skin between **bill** and eye",
+      "nl": "Gele naakte huid tussen **snavel** en oog"
+    }
+  ]
+}

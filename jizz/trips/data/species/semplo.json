@@ -1,0 +1,22 @@
+{
+  "code": "semplo",
+  "name": {
+    "en": "Semipalmated Plover",
+    "nl": "Amerikaanse bontbekplevier"
+  },
+  "latin": "Charadrius semipalmatus",
+  "look_for": [
+    {
+      "en": "Like Ringed Plover, with a stubbier **bill**",
+      "nl": "Als de bontbekplevier, met een kortere **snavel**"
+    },
+    {
+      "en": "Single dark **breast** band, often narrow",
+      "nl": "Eén donkere **borstband**, vaak smal"
+    },
+    {
+      "en": "Hardly any white **eyebrow**; orange-yellow **legs**",
+      "nl": "Nauwelijks witte **wenkbrauwstreep**; oranjegele **poten**"
+    }
+  ]
+}

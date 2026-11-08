@@ -1,0 +1,22 @@
+{
+  "code": "purgal2",
+  "name": {
+    "en": "Purple Gallinule",
+    "nl": "Amerikaans purperhoen"
+  },
+  "latin": "Porphyrio martinica",
+  "look_for": [
+    {
+      "en": "Glossy purple-blue body, green **back**",
+      "nl": "Glanzend paarsblauw lijf, groene **rug**"
+    },
+    {
+      "en": "Red **bill** with yellow tip, pale blue **frontal shield**",
+      "nl": "Rode **snavel** met gele punt, lichtblauw **voorhoofdsschild**"
+    },
+    {
+      "en": "Bright yellow **legs**; walks on lily pads",
+      "nl": "Felgele **poten**; loopt over waterlelies"
+    }
+  ]
+}

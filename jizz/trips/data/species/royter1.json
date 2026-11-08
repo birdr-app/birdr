@@ -1,0 +1,22 @@
+{
+  "code": "royter1",
+  "name": {
+    "en": "Royal Tern",
+    "nl": "Amerikaanse koningsstern"
+  },
+  "latin": "Thalasseus maximus",
+  "look_for": [
+    {
+      "en": "Large tern with a thick orange **bill**",
+      "nl": "Grote stern met een dikke oranje **snavel**"
+    },
+    {
+      "en": "White **forehead**, shaggy black **crest** most of the year",
+      "nl": "Wit **voorhoofd** en ruige zwarte **kuif**, bijna het hele jaar"
+    },
+    {
+      "en": "Black **legs**; much bigger than Sandwich Tern",
+      "nl": "Zwarte **poten**; een stuk forser dan de grote stern"
+    }
+  ]
+}

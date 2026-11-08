@@ -1,0 +1,22 @@
+{
+  "code": "gycwor1",
+  "name": {
+    "en": "Grey-cowled Wood-Rail",
+    "nl": "Cayennebosral"
+  },
+  "latin": "Aramides cajaneus",
+  "look_for": [
+    {
+      "en": "Grey **head** and neck, chestnut **breast**",
+      "nl": "Grijze **kop** en hals, kastanjebruine **borst**"
+    },
+    {
+      "en": "Black rear end and **tail**",
+      "nl": "Zwart achterlijf en zwarte **staart**"
+    },
+    {
+      "en": "Yellow-green **bill**, red **eyes** and **legs**",
+      "nl": "Geelgroene **snavel**, rode **ogen** en **poten**"
+    }
+  ]
+}

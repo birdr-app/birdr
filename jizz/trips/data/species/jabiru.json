@@ -1,0 +1,22 @@
+{
+  "code": "jabiru",
+  "name": {
+    "en": "Jabiru",
+    "nl": "Jabiroe"
+  },
+  "latin": "Jabiru mycteria",
+  "look_for": [
+    {
+      "en": "Huge white stork with a bare black **head**",
+      "nl": "Enorme witte ooievaar met een kale zwarte **kop**"
+    },
+    {
+      "en": "Red band at the base of the **neck**",
+      "nl": "Rode band onderaan de **hals**"
+    },
+    {
+      "en": "Massive black, slightly upturned **bill**",
+      "nl": "Zware zwarte, iets opgewipte **snavel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "placha",
+  "name": {
+    "en": "Plain Chachalaca",
+    "nl": "Bruine chachalaca"
+  },
+  "latin": "Ortalis vetula",
+  "look_for": [
+    {
+      "en": "Slim and olive-brown, with a long **tail**",
+      "nl": "Slank en olijfbruin, met een lange **staart**"
+    },
+    {
+      "en": "Greyish **head**, small bare pinkish **throat** patch",
+      "nl": "Grijzige **kop**, klein kaal roze plekje op de **keel**"
+    },
+    {
+      "en": "Pale tips to the dark **tail**; noisy at dawn",
+      "nl": "Lichte punten aan de donkere **staart**; luidruchtig bij zonsopkomst"
+    }
+  ]
+}

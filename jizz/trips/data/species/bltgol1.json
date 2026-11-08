@@ -1,0 +1,22 @@
+{
+  "code": "bltgol1",
+  "name": {
+    "en": "Blue-throated Goldentail",
+    "nl": "Goudstaartsaffierkolibrie"
+  },
+  "latin": "Chlorestes eliciae",
+  "look_for": [
+    {
+      "en": "Coral-red **bill** with a black tip",
+      "nl": "Koraalrode **snavel** met een zwarte punt"
+    },
+    {
+      "en": "Male: violet-blue **throat**",
+      "nl": "Mannetje: violetblauwe **keel**"
+    },
+    {
+      "en": "Golden-bronze **tail**, buff **belly**",
+      "nl": "Goudbronzen **staart**, geelbruine **buik**"
+    }
+  ]
+}

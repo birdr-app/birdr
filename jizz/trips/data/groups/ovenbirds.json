@@ -1,0 +1,18 @@
+{
+  "slug": "ovenbirds",
+  "about": {
+    "en": "A huge family of mostly plain brown and rufous birds, from spinetails and foliage-gleaners in forest to cinclodes on rocky slopes high in mountains. Many search leaves, moss and bark for insects, often in mixed flocks. Some build large nests of sticks; the horneros, which gave the family its name, build domed nests of mud.",
+    "nl": "Een enorme familie van vooral effen bruine en roestbruine vogels, van stekelstaarten en boomlopers in het bos tot cinclodes op rotsige hellingen hoog in de bergen. Veel zoeken in bladeren, mos en schors naar insecten, vaak in gemengde groepen. Sommige bouwen grote nesten van takjes; de echte ovenvogels, waar de familie haar naam aan dankt, bouwen ronde nesten van modder."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "wood-warblers"
+      ],
+      "text": {
+        "en": "The bird called Ovenbird is a wood-warbler and does not belong in this group. It got the name from its domed nest on the forest floor.",
+        "nl": "De vogel die Ovenvogel heet, is een Amerikaanse zanger en hoort niet bij deze groep. Hij dankt de naam aan zijn overdekte nest op de bosbodem."
+      }
+    }
+  ]
+}

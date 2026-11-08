@@ -1,0 +1,22 @@
+{
+  "code": "magfri",
+  "name": {
+    "en": "Magnificent Frigatebird",
+    "nl": "Amerikaanse fregatvogel"
+  },
+  "latin": "Fregata magnificens",
+  "look_for": [
+    {
+      "en": "Huge black seabird with long, angled **wings**",
+      "nl": "Enorme zwarte zeevogel met lange, geknikte **vleugels**"
+    },
+    {
+      "en": "Deeply forked **tail**, often folded to a point",
+      "nl": "Diep gevorkte **staart**, vaak gesloten tot een punt"
+    },
+    {
+      "en": "Male: red **throat** pouch; female: white **breast**",
+      "nl": "Mannetje: rode **keelzak**; vrouwtje: witte **borst**"
+    }
+  ]
+}

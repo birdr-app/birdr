@@ -1,0 +1,22 @@
+{
+  "code": "amered",
+  "name": {
+    "en": "American Redstart",
+    "nl": "Amerikaanse roodstaart"
+  },
+  "latin": "Setophaga ruticilla",
+  "look_for": [
+    {
+      "en": "Male black with bright orange patches",
+      "nl": "Mannetje zwart met feloranje vlekken"
+    },
+    {
+      "en": "Orange on **wings**, sides and tail",
+      "nl": "Oranje op **vleugels**, flanken en staart"
+    },
+    {
+      "en": "Female grey with yellow patches; fans its **tail**",
+      "nl": "Vrouwtje grijs met gele vlekken; spreidt de **staart**"
+    }
+  ]
+}

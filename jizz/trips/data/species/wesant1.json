@@ -1,0 +1,22 @@
+{
+  "code": "wesant1",
+  "name": {
+    "en": "Black-crowned Antshrike",
+    "nl": "Westelijke gevlekte mierklauwier"
+  },
+  "latin": "Thamnophilus atrinucha",
+  "look_for": [
+    {
+      "en": "Male grey with a black **crown**",
+      "nl": "Mannetje grijs met een zwarte **kruin**"
+    },
+    {
+      "en": "Rows of white dots on the **wings**",
+      "nl": "Rijen witte stippen op de **vleugels**"
+    },
+    {
+      "en": "Female olive-brown with a rufous **cap**",
+      "nl": "Vrouwtje olijfbruin met een roodbruine **kap**"
+    }
+  ]
+}

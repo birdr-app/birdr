@@ -1,0 +1,22 @@
+{
+  "code": "pregrs2",
+  "name": {
+    "en": "Cabanis's Ground-Sparrow",
+    "nl": "Costaricaanse grondgors"
+  },
+  "latin": "Melozone cabanisi",
+  "look_for": [
+    {
+      "en": "Chestnut **crown** and cheeks, black forehead",
+      "nl": "Kastanjebruine **kruin** en wangen, zwart voorhoofd"
+    },
+    {
+      "en": "White **throat** and white spot before the eye",
+      "nl": "Witte **keel** en een witte vlek voor het oog"
+    },
+    {
+      "en": "Black spot in the middle of the white **breast**",
+      "nl": "Zwarte vlek midden op de witte **borst**"
+    }
+  ]
+}

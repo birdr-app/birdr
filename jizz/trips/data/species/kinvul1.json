@@ -1,0 +1,22 @@
+{
+  "code": "kinvul1",
+  "name": {
+    "en": "King Vulture",
+    "nl": "Koningsgier"
+  },
+  "latin": "Sarcoramphus papa",
+  "look_for": [
+    {
+      "en": "Creamy white body, black **flight feathers**",
+      "nl": "Roomwit lijf, zwarte **slagpennen**"
+    },
+    {
+      "en": "Bare **head** in orange, red and purple",
+      "nl": "Kale **kop** in oranje, rood en paars"
+    },
+    {
+      "en": "Fleshy orange knob on the **bill**",
+      "nl": "Vlezige oranje knobbel op de **snavel**"
+    }
+  ]
+}

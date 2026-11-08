@@ -1,0 +1,19 @@
+{
+  "slug": "tanagers-and-allies",
+  "about": {
+    "en": "One of the largest and most varied bird families. Many are small, brilliantly coloured fruit-eaters of the canopy that travel in mixed flocks; honeycreepers and dacnises are blue, purple or green nectar and fruit eaters. The group also holds finch-like seedeaters and grassquits, heavy-billed saltators, flowerpiercers and the Bananaquit.",
+    "nl": "Een van de grootste en meest gevarieerde vogelfamilies. Veel soorten zijn kleine, schitterend gekleurde vruchteneters van de boomkruinen die in gemengde groepen rondtrekken; suikervogels en pitpits zijn blauw, purper of groen en eten nectar en vruchten. Ook vinkachtige dikbekjes en cubavinken, saltators met een zware snavel, berghoningkruipers en het suikerdiefje horen bij deze groep."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "finches-euphonias-and-allies",
+        "old-world-buntings"
+      ],
+      "text": {
+        "en": "Seedeaters and grassquits look like small finches or buntings, but they are tanagers. So are the famous Darwin's finches.",
+        "nl": "Dikbekjes en cubavinken lijken op kleine vinken of gorzen, maar het zijn tangaren. Dat geldt ook voor de beroemde darwinvinken."
+      }
+    }
+  ]
+}

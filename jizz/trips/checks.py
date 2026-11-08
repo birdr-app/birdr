@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from collections import Counter
 
-from jizz.trips.content import DATA_DIR, LANGUAGES, country_dir, read_json
+from jizz.trips.content import DATA_DIR, LANGUAGES, country_dir, home_codes, load_scope, lookalike_path, read_json
 from jizz.trips.units import MAX_UNIT
 
 MIN_PHOTOS = 6
@@ -110,6 +110,24 @@ def check_files(country: str) -> tuple[list[str], list[str]]:
             if not _has_text(endemic_texts.get('units', {}).get(unit['slug'], {}).get('title')):
                 errors.append(f'texts: endemics unit {unit["slug"]} has no title')
 
+    # Lookalike pairs: a local bird and a bird from home, with lines that tell them apart.
+    scope = load_scope(country)
+    seen_pairs = set()
+    for pair in scope['lookalikes']:
+        here, home = pair.get('here'), pair.get('home')
+        if not here or not home or here == home:
+            errors.append(f'lookalikes: bad pair {pair}')
+            continue
+        if (here, home) in seen_pairs:
+            errors.append(f'lookalikes: {here}/{home} is listed twice')
+        seen_pairs.add((here, home))
+        if here not in all_codes:
+            errors.append(f'lookalikes: {here} is not in scope')
+        shared = read_json(lookalike_path(here, home))
+        lines = (shared or {}).get('tell') or []
+        if not 2 <= len(lines) <= 3 or not all(_has_text(line) for line in lines):
+            errors.append(f'lookalikes: {here}__{home}.json needs two or three tell lines in {"/".join(LANGUAGES)}')
+
     media = read_json(folder / 'media.json')
     if not media:
         warnings.append('no media.json yet (card and quiz photos per species)')
@@ -121,4 +139,8 @@ def check_files(country: str) -> tuple[list[str], list[str]]:
                 errors.append(f'media: {code} has no card photos')
             elif len(entry['card']) + len(entry.get('quiz', [])) < MIN_PHOTOS:
                 warnings.append(f'media: {code} has {len(entry["card"]) + len(entry.get("quiz", []))} approved photos')
+        home_photos = media.get('home', {})
+        for code in home_codes(scope, all_codes):
+            if not home_photos.get(code, {}).get('card'):
+                errors.append(f'media: lookalike home bird {code} has no card photos (trip_prep_media --home-only)')
     return errors, warnings

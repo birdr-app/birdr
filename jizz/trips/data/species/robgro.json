@@ -1,0 +1,22 @@
+{
+  "code": "robgro",
+  "name": {
+    "en": "Rose-breasted Grosbeak",
+    "nl": "Roodborstkardinaal"
+  },
+  "latin": "Pheucticus ludovicianus",
+  "look_for": [
+    {
+      "en": "Male: black **head** and back",
+      "nl": "Mannetje: zwarte **kop** en rug"
+    },
+    {
+      "en": "Rose-red triangle on a white **breast**",
+      "nl": "Rozerode driehoek op een witte **borst**"
+    },
+    {
+      "en": "Huge pale **bill**; white wing patches",
+      "nl": "Enorme lichte **snavel**; witte vlekken op de vleugel"
+    }
+  ]
+}

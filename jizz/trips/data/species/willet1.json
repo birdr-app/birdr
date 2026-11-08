@@ -1,0 +1,22 @@
+{
+  "code": "willet1",
+  "name": {
+    "en": "Willet",
+    "nl": "Willet"
+  },
+  "latin": "Tringa semipalmata",
+  "look_for": [
+    {
+      "en": "Large, plain grey-brown wader",
+      "nl": "Grote, effen grijsbruine steltloper"
+    },
+    {
+      "en": "Thick, straight **bill**, grey **legs**",
+      "nl": "Dikke, rechte **snavel**, grijze **poten**"
+    },
+    {
+      "en": "Bold black-and-white **wing** pattern in flight",
+      "nl": "Opvallend zwart-wit **vleugelpatroon** in de vlucht"
+    }
+  ]
+}

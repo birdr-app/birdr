@@ -1,0 +1,22 @@
+{
+  "code": "ducfly",
+  "name": {
+    "en": "Dusky-capped Flycatcher",
+    "nl": "Monnikskaptiran"
+  },
+  "latin": "Myiarchus tuberculifer",
+  "look_for": [
+    {
+      "en": "Small flycatcher with a dark brown **cap**",
+      "nl": "Kleine tiran met een donkerbruine **kap**"
+    },
+    {
+      "en": "Grey **throat** and **breast**, yellow **belly**",
+      "nl": "Grijze **keel** en **borst**, gele **buik**"
+    },
+    {
+      "en": "Mournful, falling whistle",
+      "nl": "Weemoedig, dalend fluitje"
+    }
+  ]
+}

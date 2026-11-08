@@ -1,0 +1,22 @@
+{
+  "code": "whcman1",
+  "name": {
+    "en": "White-collared Manakin",
+    "nl": "Witkraagmanakin"
+  },
+  "latin": "Manacus candei",
+  "look_for": [
+    {
+      "en": "Black **cap**, white **throat** and collar",
+      "nl": "Zwarte **kap**, witte **keel** en kraag"
+    },
+    {
+      "en": "Yellow **belly**, olive-green **rump**",
+      "nl": "Gele **buik**, olijfgroene **stuit**"
+    },
+    {
+      "en": "Loud wing snaps from the forest floor",
+      "nl": "Luid vleugelgeknap vanaf de bosbodem"
+    }
+  ]
+}

@@ -209,7 +209,7 @@ class LeagueTestCase(TestCase):
         data = self.client.get('/api/league/NL/').data
         self.assertTrue(data['today']['played'])
         self.assertEqual(data['week']['my_rank'], 2)
-        self.assertEqual([r['name'] for r in data['week']['top']], ['Bob', 'Alice'])
+        self.assertEqual([r['name'] for r in data['week']['top']], ['bob', 'alice'])
         self.assertTrue(data['week']['top'][1]['is_me'])
         self.assertEqual(len(data['week']['days']), 7)
 
@@ -298,7 +298,7 @@ class LeagueTestCase(TestCase):
         self.assertEqual(league.caps_for(self.alice, self.country), {'week_champion': 1, 'daily_wins': 1})
         self.assertEqual(league.caps_for(self.bob, self.country), {'week_champion': 0, 'daily_wins': 1})
         board = self.client.get('/api/league/NL/leaderboard/?period=caps').data['rows']
-        self.assertEqual(board[0]['name'], 'Alice')
+        self.assertEqual(board[0]['name'], 'alice')
         # Running again changes nothing.
         league.tick(at=datetime(2026, 10, 19, 6, 15, tzinfo=dt_timezone.utc))
         self.assertEqual(LeagueWeekResult.objects.filter(country=self.country, week_start=week).count(), 2)

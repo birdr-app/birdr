@@ -1,0 +1,22 @@
+{
+  "code": "pirfly1",
+  "name": {
+    "en": "Piratic Flycatcher",
+    "nl": "Piraattiran"
+  },
+  "latin": "Legatus leucophaius",
+  "look_for": [
+    {
+      "en": "Short, stubby black **bill**",
+      "nl": "Korte, stompe zwarte **snavel**"
+    },
+    {
+      "en": "Dark **mask**, white **eyebrow** and **moustache**",
+      "nl": "Donker **masker**, witte **wenkbrauwstreep** en **baardstreep**"
+    },
+    {
+      "en": "Blurry streaks on **breast**, plain brown **tail**",
+      "nl": "Vage strepen op de **borst**, effen bruine **staart**"
+    }
+  ]
+}

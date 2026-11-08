@@ -1,0 +1,22 @@
+{
+  "code": "shthaw",
+  "name": {
+    "en": "Short-tailed Hawk",
+    "nl": "Kortstaartbuizerd"
+  },
+  "latin": "Buteo brachyurus",
+  "look_for": [
+    {
+      "en": "Small hawk, light or dark morph",
+      "nl": "Kleine buizerd, lichte of donkere vorm"
+    },
+    {
+      "en": "Light morph: white below, dark **cheeks** and back",
+      "nl": "Lichte vorm: wit van onder, donkere **wangen** en rug"
+    },
+    {
+      "en": "Soars high, then stoops on birds in the canopy",
+      "nl": "Cirkelt hoog en duikt op vogels in de boomkruinen"
+    }
+  ]
+}

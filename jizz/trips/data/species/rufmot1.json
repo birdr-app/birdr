@@ -1,0 +1,22 @@
+{
+  "code": "rufmot1",
+  "name": {
+    "en": "Rufous Motmot",
+    "nl": "Rosse motmot"
+  },
+  "latin": "Baryphthengus martii",
+  "look_for": [
+    {
+      "en": "Big motmot, rufous from **head** to **belly**",
+      "nl": "Grote motmot, roodbruin van **kop** tot **buik**"
+    },
+    {
+      "en": "Black **mask** and small black **breast** spot",
+      "nl": "Zwart **masker** en klein zwart **borstvlekje**"
+    },
+    {
+      "en": "Green **wings** and long racket-tipped **tail**",
+      "nl": "Groene **vleugels** en lange **staart** met spatels"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "pavpig2",
+  "name": {
+    "en": "Pale-vented Pigeon",
+    "nl": "Rosse duif"
+  },
+  "latin": "Patagioenas cayennensis",
+  "look_for": [
+    {
+      "en": "Purplish-red **head** and **breast**",
+      "nl": "Paarsrode **kop** en **borst**"
+    },
+    {
+      "en": "Whitish **belly** and **undertail**",
+      "nl": "Witachtige **buik** en **onderstaart**"
+    },
+    {
+      "en": "Dark **bill**; perches high in open country",
+      "nl": "Donkere **snavel**; zit graag hoog in open land"
+    }
+  ]
+}

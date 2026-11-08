@@ -1,0 +1,22 @@
+{
+  "code": "btnwar",
+  "name": {
+    "en": "Black-throated Green Warbler",
+    "nl": "Gele zwartkeelzanger"
+  },
+  "latin": "Setophaga virens",
+  "look_for": [
+    {
+      "en": "Bright yellow **face** around an olive cheek",
+      "nl": "Felgeel **gezicht** rond een olijfgroene wang"
+    },
+    {
+      "en": "Male: black **throat** and black-streaked sides",
+      "nl": "Mannetje: zwarte **keel** en zwart gestreepte flanken"
+    },
+    {
+      "en": "Olive back, two white **wing** bars",
+      "nl": "Olijfgroene rug, twee witte **vleugelstrepen**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "gobchl1",
+  "name": {
+    "en": "Golden-browed Chlorophonia",
+    "nl": "Goudbrauworganist"
+  },
+  "latin": "Chlorophonia callophrys",
+  "look_for": [
+    {
+      "en": "Bright green with a blue **crown** and **nape**",
+      "nl": "Felgroen met een blauwe **kruin** en **nek**"
+    },
+    {
+      "en": "Male has a golden-yellow **eyebrow**",
+      "nl": "Mannetje met een goudgele **wenkbrauwstreep**"
+    },
+    {
+      "en": "Yellow **belly** below a green **breast**",
+      "nl": "Gele **buik** onder een groene **borst**"
+    }
+  ]
+}

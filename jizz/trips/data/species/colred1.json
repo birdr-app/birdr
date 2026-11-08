@@ -1,0 +1,22 @@
+{
+  "code": "colred1",
+  "name": {
+    "en": "Collared Redstart",
+    "nl": "Halsbandzanger"
+  },
+  "latin": "Myioborus torquatus",
+  "look_for": [
+    {
+      "en": "Bright yellow **face** and underparts",
+      "nl": "Felgeel **gezicht** en onderkant"
+    },
+    {
+      "en": "Rufous **crown**; grey band across the breast",
+      "nl": "Roestbruine **kruin**; grijze band over de borst"
+    },
+    {
+      "en": "Tame; fans its white-edged **tail**",
+      "nl": "Tam; spreidt de wit gerande **staart**"
+    }
+  ]
+}

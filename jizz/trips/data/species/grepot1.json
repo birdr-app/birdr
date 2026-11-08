@@ -1,0 +1,22 @@
+{
+  "code": "grepot1",
+  "name": {
+    "en": "Great Potoo",
+    "nl": "Vale reuzennachtzwaluw"
+  },
+  "latin": "Nyctibius grandis",
+  "look_for": [
+    {
+      "en": "Huge, pale grey-white potoo",
+      "nl": "Enorme, lichte grijswitte reuzennachtzwaluw"
+    },
+    {
+      "en": "Big **head** with dark brown **eyes**",
+      "nl": "Grote **kop** met donkerbruine **ogen**"
+    },
+    {
+      "en": "Sits upright on high branches by day",
+      "nl": "Zit overdag rechtop op hoge takken"
+    }
+  ]
+}

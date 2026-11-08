@@ -907,8 +907,8 @@ class FlockApiTests(TestCase):
         ]
         for i, name in enumerate(names):
             user = self.admin if i == 0 else User.objects.create_user(f'share{i}', password='x')
-            user.first_name = name
-            user.save(update_fields=['first_name'])
+            user.username = name
+            user.save(update_fields=['username'])
             player, _ = Player.objects.get_or_create(
                 user=user,
                 defaults={'name': name, 'language': 'en'},
@@ -968,8 +968,8 @@ class FlockApiTests(TestCase):
                 )
 
         def add_score(challenge, user, first_name, correct, token):
-            user.first_name = first_name
-            user.save(update_fields=['first_name'])
+            user.username = first_name
+            user.save(update_fields=['username'])
             player, _ = Player.objects.get_or_create(
                 user=user,
                 defaults={'name': first_name, 'language': 'en'},

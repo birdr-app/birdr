@@ -1,0 +1,22 @@
+{
+  "code": "fltwar1",
+  "name": {
+    "en": "Flame-throated Warbler",
+    "nl": "Vuurkeelzanger"
+  },
+  "latin": "Oreothlypis gutturalis",
+  "look_for": [
+    {
+      "en": "Flame-orange **throat** and breast",
+      "nl": "Vlammend oranje **keel** en borst"
+    },
+    {
+      "en": "Slate grey back with a black patch",
+      "nl": "Leigrijze rug met een zwarte vlek"
+    },
+    {
+      "en": "Black around the **eye**; whitish belly",
+      "nl": "Zwart rond het **oog**; witachtige buik"
+    }
+  ]
+}

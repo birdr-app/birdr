@@ -1,0 +1,22 @@
+{
+  "code": "baitro1",
+  "name": {
+    "en": "Baird's Trogon",
+    "nl": "Bairdtrogon"
+  },
+  "latin": "Trogon bairdii",
+  "look_for": [
+    {
+      "en": "Blue-black **head** and **breast**, red **belly**",
+      "nl": "Blauwzwarte **kop** en **borst**, rode **buik**"
+    },
+    {
+      "en": "Mostly white under the **tail**",
+      "nl": "Grotendeels wit onder de **staart**"
+    },
+    {
+      "en": "Pale blue **bill** and **eye-ring**; Pacific lowlands",
+      "nl": "Lichtblauwe **snavel** en **oogring**; Pacifisch laagland"
+    }
+  ]
+}

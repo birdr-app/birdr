@@ -1,0 +1,22 @@
+{
+  "code": "whihaw1",
+  "name": {
+    "en": "White Hawk",
+    "nl": "Grote bonte buizerd"
+  },
+  "latin": "Pseudastur albicollis",
+  "look_for": [
+    {
+      "en": "Snow-white hawk with black **wings**",
+      "nl": "Sneeuwwitte buizerd met zwarte **vleugels**"
+    },
+    {
+      "en": "White **tail** with a broad black band",
+      "nl": "Witte **staart** met een brede zwarte band"
+    },
+    {
+      "en": "Soars low over the forest",
+      "nl": "Cirkelt laag boven het bos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "butsal1",
+  "name": {
+    "en": "Buff-throated Saltator",
+    "nl": "Bontkeelsaltator"
+  },
+  "latin": "Saltator maximus",
+  "look_for": [
+    {
+      "en": "White **eyebrow** on a grey head",
+      "nl": "Witte **wenkbrauwstreep** op een grijze kop"
+    },
+    {
+      "en": "Buff lower **throat** edged with black",
+      "nl": "Okerkleurige onderkant van de **keel**, zwart omrand"
+    },
+    {
+      "en": "Olive-green back, heavy black **bill**",
+      "nl": "Olijfgroene rug, zware zwarte **snavel**"
+    }
+  ]
+}

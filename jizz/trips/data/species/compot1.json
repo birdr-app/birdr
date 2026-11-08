@@ -1,0 +1,22 @@
+{
+  "code": "compot1",
+  "name": {
+    "en": "Common Potoo",
+    "nl": "Grijze reuzennachtzwaluw"
+  },
+  "latin": "Nyctibius griseus",
+  "look_for": [
+    {
+      "en": "Streaked grey-brown, like a broken branch",
+      "nl": "Gestreept grijsbruin, net een afgebroken tak"
+    },
+    {
+      "en": "Large yellow **eyes**, small black spots on the **breast**",
+      "nl": "Grote gele **ogen**, kleine zwarte vlekjes op de **borst**"
+    },
+    {
+      "en": "Rests upright on top of a stump by day",
+      "nl": "Rust overdag rechtop boven op een stronk"
+    }
+  ]
+}

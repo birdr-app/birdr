@@ -1,0 +1,22 @@
+{
+  "code": "grecur1",
+  "name": {
+    "en": "Great Curassow",
+    "nl": "Bruine hokko"
+  },
+  "latin": "Crax rubra",
+  "look_for": [
+    {
+      "en": "Turkey-sized, with a curly **crest**",
+      "nl": "Zo groot als een kalkoen, met een gekrulde **kuif**"
+    },
+    {
+      "en": "Male black, yellow **knob** on the **bill**",
+      "nl": "Mannetje zwart, gele **knobbel** op de **snavel**"
+    },
+    {
+      "en": "Female rufous, black-and-white barred **head**",
+      "nl": "Vrouwtje roodbruin, met zwart-wit gebandeerde **kop**"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "puffbirds-and-jacamars",
+  "about": {
+    "en": "Two families of forest birds that sit still and fly out to catch insects. Puffbirds are stocky and big-headed with a heavy bill, in brown, black and white, and stay motionless for long spells. Jacamars are slender, with a long, needle-like bill and a glittering green back, and snap up butterflies and dragonflies along forest edges.",
+    "nl": "Twee families van bosvogels die stil zitten en uitvliegen om insecten te vangen. Baardkoekoeken zijn gedrongen, met een grote kop en een zware snavel, in bruin, zwart en wit, en zitten lang roerloos. Glansvogels zijn slank, met een lange, naaldvormige snavel en een glanzend groene rug, en vangen vlinders en libellen langs bosranden."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "bee-eaters"
+      ],
+      "text": {
+        "en": "Jacamars look and hunt much like bee-eaters, with the same long bill, glossy colours and sallies after flying insects. They are unrelated and usually perch lower, inside or at the edge of forest.",
+        "nl": "Glansvogels lijken in uiterlijk en jachtgedrag sterk op bijeneters, met dezelfde lange snavel, glanzende kleuren en uitvallen naar vliegende insecten. Ze zijn niet verwant en zitten meestal lager, in het bos of aan de rand ervan."
+      }
+    }
+  ]
+}

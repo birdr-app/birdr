@@ -1,0 +1,22 @@
+{
+  "code": "sittan1",
+  "name": {
+    "en": "Silver-throated Tanager",
+    "nl": "Zilverkeeltangare"
+  },
+  "latin": "Tangara icterocephala",
+  "look_for": [
+    {
+      "en": "Bright yellow body",
+      "nl": "Felgeel lijf"
+    },
+    {
+      "en": "Silvery-white **throat** edged with black",
+      "nl": "Zilverwitte **keel** met een zwarte rand"
+    },
+    {
+      "en": "Black streaks on the yellow **back**",
+      "nl": "Zwarte strepen op de gele **rug**"
+    }
+  ]
+}

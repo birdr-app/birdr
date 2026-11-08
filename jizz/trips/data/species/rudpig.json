@@ -1,0 +1,22 @@
+{
+  "code": "rudpig",
+  "name": {
+    "en": "Ruddy Pigeon",
+    "nl": "Purperduif"
+  },
+  "latin": "Patagioenas subvinacea",
+  "look_for": [
+    {
+      "en": "Plain, dark reddish-brown forest pigeon",
+      "nl": "Effen, donker roodbruine bosduif"
+    },
+    {
+      "en": "Short black **bill**, reddish **eye**",
+      "nl": "Korte zwarte **snavel**, roodachtig **oog**"
+    },
+    {
+      "en": "Cinnamon **underwing**; told from Short-billed Pigeon by voice",
+      "nl": "Kaneelbruine **ondervleugel**; van de kortsnavelduif vooral op geluid te scheiden"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "voljun1",
+  "name": {
+    "en": "Volcano Junco",
+    "nl": "Vulkaanjunco"
+  },
+  "latin": "Junco vulcani",
+  "look_for": [
+    {
+      "en": "Fierce yellow **eye** in a black mask",
+      "nl": "Fel geel **oog** in een zwart masker"
+    },
+    {
+      "en": "Pink **bill** and pale grey head",
+      "nl": "Roze **snavel** en lichtgrijze kop"
+    },
+    {
+      "en": "Streaked brown **back**; high open volcano slopes",
+      "nl": "Gestreepte bruine **rug**; hoge, open vulkaanhellingen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "sposan",
+  "name": {
+    "en": "Spotted Sandpiper",
+    "nl": "Amerikaanse oeverloper"
+  },
+  "latin": "Actitis macularius",
+  "look_for": [
+    {
+      "en": "Like Common Sandpiper; bobs its rear constantly",
+      "nl": "Als de oeverloper; wipt steeds met het achterlijf"
+    },
+    {
+      "en": "Bold black spots on **underparts** when breeding",
+      "nl": "Grove zwarte stippen op de **onderkant** in zomerkleed"
+    },
+    {
+      "en": "Shorter **tail** than Common Sandpiper; yellowish **legs**",
+      "nl": "Kortere **staart** dan de oeverloper; geelachtige **poten**"
+    }
+  ]
+}

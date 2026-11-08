@@ -1,0 +1,22 @@
+{
+  "code": "speowl1",
+  "name": {
+    "en": "Spectacled Owl",
+    "nl": "Briluil"
+  },
+  "latin": "Pulsatrix perspicillata",
+  "look_for": [
+    {
+      "en": "Dark brown **head** with white 'spectacles'",
+      "nl": "Donkerbruine **kop** met een witte 'bril'"
+    },
+    {
+      "en": "Plain buff **belly** below a dark **breast** band",
+      "nl": "Effen geelbruine **buik** onder een donkere **borstband**"
+    },
+    {
+      "en": "Large owl with yellow **eyes**, no ear tufts",
+      "nl": "Grote uil met gele **ogen**, geen oorpluimen"
+    }
+  ]
+}

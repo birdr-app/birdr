@@ -1,0 +1,22 @@
+{
+  "code": "coltro1",
+  "name": {
+    "en": "Collared Trogon",
+    "nl": "Gekraagde trogon"
+  },
+  "latin": "Trogon collaris",
+  "look_for": [
+    {
+      "en": "Green **head** and **breast**, red **belly**",
+      "nl": "Groene **kop** en **borst**, rode **buik**"
+    },
+    {
+      "en": "Narrow white band across the **breast**",
+      "nl": "Smalle witte band over de **borst**"
+    },
+    {
+      "en": "Yellow **bill**; barred under the **tail**",
+      "nl": "Gele **snavel**; gebandeerd onder de **staart**"
+    }
+  ]
+}

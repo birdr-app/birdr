@@ -137,6 +137,26 @@ class TripApiTestCase(TestCase):
         self.assertFalse(Answer.objects.filter(question__game=game, score__gt=0).exists())
         self.assertFalse(PlayerScore.hiscore_eligible().filter(game=game).exists())
 
+    def test_lookalikes_with_home_birds(self):
+        home = json.loads((DATA_DIR / 'lk' / 'media.json').read_text())['home']['skylar']
+        skylark = Species.objects.create(id=home['species_id'], name='Eurasian Skylark', name_nl='Veldleeuwerik', name_latin='Alauda arvensis', code='skylar')
+        data = self.client.get('/api/trips/LK/?lang=nl').json()
+        pair = next(p for p in data['lookalikes'] if p['home'] == 'skylar')
+        self.assertEqual(pair['here'], 'orisky1')
+        self.assertEqual(len(pair['tell']), 3)
+        self.assertEqual(data['home_species']['skylar']['name'], 'Veldleeuwerik')
+        self.assertNotIn('skylar', data['species'])
+
+        auth = {'HTTP_AUTHORIZATION': f'Bearer {self.player.token}'}
+        res = self.client.post(
+            '/api/trips/LK/answers/',
+            {'answers': [{'species_id': skylark.id, 'answer_id': skylark.id, 'media_id': None}]},
+            format='json',
+            **auth,
+        )
+        self.assertEqual(res.status_code, 201)
+        self.assertEqual(res.json()['known'], ['skylar'])
+
     def test_answers_need_a_player(self):
         res = self.client.post('/api/trips/LK/answers/', {'answers': [{'species_id': 1, 'answer_id': 1}]}, format='json')
         self.assertEqual(res.status_code, 401)

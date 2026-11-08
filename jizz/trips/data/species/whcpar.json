@@ -1,0 +1,22 @@
+{
+  "code": "whcpar",
+  "name": {
+    "en": "White-crowned Parrot",
+    "nl": "Witkopmargrietje"
+  },
+  "latin": "Pionus senilis",
+  "look_for": [
+    {
+      "en": "White **crown** and white **throat**",
+      "nl": "Witte **kruin** en witte **keel**"
+    },
+    {
+      "en": "Dark blue **head** and **breast**",
+      "nl": "Donkerblauwe **kop** en **borst**"
+    },
+    {
+      "en": "Red under the **tail**; deep wingbeats",
+      "nl": "Rood onder de **staart**; diepe vleugelslagen"
+    }
+  ]
+}

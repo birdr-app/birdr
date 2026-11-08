@@ -1,0 +1,22 @@
+{
+  "code": "brhpar1",
+  "name": {
+    "en": "Brown-hooded Parrot",
+    "nl": "Roodoorpapegaai"
+  },
+  "latin": "Pyrilia haematotis",
+  "look_for": [
+    {
+      "en": "Small parrot with a brown **head**",
+      "nl": "Kleine papegaai met een bruine **kop**"
+    },
+    {
+      "en": "Red **ear** patch and pale eye-ring",
+      "nl": "Rode **oorvlek** en lichte oogring"
+    },
+    {
+      "en": "Red **armpits** show in flight",
+      "nl": "Rode **oksels** zichtbaar in vlucht"
+    }
+  ]
+}

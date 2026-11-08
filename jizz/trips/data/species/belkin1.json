@@ -1,0 +1,22 @@
+{
+  "code": "belkin1",
+  "name": {
+    "en": "Belted Kingfisher",
+    "nl": "Bandijsvogel"
+  },
+  "latin": "Megaceryle alcyon",
+  "look_for": [
+    {
+      "en": "Blue-grey kingfisher with a shaggy **crest**",
+      "nl": "Blauwgrijze ijsvogel met een rommelige **kuif**"
+    },
+    {
+      "en": "White **belly**, blue-grey **breast** band",
+      "nl": "Witte **buik**, blauwgrijze **borstband**"
+    },
+    {
+      "en": "Female has an extra rufous band",
+      "nl": "Vrouwtje heeft nog een roodbruine band"
+    }
+  ]
+}

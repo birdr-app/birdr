@@ -1,0 +1,22 @@
+{
+  "code": "yelwar",
+  "name": {
+    "en": "Yellow Warbler",
+    "nl": "Gele zanger"
+  },
+  "latin": "Setophaga petechia",
+  "look_for": [
+    {
+      "en": "Yellow all over, no strong face pattern",
+      "nl": "Helemaal geel, zonder duidelijke koptekening"
+    },
+    {
+      "en": "Male: thin red streaks on the **breast**",
+      "nl": "Mannetje: dunne rode strepen op de **borst**"
+    },
+    {
+      "en": "Beady black **eye** in a plain face",
+      "nl": "Zwart **oog** als een kraal in een effen gezicht"
+    }
+  ]
+}

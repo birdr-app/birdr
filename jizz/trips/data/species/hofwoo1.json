@@ -1,0 +1,22 @@
+{
+  "code": "hofwoo1",
+  "name": {
+    "en": "Hoffmann's Woodpecker",
+    "nl": "Hoffmannspecht"
+  },
+  "latin": "Melanerpes hoffmannii",
+  "look_for": [
+    {
+      "en": "Back barred black and white",
+      "nl": "Rug zwart-wit gebandeerd"
+    },
+    {
+      "en": "Plain buff-grey **face** and **breast**",
+      "nl": "Effen grijsbeige **gezicht** en **borst**"
+    },
+    {
+      "en": "Yellow **nape**; male red **crown** patch",
+      "nl": "Gele **nek**; mannetje met rode **kruinvlek**"
+    }
+  ]
+}

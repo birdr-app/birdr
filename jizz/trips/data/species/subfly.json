@@ -1,0 +1,22 @@
+{
+  "code": "subfly",
+  "name": {
+    "en": "Sulphur-bellied Flycatcher",
+    "nl": "Witvoorhoofdtiran"
+  },
+  "latin": "Myiodynastes luteiventris",
+  "look_for": [
+    {
+      "en": "Sulphur-yellow **belly** with dark streaks",
+      "nl": "Zwavelgele **buik** met donkere strepen"
+    },
+    {
+      "en": "Dark **moustache** stripes meeting under the **chin**",
+      "nl": "Donkere **baardstrepen** die onder de **kin** samenkomen"
+    },
+    {
+      "en": "Rufous **tail**, all-dark **bill**",
+      "nl": "Roodbruine **staart**, geheel donkere **snavel**"
+    }
+  ]
+}

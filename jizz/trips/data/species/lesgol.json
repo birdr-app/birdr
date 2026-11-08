@@ -1,0 +1,22 @@
+{
+  "code": "lesgol",
+  "name": {
+    "en": "Lesser Goldfinch",
+    "nl": "Witbandsijs"
+  },
+  "latin": "Spinus psaltria",
+  "look_for": [
+    {
+      "en": "Male: black **cap** and black back",
+      "nl": "Mannetje: zwarte **kap** en zwarte rug"
+    },
+    {
+      "en": "Bright yellow **underparts**",
+      "nl": "Felgele **onderkant**"
+    },
+    {
+      "en": "White patch on the black **wing**",
+      "nl": "Witte vlek op de zwarte **vleugel**"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "cotingas",
+  "about": {
+    "en": "A varied family of fruit-eaters, mostly in the forest canopy. Some males are dazzling blue, purple, red or pure white; others, such as the pihas, are plain grey but have some of the loudest voices of any bird. Bellbirds carry dangling wattles and cocks-of-the-rock dance in groups; many are hard to see but easy to hear.",
+    "nl": "Een gevarieerde familie van vruchteneters, vooral in de boomkruinen. Sommige mannetjes zijn verblindend blauw, purper, rood of helemaal wit; andere, zoals de piha's, zijn eenvoudig grijs maar hebben een van de luidste stemmen van alle vogels. Klokvogels hebben bungelende lellen en rotshanen baltsen in groepen; veel soorten zijn moeilijk te zien maar makkelijk te horen."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "australo-papuan-bellbirds"
+      ],
+      "text": {
+        "en": "The bellbirds here are cotingas with wattles and ringing, metallic calls. They are unrelated to the bellbirds of Australia and New Guinea.",
+        "nl": "De klokvogels hier zijn cotinga's met lellen en een metalig galmende roep. Ze zijn niet verwant aan de bellbirds van Australië en Nieuw-Guinea."
+      }
+    }
+  ]
+}

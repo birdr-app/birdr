@@ -1,0 +1,1010 @@
+{
+  "country": "CR",
+  "intro": {
+    "en": "Costa Rica is a small country between two oceans, with a spine of volcanoes and the high Talamanca mountains in the middle. In a day's drive you go from the dry forest of Guanacaste to the rainforest of the Caribbean lowlands or the Osa Peninsula, and more than 900 species have been recorded. This trip covers the 283 species a visitor meets on a two-week tour, plus the common winter visitors from North America that are here from October to April.",
+    "nl": "Costa Rica is een klein land tussen twee oceanen, met een rug van vulkanen en de hoge Talamancabergen in het midden. In een dag rijden ga je van het droogbos van Guanacaste naar het regenwoud van het Caribische laagland of het schiereiland Osa, en er zijn meer dan 900 soorten gezien. Deze reis omvat de 283 soorten die je op een rondreis van twee weken tegenkomt, plus de algemene wintergasten uit Noord-Amerika die hier van oktober tot april zijn."
+  },
+  "groups": {
+    "tinamous": {
+      "here": {
+        "en": "Two tinamous are on this trip. Both walk the floor of lowland rainforest, at La Selva or in Corcovado, and you will hear their whistles at dusk far more often than you see them.",
+        "nl": "Deze reis omvat twee tinamoes. Ze lopen allebei over de bodem van het regenwoud in het laagland, bij La Selva of in Corcovado, en je hoort hun gefluit in de schemering veel vaker dan je ze ziet."
+      }
+    },
+    "waterfowl": {
+      "here": {
+        "en": "Black-bellied Whistling-Duck is the one duck on this trip. Flocks stand on the banks of the Tárcoles River and fill the marshes of Palo Verde.",
+        "nl": "De zwartbuikfluiteend is de enige eend op deze reis. Groepen staan op de oevers van de rivier de Tárcoles en vullen de moerassen van Palo Verde."
+      }
+    },
+    "chachalacas-guans-and-curassows": {
+      "here": {
+        "en": "Five are on this trip. Grey-headed Chachalaca is noisy and common at forest edges in the Caribbean lowlands; Black Guan lives in the cloud forest of Monteverde and the Talamanca, and Great Curassow walks the trails of Corcovado and Carara.",
+        "nl": "Deze reis omvat er vijf. De grijskopchachalaca is luidruchtig en algemeen aan bosranden in het Caribische laagland; de zwarte goean leeft in het nevelwoud van Monteverde en de Talamanca, en de bruine hokko loopt over de paden van Corcovado en Carara."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "Eight pigeons and doves are on this trip. Inca Dove and White-tipped Dove are the first you'll meet, in hotel gardens in the Central Valley; the big pigeons call from the canopy, and Band-tailed Pigeon flocks fly over the highlands.",
+        "nl": "Deze reis omvat acht duiven. De Aztekenduif en de Verreauxduif zie je het eerst, in hoteltuinen in de Centrale Vallei; de grote duiven roepen vanuit de boomtoppen, en groepen bandstaartduiven vliegen over het hoogland."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "Three cuckoos are on this trip. Groove-billed Ani is common in the Central Valley and the dry north-west; the Common Squirrel-Cuckoo hops through trees in every forest, from the lowlands to well up the mountains.",
+        "nl": "Deze reis omvat drie koekoeken. De groefsnavelani is algemeen in de Centrale Vallei en het droge noordwesten; de eekhoornkoekoek hupt door de bomen in elk bos, van het laagland tot hoog in de bergen."
+      }
+    },
+    "nightjars": {
+      "here": {
+        "en": "Common Pauraque is the one nightjar on this trip. At night it sits on gravel roads and lodge paths in the lowlands, and its eyes shine red in a torch beam.",
+        "nl": "De pauraque is de enige nachtzwaluw op deze reis. 's Nachts zit hij op grindwegen en paden bij lodges in het laagland, en in het licht van je zaklamp lichten zijn ogen rood op."
+      }
+    },
+    "potoos-and-oilbird": {
+      "here": {
+        "en": "Two potoos are on this trip. By day they sit upright on a broken branch and look like part of it; local guides often know a day roost, in Tortuguero or at Caño Negro.",
+        "nl": "Deze reis omvat twee reuzennachtzwaluwen. Overdag zitten ze rechtop op een afgebroken tak en lijken ze er een deel van; lokale gidsen weten vaak een vaste rustplek, in Tortuguero of bij Caño Negro."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "Four swifts are on this trip. White-collared Swift is the big one, in noisy flocks over the mountains and the Central Valley; the smaller ones feed over forest in the lowlands and foothills.",
+        "nl": "Deze reis omvat vier gierzwaluwen. De witkraaggierzwaluw is de grote, in luidruchtige groepen boven de bergen en de Centrale Vallei; de kleinere jagen boven bos in het laagland en in de uitlopers van de bergen."
+      }
+    },
+    "hummingbirds": {
+      "here": {
+        "en": "Twenty-four hummingbirds are on this trip, more than any other group. Rufous-tailed Hummingbird is in every garden; the best way to see the rest is at lodge feeders in Monteverde, Savegre, Cinchona and Rancho Naturalista.",
+        "nl": "Deze reis omvat 24 kolibries, meer dan welke andere groep ook. De roodstaartamazilia zit in elke tuin; de rest zie je het best bij de voederflessen van lodges zoals in Monteverde, Savegre, Cinchona en Rancho Naturalista."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Two rails are on this trip. Purple Gallinule walks over floating plants in the canals of Tortuguero and the marshes of Palo Verde; Grey-cowled Wood-Rail steps out of wet forest and mangrove edges in the early morning.",
+        "nl": "Deze reis omvat twee rallen. Het Amerikaans purperhoen loopt over drijvende planten in de kanalen van Tortuguero en de moerassen van Palo Verde; de Cayennebosral stapt 's ochtends vroeg uit nat bos en de rand van mangroven."
+      }
+    },
+    "limpkin": {
+      "here": {
+        "en": "Limpkin lives in the freshwater marshes of the north: at Palo Verde, at Caño Negro and in the canals of Tortuguero.",
+        "nl": "De koerlan leeft in de zoetwatermoerassen van het noorden: in Palo Verde, bij Caño Negro en in de kanalen van Tortuguero."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "Ten shorebirds are on this trip. Northern Jacana, Southern Lapwing and Black-necked Stilt live here all year in wet fields and marshes; the others are winter visitors from North America on beaches and river mouths, from August to April.",
+        "nl": "Deze reis omvat tien steltlopers. De nestmanjaçana, de Zuid-Amerikaanse kievit en de Amerikaanse steltkluut wonen hier het hele jaar in natte velden en moerassen; de andere zijn wintergasten uit Noord-Amerika op stranden en bij riviermondingen, van augustus tot april."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Three of this group are on this trip, all on the coasts. Laughing Gull and Royal Tern are easy at the Tárcoles river mouth and on Pacific beaches, mostly outside the summer months.",
+        "nl": "Deze reis omvat drie soorten uit deze groep, allemaal aan de kust. De lachmeeuw en de Amerikaanse koningsstern zie je makkelijk bij de monding van de Tárcoles en op de stranden aan de Pacifische kust, vooral buiten de zomermaanden."
+      }
+    },
+    "sunbittern": {
+      "here": {
+        "en": "Sunbittern walks along fast, rocky rivers and streams in the forested foothills of both slopes. Watch the rivers around Sarapiquí and Rancho Naturalista.",
+        "nl": "De zonneral loopt langs snelle, rotsige rivieren en beken in de beboste uitlopers van de bergen, aan beide kanten. Let op de rivieren rond Sarapiquí en Rancho Naturalista."
+      }
+    },
+    "storks": {
+      "here": {
+        "en": "Two storks are on this trip. Wood Storks are common in the wetlands of Guanacaste and along the Tárcoles; Jabiru is the special one, at Palo Verde and Caño Negro.",
+        "nl": "Deze reis omvat twee ooievaars. Kaalkopooievaars zijn algemeen in de moerassen van Guanacaste en langs de Tárcoles; de jabiroe is de bijzondere, in Palo Verde en bij Caño Negro."
+      }
+    },
+    "frigatebirds-boobies-and-gannets": {
+      "here": {
+        "en": "Two seabirds are on this trip. Magnificent Frigatebirds hang over both coasts; Brown Boobies fish in the Gulf of Nicoya and off the rocky Pacific coast, where a boat trip brings you close.",
+        "nl": "Deze reis omvat twee zeevogels. Amerikaanse fregatvogels hangen boven beide kusten; bruine genten vissen in de Golf van Nicoya en voor de rotsige Pacifische kust, waar je ze vanaf een boot van dichtbij ziet."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "Two are on this trip. Neotropic Cormorant is on every river and lake; Anhinga dries its wings on branches over the canals of Tortuguero and the rivers of the lowlands.",
+        "nl": "Deze reis omvat er twee. De bigua-aalscholver zit op elke rivier en elk meer; de Amerikaanse slangenhalsvogel droogt zijn vleugels op takken boven de kanalen van Tortuguero en de rivieren in het laagland."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Thirteen herons, egrets and ibises are on this trip. Western Cattle-Egret is the first you'll meet, in fields along the road from the airport; a boat on the Tárcoles River or the canals of Tortuguero shows you most of the rest, Boat-billed Heron included.",
+        "nl": "Deze reis omvat dertien reigers, zilverreigers en ibissen. De westelijke koereiger zie je het eerst, in de velden langs de weg vanaf het vliegveld; een boottocht op de Tárcoles of door de kanalen van Tortuguero laat je de meeste andere zien, de schuitbekreiger ook."
+      }
+    },
+    "pelicans": {
+      "here": {
+        "en": "Brown Pelican is common along both coasts. Lines of them glide low over the waves along the Pacific beaches, and they rest on the piers at Puntarenas.",
+        "nl": "De bruine pelikaan is algemeen langs beide kusten. Rijen pelikanen glijden laag over de golven langs de Pacifische stranden, en ze rusten op de pieren van Puntarenas."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "Eleven are on this trip. Black and Turkey Vultures are over every town from the first morning; Roadside Hawk perches on fence posts, and from late September to early November huge flocks of Broad-winged Hawks pass along the Caribbean coast.",
+        "nl": "Deze reis omvat er elf. Zwarte gieren en roodkopgieren zie je vanaf de eerste ochtend boven elke stad; de wegbuizerd zit op hekpalen, en van eind september tot begin november trekken enorme groepen breedvleugelbuizerds langs de Caribische kust."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "Four owls are on this trip. Mottled Owl and Tropical Screech-Owl call around lodges at night; the Costa Rican Pygmy-Owl is a highland bird that also hunts by day, at Savegre and Cerro de la Muerte.",
+        "nl": "Deze reis omvat vier uilen. De bonte bosuil en de Cholibaschreeuwuil roepen 's nachts rond de lodges; de Costaricaanse dwerguil is een vogel van het hoogland die ook overdag jaagt, bij Savegre en de Cerro de la Muerte."
+      }
+    },
+    "trogons-and-quetzals": {
+      "here": {
+        "en": "Six trogons are on this trip, the quetzal among them. The trogons sit still in the middle storey of lowland forest; the Resplendent Quetzal lives in the cloud forest of Monteverde and the Talamanca.",
+        "nl": "Deze reis omvat zes trogons, met de quetzal. De trogons zitten stil in de middelste laag van het bos in het laagland; de quetzal leeft in het nevelwoud van Monteverde en de Talamanca."
+      }
+    },
+    "motmots": {
+      "here": {
+        "en": "Four motmots are on this trip. Lesson's Motmot is the one in gardens and coffee farms of the Central Valley; Turquoise-browed Motmot belongs to the dry forest of Guanacaste.",
+        "nl": "Deze reis omvat vier motmots. De diadeemmotmot is die van de tuinen en koffieplantages in de Centrale Vallei; de wenkbrauwmotmot hoort bij het droogbos van Guanacaste."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "Five kingfishers are on this trip. Green and Ringed Kingfishers sit along rivers and canals all year; Belted Kingfisher is a winter visitor from the north.",
+        "nl": "Deze reis omvat vijf ijsvogels. De groene ijsvogel en de Amerikaanse reuzenijsvogel zitten het hele jaar langs rivieren en kanalen; de bandijsvogel is een wintergast uit het noorden."
+      }
+    },
+    "puffbirds-and-jacamars": {
+      "here": {
+        "en": "Two are on this trip. Rufous-tailed Jacamar sits on a low branch at the forest edge in Carara and the Caribbean lowlands; White-whiskered Puffbird sits still in the shade inside the forest and is easy to walk past.",
+        "nl": "Deze reis omvat er twee. De roodstaartglansvogel zit op een lage tak aan de bosrand in Carara en het Caribische laagland; de witsnorbaardkoekoek zit stil in de schaduw in het bos en loop je makkelijk voorbij."
+      }
+    },
+    "barbets-and-toucans": {
+      "here": {
+        "en": "Six are on this trip. The two big toucans and the aracaris live in the lowlands, the Fiery-billed Aracari only on the south Pacific side; the emerald-toucanet and the Prong-billed Barbet live in the cloud forest.",
+        "nl": "Deze reis omvat er zes. De twee grote toekans en de arassari's leven in het laagland, de vuursnavelarassari alleen aan de zuidelijke Pacifische kant; de smaragdarassari en de tandsnavelbaardvogel leven in het nevelwoud."
+      }
+    },
+    "woodpeckers": {
+      "here": {
+        "en": "Six woodpeckers are on this trip. Hoffmann's Woodpecker is the one in Central Valley gardens; on the Caribbean side Black-cheeked Woodpecker takes its place, and on the south Pacific side Golden-naped Woodpecker.",
+        "nl": "Deze reis omvat zes spechten. De Hoffmannspecht is die van de tuinen in de Centrale Vallei; aan de Caribische kant neemt de zwartwangspecht zijn plaats in, en aan de zuidelijke Pacifische kant de goudnekspecht."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "Five are on this trip. Crested and Yellow-headed Caracaras walk in fields and along roads in the lowlands; Laughing Falcon sits on a bare branch at the forest edge and calls loudly at dawn and dusk.",
+        "nl": "Deze reis omvat er vijf. De kuifcaracara en de geelkopcaracara lopen in velden en langs wegen in het laagland; de lachvalk zit op een kale tak aan de bosrand en roept luid bij zonsopgang en zonsondergang."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "Eight parrots are on this trip. Flocks of parakeets and parrots fly over noisily in the morning and evening; Scarlet Macaws are the ones most visitors hope for, at Carara and on the Osa Peninsula.",
+        "nl": "Deze reis omvat acht papegaaien. 's Ochtends en 's avonds vliegen groepen parkieten en papegaaien luidruchtig over; de geelvleugelara's zijn waar de meeste bezoekers op hopen, in Carara en op het schiereiland Osa."
+      }
+    },
+    "antbirds": {
+      "here": {
+        "en": "Four antbirds are on this trip. Barred Antshrike lives in thickets and gardens in the lowlands; the others keep to the forest understorey at La Selva and Carara, where Bicoloured Antbird follows army ant swarms.",
+        "nl": "Deze reis omvat vier miervogels. De gebandeerde mierklauwier leeft in struikgewas en tuinen in het laagland; de andere blijven in de onderlaag van het bos bij La Selva en Carara, waar de tweekleurige miervogel zwermen trekmieren volgt."
+      }
+    },
+    "woodcreepers": {
+      "here": {
+        "en": "Three woodcreepers are on this trip. Streak-headed Woodcreeper is the one in gardens and open woodland; the others climb trunks inside the forest.",
+        "nl": "Deze reis omvat drie muisspechten. De streepkopmuisspecht zie je in tuinen en open bos; de andere klimmen langs stammen in het bos."
+      }
+    },
+    "ovenbirds": {
+      "here": {
+        "en": "Three ovenbirds are on this trip, all in the highlands. They join mixed flocks in the mossy forest of the Talamanca and Monteverde and search bark, moss and epiphytes for insects.",
+        "nl": "Deze reis omvat drie ovenvogels, allemaal in het hoogland. Ze trekken mee met gemengde groepen in het bemoste bos van de Talamanca en Monteverde en zoeken insecten in schors, mos en epifyten."
+      }
+    },
+    "manakins": {
+      "here": {
+        "en": "Four manakins are on this trip. Each region has its own: Long-tailed Manakin in the dry north-west and Monteverde, Orange-collared at Carara and the south Pacific, White-collared and Red-capped in the Caribbean lowlands.",
+        "nl": "Deze reis omvat vier manakins. Elke regio heeft zijn eigen: de langstaartmanakin in het droge noordwesten en Monteverde, de oranjekraagmanakin in Carara en het zuidelijke Pacifische gebied, de witkraagmanakin en de geelbroekmanakin in het Caribische laagland."
+      }
+    },
+    "cotingas": {
+      "here": {
+        "en": "Two cotingas are on this trip. Purple-throated Fruitcrow travels in noisy groups through the Caribbean lowland forest; Three-wattled Bellbird is heard more than seen, in Monteverde in the breeding season.",
+        "nl": "Deze reis omvat twee cotinga's. De purperkeelvruchtenkraai trekt in luidruchtige groepjes door het bos in het Caribische laagland; de drielelklokvogel hoor je meer dan je hem ziet, in Monteverde in de broedtijd."
+      }
+    },
+    "becards-tityras-and-allies": {
+      "here": {
+        "en": "Four are on this trip. Masked Tityra sits on bare branches at forest edges from the lowlands to the lower mountains; the becards join mixed flocks.",
+        "nl": "Deze reis omvat er vier. De maskertityra zit op kale takken aan bosranden, van het laagland tot in de lagere bergen; de bekardes trekken mee met gemengde groepen."
+      }
+    },
+    "sharpbill-royal-flycatchers-and-allies": {
+      "here": {
+        "en": "Tropical Royal Flycatcher is the one from this group on this trip. It is a plain brown bird of streams in lowland forest at Carara and La Selva, and it only shows its fan-shaped crest now and then.",
+        "nl": "De tropische kroontiran is de enige uit deze groep op deze reis. Het is een eenvoudig bruin vogeltje van beken in het bos van het laagland, in Carara en bij La Selva, en hij laat zijn waaiervormige kuif maar zelden zien."
+      }
+    },
+    "tyrant-flycatchers-elaenias-tyrannulets-and-allies": {
+      "here": {
+        "en": "Three are on this trip. Yellow-bellied Elaenia and Common Tody-Flycatcher live in gardens and at forest edges; Torrent Tyrannulet sits on rocks in mountain rivers, such as the Savegre.",
+        "nl": "Deze reis omvat er drie. De geelbuikelenia en de geelbuikschoffelsnavel leven in tuinen en aan bosranden; de bergbeektachuri zit op rotsen in bergrivieren, zoals de Savegre."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies": {
+      "here": {
+        "en": "Fifteen are on this trip. Great Kiskadee, Social Flycatcher and Tropical Kingbird sit on wires in every town from the first day; Sulphur-bellied and Piratic Flycatchers spend the northern winter in South America and are here mainly from February to September.",
+        "nl": "Deze reis omvat er vijftien. De grote kiskadie, de roodkruintiran en de tropische koningstiran zitten vanaf de eerste dag op draden in elke stad; de witvoorhoofdtiran en de piraattiran overwinteren in Zuid-Amerika en zijn hier vooral van februari tot september."
+      }
+    },
+    "vireos": {
+      "here": {
+        "en": "Three are on this trip. Yellow-green Vireo breeds here and is common from February to September; Red-eyed Vireo passes through on migration, and Rufous-browed Peppershrike sings from dry woodland in Guanacaste and the Central Valley.",
+        "nl": "Deze reis omvat er drie. De geelgroene vireo broedt hier en is algemeen van februari tot september; de roodoogvireo komt op doortrek langs, en de roodbrauwpeperklauwier zingt in droog bos in Guanacaste en de Centrale Vallei."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "Three jays are on this trip. Brown Jay is common and noisy across the lowlands; White-throated Magpie-Jay is the bird of Guanacaste, and Azure-hooded Jay lives in the cloud forest.",
+        "nl": "Deze reis omvat drie gaaien. De bruine gaai is algemeen en luidruchtig in het laagland; de witkeelekstergaai is de vogel van Guanacaste, en de azuurkapgaai leeft in het nevelwoud."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "Seven swallows are on this trip. Blue-and-white Swallow is the resident of towns and highlands; Barn and Cliff Swallows pass through in huge numbers in autumn and spring, and Mangrove Swallow flies low over rivers.",
+        "nl": "Deze reis omvat zeven zwaluwen. De blauw-witte zwaluw is de standvogel van steden en hoogland; boerenzwaluwen en Amerikaanse klifzwaluwen trekken in het najaar en voorjaar in grote aantallen door, en de mangrovezwaluw vliegt laag over rivieren."
+      }
+    },
+    "wrens": {
+      "here": {
+        "en": "Nine wrens are on this trip, and you'll hear most of them before you see them. Northern House Wren is in every garden; each forest and region has its own, from Rufous-naped Wren in Guanacaste to Timberline Wren near the treeline on Cerro de la Muerte.",
+        "nl": "Deze reis omvat negen winterkoningen, en de meeste hoor je voordat je ze ziet. De huiswinterkoning zit in elke tuin; elk bos en elke regio heeft zijn eigen soorten, van de roodnekwinterkoning in Guanacaste tot de Brownwinterkoning bij de boomgrens op de Cerro de la Muerte."
+      }
+    },
+    "dippers": {
+      "here": {
+        "en": "American Dipper lives on fast, clear mountain rivers. The Río Savegre at San Gerardo de Dota is the best-known place to see it.",
+        "nl": "De Noord-Amerikaanse waterspreeuw leeft op snelle, heldere bergrivieren. De Savegre bij San Gerardo de Dota is de bekendste plek om hem te zien."
+      }
+    },
+    "thrushes": {
+      "here": {
+        "en": "Five thrushes are on this trip. Clay-coloured Thrush, the national bird, is on every lawn; the solitaire and the nightingale-thrush sing in the mountains, and Swainson's Thrush passes through on migration.",
+        "nl": "Deze reis omvat vijf lijsters. De graylijster, de nationale vogel, loopt op elk grasveld; de solitaire en de geelbekdwerglijster zingen in de bergen, en de dwerglijster komt op doortrek langs."
+      }
+    },
+    "silky-flycatchers": {
+      "here": {
+        "en": "Two silky-flycatchers are on this trip, both in the highlands. Look for them on bare treetops and in fruiting trees at Savegre and along the road over Cerro de la Muerte.",
+        "nl": "Deze reis omvat twee zijdevliegenvangers, allebei in het hoogland. Zoek ze op kale boomtoppen en in bomen met vruchten bij Savegre en langs de weg over de Cerro de la Muerte."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "here": {
+        "en": "Three are on this trip. Yellow-crowned Euphonia eats fruit in gardens all over the country; Golden-browed Chlorophonia lives in the cloud forest, and Lesser Goldfinch in the open highlands.",
+        "nl": "Deze reis omvat er drie. De geelkruinorganist eet vruchten in tuinen in het hele land; de goudbrauworganist leeft in het nevelwoud, en de witbandsijs in het open hoogland."
+      }
+    },
+    "new-world-sparrows": {
+      "here": {
+        "en": "Seven are on this trip. Rufous-collared Sparrow is on every lawn in the Central Valley and the highlands; Volcano Junco lives only on the high peaks, on Irazú, Poás and Cerro de la Muerte.",
+        "nl": "Deze reis omvat er zeven. De roodkraaggors loopt op elk grasveld in de Centrale Vallei en het hoogland; de vulkaanjunco leeft alleen op de hoge toppen, op de Irazú, de Poás en de Cerro de la Muerte."
+      }
+    },
+    "wrenthrush": {
+      "here": {
+        "en": "Wrenthrush is a family of its own and lives only in the mountains of Costa Rica and western Panama. It hops through bamboo and dense undergrowth at Cerro de la Muerte, Savegre and Tapantí.",
+        "nl": "De zeledonia vormt een eigen familie en leeft alleen in de bergen van Costa Rica en West-Panama. Hij hupt door bamboe en dicht struikgewas op de Cerro de la Muerte, bij Savegre en in Tapantí."
+      }
+    },
+    "blackbirds": {
+      "here": {
+        "en": "Nine are on this trip. Great-tailed Grackle is the first bird at the airport; oropendolas hang their long nests in tall trees in the Caribbean lowlands, and Baltimore Oriole spends the winter here.",
+        "nl": "Deze reis omvat er negen. De langstaarttroepiaal is de eerste vogel op het vliegveld; oropendola's hangen hun lange nesten in hoge bomen in het Caribische laagland, en de Baltimoretroepiaal overwintert hier."
+      }
+    },
+    "wood-warblers": {
+      "here": {
+        "en": "Nineteen warblers are on this trip. About half are winter visitors from North America, here from September to April; the residents include Flame-throated and Black-cheeked Warblers and Collared Redstart, highland birds shared only with western Panama.",
+        "nl": "Deze reis omvat negentien Amerikaanse zangers. Ongeveer de helft zijn wintergasten uit Noord-Amerika, hier van september tot april; bij de standvogels horen de vuurkeelzanger, de zwartwangzanger en de halsbandzanger, vogels van het hoogland die alleen in West-Panama ook voorkomen."
+      }
+    },
+    "cardinals-grosbeaks-and-allies": {
+      "here": {
+        "en": "Seven are on this trip. Summer Tanager and Rose-breasted Grosbeak spend the winter here; the ant-tanagers move through the forest understorey in noisy groups, and the endemic Black-cheeked Ant-Tanager lives only around the Golfo Dulce and on the Osa Peninsula.",
+        "nl": "Deze reis omvat er zeven. De zomertangare en de roodborstkardinaal overwinteren hier; de miertangaren trekken in luidruchtige groepjes door de onderlaag van het bos, en de endemische zwartwangmiertangare leeft alleen rond de Golfo Dulce en op het schiereiland Osa."
+      }
+    },
+    "tanagers-and-allies": {
+      "here": {
+        "en": "Twenty-four tanagers and relatives are on this trip. Blue-grey and Palm Tanagers are in every garden; the colourful ones come to fruit feeders at lodges, and mixed flocks in the foothills can hold half a dozen species at once.",
+        "nl": "Deze reis omvat 24 tangaren en verwanten. De bisschopstangare en de palmtangare zitten in elke tuin; de bonte soorten komen naar fruit bij de lodges, en gemengde groepen in de uitlopers van de bergen kunnen zes soorten tegelijk bevatten."
+      }
+    }
+  },
+  "units": {
+    "tinamous": {
+      "title": {
+        "en": "Tinamous and a whistling-duck",
+        "nl": "Tinamoes en een fluiteend"
+      },
+      "intro": {
+        "en": "Two groups that only share this unit. The tinamous are plump, nearly tail-less birds of the forest floor; look at size and colour. The whistling-duck has a red bill and pink legs and often perches in trees.",
+        "nl": "Twee groepen die alleen deze eenheid delen. De tinamoes zijn mollige vogels zonder echte staart die op de bosbodem leven; let op grootte en kleur. De fluiteend heeft een rode snavel en roze poten en zit vaak in bomen."
+      }
+    },
+    "chachalacas-guans-and-curassows": {
+      "title": {
+        "en": "Chachalacas, guans and a curassow",
+        "nl": "Chachalaca's, goeans en een hokko"
+      },
+      "intro": {
+        "en": "Big, long-tailed birds that clamber through the trees, and one that walks the forest floor. The chachalacas are small and brown, the guans larger and darker; the curassow is the biggest, the male black with a yellow knob on the bill.",
+        "nl": "Grote vogels met lange staarten die door de bomen klauteren, en een die over de bosbodem loopt. De chachalaca's zijn klein en bruin, de goeans groter en donkerder; de hokko is de grootste, het mannetje zwart met een gele knobbel op de snavel."
+      }
+    },
+    "pigeons-and-doves-1": {
+      "title": {
+        "en": "Larger pigeons",
+        "nl": "Grotere duiven"
+      },
+      "intro": {
+        "en": "Four big pigeons that spend most of their time in the treetops. Look at the colour of the bill, the head and the tail, and listen to the call: each sings its own slow cooing phrase.",
+        "nl": "Vier grote duiven die het grootste deel van de tijd in de boomtoppen zitten. Let op de kleur van de snavel, de kop en de staart, en luister naar de roep: elke soort koert op zijn eigen trage manier."
+      }
+    },
+    "pigeons-and-doves-2": {
+      "title": {
+        "en": "Doves of garden, town and forest",
+        "nl": "Duiven van tuin, stad en bos"
+      },
+      "intro": {
+        "en": "The Rock Dove you know from home; the other three are new. Inca Dove is small and scaly, White-tipped Dove walks on the ground in the shade, and Short-billed Pigeon calls from the forest canopy.",
+        "nl": "De rotsduif ken je van thuis; de andere drie zijn nieuw. De Aztekenduif is klein en geschubd, de Verreauxduif loopt in de schaduw over de grond, en de kortsnavelduif roept vanuit de boomtoppen in het bos."
+      }
+    },
+    "cuckoos": {
+      "title": {
+        "en": "Anis, Squirrel-Cuckoo and night birds",
+        "nl": "Ani's, eekhoornkoekoek en nachtvogels"
+      },
+      "intro": {
+        "en": "The anis are black birds with a deep bill that live in noisy groups; the shape of the bill tells the two apart. The pauraque and the potoos come out after dark, and by day you only find them by luck or with a guide.",
+        "nl": "De ani's zijn zwarte vogels met een hoge snavel die in luidruchtige groepjes leven; de vorm van de snavel onderscheidt de twee. De pauraque en de reuzennachtzwaluwen komen pas in het donker tevoorschijn, en overdag vind je ze alleen met geluk of met een gids."
+      }
+    },
+    "swifts": {
+      "title": {
+        "en": "Swifts",
+        "nl": "Gierzwaluwen"
+      },
+      "intro": {
+        "en": "Swifts are always in the air, so look at size, the shape of the tail and any pale collar or rump. White-collared Swift is much bigger than the others.",
+        "nl": "Gierzwaluwen zijn altijd in de lucht, dus let op de grootte, de vorm van de staart en een lichte kraag of stuit. De witkraaggierzwaluw is veel groter dan de andere."
+      }
+    },
+    "hummingbirds-1": {
+      "title": {
+        "en": "Hermits, jacobin, violetear and fairy",
+        "nl": "Heremieten en vier andere kolibries"
+      },
+      "intro": {
+        "en": "The hermits are brown and green, with long curved bills and long tails, and they visit flowers in the forest understorey. The other three are bolder: look at the white on the neck, the violet ear patch and the fairy's white underparts.",
+        "nl": "De heremieten zijn bruin en groen, met lange gebogen snavels en lange staarten, en ze bezoeken bloemen in de onderlaag van het bos. De andere drie zijn opvallender: let op het wit in de nek, de violette oorvlek en de witte onderkant van de feeënkolibrie."
+      }
+    },
+    "hummingbirds-2": {
+      "title": {
+        "en": "Six hummers, lowland and highland",
+        "nl": "Zes kolibries van laagland en hoogland"
+      },
+      "intro": {
+        "en": "The mango, the brilliant, the thorntail and the coquette live in the lowlands and foothills; the coquette is tiny and the thorntail male has a wiry tail. The Fiery-throated and Talamanca Hummingbirds live high up and come to feeders at Savegre and Paraíso Quetzal.",
+        "nl": "De mango, de briljantkolibrie, de draadkolibrie en de koketkolibrie leven in het laagland en de uitlopers van de bergen; de koketkolibrie is piepklein en het mannetje van de draadkolibrie heeft een staart als draadjes. De Irazukolibrie en de Talamancakolibrie leven hoog en komen naar de voederflessen bij Savegre en Paraíso Quetzal."
+      }
+    },
+    "hummingbirds-3": {
+      "title": {
+        "en": "Mountain-gems, sabrewing and three more",
+        "nl": "Juweelkolibries, sabelvleugel en meer"
+      },
+      "intro": {
+        "en": "Most of these live in the cloud forest. The mountain-gems have a white stripe behind the eye, the sabrewing is big and purple, and Volcano and Scintillant Hummingbirds are tiny; on those two, look at the colour of the male's throat and at the tail.",
+        "nl": "De meeste leven in het nevelwoud. De juweelkolibries hebben een witte streep achter het oog, de sabelvleugel is groot en paars, en de vulkaankolibrie en de fonkelkolibrie zijn piepklein; let bij die twee op de kleur van de keel van het mannetje en op de staart."
+      }
+    },
+    "hummingbirds-4": {
+      "title": {
+        "en": "Rufous-tailed, Snowcap and four more",
+        "nl": "Amazilia's, witkruinkolibrie en meer"
+      },
+      "intro": {
+        "en": "Rufous-tailed and Cinnamon Hummingbirds are the common garden birds, on the wet and the dry side. The two endemics are here too: the emerald in the central mountains and the Mangrove Hummingbird on the Pacific coast. Snowcap and the goldentail need forest in the foothills or the south.",
+        "nl": "De roodstaartamazilia en de kaneelamazilia zijn de algemene tuinvogels, aan de natte en de droge kant. De twee endemen staan hier ook: de koperkopsmaragdkolibrie in de centrale bergen en de mangroveamazilia aan de Pacifische kust. Voor de witkruinkolibrie en de goudstaartsaffierkolibrie heb je bos in de uitlopers of in het zuiden nodig."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "title": {
+        "en": "Gallinule, wood-rail and Limpkin",
+        "nl": "Purperhoen, bosral en koerlan"
+      },
+      "intro": {
+        "en": "Three birds of marsh edges. The gallinule is purple and green with yellow legs, the wood-rail has a grey neck and red legs, and the Limpkin is a big brown bird with white streaks and a long bill.",
+        "nl": "Drie vogels van de rand van moerassen. Het purperhoen is paars en groen met gele poten, de bosral heeft een grijze hals en rode poten, en de koerlan is een grote bruine vogel met witte strepen en een lange snavel."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Stilt, lapwing, jacana and two more",
+        "nl": "Steltkluut, kievit, jaçana en meer"
+      },
+      "intro": {
+        "en": "Three residents of wet fields and marshes, and two small winter visitors. The jacana walks on floating leaves and flashes yellow wings; Spotted Sandpiper bobs its tail at the water's edge.",
+        "nl": "Drie standvogels van natte velden en moerassen, en twee kleine wintergasten. De jaçana loopt over drijvende bladeren en laat gele vleugels zien; de Amerikaanse oeverloper wipt met zijn staart aan de waterkant."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Waders of the beach and mudflat",
+        "nl": "Steltlopers van strand en wad"
+      },
+      "intro": {
+        "en": "Winter visitors from North America on the Pacific coast and at river mouths. Compare the bill: curved on the Whimbrel, straight and thick on the Willet, short on Sanderling and Turnstone.",
+        "nl": "Wintergasten uit Noord-Amerika aan de Pacifische kust en bij riviermondingen. Vergelijk de snavel: gebogen bij de regenwulp, recht en dik bij de willet, kort bij de drieteenstrandloper en de steenloper."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {
+        "en": "Gull, terns and a Sunbittern",
+        "nl": "Meeuw, sterns en een zonneral"
+      },
+      "intro": {
+        "en": "Two groups that only share this unit. The gull and the two terns live on the coast: Royal Tern has an orange bill, Sandwich Tern a black one with a yellow tip. The Sunbittern walks along forest rivers and opens its wings to show two big eyespots.",
+        "nl": "Twee groepen die alleen deze eenheid delen. De meeuw en de twee sterns leven aan de kust: de Amerikaanse koningsstern heeft een oranje snavel, de grote stern een zwarte met een gele punt. De zonneral loopt langs rivieren in het bos en spreidt zijn vleugels met twee grote oogvlekken."
+      }
+    },
+    "storks": {
+      "title": {
+        "en": "Storks, cormorants and seabirds",
+        "nl": "Ooievaars, aalscholvers en zeevogels"
+      },
+      "intro": {
+        "en": "Big water birds from three groups. The storks wade in marshes; the cormorant and the anhinga swim low and dry their wings on branches; the frigatebird and the booby belong to the coast.",
+        "nl": "Grote watervogels uit drie groepen. De ooievaars waden door moerassen; de aalscholver en de slangenhalsvogel zwemmen laag in het water en drogen hun vleugels op takken; de fregatvogel en de gent horen bij de kust."
+      }
+    },
+    "herons-ibis-and-allies-1": {
+      "title": {
+        "en": "Herons, an egret and two ibises",
+        "nl": "Reigers, zilverreiger en twee ibissen"
+      },
+      "intro": {
+        "en": "Smaller herons, two ibises and two odd ones. Look at the colour of the bill and legs on the egret and the small herons; the tiger-heron is barred brown, and the Boat-billed Heron has huge eyes and a broad bill and feeds at night.",
+        "nl": "Kleinere reigers, twee ibissen en twee vreemde. Let bij de zilverreiger en de kleine reigers op de kleur van snavel en poten; de tijgerroerdomp is bruin gestreept, en de schuitbekreiger heeft enorme ogen en een brede snavel en zoekt 's nachts voedsel."
+      }
+    },
+    "herons-ibis-and-allies-2": {
+      "title": {
+        "en": "Herons, egrets, spoonbill and pelican",
+        "nl": "Reigers, lepelaar en pelikaan"
+      },
+      "intro": {
+        "en": "Familiar shapes: some of these herons look much like the ones you know from home. The spoonbill is pink, and the pelican belongs to the coast.",
+        "nl": "Bekende vormen: sommige van deze reigers lijken veel op die van thuis. De lepelaar is roze, en de pelikaan hoort bij de kust."
+      }
+    },
+    "vultures-hawks-and-allies-1": {
+      "title": {
+        "en": "Vultures, kite, osprey and a hawk",
+        "nl": "Gieren, wouw, visarend en een buizerd"
+      },
+      "intro": {
+        "en": "Birds you see soaring. Turkey Vulture holds its wings in a shallow V and rocks in flight, Black Vulture flaps more and shows white wing tips; King Vulture is white and black. The kite has a long forked tail.",
+        "nl": "Vogels die je zweven ziet. De roodkopgier houdt zijn vleugels in een ondiepe V en schommelt in de vlucht, de zwarte gier klapwiekt meer en heeft witte vleugelpunten; de koningsgier is wit met zwart. De wouw heeft een lange gevorkte staart."
+      }
+    },
+    "vultures-hawks-and-allies-2": {
+      "title": {
+        "en": "Hawks and a hawk-eagle",
+        "nl": "Buizerds en een kuifarend"
+      },
+      "intro": {
+        "en": "Look at the tail bands and the colour of the body. Roadside Hawk perches low and in the open; Broad-winged Hawk is a winter visitor; White Hawk is all white with a black band on the tail.",
+        "nl": "Let op de banden op de staart en de kleur van het lijf. De wegbuizerd zit laag en open; de breedvleugelbuizerd is een wintergast; de grote bonte buizerd is helemaal wit met een zwarte band op de staart."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Owls",
+        "nl": "Uilen"
+      },
+      "intro": {
+        "en": "Owls are found by their calls, often with a guide on a night walk. Look at the size, the ear tufts and the face pattern; the pygmy-owl is small and active by day.",
+        "nl": "Uilen vind je aan hun roep, vaak met een gids tijdens een nachtwandeling. Let op de grootte, de oorpluimen en het patroon op het gezicht; de dwerguil is klein en ook overdag actief."
+      }
+    },
+    "trogons-and-quetzals": {
+      "title": {
+        "en": "Trogons and the quetzal",
+        "nl": "Trogons en de quetzal"
+      },
+      "intro": {
+        "en": "Trogons sit upright and still, so look at the colour of the belly, the eye ring and the pattern under the tail. The male quetzal is unmistakable, with tail plumes far longer than its body.",
+        "nl": "Trogons zitten rechtop en stil, dus let op de kleur van de buik, de oogring en het patroon onder de staart. Het mannetje van de quetzal is onmiskenbaar, met staartveren die veel langer zijn dan het lijf."
+      }
+    },
+    "motmots": {
+      "title": {
+        "en": "Motmots",
+        "nl": "Motmots"
+      },
+      "intro": {
+        "en": "Motmots sit quietly and swing their racket-tipped tail like a pendulum. Look at the head pattern and the colour of the underparts: Broad-billed and Rufous Motmots are similar, but Rufous is much bigger.",
+        "nl": "Motmots zitten rustig en zwaaien met hun staart met racketpunten als een slinger. Let op het patroon op de kop en de kleur van de onderkant: de breedsnavelmotmot en de rosse motmot lijken op elkaar, maar de rosse is veel groter."
+      }
+    },
+    "kingfishers": {
+      "title": {
+        "en": "Kingfishers, a jacamar and a puffbird",
+        "nl": "IJsvogels, glansvogel en baardkoekoek"
+      },
+      "intro": {
+        "en": "The green kingfishers come in three sizes, from tiny to big, so size and the colour of the breast tell them apart. The jacamar and the puffbird also sit still and wait for prey, the jacamar with a long thin bill.",
+        "nl": "De groene ijsvogels zijn er in drie maten, van piepklein tot groot, dus de grootte en de kleur van de borst onderscheiden ze. De glansvogel en de baardkoekoek zitten ook stil op prooi te wachten, de glansvogel met een lange dunne snavel."
+      }
+    },
+    "barbets-and-toucans": {
+      "title": {
+        "en": "Toucans, aracaris and a barbet",
+        "nl": "Toekans, arassari's en een baardvogel"
+      },
+      "intro": {
+        "en": "The two big toucans look alike: the Keel-billed has a rainbow bill, the Yellow-throated a two-toned one. The aracaris are slimmer, with a red rump and a band across the belly, and the barbet is a small brown bird of the cloud forest.",
+        "nl": "De twee grote toekans lijken op elkaar: de zwavelborsttoekan heeft een snavel in regenboogkleuren, de geelkeeltoekan een tweekleurige. De arassari's zijn slanker, met een rode stuit en een band over de buik, en de baardvogel is een kleine bruine vogel van het nevelwoud."
+      }
+    },
+    "woodpeckers": {
+      "title": {
+        "en": "Woodpeckers",
+        "nl": "Spechten"
+      },
+      "intro": {
+        "en": "Most regions have their own woodpecker, so where you are helps. Look at the colour of the nape and the belly; the two big ones have a red crest and differ in the white lines on the back and face.",
+        "nl": "De meeste regio's hebben hun eigen specht, dus waar je bent helpt. Let op de kleur van de nek en de buik; de twee grote hebben een rode kuif en verschillen in de witte strepen op rug en kop."
+      }
+    },
+    "falcons-and-caracaras": {
+      "title": {
+        "en": "Falcons and caracaras",
+        "nl": "Valken en caracara's"
+      },
+      "intro": {
+        "en": "The caracaras are scavengers that walk on the ground; the falcons hunt in the air. Laughing Falcon has a black mask, and Bat Falcon is small and dark and hunts bats and swifts at dusk.",
+        "nl": "De caracara's zijn aaseters die over de grond lopen; de valken jagen in de lucht. De lachvalk heeft een zwart masker, en de vleermuisvalk is klein en donker en jaagt in de schemering op vleermuizen en gierzwaluwen."
+      }
+    },
+    "parrots-parakeets-and-allies-1": {
+      "title": {
+        "en": "Parrots and a small parakeet",
+        "nl": "Papegaaien en een kleine parkiet"
+      },
+      "intro": {
+        "en": "Parrots often fly over fast and calling, so look at the head and the shape: the amazon is big and green, White-crowned Parrot has a white cap, Brown-hooded Parrot a brown head. The parakeet is small with an orange chin spot.",
+        "nl": "Papegaaien vliegen vaak snel en roepend over, dus let op de kop en de vorm: de grote amazone is groot en groen, het witkopmargrietje heeft een witte kap, de roodoorpapegaai een bruine kop. De parkiet is klein met een oranje vlekje op de kin."
+      }
+    },
+    "parrots-parakeets-and-allies-2": {
+      "title": {
+        "en": "Macaws and two parakeets",
+        "nl": "Ara's en twee parkieten"
+      },
+      "intro": {
+        "en": "The two macaws are huge and long-tailed: the Scarlet red, blue and yellow, the Great Green mostly green. The parakeets have long pointed tails; one lives in the Central Valley and the lowlands, the other in the southern mountains.",
+        "nl": "De twee ara's zijn enorm en hebben lange staarten: de geelvleugelara is rood, blauw en geel, de buffonara vooral groen. De parkieten hebben lange spitse staarten; de ene leeft in de Centrale Vallei en het laagland, de andere in de bergen in het zuiden."
+      }
+    },
+    "antbirds": {
+      "title": {
+        "en": "Antbirds and antshrikes",
+        "nl": "Miervogels en mierklauwieren"
+      },
+      "intro": {
+        "en": "These birds keep low in dense cover, and the male and female often look different. The antshrikes have a heavy hooked bill; the antbirds are slimmer.",
+        "nl": "Deze vogels blijven laag in dichte begroeiing, en het mannetje en het vrouwtje zien er vaak anders uit. De mierklauwieren hebben een zware haaksnavel; de miervogels zijn slanker."
+      }
+    },
+    "woodcreepers": {
+      "title": {
+        "en": "Woodcreepers and their highland cousins",
+        "nl": "Muisspechten en hun neven in de bergen"
+      },
+      "intro": {
+        "en": "Woodcreepers climb tree trunks with their stiff tails, like a treecreeper; look at the size and the shape of the bill. The other three are brown ovenbirds that forage among the moss and epiphytes high in the mountains.",
+        "nl": "Muisspechten klimmen met hun stijve staart langs stammen, net als een boomkruiper; let op de grootte en de vorm van de snavel. De andere drie zijn bruine ovenvogels die hoog in de bergen tussen mos en epifyten zoeken."
+      }
+    },
+    "manakins": {
+      "title": {
+        "en": "Manakins, a bellbird and a fruitcrow",
+        "nl": "Manakins, klokvogel en vruchtenkraai"
+      },
+      "intro": {
+        "en": "Manakins are small and round, and the males dance at display sites in the forest; the region you are in tells you which to expect. The bellbird and the fruitcrow are much larger relatives of the cotinga family.",
+        "nl": "Manakins zijn klein en rond, en de mannetjes dansen op baltsplekken in het bos; de regio waar je bent zegt welke je kunt verwachten. De klokvogel en de vruchtenkraai zijn veel grotere vogels uit de familie van de cotinga's."
+      }
+    },
+    "becards-tityras-and-allies": {
+      "title": {
+        "en": "Tityra and becards",
+        "nl": "Tityra en bekardes"
+      },
+      "intro": {
+        "en": "The tityra is pale grey with a red face and grunts like a frog. The becards are smaller and big-headed; male and female look different, so look at the pattern of the wings and the colour of the cap.",
+        "nl": "De tityra is lichtgrijs met een rood gezicht en knort als een kikker. De bekardes zijn kleiner en hebben een grote kop; mannetje en vrouwtje zien er anders uit, dus let op het patroon op de vleugels en de kleur van de kap."
+      }
+    },
+    "sharpbill-royal-flycatchers-and-allies": {
+      "title": {
+        "en": "Small flycatchers and a royal one",
+        "nl": "Kleine tirannen en een kroontiran"
+      },
+      "intro": {
+        "en": "Four small flycatchers, each in a different place: gardens, forest edges, mountain rivers and lowland streams. Look at the bill shape and how and where they sit.",
+        "nl": "Vier kleine tirannen, elk op een andere plek: tuinen, bosranden, bergrivieren en beken in het laagland. Let op de vorm van de snavel en hoe en waar ze zitten."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies-1": {
+      "title": {
+        "en": "Kingbird, pewees and small flycatchers",
+        "nl": "Koningstiran, piewies en kleine tirannen"
+      },
+      "intro": {
+        "en": "Flycatchers that sally out from an open perch and return to it. The kingbird is grey and yellow, the pewees are dull grey-brown, and Black Phoebe sits on rocks in rivers.",
+        "nl": "Tirannen die vanaf een open zitplek een vlucht maken en er weer terugkomen. De koningstiran is grijs en geel, de piewies zijn dof grijsbruin, en de zwarte phoebe zit op rotsen in rivieren."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies-2": {
+      "title": {
+        "en": "Kiskadee and other yellow flycatchers",
+        "nl": "Kiskadie en andere gele tirannen"
+      },
+      "intro": {
+        "en": "Great Kiskadee, Boat-billed and Social Flycatchers all have a yellow belly and a striped head, so look at the size of the bill and the rufous in the wing. Dusky-capped Flycatcher and the attila have plain heads.",
+        "nl": "De grote kiskadie, de bootsnaveltiran en de roodkruintiran hebben alle drie een gele buik en een gestreepte kop, dus let op de grootte van de snavel en het roestbruin in de vleugel. De monnikskaptiran en de attila hebben een effen kop."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies-3": {
+      "title": {
+        "en": "More flycatchers, many of them migrants",
+        "nl": "Meer tirannen, veel ervan trekvogels"
+      },
+      "intro": {
+        "en": "Eastern Kingbird passes through in big flocks in autumn and spring; Piratic, Streaked and Sulphur-bellied Flycatchers are mostly here in the breeding season. Look at the streaks and the size of the bill.",
+        "nl": "De oostelijke koningstiran trekt in het najaar en voorjaar in grote groepen door; de piraattiran, de gestreepte tiran en de witvoorhoofdtiran zijn hier vooral in de broedtijd. Let op de strepen en de grootte van de snavel."
+      }
+    },
+    "vireos": {
+      "title": {
+        "en": "Vireos, a peppershrike and jays",
+        "nl": "Vireo's, peperklauwier en gaaien"
+      },
+      "intro": {
+        "en": "Two groups that only share this unit. The vireos are small green and yellow birds of the leaves; look at the eye stripe. The jays are big and noisy: brown in the lowlands, long-tailed in Guanacaste, blue in the cloud forest.",
+        "nl": "Twee groepen die alleen deze eenheid delen. De vireo's zijn kleine groen-gele vogels tussen de bladeren; let op de oogstreep. De gaaien zijn groot en luidruchtig: bruin in het laagland, met een lange staart in Guanacaste, blauw in het nevelwoud."
+      }
+    },
+    "martins-and-swallows": {
+      "title": {
+        "en": "Swallows and a martin",
+        "nl": "Zwaluwen"
+      },
+      "intro": {
+        "en": "Look at the colour of the rump and the throat, and the shape of the tail. The two rough-winged swallows are brown and very alike; the Southern one has a pale rump and a buff throat.",
+        "nl": "Let op de kleur van de stuit en de keel, en de vorm van de staart. De twee ruwvleugelzwaluwen zijn bruin en lijken sterk op elkaar; de Zuid-Amerikaanse heeft een lichte stuit en een okerkleurige keel."
+      }
+    },
+    "wrens-1": {
+      "title": {
+        "en": "Wrens",
+        "nl": "Winterkoningen"
+      },
+      "intro": {
+        "en": "Bigger wrens than the one you know from home, and most sing loudly in duets. Look at the face pattern and the bars or spots on the underparts; the house wren is plain and brown.",
+        "nl": "Grotere winterkoningen dan die van thuis, en de meeste zingen luid in duetten. Let op het patroon op de kop en de strepen of vlekken op de onderkant; de huiswinterkoning is effen bruin."
+      }
+    },
+    "wrens-2": {
+      "title": {
+        "en": "Wood-wrens, two wrens and a dipper",
+        "nl": "Boswinterkoningen en een waterspreeuw"
+      },
+      "intro": {
+        "en": "The wood-wrens are small, with short tails, and live in the forest undergrowth: one in the lowlands, the other in the mountains. The dipper stands on rocks in rushing mountain streams.",
+        "nl": "De boswinterkoningen zijn klein, met korte staarten, en leven in de onderlaag van het bos: de ene in het laagland, de andere in de bergen. De waterspreeuw staat op rotsen in snelstromende bergbeken."
+      }
+    },
+    "thrushes": {
+      "title": {
+        "en": "Thrushes and a solitaire",
+        "nl": "Lijsters en een solitaire"
+      },
+      "intro": {
+        "en": "Clay-coloured Thrush is plain brown with a yellowish bill. The other thrushes live in the mountains; look at the colour of the bill and the eye ring. The solitaire is grey with a black face and an orange bill.",
+        "nl": "De graylijster is effen bruin met een geelachtige snavel. De andere lijsters leven in de bergen; let op de kleur van de snavel en de oogring. De solitaire is grijs met een zwart gezicht en een oranje snavel."
+      }
+    },
+    "silky-flycatchers": {
+      "title": {
+        "en": "Silky-flycatchers and finches",
+        "nl": "Zijdevliegenvangers en vinken"
+      },
+      "intro": {
+        "en": "Two groups that only share this unit. The silky-flycatchers are sleek, crested birds of the highlands. The euphonia and the chlorophonia are small, round fruit-eaters, and the goldfinch is yellow and black.",
+        "nl": "Twee groepen die alleen deze eenheid delen. De zijdevliegenvangers zijn slanke vogels met een kuif, in het hoogland. De organisten zijn kleine, ronde vruchteneters, en de witbandsijs is geel met zwart."
+      }
+    },
+    "new-world-sparrows": {
+      "title": {
+        "en": "Sparrows, brushfinch, junco and kin",
+        "nl": "Gorzen, junco en hun verwanten"
+      },
+      "intro": {
+        "en": "American sparrows are often boldly patterned on the head. Look at the stripes and the colour of the bill; the junco has bright yellow eyes.",
+        "nl": "Amerikaanse gorzen hebben vaak een opvallend patroon op de kop. Let op de strepen en de kleur van de snavel; de junco heeft felgele ogen."
+      }
+    },
+    "wrenthrush": {
+      "title": {
+        "en": "Wrenthrush",
+        "nl": "Zeledonia"
+      },
+      "intro": {
+        "en": "A small, round, short-tailed bird of dense undergrowth, slate grey with an orange crown. Listen for its high call in the bamboo.",
+        "nl": "Een kleine, ronde vogel met een korte staart in dicht struikgewas, leigrijs met een oranje kruin. Luister naar zijn hoge roep in het bamboe."
+      }
+    },
+    "blackbirds-1": {
+      "title": {
+        "en": "Oropendolas, a cacique and an oriole",
+        "nl": "Oropendola's, buidelspreeuw en troepiaal"
+      },
+      "intro": {
+        "en": "Oropendolas are big, with yellow outer tail feathers, and nest in colonies; look at the colour of the bill and the head. The cacique is black with a red rump, and the oriole lives in the dry north-west.",
+        "nl": "Oropendola's zijn groot, met gele buitenste staartveren, en broeden in kolonies; let op de kleur van de snavel en de kop. De buidelspreeuw is zwart met een rode stuit, en de troepiaal leeft in het droge noordwesten."
+      }
+    },
+    "blackbirds-2": {
+      "title": {
+        "en": "Grackle, blackbird, oriole and cowbird",
+        "nl": "Troepialen en een koevogel"
+      },
+      "intro": {
+        "en": "Three black birds and an orange one. The grackle is big with a long, keel-shaped tail; the blackbird is all black with a slim bill, the cowbird glossy with a short bill. Baltimore Oriole is a winter visitor.",
+        "nl": "Drie zwarte vogels en een oranje. De langstaarttroepiaal is groot met een lange staart in de vorm van een kiel; de rouwtroepiaal is helemaal zwart met een slanke snavel, de glanskoevogel glanzend met een korte snavel. De Baltimoretroepiaal is een wintergast."
+      }
+    },
+    "wood-warblers-1": {
+      "title": {
+        "en": "Warblers, mostly winter visitors",
+        "nl": "Zangers, vooral wintergasten"
+      },
+      "intro": {
+        "en": "Five of these come from North America for the winter and are often in dull plumage. The two residents are easier: Chestnut-capped Warbler in thickets, Flame-throated Warbler in highland oaks.",
+        "nl": "Vijf hiervan komen in de winter uit Noord-Amerika en hebben vaak een dof kleed. De twee standvogels zijn makkelijker: de kastanjekruinzanger in struikgewas, de vuurkeelzanger in eikenbossen in het hoogland."
+      }
+    },
+    "wood-warblers-2": {
+      "title": {
+        "en": "Warblers, mostly residents",
+        "nl": "Zangers, vooral standvogels"
+      },
+      "intro": {
+        "en": "Two winter visitors and four residents. Look at the face and the crown stripes: the residents differ mostly in their head pattern, and they live at different heights.",
+        "nl": "Twee wintergasten en vier standvogels. Let op het gezicht en de strepen op de kruin: de standvogels verschillen vooral in het patroon op de kop, en ze leven op verschillende hoogtes."
+      }
+    },
+    "wood-warblers-3": {
+      "title": {
+        "en": "Redstarts and four more warblers",
+        "nl": "Meniezanger, halsbandzanger en meer"
+      },
+      "intro": {
+        "en": "The two redstarts fan their tails to flush insects; one has a yellow face, the other a dark one. Look at the black-and-white stripes, the black cap and the buff rump on the others.",
+        "nl": "De meniezanger en de halsbandzanger spreiden hun staart om insecten op te jagen; de een heeft een geel gezicht, de ander een donker. Let bij de andere op de zwart-witte strepen, de zwarte kap en de lichtbruine stuit."
+      }
+    },
+    "cardinals-grosbeaks-and-allies": {
+      "title": {
+        "en": "Ant-tanagers, tanagers and grosbeaks",
+        "nl": "Miertangaren, tangaren en kardinalen"
+      },
+      "intro": {
+        "en": "Summer and Scarlet Tanagers come from North America for the winter or on passage; Flame-coloured Tanager lives in the mountains. The ant-tanagers move in noisy groups through the forest, and the grosbeaks have heavy bills.",
+        "nl": "De zomertangare en de zwartvleugeltangare komen 's winters of op doortrek uit Noord-Amerika; de bloedtangare leeft in de bergen. De miertangaren trekken in luidruchtige groepjes door het bos, en de kardinalen hebben zware snavels."
+      }
+    },
+    "tanagers-and-allies-1": {
+      "title": {
+        "en": "Tanagers and saltators",
+        "nl": "Tangaren en saltators"
+      },
+      "intro": {
+        "en": "Birds of gardens and forest edges. Look at the colour of the rump and the shoulders; the saltators are bigger, olive and grey, with thick bills.",
+        "nl": "Vogels van tuinen en bosranden. Let op de kleur van de stuit en de schouders; de saltators zijn groter, olijfgroen en grijs, met dikke snavels."
+      }
+    },
+    "tanagers-and-allies-2": {
+      "title": {
+        "en": "Colourful tanagers",
+        "nl": "Kleurrijke tangaren"
+      },
+      "intro": {
+        "en": "Blue-grey Tanager is in every garden. The others travel in mixed flocks in the foothills and at fruit feeders; look at the colour of the head and the spots or spangles.",
+        "nl": "De bisschopstangare zit in elke tuin. De andere trekken in gemengde groepen door de uitlopers van de bergen en komen naar fruit; let op de kleur van de kop en de vlekjes of spikkels."
+      }
+    },
+    "tanagers-and-allies-3": {
+      "title": {
+        "en": "Honeycreepers, dacnises and a tanager",
+        "nl": "Suikervogels, pitpits en een tangare"
+      },
+      "intro": {
+        "en": "Small, bright birds of the canopy. The honeycreepers have thin curved bills and coloured legs, red or yellow; the dacnises have short pointed bills. The females are mostly green.",
+        "nl": "Kleine, felgekleurde vogels in de boomtoppen. De suikervogels hebben dunne gebogen snavels en gekleurde poten, rood of geel; de pitpits hebben korte spitse snavels. De vrouwtjes zijn vooral groen."
+      }
+    },
+    "tanagers-and-allies-4": {
+      "title": {
+        "en": "Seedeaters and two nectar thieves",
+        "nl": "Zaadeters en twee nectardieven"
+      },
+      "intro": {
+        "en": "The seedeaters and grassquits feed in grassy roadsides and gardens; the males are black or patterned, the females brown and hard to name. The Bananaquit and the flowerpiercer take nectar, the flowerpiercer by piercing the base of the flower.",
+        "nl": "De dikbekjes en grondvinken zoeken voedsel in grasbermen en tuinen; de mannetjes zijn zwart of getekend, de vrouwtjes bruin en lastig te benoemen. Het suikerdiefje en de berghoningkruiper drinken nectar, de berghoningkruiper door een gaatje in de voet van de bloem te prikken."
+      }
+    }
+  },
+  "species": {
+    "resque1": {
+      "here": {
+        "en": "Best seen at Savegre (San Gerardo de Dota) or Monteverde in the dry season, roughly January to April, when males with long plumes feed on wild avocados.",
+        "nl": "Je ziet hem het best bij Savegre (San Gerardo de Dota) of in Monteverde in het droge seizoen, ongeveer januari tot april, als mannetjes met lange staartveren wilde avocado's eten."
+      }
+    },
+    "scamac1": {
+      "here": {
+        "en": "Easiest at Carara and around the Tárcoles River, and on the Osa Peninsula, where pairs fly over calling harshly.",
+        "nl": "Het makkelijkst in Carara en rond de rivier de Tárcoles, en op het schiereiland Osa, waar paartjes schor roepend overvliegen."
+      }
+    },
+    "grgmac": {
+      "here": {
+        "en": "An endangered bird of the northern Caribbean lowlands; the lodges around Boca Tapada and Maquenque, near the Nicaraguan border, are the best places to look.",
+        "nl": "Een bedreigde vogel van het noordelijke Caribische laagland; de lodges rond Boca Tapada en Maquenque, bij de grens met Nicaragua, zijn de beste plekken."
+      }
+    },
+    "thwbel": {
+      "here": {
+        "en": "Males call from the cloud forest at Monteverde from about March to July; the rest of the year they move down to lower forest.",
+        "nl": "De mannetjes roepen ongeveer van maart tot juli in het nevelwoud van Monteverde; de rest van het jaar trekken ze naar lager gelegen bos."
+      }
+    },
+    "sunbit1": {
+      "here": {
+        "en": "Look for it on rocks and gravel bars along forest rivers in the foothills, such as at Rancho Naturalista and in the Sarapiquí area.",
+        "nl": "Zoek hem op rotsen en grindbanken langs bosrivieren in de uitlopers van de bergen, zoals bij Rancho Naturalista en rond Sarapiquí."
+      }
+    },
+    "jabiru": {
+      "here": {
+        "en": "Palo Verde and Caño Negro are the places to see it, best in the dry season from January to April, when the marshes shrink.",
+        "nl": "Palo Verde en Caño Negro zijn de plekken om hem te zien, het best in het droge seizoen van januari tot april, als de moerassen opdrogen."
+      }
+    },
+    "clcrob": {
+      "here": {
+        "en": "Costa Rica's national bird, the yigüirro; its song in the dry season is said to call in the rains.",
+        "nl": "De nationale vogel van Costa Rica, de yigüirro; zijn zang aan het eind van het droge seizoen zou de regen aankondigen."
+      }
+    },
+    "kebtou1": {
+      "here": {
+        "en": "The Yellow-throated Toucan shares most of its range and looks alike; check the bill, which is green, orange and red on this one.",
+        "nl": "De geelkeeltoekan komt in bijna hetzelfde gebied voor en lijkt erop; kijk naar de snavel, die bij deze soort groen, oranje en rood is."
+      }
+    },
+    "fibara1": {
+      "here": {
+        "en": "Lives only on the south Pacific side, from Carara to the Osa Peninsula; on the Caribbean side Collared Aracari replaces it.",
+        "nl": "Leeft alleen aan de zuidelijke Pacifische kant, van Carara tot het schiereiland Osa; aan de Caribische kant neemt de halsbandarassari zijn plaats in."
+      }
+    },
+    "bobfly1": {
+      "here": {
+        "en": "Great Kiskadee looks almost the same; the Boat-billed has a much heavier bill and no rufous in the wings.",
+        "nl": "De grote kiskadie lijkt bijna hetzelfde; de bootsnaveltiran heeft een veel zwaardere snavel en geen roestbruin in de vleugels."
+      }
+    },
+    "yelwar": {
+      "here": {
+        "en": "Most are winter visitors from North America; the chestnut-headed birds in the mangroves are a resident form, often called Mangrove Warbler.",
+        "nl": "De meeste zijn wintergasten uit Noord-Amerika; de vogels met een kastanjebruine kop in de mangroven zijn een standvorm, vaak mangrovezanger genoemd."
+      }
+    },
+    "swtkit": {
+      "here": {
+        "en": "Most arrive from South America in January and leave by September, so expect few on a trip in November or December.",
+        "nl": "De meeste komen in januari uit Zuid-Amerika en vertrekken weer voor september, dus verwacht er weinig op een reis in november of december."
+      }
+    },
+    "pregrs2": {
+      "here": {
+        "en": "Lives in coffee plantations, gardens and scrubby edges in the Central Valley; the gardens of hotels in Santo Domingo and Heredia are a good place to try.",
+        "nl": "Leeft in koffieplantages, tuinen en ruige randen in de Centrale Vallei; de tuinen van hotels in Santo Domingo en Heredia zijn een goede plek om het te proberen."
+      }
+    }
+  },
+  "first_day": {
+    "title": {
+      "en": "Your first day",
+      "nl": "Je eerste dag"
+    },
+    "intro": {
+      "en": "These 20 birds are the ones you'll see on your first walk: in a hotel garden in San José or the Central Valley, along the road from the airport, or on the wires in town. Most are common and not at all shy. Know these, and day one already feels familiar.",
+      "nl": "Deze 20 vogels zie je bij je eerste wandeling: in een hoteltuin in San José of de Centrale Vallei, langs de weg vanaf het vliegveld of op de draden in de stad. De meeste zijn algemeen en helemaal niet schuw. Ken je deze, dan voelt de eerste dag meteen vertrouwd."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "Costa Rica has few birds of its own. It sits on a narrow land bridge, and most of its forests run on into Nicaragua and Panama, so this trip has only five endemics, and the Dark Pewee also reaches just over the border into western Panama. The real specials are the birds of the Talamanca and Chiriquí mountains, which Costa Rica shares only with western Panama: Resplendent Quetzal, Volcano and Fiery-throated Hummingbirds, Volcano Junco and Wrenthrush. You'll find them in the normal units. Cocos Island, far out in the Pacific, has three endemics of its own, but only liveaboard boats go there, so they are not in this trip.",
+      "nl": "Costa Rica heeft weinig eigen vogels. Het ligt op een smalle landbrug, en de meeste bossen lopen door in Nicaragua en Panama, dus deze reis omvat maar vijf endemen, en de Barrancapiewie komt ook net over de grens in West-Panama voor. De echte specialiteiten zijn de vogels van de Talamanca- en Chiriquíbergen, die Costa Rica alleen met West-Panama deelt: de quetzal, de vulkaankolibrie, de Irazukolibrie, de vulkaanjunco en de zeledonia. Je vindt ze in de gewone eenheden. Het Cocoseiland, ver in de Grote Oceaan, heeft drie eigen endemen, maar er gaan alleen boten heen waarop je slaapt, dus die zitten niet in deze reis."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "Talamanca highlands",
+          "nl": "Het Talamancagebergte"
+        },
+        "text": {
+          "en": "The oak and cloud forests of the mountains hold the Dark Pewee and the Panama-shared specials. San Gerardo de Dota along the Río Savegre is the classic base for quetzal, Wrenthrush and the highland hummingbirds; the páramo on Cerro de la Muerte has the Volcano Junco, and Monteverde further north is good for the Coppery-headed Emerald.",
+          "nl": "In de eiken- en nevelwouden van de bergen leven de Barrancapiewie en de specialiteiten die Costa Rica met Panama deelt. San Gerardo de Dota aan de Savegre is de klassieke uitvalsbasis voor quetzal, zeledonia en de kolibries van het hoogland; op de páramo van de Cerro de la Muerte leeft de vulkaanjunco, en Monteverde verder naar het noorden is goed voor de koperkopsmaragdkolibrie."
+        }
+      },
+      {
+        "title": {
+          "en": "Central Valley",
+          "nl": "De Centrale Vallei"
+        },
+        "text": {
+          "en": "Cabanis's Ground-Sparrow lives in coffee farms and gardens around San José, Heredia and Alajuela, close to the airport. The Coppery-headed Emerald comes to feeders on the slopes above the valley, at Cinchona and Poás.",
+          "nl": "De Costaricaanse grondgors leeft in koffieplantages en tuinen rond San José, Heredia en Alajuela, vlak bij het vliegveld. De koperkopsmaragdkolibrie komt naar de voederflessen op de hellingen boven de vallei, bij Cinchona en de Poás."
+        }
+      },
+      {
+        "title": {
+          "en": "Pacific south-west",
+          "nl": "Het zuidwesten aan de Pacifische kust"
+        },
+        "text": {
+          "en": "Black-cheeked Ant-Tanager lives only in the forests around the Golfo Dulce, on the Osa Peninsula and in Corcovado and Piedras Blancas. Mangrove Hummingbird feeds in the mangroves of the Pacific coast, from the Gulf of Nicoya south; Carara and the Tárcoles are on the way.",
+          "nl": "De zwartwangmiertangare leeft alleen in de bossen rond de Golfo Dulce, op het schiereiland Osa en in Corcovado en Piedras Blancas. De mangroveamazilia zoekt voedsel in de mangroven van de Pacifische kust, van de Golf van Nicoya naar het zuiden; Carara en de Tárcoles liggen op de route."
+        }
+      },
+      {
+        "title": {
+          "en": "Caribbean lowlands and Guanacaste",
+          "nl": "Caribisch laagland en Guanacaste"
+        },
+        "text": {
+          "en": "These have no endemics of their own, but you can't skip them. Tortuguero, La Selva and Selva Verde have the rainforest birds, and the dry forest and marshes of Palo Verde and Santa Rosa have Jabiru, Turquoise-browed Motmot and White-throated Magpie-Jay.",
+          "nl": "Deze hebben geen eigen endemen, maar je kunt ze niet overslaan. Tortuguero, La Selva en Selva Verde hebben de vogels van het regenwoud, en het droogbos en de moerassen van Palo Verde en Santa Rosa hebben de jabiroe, de wenkbrauwmotmot en de witkeelekstergaai."
+        }
+      }
+    ],
+    "families": [],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "Five endemics",
+          "nl": "Vijf endemen"
+        }
+      }
+    }
+  }
+}

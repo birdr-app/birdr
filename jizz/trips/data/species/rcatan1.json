@@ -1,0 +1,22 @@
+{
+  "code": "rcatan1",
+  "name": {
+    "en": "Red-crowned Ant-Tanager",
+    "nl": "Rode miertangare"
+  },
+  "latin": "Habia rubica",
+  "look_for": [
+    {
+      "en": "Male dull red-brown, slightly brighter **throat**",
+      "nl": "Mannetje dof roodbruin, iets fellere **keel**"
+    },
+    {
+      "en": "Red **crown** stripe edged with black",
+      "nl": "Rode **kruinstreep** met zwarte randen"
+    },
+    {
+      "en": "Female brown with a yellow **crown** stripe",
+      "nl": "Vrouwtje bruin met een gele **kruinstreep**"
+    }
+  ]
+}

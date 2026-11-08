@@ -1,0 +1,22 @@
+{
+  "code": "bicant2",
+  "name": {
+    "en": "Bicoloured Antbird",
+    "nl": "Tweekleurige miervogel"
+  },
+  "latin": "Gymnopithys bicolor",
+  "look_for": [
+    {
+      "en": "Brown above, white **throat** and **breast**",
+      "nl": "Bruin van boven, witte **keel** en **borst**"
+    },
+    {
+      "en": "Dark **cheeks**, bare blue skin round the **eye**",
+      "nl": "Donkere **wangen**, kale blauwe huid rond het **oog**"
+    },
+    {
+      "en": "Follows army-ant swarms low in the forest",
+      "nl": "Volgt zwermen trekmieren laag in het bos"
+    }
+  ]
+}

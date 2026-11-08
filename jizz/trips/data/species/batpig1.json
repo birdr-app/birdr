@@ -1,0 +1,22 @@
+{
+  "code": "batpig1",
+  "name": {
+    "en": "Band-tailed Pigeon",
+    "nl": "Bandstaartduif"
+  },
+  "latin": "Patagioenas fasciata",
+  "look_for": [
+    {
+      "en": "Thin white crescent on the **nape**",
+      "nl": "Smalle witte halve maan in de **nek**"
+    },
+    {
+      "en": "Yellow **bill** with a dark tip",
+      "nl": "Gele **snavel** met een donkere punt"
+    },
+    {
+      "en": "Pale grey band at the end of the **tail**",
+      "nl": "Lichtgrijze band aan het eind van de **staart**"
+    }
+  ]
+}

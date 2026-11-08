@@ -5,12 +5,16 @@ first) become the card photos; edit ``card`` by hand to choose others, and runni
 hand-picked card list as long as those photos are still approved. Species with fewer than
 ``--min`` approved photos are listed so they can go through the media review page first.
 
+Home birds of the country's lookalike pairs (``scope.json``) that aren't in the trip itself get
+photos too, under ``home``.
+
 Reviews are read from the local database, or with --api from a Motmot server's public media list,
 which avoids waiting for a fresh database copy after a review session.
 
 Examples:
   ./manage.py trip_prep_media --country LK
   ./manage.py trip_prep_media --country LK --api https://motmot.club
+  ./manage.py trip_prep_media --country LK --api https://motmot.club --home-only
 """
 
 from __future__ import annotations
@@ -21,7 +25,7 @@ import urllib.request
 
 from django.core.management.base import BaseCommand, CommandError
 
-from jizz.trips.content import country_dir, read_json, scope_species, write_json
+from jizz.trips.content import country_dir, home_codes, load_scope, read_json, scope_species, write_json
 
 CARD_PHOTOS = 3
 USER_AGENT = 'MotmotTripPrep/1.0 (https://motmot.club)'
@@ -81,6 +85,7 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('--country', required=True, help='Country code, e.g. LK')
         parser.add_argument('--api', help='Read reviews from this Motmot server instead of the local database')
+        parser.add_argument('--home-only', action='store_true', help="Pick only the lookalike home birds' photos")
         parser.add_argument('--min', type=int, default=6, help='Report species with fewer approved photos (default 6)')
 
     def handle(self, *args, **options):
@@ -93,27 +98,52 @@ class Command(BaseCommand):
         missing = [c for c in codes if c not in species]
         if missing:
             raise CommandError(f'Not in scope any more: {", ".join(missing)}; run trip_prep_units first')
-        ids = [species[c].species_id for c in codes]
+        ids = {c: species[c].species_id for c in codes}
+        names = {c: species[c].name for c in codes}
 
-        approved = approved_from_api(options['api'], ids) if options['api'] else approved_from_db(ids)
+        from jizz.models import Species
+
+        homes = home_codes(load_scope(country), set(codes))
+        home_rows = {s.code: s for s in Species.objects.filter(code__in=homes)}
+        unknown = [c for c in homes if c not in home_rows]
+        if unknown:
+            raise CommandError(f'Lookalike home birds not in the database: {", ".join(unknown)}')
+        for code in homes:
+            ids[code] = home_rows[code].id
+            names[code] = home_rows[code].name
+
+        if options['home_only']:
+            ids = {c: ids[c] for c in homes}
+        wanted = list(ids.values())
+        approved = approved_from_api(options['api'], wanted) if options['api'] else approved_from_db(wanted)
 
         path = country_dir(country) / 'media.json'
-        old = (read_json(path, {}) or {}).get('species', {})
-        out, low = {}, []
-        for code in codes:
-            photos = approved.get(species[code].species_id, [])
+        old_file = read_json(path, {}) or {}
+        old = {**old_file.get('home', {}), **old_file.get('species', {})}
+        low = []
+
+        def pick(code):
+            photos = approved.get(ids[code], [])
             kept = [m for m in old.get(code, {}).get('card', []) if m in photos]
             card = kept if len(kept) == CARD_PHOTOS else photos[:CARD_PHOTOS]
-            out[code] = {
-                'species_id': species[code].species_id,
-                'card': card,
-                'quiz': [m for m in photos if m not in card],
-            }
             if len(photos) < options['min']:
-                low.append(f'{species[code].name}: {len(photos)}')
+                low.append(f'{names[code]}: {len(photos)}')
+            return {'species_id': ids[code], 'card': card, 'quiz': [m for m in photos if m not in card]}
 
-        write_json(path, {'country': country, 'source': options['api'] or 'database', 'species': out})
-        self.stdout.write(f'{country}: {len(codes)} species, {len(low)} with fewer than {options["min"]} approved photos')
+        if options['home_only']:
+            out = old_file.get('species', {})
+        else:
+            out = {code: pick(code) for code in codes}
+        home = {code: pick(code) for code in homes}
+
+        data = {'country': country, 'source': options['api'] or 'database', 'species': out}
+        if home:
+            data['home'] = home
+        write_json(path, data)
+        self.stdout.write(
+            f'{country}: {len(codes)} species and {len(homes)} lookalike home birds, '
+            f'{len(low)} with fewer than {options["min"]} approved photos'
+        )
         for line in low:
             self.stdout.write(f'  {line}')
         self.stdout.write(self.style.SUCCESS(f'Wrote {path}'))

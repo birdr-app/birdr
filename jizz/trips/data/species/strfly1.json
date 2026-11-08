@@ -1,0 +1,22 @@
+{
+  "code": "strfly1",
+  "name": {
+    "en": "Streaked Flycatcher",
+    "nl": "Gestreepte tiran"
+  },
+  "latin": "Myiodynastes maculatus",
+  "look_for": [
+    {
+      "en": "Heavy dark streaks above and below",
+      "nl": "Zware donkere strepen van boven en van onder"
+    },
+    {
+      "en": "Rufous **rump** and **tail**",
+      "nl": "Roodbruine **stuit** en **staart**"
+    },
+    {
+      "en": "Whitish below, pale base to the **bill**",
+      "nl": "Witachtig van onder, lichte **snavelbasis**"
+    }
+  ]
+}

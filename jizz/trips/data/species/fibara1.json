@@ -1,0 +1,22 @@
+{
+  "code": "fibara1",
+  "name": {
+    "en": "Fiery-billed Aracari",
+    "nl": "Vuursnavelarassari"
+  },
+  "latin": "Pteroglossus frantzii",
+  "look_for": [
+    {
+      "en": "Fiery orange-red upper **bill**",
+      "nl": "Vurig oranjerode bovensnavel"
+    },
+    {
+      "en": "Red band across the yellow **belly**",
+      "nl": "Rode band over de gele **buik**"
+    },
+    {
+      "en": "Red **rump**; Pacific side only",
+      "nl": "Rode **stuit**; alleen aan de Pacifische kant"
+    }
+  ]
+}

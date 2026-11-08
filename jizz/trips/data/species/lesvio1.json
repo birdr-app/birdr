@@ -1,0 +1,22 @@
+{
+  "code": "lesvio1",
+  "name": {
+    "en": "Lesser Violetear",
+    "nl": "Kleine violetoorkolibrie"
+  },
+  "latin": "Colibri cyanotus",
+  "look_for": [
+    {
+      "en": "Glittering green all over",
+      "nl": "Overal glanzend groen"
+    },
+    {
+      "en": "Violet-blue patch behind the **eye**",
+      "nl": "Violetblauwe vlek achter het **oog**"
+    },
+    {
+      "en": "Dark band near the end of the **tail**",
+      "nl": "Donkere band vlak voor het eind van de **staart**"
+    }
+  ]
+}

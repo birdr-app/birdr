@@ -1,0 +1,19 @@
+{
+  "slug": "silky-flycatchers",
+  "about": {
+    "en": "Slim, long-tailed birds with soft, silky plumage, in grey, black or yellow and olive, some with a crest. They live in mountain forest or dry scrub, eat mainly mistletoe and other berries, and also fly out from a perch to catch insects. They often travel in small, chattering flocks.",
+    "nl": "Slanke vogels met een lange staart en zacht, zijdeachtig verenkleed, in grijs, zwart of geel met olijfgroen, sommige met een kuif. Ze leven in bergbos of droog struikgewas, eten vooral bessen van maretak en andere struiken en vliegen ook vanaf een tak uit om insecten te vangen. Vaak trekken ze rond in kleine, kwetterende groepjes."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "old-world-flycatchers",
+        "waxwings"
+      ],
+      "text": {
+        "en": "Despite the name they are not flycatchers. They are close relatives of the waxwings, with the same silky plumage and taste for berries.",
+        "nl": "Ondanks de naam zijn het geen vliegenvangers. Het zijn naaste verwanten van de pestvogels, met hetzelfde zijdeachtige verenkleed en dezelfde voorliefde voor bessen."
+      }
+    }
+  ]
+}

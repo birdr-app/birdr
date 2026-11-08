@@ -1,0 +1,22 @@
+{
+  "code": "grekis",
+  "name": {
+    "en": "Great Kiskadee",
+    "nl": "Grote kiskadie"
+  },
+  "latin": "Pitangus sulphuratus",
+  "look_for": [
+    {
+      "en": "Bold black and white stripes on the **head**",
+      "nl": "Opvallende zwarte en witte strepen op de **kop**"
+    },
+    {
+      "en": "Rufous edges on **wings** and **tail**",
+      "nl": "Roodbruine randen op **vleugels** en **staart**"
+    },
+    {
+      "en": "Yellow **belly**, strong straight **bill**",
+      "nl": "Gele **buik**, forse rechte **snavel**"
+    }
+  ]
+}

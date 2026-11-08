@@ -1,0 +1,29 @@
+{
+  "slug": "wood-warblers",
+  "about": {
+    "en": "Small, active songbirds with a thin, pointed bill, many bright yellow or olive with bold black, white, chestnut or orange markings. Some are resident in the tropics; many others breed in North America and spend the winter further south, often in duller plumage. They flit through foliage in mixed flocks, and some fan their tails to flush insects.",
+    "nl": "Kleine, beweeglijke zangvogels met een dunne, spitse snavel, veel felgeel of olijfgroen met opvallende tekening in zwart, wit, kastanjebruin of oranje. Sommige zijn standvogels in de tropen; veel andere broeden in Noord-Amerika en overwinteren zuidelijker, vaak in een doffer kleed. Ze fladderen in gemengde groepen door het gebladerte, en sommige spreiden hun staart om insecten op te jagen."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "leaf-warblers",
+        "sylviid-warblers",
+        "reed-warblers-and-allies"
+      ],
+      "text": {
+        "en": "These New World warblers are unrelated to the warblers of Europe, Asia and Africa. They are much more colourful, often patterned in yellow and black, and are closer to the tanagers and New World sparrows.",
+        "nl": "Deze Amerikaanse zangers zijn niet verwant aan de zangers van Europa, Azië en Afrika. Ze zijn veel kleurrijker, vaak getekend in geel en zwart, en staan dichter bij de tangaren en de gorzen van de Nieuwe Wereld."
+      }
+    },
+    {
+      "if_known": [
+        "thrushes"
+      ],
+      "text": {
+        "en": "Waterthrushes are wood-warblers that walk along streams and bob their tails. They are unrelated to thrushes.",
+        "nl": "Waterlijsters zijn Amerikaanse zangers die langs beken lopen en met hun staart wippen. Ze zijn niet verwant aan lijsters."
+      }
+    }
+  ]
+}

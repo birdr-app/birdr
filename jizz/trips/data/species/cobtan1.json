@@ -1,0 +1,22 @@
+{
+  "code": "cobtan1",
+  "name": {
+    "en": "Common Chlorospingus",
+    "nl": "Briltangare"
+  },
+  "latin": "Chlorospingus flavopectus",
+  "look_for": [
+    {
+      "en": "Brownish head with a white spot behind the **eye**",
+      "nl": "Bruinige kop met een witte vlek achter het **oog**"
+    },
+    {
+      "en": "Pale **throat** above a yellowish breast band",
+      "nl": "Lichte **keel** boven een geelachtige borstband"
+    },
+    {
+      "en": "Olive back; busy flocks in mountain forest",
+      "nl": "Olijfgroene rug; drukke groepjes in bergbos"
+    }
+  ]
+}

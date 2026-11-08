@@ -69,14 +69,16 @@ def username_from_oauth(
 
 
 def player_name_for_user(user, fallback: str = 'Player') -> str:
+    """The name other players see. The username is what the profile page and
+    both apps call the player name, so it wins over first + last name."""
     if not user:
         return fallback
+    username = sanitize_player_name((getattr(user, 'username', None) or '').strip(), fallback='')
+    if username:
+        return username
     full = user.get_full_name().strip()
     if full:
         return sanitize_player_name(full)
-    username = (getattr(user, 'username', None) or '').strip()
-    if username:
-        return sanitize_player_name(username)
     email = (getattr(user, 'email', None) or '').strip()
     if email:
         return sanitize_player_name(email)

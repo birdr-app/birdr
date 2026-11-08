@@ -1,0 +1,22 @@
+{
+  "code": "trokin",
+  "name": {
+    "en": "Tropical Kingbird",
+    "nl": "Tropische koningstiran"
+  },
+  "latin": "Tyrannus melancholicus",
+  "look_for": [
+    {
+      "en": "Grey **head** with a darker **mask**",
+      "nl": "Grijze **kop** met een donkerder **masker**"
+    },
+    {
+      "en": "Pale **throat**, bright yellow **belly**",
+      "nl": "Lichte **keel**, felgele **buik**"
+    },
+    {
+      "en": "Notched brown **tail** without white edges",
+      "nl": "Ingesneden bruine **staart** zonder witte randen"
+    }
+  ]
+}

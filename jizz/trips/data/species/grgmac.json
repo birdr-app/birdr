@@ -1,0 +1,22 @@
+{
+  "code": "grgmac",
+  "name": {
+    "en": "Great Green Macaw",
+    "nl": "Buffonara"
+  },
+  "latin": "Ara ambiguus",
+  "look_for": [
+    {
+      "en": "Huge green macaw with a long **tail**",
+      "nl": "Enorme groene ara met een lange **staart**"
+    },
+    {
+      "en": "Red **forehead** and bare white **face**",
+      "nl": "Rood **voorhoofd** en kaal wit **gezicht**"
+    },
+    {
+      "en": "Blue **flight feathers**; orange-red upper **tail**",
+      "nl": "Blauwe **slagpennen**; oranjerode bovenkant van de **staart**"
+    }
+  ]
+}

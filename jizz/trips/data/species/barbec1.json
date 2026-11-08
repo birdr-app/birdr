@@ -1,0 +1,22 @@
+{
+  "code": "barbec1",
+  "name": {
+    "en": "Barred Becard",
+    "nl": "Gebandeerde bekarde"
+  },
+  "latin": "Pachyramphus versicolor",
+  "look_for": [
+    {
+      "en": "Male black **cap**, yellowish **face** and **throat**",
+      "nl": "Mannetje met zwarte **kap**, geelachtige **kop** en **keel**"
+    },
+    {
+      "en": "Fine dark bars on the underparts",
+      "nl": "Fijne donkere bandjes op de onderkant"
+    },
+    {
+      "en": "Female olive with rufous **wings** and grey **cap**",
+      "nl": "Vrouwtje olijfgroen met roodbruine **vleugels** en grijze **kap**"
+    }
+  ]
+}

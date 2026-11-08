@@ -1,0 +1,22 @@
+{
+  "code": "brwhaw",
+  "name": {
+    "en": "Broad-winged Hawk",
+    "nl": "Breedvleugelbuizerd"
+  },
+  "latin": "Buteo platypterus",
+  "look_for": [
+    {
+      "en": "Small, compact hawk with pointed **wings**",
+      "nl": "Kleine, compacte buizerd met spitse **vleugels**"
+    },
+    {
+      "en": "Rufous-barred **breast**, white underwings with dark edge",
+      "nl": "Roestbruin gebandeerde **borst**, witte ondervleugel met donkere rand"
+    },
+    {
+      "en": "Broad black and white bands on the **tail**",
+      "nl": "Brede zwarte en witte banden op de **staart**"
+    }
+  ]
+}

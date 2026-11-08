@@ -1,0 +1,22 @@
+{
+  "code": "blkpho",
+  "name": {
+    "en": "Black Phoebe",
+    "nl": "Zwarte phoebe"
+  },
+  "latin": "Sayornis nigricans",
+  "look_for": [
+    {
+      "en": "Sooty black with a white **belly**",
+      "nl": "Roetzwart met een witte **buik**"
+    },
+    {
+      "en": "Thin white edges on the **wings**",
+      "nl": "Dunne witte randjes op de **vleugels**"
+    },
+    {
+      "en": "Pumps its **tail** beside mountain streams",
+      "nl": "Wipt met de **staart** langs bergbeken"
+    }
+  ]
+}

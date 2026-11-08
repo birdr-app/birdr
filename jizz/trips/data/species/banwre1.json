@@ -1,0 +1,22 @@
+{
+  "code": "banwre1",
+  "name": {
+    "en": "Banded Wren",
+    "nl": "Acaciawinterkoning"
+  },
+  "latin": "Thryophilus pleurostictus",
+  "look_for": [
+    {
+      "en": "Bold white **eyebrow**, streaked **cheeks**",
+      "nl": "Opvallende witte **wenkbrauwstreep**, gestreepte **wangen**"
+    },
+    {
+      "en": "Black bars on white **flanks**",
+      "nl": "Zwarte bandjes op witte **flanken**"
+    },
+    {
+      "en": "Warm rufous back and **rump**",
+      "nl": "Warm roodbruine rug en **stuit**"
+    }
+  ]
+}

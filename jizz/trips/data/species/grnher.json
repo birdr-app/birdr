@@ -1,0 +1,22 @@
+{
+  "code": "grnher",
+  "name": {
+    "en": "Green Heron",
+    "nl": "Groene reiger"
+  },
+  "latin": "Butorides virescens",
+  "look_for": [
+    {
+      "en": "Small, stocky heron with a dark **cap**",
+      "nl": "Kleine, gedrongen reiger met een donkere **kap**"
+    },
+    {
+      "en": "Chestnut **neck**, green-grey back",
+      "nl": "Kastanjebruine **hals**, groengrijze rug"
+    },
+    {
+      "en": "Short yellow-orange legs",
+      "nl": "Korte geeloranje poten"
+    }
+  ]
+}

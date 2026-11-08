@@ -1,0 +1,22 @@
+{
+  "code": "scamac1",
+  "name": {
+    "en": "Scarlet Macaw",
+    "nl": "Geelvleugelara"
+  },
+  "latin": "Ara macao",
+  "look_for": [
+    {
+      "en": "Scarlet red macaw with a long **tail**",
+      "nl": "Scharlakenrode ara met een lange **staart**"
+    },
+    {
+      "en": "Yellow and blue bands on the **wings**",
+      "nl": "Gele en blauwe banden op de **vleugels**"
+    },
+    {
+      "en": "Bare white **face** and pale upper **bill**",
+      "nl": "Kaal wit **gezicht** en lichte bovensnavel"
+    }
+  ]
+}

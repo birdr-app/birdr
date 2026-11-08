@@ -1,0 +1,22 @@
+{
+  "code": "balori",
+  "name": {
+    "en": "Baltimore Oriole",
+    "nl": "Baltimoretroepiaal"
+  },
+  "latin": "Icterus galbula",
+  "look_for": [
+    {
+      "en": "Male: black **hood** and black back",
+      "nl": "Mannetje: zwarte **kap** en zwarte rug"
+    },
+    {
+      "en": "Bright orange **breast**, belly and rump",
+      "nl": "Feloranje **borst**, buik en stuit"
+    },
+    {
+      "en": "White **wing** bar; female duller orange-yellow",
+      "nl": "Witte **vleugelstreep**; vrouwtje doffer oranjegeel"
+    }
+  ]
+}

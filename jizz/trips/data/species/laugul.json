@@ -1,0 +1,22 @@
+{
+  "code": "laugul",
+  "name": {
+    "en": "Laughing Gull",
+    "nl": "Lachmeeuw"
+  },
+  "latin": "Leucophaeus atricilla",
+  "look_for": [
+    {
+      "en": "Dark slate-grey back and **wings**",
+      "nl": "Donker leigrijze rug en **vleugels**"
+    },
+    {
+      "en": "Black **head** when breeding, smudged grey in winter",
+      "nl": "Zwarte **kop** in zomerkleed, 's winters vlekkerig grijs"
+    },
+    {
+      "en": "Long, slightly drooping dark **bill**",
+      "nl": "Lange, iets hangende donkere **snavel**"
+    }
+  ]
+}

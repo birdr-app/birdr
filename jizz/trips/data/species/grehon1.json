@@ -1,0 +1,22 @@
+{
+  "code": "grehon1",
+  "name": {
+    "en": "Green Honeycreeper",
+    "nl": "Groene suikervogel"
+  },
+  "latin": "Chlorophanes spiza",
+  "look_for": [
+    {
+      "en": "Male shining emerald green with a black **head**",
+      "nl": "Mannetje glanzend smaragdgroen met een zwarte **kop**"
+    },
+    {
+      "en": "Yellow **bill** with a dark ridge",
+      "nl": "Gele **snavel** met een donkere rand bovenop"
+    },
+    {
+      "en": "Red **eye**; female plain grass green",
+      "nl": "Rood **oog**; vrouwtje effen grasgroen"
+    }
+  ]
+}

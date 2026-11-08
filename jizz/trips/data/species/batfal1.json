@@ -1,0 +1,22 @@
+{
+  "code": "batfal1",
+  "name": {
+    "en": "Bat Falcon",
+    "nl": "Vleermuisvalk"
+  },
+  "latin": "Falco rufigularis",
+  "look_for": [
+    {
+      "en": "Black **hood** with a white **throat**",
+      "nl": "Zwarte **kap** met een witte **keel**"
+    },
+    {
+      "en": "Black **breast** band finely barred white",
+      "nl": "Zwarte **borstband** met fijne witte bandjes"
+    },
+    {
+      "en": "Rufous **belly** and **thighs**; hunts bats at dusk",
+      "nl": "Roodbruine **buik** en **dijen**; jaagt in de schemer op vleermuizen"
+    }
+  ]
+}

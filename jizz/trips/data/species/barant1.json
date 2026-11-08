@@ -1,0 +1,22 @@
+{
+  "code": "barant1",
+  "name": {
+    "en": "Barred Antshrike",
+    "nl": "Gebandeerde mierklauwier"
+  },
+  "latin": "Thamnophilus doliatus",
+  "look_for": [
+    {
+      "en": "Male boldly barred black and white",
+      "nl": "Mannetje fors zwart-wit gebandeerd"
+    },
+    {
+      "en": "Shaggy **crest** and pale **eye**",
+      "nl": "Rommelige **kuif** en een licht **oog**"
+    },
+    {
+      "en": "Female rufous with a streaked **face**",
+      "nl": "Vrouwtje roodbruin met een gestreept **gezicht**"
+    }
+  ]
+}

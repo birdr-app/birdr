@@ -1,0 +1,22 @@
+{
+  "code": "rotbec",
+  "name": {
+    "en": "Rose-throated Becard",
+    "nl": "Grote bekarde"
+  },
+  "latin": "Pachyramphus aglaiae",
+  "look_for": [
+    {
+      "en": "Male grey with a blackish **cap**",
+      "nl": "Mannetje grijs met een zwartachtige **kap**"
+    },
+    {
+      "en": "Rose **throat** patch, small or missing in some",
+      "nl": "Roze **keelvlek**, bij sommige klein of afwezig"
+    },
+    {
+      "en": "Female rusty-brown with a dark **cap**",
+      "nl": "Vrouwtje roestbruin met een donkere **kap**"
+    }
+  ]
+}

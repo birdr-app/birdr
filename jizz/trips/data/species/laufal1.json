@@ -1,0 +1,22 @@
+{
+  "code": "laufal1",
+  "name": {
+    "en": "Laughing Falcon",
+    "nl": "Lachvalk"
+  },
+  "latin": "Herpetotheres cachinnans",
+  "look_for": [
+    {
+      "en": "Buff **head** with a broad black **mask**",
+      "nl": "Geelbruine **kop** met een breed zwart **masker**"
+    },
+    {
+      "en": "Mask joins around the back of the **neck**",
+      "nl": "Masker loopt door rond de achterkant van de **hals**"
+    },
+    {
+      "en": "Perches upright on bare branches, eating snakes",
+      "nl": "Zit rechtop op kale takken en eet slangen"
+    }
+  ]
+}

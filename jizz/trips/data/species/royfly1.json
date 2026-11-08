@@ -1,0 +1,22 @@
+{
+  "code": "royfly1",
+  "name": {
+    "en": "Tropical Royal Flycatcher",
+    "nl": "Tropische kroontiran"
+  },
+  "latin": "Onychorhynchus coronatus",
+  "look_for": [
+    {
+      "en": "Folded **crest** gives a hammerhead shape",
+      "nl": "Gevouwen **kuif** geeft een hamerkop"
+    },
+    {
+      "en": "Red or orange fan **crest**, rarely shown",
+      "nl": "Rode of oranje **kuif** als een waaier, zelden te zien"
+    },
+    {
+      "en": "Cinnamon **rump** and **tail**, long broad **bill**",
+      "nl": "Kaneelkleurige **stuit** en **staart**, lange brede **snavel**"
+    }
+  ]
+}

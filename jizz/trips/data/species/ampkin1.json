@@ -1,0 +1,22 @@
+{
+  "code": "ampkin1",
+  "name": {
+    "en": "American Pygmy Kingfisher",
+    "nl": "Groene dwergijsvogel"
+  },
+  "latin": "Chloroceryle aenea",
+  "look_for": [
+    {
+      "en": "Tiny kingfisher, dark green above",
+      "nl": "Piepklein ijsvogeltje, donkergroen van boven"
+    },
+    {
+      "en": "Orange-rufous below with a white **belly** centre",
+      "nl": "Oranjebruin van onder, wit midden op de **buik**"
+    },
+    {
+      "en": "Female has a dark green **breast** band",
+      "nl": "Vrouwtje heeft een donkergroene **borstband**"
+    }
+  ]
+}

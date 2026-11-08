@@ -1,0 +1,18 @@
+{
+  "slug": "woodcreepers",
+  "about": {
+    "en": "Brown birds with rufous wings and tail that climb tree trunks in spirals, propped on stiff tail feathers like a woodpecker. Most are finely streaked on the head and breast, and bills range from short and straight to very long and curved. They join mixed flocks or follow ant swarms, and give loud trills and laughing calls.",
+    "nl": "Bruine vogels met roestbruine vleugels en staart die in spiralen tegen boomstammen omhoog klimmen, gesteund op stijve staartveren zoals een specht. De meeste zijn fijn gestreept op kop en borst, en de snavel varieert van kort en recht tot heel lang en gebogen. Ze trekken mee met gemengde groepen of volgen mierenzwermen en laten luide trillers en lachende roepen horen."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "treecreepers"
+      ],
+      "text": {
+        "en": "Woodcreepers climb trunks like treecreepers and use their tail as a prop the same way, but they are unrelated and much bigger, mostly thrush-sized. They belong to the ovenbird family.",
+        "nl": "Muisspechten klimmen tegen stammen als boomkruipers en gebruiken hun staart op dezelfde manier als steun, maar ze zijn niet verwant en veel groter, meestal zo groot als een lijster. Ze horen bij de familie van de ovenvogels."
+      }
+    }
+  ]
+}

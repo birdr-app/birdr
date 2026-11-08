@@ -10,7 +10,7 @@ from __future__ import annotations
 from functools import lru_cache
 
 from jizz.courses.content import text
-from jizz.trips.content import DATA_DIR, TRIPS, country_dir, read_json
+from jizz.trips.content import DATA_DIR, TRIPS, country_dir, load_scope, lookalike_path, read_json
 
 QUIZ_PHOTOS = 8
 
@@ -32,11 +32,18 @@ def _files(country: str) -> dict:
     if not units:
         raise TripNotFound(country)
     codes = [c for g in units['groups'] for c in g['species']]
+    media = read_json(folder / 'media.json', {}) or {}
+    scope = load_scope(country)
     return {
         'units': units,
         'texts': read_json(folder / 'texts.json', {}) or {},
-        'media': (read_json(folder / 'media.json', {}) or {}).get('species', {}),
-        'scope': read_json(folder / 'scope.json', {}) or {},
+        'media': media.get('species', {}),
+        # Photos of lookalike home birds that aren't in the trip itself.
+        'home_media': media.get('home', {}),
+        'scope': scope,
+        'lookalikes': [
+            {**pair, **(read_json(lookalike_path(pair['here'], pair['home']), {}) or {})} for pair in scope['lookalikes']
+        ],
         'groups': {g['slug']: read_json(DATA_DIR / 'groups' / f'{g["slug"]}.json', {}) or {} for g in units['groups']},
         'species': {c: read_json(DATA_DIR / 'species' / f'{c}.json', {}) or {} for c in codes},
     }
@@ -68,6 +75,7 @@ def trip_summary(country: str, lang: str) -> dict:
         'name': text(meta['name'], lang),
         'species_count': sum(len(g['species']) for g in units['groups']),
         'endemic_count': len(endemics),
+        'lookalike_count': len(files['lookalikes']),
         'group_count': len(units['groups']),
         'languages': list(meta['languages']),
     }
@@ -79,9 +87,10 @@ def trip_payload(country: str, lang: str) -> dict:
     codes = [c for g in units['groups'] for c in g['species']]
     endemic_codes = {c for g in units['groups'] for c in g.get('endemics', [])}
 
+    all_media = {**files['home_media'], **files['media']}
     picks = {}
-    for code in codes:
-        entry = files['media'].get(code, {})
+    for code in list(codes) + list(files['home_media']):
+        entry = all_media.get(code, {})
         picks[code] = (entry.get('card', []), entry.get('quiz', [])[:QUIZ_PHOTOS])
     rows = _media_rows({m for card, quiz in picks.values() for m in card + quiz})
     group_of = {c: g['slug'] for g in units['groups'] for c in g['species']}
@@ -119,6 +128,7 @@ def trip_payload(country: str, lang: str) -> dict:
         })
 
     unit_texts = texts.get('units', {})
+    lookalikes, home_species = _lookalikes(files, lang, picks, rows)
     endemic_texts = texts.get('endemics', {})
     first_day = texts.get('first_day', {})
     return {
@@ -165,7 +175,31 @@ def trip_payload(country: str, lang: str) -> dict:
             ],
         },
         'species': species,
+        'lookalikes': lookalikes,
+        'home_species': home_species,
     }
+
+
+def _lookalikes(files: dict, lang: str, picks: dict, rows: dict) -> tuple[list, dict]:
+    """The lookalike pairs, and the home birds that aren't in the trip (name and photos)."""
+    from jizz.models import Species
+
+    pairs = [
+        {'here': p['here'], 'home': p['home'], 'tell': [text(line, lang) for line in p.get('tell', [])]}
+        for p in files['lookalikes']
+    ]
+    home = {}
+    for sp in Species.objects.filter(code__in=list(files['home_media'])):
+        card, quiz = picks[sp.code]
+        home[sp.code] = {
+            'code': sp.code,
+            'species_id': sp.id,
+            'name': (sp.name_nl or sp.name) if lang == 'nl' else sp.name,
+            'latin': sp.name_latin,
+            'images': [rows[m] for m in card if m in rows],
+            'quiz_images': [rows[m] for m in quiz if m in rows],
+        }
+    return pairs, home
 
 
 # ---------------------------------------------------------------- the player's side
@@ -198,7 +232,8 @@ def known_species_ids(players) -> set[int]:
 
 def trip_progress(country: str, players) -> dict:
     files = _files(country)
-    id_to_code = {entry.get('species_id'): code for code, entry in files['media'].items() if entry.get('species_id')}
+    all_media = {**files['home_media'], **files['media']}
+    id_to_code = {entry.get('species_id'): code for code, entry in all_media.items() if entry.get('species_id')}
     known = known_species_ids(players) & set(id_to_code)
     return {'country': country, 'known': sorted(id_to_code[i] for i in known), 'known_group_slugs': known_group_slugs(players)}
 
@@ -224,7 +259,7 @@ def record_answers(country: str, player, answers: list[dict]) -> int:
     from jizz.models import Answer, Country, Game, PlayerScore, Question, Species
 
     files = _files(country)
-    allowed = {entry.get('species_id') for entry in files['media'].values()}
+    allowed = {entry.get('species_id') for entry in [*files['media'].values(), *files['home_media'].values()]}
     rows = [a for a in answers if a.get('species_id') in allowed and a.get('answer_id')]
     if not rows:
         return 0

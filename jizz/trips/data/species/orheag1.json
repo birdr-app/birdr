@@ -1,0 +1,22 @@
+{
+  "code": "orheag1",
+  "name": {
+    "en": "Ornate Hawk-Eagle",
+    "nl": "Bonte kuifarend"
+  },
+  "latin": "Spizaetus ornatus",
+  "look_for": [
+    {
+      "en": "Tall black **crest** on a rufous **head**",
+      "nl": "Hoge zwarte **kuif** op een roodbruine **kop**"
+    },
+    {
+      "en": "White **throat** edged by a black stripe",
+      "nl": "Witte **keel** met een zwarte streep langs de rand"
+    },
+    {
+      "en": "**Belly** and legs boldly barred black",
+      "nl": "**Buik** en poten fors zwart gebandeerd"
+    }
+  ]
+}

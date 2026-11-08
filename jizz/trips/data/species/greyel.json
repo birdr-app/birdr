@@ -1,0 +1,22 @@
+{
+  "code": "greyel",
+  "name": {
+    "en": "Greater Yellowlegs",
+    "nl": "Grote geelpootruiter"
+  },
+  "latin": "Tringa melanoleuca",
+  "look_for": [
+    {
+      "en": "Tall wader with long, bright yellow **legs**",
+      "nl": "Hoge steltloper met lange, felgele **poten**"
+    },
+    {
+      "en": "Slightly upturned **bill**, longer than Lesser Yellowlegs'",
+      "nl": "Iets opgewipte **snavel**, langer dan bij de kleine geelpootruiter"
+    },
+    {
+      "en": "White **rump**, no white wedge up the back",
+      "nl": "Witte **stuit**, geen witte wig op de rug"
+    }
+  ]
+}

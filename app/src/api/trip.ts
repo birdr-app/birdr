@@ -25,6 +25,19 @@ export type TripSpecies = {
   quiz_images: TripMedia[];
 };
 
+/** A bird from home that a trip bird looks like; only the photos and the name. */
+export type TripHomeSpecies = {
+  code: string;
+  species_id: number;
+  name: string;
+  latin: string;
+  images: TripMedia[];
+  quiz_images: TripMedia[];
+};
+
+/** A trip bird and its lookalike from home, with lines that tell them apart. */
+export type TripLookalike = { here: string; home: string; tell: string[] };
+
 export type TripGroup = {
   slug: string;
   name: string;
@@ -48,6 +61,7 @@ export type TripSummary = {
   name: string;
   species_count: number;
   endemic_count: number;
+  lookalike_count?: number;
   group_count: number;
   languages: string[];
 };
@@ -65,6 +79,9 @@ export type Trip = TripSummary & {
     units: TripUnit[];
   };
   species: Record<string, TripSpecies>;
+  lookalikes?: TripLookalike[];
+  /** Home birds of the lookalike pairs that aren't trip birds themselves. */
+  home_species?: Record<string, TripHomeSpecies>;
 };
 
 export type TripProgress = {
@@ -117,6 +134,7 @@ export type TripLocalState = {
   /** Species whose card the player has seen. */
   cards_seen: string[];
   families_done: boolean;
+  lookalikes_done: boolean;
   /** Species answered wrong last time in a trip quiz: the "shaky" ones. */
   shaky: string[];
   /** Species answered right in a trip quiz on this device (counts even when saving failed). */
@@ -126,7 +144,7 @@ export type TripLocalState = {
 const stateKey = (country: string) => `trip:${country}:state`;
 
 export function loadTripState(country: string): TripLocalState {
-  const empty: TripLocalState = { units_done: [], cards_seen: [], families_done: false, shaky: [], right: [] };
+  const empty: TripLocalState = { units_done: [], cards_seen: [], families_done: false, lookalikes_done: false, shaky: [], right: [] };
   try {
     const raw = window.localStorage.getItem(stateKey(country));
     if (raw) return { ...empty, ...JSON.parse(raw) };

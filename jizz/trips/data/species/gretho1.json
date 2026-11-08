@@ -1,0 +1,22 @@
+{
+  "code": "gretho1",
+  "name": {
+    "en": "Green Thorntail",
+    "nl": "Groene draadkolibrie"
+  },
+  "latin": "Discosura conversii",
+  "look_for": [
+    {
+      "en": "Tiny and dark green, with a white **rump** band",
+      "nl": "Piepklein en donkergroen, met een witte band over de **stuit**"
+    },
+    {
+      "en": "Male: long, wire-thin, forked **tail**",
+      "nl": "Mannetje: lange, draaddunne, gevorkte **staart**"
+    },
+    {
+      "en": "Female: black **throat** with a white **moustache**",
+      "nl": "Vrouwtje: zwarte **keel** met een witte **baardstreep**"
+    }
+  ]
+}

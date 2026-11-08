@@ -1,0 +1,28 @@
+{
+  "slug": "antbirds",
+  "about": {
+    "en": "Small to medium birds of the forest understorey, in grey, black, brown and rufous, often with white spots or bars on the wings; females are usually browner than males. Antshrikes have a heavy, hooked bill and antwrens are tiny; some follow swarms of army ants to catch the insects that flee. They are shy, but their songs are loud.",
+    "nl": "Kleine tot middelgrote vogels van de onderlaag van het bos in grijs, zwart, bruin en roestbruin, vaak met witte vlekjes of bandjes op de vleugels; vrouwtjes zijn meestal bruiner. Mierklauwieren hebben een zware, gehaakte snavel en miersluipers zijn piepklein; sommige volgen zwermen trekmieren om de insecten te vangen die ervoor vluchten. Ze zijn schuw, maar hun zang is luid."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "shrikes"
+      ],
+      "text": {
+        "en": "Antshrikes have a hooked bill like a shrike, but they are unrelated. They skulk in dense cover and rarely sit in the open on a lookout.",
+        "nl": "Mierklauwieren hebben een gehaakte snavel zoals een klauwier, maar ze zijn niet verwant. Ze sluipen door dichte begroeiing en zitten zelden vrij op een uitkijkpost."
+      }
+    },
+    {
+      "if_known": [
+        "thrushes",
+        "old-world-flycatchers"
+      ],
+      "text": {
+        "en": "Antbirds hop through the dark undergrowth like a robin or a chat, but they belong to a separate New World family. Look for the white wing spots and the cocked or swaying tail.",
+        "nl": "Miervogels hippen door het donkere struikgewas als een roodborst of tapuit, maar ze vormen een aparte familie van de Nieuwe Wereld. Let op de witte vlekjes op de vleugel en de opgewipte of wiebelende staart."
+      }
+    }
+  ]
+}

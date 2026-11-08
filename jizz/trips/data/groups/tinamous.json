@@ -1,0 +1,18 @@
+{
+  "slug": "tinamous",
+  "about": {
+    "en": "Plump, round-bodied ground birds with a small head, thin neck and almost no tail, dressed in brown, grey or rufous with fine barring. They walk quietly through forest or grassland and freeze or run when disturbed. You hear them far more often than you see them: their tremulous, flute-like whistles carry at dusk.",
+    "nl": "Mollige, ronde grondvogels met een klein kopje, een dunne hals en bijna geen staart, in bruin, grijs of roestbruin met fijne bandering. Ze lopen stil door bos of grasland en verstijven of rennen weg als ze worden verstoord. Je hoort ze veel vaker dan je ze ziet: hun trillende, fluitachtige roep draagt ver in de schemering."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "grouse-quail-and-allies"
+      ],
+      "text": {
+        "en": "Tinamous look like partridges or quail, but they are related to rheas and ostriches. They fly only short distances on whirring wings and rely on camouflage much more than on flight.",
+        "nl": "Tinamoes lijken op patrijzen of kwartels, maar ze zijn verwant aan nandoes en struisvogels. Ze vliegen alleen korte stukjes met snorrende vleugels en vertrouwen veel meer op hun schutkleur dan op wegvliegen."
+      }
+    }
+  ]
+}

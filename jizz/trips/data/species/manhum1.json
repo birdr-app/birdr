@@ -1,0 +1,22 @@
+{
+  "code": "manhum1",
+  "name": {
+    "en": "Mangrove Hummingbird",
+    "nl": "Mangroveamazilia"
+  },
+  "latin": "Chrysuronia boucardi",
+  "look_for": [
+    {
+      "en": "Bluish-green **throat** and **breast**",
+      "nl": "Blauwgroene **keel** en **borst**"
+    },
+    {
+      "en": "Whitish **belly**; **bill** black above, red below",
+      "nl": "Witachtige **buik**; **snavel** van boven zwart, van onder rood"
+    },
+    {
+      "en": "Bronze-green **tail**; only in Pacific mangroves",
+      "nl": "Bronsgroene **staart**; alleen in mangroven aan de Pacifische kust"
+    }
+  ]
+}

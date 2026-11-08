@@ -1,0 +1,22 @@
+{
+  "code": "compau",
+  "name": {
+    "en": "Common Pauraque",
+    "nl": "Pauraque"
+  },
+  "latin": "Nyctidromus albicollis",
+  "look_for": [
+    {
+      "en": "Mottled grey-brown nightjar with a long **tail**",
+      "nl": "Gevlekte grijsbruine nachtzwaluw met een lange **staart**"
+    },
+    {
+      "en": "Rufous **cheeks**; white **wing** band in flight",
+      "nl": "Roestbruine **wangen**; witte band over de **vleugel** in de vlucht"
+    },
+    {
+      "en": "Sits on tracks at night, eyes shining orange",
+      "nl": "Zit 's nachts op paden, de ogen lichten oranje op"
+    }
+  ]
+}

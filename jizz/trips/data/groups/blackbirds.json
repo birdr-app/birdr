@@ -1,0 +1,27 @@
+{
+  "slug": "blackbirds",
+  "about": {
+    "en": "A varied New World family with a sharp, pointed bill: glossy black grackles and cowbirds, black-and-orange or yellow orioles, and big oropendolas and caciques that nest in colonies of long, woven hanging nests. Many are noisy and sociable, with gurgling, liquid or harsh calls. Cowbirds lay their eggs in other birds' nests.",
+    "nl": "Een gevarieerde familie van de Nieuwe Wereld met een spitse, puntige snavel: glanzend zwarte troepialen en koevogels, zwart met oranje of gele troepialen, en grote oropendola's en buidelspreeuwen die in kolonies van lange, geweven hangnesten broeden. Veel soorten zijn luidruchtig en sociaal, met borrelende, vloeiende of rauwe roepen. Koevogels leggen hun eieren in de nesten van andere vogels."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "thrushes"
+      ],
+      "text": {
+        "en": "American blackbirds are unrelated to the Eurasian Blackbird, which is a thrush. Look for the long, pointed, cone-shaped bill and the habit of walking on the ground instead of hopping.",
+        "nl": "Amerikaanse troepialen zijn niet verwant aan onze merel, die een lijster is. Let op de lange, puntige, kegelvormige snavel en het lopen over de grond in plaats van hippen."
+      }
+    },
+    {
+      "if_known": [
+        "old-world-orioles"
+      ],
+      "text": {
+        "en": "The orioles of the Americas are icterids and unrelated to the Golden Oriole and its relatives. They got the name from their similar black-and-yellow or black-and-orange plumage.",
+        "nl": "De Amerikaanse 'orioles' zijn troepialen en niet verwant aan de wielewaal en zijn familie. Ze kregen die Engelse naam door hun vergelijkbare zwart-gele of zwart-oranje kleuren."
+      }
+    }
+  ]
+}

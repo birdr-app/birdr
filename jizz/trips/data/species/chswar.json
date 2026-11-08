@@ -1,0 +1,22 @@
+{
+  "code": "chswar",
+  "name": {
+    "en": "Chestnut-sided Warbler",
+    "nl": "Roestflankzanger"
+  },
+  "latin": "Setophaga pensylvanica",
+  "look_for": [
+    {
+      "en": "Breeding: yellow **crown** and chestnut flanks",
+      "nl": "In broedkleed: gele **kruin** en kastanjebruine flanken"
+    },
+    {
+      "en": "Winter: lime-green back, white **eye-ring**",
+      "nl": "In winterkleed: limoengroene rug, witte **oogring**"
+    },
+    {
+      "en": "Clean white **underparts**, yellowish wing bars",
+      "nl": "Schone witte **onderkant**, geelachtige vleugelstrepen"
+    }
+  ]
+}

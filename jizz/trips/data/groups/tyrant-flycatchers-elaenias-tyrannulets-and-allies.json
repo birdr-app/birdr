@@ -1,0 +1,27 @@
+{
+  "slug": "tyrant-flycatchers-elaenias-tyrannulets-and-allies",
+  "about": {
+    "en": "The small tyrant flycatchers: tyrannulets, elaenias, tody-flycatchers, pygmy-tyrants and their kin. Most are olive, grey and yellowish with pale wingbars, and many species look almost alike, so their calls are the best clue. They pick insects from leaves or make short flights after them, and elaenias also eat berries.",
+    "nl": "De kleine tirannen: tachuri's, elenia's, schoffelsnavels, dwergtirannen en verwanten. De meeste zijn olijfgroen, grijs en gelig met lichte vleugelstreepjes, en veel soorten lijken bijna op elkaar, dus hun roep is de beste aanwijzing. Ze pikken insecten van bladeren of vliegen er korte stukjes achteraan, en elenia's eten ook bessen."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "leaf-warblers"
+      ],
+      "text": {
+        "en": "Small, greenish tyrannulets can look like leaf warblers, but they are unrelated. They often sit more upright, have broader bills and give sharper, simpler calls.",
+        "nl": "Kleine, groenige tachuri's kunnen op boszangers lijken, maar ze zijn niet verwant. Ze zitten vaak rechter op, hebben een bredere snavel en een scherpere, eenvoudigere roep."
+      }
+    },
+    {
+      "if_known": [
+        "old-world-flycatchers"
+      ],
+      "text": {
+        "en": "Tyrant flycatchers fill the role of Old World flycatchers in the Americas, but the two families are unrelated.",
+        "nl": "Tirannen vervullen in Amerika de rol van de vliegenvangers van de Oude Wereld, maar de twee families zijn niet verwant."
+      }
+    }
+  ]
+}

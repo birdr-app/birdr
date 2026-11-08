@@ -1,0 +1,22 @@
+{
+  "code": "bawwar",
+  "name": {
+    "en": "Black-and-white Warbler",
+    "nl": "Bonte zanger"
+  },
+  "latin": "Mniotilta varia",
+  "look_for": [
+    {
+      "en": "Striped black and white all over",
+      "nl": "Helemaal zwart-wit gestreept"
+    },
+    {
+      "en": "Striped **crown**: black with a white centre",
+      "nl": "Gestreepte **kruin**: zwart met wit in het midden"
+    },
+    {
+      "en": "Creeps along **trunks** and branches like a nuthatch",
+      "nl": "Kruipt over **stammen** en takken als een boomklever"
+    }
+  ]
+}

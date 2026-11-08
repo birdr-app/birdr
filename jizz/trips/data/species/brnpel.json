@@ -1,0 +1,22 @@
+{
+  "code": "brnpel",
+  "name": {
+    "en": "Brown Pelican",
+    "nl": "Bruine pelikaan"
+  },
+  "latin": "Pelecanus occidentalis",
+  "look_for": [
+    {
+      "en": "Huge grey-brown seabird with a long pouched **bill**",
+      "nl": "Enorme grijsbruine zeevogel, lange **snavel** met keelzak"
+    },
+    {
+      "en": "Pale yellow-white **head**, dark **neck** when breeding",
+      "nl": "Geelwitte **kop**, donkere **hals** in broedkleed"
+    },
+    {
+      "en": "Plunges head-first from the air into the sea",
+      "nl": "Duikt van hoog met de kop vooruit in zee"
+    }
+  ]
+}

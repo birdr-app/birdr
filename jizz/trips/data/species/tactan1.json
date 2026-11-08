@@ -1,0 +1,22 @@
+{
+  "code": "tactan1",
+  "name": {
+    "en": "Tawny-crested Tanager",
+    "nl": "Taankuiftangare"
+  },
+  "latin": "Tachyphonus delatrii",
+  "look_for": [
+    {
+      "en": "Male glossy black with a tawny-orange **crest**",
+      "nl": "Mannetje glanzend zwart met een oranjebruine **kuif**"
+    },
+    {
+      "en": "Female plain olive-brown, paler **throat**",
+      "nl": "Vrouwtje effen olijfbruin, lichtere **keel**"
+    },
+    {
+      "en": "Fast, noisy flocks low in the forest",
+      "nl": "Snelle, luidruchtige groepen laag in het bos"
+    }
+  ]
+}

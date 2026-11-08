@@ -1,0 +1,22 @@
+{
+  "code": "motowl",
+  "name": {
+    "en": "Mottled Owl",
+    "nl": "Bonte bosuil"
+  },
+  "latin": "Strix virgata",
+  "look_for": [
+    {
+      "en": "Round **head** without ear tufts, dark eyes",
+      "nl": "Ronde **kop** zonder oorpluimen, donkere ogen"
+    },
+    {
+      "en": "Brown **face** with pale brows and rim",
+      "nl": "Bruin **gezicht** met lichte wenkbrauwen en rand"
+    },
+    {
+      "en": "Buff **underparts** with bold dark streaks",
+      "nl": "Geelbruine **onderkant** met grove donkere strepen"
+    }
+  ]
+}

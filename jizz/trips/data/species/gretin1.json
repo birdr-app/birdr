@@ -1,0 +1,22 @@
+{
+  "code": "gretin1",
+  "name": {
+    "en": "Great Tinamou",
+    "nl": "Grote tinamoe"
+  },
+  "latin": "Tinamus major",
+  "look_for": [
+    {
+      "en": "Large, plump, olive-brown ground bird",
+      "nl": "Grote, gedrongen, olijfbruine grondvogel"
+    },
+    {
+      "en": "Small **head**, thin neck, whitish **throat**",
+      "nl": "Kleine **kop**, dunne hals, witachtige **keel**"
+    },
+    {
+      "en": "Bluish-grey **legs**; walks quietly on the forest floor",
+      "nl": "Blauwgrijze **poten**; loopt stil over de bosbodem"
+    }
+  ]
+}

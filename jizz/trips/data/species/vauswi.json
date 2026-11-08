@@ -1,0 +1,22 @@
+{
+  "code": "vauswi",
+  "name": {
+    "en": "Vaux's Swift",
+    "nl": "Vauxgierzwaluw"
+  },
+  "latin": "Chaetura vauxi",
+  "look_for": [
+    {
+      "en": "Small, brownish swift with a stubby **tail**",
+      "nl": "Kleine, bruinige gierzwaluw met een stomp **staartje**"
+    },
+    {
+      "en": "Pale grey **throat** and **breast**",
+      "nl": "Lichtgrijze **keel** en **borst**"
+    },
+    {
+      "en": "**Rump** only slightly paler than the back",
+      "nl": "**Stuit** maar iets lichter dan de rug"
+    }
+  ]
+}

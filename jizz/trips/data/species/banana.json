@@ -1,0 +1,22 @@
+{
+  "code": "banana",
+  "name": {
+    "en": "Bananaquit",
+    "nl": "Suikerdiefje"
+  },
+  "latin": "Coereba flaveola",
+  "look_for": [
+    {
+      "en": "Long white **eyebrow** on a dark head",
+      "nl": "Lange witte **wenkbrauwstreep** op een donkere kop"
+    },
+    {
+      "en": "Yellow **breast** and rump, grey throat",
+      "nl": "Gele **borst** en stuit, grijze keel"
+    },
+    {
+      "en": "Short curved **bill**; visits flowers and feeders",
+      "nl": "Korte gebogen **snavel**; bezoekt bloemen en voederplekken"
+    }
+  ]
+}

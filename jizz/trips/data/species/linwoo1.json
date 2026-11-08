@@ -1,0 +1,22 @@
+{
+  "code": "linwoo1",
+  "name": {
+    "en": "Lineated Woodpecker",
+    "nl": "Gestreepte helmspecht"
+  },
+  "latin": "Dryocopus lineatus",
+  "look_for": [
+    {
+      "en": "Red **crest**, white line from **bill** down the **neck**",
+      "nl": "Rode **kuif**, witte streep van **snavel** langs de **hals**"
+    },
+    {
+      "en": "White back lines that do not meet",
+      "nl": "Witte rugstrepen die elkaar niet raken"
+    },
+    {
+      "en": "Dark **bill**; **belly** barred buff and black",
+      "nl": "Donkere **snavel**; **buik** geelbruin-zwart gebandeerd"
+    }
+  ]
+}

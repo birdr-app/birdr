@@ -1,0 +1,22 @@
+{
+  "code": "scihum1",
+  "name": {
+    "en": "Scintillant Hummingbird",
+    "nl": "Fonkelkolibrie"
+  },
+  "latin": "Selasphorus scintilla",
+  "look_for": [
+    {
+      "en": "Very small, with warm rufous **flanks**",
+      "nl": "Heel klein, met warm roestbruine **flanken**"
+    },
+    {
+      "en": "Male: glittering orange-red **throat**",
+      "nl": "Mannetje: glanzend oranjerode **keel**"
+    },
+    {
+      "en": "Rufous **tail** with black bars",
+      "nl": "Roestbruine **staart** met zwarte banden"
+    }
+  ]
+}

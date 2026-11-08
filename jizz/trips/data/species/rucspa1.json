@@ -1,0 +1,22 @@
+{
+  "code": "rucspa1",
+  "name": {
+    "en": "Rufous-collared Sparrow",
+    "nl": "Roodkraaggors"
+  },
+  "latin": "Zonotrichia capensis",
+  "look_for": [
+    {
+      "en": "Rufous **collar** on the sides of the neck",
+      "nl": "Roestbruine **kraag** opzij van de hals"
+    },
+    {
+      "en": "Grey head with black stripes and small **crest**",
+      "nl": "Grijze kop met zwarte strepen en een kleine **kuif**"
+    },
+    {
+      "en": "Black spot on each side of the **breast**",
+      "nl": "Zwarte vlek aan weerszijden van de **borst**"
+    }
+  ]
+}

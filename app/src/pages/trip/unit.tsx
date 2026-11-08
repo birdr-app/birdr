@@ -3,7 +3,7 @@ import { useMemo, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { postTripAnswers, updateTripState, type Trip, type TripAnswer, type TripSpecies, type TripUnit } from '../../api/trip';
 import { BirdrArtImage } from '../../components/birdr-art-image';
-import { buildUnitQuiz, makeQuestion, remaining, type TripQuestion } from '../../core/trip-quiz';
+import { buildUnitQuiz, focusCodes, makeQuestion, remaining, type TripQuestion } from '../../core/trip-quiz';
 import { Page } from '../../shared/components/layout';
 import { BoldText, Kicker, StepBar } from '../course/parts';
 import { EndemicBadge, TripLoading, TripPhoto, credit } from './parts';
@@ -27,7 +27,15 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
   const t = useTripText();
   const navigate = useNavigate();
   const [step, setStep] = useState<Step>({ kind: 'intro' });
-  const birds = unit.species.map((c) => trip.species[c]).filter((s): s is TripSpecies => !!s);
+  // The birds to learn, fixed when the player leaves the intro: the new ones, or all on request.
+  const [focus, setFocus] = useState<string[]>(unit.species);
+  const birds = focus.map((c) => trip.species[c]).filter((s): s is TripSpecies => !!s);
+  const allBirds = unit.species.map((c) => trip.species[c]).filter((s): s is TripSpecies => !!s);
+  const newCodes = focusCodes(unit.species, data.known);
+  const start = (codes: string[], next: Step) => {
+    setFocus(codes);
+    go(next);
+  };
   const back = () => navigate(unit.slug.startsWith('endemics-') ? `/trips/${trip.country}/endemics` : `/trips/${trip.country}`);
   const go = (next: Step) => {
     setStep(next);
@@ -64,10 +72,12 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
           {step.kind === 'intro' ? (
             <Intro
               unit={unit}
-              birds={birds}
-              knownCount={birds.filter((b) => data.known.has(b.code)).length}
-              onCards={() => go({ kind: 'card', index: 0 })}
-              onQuiz={() => go({ kind: 'quiz' })}
+              birds={allBirds}
+              knownCount={allBirds.filter((b) => data.known.has(b.code)).length}
+              newCount={newCodes.length}
+              onCards={() => start(newCodes, { kind: 'card', index: 0 })}
+              onAllCards={() => start(unit.species, { kind: 'card', index: 0 })}
+              onQuiz={() => start(newCodes, { kind: 'quiz' })}
             />
           ) : null}
           {step.kind === 'card' ? (
@@ -81,7 +91,7 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
               onNext={() => go(step.index + 1 < birds.length ? { kind: 'card', index: step.index + 1 } : { kind: 'quiz' })}
             />
           ) : null}
-          {step.kind === 'quiz' ? <Quiz trip={trip} unit={unit} learned={learnedCodes(trip, data)} onDone={finish} /> : null}
+          {step.kind === 'quiz' ? <Quiz trip={trip} unit={unit} targets={focus} learned={learnedCodes(trip, data)} onDone={finish} /> : null}
           {step.kind === 'done' ? (
             <Flex direction="column" gap={3}>
               <Flex align="center" gap={4}>
@@ -127,16 +137,22 @@ function Intro({
   unit,
   birds,
   knownCount,
+  newCount,
   onCards,
+  onAllCards,
   onQuiz,
 }: {
   unit: TripUnit;
   birds: TripSpecies[];
   knownCount: number;
+  newCount: number;
   onCards: () => void;
+  onAllCards: () => void;
   onQuiz: () => void;
 }) {
   const t = useTripText();
+  // Some birds known, some new: the cards and the quiz cover only the new ones.
+  const partly = knownCount > 0 && newCount < birds.length;
   const testOut = birds.length > 2 && knownCount >= birds.length - 1;
   return (
     <Flex direction="column" gap={3}>
@@ -155,9 +171,25 @@ function Intro({
           </Button>
         </Box>
       ) : null}
+      {partly && !testOut ? (
+        <Text color="primary.700" fontSize="sm">
+          {t('trip_partly_known', 'You know {known} of these {total} already. The cards and the quiz cover the {new} new ones.', {
+            known: knownCount,
+            total: birds.length,
+            new: newCount,
+          })}
+        </Text>
+      ) : null}
       <Button colorPalette="primary" size="lg" onClick={onCards} mt={2}>
-        {t('trip_start_cards', 'Meet the birds')}
+        {partly
+          ? t('trip_start_new_cards', 'Meet the {count} new birds', { count: newCount })
+          : t('trip_start_cards', 'Meet the birds')}
       </Button>
+      {partly ? (
+        <Button variant="ghost" colorPalette="primary" size="sm" onClick={onAllCards}>
+          {t('trip_all_cards', 'Show all {count} birds', { count: birds.length })}
+        </Button>
+      ) : null}
     </Flex>
   );
 }
@@ -243,16 +275,19 @@ function Card({
 function Quiz({
   trip,
   unit,
+  targets,
   learned,
   onDone,
 }: {
   trip: Trip;
   unit: TripUnit;
+  /** The birds to ask about; the rest of the unit only appears as wrong answers. */
+  targets: string[];
   learned: string[];
   onDone: (answers: TripAnswer[], right: string[], wrong: string[]) => void;
 }) {
   const t = useTripText();
-  const initial = useMemo(() => buildUnitQuiz(trip, unit.species, learned), [trip, unit, learned]);
+  const initial = useMemo(() => buildUnitQuiz(trip, targets, learned, Math.random, unit.species), [trip, unit, targets, learned]);
   const [queue, setQueue] = useState<TripQuestion[]>(initial);
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
@@ -276,7 +311,7 @@ function Quiz({
   const sp = trip.species[q.code];
   const answered = picked !== null;
   const right = picked === q.code;
-  const left = remaining(unit.species, rightOnce.current).length;
+  const left = remaining(targets, rightOnce.current).length;
 
   const choose = (option: string) => {
     if (answered) return;
@@ -298,7 +333,7 @@ function Quiz({
     }
   };
   const next = () => {
-    const stillOpen = remaining(unit.species, rightOnce.current).length > 0;
+    const stillOpen = remaining(targets, rightOnce.current).length > 0;
     if (index + 1 < queue.length && (stillOpen || queue.slice(index + 1).some((x) => x.review))) {
       setIndex(index + 1);
       setPicked(null);
@@ -307,7 +342,7 @@ function Quiz({
     onDone(
       answers.current,
       Array.from(rightOnce.current),
-      Array.from(wrongOnce.current).filter((c) => unit.species.includes(c))
+      Array.from(wrongOnce.current).filter((c) => targets.includes(c))
     );
   };
 

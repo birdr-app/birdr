@@ -1,0 +1,22 @@
+{
+  "code": "resque1",
+  "name": {
+    "en": "Resplendent Quetzal",
+    "nl": "Quetzal"
+  },
+  "latin": "Pharomachrus mocinno",
+  "look_for": [
+    {
+      "en": "Male's long green **tail** streamers",
+      "nl": "Lange groene **sleep** van het mannetje"
+    },
+    {
+      "en": "Crimson **belly** below a shining green **breast**",
+      "nl": "Karmijnrode **buik** onder een glanzend groene **borst**"
+    },
+    {
+      "en": "Rounded fuzzy **crest** over a yellow **bill**",
+      "nl": "Ronde, donzige **kuif** boven een gele **snavel**"
+    }
+  ]
+}

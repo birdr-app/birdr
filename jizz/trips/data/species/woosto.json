@@ -1,0 +1,22 @@
+{
+  "code": "woosto",
+  "name": {
+    "en": "Wood Stork",
+    "nl": "Kaalkopooievaar"
+  },
+  "latin": "Mycteria americana",
+  "look_for": [
+    {
+      "en": "White stork with a bare, dark grey **head**",
+      "nl": "Witte ooievaar met een kale, donkergrijze **kop**"
+    },
+    {
+      "en": "Thick, down-curved dark **bill**",
+      "nl": "Dikke, omlaag gebogen donkere **snavel**"
+    },
+    {
+      "en": "Black **flight feathers** and **tail** in flight",
+      "nl": "Zwarte **slagpennen** en **staart** in de vlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rubpep1",
+  "name": {
+    "en": "Rufous-browed Peppershrike",
+    "nl": "Roodbrauwpeperklauwier"
+  },
+  "latin": "Cyclarhis gujanensis",
+  "look_for": [
+    {
+      "en": "Broad rufous **eyebrow** on a grey **head**",
+      "nl": "Brede roodbruine **wenkbrauwstreep** op een grijze **kop**"
+    },
+    {
+      "en": "Heavy, hooked pinkish **bill**",
+      "nl": "Zware, haakvormige roze **snavel**"
+    },
+    {
+      "en": "Yellow **breast**, olive-green back",
+      "nl": "Gele **borst**, olijfgroene rug"
+    }
+  ]
+}

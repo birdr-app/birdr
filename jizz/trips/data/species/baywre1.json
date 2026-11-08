@@ -1,0 +1,22 @@
+{
+  "code": "baywre1",
+  "name": {
+    "en": "Bay Wren",
+    "nl": "Kastanjewinterkoning"
+  },
+  "latin": "Cantorchilus nigricapillus",
+  "look_for": [
+    {
+      "en": "Black **head** with white **cheek** patches",
+      "nl": "Zwarte **kop** met witte vlekken op de **wangen**"
+    },
+    {
+      "en": "White **throat**, rich chestnut body",
+      "nl": "Witte **keel**, diep kastanjebruin lijf"
+    },
+    {
+      "en": "Black bars on **wings** and **tail**",
+      "nl": "Zwarte bandjes op **vleugels** en **staart**"
+    }
+  ]
+}

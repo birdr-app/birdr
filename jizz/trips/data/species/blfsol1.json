@@ -1,0 +1,22 @@
+{
+  "code": "blfsol1",
+  "name": {
+    "en": "Black-faced Solitaire",
+    "nl": "Zwartmaskersolitaire"
+  },
+  "latin": "Myadestes melanops",
+  "look_for": [
+    {
+      "en": "Slate-grey with a black **face**",
+      "nl": "Leigrijs met een zwart **gezicht**"
+    },
+    {
+      "en": "Orange **bill**, **eye-ring** and **legs**",
+      "nl": "Oranje **snavel**, **oogring** en **poten**"
+    },
+    {
+      "en": "Flute-like song in highland cloud forest",
+      "nl": "Fluitende zang in het nevelwoud"
+    }
+  ]
+}

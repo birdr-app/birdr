@@ -1,0 +1,22 @@
+{
+  "code": "amekes",
+  "name": {
+    "en": "American Kestrel",
+    "nl": "Amerikaanse torenvalk"
+  },
+  "latin": "Falco sparverius",
+  "look_for": [
+    {
+      "en": "Small falcon with two black **face** bars",
+      "nl": "Kleine valk met twee zwarte strepen op het **gezicht**"
+    },
+    {
+      "en": "Male: blue-grey **wings** and rufous back",
+      "nl": "Mannetje: blauwgrijze **vleugels** en roodbruine rug"
+    },
+    {
+      "en": "Rufous **tail**; often hovers like our Kestrel",
+      "nl": "Roodbruine **staart**; bidt vaak als onze torenvalk"
+    }
+  ]
+}

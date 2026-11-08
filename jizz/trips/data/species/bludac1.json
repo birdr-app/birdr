@@ -1,0 +1,22 @@
+{
+  "code": "bludac1",
+  "name": {
+    "en": "Blue Dacnis",
+    "nl": "Blauwe pitpit"
+  },
+  "latin": "Dacnis cayana",
+  "look_for": [
+    {
+      "en": "Male turquoise blue with a black **throat**",
+      "nl": "Mannetje turkooisblauw met een zwarte **keel**"
+    },
+    {
+      "en": "Black **back** and blue-edged black wings",
+      "nl": "Zwarte **rug** en blauw gerande zwarte vleugels"
+    },
+    {
+      "en": "Short pointed **bill**; female green, blue head",
+      "nl": "Korte, spitse **snavel**; vrouwtje groen met blauwe kop"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rinkin1",
+  "name": {
+    "en": "Ringed Kingfisher",
+    "nl": "Amerikaanse reuzenijsvogel"
+  },
+  "latin": "Megaceryle torquata",
+  "look_for": [
+    {
+      "en": "Huge blue-grey kingfisher with a shaggy **crest**",
+      "nl": "Enorme blauwgrijze ijsvogel met een rommelige **kuif**"
+    },
+    {
+      "en": "Rufous **breast** and **belly**, white **collar**",
+      "nl": "Roodbruine **borst** en **buik**, witte **halsband**"
+    },
+    {
+      "en": "Very heavy dagger-like **bill**",
+      "nl": "Zeer zware dolkvormige **snavel**"
+    }
+  ]
+}

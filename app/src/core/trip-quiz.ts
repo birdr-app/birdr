@@ -1,4 +1,4 @@
-import type { Trip, TripMedia } from '../api/trip';
+import type { Trip, TripLookalike, TripMedia } from '../api/trip';
 
 export type TripQuestion = {
   /** eBird code of the right answer. */
@@ -68,24 +68,89 @@ export function makeQuestion(
   return { code, image, options: pickOptions(trip, code, unitCodes, learned, random), review };
 }
 
-/** The first round of a unit: each of its birds once, plus a few review birds mixed in. */
+/**
+ * The first round of a unit: each target bird once, plus a few review birds mixed in. Targets are
+ * the unit's birds, or only the ones new to the player; the whole unit (``pool``) still supplies
+ * the wrong answers, so a known bird stays a choice.
+ */
 export function buildUnitQuiz(
   trip: Trip,
-  unitCodes: string[],
+  targets: string[],
   learned: string[],
-  random: () => number = Math.random
+  random: () => number = Math.random,
+  pool: string[] = targets
 ): TripQuestion[] {
-  const review = shuffle(learned.filter((c) => !unitCodes.includes(c)), random).slice(0, REVIEW_QUESTIONS);
+  const review = shuffle(learned.filter((c) => !pool.includes(c)), random).slice(0, REVIEW_QUESTIONS);
   const questions = [
-    ...unitCodes.map((c) => makeQuestion(trip, c, unitCodes, learned, 0, false, random)),
-    ...review.map((c) => makeQuestion(trip, c, unitCodes, learned, 0, true, random)),
+    ...targets.map((c) => makeQuestion(trip, c, pool, learned, 0, false, random)),
+    ...review.map((c) => makeQuestion(trip, c, pool, learned, 0, true, random)),
   ].filter((q): q is TripQuestion => q !== null);
   return shuffle(questions, random);
+}
+
+/** The birds of a unit to learn: the new ones, or all of them when the player knows every bird. */
+export function focusCodes(unitCodes: string[], known: Set<string>): string[] {
+  const fresh = unitCodes.filter((c) => !known.has(c));
+  return fresh.length ? fresh : unitCodes;
+}
+
+/** A unit whose birds the player all knows already: folded away on the trip's home. */
+export function unitKnown(unitCodes: string[], known: Set<string>): boolean {
+  return unitCodes.length > 0 && unitCodes.every((c) => known.has(c));
+}
+
+export type LookalikeQuestion = { pair: TripLookalike; code: string; image: TripMedia; options: string[] };
+
+/** Photos of a trip bird or of a home bird from a lookalike pair. */
+export function lookalikePhotos(trip: Trip, code: string): TripMedia[] {
+  const sp = trip.species[code] ?? trip.home_species?.[code];
+  if (!sp) return [];
+  return sp.quiz_images.length ? sp.quiz_images : sp.images;
+}
+
+/** One question per pair: a photo of either bird, and the two names to choose from. */
+export function buildLookalikeQuiz(trip: Trip, random: () => number = Math.random): LookalikeQuestion[] {
+  const out: LookalikeQuestion[] = [];
+  for (const pair of trip.lookalikes ?? []) {
+    const sides = shuffle([pair.here, pair.home], random).filter((c) => lookalikePhotos(trip, c).length);
+    if (!sides.length) continue;
+    const media = lookalikePhotos(trip, sides[0]);
+    out.push({
+      pair,
+      code: sides[0],
+      image: media[Math.floor(random() * media.length)],
+      options: shuffle([pair.here, pair.home], random),
+    });
+  }
+  return shuffle(out, random);
 }
 
 /** Unit birds not yet answered right; the unit is done when this is empty. */
 export function remaining(unitCodes: string[], rightOnce: Set<string>): string[] {
   return unitCodes.filter((c) => !rightOnce.has(c));
+}
+
+const FAMILY_QUESTIONS = 8;
+
+export type FamilyQuestion = { group: string; image: TripMedia; options: string[] };
+
+/** Questions about new groups first; known groups fill up the rest. */
+export function buildFamilyQuiz(trip: Trip, random: () => number = Math.random, knownGroups: Set<string> = new Set()): FamilyQuestion[] {
+  const groups = trip.groups.filter((g) => g.species.some((c) => trip.species[c]?.images.length));
+  const fresh = groups.filter((g) => !knownGroups.has(g.slug));
+  const old = groups.filter((g) => knownGroups.has(g.slug));
+  return [...shuffle(fresh, random), ...shuffle(old, random)]
+    .slice(0, FAMILY_QUESTIONS)
+    .map((group) => {
+      const code = shuffle(group.species.filter((c) => trip.species[c]?.images.length), random)[0];
+      const media = trip.species[code].images;
+      const others = shuffle(groups.filter((g) => g.slug !== group.slug), random).slice(0, 3);
+      return {
+        group: group.slug,
+        image: media[Math.floor(random() * media.length)],
+        options: shuffle([group.slug, ...others.map((g) => g.slug)], random),
+      };
+    });
 }
 
 /** Split "**word**" markers into plain and bold parts. */

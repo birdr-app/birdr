@@ -1,0 +1,22 @@
+{
+  "code": "spobar1",
+  "name": {
+    "en": "Spotted Barbtail",
+    "nl": "Vlekborstboomloper"
+  },
+  "latin": "Premnoplex brunnescens",
+  "look_for": [
+    {
+      "en": "Small dark brown bird with a buff **eyebrow**",
+      "nl": "Klein donkerbruin vogeltje met een okerkleurige **wenkbrauwstreep**"
+    },
+    {
+      "en": "Bold buff spots on the dark **breast**",
+      "nl": "Grote okerkleurige vlekken op de donkere **borst**"
+    },
+    {
+      "en": "Creeps along mossy trunks in cloud forest",
+      "nl": "Kruipt langs bemoste stammen in het nevelwoud"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "whiibi",
+  "name": {
+    "en": "White Ibis",
+    "nl": "Witte ibis"
+  },
+  "latin": "Eudocimus albus",
+  "look_for": [
+    {
+      "en": "All white with a red down-curved **bill**",
+      "nl": "Helemaal wit met een rode, gebogen **snavel**"
+    },
+    {
+      "en": "Red bare **face** and red legs",
+      "nl": "Rood naakt **gezicht** en rode poten"
+    },
+    {
+      "en": "Black **wingtips**, mostly visible in flight",
+      "nl": "Zwarte **vleugelpunten**, vooral te zien in vlucht"
+    }
+  ]
+}

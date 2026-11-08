@@ -1,0 +1,22 @@
+{
+  "code": "crfpar",
+  "name": {
+    "en": "Crimson-fronted Parakeet",
+    "nl": "Finsch' aratinga"
+  },
+  "latin": "Psittacara finschi",
+  "look_for": [
+    {
+      "en": "Green parakeet with a red **forehead**",
+      "nl": "Groene parkiet met een rood **voorhoofd**"
+    },
+    {
+      "en": "Red edge along the bend of the **wing**",
+      "nl": "Rode rand langs de **vleugelbocht**"
+    },
+    {
+      "en": "Long pointed **tail**; loud flocks",
+      "nl": "Lange, spitse **staart**; luidruchtige groepen"
+    }
+  ]
+}

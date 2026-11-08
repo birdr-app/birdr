@@ -1,0 +1,22 @@
+{
+  "code": "gnbman",
+  "name": {
+    "en": "Green-breasted Mango",
+    "nl": "Groenborstmango"
+  },
+  "latin": "Anthracothorax prevostii",
+  "look_for": [
+    {
+      "en": "Large hummingbird with a slightly curved black **bill**",
+      "nl": "Grote kolibrie met een licht gebogen zwarte **snavel**"
+    },
+    {
+      "en": "Male green with a blue-black **throat** stripe",
+      "nl": "Mannetje groen met een blauwzwarte streep over de **keel**"
+    },
+    {
+      "en": "Female white below with a black central stripe",
+      "nl": "Vrouwtje wit van onder met een zwarte middenstreep"
+    }
+  ]
+}

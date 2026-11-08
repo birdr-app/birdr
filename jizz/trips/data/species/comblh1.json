@@ -1,0 +1,22 @@
+{
+  "code": "comblh1",
+  "name": {
+    "en": "Common Black Hawk",
+    "nl": "Zwarte buizerd"
+  },
+  "latin": "Buteogallus anthracinus",
+  "look_for": [
+    {
+      "en": "All black hawk with broad **wings**",
+      "nl": "Helemaal zwarte buizerd met brede **vleugels**"
+    },
+    {
+      "en": "One broad white band across the **tail**",
+      "nl": "Eén brede witte band over de **staart**"
+    },
+    {
+      "en": "Yellow **cere** and legs; hunts crabs on coasts",
+      "nl": "Gele **washuid** en poten; jaagt op krabben aan de kust"
+    }
+  ]
+}

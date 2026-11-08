@@ -1,0 +1,22 @@
+{
+  "code": "rosspo1",
+  "name": {
+    "en": "Roseate Spoonbill",
+    "nl": "Rode lepelaar"
+  },
+  "latin": "Platalea ajaja",
+  "look_for": [
+    {
+      "en": "Pink body with red **shoulders**",
+      "nl": "Roze lijf met rode **schouders**"
+    },
+    {
+      "en": "Long flat **bill** with a spoon tip",
+      "nl": "Lange platte **snavel** met een lepel aan het eind"
+    },
+    {
+      "en": "Bare greenish **head** on adults",
+      "nl": "Kale groenige **kop** bij volwassen vogels"
+    }
+  ]
+}

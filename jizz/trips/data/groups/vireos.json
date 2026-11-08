@@ -1,0 +1,28 @@
+{
+  "slug": "vireos",
+  "about": {
+    "en": "Small, olive, grey and yellow songbirds with a fairly thick bill that has a tiny hook at the tip. They move slowly through foliage, peering at leaves for insects, and sing the same short phrases over and over, even in the midday heat. The group also holds the tiny greenlets and the big-headed, heavy-billed peppershrikes and shrike-vireos.",
+    "nl": "Kleine zangvogels in olijfgroen, grijs en geel, met een vrij dikke snavel die een klein haakje aan de punt heeft. Ze bewegen langzaam door het gebladerte, speurend naar insecten op bladeren, en zingen steeds dezelfde korte frasen, zelfs in de middaghitte. Ook kleinere, groenige soorten en de peperklauwieren, met een grote kop en zware snavel, horen erbij."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "leaf-warblers",
+        "sylviid-warblers"
+      ],
+      "text": {
+        "en": "Vireos can look like a warbler, but they are unrelated and chunkier, with a thicker, hook-tipped bill. They move slowly and deliberately, where warblers flit about.",
+        "nl": "Vireo's kunnen op een zanger lijken, maar ze zijn niet verwant en steviger gebouwd, met een dikkere snavel met een haakje. Ze bewegen langzaam en bedachtzaam, waar zangers rondfladderen."
+      }
+    },
+    {
+      "if_known": [
+        "shrikes"
+      ],
+      "text": {
+        "en": "Peppershrikes and shrike-vireos have a heavy, hooked bill, but they are vireos and are unrelated to shrikes.",
+        "nl": "Peperklauwieren hebben een zware, gehaakte snavel, maar het zijn vireo's die niet verwant zijn aan klauwieren."
+      }
+    }
+  ]
+}

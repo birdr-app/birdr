@@ -1,0 +1,22 @@
+{
+  "code": "sumtan",
+  "name": {
+    "en": "Summer Tanager",
+    "nl": "Zomertangare"
+  },
+  "latin": "Piranga rubra",
+  "look_for": [
+    {
+      "en": "Male rose-red all over",
+      "nl": "Mannetje helemaal rozerood"
+    },
+    {
+      "en": "Large pale **bill**; no wing bars",
+      "nl": "Grote lichte **snavel**; geen vleugelstrepen"
+    },
+    {
+      "en": "Female mustard yellow-olive",
+      "nl": "Vrouwtje mosterdgeel tot olijfgroen"
+    }
+  ]
+}

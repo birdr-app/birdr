@@ -1,0 +1,19 @@
+{
+  "slug": "wrenthrush",
+  "about": {
+    "en": "A small, round bird with a short tail and long legs, dark olive above and slate grey below, with an orange-rufous crown. It lives on the ground in dense, wet undergrowth and bamboo of high mountain forest and is hard to see, so listen for its thin, high calls. It forms a family of its own, close to the wood-warblers.",
+    "nl": "Een klein, rond vogeltje met een korte staart en lange poten, donker olijfbruin van boven en leigrijs van onderen, met een oranjebruine kruin. Hij leeft op de grond in dicht, nat struikgewas en bamboe van hoog bergbos en is heel moeilijk te zien, dus luister naar zijn dunne, hoge roep. Hij vormt een eigen familie, verwant aan de Amerikaanse zangers."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "wrens",
+        "thrushes"
+      ],
+      "text": {
+        "en": "Despite the English name, the Wrenthrush is neither a wren nor a thrush. It is a warbler-like bird in a family of its own.",
+        "nl": "Ondanks de Engelse naam (wrenthrush) is de zeledonia geen winterkoning en geen lijster. Het is een zangerachtige vogel in een eigen familie."
+      }
+    }
+  ]
+}

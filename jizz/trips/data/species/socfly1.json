@@ -1,0 +1,22 @@
+{
+  "code": "socfly1",
+  "name": {
+    "en": "Social Flycatcher",
+    "nl": "Roodkruintiran"
+  },
+  "latin": "Myiozetetes similis",
+  "look_for": [
+    {
+      "en": "Small, with a short stubby **bill**",
+      "nl": "Klein, met een korte stompe **snavel**"
+    },
+    {
+      "en": "Dark grey **mask** and a white **eyebrow**",
+      "nl": "Donkergrijs **masker** en een witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Olive back, yellow **belly**, often in pairs",
+      "nl": "Olijfgroene rug, gele **buik**, vaak in paartjes"
+    }
+  ]
+}

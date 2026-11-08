@@ -1,0 +1,22 @@
+{
+  "code": "sunbit1",
+  "name": {
+    "en": "Sunbittern",
+    "nl": "Zonneral"
+  },
+  "latin": "Eurypyga helias",
+  "look_for": [
+    {
+      "en": "Slim, long-necked bird of forest streams",
+      "nl": "Slanke vogel met lange hals, langs bosbeken"
+    },
+    {
+      "en": "Black **head** with white stripes, orange **legs**",
+      "nl": "Zwarte **kop** met witte strepen, oranje **poten**"
+    },
+    {
+      "en": "Spread **wings** show big orange-and-black eyespots",
+      "nl": "Gespreide **vleugels** tonen grote oranje-zwarte oogvlekken"
+    }
+  ]
+}

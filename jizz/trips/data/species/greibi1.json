@@ -1,0 +1,22 @@
+{
+  "code": "greibi1",
+  "name": {
+    "en": "Green Ibis",
+    "nl": "Groene ibis"
+  },
+  "latin": "Mesembrinibis cayennensis",
+  "look_for": [
+    {
+      "en": "Dark ibis with a green-bronze sheen",
+      "nl": "Donkere ibis met een groenbronzen glans"
+    },
+    {
+      "en": "Short shaggy **crest** on the back of the head",
+      "nl": "Korte, rommelige **kuif** achter op de kop"
+    },
+    {
+      "en": "Greenish curved **bill**, short greenish legs",
+      "nl": "Groenige gebogen **snavel**, korte groenige poten"
+    }
+  ]
+}

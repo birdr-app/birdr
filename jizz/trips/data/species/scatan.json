@@ -1,0 +1,22 @@
+{
+  "code": "scatan",
+  "name": {
+    "en": "Scarlet Tanager",
+    "nl": "Zwartvleugeltangare"
+  },
+  "latin": "Piranga olivacea",
+  "look_for": [
+    {
+      "en": "Male bright scarlet with black **wings**",
+      "nl": "Mannetje fel scharlakenrood met zwarte **vleugels**"
+    },
+    {
+      "en": "Black **tail**, red body",
+      "nl": "Zwarte **staart**, rood lijf"
+    },
+    {
+      "en": "Female olive-yellow with dark **wings**",
+      "nl": "Vrouwtje olijfgeel met donkere **vleugels**"
+    }
+  ]
+}

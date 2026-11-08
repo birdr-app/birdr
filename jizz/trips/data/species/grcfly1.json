@@ -1,0 +1,22 @@
+{
+  "code": "grcfly1",
+  "name": {
+    "en": "Grey-capped Flycatcher",
+    "nl": "Grijskruintiran"
+  },
+  "latin": "Myiozetetes granadensis",
+  "look_for": [
+    {
+      "en": "Grey **head** with no white **eyebrow**",
+      "nl": "Grijze **kop** zonder witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "White **forehead** and **throat**",
+      "nl": "Wit **voorhoofd** en witte **keel**"
+    },
+    {
+      "en": "Olive back, yellow **belly**, stubby **bill**",
+      "nl": "Olijfgroene rug, gele **buik**, stompe **snavel**"
+    }
+  ]
+}

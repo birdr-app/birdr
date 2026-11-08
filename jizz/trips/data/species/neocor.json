@@ -1,0 +1,22 @@
+{
+  "code": "neocor",
+  "name": {
+    "en": "Neotropic Cormorant",
+    "nl": "Bigua-aalscholver"
+  },
+  "latin": "Nannopterum brasilianum",
+  "look_for": [
+    {
+      "en": "Slim, all-black cormorant with a long **tail**",
+      "nl": "Slanke, helemaal zwarte aalscholver met een lange **staart**"
+    },
+    {
+      "en": "Small yellowish **throat** patch, white-edged when breeding",
+      "nl": "Kleine geelbruine **keelvlek**, in broedkleed wit omrand"
+    },
+    {
+      "en": "Perches on posts and wires near water",
+      "nl": "Zit op paaltjes en draden bij het water"
+    }
+  ]
+}

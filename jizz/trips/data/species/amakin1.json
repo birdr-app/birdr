@@ -1,0 +1,22 @@
+{
+  "code": "amakin1",
+  "name": {
+    "en": "Amazon Kingfisher",
+    "nl": "Amazone-ijsvogel"
+  },
+  "latin": "Chloroceryle amazona",
+  "look_for": [
+    {
+      "en": "Large dark green kingfisher, small **crest**",
+      "nl": "Grote donkergroene ijsvogel met een kleine **kuif**"
+    },
+    {
+      "en": "Plain green **wings**, hardly any white spots",
+      "nl": "Effen groene **vleugels**, nauwelijks witte stippen"
+    },
+    {
+      "en": "Male rufous **breast**; heavy, long **bill**",
+      "nl": "Mannetje roodbruine **borst**; zware, lange **snavel**"
+    }
+  ]
+}

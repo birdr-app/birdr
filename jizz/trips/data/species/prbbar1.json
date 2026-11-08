@@ -1,0 +1,22 @@
+{
+  "code": "prbbar1",
+  "name": {
+    "en": "Prong-billed Barbet",
+    "nl": "Tandsnavelbaardvogel"
+  },
+  "latin": "Semnornis frantzii",
+  "look_for": [
+    {
+      "en": "Stubby barbet of cool mountain forest",
+      "nl": "Gedrongen baardvogel van koel bergbos"
+    },
+    {
+      "en": "Black **face** around a thick grey **bill**",
+      "nl": "Zwart **gezicht** rond een dikke grijze **snavel**"
+    },
+    {
+      "en": "Golden-brown **head**, olive back, yellowish **belly**",
+      "nl": "Goudbruine **kop**, olijfgroene rug, gelige **buik**"
+    }
+  ]
+}

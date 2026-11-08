@@ -1,0 +1,22 @@
+{
+  "code": "osprey",
+  "name": {
+    "en": "Osprey",
+    "nl": "Visarend"
+  },
+  "latin": "Pandion haliaetus",
+  "look_for": [
+    {
+      "en": "White **head** with a dark stripe through the eye",
+      "nl": "Witte **kop** met een donkere oogstreep"
+    },
+    {
+      "en": "Dark brown above, white below",
+      "nl": "Donkerbruin van boven, wit van onder"
+    },
+    {
+      "en": "Long **wings** kinked at the wrist",
+      "nl": "Lange **vleugels** met een knik bij de pols"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "acowoo",
+  "name": {
+    "en": "Acorn Woodpecker",
+    "nl": "Eikelspecht"
+  },
+  "latin": "Melanerpes formicivorus",
+  "look_for": [
+    {
+      "en": "Clown face: black, white and red",
+      "nl": "Clownsgezicht: zwart, wit en rood"
+    },
+    {
+      "en": "Pale **eye** in a black-ringed white **face**",
+      "nl": "Licht **oog** in een wit **gezicht** met zwarte rand"
+    },
+    {
+      "en": "Glossy black back, white **rump**",
+      "nl": "Glanzend zwarte rug, witte **stuit**"
+    }
+  ]
+}

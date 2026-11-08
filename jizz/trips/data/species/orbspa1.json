@@ -1,0 +1,22 @@
+{
+  "code": "orbspa1",
+  "name": {
+    "en": "Orange-billed Sparrow",
+    "nl": "Goudsnavelgors"
+  },
+  "latin": "Arremon aurantiirostris",
+  "look_for": [
+    {
+      "en": "Bright orange **bill** in a black head",
+      "nl": "Feloranje **snavel** in een zwarte kop"
+    },
+    {
+      "en": "White **throat** above a black breast band",
+      "nl": "Witte **keel** boven een zwarte borstband"
+    },
+    {
+      "en": "Thin white **eyebrow**; hops on the forest floor",
+      "nl": "Smalle witte **wenkbrauwstreep**; hupt over de bosbodem"
+    }
+  ]
+}

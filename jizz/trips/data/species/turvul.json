@@ -1,0 +1,22 @@
+{
+  "code": "turvul",
+  "name": {
+    "en": "Turkey Vulture",
+    "nl": "Roodkopgier"
+  },
+  "latin": "Cathartes aura",
+  "look_for": [
+    {
+      "en": "Small bare red **head**",
+      "nl": "Kleine, kale rode **kop**"
+    },
+    {
+      "en": "Two-toned **wings**: black front, silvery rear",
+      "nl": "Tweekleurige **vleugels**: zwart voor, zilvergrijs achter"
+    },
+    {
+      "en": "Soars with wings in a shallow V, rocking",
+      "nl": "Zweeft wiebelend met de vleugels in een ondiepe V"
+    }
+  ]
+}

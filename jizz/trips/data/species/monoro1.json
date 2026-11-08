@@ -1,0 +1,22 @@
+{
+  "code": "monoro1",
+  "name": {
+    "en": "Montezuma Oropendola",
+    "nl": "Montezumaoropendola"
+  },
+  "latin": "Psarocolius montezuma",
+  "look_for": [
+    {
+      "en": "Large chestnut body with a black **head**",
+      "nl": "Groot kastanjebruin lijf met een zwarte **kop**"
+    },
+    {
+      "en": "Bare blue **cheek** and a pink wattle",
+      "nl": "Kale blauwe **wang** en een roze lel"
+    },
+    {
+      "en": "Black **bill** with an orange tip",
+      "nl": "Zwarte **snavel** met een oranje punt"
+    }
+  ]
+}

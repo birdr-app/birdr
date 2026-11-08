@@ -1,0 +1,22 @@
+{
+  "code": "blkvul",
+  "name": {
+    "en": "American Black Vulture",
+    "nl": "Zwarte gier"
+  },
+  "latin": "Coragyps atratus",
+  "look_for": [
+    {
+      "en": "All black with a bare grey **head**",
+      "nl": "Helemaal zwart met een kale grijze **kop**"
+    },
+    {
+      "en": "White patches at the **wingtips** in flight",
+      "nl": "Witte vlekken bij de **vleugelpunten** in vlucht"
+    },
+    {
+      "en": "Short square **tail**, flaps often",
+      "nl": "Korte rechte **staart**, klapwiekt vaak"
+    }
+  ]
+}

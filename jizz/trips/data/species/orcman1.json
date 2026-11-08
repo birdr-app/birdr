@@ -1,0 +1,22 @@
+{
+  "code": "orcman1",
+  "name": {
+    "en": "Orange-collared Manakin",
+    "nl": "Oranjekraagmanakin"
+  },
+  "latin": "Manacus aurantiacus",
+  "look_for": [
+    {
+      "en": "Black **cap**, bright orange **throat** and collar",
+      "nl": "Zwarte **kap**, feloranje **keel** en kraag"
+    },
+    {
+      "en": "Yellow **belly**, olive-green **rump**",
+      "nl": "Gele **buik**, olijfgroene **stuit**"
+    },
+    {
+      "en": "Like White-collared, but orange and Pacific",
+      "nl": "Als de Witkraagmanakin, maar oranje en aan de Pacifische kant"
+    }
+  ]
+}

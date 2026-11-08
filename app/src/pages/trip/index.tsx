@@ -2,6 +2,7 @@ import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { countryCodeToFlag } from '../../api/birdrJourney';
+import { unitKnown } from '../../core/trip-quiz';
 import { fetchTrips, type TripSummary, type TripUnit } from '../../api/trip';
 import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
@@ -81,6 +82,7 @@ export function TripHomePage() {
   const t = useTripText();
   const navigate = useNavigate();
   const { trip, error, reload, local, known, knownGroups, progress } = useTrip(country);
+  const [showKnown, setShowKnown] = useState(false);
 
   if (!trip) return <TripLoading error={error} onRetry={reload} />;
 
@@ -92,15 +94,28 @@ export function TripHomePage() {
   const units = orderedUnits(trip, knownGroups);
   const unitImage = (unit: TripUnit) => trip.species[unit.species[0]]?.images[0]?.url;
   const knownIn = (unit: TripUnit) => unit.species.filter((c) => known.has(c)).length;
+  // A unit counts as done when it was played, or when the player knows every bird in it already.
+  const isDone = (unit: TripUnit) => done.has(unit.slug) || unitKnown(unit.species, known);
+  const openUnits = units.filter((u) => !unitKnown(u.species, known));
+  const knownUnits = units.filter((u) => unitKnown(u.species, known));
+  const knownUnitBirds = knownUnits.reduce((n, u) => n + u.species.length, 0);
+  const familiesDone = local.families_done || trip.groups.every((g) => knownGroups.has(g.slug));
+  const lookalikes = trip.lookalikes ?? [];
+  const lookalikesKnown = lookalikes.filter((p) => known.has(p.here)).length;
+  const lookalikeImage = lookalikes.length
+    ? (trip.home_species?.[lookalikes[0].home] ?? trip.species[lookalikes[0].home])?.images[0]?.url
+    : undefined;
 
-  // What to do next: the families, then the first day, then the next unit.
+  // What to do next: the families, the first day, the lookalikes, then the next unit.
   let next: { label: string; title: string; go: () => void } | null = null;
-  if (!local.families_done) {
+  if (!familiesDone) {
     next = { label: t('trip_start_here', 'Start here'), title: t('trip_families_title', 'Meet the families'), go: () => navigate(`/trips/${country}/families`) };
-  } else if (!done.has(trip.first_day.slug)) {
+  } else if (!isDone(trip.first_day)) {
     next = { label: t('trip_next', 'Next'), title: trip.first_day.title, go: () => navigate(`/trips/${country}/units/${trip.first_day.slug}`) };
+  } else if (lookalikes.length && !local.lookalikes_done) {
+    next = { label: t('trip_next', 'Next'), title: t('trip_lookalikes_title', 'Lookalikes from home'), go: () => navigate(`/trips/${country}/lookalikes`) };
   } else {
-    const unit = units.find((u) => !done.has(u.slug));
+    const unit = units.find((u) => !isDone(u));
     if (unit) next = { label: t('trip_next', 'Next'), title: unit.title, go: () => navigate(`/trips/${country}/units/${unit.slug}`) };
   }
 
@@ -123,7 +138,7 @@ export function TripHomePage() {
                 {t('trip_endemics_count', 'Endemics {known}/{total}', { known: endemicsKnown, total: endemicCodes.length })}
                 {' · '}
                 {t('trip_units_count', 'Units {done}/{total}', {
-                  done: trip.units.filter((u) => done.has(u.slug)).length,
+                  done: trip.units.filter(isDone).length,
                   total: trip.units.length,
                 })}
               </Text>
@@ -164,7 +179,7 @@ export function TripHomePage() {
             image={trip.species[trip.groups[0]?.species[0]]?.images[0]?.url}
             known={knownGroups.size ? trip.groups.filter((g) => knownGroups.has(g.slug)).length : 0}
             total={trip.groups.length}
-            done={local.families_done}
+            done={familiesDone}
             onClick={() => navigate(`/trips/${country}/families`)}
           />
           <UnitRow
@@ -173,9 +188,20 @@ export function TripHomePage() {
             image={unitImage(trip.first_day)}
             known={knownIn(trip.first_day)}
             total={trip.first_day.species.length}
-            done={done.has(trip.first_day.slug)}
+            done={isDone(trip.first_day)}
             onClick={() => navigate(`/trips/${country}/units/${trip.first_day.slug}`)}
           />
+          {lookalikes.length ? (
+            <UnitRow
+              title={t('trip_lookalikes_title', 'Lookalikes from home')}
+              subtitle={t('trip_pairs_count', '{count} pairs', { count: lookalikes.length })}
+              image={lookalikeImage}
+              known={lookalikesKnown}
+              total={lookalikes.length}
+              done={local.lookalikes_done}
+              onClick={() => navigate(`/trips/${country}/lookalikes`)}
+            />
+          ) : null}
           {endemicCodes.length ? (
             <UnitRow
               title={t('trip_endemics_title', 'Endemics of {country}', { country: trip.name })}
@@ -194,7 +220,7 @@ export function TripHomePage() {
           <Text fontSize="sm" color="primary.700">
             {t('trip_units_hint', 'Groups that are new to you come first.')}
           </Text>
-          {units.map((unit) => (
+          {[...openUnits, ...(showKnown ? knownUnits : [])].map((unit) => (
             <UnitRow
               key={unit.slug}
               title={unit.title}
@@ -202,11 +228,21 @@ export function TripHomePage() {
               image={unitImage(unit)}
               known={knownIn(unit)}
               total={unit.species.length}
-              done={done.has(unit.slug)}
+              done={isDone(unit)}
               highlight={next?.title === unit.title}
               onClick={() => navigate(`/trips/${country}/units/${unit.slug}`)}
             />
           ))}
+          {knownUnits.length ? (
+            <Button variant="ghost" colorPalette="primary" size="sm" onClick={() => setShowKnown(!showKnown)}>
+              {showKnown
+                ? t('trip_hide_known_units', 'Hide the units you know')
+                : t('trip_show_known_units', 'You already know every bird in {count} units ({birds} birds). Show them', {
+                    count: knownUnits.length,
+                    birds: knownUnitBirds,
+                  })}
+            </Button>
+          ) : null}
         </Flex>
       </Page.Body>
     </Page>

@@ -1,0 +1,22 @@
+{
+  "code": "grbani",
+  "name": {
+    "en": "Groove-billed Ani",
+    "nl": "Groefsnavelani"
+  },
+  "latin": "Crotophaga sulcirostris",
+  "look_for": [
+    {
+      "en": "All black and slim, with a long **tail**",
+      "nl": "Helemaal zwart en slank, met een lange **staart**"
+    },
+    {
+      "en": "Deep **bill** with fine grooves along the side",
+      "nl": "Hoge **snavel** met fijne groeven op de zijkant"
+    },
+    {
+      "en": "Curved ridge without a hump, unlike Smooth-billed Ani",
+      "nl": "Gebogen bovenkant zonder bult, anders dan bij de kleine ani"
+    }
+  ]
+}

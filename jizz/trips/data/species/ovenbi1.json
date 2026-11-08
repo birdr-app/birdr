@@ -1,0 +1,22 @@
+{
+  "code": "ovenbi1",
+  "name": {
+    "en": "Ovenbird",
+    "nl": "Ovenvogel"
+  },
+  "latin": "Seiurus aurocapilla",
+  "look_for": [
+    {
+      "en": "Orange **crown** stripe edged with black",
+      "nl": "Oranje **kruinstreep** met zwarte randen"
+    },
+    {
+      "en": "Bold white **eye-ring** on a plain face",
+      "nl": "Opvallende witte **oogring** in een effen gezicht"
+    },
+    {
+      "en": "White below with black spots; walks on the ground",
+      "nl": "Wit van onder met zwarte vlekken; loopt over de grond"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "trsowl",
+  "name": {
+    "en": "Tropical Screech-Owl",
+    "nl": "Cholibaschreeuwuil"
+  },
+  "latin": "Megascops choliba",
+  "look_for": [
+    {
+      "en": "Small owl with short **ear tufts**",
+      "nl": "Kleine uil met korte **oorpluimen**"
+    },
+    {
+      "en": "Grey-brown **face** framed by a black rim",
+      "nl": "Grijsbruin **gezicht** met een zwarte rand eromheen"
+    },
+    {
+      "en": "Streaked and cross-barred below, yellow **eyes**",
+      "nl": "Gestreept en fijn dwarsgebandeerd van onder, gele **ogen**"
+    }
+  ]
+}

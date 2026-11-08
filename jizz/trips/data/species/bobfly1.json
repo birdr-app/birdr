@@ -1,0 +1,22 @@
+{
+  "code": "bobfly1",
+  "name": {
+    "en": "Boat-billed Flycatcher",
+    "nl": "Bootsnaveltiran"
+  },
+  "latin": "Megarynchus pitangua",
+  "look_for": [
+    {
+      "en": "Massive, broad **bill**",
+      "nl": "Enorme, brede **snavel**"
+    },
+    {
+      "en": "Like Great Kiskadee, but olive **wings** without rufous",
+      "nl": "Als de Grote kiskadie, maar olijfgroene **vleugels** zonder roodbruin"
+    },
+    {
+      "en": "Black and white **head** stripes, yellow **belly**",
+      "nl": "Zwart-witte strepen op de **kop**, gele **buik**"
+    }
+  ]
+}

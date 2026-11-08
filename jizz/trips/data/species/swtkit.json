@@ -1,0 +1,22 @@
+{
+  "code": "swtkit",
+  "name": {
+    "en": "Swallow-tailed Kite",
+    "nl": "Zwaluwstaartwouw"
+  },
+  "latin": "Elanoides forficatus",
+  "look_for": [
+    {
+      "en": "Deeply forked black **tail**",
+      "nl": "Diep gevorkte zwarte **staart**"
+    },
+    {
+      "en": "White **head** and underparts, black **wings**",
+      "nl": "Witte **kop** en onderkant, zwarte **vleugels**"
+    },
+    {
+      "en": "Glides and twists gracefully over the forest",
+      "nl": "Zweeft en draait sierlijk boven het bos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "tubmot1",
+  "name": {
+    "en": "Turquoise-browed Motmot",
+    "nl": "Wenkbrauwmotmot"
+  },
+  "latin": "Eumomota superciliosa",
+  "look_for": [
+    {
+      "en": "Bright turquoise **eyebrow**",
+      "nl": "Felle turquoise **wenkbrauw**"
+    },
+    {
+      "en": "Black **throat** patch edged with blue",
+      "nl": "Zwarte **keelvlek** met een blauwe rand"
+    },
+    {
+      "en": "Very long bare shafts ending in large rackets",
+      "nl": "Heel lange kale schachten met grote spatels"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "cregua1",
+  "name": {
+    "en": "Crested Guan",
+    "nl": "Kuifsjakohoen"
+  },
+  "latin": "Penelope purpurascens",
+  "look_for": [
+    {
+      "en": "Large, dark brown guan with a bushy **crest**",
+      "nl": "Grote, donkerbruine goean met een borstelige **kuif**"
+    },
+    {
+      "en": "Bare blue **face**, bright red **throat** wattle",
+      "nl": "Kaal blauw **gezicht**, felrode **keellel**"
+    },
+    {
+      "en": "Fine white streaks on the **breast**; red **legs**",
+      "nl": "Fijne witte streepjes op de **borst**; rode **poten**"
+    }
+  ]
+}

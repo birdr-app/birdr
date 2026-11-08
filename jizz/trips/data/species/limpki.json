@@ -1,0 +1,22 @@
+{
+  "code": "limpki",
+  "name": {
+    "en": "Limpkin",
+    "nl": "Koerlan"
+  },
+  "latin": "Aramus guarauna",
+  "look_for": [
+    {
+      "en": "Large brown bird, finely streaked with white",
+      "nl": "Grote bruine vogel met fijne witte streepjes"
+    },
+    {
+      "en": "Long, slightly curved **bill**",
+      "nl": "Lange, licht gebogen **snavel**"
+    },
+    {
+      "en": "Long **legs**; wails loudly at dawn and dusk",
+      "nl": "Lange **poten**; jammert luid in de schemering"
+    }
+  ]
+}

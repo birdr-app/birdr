@@ -1,0 +1,22 @@
+{
+  "code": "sctdac1",
+  "name": {
+    "en": "Scarlet-thighed Dacnis",
+    "nl": "Rooddijpitpit"
+  },
+  "latin": "Dacnis venusta",
+  "look_for": [
+    {
+      "en": "Male: turquoise-blue **head** and back",
+      "nl": "Mannetje: turkooisblauwe **kop** en rug"
+    },
+    {
+      "en": "Black **underparts** and black mask",
+      "nl": "Zwarte **onderkant** en zwart masker"
+    },
+    {
+      "en": "Red **eye**; scarlet thighs, often hidden",
+      "nl": "Rood **oog**; scharlakenrode dijen, vaak verborgen"
+    }
+  ]
+}

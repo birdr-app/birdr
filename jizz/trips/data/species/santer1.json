@@ -1,0 +1,22 @@
+{
+  "code": "santer1",
+  "name": {
+    "en": "Sandwich Tern",
+    "nl": "Grote stern"
+  },
+  "latin": "Thalasseus sandvicensis",
+  "look_for": [
+    {
+      "en": "Black **bill** with a yellow tip",
+      "nl": "Zwarte **snavel** met een gele punt"
+    },
+    {
+      "en": "Shaggy black **crest**; white **forehead** in winter",
+      "nl": "Ruige zwarte **kuif**; wit **voorhoofd** in de winter"
+    },
+    {
+      "en": "Slimmer and paler than Royal Tern",
+      "nl": "Slanker en lichter dan de Amerikaanse koningsstern"
+    }
+  ]
+}

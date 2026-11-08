@@ -1,0 +1,18 @@
+{
+  "slug": "tyrant-flycatchers-pewees-kingbirds-and-allies",
+  "about": {
+    "en": "The larger, more visible tyrant flycatchers: kingbirds, kiskadees, pewees, phoebes, attilas and many others. They sit upright on an exposed perch and dart out to catch flying insects. Many are yellow below with a striped black-and-white head and call loudly; pewees and phoebes are plainer grey or brown.",
+    "nl": "De grotere, beter zichtbare tirannen: koningstirannen, kiskadies, piewies, phoebes, attila's en vele andere. Ze zitten rechtop op een open uitkijkpost en schieten uit om vliegende insecten te vangen. Veel soorten zijn geel van onderen met een zwart-wit gestreepte kop en roepen luid; piewies en phoebes zijn eenvoudiger grijs of bruin."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "old-world-flycatchers"
+      ],
+      "text": {
+        "en": "Tyrant flycatchers hunt like Old World flycatchers, from a perch, but the two families are unrelated. Tyrant flycatchers usually have a broader, flatter bill and harsher calls.",
+        "nl": "Tirannen jagen vanaf een uitkijkpost zoals vliegenvangers van de Oude Wereld, maar de twee families zijn niet verwant. Tirannen hebben meestal een bredere, plattere snavel en een rauwere roep."
+      }
+    }
+  ]
+}

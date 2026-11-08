@@ -1,0 +1,22 @@
+{
+  "code": "littin1",
+  "name": {
+    "en": "Little Tinamou",
+    "nl": "Kleine tinamoe"
+  },
+  "latin": "Crypturellus soui",
+  "look_for": [
+    {
+      "en": "Small, rounded tinamou with almost no **tail**",
+      "nl": "Kleine, ronde tinamoe met bijna geen **staart**"
+    },
+    {
+      "en": "Grey **head**, warm brown body without bars",
+      "nl": "Grijze **kop**, warmbruin lijf zonder bandering"
+    },
+    {
+      "en": "Yellowish **legs**; much smaller than Great Tinamou",
+      "nl": "Geelachtige **poten**; veel kleiner dan de grote tinamoe"
+    }
+  ]
+}

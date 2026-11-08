@@ -1,0 +1,22 @@
+{
+  "code": "gcrwar",
+  "name": {
+    "en": "Golden-crowned Warbler",
+    "nl": "Goudhaanzanger"
+  },
+  "latin": "Basileuterus culicivorus",
+  "look_for": [
+    {
+      "en": "Yellow-orange **crown** stripe edged with black",
+      "nl": "Geeloranje **kruinstreep** met zwarte randen"
+    },
+    {
+      "en": "Greyish **face** with a pale eyebrow",
+      "nl": "Grijzig **gezicht** met een lichte wenkbrauwstreep"
+    },
+    {
+      "en": "Olive back, bright yellow **underparts**",
+      "nl": "Olijfgroene rug, felgele **onderkant**"
+    }
+  ]
+}

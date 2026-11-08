@@ -1,0 +1,22 @@
+{
+  "code": "anhing",
+  "name": {
+    "en": "Anhinga",
+    "nl": "Amerikaanse slangenhalsvogel"
+  },
+  "latin": "Anhinga anhinga",
+  "look_for": [
+    {
+      "en": "Long, snake-like **neck** and dagger **bill**",
+      "nl": "Lange, slangachtige **hals** en dolkvormige **snavel**"
+    },
+    {
+      "en": "Silvery-white streaks on the **back** and **wings**",
+      "nl": "Zilverwitte strepen op **rug** en **vleugels**"
+    },
+    {
+      "en": "Male black; female with a buff **head** and neck",
+      "nl": "Mannetje zwart; vrouwtje met een geelbruine **kop** en hals"
+    }
+  ]
+}

@@ -92,7 +92,7 @@ class FlockScheduleTests(TestCase):
         bodies = self.pushes(push)
         self.assertEqual(push.call_count, 2)  # admin + member, quiet opted out
         self.assertIn('You won', bodies['admin1'])
-        self.assertEqual(bodies['member1'], f"Last week's challenge: Ada won with 18/{CLUB_MIX_LENGTH}.")
+        self.assertEqual(bodies['member1'], f"Last week's challenge: admin1 won with 18/{CLUB_MIX_LENGTH}.")
         self.assertNotIn('New challenge', bodies['member1'])
         challenge.refresh_from_db()
         self.assertEqual(challenge.status, FlockChallenge.STATUS_ENDED)

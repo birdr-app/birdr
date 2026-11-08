@@ -1,0 +1,18 @@
+{
+  "slug": "new-world-sparrows",
+  "about": {
+    "en": "Small to medium seed-eaters with a conical bill, from streaky brown sparrows and grey juncos to boldly patterned brushfinches and towhees. Many have striking head stripes. They feed on or near the ground, scratching in leaf litter or hopping along roadsides and in gardens, and sing simple, sweet songs.",
+    "nl": "Kleine tot middelgrote zaadeters met een kegelvormige snavel, van gestreepte bruine gorzen en grijze junco's tot opvallend getekende struikgorzen. Veel soorten hebben opvallende strepen op de kop. Ze zoeken voedsel op of vlak boven de grond, krabbend in bladafval of hippend langs wegen en in tuinen, en zingen eenvoudige, zoete liedjes."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "old-world-sparrows"
+      ],
+      "text": {
+        "en": "New World sparrows are unrelated to the House Sparrow and its relatives. They are closer to the buntings, with a slimmer shape, a longer tail and often a striped head.",
+        "nl": "Gorzen van de Nieuwe Wereld zijn niet verwant aan de huismus en zijn familie. Ze staan dichter bij de gorzen van de Oude Wereld, met een slanker lijf, een langere staart en vaak een gestreepte kop."
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "hummingbirds",
+  "about": {
+    "en": "Tiny nectar-drinkers with a needle-like bill that hover in front of flowers on wings that beat too fast to see. Many males glitter green, blue, violet or red on the throat or crown; hermits, in the forest understorey, are duller brown with long, curved bills. They visit feeders and chase each other constantly.",
+    "nl": "Piepkleine nectardrinkers met een naaldvormige snavel die voor bloemen stilhangen op vleugels die te snel slaan om te zien. Bij veel mannetjes glanzen keel of kruin groen, blauw, violet of rood; heremietkolibries, in de onderlaag van het bos, zijn doffer bruin met een lange, gebogen snavel. Ze komen op voederflesjes af en jagen elkaar voortdurend weg."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "sunbirds-and-spiderhunters"
+      ],
+      "text": {
+        "en": "Sunbirds also drink nectar and shine like jewels, but they are unrelated songbirds that usually perch to feed. Hummingbirds hover, fly backwards and are often smaller.",
+        "nl": "Honingzuigers drinken ook nectar en glanzen als juwelen, maar het zijn niet-verwante zangvogels die meestal zittend eten. Kolibries hangen stil in de lucht, vliegen achteruit en zijn vaak kleiner."
+      }
+    }
+  ]
+}

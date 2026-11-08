@@ -48,14 +48,25 @@ class UserNameHelperTests(TestCase):
         username = username_from_oauth(email='mobile@example.com')
         self.assertEqual(username, 'mobile')
 
-    def test_player_name_for_user_prefers_full_name(self):
+    def test_player_name_for_user_prefers_username(self):
         user = User.objects.create_user(
-            username='mobile@example.com',
-            email='mobile@example.com',
+            username='Birdy',
+            email='ada@example.com',
             password='pass12345',
             first_name='Ada',
             last_name='Bird',
         )
+        self.assertEqual(player_name_for_user(user), 'Birdy')
+
+    def test_player_name_for_user_falls_back_to_full_name(self):
+        user = User.objects.create_user(
+            username='x',
+            email='ada@example.com',
+            password='pass12345',
+            first_name='Ada',
+            last_name='Bird',
+        )
+        user.username = ''
         self.assertEqual(player_name_for_user(user), 'Ada Bird')
 
     def test_player_name_for_user_strips_email_username(self):

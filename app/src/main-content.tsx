@@ -66,6 +66,7 @@ import { CourseLessonPage } from "./pages/course/lesson"
 import { TripHomePage, TripListPage } from "./pages/trip"
 import { TripEndemicsPage } from "./pages/trip/endemics"
 import { TripFamiliesPage } from "./pages/trip/families"
+import { TripLookalikesPage } from "./pages/trip/lookalikes"
 import { TripUnitPage } from "./pages/trip/unit"
 import { SurvivalPlayPage } from "./pages/survival/play"
 import { SurvivalResultPage } from "./pages/survival/result"
@@ -190,6 +191,7 @@ export const MainContent = () => {
             <Route path="/trips/:country" element={<TripHomePage />} />
             <Route path="/trips/:country/families" element={<TripFamiliesPage />} />
             <Route path="/trips/:country/endemics" element={<TripEndemicsPage />} />
+            <Route path="/trips/:country/lookalikes" element={<TripLookalikesPage />} />
             <Route path="/trips/:country/units/:slug" element={<TripUnitPage />} />
             <Route path="/survival" element={<SurvivalStartPage />} />
             <Route path="/survival/play" element={<SurvivalPlayPage />} />

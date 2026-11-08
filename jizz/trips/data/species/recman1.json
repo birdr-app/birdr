@@ -1,0 +1,22 @@
+{
+  "code": "recman1",
+  "name": {
+    "en": "Red-capped Manakin",
+    "nl": "Geelbroekmanakin"
+  },
+  "latin": "Ceratopipra mentalis",
+  "look_for": [
+    {
+      "en": "Black body with a scarlet **head**",
+      "nl": "Zwart lijf met een scharlakenrode **kop**"
+    },
+    {
+      "en": "Yellow **thighs** and a white **eye**",
+      "nl": "Gele **dijen** en een wit **oog**"
+    },
+    {
+      "en": "Slides backwards along a branch in display",
+      "nl": "Schuift bij de balts achteruit over een tak"
+    }
+  ]
+}

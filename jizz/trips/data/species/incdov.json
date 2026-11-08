@@ -1,0 +1,22 @@
+{
+  "code": "incdov",
+  "name": {
+    "en": "Inca Dove",
+    "nl": "Aztekenduif"
+  },
+  "latin": "Columbina inca",
+  "look_for": [
+    {
+      "en": "Small dove with a scaly pattern all over",
+      "nl": "Kleine duif, overal geschubd"
+    },
+    {
+      "en": "Long **tail** with white edges",
+      "nl": "Lange **staart** met witte zijkanten"
+    },
+    {
+      "en": "Rufous **wings** flash in flight",
+      "nl": "Roodbruine **vleugels**, opvallend in de vlucht"
+    }
+  ]
+}

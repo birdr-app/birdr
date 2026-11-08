@@ -1,0 +1,22 @@
+{
+  "code": "brratt1",
+  "name": {
+    "en": "Bright-rumped Attila",
+    "nl": "Goudstuitattila"
+  },
+  "latin": "Attila spadiceus",
+  "look_for": [
+    {
+      "en": "Big **head**, hooked **bill** and red **eye**",
+      "nl": "Grote **kop**, **haaksnavel** en rood **oog**"
+    },
+    {
+      "en": "Bright yellow **rump**, often hidden",
+      "nl": "Felgele **stuit**, vaak verborgen"
+    },
+    {
+      "en": "Streaky olive **throat** and **breast**",
+      "nl": "Gestreepte olijfkleurige **keel** en **borst**"
+    }
+  ]
+}

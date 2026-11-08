@@ -8,6 +8,8 @@ Layout under ``jizz/trips/data/``:
   ``group_overrides`` and regional specialities.
 - ``<cc>/units.json``: groups, units and the endemics units, written by ``trip_prep_units``.
 - ``<cc>/texts.json``: ``here`` texts for groups and species, and the endemics chapter.
+- ``lookalikes/<here>__<home>.json``: how to tell a local bird from a lookalike at home (for a
+  European birder), shared by every country that lists the pair in ``scope.json``'s ``lookalikes``.
 
 Texts are ``{"en": ..., "nl": ...}`` objects, like the courses.
 """
@@ -19,6 +21,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent / 'data'
+LOOKALIKES_DIR = DATA_DIR / 'lookalikes'
 
 # Countries with Trip prep content, and the languages their texts exist in.
 TRIPS: dict[str, dict] = {
@@ -83,7 +86,21 @@ def load_scope(country: str) -> dict:
     scope.setdefault('first_day', [])
     scope.setdefault('group_overrides', {})
     scope.setdefault('regional_specialities', [])
+    scope.setdefault('lookalikes', [])
     return scope
+
+
+def lookalike_path(here: str, home: str) -> Path:
+    return LOOKALIKES_DIR / f'{here}__{home}.json'
+
+
+def home_codes(scope: dict, in_scope) -> list[str]:
+    """Lookalike home birds that aren't in the trip itself: they need their own photos."""
+    out = []
+    for pair in scope.get('lookalikes', []):
+        if pair['home'] not in in_scope and pair['home'] not in out:
+            out.append(pair['home'])
+    return out
 
 
 def scope_species(country: str) -> list[ScopeSpecies]:

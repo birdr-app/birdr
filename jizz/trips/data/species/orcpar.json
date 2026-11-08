@@ -1,0 +1,22 @@
+{
+  "code": "orcpar",
+  "name": {
+    "en": "Orange-chinned Parakeet",
+    "nl": "Toviparkiet"
+  },
+  "latin": "Brotogeris jugularis",
+  "look_for": [
+    {
+      "en": "Small green parakeet with a short **tail**",
+      "nl": "Kleine groene parkiet met een korte **staart**"
+    },
+    {
+      "en": "Tiny orange spot on the **chin**",
+      "nl": "Klein oranje vlekje op de **kin**"
+    },
+    {
+      "en": "Brown **shoulders**; noisy flocks in towns",
+      "nl": "Bruine **schouders**; luidruchtige groepjes in dorpen"
+    }
+  ]
+}

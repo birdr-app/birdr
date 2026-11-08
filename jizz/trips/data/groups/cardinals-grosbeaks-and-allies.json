@@ -1,0 +1,27 @@
+{
+  "slug": "cardinals-grosbeaks-and-allies",
+  "about": {
+    "en": "Stout songbirds, many with a thick bill, in which males are often brilliant red, blue, rose or yellow and females duller olive or brown. The group holds cardinals, grosbeaks, buntings, ant-tanagers and the red tanagers. Some feed quietly in the canopy, while ant-tanagers move through the understorey in noisy family groups.",
+    "nl": "Stevige zangvogels, veel met een dikke snavel, waarvan de mannetjes vaak schitterend rood, blauw, roze of geel zijn en de vrouwtjes doffer olijfgroen of bruin. De groep omvat kardinalen, dikbekken, gorzen zoals de indigogors, miertangaren en de rode tangaren. Sommige zoeken rustig voedsel in de kruinen; miertangaren trekken in luidruchtige familiegroepjes door de onderlaag."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "tanagers-and-allies"
+      ],
+      "text": {
+        "en": "Red tanagers such as the Summer and Scarlet Tanagers, and the ant-tanagers, are in fact cardinals. They have a stouter bill than most true tanagers.",
+        "nl": "Rode tangaren zoals de zomertangare en de zwartvleugeltangare, en ook de miertangaren, zijn eigenlijk kardinalen. Ze hebben een steviger snavel dan de meeste echte tangaren."
+      }
+    },
+    {
+      "if_known": [
+        "finches-euphonias-and-allies"
+      ],
+      "text": {
+        "en": "The grosbeaks here are unrelated to the Hawfinch and other finches called grosbeaks. They belong to the cardinal family.",
+        "nl": "De Amerikaanse dikbekken (grosbeaks) zijn niet verwant aan de appelvink en andere vinken met die Engelse naam. Ze horen bij de familie van de kardinalen."
+      }
+    }
+  ]
+}

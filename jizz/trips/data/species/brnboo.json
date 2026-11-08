@@ -1,0 +1,22 @@
+{
+  "code": "brnboo",
+  "name": {
+    "en": "Brown Booby",
+    "nl": "Bruine gent"
+  },
+  "latin": "Sula leucogaster",
+  "look_for": [
+    {
+      "en": "Dark brown above and on the **breast**",
+      "nl": "Donkerbruin van boven en op de **borst**"
+    },
+    {
+      "en": "Sharp line to the white **belly**",
+      "nl": "Scherpe grens met de witte **buik**"
+    },
+    {
+      "en": "Yellowish **bill** and feet; plunge-dives into the sea",
+      "nl": "Geelachtige **snavel** en voeten; duikt vanuit de lucht in zee"
+    }
+  ]
+}

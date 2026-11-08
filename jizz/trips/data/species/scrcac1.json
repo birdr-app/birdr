@@ -1,0 +1,22 @@
+{
+  "code": "scrcac1",
+  "name": {
+    "en": "Scarlet-rumped Cacique",
+    "nl": "Bloedstuitbuidelspreeuw"
+  },
+  "latin": "Cacicus uropygialis",
+  "look_for": [
+    {
+      "en": "Glossy black with a pale blue **eye**",
+      "nl": "Glanzend zwart met een lichtblauw **oog**"
+    },
+    {
+      "en": "Pointed pale greenish **bill**",
+      "nl": "Spitse, lichte groenige **snavel**"
+    },
+    {
+      "en": "Scarlet **rump**, often hidden until it flies",
+      "nl": "Scharlakenrode **stuit**, vaak pas te zien in vlucht"
+    }
+  ]
+}

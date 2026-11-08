@@ -1,0 +1,22 @@
+{
+  "code": "triher",
+  "name": {
+    "en": "Tricoloured Heron",
+    "nl": "Witbuikreiger"
+  },
+  "latin": "Egretta tricolor",
+  "look_for": [
+    {
+      "en": "Slaty-blue heron with a white **belly**",
+      "nl": "Leiblauwe reiger met een witte **buik**"
+    },
+    {
+      "en": "White stripe down the front of the **neck**",
+      "nl": "Witte streep voor langs de **hals**"
+    },
+    {
+      "en": "Very long, thin **bill**",
+      "nl": "Zeer lange, dunne **snavel**"
+    }
+  ]
+}

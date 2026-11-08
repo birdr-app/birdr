@@ -1,0 +1,22 @@
+{
+  "code": "libher",
+  "name": {
+    "en": "Little Blue Heron",
+    "nl": "Kleine blauwe reiger"
+  },
+  "latin": "Egretta caerulea",
+  "look_for": [
+    {
+      "en": "Slate-blue all over, purplish **neck**",
+      "nl": "Helemaal leiblauw, paarsachtige **hals**"
+    },
+    {
+      "en": "Grey-blue **bill** with a black tip",
+      "nl": "Grijsblauwe **snavel** met een zwarte punt"
+    },
+    {
+      "en": "Dull greenish legs, no yellow **feet**",
+      "nl": "Doffe groenige poten, geen gele **voeten**"
+    }
+  ]
+}

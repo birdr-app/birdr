@@ -1,0 +1,22 @@
+{
+  "code": "grasal2",
+  "name": {
+    "en": "Cinnamon-bellied Saltator",
+    "nl": "Bruin-grijze saltator"
+  },
+  "latin": "Saltator grandis",
+  "look_for": [
+    {
+      "en": "Grey-brown above with a broad white **eyebrow**",
+      "nl": "Grijsbruin van boven met een brede witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "White **throat** with a dark side stripe",
+      "nl": "Witte **keel** met een donkere streep opzij"
+    },
+    {
+      "en": "Cinnamon **belly** and vent below a grey breast",
+      "nl": "Kaneelkleurige **buik** en anaalstreek onder een grijze borst"
+    }
+  ]
+}

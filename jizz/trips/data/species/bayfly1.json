@@ -1,0 +1,22 @@
+{
+  "code": "bayfly1",
+  "name": {
+    "en": "Black-and-yellow Silky-flycatcher",
+    "nl": "Geelflankzijdevliegenvanger"
+  },
+  "latin": "Phainoptila melanoxantha",
+  "look_for": [
+    {
+      "en": "Male black with a yellow **rump**",
+      "nl": "Mannetje zwart met een gele **stuit**"
+    },
+    {
+      "en": "Bright yellow **flanks**, olive **breast**",
+      "nl": "Felgele **flanken**, olijfgroene **borst**"
+    },
+    {
+      "en": "Female olive with a dark grey **head**",
+      "nl": "Vrouwtje olijfgroen met een donkergrijze **kop**"
+    }
+  ]
+}

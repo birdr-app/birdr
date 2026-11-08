@@ -1,0 +1,22 @@
+{
+  "code": "blcwar1",
+  "name": {
+    "en": "Black-cheeked Warbler",
+    "nl": "Zwartwangzanger"
+  },
+  "latin": "Basileuterus melanogenys",
+  "look_for": [
+    {
+      "en": "Chestnut **crown** with a long white eyebrow",
+      "nl": "Kastanjebruine **kruin** met een lange witte wenkbrauwstreep"
+    },
+    {
+      "en": "Blackish **cheeks** below the eyebrow",
+      "nl": "Zwartachtige **wangen** onder de wenkbrauwstreep"
+    },
+    {
+      "en": "Grey-brown above, whitish **throat**; mountain forest",
+      "nl": "Grijsbruin van boven, witachtige **keel**; bergbos"
+    }
+  ]
+}

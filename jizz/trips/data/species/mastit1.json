@@ -1,0 +1,22 @@
+{
+  "code": "mastit1",
+  "name": {
+    "en": "Masked Tityra",
+    "nl": "Maskertityra"
+  },
+  "latin": "Tityra semifasciata",
+  "look_for": [
+    {
+      "en": "Pale grey-white with black **wings**",
+      "nl": "Licht grijswit met zwarte **vleugels**"
+    },
+    {
+      "en": "Red skin round the **eye** and **bill** base",
+      "nl": "Rode huid rond het **oog** en aan de **snavelbasis**"
+    },
+    {
+      "en": "Black **mask**; black band across the **tail**",
+      "nl": "Zwart **masker**; zwarte band over de **staart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rawwre1",
+  "name": {
+    "en": "Rufous-and-white Wren",
+    "nl": "Rood-witte winterkoning"
+  },
+  "latin": "Thryophilus rufalbus",
+  "look_for": [
+    {
+      "en": "Bright rufous upperparts",
+      "nl": "Fel roodbruine bovenkant"
+    },
+    {
+      "en": "White **eyebrow**, black-and-white streaked **cheeks**",
+      "nl": "Witte **wenkbrauwstreep**, zwart-wit gestreepte **wangen**"
+    },
+    {
+      "en": "Clean white **breast**, no bars on **flanks**",
+      "nl": "Helder witte **borst**, geen bandjes op de **flanken**"
+    }
+  ]
+}

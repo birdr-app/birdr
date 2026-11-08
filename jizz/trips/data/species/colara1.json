@@ -1,0 +1,22 @@
+{
+  "code": "colara1",
+  "name": {
+    "en": "Collared Aracari",
+    "nl": "Halsbandarassari"
+  },
+  "latin": "Pteroglossus torquatus",
+  "look_for": [
+    {
+      "en": "Slim toucan with a black **head**",
+      "nl": "Slanke toekan met een zwarte **kop**"
+    },
+    {
+      "en": "Yellow **belly** with a red-black band",
+      "nl": "Gele **buik** met een roodzwarte band"
+    },
+    {
+      "en": "Pale upper **bill**, black lower half",
+      "nl": "Lichte bovensnavel, zwarte ondersnavel"
+    }
+  ]
+}

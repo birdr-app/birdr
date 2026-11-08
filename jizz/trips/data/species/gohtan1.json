@@ -1,0 +1,22 @@
+{
+  "code": "gohtan1",
+  "name": {
+    "en": "Golden-hooded Tanager",
+    "nl": "Purpermaskertangare"
+  },
+  "latin": "Stilpnia larvata",
+  "look_for": [
+    {
+      "en": "Shining golden-orange **hood**",
+      "nl": "Glanzende goudoranje **kap**"
+    },
+    {
+      "en": "Black **mask** edged with blue",
+      "nl": "Zwart **masker** met een blauwe rand"
+    },
+    {
+      "en": "Black **back**, blue sides, white belly",
+      "nl": "Zwarte **rug**, blauwe flanken, witte buik"
+    }
+  ]
+}

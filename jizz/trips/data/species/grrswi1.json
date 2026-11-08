@@ -1,0 +1,22 @@
+{
+  "code": "grrswi1",
+  "name": {
+    "en": "Grey-rumped Swift",
+    "nl": "Grijsstuitgierzwaluw"
+  },
+  "latin": "Chaetura cinereiventris",
+  "look_for": [
+    {
+      "en": "Small black swift with a short **tail**",
+      "nl": "Kleine zwarte gierzwaluw met een korte **staart**"
+    },
+    {
+      "en": "Pale grey **rump** that stands out clearly",
+      "nl": "Lichtgrijze **stuit** die duidelijk afsteekt"
+    },
+    {
+      "en": "Glossy blue-black **back**, unlike brown Vaux's Swift",
+      "nl": "Glanzend blauwzwarte **rug**, anders dan de bruine Vauxgierzwaluw"
+    }
+  ]
+}

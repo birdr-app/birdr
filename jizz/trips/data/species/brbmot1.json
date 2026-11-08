@@ -1,0 +1,22 @@
+{
+  "code": "brbmot1",
+  "name": {
+    "en": "Broad-billed Motmot",
+    "nl": "Breedsnavelmotmot"
+  },
+  "latin": "Electron platyrhynchum",
+  "look_for": [
+    {
+      "en": "Like Rufous Motmot, but smaller with a green **chin**",
+      "nl": "Als de rosse motmot, maar kleiner en met groene **kin**"
+    },
+    {
+      "en": "Rufous only to the **breast**, belly green-blue",
+      "nl": "Alleen tot de **borst** roodbruin, buik blauwgroen"
+    },
+    {
+      "en": "Broad, flat black **bill**",
+      "nl": "Brede, platte zwarte **snavel**"
+    }
+  ]
+}

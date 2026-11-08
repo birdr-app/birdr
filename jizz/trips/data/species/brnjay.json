@@ -1,0 +1,22 @@
+{
+  "code": "brnjay",
+  "name": {
+    "en": "Brown Jay",
+    "nl": "Bruine gaai"
+  },
+  "latin": "Cyanocorax morio",
+  "look_for": [
+    {
+      "en": "Big, dark brown jay with a long **tail**",
+      "nl": "Grote, donkerbruine gaai met een lange **staart**"
+    },
+    {
+      "en": "Paler **belly**, often white **tail** tips",
+      "nl": "Lichtere **buik**, vaak witte **staartpunten**"
+    },
+    {
+      "en": "Loud screams and a popping hiccup",
+      "nl": "Luide kreten en een ploppend hikgeluid"
+    }
+  ]
+}

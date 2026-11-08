@@ -3,31 +3,11 @@ import { useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { updateTripState, type Trip, type TripGroup, type TripMedia } from '../../api/trip';
 import { BirdrArtImage } from '../../components/birdr-art-image';
-import { shuffle } from '../../core/trip-quiz';
+import { buildFamilyQuiz } from '../../core/trip-quiz';
 import { Page } from '../../shared/components/layout';
 import { Kicker, StepBar } from '../course/parts';
 import { Tag, TripLoading, TripPhoto } from './parts';
 import { useTrip, useTripText } from './use-trip';
-
-const FAMILY_QUESTIONS = 8;
-
-type FamilyQuestion = { group: string; image: TripMedia; options: string[] };
-
-export function buildFamilyQuiz(trip: Trip, random: () => number = Math.random): FamilyQuestion[] {
-  const groups = trip.groups.filter((g) => g.species.some((c) => trip.species[c]?.images.length));
-  return shuffle(groups, random)
-    .slice(0, FAMILY_QUESTIONS)
-    .map((group) => {
-      const code = shuffle(group.species.filter((c) => trip.species[c]?.images.length), random)[0];
-      const media = trip.species[code].images;
-      const others = shuffle(groups.filter((g) => g.slug !== group.slug), random).slice(0, 3);
-      return {
-        group: group.slug,
-        image: media[Math.floor(random() * media.length)],
-        options: shuffle([group.slug, ...others.map((g) => g.slug)], random),
-      };
-    });
-}
 
 /** /trips/:country/families: one card per bird group, new groups first, then a short quiz. */
 export function TripFamiliesPage() {
@@ -40,10 +20,10 @@ export function TripFamiliesPage() {
   const [quiz, setQuiz] = useState(false);
   const [finished, setFinished] = useState<{ score: number; total: number } | null>(null);
 
-  const groups = useMemo(() => {
-    if (!trip) return [];
-    return [...trip.groups].sort((a, b) => Number(knownGroups.has(a.slug)) - Number(knownGroups.has(b.slug)));
-  }, [trip, knownGroups]);
+  // Cards only for the groups that are new to the player; the known ones share one card at the end.
+  const groups = useMemo(() => (trip ? trip.groups.filter((g) => !knownGroups.has(g.slug)) : []), [trip, knownGroups]);
+  const oldGroups = useMemo(() => (trip ? trip.groups.filter((g) => knownGroups.has(g.slug)) : []), [trip, knownGroups]);
+  const steps = groups.length + (oldGroups.length ? 1 : 0);
 
   if (!trip) return <TripLoading error={error} onRetry={reload} />;
   const go = (n: number) => {
@@ -55,7 +35,7 @@ export function TripFamiliesPage() {
     setFinished({ score, total });
     window.scrollTo({ top: 0 });
   };
-  const newCount = groups.filter((g) => !knownGroups.has(g.slug)).length;
+  const newCount = groups.length;
 
   return (
     <Page>
@@ -88,27 +68,36 @@ export function TripFamiliesPage() {
               </Button>
             </Flex>
           ) : quiz ? (
-            <FamilyQuiz trip={trip} onDone={finish} />
+            <FamilyQuiz trip={trip} knownGroups={knownGroups} onDone={finish} />
           ) : (
             <>
-              <StepBar total={groups.length + 1} current={index} />
+              <StepBar total={steps + 1} current={index} />
               {index === 0 ? (
                 <Text color="primary.700">
-                  {t('trip_families_intro', '{total} kinds of birds live here. {new} of them are new to you; they come first.', {
-                    total: groups.length,
-                    new: newCount,
-                  })}
+                  {oldGroups.length
+                    ? t('trip_families_intro_known', '{total} kinds of birds live here. {new} of them are new to you; you know the other {old}.', {
+                        total: trip.groups.length,
+                        new: newCount,
+                        old: oldGroups.length,
+                      })
+                    : t('trip_families_intro_all_new', '{total} kinds of birds live here, all new to you.', { total: trip.groups.length })}
                 </Text>
               ) : null}
-              <GroupCard trip={trip} group={groups[index]} knownGroups={knownGroups} known={known} />
+              {index < groups.length ? (
+                <GroupCard trip={trip} group={groups[index]} knownGroups={knownGroups} known={known} />
+              ) : oldGroups.length ? (
+                <KnownGroupsCard trip={trip} groups={oldGroups} known={known} />
+              ) : null}
               <Flex gap={2} mt={2}>
                 <Button variant="outline" colorPalette="primary" disabled={index === 0} onClick={() => go(index - 1)}>
                   {t('trip_back', 'Back')}
                 </Button>
-                <Button colorPalette="primary" flex={1} onClick={() => (index + 1 < groups.length ? go(index + 1) : setQuiz(true))}>
+                <Button colorPalette="primary" flex={1} onClick={() => (index + 1 < steps ? go(index + 1) : setQuiz(true))}>
                   {index + 1 < groups.length
                     ? t('trip_next_group', 'Next group ({n}/{total})', { n: index + 2, total: groups.length })
-                    : t('trip_families_quiz', 'Family quiz')}
+                    : index + 1 < steps
+                      ? t('trip_known_groups_next', 'Groups you know')
+                      : t('trip_families_quiz', 'Family quiz')}
                 </Button>
               </Flex>
               <Button variant="ghost" colorPalette="primary" size="sm" onClick={() => setQuiz(true)}>
@@ -174,9 +163,39 @@ function GroupCard({ trip, group, knownGroups, known }: { trip: Trip; group: Tri
   );
 }
 
-function FamilyQuiz({ trip, onDone }: { trip: Trip; onDone: (score: number, total: number) => void }) {
+/** One card for all the groups the player knows, with how many of each group's birds they know. */
+function KnownGroupsCard({ trip, groups, known }: { trip: Trip; groups: TripGroup[]; known: Set<string> }) {
   const t = useTripText();
-  const questions = useMemo(() => buildFamilyQuiz(trip), [trip]);
+  return (
+    <Flex direction="column" gap={3} bg="white" borderRadius="xl" p={4} borderWidth="1px" borderColor="primary.200">
+      <Flex align="center" gap={2} wrap="wrap">
+        <Text fontSize="2xl" fontWeight="700" color="primary.800">
+          {t('trip_known_groups_title', 'Groups you know')}
+        </Text>
+        <Tag tone="old">{t('trip_old_friend', 'Old friend')}</Tag>
+      </Flex>
+      <Text color="primary.700">{t('trip_known_groups_intro', 'You know a bird from each of these groups. The units show which species are new.')}</Text>
+      {groups.map((g) => {
+        const knownHere = g.species.filter((c) => known.has(c)).length;
+        return (
+          <Flex key={g.slug} justify="space-between" gap={3} borderTopWidth="1px" borderColor="primary.100" pt={2}>
+            <Text color="primary.800" fontWeight="600">
+              {g.name}
+            </Text>
+            <Text color="primary.700" fontSize="sm" flexShrink={0} fontVariantNumeric="tabular-nums">
+              {t('trip_known_of', '{known}/{total} known', { known: knownHere, total: g.species.length })}
+            </Text>
+          </Flex>
+        );
+      })}
+    </Flex>
+  );
+}
+
+function FamilyQuiz({ trip, knownGroups, onDone }: { trip: Trip; knownGroups: Set<string>; onDone: (score: number, total: number) => void }) {
+  const t = useTripText();
+  // Fixed at the start: answers during the quiz must not reshuffle it.
+  const [questions] = useState(() => buildFamilyQuiz(trip, Math.random, knownGroups));
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [score, setScore] = useState(0);

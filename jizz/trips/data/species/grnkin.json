@@ -1,0 +1,22 @@
+{
+  "code": "grnkin",
+  "name": {
+    "en": "Green Kingfisher",
+    "nl": "Groene ijsvogel"
+  },
+  "latin": "Chloroceryle americana",
+  "look_for": [
+    {
+      "en": "Small green kingfisher with a white **collar**",
+      "nl": "Kleine groene ijsvogel met een witte **halsband**"
+    },
+    {
+      "en": "White spots on the **wings**",
+      "nl": "Witte stippen op de **vleugels**"
+    },
+    {
+      "en": "Male rufous **breast** band; female green bands",
+      "nl": "Mannetje roodbruine **borstband**; vrouwtje groene banden"
+    }
+  ]
+}
