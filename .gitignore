@@ -14,6 +14,8 @@ build
 jizz/media
 jizz/static
 media.json
+# Trip prep photo picks are content, not a dump.
+!jizz/trips/data/*/media.json
 
 # Coverage
 .coverage
