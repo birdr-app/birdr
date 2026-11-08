@@ -1,0 +1,22 @@
+{
+  "code": "gubter2",
+  "name": {
+    "en": "Gull-billed Tern",
+    "nl": "Lachstern"
+  },
+  "latin": "Gelochelidon nilotica",
+  "look_for": [
+    {
+      "en": "Short, thick, all-black **bill**",
+      "nl": "Korte, dikke, helemaal zwarte **snavel**"
+    },
+    {
+      "en": "Picks food from land and water, rarely dives",
+      "nl": "Pikt voedsel van land en water, duikt zelden"
+    },
+    {
+      "en": "Winter: white head, dark smudge behind the eye",
+      "nl": "Winter: witte kop, donkere vlek achter het oog"
+    }
+  ]
+}

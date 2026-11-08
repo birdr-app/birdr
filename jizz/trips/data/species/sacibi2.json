@@ -1,0 +1,22 @@
+{
+  "code": "sacibi2",
+  "name": {
+    "en": "African Sacred Ibis",
+    "nl": "Heilige ibis"
+  },
+  "latin": "Threskiornis aethiopicus",
+  "look_for": [
+    {
+      "en": "White ibis with a bare black head and neck",
+      "nl": "Witte ibis met kale zwarte kop en hals"
+    },
+    {
+      "en": "Down-curved black **bill**",
+      "nl": "Gebogen zwarte **snavel**"
+    },
+    {
+      "en": "Black lacy plumes over the **tail**",
+      "nl": "Zwarte kanten sierveren over de **staart**"
+    }
+  ]
+}

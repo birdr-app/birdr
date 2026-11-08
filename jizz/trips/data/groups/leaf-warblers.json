@@ -1,0 +1,18 @@
+{
+  "slug": "leaf-warblers",
+  "about": {
+    "en": "Tiny, active warblers in green, olive or brown, with a thin bill, pale underparts and usually a pale stripe over the eye; some have wing bars. They flit through the leaves of trees, picking off insects, and are often found by their call. Many look nearly identical, so voice is the surest guide.",
+    "nl": "Piepkleine, beweeglijke zangers in groen, olijf of bruin, met een dun snaveltje, een lichte onderkant en meestal een lichte wenkbrauwstreep; sommige hebben vleugelstrepen. Ze fladderen door het blad van bomen, pikken er insecten af en je vindt ze vaak op hun roep. Veel soorten lijken sprekend op elkaar, dus de stem is de beste aanwijzing."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "wood-warblers"
+      ],
+      "text": {
+        "en": "These are no relation of the warblers of the Americas. Leaf warblers are much plainer, in green, olive and brown, without bright yellow, orange or black patterns.",
+        "nl": "Boszangers zijn geen familie van de Amerikaanse zangers. Ze zijn veel eenvoudiger getekend, in groen, olijf en bruin, zonder felle gele, oranje of zwarte patronen."
+      }
+    }
+  ]
+}

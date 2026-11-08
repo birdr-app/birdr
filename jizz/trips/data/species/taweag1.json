@@ -1,0 +1,22 @@
+{
+  "code": "taweag1",
+  "name": {
+    "en": "Tawny Eagle",
+    "nl": "Savannearend"
+  },
+  "latin": "Aquila rapax",
+  "look_for": [
+    {
+      "en": "Plain brown eagle, from pale tawny to dark",
+      "nl": "Effen bruine arend, van licht roestgeel tot donker"
+    },
+    {
+      "en": "Yellow **gape** ends below the eye, not beyond",
+      "nl": "Gele **mondhoek** loopt tot onder het oog, niet verder"
+    },
+    {
+      "en": "Shaggy feathered legs, often looks scruffy",
+      "nl": "Ruig bevederde poten, ziet er vaak slordig uit"
+    }
+  ]
+}

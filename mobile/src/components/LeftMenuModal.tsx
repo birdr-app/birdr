@@ -25,6 +25,7 @@ const PANEL_WIDTH = Math.min(SCREEN_WIDTH * 0.85, 340);
 const MENU_ITEMS: { route: string; labelKey: string; advanced?: boolean }[] = [
   { route: 'Home', labelKey: 'home' },
   { route: 'Start', labelKey: 'new_game' },
+  { route: 'TripList', labelKey: 'trip_title' },
   { route: 'CountryChallengeLeaderboard', labelKey: 'country_leaderboard', advanced: true },
   { route: 'League', labelKey: 'league', advanced: true },
   { route: 'SurvivalScores', labelKey: 'survival_highscores', advanced: true },
@@ -99,7 +100,8 @@ export function LeftMenuModal() {
                 const isFocused =
                   currentRoute === item.route ||
                   (item.route === 'Help' && currentRoute === 'HelpDetail') ||
-                  (item.route === 'League' && currentRoute?.startsWith('League'));
+                  (item.route === 'League' && currentRoute?.startsWith('League')) ||
+                  (item.route === 'TripList' && currentRoute?.startsWith('Trip'));
                 const label = t(item.labelKey);
                 return (
                   <TouchableOpacity

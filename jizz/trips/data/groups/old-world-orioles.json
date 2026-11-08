@@ -1,0 +1,18 @@
+{
+  "slug": "old-world-orioles",
+  "about": {
+    "en": "Thrush-sized birds of the treetops, mostly golden yellow and black with a strong reddish bill; females and young are greener and streaked. They stay high in leafy trees, where they are surprisingly hard to see. Their fluting whistles and harsh, cat-like calls are the best clue.",
+    "nl": "Vogels zo groot als een lijster, meestal goudgeel en zwart met een stevige roodachtige snavel; vrouwtjes en jongen zijn groener en gestreept. Ze blijven hoog in bladrijke bomen, waar ze verrassend lastig te zien zijn. Hun fluitende zang en schorre, katachtige roep zijn de beste aanwijzing."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "blackbirds"
+      ],
+      "text": {
+        "en": "The orioles of the Americas belong to the blackbird family and are no relation. Old World orioles have a reddish bill, stay high in leafy trees and sing in fluting whistles.",
+        "nl": "De Amerikaanse 'orioles' horen bij de troepialen en zijn geen familie. Wielewalen hebben een roodachtige snavel, blijven hoog in bladrijke bomen en zingen met fluitende tonen."
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "hoovul1",
+  "name": {
+    "en": "Hooded Vulture",
+    "nl": "Kapgier"
+  },
+  "latin": "Necrosyrtes monachus",
+  "look_for": [
+    {
+      "en": "Small, dark brown vulture",
+      "nl": "Kleine, donkerbruine gier"
+    },
+    {
+      "en": "Bare pink face and a thin **bill**",
+      "nl": "Kaal roze gezicht en een dunne **snavel**"
+    },
+    {
+      "en": "Pale downy **hood** on the back of the head",
+      "nl": "Lichte donzige **kap** op het achterhoofd"
+    }
+  ]
+}

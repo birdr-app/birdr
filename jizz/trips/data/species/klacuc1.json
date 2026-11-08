@@ -1,0 +1,22 @@
+{
+  "code": "klacuc1",
+  "name": {
+    "en": "Klaas's Cuckoo",
+    "nl": "Klaaskoekoek"
+  },
+  "latin": "Chrysococcyx klaas",
+  "look_for": [
+    {
+      "en": "Male shiny green above, clean white below",
+      "nl": "Man glanzend groen van boven, zuiver wit van onder"
+    },
+    {
+      "en": "Small white patch behind a dark eye",
+      "nl": "Klein wit vlekje achter een donker oog"
+    },
+    {
+      "en": "Green **breast** sides, plain wings without white spots",
+      "nl": "Groene **borstzijden**, effen vleugels zonder witte vlekken"
+    }
+  ]
+}

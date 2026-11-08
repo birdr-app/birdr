@@ -1,0 +1,22 @@
+{
+  "code": "carwoo1",
+  "name": {
+    "en": "Cardinal Woodpecker",
+    "nl": "Kardinaalspecht"
+  },
+  "latin": "Dendropicos fuscescens",
+  "look_for": [
+    {
+      "en": "Small woodpecker, streaked **breast**, black **moustache**",
+      "nl": "Kleine specht, gestreepte **borst**, zwarte **baardstreep**"
+    },
+    {
+      "en": "Barred olive-brown and white back",
+      "nl": "Olijfbruin met wit gebandeerde rug"
+    },
+    {
+      "en": "Male: brown **forehead**, red rear crown",
+      "nl": "Mannetje: bruin **voorhoofd**, rode achterkruin"
+    }
+  ]
+}

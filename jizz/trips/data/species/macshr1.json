@@ -1,0 +1,22 @@
+{
+  "code": "macshr1",
+  "name": {
+    "en": "Mackinnon's Shrike",
+    "nl": "Mackinnonklauwier"
+  },
+  "latin": "Lanius mackinnoni",
+  "look_for": [
+    {
+      "en": "Grey back, black mask, white **eyebrow**",
+      "nl": "Grijze rug, zwart masker, witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "White V on the **shoulders**",
+      "nl": "Witte V op de **schouders**"
+    },
+    {
+      "en": "Long black **tail**; female has rufous **flanks**",
+      "nl": "Lange zwarte **staart**; vrouwtje met roodbruine **flanken**"
+    }
+  ]
+}

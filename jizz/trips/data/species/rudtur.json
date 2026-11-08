@@ -1,0 +1,22 @@
+{
+  "code": "rudtur",
+  "name": {
+    "en": "Ruddy Turnstone",
+    "nl": "Steenloper"
+  },
+  "latin": "Arenaria interpres",
+  "look_for": [
+    {
+      "en": "Short orange legs and a stubby **bill**",
+      "nl": "Korte oranje poten en een korte, stompe **snavel**"
+    },
+    {
+      "en": "Black-and-white pattern on face and **breast**",
+      "nl": "Zwart-witte tekening op kop en **borst**"
+    },
+    {
+      "en": "Flips stones and seaweed to find food",
+      "nl": "Keert stenen en wier om op zoek naar voedsel"
+    }
+  ]
+}

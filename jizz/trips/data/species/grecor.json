@@ -1,0 +1,22 @@
+{
+  "code": "grecor",
+  "name": {
+    "en": "Great Cormorant",
+    "nl": "Aalscholver"
+  },
+  "latin": "Phalacrocorax carbo",
+  "look_for": [
+    {
+      "en": "Big and heavy, the largest cormorant",
+      "nl": "Groot en zwaar, de grootste aalscholver"
+    },
+    {
+      "en": "Yellow skin at the **bill** base, white cheeks",
+      "nl": "Geel bij de **snavelbasis**, witte wangen"
+    },
+    {
+      "en": "White **thigh** patch when breeding",
+      "nl": "Witte vlek op de **dij** in de broedtijd"
+    }
+  ]
+}

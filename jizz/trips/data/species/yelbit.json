@@ -1,0 +1,22 @@
+{
+  "code": "yelbit",
+  "name": {
+    "en": "Yellow Bittern",
+    "nl": "Chinese woudaap"
+  },
+  "latin": "Botaurus sinensis",
+  "look_for": [
+    {
+      "en": "Small, buff-yellow bittern with a black **crown**",
+      "nl": "Kleine, geelbruine woudaap met een zwarte **kruin**"
+    },
+    {
+      "en": "Pale wing panel and black **flight feathers** in flight",
+      "nl": "Lichte vleugelvlek en zwarte **slagpennen** in de vlucht"
+    },
+    {
+      "en": "Clambers in reeds or freezes with its **bill** up",
+      "nl": "Klautert door het riet of verstijft met de **snavel** omhoog"
+    }
+  ]
+}

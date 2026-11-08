@@ -1,0 +1,22 @@
+{
+  "code": "ccbeat1",
+  "name": {
+    "en": "Cinnamon-chested Bee-eater",
+    "nl": "Bergbijeneter"
+  },
+  "latin": "Merops oreobates",
+  "look_for": [
+    {
+      "en": "Yellow **throat**, black collar, white **cheek** patch",
+      "nl": "Gele **keel**, zwarte kraag, witte vlek op de **wang**"
+    },
+    {
+      "en": "Deep cinnamon **breast**, darker than Little Bee-eater",
+      "nl": "Diep kaneelbruine **borst**, donkerder dan bij de Dwergbijeneter"
+    },
+    {
+      "en": "Larger, dark green; at highland forest edges",
+      "nl": "Groter en donkergroen; aan bosranden in het hoogland"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "bklbab1",
+  "name": {
+    "en": "Black-lored Babbler",
+    "nl": "Taborababbelaar"
+  },
+  "latin": "Turdoides sharpei",
+  "look_for": [
+    {
+      "en": "Black **lores** between bill and eye",
+      "nl": "Zwarte **teugel** tussen snavel en oog"
+    },
+    {
+      "en": "Staring pale, almost white **eye**",
+      "nl": "Starend licht, bijna wit **oog**"
+    },
+    {
+      "en": "Dark grey-brown with fine pale scaling",
+      "nl": "Donker grijsbruin met fijne lichte schubjes"
+    }
+  ]
+}

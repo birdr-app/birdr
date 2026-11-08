@@ -1,0 +1,22 @@
+{
+  "code": "maphor1",
+  "name": {
+    "en": "Malabar Pied-Hornbill",
+    "nl": "Malabarneushoornvogel"
+  },
+  "latin": "Anthracoceros coronatus",
+  "look_for": [
+    {
+      "en": "Big black-and-white hornbill",
+      "nl": "Grote zwart-witte neushoornvogel"
+    },
+    {
+      "en": "Huge yellow **bill** and **casque** with a black patch",
+      "nl": "Enorme gele **snavel** en **helm** met een zwarte vlek"
+    },
+    {
+      "en": "White belly and white outer tail feathers",
+      "nl": "Witte buik en witte buitenste staartveren"
+    }
+  ]
+}

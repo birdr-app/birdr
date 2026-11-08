@@ -1,0 +1,22 @@
+{
+  "code": "spgsta1",
+  "name": {
+    "en": "Splendid Starling",
+    "nl": "Prachtglansspreeuw"
+  },
+  "latin": "Lamprotornis splendidus",
+  "look_for": [
+    {
+      "en": "Large glossy starling with a creamy **eye**",
+      "nl": "Grote glansspreeuw met een crèmekleurig **oog**"
+    },
+    {
+      "en": "Velvet-black band across the **wing**",
+      "nl": "Fluweelzwarte band over de **vleugel**"
+    },
+    {
+      "en": "Coppery-bronze patch on the side of the **neck**",
+      "nl": "Koperbronzen vlek opzij van de **hals**"
+    }
+  ]
+}

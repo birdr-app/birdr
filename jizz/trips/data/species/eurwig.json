@@ -1,0 +1,22 @@
+{
+  "code": "eurwig",
+  "name": {
+    "en": "Eurasian Wigeon",
+    "nl": "Smient"
+  },
+  "latin": "Mareca penelope",
+  "look_for": [
+    {
+      "en": "Male: chestnut head with a cream **crown** stripe",
+      "nl": "Man: kastanjebruine kop met roomgele **kruinstreep**"
+    },
+    {
+      "en": "Pinkish **breast**, grey body, black-and-white rear",
+      "nl": "Rozige **borst**, grijs lijf, zwart-witte achterkant"
+    },
+    {
+      "en": "Short grey **bill**; white wing patch in flight",
+      "nl": "Korte grijze **snavel**; witte vleugelvlek in de vlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "blnmon1",
+  "name": {
+    "en": "Black-naped Monarch",
+    "nl": "Zwartnekmonarch"
+  },
+  "latin": "Hypothymis azurea",
+  "look_for": [
+    {
+      "en": "Male bright azure blue on head and **breast**",
+      "nl": "Mannetje helder azuurblauw op kop en **borst**"
+    },
+    {
+      "en": "Small black tuft on the **nape**",
+      "nl": "Klein zwart plukje in de **nek**"
+    },
+    {
+      "en": "Thin black line under the **bill**; whitish belly",
+      "nl": "Smal zwart streepje onder de **snavel**; witte buik"
+    }
+  ]
+}

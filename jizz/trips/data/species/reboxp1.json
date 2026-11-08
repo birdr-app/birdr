@@ -1,0 +1,22 @@
+{
+  "code": "reboxp1",
+  "name": {
+    "en": "Red-billed Oxpecker",
+    "nl": "Roodsnavelossenpikker"
+  },
+  "latin": "Buphagus erythroryncha",
+  "look_for": [
+    {
+      "en": "**Bill** red all over, no yellow",
+      "nl": "**Snavel** helemaal rood, geen geel"
+    },
+    {
+      "en": "Bare yellow **eye-ring**, plain brown body",
+      "nl": "Kale gele **oogring**, effen bruin lijf"
+    },
+    {
+      "en": "Rides on cattle and big game",
+      "nl": "Rijdt mee op vee en groot wild"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "whrmun",
+  "name": {
+    "en": "White-rumped Munia",
+    "nl": "Spitsstaartbronzemannetje"
+  },
+  "latin": "Lonchura striata",
+  "look_for": [
+    {
+      "en": "Dark brown with a white **rump**",
+      "nl": "Donkerbruin met een witte **stuit**"
+    },
+    {
+      "en": "Pale, dirty-white belly",
+      "nl": "Lichte, vuilwitte buik"
+    },
+    {
+      "en": "Pointed black **tail**",
+      "nl": "Spitse zwarte **staart**"
+    }
+  ]
+}

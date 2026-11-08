@@ -1,0 +1,22 @@
+{
+  "code": "spwlap1",
+  "name": {
+    "en": "Spur-winged Lapwing",
+    "nl": "Sporenkievit"
+  },
+  "latin": "Vanellus spinosus",
+  "look_for": [
+    {
+      "en": "Black **crown** and **breast**, white cheeks",
+      "nl": "Zwarte **kruin** en **borst**, witte wangen"
+    },
+    {
+      "en": "Sandy-brown back and black legs",
+      "nl": "Zandbruine rug en zwarte poten"
+    },
+    {
+      "en": "Noisy, with black-and-white wings in flight",
+      "nl": "Lawaaierig, met zwart-witte vleugels in de vlucht"
+    }
+  ]
+}

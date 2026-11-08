@@ -1,0 +1,22 @@
+{
+  "code": "trobou1",
+  "name": {
+    "en": "Tropical Boubou",
+    "nl": "Tropische fiskaal"
+  },
+  "latin": "Laniarius major",
+  "look_for": [
+    {
+      "en": "Glossy black above, white below",
+      "nl": "Glanzend zwart van boven, wit van onder"
+    },
+    {
+      "en": "Long white bar on the **wing**",
+      "nl": "Lange witte streep over de **vleugel**"
+    },
+    {
+      "en": "Pinkish wash on the **breast**; pairs duet",
+      "nl": "Roze waas op de **borst**; paartjes zingen in duet"
+    }
+  ]
+}

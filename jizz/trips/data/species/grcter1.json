@@ -1,0 +1,22 @@
+{
+  "code": "grcter1",
+  "name": {
+    "en": "Great Crested Tern",
+    "nl": "Grote kuifstern"
+  },
+  "latin": "Thalasseus bergii",
+  "look_for": [
+    {
+      "en": "Big tern with a long, pale yellow **bill**",
+      "nl": "Grote stern met een lange, lichtgele **snavel**"
+    },
+    {
+      "en": "Shaggy black **crest**, white **forehead**",
+      "nl": "Rafelige zwarte **kuif**, wit **voorhoofd**"
+    },
+    {
+      "en": "Darker grey back than other big terns",
+      "nl": "Donkerder grijze rug dan andere grote sterns"
+    }
+  ]
+}

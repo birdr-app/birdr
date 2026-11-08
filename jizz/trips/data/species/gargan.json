@@ -1,0 +1,22 @@
+{
+  "code": "gargan",
+  "name": {
+    "en": "Garganey",
+    "nl": "Zomertaling"
+  },
+  "latin": "Spatula querquedula",
+  "look_for": [
+    {
+      "en": "Male: broad white stripe curving over the eye",
+      "nl": "Man: brede witte boog boven het oog"
+    },
+    {
+      "en": "Teal-sized, with brown **breast** and pale grey sides",
+      "nl": "Zo klein als een wintertaling, bruine **borst**, grijze flanken"
+    },
+    {
+      "en": "Female: striped face, pale spot by the **bill**",
+      "nl": "Vrouwtje: gestreepte kop, lichte vlek bij de **snavel**"
+    }
+  ]
+}

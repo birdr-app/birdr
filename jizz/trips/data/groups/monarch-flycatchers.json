@@ -1,0 +1,20 @@
+{
+  "slug": "monarch-flycatchers",
+  "about": {
+    "en": "Slim, active songbirds of forest and gardens that catch insects among the leaves. Many are glossy blue, black or rufous, some with a crest, and male paradise-flycatchers have tail streamers longer than their body. They move restlessly, fan their tails and give harsh, scolding calls.",
+    "nl": "Slanke, beweeglijke zangvogels van bos en tuinen die tussen het blad insecten vangen. Veel soorten zijn glanzend blauw, zwart of roodbruin, sommige met een kuif, en mannetjes van de paradijsmonarchen hebben staartveren die langer zijn dan hun lijf. Ze zijn onrustig, spreiden hun staart en laten schorre, scheldende roepjes horen."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "old-world-flycatchers",
+        "tyrant-flycatchers-elaenias-tyrannulets-and-allies",
+        "tyrant-flycatchers-pewees-kingbirds-and-allies"
+      ],
+      "text": {
+        "en": "Monarchs are a separate family from the flycatchers you know, closer to drongos and crows. They are livelier and longer-tailed, and many are glossy blue, black or rufous.",
+        "nl": "Monarchen zijn een andere familie dan de vliegenvangers die je kent, nauwer verwant aan drongo's en kraaien. Ze zijn levendiger, hebben een langere staart en veel soorten zijn glanzend blauw, zwart of roodbruin."
+      }
+    }
+  ]
+}

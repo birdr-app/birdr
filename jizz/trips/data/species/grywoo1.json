@@ -1,0 +1,22 @@
+{
+  "code": "grywoo1",
+  "name": {
+    "en": "African Grey Woodpecker",
+    "nl": "Grijsgroene specht"
+  },
+  "latin": "Dendropicos goertae",
+  "look_for": [
+    {
+      "en": "Plain grey **head** and underparts",
+      "nl": "Effen grijze **kop** en onderkant"
+    },
+    {
+      "en": "Olive-green back with a red **rump**",
+      "nl": "Olijfgroene rug met een rode **stuit**"
+    },
+    {
+      "en": "Male has a red **crown**; female's is grey",
+      "nl": "Mannetje heeft een rode **kruin**; vrouwtje een grijze"
+    }
+  ]
+}

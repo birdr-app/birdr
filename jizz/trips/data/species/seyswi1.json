@@ -1,0 +1,22 @@
+{
+  "code": "seyswi1",
+  "name": {
+    "en": "Seychelles Swiftlet",
+    "nl": "Seychellensalangaan"
+  },
+  "latin": "Aerodramus elaphrus",
+  "look_for": [
+    {
+      "en": "Small, plain, dark grey-brown swiftlet",
+      "nl": "Kleine, effen donker grijsbruine salangaan"
+    },
+    {
+      "en": "Slightly notched **tail**, no pale **rump**",
+      "nl": "Licht ingekeepte **staart**, geen lichte **stuit**"
+    },
+    {
+      "en": "Glides and flutters over forest and hill ridges",
+      "nl": "Zweeft en fladdert boven bos en heuvelruggen"
+    }
+  ]
+}

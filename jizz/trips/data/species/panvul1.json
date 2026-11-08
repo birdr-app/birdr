@@ -1,0 +1,22 @@
+{
+  "code": "panvul1",
+  "name": {
+    "en": "Palm-nut Vulture",
+    "nl": "Palmgier"
+  },
+  "latin": "Gypohierax angolensis",
+  "look_for": [
+    {
+      "en": "Mostly white with black in the wings",
+      "nl": "Grotendeels wit met zwart in de vleugels"
+    },
+    {
+      "en": "Bare orange-red skin around the eye",
+      "nl": "Kale oranjerode huid rond het oog"
+    },
+    {
+      "en": "Stout pale **bill**; near rivers and oil palms",
+      "nl": "Forse lichte **snavel**; bij rivieren en oliepalmen"
+    }
+  ]
+}

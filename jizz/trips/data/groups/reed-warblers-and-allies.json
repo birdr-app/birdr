@@ -1,0 +1,18 @@
+{
+  "slug": "reed-warblers-and-allies",
+  "about": {
+    "en": "Plain brown, olive or yellowish warblers with a flat forehead, a fairly long bill and a rounded tail. They live in reeds, papyrus, thickets and scrub, where they are hard to see but sing loud, scratchy, repetitive songs. Many look alike, so song and habitat help most.",
+    "nl": "Effen bruine, olijfkleurige of gelige zangers met een vlak voorhoofd, een vrij lange snavel en een afgeronde staart. Ze leven in riet, papyrus, ruigte en struikgewas, waar je ze moeilijk ziet maar luid en krassend hoort zingen, steeds hetzelfde. Veel soorten lijken op elkaar, dus zang en leefgebied helpen het meest."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "wood-warblers"
+      ],
+      "text": {
+        "en": "These are no relation of the warblers of the Americas. Reed warblers are plain brown or olive, without bright patterns, and stay low in reeds and thickets.",
+        "nl": "Karekieten en rietzangers zijn geen familie van de Amerikaanse zangers. Ze zijn effen bruin of olijfkleurig, zonder felle patronen, en blijven laag in riet en struikgewas."
+      }
+    }
+  ]
+}

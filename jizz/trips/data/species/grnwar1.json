@@ -1,0 +1,22 @@
+{
+  "code": "grnwar1",
+  "name": {
+    "en": "Green Warbler",
+    "nl": "Groene fitis"
+  },
+  "latin": "Phylloscopus nitidus",
+  "look_for": [
+    {
+      "en": "Bright green above, yellowish below",
+      "nl": "Heldergroen van boven, geelachtig van onder"
+    },
+    {
+      "en": "Long yellow **eyebrow** and a dark eye-stripe",
+      "nl": "Lange gele **wenkbrauwstreep** en een donkere oogstreep"
+    },
+    {
+      "en": "One thin pale **wing bar**",
+      "nl": "Eén smalle lichte **vleugelstreep**"
+    }
+  ]
+}

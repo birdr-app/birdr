@@ -1,0 +1,22 @@
+{
+  "code": "rocpra1",
+  "name": {
+    "en": "Rock Pratincole",
+    "nl": "Rotsvorkstaartplevier"
+  },
+  "latin": "Glareola nuchalis",
+  "look_for": [
+    {
+      "en": "Small, dark grey pratincole with red legs",
+      "nl": "Kleine, donkergrijze vorkstaartplevier met rode poten"
+    },
+    {
+      "en": "Thin white line from eye round the **nape**",
+      "nl": "Dunne witte streep van het oog rond de **nek**"
+    },
+    {
+      "en": "Sits on rocks in fast-flowing rivers",
+      "nl": "Zit op rotsen in snelstromende rivieren"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "piphor1",
+  "name": {
+    "en": "Piping Hornbill",
+    "nl": "Fluitneushoornvogel"
+  },
+  "latin": "Bycanistes fistulator",
+  "look_for": [
+    {
+      "en": "Black hornbill with a white **belly**",
+      "nl": "Zwarte neushoornvogel met een witte **buik**"
+    },
+    {
+      "en": "Pale yellowish **bill** with a small **casque**",
+      "nl": "Geelwitte **snavel** met een kleine **helm**"
+    },
+    {
+      "en": "Much smaller than Black-and-white-casqued Hornbill",
+      "nl": "Veel kleiner dan de Grijsoorneushoornvogel"
+    }
+  ]
+}

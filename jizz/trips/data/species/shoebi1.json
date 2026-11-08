@@ -1,0 +1,22 @@
+{
+  "code": "shoebi1",
+  "name": {
+    "en": "Shoebill",
+    "nl": "Schoenbekooievaar"
+  },
+  "latin": "Balaeniceps rex",
+  "look_for": [
+    {
+      "en": "Huge slate-grey bird with a giant **bill**",
+      "nl": "Enorme leigrijze vogel met een gigantische **snavel**"
+    },
+    {
+      "en": "Bill shaped like a clog, with a hook",
+      "nl": "Snavel in de vorm van een klomp, met haak"
+    },
+    {
+      "en": "Stands motionless in papyrus swamps",
+      "nl": "Staat doodstil in papyrusmoerassen"
+    }
+  ]
+}

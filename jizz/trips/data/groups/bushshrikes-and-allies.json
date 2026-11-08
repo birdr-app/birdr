@@ -1,0 +1,18 @@
+{
+  "slug": "bushshrikes-and-allies",
+  "about": {
+    "en": "Sturdy songbirds of bush and forest with a strong, hooked bill and a fairly long tail. Many are bright green, yellow, orange or red below; others are black and white, or brown with a striped head. They skulk in dense cover and are mostly found by their loud whistles and duets.",
+    "nl": "Stevige zangvogels van struikgewas en bos, met een sterke, gehaakte snavel en een vrij lange staart. Veel soorten zijn van onderen felgroen, geel, oranje of rood; andere zijn zwart-wit, of bruin met een gestreepte kop. Ze houden zich schuil in dichte begroeiing en je vindt ze vooral aan hun luide fluittonen en duetten."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "shrikes"
+      ],
+      "text": {
+        "en": "Bushshrikes are a separate family from the true shrikes. They rarely sit in the open on a lookout; most creep through thick foliage, and many are far more colourful.",
+        "nl": "Struikklauwieren zijn een aparte familie, geen echte klauwieren. Ze zitten zelden open en bloot op een uitkijkpost; de meeste sluipen door dicht gebladerte, en veel soorten zijn een stuk kleuriger."
+      }
+    }
+  ]
+}

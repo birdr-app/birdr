@@ -599,6 +599,7 @@ class Game(models.Model):
     GAME_TYPE_FLOCK_CHALLENGE = 'flock_challenge'
     GAME_TYPE_SURVIVAL = 'survival'
     GAME_TYPE_LEAGUE = 'league'
+    GAME_TYPE_TRIP_PREP = 'trip_prep'
     GAME_TYPE_CHOICES = [
         (GAME_TYPE_STANDARD, 'Standard'),
         (GAME_TYPE_EXTREME, 'Extreme'),
@@ -608,6 +609,7 @@ class Game(models.Model):
         (GAME_TYPE_FLOCK_CHALLENGE, 'Flock challenge'),
         (GAME_TYPE_SURVIVAL, 'Survival'),
         (GAME_TYPE_LEAGUE, 'National league'),
+        (GAME_TYPE_TRIP_PREP, 'Trip prep'),
     ]
     game_type = models.CharField(
         max_length=20,
@@ -1018,6 +1020,7 @@ class PlayerScore(models.Model):
         Game.GAME_TYPE_MIXUP_PRACTICE,
         Game.GAME_TYPE_SURVIVAL,
         Game.GAME_TYPE_LEAGUE,
+        Game.GAME_TYPE_TRIP_PREP,
     )
 
     @classmethod

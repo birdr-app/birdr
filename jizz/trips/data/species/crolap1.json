@@ -1,0 +1,22 @@
+{
+  "code": "crolap1",
+  "name": {
+    "en": "Crowned Lapwing",
+    "nl": "Diadeemkievit"
+  },
+  "latin": "Vanellus coronatus",
+  "look_for": [
+    {
+      "en": "Black **cap** circled by a white ring",
+      "nl": "Zwarte **kap** met een witte ring eromheen"
+    },
+    {
+      "en": "Brown **breast** with a black lower edge",
+      "nl": "Bruine **borst** met een zwarte rand onderaan"
+    },
+    {
+      "en": "Red legs; lives in short, dry grass",
+      "nl": "Rode poten; leeft in kort, droog gras"
+    }
+  ]
+}

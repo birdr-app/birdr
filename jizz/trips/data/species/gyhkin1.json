@@ -1,0 +1,22 @@
+{
+  "code": "gyhkin1",
+  "name": {
+    "en": "Grey-headed Kingfisher",
+    "nl": "Grijskopijsvogel"
+  },
+  "latin": "Halcyon leucocephala",
+  "look_for": [
+    {
+      "en": "Grey **head** and **breast**, red **bill**",
+      "nl": "Grijze **kop** en **borst**, rode **snavel**"
+    },
+    {
+      "en": "Chestnut **belly**, bright blue **wings**",
+      "nl": "Kastanjebruine **buik**, felblauwe **vleugels**"
+    },
+    {
+      "en": "Black back; hunts insects away from water",
+      "nl": "Zwarte rug; jaagt op insecten ver van water"
+    }
+  ]
+}

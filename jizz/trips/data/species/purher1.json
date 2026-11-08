@@ -1,0 +1,22 @@
+{
+  "code": "purher1",
+  "name": {
+    "en": "Purple Heron",
+    "nl": "Purperreiger"
+  },
+  "latin": "Ardea purpurea",
+  "look_for": [
+    {
+      "en": "Slimmer and darker than Grey Heron",
+      "nl": "Slanker en donkerder dan de blauwe reiger"
+    },
+    {
+      "en": "Rusty neck with black stripes down the sides",
+      "nl": "Roestbruine hals met zwarte strepen langs de zijkant"
+    },
+    {
+      "en": "Thin, snake-like neck, hides in reeds",
+      "nl": "Dunne slangachtige hals, verstopt zich in het riet"
+    }
+  ]
+}

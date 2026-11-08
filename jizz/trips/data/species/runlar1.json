@@ -1,0 +1,22 @@
+{
+  "code": "runlar1",
+  "name": {
+    "en": "Rufous-naped Lark",
+    "nl": "Roodnekleeuwerik"
+  },
+  "latin": "Corypha africana",
+  "look_for": [
+    {
+      "en": "Stocky lark with a short raised **crest**",
+      "nl": "Gedrongen leeuwerik met een korte opgezette **kuif**"
+    },
+    {
+      "en": "Rufous in the **wings**, shows in flight",
+      "nl": "Roodbruin in de **vleugels**, zichtbaar in de vlucht"
+    },
+    {
+      "en": "Sings from bush tops with fluttering wings",
+      "nl": "Zingt vanaf struiken met fladderende vleugels"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "libeat1",
+  "name": {
+    "en": "Little Bee-eater",
+    "nl": "Dwergbijeneter"
+  },
+  "latin": "Merops pusillus",
+  "look_for": [
+    {
+      "en": "Tiny bee-eater, yellow **throat** with a black collar",
+      "nl": "Piepkleine bijeneter, gele **keel** met een zwarte kraag"
+    },
+    {
+      "en": "Warm orange-brown **breast** and belly",
+      "nl": "Warm oranjebruine **borst** en buik"
+    },
+    {
+      "en": "No long tail pins; hunts from low perches",
+      "nl": "Geen lange staartpennen; jaagt vanaf lage takjes"
+    }
+  ]
+}

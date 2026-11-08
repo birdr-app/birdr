@@ -1,0 +1,22 @@
+{
+  "code": "comkin1",
+  "name": {
+    "en": "Common Kingfisher",
+    "nl": "IJsvogel"
+  },
+  "latin": "Alcedo atthis",
+  "look_for": [
+    {
+      "en": "Small, orange below, blue-green above",
+      "nl": "Klein, oranje van onder, blauwgroen van boven"
+    },
+    {
+      "en": "Electric blue stripe down the back",
+      "nl": "Felblauwe streep over de rug"
+    },
+    {
+      "en": "Dark **bill**, sits low over the water",
+      "nl": "Donkere **snavel**, zit laag boven het water"
+    }
+  ]
+}

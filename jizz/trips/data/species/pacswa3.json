@@ -1,0 +1,22 @@
+{
+  "code": "pacswa3",
+  "name": {
+    "en": "Hill Swallow",
+    "nl": "Hutzwaluw"
+  },
+  "latin": "Hirundo domicola",
+  "look_for": [
+    {
+      "en": "Rusty-red **throat** and forehead, no breast band",
+      "nl": "Roestrode **keel** en voorhoofd, geen borstband"
+    },
+    {
+      "en": "Dusky grey-brown below",
+      "nl": "Vuil grijsbruin van onder"
+    },
+    {
+      "en": "Short **tail** without long streamers",
+      "nl": "Korte **staart** zonder lange staartspiesen"
+    }
+  ]
+}

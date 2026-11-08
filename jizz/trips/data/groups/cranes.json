@@ -1,0 +1,18 @@
+{
+  "slug": "cranes",
+  "about": {
+    "en": "Very tall, stately birds with long legs, a long neck and a straight bill. Most are grey or white, often with red bare skin on the head, and some wear a golden crest. They walk through wetlands and fields in pairs or flocks, and their loud, trumpeting calls carry for kilometres.",
+    "nl": "Heel grote, statige vogels met lange poten, een lange hals en een rechte snavel. De meeste zijn grijs of wit, vaak met rode naakte huid op de kop, en sommige dragen een gouden kuif. Ze lopen in paren of groepen door moerassen en akkers, en hun luide, trompetterende roep draagt kilometers ver."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "herons-ibis-and-allies"
+      ],
+      "text": {
+        "en": "Cranes look like big herons, and herons are sometimes even called cranes, but they are no relation. Cranes fly with the neck stretched out, have a shorter bill and a bushy tuft of feathers over the tail, and feed while walking.",
+        "nl": "Kraanvogels lijken op grote reigers, maar zijn geen familie. Ze vliegen met gestrekte hals, hebben een kortere snavel en een pluim van veren over de staart, en zoeken lopend naar voedsel."
+      }
+    }
+  ]
+}

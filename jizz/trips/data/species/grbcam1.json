@@ -1,0 +1,22 @@
+{
+  "code": "grbcam1",
+  "name": {
+    "en": "Green-backed Camaroptera",
+    "nl": "Mekkercamaroptera"
+  },
+  "latin": "Camaroptera brachyura",
+  "look_for": [
+    {
+      "en": "Small, olive-green back and **wings**",
+      "nl": "Klein, olijfgroene rug en **vleugels**"
+    },
+    {
+      "en": "Grey **head** and breast, short cocked **tail**",
+      "nl": "Grijze **kop** en borst, kort opgewipt **staartje**"
+    },
+    {
+      "en": "Loud bleating call from tangles",
+      "nl": "Luid mekkerend geluid uit dicht struikgewas"
+    }
+  ]
+}

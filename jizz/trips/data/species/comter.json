@@ -1,0 +1,22 @@
+{
+  "code": "comter",
+  "name": {
+    "en": "Common Tern",
+    "nl": "Visdief"
+  },
+  "latin": "Sterna hirundo",
+  "look_for": [
+    {
+      "en": "Medium-sized tern, pale grey, forked tail",
+      "nl": "Middelgrote stern, lichtgrijs, gevorkte staart"
+    },
+    {
+      "en": "Summer: black **cap**, red **bill** with dark tip",
+      "nl": "Zomer: zwarte **kap**, rode **snavel** met donkere punt"
+    },
+    {
+      "en": "Winter: white **forehead**, dark **shoulder** bar",
+      "nl": "Winter: wit **voorhoofd**, donkere **schouderstreep**"
+    }
+  ]
+}

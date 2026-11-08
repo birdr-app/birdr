@@ -1,0 +1,22 @@
+{
+  "code": "jerbus2",
+  "name": {
+    "en": "Jerdon's Bushlark",
+    "nl": "Jerdonleeuwerik"
+  },
+  "latin": "Plocealauda affinis",
+  "look_for": [
+    {
+      "en": "Stocky lark with a short, stout **bill**",
+      "nl": "Gedrongen leeuwerik met een korte, dikke **snavel**"
+    },
+    {
+      "en": "Rusty-red panel in the **wing**",
+      "nl": "Roestrode vlek in de **vleugel**"
+    },
+    {
+      "en": "Spotted **breast**; sings from bushes and wires",
+      "nl": "Gevlekte **borst**; zingt vanaf struiken en draden"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "ruwtur2",
+  "name": {
+    "en": "Rwenzori Turaco",
+    "nl": "Ruwenzoritoerako"
+  },
+  "latin": "Gallirex johnstoni",
+  "look_for": [
+    {
+      "en": "Bright yellow bare skin around the eye",
+      "nl": "Felgele kale huid rond het oog"
+    },
+    {
+      "en": "Glossy green **crest**, dark red patch on the **nape**",
+      "nl": "Glanzend groene **kuif**, donkerrode vlek in de **nek**"
+    },
+    {
+      "en": "Deep violet back and tail, red wings in flight",
+      "nl": "Donkerpaarse rug en staart, vliegend rode vleugels"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "dotbar1",
+  "name": {
+    "en": "Double-toothed Barbet",
+    "nl": "Dubbeltandbaardvogel"
+  },
+  "latin": "Pogonornis bidentatus",
+  "look_for": [
+    {
+      "en": "Bright red **face**, throat and breast",
+      "nl": "Felrood **gezicht**, keel en borst"
+    },
+    {
+      "en": "Glossy black back, white patch on the **flank**",
+      "nl": "Glanzend zwarte rug, witte vlek op de **flank**"
+    },
+    {
+      "en": "Heavy ivory **bill**, bare yellow skin round the eye",
+      "nl": "Zware ivoorkleurige **snavel**, kale gele huid rond het oog"
+    }
+  ]
+}

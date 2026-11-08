@@ -1,0 +1,22 @@
+{
+  "code": "comsan",
+  "name": {
+    "en": "Common Sandpiper",
+    "nl": "Oeverloper"
+  },
+  "latin": "Actitis hypoleucos",
+  "look_for": [
+    {
+      "en": "White hook between **breast** and wing",
+      "nl": "Wit haakje tussen **borst** en vleugel"
+    },
+    {
+      "en": "Bobs its rear end all the time",
+      "nl": "Wipt voortdurend met het achterlijf"
+    },
+    {
+      "en": "Flies low on stiff, flicking wingbeats",
+      "nl": "Vliegt laag met stijve, trillende vleugelslagen"
+    }
+  ]
+}

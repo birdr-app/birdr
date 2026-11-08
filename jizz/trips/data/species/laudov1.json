@@ -1,0 +1,22 @@
+{
+  "code": "laudov1",
+  "name": {
+    "en": "Laughing Dove",
+    "nl": "Palmtortel"
+  },
+  "latin": "Spilopelia senegalensis",
+  "look_for": [
+    {
+      "en": "Small pinkish-brown dove without a black collar",
+      "nl": "Kleine roze-bruine tortel zonder zwarte halsband"
+    },
+    {
+      "en": "Black speckles on a rusty patch on the **breast**",
+      "nl": "Zwarte spikkels op een roestbruine vlek op de **borst**"
+    },
+    {
+      "en": "Blue-grey panel on the **wing**",
+      "nl": "Blauwgrijs veld op de **vleugel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "ruff",
+  "name": {
+    "en": "Ruff",
+    "nl": "Kemphaan"
+  },
+  "latin": "Calidris pugnax",
+  "look_for": [
+    {
+      "en": "Small head on a longish neck, plump body",
+      "nl": "Klein kopje op een vrij lange hals, dik lijf"
+    },
+    {
+      "en": "Scaly back with neat pale feather edges",
+      "nl": "Geschubde rug met keurige lichte veerranden"
+    },
+    {
+      "en": "Breeding male has a big coloured **ruff**",
+      "nl": "Man draagt in het voorjaar een grote bonte **kraag**"
+    }
+  ]
+}

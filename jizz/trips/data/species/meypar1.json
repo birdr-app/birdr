@@ -1,0 +1,22 @@
+{
+  "code": "meypar1",
+  "name": {
+    "en": "Meyer's Parrot",
+    "nl": "Meyerpapegaai"
+  },
+  "latin": "Poicephalus meyeri",
+  "look_for": [
+    {
+      "en": "Plain brown **head**, back and wings",
+      "nl": "Effen bruine **kop**, rug en vleugels"
+    },
+    {
+      "en": "Yellow on the **shoulder** and often the **crown**",
+      "nl": "Geel op de **schouder** en vaak op de **kruin**"
+    },
+    {
+      "en": "Green-blue **belly** and **rump**",
+      "nl": "Groenblauwe **buik** en **stuit**"
+    }
+  ]
+}

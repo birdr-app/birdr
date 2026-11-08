@@ -1,0 +1,19 @@
+{
+  "slug": "cuckooshrikes",
+  "about": {
+    "en": "Slender birds of the treetops. Cuckooshrikes are mostly grey, black and white with a slightly hooked bill; minivets are smaller and long-tailed, males red or orange and black, females yellow and grey. They move through the canopy in pairs or small flocks, minivets calling with thin whistles.",
+    "nl": "Slanke vogels van de boomkruinen. Rupsvogels zijn meestal grijs, zwart en wit met een licht gehaakte snavel; menievogels zijn kleiner en hebben een lange staart, de mannetjes rood of oranje met zwart, de vrouwtjes geel met grijs. Ze trekken in paartjes of kleine groepjes door de kruinen, de menievogels met dunne fluittonen."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "shrikes",
+        "cuckoos"
+      ],
+      "text": {
+        "en": "Despite the name, cuckooshrikes are neither cuckoos nor shrikes. Some are grey and barred like a cuckoo and have a shrike-like bill, but they feed quietly in the canopy and don't hunt from a lookout.",
+        "nl": "Ondanks de Engelse naam (cuckooshrike) zijn rupsvogels geen koekoeken of klauwieren. Sommige zijn grijs en gestreept als een koekoek en hebben een snavel als een klauwier, maar ze zoeken rustig voedsel in de boomkruinen en jagen niet vanaf een uitkijkpost."
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "yetlon1",
+  "name": {
+    "en": "Yellow-throated Longclaw",
+    "nl": "Geelkeellangklauw"
+  },
+  "latin": "Macronyx croceus",
+  "look_for": [
+    {
+      "en": "Bright yellow **throat** with a black necklace",
+      "nl": "Felgele **keel** met een zwarte halsketting"
+    },
+    {
+      "en": "Streaky brown back, yellow **belly**",
+      "nl": "Gestreepte bruine rug, gele **buik**"
+    },
+    {
+      "en": "White **tail** corners; stiff, jerky flight",
+      "nl": "Witte hoeken aan de **staart**; stijve, schokkerige vlucht"
+    }
+  ]
+}

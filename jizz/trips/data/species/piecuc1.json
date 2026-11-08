@@ -1,0 +1,22 @@
+{
+  "code": "piecuc1",
+  "name": {
+    "en": "Pied Cuckoo",
+    "nl": "Jacobijnkoekoek"
+  },
+  "latin": "Clamator jacobinus",
+  "look_for": [
+    {
+      "en": "Black above, white below",
+      "nl": "Zwart van boven, wit van onderen"
+    },
+    {
+      "en": "Pointed black **crest**",
+      "nl": "Spitse zwarte **kuif**"
+    },
+    {
+      "en": "White patch on the wing in flight",
+      "nl": "Witte vlek op de vleugel in de vlucht"
+    }
+  ]
+}

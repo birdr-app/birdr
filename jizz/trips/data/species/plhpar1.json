@@ -1,0 +1,22 @@
+{
+  "code": "plhpar1",
+  "name": {
+    "en": "Plum-headed Parakeet",
+    "nl": "Pruimkopparkiet"
+  },
+  "latin": "Psittacula cyanocephala",
+  "look_for": [
+    {
+      "en": "Male: plum-red head with a black collar",
+      "nl": "Mannetje: pruimrode kop met een zwarte halsband"
+    },
+    {
+      "en": "Female: grey head with a yellow collar",
+      "nl": "Vrouwtje: grijze kop met een gele halsband"
+    },
+    {
+      "en": "Yellow upper **bill**, white-tipped blue tail",
+      "nl": "Gele **bovensnavel**, blauwe staart met witte punt"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "labcro1",
+  "name": {
+    "en": "Large-billed Crow",
+    "nl": "Dikbekkraai"
+  },
+  "latin": "Corvus macrorhynchos",
+  "look_for": [
+    {
+      "en": "All black and glossy, no grey collar",
+      "nl": "Helemaal zwart en glanzend, geen grijze hals"
+    },
+    {
+      "en": "Heavy, arched **bill**",
+      "nl": "Zware, gebogen **snavel**"
+    },
+    {
+      "en": "Steep forehead, bigger than House Crow",
+      "nl": "Steil voorhoofd, groter dan de huiskraai"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "mareag1",
+  "name": {
+    "en": "Martial Eagle",
+    "nl": "Vechtarend"
+  },
+  "latin": "Polemaetus bellicosus",
+  "look_for": [
+    {
+      "en": "Huge eagle with a dark grey-brown **hood**",
+      "nl": "Enorme arend met een donker grijsbruine **kap**"
+    },
+    {
+      "en": "White **belly** with small dark spots",
+      "nl": "Witte **buik** met kleine donkere vlekjes"
+    },
+    {
+      "en": "Dark underwings and a short, flat **crest**",
+      "nl": "Donkere ondervleugels en een korte, platte **kuif**"
+    }
+  ]
+}

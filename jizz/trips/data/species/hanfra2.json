@@ -1,0 +1,22 @@
+{
+  "code": "hanfra2",
+  "name": {
+    "en": "Handsome Spurfowl",
+    "nl": "Bamboefrankolijn"
+  },
+  "latin": "Pternistis nobilis",
+  "look_for": [
+    {
+      "en": "Dark chestnut body with a grey **head** and neck",
+      "nl": "Donker kastanjebruin lijf met grijze **kop** en hals"
+    },
+    {
+      "en": "Red **bill**, red **legs**, red skin round the eye",
+      "nl": "Rode **snavel**, rode **poten** en rode huid rond het oog"
+    },
+    {
+      "en": "Shy, walks on the floor of mountain forest",
+      "nl": "Schuw, loopt over de bodem van bergbos"
+    }
+  ]
+}

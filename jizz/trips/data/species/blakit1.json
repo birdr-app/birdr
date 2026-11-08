@@ -1,0 +1,22 @@
+{
+  "code": "blakit1",
+  "name": {
+    "en": "Black Kite",
+    "nl": "Zwarte wouw"
+  },
+  "latin": "Milvus migrans",
+  "look_for": [
+    {
+      "en": "Dull brown, with a pale band on the wing",
+      "nl": "Dofbruin, met een lichte band op de vleugel"
+    },
+    {
+      "en": "Slightly forked tail, twisted as it steers",
+      "nl": "Licht gevorkte staart die hij draait bij het sturen"
+    },
+    {
+      "en": "Scavenges around towns, often in groups",
+      "nl": "Zoekt afval rond steden, vaak in groepen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "renfra1",
+  "name": {
+    "en": "Red-necked Spurfowl",
+    "nl": "Roodkeelfrankolijn"
+  },
+  "latin": "Pternistis afer",
+  "look_for": [
+    {
+      "en": "Bare red skin on the **face** and **throat**",
+      "nl": "Kale rode huid op het **gezicht** en de **keel**"
+    },
+    {
+      "en": "Red **bill** and red **legs**",
+      "nl": "Rode **snavel** en rode **poten**"
+    },
+    {
+      "en": "Runs into cover along tracks and field edges",
+      "nl": "Rent het dekking in langs paden en akkerranden"
+    }
+  ]
+}

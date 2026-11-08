@@ -1,0 +1,22 @@
+{
+  "code": "matdov1",
+  "name": {
+    "en": "Malagasy Turtle Dove",
+    "nl": "Madagaskartortel"
+  },
+  "latin": "Nesoenas picturatus",
+  "look_for": [
+    {
+      "en": "Stocky dove with a grey **head** and wine-red body",
+      "nl": "Forse duif met een grijze **kop** en wijnrood lijf"
+    },
+    {
+      "en": "Warm chestnut-brown **back** and **wings**",
+      "nl": "Warm kastanjebruine **rug** en **vleugels**"
+    },
+    {
+      "en": "Dark, streaky patch on the side of the **neck**",
+      "nl": "Donkere, gestreepte vlek opzij van de **hals**"
+    }
+  ]
+}

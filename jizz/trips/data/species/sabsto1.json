@@ -1,0 +1,22 @@
+{
+  "code": "sabsto1",
+  "name": {
+    "en": "Saddle-billed Stork",
+    "nl": "Zadelbekooievaar"
+  },
+  "latin": "Ephippiorhynchus senegalensis",
+  "look_for": [
+    {
+      "en": "Very tall stork, black head and neck",
+      "nl": "Heel grote ooievaar met zwarte kop en hals"
+    },
+    {
+      "en": "Red **bill** with a broad black band",
+      "nl": "Rode **snavel** met een brede zwarte band"
+    },
+    {
+      "en": "Yellow **saddle** on top of the bill",
+      "nl": "Geel **zadel** boven op de snavel"
+    }
+  ]
+}

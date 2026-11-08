@@ -1,0 +1,22 @@
+{
+  "code": "paisto1",
+  "name": {
+    "en": "Painted Stork",
+    "nl": "Indische nimmerzat"
+  },
+  "latin": "Mycteria leucocephala",
+  "look_for": [
+    {
+      "en": "Long yellow **bill**, drooping at the tip",
+      "nl": "Lange gele **snavel** met een hangende punt"
+    },
+    {
+      "en": "Bare orange-red face",
+      "nl": "Kaal oranjerood gezicht"
+    },
+    {
+      "en": "Pink plumes over the tail, black **breast band**",
+      "nl": "Roze sierveren boven de staart, zwarte **borstband**"
+    }
+  ]
+}

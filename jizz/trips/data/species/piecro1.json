@@ -1,0 +1,22 @@
+{
+  "code": "piecro1",
+  "name": {
+    "en": "Pied Crow",
+    "nl": "Schildraaf"
+  },
+  "latin": "Corvus albus",
+  "look_for": [
+    {
+      "en": "Black crow with a white **breast**",
+      "nl": "Zwarte kraai met een witte **borst**"
+    },
+    {
+      "en": "White collar round the back of the **neck**",
+      "nl": "Witte kraag rond de achterkant van de **nek**"
+    },
+    {
+      "en": "Common around towns, tips and roads",
+      "nl": "Algemeen rond steden, vuilnisbelten en wegen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "silver1",
+  "name": {
+    "en": "Silverbird",
+    "nl": "Zilvervliegenvanger"
+  },
+  "latin": "Empidornis semipartitus",
+  "look_for": [
+    {
+      "en": "Silver-grey back and **crown**",
+      "nl": "Zilvergrijze rug en **kruin**"
+    },
+    {
+      "en": "Bright orange-rufous from **throat** to belly",
+      "nl": "Fel oranjebruin van **keel** tot buik"
+    },
+    {
+      "en": "Perches openly on dry savanna bushes",
+      "nl": "Zit open op struiken in droge savanne"
+    }
+  ]
+}

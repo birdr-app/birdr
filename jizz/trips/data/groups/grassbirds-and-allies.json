@@ -1,0 +1,18 @@
+{
+  "slug": "grassbirds-and-allies",
+  "about": {
+    "en": "Skulking brown warblers of tall grass, reeds and dense undergrowth, often with a broad, rounded tail. They creep low through cover like mice, so the song, often an insect-like reel or a repeated phrase, is usually the first sign. When one shows, look for a plain or lightly streaked back and a pale eyebrow.",
+    "nl": "Bruine zangers die zich verbergen in hoog gras, riet en dichte ondergroei, vaak met een brede, ronde staart. Ze sluipen als muizen door de begroeiing, dus meestal hoor je eerst de zang: vaak een insectachtig gesnor of een herhaald motief. Laat er een zich zien, let dan op een effen of licht gestreepte rug en een lichte wenkbrauwstreep."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "bush-warblers-and-allies"
+      ],
+      "text": {
+        "en": "Several birds here are also called bush warblers, but they belong to a different family from Cetti's Warbler and its relatives. They look much alike, so listen to the song.",
+        "nl": "Een aantal vogels hier heet ook struikzanger, maar ze horen bij een andere familie dan de Cetti's zanger en zijn verwanten. Ze lijken sterk op elkaar, dus luister naar de zang."
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "bkctch1",
+  "name": {
+    "en": "Black-crowned Tchagra",
+    "nl": "Zwartkruintsjagra"
+  },
+  "latin": "Tchagra senegalus",
+  "look_for": [
+    {
+      "en": "Black **crown** above a broad white **eyebrow**",
+      "nl": "Zwarte **kruin** boven een brede witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Black eye stripe, rich chestnut **wings**",
+      "nl": "Zwarte oogstreep, warm kastanjebruine **vleugels**"
+    },
+    {
+      "en": "Long black **tail** with white tips",
+      "nl": "Lange zwarte **staart** met witte punten"
+    }
+  ]
+}

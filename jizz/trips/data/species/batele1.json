@@ -1,0 +1,22 @@
+{
+  "code": "batele1",
+  "name": {
+    "en": "Bateleur",
+    "nl": "Bateleur"
+  },
+  "latin": "Terathopius ecaudatus",
+  "look_for": [
+    {
+      "en": "Black with a chestnut back and red face",
+      "nl": "Zwart met kastanjebruine rug en rood gezicht"
+    },
+    {
+      "en": "Very short **tail**; red feet stick out behind",
+      "nl": "Heel korte **staart**; rode poten steken erachter uit"
+    },
+    {
+      "en": "Glides low, rocking from side to side",
+      "nl": "Zweeft laag en kantelt van links naar rechts"
+    }
+  ]
+}

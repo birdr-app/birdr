@@ -1,0 +1,22 @@
+{
+  "code": "grykes1",
+  "name": {
+    "en": "Grey Kestrel",
+    "nl": "Grijze torenvalk"
+  },
+  "latin": "Falco ardosiaceus",
+  "look_for": [
+    {
+      "en": "Small falcon, slate-grey all over",
+      "nl": "Kleine valk, helemaal leigrijs"
+    },
+    {
+      "en": "Bright yellow **cere**, **eye-ring** and legs",
+      "nl": "Felgele **washuid**, **oogring** en poten"
+    },
+    {
+      "en": "Stocky, big head; sits upright on poles",
+      "nl": "Gedrongen, grote kop; zit rechtop op palen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "revbul",
+  "name": {
+    "en": "Red-vented Bulbul",
+    "nl": "Roodbuikbuulbuul"
+  },
+  "latin": "Pycnonotus cafer",
+  "look_for": [
+    {
+      "en": "Black head with a short **crest**",
+      "nl": "Zwarte kop met een korte **kuif**"
+    },
+    {
+      "en": "Scaly brown body, white **rump**",
+      "nl": "Geschubd bruin lijf, witte **stuit**"
+    },
+    {
+      "en": "Bright red under the **tail**",
+      "nl": "Felrood onder de **staart**"
+    }
+  ]
+}

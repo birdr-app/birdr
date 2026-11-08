@@ -1,0 +1,22 @@
+{
+  "code": "sebpig1",
+  "name": {
+    "en": "Seychelles Blue-Pigeon",
+    "nl": "Seychellenblauwduif"
+  },
+  "latin": "Alectroenas pulcherrimus",
+  "look_for": [
+    {
+      "en": "Deep blue body and **wings**",
+      "nl": "Diepblauw lijf en diepblauwe **vleugels**"
+    },
+    {
+      "en": "Silvery-white **head**, neck and breast",
+      "nl": "Zilverwitte **kop**, hals en borst"
+    },
+    {
+      "en": "Bare red skin on **forehead** and round the eye",
+      "nl": "Kale rode huid op het **voorhoofd** en rond het oog"
+    }
+  ]
+}

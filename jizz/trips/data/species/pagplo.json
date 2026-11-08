@@ -1,0 +1,22 @@
+{
+  "code": "pagplo",
+  "name": {
+    "en": "Pacific Golden Plover",
+    "nl": "Aziatische goudplevier"
+  },
+  "latin": "Pluvialis fulva",
+  "look_for": [
+    {
+      "en": "Upperparts spangled with gold and black",
+      "nl": "Bovenkant goud en zwart gespikkeld"
+    },
+    {
+      "en": "Slim and long-legged, with a small **bill**",
+      "nl": "Slank en hoogpotig, met een kleine **snavel**"
+    },
+    {
+      "en": "In flight no black under the wing",
+      "nl": "In de vlucht geen zwart onder de vleugel"
+    }
+  ]
+}

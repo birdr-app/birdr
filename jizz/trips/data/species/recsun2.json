@@ -1,0 +1,22 @@
+{
+  "code": "recsun2",
+  "name": {
+    "en": "Red-chested Sunbird",
+    "nl": "Sierhoningzuiger"
+  },
+  "latin": "Cinnyris erythrocercus",
+  "look_for": [
+    {
+      "en": "Male green with a deep red **breast** band",
+      "nl": "Mannetje groen met een donkerrode **borstband**"
+    },
+    {
+      "en": "Black **belly** below the red",
+      "nl": "Zwarte **buik** onder het rood"
+    },
+    {
+      "en": "Slightly long **tail**; often near lakes",
+      "nl": "Iets verlengde **staart**; vaak bij meren"
+    }
+  ]
+}

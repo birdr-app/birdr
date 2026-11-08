@@ -87,6 +87,7 @@ from jizz.checklist_views import ChecklistView
 from jizz.app_version_views import AppVersionView
 from jizz.courses.views import CourseDetailView, CourseLessonView
 from jizz.courses.admin_views import CourseCommonsPhotoView, CoursePhotoPickView, CoursePhotosView, CourseSpeciesMediaView
+from jizz.trips.views import TripAnswersView, TripDetailView, TripListView, TripProgressView
 from jizz.geo_views import GeoCountryView
 from jizz.practice_views import (
     GlobalTroubleSpotsView,
@@ -590,6 +591,10 @@ urlpatterns = [
     path('api/courses/<slug:slug>/photos/species/<int:species_id>/', CourseSpeciesMediaView.as_view(), name='course-photos-species'),
     path('api/courses/<slug:slug>/photos/species/<int:species_id>/commons/', CourseCommonsPhotoView.as_view(), name='course-photos-commons'),
     path('api/courses/<slug:slug>/photos/<int:week>/<int:species_id>/', CoursePhotoPickView.as_view(), name='course-photo-pick'),
+    path('api/trips/', TripListView.as_view(), name='trip-list'),
+    path('api/trips/<str:country>/', TripDetailView.as_view(), name='trip-detail'),
+    path('api/trips/<str:country>/progress/', TripProgressView.as_view(), name='trip-progress'),
+    path('api/trips/<str:country>/answers/', TripAnswersView.as_view(), name='trip-answers'),
     path('api/geo/country/', GeoCountryView.as_view(), name='geo-country'),
     path('api/practice/trouble-spots/', TroubleSpotsView.as_view(), name='practice-trouble-spots'),
     path(

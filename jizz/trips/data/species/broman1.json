@@ -1,0 +1,22 @@
+{
+  "code": "broman1",
+  "name": {
+    "en": "Bronze Mannikin",
+    "nl": "Gewoon ekstertje"
+  },
+  "latin": "Spermestes cucullata",
+  "look_for": [
+    {
+      "en": "Dark head and **throat**, brown back",
+      "nl": "Donkere kop en **keel**, bruine rug"
+    },
+    {
+      "en": "Small glossy green patch on the **shoulder**",
+      "nl": "Klein glanzend groen vlekje op de **schouder**"
+    },
+    {
+      "en": "White belly, barred **flanks**; in small flocks",
+      "nl": "Witte buik, gebandeerde **flanken**; in groepjes"
+    }
+  ]
+}

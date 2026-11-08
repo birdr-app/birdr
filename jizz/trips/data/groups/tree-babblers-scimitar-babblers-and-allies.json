@@ -1,0 +1,20 @@
+{
+  "slug": "tree-babblers-scimitar-babblers-and-allies",
+  "about": {
+    "en": "Small to medium brown songbirds of forest undergrowth and scrub, many with a rufous, white or striped face. Scimitar-babblers have a long, down-curved bill; tree-babblers are smaller and plainer. They move in noisy, chattering family groups, often with other species, and are heard far more than seen.",
+    "nl": "Kleine tot middelgrote bruine zangvogels van ondergroei en struikgewas, veel met een roodbruin, wit of gestreept gezicht. Kruiplijsters zijn geen echte lijsters en hebben een lange, gebogen snavel; de andere timalia's zijn kleiner en eenvoudiger getekend. Ze trekken in luidruchtige, kwetterende familiegroepjes rond, vaak samen met andere soorten, en je hoort ze veel vaker dan je ze ziet."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "ground-babblers-and-allies",
+        "laughingthrushes-and-allies",
+        "pseudo-babblers"
+      ],
+      "text": {
+        "en": "Babbler is a name shared by several families. This one holds the tree-babblers and scimitar-babblers: small, often striped-faced birds of the undergrowth and middle storey, some with a long curved bill.",
+        "nl": "De namen timalia en babbelaar worden gebruikt voor vogels uit verschillende families. Deze familie bevat de boomtimalia's en kruiplijsters: kleine vogels van de ondergroei en de middelste laag van het bos, vaak met een gestreept gezicht en soms met een lange, gebogen snavel."
+      }
+    }
+  ]
+}

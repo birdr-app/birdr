@@ -1,0 +1,22 @@
+{
+  "code": "chibat1",
+  "name": {
+    "en": "Chinspot Batis",
+    "nl": "Witflankvliegenvanger"
+  },
+  "latin": "Batis molitor",
+  "look_for": [
+    {
+      "en": "Grey **crown**, black mask, yellow **eye**",
+      "nl": "Grijze **kruin**, zwart masker, geel **oog**"
+    },
+    {
+      "en": "Male: broad black **breast** band",
+      "nl": "Mannetje: brede zwarte **borstband**"
+    },
+    {
+      "en": "Female: chestnut **breast** band and **chin** spot",
+      "nl": "Vrouwtje: kastanjebruine **borstband** en **kinvlek**"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "swifts",
+  "about": {
+    "en": "Fast, dark birds that spend almost their whole lives in the air, with long, narrow, sickle-shaped wings and a short body. They hunt insects high overhead, often in screaming groups, and never perch on wires. Small swiftlets nest in caves; others nest in buildings, cliffs or palms.",
+    "nl": "Snelle, donkere vogels die bijna hun hele leven in de lucht doorbrengen, met lange, smalle, sikkelvormige vleugels en een kort lijf. Ze jagen hoog in de lucht op insecten, vaak in gillende groepjes, en gaan nooit op een draad zitten. Kleine salanganen broeden in grotten; andere soorten in gebouwen, rotsen of palmen."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "martins-and-swallows"
+      ],
+      "text": {
+        "en": "Swifts look like swallows but are no relation. Their wings are longer, stiffer and sickle-shaped, they fly with fast, flickering beats and glides, and they never perch on wires.",
+        "nl": "Gierzwaluwen lijken op zwaluwen, maar zijn er geen familie van. Hun vleugels zijn langer, stijver en sikkelvormig, ze vliegen met snelle, trillende slagen en glijvluchten en gaan nooit op een draad zitten."
+      }
+    }
+  ]
+}

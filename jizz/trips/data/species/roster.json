@@ -1,0 +1,22 @@
+{
+  "code": "roster",
+  "name": {
+    "en": "Roseate Tern",
+    "nl": "Dougalls stern"
+  },
+  "latin": "Sterna dougallii",
+  "look_for": [
+    {
+      "en": "Very pale tern, almost white on the **back**",
+      "nl": "Heel lichte stern, bijna wit op de **rug**"
+    },
+    {
+      "en": "Long white **tail** streamers past the wingtips",
+      "nl": "Lange witte **staartpennen** die voorbij de vleugelpunten steken"
+    },
+    {
+      "en": "Slim **bill**, black to mostly red; red legs",
+      "nl": "Slanke **snavel**, zwart tot grotendeels rood; rode poten"
+    }
+  ]
+}

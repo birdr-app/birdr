@@ -1,0 +1,22 @@
+{
+  "code": "lesnod1",
+  "name": {
+    "en": "Lesser Noddy",
+    "nl": "Kleine noddy"
+  },
+  "latin": "Anous tenuirostris",
+  "look_for": [
+    {
+      "en": "Small, slim, sooty-brown noddy",
+      "nl": "Kleine, slanke, roetbruine noddy"
+    },
+    {
+      "en": "Ash-grey **cap** fading into the **nape**",
+      "nl": "Asgrijze **kap** die overloopt in de **nek**"
+    },
+    {
+      "en": "Long, thin **bill**, no crisp white forehead",
+      "nl": "Lange, dunne **snavel**, geen scherp wit voorhoofd"
+    }
+  ]
+}

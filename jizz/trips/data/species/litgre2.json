@@ -1,0 +1,22 @@
+{
+  "code": "litgre2",
+  "name": {
+    "en": "Little Greenbul",
+    "nl": "Groene buulbuul"
+  },
+  "latin": "Eurillas virens",
+  "look_for": [
+    {
+      "en": "Small, plain dark olive-green greenbul",
+      "nl": "Kleine, effen donker olijfgroene buulbuul"
+    },
+    {
+      "en": "Slightly paler yellowish-olive **belly**",
+      "nl": "Iets lichtere geelolijfgroene **buik**"
+    },
+    {
+      "en": "Shy; heard far more often than seen",
+      "nl": "Schuw; veel vaker gehoord dan gezien"
+    }
+  ]
+}

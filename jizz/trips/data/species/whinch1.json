@@ -1,0 +1,22 @@
+{
+  "code": "whinch1",
+  "name": {
+    "en": "Whinchat",
+    "nl": "Paapje"
+  },
+  "latin": "Saxicola rubetra",
+  "look_for": [
+    {
+      "en": "Bold pale **eyebrow** over a dark cheek",
+      "nl": "Opvallende lichte **wenkbrauwstreep** boven een donkere wang"
+    },
+    {
+      "en": "Streaky brown back, orange-buff **breast**",
+      "nl": "Gestreepte bruine rug, oranjebruine **borst**"
+    },
+    {
+      "en": "White patches at the base of the **tail**",
+      "nl": "Witte vlekken aan de basis van de **staart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "marsto1",
+  "name": {
+    "en": "Marabou Stork",
+    "nl": "Afrikaanse maraboe"
+  },
+  "latin": "Leptoptilos crumenifer",
+  "look_for": [
+    {
+      "en": "Huge stork with a bare pinkish head",
+      "nl": "Enorme ooievaar met een kale, rozige kop"
+    },
+    {
+      "en": "Massive pale **bill**, hanging pink **pouch**",
+      "nl": "Zware lichte **snavel**, hangende roze **keelzak**"
+    },
+    {
+      "en": "Stands hunched in towns and at rubbish dumps",
+      "nl": "Staat ineengedoken in steden en op vuilnisbelten"
+    }
+  ]
+}

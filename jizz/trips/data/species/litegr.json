@@ -1,0 +1,22 @@
+{
+  "code": "litegr",
+  "name": {
+    "en": "Little Egret",
+    "nl": "Kleine zilverreiger"
+  },
+  "latin": "Egretta garzetta",
+  "look_for": [
+    {
+      "en": "Slim white heron with a black **bill**",
+      "nl": "Slanke witte reiger met een zwarte **snavel**"
+    },
+    {
+      "en": "Black legs with bright yellow feet",
+      "nl": "Zwarte poten met felgele voeten"
+    },
+    {
+      "en": "Dashes through shallow water after fish",
+      "nl": "Rent door ondiep water achter visjes aan"
+    }
+  ]
+}

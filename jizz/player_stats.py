@@ -143,6 +143,7 @@ def member_stats_for_user(user, *, request=None) -> dict:
                 Game.GAME_TYPE_PAIR_PRACTICE,
                 Game.GAME_TYPE_SPECIES_PRACTICE,
                 Game.GAME_TYPE_MIXUP_PRACTICE,
+                Game.GAME_TYPE_TRIP_PREP,
             ]
         )
         .select_related('game__country')

@@ -1,0 +1,18 @@
+{
+  "slug": "woodswallows",
+  "about": {
+    "en": "Stocky grey or brown birds with long, pointed wings and a thick, pale blue-grey bill. They soar and glide after insects in open country, then perch on wires or bare branches, often huddled shoulder to shoulder in a tight row.",
+    "nl": "Gedrongen grijze of bruine vogels met lange, spitse vleugels en een dikke, lichte blauwgrijze snavel. Ze zweven en glijden in open land achter insecten aan en gaan daarna op draden of kale takken zitten, vaak dicht tegen elkaar aan in een strak rijtje."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "martins-and-swallows"
+      ],
+      "text": {
+        "en": "Woodswallows are no swallows. They are heavier, with a thick blue-grey bill, and they glide and soar more than swallows do.",
+        "nl": "Spitsvogels heten in het Engels woodswallow, maar het zijn geen zwaluwen. Ze zijn zwaarder, hebben een dikke blauwgrijze snavel en zweven en glijden meer dan zwaluwen."
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "reccor",
+  "name": {
+    "en": "Red-cheeked Cordonbleu",
+    "nl": "Blauwfazantje"
+  },
+  "latin": "Uraeginthus bengalus",
+  "look_for": [
+    {
+      "en": "Sky-blue face, **breast** and tail",
+      "nl": "Hemelsblauw gezicht, **borst** en staart"
+    },
+    {
+      "en": "Male with a red **cheek** spot",
+      "nl": "Mannetje met een rode **wangvlek**"
+    },
+    {
+      "en": "Brown back; hops in pairs on the ground",
+      "nl": "Bruine rug; huppelt in paartjes over de grond"
+    }
+  ]
+}

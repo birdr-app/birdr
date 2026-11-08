@@ -1,0 +1,22 @@
+{
+  "code": "afrpip1",
+  "name": {
+    "en": "African Pipit",
+    "nl": "Kaneelpieper"
+  },
+  "latin": "Anthus cinnamomeus",
+  "look_for": [
+    {
+      "en": "Streaky brown, upright on short grass",
+      "nl": "Gestreept bruin, rechtop in kort gras"
+    },
+    {
+      "en": "Pale **eyebrow** and a dark moustache stripe",
+      "nl": "Lichte **wenkbrauwstreep** en een donkere baardstreep"
+    },
+    {
+      "en": "Streaked **breast**; white outer tail feathers",
+      "nl": "Gestreepte **borst**; witte buitenste staartveren"
+    }
+  ]
+}

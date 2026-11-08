@@ -1,0 +1,22 @@
+{
+  "code": "comduc2",
+  "name": {
+    "en": "Knob-billed Duck",
+    "nl": "Afrikaanse knobbeleend"
+  },
+  "latin": "Sarkidiornis melanotos",
+  "look_for": [
+    {
+      "en": "White **head** and neck, speckled black",
+      "nl": "Witte **kop** en hals, zwart gespikkeld"
+    },
+    {
+      "en": "Glossy blue-black **back** and **wings**",
+      "nl": "Glanzend blauwzwarte **rug** en **vleugels**"
+    },
+    {
+      "en": "Male has a big black **knob** on the bill",
+      "nl": "Mannetje heeft een grote zwarte **knobbel** op de snavel"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "spbpel1",
+  "name": {
+    "en": "Spot-billed Pelican",
+    "nl": "Grijze pelikaan"
+  },
+  "latin": "Pelecanus philippensis",
+  "look_for": [
+    {
+      "en": "Greyish-white pelican, smaller than most",
+      "nl": "Grijswitte pelikaan, kleiner dan de meeste"
+    },
+    {
+      "en": "Dark spots along the top of the **bill**",
+      "nl": "Donkere stippen langs de bovenkant van de **snavel**"
+    },
+    {
+      "en": "Pinkish **pouch** and a shaggy **nape**",
+      "nl": "Roze **keelzak** en een rafelige **nek**"
+    }
+  ]
+}

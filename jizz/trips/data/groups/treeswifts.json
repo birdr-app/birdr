@@ -1,0 +1,18 @@
+{
+  "slug": "treeswifts",
+  "about": {
+    "en": "Elegant relatives of the swifts, with long, swept-back wings, a long forked tail and a small crest. They hunt insects in the air like swifts, then return to sit upright on a bare branch at the top of a tree. Look for them along forest edges and in clearings.",
+    "nl": "Sierlijke verwanten van de gierzwaluwen, met lange, naar achteren geveegde vleugels, een lange gevorkte staart en een kuifje. Ze vangen insecten in de lucht zoals gierzwaluwen en keren daarna terug naar een kale tak boven in een boom, waar ze rechtop zitten. Je ziet ze vooral aan bosranden en op open plekken."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "swifts"
+      ],
+      "text": {
+        "en": "Unlike the swifts you know, treeswifts perch. They sit upright on bare branches between hunting flights, and show a crest and a long, deeply forked tail.",
+        "nl": "Anders dan de gierzwaluwen die je kent, gaan boomgierzwaluwen wel zitten. Tussen hun jachtvluchten zitten ze rechtop op kale takken, met een kuifje en een lange, diep gevorkte staart."
+      }
+    }
+  ]
+}

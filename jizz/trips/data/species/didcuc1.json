@@ -1,0 +1,22 @@
+{
+  "code": "didcuc1",
+  "name": {
+    "en": "Dideric Cuckoo",
+    "nl": "Diederikkoekoek"
+  },
+  "latin": "Chrysococcyx caprius",
+  "look_for": [
+    {
+      "en": "Bronze-green above with white spots on the wings",
+      "nl": "Bronsgroen van boven met witte vlekken op de vleugels"
+    },
+    {
+      "en": "White **eyebrow** broken by a red eye",
+      "nl": "Witte **wenkbrauwstreep**, onderbroken door een rood oog"
+    },
+    {
+      "en": "White below with barred **flanks**",
+      "nl": "Wit van onder met gebandeerde **flanken**"
+    }
+  ]
+}

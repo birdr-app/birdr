@@ -1,0 +1,22 @@
+{
+  "code": "grsplo",
+  "name": {
+    "en": "Greater Sand Plover",
+    "nl": "Woestijnplevier"
+  },
+  "latin": "Anarhynchus leschenaultii",
+  "look_for": [
+    {
+      "en": "Long, heavy black **bill** with a pointed tip",
+      "nl": "Lange, zware zwarte **snavel** met een spitse punt"
+    },
+    {
+      "en": "Longer, paler **legs** than Tibetan Sand Plover",
+      "nl": "Langere, lichtere **poten** dan de Tibetaanse plevier"
+    },
+    {
+      "en": "Tall, with a big angular **head**",
+      "nl": "Hoog op de poten, met een grote hoekige **kop**"
+    }
+  ]
+}

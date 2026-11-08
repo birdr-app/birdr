@@ -1,0 +1,22 @@
+{
+  "code": "seykes1",
+  "name": {
+    "en": "Seychelles Kestrel",
+    "nl": "Seychellentorenvalk"
+  },
+  "latin": "Falco araeus",
+  "look_for": [
+    {
+      "en": "Tiny kestrel with a dark blue-grey **head**",
+      "nl": "Piepkleine valk met een donker blauwgrijze **kop**"
+    },
+    {
+      "en": "Rufous **back** with black spots",
+      "nl": "Roodbruine **rug** met zwarte vlekjes"
+    },
+    {
+      "en": "Plain, unspotted buff **underparts**",
+      "nl": "Effen, ongevlekte bleekbruine **onderkant**"
+    }
+  ]
+}

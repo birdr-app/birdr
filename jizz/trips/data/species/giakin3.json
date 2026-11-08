@@ -1,0 +1,22 @@
+{
+  "code": "giakin3",
+  "name": {
+    "en": "Giant Kingfisher",
+    "nl": "Afrikaanse reuzenijsvogel"
+  },
+  "latin": "Megaceryle maxima",
+  "look_for": [
+    {
+      "en": "Huge kingfisher with a massive black **bill**",
+      "nl": "Enorme ijsvogel met een zware zwarte **snavel**"
+    },
+    {
+      "en": "Slate-grey back with fine white spots, shaggy **crest**",
+      "nl": "Leigrijze rug met fijne witte stippen, rafelige **kuif**"
+    },
+    {
+      "en": "Male chestnut **breast**; female chestnut **belly**",
+      "nl": "Mannetje kastanjebruine **borst**; vrouwtje kastanjebruine **buik**"
+    }
+  ]
+}

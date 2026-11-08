@@ -1,0 +1,22 @@
+{
+  "code": "brnshr",
+  "name": {
+    "en": "Brown Shrike",
+    "nl": "Bruine klauwier"
+  },
+  "latin": "Lanius cristatus",
+  "look_for": [
+    {
+      "en": "Black **mask** under a thin white eyebrow",
+      "nl": "Zwart **masker** onder een smalle witte wenkbrauwstreep"
+    },
+    {
+      "en": "Warm brown back and **tail**, buff below",
+      "nl": "Warmbruine rug en **staart**, lichtbruin van onder"
+    },
+    {
+      "en": "Hooked **bill**; watches from an open perch",
+      "nl": "Haakvormige **snavel**; loert vanaf een open uitkijkpost"
+    }
+  ]
+}

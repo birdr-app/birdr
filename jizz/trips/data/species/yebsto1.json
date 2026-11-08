@@ -1,0 +1,22 @@
+{
+  "code": "yebsto1",
+  "name": {
+    "en": "Yellow-billed Stork",
+    "nl": "Afrikaanse nimmerzat"
+  },
+  "latin": "Mycteria ibis",
+  "look_for": [
+    {
+      "en": "Yellow, slightly drooping **bill**",
+      "nl": "Gele, licht gebogen **snavel**"
+    },
+    {
+      "en": "Bare red face and pink legs",
+      "nl": "Kaal rood gezicht en roze poten"
+    },
+    {
+      "en": "White, pink-tinged body, black **flight feathers** and tail",
+      "nl": "Wit lijf met roze zweem, zwarte **slagpennen** en staart"
+    }
+  ]
+}

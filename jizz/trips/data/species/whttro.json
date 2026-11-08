@@ -1,0 +1,22 @@
+{
+  "code": "whttro",
+  "name": {
+    "en": "White-tailed Tropicbird",
+    "nl": "Witstaartkeerkringvogel"
+  },
+  "latin": "Phaethon lepturus",
+  "look_for": [
+    {
+      "en": "Long white **tail** streamers",
+      "nl": "Lange witte **staartpennen**"
+    },
+    {
+      "en": "Bold black diagonal bar across the upper **wing**",
+      "nl": "Brede zwarte schuine baan over de **vleugel**"
+    },
+    {
+      "en": "Yellow to orange **bill**; smaller than Red-tailed Tropicbird",
+      "nl": "Gele tot oranje **snavel**; kleiner dan de roodstaartkeerkringvogel"
+    }
+  ]
+}

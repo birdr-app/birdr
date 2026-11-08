@@ -1,0 +1,22 @@
+{
+  "code": "crohor1",
+  "name": {
+    "en": "Crowned Hornbill",
+    "nl": "Kuiftok"
+  },
+  "latin": "Lophoceros alboterminatus",
+  "look_for": [
+    {
+      "en": "Dark brown above, white **belly**",
+      "nl": "Donkerbruin van boven, witte **buik**"
+    },
+    {
+      "en": "Orange-red **bill** with a low ridge on top",
+      "nl": "Oranjerode **snavel** met een lage kam erop"
+    },
+    {
+      "en": "Pale yellow **eye**, white tips to the tail",
+      "nl": "Lichtgeel **oog**, witte punten aan de staart"
+    }
+  ]
+}

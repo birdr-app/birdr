@@ -1,0 +1,22 @@
+{
+  "code": "egygoo",
+  "name": {
+    "en": "Egyptian Goose",
+    "nl": "Nijlgans"
+  },
+  "latin": "Alopochen aegyptiaca",
+  "look_for": [
+    {
+      "en": "Pale brown-buff goose with a dark **eye** patch",
+      "nl": "Lichtbruine gans met een donkere vlek rond het **oog**"
+    },
+    {
+      "en": "Chestnut patch in the middle of the **breast**",
+      "nl": "Kastanjebruine vlek midden op de **borst**"
+    },
+    {
+      "en": "Long pink **legs**; big white **wing** patches in flight",
+      "nl": "Lange roze **poten**; grote witte **vleugelvlekken** in de vlucht"
+    }
+  ]
+}

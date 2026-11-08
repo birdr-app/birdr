@@ -1,0 +1,22 @@
+{
+  "code": "orisky1",
+  "name": {
+    "en": "Oriental Skylark",
+    "nl": "Kleine veldleeuwerik"
+  },
+  "latin": "Alauda gulgula",
+  "look_for": [
+    {
+      "en": "Like a small Skylark with a short **tail**",
+      "nl": "Als een kleine veldleeuwerik met een korte **staart**"
+    },
+    {
+      "en": "Streaky brown, with a small **crest**",
+      "nl": "Bruin gestreept, met een kleine **kuif**"
+    },
+    {
+      "en": "Rusty edges in the folded **wing**",
+      "nl": "Roestbruine randjes in de gevouwen **vleugel**"
+    }
+  ]
+}

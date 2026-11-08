@@ -1,0 +1,22 @@
+{
+  "code": "copbar1",
+  "name": {
+    "en": "Coppersmith Barbet",
+    "nl": "Koperslager"
+  },
+  "latin": "Psilopogon haemacephalus",
+  "look_for": [
+    {
+      "en": "Small green barbet with a red **forehead**",
+      "nl": "Kleine groene baardvogel met rood **voorhoofd**"
+    },
+    {
+      "en": "Yellow throat, red patch on the upper breast",
+      "nl": "Gele keel, rode vlek bovenaan de borst"
+    },
+    {
+      "en": "Streaked below; calls a steady tuk-tuk-tuk",
+      "nl": "Gestreept van onder; roept een eindeloos tok-tok-tok"
+    }
+  ]
+}

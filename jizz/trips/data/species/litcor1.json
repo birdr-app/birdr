@@ -1,0 +1,22 @@
+{
+  "code": "litcor1",
+  "name": {
+    "en": "Little Cormorant",
+    "nl": "Indische dwergaalscholver"
+  },
+  "latin": "Microcarbo niger",
+  "look_for": [
+    {
+      "en": "Small and all black, short **bill**",
+      "nl": "Klein en helemaal zwart, korte **snavel**"
+    },
+    {
+      "en": "Rounded head, no yellow on the face",
+      "nl": "Ronde kop, geen geel in het gezicht"
+    },
+    {
+      "en": "Long tail for such a small cormorant",
+      "nl": "Lange staart voor zo'n kleine aalscholver"
+    }
+  ]
+}

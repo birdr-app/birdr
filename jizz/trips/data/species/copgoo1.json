@@ -1,0 +1,22 @@
+{
+  "code": "copgoo1",
+  "name": {
+    "en": "Cotton Pygmy-Goose",
+    "nl": "Coromandeleend"
+  },
+  "latin": "Nettapus coromandelianus",
+  "look_for": [
+    {
+      "en": "Tiny duck with a short, goose-like **bill**",
+      "nl": "Piepklein eendje met een korte **snavel** als een gans"
+    },
+    {
+      "en": "Male: white head and body, black **cap**",
+      "nl": "Man: witte kop en lijf, zwarte **kap**"
+    },
+    {
+      "en": "Glossy green back and thin black **collar**",
+      "nl": "Glanzend groene rug en smalle zwarte **halsband**"
+    }
+  ]
+}

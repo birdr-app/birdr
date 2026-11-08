@@ -1,0 +1,22 @@
+{
+  "code": "comwax",
+  "name": {
+    "en": "Common Waxbill",
+    "nl": "Sint-Helenafazantje"
+  },
+  "latin": "Estrilda astrild",
+  "look_for": [
+    {
+      "en": "Tiny, finely barred brown finch",
+      "nl": "Piepklein, fijn gestreept bruin vinkje"
+    },
+    {
+      "en": "Red **bill** and red stripe through the **eye**",
+      "nl": "Rode **snavel** en rode streep door het **oog**"
+    },
+    {
+      "en": "Pinkish **belly**, dark under the **tail**",
+      "nl": "Roze getinte **buik**, donker onder de **staart**"
+    }
+  ]
+}

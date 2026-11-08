@@ -1,0 +1,22 @@
+{
+  "code": "rtbeat1",
+  "name": {
+    "en": "Red-throated Bee-eater",
+    "nl": "Roodkeelbijeneter"
+  },
+  "latin": "Merops bulocki",
+  "look_for": [
+    {
+      "en": "Bright red **throat**, black eye mask",
+      "nl": "Felrode **keel**, zwart oogmasker"
+    },
+    {
+      "en": "Green back, buff **breast**, blue under the tail",
+      "nl": "Groene rug, okerkleurige **borst**, blauw onder de staart"
+    },
+    {
+      "en": "Square **tail** without long central pins",
+      "nl": "Rechte **staart** zonder lange middenpennen"
+    }
+  ]
+}

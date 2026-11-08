@@ -1,0 +1,22 @@
+{
+  "code": "afrsto1",
+  "name": {
+    "en": "African Stonechat",
+    "nl": "Afrikaanse roodborsttapuit"
+  },
+  "latin": "Saxicola torquatus",
+  "look_for": [
+    {
+      "en": "Male black head with a white **collar**",
+      "nl": "Mannetje zwarte kop met een witte **halsband**"
+    },
+    {
+      "en": "Deep rufous patch on the **breast**",
+      "nl": "Diep roodbruine vlek op de **borst**"
+    },
+    {
+      "en": "White **rump**; female streaky brown",
+      "nl": "Witte **stuit**; vrouwtje gestreept bruin"
+    }
+  ]
+}

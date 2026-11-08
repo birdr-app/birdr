@@ -1,0 +1,22 @@
+{
+  "code": "bfgbir1",
+  "name": {
+    "en": "Bare-faced Go-away-bird",
+    "nl": "Maskertoerako"
+  },
+  "latin": "Crinifer personatus",
+  "look_for": [
+    {
+      "en": "Bare black face below a grey **crest**",
+      "nl": "Kaal zwart gezicht onder een grijze **kuif**"
+    },
+    {
+      "en": "Dirty white neck and **breast**",
+      "nl": "Vuilwitte hals en **borst**"
+    },
+    {
+      "en": "Pale grey back and long grey tail",
+      "nl": "Lichtgrijze rug en lange grijze staart"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "houspa",
+  "name": {
+    "en": "House Sparrow",
+    "nl": "Huismus"
+  },
+  "latin": "Passer domesticus",
+  "look_for": [
+    {
+      "en": "Male: grey **crown**, black bib",
+      "nl": "Mannetje: grijze **kruin**, zwarte bef"
+    },
+    {
+      "en": "Chestnut on the sides of the head",
+      "nl": "Kastanjebruin opzij van de kop"
+    },
+    {
+      "en": "Female plain brown, pale **eyebrow**",
+      "nl": "Vrouwtje effen bruin, lichte **wenkbrauwstreep**"
+    }
+  ]
+}

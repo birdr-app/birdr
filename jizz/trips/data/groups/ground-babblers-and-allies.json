@@ -1,0 +1,20 @@
+{
+  "slug": "ground-babblers-and-allies",
+  "about": {
+    "en": "Small, plain brown babblers of the forest floor and thick undergrowth, often short-tailed, with a pale throat and a streaked or spotted breast. They hop and creep among leaf litter and tangles and rarely show for long. Many have loud, clear whistled songs, usually the best way to find them.",
+    "nl": "Kleine, eenvoudig bruine timalia's van de bosbodem en dichte ondergroei, vaak met een korte staart, een lichte keel en een gestreepte of gevlekte borst. Ze hippen en sluipen door strooisel en kreupelhout en laten zich zelden lang zien. Veel soorten hebben een luide, heldere fluitzang, en daarmee vind je ze meestal."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "tree-babblers-scimitar-babblers-and-allies",
+        "laughingthrushes-and-allies",
+        "pseudo-babblers"
+      ],
+      "text": {
+        "en": "Babbler is a name shared by several families. This one holds the ground babblers: small, short-tailed brown birds that stay low on or near the forest floor.",
+        "nl": "De namen timalia en babbelaar worden gebruikt voor vogels uit verschillende families. Deze familie bevat de jungletimalia's en hun verwanten: kleine bruine vogels met een korte staart die laag op of vlak boven de bosbodem blijven."
+      }
+    }
+  ]
+}

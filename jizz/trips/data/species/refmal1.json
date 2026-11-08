@@ -1,0 +1,22 @@
+{
+  "code": "refmal1",
+  "name": {
+    "en": "Red-faced Malkoha",
+    "nl": "Roodgezichtmalkoha"
+  },
+  "latin": "Phaenicophaeus pyrrhocephalus",
+  "look_for": [
+    {
+      "en": "Big red patch of bare skin round the eye",
+      "nl": "Grote rode naakte vlek rond het oog"
+    },
+    {
+      "en": "Glossy black above, white **belly**",
+      "nl": "Glanzend zwart van boven, witte **buik**"
+    },
+    {
+      "en": "Long tail with white tips, pale green **bill**",
+      "nl": "Lange staart met witte punten, lichtgroene **snavel**"
+    }
+  ]
+}

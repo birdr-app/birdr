@@ -1,0 +1,22 @@
+{
+  "code": "houcro1",
+  "name": {
+    "en": "House Crow",
+    "nl": "Huiskraai"
+  },
+  "latin": "Corvus splendens",
+  "look_for": [
+    {
+      "en": "Grey neck and breast, black face",
+      "nl": "Grijze hals en borst, zwart gezicht"
+    },
+    {
+      "en": "Slimmer than Large-billed Crow, smaller **bill**",
+      "nl": "Slanker dan de dikbekkraai, kleinere **snavel**"
+    },
+    {
+      "en": "Bold and noisy around houses and markets",
+      "nl": "Brutaal en luidruchtig rond huizen en markten"
+    }
+  ]
+}

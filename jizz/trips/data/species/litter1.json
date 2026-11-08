@@ -1,0 +1,22 @@
+{
+  "code": "litter1",
+  "name": {
+    "en": "Little Tern",
+    "nl": "Dwergstern"
+  },
+  "latin": "Sternula albifrons",
+  "look_for": [
+    {
+      "en": "Tiny tern with a black-tipped yellow **bill**",
+      "nl": "Piepklein sterntje met gele **snavel** met zwarte punt"
+    },
+    {
+      "en": "White **forehead** below a black **cap**",
+      "nl": "Wit **voorhoofd** onder een zwarte **kap**"
+    },
+    {
+      "en": "Hovers on fast wingbeats, then dives",
+      "nl": "Bidt met snelle vleugelslagen en duikt dan"
+    }
+  ]
+}

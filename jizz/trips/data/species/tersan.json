@@ -1,0 +1,22 @@
+{
+  "code": "tersan",
+  "name": {
+    "en": "Terek Sandpiper",
+    "nl": "Terekruiter"
+  },
+  "latin": "Xenus cinereus",
+  "look_for": [
+    {
+      "en": "Long, upturned **bill** with a yellowish base",
+      "nl": "Lange, opgewipte **snavel** met een gelige basis"
+    },
+    {
+      "en": "Short, bright orange-yellow **legs**",
+      "nl": "Korte, fel oranjegele **poten**"
+    },
+    {
+      "en": "Dashes about fast on mudflats, bobbing its rear",
+      "nl": "Rent snel over het slik en wipt met zijn achterlijf"
+    }
+  ]
+}

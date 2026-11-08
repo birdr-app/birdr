@@ -1,0 +1,22 @@
+{
+  "code": "comred1",
+  "name": {
+    "en": "Common Redshank",
+    "nl": "Tureluur"
+  },
+  "latin": "Tringa totanus",
+  "look_for": [
+    {
+      "en": "Bright orange-red legs",
+      "nl": "Felle oranjerode poten"
+    },
+    {
+      "en": "Straight **bill**, red at the base",
+      "nl": "Rechte **snavel**, rood aan de basis"
+    },
+    {
+      "en": "Broad white trailing edge to the wing",
+      "nl": "Brede witte achterrand aan de vleugel"
+    }
+  ]
+}

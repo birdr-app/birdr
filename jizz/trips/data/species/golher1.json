@@ -1,0 +1,22 @@
+{
+  "code": "golher1",
+  "name": {
+    "en": "Goliath Heron",
+    "nl": "Reuzenreiger"
+  },
+  "latin": "Ardea goliath",
+  "look_for": [
+    {
+      "en": "Huge heron, much larger than Grey Heron",
+      "nl": "Enorme reiger, veel groter dan de blauwe reiger"
+    },
+    {
+      "en": "Rufous head and neck, chestnut **belly**",
+      "nl": "Roestbruine kop en hals, kastanjebruine **buik**"
+    },
+    {
+      "en": "Dark grey back, heavy dark **bill**",
+      "nl": "Donkergrijze rug, zware donkere **snavel**"
+    }
+  ]
+}

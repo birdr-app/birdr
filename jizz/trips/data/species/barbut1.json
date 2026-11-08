@@ -1,0 +1,22 @@
+{
+  "code": "barbut1",
+  "name": {
+    "en": "Barred Buttonquail",
+    "nl": "Zwartkeelvechtkwartel"
+  },
+  "latin": "Turnix suscitator",
+  "look_for": [
+    {
+      "en": "Small, round, quail-like ground bird",
+      "nl": "Klein, rond grondvogeltje, als een kwartel"
+    },
+    {
+      "en": "Black-and-white bars on the **breast** sides",
+      "nl": "Zwart-witte bandjes op de zijkant van de **borst**"
+    },
+    {
+      "en": "Female has a black **throat**, male does not",
+      "nl": "Vrouwtje met zwarte **keel**, man zonder"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "blaeag1",
+  "name": {
+    "en": "Black Eagle",
+    "nl": "Indische zwarte arend"
+  },
+  "latin": "Ictinaetus malaiensis",
+  "look_for": [
+    {
+      "en": "All black, with yellow **cere** and feet",
+      "nl": "Helemaal zwart, met gele **washuid** en poten"
+    },
+    {
+      "en": "Long wings, narrow at the base, fingered tips",
+      "nl": "Lange vleugels, smal bij het lijf, met vingers"
+    },
+    {
+      "en": "Glides slowly just above the forest canopy",
+      "nl": "Glijdt langzaam vlak boven de boomtoppen"
+    }
+  ]
+}

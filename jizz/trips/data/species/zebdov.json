@@ -1,0 +1,22 @@
+{
+  "code": "zebdov",
+  "name": {
+    "en": "Zebra Dove",
+    "nl": "Zebraduif"
+  },
+  "latin": "Geopelia striata",
+  "look_for": [
+    {
+      "en": "Small, slim dove with a long **tail**",
+      "nl": "Kleine, slanke duif met een lange **staart**"
+    },
+    {
+      "en": "Fine black barring on the neck and **flanks**",
+      "nl": "Fijne zwarte streepjes op hals en **flanken**"
+    },
+    {
+      "en": "Blue-grey face with bare blue skin round the **eye**",
+      "nl": "Blauwgrijs gezicht, kale blauwe huid rond het **oog**"
+    }
+  ]
+}

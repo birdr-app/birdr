@@ -1,0 +1,22 @@
+{
+  "code": "magrob",
+  "name": {
+    "en": "Oriental Magpie-Robin",
+    "nl": "Dayallijster"
+  },
+  "latin": "Copsychus saularis",
+  "look_for": [
+    {
+      "en": "Black and white; female dark grey, not black",
+      "nl": "Zwart-wit; vrouwtje donkergrijs in plaats van zwart"
+    },
+    {
+      "en": "Long white stripe along the **wing**",
+      "nl": "Lange witte streep langs de **vleugel**"
+    },
+    {
+      "en": "Cocks its black-and-white **tail** high",
+      "nl": "Wipt de zwart-witte **staart** hoog op"
+    }
+  ]
+}

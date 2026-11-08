@@ -1,0 +1,22 @@
+{
+  "code": "spepig1",
+  "name": {
+    "en": "Speckled Pigeon",
+    "nl": "Gespikkelde duif"
+  },
+  "latin": "Columba guinea",
+  "look_for": [
+    {
+      "en": "Red-brown **wings** covered in white spots",
+      "nl": "Roodbruine **vleugels** vol witte stippen"
+    },
+    {
+      "en": "Bare red skin round the **eye**",
+      "nl": "Kale rode huid rond het **oog**"
+    },
+    {
+      "en": "Grey **head** and belly; pale grey **rump** in flight",
+      "nl": "Grijze **kop** en buik; lichtgrijze **stuit** in de vlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "crfbar3",
+  "name": {
+    "en": "Crimson-fronted Barbet",
+    "nl": "Roodkeelbaardvogel"
+  },
+  "latin": "Psilopogon rubricapillus",
+  "look_for": [
+    {
+      "en": "Red **forehead**, gold ring around the eye",
+      "nl": "Rood **voorhoofd**, gouden ring rond het oog"
+    },
+    {
+      "en": "Blue lower cheek and orange throat",
+      "nl": "Blauwe onderwang en oranje keel"
+    },
+    {
+      "en": "Plain green belly, unlike Coppersmith's streaks",
+      "nl": "Effen groene buik, zonder de strepen van de koperslager"
+    }
+  ]
+}

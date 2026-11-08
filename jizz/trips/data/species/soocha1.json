@@ -1,0 +1,22 @@
+{
+  "code": "soocha1",
+  "name": {
+    "en": "Sooty Chat",
+    "nl": "Zwarte miertapuit"
+  },
+  "latin": "Myrmecocichla nigra",
+  "look_for": [
+    {
+      "en": "Male all black with a white **shoulder**",
+      "nl": "Mannetje helemaal zwart met een witte **schouder**"
+    },
+    {
+      "en": "Female plain dark chocolate-brown",
+      "nl": "Vrouwtje effen donker chocoladebruin"
+    },
+    {
+      "en": "Perches on termite mounds in grassland",
+      "nl": "Zit op termietenheuvels in grasland"
+    }
+  ]
+}

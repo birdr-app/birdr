@@ -1,0 +1,22 @@
+{
+  "code": "nutman",
+  "name": {
+    "en": "Scaly-breasted Munia",
+    "nl": "Muskaatvink"
+  },
+  "latin": "Lonchura punctulata",
+  "look_for": [
+    {
+      "en": "Chocolate-brown head and back",
+      "nl": "Chocoladebruine kop en rug"
+    },
+    {
+      "en": "White **breast** with dark brown scales",
+      "nl": "Witte **borst** met donkerbruine schubben"
+    },
+    {
+      "en": "Thick, dark grey **bill**",
+      "nl": "Dikke, donkergrijze **snavel**"
+    }
+  ]
+}

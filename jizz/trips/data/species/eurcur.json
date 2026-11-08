@@ -1,0 +1,22 @@
+{
+  "code": "eurcur",
+  "name": {
+    "en": "Eurasian Curlew",
+    "nl": "Wulp"
+  },
+  "latin": "Numenius arquata",
+  "look_for": [
+    {
+      "en": "Very long, down-curved **bill**",
+      "nl": "Heel lange, gebogen **snavel**"
+    },
+    {
+      "en": "Big, streaky brown wader",
+      "nl": "Grote, gestreepte bruine steltloper"
+    },
+    {
+      "en": "Plain head without stripes, unlike Whimbrel",
+      "nl": "Effen kop zonder strepen, anders dan de regenwulp"
+    }
+  ]
+}

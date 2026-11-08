@@ -1,0 +1,22 @@
+{
+  "code": "bltmun1",
+  "name": {
+    "en": "Black-throated Munia",
+    "nl": "Zwartkeelbronzemannetje"
+  },
+  "latin": "Lonchura kelaarti",
+  "look_for": [
+    {
+      "en": "Blackish face and **throat**",
+      "nl": "Zwartachtig gezicht en **keel**"
+    },
+    {
+      "en": "Pinkish-buff below with scaly marks",
+      "nl": "Rozebruin van onder met schubvlekjes"
+    },
+    {
+      "en": "Dark back with fine pale streaks",
+      "nl": "Donkere rug met fijne lichte streepjes"
+    }
+  ]
+}

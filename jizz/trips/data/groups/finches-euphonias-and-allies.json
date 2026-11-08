@@ -1,0 +1,27 @@
+{
+  "slug": "finches-euphonias-and-allies",
+  "about": {
+    "en": "Small seed-eaters with a strong, cone-shaped bill and a notched tail: finches, canaries, siskins, crossbills and grosbeaks. Many males are red, yellow or green. They feed in flocks in trees or on the ground and fly with a bouncing flight. Euphonias are tiny, stubby birds, often blue-black and yellow, that eat berries.",
+    "nl": "Kleine zaadeters met een sterke, kegelvormige snavel en een ingekeepte staart: vinken, kanaries, sijzen, kruisbekken en kernbijters. Veel mannetjes zijn rood, geel of groen. Ze zoeken in groepjes voedsel in bomen of op de grond en vliegen in golvende vlucht. Euphonia's zijn piepkleine, gedrongen vogeltjes, vaak blauwzwart en geel, die bessen eten."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "tanagers-and-allies"
+      ],
+      "text": {
+        "en": "Euphonias look like small tanagers and were long counted among them, but they are finches. Look for the stubby shape and the short tail.",
+        "nl": "Euphonia's lijken op kleine tangaren en werden lang tot die groep gerekend, maar het zijn vinken. Let op de gedrongen vorm en het korte staartje."
+      }
+    },
+    {
+      "if_known": [
+        "estrildids"
+      ],
+      "text": {
+        "en": "Waxbills, munias and the Zebra Finch are often called finches, but they belong to a separate family. True finches are mostly larger, with a notched tail and a bouncing flight.",
+        "nl": "Prachtvinken zoals astrilden, bronzemannetjes en de zebravink worden vaak vinken genoemd, maar ze vormen een aparte familie. Echte vinken zijn meestal groter, met een ingekeepte staart en een golvende vlucht."
+      }
+    }
+  ]
+}

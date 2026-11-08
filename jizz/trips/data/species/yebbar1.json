@@ -1,0 +1,22 @@
+{
+  "code": "yebbar1",
+  "name": {
+    "en": "Western Yellow-billed Barbet",
+    "nl": "Westelijke geelsnavelbaardvogel"
+  },
+  "latin": "Trachylaemus goffinii",
+  "look_for": [
+    {
+      "en": "Big, dark glossy barbet with a yellow **bill**",
+      "nl": "Grote, donker glanzende baardvogel met een gele **snavel**"
+    },
+    {
+      "en": "Dark speckled **throat**, yellow **belly**",
+      "nl": "Donkere gespikkelde **keel**, gele **buik**"
+    },
+    {
+      "en": "Slow hooting call from the forest understorey",
+      "nl": "Trage, hoepende roep uit de lage bosbegroeiing"
+    }
+  ]
+}

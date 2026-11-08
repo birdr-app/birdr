@@ -1,0 +1,18 @@
+{
+  "slug": "sunbirds-and-spiderhunters",
+  "about": {
+    "en": "Small, fast nectar-feeders with a long, thin, down-curved bill. Males are glossy green, purple, blue or red and females mostly olive and yellow; they cling to flowers or hover briefly, often in gardens, and chase each other with high, sharp calls. Spiderhunters are larger, olive-green and have an even longer bill.",
+    "nl": "Kleine, snelle nectareters met een lange, dunne, gebogen snavel. Mannetjes glanzen groen, paars, blauw of rood, vrouwtjes zijn meestal olijfgroen en geel; ze hangen aan bloemen of bidden er even voor, vaak in tuinen, en jagen elkaar na met hoge, scherpe roepjes. Spinnenjagers zijn groter, olijfgroen en hebben een nog langere snavel."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "hummingbirds"
+      ],
+      "text": {
+        "en": "Sunbirds feed like hummingbirds but are songbirds and no relation. They usually perch or cling to feed, hover only briefly, and most have a clearly curved bill.",
+        "nl": "Honingzuigers eten zoals kolibries, maar het zijn zangvogels en geen familie. Ze zitten of hangen meestal tijdens het eten, bidden maar kort en de meeste hebben een duidelijk gebogen snavel."
+      }
+    }
+  ]
+}

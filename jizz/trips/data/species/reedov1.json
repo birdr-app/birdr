@@ -1,0 +1,22 @@
+{
+  "code": "reedov1",
+  "name": {
+    "en": "Red-eyed Dove",
+    "nl": "Roodoogtortel"
+  },
+  "latin": "Streptopelia semitorquata",
+  "look_for": [
+    {
+      "en": "Large, dark dove with a black half-**collar**",
+      "nl": "Grote, donkere tortel met een zwarte halve **halsband**"
+    },
+    {
+      "en": "Red **eye** in a red ring; pale grey **forehead**",
+      "nl": "Rood **oog** in een rode ring; lichtgrijs **voorhoofd**"
+    },
+    {
+      "en": "Grey band at the **tail** tip, no white corners",
+      "nl": "Grijze band aan het eind van de **staart**, geen witte hoeken"
+    }
+  ]
+}

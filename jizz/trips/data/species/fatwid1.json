@@ -1,0 +1,22 @@
+{
+  "code": "fatwid1",
+  "name": {
+    "en": "Fan-tailed Widowbird",
+    "nl": "Roodschouderwidavink"
+  },
+  "latin": "Euplectes axillaris",
+  "look_for": [
+    {
+      "en": "Male black with a red **shoulder**",
+      "nl": "Mannetje zwart met een rode **schouder**"
+    },
+    {
+      "en": "Buff band below the red patch",
+      "nl": "Lichtbruine band onder de rode vlek"
+    },
+    {
+      "en": "Short, broad **tail** spread in display flight",
+      "nl": "Korte, brede **staart** gespreid in de baltsvlucht"
+    }
+  ]
+}

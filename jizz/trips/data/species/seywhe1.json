@@ -1,0 +1,22 @@
+{
+  "code": "seywhe1",
+  "name": {
+    "en": "Seychelles White-eye",
+    "nl": "Mahébrilvogel"
+  },
+  "latin": "Zosterops modestus",
+  "look_for": [
+    {
+      "en": "Dull grey-brown white-eye without any yellow",
+      "nl": "Doffe grijsbruine brilvogel zonder geel"
+    },
+    {
+      "en": "Thin, hard-to-see white **eye-ring**",
+      "nl": "Smalle, slecht zichtbare witte **oogring**"
+    },
+    {
+      "en": "Pale grey **breast** with buff-washed **flanks**",
+      "nl": "Lichtgrijze **borst** met bleekbruine **flanken**"
+    }
+  ]
+}

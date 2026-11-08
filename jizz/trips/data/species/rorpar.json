@@ -1,0 +1,22 @@
+{
+  "code": "rorpar",
+  "name": {
+    "en": "Ring-necked Parakeet",
+    "nl": "Halsbandparkiet"
+  },
+  "latin": "Psittacula krameri",
+  "look_for": [
+    {
+      "en": "Green parakeet with a long, pointed tail",
+      "nl": "Groene parkiet met een lange, spitse staart"
+    },
+    {
+      "en": "Red **bill**, no red on the wing",
+      "nl": "Rode **snavel**, geen rood op de vleugel"
+    },
+    {
+      "en": "Male: thin black-and-pink neck ring",
+      "nl": "Mannetje: smalle zwart-roze halsband"
+    }
+  ]
+}

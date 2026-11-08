@@ -1,0 +1,22 @@
+{
+  "code": "wookin1",
+  "name": {
+    "en": "Woodland Kingfisher",
+    "nl": "Senegalijsvogel"
+  },
+  "latin": "Halcyon senegalensis",
+  "look_for": [
+    {
+      "en": "Bright turquoise back, **wings** and tail",
+      "nl": "Felturquoise rug, **vleugels** en staart"
+    },
+    {
+      "en": "**Bill** red above, black below",
+      "nl": "**Snavel** van boven rood, van onder zwart"
+    },
+    {
+      "en": "Pale grey head, black **shoulder** patch",
+      "nl": "Lichtgrijze kop, zwarte **schoudervlek**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "lessap1",
+  "name": {
+    "en": "Tibetan Sand Plover",
+    "nl": "Tibetaanse plevier"
+  },
+  "latin": "Anarhynchus atrifrons",
+  "look_for": [
+    {
+      "en": "Small sand plover with a short, blunt **bill**",
+      "nl": "Kleine zandplevier met een korte, stompe **snavel**"
+    },
+    {
+      "en": "Dark grey **legs**, shorter than Greater Sand Plover's",
+      "nl": "Donkergrijze **poten**, korter dan bij de woestijnplevier"
+    },
+    {
+      "en": "Grey-brown **breast** patches; rusty breast in spring",
+      "nl": "Grijsbruine vlekken op de **borst**; in het voorjaar een roestrode borst"
+    }
+  ]
+}

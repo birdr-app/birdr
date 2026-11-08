@@ -1,0 +1,22 @@
+{
+  "code": "spfbar1",
+  "name": {
+    "en": "Spot-flanked Barbet",
+    "nl": "Rouwbaardvogel"
+  },
+  "latin": "Tricholaema lacrymosa",
+  "look_for": [
+    {
+      "en": "Black-and-white **head**, black **throat** patch",
+      "nl": "Zwart-witte **kop**, zwarte vlek op de **keel**"
+    },
+    {
+      "en": "Big black spots on the white **flanks**",
+      "nl": "Grote zwarte vlekken op de witte **flanken**"
+    },
+    {
+      "en": "Pale yellow **eye** in a dark face",
+      "nl": "Lichtgeel **oog** in een donker gezicht"
+    }
+  ]
+}

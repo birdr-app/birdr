@@ -1,0 +1,22 @@
+{
+  "code": "whimbr",
+  "name": {
+    "en": "Whimbrel",
+    "nl": "Regenwulp"
+  },
+  "latin": "Numenius phaeopus",
+  "look_for": [
+    {
+      "en": "Down-curved **bill**, shorter than a Curlew's",
+      "nl": "Gebogen **snavel**, korter dan bij de wulp"
+    },
+    {
+      "en": "Dark **crown** with a pale central stripe",
+      "nl": "Donkere **kruin** met een lichte middenstreep"
+    },
+    {
+      "en": "Dark stripe through the eye, pale **eyebrow**",
+      "nl": "Donkere oogstreep en lichte **wenkbrauwstreep**"
+    }
+  ]
+}

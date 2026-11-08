@@ -1,0 +1,819 @@
+{
+  "country": "LK",
+  "intro": {
+    "en": "Sri Lanka packs lowland rainforest, cool highlands, dry scrub and coastal lagoons into an island smaller than Ireland. From October to April, waders, ducks and warblers from the north join the birds that live here all year. This trip covers 199 species, 34 of them found nowhere else.",
+    "nl": "Sri Lanka heeft regenwoud, koel hoogland, droog struikgewas en lagunes aan de kust, allemaal op een eiland dat ruim anderhalf keer zo groot is als Nederland. Van oktober tot april komen er steltlopers, eenden en zangers uit het noorden bij de vogels die hier het hele jaar wonen. Deze reis omvat 199 soorten, waarvan 34 nergens anders voorkomen."
+  },
+  "groups": {
+    "waterfowl": {
+      "here": {
+        "en": "This trip covers six ducks. The Lesser Whistling-Duck lives on reservoirs all year and is the first you'll meet; Pintail, Wigeon, Shoveler and Garganey arrive for the winter and gather on dry-zone lagoons such as Bundala and Mannar.",
+        "nl": "Deze reis omvat zes eenden. De Indische fluiteend zit het hele jaar op stuwmeren en is de eerste die je ziet; pijlstaart, smient, slobeend en zomertaling komen 's winters naar de lagunes van de droge zone, zoals bij Bundala en Mannar."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "here": {
+        "en": "Three game birds are on this trip, two of them endemic. Indian Peafowl walk the open plains of dry-zone parks such as Yala and Udawalawe, and the Sri Lanka Junglefowl crows from forests across the island; the Sri Lanka Spurfowl is shy and mostly heard at dawn in the rainforest.",
+        "nl": "Deze reis omvat drie hoenders, waarvan twee endemisch. Blauwe pauwen lopen over de open vlakten van parken in de droge zone, zoals Yala en Udawalawe, en het Ceylonhoen kraait in bossen op het hele eiland; de Ceylonese dwergfazant is schuw en hoor je vooral bij zonsopgang in het regenwoud."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "Seven pigeons and doves are on this trip. The Spotted Dove is on every road and lawn, Green Imperial-Pigeons call from tall trees in lowland forest, and the endemic Sri Lanka Woodpigeon lives only in the cool highlands around Nuwara Eliya and Horton Plains.",
+        "nl": "Deze reis omvat zeven duiven. De parelhalstortel zit langs elke weg en op elk grasveld, groene muskaatduiven roepen vanuit hoge bomen in het laaglandbos en de endemische Ceylonese houtduif leeft alleen in het koele hoogland rond Nuwara Eliya en Horton Plains."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "Seven cuckoos are on this trip, including two malkohas and a coucal: big, long-tailed cuckoos that raise their own young. The Asian Koel's rising 'ko-el' is one of the first sounds you'll hear; the endemic Red-faced Malkoha and Green-billed Coucal need a day or more in the rainforest of Sinharaja or Kitulgala.",
+        "nl": "Deze reis omvat zeven koekoeken, waaronder twee malkoha's en een spoorkoekoek: grote koekoeken met een lange staart die hun eigen jongen grootbrengen. Het stijgende 'ko-el' van de Indische koël hoor je al op je eerste ochtend; voor de endemische roodgezichtmalkoha en Ceylonese spoorkoekoek heb je een dag of meer in het regenwoud van Sinharaja of Kitulgala nodig."
+      }
+    },
+    "nightjars": {
+      "here": {
+        "en": "Two nightjars are on this trip. Jerdon's Nightjar is the common one: listen for it at dusk around lodges and forest edges, and look for its eyes shining red in a torch beam.",
+        "nl": "Deze reis omvat twee nachtzwaluwen. De Indische nachtzwaluw komt het meest voor: luister in de schemering bij je lodge of aan de bosrand, en zoek met een zaklamp naar zijn rood oplichtende ogen."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "Three swifts are on this trip. Asian Palm Swifts circle the palm trees in every village, Little Swifts nest under bridges and buildings, and the Indian Swiftlet feeds over hills and forest.",
+        "nl": "Deze reis omvat drie gierzwaluwen. Aziatische palmgierzwaluwen cirkelen rond de palmen in elk dorp, huisgierzwaluwen nestelen onder bruggen en gebouwen, en de Malabarsalangaan jaagt boven heuvels en bos."
+      }
+    },
+    "treeswifts": {
+      "here": {
+        "en": "One treeswift lives here: the Crested Treeswift. It perches upright on bare branches at the edge of dry-zone woodland, in parks such as Yala, and flies out from there after insects.",
+        "nl": "Er leeft hier één boomgierzwaluw: de gekroonde boomgierzwaluw. Hij zit rechtop op kale takken aan de rand van bos in de droge zone, zoals in Yala, en vliegt vandaar op insecten af."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Three rails are on this trip. The White-breasted Waterhen walks out of every ditch and roadside pool, and Grey-headed Swamphens feed on the floating plants of reservoirs.",
+        "nl": "Deze reis omvat drie rallen. Het witborstwaterhoen stapt uit elke sloot en plas langs de weg, en grijskoppurperkoeten eten van de drijvende planten op stuwmeren."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "This trip covers 25 shorebirds. A few, like the Red-wattled Lapwing that shouts from every field, live here all year; most come from northern Asia between August and April and gather on the lagoons and salt pans of Bundala, Kalametiya and Mannar.",
+        "nl": "Deze reis omvat 25 steltlopers. Een paar, zoals de Indische kievit die vanuit elk veld alarm slaat, wonen hier het hele jaar; de meeste komen tussen augustus en april uit het noorden van Azië en verzamelen zich op de lagunes en zoutpannen van Bundala, Kalametiya en Mannar."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Nine gulls and terns are on this trip, most of them terns. Whiskered Terns dip over reservoirs and paddy fields inland and Great Crested Terns fish along every coast; the gulls are winter visitors, most numerous around Mannar and Jaffna in the north.",
+        "nl": "Deze reis omvat negen meeuwen en sterns, vooral sterns. Witwangsterns scheren boven stuwmeren en rijstvelden in het binnenland en grote kuifsterns vissen langs de hele kust; de meeuwen zijn wintergasten, met de meeste rond Mannar en Jaffna in het noorden."
+      }
+    },
+    "flamingos": {
+      "here": {
+        "en": "One flamingo lives here: the Greater Flamingo. Flocks feed in the shallow salt lagoons of Bundala in the south-east and around Mannar in the north-west, mostly in winter.",
+        "nl": "Er leeft hier één soort: de flamingo. Groepen zoeken voedsel in de ondiepe zoutlagunes van Bundala in het zuidoosten en rond Mannar in het noordwesten, vooral in de winter."
+      }
+    },
+    "grebes": {
+      "here": {
+        "en": "One grebe is on this trip: the Little Grebe, the same species as in Europe. Look for it on lily-covered reservoirs and village ponds.",
+        "nl": "Deze reis omvat één fuut: de dodaars, dezelfde soort als in Europa. Zoek hem op stuwmeren vol waterlelies en op dorpsvijvers."
+      }
+    },
+    "storks": {
+      "here": {
+        "en": "Three storks are on this trip. Asian Openbills probe paddy fields for snails and Painted Storks wade in the reservoirs of the dry zone; the Woolly-necked Stork walks the grassland of parks such as Yala.",
+        "nl": "Deze reis omvat drie ooievaars. Indische gapers zoeken in rijstvelden naar slakken en Indische nimmerzatten waden in de stuwmeren van de droge zone; de bisschopsooievaar loopt door het grasland van parken zoals Yala."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "This trip covers three cormorants and a darter. Little Cormorants sit on posts and rocks in every reservoir; the Oriental Darter swims with only its snake-like neck above the water.",
+        "nl": "Deze reis omvat drie aalscholvers en een slangenhalsvogel. Indische dwergaalscholvers zitten op palen en rotsen in elk stuwmeer; de Indische slangenhalsvogel zwemt met alleen zijn slangachtige nek boven water."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Eleven birds of this group are on this trip: herons, egrets, two ibises and a spoonbill. You'll meet the Indian Pond Heron first, a brown bird hunched at the edge of a ditch that turns white the moment it flies.",
+        "nl": "Deze reis omvat elf soorten uit deze groep: reigers, zilverreigers, twee ibissen en een lepelaar. De Indische ralreiger zie je het eerst: een bruine vogel die ineengedoken aan een slootkant zit en wit wordt zodra hij opvliegt."
+      }
+    },
+    "pelicans": {
+      "here": {
+        "en": "One pelican lives here: the Spot-billed Pelican. Look for it on the big reservoirs of the dry zone, such as those around Tissamaharama and in Udawalawe.",
+        "nl": "Er leeft hier één pelikaan: de grijze pelikaan. Zoek hem op de grote stuwmeren van de droge zone, zoals rond Tissamaharama en in Udawalawe."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "Eight birds of prey are on this trip. The Brahminy Kite, chestnut with a white head, patrols coasts and reservoirs and is usually the first; over forest, listen for the loud whistling call of the Crested Serpent-Eagle.",
+        "nl": "Deze reis omvat acht roofvogels. De Brahmaanse wouw, kastanjebruin met een witte kop, patrouilleert langs kusten en stuwmeren en is meestal de eerste; boven bos hoor je de luide, fluitende roep van de Indische slangenarend."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "Two owls are on this trip, both endemic. The Chestnut-backed Owlet is active by day in the wet-zone forest at Kitulgala and Sinharaja; the Serendib Scops Owl was first seen only in 2001, and you'll need a local guide who knows where it roosts.",
+        "nl": "Deze reis omvat twee uilen, allebei endemisch. De Ceylonese dwerguil is overdag actief in het bos van de natte zone bij Kitulgala en Sinharaja; de Serendipdwergooruil werd pas in 2001 voor het eerst gezien, en voor hem heb je een lokale gids nodig die zijn slaapplek kent."
+      }
+    },
+    "hornbills": {
+      "here": {
+        "en": "Two hornbills are on this trip. The endemic Sri Lanka Grey Hornbill is common in forest and wooded gardens across the island; the Malabar Pied-Hornbill lives in the dry zone, in parks such as Yala.",
+        "nl": "Deze reis omvat twee neushoornvogels. De endemische Ceylontok is algemeen in bossen en tuinen met bomen op het hele eiland; de Malabarneushoornvogel leeft in de droge zone, in parken zoals Yala."
+      }
+    },
+    "bee-eaters": {
+      "here": {
+        "en": "Two bee-eaters are on this trip. The Blue-tailed Bee-eater sits on roadside wires everywhere, especially in winter; the Chestnut-headed Bee-eater prefers forest clearings and rivers in the wet zone and the hills.",
+        "nl": "Deze reis omvat twee bijeneters. De blauwstaartbijeneter zit overal op draden langs de weg, vooral 's winters; de bruinkopbijeneter houdt meer van open plekken in het bos en rivieren in de natte zone en de heuvels."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "Four kingfishers are on this trip. The White-throated Kingfisher sits on wires, often far from water, and is the one you'll see first; the Pied Kingfisher hovers over reservoirs before it dives.",
+        "nl": "Deze reis omvat vier ijsvogels. De smyrnaijsvogel zit op draden, vaak ver van water, en is de eerste die je ziet; de bonte ijsvogel bidt boven stuwmeren voor hij duikt."
+      }
+    },
+    "rollers-and-allies": {
+      "here": {
+        "en": "One roller is on this trip: the Indian Roller. It sits on wires and dead trees in the open dry zone and flashes bright blue wings when it flies.",
+        "nl": "Deze reis omvat één scharrelaar: de Indische scharrelaar. Hij zit op draden en dode bomen in het open land van de droge zone en laat felblauwe vleugels zien als hij vliegt."
+      }
+    },
+    "barbets-and-toucans": {
+      "here": {
+        "en": "Four barbets are on this trip, two of them endemic. You'll hear them long before you see them: the Brown-headed Barbet's 'kutroo' in lowland gardens, the Coppersmith's steady 'tuk-tuk', and the endemic Yellow-fronted Barbet in the hills around Kandy.",
+        "nl": "Deze reis omvat vier baardvogels, waarvan twee endemisch. Je hoort ze lang voor je ze ziet: het 'koetroe' van de bruinkopbaardvogel in tuinen in het laagland, het eentonige 'toek-toek' van de koperslager en de endemische Ceylonese baardvogel in de heuvels rond Kandy."
+      }
+    },
+    "woodpeckers": {
+      "here": {
+        "en": "Three woodpeckers are on this trip, including two endemic flamebacks: large woodpeckers with a red back and a red crest. The Red-backed Flameback is common in lowland gardens and coconut groves, so it is often the first.",
+        "nl": "Deze reis omvat drie spechten, waaronder twee endemische goudrugspechten: grote spechten met een rode rug en een rode kuif. De rode goudrugspecht is algemeen in tuinen en kokosplantages in het laagland en is vaak de eerste."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "Five parrots are on this trip, two of them endemic. Ring-necked Parakeets fly over in noisy flocks everywhere; in the wet zone and the hills, look for the grey-headed Layard's Parakeet and the tiny Sri Lanka Hanging-Parrot in flowering trees.",
+        "nl": "Deze reis omvat vijf papegaaien, waarvan twee endemisch. Halsbandparkieten vliegen overal in luidruchtige groepen over; in de natte zone en de heuvels zoek je de smaragdparkiet met zijn grijze kop en de kleine Ceylonese vleermuisparkiet in bloeiende bomen."
+      }
+    },
+    "old-world-pittas": {
+      "here": {
+        "en": "One pitta is on this trip: the Indian Pitta, a winter visitor from October to April. It hops on the ground in shady hotel gardens and forest, and gives a loud two-note whistle at dawn and dusk.",
+        "nl": "Deze reis omvat één pitta: de negenkleurige pitta, een wintergast van oktober tot april. Hij huppelt over de grond in schaduwrijke hoteltuinen en bos, en laat bij zonsopgang en in de schemering een luid fluitje van twee tonen horen."
+      }
+    },
+    "cuckooshrikes": {
+      "here": {
+        "en": "Three are on this trip: two minivets and a cuckooshrike. Small Minivets move in flocks through dry-zone trees, and the bright Orange Minivet lives in the forests of the wet zone and the hills.",
+        "nl": "Deze reis omvat er drie: twee menievogels en een rupsvogel. Kleine menievogels trekken in groepjes door de bomen in de droge zone, en de felgekleurde oranje menievogel leeft in de bossen van de natte zone en de heuvels."
+      }
+    },
+    "old-world-orioles": {
+      "here": {
+        "en": "One oriole is on this trip: the Black-hooded Oriole. Its fluty whistle comes from gardens and woodland across the lowlands, and its yellow body shows well against the leaves.",
+        "nl": "Deze reis omvat één wielewaal: de zwartkopwielewaal. Zijn fluitende roep klinkt uit tuinen en bos in het hele laagland, en zijn gele lijf valt goed op tussen de bladeren."
+      }
+    },
+    "woodswallows": {
+      "here": {
+        "en": "One woodswallow is on this trip: the Ashy Woodswallow. Small groups sit huddled together on wires and glide out after insects like swallows.",
+        "nl": "Deze reis omvat één spitsvogel: de grijze spitsvogel. Groepjes zitten dicht tegen elkaar op draden en zweven als zwaluwen achter insecten aan."
+      }
+    },
+    "vangas-helmetshrikes-and-allies": {
+      "here": {
+        "en": "Two birds of this family are on this trip: the endemic Sri Lanka Woodshrike in dry-zone scrub and gardens, and the small Bar-winged Flycatcher-shrike in the forest canopy.",
+        "nl": "Deze reis omvat twee soorten uit deze familie: de endemische Ceylonese rupsklauwier in struikgewas en tuinen van de droge zone, en de kleine bonte dwergtriller in de boomkruinen van het bos."
+      }
+    },
+    "ioras": {
+      "here": {
+        "en": "One iora is on this trip: the Common Iora. Listen for its long whistle in gardens and woodland, then look in the leaves for a yellow bird with dark wings and white wing bars.",
+        "nl": "Deze reis omvat één iora: de gewone iora. Luister in tuinen en bos naar zijn lange fluittoon en zoek dan tussen de bladeren naar een gele vogel met donkere vleugels en witte vleugelstrepen."
+      }
+    },
+    "fantails": {
+      "here": {
+        "en": "One fantail is on this trip: the White-browed Fantail. It dances through the scrub and gardens of the dry zone with its tail spread like a fan.",
+        "nl": "Deze reis omvat één waaierstaart: de Indische waaierstaart. Hij danst door struikgewas en tuinen in de droge zone met zijn staart als een waaier uitgespreid."
+      }
+    },
+    "drongos": {
+      "here": {
+        "en": "Three drongos are on this trip. The White-bellied Drongo is the common one in woodland and gardens; the endemic Sri Lanka Drongo leads the mixed flocks of the Sinharaja rainforest.",
+        "nl": "Deze reis omvat drie drongo's. De witbuikdrongo is de algemene soort in bos en tuinen; de endemische Ceylonese kuifdrongo gaat voorop in de gemengde groepen in het regenwoud van Sinharaja."
+      }
+    },
+    "monarch-flycatchers": {
+      "here": {
+        "en": "Two monarchs are on this trip. The Indian Paradise-Flycatcher, whose male has tail streamers longer than its body, is fairly common in shady woodland; the Black-naped Monarch is a small blue bird of the forest's middle layer.",
+        "nl": "Deze reis omvat twee monarchen. De Indische paradijsmonarch, waarvan het mannetje staartveren heeft die langer zijn dan zijn lijf, is vrij algemeen in schaduwrijk bos; de zwartnekmonarch is een klein blauw vogeltje van de middelste laag van het bos."
+      }
+    },
+    "shrikes": {
+      "here": {
+        "en": "One shrike is on this trip: the Brown Shrike, a winter visitor from eastern Asia. From October to April it sits on bushes and wires almost everywhere, from gardens to tea estates.",
+        "nl": "Deze reis omvat één klauwier: de bruine klauwier, een wintergast uit Oost-Azië. Van oktober tot april zit hij bijna overal op struiken en draden, van tuinen tot theeplantages."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "Three are on this trip: two crows and the endemic Sri Lanka Blue-Magpie. House Crows rule every town and Large-billed Crows are everywhere else; the blue-magpie lives in groups in the rainforest of Sinharaja and Kitulgala.",
+        "nl": "Deze reis omvat er drie: twee kraaien en de endemische blauwe kitta. Huiskraaien heersen in elke stad en dikbekkraaien zie je overal daarbuiten; de blauwe kitta leeft in groepjes in het regenwoud van Sinharaja en Kitulgala."
+      }
+    },
+    "larks": {
+      "here": {
+        "en": "Three larks are on this trip. Jerdon's Bushlark sings from bushes in dry grassland, and Ashy-crowned Sparrow-Larks sit on bare ground near the coast, as at Bundala.",
+        "nl": "Deze reis omvat drie leeuweriken. De Jerdonleeuwerik zingt vanaf struikjes in droog grasland, en grijskruinvinkleeuweriken zitten op kale grond bij de kust, zoals bij Bundala."
+      }
+    },
+    "cisticolas-and-allies": {
+      "here": {
+        "en": "Six are on this trip: a tailorbird, four prinias and the Zitting Cisticola. The Common Tailorbird calls a loud 'towit' from every garden; the prinias, small and long-tailed, sing from grass and scrub.",
+        "nl": "Deze reis omvat er zes: een snijdervogel, vier prinia's en de graszanger. De langstaartsnijdervogel roept in elke tuin een luid 'towiet'; de prinia's, klein en met een lange staart, zingen vanuit gras en struikgewas."
+      }
+    },
+    "grassbirds-and-allies": {
+      "here": {
+        "en": "One is on this trip: the endemic Sri Lanka Bush Warbler. It creeps through the undergrowth of the highland forest at Horton Plains and is easier to hear than to see.",
+        "nl": "Deze reis omvat één soort: de endemische Ceylonese struikzanger. Hij sluipt door de ondergroei van het hooglandbos bij Horton Plains en is makkelijker te horen dan te zien."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "Three swallows are on this trip. Barn Swallows from the north fill the sky in winter; the endemic Sri Lanka Swallow hunts over paddy fields, and the Hill Swallow flies around towns and tea estates in the highlands.",
+        "nl": "Deze reis omvat drie zwaluwen. Boerenzwaluwen uit het noorden vullen 's winters de lucht; de endemische Ceylonese zwaluw jaagt boven rijstvelden en de hutzwaluw vliegt rond stadjes en theeplantages in het hoogland."
+      }
+    },
+    "bulbuls": {
+      "here": {
+        "en": "Six bulbuls are on this trip, two of them endemic. The Red-vented Bulbul is in every garden and the first you'll see; the endemic Yellow-eared Bulbul is common in the highlands around Nuwara Eliya, and the Black-capped Bulbul lives in wet-zone forest.",
+        "nl": "Deze reis omvat zes buulbuuls, waarvan twee endemisch. De roodbuikbuulbuul zit in elke tuin en is de eerste die je ziet; de endemische geelpluimbuulbuul is algemeen in het hoogland rond Nuwara Eliya, en de Ceylonese goudborstbuulbuul leeft in het bos van de natte zone."
+      }
+    },
+    "leaf-warblers": {
+      "here": {
+        "en": "One leaf warbler is on this trip: the Green Warbler, a winter visitor. It feeds high in the trees of gardens and forest, especially in the hills; look for its yellowish wing bar.",
+        "nl": "Deze reis omvat één boszanger: de groene fitis, een wintergast. Hij zoekt voedsel hoog in de bomen in tuinen en bos, vooral in de heuvels; let op de geelachtige vleugelstreep."
+      }
+    },
+    "parrotbills-wrentit-and-allies": {
+      "here": {
+        "en": "One is on this trip: the Yellow-eyed Babbler. It lives in tall grass and scrub in the dry zone and is easiest to see when it climbs to the top of a stem to sing.",
+        "nl": "Deze reis omvat één soort: de goudoogtimalia. Hij leeft in hoog gras en struikgewas in de droge zone en is het makkelijkst te zien als hij naar de top van een stengel klimt om te zingen."
+      }
+    },
+    "white-eyes-yuhinas-and-allies": {
+      "here": {
+        "en": "Two white-eyes are on this trip. The Indian White-eye feeds in small flocks in lowland gardens; above about 1,200 metres the endemic Sri Lanka White-eye takes over.",
+        "nl": "Deze reis omvat twee brilvogels. De Indische brilvogel zoekt in groepjes voedsel in tuinen in het laagland; boven ongeveer 1200 meter neemt de endemische Ceylonese brilvogel het over."
+      }
+    },
+    "tree-babblers-scimitar-babblers-and-allies": {
+      "here": {
+        "en": "Three are on this trip, all babblers of thick undergrowth. Dark-fronted and Tawny-bellied Babblers move in small groups along forest edges, and the endemic Sri Lanka Scimitar-Babbler gives itself away with its bubbling duet.",
+        "nl": "Deze reis omvat er drie, allemaal timalia's van dicht struikgewas. De zwartvoorhoofdbabbelaar en de roodbuiktimalia trekken in groepjes langs bosranden, en de endemische Ceylonese kruiplijster verraadt zich met zijn borrelende duet."
+      }
+    },
+    "ground-babblers-and-allies": {
+      "here": {
+        "en": "One is on this trip: the endemic Brown-capped Babbler. It walks on the forest floor in both the wet and the dry zone and is far easier to hear than to see.",
+        "nl": "Deze reis omvat één soort: de endemische bruinkruinjungletimalia. Hij loopt over de bosbodem in zowel de natte als de droge zone en is veel makkelijker te horen dan te zien."
+      }
+    },
+    "laughingthrushes-and-allies": {
+      "here": {
+        "en": "Three are on this trip, two of them endemic. Yellow-billed Babblers chatter in noisy groups in every garden; the Orange-billed Babbler and the Ashy-headed Laughingthrush travel with the mixed flocks of the rainforest.",
+        "nl": "Deze reis omvat er drie, waarvan twee endemisch. Geelsnavelbabbelaars kwebbelen in luidruchtige groepjes in elke tuin; de Ceylonese babbelaar en de grijskopbabbelaar trekken mee met de gemengde groepen in het regenwoud."
+      }
+    },
+    "starlings-and-mynas": {
+      "here": {
+        "en": "Five starlings and mynas are on this trip, two of them endemic. The Common Myna walks on every lawn; the Sri Lanka Myna and the scarce White-faced Starling live in the canopy of the wet-zone rainforest.",
+        "nl": "Deze reis omvat vijf spreeuwen, maina's en beo's, waarvan twee endemisch. De treurmaina loopt op elk grasveld; de Ceylonbeo en de schaarse maskerspreeuw leven in de boomkruinen van het regenwoud in de natte zone."
+      }
+    },
+    "thrushes": {
+      "here": {
+        "en": "Two thrushes are on this trip, both endemic and both shy. The Spot-winged Thrush feeds on the forest floor at Sinharaja and Kitulgala; the Sri Lanka Thrush is one of the hardest endemics, usually found with a local guide.",
+        "nl": "Deze reis omvat twee lijsters, allebei endemisch en allebei schuw. De vlekvleugellijster zoekt voedsel op de bosbodem bij Sinharaja en Kitulgala; de Ceylonese goudlijster is een van de moeilijkste endemen, die je meestal alleen met een lokale gids vindt."
+      }
+    },
+    "old-world-flycatchers": {
+      "here": {
+        "en": "Eight are on this trip, from robins and a shama to blue flycatchers and a whistling-thrush. The Oriental Magpie-Robin sings from every garden roof; the endemic Dull-blue Flycatcher and Sri Lanka Whistling-Thrush live in the highland forest.",
+        "nl": "Deze reis omvat er acht, van paapje en shama tot blauwe vliegenvangers en een fluitlijster. De dayallijster zingt in elke tuin vanaf het dak; de endemische Ceylonese vliegenvanger en Ceylonese fluitlijster leven in het hooglandbos."
+      }
+    },
+    "flowerpeckers": {
+      "here": {
+        "en": "Three flowerpeckers are on this trip. The tiny Pale-billed Flowerpecker feeds on mistletoe berries in gardens everywhere; the endemic White-throated Flowerpecker stays high in the canopy of wet-zone forest.",
+        "nl": "Deze reis omvat drie honingvogels. De piepkleine geelsnavelhoningvogel eet overal in tuinen bessen van maretak; de endemische Ceylonese honingvogel blijft hoog in de kruinen van het bos in de natte zone."
+      }
+    },
+    "sunbirds-and-spiderhunters": {
+      "here": {
+        "en": "Three sunbirds are on this trip. The Purple-rumped Sunbird is in every garden with flowers; Loten's Sunbird has a long curved bill, and the Purple Sunbird prefers the dry zone.",
+        "nl": "Deze reis omvat drie honingzuigers. De purperstuithoningzuiger zit in elke tuin met bloemen; de Lotenhoningzuiger heeft een lange, gebogen snavel en de purperhoningzuiger zit liever in de droge zone."
+      }
+    },
+    "leafbirds": {
+      "here": {
+        "en": "One leafbird is on this trip: Jerdon's Leafbird. It is green all over, the male with a black throat, and hides well in leafy treetops, so listen for its varied song full of imitations.",
+        "nl": "Deze reis omvat één bladvogel: de Jerdonbladvogel. Hij is helemaal groen, het mannetje met een zwarte keel, en verstopt zich goed in bladrijke boomkruinen; luister naar zijn gevarieerde zang vol imitaties."
+      }
+    },
+    "weavers-and-allies": {
+      "here": {
+        "en": "Two weavers are on this trip. Baya Weavers hang their bottle-shaped nests from palms and trees near paddy fields; the Streaked Weaver is local, in the reedbeds of a few dry-zone wetlands.",
+        "nl": "Deze reis omvat twee wevers. Bayawevers hangen hun flesvormige nesten in palmen en bomen bij rijstvelden; de manyarwever komt maar op een paar plekken voor, in rietvelden van moerassen in de droge zone."
+      }
+    },
+    "estrildids": {
+      "here": {
+        "en": "Four munias are on this trip: small finches with thick bills that feed on seeds in flocks. The Scaly-breasted Munia is the one you'll see first, in gardens and paddy fields.",
+        "nl": "Deze reis omvat vier munia's: kleine prachtvinken met een dikke snavel die in groepjes zaad eten. De muskaatvink zie je het eerst, in tuinen en rijstvelden."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "One sparrow is on this trip: the House Sparrow, the same species as in Europe. It lives around houses and markets, but is less common here than at home.",
+        "nl": "Deze reis omvat één mus: de huismus, dezelfde soort als in Europa. Hij leeft rond huizen en markten, maar is hier minder algemeen dan thuis."
+      }
+    },
+    "wagtails-and-pipits": {
+      "here": {
+        "en": "Three are on this trip: two wagtails and a pipit. The Paddyfield Pipit lives in grassland and paddy fields all year; Grey Wagtails come for the winter and walk along streams and roads in the hills.",
+        "nl": "Deze reis omvat er drie: twee kwikstaarten en een pieper. De Oriëntaalse pieper leeft het hele jaar in grasland en rijstvelden; grote gele kwikstaarten komen 's winters en lopen langs beekjes en wegen in de heuvels."
+      }
+    }
+  },
+  "units": {
+    "waterfowl": {
+      "title": {"en": "Ducks", "nl": "Eenden"},
+      "intro": {
+        "en": "Four of these ducks are winter visitors you may know from Europe, though early in the season they still wear their duller eclipse plumage. The two residents are small: the brown Lesser Whistling-Duck, which whistles as it flies, and the tiny Cotton Pygmy-Goose on lily ponds.",
+        "nl": "Vier van deze eenden zijn wintergasten die je misschien uit Europa kent, al dragen ze vroeg in het seizoen nog hun saaiere eclipskleed. De twee standvogels zijn klein: de bruine Indische fluiteend, die fluit als hij vliegt, en de piepkleine Coromandeleend op vijvers met waterlelies."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "title": {"en": "Peafowl, junglefowl and spurfowl", "nl": "Pauw en hoenders"},
+      "intro": {
+        "en": "Three big ground birds of open parks and the forest floor. The peacock is easy; in the forest, look for the junglefowl's red comb and golden neck, and the spurfowl's dark chestnut body with white spots.",
+        "nl": "Drie grote grondvogels van open parken en de bosbodem. De pauw is makkelijk; let in het bos op de rode kam en gouden hals van het Ceylonhoen, en op het donkere, kastanjebruine lijf met witte stippen van de dwergfazant."
+      }
+    },
+    "pigeons-and-doves": {
+      "title": {"en": "Pigeons and doves", "nl": "Duiven"},
+      "intro": {
+        "en": "Rock Dove and Collared Dove are familiar; the other five are new. Green pigeons and the Emerald Dove hide in leafy trees, so look closely at the head, the wings and the bill.",
+        "nl": "De rotsduif en de Turkse tortel ken je al; de andere vijf zijn nieuw. Groene duiven en de smaragdduif verstoppen zich in bladrijke bomen, dus kijk goed naar de kop, de vleugels en de snavel."
+      }
+    },
+    "cuckoos": {
+      "title": {"en": "Cuckoos, malkohas and a coucal", "nl": "Koekoeken, malkoha's en een spoorkoekoek"},
+      "intro": {
+        "en": "Most cuckoos are heard far more often than seen, so their calls help. The malkohas and the coucal are big, long-tailed birds that creep through the foliage: look at the face and the colour of the bill.",
+        "nl": "De meeste koekoeken hoor je veel vaker dan je ze ziet, dus hun roep helpt. Malkoha's en de spoorkoekoek zijn grote vogels met een lange staart die door het gebladerte sluipen: kijk naar de kop en de kleur van de snavel."
+      }
+    },
+    "nightjars": {
+      "title": {"en": "Nightjars and swifts", "nl": "Nachtzwaluwen en gierzwaluwen"},
+      "intro": {
+        "en": "Swifts are always in the air, so look at their shape, especially the tail and the rump. The nightjars come out at dusk; in daylight you'll only see one resting on a branch or a track.",
+        "nl": "Gierzwaluwen zitten altijd in de lucht, dus let op de vorm, vooral van de staart en de stuit. De nachtzwaluwen komen in de schemering tevoorschijn; overdag zie je er alleen een als hij op een tak of een pad rust."
+      }
+    },
+    "treeswifts": {
+      "title": {"en": "A treeswift and three rails", "nl": "Een boomgierzwaluw en drie rallen"},
+      "intro": {
+        "en": "Two groups that only share this unit. The Crested Treeswift perches on bare twigs, which a true swift never does; the three rails live at the water's edge, where the face and the body colour tell them apart.",
+        "nl": "Twee groepen die alleen deze les delen. De gekroonde boomgierzwaluw gaat op kale takjes zitten, wat een echte gierzwaluw nooit doet; de drie rallen leven aan de waterkant, waar je ze uit elkaar houdt aan de kop en de kleur van het lijf."
+      }
+    },
+    "shorebirds-1": {
+      "title": {"en": "Stilt, jacana, plovers and thick-knee", "nl": "Steltkluut, waterfazant en plevieren"},
+      "intro": {
+        "en": "A mixed set of waders, from the long-legged stilt to the jacana walking on lily pads. Plovers have short bills and run, stop and peck; the Yellow-wattled Lapwing and the thick-knee prefer dry ground away from water.",
+        "nl": "Een gemengde groep steltlopers, van de steltkluut op zijn lange poten tot de waterfazant die over waterlelies loopt. Plevieren hebben een korte snavel en rennen, stoppen en pikken; de Malabarkievit en de Indische griel zitten liever op droge grond, weg van het water."
+      }
+    },
+    "shorebirds-2": {
+      "title": {"en": "Lapwing, godwits, curlew and snipe", "nl": "Kievit, grutto's, wulp en snip"},
+      "intro": {
+        "en": "The Red-wattled Lapwing lives here all year and will spot you first. The rest are winter visitors: compare the length and shape of the bill to sort the godwits, the curlew and the snipe. The Kentish Plover is the small one, on beaches and salt pans.",
+        "nl": "De Indische kievit woont hier het hele jaar en ziet jou als eerste. De rest zijn wintergasten: vergelijk lengte en vorm van de snavel om grutto's, wulp en snip uit elkaar te houden. De strandplevier is de kleine, op stranden en zoutpannen."
+      }
+    },
+    "shorebirds-3": {
+      "title": {"en": "Sandpipers, shanks and a turnstone", "nl": "Ruiters, oeverloper en steenloper"},
+      "intro": {
+        "en": "Familiar waders from European marshes, here for the winter. Leg colour and size do most of the work: red legs on the Redshank, greenish on the Greenshank and Wood Sandpiper, and a needle-thin bill on the slim Marsh Sandpiper.",
+        "nl": "Bekende steltlopers uit Europese moerassen, hier als wintergast. Pootkleur en formaat doen het meeste werk: rode poten bij de tureluur, groenige bij groenpootruiter en bosruiter, en een naalddunne snavel bij de slanke poelruiter."
+      }
+    },
+    "shorebirds-4": {
+      "title": {"en": "Stints, knot, whimbrel and buttonquail", "nl": "Strandlopers, regenwulp en vechtkwartel"},
+      "intro": {
+        "en": "Small sandpipers crowd the lagoon edges in winter: look at size, bill shape and how they feed. The Whimbrel is the curlew with a striped crown. The Barred Buttonquail is the odd one out, a quail-like bird of dry scrub that belongs with the waders by descent.",
+        "nl": "Kleine strandlopers verzamelen zich 's winters langs de randen van de lagunes: let op formaat, snavelvorm en hoe ze eten. De regenwulp is de wulp met een gestreepte kruin. De zwartkeelvechtkwartel is het buitenbeentje, een kwartelachtige vogel van droog struikgewas die door zijn afstamming bij de steltlopers hoort."
+      }
+    },
+    "gulls-terns-and-skimmers-1": {
+      "title": {"en": "Gulls and smaller terns", "nl": "Meeuwen en kleinere sterns"},
+      "intro": {
+        "en": "The two gulls spend the winter on the coasts of the north and west, at Mannar and Jaffna. The three terns differ in size and bill: the tiny Little Tern, the thick black bill of the Gull-billed Tern, and the Common Tern you know from home.",
+        "nl": "De twee meeuwen overwinteren aan de kusten van het noorden en westen, bij Mannar en Jaffna. De drie sterns verschillen in formaat en snavel: de piepkleine dwergstern, de dikke zwarte snavel van de lachstern en de visdief die je van thuis kent."
+      }
+    },
+    "gulls-terns-and-skimmers-2": {
+      "title": {"en": "Big terns and marsh terns", "nl": "Grote sterns en moerassterns"},
+      "intro": {
+        "en": "Two big terns of the coast, and two small marsh terns that dip over reservoirs and paddy fields inland. For the big ones, compare the bill: thick and red on the Caspian, yellow on the Great Crested.",
+        "nl": "Twee grote sterns van de kust, en twee kleine moerassterns die boven stuwmeren en rijstvelden in het binnenland jagen. Vergelijk bij de grote de snavel: dik en rood bij de reuzenstern, geel bij de grote kuifstern."
+      }
+    },
+    "flamingos": {
+      "title": {"en": "Flamingos, storks and a grebe", "nl": "Flamingo, ooievaars en dodaars"},
+      "intro": {
+        "en": "Big wading birds of lagoons and reservoirs, and one small diver. The three storks look nothing alike: watch for the gap in the openbill's bill, the pink near the tail of the Painted Stork and the woolly white neck of the Woolly-necked Stork.",
+        "nl": "Grote waadvogels van lagunes en stuwmeren, en één kleine duiker. De drie ooievaars lijken niet op elkaar: let op het gat in de snavel van de gaper, het roze bij de staart van de nimmerzat en de wollige witte hals van de bisschopsooievaar."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "title": {"en": "Cormorants and a darter", "nl": "Aalscholvers en een slangenhalsvogel"},
+      "intro": {
+        "en": "On every reservoir you'll see dark birds drying their wings on posts. Size and bill sort the cormorants; the darter has a thin, snake-like neck and a dagger bill.",
+        "nl": "Op elk stuwmeer zie je donkere vogels die op palen hun vleugels drogen. Formaat en snavel helpen bij de aalscholvers; de slangenhalsvogel heeft een dunne, slangachtige nek en een dolksnavel."
+      }
+    },
+    "herons-ibis-and-allies-1": {
+      "title": {"en": "Egrets and smaller herons", "nl": "Witte reigers, ralreiger en kwak"},
+      "intro": {
+        "en": "White egrets stand in every paddy field. Sort them by size, then check the bill and the feet: the Little Egret has yellow feet, the Cattle Egret a short neck and a yellow bill. The Pond Heron and the Night Heron are the stocky ones.",
+        "nl": "In elk rijstveld staan witte reigers. Sorteer ze op formaat en kijk dan naar snavel en voeten: de kleine zilverreiger heeft gele voeten, de koereiger een korte nek en een gele snavel. De ralreiger en de kwak zijn de gedrongen soorten."
+      }
+    },
+    "herons-ibis-and-allies-2": {
+      "title": {"en": "Big herons, ibises, spoonbill, pelican", "nl": "Reigers, ibissen, lepelaar en pelikaan"},
+      "intro": {
+        "en": "The large waterbirds of reservoirs and marshes. Grey and Purple Heron you know already; the bill does the rest: curved on the ibises, spoon-shaped on the spoonbill and huge, with a pouch, on the pelican.",
+        "nl": "De grote watervogels van stuwmeren en moerassen. Blauwe reiger en purperreiger ken je al; de snavel doet de rest: gebogen bij de ibissen, lepelvormig bij de lepelaar en enorm, met een keelzak, bij de pelikaan."
+      }
+    },
+    "vultures-hawks-and-allies-1": {
+      "title": {"en": "Eagles and a honey-buzzard", "nl": "Arenden en een wespendief"},
+      "intro": {
+        "en": "The raptors of forest and hills, usually seen soaring overhead. Look at the wing shape and the pattern underneath: the serpent-eagle has a white band across its dark wings and tail, the Black Eagle long wings with spread fingers.",
+        "nl": "De roofvogels van bos en heuvels, meestal hoog in de lucht. Let op de vleugelvorm en de tekening aan de onderkant: de slangenarend heeft een witte band over zijn donkere vleugels en staart, de Indische zwarte arend lange vleugels met gespreide vingers."
+      }
+    },
+    "vultures-hawks-and-allies-2": {
+      "title": {"en": "Kites, a sea-eagle and Shikra", "nl": "Wouwen, een zeearend en shikra"},
+      "intro": {
+        "en": "Birds of prey of open country, coasts and towns. The Brahminy Kite is the common one; the Shikra is a small hawk that hunts in gardens, like a pale Sparrowhawk.",
+        "nl": "Roofvogels van open land, kusten en steden. De Brahmaanse wouw is de algemene soort; de shikra is een kleine havik die in tuinen jaagt, als een lichte sperwer."
+      }
+    },
+    "owls": {
+      "title": {"en": "Owls, hornbills and bee-eaters", "nl": "Uilen, neushoornvogels en bijeneters"},
+      "intro": {
+        "en": "Three small groups with little in common. The bee-eaters sit on wires in the open and the hornbills fly heavily between fruiting trees; the two endemic owls need forest, a local guide and some luck.",
+        "nl": "Drie kleine groepen met weinig gemeen. De bijeneters zitten op draden in open land en de neushoornvogels vliegen zwaar tussen bomen met vruchten; voor de twee endemische uilen heb je bos, een lokale gids en wat geluk nodig."
+      }
+    },
+    "kingfishers": {
+      "title": {"en": "Kingfishers and a roller", "nl": "IJsvogels en een scharrelaar"},
+      "intro": {
+        "en": "The Common Kingfisher is the one you know; the others are bigger and easier to see. Look at size, bill colour and the pattern of black and white. The Indian Roller only shows its blue when it opens its wings.",
+        "nl": "De ijsvogel ken je al; de andere zijn groter en makkelijker te zien. Let op formaat, kleur van de snavel en de zwart-witte tekening. De Indische scharrelaar laat zijn blauw pas zien als hij de vleugels opent."
+      }
+    },
+    "barbets-and-toucans": {
+      "title": {"en": "Barbets", "nl": "Baardvogels"},
+      "intro": {
+        "en": "Barbets sit still among green leaves and call for hours. Learn the calls first, then look at the colours on the head: brown, red, yellow or a mix.",
+        "nl": "Baardvogels zitten stil tussen groene bladeren en roepen urenlang. Leer eerst de roep en kijk dan naar de kleuren van de kop: bruin, rood, geel of een mengeling."
+      }
+    },
+    "woodpeckers": {
+      "title": {"en": "Woodpeckers and flamebacks", "nl": "Spechten en goudrugspechten"},
+      "intro": {
+        "en": "One tiny brown woodpecker and two large flamebacks. Both flamebacks have red backs here, so look at the size, the bill and the pattern on the face.",
+        "nl": "Eén piepklein bruin spechtje en twee grote goudrugspechten. Beide goudrugspechten hebben hier een rode rug, dus let op het formaat, de snavel en de tekening van de kop."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "title": {"en": "Parakeets and a hanging-parrot", "nl": "Parkieten en een vleermuisparkiet"},
+      "intro": {
+        "en": "All green with long tails, apart from the tiny hanging-parrot. Look at the colour of the head and the size: the Alexandrine is the biggest, with a red patch on the shoulder.",
+        "nl": "Allemaal groen met een lange staart, op de piepkleine vleermuisparkiet na. Let op de kleur van de kop en het formaat: de grote alexanderparkiet is de grootste, met een rode vlek op de schouder."
+      }
+    },
+    "old-world-pittas": {
+      "title": {"en": "Pitta, minivets and a cuckooshrike", "nl": "Pitta, menievogels en een rupsvogel"},
+      "intro": {
+        "en": "The pitta lives on the ground; the others stay in the treetops. Minivet males are red or orange and the females yellow, so learn both.",
+        "nl": "De pitta leeft op de grond; de andere blijven in de boomtoppen. Mannetjes menievogels zijn rood of oranje en de vrouwtjes geel, dus leer ze allebei."
+      }
+    },
+    "old-world-orioles": {
+      "title": {"en": "Oriole, woodswallow and woodshrikes", "nl": "Wielewaal, spitsvogel en rupsklauwieren"},
+      "intro": {
+        "en": "Four birds of trees and wires in open woodland. The oriole is bright yellow and black; the others are grey, brown or black and white, so look at their shape and where they perch.",
+        "nl": "Vier vogels van bomen en draden in open bos. De wielewaal is felgeel en zwart; de andere zijn grijs, bruin of zwart-wit, dus let op hun vorm en waar ze zitten."
+      }
+    },
+    "ioras": {
+      "title": {"en": "Iora, fantail and drongos", "nl": "Iora, waaierstaart en drongo's"},
+      "intro": {
+        "en": "Active birds of gardens and woodland. The drongos are black with forked tails, so look at the white under the tail and the shape of the fork; the fantail and the iora are smaller and never sit still.",
+        "nl": "Beweeglijke vogels van tuinen en bos. De drongo's zijn zwart met een gevorkte staart, dus let op het wit onder de staart en de vorm van de vork; de waaierstaart en de iora zijn kleiner en zitten nooit stil."
+      }
+    },
+    "monarch-flycatchers": {
+      "title": {"en": "Crows, magpie, shrike and monarchs", "nl": "Kraaien, kitta, klauwier en monarchen"},
+      "intro": {
+        "en": "Crows and a shrike you'll see on every drive, and three birds of the forest. Tell the crows apart by the size of the bill and the grey neck of the House Crow. For the blue-magpie and the monarchs you need shady woodland.",
+        "nl": "Kraaien en een klauwier zie je bij elke autorit, en daarnaast drie bosvogels. Houd de kraaien uit elkaar aan de dikte van de snavel en de grijze nek van de huiskraai. Voor de kitta en de monarchen moet je naar schaduwrijk bos."
+      }
+    },
+    "larks": {
+      "title": {"en": "Larks", "nl": "Leeuweriken"},
+      "intro": {
+        "en": "Brown birds of short grass and bare ground. Look at the bill: thick like a finch's on the sparrow-lark, thin on the skylark. The bushlark shows rufous wings when it flies.",
+        "nl": "Bruine vogels van kort gras en kale grond. Kijk naar de snavel: dik als van een vink bij de vinkleeuwerik, dun bij de veldleeuwerik. De Jerdonleeuwerik laat roestbruine vleugels zien als hij vliegt."
+      }
+    },
+    "cisticolas-and-allies": {
+      "title": {"en": "Tailorbird, prinias and a cisticola", "nl": "Snijdervogel, prinia's en graszanger"},
+      "intro": {
+        "en": "Small, long-tailed birds of gardens, grass and scrub that look alike at first. Check the colour of the head and the breast, and listen: each prinia has its own song.",
+        "nl": "Kleine vogels met een lange staart, in tuinen, gras en struikgewas, die in het begin op elkaar lijken. Kijk naar de kleur van kop en borst, en luister: elke prinia heeft zijn eigen zang."
+      }
+    },
+    "grassbirds-and-allies": {
+      "title": {"en": "Swallows and a bush warbler", "nl": "Zwaluwen en een struikzanger"},
+      "intro": {
+        "en": "Three swallows over fields and towns, and one skulking warbler of the highlands. On the swallows, look at the underparts: white, grey or deep rufous.",
+        "nl": "Drie zwaluwen boven velden en stadjes, en één verstopte zanger uit het hoogland. Kijk bij de zwaluwen naar de onderkant: wit, grijs of diep roestbruin."
+      }
+    },
+    "bulbuls": {
+      "title": {"en": "Bulbuls", "nl": "Buulbuuls"},
+      "intro": {
+        "en": "Bulbuls are everywhere, from hotel gardens to highland forest. Look at the head and at the colour under the tail, which differ a lot between the species.",
+        "nl": "Buulbuuls zitten overal, van hoteltuinen tot hooglandbos. Let op de kop en de kleur onder de staart, die sterk per soort verschillen."
+      }
+    },
+    "leaf-warblers": {
+      "title": {"en": "White-eyes, a warbler and a babbler", "nl": "Brilvogels, een boszanger en een timalia"},
+      "intro": {
+        "en": "Four small birds of leaves and tall grass. The white-eyes have a white ring around the eye and travel in flocks; which one you see depends on the altitude.",
+        "nl": "Vier kleine vogels van bladeren en hoog gras. De brilvogels hebben een witte ring om het oog en trekken in groepjes rond; welke je ziet hangt af van de hoogte."
+      }
+    },
+    "tree-babblers-scimitar-babblers-and-allies": {
+      "title": {"en": "Babblers of the undergrowth", "nl": "Timalia's van het struikgewas"},
+      "intro": {
+        "en": "Brown birds that stay low in thick cover and give themselves away by their calls. Look at the face: a dark mask, a long white eyebrow or a curved bill.",
+        "nl": "Bruine vogels die laag in dicht struikgewas blijven en zich verraden door hun roep. Let op de kop: een donker masker, een lange witte wenkbrauwstreep of een gebogen snavel."
+      }
+    },
+    "laughingthrushes-and-allies": {
+      "title": {"en": "Babblers in noisy groups", "nl": "Babbelaars in luidruchtige groepjes"},
+      "intro": {
+        "en": "These babblers move around in chattering groups. The grey Yellow-billed Babbler is in every garden; the two endemics come with the mixed flocks of the rainforest.",
+        "nl": "Deze babbelaars trekken in kwetterende groepjes rond. De grijze geelsnavelbabbelaar zit in elke tuin; de twee endemen komen mee met de gemengde groepen in het regenwoud."
+      }
+    },
+    "starlings-and-mynas": {
+      "title": {"en": "Mynas, starlings and thrushes", "nl": "Maina's, beo's, spreeuwen en lijsters"},
+      "intro": {
+        "en": "Mynas and starlings from the garden to the rainforest canopy, plus two shy forest thrushes. On the dark hill mynas, look at the yellow wattles and the bill; the thrushes are best told by their pattern of spots and scales.",
+        "nl": "Maina's en spreeuwen van de tuin tot de kruinen van het regenwoud, plus twee schuwe boslijsters. Let bij de donkere beo's op de gele lellen en de snavel; de lijsters herken je aan hun patroon van vlekken en schubben."
+      }
+    },
+    "old-world-flycatchers-1": {
+      "title": {"en": "Robins, a shama and a flycatcher", "nl": "Dayallijster, paapje en shama"},
+      "intro": {
+        "en": "Three black-and-white or black-and-chestnut birds that cock their tails, and one plain brown flycatcher. The Magpie-Robin is in every garden; the shama sings from dense forest in the dry zone.",
+        "nl": "Drie zwart-witte of zwart-roestbruine vogels die hun staart optillen, en één effen bruine vliegenvanger. De dayallijster zit in elke tuin; de shama zingt in dicht bos in de droge zone."
+      }
+    },
+    "old-world-flycatchers-2": {
+      "title": {"en": "Flycatchers and a whistling-thrush", "nl": "Vliegenvangers en een fluitlijster"},
+      "intro": {
+        "en": "Forest birds, from lowland woods to highland streams. Two of them are blue, so look at the colour of the breast. The whistling-thrush is a dark blue shadow along mountain streams at dawn.",
+        "nl": "Bosvogels, van laaglandbos tot beekjes in de bergen. Twee ervan zijn blauw, dus let op de kleur van de borst. De fluitlijster is bij zonsopgang een donkerblauwe schim langs bergbeekjes."
+      }
+    },
+    "flowerpeckers": {
+      "title": {"en": "Sunbirds and flowerpeckers", "nl": "Honingzuigers en honingvogels"},
+      "intro": {
+        "en": "Tiny birds of flowers and berries. Sunbirds have long curved bills and glossy males; flowerpeckers are smaller with stubby bills, so look at the bill colour and the throat.",
+        "nl": "Piepkleine vogels van bloemen en bessen. Honingzuigers hebben een lange, gebogen snavel en glanzende mannetjes; honingvogels zijn kleiner met een kort snaveltje, dus let op de kleur van de snavel en de keel."
+      }
+    },
+    "leafbirds": {
+      "title": {"en": "A leafbird and two weavers", "nl": "Een bladvogel en twee wevers"},
+      "intro": {
+        "en": "A bright green leafbird of the treetops and two weavers of paddy fields and reeds. Male weavers have yellow crowns in breeding plumage; outside the season they look like streaky sparrows.",
+        "nl": "Een felgroene bladvogel uit de boomtoppen en twee wevers van rijstvelden en riet. Mannetjes wevers hebben in broedkleed een gele kruin; daarbuiten lijken ze op gestreepte mussen."
+      }
+    },
+    "estrildids": {
+      "title": {"en": "Munias", "nl": "Munia's"},
+      "intro": {
+        "en": "Small brown finches that feed in flocks on grass seeds and rice. Look at the head and the belly: black, white, brown or scaled.",
+        "nl": "Kleine bruine vinkjes die in groepjes graszaad en rijst eten. Let op de kop en de buik: zwart, wit, bruin of geschubd."
+      }
+    },
+    "old-world-sparrows": {
+      "title": {"en": "Sparrow, wagtails and a pipit", "nl": "Mus, kwikstaarten en een pieper"},
+      "intro": {
+        "en": "Birds of open ground, three of them familiar from Europe. The Paddyfield Pipit is the new one: a streaky brown bird that runs through short grass.",
+        "nl": "Vogels van open grond, waarvan je er drie uit Europa kent. De Oriëntaalse pieper is nieuw: een gestreepte bruine vogel die door kort gras rent."
+      }
+    }
+  },
+  "species": {
+    "aspfly1": {
+      "here": {
+        "en": "Most males here are chestnut with long chestnut tail streamers; all-white males also occur, mostly in winter.",
+        "nl": "De meeste mannetjes zijn hier kastanjebruin met lange kastanjebruine staartveren; helemaal witte mannetjes komen ook voor, vooral 's winters."
+      }
+    },
+    "grbcou2": {
+      "here": {
+        "en": "The Greater Coucal, common across the island, looks similar but has a black bill; this endemic has a pale green bill and darker wings.",
+        "nl": "De Chinese spoorkoekoek, die op het hele eiland algemeen is, lijkt erop maar heeft een zwarte snavel; deze endeem heeft een lichtgroene snavel en donkerdere vleugels."
+      }
+    },
+    "whbdro1": {
+      "here": {
+        "en": "Both Sri Lankan forms are darker than Indian birds, with white only under the tail, so check the vent to tell it from a Black Drongo.",
+        "nl": "Beide vormen in Sri Lanka zijn donkerder dan Indiase vogels, met alleen wit onder de staart; kijk dus naar de onderstaart om hem van een koningsdrongo te onderscheiden."
+      }
+    },
+    "lbbgul": {
+      "here": {
+        "en": "The birds here are eastern forms, often called Heuglin's Gull and Steppe Gull, that spend the winter around Mannar and Jaffna.",
+        "nl": "Hier gaat het om oostelijke vormen, vaak Heuglins meeuw en steppemeeuw genoemd, die rond Mannar en Jaffna overwinteren."
+      }
+    },
+    "bnhgul1": {
+      "here": {
+        "en": "In winter, when you see it here, the brown hood is gone and only a dark spot behind the eye remains.",
+        "nl": "In de winter, als je hem hier ziet, is de bruine kap weg en blijft alleen een donker vlekje achter het oog over."
+      }
+    },
+    "srlswa1": {
+      "here": {
+        "en": "Barn Swallows are everywhere in winter; this endemic has deep rufous underparts and no dark band across the breast.",
+        "nl": "In de winter zijn er overal boerenzwaluwen; deze endeem heeft een diep roestbruine onderkant en geen donkere band over de borst."
+      }
+    },
+    "ceyjun1": {
+      "here": {
+        "en": "Easiest in Yala and other dry-zone parks, where cocks walk along the tracks; it also comes to the edge of Sinharaja.",
+        "nl": "Het makkelijkst in Yala en andere parken in de droge zone, waar hanen langs de paden lopen; het komt ook aan de rand van Sinharaja."
+      }
+    },
+    "ceyspu1": {
+      "here": {
+        "en": "Calls loudly at dawn in Sinharaja but walks away from people; a pair sometimes crosses the trail.",
+        "nl": "Roept bij zonsopgang luid in Sinharaja, maar loopt weg van mensen; soms steekt een paartje het pad over."
+      }
+    },
+    "ceywop1": {
+      "here": {
+        "en": "Only in the highlands; look for it at Horton Plains and in the forests around Nuwara Eliya.",
+        "nl": "Alleen in het hoogland; zoek hem bij Horton Plains en in de bossen rond Nuwara Eliya."
+      }
+    },
+    "refmal1": {
+      "here": {
+        "en": "Look in the canopy at Sinharaja, where it travels with the mixed flocks.",
+        "nl": "Zoek hem in de boomkruinen van Sinharaja, waar hij met de gemengde groepen meetrekt."
+      }
+    },
+    "sersco1": {
+      "here": {
+        "en": "First seen only in 2001; local guides at Sinharaja and Kitulgala know where it roosts by day.",
+        "nl": "Pas in 2001 voor het eerst gezien; lokale gidsen bij Sinharaja en Kitulgala weten waar hij overdag slaapt."
+      }
+    },
+    "chbowl1": {
+      "here": {
+        "en": "Kitulgala is the classic site; it calls and hunts by day at the forest edge.",
+        "nl": "Kitulgala is de bekende plek; hij roept en jaagt overdag aan de bosrand."
+      }
+    },
+    "crbfla1": {
+      "here": {
+        "en": "The Red-backed Flameback, common in the lowlands, also has a red back; this one is larger, has a pale bill and lives mostly in the wet zone and the hills.",
+        "nl": "Ook de rode goudrugspecht, algemeen in het laagland, heeft een rode rug; deze is groter, heeft een lichte snavel en leeft vooral in de natte zone en de heuvels."
+      }
+    },
+    "laypar1": {
+      "here": {
+        "en": "Its grey head sets it apart from the Ring-necked Parakeets that are everywhere.",
+        "nl": "Aan zijn grijze kop onderscheid je hem van de halsbandparkieten die overal zitten."
+      }
+    },
+    "indpit1": {
+      "here": {
+        "en": "A winter visitor that often turns up in hotel gardens; listen for its whistle at dusk.",
+        "nl": "Een wintergast die vaak in hoteltuinen opduikt; luister in de schemering naar zijn fluitje."
+      }
+    },
+    "ceymag1": {
+      "here": {
+        "en": "Family groups at Sinharaja often come close to the trails; Kitulgala is another good site.",
+        "nl": "Familiegroepjes in Sinharaja komen vaak dicht bij de paden; Kitulgala is ook een goede plek."
+      }
+    },
+    "ceybuw1": {
+      "here": {
+        "en": "Common in the undergrowth at Horton Plains, but it rarely leaves cover; wait for it to cross a gap.",
+        "nl": "Algemeen in de ondergroei bij Horton Plains, maar hij komt zelden tevoorschijn; wacht tot hij een open plek oversteekt."
+      }
+    },
+    "yeebul1": {
+      "here": {
+        "en": "One of the commonest birds of the highlands, in the hotel gardens of Nuwara Eliya too.",
+        "nl": "Een van de algemeenste vogels van het hoogland, ook in de hoteltuinen van Nuwara Eliya."
+      }
+    },
+    "ceywhe1": {
+      "here": {
+        "en": "Replaces the Indian White-eye above about 1,200 metres; it is a little larger, with duller green upperparts.",
+        "nl": "Vervangt de Indische brilvogel boven ongeveer 1200 meter; hij is iets groter, met doffer groene bovendelen."
+      }
+    },
+    "whfsta2": {
+      "here": {
+        "en": "Scarce and high in the canopy; Sinharaja is the best place to look.",
+        "nl": "Schaars en hoog in de boomkruinen; Sinharaja is de beste plek om te zoeken."
+      }
+    },
+    "dubfly3": {
+      "here": {
+        "en": "Common in the highlands, in gardens and at forest edges in Nuwara Eliya and at Horton Plains.",
+        "nl": "Algemeen in het hoogland, in tuinen en aan bosranden in Nuwara Eliya en bij Horton Plains."
+      }
+    },
+    "ceywht1": {
+      "here": {
+        "en": "Look along shady streams in the highland forest at first light, as at Horton Plains.",
+        "nl": "Zoek bij het eerste licht langs schaduwrijke beekjes in het hooglandbos, bijvoorbeeld bij Horton Plains."
+      }
+    }
+  },
+  "first_day": {
+    "title": {"en": "Your first day", "nl": "Je eerste dag"},
+    "intro": {
+      "en": "These 20 birds are the ones you'll see on your first walk: in a hotel garden in Colombo or Negombo, along the road or by a paddy field. Most are noisy and not at all shy. Know these, and day one already feels familiar.",
+      "nl": "Deze 20 vogels zie je bij je eerste wandeling: in een hoteltuin in Colombo of Negombo, langs de weg of bij een rijstveld. De meeste zijn luidruchtig en helemaal niet schuw. Ken je deze, dan voelt de eerste dag meteen vertrouwd."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "Sri Lanka lies just off the tip of India and was joined to it by land during the ice ages, so most of its birds are shared. The wet south-west and the central mountains are different: monsoon rain keeps them green while the lowlands around them are dry, and their birds have been cut off long enough to become species of their own. This trip covers 34 endemics; lists differ by one or two, depending on which birds count as full species.",
+      "nl": "Sri Lanka ligt vlak voor de punt van India en was tijdens de ijstijden over land met India verbonden, dus de meeste vogels komen in beide landen voor. Het natte zuidwesten en de bergen in het midden zijn anders: moessonregen houdt ze groen terwijl het laagland eromheen droog is, en hun vogels zijn lang genoeg afgesneden om eigen soorten te worden. Deze reis omvat 34 endemen; lijsten verschillen een of twee soorten, afhankelijk van welke vogels als aparte soort tellen."
+    },
+    "where": [
+      {
+        "title": {"en": "Lowland rainforest", "nl": "Regenwoud in het laagland"},
+        "text": {
+          "en": "The rainforests of the south-west hold the most endemics. Sinharaja, a World Heritage Site, is known for its mixed flocks with blue-magpies, drongos, babblers and malkohas; Kitulgala, an easy drive from Colombo, is good for the owlet and the scops owl.",
+          "nl": "In de regenwouden van het zuidwesten leven de meeste endemen. Sinharaja, werelderfgoed, staat bekend om zijn gemengde groepen met kitta's, drongo's, babbelaars en malkoha's; Kitulgala, makkelijk te bereiken vanuit Colombo, is goed voor de dwerguil en de dwergooruil."
+        }
+      },
+      {
+        "title": {"en": "Central highlands", "nl": "Het centrale hoogland"},
+        "text": {
+          "en": "Above about 1,500 metres, around Nuwara Eliya and Horton Plains, live the mountain endemics: the bush warbler, the Dull-blue Flycatcher, the Yellow-eared Bulbul, the woodpigeon and the whistling-thrush. Victoria Park in Nuwara Eliya is a good first stop; go to Horton Plains at dawn.",
+          "nl": "Boven ongeveer 1500 meter, rond Nuwara Eliya en Horton Plains, leven de bergendemen: de struikzanger, de Ceylonese vliegenvanger, de geelpluimbuulbuul, de houtduif en de fluitlijster. Victoria Park in Nuwara Eliya is een goede eerste stop; ga bij zonsopgang naar Horton Plains."
+        }
+      },
+      {
+        "title": {"en": "The dry zone", "nl": "De droge zone"},
+        "text": {
+          "en": "The dry lowlands of the north, east and south-east have few endemics of their own, but the widespread ones are easy here. On game drives in Yala, Udawalawe and Bundala you'll see Sri Lanka Junglefowl, Sri Lanka Grey Hornbill, Red-backed Flameback and Sri Lanka Woodshrike.",
+          "nl": "Het droge laagland in het noorden, oosten en zuidoosten heeft weinig eigen endemen, maar de wijdverspreide soorten zie je hier makkelijk. Tijdens safaritochten in Yala, Udawalawe en Bundala zie je het Ceylonhoen, de Ceylontok, de rode goudrugspecht en de Ceylonese rupsklauwier."
+        }
+      }
+    ],
+    "families": [],
+    "units": {
+      "endemics-1": {"title": {"en": "From junglefowl to swallow", "nl": "Van Ceylonhoen tot zwaluw"}},
+      "endemics-2": {"title": {"en": "Green-pigeon, cuckoos, owlet, hornbill", "nl": "Duif, koekoeken, dwerguil en tok"}},
+      "endemics-3": {"title": {"en": "Barbets, flamebacks and parrots", "nl": "Baardvogels, spechten en parkieten"}},
+      "endemics-4": {"title": {"en": "Drongo, blue-magpie, bulbuls, white-eye", "nl": "Drongo, kitta, buulbuuls en brilvogel"}},
+      "endemics-5": {"title": {"en": "Babblers, a myna and a starling", "nl": "Babbelaars, een beo en een spreeuw"}},
+      "endemics-6": {"title": {"en": "Thrushes, flycatcher and flowerpecker", "nl": "Lijsters, vliegenvanger en honingvogel"}}
+    }
+  }
+}

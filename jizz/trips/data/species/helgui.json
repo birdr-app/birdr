@@ -1,0 +1,22 @@
+{
+  "code": "helgui",
+  "name": {
+    "en": "Helmeted Guineafowl",
+    "nl": "Helmparelhoen"
+  },
+  "latin": "Numida meleagris",
+  "look_for": [
+    {
+      "en": "Bony **casque** on a bare blue head",
+      "nl": "Benige **helm** op een kale blauwe kop"
+    },
+    {
+      "en": "Dark grey body covered in small white spots",
+      "nl": "Donkergrijs lijf vol kleine witte stippen"
+    },
+    {
+      "en": "Walks in groups, cackling loudly when alarmed",
+      "nl": "Loopt in groepen, kakelt luid bij onraad"
+    }
+  ]
+}

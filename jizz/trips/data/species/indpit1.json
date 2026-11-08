@@ -1,0 +1,22 @@
+{
+  "code": "indpit1",
+  "name": {
+    "en": "Indian Pitta",
+    "nl": "Negenkleurige pitta"
+  },
+  "latin": "Pitta brachyura",
+  "look_for": [
+    {
+      "en": "Plump, with a very short tail",
+      "nl": "Gedrongen, met een heel korte staart"
+    },
+    {
+      "en": "Black eye stripe under a white **brow**",
+      "nl": "Zwarte oogstreep onder een witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Green back, blue wing patch, red **undertail**",
+      "nl": "Groene rug, blauwe vleugelvlek, rode **onderstaart**"
+    }
+  ]
+}

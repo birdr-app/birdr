@@ -1,0 +1,22 @@
+{
+  "code": "sooter1",
+  "name": {
+    "en": "Sooty Tern",
+    "nl": "Bonte stern"
+  },
+  "latin": "Onychoprion fuscatus",
+  "look_for": [
+    {
+      "en": "Jet-black **back** and wings, pure white below",
+      "nl": "Gitzwarte **rug** en vleugels, van onder spierwit"
+    },
+    {
+      "en": "Broad white **forehead** patch ending at the **eye**",
+      "nl": "Brede witte vlek op het **voorhoofd** die bij het **oog** stopt"
+    },
+    {
+      "en": "Deeply forked **tail**; nests in huge, noisy colonies",
+      "nl": "Diep gevorkte **staart**; broedt in enorme, lawaaiige kolonies"
+    }
+  ]
+}

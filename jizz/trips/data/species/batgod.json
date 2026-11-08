@@ -1,0 +1,22 @@
+{
+  "code": "batgod",
+  "name": {
+    "en": "Bar-tailed Godwit",
+    "nl": "Rosse grutto"
+  },
+  "latin": "Limosa lapponica",
+  "look_for": [
+    {
+      "en": "Long **bill**, slightly upturned",
+      "nl": "Lange, licht opgewipte **snavel**"
+    },
+    {
+      "en": "Streaky grey-brown back, shorter legs",
+      "nl": "Gestreepte grijsbruine rug, kortere poten"
+    },
+    {
+      "en": "No wing bar, white **rump**, barred tail",
+      "nl": "Geen vleugelstreep, witte **stuit**, gebandeerde staart"
+    }
+  ]
+}

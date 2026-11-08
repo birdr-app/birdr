@@ -1,0 +1,22 @@
+{
+  "code": "ceghor1",
+  "name": {
+    "en": "Sri Lanka Grey Hornbill",
+    "nl": "Ceylontok"
+  },
+  "latin": "Ocyceros gingalensis",
+  "look_for": [
+    {
+      "en": "Grey-brown hornbill with no **casque**",
+      "nl": "Grijsbruine neushoornvogel zonder **helm**"
+    },
+    {
+      "en": "Male cream **bill**; female's black with a cream stripe",
+      "nl": "Mannetje roomkleurige **snavel**; vrouwtje zwart met roomkleurige streep"
+    },
+    {
+      "en": "Long dark tail with white sides",
+      "nl": "Lange donkere staart met witte zijkanten"
+    }
+  ]
+}

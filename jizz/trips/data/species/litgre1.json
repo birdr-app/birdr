@@ -1,0 +1,22 @@
+{
+  "code": "litgre1",
+  "name": {
+    "en": "Little Grebe",
+    "nl": "Dodaars"
+  },
+  "latin": "Tachybaptus ruficollis",
+  "look_for": [
+    {
+      "en": "Small and round, with almost no tail",
+      "nl": "Klein en rond, bijna zonder staart"
+    },
+    {
+      "en": "Chestnut cheeks, yellow spot at the **bill** base",
+      "nl": "Kastanjebruine wangen, geel vlekje bij de **snavel**"
+    },
+    {
+      "en": "Dives often and pops up somewhere else",
+      "nl": "Duikt vaak en komt ergens anders boven"
+    }
+  ]
+}

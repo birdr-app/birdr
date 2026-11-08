@@ -1,0 +1,22 @@
+{
+  "code": "spemou2",
+  "name": {
+    "en": "Speckled Mousebird",
+    "nl": "Bruine muisvogel"
+  },
+  "latin": "Colius striatus",
+  "look_for": [
+    {
+      "en": "Dull brown with a shaggy **crest**",
+      "nl": "Dofbruin met een rafelige **kuif**"
+    },
+    {
+      "en": "**Bill** black above, pale below",
+      "nl": "**Snavel** boven zwart, onder licht"
+    },
+    {
+      "en": "Very long stiff **tail**, clambers about in groups",
+      "nl": "Heel lange stijve **staart**, klautert in groepjes rond"
+    }
+  ]
+}

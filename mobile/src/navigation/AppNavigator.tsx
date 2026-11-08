@@ -54,6 +54,11 @@ import { UpdateDetailScreen } from '../screens/UpdateDetailScreen';
 import { SurvivalStartScreen } from '../screens/SurvivalStartScreen';
 import { CourseScreen } from '../screens/CourseScreen';
 import { CourseLessonScreen } from '../screens/CourseLessonScreen';
+import { TripListScreen } from '../screens/TripListScreen';
+import { TripHomeScreen } from '../screens/TripHomeScreen';
+import { TripFamiliesScreen } from '../screens/TripFamiliesScreen';
+import { TripUnitScreen } from '../screens/TripUnitScreen';
+import { TripEndemicsScreen } from '../screens/TripEndemicsScreen';
 import { SurvivalPlayScreen } from '../screens/SurvivalPlayScreen';
 import { SurvivalResultScreen } from '../screens/SurvivalResultScreen';
 import { SurvivalScoresScreen } from '../screens/SurvivalScoresScreen';
@@ -73,6 +78,11 @@ const SCREENS: { name: string; titleKey: string; component: React.ComponentType<
   { name: 'Start', titleKey: 'new_game', component: StartScreen },
   { name: 'Course', titleKey: 'course_title', component: CourseScreen },
   { name: 'CourseLesson', titleKey: 'course_title', component: CourseLessonScreen },
+  { name: 'TripList', titleKey: 'trip_title', component: TripListScreen },
+  { name: 'TripHome', titleKey: 'trip_title', component: TripHomeScreen },
+  { name: 'TripFamilies', titleKey: 'trip_families_title', component: TripFamiliesScreen },
+  { name: 'TripUnit', titleKey: 'trip_title', component: TripUnitScreen },
+  { name: 'TripEndemics', titleKey: 'trip_title', component: TripEndemicsScreen },
   { name: 'Scores', titleKey: 'high_scores', component: ScoresScreen },
   { name: 'BirdrJourneyList', titleKey: 'country_challenge', component: BirdrJourneyListScreen },
   { name: 'CountryChallengeLeaderboard', titleKey: 'country_challenge_leaderboard', component: CountryChallengeLeaderboardScreen },

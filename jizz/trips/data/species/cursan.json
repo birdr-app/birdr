@@ -1,0 +1,22 @@
+{
+  "code": "cursan",
+  "name": {
+    "en": "Curlew Sandpiper",
+    "nl": "Krombekstrandloper"
+  },
+  "latin": "Calidris ferruginea",
+  "look_for": [
+    {
+      "en": "Long, gently down-curved **bill**",
+      "nl": "Lange, licht gebogen **snavel**"
+    },
+    {
+      "en": "White **rump** in flight",
+      "nl": "Witte **stuit** in de vlucht"
+    },
+    {
+      "en": "Grey in winter; brick-red in summer",
+      "nl": "Grijs in de winter, steenrood in de zomer"
+    }
+  ]
+}

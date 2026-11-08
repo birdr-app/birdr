@@ -1,0 +1,22 @@
+{
+  "code": "afghor1",
+  "name": {
+    "en": "African Grey Hornbill",
+    "nl": "Grijze tok"
+  },
+  "latin": "Lophoceros nasutus",
+  "look_for": [
+    {
+      "en": "Grey-brown with a long white **eyebrow**",
+      "nl": "Grijsbruin met een lange witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Male: dark **bill** with a cream stripe",
+      "nl": "Mannetje: donkere **snavel** met een roomkleurige streep"
+    },
+    {
+      "en": "Female: pale **bill** with a dark red tip",
+      "nl": "Vrouwtje: lichte **snavel** met een donkerrode punt"
+    }
+  ]
+}

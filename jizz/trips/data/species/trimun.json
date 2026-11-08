@@ -1,0 +1,22 @@
+{
+  "code": "trimun",
+  "name": {
+    "en": "Tricoloured Munia",
+    "nl": "Driekleurennon"
+  },
+  "latin": "Lonchura malacca",
+  "look_for": [
+    {
+      "en": "Black head, throat and belly patch",
+      "nl": "Zwarte kop, keel en buikvlek"
+    },
+    {
+      "en": "White sides of the **breast** and flanks",
+      "nl": "Witte zijkant van **borst** en flanken"
+    },
+    {
+      "en": "Chestnut back, blue-grey **bill**",
+      "nl": "Kastanjebruine rug, blauwgrijze **snavel**"
+    }
+  ]
+}

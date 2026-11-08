@@ -1,0 +1,29 @@
+{
+  "slug": "laughingthrushes-and-allies",
+  "about": {
+    "en": "Thrush-sized, long-tailed songbirds, mostly brown or grey with bold face patterns, some brightly coloured. They hop through undergrowth and over the ground in noisy, close-knit groups, turning over leaves and breaking into loud chattering or laughing choruses. Smaller relatives, like sibias and minlas, move through the trees in mixed flocks.",
+    "nl": "Zangvogels zo groot als een lijster, met een lange staart, meestal bruin of grijs met een opvallende tekening op de kop, sommige felgekleurd. Ze hippen in luidruchtige, hechte groepjes door de ondergroei en over de grond, keren bladeren om en barsten uit in luid, lachend gekwetter. Kleinere verwanten, zoals sibia's en minla's, trekken in gemengde groepen door de bomen."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "thrushes"
+      ],
+      "text": {
+        "en": "Despite the name, laughingthrushes are babblers and no relation of the thrushes you know. They have longer, rounder tails, live in noisy groups and forage together in the undergrowth.",
+        "nl": "In het Engels heten veel soorten laughingthrush, maar het zijn geen lijsters. Ze hebben een langere, rondere staart, leven in luidruchtige groepen en zoeken samen voedsel in de ondergroei."
+      }
+    },
+    {
+      "if_known": [
+        "tree-babblers-scimitar-babblers-and-allies",
+        "ground-babblers-and-allies",
+        "pseudo-babblers"
+      ],
+      "text": {
+        "en": "Babbler is a name shared by several families. This one holds the laughingthrushes and their relatives: larger, long-tailed birds that move in noisy groups.",
+        "nl": "De namen timalia en babbelaar worden gebruikt voor vogels uit verschillende families. Deze familie bevat de babbelaars en hun verwanten: grotere vogels met een lange staart die in luidruchtige groepen rondtrekken."
+      }
+    }
+  ]
+}

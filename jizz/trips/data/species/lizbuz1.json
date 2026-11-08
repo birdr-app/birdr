@@ -1,0 +1,22 @@
+{
+  "code": "lizbuz1",
+  "name": {
+    "en": "Lizard Buzzard",
+    "nl": "Hagedisbuizerd"
+  },
+  "latin": "Kaupifalco monogrammicus",
+  "look_for": [
+    {
+      "en": "Small grey hawk with a barred **belly**",
+      "nl": "Kleine grijze roofvogel met gebandeerde **buik**"
+    },
+    {
+      "en": "White **throat** with one black stripe down the middle",
+      "nl": "Witte **keel** met één zwarte streep in het midden"
+    },
+    {
+      "en": "Red **cere** and legs; white band on black tail",
+      "nl": "Rode **washuid** en poten; witte band op zwarte staart"
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "country": "SC",
+  "intro": {
+    "en": "The Seychelles are granite and coral islands far out in the Indian Ocean. Few kinds of land bird made it this far, but many of those that did are found nowhere else, and the small islands hold huge colonies of terns, noddies and tropicbirds. From October to April waders from the north feed on the beaches. This trip covers 55 species, 15 of them found nowhere else.",
+    "nl": "De Seychellen zijn eilanden van graniet en koraal, ver weg in de Indische Oceaan. Weinig landvogels kwamen zo ver, maar veel van de soorten die het haalden komen nergens anders voor, en op de kleine eilanden broeden enorme kolonies sterns, noddy's en keerkringvogels. Van oktober tot april zoeken steltlopers uit het noorden voedsel op de stranden. Deze reis omvat 55 soorten, waarvan 15 nergens anders voorkomen."
+  },
+  "groups": {
+    "pigeons-and-doves": {
+      "here": {
+        "en": "Three are on this trip. The Zebra Dove and the Malagasy Turtle Dove were brought in and walk along every road and lawn; the endemic Seychelles Blue-Pigeon feeds in fruiting trees in forest and gardens on Mahé, Praslin and La Digue.",
+        "nl": "Deze reis omvat drie duiven. De zebraduif en de Madagaskartortel zijn ingevoerd en lopen langs elke weg en over elk grasveld; de endemische Seychellenblauwduif eet in vruchtdragende bomen in bos en tuinen op Mahé, Praslin en La Digue."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "One swift lives here: the endemic Seychelles Swiftlet. It nests in a few caves and feeds in small groups over ridges, forest edges and marshes on Mahé, Praslin and La Digue.",
+        "nl": "Er leeft hier één gierzwaluw: de endemische Seychellensalangaan. Hij broedt in een paar grotten en jaagt in groepjes boven bergkammen, bosranden en moerassen op Mahé, Praslin en La Digue."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "One rail is on this trip: the Common Moorhen, the same species as in Europe. Look for it on ponds and in marshes, such as those on La Digue.",
+        "nl": "Deze reis omvat één ral: het waterhoen, dezelfde soort als in Europa. Zoek het op vijvers en in moerassen, zoals op La Digue."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "This trip covers 14 waders, all visitors that spend October to April here. Ruddy Turnstones and Whimbrels are on almost every beach and rocky shore; for more, try the tidal flats and reclaimed land on Mahé's east coast, or Bird and Denis islands.",
+        "nl": "Deze reis omvat 14 steltlopers, allemaal gasten die hier van oktober tot april verblijven. Steenlopers en regenwulpen zie je op bijna elk strand en elke rotskust; voor meer soorten ga je naar de wadplaten en het opgespoten land aan de oostkust van Mahé, of naar Bird Island en Denis."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Seven terns and noddies are on this trip, and no gulls. The White Tern nests in trees, even in the capital Victoria, and Great Crested Terns fish along every coast; the others breed on the small islands, with noddies on Cousin and Aride and hundreds of thousands of Sooty Terns on Bird Island.",
+        "nl": "Deze reis omvat zeven sterns en noddy's, en geen meeuwen. De opaalstern broedt in bomen, zelfs in de hoofdstad Victoria, en grote kuifsterns vissen langs de hele kust; de andere broeden op de kleine eilanden, met noddy's op Cousin en Aride en honderdduizenden bonte sterns op Bird Island."
+      }
+    },
+    "tropicbirds": {
+      "here": {
+        "en": "Two tropicbirds are on this trip. The White-tailed Tropicbird nests in tree hollows and rock crevices and flies over the coasts of all the main islands; the Red-tailed Tropicbird breeds in these islands only on Aride.",
+        "nl": "Deze reis omvat twee keerkringvogels. De witstaartkeerkringvogel broedt in boomholten en rotsspleten en vliegt langs de kust van alle grote eilanden; de roodstaartkeerkringvogel broedt hier alleen op Aride."
+      }
+    },
+    "petrels-shearwaters-and-diving-petrels": {
+      "here": {
+        "en": "Two shearwaters are on this trip, Wedge-tailed and Tropical. Both nest in burrows on Cousin and Aride, and you'll see them skimming the waves from the boat between Praslin and these islands.",
+        "nl": "Deze reis omvat twee pijlstormvogels: de wigstaartpijlstormvogel en de tropische pijlstormvogel. Beide broeden in holen op Cousin en Aride, en vanaf de boot tussen Praslin en die eilanden zie je ze laag over de golven scheren."
+      }
+    },
+    "frigatebirds-boobies-and-gannets": {
+      "here": {
+        "en": "Two frigatebirds are on this trip. They don't nest on these islands, but many roost on Aride and you'll see them hanging over Cousin and the coasts around Praslin.",
+        "nl": "Deze reis omvat twee fregatvogels. Ze broeden niet op deze eilanden, maar veel overnachten er op Aride en je ziet ze boven Cousin en de kust rond Praslin hangen."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Six herons are on this trip. Grey Herons and Cattle Egrets wait for scraps at the fish market in Victoria, the Striated Heron hunts on rocky shores, and the Yellow Bittern hides in the marshes of La Digue and Mahé.",
+        "nl": "Deze reis omvat zes reigers. Blauwe reigers en koereigers wachten op de vismarkt van Victoria op restjes, de mangrovereiger jaagt op rotskusten en de Chinese woudaap verstopt zich in de moerassen van La Digue en Mahé."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "One owl lives here: the endemic Seychelles Scops Owl, found only in the mountain forest of Morne Seychellois on Mahé. Go at night with a local guide and listen for its harsh, rasping call.",
+        "nl": "Er leeft hier één uil: de endemische Seychellendwergooruil, die alleen in het bergbos van Morne Seychellois op Mahé voorkomt. Ga 's nachts met een lokale gids en luister naar zijn rauwe, raspende roep."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "One falcon lives here: the endemic Seychelles Kestrel, one of the smallest falcons in the world. It is easy to find on Mahé, where it perches on buildings, cliffs and dead trees, and lives on Praslin too.",
+        "nl": "Er leeft hier één valk: de endemische Seychellentorenvalk, een van de kleinste valken ter wereld. Op Mahé vind je hem makkelijk op gebouwen, rotswanden en dode bomen, en hij leeft ook op Praslin."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "One parrot is on this trip: the endemic Seychelles Parrot, also called Black Parrot, which lives only on Praslin. Listen for its whistles in the palm forest of the Vallée de Mai.",
+        "nl": "Deze reis omvat één papegaai: de endemische Praslinpapegaai, die alleen op Praslin leeft. Luister in het palmbos van de Vallée de Mai naar zijn fluitende roep."
+      }
+    },
+    "drongos": {
+      "here": {
+        "en": "One drongo is on this trip: the Aldabra Drongo, which lives only on the remote atoll of Aldabra. You won't see a drongo on the islands most visitors go to.",
+        "nl": "Deze reis omvat één drongo: de Aldabradrongo, die alleen op het afgelegen atol Aldabra leeft. Op de eilanden waar de meeste bezoekers komen, zie je geen drongo."
+      }
+    },
+    "monarch-flycatchers": {
+      "here": {
+        "en": "One monarch lives here: the endemic Seychelles Paradise-Flycatcher. Nearly all of them live on La Digue, in and around the Veuve Nature Reserve; a small population was moved to Denis Island.",
+        "nl": "Er leeft hier één monarch: de endemische Seychellenparadijsmonarch. Bijna allemaal leven ze op La Digue, in en rond het natuurreservaat La Veuve; een kleine groep is naar Denis verhuisd."
+      }
+    },
+    "reed-warblers-and-allies": {
+      "here": {
+        "en": "One reed warbler lives here: the endemic Seychelles Warbler. In the 1960s only about 26 were left, all on Cousin; it now lives on five small islands, and a morning on Cousin or Aride is the easiest way to see one.",
+        "nl": "Er leeft hier één rietzanger: de endemische Seychellenrietzanger. In de jaren zestig waren er nog maar zo'n 26 over, allemaal op Cousin; nu leeft hij op vijf kleine eilanden, en een ochtend op Cousin of Aride is de makkelijkste manier om hem te zien."
+      }
+    },
+    "bulbuls": {
+      "here": {
+        "en": "One bulbul lives here: the endemic Seychelles Bulbul. It is common and noisy in forest and gardens on all the main islands, so you'll meet it on day one.",
+        "nl": "Er leeft hier één buulbuul: de endemische diksnavelbuulbuul. Hij is algemeen en luidruchtig in bos en tuinen op alle grote eilanden, dus je ziet hem al op de eerste dag."
+      }
+    },
+    "white-eyes-yuhinas-and-allies": {
+      "here": {
+        "en": "Two white-eyes are on this trip, both endemic and both hard to see. The Seychelles White-eye lives mainly on Conception, a small island off Mahé, and on the private islands Frégate and North Island; the Aldabra White-eye lives only on Aldabra.",
+        "nl": "Deze reis omvat twee brilvogels, allebei endemisch en allebei lastig te zien. De Mahébrilvogel leeft vooral op Conception, een klein eiland voor de kust van Mahé, en op de privé-eilanden Frégate en North Island; de Aldabrabrilvogel leeft alleen op Aldabra."
+      }
+    },
+    "starlings-and-mynas": {
+      "here": {
+        "en": "One myna is on this trip: the Common Myna, brought in from Asia. It walks on every lawn and roadside and is one of the first birds you'll see.",
+        "nl": "Deze reis omvat één maina: de treurmaina, ingevoerd uit Azië. Hij loopt over elk grasveld en langs elke weg en is een van de eerste vogels die je ziet."
+      }
+    },
+    "old-world-flycatchers": {
+      "here": {
+        "en": "One bird of this family lives here: the endemic Seychelles Magpie-Robin. In 1970 only about 16 were left, all on Frégate; it now also lives on Cousin, Cousine, Aride and Denis, and a day trip to Cousin or Aride gives you the best chance.",
+        "nl": "Er leeft hier één vogel uit deze familie: de endemische Seychellenlijster. In 1970 waren er nog maar zo'n 16 over, allemaal op Frégate; nu leeft hij ook op Cousin, Cousine, Aride en Denis, en een dagtocht naar Cousin of Aride geeft je de beste kans."
+      }
+    },
+    "sunbirds-and-spiderhunters": {
+      "here": {
+        "en": "One sunbird lives here: the endemic Seychelles Sunbird. It feeds at flowers in every garden and is often the first endemic you see.",
+        "nl": "Er leeft hier één honingzuiger: de endemische Seychellenhoningzuiger. Hij zoekt nectar in elke tuin met bloemen en is vaak de eerste endeem die je ziet."
+      }
+    },
+    "weavers-and-allies": {
+      "here": {
+        "en": "Three fodies are on this trip. The Red Fody, brought in from Madagascar, lives on all the main islands; the endemic Seychelles Fody lives only on a few small islands such as Cousin, Aride and Denis, and the Aldabra Fody only on Aldabra.",
+        "nl": "Deze reis omvat drie wevers. De Madagaskarwever is ingevoerd en leeft op alle grote eilanden; de endemische Seychellenwever leeft alleen op een paar kleine eilanden, zoals Cousin, Aride en Denis, en de Aldabrawever alleen op Aldabra."
+      }
+    },
+    "estrildids": {
+      "here": {
+        "en": "One waxbill is on this trip: the Common Waxbill, brought in from Africa. Small flocks feed on grass seed along roadsides and in rough grass on the main islands.",
+        "nl": "Deze reis omvat één prachtvink: het Sint-Helenafazantje, ingevoerd uit Afrika. Groepjes eten graszaad langs de weg en in ruig gras op de grote eilanden."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "One sparrow is on this trip: the House Sparrow, brought in by people. You'll find it in towns and around harbours, mostly on Mahé.",
+        "nl": "Deze reis omvat één mus: de huismus, door mensen meegebracht. Je vindt hem in dorpen en rond havens, vooral op Mahé."
+      }
+    }
+  },
+  "units": {
+    "pigeons-and-doves": {
+      "title": {
+        "en": "Doves, a swiftlet and a moorhen",
+        "nl": "Duiven, een salangaan en een waterhoen"
+      },
+      "intro": {
+        "en": "Two doves walk on the ground everywhere: the small, finely barred Zebra Dove and the bigger, browner Malagasy Turtle Dove. The blue-pigeon stays in the trees, the swiftlet is always in the air, and the moorhen is the one you know from home.",
+        "nl": "Twee duiven lopen overal op de grond: de kleine, fijn gestreepte zebraduif en de grotere, bruinere Madagaskartortel. De blauwduif blijft in de bomen, de salangaan zit altijd in de lucht, en het waterhoen ken je van thuis."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Plovers, Terek Sandpiper and godwit",
+        "nl": "Plevieren, terekruiter en grutto"
+      },
+      "intro": {
+        "en": "You may know several of these from European coasts in winter, and here they are in the same grey-brown winter plumage. For the two sand plovers, compare the size and the length of the bill; the Terek Sandpiper has an upturned bill and short orange legs.",
+        "nl": "Een paar ken je misschien van de Europese kust in de winter, en hier dragen ze hetzelfde grijsbruine winterkleed. Vergelijk bij de Tibetaanse plevier en de woestijnplevier de grootte en de lengte van de snavel; de terekruiter heeft een opgewipte snavel en korte oranje poten."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Turnstone, sandpipers and Crab-Plover",
+        "nl": "Steenloper, strandlopers en krabplevier"
+      },
+      "intro": {
+        "en": "The turnstone and the Whimbrel are on almost every beach, and Sanderlings run with the waves. The Crab-Plover is the one you won't know: a black-and-white wader with a heavy black bill that hunts crabs on the flats.",
+        "nl": "De steenloper en de regenwulp zitten op bijna elk strand, en drieteenstrandlopers rennen mee met de golven. De krabplevier ken je niet van thuis: een zwart-witte steltloper met een zware zwarte snavel die op de platen op krabben jaagt."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {
+        "en": "Terns and noddies",
+        "nl": "Sterns en noddy's"
+      },
+      "intro": {
+        "en": "Terns and noddies are the birds of these islands. Noddies are dark brown with a pale cap; Sooty and Bridled Terns are both dark above and white below, so look at the colour of the back and the white above the eye. The White Tern is pure white with a black eye.",
+        "nl": "Sterns en noddy's zijn de vogels van deze eilanden. Noddy's zijn donkerbruin met een lichte kruin; bonte sterns en brilsterns zijn allebei van boven donker en van onderen wit, dus kijk naar de kleur van de rug en het wit boven het oog. De opaalstern is helemaal wit, met een zwart oog."
+      }
+    },
+    "tropicbirds": {
+      "title": {
+        "en": "Tropicbirds, shearwaters, frigatebirds",
+        "nl": "Keerkringvogels en andere zeevogels"
+      },
+      "intro": {
+        "en": "Three kinds of seabird you'll see from the boat and on Cousin and Aride. Tell the tropicbirds apart by the colour of the bill and the tail streamers, and the frigatebirds by the pattern of white below.",
+        "nl": "Drie soorten zeevogels die je vanaf de boot en op Cousin en Aride ziet. Houd de keerkringvogels uit elkaar aan de kleur van de snavel en de staartpennen, en de fregatvogels aan het patroon van wit aan de onderkant."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "title": {
+        "en": "Herons, egrets and a bittern",
+        "nl": "Reigers en een woudaap"
+      },
+      "intro": {
+        "en": "Four of these you know from Europe. The new ones are small: the Striated Heron, dark grey and hunched on the rocks, and the Yellow Bittern, buff with dark flight feathers, which climbs through reeds and long grass.",
+        "nl": "Vier hiervan ken je uit Europa. De nieuwe zijn klein: de mangrovereiger, donkergrijs en ineengedoken op de rotsen, en de Chinese woudaap, okergeel met donkere slagpennen, die door riet en hoog gras klautert."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Owl, kestrel, parrot and drongo",
+        "nl": "Uil, valk, papegaai en drongo"
+      },
+      "intro": {
+        "en": "Four endemics, each the only one of its group here, so none is easy to confuse. The kestrel is easy on Mahé and the parrot on Praslin; the owl needs a night walk, and the drongo a trip to Aldabra.",
+        "nl": "Vier endemen, elk de enige uit zijn groep, dus je haalt ze niet snel door elkaar. De valk zie je makkelijk op Mahé en de papegaai op Praslin; voor de uil moet je 's nachts op pad, en voor de drongo naar Aldabra."
+      }
+    },
+    "monarch-flycatchers": {
+      "title": {
+        "en": "Flycatcher, warbler, bulbul, white-eyes",
+        "nl": "Monarch, zanger, buulbuul en brilvogels"
+      },
+      "intro": {
+        "en": "Five small endemics of forest and scrub. The bulbul is everywhere; the paradise-flycatcher male is glossy black with long tail streamers and the female chestnut and white. The warbler is plain olive-brown, and the white-eyes are grey with a white ring around the eye.",
+        "nl": "Vijf kleine endemen van bos en struikgewas. De buulbuul zit overal; het mannetje van de paradijsmonarch is glanzend zwart met lange staartveren, het vrouwtje kastanjebruin en wit. De rietzanger is effen olijfbruin en de brilvogels zijn grijs met een witte ring om het oog."
+      }
+    },
+    "starlings-and-mynas": {
+      "title": {
+        "en": "Myna, magpie-robin, sunbird and fodies",
+        "nl": "Maina, lijster, honingzuiger en wevers"
+      },
+      "intro": {
+        "en": "The myna and the Red Fody were brought in and live everywhere, and the sunbird is in every garden. The magpie-robin and the Seychelles Fody you'll only find on the small reserve islands. A male Red Fody in breeding plumage is bright red; the Seychelles Fody is a plain brown bird.",
+        "nl": "De maina en de Madagaskarwever zijn ingevoerd en leven overal, en de honingzuiger zit in elke tuin. De Seychellenlijster en de Seychellenwever vind je alleen op de kleine natuureilanden. Een mannetje Madagaskarwever in broedkleed is felrood; de Seychellenwever is een effen bruine vogel."
+      }
+    },
+    "estrildids": {
+      "title": {
+        "en": "Sparrow and waxbill",
+        "nl": "Mus en Sint-Helenafazantje"
+      },
+      "intro": {
+        "en": "Two small seed-eaters that came with people. You know the House Sparrow; the Common Waxbill is tiny and brown, with a red bill and a red stripe through the eye.",
+        "nl": "Twee kleine zaadeters die met mensen zijn meegekomen. De huismus ken je; het Sint-Helenafazantje is piepklein en bruin, met een rode snavel en een rode streep door het oog."
+      }
+    }
+  },
+  "species": {
+    "sesowl1": {
+      "here": {
+        "en": "You need a night walk in the forest of Morne Seychellois on Mahé, ideally with a local guide who knows where the birds call.",
+        "nl": "Je moet 's nachts het bos van Morne Seychellois op Mahé in, het liefst met een lokale gids die weet waar de vogels roepen."
+      }
+    },
+    "seypar1": {
+      "here": {
+        "en": "Look and listen for it in the Vallée de Mai and Fond Ferdinand, two forest reserves on Praslin.",
+        "nl": "Zoek en luister ernaar in de Vallée de Mai en Fond Ferdinand, twee bosreservaten op Praslin."
+      }
+    },
+    "sepfly1": {
+      "here": {
+        "en": "Go to La Digue: the Veuve Nature Reserve is the best place, but the birds also visit the gardens around it.",
+        "nl": "Ga naar La Digue: het natuurreservaat La Veuve is de beste plek, maar de vogels komen ook in de tuinen eromheen."
+      }
+    },
+    "semrob1": {
+      "here": {
+        "en": "It lives only on small, rat-free islands; Cousin and Aride are the ones you can visit on a day trip from Praslin.",
+        "nl": "Hij leeft alleen op kleine eilanden zonder ratten; Cousin en Aride kun je op een dagtocht vanaf Praslin bezoeken."
+      }
+    },
+    "sebwar1": {
+      "here": {
+        "en": "Cousin, a short boat trip from Praslin, is the easiest place, and Aride holds the largest population.",
+        "nl": "Cousin, een kort boottochtje vanaf Praslin, is de makkelijkste plek, en op Aride leeft de grootste populatie."
+      }
+    },
+    "seyfod1": {
+      "here": {
+        "en": "On Cousin and Aride it is common and tame; it is darker and plainer than a female Red Fody.",
+        "nl": "Op Cousin en Aride is hij algemeen en tam; hij is donkerder en effener dan een vrouwtje Madagaskarwever."
+      }
+    },
+    "seywhe1": {
+      "here": {
+        "en": "Most live on Conception, which you can't visit; a few remain in the hills of Mahé, and guests on Frégate and North Island can see it there.",
+        "nl": "De meeste leven op Conception, waar je niet heen kunt; er zitten er nog een paar in de heuvels van Mahé, en gasten op Frégate en North Island kunnen hem daar zien."
+      }
+    },
+    "sooter1": {
+      "here": {
+        "en": "The colony on Bird Island holds hundreds of thousands of pairs from about April to October; outside that time you'll mostly see them far out at sea.",
+        "nl": "De kolonie op Bird Island telt van ongeveer april tot oktober honderdduizenden paren; daarbuiten zie je ze vooral ver op zee."
+      }
+    },
+    "rettro": {
+      "here": {
+        "en": "In these islands it breeds only on Aride, in small numbers.",
+        "nl": "Op deze eilanden broedt hij alleen op Aride, in kleine aantallen."
+      }
+    },
+    "matdov1": {
+      "here": {
+        "en": "The birds here are mostly descendants of doves brought from Madagascar, which have mixed with the original Seychelles form.",
+        "nl": "De vogels hier stammen vooral af van tortels uit Madagaskar, die zich hebben gemengd met de oorspronkelijke vorm van de Seychellen."
+      }
+    }
+  },
+  "first_day": {
+    "title": {
+      "en": "Your first day",
+      "nl": "Je eerste dag"
+    },
+    "intro": {
+      "en": "These 20 birds are the ones you'll see in your first day or two: in a hotel garden on Mahé or Praslin, on the beach or at the market in Victoria. Several are endemics that are still common, such as the sunbird, the bulbul and the blue-pigeon.",
+      "nl": "Deze 20 vogels zie je in je eerste dag of twee: in een hoteltuin op Mahé of Praslin, op het strand of op de markt in Victoria. Een aantal zijn endemen die nog steeds algemeen zijn, zoals de honingzuiger, de buulbuul en de blauwduif."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "The granite islands are a piece of the old supercontinent Gondwana, left behind in mid-ocean when India drifted north some 65 million years ago. The birds came later, across more than 1,000 kilometres of sea, and in isolation became species of their own. Rats, cats and forest clearing pushed several to the edge; moving them to small, predator-free islands saved them. This trip covers 15 endemics: 12 on the granite islands and 3 on the far-off atoll of Aldabra.",
+      "nl": "De granieteilanden zijn een stuk van het oude supercontinent Gondwana, dat midden in de oceaan achterbleef toen India zo'n 65 miljoen jaar geleden naar het noorden dreef. De vogels kwamen later, over meer dan 1000 kilometer zee, en werden in hun eentje aparte soorten. Ratten, katten en bomenkap brachten er een aantal op de rand van uitsterven; ze zijn gered door ze naar kleine eilanden zonder roofdieren te verhuizen. Deze reis omvat 15 endemen: 12 op de granieteilanden en 3 op het verre atol Aldabra."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "Mahé's mountain forest",
+          "nl": "Het bergbos van Mahé"
+        },
+        "text": {
+          "en": "The forested mountains of Morne Seychellois National Park rise above the capital, Victoria. The kestrel, blue-pigeon, swiftlet, bulbul and sunbird are easy here; the scops owl lives only in these hills and needs a night walk with a guide.",
+          "nl": "De beboste bergen van nationaal park Morne Seychellois liggen boven de hoofdstad Victoria. De valk, de blauwduif, de salangaan, de buulbuul en de honingzuiger zie je hier makkelijk; de dwergooruil leeft alleen in deze heuvels en vraagt om een nachtwandeling met een gids."
+        }
+      },
+      {
+        "title": {
+          "en": "Praslin and La Digue",
+          "nl": "Praslin en La Digue"
+        },
+        "text": {
+          "en": "The Vallée de Mai on Praslin, a World Heritage Site, is a forest of giant coco de mer palms and the home of the Seychelles Parrot. On La Digue, a short ferry ride away, you'll find the paradise-flycatcher in the Veuve Nature Reserve and the gardens around it.",
+          "nl": "De Vallée de Mai op Praslin, werelderfgoed, is een bos van reusachtige coco-de-merpalmen en het thuis van de Praslinpapegaai. Op La Digue, een kort boottochtje verderop, vind je de paradijsmonarch in het natuurreservaat La Veuve en de tuinen eromheen."
+        }
+      },
+      {
+        "title": {
+          "en": "The small reserve islands",
+          "nl": "De kleine natuureilanden"
+        },
+        "text": {
+          "en": "Cousin and Aride, day trips by boat from Praslin, are rat-free nature reserves. Here the magpie-robin, warbler and fody live among thousands of nesting seabirds. Cousin is open on weekday mornings; landing on Aride can be hard when the south-east trade winds blow, from June to September. Frégate and Denis hold the same birds but are private resort islands.",
+          "nl": "Cousin en Aride, dagtochten per boot vanaf Praslin, zijn natuurreservaten zonder ratten. Hier leven de Seychellenlijster, de rietzanger en de wever tussen duizenden broedende zeevogels. Cousin is op doordeweekse ochtenden open; landen op Aride kan lastig zijn als van juni tot september de zuidoostpassaat waait. Frégate en Denis hebben dezelfde vogels, maar zijn privé-eilanden met een resort."
+        }
+      },
+      {
+        "title": {
+          "en": "Aldabra",
+          "nl": "Aldabra"
+        },
+        "text": {
+          "en": "This raised coral atoll lies about 1,100 kilometres south-west of Mahé and is home to the drongo, the white-eye and the fody of Aldabra. It is a World Heritage Site without an airstrip, so you can only get there on an expedition cruise with a permit.",
+          "nl": "Dit opgeheven koraalatol ligt zo'n 1100 kilometer ten zuidwesten van Mahé en is het thuis van de drongo, de brilvogel en de wever van Aldabra. Het is werelderfgoed zonder landingsbaan, dus je komt er alleen met een expeditiecruise en een vergunning."
+        }
+      }
+    ],
+    "families": [],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "From kestrel to scops owl",
+          "nl": "Van torenvalk tot dwergooruil"
+        }
+      },
+      "endemics-2": {
+        "title": {
+          "en": "From parrot to white-eye",
+          "nl": "Van papegaai tot brilvogel"
+        }
+      },
+      "endemics-3": {
+        "title": {
+          "en": "Sunbird, fodies, white-eye, magpie-robin",
+          "nl": "Honingzuiger, wevers, brilvogel, lijster"
+        }
+      }
+    }
+  }
+}

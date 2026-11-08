@@ -1,0 +1,22 @@
+{
+  "code": "darter2",
+  "name": {
+    "en": "Oriental Darter",
+    "nl": "Indische slangenhalsvogel"
+  },
+  "latin": "Anhinga melanogaster",
+  "look_for": [
+    {
+      "en": "Thin, snake-like neck with a kink",
+      "nl": "Dunne slangachtige hals met een knik"
+    },
+    {
+      "en": "Straight dagger **bill** without a hook",
+      "nl": "Rechte dolkvormige **snavel** zonder haak"
+    },
+    {
+      "en": "Swims with only head and neck above water",
+      "nl": "Zwemt met alleen kop en hals boven water"
+    }
+  ]
+}

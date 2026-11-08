@@ -1,0 +1,22 @@
+{
+  "code": "swafly3",
+  "name": {
+    "en": "Swamp Flycatcher",
+    "nl": "Moerasvliegenvanger"
+  },
+  "latin": "Muscicapa aquatica",
+  "look_for": [
+    {
+      "en": "Dark brown above, white **throat**",
+      "nl": "Donkerbruin van boven, witte **keel**"
+    },
+    {
+      "en": "Brown band across the **breast**",
+      "nl": "Bruine band over de **borst**"
+    },
+    {
+      "en": "Perches low over water and papyrus",
+      "nl": "Zit laag boven water en papyrus"
+    }
+  ]
+}

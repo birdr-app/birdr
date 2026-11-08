@@ -1,0 +1,22 @@
+{
+  "code": "junpri1",
+  "name": {
+    "en": "Jungle Prinia",
+    "nl": "Jungleprinia"
+  },
+  "latin": "Prinia sylvatica",
+  "look_for": [
+    {
+      "en": "Large, sturdy prinia with a dark **bill**",
+      "nl": "Grote, stevige prinia met een donkere **snavel**"
+    },
+    {
+      "en": "Plain grey-brown above, buff below",
+      "nl": "Effen grijsbruin van boven, geelbruin van onder"
+    },
+    {
+      "en": "Bigger and darker than Plain Prinia",
+      "nl": "Groter en donkerder dan de witteugelprinia"
+    }
+  ]
+}

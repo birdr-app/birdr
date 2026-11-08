@@ -1,0 +1,22 @@
+{
+  "code": "crseag1",
+  "name": {
+    "en": "Crested Serpent-Eagle",
+    "nl": "Indische slangenarend"
+  },
+  "latin": "Spilornis cheela",
+  "look_for": [
+    {
+      "en": "Dark brown with small white spots below",
+      "nl": "Donkerbruin met kleine witte stippen op de buik"
+    },
+    {
+      "en": "Bare yellow face and a bushy **crest**",
+      "nl": "Kaal geel gezicht en een dikke **kuif**"
+    },
+    {
+      "en": "Broad white band across tail and wings in flight",
+      "nl": "Vliegend een brede witte band over staart en vleugels"
+    }
+  ]
+}

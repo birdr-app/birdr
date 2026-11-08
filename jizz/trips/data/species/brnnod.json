@@ -1,0 +1,22 @@
+{
+  "code": "brnnod",
+  "name": {
+    "en": "Brown Noddy",
+    "nl": "Bruine noddy"
+  },
+  "latin": "Anous stolidus",
+  "look_for": [
+    {
+      "en": "Chocolate-brown tern with a whitish-grey **cap**",
+      "nl": "Chocoladebruine stern met een witgrijze **kap**"
+    },
+    {
+      "en": "Crisp line between white **forehead** and black face",
+      "nl": "Scherpe grens tussen wit **voorhoofd** en zwart gezicht"
+    },
+    {
+      "en": "Bigger than Lesser Noddy, with a thicker **bill**",
+      "nl": "Groter dan de kleine noddy, met een dikkere **snavel**"
+    }
+  ]
+}

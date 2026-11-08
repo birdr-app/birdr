@@ -1,0 +1,22 @@
+{
+  "code": "pitsni",
+  "name": {
+    "en": "Pin-tailed Snipe",
+    "nl": "Stekelstaartsnip"
+  },
+  "latin": "Gallinago stenura",
+  "look_for": [
+    {
+      "en": "Snipe with a shorter **bill** than Common Snipe",
+      "nl": "Snip met een kortere **snavel** dan de watersnip"
+    },
+    {
+      "en": "Wide pale **eyebrow**, thin dark eye stripe",
+      "nl": "Brede lichte **wenkbrauwstreep**, dunne donkere oogstreep"
+    },
+    {
+      "en": "No white trailing edge to the wing",
+      "nl": "Geen witte achterrand aan de vleugel"
+    }
+  ]
+}

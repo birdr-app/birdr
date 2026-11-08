@@ -1,0 +1,22 @@
+{
+  "code": "compea",
+  "name": {
+    "en": "Indian Peafowl",
+    "nl": "Blauwe pauw"
+  },
+  "latin": "Pavo cristatus",
+  "look_for": [
+    {
+      "en": "Male: shining blue neck and **breast**",
+      "nl": "Man: glanzend blauwe hals en **borst**"
+    },
+    {
+      "en": "Small fan-shaped **crest** on the head",
+      "nl": "Kleine waaiervormige **kuif** op de kop"
+    },
+    {
+      "en": "Long green train full of eyespots",
+      "nl": "Lange groene sleep vol oogvlekken"
+    }
+  ]
+}

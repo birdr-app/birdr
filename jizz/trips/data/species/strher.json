@@ -1,0 +1,22 @@
+{
+  "code": "strher",
+  "name": {
+    "en": "Striated Heron",
+    "nl": "Mangrovereiger"
+  },
+  "latin": "Butorides striata",
+  "look_for": [
+    {
+      "en": "Small, hunched heron with a black **cap**",
+      "nl": "Kleine, ineengedoken reiger met een zwarte **kap**"
+    },
+    {
+      "en": "Grey-green **back**, wing feathers with pale edges",
+      "nl": "Grijsgroene **rug**, vleugelveren met lichte randjes"
+    },
+    {
+      "en": "Short yellow **legs**; waits still on rocks and mangroves",
+      "nl": "Korte gele **poten**; wacht stil op rotsen en in mangroven"
+    }
+  ]
+}

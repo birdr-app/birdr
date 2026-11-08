@@ -1,0 +1,22 @@
+{
+  "code": "alddro1",
+  "name": {
+    "en": "Aldabra Drongo",
+    "nl": "Aldabradrongo"
+  },
+  "latin": "Dicrurus aldabranus",
+  "look_for": [
+    {
+      "en": "All glossy black with a long, forked **tail**",
+      "nl": "Helemaal glanzend zwart met een lange, gevorkte **staart**"
+    },
+    {
+      "en": "Heavy black **bill** and a red **eye**",
+      "nl": "Zware zwarte **snavel** en een rood **oog**"
+    },
+    {
+      "en": "Bold; sallies from a perch after insects",
+      "nl": "Brutaal; vliegt vanaf een zitplek op insecten af"
+    }
+  ]
+}

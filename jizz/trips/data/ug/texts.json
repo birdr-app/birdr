@@ -1,0 +1,721 @@
+{
+  "country": "UG",
+  "intro": {
+    "en": "Uganda lies where the savannas of East Africa meet the rainforests of the Congo basin, so one tour takes you from the papyrus swamps on Lake Victoria to the savanna of Murchison Falls and Queen Elizabeth and the forests of Kibale and Bwindi. More than 1,000 species have been recorded in this small country, and the Shoebill at Mabamba Swamp is the bird most visitors come for. This trip covers the 202 species you meet on a standard tour.",
+    "nl": "Oeganda ligt waar de savannes van Oost-Afrika en de regenwouden van het Kongobekken elkaar raken. Op één reis ga je van de papyrusmoerassen aan het Victoriameer naar de savanne van Murchison Falls en Queen Elizabeth en de bossen van Kibale en Bwindi. In dit kleine land zijn meer dan 1000 soorten gezien, en de schoenbekooievaar in het Mabambamoeras is de vogel waarvoor de meeste bezoekers komen. Deze reis omvat de 202 soorten die je op een gewone rondreis tegenkomt."
+  },
+  "groups": {
+    "waterfowl": {
+      "here": {
+        "en": "Four waterfowl are on this trip. Egyptian and Spur-winged Geese graze along the Kazinga Channel and the Nile; White-faced Whistling-Ducks and Knob-billed Ducks turn up on swamps and lake shores.",
+        "nl": "Deze reis omvat vier watervogels. Nijlganzen en spoorwiekganzen grazen langs het Kazingakanaal en de Nijl; witwangfluiteenden en Afrikaanse knobbeleenden zie je op moerassen en aan meeroevers."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "here": {
+        "en": "Four game birds are on this trip. Helmeted Guineafowl and Crested Francolin are common in the savanna of Lake Mburo, Queen Elizabeth and Murchison Falls; Handsome Spurfowl is an Albertine Rift bird of the mountain forests of Bwindi and Mgahinga.",
+        "nl": "Deze reis omvat vier hoenders. Helmparelhoenders en kuiffrankolijnen zijn algemeen op de savanne van Lake Mburo, Queen Elizabeth en Murchison Falls; de bamboefrankolijn is een vogel van de Albertine Rift en leeft in de bergbossen van Bwindi en Mgahinga."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "Eight pigeons and doves are on this trip. Red-eyed Dove calls from every garden in Entebbe and will be your first; the green-pigeon and the two small forest doves need woodland or a forest edge, such as those around Kibale.",
+        "nl": "Deze reis omvat acht duiven. De roodoogtortel roept in elke tuin in Entebbe en is de eerste die je ziet; voor de papegaaiduif en de twee kleine bosduiven heb je bos of een bosrand nodig, zoals rond Kibale."
+      }
+    },
+    "turacos": {
+      "here": {
+        "en": "Six turacos are on this trip. Great Blue Turaco and Eastern Plantain-eater live in the gardens of Entebbe; Ross's Turaco is at Lake Mburo and Kibale, Black-billed Turaco in the forests of the west, and Rwenzori Turaco only in the mountains of the Albertine Rift.",
+        "nl": "Deze reis omvat zes toerako's. De reuzentoerako en de bandstaartbananeneter leven in de tuinen van Entebbe; de geelmaskertoerako zie je bij Lake Mburo en Kibale, de zwartsnaveltoerako in de bossen van het westen en de Ruwenzoritoerako alleen in de bergen van de Albertine Rift."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "Five cuckoos are on this trip. White-browed Coucal clambers through swamp grass around Entebbe and is the first you'll see; the others are heard far more than seen, and African Emerald Cuckoo calls from the canopy at Kibale and Bwindi.",
+        "nl": "Deze reis omvat vijf koekoeken. De wenkbrauwspoorkoekoek klautert door het moerasgras rond Entebbe en is de eerste die je ziet; de andere hoor je veel vaker dan je ze ziet, en de smaragdkoekoek roept vanuit de boomtoppen in Kibale en Bwindi."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "Three swifts are on this trip. Little Swifts nest in colonies under roofs and bridges in Kampala and Entebbe, and African Palm Swifts circle the palm trees.",
+        "nl": "Deze reis omvat drie gierzwaluwen. Huisgierzwaluwen nestelen in kolonies onder daken en bruggen in Kampala en Entebbe, en Afrikaanse palmgierzwaluwen cirkelen rond de palmen."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Two rails are on this trip. Black Crake walks in the open on floating plants at Mabamba and along the Kazinga Channel; African Swamphen keeps to the edge of the papyrus.",
+        "nl": "Deze reis omvat twee rallen. Het zwart porseleinhoen loopt gewoon in het open over drijvende planten bij Mabamba en langs het Kazingakanaal; de smaragdpurperkoet blijft aan de rand van de papyrus."
+      }
+    },
+    "cranes": {
+      "here": {
+        "en": "Grey Crowned-Crane is Uganda's national bird and stands in the middle of its flag. Pairs and small groups feed in wet grassland and farmland, around Lake Mburo, in Queen Elizabeth and along the roads of the south-west.",
+        "nl": "De grijze kroonkraanvogel is de nationale vogel van Oeganda en staat midden op de vlag. Paartjes en kleine groepen zoeken voedsel in nat grasland en op akkers, rond Lake Mburo, in Queen Elizabeth en langs de wegen in het zuidwesten."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "Twelve shorebirds are on this trip. The lapwings, the jacana and the thick-knee live here all year and are easy along the Kazinga Channel and at Mabamba; Ruff, Greenshank and the sandpipers come from Europe between September and April.",
+        "nl": "Deze reis omvat twaalf steltlopers. De kieviten, de lelieloper en de watergriel wonen hier het hele jaar en zie je makkelijk langs het Kazingakanaal en bij Mabamba; kemphaan, groenpootruiter, oeverloper en bosruiter komen tussen september en april uit Europa."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Five of this group are on this trip. Grey-hooded Gulls and terns feed along the Lake Victoria shore at Entebbe; African Skimmer rests on sandbanks in the Nile at Murchison Falls and on the Kazinga Channel.",
+        "nl": "Deze reis omvat vijf soorten uit deze groep. Grijskopmeeuwen en sterns zoeken voedsel langs de oever van het Victoriameer bij Entebbe; de Afrikaanse schaarbek rust op zandbanken in de Nijl bij Murchison Falls en langs het Kazingakanaal."
+      }
+    },
+    "storks": {
+      "here": {
+        "en": "Four storks are on this trip. You'll meet Marabou Stork first, on rooftops and rubbish tips in Kampala and Entebbe; Saddle-billed Stork is a highlight of the boat trip to the Nile delta in Murchison Falls.",
+        "nl": "Deze reis omvat vier ooievaars. De Afrikaanse maraboe zie je het eerst, op daken en vuilnisbelten in Kampala en Entebbe; de zadelbekooievaar is een hoogtepunt van de boottocht naar de Nijldelta in Murchison Falls."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "Three are on this trip, all common on Lake Victoria, the Kazinga Channel and the Nile. Reed Cormorant is the one you'll find on every swamp edge.",
+        "nl": "Deze reis omvat er drie, alle drie algemeen op het Victoriameer, het Kazingakanaal en de Nijl. De Afrikaanse dwergaalscholver vind je aan de rand van elk moeras."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Twelve herons, egrets and ibises are on this trip. Hadada Ibis and Western Cattle-Egret are the first you'll meet, on the lawns of Entebbe; Goliath and Purple Herons need a boat on the Kazinga Channel or the Nile, or the papyrus at Mabamba.",
+        "nl": "Deze reis omvat twaalf reigers, zilverreigers en ibissen. De hadadaibis en de koereiger zie je het eerst, op de grasvelden van Entebbe; voor de reuzenreiger en de purperreiger heb je een boot op het Kazingakanaal of de Nijl nodig, of de papyrus bij Mabamba."
+      }
+    },
+    "shoebill-and-hammerkop": {
+      "here": {
+        "en": "Two odd birds, each in a family of its own. Hamerkop is common along ditches and lake shores everywhere; Shoebill means a dawn boat trip into Mabamba Swamp near Entebbe or into the Nile delta in Murchison Falls.",
+        "nl": "Twee vreemde vogels, elk in een eigen familie. De hamerkop is overal algemeen langs sloten en meeroevers; voor de schoenbekooievaar maak je bij zonsopgang een boottocht door het Mabambamoeras bij Entebbe of door de Nijldelta in Murchison Falls."
+      }
+    },
+    "pelicans": {
+      "here": {
+        "en": "Two pelicans are on this trip. Both are easy on the Kazinga Channel in Queen Elizabeth, where they rest on the shore among cormorants and hippos.",
+        "nl": "Deze reis omvat twee pelikanen. Je ziet ze allebei makkelijk op het Kazingakanaal in Queen Elizabeth, waar ze tussen aalscholvers en nijlpaarden op de oever rusten."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "Fifteen raptors are on this trip. Black Kite and African Fish-Eagle are the ones you'll meet in Entebbe; vultures, Bateleur and Martial Eagle soar over the savanna of Murchison Falls and Queen Elizabeth, and Crowned Eagle hunts monkeys in the forest.",
+        "nl": "Deze reis omvat vijftien roofvogels. De zwarte wouw en de Afrikaanse zeearend zie je al in Entebbe; gieren, de bateleur en de vechtarend zweven boven de savanne van Murchison Falls en Queen Elizabeth, en de kroonarend jaagt in het bos op apen."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "Two owls are on this trip. Verreaux's Eagle-Owl roosts by day in big trees in the savanna parks, and your driver may know where; African Wood-Owl is heard at night around the lodges at Kibale and Bwindi.",
+        "nl": "Deze reis omvat twee uilen. De melkoehoe zit overdag in grote bomen in de savanneparken, en je chauffeur weet vaak waar; de Afrikaanse bosuil hoor je 's nachts rond de lodges bij Kibale en Bwindi."
+      }
+    },
+    "mousebirds": {
+      "here": {
+        "en": "Speckled Mousebird is the only mousebird on this trip. Small groups clamber through gardens and scrub around Kampala and Entebbe, often hanging from a branch with the tail straight down.",
+        "nl": "De bruine muisvogel is de enige muisvogel op deze reis. Groepjes klauteren door tuinen en struiken rond Kampala en Entebbe en hangen vaak aan een tak met de staart recht naar beneden."
+      }
+    },
+    "trogons-and-quetzals": {
+      "here": {
+        "en": "Narina Trogon is the only trogon on this trip. It lives in the forests of Kibale, Bwindi and Mabira, where you'll hear its soft hooting before you find it.",
+        "nl": "De narinatrogon is de enige trogon op deze reis. Hij leeft in de bossen van Kibale, Bwindi en Mabira, waar je zijn zachte gehoe hoort voordat je hem vindt."
+      }
+    },
+    "hornbills": {
+      "here": {
+        "en": "Five hornbills are on this trip. Black-and-white-casqued Hornbills fly noisily over the gardens of Entebbe and the forest at Kibale; Abyssinian Ground-Hornbill lives in the north, in Murchison Falls.",
+        "nl": "Deze reis omvat vijf neushoornvogels. Grijsoorneushoornvogels vliegen luidruchtig over de tuinen van Entebbe en het bos van Kibale; de noordelijke hoornraaf leeft in het noorden, in Murchison Falls."
+      }
+    },
+    "bee-eaters": {
+      "here": {
+        "en": "Six bee-eaters are on this trip, each in its own habitat. Little and Blue-breasted Bee-eaters perch low in grass and at swamp edges; Red-throated Bee-eaters nest in the banks of the Nile at Murchison Falls, and Cinnamon-chested Bee-eater sits at forest edges in the hills around Bwindi.",
+        "nl": "Deze reis omvat zes bijeneters, elk met een eigen leefgebied. De dwergbijeneter en de blauwborstbijeneter zitten laag in het gras en aan moerasranden; roodkeelbijeneters broeden in de oevers van de Nijl bij Murchison Falls, en de bergbijeneter zit aan bosranden in de heuvels rond Bwindi."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "Six kingfishers are on this trip. Pied Kingfisher is the first, hovering over Lake Victoria at Entebbe; a boat trip on the Kazinga Channel shows several kinds in one afternoon.",
+        "nl": "Deze reis omvat zes ijsvogels. De bonte ijsvogel zie je het eerst, biddend boven het Victoriameer bij Entebbe; een boottocht op het Kazingakanaal laat er in één middag meerdere zien."
+      }
+    },
+    "rollers-and-allies": {
+      "here": {
+        "en": "Two rollers are on this trip. Broad-billed Roller sits high on dead trees at forest edges and in Entebbe; Lilac-breasted Roller is a bird of dry, open savanna.",
+        "nl": "Deze reis omvat twee scharrelaars. De breedbekscharrelaar zit hoog in dode bomen aan bosranden en in Entebbe; de vorkstaartscharrelaar is een vogel van droge, open savanne."
+      }
+    },
+    "barbets-and-toucans": {
+      "here": {
+        "en": "Four barbets are on this trip. Double-toothed Barbet is common in the gardens of Entebbe; Grey-throated Barbet is a forest bird of Kibale, and Spot-flanked Barbet lives in the savanna of Lake Mburo and Queen Elizabeth.",
+        "nl": "Deze reis omvat vier baardvogels. De dubbeltandbaardvogel is algemeen in de tuinen van Entebbe; de grijskeelborstelneus is een bosvogel van Kibale, en de rouwbaardvogel leeft op de savanne van Lake Mburo en Queen Elizabeth."
+      }
+    },
+    "woodpeckers": {
+      "here": {
+        "en": "Two woodpeckers are on this trip. Both are common in gardens, savanna and forest edges; listen for the quiet tapping of the small Cardinal Woodpecker in thin branches.",
+        "nl": "Deze reis omvat twee spechten. Beide zijn algemeen in tuinen, op de savanne en aan bosranden; luister naar het zachte getik van de kleine kardinaalspecht in dunne takken."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "Grey Kestrel is the only falcon on this trip, a stocky all-grey bird that perches on poles and dead trees along the roads.",
+        "nl": "De grijze torenvalk is de enige valk op deze reis, een stevige, helemaal grijze vogel die op palen en dode bomen langs de weg zit."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "Two parrots are on this trip. Meyer's Parrot lives in the savanna of Lake Mburo and Queen Elizabeth; Grey Parrots are scarce and mostly seen flying over the forest at Kibale.",
+        "nl": "Deze reis omvat twee papegaaien. De Meyerpapegaai leeft op de savanne van Lake Mburo en Queen Elizabeth; grijze roodstaartpapegaaien zijn schaars en zie je meestal overvliegen boven het bos van Kibale."
+      }
+    },
+    "old-world-orioles": {
+      "here": {
+        "en": "African Black-headed Oriole is the only oriole on this trip. You'll hear its liquid whistle in the gardens of Entebbe and in every wooded park.",
+        "nl": "De maskerwielewaal is de enige wielewaal op deze reis. Zijn vloeiende fluittoon hoor je in de tuinen van Entebbe en in elk bebost park."
+      }
+    },
+    "wattle-eyes-and-batises": {
+      "here": {
+        "en": "Two of this group are on this trip. Chinspot Batis lives in savanna woodland such as Lake Mburo; Chestnut Wattle-eye feeds low in the forest at Kibale and Bwindi.",
+        "nl": "Deze reis omvat twee soorten uit deze groep. De witflankvliegenvanger leeft in savannebos zoals bij Lake Mburo; de witstuitlelvliegenvanger zoekt laag in het bos van Kibale en Bwindi naar voedsel."
+      }
+    },
+    "bushshrikes-and-allies": {
+      "here": {
+        "en": "Four bushshrikes are on this trip. Black-headed Gonolek shows its scarlet breast in the papyrus and gardens around Entebbe; Tropical Boubou is heard in every thicket.",
+        "nl": "Deze reis omvat vier struikklauwieren. De zwartkopfiskaal laat zijn scharlakenrode borst zien in de papyrus en de tuinen rond Entebbe; de tropische fiskaal hoor je in elk struikgewas."
+      }
+    },
+    "drongos": {
+      "here": {
+        "en": "Fork-tailed Drongo is the only drongo on this trip. It perches on bare branches in savanna and at forest edges and copies the calls of other birds.",
+        "nl": "De treurdrongo is de enige drongo op deze reis. Hij zit op kale takken op de savanne en aan bosranden en doet de roep van andere vogels na."
+      }
+    },
+    "monarch-flycatchers": {
+      "here": {
+        "en": "African Paradise-Flycatcher is the only monarch on this trip, common in gardens and woodland; the male trails a long rufous tail.",
+        "nl": "De Afrikaanse paradijsmonarch is de enige monarch op deze reis en is algemeen in tuinen en bos; het mannetje sleept een lange roodbruine staart achter zich aan."
+      }
+    },
+    "shrikes": {
+      "here": {
+        "en": "Three shrikes are on this trip. Grey-backed Fiscals sit in chattering groups on wires in Entebbe and Kampala and are the first you'll see; Mackinnon's Shrike lives on forest edges in the south-west.",
+        "nl": "Deze reis omvat drie klauwieren. Grijsrugklapeksters zitten in kwetterende groepjes op draden in Entebbe en Kampala en zijn de eerste die je ziet; de Mackinnonklauwier leeft aan bosranden in het zuidwesten."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "Pied Crow is the only crow on this trip: black with a white breast and collar, and common in every town.",
+        "nl": "De schildraaf is de enige kraai op deze reis: zwart met een witte borst en kraag, en algemeen in elke stad."
+      }
+    },
+    "larks": {
+      "here": {
+        "en": "Rufous-naped Lark is the only lark on this trip. It sings from bushes and termite mounds in the grassland of Lake Mburo and Queen Elizabeth.",
+        "nl": "De roodnekleeuwerik is de enige leeuwerik op deze reis. Hij zingt vanaf struiken en termietenheuvels in het grasland van Lake Mburo en Queen Elizabeth."
+      }
+    },
+    "cisticolas-and-allies": {
+      "here": {
+        "en": "Four of this group are on this trip. Tawny-flanked Prinia and Green-backed Camaroptera live in every garden and are the first you'll hear; Winding Cisticola sings from the edge of every swamp.",
+        "nl": "Deze reis omvat vier soorten uit deze groep. De roestflankprinia en de mekkercamaroptera zitten in elke tuin en hoor je het eerst; de oevergraszanger zingt aan de rand van elk moeras."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "Five swallows are on this trip. Angola Swallow nests on buildings in Entebbe and is the one you'll meet first; from September to April, Barn Swallows from Europe are everywhere.",
+        "nl": "Deze reis omvat vijf zwaluwen. De Angolese zwaluw nestelt aan gebouwen in Entebbe en zie je het eerst; van september tot april zijn er overal boerenzwaluwen uit Europa."
+      }
+    },
+    "bulbuls": {
+      "here": {
+        "en": "Three bulbuls are on this trip. Common Bulbul is in every garden and the first bird you'll hear in the morning; Little and Yellow-whiskered Greenbuls sing from the undergrowth at Kibale and Bwindi.",
+        "nl": "Deze reis omvat drie buulbuuls. De grauwe buulbuul zit in elke tuin en is 's ochtends de eerste vogel die je hoort; de groene buulbuul en de geelbaardbuulbuul zingen in de ondergroei van Kibale en Bwindi."
+      }
+    },
+    "leaf-warblers": {
+      "here": {
+        "en": "Willow Warbler is the only leaf warbler on this trip. It comes from Europe in September and stays until April, feeding in gardens, acacias and forest edges.",
+        "nl": "De fitis is de enige boszanger op deze reis. Hij komt in september uit Europa en blijft tot april; je ziet hem in tuinen, acacia's en aan bosranden."
+      }
+    },
+    "white-eyes-yuhinas-and-allies": {
+      "here": {
+        "en": "Northern Yellow White-eye is the only white-eye on this trip, common in gardens and at forest edges in small, busy flocks.",
+        "nl": "De noordelijke gele brilvogel is de enige brilvogel op deze reis en is algemeen in tuinen en aan bosranden, in kleine, drukke groepjes."
+      }
+    },
+    "laughingthrushes-and-allies": {
+      "here": {
+        "en": "Three babblers are on this trip. They move in noisy family groups through thickets; Arrow-marked and Black-lored Babblers are easy at Lake Mburo, Brown Babbler lives in the north at Murchison Falls.",
+        "nl": "Deze reis omvat drie babbelaars. Ze trekken in luidruchtige familiegroepen door het struikgewas; de pijlpuntbabbelaar en de Taborababbelaar zie je makkelijk bij Lake Mburo, de Sahelbabbelaar leeft in het noorden bij Murchison Falls."
+      }
+    },
+    "oxpeckers": {
+      "here": {
+        "en": "Two oxpeckers are on this trip. Yellow-billed Oxpecker is the common one on buffalo in Queen Elizabeth and Murchison Falls; look for Red-billed Oxpecker at Lake Mburo.",
+        "nl": "Deze reis omvat twee ossenpikkers. De geelsnavelossenpikker is de gewone op buffels in Queen Elizabeth en Murchison Falls; zoek de roodsnavelossenpikker bij Lake Mburo."
+      }
+    },
+    "starlings-and-mynas": {
+      "here": {
+        "en": "Five starlings are on this trip. Rüppell's and Greater Blue-eared Starlings are savanna birds of Queen Elizabeth and Lake Mburo; Splendid and Purple-headed Starlings live in forest and gardens near Entebbe and Kibale.",
+        "nl": "Deze reis omvat vijf spreeuwen. De blauwe langstaartglansspreeuw en de groenstaartglansspreeuw zijn savannevogels van Queen Elizabeth en Lake Mburo; de prachtglansspreeuw en de purperkopglansspreeuw leven in bos en tuinen bij Entebbe en Kibale."
+      }
+    },
+    "thrushes": {
+      "here": {
+        "en": "African Thrush is the only thrush on this trip. It hops over the lawns of Entebbe and Kampala much like a Blackbird at home.",
+        "nl": "De pelioslijster is de enige lijster op deze reis. Hij hupt over de grasvelden van Entebbe en Kampala, net als een merel thuis."
+      }
+    },
+    "old-world-flycatchers": {
+      "here": {
+        "en": "Eight of this group are on this trip: flycatchers, chats and a robin-chat. White-browed Robin-Chat sings in every Entebbe garden; Silverbird and Sooty Chat are savanna birds of Murchison Falls, Queen Elizabeth and Lake Mburo.",
+        "nl": "Deze reis omvat acht soorten uit deze groep: vliegenvangers, tapuiten en een lawaaimaker. De witbrauwlawaaimaker zingt in elke tuin in Entebbe; de zilvervliegenvanger en de zwarte miertapuit zijn savannevogels van Murchison Falls, Queen Elizabeth en Lake Mburo."
+      }
+    },
+    "sunbirds-and-spiderhunters": {
+      "here": {
+        "en": "Eight sunbirds are on this trip. Red-chested Sunbird is common in gardens on the Lake Victoria shore and the first you'll see; Bronze Sunbird belongs to the highlands around Bwindi and Kabale.",
+        "nl": "Deze reis omvat acht honingzuigers. De sierhoningzuiger is algemeen in tuinen aan het Victoriameer en de eerste die je ziet; de bronshoningzuiger hoort bij het hoogland rond Bwindi en Kabale."
+      }
+    },
+    "weavers-and-allies": {
+      "here": {
+        "en": "Twelve of this group are on this trip, including a bishop and a widowbird. Village and Black-headed Weavers nest in noisy colonies around Entebbe and are the first you'll see; several others nest in the papyrus at Mabamba and along the lake shores, and Fox's Weaver lives only in the east.",
+        "nl": "Deze reis omvat twaalf soorten uit deze groep, waaronder een oranje wever en een widavink. De grote textorwever en de zwartkopwever broeden in luidruchtige kolonies rond Entebbe en zie je het eerst; verschillende andere nestelen in de papyrus bij Mabamba en langs de meeroevers, en de Foxwever leeft alleen in het oosten."
+      }
+    },
+    "estrildids": {
+      "here": {
+        "en": "Six of this group are on this trip. Bronze Mannikins feed on grass seeds in every garden in Entebbe; Black-crowned Waxbill is common in the highlands of the south-west.",
+        "nl": "Deze reis omvat zes prachtvinken. Gewone ekstertjes eten graszaad in elke tuin in Entebbe; de nonastrild is algemeen in het hoogland van het zuidwesten."
+      }
+    },
+    "whydahs-and-indigobirds": {
+      "here": {
+        "en": "Pin-tailed Whydah is the only whydah on this trip. It lays its eggs in the nests of waxbills and is common in grassy gardens and fields.",
+        "nl": "De dominicanerwida is de enige wida op deze reis. Hij legt zijn eieren in de nesten van astrilden en is algemeen in grazige tuinen en velden."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "Northern Grey-headed Sparrow is the only sparrow on this trip. It lives around houses and markets, where you would expect a House Sparrow.",
+        "nl": "De grijskopmus is de enige mus op deze reis. Hij leeft rond huizen en markten, waar je een huismus zou verwachten."
+      }
+    },
+    "wagtails-and-pipits": {
+      "here": {
+        "en": "Five of this group are on this trip. African Pied Wagtail is on every lawn and roof in Entebbe and Kampala; Western Yellow Wagtails come from Europe for the winter and feed around grazing cattle.",
+        "nl": "Deze reis omvat vijf soorten uit deze groep. De Afrikaanse bonte kwikstaart zit op elk grasveld en dak in Entebbe en Kampala; gele kwikstaarten komen 's winters uit Europa en zoeken voedsel rond grazend vee."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "here": {
+        "en": "Two canaries are on this trip. Yellow-fronted Canary is common in savanna and gardens; Brimstone Canary prefers bushy edges and farmland.",
+        "nl": "Deze reis omvat twee kanaries. De Mozambiquesijs is algemeen op de savanne en in tuinen; de zwavelkanarie zit liever in struikranden en op akkers."
+      }
+    }
+  },
+  "units": {
+    "waterfowl": {
+      "title": {"en": "Ducks and geese", "nl": "Eenden en ganzen"},
+      "intro": {
+        "en": "Four big, easy waterfowl of lakes and swamps. Egyptian Goose you may know from home; Spur-winged Goose is larger and glossy black and white, and the male Knob-billed Duck has a black knob on its bill. White-faced Whistling-Ducks stand in noisy groups at the water's edge.",
+        "nl": "Vier grote, makkelijke watervogels van meren en moerassen. De nijlgans ken je misschien van thuis; de spoorwiekgans is groter en glanzend zwart-wit, en het mannetje van de Afrikaanse knobbeleend heeft een zwarte knobbel op de snavel. Witwangfluiteenden staan in luidruchtige groepjes aan de waterkant."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "title": {"en": "Guineafowl, francolin and spurfowl", "nl": "Parelhoen en frankolijnen"},
+      "intro": {
+        "en": "Ground birds that run rather than fly. Helmeted Guineafowl walk the savanna in flocks; the others are brown and scaly, so look at the throat and the legs. Red-necked Spurfowl has bare red skin on the throat, and Crested Francolin cocks its tail like a bantam.",
+        "nl": "Grondvogels die liever rennen dan vliegen. Helmparelhoenders lopen in groepen over de savanne; de andere drie zijn bruin en geschubd, dus let op de keel en de poten. De roodkeelfrankolijn heeft kale rode huid op de keel, en de kuiffrankolijn houdt zijn staart omhoog als een kriel."
+      }
+    },
+    "pigeons-and-doves-1": {
+      "title": {"en": "Doves of gardens and savanna", "nl": "Tortels van tuin en savanne"},
+      "intro": {
+        "en": "The doves you'll see every day. Three are pinkish-grey and look alike: Red-eyed Dove is the largest, with a dark half-collar and red skin around the eye, Ring-necked Dove is paler, and Laughing Dove has no collar and a speckled breast. The wood-dove flashes rufous wings as it flies up from a track.",
+        "nl": "De duiven die je elke dag ziet. Drie zijn roze-grijs en lijken op elkaar: de roodoogtortel is de grootste, met een donkere halve halsband en rode huid rond het oog, de Kaapse tortel is lichter, en de palmtortel heeft geen halsband en een gespikkelde borst. De smaragdvlekduif laat roodbruine vleugels zien als hij van een pad opvliegt."
+      }
+    },
+    "pigeons-and-doves-2": {
+      "title": {"en": "Town pigeon and forest doves", "nl": "Stadsduif en bosduiven"},
+      "intro": {
+        "en": "Speckled Pigeons nest on buildings in towns; the other three live in woodland and forest. The two small doves both fly up on rufous wings: Tambourine Dove has a white face and belly, Blue-spotted Wood-Dove a red bill with a yellow tip. African Green-Pigeons climb through fig trees like parrots.",
+        "nl": "Gespikkelde duiven nestelen op gebouwen in de stad; de andere drie leven in bos. De twee kleine duifjes vliegen allebei op met roodbruine vleugels: de tamboerijnduif heeft een wit gezicht en een witte buik, de staalvlekduif een rode snavel met een gele punt. Afrikaanse papegaaiduiven klimmen als papegaaien door vijgenbomen."
+      }
+    },
+    "turacos": {
+      "title": {"en": "Turacos, plantain-eater and go-away-bird", "nl": "Toerako's en bananeneter"},
+      "intro": {
+        "en": "Big, long-tailed fruit-eaters that run along branches and glide from tree to tree. Great Blue Turaco is the size of a chicken; Ross's, Black-billed and Rwenzori Turacos flash crimson in the wings when they fly. The plantain-eater and the go-away-bird are grey and loud.",
+        "nl": "Grote vruchteneters met een lange staart, die over takken rennen en van boom naar boom zweven. De reuzentoerako is zo groot als een kip; de geelmaskertoerako, de zwartsnaveltoerako en de Ruwenzoritoerako laten in de vlucht karmijnrode vleugels zien. De bananeneter en de maskertoerako zijn grijs en luidruchtig."
+      }
+    },
+    "cuckoos": {
+      "title": {"en": "Cuckoos and a coucal", "nl": "Koekoeken en een spoorkoekoek"},
+      "intro": {
+        "en": "Four cuckoos you'll hear far more often than see, and a coucal that is easy. Dideric and Klaas's Cuckoos are glossy green and white: Dideric has white spots on the wing, Klaas's a white patch behind the eye. Red-chested Cuckoo calls its three notes all day in the rainy season.",
+        "nl": "Vier koekoeken die je veel vaker hoort dan ziet, en een spoorkoekoek die makkelijk is. De diederikkoekoek en de Klaaskoekoek zijn glanzend groen en wit: de diederik heeft witte vlekken op de vleugel, de Klaaskoekoek een witte vlek achter het oog. De heremietkoekoek roept in het regenseizoen de hele dag zijn drie tonen."
+      }
+    },
+    "swifts": {
+      "title": {"en": "Swifts, a crane, a crake and a swamphen", "nl": "Gierzwaluwen, kraanvogel en rallen"},
+      "intro": {
+        "en": "Three swifts overhead: Little Swift has a square tail and a broad white rump, White-rumped Swift a deep fork and a thin white band, Palm Swift is slim and all brown. Down at the water, the crake walks on lily pads with red legs and a yellow bill, the swamphen is purple-blue, and the crowned-crane stands in wet fields with its golden crest.",
+        "nl": "Drie gierzwaluwen in de lucht: de huisgierzwaluw heeft een rechte staart en een brede witte stuit, de pijlstaartgierzwaluw een diepe vork en een smalle witte band, de palmgierzwaluw is slank en helemaal bruin. Beneden bij het water loopt het porseleinhoen met rode poten en een gele snavel over waterlelies, de purperkoet is paarsblauw, en de kroonkraanvogel staat met zijn gouden kuif in natte velden."
+      }
+    },
+    "shorebirds-1": {
+      "title": {"en": "Lapwings, a stilt and a thick-knee", "nl": "Kieviten, steltkluut en griel"},
+      "intro": {
+        "en": "Four lapwings, each in its own habitat. Long-toed Lapwing walks on floating plants, Spur-winged and Wattled stand by water and in wet grass, and Crowned Lapwing likes short, dry grass; look at the head pattern first. The thick-knee rests on the shore by day and stares with big yellow eyes.",
+        "nl": "Vier kieviten, elk met een eigen leefgebied. De langteenkievit loopt over drijvende planten, de sporenkievit en de lelkievit staan bij water en in nat gras, en de diadeemkievit houdt van kort, droog gras; let eerst op de tekening van de kop. De watergriel rust overdag op de oever en kijkt met grote gele ogen."
+      }
+    },
+    "shorebirds-2": {
+      "title": {"en": "Sandpipers, jacana and pratincole", "nl": "Ruiters, lelieloper en vorkstaartplevier"},
+      "intro": {
+        "en": "Four of these come from Europe between September and April, and you may know them already. The African Jacana walks over lily pads on very long toes, and the Rock Pratincole sits on wet rocks in the rapids of the Nile.",
+        "nl": "Vier hiervan komen tussen september en april uit Europa, en die ken je misschien al. De lelieloper loopt op heel lange tenen over waterlelies, en de rotsvorkstaartplevier zit op natte rotsen in de stroomversnellingen van de Nijl."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {"en": "Gulls, terns and a skimmer", "nl": "Meeuwen, sterns en een schaarbek"},
+      "intro": {
+        "en": "Grey-hooded Gull is the gull of Lake Victoria, pale with a red bill. Lesser Black-backed Gulls and White-winged Black Terns come from the north for the winter; in winter dress the two terns look alike, and White-winged has the whiter rump. The skimmer flies low over calm water with its long lower bill cutting the surface.",
+        "nl": "De grijskopmeeuw is de meeuw van het Victoriameer, licht met een rode snavel. Kleine mantelmeeuwen en witvleugelsterns komen 's winters uit het noorden; in winterkleed lijken de twee sterns op elkaar, en de witvleugelstern heeft de wittere stuit. De schaarbek vliegt laag over kalm water en snijdt met zijn lange ondersnavel door het oppervlak."
+      }
+    },
+    "storks": {
+      "title": {"en": "Storks", "nl": "Ooievaars"},
+      "intro": {
+        "en": "Four big storks of wetlands and savanna. Marabou Stork, bald and hunched, scavenges in Kampala; Yellow-billed Stork has a red face and a yellow bill, and the openbill has a gap between the halves of its bill for cracking snails. Saddle-billed Stork, the tallest, has a red, black and yellow bill.",
+        "nl": "Vier grote ooievaars van moeras en savanne. De Afrikaanse maraboe, kaal en gebogen, zoekt afval in Kampala; de nimmerzat heeft een rood gezicht en een gele snavel, en de gaper heeft een opening tussen de twee snavelhelften om slakken te kraken. De zadelbekooievaar, de grootste, heeft een rood, zwart en geel getekende snavel."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "title": {"en": "Cormorants and a darter", "nl": "Aalscholvers en een slangenhalsvogel"},
+      "intro": {
+        "en": "Great Cormorant is the bird you know, here with a white throat and breast. Reed Cormorant is much smaller with a long tail; the darter has a thin, snake-like neck and swims with only its head above water.",
+        "nl": "De aalscholver ken je al; hier heeft hij een witte keel en borst. De Afrikaanse dwergaalscholver is veel kleiner en heeft een lange staart; de slangenhalsvogel heeft een dunne nek als een slang en zwemt met alleen zijn kop boven water."
+      }
+    },
+    "herons-ibis-and-allies-1": {
+      "title": {"en": "Egrets and familiar herons", "nl": "Zilverreigers en bekende reigers"},
+      "intro": {
+        "en": "Six herons you may know from southern Europe. Use them to learn where each one hunts: Western Cattle-Egrets follow buffalo and cattle, Squacco Herons hunch at the edge of the papyrus and turn white when they fly, and Purple Herons hide in the reeds.",
+        "nl": "Zes reigers die je misschien uit Zuid-Europa kent. Leer aan de hand van deze soorten waar elke reiger jaagt: koereigers lopen achter buffels en koeien aan, ralreigers zitten ineengedoken aan de rand van de papyrus en worden wit als ze opvliegen, en purperreigers verstoppen zich in het riet."
+      }
+    },
+    "herons-ibis-and-allies-2": {
+      "title": {"en": "Ibises and African herons", "nl": "Ibissen en Afrikaanse reigers"},
+      "intro": {
+        "en": "Hadada Ibis wakes you at dawn in Entebbe with its loud 'ha-ha-haa'. Black-headed Heron hunts in dry grass away from water; Goliath Heron, the largest heron in the world, stands still at the water's edge. Striated Heron is small and dark, crouched on roots and branches over the water.",
+        "nl": "De hadadaibis maakt je bij zonsopgang in Entebbe wakker met zijn luide 'ha-ha-haa'. De zwartkopreiger jaagt in droog gras, ver van het water; de reuzenreiger, de grootste reiger ter wereld, staat roerloos aan de waterkant. De mangrovereiger is klein en donker en zit ineengedoken op wortels en takken boven het water."
+      }
+    },
+    "shoebill-and-hammerkop": {
+      "title": {"en": "Shoebill, Hamerkop and pelicans", "nl": "Schoenbekooievaar, hamerkop en pelikanen"},
+      "intro": {
+        "en": "Shoebill is the bird many visitors come for: tall, grey and very still, with a huge bill. Hamerkop is small and brown with a hammer-shaped head and builds huge nests in trees. Of the pelicans, Great White is larger and whiter, Pink-backed smaller and greyer, and it often perches in trees.",
+        "nl": "De schoenbekooievaar is de vogel waarvoor veel bezoekers komen: groot, grijs en heel stil, met een enorme snavel. De hamerkop is klein en bruin met een kop als een hamer en bouwt reusachtige nesten in bomen. Van de pelikanen is de roze pelikaan groter en witter, de kleine pelikaan kleiner en grijzer, en die zit vaak in bomen."
+      }
+    },
+    "vultures-hawks-and-allies-1": {
+      "title": {"en": "Vultures, a kite and a harrier-hawk", "nl": "Gieren, wouw en kaalkopkiekendief"},
+      "intro": {
+        "en": "Three vultures and two raptors you'll see from the road. Palm-nut Vulture is white and black and eats oil-palm fruit near water; Hooded Vulture is small and brown with a thin bill, White-backed big with a pale back. Black-winged Kite hovers over grassland, and the harrier-hawk clambers over tree trunks to raid nests.",
+        "nl": "Drie gieren en twee roofvogels die je vanaf de weg ziet. De palmgier is wit met zwart en eet vruchten van oliepalmen bij het water; de kapgier is klein en bruin met een dunne snavel, de witruggier groot met een lichte rug. De grijze wouw bidt boven grasland, en de kaalkopkiekendief klautert langs boomstammen om nesten te plunderen."
+      }
+    },
+    "vultures-hawks-and-allies-2": {
+      "title": {"en": "Eagles", "nl": "Arenden"},
+      "intro": {
+        "en": "Five eagles, from the roadside to the forest. Long-crested Eagle sits on poles with its floppy crest, Brown Snake-Eagle perches upright and stares with big yellow eyes, and Tawny Eagle is plain brown. Martial Eagle is the biggest eagle of the savanna; Crowned Eagle hunts monkeys in the forests of Kibale and Bwindi.",
+        "nl": "Vijf arenden, van de wegkant tot in het bos. De Afrikaanse kuifarend zit op palen met zijn slappe kuif, de bruine slangenarend zit rechtop en kijkt met grote gele ogen, en de savannearend is effen bruin. De vechtarend is de grootste arend van de savanne; de kroonarend jaagt op apen in de bossen van Kibale en Bwindi."
+      }
+    },
+    "vultures-hawks-and-allies-3": {
+      "title": {"en": "Fish-eagle, buzzards, kite and bateleur", "nl": "Zeearend, buizerds, wouw en bateleur"},
+      "intro": {
+        "en": "African Fish-Eagle, white-headed and loud, sits in trees above every lake. Black Kites circle over Kampala, and the Bateleur rocks from side to side on short-tailed wings over the savanna. Augur Buzzard has a red tail and white underparts and is common in the hilly south-west; Lizard Buzzard is small and grey with a black stripe down its white throat.",
+        "nl": "De Afrikaanse zeearend, met witte kop en luide roep, zit in bomen boven elk meer. Zwarte wouwen cirkelen boven Kampala, en de bateleur schommelt op vleugels met een korte staart boven de savanne. De augurbuizerd heeft een rode staart en een witte onderkant en is algemeen in het heuvelachtige zuidwesten; de hagedisbuizerd is klein en grijs met een zwarte streep over zijn witte keel."
+      }
+    },
+    "owls": {
+      "title": {"en": "Mousebird, owls and a trogon", "nl": "Muisvogel, uilen en een trogon"},
+      "intro": {
+        "en": "Four birds with little in common. The mousebird is brown and long-tailed and creeps through bushes in small gangs. Verreaux's Eagle-Owl is huge and pale grey with pink eyelids; African Wood-Owl calls at night around forest lodges. Narina Trogon sits still in the forest, green above and red below, often with its back to you.",
+        "nl": "Vier vogels met weinig gemeen. De muisvogel is bruin met een lange staart en sluipt in kleine groepjes door struiken. De melkoehoe is enorm en lichtgrijs met roze oogleden; de Afrikaanse bosuil roept 's nachts rond lodges in het bos. De narinatrogon zit stil in het bos, groen van boven en rood van onder, vaak met zijn rug naar je toe."
+      }
+    },
+    "hornbills": {
+      "title": {"en": "Hornbills and a ground-hornbill", "nl": "Neushoornvogels en een hoornraaf"},
+      "intro": {
+        "en": "Big birds with heavy, curved bills. In forest, the casqued hornbills fly over with loud wingbeats: Black-and-white-casqued has a huge pale casque, Piping Hornbill a small one, and Crowned Hornbill a red bill. African Grey Hornbill lives in savanna; the ground-hornbill is the size of a turkey and walks through the grass.",
+        "nl": "Grote vogels met een zware, gebogen snavel. In het bos vliegen de neushoornvogels met luide vleugelslagen over: de grijsoorneushoornvogel heeft een enorme lichte hoorn op de snavel, de fluitneushoornvogel een kleine, en de kuiftok een rode snavel. De grijze tok leeft op de savanne; de hoornraaf is zo groot als een kalkoen en loopt door het gras."
+      }
+    },
+    "bee-eaters": {
+      "title": {"en": "Bee-eaters", "nl": "Bijeneters"},
+      "intro": {
+        "en": "Six colourful bee-eaters that sit on open perches and fly out for insects. Look at the throat, the breast and the tail: Little and Blue-breasted Bee-eaters are small and green, White-throated has long tail streamers, and Northern Carmine is large and pink-red.",
+        "nl": "Zes kleurrijke bijeneters die op open plekken zitten en uitvliegen naar insecten. Let op de keel, de borst en de staart: de dwergbijeneter en de blauwborstbijeneter zijn klein en groen, de witkeelbijeneter heeft lange staartpennen, en de noordelijke karmijnrode bijeneter is groot en roze-rood."
+      }
+    },
+    "kingfishers": {
+      "title": {"en": "Kingfishers", "nl": "IJsvogels"},
+      "intro": {
+        "en": "Three of these fish and three hunt insects on land. Pied Kingfisher hovers over open water, the tiny Malachite sits low in the reeds, and the Giant perches on branches over rivers. Woodland and Grey-headed Kingfishers sit in trees away from water; the African Pygmy is as small as the Malachite but has no crest and violet cheeks.",
+        "nl": "Drie hiervan vissen en drie jagen op het land op insecten. De bonte ijsvogel bidt boven open water, de piepkleine malachietijsvogel zit laag in het riet, en de reuzenijsvogel zit op takken boven rivieren. De Senegalijsvogel en de grijskopijsvogel zitten in bomen, weg van het water; de Afrikaanse dwergijsvogel is even klein als de malachietijsvogel, maar heeft geen kuif en paarse wangen."
+      }
+    },
+    "rollers-and-allies": {
+      "title": {"en": "Rollers", "nl": "Scharrelaars"},
+      "intro": {
+        "en": "Lilac-breasted Roller is pale blue with a lilac breast and sits on bare branches in the savanna. Broad-billed Roller is dark cinnamon with a bright yellow bill and hunts insects in the air at dusk, often in noisy groups.",
+        "nl": "De vorkstaartscharrelaar is lichtblauw met een lila borst en zit op kale takken op de savanne. De breedbekscharrelaar is donker kaneelbruin met een felgele snavel en vangt in de schemering insecten in de lucht, vaak in luidruchtige groepjes."
+      }
+    },
+    "barbets-and-toucans": {
+      "title": {"en": "Barbets and a tinkerbird", "nl": "Baardvogels en een ketellapper"},
+      "intro": {
+        "en": "Stocky birds with heavy bills that sit in fruiting trees. Double-toothed Barbet is red and black with a pale bill; Spot-flanked Barbet is black and white with a red forehead. Grey-throated Barbet lives in the forest, and the tiny tinkerbird repeats a single 'tonk' from the canopy.",
+        "nl": "Stevige vogels met een zware snavel die in bomen met vruchten zitten. De dubbeltandbaardvogel is rood en zwart met een lichte snavel; de rouwbaardvogel is zwart-wit met een rood voorhoofd. De grijskeelborstelneus leeft in het bos, en de piepkleine ketellapper herhaalt eindeloos één 'tonk' vanuit de boomtoppen."
+      }
+    },
+    "woodpeckers": {
+      "title": {"en": "Woodpeckers, a kestrel and parrots", "nl": "Spechten, een torenvalk en papegaaien"},
+      "intro": {
+        "en": "Two woodpeckers, a grey falcon and two parrots. Cardinal Woodpecker is small with a barred back and a streaked breast; African Grey Woodpecker has a plain grey head and body, a green back and a red rump. Grey Kestrel sits on poles and dead trees. Meyer's Parrot is green and brown with yellow on the head and wings, and Grey Parrots fly over in pairs, showing a red tail.",
+        "nl": "Twee spechten, een grijze valk en twee papegaaien. De kardinaalspecht is klein met een gebandeerde rug en een gestreepte borst; de grijsgroene specht heeft een effen grijze kop en onderkant, een groene rug en een rode stuit. De grijze torenvalk zit op palen en dode bomen. De Meyerpapegaai is groen en bruin met geel op de kop en de vleugels, en grijze roodstaartpapegaaien vliegen in paartjes over en laten hun rode staart zien."
+      }
+    },
+    "old-world-orioles": {
+      "title": {"en": "An oriole, a wattle-eye and a batis", "nl": "Wielewaal en twee vliegenvangers"},
+      "intro": {
+        "en": "African Black-headed Oriole is bright yellow with a black head and a liquid whistle. The other two are small black-and-white flycatchers with chestnut on the females: Chinspot Batis lives in savanna woodland, the wattle-eye in the forest undergrowth.",
+        "nl": "De maskerwielewaal is felgeel met een zwarte kop en een vloeiende fluittoon. De andere twee zijn kleine zwart-witte vliegenvangers waarvan de vrouwtjes kastanjebruin hebben: de witflankvliegenvanger leeft in savannebos, de witstuitlelvliegenvanger in de ondergroei van het bos."
+      }
+    },
+    "bushshrikes-and-allies": {
+      "title": {"en": "Gonolek and other bushshrikes", "nl": "Gonolek en andere struikklauwieren"},
+      "intro": {
+        "en": "Shrike-like birds that hunt in thick cover and are heard far more than seen. Pairs sing in duets, one answering the other so fast that it sounds like one bird. Black-headed Gonolek is scarlet below; the puffback raises its white rump feathers like a ball of cotton.",
+        "nl": "Klauwierachtige vogels die in dichte begroeiing jagen en die je veel vaker hoort dan ziet. Paartjes zingen in duet, de een zo snel na de ander dat het als één vogel klinkt. De zwartkopfiskaal is scharlakenrood van onder; de poederdonsklauwier zet zijn witte stuitveren op als een plukje watten."
+      }
+    },
+    "drongos": {
+      "title": {"en": "Shrikes, drongo, crow, flycatcher, lark", "nl": "Klauwieren, drongo, raaf en meer"},
+      "intro": {
+        "en": "Birds of open country that perch in plain view. Grey-backed Fiscals sit in noisy groups on wires, Northern Fiscal sits alone with white shoulders, and Mackinnon's Shrike has a grey back and lives on forest edges. Pied Crow and Fork-tailed Drongo are everywhere; the paradise-flycatcher trails a long rufous tail, and the lark sings from a bush or termite mound.",
+        "nl": "Vogels van open land die goed zichtbaar zitten. Grijsrugklapeksters zitten in luidruchtige groepjes op draden, de noordelijke gekraagde klauwier zit alleen en heeft witte schouders, en de Mackinnonklauwier heeft een grijze rug en leeft aan bosranden. De schildraaf en de treurdrongo zie je overal; de paradijsmonarch sleept een lange roodbruine staart mee, en de roodnekleeuwerik zingt vanaf een struik of termietenheuvel."
+      }
+    },
+    "cisticolas-and-allies": {
+      "title": {"en": "A cisticola, prinia and camaroptera", "nl": "Graszanger, prinia en camaroptera"},
+      "intro": {
+        "en": "Small brown warblers of grass and bushes. Winding Cisticola lives in wet grass and swamps; cisticolas look alike, so listen to its song. Tawny-flanked Prinia flicks its long tail, the camaroptera bleats like a goat from thick cover, and Grey-capped Warbler gives loud whistles from thickets.",
+        "nl": "Kleine bruine zangers van gras en struiken. De oevergraszanger leeft in nat gras en moeras; graszangers lijken op elkaar, dus luister naar zijn zang. De roestflankprinia wipt met zijn lange staart, de camaroptera mekkert als een geit vanuit dichte begroeiing, en de Eminiazanger fluit luid vanuit het struikgewas."
+      }
+    },
+    "martins-and-swallows": {
+      "title": {"en": "Swallows and a saw-wing", "nl": "Zwaluwen en een kamzwaluw"},
+      "intro": {
+        "en": "Barn Swallow comes from Europe for the winter. Angola Swallow looks like it but has a greyer belly and a narrow breast band; Wire-tailed Swallow has a rufous cap and very thin tail wires, and Lesser Striped Swallow a rufous head and a streaked white breast. Black Saw-wing is all black and hunts over forest clearings.",
+        "nl": "De boerenzwaluw komt 's winters uit Europa. De Angolese zwaluw lijkt erop, met een grijzere buik en een smalle borstband; de roodkruinzwaluw heeft een roodbruine kruin en heel dunne staartdraden, en de savannezwaluw een roodbruine kop en een gestreepte witte borst. De blauw-zwarte kamzwaluw is helemaal zwart en jaagt boven open plekken in het bos."
+      }
+    },
+    "bulbuls": {
+      "title": {"en": "Bulbuls, greenbuls and a warbler", "nl": "Buulbuuls en een fitis"},
+      "intro": {
+        "en": "Common Bulbul, brown with a dark head, is in every bush. The greenbuls are olive birds of the forest, easier to hear than to see; Yellow-whiskered Greenbul has a yellow streak below the bill. Willow Warbler you know from home: it spends the winter here, in gardens and acacias.",
+        "nl": "De grauwe buulbuul, bruin met een donkere kop, zit in elke struik. De groene buulbuul en de geelbaardbuulbuul zijn olijfgroene bosvogels die je makkelijker hoort dan ziet; de geelbaardbuulbuul heeft een gele streep onder de snavel. De fitis ken je van thuis: hij overwintert hier, in tuinen en acacia's."
+      }
+    },
+    "white-eyes-yuhinas-and-allies": {
+      "title": {"en": "Oxpeckers, a white-eye and babblers", "nl": "Ossenpikkers, brilvogel en babbelaars"},
+      "intro": {
+        "en": "Oxpeckers ride on buffalo, giraffe and cattle and pick off ticks: look at the bill, all red or yellow with a red tip. Northern Yellow White-eye is small and yellow with a white eye-ring. The babblers are brown and chatter in family groups in thickets; Arrow-marked Babbler has white arrows on the breast, Black-lored Babbler a dark patch between bill and eye.",
+        "nl": "Ossenpikkers rijden mee op buffels, giraffen en koeien en pikken teken weg: let op de snavel, helemaal rood of geel met een rode punt. De noordelijke gele brilvogel is klein en geel met een witte oogring. De babbelaars zijn bruin en kwetteren in familiegroepen in het struikgewas; de pijlpuntbabbelaar heeft witte pijltjes op de borst, de Taborababbelaar een donkere vlek tussen snavel en oog."
+      }
+    },
+    "starlings-and-mynas": {
+      "title": {"en": "Glossy starlings and a thrush", "nl": "Glansspreeuwen en een lijster"},
+      "intro": {
+        "en": "Five starlings that shine blue, green and purple in the sun. Look at the tail and the eye: Rüppell's has a long tail, Greater Blue-eared a short one and a yellow eye, and the male Violet-backed is violet above and white below. African Thrush is a plain brown thrush with an orange bill.",
+        "nl": "Vijf spreeuwen die in de zon blauw, groen en paars glanzen. Let op de staart en het oog: de blauwe langstaartglansspreeuw heeft een lange staart, de groenstaartglansspreeuw een korte en een geel oog, en het mannetje van de amethistspreeuw is paars van boven en wit van onder. De pelioslijster is een effen bruine lijster met een oranje snavel."
+      }
+    },
+    "old-world-flycatchers-1": {
+      "title": {"en": "Flycatchers and a robin-chat", "nl": "Vliegenvangers en een lawaaimaker"},
+      "intro": {
+        "en": "Three flycatchers and a colourful robin-chat. African Dusky Flycatcher is small and grey-brown, Swamp Flycatcher larger and darker, perching low over the water at lake edges. Silverbird is silver-grey above and orange below. White-browed Robin-Chat is orange below with a bold white eyebrow and sings loudly from thickets.",
+        "nl": "Drie vliegenvangers en een kleurrijke lawaaimaker. De donkere vliegenvanger is klein en grijsbruin, de moerasvliegenvanger groter en donkerder en zit laag boven het water aan meeroevers. De zilvervliegenvanger is zilvergrijs van boven en oranje van onder. De witbrauwlawaaimaker is oranje van onder met een duidelijke witte wenkbrauw en zingt luid vanuit het struikgewas."
+      }
+    },
+    "old-world-flycatchers-2": {
+      "title": {"en": "Chats and a black flycatcher", "nl": "Tapuiten en een vliegenvanger"},
+      "intro": {
+        "en": "Birds that sit on top of a bush or grass stem. Whinchat comes from Europe for the winter; African Stonechat looks like the one you know and lives in the highlands. Sooty Chat is black with white shoulders and sits on termite mounds. Northern Black-Flycatcher is all black too; tell it from a drongo by its square tail.",
+        "nl": "Vogels die boven op een struik of grasstengel zitten. Het paapje komt 's winters uit Europa; de Afrikaanse roodborsttapuit lijkt op die van thuis en leeft in het hoogland. De zwarte miertapuit is zwart met witte schouders en zit op termietenheuvels. De Senegalese drongovliegenvanger is ook helemaal zwart; onderscheid hem van een drongo aan zijn rechte staart."
+      }
+    },
+    "sunbirds-and-spiderhunters-1": {
+      "title": {"en": "Sunbirds: scarlet, green and bronze", "nl": "Honingzuigers: rood, groen en brons"},
+      "intro": {
+        "en": "Sunbirds feed on nectar and perch to do it. The males are easy; females are dull olive, so learn the males first. Scarlet-chested Sunbird is dark with a scarlet breast, Collared small and green with a yellow belly, and Green-headed has a shining green head over grey underparts. Bronze Sunbird shines bronze-green, has a long tail and lives in the highlands.",
+        "nl": "Honingzuigers drinken nectar en gaan daarvoor op een tak zitten. De mannetjes zijn makkelijk; de vrouwtjes zijn dof olijfgroen, dus leer eerst de mannetjes. De roodborsthoningzuiger is donker met een scharlakenrode borst, de halsbandhoningzuiger klein en groen met een gele buik, en de groenkophoningzuiger heeft een glanzend groene kop boven een grijze onderkant. De bronshoningzuiger glanst bronsgroen, heeft een lange staart en leeft in het hoogland."
+      }
+    },
+    "sunbirds-and-spiderhunters-2": {
+      "title": {"en": "Sunbirds: red, yellow and copper", "nl": "Honingzuigers: rood, geel en koper"},
+      "intro": {
+        "en": "Olive-bellied and Red-chested Sunbirds both have a red band across the breast: Red-chested has long central tail feathers and lives by lakes and swamps, Olive-bellied a short tail and lives at forest edges. Variable Sunbird has a yellow belly; Copper Sunbird looks dark until the sun turns it coppery.",
+        "nl": "De olijfbuikhoningzuiger en de sierhoningzuiger hebben allebei een rode band over de borst: de sierhoningzuiger heeft verlengde middelste staartveren en leeft bij meren en moerassen, de olijfbuikhoningzuiger heeft een korte staart en leeft aan bosranden. De ornaathoningzuiger heeft een gele buik; de koperhoningzuiger lijkt donker tot de zon hem koperkleurig maakt."
+      }
+    },
+    "weavers-and-allies-1": {
+      "title": {"en": "Yellow weavers", "nl": "Gele wevers"},
+      "intro": {
+        "en": "Uganda is weaver country, and most of them are yellow. Look at the face, the eye and the bill: Lesser Masked-Weaver has a black mask and a pale eye, Holub's Golden-Weaver no mask at all, and Slender-billed Weaver a fine, thin bill. Northern Brown-throated Weaver nests in papyrus, Baglafecht Weaver lives in the highlands, and Fox's Weaver only in the swamps of the east.",
+        "nl": "Oeganda is wevervogelland, en de meeste zijn geel. Let op het gezicht, het oog en de snavel: de kleine textorwever heeft een zwart masker en een licht oog, de saffraanwever helemaal geen masker, en de dunbekwever een fijne, dunne snavel. De rietwever nestelt in de papyrus, de baglafechtwever leeft in het hoogland, en de Foxwever alleen in de moerassen in het oosten."
+      }
+    },
+    "weavers-and-allies-2": {
+      "title": {"en": "Weavers, a bishop and a widowbird", "nl": "Wevers, oranje wever en widavink"},
+      "intro": {
+        "en": "Village Weavers build noisy colonies in palms and trees in every town. Black-headed Weaver has a fully black head, and Vieillot's Black Weaver is all black with a yellow eye. Grosbeak Weaver has a massive bill and weaves its nest between reed stems. In the breeding season the male bishop turns orange-red and black, the widowbird black with red shoulders.",
+        "nl": "Grote textorwevers bouwen luidruchtige kolonies in palmen en bomen in elke stad. De zwartkopwever heeft een helemaal zwarte kop, en de fluweelwever is helemaal zwart met een geel oog. De dikbekwever heeft een enorme snavel en vlecht zijn nest tussen rietstengels. In de broedtijd wordt het mannetje van de oranje wever oranjerood met zwart, en de widavink zwart met rode schouders."
+      }
+    },
+    "estrildids": {
+      "title": {"en": "Waxbills, mannikins and a firefinch", "nl": "Astrilden, ekstertjes en een vuurvinkje"},
+      "intro": {
+        "en": "Tiny seed-eaters that feed in flocks in grass and gardens. Bronze Mannikin is brown and white with a dark head; Black-and-white Mannikin is larger and darker. Common Waxbill has a red bill and a red stripe through the eye, Black-crowned Waxbill a black cap and red rump, and the male cordonbleu is pale blue with a red cheek.",
+        "nl": "Piepkleine zaadeters die in groepjes in gras en tuinen eten. Het gewoon ekstertje is bruin en wit met een donkere kop; het glansekstertje is groter en donkerder. Het Sint-Helenafazantje heeft een rode snavel en een rode streep door het oog, de nonastrild een zwarte kap en een rode stuit, en het mannetje van het blauwfazantje is lichtblauw met een rode wang."
+      }
+    },
+    "whydahs-and-indigobirds": {
+      "title": {"en": "A whydah and a sparrow", "nl": "Een wida en een mus"},
+      "intro": {
+        "en": "In the breeding season the male Pin-tailed Whydah is black and white with a red bill and a tail twice as long as the bird, and dances above the females in the grass. Northern Grey-headed Sparrow has a plain grey head and no black bib, and is common in towns and villages.",
+        "nl": "In de broedtijd is het mannetje van de dominicanerwida zwart-wit met een rode snavel en een staart die twee keer zo lang is als de vogel, en danst hij boven de vrouwtjes in het gras. De grijskopmus heeft een effen grijze kop zonder zwarte bef en is algemeen in steden en dorpen."
+      }
+    },
+    "wagtails-and-pipits": {
+      "title": {"en": "Wagtails, pipits and canaries", "nl": "Kwikstaarten, piepers en kanaries"},
+      "intro": {
+        "en": "African Pied Wagtail walks on every lawn and roof; Mountain Wagtail is grey and white, slimmer, and lives on rocky streams. Yellow Wagtails from Europe feed around cattle in winter. The longclaw has a yellow throat edged in black, and the pipit looks like those you know. The two canaries are yellow finches; Brimstone is bigger, with a heavier bill.",
+        "nl": "De Afrikaanse bonte kwikstaart loopt op elk grasveld en dak; de bergkwikstaart is grijs-wit, slanker en leeft bij rotsige beken. Gele kwikstaarten uit Europa zoeken 's winters voedsel rond het vee. De geelkeellangklauw heeft een gele keel met een zwarte rand, en de kaneelpieper lijkt op de piepers die je kent. De twee kanaries zijn gele vinken; de zwavelkanarie is groter en heeft een zwaardere snavel."
+      }
+    }
+  },
+  "species": {
+    "shoebi1": {
+      "here": {
+        "en": "The easiest place is Mabamba Swamp near Entebbe, by canoe in the early morning; the Nile delta in Murchison Falls is the other good site.",
+        "nl": "De makkelijkste plek is het Mabambamoeras bij Entebbe, vroeg in de ochtend per kano; de Nijldelta in Murchison Falls is de andere goede plek."
+      }
+    },
+    "ruwtur2": {
+      "here": {
+        "en": "An Albertine Rift bird: most tours find it in the Ruhija sector of Bwindi, high on the ridge, or in Mgahinga.",
+        "nl": "Een vogel van de Albertine Rift: de meeste reizen vinden hem in het Ruhija-deel van Bwindi, hoog op de bergrug, of in Mgahinga."
+      }
+    },
+    "hanfra2": {
+      "here": {
+        "en": "An Albertine Rift bird of the mountain forests: look for it on trails in Mgahinga and around Ruhija in Bwindi, best early in the morning.",
+        "nl": "Een vogel van de bergbossen van de Albertine Rift: zoek hem op paden in Mgahinga en rond Ruhija in Bwindi, het best vroeg in de ochtend."
+      }
+    },
+    "afrski1": {
+      "here": {
+        "en": "Look for it on sandbanks during the boat trip on the Nile in Murchison Falls, and along the Kazinga Channel in Queen Elizabeth.",
+        "nl": "Zoek hem op zandbanken tijdens de boottocht op de Nijl in Murchison Falls, en langs het Kazingakanaal in Queen Elizabeth."
+      }
+    },
+    "rocpra1": {
+      "here": {
+        "en": "Look on the dark rocks in the fast water of the Nile in Murchison Falls, on the boat trip towards the falls.",
+        "nl": "Kijk op de donkere rotsen in het snelle water van de Nijl in Murchison Falls, tijdens de boottocht naar de waterval."
+      }
+    },
+    "grccra1": {
+      "here": {
+        "en": "Uganda's national bird, shown on the flag; pairs feed in wet fields and along roadsides in the south-west.",
+        "nl": "De nationale vogel van Oeganda, afgebeeld op de vlag; paartjes zoeken voedsel in natte velden en langs de weg in het zuidwesten."
+      }
+    },
+    "foxwea1": {
+      "here": {
+        "en": "Uganda's only endemic lives around Lake Opeta and Lake Bisina in the east, off the usual tour route, and breeds there in colonies during the rains.",
+        "nl": "De enige endeem van Oeganda leeft rond het Opetameer en het Bisinameer in het oosten, buiten de gewone route, en broedt daar in kolonies tijdens de regentijd."
+      }
+    },
+    "lbbgul": {
+      "here": {
+        "en": "Dark-backed birds from the Baltic spend the winter on Lake Victoria; look for them from the shore at Entebbe.",
+        "nl": "Vogels met een donkere rug uit het Oostzeegebied overwinteren op het Victoriameer; zoek ze vanaf de oever bij Entebbe."
+      }
+    },
+    "noghor1": {
+      "here": {
+        "en": "In Uganda a bird of the north: look for pairs walking through the grass in Murchison Falls.",
+        "nl": "In Oeganda een vogel van het noorden: zoek naar paartjes die door het gras lopen in Murchison Falls."
+      }
+    },
+    "grbtur1": {
+      "here": {
+        "en": "Easy in the Entebbe Botanical Gardens and at Bigodi Wetland near Kibale.",
+        "nl": "Makkelijk te zien in de botanische tuin van Entebbe en in het Bigodi-moeras bij Kibale."
+      }
+    }
+  },
+  "first_day": {
+    "title": {"en": "Your first day", "nl": "Je eerste dag"},
+    "intro": {
+      "en": "These 20 birds are the ones you'll see on day one, in the gardens of Entebbe, on the Lake Victoria shore or in the streets of Kampala. Marabou Storks stand on the rooftops, Hadada Ibises call loudly at dawn and weavers build their nests in the hotel palms. Know these, and your first walk already feels familiar.",
+      "nl": "Deze 20 vogels zie je op je eerste dag, in de tuinen van Entebbe, aan de oever van het Victoriameer of in de straten van Kampala. Maraboes staan op de daken, hadadaibissen roepen luid bij zonsopgang en wevers bouwen hun nesten in de palmen van je hotel. Ken je deze, dan voelt je eerste wandeling meteen vertrouwd."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "Uganda has only one bird of its own on this trip: Fox's Weaver, which lives in the swamps around Lake Opeta and Lake Bisina in the east, well off the usual tour route. The country's real specials are the birds of the Albertine Rift, the mountains along the borders with Rwanda and DR Congo, which you share with those countries: on this trip Rwenzori Turaco and Handsome Spurfowl, plus the forest birds of Kibale and Bwindi. And the bird most visitors come for, the Shoebill, lives in a few other African countries too, though few make it as easy to see.",
+      "nl": "Oeganda heeft op deze reis maar één eigen vogel: de Foxwever, die in de moerassen rond het Opetameer en het Bisinameer in het oosten leeft, ver van de gewone route. De echte specialiteiten van het land zijn de vogels van de Albertine Rift, de bergen langs de grens met Rwanda en Congo, die je met die landen deelt: op deze reis de Ruwenzoritoerako en de bamboefrankolijn, en daarnaast de bosvogels van Kibale en Bwindi. En de vogel waarvoor de meeste bezoekers komen, de schoenbekooievaar, leeft ook in een paar andere Afrikaanse landen, al is hij in weinig landen zo makkelijk te zien."
+    },
+    "where": [
+      {
+        "title": {"en": "Lake Opeta and Lake Bisina", "nl": "Het Opetameer en het Bisinameer"},
+        "text": {
+          "en": "Fox's Weaver nests in colonies in the flooded grassland and swamps around these two lakes in eastern Uganda, mainly from May to August. Few tours go there: it is a detour of several days east of Kampala, towards Mbale and Soroti, and you'll need a local guide.",
+          "nl": "De Foxwever broedt in kolonies in het overstroomde grasland en de moerassen rond deze twee meren in het oosten van Oeganda, vooral van mei tot augustus. Weinig reizen komen er: het is een omweg van een paar dagen ten oosten van Kampala, richting Mbale en Soroti, en je hebt een lokale gids nodig."
+        }
+      },
+      {
+        "title": {"en": "Bwindi and the Rwenzori", "nl": "Bwindi en de Rwenzori"},
+        "text": {
+          "en": "The Albertine Rift birds live in the mountain forests of the south-west. The Ruhija sector of Bwindi, high on the ridge, is where most tours find Rwenzori Turaco and Handsome Spurfowl; Mgahinga and the Rwenzori Mountains hold them too. Combine it with the gorilla trek, and with Kibale for more forest birds.",
+          "nl": "De vogels van de Albertine Rift leven in de bergbossen van het zuidwesten. In het Ruhija-deel van Bwindi, hoog op de bergrug, vinden de meeste reizen de Ruwenzoritoerako en de bamboefrankolijn; ook Mgahinga en het Rwenzori-gebergte hebben ze. Combineer het met de gorillatocht, en met Kibale voor nog meer bosvogels."
+        }
+      },
+      {
+        "title": {"en": "Mabamba Swamp", "nl": "Het Mabambamoeras"},
+        "text": {
+          "en": "A papyrus swamp on the shore of Lake Victoria, about an hour from Entebbe. You go out by canoe in the early morning and look for a Shoebill standing still at the edge of a channel; Blue-breasted Bee-eaters, Long-toed Lapwings and weavers come along the way. The Nile delta in Murchison Falls is the other good site.",
+          "nl": "Een papyrusmoeras aan de oever van het Victoriameer, ongeveer een uur van Entebbe. Je gaat vroeg in de ochtend met een kano het moeras in en zoekt een schoenbekooievaar die roerloos aan de rand van een geul staat; onderweg zie je blauwborstbijeneters, langteenkieviten en wevers. De Nijldelta in Murchison Falls is de andere goede plek."
+        }
+      }
+    ],
+    "families": [],
+    "units": {
+      "endemics-1": {
+        "title": {"en": "Fox's Weaver", "nl": "De Foxwever"}
+      }
+    }
+  }
+}

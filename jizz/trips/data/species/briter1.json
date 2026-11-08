@@ -1,0 +1,22 @@
+{
+  "code": "briter1",
+  "name": {
+    "en": "Bridled Tern",
+    "nl": "Brilstern"
+  },
+  "latin": "Onychoprion anaethetus",
+  "look_for": [
+    {
+      "en": "Grey-brown **back**, paler than the black **cap**",
+      "nl": "Grijsbruine **rug**, lichter dan de zwarte **kap**"
+    },
+    {
+      "en": "Narrow white **eyebrow** reaching behind the eye",
+      "nl": "Smalle witte **wenkbrauw** die tot achter het oog loopt"
+    },
+    {
+      "en": "Pale **collar** between the cap and the back",
+      "nl": "Lichte **halsband** tussen kap en rug"
+    }
+  ]
+}

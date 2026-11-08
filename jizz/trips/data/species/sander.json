@@ -1,0 +1,22 @@
+{
+  "code": "sander",
+  "name": {
+    "en": "Sanderling",
+    "nl": "Drieteenstrandloper"
+  },
+  "latin": "Calidris alba",
+  "look_for": [
+    {
+      "en": "Very pale grey and white in winter",
+      "nl": "In de winter heel lichtgrijs en wit"
+    },
+    {
+      "en": "Dark patch at the **shoulder**",
+      "nl": "Donkere vlek bij de **schouder**"
+    },
+    {
+      "en": "Runs along the waves like clockwork",
+      "nl": "Rent als een opwindspeeltje langs de branding"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "lesmaw1",
+  "name": {
+    "en": "Lesser Masked-Weaver",
+    "nl": "Kleine textorwever"
+  },
+  "latin": "Ploceus intermedius",
+  "look_for": [
+    {
+      "en": "Black **mask** reaching up onto the forehead",
+      "nl": "Zwart **masker** tot op het voorhoofd"
+    },
+    {
+      "en": "Pale whitish **eye** in the mask",
+      "nl": "Licht witachtig **oog** in het masker"
+    },
+    {
+      "en": "Blue-grey **legs**; yellow body, green back",
+      "nl": "Blauwgrijze **poten**; geel lijf, groene rug"
+    }
+  ]
+}

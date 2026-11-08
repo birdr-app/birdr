@@ -1,0 +1,22 @@
+{
+  "code": "semrob1",
+  "name": {
+    "en": "Seychelles Magpie-Robin",
+    "nl": "Seychellenlijster"
+  },
+  "latin": "Copsychus sechellarum",
+  "look_for": [
+    {
+      "en": "Glossy blue-black all over",
+      "nl": "Helemaal glanzend blauwzwart"
+    },
+    {
+      "en": "Big white patch on the **wing**",
+      "nl": "Grote witte vlek op de **vleugel**"
+    },
+    {
+      "en": "Hops on the ground, cocking its long **tail**",
+      "nl": "Hupt over de grond en wipt met zijn lange **staart**"
+    }
+  ]
+}

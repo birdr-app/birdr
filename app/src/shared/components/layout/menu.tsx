@@ -37,6 +37,11 @@ export const BirdrMenu = () => {
                 <FormattedMessage id="trouble_spots_everyone" defaultMessage="Everyone's tricky birds" />
               </RouterLink>
             </Link>
+            <Link asChild textDecoration="none">
+              <RouterLink to={'/trips'}>
+                <FormattedMessage id="trip_title" defaultMessage="Trip prep" />
+              </RouterLink>
+            </Link>
             <Link href={'/checklist'} textDecoration="none">
               <FormattedMessage id="checklist_title" defaultMessage="My checklist" />
             </Link>

@@ -1,0 +1,22 @@
+{
+  "code": "rettro",
+  "name": {
+    "en": "Red-tailed Tropicbird",
+    "nl": "Roodstaartkeerkringvogel"
+  },
+  "latin": "Phaethon rubricauda",
+  "look_for": [
+    {
+      "en": "Bright red **bill**",
+      "nl": "Felrode **snavel**"
+    },
+    {
+      "en": "Thin red **tail** streamers, hard to see from afar",
+      "nl": "Dunne rode **staartpennen**, van ver lastig te zien"
+    },
+    {
+      "en": "Almost all-white **wings**, no black bar",
+      "nl": "Bijna helemaal witte **vleugels**, geen zwarte baan"
+    }
+  ]
+}

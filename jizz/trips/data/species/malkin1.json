@@ -1,0 +1,22 @@
+{
+  "code": "malkin1",
+  "name": {
+    "en": "Malachite Kingfisher",
+    "nl": "Malachietijsvogel"
+  },
+  "latin": "Corythornis cristatus",
+  "look_for": [
+    {
+      "en": "Tiny, blue above, orange below, red **bill**",
+      "nl": "Piepklein, blauw van boven, oranje van onder, rode **snavel**"
+    },
+    {
+      "en": "Barred turquoise **crest** reaching down to the eye",
+      "nl": "Gestreepte turquoise **kuif** die tot het oog reikt"
+    },
+    {
+      "en": "Perches low over water at reedy edges",
+      "nl": "Zit laag boven het water langs rietkanten"
+    }
+  ]
+}

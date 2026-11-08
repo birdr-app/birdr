@@ -1,0 +1,22 @@
+{
+  "code": "norpuf1",
+  "name": {
+    "en": "Northern Puffback",
+    "nl": "Savannepoederdonsklauwier"
+  },
+  "latin": "Dryoscopus gambensis",
+  "look_for": [
+    {
+      "en": "Male: black **cap** and back, white below",
+      "nl": "Mannetje: zwarte **kap** en rug, wit van onder"
+    },
+    {
+      "en": "Grey **rump** and **shoulder**, red **eye**",
+      "nl": "Grijze **stuit** en **schouder**, rood **oog**"
+    },
+    {
+      "en": "Female brown above, buff below; puffs up **rump**",
+      "nl": "Vrouwtje bruin en okergeel; blaast de **stuit** op"
+    }
+  ]
+}

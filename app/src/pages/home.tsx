@@ -10,6 +10,7 @@ import {
   type BirdrJourneyListItem,
 } from '../api/birdrJourney';
 import { COURSE_LOCALES, COURSE_ON_HOME } from '../api/course';
+import { TRIP_LOCALES } from '../api/trip';
 import { BirdrArtImage } from '../components/birdr-art-image';
 import { BirdrLevelImage } from '../components/birdr-level-image';
 import { Feedback } from '../components/feedback';
@@ -100,6 +101,8 @@ const HomePage = () => {
   const currentLevelTitle = levelTitle(activeJourney?.current_level, locale);
   // The beginners course is written in Dutch, so only the Dutch app offers it for now.
   const showCourse = COURSE_ON_HOME && COURSE_LOCALES.includes(locale);
+  // Trip prep texts exist in English and Dutch.
+  const showTrips = TRIP_LOCALES.includes(locale);
 
   const vis = modeVisibility({
     gamesPlayed: modes.gamesPlayed,
@@ -225,6 +228,36 @@ const HomePage = () => {
                       </Flex>
                       <Text fontSize="sm" fontWeight="600" color="secondary.100">
                         <FormattedMessage id="course_home_hint" defaultMessage="A beginners course: one short lesson a week" />
+                      </Text>
+                    </Flex>
+                  </Flex>
+                </Button>
+              ) : null}
+              {showTrips ? (
+                <Button
+                  onClick={() => navigate('/trips')}
+                  variant="outline"
+                  height="auto"
+                  py={3}
+                  px={4}
+                  w="full"
+                  bg="white"
+                  borderWidth="2px"
+                  borderColor="secondary.300"
+                  borderRadius="xl"
+                  whiteSpace="normal"
+                  data-testid="home-trips"
+                >
+                  <Flex align="center" gap={3} width="full" textAlign="left">
+                    <Text fontSize="3xl" flexShrink={0} aria-hidden>
+                      🧳
+                    </Text>
+                    <Flex direction="column" flex={1} minW={0}>
+                      <Text fontSize="lg" fontWeight="700" color="primary.800" lineClamp={2}>
+                        <FormattedMessage id="trip_title" defaultMessage="Trip prep" />
+                      </Text>
+                      <Text fontSize="sm" fontWeight="600" color="primary.700">
+                        <FormattedMessage id="trip_home_hint" defaultMessage="Learn the birds before you travel" />
                       </Text>
                     </Flex>
                   </Flex>

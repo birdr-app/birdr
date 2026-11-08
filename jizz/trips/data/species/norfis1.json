@@ -1,0 +1,22 @@
+{
+  "code": "norfis1",
+  "name": {
+    "en": "Northern Fiscal",
+    "nl": "Noordelijke gekraagde klauwier"
+  },
+  "latin": "Lanius humeralis",
+  "look_for": [
+    {
+      "en": "Black above, white below, no grey",
+      "nl": "Zwart van boven, wit van onder, geen grijs"
+    },
+    {
+      "en": "White bar on the **shoulder**",
+      "nl": "Witte streep op de **schouder**"
+    },
+    {
+      "en": "Long black **tail**, perches in the open",
+      "nl": "Lange zwarte **staart**, zit vrij in het open veld"
+    }
+  ]
+}

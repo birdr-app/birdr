@@ -1,0 +1,22 @@
+{
+  "code": "piekin1",
+  "name": {
+    "en": "Pied Kingfisher",
+    "nl": "Bonte ijsvogel"
+  },
+  "latin": "Ceryle rudis",
+  "look_for": [
+    {
+      "en": "Black and white, with a shaggy **crest**",
+      "nl": "Zwart-wit, met een rafelige **kuif**"
+    },
+    {
+      "en": "Hovers over water before diving",
+      "nl": "Staat biddend boven water voor hij duikt"
+    },
+    {
+      "en": "Male has two black **breast bands**",
+      "nl": "Mannetje heeft twee zwarte **borstbanden**"
+    }
+  ]
+}

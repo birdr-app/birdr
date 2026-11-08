@@ -1,0 +1,22 @@
+{
+  "code": "eurspo1",
+  "name": {
+    "en": "Eurasian Spoonbill",
+    "nl": "Lepelaar"
+  },
+  "latin": "Platalea leucorodia",
+  "look_for": [
+    {
+      "en": "All white, with a flat spoon-shaped **bill**",
+      "nl": "Helemaal wit, met een platte lepelvormige **snavel**"
+    },
+    {
+      "en": "Sweeps its bill from side to side",
+      "nl": "Zwaait zijn snavel heen en weer door het water"
+    },
+    {
+      "en": "Flies with neck stretched, unlike egrets",
+      "nl": "Vliegt met gestrekte hals, anders dan reigers"
+    }
+  ]
+}

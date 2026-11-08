@@ -63,6 +63,10 @@ import { SurvivalStartPage } from "./pages/survival/start"
 import { CoursePage } from "./pages/course"
 import { CoursePhotosPage } from "./pages/course-photos"
 import { CourseLessonPage } from "./pages/course/lesson"
+import { TripHomePage, TripListPage } from "./pages/trip"
+import { TripEndemicsPage } from "./pages/trip/endemics"
+import { TripFamiliesPage } from "./pages/trip/families"
+import { TripUnitPage } from "./pages/trip/unit"
 import { SurvivalPlayPage } from "./pages/survival/play"
 import { SurvivalResultPage } from "./pages/survival/result"
 import { SurvivalHiscoresPage } from "./pages/survival/hiscores"
@@ -182,6 +186,11 @@ export const MainContent = () => {
             <Route path="/course" element={<CoursePage />} />
             <Route path="/course-photos" element={<CoursePhotosPage />} />
             <Route path="/course/:week" element={<CourseLessonPage />} />
+            <Route path="/trips" element={<TripListPage />} />
+            <Route path="/trips/:country" element={<TripHomePage />} />
+            <Route path="/trips/:country/families" element={<TripFamiliesPage />} />
+            <Route path="/trips/:country/endemics" element={<TripEndemicsPage />} />
+            <Route path="/trips/:country/units/:slug" element={<TripUnitPage />} />
             <Route path="/survival" element={<SurvivalStartPage />} />
             <Route path="/survival/play" element={<SurvivalPlayPage />} />
             <Route path="/survival/result" element={<SurvivalResultPage />} />

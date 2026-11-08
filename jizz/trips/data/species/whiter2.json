@@ -1,0 +1,22 @@
+{
+  "code": "whiter2",
+  "name": {
+    "en": "Whiskered Tern",
+    "nl": "Witwangstern"
+  },
+  "latin": "Chlidonias hybrida",
+  "look_for": [
+    {
+      "en": "Breeding: dark grey **belly**, white **cheeks**",
+      "nl": "Broedkleed: donkergrijze **buik**, witte **wangen**"
+    },
+    {
+      "en": "Black **cap** and dark red **bill**",
+      "nl": "Zwarte **kap** en donkerrode **snavel**"
+    },
+    {
+      "en": "Winter: grey **rump**, streaky back of the head",
+      "nl": "Winter: grijze **stuit**, gestreept achterhoofd"
+    }
+  ]
+}

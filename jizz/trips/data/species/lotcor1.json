@@ -1,0 +1,22 @@
+{
+  "code": "lotcor1",
+  "name": {
+    "en": "Reed Cormorant",
+    "nl": "Afrikaanse dwergaalscholver"
+  },
+  "latin": "Microcarbo africanus",
+  "look_for": [
+    {
+      "en": "Small cormorant with a long **tail**",
+      "nl": "Kleine aalscholver met een lange **staart**"
+    },
+    {
+      "en": "Silvery-grey back, each feather edged black",
+      "nl": "Zilvergrijze rug, elke veer zwart omrand"
+    },
+    {
+      "en": "Red eye, short **crest** when breeding",
+      "nl": "Rood oog, korte **kuif** in de broedtijd"
+    }
+  ]
+}

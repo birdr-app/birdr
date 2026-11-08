@@ -1,0 +1,22 @@
+{
+  "code": "indrob1",
+  "name": {
+    "en": "Indian Robin",
+    "nl": "Indisch paapje"
+  },
+  "latin": "Copsychus fulicatus",
+  "look_for": [
+    {
+      "en": "Male all black, with a white **shoulder** patch",
+      "nl": "Mannetje helemaal zwart, met een witte **schoudervlek**"
+    },
+    {
+      "en": "Chestnut-red under the cocked **tail**",
+      "nl": "Kastanjerood onder de opgewipte **staart**"
+    },
+    {
+      "en": "Female plain grey-brown, also red under the tail",
+      "nl": "Vrouwtje effen grijsbruin, ook rood onder de staart"
+    }
+  ]
+}

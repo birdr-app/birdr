@@ -1,0 +1,22 @@
+{
+  "code": "crheag1",
+  "name": {
+    "en": "Crowned Eagle",
+    "nl": "Kroonarend"
+  },
+  "latin": "Stephanoaetus coronatus",
+  "look_for": [
+    {
+      "en": "Big forest eagle with a short double **crest**",
+      "nl": "Grote bosarend met een korte dubbele **kuif**"
+    },
+    {
+      "en": "Rufous **breast** heavily barred and blotched black",
+      "nl": "Roestbruine **borst**, zwaar zwart gebandeerd en gevlekt"
+    },
+    {
+      "en": "Long barred tail, rufous front of **underwing**",
+      "nl": "Lange gebandeerde staart, roestbruine voorkant van de **ondervleugel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "comgre",
+  "name": {
+    "en": "Common Greenshank",
+    "nl": "Groenpootruiter"
+  },
+  "latin": "Tringa nebularia",
+  "look_for": [
+    {
+      "en": "Long, slightly upturned grey **bill**",
+      "nl": "Lange, licht opgewipte grijze **snavel**"
+    },
+    {
+      "en": "Greenish legs; bigger than Marsh Sandpiper",
+      "nl": "Groenige poten; groter dan de poelruiter"
+    },
+    {
+      "en": "White wedge up the back in flight",
+      "nl": "Witte wig op de rug in de vlucht"
+    }
+  ]
+}

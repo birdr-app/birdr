@@ -1,0 +1,22 @@
+{
+  "code": "hadibi1",
+  "name": {
+    "en": "Hadada Ibis",
+    "nl": "Hadadaibis"
+  },
+  "latin": "Bostrychia hagedash",
+  "look_for": [
+    {
+      "en": "Dull olive-grey ibis with a curved **bill**",
+      "nl": "Dof olijfgrijze ibis met een gebogen **snavel**"
+    },
+    {
+      "en": "Green-bronze gloss on the **wing**",
+      "nl": "Groenbronzen glans op de **vleugel**"
+    },
+    {
+      "en": "Loud 'ha-ha-haa' calls, often in flight",
+      "nl": "Luid 'ha-ha-haa' geroep, vaak in de vlucht"
+    }
+  ]
+}

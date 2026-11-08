@@ -1,0 +1,22 @@
+{
+  "code": "wtbeat1",
+  "name": {
+    "en": "White-throated Bee-eater",
+    "nl": "Witkeelbijeneter"
+  },
+  "latin": "Merops albicollis",
+  "look_for": [
+    {
+      "en": "White **throat** and **eyebrow**, black crown and mask",
+      "nl": "Witte **keel** en **wenkbrauwstreep**, zwarte kruin en masker"
+    },
+    {
+      "en": "Thin black band across the **breast**",
+      "nl": "Smalle zwarte band over de **borst**"
+    },
+    {
+      "en": "Very long central **tail** pins",
+      "nl": "Heel lange middelste **staartpennen**"
+    }
+  ]
+}

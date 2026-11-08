@@ -1,0 +1,22 @@
+{
+  "code": "btbeat1",
+  "name": {
+    "en": "Blue-tailed Bee-eater",
+    "nl": "Blauwstaartbijeneter"
+  },
+  "latin": "Merops philippinus",
+  "look_for": [
+    {
+      "en": "Green, with a chestnut throat",
+      "nl": "Groen, met een kastanjebruine keel"
+    },
+    {
+      "en": "Blue **rump** and tail with long central pins",
+      "nl": "Blauwe **stuit** en staart met twee lange punten"
+    },
+    {
+      "en": "Black eye mask with a blue line below",
+      "nl": "Zwart oogmasker met een blauwe streep eronder"
+    }
+  ]
+}

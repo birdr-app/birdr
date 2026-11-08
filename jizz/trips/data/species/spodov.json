@@ -1,0 +1,22 @@
+{
+  "code": "spodov",
+  "name": {
+    "en": "Spotted Dove",
+    "nl": "Parelhalstortel"
+  },
+  "latin": "Spilopelia chinensis",
+  "look_for": [
+    {
+      "en": "Black **neck patch** dotted with white",
+      "nl": "Zwarte **halsvlek** vol witte stippen"
+    },
+    {
+      "en": "Pinkish-brown **breast** and grey head",
+      "nl": "Rozebruine **borst** en grijze kop"
+    },
+    {
+      "en": "Long tail with white corners in flight",
+      "nl": "Lange staart met witte hoeken in de vlucht"
+    }
+  ]
+}

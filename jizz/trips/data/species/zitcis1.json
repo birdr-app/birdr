@@ -1,0 +1,22 @@
+{
+  "code": "zitcis1",
+  "name": {
+    "en": "Zitting Cisticola",
+    "nl": "Graszanger"
+  },
+  "latin": "Cisticola juncidis",
+  "look_for": [
+    {
+      "en": "Tiny and streaked, with a short **tail**",
+      "nl": "Piepklein en gestreept, met een korte **staart**"
+    },
+    {
+      "en": "Black and white tips under the tail",
+      "nl": "Zwart-witte puntjes onder de staart"
+    },
+    {
+      "en": "Song flight in bouncing loops: zit, zit, zit",
+      "nl": "Zangvlucht in golvende boogjes: zit, zit, zit"
+    }
+  ]
+}

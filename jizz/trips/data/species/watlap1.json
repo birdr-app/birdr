@@ -1,0 +1,22 @@
+{
+  "code": "watlap1",
+  "name": {
+    "en": "Wattled Lapwing",
+    "nl": "Lelkievit"
+  },
+  "latin": "Vanellus senegallus",
+  "look_for": [
+    {
+      "en": "Red and yellow **wattles** at the **bill** base",
+      "nl": "Rode en gele **lellen** bij de **snavelbasis**"
+    },
+    {
+      "en": "White **forehead**, finely streaked head and neck",
+      "nl": "Wit **voorhoofd**, fijn gestreepte kop en hals"
+    },
+    {
+      "en": "Long yellow legs, in wet grassland",
+      "nl": "Lange gele poten, in nat grasland"
+    }
+  ]
+}

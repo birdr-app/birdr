@@ -1,0 +1,22 @@
+{
+  "code": "grbtur1",
+  "name": {
+    "en": "Great Blue Turaco",
+    "nl": "Reuzentoerako"
+  },
+  "latin": "Corythaeola cristata",
+  "look_for": [
+    {
+      "en": "Huge turquoise-blue turaco, no red in the **wings**",
+      "nl": "Enorme turkooisblauwe toerako, geen rood in de **vleugels**"
+    },
+    {
+      "en": "Black **crest**; yellow **bill** with a red tip",
+      "nl": "Zwarte **kuif** en een gele **snavel** met rode punt"
+    },
+    {
+      "en": "Yellow-green **breast** above a chestnut **belly**",
+      "nl": "Geelgroene **borst** boven een kastanjebruine **buik**"
+    }
+  ]
+}

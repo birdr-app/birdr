@@ -1,0 +1,22 @@
+{
+  "code": "afwowl1",
+  "name": {
+    "en": "African Wood-Owl",
+    "nl": "Afrikaanse bosuil"
+  },
+  "latin": "Strix woodfordii",
+  "look_for": [
+    {
+      "en": "Round-headed brown owl without **ear tufts**",
+      "nl": "Bruine uil met ronde kop, zonder **oorpluimen**"
+    },
+    {
+      "en": "Dark eyes in a pale, ringed **facial disc**",
+      "nl": "Donkere ogen in een lichte, geringde **gezichtssluier**"
+    },
+    {
+      "en": "Brown and white barred underparts, yellow **bill**",
+      "nl": "Bruin-wit gebandeerde onderkant, gele **snavel**"
+    }
+  ]
+}

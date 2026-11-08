@@ -1,0 +1,18 @@
+{
+  "slug": "vangas-helmetshrikes-and-allies",
+  "about": {
+    "en": "A varied family of songbirds from tropical Africa and Asia, most with a strong, often hooked bill. Some roam the trees in noisy groups, others sit quietly on a branch and drop onto insects; colours range from grey and brown to bold black and white. Many look and hunt a little like shrikes.",
+    "nl": "Een gevarieerde familie zangvogels uit tropisch Afrika en Azië, de meeste met een stevige, vaak gehaakte snavel. Sommige trekken in luidruchtige groepjes door de bomen, andere zitten stil op een tak en laten zich op insecten vallen; de kleuren lopen van grijs en bruin tot contrastrijk zwart-wit. Veel soorten lijken in vorm en jachtwijze een beetje op klauwieren."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "shrikes"
+      ],
+      "text": {
+        "en": "Despite names like woodshrike and helmetshrike, these are a separate family from the true shrikes. Most are short-tailed and stay among the branches, where they pick insects from bark and leaves.",
+        "nl": "Ondanks namen als rupsklauwier en helmklauwier zijn dit geen echte klauwieren. De meeste hebben een korte staart en blijven tussen de takken, waar ze insecten van schors en blad pikken."
+      }
+    }
+  ]
+}

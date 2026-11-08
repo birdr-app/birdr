@@ -1,0 +1,22 @@
+{
+  "code": "commyn",
+  "name": {
+    "en": "Common Myna",
+    "nl": "Treurmaina"
+  },
+  "latin": "Acridotheres tristis",
+  "look_for": [
+    {
+      "en": "Brown body with a glossy black head",
+      "nl": "Bruin lijf met een glanzend zwarte kop"
+    },
+    {
+      "en": "Yellow bare skin around the **eye**, yellow bill",
+      "nl": "Gele kale huid rond het **oog**, gele snavel"
+    },
+    {
+      "en": "White patch in the **wing** flashes in flight",
+      "nl": "Witte vlek in de **vleugel** flitst in de vlucht"
+    }
+  ]
+}

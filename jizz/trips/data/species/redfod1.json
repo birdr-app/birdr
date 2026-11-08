@@ -1,0 +1,22 @@
+{
+  "code": "redfod1",
+  "name": {
+    "en": "Red Fody",
+    "nl": "Madagaskarwever"
+  },
+  "latin": "Foudia madagascariensis",
+  "look_for": [
+    {
+      "en": "Breeding male bright red with a black **mask**",
+      "nl": "Mannetje in broedkleed felrood met een zwart **masker**"
+    },
+    {
+      "en": "Dark-streaked brown **back** and **wings**",
+      "nl": "Bruine **rug** en **vleugels** met donkere streepjes"
+    },
+    {
+      "en": "Female sparrow-like, buff-brown with a pale **eyebrow**",
+      "nl": "Vrouwtje lijkt op een mus, bleekbruin met een lichte **wenkbrauw**"
+    }
+  ]
+}

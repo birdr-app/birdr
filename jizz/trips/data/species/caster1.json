@@ -1,0 +1,22 @@
+{
+  "code": "caster1",
+  "name": {
+    "en": "Caspian Tern",
+    "nl": "Reuzenstern"
+  },
+  "latin": "Hydroprogne caspia",
+  "look_for": [
+    {
+      "en": "Huge tern, as big as a large gull",
+      "nl": "Reusachtige stern, zo groot als een grote meeuw"
+    },
+    {
+      "en": "Thick, blood-red **bill** with a dark tip",
+      "nl": "Dikke, bloedrode **snavel** met donkere punt"
+    },
+    {
+      "en": "Dark underside to the wingtip",
+      "nl": "Donkere onderkant van de vleugelpunt"
+    }
+  ]
+}

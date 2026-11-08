@@ -1,0 +1,22 @@
+{
+  "code": "ashpri1",
+  "name": {
+    "en": "Ashy Prinia",
+    "nl": "Grijze prinia"
+  },
+  "latin": "Prinia socialis",
+  "look_for": [
+    {
+      "en": "Ash-grey head and back, red **eye**",
+      "nl": "Asgrijze kop en rug, rood **oog**"
+    },
+    {
+      "en": "Warm rusty-buff **breast** and belly",
+      "nl": "Warm oranjebruine **borst** en buik"
+    },
+    {
+      "en": "Long **tail** cocked up, with black-and-white tips",
+      "nl": "Lange opgewipte **staart** met zwart-witte puntjes"
+    }
+  ]
+}

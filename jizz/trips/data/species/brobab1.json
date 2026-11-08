@@ -1,0 +1,22 @@
+{
+  "code": "brobab1",
+  "name": {
+    "en": "Brown Babbler",
+    "nl": "Sahelbabbelaar"
+  },
+  "latin": "Turdoides plebejus",
+  "look_for": [
+    {
+      "en": "Grey-brown with a scaly-looking **head**",
+      "nl": "Grijsbruin met een geschubde **kop**"
+    },
+    {
+      "en": "Fine white streaks on **throat** and breast",
+      "nl": "Fijne witte streepjes op **keel** en borst"
+    },
+    {
+      "en": "Plain yellow **eye** without a red ring",
+      "nl": "Geel **oog** zonder rode ring"
+    }
+  ]
+}

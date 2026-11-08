@@ -1,0 +1,22 @@
+{
+  "code": "whiter",
+  "name": {
+    "en": "White Tern",
+    "nl": "Opaalstern"
+  },
+  "latin": "Gygis alba",
+  "look_for": [
+    {
+      "en": "Small, all-white tern with see-through **wings**",
+      "nl": "Kleine, spierwitte stern met doorschijnende **vleugels**"
+    },
+    {
+      "en": "Big dark **eye** in a thin black ring",
+      "nl": "Groot donker **oog** in een smalle zwarte ring"
+    },
+    {
+      "en": "Black **bill** with a blue base",
+      "nl": "Zwarte **snavel** met een blauwe basis"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "blksaw1",
+  "name": {
+    "en": "Black Sawwing",
+    "nl": "Blauw-zwarte kamzwaluw"
+  },
+  "latin": "Psalidoprocne pristoptera",
+  "look_for": [
+    {
+      "en": "All sooty-black swallow",
+      "nl": "Helemaal roetzwarte zwaluw"
+    },
+    {
+      "en": "Deeply forked **tail**",
+      "nl": "Diep gevorkte **staart**"
+    },
+    {
+      "en": "Slow, fluttering flight along forest edges",
+      "nl": "Trage, fladderende vlucht langs bosranden"
+    }
+  ]
+}

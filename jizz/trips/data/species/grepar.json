@@ -1,0 +1,22 @@
+{
+  "code": "grepar",
+  "name": {
+    "en": "Grey Parrot",
+    "nl": "Grijze roodstaartpapegaai"
+  },
+  "latin": "Psittacus erithacus",
+  "look_for": [
+    {
+      "en": "Pale grey with a scaly **head** and neck",
+      "nl": "Lichtgrijs met een geschubde **kop** en nek"
+    },
+    {
+      "en": "Short, bright red **tail**",
+      "nl": "Korte, felrode **staart**"
+    },
+    {
+      "en": "Bare white **face**, black **bill**",
+      "nl": "Kaal wit **gezicht**, zwarte **snavel**"
+    }
+  ]
+}

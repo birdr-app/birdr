@@ -1,0 +1,18 @@
+{
+  "slug": "thrushes",
+  "about": {
+    "en": "Medium-sized songbirds with a slender bill, a round head and strong legs, often brown or grey with a spotted breast, some black, blue or orange. Many feed on the ground, hopping and pausing to listen and tossing leaves aside for worms; others eat fruit in trees. Most are fine singers, best heard at dawn.",
+    "nl": "Middelgrote zangvogels met een slanke snavel, een ronde kop en sterke poten, vaak bruin of grijs met een gevlekte borst, sommige zwart, blauw of oranje. Veel soorten zoeken voedsel op de grond: ze hippen, staan stil om te luisteren en gooien bladeren opzij op zoek naar wormen; andere eten vruchten in bomen. De meeste zingen prachtig, vooral bij zonsopkomst."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "old-world-flycatchers"
+      ],
+      "text": {
+        "en": "Some thrushes are called robins, like the American Robin. These are true thrushes, much bigger than the European Robin, which belongs to the Old World flycatchers.",
+        "nl": "Sommige lijsters heten in het Engels robin, zoals de Roodborstlijster (American Robin). Dat zijn echte lijsters, veel groter dan de Roodborst, die bij de vliegenvangers hoort."
+      }
+    }
+  ]
+}

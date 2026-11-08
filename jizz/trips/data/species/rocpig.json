@@ -1,0 +1,22 @@
+{
+  "code": "rocpig",
+  "name": {
+    "en": "Rock Dove",
+    "nl": "Rotsduif"
+  },
+  "latin": "Columba livia",
+  "look_for": [
+    {
+      "en": "Blue-grey, with a green-purple sheen on the neck",
+      "nl": "Blauwgrijs, met een groenpaarse glans op de hals"
+    },
+    {
+      "en": "Two black **wing bars**",
+      "nl": "Twee zwarte **vleugelstrepen**"
+    },
+    {
+      "en": "Town birds in every colour, white to dark",
+      "nl": "Stadsduiven in alle kleuren, van wit tot donker"
+    }
+  ]
+}

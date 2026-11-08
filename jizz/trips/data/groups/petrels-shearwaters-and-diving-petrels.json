@@ -1,0 +1,18 @@
+{
+  "slug": "petrels-shearwaters-and-diving-petrels",
+  "about": {
+    "en": "Seabirds of the open ocean with tube-shaped nostrils on a hooked bill. Shearwaters and petrels glide low over the waves on long, stiff wings, tilting from side to side; most are dark above and dark or white below. They come ashore only to nest in burrows, and then mostly at night.",
+    "nl": "Zeevogels van de open oceaan met buisvormige neusgaten op een gehaakte snavel. Pijlstormvogels en stormvogels glijden op lange, stijve vleugels laag over de golven en kantelen daarbij heen en weer; de meeste zijn van boven donker en van onderen donker of wit. Ze komen alleen aan land om in holen te broeden, en dan vooral 's nachts."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "storm-petrels"
+      ],
+      "text": {
+        "en": "Storm-petrels share the name but are a separate family of much smaller birds, the size of a swallow, that flutter and patter low over the water. Petrels and shearwaters are bigger and glide on stiff wings.",
+        "nl": "Stormvogeltjes hebben bijna dezelfde naam, maar zijn een aparte familie van veel kleinere vogels, zo groot als een zwaluw, die fladderend over het water trippelen. Stormvogels en pijlstormvogels zijn groter en glijden op stijve vleugels."
+      }
+    }
+  ]
+}

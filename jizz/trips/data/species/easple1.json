@@ -1,0 +1,22 @@
+{
+  "code": "easple1",
+  "name": {
+    "en": "Eastern Plantain-eater",
+    "nl": "Bandstaartbananeneter"
+  },
+  "latin": "Crinifer zonurus",
+  "look_for": [
+    {
+      "en": "Large grey-brown turaco with a yellow **bill**",
+      "nl": "Grote grijsbruine toerako met een gele **snavel**"
+    },
+    {
+      "en": "Shaggy brown **crest**, whitish streaked **belly**",
+      "nl": "Ruige bruine **kuif**, witte **buik** met strepen"
+    },
+    {
+      "en": "White wing patch in flight, dark tail band",
+      "nl": "Vliegend een witte vleugelvlek, donkere band op de staart"
+    }
+  ]
+}

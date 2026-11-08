@@ -1,0 +1,28 @@
+{
+  "slug": "old-world-flycatchers",
+  "about": {
+    "en": "A large family of small songbirds that includes flycatchers, robins, chats, redstarts, wheatears and shamas. Flycatchers sit upright and dart out for insects; the others mostly feed on or near the ground, often flicking or cocking the tail. Many males are blue, black and white, or orange, and many are fine singers.",
+    "nl": "Een grote familie kleine zangvogels met vliegenvangers, roodborsten, paapjes, roodstaarten, tapuiten en shama's. Vliegenvangers zitten rechtop en schieten uit naar insecten; de andere zoeken vooral op of vlak boven de grond, vaak wippend met de staart. Veel mannetjes zijn blauw, zwart-wit of oranje, en veel soorten zingen mooi."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "tyrant-flycatchers-elaenias-tyrannulets-and-allies",
+        "tyrant-flycatchers-pewees-kingbirds-and-allies"
+      ],
+      "text": {
+        "en": "The flycatchers of the Americas are tyrant flycatchers, a separate family. This one also holds robins, chats and wheatears that feed on the ground.",
+        "nl": "De Amerikaanse 'flycatchers' zijn tirannen, een aparte familie. Deze familie bevat ook roodborsten, paapjes en tapuiten die op de grond voedsel zoeken."
+      }
+    },
+    {
+      "if_known": [
+        "thrushes"
+      ],
+      "text": {
+        "en": "Some birds in this family look like thrushes or are named after them, such as rock-thrushes, whistling-thrushes, shamas and the European Robin. The true thrushes, like the Blackbird and the American Robin, are a separate family.",
+        "nl": "Sommige vogels in deze familie lijken op lijsters of heten zo, zoals rotslijsters, fluitlijsters, shama's en de Roodborst. De echte lijsters, zoals de Merel en de Roodborstlijster, zijn een aparte familie."
+      }
+    }
+  ]
+}

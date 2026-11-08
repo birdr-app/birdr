@@ -1,0 +1,22 @@
+{
+  "code": "lesfri",
+  "name": {
+    "en": "Lesser Frigatebird",
+    "nl": "Kleine fregatvogel"
+  },
+  "latin": "Fregata ariel",
+  "look_for": [
+    {
+      "en": "Smaller, slimmer frigatebird with a deeply forked **tail**",
+      "nl": "Kleinere, slankere fregatvogel met een diep gevorkte **staart**"
+    },
+    {
+      "en": "Male black with white spurs into the **armpits**",
+      "nl": "Mannetje zwart met witte uitlopers naar de **oksels**"
+    },
+    {
+      "en": "Female has a black **throat** and white **breast**",
+      "nl": "Vrouwtje heeft een zwarte **keel** en witte **borst**"
+    }
+  ]
+}

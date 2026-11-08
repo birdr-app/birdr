@@ -1,0 +1,22 @@
+{
+  "code": "bbbeat2",
+  "name": {
+    "en": "Blue-breasted Bee-eater",
+    "nl": "Blauwborstbijeneter"
+  },
+  "latin": "Merops variegatus",
+  "look_for": [
+    {
+      "en": "Yellow **throat** above a deep blue **breast** band",
+      "nl": "Gele **keel** boven een donkerblauwe **borstband**"
+    },
+    {
+      "en": "White patch on the **cheek** below the mask",
+      "nl": "Witte vlek op de **wang** onder het masker"
+    },
+    {
+      "en": "Like Little Bee-eater, near swamps and tall grass",
+      "nl": "Lijkt op de Dwergbijeneter, bij moeras en hoog gras"
+    }
+  ]
+}

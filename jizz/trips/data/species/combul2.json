@@ -1,0 +1,22 @@
+{
+  "code": "combul2",
+  "name": {
+    "en": "Common Bulbul",
+    "nl": "Grauwe buulbuul"
+  },
+  "latin": "Pycnonotus barbatus",
+  "look_for": [
+    {
+      "en": "Dark brown **head** with a slight **crest**",
+      "nl": "Donkerbruine **kop** met een kleine **kuif**"
+    },
+    {
+      "en": "Brown back, paler grey-brown **breast**",
+      "nl": "Bruine rug, lichtere grijsbruine **borst**"
+    },
+    {
+      "en": "Yellow or white under the **tail**, by region",
+      "nl": "Geel of wit onder de **staart**, per streek verschillend"
+    }
+  ]
+}

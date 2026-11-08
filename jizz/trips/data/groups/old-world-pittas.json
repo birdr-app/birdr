@@ -1,0 +1,18 @@
+{
+  "slug": "old-world-pittas",
+  "about": {
+    "en": "Plump, short-tailed forest birds with long legs and jewel-like colours: a green back, blue in the wing, and often red under the tail. They hop over the shady forest floor, turning leaves for worms and insects, and are easy to miss. Listen for their loud, whistled calls at dawn and dusk.",
+    "nl": "Gedrongen bosvogels met een korte staart, lange poten en kleuren als juwelen: een groene rug, blauw in de vleugel en vaak rood onder de staart. Ze hippen over de schaduwrijke bosbodem en keren bladeren om op zoek naar wormen en insecten, en je ziet ze makkelijk over het hoofd. Luister bij zonsopkomst en zonsondergang naar hun luide, gefloten roep."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "gnateaters-and-antpittas"
+      ],
+      "text": {
+        "en": "Antpittas share the shape and part of the name, but they are a separate American family. Pittas are far more colourful, with green, blue and red.",
+        "nl": "Mierpitta's hebben dezelfde vorm en lijken op hun naam, maar zijn een aparte Amerikaanse familie. Pitta's zijn veel kleurrijker, met groen, blauw en rood."
+      }
+    }
+  ]
+}

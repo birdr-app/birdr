@@ -1,0 +1,22 @@
+{
+  "code": "grefla3",
+  "name": {
+    "en": "Greater Flamingo",
+    "nl": "Flamingo"
+  },
+  "latin": "Phoenicopterus roseus",
+  "look_for": [
+    {
+      "en": "Tall and pale pink, with a very long neck",
+      "nl": "Lang en lichtroze, met een heel lange hals"
+    },
+    {
+      "en": "Thick, bent pink **bill** with a black tip",
+      "nl": "Dikke, geknikte roze **snavel** met zwarte punt"
+    },
+    {
+      "en": "Crimson and black wings in flight",
+      "nl": "Karmijnrode en zwarte vleugels in de vlucht"
+    }
+  ]
+}

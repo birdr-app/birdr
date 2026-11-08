@@ -1,0 +1,22 @@
+{
+  "code": "rostur1",
+  "name": {
+    "en": "Ross's Turaco",
+    "nl": "Geelmaskertoerako"
+  },
+  "latin": "Tauraco rossae",
+  "look_for": [
+    {
+      "en": "Deep violet-blue body and wings",
+      "nl": "Diep violetblauw lijf en vleugels"
+    },
+    {
+      "en": "Yellow **bill** and **frontal shield**",
+      "nl": "Gele **snavel** en geel **voorhoofdsschild**"
+    },
+    {
+      "en": "Upright red **crest**, crimson wings in flight",
+      "nl": "Rechtopstaande rode **kuif**, vliegend karmijnrode vleugels"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rewlap1",
+  "name": {
+    "en": "Red-wattled Lapwing",
+    "nl": "Indische kievit"
+  },
+  "latin": "Vanellus indicus",
+  "look_for": [
+    {
+      "en": "Red **wattle** in front of the eye",
+      "nl": "Rode **lel** voor het oog"
+    },
+    {
+      "en": "Black head and **breast**, white cheek patch",
+      "nl": "Zwarte kop en **borst**, witte vlek op de wang"
+    },
+    {
+      "en": "Long yellow legs and a loud, shrill call",
+      "nl": "Lange gele poten en een luide, schelle roep"
+    }
+  ]
+}

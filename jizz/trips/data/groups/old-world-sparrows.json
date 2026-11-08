@@ -1,0 +1,18 @@
+{
+  "slug": "old-world-sparrows",
+  "about": {
+    "en": "Small, stocky seed-eaters with a thick, conical bill, in warm browns, greys and black. Males often have a black bib and a grey or chestnut crown; females are plainer buff-brown. They live in chirping flocks around villages, farms and towns, and the House Sparrow has followed people around the world.",
+    "nl": "Kleine, stevige zaadeters met een dikke, kegelvormige snavel, in warm bruin, grijs en zwart. Mannetjes hebben vaak een zwarte bef en een grijze of kastanjebruine kruin; vrouwtjes zijn eenvoudiger zandbruin. Ze leven in tjilpende groepen rond dorpen, boerderijen en steden, en de Huismus is de mens over de hele wereld gevolgd."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "new-world-sparrows"
+      ],
+      "text": {
+        "en": "The sparrows of the Americas are a separate family, closer to buntings, and mostly streaky birds of scrub and grassland. Old World sparrows have a thicker bill, and males often a black bib.",
+        "nl": "De Amerikaanse gorzen, in het Engels 'sparrows', zijn een andere familie en meestal gestreepte vogels van struikgewas en grasland. Mussen hebben een dikkere snavel, en de mannetjes vaak een zwarte bef."
+      }
+    }
+  ]
+}

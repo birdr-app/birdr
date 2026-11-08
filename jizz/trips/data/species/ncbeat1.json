@@ -1,0 +1,22 @@
+{
+  "code": "ncbeat1",
+  "name": {
+    "en": "Northern Carmine Bee-eater",
+    "nl": "Noordelijke karmijnrode bijeneter"
+  },
+  "latin": "Merops nubicus",
+  "look_for": [
+    {
+      "en": "Bright carmine-red body and **wings**",
+      "nl": "Fel karmijnrood lijf en **vleugels**"
+    },
+    {
+      "en": "Blue-green **head** and **throat**, black mask",
+      "nl": "Blauwgroene **kop** en **keel**, zwart masker"
+    },
+    {
+      "en": "Pale blue **rump**, long tail pins",
+      "nl": "Lichtblauwe **stuit**, lange staartpennen"
+    }
+  ]
+}

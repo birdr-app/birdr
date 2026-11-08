@@ -1,0 +1,22 @@
+{
+  "code": "lobsun2",
+  "name": {
+    "en": "Loten's Sunbird",
+    "nl": "Lotenhoningzuiger"
+  },
+  "latin": "Cinnyris lotenius",
+  "look_for": [
+    {
+      "en": "Very long, curved **bill**",
+      "nl": "Heel lange, gebogen **snavel**"
+    },
+    {
+      "en": "Male glossy purple with a maroon **breast band**",
+      "nl": "Mannetje glanzend paars met een kastanjebruine **borstband**"
+    },
+    {
+      "en": "Grey-brown belly, not black like Purple Sunbird",
+      "nl": "Grijsbruine buik, niet zwart zoals bij de purperhoningzuiger"
+    }
+  ]
+}

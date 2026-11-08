@@ -1,0 +1,22 @@
+{
+  "code": "corplo",
+  "name": {
+    "en": "Common Ringed Plover",
+    "nl": "Bontbekplevier"
+  },
+  "latin": "Charadrius hiaticula",
+  "look_for": [
+    {
+      "en": "Orange **legs**; orange **bill** with a black tip",
+      "nl": "Oranje **poten** en een oranje **snavel** met zwarte punt"
+    },
+    {
+      "en": "Broad dark **breast band** under a white collar",
+      "nl": "Brede donkere **borstband** onder een witte halsband"
+    },
+    {
+      "en": "White **wing bar** in flight, unlike Little Ringed Plover",
+      "nl": "Witte **vleugelstreep** in de vlucht, anders dan bij de kleine plevier"
+    }
+  ]
+}

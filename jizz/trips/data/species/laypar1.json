@@ -1,0 +1,22 @@
+{
+  "code": "laypar1",
+  "name": {
+    "en": "Layard's Parakeet",
+    "nl": "Smaragdparkiet"
+  },
+  "latin": "Psittacula calthrapae",
+  "look_for": [
+    {
+      "en": "Blue-grey head and back",
+      "nl": "Blauwgrijze kop en rug"
+    },
+    {
+      "en": "Bright green collar around the neck",
+      "nl": "Felgroene kraag om de hals"
+    },
+    {
+      "en": "Male red **bill**, female black; yellow tail tip",
+      "nl": "Mannetje rode **snavel**, vrouwtje zwart; gele staartpunt"
+    }
+  ]
+}

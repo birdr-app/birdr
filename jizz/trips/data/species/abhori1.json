@@ -1,0 +1,22 @@
+{
+  "code": "abhori1",
+  "name": {
+    "en": "African Black-headed Oriole",
+    "nl": "Maskerwielewaal"
+  },
+  "latin": "Oriolus larvatus",
+  "look_for": [
+    {
+      "en": "Black **head** and **throat**, bright yellow body",
+      "nl": "Zwarte **kop** en **keel**, felgeel lijf"
+    },
+    {
+      "en": "Pinkish-red **bill** and red eye",
+      "nl": "Roze-rode **snavel** en rood oog"
+    },
+    {
+      "en": "Olive-yellow back, dark **wings** with pale edges",
+      "nl": "Olijfgele rug, donkere **vleugels** met lichte randjes"
+    }
+  ]
+}

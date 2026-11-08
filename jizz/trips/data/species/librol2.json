@@ -1,0 +1,22 @@
+{
+  "code": "librol2",
+  "name": {
+    "en": "Lilac-breasted Roller",
+    "nl": "Vorkstaartscharrelaar"
+  },
+  "latin": "Coracias caudatus",
+  "look_for": [
+    {
+      "en": "Lilac **throat** and **breast**, turquoise belly",
+      "nl": "Lila **keel** en **borst**, turquoise buik"
+    },
+    {
+      "en": "Brown back, dazzling blue **wings** in flight",
+      "nl": "Bruine rug, stralend blauwe **vleugels** in de vlucht"
+    },
+    {
+      "en": "Long outer **tail** streamers, perches in the open",
+      "nl": "Lange buitenste **staartpennen**, zit vrij in het open veld"
+    }
+  ]
+}

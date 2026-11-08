@@ -1,0 +1,22 @@
+{
+  "code": "troshe5",
+  "name": {
+    "en": "Tropical Shearwater",
+    "nl": "Tropische pijlstormvogel"
+  },
+  "latin": "Puffinus bailloni",
+  "look_for": [
+    {
+      "en": "Small shearwater, blackish above, white below",
+      "nl": "Kleine pijlstormvogel, zwartbruin van boven, wit van onder"
+    },
+    {
+      "en": "White **belly** but dark under the **tail**",
+      "nl": "Witte **buik** maar donker onder de **staart**"
+    },
+    {
+      "en": "Quick, stiff wingbeats low over the sea",
+      "nl": "Snelle, stijve vleugelslagen laag boven zee"
+    }
+  ]
+}

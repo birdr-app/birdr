@@ -1,0 +1,22 @@
+{
+  "code": "grefri",
+  "name": {
+    "en": "Great Frigatebird",
+    "nl": "Grote fregatvogel"
+  },
+  "latin": "Fregata minor",
+  "look_for": [
+    {
+      "en": "Huge black seabird with long angled **wings**",
+      "nl": "Enorme zwarte zeevogel met lange geknikte **vleugels**"
+    },
+    {
+      "en": "Male all black below, no white **armpits**",
+      "nl": "Mannetje van onder helemaal zwart, geen witte **oksels**"
+    },
+    {
+      "en": "Female: grey-white **throat**, white **breast**, red eye-ring",
+      "nl": "Vrouwtje: grijswitte **keel**, witte **borst**, rode oogring"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "graher1",
+  "name": {
+    "en": "Grey Heron",
+    "nl": "Blauwe reiger"
+  },
+  "latin": "Ardea cinerea",
+  "look_for": [
+    {
+      "en": "Tall and grey, with a long neck and legs",
+      "nl": "Lang en grijs, met lange hals en poten"
+    },
+    {
+      "en": "Black stripe behind the eye, ending in a plume",
+      "nl": "Zwarte streep achter het oog, uitlopend in een pluim"
+    },
+    {
+      "en": "Whitish neck, unlike the rusty Purple Heron",
+      "nl": "Witachtige hals, anders dan de roestbruine purperreiger"
+    }
+  ]
+}

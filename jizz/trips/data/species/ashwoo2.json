@@ -1,0 +1,22 @@
+{
+  "code": "ashwoo2",
+  "name": {
+    "en": "Ashy Woodswallow",
+    "nl": "Grijze spitsvogel"
+  },
+  "latin": "Artamus fuscus",
+  "look_for": [
+    {
+      "en": "Stocky grey bird with a short tail",
+      "nl": "Gedrongen grijze vogel met een korte staart"
+    },
+    {
+      "en": "Thick, pale blue-grey **bill**",
+      "nl": "Dikke, lichtblauwgrijze **snavel**"
+    },
+    {
+      "en": "Sits in rows on wires, glides like a swallow",
+      "nl": "Zit in rijtjes op draden, zweeft als een zwaluw"
+    }
+  ]
+}
