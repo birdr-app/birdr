@@ -71,6 +71,7 @@
   "flag description explanation": "Spiega la tua risposta. Ci aiuta a migliorare il gioco.",
   "flag media title": "Segnala contenuto",
   "flag modal description": "Puoi dirci cosa non andava in questo contenuto?",
+  "flag approved warning": "Questa foto è stata approvata da {name} il {date}. Sei sicuro di volerla segnalare?",
   "forgot_password": "Password dimenticata?",
   "forgot_password_description": "Inserisci la tua email e ti invieremo un link per reimpostare la password.",
   "game ended": "Partita terminata",

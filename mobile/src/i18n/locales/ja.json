@@ -152,6 +152,7 @@
   "flag": "報告",
   "flag_media_title": "メディアを報告",
   "flag_modal_description": "このメディアの何が問題でしたか？",
+  "flag_approved_warning": "この写真は{date}に{name}さんが承認しました。本当に報告しますか？",
   "flag_description_explanation": "詳しく書いてください。ゲームの改善に役立ちます。",
   "flag_description": "説明",
   "this_seems_wrong": "これは違うようです",

@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import { useTranslation } from '../i18n/TranslationContext';
 import { useAuth } from '../context/AuthContext';
-import { flagMediaAsReview } from '../api/flagMedia';
+import { fetchMediaApproval, flagMediaAsReview, type MediaApproval } from '../api/flagMedia';
 import { colors } from '../theme';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
@@ -35,16 +35,33 @@ type Props = {
 };
 
 export function FlagMediaModal({ visible, onClose, media, playerToken, onSuccess }: Props) {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const { isAuthenticated } = useAuth();
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const [approval, setApproval] = useState<MediaApproval | null>(null);
 
   useEffect(() => {
     if (!visible) {
       setMessage('');
     }
   }, [visible]);
+
+  // Warn before overruling someone else's approval of this media.
+  const mediaId = media?.id;
+  useEffect(() => {
+    setApproval(null);
+    if (!visible || !mediaId) return;
+    let cancelled = false;
+    fetchMediaApproval(mediaId, playerToken ?? undefined, isAuthenticated)
+      .then((result) => {
+        if (!cancelled) setApproval(result);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [visible, mediaId, playerToken, isAuthenticated]);
 
   const handleSubmit = async () => {
     const mediaId = media?.id;
@@ -82,6 +99,21 @@ export function FlagMediaModal({ visible, onClose, media, playerToken, onSuccess
         >
           <View style={styles.card} pointerEvents="box-none">
             <Text style={styles.title}>{t('flag_media_title')}</Text>
+            {approval ? (
+              <View style={styles.warning} testID="flagMedia.approvedWarning">
+                <FontAwesome5 name="exclamation-triangle" size={14} color={colors.warning[500]} />
+                <Text style={styles.warningText}>
+                  {t('flag_approved_warning', {
+                    name: approval.approved_by,
+                    date: new Date(approval.approved_at).toLocaleDateString(locale, {
+                      day: 'numeric',
+                      month: 'short',
+                      year: 'numeric',
+                    }),
+                  })}
+                </Text>
+              </View>
+            ) : null}
             <Text style={styles.description}>{t('flag_modal_description')}</Text>
 
             <TextInput
@@ -133,6 +165,16 @@ const styles = StyleSheet.create({
   },
   title: { fontSize: 18, fontWeight: '700', marginBottom: 8 },
   description: { fontSize: 14, color: colors.primary[700], marginBottom: 12 },
+  warning: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: 8,
+    backgroundColor: colors.warning[50],
+    borderRadius: 8,
+    padding: 12,
+    marginBottom: 12,
+  },
+  warningText: { flex: 1, fontSize: 14, color: colors.primary[800] },
   input: {
     borderWidth: 1,
     borderColor: colors.primary[300],

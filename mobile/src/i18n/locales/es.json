@@ -152,6 +152,7 @@
   "flag": "Reportar",
   "flag_media_title": "Reportar medio",
   "flag_modal_description": "¿Puedes decirnos qué fallaba en este medio?",
+  "flag_approved_warning": "{name} aprobó esta foto el {date}. ¿Seguro que quieres reportarla?",
   "flag_description_explanation": "Explica tu respuesta. Nos ayuda a mejorar el juego.",
   "flag_description": "Descripción",
   "this_seems_wrong": "Esto no parece correcto",

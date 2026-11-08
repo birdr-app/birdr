@@ -1,5 +1,6 @@
 import AppContext from "../../../core/app-context"
 import {
+  Alert,
   Button, Flex,
   Dialog,
   Textarea,
@@ -31,6 +32,11 @@ type MediaInfo = {
   index?: number
 }
 
+type Approval = {
+  approved_by: string
+  approved_at: string
+}
+
 type Props = {
   isOpen: boolean
   onClose: () => void
@@ -46,11 +52,32 @@ export const FlagMedia = ({isOpen, onClose, media, onSuccess, useMediaReview = f
   const intl = useIntl()
   const {player} = useContext(AppContext)
 
+  const [approval, setApproval] = useState<Approval | null>(null)
+
   useEffect(() => {
     if (!isOpen) {
       setMessage('')
     }
   }, [isOpen])
+
+  // Warn before overruling someone else's approval of this media.
+  useEffect(() => {
+    setApproval(null)
+    if (!isOpen || !media?.id) return
+    let cancelled = false
+    const params = player?.token ? `?player_token=${encodeURIComponent(player.token)}` : ''
+    fetch(apiUrl(`/api/media/${media.id}/approval/${params}`))
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (!cancelled && data?.approved) {
+          setApproval({approved_by: data.approved_by, approved_at: data.approved_at})
+        }
+      })
+      .catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [isOpen, media?.id, player?.token])
 
   const onSubmit = async () => {
     const description = message.trim() || (useMediaReview ? 'Flagged from game' : '')
@@ -127,6 +154,21 @@ export const FlagMedia = ({isOpen, onClose, media, onSuccess, useMediaReview = f
           </DialogHeader>
           <DialogBody>
             <VStack gap={4} align="stretch">
+              {approval && (
+                <Alert.Root status="warning">
+                  <Alert.Indicator />
+                  <Alert.Title>
+                    <FormattedMessage
+                      id={'flag approved warning'}
+                      defaultMessage={'This picture was approved by {name} on {date}. Are you sure you want to flag this?'}
+                      values={{
+                        name: approval.approved_by,
+                        date: intl.formatDate(approval.approved_at, {day: 'numeric', month: 'short', year: 'numeric'}),
+                      }}
+                    />
+                  </Alert.Title>
+                </Alert.Root>
+              )}
               <FormattedMessage
                 id={'flag modal description'}
                 defaultMessage={'Can you tell us what was wrong with this media?'}

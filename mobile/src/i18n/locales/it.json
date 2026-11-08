@@ -152,6 +152,7 @@
   "flag": "Segnala",
   "flag_media_title": "Segnala contenuto",
   "flag_modal_description": "Puoi dirci cosa non andava in questo contenuto?",
+  "flag_approved_warning": "Questa foto è stata approvata da {name} il {date}. Sei sicuro di volerla segnalare?",
   "flag_description_explanation": "Spiega la tua risposta. Ci aiuta a migliorare il gioco.",
   "flag_description": "Descrizione",
   "this_seems_wrong": "Questo non sembra corretto",

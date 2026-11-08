@@ -152,6 +152,7 @@
   "flag": "Melden",
   "flag_media_title": "Medium melden",
   "flag_modal_description": "Kannst du uns sagen, was an diesem Medium nicht stimmte?",
+  "flag_approved_warning": "Dieses Bild wurde am {date} von {name} freigegeben. Bist du sicher, dass du es melden willst?",
   "flag_description_explanation": "Erläutere deine Antwort. Das hilft uns, das Spiel zu verbessern.",
   "flag_description": "Beschreibung",
   "this_seems_wrong": "Das scheint falsch",

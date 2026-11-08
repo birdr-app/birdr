@@ -71,6 +71,7 @@
   "flag description explanation": "Eloborate on your answer. This will help us improve the game.",
   "flag media title": "Flag media",
   "flag modal description": "Can you tell us what was wrong with this media?",
+  "flag approved warning": "This picture was approved by {name} on {date}. Are you sure you want to flag this?",
   "forgot_password": "Forgot password?",
   "forgot_password_description": "Enter your email address and we'll send you a link to reset your password.",
   "game ended": "Game ended",

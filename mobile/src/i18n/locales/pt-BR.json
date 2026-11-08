@@ -152,6 +152,7 @@
   "flag": "Sinalizar",
   "flag_media_title": "Sinalizar mídia",
   "flag_modal_description": "Pode nos dizer o que havia de errado nesta mídia?",
+  "flag_approved_warning": "Esta foto foi aprovada por {name} em {date}. Tem certeza de que quer denunciá-la?",
   "flag_description_explanation": "Explique sua resposta. Isso nos ajuda a melhorar o jogo.",
   "flag_description": "Descrição",
   "this_seems_wrong": "Isso parece errado",

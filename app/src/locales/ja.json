@@ -71,6 +71,7 @@
   "flag description explanation": "回答をくわしく書いてください。ゲームの改善に役立ちます。",
   "flag media title": "メディアを報告",
   "flag modal description": "このメディアのどこがおかしかったか教えてもらえますか？",
+  "flag approved warning": "この写真は{date}に{name}さんが承認しました。本当に報告しますか？",
   "forgot_password": "パスワードをお忘れですか？",
   "forgot_password_description": "メールアドレスを入力すると、パスワード再設定用のリンクをお送りします。",
   "game ended": "ゲーム終了",

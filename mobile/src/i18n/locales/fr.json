@@ -152,6 +152,7 @@
   "flag": "Signaler",
   "flag_media_title": "Signaler un média",
   "flag_modal_description": "Peux-tu nous dire ce qui n’allait pas avec ce média ?",
+  "flag_approved_warning": "Cette photo a été approuvée par {name} le {date}. Tu es sûr de vouloir la signaler ?",
   "flag_description_explanation": "Précise ta réponse. Cela nous aide à améliorer le jeu.",
   "flag_description": "Description",
   "this_seems_wrong": "Cela semble incorrect",

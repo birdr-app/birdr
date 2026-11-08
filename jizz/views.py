@@ -534,6 +534,46 @@ class FlagMediaView(ListCreateAPIView):
     queryset = FlagMedia.objects.all()
 
 
+class MediaApprovalView(APIView):
+    """
+    GET the latest approval of a media item by someone other than the requester,
+    so the flag dialog can warn before overruling it. Requester is the JWT user
+    or ?player_token=.
+    """
+    permission_classes = [AllowAny]
+
+    def get(self, request, pk):
+        from jizz.user_names import player_name_for_user, sanitize_player_name
+
+        reviews = MediaReview.objects.filter(
+            media_id=pk, review_type=MediaReview.APPROVED,
+        ).select_related('user', 'player__user')
+        player_token = (request.query_params.get('player_token') or '').strip()
+        if player_token:
+            reviews = reviews.exclude(player__token=player_token)
+        requester = request.user if request.user and request.user.is_authenticated else None
+        if requester is None and player_token:
+            requester = User.objects.filter(player__token=player_token).first()
+        if requester is not None:
+            reviews = reviews.exclude(user=requester).exclude(player__user=requester)
+        review = reviews.order_by('-created', '-id').first()
+        if review is None:
+            return Response({'approved': False, 'approved_by': None, 'approved_at': None})
+
+        player = review.player
+        if player is None:
+            player = Player.objects.filter(user=review.user).order_by('id').first()
+        if player and (player.name or '').strip():
+            name = sanitize_player_name(player.name)
+        else:
+            name = player_name_for_user(review.user or (player.user if player else None))
+        return Response({
+            'approved': True,
+            'approved_by': name,
+            'approved_at': review.created.isoformat(),
+        })
+
+
 class SpeciesReviewStatsView(APIView):
     """List species with media review counts; optional country filter. Returns summary counts (fully/partly/not reviewed)."""
     permission_classes = [AllowAny]
