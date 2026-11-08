@@ -15,29 +15,36 @@ from jizz.marketing.slugs import compare_pair_slug
 from jizz.marketing.views import _indexable_countries, _indexable_regions
 
 
-def _urlset(paths: list[str], origin: str, lastmods: dict[str, date] | None = None) -> str:
+def _urlset(
+    paths: list[str],
+    origin: str,
+    lastmods: dict[str, date] | None = None,
+    locales: tuple[str, ...] = MARKETING_LOCALES,
+) -> str:
     lastmods = lastmods or {}
     items = []
     for path in paths:
         lastmod = lastmods.get(path)
         lastmod_line = f'    <lastmod>{lastmod.isoformat()}</lastmod>\n' if lastmod else ''
-        for locale in MARKETING_LOCALES:
+        for locale in locales:
             loc = origin + localize_path(path, locale)
             alts = []
-            for other in MARKETING_LOCALES:
-                href = origin + localize_path(path, other)
+            # A page in one language only has no alternates.
+            if len(locales) > 1:
+                for other in locales:
+                    href = origin + localize_path(path, other)
+                    alts.append(
+                        f'    <xhtml:link rel="alternate" hreflang="{other}" href="{href}"/>'
+                    )
                 alts.append(
-                    f'    <xhtml:link rel="alternate" hreflang="{other}" href="{href}"/>'
+                    f'    <xhtml:link rel="alternate" hreflang="x-default" href="{origin + path}"/>'
                 )
-            alts.append(
-                f'    <xhtml:link rel="alternate" hreflang="x-default" href="{origin + path}"/>'
-            )
             items.append(
                 '  <url>\n'
                 f'    <loc>{loc}</loc>\n'
                 + lastmod_line
-                + '\n'.join(alts)
-                + '\n  </url>'
+                + ''.join(a + '\n' for a in alts)
+                + '  </url>'
             )
     joined = '\n'.join(items)
     return (
@@ -211,6 +218,12 @@ def taxa_paths() -> list[str]:
     return paths()
 
 
+def course_paths() -> list[str]:
+    from jizz.marketing.course import course_paths as paths
+
+    return paths()
+
+
 # Each sitemap section, for the sitemap views and for IndexNow submissions.
 SECTIONS = {
     'pages': pages_paths,
@@ -218,7 +231,17 @@ SECTIONS = {
     'taxa': taxa_paths,
     'birds': birds_paths,
     'compare': compare_paths,
+    'course': course_paths,
 }
+
+# Sections whose pages exist in some languages only (the course is Dutch).
+SECTION_LOCALES = {
+    'course': ('nl',),
+}
+
+
+def section_locales(section: str) -> tuple[str, ...]:
+    return SECTION_LOCALES.get(section, MARKETING_LOCALES)
 
 
 # Last modification date per path, for the sections whose pages have one. Countries and
@@ -235,12 +258,12 @@ def section_lastmods(section: str) -> dict[str, date]:
     return lastmods_fn() if lastmods_fn else {}
 
 
-def localized_urls(paths: list[str], origin: str) -> list[str]:
+def localized_urls(paths: list[str], origin: str, locales: tuple[str, ...] = MARKETING_LOCALES) -> list[str]:
     """Every locale's absolute URL for each path, as the sitemaps list them."""
     return [
         origin + localize_path(path, locale)
         for path in paths
-        for locale in MARKETING_LOCALES
+        for locale in locales
     ]
 
 
@@ -253,4 +276,4 @@ def sitemap_section(request, section: str):
     paths = paths_fn()
     if not 1 <= page <= _page_count(paths):
         raise Http404
-    return _xml(_urlset(_page_paths(paths, page), canonical_origin(request), section_lastmods(section)))
+    return _xml(_urlset(_page_paths(paths, page), canonical_origin(request), section_lastmods(section), section_locales(section)))

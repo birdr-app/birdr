@@ -31,6 +31,7 @@ from jizz.marketing.views import (
 from jizz.marketing import static_pages
 from jizz.marketing.api import SpeciesDescriptionView
 from jizz.marketing import sitemaps as marketing_sitemaps
+from jizz.marketing import course as marketing_course
 from jizz.marketing import taxa as marketing_taxa
 
 from jizz.views import CountryDetailView, CountryViewSet, SpeciesListView, SpeciesDetailView, SpeciesBySlugView, SpeciesCoverView, GameListView, \
@@ -376,6 +377,8 @@ urlpatterns = [
     path('site/my-tricky-birds/', intent_page, {'slug': 'my-tricky-birds'}, name='marketing-my-tricky-birds'),
     path('site/national-league/', national_league_page, name='marketing-national-league'),
     path('site/survival/', survival_page, name='marketing-survival'),
+    path('site/vogelcursus/', marketing_course.course_index, name='marketing-course'),
+    path('site/vogelcursus/les-<int:week>-<slug:slug>/', marketing_course.course_lesson, name='marketing-course-lesson'),
     path('site/my-edits/', my_edits, name='marketing-my-edits'),
     path('site/logout/', site_logout, name='marketing-logout'),
     path('site/countries/<slug:slug>/', country_page, name='marketing-country'),

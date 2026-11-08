@@ -53,6 +53,7 @@ module.exports = function (app) {
       '/sitemap-countries.xml',
       '/sitemap-birds.xml',
       '/sitemap-compare.xml',
+      '/sitemap-course.xml',
       '/robots.txt',
     ],
     createProxyMiddleware({

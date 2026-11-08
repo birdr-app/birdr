@@ -1,0 +1,90 @@
+{% extends "marketing/base.html" %}
+{% block extra_head %}
+<style>
+  .course-lessons { list-style: none; padding: 0; margin: 20px 0 8px; display: grid; gap: 10px; }
+  .course-lesson { display: flex; align-items: center; gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 10px 14px; text-decoration: none; color: var(--ink); }
+  .course-lesson:hover { border-color: var(--canopy); }
+  .course-lesson.is-done { border-color: var(--canopy); }
+  .course-num { flex: none; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; background: var(--surface-sunken); font-variant-numeric: tabular-nums; }
+  .course-lesson.is-done .course-num { background: var(--canopy); color: #fff; }
+  .course-thumb { flex: none; width: 58px; height: 58px; border-radius: 10px; object-fit: cover; background: var(--surface-sunken); }
+  .course-copy { min-width: 0; display: grid; gap: 2px; }
+  .course-copy strong { font-size: 1.05rem; }
+  .course-copy span { color: var(--ink-muted); font-size: .92rem; }
+  .course-part { margin: 26px 0 0; font-size: 1.2rem; }
+  .course-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 12px; margin: 18px 0 0; padding: 0; list-style: none; }
+  .course-steps li { background: var(--canopy-soft); border-radius: var(--radius-md); padding: 12px 14px; }
+  .course-steps b { display: block; margin-bottom: 2px; }
+</style>
+{% endblock %}
+{% block content %}
+<section class="hero has-mascot">
+  <img class="tody hero-mascot" src="/images/motmot/tody-studying.webp" width="600" height="565" alt="">
+  <h1>Vogels van Nederland: een vogelcursus voor beginners</h1>
+  <p class="lead">
+    Leer in twintig korte lessen de vogels van Nederland herkennen. Je begint met de merel en de koolmees in je
+    tuin en eindigt met de wadvogels aan de kust. Elke les duurt een minuut of tien, met foto's, geluiden en een quiz.
+    Gratis, en zonder account.
+  </p>
+  <div class="cta-row">
+    <a class="btn" id="course-start" href="{{ lessons.0.href }}">Begin met les 1</a>
+    <span class="course-progress" id="course-progress" hidden></span>
+  </div>
+</section>
+
+<section>
+  <h2>Zo werkt een les</h2>
+  <ul class="course-steps">
+    <li><b>Introductie</b>Waar we zijn en wat je gaat leren: de achtertuin, de vijver, het weiland.</li>
+    <li><b>Vogel voor vogel</b>Per vogel drie dingen om op te letten, een foto en het geluid.</li>
+    <li><b>Quiz</b>Pas aan het eind: herken je de vogels, ook tussen de vogels die erop lijken?</li>
+    <li><b>Naar buiten</b>Een kleine opdracht voor de komende week.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Alle lessen</h2>
+  <p class="lead-inline">Doe elke week één les, in je eigen tempo. Je voortgang wordt in deze browser bewaard.</p>
+  {% for row in lessons %}
+    {% if row.week == 1 %}<h3 class="course-part">Deel 1: de basis</h3>{% endif %}
+    {% if row.week == 11 %}<h3 class="course-part">Deel 2: leefgebieden</h3>{% endif %}
+    {% if row.week == 1 or row.week == 11 %}<ol class="course-lessons">{% endif %}
+    <li>
+      <a class="course-lesson" href="{{ row.href }}" data-week="{{ row.week }}">
+        <span class="course-num">{{ row.week }}</span>
+        {% if row.image %}<img class="course-thumb" src="{{ row.image }}" alt="" loading="lazy" width="58" height="58">{% else %}<span class="course-thumb" aria-hidden="true"></span>{% endif %}
+        <span class="course-copy">
+          <strong>{{ row.title }}</strong>
+          <span>{{ row.subtitle }}{% if row.bird_count %} · {{ row.bird_count }} vogels{% endif %} · {{ row.minutes }} min</span>
+        </span>
+      </a>
+    </li>
+    {% if row.week == 10 or forloop.last %}</ol>{% endif %}
+  {% endfor %}
+</section>
+
+<script>
+(function () {
+  var progress = {};
+  try { progress = (JSON.parse(localStorage.getItem('course:nl-beginners:progress') || '{}').completed) || {}; } catch (e) {}
+  var done = Object.keys(progress).length;
+  document.querySelectorAll('.course-lesson').forEach(function (a) {
+    var r = progress[a.dataset.week];
+    if (!r) return;
+    a.classList.add('is-done');
+    a.querySelector('.course-num').textContent = '✓';
+    var meta = a.querySelector('.course-copy span');
+    meta.textContent = 'Klaar · ' + r.score + ' van ' + r.total + ' goed';
+  });
+  if (done) {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.course-lesson'));
+    var next = links.find(function (a) { return !progress[a.dataset.week]; });
+    var start = document.getElementById('course-start');
+    if (next) { start.href = next.href; start.textContent = 'Verder met les ' + next.dataset.week; }
+    var p = document.getElementById('course-progress');
+    p.textContent = done + ' van ' + links.length + ' lessen klaar';
+    p.hidden = false;
+  }
+})();
+</script>
+{% endblock %}

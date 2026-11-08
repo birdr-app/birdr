@@ -31,6 +31,7 @@ _MARKETING_SITEMAP_PATHS = frozenset({
     '/sitemap-countries.xml',
     '/sitemap-birds.xml',
     '/sitemap-compare.xml',
+    '/sitemap-course.xml',
 })
 
 

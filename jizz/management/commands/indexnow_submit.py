@@ -4,7 +4,7 @@ import requests
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 
-from jizz.marketing.sitemaps import SECTIONS, localized_urls
+from jizz.marketing.sitemaps import SECTIONS, localized_urls, section_locales
 
 ENDPOINT = 'https://api.indexnow.org/indexnow'
 # IndexNow accepts at most 10,000 URLs per request.
@@ -35,7 +35,7 @@ class Command(BaseCommand):
 
         urls = []
         for name in options['section'] or sorted(SECTIONS):
-            section = localized_urls(SECTIONS[name](), origin)
+            section = localized_urls(SECTIONS[name](), origin, section_locales(name))
             self.stdout.write(f'{name}: {len(section)} URLs')
             urls.extend(section)
 

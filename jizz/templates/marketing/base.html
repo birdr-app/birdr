@@ -1651,6 +1651,7 @@
         <a href="{{ '/site/birds/'|mpath }}"{% if nav_section == 'species' %} aria-current="page"{% endif %}>{% mt "Species" %}</a>
         <a href="{{ '/site/bird-quiz-by-country/'|mpath }}"{% if nav_section == 'countries' %} aria-current="page"{% endif %}>{% mt "Countries" %}</a>
         <a href="{{ '/site/community/'|mpath }}"{% if nav_section == 'community' %} aria-current="page"{% endif %}>{% mt "Community" %}</a>
+        {% if locale == 'nl' %}<a href="{{ '/site/vogelcursus/'|mpath }}"{% if nav_section == 'course' %} aria-current="page"{% endif %}>Vogelcursus</a>{% endif %}
         {% if not nav_user_name %}
         <a class="nav-login" id="nav-login" href="{{ login_href }}" aria-haspopup="dialog" aria-controls="login-dialog">{% mt "Log in" %}</a>
         {% endif %}
@@ -1716,6 +1717,7 @@
           <li><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "Quizzes by country" %}</a></li>
           <li><a href="{{ '/site/national-league/'|mpath }}">{% mt "National League" %}</a></li>
           <li><a href="{{ '/site/survival/'|mpath }}">{% mt "Survival" %}</a></li>
+          {% if locale == 'nl' %}<li><a href="{{ '/site/vogelcursus/'|mpath }}">Vogelcursus voor beginners</a></li>{% endif %}
         </ul>
       </div>
       <div>

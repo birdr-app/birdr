@@ -1,0 +1,248 @@
+{% extends "marketing/base.html" %}
+{% block extra_head %}
+<style>
+  .lesson-kicker { font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--canopy); margin: 0 0 6px; }
+  .lesson-intro p { max-width: 42rem; font-size: 1.08rem; }
+  .lesson-today { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+  .lesson-today a { display: grid; justify-items: center; gap: 4px; text-decoration: none; color: var(--ink); font-size: .85rem; font-weight: 600; width: 84px; text-align: center; }
+  .lesson-today img { width: 72px; height: 72px; border-radius: 12px; object-fit: cover; }
+  .course-bird { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 20px 28px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 20px; margin: 22px 0 0; scroll-margin-top: 80px; }
+  @media (max-width: 760px) { .course-bird { grid-template-columns: 1fr; padding: 14px; } }
+  .bird-photo { margin: 0; }
+  .bird-photo .frame { position: relative; border-radius: 16px; overflow: hidden; background: var(--surface-sunken); aspect-ratio: 4 / 3; }
+  .bird-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .bird-photo .plumage { position: absolute; left: 10px; bottom: 10px; background: #fff; color: var(--ink); border-radius: 999px; padding: 3px 10px; font-size: .85rem; font-weight: 700; }
+  .bird-photo figcaption { font-size: .78rem; color: var(--ink-muted); margin-top: 4px; }
+  .bird-body h2 { margin: 0; }
+  .bird-body .latin { font-style: italic; color: var(--ink-muted); margin: 0 0 10px; }
+  .bird-body h3 { font-family: var(--font); font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: var(--canopy); margin: 14px 0 4px; }
+  .bird-body ul { margin: 0; padding-left: 20px; }
+  .bird-body li { margin: 2px 0; }
+  .bird-body strong { color: var(--canopy-deep); }
+  .bird-words { background: var(--canopy-soft); border-radius: 12px; padding: 8px 12px; margin: 10px 0 0; font-size: .92rem; }
+  .bird-words div { margin: 2px 0; }
+  .bird-words b { color: var(--canopy-deep); }
+  .bird-sound { display: grid; gap: 6px; background: var(--surface-sunken); border-radius: 12px; padding: 10px 12px; margin: 12px 0 0; font-size: .92rem; }
+  .bird-sound audio { width: 100%; height: 36px; }
+  .bird-note { background: var(--surface-sunken); border-radius: 12px; padding: 8px 12px; margin: 10px 0 0; font-size: .92rem; }
+  .bird-compare { grid-column: 1 / -1; border: 2px solid var(--canopy-soft); border-radius: 16px; padding: 14px; }
+  .bird-compare h3 { margin-top: 0; }
+  .bird-compare .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 8px 0; }
+  .bird-compare .pair img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; }
+  .bird-compare .pair span { display: block; font-weight: 700; margin-top: 4px; }
+  .lesson-quiz { background: var(--card); border: 2px solid var(--canopy); border-radius: var(--radius-lg); padding: 20px; margin: 28px 0 0; }
+  .quiz-photo { border-radius: 16px; overflow: hidden; background: var(--surface-sunken); aspect-ratio: 4 / 3; max-width: 560px; }
+  .quiz-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .quiz-sound { display: grid; justify-items: center; gap: 10px; background: var(--surface-sunken); border-radius: 16px; padding: 24px; max-width: 560px; }
+  .quiz-options { display: grid; gap: 8px; max-width: 560px; margin: 12px 0 0; }
+  .quiz-option { text-align: left; font: inherit; font-weight: 650; font-size: 1.05rem; padding: 12px 14px; border-radius: 14px; border: 2px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+  .quiz-option:hover:not(:disabled) { border-color: var(--canopy); }
+  .quiz-option.right { border-color: var(--canopy); background: var(--canopy-soft); }
+  .quiz-option.wrong { border-color: #B3322A; background: #FBE3E0; }
+  .quiz-feedback { font-weight: 700; margin: 10px 0; }
+  .quiz-feedback.right { color: var(--canopy); }
+  .quiz-feedback.wrong { color: #B3322A; }
+  .quiz-score { font-family: var(--display, inherit); font-size: 3rem; font-weight: 800; color: var(--canopy); line-height: 1; }
+  .lesson-outside { background: var(--canopy-soft); border-radius: var(--radius-lg); padding: 18px 20px; margin: 22px 0 0; }
+  .lesson-outside h2 { margin-top: 0; font-size: 1.3rem; }
+  .lesson-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; margin: 26px 0 8px; }
+</style>
+{% endblock %}
+{% block content %}
+<section class="hero lesson-intro">
+  <p class="lesson-kicker">Vogelcursus · Les {{ lesson.week }} · {{ lesson.minutes }} minuten</p>
+  <h1>{{ lesson.title }}</h1>
+  {% if lesson.subtitle %}<p class="lead">{{ lesson.subtitle }}</p>{% endif %}
+  {% for p in intro_html %}<p>{{ p }}</p>{% endfor %}
+  {% if birds %}
+  <h2 class="lesson-kicker">Vandaag: {{ birds|length }} vogels</h2>
+  <ul class="lesson-today">
+    {% for bird in birds %}
+    <li><a href="#vogel-{{ forloop.counter }}">{% if bird.photo %}<img src="{{ bird.photo.url }}" alt="" width="72" height="72" loading="lazy">{% endif %}{{ bird.name }}</a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p><a class="btn" href="#quiz">Naar de quiz</a></p>
+  {% endif %}
+</section>
+
+{% for bird in birds %}
+<article class="course-bird" id="vogel-{{ forloop.counter }}">
+  {% if bird.photo %}
+  <figure class="bird-photo">
+    <div class="frame">
+      <img src="{{ bird.photo.url }}" alt="{{ bird.name }}{% if bird.plumage %}, {{ bird.plumage }}{% endif %}" loading="lazy">
+      {% if bird.plumage %}<span class="plumage">{{ bird.plumage }}</span>{% endif %}
+    </div>
+    <figcaption>Foto: {{ bird.photo.contributor|default:"onbekend"|striptags }}{% if bird.photo.license %} · {{ bird.photo.license }}{% endif %}</figcaption>
+  </figure>
+  {% endif %}
+  <div class="bird-body">
+    <p class="lesson-kicker">Vogel {{ forloop.counter }} van {{ birds|length }}</p>
+    <h2>{{ bird.name }}</h2>
+    <p class="latin">{{ bird.latin }}</p>
+    <h3>Zo herken je hem</h3>
+    <ul>{% for line in bird.look_for_html %}<li>{{ line }}</li>{% endfor %}</ul>
+    {% if bird.words %}
+    <div class="bird-words">{% for w in bird.words %}<div><b>{{ w.term }}</b> {{ w.explain }}</div>{% endfor %}</div>
+    {% endif %}
+    {% if bird.where_when %}<h3>Waar en wanneer</h3><p>{{ bird.where_when }}</p>{% endif %}
+    {% if bird.sounds %}
+    <div class="bird-sound">
+      <span><b>{{ bird.sound_label }}</b> {{ bird.sound.describe }}</span>
+      <audio controls preload="none" src="{{ bird.sounds.0.url }}"></audio>
+      <small>Opname: {{ bird.sounds.0.contributor }} · xeno-canto</small>
+    </div>
+    {% endif %}
+    {% if bird.note %}<p class="bird-note">{{ bird.note }}</p>{% endif %}
+    {% if bird.dont_confuse %}<p class="bird-note"><b>Niet verwarren met:</b> {{ bird.dont_confuse }}</p>{% endif %}
+  </div>
+  {% if bird.compare and bird.pair|length == 2 %}
+  <div class="bird-compare">
+    <h3>{{ bird.compare.title }}</h3>
+    <div class="pair">
+      {% for b in bird.pair %}<div>{% if b.images %}<img src="{{ b.images.0.url }}" alt="{{ b.name }}" loading="lazy">{% endif %}<span>{{ b.name }}</span></div>{% endfor %}
+    </div>
+    <p>{{ bird.compare.text }}</p>
+  </div>
+  {% endif %}
+</article>
+{% endfor %}
+
+<section class="lesson-quiz" id="quiz" aria-live="polite">
+  <h2>Quiz</h2>
+  <div id="quiz-root">
+    <p>{{ lesson.quiz.questions }} vragen{% if lesson.quiz.kind == 'sound' %}, alleen geluid{% endif %}{% if lesson.quiz.review_questions and lesson.kind != 'review' %}, met een paar vogels uit eerdere lessen ertussen{% endif %}. Je antwoorden blijven in deze browser.</p>
+    <button class="btn" type="button" id="quiz-start">Start de quiz</button>
+  </div>
+</section>
+
+{% if lesson.outside %}
+<section class="lesson-outside">
+  <h2>Deze week buiten</h2>
+  <p>{{ lesson.outside }}</p>
+</section>
+{% endif %}
+
+<nav class="lesson-nav" aria-label="Lessen">
+  {% if prev_href %}<a class="btn secondary" href="{{ prev_href }}">← Les {{ lesson.week|add:"-1" }}</a>{% else %}<span></span>{% endif %}
+  <a class="btn secondary" href="{{ course_href }}">Alle lessen</a>
+  {% if next_href %}<a class="btn" href="{{ next_href }}">Les {{ next_week }} →</a>{% endif %}
+</nav>
+
+<script id="quiz-data" type="application/json">{{ quiz_json }}</script>
+<script>
+(function () {
+  var data = JSON.parse(document.getElementById('quiz-data').textContent);
+  var root = document.getElementById('quiz-root');
+  var nextHref = '{{ next_href|escapejs }}';
+  var KEY = 'course:nl-beginners:progress';
+
+  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+
+  // Same rules as the apps: every new bird at least once, a few from earlier lessons, and wrong
+  // answers that look like the right one first (gulls with gulls), then the lesson, then the rest.
+  function buildQuiz() {
+    var bySound = data.quiz.kind === 'sound';
+    var usable = function (b) { return bySound ? b.sounds.length : b.images.length; };
+    var lessonBirds = data.birds.map(function (b) { return { sid: b.species_id, name: b.name, images: b.quiz_images.length ? b.quiz_images : b.images, sounds: b.sounds, review: false }; }).filter(usable);
+    var reviewBirds = data.review_birds.map(function (b) { return { sid: b.species_id, name: b.name, images: b.quiz_images, sounds: b.sounds, review: true }; }).filter(usable);
+    var total = data.quiz.questions;
+    var reviewCount = (data.kind === 'review' || !lessonBirds.length) ? Math.min(total, reviewBirds.length * 3) : Math.min(data.quiz.review_questions || 0, reviewBirds.length);
+    var lessonCount = lessonBirds.length ? total - reviewCount : 0;
+    var picks = [];
+    while (picks.length < lessonCount) picks = picks.concat(shuffle(lessonBirds).slice(0, lessonCount - picks.length));
+    var reviews = [];
+    while (reviews.length < reviewCount) reviews = reviews.concat(shuffle(reviewBirds).slice(0, reviewCount - reviews.length));
+    picks = picks.concat(reviews);
+    var nameOf = {};
+    (data.known_species || []).forEach(function (k) { nameOf[k.species_id] = k.name; });
+    lessonBirds.concat(reviewBirds).forEach(function (b) { if (!nameOf[b.sid]) nameOf[b.sid] = b.name; });
+    var lessonSids = lessonBirds.map(function (b) { return b.sid; });
+    var lookalikesOf = function (sid) {
+      var out = [];
+      (data.lookalikes || []).forEach(function (g) { if (g.indexOf(sid) >= 0) g.forEach(function (x) { if (x !== sid && nameOf[x] && out.indexOf(x) < 0) out.push(x); }); });
+      return out;
+    };
+    var used = {};
+    return shuffle(picks.map(function (b) {
+      var media = bySound ? b.sounds : b.images;
+      var n = used[b.name] || 0; used[b.name] = n + 1;
+      var item = media[(n + Math.floor(Math.random() * media.length)) % media.length];
+      var candidates = shuffle(lookalikesOf(b.sid)).concat(shuffle(lessonSids), shuffle(Object.keys(nameOf).map(Number)));
+      var wrong = [];
+      for (var i = 0; i < candidates.length && wrong.length < 3; i++) {
+        var nm = nameOf[candidates[i]];
+        if (candidates[i] === b.sid || !nm || nm === b.name || wrong.indexOf(nm) >= 0) continue;
+        wrong.push(nm);
+      }
+      return { answer: b.name, image: bySound ? null : item, sound: bySound ? item : null, options: shuffle([b.name].concat(wrong)), review: b.review };
+    }));
+  }
+
+  function el(tag, attrs, text) {
+    var e = document.createElement(tag);
+    Object.keys(attrs || {}).forEach(function (k) { if (k === 'class') e.className = attrs[k]; else e.setAttribute(k, attrs[k]); });
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  function save(score, total) {
+    try {
+      var p = JSON.parse(localStorage.getItem(KEY) || '{}'); p.completed = p.completed || {};
+      var prev = p.completed[data.week];
+      if (!prev || score >= prev.score) p.completed[data.week] = { score: score, total: total, completedAt: new Date().toISOString() };
+      localStorage.setItem(KEY, JSON.stringify(p));
+    } catch (e) {}
+  }
+
+  function run() {
+    var questions = buildQuiz(), index = 0, score = 0;
+    function show() {
+      var q = questions[index];
+      root.textContent = '';
+      root.append(el('p', { class: 'lesson-kicker' }, 'Vraag ' + (index + 1) + ' van ' + questions.length + (q.review ? ' · herhaling' : '')));
+      if (q.image) {
+        var ph = el('div', { class: 'quiz-photo' }); ph.append(el('img', { src: q.image.url, alt: 'Welke vogel is dit?' })); root.append(ph);
+        root.append(el('p', { class: 'quiz-feedback' }, 'Welke vogel is dit?'));
+      } else {
+        var sd = el('div', { class: 'quiz-sound' }); sd.append(el('span', {}, 'Welke vogel hoor je?'));
+        var au = el('audio', { controls: '', src: q.sound.url, preload: 'auto' }); sd.append(au); root.append(sd);
+      }
+      var opts = el('div', { class: 'quiz-options' });
+      q.options.forEach(function (o) {
+        var b = el('button', { class: 'quiz-option', type: 'button' }, o);
+        b.onclick = function () {
+          var right = o === q.answer; if (right) score++;
+          opts.querySelectorAll('button').forEach(function (x) {
+            x.disabled = true;
+            if (x.textContent === q.answer) x.classList.add('right');
+            else if (x === b) x.classList.add('wrong');
+          });
+          root.append(el('p', { class: 'quiz-feedback ' + (right ? 'right' : 'wrong') }, right ? 'Ja, ' + q.answer + '.' : 'Dat was een ' + q.answer + '.'));
+          var next = el('button', { class: 'btn', type: 'button' }, index + 1 < questions.length ? 'Volgende vraag' : 'Bekijk je score');
+          next.onclick = function () { index++; if (index < questions.length) show(); else done(); };
+          root.append(next); next.focus();
+        };
+        opts.append(b);
+      });
+      root.append(opts);
+      root.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }
+    function done() {
+      save(score, questions.length);
+      root.textContent = '';
+      root.append(el('p', { class: 'quiz-score' }, score + '/' + questions.length));
+      root.append(el('p', {}, score / questions.length >= 0.6 ? 'Goed gedaan! Les ' + data.week + ' is klaar.' : 'Les ' + data.week + ' is klaar. Kijk de vogels die je fout had nog eens na, en probeer het opnieuw.'));
+      var row = el('p', { class: 'cta-row' });
+      var again = el('button', { class: 'btn secondary', type: 'button' }, 'Quiz nog een keer'); again.onclick = run; row.append(again);
+      if (nextHref) { var nx = el('a', { class: 'btn', href: nextHref }, 'Naar de volgende les'); row.append(nx); }
+      root.append(row);
+    }
+    if (!questions.length) { root.textContent = 'Voor deze les zijn nog geen quizvragen.'; return; }
+    show();
+  }
+  document.getElementById('quiz-start').onclick = run;
+})();
+</script>
+{% endblock %}

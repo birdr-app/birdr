@@ -3,6 +3,8 @@ import { getApiBaseUrl } from './baseUrl';
 /** The beginners course. Its texts are Dutch, so it is offered in the Dutch app only (same as mobile/src/api/course.ts). */
 export const COURSE_SLUG = 'nl-beginners';
 export const COURSE_LOCALES = ['nl'];
+/** The home-screen button is off for now: the course is on the website (motmot.club/nl/site/vogelcursus/). */
+export const COURSE_ON_HOME = false;
 
 export type CourseMedia = {
   id: number;

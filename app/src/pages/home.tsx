@@ -9,7 +9,7 @@ import {
   levelTitle,
   type BirdrJourneyListItem,
 } from '../api/birdrJourney';
-import { COURSE_LOCALES } from '../api/course';
+import { COURSE_LOCALES, COURSE_ON_HOME } from '../api/course';
 import { BirdrArtImage } from '../components/birdr-art-image';
 import { BirdrLevelImage } from '../components/birdr-level-image';
 import { Feedback } from '../components/feedback';
@@ -99,7 +99,7 @@ const HomePage = () => {
   const flag = countryCodeToFlag(countryCode);
   const currentLevelTitle = levelTitle(activeJourney?.current_level, locale);
   // The beginners course is written in Dutch, so only the Dutch app offers it for now.
-  const showCourse = COURSE_LOCALES.includes(locale);
+  const showCourse = COURSE_ON_HOME && COURSE_LOCALES.includes(locale);
 
   const vis = modeVisibility({
     gamesPlayed: modes.gamesPlayed,
