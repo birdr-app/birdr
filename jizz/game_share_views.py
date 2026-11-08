@@ -37,7 +37,7 @@ def _shareable_game(token: str) -> Game | None:
 
 def _store_urls() -> tuple[str, str]:
     return (
-        getattr(settings, 'APP_STORE_URL', 'https://apps.apple.com/us/app/birdr/id6745144189'),
+        getattr(settings, 'APP_STORE_URL', 'https://apps.apple.com/us/app/motmot-bird-id-quiz/id6745144189'),
         getattr(settings, 'PLAY_STORE_URL', 'https://play.google.com/store/apps/details?id=pro.birdr.app'),
     )
 

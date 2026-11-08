@@ -27,7 +27,7 @@ import { loadUpdates, type UpdateListItem } from '../core/updates';
 import { getCountryDisplayName } from '../data/country-names-nl';
 import { Page } from '../shared/components/layout';
 
-const APP_STORE_URL = 'https://apps.apple.com/us/app/birdr/id6745144189';
+const APP_STORE_URL = 'https://apps.apple.com/us/app/motmot-bird-id-quiz/id6745144189';
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=pro.birdr.app';
 const APP_STORE_BADGE = '/images/app-store.png';
 const PLAY_STORE_BADGE = '/images/google-play.png';

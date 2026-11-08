@@ -481,7 +481,7 @@ APP_MIN_VERSION = os.environ.get('APP_MIN_VERSION', '1.97.0')
 APP_STORE_VERSION = os.environ.get('APP_STORE_VERSION', APP_MIN_VERSION)
 APP_STORE_URL = os.environ.get(
     'APP_STORE_URL',
-    'https://apps.apple.com/us/app/birdr/id6745144189',
+    'https://apps.apple.com/us/app/motmot-bird-id-quiz/id6745144189',
 )
 PLAY_STORE_URL = os.environ.get(
     'PLAY_STORE_URL',

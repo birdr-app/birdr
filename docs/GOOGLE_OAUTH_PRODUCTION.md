@@ -41,6 +41,17 @@ regex (one server block for motmot.club, birdr.pro and their www hosts) reads:
 location ~ ^/(nl|es|pt-BR|ja|jp|it|de|fr|site|g|s|admin|flocks|data|open|updates|staff|api|auth|token|country|robots\.txt|sitemap(-[a-z]+)?\.xml)(/|$) {
 ```
 
+**Legacy page paths (to apply, November 2026):** the website used to live without `/site/` (`/birds/<slug>/`,
+`/countries/<slug>/`, `/compare/<pair>/`, `/faq/`, …). Django 301s those (`jizz/urls.py`, and on birdr.pro straight to
+motmot.club via `MarketingHostRedirectMiddleware`), but the regex above doesn't proxy them, so they get the noindex SPA
+with a 200 and lose whatever links and rankings they had. Add these prefixes to the regex (none clash with an SPA route):
+
+```
+birds|countries|compare|faq|how-it-works|learn-bird-identification|bird-quiz-by-country|birding-app|community|newsletter|my-tricky-birds|national-league|survival-mode|page|bird-identification-quiz
+```
+
+Then `curl -sI https://birdr.pro/birds/white-tern/` must 301 to `https://motmot.club/site/birds/white-tern/`.
+
 Check after any nginx change: `curl -sI https://motmot.club/sitemap.xml` must say `content-type: application/xml`,
 and `curl -s https://motmot.club/ja/site/ | grep canonical` must print the canonical link.
 

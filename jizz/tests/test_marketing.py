@@ -404,7 +404,7 @@ class MarketingPagesTests(TestCase):
         self.assertIn('from easy to hard', newsletter)
         self.assertIn('App Store:', newsletter)
         self.assertIn('Google Play:', newsletter)
-        self.assertIn('apps.apple.com/us/app/birdr', newsletter)
+        self.assertIn('apps.apple.com/us/app/motmot-bird-id-quiz', newsletter)
         self.assertIn('play.google.com/store/apps/details?id=pro.birdr.app', newsletter)
         # Current screenshots, as PNG so they show when pasted into email or Word.
         shots = ['quiz', 'new-game', 'comparison', 'tricky-birds', 'tricky-pairs', 'country-challenge', 'league']

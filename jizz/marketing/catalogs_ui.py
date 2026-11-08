@@ -141,7 +141,7 @@ UI_ENTRIES: list[tuple[str, tuple[str, ...]]] = [
             'Zoek in de soortpagina’s van Motmot, zie welke vogels mensen in quizzen het meest missen, en open de lookalikes die het lastigst uit elkaar te houden zijn.',
             'Busca las páginas de especies de Motmot, mira qué aves se fallan más en los quizzes y abre los sosias más difíciles de distinguir.',
             'Cherche les pages d’espèces de Motmot, vois quels oiseaux les gens ratent le plus dans les quiz, et ouvre les sosies les plus durs à distinguer.',
-            'Durchsuche Birdrs Artseiten, sieh, welche Vögel in Quiz am häufigsten verfehlt werden, und öffne die Doppelgänger, die am schwersten zu unterscheiden sind.',
+            'Durchsuche Motmots Artseiten, sieh, welche Vögel in Quiz am häufigsten verfehlt werden, und öffne die Doppelgänger, die am schwersten zu unterscheiden sind.',
             'Cerca le pagine delle specie di Motmot, vedi quali uccelli si sbagliano di più nei quiz e apri i sosia più difficili da distinguere.',
             'Pesquise as páginas de espécies do Motmot, veja quais aves as pessoas mais erram nos quizzes e abra os sósias mais difíceis de distinguir.',
             'Motmotの種ページを探し、クイズでいちばん間違われる鳥を見て、見分けにくい似た種を開きます。',
