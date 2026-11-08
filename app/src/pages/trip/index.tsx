@@ -221,7 +221,7 @@ export function TripHomePage() {
           {lookalikes.length ? (
             <UnitRow
               title={t('trip_lookalikes_title', 'Lookalikes from home')}
-              subtitle={t('trip_pairs_count', '{count} pairs', { count: lookalikes.length })}
+              subtitle={t('trip_pairs_count', '{count, plural, one {# pair} other {# pairs}}', { count: lookalikes.length })}
               image={lookalikeImage}
               known={lookalikesKnown}
               total={lookalikes.length}
@@ -265,7 +265,7 @@ export function TripHomePage() {
             <Button variant="ghost" colorPalette="primary" size="sm" onClick={() => setShowKnown(!showKnown)}>
               {showKnown
                 ? t('trip_hide_known_units', 'Hide the units you know')
-                : t('trip_show_known_units', 'You already know every bird in {count} units ({birds} birds). Show them', {
+                : t('trip_show_known_units', 'You already know every bird in {count, plural, one {# unit} other {# units}} ({birds} birds). Show them', {
                     count: knownUnits.length,
                     birds: knownUnitBirds,
                   })}

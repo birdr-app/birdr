@@ -106,3 +106,35 @@ read on a phone, between other things.
   site or two in each.
 - `endemics.families`: cards for families found only here (Madagascar's vangas). Empty when none.
 - `endemics.units.<slug>.title`: a title per endemics unit.
+
+## Lookalikes from home (`lookalikes/<here>__<home>.json`, shared by all countries)
+
+A trip bird that a European birder could take for a bird from home: a split (Indian vs Great
+Cormorant), a close relative (Brown vs Red-backed Shrike) or a look-alike (House Crow vs Jackdaw).
+The country's `scope.json` lists its pairs; the file holds the texts and is shared, so Morocco and
+Tunisia can use the same African Chaffinch pair.
+
+```json
+// scope.json
+"lookalikes": [{"here": "orisky1", "home": "skylar"}]
+
+// lookalikes/orisky1__skylar.json
+{
+  "here": "orisky1",
+  "home": "skylar",
+  "tell": [
+    {"en": "**Smaller**, with a shorter tail", "nl": "**Kleiner**, met een kortere staart"},
+    {"en": "**Rusty panel** in the folded wing", "nl": "**Roestbruin vlak** in de gevouwen vleugel"},
+    {"en": "In flight **no white rear edge** to the wing", "nl": "In vlucht **geen witte achterrand** aan de vleugel"}
+  ]
+}
+```
+
+- `here` is a trip bird; `home` is a bird from Europe, in the trip or not.
+- `tell`: two or three lines about the trip bird, each a difference from the home bird you can see
+  in the field (or "go by place" when there is none). Same rules as `look_for`: at most 10 words,
+  bold the deciding feature.
+- Pick pairs that can really fool someone: same shape and size, or a split of a familiar species.
+  Skip pairs that only share a name.
+- `home` birds that aren't trip birds get photos with `trip_prep_media --country <CC> --home-only`.
+

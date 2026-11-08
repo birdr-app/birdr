@@ -15,7 +15,13 @@ its texts and units, but not its photos.
 The texts still need a human review.
 
 The web app has the screens (`app/src/pages/trip/`, routes `/trips`, `/trips/<cc>`, `.../families`,
-`.../units/<slug>`, `.../endemics`), backed by `/api/trips/` (`jizz/trips/views.py`). Unit quizzes are
+`.../units/<slug>`, `.../endemics`, `.../lookalikes`), backed by `/api/trips/` (`jizz/trips/views.py`).
+For a country close to home (Morocco for a Dutch birder) the screens skip what the player knows:
+units whose birds are all known fold away on the trip home and count as done, a partly known unit
+shows cards and quiz questions only for its new birds, and *Meet the families* gives a card only to
+new groups (the known ones share one card). *Lookalikes from home* pairs trip birds with European
+birds they can be taken for (`lookalikes/` and `scope.json`, see `STYLE.md`); Sri Lanka has 13 pairs.
+The mobile app doesn't have the lookalikes or the folding yet. Unit quizzes are
 stored as `trip_prep` games with score 0 (kept out of hiscores and best scores), so they count as
 "known" everywhere. Not built yet: the `Trip` model (units done and cards seen live on the device for
 now), the review screen for shaky birds, "closest bird you know" on cards, sounds, and the mobile app.
@@ -114,6 +120,11 @@ The same shape as a course lesson: intro → species cards → quiz → result.
   earlier units. Each unit also asks 2–3 review questions from earlier units.
 - **Test out:** when the player already knows most of a unit's birds: "You know 5 of 6, quick
   check?" goes straight to the quiz.
+- **Only the new birds:** when the player knows some of a unit's birds, the cards and the quiz
+  cover the new ones; the known ones still appear as wrong options. "Show all" brings them back.
+- **Lookalikes from home:** one card per pair, the home bird next to the trip bird with two or three
+  lines on how to tell them apart, then a quiz that shows either bird and asks which of the two it
+  is. It comes after *Your first day*. For a country close to home this is the main chapter.
 
 ### 5. Group detail
 
