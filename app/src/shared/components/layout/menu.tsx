@@ -1,12 +1,18 @@
 import {Flex, Link} from "@chakra-ui/react";
+import { useContext } from "react";
 import {FormattedMessage} from "react-intl"
 import {Link as RouterLink} from "react-router-dom";
 import { getCountryChallengeLeaderboardPath } from "../../../api/birdrJourney";
+import { COURSE_LOCALES } from "../../../api/course";
+import AppContext from "../../../core/app-context";
 import { useGameModes } from "../../../core/use-game-modes";
 
 export const BirdrMenu = () => {
     // Beginners get a short menu; leagues and leaderboards appear after a few games.
     const { showMenuExtras } = useGameModes();
+    const { appLanguage } = useContext(AppContext);
+    // The beginners course is written in Dutch, so only the Dutch app offers it.
+    const showCourse = COURSE_LOCALES.includes(appLanguage || 'en');
     return (
         <Flex direction={'column'} gap={4} fontSize={'xl'}>
             <Link href={'/play'} textDecoration="none">
@@ -37,6 +43,13 @@ export const BirdrMenu = () => {
                 <FormattedMessage id="trouble_spots_everyone" defaultMessage="Everyone's tricky birds" />
               </RouterLink>
             </Link>
+            {showCourse && (
+              <Link asChild textDecoration="none">
+                <RouterLink to={'/course'}>
+                  <FormattedMessage id="course_title" defaultMessage="Birds of the Netherlands" />
+                </RouterLink>
+              </Link>
+            )}
             <Link asChild textDecoration="none">
               <RouterLink to={'/trips'}>
                 <FormattedMessage id="trip_title" defaultMessage="Trip prep" />

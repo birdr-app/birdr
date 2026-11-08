@@ -15,16 +15,21 @@ import { useMenu } from '../context/MenuContext';
 import { useGameModes } from '../context/GameModesContext';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from '../i18n/TranslationContext';
+import { COURSE_LOCALES } from '../api/course';
 import { colors } from '../theme';
 import { getAppVersionDisplay } from '../utils/appVersion';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const PANEL_WIDTH = Math.min(SCREEN_WIDTH * 0.85, 340);
 
-/** `advanced` items only show once the player has unlocked all game modes. */
-const MENU_ITEMS: { route: string; labelKey: string; advanced?: boolean }[] = [
+/**
+ * `advanced` items only show once the player has unlocked all game modes; `locales` items only in
+ * those app languages (the beginners course is written in Dutch).
+ */
+const MENU_ITEMS: { route: string; labelKey: string; advanced?: boolean; locales?: string[] }[] = [
   { route: 'Home', labelKey: 'home' },
   { route: 'Start', labelKey: 'new_game' },
+  { route: 'Course', labelKey: 'course_title', locales: COURSE_LOCALES },
   { route: 'TripList', labelKey: 'trip_title' },
   { route: 'CountryChallengeLeaderboard', labelKey: 'country_leaderboard', advanced: true },
   { route: 'League', labelKey: 'league', advanced: true },
@@ -38,10 +43,12 @@ const MENU_ITEMS: { route: string; labelKey: string; advanced?: boolean }[] = [
 export function LeftMenuModal() {
   const navigation = useNavigation();
   const insets = useSafeAreaInsets();
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const { leftMenuVisible, closeLeftMenu, currentRouteName } = useMenu();
   const { showMenuExtras } = useGameModes();
-  const menuItems = MENU_ITEMS.filter((item) => showMenuExtras || !item.advanced);
+  const menuItems = MENU_ITEMS.filter(
+    (item) => (showMenuExtras || !item.advanced) && (!item.locales || item.locales.includes(locale))
+  );
   const slideAnim = useRef(new Animated.Value(-PANEL_WIDTH)).current;
 
   useEffect(() => {
@@ -101,7 +108,8 @@ export function LeftMenuModal() {
                   currentRoute === item.route ||
                   (item.route === 'Help' && currentRoute === 'HelpDetail') ||
                   (item.route === 'League' && currentRoute?.startsWith('League')) ||
-                  (item.route === 'TripList' && currentRoute?.startsWith('Trip'));
+                  (item.route === 'TripList' && currentRoute?.startsWith('Trip')) ||
+                  (item.route === 'Course' && currentRoute?.startsWith('Course'));
                 const label = t(item.labelKey);
                 return (
                   <TouchableOpacity
