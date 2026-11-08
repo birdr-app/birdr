@@ -837,5 +837,12 @@
   "trip_retry": "Try again",
   "trip_where_to_find": "Where to find them",
   "trip_the_birds": "The birds",
-  "trip_home_hint": "Learn the birds before you travel"
+  "trip_home_hint": "Learn the birds before you travel",
+  "trip_request_title": "Going somewhere else?",
+  "trip_request_intro": "Tell us which country you would like Trip prep for. The countries asked for most come first.",
+  "trip_request_country": "Country",
+  "trip_request_note": "When are you going? Anything else? (optional)",
+  "trip_request_submit": "Send request",
+  "trip_request_thanks": "Thanks, we have noted it. The countries asked for most come first.",
+  "trip_request_error": "Your request could not be sent. Please try again."
 }

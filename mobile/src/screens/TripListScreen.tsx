@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { fetchTrips, tripLanguage, type TripSummary } from '../api/trip';
 import { TripLoading, tripStyles } from '../components/TripParts';
+import { TripRequestForm } from '../components/TripRequestForm';
 import { useTranslation } from '../i18n/TranslationContext';
 import { leagueFlag } from '../lib/league';
 import { colors } from '../theme';
@@ -28,7 +29,12 @@ export function TripListScreen() {
 
   if (!trips) return <TripLoading error={error} onRetry={load} />;
   return (
-    <ScrollView style={tripStyles.container} contentContainerStyle={tripStyles.content}>
+    <ScrollView
+      style={tripStyles.container}
+      contentContainerStyle={tripStyles.content}
+      keyboardShouldPersistTaps="handled"
+      automaticallyAdjustKeyboardInsets
+    >
       <Text style={tripStyles.body}>{t('trip_list_intro')}</Text>
       {trips.map((trip) => (
         <TouchableOpacity
@@ -49,6 +55,7 @@ export function TripListScreen() {
           <Text style={styles.chevron}>›</Text>
         </TouchableOpacity>
       ))}
+      <TripRequestForm />
     </ScrollView>
   );
 }

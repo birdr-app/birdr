@@ -6,6 +6,7 @@ import { fetchTrips, type TripSummary, type TripUnit } from '../../api/trip';
 import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
 import { ProgressRing, TripLoading, UnitRow } from './parts';
+import { TripRequestForm } from './request';
 import { orderedUnits, useTrip, useTripLang, useTripText } from './use-trip';
 
 /** /trips: the countries with Trip prep. */
@@ -66,6 +67,7 @@ export function TripListPage() {
               </Flex>
             </Button>
           ))}
+          <TripRequestForm />
         </Flex>
       </Page.Body>
     </Page>

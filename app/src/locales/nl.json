@@ -851,5 +851,12 @@
   "trip_retry": "Opnieuw proberen",
   "trip_where_to_find": "Waar je ze vindt",
   "trip_the_birds": "De vogels",
-  "trip_home_hint": "Leer de vogels voordat je op reis gaat"
+  "trip_home_hint": "Leer de vogels voordat je op reis gaat",
+  "trip_request_title": "Ga je ergens anders heen?",
+  "trip_request_intro": "Laat ons weten voor welk land je Reisvoorbereiding wilt. De landen waar het vaakst om gevraagd wordt, komen eerst.",
+  "trip_request_country": "Land",
+  "trip_request_note": "Wanneer ga je? Nog iets anders? (niet verplicht)",
+  "trip_request_submit": "Verstuur verzoek",
+  "trip_request_thanks": "Bedankt, we hebben het genoteerd. De landen waar het vaakst om gevraagd wordt, komen eerst.",
+  "trip_request_error": "Je verzoek kon niet worden verstuurd. Probeer het opnieuw."
 }

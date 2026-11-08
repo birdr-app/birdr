@@ -3,8 +3,7 @@ import {FormattedMessage, useIntl} from "react-intl"
 import {useState} from "react"
 import { FaChevronDown, FaChevronRight, FaComment } from "react-icons/fa"
 import { toaster } from "@/components/ui/toaster"
-import { apiUrl } from "../api/baseUrl"
-import { authService } from "../api/services/auth.service"
+import { postFeedback } from "../api/feedback"
 
 export const Feedback = () => {
   const intl = useIntl()
@@ -16,25 +15,10 @@ export const Feedback = () => {
   const submit = async () => {
     if (!comment.trim()) return;
     setSubmitting(true);
-    const player_token = localStorage.getItem('player-token');
-    const headers: Record<string, string> = {
-      'Content-Type': 'application/json',
-    };
-    const accessToken = authService.getAccessToken();
-    if (accessToken) {
-      headers.Authorization = `Bearer ${accessToken}`;
-    }
-    const response = await fetch(apiUrl('/api/feedback/'), {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        comment: comment.trim(),
-        ...(player_token ? { player_token } : {}),
-      }),
-    })
+    const ok = await postFeedback(comment);
     setSubmitting(false);
 
-    if (response.ok) {
+    if (ok) {
       setSubmitted(true)
       setComment('')
       toaster.create({
