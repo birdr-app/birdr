@@ -369,16 +369,6 @@
         "nl": "De ani's zijn zwarte vogels met een hoge snavel die in luidruchtige groepjes leven; de vorm van de snavel onderscheidt de twee. De pauraque en de reuzennachtzwaluwen komen pas in het donker tevoorschijn, en overdag vind je ze alleen met geluk of met een gids."
       }
     },
-    "swifts": {
-      "title": {
-        "en": "Swifts",
-        "nl": "Gierzwaluwen"
-      },
-      "intro": {
-        "en": "Swifts are always in the air, so look at size, the shape of the tail and any pale collar or rump. White-collared Swift is much bigger than the others.",
-        "nl": "Gierzwaluwen zijn altijd in de lucht, dus let op de grootte, de vorm van de staart en een lichte kraag of stuit. De witkraaggierzwaluw is veel groter dan de andere."
-      }
-    },
     "hummingbirds-1": {
       "title": {
         "en": "Hermits, jacobin, violetear and fairy",
@@ -415,8 +405,8 @@
         "nl": "Amazilia's, witkruinkolibrie en meer"
       },
       "intro": {
-        "en": "Rufous-tailed and Cinnamon Hummingbirds are the common garden birds, on the wet and the dry side. The two endemics are here too: the emerald in the central mountains and the Mangrove Hummingbird on the Pacific coast. Snowcap and the goldentail need forest in the foothills or the south.",
-        "nl": "De roodstaartamazilia en de kaneelamazilia zijn de algemene tuinvogels, aan de natte en de droge kant. De twee endemen staan hier ook: de koperkopsmaragdkolibrie in de centrale bergen en de mangroveamazilia aan de Pacifische kust. Voor de witkruinkolibrie en de goudstaartsaffierkolibrie heb je bos in de uitlopers of in het zuiden nodig."
+        "en": "Rufous-tailed and Cinnamon Hummingbirds are the common garden birds, on the wet and the dry side. The endemic emerald of the central mountains is here too. Snowcap and the goldentail need forest in the foothills or the south.",
+        "nl": "De roodstaartamazilia en de kaneelamazilia zijn de algemene tuinvogels, aan de natte en de droge kant. Ook de endemische koperkopsmaragdkolibrie van de centrale bergen staat hier. Voor de witkruinkolibrie en de goudstaartsaffierkolibrie heb je bos in de uitlopers of in het zuiden nodig."
       }
     },
     "rails-gallinules-and-allies": {
@@ -858,6 +848,16 @@
         "en": "The seedeaters and grassquits feed in grassy roadsides and gardens; the males are black or patterned, the females brown and hard to name. The Bananaquit and the flowerpiercer take nectar, the flowerpiercer by piercing the base of the flower.",
         "nl": "De dikbekjes en grondvinken zoeken voedsel in grasbermen en tuinen; de mannetjes zijn zwart of getekend, de vrouwtjes bruin en lastig te benoemen. Het suikerdiefje en de berghoningkruiper drinken nectar, de berghoningkruiper door een gaatje in de voet van de bloem te prikken."
       }
+    },
+    "potoos-and-oilbird": {
+      "title": {
+        "en": "Swifts and potoos",
+        "nl": "Gierzwaluwen en reuzennachtzwaluwen"
+      },
+      "intro": {
+        "en": "Swifts are always in the air, so look at size, the shape of the tail and any pale collar or rump; White-collared Swift is much bigger than the others. Potoos are the opposite: they sit still on a stump at night, so look for the huge eyes and the way they pose like a broken branch.",
+        "nl": "Gierzwaluwen zijn altijd in de lucht, dus let op de grootte, de vorm van de staart en een lichte kraag of stuit; de witkraaggierzwaluw is veel groter dan de andere. Reuzennachtzwaluwen zijn het tegenovergestelde: ze zitten 's nachts stil op een stronk, dus let op de enorme ogen en de pose als een afgebroken tak."
+      }
     }
   },
   "species": {
@@ -952,8 +952,8 @@
   },
   "endemics": {
     "why_here": {
-      "en": "Costa Rica has few birds of its own. It sits on a narrow land bridge, and most of its forests run on into Nicaragua and Panama, so this trip has only five endemics, and the Dark Pewee also reaches just over the border into western Panama. The real specials are the birds of the Talamanca and Chiriquí mountains, which Costa Rica shares only with western Panama: Resplendent Quetzal, Volcano and Fiery-throated Hummingbirds, Volcano Junco and Wrenthrush. You'll find them in the normal units. Cocos Island, far out in the Pacific, has three endemics of its own, but only liveaboard boats go there, so they are not in this trip.",
-      "nl": "Costa Rica heeft weinig eigen vogels. Het ligt op een smalle landbrug, en de meeste bossen lopen door in Nicaragua en Panama, dus deze reis omvat maar vijf endemen, en de Barrancapiewie komt ook net over de grens in West-Panama voor. De echte specialiteiten zijn de vogels van de Talamanca- en Chiriquíbergen, die Costa Rica alleen met West-Panama deelt: de quetzal, de vulkaankolibrie, de Irazukolibrie, de vulkaanjunco en de zeledonia. Je vindt ze in de gewone eenheden. Het Cocoseiland, ver in de Grote Oceaan, heeft drie eigen endemen, maar er gaan alleen boten heen waarop je slaapt, dus die zitten niet in deze reis."
+      "en": "Costa Rica has few birds of its own. It sits on a narrow land bridge, and most of its forests run on into Nicaragua and Panama, so this trip has only four endemics, and the Dark Pewee also reaches just over the border into western Panama. The real specials are the birds of the Talamanca and Chiriquí mountains, which Costa Rica shares only with western Panama: Resplendent Quetzal, Volcano and Fiery-throated Hummingbirds, Volcano Junco and Wrenthrush. You'll find them in the normal units. Cocos Island, far out in the Pacific, has three endemics of its own, but only liveaboard boats go there, so they are not in this trip.",
+      "nl": "Costa Rica heeft weinig eigen vogels. Het ligt op een smalle landbrug, en de meeste bossen lopen door in Nicaragua en Panama, dus deze reis omvat maar vier endemen, en de Barrancapiewie komt ook net over de grens in West-Panama voor. De echte specialiteiten zijn de vogels van de Talamanca- en Chiriquíbergen, die Costa Rica alleen met West-Panama deelt: de quetzal, de vulkaankolibrie, de Irazukolibrie, de vulkaanjunco en de zeledonia. Je vindt ze in de gewone eenheden. Het Cocoseiland, ver in de Grote Oceaan, heeft drie eigen endemen, maar er gaan alleen boten heen waarop je slaapt, dus die zitten niet in deze reis."
     },
     "where": [
       {
@@ -982,8 +982,8 @@
           "nl": "Het zuidwesten aan de Pacifische kust"
         },
         "text": {
-          "en": "Black-cheeked Ant-Tanager lives only in the forests around the Golfo Dulce, on the Osa Peninsula and in Corcovado and Piedras Blancas. Mangrove Hummingbird feeds in the mangroves of the Pacific coast, from the Gulf of Nicoya south; Carara and the Tárcoles are on the way.",
-          "nl": "De zwartwangmiertangare leeft alleen in de bossen rond de Golfo Dulce, op het schiereiland Osa en in Corcovado en Piedras Blancas. De mangroveamazilia zoekt voedsel in de mangroven van de Pacifische kust, van de Golf van Nicoya naar het zuiden; Carara en de Tárcoles liggen op de route."
+          "en": "Black-cheeked Ant-Tanager lives only in the forests around the Golfo Dulce, on the Osa Peninsula and in Corcovado and Piedras Blancas. Carara and the Tárcoles are on the way.",
+          "nl": "De zwartwangmiertangare leeft alleen in de bossen rond de Golfo Dulce, op het schiereiland Osa en in Corcovado en Piedras Blancas. Carara en de Tárcoles liggen op de route."
         }
       },
       {
@@ -1001,8 +1001,8 @@
     "units": {
       "endemics-1": {
         "title": {
-          "en": "Five endemics",
-          "nl": "Vijf endemen"
+          "en": "Four endemics",
+          "nl": "Vier endemen"
         }
       }
     }

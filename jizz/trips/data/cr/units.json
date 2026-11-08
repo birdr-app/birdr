@@ -102,7 +102,6 @@
       "species": [
         "chcswi1",
         "whcswi",
-        "grrswi1",
         "vauswi"
       ],
       "endemics": []
@@ -136,12 +135,10 @@
         "coheme1",
         "cinhum1",
         "rtlhum",
-        "manhum1",
         "bltgol1"
       ],
       "endemics": [
-        "coheme1",
-        "manhum1"
+        "coheme1"
       ]
     },
     {
@@ -910,32 +907,31 @@
       },
       "groups": [
         "cuckoos",
-        "nightjars",
-        "potoos-and-oilbird"
+        "nightjars"
       ],
       "species": [
         "grbani",
         "compau",
         "squcuc1",
-        "smbani",
-        "compot1",
-        "grepot1"
+        "smbani"
       ]
     },
     {
-      "slug": "swifts",
+      "slug": "potoos-and-oilbird",
       "title": {
-        "en": "Swifts",
-        "nl": "Gierzwaluwen"
+        "en": "Potoos and Oilbird and Swifts",
+        "nl": "Reuzennachtzwaluwen en Olievogel en Gierzwaluwen"
       },
       "groups": [
+        "potoos-and-oilbird",
         "swifts"
       ],
       "species": [
         "whcswi",
         "vauswi",
-        "grrswi1",
-        "chcswi1"
+        "compot1",
+        "chcswi1",
+        "grepot1"
       ]
     },
     {
@@ -1004,7 +1000,6 @@
       "species": [
         "rtlhum",
         "cinhum1",
-        "manhum1",
         "coheme1",
         "snowca1",
         "bltgol1"
@@ -1790,7 +1785,6 @@
       "species": [
         "darpew1",
         "coheme1",
-        "manhum1",
         "pregrs2",
         "bcatan1"
       ]
