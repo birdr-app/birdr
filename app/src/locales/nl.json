@@ -786,5 +786,7 @@
   "course_photos_done": "Klaar",
   "course_photos_no_main": "Nog geen hoofdfoto",
   "course_photos_count": "{count} zichtbare foto's",
-  "course_photos_source": "bron"
+  "course_photos_source": "bron",
+  "course_photos_commons_placeholder": "Link naar een foto op Wikimedia Commons",
+  "course_photos_commons_add": "Foto toevoegen"
 }

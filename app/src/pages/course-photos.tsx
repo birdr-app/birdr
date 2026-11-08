@@ -1,7 +1,8 @@
-import { Box, Button, Flex, Heading, Image, Link, SimpleGrid, Spinner, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Image, Input, Link, SimpleGrid, Spinner, Text } from '@chakra-ui/react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import {
+  addCommonsPhoto,
   fetchCoursePhotos,
   fetchSpeciesPhotos,
   savePhotoPick,
@@ -153,6 +154,27 @@ function BirdPhotos({ week, bird, onSaved }: { week: number; bird: CoursePhotoBi
   const [pick, setPick] = useState<PhotoPick>(() => startingPick(bird));
   const [saving, setSaving] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
   const [open, setOpen] = useState<number | null>(null);
+  const [commonsLink, setCommonsLink] = useState('');
+  const [adding, setAdding] = useState(false);
+  const [addError, setAddError] = useState('');
+  const [added, setAdded] = useState<CandidatePhoto[]>([]);
+
+  const addFromCommons = async () => {
+    if (!commonsLink.trim()) return;
+    setAdding(true);
+    setAddError('');
+    try {
+      const photo = await addCommonsPhoto(bird.species_id, commonsLink.trim());
+      setPhotos((all) => (all && !all.some((p) => p.id === photo.id) ? [photo, ...all] : all));
+      setAdded((list) => (list.some((p) => p.id === photo.id) ? list : [photo, ...list]));
+      setCommonsLink('');
+      setOpen(photo.id);
+    } catch (e) {
+      setAddError(e instanceof Error ? e.message : String(e));
+    } finally {
+      setAdding(false);
+    }
+  };
 
   useEffect(() => {
     fetchSpeciesPhotos(bird.species_id)
@@ -165,11 +187,11 @@ function BirdPhotos({ week, bird, onSaved }: { week: number; bird: CoursePhotoBi
   const ordered = useMemo(() => {
     if (!photos) return [];
     const chosen = [...pick.card, ...pick.quiz].map((id) => byId.get(id)).filter((p): p is CandidatePhoto => !!p);
-    const rest = photos.filter((p) => !pick.card.includes(p.id) && !pick.quiz.includes(p.id));
-    return [...chosen, ...rest];
+    const rest = photos.filter((p) => !pick.card.includes(p.id) && !pick.quiz.includes(p.id) && !added.some((a) => a.id === p.id));
+    return [...chosen, ...added.filter((a) => !chosen.some((c) => c.id === a.id)), ...rest];
     // Order is fixed when the photos load, so tiles don't jump while choosing.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [photos, byId]);
+  }, [photos, byId, added]);
   const missing = photos ? [...pick.card, ...pick.quiz].filter((id) => !byId.has(id)) : [];
 
   const save = useCallback(
@@ -255,9 +277,30 @@ function BirdPhotos({ week, bird, onSaved }: { week: number; bird: CoursePhotoBi
         </Flex>
       ) : (
         <>
-          <Text fontSize="xs" color="primary.600" mt={4} mb={2}>
-            <FormattedMessage id="course_photos_count" defaultMessage="{count} visible photos" values={{ count: photos.length }} />
-          </Text>
+          <Flex mt={4} mb={2} gap={2} align="center" wrap="wrap">
+            <Text fontSize="xs" color="primary.600" flex={1} minW="120px">
+              <FormattedMessage id="course_photos_count" defaultMessage="{count} visible photos" values={{ count: photos.length }} />
+            </Text>
+            <Input
+              size="sm"
+              maxW="420px"
+              value={commonsLink}
+              onChange={(e) => setCommonsLink(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') void addFromCommons();
+              }}
+              placeholder={intl.formatMessage({ id: 'course_photos_commons_placeholder', defaultMessage: 'Link to a photo on Wikimedia Commons' })}
+              aria-label={intl.formatMessage({ id: 'course_photos_commons_placeholder', defaultMessage: 'Link to a photo on Wikimedia Commons' })}
+            />
+            <Button size="sm" colorPalette="primary" onClick={() => void addFromCommons()} loading={adding} disabled={!commonsLink.trim()}>
+              <FormattedMessage id="course_photos_commons_add" defaultMessage="Add photo" />
+            </Button>
+          </Flex>
+          {addError ? (
+            <Text fontSize="sm" color="error.500" mb={2}>
+              {addError}
+            </Text>
+          ) : null}
           <SimpleGrid minChildWidth="120px" gap={2}>
             {ordered.map((p) => {
               const role = roleOf(pick, p.id);

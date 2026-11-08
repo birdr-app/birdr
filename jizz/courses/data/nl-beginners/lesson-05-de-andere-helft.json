@@ -13,7 +13,7 @@
     "nl": "Vrouwtjes en jongen van vogels die je al kent"
   },
   "intro": {
-    "nl": "We gaan terug naar de tuin en de vijver, naar vogels die je al kent. Of toch niet? In de eerste lessen leerde je alleen de mannetjes en de volwassen vogels. Maar de helft van alle merels is bruin, en ongeveer de helft van de wilde eenden ook.\n\nVrouwtjes en jonge vogels hebben vaak een ander kleed: zo noemen we alle veren samen. Ze zijn meestal bruiner en minder opvallend, zodat ze op het nest niet snel gezien worden. Vorm, snavel en gedrag blijven wel hetzelfde: precies de dingen waar je vorige week naar leerde kijken.\n\nIn deze les zie je vijf vogels: vier vrouwtjes en een jonge knobbelzwaan. In de quiz van tien vragen zie je alleen deze kleden, met drie vogels uit eerdere lessen ertussen. Het antwoord is gewoon de naam van de soort."
+    "nl": "We gaan terug naar de tuin en de vijver, naar vogels die je al kent. Of toch niet? In de eerste lessen leerde je alleen de mannetjes en de volwassen vogels. Maar de helft van alle merels is bruin, en ongeveer de helft van de wilde eenden ook.\n\nVrouwtjes en jonge vogels hebben vaak een ander kleed: zo noemen we alle veren samen. Ze zijn meestal bruiner en minder opvallend, zodat ze op het nest niet snel gezien worden. Vorm, snavel en gedrag blijven wel hetzelfde: precies de dingen waar je vorige week naar leerde kijken.\n\nIn deze les zie je de vrouwtjes van vogels die je al kent, en een paar jonge vogels. In de quiz van tien vragen zie je alleen deze kleden, met drie vogels uit eerdere lessen ertussen. Het antwoord is gewoon de naam van de soort."
   },
   "words": [
     {
@@ -255,6 +255,68 @@
       }
     },
     {
+      "species_id": 9078,
+      "latin": "Erithacus rubecula",
+      "name": {
+        "nl": "Roodborst"
+      },
+      "plumage": {
+        "nl": "jong, gevlekt"
+      },
+      "look_for": [
+        {
+          "nl": "Bruin **jeugdkleed** vol lichte vlekjes"
+        },
+        {
+          "nl": "Nog geen oranje op de borst"
+        },
+        {
+          "nl": "Rond en rechtop, met grote donkere ogen"
+        }
+      ],
+      "where_when": {
+        "nl": "Vanaf mei in tuinen en bosranden, vaak laag in de struiken. In de nazomer krijgt hij zijn oranje borst."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "nl": "Een droog, kort \"tik\", vaak een paar keer snel achter elkaar."
+        },
+        "chosen": [
+          {
+            "media_id": 1315592,
+            "xeno_canto": "XC1080724",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 41.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1315603,
+            "xeno_canto": "XC1072480",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 37.9,
+            "background_species": 0,
+            "recordist": "Pablo Guillemaud"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "dont_confuse": {
+        "nl": "Jonge merel: veel groter, met een lange staart."
+      },
+      "media": {
+        "card": [],
+        "quiz": []
+      },
+      "needs_photos": true
+    },
+    {
       "species_id": 165,
       "latin": "Anas platyrhynchos",
       "name": {
@@ -432,6 +494,7 @@
     "bird:8861",
     "bird:9815",
     "bird:9925",
+    "bird:9078",
     "bird:165",
     "bird:93",
     "quiz",

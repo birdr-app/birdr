@@ -85,7 +85,7 @@ from jizz.birdr_journey_views import (
 from jizz.checklist_views import ChecklistView
 from jizz.app_version_views import AppVersionView
 from jizz.courses.views import CourseDetailView, CourseLessonView
-from jizz.courses.admin_views import CoursePhotoPickView, CoursePhotosView, CourseSpeciesMediaView
+from jizz.courses.admin_views import CourseCommonsPhotoView, CoursePhotoPickView, CoursePhotosView, CourseSpeciesMediaView
 from jizz.geo_views import GeoCountryView
 from jizz.practice_views import (
     GlobalTroubleSpotsView,
@@ -584,6 +584,7 @@ urlpatterns = [
     path('api/courses/<slug:slug>/lessons/<int:week>/', CourseLessonView.as_view(), name='course-lesson'),
     path('api/courses/<slug:slug>/photos/', CoursePhotosView.as_view(), name='course-photos'),
     path('api/courses/<slug:slug>/photos/species/<int:species_id>/', CourseSpeciesMediaView.as_view(), name='course-photos-species'),
+    path('api/courses/<slug:slug>/photos/species/<int:species_id>/commons/', CourseCommonsPhotoView.as_view(), name='course-photos-commons'),
     path('api/courses/<slug:slug>/photos/<int:week>/<int:species_id>/', CoursePhotoPickView.as_view(), name='course-photo-pick'),
     path('api/geo/country/', GeoCountryView.as_view(), name='geo-country'),
     path('api/practice/trouble-spots/', TroubleSpotsView.as_view(), name='practice-trouble-spots'),

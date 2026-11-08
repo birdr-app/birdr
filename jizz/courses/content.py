@@ -71,16 +71,22 @@ def photo_picks(slug: str) -> dict[tuple[int, int], dict]:
 
 
 def effective_lessons(slug: str) -> list[dict]:
-    """The lessons with admin-chosen photos in place of the ones in the files."""
+    """The lessons with admin-chosen photos in place of the ones in the files.
+
+    A bird with no main photo yet (marked `needs_photos` in its file until one is chosen) is left
+    out, so the apps never show an empty card.
+    """
     picks = photo_picks(slug)
     lessons = []
     for lesson in course_lessons(slug):
-        if any((lesson['week'], b['species_id']) in picks for b in lesson.get('birds', [])):
+        birds = lesson.get('birds', [])
+        if any((lesson['week'], b['species_id']) in picks for b in birds) or any(not b['media']['card'] for b in birds):
             lesson = copy.deepcopy(lesson)
             for bird in lesson['birds']:
                 pick = picks.get((lesson['week'], bird['species_id']))
                 if pick and (pick['card'] or pick['quiz']):
                     bird['media'] = {'card': list(pick['card']), 'quiz': list(pick['quiz'])}
+            lesson['birds'] = [b for b in lesson['birds'] if b['media']['card']]
         lessons.append(lesson)
     return lessons
 

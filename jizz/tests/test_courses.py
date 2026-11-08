@@ -30,8 +30,9 @@ class CourseContentTestCase(TestCase):
                 for bird in lesson['birds']:
                     label = f"{where} {bird['name'].get('nl')}"
                     self.assertEqual(len(bird['look_for']), 3, label)
-                    self.assertTrue(bird['media']['card'], label)
-                    self.assertGreaterEqual(len(bird['media']['quiz']), 3, label)
+                    if not bird.get('needs_photos'):
+                        self.assertTrue(bird['media']['card'], label)
+                        self.assertGreaterEqual(len(bird['media']['quiz']), 3, label)
                     self.assertTrue(bird['sound'].get('chosen'), label)
                     for line in bird['look_for']:
                         bold.update(re.findall(r'\*\*(.+?)\*\*', line['nl']))
@@ -105,6 +106,10 @@ class CourseApiTestCase(TestCase):
         self.assertFalse(any(9925 in g for g in week1['lookalikes']))
         week4 = self.client.get('/api/courses/nl-beginners/lessons/4/').data
         self.assertTrue(any({9815, 9925} <= set(g) for g in week4['lookalikes']))  # Huismus and Vink
+
+    def test_a_bird_without_photos_waits_for_them(self):
+        lesson = self.client.get('/api/courses/nl-beginners/lessons/5/').data
+        self.assertNotIn('Roodborst', [b['name'] for b in lesson['birds']])
 
     def test_unknown_course_or_week_is_404(self):
         self.assertEqual(self.client.get('/api/courses/nope/').status_code, 404)
@@ -191,3 +196,29 @@ class CoursePhotoAdminTestCase(TestCase):
         change = self.client.get(f'/admin/jizz/coursephotopick/{pick.id}/change/')
         self.assertEqual(change.status_code, 200)
         self.assertContains(change, '999999')  # a hidden or missing photo is shown as a gap with its id
+
+
+    def test_add_a_commons_photo(self):
+        from unittest.mock import patch
+
+        self.client.force_authenticate(self.staff)
+        url = f'/api/courses/nl-beginners/photos/species/{self.species.id}/commons/'
+        info = {
+            'url': 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Robin_juvenile.jpg',
+            'link': 'https://commons.wikimedia.org/wiki/File:Robin_juvenile.jpg',
+            'contributor': 'Jane Doe',
+            'copyright_text': 'License: CC BY-SA 4.0',
+        }
+        with patch('media.commons_import.fetch_commons_file', return_value=info) as fetch:
+            first = self.client.post(url, {'link': 'https://commons.wikimedia.org/wiki/File:Robin_juvenile.jpg'}, format='json')
+            again = self.client.post(url, {'link': 'https://commons.wikimedia.org/wiki/File:Robin_juvenile.jpg'}, format='json')
+        fetch.assert_called_with('File:Robin juvenile.jpg')
+        self.assertEqual(first.status_code, 201)
+        self.assertEqual(again.status_code, 200)
+        self.assertEqual(first.data['photo']['id'], again.data['photo']['id'])
+        media = Media.objects.get(id=first.data['photo']['id'])
+        self.assertEqual((media.source, media.copyright_standardized, media.species_id), ('wikimedia', 'CC BY-SA', self.species.id))
+        bad = self.client.post(url, {'link': 'https://example.org/robin.jpg'}, format='json')
+        self.assertEqual(bad.status_code, 400)
+        self.client.force_authenticate(self.player)
+        self.assertEqual(self.client.post(url, {'link': info['link']}, format='json').status_code, 403)

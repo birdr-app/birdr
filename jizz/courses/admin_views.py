@@ -72,22 +72,46 @@ class CourseSpeciesMediaView(APIView):
             )
             .order_by('-created')
         )
-        media = []
-        for m in rows:
-            url = media_object_display_url(m)
-            media.append({
-                'id': m.id,
-                'url': url,
-                'thumb': _thumb(url),
-                'link': m.link,
-                'contributor': re.sub(r'<[^>]+>', '', m.contributor or '').strip(),
-                'license': m.copyright_standardized,
-                'source': m.source,
-                'approved': m.approved,
-                'rejected': m.rejected,
-            })
+        media = [_candidate(m, m.approved, m.rejected) for m in rows]
         media.sort(key=lambda m: -(m['approved'] - 2 * m['rejected']))
         return Response({'species_id': species_id, 'media': media})
+
+
+def _candidate(m, approved=0, rejected=0):
+    url = media_object_display_url(m)
+    return {
+        'id': m.id,
+        'url': url,
+        'thumb': _thumb(url),
+        'link': m.link,
+        'contributor': re.sub(r'<[^>]+>', '', m.contributor or '').strip(),
+        'license': m.copyright_standardized,
+        'source': m.source,
+        'approved': approved,
+        'rejected': rejected,
+    }
+
+
+class CourseCommonsPhotoView(APIView):
+    """Add a photo from Wikimedia Commons to a species, so it can be picked for the course."""
+
+    permission_classes = [IsAdminUser]
+
+    def post(self, request, slug, species_id):
+        from media.commons_import import CommonsImportError, add_commons_photo
+
+        _course(slug)
+        species = Species.objects.filter(id=species_id).first()
+        if species is None:
+            raise Http404
+        try:
+            media, created = add_commons_photo(species, str(request.data.get('link', '')))
+        except CommonsImportError as exc:
+            return Response({'error': str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+        return Response(
+            {'photo': _candidate(media), 'created': created},
+            status=status.HTTP_201_CREATED if created else status.HTTP_200_OK,
+        )
 
 
 class CoursePhotoPickView(APIView):

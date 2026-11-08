@@ -52,3 +52,13 @@ export async function savePhotoPick(week: number, speciesId: number, pick: Photo
 export function startingPick(bird: CoursePhotoBird): PhotoPick {
   return bird.pick ?? { card: [...bird.file.card], quiz: [...bird.file.quiz], reject: [], done: false };
 }
+
+/** Add a Wikimedia Commons photo (page or file link) to the species; returns it as a candidate. */
+export async function addCommonsPhoto(speciesId: number, link: string): Promise<CandidatePhoto> {
+  try {
+    const res = await axios.post<{ photo: CandidatePhoto }>(`${base()}/species/${speciesId}/commons/`, { link });
+    return res.data.photo;
+  } catch (error: any) {
+    throw new Error(error?.response?.data?.error || 'De foto kon niet worden toegevoegd.');
+  }
+}
