@@ -13,6 +13,10 @@ def _message():
         'Motmot <info@birdr.pro>',
         ['a@example.com'],
         reply_to=['info@motmot.club'],
+        headers={
+            'List-Unsubscribe': '<https://motmot.club/api/updates/unsubscribe/abc/>, <mailto:info@birdr.pro>',
+            'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
+        },
     )
     msg.attach_alternative(
         '<img src="https://motmot.club/images/email-logo.png"><a href="https://www.motmot.club/privacy/">Privacy</a>',
@@ -33,6 +37,24 @@ class RewriteEmailDomainsTests(SimpleTestCase):
         self.assertIn('https://www.birdr.pro/privacy/', html)
         self.assertNotIn('motmot.club', html)
         self.assertEqual(msg.reply_to, ['info@birdr.pro'])
+
+    def test_rewrites_subject_and_custom_headers(self):
+        msg = _message()
+        msg.subject = 'New on motmot.club'
+        msg = rewrite_email_domains(msg)
+
+        self.assertEqual(msg.subject, 'New on birdr.pro')
+        self.assertEqual(
+            msg.extra_headers['List-Unsubscribe'],
+            '<https://birdr.pro/api/updates/unsubscribe/abc/>, <mailto:info@birdr.pro>',
+        )
+        self.assertEqual(msg.extra_headers['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click')
+
+    def test_leaves_recipients_alone(self):
+        msg = _message()
+        msg.to = ['someone@motmot.club']
+        msg = rewrite_email_domains(msg)
+        self.assertEqual(msg.to, ['someone@motmot.club'])
 
     @override_settings(EMAIL_DOMAIN_REWRITES={})
     def test_no_rewrites_leaves_message_alone(self):
