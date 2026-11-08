@@ -267,8 +267,7 @@
       },
       "species": [
         "blfant1",
-        "rubant1",
-        "blhant1"
+        "rubant1"
       ],
       "endemics": []
     },
@@ -294,7 +293,6 @@
         "rudwoo1",
         "plbwoo1",
         "webwoo1",
-        "blbwoo1",
         "brbscy1"
       ],
       "endemics": []
@@ -307,7 +305,6 @@
       },
       "species": [
         "strxen1",
-        "stfgle1",
         "strwoo5"
       ],
       "endemics": []
@@ -737,8 +734,7 @@
         "tatlea1",
         "rubant1",
         "stcant2",
-        "blcant1",
-        "blhant1"
+        "blcant1"
       ]
     },
     {
@@ -754,8 +750,7 @@
         "webwoo1",
         "brbscy1",
         "plbwoo1",
-        "rudwoo1",
-        "blbwoo1"
+        "rudwoo1"
       ]
     },
     {
@@ -771,7 +766,6 @@
       "species": [
         "whrman1",
         "bucman1",
-        "stfgle1",
         "strwoo5",
         "strxen1",
         "whcman2"

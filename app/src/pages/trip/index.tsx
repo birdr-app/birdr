@@ -241,28 +241,6 @@ export function TripHomePage() {
             />
           ) : null}
 
-          {regions.length ? (
-            <>
-              <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
-                {t('trip_regions_section', 'Regions')}
-              </Text>
-              <Text fontSize="sm" color="primary.700">
-                {t('trip_regions_hint', 'More birds for the places you visit. They come on top of the {country} list.', { country: trip.name })}
-              </Text>
-              {regions.map((region) => (
-                <UnitRow
-                  key={region.country}
-                  title={region.name}
-                  image={region.image ?? undefined}
-                  subtitle={t('trip_region_species', '{count} extra species', { count: region.species_count })}
-                  known={regionKnown[region.country] ?? 0}
-                  total={region.species_count}
-                  done={(regionKnown[region.country] ?? 0) >= region.species_count}
-                  onClick={() => navigate(`/trips/${region.country}`)}
-                />
-              ))}
-            </>
-          ) : null}
 
           <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
             {t('trip_units_section', 'Units')}
@@ -292,6 +270,28 @@ export function TripHomePage() {
                     birds: knownUnitBirds,
                   })}
             </Button>
+          ) : null}
+          {regions.length ? (
+            <>
+              <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
+                {t('trip_regions_section', 'Regions')}
+              </Text>
+              <Text fontSize="sm" color="primary.700">
+                {t('trip_regions_hint', 'More birds for the places you visit. They come on top of the {country} list.', { country: trip.name })}
+              </Text>
+              {regions.map((region) => (
+                <UnitRow
+                  key={region.country}
+                  title={region.name}
+                  image={region.image ?? undefined}
+                  subtitle={t('trip_region_species', '{count} extra species', { count: region.species_count })}
+                  known={regionKnown[region.country] ?? 0}
+                  total={region.species_count}
+                  done={(regionKnown[region.country] ?? 0) >= region.species_count}
+                  onClick={() => navigate(`/trips/${region.country}`)}
+                />
+              ))}
+            </>
           ) : null}
         </Flex>
       </Page.Body>

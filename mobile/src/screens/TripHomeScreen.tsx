@@ -123,6 +123,23 @@ export function TripHomeScreen() {
         />
       ) : null}
 
+
+      <Text style={tripStyles.sectionTitle}>{t('trip_units_section')}</Text>
+      <Text style={tripStyles.small}>{t('trip_units_hint')}</Text>
+      {units.map((unit) => (
+        <UnitRow
+          key={unit.slug}
+          title={unit.title}
+          subtitle={`${knownIn(unit)}/${unit.species.length}`}
+          image={unitImage(unit)}
+          known={knownIn(unit)}
+          total={unit.species.length}
+          done={done.has(unit.slug)}
+          highlight={next?.title === unit.title}
+          onPress={() => openUnit(unit.slug)}
+          testID={`trip.unit.${unit.slug}`}
+        />
+      ))}
       {regions.length ? (
         <>
           <Text style={tripStyles.sectionTitle}>{t('trip_regions_section')}</Text>
@@ -142,23 +159,6 @@ export function TripHomeScreen() {
           ))}
         </>
       ) : null}
-
-      <Text style={tripStyles.sectionTitle}>{t('trip_units_section')}</Text>
-      <Text style={tripStyles.small}>{t('trip_units_hint')}</Text>
-      {units.map((unit) => (
-        <UnitRow
-          key={unit.slug}
-          title={unit.title}
-          subtitle={`${knownIn(unit)}/${unit.species.length}`}
-          image={unitImage(unit)}
-          known={knownIn(unit)}
-          total={unit.species.length}
-          done={done.has(unit.slug)}
-          highlight={next?.title === unit.title}
-          onPress={() => openUnit(unit.slug)}
-          testID={`trip.unit.${unit.slug}`}
-        />
-      ))}
     </ScrollView>
   );
 }
