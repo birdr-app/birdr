@@ -17,7 +17,14 @@ export type CoursePhotoBird = {
   pick: PhotoPick | null;
 };
 
-export type CoursePhotoLesson = { week: number; title: string; birds: CoursePhotoBird[] };
+export type CoursePhotoLesson = {
+  week: number;
+  title: string;
+  kind?: string;
+  birds: CoursePhotoBird[];
+  /** Birds repeated from an earlier lesson: they show the photos chosen there. */
+  reused?: { name: string; week: number }[];
+};
 
 export type CandidatePhoto = {
   id: number;

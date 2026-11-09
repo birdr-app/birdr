@@ -78,15 +78,21 @@ def effective_lessons(slug: str) -> list[dict]:
     """
     picks = photo_picks(slug)
     lessons = []
+    media_by_bird = {}  # (week, species_id) -> media, for birds that reuse an earlier lesson's photos
     for lesson in course_lessons(slug):
-        birds = lesson.get('birds', [])
-        if any((lesson['week'], b['species_id']) in picks for b in birds) or any(not b['media']['card'] for b in birds):
-            lesson = copy.deepcopy(lesson)
-            for bird in lesson['birds']:
+        lesson = copy.deepcopy(lesson)
+        for bird in lesson.get('birds', []):
+            # A bird repeated in the same plumage (the song lesson) shows the photos chosen for it
+            # in the lesson where it was taught, so they are picked only once.
+            source = bird.get('photos_from_week')
+            if source and (source, bird['species_id']) in media_by_bird:
+                bird['media'] = copy.deepcopy(media_by_bird[(source, bird['species_id'])])
+            else:
                 pick = picks.get((lesson['week'], bird['species_id']))
                 if pick and (pick['card'] or pick['quiz']):
                     bird['media'] = {'card': list(pick['card']), 'quiz': list(pick['quiz'])}
-            lesson['birds'] = [b for b in lesson['birds'] if b['media']['card']]
+            media_by_bird[(lesson['week'], bird['species_id'])] = bird['media']
+        lesson['birds'] = [b for b in lesson.get('birds', []) if b['media']['card']]
         lessons.append(lesson)
     return lessons
 

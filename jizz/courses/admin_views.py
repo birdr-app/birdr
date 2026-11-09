@@ -43,6 +43,8 @@ class CoursePhotosView(APIView):
         for lesson in course_lessons(slug):
             birds = []
             for bird in lesson.get('birds', []):
+                if bird.get('photos_from_week'):
+                    continue  # uses the photos chosen in the lesson where it was taught
                 media = bird.get('media', {})
                 pick = picks.get((lesson['week'], bird['species_id']))
                 birds.append({
@@ -53,7 +55,16 @@ class CoursePhotosView(APIView):
                     'file': {'card': media.get('card', []), 'quiz': media.get('quiz', [])},
                     'pick': pick,
                 })
-            lessons.append({'week': lesson['week'], 'title': text(lesson['title'], 'nl'), 'birds': birds})
+            lessons.append({
+                'week': lesson['week'],
+                'title': text(lesson['title'], 'nl'),
+                'kind': lesson.get('kind', 'species'),
+                'birds': birds,
+                'reused': [
+                    {'name': text(b['name'], 'nl'), 'week': b['photos_from_week']}
+                    for b in lesson.get('birds', []) if b.get('photos_from_week')
+                ],
+            })
         return Response({'course': slug, 'lessons': lessons})
 
 

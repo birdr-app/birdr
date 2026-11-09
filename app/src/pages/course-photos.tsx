@@ -103,8 +103,9 @@ export function CoursePhotosPage() {
             />
           </Text>
           <Flex gap={2} wrap="wrap">
-            {lessons.filter((l) => l.birds.length > 0).map((l) => {
-              const finished = l.birds.length > 0 && l.birds.every((b) => b.pick?.done);
+            {lessons.map((l) => {
+              // A lesson without birds of its own (a review lesson) has nothing to choose.
+              const finished = l.birds.every((b) => b.pick?.done);
               return (
                 <Button
                   key={l.week}
@@ -122,6 +123,23 @@ export function CoursePhotosPage() {
           <Heading size="lg" color="primary.800">
             <FormattedMessage id="course_photos_lesson" defaultMessage="Lesson {week}: {title}" values={{ week: lesson.week, title: lesson.title }} />
           </Heading>
+          {lesson.kind === 'review' && (
+            <Text color="primary.700">
+              <FormattedMessage
+                id="course_photos_review_lesson"
+                defaultMessage="This is a review lesson: its quiz uses the photos of earlier lessons. There is nothing to choose here."
+              />
+            </Text>
+          )}
+          {(lesson.reused ?? []).length > 0 && (
+            <Text color="primary.700">
+              <FormattedMessage
+                id="course_photos_reused"
+                defaultMessage="These birds use the photos chosen in their first lesson: {birds}."
+                values={{ birds: (lesson.reused ?? []).map((r) => `${r.name} (${r.week})`).join(', ') }}
+              />
+            </Text>
+          )}
           {lesson.birds.map((bird) => (
             <BirdPhotos
               key={`${lesson.week}-${bird.species_id}`}

@@ -779,6 +779,8 @@
   "course_photos_load_error": "De cursusfoto's konden niet worden geladen.",
   "course_photos_intro": "Tik op een foto om hem hoofdfoto, kaartfoto (max. 3) of quizfoto (6–8) te maken, of om hem niet te gebruiken. Wijzigingen staan meteen in de cursus. {done} van {total} vogels klaar.",
   "course_photos_lesson": "Les {week}: {title}",
+  "course_photos_review_lesson": "Dit is een herhalingsles: de quiz gebruikt de foto's van eerdere lessen. Hier hoef je niets te kiezen.",
+  "course_photos_reused": "Deze vogels gebruiken de foto's uit hun eerste les: {birds}.",
   "course_photos_teaches": "Les leert: {plumage}",
   "course_photos_missing": "{count} gekozen foto's zijn niet meer zichtbaar en vallen weg.",
   "course_photos_saving": "Opslaan…",

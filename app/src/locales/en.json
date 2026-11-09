@@ -776,6 +776,8 @@
   "no media left for question": "There is no usable picture of this bird right now.",
   "skip question": "Skip this question",
   "course_photos_title": "Select course photos",
+  "course_photos_review_lesson": "This is a review lesson: its quiz uses the photos of earlier lessons. There is nothing to choose here.",
+  "course_photos_reused": "These birds use the photos chosen in their first lesson: {birds}.",
   "trip_title": "Trip prep",
   "trip_list_intro": "Going abroad? Learn the birds before you go: first the kinds of birds, then the species, group by group. Birds you already know from other games count straight away.",
   "trip_list_counts": "{species} species · {endemics} endemics",

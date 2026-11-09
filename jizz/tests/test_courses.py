@@ -162,6 +162,21 @@ class CoursePhotoAdminTestCase(TestCase):
         self.assertEqual([i['id'] for i in lesson['birds'][0]['images']], [self.photos[1].id])
         self.assertEqual([i['id'] for i in lesson['birds'][0]['quiz_images']], [self.photos[2].id])
 
+    def test_song_lesson_reuses_the_photos_of_lesson_1(self):
+        self.client.force_authenticate(self.staff)
+        self.client.put(
+            f'/api/courses/nl-beginners/photos/1/{self.species.id}/',
+            {'card': [self.photos[2].id], 'quiz': [self.photos[1].id], 'reject': []},
+            format='json',
+        )
+        lesson9 = self.client.get('/api/courses/nl-beginners/lessons/9/').data
+        merel = next(b for b in lesson9['birds'] if b['name'] == 'Merel')
+        self.assertEqual([i['id'] for i in merel['images']], [self.photos[2].id])
+        tool = self.client.get('/api/courses/nl-beginners/photos/').data
+        week9 = next(l for l in tool['lessons'] if l['week'] == 9)
+        self.assertEqual([b['name'] for b in week9['birds']], ['Tjiftjaf'])
+        self.assertIn({'name': 'Merel', 'week': 1}, week9['reused'])
+
     def test_pick_is_validated(self):
         self.client.force_authenticate(self.staff)
         url = f'/api/courses/nl-beginners/photos/1/{self.species.id}/'
