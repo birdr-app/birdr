@@ -166,7 +166,7 @@ function Intro({
           <Text color="primary.800" mb={2}>
             {t('trip_test_out', 'You already know {known} of these {total}. Go straight to the quiz?', { known: knownCount, total: birds.length })}
           </Text>
-          <Button colorPalette="secondary" w="full" onClick={onQuiz}>
+          <Button colorPalette="primary" w="full" onClick={onQuiz}>
             {t('trip_quick_check', 'Quick check')}
           </Button>
         </Box>

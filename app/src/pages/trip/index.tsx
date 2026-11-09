@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { countryCodeToFlag } from '../../api/birdrJourney';
 import { unitKnown } from '../../core/trip-quiz';
-import { fetchTrips, fetchTripProgress, loadTripState, type TripRegion, type TripSummary, type TripUnit } from '../../api/trip';
+import { fetchTrips, fetchTripProgress, loadTripState, updateTripState, type TripRegion, type TripSummary, type TripUnit } from '../../api/trip';
 import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
 import { ProgressRing, TripLoading, UnitRow } from './parts';
@@ -102,9 +102,14 @@ export function TripHomePage() {
   const country = countryParam.toUpperCase();
   const t = useTripText();
   const navigate = useNavigate();
-  const { trip, error, reload, local, known, knownGroups, progress } = useTrip(country);
+  const { trip, error, reload, local, setLocal, known, knownGroups, progress } = useTrip(country);
   const [showKnown, setShowKnown] = useState(false);
   const regionKnown = useRegionKnown(trip?.regions ?? []);
+  // On a region pack: whether the player added it to the country's trip (stored with the country).
+  const [inParent, setInParent] = useState<boolean | null>(null);
+  useEffect(() => {
+    if (trip?.parent) setInParent(loadTripState(trip.parent).regions.includes(country));
+  }, [trip?.parent, country]);
 
   if (!trip) return <TripLoading error={error} onRetry={reload} />;
 
@@ -125,6 +130,25 @@ export function TripHomePage() {
   // A region pack adds birds to the country's trip: no families, first day or endemics of its own.
   const isPack = !!trip.parent;
   const regions = trip.regions ?? [];
+  // Regions the player added count in the main total and percentage.
+  const added = regions.filter((r) => local.regions.includes(r.country));
+  const totalSpecies = codes.length + added.reduce((n, r) => n + r.species_count, 0);
+  const totalKnown = knownCount + added.reduce((n, r) => n + Math.min(regionKnown[r.country] ?? 0, r.species_count), 0);
+  const toggleRegion = (code: string) =>
+    setLocal(
+      updateTripState(country, (s) => ({
+        ...s,
+        regions: s.regions.includes(code) ? s.regions.filter((r) => r !== code) : [...s.regions, code],
+      }))
+    );
+  const toggleInParent = () => {
+    if (!trip.parent) return;
+    const state = updateTripState(trip.parent, (s) => ({
+      ...s,
+      regions: s.regions.includes(country) ? s.regions.filter((r) => r !== country) : [...s.regions, country],
+    }));
+    setInParent(state.regions.includes(country));
+  };
   const lookalikes = trip.lookalikes ?? [];
   const lookalikesKnown = lookalikes.filter((p) => known.has(p.here)).length;
   const lookalikeImage = lookalikes.length
@@ -141,7 +165,10 @@ export function TripHomePage() {
     next = { label: t('trip_next', 'Next'), title: t('trip_lookalikes_title', 'Lookalikes from home'), go: () => navigate(`/trips/${country}/lookalikes`) };
   } else {
     const unit = units.find((u) => !isDone(u));
+    // After the country's own units: the regions the player added, in order.
+    const region = added.find((r) => (regionKnown[r.country] ?? 0) < r.species_count);
     if (unit) next = { label: t('trip_next', 'Next'), title: unit.title, go: () => navigate(`/trips/${country}/units/${unit.slug}`) };
+    else if (region) next = { label: t('trip_next', 'Next'), title: region.name, go: () => navigate(`/trips/${region.country}`) };
   }
 
   return (
@@ -155,11 +182,16 @@ export function TripHomePage() {
       <Page.Body>
         <Flex direction="column" gap={3} w="full" maxW="640px" mx="auto">
           <Flex align="center" gap={4} bg="secondary.700" borderRadius="xl" p={4}>
-            <ProgressRing value={codes.length ? knownCount / codes.length : 0} />
+            <ProgressRing value={totalSpecies ? totalKnown / totalSpecies : 0} />
             <Box flex={1} minW={0}>
               <Text color="white" fontSize="lg" fontWeight="700">
-                {t('trip_known_count', '{known} of {total} species', { known: knownCount, total: codes.length })}
+                {t('trip_known_count', '{known} of {total} species', { known: totalKnown, total: totalSpecies })}
               </Text>
+              {added.length ? (
+                <Text color="secondary.100" fontSize="sm">
+                  {t('trip_with_regions', 'With {regions}', { regions: added.map((r) => r.name).join(', ') })}
+                </Text>
+              ) : null}
               <Text color="secondary.100" fontSize="sm">
                 {endemicCodes.length ? `${t('trip_endemics_count', 'Endemics {known}/{total}', { known: endemicsKnown, total: endemicCodes.length })} · ` : ''}
                 {t('trip_units_count', 'Units {done}/{total}', {
@@ -192,6 +224,19 @@ export function TripHomePage() {
               </Text>
             </Box>
           )}
+
+          {isPack && inParent !== null ? (
+            <Flex align="center" gap={3} bg="white" borderRadius="xl" p={3} borderWidth="1px" borderColor="primary.200">
+              <Text flex={1} fontSize="sm" color="primary.800">
+                {inParent
+                  ? t('trip_region_in_parent', 'These birds count in your {country} total.', { country: trip.parent_name ?? '' })
+                  : t('trip_region_add_hint', 'Going here? Add these birds to your {country} total.', { country: trip.parent_name ?? '' })}
+              </Text>
+              <Button size="sm" colorPalette="primary" variant={inParent ? 'outline' : 'solid'} onClick={toggleInParent} flexShrink={0}>
+                {inParent ? t('trip_region_remove', 'Remove') : t('trip_region_add', 'Add')}
+              </Button>
+            </Flex>
+          ) : null}
 
           {trip.intro ? <Text color="primary.800">{trip.intro}</Text> : null}
 
@@ -277,20 +322,36 @@ export function TripHomePage() {
                 {t('trip_regions_section', 'Regions')}
               </Text>
               <Text fontSize="sm" color="primary.700">
-                {t('trip_regions_hint', 'More birds for the places you visit. They come on top of the {country} list.', { country: trip.name })}
+                {t('trip_regions_hint', 'More birds for the places you visit. Add a region and its birds count in your {country} total.', { country: trip.name })}
               </Text>
-              {regions.map((region) => (
-                <UnitRow
-                  key={region.country}
-                  title={region.name}
-                  image={region.image ?? undefined}
-                  subtitle={t('trip_region_species', '{count} extra species', { count: region.species_count })}
-                  known={regionKnown[region.country] ?? 0}
-                  total={region.species_count}
-                  done={(regionKnown[region.country] ?? 0) >= region.species_count}
-                  onClick={() => navigate(`/trips/${region.country}`)}
-                />
-              ))}
+              {regions.map((region) => {
+                const isAdded = local.regions.includes(region.country);
+                return (
+                  <Flex key={region.country} align="center" gap={2}>
+                    <Flex flex={1} minW={0} direction="column">
+                      <UnitRow
+                        title={region.name}
+                        image={region.image ?? undefined}
+                        subtitle={t('trip_region_species', '{count} extra species', { count: region.species_count })}
+                        known={regionKnown[region.country] ?? 0}
+                        total={region.species_count}
+                        done={(regionKnown[region.country] ?? 0) >= region.species_count}
+                        onClick={() => navigate(`/trips/${region.country}`)}
+                      />
+                    </Flex>
+                    <Button
+                      size="sm"
+                      colorPalette="primary"
+                      variant={isAdded ? 'solid' : 'outline'}
+                      onClick={() => toggleRegion(region.country)}
+                      flexShrink={0}
+                      minW="76px"
+                    >
+                      {isAdded ? `✓ ${t('trip_region_added', 'Added')}` : `+ ${t('trip_region_add', 'Add')}`}
+                    </Button>
+                  </Flex>
+                );
+              })}
             </>
           ) : null}
         </Flex>

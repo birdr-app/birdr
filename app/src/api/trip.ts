@@ -143,6 +143,8 @@ export type TripLocalState = {
   cards_seen: string[];
   families_done: boolean;
   lookalikes_done: boolean;
+  /** Region packs the player added to this country's trip: their birds count in its total. */
+  regions: string[];
   /** Species answered wrong last time in a trip quiz: the "shaky" ones. */
   shaky: string[];
   /** Species answered right in a trip quiz on this device (counts even when saving failed). */
@@ -152,7 +154,7 @@ export type TripLocalState = {
 const stateKey = (country: string) => `trip:${country}:state`;
 
 export function loadTripState(country: string): TripLocalState {
-  const empty: TripLocalState = { units_done: [], cards_seen: [], families_done: false, lookalikes_done: false, shaky: [], right: [] };
+  const empty: TripLocalState = { units_done: [], cards_seen: [], families_done: false, lookalikes_done: false, regions: [], shaky: [], right: [] };
   try {
     const raw = window.localStorage.getItem(stateKey(country));
     if (raw) return { ...empty, ...JSON.parse(raw) };

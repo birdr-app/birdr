@@ -58,7 +58,8 @@ export type TripSummary = {
   species_count: number;
   endemic_count: number;
   group_count: number;
-  languages: string[];  /** A region pack names the country trip it adds to (e.g. CR for CR-CARIBBEAN). */
+  languages: string[];
+  /** A region pack names the country trip it adds to (e.g. CR for CR-CARIBBEAN). */
   parent?: string | null;
   parent_name?: string | null;
 };
@@ -77,10 +78,10 @@ export type Trip = TripSummary & {
     where: { title: string; text: string }[];
     families: { title: string; text: string }[];
     units: TripUnit[];
-    /** Region packs of this country; empty on a pack itself. */
-  regions?: TripRegion[];
-};
+  };
   species: Record<string, TripSpecies>;
+  /** Region packs of this country; empty on a pack itself. */
+  regions?: TripRegion[];
 };
 
 export type TripProgress = {
@@ -155,13 +156,15 @@ export type TripLocalState = {
   /** Species whose card the player has seen. */
   cards_seen: string[];
   families_done: boolean;
+  /** Region packs the player added to this country's trip: their birds count in its total. */
+  regions: string[];
   /** Species answered wrong last time in a trip quiz: the "shaky" ones. */
   shaky: string[];
   /** Species answered right in a trip quiz on this device (counts even when saving failed). */
   right: string[];
 };
 
-export const EMPTY_TRIP_STATE: TripLocalState = { units_done: [], cards_seen: [], families_done: false, shaky: [], right: [] };
+export const EMPTY_TRIP_STATE: TripLocalState = { units_done: [], cards_seen: [], families_done: false, regions: [], shaky: [], right: [] };
 
 const stateKey = (country: string) => `trip:${country}:state`;
 
