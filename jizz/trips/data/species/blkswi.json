@@ -1,0 +1,22 @@
+{
+  "code": "blkswi",
+  "name": {
+    "en": "Black Swift",
+    "nl": "Zwarte gierzwaluw"
+  },
+  "latin": "Cypseloides niger",
+  "look_for": [
+    {
+      "en": "Large all-black swift with a notched **tail**",
+      "nl": "Grote, geheel zwarte gierzwaluw met een ingekeepte **staart**"
+    },
+    {
+      "en": "No white collar, smaller than White-collared Swift",
+      "nl": "Geen witte kraag, kleiner dan de witkraaggierzwaluw"
+    },
+    {
+      "en": "Feeds high over ridges, nests behind waterfalls",
+      "nl": "Jaagt hoog boven bergkammen, broedt achter watervallen"
+    }
+  ]
+}

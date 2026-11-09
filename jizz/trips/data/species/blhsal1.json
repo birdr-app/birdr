@@ -1,0 +1,22 @@
+{
+  "code": "blhsal1",
+  "name": {
+    "en": "Black-headed Saltator",
+    "nl": "Zwartkopsaltator"
+  },
+  "latin": "Saltator atriceps",
+  "look_for": [
+    {
+      "en": "Big saltator with a black **head** and thick bill",
+      "nl": "Grote saltator met een zwarte **kop** en dikke snavel"
+    },
+    {
+      "en": "White **throat** ringed with black",
+      "nl": "Witte **keel** met een zwarte rand"
+    },
+    {
+      "en": "Bright olive back, grey belly, orange under the **tail**",
+      "nl": "Fel olijfgroene rug, grijze buik, oranje onder de **staart**"
+    }
+  ]
+}

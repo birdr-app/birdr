@@ -1,0 +1,22 @@
+{
+  "code": "botspa",
+  "name": {
+    "en": "Botteri's Sparrow",
+    "nl": "Botterigors"
+  },
+  "latin": "Peucaea botterii",
+  "look_for": [
+    {
+      "en": "Plain, streaky sparrow of rough grassland",
+      "nl": "Effen, gestreepte gors van ruig grasland"
+    },
+    {
+      "en": "Rufous-streaked **back**, unstreaked buff **breast**",
+      "nl": "Roodbruin gestreepte **rug**, ongestreepte lichtbruine **borst**"
+    },
+    {
+      "en": "Grey **face**, rusty line behind the **eye**",
+      "nl": "Grijs **gezicht**, roestbruine streep achter het **oog**"
+    }
+  ]
+}

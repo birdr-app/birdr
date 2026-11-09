@@ -1,0 +1,22 @@
+{
+  "code": "miskit",
+  "name": {
+    "en": "Mississippi Kite",
+    "nl": "Mississippiwouw"
+  },
+  "latin": "Ictinia mississippiensis",
+  "look_for": [
+    {
+      "en": "Slim grey raptor with a pale grey **head**",
+      "nl": "Slanke grijze roofvogel met een lichtgrijze **kop**"
+    },
+    {
+      "en": "Black **tail**, pale **secondaries** in flight",
+      "nl": "Zwarte **staart**, lichte **armpennen** in vlucht"
+    },
+    {
+      "en": "Migrates in big flocks with Swainson's Hawks",
+      "nl": "Trekt in grote groepen met prairiebuizerds mee"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "nosfly1",
+  "name": {
+    "en": "Northern Scrub-Flycatcher",
+    "nl": "Salvinvliegenpikker"
+  },
+  "latin": "Sublegatus arenarum",
+  "look_for": [
+    {
+      "en": "Small flycatcher with a stubby black **bill**",
+      "nl": "Kleine vliegenvanger met een kort zwart **snaveltje**"
+    },
+    {
+      "en": "Whitish **eyebrow** above a dark eye-line",
+      "nl": "Witte **wenkbrauwstreep** boven een donkere oogstreep"
+    },
+    {
+      "en": "Grey **breast** sharply set off from yellow belly",
+      "nl": "Grijze **borst** scherp gescheiden van de gele buik"
+    }
+  ]
+}

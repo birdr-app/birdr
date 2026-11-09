@@ -1,0 +1,22 @@
+{
+  "code": "eleter1",
+  "name": {
+    "en": "Elegant Tern",
+    "nl": "Sierlijke stern"
+  },
+  "latin": "Thalasseus elegans",
+  "look_for": [
+    {
+      "en": "Long, thin, slightly drooping orange **bill**",
+      "nl": "Lange, dunne, licht hangende oranje **snavel**"
+    },
+    {
+      "en": "Shaggy black **crest**, white **forehead** in winter",
+      "nl": "Ruige zwarte **kuif**, in winter een wit **voorhoofd**"
+    },
+    {
+      "en": "Royal Tern is bigger, with a thicker bill",
+      "nl": "Koningsstern is groter, met een dikkere snavel"
+    }
+  ]
+}

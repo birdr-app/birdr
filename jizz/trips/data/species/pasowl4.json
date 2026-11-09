@@ -1,0 +1,22 @@
+{
+  "code": "pasowl4",
+  "name": {
+    "en": "Pacific Screech-Owl",
+    "nl": "Mangroveschreeuwuil"
+  },
+  "latin": "Megascops cooperi",
+  "look_for": [
+    {
+      "en": "Small owl with **ear tufts** and yellow eyes",
+      "nl": "Kleine uil met **oorpluimen** en gele ogen"
+    },
+    {
+      "en": "Pale grey **face** with a dark rim",
+      "nl": "Lichtgrijze **gezichtssluier** met een donkere rand"
+    },
+    {
+      "en": "Off-white **underparts** with a dark herringbone pattern",
+      "nl": "Vuilwitte **onderkant** met een donker visgraatpatroon"
+    }
+  ]
+}

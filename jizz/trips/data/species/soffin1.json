@@ -1,0 +1,22 @@
+{
+  "code": "soffin1",
+  "name": {
+    "en": "Sooty-faced Finch",
+    "nl": "Dikbekstruikgors"
+  },
+  "latin": "Arremon crassirostris",
+  "look_for": [
+    {
+      "en": "Rusty **crown** on a sooty-black head",
+      "nl": "Roestbruine **kruin** op een roetzwarte kop"
+    },
+    {
+      "en": "White **moustache** curving down the face",
+      "nl": "Witte **baardstreep** die omlaag buigt"
+    },
+    {
+      "en": "Dark olive breast, yellow **belly**",
+      "nl": "Donker olijfgroene borst, gele **buik**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "grcdov1",
+  "name": {
+    "en": "Grey-chested Dove",
+    "nl": "Cassinduif"
+  },
+  "latin": "Leptotila cassinii",
+  "look_for": [
+    {
+      "en": "Plain brown forest dove, white **throat**",
+      "nl": "Effen bruine bosduif, witte **keel**"
+    },
+    {
+      "en": "Greyish **breast**, reddish **belly**",
+      "nl": "Grijzige **borst**, roodachtige **buik**"
+    },
+    {
+      "en": "Yellow **eye**, red **legs**, white **tail** corners",
+      "nl": "Geel **oog**, rode **poten**, witte hoeken aan de **staart**"
+    }
+  ]
+}

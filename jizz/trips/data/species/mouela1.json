@@ -1,0 +1,22 @@
+{
+  "code": "mouela1",
+  "name": {
+    "en": "Mountain Elaenia",
+    "nl": "Bergelenia"
+  },
+  "latin": "Elaenia frantzii",
+  "look_for": [
+    {
+      "en": "Plain olive elaenia with a rounded **crest**",
+      "nl": "Effen olijfgroene elenia met een ronde **kuif**"
+    },
+    {
+      "en": "Thin pale **eye-ring** on a plain **face**",
+      "nl": "Dunne lichte **oogring** in een effen **gezicht**"
+    },
+    {
+      "en": "Two yellowish **wing bars**, pale yellow **belly**",
+      "nl": "Twee geelachtige **vleugelstrepen**, lichtgele **buik**"
+    }
+  ]
+}

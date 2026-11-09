@@ -1,0 +1,22 @@
+{
+  "code": "olispa",
+  "name": {
+    "en": "Olive Sparrow",
+    "nl": "Olijfgors"
+  },
+  "latin": "Arremonops rufivirgatus",
+  "look_for": [
+    {
+      "en": "Plain olive sparrow of dry scrub floor",
+      "nl": "Effen olijfgroene gors van de bodem van droog struikgewas"
+    },
+    {
+      "en": "Chestnut **crown** stripes with a grey centre",
+      "nl": "Kastanjebruine **kruinstrepen** met een grijs midden"
+    },
+    {
+      "en": "Buff-grey **eyebrow**, whitish belly, no black stripes",
+      "nl": "Grijsbruine **wenkbrauwstreep**, witte buik, geen zwarte strepen"
+    }
+  ]
+}

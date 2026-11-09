@@ -1,0 +1,22 @@
+{
+  "code": "sitjay1",
+  "name": {
+    "en": "Silvery-throated Jay",
+    "nl": "Zilverkeelgaai"
+  },
+  "latin": "Cyanolyca argentigula",
+  "look_for": [
+    {
+      "en": "Small dark blue jay with a black **face**",
+      "nl": "Kleine donkerblauwe gaai met een zwart **gezicht**"
+    },
+    {
+      "en": "Silvery-white **throat** above a black breast band",
+      "nl": "Zilverwitte **keel** boven een zwarte borstband"
+    },
+    {
+      "en": "Thin pale line from the **forehead** over the eye",
+      "nl": "Dunne lichte streep van het **voorhoofd** over het oog"
+    }
+  ]
+}

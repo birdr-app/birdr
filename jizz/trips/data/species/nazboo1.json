@@ -1,0 +1,22 @@
+{
+  "code": "nazboo1",
+  "name": {
+    "en": "Nazca Booby",
+    "nl": "Nazcagent"
+  },
+  "latin": "Sula granti",
+  "look_for": [
+    {
+      "en": "White booby with black **flight feathers** and **tail**",
+      "nl": "Witte gent met zwarte **slagpennen** en **staart**"
+    },
+    {
+      "en": "Orange-pink **bill**; Masked Booby's is yellow",
+      "nl": "Oranjeroze **snavel**; die van de maskergent is geel"
+    },
+    {
+      "en": "Black **mask** around a yellow **eye**",
+      "nl": "Zwart **masker** rond een geel **oog**"
+    }
+  ]
+}

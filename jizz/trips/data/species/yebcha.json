@@ -1,0 +1,22 @@
+{
+  "code": "yebcha",
+  "name": {
+    "en": "Yellow-breasted Chat",
+    "nl": "Geelborstzanger"
+  },
+  "latin": "Icteria virens",
+  "look_for": [
+    {
+      "en": "Large warbler with a bright yellow **breast**",
+      "nl": "Grote zanger met een felgele **borst**"
+    },
+    {
+      "en": "White **spectacles** around a dark eye",
+      "nl": "Witte **bril** rond een donker oog"
+    },
+    {
+      "en": "Olive back, thick **bill**; skulks in thickets",
+      "nl": "Olijfgroene rug, dikke **snavel**; verstopt in struikgewas"
+    }
+  ]
+}

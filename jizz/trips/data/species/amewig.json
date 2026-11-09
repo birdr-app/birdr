@@ -1,0 +1,22 @@
+{
+  "code": "amewig",
+  "name": {
+    "en": "American Wigeon",
+    "nl": "Amerikaanse smient"
+  },
+  "latin": "Mareca americana",
+  "look_for": [
+    {
+      "en": "Round-headed duck with a small blue-grey **bill**",
+      "nl": "Eend met een ronde kop en een kleine blauwgrijze **snavel**"
+    },
+    {
+      "en": "Male creamy **crown** and green band behind the eye",
+      "nl": "Man crèmekleurige **kruin** en groene band achter het oog"
+    },
+    {
+      "en": "Female grey-headed, paler than female Eurasian Wigeon",
+      "nl": "Vrouw grijzere kop dan het smientvrouwtje"
+    }
+  ]
+}

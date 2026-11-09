@@ -1,0 +1,22 @@
+{
+  "code": "buwtea",
+  "name": {
+    "en": "Blue-winged Teal",
+    "nl": "Blauwvleugeltaling"
+  },
+  "latin": "Spatula discors",
+  "look_for": [
+    {
+      "en": "Male: white **crescent** before the eye, blue-grey head",
+      "nl": "Man: witte **halvemaan** voor het oog, blauwgrijze kop"
+    },
+    {
+      "en": "Female mottled brown, pale spot by the **bill**",
+      "nl": "Vrouw gevlekt bruin, lichte vlek bij de **snavel**"
+    },
+    {
+      "en": "Pale blue **forewing** patch in flight",
+      "nl": "Lichtblauwe **voorvleugel** in vlucht"
+    }
+  ]
+}

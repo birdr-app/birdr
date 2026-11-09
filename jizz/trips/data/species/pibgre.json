@@ -1,0 +1,22 @@
+{
+  "code": "pibgre",
+  "name": {
+    "en": "Pied-billed Grebe",
+    "nl": "Dikbekfuut"
+  },
+  "latin": "Podilymbus podiceps",
+  "look_for": [
+    {
+      "en": "Small, stocky brown grebe",
+      "nl": "Kleine, gedrongen bruine fuut"
+    },
+    {
+      "en": "Thick, chicken-like **bill**",
+      "nl": "Dikke **snavel** als van een kip"
+    },
+    {
+      "en": "In breeding: black band on the bill, black **throat**",
+      "nl": "In broedkleed zwarte band om de snavel, zwarte **keel**"
+    }
+  ]
+}

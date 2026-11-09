@@ -1,0 +1,22 @@
+{
+  "code": "grycat",
+  "name": {
+    "en": "Grey Catbird",
+    "nl": "Katvogel"
+  },
+  "latin": "Dumetella carolinensis",
+  "look_for": [
+    {
+      "en": "Slim, plain lead-grey bird lurking in thickets",
+      "nl": "Slanke, effen loodgrijze vogel die in struiken scharrelt"
+    },
+    {
+      "en": "Black **cap** on the grey head",
+      "nl": "Zwarte **kap** op de grijze kop"
+    },
+    {
+      "en": "Rusty patch under the long **tail**",
+      "nl": "Roestbruine vlek onder de lange **staart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "plawre1",
+  "name": {
+    "en": "Cabanis's Wren",
+    "nl": "Vale winterkoning"
+  },
+  "latin": "Cantorchilus modestus",
+  "look_for": [
+    {
+      "en": "Plain wren with a bold white **eyebrow**",
+      "nl": "Effen winterkoning met een duidelijke witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "White **throat**, pale buff breast, orange-buff **flanks**",
+      "nl": "Witte **keel**, lichtbruine borst, oranjebruine **flanken**"
+    },
+    {
+      "en": "Rufous-brown back and finely barred **tail**",
+      "nl": "Roodbruine rug en fijn gebandeerde **staart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "pifshe",
+  "name": {
+    "en": "Pink-footed Shearwater",
+    "nl": "Chileense grote pijlstormvogel"
+  },
+  "latin": "Ardenna creatopus",
+  "look_for": [
+    {
+      "en": "Big shearwater, dark brown above, white below",
+      "nl": "Grote pijlstormvogel, donkerbruin van boven, wit van onder"
+    },
+    {
+      "en": "Pink **bill** with a dark tip",
+      "nl": "Roze **snavel** met een donkere punt"
+    },
+    {
+      "en": "Pink **feet**; plumage looks dull and smudgy",
+      "nl": "Roze **poten**; verenkleed oogt dof en vlekkerig"
+    }
+  ]
+}

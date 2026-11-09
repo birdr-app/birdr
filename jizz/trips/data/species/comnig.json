@@ -1,0 +1,22 @@
+{
+  "code": "comnig",
+  "name": {
+    "en": "Common Nighthawk",
+    "nl": "Amerikaanse nachtzwaluw"
+  },
+  "latin": "Chordeiles minor",
+  "look_for": [
+    {
+      "en": "Long, pointed **wings** with a white bar",
+      "nl": "Lange, puntige **vleugels** met een witte band"
+    },
+    {
+      "en": "Slightly forked **tail**, male with a white band",
+      "nl": "Licht gevorkte **staart**, man met een witte band"
+    },
+    {
+      "en": "Hunts insects high in the air at dusk",
+      "nl": "Jaagt in de schemering hoog in de lucht op insecten"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "mancuc",
+  "name": {
+    "en": "Mangrove Cuckoo",
+    "nl": "Mangrovekoekoek"
+  },
+  "latin": "Coccyzus minor",
+  "look_for": [
+    {
+      "en": "Slim cuckoo with a long, graduated **tail**",
+      "nl": "Slanke koekoek met een lange, getrapte **staart**"
+    },
+    {
+      "en": "Black **mask** through the eye",
+      "nl": "Zwart **masker** door het oog"
+    },
+    {
+      "en": "Buff **underparts**, big white spots under the tail",
+      "nl": "Lichtbruine **onderkant**, grote witte vlekken onder de staart"
+    }
+  ]
+}

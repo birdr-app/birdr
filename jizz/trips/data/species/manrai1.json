@@ -1,0 +1,22 @@
+{
+  "code": "manrai1",
+  "name": {
+    "en": "Mangrove Rail",
+    "nl": "Grijze ral"
+  },
+  "latin": "Rallus longirostris",
+  "look_for": [
+    {
+      "en": "Large rail with a long, slightly curved **bill**",
+      "nl": "Grote ral met een lange, licht gebogen **snavel**"
+    },
+    {
+      "en": "Buff **breast**, black and white bars on the flanks",
+      "nl": "Okerkleurige **borst**, zwartwit gebandeerde flanken"
+    },
+    {
+      "en": "Grey-brown **back**; hides in mangroves",
+      "nl": "Grijsbruine **rug**; houdt zich schuil in de mangrove"
+    }
+  ]
+}

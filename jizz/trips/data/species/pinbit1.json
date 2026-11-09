@@ -1,0 +1,22 @@
+{
+  "code": "pinbit1",
+  "name": {
+    "en": "Pinnated Bittern",
+    "nl": "Zuid-Amerikaanse roerdomp"
+  },
+  "latin": "Botaurus pinnatus",
+  "look_for": [
+    {
+      "en": "Large buff bittern, **neck** finely barred black",
+      "nl": "Grote okerbruine roerdomp, **hals** fijn zwart gebandeerd"
+    },
+    {
+      "en": "White **throat** and streaked white foreneck",
+      "nl": "Witte **keel** en gestreepte witte voorhals"
+    },
+    {
+      "en": "Two-toned **wings** in flight, dark grey flight feathers",
+      "nl": "Tweekleurige **vleugels** in vlucht, met donkergrijze slagpennen"
+    }
+  ]
+}

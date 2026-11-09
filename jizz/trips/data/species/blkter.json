@@ -1,0 +1,22 @@
+{
+  "code": "blkter",
+  "name": {
+    "en": "Black Tern",
+    "nl": "Zwarte stern"
+  },
+  "latin": "Chlidonias niger",
+  "look_for": [
+    {
+      "en": "Small grey tern that dips to the water surface",
+      "nl": "Kleine grijze stern die van het wateroppervlak pikt"
+    },
+    {
+      "en": "Winter: dark **cap** and dark spot on breast side",
+      "nl": "Winterkleed: donkere **kap** en donkere vlek opzij van de borst"
+    },
+    {
+      "en": "Breeding: black **head** and body, grey wings",
+      "nl": "Zomerkleed: zwarte **kop** en romp, grijze vleugels"
+    }
+  ]
+}

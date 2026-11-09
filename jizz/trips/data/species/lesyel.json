@@ -1,0 +1,22 @@
+{
+  "code": "lesyel",
+  "name": {
+    "en": "Lesser Yellowlegs",
+    "nl": "Kleine geelpootruiter"
+  },
+  "latin": "Tringa flavipes",
+  "look_for": [
+    {
+      "en": "Slim wader on long, bright yellow **legs**",
+      "nl": "Slanke steltloper op lange, felgele **poten**"
+    },
+    {
+      "en": "Thin straight **bill**, about as long as the **head**",
+      "nl": "Dunne rechte **snavel**, ongeveer zo lang als de **kop**"
+    },
+    {
+      "en": "Greater Yellowlegs is bigger, with a longer bill",
+      "nl": "Grote geelpootruiter is groter, met een langere snavel"
+    }
+  ]
+}

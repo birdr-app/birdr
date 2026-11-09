@@ -1,0 +1,22 @@
+{
+  "code": "yenpar1",
+  "name": {
+    "en": "Yellow-naped Amazon",
+    "nl": "Geelnekamazone"
+  },
+  "latin": "Amazona auropalliata",
+  "look_for": [
+    {
+      "en": "Big green parrot with a yellow **nape** patch",
+      "nl": "Grote groene papegaai met een gele vlek in de **nek**"
+    },
+    {
+      "en": "Dark grey **bill**",
+      "nl": "Donkergrijze **snavel**"
+    },
+    {
+      "en": "Green **forehead**, orange **eye**",
+      "nl": "Groen **voorhoofd**, oranje **oog**"
+    }
+  ]
+}

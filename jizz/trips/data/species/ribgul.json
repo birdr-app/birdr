@@ -1,0 +1,22 @@
+{
+  "code": "ribgul",
+  "name": {
+    "en": "Ring-billed Gull",
+    "nl": "Ringsnavelmeeuw"
+  },
+  "latin": "Larus delawarensis",
+  "look_for": [
+    {
+      "en": "Medium gull with a pale grey **back**",
+      "nl": "Middelgrote meeuw met een lichtgrijze **rug**"
+    },
+    {
+      "en": "Black ring around a yellow **bill**",
+      "nl": "Zwarte ring om een gele **snavel**"
+    },
+    {
+      "en": "Yellow **legs** and pale **eye**",
+      "nl": "Gele **poten** en een licht **oog**"
+    }
+  ]
+}

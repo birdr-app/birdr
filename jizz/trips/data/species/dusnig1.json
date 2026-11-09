@@ -1,0 +1,22 @@
+{
+  "code": "dusnig1",
+  "name": {
+    "en": "Dusky Nightjar",
+    "nl": "Zwarte nachtzwaluw"
+  },
+  "latin": "Antrostomus saturatus",
+  "look_for": [
+    {
+      "en": "Very dark nightjar with fine cinnamon spots",
+      "nl": "Zeer donkere nachtzwaluw met fijne kaneelkleurige vlekjes"
+    },
+    {
+      "en": "Cinnamon **face**, white spots on the dark breast",
+      "nl": "Kaneelbruin **gezicht**, witte vlekjes op de donkere borst"
+    },
+    {
+      "en": "Male broad white **tail** tips; female narrow buff ones",
+      "nl": "Man brede witte **staartpunten**, vrouw smalle okerkleurige"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "siftap1",
+  "name": {
+    "en": "Silvery-fronted Tapaculo",
+    "nl": "Costaricaanse tapaculo"
+  },
+  "latin": "Scytalopus argentifrons",
+  "look_for": [
+    {
+      "en": "Tiny dark bird creeping like a mouse",
+      "nl": "Piepklein donker vogeltje dat als een muis rondsluipt"
+    },
+    {
+      "en": "Male sooty black with a silvery **forehead**",
+      "nl": "Man roetzwart met een zilverig **voorhoofd**"
+    },
+    {
+      "en": "Rufous-brown **flanks** and under the tail",
+      "nl": "Roodbruine **flanken** en onderstaart"
+    }
+  ]
+}

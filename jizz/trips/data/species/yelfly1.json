@@ -1,0 +1,22 @@
+{
+  "code": "yelfly1",
+  "name": {
+    "en": "Yellowish Flycatcher",
+    "nl": "Gele feetiran"
+  },
+  "latin": "Empidonax flavescens",
+  "look_for": [
+    {
+      "en": "Almond-shaped pale yellow **eye-ring**",
+      "nl": "Amandelvormige lichtgele **oogring**"
+    },
+    {
+      "en": "Yellowish-green face, deep yellow **breast**",
+      "nl": "Geelgroene kop, diepgele **borst**"
+    },
+    {
+      "en": "Two buffy-yellow **wing bars**, orange lower **mandible**",
+      "nl": "Twee geelachtige **vleugelstrepen**, oranje **ondersnavel**"
+    }
+  ]
+}

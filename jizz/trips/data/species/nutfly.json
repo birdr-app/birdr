@@ -1,0 +1,22 @@
+{
+  "code": "nutfly",
+  "name": {
+    "en": "Nutting's Flycatcher",
+    "nl": "Bleekkeeltiran"
+  },
+  "latin": "Myiarchus nuttingi",
+  "look_for": [
+    {
+      "en": "Grey-brown flycatcher with a slight bushy **crest**",
+      "nl": "Grijsbruine vliegenvanger met een kleine ruige **kuif**"
+    },
+    {
+      "en": "Grey **throat** and breast, pale yellow belly",
+      "nl": "Grijze **keel** en borst, lichtgele buik"
+    },
+    {
+      "en": "Rufous edges on **wings** and tail, orange mouth inside",
+      "nl": "Roodbruine randen aan **vleugels** en staart, oranje binnenkant bek"
+    }
+  ]
+}

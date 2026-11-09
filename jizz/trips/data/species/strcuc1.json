@@ -1,0 +1,22 @@
+{
+  "code": "strcuc1",
+  "name": {
+    "en": "Striped Cuckoo",
+    "nl": "Gestreepte koekoek"
+  },
+  "latin": "Tapera naevia",
+  "look_for": [
+    {
+      "en": "Streaky grey-brown cuckoo of open scrubby country",
+      "nl": "Gestreepte grijsbruine koekoek van open struikland"
+    },
+    {
+      "en": "Chestnut and black **crest**, pale **eyebrow**",
+      "nl": "Kastanjebruin met zwarte **kuif**, lichte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Off-white below, long graduated **tail**",
+      "nl": "Vuilwit van onder, lange getrapte **staart**"
+    }
+  ]
+}

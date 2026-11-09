@@ -1,0 +1,22 @@
+{
+  "code": "cerwar",
+  "name": {
+    "en": "Cerulean Warbler",
+    "nl": "Azuurzanger"
+  },
+  "latin": "Setophaga cerulea",
+  "look_for": [
+    {
+      "en": "Male sky-blue above, white below",
+      "nl": "Man hemelsblauw van boven, wit van onder"
+    },
+    {
+      "en": "Thin dark **breast** band and streaked flanks",
+      "nl": "Dunne donkere **borstband** en gestreepte flanken"
+    },
+    {
+      "en": "Two white **wingbars**; female blue-green, pale eyebrow",
+      "nl": "Twee witte **vleugelstrepen**; vrouw blauwgroen met lichte wenkbrauw"
+    }
+  ]
+}

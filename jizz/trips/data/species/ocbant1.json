@@ -1,0 +1,22 @@
+{
+  "code": "ocbant1",
+  "name": {
+    "en": "Ochre-breasted Antpitta",
+    "nl": "Okerborstdwergmierpitta"
+  },
+  "latin": "Grallaricula flavirostris",
+  "look_for": [
+    {
+      "en": "Tiny round antpitta with almost no **tail**",
+      "nl": "Piepklein rond mierpitta'tje met bijna geen **staart**"
+    },
+    {
+      "en": "Ochre **face** and **breast**, buff **eye-ring**",
+      "nl": "Oker **gezicht** en **borst**, okergele **oogring**"
+    },
+    {
+      "en": "Dark streaks on the breast, white belly",
+      "nl": "Donkere streepjes op de borst, witte buik"
+    }
+  ]
+}

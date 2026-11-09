@@ -1,0 +1,22 @@
+{
+  "code": "zelant1",
+  "name": {
+    "en": "Zeledon's Antbird",
+    "nl": "Zeledonmiervogel"
+  },
+  "latin": "Hafferia zeledoni",
+  "look_for": [
+    {
+      "en": "Bare pale blue skin around a red **eye**",
+      "nl": "Kale lichtblauwe huid rond een rood **oog**"
+    },
+    {
+      "en": "Male all black",
+      "nl": "Man helemaal zwart"
+    },
+    {
+      "en": "Female dark brown with a black **face**",
+      "nl": "Vrouw donkerbruin met een zwart **gezicht**"
+    }
+  ]
+}

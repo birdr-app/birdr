@@ -1,0 +1,22 @@
+{
+  "code": "thiant1",
+  "name": {
+    "en": "Thicket Antpitta",
+    "nl": "Oranjeflankmierpitta"
+  },
+  "latin": "Myrmothera dives",
+  "look_for": [
+    {
+      "en": "Round antpitta with a short **tail**, long **legs**",
+      "nl": "Ronde mierpitta met een korte **staart** en lange **poten**"
+    },
+    {
+      "en": "Grey **head** and **back**, buff around the eye",
+      "nl": "Grijze **kop** en **rug**, lichtbruin rond het oog"
+    },
+    {
+      "en": "Orange-buff **breast** with black streaks",
+      "nl": "Oranjebruine **borst** met zwarte streepjes"
+    }
+  ]
+}

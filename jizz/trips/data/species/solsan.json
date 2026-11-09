@@ -1,0 +1,22 @@
+{
+  "code": "solsan",
+  "name": {
+    "en": "Solitary Sandpiper",
+    "nl": "Amerikaanse bosruiter"
+  },
+  "latin": "Tringa solitaria",
+  "look_for": [
+    {
+      "en": "Dark wader alone at pond edges, bobs often",
+      "nl": "Donkere steltloper, alleen langs plassen, wipt vaak"
+    },
+    {
+      "en": "Bold white **eye-ring**, white-spotted dark back",
+      "nl": "Duidelijke witte **oogring**, donkere rug met witte stipjes"
+    },
+    {
+      "en": "Dark **rump** in flight, unlike Green Sandpiper",
+      "nl": "Donkere **stuit** in vlucht, anders dan de witgat"
+    }
+  ]
+}

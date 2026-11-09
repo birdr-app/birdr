@@ -1,0 +1,22 @@
+{
+  "code": "sooshe",
+  "name": {
+    "en": "Sooty Shearwater",
+    "nl": "Grauwe pijlstormvogel"
+  },
+  "latin": "Ardenna grisea",
+  "look_for": [
+    {
+      "en": "All-dark shearwater gliding on long, stiff wings",
+      "nl": "Geheel donkere pijlstormvogel die op lange, stijve vleugels glijdt"
+    },
+    {
+      "en": "Silvery stripe along the dark **underwing**",
+      "nl": "Zilverige baan over de donkere **ondervleugel**"
+    },
+    {
+      "en": "Dark chocolate-brown body, dark **bill**",
+      "nl": "Donker chocoladebruin lijf, donkere **snavel**"
+    }
+  ]
+}

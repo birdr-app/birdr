@@ -1,0 +1,22 @@
+{
+  "code": "brocow",
+  "name": {
+    "en": "Bronzed Cowbird",
+    "nl": "Roodoogkoevogel"
+  },
+  "latin": "Molothrus aeneus",
+  "look_for": [
+    {
+      "en": "Male glossy black with a bronze-green sheen",
+      "nl": "Man glanzend zwart met een bronsgroene gloed"
+    },
+    {
+      "en": "Bright red **eye** in both sexes",
+      "nl": "Felrood **oog**, bij man en vrouw"
+    },
+    {
+      "en": "Male puffs up a ruff on the **nape** when displaying",
+      "nl": "Man zet baltsend een kraag in de **nek** op"
+    }
+  ]
+}

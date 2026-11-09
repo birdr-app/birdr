@@ -1,0 +1,22 @@
+{
+  "code": "fepowl",
+  "name": {
+    "en": "Ferruginous Pygmy-Owl",
+    "nl": "Braziliaanse dwerguil"
+  },
+  "latin": "Glaucidium brasilianum",
+  "look_for": [
+    {
+      "en": "Tiny owl, grey-brown or rufous",
+      "nl": "Piepklein uiltje, grijsbruin of roestbruin"
+    },
+    {
+      "en": "Fine pale streaks on the **crown**",
+      "nl": "Fijne lichte streepjes op de **kruin**"
+    },
+    {
+      "en": "Two dark false eyes on the **nape**; active by day",
+      "nl": "Twee donkere nepogen in de **nek**; ook overdag actief"
+    }
+  ]
+}

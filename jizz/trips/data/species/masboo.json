@@ -1,0 +1,22 @@
+{
+  "code": "masboo",
+  "name": {
+    "en": "Masked Booby",
+    "nl": "Maskergent"
+  },
+  "latin": "Sula dactylatra",
+  "look_for": [
+    {
+      "en": "Large white booby with black **flight feathers**",
+      "nl": "Grote witte gent met zwarte **slagpennen**"
+    },
+    {
+      "en": "Black **tail** and a dark **face** mask",
+      "nl": "Zwarte **staart** en een donker **gezichtsmasker**"
+    },
+    {
+      "en": "Yellowish **bill**; Nazca Booby has an orange one",
+      "nl": "Geelachtige **snavel**; de Nazcagent heeft een oranje"
+    }
+  ]
+}

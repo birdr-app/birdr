@@ -1,0 +1,22 @@
+{
+  "code": "screup1",
+  "name": {
+    "en": "Scrub Euphonia",
+    "nl": "Struikorganist"
+  },
+  "latin": "Euphonia affinis",
+  "look_for": [
+    {
+      "en": "Male blue-black with a dark **throat**, yellow below",
+      "nl": "Man blauwzwart met een donkere **keel**, geel van onder"
+    },
+    {
+      "en": "Small yellow **forehead** patch, only to the eye",
+      "nl": "Kleine gele vlek op het **voorhoofd**, alleen tot het oog"
+    },
+    {
+      "en": "Female olive with a grey **crown** and nape",
+      "nl": "Vrouw olijfgroen met een grijze **kruin** en nek"
+    }
+  ]
+}

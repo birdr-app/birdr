@@ -1,0 +1,22 @@
+{
+  "code": "palwar",
+  "name": {
+    "en": "Palm Warbler",
+    "nl": "Palmzanger"
+  },
+  "latin": "Setophaga palmarum",
+  "look_for": [
+    {
+      "en": "Pumps its **tail** up and down all the time",
+      "nl": "Wipt voortdurend met de **staart**"
+    },
+    {
+      "en": "Bright yellow **undertail**, streaked **breast**",
+      "nl": "Felgele **onderstaart**, gestreepte **borst**"
+    },
+    {
+      "en": "Pale **eyebrow**; feeds on the ground in the open",
+      "nl": "Lichte **wenkbrauw**; zoekt voedsel op de grond in open terrein"
+    }
+  ]
+}

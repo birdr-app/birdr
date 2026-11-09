@@ -1,0 +1,22 @@
+{
+  "code": "orfpar",
+  "name": {
+    "en": "Orange-fronted Parakeet",
+    "nl": "Ivooraratinga"
+  },
+  "latin": "Eupsittula canicularis",
+  "look_for": [
+    {
+      "en": "Orange **forehead**, dull blue **crown**",
+      "nl": "Oranje **voorhoofd**, dofblauwe **kruin**"
+    },
+    {
+      "en": "Ring of bare yellow skin round the **eye**",
+      "nl": "Ring van kale gele huid rond het **oog**"
+    },
+    {
+      "en": "Olive-brown **throat**, blue in the **wings**",
+      "nl": "Olijfbruine **keel**, blauw in de **vleugels**"
+    }
+  ]
+}

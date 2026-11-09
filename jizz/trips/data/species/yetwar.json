@@ -1,0 +1,22 @@
+{
+  "code": "yetwar",
+  "name": {
+    "en": "Yellow-throated Warbler",
+    "nl": "Geelkeelzanger"
+  },
+  "latin": "Setophaga dominica",
+  "look_for": [
+    {
+      "en": "Bright yellow **throat** on a grey and white bird",
+      "nl": "Felgele **keel** op een grijs-witte vogel"
+    },
+    {
+      "en": "Black and white **face** with a long eyebrow",
+      "nl": "Zwart-wit **gezicht** met een lange wenkbrauwstreep"
+    },
+    {
+      "en": "Black streaks on the **flanks**, two white wing bars",
+      "nl": "Zwarte strepen op de **flanken**, twee witte vleugelstrepen"
+    }
+  ]
+}

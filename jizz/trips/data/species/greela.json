@@ -1,0 +1,22 @@
+{
+  "code": "greela",
+  "name": {
+    "en": "Greenish Elaenia",
+    "nl": "Groene elenia"
+  },
+  "latin": "Myiopagis viridicata",
+  "look_for": [
+    {
+      "en": "Plain olive flycatcher with a greyish **crown**",
+      "nl": "Effen olijfgroene tiran met een grijzige **kruin**"
+    },
+    {
+      "en": "Pale grey **eyebrow**, dark line through the **eye**",
+      "nl": "Lichtgrijze **wenkbrauwstreep**, donkere streep door het **oog**"
+    },
+    {
+      "en": "Whitish **throat**, pale yellow **belly**",
+      "nl": "Witachtige **keel**, lichtgele **buik**"
+    }
+  ]
+}

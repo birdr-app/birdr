@@ -1,0 +1,22 @@
+{
+  "code": "wilfly",
+  "name": {
+    "en": "Willow Flycatcher",
+    "nl": "Wilgenfeetiran"
+  },
+  "latin": "Empidonax traillii",
+  "look_for": [
+    {
+      "en": "Plain brown-olive flycatcher with whitish **wing bars**",
+      "nl": "Effen bruinolijfkleurige vliegenvanger met witte **vleugelstrepen**"
+    },
+    {
+      "en": "Faint or no **eye-ring**, orange lower **bill**",
+      "nl": "Vage of geen **oogring**, oranje **ondersnavel**"
+    },
+    {
+      "en": "Only its call separates it from Alder Flycatcher",
+      "nl": "Alleen de roep onderscheidt hem van de elzenfeetiran"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "haiwoo",
+  "name": {
+    "en": "Hairy Woodpecker",
+    "nl": "Haarspecht"
+  },
+  "latin": "Leuconotopicus villosus",
+  "look_for": [
+    {
+      "en": "Black-and-white striped **head**, long straight **bill**",
+      "nl": "Zwart-wit gestreepte **kop**, lange rechte **snavel**"
+    },
+    {
+      "en": "Underparts washed smoky brown in Costa Rica",
+      "nl": "Onderkant in Costa Rica bruinig getint"
+    },
+    {
+      "en": "Male has a small red patch on the **nape**",
+      "nl": "Man heeft een klein rood vlekje in de **nek**"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "catbirds-mockingbirds-and-thrashers",
+  "about": {
+    "en": "Slim songbirds with a long tail and strong legs, mostly grey or brown, some with a long, curved bill. They feed on or near the ground and often cock or flick the tail. Many are loud, tireless singers that copy other birds, singing from a bush top or skulking in thickets.",
+    "nl": "Slanke zangvogels met een lange staart en sterke poten, meestal grijs of bruin, sommige met een lange, gebogen snavel. Ze zoeken voedsel op of vlak boven de grond en wippen of zwiepen vaak met de staart. Veel soorten zingen luid en eindeloos, bootsen andere vogels na en zitten daarbij boven op een struik of sluipen door dicht struikgewas."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "scrub-birds-and-bowerbirds"
+      ],
+      "text": {
+        "en": "The catbirds of Australia and New Guinea are bowerbirds: stout, green fruit-eaters. These catbirds are slim grey songbirds, named for their mewing call.",
+        "nl": "De katvogels van Australië en Nieuw-Guinea zijn prieelvogels: stevige, groene vruchteneters. Deze katvogels zijn slanke grijze zangvogels, genoemd naar hun miauwende roep."
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "moudov",
+  "name": {
+    "en": "Mourning Dove",
+    "nl": "Treurduif"
+  },
+  "latin": "Zenaida macroura",
+  "look_for": [
+    {
+      "en": "Slim brown dove with a long pointed **tail**",
+      "nl": "Slanke bruine duif met een lange spitse **staart**"
+    },
+    {
+      "en": "Black spots on the **wings**, dark **cheek** mark",
+      "nl": "Zwarte vlekken op de **vleugels**, donker vlekje op de **wang**"
+    },
+    {
+      "en": "White edges to the tail; no white in the wing",
+      "nl": "Witte randen aan de staart; geen wit in de vleugel"
+    }
+  ]
+}

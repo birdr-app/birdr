@@ -1,0 +1,22 @@
+{
+  "code": "macwar",
+  "name": {
+    "en": "MacGillivray's Warbler",
+    "nl": "Rouwkopzanger"
+  },
+  "latin": "Geothlypis tolmiei",
+  "look_for": [
+    {
+      "en": "Grey **hood** over yellow underparts",
+      "nl": "Grijze **kap** boven een gele onderkant"
+    },
+    {
+      "en": "Bold white **eye-arcs** above and below the eye",
+      "nl": "Duidelijke witte **oogboogjes** boven en onder het oog"
+    },
+    {
+      "en": "Skulks low in thickets, olive back",
+      "nl": "Sluipt laag door struiken, olijfgroene rug"
+    }
+  ]
+}

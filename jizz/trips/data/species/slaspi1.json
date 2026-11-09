@@ -1,0 +1,22 @@
+{
+  "code": "slaspi1",
+  "name": {
+    "en": "Slaty Spinetail",
+    "nl": "Leikleurige stekelstaart"
+  },
+  "latin": "Synallaxis brachyura",
+  "look_for": [
+    {
+      "en": "Dark grey spinetail skulking in dense thickets",
+      "nl": "Donkergrijze stekelstaart die door dichte struiken sluipt"
+    },
+    {
+      "en": "Rufous **crown** and rufous patch on the **wing**",
+      "nl": "Roodbruine **kruin** en roodbruine vlek op de **vleugel**"
+    },
+    {
+      "en": "Long spiky **tail**, blackish throat",
+      "nl": "Lange stekelige **staart**, zwartachtige keel"
+    }
+  ]
+}

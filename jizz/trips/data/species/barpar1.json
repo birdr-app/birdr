@@ -1,0 +1,22 @@
+{
+  "code": "barpar1",
+  "name": {
+    "en": "Barred Parakeet",
+    "nl": "Katharinaparkiet"
+  },
+  "latin": "Bolborhynchus lineola",
+  "look_for": [
+    {
+      "en": "Small green parakeet in fast, noisy flocks",
+      "nl": "Kleine groene parkiet in snelle, luidruchtige groepen"
+    },
+    {
+      "en": "Fine black bars over the green **back**",
+      "nl": "Fijne zwarte bandjes over de groene **rug**"
+    },
+    {
+      "en": "Black **shoulder** and a short pointed tail",
+      "nl": "Zwarte **schouder** en een korte spitse staart"
+    }
+  ]
+}

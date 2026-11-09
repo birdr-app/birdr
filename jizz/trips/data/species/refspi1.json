@@ -1,0 +1,22 @@
+{
+  "code": "refspi1",
+  "name": {
+    "en": "Red-faced Spinetail",
+    "nl": "Roodwangstekelstaart"
+  },
+  "latin": "Cranioleuca erythrops",
+  "look_for": [
+    {
+      "en": "Rufous **face** and crown on a plain olive bird",
+      "nl": "Roestrood **gezicht** en kruin op een effen olijfbruine vogel"
+    },
+    {
+      "en": "Rufous **wings** and a spiky reddish tail",
+      "nl": "Roestbruine **vleugels** en een stekelige roodbruine staart"
+    },
+    {
+      "en": "Dull olive-brown **underparts**, greyish chin",
+      "nl": "Doffe olijfbruine **onderkant**, grijzige kin"
+    }
+  ]
+}

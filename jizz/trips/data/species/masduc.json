@@ -1,0 +1,22 @@
+{
+  "code": "masduc",
+  "name": {
+    "en": "Masked Duck",
+    "nl": "Maskerstekelstaart"
+  },
+  "latin": "Nomonyx dominicus",
+  "look_for": [
+    {
+      "en": "Small duck with a stiff, spiky **tail**",
+      "nl": "Kleine eend met een stijve, stekelige **staart**"
+    },
+    {
+      "en": "Male rusty with a black **face**",
+      "nl": "Man roestbruin met een zwart **gezicht**"
+    },
+    {
+      "en": "Female: two dark stripes across a buff **face**",
+      "nl": "Vrouw: twee donkere strepen over een lichtbruin **gezicht**"
+    }
+  ]
+}

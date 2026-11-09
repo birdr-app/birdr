@@ -1,0 +1,22 @@
+{
+  "code": "wantat1",
+  "name": {
+    "en": "Wandering Tattler",
+    "nl": "Amerikaanse grijze ruiter"
+  },
+  "latin": "Tringa incana",
+  "look_for": [
+    {
+      "en": "Plain dark grey wader of rocky shores",
+      "nl": "Effen donkergrijze steltloper van rotskusten"
+    },
+    {
+      "en": "Short yellow **legs**; bobs its rear like Common Sandpiper",
+      "nl": "Korte gele **poten**; wipt met het achterlijf als een Oeverloper"
+    },
+    {
+      "en": "White **eyebrow**; barred below in breeding plumage",
+      "nl": "Witte **wenkbrauw**; in zomerkleed gebandeerd van onder"
+    }
+  ]
+}

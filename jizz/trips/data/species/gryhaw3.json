@@ -1,0 +1,22 @@
+{
+  "code": "gryhaw3",
+  "name": {
+    "en": "Grey-lined Hawk",
+    "nl": "Grijsgestreepte buizerd"
+  },
+  "latin": "Buteo nitidus",
+  "look_for": [
+    {
+      "en": "Pale grey hawk, finely barred grey below",
+      "nl": "Lichtgrijze buizerd, fijn grijs gebandeerd van onder"
+    },
+    {
+      "en": "Black **tail** with white bands",
+      "nl": "Zwarte **staart** met witte banden"
+    },
+    {
+      "en": "Orange **legs**; fine pale barring on the back",
+      "nl": "Oranje **poten**; fijne lichte bandjes op de rug"
+    }
+  ]
+}

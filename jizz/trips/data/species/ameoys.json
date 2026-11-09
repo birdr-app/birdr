@@ -1,0 +1,22 @@
+{
+  "code": "ameoys",
+  "name": {
+    "en": "American Oystercatcher",
+    "nl": "Amerikaanse bonte scholekster"
+  },
+  "latin": "Haematopus palliatus",
+  "look_for": [
+    {
+      "en": "Black **head**, dark **back**, white **belly**",
+      "nl": "Zwarte **kop**, donkere **rug**, witte **buik**"
+    },
+    {
+      "en": "Long, bright orange-red **bill**",
+      "nl": "Lange, felle oranjerode **snavel**"
+    },
+    {
+      "en": "Yellow **eye**, orange **eye-ring**, pink **legs**",
+      "nl": "Geel **oog**, oranje **oogring**, roze **poten**"
+    }
+  ]
+}

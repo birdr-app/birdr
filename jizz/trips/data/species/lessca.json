@@ -1,0 +1,22 @@
+{
+  "code": "lessca",
+  "name": {
+    "en": "Lesser Scaup",
+    "nl": "Kleine topper"
+  },
+  "latin": "Aythya affinis",
+  "look_for": [
+    {
+      "en": "Male black **head** and **breast**, pale grey **back**",
+      "nl": "Man zwarte **kop** en **borst**, lichtgrijze **rug**"
+    },
+    {
+      "en": "Small peak at the back of the **crown**",
+      "nl": "Klein puntje achter op de **kruin**"
+    },
+    {
+      "en": "Female brown, white band at the **bill** base",
+      "nl": "Vrouw bruin, witte rand om de **snavelbasis**"
+    }
+  ]
+}

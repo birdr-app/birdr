@@ -1,0 +1,22 @@
+{
+  "code": "plawre3",
+  "name": {
+    "en": "Canebrake Wren",
+    "nl": "Zeledonwinterkoning"
+  },
+  "latin": "Cantorchilus zeledoni",
+  "look_for": [
+    {
+      "en": "Plain wren with a white **eyebrow**",
+      "nl": "Effen winterkoning met een witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Grey **breast**, off-white **throat**",
+      "nl": "Grijze **borst**, gebroken witte **keel**"
+    },
+    {
+      "en": "Barred **tail**, mottled grey **cheeks**",
+      "nl": "Gebandeerde **staart**, grijs gevlekte **wangen**"
+    }
+  ]
+}

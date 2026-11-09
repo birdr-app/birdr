@@ -1,0 +1,22 @@
+{
+  "code": "corswi",
+  "name": {
+    "en": "Costa Rican Swift",
+    "nl": "Costaricaanse gierzwaluw"
+  },
+  "latin": "Chaetura fumosa",
+  "look_for": [
+    {
+      "en": "Small, dark swift with a short tail",
+      "nl": "Kleine, donkere gierzwaluw met een korte staart"
+    },
+    {
+      "en": "Pale grey **rump** contrasts with the black back",
+      "nl": "Lichtgrijze **stuit** steekt af tegen de zwarte rug"
+    },
+    {
+      "en": "Pale grey **throat** and breast",
+      "nl": "Lichtgrijze **keel** en borst"
+    }
+  ]
+}

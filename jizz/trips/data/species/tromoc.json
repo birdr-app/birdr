@@ -1,0 +1,22 @@
+{
+  "code": "tromoc",
+  "name": {
+    "en": "Tropical Mockingbird",
+    "nl": "Tropische spotlijster"
+  },
+  "latin": "Mimus gilvus",
+  "look_for": [
+    {
+      "en": "Grey above, whitish below, long **tail**",
+      "nl": "Grijs van boven, witachtig van onder, lange **staart**"
+    },
+    {
+      "en": "Dark **mask** through a yellow **eye**",
+      "nl": "Donker **masker** door een geel **oog**"
+    },
+    {
+      "en": "White **tail** corners and thin **wing bars**",
+      "nl": "Witte hoeken aan de **staart** en smalle **vleugelstrepen**"
+    }
+  ]
+}

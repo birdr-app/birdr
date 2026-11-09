@@ -1,0 +1,22 @@
+{
+  "code": "gareme1",
+  "name": {
+    "en": "Garden Emerald",
+    "nl": "Tuinsmaragdkolibrie"
+  },
+  "latin": "Chlorostilbon assimilis",
+  "look_for": [
+    {
+      "en": "Tiny hummingbird; male glittering green all over",
+      "nl": "Piepkleine kolibrie; man overal glanzend groen"
+    },
+    {
+      "en": "Short all-black **bill**, no red at the base",
+      "nl": "Korte, geheel zwarte **snavel**, zonder rood aan de basis"
+    },
+    {
+      "en": "Forked blue-black **tail**; female pale grey below",
+      "nl": "Gevorkte blauwzwarte **staart**; vrouw lichtgrijs van onder"
+    }
+  ]
+}

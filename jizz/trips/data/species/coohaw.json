@@ -1,0 +1,22 @@
+{
+  "code": "coohaw",
+  "name": {
+    "en": "Cooper's Hawk",
+    "nl": "Coopersperwer"
+  },
+  "latin": "Astur cooperii",
+  "look_for": [
+    {
+      "en": "Sparrowhawk-like, with a long, rounded **tail**",
+      "nl": "Lijkt op een sperwer, met een lange, ronde **staart**"
+    },
+    {
+      "en": "Adult blue-grey above, barred rufous below",
+      "nl": "Volwassen blauwgrijs van boven, roodbruin gebandeerd van onder"
+    },
+    {
+      "en": "Dark **cap**, bigger than Sharp-shinned Hawk",
+      "nl": "Donkere **kap**, groter dan de Amerikaanse sperwer"
+    }
+  ]
+}

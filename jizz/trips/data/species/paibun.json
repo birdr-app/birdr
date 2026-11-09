@@ -1,0 +1,22 @@
+{
+  "code": "paibun",
+  "name": {
+    "en": "Painted Bunting",
+    "nl": "Purpergors"
+  },
+  "latin": "Passerina ciris",
+  "look_for": [
+    {
+      "en": "Male: blue **head**, red belly, green **back**",
+      "nl": "Man: blauwe **kop**, rode buik, groene **rug**"
+    },
+    {
+      "en": "Male has a red **eye-ring**",
+      "nl": "Man heeft een rode **oogring**"
+    },
+    {
+      "en": "Female plain bright green, pale **eye-ring**",
+      "nl": "Vrouw egaal felgroen, lichte **oogring**"
+    }
+  ]
+}

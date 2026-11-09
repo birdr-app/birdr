@@ -1,0 +1,22 @@
+{
+  "code": "lesnig",
+  "name": {
+    "en": "Lesser Nighthawk",
+    "nl": "Texaanse nachtzwaluw"
+  },
+  "latin": "Chordeiles acutipennis",
+  "look_for": [
+    {
+      "en": "Pointed **wings** with a pale bar near the tip",
+      "nl": "Spitse **vleugels** met een lichte band bij de punt"
+    },
+    {
+      "en": "Wing bar nearer the **tip** than Common Nighthawk's",
+      "nl": "Vleugelband dichter bij de **punt** dan bij de Amerikaanse nachtzwaluw"
+    },
+    {
+      "en": "Hunts low over open ground and water at dusk",
+      "nl": "Jaagt in de schemering laag boven open terrein en water"
+    }
+  ]
+}

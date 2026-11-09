@@ -1,0 +1,22 @@
+{
+  "code": "taceup1",
+  "name": {
+    "en": "Tawny-capped Euphonia",
+    "nl": "Bruinkruinorganist"
+  },
+  "latin": "Euphonia anneae",
+  "look_for": [
+    {
+      "en": "Male blue-black with a chestnut-rufous **cap**",
+      "nl": "Man blauwzwart met een kastanjebruin **petje**"
+    },
+    {
+      "en": "Male yellow below, white under the **tail**",
+      "nl": "Man geel van onder, wit onder de **staart**"
+    },
+    {
+      "en": "Female olive, grey breast, small rufous **forehead**",
+      "nl": "Vrouw olijfgroen, grijze borst, klein roestbruin **voorhoofd**"
+    }
+  ]
+}

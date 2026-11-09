@@ -1,0 +1,22 @@
+{
+  "code": "savhaw1",
+  "name": {
+    "en": "Savanna Hawk",
+    "nl": "Savannebuizerd"
+  },
+  "latin": "Buteogallus meridionalis",
+  "look_for": [
+    {
+      "en": "Rufous hawk with long yellow **legs**",
+      "nl": "Roestbruine roofvogel met lange gele **poten**"
+    },
+    {
+      "en": "Black-and-white banded **tail**",
+      "nl": "Zwart-wit gebandeerde **staart**"
+    },
+    {
+      "en": "Black **flight feathers** show in flight",
+      "nl": "Zwarte **slagpennen** vallen op in vlucht"
+    }
+  ]
+}

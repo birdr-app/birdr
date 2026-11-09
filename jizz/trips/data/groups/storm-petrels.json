@@ -1,0 +1,18 @@
+{
+  "slug": "storm-petrels",
+  "about": {
+    "en": "The smallest seabirds, about the size of a swallow. Most are sooty brown or black, many with a white rump. They flutter low over the waves and patter their feet on the surface as they pick up food, and come ashore only at night, to nest in burrows and rock crevices on islands.",
+    "nl": "De kleinste zeevogels, ongeveer zo groot als een zwaluw. De meeste zijn roetbruin of zwart, vaak met een witte stuit. Ze fladderen laag over de golven en trippelen met hun poten over het water terwijl ze voedsel oppikken. Alleen 's nachts komen ze aan land, om op eilanden in holen en rotsspleten te broeden."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "petrels-shearwaters-and-diving-petrels"
+      ],
+      "text": {
+        "en": "Petrels and shearwaters share the name but are much bigger and glide on long, stiff wings. Storm-petrels are tiny and flutter close to the water, dipping their feet.",
+        "nl": "Stormvogels en pijlstormvogels hebben bijna dezelfde naam, maar zijn veel groter en glijden op lange, stijve vleugels. Stormvogeltjes zijn piepklein en fladderen vlak boven het water, met hun poten erin."
+      }
+    }
+  ]
+}

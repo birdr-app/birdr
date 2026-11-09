@@ -1,0 +1,22 @@
+{
+  "code": "margod",
+  "name": {
+    "en": "Marbled Godwit",
+    "nl": "Marmergrutto"
+  },
+  "latin": "Limosa fedoa",
+  "look_for": [
+    {
+      "en": "Large, warm brown godwit with a mottled **back**",
+      "nl": "Grote, warmbruine grutto met een gevlekte **rug**"
+    },
+    {
+      "en": "Long, slightly upturned pink **bill**, dark tip",
+      "nl": "Lange, licht opgewipte roze **snavel** met donkere punt"
+    },
+    {
+      "en": "Cinnamon **underwing** in flight",
+      "nl": "In vlucht een kaneelkleurige **ondervleugel**"
+    }
+  ]
+}

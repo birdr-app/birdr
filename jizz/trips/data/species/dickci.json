@@ -1,0 +1,22 @@
+{
+  "code": "dickci",
+  "name": {
+    "en": "Dickcissel",
+    "nl": "Dickcissel"
+  },
+  "latin": "Spiza americana",
+  "look_for": [
+    {
+      "en": "Male: yellow **breast** with a black **bib**",
+      "nl": "Man: gele **borst** met een zwart **slabbetje**"
+    },
+    {
+      "en": "Chestnut **shoulder** patch and yellow **eyebrow**",
+      "nl": "Kastanjebruine **schouder** en gele **wenkbrauw**"
+    },
+    {
+      "en": "Huge flocks over rice fields and roosts",
+      "nl": "Enorme zwermen boven rijstvelden en slaapplaatsen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "chahum1",
+  "name": {
+    "en": "Charming Hummingbird",
+    "nl": "Violetborstamazilia"
+  },
+  "latin": "Polyerata decora",
+  "look_for": [
+    {
+      "en": "Small green hummingbird with a glittering green **crown**",
+      "nl": "Kleine groene kolibrie met een glinsterende groene **kruin**"
+    },
+    {
+      "en": "Male royal-blue patch on the lower **throat** and breast",
+      "nl": "Man koningsblauwe vlek op onderste **keel** en borst"
+    },
+    {
+      "en": "Female has scattered blue spots on a white throat",
+      "nl": "Vrouw heeft losse blauwe vlekjes op een witte keel"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "fragul",
+  "name": {
+    "en": "Franklin's Gull",
+    "nl": "Franklins meeuw"
+  },
+  "latin": "Leucophaeus pipixcan",
+  "look_for": [
+    {
+      "en": "Small gull with a dark grey **back**",
+      "nl": "Kleine meeuw met een donkergrijze **rug**"
+    },
+    {
+      "en": "Black **hood** in summer, dark half-hood in winter",
+      "nl": "Zwarte **kap** in de zomer, halve kap in de winter"
+    },
+    {
+      "en": "Thick white **eye-crescents**, bolder than Laughing Gull",
+      "nl": "Dikke witte **oogboogjes**, opvallender dan bij de lachmeeuw"
+    }
+  ]
+}

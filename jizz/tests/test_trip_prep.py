@@ -196,11 +196,22 @@ class TripRegionApiTestCase(TestCase):
 
     def test_country_payload_lists_its_regions(self):
         data = self.client.get('/api/trips/CR/?lang=nl').json()
-        self.assertEqual([r['country'] for r in data['regions']], ['CR-CARIBBEAN'])
+        self.assertEqual(
+            [r['country'] for r in data['regions']],
+            ['CR-CARIBBEAN', 'CR-HIGHLANDS', 'CR-SOUTHPACIFIC', 'CR-NORTHPACIFIC'],
+        )
         region = data['regions'][0]
         self.assertEqual(region['name'], 'Caribisch laagland')
         self.assertTrue(region['intro'])
         self.assertIsNone(data['parent'])
+
+    def test_no_bird_is_in_two_packs_or_in_the_country_trip(self):
+        country = self.client.get('/api/trips/CR/').json()
+        seen = set(country['species'])
+        for region in country['regions']:
+            birds = set(self.client.get(f'/api/trips/{region["country"]}/').json()['species'])
+            self.assertFalse(birds & seen, region['country'])
+            seen |= birds
 
     def test_region_payload_names_its_parent_and_repeats_no_country_bird(self):
         country = self.client.get('/api/trips/CR/').json()

@@ -1,0 +1,22 @@
+{
+  "code": "towwar",
+  "name": {
+    "en": "Townsend's Warbler",
+    "nl": "Townsendzanger"
+  },
+  "latin": "Setophaga townsendi",
+  "look_for": [
+    {
+      "en": "Yellow **face** with a dark **cheek** patch",
+      "nl": "Geel **gezicht** met een donkere **wangvlek**"
+    },
+    {
+      "en": "Male black **throat**, female yellow throat",
+      "nl": "Man zwarte **keel**, vrouw gele keel"
+    },
+    {
+      "en": "Black streaks on the **flanks**, two white **wing bars**",
+      "nl": "Zwarte strepen op de **flanken**, twee witte **vleugelstrepen**"
+    }
+  ]
+}

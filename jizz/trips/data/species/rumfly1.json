@@ -1,0 +1,22 @@
+{
+  "code": "rumfly1",
+  "name": {
+    "en": "Rusty-margined Flycatcher",
+    "nl": "Roestvleugeltiran"
+  },
+  "latin": "Myiozetetes cayanensis",
+  "look_for": [
+    {
+      "en": "Bold white **eyebrow** above a dark **mask**",
+      "nl": "Brede witte **wenkbrauw** boven een donker **masker**"
+    },
+    {
+      "en": "Thin rusty edges on the **wing** feathers",
+      "nl": "Smalle roestbruine randjes aan de **vleugel**veren"
+    },
+    {
+      "en": "Sootier face than Social Flycatcher",
+      "nl": "Donkerder gezicht dan de roodkruintiran"
+    }
+  ]
+}

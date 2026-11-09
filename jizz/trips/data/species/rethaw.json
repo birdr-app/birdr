@@ -1,0 +1,22 @@
+{
+  "code": "rethaw",
+  "name": {
+    "en": "Red-tailed Hawk",
+    "nl": "Roodstaartbuizerd"
+  },
+  "latin": "Buteo jamaicensis",
+  "look_for": [
+    {
+      "en": "Big **buteo** with a brick-red **tail**",
+      "nl": "Grote buizerd met een steenrode **staart**"
+    },
+    {
+      "en": "White chest, deep rufous **belly** and **flanks**",
+      "nl": "Witte borst, diep roestbruine **buik** en **flanken**"
+    },
+    {
+      "en": "Dark brown above; soars over highland pastures",
+      "nl": "Donkerbruin van boven; zweeft boven weides in de bergen"
+    }
+  ]
+}

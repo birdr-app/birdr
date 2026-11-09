@@ -1,0 +1,22 @@
+{
+  "code": "lotwoo1",
+  "name": {
+    "en": "Long-tailed Woodcreeper",
+    "nl": "Langstaartmuisspecht"
+  },
+  "latin": "Deconychura longicauda",
+  "look_for": [
+    {
+      "en": "Slim woodcreeper with a long rufous **tail**",
+      "nl": "Slanke muisspecht met een lange roestbruine **staart**"
+    },
+    {
+      "en": "Thin straight **bill**, pale buff eyebrow",
+      "nl": "Dunne rechte **snavel**, lichte okerkleurige wenkbrauw"
+    },
+    {
+      "en": "Buff streaks on the **breast** only, plain belly",
+      "nl": "Okerkleurige strepen alleen op de **borst**, effen buik"
+    }
+  ]
+}

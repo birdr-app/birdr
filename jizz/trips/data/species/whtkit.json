@@ -1,0 +1,22 @@
+{
+  "code": "whtkit",
+  "name": {
+    "en": "White-tailed Kite",
+    "nl": "Amerikaanse grijze wouw"
+  },
+  "latin": "Elanus leucurus",
+  "look_for": [
+    {
+      "en": "Gull-like white and grey kite over open fields",
+      "nl": "Meeuwachtige wit-grijze wouw boven open velden"
+    },
+    {
+      "en": "Black **shoulders** and red **eyes**",
+      "nl": "Zwarte **schouders** en rode **ogen**"
+    },
+    {
+      "en": "Hovers with dangling legs, white **tail**",
+      "nl": "Bidt met hangende poten, witte **staart**"
+    }
+  ]
+}

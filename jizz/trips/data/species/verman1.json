@@ -1,0 +1,22 @@
+{
+  "code": "verman1",
+  "name": {
+    "en": "Veraguan Mango",
+    "nl": "Veraguamango"
+  },
+  "latin": "Anthracothorax veraguensis",
+  "look_for": [
+    {
+      "en": "Large green hummingbird with a slightly curved **bill**",
+      "nl": "Grote groene kolibrie met een licht gebogen **snavel**"
+    },
+    {
+      "en": "Male dark blue-green below, no black on the **throat**",
+      "nl": "Man donker blauwgroen van onder, geen zwart op de **keel**"
+    },
+    {
+      "en": "Female white below with a dark central **stripe**",
+      "nl": "Vrouw wit van onder met een donkere **middenstreep**"
+    }
+  ]
+}

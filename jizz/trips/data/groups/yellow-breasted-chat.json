@@ -1,0 +1,27 @@
+{
+  "slug": "yellow-breasted-chat",
+  "about": {
+    "en": "A family of one: a large, stocky songbird with a thick bill and a long tail, olive above with a bright yellow throat and breast and white spectacles. It skulks in dense thickets and is easier to hear than to see. Its song is a jumble of whistles, clucks and harsh notes.",
+    "nl": "Een familie met maar één soort: een grote, gedrongen zangvogel met een dikke snavel en een lange staart, olijfgroen van boven met een felgele keel en borst en een witte bril. Hij sluipt door dicht struikgewas en je hoort hem eerder dan je hem ziet. Zijn zang is een rommelige mix van fluitjes, klokkende tonen en schorre geluiden."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "old-world-flycatchers"
+      ],
+      "text": {
+        "en": "It has no link with the stonechats and whinchats of Europe. It looks more like an oversized warbler and hides in thick cover.",
+        "nl": "Hij is geen familie van de roodborsttapuit of het paapje. Hij lijkt meer op een uit de kluiten gewassen zanger en verstopt zich in dichte begroeiing."
+      }
+    },
+    {
+      "if_known": [
+        "wood-warblers"
+      ],
+      "text": {
+        "en": "It was long counted as a New World warbler, but it is bigger than any of them, with a heavier bill and a longer tail.",
+        "nl": "Hij werd lang tot de Amerikaanse zangers gerekend, maar is groter dan al die soorten, met een zwaardere snavel en een langere staart."
+      }
+    }
+  ]
+}

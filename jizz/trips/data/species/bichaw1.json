@@ -1,0 +1,22 @@
+{
+  "code": "bichaw1",
+  "name": {
+    "en": "Bicoloured Hawk",
+    "nl": "Roodbroeksperwer"
+  },
+  "latin": "Astur bicolor",
+  "look_for": [
+    {
+      "en": "Forest hawk, plain grey with a banded **tail**",
+      "nl": "Bossperwer, effen grijs met een gebandeerde **staart**"
+    },
+    {
+      "en": "Darker grey **cap** and wings",
+      "nl": "Donkerder grijze **kap** en vleugels"
+    },
+    {
+      "en": "Rufous **thighs**, often hidden when perched",
+      "nl": "Roodbruine **dijen**, vaak verborgen als hij zit"
+    }
+  ]
+}

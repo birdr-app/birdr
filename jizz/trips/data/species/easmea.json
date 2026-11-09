@@ -1,0 +1,22 @@
+{
+  "code": "easmea",
+  "name": {
+    "en": "Eastern Meadowlark",
+    "nl": "Witkaakweidespreeuw"
+  },
+  "latin": "Sturnella magna",
+  "look_for": [
+    {
+      "en": "Bright yellow **breast** with a black V",
+      "nl": "Felgele **borst** met een zwarte V"
+    },
+    {
+      "en": "Streaky brown back, striped **crown**",
+      "nl": "Gestreepte bruine rug, gestreepte **kruin**"
+    },
+    {
+      "en": "White outer **tail** feathers; sings from posts",
+      "nl": "Witte buitenste **staartveren**; zingt vanaf paaltjes"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "bbnthr1",
+  "name": {
+    "en": "Black-billed Nightingale-Thrush",
+    "nl": "Grijskeeldwerglijster"
+  },
+  "latin": "Catharus gracilirostris",
+  "look_for": [
+    {
+      "en": "Small thrush with a thin black **bill**",
+      "nl": "Kleine lijster met een dunne zwarte **snavel**"
+    },
+    {
+      "en": "Slate-grey **face** and **underparts**",
+      "nl": "Leigrijs **gezicht** en leigrijze **onderkant**"
+    },
+    {
+      "en": "Olive-brown **back**, olive band across the **breast**",
+      "nl": "Olijfbruine **rug**, olijfkleurige band over de **borst**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "crebob1",
+  "name": {
+    "en": "Crested Bobwhite",
+    "nl": "Kuifboomkwartel"
+  },
+  "latin": "Colinus cristatus",
+  "look_for": [
+    {
+      "en": "Small quail running through dry grass and scrub",
+      "nl": "Kleine kwartel die door droog gras en struikgewas rent"
+    },
+    {
+      "en": "Pale buff or white **crest** on the head",
+      "nl": "Lichtbruine of witte **kuif** op de kop"
+    },
+    {
+      "en": "Black and white speckled **neck**, pale throat",
+      "nl": "Zwart-wit gespikkelde **hals**, lichte keel"
+    }
+  ]
+}

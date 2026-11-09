@@ -1,0 +1,22 @@
+{
+  "code": "bcwpar1",
+  "name": {
+    "en": "Buffy-crowned Wood-Partridge",
+    "nl": "Witkeelbospatrijs"
+  },
+  "latin": "Dendrortyx leucophrys",
+  "look_for": [
+    {
+      "en": "Plump forest partridge with a chestnut **crest**",
+      "nl": "Gedrongen bospatrijs met een kastanjebruine **kuif**"
+    },
+    {
+      "en": "White **throat** and eyebrow, red skin round the eye",
+      "nl": "Witte **keel** en wenkbrauw, rode huid rond het oog"
+    },
+    {
+      "en": "Grey-brown body, **breast** with dark streaks",
+      "nl": "Grijsbruin lijf, **borst** met donkere strepen"
+    }
+  ]
+}

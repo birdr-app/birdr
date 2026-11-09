@@ -1,0 +1,22 @@
+{
+  "code": "peakit1",
+  "name": {
+    "en": "Pearl Kite",
+    "nl": "Parelwouw"
+  },
+  "latin": "Gampsonyx swainsonii",
+  "look_for": [
+    {
+      "en": "Tiny kite, the size of a small falcon",
+      "nl": "Piepkleine wouw, zo groot als een klein valkje"
+    },
+    {
+      "en": "Yellow-buff **forehead** and **cheeks**",
+      "nl": "Geelbruin **voorhoofd** en geelbruine **wangen**"
+    },
+    {
+      "en": "Black above, white below, white **collar**",
+      "nl": "Zwart van boven, wit van onder, witte **halsband**"
+    }
+  ]
+}

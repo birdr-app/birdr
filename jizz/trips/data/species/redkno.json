@@ -1,0 +1,22 @@
+{
+  "code": "redkno",
+  "name": {
+    "en": "Red Knot",
+    "nl": "Kanoet"
+  },
+  "latin": "Calidris canutus",
+  "look_for": [
+    {
+      "en": "Stocky wader with a short straight **bill**",
+      "nl": "Gedrongen steltloper met een korte rechte **snavel**"
+    },
+    {
+      "en": "Winter plain grey; breeding brick-red **underparts**",
+      "nl": "In de winter egaal grijs; in zomerkleed steenrode **onderkant**"
+    },
+    {
+      "en": "Greenish **legs**; larger than a Sanderling",
+      "nl": "Groenige **poten**; groter dan een drieteenstrandloper"
+    }
+  ]
+}

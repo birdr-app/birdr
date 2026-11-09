@@ -1,0 +1,22 @@
+{
+  "code": "hrshaw",
+  "name": {
+    "en": "Harris's Hawk",
+    "nl": "Woestijnbuizerd"
+  },
+  "latin": "Parabuteo unicinctus",
+  "look_for": [
+    {
+      "en": "Dark brown hawk with chestnut **shoulders** and thighs",
+      "nl": "Donkerbruine buizerd met kastanjebruine **schouders** en dijen"
+    },
+    {
+      "en": "White base and white tip to the dark **tail**",
+      "nl": "Witte basis en witte punt aan de donkere **staart**"
+    },
+    {
+      "en": "Long yellow **legs** and yellow face skin",
+      "nl": "Lange gele **poten** en gele huid aan de snavelbasis"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "lattro1",
+  "name": {
+    "en": "Lattice-tailed Trogon",
+    "nl": "Rasterstaarttrogon"
+  },
+  "latin": "Trogon clathratus",
+  "look_for": [
+    {
+      "en": "Pale **eye**, black **face**, yellow **bill**",
+      "nl": "Licht **oog**, zwart **gezicht**, gele **snavel**"
+    },
+    {
+      "en": "Male green, female grey; both with a red **belly**",
+      "nl": "Man groen, vrouw grijs; allebei een rode **buik**"
+    },
+    {
+      "en": "Fine white bars under the **tail**",
+      "nl": "Fijne witte bandjes onder de **staart**"
+    }
+  ]
+}

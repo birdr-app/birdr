@@ -1,0 +1,22 @@
+{
+  "code": "baffal1",
+  "name": {
+    "en": "Barred Forest-Falcon",
+    "nl": "Gestreepte bosvalk"
+  },
+  "latin": "Micrastur ruficollis",
+  "look_for": [
+    {
+      "en": "Slim grey forest-falcon with a long **tail**",
+      "nl": "Slanke grijze bosvalk met een lange **staart**"
+    },
+    {
+      "en": "White underparts with fine black bars",
+      "nl": "Witte onderkant met fijne zwarte bandjes"
+    },
+    {
+      "en": "Yellow skin around the **eye**, narrow white **tail** bars",
+      "nl": "Gele huid rond het **oog**, smalle witte **staart**bandjes"
+    }
+  ]
+}

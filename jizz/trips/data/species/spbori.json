@@ -1,0 +1,22 @@
+{
+  "code": "spbori",
+  "name": {
+    "en": "Spot-breasted Oriole",
+    "nl": "Vlekborsttroepiaal"
+  },
+  "latin": "Icterus pectoralis",
+  "look_for": [
+    {
+      "en": "Orange oriole with a black **mask** and **bib**",
+      "nl": "Oranje troepiaal met een zwart **masker** en **slab**"
+    },
+    {
+      "en": "Black spots on the sides of the **breast**",
+      "nl": "Zwarte vlekken op de zijkant van de **borst**"
+    },
+    {
+      "en": "Plain black **back**, big white patch in the **wing**",
+      "nl": "Effen zwarte **rug**, grote witte vlek in de **vleugel**"
+    }
+  ]
+}

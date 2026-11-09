@@ -1,0 +1,22 @@
+{
+  "code": "gobfly1",
+  "name": {
+    "en": "Golden-bellied Flycatcher",
+    "nl": "Goudbuiktiran"
+  },
+  "latin": "Myiodynastes hemichrysus",
+  "look_for": [
+    {
+      "en": "Bold white **eyebrow** above a black **mask**",
+      "nl": "Brede witte **wenkbrauwstreep** boven een zwart **masker**"
+    },
+    {
+      "en": "Pale stripe through the dark **cheek**",
+      "nl": "Lichte streep door de donkere **wang**"
+    },
+    {
+      "en": "Rich yellow **underparts**, almost unstreaked",
+      "nl": "Diepgele **onderkant**, bijna zonder strepen"
+    }
+  ]
+}

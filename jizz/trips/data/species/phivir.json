@@ -1,0 +1,22 @@
+{
+  "code": "phivir",
+  "name": {
+    "en": "Philadelphia Vireo",
+    "nl": "Philadelphiavireo"
+  },
+  "latin": "Vireo philadelphicus",
+  "look_for": [
+    {
+      "en": "Plain vireo with yellow **throat** and breast",
+      "nl": "Effen vireo met een gele **keel** en borst"
+    },
+    {
+      "en": "Dark **lores** and a white **eyebrow**",
+      "nl": "Donkere **teugel** en een witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Yellower below than similar vireos, no **wing bars**",
+      "nl": "Geler van onder dan verwante vireo's, geen **vleugelstrepen**"
+    }
+  ]
+}

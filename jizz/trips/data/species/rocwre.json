@@ -1,0 +1,22 @@
+{
+  "code": "rocwre",
+  "name": {
+    "en": "Rock Wren",
+    "nl": "Amerikaanse rotswinterkoning"
+  },
+  "latin": "Salpinctes obsoletus",
+  "look_for": [
+    {
+      "en": "Pale grey-brown wren that bobs on bare rock",
+      "nl": "Bleke grijsbruine winterkoning die op kale rotsen wipt"
+    },
+    {
+      "en": "Fine pale spots above, faint streaks on the **breast**",
+      "nl": "Fijne lichte stipjes van boven, vage streepjes op de **borst**"
+    },
+    {
+      "en": "Cinnamon **rump**, buff tips to the tail",
+      "nl": "Kaneelkleurige **stuit**, lichtbruine punten aan de staart"
+    }
+  ]
+}

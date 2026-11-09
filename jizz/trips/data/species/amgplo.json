@@ -1,0 +1,22 @@
+{
+  "code": "amgplo",
+  "name": {
+    "en": "American Golden Plover",
+    "nl": "Amerikaanse goudplevier"
+  },
+  "latin": "Pluvialis dominica",
+  "look_for": [
+    {
+      "en": "Slim plover with a small **head** and **bill**",
+      "nl": "Slanke plevier met een kleine **kop** en **snavel**"
+    },
+    {
+      "en": "Winter grey-brown, with a bold whitish **eyebrow**",
+      "nl": "In winterkleed grijsbruin, met een duidelijke lichte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Grey **armpits** in flight, unlike European Golden Plover",
+      "nl": "In vlucht grijze **oksels**, anders dan bij de Goudplevier"
+    }
+  ]
+}

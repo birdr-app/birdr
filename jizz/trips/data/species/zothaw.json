@@ -1,0 +1,22 @@
+{
+  "code": "zothaw",
+  "name": {
+    "en": "Zone-tailed Hawk",
+    "nl": "Bandstaartbuizerd"
+  },
+  "latin": "Buteo albonotatus",
+  "look_for": [
+    {
+      "en": "Black hawk that flies like a Turkey Vulture",
+      "nl": "Zwarte buizerd die vliegt als een kalkoengier"
+    },
+    {
+      "en": "Silvery-barred **flight feathers**, dark wing linings",
+      "nl": "Zilverig gebandeerde **slagpennen**, donkere ondervleugeldekveren"
+    },
+    {
+      "en": "Black **tail** with white bands, yellow face skin",
+      "nl": "Zwarte **staart** met witte banden, gele huid aan de snavelbasis"
+    }
+  ]
+}

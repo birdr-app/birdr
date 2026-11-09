@@ -1,0 +1,22 @@
+{
+  "code": "atbtan1",
+  "name": {
+    "en": "Ashy-throated Chlorospingus",
+    "nl": "Grijskeeltangare"
+  },
+  "latin": "Chlorospingus canigularis",
+  "look_for": [
+    {
+      "en": "Olive **head** with a pale greyish **throat**",
+      "nl": "Olijfgroene **kop** met een lichtgrijze **keel**"
+    },
+    {
+      "en": "Broad yellow **breast band**, whitish belly",
+      "nl": "Brede gele **borstband**, witachtige buik"
+    },
+    {
+      "en": "Reddish-brown **eye**, no white spot behind it",
+      "nl": "Roodbruin **oog**, zonder witte vlek erachter zoals de briltangare"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rinduc",
+  "name": {
+    "en": "Ring-necked Duck",
+    "nl": "Ringsnaveleend"
+  },
+  "latin": "Aythya collaris",
+  "look_for": [
+    {
+      "en": "Male black and grey with a peaked **head**",
+      "nl": "Man zwart en grijs met een hoekige **kop**"
+    },
+    {
+      "en": "White ring near the tip of the grey **bill**",
+      "nl": "Witte ring vlak bij de punt van de grijze **snavel**"
+    },
+    {
+      "en": "Unlike Tufted Duck no **tuft**; white wedge on side",
+      "nl": "Anders dan de Kuifeend geen **kuif**; witte wig opzij"
+    }
+  ]
+}

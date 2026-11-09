@@ -1,0 +1,22 @@
+{
+  "code": "blkski",
+  "name": {
+    "en": "Black Skimmer",
+    "nl": "Amerikaanse schaarbek"
+  },
+  "latin": "Rynchops niger",
+  "look_for": [
+    {
+      "en": "Black above, white below, flies low over water",
+      "nl": "Zwart van boven, wit van onder, vliegt laag over water"
+    },
+    {
+      "en": "Red and black **bill**, lower half much longer",
+      "nl": "Rood met zwarte **snavel**, onderste helft veel langer"
+    },
+    {
+      "en": "Skims the surface with its lower bill in water",
+      "nl": "Scheert over het water met de ondersnavel erin"
+    }
+  ]
+}

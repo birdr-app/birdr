@@ -1,0 +1,22 @@
+{
+  "code": "whthaw",
+  "name": {
+    "en": "White-tailed Hawk",
+    "nl": "Witstaartbuizerd"
+  },
+  "latin": "Geranoaetus albicaudatus",
+  "look_for": [
+    {
+      "en": "White **tail** with a black band near the tip",
+      "nl": "Witte **staart** met een zwarte band bij de punt"
+    },
+    {
+      "en": "Dark grey above, white below, rusty **shoulder**",
+      "nl": "Donkergrijs van boven, wit van onder, roestbruine **schouder**"
+    },
+    {
+      "en": "Long **wings** reach past the tail when perched",
+      "nl": "Lange **vleugels** steken zittend voorbij de staart"
+    }
+  ]
+}

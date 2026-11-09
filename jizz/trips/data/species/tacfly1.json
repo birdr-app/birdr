@@ -1,0 +1,22 @@
+{
+  "code": "tacfly1",
+  "name": {
+    "en": "Tawny-chested Flycatcher",
+    "nl": "Salvintiran"
+  },
+  "latin": "Aphanotriccus capitalis",
+  "look_for": [
+    {
+      "en": "Bright cinnamon-ochre **breast** below a white throat",
+      "nl": "Fel kaneeloranje **borst** onder een witte keel"
+    },
+    {
+      "en": "Grey **crown**, white line above the dark lores",
+      "nl": "Grijze **kruin**, witte streep boven de donkere teugel"
+    },
+    {
+      "en": "Two ochre **wingbars**, yellow belly",
+      "nl": "Twee okerkleurige **vleugelstrepen**, gele buik"
+    }
+  ]
+}

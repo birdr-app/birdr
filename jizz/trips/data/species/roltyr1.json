@@ -1,0 +1,22 @@
+{
+  "code": "roltyr1",
+  "name": {
+    "en": "White-fronted Tyrannulet",
+    "nl": "Zeledonvliegenpikker"
+  },
+  "latin": "Acrochordopus zeledoni",
+  "look_for": [
+    {
+      "en": "White **forehead** running into a white **eyebrow**",
+      "nl": "Wit **voorhoofd** dat overloopt in een witte **wenkbrauw**"
+    },
+    {
+      "en": "Slate-grey **crown**, olive back",
+      "nl": "Leigrijze **kruin**, olijfgroene rug"
+    },
+    {
+      "en": "Two yellow **wing bars**, pale yellow below",
+      "nl": "Twee gele **vleugelstrepen**, lichtgeel van onder"
+    }
+  ]
+}

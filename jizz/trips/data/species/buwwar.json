@@ -1,0 +1,22 @@
+{
+  "code": "buwwar",
+  "name": {
+    "en": "Blue-winged Warbler",
+    "nl": "Blauwvleugelzanger"
+  },
+  "latin": "Vermivora cyanoptera",
+  "look_for": [
+    {
+      "en": "Bright yellow **head** and **underparts**",
+      "nl": "Felgele **kop** en **onderkant**"
+    },
+    {
+      "en": "Thin black line through the **eye**",
+      "nl": "Dunne zwarte streep door het **oog**"
+    },
+    {
+      "en": "Blue-grey **wings** with two white **wing bars**",
+      "nl": "Blauwgrijze **vleugels** met twee witte **vleugelstrepen**"
+    }
+  ]
+}

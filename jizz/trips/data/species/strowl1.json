@@ -1,0 +1,22 @@
+{
+  "code": "strowl1",
+  "name": {
+    "en": "Striped Owl",
+    "nl": "Gestreepte ransuil"
+  },
+  "latin": "Asio clamator",
+  "look_for": [
+    {
+      "en": "Long **ear tufts** above a white **face**",
+      "nl": "Lange **oorpluimen** boven een wit **gezicht**"
+    },
+    {
+      "en": "Thin black rim round the facial **disc**",
+      "nl": "Dunne zwarte rand om de **gezichtssluier**"
+    },
+    {
+      "en": "Buff **underparts** with heavy black streaks",
+      "nl": "Lichtbruine **onderkant** met zware zwarte strepen"
+    }
+  ]
+}

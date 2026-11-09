@@ -1,0 +1,22 @@
+{
+  "code": "refboo",
+  "name": {
+    "en": "Red-footed Booby",
+    "nl": "Roodpootgent"
+  },
+  "latin": "Sula sula",
+  "look_for": [
+    {
+      "en": "Smallest booby, with bright red **feet**",
+      "nl": "Kleinste gent, met felrode **poten**"
+    },
+    {
+      "en": "Pale blue **bill** with pink skin at the base",
+      "nl": "Lichtblauwe **snavel** met roze huid aan de basis"
+    },
+    {
+      "en": "Brown or white; white birds have black **flight feathers**",
+      "nl": "Bruin of wit; witte vogels hebben zwarte **slagpennen**"
+    }
+  ]
+}

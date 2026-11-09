@@ -1,0 +1,22 @@
+{
+  "code": "pebfin1",
+  "name": {
+    "en": "Peg-billed Finch",
+    "nl": "Wigsnavelgors"
+  },
+  "latin": "Acanthidops bairdi",
+  "look_for": [
+    {
+      "en": "Sharp upturned **bill**, black above, yellow below",
+      "nl": "Spitse opgewipte **snavel**, zwart van boven, geel van onder"
+    },
+    {
+      "en": "Male plain slate grey, paler on the belly",
+      "nl": "Man effen leigrijs, lichter op de buik"
+    },
+    {
+      "en": "Female olive-brown with cinnamon **wing bars**",
+      "nl": "Vrouw olijfbruin met kaneelkleurige **vleugelstrepen**"
+    }
+  ]
+}

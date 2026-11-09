@@ -1,0 +1,22 @@
+{
+  "code": "laffin1",
+  "name": {
+    "en": "Large-footed Finch",
+    "nl": "Grootpootstruikgors"
+  },
+  "latin": "Pezopetes capitalis",
+  "look_for": [
+    {
+      "en": "Big olive sparrow with large **feet**",
+      "nl": "Grote olijfgroene gors met grote **poten**"
+    },
+    {
+      "en": "Black **face** and **crown**, grey sides of the head",
+      "nl": "Zwart **gezicht** en zwarte **kruin**, grijze zijkant van de kop"
+    },
+    {
+      "en": "Olive-green body, small slender **bill**",
+      "nl": "Olijfgroen lijf, kleine dunne **snavel**"
+    }
+  ]
+}

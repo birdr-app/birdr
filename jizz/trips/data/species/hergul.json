@@ -1,0 +1,22 @@
+{
+  "code": "hergul",
+  "name": {
+    "en": "Herring Gull",
+    "nl": "Zilvermeeuw"
+  },
+  "latin": "Larus argentatus",
+  "look_for": [
+    {
+      "en": "Large gull with a pale grey **back**",
+      "nl": "Grote meeuw met een lichtgrijze **rug**"
+    },
+    {
+      "en": "Yellow **bill** with a red spot, pink **legs**",
+      "nl": "Gele **snavel** met een rode vlek, roze **poten**"
+    },
+    {
+      "en": "Bigger than Ring-billed Gull, with no bill ring",
+      "nl": "Groter dan de ringsnavelmeeuw, zonder ring om de snavel"
+    }
+  ]
+}

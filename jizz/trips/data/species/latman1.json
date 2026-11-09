@@ -1,0 +1,22 @@
+{
+  "code": "latman1",
+  "name": {
+    "en": "Lance-tailed Manakin",
+    "nl": "Lancetmanakin"
+  },
+  "latin": "Chiroxiphia lanceolata",
+  "look_for": [
+    {
+      "en": "Two pointed central **tail** feathers",
+      "nl": "Twee puntige middelste **staartveren**"
+    },
+    {
+      "en": "Male black, sky-blue **back**, red **cap**",
+      "nl": "Man zwart, hemelsblauwe **rug**, rode **kap**"
+    },
+    {
+      "en": "Female olive-green; bright orange **legs**",
+      "nl": "Vrouw olijfgroen; feloranje **poten**"
+    }
+  ]
+}

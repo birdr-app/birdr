@@ -1,0 +1,22 @@
+{
+  "code": "wessan",
+  "name": {
+    "en": "Western Sandpiper",
+    "nl": "Alaskastrandloper"
+  },
+  "latin": "Calidris mauri",
+  "look_for": [
+    {
+      "en": "Small grey sandpiper of beaches and mudflats",
+      "nl": "Kleine grijze strandloper van stranden en slikken"
+    },
+    {
+      "en": "Longish **bill** with a slight droop at the tip",
+      "nl": "Vrij lange **snavel**, aan de punt iets omlaag"
+    },
+    {
+      "en": "Black **legs**; Semipalmated Sandpiper has a shorter, straighter bill",
+      "nl": "Zwarte **poten**; Grijze strandloper heeft een kortere, rechtere snavel"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "oltpar1",
+  "name": {
+    "en": "Olive-throated Parakeet",
+    "nl": "Olijfkeelaratinga"
+  },
+  "latin": "Eupsittula nana",
+  "look_for": [
+    {
+      "en": "Green parakeet with an olive-brown **throat** and breast",
+      "nl": "Groene parkiet met een olijfbruine **keel** en borst"
+    },
+    {
+      "en": "Bare white **eye-ring**, pale bill",
+      "nl": "Kale witte **oogring**, lichte snavel"
+    },
+    {
+      "en": "No orange **forehead**; blue in the wings",
+      "nl": "Geen oranje **voorhoofd**; blauw in de vleugels"
+    }
+  ]
+}

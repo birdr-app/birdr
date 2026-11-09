@@ -1,0 +1,22 @@
+{
+  "code": "aldfly",
+  "name": {
+    "en": "Alder Flycatcher",
+    "nl": "Elzenfeetiran"
+  },
+  "latin": "Empidonax alnorum",
+  "look_for": [
+    {
+      "en": "Brownish-olive flycatcher with a white **throat**",
+      "nl": "Bruinig olijfgroene feetiran met een witte **keel**"
+    },
+    {
+      "en": "Thin, faint **eye-ring**, pale **wing bars**",
+      "nl": "Dunne, vage **oogring**, lichte **vleugelstrepen**"
+    },
+    {
+      "en": "Hard to tell from Willow Flycatcher unless calling",
+      "nl": "Zonder geluid lastig van de Traills feetiran te onderscheiden"
+    }
+  ]
+}

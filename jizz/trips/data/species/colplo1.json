@@ -1,0 +1,22 @@
+{
+  "code": "colplo1",
+  "name": {
+    "en": "Collared Plover",
+    "nl": "Kraagplevier"
+  },
+  "latin": "Anarhynchus collaris",
+  "look_for": [
+    {
+      "en": "Small plover with one complete black **breast band**",
+      "nl": "Kleine plevier met één volledige zwarte **borstband**"
+    },
+    {
+      "en": "Chestnut **crown**, no white collar on the neck",
+      "nl": "Kastanjebruine **kruin**, geen witte halsband"
+    },
+    {
+      "en": "Thin black **bill**, pale yellowish **legs**",
+      "nl": "Dunne zwarte **snavel**, lichte geelachtige **poten**"
+    }
+  ]
+}

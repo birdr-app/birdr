@@ -1,0 +1,22 @@
+{
+  "code": "brcvir1",
+  "name": {
+    "en": "Brown-capped Vireo",
+    "nl": "Witbrauwvireo"
+  },
+  "latin": "Vireo leucophrys",
+  "look_for": [
+    {
+      "en": "Plain vireo with a dark brown **cap**",
+      "nl": "Effen vireo met een donkerbruine **kap**"
+    },
+    {
+      "en": "Bold white **eyebrow** above a dark eye-stripe",
+      "nl": "Duidelijke witte **wenkbrauwstreep** boven een donkere oogstreep"
+    },
+    {
+      "en": "Whitish **throat**, pale yellow belly",
+      "nl": "Witte **keel**, lichtgele buik"
+    }
+  ]
+}

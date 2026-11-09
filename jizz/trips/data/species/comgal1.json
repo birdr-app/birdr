@@ -1,0 +1,22 @@
+{
+  "code": "comgal1",
+  "name": {
+    "en": "American Moorhen",
+    "nl": "Amerikaans waterhoen"
+  },
+  "latin": "Gallinula galeata",
+  "look_for": [
+    {
+      "en": "Red **shield** and red **bill** with a yellow tip",
+      "nl": "Rood **voorhoofdsschild** en rode **snavel** met gele punt"
+    },
+    {
+      "en": "Dark slaty body with a white **flank** line",
+      "nl": "Donker leigrijs lijf met een witte streep op de **flank**"
+    },
+    {
+      "en": "Flicks a white **undertail** while swimming",
+      "nl": "Wipt met een witte **onderstaart** tijdens het zwemmen"
+    }
+  ]
+}

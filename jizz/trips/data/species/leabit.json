@@ -1,0 +1,22 @@
+{
+  "code": "leabit",
+  "name": {
+    "en": "Least Bittern",
+    "nl": "Amerikaanse woudaap"
+  },
+  "latin": "Botaurus exilis",
+  "look_for": [
+    {
+      "en": "Tiny heron that clambers through the reeds",
+      "nl": "Piepklein reigertje dat door het riet klautert"
+    },
+    {
+      "en": "Big buff **wing** patches, obvious in flight",
+      "nl": "Grote lichtbruine vlakken op de **vleugel**, opvallend in vlucht"
+    },
+    {
+      "en": "Male black **crown** and **back**, female brown",
+      "nl": "Man zwarte **kruin** en **rug**, vrouw bruin"
+    }
+  ]
+}

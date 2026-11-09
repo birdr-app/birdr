@@ -1,0 +1,22 @@
+{
+  "code": "camwar",
+  "name": {
+    "en": "Cape May Warbler",
+    "nl": "Tijgerzanger"
+  },
+  "latin": "Setophaga tigrina",
+  "look_for": [
+    {
+      "en": "Male chestnut **cheek** patch framed in yellow",
+      "nl": "Man kastanjebruine **wangvlek** omlijst door geel"
+    },
+    {
+      "en": "Yellow **breast** with fine black streaks",
+      "nl": "Gele **borst** met fijne zwarte streepjes"
+    },
+    {
+      "en": "Yellowish **rump**, white **wing** panel or bar",
+      "nl": "Geelachtige **stuit**, witte vlek of streep op de **vleugel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "russpa1",
+  "name": {
+    "en": "Rusty Sparrow",
+    "nl": "Roestruggors"
+  },
+  "latin": "Aimophila rufescens",
+  "look_for": [
+    {
+      "en": "Large sparrow with a rusty, streaked **crown**",
+      "nl": "Grote gors met een roestbruine, gestreepte **kruin**"
+    },
+    {
+      "en": "Black **moustache** stripe, white **eye-ring**",
+      "nl": "Zwarte **baardstreep**, witte **oogring**"
+    },
+    {
+      "en": "Rufous **wings** and **tail**, streaked **back**",
+      "nl": "Roestbruine **vleugels** en **staart**, gestreepte **rug**"
+    }
+  ]
+}

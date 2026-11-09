@@ -1,0 +1,22 @@
+{
+  "code": "sedwre",
+  "name": {
+    "en": "Grass Wren",
+    "nl": "Graswinterkoning"
+  },
+  "latin": "Cistothorus platensis",
+  "look_for": [
+    {
+      "en": "Small wren with a streaked **back**",
+      "nl": "Klein winterkoninkje met een gestreepte **rug**"
+    },
+    {
+      "en": "Buff **flanks** and barred **tail**",
+      "nl": "Lichtbruine **flanken** en een gebandeerde **staart**"
+    },
+    {
+      "en": "Sings from tall grass in wet meadows",
+      "nl": "Zingt vanuit hoog gras in natte graslanden"
+    }
+  ]
+}

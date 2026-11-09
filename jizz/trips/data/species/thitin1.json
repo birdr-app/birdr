@@ -1,0 +1,22 @@
+{
+  "code": "thitin1",
+  "name": {
+    "en": "Thicket Tinamou",
+    "nl": "Struiktinamoe"
+  },
+  "latin": "Crypturellus cinnamomeus",
+  "look_for": [
+    {
+      "en": "Brown tinamou with red **legs**",
+      "nl": "Bruine tinamoe met rode **poten**"
+    },
+    {
+      "en": "Buff **eyebrow** and a dark **ear** patch",
+      "nl": "Lichtbruine **wenkbrauwstreep** en een donkere **oorvlek**"
+    },
+    {
+      "en": "Black bars on the **back** and **wings**",
+      "nl": "Zwarte bandjes op **rug** en **vleugels**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "weskin",
+  "name": {
+    "en": "Western Kingbird",
+    "nl": "Westelijke koningstiran"
+  },
+  "latin": "Tyrannus verticalis",
+  "look_for": [
+    {
+      "en": "Pale grey **head** and breast, yellow belly",
+      "nl": "Lichtgrijze **kop** en borst, gele buik"
+    },
+    {
+      "en": "Black **tail** with white outer edges",
+      "nl": "Zwarte **staart** met witte buitenranden"
+    },
+    {
+      "en": "Square **tail**; Tropical Kingbird's is notched, without white",
+      "nl": "Rechte **staart**; bij de Tropische koningstiran gevorkt en zonder wit"
+    }
+  ]
+}

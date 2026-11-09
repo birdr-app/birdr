@@ -1,0 +1,22 @@
+{
+  "code": "trogna2",
+  "name": {
+    "en": "White-browed Gnatcatcher",
+    "nl": "Witbrauwmuggenvanger"
+  },
+  "latin": "Polioptila bilineata",
+  "look_for": [
+    {
+      "en": "Tiny grey bird with a long black-and-white **tail**",
+      "nl": "Piepklein grijs vogeltje met een lange zwartwitte **staart**"
+    },
+    {
+      "en": "Broad white **eyebrow**; male's crown black",
+      "nl": "Brede witte **wenkbrauw**; kruin van de man zwart"
+    },
+    {
+      "en": "Never a full black cap over the **eye**",
+      "nl": "Nooit een volledig zwarte kap tot over het **oog**"
+    }
+  ]
+}

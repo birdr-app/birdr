@@ -1,0 +1,22 @@
+{
+  "code": "lsspet",
+  "name": {
+    "en": "Least Storm-Petrel",
+    "nl": "Dwergstormvogeltje"
+  },
+  "latin": "Hydrobates microsoma",
+  "look_for": [
+    {
+      "en": "Tiny all-dark storm-petrel, no white **rump**",
+      "nl": "Piepklein, geheel donker stormvogeltje zonder witte **stuit**"
+    },
+    {
+      "en": "Short, wedge-shaped **tail**",
+      "nl": "Korte, wigvormige **staart**"
+    },
+    {
+      "en": "Flies low and fast over the waves",
+      "nl": "Vliegt laag en snel over de golven"
+    }
+  ]
+}

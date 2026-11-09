@@ -1,0 +1,22 @@
+{
+  "code": "leasan",
+  "name": {
+    "en": "Least Sandpiper",
+    "nl": "Kleinste strandloper"
+  },
+  "latin": "Calidris minutilla",
+  "look_for": [
+    {
+      "en": "Tiniest wader, crouches low on the mud",
+      "nl": "Kleinste steltloper, zit laag gebukt op het slik"
+    },
+    {
+      "en": "Yellowish **legs**, short thin dark **bill**",
+      "nl": "Geelachtige **poten**, korte dunne donkere **snavel**"
+    },
+    {
+      "en": "Brownish **breast**, browner than other small peeps",
+      "nl": "Bruinige **borst**, bruiner dan andere kleine strandlopers"
+    }
+  ]
+}

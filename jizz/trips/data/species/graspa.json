@@ -1,0 +1,22 @@
+{
+  "code": "graspa",
+  "name": {
+    "en": "Grasshopper Sparrow",
+    "nl": "Sprinkhaangors"
+  },
+  "latin": "Ammodramus savannarum",
+  "look_for": [
+    {
+      "en": "Flat-headed sparrow with a pale **crown** stripe",
+      "nl": "Platkoppige gors met een lichte **kruinstreep**"
+    },
+    {
+      "en": "Plain buff **breast** and short, spiky **tail**",
+      "nl": "Effen lichtbruine **borst** en korte, puntige **staart**"
+    },
+    {
+      "en": "Yellow-orange spot in front of the **eye**",
+      "nl": "Geeloranje vlekje voor het **oog**"
+    }
+  ]
+}

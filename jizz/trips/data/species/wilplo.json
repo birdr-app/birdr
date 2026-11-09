@@ -1,0 +1,22 @@
+{
+  "code": "wilplo",
+  "name": {
+    "en": "Wilson's Plover",
+    "nl": "Dikbekplevier"
+  },
+  "latin": "Anarhynchus wilsonia",
+  "look_for": [
+    {
+      "en": "Heavy black **bill**, big for a plover",
+      "nl": "Zware zwarte **snavel**, groot voor een plevier"
+    },
+    {
+      "en": "One broad **breast band**: black in male, brown in female",
+      "nl": "Eén brede **borstband**: man zwart, vrouw bruin"
+    },
+    {
+      "en": "Pinkish **legs** and white **forehead**",
+      "nl": "Roze **poten** en wit **voorhoofd**"
+    }
+  ]
+}

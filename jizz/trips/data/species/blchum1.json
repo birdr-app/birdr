@@ -1,0 +1,22 @@
+{
+  "code": "blchum1",
+  "name": {
+    "en": "Blue-chested Hummingbird",
+    "nl": "Blauwborstamazilia"
+  },
+  "latin": "Polyerata amabilis",
+  "look_for": [
+    {
+      "en": "Male green with a violet-blue **chest**",
+      "nl": "Man groen met een violetblauwe **borst**"
+    },
+    {
+      "en": "Lower **mandible** reddish at the base",
+      "nl": "**Ondersnavel** roodachtig aan de basis"
+    },
+    {
+      "en": "Female duller, with blue spots on the **throat**",
+      "nl": "Vrouw doffer, met blauwe stipjes op de **keel**"
+    }
+  ]
+}

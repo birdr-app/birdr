@@ -1,0 +1,22 @@
+{
+  "code": "relpar",
+  "name": {
+    "en": "Red-lored Amazon",
+    "nl": "Geelwangamazone"
+  },
+  "latin": "Amazona autumnalis",
+  "look_for": [
+    {
+      "en": "Green parrot with a red **forehead**",
+      "nl": "Groene papegaai met een rood **voorhoofd**"
+    },
+    {
+      "en": "Yellow **cheeks** and a bluish **crown**",
+      "nl": "Gele **wangen** en een blauwachtige **kruin**"
+    },
+    {
+      "en": "Flies in noisy pairs over the forest canopy",
+      "nl": "Vliegt in luidruchtige paartjes over het kronendak"
+    }
+  ]
+}

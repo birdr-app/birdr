@@ -1,0 +1,22 @@
+{
+  "code": "bawhae1",
+  "name": {
+    "en": "Black-and-white Hawk-Eagle",
+    "nl": "Zwart-witte kuifarend"
+  },
+  "latin": "Spizaetus melanoleucus",
+  "look_for": [
+    {
+      "en": "White **head** and **body**, black **back** and wings",
+      "nl": "Witte **kop** en **lijf**, zwarte **rug** en vleugels"
+    },
+    {
+      "en": "Black **mask** round the eye, small black **crest**",
+      "nl": "Zwart **masker** rond het oog, kleine zwarte **kuif**"
+    },
+    {
+      "en": "White leading edge to the **wing** in flight",
+      "nl": "In vlucht een witte voorrand aan de **vleugel**"
+    }
+  ]
+}

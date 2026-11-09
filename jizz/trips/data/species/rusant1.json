@@ -1,0 +1,22 @@
+{
+  "code": "rusant1",
+  "name": {
+    "en": "Russet Antshrike",
+    "nl": "Rosse mierklauwier"
+  },
+  "latin": "Thamnistes anabatinus",
+  "look_for": [
+    {
+      "en": "Stocky, with a heavy hooked **bill**",
+      "nl": "Gedrongen, met een zware **snavel** met haakpunt"
+    },
+    {
+      "en": "Rufous **wings** and tail, olive-brown back",
+      "nl": "Roestbruine **vleugels** en staart, olijfbruine rug"
+    },
+    {
+      "en": "Yellowish **eyebrow**; forages high with mixed flocks",
+      "nl": "Gelige **wenkbrauw**; zoekt hoog in gemengde groepen voedsel"
+    }
+  ]
+}

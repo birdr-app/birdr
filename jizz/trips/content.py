@@ -36,6 +36,21 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'parent': 'CR',
     },
+    'CR-HIGHLANDS': {
+        'name': {'en': 'Highlands', 'nl': 'Hooglanden'},
+        'languages': ('en', 'nl'),
+        'parent': 'CR',
+    },
+    'CR-SOUTHPACIFIC': {
+        'name': {'en': 'South Pacific', 'nl': 'Zuid-Pacific'},
+        'languages': ('en', 'nl'),
+        'parent': 'CR',
+    },
+    'CR-NORTHPACIFIC': {
+        'name': {'en': 'North Pacific', 'nl': 'Noord-Pacific'},
+        'languages': ('en', 'nl'),
+        'parent': 'CR',
+    },
 }
 
 LANGUAGES = ('en', 'nl')

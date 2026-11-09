@@ -1,0 +1,22 @@
+{
+  "code": "olipic1",
+  "name": {
+    "en": "Olivaceous Piculet",
+    "nl": "Groenrugdwergspecht"
+  },
+  "latin": "Picumnus olivaceus",
+  "look_for": [
+    {
+      "en": "Tiny woodpecker with a short **tail**",
+      "nl": "Piepklein spechtje met een korte **staart**"
+    },
+    {
+      "en": "Black **crown** with white spots, male red at front",
+      "nl": "Zwarte **kruin** met witte stippen, man voorop rood"
+    },
+    {
+      "en": "Olive-brown **back**, streaky yellowish **belly**",
+      "nl": "Olijfbruine **rug**, gestreepte geelachtige **buik**"
+    }
+  ]
+}

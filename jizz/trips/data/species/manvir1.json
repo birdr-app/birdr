@@ -1,0 +1,22 @@
+{
+  "code": "manvir1",
+  "name": {
+    "en": "Mangrove Vireo",
+    "nl": "Mangrovevireo"
+  },
+  "latin": "Vireo pallens",
+  "look_for": [
+    {
+      "en": "Small, drab vireo of mangroves and dry scrub",
+      "nl": "Kleine, doffe vireo van mangroven en droog struikgewas"
+    },
+    {
+      "en": "Two pale **wingbars** on dark wings",
+      "nl": "Twee lichte **vleugelstrepen** op donkere vleugels"
+    },
+    {
+      "en": "Buffy stripe over the **lores**, pale eye",
+      "nl": "Okerkleurige streep boven de **teugel**, licht oog"
+    }
+  ]
+}

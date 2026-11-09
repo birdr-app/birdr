@@ -1,0 +1,22 @@
+{
+  "code": "bncfly",
+  "name": {
+    "en": "Brown-crested Flycatcher",
+    "nl": "Bruinkoptiran"
+  },
+  "latin": "Myiarchus tyrannulus",
+  "look_for": [
+    {
+      "en": "Large flycatcher with a bushy brown **crest**",
+      "nl": "Grote tiran met een borstelige bruine **kuif**"
+    },
+    {
+      "en": "Grey **throat** and **breast**, bright yellow **belly**",
+      "nl": "Grijze **keel** en **borst**, felgele **buik**"
+    },
+    {
+      "en": "Rufous edges in the **wings** and **tail**",
+      "nl": "Roestbruine randen in **vleugels** en **staart**"
+    }
+  ]
+}

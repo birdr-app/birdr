@@ -1,0 +1,22 @@
+{
+  "code": "gryhaw2",
+  "name": {
+    "en": "Grey Hawk",
+    "nl": "Grijze buizerd"
+  },
+  "latin": "Buteo plagiatus",
+  "look_for": [
+    {
+      "en": "Pale grey buzzard with yellow **legs**",
+      "nl": "Lichtgrijze buizerd met gele **poten**"
+    },
+    {
+      "en": "Fine grey bars on the **underparts**",
+      "nl": "Fijne grijze bandjes op de **onderkant**"
+    },
+    {
+      "en": "Black **tail** with two white bands",
+      "nl": "Zwarte **staart** met twee witte banden"
+    }
+  ]
+}

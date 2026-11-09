@@ -1,0 +1,22 @@
+{
+  "code": "coffal1",
+  "name": {
+    "en": "Collared Forest-Falcon",
+    "nl": "Grote bosvalk"
+  },
+  "latin": "Micrastur semitorquatus",
+  "look_for": [
+    {
+      "en": "Large forest falcon with short wings, long **tail**",
+      "nl": "Grote bosvalk met korte vleugels en een lange **staart**"
+    },
+    {
+      "en": "Black above, pale below, pale **collar** round the nape",
+      "nl": "Zwart van boven, licht van onder, lichte **halsband** in nek"
+    },
+    {
+      "en": "Black **crescent** on the cheek, white tail bars",
+      "nl": "Zwarte **halvemaan** op de wang, witte staartbandjes"
+    }
+  ]
+}

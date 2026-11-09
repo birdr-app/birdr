@@ -1,0 +1,22 @@
+{
+  "code": "yetvir",
+  "name": {
+    "en": "Yellow-throated Vireo",
+    "nl": "Geelborstvireo"
+  },
+  "latin": "Vireo flavifrons",
+  "look_for": [
+    {
+      "en": "Bright yellow **throat** and breast, white belly",
+      "nl": "Felgele **keel** en borst, witte buik"
+    },
+    {
+      "en": "Yellow **spectacles** around the eye",
+      "nl": "Gele **bril** rond het oog"
+    },
+    {
+      "en": "Olive head, grey rump, two white **wingbars**",
+      "nl": "Olijfgroene kop, grijze stuit, twee witte **vleugelstrepen**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "orcori",
+  "name": {
+    "en": "Orchard Oriole",
+    "nl": "Tuintroepiaal"
+  },
+  "latin": "Icterus spurius",
+  "look_for": [
+    {
+      "en": "Small oriole; male black and chestnut",
+      "nl": "Kleine troepiaal; man zwart en kastanjebruin"
+    },
+    {
+      "en": "Female yellow-green with two white **wing bars**",
+      "nl": "Vrouw geelgroen met twee witte **vleugelstrepen**"
+    },
+    {
+      "en": "Young male like female, with a black **bib**",
+      "nl": "Jonge man als vrouw, met een zwart **slabbetje**"
+    }
+  ]
+}

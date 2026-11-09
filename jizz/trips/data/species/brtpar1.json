@@ -1,0 +1,22 @@
+{
+  "code": "brtpar1",
+  "name": {
+    "en": "Brown-throated Parakeet",
+    "nl": "Maïsparkiet"
+  },
+  "latin": "Eupsittula pertinax",
+  "look_for": [
+    {
+      "en": "Green parakeet with a long pointed **tail**",
+      "nl": "Groene parkiet met een lange spitse **staart**"
+    },
+    {
+      "en": "Dull olive-brown **face** and **throat**",
+      "nl": "Dof olijfbruin **gezicht** en **keel**"
+    },
+    {
+      "en": "Bluish edges to the **flight feathers**",
+      "nl": "Blauwige randen aan de **slagpennen**"
+    }
+  ]
+}

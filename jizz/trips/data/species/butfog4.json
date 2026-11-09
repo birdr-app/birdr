@@ -1,0 +1,22 @@
+{
+  "code": "butfog4",
+  "name": {
+    "en": "Chiriqui Foliage-gleaner",
+    "nl": "Chiriquibladspeurder"
+  },
+  "latin": "Automolus exsertus",
+  "look_for": [
+    {
+      "en": "Big brown foliage-gleaner with a heavy **bill**",
+      "nl": "Grote bruine bladspeurder met een zware **snavel**"
+    },
+    {
+      "en": "Bold buff **eye-ring** and buff throat",
+      "nl": "Opvallende lichtbruine **oogring** en lichtbruine keel"
+    },
+    {
+      "en": "Dark chestnut **tail**, streaky brown breast",
+      "nl": "Donker kastanjebruine **staart**, gestreepte bruine borst"
+    }
+  ]
+}

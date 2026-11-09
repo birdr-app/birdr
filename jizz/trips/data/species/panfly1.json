@@ -1,0 +1,22 @@
+{
+  "code": "panfly1",
+  "name": {
+    "en": "Panama Flycatcher",
+    "nl": "Panamese tiran"
+  },
+  "latin": "Myiarchus panamensis",
+  "look_for": [
+    {
+      "en": "Grey-olive flycatcher with a slight bushy **crest**",
+      "nl": "Grijsolijfgroene tiran met een kleine, ruige **kuif**"
+    },
+    {
+      "en": "Grey **throat** and breast, pale yellow belly",
+      "nl": "Grijze **keel** en borst, lichtgele buik"
+    },
+    {
+      "en": "Hardly any rufous in **wings** or tail",
+      "nl": "Nauwelijks roestbruin in **vleugels** of staart"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "recwoo1",
+  "name": {
+    "en": "Red-crowned Woodpecker",
+    "nl": "Roodkruinspecht"
+  },
+  "latin": "Melanerpes rubricapillus",
+  "look_for": [
+    {
+      "en": "Black-and-white barred **back** and wings",
+      "nl": "Zwartwit gebandeerde **rug** en vleugels"
+    },
+    {
+      "en": "Male red **crown** and nape; female red nape only",
+      "nl": "Man rode **kruin** en nek, vrouw alleen een rode nek"
+    },
+    {
+      "en": "Plain buff-grey **face** and breast, pale forehead",
+      "nl": "Effen grijsbeige **gezicht** en borst, licht voorhoofd"
+    }
+  ]
+}

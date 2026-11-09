@@ -1,0 +1,22 @@
+{
+  "code": "bffgle",
+  "name": {
+    "en": "Buff-fronted Foliage-gleaner",
+    "nl": "Geelkapbladspeurder"
+  },
+  "latin": "Dendroma rufa",
+  "look_for": [
+    {
+      "en": "Bright buff **forehead** running into a broad eyebrow",
+      "nl": "Fel okergeel **voorhoofd** dat overloopt in een brede wenkbrauw"
+    },
+    {
+      "en": "Ochre **throat** and breast, grey-brown crown",
+      "nl": "Okerkleurige **keel** en borst, grijsbruine kruin"
+    },
+    {
+      "en": "Rufous **wings** and a pointed rufous tail",
+      "nl": "Roestbruine **vleugels** en een spitse roestbruine staart"
+    }
+  ]
+}

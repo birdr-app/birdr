@@ -1,0 +1,22 @@
+{
+  "code": "semsan",
+  "name": {
+    "en": "Semipalmated Sandpiper",
+    "nl": "Grijze strandloper"
+  },
+  "latin": "Calidris pusilla",
+  "look_for": [
+    {
+      "en": "Tiny grey-brown wader with black **legs**",
+      "nl": "Piepkleine grijsbruine strandloper met zwarte **poten**"
+    },
+    {
+      "en": "Short, straight **bill** with a blunt tip",
+      "nl": "Korte, rechte **snavel** met een stompe punt"
+    },
+    {
+      "en": "Western Sandpiper has a longer, drooping bill",
+      "nl": "Alaskastrandloper heeft een langere, hangende snavel"
+    }
+  ]
+}

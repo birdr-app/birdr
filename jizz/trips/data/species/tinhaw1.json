@@ -1,0 +1,22 @@
+{
+  "code": "tinhaw1",
+  "name": {
+    "en": "Tiny Hawk",
+    "nl": "Amerikaanse dwergsperwer"
+  },
+  "latin": "Microspizias superciliosus",
+  "look_for": [
+    {
+      "en": "Very small hawk, about the size of a thrush",
+      "nl": "Heel klein roofvogeltje, ongeveer zo groot als een lijster"
+    },
+    {
+      "en": "Dark slate above with a blackish **crown**",
+      "nl": "Donker leigrijs van boven met een zwartachtige **kruin**"
+    },
+    {
+      "en": "White below with fine grey bars; red **eye**",
+      "nl": "Wit van onder met fijne grijze bandjes; rood **oog**"
+    }
+  ]
+}
