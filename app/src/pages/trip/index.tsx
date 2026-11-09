@@ -8,7 +8,8 @@ import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
 import { ProgressRing, TripLoading, UnitRow } from './parts';
 import { TripRequestForm } from './request';
-import { orderedUnits, useTrip, useTripLang, useTripText } from './use-trip';
+import { TripCelebration } from './celebration';
+import { orderedUnits, tripComplete, useTrip, useTripLang, useTripText } from './use-trip';
 
 /** /trips: the countries with Trip prep. */
 export function TripListPage() {
@@ -149,6 +150,9 @@ export function TripHomePage() {
     }));
     setInParent(state.regions.includes(country));
   };
+  // Plus: birds an Advanced game asks about that the trip doesn't teach yet.
+  const plusOpen = (trip.plus?.units ?? []).filter((u) => !isDone(u));
+  const plusImage = (unit: TripUnit) => trip.plus?.species[unit.species[0]]?.images[0]?.url;
   const lookalikes = trip.lookalikes ?? [];
   const lookalikesKnown = lookalikes.filter((p) => known.has(p.here)).length;
   const lookalikeImage = lookalikes.length
@@ -164,7 +168,7 @@ export function TripHomePage() {
   } else if (!isPack && lookalikes.length && !local.lookalikes_done) {
     next = { label: t('trip_next', 'Next'), title: t('trip_lookalikes_title', 'Lookalikes from home'), go: () => navigate(`/trips/${country}/lookalikes`) };
   } else {
-    const unit = units.find((u) => !isDone(u));
+    const unit = units.find((u) => !isDone(u)) ?? plusOpen[0];
     // After the country's own units: the regions the player added, in order.
     const region = added.find((r) => (regionKnown[r.country] ?? 0) < r.species_count);
     if (unit) next = { label: t('trip_next', 'Next'), title: unit.title, go: () => navigate(`/trips/${country}/units/${unit.slug}`) };
@@ -217,13 +221,16 @@ export function TripHomePage() {
                 {t('trip_continue', 'Continue')}
               </Button>
             </Box>
-          ) : (
+          ) : null}
+          {tripComplete(trip, known, knownGroups, local) ? (
+            <TripCelebration country={trip.parent || country} name={trip.parent_name || trip.name} />
+          ) : !next ? (
             <Box bg="white" borderRadius="xl" p={4} borderWidth="2px" borderColor="primary.200">
               <Text fontSize="xl" fontWeight="700" color="primary.800">
                 {t('trip_all_done', "You've done every unit. Have a great trip.")}
               </Text>
             </Box>
-          )}
+          ) : null}
 
           {isPack && inParent !== null ? (
             <Flex align="center" gap={3} bg="white" borderRadius="xl" p={3} borderWidth="1px" borderColor="primary.200">
@@ -315,6 +322,34 @@ export function TripHomePage() {
                     birds: knownUnitBirds,
                   })}
             </Button>
+          ) : null}
+          {plusOpen.length ? (
+            <>
+              <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
+                {t('trip_plus_section', 'More birds for Advanced')}
+              </Text>
+              <Text fontSize="sm" color="primary.700">
+                {t('trip_plus_hint', 'An Advanced game also asks about these birds. Learn them too, then play Advanced.')}
+              </Text>
+              {plusOpen.slice(0, 3).map((unit) => (
+                <UnitRow
+                  key={unit.slug}
+                  title={unit.title}
+                  subtitle={`${knownIn(unit)}/${unit.species.length}`}
+                  image={plusImage(unit)}
+                  known={knownIn(unit)}
+                  total={unit.species.length}
+                  done={false}
+                  highlight={next?.title === unit.title}
+                  onClick={() => navigate(`/trips/${country}/units/${unit.slug}`)}
+                />
+              ))}
+              {plusOpen.length > 3 ? (
+                <Text fontSize="sm" color="primary.700">
+                  {t('trip_plus_more', '{count, plural, one {# more unit} other {# more units}} after these.', { count: plusOpen.length - 3 })}
+                </Text>
+              ) : null}
+            </>
           ) : null}
           {regions.length ? (
             <>

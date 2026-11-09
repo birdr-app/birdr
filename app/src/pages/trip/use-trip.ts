@@ -11,6 +11,7 @@ import {
   type TripUnit,
 } from '../../api/trip';
 import AppContext from '../../core/app-context';
+import { unitKnown } from '../../core/trip-quiz';
 
 /** Text helper for the trip screens: react-intl with an English default. */
 export function useTripText() {
@@ -38,7 +39,28 @@ export function orderedUnits(trip: Trip, knownGroups: Set<string>): TripUnit[] {
 
 export function findUnit(trip: Trip, slug: string): TripUnit | undefined {
   if (slug === trip.first_day.slug) return trip.first_day;
-  return trip.units.find((u) => u.slug === slug) ?? trip.endemics.units.find((u) => u.slug === slug);
+  return (
+    trip.units.find((u) => u.slug === slug) ??
+    trip.endemics.units.find((u) => u.slug === slug) ??
+    trip.plus?.units.find((u) => u.slug === slug)
+  );
+}
+
+/** Every part of the trip is done: families, first day, lookalikes, all units and the Plus units (a region pack only has units). */
+export function tripComplete(trip: Trip, known: Set<string>, knownGroups: Set<string>, local: TripLocalState): boolean {
+  const done = new Set(local.units_done);
+  const isDone = (unit: TripUnit) => done.has(unit.slug) || unitKnown(unit.species, known);
+  if (!trip.parent) {
+    if (!(local.families_done || trip.groups.every((g) => knownGroups.has(g.slug)))) return false;
+    if (!isDone(trip.first_day)) return false;
+    if ((trip.lookalikes ?? []).length && !local.lookalikes_done) return false;
+  }
+  return [...trip.units, ...(trip.plus?.units ?? [])].every(isDone);
+}
+
+/** The trip with the Plus birds among its species, for the unit screens (cards and quiz). */
+export function withPlus(trip: Trip): Trip {
+  return trip.plus?.units.length ? { ...trip, species: { ...trip.species, ...trip.plus.species } } : trip;
 }
 
 export type TripData = {

@@ -7,7 +7,8 @@ import { Kicker, TripLoading, TripRing, UnitRow, tripStyles } from '../component
 import { useRegionKnown, useTrip } from '../hooks/useTrip';
 import { useTranslation } from '../i18n/TranslationContext';
 import { leagueFlag } from '../lib/league';
-import { orderedUnits } from '../lib/tripQuiz';
+import { orderedUnits, tripComplete } from '../lib/tripQuiz';
+import { TripCelebration } from '../components/TripCelebration';
 import { colors } from '../theme';
 
 export type TripRoutes = {
@@ -42,6 +43,7 @@ export function TripHomeScreen() {
   const endemicCodes = codes.filter((c) => trip.species[c].endemic);
   const endemicsKnown = endemicCodes.filter((c) => known.has(c)).length;
   const done = new Set(local.units_done);
+  const familiesDone = local.families_done || trip.groups.every((g) => knownGroups.has(g.slug));
   const units = orderedUnits(trip, knownGroups);
   const unitImage = (unit: TripUnit) => trip.species[unit.species[0]]?.images[0]?.url;
   const knownIn = (unit: TripUnit) => unit.species.filter((c) => known.has(c)).length;
@@ -62,16 +64,19 @@ export function TripHomeScreen() {
       setInParent(s.regions.includes(country))
     );
   };
+  // Plus: birds an Advanced game asks about that the trip doesn't teach yet.
+  const plusOpen = (trip.plus?.units ?? []).filter((u) => !done.has(u.slug));
+  const plusImage = (unit: TripUnit) => trip.plus?.species[unit.species[0]]?.images[0]?.url;
   const openUnit = (slug: string) => navigation.navigate('TripUnit', { country, slug });
 
   // What to do next: the families, then the first day, then the next unit.
   let next: { label: string; title: string; go: () => void } | null = null;
-  if (!isPack && !local.families_done) {
+  if (!isPack && !familiesDone) {
     next = { label: t('trip_start_here'), title: t('trip_families_title'), go: () => navigation.navigate('TripFamilies', { country }) };
   } else if (!isPack && !done.has(trip.first_day.slug)) {
     next = { label: t('trip_next'), title: trip.first_day.title, go: () => openUnit(trip.first_day.slug) };
   } else {
-    const unit = units.find((u) => !done.has(u.slug));
+    const unit = units.find((u) => !done.has(u.slug)) ?? plusOpen[0];
     // After the country's own units: the regions the player added, in order.
     const region = added.find((r) => (regionKnown[r.country] ?? 0) < r.species_count);
     if (unit) next = { label: t('trip_next'), title: unit.title, go: () => openUnit(unit.slug) };
@@ -106,11 +111,14 @@ export function TripHomeScreen() {
             <Text style={tripStyles.primaryButtonText}>{t('trip_continue')}</Text>
           </TouchableOpacity>
         </View>
-      ) : (
+      ) : null}
+      {tripComplete(trip, local, knownGroups) ? (
+        <TripCelebration country={trip.parent || country} name={trip.parent_name || trip.name} />
+      ) : !next ? (
         <View style={[tripStyles.card, tripStyles.cardStrong]}>
           <Text style={styles.nextTitle}>{t('trip_all_done')}</Text>
         </View>
-      )}
+      ) : null}
 
       {isPack && inParent !== null ? (
         <View style={[tripStyles.card, styles.addRow]}>
@@ -141,7 +149,7 @@ export function TripHomeScreen() {
         image={trip.species[trip.groups[0]?.species[0]]?.images[0]?.url}
         known={trip.groups.filter((g) => knownGroups.has(g.slug)).length}
         total={trip.groups.length}
-        done={local.families_done}
+        done={familiesDone}
         onPress={() => navigation.navigate('TripFamilies', { country })}
         testID="trip.families"
       /> : null}
@@ -185,6 +193,27 @@ export function TripHomeScreen() {
           testID={`trip.unit.${unit.slug}`}
         />
       ))}
+      {plusOpen.length ? (
+        <>
+          <Text style={tripStyles.sectionTitle}>{t('trip_plus_section')}</Text>
+          <Text style={tripStyles.small}>{t('trip_plus_hint')}</Text>
+          {plusOpen.slice(0, 3).map((unit) => (
+            <UnitRow
+              key={unit.slug}
+              title={unit.title}
+              subtitle={`${knownIn(unit)}/${unit.species.length}`}
+              image={plusImage(unit)}
+              known={knownIn(unit)}
+              total={unit.species.length}
+              done={false}
+              highlight={next?.title === unit.title}
+              onPress={() => openUnit(unit.slug)}
+              testID={`trip.unit.${unit.slug}`}
+            />
+          ))}
+          {plusOpen.length > 3 ? <Text style={tripStyles.small}>{t('trip_plus_more', { count: plusOpen.length - 3 })}</Text> : null}
+        </>
+      ) : null}
       {regions.length ? (
         <>
           <Text style={tripStyles.sectionTitle}>{t('trip_regions_section')}</Text>

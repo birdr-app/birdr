@@ -10,7 +10,7 @@ import {
   Alert,
   FlatList,
 } from 'react-native';
-import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 import { useGame } from '../context/GameContext';
 import { useGameWebSocket } from '../context/GameWebSocketContext';
 import { useAuth } from '../context/AuthContext';
@@ -74,6 +74,8 @@ const MEDIA = [
 
 export function StartScreen() {
   const navigation = useNavigation();
+  // A link can preset country and level (e.g. after Trip prep).
+  const preset = (useRoute().params ?? {}) as { country?: string; level?: PlayLevel };
   const { t, locale } = useTranslation();
   const { isAuthenticated } = useAuth();
   const { profile, ready: profileReady, refreshProfile } = useProfile();
@@ -243,6 +245,14 @@ export function StartScreen() {
   }, [isAuthenticated, profile, country?.code, language]);
 
   useEffect(() => {
+    if (!preset.country || !countriesLoaded) return;
+    const c = matchCountry(countries, preset.country);
+    if (c) setCountry(c);
+    if (preset.level) setPlayLevel(preset.level);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [preset.country, preset.level, countriesLoaded, countries]);
+
+  useEffect(() => {
     if (!differsFromProfile) setSaveToProfile(false);
   }, [differsFromProfile]);
 
@@ -254,7 +264,7 @@ export function StartScreen() {
         return;
       }
 
-      if (profile.country_code) {
+      if (profile.country_code && !preset.country) {
         const c = countries.find((x) => x.code === profile.country_code);
         if (c) setCountry(c);
       }

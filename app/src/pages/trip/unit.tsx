@@ -7,9 +7,10 @@ import { buildUnitQuiz, focusCodes, makeQuestion, remaining, type TripQuestion }
 import { Page } from '../../shared/components/layout';
 import { BoldText, Kicker, StepBar } from '../course/parts';
 import { EndemicBadge, TripLoading, TripPhoto, TripThumb, credit } from './parts';
-import { findUnit, useTrip, useTripText, type TripData } from './use-trip';
+import { TripCelebration } from './celebration';
+import { findUnit, tripComplete, useTrip, withPlus, useTripText, type TripData } from './use-trip';
 
-type Step = { kind: 'intro' } | { kind: 'card'; index: number } | { kind: 'quiz' } | { kind: 'done'; asked: number; wrong: number; saved: boolean | null };
+type Step = { kind: 'intro' } | { kind: 'card'; index: number } | { kind: 'quiz' } | { kind: 'done'; asked: number; wrong: number; saved: boolean | null; celebrate: boolean };
 
 /** /trips/:country/units/:slug: introduction, one card per bird, the quiz, the result. */
 export function TripUnitPage() {
@@ -20,7 +21,7 @@ export function TripUnitPage() {
   if (!trip) return <TripLoading error={error} onRetry={reload} />;
   const unit = findUnit(trip, slug);
   if (!unit) return <TripLoading error onRetry={reload} />;
-  return <UnitFlow key={unit.slug} trip={trip} unit={unit} data={data} />;
+  return <UnitFlow key={unit.slug} trip={withPlus(trip)} unit={unit} data={data} />;
 }
 
 function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: TripData }) {
@@ -53,7 +54,12 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
       shaky: Array.from(new Set([...s.shaky.filter((c) => !rightCodes.includes(c) || wrongCodes.includes(c)), ...wrongCodes])),
     }));
     data.setLocal(local);
-    go({ kind: 'done', asked: answers.length, wrong: wrongCodes.length, saved: null });
+    // The trip is finished by this unit: celebrate, then offer the regular game.
+    const knownNow = new Set(Array.from(data.known).concat(rightCodes));
+    const groupsNow = new Set(data.knownGroups);
+    knownNow.forEach((code) => trip.species[code] && groupsNow.add(trip.species[code].group));
+    const celebrate = !tripComplete(trip, data.known, data.knownGroups, data.local) && tripComplete(trip, knownNow, groupsNow, local);
+    go({ kind: 'done', asked: answers.length, wrong: wrongCodes.length, saved: null, celebrate });
     const progress = await postTripAnswers(trip.country, answers);
     if (progress) data.setProgress(progress);
     setStep((s) => (s.kind === 'done' ? { ...s, saved: !!progress } : s));
@@ -92,7 +98,8 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
             />
           ) : null}
           {step.kind === 'quiz' ? <Quiz trip={trip} unit={unit} targets={focus} learned={learnedCodes(trip, data)} onDone={finish} /> : null}
-          {step.kind === 'done' ? (
+          {step.kind === 'done' && step.celebrate ? <TripCelebration country={trip.parent || trip.country} name={trip.parent_name || trip.name} onBack={back} /> : null}
+          {step.kind === 'done' && !step.celebrate ? (
             <Flex direction="column" gap={3}>
               <Flex align="center" gap={4}>
                 <BirdrArtImage filename="birdr-success.png" alt="" width="110px" height="110px" objectFit="contain" bg="transparent" flexShrink={0} />
@@ -129,7 +136,7 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
 /** Birds from units already done: the source of review questions and extra wrong answers. */
 function learnedCodes(trip: Trip, data: TripData): string[] {
   const done = new Set(data.local.units_done);
-  const all = [trip.first_day, ...trip.units, ...trip.endemics.units];
+  const all = [trip.first_day, ...trip.units, ...trip.endemics.units, ...(trip.plus?.units ?? [])];
   return Array.from(new Set(all.filter((u) => done.has(u.slug)).flatMap((u) => u.species)));
 }
 
@@ -235,14 +242,18 @@ function Card({
           {group ? ` · ${group.name}` : ''}
         </Text>
       </Box>
-      <Kicker>{t('trip_look_for', 'Look for')}</Kicker>
-      <Box as="ul" pl={5} m={0} listStyleType="disc">
-        {bird.look_for.map((line, i) => (
-          <Box as="li" key={i} mb={1}>
-            <BoldText text={line} color="primary.800" />
+      {bird.look_for.length ? (
+        <>
+          <Kicker>{t('trip_look_for', 'Look for')}</Kicker>
+          <Box as="ul" pl={5} m={0} listStyleType="disc">
+            {bird.look_for.map((line, i) => (
+              <Box as="li" key={i} mb={1}>
+                <BoldText text={line} color="primary.800" />
+              </Box>
+            ))}
           </Box>
-        ))}
-      </Box>
+        </>
+      ) : null}
       {bird.here ? (
         <Box bg="primary.100" borderRadius="lg" p={3}>
           <Text fontSize="sm" color="primary.800">

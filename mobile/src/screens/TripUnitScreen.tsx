@@ -5,6 +5,7 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { postTripAnswers, updateTripState, type Trip, type TripAnswer, type TripSpecies, type TripUnit } from '../api/trip';
 import { BoldText, StepBar } from '../components/CourseParts';
 import { GameArtImage } from '../components/GameArtImage';
+import { TripCelebration } from '../components/TripCelebration';
 import { EndemicBadge, Kicker, TripLoading, TripPhoto, TripThumb, tripStyles } from '../components/TripParts';
 import { getMoodImage } from '../constants/birdrMoodImages';
 import { useVisualStyle } from '../context/VisualStyleContext';
@@ -18,6 +19,8 @@ import {
   hasNextQuestion,
   learnedCodes,
   makeQuestion,
+  tripComplete,
+  withPlus,
   remaining,
   type TripQuestion,
 } from '../lib/tripQuiz';
@@ -28,7 +31,7 @@ type Step =
   | { kind: 'intro' }
   | { kind: 'card'; index: number }
   | { kind: 'quiz'; round: number }
-  | { kind: 'done'; asked: number; wrong: number; saved: boolean | null };
+  | { kind: 'done'; asked: number; wrong: number; saved: boolean | null; celebrate: boolean };
 
 /** One unit: introduction, one card per bird, the quiz, the result. */
 export function TripUnitScreen() {
@@ -39,7 +42,7 @@ export function TripUnitScreen() {
   if (!trip) return <TripLoading error={error} onRetry={reload} />;
   const unit = findUnit(trip, route.params.slug);
   if (!unit) return <TripLoading error onRetry={reload} />;
-  return <UnitFlow key={unit.slug} trip={trip} unit={unit} data={data} />;
+  return <UnitFlow key={unit.slug} trip={withPlus(trip)} unit={unit} data={data} />;
 }
 
 function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: TripData }) {
@@ -61,8 +64,11 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
   const stepIndex = step.kind === 'intro' ? 0 : step.kind === 'card' ? step.index + 1 : birds.length + 1;
 
   const finish = async (answers: TripAnswer[], rightCodes: string[], wrongCodes: string[]) => {
-    go({ kind: 'done', asked: answers.length, wrong: wrongCodes.length, saved: null });
-    data.setLocal(await updateTripState(trip.country, (s) => finishUnit(s, unit, rightCodes, wrongCodes)));
+    const before = tripComplete(trip, data.local, data.knownGroups);
+    const local = await updateTripState(trip.country, (s) => finishUnit(s, unit, rightCodes, wrongCodes));
+    // This unit finished the trip: celebrate, then offer the regular game.
+    go({ kind: 'done', asked: answers.length, wrong: wrongCodes.length, saved: null, celebrate: !before && tripComplete(trip, local, data.knownGroups) });
+    data.setLocal(local);
     const progress = await postTripAnswers(trip.country, answers);
     if (progress) data.setProgress(progress);
     setStep((s) => (s.kind === 'done' ? { ...s, saved: !!progress } : s));
@@ -102,7 +108,10 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
           onNextQuestion={() => scrollRef.current?.scrollTo({ y: 0, animated: false })}
         />
       ) : null}
-      {step.kind === 'done' ? (
+      {step.kind === 'done' && step.celebrate ? (
+        <TripCelebration country={trip.parent || trip.country} name={trip.parent_name || trip.name} onBack={() => navigation.goBack()} />
+      ) : null}
+      {step.kind === 'done' && !step.celebrate ? (
         <View style={tripStyles.section}>
           <View style={tripStyles.doneHead}>
             <GameArtImage source={getMoodImage('success', visualStyle)} style={tripStyles.doneImage} resizeMode="contain" />
@@ -211,15 +220,19 @@ function Card({
           {group ? ` · ${group.name}` : ''}
         </Text>
       </View>
-      <Kicker>{t('trip_look_for')}</Kicker>
-      <View style={styles.lookList}>
-        {bird.look_for.map((line, i) => (
-          <View key={i} style={styles.lookRow}>
-            <Text style={styles.lookDot}>•</Text>
-            <BoldText text={line} style={styles.lookText} />
+      {bird.look_for.length ? (
+        <>
+          <Kicker>{t('trip_look_for')}</Kicker>
+          <View style={styles.lookList}>
+            {bird.look_for.map((line, i) => (
+              <View key={i} style={styles.lookRow}>
+                <Text style={styles.lookDot}>•</Text>
+                <BoldText text={line} style={styles.lookText} />
+              </View>
+            ))}
           </View>
-        ))}
-      </View>
+        </>
+      ) : null}
       {bird.here ? (
         <View style={tripStyles.note}>
           <Text style={tripStyles.small}>{bird.here}</Text>

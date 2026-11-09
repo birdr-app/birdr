@@ -219,7 +219,108 @@ def trip_payload(country: str, lang: str) -> dict:
         'lookalikes': lookalikes,
         'home_species': home_species,
         'regions': region_summaries(country, lang),
+        'plus': plus_payload(country, lang),
     }
+
+
+PLUS_UNIT_SIZE = 6
+PLUS_CARD_PHOTOS = 3
+
+
+def _advanced_gap(country: str, known_ids: set[int]) -> list[int]:
+    """Species ids an Advanced game for the country can ask about that the trip doesn't teach,
+    in a stable order (by bird group, then id). A region pack has none."""
+    from jizz.game_question_selection import _query_option_species_ids
+    from jizz.models import Country, Game, Species
+
+    if country != db_country(country) or not Country.objects.filter(code=country).exists():
+        return []
+    game = Game(country=Country.objects.get(code=country), level='advanced', rarity=Game.RARIT_REGULAR,
+                media='images', game_type=Game.GAME_TYPE_STANDARD)
+    missing = set(_query_option_species_ids(game)) - known_ids
+    rows = Species.objects.filter(id__in=missing).values_list('id', 'species_group__slug')
+    return [sid for sid, _ in sorted(rows, key=lambda r: (r[1] or '~', r[0]))]
+
+
+def trip_species_ids(country: str) -> set[int]:
+    files = _files(country)
+    return {entry.get('species_id') for entry in files['media'].values() if entry.get('species_id')}
+
+
+def plus_payload(country: str, lang: str) -> dict:
+    """The "Plus" units: birds an Advanced game can ask about that the trip itself doesn't teach.
+    Built from the database (names, photos); no hand-written texts, so cards have no look-for lines."""
+    from django.db.models import Exists, OuterRef, Q
+
+    from jizz.models import Species
+    from media.models import Media, MediaReview
+
+    ids = _advanced_gap(country, trip_species_ids(country))
+    if not ids:
+        return {'units': [], 'species': {}}
+    species = {s.id: s for s in Species.objects.filter(id__in=ids).select_related('species_group')}
+    approved = Exists(MediaReview.objects.filter(media_id=OuterRef('id'), review_type=MediaReview.APPROVED))
+    rejected = Exists(MediaReview.objects.filter(media_id=OuterRef('id'), review_type__in=MediaReview.REJECTING_TYPES))
+    photos: dict[int, list[int]] = {}
+    for media in (
+        Media.objects.filter(species_id__in=ids, type='image', hide=False)
+        .annotate(ok=approved, bad=rejected)
+        .filter(Q(ok=True) | Q(bad=False))
+        .order_by('-ok', 'id')
+        .values('id', 'species_id')
+    ):
+        photos.setdefault(media['species_id'], []).append(media['id'])
+    ids = [i for i in ids if photos.get(i)]
+    rows = _media_rows({m for i in ids for m in photos[i][:QUIZ_PHOTOS]})
+
+    def group_name(sp):
+        g = sp.species_group
+        return (g.name_nl if lang == 'nl' else g.name_en) if g else ''
+
+    out_species = {}
+    for i in ids:
+        sp = species[i]
+        shots = [rows[m] for m in photos[i][:QUIZ_PHOTOS] if m in rows]
+        out_species[sp.code] = {
+            'code': sp.code,
+            'species_id': sp.id,
+            'name': (sp.name_nl if lang == 'nl' and sp.name_nl else sp.name),
+            'latin': sp.name_latin,
+            'group': '',
+            'endemic': False,
+            'look_for': [],
+            'here': '',
+            'images': shots[:PLUS_CARD_PHOTOS],
+            'quiz_images': shots,
+        }
+
+    # Chunks of up to six birds of one group; small leftovers are pooled into mixed units.
+    chunks: list[tuple[str, list[int]]] = []
+    by_group: dict[str, list[int]] = {}
+    for i in ids:
+        by_group.setdefault(group_name(species[i]), []).append(i)
+    leftovers: list[int] = []
+    for name, members in by_group.items():
+        for start in range(0, len(members), PLUS_UNIT_SIZE):
+            part = members[start:start + PLUS_UNIT_SIZE]
+            if len(part) >= 3 and name:
+                chunks.append((name, part))
+            else:
+                leftovers += part
+    more = 'Meer vogels' if lang == 'nl' else 'More birds'
+    for start in range(0, len(leftovers), PLUS_UNIT_SIZE):
+        chunks.append((more, leftovers[start:start + PLUS_UNIT_SIZE]))
+    totals = {t: sum(1 for x, _ in chunks if x == t) for t, _ in chunks}
+    seen: dict[str, int] = {}
+    titled = []
+    for title, part in chunks:
+        seen[title] = seen.get(title, 0) + 1
+        titled.append((f'{title} {seen[title]}' if totals[title] > 1 else title, part))
+    units = [
+        {'slug': f'plus-{n}', 'title': title, 'intro': '', 'groups': [], 'species': [species[i].code for i in part]}
+        for n, (title, part) in enumerate(titled, 1)
+    ]
+    return {'units': units, 'species': out_species}
 
 
 def _lookalikes(files: dict, lang: str, picks: dict, rows: dict) -> tuple[list, dict]:
@@ -302,6 +403,7 @@ def record_answers(country: str, player, answers: list[dict]) -> int:
 
     files = _files(country)
     allowed = {entry.get('species_id') for entry in [*files['media'].values(), *files['home_media'].values()]}
+    allowed |= set(_advanced_gap(country, trip_species_ids(country)))
     rows = [a for a in answers if a.get('species_id') in allowed and a.get('answer_id')]
     if not rows:
         return 0

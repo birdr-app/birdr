@@ -126,13 +126,30 @@ export function orderedUnits(trip: Trip, knownGroups: Set<string>): TripUnit[] {
 
 export function findUnit(trip: Trip, slug: string): TripUnit | undefined {
   if (slug === trip.first_day.slug) return trip.first_day;
-  return trip.units.find((u) => u.slug === slug) ?? trip.endemics.units.find((u) => u.slug === slug);
+  return (
+    trip.units.find((u) => u.slug === slug) ??
+    trip.endemics.units.find((u) => u.slug === slug) ??
+    trip.plus?.units.find((u) => u.slug === slug)
+  );
+}
+
+/** The trip with the Plus birds among its species, for the unit screens (cards and quiz). */
+export function withPlus(trip: Trip): Trip {
+  return trip.plus?.units.length ? { ...trip, species: { ...trip.species, ...trip.plus.species } } : trip;
+}
+
+/** Every part of the trip is done: families, first day, all units and the Plus units (a pack only has units). */
+export function tripComplete(trip: Trip, local: TripLocalState, knownGroups: Set<string>): boolean {
+  const done = new Set(local.units_done);
+  const familiesDone = local.families_done || trip.groups.every((g) => knownGroups.has(g.slug));
+  if (!trip.parent && !(familiesDone && done.has(trip.first_day.slug))) return false;
+  return [...trip.units, ...(trip.plus?.units ?? [])].every((u) => done.has(u.slug));
 }
 
 /** Birds from units already done: the source of review questions and extra wrong answers. */
 export function learnedCodes(trip: Trip, unitsDone: string[]): string[] {
   const done = new Set(unitsDone);
-  const all = [trip.first_day, ...trip.units, ...trip.endemics.units];
+  const all = [trip.first_day, ...trip.units, ...trip.endemics.units, ...(trip.plus?.units ?? [])];
   return Array.from(new Set(all.filter((u) => done.has(u.slug)).flatMap((u) => u.species)));
 }
 

@@ -90,6 +90,8 @@ export type Trip = TripSummary & {
   home_species?: Record<string, TripHomeSpecies>;
   /** Region packs of this country; empty on a pack itself. */
   regions?: TripRegion[];
+  /** Birds an Advanced game can ask about that the trip doesn't teach: units built from the database. */
+  plus?: { units: TripUnit[]; species: Record<string, TripSpecies> };
 };
 
 export type TripProgress = {
