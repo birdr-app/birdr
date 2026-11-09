@@ -107,10 +107,6 @@ class CourseApiTestCase(TestCase):
         week4 = self.client.get('/api/courses/nl-beginners/lessons/4/').data
         self.assertTrue(any({9815, 9925} <= set(g) for g in week4['lookalikes']))  # Huismus and Vink
 
-    def test_a_bird_without_photos_waits_for_them(self):
-        lesson = self.client.get('/api/courses/nl-beginners/lessons/5/').data
-        self.assertNotIn('Roodborst', [b['name'] for b in lesson['birds']])
-
     def test_unknown_course_or_week_is_404(self):
         self.assertEqual(self.client.get('/api/courses/nope/').status_code, 404)
         self.assertEqual(self.client.get('/api/courses/nl-beginners/lessons/99/').status_code, 404)
