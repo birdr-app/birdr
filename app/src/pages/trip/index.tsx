@@ -8,6 +8,7 @@ import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
 import { ProgressRing, TripLoading, UnitRow } from './parts';
 import { TripRequestForm } from './request';
+import { TripStory } from './story';
 import { UnderConstruction } from '../../components/under-construction';
 import { TripCelebration } from './celebration';
 import { orderedUnits, tripComplete, useTrip, useTripLang, useTripText } from './use-trip';
@@ -249,6 +250,7 @@ export function TripHomePage() {
           ) : null}
 
           {trip.intro ? <Text color="primary.800">{trip.intro}</Text> : null}
+          <TripStory trip={trip} />
           <UnderConstruction feature="Trip prep" lang={lang} />
 
           {!isPack ? (

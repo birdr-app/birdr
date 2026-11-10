@@ -220,10 +220,22 @@ def trip_payload(country: str, lang: str) -> dict:
         'home_species': home_species,
         'regions': region_summaries(country, lang),
         'plus': plus_payload(country, lang),
+        'counts': counts_payload(country, len(codes)),
     }
 
 
 PLUS_UNIT_SIZE = 6
+
+
+def counts_payload(country: str, trip_count: int) -> dict:
+    """The numbers behind the country story: birds on record, birds in the prep, bonus birds.
+    A region pack tells no story of its own."""
+    from jizz.models import CountrySpecies
+
+    if country != db_country(country):
+        return {}
+    recorded = CountrySpecies.objects.filter(country_id=country).count()
+    return {'recorded': recorded, 'trip': trip_count, 'plus': len(_advanced_gap(country, trip_species_ids(country)))}
 PLUS_CARD_PHOTOS = 3
 
 
