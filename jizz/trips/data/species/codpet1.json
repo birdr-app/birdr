@@ -1,0 +1,22 @@
+{
+  "code": "codpet1",
+  "name": {
+    "en": "Common Diving-Petrel",
+    "nl": "Alkstormvogeltje"
+  },
+  "latin": "Pelecanoides urinatrix",
+  "look_for": [
+    {
+      "en": "Small, auk-like, black above and white below",
+      "nl": "Klein en alkachtig, zwart boven en wit onder"
+    },
+    {
+      "en": "Whirring flight",
+      "nl": "Snorrende vlucht"
+    },
+    {
+      "en": "Skims over wave tops",
+      "nl": "Scheert over golftoppen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "saddle2",
+  "name": {
+    "en": "North Island Saddleback",
+    "nl": "Noordelijke zadelrug"
+  },
+  "latin": "Philesturnus rufusater",
+  "look_for": [
+    {
+      "en": "Black with a **chestnut saddle**",
+      "nl": "Zwart met een **kastanjebruin zadel**"
+    },
+    {
+      "en": "Orange-red **wattles**",
+      "nl": "Oranjerode **lellen**"
+    },
+    {
+      "en": "Hops on the forest floor",
+      "nl": "Springt over de bosbodem"
+    }
+  ]
+}

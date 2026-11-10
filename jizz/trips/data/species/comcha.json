@@ -1,0 +1,22 @@
+{
+  "code": "comcha",
+  "name": {
+    "en": "Common Chaffinch",
+    "nl": "Vink"
+  },
+  "latin": "Fringilla coelebs",
+  "look_for": [
+    {
+      "en": "Pink breast, blue-grey cap",
+      "nl": "Roze borst en blauwgrijze kruin"
+    },
+    {
+      "en": "Two white bars on the wing",
+      "nl": "Twee witte vleugelbanden"
+    },
+    {
+      "en": "White outer tail feathers",
+      "nl": "Witte buitenste staartpennen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "fernbi1",
+  "name": {
+    "en": "New Zealand Fernbird",
+    "nl": "Varenvogel"
+  },
+  "latin": "Poodytes punctatus",
+  "look_for": [
+    {
+      "en": "Streaked brown with a long, ragged tail",
+      "nl": "Gestreept bruin met een lange, rafelige staart"
+    },
+    {
+      "en": "Skulks in low swamp vegetation",
+      "nl": "Verscholen in lage moerasvegetatie"
+    },
+    {
+      "en": "Whistles a two-note 'u-tick'",
+      "nl": "Fluit een tweetonig 'u-tick'"
+    }
+  ]
+}

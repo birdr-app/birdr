@@ -1,0 +1,22 @@
+{
+  "code": "cangoo",
+  "name": {
+    "en": "Canada Goose",
+    "nl": "Grote Canadese gans"
+  },
+  "latin": "Branta canadensis",
+  "look_for": [
+    {
+      "en": "Black neck, white chin strap",
+      "nl": "Zwarte hals met witte kinband"
+    },
+    {
+      "en": "Brown body, pale breast",
+      "nl": "Bruin lijf, lichte borst"
+    },
+    {
+      "en": "Big, loud and in flocks on grass",
+      "nl": "Groot, luidruchtig en in groepen op gras"
+    }
+  ]
+}

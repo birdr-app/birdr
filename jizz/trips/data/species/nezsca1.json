@@ -1,0 +1,22 @@
+{
+  "code": "nezsca1",
+  "name": {
+    "en": "New Zealand Scaup",
+    "nl": "Nieuw-Zeelandse topper"
+  },
+  "latin": "Aythya novaeseelandiae",
+  "look_for": [
+    {
+      "en": "Small, dumpy diving duck",
+      "nl": "Kleine, gedrongen duikeend"
+    },
+    {
+      "en": "Male black with a bright yellow eye",
+      "nl": "Mannetje zwart met een felgele iris"
+    },
+    {
+      "en": "Female brown with white at **bill** base",
+      "nl": "Vrouwtje bruin met wit bij de **snavelbasis**"
+    }
+  ]
+}

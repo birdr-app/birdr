@@ -1,0 +1,22 @@
+{
+  "code": "maslap1",
+  "name": {
+    "en": "Masked Lapwing",
+    "nl": "Maskerkievit"
+  },
+  "latin": "Vanellus miles",
+  "look_for": [
+    {
+      "en": "Yellow facial **wattles**",
+      "nl": "Gele **lellen** in het gezicht"
+    },
+    {
+      "en": "Brown back, white front, black cap",
+      "nl": "Bruine rug, witte voorkant, zwarte kap"
+    },
+    {
+      "en": "Noisy, nests on the ground",
+      "nl": "Luidruchtig, broedt op de grond"
+    }
+  ]
+}

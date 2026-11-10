@@ -1,0 +1,22 @@
+{
+  "code": "faipri1",
+  "name": {
+    "en": "Fairy Prion",
+    "nl": "Duifprion"
+  },
+  "latin": "Pachyptila turtur",
+  "look_for": [
+    {
+      "en": "Small blue-grey petrel",
+      "nl": "Kleine blauwgrijze stormvogel"
+    },
+    {
+      "en": "Blue back with a dark M across the wings",
+      "nl": "Blauwe rug met een donkere M over de vleugels"
+    },
+    {
+      "en": "White below, short **bill**",
+      "nl": "Wit onder, korte **snavel**"
+    }
+  ]
+}

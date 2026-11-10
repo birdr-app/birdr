@@ -1,0 +1,22 @@
+{
+  "code": "wfspet",
+  "name": {
+    "en": "White-faced Storm-Petrel",
+    "nl": "Bont stormvogeltje"
+  },
+  "latin": "Pelagodroma marina",
+  "look_for": [
+    {
+      "en": "Tiny, pale-rumped, long legs",
+      "nl": "Piepklein met een lichte stuit en lange poten"
+    },
+    {
+      "en": "White face with a dark eye-patch",
+      "nl": "Wit gezicht met een donkere oogstreep"
+    },
+    {
+      "en": "Dances over the water on tiptoe",
+      "nl": "Danst op tenen over het water"
+    }
+  ]
+}

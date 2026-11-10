@@ -1,0 +1,22 @@
+{
+  "code": "ausgan1",
+  "name": {
+    "en": "Australasian Gannet",
+    "nl": "Pacifische jan-van-gent"
+  },
+  "latin": "Morus serrator",
+  "look_for": [
+    {
+      "en": "White gannet with a golden-yellow **crown**",
+      "nl": "Witte jan-van-gent met een goudgele **kruin**"
+    },
+    {
+      "en": "Black wing tips",
+      "nl": "Zwarte vleugelpunten"
+    },
+    {
+      "en": "Plunges at an angle",
+      "nl": "Duikt schuin in het water"
+    }
+  ]
+}

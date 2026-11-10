@@ -1,0 +1,22 @@
+{
+  "code": "angpet1",
+  "name": {
+    "en": "Southern Giant-Petrel",
+    "nl": "Zuidelijke reuzenstormvogel"
+  },
+  "latin": "Macronectes giganteus",
+  "look_for": [
+    {
+      "en": "Huge, heavy-bodied giant petrel",
+      "nl": "Zeer grote, zware reuzenstormvogel"
+    },
+    {
+      "en": "Pale **bill** with a green tip",
+      "nl": "Lichte **snavel** met een groene punt"
+    },
+    {
+      "en": "Follows ships and scavenges",
+      "nl": "Volgt schepen en eet aas"
+    }
+  ]
+}

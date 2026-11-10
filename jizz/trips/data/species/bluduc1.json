@@ -1,0 +1,22 @@
+{
+  "code": "bluduc1",
+  "name": {
+    "en": "Blue Duck",
+    "nl": "Blauwe eend"
+  },
+  "latin": "Hymenolaimus malacorhynchos",
+  "look_for": [
+    {
+      "en": "Slate-blue, with chestnut spots on the chest",
+      "nl": "Leiblauw met kastanjebruine vlekken op de borst"
+    },
+    {
+      "en": "Pale, soft-looking **bill** with a fleshy tip",
+      "nl": "Lichte, zachte **snavel** met een vlezige punt"
+    },
+    {
+      "en": "Stands on rocks in fast mountain rivers",
+      "nl": "Staat op rotsen in snelstromende bergrivieren"
+    }
+  ]
+}

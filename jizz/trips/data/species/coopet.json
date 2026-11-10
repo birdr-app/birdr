@@ -1,0 +1,22 @@
+{
+  "code": "coopet",
+  "name": {
+    "en": "Cook's Petrel",
+    "nl": "Cookstormvogel"
+  },
+  "latin": "Pterodroma cookii",
+  "look_for": [
+    {
+      "en": "Small, grey-white petrel",
+      "nl": "Kleine grijswitte stormvogel"
+    },
+    {
+      "en": "Dark M across the wings",
+      "nl": "Donkere M over de vleugels"
+    },
+    {
+      "en": "Steep rises and falls in flight",
+      "nl": "Stijgt en daalt steil in vlucht"
+    }
+  ]
+}

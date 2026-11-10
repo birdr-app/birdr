@@ -1,0 +1,22 @@
+{
+  "code": "silver3",
+  "name": {
+    "en": "Silvereye",
+    "nl": "Grijsrugbrilvogel"
+  },
+  "latin": "Zosterops lateralis",
+  "look_for": [
+    {
+      "en": "Green back, with a white **eye-ring**",
+      "nl": "Groene rug met een witte **oogring**"
+    },
+    {
+      "en": "Pale grey flanks and buff-brown side",
+      "nl": "Lichtgrijze zijden met bruinbeige flank"
+    },
+    {
+      "en": "Feeds in flocks in orchards and gardens",
+      "nl": "Foerageert in groepen in boomgaarden en tuinen"
+    }
+  ]
+}

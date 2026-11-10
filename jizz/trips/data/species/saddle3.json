@@ -1,0 +1,22 @@
+{
+  "code": "saddle3",
+  "name": {
+    "en": "South Island Saddleback",
+    "nl": "Zuidelijke zadelrug"
+  },
+  "latin": "Philesturnus carunculatus",
+  "look_for": [
+    {
+      "en": "Black with a chestnut saddle",
+      "nl": "Zwart met een kastanjebruin zadel"
+    },
+    {
+      "en": "Pale-edged **wattle**",
+      "nl": "Lichte rand rond de **lel**"
+    },
+    {
+      "en": "Found on Ulva Island and Stewart Island",
+      "nl": "Te zien op Ulva Island en Stewart Island"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "country": "NZ",
+  "notes": "Hand-picked: eBird Status & Trends has almost no frequencies for New Zealand, so the automatic cut fails. Kept: the endemics a visitor can realistically meet (kiwis, wattlebirds, the forest and shore birds, the penguins and shags), the common natives, the established introduced birds (Blackbird, Song Thrush, Common Myna and the rest of the European and Australian set) and the seabirds seen from the Kaikoura, Stewart Island, Hauraki Gulf and Otago Peninsula boat trips. Dropped: extinct birds (Huia, Laughing Owl) and the endemics of the Chatham, Auckland, Campbell, Bounty, Snares and Antipodes islands that need a permit or an expedition. Great Cormorant is added because it is the common Black Shag. North Island Kokako is kept, South Island Kokako is dropped.",
+  "add": [
+    "angpet1",
+    "antalb1",
+    "aussho1",
+    "batgod",
+    "bkbalb",
+    "blkswa",
+    "brbpri1",
+    "brnsku3",
+    "caster1",
+    "categr2",
+    "coopet",
+    "dobplo1",
+    "fiopen1",
+    "grcgre1",
+    "grecor",
+    "greegr",
+    "hutshe1",
+    "libcor1",
+    "litpen1",
+    "norgip1",
+    "pabduc1",
+    "parjae",
+    "pomjae",
+    "redkno",
+    "royalb2",
+    "royalb3",
+    "royspo1",
+    "rudtur",
+    "salalb1",
+    "wanalb1",
+    "wespet1",
+    "wfspet",
+    "whcpet1"
+  ],
+  "drop": [
+    "antpar1",
+    "auirai1",
+    "auisha1",
+    "auitea1",
+    "boisha1",
+    "buswre1",
+    "caisha2",
+    "caitea1",
+    "chaoys1",
+    "charob1",
+    "chiger2",
+    "chipar1",
+    "chisha1",
+    "chisni1",
+    "dovpri1",
+    "huia1",
+    "kokako4",
+    "lauowl1",
+    "lotkoe1",
+    "malpar2",
+    "nezpig3",
+    "piisha1",
+    "reipar1",
+    "rocpen1",
+    "shoplo1",
+    "snisni1",
+    "soisni1",
+    "subsni1",
+    "whhpet1"
+  ],
+  "group_overrides": {},
+  "regional_specialities": [],
+  "first_day": [
+    "eurbla",
+    "houspa",
+    "commyn",
+    "silver3",
+    "welswa1",
+    "tui1",
+    "nezfan1",
+    "purswa6",
+    "parshe1",
+    "kelgul",
+    "silgul2",
+    "whfter1",
+    "ausmag2",
+    "nezpig2",
+    "eursta",
+    "sonthr1",
+    "comcha",
+    "eurgol",
+    "mallar3",
+    "nezbel1"
+  ],
+  "lookalikes": [
+    {
+      "here": "welswa1",
+      "home": "barswa"
+    },
+    {
+      "here": "silgul2",
+      "home": "bkhgul"
+    },
+    {
+      "here": "parshe1",
+      "home": "comshe"
+    },
+    {
+      "here": "pabduc1",
+      "home": "mallar3"
+    },
+    {
+      "here": "nezsca1",
+      "home": "tufduc"
+    },
+    {
+      "here": "nezgre1",
+      "home": "litgre1"
+    },
+    {
+      "here": "royspo1",
+      "home": "eurspo1"
+    },
+    {
+      "here": "ausgan1",
+      "home": "norgan"
+    },
+    {
+      "here": "dobplo1",
+      "home": "corplo"
+    },
+    {
+      "here": "kelgul",
+      "home": "gbbgul"
+    },
+    {
+      "here": "categr2",
+      "home": "categr1"
+    },
+    {
+      "here": "piesti1",
+      "home": "bkwsti"
+    }
+  ]
+}

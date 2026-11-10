@@ -1,0 +1,22 @@
+{
+  "code": "royspo1",
+  "name": {
+    "en": "Royal Spoonbill",
+    "nl": "Koningslepelaar"
+  },
+  "latin": "Platalea regia",
+  "look_for": [
+    {
+      "en": "White, with a spatula-shaped black **bill**",
+      "nl": "Wit met een lepelvormige zwarte **snavel**"
+    },
+    {
+      "en": "Black face patch and legs",
+      "nl": "Zwart gezicht en zwarte poten"
+    },
+    {
+      "en": "Sweeps its **bill** side to side",
+      "nl": "Beweegt de **snavel** heen en weer"
+    }
+  ]
+}

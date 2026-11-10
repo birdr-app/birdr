@@ -1,0 +1,22 @@
+{
+  "code": "kakapo2",
+  "name": {
+    "en": "Kakapo",
+    "nl": "Kakapo"
+  },
+  "latin": "Strigops habroptilus",
+  "look_for": [
+    {
+      "en": "Heavy, flightless parrot with an owl-like face",
+      "nl": "Zware, vluchtloze papegaai met een uilengezicht"
+    },
+    {
+      "en": "Mossy green with black bars",
+      "nl": "Mosgroen met zwarte banden"
+    },
+    {
+      "en": "Active at night, extremely rare",
+      "nl": "'s Nachts actief, uiterst zeldzaam"
+    }
+  ]
+}

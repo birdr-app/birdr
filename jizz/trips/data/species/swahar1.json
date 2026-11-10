@@ -1,0 +1,22 @@
+{
+  "code": "swahar1",
+  "name": {
+    "en": "Swamp Harrier",
+    "nl": "Australische bruine kiekendief"
+  },
+  "latin": "Circus approximans",
+  "look_for": [
+    {
+      "en": "Big brown hawk, long wings held in a V",
+      "nl": "Grote bruine roofvogel, lange vleugels in een V"
+    },
+    {
+      "en": "Pale rump",
+      "nl": "Lichte stuit"
+    },
+    {
+      "en": "Glides low over wetlands and farmland",
+      "nl": "Glijdt laag over wetlands en landbouwgrond"
+    }
+  ]
+}

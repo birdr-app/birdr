@@ -1,0 +1,22 @@
+{
+  "code": "bulalb2",
+  "name": {
+    "en": "Buller's Albatross",
+    "nl": "Bulleralbatros"
+  },
+  "latin": "Thalassarche bulleri",
+  "look_for": [
+    {
+      "en": "Medium albatross with a yellow ridge on the **bill**",
+      "nl": "Middelgrote albatros met een gele rand op de **snavel**"
+    },
+    {
+      "en": "Grey head with a white forehead",
+      "nl": "Grijze kop met een wit voorhoofd"
+    },
+    {
+      "en": "Dark edge on the white **underwing**",
+      "nl": "Donkere rand om de witte **onderzijde van de vleugel**"
+    }
+  ]
+}

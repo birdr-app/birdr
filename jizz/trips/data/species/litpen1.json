@@ -1,0 +1,22 @@
+{
+  "code": "litpen1",
+  "name": {
+    "en": "Little Penguin",
+    "nl": "Dwergpinguïn"
+  },
+  "latin": "Eudyptula minor",
+  "look_for": [
+    {
+      "en": "Smallest penguin, slate blue-grey above",
+      "nl": "Kleinste pinguïn, leiblauwgrijs boven"
+    },
+    {
+      "en": "White below",
+      "nl": "Wit onder"
+    },
+    {
+      "en": "Comes ashore at dusk in groups",
+      "nl": "Komt in groepen aan land in de schemering"
+    }
+  ]
+}

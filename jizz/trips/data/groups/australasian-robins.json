@@ -1,0 +1,19 @@
+{
+  "slug": "australasian-robins",
+  "about": {
+    "en": "Small, round-headed insect-eaters that perch upright on low branches and drop to the ground to catch prey. Males are often more boldly coloured than females. Many are tame and approach walkers.",
+    "nl": "Kleine insecteneters met een ronde kop die rechtop op lage takken zitten en zich naar de grond laten zakken om prooi te vangen. Mannetjes zijn vaak opvallender gekleurd dan vrouwtjes. Veel soorten zijn tam en komen wandelaars tegemoet."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "old-world-flycatchers",
+        "thrushes"
+      ],
+      "text": {
+        "en": "Not a robin as you know it: no red breast, and unrelated to the European Robin. These are a separate Australasian family with a similar upright stance and habit of perching low.",
+        "nl": "Geen roodborst zoals je die kent: geen rode borst en niet verwant aan het Europese roodborstje. Dit is een aparte Australazische familie met dezelfde rechtopzittende houding en dezelfde gewoonte laag te zitten."
+      }
+    }
+  ]
+}

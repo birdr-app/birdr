@@ -1,0 +1,19 @@
+{
+  "slug": "thornbills-and-allies",
+  "about": {
+    "en": "Tiny, warbler-like birds of forest and scrub in Australasia. They flit through foliage in search of insects and often have a long, trilling song.",
+    "nl": "Piepkleine, zangerachtige vogels van bos en struikgewas in Australazië. Ze fladderen door het gebladerte op zoek naar insecten en hebben vaak een lange, trillende zang."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "leaf-warblers",
+        "reed-warblers-and-allies"
+      ],
+      "text": {
+        "en": "Not a true warbler, but it fills the same niche. Look for a tiny, active bird with a pale eye-ring that trills from the canopy.",
+        "nl": "Geen echte zanger, maar wel in dezelfde niche. Zoek een klein, druk vogeltje met een lichte oogring dat vanuit de boomkruin trilt."
+      }
+    }
+  ]
+}

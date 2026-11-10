@@ -1,0 +1,22 @@
+{
+  "code": "welswa1",
+  "name": {
+    "en": "Welcome Swallow",
+    "nl": "Welkomzwaluw"
+  },
+  "latin": "Hirundo neoxena",
+  "look_for": [
+    {
+      "en": "Steel blue above, **rufous** forehead and throat",
+      "nl": "Staalblauw boven, **roestrood** voorhoofd en keel"
+    },
+    {
+      "en": "Pale grey belly, shallow tail fork",
+      "nl": "Lichtgrijze buik, ondiep gevorkte staart"
+    },
+    {
+      "en": "Perches on wires, nests on buildings",
+      "nl": "Zit op draden, nest op gebouwen"
+    }
+  ]
+}

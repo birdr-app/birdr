@@ -1,0 +1,22 @@
+{
+  "code": "fiopen1",
+  "name": {
+    "en": "Fiordland Penguin",
+    "nl": "Fjordlandkuifpinguïn"
+  },
+  "latin": "Eudyptes pachyrhynchus",
+  "look_for": [
+    {
+      "en": "Crested penguin with broad yellow brow stripes",
+      "nl": "Kuifpinguïn met brede gele wenkbrauwstrepen"
+    },
+    {
+      "en": "Heavy orange-red **bill**",
+      "nl": "Zware oranjerode **snavel**"
+    },
+    {
+      "en": "Fiordland and Stewart Island",
+      "nl": "Fiordland en Stewart Island"
+    }
+  ]
+}

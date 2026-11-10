@@ -1,0 +1,22 @@
+{
+  "code": "ausmag2",
+  "name": {
+    "en": "Australian Magpie",
+    "nl": "Zwartrugfluitvogel"
+  },
+  "latin": "Gymnorhina tibicen",
+  "look_for": [
+    {
+      "en": "Black and white with a thick, pointed **bill**",
+      "nl": "Zwart-wit met een dikke, spitse **snavel**"
+    },
+    {
+      "en": "Male has a white nape, female grey",
+      "nl": "Mannetje met witte nek, vrouwtje grijs"
+    },
+    {
+      "en": "Walks on open grass, carolling song",
+      "nl": "Loopt over open gras, melodieus lied"
+    }
+  ]
+}

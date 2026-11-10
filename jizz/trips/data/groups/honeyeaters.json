@@ -1,0 +1,19 @@
+{
+  "slug": "honeyeaters",
+  "about": {
+    "en": "Small to medium birds with a curved bill and a brush-tipped tongue for nectar. Many are noisy and bold, and they also eat insects and fruit. They live in gardens, forest and scrub in Australasia.",
+    "nl": "Kleine tot middelgrote vogels met een gebogen snavel en een tong met borsteltje voor nectar. Veel soorten zijn luid en brutaal en eten ook insecten en vruchten. Ze leven in tuinen, bos en struikgewas in Australazië."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "hummingbirds",
+        "sunbirds-and-spiderhunters"
+      ],
+      "text": {
+        "en": "Not related to the sunbirds or hummingbirds you may know. Honeyeaters feed on nectar the same way but are bigger, clumsier and far more vocal.",
+        "nl": "Niet verwant aan de honingzuigers of kolibries die je kent. Honingeters voeden zich op dezelfde manier met nectar, maar zijn groter, minder wendbaar en veel luidruchtiger."
+      }
+    }
+  ]
+}
