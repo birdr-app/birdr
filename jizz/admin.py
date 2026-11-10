@@ -1171,6 +1171,7 @@ SPECIAL_GAME_TYPES = (
     Game.GAME_TYPE_FLOCK_CHALLENGE,
     Game.GAME_TYPE_SURVIVAL,
     Game.GAME_TYPE_LEAGUE,
+    Game.GAME_TYPE_TRIP_PREP,
 )
 
 # Filter value -> (label, game_type) for the game types that have their own label.
@@ -1181,6 +1182,7 @@ GAME_KIND_BY_TYPE = {
     'flock': ('flock', Game.GAME_TYPE_FLOCK_CHALLENGE),
     'survival': ('survival', Game.GAME_TYPE_SURVIVAL),
     'national_league': ('national league', Game.GAME_TYPE_LEAGUE),
+    'trip_prep': ('trip prep', Game.GAME_TYPE_TRIP_PREP),
 }
 
 
