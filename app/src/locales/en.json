@@ -593,7 +593,7 @@
   "survival_col_points": "Points",
   "survival_col_date": "Date",
   "league_title_country": "{country} League",
-  "league_national": "National league",
+  "league_national": "National leagues",
   "league_intro": "Every day a fresh quiz for your whole country. Same birds for everyone, points add up all week, and the best birder takes the 🏆.",
   "league_my_leagues": "My national leagues",
   "league_suggested": "Made for you",
@@ -770,7 +770,7 @@
   "flock_extra_games_show_all": "Show all finished games ({count})",
   "flock_extra_games_show_fewer": "Show fewer",
   "flock_extra_games_none_open": "No open games right now. Create a game, choose Share, and add it to this flock.",
-  "course_title": "Birds of the Netherlands",
+  "course_title": "Beginners course",
   "course_home_hint": "A beginners course: one short lesson a week",
   "no other media": "There is no other picture of this bird.",
   "no media left for question": "There is no usable picture of this bird right now.",
@@ -882,5 +882,7 @@
   "trip_how_to_tell": "How to tell them apart",
   "trip_lookalikes_quiz": "Lookalike quiz",
   "trip_lookalike_q": "Lookalike quiz · question {n} of {total}",
-  "trip_which_of_two": "Which of the two is this?"
+  "trip_which_of_two": "Which of the two is this?",
+  "game_hiscores": "Game high scores",
+  "league_players_ever_week": "{ever} players · {week} this week"
 }

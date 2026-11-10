@@ -592,7 +592,7 @@
   "survival_col_points": "Punten",
   "survival_col_date": "Datum",
   "league_title_country": "Competitie {country}",
-  "league_national": "Nationale competitie",
+  "league_national": "Nationale competities",
   "league_intro": "Elke dag een verse quiz voor je hele land. Dezelfde vogels voor iedereen, punten tellen de hele week op, en de beste vogelaar pakt de 🏆.",
   "league_my_leagues": "Mijn nationale competities",
   "league_suggested": "Speciaal voor jou",
@@ -769,7 +769,7 @@
   "flock_extra_games_show_all": "Toon alle afgelopen spellen ({count})",
   "flock_extra_games_show_fewer": "Toon minder",
   "flock_extra_games_none_open": "Er staan nu geen open spellen. Maak een spel, kies Delen en voeg het toe aan deze flock.",
-  "course_title": "Vogels van Nederland",
+  "course_title": "Cursus voor beginners",
   "course_home_hint": "Cursus voor beginners: elke week een korte les",
   "no other media": "Er is geen andere foto van deze vogel.",
   "no media left for question": "Er is op dit moment geen bruikbare foto van deze vogel.",
@@ -896,5 +896,7 @@
   "trip_how_to_tell": "Zo zie je het verschil",
   "trip_lookalikes_quiz": "Dubbelgangerquiz",
   "trip_lookalike_q": "Dubbelgangerquiz · vraag {n} van {total}",
-  "trip_which_of_two": "Welke van de twee is dit?"
+  "trip_which_of_two": "Welke van de twee is dit?",
+  "game_hiscores": "Highscores spellen",
+  "league_players_ever_week": "{ever} spelers · {week} deze week"
 }

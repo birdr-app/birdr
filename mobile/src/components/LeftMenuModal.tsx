@@ -26,18 +26,18 @@ const PANEL_WIDTH = Math.min(SCREEN_WIDTH * 0.85, 340);
  * `advanced` items only show once the player has unlocked all game modes; `locales` items only in
  * those app languages (the beginners course is written in Dutch).
  */
-const MENU_ITEMS: { route: string; labelKey: string; advanced?: boolean; locales?: string[] }[] = [
+const MENU_ITEMS: { route: string; labelKey: string; advanced?: boolean; locales?: string[]; beta?: boolean; divider?: boolean; small?: boolean }[] = [
   { route: 'Home', labelKey: 'home' },
-  { route: 'Start', labelKey: 'new_game' },
-  { route: 'Course', labelKey: 'course_title', locales: COURSE_LOCALES },
-  { route: 'TripList', labelKey: 'trip_title' },
+  { route: 'Scores', labelKey: 'game_hiscores' },
+  { route: 'Course', labelKey: 'course_title', locales: COURSE_LOCALES, beta: true },
+  { route: 'TripList', labelKey: 'trip_title', beta: true },
   { route: 'CountryChallengeLeaderboard', labelKey: 'country_leaderboard', advanced: true },
-  { route: 'League', labelKey: 'league', advanced: true },
+  { route: 'LeagueList', labelKey: 'league_national', advanced: true },
   { route: 'SurvivalScores', labelKey: 'survival_highscores', advanced: true },
-  { route: 'Updates', labelKey: 'updates' },
-  { route: 'Help', labelKey: 'community_menu' },
-  { route: 'Privacy', labelKey: 'privacy' },
-  { route: 'About', labelKey: 'about_birdr' },
+  { route: 'Updates', labelKey: 'updates', divider: true, small: true },
+  { route: 'Help', labelKey: 'community_menu', small: true },
+  { route: 'Privacy', labelKey: 'privacy', small: true },
+  { route: 'About', labelKey: 'about_birdr', small: true },
 ];
 
 export function LeftMenuModal() {
@@ -107,20 +107,25 @@ export function LeftMenuModal() {
                 const isFocused =
                   currentRoute === item.route ||
                   (item.route === 'Help' && currentRoute === 'HelpDetail') ||
-                  (item.route === 'League' && currentRoute?.startsWith('League')) ||
+                  (item.route === 'LeagueList' && currentRoute?.startsWith('League')) ||
                   (item.route === 'TripList' && currentRoute?.startsWith('Trip')) ||
                   (item.route === 'Course' && currentRoute?.startsWith('Course'));
                 const label = t(item.labelKey);
                 return (
+                  <React.Fragment key={item.route}>
+                  {item.divider ? <View style={styles.divider} /> : null}
                   <TouchableOpacity
-                    key={item.route}
-                    style={[styles.item, isFocused && styles.itemFocused]}
+                    style={[styles.item, item.small && styles.itemSmall, isFocused && styles.itemFocused]}
                     onPress={() => handleItem(item.route)}
                     accessibilityRole="button"
                     accessibilityLabel={label}
                   >
-                    <Text style={[styles.label, isFocused && styles.labelFocused]}>{label}</Text>
+                    <Text style={[styles.label, item.small && styles.labelSmall, isFocused && styles.labelFocused]}>
+                      {label}
+                      {item.beta ? <Text style={styles.beta}>{`  ${t('beta').toUpperCase()}`}</Text> : null}
+                    </Text>
                   </TouchableOpacity>
+                  </React.Fragment>
                 );
               })}
               <View style={styles.footer}>
@@ -188,10 +193,14 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     paddingHorizontal: 8,
   },
+  itemSmall: { paddingVertical: 8 },
+  labelSmall: { fontSize: 15 },
   itemFocused: {
     backgroundColor: colors.primary[100],
     borderRadius: 8,
   },
+  divider: { height: 1, backgroundColor: colors.primary[200], marginVertical: 8, marginHorizontal: 16 },
+  beta: { fontSize: 10, fontWeight: '800', letterSpacing: 0.5, color: colors.primary[700] },
   label: {
     fontSize: 18,
     color: colors.primary[800],

@@ -44,6 +44,8 @@ export type LeagueOverview = {
   memberships: LeagueMembership[];
   suggested: LeagueCountry[];
   caps: ({ country_code: string } & LeagueCaps)[];
+  /** Every country where people play a league, biggest first (older API versions omit it). */
+  active?: (LeagueCountry & { players_count: number; players_week: number })[];
 };
 
 export type LeagueRow = {

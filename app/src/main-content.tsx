@@ -72,6 +72,7 @@ import { SurvivalPlayPage } from "./pages/survival/play"
 import { SurvivalResultPage } from "./pages/survival/result"
 import { SurvivalHiscoresPage } from "./pages/survival/hiscores"
 import { LeagueIndexPage } from "./pages/league/index"
+import { LeagueMinePage } from "./pages/league/mine"
 import { LeagueHomePage } from "./pages/league/home"
 import { LeagueLeaderboardPage } from "./pages/league/leaderboard"
 import { LeagueResultPage } from "./pages/league/result"
@@ -198,6 +199,7 @@ export const MainContent = () => {
             <Route path="/survival/result" element={<SurvivalResultPage />} />
             <Route path="/survival/scores" element={<SurvivalHiscoresPage />} />
             <Route path="/league" element={<LeagueIndexPage />} />
+            <Route path="/league/mine" element={<LeagueMinePage />} />
             <Route path="/league/result" element={<LeagueResultPage />} />
             <Route path="/league/:code/leaderboard" element={<LeagueLeaderboardPage />} />
             <Route path="/league/:code" element={<LeagueHomePage />} />

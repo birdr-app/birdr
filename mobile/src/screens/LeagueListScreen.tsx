@@ -34,7 +34,7 @@ export function LeagueListScreen() {
     try {
       setOverview(await fetchLeagueOverview());
     } catch {
-      setOverview({ memberships: [], suggested: [], caps: [] });
+      setOverview({ memberships: [], suggested: [], caps: [], active: [] });
     } finally {
       setLoading(false);
     }
@@ -69,70 +69,24 @@ export function LeagueListScreen() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content} testID="league.list">
-      <Text style={styles.title}>{t('league_my_leagues')}</Text>
-
-      {memberships.length === 0 ? (
-        <Text style={styles.empty}>{isAuthenticated ? t('league_no_leagues_yet') : t('league_home_hint')}</Text>
-      ) : (
-        memberships.map((membership) => {
-          const caps = overview?.caps.find((c) => c.country_code === membership.country.code);
-          return (
-            <TouchableOpacity
-              key={membership.country.code}
-              style={styles.row}
-              onPress={() => open(membership.country.code)}
-              testID={`league.list.${membership.country.code}`}
-            >
-              <Text style={styles.flag}>{leagueFlag(membership.country.code)}</Text>
-              <View style={styles.rowText}>
-                <Text style={styles.rowTitle}>{countryName(membership.country)}</Text>
-                {membership.last_played_date ? (
-                  <Text style={styles.rowSubtitle}>
-                    {t('league_last_played', { date: formatPlayedDate(membership.last_played_date, locale) })}
-                  </Text>
-                ) : membership.last_played_date === null ? (
-                  // Only when the server says so: older API versions don't send the field at all.
-                  <Text style={styles.rowSubtitle}>{t('league_not_played_yet')}</Text>
-                ) : null}
-                {caps ? (
-                  <LeagueCapsBadge weekChampion={caps.week_champion} dailyWins={caps.daily_wins} />
-                ) : null}
-              </View>
-              <Text style={styles.chevron}>›</Text>
-            </TouchableOpacity>
-          );
-        })
-      )}
-
-      {suggested.length > 0 ? (
-        <>
-          <Text style={styles.sectionTitle}>{t('league_suggested')}</Text>
-          {suggested.map((country) => (
-            <TouchableOpacity key={country.code} style={[styles.row, styles.suggestRow]} onPress={() => open(country.code)}>
-              <Text style={styles.flag}>{leagueFlag(country.code)}</Text>
-              <View style={styles.rowText}>
-                <Text style={styles.rowTitle}>{countryName(country)}</Text>
-                <Text style={styles.rowSubtitle}>{t('league_join_cta')}</Text>
-              </View>
-              <Text style={styles.chevron}>›</Text>
-            </TouchableOpacity>
-          ))}
-        </>
-      ) : null}
-
-      <Text style={styles.sectionTitle}>{t('league_other_country')}</Text>
-      <CountryRegionSelect value={picked} countries={countries} onChange={setPicked} testID="leagues.pickCountry" />
-      <TouchableOpacity
-        style={[styles.openButton, !picked && styles.openButtonDisabled]}
-        onPress={() => {
-          if (picked) open(picked.code);
-        }}
-        disabled={!picked}
-        accessibilityRole="button"
-        testID="leagues.openPicked"
-      >
-        <Text style={styles.openButtonText}>{t('league_open_picked')}</Text>
-      </TouchableOpacity>
+      <Text style={styles.title}>{t('league_national')}</Text>
+      {(overview?.active ?? []).map((country) => (
+        <TouchableOpacity
+          key={country.code}
+          style={styles.row}
+          onPress={() => open(country.code)}
+          testID={`league.list.${country.code}`}
+        >
+          <Text style={styles.flag}>{leagueFlag(country.code)}</Text>
+          <View style={styles.rowText}>
+            <Text style={styles.rowTitle}>{getCountryDisplayName(country, locale)}</Text>
+            <Text style={styles.rowSubtitle}>
+              {t('league_players_ever_week', { ever: country.players_count, week: country.players_week })}
+            </Text>
+          </View>
+          <Text style={styles.chevron}>›</Text>
+        </TouchableOpacity>
+      ))}
     </ScrollView>
   );
 }

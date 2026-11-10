@@ -42,6 +42,8 @@ export type LeagueOverview = {
   memberships: (LeagueMembership & { country: LeagueCountry })[];
   suggested: LeagueCountry[];
   caps: LeagueCapsEntry[];
+  /** Every country where people play a league, most players first. */
+  active: (LeagueCountry & { players_count: number; players_week: number })[];
 };
 
 export type LeagueRow = {

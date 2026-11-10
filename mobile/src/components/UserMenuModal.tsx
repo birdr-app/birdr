@@ -179,7 +179,7 @@ export function UserMenuModal() {
               {isAuthenticated && (hasLeagues || showMenuExtras) && (
                 <TouchableOpacity
                   style={styles.menuItem}
-                  onPress={() => handleItem('LeagueList')}
+                  onPress={() => handleItem('LeagueMine')}
                   testID="userMenu.myLeagues"
                 >
                   <Text style={styles.menuLabel}>{t('league_my_leagues')}</Text>
@@ -204,12 +204,7 @@ export function UserMenuModal() {
               ))}
               {isAuthenticated && showMenuExtras && (
                 <TouchableOpacity style={styles.menuItem} onPress={() => handleItem('MediaReview')}>
-                  <View style={styles.menuLabelRow}>
-                    <Text style={styles.menuLabel}>{t('review_media')}</Text>
-                    <View style={styles.newBadge}>
-                      <Text style={styles.newBadgeText}>{t('menu_new')}</Text>
-                    </View>
-                  </View>
+                  <Text style={styles.menuLabel}>{t('review_media')}</Text>
                 </TouchableOpacity>
               )}
               <View style={styles.separator} />

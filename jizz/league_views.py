@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import timedelta
 
 from django.db import transaction
-from django.db.models import F
+from django.db.models import Count, F, Q
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from rest_framework import status
@@ -71,8 +71,20 @@ class LeagueOverviewView(APIView):
 
     def get(self, request):
         user = request.user
+        # Every country where people play a league, most players first.
+        week_start = league.week_start_for(timezone.now().date())
+        active = [
+            {**_country_payload(c), 'players_count': c.players_ever, 'players_week': c.players_week}
+            for c in Country.objects.annotate(
+                players_ever=Count('league_days__attempts__user', distinct=True),
+                players_week=Count(
+                    'league_days__attempts__user', distinct=True,
+                    filter=Q(league_days__date__gte=week_start),
+                ),
+            ).filter(players_ever__gt=0).order_by('-players_ever', '-players_week', 'name')
+        ]
         if not user.is_authenticated:
-            return Response({'memberships': [], 'suggested': [], 'caps': []})
+            return Response({'memberships': [], 'suggested': [], 'caps': [], 'active': active})
         # Most recently played first: clients show memberships[0] as "your" league.
         memberships = list(
             LeagueMembership.objects.filter(user=user).select_related('country')
@@ -90,6 +102,7 @@ class LeagueOverviewView(APIView):
             'memberships': [_membership_payload(m) for m in memberships],
             'suggested': suggested,
             'caps': caps,
+            'active': active,
         })
 
 

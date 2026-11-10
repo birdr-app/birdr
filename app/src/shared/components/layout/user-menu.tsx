@@ -84,7 +84,7 @@ export const UserMenu = ({ onOpenLoginModal, isOpen = true }: UserMenuProps) => 
       )}
       {(hasLeagues || (isAuthenticated && showMenuExtras)) && (
         <Link asChild textDecoration="none">
-          <RouterLink to="/league">
+          <RouterLink to="/league/mine">
             <FormattedMessage id="league_my_leagues" defaultMessage="My national leagues" />
           </RouterLink>
         </Link>
