@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
+import { trimPlus } from '../lib/tripQuiz';
 import {
   EMPTY_TRIP_STATE,
   fetchTrip,
@@ -64,7 +65,8 @@ export function useTrip(country: string): TripData {
     return out;
   }, [progress, known, trip]);
 
-  return { trip, progress, local, error, reload, setLocal, setProgress, known, knownGroups };
+  const shown = useMemo(() => (trip ? trimPlus(trip, local.regions) : null), [trip, local.regions]);
+  return { trip: shown, progress, local, error, reload, setLocal, setProgress, known, knownGroups };
 }
 
 /** How many birds of each region pack the player knows: their answers anywhere plus this device. */

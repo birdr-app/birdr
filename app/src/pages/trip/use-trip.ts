@@ -63,6 +63,17 @@ export function withPlus(trip: Trip): Trip {
   return trip.plus?.units.length ? { ...trip, species: { ...trip.species, ...trip.plus.species } } : trip;
 }
 
+/** The trip with the Plus birds the player's added regions already cover taken out; empty units disappear. */
+export function trimPlus(trip: Trip, addedRegions: string[]): Trip {
+  if (!trip.plus?.units.length || !addedRegions.length) return trip;
+  const covered = new Set((trip.regions ?? []).filter((r) => addedRegions.includes(r.country)).flatMap((r) => r.codes ?? []));
+  if (!covered.size) return trip;
+  const units = trip.plus.units
+    .map((u) => ({ ...u, species: u.species.filter((c) => !covered.has(c)) }))
+    .filter((u) => u.species.length);
+  return { ...trip, plus: { ...trip.plus, units } };
+}
+
 export type TripData = {
   trip: Trip | null;
   progress: TripProgress | null;
@@ -99,5 +110,6 @@ export function useTrip(country: string): TripData {
     return out;
   }, [progress, known, trip]);
 
-  return { trip, progress, local, error, reload, setLocal, setProgress, known, knownGroups };
+  const shown = useMemo(() => (trip ? trimPlus(trip, local.regions) : null), [trip, local.regions]);
+  return { trip: shown, progress, local, error, reload, setLocal, setProgress, known, knownGroups };
 }

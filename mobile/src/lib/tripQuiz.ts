@@ -173,3 +173,14 @@ export function credit(media: TripMedia | undefined, photoLabel: string): string
   const who = media.contributor?.replace(/<[^>]+>/g, '').trim();
   return [who && `${photoLabel}: ${who}`, media.license].filter(Boolean).join(' · ');
 }
+
+/** The trip with the Plus birds the player's added regions already cover taken out; empty units disappear. */
+export function trimPlus(trip: Trip, addedRegions: string[]): Trip {
+  if (!trip.plus?.units.length || !addedRegions.length) return trip;
+  const covered = new Set((trip.regions ?? []).filter((r) => addedRegions.includes(r.country)).flatMap((r) => r.codes ?? []));
+  if (!covered.size) return trip;
+  const units = trip.plus.units
+    .map((u) => ({ ...u, species: u.species.filter((c) => !covered.has(c)) }))
+    .filter((u) => u.species.length);
+  return { ...trip, plus: { ...trip.plus, units } };
+}

@@ -106,6 +106,8 @@ def region_summaries(country: str, lang: str) -> list[dict]:
             **trip_summary(region, lang),
             'intro': text(files['texts'].get('intro'), lang),
             'image': _region_image(files),
+            # eBird codes of the pack's birds: the country's bonus units drop the ones a region covers.
+            'codes': [c for g in files['units']['groups'] for c in g['species']],
         })
     return out
 

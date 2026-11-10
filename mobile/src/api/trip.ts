@@ -65,7 +65,7 @@ export type TripSummary = {
 };
 
 /** A region pack as the country trip lists it: extra birds for one part of the country. */
-export type TripRegion = TripSummary & { intro: string; image?: string | null };
+export type TripRegion = TripSummary & { intro: string; image?: string | null; /** eBird codes of the pack's birds. */ codes?: string[] };
 
 export type Trip = TripSummary & {
   lang: string;
