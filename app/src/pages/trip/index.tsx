@@ -6,7 +6,7 @@ import { unitKnown } from '../../core/trip-quiz';
 import { fetchTrips, fetchTripProgress, loadTripState, updateTripState, type TripRegion, type TripSummary, type TripUnit } from '../../api/trip';
 import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
-import { ProgressRing, TripLoading, UnitRow } from './parts';
+import { ProgressRing, TripBackLink, TripLoading, UnitRow } from './parts';
 import { TripRequestForm } from './request';
 import { TripStory } from './story';
 import { UnderConstruction } from '../../components/under-construction';
@@ -189,6 +189,7 @@ export function TripHomePage() {
       </Page.Header>
       <Page.Body>
         <Flex direction="column" gap={3} w="full" maxW="640px" mx="auto">
+          {trip.parent ? <TripBackLink to={trip.parent} name={trip.parent_name ?? trip.parent} /> : null}
           <Flex align="center" gap={4} bg="secondary.700" borderRadius="xl" p={4}>
             <ProgressRing value={totalSpecies ? totalKnown / totalSpecies : 0} />
             <Box flex={1} minW={0}>
@@ -329,7 +330,7 @@ export function TripHomePage() {
                   })}
             </Button>
           ) : null}
-          {plusOpen.length ? (
+          {plusOpen.length || regions.length ? (
             <>
               <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
                 {t('trip_plus_section', 'More birds for Advanced')}
@@ -337,6 +338,10 @@ export function TripHomePage() {
               <Text fontSize="sm" color="primary.700">
                 {t('trip_plus_hint', 'An Advanced game also asks about these birds. Learn them too, then play Advanced.')}
               </Text>
+            </>
+          ) : null}
+          {plusOpen.length ? (
+            <>
               {plusOpen.slice(0, 3).map((unit) => (
                 <UnitRow
                   key={unit.slug}
@@ -359,9 +364,7 @@ export function TripHomePage() {
           ) : null}
           {regions.length ? (
             <>
-              <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
-                {t('trip_regions_section', 'Regions')}
-              </Text>
+              <Kicker>{t('trip_regions_section', 'Regions')}</Kicker>
               <Text fontSize="sm" color="primary.700">
                 {t('trip_regions_hint', 'More birds for the places you visit. Add a region and its birds count in your {country} total.', { country: trip.name })}
               </Text>

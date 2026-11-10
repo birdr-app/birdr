@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import { useNavigation, useRoute, type RouteProp } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Kicker, TripLoading, UnitRow, tripStyles } from '../components/TripParts';
+import { TripBackLink, Kicker, TripLoading, UnitRow, tripStyles } from '../components/TripParts';
 import { useTrip } from '../hooks/useTrip';
 import { useTranslation } from '../i18n/TranslationContext';
 import type { TripRoutes } from './TripHomeScreen';
@@ -24,6 +24,7 @@ export function TripEndemicsScreen() {
   const { endemics } = trip;
   return (
     <ScrollView style={tripStyles.container} contentContainerStyle={tripStyles.content}>
+      <TripBackLink country={trip.country} name={trip.name} />
       {endemics.why_here ? <Text style={tripStyles.body}>{endemics.why_here}</Text> : null}
       {endemics.where.length ? (
         <>

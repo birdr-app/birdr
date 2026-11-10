@@ -5,7 +5,7 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { updateTripState, type Trip, type TripGroup, type TripMedia } from '../api/trip';
 import { StepBar } from '../components/CourseParts';
 import { GameArtImage } from '../components/GameArtImage';
-import { Kicker, Tag, TripLoading, TripPhoto, tripStyles } from '../components/TripParts';
+import { TripBackLink, Kicker, Tag, TripLoading, TripPhoto, tripStyles } from '../components/TripParts';
 import { getMoodImage } from '../constants/birdrMoodImages';
 import { useVisualStyle } from '../context/VisualStyleContext';
 import { useTrip } from '../hooks/useTrip';
@@ -61,6 +61,7 @@ export function TripFamiliesScreen() {
 
   return (
     <ScrollView ref={scrollRef} style={tripStyles.container} contentContainerStyle={tripStyles.content}>
+      <TripBackLink country={trip.country} name={trip.name} />
       {finished ? (
         <View style={tripStyles.section}>
           <View style={tripStyles.doneHead}>

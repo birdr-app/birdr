@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
-import { TripLoading, UnitRow } from './parts';
+import { TripBackLink, TripLoading, UnitRow } from './parts';
 import { useTrip, useTripText } from './use-trip';
 
 /** /trips/:country/endemics: why the country has its own birds, where they live, and their units. */
@@ -24,6 +24,7 @@ export function TripEndemicsPage() {
       </Page.Header>
       <Page.Body>
         <Flex direction="column" gap={3} w="full" maxW="640px" mx="auto">
+          <TripBackLink to={trip.country} name={trip.name} />
           {endemics.why_here ? <Text color="primary.800" lineHeight="1.6">{endemics.why_here}</Text> : null}
           {endemics.where.length ? (
             <>

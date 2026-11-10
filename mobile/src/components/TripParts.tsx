@@ -1,5 +1,6 @@
 import React, { useState, type ReactNode } from 'react';
 import { ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import type { TripMedia } from '../api/trip';
 import { useTranslation } from '../i18n/TranslationContext';
 import { colors } from '../theme';
@@ -249,3 +250,18 @@ const styles = StyleSheet.create({
   unitMarkText: { fontSize: 15, fontWeight: '800', color: colors.primary[400] },
   unitMarkTextDone: { color: '#fff' },
 });
+
+/** "← Seychelles": the way back to a country's main Trip prep page, at the top of every sub screen. */
+export function TripBackLink({ country, name }: { country: string; name: string }) {
+  const navigation = useNavigation<any>();
+  return (
+    <TouchableOpacity
+      style={{ alignSelf: 'flex-start', paddingVertical: 4 }}
+      onPress={() => navigation.navigate('TripHome', { country })}
+      accessibilityRole="link"
+      testID="trip.backlink"
+    >
+      <Text style={{ fontSize: 15, fontWeight: '600', color: colors.primary[600] }}>← {name}</Text>
+    </TouchableOpacity>
+  );
+}

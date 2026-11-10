@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-nati
 import { useNavigation, useRoute, type RouteProp } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { loadTripState, updateTripState, type TripUnit } from '../api/trip';
-import { Kicker, TripLoading, TripRing, UnitRow, tripStyles } from '../components/TripParts';
+import { Kicker, TripBackLink, TripLoading, TripRing, UnitRow, tripStyles } from '../components/TripParts';
 import { TripStory } from '../components/TripStory';
 import { UnderConstruction } from '../components/UnderConstruction';
 import { useRegionKnown, useTrip } from '../hooks/useTrip';
@@ -87,6 +87,7 @@ export function TripHomeScreen() {
 
   return (
     <ScrollView style={tripStyles.container} contentContainerStyle={tripStyles.content}>
+      {trip.parent ? <TripBackLink country={trip.parent} name={trip.parent_name ?? trip.parent} /> : null}
       <View style={styles.hero}>
         <TripRing value={totalSpecies ? totalKnown / totalSpecies : 0} />
         <View style={tripStyles.flex}>
@@ -197,10 +198,14 @@ export function TripHomeScreen() {
           testID={`trip.unit.${unit.slug}`}
         />
       ))}
-      {plusOpen.length ? (
+      {plusOpen.length || regions.length ? (
         <>
           <Text style={tripStyles.sectionTitle}>{t('trip_plus_section')}</Text>
           <Text style={tripStyles.small}>{t('trip_plus_hint')}</Text>
+        </>
+      ) : null}
+      {plusOpen.length ? (
+        <>
           {plusOpen.slice(0, 3).map((unit) => (
             <UnitRow
               key={unit.slug}
@@ -220,7 +225,7 @@ export function TripHomeScreen() {
       ) : null}
       {regions.length ? (
         <>
-          <Text style={tripStyles.sectionTitle}>{t('trip_regions_section')}</Text>
+          <Kicker>{t('trip_regions_section')}</Kicker>
           <Text style={tripStyles.small}>{t('trip_regions_hint', { country: trip.name })}</Text>
           {regions.map((region) => {
             const isAdded = local.regions.includes(region.country);

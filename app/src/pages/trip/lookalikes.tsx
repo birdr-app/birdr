@@ -7,7 +7,7 @@ import { BirdrArtImage } from '../../components/birdr-art-image';
 import { buildLookalikeQuiz, type LookalikeQuestion } from '../../core/trip-quiz';
 import { Page } from '../../shared/components/layout';
 import { BoldText, Kicker } from '../course/parts';
-import { Tag, TripLoading, TripPhoto, credit } from './parts';
+import { Tag, TripBackLink, TripLoading, TripPhoto, credit } from './parts';
 import { useTrip, useTripText, type TripData } from './use-trip';
 
 type Result = { score: number; total: number; saved: boolean | null };
@@ -44,6 +44,7 @@ export function TripLookalikesPage() {
       </Page.Header>
       <Page.Body>
         <Flex direction="column" gap={3} w="full" maxW="640px" mx="auto">
+          <TripBackLink to={trip.country} name={trip.name} />
           {result ? (
             <Flex direction="column" gap={3}>
               <Flex align="center" gap={4}>

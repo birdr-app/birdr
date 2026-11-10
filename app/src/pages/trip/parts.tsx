@@ -1,5 +1,6 @@
 import { Box, Button, Dialog, Flex, Image, Portal, Spinner, Text } from '@chakra-ui/react';
 import { useState, type ReactNode } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 import type { TripMedia } from '../../api/trip';
 import { playFullSrc } from '../../utils/play-image-url';
@@ -257,6 +258,24 @@ export function UnitRow({
           {done ? '✓' : '›'}
         </Flex>
       </Flex>
+    </Button>
+  );
+}
+
+/** "← Seychelles": the way back to a country's main Trip prep page, at the top of every sub page. */
+export function TripBackLink({ to, name }: { to: string; name: string }) {
+  const navigate = useNavigate();
+  return (
+    <Button
+      variant="ghost"
+      colorPalette="primary"
+      size="sm"
+      alignSelf="flex-start"
+      px={1}
+      onClick={() => navigate(`/trips/${to}`)}
+      data-testid="trip-back-link"
+    >
+      ← {name}
     </Button>
   );
 }

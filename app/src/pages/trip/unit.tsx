@@ -6,7 +6,7 @@ import { BirdrArtImage } from '../../components/birdr-art-image';
 import { buildUnitQuiz, focusCodes, makeQuestion, remaining, type TripQuestion } from '../../core/trip-quiz';
 import { Page } from '../../shared/components/layout';
 import { BoldText, Kicker, StepBar } from '../course/parts';
-import { EndemicBadge, TripLoading, TripPhoto, TripThumb, credit } from './parts';
+import { EndemicBadge, TripBackLink, TripLoading, TripPhoto, TripThumb, credit } from './parts';
 import { TripCelebration } from './celebration';
 import { findUnit, tripComplete, useTrip, withPlus, useTripText, type TripData } from './use-trip';
 
@@ -74,6 +74,7 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
       </Page.Header>
       <Page.Body>
         <Flex direction="column" gap={3} w="full" maxW="640px" mx="auto">
+          <TripBackLink to={trip.country} name={trip.name} />
           {step.kind !== 'done' ? <StepBar total={birds.length + 2} current={stepIndex} /> : null}
           {step.kind === 'intro' ? (
             <Intro

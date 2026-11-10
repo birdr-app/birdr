@@ -6,7 +6,7 @@ import { postTripAnswers, updateTripState, type Trip, type TripAnswer, type Trip
 import { BoldText, StepBar } from '../components/CourseParts';
 import { GameArtImage } from '../components/GameArtImage';
 import { TripCelebration } from '../components/TripCelebration';
-import { EndemicBadge, Kicker, TripLoading, TripPhoto, TripThumb, tripStyles } from '../components/TripParts';
+import { TripBackLink, EndemicBadge, Kicker, TripLoading, TripPhoto, TripThumb, tripStyles } from '../components/TripParts';
 import { getMoodImage } from '../constants/birdrMoodImages';
 import { useVisualStyle } from '../context/VisualStyleContext';
 import { useTrip, type TripData } from '../hooks/useTrip';
@@ -76,6 +76,7 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
 
   return (
     <ScrollView ref={scrollRef} style={tripStyles.container} contentContainerStyle={tripStyles.content}>
+      <TripBackLink country={trip.country} name={trip.name} />
       {step.kind !== 'done' ? <StepBar total={birds.length + 2} current={stepIndex} /> : null}
       {step.kind === 'intro' ? (
         <Intro

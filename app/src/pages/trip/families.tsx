@@ -6,7 +6,7 @@ import { BirdrArtImage } from '../../components/birdr-art-image';
 import { buildFamilyQuiz } from '../../core/trip-quiz';
 import { Page } from '../../shared/components/layout';
 import { Kicker, StepBar } from '../course/parts';
-import { Tag, TripLoading, TripPhoto } from './parts';
+import { Tag, TripBackLink, TripLoading, TripPhoto } from './parts';
 import { useTrip, useTripText } from './use-trip';
 
 /** /trips/:country/families: one card per bird group, new groups first, then a short quiz. */
@@ -46,6 +46,7 @@ export function TripFamiliesPage() {
       </Page.Header>
       <Page.Body>
         <Flex direction="column" gap={3} w="full" maxW="640px" mx="auto">
+          <TripBackLink to={trip.country} name={trip.name} />
           {finished ? (
             <Flex direction="column" gap={3}>
               <Flex align="center" gap={4}>
