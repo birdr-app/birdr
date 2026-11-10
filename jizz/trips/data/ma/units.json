@@ -28,10 +28,7 @@
         "barpar2",
         "dosfra2"
       ],
-      "endemics": [
-        "barpar2",
-        "dosfra2"
-      ]
+      "endemics": []
     },
     {
       "slug": "pigeons-and-doves",
@@ -272,9 +269,7 @@
         "eurspo1",
         "gloibi"
       ],
-      "endemics": [
-        "waldra1"
-      ]
+      "endemics": []
     },
     {
       "slug": "vultures-hawks-and-allies",
@@ -315,9 +310,7 @@
         "tawowl3",
         "pheowl1"
       ],
-      "endemics": [
-        "tawowl3"
-      ]
+      "endemics": []
     },
     {
       "slug": "hoopoes",
@@ -374,9 +367,7 @@
         "grswoo",
         "levwoo1"
       ],
-      "endemics": [
-        "levwoo1"
-      ]
+      "endemics": []
     },
     {
       "slug": "falcons-and-caracaras",
@@ -442,9 +433,7 @@
         "eurjac",
         "brnrav1"
       ],
-      "endemics": [
-        "eurmag3"
-      ]
+      "endemics": []
     },
     {
       "slug": "tits-chickadees-and-titmice",
@@ -457,9 +446,7 @@
         "afbtit2",
         "gretit1"
       ],
-      "endemics": [
-        "afbtit2"
-      ]
+      "endemics": []
     },
     {
       "slug": "larks",
@@ -483,9 +470,7 @@
         "thelar1",
         "crelar1"
       ],
-      "endemics": [
-        "duplar1"
-      ]
+      "endemics": []
     },
     {
       "slug": "cisticolas-and-allies",
@@ -582,9 +567,7 @@
         "spewar2",
         "darwar1"
       ],
-      "endemics": [
-        "triwar1"
-      ]
+      "endemics": []
     },
     {
       "slug": "laughingthrushes-and-allies",
@@ -681,11 +664,7 @@
         "mouwhe2",
         "comnig1"
       ],
-      "endemics": [
-        "atlfly1",
-        "moured1",
-        "norwhe3"
-      ]
+      "endemics": []
     },
     {
       "slug": "accentors",
@@ -710,9 +689,7 @@
         "houspa",
         "spaspa1"
       ],
-      "endemics": [
-        "desspa3"
-      ]
+      "endemics": []
     },
     {
       "slug": "wagtails-and-pipits",
@@ -743,10 +720,7 @@
         "eurser1",
         "afrcha1"
       ],
-      "endemics": [
-        "crwfin2",
-        "afrcha1"
-      ]
+      "endemics": []
     },
     {
       "slug": "old-world-buntings",
@@ -1556,36 +1530,5 @@
       ]
     }
   ],
-  "endemic_units": [
-    {
-      "slug": "endemics-1",
-      "species": [
-        "barpar2",
-        "dosfra2",
-        "waldra1",
-        "tawowl3",
-        "levwoo1"
-      ]
-    },
-    {
-      "slug": "endemics-2",
-      "species": [
-        "eurmag3",
-        "afbtit2",
-        "duplar1",
-        "triwar1",
-        "atlfly1"
-      ]
-    },
-    {
-      "slug": "endemics-3",
-      "species": [
-        "moured1",
-        "norwhe3",
-        "desspa3",
-        "crwfin2",
-        "afrcha1"
-      ]
-    }
-  ]
+  "endemic_units": []
 }
