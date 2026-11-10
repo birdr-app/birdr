@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { apiUrl } from './config';
+import { getAuthHeaders } from './auth';
 
 /** The beginners course. Its texts are Dutch, so it is offered in the Dutch app only. */
 export const COURSE_SLUG = 'nl-beginners';
@@ -117,7 +118,37 @@ export async function saveLessonResult(week: number, score: number, total: numbe
     progress.completed[String(week)] = { score, total, completedAt: new Date().toISOString() };
   }
   await AsyncStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+  void syncProgress();
   return progress;
+}
+
+/**
+ * Merge this device's results with the signed-in user's server copy (best score per lesson), so
+ * progress follows the user across devices. Guests, or a failed request, keep the local copy.
+ */
+export async function syncProgress(): Promise<CourseProgress> {
+  const local = await loadProgress();
+  try {
+    const headers = (await getAuthHeaders()) as Record<string, string>;
+    if (!headers.Authorization) return local;
+    const results = Object.entries(local.completed).map(([week, r]) => ({
+      week: Number(week),
+      score: r.score,
+      total: r.total,
+      completedAt: r.completedAt,
+    }));
+    const res = await fetch(apiUrl(`/api/courses/${COURSE_SLUG}/progress/`), {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ results }),
+    });
+    if (!res.ok) return local;
+    const merged = { completed: {}, ...(await res.json()) } as CourseProgress;
+    await AsyncStorage.setItem(PROGRESS_KEY, JSON.stringify(merged));
+    return merged;
+  } catch {
+    return local;
+  }
 }
 
 /** A lesson opens once the one before it is done; lesson 1 is always open. */

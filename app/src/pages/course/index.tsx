@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Heading, Image, Spinner, Text } from '@chakra-ui/react';
 import { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { currentWeek, fetchCourse, isLessonOpen, loadProgress, type Course } from '../../api/course';
+import { currentWeek, fetchCourse, isLessonOpen, loadProgress, syncProgress, type Course } from '../../api/course';
 import { BirdrArtImage } from '../../components/birdr-art-image';
 import { UnderConstruction } from '../../components/under-construction';
 import { Page } from '../../shared/components/layout';
@@ -11,7 +11,10 @@ export function CoursePage() {
   const navigate = useNavigate();
   const [course, setCourse] = useState<Course | null>(null);
   const [error, setError] = useState(false);
-  const progress = loadProgress();
+  const [progress, setProgress] = useState(loadProgress);
+  useEffect(() => {
+    void syncProgress().then(setProgress);
+  }, []);
 
   const load = useCallback(() => {
     setError(false);

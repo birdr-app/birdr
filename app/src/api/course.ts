@@ -1,4 +1,5 @@
 import { getApiBaseUrl } from './baseUrl';
+import { authService } from './services/auth.service';
 
 /** The beginners course. Its texts are Dutch, so it is offered in the Dutch app only (same as mobile/src/api/course.ts). */
 export const COURSE_SLUG = 'nl-beginners';
@@ -115,12 +116,47 @@ export function saveLessonResult(week: number, score: number, total: number): Co
   if (!previous || score >= previous.score) {
     progress.completed[String(week)] = { score, total, completedAt: new Date().toISOString() };
   }
+  storeProgress(progress);
+  void syncProgress();
+  return progress;
+}
+
+function storeProgress(progress: CourseProgress): void {
   try {
     window.localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
   } catch {
     // Progress then lasts only for this visit.
   }
-  return progress;
+}
+
+/**
+ * Merge this device's results with the signed-in user's server copy (best score per lesson), so
+ * progress follows the user across devices. Guests, or a failed request, keep the local copy.
+ */
+export async function syncProgress(): Promise<CourseProgress> {
+  const local = loadProgress();
+  try {
+    await authService.ensureValidAccessToken();
+    const jwt = authService.getAccessToken();
+    if (!jwt) return local;
+    const results = Object.entries(local.completed).map(([week, r]) => ({
+      week: Number(week),
+      score: r.score,
+      total: r.total,
+      completedAt: r.completedAt,
+    }));
+    const res = await fetch(`${getApiBaseUrl()}/api/courses/${COURSE_SLUG}/progress/`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json', Authorization: `Bearer ${jwt}` },
+      body: JSON.stringify({ results }),
+    });
+    if (!res.ok) return local;
+    const merged = { completed: {}, ...(await res.json()) } as CourseProgress;
+    storeProgress(merged);
+    return merged;
+  } catch {
+    return local;
+  }
 }
 
 /** A lesson opens once the one before it is done; lesson 1 is always open. */

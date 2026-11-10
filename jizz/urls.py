@@ -85,7 +85,7 @@ from jizz.birdr_journey_views import (
 )
 from jizz.checklist_views import ChecklistView
 from jizz.app_version_views import AppVersionView
-from jizz.courses.views import CourseDetailView, CourseLessonView
+from jizz.courses.views import CourseDetailView, CourseLessonView, CourseProgressView
 from jizz.courses.admin_views import CourseCommonsPhotoView, CoursePhotoPickView, CoursePhotosView, CourseSpeciesMediaView
 from jizz.trips.views import TripAnswersView, TripDetailView, TripListView, TripProgressView
 from jizz.geo_views import GeoCountryView
@@ -586,6 +586,7 @@ urlpatterns = [
     re_path(r"^api/feedback/$", FeedbackListView.as_view(), name="feedback"),
     path('api/app-version/', AppVersionView.as_view(), name='app-version'),
     path('api/courses/<slug:slug>/', CourseDetailView.as_view(), name='course-detail'),
+    path('api/courses/<slug:slug>/progress/', CourseProgressView.as_view(), name='course-progress'),
     path('api/courses/<slug:slug>/lessons/<int:week>/', CourseLessonView.as_view(), name='course-lesson'),
     path('api/courses/<slug:slug>/photos/', CoursePhotosView.as_view(), name='course-photos'),
     path('api/courses/<slug:slug>/photos/species/<int:species_id>/', CourseSpeciesMediaView.as_view(), name='course-photos-species'),

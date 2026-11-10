@@ -21,7 +21,7 @@ from django.utils.html import format_html, format_html_join
 from django.utils.http import urlencode
 from django.utils.safestring import mark_safe
 
-from jizz.models import CoursePhotoPick
+from jizz.models import CourseLessonResult, CoursePhotoPick
 from jizz.models import (Answer, FlockSharedGame, SharedGame, SharedGameAttempt, BirdrJourney, BirdrJourneyGame, Country,
                          CountrySpecies, CountrySpeciesFrequency, Feedback, FlagQuestion, Game, JourneyLevel,
                          JourneyStep, Page, Player,
@@ -2416,6 +2416,18 @@ class SharedGameAdmin(admin.ModelAdmin):
         return getattr(obj, '_participants', 0)
 
     participants.admin_order_field = '_participants'
+
+
+@admin.register(CourseLessonResult)
+class CourseLessonResultAdmin(admin.ModelAdmin):
+    """Who did which course lesson, and how well. Synced from the web and mobile apps."""
+
+    list_display = ['user', 'course', 'week', 'score', 'total', 'completed_at']
+    list_filter = ['course', 'week', 'completed_at']
+    search_fields = ['user__username', 'user__email']
+    list_select_related = ['user']
+    raw_id_fields = ['user']
+    date_hierarchy = 'completed_at'
 
 
 @admin.register(CoursePhotoPick)

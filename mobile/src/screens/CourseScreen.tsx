@@ -7,6 +7,7 @@ import {
   fetchCourse,
   isLessonOpen,
   loadProgress,
+  syncProgress,
   type Course,
   type CourseProgress,
 } from '../api/course';
@@ -34,6 +35,8 @@ export function CourseScreen() {
         setProgress(p);
       })
       .catch(() => setError(true));
+    // Pull in results from other devices; the screen updates when they arrive.
+    void syncProgress().then(setProgress);
   }, []);
 
   useFocusEffect(load);

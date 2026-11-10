@@ -2655,3 +2655,22 @@ class CoursePhotoPick(models.Model):
 
     def __str__(self):
         return f'{self.course} week {self.week}: {self.species_id}'
+
+
+class CourseLessonResult(models.Model):
+    """A logged-in user's best result for one course lesson, so progress follows them across devices."""
+
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='course_lesson_results')
+    course = models.SlugField(max_length=64)
+    week = models.PositiveSmallIntegerField()
+    score = models.PositiveSmallIntegerField(default=0)
+    total = models.PositiveSmallIntegerField(default=0)
+    completed_at = models.DateTimeField()
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = [('user', 'course', 'week')]
+        ordering = ['-completed_at']
+
+    def __str__(self):
+        return f'{self.user_id} {self.course} week {self.week}: {self.score}/{self.total}'

@@ -233,3 +233,33 @@ class CoursePhotoAdminTestCase(TestCase):
         self.assertEqual(bad.status_code, 400)
         self.client.force_authenticate(self.player)
         self.assertEqual(self.client.post(url, {'link': info['link']}, format='json').status_code, 403)
+
+
+class CourseProgressTestCase(TestCase):
+    """Lesson results sync per user, keeping the best score."""
+
+    def setUp(self):
+        from django.contrib.auth.models import User
+        from rest_framework_simplejwt.tokens import AccessToken
+
+        self.slug = next(iter(COURSES))
+        self.user = User.objects.create_user('learner', 'l@example.com', 'pw')
+        self.client = APIClient()
+        self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {AccessToken.for_user(self.user)}')
+        self.url = f'/api/courses/{self.slug}/progress/'
+
+    def test_requires_login(self):
+        self.assertEqual(APIClient().get(self.url).status_code, 401)
+
+    def test_merge_keeps_best_score(self):
+        first = {'results': [{'week': 1, 'score': 5, 'total': 8, 'completedAt': '2026-11-01T10:00:00Z'}]}
+        self.assertEqual(self.client.post(self.url, first, format='json').status_code, 200)
+        worse = {'results': [{'week': 1, 'score': 3, 'total': 8}, {'week': 2, 'score': 7, 'total': 8}]}
+        data = self.client.post(self.url, worse, format='json').json()
+        self.assertEqual(data['completed']['1']['score'], 5)
+        self.assertEqual(data['completed']['2']['score'], 7)
+        self.assertEqual(self.client.get(self.url).json(), data)
+
+    def test_rejects_bad_results(self):
+        bad = {'results': [{'week': 1, 'score': 9, 'total': 8}]}
+        self.assertEqual(self.client.post(self.url, bad, format='json').status_code, 400)
