@@ -330,41 +330,11 @@ export function TripHomePage() {
                   })}
             </Button>
           ) : null}
-          {plusOpen.length || regions.length ? (
-            <>
-              <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
-                {t('trip_plus_section', 'More birds for Advanced')}
-              </Text>
-              <Text fontSize="sm" color="primary.700">
-                {t('trip_plus_hint', 'An Advanced game also asks about these birds. Learn them too, then play Advanced.')}
-              </Text>
-            </>
-          ) : null}
-          {plusOpen.length ? (
-            <>
-              {plusOpen.slice(0, 3).map((unit) => (
-                <UnitRow
-                  key={unit.slug}
-                  title={unit.title}
-                  subtitle={`${knownIn(unit)}/${unit.species.length}`}
-                  image={plusImage(unit)}
-                  known={knownIn(unit)}
-                  total={unit.species.length}
-                  done={false}
-                  highlight={next?.title === unit.title}
-                  onClick={() => navigate(`/trips/${country}/units/${unit.slug}`)}
-                />
-              ))}
-              {plusOpen.length > 3 ? (
-                <Text fontSize="sm" color="primary.700">
-                  {t('trip_plus_more', '{count, plural, one {# more unit} other {# more units}} after these.', { count: plusOpen.length - 3 })}
-                </Text>
-              ) : null}
-            </>
-          ) : null}
           {regions.length ? (
             <>
-              <Kicker>{t('trip_regions_section', 'Regions')}</Kicker>
+              <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
+                {t('trip_regions_section', 'Regions')}
+              </Text>
               <Text fontSize="sm" color="primary.700">
                 {t('trip_regions_hint', 'More birds for the places you visit. Add a region and its birds count in your {country} total.', { country: trip.name })}
               </Text>
@@ -396,6 +366,34 @@ export function TripHomePage() {
                   </Flex>
                 );
               })}
+            </>
+          ) : null}
+          {plusOpen.length ? (
+            <>
+              <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
+                {t('trip_plus_section', 'More birds for Advanced')}
+              </Text>
+              <Text fontSize="sm" color="primary.700">
+                {t('trip_plus_hint', 'An Advanced game also asks about these birds. Learn them too, then play Advanced.')}
+              </Text>
+              {plusOpen.slice(0, 3).map((unit) => (
+                <UnitRow
+                  key={unit.slug}
+                  title={unit.title}
+                  subtitle={`${knownIn(unit)}/${unit.species.length}`}
+                  image={plusImage(unit)}
+                  known={knownIn(unit)}
+                  total={unit.species.length}
+                  done={false}
+                  highlight={next?.title === unit.title}
+                  onClick={() => navigate(`/trips/${country}/units/${unit.slug}`)}
+                />
+              ))}
+              {plusOpen.length > 3 ? (
+                <Text fontSize="sm" color="primary.700">
+                  {t('trip_plus_more', '{count, plural, one {# more unit} other {# more units}} after these.', { count: plusOpen.length - 3 })}
+                </Text>
+              ) : null}
             </>
           ) : null}
         </Flex>

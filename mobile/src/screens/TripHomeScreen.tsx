@@ -198,34 +198,9 @@ export function TripHomeScreen() {
           testID={`trip.unit.${unit.slug}`}
         />
       ))}
-      {plusOpen.length || regions.length ? (
-        <>
-          <Text style={tripStyles.sectionTitle}>{t('trip_plus_section')}</Text>
-          <Text style={tripStyles.small}>{t('trip_plus_hint')}</Text>
-        </>
-      ) : null}
-      {plusOpen.length ? (
-        <>
-          {plusOpen.slice(0, 3).map((unit) => (
-            <UnitRow
-              key={unit.slug}
-              title={unit.title}
-              subtitle={`${knownIn(unit)}/${unit.species.length}`}
-              image={plusImage(unit)}
-              known={knownIn(unit)}
-              total={unit.species.length}
-              done={false}
-              highlight={next?.title === unit.title}
-              onPress={() => openUnit(unit.slug)}
-              testID={`trip.unit.${unit.slug}`}
-            />
-          ))}
-          {plusOpen.length > 3 ? <Text style={tripStyles.small}>{t('trip_plus_more', { count: plusOpen.length - 3 })}</Text> : null}
-        </>
-      ) : null}
       {regions.length ? (
         <>
-          <Kicker>{t('trip_regions_section')}</Kicker>
+          <Text style={tripStyles.sectionTitle}>{t('trip_regions_section')}</Text>
           <Text style={tripStyles.small}>{t('trip_regions_hint', { country: trip.name })}</Text>
           {regions.map((region) => {
             const isAdded = local.regions.includes(region.country);
@@ -257,6 +232,27 @@ export function TripHomeScreen() {
               </View>
             );
           })}
+        </>
+      ) : null}
+      {plusOpen.length ? (
+        <>
+          <Text style={tripStyles.sectionTitle}>{t('trip_plus_section')}</Text>
+          <Text style={tripStyles.small}>{t('trip_plus_hint')}</Text>
+          {plusOpen.slice(0, 3).map((unit) => (
+            <UnitRow
+              key={unit.slug}
+              title={unit.title}
+              subtitle={`${knownIn(unit)}/${unit.species.length}`}
+              image={plusImage(unit)}
+              known={knownIn(unit)}
+              total={unit.species.length}
+              done={false}
+              highlight={next?.title === unit.title}
+              onPress={() => openUnit(unit.slug)}
+              testID={`trip.unit.${unit.slug}`}
+            />
+          ))}
+          {plusOpen.length > 3 ? <Text style={tripStyles.small}>{t('trip_plus_more', { count: plusOpen.length - 3 })}</Text> : null}
         </>
       ) : null}
     </ScrollView>
