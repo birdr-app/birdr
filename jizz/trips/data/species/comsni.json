@@ -1,0 +1,22 @@
+{
+  "code": "comsni",
+  "name": {
+    "en": "Common Snipe",
+    "nl": "Watersnip"
+  },
+  "latin": "Gallinago gallinago",
+  "look_for": [
+    {
+      "en": "Very long straight **bill**",
+      "nl": "Zeer lange rechte **snavel**"
+    },
+    {
+      "en": "Striped **head**, buff stripes down the **back**",
+      "nl": "Gestreepte **kop**, bruine strepen over de **rug**"
+    },
+    {
+      "en": "Zigzags up with a rasping call",
+      "nl": "Vliegt in zigzag op met een rauwe roep"
+    }
+  ]
+}

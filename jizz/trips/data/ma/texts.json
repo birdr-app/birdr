@@ -1,0 +1,837 @@
+{
+  "country": "MA",
+  "intro": {
+    "en": "Morocco is a short flight from the Netherlands, and many of its birds are old friends: storks on the rooftops, kites over the towns, flamingos and waders on the coast. Beyond them lie the Atlas mountains and the desert edge, where larks, wheatears and a handful of Maghreb specialities wait. This trip covers 224 species, with a chapter on the look-alikes of birds you know from home.",
+    "nl": "Marokko is een korte vlucht van Nederland en veel vogels zijn er oude bekenden: ooievaars op de daken, wouwen boven de steden, flamingo's en steltlopers aan de kust. Daarachter liggen het Atlasgebergte en de woestijnrand, met leeuweriken, tapuiten en een handvol specialiteiten van de Maghreb. Deze reis omvat 224 soorten, met een hoofdstuk over de dubbelgangers van vogels die je van huis kent."
+  },
+  "groups": {
+    "waterfowl": {
+      "here": {
+        "en": "Six ducks are on this trip, all familiar from home. Mallard, Gadwall, Shoveler, Pintail and Pochard gather on coastal lagoons and reservoirs in winter, while the Marbled Duck, a scarce Mediterranean speciality, is the one to look for at wetlands such as Merja Zerga and Oued Massa.",
+        "nl": "Deze reis omvat zes eenden, allemaal bekend van thuis. Wilde eend, krakeend, slobeend, pijlstaart en tafeleend verzamelen zich 's winters op kustlagunes en stuwmeren, en de marmereend, een zeldzame soort van het Middellandse Zeegebied, is de eend waar je extra naar zoekt bij wetlands als Merja Zerga en Oued Massa."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "here": {
+        "en": "Three game birds are on this trip. The Common Quail is a summer visitor you will mostly hear in crops and steppe, the Barbary Partridge is common on stony hillsides and scrub, and the Double-spurred Spurfowl, a bird of west Africa, reaches Morocco only in the north-west, where it is shy and mostly heard.",
+        "nl": "Deze reis omvat drie hoenderachtigen. De kwartel is een zomergast die je vooral hoort in akkers en steppe, de Barbarijse patrijs is algemeen op rotsachtige hellingen en in struikgewas, en de Barbarijse frankolijn, een vogel uit West-Afrika, haalt Marokko alleen in het noordwesten, waar hij schuw is en vooral te horen."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "Five pigeons and doves are on this trip. Woodpigeon, Rock Dove and Collared Dove are as at home, the Turtle Dove passes through in spring and autumn, and the small Laughing Dove is the African species you will see in every town and oasis.",
+        "nl": "Deze reis omvat vijf duiven. Houtduif, rotsduif en Turkse tortel zijn zoals thuis, de zomertortel trekt in voorjaar en najaar door, en de kleine palmtortel is de Afrikaanse soort die je in elke stad en oase ziet."
+      }
+    },
+    "sandgrouse": {
+      "here": {
+        "en": "Four sandgrouse are on this trip, a group that has no counterpart in northern Europe. They live on the dry plains and stony desert south of the Atlas, around Boumalne Dades, the Draa valley and Merzouga, and are best seen at dawn when flocks fly to drink and call overhead.",
+        "nl": "Deze reis omvat vier zandhoenders, een groep die in Noord-Europa geen tegenhanger heeft. Ze leven op de droge vlaktes en in de stenige woestijn ten zuiden van de Atlas, rond Boumalne Dades, de Draavallei en Merzouga, en zie je het best bij zonsopgang, als groepen overvliegen om te drinken en roepen."
+      }
+    },
+    "bustards": {
+      "here": {
+        "en": "One bustard is on this trip, the African Houbara, a rare and wary bird of the arid steppe in the east and south that few visitors see. Do not expect an easy tick.",
+        "nl": "Deze reis omvat één trap, de Westelijke kraagtrap, een zeldzame en waakzame vogel van de droge steppe in het oosten en zuiden die weinig bezoekers zien. Reken niet op een makkelijke soort."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "Two cuckoos are on this trip. The Common Cuckoo passes through in spring, and the Great Spotted Cuckoo is a resident and summer visitor in open woodland, olive groves and cork oak around Marrakech and the north.",
+        "nl": "Deze reis omvat twee koekoeken. De koekoek trekt in het voorjaar door en de kuifkoekoek is standvogel en zomergast in open bos, olijfgaarden en kurkeiken rond Marrakech en in het noorden."
+      }
+    },
+    "nightjars": {
+      "here": {
+        "en": "Three nightjars are on this trip, mostly seen at dusk or by torchlight. Eurasian Nightjar migrates through in spring and autumn, the Red-necked Nightjar nests in warm scrub and open woodland, and the Egyptian Nightjar is a desert bird you may find near Merzouga.",
+        "nl": "Deze reis omvat drie nachtzwaluwen, die je vooral in de schemer of met zaklamp ziet. De nachtzwaluw trekt in voorjaar en najaar door, de Moorse nachtzwaluw broedt in warm struikgewas en open bos, en de Egyptische nachtzwaluw is een woestijnvogel die je bij Merzouga kunt vinden."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "Five swifts are on this trip. Common Swift passes through in numbers in spring and autumn, Pallid and Alpine Swifts breed on the coast and in the mountains, and the Little Swift and White-rumped Swift are the African species that nest on bridges and buildings in the south.",
+        "nl": "Deze reis omvat vijf gierzwaluwen. De gierzwaluw trekt in het voorjaar en najaar in aantallen door, vale en alpengierzwaluw broeden aan de kust en in de bergen, en de huisgierzwaluw en pijlstaartgierzwaluw zijn de Afrikaanse soorten die op bruggen en gebouwen in het zuiden nestelen."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Four rails and coots are on this trip. Coot and Moorhen are as at home, while the Red-knobbed Coot and Western Swamphen are the Moroccan specials, found at only a few well-vegetated wetlands such as Oued Massa and Merja Zerga.",
+        "nl": "Deze reis omvat vier rallen en koeten. Meerkoet en waterhoen zijn zoals thuis, terwijl de knobbelmeerkoet en het purperhoen de Marokkaanse specialiteiten zijn, te vinden op een paar goed begroeide wetlands zoals Oued Massa en Merja Zerga."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "Twenty-five waders are on this trip, most of them familiar from home. Merja Zerga, Oued Massa and the Atlantic estuaries are full of them from autumn to spring, while the Stone-curlew, Cream-coloured Courser and Collared Pratincole live on dry plains and bare ground.",
+        "nl": "Deze reis omvat vijfentwintig steltlopers, de meeste bekend van thuis. Merja Zerga, Oued Massa en de Atlantische estuaria zitten er van najaar tot voorjaar vol mee, terwijl de griel, renvogel en vorkstaartplevier op droge vlaktes en kale grond leven."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Thirteen gulls and terns are on this trip. The Atlantic coast is the place for Yellow-legged, Audouin's and Slender-billed Gulls and for Sandwich, Caspian and Little Terns, while the Whiskered and Gull-billed Terns are marsh terns you will find around inland pools and lagoons.",
+        "nl": "Deze reis omvat dertien meeuwen en sterns. De Atlantische kust is de plek voor geelpoot-, Audouins en dunbekmeeuw en voor grote, reuzen- en dwergstern, terwijl de witwangstern en de lachstern bij binnenwateren en lagunes te vinden zijn."
+      }
+    },
+    "flamingos": {
+      "here": {
+        "en": "One flamingo is on this trip, the Greater Flamingo, which gathers in the lagoons and estuaries of the Atlantic coast such as Merja Zerga and Oued Massa.",
+        "nl": "Deze reis omvat één flamingo, de flamingo, die zich verzamelt in lagunes en estuaria aan de Atlantische kust zoals Merja Zerga en Oued Massa."
+      }
+    },
+    "grebes": {
+      "here": {
+        "en": "Two grebes are on this trip, both as at home: Little Grebe on reservoirs and pools, Great Crested Grebe on bigger water.",
+        "nl": "Deze reis omvat twee futen, beide zoals thuis: de dodaars op stuwmeren en plassen, de fuut op groter water."
+      }
+    },
+    "petrels-shearwaters-and-diving-petrels": {
+      "here": {
+        "en": "Two shearwaters are on this trip, Cory's and Balearic. You see them from Atlantic headlands and ferries, especially on passage, when flocks move along the coast.",
+        "nl": "Deze reis omvat twee pijlstormvogels, de geelsnavel- en de vale pijlstormvogel. Je ziet ze vanaf Atlantische landtongen en veerboten, vooral tijdens de trek, als groepen langs de kust vliegen."
+      }
+    },
+    "storks": {
+      "here": {
+        "en": "Two storks are on this trip. The White Stork nests on buildings and pylons across Morocco, and breeding birds are joined by migrants from Europe, while the Black Stork is a rarer migrant and winter visitor.",
+        "nl": "Deze reis omvat twee ooievaars. De ooievaar nestelt op gebouwen en palen in heel Marokko en broedvogels krijgen gezelschap van trekkers uit Europa, terwijl de zwarte ooievaar een zeldzamere doortrekker en wintergast is."
+      }
+    },
+    "frigatebirds-boobies-and-gannets": {
+      "here": {
+        "en": "One gannet is on this trip, the Northern Gannet, a winter visitor you see offshore from Atlantic headlands and ports.",
+        "nl": "Deze reis omvat één jan-van-gent, een wintergast die je op zee ziet vanaf Atlantische landtongen en havens."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "One cormorant is on this trip, the Great Cormorant, which fishes in harbours, lagoons and reservoirs, mostly in winter.",
+        "nl": "Deze reis omvat één aalscholver, die vist in havens, lagunes en stuwmeren, vooral in de winter."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Ten herons, ibises and allies are on this trip. Cattle Egret, Little Egret and Grey Heron are everywhere, the Spoonbill and Glossy Ibis gather at coastal wetlands, and the Northern Bald Ibis, one of the rarest birds in the world, is a Moroccan special seen on the cliffs and coast near Souss-Massa and Tamri.",
+        "nl": "Deze reis omvat tien reigers, ibissen en verwanten. Koereiger, kleine zilverreiger en blauwe reiger zie je overal, lepelaar en zwarte ibis verzamelen zich op kustwetlands, en de heremietibis, een van de zeldzaamste vogels ter wereld, is een Marokkaanse specialiteit die je bij de kliffen en kust van Souss-Massa en Tamri ziet."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "Sixteen raptors are on this trip. Spring and autumn passage over the Strait of Gibraltar spills into northern Morocco, and in the High Atlas and Draa valley you can find Bearded and Griffon Vultures, Golden and Bonelli's Eagles, and the Long-legged Buzzard.",
+        "nl": "Deze reis omvat zestien roofvogels. Voorjaars- en najaarstrek over de Straat van Gibraltar loopt door tot in Noord-Marokko, en in de Hoge Atlas en de Draavallei kun je lammergier, vale gier, steenarend, havikarend en arendbuizerd vinden."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "Five owls are on this trip. The Little Owl and Scops Owl are as at home, the Pharaoh Eagle Owl lives among rocks and gorges of the south, the Marsh Owl hunts open wetlands, and the Maghreb Owl is a Moroccan special of cedar and oak woods in the Middle Atlas.",
+        "nl": "Deze reis omvat vijf uilen. Steenuil en dwergooruil zijn zoals thuis, de woestijnoehoe leeft tussen rotsen en kloven in het zuiden, de Afrikaanse velduil jaagt boven open wetlands, en de Maghrebbosuil is een Marokkaanse specialiteit van ceder- en eikenbos in de Middle Atlas."
+      }
+    },
+    "hoopoes": {
+      "here": {
+        "en": "One hoopoe is on this trip, the Common Hoopoe, which feeds on lawns and olive groves from the coast to the desert.",
+        "nl": "Deze reis omvat één hop, die op gazons en in olijfgaarden foerageert, van de kust tot de woestijn."
+      }
+    },
+    "bee-eaters": {
+      "here": {
+        "en": "Two bee-eaters are on this trip. The European Bee-eater passes through in spring and autumn and nests in sandy banks, and the Blue-cheeked Bee-eater is a green summer visitor around desert oases and the Draa valley.",
+        "nl": "Deze reis omvat twee bijeneters. De bijeneter trekt in voorjaar en najaar door en nestelt in zandige oevers, en de groene bijeneter is een groene zomergast rond woestijnoases en in de Draavallei."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "One kingfisher is on this trip, the Common Kingfisher, which you find along rivers, lagoons and the coast, mostly in winter.",
+        "nl": "Deze reis omvat één ijsvogel, die je vindt langs rivieren, lagunes en de kust, vooral in de winter."
+      }
+    },
+    "rollers-and-allies": {
+      "here": {
+        "en": "One roller is on this trip, the European Roller, a summer visitor to open country, often sitting on wires from late spring.",
+        "nl": "Deze reis omvat één scharrelaar, een zomergast van open land die je vanaf het late voorjaar vaak op draden ziet zitten."
+      }
+    },
+    "woodpeckers": {
+      "here": {
+        "en": "Two woodpeckers are on this trip. The Great Spotted Woodpecker is the north African form, and Levaillant's Woodpecker is a Moroccan special of cedar and oak forest, such as around Azrou and Ifrane in the Middle Atlas.",
+        "nl": "Deze reis omvat twee spechten. De grote bonte specht is de Noord-Afrikaanse vorm, en Levaillants specht is een Marokkaanse specialiteit van ceder- en eikenbos, zoals rond Azrou en Ifrane in de Middle Atlas."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "Five falcons are on this trip. Kestrel and Peregrine are as at home, the Lesser Kestrel is a migrant, the Lanner Falcon hunts desert edges and gorges, and Eleonora's Falcon is a summer visitor nesting on the island cliffs near Essaouira.",
+        "nl": "Deze reis omvat vijf valken. Torenvalk en slechtvalk zijn zoals thuis, de kleine torenvalk is een trekker, de lannervalk jaagt aan woestijnranden en in kloven, en Eleonora's valk is een zomergast die broedt op de kliffen van de eilandjes bij Essaouira."
+      }
+    },
+    "old-world-orioles": {
+      "here": {
+        "en": "One oriole is on this trip, the Golden Oriole, a summer visitor you will more often hear than see in poplars and gardens.",
+        "nl": "Deze reis omvat één wielewaal, een zomergast die je vaker hoort dan ziet in populieren en tuinen."
+      }
+    },
+    "bushshrikes-and-allies": {
+      "here": {
+        "en": "One bushshrike is on this trip, the Black-crowned Tchagra, a skulking bird of scrub and gardens, found in the north-west and around Marrakech and Souss.",
+        "nl": "Deze reis omvat één bosklauwier, de zwartkruintsjagra, een schuwe vogel van struikgewas en tuinen, te vinden in het noordwesten en rond Marrakech en Souss."
+      }
+    },
+    "shrikes": {
+      "here": {
+        "en": "Two shrikes are on this trip. The Woodchat Shrike is a summer visitor in open country, and the Great Grey Shrike here is the pale desert form, seen on wires and bushes in the south.",
+        "nl": "Deze reis omvat twee klauwieren. De roodkopklauwier is een zomergast in open land, en de klapekster is hier de bleke woestijnvorm, die je op draden en struiken in het zuiden ziet."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "Seven crows are on this trip. Raven, Jackdaw and Jay are as at home, the Brown-necked Raven is the desert species, and the Maghreb Magpie is a Moroccan special; in the mountains you find Red-billed and Alpine Choughs.",
+        "nl": "Deze reis omvat zeven kraaiachtigen. Raaf, kauw en gaai zijn zoals thuis, de bruinnekraaf is de woestijnsoort en de Maghrebekster is een Marokkaanse specialiteit; in de bergen vind je alpenkraai en alpenkauw."
+      }
+    },
+    "tits-chickadees-and-titmice": {
+      "here": {
+        "en": "Three tits are on this trip. Great Tit and Coal Tit are as at home, and the African Blue Tit is a Moroccan special of cedar and oak forest, also seen in gardens and palm groves.",
+        "nl": "Deze reis omvat drie mezen. Koolmees en zwarte mees zijn zoals thuis, en de Afrikaanse pimpelmees is een Marokkaanse specialiteit van ceder- en eikenbos, ook te zien in tuinen en palmbossen."
+      }
+    },
+    "larks": {
+      "here": {
+        "en": "Fourteen larks are on this trip, more than any other group but the chats. The desert edge and stony plains from Boumalne Dades to Merzouga hold the specials, including Dupont's, Thick-billed, Bar-tailed and Temminck's Larks and the Greater Hoopoe-Lark, while Skylark and Crested Lark are at home on the fields.",
+        "nl": "Deze reis omvat veertien leeuweriken, meer dan welke andere groep ook behalve de tapuiten. De woestijnrand en stenige vlaktes van Boumalne Dades tot Merzouga houden de specialiteiten, waaronder Duponts, diksnavel-, rosse woestijn- en Temmincks leeuwerik en de witbandleeuwerik, terwijl veld- en kuifleeuwerik thuis zijn op de velden."
+      }
+    },
+    "cisticolas-and-allies": {
+      "here": {
+        "en": "One cisticola is on this trip, the Zitting Cisticola, a tiny bird with a jerky display flight over grass and crops.",
+        "nl": "Deze reis omvat één graszanger, een piepklein vogeltje met een schokkerige baltsvlucht boven gras en akkers."
+      }
+    },
+    "reed-warblers-and-allies": {
+      "here": {
+        "en": "Three warblers of reeds and scrub are on this trip. The Melodious Warbler and Western Olivaceous Warbler are summer visitors, and the Moustached Warbler skulks in marshes.",
+        "nl": "Deze reis omvat drie zangers van riet en struikgewas. De orpheusspotvogel en de westelijke vale spotvogel zijn zomergasten, en de zwartkoprietzanger sluipt door moerassen."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "Seven swallows and martins are on this trip. Barn Swallow, House Martin and Sand Martin pass through in spring and autumn, while Crag Martin, Rock Martin and Red-rumped Swallow nest on cliffs and bridges, and the Plain Martin is a local look-alike of the Sand Martin.",
+        "nl": "Deze reis omvat zeven zwaluwen. Boeren-, huis- en oeverzwaluw trekken in voorjaar en najaar door, terwijl rots-, vale rots- en roodstuitzwaluw op kliffen en bruggen nestelen, en de vale oeverzwaluw een lokale soortgenoot van de oeverzwaluw is."
+      }
+    },
+    "bulbuls": {
+      "here": {
+        "en": "One bulbul is on this trip, the Common Bulbul, a resident of gardens, scrub and oases across Morocco, singing from low bushes.",
+        "nl": "Deze reis omvat één bulbuul, de grauwe buulbuul, een standvogel van tuinen, struikgewas en oases in heel Marokko, die zingt vanuit lage struiken."
+      }
+    },
+    "leaf-warblers": {
+      "here": {
+        "en": "Four leaf warblers are on this trip: Chiffchaff, Willow Warbler, Iberian Chiffchaff and Western Bonelli's Warbler, mostly seen on spring and autumn passage in gardens and woods. Also with them is the Scrub Warbler, a long-tailed bird of rocky desert slopes.",
+        "nl": "Deze reis omvat vier bladkoningen: tjiftjaf, fitis, Iberische tjiftjaf en bergfluiter, die je vooral tijdens de trek in voorjaar en najaar in tuinen en bossen ziet. Daarbij hoort ook de maquiszanger, een langstaartige vogel van rotsachtige woestijnhellingen."
+      }
+    },
+    "bush-warblers-and-allies": {
+      "here": {
+        "en": "Two bush warblers are on this trip: Cetti's Warbler, loud in wet scrub and reeds, and the Scrub Warbler, a long-tailed bird of dry, rocky slopes.",
+        "nl": "Deze reis omvat twee zangers van struikgewas: Cetti's zanger, luid in nat struikgewas en riet, en de maquiszanger, een langstaartige vogel van droge, rotsachtige hellingen."
+      }
+    },
+    "sylviid-warblers": {
+      "here": {
+        "en": "Nine Sylvia warblers are on this trip. Sardinian Warbler is everywhere, Blackcap and Whitethroat pass through, and Tristram's Warbler, found in Atlas scrub, and the African Desert Warbler, a bird of desert fringes, are the Moroccan specials.",
+        "nl": "Deze reis omvat negen grasmussen. De kleine zwartkop zit overal, zwartkop en grasmus trekken door, en de Atlasgrasmus, in het struikgewas van de Atlas, en de Afrikaanse woestijngrasmus, een vogel van woestijnranden, zijn de Marokkaanse specialiteiten."
+      }
+    },
+    "laughingthrushes-and-allies": {
+      "here": {
+        "en": "One chatterer is on this trip, the Fulvous Chatterer, a social, noisy bird found in oases and gardens in the south, with small groups moving through the undergrowth.",
+        "nl": "Deze reis omvat één babbelaar, de bruingele babbelaar, een sociale, luidruchtige vogel van oases en tuinen in het zuiden, met kleine groepen die door het kreupelhout trekken."
+      }
+    },
+    "kinglets": {
+      "here": {
+        "en": "One kinglet is on this trip, the Firecrest, which is a resident of cedar and oak forest in the Middle Atlas and a winter visitor elsewhere.",
+        "nl": "Deze reis omvat één goudhaantje, de vuurgoudhaan, een standvogel van ceder- en eikenbos in de Middle Atlas en elders een wintergast."
+      }
+    },
+    "treecreepers": {
+      "here": {
+        "en": "One treecreeper is on this trip, the Short-toed Treecreeper, a bird of cedar and oak forest in the Middle Atlas.",
+        "nl": "Deze reis omvat één boomkruiper, de boomkruiper, een vogel van ceder- en eikenbos in de Middle Atlas."
+      }
+    },
+    "wrens": {
+      "here": {
+        "en": "One wren is on this trip, the Wren, which lives in damp forest and rocky stream gullies in the mountains.",
+        "nl": "Deze reis omvat één winterkoning, die leeft in vochtig bos en rotsachtige beekkloven in de bergen."
+      }
+    },
+    "starlings-and-mynas": {
+      "here": {
+        "en": "Two starlings are on this trip. The Spotless Starling is the resident black starling in towns and villages, and the Common Starling is a winter visitor.",
+        "nl": "Deze reis omvat twee spreeuwen. De zwarte spreeuw is de standvogel in steden en dorpen, en de spreeuw is een wintergast."
+      }
+    },
+    "thrushes": {
+      "here": {
+        "en": "Three thrushes are on this trip. Blackbird and Mistle Thrush are as at home, and the Song Thrush is a winter visitor.",
+        "nl": "Deze reis omvat drie lijsters. Merel en grote lijster zijn zoals thuis, en de zanglijster is een wintergast."
+      }
+    },
+    "old-world-flycatchers": {
+      "here": {
+        "en": "Eighteen chats, flycatchers and wheatears are on this trip, the biggest group. Robin, Redstart and Stonechat are familiar, while the Atlas Flycatcher, Moussier's Redstart and Mourning, Black, Red-rumped, White-crowned and Desert Wheatears are the Moroccan specials from the Atlas to the Sahara.",
+        "nl": "Deze reis omvat achttien tapuiten, vliegenvangers en roodstaarten, de grootste groep. Roodborst, roodstaart en roodborsttapuit zijn bekend, terwijl de Atlasvliegenvanger, de diadeemroodstaart en de rouw-, zwarte, roodstuit-, witkruin- en woestijntapuit de Marokkaanse specialiteiten zijn, van de Atlas tot de Sahara."
+      }
+    },
+    "accentors": {
+      "here": {
+        "en": "One accentor is on this trip, the Alpine Accentor, a bird of the high, rocky slopes of the High Atlas, where it is seen near ski areas such as Oukaimeden.",
+        "nl": "Deze reis omvat één heggenmus, de alpenheggenmus, een vogel van hoge, rotsachtige hellingen in de Hoge Atlas, waar je hem bij skigebieden zoals Oukaimeden ziet."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "Four sparrows are on this trip. House Sparrow and Spanish Sparrow live in villages and fields, the Rock Sparrow in stony places, and the Desert Sparrow is a Sahara specialty seen near Merzouga.",
+        "nl": "Deze reis omvat vier mussen. Huismus en Spaanse mus leven in dorpen en velden, de rotsmus op stenige plekken, en de woestijnmus is een Sahara-specialiteit die je bij Merzouga ziet."
+      }
+    },
+    "wagtails-and-pipits": {
+      "here": {
+        "en": "Four wagtails and pipits are on this trip. White, Yellow and Grey Wagtails are familiar from home and winter in numbers, and the Tawny Pipit is a bird of dry plains.",
+        "nl": "Deze reis omvat vier kwikstaarten en piepers. Witte, gele en grote gele kwikstaart zijn bekend van thuis en overwinteren in aantal, en de duinpieper is een vogel van droge vlaktes."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "here": {
+        "en": "Seven finches are on this trip. Greenfinch, Goldfinch, Linnet and Serin are as at home, while the Trumpeter Finch (desert), Crimson-winged Finch (High Atlas) and African Chaffinch (cedar and oak forest) are the Moroccan specials.",
+        "nl": "Deze reis omvat zeven vinken. Groenling, putter, kneu en Europese kanarie zijn zoals thuis, terwijl de woestijnvink (woestijn), de rode bergvink (Hoge Atlas) en de Afrikaanse vink (ceder- en eikenbos) de Marokkaanse specialiteiten zijn."
+      }
+    },
+    "old-world-buntings": {
+      "here": {
+        "en": "Three buntings are on this trip. The Corn Bunting is common on farmland, the Rock Bunting lives on rocky hillsides, and the House Bunting is a bird of villages and gorges in the south.",
+        "nl": "Deze reis omvat drie gorzen. De grauwe gors is algemeen op landbouwgrond, de grijze gors leeft op rotsachtige hellingen, en de huisgors is een vogel van dorpen en kloven in het zuiden."
+      }
+    }
+  },
+  "units": {
+    "waterfowl": {
+      "title": {
+        "en": "Ducks of lakes and lagoons",
+        "nl": "Eenden van meren en lagunes"
+      },
+      "intro": {
+        "en": "Moroccan wetlands such as Merja Zerga and the Souss-Massa lagoons hold winter ducks you know well. Look at the bill shape and the head pattern to separate the dabblers, and keep an eye out for the pale, spotted Marbled Duck among them.",
+        "nl": "Marokkaanse wetlands zoals Merja Zerga en de lagunes van Souss-Massa hebben 's winters eenden die je goed kent. Let op de snavelvorm en de kopkleur om de zwemeenden uit elkaar te houden, en zoek tussen hen naar de bleke, gevlekte marmereend."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "title": {
+        "en": "Partridges and a quail",
+        "nl": "Patrijzen en een kwartel"
+      },
+      "intro": {
+        "en": "These are birds of scrub and stony ground that prefer to run rather than fly. The Barbary Partridge looks like a red-legged partridge with a chestnut collar, and a spurfowl is chunkier and more heavily marked; the quail is a small, round, sandy bird.",
+        "nl": "Dit zijn vogels van struikgewas en stenige grond die liever rennen dan vliegen. De Barbarijse patrijs lijkt op een rode patrijs met een kastanjebruine kraag, een frankolijn is steviger en forser getekend, en de kwartel is een klein, rond, zandkleurig vogeltje."
+      }
+    },
+    "pigeons-and-doves": {
+      "title": {
+        "en": "Pigeons and doves",
+        "nl": "Duiven"
+      },
+      "intro": {
+        "en": "Most of these you will pass without a second look at home, but in Morocco they sit on the same walls and wires as the Laughing Dove. Compare size and colour: the Laughing Dove is small and warm pinkish-brown, the Turtle Dove has a striped neck patch and a rusty back.",
+        "nl": "Thuis kijk je meestal niet meer naar deze soorten om, maar in Marokko zitten ze op dezelfde muren en draden als de palmtortel. Vergelijk grootte en kleur: de palmtortel is klein en warm roze-bruin, de zomertortel heeft gestreepte halsvlekken en een roestbruine rug."
+      }
+    },
+    "sandgrouse": {
+      "title": {
+        "en": "Sandgrouse",
+        "nl": "Zandhoenders"
+      },
+      "intro": {
+        "en": "Sandgrouse look like pigeons built for the desert, with short legs, long pointed wings and a fast, direct flight. They are usually identified by the calls of a flock overhead and by the belly: black, white or finely barred.",
+        "nl": "Zandhoenders lijken op duiven die voor de woestijn zijn gebouwd, met korte poten, lange puntige vleugels en een snelle, rechte vlucht. Je herkent ze meestal aan de roep van een groep boven je en aan de buik: zwart, wit of fijn gebandeerd."
+      }
+    },
+    "bustards": {
+      "title": {
+        "en": "Houbara, nightjars and cuckoos",
+        "nl": "Kraagtrap, nachtzwaluwen en koekoeken"
+      },
+      "intro": {
+        "en": "Here the Houbara meets the night birds and cuckoos of Morocco. The nightjars hunt over dry scrub and desert at dusk: Eurasian Nightjar is the familiar migrant, while the Red-necked and Egyptian are the local specials, and the Great Spotted Cuckoo is the crested one in the cork oaks and olive groves.",
+        "nl": "Hier komt de kraagtrap samen met de nachtvogels en koekoeken van Marokko. De nachtzwaluwen jagen bij schemer boven droog struikgewas en woestijn: de gewone nachtzwaluw is de bekende doortrekker, de Moorse en de Egyptische zijn de lokale specialiteiten, en de kuifkoekoek is de gekuifde soort in kurkeiken en olijfgaarden."
+      }
+    },
+    "swifts": {
+      "title": {
+        "en": "Swifts",
+        "nl": "Gierzwaluwen"
+      },
+      "intro": {
+        "en": "Swifts overhead above Moroccan cliffs and towns are a puzzle you know from home with extra species. Compare size, the white rump and throat, and the colour of the body: Pallid is paler and browner than Common, and Alpine is big with a white belly.",
+        "nl": "Gierzwaluwen boven Marokkaanse kliffen en steden zijn een puzzel die je van thuis kent, maar met extra soorten. Let op grootte, witte stuit en keel en de kleur van het lijf: de vale is bleker en bruiner dan de gewone, en de alpengierzwaluw is groot met een witte buik."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "title": {
+        "en": "Coots, moorhen and swamphen",
+        "nl": "Meerkoeten, waterhoen en purperhoen"
+      },
+      "intro": {
+        "en": "Reedbeds and lagoon edges hold these water birds. The Red-knobbed Coot has two red knobs on its head, which are hard to see at distance, so check the head shape and bill, and the Western Swamphen is a large blue-purple bird with a heavy red bill.",
+        "nl": "Rietkragen en lagunerandjes herbergen deze watervogels. De knobbelmeerkoet heeft twee rode knobbeltjes op de kop die op afstand moeilijk te zien zijn, dus let op kopvorm en snavel, en het purperhoen is een grote blauwpaarse vogel met een zware rode snavel."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Waders: plovers, stilt and avocet",
+        "nl": "Steltlopers: plevieren, steltkluut en kluut"
+      },
+      "intro": {
+        "en": "Mudflats and lagoon shores hold these plovers, the Black-winged Stilt and the Avocet, much as on a Dutch estuary. Check size and leg colour, and look for the Kentish Plover on bare sand and the Stone-curlew on dry stony ground, with its big yellow eye.",
+        "nl": "Slikken en lagunekusten houden deze plevieren, de steltkluut en de kluut, net als in een Nederlands estuarium. Let op grootte en pootkleur, en zoek de strandplevier op kaal zand en de griel op droge, stenige grond, met zijn grote gele oog."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Waders: godwits, curlew and sandpipers",
+        "nl": "Steltlopers: ruiters, wulp en snippen"
+      },
+      "intro": {
+        "en": "This is a group of longer-billed waders on mud and shallow water. The godwits and Curlew are big, the Snipe is hidden at the edge of reeds, and the Green and Common Sandpipers bob along the water's edge.",
+        "nl": "Dit is een groep steltlopers met langere snavels op modder en ondiep water. De ruiters en de wulp zijn groot, de watersnip zit verborgen langs het riet, en witgat en oeverloper wippen langs de waterkant."
+      }
+    },
+    "shorebirds-3": {
+      "title": {
+        "en": "Waders: redshank, ruff and turnstone",
+        "nl": "Steltlopers: tureluur, kemphaan en steenloper"
+      },
+      "intro": {
+        "en": "These waders are widespread and often seen on the same pool. Separate Redshank, Greenshank and Wood Sandpiper by size, leg colour and the white rump, and look for the Ruff and Curlew Sandpiper in non-breeding plumage.",
+        "nl": "Deze steltlopers zijn wijdverbreid en zitten vaak in dezelfde plas. Scheid tureluur, groenpootruiter en bosruiter op grootte, pootkleur en de witte stuit, en zoek naar kemphaan en krombekstrandloper in winterkleed."
+      }
+    },
+    "shorebirds-4": {
+      "title": {
+        "en": "Waders: stints, courser, pratincole",
+        "nl": "Steltlopers: strandlopers, renvogel, vorkstaartplevier"
+      },
+      "intro": {
+        "en": "Small waders of the shoreline, plus two birds of dry ground. Sanderling and Little Stint are quick and tiny on the tide line, while the Cream-coloured Courser and Collared Pratincole belong to bare plains and the Small Buttonquail is a rare, secretive bird of scrub.",
+        "nl": "Kleine steltlopers van de vloedlijn, plus twee vogels van droge grond. Drieteenstrandloper en kleine strandloper zijn vlug en klein op de vloedlijn, de renvogel en vorkstaartplevier horen bij kale vlaktes, en de gestreepte vechtkwartel is een zeldzame, verborgen vogel van struikgewas."
+      }
+    },
+    "gulls-terns-and-skimmers-1": {
+      "title": {
+        "en": "Gulls and terns of the coast",
+        "nl": "Meeuwen en sterns van de kust"
+      },
+      "intro": {
+        "en": "The beaches and harbours hold familiar gulls with a Mediterranean twist. The Yellow-legged Gull replaces the Herring Gull, Audouin's Gull has a red bill with a dark tip, and the West African Crested Tern may show on the southern coast.",
+        "nl": "Stranden en havens houden bekende meeuwen met een mediterraan tintje. De geelpootmeeuw vervangt de zilvermeeuw, Audouins meeuw heeft een rode snavel met een donkere punt, en de Afrikaanse koningsstern kan aan de zuidkust opduiken."
+      }
+    },
+    "gulls-terns-and-skimmers-2": {
+      "title": {
+        "en": "Terns and a dark-backed gull",
+        "nl": "Sterns en een zwartrugmeeuw"
+      },
+      "intro": {
+        "en": "Sandy bars and lagoons hold these terns, plus the big dark-backed Lesser Black-backed Gull. Size and bill colour do most of the work: the Caspian is huge with a red bill, the Sandwich has a shaggy black tip, and the Little Tern is tiny with a yellow bill.",
+        "nl": "Zandbanken en lagunes houden deze sterns, plus de grote zwartrugmeeuw. Grootte en snavelkleur doen het meeste werk: de reuzenstern is enorm met een rode snavel, de grote stern heeft een warrige zwarte kop en de dwergstern is klein met een gele snavel."
+      }
+    },
+    "flamingos": {
+      "title": {
+        "en": "Flamingo, grebes and shearwaters",
+        "nl": "Flamingo, futen en pijlstormvogels"
+      },
+      "intro": {
+        "en": "This unit mixes the pink flamingo of the lagoons with two grebes and two shearwaters. Shearwaters are seen from headlands and on boat trips on the Atlantic coast, while the Little and Great Crested Grebes are as at home.",
+        "nl": "Deze groep combineert de roze flamingo van de lagunes met twee futen en twee pijlstormvogels. Pijlstormvogels zie je vanaf landtongen en tijdens boottochten op de Atlantische kust, terwijl dodaars en fuut zijn zoals thuis."
+      }
+    },
+    "storks": {
+      "title": {
+        "en": "Storks, cormorant and gannet",
+        "nl": "Ooievaars, aalscholver en jan-van-gent"
+      },
+      "intro": {
+        "en": "The big birds of this unit are storks, a gannet and a cormorant, all long-winged and easy to see at distance. White Stork nests on towers and ruins, the Great Cormorant fishes in harbours and lagoons, and the Gannet is a winter visitor offshore.",
+        "nl": "De grote vogels van deze groep zijn ooievaars, een jan-van-gent en een aalscholver, allemaal langvleugelig en op afstand goed te zien. De ooievaar nestelt op torens en ruïnes, de aalscholver vist in havens en lagunes en de jan-van-gent is een wintergast op zee."
+      }
+    },
+    "herons-ibis-and-allies-1": {
+      "title": {
+        "en": "Herons and egrets",
+        "nl": "Reigers en zilverreigers"
+      },
+      "intro": {
+        "en": "Herons and egrets wade in lagoons and fields, and the Cattle Egret follows livestock. Compare size, bill and leg colour: Little Egret has black legs with yellow feet, Great White Egret is tall with a long neck, and the Squacco and Night Heron are smaller and stockier.",
+        "nl": "Reigers en zilverreigers waden in lagunes en velden, en de koereiger volgt vee. Vergelijk grootte, snavel en pootkleur: de kleine zilverreiger heeft zwarte poten met gele voeten, de grote zilverreiger is hoog met een lange hals, en ralreiger en kwak zijn kleiner en gedrongener."
+      }
+    },
+    "herons-ibis-and-allies-2": {
+      "title": {
+        "en": "Spoonbill, ibises and herons",
+        "nl": "Lepelaar, ibissen en reigers"
+      },
+      "intro": {
+        "en": "A mix of wetland birds led by the long-legged Spoonbill and Glossy Ibis, together with two big herons. The Northern Bald Ibis is the star here: dark with a bare red head and a long curved bill, living in small colonies on cliffs near the coast.",
+        "nl": "Een mix van watervogels, aangevoerd door de langpotige lepelaar en zwarte ibis, samen met twee grote reigers. De heremietibis is hier de ster: donker met een kale rode kop en een lange gebogen snavel, in kleine kolonies op kliffen bij de kust."
+      }
+    },
+    "vultures-hawks-and-allies-1": {
+      "title": {
+        "en": "Vultures, eagles and a kite",
+        "nl": "Gieren, arenden en een wouw"
+      },
+      "intro": {
+        "en": "These raptors perch on cliffs, soar over hillsides or hover over fields. The Bearded Vulture lives in the High Atlas gorges, the Egyptian Vulture is white with a yellow face, and the Black-winged Kite is a pale hoverer that you may see near Marrakech and Souss.",
+        "nl": "Deze roofvogels zitten op kliffen, zweven over hellingen of bidden boven velden. De lammergier leeft in kloven van de Hoge Atlas, de aasgier is wit met een geel gezicht, en de grijze wouw is een bleke bidder die je bij Marrakech en in Souss kunt zien."
+      }
+    },
+    "vultures-hawks-and-allies-2": {
+      "title": {
+        "en": "Eagles, harriers and a hawk",
+        "nl": "Arenden, kiekendieven en een havik"
+      },
+      "intro": {
+        "en": "Eagles, harriers and a hawk, many of them familiar from home. Short-toed and Bonelli's Eagles soar over the hills, Marsh and Montagu's Harriers quarter the open ground low, and the Sparrowhawk slips through the trees.",
+        "nl": "Arenden, kiekendieven en een havik, veel ervan bekend van thuis. Slangenarend en havikarend zweven boven de heuvels, bruine en grauwe kiekendief jagen laag over open terrein, en de sperwer glipt door de bomen."
+      }
+    },
+    "vultures-hawks-and-allies-3": {
+      "title": {
+        "en": "Kites, buzzards and big eagles",
+        "nl": "Wouwen, buizerds en grote arenden"
+      },
+      "intro": {
+        "en": "These large birds are best seen soaring on thermals in the mountains. Compare the tail shape and the way the wings are held: Griffon Vulture is huge with flat wings, Golden Eagle is dark with a golden nape, and Common Buzzard is smaller and more variable.",
+        "nl": "Deze grote vogels zie je het best zweven op thermiek in de bergen. Let op staartvorm en vleugelhouding: de vale gier is enorm met vlakke vleugels, de steenarend is donker met een goudkleurige nek, en de buizerd is kleiner en variabeler."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Owls",
+        "nl": "Uilen"
+      },
+      "intro": {
+        "en": "Owls are often seen by luck at their day roost or heard at dusk. Check size and habitat: the Little Owl is small and upright on rocks, the Pharaoh Eagle Owl is large with orange eyes, and the Maghreb Owl lives in the cedar woods.",
+        "nl": "Uilen zie je vaak bij toeval op hun dagrustplaats of hoor je in de schemer. Let op grootte en habitat: de steenuil is klein en rechtop op rotsen, de woestijnoehoe is groot met oranje ogen, en de Maghrebbosuil leeft in de cederbossen."
+      }
+    },
+    "hoopoes": {
+      "title": {
+        "en": "Hoopoe, bee-eaters and kingfisher",
+        "nl": "Hop, bijeneters en ijsvogel"
+      },
+      "intro": {
+        "en": "Colourful birds of open ground and waterside. The Hoopoe strolls across the lawn with its crest, the two bee-eaters hunt insects from the air in spring, and the Kingfisher flashes along a river or lagoon edge.",
+        "nl": "Kleurrijke vogels van open grond en waterkant. De hop wandelt met zijn kuif over het gras, de twee bijeneters vangen in het voorjaar insecten in de lucht, en de ijsvogel flitst langs een rivier of lagunerand."
+      }
+    },
+    "rollers-and-allies": {
+      "title": {
+        "en": "Roller and woodpeckers",
+        "nl": "Scharrelaar en spechten"
+      },
+      "intro": {
+        "en": "A blue roller of open country and two woodpeckers of the forest. The Roller is turquoise with chestnut back and sits on wires, and Levaillant's Woodpecker is a green woodpecker with red on the head, replacing our Green Woodpecker in Morocco.",
+        "nl": "Een blauwe scharrelaar van open land en twee spechten van het bos. De scharrelaar is turkoois met een kastanjebruine rug en zit op draden, en Levaillants specht is een groene specht met rood op de kop die in Marokko onze groene specht vervangt."
+      }
+    },
+    "falcons-and-caracaras": {
+      "title": {
+        "en": "Falcons",
+        "nl": "Valken"
+      },
+      "intro": {
+        "en": "Falcons are fast and long-winged. Compare size and the face pattern: the Kestrel hovers in a field, the Lesser Kestrel is a plain-backed male with a blue-grey head, and the Lanner is a large, pale-headed bird that flies low.",
+        "nl": "Valken zijn snel en langvleugelig. Let op grootte en gezichtstekening: de torenvalk bidt boven een veld, de kleine torenvalk is een mannetje met een effen rug en blauwgrijze kop, en de lannervalk is een grote vogel met een lichte kop die laag vliegt."
+      }
+    },
+    "old-world-orioles": {
+      "title": {
+        "en": "Shrikes, oriole and tchagra",
+        "nl": "Klauwieren, wielewaal en tchagra"
+      },
+      "intro": {
+        "en": "These birds sit on wires, bushes and treetops. The Woodchat Shrike has a chestnut cap, the Great Grey Shrike is grey and white and much paler than at home, the Golden Oriole is bright yellow, and the Tchagra is a hidden, chestnut-winged skulker.",
+        "nl": "Deze vogels zitten op draden, struiken en boomtoppen. De roodkopklauwier heeft een kastanjebruine kruin, de klapekster is grijs en wit en veel bleker dan thuis, de wielewaal is felgeel, en de tchagra is een verborgen schuwe vogel met kastanjebruine vleugels."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "title": {
+        "en": "Crows, choughs and magpies",
+        "nl": "Kraaiachtigen, kraaien en eksters"
+      },
+      "intro": {
+        "en": "Crows are familiar, but some here are different. The Maghreb Magpie has blue wings and a bare patch behind the eye, the Brown-necked Raven is smaller than a Raven with a brown nape, and the choughs hang around mountain cliffs and passes.",
+        "nl": "Kraaiachtigen zijn bekend, maar sommige hier zijn anders. De Maghrebekster heeft blauwe vleugels en een kale vlek achter het oog, de bruinnekraaf is kleiner dan een raaf met een bruine nek, en de kraaien van de bergen hangen rond kliffen en passen."
+      }
+    },
+    "tits-chickadees-and-titmice": {
+      "title": {
+        "en": "Tits",
+        "nl": "Mezen"
+      },
+      "intro": {
+        "en": "Tits move in lively groups through the canopy. The African Blue Tit looks like a Blue Tit but has a darker blue cap and back, and the Coal Tit and Great Tit are the familiar ones.",
+        "nl": "Mezen trekken in drukke groepjes door het bladerdak. De Afrikaanse pimpelmees lijkt op een pimpelmees maar heeft een donkerder blauwe kruin en rug, en zwarte mees en koolmees zijn de bekende soorten."
+      }
+    },
+    "larks-1": {
+      "title": {
+        "en": "Larks of the desert edge",
+        "nl": "Leeuweriken van de woestijnrand"
+      },
+      "intro": {
+        "en": "Desert larks are often a challenge: dull sandy birds on sandy ground. Compare bill thickness, wing pattern and habitat, and look for the Greater Hoopoe-Lark with its black-and-white wings, a bird that is easy once you see it display.",
+        "nl": "Woestijnleeuweriken zijn vaak een uitdaging: saaie zandkleurige vogels op zandgrond. Vergelijk snavel, vleugeltekening en habitat, en zoek naar de witbandleeuwerik met zijn zwartwitte vleugels, een vogel die makkelijk is als je hem zijn baltsvlucht ziet doen."
+      }
+    },
+    "larks-2": {
+      "title": {
+        "en": "Larks of steppe and plain",
+        "nl": "Leeuweriken van steppe en vlakte"
+      },
+      "intro": {
+        "en": "Fields and open plains hold these larks. The Skylark and Crested Lark are familiar, Thekla's Lark is a near-twin of the Crested Lark, and Dupont's Lark, the shy Moroccan special, is a hard bird that mostly gives itself away by its song at dawn.",
+        "nl": "Velden en open vlaktes houden deze leeuweriken. Veld- en kuifleeuwerik zijn bekend, de Theklaleeuwerik is bijna een tweeling van de kuifleeuwerik, en Duponts leeuwerik, de schuwe Marokkaanse specialiteit, is een moeilijke vogel die zich meestal verraadt met zijn zang bij zonsopgang."
+      }
+    },
+    "cisticolas-and-allies": {
+      "title": {
+        "en": "Cisticola and other warblers",
+        "nl": "Graszanger en andere zangers"
+      },
+      "intro": {
+        "en": "Small brown warblers of reeds, scrub and grass. The Zitting Cisticola has a tail with a white tip and sings from the air, the Melodious Warbler is yellowish, and the Moustached Warbler is a reed skulker with a dark cap.",
+        "nl": "Kleine bruine zangers van riet, struikgewas en gras. De graszanger heeft een staart met witte punt en zingt vanuit de lucht, de orpheusspotvogel is geelachtig, en de zwartkoprietzanger is een rietsluiper met een donkere kruin."
+      }
+    },
+    "martins-and-swallows": {
+      "title": {
+        "en": "Swallows and martins",
+        "nl": "Zwaluwen"
+      },
+      "intro": {
+        "en": "Swallows are easy to confuse in flight, so look at the tail and underparts. The Crag and Rock Martins are brown, with small white spots in the tail, and the Red-rumped Swallow has a pale rump.",
+        "nl": "Zwaluwen zijn in de vlucht makkelijk te verwarren, dus kijk naar staart en onderkant. De rots- en vale rotszwaluw zijn bruin met kleine witte vlekjes in de staart, en de roodstuitzwaluw heeft een lichte stuit."
+      }
+    },
+    "bulbuls": {
+      "title": {
+        "en": "The Common Bulbul",
+        "nl": "De bulbul"
+      },
+      "intro": {
+        "en": "A sociable songbird you will see in nearly every garden. Look for the dark head, the white eye-ring and the yellow-orange patch under the tail.",
+        "nl": "Een gezellige zangvogel die je in bijna elke tuin ziet. Let op de donkere kop, de witte oogring en de geeloranje vlek onder de staart."
+      }
+    },
+    "leaf-warblers": {
+      "title": {
+        "en": "Leaf warblers and Scrub Warbler",
+        "nl": "Bladkoningen en woestijnzanger"
+      },
+      "intro": {
+        "en": "Small olive-green warblers that are hard to tell apart without hearing the song. Chiffchaff and Iberian Chiffchaff are nearly alike, so rely on the song, and look for the Scrub Warbler cocking its long tail among the rocks.",
+        "nl": "Kleine olijfgroene zangers die je zonder zang moeilijk uit elkaar houdt. Tjiftjaf en Iberische tjiftjaf lijken bijna op elkaar, dus vertrouw op de zang, en zoek naar de maquiszanger die zijn lange staart opwipt tussen de rotsen."
+      }
+    },
+    "sylviid-warblers-1": {
+      "title": {
+        "en": "Blackcap, Sardinian and desert warblers",
+        "nl": "Zwartkop, kleine zwartkop en woestijnzangers"
+      },
+      "intro": {
+        "en": "Sardinian Warbler is the commonest of all, with its black head and red eye ring. Blackcap and Western Orphean Warbler have darker heads, and Tristram's Warbler, with a dark head and rufous wings, is the one to search for in the mountains.",
+        "nl": "De kleine zwartkop is de algemeenste, met zwarte kop en rode oogring. Zwartkop en westelijke orpheusgrasmus hebben donkere koppen, en de Atlasgrasmus, met donkere kop en roodbruine vleugels, is degene waarnaar je in de bergen zoekt."
+      }
+    },
+    "sylviid-warblers-2": {
+      "title": {
+        "en": "Whitethroats and small Sylvia warblers",
+        "nl": "Grasmussen en kleine Sylvia's"
+      },
+      "intro": {
+        "en": "Small warblers of scrub and open ground. Look at the throat and underparts: Subalpine Warbler is pinkish-orange, Spectacled Warbler has a white throat and rufous wings, and Dartford Warbler is dark with a long tail.",
+        "nl": "Kleine zangers van struikgewas en open grond. Kijk naar keel en onderzijde: de baardgrasmus is roze-oranje, de brilgrasmus heeft een witte keel en roodbruine vleugels, en de Provençaalse grasmus is donker met een lange staart."
+      }
+    },
+    "laughingthrushes-and-allies": {
+      "title": {
+        "en": "Wren, treecreeper, chatterer, firecrest",
+        "nl": "Winterkoning, boomkruiper, babbelaar, vuurgoudhaan"
+      },
+      "intro": {
+        "en": "A mixed set of small birds, each easy once you know it. The Fulvous Chatterer is a long-tailed, noisy bird of oases, the Firecrest and Treecreeper work the cedar trees, and the Wren sings from rocks.",
+        "nl": "Een gemengd setje kleine vogels, elk makkelijk als je het kent. De bruingele babbelaar is een langstaartige, luidruchtige vogel van oases, vuurgoudhaan en boomkruiper werken in de cederbomen, en de winterkoning zingt vanaf rotsen."
+      }
+    },
+    "starlings-and-mynas": {
+      "title": {
+        "en": "Starlings and thrushes",
+        "nl": "Spreeuwen en lijsters"
+      },
+      "intro": {
+        "en": "Starlings and thrushes here are the same as at home, with a twist. The Spotless Starling is an all-dark bird with no spots, and the Mistle Thrush and Song Thrush need a look at size and breast spots.",
+        "nl": "Spreeuwen en lijsters zijn hier zoals thuis, met een twist. De zwarte spreeuw is een geheel donkere vogel zonder spikkels, en bij grote lijster en zanglijster let je op grootte en borstvlekken."
+      }
+    },
+    "old-world-flycatchers-1": {
+      "title": {
+        "en": "Flycatchers, robins and a redstart",
+        "nl": "Vliegenvangers, roodborst en een roodstaart"
+      },
+      "intro": {
+        "en": "A mixed unit of woodland and scrub. The Atlas Flycatcher looks like a Pied Flycatcher, Moussier's Redstart is a colourful black-and-orange bird of the mountains, and the Rufous-tailed Scrub Robin cocks its fanned tail in low scrub.",
+        "nl": "Een gemengde groep van bos en struikgewas. De Atlasvliegenvanger lijkt op een bonte vliegenvanger, de diadeemroodstaart is een kleurrijke zwart-oranje vogel van de bergen, en de rosse waaierstaart waaiert zijn staart in laag struikgewas."
+      }
+    },
+    "old-world-flycatchers-2": {
+      "title": {
+        "en": "Chats, redstarts and Atlas Wheatear",
+        "nl": "Tapuiten, roodstaarten en Atlastapuit"
+      },
+      "intro": {
+        "en": "Chats, redstarts and a wheatear of the mountains. Compare Common and Black Redstart, check the Stonechat on the fence, and look for the Atlas Wheatear on the high stony plateaus.",
+        "nl": "Tapuiten, roodstaarten en een tapuit van de bergen. Vergelijk gekraagde en zwarte roodstaart, kijk naar de roodborsttapuit op het hek, en zoek de Atlastapuit op de hoge stenige plateaus."
+      }
+    },
+    "old-world-flycatchers-3": {
+      "title": {
+        "en": "Wheatears and the nightingale",
+        "nl": "Tapuiten en de nachtegaal"
+      },
+      "intro": {
+        "en": "Wheatears of rocky desert are a classic Moroccan group, with a lot of black, white and rufous. Note the tail pattern and the extent of the black on the throat; the Nightingale and the Alpine Accentor join them as familiar and mountain visitors.",
+        "nl": "Tapuiten van rotsachtige woestijn zijn een klassieke Marokkaanse groep, met veel zwart, wit en roestbruin. Let op de staarttekening en hoeveel zwart de keel heeft; de nachtegaal en de alpenheggenmus voegen zich erbij als bekende en bergvogels."
+      }
+    },
+    "old-world-sparrows": {
+      "title": {
+        "en": "Sparrows",
+        "nl": "Mussen"
+      },
+      "intro": {
+        "en": "Sparrows of village and desert. Spanish Sparrow males have a chestnut crown and heavy black streaks, and the Desert Sparrow is a pale, sandy bird found only in the far south.",
+        "nl": "Mussen van dorp en woestijn. Spaanse musmannetjes hebben een kastanjebruine kruin en zware zwarte strepen, en de woestijnmus is een bleke, zandkleurige vogel die je alleen in het uiterste zuiden vindt."
+      }
+    },
+    "wagtails-and-pipits": {
+      "title": {
+        "en": "Wagtails and a pipit",
+        "nl": "Kwikstaarten en een pieper"
+      },
+      "intro": {
+        "en": "Wagtails wag their tails along the water and on lawns. The Grey Wagtail has a long tail and yellow underparts, and the Tawny Pipit is a long-legged pale bird of dry open ground.",
+        "nl": "Kwikstaarten wippen met hun staart langs het water en op gazons. De grote gele kwikstaart heeft een lange staart en gele onderzijde, en de duinpieper is een langpotige bleke vogel van droge open grond."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "title": {
+        "en": "Finches",
+        "nl": "Vinken"
+      },
+      "intro": {
+        "en": "The familiar finches share the scene with three local ones. Look for the Trumpeter Finch, with its stubby red bill and pinkish plumage, on desert slopes, and the Crimson-winged Finch with its red wing patch high in the mountains.",
+        "nl": "De bekende vinken delen het toneel met drie lokale soorten. Zoek de woestijnvink, met zijn korte rode snavel en roze verenkleed, op woestijnhellingen, en de rode bergvink met zijn rode vleugelvlek hoog in de bergen."
+      }
+    },
+    "old-world-buntings": {
+      "title": {
+        "en": "Buntings",
+        "nl": "Gorzen"
+      },
+      "intro": {
+        "en": "Buntings of open and rocky country. The Rock Bunting has a striped head and the House Bunting is warm rufous with a grey head, often tame around villages.",
+        "nl": "Gorzen van open en rotsachtig land. De grijze gors heeft een gestreepte kop en de huisgors is warm roestbruin met een grijze kop, vaak tam rond dorpen."
+      }
+    }
+  },
+  "species": {},
+  "first_day": {
+    "title": {
+      "en": "Your first day in Morocco",
+      "nl": "Je eerste dag in Marokko"
+    },
+    "intro": {
+      "en": "The twenty birds you will meet in the first hours: around the hotel, in the medina, along the road and at the coast. Several you know already, a few look just different enough to be worth a second look.",
+      "nl": "De twintig vogels die je de eerste uren tegenkomt: bij het hotel, in de medina, langs de weg en aan de kust. Een aantal ken je al, een paar zien er net anders genoeg uit om goed te kijken."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "Morocco has no bird of its own that lives nowhere else, but the Maghreb does. Atlas Flycatcher, Maghreb Magpie, Maghreb Owl and Levaillant's Woodpecker live only in north-west Africa, and the Northern Bald Ibis hangs on in tiny numbers on the Atlantic coast. This chapter gathers fifteen of these Maghreb specialities and near-endemics, most of them shared with Algeria and Tunisia.",
+      "nl": "Marokko heeft geen vogel die nergens anders voorkomt, maar de Maghreb wel. Atlasvliegenvanger, Maghrebekster, Maghrebbosuil en Levaillants specht leven alleen in Noordwest-Afrika, en de heremietibis houdt het met een handvol vogels vol aan de Atlantische kust. Dit hoofdstuk verzamelt vijftien van deze specialiteiten en bijna-endemen, de meeste gedeeld met Algerije en Tunesië."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "Cedar forest of the Middle Atlas",
+          "nl": "Cederbos van de Midden-Atlas"
+        },
+        "text": {
+          "en": "Around Azrou and Ifrane the cedar and oak forest holds Atlas Flycatcher, African Blue Tit, Levaillant's Woodpecker and African Chaffinch, and Maghreb Magpie in the more open parts. Go in May and June, when the males sing.",
+          "nl": "Rond Azrou en Ifrane herbergt het cederen- en eikenbos Atlasvliegenvanger, Afrikaanse pimpelmees, Levaillants specht en Afrikaanse vink, en in de opener delen de Maghrebekster. Ga in mei en juni, als de mannetjes zingen."
+        }
+      },
+      {
+        "title": {
+          "en": "High Atlas and the Oukaimeden plateau",
+          "nl": "Hoge Atlas en het plateau van Oukaïmeden"
+        },
+        "text": {
+          "en": "Above the tree line, the stony slopes of the Oukaimeden ski resort near Marrakech are the place for Crimson-winged Finch, Atlas Wheatear and Moussier's Redstart in the gullies below. Dress warmly: it is cold even in spring.",
+          "nl": "Boven de boomgrens zijn de stenige hellingen van Oukaïmeden bij Marrakesh de plek voor de rode bergvink en Seebohms tapuit, met diadeemroodstaart in de geulen eronder. Kleed je warm: ook in het voorjaar is het er koud."
+        }
+      },
+      {
+        "title": {
+          "en": "Steppe and desert near Boumalne and Merzouga",
+          "nl": "Steppe en woestijn bij Boumalne en Merzouga"
+        },
+        "text": {
+          "en": "The stony plains near Boumalne Dades and the dunes at Merzouga hold Dupont's Lark, Desert Sparrow and Double-spurred Spurfowl, with a good guide. Dupont's Lark is the hardest: it sings at first light and then vanishes.",
+          "nl": "De stenige vlakten bij Boumalne Dades en de duinen bij Merzouga hebben Duponts leeuwerik, woestijnmus en Barbarijse frankolijn, met een goede gids. Duponts leeuwerik is de moeilijkste: hij zingt bij het eerste licht en verdwijnt dan."
+        }
+      },
+      {
+        "title": {
+          "en": "Atlantic coast and Souss-Massa",
+          "nl": "Atlantische kust en Souss-Massa"
+        },
+        "text": {
+          "en": "The cliffs and river mouth of Souss-Massa National Park are the most reliable site for Northern Bald Ibis. Barbary Partridge and Tristram's Warbler live in the scrub nearby.",
+          "nl": "De kliffen en riviermonding van het nationaal park Souss-Massa zijn de betrouwbaarste plek voor de heremietibis. In de struiken ernaast leven Barbarijse patrijs en Atlasgrasmus."
+        }
+      }
+    ],
+    "families": [],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "Maghreb birds: partridges, ibis, owl",
+          "nl": "Maghrebvogels: patrijzen, ibis, uil"
+        }
+      },
+      "endemics-2": {
+        "title": {
+          "en": "Maghreb birds: magpie, tit, lark, warbler",
+          "nl": "Maghrebvogels: ekster, mees, leeuwerik, zanger"
+        }
+      },
+      "endemics-3": {
+        "title": {
+          "en": "Maghreb birds: redstart, wheatear, finches",
+          "nl": "Maghrebvogels: roodstaart, tapuit, vinken"
+        }
+      }
+    }
+  }
+}

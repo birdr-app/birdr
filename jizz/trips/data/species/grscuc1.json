@@ -1,0 +1,22 @@
+{
+  "code": "grscuc1",
+  "name": {
+    "en": "Great Spotted Cuckoo",
+    "nl": "Kuifkoekoek"
+  },
+  "latin": "Clamator glandarius",
+  "look_for": [
+    {
+      "en": "Grey **crest** on a dark **cap**",
+      "nl": "Grijze **kuif** op een donkere **kap**"
+    },
+    {
+      "en": "Black-brown above with white spots, cream below",
+      "nl": "Zwartbruin met witte vlekjes, crème onder"
+    },
+    {
+      "en": "Long, white-tipped **tail**",
+      "nl": "Lange **staart** met witte punten"
+    }
+  ]
+}

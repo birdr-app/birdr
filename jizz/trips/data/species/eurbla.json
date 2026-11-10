@@ -1,0 +1,22 @@
+{
+  "code": "eurbla",
+  "name": {
+    "en": "Eurasian Blackbird",
+    "nl": "Merel"
+  },
+  "latin": "Turdus merula",
+  "look_for": [
+    {
+      "en": "Male all black with orange-yellow **bill**",
+      "nl": "Man helemaal zwart met oranjegele **snavel**"
+    },
+    {
+      "en": "Yellow ring round the **eye**",
+      "nl": "Gele ring om het **oog**"
+    },
+    {
+      "en": "Female plain dark brown, paler **throat**",
+      "nl": "Vrouw egaal donkerbruin, lichtere **keel**"
+    }
+  ]
+}

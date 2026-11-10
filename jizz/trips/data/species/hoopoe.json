@@ -1,0 +1,22 @@
+{
+  "code": "hoopoe",
+  "name": {
+    "en": "Common Hoopoe",
+    "nl": "Hop"
+  },
+  "latin": "Upupa epops",
+  "look_for": [
+    {
+      "en": "Orange **crest** tipped with black",
+      "nl": "Oranje **kuif** met zwarte punten"
+    },
+    {
+      "en": "Long thin curved **bill**, pinkish body",
+      "nl": "Lange dunne gebogen **snavel**, roze lijf"
+    },
+    {
+      "en": "Black-and-white barred **wings**",
+      "nl": "Zwart-wit gebandeerde **vleugels**"
+    }
+  ]
+}

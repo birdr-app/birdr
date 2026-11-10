@@ -1,0 +1,22 @@
+{
+  "code": "marowl2",
+  "name": {
+    "en": "Marsh Owl",
+    "nl": "Afrikaanse velduil"
+  },
+  "latin": "Asio capensis",
+  "look_for": [
+    {
+      "en": "Dark brown owl of damp open grassland",
+      "nl": "Donkerbruine uil van vochtig open grasland"
+    },
+    {
+      "en": "Pale buff **face** with dark **eyes**",
+      "nl": "Licht bruin **gezicht** met donkere **ogen**"
+    },
+    {
+      "en": "Slim, long-**winged**, flies low at dusk",
+      "nl": "Slank met lange **vleugels**, vliegt laag in de schemering"
+    }
+  ]
+}

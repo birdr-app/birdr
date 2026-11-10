@@ -1,0 +1,22 @@
+{
+  "code": "firecr1",
+  "name": {
+    "en": "Common Firecrest",
+    "nl": "Vuurgoudhaan"
+  },
+  "latin": "Regulus ignicapilla",
+  "look_for": [
+    {
+      "en": "Bold black eye-stripe, white eyebrow",
+      "nl": "Zwarte oogstreep, witte wenkbrauw"
+    },
+    {
+      "en": "Orange-gold stripe on the **crown**",
+      "nl": "Oranjegouden streep op de **kruin**"
+    },
+    {
+      "en": "Tiny, green above, restless in foliage",
+      "nl": "Piepklein, groen boven, onrustig in het loof"
+    }
+  ]
+}

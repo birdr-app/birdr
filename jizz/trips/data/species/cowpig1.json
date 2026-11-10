@@ -1,0 +1,22 @@
+{
+  "code": "cowpig1",
+  "name": {
+    "en": "Common Woodpigeon",
+    "nl": "Houtduif"
+  },
+  "latin": "Columba palumbus",
+  "look_for": [
+    {
+      "en": "Big, plump pigeon with pink **chest**",
+      "nl": "Grote, dikke duif met roze **borst**"
+    },
+    {
+      "en": "White patch on each side of the **neck**",
+      "nl": "Witte vlek aan weerszijden van de **hals**"
+    },
+    {
+      "en": "White **wing** bar shows in flight",
+      "nl": "Witte **vleugel**streep zichtbaar in de vlucht"
+    }
+  ]
+}

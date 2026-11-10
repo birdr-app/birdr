@@ -1,0 +1,22 @@
+{
+  "code": "eurjay1",
+  "name": {
+    "en": "Eurasian Jay",
+    "nl": "Gaai"
+  },
+  "latin": "Garrulus glandarius",
+  "look_for": [
+    {
+      "en": "Pinkish-brown body, black **moustache**",
+      "nl": "Roze-bruin lijf, zwarte **baardstreep**"
+    },
+    {
+      "en": "Blue and black barred **wing** patch",
+      "nl": "Blauw-zwart gebandeerd **vleugelvlak**"
+    },
+    {
+      "en": "White **rump**, black tail, harsh screech",
+      "nl": "Witte **stuit**, zwarte staart, rauwe schreeuw"
+    }
+  ]
+}

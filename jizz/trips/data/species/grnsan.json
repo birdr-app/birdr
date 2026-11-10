@@ -1,0 +1,22 @@
+{
+  "code": "grnsan",
+  "name": {
+    "en": "Green Sandpiper",
+    "nl": "Witgat"
+  },
+  "latin": "Tringa ochropus",
+  "look_for": [
+    {
+      "en": "Dark olive-brown above, white below",
+      "nl": "Donker olijfbruin boven, wit onder"
+    },
+    {
+      "en": "Bright white **rump**, dark underwing",
+      "nl": "Heldere witte **stuit**, donkere onderkant van de vleugel"
+    },
+    {
+      "en": "Bobs, flushes from ditches with sharp calls",
+      "nl": "Wipt, vliegt op uit sloten met scherpe roep"
+    }
+  ]
+}

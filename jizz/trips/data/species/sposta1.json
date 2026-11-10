@@ -1,0 +1,22 @@
+{
+  "code": "sposta1",
+  "name": {
+    "en": "Spotless Starling",
+    "nl": "Zwarte spreeuw"
+  },
+  "latin": "Sturnus unicolor",
+  "look_for": [
+    {
+      "en": "Plain glossy black, no spots",
+      "nl": "Egaal glanzend zwart, zonder spikkels"
+    },
+    {
+      "en": "Shaggy **throat** feathers, yellow bill in summer",
+      "nl": "Warrige **keel**veren, in de zomer gele snavel"
+    },
+    {
+      "en": "Common in towns, sings from rooftops",
+      "nl": "Algemeen in dorpen, zingt vanaf daken"
+    }
+  ]
+}

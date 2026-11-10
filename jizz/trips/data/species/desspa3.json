@@ -1,0 +1,22 @@
+{
+  "code": "desspa3",
+  "name": {
+    "en": "Desert Sparrow",
+    "nl": "Woestijnmus"
+  },
+  "latin": "Passer simplex",
+  "look_for": [
+    {
+      "en": "Pale sandy bird with black **bill**",
+      "nl": "Bleke zandkleurige vogel met zwarte **snavel**"
+    },
+    {
+      "en": "Male: black **bib**, black stripe through the eye",
+      "nl": "Mannetje: zwarte **bef**, zwarte streep door het oog"
+    },
+    {
+      "en": "Plain pale female, always in true desert",
+      "nl": "Effen bleek vrouwtje, altijd in echte woestijn"
+    }
+  ]
+}

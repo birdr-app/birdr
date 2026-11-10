@@ -1,0 +1,22 @@
+{
+  "code": "eurspa1",
+  "name": {
+    "en": "Eurasian Sparrowhawk",
+    "nl": "Sperwer"
+  },
+  "latin": "Accipiter nisus",
+  "look_for": [
+    {
+      "en": "Small hawk with short, broad **wings**",
+      "nl": "Kleine havik met korte, brede **vleugels**"
+    },
+    {
+      "en": "Male: blue-grey above, orange-barred **breast**",
+      "nl": "Mannetje: blauwgrijs boven, oranje gebande **borst**"
+    },
+    {
+      "en": "Long **tail** with dark bars, yellow **eye**",
+      "nl": "Lange **staart** met donkere banden, geel **oog**"
+    }
+  ]
+}

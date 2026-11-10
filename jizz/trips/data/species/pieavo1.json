@@ -1,0 +1,22 @@
+{
+  "code": "pieavo1",
+  "name": {
+    "en": "Pied Avocet",
+    "nl": "Kluut"
+  },
+  "latin": "Recurvirostra avosetta",
+  "look_for": [
+    {
+      "en": "Upturned thin **bill**, black and white",
+      "nl": "Opgebogen dunne **snavel**, zwart-wit"
+    },
+    {
+      "en": "Sweeps its **bill** sideways in shallows",
+      "nl": "Zwaait de **snavel** zijwaarts door ondiep water"
+    },
+    {
+      "en": "Long blue-grey **legs**",
+      "nl": "Lange blauwgrijze **poten**"
+    }
+  ]
+}

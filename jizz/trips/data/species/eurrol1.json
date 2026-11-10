@@ -1,0 +1,22 @@
+{
+  "code": "eurrol1",
+  "name": {
+    "en": "European Roller",
+    "nl": "Scharrelaar"
+  },
+  "latin": "Coracias garrulus",
+  "look_for": [
+    {
+      "en": "Turquoise-blue **head** and body",
+      "nl": "Turkooisblauwe **kop** en lijf"
+    },
+    {
+      "en": "Chestnut **back**, dark blue **wings** in flight",
+      "nl": "Kastanjebruine **rug**, donkerblauwe **vleugels** in de vlucht"
+    },
+    {
+      "en": "Perches upright on wires and poles",
+      "nl": "Zit rechtop op draden en palen"
+    }
+  ]
+}

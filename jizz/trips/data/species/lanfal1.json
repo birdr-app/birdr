@@ -1,0 +1,22 @@
+{
+  "code": "lanfal1",
+  "name": {
+    "en": "Lanner Falcon",
+    "nl": "Lannervalk"
+  },
+  "latin": "Falco biarmicus",
+  "look_for": [
+    {
+      "en": "Rufous **crown**, pale cheeks, thin moustache",
+      "nl": "Roestrode **kruin**, bleke wangen, dunne baard"
+    },
+    {
+      "en": "Big falcon with broad wings, long tail",
+      "nl": "Grote valk met brede vleugels, lange staart"
+    },
+    {
+      "en": "Dark spots on creamy underparts",
+      "nl": "Donkere vlekken op roomwitte onderkant"
+    }
+  ]
+}

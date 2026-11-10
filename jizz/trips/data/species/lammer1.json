@@ -1,0 +1,22 @@
+{
+  "code": "lammer1",
+  "name": {
+    "en": "Bearded Vulture",
+    "nl": "Lammergier"
+  },
+  "latin": "Gypaetus barbatus",
+  "look_for": [
+    {
+      "en": "Huge, long-winged vulture, wedge-shaped **tail**",
+      "nl": "Enorme gier met lange **vleugels** en wigvormige **staart**"
+    },
+    {
+      "en": "Orange-washed **underparts**, dark mask and **beard**",
+      "nl": "Oranje **onderlijf**, donker masker en **baard**"
+    },
+    {
+      "en": "Soars over cliffs and high mountains",
+      "nl": "Zweeft boven kliffen en hoge bergen"
+    }
+  ]
+}

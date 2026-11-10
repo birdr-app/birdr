@@ -1,0 +1,22 @@
+{
+  "code": "compoc",
+  "name": {
+    "en": "Common Pochard",
+    "nl": "Tafeleend"
+  },
+  "latin": "Aythya ferina",
+  "look_for": [
+    {
+      "en": "Male: chestnut **head**, grey body",
+      "nl": "Mannetje: kastanjebruine **kop**, grijs lijf"
+    },
+    {
+      "en": "Black **chest** and black rear end",
+      "nl": "Zwarte **borst** en zwart achterlijf"
+    },
+    {
+      "en": "Grey **bill** with a pale band",
+      "nl": "Grijze **snavel** met een lichte band"
+    }
+  ]
+}

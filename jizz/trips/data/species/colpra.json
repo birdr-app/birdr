@@ -1,0 +1,22 @@
+{
+  "code": "colpra",
+  "name": {
+    "en": "Collared Pratincole",
+    "nl": "Vorkstaartplevier"
+  },
+  "latin": "Glareola pratincola",
+  "look_for": [
+    {
+      "en": "Slim, tern-like with long pointed **wings**",
+      "nl": "Slank, sternachtig met lange puntige **vleugels**"
+    },
+    {
+      "en": "Cream **throat** edged with a black line",
+      "nl": "Crème **keel** met een zwarte rand"
+    },
+    {
+      "en": "Deeply forked **tail**, red-based **bill**",
+      "nl": "Diep gevorkte **staart**, **snavel** met rode basis"
+    }
+  ]
+}

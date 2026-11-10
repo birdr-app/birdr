@@ -1,0 +1,22 @@
+{
+  "code": "rekcoo1",
+  "name": {
+    "en": "Red-knobbed Coot",
+    "nl": "Knobbelmeerkoet"
+  },
+  "latin": "Fulica cristata",
+  "look_for": [
+    {
+      "en": "Dark coot with two red knobs on the **forehead**",
+      "nl": "Donkere meerkoet met twee rode knobbels op het **voorhoofd**"
+    },
+    {
+      "en": "Blue-grey **bill** with a white **shield**",
+      "nl": "Blauwgrijze **snavel** met een wit **schild**"
+    },
+    {
+      "en": "Smaller, slimmer than Eurasian Coot, shy",
+      "nl": "Kleiner en slanker dan de Meerkoet, schuw"
+    }
+  ]
+}

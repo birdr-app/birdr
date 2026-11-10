@@ -1,0 +1,22 @@
+{
+  "code": "spewar2",
+  "name": {
+    "en": "Spectacled Warbler",
+    "nl": "Brilgrasmus"
+  },
+  "latin": "Curruca conspicillata",
+  "look_for": [
+    {
+      "en": "Bold white eye-ring, grey **head**",
+      "nl": "Opvallende witte oogring, grijze **kop**"
+    },
+    {
+      "en": "Rusty-edged wings, pinkish breast",
+      "nl": "Roestrandige vleugels, roze borst"
+    },
+    {
+      "en": "Skulks low in salty scrub",
+      "nl": "Sluipt laag door zilt struikgewas"
+    }
+  ]
+}

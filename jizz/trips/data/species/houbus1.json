@@ -1,0 +1,22 @@
+{
+  "code": "houbus1",
+  "name": {
+    "en": "African Houbara",
+    "nl": "Westelijke kraagtrap"
+  },
+  "latin": "Chlamydotis undulata",
+  "look_for": [
+    {
+      "en": "Large sandy bustard, spotted above",
+      "nl": "Grote zandkleurige trap, boven gespikkeld"
+    },
+    {
+      "en": "Black stripe down the side of the **neck**",
+      "nl": "Zwarte streep langs de zijkant van de **hals**"
+    },
+    {
+      "en": "Freezes or walks off rather than flying",
+      "nl": "Verstijft of loopt weg in plaats van op te vliegen"
+    }
+  ]
+}

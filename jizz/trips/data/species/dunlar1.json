@@ -1,0 +1,22 @@
+{
+  "code": "dunlar1",
+  "name": {
+    "en": "Dunn's Lark",
+    "nl": "Afrikaanse Dunns leeuwerik"
+  },
+  "latin": "Eremalauda dunni",
+  "look_for": [
+    {
+      "en": "Pale sandy plumage, plain and chunky",
+      "nl": "Bleek zandkleurig, effen en gedrongen"
+    },
+    {
+      "en": "Thick, pale **bill**",
+      "nl": "Dikke, lichte **snavel**"
+    },
+    {
+      "en": "Open stony desert, often in flocks",
+      "nl": "Open stenige woestijn, vaak in groepjes"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "sposan1",
+  "name": {
+    "en": "Spotted Sandgrouse",
+    "nl": "Sahelzandhoen"
+  },
+  "latin": "Pterocles senegallus",
+  "look_for": [
+    {
+      "en": "Pale sandy bird with a dark **belly**",
+      "nl": "Bleke zandkleurige vogel met een donkere **buik**"
+    },
+    {
+      "en": "Long pointed **tail**, narrow pointed **wings**",
+      "nl": "Lange spitse **staart**, smalle spitse **vleugels**"
+    },
+    {
+      "en": "Flocks flock to water in the morning",
+      "nl": "Groepen vliegen 's ochtends naar het water"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "waldra1",
+  "name": {
+    "en": "Northern Bald Ibis",
+    "nl": "Heremietibis"
+  },
+  "latin": "Geronticus eremita",
+  "look_for": [
+    {
+      "en": "Black, glossy ibis with a bare red **face**",
+      "nl": "Zwarte, glanzende ibis met een kaal rood **gezicht**"
+    },
+    {
+      "en": "Long curved red **bill**, shaggy **nape** plumes",
+      "nl": "Lange gebogen rode **snavel**, ragfijne **nek**pluimen"
+    },
+    {
+      "en": "Walks in flocks on cliffs and dry slopes",
+      "nl": "Loopt in groepen op kliffen en droge hellingen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "norwhe3",
+  "name": {
+    "en": "Atlas Wheatear",
+    "nl": "Seebohms tapuit"
+  },
+  "latin": "Oenanthe seebohmi",
+  "look_for": [
+    {
+      "en": "Male black **throat** and face, pale **crown**",
+      "nl": "Man met zwarte **keel** en kop, lichte **kruin**"
+    },
+    {
+      "en": "White **rump**, black T on the **tail**",
+      "nl": "Witte **stuit**, zwarte T op de **staart**"
+    },
+    {
+      "en": "Stony slopes and plateaus in the Atlas",
+      "nl": "Stenige hellingen en plateaus in de Atlas"
+    }
+  ]
+}

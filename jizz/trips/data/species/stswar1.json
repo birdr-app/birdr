@@ -1,0 +1,22 @@
+{
+  "code": "stswar1",
+  "name": {
+    "en": "Scrub Warbler",
+    "nl": "Maquiszanger"
+  },
+  "latin": "Scotocerca inquieta",
+  "look_for": [
+    {
+      "en": "Long tail often cocked upright",
+      "nl": "Lange staart vaak omhoog gehouden"
+    },
+    {
+      "en": "Pale sandy-grey, dark streaked **crown**",
+      "nl": "Bleek zandgrijs, donker gestreepte **kruin**"
+    },
+    {
+      "en": "Runs on the ground among desert scrub",
+      "nl": "Rent over de grond tussen woestijnstruiken"
+    }
+  ]
+}

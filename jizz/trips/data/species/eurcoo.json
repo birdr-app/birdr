@@ -1,0 +1,22 @@
+{
+  "code": "eurcoo",
+  "name": {
+    "en": "Eurasian Coot",
+    "nl": "Meerkoet"
+  },
+  "latin": "Fulica atra",
+  "look_for": [
+    {
+      "en": "All-black waterbird with a white **bill**",
+      "nl": "Zwarte watervogel met een witte **snavel**"
+    },
+    {
+      "en": "White **shield** on the **forehead**",
+      "nl": "Wit **schild** op het **voorhoofd**"
+    },
+    {
+      "en": "Lobed toes, dives and bobs on open water",
+      "nl": "Gelobde tenen, duikt en wipt op open water"
+    }
+  ]
+}

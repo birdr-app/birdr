@@ -1,0 +1,22 @@
+{
+  "code": "booeag1",
+  "name": {
+    "en": "Booted Eagle",
+    "nl": "Dwergarend"
+  },
+  "latin": "Hieraaetus pennatus",
+  "look_for": [
+    {
+      "en": "Small eagle with white spots at **wing** base",
+      "nl": "Kleine arend met witte vlekken bij de **vleugel**basis"
+    },
+    {
+      "en": "Pale and dark forms, square-ended **tail**",
+      "nl": "Lichte en donkere vorm, rechte **staart**"
+    },
+    {
+      "en": "Pale form: dark flight feathers underneath",
+      "nl": "Lichte vorm: donkere slagpennen aan de onderkant"
+    }
+  ]
+}

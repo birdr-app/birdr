@@ -1,0 +1,22 @@
+{
+  "code": "deswhe1",
+  "name": {
+    "en": "Desert Wheatear",
+    "nl": "Woestijntapuit"
+  },
+  "latin": "Oenanthe deserti",
+  "look_for": [
+    {
+      "en": "Male black **throat** and **wings** on sandy body",
+      "nl": "Man met zwarte **keel** en **vleugels** op een zandkleurig lijf"
+    },
+    {
+      "en": "Plain sandy **back**, almost all-black **tail**",
+      "nl": "Effen zandkleurige **rug**, bijna helemaal zwarte **staart**"
+    },
+    {
+      "en": "Open sandy and stony desert",
+      "nl": "Open zandige en stenige woestijn"
+    }
+  ]
+}

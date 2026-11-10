@@ -1,0 +1,22 @@
+{
+  "code": "monhar1",
+  "name": {
+    "en": "Montagu's Harrier",
+    "nl": "Grauwe kiekendief"
+  },
+  "latin": "Circus pygargus",
+  "look_for": [
+    {
+      "en": "Slim, elegant harrier with long pointed **wings**",
+      "nl": "Slanke, sierlijke kiekendief met lange puntige **vleugels**"
+    },
+    {
+      "en": "Male: pale grey with a black bar on the **wing**",
+      "nl": "Mannetje: lichtgrijs met een zwarte streep op de **vleugel**"
+    },
+    {
+      "en": "Glides low over fields and steppe",
+      "nl": "Zweeft laag over velden en steppe"
+    }
+  ]
+}

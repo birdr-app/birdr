@@ -1,0 +1,22 @@
+{
+  "code": "skylar",
+  "name": {
+    "en": "Eurasian Skylark",
+    "nl": "Veldleeuwerik"
+  },
+  "latin": "Alauda arvensis",
+  "look_for": [
+    {
+      "en": "Small **crest**, streaked brown",
+      "nl": "Kleine **kuif**, gestreept bruin"
+    },
+    {
+      "en": "White outer **tail** feathers",
+      "nl": "Witte buitenste **staartveren**"
+    },
+    {
+      "en": "Sings nonstop while hovering high up",
+      "nl": "Zingt non-stop terwijl hij hoog fladdert"
+    }
+  ]
+}

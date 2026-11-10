@@ -1,0 +1,22 @@
+{
+  "code": "moured1",
+  "name": {
+    "en": "Moussier's Redstart",
+    "nl": "Diadeemroodstaart"
+  },
+  "latin": "Phoenicurus moussieri",
+  "look_for": [
+    {
+      "en": "Male black **head** with white band over the **eye**",
+      "nl": "Man met zwarte **kop** en witte band boven het **oog**"
+    },
+    {
+      "en": "Orange-red **breast** and **rump**",
+      "nl": "Oranjerode **borst** en **stuit**"
+    },
+    {
+      "en": "Black **back**, white patch on the **wing**",
+      "nl": "Zwarte **rug**, witte vlek op de **vleugel**"
+    }
+  ]
+}

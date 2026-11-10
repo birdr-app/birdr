@@ -1,0 +1,22 @@
+{
+  "code": "eurser1",
+  "name": {
+    "en": "European Serin",
+    "nl": "Europese kanarie"
+  },
+  "latin": "Serinus serinus",
+  "look_for": [
+    {
+      "en": "Tiny streaky finch with a yellow **rump**",
+      "nl": "Piepklein gestreept vinkje met gele **stuit**"
+    },
+    {
+      "en": "Male bright yellow **head** and **breast**",
+      "nl": "Man met felgele **kop** en **borst**"
+    },
+    {
+      "en": "Very short **bill**, tinkling song in flight",
+      "nl": "Zeer korte **snavel**, tinkelend lied in vlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "wemhar1",
+  "name": {
+    "en": "Western Marsh Harrier",
+    "nl": "Bruine kiekendief"
+  },
+  "latin": "Circus aeruginosus",
+  "look_for": [
+    {
+      "en": "Brown harrier with a pale **head** and shoulders",
+      "nl": "Bruine kiekendief met een lichte **kop** en schouders"
+    },
+    {
+      "en": "Male: grey **wings** with black tips",
+      "nl": "Mannetje: grijze **vleugels** met zwarte toppen"
+    },
+    {
+      "en": "Flies low over reeds, **wings** in a shallow V",
+      "nl": "Vliegt laag over riet, **vleugels** in een ondiepe V"
+    }
+  ]
+}

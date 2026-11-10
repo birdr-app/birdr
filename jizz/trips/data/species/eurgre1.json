@@ -1,0 +1,22 @@
+{
+  "code": "eurgre1",
+  "name": {
+    "en": "European Greenfinch",
+    "nl": "Groenling"
+  },
+  "latin": "Chloris chloris",
+  "look_for": [
+    {
+      "en": "Chunky olive-green finch, yellow on **wings**",
+      "nl": "Gedrongen olijfgroene vink met geel op de **vleugels**"
+    },
+    {
+      "en": "Heavy pale **bill**, short forked **tail**",
+      "nl": "Zware lichte **snavel**, korte gevorkte **staart**"
+    },
+    {
+      "en": "Wheezing calls from treetops and gardens",
+      "nl": "Hijgende roep uit boomtoppen en tuinen"
+    }
+  ]
+}

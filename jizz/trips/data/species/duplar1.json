@@ -1,0 +1,22 @@
+{
+  "code": "duplar1",
+  "name": {
+    "en": "Dupont's Lark",
+    "nl": "Duponts leeuwerik"
+  },
+  "latin": "Chersophilus duponti",
+  "look_for": [
+    {
+      "en": "Long, curved **bill**",
+      "nl": "Lange, gebogen **snavel**"
+    },
+    {
+      "en": "Streaked **breast**, no crest",
+      "nl": "Gestreepte **borst**, geen kuif"
+    },
+    {
+      "en": "Secretive, runs like a mouse across steppe",
+      "nl": "Schuw, rent als een muis over de steppe"
+    }
+  ]
+}

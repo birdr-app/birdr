@@ -1,0 +1,22 @@
+{
+  "code": "balshe1",
+  "name": {
+    "en": "Balearic Shearwater",
+    "nl": "Vale pijlstormvogel"
+  },
+  "latin": "Puffinus mauretanicus",
+  "look_for": [
+    {
+      "en": "Brown-grey shearwater, dusky below",
+      "nl": "Bruingrijze pijlstormvogel, vuilbruin onderaan"
+    },
+    {
+      "en": "Stiff **wings**, glides low over the waves",
+      "nl": "Stijve **vleugels**, glijdt laag over de golven"
+    },
+    {
+      "en": "Larger and heavier than Manx Shearwater",
+      "nl": "Groter en zwaarder dan de Noordse pijlstormvogel"
+    }
+  ]
+}

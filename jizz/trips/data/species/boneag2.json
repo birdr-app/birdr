@@ -1,0 +1,22 @@
+{
+  "code": "boneag2",
+  "name": {
+    "en": "Bonelli's Eagle",
+    "nl": "Havikarend"
+  },
+  "latin": "Aquila fasciata",
+  "look_for": [
+    {
+      "en": "Dark brown above, pale below, dark band on the **tail**",
+      "nl": "Donkerbruin boven, licht onder, donkere band op de **staart**"
+    },
+    {
+      "en": "Pale **patch** on the upper **back**",
+      "nl": "Lichte **vlek** op de bovenste **rug**"
+    },
+    {
+      "en": "Slim, long-**tailed** eagle of rocky hills",
+      "nl": "Slanke arend met een lange **staart** van rotsachtige heuvels"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "eurmag3",
+  "name": {
+    "en": "Maghreb Magpie",
+    "nl": "Maghrebekster"
+  },
+  "latin": "Pica mauritanica",
+  "look_for": [
+    {
+      "en": "Black **head**, white belly, white shoulders",
+      "nl": "Zwarte **kop**, witte buik, witte schouders"
+    },
+    {
+      "en": "Bare blue patch behind the **eye**",
+      "nl": "Kale blauwe plek achter het **oog**"
+    },
+    {
+      "en": "Long, glossy blue-green **tail**",
+      "nl": "Lange, glanzend blauwgroene **staart**"
+    }
+  ]
+}

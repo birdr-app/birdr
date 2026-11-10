@@ -1,0 +1,22 @@
+{
+  "code": "rocpet1",
+  "name": {
+    "en": "Rock Sparrow",
+    "nl": "Rotsmus"
+  },
+  "latin": "Petronia petronia",
+  "look_for": [
+    {
+      "en": "Striped head with a pale **crown** stripe",
+      "nl": "Gestreepte kop met een lichte **kruin**streep"
+    },
+    {
+      "en": "Yellow spot on the **throat**",
+      "nl": "Gele vlek op de **keel**"
+    },
+    {
+      "en": "White spots on the corners of the **tail**",
+      "nl": "Witte vlekken op de hoeken van de **staart**"
+    }
+  ]
+}

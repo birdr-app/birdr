@@ -1,0 +1,22 @@
+{
+  "code": "blackc1",
+  "name": {
+    "en": "Eurasian Blackcap",
+    "nl": "Zwartkop"
+  },
+  "latin": "Sylvia atricapilla",
+  "look_for": [
+    {
+      "en": "Male: neat black **cap**, grey body",
+      "nl": "Mannetje: strakke zwarte **kap**, grijs lijf"
+    },
+    {
+      "en": "Female and young: rusty-brown **cap**",
+      "nl": "Vrouwtje en jong: roodbruine **kap**"
+    },
+    {
+      "en": "Plain grey-brown **back**, no wing bars",
+      "nl": "Effen grijsbruine **rug**, geen vleugelstrepen"
+    }
+  ]
+}

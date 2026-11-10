@@ -1,0 +1,22 @@
+{
+  "code": "crwfin2",
+  "name": {
+    "en": "Crimson-winged Finch",
+    "nl": "Rode bergvink"
+  },
+  "latin": "Rhodopechys sanguineus",
+  "look_for": [
+    {
+      "en": "Rosy-crimson **wing** panel, grey-brown body",
+      "nl": "Roze-karmozijnrood **vleugel**vlak, grijsbruin lijf"
+    },
+    {
+      "en": "Stout pale **bill**, plump short-tailed shape",
+      "nl": "Dikke lichte **snavel**, gedrongen met korte staart"
+    },
+    {
+      "en": "Rocky high-mountain slopes, feeds on the ground",
+      "nl": "Rotsige berghellingen, zoekt voedsel op de grond"
+    }
+  ]
+}

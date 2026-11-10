@@ -1,0 +1,22 @@
+{
+  "code": "eurlin1",
+  "name": {
+    "en": "Common Linnet",
+    "nl": "Kneu"
+  },
+  "latin": "Linaria cannabina",
+  "look_for": [
+    {
+      "en": "Male with crimson **forehead** and **breast**",
+      "nl": "Man met karmozijnrood **voorhoofd** en **borst**"
+    },
+    {
+      "en": "Grey **head**, chestnut **back**",
+      "nl": "Grijze **kop**, kastanjebruine **rug**"
+    },
+    {
+      "en": "Slim finch, white edge to the **wing** in flight",
+      "nl": "Slanke vink, witte rand aan de **vleugel** in vlucht"
+    }
+  ]
+}

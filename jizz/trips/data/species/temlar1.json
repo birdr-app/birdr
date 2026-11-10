@@ -1,0 +1,22 @@
+{
+  "code": "temlar1",
+  "name": {
+    "en": "Temminck's Lark",
+    "nl": "Temmincks strandleeuwerik"
+  },
+  "latin": "Eremophila bilopha",
+  "look_for": [
+    {
+      "en": "White **face** with black mask lines",
+      "nl": "Witte **kop** met zwarte maskerstrepen"
+    },
+    {
+      "en": "Black band across the **breast**",
+      "nl": "Zwarte band over de **borst**"
+    },
+    {
+      "en": "Tiny black horns, walks on bare ground",
+      "nl": "Kleine zwarte hoorntjes, loopt over kale grond"
+    }
+  ]
+}

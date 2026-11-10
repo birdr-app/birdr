@@ -1,0 +1,22 @@
+{
+  "code": "deslar1",
+  "name": {
+    "en": "Desert Lark",
+    "nl": "Woestijnleeuwerik"
+  },
+  "latin": "Ammomanes deserti",
+  "look_for": [
+    {
+      "en": "Plain, dusky sandy-brown, no crest",
+      "nl": "Effen, doffe zandbruine vogel zonder kuif"
+    },
+    {
+      "en": "Fairly heavy **bill**",
+      "nl": "Vrij zware **snavel**"
+    },
+    {
+      "en": "Perches on rocks, blends with stone",
+      "nl": "Zit op rotsen, valt weg tegen de stenen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "stonec4",
+  "name": {
+    "en": "European Stonechat",
+    "nl": "Roodborsttapuit"
+  },
+  "latin": "Saxicola rubicola",
+  "look_for": [
+    {
+      "en": "Male black **head** with white **neck** patch",
+      "nl": "Man met zwarte **kop** en witte vlek op de **hals**"
+    },
+    {
+      "en": "Orange **breast** fading to white belly",
+      "nl": "Oranje **borst** die naar een witte buik vervaagt"
+    },
+    {
+      "en": "Perches on bush tops, flicks **wings**",
+      "nl": "Zit op struiktoppen en wipt met de **vleugels**"
+    }
+  ]
+}

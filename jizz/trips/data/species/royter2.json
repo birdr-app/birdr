@@ -1,0 +1,22 @@
+{
+  "code": "royter2",
+  "name": {
+    "en": "West African Crested Tern",
+    "nl": "Afrikaanse koningsstern"
+  },
+  "latin": "Thalasseus albididorsalis",
+  "look_for": [
+    {
+      "en": "Large tern with a shaggy black **crest**",
+      "nl": "Grote stern met een warrige zwarte **kuif**"
+    },
+    {
+      "en": "Heavy orange-yellow **bill**",
+      "nl": "Zware oranjegele **snavel**"
+    },
+    {
+      "en": "Pale grey **back**, dives from the air",
+      "nl": "Lichtgrijze **rug**, duikt vanuit de lucht"
+    }
+  ]
+}

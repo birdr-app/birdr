@@ -1,0 +1,22 @@
+{
+  "code": "audgul1",
+  "name": {
+    "en": "Audouin's Gull",
+    "nl": "Audouins meeuw"
+  },
+  "latin": "Ichthyaetus audouinii",
+  "look_for": [
+    {
+      "en": "Medium gull, grey **wings** with black tips",
+      "nl": "Middelgrote meeuw met grijze **vleugels** en zwarte toppen"
+    },
+    {
+      "en": "Heavy red **bill** with a black band and yellow tip",
+      "nl": "Zware rode **snavel** met zwarte band en gele punt"
+    },
+    {
+      "en": "Dark olive-grey **legs**",
+      "nl": "Donker olijfgrijze **poten**"
+    }
+  ]
+}

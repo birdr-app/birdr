@@ -1,0 +1,22 @@
+{
+  "code": "barpar2",
+  "name": {
+    "en": "Barbary Partridge",
+    "nl": "Barbarijse patrijs"
+  },
+  "latin": "Alectoris barbara",
+  "look_for": [
+    {
+      "en": "Chestnut **collar** spotted with white",
+      "nl": "Kastanjebruine **kraag** met witte stippen"
+    },
+    {
+      "en": "Grey **face** and throat",
+      "nl": "Grijs **gezicht** en keel"
+    },
+    {
+      "en": "Red **legs**, boldly barred flanks",
+      "nl": "Rode **poten**, flink gebandeerde flanken"
+    }
+  ]
+}

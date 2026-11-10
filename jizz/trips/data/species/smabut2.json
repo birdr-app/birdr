@@ -1,0 +1,22 @@
+{
+  "code": "smabut2",
+  "name": {
+    "en": "Small Buttonquail",
+    "nl": "Gestreepte vechtkwartel"
+  },
+  "latin": "Turnix sylvaticus",
+  "look_for": [
+    {
+      "en": "Tiny quail-like bird, hard to flush",
+      "nl": "Klein kwartelachtig vogeltje, moeilijk op te jagen"
+    },
+    {
+      "en": "Rusty **breast** with black spots on the **flanks**",
+      "nl": "Roestkleurige **borst** met zwarte vlekken op de **flanken**"
+    },
+    {
+      "en": "Pale **eye**, stout pale **bill**",
+      "nl": "Licht **oog**, stevige lichte **snavel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "corbun1",
+  "name": {
+    "en": "Corn Bunting",
+    "nl": "Grauwe gors"
+  },
+  "latin": "Emberiza calandra",
+  "look_for": [
+    {
+      "en": "Chunky, streaky brown bunting, no white",
+      "nl": "Plompe, gestreepte bruine gors zonder wit"
+    },
+    {
+      "en": "Heavy pale **bill**, dark spot on **breast**",
+      "nl": "Zware lichte **snavel**, donkere vlek op de **borst**"
+    },
+    {
+      "en": "Sings from wires, **legs** dangling in flight",
+      "nl": "Zingt op draden, **poten** bungelend in de vlucht"
+    }
+  ]
+}

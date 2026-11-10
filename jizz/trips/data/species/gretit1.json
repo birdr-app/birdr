@@ -1,0 +1,22 @@
+{
+  "code": "gretit1",
+  "name": {
+    "en": "Great Tit",
+    "nl": "Koolmees"
+  },
+  "latin": "Parus major",
+  "look_for": [
+    {
+      "en": "Black **head** with white cheeks",
+      "nl": "Zwarte **kop** met witte wangen"
+    },
+    {
+      "en": "Black stripe down a yellow **belly**",
+      "nl": "Zwarte streep over een gele **buik**"
+    },
+    {
+      "en": "Loud two-note song from woods",
+      "nl": "Luide tweetonige zang uit het bos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "ibechi2",
+  "name": {
+    "en": "Iberian Chiffchaff",
+    "nl": "Iberische tjiftjaf"
+  },
+  "latin": "Phylloscopus ibericus",
+  "look_for": [
+    {
+      "en": "Greener back than Common Chiffchaff",
+      "nl": "Groenere rug dan de Tjiftjaf"
+    },
+    {
+      "en": "Yellowish **throat**, whitish belly",
+      "nl": "Gelige **keel**, witte buik"
+    },
+    {
+      "en": "Song is faster and more varied",
+      "nl": "Zang is sneller en gevarieerder"
+    }
+  ]
+}

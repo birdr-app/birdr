@@ -1,0 +1,22 @@
+{
+  "code": "leskes1",
+  "name": {
+    "en": "Lesser Kestrel",
+    "nl": "Kleine torenvalk"
+  },
+  "latin": "Falco naumanni",
+  "look_for": [
+    {
+      "en": "Male: blue-grey **head**, plain rufous **back**",
+      "nl": "Mannetje: blauwgrijze **kop**, effen roodbruine **rug**"
+    },
+    {
+      "en": "No dark moustache, unlike Common Kestrel",
+      "nl": "Geen snor, anders dan torenvalk"
+    },
+    {
+      "en": "Nests in colonies on old town walls",
+      "nl": "Broedt in kolonies op oude stadsmuren"
+    }
+  ]
+}

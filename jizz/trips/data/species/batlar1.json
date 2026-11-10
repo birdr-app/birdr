@@ -1,0 +1,22 @@
+{
+  "code": "batlar1",
+  "name": {
+    "en": "Bar-tailed Lark",
+    "nl": "Rosse woestijnleeuwerik"
+  },
+  "latin": "Ammomanes cinctura",
+  "look_for": [
+    {
+      "en": "Plain rufous-sandy plumage",
+      "nl": "Effen roodachtig zandkleurig verenkleed"
+    },
+    {
+      "en": "Dark band across the **tail**",
+      "nl": "Donkere band over de **staart**"
+    },
+    {
+      "en": "Stout **bill**, runs over stony ground",
+      "nl": "Stevige **snavel**, rent over stenige grond"
+    }
+  ]
+}

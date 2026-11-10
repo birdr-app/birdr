@@ -1,0 +1,22 @@
+{
+  "code": "norshr1",
+  "name": {
+    "en": "Great Grey Shrike",
+    "nl": "Klapekster"
+  },
+  "latin": "Lanius excubitor",
+  "look_for": [
+    {
+      "en": "Grey above, white below, black **mask**",
+      "nl": "Grijs boven, wit onder, zwart **masker**"
+    },
+    {
+      "en": "Long **tail**, white patches on black **wings**",
+      "nl": "Lange **staart**, witte vlekken op zwarte **vleugels**"
+    },
+    {
+      "en": "Perches high, **bill** hooked at the tip",
+      "nl": "Zit hoog, **snavel** met haakje aan de punt"
+    }
+  ]
+}

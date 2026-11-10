@@ -1,0 +1,22 @@
+{
+  "code": "comnig1",
+  "name": {
+    "en": "Common Nightingale",
+    "nl": "Nachtegaal"
+  },
+  "latin": "Luscinia megarhynchos",
+  "look_for": [
+    {
+      "en": "Plain warm brown **back**, rufous **tail**",
+      "nl": "Effen warmbruine **rug**, roodbruine **staart**"
+    },
+    {
+      "en": "Pale grey-buff underparts, faint **eye** ring",
+      "nl": "Lichtgrijsbeige onderkant, vage ring om het **oog**"
+    },
+    {
+      "en": "Heard more than seen, loud song from cover",
+      "nl": "Vaker gehoord dan gezien, luid lied uit dichte begroeiing"
+    }
+  ]
+}

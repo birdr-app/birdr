@@ -1,0 +1,22 @@
+{
+  "code": "eursco1",
+  "name": {
+    "en": "Eurasian Scops Owl",
+    "nl": "Dwergooruil"
+  },
+  "latin": "Otus scops",
+  "look_for": [
+    {
+      "en": "Tiny owl with small ear **tufts**",
+      "nl": "Klein uiltje met kleine oor**pluimen**"
+    },
+    {
+      "en": "Grey-brown, finely streaked like bark",
+      "nl": "Grijsbruin, fijn gestreept als boomschors"
+    },
+    {
+      "en": "Yellow **eyes**, upright when resting in trees",
+      "nl": "Gele **ogen**, rechtop zittend in bomen"
+    }
+  ]
+}

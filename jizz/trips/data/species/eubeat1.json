@@ -1,0 +1,22 @@
+{
+  "code": "eubeat1",
+  "name": {
+    "en": "European Bee-eater",
+    "nl": "Bijeneter"
+  },
+  "latin": "Merops apiaster",
+  "look_for": [
+    {
+      "en": "Bright yellow **throat** with a black collar",
+      "nl": "Felgele **keel** met een zwarte kraag"
+    },
+    {
+      "en": "Chestnut **crown** and **back**, blue-green **belly**",
+      "nl": "Kastanjebruine **kruin** en **rug**, blauwgroene **buik**"
+    },
+    {
+      "en": "Hawks insects from wires, liquid calls",
+      "nl": "Vangt insecten vanaf draden, vloeiende roep"
+    }
+  ]
+}

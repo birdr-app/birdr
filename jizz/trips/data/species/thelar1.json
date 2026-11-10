@@ -1,0 +1,22 @@
+{
+  "code": "thelar1",
+  "name": {
+    "en": "Thekla's Lark",
+    "nl": "Theklaleeuwerik"
+  },
+  "latin": "Galerida theklae",
+  "look_for": [
+    {
+      "en": "Bold dark spots on the **breast**",
+      "nl": "Duidelijke donkere vlekken op de **borst**"
+    },
+    {
+      "en": "Short, stout **bill**",
+      "nl": "Korte, stevige **snavel**"
+    },
+    {
+      "en": "Pointed crest, greyish-brown upperparts",
+      "nl": "Spitse kuif, grijsbruine bovenkant"
+    }
+  ]
+}

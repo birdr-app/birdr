@@ -1,0 +1,22 @@
+{
+  "code": "goleag",
+  "name": {
+    "en": "Golden Eagle",
+    "nl": "Steenarend"
+  },
+  "latin": "Aquila chrysaetos",
+  "look_for": [
+    {
+      "en": "Huge dark eagle, golden-brown **nape**",
+      "nl": "Enorme donkere arend met goudbruine **nek**"
+    },
+    {
+      "en": "Long broad **wings** held in shallow V",
+      "nl": "Lange brede **vleugels** in lichte V"
+    },
+    {
+      "en": "Soars over mountains and cliffs",
+      "nl": "Zweeft boven bergen en kliffen"
+    }
+  ]
+}

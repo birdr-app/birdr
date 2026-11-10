@@ -1,0 +1,22 @@
+{
+  "code": "banswa",
+  "name": {
+    "en": "Sand Martin",
+    "nl": "Oeverzwaluw"
+  },
+  "latin": "Riparia riparia",
+  "look_for": [
+    {
+      "en": "Small brown martin, white below",
+      "nl": "Kleine bruine zwaluw, wit onder"
+    },
+    {
+      "en": "Brown band across the **breast**",
+      "nl": "Bruine band over de **borst**"
+    },
+    {
+      "en": "Short, shallowly forked **tail**, fluttery flight",
+      "nl": "Korte, licht gevorkte **staart**, fladderende vlucht"
+    }
+  ]
+}

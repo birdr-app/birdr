@@ -1,0 +1,22 @@
+{
+  "code": "norgan",
+  "name": {
+    "en": "Northern Gannet",
+    "nl": "Jan-van-gent"
+  },
+  "latin": "Morus bassanus",
+  "look_for": [
+    {
+      "en": "White with black **wingtips**, buff-yellow head",
+      "nl": "Wit met zwarte **vleugel**punten, geelbeige kop"
+    },
+    {
+      "en": "Big dagger-like **bill**, pointed **tail**",
+      "nl": "Grote dolkvormige **snavel**, spitse **staart**"
+    },
+    {
+      "en": "Plunge-dives from height into the sea",
+      "nl": "Duikt van grote hoogte in zee"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "comrav",
+  "name": {
+    "en": "Common Raven",
+    "nl": "Raaf"
+  },
+  "latin": "Corvus corax",
+  "look_for": [
+    {
+      "en": "Huge black crow with a thick **bill**",
+      "nl": "Enorme zwarte kraai met een dikke **snavel**"
+    },
+    {
+      "en": "Wedge-shaped **tail** in flight",
+      "nl": "Wigvormige **staart** in de vlucht"
+    },
+    {
+      "en": "Shaggy throat, deep croaking call",
+      "nl": "Ruige keel, diepe krakende roep"
+    }
+  ]
+}

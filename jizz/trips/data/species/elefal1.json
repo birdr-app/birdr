@@ -1,0 +1,22 @@
+{
+  "code": "elefal1",
+  "name": {
+    "en": "Eleonora's Falcon",
+    "nl": "Eleonora's valk"
+  },
+  "latin": "Falco eleonorae",
+  "look_for": [
+    {
+      "en": "Slim, long-winged falcon, **wings** swept back",
+      "nl": "Slanke valk met lange **vleugels**, naar achteren geveegd"
+    },
+    {
+      "en": "Dark morph all sooty; pale morph streaky below",
+      "nl": "Donkere vorm egaal roetkleurig; lichte vorm gestreept onder"
+    },
+    {
+      "en": "Hunts at dusk along sea cliffs",
+      "nl": "Jaagt in de schemering langs zeekliffen"
+    }
+  ]
+}

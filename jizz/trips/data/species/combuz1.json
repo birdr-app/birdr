@@ -1,0 +1,22 @@
+{
+  "code": "combuz1",
+  "name": {
+    "en": "Common Buzzard",
+    "nl": "Buizerd"
+  },
+  "latin": "Buteo buteo",
+  "look_for": [
+    {
+      "en": "Stocky raptor, broad **wings** and short **tail**",
+      "nl": "Gedrongen roofvogel met brede **vleugels** en korte **staart**"
+    },
+    {
+      "en": "Variable brown, with a pale **breast** band",
+      "nl": "Wisselend bruin, met een lichte **borst**band"
+    },
+    {
+      "en": "Soars with **wings** held in a shallow V",
+      "nl": "Zweeft met **vleugels** in een ondiepe V"
+    }
+  ]
+}

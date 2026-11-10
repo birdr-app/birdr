@@ -1,0 +1,22 @@
+{
+  "code": "tawpip1",
+  "name": {
+    "en": "Tawny Pipit",
+    "nl": "Duinpieper"
+  },
+  "latin": "Anthus campestris",
+  "look_for": [
+    {
+      "en": "Large plain sandy pipit, almost unstreaked",
+      "nl": "Grote, effen zandkleurige pieper, bijna ongestreept"
+    },
+    {
+      "en": "Pale **eyebrow**, dark line through the **eye**",
+      "nl": "Lichte **wenkbrauwstreep**, donkere lijn door het **oog**"
+    },
+    {
+      "en": "Upright and long-legged, wags **tail**",
+      "nl": "Rechtop op lange poten, wipt met de **staart**"
+    }
+  ]
+}

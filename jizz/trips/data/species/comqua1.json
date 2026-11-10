@@ -1,0 +1,22 @@
+{
+  "code": "comqua1",
+  "name": {
+    "en": "Common Quail",
+    "nl": "Kwartel"
+  },
+  "latin": "Coturnix coturnix",
+  "look_for": [
+    {
+      "en": "Tiny, round, streaky buff-brown",
+      "nl": "Klein, rond en streperig bruinbeige"
+    },
+    {
+      "en": "Pale stripes down the **back**",
+      "nl": "Lichte strepen over de **rug**"
+    },
+    {
+      "en": "Hides in crops, rarely seen flying",
+      "nl": "Zit verscholen in gewassen, vliegt zelden op"
+    }
+  ]
+}

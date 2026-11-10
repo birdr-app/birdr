@@ -1,0 +1,22 @@
+{
+  "code": "perfal",
+  "name": {
+    "en": "Peregrine Falcon",
+    "nl": "Slechtvalk"
+  },
+  "latin": "Falco peregrinus",
+  "look_for": [
+    {
+      "en": "Dark **head** with a thick black moustache",
+      "nl": "Donkere **kop** met een brede zwarte baard"
+    },
+    {
+      "en": "Slate back, finely barred pale **underparts**",
+      "nl": "Leigrijze rug, fijn gebandeerde lichte **onderkant**"
+    },
+    {
+      "en": "Stocky, pointed wings, short tail",
+      "nl": "Gedrongen, puntige vleugels, korte staart"
+    }
+  ]
+}

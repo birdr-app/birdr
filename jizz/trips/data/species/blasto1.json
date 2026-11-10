@@ -1,0 +1,22 @@
+{
+  "code": "blasto1",
+  "name": {
+    "en": "Black Stork",
+    "nl": "Zwarte ooievaar"
+  },
+  "latin": "Ciconia nigra",
+  "look_for": [
+    {
+      "en": "Black with glossy sheen, white **belly**",
+      "nl": "Zwart met glans, witte **buik**"
+    },
+    {
+      "en": "Long red **legs** and red **bill**",
+      "nl": "Lange rode **poten** en rode **snavel**"
+    },
+    {
+      "en": "Shy bird of wooded valleys and rivers",
+      "nl": "Schuwe vogel van beboste dalen en rivieren"
+    }
+  ]
+}

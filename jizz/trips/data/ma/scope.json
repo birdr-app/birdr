@@ -1,0 +1,285 @@
+{
+  "country": "MA",
+  "notes": "Morocco has no strict endemics, and most of its birds are modelled as rare in the database, so the list is hand-picked: what a visitor meets on a standard tour (Marrakech and the High Atlas, Atlantic coast and Merja Zerga, Souss-Massa, Ouarzazate and the Draa valley, Boumalne Dades, Merzouga and the Middle Atlas), plus the Maghreb specialities and near-endemics (Atlas Flycatcher, Maghreb Magpie, Maghreb Owl, Levaillant's Woodpecker, Moussier's Redstart, Atlas Wheatear, African Blue Tit, Double-spurred Spurfowl, Northern Bald Ibis, Dupont's Lark, Desert Sparrow). Vagrants, scarce winter ducks, pelagic seabirds and escaped cage birds are dropped; Common Chaffinch and Eurasian Nuthatch are dropped because the Moroccan birds are African Chaffinch and the Atlas form is not split in the database. Regional specialities are not recorded separately: the Maghreb birds sit in their normal units. The main chapter is Lookalikes from home.",
+  "add": [
+    "afbtit2",
+    "afdwar1",
+    "afrcha1",
+    "alpacc1",
+    "atlfly1",
+    "audgul1",
+    "balshe1",
+    "barpar2",
+    "batgod",
+    "batlar1",
+    "bcbeat1",
+    "bcnher",
+    "bkctch1",
+    "bkhgul",
+    "bkskit1",
+    "bktgod",
+    "blasto1",
+    "boneag2",
+    "booeag1",
+    "brnrav1",
+    "caster1",
+    "cetwar1",
+    "coatit2",
+    "colpra",
+    "combuz1",
+    "comcuc",
+    "comgre",
+    "comkin1",
+    "commoo3",
+    "compoc",
+    "comqua1",
+    "comred1",
+    "comsan",
+    "comsni",
+    "comter",
+    "corplo",
+    "corshe",
+    "crccou1",
+    "crosan1",
+    "crwfin2",
+    "cursan",
+    "darwar1",
+    "deslar1",
+    "desspa3",
+    "deswhe1",
+    "dosfra2",
+    "dunlar1",
+    "dunlin",
+    "duplar1",
+    "egynig1",
+    "elefal1",
+    "eurcoo",
+    "eurcur",
+    "eurjay1",
+    "eurmag3",
+    "eurnig1",
+    "eurrol1",
+    "eursco1",
+    "eurspa1",
+    "eutkne1",
+    "firecr1",
+    "fulcha1",
+    "gadwal",
+    "gloibi",
+    "goleag",
+    "graher1",
+    "grcgre1",
+    "grecor",
+    "greegr",
+    "grhlar1",
+    "grscuc1",
+    "grswoo",
+    "gstlar1",
+    "gubter2",
+    "houbun3",
+    "houbus1",
+    "kenplo1",
+    "lammer1",
+    "lanfal1",
+    "laudov1",
+    "lbbgul",
+    "leskes1",
+    "levwoo1",
+    "lirplo",
+    "litegr",
+    "litgre1",
+    "litowl1",
+    "litsti",
+    "litswi1",
+    "litter1",
+    "lolbuz1",
+    "mallar3",
+    "marowl2",
+    "martea1",
+    "medgul1",
+    "monhar1",
+    "moured1",
+    "mouwar1",
+    "mouwhe2",
+    "mstlar1",
+    "norgan",
+    "norpin",
+    "norsho",
+    "norwhe3",
+    "osprey",
+    "perfal",
+    "pheowl1",
+    "pieavo1",
+    "pitsan1",
+    "plamar1",
+    "purher1",
+    "purswa1",
+    "rebcho1",
+    "rekcoo1",
+    "rennig1",
+    "rerwhe1",
+    "rocbun1",
+    "rocmar2",
+    "rocpet1",
+    "royter2",
+    "rudtur",
+    "ruff",
+    "sander",
+    "santer1",
+    "shttre1",
+    "slbgul1",
+    "smabut2",
+    "spewar2",
+    "sposan1",
+    "squher1",
+    "stswar1",
+    "tawowl3",
+    "tawpip1",
+    "temlar1",
+    "thblar1",
+    "triwar1",
+    "trufin2",
+    "waldra1",
+    "weowar1",
+    "whimbr",
+    "whiter2",
+    "whrswi1",
+    "whtwhe1",
+    "winwre4",
+    "woosan",
+    "yebcho1",
+    "yelgul1"
+  ],
+  "drop": [
+    "blkter",
+    "eurwar1",
+    "meapip1",
+    "trepip"
+  ],
+  "group_overrides": {},
+  "regional_specialities": [],
+  "first_day": [
+    "houspa",
+    "spaspa1",
+    "sposta1",
+    "eurbla",
+    "combul2",
+    "whiwag",
+    "rocpig",
+    "eucdov",
+    "whisto1",
+    "blakit1",
+    "categr1",
+    "yelgul1",
+    "palswi3",
+    "barswa",
+    "hoopoe",
+    "crelar1",
+    "thelar1",
+    "blared1",
+    "eurkes",
+    "stonec4"
+  ],
+  "lookalikes": [
+    {
+      "here": "afrcha1",
+      "home": "comcha"
+    },
+    {
+      "here": "afbtit2",
+      "home": "blutit"
+    },
+    {
+      "here": "eurmag3",
+      "home": "eurmag1"
+    },
+    {
+      "here": "tawowl3",
+      "home": "tawowl1"
+    },
+    {
+      "here": "levwoo1",
+      "home": "eugwoo2"
+    },
+    {
+      "here": "atlfly1",
+      "home": "eupfly1"
+    },
+    {
+      "here": "norwhe3",
+      "home": "norwhe"
+    },
+    {
+      "here": "moured1",
+      "home": "comred2"
+    },
+    {
+      "here": "sposta1",
+      "home": "eursta"
+    },
+    {
+      "here": "ibechi2",
+      "home": "comchi1"
+    },
+    {
+      "here": "triwar1",
+      "home": "darwar1"
+    },
+    {
+      "here": "thelar1",
+      "home": "crelar1"
+    },
+    {
+      "here": "mstlar1",
+      "home": "gstlar1"
+    },
+    {
+      "here": "rocmar2",
+      "home": "eurcrm1"
+    },
+    {
+      "here": "plamar1",
+      "home": "banswa"
+    },
+    {
+      "here": "palswi3",
+      "home": "comswi"
+    },
+    {
+      "here": "yelgul1",
+      "home": "euhgul1"
+    },
+    {
+      "here": "lolbuz1",
+      "home": "combuz1"
+    },
+    {
+      "here": "houbun3",
+      "home": "rocbun1"
+    },
+    {
+      "here": "spaspa1",
+      "home": "houspa"
+    },
+    {
+      "here": "brnrav1",
+      "home": "comrav"
+    },
+    {
+      "here": "rebcho1",
+      "home": "yebcho1"
+    },
+    {
+      "here": "laudov1",
+      "home": "eutdov"
+    },
+    {
+      "here": "barpar2",
+      "home": "relpar1"
+    },
+    {
+      "here": "leskes1",
+      "home": "eurkes"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "martea1",
+  "name": {
+    "en": "Marbled Duck",
+    "nl": "Marmereend"
+  },
+  "latin": "Marmaronetta angustirostris",
+  "look_for": [
+    {
+      "en": "Pale sandy brown, blotched with cream",
+      "nl": "Bleek zandbruin met crèmekleurige vlekken"
+    },
+    {
+      "en": "Dark smudge around the **eye**",
+      "nl": "Donkere veeg om het **oog**"
+    },
+    {
+      "en": "Shaggy **nape**, no bright wing patch",
+      "nl": "Warrige **nek**, geen felle vleugelspiegel"
+    }
+  ]
+}

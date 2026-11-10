@@ -1,0 +1,22 @@
+{
+  "code": "whisto1",
+  "name": {
+    "en": "White Stork",
+    "nl": "Ooievaar"
+  },
+  "latin": "Ciconia ciconia",
+  "look_for": [
+    {
+      "en": "White with black **wings**, red **bill**",
+      "nl": "Wit met zwarte **vleugels**, rode **snavel**"
+    },
+    {
+      "en": "Long red **legs** trail behind in flight",
+      "nl": "Lange rode **poten** wijzen achteruit in de vlucht"
+    },
+    {
+      "en": "Nests on roofs, pylons and ruins",
+      "nl": "Nest op daken, masten en ruïnes"
+    }
+  ]
+}

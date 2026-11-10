@@ -1,0 +1,22 @@
+{
+  "code": "eursta",
+  "name": {
+    "en": "Common Starling",
+    "nl": "Spreeuw"
+  },
+  "latin": "Sturnus vulgaris",
+  "look_for": [
+    {
+      "en": "Glossy dark body with pale spots",
+      "nl": "Glanzend donker lijf met lichte spikkels"
+    },
+    {
+      "en": "Long pointed **bill**, yellow in summer",
+      "nl": "Lange spitse **snavel**, in de zomer geel"
+    },
+    {
+      "en": "Short **tail**, struts about on lawns",
+      "nl": "Korte **staart**, loopt driftig over grasvelden"
+    }
+  ]
+}

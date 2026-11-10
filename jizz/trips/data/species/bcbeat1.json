@@ -1,0 +1,22 @@
+{
+  "code": "bcbeat1",
+  "name": {
+    "en": "Blue-cheeked Bee-eater",
+    "nl": "Groene bijeneter"
+  },
+  "latin": "Merops persicus",
+  "look_for": [
+    {
+      "en": "Green bee-eater with a blue **face** patch",
+      "nl": "Groene bijeneter met een blauwe **gezichts**vlek"
+    },
+    {
+      "en": "Black eye stripe, orange-yellow **throat**",
+      "nl": "Zwarte oogstreep, oranjegele **keel**"
+    },
+    {
+      "en": "Long central **tail** streamers",
+      "nl": "Lange middelste **staart**pennen"
+    }
+  ]
+}

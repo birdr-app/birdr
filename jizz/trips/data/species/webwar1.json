@@ -1,0 +1,22 @@
+{
+  "code": "webwar1",
+  "name": {
+    "en": "Western Bonelli's Warbler",
+    "nl": "Bergfluiter"
+  },
+  "latin": "Phylloscopus bonelli",
+  "look_for": [
+    {
+      "en": "Pale **head**, whitish underparts",
+      "nl": "Bleke **kop**, witachtige onderkant"
+    },
+    {
+      "en": "Greenish-yellow **rump** and wing panel",
+      "nl": "Groengele **stuit** en vleugelvlak"
+    },
+    {
+      "en": "Short trilling song in woodland",
+      "nl": "Korte trillende zang in het bos"
+    }
+  ]
+}

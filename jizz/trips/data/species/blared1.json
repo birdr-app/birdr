@@ -1,0 +1,22 @@
+{
+  "code": "blared1",
+  "name": {
+    "en": "Black Redstart",
+    "nl": "Zwarte roodstaart"
+  },
+  "latin": "Phoenicurus ochruros",
+  "look_for": [
+    {
+      "en": "Male sooty black **breast**, paler belly",
+      "nl": "Man met roetzwarte **borst**, lichtere buik"
+    },
+    {
+      "en": "Orange-red **tail** quivers constantly",
+      "nl": "Oranjerode **staart** trilt voortdurend"
+    },
+    {
+      "en": "Perches on buildings and rocks",
+      "nl": "Zit op gebouwen en rotsen"
+    }
+  ]
+}

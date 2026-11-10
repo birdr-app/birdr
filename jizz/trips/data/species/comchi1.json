@@ -1,0 +1,22 @@
+{
+  "code": "comchi1",
+  "name": {
+    "en": "Common Chiffchaff",
+    "nl": "Tjiftjaf"
+  },
+  "latin": "Phylloscopus collybita",
+  "look_for": [
+    {
+      "en": "Plain olive-brown, short pale eyebrow",
+      "nl": "Effen olijfbruin, korte lichte wenkbrauw"
+    },
+    {
+      "en": "Dark **legs**, thin dark bill",
+      "nl": "Donkere **poten**, dunne donkere snavel"
+    },
+    {
+      "en": "Dips its **tail**, song says chiff-chaff",
+      "nl": "Wipt met de **staart**, zingt tjif-tjaf"
+    }
+  ]
+}

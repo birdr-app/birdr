@@ -1,0 +1,22 @@
+{
+  "code": "spaspa1",
+  "name": {
+    "en": "Spanish Sparrow",
+    "nl": "Spaanse mus"
+  },
+  "latin": "Passer hispaniolensis",
+  "look_for": [
+    {
+      "en": "Male chestnut **crown**, white **cheek**",
+      "nl": "Man met kastanjebruine **kruin** en witte **wang**"
+    },
+    {
+      "en": "Black **bib** spills into streaks on the **flanks**",
+      "nl": "Zwarte **bef** loopt door in strepen op de **flanken**"
+    },
+    {
+      "en": "Noisy flocks, bulky colonial nests in trees",
+      "nl": "Luidruchtige groepen, grote kolonienesten in bomen"
+    }
+  ]
+}

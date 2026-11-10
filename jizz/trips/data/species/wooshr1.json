@@ -1,0 +1,22 @@
+{
+  "code": "wooshr1",
+  "name": {
+    "en": "Woodchat Shrike",
+    "nl": "Roodkopklauwier"
+  },
+  "latin": "Lanius senator",
+  "look_for": [
+    {
+      "en": "Chestnut **crown** and **nape**",
+      "nl": "Kastanjebruine **kruin** en **nek**"
+    },
+    {
+      "en": "Black **mask** and forehead, white **shoulder** patches",
+      "nl": "Zwart **masker** en voorhoofd, witte **schouder**vlekken"
+    },
+    {
+      "en": "Creamy white below, perches on wires",
+      "nl": "Crèmewit onder, zit op draden"
+    }
+  ]
+}

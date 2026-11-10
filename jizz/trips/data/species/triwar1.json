@@ -1,0 +1,22 @@
+{
+  "code": "triwar1",
+  "name": {
+    "en": "Tristram's Warbler",
+    "nl": "Atlasgrasmus"
+  },
+  "latin": "Curruca deserticola",
+  "look_for": [
+    {
+      "en": "Dark grey **head**, rusty wing panel",
+      "nl": "Donkergrijze **kop**, roestkleurig vleugelvlak"
+    },
+    {
+      "en": "Warm rusty-buff underparts",
+      "nl": "Warme roestbruine onderkant"
+    },
+    {
+      "en": "Cocks and flicks its **tail**",
+      "nl": "Houdt de **staart** omhoog en wipt ermee"
+    }
+  ]
+}

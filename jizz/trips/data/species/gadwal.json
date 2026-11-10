@@ -1,0 +1,22 @@
+{
+  "code": "gadwal",
+  "name": {
+    "en": "Gadwall",
+    "nl": "Krakeend"
+  },
+  "latin": "Mareca strepera",
+  "look_for": [
+    {
+      "en": "Male finely grey, black at the rear",
+      "nl": "Mannetje fijn grijs, zwart achterlijf"
+    },
+    {
+      "en": "Small white patch on the **wing**",
+      "nl": "Klein wit vlekje op de **vleugel**"
+    },
+    {
+      "en": "Female like Mallard, orange-edged **bill**",
+      "nl": "Vrouwtje lijkt op wilde eend, oranje **snavelrand**"
+    }
+  ]
+}

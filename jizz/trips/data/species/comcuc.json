@@ -1,0 +1,22 @@
+{
+  "code": "comcuc",
+  "name": {
+    "en": "Common Cuckoo",
+    "nl": "Koekoek"
+  },
+  "latin": "Cuculus canorus",
+  "look_for": [
+    {
+      "en": "Slim grey bird, barred pale **belly**",
+      "nl": "Slanke grijze vogel, gebande lichte **buik**"
+    },
+    {
+      "en": "Long pointed **wings**, hawk-like flight",
+      "nl": "Lange puntige **vleugels**, haviksachtige vlucht"
+    },
+    {
+      "en": "Long dark **tail** with white spots",
+      "nl": "Lange donkere **staart** met witte vlekjes"
+    }
+  ]
+}

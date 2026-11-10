@@ -1,0 +1,22 @@
+{
+  "code": "coatit2",
+  "name": {
+    "en": "Coal Tit",
+    "nl": "Zwarte mees"
+  },
+  "latin": "Periparus ater",
+  "look_for": [
+    {
+      "en": "Black cap and **bib**, white **nape** patch",
+      "nl": "Zwarte kop en **keel**, witte **nek**vlek"
+    },
+    {
+      "en": "White **cheeks**, two pale **wing** bars",
+      "nl": "Witte **wangen**, twee lichte **vleugel**strepen"
+    },
+    {
+      "en": "Tiny, acrobatic in cedars and pines",
+      "nl": "Klein en acrobatisch in ceders en dennen"
+    }
+  ]
+}

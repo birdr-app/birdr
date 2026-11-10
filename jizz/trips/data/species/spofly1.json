@@ -1,0 +1,22 @@
+{
+  "code": "spofly1",
+  "name": {
+    "en": "Spotted Flycatcher",
+    "nl": "Grauwe vliegenvanger"
+  },
+  "latin": "Muscicapa striata",
+  "look_for": [
+    {
+      "en": "Grey-brown, upright, flat-headed",
+      "nl": "Grijsbruin, rechtop, platte kop"
+    },
+    {
+      "en": "Streaked **crown** and **breast**, no wing bars",
+      "nl": "Gestreepte **kruin** en **borst**, geen vleugelstrepen"
+    },
+    {
+      "en": "Sallies from a perch to catch insects",
+      "nl": "Vliegt vanaf een zitplek uit om insecten te vangen"
+    }
+  ]
+}

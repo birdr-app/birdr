@@ -1,0 +1,22 @@
+{
+  "code": "eurgri1",
+  "name": {
+    "en": "Griffon Vulture",
+    "nl": "Vale gier"
+  },
+  "latin": "Gyps fulvus",
+  "look_for": [
+    {
+      "en": "Huge tawny vulture, dark **flight feathers**",
+      "nl": "Enorme bruinbeige gier met donkere **slagpennen**"
+    },
+    {
+      "en": "Pale **head** and neck, white **ruff**",
+      "nl": "Lichte **kop** en hals, witte **kraag**"
+    },
+    {
+      "en": "Soars in groups, wings in shallow V",
+      "nl": "Zweeft in groepen, vleugels in lichte V"
+    }
+  ]
+}

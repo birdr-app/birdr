@@ -1,0 +1,22 @@
+{
+  "code": "eurkes",
+  "name": {
+    "en": "Common Kestrel",
+    "nl": "Torenvalk"
+  },
+  "latin": "Falco tinnunculus",
+  "look_for": [
+    {
+      "en": "Small falcon hovering over open ground",
+      "nl": "Kleine valk die boven open terrein bidt"
+    },
+    {
+      "en": "Rufous **back** with black spots; male grey-headed",
+      "nl": "Roestkleurige **rug** met zwarte vlekken; mannetje grijskop"
+    },
+    {
+      "en": "Long **tail** with a black band at the end",
+      "nl": "Lange **staart** met een zwarte band aan het eind"
+    }
+  ]
+}

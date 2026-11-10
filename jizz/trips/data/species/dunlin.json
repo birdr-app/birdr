@@ -1,0 +1,22 @@
+{
+  "code": "dunlin",
+  "name": {
+    "en": "Dunlin",
+    "nl": "Bonte strandloper"
+  },
+  "latin": "Calidris alpina",
+  "look_for": [
+    {
+      "en": "Black **belly** patch, rusty **back** in summer",
+      "nl": "Zwarte **buik**vlek, roestrode **rug** in de zomer"
+    },
+    {
+      "en": "Fairly long, slightly drooping **bill**",
+      "nl": "Vrij lange, licht neerwaarts gebogen **snavel**"
+    },
+    {
+      "en": "Hunched, short-legged, in flocks",
+      "nl": "Gedrongen met korte poten, in groepen"
+    }
+  ]
+}

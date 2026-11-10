@@ -1,0 +1,22 @@
+{
+  "code": "plamar1",
+  "name": {
+    "en": "Plain Martin",
+    "nl": "Vale oeverzwaluw"
+  },
+  "latin": "Riparia paludicola",
+  "look_for": [
+    {
+      "en": "Small, plain brown martin",
+      "nl": "Kleine, effen bruine zwaluw"
+    },
+    {
+      "en": "No dark band across the **breast**",
+      "nl": "Geen donkere band over de **borst**"
+    },
+    {
+      "en": "Low over rivers, nests in sandy banks",
+      "nl": "Laag over rivieren, nestelt in zandige oevers"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "mallar3",
+  "name": {
+    "en": "Mallard",
+    "nl": "Wilde eend"
+  },
+  "latin": "Anas platyrhynchos",
+  "look_for": [
+    {
+      "en": "Male: glossy green head, white collar",
+      "nl": "Mannetje: groene glanskop, witte ring"
+    },
+    {
+      "en": "Female mottled brown, orange **bill**",
+      "nl": "Vrouwtje gevlekt bruin, oranje **snavel**"
+    },
+    {
+      "en": "Blue **wing** patch edged in white",
+      "nl": "Blauwe **vleugel**spiegel met witte randen"
+    }
+  ]
+}

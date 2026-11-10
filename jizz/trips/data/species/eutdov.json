@@ -1,0 +1,22 @@
+{
+  "code": "eutdov",
+  "name": {
+    "en": "European Turtle Dove",
+    "nl": "Zomertortel"
+  },
+  "latin": "Streptopelia turtur",
+  "look_for": [
+    {
+      "en": "Scaly rufous **wings**, slim small dove",
+      "nl": "Schubbige roodbruine **vleugels**, slank duifje"
+    },
+    {
+      "en": "Black-and-white striped patch on the **neck**",
+      "nl": "Zwart-wit gestreepte vlek op de **hals**"
+    },
+    {
+      "en": "White-edged **tail**, pinkish **chest**",
+      "nl": "Wit omrande **staart**, roze **borst**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "medgul1",
+  "name": {
+    "en": "Mediterranean Gull",
+    "nl": "Zwartkopmeeuw"
+  },
+  "latin": "Ichthyaetus melanocephalus",
+  "look_for": [
+    {
+      "en": "Pure white **wing** tips, no black",
+      "nl": "Zuiver witte **vleugel**toppen, geen zwart"
+    },
+    {
+      "en": "Full black **hood** with white eyelids",
+      "nl": "Volledig zwarte **kap** met witte oogleden"
+    },
+    {
+      "en": "Thick red **bill**, dark red **legs**",
+      "nl": "Dikke rode **snavel**, donkerrode **poten**"
+    }
+  ]
+}
