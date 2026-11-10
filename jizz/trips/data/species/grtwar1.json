@@ -1,0 +1,22 @@
+{
+  "code": "grtwar1",
+  "name": {
+    "en": "Green-tailed Warbler",
+    "nl": "Haïtizanger"
+  },
+  "latin": "Microligea palustris",
+  "look_for": [
+    {
+      "en": "Olive-green back and tail",
+      "nl": "Olijfgroene rug en staart"
+    },
+    {
+      "en": "Grey head, white **throat**",
+      "nl": "Grijze kop, witte **keel**"
+    },
+    {
+      "en": "Skulks in dense undergrowth",
+      "nl": "Verscholen in dicht struikgewas"
+    }
+  ]
+}

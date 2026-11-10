@@ -1,0 +1,93 @@
+{
+  "country": "DO",
+  "notes": "Hand-picked: eBird Status & Trends marks most Dominican birds rare, so the automatic cut gives too few. The list holds all 32 Hispaniolan endemics (kept by the automatic rule), the common Greater Antillean and Caribbean birds, the introduced birds you see in towns and fields, the shorebirds, herons and ducks of the lagoons and mangroves, the main wintering North American warblers and a few seabirds. Hispaniolan Nightjar is added by hand: the database lists it as native, but it lives only on Hispaniola, so it appears as a normal bird without the endemic badge. Dropped: American Wigeon, Black Swift, Louisiana Waterthrush and American Barn Owl (rare or hard to separate). Birds shared only with Haiti or the Greater Antilles (Palmchat is Hispaniolan; Greater Antillean Bullfinch, Golden Swallow, Rufous-throated Solitaire are regional) sit in normal units until regional specialities are supported.",
+  "add": [
+    "granig3",
+    "grefla2",
+    "rosspo1",
+    "wiwduc1",
+    "bcnher",
+    "libher",
+    "ycnher",
+    "grbher3",
+    "pibgre",
+    "y00475",
+    "buwtea",
+    "brnboo",
+    "doccor",
+    "osprey",
+    "sposan",
+    "willet1",
+    "wessan",
+    "greyel",
+    "wilplo",
+    "leater1",
+    "norwat",
+    "kwqdov",
+    "norpot1"
+  ],
+  "drop": [
+    "amewig",
+    "blkswi",
+    "louwat",
+    "brnowl"
+  ],
+  "group_overrides": {},
+  "regional_specialities": [],
+  "first_day": [
+    "palmch1",
+    "hiswoo1",
+    "normoc",
+    "grabul1",
+    "banana",
+    "smbani",
+    "grykin",
+    "stofly1",
+    "zendov",
+    "whwdov",
+    "bcptan1",
+    "brbtod1",
+    "anpswi",
+    "categr1",
+    "turvul",
+    "magfri",
+    "brnpel",
+    "verhum1",
+    "hiseme1",
+    "gragra1"
+  ],
+  "lookalikes": [
+    {
+      "here": "y00475",
+      "home": "eurcoo"
+    },
+    {
+      "here": "snoegr",
+      "home": "litegr"
+    },
+    {
+      "here": "sposan",
+      "home": "comsan"
+    },
+    {
+      "here": "bknsti",
+      "home": "bkwsti"
+    },
+    {
+      "here": "amekes",
+      "home": "eurkes"
+    },
+    {
+      "here": "doccor",
+      "home": "grecor"
+    },
+    {
+      "here": "rethaw",
+      "home": "combuz1"
+    },
+    {
+      "here": "greyel",
+      "home": "comgre"
+    }
+  ]
+}

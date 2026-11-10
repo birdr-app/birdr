@@ -1,0 +1,22 @@
+{
+  "code": "hislic1",
+  "name": {
+    "en": "Hispaniolan Lizard-Cuckoo",
+    "nl": "Hispaniolahagediskoekoek"
+  },
+  "latin": "Coccyzus longirostris",
+  "look_for": [
+    {
+      "en": "Long tail with **white tips** underneath",
+      "nl": "Lange staart met **witte toppen** onderaan"
+    },
+    {
+      "en": "Grey-brown above, buff below",
+      "nl": "Grijsbruin boven, lichtbruin onder"
+    },
+    {
+      "en": "Moves slowly through low branches hunting lizards",
+      "nl": "Beweegt langzaam door lage takken op jacht naar hagedissen"
+    }
+  ]
+}

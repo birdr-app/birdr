@@ -1,0 +1,22 @@
+{
+  "code": "scnpig1",
+  "name": {
+    "en": "Scaly-naped Pigeon",
+    "nl": "Roodhalsduif"
+  },
+  "latin": "Patagioenas squamosa",
+  "look_for": [
+    {
+      "en": "Dark slate body, scaly maroon **nape**",
+      "nl": "Donkergrijs lijf, geschubde kastanjebruine **nek**"
+    },
+    {
+      "en": "Red ring of bare skin round the eye",
+      "nl": "Rode ring van kale huid om het oog"
+    },
+    {
+      "en": "Large, in the canopy of forest and gardens",
+      "nl": "Groot, in de boomtoppen van bos en tuinen"
+    }
+  ]
+}

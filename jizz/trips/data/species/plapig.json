@@ -1,0 +1,22 @@
+{
+  "code": "plapig",
+  "name": {
+    "en": "Plain Pigeon",
+    "nl": "Wijnrode duif"
+  },
+  "latin": "Patagioenas inornata",
+  "look_for": [
+    {
+      "en": "Big, plain reddish-brown pigeon",
+      "nl": "Grote, effen roodbruine duif"
+    },
+    {
+      "en": "**No scaling** on the neck",
+      "nl": "**Geen schubben** in de nek"
+    },
+    {
+      "en": "Bigger and plainer than the doves nearby",
+      "nl": "Groter en effener dan de duiven in de buurt"
+    }
+  ]
+}

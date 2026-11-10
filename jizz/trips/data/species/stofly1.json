@@ -1,0 +1,22 @@
+{
+  "code": "stofly1",
+  "name": {
+    "en": "Stolid Flycatcher",
+    "nl": "Dikkoptiran"
+  },
+  "latin": "Myiarchus stolidus",
+  "look_for": [
+    {
+      "en": "Greyish head, **rusty** edges to wings and tail",
+      "nl": "Grijsachtige kop, **roestkleurige** randen aan vleugel en staart"
+    },
+    {
+      "en": "Pale yellow belly",
+      "nl": "Lichtgele buik"
+    },
+    {
+      "en": "Perches upright in dry scrub",
+      "nl": "Zit rechtop in droog struweel"
+    }
+  ]
+}

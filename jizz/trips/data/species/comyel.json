@@ -1,0 +1,22 @@
+{
+  "code": "comyel",
+  "name": {
+    "en": "Common Yellowthroat",
+    "nl": "Gewone maskerzanger"
+  },
+  "latin": "Geothlypis trichas",
+  "look_for": [
+    {
+      "en": "Male: black **mask** and yellow throat",
+      "nl": "Mannetje: zwart **masker** en gele keel"
+    },
+    {
+      "en": "Female brownish, yellow throat",
+      "nl": "Vrouwtje bruinachtig, gele keel"
+    },
+    {
+      "en": "Skulks in thick, low vegetation",
+      "nl": "Verscholen in dichte, lage begroeiing"
+    }
+  ]
+}

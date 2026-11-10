@@ -1,0 +1,22 @@
+{
+  "code": "killde",
+  "name": {
+    "en": "Killdeer",
+    "nl": "Killdeerplevier"
+  },
+  "latin": "Charadrius vociferus",
+  "look_for": [
+    {
+      "en": "Two black **bands** across the chest",
+      "nl": "Twee zwarte **banden** over de borst"
+    },
+    {
+      "en": "Orange-red rump in flight",
+      "nl": "Oranjerode stuit in de vlucht"
+    },
+    {
+      "en": "Runs on lawns and fields, calls loudly",
+      "nl": "Rent over gazons en velden, roept luid"
+    }
+  ]
+}

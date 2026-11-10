@@ -1,0 +1,22 @@
+{
+  "code": "hisspi",
+  "name": {
+    "en": "Hispaniolan Spindalis",
+    "nl": "Hispaniolaspindalis"
+  },
+  "latin": "Spindalis dominicensis",
+  "look_for": [
+    {
+      "en": "Male: black head with white **stripes**",
+      "nl": "Mannetje: zwarte kop met witte **strepen**"
+    },
+    {
+      "en": "Orange-red breast, black wings with a white patch",
+      "nl": "Oranjerode borst, zwarte vleugels met een witte vlek"
+    },
+    {
+      "en": "Female olive, faintly streaked",
+      "nl": "Vrouwtje olijfgroen, vaag gestreept"
+    }
+  ]
+}
