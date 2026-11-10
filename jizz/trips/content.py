@@ -31,7 +31,9 @@ TRIPS: dict[str, dict] = {
     'SC': {'name': {'en': 'Seychelles', 'nl': 'Seychellen'}, 'languages': ('en', 'nl')},
     'UG': {'name': {'en': 'Uganda', 'nl': 'Oeganda'}, 'languages': ('en', 'nl')},
     'CR': {'name': {'en': 'Costa Rica', 'nl': 'Costa Rica'}, 'languages': ('en', 'nl')},
+    'MA': {'name': {'en': 'Morocco', 'nl': 'Marokko'}, 'languages': ('en', 'nl')},
     'DO': {'name': {'en': 'Dominican Republic', 'nl': 'Dominicaanse Republiek'}, 'languages': ('en', 'nl')},
+    'NZ': {'name': {'en': 'New Zealand', 'nl': 'Nieuw-Zeeland'}, 'languages': ('en', 'nl')},
     'CR-CARIBBEAN': {
         'name': {'en': 'Caribbean lowlands', 'nl': 'Caribisch laagland'},
         'languages': ('en', 'nl'),
