@@ -11,6 +11,7 @@ import {
   type CourseProgress,
 } from '../api/course';
 import { GameArtImage } from '../components/GameArtImage';
+import { UnderConstruction } from '../components/UnderConstruction';
 import { getMoodImage } from '../constants/birdrMoodImages';
 import { useVisualStyle } from '../context/VisualStyleContext';
 import { colors } from '../theme';
@@ -75,6 +76,7 @@ export function CourseScreen() {
           </Text>
         </View>
       </View>
+      <UnderConstruction feature="Beginners course" lang="nl" />
 
       {next && !allDone && (
         <TouchableOpacity

@@ -4,6 +4,7 @@ import { useNavigation, useRoute, type RouteProp } from '@react-navigation/nativ
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { loadTripState, updateTripState, type TripUnit } from '../api/trip';
 import { Kicker, TripLoading, TripRing, UnitRow, tripStyles } from '../components/TripParts';
+import { UnderConstruction } from '../components/UnderConstruction';
 import { useRegionKnown, useTrip } from '../hooks/useTrip';
 import { useTranslation } from '../i18n/TranslationContext';
 import { leagueFlag } from '../lib/league';
@@ -141,6 +142,7 @@ export function TripHomeScreen() {
       ) : null}
 
       {trip.intro ? <Text style={tripStyles.body}>{trip.intro}</Text> : null}
+      <UnderConstruction feature="Trip prep" />
 
       {!isPack ? <Text style={tripStyles.sectionTitle}>{t('trip_start_section')}</Text> : null}
       {!isPack ? <UnitRow

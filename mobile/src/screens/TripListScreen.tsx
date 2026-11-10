@@ -5,6 +5,7 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { fetchTrips, tripLanguage, type TripSummary } from '../api/trip';
 import { TripLoading, tripStyles } from '../components/TripParts';
 import { TripRequestForm } from '../components/TripRequestForm';
+import { UnderConstruction } from '../components/UnderConstruction';
 import { useTranslation } from '../i18n/TranslationContext';
 import { leagueFlag } from '../lib/league';
 import { colors } from '../theme';
@@ -36,6 +37,7 @@ export function TripListScreen() {
       automaticallyAdjustKeyboardInsets
     >
       <Text style={tripStyles.body}>{t('trip_list_intro')}</Text>
+      <UnderConstruction feature="Trip prep" lang={lang} />
       {trips.filter((trip) => !trip.parent).map((trip) => (
         <TouchableOpacity
           key={trip.country}

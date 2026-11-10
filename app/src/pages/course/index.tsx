@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { currentWeek, fetchCourse, isLessonOpen, loadProgress, type Course } from '../../api/course';
 import { BirdrArtImage } from '../../components/birdr-art-image';
+import { UnderConstruction } from '../../components/under-construction';
 import { Page } from '../../shared/components/layout';
 
 /** The beginners course: all lessons as a path, the next one open. Dutch only. */
@@ -69,6 +70,7 @@ export function CoursePage() {
               </Text>
             </Box>
           </Flex>
+          <UnderConstruction feature="Beginners course" lang="nl" />
 
           {next && !allDone ? (
             <Box bg="white" borderRadius="xl" p={4} borderWidth="2px" borderColor="primary.200">

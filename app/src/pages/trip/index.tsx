@@ -8,6 +8,7 @@ import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
 import { ProgressRing, TripLoading, UnitRow } from './parts';
 import { TripRequestForm } from './request';
+import { UnderConstruction } from '../../components/under-construction';
 import { TripCelebration } from './celebration';
 import { orderedUnits, tripComplete, useTrip, useTripLang, useTripText } from './use-trip';
 
@@ -39,6 +40,7 @@ export function TripListPage() {
           <Text color="primary.800">
             {t('trip_list_intro', "Going abroad? Learn the birds before you go: first the kinds of birds, then the species, group by group. Birds you already know from other games count straight away.")}
           </Text>
+          <UnderConstruction feature="Trip prep" lang={lang} />
           {trips.filter((trip) => !trip.parent).map((trip) => (
             <Button
               key={trip.country}
@@ -102,6 +104,7 @@ export function TripHomePage() {
   const { country: countryParam = '' } = useParams();
   const country = countryParam.toUpperCase();
   const t = useTripText();
+  const lang = useTripLang();
   const navigate = useNavigate();
   const { trip, error, reload, local, setLocal, known, knownGroups, progress } = useTrip(country);
   const [showKnown, setShowKnown] = useState(false);
@@ -246,6 +249,7 @@ export function TripHomePage() {
           ) : null}
 
           {trip.intro ? <Text color="primary.800">{trip.intro}</Text> : null}
+          <UnderConstruction feature="Trip prep" lang={lang} />
 
           {!isPack ? (
             <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
