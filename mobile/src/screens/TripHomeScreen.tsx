@@ -252,7 +252,7 @@ export function TripHomeScreen() {
               testID={`trip.unit.${unit.slug}`}
             />
           ))}
-          {plusOpen.length > 3 ? <Text style={tripStyles.small}>{t('trip_plus_more', { count: plusOpen.length - 3 })}</Text> : null}
+          {plusOpen.length > 3 ? <Text style={tripStyles.small}>{t('trip_plus_more', { count: plusOpen.length - 3, birds: plusOpen.slice(3).reduce((n, u) => n + u.species.length, 0) })}</Text> : null}
         </>
       ) : null}
     </ScrollView>

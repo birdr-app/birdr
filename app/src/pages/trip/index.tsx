@@ -391,7 +391,7 @@ export function TripHomePage() {
               ))}
               {plusOpen.length > 3 ? (
                 <Text fontSize="sm" color="primary.700">
-                  {t('trip_plus_more', '{count, plural, one {# more unit} other {# more units}} after these.', { count: plusOpen.length - 3 })}
+                  {t('trip_plus_more', '{count, plural, one {# more unit} other {# more units}} after these.', { count: plusOpen.length - 3, birds: plusOpen.slice(3).reduce((n, u) => n + u.species.length, 0) })}
                 </Text>
               ) : null}
             </>
