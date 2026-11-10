@@ -1,0 +1,22 @@
+{
+  "code": "yellow2",
+  "name": {
+    "en": "Yellowhammer",
+    "nl": "Geelgors"
+  },
+  "latin": "Emberiza citrinella",
+  "look_for": [
+    {
+      "en": "Male: bright yellow head",
+      "nl": "Mannetje: felgele kop"
+    },
+    {
+      "en": "Streaked chestnut rump",
+      "nl": "Gestreepte kastanjebruine stuit"
+    },
+    {
+      "en": "Sings 'a little bit of bread and no cheese'",
+      "nl": "Zingt 'a little bit of bread and no cheese'"
+    }
+  ]
+}

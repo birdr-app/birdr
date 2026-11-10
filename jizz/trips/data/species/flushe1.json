@@ -1,0 +1,22 @@
+{
+  "code": "flushe1",
+  "name": {
+    "en": "Fluttering Shearwater",
+    "nl": "Vlinderpijlstormvogel"
+  },
+  "latin": "Puffinus gavia",
+  "look_for": [
+    {
+      "en": "Small black-and-white shearwater",
+      "nl": "Kleine zwart-witte pijlstormvogel"
+    },
+    {
+      "en": "Rapid, whirring wingbeats",
+      "nl": "Snelle, snorrende vleugelslagen"
+    },
+    {
+      "en": "Pale **underwing** with a dark edge",
+      "nl": "Lichte **onderzijde van de vleugel** met donkere rand"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "parjae",
+  "name": {
+    "en": "Arctic Skua",
+    "nl": "Kleine jager"
+  },
+  "latin": "Stercorarius parasiticus",
+  "look_for": [
+    {
+      "en": "Dark, falcon-like skua",
+      "nl": "Donkere, valkachtige jager"
+    },
+    {
+      "en": "Pale morphs have a pale breast",
+      "nl": "Lichte vorm met lichte borst"
+    },
+    {
+      "en": "Chases terns until they drop food",
+      "nl": "Achtervolgt sterns tot ze hun prooi laten vallen"
+    }
+  ]
+}

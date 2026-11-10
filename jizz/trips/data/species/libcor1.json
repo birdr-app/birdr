@@ -1,0 +1,22 @@
+{
+  "code": "libcor1",
+  "name": {
+    "en": "Little Black Cormorant",
+    "nl": "Zwarte aalscholver"
+  },
+  "latin": "Phalacrocorax sulcirostris",
+  "look_for": [
+    {
+      "en": "All-black, slender",
+      "nl": "Geheel zwart en slank"
+    },
+    {
+      "en": "Often fishes in flocks on lakes",
+      "nl": "Vist vaak in groepen op meren"
+    },
+    {
+      "en": "Slim **bill** and a longer tail",
+      "nl": "Dunne **snavel** en een langere staart"
+    }
+  ]
+}

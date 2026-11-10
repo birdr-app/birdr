@@ -1,0 +1,22 @@
+{
+  "code": "piesti1",
+  "name": {
+    "en": "Pied Stilt",
+    "nl": "Australische steltkluut"
+  },
+  "latin": "Himantopus leucocephalus",
+  "look_for": [
+    {
+      "en": "Long red legs, thin black **bill**",
+      "nl": "Lange rode poten, dunne zwarte **snavel**"
+    },
+    {
+      "en": "Black back and white front",
+      "nl": "Zwarte rug en witte voorkant"
+    },
+    {
+      "en": "Wades in shallow wetlands, noisy flocks",
+      "nl": "Waadt in ondiepe wetlands, luidruchtige groepen"
+    }
+  ]
+}

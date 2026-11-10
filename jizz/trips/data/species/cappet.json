@@ -1,0 +1,22 @@
+{
+  "code": "cappet",
+  "name": {
+    "en": "Pintado Petrel",
+    "nl": "Kaapse stormvogel"
+  },
+  "latin": "Daption capense",
+  "look_for": [
+    {
+      "en": "Black-and-white chequered back",
+      "nl": "Zwart-wit geblokte rug"
+    },
+    {
+      "en": "Black head and white belly",
+      "nl": "Zwarte kop en witte buik"
+    },
+    {
+      "en": "Gathers around boats in noisy flocks",
+      "nl": "Verzamelt zich luidruchtig rond boten"
+    }
+  ]
+}

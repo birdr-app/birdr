@@ -1,0 +1,22 @@
+{
+  "code": "morepo2",
+  "name": {
+    "en": "Morepork",
+    "nl": "Nieuw-Zeelandse boeboek"
+  },
+  "latin": "Ninox novaeseelandiae",
+  "look_for": [
+    {
+      "en": "Small brown owl with white spots",
+      "nl": "Kleine bruine uil met witte vlekken"
+    },
+    {
+      "en": "Yellow eyes",
+      "nl": "Gele ogen"
+    },
+    {
+      "en": "Calls 'more-pork' at dusk",
+      "nl": "Roept 'more-pork' in de schemering"
+    }
+  ]
+}

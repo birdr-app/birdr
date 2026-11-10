@@ -1,0 +1,22 @@
+{
+  "code": "silgul2",
+  "name": {
+    "en": "Silver Gull",
+    "nl": "Witkopmeeuw"
+  },
+  "latin": "Chroicocephalus novaehollandiae",
+  "look_for": [
+    {
+      "en": "Small, pale grey gull with a pale eye",
+      "nl": "Kleine, lichtgrijze meeuw met een lichte iris"
+    },
+    {
+      "en": "Red **bill** and legs",
+      "nl": "Rode **snavel** en poten"
+    },
+    {
+      "en": "Black wing tips, noisy flocks in towns",
+      "nl": "Zwarte vleugelpunten, luidruchtig in steden"
+    }
+  ]
+}

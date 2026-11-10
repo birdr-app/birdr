@@ -1,0 +1,22 @@
+{
+  "code": "parpet1",
+  "name": {
+    "en": "Parkinson's Petrel",
+    "nl": "Zwarte stormvogel"
+  },
+  "latin": "Procellaria parkinsoni",
+  "look_for": [
+    {
+      "en": "All black, large",
+      "nl": "Groot en geheel zwart"
+    },
+    {
+      "en": "Pale yellow **bill** with a black tip",
+      "nl": "Lichtgele **snavel** met een zwarte punt"
+    },
+    {
+      "en": "Nests on Great and Little Barrier",
+      "nl": "Broedt op Great en Little Barrier"
+    }
+  ]
+}

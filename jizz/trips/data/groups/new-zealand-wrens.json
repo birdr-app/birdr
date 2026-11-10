@@ -1,0 +1,18 @@
+{
+  "slug": "new-zealand-wrens",
+  "about": {
+    "en": "Tiny, round, almost tailless birds that creep over rocks and trunks, bobbing as they go. They are not closely related to the wrens you may know, and only a few species survive. Their calls are thin and high.",
+    "nl": "Piepkleine, ronde vogels zonder staart die over rotsen en stammen kruipen en daarbij wippen. Ze zijn niet nauw verwant aan de winterkoningen die je kent en er zijn nog maar weinig soorten. Hun roep is dun en hoog."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "wrens"
+      ],
+      "text": {
+        "en": "Not related to the Wren you know. These tiny birds are the only survivors of an ancient family, and they hop and bob across rock and trunk rather than cock their tails.",
+        "nl": "Niet verwant aan de winterkoning die je kent. Deze kleine vogels zijn de laatste overlevenden van een oude familie en wippen en hippen over rots en stam in plaats van de staart omhoog te houden."
+      }
+    }
+  ]
+}

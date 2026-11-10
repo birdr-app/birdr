@@ -1,0 +1,22 @@
+{
+  "code": "sposha1",
+  "name": {
+    "en": "Spotted Shag",
+    "nl": "Gevlekte aalscholver"
+  },
+  "latin": "Phalacrocorax punctatus",
+  "look_for": [
+    {
+      "en": "Pale grey-blue back, spotted",
+      "nl": "Lichtgrijsblauwe rug met vlekken"
+    },
+    {
+      "en": "White stripe down the neck",
+      "nl": "Witte streep langs de hals"
+    },
+    {
+      "en": "Rocky coasts and harbours",
+      "nl": "Rotskusten en havens"
+    }
+  ]
+}

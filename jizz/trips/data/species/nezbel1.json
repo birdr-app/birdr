@@ -1,0 +1,22 @@
+{
+  "code": "nezbel1",
+  "name": {
+    "en": "New Zealand Bellbird",
+    "nl": "Maoribelvogel"
+  },
+  "latin": "Anthornis melanura",
+  "look_for": [
+    {
+      "en": "Olive-green, male with a purple sheen on the head",
+      "nl": "Olijfgroen, mannetje met paarse glans op de kop"
+    },
+    {
+      "en": "Curved **bill**",
+      "nl": "Gebogen **snavel**"
+    },
+    {
+      "en": "Loud, bell-like song",
+      "nl": "Luid, klokachtig lied"
+    }
+  ]
+}

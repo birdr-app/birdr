@@ -1,0 +1,22 @@
+{
+  "code": "rinphe1",
+  "name": {
+    "en": "Common Pheasant",
+    "nl": "Fazant"
+  },
+  "latin": "Phasianus colchicus",
+  "look_for": [
+    {
+      "en": "Male: long barred tail, red face, green head",
+      "nl": "Mannetje: lange gebande staart, rode wangen, groene kop"
+    },
+    {
+      "en": "Female: mottled brown with a long tail",
+      "nl": "Vrouwtje: gevlekt bruin met lange staart"
+    },
+    {
+      "en": "On field edges and rough grass",
+      "nl": "Langs akkerranden en ruig gras"
+    }
+  ]
+}

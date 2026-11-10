@@ -1,0 +1,22 @@
+{
+  "code": "pabduc1",
+  "name": {
+    "en": "Pacific Black Duck",
+    "nl": "Wenkbrauweend"
+  },
+  "latin": "Anas superciliosa",
+  "look_for": [
+    {
+      "en": "Looks like a female Mallard with a striped face",
+      "nl": "Lijkt op een vrouwtje wilde eend met een gestreepte kop"
+    },
+    {
+      "en": "Dark crown, pale cheek, dark eye stripe",
+      "nl": "Donkere kruin, lichte wang, donkere oogstreep"
+    },
+    {
+      "en": "Green **speculum** in the wing",
+      "nl": "Groene **spiegel** in de vleugel"
+    }
+  ]
+}

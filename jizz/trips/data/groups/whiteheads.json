@@ -1,0 +1,19 @@
+{
+  "slug": "whiteheads",
+  "about": {
+    "en": "Small, active forest birds that move in flocks through the canopy and call a lot. Unlike the birds they resemble, they are a family found only in New Zealand. Males and females look alike.",
+    "nl": "Kleine, drukke bosvogels die in groepen door de boomkruin trekken en veel roepen. Ze lijken op andere vogels, maar vormen een familie die alleen in Nieuw-Zeeland voorkomt. Mannetje en vrouwtje lijken op elkaar."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "tits-chickadees-and-titmice",
+        "long-tailed-tits-and-bushtit"
+      ],
+      "text": {
+        "en": "Not tits, though they flock and hang upside down in the same way. They are an old family unique to New Zealand.",
+        "nl": "Geen mezen, ook al zitten ze in groepen en hangen ze op dezelfde manier ondersteboven. Het is een oude familie die alleen in Nieuw-Zeeland voorkomt."
+      }
+    }
+  ]
+}

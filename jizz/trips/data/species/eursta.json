@@ -1,0 +1,22 @@
+{
+  "code": "eursta",
+  "name": {
+    "en": "Common Starling",
+    "nl": "Spreeuw"
+  },
+  "latin": "Sturnus vulgaris",
+  "look_for": [
+    {
+      "en": "Glossy and spotted in winter",
+      "nl": "Glanzend en gespikkeld in de winter"
+    },
+    {
+      "en": "Yellow **bill** in summer",
+      "nl": "Gele **snavel** in de zomer"
+    },
+    {
+      "en": "Walks on the ground, mimics other birds",
+      "nl": "Loopt over de grond, imiteert andere vogels"
+    }
+  ]
+}

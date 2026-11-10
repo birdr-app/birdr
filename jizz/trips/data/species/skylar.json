@@ -1,0 +1,22 @@
+{
+  "code": "skylar",
+  "name": {
+    "en": "Eurasian Skylark",
+    "nl": "Veldleeuwerik"
+  },
+  "latin": "Alauda arvensis",
+  "look_for": [
+    {
+      "en": "Streaked brown with a small **crest**",
+      "nl": "Gestreept bruin met een kleine **kuif**"
+    },
+    {
+      "en": "White outer tail feathers",
+      "nl": "Witte buitenste staartpennen"
+    },
+    {
+      "en": "Song-flights high over fields",
+      "nl": "Zangvlucht hoog boven velden"
+    }
+  ]
+}

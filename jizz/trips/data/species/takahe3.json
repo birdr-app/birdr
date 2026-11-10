@@ -1,0 +1,22 @@
+{
+  "code": "takahe3",
+  "name": {
+    "en": "South Island Takahe",
+    "nl": "Zuidereilandtakahe"
+  },
+  "latin": "Porphyrio hochstetteri",
+  "look_for": [
+    {
+      "en": "Big, blue and green flightless bird",
+      "nl": "Grote, blauw en groene loopvogel"
+    },
+    {
+      "en": "Thick red **bill** and **frontal shield**",
+      "nl": "Dikke rode **snavel** met **voorhoofdsschild**"
+    },
+    {
+      "en": "Eats tussock grass in Fiordland and Murchison Mountains",
+      "nl": "Eet pollengras in Fiordland en de Murchison Mountains"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "gretea1",
+  "name": {
+    "en": "Grey Teal",
+    "nl": "Australische taling"
+  },
+  "latin": "Anas gracilis",
+  "look_for": [
+    {
+      "en": "Small, plain grey-brown duck",
+      "nl": "Kleine, effen grijsbruine eend"
+    },
+    {
+      "en": "Pale throat, red eye",
+      "nl": "Lichte keel en rood oog"
+    },
+    {
+      "en": "Green wing patch in flight",
+      "nl": "Groen vleugelvlak in vlucht"
+    }
+  ]
+}

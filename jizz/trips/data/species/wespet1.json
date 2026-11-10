@@ -1,0 +1,22 @@
+{
+  "code": "wespet1",
+  "name": {
+    "en": "Westland Petrel",
+    "nl": "Westlandstormvogel"
+  },
+  "latin": "Procellaria westlandica",
+  "look_for": [
+    {
+      "en": "Large and black",
+      "nl": "Groot en zwart"
+    },
+    {
+      "en": "Pale **bill** with dark tip",
+      "nl": "Lichte **snavel** met donkere punt"
+    },
+    {
+      "en": "Breeds only in Punakaiki, West Coast",
+      "nl": "Broedt alleen bij Punakaiki aan de westkust"
+    }
+  ]
+}

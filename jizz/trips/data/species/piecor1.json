@@ -1,0 +1,22 @@
+{
+  "code": "piecor1",
+  "name": {
+    "en": "Pied Cormorant",
+    "nl": "Bonte aalscholver"
+  },
+  "latin": "Phalacrocorax varius",
+  "look_for": [
+    {
+      "en": "Black above, white below, large",
+      "nl": "Groot, zwart boven en wit onder"
+    },
+    {
+      "en": "Orange-yellow face patch",
+      "nl": "Oranjegele vlek in het gezicht"
+    },
+    {
+      "en": "Roosts in groups on rocks and trees",
+      "nl": "Slaapt in groepen op rotsen en bomen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "salalb1",
+  "name": {
+    "en": "Salvin's Albatross",
+    "nl": "Salvinalbatros"
+  },
+  "latin": "Thalassarche salvini",
+  "look_for": [
+    {
+      "en": "Like White-capped, but with a darker grey head",
+      "nl": "Lijkt op de witkruinalbatros met een donkerder grijze kop"
+    },
+    {
+      "en": "Yellow-tipped **bill** with a black spot",
+      "nl": "Gele snavelpunt met een zwarte vlek"
+    },
+    {
+      "en": "Black thumbprint on the **underwing**",
+      "nl": "Zwarte vlek op de **onderzijde van de vleugel**"
+    }
+  ]
+}

@@ -1,0 +1,779 @@
+{
+  "country": "NZ",
+  "intro": {
+    "en": "New Zealand has few land birds, but almost all of them are found nowhere else. Many are rare, nocturnal or shy, so the first birds you meet are often Blackbirds, Song Thrushes and Common Mynas brought from Europe and Asia. This trip covers 129 species: the introduced birds, the common natives, 48 endemics and the seabirds you can see from a boat.",
+    "nl": "Nieuw-Zeeland heeft weinig landvogels, maar bijna al die soorten komen nergens anders voor. Veel zijn zeldzaam, nachtactief of schuw, dus de eerste vogels die je ziet zijn vaak merels, zanglijsters en Indische mynahs uit Europa en Azië. Deze trip omvat 129 soorten: de ingevoerde vogels, de algemene inheemse soorten, 48 endemische soorten en de zeevogels die je vanaf een boot ziet."
+  },
+  "groups": {
+    "kiwis": {
+      "here": {
+        "en": "Five kiwis are on this trip, and all of them are shy and nocturnal. Your best chances are North Island Brown Kiwi in a kiwi house or on a night walk, and Southern Brown Kiwi on Stewart Island, where some feed by day.",
+        "nl": "Vijf kiwi's staan op deze trip, en alle vijf zijn schuw en nachtactief. De grootste kans heb je bij de noordelijke bruine kiwi in een kiwihuis of tijdens een nachtwandeling, en bij de zuidelijke bruine kiwi op Stewart Island, waar sommige overdag foerageren."
+      }
+    },
+    "waterfowl": {
+      "here": {
+        "en": "Ten ducks, geese and swans. Mallard, Canada Goose and Black Swan are introduced and everywhere. The Paradise Shelduck is a true New Zealand bird, and Blue Duck is the rare one on fast rivers.",
+        "nl": "Tien eenden, ganzen en zwanen. Wilde eend, Canadese gans en zwarte zwaan zijn ingevoerd en overal te zien. De paradijscasarca is een echte Nieuw-Zeelandse vogel en de blauwe eend is de zeldzame soort op snelstromende rivieren."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "here": {
+        "en": "Two introduced game birds. California Quail run along roadsides and Common Pheasant stand on field edges.",
+        "nl": "Twee ingevoerde jachtvogels. Californische kuifkwartels rennen langs de weg en fazanten staan aan akkerranden."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "One native pigeon and one introduced one. The big New Zealand Pigeon (kererū) is common in forest and towns; you can hear its wingbeats from far away.",
+        "nl": "Eén inheemse duif en één ingevoerde. De grote Nieuw-Zeelandse duif (kererū) is algemeen in bos en steden; je hoort zijn vleugelslag van ver."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "Just one, the Shining Bronze-Cuckoo. It is a spring visitor, easier to hear than to see.",
+        "nl": "Er is er maar één, de gouden bronskoekoek. Het is een voorjaarsgast, makkelijker te horen dan te zien."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Three ground-living rails: the common Pukeko, the flightless Weka and the rare Takahe. Pukeko stand in every wet paddock; Weka walk through camps and carparks.",
+        "nl": "Drie grondbewonende rallen: de algemene pukeko, de vluchtloze weka en de zeldzame takahe. Pukeko's staan in elk nat weiland; weka's lopen over kampeerterreinen en parkeerplaatsen."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "Eleven waders. Oystercatchers, Pied Stilt and Masked Lapwing stay all year; Bar-tailed Godwit and Red Knot arrive from Siberia and Alaska in spring. Wrybill and the New Zealand Dotterel are found only here.",
+        "nl": "Elf steltlopers. Scholeksters, steltkluut en maskerkievit blijven het hele jaar; rosse grutto en kanoet komen in het voorjaar uit Siberië en Alaska. De scheefsnavelplevier en de rosse plevier komen alleen hier voor."
+      }
+    },
+    "skuas-and-jaegers": {
+      "here": {
+        "en": "Three skuas. Brown Skua breeds on Stewart Island and the south; Arctic and Pomarine Skua pass through in summer.",
+        "nl": "Drie jagers. De subantarctische grote jager broedt op Stewart Island en in het zuiden; kleine en middelste jager trekken in de zomer door."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Six gulls and terns. Kelp Gull (black-backed gull) and Silver Gull (red-billed gull) are on every beach; Black-fronted Tern and Black-billed Gull nest on South Island braided rivers.",
+        "nl": "Zes meeuwen en sterns. Kelpmeeuw en witkopmeeuw zie je op elk strand; Nieuw-Zeelandse stern en zwartsnavelmeeuw broeden op de vlechtende rivieren van het Zuidereiland."
+      }
+    },
+    "grebes": {
+      "here": {
+        "en": "Two grebes. The New Zealand Grebe (dabchick) is small and dark; the Great Crested Grebe is rare and nearly confined to South Island lakes.",
+        "nl": "Twee futen. De Nieuw-Zeelandse fuut is klein en donker; de fuut is zeldzaam en bijna beperkt tot meren op het Zuidereiland."
+      }
+    },
+    "penguins": {
+      "here": {
+        "en": "Three penguins. Little Penguin is the one you will see most, at dusk at Oamaru, Wellington or Akaroa. Yellow-eyed and Fiordland Penguin are found in the far south.",
+        "nl": "Drie pinguïns. De dwergpinguïn zie je het vaakst, in de schemering bij Oamaru, Wellington of Akaroa. Geeloog- en fjordlandkuifpinguïn leven in het uiterste zuiden."
+      }
+    },
+    "albatrosses": {
+      "here": {
+        "en": "Eight albatrosses, best seen from a boat off Kaikoura, Otago or Stewart Island. Royal albatrosses nest at Taiaroa Head near Dunedin, where you can watch them fly over the headland.",
+        "nl": "Acht albatrossen, het best te zien vanaf een boot bij Kaikoura, Otago of Stewart Island. Koningsalbatrossen nestelen bij Taiaroa Head bij Dunedin, waar je ze over de landtong ziet vliegen."
+      }
+    },
+    "storm-petrels": {
+      "here": {
+        "en": "Two small storm-petrels, both hard to find. White-faced Storm-Petrel is regular on Hauraki Gulf trips; the New Zealand Storm-Petrel was thought extinct until 2003.",
+        "nl": "Twee kleine stormvogeltjes, allebei moeilijk te vinden. Het bonte stormvogeltje komt regelmatig voor op tochten in de Hauraki Gulf; het Nieuw-Zeelands stormvogeltje werd tot 2003 uitgestorven gewaand."
+      }
+    },
+    "petrels-shearwaters-and-diving-petrels": {
+      "here": {
+        "en": "Sixteen petrels, shearwaters and prions. New Zealand has more breeding species than any other country, and most are seen only offshore. Sooty Shearwater and Fluttering Shearwater are the easy ones.",
+        "nl": "Zestien stormvogels, pijlstormvogels en prions. Nieuw-Zeeland heeft meer broedende soorten dan enig ander land en de meeste zie je alleen op zee. Bruine pijlstormvogel en vlinderpijlstormvogel zijn het makkelijkst."
+      }
+    },
+    "frigatebirds-boobies-and-gannets": {
+      "here": {
+        "en": "One gannet, the Australasian Gannet. Colonies at Muriwai and Cape Kidnappers are easy to visit.",
+        "nl": "Eén genten-soort, de Pacifische jan-van-gent. Kolonies bij Muriwai en Cape Kidnappers zijn goed te bezoeken."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "Seven shags and cormorants, each with its own name in New Zealand. Great Cormorant is the Black Shag; Pied, Little Pied and Little Black are the other widespread ones, and three are limited to the south or the Marlborough Sounds.",
+        "nl": "Zeven aalscholvers, elk met een eigen naam in Nieuw-Zeeland. De aalscholver is de Black Shag; bonte, kleine bonte en zwarte aalscholver komen ook breed voor, en drie soorten zijn beperkt tot het zuiden of de Marlborough Sounds."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Four herons and a spoonbill. White-faced Heron is the common one in fields and on shores; the white Great Egret (kōtuku) is rare and treasured.",
+        "nl": "Vier reigers en een lepelaar. De witwangreiger is de algemene soort op velden en kusten; de witte grote zilverreiger (kōtuku) is zeldzaam en geliefd."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "One bird of prey: the Swamp Harrier, hunting low over wetlands and farmland.",
+        "nl": "Eén roofvogel: de Australische bruine kiekendief, die laag over wetlands en landbouwgrond jaagt."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "One owl: the Morepork. It calls at dusk and at night; by day it roosts in dense cover.",
+        "nl": "Eén uil: de Nieuw-Zeelandse boeboek. Hij roept in de schemering en 's nachts en slaapt overdag in dichte begroeiing."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "One kingfisher: the Sacred Kingfisher. It sits on wires and posts, and often hunts on land.",
+        "nl": "Eén ijsvogel: de heilige ijsvogel. Hij zit op draden en palen en jaagt vaak op het land."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "One falcon: the New Zealand Falcon (kārearea). It is rare but regular in the high country and in southern forest.",
+        "nl": "Eén valk: de Nieuw-Zeelandse valk (kārearea). Hij is zeldzaam maar regelmatig te zien in het hoogland en in het zuidelijke bos."
+      }
+    },
+    "new-zealand-parrots": {
+      "here": {
+        "en": "Three big parrots. Kea live in the mountains, Kaka in forest, and Kakapo only on a few predator-free islands, where a visitor is unlikely to see one.",
+        "nl": "Drie grote papegaaien. Kea's leven in de bergen, kaka's in het bos en de kakapo alleen op enkele roofdiervrije eilanden, waar een bezoeker er waarschijnlijk geen ziet."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "Three small parrots. Eastern Rosella is introduced and spreading in the north; the two native parakeets (kākāriki) live in forest and on islands.",
+        "nl": "Drie kleine papegaaien. De prachtrosella is ingevoerd en breidt zich uit in het noorden; de twee inheemse kakariki's leven in bos en op eilanden."
+      }
+    },
+    "new-zealand-wrens": {
+      "here": {
+        "en": "Two small birds from an ancient family. The Rifleman is the easier one, in beech forest; the Rock Wren lives in alpine rocks and takes a mountain walk.",
+        "nl": "Twee kleine vogels uit een oude familie. De geweervogel is het makkelijkst te vinden, in beukenbos; de zuidereilandwinterkoning leeft op alpiene rotsen en vraagt een bergwandeling."
+      }
+    },
+    "honeyeaters": {
+      "here": {
+        "en": "Two honeyeaters, both loud. Tui and Bellbird sing in gardens and forest; Tui is the one with the white throat tuft and the odd, clicking song.",
+        "nl": "Twee honingeters, allebei luid. Toeï en belvogel zingen in tuinen en bos; de toeï heeft de witte keelpluim en een vreemd, klikkend lied."
+      }
+    },
+    "thornbills-and-allies": {
+      "here": {
+        "en": "One tiny songbird, the Grey Gerygone. It is widespread, but often heard high in the canopy.",
+        "nl": "Eén piepklein zangvogeltje, de maorimangrovezanger. Hij komt overal voor, maar wordt vaak hoog in de boomkruin gehoord."
+      }
+    },
+    "whiteheads": {
+      "here": {
+        "en": "Three small flock-forming forest birds, the Whitehead, Yellowhead and Pipipi. All are found only in New Zealand. The Pipipi is the common one on the South Island.",
+        "nl": "Drie kleine bosvogels die in groepen leven: de witkopmohoua, de mohoua en de finschia. Alle drie komen alleen in Nieuw-Zeeland voor. De finschia is de algemene soort op het Zuidereiland."
+      }
+    },
+    "bellmagpies-and-allies": {
+      "here": {
+        "en": "One introduced bird: the Australian Magpie. It lives on farmland and in towns, and swoops at people near its nest in spring.",
+        "nl": "Eén ingevoerde vogel: de zwartrugfluitvogel. Hij leeft op landbouwgrond en in steden en duikt in het voorjaar naar mensen bij zijn nest."
+      }
+    },
+    "fantails": {
+      "here": {
+        "en": "One fantail, found all over New Zealand. It follows walkers in forest and in gardens.",
+        "nl": "Eén waaierstaart, die overal in Nieuw-Zeeland voorkomt. Hij volgt wandelaars in bos en tuinen."
+      }
+    },
+    "wattlebirds": {
+      "here": {
+        "en": "Three wattlebirds, North Island Kokako and the two saddlebacks, found only on mainland sanctuaries and islands. Hearing a Kokako sing is a highlight of a trip.",
+        "nl": "Drie lelvogels, de Noordelijke kokako en de twee zadelruggen, alleen op beschermde gebieden op het vasteland en op eilanden. Een kokako horen zingen is een hoogtepunt van een reis."
+      }
+    },
+    "stitchbird": {
+      "here": {
+        "en": "The Stitchbird (hihi) is found on a few island and mainland sanctuaries, notably Tiritiri Matangi and Kapiti.",
+        "nl": "De hihi komt voor op enkele eilanden en beschermde gebieden op het vasteland, vooral Tiritiri Matangi en Kapiti."
+      }
+    },
+    "australasian-robins": {
+      "here": {
+        "en": "Three small, tame birds: the Tomtit, and North Island and South Island Robin. Look low in forest, where they watch from trunks and drop to the ground.",
+        "nl": "Drie kleine, tamme vogels: de maorivliegenvanger en de noordelijke en zuidelijke vliegenvanger. Kijk laag in het bos, waar ze vanaf stammen toekijken en naar de grond duiken."
+      }
+    },
+    "larks": {
+      "here": {
+        "en": "One lark, the Eurasian Skylark. It was brought from Europe and sings over fields and dunes.",
+        "nl": "Eén leeuwerik, de veldleeuwerik. Hij is uit Europa ingevoerd en zingt boven velden en duinen."
+      }
+    },
+    "grassbirds-and-allies": {
+      "here": {
+        "en": "One grassbird, the New Zealand Fernbird. It skulks in wetlands and is easiest to find by its two-note call.",
+        "nl": "Eén grasvogel, de varenvogel. Hij sluipt door wetlands en is het makkelijkst te vinden aan zijn tweetonige roep."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "One swallow, the Welcome Swallow. It arrived on its own from Australia in the 1950s and now nests under bridges.",
+        "nl": "Eén zwaluw, de welkomzwaluw. Hij kwam in de jaren vijftig zelf uit Australië en nestelt nu onder bruggen."
+      }
+    },
+    "white-eyes-yuhinas-and-allies": {
+      "here": {
+        "en": "One white-eye, the Silvereye. It reached New Zealand from Australia in 1856 and is now common in gardens.",
+        "nl": "Eén brilvogel, de grijsrugbrilvogel. Hij kwam in 1856 uit Australië en is nu algemeen in tuinen."
+      }
+    },
+    "starlings-and-mynas": {
+      "here": {
+        "en": "Two introduced birds: the Common Starling and the Common Myna. Starlings are everywhere; mynas live mostly in the north.",
+        "nl": "Twee ingevoerde vogels: de spreeuw en de Indische mynah. Spreeuwen zijn overal; mynahs leven vooral in het noorden."
+      }
+    },
+    "thrushes": {
+      "here": {
+        "en": "Two thrushes, both from Europe. Blackbird and Song Thrush are among the commonest birds in gardens and forest edges.",
+        "nl": "Twee lijsters, allebei uit Europa. Merel en zanglijster behoren tot de algemeenste vogels in tuinen en aan bosranden."
+      }
+    },
+    "accentors": {
+      "here": {
+        "en": "One accentor, the Dunnock. It was introduced from Europe and is common in gardens and hedges.",
+        "nl": "Eén heggenmus. Hij is uit Europa ingevoerd en algemeen in tuinen en heggen."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "One sparrow, the House Sparrow, abundant in towns and farms.",
+        "nl": "Eén mus, de huismus, talrijk in steden en op boerderijen."
+      }
+    },
+    "wagtails-and-pipits": {
+      "here": {
+        "en": "One pipit, the New Zealand Pipit (pīhoihoi). It lives in open country and walks on shingle and farmland.",
+        "nl": "Eén pieper, de Nieuw-Zeelandse pieper (pīhoihoi). Hij leeft in open land en loopt over grind en landbouwgrond."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "here": {
+        "en": "Four finches from Europe. Chaffinch, Greenfinch, Goldfinch and Lesser Redpoll flock on fields, roadsides and in forest.",
+        "nl": "Vier vinkachtigen uit Europa. Vink, groenling, putter en kleine barmsijs zitten in groepen op velden, langs wegen en in het bos."
+      }
+    },
+    "old-world-buntings": {
+      "here": {
+        "en": "One bunting, the Yellowhammer. It was introduced from Europe and is common on farmland.",
+        "nl": "Eén gors, de geelgors. Hij is uit Europa ingevoerd en algemeen op landbouwgrond."
+      }
+    }
+  },
+  "units": {
+    "kiwis": {
+      "title": {
+        "en": "Kiwis",
+        "nl": "Kiwi's"
+      },
+      "intro": {
+        "en": "Five flightless birds that feed at night. You can find them in guided night walks and kiwi houses; learn how to tell the five apart by place, since they look alike.",
+        "nl": "Vijf vluchtloze vogels die 's nachts foerageren. Je vindt ze op begeleide nachtwandelingen en in kiwihuizen; leer ze uit elkaar houden op leefgebied, want ze lijken op elkaar."
+      }
+    },
+    "waterfowl-1": {
+      "title": {
+        "en": "Shelducks, geese and swans",
+        "nl": "Casarca's, ganzen en zwanen"
+      },
+      "intro": {
+        "en": "Birds of lakes, paddocks and rivers. Canada Goose and Black Swan are introduced; the Paradise Shelduck is native.",
+        "nl": "Vogels van meren, weilanden en rivieren. Canadese gans en zwarte zwaan zijn ingevoerd; de paradijscasarca is inheems."
+      }
+    },
+    "waterfowl-2": {
+      "title": {
+        "en": "Dabbling and diving ducks",
+        "nl": "Eenden en duikeenden"
+      },
+      "intro": {
+        "en": "Most of these live on lakes and slow rivers. Mallard and Pacific Black Duck look alike and often hybridise.",
+        "nl": "De meeste leven op meren en langzame rivieren. Wilde eend en wenkbrauweend lijken op elkaar en kruisen vaak."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "title": {
+        "en": "Game birds and pigeons",
+        "nl": "Jachtvogels en duiven"
+      },
+      "intro": {
+        "en": "Four birds of farmland and forest. The New Zealand Pigeon is large and native; the others were introduced.",
+        "nl": "Vier vogels van landbouwgrond en bos. De Nieuw-Zeelandse duif is groot en inheems; de andere zijn ingevoerd."
+      }
+    },
+    "cuckoos": {
+      "title": {
+        "en": "Rails, takahe and a cuckoo",
+        "nl": "Rallen, takahe en een koekoek"
+      },
+      "intro": {
+        "en": "The Pukeko is the first one you will meet. Weka and takahe do not fly. The cuckoo is mostly heard.",
+        "nl": "De pukeko is de eerste die je tegenkomt. Weka en takahe kunnen niet vliegen. De koekoek is vooral te horen."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Oystercatchers, stilts and plovers",
+        "nl": "Scholeksters, steltkluten en plevieren"
+      },
+      "intro": {
+        "en": "Look on estuaries and braided rivers. The Wrybill is the only bird in the world with a bill bent sideways.",
+        "nl": "Zoek op estuaria en vlechtende rivieren. De scheefsnavelplevier is de enige vogel ter wereld met een zijwaarts gebogen snavel."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Dotterels and migrant waders",
+        "nl": "Plevieren en trekvogels"
+      },
+      "intro": {
+        "en": "Two New Zealand specialities and three long-distance migrants from the Arctic that arrive in spring.",
+        "nl": "Twee soorten van Nieuw-Zeeland en drie langeafstandstrekkers uit het noordpoolgebied die in het voorjaar aankomen."
+      }
+    },
+    "skuas-and-jaegers": {
+      "title": {
+        "en": "Skuas",
+        "nl": "Jagers"
+      },
+      "intro": {
+        "en": "Three pirate seabirds. Each steals food from smaller seabirds.",
+        "nl": "Drie piratenzeevogels. Elke soort steelt voedsel van kleinere zeevogels."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {
+        "en": "Gulls and terns",
+        "nl": "Meeuwen en sterns"
+      },
+      "intro": {
+        "en": "Birds of beaches, estuaries and rivers. Two gulls are very common on the coast; two species nest on South Island riverbeds.",
+        "nl": "Vogels van stranden, estuaria en rivieren. Twee meeuwen zijn zeer algemeen aan de kust; twee soorten broeden op rivierbeddingen op het Zuidereiland."
+      }
+    },
+    "grebes": {
+      "title": {
+        "en": "Grebes and penguins",
+        "nl": "Futen en pinguïns"
+      },
+      "intro": {
+        "en": "Two diving waterbirds and three penguins. The penguins come ashore at dusk on rocky coasts in the south.",
+        "nl": "Twee duikende watervogels en drie pinguïns. De pinguïns komen in de schemering aan land op rotskusten in het zuiden."
+      }
+    },
+    "albatrosses-1": {
+      "title": {
+        "en": "Albatrosses: the first four",
+        "nl": "Albatrossen: de eerste vier"
+      },
+      "intro": {
+        "en": "Huge, with narrow wings and a hooked bill. You see them on boat trips and on headlands. Look at bill and head to tell the species apart.",
+        "nl": "Enorm, met smalle vleugels en gehaakte snavel. Je ziet ze op boottochten en vanaf landtongen. Kijk naar snavel en kop om de soorten uit elkaar te houden."
+      }
+    },
+    "albatrosses-2": {
+      "title": {
+        "en": "More albatrosses and storm-petrels",
+        "nl": "Meer albatrossen en stormvogeltjes"
+      },
+      "intro": {
+        "en": "Four more albatrosses and two tiny storm-petrels that feed low over the waves.",
+        "nl": "Nog vier albatrossen en twee kleine stormvogeltjes die laag over de golven foerageren."
+      }
+    },
+    "petrels-shearwaters-and-diving-petrels-1": {
+      "title": {
+        "en": "Prions, giant petrels and Pintado",
+        "nl": "Prions, reuzenstormvogels en Kaapse stormvogel"
+      },
+      "intro": {
+        "en": "Seabirds that gather around fishing boats. Look at size first, then at bill colour and wing pattern.",
+        "nl": "Zeevogels die zich rond vissersboten verzamelen. Kijk eerst naar grootte, dan naar snavelkleur en vleugeltekening."
+      }
+    },
+    "petrels-shearwaters-and-diving-petrels-2": {
+      "title": {
+        "en": "Petrels and Buller's Shearwater",
+        "nl": "Stormvogels en Bullerpijlstormvogel"
+      },
+      "intro": {
+        "en": "Mostly dark or black seabirds that you see on boat trips. Westland and Parkinson's Petrel nest only in New Zealand.",
+        "nl": "Vooral donkere of zwarte zeevogels die je op boottochten ziet. Westland- en zwarte stormvogel broeden alleen in Nieuw-Zeeland."
+      }
+    },
+    "petrels-shearwaters-and-diving-petrels-3": {
+      "title": {
+        "en": "Shearwaters, diving-petrel and gannet",
+        "nl": "Pijlstormvogels, alkstormvogeltje en jan-van-gent"
+      },
+      "intro": {
+        "en": "Seabirds you can also see from the shore. Sooty Shearwaters pass in huge flocks in summer; the gannet dives from above.",
+        "nl": "Zeevogels die je ook vanaf de kust ziet. Bruine pijlstormvogels trekken in de zomer in enorme groepen voorbij; de jan-van-gent duikt van bovenaf."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "title": {
+        "en": "Shags and cormorants",
+        "nl": "Aalscholvers"
+      },
+      "intro": {
+        "en": "Seven species, with local names such as Black Shag and Spotted Shag. Look at size, face colour and the white patches.",
+        "nl": "Zeven soorten met lokale namen zoals Black Shag en Spotted Shag. Kijk naar grootte, gezichtskleur en de witte vlekken."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "title": {
+        "en": "Herons and a spoonbill",
+        "nl": "Reigers en een lepelaar"
+      },
+      "intro": {
+        "en": "Look in wetlands, estuaries and paddocks. Cattle Egret arrives in winter.",
+        "nl": "Zoek in wetlands, estuaria en weilanden. De koereiger komt in de winter."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "title": {
+        "en": "Harrier, falcon, owl and kingfisher",
+        "nl": "Kiekendief, valk, uil en ijsvogel"
+      },
+      "intro": {
+        "en": "Four predators and sit-and-wait hunters. Each has an easy call to learn.",
+        "nl": "Vier roofvogels en loerjagers. Elk heeft een roep die je makkelijk leert."
+      }
+    },
+    "new-zealand-parrots": {
+      "title": {
+        "en": "Parrots and parakeets",
+        "nl": "Papegaaien en parkieten"
+      },
+      "intro": {
+        "en": "Native and introduced parrots. The big ones are loud and bold; the parakeets are small and green.",
+        "nl": "Inheemse en ingevoerde papegaaien. De grote zijn luid en brutaal; de parkieten zijn klein en groen."
+      }
+    },
+    "new-zealand-wrens": {
+      "title": {
+        "en": "Forest songsters and tiny wrens",
+        "nl": "Zangers van het bos en kleine winterkoningen"
+      },
+      "intro": {
+        "en": "Tui and Bellbird sing everywhere in forest and gardens. Rifleman and Rock Wren are tiny and live in beech forest and alpine rocks.",
+        "nl": "Toeï en belvogel zingen overal in bos en tuinen. Geweervogel en zuidereilandwinterkoning zijn klein en leven in beukenbos en op alpiene rotsen."
+      }
+    },
+    "thornbills-and-allies": {
+      "title": {
+        "en": "Gerygone and the mohoua birds",
+        "nl": "Zanger en mohoua's"
+      },
+      "intro": {
+        "en": "Four small forest birds that you often hear first. Look in the canopy for flocks.",
+        "nl": "Vier kleine bosvogels die je vaak eerst hoort. Zoek in de boomkruin naar groepen."
+      }
+    },
+    "bellmagpies-and-allies": {
+      "title": {
+        "en": "Magpie, fantail and wattlebirds",
+        "nl": "Fluitvogel, waaierstaart en lelvogels"
+      },
+      "intro": {
+        "en": "A common farm bird, a restless fantail and three rare wattlebirds of forest sanctuaries.",
+        "nl": "Een algemene boerderijvogel, een onrustige waaierstaart en drie zeldzame lelvogels van beschermde bossen."
+      }
+    },
+    "stitchbird": {
+      "title": {
+        "en": "Robins, tomtit and stitchbird",
+        "nl": "Vliegenvangers en hihi"
+      },
+      "intro": {
+        "en": "Four small, bold forest birds. Look low, at eye level, where they perch on trunks.",
+        "nl": "Vier kleine, brutale bosvogels. Kijk laag, op ooghoogte, waar ze op stammen zitten."
+      }
+    },
+    "larks": {
+      "title": {
+        "en": "Skylark, swallow, silvereye and fernbird",
+        "nl": "Leeuwerik, zwaluw, brilvogel en varenvogel"
+      },
+      "intro": {
+        "en": "Four small birds of open country and gardens. The Fernbird is the shy one, hidden in swamp.",
+        "nl": "Vier kleine vogels van open land en tuinen. De varenvogel is de schuwe, verborgen in moeras."
+      }
+    },
+    "starlings-and-mynas": {
+      "title": {
+        "en": "Blackbird, thrush and starlings",
+        "nl": "Merel, lijster en spreeuwen"
+      },
+      "intro": {
+        "en": "Four birds you know from home or from Asia. Common Myna is an invasive bird of the northern towns.",
+        "nl": "Vier vogels die je kent van thuis of uit Azië. De Indische mynah is een invasieve vogel van de noordelijke steden."
+      }
+    },
+    "accentors": {
+      "title": {
+        "en": "Dunnock, sparrow and pipit",
+        "nl": "Heggenmus, mus en pieper"
+      },
+      "intro": {
+        "en": "Three small brown birds. The Dunnock and House Sparrow are from Europe; the pipit is native.",
+        "nl": "Drie kleine bruine vogels. De heggenmus en de huismus komen uit Europa; de pieper is inheems."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "title": {
+        "en": "Finches and a bunting",
+        "nl": "Vinken en een gors"
+      },
+      "intro": {
+        "en": "Five seed-eaters from Europe that now flock all over farmland, towns and forest edges.",
+        "nl": "Vijf zaadeters uit Europa die nu in groepen over landbouwgrond, steden en bosranden trekken."
+      }
+    }
+  },
+  "species": {
+    "grecor": {
+      "here": {
+        "en": "In New Zealand this is the Black Shag, and the commonest large dark shag inland.",
+        "nl": "Hier heet hij Black Shag en is hij de algemeenste grote donkere aalscholver in het binnenland."
+      }
+    },
+    "purswa6": {
+      "here": {
+        "en": "Known as Pukeko; groups walk across paddocks and roadsides.",
+        "nl": "Hier bekend als pukeko; groepen lopen over weilanden en bermen."
+      }
+    },
+    "kelgul": {
+      "here": {
+        "en": "Locally called Black-backed Gull; very common on every coast.",
+        "nl": "Hier Black-backed Gull genoemd; zeer algemeen aan elke kust."
+      }
+    },
+    "silgul2": {
+      "here": {
+        "en": "Locally called Red-billed Gull; the commonest gull on beaches and in car parks.",
+        "nl": "Hier Red-billed Gull genoemd; de algemeenste meeuw op stranden en parkeerplaatsen."
+      }
+    },
+    "piesti1": {
+      "here": {
+        "en": "Known locally as Poaka; found in wet paddocks and on shallow lagoons.",
+        "nl": "Hier bekend als poaka; te vinden op natte weilanden en ondiepe lagunes."
+      }
+    },
+    "nezpig2": {
+      "here": {
+        "en": "Known as Kererū; look for it feeding in fruiting trees.",
+        "nl": "Hier bekend als kererū; zoek hem in vruchtdragende bomen."
+      }
+    },
+    "morepo2": {
+      "here": {
+        "en": "Known as Ruru; often heard calling from town parks.",
+        "nl": "Hier bekend als ruru; vaak te horen roepen vanuit stadsparken."
+      }
+    },
+    "silver3": {
+      "here": {
+        "en": "Known locally as Waxeye or Tauhou.",
+        "nl": "Hier ook bekend als Waxeye of tauhou."
+      }
+    },
+    "categr2": {
+      "here": {
+        "en": "Arrives in winter from Australia; look in paddocks among cattle.",
+        "nl": "Komt in de winter uit Australië; zoek op weilanden tussen het vee."
+      }
+    },
+    "rebdot1": {
+      "here": {
+        "en": "Locally called New Zealand Dotterel; found on northern beaches.",
+        "nl": "Hier New Zealand Dotterel genoemd; te vinden op stranden in het noorden."
+      }
+    },
+    "greegr": {
+      "here": {
+        "en": "Locally called White Heron (kōtuku); very rare, with one nesting site on the west coast.",
+        "nl": "Hier White Heron (kōtuku) genoemd; zeer zeldzaam, met één broedplaats aan de westkust."
+      }
+    },
+    "mallar3": {
+      "here": {
+        "en": "Hybrids with Pacific Black Duck are common here; mixed birds may look like either.",
+        "nl": "Kruisingen met de wenkbrauweend zijn hier gewoon; gemengde vogels lijken op beide soorten."
+      }
+    },
+    "nezfan1": {
+      "here": {
+        "en": "Pied and black morphs occur; the black one is more frequent in the south.",
+        "nl": "Zowel de bonte als de zwarte vorm komt voor; de zwarte is in het zuiden vaker."
+      }
+    }
+  },
+  "first_day": {
+    "title": {
+      "en": "Your first day",
+      "nl": "Je eerste dag"
+    },
+    "intro": {
+      "en": "Twenty birds you will see within a day: garden birds from Europe, common natives and the first seabirds on the beach. Learn these and your first walk already pays off.",
+      "nl": "Twintig vogels die je binnen een dag ziet: tuinvogels uit Europa, algemene inheemse vogels en de eerste zeevogels op het strand. Leer deze en je eerste wandeling levert al wat op."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "New Zealand split from Gondwana about 80 million years ago and had no land mammals for most of its history. Birds filled the gaps, and many became flightless, nocturnal or ground-living. Rats, stoats and cats have brought many to the edge, so a lot of endemics now live on islands and in fenced sanctuaries. This trip has 48 of them.",
+      "nl": "Nieuw-Zeeland brak ongeveer 80 miljoen jaar geleden los van Gondwana en had het grootste deel van zijn geschiedenis geen landzoogdieren. Vogels namen die plekken in en veel werden vluchteloos, nachtactief of grondbewonend. Ratten, hermelijnen en katten hebben veel soorten bijna uitgeroeid, dus veel endemische vogels leven nu op eilanden en in omheinde reservaten. Deze trip heeft er 48."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "Predator-free islands and sanctuaries",
+          "nl": "Roofdiervrije eilanden en reservaten"
+        },
+        "text": {
+          "en": "The best chance for saddlebacks, Stitchbird, Kokako and kiwis is a sanctuary. Tiritiri Matangi near Auckland, Kapiti Island near Wellington and Zealandia in Wellington are the classics.",
+          "nl": "De beste kans op zadelruggen, hihi, kokako en kiwi's is een reservaat. Tiritiri Matangi bij Auckland, Kapiti Island bij Wellington en Zealandia in Wellington zijn de klassiekers."
+        }
+      },
+      {
+        "title": {
+          "en": "Fiordland and Stewart Island",
+          "nl": "Fiordland en Stewart Island"
+        },
+        "text": {
+          "en": "The south has Takahe, Yellow-eyed and Fiordland Penguin, Southern Brown Kiwi and Yellowhead. Try Milford Sound, the Catlins and Ulva Island off Stewart Island.",
+          "nl": "In het zuiden vind je takahe, geeloog- en fjordlandkuifpinguïn, zuidelijke bruine kiwi en mohoua. Probeer Milford Sound, de Catlins en Ulva Island bij Stewart Island."
+        }
+      },
+      {
+        "title": {
+          "en": "Mountains and braided rivers",
+          "nl": "Bergen en vlechtende rivieren"
+        },
+        "text": {
+          "en": "Kea and Rock Wren live in alpine zones such as Arthur's Pass. Wrybill, Black Stilt and Black-fronted Tern use the braided rivers around Twizel and Canterbury.",
+          "nl": "Kea en zuidereilandwinterkoning leven in alpiene zones zoals Arthur's Pass. Scheefsnavelplevier, zwarte steltkluut en Nieuw-Zeelandse stern gebruiken de vlechtende rivieren bij Twizel en in Canterbury."
+        }
+      },
+      {
+        "title": {
+          "en": "Northern forests",
+          "nl": "Noordelijke bossen"
+        },
+        "text": {
+          "en": "Northland and the Waikato hold North Island Kokako at Pureora and Kiwi at night in Waitangi and Trounson. Brown Teal and Dotterel live on Northland shores.",
+          "nl": "Northland en Waikato herbergen noordelijke kokako's bij Pureora en 's nachts kiwi's in Waitangi en Trounson. Bruine taling en rosse plevier leven aan de kusten van Northland."
+        }
+      }
+    ],
+    "families": [
+      {
+        "title": {
+          "en": "Kiwis",
+          "nl": "Kiwi's"
+        },
+        "text": {
+          "en": "Five kiwis are on the list. They are flightless, nocturnal and each has a restricted range. A kiwi egg is up to a fifth of its mother's weight.",
+          "nl": "Vijf kiwi's staan op de lijst. Ze zijn vluchteloos, nachtactief en elk heeft een beperkt leefgebied. Een kiwi-ei kan wel een vijfde van het gewicht van de moeder wegen."
+        }
+      },
+      {
+        "title": {
+          "en": "Wattlebirds",
+          "nl": "Lelvogels"
+        },
+        "text": {
+          "en": "A family of three: Kokako, saddlebacks and the extinct Huia. They have fleshy wattles and strong legs and rarely fly far.",
+          "nl": "Een familie van drie: kokako, zadelruggen en de uitgestorven huia. Ze hebben vlezige lellen en sterke poten en vliegen zelden ver."
+        }
+      },
+      {
+        "title": {
+          "en": "New Zealand wrens",
+          "nl": "Nieuw-Zeelandse winterkoningen"
+        },
+        "text": {
+          "en": "Rifleman and Rock Wren are the last of an ancient family that split off from all other songbirds. They are tiny and bob and creep.",
+          "nl": "Geweervogel en zuidereilandwinterkoning zijn de laatste van een oude familie die zich van alle andere zangvogels afsplitste. Ze zijn klein en wippen en kruipen."
+        }
+      },
+      {
+        "title": {
+          "en": "Parrots: Kea, Kaka, Kakapo",
+          "nl": "Papegaaien: kea, kaka, kakapo"
+        },
+        "text": {
+          "en": "An ancient, separate parrot family found only in New Zealand. Kea lives in the mountains, Kaka in forest, and the flightless Kakapo on a few islands.",
+          "nl": "Een oude, aparte papegaaienfamilie die alleen in Nieuw-Zeeland voorkomt. De kea leeft in de bergen, de kaka in het bos en de vluchtloze kakapo op enkele eilanden."
+        }
+      },
+      {
+        "title": {
+          "en": "Mohoua birds",
+          "nl": "Mohoua's"
+        },
+        "text": {
+          "en": "Whitehead, Yellowhead and Pipipi are a small family of flocking forest birds. They are also found only in New Zealand.",
+          "nl": "Witkopmohoua, mohoua en finschia vormen een kleine familie van bosvogels die in groepen leven. Ook zij komen alleen in Nieuw-Zeeland voor."
+        }
+      }
+    ],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "Kiwis and waterbirds",
+          "nl": "Kiwi's en watervogels"
+        }
+      },
+      "endemics-2": {
+        "title": {
+          "en": "Water, shore and sea",
+          "nl": "Water, kust en zee"
+        }
+      },
+      "endemics-3": {
+        "title": {
+          "en": "Forest and mountain birds",
+          "nl": "Bos- en bergvogels"
+        }
+      },
+      "endemics-4": {
+        "title": {
+          "en": "Takahe, fantail and shorebirds",
+          "nl": "Takahe, waaierstaart en kustvogels"
+        }
+      },
+      "endemics-5": {
+        "title": {
+          "en": "Shags, tern and parrots",
+          "nl": "Aalscholvers, stern en papegaaien"
+        }
+      },
+      "endemics-6": {
+        "title": {
+          "en": "Island forest songbirds",
+          "nl": "Zangvogels van eilandbossen"
+        }
+      },
+      "endemics-7": {
+        "title": {
+          "en": "Robins, stitchbird and rifleman",
+          "nl": "Vliegenvangers, hihi en geweervogel"
+        }
+      },
+      "endemics-8": {
+        "title": {
+          "en": "Rock wren, mohua and rare ones",
+          "nl": "Rotswinterkoning, mohoua en zeldzame vogels"
+        }
+      }
+    }
+  }
+}

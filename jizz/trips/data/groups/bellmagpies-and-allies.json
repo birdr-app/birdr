@@ -1,0 +1,18 @@
+{
+  "slug": "bellmagpies-and-allies",
+  "about": {
+    "en": "Medium to large black-and-white or grey birds with strong, pointed bills. They walk on the ground and sing loud, flute-like songs, often in groups. They are not related to crows or true magpies.",
+    "nl": "Middelgrote tot grote zwart-witte of grijze vogels met sterke, spitse snavels. Ze lopen over de grond en zingen luide, fluitende liederen, vaak in groepen. Ze zijn niet verwant aan kraaien of echte eksters."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "jays-magpies-crows-and-ravens"
+      ],
+      "text": {
+        "en": "Not related to the magpies you know. Like them they are black and white, but they are closer to butcherbirds and have a bell-like song.",
+        "nl": "Niet verwant aan de eksters die je kent. Ze zijn net als die zwart-wit, maar staan dichter bij de slagersvogels en hebben een klokachtig lied."
+      }
+    }
+  ]
+}

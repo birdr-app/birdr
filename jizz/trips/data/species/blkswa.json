@@ -1,0 +1,22 @@
+{
+  "code": "blkswa",
+  "name": {
+    "en": "Black Swan",
+    "nl": "Zwarte zwaan"
+  },
+  "latin": "Cygnus atratus",
+  "look_for": [
+    {
+      "en": "Black swan with white wing tips in flight",
+      "nl": "Zwarte zwaan met witte vleugelpunten in vlucht"
+    },
+    {
+      "en": "Red **bill** with a pale band",
+      "nl": "Rode **snavel** met een lichte band"
+    },
+    {
+      "en": "Curled back feathers, on lakes and estuaries",
+      "nl": "Gekrulde rugveren, op meren en estuaria"
+    }
+  ]
+}

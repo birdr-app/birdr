@@ -1,0 +1,22 @@
+{
+  "code": "eurgol",
+  "name": {
+    "en": "European Goldfinch",
+    "nl": "Putter"
+  },
+  "latin": "Carduelis carduelis",
+  "look_for": [
+    {
+      "en": "Red face, white cheek",
+      "nl": "Rood gezicht en witte wang"
+    },
+    {
+      "en": "Black-and-yellow wings",
+      "nl": "Zwart-gele vleugels"
+    },
+    {
+      "en": "Flocks on thistles",
+      "nl": "Groepen op distels"
+    }
+  ]
+}

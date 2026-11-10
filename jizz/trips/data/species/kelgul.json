@@ -1,0 +1,22 @@
+{
+  "code": "kelgul",
+  "name": {
+    "en": "Kelp Gull",
+    "nl": "Kelpmeeuw"
+  },
+  "latin": "Larus dominicanus",
+  "look_for": [
+    {
+      "en": "Large gull with a black back and white head",
+      "nl": "Grote meeuw met zwarte rug en witte kop"
+    },
+    {
+      "en": "Yellow **bill** with a red spot",
+      "nl": "Gele **snavel** met een rode vlek"
+    },
+    {
+      "en": "Pale eye",
+      "nl": "Lichte iris"
+    }
+  ]
+}

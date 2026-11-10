@@ -1,0 +1,22 @@
+{
+  "code": "mallar3",
+  "name": {
+    "en": "Mallard",
+    "nl": "Wilde eend"
+  },
+  "latin": "Anas platyrhynchos",
+  "look_for": [
+    {
+      "en": "Male: green head, white collar",
+      "nl": "Mannetje: groene kop met witte kraag"
+    },
+    {
+      "en": "Female: mottled brown, orange **bill**",
+      "nl": "Vrouwtje: gevlekt bruin met oranje **snavel**"
+    },
+    {
+      "en": "Hybrids with Pacific Black Duck are common",
+      "nl": "Kruisingen met de wenkbrauweend komen veel voor"
+    }
+  ]
+}

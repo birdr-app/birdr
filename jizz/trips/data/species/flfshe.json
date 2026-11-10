@@ -1,0 +1,22 @@
+{
+  "code": "flfshe",
+  "name": {
+    "en": "Flesh-footed Shearwater",
+    "nl": "Australische grote pijlstormvogel"
+  },
+  "latin": "Ardenna carneipes",
+  "look_for": [
+    {
+      "en": "Large, dark brown shearwater",
+      "nl": "Grote, donkerbruine pijlstormvogel"
+    },
+    {
+      "en": "Pale pink **bill** with a dark tip",
+      "nl": "Roze **snavel** met een donkere punt"
+    },
+    {
+      "en": "Pale flesh-coloured legs",
+      "nl": "Vleeskleurige poten"
+    }
+  ]
+}

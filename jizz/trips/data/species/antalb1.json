@@ -1,0 +1,22 @@
+{
+  "code": "antalb1",
+  "name": {
+    "en": "Antipodean Albatross",
+    "nl": "Antipodenalbatros"
+  },
+  "latin": "Diomedea antipodensis",
+  "look_for": [
+    {
+      "en": "Large albatross, young birds mostly brown",
+      "nl": "Grote albatros, jonge vogels vooral bruin"
+    },
+    {
+      "en": "Adult males white-bodied with dark wings",
+      "nl": "Volwassen mannetjes met wit lijf en donkere vleugels"
+    },
+    {
+      "en": "Yellow-tipped **bill**",
+      "nl": "**Snavel** met gele punt"
+    }
+  ]
+}

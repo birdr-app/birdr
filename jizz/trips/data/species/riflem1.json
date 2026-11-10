@@ -1,0 +1,22 @@
+{
+  "code": "riflem1",
+  "name": {
+    "en": "Rifleman",
+    "nl": "Geweervogel"
+  },
+  "latin": "Acanthisitta chloris",
+  "look_for": [
+    {
+      "en": "Tiny and nearly tailless",
+      "nl": "Piepklein en vrijwel zonder staart"
+    },
+    {
+      "en": "Male green above, female streaked brown",
+      "nl": "Mannetje groen boven, vrouwtje gestreept bruin"
+    },
+    {
+      "en": "Climbs trunks like a **treecreeper**, high 'zipt'",
+      "nl": "Klimt langs stammen als een **boomkruiper**, hoge 'zipt'"
+    }
+  ]
+}

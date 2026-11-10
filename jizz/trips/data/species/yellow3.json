@@ -1,0 +1,22 @@
+{
+  "code": "yellow3",
+  "name": {
+    "en": "Yellowhead",
+    "nl": "Mohoua"
+  },
+  "latin": "Mohoua ochrocephala",
+  "look_for": [
+    {
+      "en": "Yellow head and breast",
+      "nl": "Gele kop en borst"
+    },
+    {
+      "en": "Brown back and wing",
+      "nl": "Bruine rug en vleugels"
+    },
+    {
+      "en": "Forest of beech and tussock in the south",
+      "nl": "Beukenbos en pollengras in het zuiden"
+    }
+  ]
+}

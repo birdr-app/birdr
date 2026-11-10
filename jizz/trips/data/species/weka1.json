@@ -1,0 +1,22 @@
+{
+  "code": "weka1",
+  "name": {
+    "en": "Weka",
+    "nl": "Weka"
+  },
+  "latin": "Gallirallus australis",
+  "look_for": [
+    {
+      "en": "Brown, chicken-sized, flightless",
+      "nl": "Bruin, ter grootte van een kip, vliegt niet"
+    },
+    {
+      "en": "Long, strong pinkish **bill**",
+      "nl": "Lange, sterke, roze **snavel**"
+    },
+    {
+      "en": "Bold, scavenges around camps",
+      "nl": "Brutaal, zoekt aas bij kampen"
+    }
+  ]
+}
