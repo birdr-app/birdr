@@ -43,6 +43,8 @@ type GameWebSocketContextType = {
   clearRematchInvitation: () => void;
   clearRematchError: () => void;
   refreshGameState: (options?: { resyncWs?: boolean; force?: boolean }) => Promise<void>;
+  /** Retry a Next press on a fresh connection (a half-dead socket reports OPEN but drops messages). */
+  retryNextQuestion: () => void;
   patchQuestionMedia: (patch: Pick<Question, 'number' | 'images' | 'videos' | 'sounds'>) => void;
 };
 
@@ -480,6 +482,22 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
     [ensureConnection, fetchCurrentQuestion]
   );
 
+  const retryNextQuestion = useCallback(() => {
+    const game = gameRef.current;
+    const player = playerRef.current;
+    const setGame = setGameRef.current;
+    const gameToken = gameTokenRef.current;
+    if (!game?.token || !player?.token || !setGame || !gameToken) return;
+    // Queue the action first: onopen sends join_game, then flushes it. next_question is
+    // idempotent server-side (ignored once the host's round has already advanced).
+    pendingActionsRef.current = pendingActionsRef.current.filter((p) => p.action !== 'next_question');
+    pendingActionsRef.current.push({ action: 'next_question', player_token: player.token });
+    closeSocket((currentSocketRef.current ?? socketRef.current) as TaggedSocket | undefined, true);
+    connectSocket(game, player, setGame);
+    // The server may already have advanced and only the broadcast was lost.
+    void fetchCurrentQuestion(gameToken, undefined, gameToken);
+  }, [closeSocket, connectSocket, fetchCurrentQuestion]);
+
   const joinGame = useCallback(
     (
       game: Game | null,
@@ -602,6 +620,7 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
         clearRematchInvitation,
         clearRematchError,
         refreshGameState,
+        retryNextQuestion,
         patchQuestionMedia,
       }}
     >

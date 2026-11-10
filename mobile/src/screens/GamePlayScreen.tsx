@@ -104,7 +104,7 @@ export function GamePlayScreen() {
     isLeagueGame ||
     sharedGameToken != null;
   const { game, player, setGame, setPlayer, loadGame } = useGame();
-  const { question, answer, players, nextQuestion, submitAnswer, joinGame, startGame, connected, endGameSession, refreshGameState, patchQuestionMedia } = useGameWebSocket();
+  const { question, answer, players, nextQuestion, submitAnswer, joinGame, startGame, connected, endGameSession, refreshGameState, patchQuestionMedia, retryNextQuestion } = useGameWebSocket();
   const dailyChallengeStartSent = useRef(false);
   const flockCompleteSent = useRef(false);
   const leagueCompleteSent = useRef(false);
@@ -507,6 +507,19 @@ export function GamePlayScreen() {
     nextQuestion();
   };
 
+  // After Next the screen waits for the new question. If the websocket dropped meanwhile the
+  // message (or the reply) is lost and the loader never ends. Retry on a fresh connection (the
+  // server ignores a repeat once the round has advanced) and finally give the Next button back.
+  useEffect(() => {
+    if (!advancingQuestion) return;
+    const resend = setInterval(() => retryNextQuestion(), 6000);
+    const release = setTimeout(() => setAdvancingQuestion(false), 20000);
+    return () => {
+      clearInterval(resend);
+      clearTimeout(release);
+    };
+  }, [advancingQuestion, retryNextQuestion]);
+
   const handleAnswer = (option: Species) => {
     if (!question || answer || submittingId !== null) return;
     setSubmittingId(option.id);
@@ -521,6 +534,25 @@ export function GamePlayScreen() {
     setShowFeedback(false);
     submitAnswer({ question, timedOut: true });
   };
+
+  // The timeout answer goes out over HTTP (then the socket); on a flaky Android connection that
+  // request can hang or fail and the player never gets the Next button. Keep resending until the
+  // answer arrives; the server returns the existing answer for a repeat.
+  const timedOutPending = !!question && timedOutQuestionId === question.id && !answer;
+  useEffect(() => {
+    if (!timedOutPending || !question) return;
+    let attempts = 0;
+    const interval = setInterval(() => {
+      attempts += 1;
+      if (attempts > 20) {
+        clearInterval(interval);
+        return;
+      }
+      submitAnswer({ question, timedOut: true });
+    }, 3000);
+    return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timedOutPending, question?.id]);
 
   const imageUri = image?.url
     ? playPreviewSrc(image.url.startsWith('http') ? image.url : apiUrl(image.url))
