@@ -1,0 +1,22 @@
+{
+  "code": "grykin",
+  "name": {
+    "en": "Grey Kingbird",
+    "nl": "Grijze koningstiran"
+  },
+  "latin": "Tyrannus dominicensis",
+  "look_for": [
+    {
+      "en": "Grey above, white below",
+      "nl": "Grijs boven, wit onder"
+    },
+    {
+      "en": "Dark **mask** through the eye",
+      "nl": "Donker **masker** door het oog"
+    },
+    {
+      "en": "Sits on wires and sallies after insects",
+      "nl": "Zit op draden en vangt insecten in de vlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "hispar1",
+  "name": {
+    "en": "Hispaniolan Amazon",
+    "nl": "Hispaniola-amazone"
+  },
+  "latin": "Amazona ventralis",
+  "look_for": [
+    {
+      "en": "Green parrot, **white forehead**",
+      "nl": "Groene papegaai, **wit voorhoofd**"
+    },
+    {
+      "en": "Dark ear patch",
+      "nl": "Donkere oorvlek"
+    },
+    {
+      "en": "Maroon patch on the belly",
+      "nl": "Kastanjebruine vlek op de buik"
+    }
+  ]
+}

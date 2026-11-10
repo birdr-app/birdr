@@ -1,0 +1,22 @@
+{
+  "code": "normoc",
+  "name": {
+    "en": "Northern Mockingbird",
+    "nl": "Noordelijke spotlijster"
+  },
+  "latin": "Mimus polyglottos",
+  "look_for": [
+    {
+      "en": "Grey above, pale below, long tail",
+      "nl": "Grijs boven, licht onder, lange staart"
+    },
+    {
+      "en": "White **patches** in wing and tail in flight",
+      "nl": "Witte **vlekken** in vleugel en staart in de vlucht"
+    },
+    {
+      "en": "Sings from the top of bushes, mimics",
+      "nl": "Zingt vanaf de top van struiken, bootst na"
+    }
+  ]
+}

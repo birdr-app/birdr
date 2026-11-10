@@ -1,0 +1,22 @@
+{
+  "code": "hispar",
+  "name": {
+    "en": "Hispaniolan Parakeet",
+    "nl": "Hispaniola-aratinga"
+  },
+  "latin": "Psittacara chloropterus",
+  "look_for": [
+    {
+      "en": "Mostly green with **red** on the wings",
+      "nl": "Vooral groen met **rood** op de vleugels"
+    },
+    {
+      "en": "Pale ring around the eye",
+      "nl": "Bleke ring om het oog"
+    },
+    {
+      "en": "Noisy flocks fly over towns and forest",
+      "nl": "Luidruchtige groepen vliegen over dorpen en bos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "pinwar",
+  "name": {
+    "en": "Pine Warbler",
+    "nl": "Dennenzanger"
+  },
+  "latin": "Setophaga pinus",
+  "look_for": [
+    {
+      "en": "Yellow throat and breast, whitish belly",
+      "nl": "Gele keel en borst, witachtige buik"
+    },
+    {
+      "en": "Two white **wing bars**",
+      "nl": "Twee witte **vleugelstrepen**"
+    },
+    {
+      "en": "Heavy bill for a warbler, in pines",
+      "nl": "Zware snavel voor een zanger, in dennen"
+    }
+  ]
+}

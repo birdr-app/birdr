@@ -1,0 +1,22 @@
+{
+  "code": "btbwar",
+  "name": {
+    "en": "Black-throated Blue Warbler",
+    "nl": "Blauwe zwartkeelzanger"
+  },
+  "latin": "Setophaga caerulescens",
+  "look_for": [
+    {
+      "en": "Male: dark blue back, **black** throat and face",
+      "nl": "Mannetje: donkerblauwe rug, **zwarte** keel en gezicht"
+    },
+    {
+      "en": "Small white patch on the wing",
+      "nl": "Klein wit vlekje op de vleugel"
+    },
+    {
+      "en": "Female olive-brown with a pale eyebrow",
+      "nl": "Vrouwtje olijfbruin met een bleke wenkbrauw"
+    }
+  ]
+}

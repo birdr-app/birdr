@@ -1,0 +1,22 @@
+{
+  "code": "nabtod1",
+  "name": {
+    "en": "Narrow-billed Tody",
+    "nl": "Smalsnaveltodie"
+  },
+  "latin": "Todus angustirostris",
+  "look_for": [
+    {
+      "en": "Tiny, green, **red throat**",
+      "nl": "Klein, groen, **rode keel**"
+    },
+    {
+      "en": "**Pink** flanks",
+      "nl": "**Roze** flanken"
+    },
+    {
+      "en": "Longer, narrower bill than Broad-billed Tody",
+      "nl": "Langere, smallere snavel dan de diksnaveltodie"
+    }
+  ]
+}

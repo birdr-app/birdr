@@ -1,0 +1,22 @@
+{
+  "code": "burowl",
+  "name": {
+    "en": "Burrowing Owl",
+    "nl": "Holenuil"
+  },
+  "latin": "Athene cunicularia",
+  "look_for": [
+    {
+      "en": "Small, round-headed, no ear tufts",
+      "nl": "Klein, ronde kop, geen oorpluimen"
+    },
+    {
+      "en": "**Long legs**, stands upright on the ground",
+      "nl": "**Lange poten**, staat rechtop op de grond"
+    },
+    {
+      "en": "Bobs when alarmed; often by day",
+      "nl": "Buigt door de knieën bij onraad; vaak overdag"
+    }
+  ]
+}

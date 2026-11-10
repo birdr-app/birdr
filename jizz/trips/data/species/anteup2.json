@@ -1,0 +1,22 @@
+{
+  "code": "anteup2",
+  "name": {
+    "en": "Hispaniolan Euphonia",
+    "nl": "Hispaniolaorganist"
+  },
+  "latin": "Chlorophonia musica",
+  "look_for": [
+    {
+      "en": "Male has a **blue** cap and yellow belly",
+      "nl": "Mannetje heeft een **blauwe** kap en gele buik"
+    },
+    {
+      "en": "Female duller green",
+      "nl": "Vrouwtje doffer groen"
+    },
+    {
+      "en": "Eats fruit and mistletoe in the canopy",
+      "nl": "Eet fruit en maretak in de boomtoppen"
+    }
+  ]
+}

@@ -1,0 +1,691 @@
+{
+  "country": "DO",
+  "intro": {
+    "en": "Hispaniola, the island the Dominican Republic shares with Haiti, is the second-largest in the Caribbean and has its own set of birds. Mountains up to 3,000 metres, rainforest, pine woods, dry thorn scrub and salt lagoons lie close together, so one short trip covers a lot. From October to April North American warblers and waders join the residents. This trip covers 135 species, 31 of them found nowhere else.",
+    "nl": "Hispaniola, het eiland dat de Dominicaanse Republiek met Haïti deelt, is het op één na grootste van de Caraïben en heeft eigen vogels. Bergen tot 3000 meter, regenwoud, dennenbos, droog doornstruweel en zoute lagunes liggen dicht bij elkaar, dus één korte reis bestrijkt veel. Van oktober tot april voegen Noord-Amerikaanse zangers en steltlopers zich bij de standvogels. Deze reis omvat 135 soorten, waarvan 31 nergens anders voorkomen."
+  },
+  "groups": {
+    "waterfowl": {
+      "here": {
+        "en": "Three ducks are on this trip: the West Indian Whistling-Duck, the White-cheeked Pintail and, in winter, the Blue-winged Teal. Look for them on lagoons, reservoirs and mangrove pools.",
+        "nl": "Deze reis omvat drie eenden: de West-Indische fluiteend, de witwangpijlstaart en in de winter de blauwvleugeltaling. Zoek ze op lagunes, stuwmeren en mangrovepoelen."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "here": {
+        "en": "Two ground birds were brought in and now live wild: the Helmeted Guineafowl and the Northern Bobwhite. Look for them in dry scrub and farmland, especially in the south-west.",
+        "nl": "Twee grondvogels zijn hier ingevoerd en leven nu in het wild: het helmparelhoen en de bobwhite. Zoek ze in droog struweel en akkerland, vooral in het zuidwesten."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "This trip has 12 pigeons and doves, from the Rock Dove in town to the quail-doves that walk through the forest. Zenaida, White-winged and Mourning Doves are the ones you'll see on day one.",
+        "nl": "Deze reis omvat 12 duiven, van de stadsduif in het dorp tot de kwartelduiven die door het bos lopen. De Antilliaanse treurduif, de witvleugeltreurduif en de treurduif zie je op de eerste dag."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "Four cuckoos live here. The Smooth-billed Ani is a noisy black bird in every field, the Mangrove Cuckoo is a shy bird of woods and scrub, and two are endemic lizard-eaters of the forest.",
+        "nl": "Hier leven vier koekoeken. De kleine ani is een luidruchtige zwarte vogel op elk veld, de mangrovekoekoek is een schuwe vogel van bos en struweel, en twee zijn endemische hagedisetende koekoeken van het bos."
+      }
+    },
+    "nightjars": {
+      "here": {
+        "en": "Three nightjars are here, and you meet them after dark. The Antillean Nighthawk flies over towns at dusk; the Hispaniolan Nightjar and the tiny Least Pauraque need a night walk in dry forest.",
+        "nl": "Hier leven drie nachtzwaluwen, die je pas na zonsondergang ziet. De Antilliaanse nachtzwaluw vliegt in de schemering boven dorpen; de Hispaniolanachtzwaluw en de kleine Haïtiaanse nachtzwaluw vragen om een nachtwandeling in droog bos."
+      }
+    },
+    "potoos-and-oilbird": {
+      "here": {
+        "en": "One potoo lives here, the Northern Potoo. It looks like a broken branch by day and is easiest to find by its call after dark.",
+        "nl": "Hier leeft één reuzennachtzwaluw, de Noordelijke reuzennachtzwaluw. Overdag lijkt hij op een afgebroken tak en je vindt hem het makkelijkst op zijn roep na zonsondergang."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "Two swifts are on this trip. The White-collared Swift is a large bird of the mountains and the Antillean Palm Swift is a small one that stays by palm trees in the lowlands.",
+        "nl": "Deze reis omvat twee gierzwaluwen. De witkraaggierzwaluw is een grote vogel van de bergen en de Cubaanse palmgierzwaluw een kleine die in het laagland bij palmbomen blijft."
+      }
+    },
+    "hummingbirds": {
+      "here": {
+        "en": "Three hummingbirds are on this trip, and two are endemic: the Hispaniolan Mango and the Hispaniolan Emerald. The third is the tiny Vervain Hummingbird, found in gardens and scrub.",
+        "nl": "Deze reis omvat drie kolibries, waarvan twee endemisch: de Hispaniolamango en de Hispaniolasmaragdkolibrie. De derde is de dwergkolibrie, in tuinen en struweel."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Three water birds with long toes: American Moorhen, American Coot and Purple Gallinule. Look for them on ponds and marsh edges, and in lagoons with reeds.",
+        "nl": "Drie watervogels met lange tenen: het Amerikaanse waterhoen, de Amerikaanse meerkoet en het Amerikaanse purperhoen. Zoek ze op vijvers en moerasranden en in lagunes met riet."
+      }
+    },
+    "limpkin": {
+      "here": {
+        "en": "The Limpkin is the only bird of its kind. It wades in marshes and wet fields on Hispaniola, and its wailing call carries a long way at dawn and dusk.",
+        "nl": "De koerlan is de enige vogel van zijn soort. Hij waadt door moerassen en natte velden op Hispaniola en zijn jammerende roep draagt ver bij zonsopgang en -ondergang."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "This trip covers 15 waders, almost all winter visitors from North America. Try mudflats, saltpans and lagoon edges from October to April, and don't expect to find them all in July.",
+        "nl": "Deze reis omvat 15 steltlopers, bijna allemaal wintergasten uit Noord-Amerika. Probeer wadplaten, zoutpannen en lagunerandjes van oktober tot april, en verwacht ze niet allemaal in juli."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Four are on this trip: the Laughing Gull, the Least Tern, the Sandwich Tern and the Royal Tern. Look on beaches, harbours and lagoons along the coast.",
+        "nl": "Deze reis omvat vier soorten: de lachmeeuw, de Amerikaanse dwergstern, de grote stern en de Amerikaanse koningsstern. Zoek ze op stranden, in havens en bij lagunes langs de kust."
+      }
+    },
+    "flamingos": {
+      "here": {
+        "en": "The American Flamingo lives in the salt lagoons of the south-west, such as those near Cabo Rojo and Lago Enriquillo. It is the one bird here that needs no explaining.",
+        "nl": "De Caribische flamingo leeft in de zoute lagunes van het zuidwesten, zoals bij Cabo Rojo en Lago Enriquillo. Het is de enige vogel hier die geen uitleg nodig heeft."
+      }
+    },
+    "grebes": {
+      "here": {
+        "en": "The Pied-billed Grebe is the only grebe, a small brown diver of ponds and reservoirs.",
+        "nl": "De dikbekfuut is de enige fuut, een kleine bruine duiker op vijvers en stuwmeren."
+      }
+    },
+    "frigatebirds-boobies-and-gannets": {
+      "here": {
+        "en": "Two seabirds from the coast: the Magnificent Frigatebird, easy over any harbour, and the Brown Booby, which dives for fish offshore.",
+        "nl": "Twee zeevogels van de kust: de Amerikaanse fregatvogel, makkelijk boven elke haven, en de bruine gent, die op zee naar vis duikt."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "One cormorant lives here, the Double-crested Cormorant. Look for it on lagoons, reservoirs and the coast; it often perches with its wings spread.",
+        "nl": "Hier leeft één aalscholver, de geoorde aalscholver. Zoek hem op lagunes, stuwmeren en langs de kust; hij zit vaak met gespreide vleugels."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "This trip has 12 herons, egrets, ibises and a spoonbill. The Western Cattle-Egret is in every field and the Snowy Egret and Great White Egret wade in shallow water; night herons and the spoonbill come with the lagoons.",
+        "nl": "Deze reis omvat 12 reigers, ibissen en een lepelaar. De westelijke koereiger staat in elk veld en de Amerikaanse kleine zilverreiger en de grote zilverreiger waden door ondiep water; kwakken en de rode lepelaar horen bij de lagunes."
+      }
+    },
+    "pelicans": {
+      "here": {
+        "en": "The Brown Pelican is the only pelican. You see it diving off the coast and sitting on harbour posts.",
+        "nl": "De bruine pelikaan is de enige pelikaan. Je ziet hem duiken langs de kust en zitten op havenpalen."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "Four birds of prey are on this trip: the Turkey Vulture, the Osprey in winter, the Red-tailed Hawk and the rare endemic Ridgway's Hawk. The vulture is the one you'll see every day.",
+        "nl": "Deze reis omvat vier roofvogels: de roodkopgier, de visarend in de winter, de roodstaartbuizerd en de zeldzame endemische Ridgwaybuizerd. De gier zie je elke dag."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "Two owls live here: the Burrowing Owl, which you can find by day on dry ground, and the endemic Ashy-faced Owl, which roosts in caves.",
+        "nl": "Hier leven twee uilen: de holenuil, die je overdag op droge grond kunt vinden, en de endemische Hispaniolakerkuil, die in grotten slaapt."
+      }
+    },
+    "trogons-and-quetzals": {
+      "here": {
+        "en": "The Hispaniolan Trogon is the only trogon, and it is endemic. It sits very still in mountain forest and is easiest to find by its call.",
+        "nl": "De Hispaniolatrogon is de enige trogon, en hij is endemisch. Hij zit heel stil in bergbos en is het makkelijkst te vinden op zijn roep."
+      }
+    },
+    "todies": {
+      "here": {
+        "en": "Hispaniola has two of the five todies in the world, both endemic. The Broad-billed Tody lives in the lowlands and foothills, the Narrow-billed Tody higher up in wet forest.",
+        "nl": "Hispaniola heeft twee van de vijf todies ter wereld, beide endemisch. De diksnaveltodie leeft in het laagland en de voorbergen, de smalsnaveltodie hoger in nat bos."
+      }
+    },
+    "woodpeckers": {
+      "here": {
+        "en": "Two are on this trip, both endemic: the Hispaniolan Woodpecker, loud and easy in palms and gardens, and the tiny Antillean Piculet.",
+        "nl": "Deze reis omvat twee soorten, beide endemisch: de Hispaniolaspecht, luidruchtig en makkelijk in palmen en tuinen, en de kleine Hispanioladwergspecht."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "The American Kestrel is the only falcon in this trip. You'll see it hovering over roadside fields and perched on wires.",
+        "nl": "De Amerikaanse torenvalk is de enige valk op deze reis. Je ziet hem bidden boven velden langs de weg en zitten op draden."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "Two parrots are here, both endemic: the Hispaniolan Amazon and the Hispaniolan Parakeet. Both fly in noisy flocks, often high over forest and towns.",
+        "nl": "Hier leven twee papegaaien, beide endemisch: de Hispaniola-amazone en de Hispaniola-aratinga. Beide vliegen in luidruchtige groepen, vaak hoog boven bos en dorpen."
+      }
+    },
+    "tyrant-flycatchers-elaenias-tyrannulets-and-allies": {
+      "here": {
+        "en": "One elaenia lives here, the Greater Antillean Elaenia. It is a small, dull bird of scrub and forest edge.",
+        "nl": "Hier leeft één elenia, de Antilliaanse elenia. Het is een kleine, doffe vogel van struweel en bosrand."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies": {
+      "here": {
+        "en": "Three tyrants are on this trip: the Grey Kingbird on every wire, the Stolid Flycatcher in dry scrub and the endemic Hispaniolan Pewee in mountain forest.",
+        "nl": "Deze reis omvat drie tirannen: de grijze koningstiran op elke draad, de dikkoptiran in droog struweel en de endemische Hispaniolapiewie in bergbos."
+      }
+    },
+    "vireos": {
+      "here": {
+        "en": "Two vireos live here: the Black-whiskered Vireo, heard everywhere from April to August, and the Flat-billed Vireo, an endemic of mountain forest.",
+        "nl": "Hier leven twee vireo's: de baardvireo, van april tot augustus overal te horen, en de platsnavelvireo, een endeem van bergbos."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "Hispaniola has two crows, both endemic. The Hispaniolan Palm-Crow is the one you'll meet; the White-necked Crow is rare and found mostly in high forest.",
+        "nl": "Hispaniola heeft twee kraaien, beide endemisch. De Hispaniolapalmkraai is degene die je ziet; de witnekkraai is zeldzaam en vooral te vinden in hoog bos."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "Four swallows are on this trip. The Caribbean Martin and the Cave Swallow nest near buildings and caves, the Golden Swallow lives in the hills, and the Barn Swallow visits in winter.",
+        "nl": "Deze reis omvat vier zwaluwen. De Caribische purperzwaluw en de holenzwaluw broeden bij gebouwen en grotten, de goudzwaluw leeft in de heuvels en de boerenzwaluw komt in de winter."
+      }
+    },
+    "catbirds-mockingbirds-and-thrashers": {
+      "here": {
+        "en": "The Northern Mockingbird is the only mockingbird. It sings from rooftops, wires and bushes, and is among the first birds you'll hear.",
+        "nl": "De noordelijke spotlijster is de enige spotlijster. Hij zingt van daken, draden en struiken en is een van de eerste vogels die je hoort."
+      }
+    },
+    "thrushes": {
+      "here": {
+        "en": "Three are on this trip: the Western Red-legged Thrush, common in forest and gardens, the endemic La Selle Thrush of cloud forest and the Rufous-throated Solitaire, whose song carries across mountain slopes.",
+        "nl": "Deze reis omvat drie soorten: de westelijke roodpootlijster, algemeen in bos en tuinen, de endemische Haïtilijster van nevelwoud en de roodkeelsolitaire, wiens lied over berghellingen draagt."
+      }
+    },
+    "palmchat": {
+      "here": {
+        "en": "The Palmchat is the national bird of the Dominican Republic and the only member of its family. Look for its huge shared stick nests high in royal palms.",
+        "nl": "De palmtapuit is de nationale vogel van de Dominicaanse Republiek en het enige lid van zijn familie. Let op zijn enorme gedeelde takkennesten hoog in koningspalmen."
+      }
+    },
+    "weavers-and-allies": {
+      "here": {
+        "en": "The Village Weaver was brought in from Africa and is now common in fields and villages, where the males build round hanging nests.",
+        "nl": "De grote textorwever is uit Afrika ingevoerd en nu algemeen op velden en in dorpen, waar de mannetjes ronde hangende nesten bouwen."
+      }
+    },
+    "estrildids": {
+      "here": {
+        "en": "Two small finches from Asia are on this trip, the Scaly-breasted Munia and the Tricoloured Munia. Both feed in flocks on seeding grass.",
+        "nl": "Deze reis omvat twee kleine vinken uit Azië, de muskaatvink en de driekleurennon. Beide eten in groepen van zaadpluimen."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "The House Sparrow lives in towns and villages, as at home.",
+        "nl": "De huismus leeft in dorpen en steden, net als thuis."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "here": {
+        "en": "Three endemic finches are on this trip: the Hispaniolan Euphonia in forest and gardens, and the Antillean Siskin and Hispaniolan Crossbill in the mountain pines.",
+        "nl": "Deze reis omvat drie endemische vinken: de Hispaniolaorganist in bos en tuinen, en de Haïtiaanse sijs en Hispaniolakruisbek in het dennenbos van de bergen."
+      }
+    },
+    "new-world-sparrows": {
+      "here": {
+        "en": "The Rufous-collared Sparrow is the only sparrow here, a bird of the high mountains and of cool, open ground such as Constanza.",
+        "nl": "De roodkraaggors is de enige gors hier, een vogel van het hooggebergte en van koel, open terrein zoals bij Constanza."
+      }
+    },
+    "chat-tanagers-and-greater-antillean-tanagers": {
+      "here": {
+        "en": "Six birds from this small group of Hispaniolan songbirds are on this trip, all endemic. The Black-crowned Palm-Tanager is in every garden; the chat-tanagers and warblers live in thick mountain forest.",
+        "nl": "Deze reis omvat zes vogels uit deze kleine groep Hispaniolaanse zangvogels, allemaal endemisch. De zwartkruinpalmtangare zit in elke tuin; de tapuittangaren en zangers leven in dicht bergbos."
+      }
+    },
+    "blackbirds": {
+      "here": {
+        "en": "Three are on this trip: the Greater Antillean Grackle, which walks in every town, the Shiny Cowbird of open country and the endemic Hispaniolan Oriole in palms and gardens.",
+        "nl": "Deze reis omvat drie soorten: de Antilliaanse troepiaal, die in elk dorp rondloopt, de glanskoevogel van open land en de endemische Hispaniolatroepiaal in palmen en tuinen."
+      }
+    },
+    "wood-warblers": {
+      "here": {
+        "en": "This trip covers 12 American warblers. Most are winter visitors from October to April; the Pine Warbler also lives here all year in the mountain pines. The Ovenbird and the Northern Waterthrush walk on the ground, the others work through branches.",
+        "nl": "Deze reis omvat 12 Amerikaanse zangers. De meeste zijn wintergasten van oktober tot april; de dennenzanger leeft ook het hele jaar in de dennenbossen van de bergen. De ovenvogel en de noordelijke waterlijster lopen op de grond, de andere werken zich door de takken."
+      }
+    },
+    "tanagers-and-allies": {
+      "here": {
+        "en": "Four small birds of scrub and gardens: the Bananaquit, found everywhere, two grassquits and the Greater Antillean Bullfinch.",
+        "nl": "Vier kleine vogels van struweel en tuinen: het suikerdiefje, overal te vinden, twee grondvinken en het Bahamadikbekje."
+      }
+    }
+  },
+  "units": {
+    "ducks-and-gamebirds": {
+      "title": {
+        "en": "Ducks and gamebirds",
+        "nl": "Eenden en hoenderachtigen"
+      },
+      "intro": {
+        "en": "Three ducks of lagoons and pools, and two ground birds from elsewhere. The whistling-duck is the one to learn first: it is long-legged and sits in trees.",
+        "nl": "Drie eenden van lagunes en poelen en twee grondvogels uit andere landen. Leer eerst de fluiteend: hij heeft lange poten en zit in bomen."
+      }
+    },
+    "pigeons-and-doves-1": {
+      "title": {
+        "en": "Pigeons and doves, part 1",
+        "nl": "Duiven, deel 1"
+      },
+      "intro": {
+        "en": "Six pigeons and doves, from the Collared Dove you know to forest pigeons with scaly necks. Look at head pattern, eye ring and how plain or scaly the neck is.",
+        "nl": "Zes duiven, van de Turkse tortel die je kent tot bosduiven met een geschubde nek. Let op kopstekening, oogring en of de nek effen of geschubd is."
+      }
+    },
+    "pigeons-and-doves-2": {
+      "title": {
+        "en": "Pigeons and doves, part 2",
+        "nl": "Duiven, deel 2"
+      },
+      "intro": {
+        "en": "Six more, from the doves of every lawn to the secretive quail-doves of the forest floor. The quail-doves are low and plump and walk rather than fly.",
+        "nl": "Nog zes, van de duiven op elk gazon tot de schuwe kwartelduiven van de bosbodem. De kwartelduiven zijn laag en gedrongen en lopen liever dan dat ze vliegen."
+      }
+    },
+    "cuckoos": {
+      "title": {
+        "en": "Cuckoos and the ani",
+        "nl": "Koekoeken en de ani"
+      },
+      "intro": {
+        "en": "Three cuckoos and the ani, a black bird that behaves nothing like a cuckoo. Learn the ani first; the others need patience in forest and scrub.",
+        "nl": "Drie koekoeken en de ani, een zwarte vogel die zich helemaal niet als koekoek gedraagt. Leer eerst de ani; voor de andere heb je geduld nodig in bos en struweel."
+      }
+    },
+    "nightjars-and-potoo": {
+      "title": {
+        "en": "Nightjars and a potoo",
+        "nl": "Nachtzwaluwen en een reuzennachtzwaluw"
+      },
+      "intro": {
+        "en": "Birds of the night. They look like bark or dead leaves by day, so you meet them by call, or by torchlight on a track.",
+        "nl": "Vogels van de nacht. Overdag lijken ze op bast of dode bladeren, dus je ontmoet ze op hun roep of in het licht van een zaklamp op een pad."
+      }
+    },
+    "swifts-and-hummingbirds": {
+      "title": {
+        "en": "Swifts and hummingbirds",
+        "nl": "Gierzwaluwen en kolibries"
+      },
+      "intro": {
+        "en": "Two swifts and three hummingbirds, all small and fast. Look at where you are: palms, high mountains or gardens.",
+        "nl": "Twee gierzwaluwen en drie kolibries, allemaal klein en snel. Kijk waar je bent: palmen, hoge bergen of tuinen."
+      }
+    },
+    "rails-and-limpkin": {
+      "title": {
+        "en": "Rails, gallinules and the Limpkin",
+        "nl": "Rallen, koeten en de koerlan"
+      },
+      "intro": {
+        "en": "Four birds of wet ground. Three are rail relatives with big feet; the Limpkin is a heron-sized wader with a curved bill.",
+        "nl": "Vier vogels van natte grond. Drie zijn verwanten van de ral met grote voeten; de koerlan is een reigergrote waadvogel met een gebogen snavel."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Waders, part 1",
+        "nl": "Steltlopers, deel 1"
+      },
+      "intro": {
+        "en": "The larger waders: a stilt, plovers and a dowitcher. Look at bill length, breast bands and leg colour.",
+        "nl": "De grotere steltlopers: een steltkluut, plevieren en een grijze snip. Let op snavellengte, borstbanden en kleur van de poten."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Waders, part 2",
+        "nl": "Steltlopers, deel 2"
+      },
+      "intro": {
+        "en": "Yellowlegs, Willet, Spotted Sandpiper and a turnstone. The two yellowlegs are the toughest pair: they differ mainly in size and bill length.",
+        "nl": "Geelpootruiters, Willet, Amerikaanse oeverloper en een steenloper. De twee geelpootruiters zijn het lastigste paar: ze verschillen vooral in grootte en snavellengte."
+      }
+    },
+    "shorebirds-3": {
+      "title": {
+        "en": "Waders, part 3",
+        "nl": "Steltlopers, deel 3"
+      },
+      "intro": {
+        "en": "Small beach birds. Four are the little brown sandpipers called peeps, so learn Killdeer and Sanderling first, then compare the rest.",
+        "nl": "Kleine strandvogels. Vier zijn de kleine bruine strandlopers die peeps heten, dus leer eerst de Killdeerplevier en de drieteenstrandloper en vergelijk dan de rest."
+      }
+    },
+    "gulls-and-terns": {
+      "title": {
+        "en": "Laughing Gull and terns",
+        "nl": "Lachmeeuw en sterns"
+      },
+      "intro": {
+        "en": "One gull and three terns of the coast. Terns are slimmer than gulls, with pointed wings, and they dive for fish.",
+        "nl": "Eén meeuw en drie sterns van de kust. Sterns zijn slanker dan meeuwen, met spitse vleugels, en duiken naar vis."
+      }
+    },
+    "flamingo-and-seabirds": {
+      "title": {
+        "en": "Flamingo, grebe and sea birds",
+        "nl": "Flamingo, fuut en zeevogels"
+      },
+      "intro": {
+        "en": "Five birds of the sea and the lagoons. Most are far larger than they first look, so learn them by shape in flight.",
+        "nl": "Vijf vogels van de zee en de lagunes. De meeste zijn veel groter dan ze op het eerste gezicht lijken, dus leer ze kennen aan hun vorm in de vlucht."
+      }
+    },
+    "herons-and-ibis-1": {
+      "title": {
+        "en": "Herons and ibis, part 1",
+        "nl": "Reigers en ibissen, deel 1"
+      },
+      "intro": {
+        "en": "Six wading birds of lagoons, mangroves and ponds. Compare size, leg colour and whether the bird hunts by day or night.",
+        "nl": "Zes waadvogels van lagunes, mangrove en vijvers. Vergelijk grootte, kleur van de poten en of de vogel overdag of 's nachts jaagt."
+      }
+    },
+    "herons-and-ibis-2": {
+      "title": {
+        "en": "Herons, spoonbill and pelican",
+        "nl": "Reigers, lepelaar en pelikaan"
+      },
+      "intro": {
+        "en": "The commonest herons, the spoonbill and the pelican. Western Cattle-Egret is the first one you will see, usually in a field with cattle.",
+        "nl": "De algemeenste reigers, de lepelaar en de pelikaan. De westelijke koereiger zie je het eerst, meestal in een veld met vee."
+      }
+    },
+    "hawks-and-vulture": {
+      "title": {
+        "en": "Hawks, Osprey and vulture",
+        "nl": "Buizerds, visarend en gier"
+      },
+      "intro": {
+        "en": "Four big birds of the sky. The Turkey Vulture is the daily one; the endemic Ridgway's Hawk is rare and very local.",
+        "nl": "Vier grote vogels van de lucht. De roodkopgier zie je dagelijks; de endemische Ridgwaybuizerd is zeldzaam en zeer lokaal."
+      }
+    },
+    "owls-trogon-and-todies": {
+      "title": {
+        "en": "Owls, trogon and todies",
+        "nl": "Uilen, trogon en todies"
+      },
+      "intro": {
+        "en": "Five small forest birds of Hispaniola, four of them endemic. The todies are tiny, bright green and sit on thin twigs.",
+        "nl": "Vijf kleine bosvogels van Hispaniola, vier ervan endemisch. De todies zijn klein, felgroen en zitten op dunne twijgjes."
+      }
+    },
+    "woodpeckers-parrots-and-kestrel": {
+      "title": {
+        "en": "Woodpeckers, parrots and a kestrel",
+        "nl": "Spechten, papegaaien en een torenvalk"
+      },
+      "intro": {
+        "en": "Two woodpeckers, two parrots and a small falcon. The woodpecker and the parrots are noisy, so listen first.",
+        "nl": "Twee spechten, twee papegaaien en een kleine valk. De specht en de papegaaien zijn luidruchtig, dus luister eerst."
+      }
+    },
+    "tyrant-flycatchers": {
+      "title": {
+        "en": "Tyrant flycatchers",
+        "nl": "Tirannen"
+      },
+      "intro": {
+        "en": "Four New World flycatchers. They sit upright and fly out to catch insects, much as the flycatchers at home, but they are not related.",
+        "nl": "Vier vliegenvangers uit de Nieuwe Wereld. Ze zitten rechtop en vliegen uit om insecten te vangen, net als de vliegenvangers thuis, maar ze zijn niet verwant."
+      }
+    },
+    "vireos-and-crows": {
+      "title": {
+        "en": "Vireos and crows",
+        "nl": "Vireo's en kraaien"
+      },
+      "intro": {
+        "en": "Two vireos, small and greenish and heard more than seen, and two crows, both endemic and both quite different in size.",
+        "nl": "Twee vireo's, klein en groenachtig en vaker gehoord dan gezien, en twee kraaien, beide endemisch en heel verschillend van grootte."
+      }
+    },
+    "swallows": {
+      "title": {
+        "en": "Swallows and martins",
+        "nl": "Zwaluwen"
+      },
+      "intro": {
+        "en": "Three swallows and a winter visitor you know. Look at the rump and belly colour in flight.",
+        "nl": "Drie zwaluwen en een wintergast die je kent. Let in de vlucht op stuit- en buikkleur."
+      }
+    },
+    "mockingbird-and-thrushes": {
+      "title": {
+        "en": "Mockingbird and thrushes",
+        "nl": "Spotlijster en lijsters"
+      },
+      "intro": {
+        "en": "The mockingbird of every town and three thrushes of the forest. The thrushes hop about on the ground or stay in the canopy.",
+        "nl": "De spotlijster van elk dorp en drie lijsters van het bos. De lijsters huppelen over de grond of blijven in de boomtoppen."
+      }
+    },
+    "palmchat-weaver-and-munias": {
+      "title": {
+        "en": "Palmchat, weaver and munias",
+        "nl": "Palmtapuit, wever en muntjes"
+      },
+      "intro": {
+        "en": "The national bird and four small birds that came from other continents. The Palmchat stands out by its nests: big piles of sticks high in palms.",
+        "nl": "De nationale vogel en vier kleine vogels die van andere continenten kwamen. De palmtapuit herken je aan zijn nesten: grote hopen takken hoog in palmen."
+      }
+    },
+    "sparrows-and-finches": {
+      "title": {
+        "en": "Sparrows, siskin, euphonia and crossbill",
+        "nl": "Mussen, sijs, organist en kruisbek"
+      },
+      "intro": {
+        "en": "The House Sparrow you know, and the finches of the highlands. Three are endemic: look for them in flocks in pine forest or on forest edges.",
+        "nl": "De huismus die je kent, en de vinken van het hoogland. Drie zijn endemisch: zoek ze in groepen in dennenbos of aan de bosrand."
+      }
+    },
+    "chat-tanagers": {
+      "title": {
+        "en": "Tanagers and warblers of the forest",
+        "nl": "Tangaren en zangers van het bos"
+      },
+      "intro": {
+        "en": "Six endemic songbirds, a small group found only on Hispaniola. Some skulk in thick undergrowth; learn the garden birds first.",
+        "nl": "Zes endemische zangvogels, een kleine groep die alleen op Hispaniola leeft. Sommige verbergen zich in dicht struikgewas; leer eerst de tuinvogels."
+      }
+    },
+    "blackbirds": {
+      "title": {
+        "en": "Grackle, cowbird and oriole",
+        "nl": "Grackel, koevink en troepiaal"
+      },
+      "intro": {
+        "en": "Three birds in the blackbird family, but nothing like the one at home. The grackle is black with a long tail, the oriole yellow and black.",
+        "nl": "Drie vogels uit de familie van de troepialen, maar helemaal niet zoals de merel thuis. De troepiaal is zwart met een lange staart, de Hispaniolatroepiaal geel en zwart."
+      }
+    },
+    "wood-warblers-1": {
+      "title": {
+        "en": "North American warblers, part 1",
+        "nl": "Amerikaanse zangers, deel 1"
+      },
+      "intro": {
+        "en": "Six warblers from North America that spend the winter here. In autumn many look dull, so learn the shape and behaviour as well as the colour.",
+        "nl": "Zes zangers uit Noord-Amerika die hier overwinteren. In het najaar zien veel soorten er dof uit, dus leer vorm en gedrag net zo goed als kleur."
+      }
+    },
+    "wood-warblers-2": {
+      "title": {
+        "en": "North American warblers, part 2",
+        "nl": "Amerikaanse zangers, deel 2"
+      },
+      "intro": {
+        "en": "Six more. Look for wing bars, tail spots and whether the bird bobs its tail.",
+        "nl": "Nog zes. Let op vleugelstrepen, staartvlekken en of de vogel met zijn staart wipt."
+      }
+    },
+    "bananaquit-and-grassquits": {
+      "title": {
+        "en": "Bananaquit and grassquits",
+        "nl": "Suikervogel en grondvinken"
+      },
+      "intro": {
+        "en": "Four small birds of gardens and scrub. The Bananaquit has a curved bill and a yellow belly; the others are seed-eaters.",
+        "nl": "Vier kleine vogels van tuinen en struweel. Het suikerdiefje heeft een gebogen snavel en een gele buik; de andere zijn zaadeters."
+      }
+    }
+  },
+  "species": {
+    "eucdov": {
+      "here": {
+        "en": "The same species as in Europe. It reached the Caribbean in the 1970s and is now common in towns.",
+        "nl": "Dezelfde soort als in Europa. Hij bereikte de Caraïben in de jaren zeventig en is nu algemeen in dorpen."
+      }
+    },
+    "houspa": {
+      "here": {
+        "en": "The same House Sparrow as at home, common in towns and villages.",
+        "nl": "Dezelfde huismus als thuis, algemeen in dorpen en steden."
+      }
+    },
+    "barswa": {
+      "here": {
+        "en": "Visits from North America in winter; the belly is rusty orange, not whitish like the European birds.",
+        "nl": "Komt in de winter uit Noord-Amerika; de buik is roestoranje en niet witachtig zoals bij de Europese vogels."
+      }
+    }
+  },
+  "first_day": {
+    "title": {
+      "en": "Your first day",
+      "nl": "Je eerste dag"
+    },
+    "intro": {
+      "en": "These 20 birds are the ones you'll see on your first walk: in a hotel garden near Santo Domingo, Puerto Plata or Punta Cana, along the road or on the shore. Most are common and not shy. Know these, and day one already feels familiar.",
+      "nl": "Deze 20 vogels zie je bij je eerste wandeling: in een hoteltuin bij Santo Domingo, Puerto Plata of Punta Cana, langs de weg of aan de kust. De meeste zijn algemeen en niet schuw. Ken je deze, dan voelt de eerste dag meteen vertrouwd."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "Hispaniola has been an island for tens of millions of years, cut off from Cuba, Jamaica and Puerto Rico by deep water. Tall mountains, with wet and dry forest side by side, gave its birds room to become species of their own. Haiti has lost most of its forest, so the Dominican side holds most of the survivors. This trip covers 31 endemics.",
+      "nl": "Hispaniola is al tientallen miljoenen jaren een eiland, door diep water gescheiden van Cuba, Jamaica en Puerto Rico. Hoge bergen, met nat en droog bos naast elkaar, gaven de vogels ruimte om eigen soorten te worden. Haïti heeft het meeste bos verloren, dus de Dominicaanse kant heeft de meeste overlevers. Deze reis omvat 31 endemen."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "Sierra de Bahoruco",
+          "nl": "Sierra de Bahoruco"
+        },
+        "text": {
+          "en": "The mountains of the south-west hold the most endemics in the country. Pine and cloud forest here, reached from Pedernales, is the place for the trogon, the La Selle Thrush, the White-winged Warbler, the Western Chat-Tanager and the Bay-breasted Cuckoo.",
+          "nl": "De bergen van het zuidwesten hebben de meeste endemen van het land. Het dennen- en nevelwoud hier, bereikbaar vanaf Pedernales, is de plek voor de trogon, de Haïtilijster, de witvleugelzanger, de westelijke tapuittangare en de mantero."
+        }
+      },
+      {
+        "title": {
+          "en": "Cordillera Central",
+          "nl": "Cordillera Central"
+        },
+        "text": {
+          "en": "Pine forest above about 1,500 metres around Constanza and Valle Nuevo is cold at dawn and quiet, and holds the crossbill, the siskin and the solitaire. Go early; the birds are active until mid-morning.",
+          "nl": "Dennenbos boven ongeveer 1500 meter rond Constanza en Valle Nuevo is 's ochtends koud en stil en heeft de kruisbek, de sijs en de solitaire. Ga vroeg op pad; de vogels zijn actief tot halverwege de ochtend."
+        }
+      },
+      {
+        "title": {
+          "en": "The dry south-west",
+          "nl": "Het droge zuidwesten"
+        },
+        "text": {
+          "en": "Thorn scrub and salt lagoons around Cabo Rojo, Oviedo and Lago Enriquillo have fewer endemics but they are easy, and it is the place for flamingos, the Burrowing Owl and, at night, the nightjars and the pauraque.",
+          "nl": "Doornstruweel en zoute lagunes rond Cabo Rojo, Oviedo en Lago Enriquillo hebben minder endemen, maar die zijn makkelijk, en dit is de plek voor flamingo's, de holenuil en 's nachts de Hispaniolanachtzwaluw en de Haïtiaanse nachtzwaluw."
+        }
+      },
+      {
+        "title": {
+          "en": "Lowlands and gardens",
+          "nl": "Laagland en tuinen"
+        },
+        "text": {
+          "en": "Many endemics are not shy at all. Palmchat, Hispaniolan Woodpecker, Black-crowned Palm-Tanager, the mango and the emerald live in gardens and parks; Los Haitises is the place to look for Ridgway's Hawk.",
+          "nl": "Veel endemen zijn helemaal niet schuw. Palmtapuit, Hispaniolaspecht, zwartkruinpalmtangare, de mango en de smaragdkolibrie leven in tuinen en parken; Los Haitises is de plek voor de Ridgwaybuizerd."
+        }
+      }
+    ],
+    "families": [
+      {
+        "title": {
+          "en": "Palmchat family",
+          "nl": "De palmtapuitfamilie"
+        },
+        "text": {
+          "en": "The Palmchat is the only member of its family, found nowhere else in the world. It builds enormous stick nests that many pairs share.",
+          "nl": "De palmtapuit is het enige lid van zijn familie en leeft nergens anders ter wereld. Hij bouwt enorme takkennesten die veel paartjes delen."
+        }
+      },
+      {
+        "title": {
+          "en": "Todies",
+          "nl": "Todies"
+        },
+        "text": {
+          "en": "Todies live only on the Greater Antilles, five species in all. Hispaniola has two, both endemic, tiny green birds with red throats.",
+          "nl": "Todies leven alleen op de Grote Antillen, vijf soorten in totaal. Hispaniola heeft er twee, beide endemisch, kleine groene vogels met een rode keel."
+        }
+      },
+      {
+        "title": {
+          "en": "Chat-tanagers",
+          "nl": "Tapuittangaren"
+        },
+        "text": {
+          "en": "A small family found only on Hispaniola, with two skulking species of undergrowth. Palm-tanagers and a few warblers sit close by.",
+          "nl": "Een kleine familie die alleen op Hispaniola leeft, met twee verscholen soorten in het struikgewas. Palmtangaren en een paar zangers staan er dicht bij."
+        }
+      }
+    ],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "Trogon, todies and quail-dove",
+          "nl": "Trogon, todies en kwartelduif"
+        }
+      },
+      "endemics-2": {
+        "title": {
+          "en": "Palmchat, euphonia and siskin",
+          "nl": "Palmtapuit, organist en sijs"
+        }
+      },
+      "endemics-3": {
+        "title": {
+          "en": "Tanagers, cuckoo and mango",
+          "nl": "Tangaren, koekoek en mango"
+        }
+      },
+      "endemics-4": {
+        "title": {
+          "en": "Emerald, hawk, owl and woodpeckers",
+          "nl": "Smaragdkolibrie, buizerd, uil en spechten"
+        }
+      },
+      "endemics-5": {
+        "title": {
+          "en": "Parrots, crows and a thrush",
+          "nl": "Papegaaien, kraaien en een lijster"
+        }
+      },
+      "endemics-6": {
+        "title": {
+          "en": "Crossbill, warblers, spindalis and oriole",
+          "nl": "Kruisbek, zangers, spindalis en troepiaal"
+        }
+      }
+    }
+  }
+}

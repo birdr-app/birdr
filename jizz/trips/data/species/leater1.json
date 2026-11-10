@@ -1,0 +1,22 @@
+{
+  "code": "leater1",
+  "name": {
+    "en": "Least Tern",
+    "nl": "Amerikaanse dwergstern"
+  },
+  "latin": "Sternula antillarum",
+  "look_for": [
+    {
+      "en": "Smallest tern, **yellow bill** with black tip",
+      "nl": "Kleinste stern, **gele snavel** met zwarte punt"
+    },
+    {
+      "en": "White forehead on a black cap",
+      "nl": "Wit voorhoofd op een zwarte kap"
+    },
+    {
+      "en": "Hovers and dives over shallow water",
+      "nl": "Zweeft en duikt boven ondiep water"
+    }
+  ]
+}
