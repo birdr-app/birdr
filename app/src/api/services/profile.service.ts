@@ -2,6 +2,9 @@ import axios from '../axios-config';
 import { getApiBaseUrl } from '../baseUrl';
 import { authService } from './auth.service';
 
+export type HomeRegion = 'na' | 'eu' | 'other';
+export type HomeRegionSetting = HomeRegion | '';
+
 export interface UserProfile {
   username: string;
   email: string;
@@ -18,6 +21,10 @@ export interface UserProfile {
   show_all_modes?: boolean;
   /** Finished games across all of this user's players (read-only). */
   games_played?: number;
+  /** Chosen home region; '' = inferred from the preferred country. */
+  home_region?: HomeRegionSetting;
+  /** The region in use: the chosen one, else inferred from the preferred country. */
+  home_region_effective?: HomeRegion;
   country_code: string | null;
   country_name: string | null;
   is_staff: boolean;
@@ -44,6 +51,7 @@ export interface ProfileUpdateData {
   timezone?: string;
   visual_style?: string;
   show_all_modes?: boolean;
+  home_region?: HomeRegionSetting;
   country_code?: string | null;
 }
 
@@ -115,6 +123,9 @@ class ProfileService {
       }
       if (data.visual_style !== undefined) {
         formData.append('visual_style', data.visual_style);
+      }
+      if (data.home_region !== undefined) {
+        formData.append('home_region', data.home_region);
       }
       if (data.show_all_modes !== undefined) {
         formData.append('show_all_modes', data.show_all_modes.toString());

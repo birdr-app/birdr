@@ -209,7 +209,7 @@ const HomePage = () => {
                     <Flex direction="column" flex={1} minW={0}>
                       <Flex align="center" gap={2} wrap="wrap">
                         <Text fontSize="lg" fontWeight="700" color="white" lineClamp={2}>
-                          <FormattedMessage id="course_title" defaultMessage="Birds of the Netherlands" />
+                          <FormattedMessage id="course_title" defaultMessage="Beginners course" />
                         </Text>
                         <Box
                           as="span"

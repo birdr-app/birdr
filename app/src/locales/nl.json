@@ -315,6 +315,12 @@
   "read_more": "Lees meer",
   "username": "Gebruikersnaam",
   "videos": "Video's",
+  "home_region": "Vogels die ik van thuis ken",
+  "home_region_hint": "Reisvoorbereiding gebruikt dit om nieuwe vogels te vergelijken met de vogels die je kent",
+  "home_region_auto": "Automatisch (op basis van mijn favoriete land)",
+  "home_region_na": "Noord-Amerika",
+  "home_region_eu": "Europa",
+  "home_region_other": "Elders",
   "beta": "Beta",
   "video_still_fallback": "Deze video kon niet worden afgespeeld. In plaats daarvan een still.",
   "view on eBird": "Bekijk op eBird",
@@ -898,5 +904,7 @@
   "trip_lookalike_q": "Dubbelgangerquiz · vraag {n} van {total}",
   "trip_which_of_two": "Welke van de twee is dit?",
   "game_hiscores": "Highscores spellen",
+  "league_all_countries": "Competities wereldwijd",
+  "league_members_count": "{count, plural, one {# vogelaar} other {# vogelaars}}",
   "league_players_ever_week": "{ever} spelers · {week} deze week"
 }

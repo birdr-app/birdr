@@ -224,6 +224,24 @@ export const QuestionComponent = () => {
     submitAnswer({ question, player, timed_out: true })
   }
 
+  // The timeout answer travels over the websocket, which may have dropped while the player
+  // was idle (or the app was backgrounded). Without the server's answer there is no Next
+  // button, so keep resending until it arrives; the server returns the existing answer.
+  useEffect(() => {
+    if (!timedOut || answer || !question || !player || !submitAnswer) return
+    let attempts = 0
+    const interval = window.setInterval(() => {
+      attempts += 1
+      if (attempts > 20) {
+        window.clearInterval(interval)
+        return
+      }
+      submitAnswer({ question, player, timed_out: true })
+    }, 2500)
+    return () => window.clearInterval(interval)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timedOut, !!answer, question?.id, player?.token])
+
   const rotate = keyframes`
       from {
           transform: rotate(360deg)

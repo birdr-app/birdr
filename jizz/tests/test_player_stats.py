@@ -117,3 +117,25 @@ class CompletedGamesTestCase(TestCase):
 
         anon = APIClient()
         self.assertEqual(anon.get('/api/member-stats/').status_code, status.HTTP_401_UNAUTHORIZED)
+
+
+class HomeRegionTests(TestCase):
+    def test_region_for_country(self):
+        from jizz.home_region import region_for_country
+
+        self.assertEqual(region_for_country('US'), 'na')
+        self.assertEqual(region_for_country('US-MA'), 'na')
+        self.assertEqual(region_for_country('NL'), 'eu')
+        self.assertEqual(region_for_country('IS'), 'eu')
+        self.assertEqual(region_for_country('CR'), 'other')
+        self.assertEqual(region_for_country(None), 'other')
+
+    def test_profile_infers_region_and_keeps_an_explicit_choice(self):
+        from jizz.models import Country, UserProfile
+        from jizz.home_region import effective_home_region
+
+        user = User.objects.create_user('birder', 'b@example.com', 'pw')
+        profile = UserProfile.objects.create(user=user, country=Country.objects.get_or_create(code='CA', defaults={'name': 'Canada'})[0])
+        self.assertEqual(effective_home_region(profile), 'na')
+        profile.home_region = 'eu'
+        self.assertEqual(effective_home_region(profile), 'eu')

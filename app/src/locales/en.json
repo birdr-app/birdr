@@ -315,6 +315,12 @@
   "read_more": "Read more",
   "username": "Username",
   "videos": "Videos",
+  "home_region": "Birds I know from home",
+  "home_region_hint": "Trip prep uses this to compare new birds with the ones you know",
+  "home_region_auto": "Automatic (from my preferred country)",
+  "home_region_na": "North America",
+  "home_region_eu": "Europe",
+  "home_region_other": "Elsewhere",
   "beta": "Beta",
   "video_still_fallback": "This video couldn't be played. Showing a still instead.",
   "view on eBird": "View on eBird",
@@ -884,5 +890,7 @@
   "trip_lookalike_q": "Lookalike quiz · question {n} of {total}",
   "trip_which_of_two": "Which of the two is this?",
   "game_hiscores": "Game high scores",
+  "league_all_countries": "Leagues around the world",
+  "league_members_count": "{count, plural, one {# birder} other {# birders}}",
   "league_players_ever_week": "{ever} players · {week} this week"
 }

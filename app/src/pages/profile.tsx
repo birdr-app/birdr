@@ -21,7 +21,7 @@ import {
 } from "@chakra-ui/react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useNavigate } from "react-router-dom";
-import { profileService, UserProfile, ProfileUpdateData, getAvatarUrl } from "../api/services/profile.service";
+import { profileService, UserProfile, ProfileUpdateData, HomeRegionSetting, getAvatarUrl } from "../api/services/profile.service";
 import { authService } from "../api/services/auth.service";
 import { Page } from "../shared/components/layout";
 import { UseCountries } from "../user/use-countries";
@@ -60,6 +60,7 @@ export const ProfilePage = () => {
   const [appLanguage, setAppLanguage] = useState<AppLocale>("en");
   const [timezone, setTimezone] = useState("Europe/Amsterdam");
   const [countryCode, setCountryCode] = useState<string | null>(null);
+  const [homeRegion, setHomeRegion] = useState<HomeRegionSetting>("");
   const [deleteOpen, setDeleteOpen] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [visualStyle, setVisualStyleLocal] = useState<VisualStyle>(contextVisualStyle ?? DEFAULT_VISUAL_STYLE);
@@ -84,6 +85,7 @@ export const ProfilePage = () => {
         setAppLanguage((profileData.app_language as AppLocale) || "en");
         setTimezone(profileData.timezone || "Europe/Amsterdam");
         setCountryCode(profileData.country_code || null);
+        setHomeRegion(profileData.home_region ?? "");
         setVisualStyleLocal(parseVisualStyle(profileData.visual_style));
       } catch (err: any) {
         setError(err.message || "Failed to load profile");
@@ -156,6 +158,10 @@ export const ProfilePage = () => {
         updateData.country_code = countryCode;
       }
 
+      if (homeRegion !== (profile?.home_region ?? "")) {
+        updateData.home_region = homeRegion;
+      }
+
       if (timezone !== (profile?.timezone ?? "Europe/Amsterdam")) {
         updateData.timezone = timezone?.trim() || "Europe/Amsterdam";
       }
@@ -191,6 +197,7 @@ export const ProfilePage = () => {
       setAppLanguage((updatedProfile.app_language as AppLocale) || "en");
       setTimezone(updatedProfile.timezone ?? "Europe/Amsterdam");
       setCountryCode(updatedProfile.country_code || null);
+      setHomeRegion(updatedProfile.home_region ?? "");
       setVisualStyleLocal(parseVisualStyle(updatedProfile.visual_style));
       setVisualStyle?.(parseVisualStyle(updatedProfile.visual_style));
       setSuccess("Profile updated successfully!");
@@ -521,6 +528,32 @@ export const ProfilePage = () => {
                 value={countryCode}
                 onChange={setCountryCode}
               />
+            </Box>
+
+            {/* Home region: which birds you already know from home (Trip prep) */}
+            <Box>
+              <Text fontSize="sm" fontWeight="medium" mb={1}>
+                <FormattedMessage id="home_region" defaultMessage="Birds I know from home" />
+              </Text>
+              <Text fontSize="sm" color="gray.500" mb={2}>
+                <FormattedMessage
+                  id="home_region_hint"
+                  defaultMessage="Trip prep uses this to compare new birds with the ones you know"
+                />
+              </Text>
+              <select
+                value={homeRegion}
+                onChange={(e) => setHomeRegion(e.target.value as HomeRegionSetting)}
+                data-testid="home-region-select"
+                style={{ width: "100%", padding: "8px 12px", borderRadius: 6, border: "1px solid #cbd5e0", background: "transparent" }}
+              >
+                <option value="">
+                  {intl.formatMessage({ id: "home_region_auto", defaultMessage: "Automatic (from my preferred country)" })}
+                </option>
+                <option value="na">{intl.formatMessage({ id: "home_region_na", defaultMessage: "North America" })}</option>
+                <option value="eu">{intl.formatMessage({ id: "home_region_eu", defaultMessage: "Europe" })}</option>
+                <option value="other">{intl.formatMessage({ id: "home_region_other", defaultMessage: "Elsewhere" })}</option>
+              </select>
             </Box>
 
             <Field.Root>

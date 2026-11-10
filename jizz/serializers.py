@@ -823,11 +823,17 @@ class UserProfileSerializer(serializers.ModelSerializer):
     country_code = serializers.CharField(source='country.code', read_only=True, allow_null=True)
     country_name = serializers.CharField(source='country.name', read_only=True, allow_null=True)
     games_played = serializers.SerializerMethodField()
+    home_region_effective = serializers.SerializerMethodField()
 
     class Meta:
         model = UserProfile
-        fields = ('username', 'email', 'first_name', 'last_name', 'avatar', 'avatar_url', 'receive_updates', 'language', 'app_language', 'timezone', 'visual_style', 'show_all_modes', 'games_played', 'country_code', 'country_name', 'is_staff', 'is_superuser')
-        read_only_fields = ('avatar_url', 'games_played', 'country_code', 'country_name', 'is_staff', 'is_superuser')
+        fields = ('home_region', 'home_region_effective', 'username', 'email', 'first_name', 'last_name', 'avatar', 'avatar_url', 'receive_updates', 'language', 'app_language', 'timezone', 'visual_style', 'show_all_modes', 'games_played', 'country_code', 'country_name', 'is_staff', 'is_superuser')
+        read_only_fields = ('home_region_effective', 'avatar_url', 'games_played', 'country_code', 'country_name', 'is_staff', 'is_superuser')
+
+    def get_home_region_effective(self, obj):
+        from jizz.home_region import effective_home_region
+
+        return effective_home_region(obj)
 
     def get_games_played(self, obj):
         from jizz.player_stats import completed_games_count
@@ -869,6 +875,7 @@ class UserProfileUpdateSerializer(serializers.Serializer):
         choices=('tody', 'classic', 'stylish', 'none'),
     )
     show_all_modes = serializers.BooleanField(required=False)
+    home_region = serializers.ChoiceField(required=False, choices=('', 'na', 'eu', 'other'), allow_blank=True)
     country_code = serializers.CharField(required=False, max_length=10, allow_blank=True, allow_null=True)
 
     def validate_username(self, value):
@@ -973,6 +980,9 @@ class UserProfileUpdateSerializer(serializers.Serializer):
 
         if 'show_all_modes' in validated_data:
             instance.show_all_modes = validated_data['show_all_modes']
+
+        if 'home_region' in validated_data:
+            instance.home_region = validated_data['home_region']
         
         # Update country if provided
         if 'country_code' in validated_data:

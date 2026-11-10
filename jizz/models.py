@@ -920,6 +920,14 @@ class UserProfile(models.Model):
         help_text='App UI language (empty = not set; clients guess from the device)',
     )
     country = models.ForeignKey('jizz.Country', on_delete=models.SET_NULL, null=True, blank=True, help_text='Preferred country')
+    HOME_REGION_CHOICES = [('na', 'North America'), ('eu', 'Europe'), ('other', 'Other')]
+    home_region = models.CharField(
+        max_length=8,
+        choices=HOME_REGION_CHOICES,
+        default='',
+        blank=True,
+        help_text='Birds you know from home (Trip prep tailoring). Empty = inferred from the preferred country.',
+    )
     timezone = models.CharField(
         max_length=63,
         default='Europe/Amsterdam',
