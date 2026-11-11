@@ -1,0 +1,159 @@
+{
+  "country": "AU-REDCENTRE",
+  "intro": {
+    "en": "This pack is for trips to the Red Centre and the arid outback: Alice Springs, the MacDonnell Ranges, Uluru and Kata Tjuta, and out to Birdsville and the Strzelecki Track. Its 81 birds come on top of the Australia trip and live in mulga, spinifex and saltbush country, around gorges and waterholes, and on the lakes and plains that fill after rain.",
+    "nl": "Dit pakket is voor reizen naar het Rode Centrum en de droge outback: Alice Springs, de MacDonnell Ranges, Uluru en Kata Tjuta, en verder naar Birdsville en de Strzelecki Track. De 81 vogels komen bovenop de reis door Australië en leven in mulga, spinifex en zoutbos, rond kloven en drinkplaatsen, en op de meren en vlaktes die na regen vollopen."
+  },
+  "units": {
+    "water-and-lakes": {
+      "title": {
+        "en": "Water in the desert",
+        "nl": "Water in de woestijn"
+      },
+      "intro": {
+        "en": "After rain the desert fills with life. Lakes and floodplains such as those near Birdsville draw ducks, terns and a nativehen from hundreds of kilometres away, and they leave again as the water drops. Look at what sits on the open water and what skulks at the reed edge.",
+        "nl": "Na regen komt de woestijn tot leven. Meren en overstromingsvlaktes, zoals bij Birdsville, trekken eenden, sterns en een waterhoen van honderden kilometers ver en ze vertrekken weer als het water zakt. Kijk naar wat op open water zit en wat langs de rietrand sluipt."
+      }
+    },
+    "quail-doves-and-cuckoos": {
+      "title": {
+        "en": "Quail, doves and cuckoos",
+        "nl": "Kwartels, duiven en koekoeken"
+      },
+      "intro": {
+        "en": "Small birds of the ground and the bush. The quail, the doves and the nightjar are easiest at dawn, dusk and at waterholes, where doves come in to drink. The two cuckoos are quiet and often overlooked; look for them on bare branches in mulga.",
+        "nl": "Kleine vogels van de grond en de struiken. Kwartel, duiven en nachtzwaluw zie je het makkelijkst bij zonsopgang, in de schemering en bij drinkplaatsen, waar duiven komen drinken. De twee koekoeken zijn stil en worden vaak over het hoofd gezien; zoek ze op kale takken in mulga."
+      }
+    },
+    "plains-waders-and-buttonquail": {
+      "title": {
+        "en": "Plains waders and buttonquail",
+        "nl": "Vlaktevogels en vechtkwartels"
+      },
+      "intro": {
+        "en": "Not every wader lives on a beach. The stilt of the salt lakes, the lapwing, dotterel and pratincole of the stony plains, and the buttonquail of the grass all live far from the sea. Scan bare ground and lake edges for shapes that stand still; they run, then freeze.",
+        "nl": "Niet elke steltloper leeft aan de kust. De steltkluut van de zoutmeren, de kievit, renplevier en vorkstaartplevier van de stenige vlaktes en de vechtkwartels in het gras leven ver van zee. Zoek kale grond en meeroevers af naar vormen die stilstaan; ze rennen en staan dan stil."
+      }
+    },
+    "raptors": {
+      "title": {
+        "en": "Raptors of the open country",
+        "nl": "Roofvogels van het open land"
+      },
+      "intro": {
+        "en": "Wide skies and few trees make the outback a good place to watch raptors. Several of these are nomads that follow rodent plagues and seed; the falcons are seldom common. Learn the shape in the air first: the kite, the harrier and the two falcons each fly differently.",
+        "nl": "Wijde luchten en weinig bomen maken de outback tot een goede plek om roofvogels te kijken. Een aantal daarvan zijn nomaden die muizenplagen en zaad volgen; de valken zijn zelden algemeen. Leer eerst de vorm in de lucht: de wouw, de kiekendief en de twee valken vliegen elk anders."
+      }
+    },
+    "nomad-parrots": {
+      "title": {
+        "en": "Nomad parrots and a bowerbird",
+        "nl": "Zwervende papegaaien en een prieelvogel"
+      },
+      "intro": {
+        "en": "Four parrots of mulga, spinifex and dunes, followed by a bowerbird of the rocky gorges. The parrots wander with rain and seed and can be hard to find; early morning at a waterhole is your best chance. The bowerbird is bold and easy near the gorges around Alice Springs.",
+        "nl": "Vier papegaaien van mulga, spinifex en duinen, gevolgd door een prieelvogel van de rotskloven. De papegaaien zwerven mee met regen en zaad en zijn lastig te vinden; vroeg in de ochtend bij een drinkplaats heb je de beste kans. De prieelvogel is brutaal en makkelijk te zien bij de kloven rond Alice Springs."
+      }
+    },
+    "grasswrens": {
+      "title": {
+        "en": "Grasswrens and an emuwren",
+        "nl": "Grassluipers en een emoemuisluiper"
+      },
+      "intro": {
+        "en": "The prize of the arid inland. Grasswrens are shy, long-tailed birds that run between clumps of spinifex, lignum and cane-grass and are rarely seen without local help. Each species keeps to its own habitat, from rocky ranges to sand dunes, so a guide goes to the right place for each.",
+        "nl": "De hoofdprijs van het droge binnenland. Grassluipers zijn schuwe vogels met een lange staart die tussen pollen spinifex, lignum en rietgras rennen en zelden te zien zijn zonder lokale hulp. Elke soort blijft in zijn eigen biotoop, van rotsige bergketens tot zandduinen, dus een gids gaat voor elke soort naar de juiste plek."
+      }
+    },
+    "arid-honeyeaters-1": {
+      "title": {
+        "en": "Arid honeyeaters: grey and brown",
+        "nl": "Honingeters: grijs en bruin"
+      },
+      "intro": {
+        "en": "Honeyeaters of the dry country are mostly small and plain, and they follow flowering shrubs and trees. Start with the Pied and the Singing Honeyeater, which are easy to recognise, then separate the grey-headed ones by head colour and by where they live.",
+        "nl": "Honingeters van het droge land zijn meestal klein en onopvallend en volgen bloeiende struiken en bomen. Begin met de Eksterhoningeter en de Fluithoningeter, die makkelijk te herkennen zijn, en onderscheid dan de grijskoppige soorten aan hun kopkleur en leefgebied."
+      }
+    },
+    "arid-honeyeaters-2": {
+      "title": {
+        "en": "Arid honeyeaters: black, pied and bold",
+        "nl": "Honingeters: zwart, bont en brutaal"
+      },
+      "intro": {
+        "en": "A mixed group: the nomad that feeds on desert flowers, a bird of the mistletoe, a bird of the creek trees and a friarbird at water. Learn the males first; the females are streaked brown and harder to place.",
+        "nl": "Een gemengde groep: de nomade die van woestijnbloemen leeft, een vogel van de maretak, een vogel van de bomen langs beken en een lederkop bij water. Leer eerst de mannetjes; de vrouwtjes zijn gestreept bruin en moeilijker te plaatsen."
+      }
+    },
+    "chats": {
+      "title": {
+        "en": "The chats",
+        "nl": "De schijnpaapjes"
+      },
+      "intro": {
+        "en": "Chats look like small robins but are honeyeaters in disguise. They live in open country, feed on the ground and often move in flocks that arrive after rain. The males are bright; the Gibberbird is the one that looks duller and lives on stony plains.",
+        "nl": "Schijnpaapjes lijken op kleine roodborstjes maar zijn honingeters in vermomming. Ze leven in open land, zoeken voedsel op de grond en trekken vaak in zwermen die na regen komen. De mannetjes zijn fel van kleur; de Woestijnschijnpaapje is doffer en leeft op stenige vlaktes."
+      }
+    },
+    "whitefaces-and-fieldwrens": {
+      "title": {
+        "en": "Whitefaces, Redthroat and fieldwren",
+        "nl": "Witgezichten en struiksluipers"
+      },
+      "intro": {
+        "en": "Small ground birds of saltbush, bluebush and mulga. The three whitefaces are told apart by the breast: none, a thin band, or a broad chestnut band. The Redthroat and the fieldwren stay lower in the shrubs and are easiest when they sing.",
+        "nl": "Kleine grondvogels van zoutbos, blauwbos en mulga. De drie witgezichten onderscheid je aan de borst: geen band, een dunne band of een brede kastanjebruine band. De Roodkeelstruiksluiper en de struiksluiper blijven lager in de struiken en zijn het makkelijkst te vinden als ze zingen."
+      }
+    },
+    "thornbills-and-allies": {
+      "title": {
+        "en": "Thornbills and small insect eaters",
+        "nl": "Doornsnavels en kleine insecteneters"
+      },
+      "intro": {
+        "en": "Tiny, active birds that work through the foliage of mulga and mallee in small flocks. Thornbills look much alike: tell them apart by rump colour, the tail band and where they feed. The gerygone is known by its song, the pardalote by its spotted cap.",
+        "nl": "Kleine, bedrijvige vogels die in groepjes door het gebladerte van mulga en mallee trekken. Doornsnavels lijken sterk op elkaar: onderscheid ze aan stuitkleur, staartband en waar ze foerageren. De mangrovezanger herken je aan zijn zang, de diamantvogel aan zijn gespikkelde kap."
+      }
+    },
+    "babblers-and-wedgebills": {
+      "title": {
+        "en": "Babblers, wedgebills and a quail-thrush",
+        "nl": "Babbelaars, kwartellijster en wedgebills"
+      },
+      "intro": {
+        "en": "Birds of mulga and stony scrub that you hear first. Babblers move in noisy groups, wedgebills call from the tops of bushes, the Crested Bellbird rings out from hidden perches and the quail-thrush runs across the stones and freezes.",
+        "nl": "Vogels van mulga en stenig struikgewas die je eerst hoort. Babbelaars trekken in luidruchtige groepen, wedgebills roepen vanaf struiktoppen, de Zwartkuiffluiter klinkt vanaf verborgen zitplekken en de kwartellijster rent over de stenen en staat dan stil."
+      }
+    },
+    "woodswallows-and-trillers": {
+      "title": {
+        "en": "Woodswallows, triller and finches",
+        "nl": "Spitsvogels, triller en vinkjes"
+      },
+      "intro": {
+        "en": "Open-country birds that arrive when conditions are right. The woodswallows hawk insects in flocks, the triller and the cuckooshrike come with the flowering mulga, and the swallow, firetail and Plum-headed Finch each keep to their own corner: sand banks, rocky hills and grass near water.",
+        "nl": "Vogels van open land die komen als de omstandigheden goed zijn. De spitsvogels jagen in zwermen op insecten, de triller en de rupsvogel komen mee met de bloeiende mulga, en de zwaluw, de astrild en de Ceresamadine houden elk hun eigen hoekje: zandoevers, rotsachtige heuvels en gras bij water."
+      }
+    },
+    "robins-butcherbird-and-crow": {
+      "title": {
+        "en": "Robins, a butcherbird and a crow",
+        "nl": "Roodborsten, een orgelvogel en een kraai"
+      },
+      "intro": {
+        "en": "Four birds of the dry woodland. The two robins perch low and pounce on the ground, the butcherbird sings from tall trees in the gorges and the Little Crow wanders in flocks. Notice shape and voice before colour.",
+        "nl": "Vier vogels van het droge bos. De twee roodborsten zitten laag en duiken op de grond, de orgelvogel zingt vanuit hoge bomen in de kloven en de Bennettkraai zwerft in groepen. Let eerst op vorm en geluid, dan op kleur."
+      }
+    },
+    "songlarks-and-grassbirds": {
+      "title": {
+        "en": "Songlarks, Spinifexbird and bushlark",
+        "nl": "Grasvogels, Spinifexzanger en leeuwerik"
+      },
+      "intro": {
+        "en": "Singers of grass and spinifex. The songlarks perform on top of a bush or in a display flight, the Spinifexbird skulks in the clumps and the bushlark sings high over short grass. After good rain they are everywhere.",
+        "nl": "Zangers van gras en spinifex. De grasvogels zingen vanaf een struiktop of tijdens een baltsvlucht, de Spinifexzanger sluipt door de pollen en de leeuwerik zingt hoog boven kort gras. Na goede regen zijn ze overal."
+      }
+    }
+  }
+}
