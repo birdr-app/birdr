@@ -1,7 +1,7 @@
 {
   "intro": {
-    "en": "This pack is for trips to the Top End and the Kimberley: Darwin, Kakadu, Katherine, Mary River, Kununurra and Broome. Its 130 birds come on top of the Australia trip. They live on tropical wetlands and floodplains, in monsoon forest and mangrove, on the stone country of Arnhem Land and the Kimberley, and on the mudflats where waders from Asia spend the dry season.",
-    "nl": "Dit pakket is voor reizen naar het Top End en de Kimberley: Darwin, Kakadu, Katherine, Mary River, Kununurra en Broome. De 130 vogels komen bovenop de reis door Australië. Ze leven op tropische wetlands en uiterwaarden, in moessonbos en mangrove, in het rotsland van Arnhem Land en de Kimberley en op de wadplaten waar steltlopers uit Azië het droge seizoen doorbrengen."
+    "en": "This pack is for trips to the Top End and the Kimberley: Darwin, Kakadu, Katherine, Mary River, Kununurra and Broome. Its 130 birds come on top of the Australia trip. They live on tropical wetlands and floodplains, in monsoon forest and mangrove, on the stone country of Arnhem Land and the Kimberley, and on the mudflats where waders from Asia spend the southern summer.",
+    "nl": "Dit pakket is voor reizen naar het Top End en de Kimberley: Darwin, Kakadu, Katherine, Mary River, Kununurra en Broome. De 130 vogels komen bovenop de reis door Australië. Ze leven op tropische wetlands en uiterwaarden, in moessonbos en mangrove, in het rotsland van Arnhem Land en de Kimberley en op de wadplaten waar steltlopers uit Azië de zuidelijke zomer doorbrengen."
   },
   "units": {
     "waterfowl": {
@@ -20,8 +20,8 @@
         "nl": "Duiven"
       },
       "intro": {
-        "en": "Three of these birds live among the sandstone rocks of Arnhem Land and the Kimberley, walking over boulders rather than flying. The Partridge Pigeon and the Flock Bronzewing feed on the ground in savanna and dry country. The fruit-dove and the imperial-pigeon stay high in the trees.",
-        "nl": "Drie van deze vogels leven tussen de zandsteenrotsen van Arnhem Land en de Kimberley en lopen liever over rotsblokken dan dat ze vliegen. De kwartelduif en de harlekijnduif foerageren op de grond in savanne en droog land. De vruchtenduif en de muskaatduif blijven hoog in de bomen."
+        "en": "The two rock-pigeons live among the sandstone rocks and gorges of Arnhem Land (Chestnut-quilled) and the Kimberley and Victoria River country (White-quilled), walking over boulders rather than flying. The Partridge Pigeon, the Flock Bronzewing and the Diamond Dove feed on the ground in savanna and dry country. The Black-banded Fruit-Dove stays high in the trees of rainforest patches along the Arnhem Land escarpment. The Collared Imperial-Pigeon barely reaches Australia, so treat it as a long shot.",
+        "nl": "De twee kwartelduiven leven tussen de zandsteenrotsen en kloven van Arnhem Land (roodvleugelkwartelduif) en de Kimberley en het gebied rond de Victoria River (witvleugelkwartelduif) en lopen liever over rotsblokken dan dat ze vliegen. De kwartelduif, de harlekijnduif en de diamantduif foerageren op de grond in savanne en droog land. De alligatorjufferduif blijft hoog in de bomen van regenwoudstukjes langs de Arnhem Land-steilrand. De zwartkraagmuskaatduif komt Australië amper binnen, dus beschouw hem als een gok."
       }
     },
     "owls-and-nightjars": {
@@ -60,8 +60,8 @@
         "nl": "Reigers en een roerdomp"
       },
       "intro": {
-        "en": "Three of these herons live in the mud and mangrove of Darwin's harbour and the Kimberley coast, where you see them at low tide. The bittern is a forest bird of dark creeks. The Plumed Egret is a medium white egret of flooded plains, easy to take for a Great or Intermediate Egret.",
-        "nl": "Drie van deze reigers leven in de modder en mangrove van de haven van Darwin en de kust van de Kimberley, waar je ze bij eb ziet. De roerdomp is een bosvogel van donkere beken. De pluimzilverreiger is een middelgrote witte reiger van overstroomde vlakten, die je makkelijk voor een grote of middelste zilverreiger houdt."
+        "en": "The Great-billed Heron lives in the mud and mangrove of Darwin's harbour and the Kimberley coast, where you see it at low tide. The Pied Heron hunts in wetlands and floodplains. The bittern is a forest bird of dark creeks. The Plumed Egret is a medium white egret of flooded plains, easy to take for a Great Egret.",
+        "nl": "De Sumatraanse reiger leeft in de modder en mangrove van de haven van Darwin en de kust van de Kimberley, waar je hem bij eb ziet. De bonte reiger jaagt in wetlands en overstroomde vlakten. De roerdomp is een bosvogel van donkere beken. De pluimzilverreiger is een middelgrote witte reiger van overstroomde vlakten, die je makkelijk voor een grote zilverreiger houdt."
       }
     },
     "vultures-hawks-and-allies": {
@@ -80,8 +80,8 @@
         "nl": "Steltlopers van de wadplaten"
       },
       "intro": {
-        "en": "In the dry season, thousands of waders from Siberia and Alaska gather on the mudflats of Darwin and Broome's Roebuck Bay. Most are in grey winter plumage. Go at high tide, when the birds are pushed to the roosts close to the shore.",
-        "nl": "In het droge seizoen verzamelen duizenden waders uit Siberië en Alaska zich op de wadplaten van Darwin en Roebuck Bay bij Broome. De meeste dragen grijs winterkleed. Ga bij hoogwater, wanneer de vogels dicht bij de kust op hun slaapplaats worden gedreven."
+        "en": "From about September to March, thousands of waders from Siberia and Alaska gather on the mudflats of Darwin and Broome's Roebuck Bay. Most are in plain non-breeding plumage. Go at high tide, when the birds are pushed to the roosts close to the shore.",
+        "nl": "Van ongeveer september tot maart verzamelen duizenden waders uit Siberië en Alaska zich op de wadplaten van Darwin en Roebuck Bay bij Broome. De meeste dragen een eenvoudig kleed buiten het broedseizoen. Ga bij hoogwater, wanneer de vogels dicht bij de kust op hun slaapplaats worden gedreven."
       }
     },
     "shorebirds-2": {
@@ -130,8 +130,8 @@
         "nl": "Pitta en vogels van het rotsland"
       },
       "intro": {
-        "en": "A rainbow-coloured pitta of monsoon forest, then three birds of the sandstone country of Kakadu and Arnhem Land: a treecreeper, a grasswren and a shrikethrush. These are the birds that make the Top End special for many visitors.",
-        "nl": "Een regenboogkleurige pitta van moessonbos, en daarna drie vogels van het zandsteenland van Kakadu en Arnhem Land: een boomkruiper, een grassluiper en een dikkop. Dit zijn de vogels die het Top End voor veel bezoekers bijzonder maken."
+        "en": "A rainbow-coloured pitta of monsoon forest, then three birds of the sandstone country: a treecreeper of open woodland, a grasswren of the Arnhem Land plateau and a shrikethrush of the sandstone gorges. These are the birds that make the Top End special for many visitors.",
+        "nl": "Een regenboogkleurige pitta van moessonbos, en daarna drie vogels van het zandsteenland: een boomkruiper van open bos, een grassluiper van het Arnhem Land-plateau en een dikkop van de zandsteenkloven. Dit zijn de vogels die het Top End voor veel bezoekers bijzonder maken."
       }
     },
     "shrike-tits": {
@@ -170,8 +170,8 @@
         "nl": "Honingeters van mangrove en uiterwaard"
       },
       "intro": {
-        "en": "Honeyeaters of wet places: mangroves, paperbark swamps and wet floodplains. The Yellow Chat is not a honeyeater in the strict sense, but it belongs to the same family and lives in the same wet grass.",
-        "nl": "Honingeters van natte plekken: mangrove, paperbarkmoerassen en natte uiterwaarden. Het gele schijnpaapje is strikt genomen geen honingeter, maar hoort tot dezelfde familie en leeft in hetzelfde natte gras."
+        "en": "Mostly honeyeaters of wet places: mangroves, paperbark swamps and wet floodplains. The Black and Pied Honeyeaters are nomads of drier country that turn up only now and then. The Yellow Chat is a honeyeater too, despite its name, and lives in marshy grass.",
+        "nl": "Vooral honingeters van natte plekken: mangrove, paperbarkmoerassen en natte uiterwaarden. De zwarte en de bonte honingeter zijn nomaden van droger land die maar af en toe opduiken. Het gele schijnpaapje is ondanks zijn naam ook een honingeter en leeft in moerassig gras."
       }
     },
     "honeyeaters-4": {
@@ -220,8 +220,8 @@
         "nl": "Roodborsten, een brilvogel en een kraai"
       },
       "intro": {
-        "en": "A scrub-robin that hops on the forest floor, a robin of the mangroves and a flyrobin that hovers at the edge. The Little Crow belongs here too: a small black crow you meet in towns. The yellow white-eye feeds in flocks in mangroves.",
-        "nl": "Een grondrobin die over de bosbodem hipt, een robin van de mangrove en een vliegenvangertje dat aan de rand zweeft. De Bennettkraai hoort ook hier: een kleine zwarte kraai die je in steden ziet. De gele brilvogel foerageert in groepen in mangrove."
+        "en": "A scrub-robin that hops on the forest floor, a robin of the mangroves and a flyrobin that hovers at the edge. The Little Crow belongs here too: a small black crow of drier country. The yellow white-eye feeds in flocks in mangroves.",
+        "nl": "Een grondrobin die over de bosbodem hipt, een robin van de mangrove en een vliegenvangertje dat aan de rand zweeft. De Bennettkraai hoort ook hier: een kleine zwarte kraai van droger land. De gele brilvogel foerageert in groepen in mangrove."
       }
     },
     "estrildids": {
