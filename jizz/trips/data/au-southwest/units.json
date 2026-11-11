@@ -429,12 +429,10 @@
         "nl": "Whistlers and Allies"
       },
       "species": [
-        "weswhi2",
-        "relwhi1"
+        "weswhi2"
       ],
       "endemics": [
-        "weswhi2",
-        "relwhi1"
+        "weswhi2"
       ]
     },
     {
@@ -613,7 +611,6 @@
       "species": [
         "cresht2",
         "weswhi2",
-        "relwhi1",
         "whwtri1"
       ]
     },
