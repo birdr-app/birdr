@@ -21,7 +21,7 @@ The library holds no trustworthy photo of these species (the images on file are 
 | Double-banded Plover | dobplo1 | AU-TASMANIA, AU-SOUTHEAST |
 | Black-eared Miner | blemin1 | AU-SOUTHEAST |
 
-## Doubtful picks to look at
+## Doubtful picks (reviewed and accepted by the owner, November 2026)
 
 Reviewer notes where the species ID of a pick is not fully certain (look-alikes). The picks stay in `media.json`; remove the ids if you disagree.
 
