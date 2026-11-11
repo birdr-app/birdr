@@ -13,9 +13,11 @@ import { colors } from '../theme';
 type AppHeaderProps = {
   title: string;
   routeName?: string;
+  /** Shown left of the menu button, e.g. a back arrow. */
+  leftExtra?: React.ReactNode;
 };
 
-export function AppHeader({ title, routeName }: AppHeaderProps) {
+export function AppHeader({ title, routeName, leftExtra }: AppHeaderProps) {
   const navigation = useNavigation<NativeStackNavigationProp<Record<string, undefined>, string>>();
   const { t } = useTranslation();
   const { openUserMenu, openLeftMenu, setCurrentRouteName } = useMenu();
@@ -55,6 +57,7 @@ export function AppHeader({ title, routeName }: AppHeaderProps) {
       >
         <FontAwesome5 name="bars" solid={false} size={20} color={colors.primary[800]} />
       </TouchableOpacity>
+      {leftExtra}
       <View style={styles.center}>
         <Text style={styles.title} numberOfLines={1}>
           {title}

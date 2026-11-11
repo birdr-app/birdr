@@ -1,12 +1,12 @@
 import {ReactElement, ReactNode} from "react";
 import {Flex, Button, HStack, Avatar, Text} from "@chakra-ui/react";
 import {GiHamburgerMenu} from "react-icons/gi";
-import {FaUserCircle} from "react-icons/fa";
+import {FaUserCircle, FaArrowLeft} from "react-icons/fa";
 import {useMenu} from "./menu-context";
 import {useAuthProfile} from "../../../core/auth-profile-context";
 import {getAvatarUrl} from "../../../api/services/profile.service";
 
-const PageHeader = ({children}: {children: ReactElement | ReactNode[]} ) => {
+const PageHeader = ({children, onBack, backLabel, backFlag}: {children: ReactElement | ReactNode[], onBack?: () => void, backLabel?: string, backFlag?: string} ) => {
   const {onOpenMenu, onOpenUserMenu} = useMenu();
   const {isAuthenticated, profile, userEmail} = useAuthProfile();
 
@@ -27,6 +27,12 @@ const PageHeader = ({children}: {children: ReactElement | ReactNode[]} ) => {
       <Button variant="ghost" color={'gray.800'} p={2} onClick={onOpenMenu} size="sm">
         <GiHamburgerMenu size={20}/>
       </Button>
+      {onBack ? (
+        <Button variant="ghost" color={'gray.800'} p={2} onClick={onBack} size="sm" aria-label={backLabel || 'Back'} data-testid="trip-back-link">
+          <FaArrowLeft size={18}/>
+          {backFlag ? <span style={{fontSize: 18, lineHeight: 1}}>{backFlag}</span> : null}
+        </Button>
+      ) : null}
       
       {/* Center content (title) */}
       <Flex flex={1} justifyContent="center" alignItems="center">

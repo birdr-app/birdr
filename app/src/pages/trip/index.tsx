@@ -6,7 +6,7 @@ import { unitKnown } from '../../core/trip-quiz';
 import { fetchTrips, fetchTripProgress, loadTripState, updateTripState, type TripRegion, type TripSummary, type TripUnit } from '../../api/trip';
 import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
-import { ProgressRing, TripBackLink, TripLoading, UnitRow } from './parts';
+import { FoldedAbout, ProgressRing, TripBackLink, TripLoading, UnitRow } from './parts';
 import { TripRequestForm } from './request';
 import { TripStory } from './story';
 import { UnderConstruction } from '../../components/under-construction';
@@ -250,8 +250,10 @@ export function TripHomePage() {
             </Flex>
           ) : null}
 
-          {trip.intro ? <Text color="primary.800">{trip.intro}</Text> : null}
-          <TripStory trip={trip} />
+          <FoldedAbout folded={!isPack && familiesDone}>
+            {trip.intro ? <Text color="primary.800">{trip.intro}</Text> : null}
+            <TripStory trip={trip} />
+          </FoldedAbout>
           <UnderConstruction feature="Trip prep" lang={lang} />
 
           {!isPack ? (

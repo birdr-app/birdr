@@ -19,6 +19,8 @@ export type ZoomablePlayImageProps = {
   fullSrc: string;
   onLoad: () => void;
   onError: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void;
+  /** Stage height; defaults to the shared in-game height. */
+  height?: string;
 };
 
 /**
@@ -29,6 +31,7 @@ export function ZoomablePlayImage({
   fullSrc,
   onLoad,
   onError,
+  height = PLAY_IMAGE_STAGE_HEIGHT,
 }: ZoomablePlayImageProps) {
   const [open, setOpen] = useState(false);
   const intl = useIntl();
@@ -48,7 +51,7 @@ export function ZoomablePlayImage({
     <>
       <Box
         w="100%"
-        h={PLAY_IMAGE_STAGE_HEIGHT}
+        h={height}
         bg="transparent"
         overflow="hidden"
         display="flex"

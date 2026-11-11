@@ -19,8 +19,8 @@
     },
     "rails-gallinules-and-allies": {
       "here": {
-        "en": "One rail is on this trip: the Common Moorhen, the same species as in Europe. Look for it on ponds and in marshes, such as those on La Digue.",
-        "nl": "Deze reis omvat één ral: het waterhoen, dezelfde soort als in Europa. Zoek het op vijvers en in moerassen, zoals op La Digue."
+        "en": "One rail is on this trip: the Common Moorhen, a species found on most continents. Look for it on ponds and in marshes, such as those on La Digue.",
+        "nl": "Deze reis omvat één ral: het waterhoen, een soort die op de meeste continenten voorkomt. Zoek het op vijvers en in moerassen, zoals op La Digue."
       }
     },
     "shorebirds": {
@@ -151,8 +151,8 @@
         "nl": "Duiven, een salangaan en een waterhoen"
       },
       "intro": {
-        "en": "Two doves walk on the ground everywhere: the small, finely barred Zebra Dove and the bigger, browner Malagasy Turtle Dove. The blue-pigeon stays in the trees, the swiftlet is always in the air, and the moorhen is the one you know from home.",
-        "nl": "Twee duiven lopen overal op de grond: de kleine, fijn gestreepte zebraduif en de grotere, bruinere Madagaskartortel. De blauwduif blijft in de bomen, de salangaan zit altijd in de lucht, en het waterhoen ken je van thuis."
+        "en": "Two doves walk on the ground everywhere: the small, finely barred Zebra Dove and the bigger, browner Malagasy Turtle Dove. The blue-pigeon stays in the trees, the swiftlet is always in the air, and the moorhen is a widespread waterbird.",
+        "nl": "Twee duiven lopen overal op de grond: de kleine, fijn gestreepte zebraduif en de grotere, bruinere Madagaskartortel. De blauwduif blijft in de bomen, de salangaan zit altijd in de lucht, en het waterhoen is een wijdverbreide watervogel."
       }
     },
     "shorebirds-1": {
@@ -161,8 +161,8 @@
         "nl": "Plevieren, terekruiter en grutto"
       },
       "intro": {
-        "en": "You may know several of these from European coasts in winter, and here they are in the same grey-brown winter plumage. For the two sand plovers, compare the size and the length of the bill; the Terek Sandpiper has an upturned bill and short orange legs.",
-        "nl": "Een paar ken je misschien van de Europese kust in de winter, en hier dragen ze hetzelfde grijsbruine winterkleed. Vergelijk bij de Tibetaanse plevier en de woestijnplevier de grootte en de lengte van de snavel; de terekruiter heeft een opgewipte snavel en korte oranje poten."
+        "en": "Several of these breed in the north and winter on tropical coasts, here in grey-brown winter plumage. For the two sand plovers, compare the size and the length of the bill; the Terek Sandpiper has an upturned bill and short orange legs.",
+        "nl": "Een paar broeden in het noorden en overwinteren aan tropische kusten, hier in grijsbruin winterkleed. Vergelijk bij de Tibetaanse plevier en de woestijnplevier de grootte en de lengte van de snavel; de terekruiter heeft een opgewipte snavel en korte oranje poten."
       }
     },
     "shorebirds-2": {
@@ -172,7 +172,7 @@
       },
       "intro": {
         "en": "The turnstone and the Whimbrel are on almost every beach, and Sanderlings run with the waves. The Crab-Plover is the one you won't know: a black-and-white wader with a heavy black bill that hunts crabs on the flats.",
-        "nl": "De steenloper en de regenwulp zitten op bijna elk strand, en drieteenstrandlopers rennen mee met de golven. De krabplevier ken je niet van thuis: een zwart-witte steltloper met een zware zwarte snavel die op de platen op krabben jaagt."
+        "nl": "De steenloper en de regenwulp zitten op bijna elk strand, en drieteenstrandlopers rennen mee met de golven. De krabplevier is bijzonder: een zwart-witte steltloper met een zware zwarte snavel die op de platen op krabben jaagt."
       }
     },
     "gulls-terns-and-skimmers": {
@@ -201,8 +201,8 @@
         "nl": "Reigers en een woudaap"
       },
       "intro": {
-        "en": "Four of these you know from Europe. The new ones are small: the Striated Heron, dark grey and hunched on the rocks, and the Yellow Bittern, buff with dark flight feathers, which climbs through reeds and long grass.",
-        "nl": "Vier hiervan ken je uit Europa. De nieuwe zijn klein: de mangrovereiger, donkergrijs en ineengedoken op de rotsen, en de Chinese woudaap, okergeel met donkere slagpennen, die door riet en hoog gras klautert."
+        "en": "Four of these are widespread herons. The others are small: the Striated Heron, dark grey and hunched on the rocks, and the Yellow Bittern, buff with dark flight feathers, which climbs through reeds and long grass.",
+        "nl": "Vier hiervan zijn wijdverbreide reigers. De andere zijn klein: de mangrovereiger, donkergrijs en ineengedoken op de rotsen, en de Chinese woudaap, okergeel met donkere slagpennen, die door riet en hoog gras klautert."
       }
     },
     "owls": {
@@ -241,8 +241,8 @@
         "nl": "Mus en Sint-Helenafazantje"
       },
       "intro": {
-        "en": "Two small seed-eaters that came with people. You know the House Sparrow; the Common Waxbill is tiny and brown, with a red bill and a red stripe through the eye.",
-        "nl": "Twee kleine zaadeters die met mensen zijn meegekomen. De huismus ken je; het Sint-Helenafazantje is piepklein en bruin, met een rode snavel en een rode streep door het oog."
+        "en": "Two small seed-eaters that came with people. The House Sparrow is widespread; the Common Waxbill is tiny and brown, with a red bill and a red stripe through the eye.",
+        "nl": "Twee kleine zaadeters die met mensen zijn meegekomen. De huismus is wijdverbreid; het Sint-Helenafazantje is piepklein en bruin, met een rode snavel en een rode streep door het oog."
       }
     }
   },

@@ -28,7 +28,7 @@ function cardWords(bird: CourseBird, lesson: CourseLesson) {
 function Photo({ media, label }: { media: CourseMedia; label?: string }) {
   return (
     <Box position="relative" borderRadius="xl" overflow="hidden" bg="primary.100" aspectRatio={4 / 3} w="full">
-      <Image src={media.url} alt="" w="full" h="full" objectFit="cover" />
+      <Image src={media.url} alt="" w="full" h="full" objectFit="contain" />
       {label ? (
         <Text position="absolute" left={2} bottom={2} bg="white" borderRadius="full" px={3} py={1} fontSize="sm" fontWeight="700" color="primary.800">
           {label}

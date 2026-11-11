@@ -32,6 +32,12 @@ function photos(trip: Trip, code: string): TripMedia[] {
   return sp.quiz_images.length ? sp.quiz_images : sp.images;
 }
 
+/** Another photo of the bird, for when the player flagged the one shown; null when there is none left. */
+export function otherPhoto(trip: Trip, code: string, excludeIds: number[]): TripMedia | null {
+  const left = photos(trip, code).filter((m) => !excludeIds.includes(m.id));
+  return left.length ? left[Math.floor(Math.random() * left.length)] : null;
+}
+
 /**
  * Wrong answers that make the player look: the unit's other birds first, then the same group,
  * then anything already learned, then the rest of the trip.

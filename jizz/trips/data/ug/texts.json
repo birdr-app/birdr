@@ -265,8 +265,8 @@
     },
     "thrushes": {
       "here": {
-        "en": "African Thrush is the only thrush on this trip. It hops over the lawns of Entebbe and Kampala much like a Blackbird at home.",
-        "nl": "De pelioslijster is de enige lijster op deze reis. Hij hupt over de grasvelden van Entebbe en Kampala, net als een merel thuis."
+        "en": "African Thrush is the only thrush on this trip. It hops over the lawns of Entebbe and Kampala much like a Blackbird.",
+        "nl": "De pelioslijster is de enige lijster op deze reis. Hij hupt over de grasvelden van Entebbe en Kampala, net als een merel."
       }
     },
     "old-world-flycatchers": {
@@ -322,8 +322,8 @@
     "waterfowl": {
       "title": {"en": "Ducks and geese", "nl": "Eenden en ganzen"},
       "intro": {
-        "en": "Four big, easy waterfowl of lakes and swamps. Egyptian Goose you may know from home; Spur-winged Goose is larger and glossy black and white, and the male Knob-billed Duck has a black knob on its bill. White-faced Whistling-Ducks stand in noisy groups at the water's edge.",
-        "nl": "Vier grote, makkelijke watervogels van meren en moerassen. De nijlgans ken je misschien van thuis; de spoorwiekgans is groter en glanzend zwart-wit, en het mannetje van de Afrikaanse knobbeleend heeft een zwarte knobbel op de snavel. Witwangfluiteenden staan in luidruchtige groepjes aan de waterkant."
+        "en": "Four big, easy waterfowl of lakes and swamps. Egyptian Goose is brown with a dark eye patch; Spur-winged Goose is larger and glossy black and white, and the male Knob-billed Duck has a black knob on its bill. White-faced Whistling-Ducks stand in noisy groups at the water's edge.",
+        "nl": "Vier grote, makkelijke watervogels van meren en moerassen. De nijlgans is bruin met een donkere oogvlek; de spoorwiekgans is groter en glanzend zwart-wit, en het mannetje van de Afrikaanse knobbeleend heeft een zwarte knobbel op de snavel. Witwangfluiteenden staan in luidruchtige groepjes aan de waterkant."
       }
     },
     "grouse-quail-and-allies": {
@@ -378,8 +378,8 @@
     "shorebirds-2": {
       "title": {"en": "Sandpipers, jacana and pratincole", "nl": "Ruiters, lelieloper en vorkstaartplevier"},
       "intro": {
-        "en": "Four of these come from Europe between September and April, and you may know them already. The African Jacana walks over lily pads on very long toes, and the Rock Pratincole sits on wet rocks in the rapids of the Nile.",
-        "nl": "Vier hiervan komen tussen september en april uit Europa, en die ken je misschien al. De lelieloper loopt op heel lange tenen over waterlelies, en de rotsvorkstaartplevier zit op natte rotsen in de stroomversnellingen van de Nijl."
+        "en": "Four of these come from Europe between September and April. The African Jacana walks over lily pads on very long toes, and the Rock Pratincole sits on wet rocks in the rapids of the Nile.",
+        "nl": "Vier hiervan komen tussen september en april uit Europa. De lelieloper loopt op heel lange tenen over waterlelies, en de rotsvorkstaartplevier zit op natte rotsen in de stroomversnellingen van de Nijl."
       }
     },
     "gulls-terns-and-skimmers": {
@@ -399,15 +399,15 @@
     "cormorants-and-anhingas": {
       "title": {"en": "Cormorants and a darter", "nl": "Aalscholvers en een slangenhalsvogel"},
       "intro": {
-        "en": "Great Cormorant is the bird you know, here with a white throat and breast. Reed Cormorant is much smaller with a long tail; the darter has a thin, snake-like neck and swims with only its head above water.",
-        "nl": "De aalscholver ken je al; hier heeft hij een witte keel en borst. De Afrikaanse dwergaalscholver is veel kleiner en heeft een lange staart; de slangenhalsvogel heeft een dunne nek als een slang en zwemt met alleen zijn kop boven water."
+        "en": "Great Cormorant is widespread, here with a white throat and breast. Reed Cormorant is much smaller with a long tail; the darter has a thin, snake-like neck and swims with only its head above water.",
+        "nl": "De aalscholver is wijdverbreid; hier heeft hij een witte keel en borst. De Afrikaanse dwergaalscholver is veel kleiner en heeft een lange staart; de slangenhalsvogel heeft een dunne nek als een slang en zwemt met alleen zijn kop boven water."
       }
     },
     "herons-ibis-and-allies-1": {
-      "title": {"en": "Egrets and familiar herons", "nl": "Zilverreigers en bekende reigers"},
+      "title": {"en": "Egrets and widespread herons", "nl": "Zilverreigers en wijdverbreide reigers"},
       "intro": {
-        "en": "Six herons you may know from southern Europe. Use them to learn where each one hunts: Western Cattle-Egrets follow buffalo and cattle, Squacco Herons hunch at the edge of the papyrus and turn white when they fly, and Purple Herons hide in the reeds.",
-        "nl": "Zes reigers die je misschien uit Zuid-Europa kent. Leer aan de hand van deze soorten waar elke reiger jaagt: koereigers lopen achter buffels en koeien aan, ralreigers zitten ineengedoken aan de rand van de papyrus en worden wit als ze opvliegen, en purperreigers verstoppen zich in het riet."
+        "en": "Six widespread herons. Use them to learn where each one hunts: Western Cattle-Egrets follow buffalo and cattle, Squacco Herons hunch at the edge of the papyrus and turn white when they fly, and Purple Herons hide in the reeds.",
+        "nl": "Zes wijdverbreide reigers. Leer aan de hand van deze soorten waar elke reiger jaagt: koereigers lopen achter buffels en koeien aan, ralreigers zitten ineengedoken aan de rand van de papyrus en worden wit als ze opvliegen, en purperreigers verstoppen zich in het riet."
       }
     },
     "herons-ibis-and-allies-2": {
@@ -532,8 +532,8 @@
     "bulbuls": {
       "title": {"en": "Bulbuls, greenbuls and a warbler", "nl": "Buulbuuls en een fitis"},
       "intro": {
-        "en": "Common Bulbul, brown with a dark head, is in every bush. The greenbuls are olive birds of the forest, easier to hear than to see; Yellow-whiskered Greenbul has a yellow streak below the bill. Willow Warbler you know from home: it spends the winter here, in gardens and acacias.",
-        "nl": "De grauwe buulbuul, bruin met een donkere kop, zit in elke struik. De groene buulbuul en de geelbaardbuulbuul zijn olijfgroene bosvogels die je makkelijker hoort dan ziet; de geelbaardbuulbuul heeft een gele streep onder de snavel. De fitis ken je van thuis: hij overwintert hier, in tuinen en acacia's."
+        "en": "Common Bulbul, brown with a dark head, is in every bush. The greenbuls are olive birds of the forest, easier to hear than to see; Yellow-whiskered Greenbul has a yellow streak below the bill. Willow Warbler is a migrant from the north: it spends the winter here, in gardens and acacias.",
+        "nl": "De grauwe buulbuul, bruin met een donkere kop, zit in elke struik. De groene buulbuul en de geelbaardbuulbuul zijn olijfgroene bosvogels die je makkelijker hoort dan ziet; de geelbaardbuulbuul heeft een gele streep onder de snavel. De fitis is een trekvogel uit het noorden: hij overwintert hier, in tuinen en acacia's."
       }
     },
     "white-eyes-yuhinas-and-allies": {
@@ -560,8 +560,8 @@
     "old-world-flycatchers-2": {
       "title": {"en": "Chats and a black flycatcher", "nl": "Tapuiten en een vliegenvanger"},
       "intro": {
-        "en": "Birds that sit on top of a bush or grass stem. Whinchat comes from Europe for the winter; African Stonechat looks like the one you know and lives in the highlands. Sooty Chat is black with white shoulders and sits on termite mounds. Northern Black-Flycatcher is all black too; tell it from a drongo by its square tail.",
-        "nl": "Vogels die boven op een struik of grasstengel zitten. Het paapje komt 's winters uit Europa; de Afrikaanse roodborsttapuit lijkt op die van thuis en leeft in het hoogland. De zwarte miertapuit is zwart met witte schouders en zit op termietenheuvels. De Senegalese drongovliegenvanger is ook helemaal zwart; onderscheid hem van een drongo aan zijn rechte staart."
+        "en": "Birds that sit on top of a bush or grass stem. Whinchat comes from Europe for the winter; African Stonechat looks like the European Stonechat and lives in the highlands. Sooty Chat is black with white shoulders and sits on termite mounds. Northern Black-Flycatcher is all black too; tell it from a drongo by its square tail.",
+        "nl": "Vogels die boven op een struik of grasstengel zitten. Het paapje komt 's winters uit Europa; de Afrikaanse roodborsttapuit lijkt op de Europese roodborsttapuit en leeft in het hoogland. De zwarte miertapuit is zwart met witte schouders en zit op termietenheuvels. De Senegalese drongovliegenvanger is ook helemaal zwart; onderscheid hem van een drongo aan zijn rechte staart."
       }
     },
     "sunbirds-and-spiderhunters-1": {
@@ -609,8 +609,8 @@
     "wagtails-and-pipits": {
       "title": {"en": "Wagtails, pipits and canaries", "nl": "Kwikstaarten, piepers en kanaries"},
       "intro": {
-        "en": "African Pied Wagtail walks on every lawn and roof; Mountain Wagtail is grey and white, slimmer, and lives on rocky streams. Yellow Wagtails from Europe feed around cattle in winter. The longclaw has a yellow throat edged in black, and the pipit looks like those you know. The two canaries are yellow finches; Brimstone is bigger, with a heavier bill.",
-        "nl": "De Afrikaanse bonte kwikstaart loopt op elk grasveld en dak; de bergkwikstaart is grijs-wit, slanker en leeft bij rotsige beken. Gele kwikstaarten uit Europa zoeken 's winters voedsel rond het vee. De geelkeellangklauw heeft een gele keel met een zwarte rand, en de kaneelpieper lijkt op de piepers die je kent. De twee kanaries zijn gele vinken; de zwavelkanarie is groter en heeft een zwaardere snavel."
+        "en": "African Pied Wagtail walks on every lawn and roof; Mountain Wagtail is grey and white, slimmer, and lives on rocky streams. Yellow Wagtails from Europe feed around cattle in winter. The longclaw has a yellow throat edged in black, and the pipit looks like other pipits. The two canaries are yellow finches; Brimstone is bigger, with a heavier bill.",
+        "nl": "De Afrikaanse bonte kwikstaart loopt op elk grasveld en dak; de bergkwikstaart is grijs-wit, slanker en leeft bij rotsige beken. Gele kwikstaarten uit Europa zoeken 's winters voedsel rond het vee. De geelkeellangklauw heeft een gele keel met een zwarte rand, en de kaneelpieper lijkt op andere piepers. De twee kanaries zijn gele vinken; de zwavelkanarie is groter en heeft een zwaardere snavel."
       }
     }
   },

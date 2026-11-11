@@ -1,16 +1,42 @@
-import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import { useMemo, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { postTripAnswers, updateTripState, type Trip, type TripAnswer, type TripSpecies, type TripUnit } from '../../api/trip';
+import { FlagMediaButton } from '../../components/flag-media-button';
+import { MediaCredits } from '../../components/media-credits';
+import { ZoomablePlayImage } from '../../components/zoomable-play-image';
+import { playFullSrc, playPreviewSrc } from '../../utils/play-image-url';
+import { ComparisonButton } from '../../components/comparison-button';
+import { SpeciesModal } from '../../components/species-modal';
+import type { Species, SpeciesImage } from '../../core/app-context';
+import { countryCodeToFlag } from '../../api/birdrJourney';
 import { BirdrArtImage } from '../../components/birdr-art-image';
-import { buildUnitQuiz, focusCodes, makeQuestion, remaining, type TripQuestion } from '../../core/trip-quiz';
+import { buildUnitQuiz, focusCodes, makeQuestion, otherPhoto, remaining, type TripQuestion } from '../../core/trip-quiz';
 import { Page } from '../../shared/components/layout';
 import { BoldText, Kicker, StepBar } from '../course/parts';
-import { EndemicBadge, TripBackLink, TripLoading, TripPhoto, TripThumb, credit } from './parts';
+import { EndemicBadge, TripLoading, TripPhoto, TripThumb, credit } from './parts';
 import { TripCelebration } from './celebration';
 import { findUnit, tripComplete, useTrip, withPlus, useTripText, type TripData } from './use-trip';
 
 type Step = { kind: 'intro' } | { kind: 'card'; index: number } | { kind: 'quiz' } | { kind: 'done'; asked: number; wrong: number; saved: boolean | null; celebrate: boolean };
+
+/** The minimal Species the species modal needs; it loads the photos, videos and sounds itself. */
+function tripToSpecies(sp: TripSpecies): Species {
+  return {
+    id: sp.species_id,
+    code: sp.code,
+    name: sp.name,
+    name_nl: sp.name,
+    name_latin: sp.latin,
+    name_translated: sp.name,
+    tax_order: '',
+    tax_family: '',
+    tax_family_en: '',
+    images: [],
+    sounds: [],
+    videos: [],
+  };
+}
 
 /** /trips/:country/units/:slug: introduction, one card per bird, the quiz, the result. */
 export function TripUnitPage() {
@@ -67,15 +93,14 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
 
   return (
     <Page>
-      <Page.Header>
+      <Page.Header onBack={back} backLabel={trip.name} backFlag={countryCodeToFlag(trip.parent || trip.country)}>
         <Heading color="gray.800" size="xl">
           {unit.title}
         </Heading>
       </Page.Header>
       <Page.Body>
         <Flex direction="column" gap={3} w="full" maxW="640px" mx="auto">
-          <TripBackLink to={trip.country} name={trip.name} />
-          {step.kind !== 'done' ? <StepBar total={birds.length + 2} current={stepIndex} /> : null}
+          {step.kind !== 'done' && birds.length + 2 <= 12 ? <StepBar total={birds.length + 2} current={stepIndex} /> : null}
           {step.kind === 'intro' ? (
             <Intro
               unit={unit}
@@ -170,7 +195,7 @@ function Intro({
         {birds.map((b) => (b.images[0] ? <TripThumb key={b.code} media={b.images[0]} alt={b.name} /> : null))}
       </Flex>
       {testOut ? (
-        <Box bg="secondary.50" borderRadius="lg" p={3}>
+        <Box bg="white" borderWidth="1px" borderColor="primary.200" borderRadius="lg" p={3}>
           <Text color="primary.800" mb={2}>
             {t('trip_test_out', 'You already know {known} of these {total}. Go straight to the quiz?', { known: knownCount, total: birds.length })}
           </Text>
@@ -266,16 +291,16 @@ function Card({
         <Flex gap={2}>
           {bird.images.slice(1, 3).map((m) => (
             <Box key={m.id} flex={1}>
-              <TripPhoto media={m} ratio={1} />
+              <TripPhoto media={m} ratio={5 / 3} />
             </Box>
           ))}
         </Flex>
       ) : null}
-      <Flex gap={2} mt={2}>
-        <Button variant="outline" colorPalette="primary" onClick={onBack}>
+      <Flex gap={2} mt={2} position="sticky" bottom={6} zIndex={2}>
+        <Button variant="solid" bg="white" color="primary.800" borderWidth="1px" borderColor="primary.300" shadow="md" _hover={{ bg: 'primary.50' }} onClick={onBack}>
           {t('trip_back', 'Back')}
         </Button>
-        <Button colorPalette="primary" flex={1} onClick={onNext}>
+        <Button colorPalette="primary" flex={1} shadow="md" onClick={onNext}>
           {index + 1 < total ? t('trip_next_bird', 'Next bird') : t('trip_to_quiz', 'To the quiz')}
         </Button>
       </Flex>
@@ -303,6 +328,8 @@ function Quiz({
   const [queue, setQueue] = useState<TripQuestion[]>(initial);
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
+  const flagged = useRef<number[]>([]);
+  const [viewSpecies, setViewSpecies] = useState<Species | undefined>(undefined);
   const rightOnce = useRef(new Set<string>());
   const wrongOnce = useRef(new Set<string>());
   const asked = useRef(new Map<string, number>());
@@ -364,45 +391,67 @@ function Quiz({
         {t('trip_quiz_left', 'Quiz · {left} birds to go', { left })}
         {q.review ? ` · ${t('trip_review', 'review')}` : ''}
       </Kicker>
-      <TripPhoto key={`${index}-${q.image.id}`} media={q.image} />
+      <ZoomablePlayImage
+        key={`${index}-${q.image.id}`}
+        previewSrc={playPreviewSrc(q.image.url)}
+        fullSrc={playFullSrc(q.image.url)}
+        height="clamp(180px, 32vh, 320px)"
+        onLoad={() => {}}
+        onError={(e) => {
+          e.currentTarget.src = '/images/birdr-logo.png';
+        }}
+      />
+      <Flex direction="row" justify="space-between" align="center" wrap="wrap" gap={2}>
+        <MediaCredits contributor={q.image.contributor} source={q.image.source} />
+        <FlagMediaButton
+          media={q.image as unknown as SpeciesImage}
+          onFlagSuccess={() => {
+            const flaggedIds = [...flagged.current, q.image.id];
+            flagged.current = flaggedIds;
+            const another = otherPhoto(trip, q.code, flaggedIds);
+            if (another) setQueue((list) => list.map((x, i) => (i === index ? { ...x, image: another } : x)));
+          }}
+        />
+      </Flex>
       <Text fontSize="lg" fontWeight="700" color="primary.800">
         {t('trip_which_bird', 'Which bird is this?')}
       </Text>
-      {q.options.map((option) => {
-        const isAnswer = option === q.code;
-        const isPicked = option === picked;
-        const state = answered && isAnswer ? 'right' : answered && isPicked ? 'wrong' : 'none';
-        return (
-          <Button
-            key={option}
-            onClick={() => choose(option)}
-            disabled={answered && !isAnswer && !isPicked}
-            variant="outline"
-            height="auto"
-            py={3}
-            justifyContent="flex-start"
-            whiteSpace="normal"
-            fontSize="md"
-            fontWeight="600"
-            color="primary.800"
-            bg={state === 'right' ? 'success.50' : state === 'wrong' ? 'error.50' : 'white'}
-            borderWidth="2px"
-            borderColor={state === 'right' ? 'success.500' : state === 'wrong' ? 'error.500' : 'primary.200'}
-          >
-            {state === 'right' ? '✓ ' : state === 'wrong' ? '✗ ' : ''}
-            {trip.species[option]?.name}
-          </Button>
-        );
-      })}
+      <SimpleGrid columns={{ base: 1, md: 2 }} gap={3}>
+        {q.options.map((option) => {
+          const isAnswer = option === q.code;
+          const isPicked = option === picked;
+          const spOpt = trip.species[option];
+          if (answered) {
+            return (
+              <Button
+                key={option}
+                onClick={() => spOpt && setViewSpecies(tripToSpecies(spOpt))}
+                gap={4}
+                colorPalette={isAnswer ? 'success' : isPicked ? 'error' : 'warning'}
+              >
+                {spOpt?.name}
+              </Button>
+            );
+          }
+          return (
+            <Button key={option} colorPalette="primary" onClick={() => choose(option)}>
+              {spOpt?.name}
+            </Button>
+          );
+        })}
+      </SimpleGrid>
+      {answered && !right && picked && trip.species[picked] ? (
+        <ComparisonButton
+          species1Id={sp.species_id}
+          species2Id={trip.species[picked].species_id}
+          species1Name={sp.name}
+          species2Name={trip.species[picked].name}
+          buttonLabel={t('view_comparison', 'Comparison')}
+        />
+      ) : null}
+      <SpeciesModal species={viewSpecies} onClose={() => setViewSpecies(undefined)} isOpen={!!viewSpecies} />
       {answered ? (
         <>
-          <Text fontWeight="700" color={right ? 'success.500' : 'error.500'}>
-            {right
-              ? t('trip_right', 'Yes, {name}.', { name: sp.name })
-              : q.review
-                ? t('trip_wrong_review', "Not quite: it's {name}.", { name: sp.name })
-                : t('trip_wrong', "Not quite: it's {name}. It comes back later.", { name: sp.name })}
-          </Text>
           {!right && sp.look_for[0] ? <BoldText text={sp.look_for.join(' · ')} fontSize="sm" color="primary.700" /> : null}
           <Button colorPalette="primary" onClick={next}>
             {t('trip_next_question', 'Next')}

@@ -1,18 +1,26 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useNavigation, useRoute, type RouteProp } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { postTripAnswers, updateTripState, type Trip, type TripAnswer, type TripSpecies, type TripUnit } from '../api/trip';
 import { BoldText, StepBar } from '../components/CourseParts';
+import { FlagMediaModal, type FlagMediaInfo } from '../components/FlagMediaModal';
+import { QuestionMediaView } from '../components/QuestionMediaView';
+import { playFullSrc } from '../utils/playImageUrl';
+import { ComparisonButton } from '../components/ComparisonButton';
+import { SpeciesMediaModal, type SpeciesMediaData } from '../components/SpeciesMediaModal';
+import { SpeciesViewButton } from '../components/SpeciesViewButton';
 import { GameArtImage } from '../components/GameArtImage';
 import { TripCelebration } from '../components/TripCelebration';
-import { TripBackLink, EndemicBadge, Kicker, TripLoading, TripPhoto, TripThumb, tripStyles } from '../components/TripParts';
+import { TripBackArrow, EndemicBadge, Kicker, TripLoading, TripPhoto, TripThumb, tripStyles } from '../components/TripParts';
 import { getMoodImage } from '../constants/birdrMoodImages';
 import { useVisualStyle } from '../context/VisualStyleContext';
 import { useTrip, type TripData } from '../hooks/useTrip';
 import { useTranslation } from '../i18n/TranslationContext';
 import {
   buildUnitQuiz,
+  otherPhoto,
   credit,
   findUnit,
   finishUnit,
@@ -49,13 +57,15 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
   const { t } = useTranslation();
   const navigation = useNavigation<NativeStackNavigationProp<TripRoutes>>();
   const { visualStyle } = useVisualStyle();
+  const insets = useSafeAreaInsets();
+  const navBottom = Math.max(insets.bottom, 12) + 16;
   const [step, setStep] = useState<Step>({ kind: 'intro' });
   const scrollRef = useRef<ScrollView>(null);
   const birds = unit.species.map((c) => trip.species[c]).filter((s): s is TripSpecies => !!s);
 
   useEffect(() => {
-    navigation.setOptions({ title: unit.title });
-  }, [navigation, unit.title]);
+    navigation.setOptions({ title: unit.title, headerLeft: () => <TripBackArrow country={trip.country} name={trip.name} parentCountry={trip.parent} /> });
+  }, [navigation, unit.title, trip.country, trip.name]);
 
   const go = (next: Step) => {
     setStep(next);
@@ -74,10 +84,19 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
     setStep((s) => (s.kind === 'done' ? { ...s, saved: !!progress } : s));
   };
 
+  const cardNav =
+    step.kind === 'card'
+      ? {
+          back: () => go(step.index === 0 ? { kind: 'intro' } : { kind: 'card', index: step.index - 1 }),
+          next: () => go(step.index + 1 < birds.length ? { kind: 'card', index: step.index + 1 } : { kind: 'quiz', round: 0 }),
+          last: step.index + 1 >= birds.length,
+        }
+      : null;
+
   return (
-    <ScrollView ref={scrollRef} style={tripStyles.container} contentContainerStyle={tripStyles.content}>
-      <TripBackLink country={trip.country} name={trip.name} />
-      {step.kind !== 'done' ? <StepBar total={birds.length + 2} current={stepIndex} /> : null}
+    <View style={tripStyles.flex}>
+    <ScrollView ref={scrollRef} style={tripStyles.container} contentContainerStyle={[tripStyles.content, cardNav && { paddingBottom: navBottom + 80 }]}>
+      {step.kind !== 'done' && birds.length + 2 <= 12 ? <StepBar total={birds.length + 2} current={stepIndex} /> : null}
       {step.kind === 'intro' ? (
         <Intro
           unit={unit}
@@ -142,6 +161,17 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
         </View>
       ) : null}
     </ScrollView>
+    {cardNav ? (
+      <View style={[styles.floatNav, { bottom: navBottom }]} pointerEvents="box-none">
+        <TouchableOpacity style={[tripStyles.secondaryButton, styles.floatBack]} onPress={cardNav.back} accessibilityRole="button">
+          <Text style={tripStyles.secondaryButtonText}>{t('trip_back')}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[tripStyles.primaryButton, tripStyles.flex]} onPress={cardNav.next} accessibilityRole="button" testID="trip.unit.nextCard">
+          <Text style={tripStyles.primaryButtonText}>{cardNav.last ? t('trip_to_quiz') : t('trip_next_bird')}</Text>
+        </TouchableOpacity>
+      </View>
+    ) : null}
+    </View>
   );
 }
 
@@ -196,8 +226,8 @@ function Card({
   bird: TripSpecies;
   index: number;
   total: number;
-  onBack: () => void;
-  onNext: () => void;
+  onBack?: () => void;
+  onNext?: () => void;
 }) {
   const { t } = useTranslation();
   const photo = bird.images[0];
@@ -243,19 +273,11 @@ function Card({
         <View style={styles.extraPhotos}>
           {bird.images.slice(1, 3).map((m) => (
             <View key={m.id} style={tripStyles.flex}>
-              <TripPhoto media={m} ratio={1} />
+              <TripPhoto media={m} ratio={5 / 3} />
             </View>
           ))}
         </View>
       ) : null}
-      <View style={tripStyles.navRow}>
-        <TouchableOpacity style={tripStyles.secondaryButton} onPress={onBack} accessibilityRole="button">
-          <Text style={tripStyles.secondaryButtonText}>{t('trip_back')}</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[tripStyles.primaryButton, tripStyles.flex]} onPress={onNext} accessibilityRole="button" testID="trip.unit.nextCard">
-          <Text style={tripStyles.primaryButtonText}>{index + 1 < total ? t('trip_next_bird') : t('trip_to_quiz')}</Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 }
@@ -276,7 +298,11 @@ function Quiz({
   onAnswered: () => void;
   onNextQuestion: () => void;
 }) {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
+  const [mediaSpecies, setMediaSpecies] = useState<SpeciesMediaData | null>(null);
+  const [imageError, setImageError] = useState<string | null>(null);
+  const [flagMedia, setFlagMedia] = useState<FlagMediaInfo | null>(null);
+  const flagged = useRef<number[]>([]);
   // Built once per round: the learned list changes when the unit finishes, the quiz must not.
   const [queue, setQueue] = useState<TripQuestion[]>(() => buildUnitQuiz(trip, unit.species, learned));
   const [index, setIndex] = useState(0);
@@ -321,6 +347,7 @@ function Quiz({
     setTimeout(onAnswered, 50);
   };
   const next = () => {
+    setImageError(null);
     if (hasNextQuestion(queue, index, unit.species, rightOnce.current)) {
       setIndex(index + 1);
       setPicked(null);
@@ -340,48 +367,80 @@ function Quiz({
         {t('trip_quiz_left', { left })}
         {q.review ? ` · ${t('trip_review')}` : ''}
       </Kicker>
-      <TripPhoto key={`${index}-${q.image.id}`} media={q.image} />
+      <QuestionMediaView
+        key={`${index}-${q.image.id}`}
+        mediaType="images"
+        imageUri={playFullSrc(q.image.url)}
+        imageError={imageError}
+        onImageError={setImageError}
+        onImageRetry={() => setImageError(null)}
+        imageMedia={{ contributor: q.image.contributor, source: q.image.source }}
+        onFlagPress={() => setFlagMedia({ id: q.image.id, type: 'image', url: q.image.url, contributor: q.image.contributor })}
+        flagLabel={t('this_seems_wrong')}
+        reloadImageLabel={t('retry')}
+        imageFailedLabel={t('image_failed_to_load')}
+        loadingLabel={t('loading')}
+        expandImageLabel={t('expand_image_fullscreen_label')}
+        expandImageHint={t('expand_image_fullscreen_hint')}
+        closeFullScreenLabel={t('close')}
+        imageHeight={220}
+      />
       <Text style={tripStyles.question}>{t('trip_which_bird')}</Text>
       {q.options.map((option, i) => {
         const isAnswer = option === q.code;
         const isPicked = option === picked;
-        const state = answered && isAnswer ? 'right' : answered && isPicked ? 'wrong' : 'none';
+        const spOpt = trip.species[option];
+        if (answered) {
+          return (
+            <SpeciesViewButton
+              key={option}
+              label={spOpt?.name ?? option}
+              onPress={() => spOpt && setMediaSpecies({ id: spOpt.species_id, code: spOpt.code, name: spOpt.name, name_latin: spOpt.latin })}
+              variant={isAnswer ? 'correct' : isPicked ? 'wrong' : 'revealed'}
+              icon={isAnswer ? 'correct' : isPicked ? 'wrong' : undefined}
+            />
+          );
+        }
         return (
           <TouchableOpacity
             key={option}
             onPress={() => choose(option)}
-            disabled={answered}
-            style={[
-              tripStyles.option,
-              state === 'right' && tripStyles.optionRight,
-              state === 'wrong' && tripStyles.optionWrong,
-              answered && state === 'none' && styles.optionFaded,
-            ]}
+            style={styles.quizOption}
             accessibilityRole="button"
             testID={`trip.quiz.option.${i}`}
           >
-            <Text style={tripStyles.optionText}>
-              {state === 'right' ? '✓ ' : state === 'wrong' ? '✗ ' : ''}
-              {trip.species[option]?.name}
-            </Text>
+            <Text style={styles.quizOptionText} numberOfLines={2}>{spOpt?.name}</Text>
           </TouchableOpacity>
         );
       })}
+      {answered && !right && picked && trip.species[picked] ? (
+        <ComparisonButton
+          species1Id={sp.species_id}
+          species2Id={trip.species[picked].species_id}
+          species1Name={sp.name}
+          species2Name={trip.species[picked].name}
+        />
+      ) : null}
       {answered ? (
         <>
-          <Text style={[tripStyles.feedback, right ? tripStyles.feedbackRight : tripStyles.feedbackWrong]}>
-            {right
-              ? t('trip_right', { name: sp.name })
-              : q.review
-                ? t('trip_wrong_review', { name: sp.name })
-                : t('trip_wrong', { name: sp.name })}
-          </Text>
           {!right && sp.look_for[0] ? <BoldText text={sp.look_for.join(' · ')} style={tripStyles.small} /> : null}
           <TouchableOpacity style={tripStyles.primaryButton} onPress={next} accessibilityRole="button" testID="trip.quiz.next">
             <Text style={tripStyles.primaryButtonText}>{t('trip_next_question')}</Text>
           </TouchableOpacity>
         </>
       ) : null}
+      <FlagMediaModal visible={!!flagMedia} onClose={() => setFlagMedia(null)} media={flagMedia}
+        playerToken={undefined}
+        onSuccess={() => {
+          const flaggedIds = [...flagged.current, ...(flagMedia ? [flagMedia.id] : [])];
+          flagged.current = flaggedIds;
+          setFlagMedia(null);
+          const another = otherPhoto(trip, q.code, flaggedIds);
+          if (another) setQueue((list) => list.map((x, i) => (i === index ? { ...x, image: another } : x)));
+          setImageError(null);
+        }}
+      />
+      <SpeciesMediaModal visible={!!mediaSpecies} onClose={() => setMediaSpecies(null)} species={mediaSpecies} language={locale.slice(0, 2)} />
     </View>
   );
 }
@@ -395,6 +454,10 @@ const styles = StyleSheet.create({
   lookRow: { flexDirection: 'row', gap: 8 },
   lookDot: { fontSize: 16, color: colors.secondary[500], lineHeight: 23 },
   lookText: { flex: 1, fontSize: 16, lineHeight: 23, color: colors.primary[800] },
+  floatNav: { position: 'absolute', left: 16, right: 16, bottom: 16, flexDirection: 'row', gap: 10 },
+  floatBack: { backgroundColor: '#fff' },
   extraPhotos: { flexDirection: 'row', gap: 8 },
+  quizOption: { backgroundColor: colors.primary[500], paddingVertical: 12, paddingHorizontal: 14, borderRadius: 8, minHeight: 44, justifyContent: 'center' },
+  quizOptionText: { fontSize: 16, color: colors.primary[50], fontWeight: '500' },
   optionFaded: { opacity: 0.5 },
 });

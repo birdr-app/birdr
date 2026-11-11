@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-nati
 import { useNavigation, useRoute, type RouteProp } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { loadTripState, updateTripState, type TripUnit } from '../api/trip';
-import { Kicker, TripBackLink, TripLoading, TripRing, UnitRow, tripStyles } from '../components/TripParts';
+import { FoldedAbout, Kicker, TripBackLink, TripLoading, TripRing, UnitRow, tripStyles } from '../components/TripParts';
 import { TripStory } from '../components/TripStory';
 import { UnderConstruction } from '../components/UnderConstruction';
 import { useRegionKnown, useTrip } from '../hooks/useTrip';
@@ -143,8 +143,10 @@ export function TripHomeScreen() {
         </View>
       ) : null}
 
-      {trip.intro ? <Text style={tripStyles.body}>{trip.intro}</Text> : null}
-      <TripStory trip={trip} />
+      <FoldedAbout folded={!trip.parent && familiesDone}>
+        {trip.intro ? <Text style={tripStyles.body}>{trip.intro}</Text> : null}
+        <TripStory trip={trip} />
+      </FoldedAbout>
       <UnderConstruction feature="Trip prep" />
 
       {!isPack ? <Text style={tripStyles.sectionTitle}>{t('trip_start_section')}</Text> : null}

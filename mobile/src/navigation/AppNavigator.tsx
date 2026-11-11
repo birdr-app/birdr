@@ -161,6 +161,7 @@ export default function AppNavigator() {
               <AppHeader
                 routeName={route.name}
                 title={title}
+                leftExtra={options.headerLeft ? options.headerLeft({ canGoBack: false }) : undefined}
               />
             );
           },

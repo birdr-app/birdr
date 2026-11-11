@@ -14,6 +14,9 @@ read on a phone, between other things.
 
 - Plain, warm, direct. Short sentences. Address the reader as "you" (Dutch: *je*).
 - Active voice. No "it is worth noting", no "fascinating", no "a true gem", no "delve".
+- Texts must not refer to the reader's home country or region ("as at home", "you know from
+  Europe", "a Dutch estuary", "our Blackbird"). The app shows the same text to every reader. Facts
+  about the bird's own range ("a winter visitor from Europe") are fine; say "widespread" instead.
 - No em-dashes as asides. No "not X, but Y" constructions. No exclamation marks.
 - Facts only when they help to find or recognise the bird. Check facts on Wikipedia or eBird;
   write in your own words. Never copy field-guide text.

@@ -50,7 +50,7 @@ function ZoomDialog({ media, alt, open, onClose }: { media: TripMedia; alt: stri
 }
 
 /** A rounded, cropped photo. Click it to see the whole photo, zoomable. */
-export function TripPhoto({ media, ratio = 4 / 3, label, alt = '' }: { media: TripMedia; ratio?: number; label?: string; alt?: string }) {
+export function TripPhoto({ media, ratio = 16 / 10, label, alt = '' }: { media: TripMedia; ratio?: number; label?: string; alt?: string }) {
   const t = useTripText();
   const [open, setOpen] = useState(false);
   const title = t('tap_image_fullscreen', 'Click to open full screen. Pinch or scroll wheel to zoom');
@@ -61,7 +61,7 @@ export function TripPhoto({ media, ratio = 4 / 3, label, alt = '' }: { media: Tr
         borderRadius="xl"
         overflow="hidden"
         bg="primary.100"
-        aspectRatio={ratio}
+        aspectRatio={ratio} maxH={{ base: "34vh", md: "none" }}
         w="full"
         cursor="zoom-in"
         role="button"
@@ -71,7 +71,7 @@ export function TripPhoto({ media, ratio = 4 / 3, label, alt = '' }: { media: Tr
         onClick={() => setOpen(true)}
         onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setOpen(true)}
       >
-        <Image src={media.url} alt={alt} w="full" h="full" objectFit="cover" />
+        <Image src={media.url} alt={alt} w="full" h="full" objectFit="contain" />
         {label ? (
           <Text position="absolute" left={2} bottom={2} bg="white" borderRadius="full" px={3} py={1} fontSize="sm" fontWeight="700" color="primary.800">
             {label}
@@ -94,7 +94,7 @@ export function TripThumb({ media, alt, size = '64px' }: { media: TripMedia; alt
         alt={alt}
         w={size}
         h={size}
-        objectFit="cover"
+        objectFit="contain" bg="primary.100"
         borderRadius="md"
         cursor="zoom-in"
         role="button"
@@ -105,6 +105,21 @@ export function TripThumb({ media, alt, size = '64px' }: { media: TripMedia; alt
       />
       <ZoomDialog media={media} alt={alt} open={open} onClose={() => setOpen(false)} />
     </>
+  );
+}
+
+/** The country introduction: open for newcomers, folded behind a small toggle once the families are done. */
+export function FoldedAbout({ folded, children }: { folded: boolean; children: ReactNode }) {
+  const t = useTripText();
+  const [open, setOpen] = useState(false);
+  if (!folded) return <>{children}</>;
+  return (
+    <Flex direction="column" gap={3} alignItems="flex-start">
+      <Button variant="ghost" colorPalette="primary" size="sm" px={1} onClick={() => setOpen((v) => !v)} aria-expanded={open}>
+        {open ? '▾' : '▸'} {t('trip_about', 'About this trip')}
+      </Button>
+      {open ? <Flex direction="column" gap={3}>{children}</Flex> : null}
+    </Flex>
   );
 }
 
@@ -228,7 +243,7 @@ export function UnitRow({
     >
       <Flex align="center" gap={3} w="full" textAlign="left">
         {image ? (
-          <Image src={image} alt="" w="46px" h="46px" objectFit="cover" borderRadius="md" flexShrink={0} />
+          <Image src={image} alt="" w="46px" h="46px" objectFit="contain" borderRadius="md" flexShrink={0} />
         ) : (
           <Box w="46px" h="46px" borderRadius="md" bg="primary.100" flexShrink={0} />
         )}

@@ -1,9 +1,11 @@
 import React, { useState, type ReactNode } from 'react';
 import { ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import type { TripMedia } from '../api/trip';
 import { useTranslation } from '../i18n/TranslationContext';
 import { colors } from '../theme';
+import { leagueFlag } from '../lib/league';
 import { ProgressRing } from './ProgressRing';
 import { playFullSrc, playPreviewSrc } from '../utils/playImageUrl';
 import { FullScreenImageViewerModal } from './FullScreenImageViewerModal';
@@ -24,7 +26,7 @@ export const tripStyles = StyleSheet.create({
   card: { backgroundColor: '#fff', borderRadius: 16, padding: 16, gap: 10, borderWidth: 1, borderColor: colors.primary[200] },
   cardStrong: { borderWidth: 2 },
   note: { backgroundColor: colors.primary[100], borderRadius: 12, padding: 12 },
-  greenNote: { backgroundColor: colors.secondary[50], borderRadius: 12, padding: 12, gap: 4 },
+  greenNote: { backgroundColor: '#fff', borderWidth: 1, borderColor: colors.primary[200], borderRadius: 12, padding: 12, gap: 4 },
   orangeNote: { backgroundColor: colors.warning[50], borderRadius: 12, padding: 12 },
   navRow: { flexDirection: 'row', gap: 10, marginTop: 4 },
   primaryButton: { backgroundColor: colors.primary[500], borderRadius: 12, paddingVertical: 14, paddingHorizontal: 18, alignItems: 'center' },
@@ -50,7 +52,7 @@ export const tripStyles = StyleSheet.create({
 });
 
 /** A rounded photo, optionally with a label on it. Tap it to see the whole photo, zoomable. */
-export function TripPhoto({ media, ratio = 4 / 3, label, alt }: { media: TripMedia; ratio?: number; label?: string; alt?: string }) {
+export function TripPhoto({ media, ratio = 16 / 10, label, alt }: { media: TripMedia; ratio?: number; label?: string; alt?: string }) {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   return (
@@ -63,7 +65,7 @@ export function TripPhoto({ media, ratio = 4 / 3, label, alt }: { media: TripMed
         accessibilityHint={t('expand_image_fullscreen_hint')}
         style={[styles.photoFrame, { aspectRatio: ratio }]}
       >
-        <Image source={{ uri: ratio === 1 ? playPreviewSrc(media.url) : playFullSrc(media.url) }} style={styles.photo} resizeMode="cover" accessibilityIgnoresInvertColors />
+        <Image source={{ uri: ratio === 1 ? playPreviewSrc(media.url) : playFullSrc(media.url) }} style={styles.photo} resizeMode="contain" accessibilityIgnoresInvertColors />
         {label ? (
           <View style={styles.photoLabel}>
             <Text style={styles.photoLabelText}>{label}</Text>
@@ -92,6 +94,23 @@ export function TripThumb({ media, alt, size = 64 }: { media: TripMedia; alt: st
       </TouchableOpacity>
       <FullScreenImageViewerModal visible={open} imageUri={playFullSrc(media.url)} onClose={() => setOpen(false)} closeLabel={t('close')} />
     </>
+  );
+}
+
+/** The country introduction: open for newcomers, folded behind a small toggle once the families are done. */
+export function FoldedAbout({ folded, children }: { folded: boolean; children: ReactNode }) {
+  const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
+  if (!folded) return <>{children}</>;
+  return (
+    <View style={{ gap: 12 }}>
+      <TouchableOpacity onPress={() => setOpen((v) => !v)} accessibilityRole="button" accessibilityState={{ expanded: open }} style={{ alignSelf: 'flex-start', paddingVertical: 4 }}>
+        <Text style={{ fontSize: 15, fontWeight: '600', color: colors.primary[600] }}>
+          {open ? '▾' : '▸'} {t('trip_about')}
+        </Text>
+      </TouchableOpacity>
+      {open ? children : null}
+    </View>
   );
 }
 
@@ -250,6 +269,24 @@ const styles = StyleSheet.create({
   unitMarkText: { fontSize: 15, fontWeight: '800', color: colors.primary[400] },
   unitMarkTextDone: { color: '#fff' },
 });
+
+/** Single back arrow for the top bar: to a country's main Trip prep page. */
+export function TripBackArrow({ country, name, parentCountry }: { country: string; name: string; parentCountry?: string | null }) {
+  const navigation = useNavigation<any>();
+  return (
+    <TouchableOpacity
+      style={{ minWidth: 44, height: 44, alignItems: 'center', justifyContent: 'center', flexDirection: 'row', gap: 6, paddingHorizontal: 6 }}
+      onPress={() => navigation.navigate('TripHome', { country })}
+      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+      accessibilityRole="button"
+      accessibilityLabel={name}
+      testID="trip.backlink"
+    >
+      <FontAwesome5 name="arrow-left" size={18} color={colors.primary[800]} />
+      <Text style={{ fontSize: 18 }}>{leagueFlag(parentCountry || country)}</Text>
+    </TouchableOpacity>
+  );
+}
 
 /** "← Seychelles": the way back to a country's main Trip prep page, at the top of every sub screen. */
 export function TripBackLink({ country, name }: { country: string; name: string }) {

@@ -217,8 +217,8 @@
     },
     "old-world-sparrows": {
       "here": {
-        "en": "The House Sparrow lives in towns and villages, as at home.",
-        "nl": "De huismus leeft in dorpen en steden, net als thuis."
+        "en": "The House Sparrow lives in towns and villages.",
+        "nl": "De huismus leeft in dorpen en steden."
       }
     },
     "finches-euphonias-and-allies": {
@@ -275,8 +275,8 @@
         "nl": "Duiven, deel 1"
       },
       "intro": {
-        "en": "Six pigeons and doves, from the Collared Dove you know to forest pigeons with scaly necks. Look at head pattern, eye ring and how plain or scaly the neck is.",
-        "nl": "Zes duiven, van de Turkse tortel die je kent tot bosduiven met een geschubde nek. Let op kopstekening, oogring en of de nek effen of geschubd is."
+        "en": "Six pigeons and doves, from the widespread Collared Dove to forest pigeons with scaly necks. Look at head pattern, eye ring and how plain or scaly the neck is.",
+        "nl": "Zes duiven, van de wijdverbreide Turkse tortel tot bosduiven met een geschubde nek. Let op kopstekening, oogring en of de nek effen of geschubd is."
       }
     },
     "pigeons-and-doves-2": {
@@ -435,8 +435,8 @@
         "nl": "Tirannen"
       },
       "intro": {
-        "en": "Four New World flycatchers. They sit upright and fly out to catch insects, much as the flycatchers at home, but they are not related.",
-        "nl": "Vier vliegenvangers uit de Nieuwe Wereld. Ze zitten rechtop en vliegen uit om insecten te vangen, net als de vliegenvangers thuis, maar ze zijn niet verwant."
+        "en": "Four New World flycatchers. They sit upright and fly out to catch insects, much like Old World flycatchers, but they are not related.",
+        "nl": "Vier vliegenvangers uit de Nieuwe Wereld. Ze zitten rechtop en vliegen uit om insecten te vangen, net als vliegenvangers uit de Oude Wereld, maar ze zijn niet verwant."
       }
     },
     "vireos-and-crows": {
@@ -455,8 +455,8 @@
         "nl": "Zwaluwen"
       },
       "intro": {
-        "en": "Three swallows and a winter visitor you know. Look at the rump and belly colour in flight.",
-        "nl": "Drie zwaluwen en een wintergast die je kent. Let in de vlucht op stuit- en buikkleur."
+        "en": "Three swallows and a widespread winter visitor. Look at the rump and belly colour in flight.",
+        "nl": "Drie zwaluwen en een wijdverbreide wintergast. Let in de vlucht op stuit- en buikkleur."
       }
     },
     "mockingbird-and-thrushes": {
@@ -485,8 +485,8 @@
         "nl": "Mussen, sijs, organist en kruisbek"
       },
       "intro": {
-        "en": "The House Sparrow you know, and the finches of the highlands. Three are endemic: look for them in flocks in pine forest or on forest edges.",
-        "nl": "De huismus die je kent, en de vinken van het hoogland. Drie zijn endemisch: zoek ze in groepen in dennenbos of aan de bosrand."
+        "en": "The widespread House Sparrow, and the finches of the highlands. Three are endemic: look for them in flocks in pine forest or on forest edges.",
+        "nl": "De wijdverbreide huismus, en de vinken van het hoogland. Drie zijn endemisch: zoek ze in groepen in dennenbos of aan de bosrand."
       }
     },
     "chat-tanagers": {
@@ -505,8 +505,8 @@
         "nl": "Grackel, koevink en troepiaal"
       },
       "intro": {
-        "en": "Three birds in the blackbird family, but nothing like the one at home. The grackle is black with a long tail, the oriole yellow and black.",
-        "nl": "Drie vogels uit de familie van de troepialen, maar helemaal niet zoals de merel thuis. De troepiaal is zwart met een lange staart, de Hispaniolatroepiaal geel en zwart."
+        "en": "Three birds in the blackbird family, but nothing like the Eurasian Blackbird. The grackle is black with a long tail, the oriole yellow and black.",
+        "nl": "Drie vogels uit de familie van de troepialen, maar helemaal niet zoals de merel. De troepiaal is zwart met een lange staart, de Hispaniolatroepiaal geel en zwart."
       }
     },
     "wood-warblers-1": {
@@ -543,20 +543,20 @@
   "species": {
     "eucdov": {
       "here": {
-        "en": "The same species as in Europe. It reached the Caribbean in the 1970s and is now common in towns.",
-        "nl": "Dezelfde soort als in Europa. Hij bereikte de Caraïben in de jaren zeventig en is nu algemeen in dorpen."
+        "en": "A Eurasian species. It reached the Caribbean in the 1970s and is now common in towns.",
+        "nl": "Een Euraziatische soort. Hij bereikte de Caraïben in de jaren zeventig en is nu algemeen in dorpen."
       }
     },
     "houspa": {
       "here": {
-        "en": "The same House Sparrow as at home, common in towns and villages.",
-        "nl": "Dezelfde huismus als thuis, algemeen in dorpen en steden."
+        "en": "The widespread House Sparrow, common in towns and villages.",
+        "nl": "De wijdverbreide huismus, algemeen in dorpen en steden."
       }
     },
     "barswa": {
       "here": {
-        "en": "Visits from North America in winter; the belly is rusty orange, not whitish like the European birds.",
-        "nl": "Komt in de winter uit Noord-Amerika; de buik is roestoranje en niet witachtig zoals bij de Europese vogels."
+        "en": "Visits from North America in winter; the belly is rusty orange, not whitish like the Old World form.",
+        "nl": "Komt in de winter uit Noord-Amerika; de buik is roestoranje en niet witachtig zoals bij de vorm uit de Oude Wereld."
       }
     }
   },

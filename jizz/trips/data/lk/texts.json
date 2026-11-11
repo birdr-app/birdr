@@ -1,8 +1,8 @@
 {
   "country": "LK",
   "intro": {
-    "en": "Sri Lanka packs lowland rainforest, cool highlands, dry scrub and coastal lagoons into an island smaller than Ireland. From October to April, waders, ducks and warblers from the north join the birds that live here all year. This trip covers 199 species, 34 of them found nowhere else.",
-    "nl": "Sri Lanka heeft regenwoud, koel hoogland, droog struikgewas en lagunes aan de kust, allemaal op een eiland dat ruim anderhalf keer zo groot is als Nederland. Van oktober tot april komen er steltlopers, eenden en zangers uit het noorden bij de vogels die hier het hele jaar wonen. Deze reis omvat 199 soorten, waarvan 34 nergens anders voorkomen."
+    "en": "Sri Lanka packs lowland rainforest, cool highlands, dry scrub and coastal lagoons into a single island. From October to April, waders, ducks and warblers from the north join the birds that live here all year. This trip covers 199 species, 34 of them found nowhere else.",
+    "nl": "Sri Lanka heeft regenwoud, koel hoogland, droog struikgewas en lagunes aan de kust, allemaal op één eiland. Van oktober tot april komen er steltlopers, eenden en zangers uit het noorden bij de vogels die hier het hele jaar wonen. Deze reis omvat 199 soorten, waarvan 34 nergens anders voorkomen."
   },
   "groups": {
     "waterfowl": {
@@ -73,8 +73,8 @@
     },
     "grebes": {
       "here": {
-        "en": "One grebe is on this trip: the Little Grebe, the same species as in Europe. Look for it on lily-covered reservoirs and village ponds.",
-        "nl": "Deze reis omvat één fuut: de dodaars, dezelfde soort als in Europa. Zoek hem op stuwmeren vol waterlelies en op dorpsvijvers."
+        "en": "One grebe is on this trip: the Little Grebe, a species found across the Old World. Look for it on lily-covered reservoirs and village ponds.",
+        "nl": "Deze reis omvat één fuut: de dodaars, een soort die in de hele Oude Wereld voorkomt. Zoek hem op stuwmeren vol waterlelies en op dorpsvijvers."
       }
     },
     "storks": {
@@ -337,8 +337,8 @@
     },
     "old-world-sparrows": {
       "here": {
-        "en": "One sparrow is on this trip: the House Sparrow, the same species as in Europe. It lives around houses and markets, but is less common here than at home.",
-        "nl": "Deze reis omvat één mus: de huismus, dezelfde soort als in Europa. Hij leeft rond huizen en markten, maar is hier minder algemeen dan thuis."
+        "en": "One sparrow is on this trip: the House Sparrow, a species found almost worldwide. It lives around houses and markets, but is less common here than in many countries.",
+        "nl": "Deze reis omvat één mus: de huismus, een soort die bijna overal ter wereld voorkomt. Hij leeft rond huizen en markten, maar is hier minder algemeen dan in veel landen."
       }
     },
     "wagtails-and-pipits": {
@@ -352,8 +352,8 @@
     "waterfowl": {
       "title": {"en": "Ducks", "nl": "Eenden"},
       "intro": {
-        "en": "Four of these ducks are winter visitors you may know from Europe, though early in the season they still wear their duller eclipse plumage. The two residents are small: the brown Lesser Whistling-Duck, which whistles as it flies, and the tiny Cotton Pygmy-Goose on lily ponds.",
-        "nl": "Vier van deze eenden zijn wintergasten die je misschien uit Europa kent, al dragen ze vroeg in het seizoen nog hun saaiere eclipskleed. De twee standvogels zijn klein: de bruine Indische fluiteend, die fluit als hij vliegt, en de piepkleine Coromandeleend op vijvers met waterlelies."
+        "en": "Four of these ducks are winter visitors from the north, though early in the season they still wear their duller eclipse plumage. The two residents are small: the brown Lesser Whistling-Duck, which whistles as it flies, and the tiny Cotton Pygmy-Goose on lily ponds.",
+        "nl": "Vier van deze eenden zijn wintergasten uit het noorden, al dragen ze vroeg in het seizoen nog hun saaiere eclipskleed. De twee standvogels zijn klein: de bruine Indische fluiteend, die fluit als hij vliegt, en de piepkleine Coromandeleend op vijvers met waterlelies."
       }
     },
     "grouse-quail-and-allies": {
@@ -366,8 +366,8 @@
     "pigeons-and-doves": {
       "title": {"en": "Pigeons and doves", "nl": "Duiven"},
       "intro": {
-        "en": "Rock Dove and Collared Dove are familiar; the other five are new. Green pigeons and the Emerald Dove hide in leafy trees, so look closely at the head, the wings and the bill.",
-        "nl": "De rotsduif en de Turkse tortel ken je al; de andere vijf zijn nieuw. Groene duiven en de smaragdduif verstoppen zich in bladrijke bomen, dus kijk goed naar de kop, de vleugels en de snavel."
+        "en": "Rock Dove and Collared Dove are widespread; the other five are local species. Green pigeons and the Emerald Dove hide in leafy trees, so look closely at the head, the wings and the bill.",
+        "nl": "De rotsduif en de Turkse tortel zijn wijdverbreid; de andere vijf zijn lokale soorten. Groene duiven en de smaragdduif verstoppen zich in bladrijke bomen, dus kijk goed naar de kop, de vleugels en de snavel."
       }
     },
     "cuckoos": {
@@ -408,8 +408,8 @@
     "shorebirds-3": {
       "title": {"en": "Sandpipers, shanks and a turnstone", "nl": "Ruiters, oeverloper en steenloper"},
       "intro": {
-        "en": "Familiar waders from European marshes, here for the winter. Leg colour and size do most of the work: red legs on the Redshank, greenish on the Greenshank and Wood Sandpiper, and a needle-thin bill on the slim Marsh Sandpiper.",
-        "nl": "Bekende steltlopers uit Europese moerassen, hier als wintergast. Pootkleur en formaat doen het meeste werk: rode poten bij de tureluur, groenige bij groenpootruiter en bosruiter, en een naalddunne snavel bij de slanke poelruiter."
+        "en": "Widespread waders from northern marshes, here for the winter. Leg colour and size do most of the work: red legs on the Redshank, greenish on the Greenshank and Wood Sandpiper, and a needle-thin bill on the slim Marsh Sandpiper.",
+        "nl": "Wijdverbreide steltlopers uit noordelijke moerassen, hier als wintergast. Pootkleur en formaat doen het meeste werk: rode poten bij de tureluur, groenige bij groenpootruiter en bosruiter, en een naalddunne snavel bij de slanke poelruiter."
       }
     },
     "shorebirds-4": {
@@ -422,8 +422,8 @@
     "gulls-terns-and-skimmers-1": {
       "title": {"en": "Gulls and smaller terns", "nl": "Meeuwen en kleinere sterns"},
       "intro": {
-        "en": "The two gulls spend the winter on the coasts of the north and west, at Mannar and Jaffna. The three terns differ in size and bill: the tiny Little Tern, the thick black bill of the Gull-billed Tern, and the Common Tern you know from home.",
-        "nl": "De twee meeuwen overwinteren aan de kusten van het noorden en westen, bij Mannar en Jaffna. De drie sterns verschillen in formaat en snavel: de piepkleine dwergstern, de dikke zwarte snavel van de lachstern en de visdief die je van thuis kent."
+        "en": "The two gulls spend the winter on the coasts of the north and west, at Mannar and Jaffna. The three terns differ in size and bill: the tiny Little Tern, the thick black bill of the Gull-billed Tern, and the widespread Common Tern.",
+        "nl": "De twee meeuwen overwinteren aan de kusten van het noorden en westen, bij Mannar en Jaffna. De drie sterns verschillen in formaat en snavel: de piepkleine dwergstern, de dikke zwarte snavel van de lachstern en de wijdverbreide visdief."
       }
     },
     "gulls-terns-and-skimmers-2": {
@@ -457,8 +457,8 @@
     "herons-ibis-and-allies-2": {
       "title": {"en": "Big herons, ibises, spoonbill, pelican", "nl": "Reigers, ibissen, lepelaar en pelikaan"},
       "intro": {
-        "en": "The large waterbirds of reservoirs and marshes. Grey and Purple Heron you know already; the bill does the rest: curved on the ibises, spoon-shaped on the spoonbill and huge, with a pouch, on the pelican.",
-        "nl": "De grote watervogels van stuwmeren en moerassen. Blauwe reiger en purperreiger ken je al; de snavel doet de rest: gebogen bij de ibissen, lepelvormig bij de lepelaar en enorm, met een keelzak, bij de pelikaan."
+        "en": "The large waterbirds of reservoirs and marshes. Grey and Purple Heron are widespread; the bill does the rest: curved on the ibises, spoon-shaped on the spoonbill and huge, with a pouch, on the pelican.",
+        "nl": "De grote watervogels van stuwmeren en moerassen. Blauwe reiger en purperreiger zijn wijdverbreid; de snavel doet de rest: gebogen bij de ibissen, lepelvormig bij de lepelaar en enorm, met een keelzak, bij de pelikaan."
       }
     },
     "vultures-hawks-and-allies-1": {
@@ -485,8 +485,8 @@
     "kingfishers": {
       "title": {"en": "Kingfishers and a roller", "nl": "IJsvogels en een scharrelaar"},
       "intro": {
-        "en": "The Common Kingfisher is the one you know; the others are bigger and easier to see. Look at size, bill colour and the pattern of black and white. The Indian Roller only shows its blue when it opens its wings.",
-        "nl": "De ijsvogel ken je al; de andere zijn groter en makkelijker te zien. Let op formaat, kleur van de snavel en de zwart-witte tekening. De Indische scharrelaar laat zijn blauw pas zien als hij de vleugels opent."
+        "en": "The Common Kingfisher is the widespread one; the others are bigger and easier to see. Look at size, bill colour and the pattern of black and white. The Indian Roller only shows its blue when it opens its wings.",
+        "nl": "De ijsvogel is de wijdverbreide soort; de andere zijn groter en makkelijker te zien. Let op formaat, kleur van de snavel en de zwart-witte tekening. De Indische scharrelaar laat zijn blauw pas zien als hij de vleugels opent."
       }
     },
     "barbets-and-toucans": {
@@ -632,8 +632,8 @@
     "old-world-sparrows": {
       "title": {"en": "Sparrow, wagtails and a pipit", "nl": "Mus, kwikstaarten en een pieper"},
       "intro": {
-        "en": "Birds of open ground, three of them familiar from Europe. The Paddyfield Pipit is the new one: a streaky brown bird that runs through short grass.",
-        "nl": "Vogels van open grond, waarvan je er drie uit Europa kent. De Oriëntaalse pieper is nieuw: een gestreepte bruine vogel die door kort gras rent."
+        "en": "Birds of open ground, three of them widespread species. The Paddyfield Pipit is the new one: a streaky brown bird that runs through short grass.",
+        "nl": "Vogels van open grond, waarvan er drie wijdverbreid zijn. De Oriëntaalse pieper is nieuw: een gestreepte bruine vogel die door kort gras rent."
       }
     }
   },
