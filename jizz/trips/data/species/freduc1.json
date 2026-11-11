@@ -1,0 +1,22 @@
+{
+  "code": "freduc1",
+  "name": {
+    "en": "Freckled Duck",
+    "nl": "Stippeleend"
+  },
+  "latin": "Stictonetta naevosa",
+  "look_for": [
+    {
+      "en": "Dark, speckled **plumage**, peaked **head**",
+      "nl": "Donker, gespikkeld **verenkleed**, puntige **kop**"
+    },
+    {
+      "en": "Heavy, steeply sloped **bill**, red in male",
+      "nl": "Zware, schuin aflopende **snavel**, rood bij het mannetje"
+    },
+    {
+      "en": "Sits low in water on shallow lakes",
+      "nl": "Zit laag in het water op ondiepe meren"
+    }
+  ]
+}

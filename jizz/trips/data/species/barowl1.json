@@ -1,0 +1,22 @@
+{
+  "code": "barowl1",
+  "name": {
+    "en": "Barking Owl",
+    "nl": "Blafuil"
+  },
+  "latin": "Ninox connivens",
+  "look_for": [
+    {
+      "en": "Medium owl, **yellow** **eyes**, dark streaked **breast**",
+      "nl": "Middelgrote uil, **gele** **ogen**, donker gestreepte **borst**"
+    },
+    {
+      "en": "Dog-like barking call at night",
+      "nl": "Hondachtige blafroep 's nachts"
+    },
+    {
+      "en": "Hunts at dusk from a branch in open woodland",
+      "nl": "Jaagt in de schemering vanaf een tak in open bos"
+    }
+  ]
+}

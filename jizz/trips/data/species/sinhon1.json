@@ -1,0 +1,22 @@
+{
+  "code": "sinhon1",
+  "name": {
+    "en": "Singing Honeyeater",
+    "nl": "Fluithoningeter"
+  },
+  "latin": "Gavicalis virescens",
+  "look_for": [
+    {
+      "en": "Plain olive-grey honeyeater with yellow **ear** patch",
+      "nl": "Effen olijfgrijze honingeter met gele **oor**vlek"
+    },
+    {
+      "en": "Dark line through the **eye**, no streaks",
+      "nl": "Donkere lijn door het **oog**, geen strepen"
+    },
+    {
+      "en": "Common in gardens and scrub; loud song",
+      "nl": "Algemeen in tuinen en struikgewas; luide zang"
+    }
+  ]
+}

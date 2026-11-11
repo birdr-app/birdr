@@ -1,0 +1,22 @@
+{
+  "code": "litbut1",
+  "name": {
+    "en": "Little Buttonquail",
+    "nl": "Kleine vechtkwartel"
+  },
+  "latin": "Turnix velox",
+  "look_for": [
+    {
+      "en": "Tiny, quail-like bird of dry grassland",
+      "nl": "Klein, kwartelachtig vogeltje van droog grasland"
+    },
+    {
+      "en": "Pale buff, with rusty **breast** and dark spots",
+      "nl": "Licht beige, met roestkleurige **borst** en donkere vlekken"
+    },
+    {
+      "en": "Female brighter than the male",
+      "nl": "Vrouwtje feller gekleurd dan het mannetje"
+    }
+  ]
+}

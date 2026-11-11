@@ -1,0 +1,22 @@
+{
+  "code": "blecuc1",
+  "name": {
+    "en": "Black-eared Cuckoo",
+    "nl": "Zwartoorkoekoek"
+  },
+  "latin": "Chalcites osculans",
+  "look_for": [
+    {
+      "en": "Small, plain brown-grey cuckoo",
+      "nl": "Kleine, effen bruingrijze koekoek"
+    },
+    {
+      "en": "Black **ear** patch, white **eyebrow**",
+      "nl": "Zwarte **oor**vlek, witte **wenkbrauw**"
+    },
+    {
+      "en": "Unbarred buff **underparts**",
+      "nl": "Ongebandeerde buffkleurige **onderkant**"
+    }
+  ]
+}

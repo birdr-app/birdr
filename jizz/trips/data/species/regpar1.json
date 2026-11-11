@@ -1,0 +1,22 @@
+{
+  "code": "regpar1",
+  "name": {
+    "en": "Regent Parrot",
+    "nl": "Regentparkiet"
+  },
+  "latin": "Polytelis anthopeplus",
+  "look_for": [
+    {
+      "en": "Long-tailed, slim yellow-green parrot",
+      "nl": "Slanke geelgroene papegaai met lange staart"
+    },
+    {
+      "en": "Male golden-yellow, black **wing** and **tail**",
+      "nl": "Mannetje goudgeel, zwarte **vleugel** en **staart**"
+    },
+    {
+      "en": "Pink-red **bill**; female duller olive",
+      "nl": "Roze-rode **snavel**; vrouwtje doffer olijfkleurig"
+    }
+  ]
+}

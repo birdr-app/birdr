@@ -1,0 +1,22 @@
+{
+  "code": "banlap1",
+  "name": {
+    "en": "Banded Lapwing",
+    "nl": "Australische kievit"
+  },
+  "latin": "Vanellus tricolor",
+  "look_for": [
+    {
+      "en": "Black cap, **throat** and a white face band",
+      "nl": "Zwarte kap, **keel** en een witte gezichtsband"
+    },
+    {
+      "en": "Yellow **wattle** and a red-based **bill**",
+      "nl": "Gele **lel** en een **snavel** met rode basis"
+    },
+    {
+      "en": "Smaller than Masked Lapwing, no yellow face",
+      "nl": "Kleiner dan de Maskerkievit, geen gele lellen"
+    }
+  ]
+}

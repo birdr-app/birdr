@@ -1,0 +1,22 @@
+{
+  "code": "duswoo1",
+  "name": {
+    "en": "Dusky Woodswallow",
+    "nl": "Blauwvleugelspitsvogel"
+  },
+  "latin": "Artamus cyanopterus",
+  "look_for": [
+    {
+      "en": "Dark grey-brown, stout woodswallow, white **wing** edge",
+      "nl": "Donker grijsbruine, stevige spitsvogel, witte **vleugel**rand"
+    },
+    {
+      "en": "Pale **bill** with a dark tip",
+      "nl": "Lichte **snavel** met een donkere punt"
+    },
+    {
+      "en": "Soars on broad wings; summer visitor in the south",
+      "nl": "Zweeft op brede vleugels; zomergast in het zuiden"
+    }
+  ]
+}

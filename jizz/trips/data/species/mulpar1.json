@@ -1,0 +1,22 @@
+{
+  "code": "mulpar1",
+  "name": {
+    "en": "Mulga Parrot",
+    "nl": "Regenboogparkiet"
+  },
+  "latin": "Psephotellus varius",
+  "look_for": [
+    {
+      "en": "Male: green **back**, red **belly**, yellow **forehead**",
+      "nl": "Mannetje: groene **rug**, rode **buik**, gele **voorhoofd**"
+    },
+    {
+      "en": "Turquoise **cheek** and a blue-green **head**",
+      "nl": "Turquoise **wang** en een blauwgroene **kop**"
+    },
+    {
+      "en": "Female plain olive-brown with a pale **wing** stripe",
+      "nl": "Vrouwtje effen olijfbruin met een lichte **vleugel**streep"
+    }
+  ]
+}

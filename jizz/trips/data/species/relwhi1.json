@@ -1,0 +1,22 @@
+{
+  "code": "relwhi1",
+  "name": {
+    "en": "Red-lored Whistler",
+    "nl": "Roodteugelfluiter"
+  },
+  "latin": "Pachycephala rufogularis",
+  "look_for": [
+    {
+      "en": "Male: black **breast** band, rusty **throat**",
+      "nl": "Mannetje: zwarte **borst**band, roestkleurige **keel**"
+    },
+    {
+      "en": "Grey **head** and back, pale **belly**",
+      "nl": "Grijze **kop** en rug, lichte **buik**"
+    },
+    {
+      "en": "Female plain grey-brown; mallee and dry scrub",
+      "nl": "Vrouwtje effen grijsbruin; mallee en droog struikgewas"
+    }
+  ]
+}

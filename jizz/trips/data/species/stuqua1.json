@@ -1,0 +1,22 @@
+{
+  "code": "stuqua1",
+  "name": {
+    "en": "Stubble Quail",
+    "nl": "Stoppelveldkwartel"
+  },
+  "latin": "Coturnix pectoralis",
+  "look_for": [
+    {
+      "en": "Small, scaly-patterned quail of open fields",
+      "nl": "Kleine kwartel met schubpatroon op open land"
+    },
+    {
+      "en": "Pale **eyebrow**, black **throat** line in male",
+      "nl": "Lichte **wenkbrauw**, zwarte **keel**streep bij het mannetje"
+    },
+    {
+      "en": "Paler and greyer than Brown Quail",
+      "nl": "Bleker en grijzer dan de Bruine kwartel"
+    }
+  ]
+}

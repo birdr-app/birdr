@@ -1,0 +1,22 @@
+{
+  "code": "brubro1",
+  "name": {
+    "en": "Brush Bronzewing",
+    "nl": "Struikbronsvleugelduif"
+  },
+  "latin": "Phaps elegans",
+  "look_for": [
+    {
+      "en": "Plump, olive-brown pigeon of dense heath",
+      "nl": "Rondachtige, olijfbruine duif in dichte heide"
+    },
+    {
+      "en": "Bronze-green **wing** patch, chestnut **throat**",
+      "nl": "Bronsgroene **vleugel**vlek, kastanjebruine **keel**"
+    },
+    {
+      "en": "Walks quietly on the ground, flies fast",
+      "nl": "Loopt stil over de grond, vliegt snel"
+    }
+  ]
+}

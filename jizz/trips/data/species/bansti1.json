@@ -1,0 +1,22 @@
+{
+  "code": "bansti1",
+  "name": {
+    "en": "Banded Stilt",
+    "nl": "Bandsteltkluut"
+  },
+  "latin": "Cladorhynchus leucocephalus",
+  "look_for": [
+    {
+      "en": "White wader with a **chestnut** band on the **breast**",
+      "nl": "Witte steltloper met een **kastanje**bruine band op de **borst**"
+    },
+    {
+      "en": "Long, thin, upturned **bill**; long pink **legs**",
+      "nl": "Lange, dunne, opgewipte **snavel**; lange roze **poten**"
+    },
+    {
+      "en": "In flocks on salt lakes, often swimming",
+      "nl": "In groepen op zoutmeren, zwemt vaak"
+    }
+  ]
+}

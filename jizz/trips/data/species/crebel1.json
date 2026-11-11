@@ -1,0 +1,22 @@
+{
+  "code": "crebel1",
+  "name": {
+    "en": "Crested Bellbird",
+    "nl": "Zwartkuiffluiter"
+  },
+  "latin": "Oreoica gutturalis",
+  "look_for": [
+    {
+      "en": "Male: black **breast** band, grey **head**, short **crest**",
+      "nl": "Mannetje: zwarte **borst**band, grijze **kop**, korte **kuif**"
+    },
+    {
+      "en": "Pale **throat**, buff **belly**",
+      "nl": "Lichte **keel**, beige **buik**"
+    },
+    {
+      "en": "Sings a bell-like, ventriloquial song from cover",
+      "nl": "Zingt een klokachtige, buikspreekachtige zang vanuit dekking"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "sosrob1",
+  "name": {
+    "en": "Southern Scrub-Robin",
+    "nl": "Malleefluiter"
+  },
+  "latin": "Drymodes brunneopygia",
+  "look_for": [
+    {
+      "en": "Long-tailed, brown ground bird with a pale **eyebrow**",
+      "nl": "Langstaartige, bruine grondvogel met een lichte **wenkbrauw**"
+    },
+    {
+      "en": "Rusty **tail** held up, dark **eye** stripe",
+      "nl": "Roestkleurige **staart** omhoog, donkere **oog**streep"
+    },
+    {
+      "en": "Hops and runs under dense heath and scrub",
+      "nl": "Hipt en rent onder dichte heide en struikgewas"
+    }
+  ]
+}

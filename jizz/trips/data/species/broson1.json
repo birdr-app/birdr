@@ -1,0 +1,22 @@
+{
+  "code": "broson1",
+  "name": {
+    "en": "Brown Songlark",
+    "nl": "Roetbruine grasvogel"
+  },
+  "latin": "Cincloramphus cruralis",
+  "look_for": [
+    {
+      "en": "Male large, dark brown with a long **tail**",
+      "nl": "Mannetje groot, donkerbruin met een lange **staart**"
+    },
+    {
+      "en": "Pale-streaked **back**; female smaller and paler",
+      "nl": "Licht gestreepte **rug**; vrouwtje kleiner en bleker"
+    },
+    {
+      "en": "Sings in a display flight over open grassland",
+      "nl": "Zingt in baltsvlucht boven open grasland"
+    }
+  ]
+}

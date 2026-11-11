@@ -1,0 +1,22 @@
+{
+  "code": "ruftre3",
+  "name": {
+    "en": "Rufous Treecreeper",
+    "nl": "Rosse kruiper"
+  },
+  "latin": "Climacteris rufus",
+  "look_for": [
+    {
+      "en": "Rusty-brown treecreeper with a streaked **breast**",
+      "nl": "Roestbruine boomkruiper met een gestreepte **borst**"
+    },
+    {
+      "en": "Male has a black **throat**, female a rusty one",
+      "nl": "Mannetje heeft een zwarte **keel**, vrouwtje een roestkleurige"
+    },
+    {
+      "en": "Spirals up trunks and hunts on the ground",
+      "nl": "Klimt spiraalsgewijs omhoog en zoekt ook op de grond"
+    }
+  ]
+}

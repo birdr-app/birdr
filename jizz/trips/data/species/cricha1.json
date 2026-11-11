@@ -1,0 +1,22 @@
+{
+  "code": "cricha1",
+  "name": {
+    "en": "Crimson Chat",
+    "nl": "Scharlaken schijnpaapje"
+  },
+  "latin": "Epthianura tricolor",
+  "look_for": [
+    {
+      "en": "Male: scarlet **crown** and **breast**, black **face**",
+      "nl": "Mannetje: scharlaken **kruin** en **borst**, zwart **gezicht**"
+    },
+    {
+      "en": "Pale **eye**, short **bill**, slim body",
+      "nl": "Lichte **ogen**, korte **snavel**, slank lijf"
+    },
+    {
+      "en": "Female plainer, rosy on **breast**; nomadic flocks",
+      "nl": "Vrouwtje effener, roze op de **borst**; zwervende groepen"
+    }
+  ]
+}

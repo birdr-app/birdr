@@ -1,0 +1,22 @@
+{
+  "code": "wescor1",
+  "name": {
+    "en": "Western Corella",
+    "nl": "Westelijke langsnavelkaketoe"
+  },
+  "latin": "Cacatua pastinator",
+  "look_for": [
+    {
+      "en": "White cockatoo with a short **crest**",
+      "nl": "Witte kaketoe met een korte **kuif**"
+    },
+    {
+      "en": "Pale blue skin around the **eye**, pink **lores**",
+      "nl": "Lichtblauwe huid rond het **oog**, roze **teugels**"
+    },
+    {
+      "en": "Forages on the ground in noisy flocks",
+      "nl": "Zoekt voedsel op de grond in luidruchtige groepen"
+    }
+  ]
+}

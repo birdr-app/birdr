@@ -1,0 +1,22 @@
+{
+  "code": "litcro1",
+  "name": {
+    "en": "Little Crow",
+    "nl": "Bennettkraai"
+  },
+  "latin": "Corvus bennetti",
+  "look_for": [
+    {
+      "en": "Small, slim, all-black crow",
+      "nl": "Kleine, slanke, geheel zwarte kraai"
+    },
+    {
+      "en": "White **eye**, thin **bill** and glossy black **plumage**",
+      "nl": "Wit **oog**, dunne **snavel** en glanzend zwart **verenkleed**"
+    },
+    {
+      "en": "Smaller than the ravens; feathers lie smooth at the **throat**",
+      "nl": "Kleiner dan de raven; veren liggen glad aan de **keel**"
+    }
+  ]
+}

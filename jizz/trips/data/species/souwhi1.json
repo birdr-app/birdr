@@ -1,0 +1,22 @@
+{
+  "code": "souwhi1",
+  "name": {
+    "en": "Southern Whiteface",
+    "nl": "Zuidelijke witgezicht"
+  },
+  "latin": "Aphelocephala leucopsis",
+  "look_for": [
+    {
+      "en": "Small, round, grey-brown bird with a white **face**",
+      "nl": "Klein, rond, grijsbruin vogeltje met een wit **gezicht**"
+    },
+    {
+      "en": "Short, stout **bill**; pale **eye**",
+      "nl": "Korte, stevige **snavel**; lichte **ogen**"
+    },
+    {
+      "en": "Forages in small groups on the ground",
+      "nl": "Zoekt voedsel in kleine groepen op de grond"
+    }
+  ]
+}
