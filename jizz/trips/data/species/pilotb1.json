@@ -1,0 +1,22 @@
+{
+  "code": "pilotb1",
+  "name": {
+    "en": "Pilotbird",
+    "nl": "Loodsvogel"
+  },
+  "latin": "Pycnoptilus floccosus",
+  "look_for": [
+    {
+      "en": "Plump, dark forest bird with a short tail",
+      "nl": "Ronde, donkere bosvogel met een korte staart"
+    },
+    {
+      "en": "Rufous underparts and a pale throat",
+      "nl": "Roestbruine onderkant en een bleke keel"
+    },
+    {
+      "en": "Stays on the ground, calls from low cover",
+      "nl": "Blijft op de grond, roept uit lage dekking"
+    }
+  ]
+}

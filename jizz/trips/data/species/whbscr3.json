@@ -1,0 +1,22 @@
+{
+  "code": "whbscr3",
+  "name": {
+    "en": "Spotted Scrubwren",
+    "nl": "Gespikkelde struiksluiper"
+  },
+  "latin": "Sericornis maculatus",
+  "look_for": [
+    {
+      "en": "Small, plain brown scrubwren with a pale eye",
+      "nl": "Kleine, effen bruine struiksluiper met lichte ogen"
+    },
+    {
+      "en": "Spotted **breast** and a dark **mask**",
+      "nl": "Gevlekte **borst** en een donker **masker**"
+    },
+    {
+      "en": "Forages in low, damp undergrowth",
+      "nl": "Foerageert in laag, vochtig kreupelhout"
+    }
+  ]
+}

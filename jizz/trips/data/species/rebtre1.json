@@ -1,0 +1,22 @@
+{
+  "code": "rebtre1",
+  "name": {
+    "en": "Red-browed Treecreeper",
+    "nl": "Roodbrauwkruiper"
+  },
+  "latin": "Climacteris erythrops",
+  "look_for": [
+    {
+      "en": "Small treecreeper with a rufous **eyebrow**",
+      "nl": "Kleine boomkruiper met een roestbruine **wenkbrauw**"
+    },
+    {
+      "en": "Rufous **face** and **rump**, grey-brown body",
+      "nl": "Roestbruin **gezicht** en **stuit**, grijsbruin lijf"
+    },
+    {
+      "en": "Climbs trunks in moist eucalypt forest",
+      "nl": "Klimt langs stammen in vochtig eucalyptusbos"
+    }
+  ]
+}
