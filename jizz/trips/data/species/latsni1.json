@@ -1,0 +1,22 @@
+{
+  "code": "latsni1",
+  "name": {
+    "en": "Latham's Snipe",
+    "nl": "Japanse snip"
+  },
+  "latin": "Gallinago hardwickii",
+  "look_for": [
+    {
+      "en": "Large, long-billed snipe, striped **head** and **back**",
+      "nl": "Grote snip met lange snavel, gestreepte **kop** en **rug**"
+    },
+    {
+      "en": "Stays hidden in wet grass until flushed",
+      "nl": "Blijft verborgen in nat gras tot hij opvliegt"
+    },
+    {
+      "en": "Zigzag flight with a rasping call",
+      "nl": "Zigzagvlucht met een rasperige roep"
+    }
+  ]
+}

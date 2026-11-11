@@ -1,0 +1,22 @@
+{
+  "code": "reefir1",
+  "name": {
+    "en": "Red-eared Firetail",
+    "nl": "Roodoorastrild"
+  },
+  "latin": "Stagonopleura oculata",
+  "look_for": [
+    {
+      "en": "Olive-brown finch with a **red** patch behind the **eye**",
+      "nl": "Olijfbruine vink met een **rode** vlek achter het **oog**"
+    },
+    {
+      "en": "Black-and-white spotted **flanks**",
+      "nl": "Zwart-wit gevlekte **flanken**"
+    },
+    {
+      "en": "Red **rump** and a black **tail**; hides in thick scrub",
+      "nl": "Rode **stuit** en een zwarte **staart**; verstopt zich in dik struikgewas"
+    }
+  ]
+}

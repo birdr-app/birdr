@@ -1,0 +1,22 @@
+{
+  "code": "litwat1",
+  "name": {
+    "en": "Western Wattlebird",
+    "nl": "Westelijke lelhoningeter"
+  },
+  "latin": "Anthochaera lunulata",
+  "look_for": [
+    {
+      "en": "Large grey-brown honeyeater with a long **tail**",
+      "nl": "Grote grijsbruine honingeter met een lange **staart**"
+    },
+    {
+      "en": "Pale **cheek** wattle and streaked **breast**",
+      "nl": "Lichte **wang**lel en gestreepte **borst**"
+    },
+    {
+      "en": "Noisy, harsh calls in banksia and eucalypt",
+      "nl": "Luide, rauwe roep in banksia en eucalyptus"
+    }
+  ]
+}

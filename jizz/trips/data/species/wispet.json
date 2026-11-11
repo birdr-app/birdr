@@ -1,0 +1,22 @@
+{
+  "code": "wispet",
+  "name": {
+    "en": "Wilson's Storm-Petrel",
+    "nl": "Wilsons stormvogeltje"
+  },
+  "latin": "Oceanites oceanicus",
+  "look_for": [
+    {
+      "en": "Small dark storm-petrel, white **rump**",
+      "nl": "Klein donker stormvogeltje, witte **stuit**"
+    },
+    {
+      "en": "Yellow **webs** between the toes, **legs** trail",
+      "nl": "Gele **zwemvliezen**, **poten** steken achter uit"
+    },
+    {
+      "en": "Pats the sea with its feet while feeding",
+      "nl": "Tikt met de poten op zee tijdens het foerageren"
+    }
+  ]
+}

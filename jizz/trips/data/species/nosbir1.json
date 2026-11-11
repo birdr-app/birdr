@@ -1,0 +1,22 @@
+{
+  "code": "nosbir1",
+  "name": {
+    "en": "Noisy Scrub-bird",
+    "nl": "Grote doornkruiper"
+  },
+  "latin": "Atrichornis clamosus",
+  "look_for": [
+    {
+      "en": "Shy, brown ground bird with a **tail** often cocked",
+      "nl": "Schuwe, bruine grondvogel met vaak opgezette **staart**"
+    },
+    {
+      "en": "Short, rounded **wings**; rarely flies",
+      "nl": "Korte, afgeronde **vleugels**; vliegt zelden"
+    },
+    {
+      "en": "Heard far more than seen: very loud song",
+      "nl": "Veel meer gehoord dan gezien: erg luide zang"
+    }
+  ]
+}

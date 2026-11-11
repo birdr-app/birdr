@@ -1,0 +1,22 @@
+{
+  "code": "souemu1",
+  "name": {
+    "en": "Southern Emuwren",
+    "nl": "Roodooremoesluiper"
+  },
+  "latin": "Stipiturus malachurus",
+  "look_for": [
+    {
+      "en": "Tiny, long-tailed bird with wispy **tail** feathers",
+      "nl": "Klein langstaartig vogeltje met pluizige **staart**veren"
+    },
+    {
+      "en": "Male has a blue **throat**, rufous **head**",
+      "nl": "Mannetje heeft een blauwe **keel**, roodbruine **kop**"
+    },
+    {
+      "en": "Rarely flies; scurries through dense heath",
+      "nl": "Vliegt zelden; schiet door dichte heide"
+    }
+  ]
+}

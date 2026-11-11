@@ -1,0 +1,169 @@
+{
+  "country": "AU-SOUTHWEST",
+  "intro": {
+    "en": "This pack is for trips to south-west Western Australia: Perth and Rottnest, Dryandra woodland, the jarrah and karri forests, the Stirling Range, Albany and Esperance heath, and Kalbarri. Its 81 birds come on top of the Australia trip and include Baudin's Black-Cockatoo, the Noisy Scrub-bird, the Western Bristlebird and the Rock Parrot.",
+    "nl": "Dit pakket is voor reizen naar het zuidwesten van West-Australië: Perth en Rottnest, het bos van Dryandra, de jarrah- en karribossen, de Stirling Range, de heide bij Albany en Esperance, en Kalbarri. De 81 vogels komen bovenop de reis door Australië en zijn onder meer de Langsnavelraafkaketoe, de Grote doornkruiper, de Westelijke borstelvogel en de Rotsparkiet."
+  },
+  "units": {
+    "cockatoos-and-parrots": {
+      "title": {
+        "en": "Cockatoos and parrots",
+        "nl": "Kaketoes en papegaaien"
+      },
+      "intro": {
+        "en": "Baudin's Black-Cockatoo and the Western Corella feed in the jarrah and karri forest and on farmland around it; look at the bill and the tail panels. The small parrots are quieter: Elegant and Mulga Parrots feed on the ground in the wheatbelt, Rock Parrots on coastal dunes, and the Purple-crowned Lorikeet and Regent Parrot in flowering trees and woodland.",
+        "nl": "De Langsnavelraafkaketoe en de Westelijke langsnavelkaketoe zoeken voedsel in het jarrah- en karribos en op het boerenland eromheen; kijk naar de snavel en de staartvlakken. De kleinere papegaaien zijn rustiger: Prachtparkiet en Regenboogparkiet eten op de grond in de wheatbelt, Rotsparkieten op kustduinen, en de Purperkruinlori en Regentparkiet in bloeiende bomen en bos."
+      }
+    },
+    "honeyeaters-heath": {
+      "title": {
+        "en": "Honeyeaters of the heath",
+        "nl": "Honingeters van de heide"
+      },
+      "intro": {
+        "en": "These four feed on the flowers of banksia, grevillea and heath along the south coast and around Perth. The wattlebird is big and loud, the Singing Honeyeater is the plain one you see in gardens, and the Purple-gaped and Tawny-crowned Honeyeaters stay in thick heath. Listen first, then look for a bird on a flowering stem.",
+        "nl": "Deze vier eten van de bloemen van banksia, grevillea en heide langs de zuidkust en rond Perth. De lelhoningeter is groot en luid, de Fluithoningeter is de effen soort uit tuinen, en de Purperteugel- en Goudkruinhoningeter blijven in dichte heide. Luister eerst en zoek dan naar een vogel op een bloeiende stengel."
+      }
+    },
+    "honeyeaters-woodland": {
+      "title": {
+        "en": "Honeyeaters of the woodland",
+        "nl": "Honingeters van het bos"
+      },
+      "intro": {
+        "en": "Four small honeyeaters of the dry woodland and mallee at Dryandra and the wheatbelt, plus the Crimson Chat of the arid edge. The Yellow-plumed and White-fronted Honeyeaters give constant calls from the tree tops, while Gilbert's and Brown-headed Honeyeaters work the trunks and branches. Check the head pattern first.",
+        "nl": "Vier kleine honingeters van het droge bos en de mallee bij Dryandra en in de wheatbelt, plus het Scharlaken schijnpaapje van de droge rand. De Malleehoningeter en Witvoorhoofdhoningeter roepen voortdurend vanuit de boomtoppen, terwijl de Swanhoningeter en Bruinkophoningeter stammen en takken afzoeken. Kijk eerst naar het patroon op de kop."
+      }
+    },
+    "robins-and-songlarks": {
+      "title": {
+        "en": "Robins, songlarks and a firetail",
+        "nl": "Roodborsten, grasvogels en een vuurstaart"
+      },
+      "intro": {
+        "en": "The Hooded and White-breasted Robins perch low and drop to the ground to catch insects; look for them on fence posts and trunks. The Southern Scrub-Robin hops under heath and shrubs. The songlarks sing from high perches in open country in spring, and the Red-eared Firetail hides in thick, damp scrub in the far south.",
+        "nl": "De Zwartkopvliegenvanger en de Grijs-witte vliegenvanger zitten laag en duiken naar de grond om insecten te vangen; zoek ze op hekpalen en stammen. De Malleefluiter hipt onder heide en struiken. De grasvogels zingen in het voorjaar vanaf hoge zitplaatsen in open land, en de Roodoorastrild verstopt zich in dik, vochtig struikgewas in het uiterste zuiden."
+      }
+    },
+    "whistlers-and-shrike-tit": {
+      "title": {
+        "en": "Whistlers, shrike-tit and triller",
+        "nl": "Fluiters, harlekijndikkop en triller"
+      },
+      "intro": {
+        "en": "Four songbirds of the tree canopy. The two whistlers sing loudly and are easier to hear than to see; males wear a black breast band. The Western Shrike-tit tears bark off branches with its heavy bill, and the White-winged Triller visits in summer and sings in the open woodland. Watch the males; females are plainer.",
+        "nl": "Vier zangvogels van het kronendak. De twee fluiters zingen luid en zijn gemakkelijker te horen dan te zien; mannetjes hebben een zwarte borstband. De Westelijke harlekijndikkop trekt met zijn zware snavel bast van takken, en de Grijsstuittriller komt in de zomer en zingt in open bos. Let op de mannetjes; de vrouwtjes zijn effener."
+      }
+    },
+    "woodswallows-and-crows": {
+      "title": {
+        "en": "Woodswallows, currawong and crow",
+        "nl": "Spitsvogels, kraaiwurger en kraai"
+      },
+      "intro": {
+        "en": "The woodswallows hunt insects in the air over woodland and farmland and perch in tight rows on branches and wires. The Grey Currawong and the Little Crow are two dark birds of the wheatbelt and inland woodland. Compare size, eye colour and the way they fly.",
+        "nl": "De spitsvogels jagen op insecten in de lucht boven bos en boerenland en zitten in dichte rijen op takken en draden. De Grijze klauwierkraai en de Bennettkraai zijn twee donkere vogels van de wheatbelt en het bos in het binnenland. Vergelijk grootte, oogkleur en vliegwijze."
+      }
+    },
+    "thornbills-and-heathwrens": {
+      "title": {
+        "en": "Thornbills and heathwrens",
+        "nl": "Doornsnavels en heidesluipers"
+      },
+      "intro": {
+        "en": "Small brown birds that flit through shrubs and low trees; the colour of the rump is often the best mark. The Shy Heathwren and the Western Fieldwren live low in heath and mallee, and the thornbills feed in the shrub layer and trees. Look at the rump, the eye and the forehead.",
+        "nl": "Kleine bruine vogeltjes die door struiken en lage bomen flitsen; de kleur van de stuit is vaak het beste kenmerk. De Malleeheidesluiper en de Westelijke struiksluiper leven laag in heide en mallee, en de doornsnavels zoeken voedsel in de struiklaag en in bomen. Kijk naar stuit, oog en voorhoofd."
+      }
+    },
+    "gerygones-and-babblers": {
+      "title": {
+        "en": "Gerygone, whiteface and babbler",
+        "nl": "Gerygone, witgezicht en babbelaar"
+      },
+      "intro": {
+        "en": "A mixed set of small birds in the wheatbelt and along the coast. The Western Gerygone sings a sweet trill from the canopy, the Southern Whiteface and the Slender-billed Thornbill feed in small groups in dry scrub and saltbush, and the White-browed Babbler moves around in noisy groups.",
+        "nl": "Een gemengde groep kleine vogels in de wheatbelt en langs de kust. De Witstaartmangrovezanger zingt een zoete triller vanuit het kronendak, het Zuidelijke witgezicht en de Mulgadoornsnavel zoeken voedsel in kleine groepen in droog struikgewas en zoutstruiken, en de Witbrauwbabbelaar trekt rond in luidruchtige groepen."
+      }
+    },
+    "thicket-and-heath": {
+      "title": {
+        "en": "Secretive birds of thicket and heath",
+        "nl": "Verborgen vogels van struweel en heide"
+      },
+      "intro": {
+        "en": "These four live low in dense vegetation, and the south-west is one of the few places you can hear them. The Noisy Scrub-bird and Western Whipbird sing with loud, carrying calls from thick coastal thicket, the Western Bristlebird creeps in heath, and the Southern Emuwren skims over the top of it. Learn the songs before you go.",
+        "nl": "Deze vier leven laag in dichte vegetatie, en het zuidwesten is een van de weinige plekken waar je ze kunt horen. De Grote doornkruiper en Grijskopzwiepfluiter laten luide, ver dragende roepen horen uit dik kuststruweel, de Westelijke borstelvogel sluipt door de heide, en de Roodooremoesluiper scheert erboven. Leer de zang voordat je gaat."
+      }
+    },
+    "wheatbelt-scrub": {
+      "title": {
+        "en": "Birds of the wheatbelt scrub",
+        "nl": "Vogels van het struikgewas"
+      },
+      "intro": {
+        "en": "Four birds of dry scrub and woodland inland from Perth. The Chestnut Quail-thrush walks quietly on the ground, the Chiming Wedgebill and the Crested Bellbird sing clear, ringing notes from low bushes, and the Rufous Treecreeper climbs trunks and searches the ground.",
+        "nl": "Vier vogels van droog struikgewas en bos in het binnenland van Perth. De Roodrugkwartellijster loopt stil over de grond, de Klokzwiepfluiter en de Zwartkuiffluiter zingen heldere, klinkende tonen vanuit lage struiken, en de Rosse kruiper klimt langs stammen en zoekt op de grond."
+      }
+    },
+    "ground-birds": {
+      "title": {
+        "en": "Ground birds of the woodland",
+        "nl": "Grondvogels van het bos"
+      },
+      "intro": {
+        "en": "Six birds that spend their day on the ground. Malleefowl and Brush Bronzewing keep to quiet woodland and dense heath, and you often see them near dawn. The quails burst out of grass and low cover, and the Indian Peafowl was released on Rottnest and is easy to find. Listen for the rustle first.",
+        "nl": "Zes vogels die hun dag op de grond doorbrengen. Thermometervogel en Struikbronsvleugelduif houden zich in rustig bos en dichte heide op, en je ziet ze vaak rond zonsopgang. De kwartels schieten op uit gras en laag dekkend struikgewas, en de Blauwe pauw is op Rottnest uitgezet en gemakkelijk te vinden. Luister eerst naar het geritsel."
+      }
+    },
+    "cuckoos-owls-and-a-kite": {
+      "title": {
+        "en": "Cuckoos, owls, a kite and a needletail",
+        "nl": "Koekoeken, uilen, een wouw en een naaldstaartzwaluw"
+      },
+      "intro": {
+        "en": "Birds of the forest and woodland that appear briefly or mostly at night. The three bronze-cuckoos arrive in spring and are easiest to tell by the pattern on the belly. The Barking Owl and the Australian Masked-Owl are owls you hear after dark, the Square-tailed Kite glides low over the treetops, and the needletail passes high overhead in summer.",
+        "nl": "Vogels van bos en open bos die kort of vooral 's nachts te zien zijn. De drie bronskoekoeken komen in het voorjaar aan en zijn het gemakkelijkst te herkennen aan het patroon op de buik. De Blafuil en de Australische kerkuil hoor je na het donker worden, de Kortstaartwouw zweeft laag over de boomtoppen, en de naaldstaartzwaluw trekt in de zomer hoog over."
+      }
+    },
+    "wetland-birds": {
+      "title": {
+        "en": "Birds of lakes and reedbeds",
+        "nl": "Vogels van meren en rietvelden"
+      },
+      "intro": {
+        "en": "These five live at the shallow lakes and wetlands around Perth, such as Herdsman Lake, Lake Joondalup and the Peel-Harvey estuary. The Freckled Duck sits low on open water, while the bittern, the two small crakes and Latham's Snipe stay hidden in reeds and wet grass. Early morning gives the best chance.",
+        "nl": "Deze vijf leven bij de ondiepe meren en wetlands rond Perth, zoals Herdsman Lake, Lake Joondalup en de Peel-Harvey-estuarium. De Stippeleend zit laag op open water, terwijl de roerdomp, de twee kleine waterhoentjes en de Japanse snip zich in riet en nat gras verbergen. Vroeg in de ochtend is de kans het grootst."
+      }
+    },
+    "shorebirds": {
+      "title": {
+        "en": "Shorebirds",
+        "nl": "Steltlopers"
+      },
+      "intro": {
+        "en": "Four waders of salt lakes and sandy shores. The Banded Stilt gathers by thousands on inland salt lakes, the Banded Lapwing walks in dry paddocks, and the Sanderling and Ruddy Turnstone run along the beach at Rottnest and Perth in summer.",
+        "nl": "Vier steltlopers van zoutmeren en zandige kusten. De Bandsteltkluut verzamelt zich bij duizenden op zoutmeren in het binnenland, de Australische kievit loopt in droge weilanden, en de Drieteenstrandloper en Steenloper rennen in de zomer langs het strand bij Rottnest en Perth."
+      }
+    },
+    "terns": {
+      "title": {
+        "en": "Terns",
+        "nl": "Sterns"
+      },
+      "intro": {
+        "en": "Four terns of the Perth coast and Rottnest. The Australian Fairy Tern nests on sandy islands, the Whiskered Tern and the Australian Tern hunt over lakes and farmland as well as the sea, and the Bridled Tern visits in summer. Look at bill colour, forehead and tail.",
+        "nl": "Vier sterns van de kust bij Perth en Rottnest. De Elfenstern broedt op zandige eilanden, de Witwangstern en de Australische lachstern jagen boven meren en boerenland en boven zee, en de Brilstern komt in de zomer. Let op snavelkleur, voorhoofd en staart."
+      }
+    },
+    "seabirds": {
+      "title": {
+        "en": "Seabirds off Albany",
+        "nl": "Zeevogels bij Albany"
+      },
+      "intro": {
+        "en": "Seven seabirds you may meet on a boat trip out of Albany or from the coast in winter. The petrels and shearwaters glide fast across the swell, the prion and the storm-petrel are small and flit close to the water, and the Brown Skua chases other seabirds. Learn their size and the pattern of the wing.",
+        "nl": "Zeven zeevogels die je kunt zien op een boottocht vanuit Albany of in de winter vanaf de kust. De stormvogels glijden snel over de deining, de prion en het stormvogeltje zijn klein en vliegen vlak boven het water, en de Subantarctische grote jager jaagt andere zeevogels na. Leer hun grootte en het patroon van de vleugel."
+      }
+    }
+  }
+}

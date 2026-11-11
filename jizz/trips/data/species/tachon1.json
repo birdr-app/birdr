@@ -1,0 +1,22 @@
+{
+  "code": "tachon1",
+  "name": {
+    "en": "Tawny-crowned Honeyeater",
+    "nl": "Goudkruinhoningeter"
+  },
+  "latin": "Gliciphila melanops",
+  "look_for": [
+    {
+      "en": "Black **mask**, golden-yellow patch behind the **eye**",
+      "nl": "Zwart **masker**, goudgele vlek achter het **oog**"
+    },
+    {
+      "en": "Tawny **crown**, streaked **breast**",
+      "nl": "Roodbruine **kruin**, gestreepte **borst**"
+    },
+    {
+      "en": "Feeds on heath flowers; perches on tall stems",
+      "nl": "Eet van heidebloemen; zit op hoge stengels"
+    }
+  ]
+}

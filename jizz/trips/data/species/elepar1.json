@@ -1,0 +1,22 @@
+{
+  "code": "elepar1",
+  "name": {
+    "en": "Elegant Parrot",
+    "nl": "Prachtparkiet"
+  },
+  "latin": "Neophema elegans",
+  "look_for": [
+    {
+      "en": "Small slim parrot, olive-green, **blue** **forehead** band",
+      "nl": "Kleine slanke papegaai, olijfgroen, blauwe **voorhoofd**band"
+    },
+    {
+      "en": "Yellow-green **underparts**, blue **wing** edge",
+      "nl": "Geelgroene **onderkant**, blauwe **vleugel**rand"
+    },
+    {
+      "en": "Feeds on the ground in pairs and small groups",
+      "nl": "Zoekt voedsel op de grond in paren en kleine groepen"
+    }
+  ]
+}

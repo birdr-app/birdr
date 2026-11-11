@@ -1,0 +1,22 @@
+{
+  "code": "pughon1",
+  "name": {
+    "en": "Purple-gaped Honeyeater",
+    "nl": "Purperteugelhoningeter"
+  },
+  "latin": "Lichenostomus cratitius",
+  "look_for": [
+    {
+      "en": "Olive-green honeyeater with a white **ear** patch",
+      "nl": "Olijfgroene honingeter met een witte **oor**vlek"
+    },
+    {
+      "en": "Purple-grey patch at the **gape**",
+      "nl": "Paargrijze vlek bij de **mondhoek**"
+    },
+    {
+      "en": "Heard in thick coastal heath and mallee",
+      "nl": "Te horen in dichte kustheide en mallee"
+    }
+  ]
+}

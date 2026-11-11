@@ -1,0 +1,22 @@
+{
+  "code": "ruffie3",
+  "name": {
+    "en": "Western Fieldwren",
+    "nl": "Westelijke struiksluiper"
+  },
+  "latin": "Calamanthus montanellus",
+  "look_for": [
+    {
+      "en": "Brown, streaked ground bird with a short **tail**",
+      "nl": "Bruine, gestreepte grondvogel met een korte **staart**"
+    },
+    {
+      "en": "Rufous **head**, pale **eyebrow**",
+      "nl": "Roodbruine **kop**, lichte **wenkbrauw**"
+    },
+    {
+      "en": "Hops and sings from the top of a low bush",
+      "nl": "Hipt en zingt vanaf de top van een lage struik"
+    }
+  ]
+}

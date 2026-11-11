@@ -1,0 +1,22 @@
+{
+  "code": "chequt1",
+  "name": {
+    "en": "Chestnut Quail-thrush",
+    "nl": "Roodrugkwartellijster"
+  },
+  "latin": "Cinclosoma castanotum",
+  "look_for": [
+    {
+      "en": "Ground bird, male with a black **throat** and white **eyebrow**",
+      "nl": "Grondvogel, mannetje met een zwarte **keel** en witte **wenkbrauw**"
+    },
+    {
+      "en": "Rusty back and a chestnut **flank** stripe",
+      "nl": "Roestkleurige rug en een kastanje **flank**streep"
+    },
+    {
+      "en": "Runs, then flies low with the **tail** spread",
+      "nl": "Rent en vliegt dan laag met gespreide **staart**"
+    }
+  ]
+}

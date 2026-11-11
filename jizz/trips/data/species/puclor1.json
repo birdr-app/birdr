@@ -1,0 +1,22 @@
+{
+  "code": "puclor1",
+  "name": {
+    "en": "Purple-crowned Lorikeet",
+    "nl": "Purperkruinlori"
+  },
+  "latin": "Psitteuteles porphyrocephalus",
+  "look_for": [
+    {
+      "en": "Small green lorikeet with a purple **crown**",
+      "nl": "Kleine groene lori met een paarse **kruin**"
+    },
+    {
+      "en": "Yellow-orange **cheek**, bright green **body**",
+      "nl": "Geeloranje **wang**, felgroen **lijf**"
+    },
+    {
+      "en": "Fast, high flyer; call rises in blossom trees",
+      "nl": "Snelle, hoge vlieger; roept in bloeiende bomen"
+    }
+  ]
+}

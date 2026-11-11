@@ -1,0 +1,22 @@
+{
+  "code": "rocpar1",
+  "name": {
+    "en": "Rock Parrot",
+    "nl": "Rotsparkiet"
+  },
+  "latin": "Neophema petrophila",
+  "look_for": [
+    {
+      "en": "Small, dull olive-brown parrot of the coast",
+      "nl": "Kleine, doffe olijfbruine papegaai van de kust"
+    },
+    {
+      "en": "Narrow blue band across the **forehead**",
+      "nl": "Smalle blauwe band over het **voorhoofd**"
+    },
+    {
+      "en": "Feeds on the ground on dunes and rocky shores",
+      "nl": "Zoekt voedsel op de grond in duinen en op rotskusten"
+    }
+  ]
+}
