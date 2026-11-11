@@ -1,0 +1,22 @@
+{
+  "code": "lessap2",
+  "name": {
+    "en": "Siberian Sand Plover",
+    "nl": "Mongoolse plevier"
+  },
+  "latin": "Anarhynchus mongolus",
+  "look_for": [
+    {
+      "en": "Compact small plover, short dark **bill**",
+      "nl": "Compacte kleine plevier met korte donkere **snavel**"
+    },
+    {
+      "en": "Breeding: orange-rust **breast** with black mask",
+      "nl": "Broedkleed: oranjeroest **borst** met zwart masker"
+    },
+    {
+      "en": "Pale grey-brown in winter; flocks on mudflats",
+      "nl": "Lichtgrijsbruin in winter; groepen op wadplaten"
+    }
+  ]
+}

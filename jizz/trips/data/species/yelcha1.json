@@ -1,0 +1,22 @@
+{
+  "code": "yelcha1",
+  "name": {
+    "en": "Yellow Chat",
+    "nl": "Geel schijnpaapje"
+  },
+  "latin": "Epthianura crocea",
+  "look_for": [
+    {
+      "en": "Bright yellow chat with a black **breast** band (male)",
+      "nl": "Felgele schijnpaap met zwarte **borst**band (man)"
+    },
+    {
+      "en": "Female duller, olive-yellow",
+      "nl": "Vrouw doffer, olijfgeel"
+    },
+    {
+      "en": "Perches on grass stems in wet floodplains",
+      "nl": "Zit op grashalmen in natte uiterwaarden"
+    }
+  ]
+}

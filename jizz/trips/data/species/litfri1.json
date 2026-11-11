@@ -1,0 +1,22 @@
+{
+  "code": "litfri1",
+  "name": {
+    "en": "Little Friarbird",
+    "nl": "Kleine lederkop"
+  },
+  "latin": "Philemon citreogularis",
+  "look_for": [
+    {
+      "en": "Slim friarbird with a bald, dark **head**",
+      "nl": "Slanke lederkop met een kale donkere **kop**"
+    },
+    {
+      "en": "Pale grey-brown, bare skin around the **eye**",
+      "nl": "Lichtgrijsbruin, kale huid rond het **oog**"
+    },
+    {
+      "en": "Calls loudly from the canopy",
+      "nl": "Roept luid vanuit de kroon"
+    }
+  ]
+}

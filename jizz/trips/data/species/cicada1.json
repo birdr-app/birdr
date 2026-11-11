@@ -1,0 +1,22 @@
+{
+  "code": "cicada1",
+  "name": {
+    "en": "Sahul Cicadabird",
+    "nl": "Sahoelrupsvogel"
+  },
+  "latin": "Edolisoma tenuirostre",
+  "look_for": [
+    {
+      "en": "Plain grey cicadabird (male)",
+      "nl": "Effen grijze rupsvogel (man)"
+    },
+    {
+      "en": "Female brown with streaked **underparts**",
+      "nl": "Vrouw bruin met gestreepte **onderkant**"
+    },
+    {
+      "en": "Calls a harsh buzzing from the canopy",
+      "nl": "Roept een schorre zoem vanuit de kroon"
+    }
+  ]
+}

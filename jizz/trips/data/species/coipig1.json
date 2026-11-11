@@ -1,0 +1,22 @@
+{
+  "code": "coipig1",
+  "name": {
+    "en": "Collared Imperial-Pigeon",
+    "nl": "Zwartkraagmuskaatduif"
+  },
+  "latin": "Ducula mullerii",
+  "look_for": [
+    {
+      "en": "Large pigeon with a grey **head** and body",
+      "nl": "Grote duif met een grijze **kop** en lijf"
+    },
+    {
+      "en": "Black **collar** at the back of the neck",
+      "nl": "Zwarte **kraag** achter in de nek"
+    },
+    {
+      "en": "Flies over the treetops in Darwin parks",
+      "nl": "Vliegt over boomtoppen in Darwinse parken"
+    }
+  ]
+}

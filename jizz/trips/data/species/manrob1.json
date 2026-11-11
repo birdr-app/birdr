@@ -1,0 +1,22 @@
+{
+  "code": "manrob1",
+  "name": {
+    "en": "Mangrove Robin",
+    "nl": "Tapuitvliegenvanger"
+  },
+  "latin": "Melanodryas pulverulenta",
+  "look_for": [
+    {
+      "en": "Small, grey-brown robin",
+      "nl": "Klein grijsbruin vliegenvangertje"
+    },
+    {
+      "en": "Pale chin, dark mask",
+      "nl": "Lichte kin, donker masker"
+    },
+    {
+      "en": "Perches low in mangrove",
+      "nl": "Zit laag in mangrove"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "stafin1",
+  "name": {
+    "en": "Star Finch",
+    "nl": "Biesastrild"
+  },
+  "latin": "Emblema ruficauda",
+  "look_for": [
+    {
+      "en": "Red **bill** and **face**, spotted **flanks**",
+      "nl": "Rode **snavel** en **kop**, gevlekte **flanken**"
+    },
+    {
+      "en": "Olive-brown back, red tail",
+      "nl": "Olijfbruine rug, rode staart"
+    },
+    {
+      "en": "Feeds in tall grass beside water",
+      "nl": "Foerageert in hoog gras langs water"
+    }
+  ]
+}

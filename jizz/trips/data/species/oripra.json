@@ -1,0 +1,22 @@
+{
+  "code": "oripra",
+  "name": {
+    "en": "Oriental Pratincole",
+    "nl": "Oosterse vorkstaartplevier"
+  },
+  "latin": "Glareola maldivarum",
+  "look_for": [
+    {
+      "en": "Slender, tern-like wader with a forked **tail**",
+      "nl": "Slanke sternachtige wader met gevorkte **staart**"
+    },
+    {
+      "en": "Chestnut **underwing**, white rump",
+      "nl": "Kastanjebruine **onderkant van de vleugel**, witte stuit"
+    },
+    {
+      "en": "Forms flocks hunting insects over floodplains",
+      "nl": "Jaagt in groepen op insecten boven uiterwaarden"
+    }
+  ]
+}

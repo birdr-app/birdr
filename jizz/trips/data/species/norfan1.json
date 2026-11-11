@@ -1,0 +1,22 @@
+{
+  "code": "norfan1",
+  "name": {
+    "en": "Northern Fantail",
+    "nl": "Streepborstwaaierstaart"
+  },
+  "latin": "Rhipidura rufiventris",
+  "look_for": [
+    {
+      "en": "Small fantail with a dark head and **chest** band",
+      "nl": "Kleine waaierstaart met donkere kop en **borst**band"
+    },
+    {
+      "en": "Rufous **belly**, long white-edged **tail**",
+      "nl": "Roodbruine **buik**, lange staart met witte rand"
+    },
+    {
+      "en": "Fans its tail while it feeds",
+      "nl": "Waaiert met de staart terwijl hij foerageert"
+    }
+  ]
+}

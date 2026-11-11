@@ -1,0 +1,22 @@
+{
+  "code": "pieher2",
+  "name": {
+    "en": "Pied Heron",
+    "nl": "Bonte reiger"
+  },
+  "latin": "Egretta picata",
+  "look_for": [
+    {
+      "en": "Small dark heron with a white **throat**",
+      "nl": "Kleine donkere reiger met een witte **keel**"
+    },
+    {
+      "en": "Slate-grey body, black cap, white **head** stripe",
+      "nl": "Leigrijs lijf, zwarte kap, witte streep over de **kop**"
+    },
+    {
+      "en": "Hunts in shallow water of mangrove flats",
+      "nl": "Jaagt in ondiep water op mangrovevlakten"
+    }
+  ]
+}

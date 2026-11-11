@@ -1,0 +1,22 @@
+{
+  "code": "sinbus6",
+  "name": {
+    "en": "Singing Bushlark",
+    "nl": "Struikleeuwerik"
+  },
+  "latin": "Mirafra javanica",
+  "look_for": [
+    {
+      "en": "Small, streaked brown lark",
+      "nl": "Kleine gestreepte bruine leeuwerik"
+    },
+    {
+      "en": "Rufous **wing** patch in flight",
+      "nl": "Roodbruin **vleugel**vlak in de vlucht"
+    },
+    {
+      "en": "Sings in a display flight",
+      "nl": "Zingt in baltsvlucht"
+    }
+  ]
+}

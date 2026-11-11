@@ -1,0 +1,22 @@
+{
+  "code": "papfly1",
+  "name": {
+    "en": "Paperbark Flycatcher",
+    "nl": "Kleine witkeelmonarch"
+  },
+  "latin": "Myiagra nana",
+  "look_for": [
+    {
+      "en": "Small, slim flycatcher with a white **throat**",
+      "nl": "Kleine slanke vliegenvanger met witte **keel**"
+    },
+    {
+      "en": "Male blue-grey **back**",
+      "nl": "Man blauwgrijze **rug**"
+    },
+    {
+      "en": "Perches in paperbark wetland edge",
+      "nl": "Zit aan paperbarkmoerasranden"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "tabhon1",
+  "name": {
+    "en": "Tawny-breasted Honeyeater",
+    "nl": "Taanborsthoningeter"
+  },
+  "latin": "Xanthotis flaviventer",
+  "look_for": [
+    {
+      "en": "Quiet, olive-brown honeyeater with a dark **bill**",
+      "nl": "Rustige olijfbruine honingeter met donkere **snavel**"
+    },
+    {
+      "en": "Buff **belly**, yellow **ear** tuft",
+      "nl": "Buffgele **buik**, gele **oor**pluim"
+    },
+    {
+      "en": "Hides in rainforest edge",
+      "nl": "Verborgen aan de rand van regenwoud"
+    }
+  ]
+}

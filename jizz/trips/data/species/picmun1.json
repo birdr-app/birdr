@@ -1,0 +1,22 @@
+{
+  "code": "picmun1",
+  "name": {
+    "en": "Pictorella Munia",
+    "nl": "Witborstrietvink"
+  },
+  "latin": "Heteromunia pectoralis",
+  "look_for": [
+    {
+      "en": "Finch with a white spotted **chest** and black **mask**",
+      "nl": "Vink met witgespikkelde **borst** en zwart **masker**"
+    },
+    {
+      "en": "Grey-brown back, chestnut **belly**",
+      "nl": "Grijsbruine rug, kastanje **buik**"
+    },
+    {
+      "en": "Feeds on grass seed on the ground",
+      "nl": "Eet grasdaad op de grond"
+    }
+  ]
+}

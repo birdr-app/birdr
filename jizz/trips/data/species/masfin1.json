@@ -1,0 +1,22 @@
+{
+  "code": "masfin1",
+  "name": {
+    "en": "Masked Finch",
+    "nl": "Maskeramadine"
+  },
+  "latin": "Poephila personata",
+  "look_for": [
+    {
+      "en": "Grey-brown finch with a black **face** mask",
+      "nl": "Grijsbruine vink met een zwart **gezichts**masker"
+    },
+    {
+      "en": "Pale grey back, white belly",
+      "nl": "Lichtgrijze rug, witte buik"
+    },
+    {
+      "en": "Feeds on the ground in pairs and flocks",
+      "nl": "Foerageert op de grond in paren en groepjes"
+    }
+  ]
+}

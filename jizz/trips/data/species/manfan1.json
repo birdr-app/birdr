@@ -1,0 +1,22 @@
+{
+  "code": "manfan1",
+  "name": {
+    "en": "Mangrove Fantail",
+    "nl": "Mangrovewaaierstaart"
+  },
+  "latin": "Rhipidura phasiana",
+  "look_for": [
+    {
+      "en": "Small fantail of mangroves, pale underparts",
+      "nl": "Kleine waaierstaart van mangrove, lichte onderkant"
+    },
+    {
+      "en": "Grey **back**, white **eyebrow**",
+      "nl": "Grijze **rug**, witte **wenkbrauw**"
+    },
+    {
+      "en": "Catches insects in the mangrove canopy",
+      "nl": "Vangt insecten in de mangrovekroon"
+    }
+  ]
+}

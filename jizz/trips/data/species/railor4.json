@@ -1,0 +1,22 @@
+{
+  "code": "railor4",
+  "name": {
+    "en": "Coconut Lorikeet",
+    "nl": "Nieuw-Guinese regenbooglori"
+  },
+  "latin": "Trichoglossus haematodus",
+  "look_for": [
+    {
+      "en": "Rainbow lorikeet with a blue **head**",
+      "nl": "Regenbooglori met een blauwe **kop**"
+    },
+    {
+      "en": "Green collar, orange-yellow **breast**",
+      "nl": "Groene kraag, oranjegele **borst**"
+    },
+    {
+      "en": "Common in Darwin gardens and palms",
+      "nl": "Algemeen in tuinen en palmen van Darwin"
+    }
+  ]
+}

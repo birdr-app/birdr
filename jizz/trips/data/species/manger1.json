@@ -1,0 +1,22 @@
+{
+  "code": "manger1",
+  "name": {
+    "en": "Mangrove Gerygone",
+    "nl": "Witbrauwmangrovezanger"
+  },
+  "latin": "Gerygone levigaster",
+  "look_for": [
+    {
+      "en": "Small gerygone with a white **eyebrow**",
+      "nl": "Kleine zanger met een witte **wenkbrauw**"
+    },
+    {
+      "en": "Grey-brown above, white below",
+      "nl": "Grijsbruin van boven, wit van onder"
+    },
+    {
+      "en": "Flits in mangrove foliage",
+      "nl": "Flitst in mangrovebladeren"
+    }
+  ]
+}

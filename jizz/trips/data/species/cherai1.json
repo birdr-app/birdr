@@ -1,0 +1,22 @@
+{
+  "code": "cherai1",
+  "name": {
+    "en": "Chestnut Rail",
+    "nl": "Mangroveral"
+  },
+  "latin": "Gallirallus castaneoventris",
+  "look_for": [
+    {
+      "en": "Large rail with a long **bill** and chestnut **belly**",
+      "nl": "Grote ral met lange **snavel** en kastanjebruine **buik**"
+    },
+    {
+      "en": "Grey face and breast, barred back",
+      "nl": "Grijs gezicht en borst, gebande rug"
+    },
+    {
+      "en": "Walks the mud at the mangrove edge at low tide",
+      "nl": "Loopt bij eb over de modder langs de mangrove"
+    }
+  ]
+}

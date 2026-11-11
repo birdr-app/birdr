@@ -1,0 +1,22 @@
+{
+  "code": "yethon2",
+  "name": {
+    "en": "Yellow-tinted Honeyeater",
+    "nl": "Sikkeloorhoningeter"
+  },
+  "latin": "Ptilotula flavescens",
+  "look_for": [
+    {
+      "en": "Medium honeyeater; yellow tinge to **ear** and **belly**",
+      "nl": "Middelgrote honingeter; gele tint op **oor** en **buik**"
+    },
+    {
+      "en": "Slim; olive-grey **back**",
+      "nl": "Slank; olijfgrijze **rug**"
+    },
+    {
+      "en": "Gleans eucalyptus foliage",
+      "nl": "Zoekt voedsel in eucalyptusblad"
+    }
+  ]
+}

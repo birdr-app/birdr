@@ -1,0 +1,22 @@
+{
+  "code": "libcuc1",
+  "name": {
+    "en": "Little Bronze-Cuckoo",
+    "nl": "Kleine bronskoekoek"
+  },
+  "latin": "Chalcites minutillus",
+  "look_for": [
+    {
+      "en": "Very small cuckoo, bronze-green above",
+      "nl": "Heel kleine koekoek, bronsgroen van boven"
+    },
+    {
+      "en": "Bold bars below, no clear eyebrow",
+      "nl": "Brede banden op de onderkant, geen duidelijke wenkbrauw"
+    },
+    {
+      "en": "Smaller and shorter-billed than Horsfield's",
+      "nl": "Kleiner en met kortere **snavel** dan Horsfields koekoek"
+    }
+  ]
+}

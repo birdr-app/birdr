@@ -1,0 +1,22 @@
+{
+  "code": "brucuc1",
+  "name": {
+    "en": "Brush Cuckoo",
+    "nl": "Treurkoekoek"
+  },
+  "latin": "Cacomantis variolosus",
+  "look_for": [
+    {
+      "en": "Dull brown cuckoo, pale grey-brown **head**",
+      "nl": "Doffe bruine koekoek met lichtgrijsbruine **kop**"
+    },
+    {
+      "en": "Orange-buff **belly**, no bars",
+      "nl": "Oranjebuff **buik**, geen strepen"
+    },
+    {
+      "en": "Heard calling a rising, trilled song",
+      "nl": "Roept een stijgende, trillende zang"
+    }
+  ]
+}

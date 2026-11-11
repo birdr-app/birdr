@@ -1,0 +1,22 @@
+{
+  "code": "arafan1",
+  "name": {
+    "en": "Arafura Fantail",
+    "nl": "Arafurawaaierstaart"
+  },
+  "latin": "Rhipidura dryas",
+  "look_for": [
+    {
+      "en": "Fantail with a **throat** band and a pale **belly**",
+      "nl": "Waaierstaart met een **keel**band en lichte **buik**"
+    },
+    {
+      "en": "White-tipped, fan-shaped **tail**",
+      "nl": "Waaiervormige **staart** met witte punten"
+    },
+    {
+      "en": "Lives in monsoon forest understorey",
+      "nl": "Leeft in de onderbegroeiing van moessonbos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "spohar1",
+  "name": {
+    "en": "Spotted Harrier",
+    "nl": "Gevlekte kiekendief"
+  },
+  "latin": "Circus assimilis",
+  "look_for": [
+    {
+      "en": "Long-winged harrier, grey **back** and chestnut front",
+      "nl": "Lange vleugels, grijze **rug** en kastanjebruine voorkant"
+    },
+    {
+      "en": "Black **wing**-tips and barred tail in flight",
+      "nl": "Zwarte **vleugel**punten en gebande staart in vlucht"
+    },
+    {
+      "en": "Quarter low over grass, gliding and dropping",
+      "nl": "Zweeft laag over gras en duikt omlaag"
+    }
+  ]
+}

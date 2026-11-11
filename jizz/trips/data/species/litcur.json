@@ -1,0 +1,22 @@
+{
+  "code": "litcur",
+  "name": {
+    "en": "Little Whimbrel",
+    "nl": "Kleine regenwulp"
+  },
+  "latin": "Numenius minutus",
+  "look_for": [
+    {
+      "en": "Small, slim curlew with a short, curved **bill**",
+      "nl": "Kleine slanke regenwulp met korte gebogen **snavel**"
+    },
+    {
+      "en": "Buff face, pale stripe over the dark **crown**",
+      "nl": "Buffgele kop, lichte streep over de donkere **kruin**"
+    },
+    {
+      "en": "Flocks on dry grassland and airfields",
+      "nl": "Groepen op droog grasland en vliegvelden"
+    }
+  ]
+}

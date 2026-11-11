@@ -1,0 +1,22 @@
+{
+  "code": "orfscr1",
+  "name": {
+    "en": "Orange-footed Megapode",
+    "nl": "Rood boshoen"
+  },
+  "latin": "Megapodius reinwardt",
+  "look_for": [
+    {
+      "en": "Chicken-sized, dark brown, bare red **face**",
+      "nl": "Zo groot als een kip, donkerbruin, kale rode **kop**"
+    },
+    {
+      "en": "Huge orange **feet** that scratch leaf litter",
+      "nl": "Grote oranje **poten** die in het bladstrooisel krabben"
+    },
+    {
+      "en": "Rummages in thick monsoon forest and thicket",
+      "nl": "Scharrelt in dicht moessonbos en struikgewas"
+    }
+  ]
+}

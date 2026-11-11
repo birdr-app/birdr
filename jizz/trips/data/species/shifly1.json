@@ -1,0 +1,22 @@
+{
+  "code": "shifly1",
+  "name": {
+    "en": "Shining Flycatcher",
+    "nl": "Glansmonarch"
+  },
+  "latin": "Myiagra alecto",
+  "look_for": [
+    {
+      "en": "Male glossy black with a white **belly**",
+      "nl": "Man glanzend zwart met witte **buik**"
+    },
+    {
+      "en": "Female: rufous **back**, white **throat**",
+      "nl": "Vrouw: roodbruine **rug**, witte **keel**"
+    },
+    {
+      "en": "Works along mangrove creeks",
+      "nl": "Werkt langs mangrovebeken"
+    }
+  ]
+}

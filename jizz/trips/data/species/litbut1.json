@@ -1,0 +1,22 @@
+{
+  "code": "litbut1",
+  "name": {
+    "en": "Little Buttonquail",
+    "nl": "Kleine vechtkwartel"
+  },
+  "latin": "Turnix velox",
+  "look_for": [
+    {
+      "en": "Very small, pale buttonquail of dry grass",
+      "nl": "Heel kleine, bleke vechtkwartel in droog gras"
+    },
+    {
+      "en": "Sandy-buff, with a spotted **wing** and flank",
+      "nl": "Zandbuff, met gevlekte **vleugel** en flank"
+    },
+    {
+      "en": "Flushes underfoot and flies low",
+      "nl": "Vliegt vlak voor je voeten op en blijft laag"
+    }
+  ]
+}

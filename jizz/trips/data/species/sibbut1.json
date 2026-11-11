@@ -1,0 +1,22 @@
+{
+  "code": "sibbut1",
+  "name": {
+    "en": "Silver-backed Butcherbird",
+    "nl": "Zilverrugorgelvogel"
+  },
+  "latin": "Cracticus argenteus",
+  "look_for": [
+    {
+      "en": "Black **head**, silver-grey **back**, white **belly**",
+      "nl": "Zwarte **kop**, zilvergrijze **rug**, witte **buik**"
+    },
+    {
+      "en": "Hooked **bill**",
+      "nl": "Gehaakte **snavel**"
+    },
+    {
+      "en": "Calls a loud, fluting song",
+      "nl": "Roept een luid fluitend lied"
+    }
+  ]
+}

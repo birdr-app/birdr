@@ -1,0 +1,22 @@
+{
+  "code": "rebpar6",
+  "name": {
+    "en": "Red-browed Pardalote",
+    "nl": "Roodbrauwdiamantvogel"
+  },
+  "latin": "Pardalotus rubricatus",
+  "look_for": [
+    {
+      "en": "Tiny, short-tailed pardalote with a red **eyebrow**",
+      "nl": "Piepkleine diamantvogel met rode **wenkbrauw**"
+    },
+    {
+      "en": "Streaked crown, olive back, pale **belly**",
+      "nl": "Gestreepte kruin, olijfgroene rug, lichte **buik**"
+    },
+    {
+      "en": "Searches eucalypt foliage in woodland",
+      "nl": "Zoekt in eucalyptusblad in open bos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "lecter2",
+  "name": {
+    "en": "Lesser Crested Tern",
+    "nl": "Bengaalse stern"
+  },
+  "latin": "Thalasseus bengalensis",
+  "look_for": [
+    {
+      "en": "Slim crested tern with a slender orange-yellow **bill**",
+      "nl": "Slanke kuifstern met een dunne oranjegele **snavel**"
+    },
+    {
+      "en": "Smaller and paler than the Great Crested Tern",
+      "nl": "Kleiner en lichter dan de Grote kuifstern"
+    },
+    {
+      "en": "Roosts on beaches and breakwaters",
+      "nl": "Slaapt op stranden en golfbrekers"
+    }
+  ]
+}
