@@ -1,0 +1,22 @@
+{
+  "code": "hoorob1",
+  "name": {
+    "en": "Hooded Robin",
+    "nl": "Zwartkopvliegenvanger"
+  },
+  "latin": "Melanodryas cucullata",
+  "look_for": [
+    {
+      "en": "Male black above, white below, hooded",
+      "nl": "Mannetje zwart boven, wit onder, met kap"
+    },
+    {
+      "en": "White **wing** stripe and outer tail",
+      "nl": "Witte **vleugel**streep en witte buitenste staartveren"
+    },
+    {
+      "en": "Perches on a stump, pounces; female grey-brown",
+      "nl": "Zit op een stronk en duikt naar beneden; vrouwtje grijsbruin"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "gubter3",
+  "name": {
+    "en": "Australian Tern",
+    "nl": "Australische lachstern"
+  },
+  "latin": "Gelochelidon macrotarsa",
+  "look_for": [
+    {
+      "en": "Pale grey tern with a short, thick black **bill**",
+      "nl": "Lichtgrijze stern met een korte, dikke zwarte **snavel**"
+    },
+    {
+      "en": "Black cap when breeding; a dark mask in winter",
+      "nl": "Zwarte kap in broedkleed; donker masker in de winter"
+    },
+    {
+      "en": "Hawks over land and shallows, rarely dives",
+      "nl": "Jaagt boven land en ondiep water, duikt zelden"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rucemu1",
+  "name": {
+    "en": "Rufous-crowned Emuwren",
+    "nl": "Roodkopemoesluiper"
+  },
+  "latin": "Stipiturus ruficeps",
+  "look_for": [
+    {
+      "en": "Tiny, with a long wispy **tail** like emu feathers",
+      "nl": "Piepklein, met een lange, vederige **staart** als emoeveren"
+    },
+    {
+      "en": "**Crown** rufous, streaked with black",
+      "nl": "Rode, zwart gestreepte **kruin**"
+    },
+    {
+      "en": "Flushed from spinifex, flies low for a short way",
+      "nl": "Vliegt op uit spinifex en vliegt laag een stukje"
+    }
+  ]
+}

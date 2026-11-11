@@ -1,0 +1,22 @@
+{
+  "code": "blahon1",
+  "name": {
+    "en": "Black Honeyeater",
+    "nl": "Rouwhoningeter"
+  },
+  "latin": "Sugomel nigrum",
+  "look_for": [
+    {
+      "en": "Male black above and on the throat, white belly",
+      "nl": "Mannetje zwart boven en op de keel, witte buik"
+    },
+    {
+      "en": "Female brown, streaked, with a pale **eyebrow**",
+      "nl": "Vrouwtje bruin, gestreept, met een lichte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Slender curved **bill**; feeds on emu-bush flowers",
+      "nl": "Slanke gebogen **snavel**; eet nectar van emoestruiken"
+    }
+  ]
+}

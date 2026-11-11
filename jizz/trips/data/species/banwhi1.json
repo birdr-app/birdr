@@ -1,0 +1,22 @@
+{
+  "code": "banwhi1",
+  "name": {
+    "en": "Banded Whiteface",
+    "nl": "Gebandeerde witgezicht"
+  },
+  "latin": "Aphelocephala nigricincta",
+  "look_for": [
+    {
+      "en": "Small, grey-brown, with a whitish face",
+      "nl": "Klein, grijsbruin, met een witachtig gezicht"
+    },
+    {
+      "en": "Thin black band across the **breast**",
+      "nl": "Dunne zwarte band over de **borst**"
+    },
+    {
+      "en": "Feeds on the ground on stony saltbush plains",
+      "nl": "Zoekt voedsel op de grond op stenige zoutbosvlaktes"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "wesbow1",
+  "name": {
+    "en": "Western Bowerbird",
+    "nl": "Gevlekte prieelvogel"
+  },
+  "latin": "Chlamydera guttata",
+  "look_for": [
+    {
+      "en": "Streaked and spotted brown, long tail",
+      "nl": "Gestreept en gespikkeld bruin, lange staart"
+    },
+    {
+      "en": "Lilac **nape** crest, raised in display",
+      "nl": "Lila kuif in de **nek**, opgezet bij de baltsvlucht"
+    },
+    {
+      "en": "Stick avenue **bower** with white and green decorations",
+      "nl": "Prieel van takken met witte en groene versieringen"
+    }
+  ]
+}

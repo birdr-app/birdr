@@ -1,0 +1,22 @@
+{
+  "code": "paifir1",
+  "name": {
+    "en": "Painted Firetail",
+    "nl": "Geschilderde astrild"
+  },
+  "latin": "Emblema pictum",
+  "look_for": [
+    {
+      "en": "Brown above, red **rump** and red on the face",
+      "nl": "Bruin boven, rode **stuit** en rood op het gezicht"
+    },
+    {
+      "en": "Black flanks spotted with white",
+      "nl": "Zwarte flanken met witte stippen"
+    },
+    {
+      "en": "Hops on rocky spinifex hills, eats seed",
+      "nl": "Hipt over rotsachtige spinifexheuvels en eet zaden"
+    }
+  ]
+}

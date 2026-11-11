@@ -1,0 +1,22 @@
+{
+  "code": "banlap1",
+  "name": {
+    "en": "Banded Lapwing",
+    "nl": "Australische kievit"
+  },
+  "latin": "Vanellus tricolor",
+  "look_for": [
+    {
+      "en": "Brown back, white belly, black **breast** band",
+      "nl": "Bruine rug, witte buik, zwarte **borstband**"
+    },
+    {
+      "en": "Stands upright on bare, short-grass plains",
+      "nl": "Staat rechtop op kale vlaktes met kort gras"
+    },
+    {
+      "en": "Runs, then freezes; flies low and wheels away",
+      "nl": "Rent en staat dan stil; vliegt laag en zwenkt weg"
+    }
+  ]
+}

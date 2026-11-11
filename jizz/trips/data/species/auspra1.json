@@ -1,0 +1,22 @@
+{
+  "code": "auspra1",
+  "name": {
+    "en": "Australian Pratincole",
+    "nl": "Steltvorkstaartplevier"
+  },
+  "latin": "Glareola isabella",
+  "look_for": [
+    {
+      "en": "Plover-like body with long, tern-like wings",
+      "nl": "Lijf als een plevier met lange, sternachtige vleugels"
+    },
+    {
+      "en": "Sandy-olive above, chestnut-and-black underwing",
+      "nl": "Zandolijf boven, kastanjebruin-zwarte onderkant van de vleugel"
+    },
+    {
+      "en": "Hawks insects over dry plains and lake edges",
+      "nl": "Jaagt op insecten boven droge vlaktes en meeroevers"
+    }
+  ]
+}

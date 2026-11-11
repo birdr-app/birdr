@@ -1,0 +1,22 @@
+{
+  "code": "recbut1",
+  "name": {
+    "en": "Red-chested Buttonquail",
+    "nl": "Roodborstvechtkwartel"
+  },
+  "latin": "Turnix pyrrhothorax",
+  "look_for": [
+    {
+      "en": "Small, quail-like bird of damp grassland",
+      "nl": "Kleine, kwartelachtige vogel van vochtig grasland"
+    },
+    {
+      "en": "Orange-red **breast**, brighter in the female",
+      "nl": "Oranjerode **borst**, feller bij het vrouwtje"
+    },
+    {
+      "en": "Flushed from grass near water, drops quickly",
+      "nl": "Vliegt op uit gras bij water en valt snel neer"
+    }
+  ]
+}

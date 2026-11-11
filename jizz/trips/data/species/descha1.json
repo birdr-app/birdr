@@ -1,0 +1,22 @@
+{
+  "code": "descha1",
+  "name": {
+    "en": "Gibberbird",
+    "nl": "Woestijnschijnpaapje"
+  },
+  "latin": "Ashbyia lovensis",
+  "look_for": [
+    {
+      "en": "Ground chat, brown above, yellow below",
+      "nl": "Grondschijnpaapje, bruin boven, geel onder"
+    },
+    {
+      "en": "Male has a dark **breast** band",
+      "nl": "Mannetje met een donkere **borstband**"
+    },
+    {
+      "en": "Runs and stops, bobbing, on bare stony plains",
+      "nl": "Rent en staat stil, wippend, op kale stenige vlaktes"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "btnhen1",
+  "name": {
+    "en": "Black-tailed Nativehen",
+    "nl": "Australisch waterhoen"
+  },
+  "latin": "Tribonyx ventralis",
+  "look_for": [
+    {
+      "en": "Chicken-sized, dark grey-brown rail",
+      "nl": "Kippengrote, donkere grijsbruine ral"
+    },
+    {
+      "en": "Often holds its black **tail** cocked",
+      "nl": "Houdt de zwarte **staart** vaak omhoog"
+    },
+    {
+      "en": "Runs in groups over open ground and shallows",
+      "nl": "Rent in groepjes over open grond en ondiep water"
+    }
+  ]
+}

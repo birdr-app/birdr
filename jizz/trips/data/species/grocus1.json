@@ -1,0 +1,22 @@
+{
+  "code": "grocus1",
+  "name": {
+    "en": "Ground Cuckooshrike",
+    "nl": "Grondrupsvogel"
+  },
+  "latin": "Coracina maxima",
+  "look_for": [
+    {
+      "en": "Large, grey, black face and **throat**",
+      "nl": "Groot, grijs, zwart gezicht en zwarte **keel**"
+    },
+    {
+      "en": "Finely barred underparts, long tail",
+      "nl": "Fijn gebandeerde onderkant, lange staart"
+    },
+    {
+      "en": "Feeds on the ground in open woodland, flicking wings",
+      "nl": "Foerageert op de grond in open bos en klapt met de vleugels"
+    }
+  ]
+}

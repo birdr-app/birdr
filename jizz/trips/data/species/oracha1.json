@@ -1,0 +1,22 @@
+{
+  "code": "oracha1",
+  "name": {
+    "en": "Orange Chat",
+    "nl": "Oranje schijnpaapje"
+  },
+  "latin": "Epthianura aurifrons",
+  "look_for": [
+    {
+      "en": "Male orange-yellow with a black **bib**",
+      "nl": "Mannetje oranjegeel met een zwart **slabbetje**"
+    },
+    {
+      "en": "Female duller, pale yellow-orange",
+      "nl": "Vrouwtje doffer, bleek geeloranje"
+    },
+    {
+      "en": "Feeds on the ground in saltbush and samphire",
+      "nl": "Zoekt voedsel op de grond in zoutbos en zeekraal"
+    }
+  ]
+}

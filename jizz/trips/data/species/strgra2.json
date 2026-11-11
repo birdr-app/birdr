@@ -1,0 +1,22 @@
+{
+  "code": "strgra2",
+  "name": {
+    "en": "Striated Grasswren",
+    "nl": "Gestreepte grassluiper"
+  },
+  "latin": "Amytornis striatus",
+  "look_for": [
+    {
+      "en": "Slender, heavily streaked brown and white",
+      "nl": "Slank, sterk gestreept bruin en wit"
+    },
+    {
+      "en": "Long **tail** held cocked",
+      "nl": "Lange **staart** omhoog gehouden"
+    },
+    {
+      "en": "Runs between spinifex clumps",
+      "nl": "Rent tussen de spinifexpollen"
+    }
+  ]
+}
