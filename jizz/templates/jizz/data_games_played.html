@@ -383,7 +383,6 @@
                 const labels = payload.series.map((row) => formatLabel(row, payload.granularity));
                 const games = payload.series.map((row) => row.games);
                 const players = payload.series.map((row) => row.players);
-                const tripPrep = payload.series.map((row) => row.trip_prep_games || 0);
 
                 if (chart) {
                     chart.destroy();
@@ -399,15 +398,6 @@
                                 data: games,
                                 backgroundColor: "rgba(139, 100, 25, 0.75)",
                                 borderColor: "#8b6419",
-                                borderWidth: 1,
-                                yAxisID: "y",
-                                order: 2,
-                            },
-                            {
-                                label: "Trip prep games",
-                                data: tripPrep,
-                                backgroundColor: "rgba(46, 125, 80, 0.85)",
-                                borderColor: "#2e7d50",
                                 borderWidth: 1,
                                 yAxisID: "y",
                                 order: 2,

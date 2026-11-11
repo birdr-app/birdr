@@ -7,9 +7,8 @@ from django.db.models import Count
 from django.db.models.functions import TruncDay, TruncMonth, TruncWeek
 from django.utils import timezone
 
-from django.db.models import Q
 
-from jizz.models import Game, PlayerScore
+from jizz.models import PlayerScore
 from jizz.playable_regions import hyphen_parent_code
 
 Granularity = Literal['day', 'week', 'month']
@@ -148,12 +147,6 @@ def games_played_rows(
             .annotate(
                 games=Count('game_id', distinct=True),
                 players=Count('player_id', distinct=True),
-                trip_prep_games=Count(
-                    'game_id', distinct=True, filter=Q(game__game_type=Game.GAME_TYPE_TRIP_PREP),
-                ),
-                trip_prep_players=Count(
-                    'player_id', distinct=True, filter=Q(game__game_type=Game.GAME_TYPE_TRIP_PREP),
-                ),
             )
         )
     }
@@ -167,8 +160,6 @@ def games_played_rows(
                 'period_end': _end_period(period_start, end, granularity).isoformat(),
                 'games': bucket.get('games', 0),
                 'players': bucket.get('players', 0),
-                'trip_prep_games': bucket.get('trip_prep_games', 0),
-                'trip_prep_players': bucket.get('trip_prep_players', 0),
             }
         )
     return rows
