@@ -1,0 +1,148 @@
+{
+  "intro": {
+    "en": "This pack is for trips to Tasmania: Hobart, Bruny Island, Maria Island, Eaglehawk Neck and its pelagic trips, Cradle Mountain and the south-west. Its 65 birds come on top of the Australia trip, which already holds most Tasmanian endemics. They are the specialities of the wet forest and heath, some island visitors and, above all, the albatrosses, petrels and prions you meet on a pelagic trip.",
+    "nl": "Dit pakket is voor reizen naar Tasmanië: Hobart, Bruny Island, Maria Island, Eaglehawk Neck met zijn pelagische tochten, Cradle Mountain en het zuidwesten. De 65 vogels komen bovenop de reis door Australië, die de meeste Tasmaanse endemen al bevat. Het zijn de specialiteiten van nat bos en heide, enkele gasten van het eiland en vooral de albatrossen, stormvogels en prionen van een pelagische tocht."
+  },
+  "units": {
+    "grouse-quail-and-allies": {
+      "title": {
+        "en": "Quail, a bronzewing and a cuckoo",
+        "nl": "Kwartels, een bronsvleugelduif en een koekoek"
+      },
+      "intro": {
+        "en": "Brown and Stubble Quail live in grass and farmland and fly up with a whirr only when you nearly step on them. Brush Bronzewing walks on forest tracks and heath, and Shining Bronze-Cuckoo is a summer visitor you more often hear than see in the forest.",
+        "nl": "Bruine en Stoppelveldkwartels leven in gras en akkerland en vliegen snorrend op als je er bijna op trapt. De struikbronsvleugelduif loopt over bospaden en heide en de gouden bronskoekoek is een zomergast die je in het bos vaker hoort dan ziet."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "title": {
+        "en": "Crakes, a rail and a bittern",
+        "nl": "Kriekelrallen, een ral en een roerdomp"
+      },
+      "intro": {
+        "en": "These birds of reedbeds and wet grass hide well. Walk quietly along a marsh edge at dawn or dusk and wait. The bittern stands frozen among the reeds with its bill pointed up.",
+        "nl": "Deze vogels van rietkragen en nat gras verstoppen zich goed. Loop in de ochtend of avond rustig langs een moerasrand en wacht af. De roerdomp staat roerloos in het riet met de snavel omhoog."
+      }
+    },
+    "shorebirds": {
+      "title": {
+        "en": "Shorebirds from the Arctic",
+        "nl": "Steltlopers uit het noorden"
+      },
+      "intro": {
+        "en": "Tasmania's beaches and estuaries hold summer visitors from the Arctic and a few winter birds from New Zealand. Check the flocks at Orielton Lagoon, the Derwent shore and the sandy bays of the east coast.",
+        "nl": "De stranden en estuaria van Tasmanië huisvesten zomergasten uit het noordpoolgebied en een paar wintergasten uit Nieuw-Zeeland. Bekijk de groepen bij Orielton Lagoon, aan de oever van de Derwent en in de zandbaaien aan de oostkust."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {
+        "en": "Terns, a gull and two skuas",
+        "nl": "Sterns, een meeuw en twee jagers"
+      },
+      "intro": {
+        "en": "The terns fish the bays and lagoons, and the Kelp Gull is the big dark-backed gull of rocky coasts. The two skuas are pelagic birds that chase seabirds on the Eaglehawk Neck trips.",
+        "nl": "De sterns vissen in baaien en lagunes en de kelpmeeuw is de grote meeuw met donkere rug van rotskusten. De twee jagers zijn zeevogels die op de tochten vanaf Eaglehawk Neck andere zeevogels achtervolgen."
+      }
+    },
+    "albatrosses": {
+      "title": {
+        "en": "Albatrosses of the southern ocean",
+        "nl": "Albatrossen van de zuidelijke oceaan"
+      },
+      "intro": {
+        "en": "Pelagic trips from Eaglehawk Neck reach the edge of the continental shelf, where chum draws albatrosses to the boat. Winter has the most species. Look at the bill, the head and the underwing to tell them apart.",
+        "nl": "Pelagische tochten vanaf Eaglehawk Neck gaan naar de rand van het continentaal plat, waar lokvoer albatrossen naar de boot trekt. De winter levert de meeste soorten op. Let op snavel, kop en vleugelonderkant om ze uit elkaar te houden."
+      }
+    },
+    "storm-petrels": {
+      "title": {
+        "en": "Storm-petrels",
+        "nl": "Stormvogeltjes"
+      },
+      "intro": {
+        "en": "These small seabirds patter over the waves behind a boat. On Tasmanian trips they come to the chum slick. Watch the colour of the rump and belly, and how they use their feet.",
+        "nl": "Deze kleine zeevogels trippelen achter een boot over de golven. Op Tasmaanse tochten komen ze naar de lokvoerspoor. Let op de kleur van stuit en buik en hoe ze hun poten gebruiken."
+      }
+    },
+    "petrels-shearwaters-and-diving-petrels-1": {
+      "title": {
+        "en": "Petrels of the open ocean",
+        "nl": "Stormvogels van de open oceaan"
+      },
+      "intro": {
+        "en": "Big, fast petrels of the southern ocean. They arc over the waves on stiff wings and rarely come near land. Compare the size of the head and bill and the colour of the underwing.",
+        "nl": "Grote, snelle stormvogels van de zuidelijke oceaan. Ze maaien op stijve vleugels over de golven en komen zelden bij land. Vergelijk de grootte van kop en snavel en de kleur van de onderkant van de vleugel."
+      }
+    },
+    "petrels-shearwaters-and-diving-petrels-2": {
+      "title": {
+        "en": "Prions and a grey petrel",
+        "nl": "Prionen en een bruine stormvogel"
+      },
+      "intro": {
+        "en": "Prions are small blue-grey petrels that flutter low over the sea in flocks and are hard to separate; the width of the bill is the best clue. The Grey Petrel is larger and follows boats.",
+        "nl": "Prionen zijn kleine blauwgrijze stormvogels die in groepen laag over zee fladderen en moeilijk uit elkaar te houden zijn; de breedte van de snavel helpt het meest. De bruine stormvogel is groter en volgt boten."
+      }
+    },
+    "petrels-shearwaters-and-diving-petrels-3": {
+      "title": {
+        "en": "Shearwaters and diving-petrels",
+        "nl": "Pijlstormvogels en duikstormvogels"
+      },
+      "intro": {
+        "en": "Shearwaters skim the waves on stiff wings, sometimes in huge flocks, and nest in burrows on Tasmanian islands. The diving-petrel whirs low and drops into the water like a small auk.",
+        "nl": "Pijlstormvogels scheren op stijve vleugels over de golven, soms in enorme groepen, en nestelen in holen op Tasmaanse eilanden. De duikstormvogel snort laag over het water en valt erin als een kleine alk."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Owls and a goshawk",
+        "nl": "Uilen en een havik"
+      },
+      "intro": {
+        "en": "Two big night birds and a forest hawk. The Tasmanian Boobook and the Masked-Owl are easier to hear than to see; a night walk at Mount Field or on Bruny Island may turn them up. The Grey Goshawk hunts in forest and often shows as a white bird.",
+        "nl": "Twee grote nachtvogels en een bosroofvogel. De Tasmaanse boeboek en de kerkuil hoor je gemakkelijker dan je ze ziet; een nachtwandeling bij Mount Field of op Bruny Island kan ze opleveren. De grijze havik jaagt in bos en laat zich vaak zien als een witte vogel."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "title": {
+        "en": "Parrots and an emuwren",
+        "nl": "Papegaaien en een emoesluiper"
+      },
+      "intro": {
+        "en": "Three small parrots of heath and grassland, one of them, the Orange-bellied Parrot, among Australia's rarest birds, and a tiny long-tailed wren of the heath. Cradle Mountain and Melaleuca are the places for them.",
+        "nl": "Drie kleine papegaaien van heide en grasland, een ervan, de oranjebuikparkiet, behoort tot de zeldzaamste vogels van Australië, en een klein langstaartig vogeltje van de heide. Cradle Mountain en Melaleuca zijn de plekken voor deze vogels."
+      }
+    },
+    "honeyeaters": {
+      "title": {
+        "en": "Tasmanian honeyeaters",
+        "nl": "Tasmaanse honingeters"
+      },
+      "intro": {
+        "en": "Tasmania's forests and heaths have two honeyeaters found nowhere else and two widespread ones. Listen for the loud calls in gum forest and look at the head pattern.",
+        "nl": "In de bossen en heiden van Tasmanië leven twee honingeters die nergens anders voorkomen en twee algemene. Luister naar de luide roepen in eucalyptusbos en let op de kopaftekening."
+      }
+    },
+    "thornbills-and-allies": {
+      "title": {
+        "en": "Small birds of scrub and wet forest",
+        "nl": "Kleine vogels van struikgewas en nat bos"
+      },
+      "intro": {
+        "en": "A fieldwren on coastal heath, a thornbill in the shrubs and two Tasmanian specialities of wet forest, the Scrubtit and Olive Whistler. Cradle Mountain and Mount Field are the best places for the last two.",
+        "nl": "Een struiksluiper op kustheide, een doornsnavel in de struiken en twee Tasmaanse specialiteiten van nat bos, de kleine Tasmaanse struiksluiper en de bruine fluiter. Cradle Mountain en Mount Field zijn de beste plekken voor die laatste twee."
+      }
+    },
+    "woodswallows": {
+      "title": {
+        "en": "Bush and farmland birds",
+        "nl": "Vogels van bos en akkerland"
+      },
+      "intro": {
+        "en": "A mixed unit of five birds: a woodswallow in the air above forest edges, a large currawong with a metallic call, a small finch of the undergrowth, a summer-visiting flycatcher, and an introduced finch around towns.",
+        "nl": "Een gemengde groep van vijf vogels: een spitsvogel in de lucht boven bosranden, een grote klauwierkraai met een metaalachtige roep, een klein vinkje van het kreupelhout, een vliegenvanger die in de zomer komt en een uitheemse vink bij dorpen."
+      }
+    }
+  }
+}
