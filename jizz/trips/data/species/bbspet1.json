@@ -1,0 +1,22 @@
+{
+  "code": "bbspet1",
+  "name": {
+    "en": "Black-bellied Storm-Petrel",
+    "nl": "Zwartbuikstormvogeltje"
+  },
+  "latin": "Fregetta tropica",
+  "look_for": [
+    {
+      "en": "Black-and-white storm-petrel with a dark belly stripe",
+      "nl": "Zwart-wit stormvogeltje met donkere streep over de buik"
+    },
+    {
+      "en": "White **rump**, black head and **breast**",
+      "nl": "Witte **stuit**, zwarte kop en **borst**"
+    },
+    {
+      "en": "Bounces and kicks off the waves on long legs",
+      "nl": "Stuitert en springt van de golven op lange poten"
+    }
+  ]
+}

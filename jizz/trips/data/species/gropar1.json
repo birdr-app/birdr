@@ -1,0 +1,22 @@
+{
+  "code": "gropar1",
+  "name": {
+    "en": "Ground Parrot",
+    "nl": "Grondpapegaai"
+  },
+  "latin": "Pezoporus wallicus",
+  "look_for": [
+    {
+      "en": "Slender, long-tailed green parrot on the ground",
+      "nl": "Slanke, langstaartige groene papegaai op de grond"
+    },
+    {
+      "en": "Barred and streaked yellow-green, orange **forehead** band",
+      "nl": "Gebandeerd en gestreept geelgroen, oranje band op het **voorhoofd**"
+    },
+    {
+      "en": "Flushes from heath and flies low and fast",
+      "nl": "Vliegt op uit heide en vliegt laag en snel"
+    }
+  ]
+}

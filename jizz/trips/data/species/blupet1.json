@@ -1,0 +1,22 @@
+{
+  "code": "blupet1",
+  "name": {
+    "en": "Blue Petrel",
+    "nl": "Blauwe stormvogel"
+  },
+  "latin": "Halobaena caerulea",
+  "look_for": [
+    {
+      "en": "Small blue-grey petrel with a dark **M** across the wings",
+      "nl": "Kleine blauwgrijze stormvogel met donkere **M** over de vleugels"
+    },
+    {
+      "en": "Dark **cap**, white tail tip",
+      "nl": "Donkere **kap**, witte staartpunt"
+    },
+    {
+      "en": "Fast, flutters low like a prion",
+      "nl": "Snel en fladderend laag, als een prion"
+    }
+  ]
+}

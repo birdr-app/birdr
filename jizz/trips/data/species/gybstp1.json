@@ -1,0 +1,22 @@
+{
+  "code": "gybstp1",
+  "name": {
+    "en": "Grey-backed Storm-Petrel",
+    "nl": "Grijsrugstormvogeltje"
+  },
+  "latin": "Garrodia nereis",
+  "look_for": [
+    {
+      "en": "Small, pale grey-backed storm-petrel",
+      "nl": "Klein stormvogeltje met lichtgrijze rug"
+    },
+    {
+      "en": "White belly, grey **breast** and dark face",
+      "nl": "Witte buik, grijze **borst** en donker gezicht"
+    },
+    {
+      "en": "Flutters low, long legs trail behind",
+      "nl": "Fladdert laag, lange poten hangen achter"
+    }
+  ]
+}

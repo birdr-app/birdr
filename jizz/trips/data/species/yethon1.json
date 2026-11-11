@@ -1,0 +1,22 @@
+{
+  "code": "yethon1",
+  "name": {
+    "en": "Yellow-throated Honeyeater",
+    "nl": "Geelkeelhoningeter"
+  },
+  "latin": "Nesoptilotis flavicollis",
+  "look_for": [
+    {
+      "en": "Olive-green honeyeater with a **yellow** throat",
+      "nl": "Olijfgroene honingeter met een **gele** keel"
+    },
+    {
+      "en": "Dark grey **head**, bold black ear patch",
+      "nl": "Donkergrijze **kop**, opvallende zwarte vlek op het oor"
+    },
+    {
+      "en": "Common, noisy and bold in Tasmanian forest",
+      "nl": "Gewoon, luidruchtig en brutaal in Tasmaans bos"
+    }
+  ]
+}

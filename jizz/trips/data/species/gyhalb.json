@@ -1,0 +1,22 @@
+{
+  "code": "gyhalb",
+  "name": {
+    "en": "Grey-headed Albatross",
+    "nl": "Grijskopalbatros"
+  },
+  "latin": "Thalassarche chrysostoma",
+  "look_for": [
+    {
+      "en": "Dark grey head and neck, black-and-white wings",
+      "nl": "Donkergrijze kop en hals, zwart-witte vleugels"
+    },
+    {
+      "en": "Mostly black **bill** with yellow top and bottom",
+      "nl": "Overwegend zwarte **snavel** met gele boven- en onderrand"
+    },
+    {
+      "en": "Smaller than royal albatrosses, white underwings, dark edges",
+      "nl": "Kleiner dan koningsalbatrossen, witte onderkant met donkere randen"
+    }
+  ]
+}

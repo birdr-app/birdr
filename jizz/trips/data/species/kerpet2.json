@@ -1,0 +1,22 @@
+{
+  "code": "kerpet2",
+  "name": {
+    "en": "Kerguelen Petrel",
+    "nl": "Kerguelenstormvogel"
+  },
+  "latin": "Aphrodroma brevirostris",
+  "look_for": [
+    {
+      "en": "Stocky grey petrel with a large dark **head**",
+      "nl": "Gedrongen grijze stormvogel met grote donkere **kop**"
+    },
+    {
+      "en": "Short stubby **bill**, pale grey back",
+      "nl": "Korte dikke **snavel**, lichtgrijze rug"
+    },
+    {
+      "en": "Dark **eye** patch, white underwings with dark tips",
+      "nl": "Donkere vlek om het **oog**, witte vleugels met donkere punten"
+    }
+  ]
+}

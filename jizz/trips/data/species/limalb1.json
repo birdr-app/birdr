@@ -1,0 +1,22 @@
+{
+  "code": "limalb1",
+  "name": {
+    "en": "Light-mantled Albatross",
+    "nl": "Roetkopalbatros"
+  },
+  "latin": "Phoebetria palpebrata",
+  "look_for": [
+    {
+      "en": "Slender sooty albatross with pale grey back",
+      "nl": "Slanke roetbruine albatros met lichtgrijze rug"
+    },
+    {
+      "en": "Dark head, white crescent behind the **eye**",
+      "nl": "Donkere kop, witte halvemaan achter het **oog**"
+    },
+    {
+      "en": "Blue stripe on the dark **bill**",
+      "nl": "Blauwe streep op de donkere **snavel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "strfie1",
+  "name": {
+    "en": "Striated Fieldwren",
+    "nl": "Gestreepte struiksluiper"
+  },
+  "latin": "Calamanthus fuliginosus",
+  "look_for": [
+    {
+      "en": "Small streaky brown bird, cocked **tail**",
+      "nl": "Klein gestreept bruin vogeltje met opgerichte **staart**"
+    },
+    {
+      "en": "Dark streaking on the **breast**, rusty rump",
+      "nl": "Donkere strepen op de **borst**, roestbruine stuit"
+    },
+    {
+      "en": "Hops on the ground in heath and coastal scrub",
+      "nl": "Hipt over de grond in heide en kustbos"
+    }
+  ]
+}
