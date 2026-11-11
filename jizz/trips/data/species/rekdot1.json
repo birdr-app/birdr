@@ -1,0 +1,22 @@
+{
+  "code": "rekdot1",
+  "name": {
+    "en": "Red-kneed Dotterel",
+    "nl": "Roodknieplevier"
+  },
+  "latin": "Erythrogonys cinctus",
+  "look_for": [
+    {
+      "en": "Chestnut-brown **breast** patch, black cap",
+      "nl": "Kastanjebruine **borstvlek**, zwarte kap"
+    },
+    {
+      "en": "Red **bill** with black tip, red **knees**",
+      "nl": "Rode **snavel** met zwarte punt, rode **knieën**"
+    },
+    {
+      "en": "Wades in muddy freshwater pools",
+      "nl": "Waadt in modderige zoetwaterpoelen"
+    }
+  ]
+}

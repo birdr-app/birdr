@@ -1,0 +1,22 @@
+{
+  "code": "fospar1",
+  "name": {
+    "en": "Forty-spotted Pardalote",
+    "nl": "Tasmaanse diamantvogel"
+  },
+  "latin": "Pardalotus quadragintus",
+  "look_for": [
+    {
+      "en": "Tiny green-grey bird with dark **cap**",
+      "nl": "Klein groengrijs vogeltje met donkere **kap**"
+    },
+    {
+      "en": "White spots on the **crown**",
+      "nl": "Witte stippen op de **kruin**"
+    },
+    {
+      "en": "Feeds in manna gum foliage",
+      "nl": "Zoekt voedsel in het blad van manna-eucalyptus"
+    }
+  ]
+}

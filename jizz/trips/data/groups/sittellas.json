@@ -1,0 +1,18 @@
+{
+  "slug": "sittellas",
+  "about": {
+    "en": "Small, bark-gleaning birds with a thin, slightly upturned bill and a stubby tail, moving in flocks head-first down tree trunks and along branches. They do not need to hop up like a treecreeper and are always noisy and on the move.",
+    "nl": "Kleine vogels die schors afzoeken, met een dunne, licht omhoog gebogen snavel en een korte staart. Ze trekken in groepen kop-eerst langs stammen en takken naar beneden. Ze zijn altijd luidruchtig en onderweg."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "nuthatches"
+      ],
+      "text": {
+        "en": "Not related to the nuthatches you know, though they too climb head-first down trunks. Sittellas are smaller, with an upturned bill, and move in noisy groups.",
+        "nl": "Niet verwant aan de boomklevers die je kent, al klimmen ook zij met de kop omlaag langs stammen. Sittella's zijn kleiner, met een omhoog gebogen snavel, en trekken in luidruchtige groepen."
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "solpet1",
+  "name": {
+    "en": "Providence Petrel",
+    "nl": "Solanderstormvogel"
+  },
+  "latin": "Pterodroma solandri",
+  "look_for": [
+    {
+      "en": "Dark, chocolate-brown petrel at sea",
+      "nl": "Donkere, chocoladebruine stormvogel op zee"
+    },
+    {
+      "en": "Pale **flash** at base of primaries",
+      "nl": "Witte **flits** aan de basis van de handpennen"
+    },
+    {
+      "en": "Fast, arcing flight on stiff wings",
+      "nl": "Snelle, boogvormige vlucht op stijve vleugels"
+    }
+  ]
+}

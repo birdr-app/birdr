@@ -1,0 +1,22 @@
+{
+  "code": "torimp1",
+  "name": {
+    "en": "Torresian Imperial-Pigeon",
+    "nl": "Australische muskaatduif"
+  },
+  "latin": "Ducula spilorrhoa",
+  "look_for": [
+    {
+      "en": "Large white pigeon with black **wing** tips",
+      "nl": "Grote witte duif met zwarte **vleugel**punten"
+    },
+    {
+      "en": "Black **tail** tip, cream-white **head**",
+      "nl": "Zwarte **staart**punt, crèmewitte **kop**"
+    },
+    {
+      "en": "Flies in flocks between islands and coast",
+      "nl": "Vliegt in groepen tussen eilanden en kust"
+    }
+  ]
+}

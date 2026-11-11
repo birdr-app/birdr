@@ -1,0 +1,18 @@
+{
+  "slug": "australian-treecreepers",
+  "about": {
+    "en": "Small to medium brown birds that climb tree trunks and branches in short spiral hops, probing the bark for insects with a fine, slightly curved bill. Unlike the true treecreepers, many also feed on the ground, and they fly short distances from tree to tree.",
+    "nl": "Kleine tot middelgrote bruine vogels die in korte spiraalvormige sprongen langs stammen en takken klimmen en met een fijne, licht gebogen snavel in de schors naar insecten zoeken. Anders dan echte boomkruipers foerageren veel van hen ook op de grond en vliegen ze korte stukjes van boom naar boom."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "treecreepers"
+      ],
+      "text": {
+        "en": "Not related to the treecreepers you know. They climb in a similar way, but also hop along the ground and do not use the tail as a prop.",
+        "nl": "Niet verwant aan de boomkruipers die je kent. Ze klimmen op een vergelijkbare manier, maar hippen ook over de grond en steunen niet op hun staart."
+      }
+    }
+  ]
+}

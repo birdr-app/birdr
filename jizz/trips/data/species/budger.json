@@ -1,0 +1,22 @@
+{
+  "code": "budger",
+  "name": {
+    "en": "Budgerigar",
+    "nl": "Grasparkiet"
+  },
+  "latin": "Melopsittacus undulatus",
+  "look_for": [
+    {
+      "en": "Small slim green parrot, yellow **head** barred black",
+      "nl": "Kleine slanke groene papegaai, gele **kop** met zwarte strepen"
+    },
+    {
+      "en": "Blue **cheek** spots, long thin **tail**",
+      "nl": "Blauwe **wangvlekken**, lange dunne **staart**"
+    },
+    {
+      "en": "Fast, flocking nomad of dry inland plains",
+      "nl": "Snelle, zwervende groepsvogel van droge binnenlandvlaktes"
+    }
+  ]
+}

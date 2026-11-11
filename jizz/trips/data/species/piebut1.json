@@ -1,0 +1,22 @@
+{
+  "code": "piebut1",
+  "name": {
+    "en": "Pied Butcherbird",
+    "nl": "Zwartkeelorgelvogel"
+  },
+  "latin": "Cracticus nigrogularis",
+  "look_for": [
+    {
+      "en": "Black-and-white butcherbird, black **throat**",
+      "nl": "Zwart-witte orgelvogel met zwarte **keel**"
+    },
+    {
+      "en": "Strong hook-tipped bluish **bill**",
+      "nl": "Sterke blauwachtige **snavel** met haak"
+    },
+    {
+      "en": "Rich, flute-like song at dawn",
+      "nl": "Rijke, fluitende zang bij zonsopgang"
+    }
+  ]
+}

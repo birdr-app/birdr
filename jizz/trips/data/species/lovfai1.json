@@ -1,0 +1,22 @@
+{
+  "code": "lovfai1",
+  "name": {
+    "en": "Lovely Fairywren",
+    "nl": "Roestflankelfje"
+  },
+  "latin": "Malurus amabilis",
+  "look_for": [
+    {
+      "en": "Male black with bright blue back and **cheek**",
+      "nl": "Man zwart met felblauwe rug en **wang**"
+    },
+    {
+      "en": "Black **crown**, blue **cheek** patches",
+      "nl": "Zwarte **kruin**, blauwe **wang**vlekken"
+    },
+    {
+      "en": "Female rusty-brown, tail often cocked",
+      "nl": "Vrouw roestbruin, staart vaak omhoog"
+    }
+  ]
+}

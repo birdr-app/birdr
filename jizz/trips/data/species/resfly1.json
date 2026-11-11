@@ -1,0 +1,22 @@
+{
+  "code": "resfly1",
+  "name": {
+    "en": "Restless Flycatcher",
+    "nl": "Grote witkeelmonarch"
+  },
+  "latin": "Myiagra inquieta",
+  "look_for": [
+    {
+      "en": "Black-and-white with **throat** pure white",
+      "nl": "Zwart en wit met zuiver witte **keel**"
+    },
+    {
+      "en": "Glossy blue-black **head** and back",
+      "nl": "Glanzend blauwzwarte **kop** en rug"
+    },
+    {
+      "en": "Hovers and grinds like a chattering insect",
+      "nl": "Zweeft biddend en maakt een krassend geluid"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "polpar1",
+  "name": {
+    "en": "Australian Ringneck",
+    "nl": "Halsringparkiet"
+  },
+  "latin": "Barnardius zonarius",
+  "look_for": [
+    {
+      "en": "Green parrot with yellow **collar**",
+      "nl": "Groene papegaai met gele **halsband**"
+    },
+    {
+      "en": "Dark **head** and bluish **cheeks**, small red **frontal band**",
+      "nl": "Donkere **kop** en blauwachtige **wangen**, klein rood **voorhoofd**"
+    },
+    {
+      "en": "Long **tail**, ringing '28' call",
+      "nl": "Lange **staart**, roep klinkt als '28'"
+    }
+  ]
+}

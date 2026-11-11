@@ -1,0 +1,22 @@
+{
+  "code": "torcro2",
+  "name": {
+    "en": "Torresian Crow",
+    "nl": "Australische kraai"
+  },
+  "latin": "Corvus orru",
+  "look_for": [
+    {
+      "en": "All black with a white eye",
+      "nl": "Geheel zwart met wit oog"
+    },
+    {
+      "en": "Short **throat** hackles, a slimmer build",
+      "nl": "Korte **keel**veren en slanker postuur"
+    },
+    {
+      "en": "Short, nasal 'ah-ah-ah' call",
+      "nl": "Korte, neusachtige 'ah-ah-ah'-roep"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "azukin1",
+  "name": {
+    "en": "Azure Kingfisher",
+    "nl": "Azuurijsvogel"
+  },
+  "latin": "Ceyx azureus",
+  "look_for": [
+    {
+      "en": "Small kingfisher, deep blue above, orange below",
+      "nl": "Kleine ijsvogel, diepblauw boven, oranje onder"
+    },
+    {
+      "en": "Small white patch on **neck** side",
+      "nl": "Klein wit vlekje op de **halszijde**"
+    },
+    {
+      "en": "Perches low over shady creeks and pools",
+      "nl": "Zit laag boven beschaduwde beken en poelen"
+    }
+  ]
+}

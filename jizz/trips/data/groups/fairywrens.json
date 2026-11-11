@@ -1,0 +1,18 @@
+{
+  "slug": "fairywrens",
+  "about": {
+    "en": "Tiny, long-tailed, active birds that hop on the ground and in low shrubs with the tail held upright. Males in breeding plumage are bright blue, purple or red; females and young males are brown. They live in family groups, and the males often carry a petal or flower to a rival or mate.",
+    "nl": "Piepkleine, langstaartige, bedrijvige vogels die hippend over de grond en door lage struiken gaan met de staart rechtop. Mannetjes in broedkleed zijn helderblauw, paars of rood; vrouwtjes en jonge mannetjes zijn bruin. Ze leven in familiegroepen en de mannetjes dragen vaak een bloemblaadje of bloem naar een rivaal of partner."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "wrens"
+      ],
+      "text": {
+        "en": "Not related to the wrens you know, though they share the cocked tail and the small size. Fairywrens are even more active, and the male is often brilliantly coloured.",
+        "nl": "Niet verwant aan de winterkoninkjes die je kent, al hebben ze net als die de opgerichte staart en het kleine formaat. Elfjes zijn nog onrustiger en het mannetje is vaak schitterend gekleurd."
+      }
+    }
+  ]
+}

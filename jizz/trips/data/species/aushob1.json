@@ -1,0 +1,22 @@
+{
+  "code": "aushob1",
+  "name": {
+    "en": "Australian Hobby",
+    "nl": "Australische boomvalk"
+  },
+  "latin": "Falco longipennis",
+  "look_for": [
+    {
+      "en": "Small slim falcon with long pointed **wings**",
+      "nl": "Kleine slanke valk met lange spitse **vleugels**"
+    },
+    {
+      "en": "Dark cap, rusty collar, pale **cheek**",
+      "nl": "Donkere kap, roestkleurige nek, lichte **wang**"
+    },
+    {
+      "en": "Fast low chases of small birds",
+      "nl": "Snelle lage jacht op kleine vogels"
+    }
+  ]
+}

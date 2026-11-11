@@ -1,0 +1,22 @@
+{
+  "code": "phecou2",
+  "name": {
+    "en": "Pheasant Coucal",
+    "nl": "Fazantspoorkoekoek"
+  },
+  "latin": "Centropus phasianinus",
+  "look_for": [
+    {
+      "en": "Long broad **tail** and rusty **wings**",
+      "nl": "Lange brede **staart** en roestbruine **vleugels**"
+    },
+    {
+      "en": "Streaked brown **body**, heavy build",
+      "nl": "Gestreept bruin **lijf**, zware bouw"
+    },
+    {
+      "en": "Clambers through tall grass, flies weakly",
+      "nl": "Klautert door hoog gras, vliegt zwak"
+    }
+  ]
+}

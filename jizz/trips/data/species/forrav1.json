@@ -1,0 +1,22 @@
+{
+  "code": "forrav1",
+  "name": {
+    "en": "Forest Raven",
+    "nl": "Tasmaanse raaf"
+  },
+  "latin": "Corvus tasmanicus",
+  "look_for": [
+    {
+      "en": "Large black corvid with a white eye",
+      "nl": "Grote zwarte kraaiachtige met wit oog"
+    },
+    {
+      "en": "Heavy **bill** and dense **throat** hackles",
+      "nl": "Zware **snavel** en dichte **keel**veren"
+    },
+    {
+      "en": "Tasmanian; deep, croaking, drawn-out call",
+      "nl": "Alleen Tasmanië; diepe, krassende, gerekte roep"
+    }
+  ]
+}

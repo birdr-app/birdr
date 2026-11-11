@@ -1,0 +1,22 @@
+{
+  "code": "litrav1",
+  "name": {
+    "en": "Little Raven",
+    "nl": "Kleine raaf"
+  },
+  "latin": "Corvus mellori",
+  "look_for": [
+    {
+      "en": "All black, white eye, smaller than a raven",
+      "nl": "Geheel zwart met wit oog, kleiner dan een raaf"
+    },
+    {
+      "en": "Short **throat** hackles, quick **wing** flicks when calling",
+      "nl": "Korte **keel**veren, snelle **vleugel**slagen tijdens het roepen"
+    },
+    {
+      "en": "Nasal, higher 'aa-aa' call; flocks in open country",
+      "nl": "Neusachtige, hogere 'aa-aa'-roep; groepen in open land"
+    }
+  ]
+}

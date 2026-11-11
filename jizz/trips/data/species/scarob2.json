@@ -1,0 +1,22 @@
+{
+  "code": "scarob2",
+  "name": {
+    "en": "Scarlet Robin",
+    "nl": "Scharlaken vliegenvanger"
+  },
+  "latin": "Petroica boodang",
+  "look_for": [
+    {
+      "en": "Male has scarlet **breast** and black **head**",
+      "nl": "Man heeft scharlaken **borst** en zwarte **kop**"
+    },
+    {
+      "en": "White spot above the **bill**",
+      "nl": "Witte vlek boven de **snavel**"
+    },
+    {
+      "en": "Black back, white **wing bar**",
+      "nl": "Zwarte rug, witte **vleugelstreep**"
+    }
+  ]
+}

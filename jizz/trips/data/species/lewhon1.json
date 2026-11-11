@@ -1,0 +1,22 @@
+{
+  "code": "lewhon1",
+  "name": {
+    "en": "Lewin's Honeyeater",
+    "nl": "Geeloorhoningeter"
+  },
+  "latin": "Meliphaga lewinii",
+  "look_for": [
+    {
+      "en": "Dark brown honeyeater with a pale yellow **ear** patch",
+      "nl": "Donkerbruine honingeter met een lichtgele vlek op het **oor**"
+    },
+    {
+      "en": "Rainforest and wet forest, fairly big and heavy",
+      "nl": "Regenwoud en nat bos, vrij groot en zwaar"
+    },
+    {
+      "en": "Rattling, machine-gun call",
+      "nl": "Ratelende roep als een machinegeweer"
+    }
+  ]
+}

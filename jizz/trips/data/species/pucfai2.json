@@ -1,0 +1,22 @@
+{
+  "code": "pucfai2",
+  "name": {
+    "en": "Purple-crowned Fairywren",
+    "nl": "Purperkruinelfje"
+  },
+  "latin": "Malurus coronatus",
+  "look_for": [
+    {
+      "en": "Male: purple **crown** and black **mask**",
+      "nl": "Man: paarse **kruin** en zwart **masker**"
+    },
+    {
+      "en": "Blue-grey **tail**, brown back",
+      "nl": "Blauwgrijze **staart**, bruine rug"
+    },
+    {
+      "en": "Female has chestnut **lores**, no mask",
+      "nl": "Vrouw met kastanjebruine **teugel**, geen masker"
+    }
+  ]
+}

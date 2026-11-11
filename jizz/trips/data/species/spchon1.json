@@ -1,0 +1,22 @@
+{
+  "code": "spchon1",
+  "name": {
+    "en": "Spiny-cheeked Honeyeater",
+    "nl": "Goudkeelhoningeter"
+  },
+  "latin": "Acanthagenys rufogularis",
+  "look_for": [
+    {
+      "en": "Streaked grey-brown with black **bib** and moustache",
+      "nl": "Gestreept grijsbruin met zwarte **bef** en snorstreep"
+    },
+    {
+      "en": "Rusty **throat** and long curved **bill**",
+      "nl": "Roestige **keel** en lange gebogen **snavel**"
+    },
+    {
+      "en": "Pale **tail** tip, bare patch behind **eye**",
+      "nl": "Lichte **staart**punt, kale vlek achter het **oog**"
+    }
+  ]
+}

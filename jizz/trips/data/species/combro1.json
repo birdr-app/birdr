@@ -1,0 +1,22 @@
+{
+  "code": "combro1",
+  "name": {
+    "en": "Common Bronzewing",
+    "nl": "Bronsvleugelduif"
+  },
+  "latin": "Phaps chalcoptera",
+  "look_for": [
+    {
+      "en": "Plump brown pigeon with iridescent **wing** patches",
+      "nl": "Volle bruine duif met glanzende **vleugel**vlekken"
+    },
+    {
+      "en": "Pale forehead, dark line through **eye**",
+      "nl": "Lichte voorhoofd, donkere streep door het **oog**"
+    },
+    {
+      "en": "Flies off fast with clattering wings",
+      "nl": "Vliegt snel weg met klapperende vleugels"
+    }
+  ]
+}

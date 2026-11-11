@@ -1,0 +1,22 @@
+{
+  "code": "grecat1",
+  "name": {
+    "en": "Green Catbird",
+    "nl": "Groene katvogel"
+  },
+  "latin": "Ailuroedus crassirostris",
+  "look_for": [
+    {
+      "en": "Plump green bird with pale **bill** and red **eye**",
+      "nl": "Gedrongen groene vogel met lichte **snavel** en rood **oog**"
+    },
+    {
+      "en": "Pale-spotted **head** and **wings**",
+      "nl": "Lichte vlekken op **kop** en **vleugels**"
+    },
+    {
+      "en": "Cat-like wailing call in rainforest",
+      "nl": "Kattachtig jammerende roep in regenwoud"
+    }
+  ]
+}

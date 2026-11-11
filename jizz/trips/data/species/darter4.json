@@ -1,0 +1,22 @@
+{
+  "code": "darter4",
+  "name": {
+    "en": "Australasian Darter",
+    "nl": "Australische slangenhalsvogel"
+  },
+  "latin": "Anhinga novaehollandiae",
+  "look_for": [
+    {
+      "en": "Snake-like **neck**, dagger **bill**",
+      "nl": "Slangachtige **hals**, dolkvormige **snavel**"
+    },
+    {
+      "en": "Male dark; female pale **breast**",
+      "nl": "Man donker; vrouw met lichte **borst**"
+    },
+    {
+      "en": "Swims low in water, perches wings open",
+      "nl": "Zwemt diep in water, zit met open vleugels"
+    }
+  ]
+}

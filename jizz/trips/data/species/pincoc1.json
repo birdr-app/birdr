@@ -1,0 +1,22 @@
+{
+  "code": "pincoc1",
+  "name": {
+    "en": "Pink Cockatoo",
+    "nl": "Incakaketoe"
+  },
+  "latin": "Cacatua leadbeateri",
+  "look_for": [
+    {
+      "en": "White cockatoo with pink **breast** and **belly**",
+      "nl": "Witte kaketoe met roze **borst** en **buik**"
+    },
+    {
+      "en": "Raised **crest** striped red, yellow, white",
+      "nl": "Opgeheven **kuif** met rode, gele en witte banden"
+    },
+    {
+      "en": "Soft, drawn-out calls in dry woodland",
+      "nl": "Zachte, gerekte roepen in droog bos"
+    }
+  ]
+}

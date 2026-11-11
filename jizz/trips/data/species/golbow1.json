@@ -1,0 +1,22 @@
+{
+  "code": "golbow1",
+  "name": {
+    "en": "Golden Bowerbird",
+    "nl": "Meiboombouwer"
+  },
+  "latin": "Prionodura newtoniana",
+  "look_for": [
+    {
+      "en": "Small, golden-yellow and olive-brown bowerbird",
+      "nl": "Kleine gouden gele en olijfbruine prieelvogel"
+    },
+    {
+      "en": "Male: gold **crown** and **underparts**",
+      "nl": "Man: gouden **kruin** en **onderkant**"
+    },
+    {
+      "en": "Twin-towered bower in mountain rainforest",
+      "nl": "Twee torens als prieel in bergregenwoud"
+    }
+  ]
+}

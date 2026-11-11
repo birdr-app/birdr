@@ -1,0 +1,22 @@
+{
+  "code": "auspel1",
+  "name": {
+    "en": "Australian Pelican",
+    "nl": "Australische pelikaan"
+  },
+  "latin": "Pelecanus conspicillatus",
+  "look_for": [
+    {
+      "en": "Huge white pelican, black **wings**",
+      "nl": "Enorme witte pelikaan met zwarte **vleugels**"
+    },
+    {
+      "en": "Giant pink **bill** with a pouch",
+      "nl": "Gigantische roze **snavel** met een keelzak"
+    },
+    {
+      "en": "Soars on thermals in big flocks",
+      "nl": "Zweeft op thermiek in grote groepen"
+    }
+  ]
+}

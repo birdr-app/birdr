@@ -1,0 +1,22 @@
+{
+  "code": "ausrav1",
+  "name": {
+    "en": "Australian Raven",
+    "nl": "Australische raaf"
+  },
+  "latin": "Corvus coronoides",
+  "look_for": [
+    {
+      "en": "Large black crow-like bird with a white eye",
+      "nl": "Grote zwarte kraaiachtige vogel met wit oog"
+    },
+    {
+      "en": "Long **throat** hackles, heavy **bill**",
+      "nl": "Lange **keel**veren en zware **snavel**"
+    },
+    {
+      "en": "Slow, drawn-out call ending on a falling note",
+      "nl": "Langzame, gerekte roep met een dalende slotnoot"
+    }
+  ]
+}

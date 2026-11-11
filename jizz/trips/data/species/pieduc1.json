@@ -1,0 +1,22 @@
+{
+  "code": "pieduc1",
+  "name": {
+    "en": "Pink-eared Duck",
+    "nl": "Lepelbekeend"
+  },
+  "latin": "Malacorhynchus membranaceus",
+  "look_for": [
+    {
+      "en": "Small pale duck with a huge spatulate **bill**",
+      "nl": "Kleine bleke eend met een enorme lepelvormige **snavel**"
+    },
+    {
+      "en": "Pink patch behind the **eye**",
+      "nl": "Roze vlek achter het **oog**"
+    },
+    {
+      "en": "Barred flanks, dark eye patch",
+      "nl": "Gebandeerde flanken, donkere oogvlek"
+    }
+  ]
+}

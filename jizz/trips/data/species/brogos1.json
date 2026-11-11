@@ -1,0 +1,22 @@
+{
+  "code": "brogos1",
+  "name": {
+    "en": "Brown Goshawk",
+    "nl": "Bruine havik"
+  },
+  "latin": "Tachyspiza fasciata",
+  "look_for": [
+    {
+      "en": "Slim hawk with rufous-barred **breast** and **belly**",
+      "nl": "Slanke havik met roestbruin gebandeerde **borst** en **buik**"
+    },
+    {
+      "en": "Grey **back**, rufous **nape**, long barred **tail**",
+      "nl": "Grijze **rug**, roestbruine **nek**, lange gebande **staart**"
+    },
+    {
+      "en": "Yellow **eye** and **legs**; hunts in woodland and gardens",
+      "nl": "Gele **ogen** en **poten**, jaagt in bos en tuinen"
+    }
+  ]
+}

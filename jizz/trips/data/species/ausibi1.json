@@ -1,0 +1,22 @@
+{
+  "code": "ausibi1",
+  "name": {
+    "en": "Australian Ibis",
+    "nl": "Australische witte ibis"
+  },
+  "latin": "Threskiornis molucca",
+  "look_for": [
+    {
+      "en": "White ibis with bare black **head** and neck",
+      "nl": "Witte ibis met kale zwarte **kop** en **hals**"
+    },
+    {
+      "en": "Long, thick down-curved black **bill**",
+      "nl": "Lange, dikke, gebogen zwarte **snavel**"
+    },
+    {
+      "en": "Black plumes on **back**; scavenges in towns",
+      "nl": "Zwarte pluimen op de **rug**, zoekt voedsel in steden"
+    }
+  ]
+}

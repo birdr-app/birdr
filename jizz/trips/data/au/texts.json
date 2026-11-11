@@ -1,0 +1,1212 @@
+{
+  "country": "AU",
+  "intro": {
+    "en": "Australia is a continent of its own: millions of years of isolation produced parrots, honeyeaters and fairywrens that live nowhere else. Many of the birds you will see first are loud, confident and easy: kookaburras, magpies, lorikeets and cockatoos. This trip covers 294 species: the regular birds of the coast, the cities, the forests and the outback, 127 endemics and the seabirds of a pelagic trip.",
+    "nl": "Australië is een werelddeel op zich: miljoenen jaren isolatie brachten papegaaien, honingeters en elfjes voort die nergens anders leven. Veel van de vogels die je het eerst ziet zijn luid, brutaal en makkelijk: kookaburra's, fluitvogels, lori's en kaketoes. Deze trip omvat 294 soorten: de gewone vogels van kust, steden, bossen en outback, 127 endemische soorten en de zeevogels van een pelagische tocht."
+  },
+  "groups": {
+    "cassowaries-and-emu": {
+      "here": {
+        "en": "Emu is widespread in open country, often at the roadside in the outback. Southern Cassowary lives only in the rainforests of Far North Queensland; the Daintree and Mission Beach are the places to look.",
+        "nl": "De emoe is wijdverbreid in open land, vaak langs de weg in de outback. De helmkasuaris leeft alleen in de regenwouden van Far North Queensland; de Daintree en Mission Beach zijn de plekken om te zoeken."
+      }
+    },
+    "waterfowl": {
+      "here": {
+        "en": "16 ducks, geese and swans are on the trip. Black Swan, Pacific Black Duck and Australian Wood Duck are on almost every park lake; Magpie Goose is the bird of the tropical wetlands.",
+        "nl": "Er staan 16 eenden, ganzen en zwanen op de trip. Zwarte zwaan, Pacifische zwarte eend en manenend staan op bijna elke parkvijver; de ooievaarsgans is de vogel van de tropische moerassen."
+      }
+    },
+    "megapodes": {
+      "here": {
+        "en": "Australian Brushturkey is the one you will meet: it scratches up leaf mounds in suburban gardens and picnic areas along the east coast.",
+        "nl": "De Australische struikkalkoen is de soort die je ziet: hij schraapt bladhopen bijeen in stadstuinen en op picknickplaatsen langs de oostkust."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "16 pigeons and doves, from the Crested Pigeon on every lawn to fruit-doves in the rainforest canopy. The fruit-doves are heard as a deep, hollow call more often than seen.",
+        "nl": "16 duiven, van de kuifduif op elk grasveld tot de vruchtenduiven in het kronendak van het regenwoud. De vruchtenduiven hoor je vaker, met hun diepe holle roep, dan dat je ze ziet."
+      }
+    },
+    "bustards": {
+      "here": {
+        "en": "Australian Bustard is a huge, slow walker of open grassland in the north and the outback. Look for it from the car in Kakadu and along outback roads.",
+        "nl": "De Australische trap is een enorme, langzaam lopende vogel van open grasland in het noorden en de outback. Zoek hem vanuit de auto in Kakadu en langs wegen in de outback."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "5 cuckoos on the trip: the Pacific Koel shouts from suburban trees in spring and summer, and the Pheasant Coucal sits in tall grass.",
+        "nl": "5 koekoeken op de trip: de Pacifische koel schreeuwt in de lente en zomer vanuit bomen in de stad en de fazantkoekoek zit in hoog gras."
+      }
+    },
+    "frogmouths": {
+      "here": {
+        "en": "Tawny Frogmouth is the one to learn: it looks like a dead branch on a park tree by day and is easy to find once you know how.",
+        "nl": "De Tawny Frogmouth is de soort om te leren: overdag lijkt hij op een dode tak in een parkboom en is hij makkelijk te vinden als je weet hoe."
+      }
+    },
+    "owlet-nightjars": {
+      "here": {
+        "en": "Australian Owlet-nightjar is the small owl-like bird that peers from a tree hole in the late afternoon.",
+        "nl": "De Australische uilnachtzwaluw is het kleine uilachtige vogeltje dat aan het einde van de middag uit een boomholte kijkt."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "Pacific Swift is a summer visitor to the east coast and often seen high overhead before a storm.",
+        "nl": "De Pacifische gierzwaluw is een zomergast aan de oostkust en vaak hoog in de lucht te zien voor een onweersbui."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "5 rails and relatives on the trip. Dusky Moorhen and Australasian Swamphen walk around park ponds; Buff-banded Rail feeds along lake edges at dusk.",
+        "nl": "5 rallen en verwanten op de trip. De Australische waterhoen en de purperkoet lopen rond parkvijvers; de bandrail foerageert in de schemering langs oevers."
+      }
+    },
+    "cranes": {
+      "here": {
+        "en": "Brolga is the dancing crane of the tropical north and the south-east wetlands; Sarus Crane, taller still, lives in the Atherton Tableland.",
+        "nl": "De brolga is de dansende kraanvogel van het tropische noorden en de moerassen in het zuidoosten; de sarus, nog groter, leeft op het Atherton Tableland."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "21 waders and shorebirds. Masked Lapwing and Pied Oystercatcher are year-round; most of the others are northern-hemisphere migrants that arrive on mudflats between September and April.",
+        "nl": "21 steltlopers en strandvogels. De maskerkievit en de bonte scholekster zijn er het hele jaar; de meeste andere zijn trekvogels van het noordelijk halfrond die tussen september en april op de slikken aankomen."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "8 gulls and terns. Silver Gull is the bird on every beach and car park; Pacific Gull and the terns are for harbours and sandspits.",
+        "nl": "8 meeuwen en sterns. De zilvermeeuw staat op elk strand en elke parkeerplaats; de grote Pacifische meeuw en de sterns zoek je in havens en op zandbanken."
+      }
+    },
+    "grebes": {
+      "here": {
+        "en": "Hoary-headed and Australasian Grebe dive on freshwater lakes, and Great Crested Grebe is on larger lakes in the south.",
+        "nl": "De Australische en de kleine fuut duiken op zoetwatermeren en de fuut zit op grotere meren in het zuiden."
+      }
+    },
+    "penguins": {
+      "here": {
+        "en": "Little Penguin is the smallest penguin in the world and breeds on the south coast; Phillip Island and the Tasmanian shore are the places to see them come in at dusk.",
+        "nl": "De dwergpinguïn is de kleinste pinguïn ter wereld en broedt aan de zuidkust; Phillip Island en de Tasmaanse kust zijn de plekken om ze in de schemering te zien binnenkomen."
+      }
+    },
+    "albatrosses": {
+      "here": {
+        "en": "Albatrosses are birds of the sea. 4 species can be seen on a winter pelagic trip from Sydney, Wollongong or Eaglehawk Neck.",
+        "nl": "Albatrossen zijn vogels van de open zee. 4 soorten zie je op een pelagische tocht in de winter vanuit Sydney, Wollongong of Eaglehawk Neck."
+      }
+    },
+    "storm-petrels": {
+      "here": {
+        "en": "White-faced Storm-Petrel is the one that dances over the water surface on pelagic trips off the south-east coast.",
+        "nl": "Het Australische stormvogeltje is de soort die over het wateroppervlak danst op pelagische tochten voor de zuidoostkust."
+      }
+    },
+    "petrels-shearwaters-and-diving-petrels": {
+      "here": {
+        "en": "7 petrels and shearwaters. Short-tailed Shearwater (the mutton-bird) is seen from shore in huge flocks in spring; the rest need a boat.",
+        "nl": "7 stormvogels en pijlstormvogels. De kortstaartpijlstormvogel zie je in het voorjaar in enorme groepen vanaf de kust; voor de rest heb je een boot nodig."
+      }
+    },
+    "storks": {
+      "here": {
+        "en": "Black-necked Stork is the tall, glossy stork of the tropical wetlands, easy to find at Kakadu and Cairns.",
+        "nl": "De zwartnekooievaar is de lange, glanzende ooievaar van de tropische wetlands, makkelijk te vinden in Kakadu en bij Cairns."
+      }
+    },
+    "frigatebirds-boobies-and-gannets": {
+      "here": {
+        "en": "Australasian Gannet plunges into the sea off the south-east coast; frigatebirds and boobies belong to the tropical north.",
+        "nl": "De Australische jan-van-gent duikt voor de zuidoostkust in zee; fregatvogels en genten horen bij het tropische noorden."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "6 cormorants and the Australasian Darter. Little Pied and Little Black are on every lake; Pied Cormorant is the big bird on coastal rocks and jetties.",
+        "nl": "6 aalscholvers en de Australische slangenhalsvogel. De kleine bonte en de zwarte aalscholver zitten op elk meer; de bonte aalscholver is de grote vogel op rotsen en steigers aan de kust."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "14 herons, egrets, ibises and spoonbills. Australian Ibis, White-faced Heron and Great Egret are widespread; the Straw-necked Ibis flocks in paddocks.",
+        "nl": "14 reigers, ibissen en lepelaars. De Australische ibis, de witwangreiger en de grote zilverreiger zijn wijdverbreid; de strohalsibis trekt in groepen over weilanden."
+      }
+    },
+    "pelicans": {
+      "here": {
+        "en": "Australian Pelican is on almost every large body of water and on many town harbours.",
+        "nl": "De Australische pelikaan zit op bijna elk groot water en in veel havens."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "12 raptors on the trip. Black Kite and Whistling Kite are the ones you see from the car; Wedge-tailed Eagle is the big one in the outback.",
+        "nl": "12 roofvogels op de trip. De zwarte wouw en de fluitwouw zie je vanuit de auto; de wigstaartarend is de grote in de outback."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "Australian Boobook and Powerful Owl are the two owls on the trip. The Boobook is heard in most places at night; the Powerful Owl roosts in forest near Sydney and Melbourne.",
+        "nl": "De Australische boobook en de krachtuil zijn de twee uilen op de trip. De boobook hoor je bijna overal in de nacht; de krachtuil slaapt in bos bij Sydney en Melbourne."
+      }
+    },
+    "bee-eaters": {
+      "here": {
+        "en": "Rainbow Bee-eater is a summer visitor in the south and a year-round resident in the north, often on wires.",
+        "nl": "De regenboogbijeneter is in het zuiden een zomergast en in het noorden een standvogel, vaak op draden."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "6 kingfishers. The Laughing Kookaburra is the first one you hear, at dawn; the small Azure Kingfisher needs a quiet river.",
+        "nl": "6 ijsvogels. De lachende kookaburra hoor je als eerste, bij zonsopgang; de kleine azuurijsvogel heeft een rustige rivier nodig."
+      }
+    },
+    "rollers-and-allies": {
+      "here": {
+        "en": "Dollarbird is a summer visitor, usually on a dead branch high in the tree.",
+        "nl": "De dollarvogel is een zomergast, meestal op een dode tak hoog in de boom."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "4 falcons. Nankeen Kestrel hovers beside roads and over paddocks, and Peregrine Falcon nests on city buildings.",
+        "nl": "4 valken. De Nankeen-torenvalk bidt langs wegen en boven weilanden en de slechtvalk broedt op gebouwen in de stad."
+      }
+    },
+    "cockatoos": {
+      "here": {
+        "en": "11 cockatoos. Galah and Sulphur-crested Cockatoo are in every town; the black cockatoos and Gang-gang need woodland.",
+        "nl": "11 kaketoes. De roze kaketoe en de grote geelkuifkaketoe zitten in elke stad; de zwarte kaketoes en de helmkakatoe vragen om bos."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "17 parrots, rosellas and lorikeets. Rainbow Lorikeet and Crimson Rosella come to feeders; the Budgerigar flocks in the arid interior.",
+        "nl": "17 papegaaien, rosella's en lori's. De regenboog-lori en de rode rosella komen naar voederplekken; de grasparkiet trekt in groepen door het droge binnenland."
+      }
+    },
+    "old-world-pittas": {
+      "here": {
+        "en": "Noisy Pitta is a bright, ground-living rainforest bird of the east coast, heard more often than seen; the walk-through at Lamington is a good place.",
+        "nl": "De Noisy Pitta is een felgekleurde grondvogel van het regenwoud langs de oostkust, vaker gehoord dan gezien; Lamington is een goede plek."
+      }
+    },
+    "lyrebirds": {
+      "here": {
+        "en": "Superb Lyrebird is the great mimic of the wet forests of the south-east. Sherbrooke Forest near Melbourne and the Blue Mountains are the classic places.",
+        "nl": "De prachtlierstaart is de grote imitator van de natte bossen in het zuidoosten. Sherbrooke Forest bij Melbourne en de Blue Mountains zijn de klassieke plekken."
+      }
+    },
+    "scrub-birds-and-bowerbirds": {
+      "here": {
+        "en": "7 bowerbirds and catbirds. Satin Bowerbird is a common visitor to gardens in the east; the Great Bowerbird has its bower in the tropical north.",
+        "nl": "7 prieelvogels en katvogels. De satijnprieelvogel komt vaak in tuinen in het oosten; de grote prieelvogel bouwt zijn prieel in het tropische noorden."
+      }
+    },
+    "australian-treecreepers": {
+      "here": {
+        "en": "White-throated Treecreeper climbs trunks in eastern forests; Brown Treecreeper hops on the ground and fallen logs in open country.",
+        "nl": "De witkeelboomkruiper klimt langs stammen in oostelijke bossen; de bruine boomkruiper hipt in open land over de grond en gevallen takken."
+      }
+    },
+    "fairywrens": {
+      "here": {
+        "en": "10 fairywrens. Superb Fairywren is in almost every garden in the south-east; other species are regional.",
+        "nl": "10 elfjes. De prachtelfje zit in bijna elke tuin in het zuidoosten; de andere soorten zijn regionaal."
+      }
+    },
+    "honeyeaters": {
+      "here": {
+        "en": "20 honeyeaters, the biggest group on the trip. They feed on nectar and insects, and many have a loud voice and are aggressive at flowers.",
+        "nl": "20 honingeters, de grootste groep op de trip. Ze eten nectar en insecten en veel hebben een luide stem en zijn agressief bij bloemen."
+      }
+    },
+    "pardalotes": {
+      "here": {
+        "en": "3 pardalotes. Striated and Spotted Pardalote are common but small and in the canopy; Forty-spotted Pardalote lives only on a few islands in Tasmania.",
+        "nl": "3 pardalotes. De gestreepte en gevlekte pardalote zijn algemeen maar klein en zitten in het kronendak; de veertigvlekpardalote leeft alleen op enkele eilanden bij Tasmanië."
+      }
+    },
+    "thornbills-and-allies": {
+      "here": {
+        "en": "7 thornbills, scrubwrens and gerygones. Small, brown, busy and hard to tell apart: learn them by habitat and call.",
+        "nl": "7 doornsnavels, scrubwrens en gerygones. Klein, bruin, onrustig en moeilijk uit elkaar te houden: leer ze kennen op leefgebied en roep."
+      }
+    },
+    "pseudo-babblers": {
+      "here": {
+        "en": "Grey-crowned and Chestnut-crowned Babblers move in noisy groups through dry woodland in the north and inland.",
+        "nl": "De grijskruinbabbelaar en de kastanjekruinbabbelaar trekken in luidruchtige groepen door droog bos in het noorden en het binnenland."
+      }
+    },
+    "logrunners": {
+      "here": {
+        "en": "Chowchilla lives in the rainforest of the Atherton Tableland; Australian Logrunner in the forests of the east coast. Both scratch leaf litter.",
+        "nl": "De Chowchilla leeft in het regenwoud van het Atherton Tableland; de Australische bosloper in de bossen aan de oostkust. Beide scharrelen in bladstrooisel."
+      }
+    },
+    "cuckooshrikes": {
+      "here": {
+        "en": "Black-faced Cuckooshrike is a widespread grey bird with a black face, often seen in the treetops of parks and woodland.",
+        "nl": "De zwartmaskerrupsvogel is een wijdverbreide grijze vogel met een zwart gezicht, vaak in boomtoppen van parken en bos."
+      }
+    },
+    "sittellas": {
+      "here": {
+        "en": "Varied Sittella works its way head-first down trunks in a small group, often in dry woodland.",
+        "nl": "De Varied Sittella gaat in een klein groepje met de kop omlaag langs stammen, vaak in droog bos."
+      }
+    },
+    "whipbirds-and-wedgebills": {
+      "here": {
+        "en": "Eastern Whipbird is the source of the whip-crack call from thick undergrowth in the east. Seeing it takes patience.",
+        "nl": "De Eastern Whipbird is de bron van de zweepslag uit dicht kreupelhout in het oosten. Hem zien kost geduld."
+      }
+    },
+    "shrike-tits": {
+      "here": {
+        "en": "Eastern Shrike-tit is an uncommon, crested bird of eucalypt forest in the south-east; listen for a sharp whistle and the sound of bark being torn.",
+        "nl": "De Eastern Shrike-tit is een niet algemene, gekuifde vogel van eucalyptusbos in het zuidoosten; luister naar een scherp gefluit en het geluid van schors dat wordt gescheurd."
+      }
+    },
+    "whistlers-and-allies": {
+      "here": {
+        "en": "Golden and Rufous Whistler are loud singers of woodland; Grey Shrikethrush is the plain brown one with a lovely song.",
+        "nl": "De Golden Whistler en de Rufous Whistler zijn luide zangers van het open bos; de Grey Shrikethrush is de egaal bruine met een mooie zang."
+      }
+    },
+    "old-world-orioles": {
+      "here": {
+        "en": "Olive-backed Oriole and Australasian Figbird are fruit-eating orioles; the Figbird is a common sight in tropical gardens.",
+        "nl": "De Olive-backed Oriole en de Australasian Figbird zijn vruchteneters; de Figbird is een bekende verschijning in tropische tuinen."
+      }
+    },
+    "woodswallows": {
+      "here": {
+        "en": "Black-faced and Masked Woodswallow perch in lines and glide on stiff wings; they are nomadic and follow insects.",
+        "nl": "De Black-faced en de Masked Woodswallow zitten in rijen en glijden op stijve vleugels; het zijn nomaden die insecten volgen."
+      }
+    },
+    "bellmagpies-and-allies": {
+      "here": {
+        "en": "5 magpies, butcherbirds and currawongs. The Australian Magpie is the one in every park; its warbling carol is the sound of the morning.",
+        "nl": "5 eksters, slachtvogels en currawongs. De Australische fluitvogel is de soort in elk park; zijn jodelende zang is het geluid van de ochtend."
+      }
+    },
+    "fantails": {
+      "here": {
+        "en": "Willie-wagtail is the black-and-white bird that follows you across the lawn; Grey Fantail fans its tail in forest.",
+        "nl": "De Willie-wagtail is het zwart-witte vogeltje dat je over het gazon volgt; de Grey Fantail spreidt zijn staart in het bos."
+      }
+    },
+    "birds-of-paradise": {
+      "here": {
+        "en": "Paradise Riflebird lives in the forests of the east coast and Victoria's Riflebird in the Wet Tropics; the males show off on a bare branch.",
+        "nl": "De Paradise Riflebird leeft in de bossen aan de oostkust en de Victoria's Riflebird in de natte tropen; de mannetjes tonen zich op een kale tak."
+      }
+    },
+    "drongos": {
+      "here": {
+        "en": "Spangled Drongo is a glossy black bird with a fish-tail, in the tropical north and east.",
+        "nl": "De Spangled Drongo is een glanzend zwarte vogel met een visstaart, in het tropische noorden en oosten."
+      }
+    },
+    "monarch-flycatchers": {
+      "here": {
+        "en": "Magpie-lark is common on lawns; Restless Flycatcher hovers and makes a grinding call.",
+        "nl": "De Magpie-lark is algemeen op gazons; de Restless Flycatcher bidt en maakt een slijpend geluid."
+      }
+    },
+    "white-winged-chough-and-apostlebird": {
+      "here": {
+        "en": "White-winged Chough and Apostlebird move in family groups on the ground in woodland, mostly in the inland south-east.",
+        "nl": "De White-winged Chough en de Apostlebird gaan in familiegroepen over de grond in open bos, vooral in het zuidoostelijke binnenland."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "4 crows and ravens, which look identical and are told apart mainly by voice and by place. Learn the local one.",
+        "nl": "4 kraaien en raven die er vrijwel hetzelfde uitzien en vooral op stem en plaats worden gescheiden. Leer de lokale soort."
+      }
+    },
+    "australasian-robins": {
+      "here": {
+        "en": "8 robins on the trip. They are not related to European robins: small, upright, and often perched on a low branch before pouncing on prey.",
+        "nl": "8 Australische roodborsten op de trip. Ze zijn niet verwant aan de Europese roodborst: klein, rechtop en vaak op een lage tak voor ze op prooi duiken."
+      }
+    },
+    "larks": {
+      "here": {
+        "en": "Eurasian Skylark was introduced to Melbourne and Tasmania; the song is just as you know it.",
+        "nl": "De veldleeuwerik is ingevoerd rond Melbourne en in Tasmanië; de zang is net als je kent."
+      }
+    },
+    "cisticolas-and-allies": {
+      "here": {
+        "en": "Golden-headed Cisticola sings from fence posts and reed tops in damp grass.",
+        "nl": "De Golden-headed Cisticola zingt vanaf hekpalen en rietpluimen in vochtig gras."
+      }
+    },
+    "reed-warblers-and-allies": {
+      "here": {
+        "en": "Australian Reed Warbler is a loud singer of reedbeds across the country.",
+        "nl": "De Australische kleine karekiet is een luide zanger van rietkragen door het hele land."
+      }
+    },
+    "grassbirds-and-allies": {
+      "here": {
+        "en": "Little Grassbird and Tawny Grassbird are secretive in reeds and tall grass; the song carries far.",
+        "nl": "De Little Grassbird en de Tawny Grassbird leven verborgen in riet en hoog gras; de zang draagt ver."
+      }
+    },
+    "wagtails-and-pipits": {
+      "here": {
+        "en": "Australian Pipit runs along roadsides and short grass in open country.",
+        "nl": "De Australische piper rent langs wegbermen en over kort gras in open land."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "4 swallows and martins. Welcome Swallow is everywhere; Fairy and Tree Martin nest in colonies under bridges and in tree hollows.",
+        "nl": "4 zwaluwen en oeverzwaluwachtigen. De Welcome Swallow is overal; de Fairy Martin en de Tree Martin nestelen in kolonies onder bruggen en in boomholtes."
+      }
+    },
+    "bulbuls": {
+      "here": {
+        "en": "Red-whiskered Bulbul is an introduced bird in Sydney and Brisbane gardens; do not confuse with a native.",
+        "nl": "De roodoorbuulbuul is een ingevoerde vogel in tuinen van Sydney en Brisbane; verwar hem niet met een inheemse soort."
+      }
+    },
+    "white-eyes-yuhinas-and-allies": {
+      "here": {
+        "en": "Silvereye is a tiny greenish bird with a white eye-ring in gardens and woodland all over the south and east.",
+        "nl": "De Silvereye is een klein groenig vogeltje met een witte oogring in tuinen en bos in het hele zuiden en oosten."
+      }
+    },
+    "starlings-and-mynas": {
+      "here": {
+        "en": "Common Starling and Common Myna are introduced and abundant around towns in the south and east.",
+        "nl": "De spreeuw en de treurmaina zijn ingevoerd en talrijk rond steden in het zuiden en oosten."
+      }
+    },
+    "thrushes": {
+      "here": {
+        "en": "Bassian Thrush is a ground thrush of the wet forest; Song Thrush and Blackbird are introduced garden birds in the south-east.",
+        "nl": "De Bassian Thrush is een lijster van de grond in nat bos; de zanglijster en de merel zijn ingevoerde tuinvogels in het zuidoosten."
+      }
+    },
+    "flowerpeckers": {
+      "here": {
+        "en": "Mistletoebird is a small, nomadic bird that follows mistletoe fruit; the male is red-throated and blue-black above.",
+        "nl": "De Mistletoebird is een klein, rondtrekkend vogeltje dat maretakbessen volgt; het mannetje heeft een rode keel en is boven blauwzwart."
+      }
+    },
+    "sunbirds-and-spiderhunters": {
+      "here": {
+        "en": "Sahul Sunbird is a small sunbird of the tropical north and the Queensland coast, often in gardens in Cairns.",
+        "nl": "De Sahul Sunbird is een kleine honingzuiger van het tropische noorden en de kust van Queensland, vaak in tuinen in Cairns."
+      }
+    },
+    "estrildids": {
+      "here": {
+        "en": "7 finches of grassland and scrub, small, social and seed-eating. Zebra Finch flocks come to waterholes in the outback.",
+        "nl": "7 prachtvinken van grasland en struweel, klein, sociaal en zaadetend. Groepen zebravinken komen in de outback naar waterpoeltjes."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "House Sparrow, Eurasian Tree Sparrow and European Goldfinch are introduced and live around towns.",
+        "nl": "De huismus, de ringmus en de putter zijn ingevoerd en leven rond steden."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "here": {
+        "en": "European Goldfinch is an introduced finch of parks and weedy ground in the south.",
+        "nl": "De putter is een ingevoerde vink van parken en onkruidland in het zuiden."
+      }
+    }
+  },
+  "units": {
+    "ground-birds": {
+      "title": {
+        "en": "Emu, cassowary and big ground birds",
+        "nl": "Emoe, kasuaris en grote loopvogels"
+      },
+      "intro": {
+        "en": "The biggest ground birds: flightless Emu and Southern Cassowary, the mound-building Brushturkey and the Australian Bustard.",
+        "nl": "De grootste grondvogels: de vluchteloze emoe en kasuaris, de heuvelbouwende struikkalkoen en de Australische trap."
+      }
+    },
+    "waterfowl-1": {
+      "title": {
+        "en": "Ducks, geese and swans",
+        "nl": "Eenden, ganzen en zwanen"
+      },
+      "intro": {
+        "en": "Ducks, geese and swans. Look at the bill and head pattern; many are told apart by a single mark.",
+        "nl": "Eenden, ganzen en zwanen. Kijk naar snavel en kopmarkering; veel soorten herken je aan één kenmerk."
+      }
+    },
+    "waterfowl-2": {
+      "title": {
+        "en": "Ducks, geese and swans",
+        "nl": "Eenden, ganzen en zwanen"
+      },
+      "intro": {
+        "en": "Ducks, geese and swans. Look at the bill and head pattern; many are told apart by a single mark.",
+        "nl": "Eenden, ganzen en zwanen. Kijk naar snavel en kopmarkering; veel soorten herken je aan één kenmerk."
+      }
+    },
+    "waterfowl-3": {
+      "title": {
+        "en": "Ducks, geese and swans",
+        "nl": "Eenden, ganzen en zwanen"
+      },
+      "intro": {
+        "en": "Ducks, geese and swans. Look at the bill and head pattern; many are told apart by a single mark.",
+        "nl": "Eenden, ganzen en zwanen. Kijk naar snavel en kopmarkering; veel soorten herken je aan één kenmerk."
+      }
+    },
+    "pigeons-and-doves-1": {
+      "title": {
+        "en": "Pigeons and doves",
+        "nl": "Duiven"
+      },
+      "intro": {
+        "en": "Pigeons and doves from city parks to rainforest. Crest, wing bars and colour are the clues.",
+        "nl": "Duiven van stadsparken tot regenwoud. Kuif, vleugelstrepen en kleur zijn de aanwijzingen."
+      }
+    },
+    "pigeons-and-doves-2": {
+      "title": {
+        "en": "Pigeons and doves",
+        "nl": "Duiven"
+      },
+      "intro": {
+        "en": "Pigeons and doves from city parks to rainforest. Crest, wing bars and colour are the clues.",
+        "nl": "Duiven van stadsparken tot regenwoud. Kuif, vleugelstrepen en kleur zijn de aanwijzingen."
+      }
+    },
+    "pigeons-and-doves-3": {
+      "title": {
+        "en": "Pigeons and doves",
+        "nl": "Duiven"
+      },
+      "intro": {
+        "en": "Pigeons and doves from city parks to rainforest. Crest, wing bars and colour are the clues.",
+        "nl": "Duiven van stadsparken tot regenwoud. Kuif, vleugelstrepen en kleur zijn de aanwijzingen."
+      }
+    },
+    "cuckoos": {
+      "title": {
+        "en": "Cuckoos and the coucal",
+        "nl": "Koekoeken en de coucal"
+      },
+      "intro": {
+        "en": "Cuckoos are usually heard first: a repeated call from the canopy or a tall grass tuft.",
+        "nl": "Koekoeken hoor je meestal eerst: een herhaalde roep uit het kronendak of een hoge grassprieten."
+      }
+    },
+    "night-birds": {
+      "title": {
+        "en": "Night birds and a swift",
+        "nl": "Nachtvogels en een gierzwaluw"
+      },
+      "intro": {
+        "en": "Night birds of the forest and a swift: they hide by day and call at dusk.",
+        "nl": "Nachtvogels van het bos en een gierzwaluw: ze verstoppen zich overdag en roepen in de schemering."
+      }
+    },
+    "rails-and-cranes": {
+      "title": {
+        "en": "Rails, swamphens and cranes",
+        "nl": "Rallen, purperkoeten en kraanvogels"
+      },
+      "intro": {
+        "en": "Rails and swamphens of water edges, and the tall cranes of the wetlands.",
+        "nl": "Rallen en purperkoeten van waterkanten en de hoge kraanvogels van de wetlands."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Waders and shorebirds",
+        "nl": "Steltlopers en strandvogels"
+      },
+      "intro": {
+        "en": "Waders and shorebirds. Start with size, leg colour and bill shape before looking at plumage.",
+        "nl": "Steltlopers en strandvogels. Begin met formaat, pootkleur en snavelvorm voor je naar het verenkleed kijkt."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Waders and shorebirds",
+        "nl": "Steltlopers en strandvogels"
+      },
+      "intro": {
+        "en": "Waders and shorebirds. Start with size, leg colour and bill shape before looking at plumage.",
+        "nl": "Steltlopers en strandvogels. Begin met formaat, pootkleur en snavelvorm voor je naar het verenkleed kijkt."
+      }
+    },
+    "shorebirds-3": {
+      "title": {
+        "en": "Waders and shorebirds",
+        "nl": "Steltlopers en strandvogels"
+      },
+      "intro": {
+        "en": "Waders and shorebirds. Start with size, leg colour and bill shape before looking at plumage.",
+        "nl": "Steltlopers en strandvogels. Begin met formaat, pootkleur en snavelvorm voor je naar het verenkleed kijkt."
+      }
+    },
+    "gulls-terns-and-skimmers-1": {
+      "title": {
+        "en": "Gulls and terns",
+        "nl": "Meeuwen en sterns"
+      },
+      "intro": {
+        "en": "Gulls and terns on beaches and sandbars. Bill colour and the shape of the cap tell terns apart.",
+        "nl": "Meeuwen en sterns op stranden en zandbanken. Snavelkleur en de vorm van de kap onderscheiden de sterns."
+      }
+    },
+    "gulls-terns-and-skimmers-2": {
+      "title": {
+        "en": "Gulls and terns",
+        "nl": "Meeuwen en sterns"
+      },
+      "intro": {
+        "en": "Gulls and terns on beaches and sandbars. Bill colour and the shape of the cap tell terns apart.",
+        "nl": "Meeuwen en sterns op stranden en zandbanken. Snavelkleur en de vorm van de kap onderscheiden de sterns."
+      }
+    },
+    "grebes-and-penguin": {
+      "title": {
+        "en": "Grebes and the Little Penguin",
+        "nl": "Futen en de dwergpinguïn"
+      },
+      "intro": {
+        "en": "Grebes dive on lakes; the Little Penguin is the odd one out, a small blue penguin from the south coast.",
+        "nl": "Futen duiken op meren; de dwergpinguïn is de vreemde eend, een kleine blauwe pinguïn van de zuidkust."
+      }
+    },
+    "albatrosses-and-storm-petrels": {
+      "title": {
+        "en": "Albatrosses and a storm-petrel",
+        "nl": "Albatrossen en een stormvogeltje"
+      },
+      "intro": {
+        "en": "Birds of the open ocean, seen on pelagic trips: look at the bill, underwing and size.",
+        "nl": "Vogels van de open oceaan, te zien op pelagische tochten: kijk naar snavel, onderkant van de vleugel en formaat."
+      }
+    },
+    "petrels-and-shearwaters": {
+      "title": {
+        "en": "Petrels and shearwaters",
+        "nl": "Stormvogels en pijlstormvogels"
+      },
+      "intro": {
+        "en": "Petrels and shearwaters of the sea; many are dark and need flight style and bill to be told apart.",
+        "nl": "Stormvogels en pijlstormvogels van de zee; veel zijn donker en je onderscheidt ze op vlucht en snavel."
+      }
+    },
+    "gannets-frigatebirds-stork": {
+      "title": {
+        "en": "Gannets, frigatebirds and a stork",
+        "nl": "Genten, fregatvogels en een ooievaar"
+      },
+      "intro": {
+        "en": "Large seabirds and a stork: the gannet dives from height, the frigatebird never lands on water.",
+        "nl": "Grote zeevogels en een ooievaar: de jan-van-gent duikt van hoogte, de fregatvogel landt nooit op water."
+      }
+    },
+    "cormorants-and-pelican": {
+      "title": {
+        "en": "Cormorants, darter and pelican",
+        "nl": "Aalscholvers, slangenhalsvogel en pelikaan"
+      },
+      "intro": {
+        "en": "Fish-eaters of lakes and coasts: cormorants, the darter with its snake neck, and the pelican.",
+        "nl": "Viseters van meren en kusten: aalscholvers, de slangenhalsvogel en de pelikaan."
+      }
+    },
+    "herons-ibis-and-allies-1": {
+      "title": {
+        "en": "Herons, egrets and ibises",
+        "nl": "Reigers, ibissen en lepelaars"
+      },
+      "intro": {
+        "en": "Herons, egrets, ibises and spoonbills. Size and bill shape tell most apart; egrets look alike in white.",
+        "nl": "Reigers, ibissen en lepelaars. Formaat en snavelvorm onderscheiden de meeste; de witte zilverreigers lijken op elkaar."
+      }
+    },
+    "herons-ibis-and-allies-2": {
+      "title": {
+        "en": "Herons, egrets and ibises",
+        "nl": "Reigers, ibissen en lepelaars"
+      },
+      "intro": {
+        "en": "Herons, egrets, ibises and spoonbills. Size and bill shape tell most apart; egrets look alike in white.",
+        "nl": "Reigers, ibissen en lepelaars. Formaat en snavelvorm onderscheiden de meeste; de witte zilverreigers lijken op elkaar."
+      }
+    },
+    "raptors-1": {
+      "title": {
+        "en": "Eagles, kites and hawks",
+        "nl": "Arenden, wouwen en haviken"
+      },
+      "intro": {
+        "en": "Eagles, kites, harriers and hawks. Look at wing shape and tail when they soar.",
+        "nl": "Arenden, wouwen, kiekendieven en haviken. Kijk naar vleugelvorm en staart als ze zweven."
+      }
+    },
+    "raptors-2": {
+      "title": {
+        "en": "Eagles, kites and hawks",
+        "nl": "Arenden, wouwen en haviken"
+      },
+      "intro": {
+        "en": "Eagles, kites, harriers and hawks. Look at wing shape and tail when they soar.",
+        "nl": "Arenden, wouwen, kiekendieven en haviken. Kijk naar vleugelvorm en staart als ze zweven."
+      }
+    },
+    "falcons": {
+      "title": {
+        "en": "Falcons",
+        "nl": "Valken"
+      },
+      "intro": {
+        "en": "Fast, pointed-winged hunters. Kestrel hovers; hobby and peregrine stoop.",
+        "nl": "Snelle jagers met spitse vleugels. De torenvalk bidt; boomvalk en slechtvalk stoten."
+      }
+    },
+    "kingfishers": {
+      "title": {
+        "en": "Kookaburras and kingfishers",
+        "nl": "Kookaburra’s en ijsvogels"
+      },
+      "intro": {
+        "en": "Kookaburras and kingfishers: not all of them eat fish, and several are heard before they are seen.",
+        "nl": "Kookaburra's en ijsvogels: niet alle eten vis en meerdere hoor je eerder dan je ze ziet."
+      }
+    },
+    "forest-odd-ones": {
+      "title": {
+        "en": "Bee-eater, dollarbird, pitta and lyrebird",
+        "nl": "Bijeneter, roller, pitta en lierstaart"
+      },
+      "intro": {
+        "en": "Four colourful, different birds of forest and woodland edges: bee-eater, dollarbird, pitta and the lyrebird.",
+        "nl": "Vier kleurrijke, verschillende vogels van bos en bosrand: bijeneter, dollarvogel, pitta en lierstaart."
+      }
+    },
+    "cockatoos-1": {
+      "title": {
+        "en": "Cockatoos and corellas",
+        "nl": "Kaketoes en corella’s"
+      },
+      "intro": {
+        "en": "Cockatoos and corellas: crest, colour and the shape of the tail are what to look at.",
+        "nl": "Kaketoes en corella's: kuif, kleur en de vorm van de staart zijn de kenmerken."
+      }
+    },
+    "cockatoos-2": {
+      "title": {
+        "en": "Cockatoos and corellas",
+        "nl": "Kaketoes en corella’s"
+      },
+      "intro": {
+        "en": "Cockatoos and corellas: crest, colour and the shape of the tail are what to look at.",
+        "nl": "Kaketoes en corella's: kuif, kleur en de vorm van de staart zijn de kenmerken."
+      }
+    },
+    "parrots-1": {
+      "title": {
+        "en": "Parrots, rosellas and lorikeets",
+        "nl": "Papegaaien, rosella’s en lori’s"
+      },
+      "intro": {
+        "en": "Parrots, rosellas and lorikeets. Cheek patch, back scaling and call separate the lookalikes.",
+        "nl": "Papegaaien, rosella's en lori's. Wangvlek, schubbenpatroon op de rug en roep onderscheiden de gelijkenden."
+      }
+    },
+    "parrots-2": {
+      "title": {
+        "en": "Parrots, rosellas and lorikeets",
+        "nl": "Papegaaien, rosella’s en lori’s"
+      },
+      "intro": {
+        "en": "Parrots, rosellas and lorikeets. Cheek patch, back scaling and call separate the lookalikes.",
+        "nl": "Papegaaien, rosella's en lori's. Wangvlek, schubbenpatroon op de rug en roep onderscheiden de gelijkenden."
+      }
+    },
+    "parrots-3": {
+      "title": {
+        "en": "Parrots, rosellas and lorikeets",
+        "nl": "Papegaaien, rosella’s en lori’s"
+      },
+      "intro": {
+        "en": "Parrots, rosellas and lorikeets. Cheek patch, back scaling and call separate the lookalikes.",
+        "nl": "Papegaaien, rosella's en lori's. Wangvlek, schubbenpatroon op de rug en roep onderscheiden de gelijkenden."
+      }
+    },
+    "bowerbirds": {
+      "title": {
+        "en": "Bowerbirds and catbirds",
+        "nl": "Prieelvogels en katvogels"
+      },
+      "intro": {
+        "en": "Bowerbirds and catbirds. The bower is the clue: where there is one, the male is near.",
+        "nl": "Prieelvogels en katvogels. Het prieel is de aanwijzing: waar er een is, is het mannetje niet ver."
+      }
+    },
+    "treecreepers-and-pardalotes": {
+      "title": {
+        "en": "Treecreepers and pardalotes",
+        "nl": "Boomkruipers en pardalotes"
+      },
+      "intro": {
+        "en": "Tree-climbing birds and tiny canopy birds, all small, brown and quick.",
+        "nl": "Boomklimmers en kleine kronendakvogels, allemaal klein, bruin en snel."
+      }
+    },
+    "fairywrens-1": {
+      "title": {
+        "en": "Fairywrens",
+        "nl": "Elfjes (fairywrens)"
+      },
+      "intro": {
+        "en": "Tiny, long-tailed birds. In breeding colour the male decides the species; the brown ones are females.",
+        "nl": "Piepkleine langstaartvogels. In broedkleed bepaalt het mannetje de soort; de bruine zijn vrouwtjes."
+      }
+    },
+    "fairywrens-2": {
+      "title": {
+        "en": "Fairywrens",
+        "nl": "Elfjes (fairywrens)"
+      },
+      "intro": {
+        "en": "Tiny, long-tailed birds. In breeding colour the male decides the species; the brown ones are females.",
+        "nl": "Piepkleine langstaartvogels. In broedkleed bepaalt het mannetje de soort; de bruine zijn vrouwtjes."
+      }
+    },
+    "honeyeaters-1": {
+      "title": {
+        "en": "Honeyeaters",
+        "nl": "Honingeters"
+      },
+      "intro": {
+        "en": "Honeyeaters have a slim, curved bill and a brush tongue. Face patch and colour of the throat are the clues.",
+        "nl": "Honingeters hebben een slanke, gebogen snavel en een borsteltong. Gezichtsvlek en kleur van de keel zijn de aanwijzingen."
+      }
+    },
+    "honeyeaters-2": {
+      "title": {
+        "en": "Honeyeaters",
+        "nl": "Honingeters"
+      },
+      "intro": {
+        "en": "Honeyeaters have a slim, curved bill and a brush tongue. Face patch and colour of the throat are the clues.",
+        "nl": "Honingeters hebben een slanke, gebogen snavel en een borsteltong. Gezichtsvlek en kleur van de keel zijn de aanwijzingen."
+      }
+    },
+    "honeyeaters-3": {
+      "title": {
+        "en": "Honeyeaters",
+        "nl": "Honingeters"
+      },
+      "intro": {
+        "en": "Honeyeaters have a slim, curved bill and a brush tongue. Face patch and colour of the throat are the clues.",
+        "nl": "Honingeters hebben een slanke, gebogen snavel en een borsteltong. Gezichtsvlek en kleur van de keel zijn de aanwijzingen."
+      }
+    },
+    "thornbills-and-scrubwrens": {
+      "title": {
+        "en": "Thornbills and scrubwrens",
+        "nl": "Doornsnavels en scrubwrens"
+      },
+      "intro": {
+        "en": "Tiny brown birds of forest and scrub: use the face, the colour of the rump and the call.",
+        "nl": "Kleine bruine vogels van bos en struweel: let op gezicht, stuitkleur en roep."
+      }
+    },
+    "babblers-and-logrunners": {
+      "title": {
+        "en": "Babblers, logrunners and the whipbird",
+        "nl": "Babbelaars, boslopers en de zweepvogel"
+      },
+      "intro": {
+        "en": "Ground-scratching birds that live in groups: babblers of dry woodland, logrunners and the whipbird of wet forest.",
+        "nl": "Grondscharrelaars die in groepen leven: babbelaars van droog bos, boslopers en de zweepvogel van nat bos."
+      }
+    },
+    "whistlers-and-shrike-tit": {
+      "title": {
+        "en": "Whistlers, shrike-tit and sittella",
+        "nl": "Fluiters, kuifmees en boomklever"
+      },
+      "intro": {
+        "en": "Birds with strong voices and strong bills, perching upright in the canopy.",
+        "nl": "Vogels met een sterke stem en een stevige snavel die rechtop in het kronendak zitten."
+      }
+    },
+    "cuckooshrikes-orioles-woodswallows": {
+      "title": {
+        "en": "Cuckooshrike, orioles and woodswallows",
+        "nl": "Rupsvogel, wielewalen en zwaluwklauwieren"
+      },
+      "intro": {
+        "en": "Three families you will see in the tree tops: grey cuckooshrikes, fruit-loving orioles and gliding woodswallows.",
+        "nl": "Drie families die je in boomtoppen ziet: grijze rupsvogels, vruchtenetende wielewalen en glijdende zwaluwklauwieren."
+      }
+    },
+    "magpies-and-currawongs": {
+      "title": {
+        "en": "Magpies, currawongs and choughs",
+        "nl": "Eksters, currawongs en choughs"
+      },
+      "intro": {
+        "en": "Black-and-white birds of the open: magpie, butcherbirds and currawongs, plus two ground-feeding groups.",
+        "nl": "Zwart-witte vogels van het open land: fluitvogel, slachtvogels en currawongs, plus twee groepen die op de grond foerageren."
+      }
+    },
+    "crows-and-ravens": {
+      "title": {
+        "en": "Crows and ravens",
+        "nl": "Kraaien en raven"
+      },
+      "intro": {
+        "en": "Crows and ravens look the same here. Learn the call and the range.",
+        "nl": "Kraaien en raven zien er hier hetzelfde uit. Leer de roep en het verspreidingsgebied."
+      }
+    },
+    "fantails-and-monarchs": {
+      "title": {
+        "en": "Fantails, monarchs, drongo and riflebird",
+        "nl": "Waaierstaarten, monarchen, drongo en riflebird"
+      },
+      "intro": {
+        "en": "Small, active flycatchers with tails that fan and wag, plus a drongo and a riflebird.",
+        "nl": "Kleine, actieve vliegenvangers met waaierende en kwispelende staarten, plus een drongo en een riflebird."
+      }
+    },
+    "robins-1": {
+      "title": {
+        "en": "Australasian robins",
+        "nl": "Australische roodborsten"
+      },
+      "intro": {
+        "en": "Small, upright robins perched on a low branch. The male colour decides the species; females are brown.",
+        "nl": "Kleine, rechtop zittende roodborsten op een lage tak. De kleur van het mannetje bepaalt de soort; vrouwtjes zijn bruin."
+      }
+    },
+    "robins-2": {
+      "title": {
+        "en": "Australasian robins",
+        "nl": "Australische roodborsten"
+      },
+      "intro": {
+        "en": "Small, upright robins perched on a low branch. The male colour decides the species; females are brown.",
+        "nl": "Kleine, rechtop zittende roodborsten op een lage tak. De kleur van het mannetje bepaalt de soort; vrouwtjes zijn bruin."
+      }
+    },
+    "pipits-larks-and-grass-warblers": {
+      "title": {
+        "en": "Pipit, lark and grass warblers",
+        "nl": "Piepers, leeuweriken en grasgors-zangers"
+      },
+      "intro": {
+        "en": "Small brown birds of open fields and wetland edges: use song and habitat.",
+        "nl": "Kleine bruine vogels van open velden en waterkanten: gebruik zang en leefgebied."
+      }
+    },
+    "martins-and-swallows": {
+      "title": {
+        "en": "Swallows and martins",
+        "nl": "Zwaluwen"
+      },
+      "intro": {
+        "en": "Swallows and martins catching insects on the wing. Look at the rump and the tail.",
+        "nl": "Zwaluwen die insecten vangen in de vlucht. Kijk naar de stuit en de staart."
+      }
+    },
+    "thrushes-and-small-fry": {
+      "title": {
+        "en": "Thrushes, silvereye, mistletoebird and sunbird",
+        "nl": "Lijsters, brilvogel, mistletoebird en honingzuiger"
+      },
+      "intro": {
+        "en": "A mixed group: thrushes, silvereye, mistletoebird and sunbird, small birds of garden and forest.",
+        "nl": "Een gemengde groep: lijsters, silvereye, mistletoebird en honingzuiger, kleine vogels van tuin en bos."
+      }
+    },
+    "introduced-town-birds": {
+      "title": {
+        "en": "Introduced town birds",
+        "nl": "Ingevoerde stadsvogels"
+      },
+      "intro": {
+        "en": "Birds brought from Europe and Asia that live around towns. They are the first ones you see.",
+        "nl": "Vogels die uit Europa en Azië zijn meegebracht en rond steden leven. Ze zie je als eerste."
+      }
+    },
+    "estrildids": {
+      "title": {
+        "en": "Finches and firetails",
+        "nl": "Prachtvinken"
+      },
+      "intro": {
+        "en": "Seed-eating finches in flocks, brightly patterned; you will find them near water in dry country.",
+        "nl": "Zaadetende vinken in groepen met een helder patroon; je vindt ze bij water in droog gebied."
+      }
+    }
+  },
+  "species": {},
+  "first_day": {
+    "title": {
+      "en": "Your first day",
+      "nl": "Je eerste dag"
+    },
+    "intro": {
+      "en": "Twenty birds you will meet in a day in Sydney, Brisbane or Melbourne: the loud birds in the park, the waterbirds on the pond and a few introduced birds. Learn these and the first walk already pays off.",
+      "nl": "Twintig vogels die je binnen een dag ziet in Sydney, Brisbane of Melbourne: de luide vogels in het park, de watervogels op de vijver en een paar ingevoerde vogels. Leer deze en je eerste wandeling levert al wat op."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "Australia has been an island for about 35 million years, with a big desert in the middle and wet forest around the edges. Parrots, honeyeaters and the songbirds of the south evolved here, and many are found nowhere else. This trip has 127 of them, and you will meet many without leaving the suburbs.",
+      "nl": "Australië is al ongeveer 35 miljoen jaar een eiland, met een grote woestijn in het midden en nat bos langs de randen. Papegaaien, honingeters en de zangvogels van het zuiden ontstonden hier en veel soorten komen nergens anders voor. Deze trip heeft er 127 en veel zie je zonder de buitenwijken te verlaten."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "East coast forests",
+          "nl": "Oostkustbossen"
+        },
+        "text": {
+          "en": "The wet forests of the Blue Mountains, Lamington and Dorrigo hold lyrebirds, bowerbirds, whipbirds and Eastern Spinebill. Royal National Park and the Sydney suburbs have many of the common ones.",
+          "nl": "De natte bossen van de Blue Mountains, Lamington en Dorrigo herbergen lierstaarten, prieelvogels, zweepvogels en de Eastern Spinebill. Royal National Park en de buitenwijken van Sydney hebben veel van de algemene soorten."
+        }
+      },
+      {
+        "title": {
+          "en": "Tropical Queensland",
+          "nl": "Tropisch Queensland"
+        },
+        "text": {
+          "en": "Cairns, the Daintree and the Atherton Tableland have Southern Cassowary, Golden Bowerbird, Chowchilla and Victoria's Riflebird. The wet tropics hold more endemics than any other region.",
+          "nl": "Cairns, de Daintree en het Atherton Tableland hebben de helmkasuaris, de gouden prieelvogel, Chowchilla en de Victoria's riflebird. De natte tropen herbergen meer endemen dan welke andere regio ook."
+        }
+      },
+      {
+        "title": {
+          "en": "South-west Western Australia",
+          "nl": "Zuidwest-Australië"
+        },
+        "text": {
+          "en": "Perth and the forests and heath of the south-west have Red-capped Parrot, Splendid Fairywren, Western Spinebill and Carnaby's Black-Cockatoo, found nowhere in the east.",
+          "nl": "Perth en de bossen en heide van het zuidwesten hebben de roodkapparkiet, de Splendid Fairywren, de Western Spinebill en de Carnaby's zwarte kaketoe, die in het oosten ontbreken."
+        }
+      },
+      {
+        "title": {
+          "en": "Red Centre and outback",
+          "nl": "Rode hart en outback"
+        },
+        "text": {
+          "en": "Alice Springs, Uluru and the dry interior hold Spinifex Pigeon, Budgerigar, Zebra Finch and Mulga-country honeyeaters, parrots and woodswallows.",
+          "nl": "Alice Springs, Uluru en het droge binnenland herbergen de spinifexduif, de grasparkiet, de zebravink en honingeters, papegaaien en zwaluwklauwieren van het mulga-land."
+        }
+      },
+      {
+        "title": {
+          "en": "Tasmania",
+          "nl": "Tasmanië"
+        },
+        "text": {
+          "en": "Tasmania has about a dozen birds found nowhere else, such as Forty-spotted Pardalote, Yellow Wattlebird and Tasmanian Nativehen. Bruny Island is the classic site.",
+          "nl": "Tasmanië heeft zo'n twaalf vogels die nergens anders voorkomen, zoals de veertigvlekpardalote, de Yellow Wattlebird en de Tasmaanse waterhoen. Bruny Island is de klassieke plek."
+        }
+      }
+    ],
+    "families": [
+      {
+        "title": {
+          "en": "Lyrebirds",
+          "nl": "Lierstaarten"
+        },
+        "text": {
+          "en": "Two lyrebirds, both Australian. Superb Lyrebird is the one on this trip: it lives in cool, wet forest in the south-east.",
+          "nl": "Twee lierstaarten, beide Australisch. De prachtlierstaart is de soort op deze trip: hij leeft in koel, nat bos in het zuidoosten."
+        }
+      },
+      {
+        "title": {
+          "en": "Bowerbirds",
+          "nl": "Prieelvogels"
+        },
+        "text": {
+          "en": "Bowerbirds build elaborate display structures from sticks and decorate them. Satin Bowerbird collects blue objects.",
+          "nl": "Prieelvogels bouwen ingewikkelde baltsconstructies van takjes en versieren ze. De satijnprieelvogel verzamelt blauwe voorwerpen."
+        }
+      },
+      {
+        "title": {
+          "en": "Fairywrens",
+          "nl": "Elfjes"
+        },
+        "text": {
+          "en": "A family of tiny, cocked-tailed birds found in Australia and New Guinea, where the males are bright and the females brown.",
+          "nl": "Een familie van piepkleine vogeltjes met opgerichte staart uit Australië en Nieuw-Guinea, waar de mannetjes helder en de vrouwtjes bruin zijn."
+        }
+      },
+      {
+        "title": {
+          "en": "Honeyeaters",
+          "nl": "Honingeters"
+        },
+        "text": {
+          "en": "Australia's biggest songbird family, with more than 70 species on the continent. They feed on nectar and fill the role hummingbirds have elsewhere.",
+          "nl": "De grootste zangvogelfamilie van Australië, met meer dan 70 soorten op het continent. Ze eten nectar en vervullen de rol van de kolibries elders."
+        }
+      }
+    ],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "Shorebirds, Honeyeaters and Waterfowl",
+          "nl": "Steltlopers, Honingeters en Watervogels"
+        }
+      },
+      "endemics-2": {
+        "title": {
+          "en": "Pigeons, Frogmouths and Rails",
+          "nl": "Duiven, Uilnachtzwaluwen en Rallen"
+        }
+      },
+      "endemics-3": {
+        "title": {
+          "en": "Gulls, Cormorants and Vultures",
+          "nl": "Meeuwen, Aalscholvers en Slangehalsvogels en Gieren"
+        }
+      },
+      "endemics-4": {
+        "title": {
+          "en": "Parrots, Lyrebirds and Scrub-birds",
+          "nl": "Papegaaien, Liervogels en Doornkruipers en Prieelvogels"
+        }
+      },
+      "endemics-5": {
+        "title": {
+          "en": "Fairywrens, Honeyeaters and Pardalotes",
+          "nl": "Elfjes, Honingeters en Diamantvogels"
+        }
+      },
+      "endemics-6": {
+        "title": {
+          "en": "Thornbills, Pseudo-Babblers and Logrunners",
+          "nl": "Australische zangers, Pseudo-Babbelaars en Stronklopers"
+        }
+      },
+      "endemics-7": {
+        "title": {
+          "en": "Monarch Flycatchers, White-winged Chough and Australasian Robins",
+          "nl": "Monarch Flycatchers, White-winged Chough en Australasian Robins"
+        }
+      },
+      "endemics-8": {
+        "title": {
+          "en": "Kingfishers, Parrots and Scrub-birds",
+          "nl": "IJsvogels, Papegaaien en Doornkruipers en Prieelvogels"
+        }
+      },
+      "endemics-9": {
+        "title": {
+          "en": "Fairywrens, Honeyeaters and White-winged Chough",
+          "nl": "Elfjes, Honingeters en White-winged Chough"
+        }
+      },
+      "endemics-10": {
+        "title": {
+          "en": "Australasian Robins, Flowerpeckers and Cassowaries",
+          "nl": "Australasian Robins, Flowerpeckers en Cussuarissen en Emoes"
+        }
+      },
+      "endemics-11": {
+        "title": {
+          "en": "Waterfowl, Megapodes and Grebes",
+          "nl": "Watervogels, Grootpoothoenders en Futen"
+        }
+      },
+      "endemics-12": {
+        "title": {
+          "en": "Pigeons, Shorebirds and Herons",
+          "nl": "Duiven, Steltlopers en Reigers"
+        }
+      },
+      "endemics-13": {
+        "title": {
+          "en": "Cockatoos",
+          "nl": "Kaketoes"
+        }
+      },
+      "endemics-14": {
+        "title": {
+          "en": "Cockatoos and Parrots",
+          "nl": "Kaketoes en Papegaaien"
+        }
+      },
+      "endemics-15": {
+        "title": {
+          "en": "Parrots and Scrub-birds",
+          "nl": "Papegaaien en Doornkruipers en Prieelvogels"
+        }
+      },
+      "endemics-16": {
+        "title": {
+          "en": "Australian Treecreepers and Fairywrens",
+          "nl": "Australische Boomkruipers en Elfjes"
+        }
+      },
+      "endemics-17": {
+        "title": {
+          "en": "Fairywrens and Honeyeaters",
+          "nl": "Elfjes en Honingeters"
+        }
+      },
+      "endemics-18": {
+        "title": {
+          "en": "Honeyeaters",
+          "nl": "Honingeters"
+        }
+      },
+      "endemics-19": {
+        "title": {
+          "en": "Pardalotes and Thornbills",
+          "nl": "Diamantvogels en Australische zangers"
+        }
+      },
+      "endemics-20": {
+        "title": {
+          "en": "Whipbirds, Shrike-tits and Woodswallows",
+          "nl": "Zwiepfluiters, Shrike-tits en Woodswallows"
+        }
+      },
+      "endemics-21": {
+        "title": {
+          "en": "Bellmagpies, Jays and Australasian Robins",
+          "nl": "Bellmagpies, Gaaien en Australasian Robins"
+        }
+      },
+      "endemics-22": {
+        "title": {
+          "en": "Australasian Robins and Estrildids",
+          "nl": "Australasian Robins en Prachtvinken"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "code": "recpar1",
+  "name": {
+    "en": "Red-capped Parrot",
+    "nl": "Roodkapparkiet"
+  },
+  "latin": "Purpureicephalus spurius",
+  "look_for": [
+    {
+      "en": "Crimson cap, green face and long curved **bill**",
+      "nl": "Karmozijnrode kap, groen gezicht, lange gebogen **snavel**"
+    },
+    {
+      "en": "Purple-blue **breast**, yellow **belly**",
+      "nl": "Paarsblauwe **borst**, gele **buik**"
+    },
+    {
+      "en": "Often feeds on marri fruit in woodland",
+      "nl": "Eet vaak marri-vruchten in bos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "cabgoo1",
+  "name": {
+    "en": "Cape Barren Goose",
+    "nl": "Hoendergans"
+  },
+  "latin": "Cereopsis novaehollandiae",
+  "look_for": [
+    {
+      "en": "Big pale grey goose",
+      "nl": "Grote, bleekgrijze gans"
+    },
+    {
+      "en": "Tiny black **bill** with green cere",
+      "nl": "Kleine zwarte **snavel** met groene wasvlies"
+    },
+    {
+      "en": "Black-spotted **wings**, pink legs",
+      "nl": "Zwartgevlekte **vleugels**, roze poten"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "norros1",
+  "name": {
+    "en": "Northern Rosella",
+    "nl": "Zwartkoprosella"
+  },
+  "latin": "Platycercus venustus",
+  "look_for": [
+    {
+      "en": "Black **head** with white cheek patch",
+      "nl": "Zwarte **kop** met witte wangvlek"
+    },
+    {
+      "en": "Pale yellow **breast**, blue and scaly back",
+      "nl": "Bleekgele **borst**, blauwe en geschubde rug"
+    },
+    {
+      "en": "Rosella of tropical savanna woodland",
+      "nl": "Rosella van tropisch savannebos"
+    }
+  ]
+}

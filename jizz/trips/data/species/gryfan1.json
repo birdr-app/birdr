@@ -1,0 +1,22 @@
+{
+  "code": "gryfan1",
+  "name": {
+    "en": "Grey Fantail",
+    "nl": "Grijze waaierstaart"
+  },
+  "latin": "Rhipidura albiscapa",
+  "look_for": [
+    {
+      "en": "Grey with a long, fanned **tail** tipped white",
+      "nl": "Grijs met een lange, gespreide **staart** met witte punt"
+    },
+    {
+      "en": "White **eyebrow** and two **breast bands**",
+      "nl": "Witte **wenkbrauw** en twee **borstbanden**"
+    },
+    {
+      "en": "Flits after insects and fans its tail constantly",
+      "nl": "Jaagt fladderend op insecten en waaiert steeds met de staart"
+    }
+  ]
+}

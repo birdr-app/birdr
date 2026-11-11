@@ -1,0 +1,22 @@
+{
+  "code": "bruwat1",
+  "name": {
+    "en": "Little Wattlebird",
+    "nl": "Kleine lelhoningeter"
+  },
+  "latin": "Anthochaera chrysoptera",
+  "look_for": [
+    {
+      "en": "Streaky brown and grey, pale **cheek** patch",
+      "nl": "Gestreept bruingrijs, bleke **wang**vlek"
+    },
+    {
+      "en": "Rufous **wing** patch in flight",
+      "nl": "Roestbruine **vleugel**vlek in vlucht"
+    },
+    {
+      "en": "Noisy, restless flower-visitor in banksias",
+      "nl": "Luidruchtige, onrustige bloembezoeker in banksia's"
+    }
+  ]
+}

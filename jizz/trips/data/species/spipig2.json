@@ -1,0 +1,22 @@
+{
+  "code": "spipig2",
+  "name": {
+    "en": "Spinifex Pigeon",
+    "nl": "Spinifexduif"
+  },
+  "latin": "Geophaps plumifera",
+  "look_for": [
+    {
+      "en": "Small, rusty-red pigeon of dry country",
+      "nl": "Kleine, roestrode duif van droog land"
+    },
+    {
+      "en": "Spiky black **crest**, red eye patch",
+      "nl": "Spitse zwarte **kuif**, rode oogvlek"
+    },
+    {
+      "en": "Black-and-white bars on the **wing**",
+      "nl": "Zwart-wit gebandeerde **vleugel**"
+    }
+  ]
+}

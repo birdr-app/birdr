@@ -1,0 +1,22 @@
+{
+  "code": "grybut1",
+  "name": {
+    "en": "Grey Butcherbird",
+    "nl": "Grijsrugorgelvogel"
+  },
+  "latin": "Cracticus torquatus",
+  "look_for": [
+    {
+      "en": "Black **head** with a grey back and white **collar**",
+      "nl": "Zwarte **kop** met een grijze rug en witte **kraag**"
+    },
+    {
+      "en": "Hooked **bill** with a pale base",
+      "nl": "Haaksnavel met een lichte basis"
+    },
+    {
+      "en": "Rich, fluting song at dawn",
+      "nl": "Rijk, fluitend lied bij zonsopgang"
+    }
+  ]
+}

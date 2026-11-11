@@ -1,0 +1,19 @@
+{
+  "slug": "shrike-tits",
+  "about": {
+    "en": "Medium-sized birds of eucalypt woodland with a heavy, hooked bill and a black-and-white striped head with a crest. They rip bark off trunks to find insects and often sit and call from a high perch.",
+    "nl": "Middelgrote vogels van eucalyptusbos met een zware, gehaakte snavel en een zwart-wit gestreepte kop met een kuif. Ze scheuren schors van stammen op zoek naar insecten en zitten vaak roepend op een hoge zitplaats."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "shrikes",
+        "tits-chickadees-and-titmice"
+      ],
+      "text": {
+        "en": "Not related to shrikes or tits, despite the name. They look like neither: a chunky, heavy-billed bird that tears at bark.",
+        "nl": "Ondanks de naam niet verwant aan klauwieren of mezen. Ze lijken op geen van beide: een stevige vogel met een zware snavel die aan schors rukt."
+      }
+    }
+  ]
+}

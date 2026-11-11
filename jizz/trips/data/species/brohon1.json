@@ -1,0 +1,22 @@
+{
+  "code": "brohon1",
+  "name": {
+    "en": "Brown Honeyeater",
+    "nl": "Parkhoningeter"
+  },
+  "latin": "Lichmera indistincta",
+  "look_for": [
+    {
+      "en": "Plain brown honeyeater with a pale **eye-stripe**",
+      "nl": "Eenvoudig bruine honingeter met een lichte **oogstreep**"
+    },
+    {
+      "en": "Yellow-cream patch behind the **eye**",
+      "nl": "Geelwitte vlek achter het **oog**"
+    },
+    {
+      "en": "Liquid, babbling song; common in scrub and mangroves",
+      "nl": "Vloeiend, kwetterend lied; algemeen in struweel en mangroven"
+    }
+  ]
+}

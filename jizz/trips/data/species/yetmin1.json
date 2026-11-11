@@ -1,0 +1,22 @@
+{
+  "code": "yetmin1",
+  "name": {
+    "en": "Yellow-throated Miner",
+    "nl": "Witstuithoningeter"
+  },
+  "latin": "Manorina flavigula",
+  "look_for": [
+    {
+      "en": "Grey bird with yellow **throat** and **bill**",
+      "nl": "Grijze vogel met gele **keel** en **snavel**"
+    },
+    {
+      "en": "White **rump** and dark mask",
+      "nl": "Witte **stuit** en donker masker"
+    },
+    {
+      "en": "Noisy, bouncing flocks in dry woodland",
+      "nl": "Luidruchtige springende groepen in droog bos"
+    }
+  ]
+}

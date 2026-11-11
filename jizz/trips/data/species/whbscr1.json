@@ -1,0 +1,22 @@
+{
+  "code": "whbscr1",
+  "name": {
+    "en": "White-browed Scrubwren",
+    "nl": "Witbrauwstruiksluiper"
+  },
+  "latin": "Sericornis frontalis",
+  "look_for": [
+    {
+      "en": "Olive-brown with a white **eyebrow** and pale eye",
+      "nl": "Olijfbruin met een witte **wenkbrauw** en licht oog"
+    },
+    {
+      "en": "Streaked **breast** and dark **tail**",
+      "nl": "Gestreepte **borst** en donkere **staart**"
+    },
+    {
+      "en": "Forages on the ground in dense undergrowth",
+      "nl": "Zoekt op de grond in dichte ondergroei"
+    }
+  ]
+}

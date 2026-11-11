@@ -1,0 +1,22 @@
+{
+  "code": "zebfin2",
+  "name": {
+    "en": "Zebra Finch",
+    "nl": "Zebravink"
+  },
+  "latin": "Taeniopygia guttata",
+  "look_for": [
+    {
+      "en": "Orange **bill**, orange **cheek** patches",
+      "nl": "Oranje **snavel**, oranje vlekken op de **wangen**"
+    },
+    {
+      "en": "Male: barred **tail** and black **breast** band",
+      "nl": "Mannetje: gebande **staart** en zwarte **borstband**"
+    },
+    {
+      "en": "Flocks drinking at waterholes; nasal calls",
+      "nl": "Groepen die bij waterplaatsen drinken; neusachtige roep"
+    }
+  ]
+}

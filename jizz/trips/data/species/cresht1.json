@@ -1,0 +1,22 @@
+{
+  "code": "cresht1",
+  "name": {
+    "en": "Eastern Shrike-tit",
+    "nl": "Oostelijke harlekijndikkop"
+  },
+  "latin": "Falcunculus frontatus",
+  "look_for": [
+    {
+      "en": "Black and white striped **head** with a peaked crest",
+      "nl": "Zwart-wit gestreepte **kop** met een puntige kuif"
+    },
+    {
+      "en": "Yellow underparts and olive back",
+      "nl": "Gele onderzijde en olijfgroene rug"
+    },
+    {
+      "en": "Strips bark in eucalypts; heavy **bill**",
+      "nl": "Trekt schors los in eucalyptussen; stevige **snavel**"
+    }
+  ]
+}

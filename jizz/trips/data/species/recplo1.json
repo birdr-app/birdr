@@ -1,0 +1,22 @@
+{
+  "code": "recplo1",
+  "name": {
+    "en": "Red-capped Plover",
+    "nl": "Roodkopplevier"
+  },
+  "latin": "Anarhynchus ruficapillus",
+  "look_for": [
+    {
+      "en": "Small plover with rufous cap and **nape**",
+      "nl": "Kleine plevier met roestbruine kap en **nek**"
+    },
+    {
+      "en": "Black **eye**-stripe, white **underparts**, no **breast** band",
+      "nl": "Zwarte oogstreep, witte **onderzijde**, geen **borstband**"
+    },
+    {
+      "en": "Fast runner on beaches, salt lakes and mud",
+      "nl": "Snelle loper op stranden, zoutmeren en slik"
+    }
+  ]
+}

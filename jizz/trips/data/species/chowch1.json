@@ -1,0 +1,22 @@
+{
+  "code": "chowch1",
+  "name": {
+    "en": "Chowchilla",
+    "nl": "Zwartkopstronkloper"
+  },
+  "latin": "Orthonyx spaldingii",
+  "look_for": [
+    {
+      "en": "Plump, dark rainforest bird on the ground",
+      "nl": "Gedrongen donkere vogel op de regenwoudbodem"
+    },
+    {
+      "en": "Rufous-brown **breast**, short **tail**",
+      "nl": "Roodbruine **borst**, korte **staart**"
+    },
+    {
+      "en": "Loud 'chowchilla' calls, scratching leaves",
+      "nl": "Luide 'chowchilla'-roepen, krabt in bladeren"
+    }
+  ]
+}

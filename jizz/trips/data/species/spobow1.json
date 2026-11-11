@@ -1,0 +1,22 @@
+{
+  "code": "spobow1",
+  "name": {
+    "en": "Spotted Bowerbird",
+    "nl": "Grijsnekprieelvogel"
+  },
+  "latin": "Chlamydera maculata",
+  "look_for": [
+    {
+      "en": "Brown, spotted body with pink **nape** crest",
+      "nl": "Bruin gevlekt lijf met roze **nek**kuif"
+    },
+    {
+      "en": "Pale buff **underparts**, speckled back",
+      "nl": "Lichte **onderkant**, gespikkelde rug"
+    },
+    {
+      "en": "Avenue bower decorated with bones, glass",
+      "nl": "Lanenprieel versierd met botten en glas"
+    }
+  ]
+}

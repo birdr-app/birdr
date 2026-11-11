@@ -1,0 +1,22 @@
+{
+  "code": "auspip2",
+  "name": {
+    "en": "Australian Pipit",
+    "nl": "Australische pieper"
+  },
+  "latin": "Anthus australis",
+  "look_for": [
+    {
+      "en": "Streaky brown pipit upright on the ground",
+      "nl": "Gestreepte bruine pieper die rechtop op de grond staat"
+    },
+    {
+      "en": "Pale **eyebrow** and buff **breast**",
+      "nl": "Lichte **wenkbrauw** en bruingele **borst**"
+    },
+    {
+      "en": "Walks in open fields; flicks its **tail**",
+      "nl": "Loopt in open velden; wipt met de **staart**"
+    }
+  ]
+}

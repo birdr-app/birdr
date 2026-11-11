@@ -1,0 +1,22 @@
+{
+  "code": "litcor2",
+  "name": {
+    "en": "Little Corella",
+    "nl": "Naaktoogkaketoe"
+  },
+  "latin": "Cacatua sanguinea",
+  "look_for": [
+    {
+      "en": "White cockatoo with bare bluish skin round **eye**",
+      "nl": "Witte kaketoe met kale blauwige huid rond het **oog**"
+    },
+    {
+      "en": "Short, pale **bill**, salmon-pink **face**",
+      "nl": "Korte lichte **snavel**, zalmroze **kop**"
+    },
+    {
+      "en": "Large flocks feed on the ground in open country",
+      "nl": "Grote groepen foerageren op de grond in open land"
+    }
+  ]
+}

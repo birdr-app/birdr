@@ -1,0 +1,22 @@
+{
+  "code": "palcoc1",
+  "name": {
+    "en": "Palm Cockatoo",
+    "nl": "Zwarte kaketoe"
+  },
+  "latin": "Probosciger aterrimus",
+  "look_for": [
+    {
+      "en": "Huge, sooty-black cockatoo with long **crest**",
+      "nl": "Enorme roetzwarte kaketoe met lange **kuif**"
+    },
+    {
+      "en": "Bare red **cheek** patch, massive black **bill**",
+      "nl": "Kale rode **wang**, enorme zwarte **snavel**"
+    },
+    {
+      "en": "Rainforest and savanna edges in the far north",
+      "nl": "Regenwoud en savanne in het verre noorden"
+    }
+  ]
+}

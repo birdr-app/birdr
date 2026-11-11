@@ -1,0 +1,22 @@
+{
+  "code": "recrob1",
+  "name": {
+    "en": "Red-capped Robin",
+    "nl": "Roodvoorhoofdvliegenvanger"
+  },
+  "latin": "Petroica goodenovii",
+  "look_for": [
+    {
+      "en": "Male has bright red **cap** and breast",
+      "nl": "Man heeft felrode **kruin** en borst"
+    },
+    {
+      "en": "Otherwise black above, white below",
+      "nl": "Verder zwart boven, wit onder"
+    },
+    {
+      "en": "Perches low in dry scrub, drops to feed",
+      "nl": "Zit laag in droog struikgewas, duikt naar de grond"
+    }
+  ]
+}

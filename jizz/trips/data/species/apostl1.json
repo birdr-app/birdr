@@ -1,0 +1,22 @@
+{
+  "code": "apostl1",
+  "name": {
+    "en": "Apostlebird",
+    "nl": "Apostelvogel"
+  },
+  "latin": "Struthidea cinerea",
+  "look_for": [
+    {
+      "en": "Plain grey bird with long **tail**",
+      "nl": "Effen grijze vogel met lange **staart**"
+    },
+    {
+      "en": "Short thick black **bill**, brown wing patch",
+      "nl": "Korte dikke zwarte **snavel**, bruine vlek op de **vleugel**"
+    },
+    {
+      "en": "Noisy family groups feeding on the ground",
+      "nl": "Luidruchtige familiegroepen op de grond"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "mistle1",
+  "name": {
+    "en": "Mistletoebird",
+    "nl": "Mistelhoningvogel"
+  },
+  "latin": "Dicaeum hirundinaceum",
+  "look_for": [
+    {
+      "en": "Male glossy blue-black above, scarlet **throat**",
+      "nl": "Man glanzend blauwzwart boven, scharlaken **keel**"
+    },
+    {
+      "en": "Tiny, short **tail**, white **belly** with black streak",
+      "nl": "Piepklein, korte **staart**, witte **buik** met zwarte streep"
+    },
+    {
+      "en": "Female grey above, pale below, red under **tail**",
+      "nl": "Vrouw grijs boven, licht onder, rood onder de **staart**"
+    }
+  ]
+}

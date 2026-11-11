@@ -1,0 +1,22 @@
+{
+  "code": "strpar1",
+  "name": {
+    "en": "Striated Pardalote",
+    "nl": "Gestreepte diamantvogel"
+  },
+  "latin": "Pardalotus striatus",
+  "look_for": [
+    {
+      "en": "Tiny, with a black **crown** striped white",
+      "nl": "Klein, met een zwarte **kruin** met witte streepjes"
+    },
+    {
+      "en": "Yellow-orange spot on the **wing** edge",
+      "nl": "Geeloranje vlek op de **vleugelrand**"
+    },
+    {
+      "en": "Two-note call, 'wit-ta-wit', from trees",
+      "nl": "Tweedelige roep, 'wit-ta-wit', uit bomen"
+    }
+  ]
+}

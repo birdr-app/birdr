@@ -1,0 +1,22 @@
+{
+  "code": "sarcra1",
+  "name": {
+    "en": "Sarus Crane",
+    "nl": "Saruskraanvogel"
+  },
+  "latin": "Antigone antigone",
+  "look_for": [
+    {
+      "en": "Very tall grey crane with red **head**",
+      "nl": "Zeer grote grijze kraanvogel met rode **kop**"
+    },
+    {
+      "en": "Pale grey **neck**, long pinkish legs",
+      "nl": "Lichtgrijze **nek**, lange roze poten"
+    },
+    {
+      "en": "Dances in pairs on wetlands",
+      "nl": "Danst in paren in moerasland"
+    }
+  ]
+}

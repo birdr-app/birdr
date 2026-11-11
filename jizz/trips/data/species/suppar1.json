@@ -1,0 +1,22 @@
+{
+  "code": "suppar1",
+  "name": {
+    "en": "Superb Parrot",
+    "nl": "Barrabandparkiet"
+  },
+  "latin": "Polytelis swainsonii",
+  "look_for": [
+    {
+      "en": "Slim green parrot with long pointed **tail**",
+      "nl": "Slanke groene papegaai met lange spitse **staart**"
+    },
+    {
+      "en": "Male has yellow **face** and **throat**, red band below",
+      "nl": "Mannetje met gele **kop** en **keel**, rode band eronder"
+    },
+    {
+      "en": "Open woodland and farmland in the southeast",
+      "nl": "Open bos en landbouwgrond in het zuidoosten"
+    }
+  ]
+}

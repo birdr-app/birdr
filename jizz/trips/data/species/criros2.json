@@ -1,0 +1,22 @@
+{
+  "code": "criros2",
+  "name": {
+    "en": "Crimson Rosella",
+    "nl": "Pennantrosella"
+  },
+  "latin": "Platycercus elegans",
+  "look_for": [
+    {
+      "en": "Crimson **head** and **underparts**, blue **cheek**",
+      "nl": "Karmozijnrode **kop** en **onderzijde**, blauwe **wang**"
+    },
+    {
+      "en": "Dark scaly **back**, blue **wings** and **tail**",
+      "nl": "Donkere geschubde **rug**, blauwe **vleugels** en **staart**"
+    },
+    {
+      "en": "Common in forests, parks and gardens",
+      "nl": "Algemeen in bossen, parken en tuinen"
+    }
+  ]
+}

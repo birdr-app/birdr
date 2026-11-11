@@ -1,0 +1,22 @@
+{
+  "code": "maswoo1",
+  "name": {
+    "en": "Masked Woodswallow",
+    "nl": "Maskerspitsvogel"
+  },
+  "latin": "Artamus personatus",
+  "look_for": [
+    {
+      "en": "Dark grey with a black **face mask**",
+      "nl": "Donkergrijs met een zwart **gezichtsmasker**"
+    },
+    {
+      "en": "White line above the mask, pale blue **bill**",
+      "nl": "Witte lijn boven het masker, lichtblauwe **snavel**"
+    },
+    {
+      "en": "Nomadic flocks with a swallow-like flight",
+      "nl": "Zwervende groepen met een zwaluwachtige vlucht"
+    }
+  ]
+}

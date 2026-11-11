@@ -1,0 +1,22 @@
+{
+  "code": "pieoys1",
+  "name": {
+    "en": "Pied Oystercatcher",
+    "nl": "Australische bonte scholekster"
+  },
+  "latin": "Haematopus longirostris",
+  "look_for": [
+    {
+      "en": "Black-and-white wader with long red **bill**",
+      "nl": "Zwartwitte steltloper met lange rode **snavel**"
+    },
+    {
+      "en": "Black **head** and **back**, white **belly**",
+      "nl": "Zwarte **kop** en **rug**, witte **buik**"
+    },
+    {
+      "en": "Coasts, mudflats and sandy beaches; pink **legs**",
+      "nl": "Kusten, slikken en stranden, roze **poten**"
+    }
+  ]
+}

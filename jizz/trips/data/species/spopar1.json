@@ -1,0 +1,22 @@
+{
+  "code": "spopar1",
+  "name": {
+    "en": "Spotted Pardalote",
+    "nl": "Gevlekte diamantvogel"
+  },
+  "latin": "Pardalotus punctatus",
+  "look_for": [
+    {
+      "en": "Tiny, with a white-spotted black **crown**",
+      "nl": "Klein, met een wit gespikkelde zwarte **kruin**"
+    },
+    {
+      "en": "Black **wings** with white spots, yellow throat or rump",
+      "nl": "Zwarte **vleugels** met witte stippen, gele keel of stuit"
+    },
+    {
+      "en": "High in eucalypts; soft, pipping call",
+      "nl": "Hoog in eucalyptussen; zachte, piepende roep"
+    }
+  ]
+}

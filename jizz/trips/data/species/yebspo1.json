@@ -1,0 +1,22 @@
+{
+  "code": "yebspo1",
+  "name": {
+    "en": "Yellow-billed Spoonbill",
+    "nl": "Geelsnavellepelaar"
+  },
+  "latin": "Platalea flavipes",
+  "look_for": [
+    {
+      "en": "Pale yellow, long, flat-tipped **bill**",
+      "nl": "Lange, bleekgele **snavel** met platte punt"
+    },
+    {
+      "en": "White body, yellow **legs**, black facial skin",
+      "nl": "Wit lijf, gele **poten**, zwarte **gezichtshuid**"
+    },
+    {
+      "en": "Sweeps **bill** sideways in shallow fresh water",
+      "nl": "Zwiept met de **snavel** door ondiep zoet water"
+    }
+  ]
+}

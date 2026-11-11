@@ -1,0 +1,22 @@
+{
+  "code": "rabeat1",
+  "name": {
+    "en": "Rainbow Bee-eater",
+    "nl": "Regenboogbijeneter"
+  },
+  "latin": "Merops ornatus",
+  "look_for": [
+    {
+      "en": "Slender bee-eater, green with blue **rump**",
+      "nl": "Slanke bijeneter, groen met blauwe **stuit**"
+    },
+    {
+      "en": "Black **eye**-stripe and yellow-and-black **throat**",
+      "nl": "Zwarte oogstreep, geel-zwarte **keel**"
+    },
+    {
+      "en": "Long thin **tail** streamers; hawks from wires",
+      "nl": "Lange dunne **staartpunten**, jaagt vanaf draden"
+    }
+  ]
+}

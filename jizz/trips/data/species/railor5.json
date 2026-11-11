@@ -1,0 +1,22 @@
+{
+  "code": "railor5",
+  "name": {
+    "en": "Rainbow Lorikeet",
+    "nl": "Australische regenbooglori"
+  },
+  "latin": "Trichoglossus moluccanus",
+  "look_for": [
+    {
+      "en": "Blue **head**, red **bill**, orange-red **breast**",
+      "nl": "Blauwe **kop**, rode **snavel**, oranjerode **borst**"
+    },
+    {
+      "en": "Green **back**, yellow collar, dark blue **belly**",
+      "nl": "Groene **rug**, gele kraag, donkerblauwe **buik**"
+    },
+    {
+      "en": "Raucous flocks in gardens and flowering trees",
+      "nl": "Luidruchtige groepen in tuinen en bloeiende bomen"
+    }
+  ]
+}

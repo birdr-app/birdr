@@ -1,0 +1,22 @@
+{
+  "code": "grebow1",
+  "name": {
+    "en": "Great Bowerbird",
+    "nl": "Grijze prieelvogel"
+  },
+  "latin": "Chlamydera nuchalis",
+  "look_for": [
+    {
+      "en": "Large grey-brown bowerbird, pale **belly**",
+      "nl": "Grote grijsbruine prieelvogel met lichte **buik**"
+    },
+    {
+      "en": "Pink-lilac **nape** patch, scaly back",
+      "nl": "Roze lila **nek**vlek, geschubde rug"
+    },
+    {
+      "en": "Big avenue bower decorated with green objects",
+      "nl": "Groot lanenprieel met groene voorwerpen"
+    }
+  ]
+}

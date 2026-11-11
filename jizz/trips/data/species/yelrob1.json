@@ -1,0 +1,22 @@
+{
+  "code": "yelrob1",
+  "name": {
+    "en": "Eastern Yellow Robin",
+    "nl": "Groenstuitvliegenvanger"
+  },
+  "latin": "Eopsaltria australis",
+  "look_for": [
+    {
+      "en": "Grey **head** and back with a bright yellow **belly**",
+      "nl": "Grijze **kop** en rug met een felgele **buik**"
+    },
+    {
+      "en": "Olive-yellow **rump**, pale **throat**",
+      "nl": "Olijfgele **stuit**, lichte **keel**"
+    },
+    {
+      "en": "Clings upright to trunks, then drops down",
+      "nl": "Zit rechtop tegen stammen, duikt dan omlaag"
+    }
+  ]
+}

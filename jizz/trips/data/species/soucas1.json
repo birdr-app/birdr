@@ -1,0 +1,22 @@
+{
+  "code": "soucas1",
+  "name": {
+    "en": "Southern Cassowary",
+    "nl": "Helmkasuaris"
+  },
+  "latin": "Casuarius casuarius",
+  "look_for": [
+    {
+      "en": "Huge, flightless, glossy black bird",
+      "nl": "Enorme, loopvogel met glanzend zwart verenkleed"
+    },
+    {
+      "en": "Tall blue **neck** with red wattles",
+      "nl": "Blauwe **hals** met rode lellen"
+    },
+    {
+      "en": "Horn-like **casque** on the head",
+      "nl": "Hoornachtige **helm** op de kop"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "chcbab2",
+  "name": {
+    "en": "Chestnut-crowned Babbler",
+    "nl": "Roodkruinbabbelaar"
+  },
+  "latin": "Pomatostomus ruficeps",
+  "look_for": [
+    {
+      "en": "Chestnut **crown**, brown babbler",
+      "nl": "Kastanjebruine **kruin**, bruine babbelaar"
+    },
+    {
+      "en": "White **throat**, white **breast** edge",
+      "nl": "Witte **keel**, witte **borst**rand"
+    },
+    {
+      "en": "Black **tail** with white tip, in groups",
+      "nl": "Zwarte **staart** met witte punt, in groepen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "whikit1",
+  "name": {
+    "en": "Whistling Kite",
+    "nl": "Wigstaartwouw"
+  },
+  "latin": "Haliastur sphenurus",
+  "look_for": [
+    {
+      "en": "Pale brown raptor with long, rounded **tail**",
+      "nl": "Bleekbruine roofvogel met lange, afgeronde **staart**"
+    },
+    {
+      "en": "Pale **wing** patch and dark **flight feathers** from below",
+      "nl": "Lichte vlek in de **vleugel**, donkere **slagpennen** van onderen"
+    },
+    {
+      "en": "Loud, whistling call; soars near water and fields",
+      "nl": "Luide fluitroep, zweeft bij water en velden"
+    }
+  ]
+}

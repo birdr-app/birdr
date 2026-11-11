@@ -1,0 +1,22 @@
+{
+  "code": "renavo1",
+  "name": {
+    "en": "Red-necked Avocet",
+    "nl": "Australische kluut"
+  },
+  "latin": "Recurvirostra novaehollandiae",
+  "look_for": [
+    {
+      "en": "Slender wader with upcurved **bill**",
+      "nl": "Slanke steltloper met opwaarts gebogen **snavel**"
+    },
+    {
+      "en": "Chestnut **head** and **neck**, white body",
+      "nl": "Kastanjebruine **kop** en **hals**, wit lijf"
+    },
+    {
+      "en": "Black **wings**, wades in salty shallows",
+      "nl": "Zwarte **vleugels**, waadt in zoute ondiepten"
+    }
+  ]
+}

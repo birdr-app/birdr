@@ -1,0 +1,22 @@
+{
+  "code": "bubrai1",
+  "name": {
+    "en": "Buff-banded Rail",
+    "nl": "Geelbandral"
+  },
+  "latin": "Gallirallus philippensis",
+  "look_for": [
+    {
+      "en": "Brown rail with a barred buff band on **breast**",
+      "nl": "Bruine ral met gebandeerde roomkleurige band op de **borst**"
+    },
+    {
+      "en": "Chestnut **eye** stripe, pale **eyebrow**",
+      "nl": "Kastanjebruine streep door het **oog**, lichte **wenkbrauw**"
+    },
+    {
+      "en": "Walks openly on grass near water",
+      "nl": "Loopt in het open over gras bij water"
+    }
+  ]
+}

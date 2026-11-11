@@ -1,0 +1,22 @@
+{
+  "code": "ausbrt1",
+  "name": {
+    "en": "Australian Brushturkey",
+    "nl": "Boskalkoen"
+  },
+  "latin": "Alectura lathami",
+  "look_for": [
+    {
+      "en": "Large black ground bird with bare red **head**",
+      "nl": "Grote zwarte grondvogel met kale rode **kop**"
+    },
+    {
+      "en": "Yellow neck **wattle**, fan-shaped **tail**",
+      "nl": "Gele **lel** aan de nek, waaiervormige **staart**"
+    },
+    {
+      "en": "Scratches leaf litter in forest and gardens",
+      "nl": "Krabt door bladafval in bos en tuinen"
+    }
+  ]
+}

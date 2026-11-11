@@ -1,0 +1,22 @@
+{
+  "code": "cockat",
+  "name": {
+    "en": "Cockatiel",
+    "nl": "Valkparkiet"
+  },
+  "latin": "Nymphicus hollandicus",
+  "look_for": [
+    {
+      "en": "Small grey parrot with long **tail** and tall **crest**",
+      "nl": "Kleine grijze papegaai met lange **staart** en hoge **kuif**"
+    },
+    {
+      "en": "Yellow **face**, orange **cheek** patch",
+      "nl": "Gele **kop**, oranje **wangvlek**"
+    },
+    {
+      "en": "White **wing** patch; nomadic flocks in dry country",
+      "nl": "Witte **vleugelstrook**, zwervende groepen in droog land"
+    }
+  ]
+}

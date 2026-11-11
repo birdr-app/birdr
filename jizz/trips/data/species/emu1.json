@@ -1,0 +1,22 @@
+{
+  "code": "emu1",
+  "name": {
+    "en": "Emu",
+    "nl": "Emoe"
+  },
+  "latin": "Dromaius novaehollandiae",
+  "look_for": [
+    {
+      "en": "Huge flightless bird, shaggy grey-brown plumage",
+      "nl": "Enorme loopvogel met slordig grijsbruin verenkleed"
+    },
+    {
+      "en": "Long legs, long neck, small **head**",
+      "nl": "Lange poten, lange nek, kleine **kop**"
+    },
+    {
+      "en": "Walks or runs across open country",
+      "nl": "Loopt of rent door open land"
+    }
+  ]
+}

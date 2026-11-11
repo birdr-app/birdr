@@ -1,0 +1,22 @@
+{
+  "code": "greros2",
+  "name": {
+    "en": "Green Rosella",
+    "nl": "Geelbuikrosella"
+  },
+  "latin": "Platycercus caledonicus",
+  "look_for": [
+    {
+      "en": "Rosella with green **back** and yellow **underparts**",
+      "nl": "Rosella met groene **rug** en gele **onderzijde**"
+    },
+    {
+      "en": "Red forehead band, blue **wings** and **tail**",
+      "nl": "Rode **voorhoofdsband**, blauwe **vleugels** en **staart**"
+    },
+    {
+      "en": "Cool forests, only in Tasmania",
+      "nl": "Koele bossen, alleen op Tasmanië"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "piecur1",
+  "name": {
+    "en": "Pied Currawong",
+    "nl": "Bonte klauwierkraai"
+  },
+  "latin": "Strepera graculina",
+  "look_for": [
+    {
+      "en": "Large black bird with white **wing** patches",
+      "nl": "Grote zwarte vogel met witte vlekken op de **vleugels**"
+    },
+    {
+      "en": "White **vent** and **tail** tip, yellow eye",
+      "nl": "Witte **onderstaartdekveren** en staartpunt, gele ogen"
+    },
+    {
+      "en": "Ringing 'curra-wong' call",
+      "nl": "Klinkende 'curra-wong'-roep"
+    }
+  ]
+}

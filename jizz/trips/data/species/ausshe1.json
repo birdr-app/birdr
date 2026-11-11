@@ -1,0 +1,22 @@
+{
+  "code": "ausshe1",
+  "name": {
+    "en": "Australian Shelduck",
+    "nl": "Australische bergeend"
+  },
+  "latin": "Tadorna tadornoides",
+  "look_for": [
+    {
+      "en": "Large duck with dark green **head**",
+      "nl": "Grote eend met donkergroene **kop**"
+    },
+    {
+      "en": "Chestnut **breast**, white neck ring",
+      "nl": "Kastanjebruine **borst**, witte halsring"
+    },
+    {
+      "en": "Black body, white **wing** patch in flight",
+      "nl": "Zwart lijf, witte vlek in de **vleugel** in vlucht"
+    }
+  ]
+}

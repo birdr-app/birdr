@@ -1,0 +1,22 @@
+{
+  "code": "aukpar1",
+  "name": {
+    "en": "Australian King-Parrot",
+    "nl": "Australische koningsparkiet"
+  },
+  "latin": "Alisterus scapularis",
+  "look_for": [
+    {
+      "en": "Male has scarlet **head** and **underparts**",
+      "nl": "Mannetje met scharlaken **kop** en **onderzijde**"
+    },
+    {
+      "en": "Green **back** and **wings**, blue **rump**",
+      "nl": "Groene **rug** en **vleugels**, blauwe **stuit**"
+    },
+    {
+      "en": "Long dark **tail**; wet forests, often at feeders",
+      "nl": "Lange donkere **staart**, natte bossen, vaak bij voederplekken"
+    }
+  ]
+}

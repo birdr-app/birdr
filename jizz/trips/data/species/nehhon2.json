@@ -1,0 +1,22 @@
+{
+  "code": "nehhon2",
+  "name": {
+    "en": "New Holland Honeyeater",
+    "nl": "Witooghoningeter"
+  },
+  "latin": "Phylidonyris novaehollandiae",
+  "look_for": [
+    {
+      "en": "Black and white streaked body with a white **eye**",
+      "nl": "Zwart-wit gestreept met een wit **oog**"
+    },
+    {
+      "en": "White tuft behind the **cheek**",
+      "nl": "Witte pluim achter de **wang**"
+    },
+    {
+      "en": "Yellow patches in **wings** and **tail**",
+      "nl": "Gele vlekken in **vleugels** en **staart**"
+    }
+  ]
+}

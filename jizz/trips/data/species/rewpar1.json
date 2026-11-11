@@ -1,0 +1,22 @@
+{
+  "code": "rewpar1",
+  "name": {
+    "en": "Red-winged Parrot",
+    "nl": "Roodvleugelparkiet"
+  },
+  "latin": "Aprosmictus erythropterus",
+  "look_for": [
+    {
+      "en": "Large green parrot with red **bill**",
+      "nl": "Grote groene papegaai met rode **snavel**"
+    },
+    {
+      "en": "Bright red **wing** patch, blue **rump**",
+      "nl": "Felrode **vleugelvlek**, blauwe **stuit**"
+    },
+    {
+      "en": "Open woodland and savanna in the north",
+      "nl": "Open bos en savanne in het noorden"
+    }
+  ]
+}

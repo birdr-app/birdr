@@ -1,0 +1,22 @@
+{
+  "code": "regbow1",
+  "name": {
+    "en": "Regent Bowerbird",
+    "nl": "Geelnekprieelvogel"
+  },
+  "latin": "Sericulus chrysocephalus",
+  "look_for": [
+    {
+      "en": "Male glossy black with golden-yellow **nape**",
+      "nl": "Man glanzend zwart met goudgele **nek**"
+    },
+    {
+      "en": "Gold **wing** patches, yellow **crown**",
+      "nl": "Gouden vlekken in de **vleugel**, gele **kruin**"
+    },
+    {
+      "en": "Female mottled brown, pale scaly **belly**",
+      "nl": "Vrouw gevlekt bruin met geschubde lichte **buik**"
+    }
+  ]
+}

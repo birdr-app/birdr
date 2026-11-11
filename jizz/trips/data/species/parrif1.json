@@ -1,0 +1,22 @@
+{
+  "code": "parrif1",
+  "name": {
+    "en": "Paradise Riflebird",
+    "nl": "Schildgeweervogel"
+  },
+  "latin": "Ptiloris paradiseus",
+  "look_for": [
+    {
+      "en": "Male: velvety black with iridescent blue **throat**",
+      "nl": "Man: fluweelzwart met glanzend blauwe **keel**"
+    },
+    {
+      "en": "Long, down-curved **bill**",
+      "nl": "Lange, naar beneden gebogen **snavel**"
+    },
+    {
+      "en": "Female brown with pale spotted **breast**",
+      "nl": "Vrouw bruin met lichte gevlekte **borst**"
+    }
+  ]
+}

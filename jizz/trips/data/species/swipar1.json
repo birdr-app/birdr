@@ -1,0 +1,22 @@
+{
+  "code": "swipar1",
+  "name": {
+    "en": "Swift Parrot",
+    "nl": "Zwaluwpapegaai"
+  },
+  "latin": "Lathamus discolor",
+  "look_for": [
+    {
+      "en": "Slender green parrot with long pointed **tail**",
+      "nl": "Slanke groene papegaai met lange spitse **staart**"
+    },
+    {
+      "en": "Red **face** and throat, red **shoulder** patch",
+      "nl": "Rood **gezicht** en keel, rode vlek op de **schouder**"
+    },
+    {
+      "en": "Rapid flight, often in flowering eucalypts",
+      "nl": "Snelle vlucht, vaak in bloeiende eucalyptussen"
+    }
+  ]
+}

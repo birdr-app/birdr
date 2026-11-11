@@ -1,0 +1,22 @@
+{
+  "code": "laukoo1",
+  "name": {
+    "en": "Laughing Kookaburra",
+    "nl": "Kookaburra"
+  },
+  "latin": "Dacelo novaeguineae",
+  "look_for": [
+    {
+      "en": "Large, stocky kingfisher with big pale **head**",
+      "nl": "Grote, gedrongen ijsvogel met grote lichte **kop**"
+    },
+    {
+      "en": "Dark **eye**-stripe, heavy **bill**, brown **back**",
+      "nl": "Donkere oogstreep, zware **snavel**, bruine **rug**"
+    },
+    {
+      "en": "Famous laughing call at dawn and dusk",
+      "nl": "Beroemde lachroep bij zonsopgang en schemering"
+    }
+  ]
+}

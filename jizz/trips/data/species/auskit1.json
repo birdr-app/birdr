@@ -1,0 +1,22 @@
+{
+  "code": "auskit1",
+  "name": {
+    "en": "Black-shouldered Kite",
+    "nl": "Australische grijze wouw"
+  },
+  "latin": "Elanus axillaris",
+  "look_for": [
+    {
+      "en": "Small, pale grey and white raptor, black shoulders",
+      "nl": "Kleine grijswitte roofvogel met zwarte **schouders**"
+    },
+    {
+      "en": "Red **eye** and black patch around it",
+      "nl": "Rode **ogen** met zwarte vlek eromheen"
+    },
+    {
+      "en": "Hovers with **tail** fanned over open ground",
+      "nl": "Bidt met waaiervormige **staart** boven open terrein"
+    }
+  ]
+}

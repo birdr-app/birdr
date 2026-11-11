@@ -1,0 +1,22 @@
+{
+  "code": "ausbus1",
+  "name": {
+    "en": "Australian Bustard",
+    "nl": "Australische trap"
+  },
+  "latin": "Ardeotis australis",
+  "look_for": [
+    {
+      "en": "Huge, long-legged ground bird",
+      "nl": "Enorme grondvogel op lange poten"
+    },
+    {
+      "en": "Black **cap**, long grey **neck**",
+      "nl": "Zwarte **kap**, lange grijze **hals**"
+    },
+    {
+      "en": "Stalks slowly across open grassland",
+      "nl": "Loopt langzaam over open grasland"
+    }
+  ]
+}

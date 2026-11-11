@@ -1,0 +1,22 @@
+{
+  "code": "colspa1",
+  "name": {
+    "en": "Collared Sparrowhawk",
+    "nl": "Grijskopsperwer"
+  },
+  "latin": "Tachyspiza cirrocephala",
+  "look_for": [
+    {
+      "en": "Small grey hawk, slender with long thin **legs**",
+      "nl": "Kleine grijze havik, slank met lange dunne **poten**"
+    },
+    {
+      "en": "Grey **head** and **back**, rufous barred **underparts**",
+      "nl": "Grijze **kop** en **rug**, roestbruine **onderzijde** met banden"
+    },
+    {
+      "en": "Square-tipped **tail**; darts through trees after birds",
+      "nl": "Rechte **staartpunt**, schiet door bomen achter vogels aan"
+    }
+  ]
+}

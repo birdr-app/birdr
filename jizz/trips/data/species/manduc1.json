@@ -1,0 +1,22 @@
+{
+  "code": "manduc1",
+  "name": {
+    "en": "Maned Duck",
+    "nl": "Manengans"
+  },
+  "latin": "Chenonetta jubata",
+  "look_for": [
+    {
+      "en": "Small, goose-like grazing duck",
+      "nl": "Kleine, ganzachtige eend die graast"
+    },
+    {
+      "en": "Male: brown **head**, grey flanks, mane",
+      "nl": "Man: bruine **kop**, grijze flanken, manen"
+    },
+    {
+      "en": "Female pale-striped face, spotted **breast**",
+      "nl": "Vrouw: lichte gezichtsstrepen, gevlekte **borst**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "litkin1",
+  "name": {
+    "en": "Little Kingfisher",
+    "nl": "Mangrovedwergijsvogel"
+  },
+  "latin": "Ceyx pusillus",
+  "look_for": [
+    {
+      "en": "Tiny kingfisher, blue above, white below",
+      "nl": "Piepkleine ijsvogel, blauw boven, wit onder"
+    },
+    {
+      "en": "Black **bill**, small white **throat**",
+      "nl": "Zwarte **snavel**, kleine witte **keel**"
+    },
+    {
+      "en": "Mangrove creeks and muddy streams",
+      "nl": "Mangrovekreken en modderige beken"
+    }
+  ]
+}

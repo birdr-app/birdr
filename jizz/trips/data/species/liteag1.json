@@ -1,0 +1,22 @@
+{
+  "code": "liteag1",
+  "name": {
+    "en": "Little Eagle",
+    "nl": "Australische dwergarend"
+  },
+  "latin": "Hieraaetus morphnoides",
+  "look_for": [
+    {
+      "en": "Small eagle, pale morph white below",
+      "nl": "Kleine arend, lichte vorm wit onderaan"
+    },
+    {
+      "en": "Square **tail**, white 'braces' on shoulders",
+      "nl": "Rechte **staart**, witte 'bretels' op schouders"
+    },
+    {
+      "en": "Feathered legs, broad pale **wings**",
+      "nl": "Bevederde poten, brede lichte **vleugels**"
+    }
+  ]
+}

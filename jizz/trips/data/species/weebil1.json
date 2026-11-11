@@ -1,0 +1,22 @@
+{
+  "code": "weebil1",
+  "name": {
+    "en": "Weebill",
+    "nl": "Eucalyptushaantje"
+  },
+  "latin": "Smicrornis brevirostris",
+  "look_for": [
+    {
+      "en": "Tiny, plain, with a very short pale **bill**",
+      "nl": "Piepklein en eenvoudig, met een heel korte lichte **snavel**"
+    },
+    {
+      "en": "Pale eye and yellow-olive underparts",
+      "nl": "Licht oog en geel-olijfgroene onderzijde"
+    },
+    {
+      "en": "Flits in eucalypt canopies; ringing 'weebil' call",
+      "nl": "Fladdert in eucalyptuskronen; luide 'weebil'-roep"
+    }
+  ]
+}

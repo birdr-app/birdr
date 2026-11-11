@@ -1,0 +1,22 @@
+{
+  "code": "bluebo1",
+  "name": {
+    "en": "Greater Bluebonnet",
+    "nl": "Roodbuikparkiet"
+  },
+  "latin": "Northiella haematogaster",
+  "look_for": [
+    {
+      "en": "Grey-brown parrot with red **belly**",
+      "nl": "Grijsbruine papegaai met rode **buik**"
+    },
+    {
+      "en": "Blue **face** and pale yellow **vent**",
+      "nl": "Blauw **gezicht** en lichtgele **onderstaart**"
+    },
+    {
+      "en": "Red patch on **shoulder** in dry scrub",
+      "nl": "Rode vlek op de **schouder** in droog struikgewas"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "brolga1",
+  "name": {
+    "en": "Brolga",
+    "nl": "Brolgakraanvogel"
+  },
+  "latin": "Antigone rubicunda",
+  "look_for": [
+    {
+      "en": "Tall grey crane with bare red **head**",
+      "nl": "Grote grijze kraanvogel met kale rode **kop**"
+    },
+    {
+      "en": "Long **legs** and pale grey **bill**",
+      "nl": "Lange **poten** en lichtgrijze **snavel**"
+    },
+    {
+      "en": "Wetlands, grassland and farmland, often in pairs",
+      "nl": "Moerassen en grasland, vaak in paartjes"
+    }
+  ]
+}

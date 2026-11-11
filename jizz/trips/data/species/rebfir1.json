@@ -1,0 +1,22 @@
+{
+  "code": "rebfir1",
+  "name": {
+    "en": "Red-browed Firetail",
+    "nl": "Doornastrild"
+  },
+  "latin": "Neochmia temporalis",
+  "look_for": [
+    {
+      "en": "Red **bill** and red **rump**",
+      "nl": "Rode **snavel** en rode **stuit**"
+    },
+    {
+      "en": "Red stripe through the **eye**",
+      "nl": "Rode streep door het **oog**"
+    },
+    {
+      "en": "Olive-brown back, grey **belly**, in grassy edges",
+      "nl": "Olijfbruine rug, grijze **buik**, in grazige randen"
+    }
+  ]
+}

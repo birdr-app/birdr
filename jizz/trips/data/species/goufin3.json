@@ -1,0 +1,22 @@
+{
+  "code": "goufin3",
+  "name": {
+    "en": "Gouldian Finch",
+    "nl": "Goulds amadine"
+  },
+  "latin": "Chloebia gouldiae",
+  "look_for": [
+    {
+      "en": "Purple **breast**, green back, yellow **belly**",
+      "nl": "Paarse **borst**, groene rug, gele **buik**"
+    },
+    {
+      "en": "Face red, black or orange",
+      "nl": "Gezicht rood, zwart of oranje"
+    },
+    {
+      "en": "Blue **rump**, long thin black **tail**",
+      "nl": "Blauwe **stuit**, lange dunne zwarte **staart**"
+    }
+  ]
+}

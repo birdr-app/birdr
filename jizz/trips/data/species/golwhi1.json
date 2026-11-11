@@ -1,0 +1,22 @@
+{
+  "code": "golwhi1",
+  "name": {
+    "en": "Golden Whistler",
+    "nl": "Oostelijke Gouden Fluiter"
+  },
+  "latin": "Pachycephala pectoralis",
+  "look_for": [
+    {
+      "en": "Male: bright yellow body with a black **head**",
+      "nl": "Mannetje: felgeel met een zwarte **kop**"
+    },
+    {
+      "en": "White **throat** and black **breast band**",
+      "nl": "Witte **keel** en zwarte **borstband**"
+    },
+    {
+      "en": "Greenish-yellow **back**; female is plain grey-brown",
+      "nl": "Groengele **rug**; vrouwtje is eenvoudig grijsbruin"
+    }
+  ]
+}

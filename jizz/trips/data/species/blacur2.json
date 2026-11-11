@@ -1,0 +1,22 @@
+{
+  "code": "blacur2",
+  "name": {
+    "en": "Black Currawong",
+    "nl": "Zwarte klauwierkraai"
+  },
+  "latin": "Strepera fuliginosa",
+  "look_for": [
+    {
+      "en": "All-black with a yellow eye",
+      "nl": "Geheel zwart met een geel oog"
+    },
+    {
+      "en": "White patches at the **wing** tips and **tail** tip",
+      "nl": "Witte vlekken op de **vleugeltippen** en de **staartpunt**"
+    },
+    {
+      "en": "Tasmanian; loud 'kar-wak' call",
+      "nl": "Alleen Tasmanië; luide 'kar-wak'-roep"
+    }
+  ]
+}

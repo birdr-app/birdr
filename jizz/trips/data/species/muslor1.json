@@ -1,0 +1,22 @@
+{
+  "code": "muslor1",
+  "name": {
+    "en": "Musk Lorikeet",
+    "nl": "Muskusparkiet"
+  },
+  "latin": "Trichoglossus concinnus",
+  "look_for": [
+    {
+      "en": "Green lorikeet with red **forehead** and blue **crown**",
+      "nl": "Groene lori met rood **voorhoofd** en blauwe **kruin**"
+    },
+    {
+      "en": "Red-orange **bill**, yellowish **breast**",
+      "nl": "Rood-oranje **snavel**, gelige **borst**"
+    },
+    {
+      "en": "Noisy in flowering gum trees; small, fast flier",
+      "nl": "Luidruchtig in bloeiende eucalyptussen, kleine snelle vlieger"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "pinrob1",
+  "name": {
+    "en": "Pink Robin",
+    "nl": "Zwart-roze vliegenvanger"
+  },
+  "latin": "Petroica rodinogaster",
+  "look_for": [
+    {
+      "en": "Male dark grey-black above, bright pink **breast**",
+      "nl": "Man donkergrijs boven, felroze **borst**"
+    },
+    {
+      "en": "White spot above the **bill**",
+      "nl": "Witte vlek boven de **snavel**"
+    },
+    {
+      "en": "Perches low in damp cool forest",
+      "nl": "Zit laag in vochtig koel bos"
+    }
+  ]
+}

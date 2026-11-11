@@ -1,0 +1,22 @@
+{
+  "code": "rebkin2",
+  "name": {
+    "en": "Red-backed Kingfisher",
+    "nl": "Roodrugijsvogel"
+  },
+  "latin": "Todiramphus pyrrhopygius",
+  "look_for": [
+    {
+      "en": "Blue-green back and **wings**, white collar",
+      "nl": "Blauwgroene rug en **vleugels**, witte halsband"
+    },
+    {
+      "en": "Bright rufous **rump** and lower back",
+      "nl": "Fel roestrode **stuit** en onderrug"
+    },
+    {
+      "en": "Perches on bare branches or wires, dry country",
+      "nl": "Zit op kale takken of draden, droog land"
+    }
+  ]
+}

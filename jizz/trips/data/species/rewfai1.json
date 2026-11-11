@@ -1,0 +1,22 @@
+{
+  "code": "rewfai1",
+  "name": {
+    "en": "Red-winged Fairywren",
+    "nl": "Roodvleugelelfje"
+  },
+  "latin": "Malurus elegans",
+  "look_for": [
+    {
+      "en": "Male: bright blue with red-brown **wings**",
+      "nl": "Man: felblauw met roodbruine **vleugels**"
+    },
+    {
+      "en": "Blue **head** and **tail**, black **bill**",
+      "nl": "Blauwe **kop** en **staart**, zwarte **snavel**"
+    },
+    {
+      "en": "Female brown with red **bill**",
+      "nl": "Vrouw bruin met rode **snavel**"
+    }
+  ]
+}

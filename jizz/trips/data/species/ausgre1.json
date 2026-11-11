@@ -1,0 +1,22 @@
+{
+  "code": "ausgre1",
+  "name": {
+    "en": "Australasian Grebe",
+    "nl": "Australische dodaars"
+  },
+  "latin": "Tachybaptus novaehollandiae",
+  "look_for": [
+    {
+      "en": "Small dark grebe with chestnut **cheek**",
+      "nl": "Kleine donkere fuut met kastanjebruine **wang**"
+    },
+    {
+      "en": "Yellow patch at base of the **bill**",
+      "nl": "Gele vlek aan de basis van de **snavel**"
+    },
+    {
+      "en": "Dark **crown**, dives from still water",
+      "nl": "Donkere **kruin**, duikt op stil water"
+    }
+  ]
+}

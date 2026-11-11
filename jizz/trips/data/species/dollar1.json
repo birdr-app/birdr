@@ -1,0 +1,22 @@
+{
+  "code": "dollar1",
+  "name": {
+    "en": "Dollarbird",
+    "nl": "Dollarvogel"
+  },
+  "latin": "Eurystomus orientalis",
+  "look_for": [
+    {
+      "en": "Stocky, dark roller with large flat **head**",
+      "nl": "Gedrongen donkere scharrelaar met grote platte **kop**"
+    },
+    {
+      "en": "Coral-red **bill**, pale blue patch on **wing**",
+      "nl": "Koraalrode **snavel**, lichtblauwe vlek op de **vleugel**"
+    },
+    {
+      "en": "Perches high on dead branches, sallies for insects",
+      "nl": "Zit hoog op dode takken en jaagt op insecten"
+    }
+  ]
+}

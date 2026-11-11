@@ -1,0 +1,22 @@
+{
+  "code": "succoc",
+  "name": {
+    "en": "Sulphur-crested Cockatoo",
+    "nl": "Grote geelkuifkaketoe"
+  },
+  "latin": "Cacatua galerita",
+  "look_for": [
+    {
+      "en": "Big white cockatoo with long yellow **crest**",
+      "nl": "Grote witte kaketoe met lange gele **kuif**"
+    },
+    {
+      "en": "Yellow wash under **wings** and **tail**",
+      "nl": "Gele tint onder **vleugels** en **staart**"
+    },
+    {
+      "en": "Raucous screeching; flocks in woods and towns",
+      "nl": "Schetterende roep, groepen in bos en stad"
+    }
+  ]
+}

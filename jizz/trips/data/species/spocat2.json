@@ -1,0 +1,22 @@
+{
+  "code": "spocat2",
+  "name": {
+    "en": "Spotted Catbird",
+    "nl": "Gevlekte katvogel"
+  },
+  "latin": "Ailuroedus maculosus",
+  "look_for": [
+    {
+      "en": "Chunky green bird, pale spotted **body**",
+      "nl": "Gedrongen groene vogel met lichte stippen op het **lijf**"
+    },
+    {
+      "en": "Stout pale **bill**, dark mask",
+      "nl": "Stevige lichte **snavel**, donker masker"
+    },
+    {
+      "en": "Cat-like wail from rainforest canopy",
+      "nl": "Kattenachtig gejank uit het regenwoud"
+    }
+  ]
+}

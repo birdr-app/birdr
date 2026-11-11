@@ -1,0 +1,22 @@
+{
+  "code": "noipit1",
+  "name": {
+    "en": "Noisy Pitta",
+    "nl": "Australische pitta"
+  },
+  "latin": "Pitta versicolor",
+  "look_for": [
+    {
+      "en": "Plump, short-tailed bird with black **head** and pale **eyebrow**",
+      "nl": "Gedrongen vogel met korte **staart**, zwarte **kop**, lichte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Buff **underparts**, red patch under the **tail**",
+      "nl": "Bruingele **onderzijde**, rode vlek onder de **staart**"
+    },
+    {
+      "en": "Hops on rainforest floor; loud whistled call",
+      "nl": "Hupt op de regenwoudbodem, luide fluitroep"
+    }
+  ]
+}

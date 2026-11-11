@@ -1,0 +1,22 @@
+{
+  "code": "tasscr1",
+  "name": {
+    "en": "Tasmanian Scrubwren",
+    "nl": "Grote Tasmaanse struiksluiper"
+  },
+  "latin": "Sericornis humilis",
+  "look_for": [
+    {
+      "en": "Dark olive-brown, secretive forest bird",
+      "nl": "Donker olijfbruin, verborgen bosvogel"
+    },
+    {
+      "en": "Short **tail**, pale **eye**",
+      "nl": "Korte **staart**, lichte **ogen**"
+    },
+    {
+      "en": "Forages low in damp undergrowth",
+      "nl": "Zoekt laag in vochtig kreupelhout"
+    }
+  ]
+}

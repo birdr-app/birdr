@@ -1,0 +1,22 @@
+{
+  "code": "shtsan",
+  "name": {
+    "en": "Sharp-tailed Sandpiper",
+    "nl": "Siberische strandloper"
+  },
+  "latin": "Calidris acuminata",
+  "look_for": [
+    {
+      "en": "Rufous-orange **crown**, bold white **eyebrow**",
+      "nl": "Roestoranje **kruin**, duidelijke witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Chestnut-washed **breast** with V-shaped marks on **flanks**",
+      "nl": "Roestgetinte **borst** met V-tekening op de **flanken**"
+    },
+    {
+      "en": "Short greenish **legs**; feeds on wet grass and mud",
+      "nl": "Korte groenige **poten**, foerageert op nat gras en slik"
+    }
+  ]
+}

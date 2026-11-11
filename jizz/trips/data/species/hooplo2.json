@@ -1,0 +1,22 @@
+{
+  "code": "hooplo2",
+  "name": {
+    "en": "Hooded Plover",
+    "nl": "Zwartkopplevier"
+  },
+  "latin": "Thinornis cucullatus",
+  "look_for": [
+    {
+      "en": "Small plover with black hood and white **collar**",
+      "nl": "Kleine plevier met zwarte kap en witte **kraag**"
+    },
+    {
+      "en": "Red **bill** and eye-ring, pale grey back",
+      "nl": "Rode **snavel** en oogring, lichtgrijze rug"
+    },
+    {
+      "en": "Runs on open sandy surf beaches",
+      "nl": "Rent over open zandstranden"
+    }
+  ]
+}

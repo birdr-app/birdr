@@ -1,0 +1,22 @@
+{
+  "code": "noimin1",
+  "name": {
+    "en": "Noisy Miner",
+    "nl": "Tuinhoningeter"
+  },
+  "latin": "Manorina melanocephala",
+  "look_for": [
+    {
+      "en": "Grey honeyeater with a yellow **bill** and eye-patch",
+      "nl": "Grijze honingeter met gele **snavel** en oogvlek"
+    },
+    {
+      "en": "Black **forehead** and cap, white **forecrown** band",
+      "nl": "Zwart **voorhoofd** en kap met een witte band erboven"
+    },
+    {
+      "en": "Loud, aggressive, mobs other birds",
+      "nl": "Luidruchtig en agressief, jaagt andere vogels weg"
+    }
+  ]
+}

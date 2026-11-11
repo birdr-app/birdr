@@ -1,0 +1,22 @@
+{
+  "code": "rtbcoc1",
+  "name": {
+    "en": "Red-tailed Black-Cockatoo",
+    "nl": "Roodstaartraafkaketoe"
+  },
+  "latin": "Calyptorhynchus banksii",
+  "look_for": [
+    {
+      "en": "Black cockatoo with bold red **tail** panels",
+      "nl": "Zwarte kaketoe met felrode **staartvlekken**"
+    },
+    {
+      "en": "Male uniformly black, short **crest**",
+      "nl": "Mannetje geheel zwart met korte **kuif**"
+    },
+    {
+      "en": "Calls in noisy flocks over savanna",
+      "nl": "Roept in luidruchtige groepen boven savanne"
+    }
+  ]
+}

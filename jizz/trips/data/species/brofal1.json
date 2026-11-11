@@ -1,0 +1,22 @@
+{
+  "code": "brofal1",
+  "name": {
+    "en": "Brown Falcon",
+    "nl": "Bruine valk"
+  },
+  "latin": "Falco berigora",
+  "look_for": [
+    {
+      "en": "Variable brown falcon with long **legs**",
+      "nl": "Variabele bruine valk met lange **poten**"
+    },
+    {
+      "en": "Dark moustache, pale **face** and rufous **nape**",
+      "nl": "Donkere snor, lichte **kop** en roestbruine **nek**"
+    },
+    {
+      "en": "Perches on posts; broad **wings**, pale below",
+      "nl": "Zit op palen, brede **vleugels**, licht onderaan"
+    }
+  ]
+}

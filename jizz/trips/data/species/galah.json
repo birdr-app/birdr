@@ -1,0 +1,22 @@
+{
+  "code": "galah",
+  "name": {
+    "en": "Galah",
+    "nl": "Roze kaketoe"
+  },
+  "latin": "Eolophus roseicapilla",
+  "look_for": [
+    {
+      "en": "Pink **underparts** and **face**, pale grey **back**",
+      "nl": "Roze **onderzijde** en **kop**, lichtgrijze **rug**"
+    },
+    {
+      "en": "Pale pink **crest**, grey **wings**",
+      "nl": "Lichtroze **kuif**, grijze **vleugels**"
+    },
+    {
+      "en": "Noisy flocks on lawns, fields and roadsides",
+      "nl": "Luidruchtige groepen op gazons, velden en wegbermen"
+    }
+  ]
+}

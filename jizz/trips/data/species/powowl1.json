@@ -1,0 +1,22 @@
+{
+  "code": "powowl1",
+  "name": {
+    "en": "Powerful Owl",
+    "nl": "Grote valkuil"
+  },
+  "latin": "Ninox strenua",
+  "look_for": [
+    {
+      "en": "Large grey-brown owl with barred underside",
+      "nl": "Grote grijsbruine uil met gebandeerde onderkant"
+    },
+    {
+      "en": "Small round **head**, yellow eyes",
+      "nl": "Kleine ronde **kop**, gele ogen"
+    },
+    {
+      "en": "Often clutches a possum in its **talons**",
+      "nl": "Houdt vaak een opossum in zijn **klauwen**"
+    }
+  ]
+}

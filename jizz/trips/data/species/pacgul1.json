@@ -1,0 +1,22 @@
+{
+  "code": "pacgul1",
+  "name": {
+    "en": "Pacific Gull",
+    "nl": "Diksnavelmeeuw"
+  },
+  "latin": "Larus pacificus",
+  "look_for": [
+    {
+      "en": "Huge gull with massive **bill**",
+      "nl": "Enorme meeuw met enorme **snavel**"
+    },
+    {
+      "en": "Red tip on yellow bill, black **tail** band",
+      "nl": "Rode punt op gele snavel, zwarte **staart**band"
+    },
+    {
+      "en": "White **head**, black back, heavy build",
+      "nl": "Witte **kop**, zwarte rug, zware bouw"
+    }
+  ]
+}

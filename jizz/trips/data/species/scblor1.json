@@ -1,0 +1,22 @@
+{
+  "code": "scblor1",
+  "name": {
+    "en": "Scaly-breasted Lorikeet",
+    "nl": "Schubbenlori"
+  },
+  "latin": "Trichoglossus chlorolepidotus",
+  "look_for": [
+    {
+      "en": "Green lorikeet with yellow scaly **breast**",
+      "nl": "Groene lori met geel geschubde **borst**"
+    },
+    {
+      "en": "Red-orange **bill**, plain green **head**",
+      "nl": "Rood-oranje **snavel**, effen groene **kop**"
+    },
+    {
+      "en": "Yellow **wing** stripe in flight; blossom feeder",
+      "nl": "Gele **vleugelstreep** in vlucht, voedt zich met bloesem"
+    }
+  ]
+}

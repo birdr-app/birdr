@@ -1,0 +1,22 @@
+{
+  "code": "crepig1",
+  "name": {
+    "en": "Crested Pigeon",
+    "nl": "Spitskuifduif"
+  },
+  "latin": "Ocyphaps lophotes",
+  "look_for": [
+    {
+      "en": "Grey-brown pigeon with tall thin black **crest**",
+      "nl": "Grijsbruine duif met hoge dunne zwarte **kuif**"
+    },
+    {
+      "en": "Iridescent bars in the **wing**, pink **breast**",
+      "nl": "Glanzende banden in de **vleugel**, roze **borst**"
+    },
+    {
+      "en": "Whistling wings when taking off",
+      "nl": "Fluitende vleugels bij opvliegen"
+    }
+  ]
+}

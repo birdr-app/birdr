@@ -1,0 +1,22 @@
+{
+  "code": "suplyr1",
+  "name": {
+    "en": "Superb Lyrebird",
+    "nl": "Liervogel"
+  },
+  "latin": "Menura novaehollandiae",
+  "look_for": [
+    {
+      "en": "Large pheasant-like bird of dense forest floor",
+      "nl": "Grote fazantachtige bodemvogel in dicht bos"
+    },
+    {
+      "en": "Long, dark **tail** with lyre-shaped plumes",
+      "nl": "Lange, donkere **staart** met lierachtige pluimen"
+    },
+    {
+      "en": "Loud, mimicking song, scratching leaf litter",
+      "nl": "Luide, nabootsende zang, krabt in bladeren"
+    }
+  ]
+}

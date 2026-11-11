@@ -1,0 +1,22 @@
+{
+  "code": "satbow1",
+  "name": {
+    "en": "Satin Bowerbird",
+    "nl": "Satijnblauwe prieelvogel"
+  },
+  "latin": "Ptilonorhynchus violaceus",
+  "look_for": [
+    {
+      "en": "Male glossy blue-black with violet-blue **eye**",
+      "nl": "Mannetje glanzend blauwzwart met violetblauw **oog**"
+    },
+    {
+      "en": "Female green with scaly **underparts**",
+      "nl": "Vrouwtje groen met geschubde **onderzijde**"
+    },
+    {
+      "en": "Pale **bill**; builds a bower of twigs",
+      "nl": "Lichte **snavel**, bouwt een prieel van takjes"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "blnter1",
+  "name": {
+    "en": "Black-naped Tern",
+    "nl": "Zwartnekstern"
+  },
+  "latin": "Sterna sumatrana",
+  "look_for": [
+    {
+      "en": "Small, very pale tern with black **eye**-stripe",
+      "nl": "Kleine, zeer lichte stern met zwarte oogstreep"
+    },
+    {
+      "en": "Black band runs round the **nape**",
+      "nl": "Zwarte band loopt door de **nek**"
+    },
+    {
+      "en": "Sharp black **bill**; coastal, perches on posts",
+      "nl": "Scherpe zwarte **snavel**, kustvogel op palen"
+    }
+  ]
+}

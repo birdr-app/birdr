@@ -1,0 +1,22 @@
+{
+  "code": "musduc1",
+  "name": {
+    "en": "Musk Duck",
+    "nl": "Australische muskuseend"
+  },
+  "latin": "Biziura lobata",
+  "look_for": [
+    {
+      "en": "Dark grey-brown, finely barred, thick-set diver",
+      "nl": "Donker grijsbruin, fijn gebandeerd, gedrongen duiker"
+    },
+    {
+      "en": "Male has a leathery lobe under the **bill**",
+      "nl": "Man heeft een leerachtige lel onder de **snavel**"
+    },
+    {
+      "en": "Sits low, stiff **tail** fanned on water",
+      "nl": "Ligt laag, stijve **staart** gespreid op het water"
+    }
+  ]
+}

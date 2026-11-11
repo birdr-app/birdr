@@ -1,0 +1,22 @@
+{
+  "code": "litgra1",
+  "name": {
+    "en": "Little Grassbird",
+    "nl": "Dwerggrasvogel"
+  },
+  "latin": "Poodytes gramineus",
+  "look_for": [
+    {
+      "en": "Small, streaked brown, skulks low in reeds",
+      "nl": "Klein, gestreept bruin, sluipt laag door riet"
+    },
+    {
+      "en": "Short rounded **tail**, pale **throat**",
+      "nl": "Korte ronde **staart**, lichte **keel**"
+    },
+    {
+      "en": "Rather plain face, dark **bill**",
+      "nl": "Vrij effen gezicht, donkere **snavel**"
+    }
+  ]
+}
