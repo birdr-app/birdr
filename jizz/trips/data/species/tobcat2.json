@@ -1,0 +1,22 @@
+{
+  "code": "tobcat2",
+  "name": {
+    "en": "Tooth-billed Bowerbird",
+    "nl": "Bruine katvogel"
+  },
+  "latin": "Scenopoeetes dentirostris",
+  "look_for": [
+    {
+      "en": "Plain brown bowerbird",
+      "nl": "Effen bruine prieelvogel"
+    },
+    {
+      "en": "Pale-streaked **throat** and breast",
+      "nl": "Lichtgestreepte **keel** en borst"
+    },
+    {
+      "en": "Notched **bill**; clears a display ground of leaves",
+      "nl": "Gekerfde **snavel**; maakt een baltsplek vrij van bladeren"
+    }
+  ]
+}

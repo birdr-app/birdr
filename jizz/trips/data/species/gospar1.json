@@ -1,0 +1,22 @@
+{
+  "code": "gospar1",
+  "name": {
+    "en": "Golden-shouldered Parrot",
+    "nl": "Geelschouderparkiet"
+  },
+  "latin": "Psephotellus chrysopterygius",
+  "look_for": [
+    {
+      "en": "Male turquoise, black **cap**, golden shoulders",
+      "nl": "Man turkoois, zwarte **kap**, gouden schouders"
+    },
+    {
+      "en": "Female green, duller, pale **belly**",
+      "nl": "Vrouw groen, dof, lichte **buik**"
+    },
+    {
+      "en": "Nests in termite mounds, open savanna",
+      "nl": "Nestelt in termietenheuvels in open savanne"
+    }
+  ]
+}

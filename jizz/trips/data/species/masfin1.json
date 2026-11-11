@@ -1,0 +1,22 @@
+{
+  "code": "masfin1",
+  "name": {
+    "en": "Masked Finch",
+    "nl": "Maskeramadine"
+  },
+  "latin": "Poephila personata",
+  "look_for": [
+    {
+      "en": "Grey-brown, black **mask**, yellow **bill**",
+      "nl": "Grijsbruin, zwart **masker**, gele **snavel**"
+    },
+    {
+      "en": "Black **bib**, white rump",
+      "nl": "Zwarte **bef**, witte stuit"
+    },
+    {
+      "en": "Small flocks in grassy open woodland",
+      "nl": "Kleine groepen in grazige open bossen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "blknod",
+  "name": {
+    "en": "Black Noddy",
+    "nl": "Witkruinnoddy"
+  },
+  "latin": "Anous minutus",
+  "look_for": [
+    {
+      "en": "Dark tern-like seabird, white **cap**",
+      "nl": "Donkere sternachtige zeevogel, witte **kap**"
+    },
+    {
+      "en": "Slim, pointed **bill**, long wedge **tail**",
+      "nl": "Slanke, spitse **snavel**, lange wigvormige **staart**"
+    },
+    {
+      "en": "Nests in trees and shrubs on coral cays",
+      "nl": "Broedt in bomen en struiken op koraaleilanden"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "defpar1",
+  "name": {
+    "en": "Double-eyed Fig-Parrot",
+    "nl": "Dubbeloogvijgpapegaai"
+  },
+  "latin": "Cyclopsitta diophthalma",
+  "look_for": [
+    {
+      "en": "Tiny, stubby green parrot",
+      "nl": "Kleine, gedrongen groene papegaai"
+    },
+    {
+      "en": "Red **forehead**, blue cheek spots",
+      "nl": "Rood **voorhoofd**, blauwe wangvlekken"
+    },
+    {
+      "en": "Perches in fig trees; calls in flight",
+      "nl": "Zit in vijgenbomen; roept in vlucht"
+    }
+  ]
+}

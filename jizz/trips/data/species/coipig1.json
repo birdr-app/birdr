@@ -1,0 +1,22 @@
+{
+  "code": "coipig1",
+  "name": {
+    "en": "Collared Imperial-Pigeon",
+    "nl": "Zwartkraagmuskaatduif"
+  },
+  "latin": "Ducula mullerii",
+  "look_for": [
+    {
+      "en": "Large pale pigeon, grey above",
+      "nl": "Grote lichte duif, grijs bovenop"
+    },
+    {
+      "en": "Black **collar** across the nape",
+      "nl": "Zwarte **kraag** in de nek"
+    },
+    {
+      "en": "Flies over the canopy of coastal forest",
+      "nl": "Vliegt boven het kronendak van kustbos"
+    }
+  ]
+}

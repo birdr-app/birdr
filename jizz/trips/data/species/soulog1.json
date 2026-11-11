@@ -1,0 +1,22 @@
+{
+  "code": "soulog1",
+  "name": {
+    "en": "Australian Logrunner",
+    "nl": "Australische stronkloper"
+  },
+  "latin": "Orthonyx temminckii",
+  "look_for": [
+    {
+      "en": "Large ground-forager, white **throat**, black **chest**",
+      "nl": "Grote grondvogel, witte **keel**, zwarte **borst**"
+    },
+    {
+      "en": "Chestnut upper body, strong feet",
+      "nl": "Kastanjebruin bovenlijf, sterke poten"
+    },
+    {
+      "en": "Flings leaf litter; loud, chattering calls",
+      "nl": "Gooit bladafval weg; luide, kwetterende roep"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rufowl2",
+  "name": {
+    "en": "Rufous Owl",
+    "nl": "Rosse valkuil"
+  },
+  "latin": "Ninox rufa",
+  "look_for": [
+    {
+      "en": "Large, brown, hawk-like owl",
+      "nl": "Grote, bruine, havikachtige uil"
+    },
+    {
+      "en": "Barred underparts, yellow eyes",
+      "nl": "Gebandeerde onderzijde, gele ogen"
+    },
+    {
+      "en": "Roosts in dense trees by day",
+      "nl": "Slaapt overdag in dichte bomen"
+    }
+  ]
+}

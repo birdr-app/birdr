@@ -1,0 +1,22 @@
+{
+  "code": "bltfin1",
+  "name": {
+    "en": "Black-throated Finch",
+    "nl": "Gordelamadine"
+  },
+  "latin": "Poephila cincta",
+  "look_for": [
+    {
+      "en": "Black throat patch, pale grey **head**",
+      "nl": "Zwarte keelvlek, lichtgrijze **kop**"
+    },
+    {
+      "en": "Black bill, white rump, black tail",
+      "nl": "Zwarte snavel, witte stuit, zwarte staart"
+    },
+    {
+      "en": "Flocks at waterholes in savanna",
+      "nl": "Groepen bij waterpoelen in savanne"
+    }
+  ]
+}

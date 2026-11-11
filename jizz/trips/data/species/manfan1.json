@@ -1,0 +1,22 @@
+{
+  "code": "manfan1",
+  "name": {
+    "en": "Mangrove Fantail",
+    "nl": "Mangrovewaaierstaart"
+  },
+  "latin": "Rhipidura phasiana",
+  "look_for": [
+    {
+      "en": "Pale grey-brown above",
+      "nl": "Lichtgrijsbruin boven"
+    },
+    {
+      "en": "White **eyebrow**, buff breast, white tail edges",
+      "nl": "Witte **wenkbrauw**, bruingele borst, witte staartranden"
+    },
+    {
+      "en": "Flits through mangrove foliage",
+      "nl": "Flitst door mangroveblad"
+    }
+  ]
+}

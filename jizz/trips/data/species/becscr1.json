@@ -1,0 +1,22 @@
+{
+  "code": "becscr1",
+  "name": {
+    "en": "Tropical Scrubwren",
+    "nl": "Beccaristruiksluiper"
+  },
+  "latin": "Sericornis beccarii",
+  "look_for": [
+    {
+      "en": "Olive-brown scrubwren, dark **eye**",
+      "nl": "Olijfbruine struiksluiper, donker **oog**"
+    },
+    {
+      "en": "Pale eyebrow, pale yellow **throat**",
+      "nl": "Lichte wenkbrauw, bleekgele **keel**"
+    },
+    {
+      "en": "Moves through rainforest undergrowth",
+      "nl": "Beweegt door onderbegroeiing van regenwoud"
+    }
+  ]
+}

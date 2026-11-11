@@ -1,0 +1,22 @@
+{
+  "code": "piemon1",
+  "name": {
+    "en": "Pied Monarch",
+    "nl": "Zwartborstfranjemonarch"
+  },
+  "latin": "Arses kaupi",
+  "look_for": [
+    {
+      "en": "Black head and wings, white throat",
+      "nl": "Zwarte kop en vleugels, witte keel"
+    },
+    {
+      "en": "Black **breast** band, white belly",
+      "nl": "Zwarte **borst**band, witte buik"
+    },
+    {
+      "en": "Small, active; hawks insects at the forest edge",
+      "nl": "Klein en actief; jaagt op insecten aan de bosrand"
+    }
+  ]
+}

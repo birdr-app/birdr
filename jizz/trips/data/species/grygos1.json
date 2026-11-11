@@ -1,0 +1,22 @@
+{
+  "code": "grygos1",
+  "name": {
+    "en": "Grey Goshawk",
+    "nl": "Grijze havik"
+  },
+  "latin": "Tachyspiza novaehollandiae",
+  "look_for": [
+    {
+      "en": "Medium hawk, pale grey or white",
+      "nl": "Middelgrote havik, lichtgrijs of wit"
+    },
+    {
+      "en": "Red **cere** and orange eye-ring",
+      "nl": "Rode **waslap** en oranje oogring"
+    },
+    {
+      "en": "Pure white form often seen along the coast",
+      "nl": "Zuiver witte vorm vaak langs de kust"
+    }
+  ]
+}

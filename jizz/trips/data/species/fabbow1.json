@@ -1,0 +1,22 @@
+{
+  "code": "fabbow1",
+  "name": {
+    "en": "Fawn-breasted Bowerbird",
+    "nl": "Okerbuikprieelvogel"
+  },
+  "latin": "Chlamydera cerviniventris",
+  "look_for": [
+    {
+      "en": "Brown bowerbird with a pale buff **breast**",
+      "nl": "Bruine prieelvogel met een bleke bruingele **borst**"
+    },
+    {
+      "en": "Lilac **nape** crest",
+      "nl": "Lila **nek**kuif"
+    },
+    {
+      "en": "Builds an avenue bower of sticks",
+      "nl": "Bouwt een laanprieel van takjes"
+    }
+  ]
+}

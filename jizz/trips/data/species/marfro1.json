@@ -1,0 +1,22 @@
+{
+  "code": "marfro1",
+  "name": {
+    "en": "Marbled Frogmouth",
+    "nl": "Marmeruilnachtzwaluw"
+  },
+  "latin": "Podargus ocellatus",
+  "look_for": [
+    {
+      "en": "Mottled grey-brown, like a branch stub",
+      "nl": "Gevlekt grijsbruin, als een afgebroken tak"
+    },
+    {
+      "en": "Sits upright by day, eyes nearly shut",
+      "nl": "Zit overdag rechtop, ogen bijna dicht"
+    },
+    {
+      "en": "Smaller than Papuan Frogmouth, finely marbled",
+      "nl": "Kleiner dan de Reuzenuilnachtzwaluw, fijn gemarmerd"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "spocat1",
+  "name": {
+    "en": "Black-eared Catbird",
+    "nl": "Zwartoorkatvogel"
+  },
+  "latin": "Ailuroedus melanotis",
+  "look_for": [
+    {
+      "en": "Green bowerbird, black ear patch",
+      "nl": "Groene prieelvogel, zwarte oorvlek"
+    },
+    {
+      "en": "Spotted **cheek**, red eye",
+      "nl": "Gevlekte **wang**, rood oog"
+    },
+    {
+      "en": "Cat-like wailing call in the rainforest",
+      "nl": "Kattenachtige jammerroep in het regenwoud"
+    }
+  ]
+}

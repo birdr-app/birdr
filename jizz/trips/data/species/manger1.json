@@ -1,0 +1,22 @@
+{
+  "code": "manger1",
+  "name": {
+    "en": "Mangrove Gerygone",
+    "nl": "Witbrauwmangrovezanger"
+  },
+  "latin": "Gerygone levigaster",
+  "look_for": [
+    {
+      "en": "Small, plain grey-brown warbler",
+      "nl": "Klein, effen grijsbruin zangertje"
+    },
+    {
+      "en": "Pale **eyebrow**, red eye",
+      "nl": "Lichte **wenkbrauw**, rood oog"
+    },
+    {
+      "en": "Forages in mangrove leaves, tail fanned",
+      "nl": "Foerageert in mangroveblad met gespreide staart"
+    }
+  ]
+}

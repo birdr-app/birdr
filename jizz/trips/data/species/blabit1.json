@@ -1,0 +1,22 @@
+{
+  "code": "blabit1",
+  "name": {
+    "en": "Black Bittern",
+    "nl": "Zwarte woudaap"
+  },
+  "latin": "Botaurus flavicollis",
+  "look_for": [
+    {
+      "en": "Dark **chestnut** bittern, black crown",
+      "nl": "Donkere **kastanjebruine** roerdomp, zwarte kruin"
+    },
+    {
+      "en": "Long yellow **bill**, orange-yellow throat stripe",
+      "nl": "Lange gele **snavel**, oranjegele keelstreep"
+    },
+    {
+      "en": "Skulks in dense swamp and mangroves",
+      "nl": "Sluipt door dichte moerassen en mangroven"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "blfmon1",
+  "name": {
+    "en": "Black-faced Monarch",
+    "nl": "Maskermonarch"
+  },
+  "latin": "Monarcha melanopsis",
+  "look_for": [
+    {
+      "en": "Black **face** and **throat**, grey back",
+      "nl": "Zwart **gezicht** en **keel**, grijze rug"
+    },
+    {
+      "en": "Bright **rufous-orange** belly",
+      "nl": "Felle **roestoranje** buik"
+    },
+    {
+      "en": "Migrant to northern rainforests in summer",
+      "nl": "Zomergast in noordelijk regenwoud"
+    }
+  ]
+}

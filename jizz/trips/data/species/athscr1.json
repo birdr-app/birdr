@@ -1,0 +1,22 @@
+{
+  "code": "athscr1",
+  "name": {
+    "en": "Atherton Scrubwren",
+    "nl": "Athertonstruiksluiper"
+  },
+  "latin": "Sericornis keri",
+  "look_for": [
+    {
+      "en": "Dark brown scrubwren, paler breast",
+      "nl": "Donkerbruine struiksluiper, lichtere borst"
+    },
+    {
+      "en": "Pale **eye**, lacks **eyebrow**",
+      "nl": "Licht **oog**, geen **wenkbrauw**"
+    },
+    {
+      "en": "Hops on the floor of upland forest",
+      "nl": "Huppelt over de bodem van bergbos"
+    }
+  ]
+}

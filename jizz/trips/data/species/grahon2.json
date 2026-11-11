@@ -1,0 +1,22 @@
+{
+  "code": "grahon2",
+  "name": {
+    "en": "Graceful Honeyeater",
+    "nl": "Priemsnavelhoningeter"
+  },
+  "latin": "Meliphaga gracilis",
+  "look_for": [
+    {
+      "en": "Olive-green above, pale below",
+      "nl": "Olijfgroen boven, licht onder"
+    },
+    {
+      "en": "Yellow ear patch, long **bill**",
+      "nl": "Gele oorvlek, lange **snavel**"
+    },
+    {
+      "en": "Feeds in the lower to mid canopy",
+      "nl": "Foerageert in de lage tot middelste laag van het kronendak"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "recpar2",
+  "name": {
+    "en": "Red-cheeked Parrot",
+    "nl": "Roodwangpapegaai"
+  },
+  "latin": "Geoffroyus geoffroyi",
+  "look_for": [
+    {
+      "en": "Green parrot, male has red **cheeks**",
+      "nl": "Groene papegaai, man met rode **wangen**"
+    },
+    {
+      "en": "Female has a brownish-grey head",
+      "nl": "Vrouw heeft een bruingrijze kop"
+    },
+    {
+      "en": "Fast flights with shrill calls",
+      "nl": "Snelle vluchten met schelle roep"
+    }
+  ]
+}

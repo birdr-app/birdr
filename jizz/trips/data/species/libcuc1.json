@@ -1,0 +1,22 @@
+{
+  "code": "libcuc1",
+  "name": {
+    "en": "Little Bronze-Cuckoo",
+    "nl": "Kleine bronskoekoek"
+  },
+  "latin": "Chalcites minutillus",
+  "look_for": [
+    {
+      "en": "Tiny bronze-green cuckoo",
+      "nl": "Piepkleine bronsgroene koekoek"
+    },
+    {
+      "en": "Barred underparts, **thick** dark eye-stripe",
+      "nl": "Gebandeerde onderzijde, **dikke** donkere oogstreep"
+    },
+    {
+      "en": "Short **bill**; sits in mangroves and thickets",
+      "nl": "Korte **snavel**; zit in mangrove en struikgewas"
+    }
+  ]
+}

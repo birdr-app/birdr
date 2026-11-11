@@ -1,0 +1,22 @@
+{
+  "code": "machon2",
+  "name": {
+    "en": "Macleay's Honeyeater",
+    "nl": "Brunettehoningeter"
+  },
+  "latin": "Xanthotis macleayanus",
+  "look_for": [
+    {
+      "en": "Olive-brown, plain face with yellow ear",
+      "nl": "Olijfbruin, eenvoudig gezicht met gele oorvlek"
+    },
+    {
+      "en": "Pale yellow **throat**",
+      "nl": "Bleekgele **keel**"
+    },
+    {
+      "en": "Fairly large; gleans leaves and fruit",
+      "nl": "Vrij groot; pikt bladeren en vruchten"
+    }
+  ]
+}

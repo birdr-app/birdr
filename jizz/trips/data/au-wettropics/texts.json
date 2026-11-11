@@ -1,0 +1,249 @@
+{
+  "country": "AU-WETTROPICS",
+  "intro": {
+    "en": "This pack is for trips to Australia's tropical north: Cairns, the Daintree, the Atherton Tableland, Mission Beach and Cape York. Its 130 birds come on top of the Australia trip and live in tropical rainforest, mangroves, tidal flats, the Great Barrier Reef and the savanna of the Cape.",
+    "nl": "Dit pakket is voor reizen naar het tropische noorden van Australië: Cairns, de Daintree, de Atherton Tableland, Mission Beach en Kaap York. De 130 vogels komen bovenop de reis door Australië en leven in tropisch regenwoud, mangroven, getijdenplaten, het Great Barrier Reef en de savanne van de Kaap."
+  },
+  "units": {
+    "waterfowl": {
+      "title": {
+        "en": "A pygmy-goose, a megapode and a pigeon",
+        "nl": "Een dwergeend, een boshoen en een duif"
+      },
+      "intro": {
+        "en": "The Green Pygmy-Goose sits on lily-covered lagoons and the megapode scratches in the leaf litter of coastal scrub and rainforest edges. The imperial-pigeon is a Cape York bird that flies over the canopy and is easiest to see from a boat or a clearing.",
+        "nl": "De groene dwergeend zit op lagunes vol waterlelies en het boshoen krabt in het bladafval van kuststruikgewas en bosranden. De muskaatduif is een vogel van Kaap York die over het kronendak vliegt en het makkelijkst te zien is vanaf een boot of op een open plek."
+      }
+    },
+    "cuckoos": {
+      "title": {
+        "en": "Bronze-cuckoos and Brush Cuckoo",
+        "nl": "Bronskoekoeken en Treurkoekoek"
+      },
+      "intro": {
+        "en": "Most of these small cuckoos are hard to tell apart and move through coastal scrub, mangroves and rainforest edges. Look at the underparts, the eye-stripe and the tail; the song is often the easiest clue.",
+        "nl": "De meeste van deze kleine koekoeken zijn moeilijk uit elkaar te houden en bewegen zich door kuststruikgewas, mangroven en bosranden. Let op de onderzijde, de oogstreep en de staart; de zang is vaak het makkelijkst."
+      }
+    },
+    "nightjars": {
+      "title": {
+        "en": "Night birds and a swiftlet",
+        "nl": "Nachtvogels en een salangaan"
+      },
+      "intro": {
+        "en": "The two frogmouths and the nightjar sit tight by day and come alive after dark; the swiftlet flies in daylight over the forest. Look for frogmouths on open branches and listen for the nightjar at dusk.",
+        "nl": "De twee uilnachtzwaluwen en de nachtzwaluw zitten overdag stil en worden na het donker actief; de salangaan vliegt overdag boven het bos. Zoek uilnachtzwaluwen op open takken en luister in de schemering naar de nachtzwaluw."
+      }
+    },
+    "marsh-and-mangrove-birds": {
+      "title": {
+        "en": "Crakes, rails and herons of wet places",
+        "nl": "Ralen en reigers van natte plekken"
+      },
+      "intro": {
+        "en": "Crakes and rails skulk at the edges of swamps and mangroves, often best seen at dawn or at low tide. The herons stand motionless on mudflats, creeks and in shallow water.",
+        "nl": "Ralen verbergen zich aan de randen van moerassen en mangroven en zijn vaak het best te zien bij zonsopgang of bij eb. De reigers staan bewegingloos op slikken, in kreken en in ondiep water."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Waders on the mudflats, part 1",
+        "nl": "Steltlopers op de slikken, deel 1"
+      },
+      "intro": {
+        "en": "Cairns' Esplanade and the tidal flats along the coast hold migrants from Siberia from September to April. Start with the sand plovers and the long-billed waders and compare size, bill and leg colour.",
+        "nl": "De Esplanade van Cairns en de getijdenplaten langs de kust hebben van september tot april trekvogels uit Siberië. Begin met de plevieren en de steltlopers met lange snavel en vergelijk grootte, snavel en kleur van de poten."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Waders on the mudflats, part 2",
+        "nl": "Steltlopers op de slikken, deel 2"
+      },
+      "intro": {
+        "en": "More migrants on the tidal flats and shorelines, from the whimbrel to the knots and the turnstone. The pratincole hunts insects in flocks over open ground. Compare bill shape, leg colour and size first.",
+        "nl": "Meer trekvogels op de getijdenplaten en langs de kust, van de regenwulp tot de kanoeten en de steenloper. De vorkstaartplevier jaagt in groepen op insecten boven open terrein. Vergelijk eerst snavelvorm, kleur van de poten en grootte."
+      }
+    },
+    "seabirds": {
+      "title": {
+        "en": "Reef terns, noddies and boobies",
+        "nl": "Sterns, noddy's en genten van het rif"
+      },
+      "intro": {
+        "en": "These seabirds nest on coral cays on the Great Barrier Reef and you meet them on boat trips from Cairns and Port Douglas. Terns have forked tails and slim bills; the boobies and frigatebird are bigger and soar over the sea.",
+        "nl": "Deze zeevogels broeden op koraaleilanden op het Great Barrier Reef en je ziet ze op boottochten vanuit Cairns en Port Douglas. Sterns hebben gevorkte staarten en slanke snavels; de genten en de fregatvogel zijn groter en zweven boven zee."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "title": {
+        "en": "Raptors and owls of the rainforest",
+        "nl": "Roofvogels en uilen van het regenwoud"
+      },
+      "intro": {
+        "en": "Three powerful raptors that patrol forest edges and the canopy, and three owls that roost in dense trees by day. You rarely see them: look for a silhouette overhead or a tree where small birds are mobbing something.",
+        "nl": "Drie krachtige roofvogels die bosranden en het kronendak afspeuren, en drie uilen die overdag in dichte bomen slapen. Je ziet ze zelden: zoek een silhouet boven je of een boom waar kleine vogels iets verjagen."
+      }
+    },
+    "kingfishers": {
+      "title": {
+        "en": "Kingfishers of mangroves and forest",
+        "nl": "IJsvogels van mangroven en bos"
+      },
+      "intro": {
+        "en": "Three kingfishers of mangroves and creeks, a heavy-billed rainforest one and the migrant paradise-kingfisher. Check bill size and colour first, then the collar and the underparts.",
+        "nl": "Drie ijsvogels van mangroven en kreken, een zwaarsnavelige regenwoudsoort en de trekkende paradijsijsvogel. Kijk eerst naar grootte en kleur van de snavel, dan naar de kraag en de onderzijde."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "title": {
+        "en": "Parrots of Cape York and the coast",
+        "nl": "Papegaaien van Kaap York en de kust"
+      },
+      "intro": {
+        "en": "Colourful parrots of the tropical north: the eclectus and fig-parrot in the rainforest canopy, a lorikeet in coastal trees and two rarer birds of the savanna. Many are first noticed by a shrill call as they fly past.",
+        "nl": "Kleurrijke papegaaien van het tropische noorden: de edelpapegaai en de vijgpapegaai in het kronendak van het regenwoud, een lori in kustbomen en twee zeldzamere vogels van de savanne. Veel soorten merk je eerst op door een schelle roep als ze voorbijvliegen."
+      }
+    },
+    "old-world-pittas": {
+      "title": {
+        "en": "Pittas, catbird and bowerbirds",
+        "nl": "Pitta's, katvogel en prieelvogels"
+      },
+      "intro": {
+        "en": "Two jewel-coloured pittas hop on the floor of Cape York's rainforest and monsoon forest. The catbird and the bowerbirds belong to the same region: look for display grounds and bowers on the forest floor.",
+        "nl": "Twee juweelkleurige pitta's huppelen over de bodem van het regenwoud en het moessonbos van Kaap York. De katvogel en de prieelvogels horen bij dezelfde streek: zoek baltsplekken en prieeltjes op de bosbodem."
+      }
+    },
+    "honeyeaters-1": {
+      "title": {
+        "en": "Honeyeaters of the forest and coast, part 1",
+        "nl": "Honingeters van bos en kust, deel 1"
+      },
+      "intro": {
+        "en": "Seven honeyeaters of rainforest, mangroves and gardens, mostly small and olive-green. Look at the ear patch, the throat and the bill, and note the habitat.",
+        "nl": "Zeven honingeters van regenwoud, mangroven en tuinen, meestal klein en olijfgroen. Let op de oorvlek, de keel en de snavel, en let op het leefgebied."
+      }
+    },
+    "honeyeaters-2": {
+      "title": {
+        "en": "Honeyeaters of the forest and coast, part 2",
+        "nl": "Honingeters van bos en kust, deel 2"
+      },
+      "intro": {
+        "en": "Friarbirds are loud and big with bare faces; the myzomelas are small and brightly coloured. The others feed on flowers in the canopy. Look for movement in flowering trees.",
+        "nl": "Lederkoppen zijn luidruchtig en groot met een kaal gezicht; de dwerghoningeters zijn klein en felgekleurd. De andere soorten eten van bloemen in het kronendak. Let op beweging in bloeiende bomen."
+      }
+    },
+    "thornbills-and-allies-1": {
+      "title": {
+        "en": "Scrubwrens, a fernwren and a gerygone",
+        "nl": "Struiksluipers en een mangrovezanger"
+      },
+      "intro": {
+        "en": "Small brown birds of the forest floor and understorey in the Wet Tropics. Several live only in the Atherton uplands. Look for the pale eye, the throat and the way they hop on the leaf litter.",
+        "nl": "Kleine bruine vogels van de bosbodem en de onderlaag in de Wet Tropics. Een aantal leeft alleen in de Athertonhooglanden. Let op het lichte oog, de keel en hoe ze over het bladafval huppelen."
+      }
+    },
+    "thornbills-and-allies-2": {
+      "title": {
+        "en": "Gerygones, logrunner and quail-thrush",
+        "nl": "Gerygones, stronkloper en kwartellijster"
+      },
+      "intro": {
+        "en": "Gerygones are tiny insect-eaters that flit through the canopy with a sweet, rising song. The logrunner and the quail-thrush are the opposite: sturdy ground birds that fling leaf litter around.",
+        "nl": "Gerygones zijn kleine insecteneters die door het kronendak fladderen met een zoete, stijgende zang. De stronkloper en de kwartellijster zijn het tegenovergestelde: stevige grondvogels die bladafval wegslaan."
+      }
+    },
+    "cuckooshrikes": {
+      "title": {
+        "en": "Cuckooshrikes, trillers and a cicadabird",
+        "nl": "Rupsvogels, triller en een cicadavogel"
+      },
+      "intro": {
+        "en": "Grey, black and white birds that sit upright in the tops of trees and call from the canopy. Look at the face pattern, the wing patch and the underparts.",
+        "nl": "Grijze, zwarte en witte vogels die rechtop in boomtoppen zitten en vanuit het kronendak roepen. Let op de gezichtstekening, de vleugelvlek en de onderzijde."
+      }
+    },
+    "whistlers-and-allies": {
+      "title": {
+        "en": "Shrikethrushes, a whistler and an oriole",
+        "nl": "Lijsterdikkoppen, een fluiter en een wielewaal"
+      },
+      "intro": {
+        "en": "Plain birds with beautiful voices. They feed in the mid-storey and the canopy, so you hear them more than you see them. Go by habitat and song.",
+        "nl": "Eenvoudige vogels met mooie stemmen. Ze foerageren in het middenlevel en het kronendak, dus je hoort ze vaker dan je ze ziet. Ga af op leefgebied en zang."
+      }
+    },
+    "boatbills": {
+      "title": {
+        "en": "Boatbill, woodswallow, fantails and a butcherbird",
+        "nl": "Bootsnavel, spitsvogel, waaierstaarten en een orgelvogel"
+      },
+      "intro": {
+        "en": "Birds of the forest edge and the mangroves that hawk or glean for insects. The fantails fan their tails; the woodswallow sits on wires; the butcherbird is a heavy black bird with a hooked bill.",
+        "nl": "Vogels van de bosrand en de mangroven die insecten vangen of van bladeren plukken. De waaierstaarten spreiden hun staart; de spitsvogel zit op draden; de orgelvogel is een zware zwarte vogel met een gehaakte snavel."
+      }
+    },
+    "birds-of-paradise": {
+      "title": {
+        "en": "Birds-of-paradise of the rainforest",
+        "nl": "Paradijsvogels van het regenwoud"
+      },
+      "intro": {
+        "en": "Three birds-of-paradise live in Queensland's rainforest. The males display on a branch with spread wings and are black with an iridescent throat; the females are brown. Listen first: they call loudly.",
+        "nl": "Drie paradijsvogels leven in het regenwoud van Queensland. De mannetjes baltsen op een tak met gespreide vleugels en zijn zwart met een glanzende keel; de vrouwtjes zijn bruin. Luister eerst: ze roepen luid."
+      }
+    },
+    "monarch-flycatchers-1": {
+      "title": {
+        "en": "Monarchs of the rainforest",
+        "nl": "Monarchen van het regenwoud"
+      },
+      "intro": {
+        "en": "Slim insect-eaters that flit through the rainforest understorey and canopy. Several are black and white or grey with an orange belly. Check the face, the throat and the belly.",
+        "nl": "Slanke insecteneters die door de onderlaag en het kronendak van het regenwoud fladderen. Meerdere zijn zwart-wit of grijs met een oranje buik. Let op het gezicht, de keel en de buik."
+      }
+    },
+    "monarch-flycatchers-2": {
+      "title": {
+        "en": "Flycatchers of creeks and mangroves",
+        "nl": "Monarchen van beken en mangroven"
+      },
+      "intro": {
+        "en": "Small flycatchers that sit low on a perch and quiver their tails. The males are blue-grey or glossy blue-black; the females often have a rusty throat. Look at the throat and the belly.",
+        "nl": "Kleine monarchen die laag op een tak zitten en met hun staart trillen. De mannetjes zijn blauwgrijs of glanzend blauwzwart; de vrouwtjes hebben vaak een roestbruine keel. Let op de keel en de buik."
+      }
+    },
+    "australasian-robins": {
+      "title": {
+        "en": "Robins of the forest floor and mangroves",
+        "nl": "Vliegenvangers van bosbodem en mangroven"
+      },
+      "intro": {
+        "en": "Small, upright birds that cling sideways to tree trunks and drop to the ground for insects. They look like flycatchers. Check the head colour, the throat and the underparts.",
+        "nl": "Kleine, rechtop zittende vogels die zich zijwaarts aan boomstammen vastklampen en naar de grond duiken voor insecten. Ze lijken op vliegenvangers. Let op de kleur van de kop, de keel en de onderzijde."
+      }
+    },
+    "grassbirds-and-allies": {
+      "title": {
+        "en": "White-eyes, starlings and others",
+        "nl": "Brilvogels, spreeuwen en anderen"
+      },
+      "intro": {
+        "en": "Birds of the coast and the forest edge that do not belong together. The white-eyes feed in flocks, the starlings nest in noisy colonies, and the thrush hops on the dark forest floor.",
+        "nl": "Vogels van de kust en de bosrand die niet bij elkaar horen. De brilvogels foerageren in groepen, de spreeuwen broeden in luidruchtige kolonies en de lijster huppelt over de donkere bosbodem."
+      }
+    },
+    "estrildids": {
+      "title": {
+        "en": "Finches and munias of open country",
+        "nl": "Amadines en rietvinken van open terrein"
+      },
+      "intro": {
+        "en": "Small seed-eaters that live in flocks on grassland, at waterholes and in cane fields. The parrotfinch lives in rainforest. Look at the head, the bill colour and the rump.",
+        "nl": "Kleine zaadeters die in groepen leven op grasland, bij waterpoelen en in suikerrietvelden. De papegaaiamadine leeft in het regenwoud. Let op de kop, de kleur van de snavel en de stuit."
+      }
+    }
+  }
+}

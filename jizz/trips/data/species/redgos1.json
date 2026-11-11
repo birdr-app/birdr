@@ -1,0 +1,22 @@
+{
+  "code": "redgos1",
+  "name": {
+    "en": "Red Goshawk",
+    "nl": "Rosse havik"
+  },
+  "latin": "Erythrotriorchis radiatus",
+  "look_for": [
+    {
+      "en": "Large, powerful, long-legged hawk",
+      "nl": "Grote, krachtige havik met lange poten"
+    },
+    {
+      "en": "Rufous underparts with black streaks",
+      "nl": "Roestbruine onderzijde met zwarte strepen"
+    },
+    {
+      "en": "Rare; patrols the edges of woodland",
+      "nl": "Zeldzaam; patrouilleert langs bosranden"
+    }
+  ]
+}

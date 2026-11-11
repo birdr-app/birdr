@@ -1,0 +1,22 @@
+{
+  "code": "frnmon1",
+  "name": {
+    "en": "Frill-necked Monarch",
+    "nl": "Witborstfranjemonarch"
+  },
+  "latin": "Arses lorealis",
+  "look_for": [
+    {
+      "en": "Black head with a white **throat**",
+      "nl": "Zwarte kop met witte **keel**"
+    },
+    {
+      "en": "White **frill** at the neck, white belly",
+      "nl": "Witte **kraag** in de nek, witte buik"
+    },
+    {
+      "en": "Calls with a harsh trill in the canopy",
+      "nl": "Roept met een ruwe triller in het kronendak"
+    }
+  ]
+}

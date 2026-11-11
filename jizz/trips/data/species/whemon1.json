@@ -1,0 +1,22 @@
+{
+  "code": "whemon1",
+  "name": {
+    "en": "White-eared Monarch",
+    "nl": "Witoormonarch"
+  },
+  "latin": "Carterornis leucotis",
+  "look_for": [
+    {
+      "en": "Black head, white back",
+      "nl": "Zwarte kop, witte rug"
+    },
+    {
+      "en": "White **ear** patch, orange-red under tail",
+      "nl": "Witte **oor**vlek, oranjerood onder de staart"
+    },
+    {
+      "en": "Gleans insects in rainforest canopy",
+      "nl": "Pikt insecten in het kronendak van regenwoud"
+    }
+  ]
+}

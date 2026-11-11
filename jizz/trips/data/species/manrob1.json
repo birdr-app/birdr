@@ -1,0 +1,22 @@
+{
+  "code": "manrob1",
+  "name": {
+    "en": "Mangrove Robin",
+    "nl": "Tapuitvliegenvanger"
+  },
+  "latin": "Melanodryas pulverulenta",
+  "look_for": [
+    {
+      "en": "Grey above, white eyebrow",
+      "nl": "Grijs boven, witte wenkbrauw"
+    },
+    {
+      "en": "White **belly**, dark **wings** with white bar",
+      "nl": "Witte **buik**, donkere **vleugels** met witte band"
+    },
+    {
+      "en": "Perches on mangrove roots at low tide",
+      "nl": "Zit bij eb op mangrovewortels"
+    }
+  ]
+}

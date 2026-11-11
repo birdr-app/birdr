@@ -1,0 +1,22 @@
+{
+  "code": "railor4",
+  "name": {
+    "en": "Coconut Lorikeet",
+    "nl": "Nieuw-Guinese regenbooglori"
+  },
+  "latin": "Trichoglossus haematodus",
+  "look_for": [
+    {
+      "en": "Bright blue **head**, orange-red breast",
+      "nl": "Helderblauwe **kop**, oranjerode borst"
+    },
+    {
+      "en": "Green back and tail",
+      "nl": "Groene rug en staart"
+    },
+    {
+      "en": "Noisy flocks in coastal trees",
+      "nl": "Luidruchtige groepen in kustbomen"
+    }
+  ]
+}

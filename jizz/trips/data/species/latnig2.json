@@ -1,0 +1,22 @@
+{
+  "code": "latnig2",
+  "name": {
+    "en": "Large-tailed Nightjar",
+    "nl": "Breedstaartnachtzwaluw"
+  },
+  "latin": "Caprimulgus macrurus",
+  "look_for": [
+    {
+      "en": "Long-tailed nightjar, mottled brown",
+      "nl": "Langstaartige nachtzwaluw, bruin gevlekt"
+    },
+    {
+      "en": "White **throat** patch, white tail corners",
+      "nl": "Witte **keel**, witte hoeken in de staart"
+    },
+    {
+      "en": "Calls with a repeated \"tok tok tok\"",
+      "nl": "Roept met een herhaald \"tok tok tok\""
+    }
+  ]
+}

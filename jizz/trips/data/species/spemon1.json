@@ -1,0 +1,22 @@
+{
+  "code": "spemon1",
+  "name": {
+    "en": "Australian Spectacled Monarch",
+    "nl": "Brilmonarch"
+  },
+  "latin": "Symposiachrus trivirgatus",
+  "look_for": [
+    {
+      "en": "Black **face** around the eye",
+      "nl": "Zwart **gezicht** rond het oog"
+    },
+    {
+      "en": "Pale grey back, orange throat",
+      "nl": "Lichtgrijze rug, oranje keel"
+    },
+    {
+      "en": "Perches low, fans its tail",
+      "nl": "Zit laag, spreidt zijn staart"
+    }
+  ]
+}
