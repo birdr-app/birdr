@@ -72,6 +72,42 @@ _ENTRIES: list[tuple[str, tuple[str, ...]]] = [
     ),
     ('What is Motmot?', ('Wat is Motmot?', '¿Qué es Motmot?', 'Qu’est-ce que Motmot ?', 'Was ist Motmot?', 'Cos’è Motmot?', 'O que é o Motmot?', 'Motmotとは？')),
     (
+        'New: Trip prep',
+        (
+            'Nieuw: Reisvoorbereiding',
+            'Novedad: prepara tu viaje',
+            'Nouveau : prépare ton voyage',
+            'Neu: Reisevorbereitung',
+            'Novità: prepara il tuo viaggio',
+            'Novidade: prepare sua viagem',
+            '新機能：旅の準備',
+        ),
+    ),
+    (
+        'Going birding abroad? Pick a destination, get to know its birds with photo cards and identification tips, then see what you remember in short quizzes.',
+        (
+            'Ga je vogels kijken in het buitenland? Kies een bestemming, leer de vogels kennen met fotokaarten en herkenningstips en test jezelf met korte quizzen.',
+            '¿Vas a observar aves en el extranjero? Elige un destino, conoce sus aves con fichas con fotos y consejos de identificación, y pon a prueba lo aprendido con quizzes cortos.',
+            'Tu pars observer les oiseaux à l’étranger ? Choisis une destination, découvre ses oiseaux avec des fiches photo et des conseils d’identification, puis teste tes connaissances avec de courts quiz.',
+            'Gehst du im Ausland auf Vogelbeobachtung? Wähle ein Reiseziel, lerne die dortigen Vögel mit Fotokarten und Bestimmungstipps kennen und teste dein Wissen in kurzen Quizrunden.',
+            'Vai a osservare gli uccelli all’estero? Scegli una destinazione, scopri i suoi uccelli con schede fotografiche e consigli per riconoscerli, poi mettiti alla prova con brevi quiz.',
+            'Vai observar aves no exterior? Escolha um destino, conheça as aves de lá com fichas ilustradas com fotos e dicas de identificação e teste o que aprendeu em quizzes rápidos.',
+            '海外でバードウォッチングをする予定ですか？行き先を選び、写真カードと識別のヒントで現地の鳥を覚えたら、短いクイズで確認しましょう。',
+        ),
+    ),
+    (
+        'Explore trip destinations',
+        (
+            'Bekijk de bestemmingen',
+            'Explora los destinos',
+            'Découvre les destinations',
+            'Reiseziele entdecken',
+            'Scopri le destinazioni',
+            'Explore os destinos',
+            '行き先を探す',
+        ),
+    ),
+    (
         'Motmot is a free bird-identification training app. It helps birders learn to recognise species through photo, video and sound quizzes, personalised practice and country challenges. You can sign in with Google so Motmot can create your account and save your scores and learning progress.',
         (
             'Motmot is een gratis trainingsapp voor vogelherkenning. Vogelaars leren soorten herkennen met foto-, video- en geluidquizzen, persoonlijke oefening en landenuitdagingen. Je kunt inloggen met Google, zodat Motmot je account kan aanmaken en je scores en leervoortgang kan bewaren.',

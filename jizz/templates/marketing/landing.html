@@ -32,6 +32,21 @@
   </div>
 </section>
 
+<section id="learning-guides" class="grid">
+  <article class="card">
+    <h2>{% mt "New: Trip prep" %}</h2>
+    <p>{% mt "Going birding abroad? Pick a destination, get to know its birds with photo cards and identification tips, then see what you remember in short quizzes." %}</p>
+    <p><a class="btn" href="/trips">{% mt "Explore trip destinations" %}</a></p>
+  </article>
+  {% if locale == 'nl' %}
+  <article class="card">
+    <h2>Beginnerscursus</h2>
+    <p>Leer in twintig korte lessen de vogels van Nederland herkennen. Oefen met foto’s, vogelgeluiden en quizzen. Gratis en zonder account.</p>
+    <p><a class="btn" href="{{ '/site/vogelcursus/'|mpath }}">Bekijk de beginnerscursus</a></p>
+  </article>
+  {% endif %}
+</section>
+
 <section>
   <h2>{% mt "How Motmot teaches" %}</h2>
   <div class="steps">
