@@ -1,0 +1,22 @@
+{
+  "code": "relpar1",
+  "name": {
+    "en": "Red-legged Partridge",
+    "nl": "Rode patrijs"
+  },
+  "latin": "Alectoris rufa",
+  "look_for": [
+    {
+      "en": "Black-bordered white **throat**, black **necklace**",
+      "nl": "Witte **keel** met zwarte rand, uitlopend in een **halsband**"
+    },
+    {
+      "en": "Bold black and chestnut bars on **flanks**",
+      "nl": "Brede zwarte en kastanjebruine strepen op de **flanken**"
+    },
+    {
+      "en": "Red **bill** and legs",
+      "nl": "Rode **snavel** en poten"
+    }
+  ]
+}

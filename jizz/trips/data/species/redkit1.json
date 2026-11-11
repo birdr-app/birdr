@@ -1,0 +1,22 @@
+{
+  "code": "redkit1",
+  "name": {
+    "en": "Red Kite",
+    "nl": "Rode wouw"
+  },
+  "latin": "Milvus milvus",
+  "look_for": [
+    {
+      "en": "Deeply forked rusty **tail**",
+      "nl": "Diep gevorkte roestbruine **staart**"
+    },
+    {
+      "en": "Pale grey **head**, rufous body",
+      "nl": "Lichtgrijze **kop**, roodbruin lijf"
+    },
+    {
+      "en": "White patches under **wing** tips",
+      "nl": "Witte vlekken onder de **vleugeltippen**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "carcro1",
+  "name": {
+    "en": "Carrion Crow",
+    "nl": "Zwarte kraai"
+  },
+  "latin": "Corvus corone",
+  "look_for": [
+    {
+      "en": "All black, heavy **bill**",
+      "nl": "Geheel zwart met zware **snavel**"
+    },
+    {
+      "en": "Square-ended **tail**, hoarse croak",
+      "nl": "Rechte **staart**, schorre roep"
+    },
+    {
+      "en": "Usually singly or in pairs",
+      "nl": "Meestal alleen of in paren"
+    }
+  ]
+}

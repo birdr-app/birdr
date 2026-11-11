@@ -1,0 +1,22 @@
+{
+  "code": "rtrthr1",
+  "name": {
+    "en": "Common Rock Thrush",
+    "nl": "Rode rotslijster"
+  },
+  "latin": "Monticola saxatilis",
+  "look_for": [
+    {
+      "en": "Male blue **head**, orange belly",
+      "nl": "Mannetje met blauwe **kop** en oranje buik"
+    },
+    {
+      "en": "Short rusty **tail**",
+      "nl": "Korte roestrode **staart**"
+    },
+    {
+      "en": "Female barred brown, rusty **tail**",
+      "nl": "Vrouwtje gebandeerd bruin met roestrode **staart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "citfin1",
+  "name": {
+    "en": "Citril Finch",
+    "nl": "Citroensijs"
+  },
+  "latin": "Carduelis citrinella",
+  "look_for": [
+    {
+      "en": "Yellow-green face and **breast**",
+      "nl": "Geelgroen gezicht en **borst**"
+    },
+    {
+      "en": "Grey **nape**, two yellow wing bars",
+      "nl": "Grijze **nek**, twee gele vleugelbanden"
+    },
+    {
+      "en": "Mountain pastures and open pine woods",
+      "nl": "Bergweiden en open dennenbos"
+    }
+  ]
+}

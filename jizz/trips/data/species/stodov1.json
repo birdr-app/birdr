@@ -1,0 +1,22 @@
+{
+  "code": "stodov1",
+  "name": {
+    "en": "Stock Dove",
+    "nl": "Holenduif"
+  },
+  "latin": "Columba oenas",
+  "look_for": [
+    {
+      "en": "Plain blue-grey, **neck** patch green",
+      "nl": "Egaal blauwgrijs met groene vlek op de **nek**"
+    },
+    {
+      "en": "No white on **neck** or wing",
+      "nl": "Geen wit op **nek** of vleugel"
+    },
+    {
+      "en": "Two short black bars on **wing**",
+      "nl": "Twee korte zwarte banden op de **vleugel**"
+    }
+  ]
+}

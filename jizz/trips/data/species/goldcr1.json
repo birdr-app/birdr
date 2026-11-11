@@ -1,0 +1,22 @@
+{
+  "code": "goldcr1",
+  "name": {
+    "en": "Goldcrest",
+    "nl": "Goudhaan"
+  },
+  "latin": "Regulus regulus",
+  "look_for": [
+    {
+      "en": "Tiny, olive-green with black-bordered **crest**",
+      "nl": "Piepklein, olijfgroen met zwartomrande **kuif**"
+    },
+    {
+      "en": "Plain face, large dark **eye**",
+      "nl": "Effen gezicht, groot donker **oog**"
+    },
+    {
+      "en": "Restless, flicks **wings** in conifers",
+      "nl": "Rusteloos, trilt met de **vleugels** in naaldbomen"
+    }
+  ]
+}

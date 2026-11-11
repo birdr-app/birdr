@@ -1,0 +1,22 @@
+{
+  "code": "rebshr1",
+  "name": {
+    "en": "Red-backed Shrike",
+    "nl": "Grauwe klauwier"
+  },
+  "latin": "Lanius collurio",
+  "look_for": [
+    {
+      "en": "Male grey **crown**, black eye **mask**",
+      "nl": "Mannetje met grijze **kruin** en zwart oogmasker"
+    },
+    {
+      "en": "Male chestnut back, pink-washed breast",
+      "nl": "Mannetje met kastanjebruine rug, roze getinte borst"
+    },
+    {
+      "en": "Female brown, barred, with pale **mask**",
+      "nl": "Vrouwtje bruin en gebandeerd, met bleek **masker**"
+    }
+  ]
+}

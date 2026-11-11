@@ -1,0 +1,22 @@
+{
+  "code": "litbit1",
+  "name": {
+    "en": "Little Bittern",
+    "nl": "Woudaap"
+  },
+  "latin": "Botaurus minutus",
+  "look_for": [
+    {
+      "en": "Tiny heron, creeps through **reeds**",
+      "nl": "Kleine reiger, sluipt door het **riet**"
+    },
+    {
+      "en": "Male black **cap** and back, buff cheeks",
+      "nl": "Mannetje met zwarte **kruin** en rug, bruingele wangen"
+    },
+    {
+      "en": "Pale buff **wing** panel in flight",
+      "nl": "Lichtbruingeel vlak op de **vleugel** in vlucht"
+    }
+  ]
+}

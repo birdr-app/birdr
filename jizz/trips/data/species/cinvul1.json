@@ -1,0 +1,22 @@
+{
+  "code": "cinvul1",
+  "name": {
+    "en": "Black Vulture",
+    "nl": "Monniksgier"
+  },
+  "latin": "Aegypius monachus",
+  "look_for": [
+    {
+      "en": "Huge, dark brown, very broad flat **wings**",
+      "nl": "Enorm, donkerbruin, zeer brede vlakke **vleugels**"
+    },
+    {
+      "en": "Small pale **head**, dark ruff",
+      "nl": "Kleine lichte **kop** met donkere kraag"
+    },
+    {
+      "en": "Short wedge-shaped **tail**",
+      "nl": "Korte wigvormige **staart**"
+    }
+  ]
+}

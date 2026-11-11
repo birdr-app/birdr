@@ -1,0 +1,22 @@
+{
+  "code": "norgos1",
+  "name": {
+    "en": "Eurasian Goshawk",
+    "nl": "Havik"
+  },
+  "latin": "Astur gentilis",
+  "look_for": [
+    {
+      "en": "Big hawk, broad **wings**, long barred tail",
+      "nl": "Grote havik, brede **vleugels**, lange gebande staart"
+    },
+    {
+      "en": "Bold white stripe above the **eye**",
+      "nl": "Opvallende witte streep boven het **oog**"
+    },
+    {
+      "en": "Fluffy white **undertail**, fast in woods",
+      "nl": "Pluizig witte **onderstaart**, snel door bos"
+    }
+  ]
+}

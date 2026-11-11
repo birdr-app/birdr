@@ -1,0 +1,22 @@
+{
+  "code": "comshe",
+  "name": {
+    "en": "Common Shelduck",
+    "nl": "Bergeend"
+  },
+  "latin": "Tadorna tadorna",
+  "look_for": [
+    {
+      "en": "Bold pied duck, **head** glossy green-black",
+      "nl": "Opvallende zwart-witte eend, **kop** glanzend groenzwart"
+    },
+    {
+      "en": "Broad chestnut band round the **breast**",
+      "nl": "Brede kastanjebruine band om de **borst**"
+    },
+    {
+      "en": "Bright red **bill**, male with a knob",
+      "nl": "Felrode **snavel**, bij het mannetje met een knobbel"
+    }
+  ]
+}

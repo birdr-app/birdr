@@ -1,0 +1,22 @@
+{
+  "code": "spaeag1",
+  "name": {
+    "en": "Spanish Eagle",
+    "nl": "Spaanse keizerarend"
+  },
+  "latin": "Aquila adalberti",
+  "look_for": [
+    {
+      "en": "Huge dark eagle, pale cream **crown**",
+      "nl": "Enorme donkere arend met crèmekleurige **kruin**"
+    },
+    {
+      "en": "White shoulder patches on the **wing**",
+      "nl": "Witte schouderstrepen op de **vleugel**"
+    },
+    {
+      "en": "Adult almost black, flat **wings** in flight",
+      "nl": "Adult bijna zwart, vlakke **vleugels** in vlucht"
+    }
+  ]
+}

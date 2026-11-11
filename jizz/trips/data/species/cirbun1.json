@@ -1,0 +1,22 @@
+{
+  "code": "cirbun1",
+  "name": {
+    "en": "Cirl Bunting",
+    "nl": "Cirlgors"
+  },
+  "latin": "Emberiza cirlus",
+  "look_for": [
+    {
+      "en": "Male striped black-and-yellow **head**",
+      "nl": "Mannetje met zwartgeel gestreepte **kop**"
+    },
+    {
+      "en": "Olive **breast** band, chestnut flanks",
+      "nl": "Olijfkleurige **borstband**, kastanjebruine flanken"
+    },
+    {
+      "en": "Female streaked, olive-grey **rump**",
+      "nl": "Vrouwtje gestreept met olijfgrijze **stuit**"
+    }
+  ]
+}

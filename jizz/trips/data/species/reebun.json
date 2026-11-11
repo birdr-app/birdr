@@ -1,0 +1,22 @@
+{
+  "code": "reebun",
+  "name": {
+    "en": "Common Reed Bunting",
+    "nl": "Rietgors"
+  },
+  "latin": "Emberiza schoeniclus",
+  "look_for": [
+    {
+      "en": "Male black **head**, white collar",
+      "nl": "Mannetje met zwarte **kop** en witte kraag"
+    },
+    {
+      "en": "Female streaked, buff **eyebrow**",
+      "nl": "Vrouwtje gestreept met bruingele **wenkbrauwstreep**"
+    },
+    {
+      "en": "White **outer** tail, perches on reeds",
+      "nl": "Wit in de **buitenste** staart, zit op riet"
+    }
+  ]
+}

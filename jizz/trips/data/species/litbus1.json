@@ -1,0 +1,22 @@
+{
+  "code": "litbus1",
+  "name": {
+    "en": "Little Bustard",
+    "nl": "Kleine trap"
+  },
+  "latin": "Tetrax tetrax",
+  "look_for": [
+    {
+      "en": "Male black **neck** with two white bands",
+      "nl": "Mannetje met zwarte **hals** en twee witte banden"
+    },
+    {
+      "en": "Female sandy, finely barred, partridge-like",
+      "nl": "Vrouwtje zandkleurig, fijn gebandeerd, als een patrijs"
+    },
+    {
+      "en": "In flight **wings** mostly white, whistling",
+      "nl": "In vlucht vooral witte **vleugels**, fluitend geluid"
+    }
+  ]
+}

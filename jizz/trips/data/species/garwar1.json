@@ -1,0 +1,22 @@
+{
+  "code": "garwar1",
+  "name": {
+    "en": "Garden Warbler",
+    "nl": "Tuinfluiter"
+  },
+  "latin": "Sylvia borin",
+  "look_for": [
+    {
+      "en": "Plain brown, **no** pattern on the face",
+      "nl": "Egaal bruin, geen tekening op het **gezicht**"
+    },
+    {
+      "en": "Short thick **bill**, round head",
+      "nl": "Korte dikke **snavel**, ronde kop"
+    },
+    {
+      "en": "Soft grey patch on **neck** side",
+      "nl": "Zachtgrijze vlek op de **nek**zijde"
+    }
+  ]
+}

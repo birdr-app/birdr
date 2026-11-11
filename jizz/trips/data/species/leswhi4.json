@@ -1,0 +1,22 @@
+{
+  "code": "leswhi4",
+  "name": {
+    "en": "Lesser Whitethroat",
+    "nl": "Braamsluiper"
+  },
+  "latin": "Curruca curruca",
+  "look_for": [
+    {
+      "en": "Grey **head**, darker mask",
+      "nl": "Grijze **kop** met donker masker"
+    },
+    {
+      "en": "White **throat**, plain brown back",
+      "nl": "Witte **keel**, effen bruine rug"
+    },
+    {
+      "en": "Shy, ticks from dense bushes",
+      "nl": "Schuw, tikt vanuit dichte struiken"
+    }
+  ]
+}

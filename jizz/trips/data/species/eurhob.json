@@ -1,0 +1,22 @@
+{
+  "code": "eurhob",
+  "name": {
+    "en": "Eurasian Hobby",
+    "nl": "Boomvalk"
+  },
+  "latin": "Falco subbuteo",
+  "look_for": [
+    {
+      "en": "Slim falcon, long pointed **wings**, like a big swift",
+      "nl": "Slanke valk met lange spitse **vleugels**, als een grote gierzwaluw"
+    },
+    {
+      "en": "Black **moustache**, white throat",
+      "nl": "Zwarte **baardstreep**, witte keel"
+    },
+    {
+      "en": "Rusty **thighs**, streaked underparts",
+      "nl": "Roestrode **broek**, gestreepte onderkant"
+    }
+  ]
+}

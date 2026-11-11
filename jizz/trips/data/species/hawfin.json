@@ -1,0 +1,22 @@
+{
+  "code": "hawfin",
+  "name": {
+    "en": "Hawfinch",
+    "nl": "Appelvink"
+  },
+  "latin": "Coccothraustes coccothraustes",
+  "look_for": [
+    {
+      "en": "Huge conical **bill**, thick-necked",
+      "nl": "Enorme kegelvormige **snavel**, dikke nek"
+    },
+    {
+      "en": "Orange-brown **head**, black bib",
+      "nl": "Oranjebruine **kop**, zwarte bef"
+    },
+    {
+      "en": "White **wing** bar, short tail",
+      "nl": "Witte **vleugelband**, korte staart"
+    }
+  ]
+}

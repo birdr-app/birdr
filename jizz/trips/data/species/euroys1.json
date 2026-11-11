@@ -1,0 +1,22 @@
+{
+  "code": "euroys1",
+  "name": {
+    "en": "Eurasian Oystercatcher",
+    "nl": "Scholekster"
+  },
+  "latin": "Haematopus ostralegus",
+  "look_for": [
+    {
+      "en": "Black and white wader, **bill** long orange-red",
+      "nl": "Zwart-witte steltloper met lange oranjerode **snavel**"
+    },
+    {
+      "en": "Pink legs, red **eye**",
+      "nl": "Roze poten, rood **oog**"
+    },
+    {
+      "en": "White **wing** stripe in flight",
+      "nl": "Witte **vleugelstreep** in vlucht"
+    }
+  ]
+}

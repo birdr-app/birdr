@@ -1,0 +1,22 @@
+{
+  "code": "tawowl1",
+  "name": {
+    "en": "Tawny Owl",
+    "nl": "Bosuil"
+  },
+  "latin": "Strix aluco",
+  "look_for": [
+    {
+      "en": "Round head, **no ear** tufts",
+      "nl": "Ronde kop, geen **oorpluimen**"
+    },
+    {
+      "en": "Large dark **eyes** in a pale face",
+      "nl": "Grote donkere **ogen** in een bleek gezicht"
+    },
+    {
+      "en": "Mottled brown or grey-brown, hooting at night",
+      "nl": "Gevlekt bruin of grijsbruin, hoeit 's nachts"
+    }
+  ]
+}

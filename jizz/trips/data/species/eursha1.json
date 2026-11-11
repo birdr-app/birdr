@@ -1,0 +1,22 @@
+{
+  "code": "eursha1",
+  "name": {
+    "en": "European Shag",
+    "nl": "Kuifaalscholver"
+  },
+  "latin": "Gulosus aristotelis",
+  "look_for": [
+    {
+      "en": "Glossy dark green, slimmer than Cormorant",
+      "nl": "Glanzend donkergroen, slanker dan een Aalscholver"
+    },
+    {
+      "en": "Thin **bill**, no white face patch",
+      "nl": "Dunne **snavel**, geen wit vlak op het gezicht"
+    },
+    {
+      "en": "Breeding adult has upright **crest**",
+      "nl": "In broedkleed een rechtopstaande **kuif**"
+    }
+  ]
+}

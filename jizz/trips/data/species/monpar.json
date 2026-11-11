@@ -1,0 +1,22 @@
+{
+  "code": "monpar",
+  "name": {
+    "en": "Monk Parakeet",
+    "nl": "Monniksparkiet"
+  },
+  "latin": "Myiopsitta monachus",
+  "look_for": [
+    {
+      "en": "Green parakeet with grey **face** and breast",
+      "nl": "Groene parkiet met grijs **gezicht** en grijze borst"
+    },
+    {
+      "en": "Long pointed **tail**, pale bill",
+      "nl": "Lange spitse **staart**, lichte snavel"
+    },
+    {
+      "en": "Huge stick nests in tall trees",
+      "nl": "Enorme takkennesten in hoge bomen"
+    }
+  ]
+}

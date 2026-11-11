@@ -1,0 +1,22 @@
+{
+  "code": "meapip1",
+  "name": {
+    "en": "Meadow Pipit",
+    "nl": "Graspieper"
+  },
+  "latin": "Anthus pratensis",
+  "look_for": [
+    {
+      "en": "Olive-brown, streaked **flanks**",
+      "nl": "Olijfbruin met gestreepte **flanken**"
+    },
+    {
+      "en": "Thin **bill**, pale pinkish legs",
+      "nl": "Dunne **snavel**, lichte roze poten"
+    },
+    {
+      "en": "Thin high call, parachute display flight",
+      "nl": "Hoge dunne roep, parachutevlucht tijdens de baltsvlucht"
+    }
+  ]
+}

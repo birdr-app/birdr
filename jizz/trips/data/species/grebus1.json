@@ -1,0 +1,22 @@
+{
+  "code": "grebus1",
+  "name": {
+    "en": "Great Bustard",
+    "nl": "Grote trap"
+  },
+  "latin": "Otis tarda",
+  "look_for": [
+    {
+      "en": "Huge, heavy, turkey-sized ground bird",
+      "nl": "Enorme, zware vogel van de grond, kalkoengroot"
+    },
+    {
+      "en": "Chestnut **back** barred black, grey head",
+      "nl": "Kastanjebruine **rug** met zwarte banden, grijze kop"
+    },
+    {
+      "en": "In flight large white **wing** patches",
+      "nl": "In vlucht grote witte vlakken op de **vleugel**"
+    }
+  ]
+}

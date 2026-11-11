@@ -1,0 +1,22 @@
+{
+  "code": "watrai1",
+  "name": {
+    "en": "Water Rail",
+    "nl": "Waterral"
+  },
+  "latin": "Rallus aquaticus",
+  "look_for": [
+    {
+      "en": "Long red **bill**, slate-grey face and breast",
+      "nl": "Lange rode **snavel**, leigrijs gezicht en borst"
+    },
+    {
+      "en": "Black and white barred **flanks**",
+      "nl": "Zwart-wit gebandeerde **flanken**"
+    },
+    {
+      "en": "Skulks in reeds, pig-like squeals",
+      "nl": "Sluipt door riet, gilt als een varken"
+    }
+  ]
+}

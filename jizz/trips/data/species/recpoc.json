@@ -1,0 +1,22 @@
+{
+  "code": "recpoc",
+  "name": {
+    "en": "Red-crested Pochard",
+    "nl": "Krooneend"
+  },
+  "latin": "Netta rufina",
+  "look_for": [
+    {
+      "en": "Male **head** rusty orange, **bill** bright red",
+      "nl": "Mannetje met roestoranje **kop** en felrode **snavel**"
+    },
+    {
+      "en": "Male black front, white **flanks**",
+      "nl": "Mannetje met zwarte voorkant en witte **flanken**"
+    },
+    {
+      "en": "Female brown, pale cheeks, dark **cap**",
+      "nl": "Vrouwtje bruin met lichte wangen en donkere **kruin**"
+    }
+  ]
+}

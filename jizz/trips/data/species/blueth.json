@@ -1,0 +1,22 @@
+{
+  "code": "blueth",
+  "name": {
+    "en": "Bluethroat",
+    "nl": "Blauwborst"
+  },
+  "latin": "Luscinia svecica",
+  "look_for": [
+    {
+      "en": "Blue **throat** with red or white spot",
+      "nl": "Blauwe **keel** met rode of witte vlek"
+    },
+    {
+      "en": "Chestnut base to the **tail**",
+      "nl": "Kastanjebruine **staartbasis**"
+    },
+    {
+      "en": "Pale **eyebrow**, hops on the ground",
+      "nl": "Lichte **wenkbrauwstreep**, huppelt over de grond"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "eurmag1",
+  "name": {
+    "en": "Common Magpie",
+    "nl": "Ekster"
+  },
+  "latin": "Pica pica",
+  "look_for": [
+    {
+      "en": "Black and white, long glossy **tail**",
+      "nl": "Zwart-wit met lange glanzende **staart**"
+    },
+    {
+      "en": "White **belly** and shoulders",
+      "nl": "Witte **buik** en schouders"
+    },
+    {
+      "en": "White flashes in **wing** in flight",
+      "nl": "Witte vlekken in de **vleugel** in vlucht"
+    }
+  ]
+}

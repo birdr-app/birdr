@@ -1,0 +1,22 @@
+{
+  "code": "lottit1",
+  "name": {
+    "en": "Long-tailed Tit",
+    "nl": "Staartmees"
+  },
+  "latin": "Aegithalos caudatus",
+  "look_for": [
+    {
+      "en": "Tiny ball with a very long **tail**",
+      "nl": "Klein bolletje met een heel lange **staart**"
+    },
+    {
+      "en": "White **head**, pinkish back and flanks",
+      "nl": "Witte **kop**, rozige rug en flanken"
+    },
+    {
+      "en": "Small flocks calling in trees",
+      "nl": "Kleine groepjes die roepen in bomen"
+    }
+  ]
+}

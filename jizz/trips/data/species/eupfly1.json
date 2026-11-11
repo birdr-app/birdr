@@ -1,0 +1,22 @@
+{
+  "code": "eupfly1",
+  "name": {
+    "en": "European Pied Flycatcher",
+    "nl": "Bonte vliegenvanger"
+  },
+  "latin": "Ficedula hypoleuca",
+  "look_for": [
+    {
+      "en": "Male black and white, small white forehead",
+      "nl": "Mannetje zwart-wit met een klein wit voorhoofd"
+    },
+    {
+      "en": "Female brown with white **wing** patch",
+      "nl": "Vrouwtje bruin met wit vlak op de **vleugel**"
+    },
+    {
+      "en": "Flicks **tail**, sallies from perches",
+      "nl": "Trilt met de **staart**, vliegt uit vanaf een zitplek"
+    }
+  ]
+}
