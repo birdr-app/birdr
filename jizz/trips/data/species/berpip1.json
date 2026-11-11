@@ -1,0 +1,22 @@
+{
+  "code": "berpip1",
+  "name": {
+    "en": "Berthelot's Pipit",
+    "nl": "Berthelots pieper"
+  },
+  "latin": "Anthus berthelotii",
+  "look_for": [
+    {
+      "en": "Sandy-brown pipit with a streaked **breast**",
+      "nl": "Zandbruine pieper met gestreepte **borst**"
+    },
+    {
+      "en": "Pale eyebrow, white-edged **tail**",
+      "nl": "Lichte wenkbrauwstreep, **staart** met witte randen"
+    },
+    {
+      "en": "Runs on bare ground, bobbing its tail",
+      "nl": "Rent over kale grond en wipt met de staart"
+    }
+  ]
+}

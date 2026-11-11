@@ -1,0 +1,22 @@
+{
+  "code": "caisto1",
+  "name": {
+    "en": "Fuerteventura Stonechat",
+    "nl": "Canarische roodborsttapuit"
+  },
+  "latin": "Saxicola dacotiae",
+  "look_for": [
+    {
+      "en": "Male black-streaked **head**, white eyebrow",
+      "nl": "Man met zwart gestreepte **kop** en witte wenkbrauwstreep"
+    },
+    {
+      "en": "Orange-chestnut **breast**, white neck sides",
+      "nl": "Oranjebruine **borst**, witte halszijden"
+    },
+    {
+      "en": "Perches on rocks and palms in ravines",
+      "nl": "Zit op rotsen en palmen in ravijnen"
+    }
+  ]
+}

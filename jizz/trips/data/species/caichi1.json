@@ -1,0 +1,22 @@
+{
+  "code": "caichi1",
+  "name": {
+    "en": "Canary Islands Chiffchaff",
+    "nl": "Canarische tjiftjaf"
+  },
+  "latin": "Phylloscopus canariensis",
+  "look_for": [
+    {
+      "en": "Dark olive-brown above, dull below",
+      "nl": "Donker olijfbruin boven, doffe onderkant"
+    },
+    {
+      "en": "Short **wings**, restless in treetops",
+      "nl": "Korte **vleugels**, onrustig in boomkruinen"
+    },
+    {
+      "en": "Dark **legs**, plain face, thin **bill**",
+      "nl": "Donkere **poten**, effen kop, dunne **snavel**"
+    }
+  ]
+}

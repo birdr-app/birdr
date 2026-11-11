@@ -1,0 +1,22 @@
+{
+  "code": "comcan",
+  "name": {
+    "en": "Atlantic Canary",
+    "nl": "Kanarie"
+  },
+  "latin": "Serinus canaria",
+  "look_for": [
+    {
+      "en": "Streaky green-brown back, grey **nape**",
+      "nl": "Gestreepte groenbruine rug, grijze **nek**"
+    },
+    {
+      "en": "Male yellow-green **face** and breast",
+      "nl": "Man met geelgroene **kop** en borst"
+    },
+    {
+      "en": "Small finch, twittering flocks in trees",
+      "nl": "Klein vinkje, tjilpende groepen in bomen"
+    }
+  ]
+}

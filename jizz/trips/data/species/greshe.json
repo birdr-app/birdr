@@ -1,0 +1,22 @@
+{
+  "code": "greshe",
+  "name": {
+    "en": "Great Shearwater",
+    "nl": "Grote pijlstormvogel"
+  },
+  "latin": "Ardenna gravis",
+  "look_for": [
+    {
+      "en": "Large shearwater with dark **cap**, white collar",
+      "nl": "Grote pijlstormvogel met donkere **kap** en witte kraag"
+    },
+    {
+      "en": "White band across the **rump**",
+      "nl": "Witte band over de **stuit**"
+    },
+    {
+      "en": "Dark smudge on pale **belly**",
+      "nl": "Donkere vlek op de lichte **buik**"
+    }
+  ]
+}

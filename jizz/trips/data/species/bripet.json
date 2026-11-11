@@ -1,0 +1,22 @@
+{
+  "code": "bripet",
+  "name": {
+    "en": "European Storm-Petrel",
+    "nl": "Stormvogeltje"
+  },
+  "latin": "Hydrobates pelagicus",
+  "look_for": [
+    {
+      "en": "Tiny, sooty-black seabird, **rump** white",
+      "nl": "Klein, roetzwart zeevogeltje met witte **stuit**"
+    },
+    {
+      "en": "White stripe under the **wing**",
+      "nl": "Witte streep onder de **vleugel**"
+    },
+    {
+      "en": "Fluttering, bat-like flight low over waves",
+      "nl": "Fladderende, vleermuisachtige vlucht vlak boven de golven"
+    }
+  ]
+}

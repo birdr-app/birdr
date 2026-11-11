@@ -1,0 +1,49 @@
+{
+  "country": "ES-CANARIES",
+  "intro": {
+    "en": "The Canary Islands lie in the Atlantic off the Moroccan coast, and their birds are a mix of their own endemics and African and seabird species. Laurel forest on Tenerife and La Palma, pine forest on Gran Canaria and the dry plains of Fuerteventura each have their own birds. This pack covers 21 species, on top of the Spain trip.",
+    "nl": "De Canarische Eilanden liggen in de Atlantische Oceaan voor de kust van Marokko, en hun vogels zijn een mengeling van eigen endemen en Afrikaanse soorten en zeevogels. Laurierbos op Tenerife en La Palma, dennenbos op Gran Canaria en de droge vlakten van Fuerteventura hebben elk hun eigen vogels. Dit pakket omvat 21 soorten, bovenop de reis naar Spanje."
+  },
+  "units": {
+    "canary-finches-and-pigeons": {
+      "title": {
+        "en": "Blue chaffinches, canary and pigeons",
+        "nl": "Blauwe vinken, kanarie en duiven"
+      },
+      "intro": {
+        "en": "Six endemic and local birds of the island forests. The two blue chaffinches live in pine forest on different islands, and the two pigeons in laurel forest.",
+        "nl": "Zes endemische en lokale vogels van de eilandbossen. De twee blauwe vinken leven in dennenbos op verschillende eilanden, de twee duiven in laurierbos."
+      }
+    },
+    "canary-songbirds": {
+      "title": {
+        "en": "Island songbirds",
+        "nl": "Zangvogels van de eilanden"
+      },
+      "intro": {
+        "en": "Four small birds you find in woods, gardens and on rocky open ground. Several are island forms of birds known from the mainland, so song and range help.",
+        "nl": "Vier kleine vogels van bossen, tuinen en rotsachtig open land. Meerdere zijn eilandvormen van vogels van het vasteland, dus zang en verspreiding helpen."
+      }
+    },
+    "canary-dry-country": {
+      "title": {
+        "en": "Dry country and towns",
+        "nl": "Droog land en dorpen"
+      },
+      "intro": {
+        "en": "Five birds of the dry plains, towns and coasts, several with an African origin. Fuerteventura and Lanzarote are the best islands for the houbara.",
+        "nl": "Vijf vogels van droge vlakten, dorpen en kusten, meerdere met een Afrikaanse herkomst. Fuerteventura en Lanzarote zijn de beste eilanden voor de kraagtrap."
+      }
+    },
+    "canary-seabirds": {
+      "title": {
+        "en": "Shearwaters, storm-petrel, tropicbird",
+        "nl": "Zeevogels van veerboot en kust"
+      },
+      "intro": {
+        "en": "Six seabirds that you see from ferries, headlands and boat trips. Look at the size, the wing shape and how they fly over the waves.",
+        "nl": "Zes zeevogels die je ziet vanaf veerboten, kapen en boottochten. Let op de grootte, de vleugelvorm en hoe ze over de golven vliegen."
+      }
+    }
+  }
+}

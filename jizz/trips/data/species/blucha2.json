@@ -1,0 +1,22 @@
+{
+  "code": "blucha2",
+  "name": {
+    "en": "Tenerife Blue Chaffinch",
+    "nl": "Teneriefse blauwe vink"
+  },
+  "latin": "Fringilla teydea",
+  "look_for": [
+    {
+      "en": "Male deep blue with grey **bill**",
+      "nl": "Man diepblauw met grijze **snavel**"
+    },
+    {
+      "en": "Female dull grey-brown, weak **wing** bars",
+      "nl": "Vrouw dof grijsbruin, zwakke **vleugelbanden**"
+    },
+    {
+      "en": "In pine forest, thick bill and croaky call",
+      "nl": "Dennenbos, dikke snavel en krakerige roep"
+    }
+  ]
+}

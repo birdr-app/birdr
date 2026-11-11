@@ -1,0 +1,249 @@
+{
+  "country": "ES-CANARIES",
+  "groups": [
+    {
+      "slug": "grouse-quail-and-allies",
+      "name": {
+        "en": "Grouse, Quail, and Allies",
+        "nl": "Hoenders, Kwartels en aanverwanten"
+      },
+      "species": [
+        "barpar2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "pigeons-and-doves",
+      "name": {
+        "en": "Pigeons and Doves",
+        "nl": "Duiven"
+      },
+      "species": [
+        "bolpig1",
+        "laupig1",
+        "laudov1"
+      ],
+      "endemics": [
+        "bolpig1",
+        "laupig1"
+      ]
+    },
+    {
+      "slug": "bustards",
+      "name": {
+        "en": "Bustards",
+        "nl": "Trappen"
+      },
+      "species": [
+        "houbus1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "swifts",
+      "name": {
+        "en": "Swifts",
+        "nl": "Gierzwaluwen"
+      },
+      "species": [
+        "plaswi1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "shorebirds",
+      "name": {
+        "en": "Shorebirds",
+        "nl": "Steltlopers"
+      },
+      "species": [
+        "rudtur"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tropicbirds",
+      "name": {
+        "en": "Tropicbirds",
+        "nl": "Keerkringvogels"
+      },
+      "species": [
+        "rebtro"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "storm-petrels",
+      "name": {
+        "en": "Storm-Petrels",
+        "nl": "Stormvogeltjes"
+      },
+      "species": [
+        "bripet"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "petrels-shearwaters-and-diving-petrels",
+      "name": {
+        "en": "Petrels, Shearwaters, and Diving-Petrels",
+        "nl": "Stormvogels en Pijlstormvogels"
+      },
+      "species": [
+        "greshe",
+        "sooshe",
+        "manshe",
+        "corshe"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tits-chickadees-and-titmice",
+      "name": {
+        "en": "Tits, Chickadees, and Titmice",
+        "nl": "Mezen"
+      },
+      "species": [
+        "afbtit2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "leaf-warblers",
+      "name": {
+        "en": "Leaf Warblers",
+        "nl": "Boszangers"
+      },
+      "species": [
+        "caichi1"
+      ],
+      "endemics": [
+        "caichi1"
+      ]
+    },
+    {
+      "slug": "old-world-flycatchers",
+      "name": {
+        "en": "Old World Flycatchers",
+        "nl": "Vliegenvangers van de Oude Wereld"
+      },
+      "species": [
+        "caisto1"
+      ],
+      "endemics": [
+        "caisto1"
+      ]
+    },
+    {
+      "slug": "wagtails-and-pipits",
+      "name": {
+        "en": "Wagtails and Pipits",
+        "nl": "Kwikstaarten en Piepers"
+      },
+      "species": [
+        "berpip1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "finches-euphonias-and-allies",
+      "name": {
+        "en": "Finches, Euphonias, and Allies",
+        "nl": "Vinken, Euphonia's en aanverwanten"
+      },
+      "species": [
+        "blucha3",
+        "caicha1",
+        "blucha2",
+        "comcan"
+      ],
+      "endemics": [
+        "blucha3",
+        "blucha2"
+      ]
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "canary-finches-and-pigeons",
+      "title": {
+        "en": "canary-finches-and-pigeons",
+        "nl": "canary-finches-and-pigeons"
+      },
+      "groups": [
+        "finches-euphonias-and-allies",
+        "pigeons-and-doves"
+      ],
+      "species": [
+        "blucha2",
+        "blucha3",
+        "caicha1",
+        "comcan",
+        "bolpig1",
+        "laupig1"
+      ]
+    },
+    {
+      "slug": "canary-songbirds",
+      "title": {
+        "en": "canary-songbirds",
+        "nl": "canary-songbirds"
+      },
+      "groups": [
+        "leaf-warblers",
+        "old-world-flycatchers",
+        "wagtails-and-pipits",
+        "tits-chickadees-and-titmice"
+      ],
+      "species": [
+        "caichi1",
+        "caisto1",
+        "berpip1",
+        "afbtit2"
+      ]
+    },
+    {
+      "slug": "canary-dry-country",
+      "title": {
+        "en": "canary-dry-country",
+        "nl": "canary-dry-country"
+      },
+      "groups": [
+        "bustards",
+        "grouse-quail-and-allies",
+        "pigeons-and-doves",
+        "swifts",
+        "shorebirds"
+      ],
+      "species": [
+        "houbus1",
+        "barpar2",
+        "laudov1",
+        "plaswi1",
+        "rudtur"
+      ]
+    },
+    {
+      "slug": "canary-seabirds",
+      "title": {
+        "en": "canary-seabirds",
+        "nl": "canary-seabirds"
+      },
+      "groups": [
+        "petrels-shearwaters-and-diving-petrels",
+        "storm-petrels",
+        "tropicbirds"
+      ],
+      "species": [
+        "corshe",
+        "greshe",
+        "manshe",
+        "sooshe",
+        "bripet",
+        "rebtro"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

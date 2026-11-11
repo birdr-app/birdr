@@ -1,0 +1,22 @@
+{
+  "code": "caicha1",
+  "name": {
+    "en": "Canary Islands Chaffinch",
+    "nl": "Canarische vink"
+  },
+  "latin": "Fringilla canariensis",
+  "look_for": [
+    {
+      "en": "Male blue-grey **back**, pink face and breast",
+      "nl": "Man met blauwgrijze **rug** en roze kop en borst"
+    },
+    {
+      "en": "White **belly** and undertail",
+      "nl": "Witte **buik** en onderstaartdekveren"
+    },
+    {
+      "en": "Duller brown female, like a chaffinch",
+      "nl": "Vrouw dof bruin, zoals een gewone vink"
+    }
+  ]
+}

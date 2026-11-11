@@ -1,0 +1,22 @@
+{
+  "code": "manshe",
+  "name": {
+    "en": "Manx Shearwater",
+    "nl": "Noordse pijlstormvogel"
+  },
+  "latin": "Puffinus puffinus",
+  "look_for": [
+    {
+      "en": "Black above, clean white below",
+      "nl": "Zwart boven, schoon wit onder"
+    },
+    {
+      "en": "Stiff **wings**, few beats, long glides",
+      "nl": "Stijve **vleugels**, weinig slagen, lange glijvluchten"
+    },
+    {
+      "en": "Skims the waves, **wings** tilting side to side",
+      "nl": "Scheert over de golven en wiegt van zij naar zij"
+    }
+  ]
+}

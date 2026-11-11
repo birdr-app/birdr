@@ -1,0 +1,22 @@
+{
+  "code": "rebtro",
+  "name": {
+    "en": "Red-billed Tropicbird",
+    "nl": "Roodsnavelkeerkringvogel"
+  },
+  "latin": "Phaethon aethereus",
+  "look_for": [
+    {
+      "en": "White seabird with very long **tail** streamers",
+      "nl": "Witte zeevogel met zeer lange **staartpennen**"
+    },
+    {
+      "en": "Red **bill**, black eye-stripe, barred back",
+      "nl": "Rode **snavel**, zwarte oogstreep, gebandeerde rug"
+    },
+    {
+      "en": "Fast, direct flight along sea cliffs",
+      "nl": "Snelle, rechte vlucht langs zeekliffen"
+    }
+  ]
+}

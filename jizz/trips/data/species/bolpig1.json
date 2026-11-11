@@ -1,0 +1,22 @@
+{
+  "code": "bolpig1",
+  "name": {
+    "en": "Bolle's Pigeon",
+    "nl": "Bolles laurierduif"
+  },
+  "latin": "Columba bollii",
+  "look_for": [
+    {
+      "en": "Dark grey pigeon, **bill** red at the tip",
+      "nl": "Donkergrijze duif met rode **snavel**, vooral aan de punt"
+    },
+    {
+      "en": "Dark **tail** with a pale grey band",
+      "nl": "Donkere **staart** met een bleekgrijze band"
+    },
+    {
+      "en": "Metallic green-blue **neck**, pinkish breast",
+      "nl": "Metaalgroene tot blauwige **hals**, roze borst"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "laupig1",
+  "name": {
+    "en": "Laurel Pigeon",
+    "nl": "Laurierduif"
+  },
+  "latin": "Columba junoniae",
+  "look_for": [
+    {
+      "en": "Browner than Bolle's Pigeon, **bill** pink, white tip",
+      "nl": "Bruiner dan Bolles laurierduif, roze **snavel** met witte punt"
+    },
+    {
+      "en": "Whitish band right at the **tail** tip",
+      "nl": "Witachtige band helemaal aan het eind van de **staart**"
+    },
+    {
+      "en": "Green gloss on **nape**, reddish breast",
+      "nl": "Groene glans op de **nek**, roodachtige borst"
+    }
+  ]
+}
