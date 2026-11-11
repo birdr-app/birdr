@@ -1,0 +1,22 @@
+{
+  "code": "plawan1",
+  "name": {
+    "en": "Plains-wanderer",
+    "nl": "Trapvechtkwartel"
+  },
+  "latin": "Pedionomus torquatus",
+  "look_for": [
+    {
+      "en": "Quail-like, upright, long pale legs",
+      "nl": "Kwartelachtig, rechtop, lange bleke poten"
+    },
+    {
+      "en": "Female has a black-spotted **collar**, bigger than male",
+      "nl": "Vrouw heeft een zwart gevlekte **kraag**, groter dan man"
+    },
+    {
+      "en": "Freezes or crouches in grassland, rarely flies",
+      "nl": "Blijft stokstijf of ducht weg in grasland, vliegt zelden"
+    }
+  ]
+}

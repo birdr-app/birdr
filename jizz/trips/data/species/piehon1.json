@@ -1,0 +1,22 @@
+{
+  "code": "piehon1",
+  "name": {
+    "en": "Pied Honeyeater",
+    "nl": "Eksterhoningeter"
+  },
+  "latin": "Certhionyx variegatus",
+  "look_for": [
+    {
+      "en": "Male black above, white below, white tail corners",
+      "nl": "Mannetje zwart boven, wit onder, witte staarthoeken"
+    },
+    {
+      "en": "Female brown, streaked, pale below",
+      "nl": "Vrouwtje bruin, gestreept, licht onder"
+    },
+    {
+      "en": "Nomadic, follows flowering desert shrubs",
+      "nl": "Nomadisch, volgt bloeiende woestijnstruiken"
+    }
+  ]
+}

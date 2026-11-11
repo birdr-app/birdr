@@ -1,0 +1,22 @@
+{
+  "code": "rosrob1",
+  "name": {
+    "en": "Rose Robin",
+    "nl": "Grijs-roze vliegenvanger"
+  },
+  "latin": "Petroica rosea",
+  "look_for": [
+    {
+      "en": "Tiny robin with a rosy-pink **breast**",
+      "nl": "Klein roodborstje met een roze **borst**"
+    },
+    {
+      "en": "Male dark grey with a small white **forehead** spot",
+      "nl": "Man donkergrijs met een kleine witte **voorhoofdvlek**"
+    },
+    {
+      "en": "Female brown with a faint pink wash",
+      "nl": "Vrouw bruin met een zweem roze"
+    }
+  ]
+}

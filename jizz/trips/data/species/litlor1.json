@@ -1,0 +1,22 @@
+{
+  "code": "litlor1",
+  "name": {
+    "en": "Little Lorikeet",
+    "nl": "Dwerglori"
+  },
+  "latin": "Psitteuteles pusillus",
+  "look_for": [
+    {
+      "en": "Tiny, green **lorikeet**, short blunt tail",
+      "nl": "Piepkleine, groene **lori** met korte, stompe staart"
+    },
+    {
+      "en": "Red **face**, green head and **back**",
+      "nl": "Rood **gezicht**, groene kop en **rug**"
+    },
+    {
+      "en": "Fast, high flight, calls in blossoming gums",
+      "nl": "Snelle, hoge vlucht, roept in bloeiende eucalyptussen"
+    }
+  ]
+}

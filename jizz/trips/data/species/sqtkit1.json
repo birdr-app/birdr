@@ -1,0 +1,22 @@
+{
+  "code": "sqtkit1",
+  "name": {
+    "en": "Square-tailed Kite",
+    "nl": "Kortstaartwouw"
+  },
+  "latin": "Lophoictinia isura",
+  "look_for": [
+    {
+      "en": "Slim, long-winged raptor, pale streaked **head**",
+      "nl": "Slanke roofvogel met lange vleugels, lichte gestreepte **kop**"
+    },
+    {
+      "en": "Dark **flight feathers**, rusty streaked **underparts**",
+      "nl": "Donkere **slagpennen**, roestkleurig gestreepte **onderkant**"
+    },
+    {
+      "en": "Glides low, drops into trees to grab prey",
+      "nl": "Zweeft laag en duikt in bomen om prooi te grijpen"
+    }
+  ]
+}

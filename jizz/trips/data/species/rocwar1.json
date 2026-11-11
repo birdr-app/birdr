@@ -1,0 +1,22 @@
+{
+  "code": "rocwar1",
+  "name": {
+    "en": "Rockwarbler",
+    "nl": "Rotsstruiksluiper"
+  },
+  "latin": "Origma solitaria",
+  "look_for": [
+    {
+      "en": "Small dark-brown bird on sandstone cliffs",
+      "nl": "Kleine donkerbruine vogel op zandsteenrotsen"
+    },
+    {
+      "en": "Rufous **rump**, pale throat",
+      "nl": "Roodbruine **stuit**, bleke keel"
+    },
+    {
+      "en": "Hops over rock faces and cave mouths",
+      "nl": "Hipt over rotswanden en grotopeningen"
+    }
+  ]
+}

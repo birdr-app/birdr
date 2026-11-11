@@ -1,0 +1,22 @@
+{
+  "code": "auspas1",
+  "name": {
+    "en": "Australian Painted-Snipe",
+    "nl": "Australische goudsnip"
+  },
+  "latin": "Rostratula australis",
+  "look_for": [
+    {
+      "en": "Short-billed, round-winged wader of wet marsh",
+      "nl": "Kortsnavelige wader met ronde vleugels in nat moeras"
+    },
+    {
+      "en": "Female: chestnut neck, white band at the **shoulder**",
+      "nl": "Vrouw: kastanje nek, witte band bij de **schouder**"
+    },
+    {
+      "en": "Male duller; creeps among low vegetation",
+      "nl": "Man doffer; sluipt tussen lage plantengroei"
+    }
+  ]
+}

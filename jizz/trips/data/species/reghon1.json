@@ -1,0 +1,22 @@
+{
+  "code": "reghon1",
+  "name": {
+    "en": "Regent Honeyeater",
+    "nl": "Geschubde lelhoningeter"
+  },
+  "latin": "Anthochaera phrygia",
+  "look_for": [
+    {
+      "en": "Black head and **breast** with scaly yellow-white edges",
+      "nl": "Zwarte kop en **borst** met geschubde geelwitte randen"
+    },
+    {
+      "en": "Warty, pale **eye patch** of bare skin",
+      "nl": "Wrattige, bleke **oogvlek** van kale huid"
+    },
+    {
+      "en": "Yellow **wing** patches show in slow flight",
+      "nl": "Gele **vleugelvlekken** zichtbaar in langzame vlucht"
+    }
+  ]
+}

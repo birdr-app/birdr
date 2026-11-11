@@ -1,0 +1,22 @@
+{
+  "code": "yethon3",
+  "name": {
+    "en": "Yellow-tufted Honeyeater",
+    "nl": "Geelpluimhoningeter"
+  },
+  "latin": "Lichenostomus melanops",
+  "look_for": [
+    {
+      "en": "Yellow head with a black **mask**",
+      "nl": "Gele kop met een zwart **masker**"
+    },
+    {
+      "en": "Bright yellow **ear tuft**",
+      "nl": "Heldere gele **oorpluim**"
+    },
+    {
+      "en": "Olive-grey back, bold and noisy in woodland",
+      "nl": "Olijfgrijze rug, brutaal en luidruchtig in bos"
+    }
+  ]
+}

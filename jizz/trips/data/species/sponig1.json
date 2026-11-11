@@ -1,0 +1,22 @@
+{
+  "code": "sponig1",
+  "name": {
+    "en": "Spotted Nightjar",
+    "nl": "Argusnachtzwaluw"
+  },
+  "latin": "Eurostopodus argus",
+  "look_for": [
+    {
+      "en": "Large, long-winged nightjar, mottled grey-brown",
+      "nl": "Grote, langvleugelige nachtzwaluw, grijsbruin gevlekt"
+    },
+    {
+      "en": "Big buff spots on the **wings** and back",
+      "nl": "Grote lichtbruine vlekken op de **vleugels** en rug"
+    },
+    {
+      "en": "Sleeps by day on bare, stony ground",
+      "nl": "Slaapt overdag op kale, stenige grond"
+    }
+  ]
+}

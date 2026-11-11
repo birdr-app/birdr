@@ -1,0 +1,209 @@
+{
+  "country": "AU-SOUTHEAST",
+  "intro": {
+    "en": "This pack is for trips beyond the cities of south-eastern Australia: the mallee and heath of Victoria and South Australia (Little Desert, Hattah-Kulkyne, Wyperfeld, the Murray River, Kangaroo Island, the Great Ocean Road and Mount Lofty) and the dry woodland and plains of New South Wales (Capertee Valley, Pilliga). Its 117 birds come on top of the Australia trip and include the Malleefowl, the emuwrens, the bristlebirds and the Regent Honeyeater.",
+    "nl": "Dit pakket is voor reizen buiten de steden van zuidoostelijk Australië: de mallee en heide van Victoria en Zuid-Australië (Little Desert, Hattah-Kulkyne, Wyperfeld, de Murray, Kangaroo Island, de Great Ocean Road en Mount Lofty) en het droge bos en de vlakten van Nieuw-Zuid-Wales (Capertee Valley, Pilliga). De 117 vogels komen bovenop de reis door Australië en omvatten de thermometervogel, de emoesluipers, de borstelvogels en de geschubde lelhoningeter."
+  },
+  "units": {
+    "mallee-specials": {
+      "title": {
+        "en": "Malleefowl and the emuwrens",
+        "nl": "Thermometervogel en emoesluipers"
+      },
+      "intro": {
+        "en": "Three of the hardest birds of the south-east live in mallee and heath. The Malleefowl walks the floor of the mallee at Hattah-Kulkyne and Wyperfeld and builds a huge nesting mound. The two emuwrens are tiny, long-tailed birds that hide in spinifex and heath, and the whipbird sings from dense mallee scrub.",
+        "nl": "Drie van de moeilijkste vogels van het zuidoosten leven in mallee en heide. De thermometervogel loopt over de bodem van de mallee bij Hattah-Kulkyne en Wyperfeld en bouwt een enorme nestheuvel. De twee emoesluipers zijn piepkleine vogels met een lange staart die zich verstoppen in spinifex en heide, en de zweepvogel zingt vanuit dicht mallee-struikgewas."
+      }
+    },
+    "heath-skulkers": {
+      "title": {
+        "en": "Skulkers of heath and forest floor",
+        "nl": "Verborgen vogels van heide en bosbodem"
+      },
+      "intro": {
+        "en": "These birds stay low and out of sight. The bristlebirds and the Ground Parrot live in coastal heath, at places like the Otways and Beachport; the Pilotbird and Spotted Scrubwren skulk in damp undergrowth, and the Rockwarbler hops on sandstone around Sydney. Listen first: the song is how you find them.",
+        "nl": "Deze vogels blijven laag en uit het zicht. De borstelvogels en de grondparkiet leven in kustheide, bij plaatsen als de Otways en Beachport; de loodsvogel en de gespikkelde struiksluiper sluipen door vochtig kreupelhout, en de rotsstruiksluiper hipt over zandsteen rond Sydney. Luister eerst: het lied is hoe je ze vindt."
+      }
+    },
+    "quail-and-plains": {
+      "title": {
+        "en": "Quail, buttonquail and the plains",
+        "nl": "Kwartels, vechtkwartels en de vlakte"
+      },
+      "intro": {
+        "en": "Small ground birds of grassland and low scrub that you mostly flush underfoot. The two quail and the buttonquails run and hide. The Plains-wanderer lives on the open native grasslands of northern Victoria and the NSW Riverina, and is usually found on a night drive with a guide.",
+        "nl": "Kleine grondvogels van grasland en laag struikgewas die je meestal onder je voeten opjaagt. De twee kwartels en de vechtkwartels rennen weg en verstoppen zich. De trapvechtkwartel leeft op het open, oorspronkelijke grasland van noordelijk Victoria en de Riverina in Nieuw-Zuid-Wales en vind je meestal tijdens een nachtelijke rit met een gids."
+      }
+    },
+    "salt-lakes": {
+      "title": {
+        "en": "Salt lakes and wet paddocks",
+        "nl": "Zoutmeren en natte weilanden"
+      },
+      "intro": {
+        "en": "Four birds of open, shallow water and damp ground. The Banded Stilt crowds on inland salt lakes when they fill, and the Banded Lapwing walks dry paddocks. The painted-snipe and Latham's Snipe hide in reeds and wet grass at the edge of swamps.",
+        "nl": "Vier vogels van open, ondiep water en vochtige grond. De bandsteltloper verzamelt zich op zoutmeren in het binnenland als die vollopen, en de bandkievit loopt over droge weilanden. De Australische goudsnip en de Latham's snip verbergen zich in riet en nat gras aan de rand van moerassen."
+      }
+    },
+    "waders-1": {
+      "title": {
+        "en": "Waders on the south-east coast",
+        "nl": "Waadvogels aan de zuidoostkust"
+      },
+      "intro": {
+        "en": "Many waders arrive from Siberia and Alaska in spring and stay until autumn. Look for them on the mudflats of Western Port, Werribee and the Coorong at high tide, when they gather on the shore to roost. These five are quiet, often distant birds; learn the bill shapes and leg colours.",
+        "nl": "Veel waadvogels komen in het voorjaar uit Siberië en Alaska en blijven tot de herfst. Zoek ze op de slikken van Western Port, Werribee en de Coorong bij hoogwater, als ze zich op de oever verzamelen om te rusten. Deze vijf zijn rustige, vaak ver weg zittende vogels; leer de vorm van de snavel en de kleur van de poten."
+      }
+    },
+    "waders-2": {
+      "title": {
+        "en": "Knots, sanderling and turnstone",
+        "nl": "Knutten, drieteenstrandloper en steenloper"
+      },
+      "intro": {
+        "en": "Stocky shorebirds of sandy beaches, estuaries and rocky shores. The knots feed in dense flocks and are most common from September to March. The Double-banded Plover is the odd one out: it breeds in New Zealand and spends the southern winter on south-east coasts.",
+        "nl": "Gedrongen kustvogels van zandstranden, estuaria en rotskusten. De knutten foerageren in dichte groepen en zijn het talrijkst van september tot maart. De tweebandplevier is de uitzondering: hij broedt in Nieuw-Zeeland en brengt de zuidelijke winter door aan de kusten van het zuidoosten."
+      }
+    },
+    "secret-wetland": {
+      "title": {
+        "en": "Crakes, rails, bittern and Freckled Duck",
+        "nl": "Ral, kwartelkoningen, roerdomp en stippeleend"
+      },
+      "intro": {
+        "en": "Secretive wetland birds of reedbeds and swamp edges. The crakes and the rail slip in and out of cover and are often only heard; the Australasian Bittern booms from the reeds in spring. The Freckled Duck rests on timber at the edge of swamps, often among other ducks.",
+        "nl": "Schuwe vogels van rietvelden en moerasranden. De kwartelkoningen en de ral glippen in en uit de dekking en worden vaak alleen gehoord; de Australische roerdomp boomt in het voorjaar vanuit het riet. De stippeleend rust op hout aan de rand van moerassen, vaak tussen andere eenden."
+      }
+    },
+    "terns-shearwaters": {
+      "title": {
+        "en": "Terns, gull and shearwaters",
+        "nl": "Sterns, meeuw en pijlstormvogels"
+      },
+      "intro": {
+        "en": "Birds of the coast, harbours and salt lakes. The Australian Tern and Whiskered Tern also fly over inland wetlands. The Fairy Tern nests on quiet beaches, and the Kelp Gull is the large dark-backed gull of rocky shores. The shearwaters belong to the open sea and are seen from headlands or ferries.",
+        "nl": "Vogels van de kust, havens en zoutmeren. De Australische reuzenstern en de witwangstern vliegen ook over wetlands in het binnenland. De Australische dwergstern nestelt op rustige stranden, en de kelpmeeuw is de grote meeuw met donkere rug van rotskusten. De pijlstormvogels horen bij de open zee en zie je vanaf kapen of veerboten."
+      }
+    },
+    "raptors-owls": {
+      "title": {
+        "en": "Raptors, falcon and owls",
+        "nl": "Roofvogels, valk en uilen"
+      },
+      "intro": {
+        "en": "Hunters of woodland and open country. The Square-tailed Kite and Grey Goshawk hunt in forest, the Spotted Harrier quarters grassland, and the Black Falcon is fast over inland plains. The Barking Owl and the Australian Masked-Owl are night birds; learn their calls, then search for them at dusk.",
+        "nl": "Jagers van bos en open land. De vierkantstaartwouw en de grijze havik jagen in het bos, de gevlekte kiekendief zoekt grasland af, en de zwarte valk is snel boven de binnenlandse vlakten. De blafuil en de Australische maskeruil zijn nachtvogels; leer hun roep en zoek ze dan in de schemering."
+      }
+    },
+    "cuckoos-night": {
+      "title": {
+        "en": "Cuckoos, nightjar and needletail",
+        "nl": "Koekoeken, nachtzwaluw en gierzwaluw"
+      },
+      "intro": {
+        "en": "Two cuckoos that arrive in spring, a nightjar of mallee and dry woodland, a swift that visits for the summer and a pigeon of heath and scrub. Most are easiest by voice, at dawn, dusk or after dark.",
+        "nl": "Twee koekoeken die in het voorjaar aankomen, een nachtzwaluw van mallee en droog bos, een gierzwaluw die de zomer komt doorbrengen en een duif van heide en struikgewas. De meeste vind je het makkelijkst op de stem, bij zonsopgang, in de schemering of na donker."
+      }
+    },
+    "parrots": {
+      "title": {
+        "en": "Parrots of mallee and woodland",
+        "nl": "Papegaaien van mallee en bos"
+      },
+      "intro": {
+        "en": "Parrots that feed on seeds, mostly on the ground, in quiet pairs and flocks. The Regent Parrot lives along the Murray River; the Mulga and Bourke's Parrots are birds of dry scrub and woodland. The Orange-bellied Parrot, a critically endangered migrant, winters on the coast of Victoria and South Australia.",
+        "nl": "Papegaaien die zaden eten, vooral op de grond, in rustige paren en groepen. De prinsparkiet leeft langs de Murray; de roodrugparkiet en de Bourke's parkiet zijn vogels van droog struikgewas en bos. De oranjebuikparkiet, een ernstig bedreigde trekvogel, overwintert aan de kust van Victoria en Zuid-Australië."
+      }
+    },
+    "blossom-nomads": {
+      "title": {
+        "en": "Blossom nomads",
+        "nl": "Nomaden van de bloesem"
+      },
+      "intro": {
+        "en": "These birds follow the flowering of eucalypts and wattles, so one year they are here and the next they are gone. The Regent Honeyeater is critically endangered and is best sought at Capertee Valley and a few other known sites. The Little Lorikeet and Purple-crowned Lorikeet are small and green, and easiest by their calls.",
+        "nl": "Deze vogels volgen de bloei van eucalyptussen en acacia's, zodat ze het ene jaar hier zijn en het volgende jaar weg. De geschubde lelhoningeter is ernstig bedreigd en het beste te zoeken in de Capertee Valley en op enkele andere bekende plekken. De dwerglori en de paarskruinlori zijn klein en groen en het makkelijkst te herkennen aan hun roep."
+      }
+    },
+    "mallee-honeyeaters": {
+      "title": {
+        "en": "Mallee honeyeaters",
+        "nl": "Honingeters van de mallee"
+      },
+      "intro": {
+        "en": "Honeyeaters of the mallee, the multi-stemmed eucalypt scrub of the Murray region and Eyre Peninsula. They flit through the foliage and give soft, rolling calls. The Black-eared Miner is rare and found only at a few mallee reserves.",
+        "nl": "Honingeters van de mallee, het eucalyptusstruikgewas met meerdere stammen in de Murrayregio en op het Eyre-schiereiland. Ze fladderen door het gebladerte en roepen zacht en rollend. De zwartoorhoningeter is zeldzaam en komt alleen in enkele mallee-reservaten voor."
+      }
+    },
+    "woodland-honeyeaters": {
+      "title": {
+        "en": "Woodland and heath honeyeaters",
+        "nl": "Honingeters van bos en heide"
+      },
+      "intro": {
+        "en": "Honeyeaters of box-ironbark woodland, dry forest and coastal heath. Most are easy to find in flowering trees at Chiltern, the Grampians and the Great Ocean Road heath. Look at the face and the colour of the ear patch first.",
+        "nl": "Honingeters van box-ijzerbast-bos, droog bos en kustheide. De meeste vind je makkelijk in bloeiende bomen bij Chiltern, de Grampians en de heide langs de Great Ocean Road. Kijk eerst naar het gezicht en de kleur van de oorvlek."
+      }
+    },
+    "heathwrens": {
+      "title": {
+        "en": "Heathwrens, fieldwrens and the Redthroat",
+        "nl": "Heidesluipers, veldzangers en de roodkeel"
+      },
+      "intro": {
+        "en": "Small brown birds of heath, mallee and dry woodland that stay near the ground and cock their tails. They are shy and are best found by their songs and by waiting at a quiet clearing. The Speckled Warbler walks open woodland in the Pilliga and Capertee Valley.",
+        "nl": "Kleine bruine vogels van heide, mallee en droog bos die dicht bij de grond blijven en hun staart omhoog houden. Ze zijn schuw en vind je het best op hun lied en door te wachten bij een rustige open plek. De pieperstruiksluiper loopt door open bos in de Pilliga en de Capertee Valley."
+      }
+    },
+    "thornbills": {
+      "title": {
+        "en": "Thornbills and the Southern Whiteface",
+        "nl": "Doornsnavels en de zuidelijke witgezicht"
+      },
+      "intro": {
+        "en": "Tiny, busy insect-eaters that move in small flocks through woodland, mallee and saltbush. Thornbills are hard to tell apart: look at the rump, the eye and the forehead. The Southern Whiteface perches on fence posts and low bushes.",
+        "nl": "Piepkleine, bedrijvige insecteneters die in kleine groepjes door bos, mallee en zoutkruid trekken. Doornsnavels zijn moeilijk uit elkaar te houden: kijk naar de stuit, het oog en het voorhoofd. De zuidelijke witgezicht zit op hekpalen en lage struiken."
+      }
+    },
+    "treecreepers-woodswallows": {
+      "title": {
+        "en": "Treecreepers, babbler and woodswallows",
+        "nl": "Boomkruipers, babbelaar en boszwaluwen"
+      },
+      "intro": {
+        "en": "Birds of open dry woodland. The treecreepers spiral up trunks, the babblers move in noisy groups on the ground, and the woodswallows hang in the sky on triangular wings and perch in tight rows. The triller and the currawong share the same woodland.",
+        "nl": "Vogels van open, droog bos. De boomkruipers klimmen in spiralen langs stammen, de babbelaars bewegen in luidruchtige groepen over de grond, en de boszwaluwen hangen met driehoekige vleugels in de lucht en zitten dicht naast elkaar op takken. De triller en de currawong leven in hetzelfde bos."
+      }
+    },
+    "woodland-robins": {
+      "title": {
+        "en": "Robins and flycatchers",
+        "nl": "Vliegenvangers en roodborstjes"
+      },
+      "intro": {
+        "en": "Small perching birds that sit on a low branch and drop to the ground for insects. The Rose Robin lives in damp forest; the Hooded Robin sits on fence posts in dry woodland. Satin and Leaden Flycatchers come in spring to breed, and the Southern Scrub-robin hops on the ground in mallee.",
+        "nl": "Kleine zangvogels die op een lage tak zitten en naar de grond duiken voor insecten. De grijs-roze vliegenvanger leeft in vochtig bos; de kapvliegenvanger zit op hekpalen in droog bos. Satijn- en blauwgrijze vliegenvangers komen in het voorjaar om te broeden, en de zuidelijke struikvliegenvanger hipt over de grond in de mallee."
+      }
+    },
+    "quail-thrushes": {
+      "title": {
+        "en": "Quail-thrushes, bellbird and whistlers",
+        "nl": "Kwartellijsters, klokvogel en fluiters"
+      },
+      "intro": {
+        "en": "Birds of dry scrub and mallee that are better heard than seen. The quail-thrushes run over leaf litter and freeze, the Crested Bellbird has a ringing call that seems to come from no direction, and the whistlers sing from mid-height.",
+        "nl": "Vogels van droog struikgewas en mallee die je beter hoort dan ziet. De kwartellijsters rennen over bladstrooisel en blijven stokstijf staan, de kuifklokvogel heeft een klinkende roep die uit geen enkele richting lijkt te komen, en de fluiters zingen op middelhoogte."
+      }
+    },
+    "firetails-chats": {
+      "title": {
+        "en": "Firetails, chats and songlarks",
+        "nl": "Vuurstaarten, chats en zangers van het veld"
+      },
+      "intro": {
+        "en": "Birds of open country, grassland and scrub. The firetails are small finches with red rumps. The chats are nomads of the inland, and the Crimson and Orange Chat appear after rain. The songlarks and the bushlark sing in flight over paddocks and plains in spring.",
+        "nl": "Vogels van open land, grasland en struikgewas. De vuurstaarten zijn kleine vinken met een rode stuit. De chats zijn nomaden van het binnenland, en de karmozijnchat en de oranjechat verschijnen na regen. De veldzangers en de leeuwerik zingen in het voorjaar in de vlucht boven weilanden en vlakten."
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "code": "spohar1",
+  "name": {
+    "en": "Spotted Harrier",
+    "nl": "Gevlekte kiekendief"
+  },
+  "latin": "Circus assimilis",
+  "look_for": [
+    {
+      "en": "Slender raptor with long wings and legs",
+      "nl": "Slanke roofvogel met lange vleugels en poten"
+    },
+    {
+      "en": "Grey above, chestnut below dotted with white",
+      "nl": "Grijs boven, kastanjebruin onder met witte stippen"
+    },
+    {
+      "en": "Glides low over grass, **wings** in a shallow V",
+      "nl": "Glijdt laag over gras met de **vleugels** in een ondiepe V"
+    }
+  ]
+}

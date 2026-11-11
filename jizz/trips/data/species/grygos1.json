@@ -1,0 +1,22 @@
+{
+  "code": "grygos1",
+  "name": {
+    "en": "Grey Goshawk",
+    "nl": "Grijze havik"
+  },
+  "latin": "Tachyspiza novaehollandiae",
+  "look_for": [
+    {
+      "en": "Small hawk, either pale grey or all white",
+      "nl": "Kleine havik, grijs of geheel wit"
+    },
+    {
+      "en": "Orange-yellow **cere**, **legs** and **eye** ring",
+      "nl": "Oranjegele **was**, **poten** en **oog**ring"
+    },
+    {
+      "en": "White form is common in Tasmania, short broad wings",
+      "nl": "De witte vorm is gewoon op Tasmanië, korte brede vleugels"
+    }
+  ]
+}

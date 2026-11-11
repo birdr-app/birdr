@@ -1,0 +1,22 @@
+{
+  "code": "turpar1",
+  "name": {
+    "en": "Turquoise Parrot",
+    "nl": "Turkooisparkiet"
+  },
+  "latin": "Neophema pulchella",
+  "look_for": [
+    {
+      "en": "Small, slim, green parrot with blue **face**",
+      "nl": "Kleine, slanke, groene papegaai met blauw **gezicht**"
+    },
+    {
+      "en": "Male has a red **shoulder** patch and orange belly",
+      "nl": "Man heeft rode **schouder** en oranje buik"
+    },
+    {
+      "en": "Feeds quietly on the ground in open woodland",
+      "nl": "Foerageert rustig op de grond in open bos"
+    }
+  ]
+}

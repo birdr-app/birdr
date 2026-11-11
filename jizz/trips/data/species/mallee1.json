@@ -1,0 +1,22 @@
+{
+  "code": "mallee1",
+  "name": {
+    "en": "Malleefowl",
+    "nl": "Thermometervogel"
+  },
+  "latin": "Leipoa ocellata",
+  "look_for": [
+    {
+      "en": "Large ground bird, grey, brown and white",
+      "nl": "Grote grondvogel, grijs, bruin en wit"
+    },
+    {
+      "en": "Black stripe down the **breast**, spotted **back**",
+      "nl": "Zwarte streep over de **borst**, gevlekte **rug**"
+    },
+    {
+      "en": "Builds a huge mound of sand and leaves",
+      "nl": "Bouwt een enorme heuvel van zand en bladeren"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "spocra2",
+  "name": {
+    "en": "Spotless Crake",
+    "nl": "Pacifisch porseleinhoen"
+  },
+  "latin": "Zapornia tabuensis",
+  "look_for": [
+    {
+      "en": "Dark, uniform slate-black crake",
+      "nl": "Donker, egaal leiblauw-zwart waterhoentje"
+    },
+    {
+      "en": "Red **legs**, red **eye** and a dark bill",
+      "nl": "Rode **poten**, rood **oog** en een donkere snavel"
+    },
+    {
+      "en": "Creeps along reed edges at dawn and dusk",
+      "nl": "Sluipt langs rietranden in de schemering"
+    }
+  ]
+}

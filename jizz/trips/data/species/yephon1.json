@@ -1,0 +1,22 @@
+{
+  "code": "yephon1",
+  "name": {
+    "en": "Yellow-plumed Honeyeater",
+    "nl": "Malleehoningeter"
+  },
+  "latin": "Ptilotula ornata",
+  "look_for": [
+    {
+      "en": "Small honeyeater with a yellow **plume** on the **neck**",
+      "nl": "Kleine honingeter met een gele **pluim** op de **nek**"
+    },
+    {
+      "en": "Olive-grey above, yellow **face** stripe",
+      "nl": "Olijfgrijs boven, gele **gezichts**streep"
+    },
+    {
+      "en": "Flits in mallee and woodland, often in groups",
+      "nl": "Flitst in mallee en bos, vaak in groepen"
+    }
+  ]
+}

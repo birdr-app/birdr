@@ -1,0 +1,22 @@
+{
+  "code": "spewar3",
+  "name": {
+    "en": "Speckled Warbler",
+    "nl": "Pieperstruiksluiper"
+  },
+  "latin": "Pyrrholaemus sagittatus",
+  "look_for": [
+    {
+      "en": "Small brown bird, finely streaked **breast**",
+      "nl": "Kleine bruine vogel met fijn gestreepte **borst**"
+    },
+    {
+      "en": "White **eyebrow**, rufous **forehead** of male",
+      "nl": "Witte **wenkbrauw**, roestbruin **voorhoofd** van man"
+    },
+    {
+      "en": "Forages on the ground in dry woodland",
+      "nl": "Foerageert op de grond in droog bos"
+    }
+  ]
+}

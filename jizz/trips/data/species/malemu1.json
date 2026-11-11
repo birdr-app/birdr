@@ -1,0 +1,22 @@
+{
+  "code": "malemu1",
+  "name": {
+    "en": "Mallee Emuwren",
+    "nl": "Mallee-emoesluiper"
+  },
+  "latin": "Stipiturus mallee",
+  "look_for": [
+    {
+      "en": "Tiny and rounded, with a very long tail",
+      "nl": "Piepklein en rond, met een erg lange staart"
+    },
+    {
+      "en": "Male has a blue throat and rufous **crown**",
+      "nl": "Man heeft een blauwe keel en roestbruine **kruin**"
+    },
+    {
+      "en": "Hides in spinifex clumps, runs like a mouse",
+      "nl": "Verstopt zich in spinifex en rent als een muis"
+    }
+  ]
+}

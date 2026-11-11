@@ -1,0 +1,22 @@
+{
+  "code": "leafly2",
+  "name": {
+    "en": "Leaden Flycatcher",
+    "nl": "Zilvermonarch"
+  },
+  "latin": "Myiagra rubecula",
+  "look_for": [
+    {
+      "en": "Small blue-grey flycatcher with a white **belly**",
+      "nl": "Kleine blauwgrijze vliegenvanger met witte **buik**"
+    },
+    {
+      "en": "Male: blue-grey **back** and throat",
+      "nl": "Man: blauwgrijze **rug** en keel"
+    },
+    {
+      "en": "Perches in woodland edge",
+      "nl": "Zit aan bosrand"
+    }
+  ]
+}
