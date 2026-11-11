@@ -159,7 +159,6 @@
         "nl": "Reigers, Ibissen en aanverwanten"
       },
       "species": [
-        "blabit1",
         "pieher2",
         "integr2",
         "grbher2"
@@ -233,7 +232,6 @@
       "species": [
         "hoopar1",
         "varlor1",
-        "railor4",
         "railor7"
       ],
       "endemics": [
@@ -266,19 +264,6 @@
       ],
       "endemics": [
         "bkttre1"
-      ]
-    },
-    {
-      "slug": "fairywrens",
-      "name": {
-        "en": "Fairywrens",
-        "nl": "Elfjes"
-      },
-      "species": [
-        "whtgra1"
-      ],
-      "endemics": [
-        "whtgra1"
       ]
     },
     {
@@ -481,8 +466,7 @@
       },
       "species": [
         "lebfly3",
-        "nosrob1",
-        "manrob1"
+        "nosrob1"
       ],
       "endemics": [
         "nosrob1"
@@ -534,7 +518,6 @@
       },
       "species": [
         "picmun1",
-        "stafin1",
         "masfin1",
         "lotfin1",
         "yermun1",
@@ -542,7 +525,6 @@
       ],
       "endemics": [
         "picmun1",
-        "stafin1",
         "masfin1",
         "lotfin1",
         "yermun1"
@@ -656,8 +638,7 @@
       "species": [
         "pieher2",
         "integr2",
-        "grbher2",
-        "blabit1"
+        "grbher2"
       ]
     },
     {
@@ -764,7 +745,6 @@
       "species": [
         "hoopar1",
         "varlor1",
-        "railor4",
         "railor7"
       ]
     },
@@ -783,7 +763,6 @@
       "species": [
         "raipit1",
         "bkttre1",
-        "whtgra1",
         "sansht2"
       ]
     },
@@ -952,7 +931,6 @@
       "species": [
         "lebfly3",
         "nosrob1",
-        "manrob1",
         "litcro1",
         "ayweye3"
       ]
@@ -968,7 +946,6 @@
       ],
       "species": [
         "picmun1",
-        "stafin1",
         "masfin1",
         "lotfin1",
         "yermun1",

@@ -423,19 +423,6 @@
       ]
     },
     {
-      "slug": "whistlers-and-allies",
-      "name": {
-        "en": "Whistlers and Allies",
-        "nl": "Whistlers and Allies"
-      },
-      "species": [
-        "weswhi2"
-      ],
-      "endemics": [
-        "weswhi2"
-      ]
-    },
-    {
       "slug": "woodswallows",
       "name": {
         "en": "Woodswallows",
@@ -610,7 +597,6 @@
       ],
       "species": [
         "cresht2",
-        "weswhi2",
         "whwtri1"
       ]
     },

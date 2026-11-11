@@ -154,7 +154,6 @@
         "nl": "Reigers, Ibissen en aanverwanten"
       },
       "species": [
-        "blabit1",
         "pieher2",
         "grbher2"
       ],
@@ -215,8 +214,7 @@
         "recpar2",
         "pahros1",
         "gospar1",
-        "defpar1",
-        "railor4"
+        "defpar1"
       ],
       "endemics": [
         "pahros1",
@@ -463,14 +461,10 @@
       "species": [
         "yelfly4",
         "lebfly3",
-        "gyhrob2",
-        "manrob1",
-        "payrob1",
-        "whfrob1"
+        "gyhrob2"
       ],
       "endemics": [
-        "gyhrob2",
-        "payrob1"
+        "gyhrob2"
       ]
     },
     {
@@ -620,8 +614,7 @@
         "rencra1",
         "cherai1",
         "pieher2",
-        "grbher2",
-        "blabit1"
+        "grbher2"
       ]
     },
     {
@@ -729,8 +722,7 @@
         "gospar1",
         "eclpar4",
         "recpar2",
-        "defpar1",
-        "railor4"
+        "defpar1"
       ]
     },
     {
@@ -942,11 +934,8 @@
       ],
       "species": [
         "gyhrob2",
-        "payrob1",
         "yelfly4",
-        "lebfly3",
-        "manrob1",
-        "whfrob1"
+        "lebfly3"
       ]
     },
     {

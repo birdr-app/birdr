@@ -34,6 +34,37 @@ TRIPS: dict[str, dict] = {
     'MA': {'name': {'en': 'Morocco', 'nl': 'Marokko'}, 'languages': ('en', 'nl')},
     'DO': {'name': {'en': 'Dominican Republic', 'nl': 'Dominicaanse Republiek'}, 'languages': ('en', 'nl')},
     'NZ': {'name': {'en': 'New Zealand', 'nl': 'Nieuw-Zeeland'}, 'languages': ('en', 'nl')},
+    'AU': {'name': {'en': 'Australia', 'nl': 'Australië'}, 'languages': ('en', 'nl')},
+    'AU-WETTROPICS': {
+        'name': {'en': 'Wet Tropics and Cape York', 'nl': 'Wet Tropics en Kaap York'},
+        'languages': ('en', 'nl'),
+        'parent': 'AU',
+    },
+    'AU-TOPEND': {
+        'name': {'en': 'Top End and Kimberley', 'nl': 'Top End en Kimberley'},
+        'languages': ('en', 'nl'),
+        'parent': 'AU',
+    },
+    'AU-REDCENTRE': {
+        'name': {'en': 'Red Centre and outback', 'nl': 'Rode Centrum en outback'},
+        'languages': ('en', 'nl'),
+        'parent': 'AU',
+    },
+    'AU-SOUTHWEST': {
+        'name': {'en': 'South-west', 'nl': 'Zuidwest'},
+        'languages': ('en', 'nl'),
+        'parent': 'AU',
+    },
+    'AU-TASMANIA': {
+        'name': {'en': 'Tasmania', 'nl': 'Tasmanië'},
+        'languages': ('en', 'nl'),
+        'parent': 'AU',
+    },
+    'AU-SOUTHEAST': {
+        'name': {'en': 'South-east heath and mallee', 'nl': 'Zuidoost: heide en mallee'},
+        'languages': ('en', 'nl'),
+        'parent': 'AU',
+    },
     'CR-CARIBBEAN': {
         'name': {'en': 'Caribbean lowlands', 'nl': 'Caribisch laagland'},
         'languages': ('en', 'nl'),

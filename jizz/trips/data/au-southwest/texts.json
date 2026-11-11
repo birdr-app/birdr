@@ -1,8 +1,8 @@
 {
   "country": "AU-SOUTHWEST",
   "intro": {
-    "en": "This pack is for trips to south-west Western Australia: Perth and Rottnest, Dryandra woodland, the jarrah and karri forests, the Stirling Range, Albany and Esperance heath, and Kalbarri. Its 81 birds come on top of the Australia trip and include Baudin's Black-Cockatoo, the Noisy Scrub-bird, the Western Bristlebird and the Rock Parrot.",
-    "nl": "Dit pakket is voor reizen naar het zuidwesten van West-Australië: Perth en Rottnest, het bos van Dryandra, de jarrah- en karribossen, de Stirling Range, de heide bij Albany en Esperance, en Kalbarri. De 81 vogels komen bovenop de reis door Australië en zijn onder meer de Langsnavelraafkaketoe, de Grote doornkruiper, de Westelijke borstelvogel en de Rotsparkiet."
+    "en": "This pack is for trips to south-west Western Australia: Perth and Rottnest, Dryandra woodland, the jarrah and karri forests, the Stirling Range, Albany and Esperance heath, and Kalbarri. Its 79 birds come on top of the Australia trip and include Baudin's Black-Cockatoo, the Noisy Scrub-bird, the Western Bristlebird and the Rock Parrot.",
+    "nl": "Dit pakket is voor reizen naar het zuidwesten van West-Australië: Perth en Rottnest, het bos van Dryandra, de jarrah- en karribossen, de Stirling Range, de heide bij Albany en Esperance, en Kalbarri. De 79 vogels komen bovenop de reis door Australië en zijn onder meer de Langsnavelraafkaketoe, de Grote doornkruiper, de Westelijke borstelvogel en de Rotsparkiet."
   },
   "units": {
     "cockatoos-and-parrots": {
@@ -47,12 +47,12 @@
     },
     "whistlers-and-shrike-tit": {
       "title": {
-        "en": "Whistlers, shrike-tit and triller",
-        "nl": "Fluiters, harlekijndikkop en triller"
+        "en": "Shrike-tit and triller",
+        "nl": "Harlekijndikkop en triller"
       },
       "intro": {
-        "en": "Three songbirds of the tree canopy. The Western Whistler sings loudly and is easier to hear than to see; the male wears a black breast band. The Western Shrike-tit tears bark off branches with its heavy bill, and the White-winged Triller visits in summer and sings in the open woodland. Watch the males; females are plainer.",
-        "nl": "Drie zangvogels van het kronendak. De Westelijke Gouden Fluiter zingt luid en is gemakkelijker te horen dan te zien; het mannetje heeft een zwarte borstband. De Westelijke harlekijndikkop trekt met zijn zware snavel bast van takken, en de Grijsstuittriller komt in de zomer en zingt in open bos. Let op de mannetjes; de vrouwtjes zijn effener."
+        "en": "Two songbirds of the tree canopy. The Western Shrike-tit tears bark off branches with its heavy bill, and the White-winged Triller visits in summer and sings in the open woodland. Watch the males; females are plainer.",
+        "nl": "Twee zangvogels van het kronendak. De Westelijke harlekijndikkop trekt met zijn zware snavel bast van takken, en de Grijsstuittriller komt in de zomer en zingt in open bos. Let op de mannetjes; de vrouwtjes zijn effener."
       }
     },
     "woodswallows-and-crows": {

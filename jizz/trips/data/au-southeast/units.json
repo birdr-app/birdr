@@ -115,7 +115,6 @@
         "plawan1",
         "banlap1",
         "grsplo",
-        "dobplo1",
         "auspas1",
         "bktgod",
         "latsni1",
@@ -297,7 +296,6 @@
         "whfhon1",
         "yethon3",
         "pughon1",
-        "blemin1",
         "reghon1",
         "sinhon1",
         "yephon1",
@@ -320,7 +318,6 @@
         "whfhon1",
         "yethon3",
         "pughon1",
-        "blemin1",
         "reghon1",
         "sinhon1",
         "yephon1",
@@ -679,8 +676,7 @@
         "rudtur",
         "grekno",
         "redkno",
-        "sander",
-        "dobplo1"
+        "sander"
       ]
     },
     {
@@ -813,7 +809,6 @@
       ],
       "species": [
         "pughon1",
-        "blemin1",
         "yephon1",
         "gyfhon1",
         "sinhon1",

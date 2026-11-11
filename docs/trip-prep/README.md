@@ -10,7 +10,7 @@ content is drafted in `jizz/trips/data/lk/` with shared texts in `jizz/trips/dat
 Seychelles (`sc/`, 55 species) and Uganda (`ug/`, 202 species) followed; their species lists are
 hand-picked in `scope.json`, because eBird Status & Trends models too few of their birds for the
 frequency cut. Their photos are reviewed (see `sc/report.md` and `ug/report.md`) and both are
-published in `TRIPS`. Australia (`au/`, 294 species, hand-picked, packs to follow, see `regions.md`) has all its texts in English and Dutch and its photos ranked, but the photos are not reviewed, so it is not in `TRIPS` yet. A country folder that is not in `TRIPS` counts as a draft: the test suite checks
+published in `TRIPS`. Australia (`au/`, 293 species, hand-picked, plus six region packs, see `regions.md`) has all its texts in English and Dutch, its photos reviewed (see `au/` report in `au-photos.md`; a few look-alike picks wait for the owner's eye) and is published in `TRIPS` with the packs. A country folder that is not in `TRIPS` counts as a draft: the test suite checks
 its texts and units, but not its photos.
 The texts still need a human review.
 
