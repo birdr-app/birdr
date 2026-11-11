@@ -1,0 +1,22 @@
+{
+  "code": "boupar2",
+  "name": {
+    "en": "Bourke's Parrot",
+    "nl": "Bourkeparkiet"
+  },
+  "latin": "Neopsephotus bourkii",
+  "look_for": [
+    {
+      "en": "Slender, grey-brown parrot with a pink **belly**",
+      "nl": "Slanke, grijsbruine papegaai met een roze **buik**"
+    },
+    {
+      "en": "Male has a pale blue **forehead**",
+      "nl": "Het mannetje heeft een lichtblauw **voorhoofd**"
+    },
+    {
+      "en": "Feeds on the ground at dawn and dusk",
+      "nl": "Zoekt voedsel op de grond in de vroege ochtend en de avond"
+    }
+  ]
+}

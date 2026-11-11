@@ -1,0 +1,22 @@
+{
+  "code": "gyhhon1",
+  "name": {
+    "en": "Grey-headed Honeyeater",
+    "nl": "Grijskophoningeter"
+  },
+  "latin": "Ptilotula keartlandi",
+  "look_for": [
+    {
+      "en": "Small honeyeater with a grey **head**",
+      "nl": "Kleine honingeter met een grijze **kop**"
+    },
+    {
+      "en": "Small yellow ear tuft, olive-yellow **wings**",
+      "nl": "Klein geel oorpluimpje, olijfgele **vleugels**"
+    },
+    {
+      "en": "Likes rocky ranges, gorges and spinifex slopes",
+      "nl": "Houdt van rotsachtige bergen, kloven en spinifexhellingen"
+    }
+  ]
+}

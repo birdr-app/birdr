@@ -1,0 +1,22 @@
+{
+  "code": "dusgra1",
+  "name": {
+    "en": "Dusky Grasswren",
+    "nl": "Bruine grassluiper"
+  },
+  "latin": "Amytornis purnelli",
+  "look_for": [
+    {
+      "en": "Dark rusty-brown with fine white streaks",
+      "nl": "Donker roestbruin met fijne witte strepen"
+    },
+    {
+      "en": "Rocky ranges and gorges with spinifex",
+      "nl": "Rotsachtige bergketens en kloven met spinifex"
+    },
+    {
+      "en": "Runs over rock, **tail** held high",
+      "nl": "Rent over rotsen met de **staart** omhoog"
+    }
+  ]
+}

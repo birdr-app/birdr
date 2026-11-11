@@ -1,0 +1,22 @@
+{
+  "code": "crebel1",
+  "name": {
+    "en": "Crested Bellbird",
+    "nl": "Zwartkuiffluiter"
+  },
+  "latin": "Oreoica gutturalis",
+  "look_for": [
+    {
+      "en": "Male has a pointed grey crest and black **breast** band",
+      "nl": "Mannetje met spitse grijze kuif en zwarte **borstband**"
+    },
+    {
+      "en": "Female plainer, grey-brown, no band",
+      "nl": "Vrouwtje effener, grijsbruin, geen band"
+    },
+    {
+      "en": "Ringing, ventriloquial bell calls from mulga",
+      "nl": "Klinkende, buiksprekende klokroepen vanuit mulga"
+    }
+  ]
+}

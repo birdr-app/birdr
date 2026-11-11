@@ -1,0 +1,22 @@
+{
+  "code": "grygra1",
+  "name": {
+    "en": "Grey Grasswren",
+    "nl": "Harlekijngrassluiper"
+  },
+  "latin": "Amytornis barbatus",
+  "look_for": [
+    {
+      "en": "Large grasswren, grey-brown with white streaks",
+      "nl": "Grote grassluiper, grijsbruin met witte strepen"
+    },
+    {
+      "en": "Long, thin **tail** held cocked",
+      "nl": "Lange, dunne **staart** omhoog gehouden"
+    },
+    {
+      "en": "Hides in lignum and cane-grass, runs rather than flies",
+      "nl": "Verstopt zich in lignum en rietgras, rent liever dan te vliegen"
+    }
+  ]
+}

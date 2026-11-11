@@ -1,0 +1,22 @@
+{
+  "code": "alepar1",
+  "name": {
+    "en": "Princess Parrot",
+    "nl": "Prinsesparkiet"
+  },
+  "latin": "Polytelis alexandrae",
+  "look_for": [
+    {
+      "en": "Slender, with a very long, pointed **tail**",
+      "nl": "Slank, met een heel lange, spitse **staart**"
+    },
+    {
+      "en": "Blue-grey **crown**, pink throat, olive body",
+      "nl": "Blauwgrijze **kruin**, roze keel, olijfgroen lijf"
+    },
+    {
+      "en": "Rare nomad of desert dunes, in small groups",
+      "nl": "Zeldzame nomade van woestijnduinen, in kleine groepjes"
+    }
+  ]
+}

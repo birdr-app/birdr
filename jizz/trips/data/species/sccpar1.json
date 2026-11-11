@@ -1,0 +1,22 @@
+{
+  "code": "sccpar1",
+  "name": {
+    "en": "Scarlet-chested Parrot",
+    "nl": "Roodborstparkiet"
+  },
+  "latin": "Neophema splendida",
+  "look_for": [
+    {
+      "en": "Small parrot; male has a **scarlet** breast and blue face",
+      "nl": "Kleine papegaai; mannetje met **scharlaken** borst en blauw gezicht"
+    },
+    {
+      "en": "Female dull green with a little blue on the face",
+      "nl": "Vrouwtje dofgroen met wat blauw op het gezicht"
+    },
+    {
+      "en": "Quiet and nomadic, feeds on seeds on the ground",
+      "nl": "Stil en nomadisch, eet zaden van de grond"
+    }
+  ]
+}

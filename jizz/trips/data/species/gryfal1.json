@@ -1,0 +1,22 @@
+{
+  "code": "gryfal1",
+  "name": {
+    "en": "Grey Falcon",
+    "nl": "Grijze valk"
+  },
+  "latin": "Falco hypoleucos",
+  "look_for": [
+    {
+      "en": "Pale grey falcon, white below, black wing tips",
+      "nl": "Lichtgrijze valk, wit onder, zwarte vleugeltoppen"
+    },
+    {
+      "en": "Yellow **cere** and yellow legs",
+      "nl": "Gele **snavelbasis** en gele poten"
+    },
+    {
+      "en": "Rare; sits on bare trees along dry rivers",
+      "nl": "Zeldzaam; zit op kale bomen langs droge rivieren"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "mulpar1",
+  "name": {
+    "en": "Mulga Parrot",
+    "nl": "Regenboogparkiet"
+  },
+  "latin": "Psephotellus varius",
+  "look_for": [
+    {
+      "en": "Slim, long-tailed parrot, green and brown",
+      "nl": "Slanke, langstaartige papegaai, groen en bruin"
+    },
+    {
+      "en": "Male has yellow and red patches on head and shoulder",
+      "nl": "Mannetje met gele en rode vlekken op kop en schouder"
+    },
+    {
+      "en": "Pairs feed on the ground among mulga",
+      "nl": "Paartjes zoeken voedsel op de grond tussen mulga"
+    }
+  ]
+}

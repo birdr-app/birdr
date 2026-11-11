@@ -1,0 +1,22 @@
+{
+  "code": "broson1",
+  "name": {
+    "en": "Brown Songlark",
+    "nl": "Roetbruine grasvogel"
+  },
+  "latin": "Cincloramphus cruralis",
+  "look_for": [
+    {
+      "en": "Male sooty-brown with a pale **bill**",
+      "nl": "Mannetje roetbruin met een lichte **snavel**"
+    },
+    {
+      "en": "Female and young smaller, buff and streaked",
+      "nl": "Vrouwtje en jongen kleiner, lichtbruin en gestreept"
+    },
+    {
+      "en": "Male sings in rising display flights over grass",
+      "nl": "Mannetje zingt in stijgende baltsvluchten boven gras"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "redthr1",
+  "name": {
+    "en": "Redthroat",
+    "nl": "Roodkeelstruiksluiper"
+  },
+  "latin": "Pyrrholaemus brunneus",
+  "look_for": [
+    {
+      "en": "Small, plain brown bird, pale below",
+      "nl": "Klein, effen bruin vogeltje, licht onder"
+    },
+    {
+      "en": "Male has a **chestnut** throat patch",
+      "nl": "Mannetje met een **kastanjebruine** keelvlek"
+    },
+    {
+      "en": "Skulks low in mulga and shrubs",
+      "nl": "Sluipt laag door mulga en struiken"
+    }
+  ]
+}
