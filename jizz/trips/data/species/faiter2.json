@@ -1,0 +1,22 @@
+{
+  "code": "faiter2",
+  "name": {
+    "en": "Australian Fairy Tern",
+    "nl": "Elfenstern"
+  },
+  "latin": "Sternula nereis",
+  "look_for": [
+    {
+      "en": "Small tern with white forehead and black cap",
+      "nl": "Kleine stern met witte voorhoofd en zwarte kap"
+    },
+    {
+      "en": "Pale grey **back**, slightly forked tail",
+      "nl": "Lichtgrijze **rug**, licht gevorkte staart"
+    },
+    {
+      "en": "Yellowish bill in winter, orange in summer",
+      "nl": "Gelige snavel in winter, oranje in zomer"
+    }
+  ]
+}

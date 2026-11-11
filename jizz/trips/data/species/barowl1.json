@@ -1,0 +1,22 @@
+{
+  "code": "barowl1",
+  "name": {
+    "en": "Barking Owl",
+    "nl": "Blafuil"
+  },
+  "latin": "Ninox connivens",
+  "look_for": [
+    {
+      "en": "Hawk-owl with big staring yellow eyes",
+      "nl": "Havikuil met grote starende gele ogen"
+    },
+    {
+      "en": "Streaked **breast**, no facial disc",
+      "nl": "Gestreepte **borst**, geen duidelijke sluier"
+    },
+    {
+      "en": "Dog-like barking call at night",
+      "nl": "Hondachtig blaffende roep 's nachts"
+    }
+  ]
+}

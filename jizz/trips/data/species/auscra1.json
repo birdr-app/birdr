@@ -1,0 +1,22 @@
+{
+  "code": "auscra1",
+  "name": {
+    "en": "Australian Crake",
+    "nl": "Australisch porseleinhoen"
+  },
+  "latin": "Porzana fluminea",
+  "look_for": [
+    {
+      "en": "Small, shy crake with a grey **head** and breast",
+      "nl": "Kleine schuwe ral met grijze **kop** en borst"
+    },
+    {
+      "en": "Red-brown back; barred flanks",
+      "nl": "Roodbruine rug; gebande flanken"
+    },
+    {
+      "en": "Walks out of reeds along pool edges",
+      "nl": "Loopt uit het riet langs de oevers"
+    }
+  ]
+}

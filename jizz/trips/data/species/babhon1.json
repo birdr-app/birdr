@@ -1,0 +1,22 @@
+{
+  "code": "babhon1",
+  "name": {
+    "en": "Bar-breasted Honeyeater",
+    "nl": "Sperwerhoningeter"
+  },
+  "latin": "Ramsayornis fasciatus",
+  "look_for": [
+    {
+      "en": "Small honeyeater with a fine barred **breast**",
+      "nl": "Kleine honingeter met een fijn gebandeerde **borst**"
+    },
+    {
+      "en": "Brown above, pale streak behind the **eye**",
+      "nl": "Bruin van boven, lichte streep achter het **oog**"
+    },
+    {
+      "en": "Works paperbark blossom in swamps",
+      "nl": "Zoekt in paperbarkbloesem in moerassen"
+    }
+  ]
+}

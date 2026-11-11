@@ -1,0 +1,22 @@
+{
+  "code": "varlor1",
+  "name": {
+    "en": "Varied Lorikeet",
+    "nl": "Veelkleurige lori"
+  },
+  "latin": "Psitteuteles versicolor",
+  "look_for": [
+    {
+      "en": "Small green lorikeet, red **bill** and bright wings",
+      "nl": "Kleine groene lori met rode **snavel** en heldere vleugels"
+    },
+    {
+      "en": "Pinkish-red forehead, dark purple **crown**",
+      "nl": "Roze-rood voorhoofd, donkerpaarse **kruin**"
+    },
+    {
+      "en": "Feeds on flowering eucalypts and paperbarks",
+      "nl": "Voedt zich op bloeiende eucalyptussen en paperbarks"
+    }
+  ]
+}

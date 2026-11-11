@@ -1,0 +1,22 @@
+{
+  "code": "sansht2",
+  "name": {
+    "en": "Sandstone Shrikethrush",
+    "nl": "Rotslijsterdikkop"
+  },
+  "latin": "Colluricincla woodwardi",
+  "look_for": [
+    {
+      "en": "Plain brown shrikethrush with a pale **throat**",
+      "nl": "Effen bruine dikkop met een lichte **keel**"
+    },
+    {
+      "en": "Heavy dark **bill** and a pale lore",
+      "nl": "Zware donkere **snavel** en lichte teugel"
+    },
+    {
+      "en": "Hops over sandstone rocks and escarpment gorges",
+      "nl": "Hipt over zandsteenrotsen en kloven"
+    }
+  ]
+}

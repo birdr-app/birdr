@@ -1,0 +1,22 @@
+{
+  "code": "blahon1",
+  "name": {
+    "en": "Black Honeyeater",
+    "nl": "Rouwhoningeter"
+  },
+  "latin": "Sugomel nigrum",
+  "look_for": [
+    {
+      "en": "Small black-and-white honeyeater (male)",
+      "nl": "Kleine zwart-witte honingeter (man)"
+    },
+    {
+      "en": "Female brownish with a streaked **breast**",
+      "nl": "Vrouw bruinig met gestreepte **borst**"
+    },
+    {
+      "en": "Nomadic; feeds on flowering shrubs",
+      "nl": "Zwervend; voedt zich op bloeiende struiken"
+    }
+  ]
+}

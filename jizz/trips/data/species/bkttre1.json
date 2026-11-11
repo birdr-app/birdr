@@ -1,0 +1,22 @@
+{
+  "code": "bkttre1",
+  "name": {
+    "en": "Black-tailed Treecreeper",
+    "nl": "Zwartstaartkruiper"
+  },
+  "latin": "Climacteris melanurus",
+  "look_for": [
+    {
+      "en": "Slender treecreeper with a black **tail**",
+      "nl": "Slanke boomkruiper met een zwarte **staart**"
+    },
+    {
+      "en": "Rufous-brown back, streaked white **throat**",
+      "nl": "Roodbruine rug, gestreepte witte **keel**"
+    },
+    {
+      "en": "Climbs eucalypt trunks in savanna woodland",
+      "nl": "Klimt tegen eucalyptusstammen in savannebos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "asidow1",
+  "name": {
+    "en": "Asian Dowitcher",
+    "nl": "Aziatische grijze snip"
+  },
+  "latin": "Limnodromus semipalmatus",
+  "look_for": [
+    {
+      "en": "Large, long-billed wader, like a dowitcher",
+      "nl": "Grote steltloper met lange **snavel**"
+    },
+    {
+      "en": "Heavy, straight **bill** with a flat pinkish tip",
+      "nl": "Zware rechte **snavel** met afgeplatte roze punt"
+    },
+    {
+      "en": "Chestnut head in summer; wades in shallow pools",
+      "nl": "Kastanjebruine kop in de zomer; waadt in ondiep water"
+    }
+  ]
+}

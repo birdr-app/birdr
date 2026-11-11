@@ -1,0 +1,22 @@
+{
+  "code": "lotfin1",
+  "name": {
+    "en": "Long-tailed Finch",
+    "nl": "Spitsstaartamadine"
+  },
+  "latin": "Poephila acuticauda",
+  "look_for": [
+    {
+      "en": "Pale grey finch with a black **bib**",
+      "nl": "Lichtgrijze vink met een zwarte **keel**"
+    },
+    {
+      "en": "Long pointed black **tail**",
+      "nl": "Lange puntige zwarte **staart**"
+    },
+    {
+      "en": "Feeds on grass seed in savanna",
+      "nl": "Eet grasdaad in savanne"
+    }
+  ]
+}

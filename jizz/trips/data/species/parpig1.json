@@ -1,0 +1,22 @@
+{
+  "code": "parpig1",
+  "name": {
+    "en": "Partridge Pigeon",
+    "nl": "Naaktoogkwartelduif"
+  },
+  "latin": "Geophaps smithii",
+  "look_for": [
+    {
+      "en": "Plump ground pigeon with a bare **eye**-patch",
+      "nl": "Gedrongen grondduif met een kaal **oog**vlak"
+    },
+    {
+      "en": "Brown above, black and white face stripes",
+      "nl": "Bruin van boven, zwart-witte gezichtsstrepen"
+    },
+    {
+      "en": "Walks in open woodland and bursts into flight",
+      "nl": "Loopt in open bos en vliegt plots op"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "litwoo4",
+  "name": {
+    "en": "Little Woodswallow",
+    "nl": "Roetspitsvogel"
+  },
+  "latin": "Artamus minor",
+  "look_for": [
+    {
+      "en": "Small, dark woodswallow, all dark brown",
+      "nl": "Kleine, donkere spitsvogel, helemaal donkerbruin"
+    },
+    {
+      "en": "Short, rounded **tail** with white tips",
+      "nl": "Korte, ronde **staart** met witte punten"
+    },
+    {
+      "en": "Clings to rock walls and cliffs",
+      "nl": "Klampt zich vast aan rotswanden en kliffen"
+    }
+  ]
+}

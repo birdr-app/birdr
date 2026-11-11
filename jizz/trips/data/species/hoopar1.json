@@ -1,0 +1,22 @@
+{
+  "code": "hoopar1",
+  "name": {
+    "en": "Hooded Parrot",
+    "nl": "Kapparkiet"
+  },
+  "latin": "Psephotellus dissimilis",
+  "look_for": [
+    {
+      "en": "Male: black **cap**, brown **back**, blue-green **belly**",
+      "nl": "Man: zwarte **kap**, bruine **rug**, blauwgroene **buik**"
+    },
+    {
+      "en": "Female: duller, green-brown",
+      "nl": "Vrouw: doffer, groenbruin"
+    },
+    {
+      "en": "Feeds on the ground near termite mounds",
+      "nl": "Foerageert op de grond bij termietenheuvels"
+    }
+  ]
+}

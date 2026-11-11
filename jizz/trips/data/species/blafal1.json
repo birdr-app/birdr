@@ -1,0 +1,22 @@
+{
+  "code": "blafal1",
+  "name": {
+    "en": "Black Falcon",
+    "nl": "Zwarte valk"
+  },
+  "latin": "Falco subniger",
+  "look_for": [
+    {
+      "en": "Dark, slate-brown falcon with a pale chin",
+      "nl": "Donkere leigrijsbruine valk met lichte kin"
+    },
+    {
+      "en": "Long wings, pointed; fast and low",
+      "nl": "Lange, spitse vleugels; snel en laag"
+    },
+    {
+      "en": "Chases birds over open woodland and plains",
+      "nl": "Jaagt op vogels boven open bos en vlakten"
+    }
+  ]
+}

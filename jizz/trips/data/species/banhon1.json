@@ -1,0 +1,22 @@
+{
+  "code": "banhon1",
+  "name": {
+    "en": "Banded Honeyeater",
+    "nl": "Zwartbandhoningeter"
+  },
+  "latin": "Cissomela pectoralis",
+  "look_for": [
+    {
+      "en": "Small honeyeater with a black **breast** band",
+      "nl": "Kleine honingeter met zwarte **borst**band"
+    },
+    {
+      "en": "Grey-white **underparts**, brown back",
+      "nl": "Grijswitte **onderkant**, bruine rug"
+    },
+    {
+      "en": "Feeds on paperbark flowers in swamps",
+      "nl": "Voedt zich op paperbarkbloemen in moerassen"
+    }
+  ]
+}

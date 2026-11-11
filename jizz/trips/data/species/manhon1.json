@@ -1,0 +1,22 @@
+{
+  "code": "manhon1",
+  "name": {
+    "en": "Mangrove Honeyeater",
+    "nl": "Mangrovehoningeter"
+  },
+  "latin": "Gavicalis fasciogularis",
+  "look_for": [
+    {
+      "en": "Grey-brown honeyeater with a pale **belly**",
+      "nl": "Grijsbruine honingeter met lichte **buik**"
+    },
+    {
+      "en": "Yellow face patch, whitish **throat**",
+      "nl": "Gele gezichtsvlek, witachtige **keel**"
+    },
+    {
+      "en": "Stays in mangroves, flits among leaves",
+      "nl": "Blijft in mangrove, flitst tussen bladeren"
+    }
+  ]
+}

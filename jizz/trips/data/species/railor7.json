@@ -1,0 +1,22 @@
+{
+  "code": "railor7",
+  "name": {
+    "en": "Red-collared Lorikeet",
+    "nl": "Roodhalslori"
+  },
+  "latin": "Trichoglossus rubritorquis",
+  "look_for": [
+    {
+      "en": "Like Rainbow Lorikeet but with a red **collar**",
+      "nl": "Als regenbooglori maar met rode **kraag**"
+    },
+    {
+      "en": "Blue head, orange breast, scarlet nape",
+      "nl": "Blauwe kop, oranje borst, rode nek"
+    },
+    {
+      "en": "Feeds in flowering gums in Kakadu and Katherine",
+      "nl": "Voedt in bloeiende eucalyptussen bij Kakadu"
+    }
+  ]
+}

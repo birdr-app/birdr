@@ -1,0 +1,238 @@
+{
+  "intro": {
+    "en": "This pack is for trips to the Top End and the Kimberley: Darwin, Kakadu, Katherine, Mary River, Kununurra and Broome. Its 130 birds come on top of the Australia trip. They live on tropical wetlands and floodplains, in monsoon forest and mangrove, on the stone country of Arnhem Land and the Kimberley, and on the mudflats where waders from Asia spend the dry season.",
+    "nl": "Dit pakket is voor reizen naar het Top End en de Kimberley: Darwin, Kakadu, Katherine, Mary River, Kununurra en Broome. De 130 vogels komen bovenop de reis door Australië. Ze leven op tropische wetlands en uiterwaarden, in moessonbos en mangrove, in het rotsland van Arnhem Land en de Kimberley en op de wadplaten waar steltlopers uit Azië het droge seizoen doorbrengen."
+  },
+  "units": {
+    "waterfowl": {
+      "title": {
+        "en": "Ducks and a megapode",
+        "nl": "Eenden en een grootpoothoen"
+      },
+      "intro": {
+        "en": "The shelduck and the pygmy-geese live on the lily-covered pools and billabongs of Kakadu and the Mary River floodplains. The whistling-duck feeds on the same wetlands. The megapode is different: it scratches around in dense monsoon forest and thicket, and builds a huge mound of leaves.",
+        "nl": "De eend en de dwergganzen leven op de met lelies bedekte poelen en billabongs van Kakadu en de uiterwaarden van de Mary River. De fluiteend voedt zich op dezelfde wetlands. Het grootpoothoen is anders: het scharrelt in dicht moessonbos en struikgewas en bouwt een enorme hoop van bladeren."
+      }
+    },
+    "pigeons-and-doves": {
+      "title": {
+        "en": "Pigeons and doves",
+        "nl": "Duiven"
+      },
+      "intro": {
+        "en": "Three of these birds live among the sandstone rocks of Arnhem Land and the Kimberley, walking over boulders rather than flying. The Partridge Pigeon and the Flock Bronzewing feed on the ground in savanna and dry country. The fruit-dove and the imperial-pigeon stay high in the trees.",
+        "nl": "Drie van deze vogels leven tussen de zandsteenrotsen van Arnhem Land en de Kimberley en lopen liever over rotsblokken dan dat ze vliegen. De kwartelduif en de harlekijnduif foerageren op de grond in savanne en droog land. De vruchtenduif en de muskaatduif blijven hoog in de bomen."
+      }
+    },
+    "owls-and-nightjars": {
+      "title": {
+        "en": "Owls and nightjars",
+        "nl": "Uilen en nachtzwaluwen"
+      },
+      "intro": {
+        "en": "Most of these birds are for after dark. The owls roost in tree hollows and dense foliage by day, so go out at dusk at Kakadu, Mary River or Katherine and listen for their calls. The two nightjars sit on tracks and clearings, where a torch picks up their eye-shine.",
+        "nl": "De meeste van deze vogels zie je pas na zonsondergang. De uilen slapen overdag in boomholtes en dicht gebladerte, dus ga in de schemering op pad bij Kakadu, Mary River of Katherine en luister naar hun roep. De twee nachtzwaluwen zitten op paden en open plekken, waar een zaklamp hun ogen laat oplichten."
+      }
+    },
+    "kingfishers-and-cuckoos": {
+      "title": {
+        "en": "Kingfishers and bronze-cuckoos",
+        "nl": "IJsvogels en bronskoekoeken"
+      },
+      "intro": {
+        "en": "Look for the kingfishers on wires and branches along creeks and in the mangroves around Darwin. The paradise-kingfisher comes to the monsoon forest in the wet season to nest in termite mounds. The three small cuckoos are brown and barred and best told by their calls.",
+        "nl": "Zoek de ijsvogels op draden en takken langs beken en in de mangrove bij Darwin. De paradijsijsvogel komt in het regenseizoen naar het moessonbos om in termietenheuvels te nestelen. De drie kleine koekoeken zijn bruin en gebandeerd en het best aan hun roep te herkennen."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "title": {
+        "en": "Crakes, a rail and a painted-snipe",
+        "nl": "Randen, een ral en een goudsnip"
+      },
+      "intro": {
+        "en": "These birds are shy and live in reeds, long grass, mangrove and forest floor. Walk quietly along the edge of a billabong at dawn or dusk. The painted-snipe is a wader that behaves like a crake, creeping about in wet vegetation.",
+        "nl": "Deze vogels zijn schuw en leven in riet, hoog gras, mangrove en op de bosbodem. Loop in alle rust langs de rand van een billabong bij zonsopgang of in de schemering. De goudsnip is een wader die zich als een ral gedraagt en door natte begroeiing sluipt."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "title": {
+        "en": "Herons and a bittern",
+        "nl": "Reigers en een roerdomp"
+      },
+      "intro": {
+        "en": "Three of these herons live in the mud and mangrove of Darwin's harbour and the Kimberley coast, where you see them at low tide. The bittern is a forest bird of dark creeks. The Plumed Egret is a medium white egret of flooded plains, easy to take for a Great or Intermediate Egret.",
+        "nl": "Drie van deze reigers leven in de modder en mangrove van de haven van Darwin en de kust van de Kimberley, waar je ze bij eb ziet. De roerdomp is een bosvogel van donkere beken. De pluimzilverreiger is een middelgrote witte reiger van overstroomde vlakten, die je makkelijk voor een grote of middelste zilverreiger houdt."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "title": {
+        "en": "Raptors of the floodplain",
+        "nl": "Roofvogels van de uiterwaard"
+      },
+      "intro": {
+        "en": "These raptors hunt over the floodplains, savanna and river forest of the Top End and Kimberley. Look at the shape in flight: wing length, tail length, pale windows. The Red Goshawk is rare and hard to find; the others are easier on a drive across open country.",
+        "nl": "Deze roofvogels jagen boven de uiterwaarden, savanne en rivierbos van het Top End en de Kimberley. Let in vlucht op de vorm: lengte van vleugels en staart, lichte vlakken. De rosse havik is zeldzaam en moeilijk te vinden; de andere zie je makkelijker vanuit de auto in open land."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Waders of the mudflats",
+        "nl": "Steltlopers van de wadplaten"
+      },
+      "intro": {
+        "en": "In the dry season, thousands of waders from Siberia and Alaska gather on the mudflats of Darwin and Broome's Roebuck Bay. Most are in grey winter plumage. Go at high tide, when the birds are pushed to the roosts close to the shore.",
+        "nl": "In het droge seizoen verzamelen duizenden waders uit Siberië en Alaska zich op de wadplaten van Darwin en Roebuck Bay bij Broome. De meeste dragen grijs winterkleed. Ga bij hoogwater, wanneer de vogels dicht bij de kust op hun slaapplaats worden gedreven."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Waders of marsh and plain",
+        "nl": "Steltlopers van moeras en vlakte"
+      },
+      "intro": {
+        "en": "These waders prefer the freshwater side: shallow marshes, wet paddocks and short grass instead of open mudflats. The stint and the sandpipers feed at the edge of pools; the dowitcher and the Little Curlew prefer grassland and brackish ponds. Look for them in the Darwin region and on the Fogg Dam plains.",
+        "nl": "Deze waders houden van de zoete kant: ondiepe moerassen, natte weilanden en kort gras in plaats van open wadplaten. De strandloper en de ruiters foerageren aan de rand van poelen; de grijze snip en de kleine regenwulp geven de voorkeur aan grasland en brakke vijvers. Zoek ze in de omgeving van Darwin en op de vlakten bij Fogg Dam."
+      }
+    },
+    "shorebirds-3": {
+      "title": {
+        "en": "Pratincoles and buttonquails",
+        "nl": "Vorkstaartplevieren en vechtkwartels"
+      },
+      "intro": {
+        "en": "The pratincoles hunt insects in the air over dry floodplains, like swallows with short legs. The buttonquails are small ground birds that look like quails but belong to a family of their own. You see them when they flush from the grass.",
+        "nl": "De vorkstaartplevieren jagen op insecten in de lucht boven droge uiterwaarden, als zwaluwen met korte poten. De vechtkwartels zijn kleine grondvogels die op kwartels lijken maar een eigen familie vormen. Je ziet ze wanneer ze uit het gras opvliegen."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {
+        "en": "Terns and a frigatebird",
+        "nl": "Sterns en een fregatvogel"
+      },
+      "intro": {
+        "en": "Watch the coast at Darwin and Broome. The terns roost on beaches and sandbars, and the frigatebird soars high over the sea. Tell them apart by size, bill colour and cap shape.",
+        "nl": "Kijk goed langs de kust bij Darwin en Broome. De sterns rusten op stranden en zandbanken en de fregatvogel zweeft hoog boven de zee. Onderscheid ze aan grootte, snavelkleur en vorm van de kap."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "title": {
+        "en": "Parrots and lorikeets",
+        "nl": "Papegaaien en lori's"
+      },
+      "intro": {
+        "en": "The Hooded Parrot is a rare parrot of the Top End. It feeds on grass seed near termite mounds and nests in them; look for it on the roads of Kakadu and Katherine. The lorikeets feed on nectar in flowering trees and fly fast and noisily.",
+        "nl": "De kapparkiet is een zeldzame papegaai van het Top End. Hij eet grasdaad bij termietenheuvels en nestelt erin; zoek hem langs de wegen van Kakadu en Katherine. De lori's eten nectar in bloeiende bomen en vliegen snel en luidruchtig."
+      }
+    },
+    "old-world-pittas": {
+      "title": {
+        "en": "Pitta and stone-country birds",
+        "nl": "Pitta en vogels van het rotsland"
+      },
+      "intro": {
+        "en": "A rainbow-coloured pitta of monsoon forest, then three birds of the sandstone country of Kakadu and Arnhem Land: a treecreeper, a grasswren and a shrikethrush. These are the birds that make the Top End special for many visitors.",
+        "nl": "Een regenboogkleurige pitta van moessonbos, en daarna drie vogels van het zandsteenland van Kakadu en Arnhem Land: een boomkruiper, een grassluiper en een dikkop. Dit zijn de vogels die het Top End voor veel bezoekers bijzonder maken."
+      }
+    },
+    "shrike-tits": {
+      "title": {
+        "en": "Shrike-tit, whistler and friends",
+        "nl": "Harlekijndikkop, fluiter en anderen"
+      },
+      "intro": {
+        "en": "Five strongly built birds of woodland and mangrove. The shrike-tit has a crest and peels bark; the shrikethrush and the whistler sing loudly, and the butcherbird has a hooked bill. The boatbill is tiny and lives in rainforest.",
+        "nl": "Vijf stevig gebouwde vogels van bos en mangrove. De harlekijndikkop heeft een kuif en trekt schors los; de lijsterdikkop en de fluiter zingen luid en de orgelvogel heeft een gehaakte snavel. De bootsnavel is piepklein en leeft in regenwoud."
+      }
+    },
+    "honeyeaters-1": {
+      "title": {
+        "en": "Kimberley and escarpment honeyeaters",
+        "nl": "Honingeters van Kimberley en steilrand"
+      },
+      "intro": {
+        "en": "Honeyeaters of the dry rocky country. The Kimberley and White-lined Honeyeaters call from sandstone ridges, and the Banded and Bar-breasted Honeyeaters feed on flowering shrubs. They look similar at first: look at the face pattern and the colour of the underparts.",
+        "nl": "Honingeters van het droge rotsige land. De Kimberley- en witbaardhoningeter roepen vanaf zandsteenruggen en de zwartband- en sperwerhoningeter voeden zich op bloeiende struiken. Ze lijken eerst op elkaar: let op het gezichtspatroon en de kleur van de onderkant."
+      }
+    },
+    "honeyeaters-2": {
+      "title": {
+        "en": "Honeyeaters of woodland and coast",
+        "nl": "Honingeters van bos en kust"
+      },
+      "intro": {
+        "en": "Plainer honeyeaters of woodland, thickets and the coast. Most are green-olive, brown or pale, so look at the face, the eye and the belly. Listen too: each calls differently.",
+        "nl": "Eenvoudiger honingeters van bos, struikgewas en kust. De meeste zijn groenolijf, bruin of bleek, dus kijk naar het gezicht, het oog en de buik. Luister ook: elke soort roept anders."
+      }
+    },
+    "honeyeaters-3": {
+      "title": {
+        "en": "Honeyeaters of mangrove and floodplain",
+        "nl": "Honingeters van mangrove en uiterwaard"
+      },
+      "intro": {
+        "en": "Honeyeaters of wet places: mangroves, paperbark swamps and wet floodplains. The Yellow Chat is not a honeyeater in the strict sense, but it belongs to the same family and lives in the same wet grass.",
+        "nl": "Honingeters van natte plekken: mangrove, paperbarkmoerassen en natte uiterwaarden. Het gele schijnpaapje is strikt genomen geen honingeter, maar hoort tot dezelfde familie en leeft in hetzelfde natte gras."
+      }
+    },
+    "honeyeaters-4": {
+      "title": {
+        "en": "Friarbirds and myzomelas",
+        "nl": "Brilvogels en myzomela's"
+      },
+      "intro": {
+        "en": "The friarbirds are large, noisy honeyeaters with bare heads and loud calls. The two myzomelas are tiny and feed on blossom. Check the head: knob, bare skin or silver crown.",
+        "nl": "De lederkoppen zijn grote, luidruchtige honingeters met kale kop en luide roep. De twee myzomela's zijn klein en eten bloesem. Let op de kop: knobbel, kale huid of zilveren kruin."
+      }
+    },
+    "thornbills-and-allies": {
+      "title": {
+        "en": "Small birds of scrub and grass",
+        "nl": "Kleine vogels van struweel en gras"
+      },
+      "intro": {
+        "en": "Small birds of mangroves, scrub and grass. The three gerygones are easy to confuse: listen to the song and look at the eye colour. The grass birds stay hidden low in vegetation; wait for a bird that sings from the top of a stem.",
+        "nl": "Kleine vogels van mangrove, struikgewas en gras. De drie zangers zijn makkelijk te verwarren: luister naar het lied en kijk naar de oogkleur. De grasvogels blijven laag in de begroeiing verborgen; wacht op een vogel die vanaf de top van een halm zingt."
+      }
+    },
+    "cuckooshrikes": {
+      "title": {
+        "en": "Trillers and woodswallows",
+        "nl": "Rupsvogels en zwaluwlijsters"
+      },
+      "intro": {
+        "en": "Medium birds that feed high in trees and perch on bare branches. The woodswallows hawk insects in the air, like swallows with broad wings; they sit in rows on wires and dead branches.",
+        "nl": "Middelgrote vogels die hoog in bomen foerageren en op kale takken zitten. De spitsvogels vangen insecten in de lucht, als zwaluwen met brede vleugels; ze zitten naast elkaar op draden en dode takken."
+      }
+    },
+    "monarch-flycatchers": {
+      "title": {
+        "en": "Fantails and flycatchers",
+        "nl": "Waaierstaarten en vliegenvangers"
+      },
+      "intro": {
+        "en": "Active small birds of forest, mangrove and creeks. The fantails fan their tails; the flycatchers hover and snap insects from the leaves. Males and females of the flycatchers differ clearly, so check both.",
+        "nl": "Actieve kleine vogels van bos, mangrove en beken. De waaierstaarten waaieren hun staart; de vliegenvangers zweven en grijpen insecten van de bladeren. Mannen en vrouwen van de vliegenvangers verschillen duidelijk, dus let op beide."
+      }
+    },
+    "australasian-robins": {
+      "title": {
+        "en": "Robins, a white-eye and a crow",
+        "nl": "Roodborsten, een brilvogel en een kraai"
+      },
+      "intro": {
+        "en": "A scrub-robin that hops on the forest floor, a robin of the mangroves and a flyrobin that hovers at the edge. The Little Crow belongs here too: a small black crow you meet in towns. The yellow white-eye feeds in flocks in mangroves.",
+        "nl": "Een grondrobin die over de bosbodem hipt, een robin van de mangrove en een vliegenvangertje dat aan de rand zweeft. De Bennettkraai hoort ook hier: een kleine zwarte kraai die je in steden ziet. De gele brilvogel foerageert in groepen in mangrove."
+      }
+    },
+    "estrildids": {
+      "title": {
+        "en": "Finches and munias",
+        "nl": "Vinken en muisjes"
+      },
+      "intro": {
+        "en": "Six small seed-eaters of the savanna and floodplains. They feed on grass seed and drink at pools and puddles in the dry season, so a waterhole is the best place. Look at the face mask, the breast and the rump.",
+        "nl": "Zes kleine zaadeters van savanne en uiterwaarden. Ze eten grasdaad en drinken in het droge seizoen aan poelen en plassen, dus een waterpoel is de beste plek. Let op het gezichtsmasker, de borst en de stuit."
+      }
+    }
+  }
+}

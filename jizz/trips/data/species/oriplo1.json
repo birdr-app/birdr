@@ -1,0 +1,22 @@
+{
+  "code": "oriplo1",
+  "name": {
+    "en": "Oriental Plover",
+    "nl": "Steppeplevier"
+  },
+  "latin": "Anarhynchus veredus",
+  "look_for": [
+    {
+      "en": "Slender plover with long legs and a long neck",
+      "nl": "Slanke plevier met lange poten en hals"
+    },
+    {
+      "en": "Broad **breast** band: chestnut and black",
+      "nl": "Brede **borst**band: kastanje en zwart"
+    },
+    {
+      "en": "Runs across dry plains and short grass",
+      "nl": "Rent over droge vlakten en kort gras"
+    }
+  ]
+}
