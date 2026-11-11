@@ -1,0 +1,22 @@
+{
+  "code": "souboo3",
+  "name": {
+    "en": "Tasmanian Boobook",
+    "nl": "Tasmaanse boeboek"
+  },
+  "latin": "Ninox leucopsis",
+  "look_for": [
+    {
+      "en": "Medium brown owl with dark **face** patches",
+      "nl": "Middelgrote bruine uil met donkere vlekken op het **gezicht**"
+    },
+    {
+      "en": "Darker and larger than mainland boobooks, spotted **back**",
+      "nl": "Donkerder en groter dan boeboeks van het vasteland, gevlekte **rug**"
+    },
+    {
+      "en": "Soft double hoot at dusk, roosts in trees",
+      "nl": "Zacht dubbel hoeten in de schemering, rust in bomen"
+    }
+  ]
+}

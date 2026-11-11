@@ -1,0 +1,22 @@
+{
+  "code": "duswoo1",
+  "name": {
+    "en": "Dusky Woodswallow",
+    "nl": "Blauwvleugelspitsvogel"
+  },
+  "latin": "Artamus cyanopterus",
+  "look_for": [
+    {
+      "en": "Dusky grey-brown bird with a pale **bill** tip",
+      "nl": "Donker grijsbruin vogeltje met lichte **snavel**punt"
+    },
+    {
+      "en": "White **edge** on the wing, short blunt tail",
+      "nl": "Witte **rand** aan de vleugel, korte stompe staart"
+    },
+    {
+      "en": "Sallies from perches, often in groups",
+      "nl": "Jaagt vanaf zitplekken, vaak in groepen"
+    }
+  ]
+}

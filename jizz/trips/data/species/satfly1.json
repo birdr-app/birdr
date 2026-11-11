@@ -1,0 +1,22 @@
+{
+  "code": "satfly1",
+  "name": {
+    "en": "Satin Flycatcher",
+    "nl": "Satijnmonarch"
+  },
+  "latin": "Myiagra cyanoleuca",
+  "look_for": [
+    {
+      "en": "Male glossy blue-black above, white below",
+      "nl": "Mannetje glanzend blauwzwart boven, wit onder"
+    },
+    {
+      "en": "Female grey-blue with an orange-buff **throat**",
+      "nl": "Vrouwtje grijsblauw met oranjebruine **keel**"
+    },
+    {
+      "en": "Summer visitor, shivers **tail** from a perch",
+      "nl": "Zomergast, trilt met de **staart** vanaf een zitplek"
+    }
+  ]
+}

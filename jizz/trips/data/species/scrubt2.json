@@ -1,0 +1,22 @@
+{
+  "code": "scrubt2",
+  "name": {
+    "en": "Scrubtit",
+    "nl": "Kleine Tasmaanse struiksluiper"
+  },
+  "latin": "Acanthornis magna",
+  "look_for": [
+    {
+      "en": "Tiny olive-brown bird with a plain face",
+      "nl": "Klein olijfbruin vogeltje met een effen gezicht"
+    },
+    {
+      "en": "Pale **eye**, short **bill**, buff underparts",
+      "nl": "Licht **oog**, korte **snavel**, bruingele onderkant"
+    },
+    {
+      "en": "Creeps up trunks and fallen logs like a treecreeper",
+      "nl": "Kruipt langs stammen en gevallen bomen als een boomklever"
+    }
+  ]
+}

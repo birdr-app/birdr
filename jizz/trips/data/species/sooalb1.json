@@ -1,0 +1,22 @@
+{
+  "code": "sooalb1",
+  "name": {
+    "en": "Sooty Albatross",
+    "nl": "Zwarte albatros"
+  },
+  "latin": "Phoebetria fusca",
+  "look_for": [
+    {
+      "en": "Slender sooty-brown albatross with a pale **bill** stripe",
+      "nl": "Slanke roetbruine albatros met lichte streep op de **snavel**"
+    },
+    {
+      "en": "Long pointed **tail**, narrow wings",
+      "nl": "Lange puntige **staart**, smalle vleugels"
+    },
+    {
+      "en": "Pale back and a dark head, elegant glide",
+      "nl": "Lichte rug en donkere kop, sierlijke glijvlucht"
+    }
+  ]
+}

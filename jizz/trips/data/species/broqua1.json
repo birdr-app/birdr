@@ -1,0 +1,22 @@
+{
+  "code": "broqua1",
+  "name": {
+    "en": "Brown Quail",
+    "nl": "Bruine kwartel"
+  },
+  "latin": "Synoicus ypsilophorus",
+  "look_for": [
+    {
+      "en": "Small round quail, brown with fine **barring**",
+      "nl": "Kleine ronde kwartel, bruin met fijne **dwarsstrepen**"
+    },
+    {
+      "en": "Male has grey-brown flanks, female more mottled",
+      "nl": "Mannetje met grijsbruine flanken, vrouwtje meer gevlekt"
+    },
+    {
+      "en": "Flushes from damp grass and drops back",
+      "nl": "Vliegt op uit vochtig gras en zakt weer weg"
+    }
+  ]
+}

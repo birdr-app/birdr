@@ -1,0 +1,22 @@
+{
+  "code": "faiter2",
+  "name": {
+    "en": "Australian Fairy Tern",
+    "nl": "Elfenstern"
+  },
+  "latin": "Sternula nereis",
+  "look_for": [
+    {
+      "en": "Tiny tern, **bill** yellow with a dark tip",
+      "nl": "Zeer kleine stern, gele **snavel** met donkere punt"
+    },
+    {
+      "en": "White **forehead** reaching over the eye",
+      "nl": "Wit **voorhoofd** dat tot boven het oog reikt"
+    },
+    {
+      "en": "Hovers over shallows, plunges for small fish",
+      "nl": "Hangt boven ondiep water, duikt op visjes"
+    }
+  ]
+}

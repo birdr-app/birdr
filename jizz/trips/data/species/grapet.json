@@ -1,0 +1,22 @@
+{
+  "code": "grapet",
+  "name": {
+    "en": "Grey Petrel",
+    "nl": "Bruine stormvogel"
+  },
+  "latin": "Procellaria cinerea",
+  "look_for": [
+    {
+      "en": "Large grey-brown petrel with a pale **bill**",
+      "nl": "Grote grijsbruine stormvogel met lichte **snavel**"
+    },
+    {
+      "en": "Paler **belly**, dark underwings and black tail",
+      "nl": "Lichtere **buik**, donkere vleugelonderkant en zwarte staart"
+    },
+    {
+      "en": "Long pale wings, strong glide, follows boats",
+      "nl": "Lange lichte vleugels, krachtige glijvlucht, volgt boten"
+    }
+  ]
+}

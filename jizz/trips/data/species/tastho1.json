@@ -1,0 +1,22 @@
+{
+  "code": "tastho1",
+  "name": {
+    "en": "Tasmanian Thornbill",
+    "nl": "Tasmaanse doornsnavel"
+  },
+  "latin": "Acanthiza ewingii",
+  "look_for": [
+    {
+      "en": "Small olive-brown bird with streaked pale **forehead**",
+      "nl": "Klein olijfbruin vogeltje met gestreept licht **voorhoofd**"
+    },
+    {
+      "en": "Rufous **rump** and a pale **eye**",
+      "nl": "Roestbruine **stuit** en licht **oog**"
+    },
+    {
+      "en": "Forages low in bushes in flocks, shy",
+      "nl": "Zoekt laag in struiken in groepjes, schuw"
+    }
+  ]
+}

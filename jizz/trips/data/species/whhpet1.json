@@ -1,0 +1,22 @@
+{
+  "code": "whhpet1",
+  "name": {
+    "en": "White-headed Petrel",
+    "nl": "Witkopstormvogel"
+  },
+  "latin": "Pterodroma lessonii",
+  "look_for": [
+    {
+      "en": "Big, bull-necked petrel with a pale head",
+      "nl": "Grote stormvogel met dikke hals en lichte kop"
+    },
+    {
+      "en": "Grey **breast** band, dark patch around the **eye**",
+      "nl": "Grijze **borst**band, donkere vlek om het **oog**"
+    },
+    {
+      "en": "Dark **bill**, white underwing with dark edge",
+      "nl": "Donkere **snavel**, witte vleugel met donkere rand"
+    }
+  ]
+}

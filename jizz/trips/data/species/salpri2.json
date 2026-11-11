@@ -1,0 +1,22 @@
+{
+  "code": "salpri2",
+  "name": {
+    "en": "Salvin's Prion",
+    "nl": "Salvinprion"
+  },
+  "latin": "Pachyptila salvini",
+  "look_for": [
+    {
+      "en": "Small blue-grey petrel with a broad **bill**",
+      "nl": "Kleine blauwgrijze stormvogel met brede **snavel**"
+    },
+    {
+      "en": "Dark **M** on the wings, dark tail band",
+      "nl": "Donkere **M** op de vleugels, donkere staartband"
+    },
+    {
+      "en": "Hard to tell from other prions",
+      "nl": "Moeilijk te onderscheiden van andere prionen"
+    }
+  ]
+}

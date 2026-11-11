@@ -1,0 +1,22 @@
+{
+  "code": "souemu1",
+  "name": {
+    "en": "Southern Emuwren",
+    "nl": "Roodooremoesluiper"
+  },
+  "latin": "Stipiturus malachurus",
+  "look_for": [
+    {
+      "en": "Tiny wren with a very long, loose **tail**",
+      "nl": "Klein vogeltje met een zeer lange, losse **staart**"
+    },
+    {
+      "en": "Male has a blue-grey **throat** and rusty **crown**",
+      "nl": "Mannetje met blauwgrijze **keel** en roestbruine **kruin**"
+    },
+    {
+      "en": "Skulks in heath and sedge, runs like a mouse",
+      "nl": "Sluipt door heide en zeggen, rent als een muis"
+    }
+  ]
+}

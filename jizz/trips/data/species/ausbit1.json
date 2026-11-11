@@ -1,0 +1,22 @@
+{
+  "code": "ausbit1",
+  "name": {
+    "en": "Australasian Bittern",
+    "nl": "Australische roerdomp"
+  },
+  "latin": "Botaurus poiciloptilus",
+  "look_for": [
+    {
+      "en": "Large brown, heavily streaked heron",
+      "nl": "Grote bruine reiger met sterke strepen"
+    },
+    {
+      "en": "Dark **crown**, pale **throat**, buff-brown plumage",
+      "nl": "Donkere **kruin**, lichte **keel**, bruingeel verenkleed"
+    },
+    {
+      "en": "Freezes upright in reeds and wet grass",
+      "nl": "Staat roerloos rechtop in riet en nat gras"
+    }
+  ]
+}

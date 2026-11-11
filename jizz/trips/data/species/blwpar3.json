@@ -1,0 +1,22 @@
+{
+  "code": "blwpar3",
+  "name": {
+    "en": "Blue-winged Parrot",
+    "nl": "Blauwvleugelparkiet"
+  },
+  "latin": "Neophema chrysostoma",
+  "look_for": [
+    {
+      "en": "Small olive-green parrot with a blue **forehead** band",
+      "nl": "Kleine olijfgroene papegaai met blauwe band op het **voorhoofd**"
+    },
+    {
+      "en": "Yellow **belly**, bright blue wing patch",
+      "nl": "Gele **buik**, felblauwe vleugelvlek"
+    },
+    {
+      "en": "Feeds on the ground in grassy places, quiet",
+      "nl": "Zoekt voedsel op de grond in grasland, rustig"
+    }
+  ]
+}

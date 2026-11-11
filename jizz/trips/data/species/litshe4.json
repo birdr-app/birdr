@@ -1,0 +1,22 @@
+{
+  "code": "litshe4",
+  "name": {
+    "en": "Subantarctic Shearwater",
+    "nl": "Subantarctische kleine pijlstormvogel"
+  },
+  "latin": "Puffinus elegans",
+  "look_for": [
+    {
+      "en": "Small black-and-white shearwater, short wings",
+      "nl": "Kleine zwart-witte pijlstormvogel met korte vleugels"
+    },
+    {
+      "en": "Dark above, white below, white behind the **eye**",
+      "nl": "Donker boven, wit onder, wit achter het **oog**"
+    },
+    {
+      "en": "Quick flaps and short glides low over waves",
+      "nl": "Snelle vleugelslagen en korte glijvluchten laag boven de golven"
+    }
+  ]
+}

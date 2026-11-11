@@ -1,0 +1,22 @@
+{
+  "code": "oliwhi1",
+  "name": {
+    "en": "Olive Whistler",
+    "nl": "Bruine fluiter"
+  },
+  "latin": "Pachycephala olivacea",
+  "look_for": [
+    {
+      "en": "Dumpy olive-brown whistler, grey **head**",
+      "nl": "Gedrongen olijfbruine fluiter, grijze **kop**"
+    },
+    {
+      "en": "Pale **throat** and a streaked **chest**",
+      "nl": "Lichte **keel** en een gestreepte **borst**"
+    },
+    {
+      "en": "Loud rising whistle, hidden in dense forest",
+      "nl": "Luid stijgend gefluit, verborgen in dicht bos"
+    }
+  ]
+}

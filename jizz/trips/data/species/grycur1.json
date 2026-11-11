@@ -1,0 +1,22 @@
+{
+  "code": "grycur1",
+  "name": {
+    "en": "Grey Currawong",
+    "nl": "Grijze klauwierkraai"
+  },
+  "latin": "Strepera versicolor",
+  "look_for": [
+    {
+      "en": "Large grey crow-like bird with a heavy black **bill**",
+      "nl": "Grote grijze kraaiachtige vogel met zware zwarte **snavel**"
+    },
+    {
+      "en": "Yellow **eyes**, white under the tail",
+      "nl": "Gele **ogen**, wit onder de staart"
+    },
+    {
+      "en": "Ringing, metallic clinking calls in forest",
+      "nl": "Klinkende, metaalachtige roepen in bos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "soppet1",
+  "name": {
+    "en": "Soft-plumaged Petrel",
+    "nl": "Donsstormvogel"
+  },
+  "latin": "Pterodroma mollis",
+  "look_for": [
+    {
+      "en": "Pale grey petrel with a dark **eye** patch",
+      "nl": "Lichtgrijze stormvogel met donkere vlek om het **oog**"
+    },
+    {
+      "en": "Grey breast band across a white belly",
+      "nl": "Grijze borstband over een witte buik"
+    },
+    {
+      "en": "Dark underwing, fast arcs on stiff wings",
+      "nl": "Donkere onderkant van de vleugels, snelle bogen op stijve vleugels"
+    }
+  ]
+}
