@@ -178,9 +178,15 @@ class MediaAdmin(HideableAdminMixin, admin.ModelAdmin):
             _review_count=Count('reviews'),
         )
 
-    list_filter = [VisibilityFilter, ReviewStatusFilter, 'type', 'created', 'source', 'copyright_standardized', 'non_commercial_only', 'species']
+    list_filter = [VisibilityFilter, ReviewStatusFilter, ('held_for_change', admin.EmptyFieldListFilter), 'type', 'created', 'source', 'copyright_standardized', 'non_commercial_only', 'species']
     search_fields = ['species__name', 'contributor', 'copyright_text', 'copyright_standardized', 'url']
-    raw_id_fields = ['species', 'duplicate_of']
+    raw_id_fields = ['species', 'duplicate_of', 'subspecies', 'held_for_change']
+    actions = ['mark_hidden', 'mark_visible', 'release_taxonomy_hold']
+
+    @admin.action(description='Release taxonomy hold (make visible on its current species)')
+    def release_taxonomy_hold(self, request, queryset):
+        n = queryset.exclude(held_for_change=None).update(held_for_change=None, hide=False)
+        self.message_user(request, f'Released {n} media. Set the right species first if it is still on the wrong one.')
     readonly_fields = ['created', 'updated', 'image_preview', 'machine_assertion_summary']
     date_hierarchy = 'created'
     list_per_page = 25
@@ -198,7 +204,7 @@ class MediaAdmin(HideableAdminMixin, admin.ModelAdmin):
 
     fieldsets = (
         ('Species', {
-            'fields': ('species',)
+            'fields': ('species', 'subspecies', 'held_for_change')
         }),
         ('Media Information', {
             'fields': ('source', 'type', 'contributor', 'url', 'link', 'hide', 'duplicate_of', 'image_preview')

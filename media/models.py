@@ -34,6 +34,15 @@ class Media(models.Model):
         related_name='media',
         help_text='Form this media shows (set on a lump so a later split can move it).',
     )
+    held_for_change = models.ForeignKey(
+        'jizz.TaxonomyChange',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='held_media',
+        help_text='Hidden because a species split left it unclear which new species it shows; '
+        'released (and unhidden) once classified or assigned by hand.',
+    )
     source = models.CharField(max_length=200, choices=IMAGE_SOURCES, blank=True, default='')
     contributor =models.CharField(max_length=500, blank=True, default='')
     copyright_text = models.CharField(max_length=500, blank=True, default='', help_text='Copyright text as received from scraper')

@@ -99,16 +99,31 @@ def fetch_latest_taxonomy_version(*, timeout: int = 60) -> str:
     return ''
 
 
+def _child_info(row: dict[str, Any], existing: Species | None) -> dict[str, Any]:
+    return {
+        'code': row['speciesCode'], 'name': row.get('comName') or '', 'name_latin': row.get('sciName') or '',
+        'tax_ordering': row.get('taxonOrder'), 'family_sci': row.get('familySciName') or '',
+        'exists_id': existing.id if existing else None,
+    }
+
+
+def ours_by_code_stem(ours: dict[str, Species], stem: str) -> set[str]:
+    """Codes of our species that share the stem but are not this species (never a successor by stem)."""
+    return set()
+
+
 def detect_changes(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
     """
     Compare the eBird taxonomy (species + issf + form rows) with our species table.
 
     Returns change dicts ``{change_type, old_codes, new_codes, report}``:
     - lump:    our species is now a subspecies/form that reports as another of our species
-    - split:   a code we hold as a subspecies is now a full species
-    - new:     a species code we do not know at all
-    - retired: our species code is gone from the feed
-    - rename:  same code, different scientific name
+    - split:   our species is replaced by two or more species (children found through the
+               subspecies codes eBird links, plus a same-named species)
+    - rename:  same code with a new scientific name, or ``kind: recode`` when the species lives
+               on under a new code (one successor, possibly already in our table)
+    - new:     a species code we do not know and that replaces nothing of ours
+    - retired: our species code is gone from the feed with no successor
     """
     rows = list(rows)
     species_rows = {r['speciesCode']: r for r in rows if r.get('category') == 'species' and r.get('speciesCode')}
@@ -120,12 +135,42 @@ def detect_changes(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
         raise ValueError('eBird feed has no species rows; refusing to detect changes')
 
     ours = {s.code: s for s in Species.objects.filter(retired_at__isnull=True)}
+    ours_by_latin: dict[str, list[Species]] = {}
+    for sp in ours.values():
+        ours_by_latin.setdefault(sp.name_latin, []).append(sp)
     alias_codes = set(SpeciesAlias.objects.values_list('code', flat=True))
     subspecies_by_code = {s.code: s for s in Subspecies.objects.select_related('species')}
+    subs_by_species: dict[int, list[Subspecies]] = {}
+    for sub in subspecies_by_code.values():
+        subs_by_species.setdefault(sub.species_id, []).append(sub)
+    new_by_latin = {
+        r.get('sciName'): c for c, r in species_rows.items()
+        if c not in ours and c not in alias_codes and r.get('sciName')
+    }
     changes: list[dict[str, Any]] = []
+    consumed_new: set[str] = set()
 
     for code, sp in ours.items():
         if code in species_rows:
+            # carve-out: the species stays, but a subspecies we hold became a species of its own
+            carved = {
+                sub.code: _child_info(species_rows[sub.code], None)
+                for sub in subs_by_species.get(sp.id, [])
+                if sub.source == Subspecies.SOURCE_EBIRD and sub.code in species_rows
+                and sub.code not in ours and sub.code not in alias_codes
+            }
+            if carved:
+                consumed_new.update(carved)
+                children = {code: _child_info(species_rows[code], sp), **carved}
+                changes.append({
+                    'change_type': TaxonomyChange.TYPE_SPLIT,
+                    'old_codes': [code], 'new_codes': sorted(children),
+                    'report': {
+                        'species_id': sp.id, 'name': sp.name, 'name_latin': sp.name_latin,
+                        'children': children, 'continuing': code,
+                        'subspecies_map': {c: c for c in carved},
+                    },
+                })
             latin = species_rows[code].get('sciName') or ''
             if latin and sp.name_latin and latin != sp.name_latin:
                 changes.append({
@@ -151,38 +196,77 @@ def detect_changes(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
                     'sub_name_latin': row.get('sciName') or '',
                 },
             })
-        else:
+            continue
+
+        # Successors: species that now carry this one's subspecies, or that share its scientific name.
+        child_codes: dict[str, dict[str, Any]] = {}
+        sub_map: dict[str, str] = {}
+        for sub in subs_by_species.get(sp.id, []):
+            feed = sub_rows.get(sub.code)
+            child = (feed or {}).get('reportAs')
+            if child and child in species_rows and child != code:
+                sub_map[sub.code] = child
+                child_codes[child] = _child_info(species_rows[child], ours.get(child))
+        # eBird subspecies codes share the species code stem ('marwre' -> 'marwre3', 'marwre5').
+        stem = code.rstrip('0123456789')
+        for sub_code, feed in sub_rows.items():
+            if sub_code.startswith(stem) and sub_code[len(stem):].isdigit() and sub_code not in sub_map:
+                child = feed.get('reportAs')
+                if child and child in species_rows and child != code and child not in ours_by_code_stem(ours, stem):
+                    sub_map[sub_code] = child
+                    child_codes[child] = _child_info(species_rows[child], ours.get(child))
+        for other in ours_by_latin.get(sp.name_latin, []):
+            if other.id != sp.id and other.code in species_rows:
+                child_codes[other.code] = _child_info(species_rows[other.code], other)
+        same_new = new_by_latin.get(sp.name_latin)
+        if same_new:
+            child_codes[same_new] = _child_info(species_rows[same_new], None)
+
+        if not child_codes:
             changes.append({
                 'change_type': TaxonomyChange.TYPE_RETIRED,
                 'old_codes': [code], 'new_codes': [],
                 'report': {'species_id': sp.id, 'name': sp.name, 'name_latin': sp.name_latin},
             })
+            continue
+        consumed_new.update(c for c, info in child_codes.items() if not info['exists_id'])
+        continuing = next((c for c, i in child_codes.items() if i['name_latin'] == sp.name_latin), None)
+        if continuing is None and len(child_codes) == 1:
+            continuing = next(iter(child_codes))
+        report = {
+            'species_id': sp.id, 'name': sp.name, 'name_latin': sp.name_latin,
+            'children': child_codes, 'continuing': continuing, 'subspecies_map': sub_map,
+        }
+        recode = len(child_codes) == 1 and continuing is not None
+        changes.append({
+            'change_type': TaxonomyChange.TYPE_RENAME if recode else TaxonomyChange.TYPE_SPLIT,
+            'old_codes': [code], 'new_codes': sorted(child_codes),
+            'report': {**report, 'kind': 'recode'} if recode else report,
+        })
 
     for code, row in species_rows.items():
-        if code in ours or code in alias_codes:
+        if code in ours or code in alias_codes or code in consumed_new:
             continue
-        sub = subspecies_by_code.get(code)
-        if sub is not None and sub.source == Subspecies.SOURCE_EBIRD:
-            changes.append({
-                'change_type': TaxonomyChange.TYPE_SPLIT,
-                'old_codes': [sub.species.code], 'new_codes': [code],
-                'report': {
-                    'from_species_id': sub.species_id, 'from_name': sub.species.name,
-                    'name': row.get('comName'), 'name_latin': row.get('sciName'),
-                },
-            })
-        elif sub is None:
-            changes.append({
-                'change_type': TaxonomyChange.TYPE_NEW,
-                'old_codes': [], 'new_codes': [code],
-                'report': {'name': row.get('comName'), 'name_latin': row.get('sciName')},
-            })
+        if code in subspecies_by_code and subspecies_by_code[code].source == Subspecies.SOURCE_EBIRD:
+            continue  # a subspecies we hold that became a species: reported with its old species
+        changes.append({
+            'change_type': TaxonomyChange.TYPE_NEW,
+            'old_codes': [], 'new_codes': [code],
+            'report': {'name': row.get('comName'), 'name_latin': row.get('sciName')},
+        })
     return changes
 
 
 def record_changes(changes: list[dict[str, Any]], version: TaxonomyVersion | None) -> dict[str, int]:
     """Store detected changes as proposals; identical open/applied ones are not duplicated."""
-    stats = {'recorded': 0, 'already_known': 0}
+    stats = {'recorded': 0, 'already_known': 0, 'superseded': 0}
+    current = {(c['change_type'], tuple(c['old_codes']), tuple(c['new_codes'])) for c in changes}
+    for stale in TaxonomyChange.objects.filter(status=TaxonomyChange.STATUS_PROPOSED):
+        if (stale.change_type, tuple(stale.old_codes), tuple(stale.new_codes)) not in current:
+            stale.status = TaxonomyChange.STATUS_IGNORED
+            stale.report = {**(stale.report or {}), 'superseded': True}
+            stale.save(update_fields=['status', 'report'])
+            stats['superseded'] += 1
     for ch in changes:
         existing = TaxonomyChange.objects.filter(
             change_type=ch['change_type'], old_codes=ch['old_codes'], new_codes=ch['new_codes'],
@@ -298,6 +382,15 @@ def _move_region_months(old: Species, survivor: Species) -> int:
     return moved
 
 
+def subspecies_latin_name(survivor_latin: str, former_latin: str) -> str:
+    """'Acanthis flammea' + 'Acanthis hornemanni' -> 'Acanthis flammea hornemanni' (the form as a trinomial)."""
+    survivor_latin = (survivor_latin or '').strip()
+    parts = (former_latin or '').split()
+    if len(parts) != 2 or len(survivor_latin.split()) != 2:
+        return former_latin  # already a trinomial or unexpected shape: leave untouched
+    return f'{survivor_latin} {parts[1]}'
+
+
 @transaction.atomic
 def apply_lump(change: TaxonomyChange, *, version: str = '') -> dict[str, Any]:
     """
@@ -358,7 +451,9 @@ def apply_lump(change: TaxonomyChange, *, version: str = '') -> dict[str, Any]:
     Species.objects.filter(merged_into=old).update(merged_into=survivor)
     old.retired_at = timezone.now()
     old.merged_into = survivor
-    old.save(update_fields=['retired_at', 'merged_into'])
+    old.ebird_category = sub.ebird_category  # no longer a species: issf / form
+    old.name_latin = subspecies_latin_name(survivor.name_latin, old.name_latin)  # snapshot above keeps the original
+    old.save(update_fields=['retired_at', 'merged_into', 'ebird_category', 'name_latin'])
 
     change.status = TaxonomyChange.STATUS_APPLIED
     change.applied_at = timezone.now()
@@ -380,19 +475,42 @@ def apply_rename(change: TaxonomyChange) -> dict[str, Any]:
     return {'renamed': change.old_codes[0]}
 
 
+def apply_change(change: TaxonomyChange, version: str = '') -> dict[str, Any]:
+    """Apply one proposed change of a kind we can apply automatically."""
+    from jizz.services.taxonomy_succession import apply_succession
+
+    rep = change.report or {}
+    if change.change_type == TaxonomyChange.TYPE_LUMP:
+        return apply_lump(change, version=version)
+    if change.change_type == TaxonomyChange.TYPE_SPLIT or rep.get('kind') == 'recode':
+        return apply_succession(change, version=version)
+    if change.change_type == TaxonomyChange.TYPE_RENAME:
+        return apply_rename(change)
+    raise ValueError(f'{change.change_type} changes are not applied automatically')
+
+
+AUTO_TYPES = (TaxonomyChange.TYPE_LUMP, TaxonomyChange.TYPE_SPLIT, TaxonomyChange.TYPE_RENAME)
+
+
 def apply_proposed(version: str = '') -> dict[str, int]:
-    """Apply every proposed lump and rename. Splits, new and retired species stay manual."""
-    stats = {'lumps': 0, 'renames': 0, 'failed': 0}
-    for change in TaxonomyChange.objects.filter(status=TaxonomyChange.STATUS_PROPOSED).order_by('id'):
+    """Apply every proposed lump, split, recode and rename. New and retired species stay manual."""
+    stats = {'lumps': 0, 'splits': 0, 'recodes': 0, 'renames': 0, 'failed': 0}
+    for change in TaxonomyChange.objects.filter(
+        status=TaxonomyChange.STATUS_PROPOSED, change_type__in=AUTO_TYPES,
+    ).order_by('id'):
         try:
+            apply_change(change, version=version)
             if change.change_type == TaxonomyChange.TYPE_LUMP:
-                apply_lump(change, version=version)
                 stats['lumps'] += 1
-            elif change.change_type == TaxonomyChange.TYPE_RENAME:
-                apply_rename(change)
+            elif change.change_type == TaxonomyChange.TYPE_SPLIT:
+                stats['splits'] += 1
+            elif (change.report or {}).get('kind') == 'recode':
+                stats['recodes'] += 1
+            else:
                 stats['renames'] += 1
         except Exception as exc:  # one bad change must not block the rest
             stats['failed'] += 1
+            change.refresh_from_db()
             change.report = {**(change.report or {}), 'error': str(exc)}
             change.save(update_fields=['report'])
     return stats

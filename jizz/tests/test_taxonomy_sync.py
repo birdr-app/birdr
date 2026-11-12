@@ -40,7 +40,7 @@ class DetectTests(TestCase):
         Subspecies.objects.create(species=self.redpoll, code='mealy', name='Mealy')
         rows = [sp('redpol1', sci='Acanthis flammea'), sp('lesred1', sci='Acanthis cabaret'),
                 sp('gone1', sci='Gone gone'), sp('mealy')]
-        self.assertIn(('split', ('redpol1',), ('mealy',)), self.kinds(rows))
+        self.assertIn(('split', ('redpol1',), ('mealy', 'redpol1')), self.kinds(rows))
 
     def test_empty_feed_refused(self):
         with self.assertRaises(ValueError):
@@ -72,6 +72,9 @@ class ApplyLumpTests(TestCase):
         self.assertEqual(m.subspecies.code, 'lesred1')
         self.assertEqual(old.merged_into, survivor)
         self.assertIsNotNone(old.retired_at)
+        self.assertEqual(old.ebird_category, 'issf')
+        self.assertEqual(old.name_latin, 'Acanthis flammea cabaret')
+        self.assertEqual(change.report['applied']['former_species']['name_latin'], 'Acanthis cabaret')
         self.assertEqual(Subspecies.objects.get(code='lesred1').source, Subspecies.SOURCE_LUMP)
         self.assertEqual(Subspecies.objects.get(code='lesred1').name_latin, 'Acanthis flammea cabaret')
         self.assertEqual(resolve_species_by_code('lesred1'), old)  # still a current Species row
@@ -131,3 +134,11 @@ class LumpGamesAndApiTests(TestCase):
         r = self.client.get(f'/api/species/{self.old.id}/')
         self.assertEqual(r.status_code, 200)
         self.assertEqual(r.json()['id'], self.survivor.id)
+
+
+class SupersedeTests(TestCase):
+    def test_proposal_no_longer_detected_is_ignored(self):
+        TaxonomyChange.objects.create(change_type='retired', old_codes=['x1'], new_codes=[])
+        stats = record_changes([], None)
+        self.assertEqual(stats['superseded'], 1)
+        self.assertEqual(TaxonomyChange.objects.get().status, 'ignored')

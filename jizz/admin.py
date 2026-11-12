@@ -2608,23 +2608,22 @@ class TaxonomyChangeAdmin(admin.ModelAdmin):
     readonly_fields = ['created', 'applied_at', 'report']
     actions = ['apply_selected', 'ignore_selected']
 
-    @admin.action(description='Apply selected lumps / renames')
+    @admin.action(description='Apply selected lumps / splits / renames')
     def apply_selected(self, request, queryset):
-        from jizz.services.taxonomy_sync import apply_lump, apply_rename
+        from jizz.services.taxonomy_sync import AUTO_TYPES, apply_change
         done = failed = 0
-        for change in queryset.filter(status=TaxonomyChange.STATUS_PROPOSED):
+        for change in queryset.filter(status=TaxonomyChange.STATUS_PROPOSED, change_type__in=AUTO_TYPES):
             try:
-                if change.change_type == TaxonomyChange.TYPE_LUMP:
-                    apply_lump(change)
-                elif change.change_type == TaxonomyChange.TYPE_RENAME:
-                    apply_rename(change)
-                else:
-                    continue
+                apply_change(change)
                 done += 1
             except Exception as exc:
                 failed += 1
                 self.message_user(request, f'{change}: {exc}', level='error')
-        self.message_user(request, f'Applied {done}, failed {failed}.')
+        self.message_user(
+            request,
+            f'Applied {done}, failed {failed}. For splits, run "sync_taxonomy --apply" to classify held media, '
+            f'rebuild country lists and collect new media.',
+        )
 
     @admin.action(description='Mark selected as ignored')
     def ignore_selected(self, request, queryset):

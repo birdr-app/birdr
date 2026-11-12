@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.core.management.base import BaseCommand
 
 from jizz.models import TaxonomyChange, TaxonomyVersion
@@ -9,6 +10,7 @@ from jizz.services.taxonomy_sync import (
     import_subspecies,
     record_changes,
 )
+from jizz.services.taxonomy_succession import finish_successions
 from jizz.services.taxonomy_texts import fetch_ebird_taxonomy
 
 
@@ -22,6 +24,12 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('--apply', action='store_true',
                             help='Apply all proposed lumps and renames (including ones from earlier runs).')
+        parser.add_argument('--skip-network', action='store_true',
+                            help='With --apply: do not classify held media, rebuild country lists or scrape media.')
+        parser.add_argument('--no-collect-media', action='store_true',
+                            help='With --apply: skip scraping new media for successor species.')
+        parser.add_argument('--classify-limit', type=int, default=500,
+                            help='Held media to look up per split per run (default 500).')
         parser.add_argument('--dry-run', action='store_true', help='Report only, write nothing.')
 
     def handle(self, *args, **options):
@@ -48,6 +56,8 @@ class Command(BaseCommand):
         if options['apply']:
             self.stdout.write(f'applied: {apply_proposed(version)}')
         self.stdout.write(f'subspecies: {import_subspecies(rows)}')
+        if options['apply'] and not options['skip_network']:
+            self.stdout.write(f'follow-up: {finish_successions(token=(settings.EBIRD_API_TOKEN or ""), classify_limit=options["classify_limit"], collect=not options["no_collect_media"])}')
         if tv:
             tv.summary = {'rows': len(rows), 'detected': counts}
             tv.save(update_fields=['summary'])
