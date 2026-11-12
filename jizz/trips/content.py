@@ -71,6 +71,32 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'parent': 'ES',
     },
+    'CO': {'name': {'en': 'Colombia', 'nl': 'Colombia'}, 'languages': ('en', 'nl')},
+    'CO-CARIBBEAN': {
+        'name': {'en': 'Caribbean coast and Santa Marta', 'nl': 'Caribische kust en Santa Marta'},
+        'languages': ('en', 'nl'),
+        'parent': 'CO',
+    },
+    'CO-CHOCO': {
+        'name': {'en': 'Chocó and the Western Andes', 'nl': 'Chocó en de Westelijke Andes'},
+        'languages': ('en', 'nl'),
+        'parent': 'CO',
+    },
+    'CO-ANDES': {
+        'name': {'en': 'Central and Eastern Andes', 'nl': 'Centrale en Oostelijke Andes'},
+        'languages': ('en', 'nl'),
+        'parent': 'CO',
+    },
+    'CO-AMAZON': {
+        'name': {'en': 'Amazon', 'nl': 'Amazone'},
+        'languages': ('en', 'nl'),
+        'parent': 'CO',
+    },
+    'CO-LLANOS': {
+        'name': {'en': 'Llanos', 'nl': 'Llanos'},
+        'languages': ('en', 'nl'),
+        'parent': 'CO',
+    },
     'CR-CARIBBEAN': {
         'name': {'en': 'Caribbean lowlands', 'nl': 'Caribisch laagland'},
         'languages': ('en', 'nl'),
