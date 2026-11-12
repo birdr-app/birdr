@@ -655,6 +655,8 @@ def birds_index(request):
 @require_GET
 def bird_page(request, slug: str):
     species = get_object_or_404(Species, slug=slug)
+    if species.retired_at and species.merged_into_id and species.merged_into.slug:
+        return redirect('marketing-bird', slug=species.merged_into.slug, permanent=True)
     photos = _photo_urls(request, species, limit=2)
     cover = species_cover_url(species, request)
     if not photos and not cover:

@@ -162,6 +162,7 @@ def birds_paths() -> list[str]:
 def birds_lastmods() -> dict[str, date]:
     descriptions = (
         SpeciesDescription.objects.exclude(Q(species__slug='') | Q(species__slug__isnull=True))
+        .filter(species__retired_at__isnull=True)
         .values_list('species__slug', 'updated')
     )
     return {
@@ -182,6 +183,8 @@ def _comparisons() -> dict[str, datetime]:
         comparison_type='species',
         species_1__isnull=False,
         species_2__isnull=False,
+        species_1__retired_at__isnull=True,
+        species_2__retired_at__isnull=True,
     ).order_by('id').values_list(
         'species_1_id', 'species_1__slug', 'species_2_id', 'species_2__slug', 'updated_at',
     )

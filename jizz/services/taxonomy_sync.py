@@ -79,7 +79,7 @@ def import_subspecies(rows: Iterable[dict[str, Any]], *, dry_run: bool = False) 
 import requests
 from django.utils import timezone
 
-from jizz.models import CountrySpecies, SpeciesAlias, TaxonomyChange, TaxonomyVersion
+from jizz.models import CountrySpecies, RegionSpeciesMonth, SpeciesAlias, TaxonomyChange, TaxonomyVersion
 from jizz.services.taxonomy_texts import EBIRD_TAXONOMY_URL, _ebird_headers
 
 EBIRD_TAXONOMY_VERSIONS_URL = 'https://api.ebird.org/v2/ref/taxonomy/versions'
@@ -147,6 +147,8 @@ def detect_changes(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
                     'species_id': sp.id, 'name': sp.name, 'name_latin': sp.name_latin,
                     'into_species_id': target.id, 'into_name': target.name,
                     'ebird_category': row.get('category'),
+                    'sub_name': row.get('comName') or '',
+                    'sub_name_latin': row.get('sciName') or '',
                 },
             })
         else:
@@ -194,15 +196,74 @@ def record_changes(changes: list[dict[str, Any]], version: TaxonomyVersion | Non
     return stats
 
 
-def _move_country_species(old: Species, survivor: Species) -> dict[str, int]:
+def _move_country_species(old: Species, survivor: Species) -> dict[str, Any]:
+    """
+    Repoint country records the survivor lacks. Overlapping ones are removed so the retired
+    species leaves country games, but first snapshotted (incl. monthly frequencies) into the
+    returned dict, which is stored on the TaxonomyChange report.
+    """
     have = set(CountrySpecies.objects.filter(species=survivor).values_list('country_id', flat=True))
     moved = CountrySpecies.objects.filter(species=old).exclude(country_id__in=have)
-    result = {'country_moved': moved.count()}
+    result: dict[str, Any] = {'country_moved': moved.count()}
     moved.update(species=survivor)
-    leftover = CountrySpecies.objects.filter(species=old)
-    result['country_dropped'] = leftover.count()
-    leftover.delete()  # survivor already covers that country; keeps the retired species out of country games
+    leftover = CountrySpecies.objects.filter(species=old).prefetch_related('frequency_by_month')
+    snapshot = []
+    for cs in leftover:
+        snapshot.append({
+            'country_id': cs.country_id, 'status': cs.status, 'frequency': cs.frequency,
+            'frequency_pct': cs.frequency_pct,
+            'monthly': [
+                {'month': f.month, 'reference_year': f.reference_year, 'frequency_pct': f.frequency_pct}
+                for f in cs.frequency_by_month.all()
+            ],
+        })
+    result['country_dropped'] = len(snapshot)
+    result['country_dropped_snapshot'] = snapshot
+    leftover.delete()
     return result
+
+
+def _repoint_games(old: Species, survivor: Species) -> dict[str, int]:
+    """
+    Practice games must not reference a species that no longer has media. Point focus, pair and
+    mixup species at the survivor. A pair that collapses into one species is cleared; a mixup
+    keeps each species once.
+    """
+    from jizz.models import Game
+
+    result = {
+        'games_focus': Game.objects.filter(focus_species=old).update(focus_species=survivor),
+        'games_pair_cleared': 0,
+        'games_pair': 0,
+        'games_mixup': 0,
+    }
+    for game in Game.objects.filter(pair_species_low=old) | Game.objects.filter(pair_species_high=old):
+        low = survivor.id if game.pair_species_low_id == old.id else game.pair_species_low_id
+        high = survivor.id if game.pair_species_high_id == old.id else game.pair_species_high_id
+        if low == high:
+            low = high = None
+            result['games_pair_cleared'] += 1
+        else:
+            result['games_pair'] += 1
+        Game.objects.filter(pk=game.pk).update(pair_species_low_id=low, pair_species_high_id=high)
+    through = Game.mixup_species.through
+    for game_id in list(through.objects.filter(species_id=old.id).values_list('game_id', flat=True)):
+        through.objects.filter(game_id=game_id, species_id=old.id).delete()
+        through.objects.get_or_create(game_id=game_id, species_id=survivor.id)
+        result['games_mixup'] += 1
+    return result
+
+
+def _move_region_months(old: Species, survivor: Species) -> int:
+    """Repoint trip/region month records the survivor lacks; conflicting ones stay on the old species."""
+    have = set(RegionSpeciesMonth.objects.filter(species=survivor).values_list('region_code', 'month'))
+    moved = 0
+    for rec in RegionSpeciesMonth.objects.filter(species=old):
+        if (rec.region_code, rec.month) not in have:
+            rec.species = survivor
+            rec.save(update_fields=['species'])
+            moved += 1
+    return moved
 
 
 @transaction.atomic
@@ -221,10 +282,16 @@ def apply_lump(change: TaxonomyChange, *, version: str = '') -> dict[str, Any]:
     if old.id == survivor.id:
         raise ValueError('Cannot merge a species into itself')
 
+    # Subspecies names are trinomials (Acanthis flammea cabaret): prefer eBird's own name from the
+    # detected change, then a row already imported from eBird, and only last the old species' binomial.
+    rep = change.report or {}
+    existing = Subspecies.objects.filter(code=old.code).first()
+    sub_latin = rep.get('sub_name_latin') or (existing.name_latin if existing else '') or old.name_latin
+    sub_name = rep.get('sub_name') or (existing.name if existing else '') or old.name
     sub, _ = Subspecies.objects.update_or_create(
         code=old.code,
         defaults={
-            'species': survivor, 'name': old.name, 'name_latin': old.name_latin,
+            'species': survivor, 'name': sub_name, 'name_latin': sub_latin,
             'ebird_category': (change.report or {}).get('ebird_category') or 'issf',
             'tax_ordering': old.tax_ordering, 'active': True,
             'source': Subspecies.SOURCE_LUMP, 'former_species_id': old.id,
@@ -246,6 +313,16 @@ def apply_lump(change: TaxonomyChange, *, version: str = '') -> dict[str, Any]:
         dupes.delete()
         result[f'{model.__name__}_moved'] = qs.update(species=survivor)
     result.update(_move_country_species(old, survivor))
+    result['region_months_moved'] = _move_region_months(old, survivor)
+    result.update(_repoint_games(old, survivor))
+    # Everything else (names/translations, illustration, traits, facts, questions, answers, games)
+    # stays on the retired species row, which is kept. Record how it looked before the lump.
+    result['former_species'] = {
+        'id': old.id, 'code': old.code, 'slug': old.slug, 'name': old.name, 'name_nl': old.name_nl,
+        'name_latin': old.name_latin, 'tax_ordering': old.tax_ordering,
+        'taxon_concept_id': old.taxon_concept_id, 'taxonomic_family_id': old.taxonomic_family_id,
+        'taxonomic_genus_id': old.taxonomic_genus_id, 'species_group_id': old.species_group_id,
+    }
     Species.objects.filter(merged_into=old).update(merged_into=survivor)
     old.retired_at = timezone.now()
     old.merged_into = survivor

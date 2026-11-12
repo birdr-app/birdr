@@ -494,6 +494,7 @@ def public_species_qs():
     """Species with a slug, public photo, and membership on a real country list."""
     return (
         Species.objects.filter(
+            retired_at__isnull=True,
             media__type='image',
             media__hide=False,
             countryspecies__country_id__in=indexable_country_codes(),

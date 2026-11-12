@@ -171,7 +171,7 @@ SPECIES_LIST_CACHE_TTL = 3600
 
 class SpeciesListView(ListAPIView):
     serializer_class = SpeciesListSerializer
-    queryset = Species.objects.select_related('taxonomic_order', 'taxonomic_family')
+    queryset = Species.objects.filter(retired_at__isnull=True).select_related('taxonomic_order', 'taxonomic_family')
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ["countryspecies__country"]
     permission_classes = [AllowAny]
@@ -215,18 +215,26 @@ class SpeciesListView(ListAPIView):
         return response
 
 
-class SpeciesDetailView(RetrieveAPIView):
+class _ResolveMergedSpeciesMixin:
+    """A species lumped into another resolves to the survivor, so old ids and slugs keep working."""
+
+    def get_object(self):
+        obj = super().get_object()
+        return obj.merged_into if obj.retired_at and obj.merged_into_id else obj
+
+
+class SpeciesDetailView(_ResolveMergedSpeciesMixin, RetrieveAPIView):
     serializer_class = SpeciesDetailSerializer
-    queryset = Species.objects.all()
+    queryset = Species.objects.select_related('merged_into')
     permission_classes = [AllowAny]
     authentication_classes = []  # No authentication required for public species data
 
 
-class SpeciesBySlugView(RetrieveAPIView):
+class SpeciesBySlugView(_ResolveMergedSpeciesMixin, RetrieveAPIView):
     """Public species lookup by marketing slug for practice start pages."""
 
     serializer_class = SpeciesSlugSerializer
-    queryset = Species.objects.all()
+    queryset = Species.objects.select_related('merged_into')
     lookup_field = 'slug'
     permission_classes = [AllowAny]
     authentication_classes = []

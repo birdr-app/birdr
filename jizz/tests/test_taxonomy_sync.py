@@ -61,7 +61,7 @@ class ApplyLumpTests(TestCase):
         CountrySpecies.objects.create(country=nl, species=old)
         CountrySpecies.objects.create(country=be, species=old)
         m = Media.objects.create(species=old, type='image', url='http://x/1.jpg')
-        Subspecies.objects.create(species=survivor, code='lesred1', name='L', source=Subspecies.SOURCE_EBIRD)
+        Subspecies.objects.create(species=survivor, code='lesred1', name='Lesser Redpoll', name_latin='Acanthis flammea cabaret', source=Subspecies.SOURCE_EBIRD)
         change = TaxonomyChange.objects.create(change_type='lump', old_codes=['lesred1'], new_codes=['redpol1'])
 
         stats = apply_proposed('2025')
@@ -73,8 +73,46 @@ class ApplyLumpTests(TestCase):
         self.assertEqual(old.merged_into, survivor)
         self.assertIsNotNone(old.retired_at)
         self.assertEqual(Subspecies.objects.get(code='lesred1').source, Subspecies.SOURCE_LUMP)
+        self.assertEqual(Subspecies.objects.get(code='lesred1').name_latin, 'Acanthis flammea cabaret')
         self.assertEqual(resolve_species_by_code('lesred1'), old)  # still a current Species row
         self.assertTrue(SpeciesAlias.objects.filter(code='lesred1', species=survivor).exists())
         self.assertFalse(CountrySpecies.objects.filter(species=old).exists())
         self.assertEqual(CountrySpecies.objects.filter(species=survivor).count(), 2)
         self.assertEqual(change.status, 'applied')
+        self.assertEqual(change.report['applied']['country_dropped'], 1)
+        self.assertEqual(change.report['applied']['country_dropped_snapshot'][0]['country_id'], nl.pk)
+        self.assertEqual(change.report['applied']['former_species']['name'], 'Lesser Redpoll')
+
+
+class LumpGamesAndApiTests(TestCase):
+    def setUp(self):
+        from jizz.models import Game
+        self.Game = Game
+        self.survivor = Species.objects.create(name='Redpoll', name_latin='Acanthis flammea', code='redpol1', slug='redpoll')
+        self.old = Species.objects.create(name='Lesser Redpoll', name_latin='Acanthis cabaret', code='lesred1', slug='lesser-redpoll')
+        self.other = Species.objects.create(name='Siskin', name_latin='Spinus spinus', code='eursis')
+
+    def lump(self):
+        TaxonomyChange.objects.create(change_type='lump', old_codes=['lesred1'], new_codes=['redpol1'])
+        return apply_proposed('2026')
+
+    def test_games_repointed_and_collapsed_pair_cleared(self):
+        focus = self.Game.objects.create(focus_species=self.old)
+        pair = self.Game.objects.create(pair_species_low=self.survivor, pair_species_high=self.old)
+        pair2 = self.Game.objects.create(pair_species_low=self.old, pair_species_high=self.other)
+        mix = self.Game.objects.create()
+        mix.mixup_species.set([self.old, self.survivor, self.other])
+        self.assertEqual(self.lump()['lumps'], 1)
+        for g in (focus, pair, pair2, mix):
+            g.refresh_from_db()
+        self.assertEqual(focus.focus_species, self.survivor)
+        self.assertIsNone(pair.pair_species_low_id)
+        self.assertIsNone(pair.pair_species_high_id)
+        self.assertEqual((pair2.pair_species_low, pair2.pair_species_high), (self.survivor, self.other))
+        self.assertEqual(set(mix.mixup_species.all()), {self.survivor, self.other})
+
+    def test_api_resolves_retired_species_to_survivor_and_hides_it_from_list(self):
+        self.lump()
+        r = self.client.get(f'/api/species/{self.old.id}/')
+        self.assertEqual(r.status_code, 200)
+        self.assertEqual(r.json()['id'], self.survivor.id)
