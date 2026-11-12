@@ -250,7 +250,7 @@ function Card({
       <Kicker>{t('trip_bird_of', 'Bird {n} of {total}', { n: index + 1, total })}</Kicker>
       {photo ? (
         <>
-          <TripPhoto media={photo} />
+          <TripPhoto media={photo} flag />
           <Text fontSize="xs" color="primary.700" mt={-2}>
             {credit(photo, t('trip_photo', 'Photo'))}
           </Text>
@@ -291,7 +291,7 @@ function Card({
         <Flex gap={2}>
           {bird.images.slice(1, 3).map((m) => (
             <Box key={m.id} flex={1}>
-              <TripPhoto media={m} ratio={5 / 3} />
+              <TripPhoto media={m} ratio={5 / 3} flag />
             </Box>
           ))}
         </Flex>

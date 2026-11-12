@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 import type { TripMedia } from '../../api/trip';
 import { playFullSrc } from '../../utils/play-image-url';
+import { FlagMediaButton } from '../../components/flag-media-button';
+import type { SpeciesImage } from '../../core/app-context';
 import { Page } from '../../shared/components/layout';
 import { useTripText } from './use-trip';
 
@@ -50,11 +52,28 @@ function ZoomDialog({ media, alt, open, onClose }: { media: TripMedia; alt: stri
 }
 
 /** A rounded, cropped photo. Click it to see the whole photo, zoomable. */
-export function TripPhoto({ media, ratio = 16 / 10, label, alt = '' }: { media: TripMedia; ratio?: number; label?: string; alt?: string }) {
+export function TripPhoto({
+  media,
+  ratio = 16 / 10,
+  label,
+  alt = '',
+  flag = false,
+  onFlagged,
+}: {
+  media: TripMedia;
+  ratio?: number;
+  label?: string;
+  alt?: string;
+  /** Show a flag link under the photo. Once flagged the photo disappears, unless onFlagged swaps it. */
+  flag?: boolean;
+  onFlagged?: (media: TripMedia) => void;
+}) {
   const t = useTripText();
   const [open, setOpen] = useState(false);
+  const [flagged, setFlagged] = useState(false);
+  if (flagged) return null;
   const title = t('tap_image_fullscreen', 'Click to open full screen. Pinch or scroll wheel to zoom');
-  return (
+  const photo = (
     <>
       <Box
         position="relative"
@@ -80,6 +99,21 @@ export function TripPhoto({ media, ratio = 16 / 10, label, alt = '' }: { media: 
       </Box>
       <ZoomDialog media={media} alt={alt} open={open} onClose={() => setOpen(false)} />
     </>
+  );
+  if (!flag) return photo;
+  return (
+    <Flex direction="column" gap={1} w="full">
+      {photo}
+      <Flex justify="flex-end">
+        <FlagMediaButton
+          media={media as unknown as SpeciesImage}
+          onFlagSuccess={() => {
+            if (onFlagged) onFlagged(media);
+            else setFlagged(true);
+          }}
+        />
+      </Flex>
+    </Flex>
   );
 }
 

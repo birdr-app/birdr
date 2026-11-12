@@ -136,7 +136,7 @@ function GroupCard({ trip, group, knownGroups, known }: { trip: Trip; group: Tri
         <Flex gap={2}>
           {examples.map((m) => (
             <Box key={m.id} flex={1} minW={0}>
-              <TripPhoto media={m} ratio={1} />
+              <TripPhoto media={m} ratio={1} flag />
             </Box>
           ))}
         </Flex>
@@ -200,6 +200,8 @@ function FamilyQuiz({ trip, knownGroups, onDone }: { trip: Trip; knownGroups: Se
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [score, setScore] = useState(0);
+  const [flagged, setFlagged] = useState<number[]>([]);
+  const [swapped, setSwapped] = useState<Record<number, TripMedia>>({});
   const name = (slug: string) => trip.groups.find((g) => g.slug === slug)?.name ?? slug;
   const q = questions[index];
   if (!q) {
@@ -209,11 +211,23 @@ function FamilyQuiz({ trip, knownGroups, onDone }: { trip: Trip; knownGroups: Se
       </Button>
     );
   }
+  const shown = swapped[index] ?? q.image;
   const answered = picked !== null;
   return (
     <Flex direction="column" gap={3}>
       <Kicker>{t('trip_family_q', 'Family quiz · question {n} of {total}', { n: index + 1, total: questions.length })}</Kicker>
-      <TripPhoto key={q.image.id} media={q.image} />
+      <TripPhoto
+        key={`${index}-${shown.id}`}
+        media={shown}
+        flag
+        onFlagged={(m) => {
+          const flaggedIds = [...flagged, m.id];
+          setFlagged(flaggedIds);
+          const group = trip.groups.find((g) => g.slug === q.group);
+          const left = (group?.species ?? []).flatMap((c) => trip.species[c]?.images ?? []).filter((x) => !flaggedIds.includes(x.id));
+          if (left.length) setSwapped((s) => ({ ...s, [index]: left[Math.floor(Math.random() * left.length)] }));
+        }}
+      />
       <Text fontSize="lg" fontWeight="700" color="primary.800">
         {t('trip_which_group', 'Which kind of bird is this?')}
       </Text>

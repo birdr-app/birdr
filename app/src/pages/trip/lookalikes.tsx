@@ -2,9 +2,9 @@ import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { countryCodeToFlag } from '../../api/birdrJourney';
-import { postTripAnswers, updateTripState, type Trip, type TripAnswer, type TripLookalike } from '../../api/trip';
+import { postTripAnswers, updateTripState, type Trip, type TripAnswer, type TripLookalike, type TripMedia } from '../../api/trip';
 import { BirdrArtImage } from '../../components/birdr-art-image';
-import { buildLookalikeQuiz, type LookalikeQuestion } from '../../core/trip-quiz';
+import { buildLookalikeQuiz, lookalikePhotos, type LookalikeQuestion } from '../../core/trip-quiz';
 import { Page } from '../../shared/components/layout';
 import { BoldText, Kicker } from '../course/parts';
 import { Tag, TripBackLink, TripLoading, TripPhoto, credit } from './parts';
@@ -118,7 +118,7 @@ function PairCard({ trip, pair, known }: { trip: Trip; pair: TripLookalike; know
   if (!home || !here) return null;
   const side = (sp: typeof home, label: string, isKnown: boolean) => (
     <Box flex={1} minW={0}>
-      {sp.images[0] ? <TripPhoto media={sp.images[0]} ratio={1} label={label} /> : null}
+      {sp.images[0] ? <TripPhoto media={sp.images[0]} ratio={1} label={label} flag /> : null}
       <Text fontWeight="700" color="primary.800" mt={2} lineClamp={2}>
         {sp.name}
       </Text>
@@ -155,6 +155,8 @@ function LookalikeQuiz({ trip, data, onDone }: { trip: Trip; data: TripData; onD
   const [picked, setPicked] = useState<string | null>(null);
   const [answers, setAnswers] = useState<TripAnswer[]>([]);
   const [right, setRight] = useState<string[]>([]);
+  const [flagged, setFlagged] = useState<number[]>([]);
+  const [swapped, setSwapped] = useState<Record<number, TripMedia>>({});
 
   const q = questions[index];
   if (!q) {
@@ -164,6 +166,7 @@ function LookalikeQuiz({ trip, data, onDone }: { trip: Trip; data: TripData; onD
       </Button>
     );
   }
+  const shown = swapped[index] ?? q.image;
   const answered = picked !== null;
   const name = (code: string) => bird(trip, code)?.name ?? code;
 
@@ -172,7 +175,7 @@ function LookalikeQuiz({ trip, data, onDone }: { trip: Trip; data: TripData; onD
     setPicked(option);
     const target = bird(trip, q.code);
     const answer = bird(trip, option);
-    if (target && answer) setAnswers((list) => [...list, { species_id: target.species_id, answer_id: answer.species_id, media_id: q.image.id }]);
+    if (target && answer) setAnswers((list) => [...list, { species_id: target.species_id, answer_id: answer.species_id, media_id: shown.id }]);
     if (option === q.code) setRight((list) => [...list, q.code]);
   };
 
@@ -190,7 +193,17 @@ function LookalikeQuiz({ trip, data, onDone }: { trip: Trip; data: TripData; onD
   return (
     <Flex direction="column" gap={3}>
       <Kicker>{t('trip_lookalike_q', 'Lookalike quiz · question {n} of {total}', { n: index + 1, total: questions.length })}</Kicker>
-      <TripPhoto key={`${index}-${q.image.id}`} media={q.image} />
+      <TripPhoto
+        key={`${index}-${shown.id}`}
+        media={shown}
+        flag
+        onFlagged={(m) => {
+          const flaggedIds = [...flagged, m.id];
+          setFlagged(flaggedIds);
+          const left = lookalikePhotos(trip, q.code).filter((x) => !flaggedIds.includes(x.id));
+          if (left.length) setSwapped((s) => ({ ...s, [index]: left[Math.floor(Math.random() * left.length)] }));
+        }}
+      />
       <Text fontSize="lg" fontWeight="700" color="primary.800">
         {t('trip_which_of_two', 'Which of the two is this?')}
       </Text>
