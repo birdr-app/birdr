@@ -143,7 +143,14 @@ export function CoursePhotosPage() {
           {lesson.birds.map((bird) => (
             <BirdPhotos
               key={`${lesson.week}-${bird.species_id}`}
-              week={lesson.week}
+              api={{
+                fetchPhotos: fetchSpeciesPhotos,
+                addCommons: addCommonsPhoto,
+                save: (speciesId, pick) => savePhotoPick(lesson.week, speciesId, pick),
+              }}
+              subtitle={
+                <FormattedMessage id="course_photos_teaches" defaultMessage="Lesson teaches: {plumage}" values={{ plumage: bird.plumage || 'volwassen' }} />
+              }
               bird={bird}
               onSaved={(pick) => updateBird(lesson.week, bird.species_id, pick)}
             />
@@ -154,7 +161,7 @@ export function CoursePhotosPage() {
   );
 }
 
-function Centered({ children }: { children: React.ReactNode }) {
+export function Centered({ children }: { children: React.ReactNode }) {
   return (
     <Page>
       <Page.Body>
@@ -166,7 +173,25 @@ function Centered({ children }: { children: React.ReactNode }) {
   );
 }
 
-function BirdPhotos({ week, bird, onSaved }: { week: number; bird: CoursePhotoBird; onSaved: (pick: PhotoPick) => void }) {
+/** What the bird photo picker needs from its page: where photos come from and where picks go. */
+export type PhotoPickApi = {
+  fetchPhotos: (speciesId: number) => Promise<CandidatePhoto[]>;
+  addCommons: (speciesId: number, link: string) => Promise<CandidatePhoto>;
+  save: (speciesId: number, pick: PhotoPick) => Promise<PhotoPick>;
+};
+
+export function BirdPhotos({
+  api,
+  bird,
+  subtitle,
+  onSaved,
+}: {
+  api: PhotoPickApi;
+  bird: CoursePhotoBird;
+  /** The line under the latin name; the course shows what the lesson teaches. */
+  subtitle?: React.ReactNode;
+  onSaved: (pick: PhotoPick) => void;
+}) {
   const intl = useIntl();
   const [photos, setPhotos] = useState<CandidatePhoto[] | null>(null);
   const [pick, setPick] = useState<PhotoPick>(() => startingPick(bird));
@@ -182,7 +207,7 @@ function BirdPhotos({ week, bird, onSaved }: { week: number; bird: CoursePhotoBi
     setAdding(true);
     setAddError('');
     try {
-      const photo = await addCommonsPhoto(bird.species_id, commonsLink.trim());
+      const photo = await api.addCommons(bird.species_id, commonsLink.trim());
       setPhotos((all) => (all && !all.some((p) => p.id === photo.id) ? [photo, ...all] : all));
       setAdded((list) => (list.some((p) => p.id === photo.id) ? list : [photo, ...list]));
       setCommonsLink('');
@@ -195,7 +220,7 @@ function BirdPhotos({ week, bird, onSaved }: { week: number; bird: CoursePhotoBi
   };
 
   useEffect(() => {
-    fetchSpeciesPhotos(bird.species_id)
+    api.fetchPhotos(bird.species_id)
       .then(setPhotos)
       .catch(() => setPhotos([]));
   }, [bird.species_id]);
@@ -220,7 +245,7 @@ function BirdPhotos({ week, bird, onSaved }: { week: number; bird: CoursePhotoBi
         // Photos that are no longer visible cannot be saved; drop them.
         const visible = (ids: number[]) => ids.filter((id) => byId.has(id));
         const body = { ...next, card: visible(next.card), quiz: visible(next.quiz), reject: visible(next.reject) };
-        const saved = await savePhotoPick(week, bird.species_id, body);
+        const saved = await api.save(bird.species_id, body);
         setPick(saved);
         onSaved(saved);
         setSaving('saved');
@@ -228,7 +253,7 @@ function BirdPhotos({ week, bird, onSaved }: { week: number; bird: CoursePhotoBi
         setSaving('error');
       }
     },
-    [week, bird.species_id, byId, onSaved]
+    [api, bird.species_id, byId, onSaved]
   );
 
   const main = pick.card[0] ? byId.get(pick.card[0]) : undefined;
@@ -243,9 +268,11 @@ function BirdPhotos({ week, bird, onSaved }: { week: number; bird: CoursePhotoBi
           <Text fontStyle="italic" fontSize="sm" color="primary.700">
             {bird.latin}
           </Text>
-          <Text fontSize="sm" fontWeight="700" color="primary.700" mt={1}>
-            <FormattedMessage id="course_photos_teaches" defaultMessage="Lesson teaches: {plumage}" values={{ plumage: bird.plumage || 'volwassen' }} />
-          </Text>
+          {subtitle ? (
+            <Text fontSize="sm" fontWeight="700" color="primary.700" mt={1}>
+              {subtitle}
+            </Text>
+          ) : null}
           {missing.length > 0 ? (
             <Text fontSize="sm" color="error.500" fontWeight="600">
               <FormattedMessage

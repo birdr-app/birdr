@@ -223,3 +223,51 @@ class TripRegionApiTestCase(TestCase):
         self.assertEqual(data['endemics']['units'], [])
         self.assertFalse(set(data['species']) & set(country['species']))
         self.assertTrue(all(u['title'] and u['intro'] for u in data['units']))
+
+
+class TripPhotoPicksTests(TestCase):
+    """The admin photo picker: staff only, and a saved pick replaces the photos in media.json."""
+
+    def setUp(self):
+        from django.contrib.auth.models import User
+
+        from jizz.trips.api import _static_files
+
+        entry = _static_files('ES-CANARIES')['media']['barpar2']
+        self.file_card = entry['card']
+        self.species = Species.objects.create(id=entry['species_id'], name='Barbary Partridge', code='barpar2')
+        self.photos = [
+            Media.objects.create(species=self.species, type='image', url=f'https://example.org/{i}.jpg', source='inaturalist')
+            for i in range(4)
+        ]
+        self.staff = User.objects.create_user('staff', is_staff=True)
+        self.client = APIClient()
+
+    def test_staff_only(self):
+        self.assertIn(self.client.get('/api/trips/ES-CANARIES/photos/').status_code, (401, 403))
+        self.assertIn(self.client.put(f'/api/trips/ES-CANARIES/photos/{self.species.id}/', {}, format='json').status_code, (401, 403))
+
+    def test_pick_replaces_file_photos(self):
+        from jizz.trips.api import _files
+
+        self.client.force_authenticate(self.staff)
+        listing = self.client.get('/api/trips/ES-CANARIES/photos/').json()
+        birds = [b for sec in listing['sections'] for b in sec['birds']]
+        self.assertTrue(any(b['code'] == 'barpar2' for b in birds))
+        ids = [m.id for m in self.photos]
+        res = self.client.put(
+            f'/api/trips/ES-CANARIES/photos/{self.species.id}/',
+            {'card': ids[:2], 'quiz': ids[2:3], 'reject': [], 'done': True},
+            format='json',
+        )
+        self.assertEqual(res.status_code, 200)
+        entry = _files('ES-CANARIES')['media']['barpar2']
+        self.assertEqual(entry['card'], ids[:2])
+        self.assertEqual(entry['quiz'], ids[2:3])
+
+    def test_rejects_other_species_photos(self):
+        self.client.force_authenticate(self.staff)
+        res = self.client.put(
+            f'/api/trips/ES-CANARIES/photos/{self.species.id}/', {'card': [999999999]}, format='json'
+        )
+        self.assertEqual(res.status_code, 400)

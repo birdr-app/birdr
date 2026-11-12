@@ -35,8 +35,43 @@ def trip_language(country: str, wanted: str | None) -> str:
     return wanted if wanted in languages else languages[0]
 
 
-@lru_cache(maxsize=None)
+def photo_picks(trip: str) -> dict[int, dict]:
+    """Photos chosen by admins on /trip-photos, keyed by species id."""
+    from jizz.models import TripPhotoPick
+
+    return {
+        p.species_id: {'card': p.card, 'quiz': p.quiz, 'reject': p.reject, 'done': p.done}
+        for p in TripPhotoPick.objects.filter(trip=trip)
+    }
+
+
 def _files(country: str) -> dict:
+    """The trip's files, with the photos admins chose in place of the ones in media.json."""
+    files = _static_files(country)
+    picks = photo_picks(country)
+    if not picks:
+        return files
+
+    def overlay(media: dict) -> dict:
+        out = {}
+        for code, entry in media.items():
+            pick = picks.get(entry.get('species_id'))
+            out[code] = {**entry, 'card': list(pick['card']), 'quiz': list(pick['quiz'])} if pick and pick['card'] else entry
+        return out
+
+    return {**files, 'media': overlay(files['media']), 'home_media': overlay(files['home_media'])}
+
+
+def clear_cache(trip: str) -> None:
+    """Forget the cached trip payloads (the trip and its country), e.g. after photos were changed."""
+    from django.core.cache import cache
+
+    trips = {trip, parent_trip(trip) or trip}
+    cache.delete_many([f'trip:{t}:{lang}' for t in trips if t in TRIPS for lang in TRIPS[t]['languages']])
+
+
+@lru_cache(maxsize=None)
+def _static_files(country: str) -> dict:
     folder = country_dir(country)
     units = read_json(folder / 'units.json')
     if not units:

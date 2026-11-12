@@ -2665,6 +2665,30 @@ class CoursePhotoPick(models.Model):
         return f'{self.course} week {self.week}: {self.species_id}'
 
 
+class TripPhotoPick(models.Model):
+    """Photos an admin chose for one bird of one trip prep pack.
+
+    Overrides the photo ids in ``jizz/trips/data/<trip>/media.json``, so photos can be swapped
+    without a deploy. ``card[0]`` is the main photo on the bird card.
+    """
+
+    trip = models.CharField(max_length=32)
+    species = models.ForeignKey(Species, on_delete=models.CASCADE, related_name='trip_photo_picks')
+    card = models.JSONField(default=list, blank=True)
+    quiz = models.JSONField(default=list, blank=True)
+    reject = models.JSONField(default=list, blank=True)
+    done = models.BooleanField(default=False)
+    updated_by = models.ForeignKey('auth.User', null=True, blank=True, on_delete=models.SET_NULL, related_name='+')
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = [('trip', 'species')]
+        ordering = ['trip', 'species_id']
+
+    def __str__(self):
+        return f'{self.trip}: {self.species_id}'
+
+
 class CourseLessonResult(models.Model):
     """A logged-in user's best result for one course lesson, so progress follows them across devices."""
 

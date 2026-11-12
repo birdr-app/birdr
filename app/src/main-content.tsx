@@ -62,6 +62,7 @@ import { SharedGamePage } from "./pages/shared-game"
 import { SurvivalStartPage } from "./pages/survival/start"
 import { CoursePage } from "./pages/course"
 import { CoursePhotosPage } from "./pages/course-photos"
+import { TripPhotosPage } from "./pages/trip-photos"
 import { CourseLessonPage } from "./pages/course/lesson"
 import { TripHomePage, TripListPage } from "./pages/trip"
 import { TripEndemicsPage } from "./pages/trip/endemics"
@@ -187,6 +188,7 @@ export const MainContent = () => {
             <Route path="/my-games/:token" element={<GameDetailPage />} />
             <Route path="/course" element={<CoursePage />} />
             <Route path="/course-photos" element={<CoursePhotosPage />} />
+            <Route path="/trip-photos" element={<TripPhotosPage />} />
             <Route path="/course/:week" element={<CourseLessonPage />} />
             <Route path="/trips" element={<TripListPage />} />
             <Route path="/trips/:country" element={<TripHomePage />} />

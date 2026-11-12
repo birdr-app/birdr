@@ -201,6 +201,9 @@ export const UserMenu = ({ onOpenLoginModal, isOpen = true }: UserMenuProps) => 
           <Link href="/course-photos" textDecoration="none">
             <FormattedMessage id="course_photos_title" defaultMessage="Select course photos" />
           </Link>
+          <Link href="/trip-photos" textDecoration="none">
+            <FormattedMessage id="trip_photos_title" defaultMessage="Select trip photos" />
+          </Link>
         </>
       )}
       
