@@ -34,9 +34,14 @@ class GBIFScraper(BaseMediaScraper):
             Taxon key (usageKey) or None if not found
         """
         params = {"name": name}
+        infraspecific = len(name.split()) >= 3
+        if infraspecific:
+            params["strict"] = "true"  # no fuzzy fall-back to the species or genus
         data = self._fetch_json(f"{self.API_BASE}/species/match", params)
         
         if not data:
+            return None
+        if infraspecific and data.get("rank") not in ("SUBSPECIES", "FORM", "VARIETY", "INFRASPECIFIC_NAME"):
             return None
         
         usage_key = data.get("usageKey")

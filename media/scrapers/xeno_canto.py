@@ -50,7 +50,9 @@ class XenoCantoScraper(BaseMediaScraper):
         # Build query - try different formats
         queries_to_try = []
         
-        if len(name_parts) >= 2:
+        if len(name_parts) >= 3:
+            queries_to_try.append(f'gen:{name_parts[0]} sp:{name_parts[1]} ssp:{name_parts[2]}')
+        elif len(name_parts) >= 2:
             # Full scientific name: "gen:Anser sp:cygnoides"
             queries_to_try.append(f'gen:{name_parts[0]} sp:{name_parts[1]}')
             # Also try with full name as single query

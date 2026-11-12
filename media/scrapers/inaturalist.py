@@ -181,6 +181,8 @@ class iNaturalistScraper(BaseMediaScraper):
             if record.get('name', '').lower() == normalized_name.lower():
                 exact_match = record
                 break
+        if len(normalized_name.split()) >= 3:
+            return exact_match  # a subspecies must match exactly; never fall back to some other taxon
         return exact_match or fallback
     
     def _process_taxon_photo(self, photo: Dict, taxon: Dict) -> Optional[Dict]:

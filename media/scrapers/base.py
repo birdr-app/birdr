@@ -112,9 +112,19 @@ class BaseMediaScraper(ABC):
         """Normalize scientific name for searching."""
         # Remove extra whitespace and convert to standard format
         parts = name.strip().split()
+        if len(parts) >= 3 and self._is_epithet(parts[2]):
+            return f"{parts[0]} {parts[1]} {parts[2]}"  # subspecies: keep it, or we search the whole species
         if len(parts) >= 2:
             return f"{parts[0]} {parts[1]}"
         return name.strip()
+
+    @staticmethod
+    def _is_epithet(token: str) -> bool:
+        return token.isalpha() and token.islower() and token not in ('sp', 'spp', 'group', 'x')
+
+    def is_infraspecific(self, name: str) -> bool:
+        """True for a trinomial (subspecies) name such as 'Acanthis flammea hornemanni'."""
+        return len(self.normalize_scientific_name(name).split()) == 3
 
     def normalize_contributor(self, value) -> str:
         """Plain text, no HTML, max length per Media.contributor."""

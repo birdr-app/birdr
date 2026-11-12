@@ -907,6 +907,11 @@ class SpeciesAdmin(admin.ModelAdmin):
 
     def get_media(self, request, pk=None, media_type=None):
         species = Species.objects.get(pk=pk)
+        # A species lumped into another: its media belongs to the survivor, tagged with the form.
+        store_species, form = species, None
+        if species.retired_at and species.merged_into_id:
+            form = Subspecies.objects.filter(code=species.code, source=Subspecies.SOURCE_LUMP).first()
+            store_species = species.merged_into
         if media_type:
             results = get_species_media(species, [media_type])
         else:
@@ -918,14 +923,15 @@ class SpeciesAdmin(admin.ModelAdmin):
                 # get_or_create can raise MultipleObjectsReturned if we already have duplicates.
                 # In admin scrape flows, it's better to be resilient and reuse an existing row.
                 qs = Media.objects.filter(
-                    species=species,
+                    species=store_species,
                     url=result['url'],
                     type=result['type'],
                 ).order_by('id')
                 obj = qs.first()
                 if obj is None:
                     Media.objects.create(
-                        species=species,
+                        species=store_species,
+                        subspecies=form,
                         url=result['url'],
                         type=result['type'],
                         link=result['link'],
@@ -936,6 +942,8 @@ class SpeciesAdmin(admin.ModelAdmin):
                         non_commercial_only=cc[1],
                     )
                 else:
+                    if form:  # a file already on the survivor that this form-specific search found again
+                        Media.objects.filter(pk=obj.pk, subspecies__isnull=True).update(subspecies=form)
                     # Keep the first row; update metadata in case scrapers changed.
                     Media.objects.filter(pk=obj.pk).update(
                         link=result['link'],
@@ -945,9 +953,10 @@ class SpeciesAdmin(admin.ModelAdmin):
                         copyright_standardized=cc[0],
                         non_commercial_only=cc[1],
                     )
-        image_count = species.media.filter(type='image').count()
-        video_count = species.media.filter(type='video').count()
-        audio_count = species.media.filter(type='audio').count()
+        counted = store_species.media.filter(subspecies=form) if form else species.media
+        image_count = counted.filter(type='image').count()
+        video_count = counted.filter(type='video').count()
+        audio_count = counted.filter(type='audio').count()
         if media_type == 'image':
             messages.add_message(request, messages.INFO, f'Found {image_count} images.')
         elif media_type == 'video':
