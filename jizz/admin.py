@@ -756,6 +756,7 @@ class SpeciesGroupAdmin(admin.ModelAdmin):
 class SpeciesAdmin(admin.ModelAdmin):
     inlines = [SpeciesIllustrationInline, MediaInline]
     search_fields = ['name', 'name_nl', 'name_latin', 'slug']
+    raw_id_fields = ['merged_into', 'taxonomic_order', 'taxonomic_family']
     readonly_fields = ['sync_media', 'pic_count', 'infer_machine_predictions']
     list_display = ['name', 'name_nl', 'slug', 'taxonomic_genus', 'species_group', 'tax_ordering', 'pic_count']
     prepopulated_fields = {'slug': ('name',)}

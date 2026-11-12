@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Count, Exists, OuterRef
 from django.utils.html import format_html
-from .models import Media, FlagMedia, MediaBirdDetection, MediaReview, MediaPrediction
+from .models import Media, FlagMedia, MediaBirdDetection, MediaReview, MediaPrediction, MediaPlumage
 from .review_email import media_review_recipient, send_media_review_reply_if_needed
 from .wikimedia_urls import wikimedia_video_playback_url
 
@@ -153,6 +153,20 @@ class MediaReviewInline(admin.TabularInline):
     fields = ['player', 'user', 'review_type', 'description', 'reply', 'reply_sent_at', 'created']
 
 
+class MediaPlumageInline(admin.StackedInline):
+    model = MediaPlumage
+    extra = 0
+    max_num = 1
+    can_delete = True
+    fields = ['sex', 'stage', 'season', 'source', 'confidence', 'model_version', 'updated']
+    readonly_fields = ['confidence', 'model_version', 'updated']
+
+    def get_formset(self, request, obj=None, **kwargs):
+        formset = super().get_formset(request, obj, **kwargs)
+        formset.form.base_fields['source'].initial = 'human'
+        return formset
+
+
 @admin.register(Media)
 class MediaAdmin(HideableAdminMixin, admin.ModelAdmin):
     list_display = ['id', 'species', 'type', 'source', 'hide', 'review_count', 'image_thumbnail', 'created']
@@ -170,7 +184,17 @@ class MediaAdmin(HideableAdminMixin, admin.ModelAdmin):
     readonly_fields = ['created', 'updated', 'image_preview', 'machine_assertion_summary']
     date_hierarchy = 'created'
     list_per_page = 25
-    inlines = [MediaReviewInline]
+    inlines = [MediaPlumageInline, MediaReviewInline]
+
+    def save_formset(self, request, form, formset, change):
+        # A plumage label edited by hand is a human label, which overrides scraped/AI ones.
+        if formset.model is MediaPlumage:
+            for f in formset.forms:
+                if f.has_changed() and f.instance.pk and any(
+                    k in f.changed_data for k in ('sex', 'stage', 'season')
+                ):
+                    f.instance.source = 'human'
+        super().save_formset(request, form, formset, change)
 
     fieldsets = (
         ('Species', {
