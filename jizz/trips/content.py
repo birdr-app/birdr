@@ -65,6 +65,12 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'parent': 'AU',
     },
+    'ES': {'name': {'en': 'Spain', 'nl': 'Spanje'}, 'languages': ('en', 'nl')},
+    'ES-CANARIES': {
+        'name': {'en': 'Canary Islands', 'nl': 'Canarische Eilanden'},
+        'languages': ('en', 'nl'),
+        'parent': 'ES',
+    },
     'CR-CARIBBEAN': {
         'name': {'en': 'Caribbean lowlands', 'nl': 'Caribisch laagland'},
         'languages': ('en', 'nl'),

@@ -12,8 +12,7 @@ hand-picked in `scope.json`, because eBird Status & Trends models too few of the
 frequency cut. Their photos are reviewed (see `sc/report.md` and `ug/report.md`) and both are
 published in `TRIPS`. Australia (`au/`, 293 species, hand-picked, plus six region packs, see `regions.md`) has all its texts in English and Dutch, its photos reviewed (see `au/` report in `au-photos.md`; a few look-alike picks wait for the owner's eye) and is published in `TRIPS` with the packs. A country folder that is not in `TRIPS` counts as a draft: the test suite checks
 its texts and units, but not its photos.
-Spain (`es/`, 217 species, hand-picked, one pack without regions, 10 lookalike pairs, no endemics chapter) is a draft: texts in English and Dutch, photos ranked from production reviews but 15 species still lack approved card photos, so it is not in `TRIPS`.
-A Canary Islands region pack (`es-canaries/`, 21 species, 4 units) is drafted the same way and also waits for photos.
+Spain (`es/`, 217 species, hand-picked, one pack without regions, 10 lookalike pairs, no endemics chapter) has its texts in English and Dutch and its photos picked by the owner. It is published in `TRIPS`, together with the Canary Islands region pack (`es-canaries/`, 21 species, 4 units). The picked photos still need approving in the media review page on production.
 The texts still need a human review.
 
 The web app has the screens (`app/src/pages/trip/`, routes `/trips`, `/trips/<cc>`, `.../families`,
