@@ -781,6 +781,8 @@
   "no media left for question": "Er is op dit moment geen bruikbare foto van deze vogel.",
   "skip question": "Deze vraag overslaan",
   "course_photos_title": "Cursusfoto's kiezen",
+  "trip_photos_regions": "Pakketten {country}",
+  "trip_photos_whole": "Heel land",
   "trip_photos_title": "Reisfoto's kiezen",
   "trip_photos_intro": "Tik op een foto om hem hoofdfoto, kaartfoto (max. 3) of quizfoto te maken, of om hem niet te gebruiken. Wijzigingen staan direct live in de reis. {done} van {total} vogels klaar.",
   "trip_photos_load_error": "De reisfoto's konden niet worden geladen.",

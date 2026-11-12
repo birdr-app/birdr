@@ -782,6 +782,8 @@
   "no media left for question": "There is no usable picture of this bird right now.",
   "skip question": "Skip this question",
   "course_photos_title": "Select course photos",
+  "trip_photos_regions": "{country} packs",
+  "trip_photos_whole": "Whole country",
   "trip_photos_title": "Select trip photos",
   "trip_photos_intro": "Tap a photo to make it the main photo, a card photo (max. 3) or a quiz photo, or to leave it out. Changes go live in the trip straight away. {done} of {total} birds done.",
   "trip_photos_load_error": "The trip photos could not be loaded.",
