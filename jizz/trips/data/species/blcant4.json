@@ -1,0 +1,22 @@
+{
+  "code": "blcant4",
+  "name": {
+    "en": "Black-crested Antshrike",
+    "nl": "Zwartkuifmierklauwier"
+  },
+  "latin": "Sakesphorus canadensis",
+  "look_for": [
+    {
+      "en": "Male has a long, black, spiky **crest**",
+      "nl": "Mannetje met lange, zwarte, puntige **kuif**"
+    },
+    {
+      "en": "Black above, white below, dry-forest bird",
+      "nl": "Boven zwart, onder wit, vogel van droog bos"
+    },
+    {
+      "en": "Female streaked rufous with a spiky **crest**",
+      "nl": "Vrouwtje roestbruin gestreept met puntige **kuif**"
+    }
+  ]
+}

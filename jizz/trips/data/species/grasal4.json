@@ -1,0 +1,22 @@
+{
+  "code": "grasal4",
+  "name": {
+    "en": "Olive-grey Saltator",
+    "nl": "Olijf-grijze saltator"
+  },
+  "latin": "Saltator olivascens",
+  "look_for": [
+    {
+      "en": "Olive-grey **body** with a pale throat",
+      "nl": "Olijfgrijs **lijf** met een bleke keel"
+    },
+    {
+      "en": "Dull buff **belly**, black moustache stripe",
+      "nl": "Dof bruine **buik**, zwarte baardstreep"
+    },
+    {
+      "en": "Duller than Bluish-grey, wetter regions",
+      "nl": "Doffer dan Blauwgrijze saltator, in vochtiger gebied"
+    }
+  ]
+}

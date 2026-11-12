@@ -1,0 +1,22 @@
+{
+  "code": "immant1",
+  "name": {
+    "en": "Blue-lored Antbird",
+    "nl": "Blauwmaskermiervogel"
+  },
+  "latin": "Hafferia immaculata",
+  "look_for": [
+    {
+      "en": "Dark grey with a bright blue **eyering** patch",
+      "nl": "Donkergrijs met een felblauwe **oog**vlek"
+    },
+    {
+      "en": "Plain, sooty body and short **tail**",
+      "nl": "Effen, roetkleurig lijf en korte **staart**"
+    },
+    {
+      "en": "Ground-dweller in dense low forest",
+      "nl": "Grondbewoner in dicht laag bos"
+    }
+  ]
+}

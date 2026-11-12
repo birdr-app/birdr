@@ -1,0 +1,22 @@
+{
+  "code": "blbant1",
+  "name": {
+    "en": "Black-backed Antshrike",
+    "nl": "Zwartrugmierklauwier"
+  },
+  "latin": "Thamnophilus melanonotus",
+  "look_for": [
+    {
+      "en": "Male black with a bold white **back** patch",
+      "nl": "Mannetje zwart met opvallende witte **rug**vlek"
+    },
+    {
+      "en": "Black **crest** and white-edged wing coverts",
+      "nl": "Zwarte **kuif** en wit omzoomde dekveren"
+    },
+    {
+      "en": "Female rufous-brown, **crown** bright rufous",
+      "nl": "Vrouwtje roestbruin, **kruin** helder roestrood"
+    }
+  ]
+}

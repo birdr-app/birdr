@@ -1,0 +1,22 @@
+{
+  "code": "capcon1",
+  "name": {
+    "en": "Capped Conebill",
+    "nl": "Witkopspitssnavel"
+  },
+  "latin": "Conirostrum albifrons",
+  "look_for": [
+    {
+      "en": "Blue-grey **back** with a white cap",
+      "nl": "Blauwgrijze **rug** met een witte kap"
+    },
+    {
+      "en": "Turquoise **underparts** and thin bill",
+      "nl": "Turkooizen **onderkant** en dunne snavel"
+    },
+    {
+      "en": "Always in canopy flocks of lowland forest",
+      "nl": "Altijd in kroonlaagtroepen van laaglandbos"
+    }
+  ]
+}

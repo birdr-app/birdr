@@ -1,0 +1,22 @@
+{
+  "code": "spered1",
+  "name": {
+    "en": "Spectacled Redstart",
+    "nl": "Brilzanger"
+  },
+  "latin": "Myioborus melanocephalus",
+  "look_for": [
+    {
+      "en": "Black **crown** with chestnut central patch",
+      "nl": "Zwarte **kruin** met kastanjebruine vlek"
+    },
+    {
+      "en": "Yellow spectacles, yellow underparts",
+      "nl": "Gele bril, gele onderkant"
+    },
+    {
+      "en": "Fans white-edged tail, grey-black back",
+      "nl": "Waaiert witrandige staart, grijszwarte rug"
+    }
+  ]
+}

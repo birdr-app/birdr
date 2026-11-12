@@ -1,0 +1,22 @@
+{
+  "code": "stavir1",
+  "name": {
+    "en": "San Andres Vireo",
+    "nl": "San-Andresvireo"
+  },
+  "latin": "Vireo caribaeus",
+  "look_for": [
+    {
+      "en": "Pale grey **back**, white underparts, thin eyebrow",
+      "nl": "Lichtgrijze **rug**, witte onderkant, dunne wenkbrauw"
+    },
+    {
+      "en": "Dark wings with two pale bars",
+      "nl": "Donkere vleugels met twee lichte banden"
+    },
+    {
+      "en": "Island scrub and woodland, slow and deliberate",
+      "nl": "Eilandstruweel en -bos, traag en bedachtzaam"
+    }
+  ]
+}

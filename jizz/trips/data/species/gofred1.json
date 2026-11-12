@@ -1,0 +1,22 @@
+{
+  "code": "gofred1",
+  "name": {
+    "en": "Golden-fronted Redstart",
+    "nl": "Zwartoorzanger"
+  },
+  "latin": "Myioborus ornatus",
+  "look_for": [
+    {
+      "en": "Yellow **forehead** and face, dark ear patch",
+      "nl": "Gele **voorhoofd** en kop, donkere oorstreek"
+    },
+    {
+      "en": "Grey **back**, yellow underparts",
+      "nl": "Grijze **rug**, gele onderkant"
+    },
+    {
+      "en": "Fans white-edged tail while hopping",
+      "nl": "Waaiert witrandige staart tijdens het springen"
+    }
+  ]
+}

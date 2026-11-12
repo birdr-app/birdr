@@ -1,0 +1,22 @@
+{
+  "code": "refpar3",
+  "name": {
+    "en": "Red-fan Parrot",
+    "nl": "Kraagpapegaai"
+  },
+  "latin": "Deroptyus accipitrinus",
+  "look_for": [
+    {
+      "en": "Raised **neck** fan of red and blue",
+      "nl": "Opgezette **nek**waaier van rood en blauw"
+    },
+    {
+      "en": "Pale streaked head, long tail",
+      "nl": "Lichte gestreepte kop, lange staart"
+    },
+    {
+      "en": "Hawk-like, sleek flight",
+      "nl": "Havikachtige, gestroomlijnde vlucht"
+    }
+  ]
+}

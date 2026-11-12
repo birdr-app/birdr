@@ -1,0 +1,22 @@
+{
+  "code": "saffin",
+  "name": {
+    "en": "Saffron Finch",
+    "nl": "Gewone saffraangors"
+  },
+  "latin": "Sicalis flaveola",
+  "look_for": [
+    {
+      "en": "Bright yellow **body** with an orange crown",
+      "nl": "Felgele **kop** met een oranje kruin"
+    },
+    {
+      "en": "Olive-yellow **back**, short grey bill",
+      "nl": "Olijfgele **rug**, korte grijze snavel"
+    },
+    {
+      "en": "Perches openly on wires and fences",
+      "nl": "Zit open op draden en hekken"
+    }
+  ]
+}

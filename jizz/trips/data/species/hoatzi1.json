@@ -1,0 +1,22 @@
+{
+  "code": "hoatzi1",
+  "name": {
+    "en": "Hoatzin",
+    "nl": "Hoatzin"
+  },
+  "latin": "Opisthocomus hoazin",
+  "look_for": [
+    {
+      "en": "Bizarre long-necked bird with a spiky rufous **crest**",
+      "nl": "Vreemde langhalsvogel met een stekelige roestbruine **kuif**"
+    },
+    {
+      "en": "Bare blue face with a red **eye**",
+      "nl": "Blote blauwe kop met een rood **oog**"
+    },
+    {
+      "en": "Clambers through waterside trees, long loose **tail**",
+      "nl": "Klautert door bomen langs het water, lange losse **staart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "whbant1",
+  "name": {
+    "en": "White-bellied Antbird",
+    "nl": "Witbuikmiervogel"
+  },
+  "latin": "Myrmeciza longipes",
+  "look_for": [
+    {
+      "en": "Dark brown **back**, white **belly**, grey sides",
+      "nl": "Donkerbruine **rug**, witte **buik**, grijze flanken"
+    },
+    {
+      "en": "Black **throat** and long, slim legs",
+      "nl": "Zwarte **keel** en lange, slanke **poten**"
+    },
+    {
+      "en": "Hops on the ground, flicks **tail** down",
+      "nl": "Hipt over de grond, flipt **staart** omlaag"
+    }
+  ]
+}

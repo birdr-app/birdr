@@ -1,0 +1,22 @@
+{
+  "code": "puchum1",
+  "name": {
+    "en": "Purple-chested Hummingbird",
+    "nl": "Purperborstamazilia"
+  },
+  "latin": "Polyerata rosenbergi",
+  "look_for": [
+    {
+      "en": "Purple **chest** patch and a green back",
+      "nl": "Paarse **borst**vlek en een groene rug"
+    },
+    {
+      "en": "Bronzy **tail** and bright green belly",
+      "nl": "Bronzen **staart** en helder groene buik"
+    },
+    {
+      "en": "Straight bill, red-based, dark tip",
+      "nl": "Rechte snavel met rode basis en donkere punt"
+    }
+  ]
+}

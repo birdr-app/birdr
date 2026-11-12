@@ -1,0 +1,22 @@
+{
+  "code": "dobant2",
+  "name": {
+    "en": "Dot-backed Antbird",
+    "nl": "Zilvervlekmiervogel"
+  },
+  "latin": "Hylophylax punctulatus",
+  "look_for": [
+    {
+      "en": "Black-and-white spotted **back** and wing coverts",
+      "nl": "Zwart-wit gevlekte **rug** en vleugeldekveren"
+    },
+    {
+      "en": "Black **throat**, grey flanks and rufous belly",
+      "nl": "Zwarte **keel**, grijze flanken en roestbruine buik"
+    },
+    {
+      "en": "Female has buff throat and no black bib",
+      "nl": "Vrouwtje met bruine **keel** en zonder zwarte bef"
+    }
+  ]
+}

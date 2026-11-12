@@ -1,0 +1,22 @@
+{
+  "code": "spehum1",
+  "name": {
+    "en": "Speckled Hummingbird",
+    "nl": "Zwartoorkolibrie"
+  },
+  "latin": "Adelomyia melanogenys",
+  "look_for": [
+    {
+      "en": "Plain buff **belly** with speckled throat and breast",
+      "nl": "Egaal beige **buik** met gespikkelde keel en borst"
+    },
+    {
+      "en": "Dark **mask** behind the eye, pale eyebrow",
+      "nl": "Donker **masker** achter het oog, lichte wenkbrauw"
+    },
+    {
+      "en": "Short straight **bill**, cinnamon wing flash",
+      "nl": "Korte rechte **snavel**, kaneelkleurige vleugelflits"
+    }
+  ]
+}

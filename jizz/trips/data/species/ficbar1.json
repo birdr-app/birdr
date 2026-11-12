@@ -1,0 +1,22 @@
+{
+  "code": "ficbar1",
+  "name": {
+    "en": "Five-coloured Barbet",
+    "nl": "Vijfkleurenbaardvogel"
+  },
+  "latin": "Capito quinticolor",
+  "look_for": [
+    {
+      "en": "Bright patches of red, yellow, blue and black",
+      "nl": "Felle vlakken van rood, geel, blauw en zwart"
+    },
+    {
+      "en": "Yellow-green **back**, heavy pale **bill**",
+      "nl": "Geelgroene **rug**, zware lichte **snavel**"
+    },
+    {
+      "en": "In the subcanopy of foothill forest",
+      "nl": "In de onderlaag van het kroondak van voorbergbos"
+    }
+  ]
+}

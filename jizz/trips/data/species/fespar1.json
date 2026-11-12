@@ -1,0 +1,22 @@
+{
+  "code": "fespar1",
+  "name": {
+    "en": "Festive Amazon",
+    "nl": "Blauwbaardamazone"
+  },
+  "latin": "Amazona festiva",
+  "look_for": [
+    {
+      "en": "Blue cheek and chin, red **rump**",
+      "nl": "Blauwe wang en kin, rode **stuit**"
+    },
+    {
+      "en": "Dark green, red-maroon forehead",
+      "nl": "Donkergroen, roodbruin voorhoofd"
+    },
+    {
+      "en": "Flooded forest and river edges",
+      "nl": "Overstroomd bos en rivieroevers"
+    }
+  ]
+}

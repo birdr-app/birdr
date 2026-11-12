@@ -1,0 +1,22 @@
+{
+  "code": "asctap1",
+  "name": {
+    "en": "Ash-coloured Tapaculo",
+    "nl": "Grijze tapaculo"
+  },
+  "latin": "Myornis senilis",
+  "look_for": [
+    {
+      "en": "Plain ash-grey all over, paler below",
+      "nl": "Effen asgrijs, onderaan lichter"
+    },
+    {
+      "en": "Long **tail**, often cocked, small round body",
+      "nl": "Lange **staart**, vaak opgericht, klein rond lijf"
+    },
+    {
+      "en": "Hops in mossy undergrowth of high forest",
+      "nl": "Hipt door bemost kreupelhout van hoog bergbos"
+    }
+  ]
+}

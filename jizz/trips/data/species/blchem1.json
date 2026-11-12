@@ -1,0 +1,22 @@
+{
+  "code": "blchem1",
+  "name": {
+    "en": "Black-capped Hemispingus",
+    "nl": "Zwartkruintangare"
+  },
+  "latin": "Kleinothraupis atropileus",
+  "look_for": [
+    {
+      "en": "Black **cap** and bold white eyebrow",
+      "nl": "Zwarte **kap** en een opvallende witte wenkbrauw"
+    },
+    {
+      "en": "Olive **back**, dusky grey below",
+      "nl": "Olijfkleurige **rug**, donkergrijs eronder"
+    },
+    {
+      "en": "Active in mixed flocks at forest edge",
+      "nl": "Actief in gemengde troepen aan de bosrand"
+    }
+  ]
+}

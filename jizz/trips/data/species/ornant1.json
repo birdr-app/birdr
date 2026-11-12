@@ -1,0 +1,22 @@
+{
+  "code": "ornant1",
+  "name": {
+    "en": "Ornate Stipplethroat",
+    "nl": "Zwartkeelmiersluiper"
+  },
+  "latin": "Epinecrophylla ornata",
+  "look_for": [
+    {
+      "en": "Male has a black **throat** with white spots",
+      "nl": "Mannetje met zwarte **keel** met witte vlekjes"
+    },
+    {
+      "en": "Rufous **back** and tail, grey underparts",
+      "nl": "Roestbruine **rug** en staart, grijze onderkant"
+    },
+    {
+      "en": "Forages low in forest, often near the ground",
+      "nl": "Foerageert laag in bos, vaak vlak bij de grond"
+    }
+  ]
+}

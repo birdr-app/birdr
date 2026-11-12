@@ -1,0 +1,22 @@
+{
+  "code": "torduc1",
+  "name": {
+    "en": "Torrent Duck",
+    "nl": "Bergbeekeend"
+  },
+  "latin": "Merganetta armata",
+  "look_for": [
+    {
+      "en": "Male with a white **head** and black stripes",
+      "nl": "Mannetje met een witte **kop** en zwarte strepen"
+    },
+    {
+      "en": "Streaked black-and-white head, rufous belly",
+      "nl": "Gestreepte zwart-witte kop, roestbruine buik"
+    },
+    {
+      "en": "Sits on boulders in fast Andean streams",
+      "nl": "Zit op keien in snelle Andesstromen"
+    }
+  ]
+}

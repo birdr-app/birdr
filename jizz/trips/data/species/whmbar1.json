@@ -1,0 +1,22 @@
+{
+  "code": "whmbar1",
+  "name": {
+    "en": "White-mantled Barbet",
+    "nl": "Witrugbaardvogel"
+  },
+  "latin": "Capito hypoleucus",
+  "look_for": [
+    {
+      "en": "White **back** and upper **mantle**",
+      "nl": "Witte **rug** en bovenkant van de **mantel**"
+    },
+    {
+      "en": "Red **crown**, white **throat** and breast",
+      "nl": "Rode **kruin**, witte **keel** en borst"
+    },
+    {
+      "en": "Dry valley forest, mainly the Magdalena",
+      "nl": "Droog dalbos, vooral in de Magdalena"
+    }
+  ]
+}

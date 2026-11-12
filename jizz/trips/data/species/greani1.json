@@ -1,0 +1,22 @@
+{
+  "code": "greani1",
+  "name": {
+    "en": "Greater Ani",
+    "nl": "Grote ani"
+  },
+  "latin": "Crotophaga major",
+  "look_for": [
+    {
+      "en": "Large, glossy black, long **tail**",
+      "nl": "Groot, glanzend zwart, lange **staart**"
+    },
+    {
+      "en": "Deep ridged **bill**, pale eye",
+      "nl": "Hoge **snavel** met rug, lichte iris"
+    },
+    {
+      "en": "Flocks with clumsy, flapping flight",
+      "nl": "Groepen met onhandige, klapperende vlucht"
+    }
+  ]
+}

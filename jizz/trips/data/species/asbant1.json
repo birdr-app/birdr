@@ -1,0 +1,22 @@
+{
+  "code": "asbant1",
+  "name": {
+    "en": "Ash-breasted Antbird",
+    "nl": "Asborstmierkruiper"
+  },
+  "latin": "Myrmoborus lugubris",
+  "look_for": [
+    {
+      "en": "Male black with ash-grey **breast**",
+      "nl": "Mannetje zwart met asgrijze **borst**"
+    },
+    {
+      "en": "Black **face** and throat, bold white **brow** in some",
+      "nl": "Zwart **gezicht** en keel, brede witte wenkbrauw bij sommige"
+    },
+    {
+      "en": "Walks on the ground in flooded forest",
+      "nl": "Loopt op de grond in overstroomd bos"
+    }
+  ]
+}

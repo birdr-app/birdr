@@ -1,0 +1,22 @@
+{
+  "code": "pacant",
+  "name": {
+    "en": "Pacific Antwren",
+    "nl": "Chocomiersluiper"
+  },
+  "latin": "Myrmotherula pacifica",
+  "look_for": [
+    {
+      "en": "Male grey with a white-spotted black **throat**",
+      "nl": "Mannetje grijs met zwarte, wit gevlekte **keel**"
+    },
+    {
+      "en": "Pale grey **belly** with rusty-edged **wings**",
+      "nl": "Lichtgrijze **buik** met roestbruine **vleugel**randen"
+    },
+    {
+      "en": "Low in forest edges of the Pacific lowlands",
+      "nl": "Laag aan bosranden van het Pacifische laagland"
+    }
+  ]
+}

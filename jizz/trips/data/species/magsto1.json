@@ -1,0 +1,22 @@
+{
+  "code": "magsto1",
+  "name": {
+    "en": "Maguari Stork",
+    "nl": "Magoeari"
+  },
+  "latin": "Ciconia maguari",
+  "look_for": [
+    {
+      "en": "White stork with a black **tail** and flight feathers",
+      "nl": "Witte ooievaar met zwarte **staart** en slagpennen"
+    },
+    {
+      "en": "Dark red **legs** and a pale slim bill",
+      "nl": "Donkerrode **poten** en een bleke dunne snavel"
+    },
+    {
+      "en": "Wet grasslands and marshes",
+      "nl": "Natte graslanden en moerassen"
+    }
+  ]
+}

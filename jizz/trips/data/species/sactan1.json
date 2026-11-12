@@ -1,0 +1,22 @@
+{
+  "code": "sactan1",
+  "name": {
+    "en": "Saffron-crowned Tanager",
+    "nl": "Geelkoptangare"
+  },
+  "latin": "Tangara xanthocephala",
+  "look_for": [
+    {
+      "en": "Saffron-yellow **crown** and black mask",
+      "nl": "Saffraangele **kruin** en zwart masker"
+    },
+    {
+      "en": "Green **body** with a turquoise-edged wing",
+      "nl": "Groen **lijf** met een turkoois omrande vleugel"
+    },
+    {
+      "en": "Black **back** streaked with yellow",
+      "nl": "Zwarte **rug** met gele strepen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "orfbar1",
+  "name": {
+    "en": "Orange-fronted Barbet",
+    "nl": "Geschubde baardvogel"
+  },
+  "latin": "Capito squamatus",
+  "look_for": [
+    {
+      "en": "Orange **forehead** and a red **throat**",
+      "nl": "Oranje **voorhoofd** en een rode **keel**"
+    },
+    {
+      "en": "Black-streaked **back**, yellowish **belly**",
+      "nl": "Zwart gestreepte **rug**, gelige **buik**"
+    },
+    {
+      "en": "Pacific slope forest, in the canopy and edges",
+      "nl": "Bos op de Pacifische helling, kroon en randen"
+    }
+  ]
+}

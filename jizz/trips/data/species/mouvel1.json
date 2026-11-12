@@ -1,0 +1,22 @@
+{
+  "code": "mouvel1",
+  "name": {
+    "en": "Mountain Velvetbreast",
+    "nl": "Draadvleugelkolibrie"
+  },
+  "latin": "Lafresnaya lafresnayi",
+  "look_for": [
+    {
+      "en": "Strongly down-curved **bill**, long and black",
+      "nl": "Sterk gebogen **snavel**, lang en zwart"
+    },
+    {
+      "en": "Glittering green **breast** with a velvet black belly stripe",
+      "nl": "Groene glinsterende **borst** met een zwarte fluwelen buikstreep"
+    },
+    {
+      "en": "Rufous-chestnut **wing** patches, bright in flight",
+      "nl": "Kastanjebruine **vleugel**vlekken, opvallend in de vlucht"
+    }
+  ]
+}

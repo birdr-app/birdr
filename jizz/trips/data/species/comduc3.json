@@ -1,0 +1,22 @@
+{
+  "code": "comduc3",
+  "name": {
+    "en": "Comb Duck",
+    "nl": "Amerikaanse knobbeleend"
+  },
+  "latin": "Sarkidiornis sylvicola",
+  "look_for": [
+    {
+      "en": "Large black-and-white duck with a black **back**",
+      "nl": "Grote zwart-witte eend met een zwarte **rug**"
+    },
+    {
+      "en": "Male has a big black knob on the bill",
+      "nl": "Mannetje met een grote zwarte knobbel op de snavel"
+    },
+    {
+      "en": "White head with black speckles",
+      "nl": "Witte kop met zwarte stippen"
+    }
+  ]
+}

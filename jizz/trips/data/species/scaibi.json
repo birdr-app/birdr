@@ -1,0 +1,22 @@
+{
+  "code": "scaibi",
+  "name": {
+    "en": "Scarlet Ibis",
+    "nl": "Rode ibis"
+  },
+  "latin": "Eudocimus ruber",
+  "look_for": [
+    {
+      "en": "Entirely bright scarlet",
+      "nl": "Helemaal fel scharlakenrood"
+    },
+    {
+      "en": "Black **wing** tips in flight",
+      "nl": "Zwarte **vleugelpunten** in de vlucht"
+    },
+    {
+      "en": "Long downcurved **bill**",
+      "nl": "Lange gebogen **snavel**"
+    }
+  ]
+}

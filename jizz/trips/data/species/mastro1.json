@@ -1,0 +1,22 @@
+{
+  "code": "mastro1",
+  "name": {
+    "en": "Masked Trogon",
+    "nl": "Maskertrogon"
+  },
+  "latin": "Trogon personatus",
+  "look_for": [
+    {
+      "en": "Black **face** mask, green back",
+      "nl": "Zwart **gezichts**masker, groene rug"
+    },
+    {
+      "en": "Red belly, narrow white chest band",
+      "nl": "Rode buik, smalle witte borstband"
+    },
+    {
+      "en": "Montane forest trogon, finely barred tail underside",
+      "nl": "Trogon van bergbos, fijn gebandeerde staartonderkant"
+    }
+  ]
+}

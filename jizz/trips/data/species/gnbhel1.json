@@ -1,0 +1,22 @@
+{
+  "code": "gnbhel1",
+  "name": {
+    "en": "Green-bearded Helmetcrest",
+    "nl": "Groenbaardhelmkolibrie"
+  },
+  "latin": "Oxypogon guerinii",
+  "look_for": [
+    {
+      "en": "Long green **beard** and white-tipped crest in the male",
+      "nl": "Lange groene **baard** en witgepunte kuif bij het mannetje"
+    },
+    {
+      "en": "Glossy green **throat** and belly, white chest patch",
+      "nl": "Glanzend groene **keel** en buik, witte borstvlek"
+    },
+    {
+      "en": "Female duller, shorter **crest**, white neck patch",
+      "nl": "Vrouwtje doffer, kortere **kuif**, witte nekvlek"
+    }
+  ]
+}

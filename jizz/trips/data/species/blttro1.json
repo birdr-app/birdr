@@ -1,0 +1,22 @@
+{
+  "code": "blttro1",
+  "name": {
+    "en": "Black-tailed Trogon",
+    "nl": "Zwartstaarttrogon"
+  },
+  "latin": "Trogon melanurus",
+  "look_for": [
+    {
+      "en": "Large trogon with red **belly**, white chest band",
+      "nl": "Grote trogon met rode **buik**, witte borstband"
+    },
+    {
+      "en": "Solid black underside of the tail",
+      "nl": "Egaal zwarte onderkant van de staart"
+    },
+    {
+      "en": "Blue-green head and back",
+      "nl": "Blauwgroene kop en rug"
+    }
+  ]
+}

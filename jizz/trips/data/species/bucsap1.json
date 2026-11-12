@@ -1,0 +1,22 @@
+{
+  "code": "bucsap1",
+  "name": {
+    "en": "Blue-chinned Sapphire",
+    "nl": "Blauwkeelsaffierkolibrie"
+  },
+  "latin": "Chlorestes notata",
+  "look_for": [
+    {
+      "en": "Violet-blue **chin** and throat in the male",
+      "nl": "Violetblauwe **kin** en keel bij het mannetje"
+    },
+    {
+      "en": "Green **back**, pale underparts with green wash",
+      "nl": "Groene **rug**, lichte onderkant met groene waas"
+    },
+    {
+      "en": "Red-based **bill** with a dark tip, bronzy tail",
+      "nl": "Roodbasis **snavel** met donkere punt, bronzen staart"
+    }
+  ]
+}

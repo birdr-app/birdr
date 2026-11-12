@@ -1,0 +1,22 @@
+{
+  "code": "purjac1",
+  "name": {
+    "en": "Purplish Jacamar",
+    "nl": "Purperglansvogel"
+  },
+  "latin": "Galbula chalcothorax",
+  "look_for": [
+    {
+      "en": "Dark purplish-glossed jacamar with a rufous **belly**",
+      "nl": "Donkerpaarse glansvogel met roestkleurige **buik**"
+    },
+    {
+      "en": "Metallic purple **crown** and breast band",
+      "nl": "Paarse metaalglans op **kruin** en borstband"
+    },
+    {
+      "en": "White **throat** in male, buff in female",
+      "nl": "Witte **keel** bij het mannetje, bruin bij het vrouwtje"
+    }
+  ]
+}

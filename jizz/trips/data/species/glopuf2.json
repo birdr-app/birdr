@@ -1,0 +1,22 @@
+{
+  "code": "glopuf2",
+  "name": {
+    "en": "Glowing Puffleg",
+    "nl": "Groen pluimbroekje"
+  },
+  "latin": "Eriocnemis vestita",
+  "look_for": [
+    {
+      "en": "Glowing blue-green **belly** patch, big white leg puffs",
+      "nl": "Glinsterend blauwgroene **buik**vlek, grote witte broekjes"
+    },
+    {
+      "en": "Short straight black **bill**, glittering green forehead",
+      "nl": "Korte rechte zwarte **snavel**, glinsterend groen voorhoofd"
+    },
+    {
+      "en": "Dark bronzy-green **body**, short forked tail",
+      "nl": "Donker bronsgroen **lijf**, korte gevorkte staart"
+    }
+  ]
+}

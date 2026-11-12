@@ -1,0 +1,22 @@
+{
+  "code": "bubtan2",
+  "name": {
+    "en": "Burnished-buff Tanager",
+    "nl": "Sabeltangare"
+  },
+  "latin": "Stilpnia cayana",
+  "look_for": [
+    {
+      "en": "Buff-orange **belly** with a black **mask**",
+      "nl": "Oranjegele **buik** met een zwart **masker**"
+    },
+    {
+      "en": "Blue-green **crown** and blue wing",
+      "nl": "Blauwgroene **kruin** en blauwe vleugels"
+    },
+    {
+      "en": "Dry savanna and scrub, not forest",
+      "nl": "Droge savanne en struikgewas, geen bos"
+    }
+  ]
+}

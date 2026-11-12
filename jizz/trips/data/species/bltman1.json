@@ -1,0 +1,22 @@
+{
+  "code": "bltman1",
+  "name": {
+    "en": "Black-throated Mango",
+    "nl": "Zwartkeelmango"
+  },
+  "latin": "Anthracothorax nigricollis",
+  "look_for": [
+    {
+      "en": "Male green with a black **throat** stripe below",
+      "nl": "Mannetje groen met zwarte **keel**streep over de onderkant"
+    },
+    {
+      "en": "Maroon-and-blue **tail** edges, dark curved bill",
+      "nl": "Kastanje en blauwe **staart**randen, donkere gebogen snavel"
+    },
+    {
+      "en": "Female white below, black central **stripe**",
+      "nl": "Vrouwtje wit onder met zwarte middenstreep over de **borst**"
+    }
+  ]
+}

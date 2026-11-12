@@ -1,0 +1,239 @@
+{
+  "country": "CO-ANDES",
+  "intro": {
+    "en": "The Andes split Colombia into three ranges, and their slopes hold more birds than almost anywhere on Earth. Cloud forest around Manizales, Jardín and Medellín, the páramo of Los Nevados and Chingaza, and the dry valleys of Chicamocha and the Magdalena each have their own species, many found nowhere else. This pack covers 116 species, on top of the Colombia trip.",
+    "nl": "De Andes splitsen Colombia in drie bergketens, en hun hellingen herbergen meer vogels dan bijna elke andere plek ter wereld. Nevelwoud rond Manizales, Jardín en Medellín, de páramo van Los Nevados en Chingaza en de droge dalen van Chicamocha en de Magdalena hebben elk hun eigen soorten, veel ervan nergens anders te vinden. Dit pakket omvat 116 soorten, bovenop de reis naar Colombia."
+  },
+  "units": {
+    "waterfowl": {
+      "title": {
+        "en": "Torrent Duck, guans and Oilbird",
+        "nl": "Bergbeekeend, goeans en Vetvogel"
+      },
+      "intro": {
+        "en": "Highland waters and the forests around them. Look for the Torrent Duck on fast mountain rivers, the teal and Andean Duck on high lakes, and the guans in cloud-forest canopy. The Oilbird roosts in caves and is best seen at a known cave.",
+        "nl": "Hoge wateren en de bossen eromheen. Zoek de Bergbeekeend op snelstromende bergrivieren, de taling en de Andesstekelstaart op hooggelegen meren en de goeans in het kronendak van nevelwoud. De Vetvogel slaapt in grotten en zie je het best bij een bekende grot."
+      }
+    },
+    "hummingbirds-1": {
+      "title": {
+        "en": "Helmetcrest, lancebills, sunangel",
+        "nl": "Helmkolibrie, lansbekken, zonnenymf"
+      },
+      "intro": {
+        "en": "A mix of high and low birds. The helmetcrest and thornbill live in open páramo, while the lancebills and the hermit work the understorey of wet forest. Long straight bills, sharp-pointed or decurved, help to separate them.",
+        "nl": "Een mix van hoge en lage vogels. De helmkolibrie en de doornsnavel leven in open páramo, de lansbekken en de heremietkolibrie werken in het ondergroeiniveau van nat bos. De snavelvorm helpt: lang en recht, of juist naar beneden gebogen."
+      }
+    },
+    "hummingbirds-2": {
+      "title": {
+        "en": "Pufflegs, brilliant and jewelfront",
+        "nl": "Broekjes, briljant en juweelkolibrie"
+      },
+      "intro": {
+        "en": "Hummingbirds of cloud-forest edges and flowering shrubs. The pufflegs show white fluffy leg tufts, and the brilliants and jewelfront are larger forest birds with glittering throats. Watch flowers and feeders at the higher lodges.",
+        "nl": "Kolibries van nevelwoudranden en bloeiende struiken. De broekjes hebben witte pluizige pakjes aan de poten, de briljanten en de juweelkolibrie zijn grotere bosvogels met glinsterende kelen. Let op bloemen en voederplekken bij de hoger gelegen lodges."
+      }
+    },
+    "hummingbirds-3": {
+      "title": {
+        "en": "Woodstars, blossomcrown, brilliant",
+        "nl": "Boskolibries, bloemkroon, briljant"
+      },
+      "intro": {
+        "en": "Smaller and rarer hummingbirds of the mountain forests. Two are Colombian endemics of the Central Andes and the Magdalena valley. The woodstars are tiny and bee-like, so look for them at flowers in forest gaps.",
+        "nl": "Kleinere en zeldzamere kolibries van het bergbos. Twee zijn endemisch in Colombia, in de Centrale Andes en het Magdalenadal. De boskolibries zijn piepklein en lijken op bijen, dus zoek ze bij bloemen in open plekken in het bos."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "title": {
+        "en": "Andean Condor, puffbird, nunbird",
+        "nl": "Andescondor, baardkoekoek, nonvogel"
+      },
+      "intro": {
+        "en": "One giant of the high Andes and two quiet forest birds. Scan the cliffs and open ridges above the treeline for the condor, and the forest foothills for the puffbird and nunbird, which perch motionless for long periods.",
+        "nl": "Eén reus van de hoge Andes en twee stille bosvogels. Scan de rotswanden en open bergruggen boven de boomgrens naar de condor, en de beboste voorgebergten naar de baardkoekoek en de nonvogel, die lang bewegingloos blijven zitten."
+      }
+    },
+    "barbets-and-toucans": {
+      "title": {
+        "en": "Barbets and mountain-toucans",
+        "nl": "Baardvogels en bergtoekans"
+      },
+      "intro": {
+        "en": "Four fruit-eaters of the foothills and cloud forest. The barbets are plump with a heavy bill and bright colours, and the toucanets are green or grey with a long bill. Look in fruiting trees at the forest edge, often around dawn.",
+        "nl": "Vier fruitetende vogels van het voorgebergte en nevelwoud. De baardvogels zijn gedrongen met een zware snavel en felle kleuren, de toekans zijn groen of grijs met een lange snavel. Kijk in vruchtdragende bomen aan de bosrand, vaak rond zonsopgang."
+      }
+    },
+    "woodpeckers": {
+      "title": {
+        "en": "Woodpeckers and a piculet",
+        "nl": "Spechten en een dwergspecht"
+      },
+      "intro": {
+        "en": "Four woodpeckers of foothill and mid-elevation forest. The piculet is tiny and taps at thin twigs, the others work trunks and larger branches. Two are Colombian endemics.",
+        "nl": "Vier spechten van voorgebergte en middelhoog bos. De dwergspecht is klein en tikt op dunne twijgen, de andere werken aan stammen en dikkere takken. Twee zijn endemisch in Colombia."
+      }
+    },
+    "parrots-parakeets-and-allies-1": {
+      "title": {
+        "en": "Cloud-forest parrots and parakeets",
+        "nl": "Papegaaien van het nevelwoud"
+      },
+      "intro": {
+        "en": "Green parrots that cross the cloud forest in noisy flocks at dawn and dusk. Check the head and wing patches in flight, as the green bodies look the same at first. Fruiting trees and forest clearings are good places to wait.",
+        "nl": "Groene papegaaien die in lawaaierige groepen bij zonsopgang en in de schemering over het nevelwoud vliegen. Let in vlucht op kop en vleugelvlekken, want de groene lijven zien er eerst hetzelfde uit. Vruchtdragende bomen en open plekken zijn goede wachtplekken."
+      }
+    },
+    "parrots-parakeets-and-allies-2": {
+      "title": {
+        "en": "Parakeets, parrotlet and Yellow-eared",
+        "nl": "Parkieten, papegaaitje, Geeloorpapegaai"
+      },
+      "intro": {
+        "en": "More parrots from the mountain forests, among them the Yellow-eared Parrot, a rare bird of wax-palm forest. Look at tail length, wing colour and calls to separate the parakeets in flight.",
+        "nl": "Meer papegaaien uit de bergbossen, waaronder de Geeloorpapegaai, een zeldzame vogel van het wasplamenbos. Let op staartlengte, vleugelkleur en geluid om de parkieten in vlucht uit elkaar te houden."
+      }
+    },
+    "antbirds": {
+      "title": {
+        "en": "Antbirds of the forest understorey",
+        "nl": "Miervogels in het ondergroeiniveau"
+      },
+      "intro": {
+        "en": "Small to medium birds that stay low in dense forest, often with a dark and a rufous sex. Find them by their song and by following mixed flocks. Two are endemics of the eastern foothills and the Magdalena side.",
+        "nl": "Kleine tot middelgrote vogels die laag blijven in dicht bos, vaak met een donker en een roodbruin geslacht. Vind ze op de zang en door gemengde groepen te volgen. Twee zijn endemisch in de oostelijke voorgebergten en aan de Magdalenakant."
+      }
+    },
+    "gnateaters-and-antpittas": {
+      "title": {
+        "en": "Antpittas of the Andean forests",
+        "nl": "Mierpitta's van de Andesbossen"
+      },
+      "intro": {
+        "en": "Round, long-legged birds that hop over the forest floor and are hard to see. Several sites here feed them with worms, which makes them easier. Learn the calls first, and look low on moss-covered banks.",
+        "nl": "Ronde vogels met lange poten die over de bosbodem hippen en moeilijk te zien zijn. Op meerdere plekken worden ze met wormen bijgevoerd, wat ze makkelijker maakt. Leer eerst de roep en kijk laag op bemoste hellingen."
+      }
+    },
+    "tapaculos": {
+      "title": {
+        "en": "Tapaculos",
+        "nl": "Tapaculo's"
+      },
+      "intro": {
+        "en": "Small, dark, mouse-like birds that run through thick undergrowth with a cocked tail. They sound far more often than they show, and species differ by range and altitude more than by plumage. Two are Colombian endemics.",
+        "nl": "Kleine, donkere, muisachtige vogels die met opgerichte staart door dicht struikgewas rennen. Je hoort ze veel vaker dan je ze ziet, en soorten verschillen meer door verspreiding en hoogte dan door verenkleed. Twee zijn endemisch in Colombia."
+      }
+    },
+    "antthrushes": {
+      "title": {
+        "en": "Cinclodes, thistletail, antthrush",
+        "nl": "Cinclodes, distelstaart, mierlijster"
+      },
+      "intro": {
+        "en": "Ground and scrub birds of the high Andes, plus one forest antthrush. The cinclodes and thistletail stay near streams and bogs in the páramo. The antthrush walks quietly on the forest floor.",
+        "nl": "Grond- en struikvogels van de hoge Andes, plus één bosmierlijster. De cinclodes en de distelstaart blijven bij beken en moerassen in de páramo. De mierlijster loopt stil over de bosbodem."
+      }
+    },
+    "cotingas": {
+      "title": {
+        "en": "Fruiteaters and Chestnut-capped Piha",
+        "nl": "Fruiteters en de piha"
+      },
+      "intro": {
+        "en": "Fruit-eating birds of mid-elevation forest. The fruiteaters sit upright and still in the canopy, and the piha is best recognised by its far-carrying call. Look near fruiting trees.",
+        "nl": "Fruitetende vogels van middelhoog bos. De fruiteters zitten rechtop en stil in het kronendak, en de piha herken je vooral aan zijn ver dragende roep. Kijk bij vruchtdragende bomen."
+      }
+    },
+    "tyrant-flycatchers-elaenias-tyrannulets-and-allies": {
+      "title": {
+        "en": "Tyrannulets and bristle-tyrants",
+        "nl": "Dwergtirannen en borstelkoninkjes"
+      },
+      "intro": {
+        "en": "Tiny flycatchers of mountain forest, often in mixed flocks with tanagers. Check the face pattern, wing bars and where the bird sits, as the species look similar. One is endemic to Antioquia.",
+        "nl": "Piepkleine vliegenvangers van het bergbos, vaak in gemengde groepen met tangaren. Let op gezichtstekening, vleugelstrepen en waar de vogel zit, want de soorten lijken op elkaar. Eén is endemisch in Antioquia."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies": {
+      "title": {
+        "en": "Chat-tyrants and ground-tyrants",
+        "nl": "Struiktirannen en grondtirannen"
+      },
+      "intro": {
+        "en": "Flycatchers of the páramo edge and high cloud forest. They perch openly on shrubs and rocks and drop to the ground for insects. Look at the colour of the belly and rump to separate the chat-tyrants and bush-tyrants.",
+        "nl": "Vliegenvangers van de páramorand en hoog nevelwoud. Ze zitten open op struiken en rotsen en laten zich naar de grond zakken voor insecten. Let op de kleur van buik en stuit om de struiktirannen uit elkaar te houden."
+      }
+    },
+    "larks": {
+      "title": {
+        "en": "Shore Lark, wrens and a euphonia",
+        "nl": "Strandleeuwerik, winterkoning, organist"
+      },
+      "intro": {
+        "en": "Three families in one unit. The Shore Lark lives on open high plains near Bogotá, the wrens in thick forest and bamboo, and the euphonia in forest and its edges.",
+        "nl": "Drie families in één onderdeel. De Strandleeuwerik leeft op open hoogvlakten bij Bogotá, de winterkoningen in dicht bos en bamboe, en de organist in bos en langs de bosrand."
+      }
+    },
+    "new-world-sparrows": {
+      "title": {
+        "en": "Brushfinches of the cloud forest",
+        "nl": "Borstelvinken van het nevelwoud"
+      },
+      "intro": {
+        "en": "Three brushfinches that are all Colombian endemics. They hop on the ground and in thickets in the undergrowth of humid forest. Look at the head colour, which is the clearest difference.",
+        "nl": "Drie borstelvinken die alle endemisch zijn in Colombia. Ze hippen op de grond en in struikgewas in het ondergroeiniveau van vochtig bos. Kijk naar de kleur van de kop, het duidelijkste verschil."
+      }
+    },
+    "blackbirds": {
+      "title": {
+        "en": "Grackles, cacique and oropendola",
+        "nl": "Troepialen, cacique en oropendola"
+      },
+      "intro": {
+        "en": "Social birds of mountain slopes and forest edges. The two grackles are Colombian endemics, one of the east and one of the central Andes, and both move in noisy groups. Listen for the oropendola's gurgling song at colonies.",
+        "nl": "Sociale vogels van berghellingen en bosranden. De twee grakels zijn endemisch in Colombia, een in het oosten en een in de centrale Andes, en beide trekken in luidruchtige groepen. Luister naar het borrelende lied van de oropendola bij de kolonies."
+      }
+    },
+    "wood-warblers": {
+      "title": {
+        "en": "Warbler, ant-tanagers and a migrant",
+        "nl": "Zanger, mierentangaren en een trekker"
+      },
+      "intro": {
+        "en": "A small unit with two endemic ant-tanagers of the Magdalena and Antioquia forests. The Cerulean Warbler is a winter visitor that joins mixed flocks. The ant-tanagers stay low and are best found by their calls.",
+        "nl": "Een kleine groep met twee endemische mierentangaren van de bossen in het Magdalenadal en Antioquia. De Cerulean Warbler is een blauwe wintergast uit Noord-Amerika die zich bij gemengde groepen voegt. De mierentangaren blijven laag en zijn het best te vinden op de roep."
+      }
+    },
+    "tanagers-and-allies-1": {
+      "title": {
+        "en": "Mountain tanagers and hemispinguses",
+        "nl": "Bergtangaren en hemispingussen"
+      },
+      "intro": {
+        "en": "Tanagers of high cloud forest and the treeline, often in mixed flocks. Look at the head pattern and belly colour, which separate the hemispinguses, and at the bright red or green of the larger species.",
+        "nl": "Tangaren van hoog nevelwoud en de boomgrens, vaak in gemengde groepen. Let op kopstekening en buikkleur, die de hemispingussen uit elkaar houden, en op het felle rood of groen van de grotere soorten."
+      }
+    },
+    "tanagers-and-allies-2": {
+      "title": {
+        "en": "Colourful tanagers of mid-elevations",
+        "nl": "Kleurrijke tangaren van middelhoog bos"
+      },
+      "intro": {
+        "en": "Brightly coloured tanagers of mid-elevation forest and gardens. They feed at fruit feeders at many lodges and in mixed flocks. Look at the head and back, which carry the field marks.",
+        "nl": "Felgekleurde tangaren van middelhoog bos en tuinen. Ze komen bij veel lodges naar vruchtenvoeders en trekken in gemengde groepen. Kijk naar kop en rug, waar de kenmerken zitten."
+      }
+    },
+    "tanagers-and-allies-3": {
+      "title": {
+        "en": "Dacnis, conebill, plushcap, bush tanager",
+        "nl": "Dacnis, kegelsnavel, bergtangaren"
+      },
+      "intro": {
+        "en": "Small tanagers and allies of forest and the treeline. The dacnis and bush tanagers join mixed flocks, while the conebill and plushcap favour bamboo and shrubby edges high up.",
+        "nl": "Kleine tangaren en verwanten van bos en boomgrens. De dacnis en de bergtangaren voegen zich bij gemengde groepen, terwijl de kegelsnavel en de pluchevogel de voorkeur geven aan bamboe en struikige randen hoog in de bergen."
+      }
+    }
+  }
+}

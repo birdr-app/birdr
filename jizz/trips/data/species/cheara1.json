@@ -1,0 +1,22 @@
+{
+  "code": "cheara1",
+  "name": {
+    "en": "Chestnut-eared Aracari",
+    "nl": "Bruinoorarassari"
+  },
+  "latin": "Pteroglossus castanotis",
+  "look_for": [
+    {
+      "en": "Chestnut **ear** patch on a black **head**",
+      "nl": "Kastanjebruine **oor**vlek op zwarte **kop**"
+    },
+    {
+      "en": "Yellow **belly** with a single dark band",
+      "nl": "Gele **buik** met één donkere band"
+    },
+    {
+      "en": "Black **bill** with a pale stripe along the top",
+      "nl": "Zwarte **snavel** met lichte streep bovenlangs"
+    }
+  ]
+}

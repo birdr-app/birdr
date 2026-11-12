@@ -1,0 +1,22 @@
+{
+  "code": "fotwoo1",
+  "name": {
+    "en": "Fork-tailed Woodnymph",
+    "nl": "Vorkstaartbosnimf"
+  },
+  "latin": "Thalurania furcata",
+  "look_for": [
+    {
+      "en": "Male with blue **belly** and a glittering green throat",
+      "nl": "Mannetje met blauwe **buik** en glinsterend groene keel"
+    },
+    {
+      "en": "Deeply forked blue-black **tail**",
+      "nl": "Diep gevorkte blauwzwarte **staart**"
+    },
+    {
+      "en": "Female grey below with a white **tail** tip",
+      "nl": "Vrouwtje grijs onder met witte **staart**punt"
+    }
+  ]
+}

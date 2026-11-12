@@ -1,0 +1,22 @@
+{
+  "code": "flctan1",
+  "name": {
+    "en": "Flame-crested Tanager",
+    "nl": "Vuurkuiftangare"
+  },
+  "latin": "Loriotus cristatus",
+  "look_for": [
+    {
+      "en": "Black **head** with a golden crest, grey belly",
+      "nl": "Zwarte **kop** met een gouden kuif, grijze buik"
+    },
+    {
+      "en": "Orange **crest** and a yellow rump",
+      "nl": "Oranje **kuif** en een gele stuit"
+    },
+    {
+      "en": "Moves quietly in canopy flocks",
+      "nl": "Beweegt rustig mee met troepen in het bladerdak"
+    }
+  ]
+}

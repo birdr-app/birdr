@@ -1,0 +1,22 @@
+{
+  "code": "letara1",
+  "name": {
+    "en": "Lettered Aracari",
+    "nl": "Letterarassari"
+  },
+  "latin": "Pteroglossus inscriptus",
+  "look_for": [
+    {
+      "en": "Black **bill** marked by an ivory-coloured stripe",
+      "nl": "Zwarte **snavel** met een ivoorkleurige streep"
+    },
+    {
+      "en": "Red **rump**; pale yellow **belly** with a single band",
+      "nl": "Rode **stuit**; lichtgele **buik** met één band"
+    },
+    {
+      "en": "Black **head**, red-streaked **neck**",
+      "nl": "Zwarte **kop**, rood gestreepte **nek**"
+    }
+  ]
+}

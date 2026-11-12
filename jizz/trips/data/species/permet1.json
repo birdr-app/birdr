@@ -1,0 +1,22 @@
+{
+  "code": "permet1",
+  "name": {
+    "en": "Perija Metaltail",
+    "nl": "Perijaglansstaartkolibrie"
+  },
+  "latin": "Metallura iracunda",
+  "look_for": [
+    {
+      "en": "Dark bronze-green **body** with a bright orange-rufous tail",
+      "nl": "Donker bronsgroen **lijf** met felle oranje-roestbruine staart"
+    },
+    {
+      "en": "Short straight black **bill**, glittering green throat",
+      "nl": "Korte rechte zwarte **snavel**, glinsterend groene keel"
+    },
+    {
+      "en": "Only in the Serranía de **Perijá**",
+      "nl": "Enkel in de Serranía de **Perijá**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "ocetap1",
+  "name": {
+    "en": "Ocellated Tapaculo",
+    "nl": "Zilverpareltapaculo"
+  },
+  "latin": "Acropternis orthonyx",
+  "look_for": [
+    {
+      "en": "Large, black with white spots on the **body**",
+      "nl": "Groot, zwart met witte vlekken op het **lijf**"
+    },
+    {
+      "en": "Rufous **face** and throat, long tail",
+      "nl": "Roestbruin **gezicht** en keel, lange staart"
+    },
+    {
+      "en": "Walks the forest floor and trails, heavy gait",
+      "nl": "Loopt over bosbodem en paden, zwaar van tred"
+    }
+  ]
+}

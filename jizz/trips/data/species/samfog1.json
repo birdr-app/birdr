@@ -1,0 +1,22 @@
+{
+  "code": "samfog1",
+  "name": {
+    "en": "Santa Marta Foliage-gleaner",
+    "nl": "Santa-Martabladspeurder"
+  },
+  "latin": "Clibanornis rufipectus",
+  "look_for": [
+    {
+      "en": "Plain brown above, rufous **breast**",
+      "nl": "Effen bruin boven, roodbruine **borst**"
+    },
+    {
+      "en": "Pale throat, rufous tail",
+      "nl": "Lichte keel, roodbruine staart"
+    },
+    {
+      "en": "Humid forest of Sierra Nevada de Santa Marta",
+      "nl": "Vochtig bos in de Sierra Nevada de Santa Marta"
+    }
+  ]
+}

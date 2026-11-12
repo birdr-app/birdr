@@ -1,0 +1,119 @@
+{
+  "country": "CO-LLANOS",
+  "intro": {
+    "en": "The Llanos are Colombia's eastern plains in Meta, Casanare and Arauca, a land of flooded savannah, palm groves, rivers and strips of gallery forest. Birding is easy and open: roadside wetlands, ranches such as Hato La Aurora near Yopal, and the roads east of Villavicencio hold big wading birds, raptors and many birds you cannot find in the Andes. This pack covers 50 species, on top of the Colombia trip.",
+    "nl": "De Llanos zijn de oostelijke vlakten van Colombia in Meta, Casanare en Arauca, een land van overstroomde savanne, palmbosjes, rivieren en stroken galerijbos. Vogelen gaat hier makkelijk en in het open veld: moerassen langs de weg, ranches zoals Hato La Aurora bij Yopal en de wegen ten oosten van Villavicencio herbergen grote waadvogels, roofvogels en veel soorten die je in de Andes niet vindt. Dit pakket omvat 50 soorten, bovenop de reis naar Colombia."
+  },
+  "units": {
+    "screamers": {
+      "title": {
+        "en": "Screamers, geese, ducks, nighthawk",
+        "nl": "Hoenderkoet, ganzen, eenden, nachtzwaluw"
+      },
+      "intro": {
+        "en": "Five birds of the flooded plains. Horned Screamer, Orinoco Goose, Comb Duck and Brazilian Teal share the marshes and pools, and the Least Nighthawk rests by day on bare ground and sandbanks.",
+        "nl": "Vijf vogels van de overstroomde vlakten. Hoenderkoet, Orinocogans, knobbeleend en Braziliaanse taling delen de moerassen en poelen, en de dwergnachtzwaluw rust overdag op kaal land en zandbanken."
+      }
+    },
+    "hummingbirds-1": {
+      "title": {
+        "en": "Hummingbirds of garden and forest edge",
+        "nl": "Kolibries van tuin en bosrand"
+      },
+      "intro": {
+        "en": "Five hummingbirds you meet at flowering shrubs, lodge gardens and gallery forest edges. The White-bearded Hermit is long-billed and works forest trails, while the mango, emerald and goldenthroat feed in the open.",
+        "nl": "Vijf kolibries die je ziet bij bloeiende struiken, lodgetuinen en bosranden. De witbaardkluizenaar heeft een lange snavel en vliegt langs bospaden, terwijl de mango, de smaragd en de goudkeel in het open veld foerageren."
+      }
+    },
+    "hummingbirds-2": {
+      "title": {
+        "en": "Sapphires and emeralds",
+        "nl": "Saffieren en smaragden"
+      },
+      "intro": {
+        "en": "Five small, mostly green and blue hummingbirds of gardens, scrub and woodland edge. Look at the throat, the tail and the colour of the belly, and wait at a feeder or a flowering tree.",
+        "nl": "Vijf kleine, vooral groene en blauwe kolibries van tuinen, struikgewas en bosranden. Let op de keel, de staart en de kleur van de buik, en wacht bij een voederplek of een bloeiende boom."
+      }
+    },
+    "shorebirds": {
+      "title": {
+        "en": "Storks, thick-knee and plover",
+        "nl": "Ooievaars, griel en plevier"
+      },
+      "intro": {
+        "en": "Big wetland birds and a wader. Jabiru and Maguari Stork stand in shallow marshes and ricefields, while the thick-knee and the Pied Plover prefer open ground and sandy river banks.",
+        "nl": "Grote moerasvogels en twee steltlopers. Jabiroe en maguarioievaar staan in ondiepe moerassen en rijstvelden, terwijl de griel en de bonte kievit open grond en zandige rivieroevers verkiezen."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "title": {
+        "en": "Ibises and herons of the marshes",
+        "nl": "Ibissen en reigers van de moerassen"
+      },
+      "intro": {
+        "en": "Three ibises and two herons that feed in wet savannah, pools and flooded grassland. Scarlet Ibis is unmistakable, so use size and bill shape to separate the others, and look for the Capped Heron at pool edges.",
+        "nl": "Drie ibissen en twee reigers die foerageren in natte savanne, poelen en overstroomd grasland. De rode ibis is onmiskenbaar, dus gebruik grootte en snavelvorm voor de rest, en zoek de kapreiger langs poelranden."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "title": {
+        "en": "Vultures and hawks of the savannah",
+        "nl": "Gieren en haviken van de savanne"
+      },
+      "intro": {
+        "en": "Four raptors of open country. Scan fence posts and dead trees for the Savanna Hawk, and watch the sky for the two vultures, which are told apart by head colour and size.",
+        "nl": "Vier roofvogels van open land. Speur hekpalen en dode bomen af naar de savannebuizerd en let in de lucht op de twee gieren, die je herkent aan kopkleur en grootte."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Burrowing owl, puffbird and jacamars",
+        "nl": "Holenuil, baardkoekoek en glansvogels"
+      },
+      "intro": {
+        "en": "Four birds that perch still and wait. The Burrowing Owl sits at its hole on open ground by day, and the puffbird and the two jacamars sit on bare branches along tracks and in gallery forest.",
+        "nl": "Vier vogels die stil blijven zitten en wachten. De holenuil zit overdag bij zijn hol op open grond, en de baardkoekoek en de twee glansvogels zitten op kale takken langs paden en in galerijbos."
+      }
+    },
+    "woodpeckers": {
+      "title": {
+        "en": "Piculets and Little Woodpecker",
+        "nl": "Dwergspechten en kleine specht"
+      },
+      "intro": {
+        "en": "Small woodpeckers of savannah scrub and gallery forest. The three piculets are tiny and easy to miss, so listen for tapping on thin branches and check the barred or scaled pattern.",
+        "nl": "Kleine spechten van savannestruweel en galerijbos. De drie dwergspechten zijn piepklein en makkelijk te missen, dus luister naar getik op dunne takken en let op de gebandeerde of geschubde tekening."
+      }
+    },
+    "falcons-and-caracaras": {
+      "title": {
+        "en": "Falcon, parakeet, parrotlet, kiskadee",
+        "nl": "Valk, parkiet, papegaaitje, kiskadie"
+      },
+      "intro": {
+        "en": "Four conspicuous birds of open country with trees. Aplomado Falcon hunts from palms and posts, the parakeet and parrotlet fly in noisy groups, and the Lesser Kiskadee calls from low perches.",
+        "nl": "Vier opvallende vogels van open land met bomen. De Aplomadovalk jaagt vanaf palmen en palen, de parkiet en het papegaaitje vliegen in luidruchtige groepen, en de kleine kiskadie roept vanaf lage zitplaatsen."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "title": {
+        "en": "Jays, blackbird and yellowthroat",
+        "nl": "Gaaien, troepiaal en maskerzanger"
+      },
+      "intro": {
+        "en": "Four birds of gallery forest, palm groves and wet grass. The two jays move in noisy family parties, the Oriole Blackbird forages in palms, and the yellowthroat skulks in marsh vegetation.",
+        "nl": "Vier vogels van galerijbos, palmbosjes en nat gras. De twee gaaien trekken in luidruchtige familiegroepen rond, de troepiaal zoekt voedsel in palmen en de maskerzanger sluipt door moerasvegetatie."
+      }
+    },
+    "tanagers-and-allies": {
+      "title": {
+        "en": "Cardinal, saltator, tanagers, finches",
+        "nl": "Kardinaal, saltator, tangaren, vinken"
+      },
+      "intro": {
+        "en": "Six colourful songbirds of scrub, gallery forest and grassland. The cardinal, saltator and tanagers use bushes and forest edge, and the two yellow-finches feed on the ground in open grass.",
+        "nl": "Zes kleurrijke zangvogels van struikgewas, galerijbos en grasland. De kardinaal, de saltator en de tangaren zitten in struiken en langs bosranden, en de twee geelvinken foerageren op de grond in open gras."
+      }
+    }
+  }
+}

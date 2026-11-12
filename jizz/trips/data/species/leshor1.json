@@ -1,0 +1,22 @@
+{
+  "code": "leshor1",
+  "name": {
+    "en": "Lesser Hornero",
+    "nl": "Kleine ovenvogel"
+  },
+  "latin": "Furnarius minor",
+  "look_for": [
+    {
+      "en": "Small plain hornero, pale **throat**",
+      "nl": "Kleine effen ovenvogel, lichte **keel**"
+    },
+    {
+      "en": "Rufous tail, brown back",
+      "nl": "Roodbruine staart, bruine rug"
+    },
+    {
+      "en": "Walks on sandbars and river islands",
+      "nl": "Loopt op zandbanken en riviereilanden"
+    }
+  ]
+}

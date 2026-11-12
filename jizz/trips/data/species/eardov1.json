@@ -1,0 +1,22 @@
+{
+  "code": "eardov1",
+  "name": {
+    "en": "Eared Dove",
+    "nl": "Geoorde treurduif"
+  },
+  "latin": "Zenaida auriculata",
+  "look_for": [
+    {
+      "en": "Small grey-brown dove with two black **cheek** streaks",
+      "nl": "Kleine grijsbruine duif met twee zwarte **wangstrepen**"
+    },
+    {
+      "en": "Short, dark, white-tipped **tail** in flight",
+      "nl": "Korte, donkere **staart** met witte punten in de vlucht"
+    },
+    {
+      "en": "Walks on open ground, often in flocks",
+      "nl": "Loopt op open grond, vaak in groepen"
+    }
+  ]
+}

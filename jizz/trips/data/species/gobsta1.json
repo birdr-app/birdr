@@ -1,0 +1,22 @@
+{
+  "code": "gobsta1",
+  "name": {
+    "en": "Golden-bellied Starfrontlet",
+    "nl": "Goudbuikincakolibrie"
+  },
+  "latin": "Coeligena bonapartei",
+  "look_for": [
+    {
+      "en": "Golden-yellow **belly** and glittering green forehead",
+      "nl": "Goudgele **buik** en glinsterend groen voorhoofd"
+    },
+    {
+      "en": "Long straight **bill**, white thigh tufts",
+      "nl": "Lange rechte **snavel**, witte beenpluimen"
+    },
+    {
+      "en": "Bronzy **tail** with a dark band, buff wing patches",
+      "nl": "Bronzen **staart** met donkere band, bruine vleugelvlekken"
+    }
+  ]
+}

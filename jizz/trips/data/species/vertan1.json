@@ -1,0 +1,22 @@
+{
+  "code": "vertan1",
+  "name": {
+    "en": "Vermilion Tanager",
+    "nl": "Vermiljoentangare"
+  },
+  "latin": "Calochaetes coccineus",
+  "look_for": [
+    {
+      "en": "Bright vermilion-red **body** with a black back",
+      "nl": "Fel vermiljoenrood **lijf** met een zwarte rug"
+    },
+    {
+      "en": "Black **wing** and tail, red head",
+      "nl": "Zwarte **vleugel** en staart, rode kop"
+    },
+    {
+      "en": "Female duller red-brown with a grey back",
+      "nl": "Vrouwtje doffer roodbruin met een grijze rug"
+    }
+  ]
+}

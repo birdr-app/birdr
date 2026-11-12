@@ -1,0 +1,22 @@
+{
+  "code": "blwsal1",
+  "name": {
+    "en": "Black-winged Saltator",
+    "nl": "Zwartvleugelsaltator"
+  },
+  "latin": "Saltator atripennis",
+  "look_for": [
+    {
+      "en": "Large grey-green **body** with a black wing",
+      "nl": "Groot grijsgroen **lijf** met zwarte vleugels"
+    },
+    {
+      "en": "Orange-red **bill** and blackish face",
+      "nl": "Oranjerode **snavel** en zwartachtig gezicht"
+    },
+    {
+      "en": "Skulks in dense thickets at middle levels",
+      "nl": "Sluipt door dichte struiken op middenhoogte"
+    }
+  ]
+}

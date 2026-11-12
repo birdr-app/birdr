@@ -1,0 +1,22 @@
+{
+  "code": "spigua1",
+  "name": {
+    "en": "Spix's Guan",
+    "nl": "Spixsjakohoen"
+  },
+  "latin": "Penelope jacquacu",
+  "look_for": [
+    {
+      "en": "Dark olive-brown, **neck** feathers edged white",
+      "nl": "Donker olijfbruin, **halsveren** wit omrand"
+    },
+    {
+      "en": "Red bare **throat** pouch, grey face",
+      "nl": "Rode kale **keelzak**, grijs gezicht"
+    },
+    {
+      "en": "Lowland forest canopy",
+      "nl": "Bladerdak van laaglandbos"
+    }
+  ]
+}

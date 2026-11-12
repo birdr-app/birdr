@@ -1,0 +1,22 @@
+{
+  "code": "lowant1",
+  "name": {
+    "en": "Long-winged Antwren",
+    "nl": "Langvleugelmiersluiper"
+  },
+  "latin": "Myrmotherula longipennis",
+  "look_for": [
+    {
+      "en": "Male grey with black **throat**, long **wings**",
+      "nl": "Mannetje grijs met zwarte **keel**, lange **vleugels**"
+    },
+    {
+      "en": "Wing coverts black with white tips",
+      "nl": "Zwarte **vleugel**dekveren met witte tippen"
+    },
+    {
+      "en": "Active, high in canopy, **tail** short",
+      "nl": "Actief, hoog in de kroon, korte **staart**"
+    }
+  ]
+}

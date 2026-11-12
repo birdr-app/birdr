@@ -1,0 +1,22 @@
+{
+  "code": "rutant3",
+  "name": {
+    "en": "Rufous-tailed Stipplethroat",
+    "nl": "Roodstaartmiersluiper"
+  },
+  "latin": "Epinecrophylla erythrura",
+  "look_for": [
+    {
+      "en": "Male grey with a black **throat**, white flecks",
+      "nl": "Mannetje grijs met zwarte **keel**, witte vlekjes"
+    },
+    {
+      "en": "Rufous **tail**, olive-grey **back**",
+      "nl": "Roestbruine **staart**, olijfgrijze **rug**"
+    },
+    {
+      "en": "Forages low in forest, often hopping up stems",
+      "nl": "Foerageert laag in bos, hipt vaak langs stengels"
+    }
+  ]
+}

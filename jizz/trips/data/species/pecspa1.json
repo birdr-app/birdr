@@ -1,0 +1,22 @@
+{
+  "code": "pecspa1",
+  "name": {
+    "en": "Pectoral Sparrow",
+    "nl": "Olijfruggors"
+  },
+  "latin": "Arremon taciturnus",
+  "look_for": [
+    {
+      "en": "Dark **head** with a pale central stripe",
+      "nl": "Donkere **kop** met een lichte middenstreep"
+    },
+    {
+      "en": "Incomplete black band across the breast",
+      "nl": "Onderbroken zwarte band over de borst"
+    },
+    {
+      "en": "Hops on the floor of lowland forest",
+      "nl": "Hipt over de bodem van bos in het laagland"
+    }
+  ]
+}

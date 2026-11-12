@@ -1,0 +1,22 @@
+{
+  "code": "bltant2",
+  "name": {
+    "en": "Black-throated Antbird",
+    "nl": "Zwartkeelmiervogel"
+  },
+  "latin": "Myrmophylax atrothorax",
+  "look_for": [
+    {
+      "en": "Male black; **throat** and face black, **belly** grey",
+      "nl": "Mannetje zwart; **keel** en gezicht zwart, **buik** grijs"
+    },
+    {
+      "en": "Long, slim bird with long, rounded **tail**",
+      "nl": "Lange, slanke vogel met lange, afgeronde **staart**"
+    },
+    {
+      "en": "Stays on the ground or near it, lowland forest",
+      "nl": "Blijft op of vlak bij de grond in laagland bos"
+    }
+  ]
+}

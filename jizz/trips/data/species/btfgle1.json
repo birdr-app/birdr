@@ -1,0 +1,22 @@
+{
+  "code": "btfgle1",
+  "name": {
+    "en": "Ochre-throated Foliage-gleaner",
+    "nl": "Okerkeelbladspeurder"
+  },
+  "latin": "Automolus ochrolaemus",
+  "look_for": [
+    {
+      "en": "Plain olive-brown, ochre **throat**",
+      "nl": "Effen olijfbruin, okerkleurige **keel**"
+    },
+    {
+      "en": "Rufous-chestnut tail, plain wings",
+      "nl": "Roodbruine staart, effen vleugels"
+    },
+    {
+      "en": "Pale eyering, hunts dead leaves in understorey",
+      "nl": "Lichte oogring, zoekt dode bladeren in onderbegroeiing"
+    }
+  ]
+}

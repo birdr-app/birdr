@@ -1,0 +1,22 @@
+{
+  "code": "blbcon1",
+  "name": {
+    "en": "Blue-backed Conebill",
+    "nl": "Blauwrugspitssnavel"
+  },
+  "latin": "Conirostrum sitticolor",
+  "look_for": [
+    {
+      "en": "Bright blue **back** and chestnut underparts",
+      "nl": "Blauwe **rug** en kastanjebruine onderkant"
+    },
+    {
+      "en": "Black **face** mask and thin bill",
+      "nl": "Zwart **masker** en dunne snavel"
+    },
+    {
+      "en": "Feeds in high-altitude forest flocks",
+      "nl": "Foerageert in bostroepen op grote hoogte"
+    }
+  ]
+}

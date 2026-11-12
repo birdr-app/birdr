@@ -1,0 +1,22 @@
+{
+  "code": "blaant2",
+  "name": {
+    "en": "Black Antbird",
+    "nl": "Zwarte miervogel"
+  },
+  "latin": "Cercomacroides serva",
+  "look_for": [
+    {
+      "en": "Glossy black all over, pale grey **bill** base",
+      "nl": "Glanzend zwart overal, **snavel** met lichte basis"
+    },
+    {
+      "en": "Female duller, with sooty brown body",
+      "nl": "Vrouwtje doffer, roetbruin lijf"
+    },
+    {
+      "en": "Dense understorey near streams in lowland forest",
+      "nl": "Dicht struikgewas bij beken in laagland bos"
+    }
+  ]
+}

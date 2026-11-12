@@ -1,0 +1,22 @@
+{
+  "code": "leanig1",
+  "name": {
+    "en": "Least Nighthawk",
+    "nl": "Kleinste nachtzwaluw"
+  },
+  "latin": "Chordeiles pusillus",
+  "look_for": [
+    {
+      "en": "Tiny nighthawk with a white **throat**",
+      "nl": "Kleine nachtzwaluw met een witte **keel**"
+    },
+    {
+      "en": "Pale band across the **wing**",
+      "nl": "Lichte band over de **vleugel**"
+    },
+    {
+      "en": "Flutters low at dusk over savanna",
+      "nl": "Fladdert laag in de schemering over savanne"
+    }
+  ]
+}

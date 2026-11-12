@@ -1,0 +1,22 @@
+{
+  "code": "bufhel1",
+  "name": {
+    "en": "Buffy Helmetcrest",
+    "nl": "Purperbaardhelmkolibrie"
+  },
+  "latin": "Oxypogon stuebelii",
+  "look_for": [
+    {
+      "en": "Pale buffy **crest** with white-tipped wispy feathers",
+      "nl": "Bleekgele **kuif** met witgepunte pluimen"
+    },
+    {
+      "en": "Buffy-grey **belly**, white beard stripe",
+      "nl": "Bleekgrijze **buik**, witte baardstreep"
+    },
+    {
+      "en": "Plainer, greyer **crest** than other helmetcrests",
+      "nl": "Eenvoudiger, grijzere **kuif** dan andere helmkolibries"
+    }
+  ]
+}

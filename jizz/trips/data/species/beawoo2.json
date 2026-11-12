@@ -1,0 +1,22 @@
+{
+  "code": "beawoo2",
+  "name": {
+    "en": "Beautiful Woodpecker",
+    "nl": "Prachtspecht"
+  },
+  "latin": "Melanerpes pulcher",
+  "look_for": [
+    {
+      "en": "Black and white barred **back**",
+      "nl": "Zwartwit gebandeerde **rug**"
+    },
+    {
+      "en": "Red patch on lower belly",
+      "nl": "Rode vlek op de onderbuik"
+    },
+    {
+      "en": "Buffy underparts, male red crown",
+      "nl": "Beige onderkant, man met rode kruin"
+    }
+  ]
+}

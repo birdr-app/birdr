@@ -1,0 +1,22 @@
+{
+  "code": "colpuf1",
+  "name": {
+    "en": "Collared Puffbird",
+    "nl": "Gekraagde baardkoekoek"
+  },
+  "latin": "Bucco capensis",
+  "look_for": [
+    {
+      "en": "Black **breast** band and rufous-brown **cap**",
+      "nl": "Zwarte **borstband** en roodbruine **kruin**"
+    },
+    {
+      "en": "Pale cinnamon underparts, thick **bill**",
+      "nl": "Bleek kaneelkleurige onderkant, dikke **snavel**"
+    },
+    {
+      "en": "Larger than Chestnut-capped, scaled back",
+      "nl": "Groter dan Bruinkapbaardkoekoek, geschubde rug"
+    }
+  ]
+}

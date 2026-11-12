@@ -1,0 +1,22 @@
+{
+  "code": "spcbar1",
+  "name": {
+    "en": "Spot-crowned Barbet",
+    "nl": "Roodflankbaardvogel"
+  },
+  "latin": "Capito maculicoronatus",
+  "look_for": [
+    {
+      "en": "Red **crown** with black spots, yellow **breast**",
+      "nl": "Rode **kruin** met zwarte vlekjes, gele **borst**"
+    },
+    {
+      "en": "Red **flanks** in the male, dark **back**",
+      "nl": "Rode **flanken** bij het mannetje, donkere **rug**"
+    },
+    {
+      "en": "Heavy pale **bill**; humid forest, Pacific side",
+      "nl": "Zware lichte **snavel**; vochtig bos, Pacifische zijde"
+    }
+  ]
+}

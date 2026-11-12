@@ -1,0 +1,22 @@
+{
+  "code": "silant1",
+  "name": {
+    "en": "Silvered Antbird",
+    "nl": "Mangrovemiervogel"
+  },
+  "latin": "Sclateria naevia",
+  "look_for": [
+    {
+      "en": "Grey and silvery, a plain **head**, a bright **eye**",
+      "nl": "Grijs en zilverig, effen **kop**, een heldere **iris**"
+    },
+    {
+      "en": "Black **throat** and white wing spots, male",
+      "nl": "Mannetje met zwarte **keel** en witte vleugelvlekjes"
+    },
+    {
+      "en": "Wet, flooded forest and mangrove floor",
+      "nl": "Nat, overstroomd bos en mangrovebodem"
+    }
+  ]
+}

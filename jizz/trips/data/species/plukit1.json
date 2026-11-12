@@ -1,0 +1,22 @@
+{
+  "code": "plukit1",
+  "name": {
+    "en": "Plumbeous Kite",
+    "nl": "Donkergrijze wouw"
+  },
+  "latin": "Ictinia plumbea",
+  "look_for": [
+    {
+      "en": "Slate-grey **body**, long pointed wings",
+      "nl": "Leigrijs **lijf**, lange spitse vleugels"
+    },
+    {
+      "en": "Rufous wing patch visible in flight",
+      "nl": "Roestbruine vleugelvlek zichtbaar in de vlucht"
+    },
+    {
+      "en": "Dark tail with two thin white bands",
+      "nl": "Donkere staart met twee smalle witte banden"
+    }
+  ]
+}

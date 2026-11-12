@@ -1,0 +1,22 @@
+{
+  "code": "blteme1",
+  "name": {
+    "en": "Blue-tailed Emerald",
+    "nl": "Blauwstaartsmaragdkolibrie"
+  },
+  "latin": "Chlorostilbon mellisugus",
+  "look_for": [
+    {
+      "en": "Male glittering green, blue-black forked **tail**",
+      "nl": "Mannetje glinsterend groen met blauwzwarte gevorkte **staart**"
+    },
+    {
+      "en": "Short straight **bill**, red base to lower mandible",
+      "nl": "Korte rechte **snavel** met rode basis onderkant"
+    },
+    {
+      "en": "Female grey below, dark **ear** patch, white eyestripe",
+      "nl": "Vrouwtje grijs onder, donkere **oor**vlek, witte oogstreep"
+    }
+  ]
+}

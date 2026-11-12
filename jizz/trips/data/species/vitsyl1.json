@@ -1,0 +1,22 @@
+{
+  "code": "vitsyl1",
+  "name": {
+    "en": "Violet-tailed Sylph",
+    "nl": "Violetstaartnimf"
+  },
+  "latin": "Aglaiocercus coelestis",
+  "look_for": [
+    {
+      "en": "Violet **tail** feathers, long and forked in the male",
+      "nl": "Violette **staart**pennen, lang en gevorkt bij het mannetje"
+    },
+    {
+      "en": "Green **body**, bright glittering throat patch",
+      "nl": "Groen **lijf**, helder glinsterende keelvlek"
+    },
+    {
+      "en": "Blue **crown**, shorter tail than Long-tailed Sylph",
+      "nl": "Blauwe **kruin**, kortere staart dan verwante sylfen"
+    }
+  ]
+}

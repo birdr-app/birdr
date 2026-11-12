@@ -1,0 +1,22 @@
+{
+  "code": "pltant1",
+  "name": {
+    "en": "Plain-throated Antwren",
+    "nl": "Grijsbuikmiersluiper"
+  },
+  "latin": "Isleria hauxwelli",
+  "look_for": [
+    {
+      "en": "Male grey with a **throat** that is plain, unmarked",
+      "nl": "Mannetje grijs met effen ongetekende **keel**"
+    },
+    {
+      "en": "Short **tail**, rufous **back**, no white spots",
+      "nl": "Korte **staart**, roestbruine **rug**, geen witte vlekjes"
+    },
+    {
+      "en": "Forages low, flicking its **wings** and tail",
+      "nl": "Foerageert laag, beweegt **vleugels** en staart"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "opctan1",
+  "name": {
+    "en": "Opal-crowned Tanager",
+    "nl": "Opaalkruintangare"
+  },
+  "latin": "Tangara callophrys",
+  "look_for": [
+    {
+      "en": "Green **body** with an opal-blue crown",
+      "nl": "Groen **lijf** met een opaalblauwe kruin"
+    },
+    {
+      "en": "Black **face** with a blue-green cheek",
+      "nl": "Zwart **gezicht** met een blauwgroene wang"
+    },
+    {
+      "en": "Rufous **belly** and black-scaled back",
+      "nl": "Roestbruine **buik** en een zwartgeschubde rug"
+    }
+  ]
+}

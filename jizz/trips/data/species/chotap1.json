@@ -1,0 +1,22 @@
+{
+  "code": "chotap1",
+  "name": {
+    "en": "Choco Tapaculo",
+    "nl": "Chocotapaculo"
+  },
+  "latin": "Scytalopus chocoensis",
+  "look_for": [
+    {
+      "en": "Dark grey tapaculo of the Pacific slope",
+      "nl": "Donkergrijs tapaculo van de Pacifische helling"
+    },
+    {
+      "en": "Lacks the brown **rump** of Andean relatives",
+      "nl": "Mist de bruine **stuit** van de Andes-verwanten"
+    },
+    {
+      "en": "Keeps low in wet foothill undergrowth",
+      "nl": "Blijft laag in nat kreupelhout van de voorheuvels"
+    }
+  ]
+}

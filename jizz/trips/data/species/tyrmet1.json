@@ -1,0 +1,22 @@
+{
+  "code": "tyrmet1",
+  "name": {
+    "en": "Tyrian Metaltail",
+    "nl": "Smaragdglansstaartkolibrie"
+  },
+  "latin": "Metallura tyrianthina",
+  "look_for": [
+    {
+      "en": "Small; dark green **body** with a coppery-red tail",
+      "nl": "Klein; donkergroen **lijf** met een koperrode staart"
+    },
+    {
+      "en": "Short straight black **bill**, glittering green throat",
+      "nl": "Korte rechte zwarte **snavel**, glinsterend groene keel"
+    },
+    {
+      "en": "Colourful **forehead** patch, common in páramo scrub",
+      "nl": "Glinsterend **voorhoofd**, algemeen in páramostruweel"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "bograi1",
+  "name": {
+    "en": "Bogota Rail",
+    "nl": "Bogotaral"
+  },
+  "latin": "Rallus semiplumbeus",
+  "look_for": [
+    {
+      "en": "Dark rufous-grey rail with a long red **bill**",
+      "nl": "Donkere roodgrijze ral met een lange rode **snavel**"
+    },
+    {
+      "en": "Barred black-and-white **flanks**, short tail",
+      "nl": "Zwartwit gebandeerde **flanken**, korte staart"
+    },
+    {
+      "en": "Marshes of the Bogota highlands only",
+      "nl": "Alleen moerassen in het hoogland rond Bogotá"
+    }
+  ]
+}

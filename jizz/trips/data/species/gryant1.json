@@ -1,0 +1,22 @@
+{
+  "code": "gryant1",
+  "name": {
+    "en": "Grey Antwren",
+    "nl": "Bonte miersluiper"
+  },
+  "latin": "Myrmotherula menetriesii",
+  "look_for": [
+    {
+      "en": "Male grey with black **throat**, white wing spots",
+      "nl": "Mannetje grijs met zwarte **keel**, witte vleugelvlekjes"
+    },
+    {
+      "en": "Female buffy-white below, grey **crown**",
+      "nl": "Vrouwtje roomwit onder, grijze **kruin**"
+    },
+    {
+      "en": "Active in vine tangles, short **tail** flicked",
+      "nl": "Actief in lianen, korte **staart** geflipt"
+    }
+  ]
+}

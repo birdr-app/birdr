@@ -1,0 +1,22 @@
+{
+  "code": "barpuf1",
+  "name": {
+    "en": "Barred Puffbird",
+    "nl": "Gebandeerde baardkoekoek"
+  },
+  "latin": "Nystalus radiatus",
+  "look_for": [
+    {
+      "en": "Heavily barred **underparts** and a dark **crown**",
+      "nl": "Sterk gebandeerde **onderkant** en een donkere **kruin**"
+    },
+    {
+      "en": "Stout black **bill** and short tail",
+      "nl": "Stevige zwarte **snavel** en korte staart"
+    },
+    {
+      "en": "Perches upright and still in forest edge",
+      "nl": "Zit rechtop en bewegingloos aan de bosrand"
+    }
+  ]
+}

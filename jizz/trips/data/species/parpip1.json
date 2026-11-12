@@ -1,0 +1,22 @@
+{
+  "code": "parpip1",
+  "name": {
+    "en": "Paramo Pipit",
+    "nl": "Paramopieper"
+  },
+  "latin": "Anthus bogotensis",
+  "look_for": [
+    {
+      "en": "Streaky brown pipit with a long **tail**",
+      "nl": "Gestreepte bruine piepers met een lange **staart**"
+    },
+    {
+      "en": "Pale eyebrow, paler belly",
+      "nl": "Lichte wenkbrauw, lichtere buik"
+    },
+    {
+      "en": "Walks on grass at páramo and high pasture",
+      "nl": "Loopt over gras in páramo en hoge weiden"
+    }
+  ]
+}

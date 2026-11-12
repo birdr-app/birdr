@@ -1,0 +1,22 @@
+{
+  "code": "butsic1",
+  "name": {
+    "en": "Buff-tailed Sicklebill",
+    "nl": "Roodstaarthaaksnavelkolibrie"
+  },
+  "latin": "Eutoxeres condamini",
+  "look_for": [
+    {
+      "en": "Strongly curved **sickle bill**, almost 90 degrees",
+      "nl": "Sterk gebogen **sikkelsnavel**"
+    },
+    {
+      "en": "Heavily streaked buff **underparts**",
+      "nl": "Zwaar gestreepte geelbruine **onderkant**"
+    },
+    {
+      "en": "Green **back**, dark head, buff-tipped tail",
+      "nl": "Groene **rug**, donkere kop, crème staartpunt"
+    }
+  ]
+}

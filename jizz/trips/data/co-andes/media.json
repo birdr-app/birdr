@@ -1,0 +1,664 @@
+{
+  "country": "CO-ANDES",
+  "source": "https://motmot.club",
+  "species": {
+    "torduc1": {
+      "species_id": 137,
+      "card": [
+        126437,
+        126436,
+        126433
+      ],
+      "quiz": [
+        126404,
+        126403,
+        126402,
+        126385,
+        126370,
+        126351,
+        126344
+      ]
+    },
+    "spetea3": {
+      "species_id": 176,
+      "card": [],
+      "quiz": []
+    },
+    "andduc1": {
+      "species_id": 232,
+      "card": [],
+      "quiz": []
+    },
+    "watgua1": {
+      "species_id": 296,
+      "card": [],
+      "quiz": []
+    },
+    "caugua1": {
+      "species_id": 284,
+      "card": [],
+      "quiz": []
+    },
+    "oilbir1": {
+      "species_id": 1259,
+      "card": [],
+      "quiz": []
+    },
+    "socher1": {
+      "species_id": 1423,
+      "card": [],
+      "quiz": []
+    },
+    "grflan1": {
+      "species_id": 1426,
+      "card": [
+        247614,
+        247606,
+        247605
+      ],
+      "quiz": [
+        247604,
+        247602
+      ]
+    },
+    "blflan1": {
+      "species_id": 1427,
+      "card": [],
+      "quiz": []
+    },
+    "webhum1": {
+      "species_id": 1429,
+      "card": [],
+      "quiz": []
+    },
+    "amtsun2": {
+      "species_id": 1457,
+      "card": [],
+      "quiz": []
+    },
+    "rabtho1": {
+      "species_id": 1508,
+      "card": [],
+      "quiz": []
+    },
+    "bufhel1": {
+      "species_id": 1509,
+      "card": [],
+      "quiz": []
+    },
+    "gnbhel1": {
+      "species_id": 1512,
+      "card": [],
+      "quiz": []
+    },
+    "cobpuf1": {
+      "species_id": 1531,
+      "card": [],
+      "quiz": []
+    },
+    "savpuf1": {
+      "species_id": 1532,
+      "card": [],
+      "quiz": []
+    },
+    "gobpuf1": {
+      "species_id": 1533,
+      "card": [],
+      "quiz": []
+    },
+    "embpuf1": {
+      "species_id": 1536,
+      "card": [],
+      "quiz": []
+    },
+    "goujew1": {
+      "species_id": 1574,
+      "card": [],
+      "quiz": []
+    },
+    "fabbri1": {
+      "species_id": 1575,
+      "card": [],
+      "quiz": []
+    },
+    "vifbri1": {
+      "species_id": 1578,
+      "card": [],
+      "quiz": []
+    },
+    "gorwoo2": {
+      "species_id": 1608,
+      "card": [],
+      "quiz": []
+    },
+    "ruswoo1": {
+      "species_id": 1611,
+      "card": [],
+      "quiz": []
+    },
+    "tolblo1": {
+      "species_id": 1667,
+      "card": [],
+      "quiz": []
+    },
+    "chbhum1": {
+      "species_id": 1713,
+      "card": [],
+      "quiz": []
+    },
+    "shghum1": {
+      "species_id": 1725,
+      "card": [],
+      "quiz": []
+    },
+    "andcon1": {
+      "species_id": 2698,
+      "card": [],
+      "quiz": []
+    },
+    "barpuf1": {
+      "species_id": 3526,
+      "card": [],
+      "quiz": []
+    },
+    "whfnun2": {
+      "species_id": 3547,
+      "card": [],
+      "quiz": []
+    },
+    "whmbar1": {
+      "species_id": 3651,
+      "card": [],
+      "quiz": []
+    },
+    "ficbar1": {
+      "species_id": 3654,
+      "card": [],
+      "quiz": []
+    },
+    "grbtou1": {
+      "species_id": 3666,
+      "card": [],
+      "quiz": []
+    },
+    "gybmot1": {
+      "species_id": 3672,
+      "card": [],
+      "quiz": []
+    },
+    "grapic1": {
+      "species_id": 3741,
+      "card": [],
+      "quiz": []
+    },
+    "beawoo2": {
+      "species_id": 3763,
+      "card": [],
+      "quiz": []
+    },
+    "smbwoo1": {
+      "species_id": 3827,
+      "card": [
+        531325,
+        531324,
+        531323
+      ],
+      "quiz": [
+        531320,
+        531318,
+        531315,
+        531314
+      ]
+    },
+    "yevwoo1": {
+      "species_id": 3839,
+      "card": [],
+      "quiz": []
+    },
+    "spwpar2": {
+      "species_id": 4265,
+      "card": [],
+      "quiz": []
+    },
+    "rufpar1": {
+      "species_id": 4269,
+      "card": [],
+      "quiz": []
+    },
+    "rufpar2": {
+      "species_id": 4284,
+      "card": [],
+      "quiz": []
+    },
+    "inwpar1": {
+      "species_id": 4285,
+      "card": [],
+      "quiz": []
+    },
+    "rebpar2": {
+      "species_id": 4296,
+      "card": [],
+      "quiz": []
+    },
+    "spfpar1": {
+      "species_id": 4298,
+      "card": [],
+      "quiz": []
+    },
+    "scnpar1": {
+      "species_id": 4335,
+      "card": [],
+      "quiz": []
+    },
+    "buwpar1": {
+      "species_id": 4338,
+      "card": [],
+      "quiz": []
+    },
+    "brbpar2": {
+      "species_id": 4367,
+      "card": [],
+      "quiz": []
+    },
+    "goppar1": {
+      "species_id": 4405,
+      "card": [],
+      "quiz": []
+    },
+    "yeepar1": {
+      "species_id": 4406,
+      "card": [],
+      "quiz": []
+    },
+    "uniant2": {
+      "species_id": 4536,
+      "card": [],
+      "quiz": []
+    },
+    "plaant1": {
+      "species_id": 4552,
+      "card": [],
+      "quiz": []
+    },
+    "slaant1": {
+      "species_id": 4586,
+      "card": [
+        600896,
+        600893,
+        600890
+      ],
+      "quiz": [
+        600889
+      ]
+    },
+    "lotant1": {
+      "species_id": 4635,
+      "card": [],
+      "quiz": []
+    },
+    "parant2": {
+      "species_id": 4650,
+      "card": [],
+      "quiz": []
+    },
+    "dumant3": {
+      "species_id": 4692,
+      "card": [],
+      "quiz": []
+    },
+    "cunant1": {
+      "species_id": 4761,
+      "card": [],
+      "quiz": []
+    },
+    "bicant3": {
+      "species_id": 4775,
+      "card": [],
+      "quiz": []
+    },
+    "rufant7": {
+      "species_id": 4776,
+      "card": [],
+      "quiz": []
+    },
+    "tawant2": {
+      "species_id": 4789,
+      "card": [],
+      "quiz": []
+    },
+    "tawant3": {
+      "species_id": 4790,
+      "card": [],
+      "quiz": []
+    },
+    "crfant1": {
+      "species_id": 4817,
+      "card": [],
+      "quiz": []
+    },
+    "ocetap1": {
+      "species_id": 4824,
+      "card": [],
+      "quiz": []
+    },
+    "asctap1": {
+      "species_id": 4831,
+      "card": [],
+      "quiz": []
+    },
+    "upmtap1": {
+      "species_id": 4872,
+      "card": [],
+      "quiz": []
+    },
+    "stitap1": {
+      "species_id": 4873,
+      "card": [],
+      "quiz": []
+    },
+    "mattap1": {
+      "species_id": 4877,
+      "card": [],
+      "quiz": []
+    },
+    "rubant1": {
+      "species_id": 4888,
+      "card": [
+        616018,
+        616014,
+        616010
+      ],
+      "quiz": [
+        616008
+      ]
+    },
+    "chwcin1": {
+      "species_id": 5007,
+      "card": [],
+      "quiz": []
+    },
+    "stbcin1": {
+      "species_id": 5011,
+      "card": [],
+      "quiz": []
+    },
+    "whcthi1": {
+      "species_id": 5125,
+      "card": [],
+      "quiz": []
+    },
+    "gobfru1": {
+      "species_id": 5269,
+      "card": [],
+      "quiz": []
+    },
+    "chcpih1": {
+      "species_id": 5313,
+      "card": [],
+      "quiz": []
+    },
+    "barfru1": {
+      "species_id": 5268,
+      "card": [],
+      "quiz": []
+    },
+    "mfbtyr1": {
+      "species_id": 5398,
+      "card": [],
+      "quiz": []
+    },
+    "rubfly2": {
+      "species_id": 5394,
+      "card": [],
+      "quiz": []
+    },
+    "whttyr1": {
+      "species_id": 5503,
+      "card": [],
+      "quiz": []
+    },
+    "anbtyr1": {
+      "species_id": 5399,
+      "card": [],
+      "quiz": []
+    },
+    "agitit1": {
+      "species_id": 5515,
+      "card": [],
+      "quiz": []
+    },
+    "plcgrt1": {
+      "species_id": 5688,
+      "card": [],
+      "quiz": []
+    },
+    "rrbtyr1": {
+      "species_id": 5691,
+      "card": [],
+      "quiz": []
+    },
+    "smbtyr2": {
+      "species_id": 5708,
+      "card": [],
+      "quiz": []
+    },
+    "slbcht2": {
+      "species_id": 5725,
+      "card": [],
+      "quiz": []
+    },
+    "rbctyr1": {
+      "species_id": 5728,
+      "card": [],
+      "quiz": []
+    },
+    "apifly1": {
+      "species_id": 5764,
+      "card": [],
+      "quiz": []
+    },
+    "horlar": {
+      "species_id": 7219,
+      "card": [
+        814200,
+        814197,
+        814193
+      ],
+      "quiz": [
+        814180,
+        814172,
+        814169,
+        814156,
+        814102,
+        814093,
+        814077
+      ]
+    },
+    "antwre2": {
+      "species_id": 8568,
+      "card": [],
+      "quiz": []
+    },
+    "shawre1": {
+      "species_id": 8583,
+      "card": [],
+      "quiz": []
+    },
+    "vefeup1": {
+      "species_id": 9948,
+      "card": [],
+      "quiz": []
+    },
+    "yehbrf1": {
+      "species_id": 10321,
+      "card": [],
+      "quiz": []
+    },
+    "dhbfin1": {
+      "species_id": 10322,
+      "card": [],
+      "quiz": []
+    },
+    "antbrf1": {
+      "species_id": 10329,
+      "card": [],
+      "quiz": []
+    },
+    "blaoro1": {
+      "species_id": 10376,
+      "card": [],
+      "quiz": []
+    },
+    "moucac1": {
+      "species_id": 10385,
+      "card": [],
+      "quiz": []
+    },
+    "rebgra1": {
+      "species_id": 10444,
+      "card": [],
+      "quiz": []
+    },
+    "mougra1": {
+      "species_id": 10447,
+      "card": [],
+      "quiz": []
+    },
+    "rucwar4": {
+      "species_id": 10535,
+      "card": [
+        1122335,
+        1122325,
+        1122318
+      ],
+      "quiz": [
+        1122315,
+        1122313
+      ]
+    },
+    "cerwar": {
+      "species_id": 10506,
+      "card": [
+        1118119,
+        1118118,
+        1118117
+      ],
+      "quiz": [
+        1118116,
+        1118111,
+        1118107,
+        1118105,
+        1118103,
+        1118081,
+        1118078
+      ]
+    },
+    "cratan1": {
+      "species_id": 10596,
+      "card": [],
+      "quiz": []
+    },
+    "rehtan2": {
+      "species_id": 10591,
+      "card": [],
+      "quiz": []
+    },
+    "soatan1": {
+      "species_id": 10594,
+      "card": [],
+      "quiz": []
+    },
+    "blchem1": {
+      "species_id": 10653,
+      "card": [],
+      "quiz": []
+    },
+    "blehem1": {
+      "species_id": 10658,
+      "card": [],
+      "quiz": []
+    },
+    "vertan1": {
+      "species_id": 10699,
+      "card": [],
+      "quiz": []
+    },
+    "gortan1": {
+      "species_id": 10705,
+      "card": [],
+      "quiz": []
+    },
+    "mamtan1": {
+      "species_id": 10710,
+      "card": [],
+      "quiz": []
+    },
+    "grgtan1": {
+      "species_id": 10711,
+      "card": [],
+      "quiz": []
+    },
+    "goctan4": {
+      "species_id": 10726,
+      "card": [],
+      "quiz": []
+    },
+    "oretan1": {
+      "species_id": 10731,
+      "card": [],
+      "quiz": []
+    },
+    "spetan1": {
+      "species_id": 10742,
+      "card": [
+        1145752,
+        1145748,
+        1145747
+      ],
+      "quiz": [
+        1145745,
+        1145744
+      ]
+    },
+    "scrtan1": {
+      "species_id": 10758,
+      "card": [],
+      "quiz": []
+    },
+    "blbtan3": {
+      "species_id": 10767,
+      "card": [],
+      "quiz": []
+    },
+    "goetan1": {
+      "species_id": 10782,
+      "card": [],
+      "quiz": []
+    },
+    "turdac1": {
+      "species_id": 10794,
+      "card": [],
+      "quiz": []
+    },
+    "rubcon1": {
+      "species_id": 10822,
+      "card": [],
+      "quiz": []
+    },
+    "plushc1": {
+      "species_id": 10842,
+      "card": [],
+      "quiz": []
+    },
+    "bbbtan1": {
+      "species_id": 10843,
+      "card": [],
+      "quiz": []
+    },
+    "bbmtan1": {
+      "species_id": 10719,
+      "card": [],
+      "quiz": []
+    }
+  }
+}

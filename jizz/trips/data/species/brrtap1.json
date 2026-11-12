@@ -1,0 +1,22 @@
+{
+  "code": "brrtap1",
+  "name": {
+    "en": "Brown-rumped Tapaculo",
+    "nl": "Bruinstuittapaculo"
+  },
+  "latin": "Scytalopus latebricola",
+  "look_for": [
+    {
+      "en": "Dark grey **back**, brown rump and flanks",
+      "nl": "Donkergrijze **rug**, bruine stuit en flanken"
+    },
+    {
+      "en": "Paler grey underparts, no white **crown** spot",
+      "nl": "Lichtere grijze onderkant, geen witte **kruin**vlek"
+    },
+    {
+      "en": "Skulks in cloud forest undergrowth, Andes only",
+      "nl": "Sluipt door kreupelhout in Andes-nevelwoud"
+    }
+  ]
+}

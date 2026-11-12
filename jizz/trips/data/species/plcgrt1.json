@@ -1,0 +1,22 @@
+{
+  "code": "plcgrt1",
+  "name": {
+    "en": "Plain-capped Ground-Tyrant",
+    "nl": "Rotsgrondtiran"
+  },
+  "latin": "Muscisaxicola alpinus",
+  "look_for": [
+    {
+      "en": "Greyish-brown with a plain **head**",
+      "nl": "Grijsbruin met een effen **kop**"
+    },
+    {
+      "en": "Pale belly, dark tail",
+      "nl": "Lichte buik, donkere staart"
+    },
+    {
+      "en": "Runs and stops on open high páramo ground",
+      "nl": "Rent en stopt op open hoge páramogrond"
+    }
+  ]
+}

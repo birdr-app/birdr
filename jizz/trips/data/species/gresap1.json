@@ -1,0 +1,22 @@
+{
+  "code": "gresap1",
+  "name": {
+    "en": "Great Sapphirewing",
+    "nl": "Saffiervleugelkolibrie"
+  },
+  "latin": "Pterophanes cyanopterus",
+  "look_for": [
+    {
+      "en": "Very large **hummingbird**, glittering violet-blue wings",
+      "nl": "Zeer grote **kolibrie** met glinsterend violetblauwe vleugels"
+    },
+    {
+      "en": "Dark **body**, long black bill, white tail patch",
+      "nl": "Donker **lijf**, lange zwarte snavel, witte staartvlek"
+    },
+    {
+      "en": "Slow floating flight, **wings** raised on landing",
+      "nl": "Trage zwevende vlucht, **vleugels** omhoog bij landen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "masyel2",
+  "name": {
+    "en": "Masked Yellowthroat",
+    "nl": "Evenaarmaskerzanger"
+  },
+  "latin": "Geothlypis aequinoctialis",
+  "look_for": [
+    {
+      "en": "Male has black **mask** with no pale border",
+      "nl": "Man heeft zwart **masker** zonder lichte rand"
+    },
+    {
+      "en": "Bright yellow throat and underparts",
+      "nl": "Felgele keel en onderkant"
+    },
+    {
+      "en": "Skulks in wet grass and reeds",
+      "nl": "Zit verscholen in nat gras en riet"
+    }
+  ]
+}

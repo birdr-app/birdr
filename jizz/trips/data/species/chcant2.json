@@ -1,0 +1,22 @@
+{
+  "code": "chcant2",
+  "name": {
+    "en": "Chestnut-crowned Antpitta",
+    "nl": "Roestkopmierpitta"
+  },
+  "latin": "Grallaria ruficapilla",
+  "look_for": [
+    {
+      "en": "Chestnut **crown** and nape",
+      "nl": "Kastanjebruine **kruin** en nek"
+    },
+    {
+      "en": "White **throat** with a dark malar",
+      "nl": "Witte **keel** met donkere baardstreep"
+    },
+    {
+      "en": "Olive-brown back, pale belly",
+      "nl": "Olijfbruine rug, bleke buik"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "gontan1",
+  "name": {
+    "en": "Golden-naped Tanager",
+    "nl": "Goudnektangare"
+  },
+  "latin": "Chalcothraupis ruficervix",
+  "look_for": [
+    {
+      "en": "Green **body**, golden-rufous nape and blue ear",
+      "nl": "Groen **lijf**, goudbruine nek en blauwe oorvlek"
+    },
+    {
+      "en": "Blue-green **cap** with a black mask",
+      "nl": "Blauwgroene **kruin** met een zwart masker"
+    },
+    {
+      "en": "Cinnamon **belly** and golden-buff shoulder",
+      "nl": "Kaneelkleurige **buik** en goudbruine schouder"
+    }
+  ]
+}

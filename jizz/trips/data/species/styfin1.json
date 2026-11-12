@@ -1,0 +1,22 @@
+{
+  "code": "styfin1",
+  "name": {
+    "en": "Stripe-tailed Yellow-Finch",
+    "nl": "Witstaartsaffraangors"
+  },
+  "latin": "Sicalis citrina",
+  "look_for": [
+    {
+      "en": "Yellow **body** with an olive back and dark stripe",
+      "nl": "Geel **lijf** met een olijfkleurige rug en een donkere streep"
+    },
+    {
+      "en": "Male has a yellow forehead and yellow **underparts**",
+      "nl": "Mannetje heeft een geel voorhoofd en gele **onderkant**"
+    },
+    {
+      "en": "Mountain grassland, with white tail patches",
+      "nl": "Berggrasland, met witte staartvlekken"
+    }
+  ]
+}

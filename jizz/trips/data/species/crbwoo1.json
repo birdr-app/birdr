@@ -1,0 +1,22 @@
+{
+  "code": "crbwoo1",
+  "name": {
+    "en": "Crimson-bellied Woodpecker",
+    "nl": "Grote roodbuikspecht"
+  },
+  "latin": "Campephilus haematogaster",
+  "look_for": [
+    {
+      "en": "Large and dark with crimson **rump** and belly",
+      "nl": "Groot en donker met karmozijnrode **stuit** en buik"
+    },
+    {
+      "en": "Male crimson head and crest",
+      "nl": "Man met karmozijnrode kop en kuif"
+    },
+    {
+      "en": "Female blackish head, forest interior",
+      "nl": "Vrouw met zwartachtige kop, bosinterieur"
+    }
+  ]
+}

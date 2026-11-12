@@ -1,0 +1,22 @@
+{
+  "code": "socher1",
+  "name": {
+    "en": "Sooty-capped Hermit",
+    "nl": "Roetkruinheremietkolibrie"
+  },
+  "latin": "Phaethornis augusti",
+  "look_for": [
+    {
+      "en": "Dark **cap**, pale eye-stripe, rufous underparts",
+      "nl": "Donkere **kruin**, lichte streep achter het oog, roestbruine onderkant"
+    },
+    {
+      "en": "Rufous **rump** and white-tipped central tail feathers",
+      "nl": "Roestbruine **stuit** en middelste staartpennen met witte punt"
+    },
+    {
+      "en": "Curved **bill**, medium-sized hermit",
+      "nl": "Gebogen **snavel**, middelgrote heremiet"
+    }
+  ]
+}

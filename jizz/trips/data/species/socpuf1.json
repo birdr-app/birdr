@@ -1,0 +1,22 @@
+{
+  "code": "socpuf1",
+  "name": {
+    "en": "Sooty-capped Puffbird",
+    "nl": "Roetkruinbaardkoekoek"
+  },
+  "latin": "Bucco noanamae",
+  "look_for": [
+    {
+      "en": "Dark sooty **cap** with a white-spotted collar",
+      "nl": "Donkere roetkleurige **kap** met een gevlekte kraag"
+    },
+    {
+      "en": "Black **breast** band, buff-white underparts",
+      "nl": "Zwarte **borstband**, bleekwitte onderkant"
+    },
+    {
+      "en": "Chocó forest puffbird, sits still low down",
+      "nl": "Baardkoekoek van het Chocó-bos, zit stil laag"
+    }
+  ]
+}

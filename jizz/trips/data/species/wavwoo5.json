@@ -1,0 +1,22 @@
+{
+  "code": "wavwoo5",
+  "name": {
+    "en": "Waved Woodpecker",
+    "nl": "Geschubde specht"
+  },
+  "latin": "Celeus undatus",
+  "look_for": [
+    {
+      "en": "Finely waved buff-and-brown **plumage**",
+      "nl": "Fijn golvend beige-bruin **verenkleed**"
+    },
+    {
+      "en": "Plain buffy head, pale bill",
+      "nl": "Effen beige kop, lichte snavel"
+    },
+    {
+      "en": "Short crest, male red moustache",
+      "nl": "Kleine kuif, man met rode snorstreep"
+    }
+  ]
+}

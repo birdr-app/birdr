@@ -1,0 +1,22 @@
+{
+  "code": "broinc1",
+  "name": {
+    "en": "Bronzy Inca",
+    "nl": "Bronzen incakolibrie"
+  },
+  "latin": "Coeligena coeligena",
+  "look_for": [
+    {
+      "en": "Chestnut-bronzy **underparts** with a dark rump",
+      "nl": "Kastanjebronzen **onderkant** met donkere stuit"
+    },
+    {
+      "en": "Long straight black **bill**, white spot behind eye",
+      "nl": "Lange rechte zwarte **snavel**, witte vlek achter oog"
+    },
+    {
+      "en": "Glittering green **throat** patch, bronzy tail",
+      "nl": "Glinsterend groene **keel**vlek, bronzen staart"
+    }
+  ]
+}

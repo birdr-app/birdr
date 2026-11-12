@@ -1,0 +1,22 @@
+{
+  "code": "megtan1",
+  "name": {
+    "en": "Metallic-green Tanager",
+    "nl": "Zwartnektangare"
+  },
+  "latin": "Tangara labradorides",
+  "look_for": [
+    {
+      "en": "Metallic green **body** with black mask and back",
+      "nl": "Metaalgroen **lijf** met een zwart masker en rug"
+    },
+    {
+      "en": "Green **throat**, orange-yellow vent",
+      "nl": "Groene **keel**, oranjegele onderstaart"
+    },
+    {
+      "en": "Dark scaly pattern on the back",
+      "nl": "Donker schubpatroon op de rug"
+    }
+  ]
+}

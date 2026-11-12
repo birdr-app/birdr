@@ -1,0 +1,22 @@
+{
+  "code": "patbar1",
+  "name": {
+    "en": "Pale-tailed Barbthroat",
+    "nl": "Zwartkeelbaardkolibrie"
+  },
+  "latin": "Threnetes leucurus",
+  "look_for": [
+    {
+      "en": "Dull olive **plumage**, rufous-buff throat streaks",
+      "nl": "Doffe olijfkleurige **veren**, roestbruine keelstrepen"
+    },
+    {
+      "en": "Long curved bill with a pale lower **mandible**",
+      "nl": "Lange gebogen snavel met een lichte onder**snavel**"
+    },
+    {
+      "en": "White tail **tips**, buff eyestripe",
+      "nl": "Witte **staart**punten, beige oogstreep"
+    }
+  ]
+}

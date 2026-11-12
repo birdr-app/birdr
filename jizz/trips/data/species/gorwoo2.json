@@ -1,0 +1,22 @@
+{
+  "code": "gorwoo2",
+  "name": {
+    "en": "Gorgeted Woodstar",
+    "nl": "Zonneboself"
+  },
+  "latin": "Chaetocercus heliodor",
+  "look_for": [
+    {
+      "en": "Tiny; male with a long violet-magenta **throat** gorget",
+      "nl": "Piepklein; mannetje met lange violetmagenta **keel**vlek"
+    },
+    {
+      "en": "Short **tail**, white thigh patch, white breast band",
+      "nl": "Korte **staart**, witte dijvlek, witte borstband"
+    },
+    {
+      "en": "Female buff below, cinnamon **belly**, banded tail",
+      "nl": "Vrouwtje geelbruin onder met kaneelkleurige **buik** en staartband"
+    }
+  ]
+}

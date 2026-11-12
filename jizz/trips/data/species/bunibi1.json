@@ -1,0 +1,22 @@
+{
+  "code": "bunibi1",
+  "name": {
+    "en": "Buff-necked Ibis",
+    "nl": "Geelhalsibis"
+  },
+  "latin": "Theristicus caudatus",
+  "look_for": [
+    {
+      "en": "Buff **neck** and head, grey back",
+      "nl": "Beige **hals** en kop, grijze rug"
+    },
+    {
+      "en": "Long downcurved **bill**",
+      "nl": "Lange gebogen **snavel**"
+    },
+    {
+      "en": "Flocks in open grassland",
+      "nl": "Groepen in open grasland"
+    }
+  ]
+}

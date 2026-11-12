@@ -1,0 +1,22 @@
+{
+  "code": "bcmtan2",
+  "name": {
+    "en": "Black-chinned Mountain Tanager",
+    "nl": "Zwartkinbergtangare"
+  },
+  "latin": "Anisognathus notabilis",
+  "look_for": [
+    {
+      "en": "Blue-grey **body** with black chin and face",
+      "nl": "Blauwgrijs **lijf** met zwarte kin en gezicht"
+    },
+    {
+      "en": "Yellow **belly** and rufous undertail",
+      "nl": "Gele **buik** en roestkleurige onderstaart"
+    },
+    {
+      "en": "Smaller than Black-cheeked, no cheek stripe",
+      "nl": "Kleiner dan Zwartwangbergtangare, geen wangstreep"
+    }
+  ]
+}

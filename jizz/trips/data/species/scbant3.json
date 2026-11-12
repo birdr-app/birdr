@@ -1,0 +1,22 @@
+{
+  "code": "scbant3",
+  "name": {
+    "en": "Common Scale-backed Antbird",
+    "nl": "Schubrugmiervogel"
+  },
+  "latin": "Willisornis poecilinotus",
+  "look_for": [
+    {
+      "en": "Scaly **back** from pale-edged black feathers",
+      "nl": "Geschubde **rug** van zwarte veren met lichte randen"
+    },
+    {
+      "en": "Rufous **tail** and white, short **eyebrow**",
+      "nl": "Roestbruine **staart** en korte witte **wenkbrauw**"
+    },
+    {
+      "en": "Follows ants, short-tailed, low in forest",
+      "nl": "Volgt mieren, kortstaartig, laag in bos"
+    }
+  ]
+}

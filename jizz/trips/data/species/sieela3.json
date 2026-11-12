@@ -1,0 +1,22 @@
+{
+  "code": "sieela3",
+  "name": {
+    "en": "Sierran Elaenia",
+    "nl": "Andeselenia"
+  },
+  "latin": "Elaenia pallatangae",
+  "look_for": [
+    {
+      "en": "Brownish elaenia with a hidden white **crest**",
+      "nl": "Bruinachtige elaenia met verborgen witte **kuif**"
+    },
+    {
+      "en": "Two bold white wing bars, plain throat",
+      "nl": "Twee witte vleugelbanden, effen keel"
+    },
+    {
+      "en": "Montane, perches in the open at shrubby edges",
+      "nl": "In bergland, zit open aan struikrijke randen"
+    }
+  ]
+}

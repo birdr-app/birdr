@@ -1,0 +1,22 @@
+{
+  "code": "whepar2",
+  "name": {
+    "en": "White-eyed Parakeet",
+    "nl": "Witoogaratinga"
+  },
+  "latin": "Psittacara leucophthalmus",
+  "look_for": [
+    {
+      "en": "Green with scattered red **head** flecks",
+      "nl": "Groen met verspreide rode vlekjes op de **kop**"
+    },
+    {
+      "en": "Bare white eyering",
+      "nl": "Kale witte oogring"
+    },
+    {
+      "en": "Red shoulder patch, yellow underwing",
+      "nl": "Rode schouder, gele onderkant vleugel"
+    }
+  ]
+}

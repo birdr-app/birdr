@@ -1,0 +1,22 @@
+{
+  "code": "chewoo2",
+  "name": {
+    "en": "Chestnut Woodpecker",
+    "nl": "Vaalkuifspecht"
+  },
+  "latin": "Celeus elegans",
+  "look_for": [
+    {
+      "en": "Chestnut-brown body, pale yellow **crest**",
+      "nl": "Kastanjebruin lijf, bleekgele **kuif**"
+    },
+    {
+      "en": "Pale bill, male red moustache",
+      "nl": "Lichte snavel, man met rode snorstreep"
+    },
+    {
+      "en": "Yellow-washed head and neck, plain wings",
+      "nl": "Geelachtige kop en nek, effen vleugels"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "bltsta1",
+  "name": {
+    "en": "Blue-throated Starfrontlet",
+    "nl": "Blauwe incakolibrie"
+  },
+  "latin": "Coeligena helianthea",
+  "look_for": [
+    {
+      "en": "Glittering blue **throat**, green forehead patch",
+      "nl": "Glinsterend blauwe **keel** en groen voorhoofdsvlak"
+    },
+    {
+      "en": "Dark **body**, tawny-orange patches in wing",
+      "nl": "Donker **lijf**, oranjebruine vlekken in de vleugel"
+    },
+    {
+      "en": "Long straight black **bill**, white thigh tufts",
+      "nl": "Lange rechte zwarte **snavel**, witte beenpluimen"
+    }
+  ]
+}

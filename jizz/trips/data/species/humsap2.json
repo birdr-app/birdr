@@ -1,0 +1,22 @@
+{
+  "code": "humsap2",
+  "name": {
+    "en": "Humboldt's Sapphire",
+    "nl": "Humboldtsaffierkolibrie"
+  },
+  "latin": "Chrysuronia humboldtii",
+  "look_for": [
+    {
+      "en": "Male blue **head** and breast with a green belly",
+      "nl": "Mannetje met blauwe **kop** en borst en groene buik"
+    },
+    {
+      "en": "Straight red **bill** with a black tip",
+      "nl": "Rechte rode **snavel** met zwarte punt"
+    },
+    {
+      "en": "Female green above, white below, black **ear** patch",
+      "nl": "Vrouwtje groen boven, wit onder, zwarte **oor**vlek"
+    }
+  ]
+}

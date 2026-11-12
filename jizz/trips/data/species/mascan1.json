@@ -1,0 +1,22 @@
+{
+  "code": "mascan1",
+  "name": {
+    "en": "Many-striped Canastero",
+    "nl": "Jardinecanastero"
+  },
+  "latin": "Asthenes flammulata",
+  "look_for": [
+    {
+      "en": "Heavily streaked brown and white **back**",
+      "nl": "Sterk gestreepte bruin-witte **rug**"
+    },
+    {
+      "en": "Rusty patch in the wing",
+      "nl": "Roestkleurige vlek in de vleugel"
+    },
+    {
+      "en": "Skulks in dense páramo shrubs",
+      "nl": "Sluipt door dichte struiken in de páramo"
+    }
+  ]
+}

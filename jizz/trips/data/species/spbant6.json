@@ -1,0 +1,22 @@
+{
+  "code": "spbant6",
+  "name": {
+    "en": "Spot-backed Antbird",
+    "nl": "Bruinvlekmiervogel"
+  },
+  "latin": "Hylophylax naevius",
+  "look_for": [
+    {
+      "en": "Black **back** with buff spots on **wings**",
+      "nl": "Zwarte **rug** met bruine vlekjes op de **vleugels**"
+    },
+    {
+      "en": "Black **throat** above a white, spotted **breast**",
+      "nl": "Zwarte **keel** boven een witte, gevlekte **borst**"
+    },
+    {
+      "en": "Short **tail** cocked as it follows army ants",
+      "nl": "Korte **staart** omhoog bij mierenlegers"
+    }
+  ]
+}

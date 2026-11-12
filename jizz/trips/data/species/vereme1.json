@@ -1,0 +1,22 @@
+{
+  "code": "vereme1",
+  "name": {
+    "en": "Versicoloured Emerald",
+    "nl": "Regenboogamazilia"
+  },
+  "latin": "Chrysuronia versicolor",
+  "look_for": [
+    {
+      "en": "Green **throat** and breast, white belly centre",
+      "nl": "Groene **keel** en borst, witte buikmidden"
+    },
+    {
+      "en": "Straight **bill**, rufous-bronze tail with dark band",
+      "nl": "Rechte **snavel**, roestbronzen staart met donkere band"
+    },
+    {
+      "en": "White tuft behind the **eye**, bronzy back",
+      "nl": "Witte pluim achter het **oog**, bronzen rug"
+    }
+  ]
+}

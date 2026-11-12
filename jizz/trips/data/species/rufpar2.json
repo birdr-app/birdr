@@ -1,0 +1,22 @@
+{
+  "code": "rufpar2",
+  "name": {
+    "en": "Rusty-faced Parrot",
+    "nl": "Andespapegaai"
+  },
+  "latin": "Hapalopsittaca amazonina",
+  "look_for": [
+    {
+      "en": "Rusty-red **face** on a green body",
+      "nl": "Roestrode **kop** op een groen lijf"
+    },
+    {
+      "en": "Short tail, red patch below",
+      "nl": "Korte staart, rode vlek onderaan"
+    },
+    {
+      "en": "Chunky, in Andean cloud forest",
+      "nl": "Gedrongen, in Andes-nevelbos"
+    }
+  ]
+}

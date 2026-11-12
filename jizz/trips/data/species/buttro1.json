@@ -1,0 +1,22 @@
+{
+  "code": "buttro1",
+  "name": {
+    "en": "Blue-tailed Trogon",
+    "nl": "Blauwstaarttrogon"
+  },
+  "latin": "Trogon comptus",
+  "look_for": [
+    {
+      "en": "Violet-blue **head** and chest",
+      "nl": "Violetblauwe **kop** en borst"
+    },
+    {
+      "en": "White belly, with no yellow",
+      "nl": "Witte buik, zonder geel"
+    },
+    {
+      "en": "Glossy blue **tail** seen from above",
+      "nl": "Glanzend blauwe **staart** van boven gezien"
+    }
+  ]
+}

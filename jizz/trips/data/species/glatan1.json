@@ -1,0 +1,22 @@
+{
+  "code": "glatan1",
+  "name": {
+    "en": "Glaucous Tanager",
+    "nl": "Blauwgroene tangare"
+  },
+  "latin": "Thraupis glaucocolpa",
+  "look_for": [
+    {
+      "en": "Pale blue-grey **body** with a green shoulder",
+      "nl": "Bleek blauwgrijs **lijf** met groene schouder"
+    },
+    {
+      "en": "Pale **belly** and turquoise wing edges",
+      "nl": "Bleke **buik** en turkooizen vleugelranden"
+    },
+    {
+      "en": "Paler and greener than Blue-grey Tanager",
+      "nl": "Bleker en groener dan Blauwgrijze tangare"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "chotou1",
+  "name": {
+    "en": "Choco Toucan",
+    "nl": "Chocotoekan"
+  },
+  "latin": "Ramphastos brevis",
+  "look_for": [
+    {
+      "en": "Large with a bicoloured **bill**, yellow above, dark below",
+      "nl": "Groot met tweekleurige **snavel**, boven geel, onder donker"
+    },
+    {
+      "en": "White **throat** with a dark upper **breast**",
+      "nl": "Witte **keel** met donkere bovenborst"
+    },
+    {
+      "en": "Calls a repeated yelping croak",
+      "nl": "Roept een herhaalde, blaffende kreet"
+    }
+  ]
+}

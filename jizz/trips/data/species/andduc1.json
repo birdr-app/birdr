@@ -1,0 +1,22 @@
+{
+  "code": "andduc1",
+  "name": {
+    "en": "Andean Duck",
+    "nl": "Andesstekelstaart"
+  },
+  "latin": "Oxyura ferruginea",
+  "look_for": [
+    {
+      "en": "Male with rich chestnut **body**, blue bill",
+      "nl": "Mannetje met kastanjebruin **lijf**, blauwe snavel"
+    },
+    {
+      "en": "Black head with a white cheek patch",
+      "nl": "Zwarte kop met witte wangvlek"
+    },
+    {
+      "en": "Stiff upright tail, dives in high lakes",
+      "nl": "Stijve opgerichte staart, duikt in hoge meren"
+    }
+  ]
+}

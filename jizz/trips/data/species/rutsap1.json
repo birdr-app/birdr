@@ -1,0 +1,22 @@
+{
+  "code": "rutsap1",
+  "name": {
+    "en": "Rufous-throated Sapphire",
+    "nl": "Roodkeelsaffierkolibrie"
+  },
+  "latin": "Hylocharis sapphirina",
+  "look_for": [
+    {
+      "en": "Rufous **chin** and throat above a blue breast",
+      "nl": "Roestbruine **kin** en keel boven een blauwe borst"
+    },
+    {
+      "en": "Pale **belly**, red bill with a black tip",
+      "nl": "Bleke **buik**, rode snavel met zwarte punt"
+    },
+    {
+      "en": "Female rufous-washed **flanks** and a pale throat",
+      "nl": "Vrouwtje met roestbruine **flanken** en een lichte keel"
+    }
+  ]
+}

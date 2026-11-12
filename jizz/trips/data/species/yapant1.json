@@ -1,0 +1,22 @@
+{
+  "code": "yapant1",
+  "name": {
+    "en": "Yapacana Antbird",
+    "nl": "Yapacanamiervogel"
+  },
+  "latin": "Aprositornis disjuncta",
+  "look_for": [
+    {
+      "en": "Dark grey **body** with a bold white **eyebrow**",
+      "nl": "Donkergrijs **lijf** met opvallende witte **wenkbrauw**"
+    },
+    {
+      "en": "Black **throat**, grey belly, short **tail**",
+      "nl": "Zwarte **keel**, grijze buik, korte **staart**"
+    },
+    {
+      "en": "White-sand forest of the far east",
+      "nl": "Bos op wit zand in het verre oosten"
+    }
+  ]
+}

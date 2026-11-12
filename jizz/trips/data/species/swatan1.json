@@ -1,0 +1,22 @@
+{
+  "code": "swatan1",
+  "name": {
+    "en": "Swallow Tanager",
+    "nl": "Zwaluwtangare"
+  },
+  "latin": "Tersina viridis",
+  "look_for": [
+    {
+      "en": "Male turquoise-blue with a black **mask**",
+      "nl": "Mannetje turkooisblauw met een zwart **masker**"
+    },
+    {
+      "en": "White **belly** and barred flanks",
+      "nl": "Witte **buik** en gebandeerde flanken"
+    },
+    {
+      "en": "Red **bill** and orange legs, female green",
+      "nl": "Rode **snavel** en oranje poten, vrouwtje groen"
+    }
+  ]
+}

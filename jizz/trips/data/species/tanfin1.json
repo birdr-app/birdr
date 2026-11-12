@@ -1,0 +1,22 @@
+{
+  "code": "tanfin1",
+  "name": {
+    "en": "Tanager Finch",
+    "nl": "Tangarestruikgors"
+  },
+  "latin": "Oreothraupis arremonops",
+  "look_for": [
+    {
+      "en": "Large, dark finch with a striped **head**",
+      "nl": "Grote, donkere gors met een gestreepte **kop**"
+    },
+    {
+      "en": "White throat, slaty body",
+      "nl": "Witte keel, leigrijs lijf"
+    },
+    {
+      "en": "Skulks in dense cloud-forest undergrowth",
+      "nl": "Sluipt door dichte onderbegroeiing van nevelbos"
+    }
+  ]
+}

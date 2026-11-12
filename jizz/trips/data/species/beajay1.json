@@ -1,0 +1,22 @@
+{
+  "code": "beajay1",
+  "name": {
+    "en": "Beautiful Jay",
+    "nl": "Ornaatgaai"
+  },
+  "latin": "Cyanolyca pulchra",
+  "look_for": [
+    {
+      "en": "Dark blue jay with a black **mask**",
+      "nl": "Donkerblauwe gaai met een zwart **masker**"
+    },
+    {
+      "en": "Pale turquoise band across the **forehead**",
+      "nl": "Lichtturkooise band over het **voorhoofd**"
+    },
+    {
+      "en": "Small, in pairs or groups in cloud forest",
+      "nl": "Klein, in paartjes of groepjes in nevelbos"
+    }
+  ]
+}

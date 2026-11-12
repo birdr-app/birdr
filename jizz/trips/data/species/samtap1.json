@@ -1,0 +1,22 @@
+{
+  "code": "samtap1",
+  "name": {
+    "en": "Santa Marta Tapaculo",
+    "nl": "Santa-Martatapaculo"
+  },
+  "latin": "Scytalopus sanctaemartae",
+  "look_for": [
+    {
+      "en": "Plain dark grey tapaculo, paler **belly**",
+      "nl": "Effen donkergrijs tapaculo, lichtere **buik**"
+    },
+    {
+      "en": "Found only in Santa Marta mountains",
+      "nl": "Alleen in de bergen van Santa Marta"
+    },
+    {
+      "en": "Hops low in dense mossy undergrowth",
+      "nl": "Hipt laag door dicht bemost kreupelhout"
+    }
+  ]
+}

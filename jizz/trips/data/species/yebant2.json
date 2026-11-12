@@ -1,0 +1,22 @@
+{
+  "code": "yebant2",
+  "name": {
+    "en": "Yellow-breasted Antwren",
+    "nl": "Geelborstmiersluiper"
+  },
+  "latin": "Herpsilochmus axillaris",
+  "look_for": [
+    {
+      "en": "Yellowish **breast** and belly, black **crown** streaks",
+      "nl": "Gelige **borst** en buik, zwarte **kruin**strepen"
+    },
+    {
+      "en": "Grey **back** with white-edged wing coverts",
+      "nl": "Grijze **rug** met wit omzoomde dekveren"
+    },
+    {
+      "en": "Pairs high in canopy, **tail** dark with white tips",
+      "nl": "Paren hoog in de kroon, donkere **staart** met witte tippen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "spowoo1",
+  "name": {
+    "en": "Spotted Woodcreeper",
+    "nl": "Gevlekte muisspecht"
+  },
+  "latin": "Xiphorhynchus erythropygius",
+  "look_for": [
+    {
+      "en": "Bold buff spots on **breast** and upper back",
+      "nl": "Opvallende beige vlekken op **borst** en bovenrug"
+    },
+    {
+      "en": "Olive-brown above, rufous tail",
+      "nl": "Olijfbruin boven, roodbruine staart"
+    },
+    {
+      "en": "Plain belly, medium straight bill",
+      "nl": "Effen buik, middellange rechte snavel"
+    }
+  ]
+}

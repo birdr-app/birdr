@@ -1,0 +1,22 @@
+{
+  "code": "gobpuf1",
+  "name": {
+    "en": "Golden-breasted Puffleg",
+    "nl": "Goudbuikpluimbroekje"
+  },
+  "latin": "Eriocnemis mosquera",
+  "look_for": [
+    {
+      "en": "Golden-orange **belly** and green back",
+      "nl": "Gouden-oranje **buik** en groene rug"
+    },
+    {
+      "en": "Bright coppery **rump** and bronzy tail",
+      "nl": "Felle koperkleurige **stuit** en bronzen staart"
+    },
+    {
+      "en": "White leg **puffs**, short straight bill",
+      "nl": "Witte **broekjes**, korte rechte snavel"
+    }
+  ]
+}

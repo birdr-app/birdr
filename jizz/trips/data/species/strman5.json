@@ -1,0 +1,22 @@
+{
+  "code": "strman5",
+  "name": {
+    "en": "Striolated Manakin",
+    "nl": "Westelijke gestreepte manakin"
+  },
+  "latin": "Machaeropterus striolatus",
+  "look_for": [
+    {
+      "en": "Bright red **crown** on olive-brown head",
+      "nl": "Felrode **kruin** op olijfbruine kop"
+    },
+    {
+      "en": "Rusty streaks down the pale breast",
+      "nl": "Roestkleurige streepjes op de lichte borst"
+    },
+    {
+      "en": "Female duller, streaked below",
+      "nl": "Vrouwtje doffer, gestreept onderaan"
+    }
+  ]
+}

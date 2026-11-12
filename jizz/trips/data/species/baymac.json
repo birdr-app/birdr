@@ -1,0 +1,22 @@
+{
+  "code": "baymac",
+  "name": {
+    "en": "Blue-and-yellow Macaw",
+    "nl": "Blauw-gele ara"
+  },
+  "latin": "Ara ararauna",
+  "look_for": [
+    {
+      "en": "Blue above, golden-yellow below",
+      "nl": "Blauw boven, goudgeel eronder"
+    },
+    {
+      "en": "Bare white **face** with fine black lines",
+      "nl": "Kale witte **wang** met fijne zwarte lijntjes"
+    },
+    {
+      "en": "Black chin, long pointed tail",
+      "nl": "Zwarte kin, lange spitse staart"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "amtsun2",
+  "name": {
+    "en": "Longuemare's Sunangel",
+    "nl": "Longuemarezonnekolibrie"
+  },
+  "latin": "Heliangelus clarisse",
+  "look_for": [
+    {
+      "en": "Bronzy-green sunangel, glittering green **throat**",
+      "nl": "Bronsgroene zonnekolibrie met glanzend groene **keel**"
+    },
+    {
+      "en": "Buff-white **tail** base with a dark tip",
+      "nl": "Bleekgeel-witte **staart** met donkere punt"
+    },
+    {
+      "en": "White leg tufts, short straight **bill**",
+      "nl": "Witte beenpluimen, korte rechte **snavel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "crmwoo2",
+  "name": {
+    "en": "Crimson-mantled Woodpecker",
+    "nl": "Roodmantelspecht"
+  },
+  "latin": "Colaptes rivolii",
+  "look_for": [
+    {
+      "en": "Crimson **mantle** and rump",
+      "nl": "Karmozijnrode **mantel** en stuit"
+    },
+    {
+      "en": "Barred black-and-yellow underparts",
+      "nl": "Zwartgeel gebandeerde onderkant"
+    },
+    {
+      "en": "Upper Andean forest, often on the ground",
+      "nl": "Andesbos op grote hoogte, vaak op de grond"
+    }
+  ]
+}

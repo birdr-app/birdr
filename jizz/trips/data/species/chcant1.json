@@ -1,0 +1,22 @@
+{
+  "code": "chcant1",
+  "name": {
+    "en": "Chestnut-crested Antbird",
+    "nl": "Kastanjekuifmiervogel"
+  },
+  "latin": "Rhegmatorhina cristata",
+  "look_for": [
+    {
+      "en": "Dark brown with a bushy chestnut **crest**",
+      "nl": "Donkerbruin met een volle kastanjebruine **kuif**"
+    },
+    {
+      "en": "Bare blue **skin** around the eye",
+      "nl": "Blauwe kale **huid** rond het oog"
+    },
+    {
+      "en": "Attends army-ant swarms near the ground",
+      "nl": "Volgt mierenzwermen vlak bij de grond"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "whcant1",
+  "name": {
+    "en": "White-cheeked Antbird",
+    "nl": "Witwangmiervogel"
+  },
+  "latin": "Gymnopithys leucaspis",
+  "look_for": [
+    {
+      "en": "White **cheek** and throat on a rufous body",
+      "nl": "Witte **wang** en keel op roestbruin lijf"
+    },
+    {
+      "en": "Dark crown, bare-faced when at ants",
+      "nl": "Donkere **kruin**, kaal gezicht bij mieren"
+    },
+    {
+      "en": "Walks on the ground by army-ant swarms",
+      "nl": "Loopt over de grond bij mierenzwermen"
+    }
+  ]
+}

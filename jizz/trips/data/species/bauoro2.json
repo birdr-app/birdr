@@ -1,0 +1,22 @@
+{
+  "code": "bauoro2",
+  "name": {
+    "en": "Baudo Oropendola",
+    "nl": "Bruinrugoropendola"
+  },
+  "latin": "Psarocolius cassini",
+  "look_for": [
+    {
+      "en": "Black **head** and chestnut body",
+      "nl": "Zwarte **kop** en kastanjebruin lijf"
+    },
+    {
+      "en": "Yellow outer **tail** feathers",
+      "nl": "Gele buitenste **staartveren**"
+    },
+    {
+      "en": "Pale, orange-tipped **bill**, bare pinkish face",
+      "nl": "Bleke **snavel** met oranje punt, kaal roze gezicht"
+    }
+  ]
+}

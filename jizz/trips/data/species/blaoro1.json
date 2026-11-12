@@ -1,0 +1,22 @@
+{
+  "code": "blaoro1",
+  "name": {
+    "en": "Black Oropendola",
+    "nl": "Zwarte oropendola"
+  },
+  "latin": "Psarocolius guatimozinus",
+  "look_for": [
+    {
+      "en": "Black **head** and breast, chestnut rump",
+      "nl": "Zwarte **kop** en borst, kastanjebruine stuit"
+    },
+    {
+      "en": "Yellow outer **tail** feathers",
+      "nl": "Gele buitenste **staartveren**"
+    },
+    {
+      "en": "Pale **bill** with orange tip, pink face",
+      "nl": "Bleke **snavel** met oranje punt, roze gezicht"
+    }
+  ]
+}

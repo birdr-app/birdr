@@ -1,0 +1,22 @@
+{
+  "code": "bafibi1",
+  "name": {
+    "en": "Bare-faced Ibis",
+    "nl": "Roodmaskeribis"
+  },
+  "latin": "Phimosus infuscatus",
+  "look_for": [
+    {
+      "en": "Dark body with bare red **face**",
+      "nl": "Donker lijf met kaal rood **gezicht**"
+    },
+    {
+      "en": "Pinkish **bill** and legs",
+      "nl": "Roze **snavel** en poten"
+    },
+    {
+      "en": "Flocks in wet grassland",
+      "nl": "Groepen in nat grasland"
+    }
+  ]
+}

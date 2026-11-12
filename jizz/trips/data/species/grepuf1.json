@@ -1,0 +1,22 @@
+{
+  "code": "grepuf1",
+  "name": {
+    "en": "Greenish Puffleg",
+    "nl": "Aureliapluimbroekje"
+  },
+  "latin": "Haplophaedia aureliae",
+  "look_for": [
+    {
+      "en": "Dull green **body** with white leg puffs",
+      "nl": "Dof groen **lijf** met witte broekjes"
+    },
+    {
+      "en": "Short straight black **bill**, bronzy-green tail",
+      "nl": "Korte rechte zwarte **snavel**, bronsgroene staart"
+    },
+    {
+      "en": "Scaly-looking **underparts**, no bright throat patch",
+      "nl": "Geschubd ogende **onderkant**, geen felle keelvlek"
+    }
+  ]
+}

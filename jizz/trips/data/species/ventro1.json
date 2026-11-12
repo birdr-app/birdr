@@ -1,0 +1,22 @@
+{
+  "code": "ventro1",
+  "name": {
+    "en": "Venezuelan Troupial",
+    "nl": "Oranje troepiaal"
+  },
+  "latin": "Icterus icterus",
+  "look_for": [
+    {
+      "en": "Orange body with black **head** and bib",
+      "nl": "Oranje lijf met zwarte **kop** en bef"
+    },
+    {
+      "en": "Black **wings** with a large white patch",
+      "nl": "Zwarte **vleugels** met een grote witte vlek"
+    },
+    {
+      "en": "Bare blue skin round a yellow eye",
+      "nl": "Blauwe kale huid rond gele iris"
+    }
+  ]
+}

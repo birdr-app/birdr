@@ -1,0 +1,22 @@
+{
+  "code": "hoapuf1",
+  "name": {
+    "en": "Hoary Puffleg",
+    "nl": "Geschubd pluimbroekje"
+  },
+  "latin": "Haplophaedia lugens",
+  "look_for": [
+    {
+      "en": "Mostly dark **body** with a grey-scaled belly",
+      "nl": "Overwegend donker **lijf** met een grijs geschubde buik"
+    },
+    {
+      "en": "Whitish leg **puffs**, short bill",
+      "nl": "Witachtige **broekjes**, korte snavel"
+    },
+    {
+      "en": "Dark steel-blue forked **tail**",
+      "nl": "Donkere staalblauwe gevorkte **staart**"
+    }
+  ]
+}

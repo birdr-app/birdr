@@ -1,0 +1,22 @@
+{
+  "code": "pygant1",
+  "name": {
+    "en": "Pygmy Antwren",
+    "nl": "Dwergmiersluiper"
+  },
+  "latin": "Myrmotherula brachyura",
+  "look_for": [
+    {
+      "en": "Tiny, short-**tailed**; male black-throated",
+      "nl": "Klein en kortstaartig; mannetje zwartkeelig"
+    },
+    {
+      "en": "Black **breast** streaked white, fine white wing spots",
+      "nl": "Zwarte **borst** met witte strepen en witte vleugelvlekjes"
+    },
+    {
+      "en": "Active in vines of lowland forest",
+      "nl": "Actief in lianen van laagland bos"
+    }
+  ]
+}

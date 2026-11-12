@@ -1,0 +1,22 @@
+{
+  "code": "gryfin1",
+  "name": {
+    "en": "Grassland Yellow-Finch",
+    "nl": "Graslandsaffraangors"
+  },
+  "latin": "Sicalis luteola",
+  "look_for": [
+    {
+      "en": "Small yellow **bird** with a streaked olive back",
+      "nl": "Klein geel **vogeltje** met een gestreepte olijfkleurige rug"
+    },
+    {
+      "en": "Bright yellow **underparts**, grey-brown bill",
+      "nl": "Felgele **onderkant**, grijsbruine snavel"
+    },
+    {
+      "en": "Flocks in grassland, duller than Saffron Finch",
+      "nl": "Troepjes in grasland, doffer dan Gewone saffraangors"
+    }
+  ]
+}

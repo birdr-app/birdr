@@ -1,0 +1,22 @@
+{
+  "code": "blttra1",
+  "name": {
+    "en": "Black-tailed Trainbearer",
+    "nl": "Zwartstaartkomeetkolibrie"
+  },
+  "latin": "Lesbia victoriae",
+  "look_for": [
+    {
+      "en": "Male with a very long forked **tail**",
+      "nl": "Mannetje met een zeer lange gevorkte **staart**"
+    },
+    {
+      "en": "Green **body**, short bill, rufous wing patch",
+      "nl": "Groen **lijf**, korte snavel, roestbruin vleugelvlak"
+    },
+    {
+      "en": "Orange-rufous **underside** to the tail, glittering green",
+      "nl": "Oranje-roestbruine **onderzijde** van de staart, helder groen glinsterend"
+    }
+  ]
+}

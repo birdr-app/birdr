@@ -1,0 +1,22 @@
+{
+  "code": "stitap1",
+  "name": {
+    "en": "Stiles's Tapaculo",
+    "nl": "Stilestapaculo"
+  },
+  "latin": "Scytalopus stilesi",
+  "look_for": [
+    {
+      "en": "Dark grey with a slightly paler **belly**",
+      "nl": "Donkergrijs met een iets lichtere **buik**"
+    },
+    {
+      "en": "Central Andes endemic, Colombia only",
+      "nl": "Endemisch in de Centrale Andes van Colombia"
+    },
+    {
+      "en": "Creeps in dense undergrowth, voice decisive",
+      "nl": "Sluipt door dicht kreupelhout, zang bepalend"
+    }
+  ]
+}

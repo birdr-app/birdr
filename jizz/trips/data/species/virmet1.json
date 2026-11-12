@@ -1,0 +1,22 @@
+{
+  "code": "virmet1",
+  "name": {
+    "en": "Viridian Metaltail",
+    "nl": "Williamglansstaartkolibrie"
+  },
+  "latin": "Metallura williami",
+  "look_for": [
+    {
+      "en": "Viridian green **body** with a dark central tail",
+      "nl": "Viridiaan groen **lijf** met donkere middenstaart"
+    },
+    {
+      "en": "Short straight **bill**, bronzy-green tail",
+      "nl": "Korte rechte **snavel**, bronsgroene staart"
+    },
+    {
+      "en": "Higher **Andes**, plain except the glittering throat",
+      "nl": "Hoger in de **Andes**, eenvoudig behalve de glinsterende keel"
+    }
+  ]
+}

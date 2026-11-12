@@ -1,0 +1,22 @@
+{
+  "code": "tuipar1",
+  "name": {
+    "en": "Tui Parakeet",
+    "nl": "Tuíparkiet"
+  },
+  "latin": "Brotogeris sanctithomae",
+  "look_for": [
+    {
+      "en": "Yellow-orange **forehead** patch, plain green",
+      "nl": "Geeloranje **voorhoofds**vlek, verder groen"
+    },
+    {
+      "en": "No blue in the wing",
+      "nl": "Geen blauw in de vleugel"
+    },
+    {
+      "en": "Fast flocks over Amazon forest",
+      "nl": "Snelle groepen boven Amazonebos"
+    }
+  ]
+}

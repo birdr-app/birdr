@@ -1,0 +1,22 @@
+{
+  "code": "jetant1",
+  "name": {
+    "en": "Jet Antbird",
+    "nl": "Rouwmiervogel"
+  },
+  "latin": "Cercomacra nigricans",
+  "look_for": [
+    {
+      "en": "Male glossy black with white **shoulder** spots",
+      "nl": "Mannetje glanzend zwart met witte **schouder**vlekjes"
+    },
+    {
+      "en": "White-tipped **tail** and wing coverts",
+      "nl": "Witte tippen aan **staart** en vleugeldekveren"
+    },
+    {
+      "en": "Female plain rufous-brown, **tail** cocked",
+      "nl": "Vrouwtje effen roestbruin, **staart** omhoog"
+    }
+  ]
+}

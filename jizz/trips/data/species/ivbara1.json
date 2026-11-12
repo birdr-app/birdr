@@ -1,0 +1,22 @@
+{
+  "code": "ivbara1",
+  "name": {
+    "en": "Ivory-billed Aracari",
+    "nl": "Ivoorsnavelarassari"
+  },
+  "latin": "Pteroglossus azara",
+  "look_for": [
+    {
+      "en": "Ivory-coloured **bill** with a black tip",
+      "nl": "Ivoorkleurige **snavel** met zwarte punt"
+    },
+    {
+      "en": "Chestnut **head** and neck, a single **belly** band",
+      "nl": "Kastanjebruine **kop** en nek, één **buik**band"
+    },
+    {
+      "en": "Yellow **belly**, green **back**; noisy flocks",
+      "nl": "Gele **buik**, groene **rug**; luidruchtige groepen"
+    }
+  ]
+}

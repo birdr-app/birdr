@@ -1,0 +1,22 @@
+{
+  "code": "rufspi1",
+  "name": {
+    "en": "Rufous Spinetail",
+    "nl": "Roeststekelstaart"
+  },
+  "latin": "Synallaxis unirufa",
+  "look_for": [
+    {
+      "en": "Plain rufous all over",
+      "nl": "Effen roestkleurig over het hele lijf"
+    },
+    {
+      "en": "Blackish **lores** on a plain face",
+      "nl": "Zwartachtige **teugel** op een effen gezicht"
+    },
+    {
+      "en": "Skulks in high Andean forest edge",
+      "nl": "Sluipt langs bosranden hoog in de Andes"
+    }
+  ]
+}

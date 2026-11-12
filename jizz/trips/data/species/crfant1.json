@@ -1,0 +1,22 @@
+{
+  "code": "crfant1",
+  "name": {
+    "en": "Crescent-faced Antpitta",
+    "nl": "Chapmandwergmierpitta"
+  },
+  "latin": "Grallaricula lineifrons",
+  "look_for": [
+    {
+      "en": "Tiny antpitta with a pale crescent on the **face**",
+      "nl": "Piepkleine mierpitta met lichte halve maan op het **gezicht**"
+    },
+    {
+      "en": "Olive-brown back, rufous head",
+      "nl": "Olijfbruine rug, roodbruine kop"
+    },
+    {
+      "en": "Orange-buff **breast**, scaled",
+      "nl": "Oranjebeige **borst**, geschubd"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "fooant1",
+  "name": {
+    "en": "Foothill Stipplethroat",
+    "nl": "Heuvelmiersluiper"
+  },
+  "latin": "Epinecrophylla spodionota",
+  "look_for": [
+    {
+      "en": "Male grey with a white-spotted black **throat**",
+      "nl": "Mannetje grijs met een zwarte, wit gespikkelde **keel**"
+    },
+    {
+      "en": "Rufous-brown **back**, bright rufous **tail**",
+      "nl": "Roestbruine **rug**, felroestrode **staart**"
+    },
+    {
+      "en": "Hops low in foothill forest, in mixed flocks",
+      "nl": "Hipt laag in voorbergbos, in gemengde groepen"
+    }
+  ]
+}

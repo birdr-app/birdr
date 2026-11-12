@@ -1,0 +1,22 @@
+{
+  "code": "ruthum1",
+  "name": {
+    "en": "Ruby-topaz Hummingbird",
+    "nl": "Muskietkolibrie"
+  },
+  "latin": "Chrysolampis mosquitus",
+  "look_for": [
+    {
+      "en": "Male with a ruby-red **crown** and a golden throat",
+      "nl": "Mannetje met een robijnrode **kruin** en gouden keel"
+    },
+    {
+      "en": "Dark **body**, bright rufous tail",
+      "nl": "Donker **lijf**, helder roestbruine staart"
+    },
+    {
+      "en": "Female grey-green above, white below, rufous **tail**",
+      "nl": "Vrouwtje grijsgroen boven, wit onder, roestbruine **staart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "plushc1",
+  "name": {
+    "en": "Plushcap",
+    "nl": "Fluweelkoptangare"
+  },
+  "latin": "Catamblyrhynchus diadema",
+  "look_for": [
+    {
+      "en": "Black **body** with a chestnut belly",
+      "nl": "Zwart **lijf** met een kastanjebruine buik"
+    },
+    {
+      "en": "Velvety **forehead** tuft and a short bill",
+      "nl": "Fluweelachtig **voorhoofdspluimpje** en een korte snavel"
+    },
+    {
+      "en": "Searches bamboo for insects",
+      "nl": "Zoekt in bamboe naar insecten"
+    }
+  ]
+}

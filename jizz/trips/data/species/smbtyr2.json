@@ -1,0 +1,22 @@
+{
+  "code": "smbtyr2",
+  "name": {
+    "en": "Smoky Bush-Tyrant",
+    "nl": "Roetkleurige struiktiran"
+  },
+  "latin": "Myiotheretes fumigatus",
+  "look_for": [
+    {
+      "en": "Smoky brown **body** with a rufous wing panel",
+      "nl": "Rookbruin **lijf** met roestbruin vleugelpaneel"
+    },
+    {
+      "en": "Slightly streaked breast, pale throat",
+      "nl": "Licht gestreepte borst, lichte keel"
+    },
+    {
+      "en": "High Andes, sits on bush tops, hunting insects",
+      "nl": "Hoge Andes, zit op struiktoppen, jaagt op insecten"
+    }
+  ]
+}

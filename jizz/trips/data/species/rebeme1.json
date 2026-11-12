@@ -1,0 +1,22 @@
+{
+  "code": "rebeme1",
+  "name": {
+    "en": "Red-billed Emerald",
+    "nl": "Roodsnavelsmaragdkolibrie"
+  },
+  "latin": "Chlorostilbon gibsoni",
+  "look_for": [
+    {
+      "en": "Red **bill** with a black tip, in both sexes",
+      "nl": "Rode **snavel** met zwarte punt, bij beide geslachten"
+    },
+    {
+      "en": "Male glittering green with a dark forked **tail**",
+      "nl": "Mannetje glinsterend groen met een donkere gevorkte **staart**"
+    },
+    {
+      "en": "Female grey below with a white **eyestripe**",
+      "nl": "Vrouwtje grijs onder met een witte **oogstreep**"
+    }
+  ]
+}

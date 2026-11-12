@@ -1,0 +1,22 @@
+{
+  "code": "andcon1",
+  "name": {
+    "en": "Andean Condor",
+    "nl": "Andescondor"
+  },
+  "latin": "Vultur gryphus",
+  "look_for": [
+    {
+      "en": "Huge black vulture with a white neck ruff",
+      "nl": "Enorme zwarte gier met een witte halskraag"
+    },
+    {
+      "en": "Male has a fleshy **comb**, white wing patches",
+      "nl": "Mannetje met een vlezige **kam**, witte vleugelvlekken"
+    },
+    {
+      "en": "Flat-winged soaring, fingered wing tips",
+      "nl": "Zweeft op vlakke vleugels met gespreide vleugelpunten"
+    }
+  ]
+}

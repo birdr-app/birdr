@@ -1,0 +1,19 @@
+{
+  "slug": "sapayoa",
+  "about": {
+    "en": "A small, plain bird about the size of a sparrow, olive-green above and yellowish below, with a flat, broad bill. It sits upright and quietly in the understory of lowland forest, flying out now and then to snatch an insect or a berry. Easy to overlook.",
+    "nl": "Een kleine, eenvoudige vogel ter grootte van een mus, olijfgroen boven en geelachtig onder, met een platte, brede snavel. Hij zit rechtop en rustig in het onderhout van laaglandbos en vliegt af en toe uit om een insect of bes te pakken. Makkelijk te missen."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "manakins",
+        "tyrant-flycatchers-elaenias-tyrannulets-and-allies"
+      ],
+      "text": {
+        "en": "The Sapayoa looks like a plain flycatcher or a female manakin, but it is its own family, more closely related to the broadbills of the Old World. Look for the broad, flat bill and the upright, still posture.",
+        "nl": "De breedbekmanakin lijkt op een gewone vliegenvanger of een vrouwtjesmanakin, maar vormt een eigen familie, nauwer verwant aan de breedbekken van de Oude Wereld. Let op de brede, platte snavel en de rechte, stille houding."
+      }
+    }
+  ]
+}

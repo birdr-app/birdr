@@ -1,0 +1,22 @@
+{
+  "code": "pielap1",
+  "name": {
+    "en": "Pied Plover",
+    "nl": "Cayenneplevier"
+  },
+  "latin": "Hoploxypterus cayanus",
+  "look_for": [
+    {
+      "en": "Black-and-white **plover** with a rounded crest",
+      "nl": "Zwartwitte **plevier** met een korte nekkuif"
+    },
+    {
+      "en": "Black **breast** line, brown back",
+      "nl": "Zwarte **borststreep**, bruine rug"
+    },
+    {
+      "en": "Red legs and rounded white wing patches",
+      "nl": "Rode poten en witte vleugelvlekken"
+    }
+  ]
+}

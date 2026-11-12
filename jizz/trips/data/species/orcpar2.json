@@ -1,0 +1,22 @@
+{
+  "code": "orcpar2",
+  "name": {
+    "en": "Orange-cheeked Parrot",
+    "nl": "Barrabandpapegaai"
+  },
+  "latin": "Pyrilia barrabandi",
+  "look_for": [
+    {
+      "en": "Black **head**, bright orange cheek patch",
+      "nl": "Zwarte **kop**, heldere oranje wangvlek"
+    },
+    {
+      "en": "Yellow thighs and bend of wing",
+      "nl": "Gele dijen en vleugelbocht"
+    },
+    {
+      "en": "Green body, flies over Amazon canopy",
+      "nl": "Groen lijf, vliegt boven Amazone-kronendak"
+    }
+  ]
+}

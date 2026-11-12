@@ -1,0 +1,22 @@
+{
+  "code": "scapic1",
+  "name": {
+    "en": "Scaled Piculet",
+    "nl": "Geschubde dwergspecht"
+  },
+  "latin": "Picumnus squamulatus",
+  "look_for": [
+    {
+      "en": "Tiny, olive-brown **back**",
+      "nl": "Piepklein, olijfbruine **rug**"
+    },
+    {
+      "en": "Scaly black-and-white underparts",
+      "nl": "Geschubde zwartwitte onderkant"
+    },
+    {
+      "en": "Male orange-spotted crown, dry Caribbean scrub",
+      "nl": "Man met oranje kruinstippen, droog struikgewas"
+    }
+  ]
+}

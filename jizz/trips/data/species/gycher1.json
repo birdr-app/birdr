@@ -1,0 +1,22 @@
+{
+  "code": "gycher1",
+  "name": {
+    "en": "Grey-chinned Hermit",
+    "nl": "Grijskinheremietkolibrie"
+  },
+  "latin": "Phaethornis griseogularis",
+  "look_for": [
+    {
+      "en": "Grey **throat** and cinnamon rump, white tail tip",
+      "nl": "Grijze **keel** en kaneelbruine stuit, witte staartpunt"
+    },
+    {
+      "en": "Long decurved **bill**, buff eyebrow",
+      "nl": "Lange gebogen **snavel**, lichtbruine wenkbrauw"
+    },
+    {
+      "en": "Cinnamon **belly** and dark mask",
+      "nl": "Kaneelbruine **buik** en donker masker"
+    }
+  ]
+}

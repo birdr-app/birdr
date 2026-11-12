@@ -1,0 +1,22 @@
+{
+  "code": "gilbar1",
+  "name": {
+    "en": "Gilded Barbet",
+    "nl": "Gouden baardvogel"
+  },
+  "latin": "Capito auratus",
+  "look_for": [
+    {
+      "en": "Black **head** with a bright orange-yellow **crown**",
+      "nl": "Zwarte **kop** met felle oranjegele **kruin**"
+    },
+    {
+      "en": "Streaked **back** and yellow-streaked **breast**",
+      "nl": "Gestreepte **rug** en geelgestreepte **borst**"
+    },
+    {
+      "en": "Perches high in lowland canopy, often in pairs",
+      "nl": "Zit hoog in laagland kroon, vaak in paren"
+    }
+  ]
+}

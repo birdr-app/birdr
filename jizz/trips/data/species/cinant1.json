@@ -1,0 +1,22 @@
+{
+  "code": "cinant1",
+  "name": {
+    "en": "Cinereous Antshrike",
+    "nl": "Temminckmierklauwier"
+  },
+  "latin": "Thamnomanes caesius",
+  "look_for": [
+    {
+      "en": "Male dark slate-grey, a plain **face**",
+      "nl": "Mannetje donker leigrijs, effen **gezicht**"
+    },
+    {
+      "en": "Pale **eye**, no markings on grey **wings**",
+      "nl": "Lichte **iris**, geen tekening op grijze **vleugels**"
+    },
+    {
+      "en": "Perches upright, leads mixed flocks in understorey",
+      "nl": "Zit rechtop, leidt gemengde groepen in struikgewas"
+    }
+  ]
+}

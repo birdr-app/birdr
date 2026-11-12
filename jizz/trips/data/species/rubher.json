@@ -1,0 +1,22 @@
+{
+  "code": "rubher",
+  "name": {
+    "en": "Rufous-breasted Hermit",
+    "nl": "Roodborstheremietkolibrie"
+  },
+  "latin": "Glaucis hirsutus",
+  "look_for": [
+    {
+      "en": "Rufous **belly** with a curved bill, large hermit",
+      "nl": "Roestbruine **buik** met gebogen snavel, grote heremiet"
+    },
+    {
+      "en": "Bright **eyebrow** and dark mask, buff throat",
+      "nl": "Heldere **wenkbrauw** en donker masker, beige keel"
+    },
+    {
+      "en": "Bronzy-green **back**, rufous tail with white tip",
+      "nl": "Bronsgroene **rug**, roestbruine staart met witte punt"
+    }
+  ]
+}

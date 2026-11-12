@@ -1,0 +1,22 @@
+{
+  "code": "pavque1",
+  "name": {
+    "en": "Pavonine Quetzal",
+    "nl": "Pauwquetzal"
+  },
+  "latin": "Pharomachrus pavoninus",
+  "look_for": [
+    {
+      "en": "Green **head** and back, crimson belly",
+      "nl": "Groene **kop** en rug, karmijnrode buik"
+    },
+    {
+      "en": "Male has a red bill",
+      "nl": "Mannetje heeft een rode snavel"
+    },
+    {
+      "en": "Perches motionless in Amazon forest canopy",
+      "nl": "Zit bewegingloos in de kruin van Amazonebos"
+    }
+  ]
+}

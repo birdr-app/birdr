@@ -1,0 +1,22 @@
+{
+  "code": "dusant1",
+  "name": {
+    "en": "Dusky Antbird",
+    "nl": "Tiranmiervogel"
+  },
+  "latin": "Cercomacroides tyrannina",
+  "look_for": [
+    {
+      "en": "Male dark grey, plain, with pale **wing** edges",
+      "nl": "Mannetje donkergrijs, effen, met lichte **vleugel**randen"
+    },
+    {
+      "en": "Female olive-brown, buffy-rufous below",
+      "nl": "Vrouwtje olijfbruin, roodbruin onder"
+    },
+    {
+      "en": "Long **tail** cocked up in tangled thickets",
+      "nl": "Lange **staart** omhoog in dicht struweel"
+    }
+  ]
+}

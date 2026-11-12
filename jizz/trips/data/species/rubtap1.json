@@ -1,0 +1,22 @@
+{
+  "code": "rubtap1",
+  "name": {
+    "en": "Rusty-belted Tapaculo",
+    "nl": "Roestbuiktapaculo"
+  },
+  "latin": "Liosceles thoracicus",
+  "look_for": [
+    {
+      "en": "Grey **head** and back, rufous belly and flanks",
+      "nl": "Grijze **kop** en rug, roestbruine buik en flanken"
+    },
+    {
+      "en": "Long **legs** and a very short tail",
+      "nl": "Lange **poten** en een zeer korte staart"
+    },
+    {
+      "en": "Walks upright on the floor of lowland forest",
+      "nl": "Loopt rechtop over de bodem van laaglandbos"
+    }
+  ]
+}

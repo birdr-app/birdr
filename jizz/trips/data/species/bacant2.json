@@ -1,0 +1,22 @@
+{
+  "code": "bacant2",
+  "name": {
+    "en": "Bar-crested Antshrike",
+    "nl": "Streepkuifmierklauwier"
+  },
+  "latin": "Thamnophilus multistriatus",
+  "look_for": [
+    {
+      "en": "Male barred black and white, bushy **crest**",
+      "nl": "Mannetje zwart-wit gebandeerd, volle **kuif**"
+    },
+    {
+      "en": "Female rufous **crown**, buff-barred underparts",
+      "nl": "Vrouwtje met roestbruine **kruin**, gebandeerde onderkant"
+    },
+    {
+      "en": "Scrub and dry woodland; barred **tail** held up",
+      "nl": "Struweel en droog bos; gebandeerde **staart** omhoog"
+    }
+  ]
+}

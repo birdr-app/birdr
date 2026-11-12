@@ -1,0 +1,22 @@
+{
+  "code": "fietop1",
+  "name": {
+    "en": "Fiery Topaz",
+    "nl": "Vuurtopaaskolibrie"
+  },
+  "latin": "Topaza pyra",
+  "look_for": [
+    {
+      "en": "Crimson and gold **belly** with long, crossed tail streamers",
+      "nl": "Karmozijn met gouden **buik** en lange gekruiste staartpennen"
+    },
+    {
+      "en": "Black **head** with a glittering emerald throat",
+      "nl": "Zwarte **kop** met glinsterende smaragdgroene keel"
+    },
+    {
+      "en": "Very large, red-bodied **hummingbird** of rainforest streams",
+      "nl": "Zeer grote, rode **kolibrie** van regenwoudbeken"
+    }
+  ]
+}

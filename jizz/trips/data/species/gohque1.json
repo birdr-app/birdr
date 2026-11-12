@@ -1,0 +1,22 @@
+{
+  "code": "gohque1",
+  "name": {
+    "en": "Golden-headed Quetzal",
+    "nl": "Goudkopquetzal"
+  },
+  "latin": "Pharomachrus auriceps",
+  "look_for": [
+    {
+      "en": "Golden-green **head**, short crest",
+      "nl": "Goudgroene **kop**, korte kuif"
+    },
+    {
+      "en": "Crimson belly and green chest",
+      "nl": "Karmijnrode buik en groene borst"
+    },
+    {
+      "en": "Male has a bright yellow bill",
+      "nl": "Mannetje heeft een felgele snavel"
+    }
+  ]
+}

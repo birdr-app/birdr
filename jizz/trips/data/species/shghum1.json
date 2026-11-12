@@ -1,0 +1,22 @@
+{
+  "code": "shghum1",
+  "name": {
+    "en": "Shining-green Hummingbird",
+    "nl": "Goudotkolibrie"
+  },
+  "latin": "Chrysuronia goudoti",
+  "look_for": [
+    {
+      "en": "Shining green **plumage**, scaly looking breast",
+      "nl": "Glanzend groen **verenkleed**, geschubd ogende borst"
+    },
+    {
+      "en": "White **belly**, blue-green throat",
+      "nl": "Witte **buik**, blauwgroene keel"
+    },
+    {
+      "en": "Straight **bill**, bronzy tail, dark ear patch",
+      "nl": "Rechte **snavel**, bronzen staart, donkere oorvlek"
+    }
+  ]
+}

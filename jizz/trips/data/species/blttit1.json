@@ -1,0 +1,22 @@
+{
+  "code": "blttit1",
+  "name": {
+    "en": "Black-tailed Tityra",
+    "nl": "Zwartstaarttityra"
+  },
+  "latin": "Tityra cayana",
+  "look_for": [
+    {
+      "en": "Pale grey body with a black **cap**",
+      "nl": "Lichtgrijs lijf met een zwarte **kruin**"
+    },
+    {
+      "en": "Black **tail** with a narrow pale tip",
+      "nl": "Zwarte **staart** met smalle lichte top"
+    },
+    {
+      "en": "Bare red face and red bill base",
+      "nl": "Kaal rood gezicht en rode snavelbasis"
+    }
+  ]
+}

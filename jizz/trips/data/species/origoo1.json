@@ -1,0 +1,22 @@
+{
+  "code": "origoo1",
+  "name": {
+    "en": "Orinoco Goose",
+    "nl": "Orinocogans"
+  },
+  "latin": "Oressochen jubatus",
+  "look_for": [
+    {
+      "en": "Large goose-like duck with a chestnut **belly**",
+      "nl": "Grote ganzachtige eend met een kastanjebruine **buik**"
+    },
+    {
+      "en": "Black back and wings with a white wing flash",
+      "nl": "Zwarte rug en vleugels met een witte vleugelflits"
+    },
+    {
+      "en": "Pale head with a black bill",
+      "nl": "Lichte kop met een zwarte snavel"
+    }
+  ]
+}

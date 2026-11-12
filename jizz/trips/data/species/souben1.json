@@ -1,0 +1,22 @@
+{
+  "code": "souben1",
+  "name": {
+    "en": "Southern Bentbill",
+    "nl": "Colombiaanse krombektiran"
+  },
+  "latin": "Oncostoma olivaceum",
+  "look_for": [
+    {
+      "en": "Short **bill** with a bent-down tip",
+      "nl": "Korte **snavel** met een omlaag gebogen punt"
+    },
+    {
+      "en": "Olive back, yellowish belly",
+      "nl": "Olijfgroene rug, geelachtige buik"
+    },
+    {
+      "en": "Pale eye, bobs tail in dense understorey",
+      "nl": "Lichte oog, wipt met staart in dicht onderbos"
+    }
+  ]
+}

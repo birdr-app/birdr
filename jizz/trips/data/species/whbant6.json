@@ -1,0 +1,22 @@
+{
+  "code": "whbant6",
+  "name": {
+    "en": "White-browed Antbird",
+    "nl": "Witbrauwmierkruiper"
+  },
+  "latin": "Myrmoborus leucophrys",
+  "look_for": [
+    {
+      "en": "Male black with bold white **brow**, grey **belly**",
+      "nl": "Mannetje zwart met witte **wenkbrauw**, grijze **buik**"
+    },
+    {
+      "en": "Black **throat** and **face**, brown **back**",
+      "nl": "Zwarte **keel** en **gezicht**, bruine **rug**"
+    },
+    {
+      "en": "Female rufous below, white brow in both",
+      "nl": "Vrouwtje roestbruin onder, wenkbrauw bij beide wit"
+    }
+  ]
+}

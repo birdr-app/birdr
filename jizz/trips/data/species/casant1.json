@@ -1,0 +1,22 @@
+{
+  "code": "casant1",
+  "name": {
+    "en": "Castelnau's Antshrike",
+    "nl": "Castelnaumierklauwier"
+  },
+  "latin": "Thamnophilus cryptoleucus",
+  "look_for": [
+    {
+      "en": "Male black with a **crown** and back mostly white",
+      "nl": "Mannetje zwart met witte **kruin** en rug"
+    },
+    {
+      "en": "Black **wings** and tail, white tips on coverts",
+      "nl": "Zwarte **vleugels** en staart, witte tippen op dekveren"
+    },
+    {
+      "en": "Female rufous above, buff-streaked underparts",
+      "nl": "Vrouwtje roestbruin boven, bruin gestreepte onderkant"
+    }
+  ]
+}

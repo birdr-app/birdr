@@ -1,0 +1,22 @@
+{
+  "code": "esmant1",
+  "name": {
+    "en": "Esmeraldas Antbird",
+    "nl": "Esmeraldasmiervogel"
+  },
+  "latin": "Sipia nigricauda",
+  "look_for": [
+    {
+      "en": "Male glossy black, with a slightly hooked **bill**",
+      "nl": "Mannetje glanzend zwart, met licht gehaakte **snavel**"
+    },
+    {
+      "en": "Female dark rufous-brown overall, plain",
+      "nl": "Vrouwtje donker roestbruin, effen"
+    },
+    {
+      "en": "Dense forest understorey of the Pacific lowlands",
+      "nl": "Dicht struikgewas van het Pacifische laagland"
+    }
+  ]
+}

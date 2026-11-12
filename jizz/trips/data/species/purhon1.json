@@ -1,0 +1,22 @@
+{
+  "code": "purhon1",
+  "name": {
+    "en": "Purple Honeycreeper",
+    "nl": "Purpersuikervogel"
+  },
+  "latin": "Cyanerpes caeruleus",
+  "look_for": [
+    {
+      "en": "Male violet-blue with a short, curved **bill**",
+      "nl": "Mannetje violetblauw met een korte gebogen **snavel**"
+    },
+    {
+      "en": "Black **back** and a bright blue crown",
+      "nl": "Zwarte **rug** en een felblauwe kruin"
+    },
+    {
+      "en": "Yellow legs and black wings",
+      "nl": "Gele poten en zwarte vleugels"
+    }
+  ]
+}

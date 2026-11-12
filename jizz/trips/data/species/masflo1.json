@@ -1,0 +1,22 @@
+{
+  "code": "masflo1",
+  "name": {
+    "en": "Masked Flowerpiercer",
+    "nl": "Maskerberghoningkruiper"
+  },
+  "latin": "Diglossa cyanea",
+  "look_for": [
+    {
+      "en": "Blue **body**, black mask, hooked bill",
+      "nl": "Blauw **lijf**, zwart masker, haaksnavel"
+    },
+    {
+      "en": "Red **eye** and a black forehead",
+      "nl": "Rood **oog** en een zwart voorhoofd"
+    },
+    {
+      "en": "Female greener and duller with a blue head",
+      "nl": "Vrouwtje groener en doffer met een blauwe kop"
+    }
+  ]
+}

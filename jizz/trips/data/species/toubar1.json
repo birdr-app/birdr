@@ -1,0 +1,22 @@
+{
+  "code": "toubar1",
+  "name": {
+    "en": "Toucan Barbet",
+    "nl": "Toekanbaardvogel"
+  },
+  "latin": "Semnornis ramphastinus",
+  "look_for": [
+    {
+      "en": "Heavy, two-toned yellow-and-black **bill**",
+      "nl": "Zware, tweekleurige geelzwarte **snavel**"
+    },
+    {
+      "en": "Red **breast**, yellow **throat**, grey **back**",
+      "nl": "Rode **borst**, gele **keel**, grijze **rug**"
+    },
+    {
+      "en": "Shy; in mossy cloud forest, in pairs",
+      "nl": "Schuw; in bemost wolkenbos, in paren"
+    }
+  ]
+}

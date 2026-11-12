@@ -1,0 +1,22 @@
+{
+  "code": "turtan1",
+  "name": {
+    "en": "Turquoise Tanager",
+    "nl": "Turkooistangare"
+  },
+  "latin": "Tangara mexicana",
+  "look_for": [
+    {
+      "en": "Turquoise **head**, black back and yellow belly",
+      "nl": "Turkooizen **kop**, zwarte rug en gele buik"
+    },
+    {
+      "en": "Blue **throat** and chest, dark wings",
+      "nl": "Blauwe **keel** en borst, donkere vleugels"
+    },
+    {
+      "en": "Lowland savanna and forest edges",
+      "nl": "Laaglandsavanne en bosranden"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "pluant1",
+  "name": {
+    "en": "Plumbeous Antbird",
+    "nl": "Chamicurusmiervogel"
+  },
+  "latin": "Myrmelastes hyperythrus",
+  "look_for": [
+    {
+      "en": "Grey-blue body with rusty brown **back**",
+      "nl": "Grijsblauw lijf met roestbruine **rug**"
+    },
+    {
+      "en": "Dark **head** and plain underparts",
+      "nl": "Donkere **kop** en effen onderkant"
+    },
+    {
+      "en": "Ground dweller near army ants",
+      "nl": "Grondbewoner bij mierenlegers"
+    }
+  ]
+}

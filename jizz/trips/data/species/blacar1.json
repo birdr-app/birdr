@@ -1,0 +1,22 @@
+{
+  "code": "blacar1",
+  "name": {
+    "en": "Black Caracara",
+    "nl": "Zwarte caracara"
+  },
+  "latin": "Daptrius ater",
+  "look_for": [
+    {
+      "en": "Glossy black with bare orange-red **face**",
+      "nl": "Glanzend zwart met kaal oranjerood **gezicht**"
+    },
+    {
+      "en": "White **tail** base and band",
+      "nl": "Witte **staartbasis** en band"
+    },
+    {
+      "en": "Noisy, near rivers and forest edges",
+      "nl": "Luidruchtig, bij rivieren en bosranden"
+    }
+  ]
+}

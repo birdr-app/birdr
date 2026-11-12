@@ -1,0 +1,22 @@
+{
+  "code": "schant1",
+  "name": {
+    "en": "Schwartz's Antthrush",
+    "nl": "Geschubde mierlijster"
+  },
+  "latin": "Chamaeza turdina",
+  "look_for": [
+    {
+      "en": "Scaly black-and-buff **back**, long slim **tail**",
+      "nl": "Geschubde zwart-bruine **rug**, lange slanke **staart**"
+    },
+    {
+      "en": "Pale **throat**, scaled buffy **breast**",
+      "nl": "Lichte **keel**, geschubde roomgele **borst**"
+    },
+    {
+      "en": "Walks on the ground, bobbing its **tail**",
+      "nl": "Loopt over de grond en wipt met de **staart**"
+    }
+  ]
+}

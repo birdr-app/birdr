@@ -1,0 +1,22 @@
+{
+  "code": "butcor1",
+  "name": {
+    "en": "Buff-tailed Coronet",
+    "nl": "Bruinstaarthoornkolibrie"
+  },
+  "latin": "Boissonneaua flavescens",
+  "look_for": [
+    {
+      "en": "Chestnut **wings** and buff-tinged tail",
+      "nl": "Kastanjebruine **vleugels** en geelachtige staart"
+    },
+    {
+      "en": "Green **body**, buffy belly",
+      "nl": "Groen **lijf**, geelbruine buik"
+    },
+    {
+      "en": "Buff **tail** with a bronzy tip, short bill",
+      "nl": "Geelbruine **staart** met bronzen punt, korte snavel"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "bucmot3",
+  "name": {
+    "en": "Whooping Motmot",
+    "nl": "Caribische motmot"
+  },
+  "latin": "Momotus subrufescens",
+  "look_for": [
+    {
+      "en": "Cinnamon-rufous underparts, dark chest **spot**",
+      "nl": "Kaneelrode onderkant, donkere **vlek** op de borst"
+    },
+    {
+      "en": "Racket-tipped **tail** swung like a pendulum",
+      "nl": "Racketstaart die als een slinger zwaait"
+    },
+    {
+      "en": "Whooping call in dry coastal woodland",
+      "nl": "Hoepende roep in droog kustbos"
+    }
+  ]
+}

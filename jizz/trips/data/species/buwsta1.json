@@ -1,0 +1,22 @@
+{
+  "code": "buwsta1",
+  "name": {
+    "en": "Buff-winged Starfrontlet",
+    "nl": "Bruinvleugelincakolibrie"
+  },
+  "latin": "Coeligena lutetiae",
+  "look_for": [
+    {
+      "en": "Buff **wing** patches on a dark body",
+      "nl": "Beige **vleugel**vlekken op een donker lijf"
+    },
+    {
+      "en": "Glittering green **forehead**, long straight bill",
+      "nl": "Glinsterend groen **voorhoofd**, lange rechte snavel"
+    },
+    {
+      "en": "Bronzy **tail**, white thigh tufts",
+      "nl": "Bronzen **staart**, witte beenpluimen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rusflo1",
+  "name": {
+    "en": "Rusty Flowerpiercer",
+    "nl": "Kleverberghoningkruiper"
+  },
+  "latin": "Diglossa sittoides",
+  "look_for": [
+    {
+      "en": "Small grey **body** with rufous underparts",
+      "nl": "Klein grijs **lijf** met roestbruine onderkant"
+    },
+    {
+      "en": "Hooked **bill**, a black face in male",
+      "nl": "Haaksnavel, een zwart gezicht bij het mannetje"
+    },
+    {
+      "en": "Female olive-brown, more streaked than male",
+      "nl": "Vrouwtje olijfbruin, meer gestreept dan het mannetje"
+    }
+  ]
+}

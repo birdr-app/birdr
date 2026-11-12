@@ -1,0 +1,22 @@
+{
+  "code": "orisal1",
+  "name": {
+    "en": "Orinocan Saltator",
+    "nl": "Orinocosaltator"
+  },
+  "latin": "Saltator orenocensis",
+  "look_for": [
+    {
+      "en": "Large grey **bird** with a black cheek band",
+      "nl": "Grote grijze **vogel** met een zwarte wangband"
+    },
+    {
+      "en": "White **throat** edged in black",
+      "nl": "Witte **keel** met een zwarte rand"
+    },
+    {
+      "en": "Buff-white **belly**, Orinoco savanna species",
+      "nl": "Bleekwitte **buik**, soort van de Orinocosavanne"
+    }
+  ]
+}

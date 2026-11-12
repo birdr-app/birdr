@@ -1,0 +1,22 @@
+{
+  "code": "indflo1",
+  "name": {
+    "en": "Indigo Flowerpiercer",
+    "nl": "Indigoberghoningkruiper"
+  },
+  "latin": "Diglossa indigotica",
+  "look_for": [
+    {
+      "en": "Dark blue-black **body** with a hooked bill",
+      "nl": "Donker blauwzwart **lijf** met een haaksnavel"
+    },
+    {
+      "en": "Metallic indigo **sheen** and a pale eye",
+      "nl": "Metallic indigo **glans** en een bleek oog"
+    },
+    {
+      "en": "Shorter bill, bluer than Glossy Flowerpiercer",
+      "nl": "Kortere snavel, blauwer dan Glansberghoningkruiper"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "carela1",
+  "name": {
+    "en": "Caribbean Elaenia",
+    "nl": "Witbuikelenia"
+  },
+  "latin": "Elaenia martinica",
+  "look_for": [
+    {
+      "en": "Small, grey-brown elaenia with a hidden white **crest**",
+      "nl": "Kleine grijsbruine elaenia met verborgen witte **kuif**"
+    },
+    {
+      "en": "Two pale wing bars, whitish belly",
+      "nl": "Twee lichte vleugelbanden, witachtige buik"
+    },
+    {
+      "en": "Island and coast bird, sits openly in trees",
+      "nl": "Vogel van eilanden en kust, zit open in bomen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "ecupie1",
+  "name": {
+    "en": "Ecuadorian Piedtail",
+    "nl": "Ecuadoraanse eksterstaart"
+  },
+  "latin": "Phlogophilus hemileucurus",
+  "look_for": [
+    {
+      "en": "Short straight **bill**, green back, white belly",
+      "nl": "Korte rechte **snavel**, groene rug, witte buik"
+    },
+    {
+      "en": "Broad white **tail** tips, white rump",
+      "nl": "Brede witte **staart**punten, witte stuit"
+    },
+    {
+      "en": "Two white **bars** on the body, white eyespot",
+      "nl": "Twee witte **strepen** op de onderkant, witte vlek achter oog"
+    }
+  ]
+}

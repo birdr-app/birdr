@@ -1,0 +1,22 @@
+{
+  "code": "thswar1",
+  "name": {
+    "en": "Three-striped Warbler",
+    "nl": "Driestreepzanger"
+  },
+  "latin": "Basileuterus tristriatus",
+  "look_for": [
+    {
+      "en": "Buff central **crown** between black side stripes",
+      "nl": "Beige midden op de **kruin** tussen zwarte zijstrepen"
+    },
+    {
+      "en": "Pale eyebrow, dark eyestripe",
+      "nl": "Lichte wenkbrauwstreep, donkere oogstreep"
+    },
+    {
+      "en": "Olive back, dull yellow-olive underparts",
+      "nl": "Olijfgroene rug, dof geelgroene onderkant"
+    }
+  ]
+}

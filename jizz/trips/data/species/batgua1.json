@@ -1,0 +1,22 @@
+{
+  "code": "batgua1",
+  "name": {
+    "en": "Band-tailed Guan",
+    "nl": "Bandstaartsjakohoen"
+  },
+  "latin": "Penelope argyrotis",
+  "look_for": [
+    {
+      "en": "Grey-brown with white-streaked **head**",
+      "nl": "Grijsbruin met wit gestreepte **kop**"
+    },
+    {
+      "en": "Red bare **throat** wattle",
+      "nl": "Rode kale **keellel**"
+    },
+    {
+      "en": "Pale band at the **tail** tip",
+      "nl": "Lichte band aan de **staartpunt**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "butpig1",
+  "name": {
+    "en": "Blue-throated Piping-Guan",
+    "nl": "Blauwkeelgoean"
+  },
+  "latin": "Pipile cumanensis",
+  "look_for": [
+    {
+      "en": "Black with a large white **wing** patch",
+      "nl": "Zwart met een grote witte **vleugelvlek**"
+    },
+    {
+      "en": "White **crest** and bare blue throat",
+      "nl": "Witte **kuif** en kale blauwe keel"
+    },
+    {
+      "en": "Rattling wing noises when flushed",
+      "nl": "Ratelende vleugelslag bij opvliegen"
+    }
+  ]
+}

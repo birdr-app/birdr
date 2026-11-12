@@ -1,0 +1,22 @@
+{
+  "code": "grasal3",
+  "name": {
+    "en": "Bluish-grey Saltator",
+    "nl": "Blauwgrijze saltator"
+  },
+  "latin": "Saltator coerulescens",
+  "look_for": [
+    {
+      "en": "Large blue-grey **bird** with a black eye-line",
+      "nl": "Grote blauwgrijze **vogel** met een zwarte oogstreep"
+    },
+    {
+      "en": "White **throat**, cinnamon belly and vent",
+      "nl": "Witte **keel**, kaneelkleurige buik en onderstaart"
+    },
+    {
+      "en": "Dry scrub and gardens, loud whistled song",
+      "nl": "Droog struikgewas en tuinen, luide fluitzang"
+    }
+  ]
+}

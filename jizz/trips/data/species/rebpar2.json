@@ -1,0 +1,22 @@
+{
+  "code": "rebpar2",
+  "name": {
+    "en": "Red-billed Parrot",
+    "nl": "Roodsnavelmargrietje"
+  },
+  "latin": "Pionus sordidus",
+  "look_for": [
+    {
+      "en": "Red **bill** on a dull green body",
+      "nl": "Rode **snavel** op een dofgroen lijf"
+    },
+    {
+      "en": "Red under the tail",
+      "nl": "Rood onder de staart"
+    },
+    {
+      "en": "Bluish tint on head and throat",
+      "nl": "Blauwachtige tint op kop en keel"
+    }
+  ]
+}

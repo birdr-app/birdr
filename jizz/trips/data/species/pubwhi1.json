@@ -1,0 +1,22 @@
+{
+  "code": "pubwhi1",
+  "name": {
+    "en": "Purple-bibbed Whitetip",
+    "nl": "Wittipkolibrie"
+  },
+  "latin": "Urosticte benjamini",
+  "look_for": [
+    {
+      "en": "Male purple **throat**, white tuft behind eye",
+      "nl": "Mannetje met paarse **keel** en witte pluim achter het oog"
+    },
+    {
+      "en": "Dark green **body**, white-tipped dark tail",
+      "nl": "Donkergroen **lijf**, donkere staart met witte punt"
+    },
+    {
+      "en": "Female spotted green below, white **whisker** and tail tips",
+      "nl": "Vrouwtje groen gespikkeld onder, witte **snor** en staartpunten"
+    }
+  ]
+}

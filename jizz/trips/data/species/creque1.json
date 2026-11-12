@@ -1,0 +1,22 @@
+{
+  "code": "creque1",
+  "name": {
+    "en": "Crested Quetzal",
+    "nl": "Kuifquetzal"
+  },
+  "latin": "Pharomachrus antisianus",
+  "look_for": [
+    {
+      "en": "Crimson **belly**, green chest",
+      "nl": "Karmijnrode **buik**, groene borst"
+    },
+    {
+      "en": "Rounded crest on a bronze-green head",
+      "nl": "Ronde kuif op een bronsgroene kop"
+    },
+    {
+      "en": "White underside of the tail, with black bars",
+      "nl": "Witte onderkant van de staart met zwarte banden"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "samsco1",
+  "name": {
+    "en": "Santa Marta Screech-Owl",
+    "nl": "Santa-Martaschreeuwuil"
+  },
+  "latin": "Megascops gilesi",
+  "look_for": [
+    {
+      "en": "Small eared owl, grey-brown **plumage**",
+      "nl": "Kleine uil met oorpluimen, grijsbruin **verenkleed**"
+    },
+    {
+      "en": "Streaked underparts, no breast band",
+      "nl": "Gestreepte onderkant, geen borstband"
+    },
+    {
+      "en": "Low trilled whistle at night",
+      "nl": "Lage getrilde fluittoon 's nachts"
+    }
+  ]
+}

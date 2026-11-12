@@ -1,0 +1,22 @@
+{
+  "code": "multan1",
+  "name": {
+    "en": "Multicoloured Tanager",
+    "nl": "Veelkleurige tangare"
+  },
+  "latin": "Chlorochrysa nitidissima",
+  "look_for": [
+    {
+      "en": "Yellow-green **body** with a golden-orange ear",
+      "nl": "Geelgroen **lijf** met een goudoranje oorvlek"
+    },
+    {
+      "en": "Black **face** with shiny green patches",
+      "nl": "Zwart **gezicht** met glanzend groene vlekken"
+    },
+    {
+      "en": "Small, gaudy and fast in cloud-forest flocks",
+      "nl": "Klein, bont en snel in troepen in het nevelwoud"
+    }
+  ]
+}

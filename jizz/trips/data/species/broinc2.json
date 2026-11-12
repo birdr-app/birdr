@@ -1,0 +1,22 @@
+{
+  "code": "broinc2",
+  "name": {
+    "en": "Brown Inca",
+    "nl": "Bruine incakolibrie"
+  },
+  "latin": "Coeligena wilsoni",
+  "look_for": [
+    {
+      "en": "Brown-bodied **inca** with a glittering green throat",
+      "nl": "Bruinlijvige **inca** met glinsterend groene keel"
+    },
+    {
+      "en": "Dull rufous **belly** and bronzy back",
+      "nl": "Doffe roestbruine **buik** en bronzen rug"
+    },
+    {
+      "en": "Violet-blue spot on the **crown**, white pectoral patch",
+      "nl": "Violetblauwe vlek op de **kruin**, witte borstvlek"
+    }
+  ]
+}

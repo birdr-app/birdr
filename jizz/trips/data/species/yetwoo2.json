@@ -1,0 +1,22 @@
+{
+  "code": "yetwoo2",
+  "name": {
+    "en": "Yellow-tufted Woodpecker",
+    "nl": "Geelbrauwspecht"
+  },
+  "latin": "Melanerpes cruentatus",
+  "look_for": [
+    {
+      "en": "Yellow tuft behind the **eye**, red crown",
+      "nl": "Gele pluim achter het **oog**, rode kruin"
+    },
+    {
+      "en": "Black back with broad white stripes",
+      "nl": "Zwarte rug met brede witte strepen"
+    },
+    {
+      "en": "Black face, barred belly",
+      "nl": "Zwart gezicht, gebandeerde buik"
+    }
+  ]
+}

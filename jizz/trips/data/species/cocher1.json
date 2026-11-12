@@ -1,0 +1,22 @@
+{
+  "code": "cocher1",
+  "name": {
+    "en": "Cocoi Heron",
+    "nl": "Sokoireiger"
+  },
+  "latin": "Ardea cocoi",
+  "look_for": [
+    {
+      "en": "Large grey heron with white **neck**",
+      "nl": "Grote grijze reiger met witte **hals**"
+    },
+    {
+      "en": "Black **crown** and white thighs",
+      "nl": "Zwarte **kruin** en witte dijen"
+    },
+    {
+      "en": "Dagger-like yellowish bill",
+      "nl": "Dolkvormige geelachtige snavel"
+    }
+  ]
+}

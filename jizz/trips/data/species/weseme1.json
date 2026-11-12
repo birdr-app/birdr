@@ -1,0 +1,22 @@
+{
+  "code": "weseme1",
+  "name": {
+    "en": "Western Emerald",
+    "nl": "West-Andessmaragdkolibrie"
+  },
+  "latin": "Chlorostilbon melanorhynchus",
+  "look_for": [
+    {
+      "en": "Male glittering green with a blue-black **tail**",
+      "nl": "Mannetje glinsterend groen met een blauwzwarte **staart**"
+    },
+    {
+      "en": "Black **bill**, unlike Red-billed Emerald",
+      "nl": "Zwarte **snavel**, niet rood zoals bij verwante soorten"
+    },
+    {
+      "en": "Female grey below with a white **eyestripe**",
+      "nl": "Vrouwtje grijs onder met een witte **oogstreep**"
+    }
+  ]
+}

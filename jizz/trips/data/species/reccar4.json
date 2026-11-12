@@ -1,0 +1,22 @@
+{
+  "code": "reccar4",
+  "name": {
+    "en": "Red-capped Cardinal",
+    "nl": "Zwartkeelkardinaal"
+  },
+  "latin": "Paroaria gularis",
+  "look_for": [
+    {
+      "en": "Red **head** with a black throat bib",
+      "nl": "Rode **kop** met een zwarte keelbef"
+    },
+    {
+      "en": "Black **back**, white underparts",
+      "nl": "Zwarte **rug**, witte onderkant"
+    },
+    {
+      "en": "Orange legs, near water and rivers",
+      "nl": "Oranje poten, bij water en rivieren"
+    }
+  ]
+}

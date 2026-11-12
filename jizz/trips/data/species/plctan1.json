@@ -1,0 +1,22 @@
+{
+  "code": "plctan1",
+  "name": {
+    "en": "Plain-coloured Tanager",
+    "nl": "Grijze tangare"
+  },
+  "latin": "Tangara inornata",
+  "look_for": [
+    {
+      "en": "Plain grey-blue **body** with a buff belly",
+      "nl": "Effen grijsblauw **lijf** met een bruingele buik"
+    },
+    {
+      "en": "Blue **wing** edges and pale eye-ring",
+      "nl": "Blauwe **vleugelranden** en een bleke oogring"
+    },
+    {
+      "en": "Dull and easily overlooked in canopy",
+      "nl": "Dof en makkelijk over het hoofd gezien in het bladerdak"
+    }
+  ]
+}

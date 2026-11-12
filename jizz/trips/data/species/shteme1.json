@@ -1,0 +1,22 @@
+{
+  "code": "shteme1",
+  "name": {
+    "en": "Short-tailed Emerald",
+    "nl": "Kortstaartsmaragdkolibrie"
+  },
+  "latin": "Chlorostilbon poortmani",
+  "look_for": [
+    {
+      "en": "Male glittering green with a black **tail**",
+      "nl": "Mannetje glinsterend groen met een zwarte **staart**"
+    },
+    {
+      "en": "Short **bill**, red base, black tip",
+      "nl": "Korte **snavel**, rode basis, zwarte punt"
+    },
+    {
+      "en": "Female grey below, white **eyestripe** and tail corners",
+      "nl": "Vrouwtje grijs onder, witte **oogstreep** en staarthoeken"
+    }
+  ]
+}

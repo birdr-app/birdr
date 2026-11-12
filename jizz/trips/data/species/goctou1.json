@@ -1,0 +1,22 @@
+{
+  "code": "goctou1",
+  "name": {
+    "en": "Golden-collared Toucanet",
+    "nl": "Reinwardtpepervreter"
+  },
+  "latin": "Selenidera reinwardtii",
+  "look_for": [
+    {
+      "en": "Black **head**, a golden collar behind the **neck**",
+      "nl": "Zwarte **kop** met gouden kraag achter de **nek**"
+    },
+    {
+      "en": "Female has a chestnut **crown** and neck",
+      "nl": "Vrouwtje met kastanjebruine **kruin** en nek"
+    },
+    {
+      "en": "Small and green, yellow-grey **belly**, strong **bill**",
+      "nl": "Klein en groen, geelgrijze **buik**, sterke **snavel**"
+    }
+  ]
+}

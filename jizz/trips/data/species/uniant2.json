@@ -1,0 +1,22 @@
+{
+  "code": "uniant2",
+  "name": {
+    "en": "Uniform Antshrike",
+    "nl": "Eenkleurige mierklauwier"
+  },
+  "latin": "Thamnophilus unicolor",
+  "look_for": [
+    {
+      "en": "Male uniform dark grey, no marks at all",
+      "nl": "Mannetje egaal donkergrijs, helemaal zonder tekening"
+    },
+    {
+      "en": "Plain rufous female without any streaks",
+      "nl": "Effen roestbruin vrouwtje zonder strepen"
+    },
+    {
+      "en": "Hooked **bill**, in undergrowth of highland forest",
+      "nl": "Haakvormige **snavel**, in struikgewas van berg bos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "alptap1",
+  "name": {
+    "en": "Tatama Tapaculo",
+    "nl": "Tatamatapaculo"
+  },
+  "latin": "Scytalopus alvarezlopezi",
+  "look_for": [
+    {
+      "en": "Uniform dark grey, tiny, no barring",
+      "nl": "Egaal donkergrijs, klein, zonder bandering"
+    },
+    {
+      "en": "Only on the Tatamá massif, Western Andes",
+      "nl": "Alleen op het Tatamá-massief, Westelijke Andes"
+    },
+    {
+      "en": "Creeps low through mossy undergrowth, voice decisive",
+      "nl": "Sluipt laag door bemost kreupelhout, zang bepalend"
+    }
+  ]
+}

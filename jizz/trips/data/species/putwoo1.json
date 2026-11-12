@@ -1,0 +1,22 @@
+{
+  "code": "putwoo1",
+  "name": {
+    "en": "Purple-throated Woodstar",
+    "nl": "Paarskeelboself"
+  },
+  "latin": "Philodice mitchellii",
+  "look_for": [
+    {
+      "en": "Tiny; male purple **throat**, white breast band",
+      "nl": "Piepklein; mannetje met paarse **keel** en witte borstband"
+    },
+    {
+      "en": "Long violet **gorget** with extended side feathers",
+      "nl": "Lange violette **keel**vlek met verlengde zijveren"
+    },
+    {
+      "en": "Female buff below, short rounded **tail**, rufous base",
+      "nl": "Vrouwtje beige onder, korte ronde **staart** met roestbruine basis"
+    }
+  ]
+}

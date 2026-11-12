@@ -1,0 +1,22 @@
+{
+  "code": "biccon1",
+  "name": {
+    "en": "Bicoloured Conebill",
+    "nl": "Tweekleurige spitssnavel"
+  },
+  "latin": "Conirostrum bicolor",
+  "look_for": [
+    {
+      "en": "Small blue-grey **bird** with a chestnut belly",
+      "nl": "Klein blauwgrijs **vogeltje** met een kastanjebruine buik"
+    },
+    {
+      "en": "Sharp thin **bill**, rufous underparts",
+      "nl": "Spitse dunne **snavel**, roestbruine onderkant"
+    },
+    {
+      "en": "Feeds in mangroves and coastal scrub",
+      "nl": "Foerageert in mangrove en kustkreupelhout"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "capher1",
+  "name": {
+    "en": "Capped Heron",
+    "nl": "Kapreiger"
+  },
+  "latin": "Pilherodius pileatus",
+  "look_for": [
+    {
+      "en": "Creamy-white body, black **cap**",
+      "nl": "Roomwit lijf, zwarte **kruin**"
+    },
+    {
+      "en": "Blue **bill** and bare facial skin",
+      "nl": "Blauwe **snavel** en kale gezichtshuid"
+    },
+    {
+      "en": "Long thin plume from the nape",
+      "nl": "Lange dunne pluim vanaf de nek"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rinwoo1",
+  "name": {
+    "en": "Ringed Woodpecker",
+    "nl": "Zwartborstspecht"
+  },
+  "latin": "Celeus torquatus",
+  "look_for": [
+    {
+      "en": "Pale buff **head**, black breast band",
+      "nl": "Bleekbeige **kop**, zwarte borstband"
+    },
+    {
+      "en": "Rufous-chestnut belly",
+      "nl": "Roodkastanjebruine buik"
+    },
+    {
+      "en": "Rufous-chestnut **belly** below black breast",
+      "nl": "Roodkastanjebruine **buik** onder zwarte borst"
+    }
+  ]
+}

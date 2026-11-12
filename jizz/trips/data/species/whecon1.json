@@ -1,0 +1,22 @@
+{
+  "code": "whecon1",
+  "name": {
+    "en": "White-eared Conebill",
+    "nl": "Witoorspitssnavel"
+  },
+  "latin": "Conirostrum leucogenys",
+  "look_for": [
+    {
+      "en": "Blue-grey **body** with a white face patch",
+      "nl": "Blauwgrijs **lijf** met een witte gezichtsvlek"
+    },
+    {
+      "en": "White **ear** patch and a pale throat",
+      "nl": "Witte **oorvlek** en een bleke keel"
+    },
+    {
+      "en": "Chestnut **belly** and a thin bill",
+      "nl": "Kastanjebruine **buik** en een dunne snavel"
+    }
+  ]
+}

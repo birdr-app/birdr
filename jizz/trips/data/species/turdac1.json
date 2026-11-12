@@ -1,0 +1,22 @@
+{
+  "code": "turdac1",
+  "name": {
+    "en": "Turquoise Dacnis",
+    "nl": "Turkooispitpit"
+  },
+  "latin": "Dacnis hartlaubi",
+  "look_for": [
+    {
+      "en": "Male blue **head** with a black throat",
+      "nl": "Mannetje met blauwe **kop** en een zwarte keel"
+    },
+    {
+      "en": "Yellow **belly** and a green back",
+      "nl": "Gele **buik** en een groene rug"
+    },
+    {
+      "en": "Female green with a blue head",
+      "nl": "Vrouwtje groen met een blauwe kop"
+    }
+  ]
+}

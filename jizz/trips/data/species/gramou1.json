@@ -1,0 +1,22 @@
+{
+  "code": "gramou1",
+  "name": {
+    "en": "Greyish Mourner",
+    "nl": "Grijze treurtiran"
+  },
+  "latin": "Rhytipterna simplex",
+  "look_for": [
+    {
+      "en": "Plain greyish-brown, no field marks",
+      "nl": "Effen grijsbruin, zonder opvallende kenmerken"
+    },
+    {
+      "en": "Rufous in **wings** and tail, pale belly",
+      "nl": "Roestbruin in **vleugels** en staart, lichte buik"
+    },
+    {
+      "en": "Whistled song from mid-level forest",
+      "nl": "Gefluit uit het middelhoge bos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "labter1",
+  "name": {
+    "en": "Large-billed Tern",
+    "nl": "Grootsnavelstern"
+  },
+  "latin": "Phaetusa simplex",
+  "look_for": [
+    {
+      "en": "Heavy yellow **bill**, black cap",
+      "nl": "Zware gele **snavel**, zwarte kruin"
+    },
+    {
+      "en": "Broad white-and-black **wings**",
+      "nl": "Brede wit-zwarte **vleugels**"
+    },
+    {
+      "en": "Rests on river sandbars",
+      "nl": "Rust op zandbanken in rivieren"
+    }
+  ]
+}

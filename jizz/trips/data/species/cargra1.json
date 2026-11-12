@@ -1,0 +1,22 @@
+{
+  "code": "cargra1",
+  "name": {
+    "en": "Carib Grackle",
+    "nl": "Caribische troepiaal"
+  },
+  "latin": "Quiscalus lugubris",
+  "look_for": [
+    {
+      "en": "Glossy black with a pale yellow **eye**",
+      "nl": "Glanzend zwart met een lichtgele **iris**"
+    },
+    {
+      "en": "Long keel-shaped **tail**, often held up",
+      "nl": "Lange, kielvormige **staart**"
+    },
+    {
+      "en": "Female brown; walks on open ground",
+      "nl": "Vrouwtje bruin; loopt over open grond"
+    }
+  ]
+}

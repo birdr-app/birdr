@@ -1,0 +1,22 @@
+{
+  "code": "banant2",
+  "name": {
+    "en": "Banded Antbird",
+    "nl": "Bandrugmiervogel"
+  },
+  "latin": "Dichrozona cincta",
+  "look_for": [
+    {
+      "en": "Small, short-**tailed**, with a black **back** band",
+      "nl": "Klein, kortstaartig, met een zwarte **rugband**"
+    },
+    {
+      "en": "Pale buff-and-black banded **back** and wings",
+      "nl": "Lichte, bruin-zwart gebandeerde **rug** en vleugels"
+    },
+    {
+      "en": "Walks on the forest floor, tail cocked",
+      "nl": "Loopt over de bosbodem, staart omhoog"
+    }
+  ]
+}

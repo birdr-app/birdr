@@ -1,0 +1,22 @@
+{
+  "code": "gotsap1",
+  "name": {
+    "en": "Golden-tailed Sapphire",
+    "nl": "Bronsstaartsaffierkolibrie"
+  },
+  "latin": "Chrysuronia oenone",
+  "look_for": [
+    {
+      "en": "Male with blue **head** and breast, green back",
+      "nl": "Mannetje met blauwe **kop** en borst, groene rug"
+    },
+    {
+      "en": "Golden-bronze **tail**, short straight bill",
+      "nl": "Goudbronzen **staart**, korte rechte snavel"
+    },
+    {
+      "en": "Female pale grey below with a dark **ear** patch",
+      "nl": "Vrouwtje lichtgrijs onder met donkere **oor**vlek"
+    }
+  ]
+}

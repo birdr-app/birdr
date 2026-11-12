@@ -1,0 +1,22 @@
+{
+  "code": "grnjay",
+  "name": {
+    "en": "Green Jay",
+    "nl": "Groene gaai"
+  },
+  "latin": "Cyanocorax yncas",
+  "look_for": [
+    {
+      "en": "Green back, yellow belly, blue **crown**",
+      "nl": "Groene rug, gele buik, blauwe **kruin**"
+    },
+    {
+      "en": "Black bib and face stripes",
+      "nl": "Zwarte keelvlek en gezichtsstrepen"
+    },
+    {
+      "en": "Yellow outer **tail** feathers in flight",
+      "nl": "Gele buitenste **staart**veren in de vlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "whsant2",
+  "name": {
+    "en": "White-shouldered Antshrike",
+    "nl": "Witschoudermierklauwier"
+  },
+  "latin": "Thamnophilus aethiops",
+  "look_for": [
+    {
+      "en": "Male black with white **shoulders** and a bushy **crest**",
+      "nl": "Mannetje zwart met witte **schouders** en volle **kuif**"
+    },
+    {
+      "en": "Black **tail** and body, white-tipped coverts",
+      "nl": "Zwarte **staart** en lijf, dekveren met witte tippen"
+    },
+    {
+      "en": "Female rufous-brown **crown**, buff-brown **breast**",
+      "nl": "Vrouwtje met roestbruine **kruin**, bruine **borst**"
+    }
+  ]
+}

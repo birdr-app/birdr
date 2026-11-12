@@ -1,0 +1,19 @@
+{
+  "slug": "donacobius",
+  "about": {
+    "en": "A slender, long-tailed bird of marshy places, dark brown above and buff below, with a black head, a pale yellow eye and a long, rounded tail. It sits in reeds and bushes by the water, often in pairs that sing loud duets, waving and fanning the tail and puffing out bright throat skin.",
+    "nl": "Een slanke vogel met lange staart van moerassige plekken, donkerbruin boven en bruingeel onder, met een zwarte kop, een bleekgele iris en een lange, afgeronde staart. Hij zit in riet en struiken langs het water, vaak in paren die luid duetten zingen, terwijl ze met hun staart zwaaien en waaieren en de felgekleurde keelhuid opblazen."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "wrens",
+        "catbirds-mockingbirds-and-thrashers"
+      ],
+      "text": {
+        "en": "The Donacobius looks and acts like a big wren or a mockingbird, with its long tail and loud duetting, but it is a family of its own. It stays low in reeds near water and is much bigger than any marsh wren.",
+        "nl": "De donacobius lijkt en gedraagt zich als een grote winterkoning of spotlijster, met zijn lange staart en luide duetten, maar vormt een eigen familie. Hij blijft laag in het riet bij water en is veel groter dan welke moerasgrasmus of wrens ook."
+      }
+    }
+  ]
+}

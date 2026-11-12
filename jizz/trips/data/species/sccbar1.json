@@ -1,0 +1,22 @@
+{
+  "code": "sccbar1",
+  "name": {
+    "en": "Scarlet-crowned Barbet",
+    "nl": "Roodkruinbaardvogel"
+  },
+  "latin": "Capito aurovirens",
+  "look_for": [
+    {
+      "en": "Scarlet **crown** with yellow below it",
+      "nl": "Scharlaken **kruin** met geel eronder"
+    },
+    {
+      "en": "Yellow-and-green **back**, dark **bill**",
+      "nl": "Geel en groene **rug**, donkere **snavel**"
+    },
+    {
+      "en": "Streaked **breast**; Amazon east of the Andes",
+      "nl": "Gestreepte **borst**; Amazonegebied ten oosten van de Andes"
+    }
+  ]
+}

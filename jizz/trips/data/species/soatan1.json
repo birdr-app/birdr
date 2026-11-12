@@ -1,0 +1,22 @@
+{
+  "code": "soatan1",
+  "name": {
+    "en": "Sooty Ant-Tanager",
+    "nl": "Grijsrugmiertangare"
+  },
+  "latin": "Driophlox gutturalis",
+  "look_for": [
+    {
+      "en": "Sooty-grey body with a red **throat**",
+      "nl": "Roetgrijs lijf met een rode **keel**"
+    },
+    {
+      "en": "Female olive-brown, ochre throat",
+      "nl": "Vrouwtje olijfbruin, okerkleurige keel"
+    },
+    {
+      "en": "Skulks low in forest, joins ant swarms",
+      "nl": "Sluipt laag door bos, volgt mierenzwermen"
+    }
+  ]
+}

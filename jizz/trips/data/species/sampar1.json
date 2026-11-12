@@ -1,0 +1,22 @@
+{
+  "code": "sampar1",
+  "name": {
+    "en": "Santa Marta Parakeet",
+    "nl": "Santa-Martaparkiet"
+  },
+  "latin": "Pyrrhura viridicata",
+  "look_for": [
+    {
+      "en": "Green with red **shoulders** and belly patch",
+      "nl": "Groen met rode **schouders** en buikvlek"
+    },
+    {
+      "en": "Long maroon-red tail",
+      "nl": "Lange kastanjerode staart"
+    },
+    {
+      "en": "Santa Marta mountains only",
+      "nl": "Alleen in de bergen van Santa Marta"
+    }
+  ]
+}

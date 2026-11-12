@@ -1,0 +1,22 @@
+{
+  "code": "baepig2",
+  "name": {
+    "en": "Bare-eyed Pigeon",
+    "nl": "Naaktoogduif"
+  },
+  "latin": "Patagioenas corensis",
+  "look_for": [
+    {
+      "en": "Pale grey-brown pigeon with **bare** blue-grey eye-ring",
+      "nl": "Bleekgrijsbruine duif met kale blauwgrijze oogring"
+    },
+    {
+      "en": "Pinkish-white **crown** and purplish neck sheen",
+      "nl": "Roze-witte **kruin** en paarsige glans op de nek"
+    },
+    {
+      "en": "Dry scrub and coast, in pairs",
+      "nl": "Droog struikgewas en kust, in paartjes"
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "country": "CO-CHOCO",
+  "intro": {
+    "en": "The Chocó is the wet Pacific slope of Colombia, from the coast at Bahía Solano and Utría up through rainforest at Anchicayá and Km 18 near Cali to cloud forest in Jardín, Tatamá and the Farallones. It is one of the wettest and richest bird regions of the world, with many endemics and species that occur nowhere else in the country. This pack covers 163 species, on top of the Colombia trip.",
+    "nl": "De Chocó is de natte Pacifische helling van Colombia, van de kust bij Bahía Solano en Utría via regenwoud bij Anchicayá en Km 18 bij Cali tot nevelwoud in Jardín, Tatamá en de Farallones. Het is een van de natste en vogelrijkste streken ter wereld, met veel endemen en soorten die nergens anders in Colombia voorkomen. Dit pakket omvat 163 soorten, bovenop de reis naar Colombia."
+  },
+  "units": {
+    "chachalacas-guans-and-curassows": {
+      "title": {
+        "en": "Guan, chachalacas and night birds",
+        "nl": "Guan, chachalaca's en nachtvogels"
+      },
+      "intro": {
+        "en": "Two chachalacas and the Baudo Guan live in the lowland and foothill forest of the Pacific slope, with the Banded Ground-Cuckoo and Choco Poorwill as shy extras. Chachalacas call loudly at dawn from forest edges, while the guan and the cuckoo take patience.",
+        "nl": "Twee chachalaca's en de Baudo-jakohoen leven in het laaglandbos en het heuvelbos van de Pacifische helling, met de Bandgrondkoekoek en de Chocó-nachtzwaluw als schuwe extra's. Chachalaca's roepen bij zonsopgang luid vanaf bosranden, voor de jakohoen en de koekoek heb je geduld nodig."
+      }
+    },
+    "trogons-and-quetzals": {
+      "title": {
+        "en": "Trogons and motmots",
+        "nl": "Trogons en motmots"
+      },
+      "intro": {
+        "en": "Three trogons and two motmots of the lowland rainforest, usually sitting still on a mid-level perch. Check the colour of the belly, the face and the underside of the tail to tell the trogons apart.",
+        "nl": "Drie trogons en twee motmots van het laaglandregenwoud, meestal rustig zittend op een tak halverwege. Kijk naar de kleur van de buik, het gezicht en de onderkant van de staart om de trogons uit elkaar te houden."
+      }
+    },
+    "barbets-and-toucans": {
+      "title": {
+        "en": "Toucanets, barbet and mountain-toucan",
+        "nl": "Toekanetjes, baardvogel en bergtoekan"
+      },
+      "intro": {
+        "en": "Four fruit-eaters of the wet foothill and cloud forest. They come to fruiting trees at first light, where the toucanets show well and the Plate-billed Mountain-Toucan is the prize.",
+        "nl": "Vier fruitetende vogels van het natte heuvel- en nevelwoud. Ze komen in de vroege ochtend naar vruchtdragende bomen, waar de toekanetjes goed te zien zijn en de Zwartkruinbergtoekan de hoofdprijs is."
+      }
+    },
+    "woodpeckers-1": {
+      "title": {
+        "en": "Woodpeckers of forest edge",
+        "nl": "Spechten van de bosrand"
+      },
+      "intro": {
+        "en": "Four woodpeckers that work trunks and dead trees at the edge of lowland forest and in clearings. Look at the red on head and belly and at the barring on the back.",
+        "nl": "Vier spechten die stammen en dode bomen afzoeken aan de rand van laaglandbos en in open plekken. Let op het rood op kop en buik en op de dwarsstreping op de rug."
+      }
+    },
+    "woodpeckers-2": {
+      "title": {
+        "en": "Woodpeckers of the Chocó forest",
+        "nl": "Spechten van het Chocó-bos"
+      },
+      "intro": {
+        "en": "Four larger woodpeckers of the humid forest interior, among them the Choco and Lita Woodpeckers. They are most often found by their loud drumming or by following a mixed flock.",
+        "nl": "Vier grotere spechten van het binnenste van het vochtige bos, onder andere de Chocó- en de Lita-specht. Je vindt ze meestal door hun luide getrommel of door een gemengde groep te volgen."
+      }
+    },
+    "puffbirds-and-jacamars": {
+      "title": {
+        "en": "Puffbirds",
+        "nl": "Baardkoekoeken"
+      },
+      "intro": {
+        "en": "Four puffbirds that sit motionless on bare branches and sally out after insects. Scan the mid-level perches of the forest edge, and look at the white on the throat and the dark breast band.",
+        "nl": "Vier baardkoekoeken die bewegingloos op kale takken zitten en uitvliegen om insecten te vangen. Zoek de takken halverwege aan de bosrand af en let op het wit van de keel en de donkere borstband."
+      }
+    },
+    "antbirds-1": {
+      "title": {
+        "en": "Antwrens and antvireos",
+        "nl": "Mierkruipers en mierenvireo's"
+      },
+      "intro": {
+        "en": "Six small birds of the understorey and the mid-levels, often in a mixed flock. The antvireos are stout with a hooked bill, the antwrens thin and restless. Patterns of spots and bars on the wings help.",
+        "nl": "Zes kleine vogels van het struikgewas en de middenlaag, vaak in een gemengde groep. De mierenvireo's zijn gedrongen met een haaksnavel, de mierkruipers dun en onrustig. Patronen van vlekjes en strepen op de vleugels helpen."
+      }
+    },
+    "antbirds-2": {
+      "title": {
+        "en": "Antwrens, antbird and fire-eye",
+        "nl": "Mierkruipers, mierpitta en vuurogen"
+      },
+      "intro": {
+        "en": "Six antbirds of the forest understorey, from lowland to foothills. The Western Fire-eye follows army ants, and the antwrens are found in mixed flocks and vine tangles.",
+        "nl": "Zes mierenvogels van het onderbos, van laagland tot heuvels. De Westelijke vuuroog volgt trekmieren, en de mierkruipers zitten in gemengde groepen en klimplantenwirwar."
+      }
+    },
+    "antbirds-3": {
+      "title": {
+        "en": "Antbirds of the forest floor",
+        "nl": "Mierenvogels dichtbij de grond"
+      },
+      "intro": {
+        "en": "Six antbirds that stay low in thick forest, usually near the ground or in dense undergrowth. They are heard before they are seen, so learn the voices, and look at the colour of the back and belly.",
+        "nl": "Zes mierenvogels die laag blijven in dicht bos, meestal vlak bij de grond of in dichte begroeiing. Je hoort ze eerder dan je ze ziet, dus leer de stemmen en let op de kleur van rug en buik."
+      }
+    },
+    "antbirds-4": {
+      "title": {
+        "en": "Ant-followers of the lowland forest",
+        "nl": "Mierenvolgers van het laagland"
+      },
+      "intro": {
+        "en": "Five antbirds that follow swarms of army ants and pick off insects that flee the column. Where there is a swarm, wait quietly nearby, as Spotted and Ocellated Antbirds come in close.",
+        "nl": "Vijf mierenvogels die zwermen trekmieren volgen en de insecten vangen die voor de kolom vluchten. Waar een zwerm is, wacht je rustig in de buurt, want Vlekborstmiervogels en McLeannanmiervogels komen dichtbij."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "title": {
+        "en": "Parrots, macaw and the Sapayoa",
+        "nl": "Papegaaien, ara en de sapayoa"
+      },
+      "intro": {
+        "en": "Four parrots of the forest canopy and a small olive bird, the Sapayoa, which sits quietly in the understorey of lowland forest. The parrots are mostly seen flying over in noisy groups, and the Great Green Macaw is the big one.",
+        "nl": "Vier papegaaien uit het bladerdak en een klein olijfkleurig vogeltje, de sapayoa (breedbekmanakin), dat rustig in het onderbos van laaglandbos zit. De papegaaien zie je vooral overvliegen in luidruchtige groepen, en de Buffonara is de grote."
+      }
+    },
+    "gnateaters-and-antpittas": {
+      "title": {
+        "en": "Antpittas",
+        "nl": "Mierpitta's"
+      },
+      "intro": {
+        "en": "Seven shy round birds that hop on the floor of cloud forest on the west slope. Several are Colombian specialities, and at feeding stations in Jardin and Tatama you may see some at close range.",
+        "nl": "Zeven schuwe, ronde vogels die over de bosbodem van nevelwoud op de westhelling hippen. Verschillende zijn Colombiaanse specialiteiten, en bij voerplekken in Jardín en Tatamá zie je er soms enkele van dichtbij."
+      }
+    },
+    "tapaculos": {
+      "title": {
+        "en": "Antthrushes and tapaculos",
+        "nl": "Mierlijsters en tapaculo's"
+      },
+      "intro": {
+        "en": "Three antthrushes and two tapaculos, all of them walkers and skulkers on the forest floor. Antthrushes walk with a bobbing tail, tapaculos run like mice, and both are located by their song.",
+        "nl": "Drie mierlijsters en twee tapaculo's, allemaal lopers en sluipers op de bosbodem. Mierlijsters lopen met een wippende staart, tapaculo's rennen als muizen, en beide vind je via hun zang."
+      }
+    },
+    "woodcreepers": {
+      "title": {
+        "en": "Woodcreepers",
+        "nl": "Boomklimmers"
+      },
+      "intro": {
+        "en": "Four brown woodcreepers that climb tree trunks, propped up on a stiff tail. Look at the bill shape, the streaks and spots, and the rufous or plain tone of the back.",
+        "nl": "Vier bruine boomklimmers die langs stammen omhoog klauteren, ondersteund door hun stijve staart. Let op de snavelvorm, de strepen en vlekken en de roestbruine of effen tint van de rug."
+      }
+    },
+    "ovenbirds": {
+      "title": {
+        "en": "Foliage-gleaners and tuftedcheek",
+        "nl": "Bladzoekers en wangpluim"
+      },
+      "intro": {
+        "en": "Four brown, creeping birds that search leaves, moss and bark in the forest. Pale throats, rufous wings and tail colour are the marks to check.",
+        "nl": "Vier bruine, kruipende vogels die bladeren, mos en bast in het bos doorzoeken. Lichte keel, roestkleurige vleugels en staartkleur zijn de kenmerken om op te letten."
+      }
+    },
+    "manakins": {
+      "title": {
+        "en": "Manakins",
+        "nl": "Manakins"
+      },
+      "intro": {
+        "en": "Six small, plump fruit-eaters of the forest interior. Males are brightly coloured and display at leks, so listen for snaps and whirrs, while females are green and hard to tell apart.",
+        "nl": "Zes kleine, gedrongen fruiteters in het bosinterieur. Mannetjes zijn felgekleurd en tonen op baltsplaatsen, dus luister naar knallen en gesnor, terwijl vrouwtjes groen en moeilijk uit elkaar te houden zijn."
+      }
+    },
+    "cotingas": {
+      "title": {
+        "en": "Cotingas and royal flycatchers",
+        "nl": "Cotinga's en koningsvliegenvangers"
+      },
+      "intro": {
+        "en": "Fruiteaters and the odd Long-wattled Umbrellabird, plus two flycatchers that sit upright at forest edges. The fruiteaters sit in the canopy of cloud forest, the umbrellabird is a rarity of the wet Pacific forest.",
+        "nl": "Fruiteters en de bijzondere Ecuadoraanse parasolvogel, plus twee vliegenvangers die rechtop aan bosranden zitten. De fruiteters zitten in het bladerdak van nevelwoud, de parasolvogel is een zeldzaamheid van het natte Pacifische bos."
+      }
+    },
+    "tyrant-flycatchers-elaenias-tyrannulets-and-allies": {
+      "title": {
+        "en": "Small tyrants of the understorey",
+        "nl": "Kleine tirannen van het onderbos"
+      },
+      "intro": {
+        "en": "Six small flycatchers of the forest understorey and cloud forest. They are tiny and quick, so look for pale eye-rings, wing bars and the shape of the bill.",
+        "nl": "Zes kleine vliegenvangers van het onderbos en nevelwoud. Ze zijn klein en snel, dus let op lichte oogringen, vleugelstrepen en de vorm van de snavel."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies": {
+      "title": {
+        "en": "Wrens, jay, attila and solitaire",
+        "nl": "Winterkoningen, gaai, attila en soliter"
+      },
+      "intro": {
+        "en": "A mixed set of seven birds of the Pacific forest. The wrens are heard more than seen, the Beautiful Jay moves in noisy groups, and the Black Solitaire sings from cloud forest.",
+        "nl": "Een gemengd stel van zeven vogels van het Pacifische bos. De winterkoninkjes hoor je eerder dan je ze ziet, de Ornaatgaai trekt rond in luidruchtige groepen en de Zwarte soliter zingt in het nevelwoud."
+      }
+    },
+    "new-world-sparrows": {
+      "title": {
+        "en": "Brushfinch and chlorospingus",
+        "nl": "Struikgors en chlorospingus"
+      },
+      "intro": {
+        "en": "Four finches of cloud forest. The chlorospingus join mixed flocks, the Black-headed Brushfinch hops on the ground and the Tanager Finch sits in the thickets.",
+        "nl": "Vier vinkachtigen van nevelwoud. De Chlorospingus voegen zich bij gemengde groepen, de Zwartkopstruikgors hipt over de grond en de Tangarestruikgors zit in het struikgewas."
+      }
+    },
+    "cardinals-grosbeaks-and-allies": {
+      "title": {
+        "en": "Tanagers of the forest edge",
+        "nl": "Tangaren van de bosrand"
+      },
+      "intro": {
+        "en": "Three tanagers of the wet lowland and foothills. Check the colour of the throat and breast, and the spectacles on the Lemon-spectacled Tanager.",
+        "nl": "Drie tangaren van het natte laagland en de heuvels. Let op de kleur van keel en borst, en op de bril van de Geelbriltangare."
+      }
+    },
+    "tanagers-and-allies-1": {
+      "title": {
+        "en": "Colourful tanagers, foothill forest",
+        "nl": "Kleurrijke tangaren, heuvelbos"
+      },
+      "intro": {
+        "en": "Six tanagers of the wet forest on the Pacific slope, often in mixed flocks at fruit and flowers. Check the crest, shoulder and chest colours.",
+        "nl": "Zes tangaren van het natte bos op de Pacifische helling, vaak in gemengde groepen bij vruchten en bloemen. Let op de kleur van kuif, schouder en borst."
+      }
+    },
+    "tanagers-and-allies-2": {
+      "title": {
+        "en": "Mountain tanagers, west slope",
+        "nl": "Bergtangaren van de westhelling"
+      },
+      "intro": {
+        "en": "Six tanagers of the cloud forest of the Western Andes, usually in mixed flocks. Look at the glistening greens, blues and purples.",
+        "nl": "Zes tangaren van het nevelwoud in de Westelijke Andes, meestal in gemengde groepen. Let op de glanzende groen-, blauw- en paarstinten."
+      }
+    },
+    "tanagers-and-allies-3": {
+      "title": {
+        "en": "Tanagers and dacnis of the Pacific",
+        "nl": "Tangaren en dacnis van de Pacific"
+      },
+      "intro": {
+        "en": "Six tanagers and a dacnis of the wet lowland and mid-elevation forest. They feed in the canopy, so a flock with Emerald and Blue-whiskered Tanagers is a good find.",
+        "nl": "Zes tangaren en een dacnis van het natte laagland- en middenhoogtebos. Ze foerageren in het bladerdak, dus een groep met Smaragd- en Blauwbaardtangaren is een mooie vondst."
+      }
+    },
+    "tanagers-and-allies-4": {
+      "title": {
+        "en": "Tanagers, flowerpiercers and dacnis",
+        "nl": "Tangaren, bloemprikkers en dacnis"
+      },
+      "intro": {
+        "en": "Six small birds of forest edge and gardens at mid-elevation. The flowerpiercers pierce flowers at the base to get at the nectar, and the dacnis join fruiting trees.",
+        "nl": "Zes kleine vogels van bosranden en tuinen op middelhoogte. De bloemprikkers prikken bloemen aan de basis door voor de nectar, en de dacnis komen naar vruchtdragende bomen."
+      }
+    },
+    "blackbirds": {
+      "title": {
+        "en": "Oropendolas, cacique and Chocó Warbler",
+        "nl": "Oropendola's, cacique en Chocó-zanger"
+      },
+      "intro": {
+        "en": "Two oropendolas and a cacique nest in colonies of hanging nests in tall trees, with the Choco Warbler a small bird of the cloud forest canopy. Listen for gurgling songs near the colonies.",
+        "nl": "Twee oropendola's en een cacique nestelen in kolonies met hangende nesten in hoge bomen, met de Chocozanger als klein vogeltje in het bladerdak van het nevelwoud. Luister naar borrelende zang bij de kolonies."
+      }
+    },
+    "hummingbirds-1": {
+      "title": {
+        "en": "Hermits, fairies and thorntails",
+        "nl": "Heremieten, feeën en doornstaarten"
+      },
+      "intro": {
+        "en": "Seven hummingbirds of the lowland forest. Hermits visit heliconia and fly along trails, while the fairy and the thorntail feed in the canopy and at flowering trees.",
+        "nl": "Zeven kolibries van het laaglandbos. Heremieten bezoeken heliconia's en vliegen langs paden, terwijl de fee en de doornstaart in het bladerdak en bij bloeiende bomen foerageren."
+      }
+    },
+    "hummingbirds-2": {
+      "title": {
+        "en": "Pufflegs, coquettes and Brown Inca",
+        "nl": "Pufflegs, coquettes en bruine inca"
+      },
+      "intro": {
+        "en": "Seven hummingbirds of cloud forest and foothills, found at feeders and flowers. Look at the white or coloured leg puffs, the tail and the throat patch.",
+        "nl": "Zeven kolibries van nevelwoud en heuvels, te vinden bij voerders en bloemen. Let op de witte of gekleurde beenpluimen, de staart en de keelvlek."
+      }
+    },
+    "hummingbirds-3": {
+      "title": {
+        "en": "Highland hummingbirds and woodstars",
+        "nl": "Hooglandkolibries en woodstars"
+      },
+      "intro": {
+        "en": "Seven hummingbirds from the foothills to the higher slopes. Feeders at Jardin and other lodges show most of them, and the emerald and the plumeleteer are lower down.",
+        "nl": "Zeven kolibries van de heuvels tot de hogere hellingen. Voerders bij Jardín en andere lodges laten de meeste zien, en de smaragdkolibrie en de plumeleteer zitten lager."
+      }
+    },
+    "hummingbirds-4": {
+      "title": {
+        "en": "Sapphires, hummingbirds and a wood-rail",
+        "nl": "Saffieren, kolibries en een bosral"
+      },
+      "intro": {
+        "en": "Six hummingbirds of garden, forest edge and lowland, plus the Brown Wood-Rail, which walks at the edge of forest streams and bird feeders. Check the blue and violet on throat and belly.",
+        "nl": "Zes kolibries van tuin, bosrand en laagland, plus de Bruine bosral, die langs bosbeken en voerplekken loopt. Let op het blauw en violet op keel en buik."
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "code": "glteme1",
+  "name": {
+    "en": "Glittering-throated Emerald",
+    "nl": "Franjeamazilia"
+  },
+  "latin": "Chionomesa fimbriata",
+  "look_for": [
+    {
+      "en": "Bright green **throat** with a broad white breast stripe",
+      "nl": "Helder groene **keel** met brede witte borststreep"
+    },
+    {
+      "en": "Bronzy **tail** with a dark band, white belly",
+      "nl": "Bronzen **staart** met donkere band, witte buik"
+    },
+    {
+      "en": "White line behind the **eye**, red-based bill",
+      "nl": "Witte streep achter het **oog**, rode snavelbasis"
+    }
+  ]
+}

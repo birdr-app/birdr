@@ -1,0 +1,22 @@
+{
+  "code": "fustan1",
+  "name": {
+    "en": "Fulvous Shrike-Tanager",
+    "nl": "Bruine klauwiertangare"
+  },
+  "latin": "Lanio fulvus",
+  "look_for": [
+    {
+      "en": "Fulvous-brown **body** with a heavy hooked bill",
+      "nl": "Roestbruin **lijf** met een zware haaksnavel"
+    },
+    {
+      "en": "Black **mask** and golden-orange crown",
+      "nl": "Zwart **masker** en een gouden kruin"
+    },
+    {
+      "en": "Follows ant swarms and mixed flocks",
+      "nl": "Volgt mierenzwermen en gemengde troepen"
+    }
+  ]
+}

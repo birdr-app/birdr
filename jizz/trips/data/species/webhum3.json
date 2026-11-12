@@ -1,0 +1,22 @@
+{
+  "code": "webhum3",
+  "name": {
+    "en": "White-throated Daggerbill",
+    "nl": "Witvlekwigsnavel"
+  },
+  "latin": "Schistes albogularis",
+  "look_for": [
+    {
+      "en": "Whiter **throat** and belly than Geoffroy's Daggerbill",
+      "nl": "Witter **keel** en buik dan de verwante dolksnavel"
+    },
+    {
+      "en": "Long slightly curved **bill**, white behind the eye",
+      "nl": "Lange licht gebogen **snavel**, wit achter het oog"
+    },
+    {
+      "en": "Green **flanks**, bronzy tail with a white tip",
+      "nl": "Groene **flanken**, bronzen staart met een witte punt"
+    }
+  ]
+}

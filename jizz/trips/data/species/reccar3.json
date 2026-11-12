@@ -1,0 +1,22 @@
+{
+  "code": "reccar3",
+  "name": {
+    "en": "Masked Cardinal",
+    "nl": "Maskerkardinaal"
+  },
+  "latin": "Paroaria nigrogenis",
+  "look_for": [
+    {
+      "en": "Red **head** and bright red crest, black mask",
+      "nl": "Rode **kop** en felrode kuif, zwart masker"
+    },
+    {
+      "en": "White **underparts** and grey back",
+      "nl": "Witte **onderkant** en grijze rug"
+    },
+    {
+      "en": "Black mask extends above the eye",
+      "nl": "Zwart masker loopt tot boven het oog"
+    }
+  ]
+}

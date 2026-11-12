@@ -1,0 +1,22 @@
+{
+  "code": "mocant1",
+  "name": {
+    "en": "Mouse-coloured Antshrike",
+    "nl": "Grijze mierklauwier"
+  },
+  "latin": "Thamnophilus murinus",
+  "look_for": [
+    {
+      "en": "Plain mouse-grey, unmarked **head** and body",
+      "nl": "Effen muisgrijs, ongetekende **kop** en lijf"
+    },
+    {
+      "en": "Pale iris, short **crest** barely visible",
+      "nl": "Lichte iris, korte **kuif** nauwelijks zichtbaar"
+    },
+    {
+      "en": "Female and male alike, no wingbars",
+      "nl": "Mannetje en vrouwtje gelijk, geen vleugelbanden"
+    }
+  ]
+}

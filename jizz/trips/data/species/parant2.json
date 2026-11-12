@@ -1,0 +1,22 @@
+{
+  "code": "parant2",
+  "name": {
+    "en": "Parker's Antbird",
+    "nl": "Parkermiervogel"
+  },
+  "latin": "Cercomacroides parkeri",
+  "look_for": [
+    {
+      "en": "Male dark grey, **tail** long and plain",
+      "nl": "Mannetje donkergrijs, lange effen **staart**"
+    },
+    {
+      "en": "Female rufous-brown with a paler **throat**",
+      "nl": "Vrouwtje roestbruin met lichtere **keel**"
+    },
+    {
+      "en": "Dense understorey of humid Andean foothills",
+      "nl": "Dicht struikgewas van vochtige Andesvoet"
+    }
+  ]
+}

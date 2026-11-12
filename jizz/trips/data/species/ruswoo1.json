@@ -1,0 +1,22 @@
+{
+  "code": "ruswoo1",
+  "name": {
+    "en": "Rufous-shafted Woodstar",
+    "nl": "Jourdanboself"
+  },
+  "latin": "Chaetocercus jourdanii",
+  "look_for": [
+    {
+      "en": "Tiny; male with a violet **throat**, rufous tail",
+      "nl": "Piepklein; mannetje met violette **keel** en roestbruine staart"
+    },
+    {
+      "en": "Short rufous **tail** with dark tips",
+      "nl": "Korte roestbruine **staart** met donkere punten"
+    },
+    {
+      "en": "Female buff below, **rufous** tail with a dark band",
+      "nl": "Vrouwtje beige onder, **roestbruine** staart met donkere band"
+    }
+  ]
+}

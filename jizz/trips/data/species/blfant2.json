@@ -1,0 +1,22 @@
+{
+  "code": "blfant2",
+  "name": {
+    "en": "Black-faced Antbird",
+    "nl": "Zwartmaskermierkruiper"
+  },
+  "latin": "Myrmoborus myotherinus",
+  "look_for": [
+    {
+      "en": "Black **face** and throat, grey **breast** and belly",
+      "nl": "Zwart **gezicht** en keel, grijze **borst** en buik"
+    },
+    {
+      "en": "Rusty-brown **back**, no white wing spots",
+      "nl": "Roestbruine **rug**, geen witte vleugelvlekken"
+    },
+    {
+      "en": "Follows ant swarms low in lowland forest",
+      "nl": "Volgt mierenzwermen laag in laagland bos"
+    }
+  ]
+}

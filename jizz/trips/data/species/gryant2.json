@@ -1,0 +1,22 @@
+{
+  "code": "gryant2",
+  "name": {
+    "en": "Grey Antbird",
+    "nl": "Grijze miervogel"
+  },
+  "latin": "Cercomacra cinerascens",
+  "look_for": [
+    {
+      "en": "Pale grey with a slim, long **tail**",
+      "nl": "Lichtgrijs met een slanke, lange **staart**"
+    },
+    {
+      "en": "Plain, white-tipped **tail** and **wing** coverts",
+      "nl": "Effen, **staart** en **vleugel**dekveren met witte tippen"
+    },
+    {
+      "en": "Tangled riverside growth, flicks **tail** up",
+      "nl": "Wirwar langs rivieren, flipt **staart** omhoog"
+    }
+  ]
+}

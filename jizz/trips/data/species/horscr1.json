@@ -1,0 +1,22 @@
+{
+  "code": "horscr1",
+  "name": {
+    "en": "Horned Screamer",
+    "nl": "Anioema"
+  },
+  "latin": "Anhima cornuta",
+  "look_for": [
+    {
+      "en": "Huge, long-legged black bird with a small **head**",
+      "nl": "Enorme, langbenige zwarte vogel met kleine **kop**"
+    },
+    {
+      "en": "Long thin **horn** on the forehead",
+      "nl": "Lange dunne **hoorn** op het voorhoofd"
+    },
+    {
+      "en": "White **belly**, loud booming calls in marshes",
+      "nl": "Witte **buik**, luide roepen in moerassen"
+    }
+  ]
+}

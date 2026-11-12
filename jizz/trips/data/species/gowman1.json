@@ -1,0 +1,22 @@
+{
+  "code": "gowman1",
+  "name": {
+    "en": "Golden-winged Manakin",
+    "nl": "Goudvleugelmanakin"
+  },
+  "latin": "Masius chrysopterus",
+  "look_for": [
+    {
+      "en": "Black with a golden-yellow **crown** patch",
+      "nl": "Zwart met een goudgele **kruin**vlek"
+    },
+    {
+      "en": "Yellow patch on the **wing** in display",
+      "nl": "Gele vlek op de **vleugel** bij het baltsen"
+    },
+    {
+      "en": "Foothill and montane forest understorey",
+      "nl": "Onderbegroeiing van voet- en berg bos"
+    }
+  ]
+}

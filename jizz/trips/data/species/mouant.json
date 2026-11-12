@@ -1,0 +1,22 @@
+{
+  "code": "mouant",
+  "name": {
+    "en": "Moustached Antwren",
+    "nl": "Snormiersluiper"
+  },
+  "latin": "Myrmotherula ignota",
+  "look_for": [
+    {
+      "en": "Male grey with a white **moustache** streak",
+      "nl": "Mannetje grijs met een witte **snor**streep"
+    },
+    {
+      "en": "Black **throat** and white-spotted wing coverts",
+      "nl": "Zwarte **keel** en wit gespikkelde vleugeldekveren"
+    },
+    {
+      "en": "Forages in canopy in small groups",
+      "nl": "Foerageert in de kroon in kleine groepen"
+    }
+  ]
+}

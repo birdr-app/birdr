@@ -1,0 +1,22 @@
+{
+  "code": "webhum1",
+  "name": {
+    "en": "Geoffroy's Daggerbill",
+    "nl": "Witstreepwigsnavel"
+  },
+  "latin": "Schistes geoffroyi",
+  "look_for": [
+    {
+      "en": "Long, slightly decurved **bill**, white eye-stripe",
+      "nl": "Lange **snavel**, licht gebogen, witte streep achter oog"
+    },
+    {
+      "en": "Green **back**, white underparts with green sides",
+      "nl": "Groene **rug**, witte onderkant met groene zijden"
+    },
+    {
+      "en": "Bronzy **tail** with a white band at the tip",
+      "nl": "Bronzen **staart** met een witte band aan de punt"
+    }
+  ]
+}

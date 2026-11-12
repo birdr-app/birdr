@@ -1,0 +1,22 @@
+{
+  "code": "matpar2",
+  "name": {
+    "en": "Maroon-tailed Parakeet",
+    "nl": "Zwartstaartparkiet"
+  },
+  "latin": "Pyrrhura melanura",
+  "look_for": [
+    {
+      "en": "Maroon **tail**, scaled grey breast",
+      "nl": "Kastanjebruine **staart**, geschubde grijze borst"
+    },
+    {
+      "en": "Brown crown, grey cheeks",
+      "nl": "Bruine kruin, grijze wangen"
+    },
+    {
+      "en": "Small noisy flocks in the canopy",
+      "nl": "Kleine luidruchtige groepjes in het kronendak"
+    }
+  ]
+}

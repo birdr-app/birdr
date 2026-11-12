@@ -1,0 +1,22 @@
+{
+  "code": "rubcon1",
+  "name": {
+    "en": "Rufous-browed Conebill",
+    "nl": "Roodbrauwspitssnavel"
+  },
+  "latin": "Conirostrum rufum",
+  "look_for": [
+    {
+      "en": "Chestnut **eyebrow** and rufous underparts",
+      "nl": "Kastanjebruine **wenkbrauw** en roodbruine onderkant"
+    },
+    {
+      "en": "Blue-grey **back** and black face",
+      "nl": "Blauwgrijze **rug** en zwart gezicht"
+    },
+    {
+      "en": "Feeds in páramo bushes and flowers",
+      "nl": "Foerageert in struiken en bloemen in het páramo"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "spvear1",
+  "name": {
+    "en": "Sparkling Violetear",
+    "nl": "Glansvioletoorkolibrie"
+  },
+  "latin": "Colibri coruscans",
+  "look_for": [
+    {
+      "en": "Violet **ear** patches and a glittering blue chin",
+      "nl": "Violette **oor**vlekken en glinsterend blauwe kin"
+    },
+    {
+      "en": "Bright blue **belly** patch, green body, straight bill",
+      "nl": "Helderblauwe **buik**vlek, groen lijf, rechte snavel"
+    },
+    {
+      "en": "Fans the **tail**, cinnamon band across it",
+      "nl": "Waaiert de **staart**, kaneelkleurige band over donkere staart"
+    }
+  ]
+}

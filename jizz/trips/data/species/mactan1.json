@@ -1,0 +1,22 @@
+{
+  "code": "mactan1",
+  "name": {
+    "en": "Masked Crimson Tanager",
+    "nl": "Zwartmaskertangare"
+  },
+  "latin": "Ramphocelus nigrogularis",
+  "look_for": [
+    {
+      "en": "Black **head** and body with a crimson belly",
+      "nl": "Zwarte **kop** en rug met een karmozijnrode buik"
+    },
+    {
+      "en": "Black **throat**, pale silvery bill",
+      "nl": "Zwarte **keel**, bleke zilverige snavel"
+    },
+    {
+      "en": "Black mask contrasts with red body",
+      "nl": "Zwart masker contrasteert met het rode lijf"
+    }
+  ]
+}

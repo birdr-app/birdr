@@ -1,0 +1,22 @@
+{
+  "code": "ragmac1",
+  "name": {
+    "en": "Red-and-green Macaw",
+    "nl": "Groenvleugelara"
+  },
+  "latin": "Ara chloropterus",
+  "look_for": [
+    {
+      "en": "Red macaw with a green **wing** band",
+      "nl": "Rode ara met een groene **vleugel**band"
+    },
+    {
+      "en": "Bare white face with red lines",
+      "nl": "Kaal wit gezicht met rode lijntjes"
+    },
+    {
+      "en": "Blue tail tip, dark lower bill",
+      "nl": "Blauwe staartpunt, donkere onderrand snavel"
+    }
+  ]
+}

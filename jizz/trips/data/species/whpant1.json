@@ -1,0 +1,22 @@
+{
+  "code": "whpant1",
+  "name": {
+    "en": "White-plumed Antbird",
+    "nl": "Witpluimmiervogel"
+  },
+  "latin": "Pithys albifrons",
+  "look_for": [
+    {
+      "en": "White, long **plume** on the **head** of black bird",
+      "nl": "Lange witte **pluim** op de **kop** van een zwarte vogel"
+    },
+    {
+      "en": "Rufous **breast** and belly, grey **back**",
+      "nl": "Roestbruine **borst** en buik, grijze **rug**"
+    },
+    {
+      "en": "Hops low behind army ants",
+      "nl": "Hipt laag achter mierenlegers"
+    }
+  ]
+}

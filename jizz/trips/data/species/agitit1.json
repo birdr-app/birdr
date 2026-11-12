@@ -1,0 +1,22 @@
+{
+  "code": "agitit1",
+  "name": {
+    "en": "Agile Tit-Tyrant",
+    "nl": "Langstaartmeestiran"
+  },
+  "latin": "Uromyias agilis",
+  "look_for": [
+    {
+      "en": "Small, with a long, often cocked **tail**",
+      "nl": "Klein, met een lange, vaak opgerichte **staart**"
+    },
+    {
+      "en": "Small crest, streaked **breast**, pale brow",
+      "nl": "Kleine kuif, gestreepte **borst**, lichte wenkbrauw"
+    },
+    {
+      "en": "Restless in shrubs at cloud forest edge",
+      "nl": "Onrustig in struiken aan de rand van nevelwoud"
+    }
+  ]
+}

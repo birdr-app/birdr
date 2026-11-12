@@ -1,0 +1,22 @@
+{
+  "code": "mouant1",
+  "name": {
+    "en": "Moustached Antpitta",
+    "nl": "Allenmierpitta"
+  },
+  "latin": "Grallaria alleni",
+  "look_for": [
+    {
+      "en": "White **moustache** stripe on grey face",
+      "nl": "Witte **snorstreep** op grijs gezicht"
+    },
+    {
+      "en": "Olive-brown back, white throat",
+      "nl": "Olijfbruine rug, witte keel"
+    },
+    {
+      "en": "Rufous-tinged **breast**, tail short",
+      "nl": "Roodbruin getinte **borst**, korte staart"
+    }
+  ]
+}

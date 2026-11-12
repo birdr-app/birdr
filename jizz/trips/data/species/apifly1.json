@@ -1,0 +1,22 @@
+{
+  "code": "apifly1",
+  "name": {
+    "en": "Apical Flycatcher",
+    "nl": "Zoomstaarttiran"
+  },
+  "latin": "Myiarchus apicalis",
+  "look_for": [
+    {
+      "en": "Large flycatcher with grey breast, yellow belly",
+      "nl": "Grote vliegenvanger met grijze borst, gele buik"
+    },
+    {
+      "en": "Pale-tipped **tail** feathers",
+      "nl": "Lichte punten aan de **staart**veren"
+    },
+    {
+      "en": "Colombian endemic of dry valleys",
+      "nl": "Endemisch in droge dalen van Colombia"
+    }
+  ]
+}

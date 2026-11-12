@@ -1,0 +1,22 @@
+{
+  "code": "greoro1",
+  "name": {
+    "en": "Green Oropendola",
+    "nl": "Groene oropendola"
+  },
+  "latin": "Psarocolius viridis",
+  "look_for": [
+    {
+      "en": "Olive-green body, black **head** and neck",
+      "nl": "Olijfgroen lijf, zwarte **kop** en hals"
+    },
+    {
+      "en": "Bright yellow outer **tail** feathers",
+      "nl": "Felgele buitenste **staartveren**"
+    },
+    {
+      "en": "Large pale **bill** with a red tip",
+      "nl": "Grote lichte **snavel** met rode punt"
+    }
+  ]
+}

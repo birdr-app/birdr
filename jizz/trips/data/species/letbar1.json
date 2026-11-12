@@ -1,0 +1,22 @@
+{
+  "code": "letbar1",
+  "name": {
+    "en": "Lemon-throated Barbet",
+    "nl": "Citroenkeelbaardvogel"
+  },
+  "latin": "Eubucco richardsoni",
+  "look_for": [
+    {
+      "en": "Bright lemon-yellow **throat** with a red **crown**",
+      "nl": "Fel citroengele **keel** met een rode **kruin**"
+    },
+    {
+      "en": "Male has red **head**; female a yellow **crown**",
+      "nl": "Mannetje met rode **kop**; vrouwtje met gele **kruin**"
+    },
+    {
+      "en": "Green **back**, streaked flanks; sits quietly",
+      "nl": "Groene **rug**, gestreepte flanken; zit stil"
+    }
+  ]
+}

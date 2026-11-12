@@ -1,0 +1,602 @@
+{
+  "country": "CO-CARIBBEAN",
+  "groups": [
+    {
+      "slug": "screamers",
+      "name": {
+        "en": "Screamers",
+        "nl": "Hoenderkoeten"
+      },
+      "species": [
+        "norscr1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "chachalacas-guans-and-curassows",
+      "name": {
+        "en": "Chachalacas, Guans, and Curassows",
+        "nl": "Sjakohoenders en Hokko's"
+      },
+      "species": [
+        "batgua1",
+        "cregua1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "hummingbirds",
+      "name": {
+        "en": "Hummingbirds",
+        "nl": "Kolibries"
+      },
+      "species": [
+        "blbtho1",
+        "bubhel1",
+        "permet1",
+        "whtsta1",
+        "gobsta2",
+        "samwoo2",
+        "shteme1",
+        "copeme1",
+        "samblo1",
+        "samsab1",
+        "whvplu1",
+        "bufhum1",
+        "inchum1",
+        "sathum1",
+        "sabhum1",
+        "bucsap1",
+        "rubher"
+      ],
+      "endemics": [
+        "blbtho1",
+        "bubhel1",
+        "whtsta1",
+        "samwoo2",
+        "samblo1",
+        "samsab1",
+        "inchum1",
+        "sabhum1"
+      ]
+    },
+    {
+      "slug": "shorebirds",
+      "name": {
+        "en": "Shorebirds",
+        "nl": "Steltlopers"
+      },
+      "species": [
+        "whimbr"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "flamingos",
+      "name": {
+        "en": "Flamingos",
+        "nl": "Flamingo's"
+      },
+      "species": [
+        "grefla2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "owls",
+      "name": {
+        "en": "Owls",
+        "nl": "Uilen"
+      },
+      "species": [
+        "samsco1"
+      ],
+      "endemics": [
+        "samsco1"
+      ]
+    },
+    {
+      "slug": "puffbirds-and-jacamars",
+      "name": {
+        "en": "Puffbirds and Jacamars",
+        "nl": "Baardkoekoeken en Glansvogels"
+      },
+      "species": [
+        "piepuf1",
+        "rutpuf1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "woodpeckers",
+      "name": {
+        "en": "Woodpeckers",
+        "nl": "Spechten"
+      },
+      "species": [
+        "olipic1",
+        "chepic1",
+        "spbwoo1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "parrots-parakeets-and-allies",
+      "name": {
+        "en": "Parrots, Parakeets, and Allies",
+        "nl": "Papegaaien, Parkieten en aanverwanten"
+      },
+      "species": [
+        "sampar1",
+        "relpar"
+      ],
+      "endemics": [
+        "sampar1"
+      ]
+    },
+    {
+      "slug": "antbirds",
+      "name": {
+        "en": "Antbirds",
+        "nl": "Miervogels"
+      },
+      "species": [
+        "blcant4",
+        "whfant4",
+        "samant2"
+      ],
+      "endemics": [
+        "samant2"
+      ]
+    },
+    {
+      "slug": "gnateaters-and-antpittas",
+      "name": {
+        "en": "Gnateaters and Antpittas",
+        "nl": "Muggenvangers en Muggeneters"
+      },
+      "species": [
+        "samant1",
+        "rufant5",
+        "rufant6"
+      ],
+      "endemics": [
+        "samant1",
+        "rufant5"
+      ]
+    },
+    {
+      "slug": "tapaculos",
+      "name": {
+        "en": "Tapaculos",
+        "nl": "Tapaculo's"
+      },
+      "species": [
+        "samtap1",
+        "brrtap1"
+      ],
+      "endemics": [
+        "samtap1",
+        "brrtap1"
+      ]
+    },
+    {
+      "slug": "ovenbirds",
+      "name": {
+        "en": "Ovenbirds",
+        "nl": "Ovenvogels"
+      },
+      "species": [
+        "palhor5",
+        "samfog1",
+        "perthi1",
+        "stcspi1",
+        "whwspi1",
+        "ruhspi1"
+      ],
+      "endemics": [
+        "samfog1",
+        "ruhspi1"
+      ]
+    },
+    {
+      "slug": "manakins",
+      "name": {
+        "en": "Manakins",
+        "nl": "Manakins"
+      },
+      "species": [
+        "whbman2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tyrant-flycatchers-elaenias-tyrannulets-and-allies",
+      "name": {
+        "en": "Tyrant Flycatchers: Elaenias, Tyrannulets, and Allies",
+        "nl": "Tirannen: Breekbektirannen en aanverwanten"
+      },
+      "species": [
+        "carela1",
+        "slbtyr1",
+        "pattyr3"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tyrant-flycatchers-pewees-kingbirds-and-allies",
+      "name": {
+        "en": "Tyrant Flycatchers: Pewees, Kingbirds, and Allies",
+        "nl": "Tirannen: Peewees, Koningstirannen en aanverwanten"
+      },
+      "species": [
+        "nosfly1",
+        "smbtyr1",
+        "panfly1"
+      ],
+      "endemics": [
+        "smbtyr1"
+      ]
+    },
+    {
+      "slug": "vireos",
+      "name": {
+        "en": "Vireos",
+        "nl": "Vireo's"
+      },
+      "species": [
+        "manvir1",
+        "stavir1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "wrens",
+      "name": {
+        "en": "Wrens",
+        "nl": "Winterkoningen"
+      },
+      "species": [
+        "sttwre1",
+        "samwre1",
+        "whhwre1",
+        "bicwre1",
+        "bubwre1",
+        "gybwow3"
+      ],
+      "endemics": [
+        "samwre1",
+        "gybwow3"
+      ]
+    },
+    {
+      "slug": "new-world-sparrows",
+      "name": {
+        "en": "New World Sparrows",
+        "nl": "Gorzen van de Nieuwe Wereld"
+      },
+      "species": [
+        "sthbrf4",
+        "sthbrf5",
+        "smbfin1"
+      ],
+      "endemics": [
+        "sthbrf4",
+        "smbfin1"
+      ]
+    },
+    {
+      "slug": "wood-warblers",
+      "name": {
+        "en": "Wood-Warblers",
+        "nl": "Amerikaanse zangers"
+      },
+      "species": [
+        "samwar1",
+        "whlwar1",
+        "yecred1",
+        "prowar"
+      ],
+      "endemics": [
+        "samwar1",
+        "whlwar1",
+        "yecred1"
+      ]
+    },
+    {
+      "slug": "cardinals-grosbeaks-and-allies",
+      "name": {
+        "en": "Cardinals, Grosbeaks, and Allies",
+        "nl": "Kardinalen, Dikbekken en aanverwanten"
+      },
+      "species": [
+        "vercar1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tanagers-and-allies",
+      "name": {
+        "en": "Tanagers and Allies",
+        "nl": "Tangaren"
+      },
+      "species": [
+        "grasal4",
+        "glatan1",
+        "biccon1",
+        "lessee2",
+        "rubsee1",
+        "bkfgra",
+        "fuhtan1"
+      ],
+      "endemics": []
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "screamers",
+      "title": {
+        "en": "Screamers and Chachalacas, Guans, and Curassows",
+        "nl": "Hoenderkoeten en Sjakohoenders en Hokko's"
+      },
+      "groups": [
+        "screamers",
+        "chachalacas-guans-and-curassows"
+      ],
+      "species": [
+        "norscr1",
+        "batgua1",
+        "cregua1"
+      ]
+    },
+    {
+      "slug": "hummingbirds-1",
+      "title": {
+        "en": "Hummingbirds",
+        "nl": "Kolibries"
+      },
+      "groups": [
+        "hummingbirds"
+      ],
+      "species": [
+        "blbtho1",
+        "bubhel1",
+        "whtsta1",
+        "samwoo2",
+        "permet1",
+        "gobsta2"
+      ]
+    },
+    {
+      "slug": "hummingbirds-2",
+      "title": {
+        "en": "Hummingbirds",
+        "nl": "Kolibries"
+      },
+      "groups": [
+        "hummingbirds"
+      ],
+      "species": [
+        "samblo1",
+        "samsab1",
+        "whvplu1",
+        "shteme1",
+        "copeme1",
+        "bufhum1"
+      ]
+    },
+    {
+      "slug": "hummingbirds-3",
+      "title": {
+        "en": "Hummingbirds",
+        "nl": "Kolibries"
+      },
+      "groups": [
+        "hummingbirds"
+      ],
+      "species": [
+        "inchum1",
+        "sabhum1",
+        "rubher",
+        "sathum1",
+        "bucsap1"
+      ]
+    },
+    {
+      "slug": "shorebirds",
+      "title": {
+        "en": "Shorebirds, Flamingos, Owls and Puffbirds and Jacamars",
+        "nl": "Steltlopers, Flamingo's, Uilen en Baardkoekoeken en Glansvogels"
+      },
+      "groups": [
+        "shorebirds",
+        "flamingos",
+        "owls",
+        "puffbirds-and-jacamars"
+      ],
+      "species": [
+        "grefla2",
+        "samsco1",
+        "whimbr",
+        "piepuf1",
+        "rutpuf1"
+      ]
+    },
+    {
+      "slug": "woodpeckers",
+      "title": {
+        "en": "Woodpeckers and Parrots, Parakeets, and Allies",
+        "nl": "Spechten en Papegaaien, Parkieten en aanverwanten"
+      },
+      "groups": [
+        "woodpeckers",
+        "parrots-parakeets-and-allies"
+      ],
+      "species": [
+        "spbwoo1",
+        "sampar1",
+        "olipic1",
+        "relpar",
+        "chepic1"
+      ]
+    },
+    {
+      "slug": "antbirds",
+      "title": {
+        "en": "Antbirds and Gnateaters and Antpittas",
+        "nl": "Miervogels en Muggenvangers en Muggeneters"
+      },
+      "groups": [
+        "antbirds",
+        "gnateaters-and-antpittas"
+      ],
+      "species": [
+        "blcant4",
+        "whfant4",
+        "samant2",
+        "samant1",
+        "rufant5",
+        "rufant6"
+      ]
+    },
+    {
+      "slug": "tapaculos",
+      "title": {
+        "en": "Tapaculos",
+        "nl": "Tapaculo's"
+      },
+      "groups": [
+        "tapaculos"
+      ],
+      "species": [
+        "samtap1",
+        "brrtap1"
+      ]
+    },
+    {
+      "slug": "ovenbirds",
+      "title": {
+        "en": "Ovenbirds",
+        "nl": "Ovenvogels"
+      },
+      "groups": [
+        "ovenbirds"
+      ],
+      "species": [
+        "samfog1",
+        "ruhspi1",
+        "palhor5",
+        "perthi1",
+        "stcspi1",
+        "whwspi1"
+      ]
+    },
+    {
+      "slug": "manakins",
+      "title": {
+        "en": "Manakins and Tyrant Flycatchers: Elaenias, Tyrannulets, and Allies",
+        "nl": "Manakins en Tirannen: Breekbektirannen en aanverwanten"
+      },
+      "groups": [
+        "manakins",
+        "tyrant-flycatchers-elaenias-tyrannulets-and-allies"
+      ],
+      "species": [
+        "carela1",
+        "whbman2",
+        "slbtyr1",
+        "pattyr3"
+      ]
+    },
+    {
+      "slug": "tyrant-flycatchers-pewees-kingbirds-and-allies",
+      "title": {
+        "en": "Tyrant Flycatchers: Pewees, Kingbirds, and Allies and Vireos",
+        "nl": "Tirannen: Peewees, Koningstirannen en aanverwanten en Vireo's"
+      },
+      "groups": [
+        "tyrant-flycatchers-pewees-kingbirds-and-allies",
+        "vireos"
+      ],
+      "species": [
+        "smbtyr1",
+        "nosfly1",
+        "panfly1",
+        "stavir1",
+        "manvir1"
+      ]
+    },
+    {
+      "slug": "wrens",
+      "title": {
+        "en": "Wrens",
+        "nl": "Winterkoningen"
+      },
+      "groups": [
+        "wrens"
+      ],
+      "species": [
+        "bicwre1",
+        "bubwre1",
+        "samwre1",
+        "gybwow3",
+        "whhwre1",
+        "sttwre1"
+      ]
+    },
+    {
+      "slug": "new-world-sparrows",
+      "title": {
+        "en": "New World Sparrows",
+        "nl": "Gorzen van de Nieuwe Wereld"
+      },
+      "groups": [
+        "new-world-sparrows"
+      ],
+      "species": [
+        "sthbrf4",
+        "smbfin1",
+        "sthbrf5"
+      ]
+    },
+    {
+      "slug": "wood-warblers",
+      "title": {
+        "en": "Wood-Warblers and Cardinals, Grosbeaks, and Allies",
+        "nl": "Amerikaanse zangers en Kardinalen, Dikbekken en aanverwanten"
+      },
+      "groups": [
+        "wood-warblers",
+        "cardinals-grosbeaks-and-allies"
+      ],
+      "species": [
+        "prowar",
+        "yecred1",
+        "whlwar1",
+        "samwar1",
+        "vercar1"
+      ]
+    },
+    {
+      "slug": "tanagers-and-allies",
+      "title": {
+        "en": "Tanagers and Allies",
+        "nl": "Tangaren"
+      },
+      "groups": [
+        "tanagers-and-allies"
+      ],
+      "species": [
+        "grasal4",
+        "glatan1",
+        "bkfgra",
+        "rubsee1",
+        "lessee2",
+        "fuhtan1",
+        "biccon1"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

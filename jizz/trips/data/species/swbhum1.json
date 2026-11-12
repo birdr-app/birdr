@@ -1,0 +1,22 @@
+{
+  "code": "swbhum1",
+  "name": {
+    "en": "Sword-billed Hummingbird",
+    "nl": "Zwaardkolibrie"
+  },
+  "latin": "Ensifera ensifera",
+  "look_for": [
+    {
+      "en": "Extremely long, straight **bill** longer than its body",
+      "nl": "Extreem lange, rechte **snavel** langer dan het lijf"
+    },
+    {
+      "en": "Dark **body** with a bronzy-green back, short tail",
+      "nl": "Donker **lijf** met bronsgroene rug, korte staart"
+    },
+    {
+      "en": "Hovers with the **head** tilted up when feeding",
+      "nl": "Zweeft met de **kop** omhoog bij het voeden"
+    }
+  ]
+}

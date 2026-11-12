@@ -1,0 +1,22 @@
+{
+  "code": "brwpar1",
+  "name": {
+    "en": "Bronze-winged Parrot",
+    "nl": "Bronsvleugelmargrietje"
+  },
+  "latin": "Pionus chalcopterus",
+  "look_for": [
+    {
+      "en": "Dark blue **head**, white throat patch",
+      "nl": "Donkerblauwe **kop**, witte keelvlek"
+    },
+    {
+      "en": "Bronze-brown **wing** coverts, dark body",
+      "nl": "Bronsbruine **vleugel**dekveren, donker lijf"
+    },
+    {
+      "en": "Red under the tail",
+      "nl": "Rood onder de staart"
+    }
+  ]
+}

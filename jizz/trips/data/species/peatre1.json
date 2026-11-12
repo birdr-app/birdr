@@ -1,0 +1,22 @@
+{
+  "code": "peatre1",
+  "name": {
+    "en": "Pearled Treerunner",
+    "nl": "Parelboomloper"
+  },
+  "latin": "Margarornis squamiger",
+  "look_for": [
+    {
+      "en": "Rufous **crown** and tail, white eyebrow",
+      "nl": "Roodbruine **kruin** en staart, witte wenkbrauwstreep"
+    },
+    {
+      "en": "White throat, black-edged pearl spots",
+      "nl": "Witte keel, parelvlekjes met zwarte rand"
+    },
+    {
+      "en": "Climbs mossy trunks and branches",
+      "nl": "Klimt langs bemoste stammen en takken"
+    }
+  ]
+}

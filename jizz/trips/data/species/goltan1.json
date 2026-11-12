@@ -1,0 +1,22 @@
+{
+  "code": "goltan1",
+  "name": {
+    "en": "Golden Tanager",
+    "nl": "Goudtangare"
+  },
+  "latin": "Tangara arthus",
+  "look_for": [
+    {
+      "en": "Golden-yellow **head** and underparts",
+      "nl": "Goudgele **kop** en onderkant"
+    },
+    {
+      "en": "Black **mask** and a rufous-chestnut stripe",
+      "nl": "Zwart **masker** en een kastanjebruine streep"
+    },
+    {
+      "en": "Black streaked **back**, chestnut on the flanks",
+      "nl": "Zwartgestreepte **rug**, kastanjebruin op flanken"
+    }
+  ]
+}

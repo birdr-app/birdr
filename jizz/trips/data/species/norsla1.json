@@ -1,0 +1,22 @@
+{
+  "code": "norsla1",
+  "name": {
+    "en": "Northern Slaty-Antshrike",
+    "nl": "Noordelijke gevlekte mierklauwier"
+  },
+  "latin": "Thamnophilus punctatus",
+  "look_for": [
+    {
+      "en": "Male grey with black **back** spotted with white",
+      "nl": "Mannetje grijs met zwarte, wit gevlekte **rug**"
+    },
+    {
+      "en": "Heavy-**billed**, red **eye**, bold black **wings**",
+      "nl": "Zware **snavel**, rode **iris**, zwarte **vleugels**"
+    },
+    {
+      "en": "Female rufous above; shy, in thick scrub",
+      "nl": "Vrouwtje roestbruin boven; schuw in dicht struweel"
+    }
+  ]
+}

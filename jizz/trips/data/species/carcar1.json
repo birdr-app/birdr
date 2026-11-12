@@ -1,0 +1,22 @@
+{
+  "code": "carcar1",
+  "name": {
+    "en": "Carunculated Caracara",
+    "nl": "Lelcaracara"
+  },
+  "latin": "Daptrius carunculatus",
+  "look_for": [
+    {
+      "en": "Black **head** and wings, white belly",
+      "nl": "Zwarte **kop** en vleugels, witte buik"
+    },
+    {
+      "en": "Bare orange-red **face**",
+      "nl": "Kaal oranjerood **gezicht**"
+    },
+    {
+      "en": "Walks on the ground in páramo",
+      "nl": "Loopt over de grond in páramo"
+    }
+  ]
+}

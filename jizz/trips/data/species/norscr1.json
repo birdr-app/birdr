@@ -1,0 +1,22 @@
+{
+  "code": "norscr1",
+  "name": {
+    "en": "Northern Screamer",
+    "nl": "Witwanghoenderkoet"
+  },
+  "latin": "Chauna chavaria",
+  "look_for": [
+    {
+      "en": "Large grey, goose-like bird with a red **face**",
+      "nl": "Grote grijze, ganzachtige vogel met rood **gezicht**"
+    },
+    {
+      "en": "Black **collar** and white cheeks",
+      "nl": "Zwarte **kraag** en witte wangen"
+    },
+    {
+      "en": "Wet pastures and marshes, loud calls",
+      "nl": "Natte weiden en moerassen, luide roep"
+    }
+  ]
+}

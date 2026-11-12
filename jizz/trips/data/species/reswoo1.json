@@ -1,0 +1,22 @@
+{
+  "code": "reswoo1",
+  "name": {
+    "en": "Red-stained Woodpecker",
+    "nl": "Roodvleugelspecht"
+  },
+  "latin": "Veniliornis affinis",
+  "look_for": [
+    {
+      "en": "Red-washed **wing** coverts and back",
+      "nl": "Rood getinte **dekveren** op vleugel en rug"
+    },
+    {
+      "en": "Male red crown, pale face",
+      "nl": "Man met rode kruin, licht gezicht"
+    },
+    {
+      "en": "Barred underparts, small, in forest",
+      "nl": "Gebandeerde onderkant, klein, in bos"
+    }
+  ]
+}

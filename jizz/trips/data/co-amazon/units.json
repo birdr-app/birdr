@@ -1,0 +1,1149 @@
+{
+  "country": "CO-AMAZON",
+  "groups": [
+    {
+      "slug": "chachalacas-guans-and-curassows",
+      "name": {
+        "en": "Chachalacas, Guans, and Curassows",
+        "nl": "Sjakohoenders en Hokko's"
+      },
+      "species": [
+        "spigua1",
+        "butpig1",
+        "specha3"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "nightjars",
+      "name": {
+        "en": "Nightjars",
+        "nl": "Nachtzwaluwen"
+      },
+      "species": [
+        "sacnig1",
+        "latnig1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "hummingbirds",
+      "name": {
+        "en": "Hummingbirds",
+        "nl": "Kolibries"
+      },
+      "species": [
+        "butsic1",
+        "fietop1",
+        "stbher1",
+        "grbher1",
+        "bkther1",
+        "gycher1",
+        "redher1",
+        "bkefai1",
+        "wictho2",
+        "boorat2",
+        "bltbri1",
+        "gybsab1",
+        "fotwoo1",
+        "olshum1",
+        "patbar1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "trumpeters",
+      "name": {
+        "en": "Trumpeters",
+        "nl": "Trompetvogels"
+      },
+      "species": [
+        "gywtru1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "gulls-terns-and-skimmers",
+      "name": {
+        "en": "Gulls, Terns, and Skimmers",
+        "nl": "Meeuwen, Sterns en Schaarbekken"
+      },
+      "species": [
+        "labter1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "hoatzin",
+      "name": {
+        "en": "Hoatzin",
+        "nl": "Hoatzins"
+      },
+      "species": [
+        "hoatzi1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "herons-ibis-and-allies",
+      "name": {
+        "en": "Herons, Ibis, and Allies",
+        "nl": "Reigers, Ibissen en aanverwanten"
+      },
+      "species": [
+        "greibi1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "vultures-hawks-and-allies",
+      "name": {
+        "en": "Vultures, Hawks, and Allies",
+        "nl": "Gieren, Arenden, Buizerds, Haviken en aanverwanten"
+      },
+      "species": [
+        "gyhvul1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "trogons-and-quetzals",
+      "name": {
+        "en": "Trogons and Quetzals",
+        "nl": "Trogons en Quetzals"
+      },
+      "species": [
+        "pavque1",
+        "gnbtro1",
+        "viotro3",
+        "bkttro6"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "motmots",
+      "name": {
+        "en": "Motmots",
+        "nl": "Motmots"
+      },
+      "species": [
+        "bucmot4"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "puffbirds-and-jacamars",
+      "name": {
+        "en": "Puffbirds and Jacamars",
+        "nl": "Baardkoekoeken en Glansvogels"
+      },
+      "species": [
+        "chcpuf1",
+        "spopuf1",
+        "colpuf1",
+        "whcpuf1",
+        "blfnun1",
+        "whfnun1",
+        "yebnun1",
+        "swwpuf1",
+        "whejac1",
+        "yebjac1",
+        "grtjac1",
+        "whcjac1",
+        "purjac1",
+        "parjac1",
+        "grejac2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "barbets-and-toucans",
+      "name": {
+        "en": "Barbets and Toucans",
+        "nl": "Baardvogels en Toekans"
+      },
+      "species": [
+        "sccbar1",
+        "orfbar1",
+        "gilbar1",
+        "letbar1",
+        "letara1",
+        "cheara1",
+        "mabara1",
+        "ivbara1",
+        "goctou1",
+        "chbtou1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "woodpeckers",
+      "name": {
+        "en": "Woodpeckers",
+        "nl": "Spechten"
+      },
+      "species": [
+        "lafpic1",
+        "ruhwoo1",
+        "plbpic1",
+        "yetwoo2",
+        "reswoo1",
+        "renwoo1",
+        "rinwoo1",
+        "wavwoo5",
+        "crcwoo2",
+        "chewoo2",
+        "whtwoo2",
+        "yetwoo1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "falcons-and-caracaras",
+      "name": {
+        "en": "Falcons and Caracaras",
+        "nl": "Valken en Caracaras"
+      },
+      "species": [
+        "blacar1",
+        "retcar2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "parrots-parakeets-and-allies",
+      "name": {
+        "en": "Parrots, Parakeets, and Allies",
+        "nl": "Papegaaien, Parkieten en aanverwanten"
+      },
+      "species": [
+        "sarpar2",
+        "tuipar1",
+        "whwpar",
+        "cowpar1",
+        "orcpar2",
+        "shtpar2",
+        "fespar1",
+        "dubpar1",
+        "buwpar2",
+        "blhpar4",
+        "refpar3",
+        "matpar2",
+        "duhpar",
+        "rebmac2",
+        "baymac",
+        "chfmac1",
+        "scamac1",
+        "ragmac1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "antbirds",
+      "name": {
+        "en": "Antbirds",
+        "nl": "Miervogels"
+      },
+      "species": [
+        "fulant1",
+        "perwaa1",
+        "slcant3",
+        "gryant2",
+        "greant1",
+        "plwant1",
+        "mocant1",
+        "cocant1",
+        "casant1",
+        "blgant2",
+        "norsla1",
+        "whsant2",
+        "blbant1",
+        "amaant2",
+        "peaant1",
+        "dutant2",
+        "cinant1",
+        "pltant1",
+        "spwant2",
+        "rubsti1",
+        "fooant1",
+        "ornant1",
+        "rutant3",
+        "pygant1",
+        "yetant1",
+        "amasta1",
+        "lowant1",
+        "gryant1",
+        "banant2",
+        "dugant1",
+        "spbant4",
+        "yebant2",
+        "ruwant3",
+        "imewaa1",
+        "blaant2",
+        "jetant1",
+        "whbant6",
+        "asbant1",
+        "blfant2",
+        "blcant3",
+        "bawant1",
+        "silant1",
+        "blhant3",
+        "pluant1",
+        "spwant3",
+        "whsant1",
+        "sooant1",
+        "yapant1",
+        "bltant2",
+        "gybant1",
+        "whpant1",
+        "chcant1",
+        "hacant1",
+        "spbant6",
+        "dobant2",
+        "scbant3",
+        "bsbeye1",
+        "rwbeye1",
+        "fasant1",
+        "blabus1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tapaculos",
+      "name": {
+        "en": "Tapaculos",
+        "nl": "Tapaculo's"
+      },
+      "species": [
+        "rubtap1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "antthrushes",
+      "name": {
+        "en": "Antthrushes",
+        "nl": "Miervogels"
+      },
+      "species": [
+        "rucant2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "woodcreepers",
+      "name": {
+        "en": "Woodcreepers",
+        "nl": "Muisspechten"
+      },
+      "species": [
+        "whcwoo1",
+        "citwoo1",
+        "sptwoo1",
+        "lobwoo1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "ovenbirds",
+      "name": {
+        "en": "Ovenbirds",
+        "nl": "Ovenvogels"
+      },
+      "species": [
+        "potpal1",
+        "pabhor2",
+        "leshor1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "manakins",
+      "name": {
+        "en": "Manakins",
+        "nl": "Manakins"
+      },
+      "species": [
+        "sctman1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "cotingas",
+      "name": {
+        "en": "Cotingas",
+        "nl": "Cotinga's"
+      },
+      "species": [
+        "amaumb1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "becards-tityras-and-allies",
+      "name": {
+        "en": "Becards, Tityras, and Allies",
+        "nl": "Tityra's"
+      },
+      "species": [
+        "blttit1",
+        "thlsch3"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tyrant-flycatchers-elaenias-tyrannulets-and-allies",
+      "name": {
+        "en": "Tyrant Flycatchers: Elaenias, Tyrannulets, and Allies",
+        "nl": "Tirannen: Breekbektirannen en aanverwanten"
+      },
+      "species": [
+        "stptyr1",
+        "ybtfly1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tyrant-flycatchers-pewees-kingbirds-and-allies",
+      "name": {
+        "en": "Tyrant Flycatchers: Pewees, Kingbirds, and Allies",
+        "nl": "Tirannen: Peewees, Koningstirannen en aanverwanten"
+      },
+      "species": [
+        "cibatt1",
+        "gramou1",
+        "drwtyr1",
+        "yetfly2",
+        "lottyr1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "gnatcatchers",
+      "name": {
+        "en": "Gnatcatchers",
+        "nl": "Gnatcatchers"
+      },
+      "species": [
+        "colgna1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "wrens",
+      "name": {
+        "en": "Wrens",
+        "nl": "Winterkoningen"
+      },
+      "species": [
+        "thlwre1",
+        "muswre2",
+        "chbwre1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "finches-euphonias-and-allies",
+      "name": {
+        "en": "Finches, Euphonias, and Allies",
+        "nl": "Vinken, Euphonia's en aanverwanten"
+      },
+      "species": [
+        "plueup1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "new-world-sparrows",
+      "name": {
+        "en": "New World Sparrows",
+        "nl": "Gorzen van de Nieuwe Wereld"
+      },
+      "species": [
+        "pecspa1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "blackbirds",
+      "name": {
+        "en": "Blackbirds",
+        "nl": "Troepialen en Epauletspreeuwen"
+      },
+      "species": [
+        "ruboro1",
+        "greoro1",
+        "olioro1",
+        "rercac1",
+        "epaori1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "cardinals-grosbeaks-and-allies",
+      "name": {
+        "en": "Cardinals, Grosbeaks, and Allies",
+        "nl": "Kardinalen, Dikbekken en aanverwanten"
+      },
+      "species": [
+        "yeggro1",
+        "cartan2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tanagers-and-allies",
+      "name": {
+        "en": "Tanagers and Allies",
+        "nl": "Tangaren"
+      },
+      "species": [
+        "reccar4",
+        "flctan1",
+        "fustan1",
+        "mactan1",
+        "yebtan2",
+        "mastan1",
+        "turtan1",
+        "partan1",
+        "oprtan1",
+        "opctan1",
+        "gagtan2",
+        "whbdac1",
+        "yebdac1"
+      ],
+      "endemics": []
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "chachalacas-guans-and-curassows",
+      "title": {
+        "en": "Chachalacas, Guans, and Curassows and Nightjars",
+        "nl": "Sjakohoenders en Hokko's en Nachtzwaluwen"
+      },
+      "groups": [
+        "chachalacas-guans-and-curassows",
+        "nightjars"
+      ],
+      "species": [
+        "spigua1",
+        "butpig1",
+        "specha3",
+        "sacnig1",
+        "latnig1"
+      ]
+    },
+    {
+      "slug": "hummingbirds-1",
+      "title": {
+        "en": "Hummingbirds",
+        "nl": "Kolibries"
+      },
+      "groups": [
+        "hummingbirds"
+      ],
+      "species": [
+        "butsic1",
+        "fietop1",
+        "stbher1",
+        "grbher1",
+        "bkther1"
+      ]
+    },
+    {
+      "slug": "hummingbirds-2",
+      "title": {
+        "en": "Hummingbirds",
+        "nl": "Kolibries"
+      },
+      "groups": [
+        "hummingbirds"
+      ],
+      "species": [
+        "gycher1",
+        "redher1",
+        "bkefai1",
+        "wictho2",
+        "boorat2"
+      ]
+    },
+    {
+      "slug": "hummingbirds-3",
+      "title": {
+        "en": "Hummingbirds",
+        "nl": "Kolibries"
+      },
+      "groups": [
+        "hummingbirds"
+      ],
+      "species": [
+        "bltbri1",
+        "gybsab1",
+        "fotwoo1",
+        "olshum1",
+        "patbar1"
+      ]
+    },
+    {
+      "slug": "trumpeters",
+      "title": {
+        "en": "Trumpeters, Gulls, Terns, and Skimmers, Hoatzin, Herons, Ibis, and Allies and Vultures, Hawks, and Allies",
+        "nl": "Trompetvogels, Meeuwen, Sterns en Schaarbekken, Hoatzins, Reigers, Ibissen en aanverwanten en Gieren, Arenden, Buizerds, Haviken en aanverwanten"
+      },
+      "groups": [
+        "trumpeters",
+        "gulls-terns-and-skimmers",
+        "hoatzin",
+        "herons-ibis-and-allies",
+        "vultures-hawks-and-allies"
+      ],
+      "species": [
+        "greibi1",
+        "labter1",
+        "gywtru1",
+        "hoatzi1",
+        "gyhvul1"
+      ]
+    },
+    {
+      "slug": "trogons-and-quetzals",
+      "title": {
+        "en": "Trogons and Quetzals and Motmots",
+        "nl": "Trogons en Quetzals en Motmots"
+      },
+      "groups": [
+        "trogons-and-quetzals",
+        "motmots"
+      ],
+      "species": [
+        "gnbtro1",
+        "pavque1",
+        "viotro3",
+        "bkttro6",
+        "bucmot4"
+      ]
+    },
+    {
+      "slug": "puffbirds-and-jacamars-1",
+      "title": {
+        "en": "Puffbirds and Jacamars",
+        "nl": "Baardkoekoeken en Glansvogels"
+      },
+      "groups": [
+        "puffbirds-and-jacamars"
+      ],
+      "species": [
+        "chcpuf1",
+        "spopuf1",
+        "colpuf1",
+        "whcpuf1",
+        "blfnun1"
+      ]
+    },
+    {
+      "slug": "puffbirds-and-jacamars-2",
+      "title": {
+        "en": "Puffbirds and Jacamars",
+        "nl": "Baardkoekoeken en Glansvogels"
+      },
+      "groups": [
+        "puffbirds-and-jacamars"
+      ],
+      "species": [
+        "whfnun1",
+        "yebnun1",
+        "swwpuf1",
+        "whejac1",
+        "yebjac1"
+      ]
+    },
+    {
+      "slug": "puffbirds-and-jacamars-3",
+      "title": {
+        "en": "Puffbirds and Jacamars",
+        "nl": "Baardkoekoeken en Glansvogels"
+      },
+      "groups": [
+        "puffbirds-and-jacamars"
+      ],
+      "species": [
+        "grejac2",
+        "grtjac1",
+        "whcjac1",
+        "purjac1",
+        "parjac1"
+      ]
+    },
+    {
+      "slug": "barbets-and-toucans-1",
+      "title": {
+        "en": "Barbets and Toucans",
+        "nl": "Baardvogels en Toekans"
+      },
+      "groups": [
+        "barbets-and-toucans"
+      ],
+      "species": [
+        "gilbar1",
+        "sccbar1",
+        "orfbar1",
+        "letbar1",
+        "letara1"
+      ]
+    },
+    {
+      "slug": "barbets-and-toucans-2",
+      "title": {
+        "en": "Barbets and Toucans",
+        "nl": "Baardvogels en Toekans"
+      },
+      "groups": [
+        "barbets-and-toucans"
+      ],
+      "species": [
+        "chbtou1",
+        "cheara1",
+        "mabara1",
+        "ivbara1",
+        "goctou1"
+      ]
+    },
+    {
+      "slug": "woodpeckers-1",
+      "title": {
+        "en": "Woodpeckers",
+        "nl": "Spechten"
+      },
+      "groups": [
+        "woodpeckers"
+      ],
+      "species": [
+        "lafpic1",
+        "ruhwoo1",
+        "plbpic1",
+        "yetwoo2",
+        "reswoo1",
+        "renwoo1"
+      ]
+    },
+    {
+      "slug": "woodpeckers-2",
+      "title": {
+        "en": "Woodpeckers",
+        "nl": "Spechten"
+      },
+      "groups": [
+        "woodpeckers"
+      ],
+      "species": [
+        "chewoo2",
+        "rinwoo1",
+        "wavwoo5",
+        "crcwoo2",
+        "whtwoo2",
+        "yetwoo1"
+      ]
+    },
+    {
+      "slug": "falcons-and-caracaras",
+      "title": {
+        "en": "Falcons and Caracaras",
+        "nl": "Valken en Caracaras"
+      },
+      "groups": [
+        "falcons-and-caracaras"
+      ],
+      "species": [
+        "retcar2",
+        "blacar1"
+      ]
+    },
+    {
+      "slug": "parrots-parakeets-and-allies-1",
+      "title": {
+        "en": "Parrots, Parakeets, and Allies",
+        "nl": "Papegaaien, Parkieten en aanverwanten"
+      },
+      "groups": [
+        "parrots-parakeets-and-allies"
+      ],
+      "species": [
+        "whwpar",
+        "sarpar2",
+        "tuipar1",
+        "cowpar1",
+        "orcpar2",
+        "shtpar2"
+      ]
+    },
+    {
+      "slug": "parrots-parakeets-and-allies-2",
+      "title": {
+        "en": "Parrots, Parakeets, and Allies",
+        "nl": "Papegaaien, Parkieten en aanverwanten"
+      },
+      "groups": [
+        "parrots-parakeets-and-allies"
+      ],
+      "species": [
+        "fespar1",
+        "dubpar1",
+        "buwpar2",
+        "blhpar4",
+        "refpar3",
+        "matpar2"
+      ]
+    },
+    {
+      "slug": "parrots-parakeets-and-allies-3",
+      "title": {
+        "en": "Parrots, Parakeets, and Allies",
+        "nl": "Papegaaien, Parkieten en aanverwanten"
+      },
+      "groups": [
+        "parrots-parakeets-and-allies"
+      ],
+      "species": [
+        "rebmac2",
+        "scamac1",
+        "chfmac1",
+        "ragmac1",
+        "baymac",
+        "duhpar"
+      ]
+    },
+    {
+      "slug": "antbirds-1",
+      "title": {
+        "en": "Antbirds",
+        "nl": "Miervogels"
+      },
+      "groups": [
+        "antbirds"
+      ],
+      "species": [
+        "perwaa1",
+        "fulant1",
+        "slcant3",
+        "gryant2",
+        "plwant1",
+        "mocant1",
+        "greant1"
+      ]
+    },
+    {
+      "slug": "antbirds-2",
+      "title": {
+        "en": "Antbirds",
+        "nl": "Miervogels"
+      },
+      "groups": [
+        "antbirds"
+      ],
+      "species": [
+        "cocant1",
+        "casant1",
+        "blgant2",
+        "norsla1",
+        "whsant2",
+        "blbant1",
+        "amaant2"
+      ]
+    },
+    {
+      "slug": "antbirds-3",
+      "title": {
+        "en": "Antbirds",
+        "nl": "Miervogels"
+      },
+      "groups": [
+        "antbirds"
+      ],
+      "species": [
+        "peaant1",
+        "dutant2",
+        "cinant1",
+        "pltant1",
+        "spwant2",
+        "rubsti1",
+        "fooant1"
+      ]
+    },
+    {
+      "slug": "antbirds-4",
+      "title": {
+        "en": "Antbirds",
+        "nl": "Miervogels"
+      },
+      "groups": [
+        "antbirds"
+      ],
+      "species": [
+        "ornant1",
+        "rutant3",
+        "pygant1",
+        "yetant1",
+        "amasta1",
+        "lowant1",
+        "gryant1"
+      ]
+    },
+    {
+      "slug": "antbirds-5",
+      "title": {
+        "en": "Antbirds",
+        "nl": "Miervogels"
+      },
+      "groups": [
+        "antbirds"
+      ],
+      "species": [
+        "banant2",
+        "dugant1",
+        "spbant4",
+        "ruwant3",
+        "imewaa1",
+        "blaant2",
+        "yebant2"
+      ]
+    },
+    {
+      "slug": "antbirds-6",
+      "title": {
+        "en": "Antbirds",
+        "nl": "Miervogels"
+      },
+      "groups": [
+        "antbirds"
+      ],
+      "species": [
+        "whbant6",
+        "asbant1",
+        "blfant2",
+        "blcant3",
+        "bawant1",
+        "jetant1",
+        "silant1"
+      ]
+    },
+    {
+      "slug": "antbirds-7",
+      "title": {
+        "en": "Antbirds",
+        "nl": "Miervogels"
+      },
+      "groups": [
+        "antbirds"
+      ],
+      "species": [
+        "blhant3",
+        "pluant1",
+        "spwant3",
+        "whsant1",
+        "sooant1",
+        "yapant1"
+      ]
+    },
+    {
+      "slug": "antbirds-8",
+      "title": {
+        "en": "Antbirds",
+        "nl": "Miervogels"
+      },
+      "groups": [
+        "antbirds"
+      ],
+      "species": [
+        "bltant2",
+        "gybant1",
+        "whpant1",
+        "chcant1",
+        "hacant1",
+        "spbant6"
+      ]
+    },
+    {
+      "slug": "antbirds-9",
+      "title": {
+        "en": "Antbirds",
+        "nl": "Miervogels"
+      },
+      "groups": [
+        "antbirds"
+      ],
+      "species": [
+        "fasant1",
+        "scbant3",
+        "dobant2",
+        "bsbeye1",
+        "rwbeye1",
+        "blabus1"
+      ]
+    },
+    {
+      "slug": "tapaculos",
+      "title": {
+        "en": "Tapaculos and Antthrushes",
+        "nl": "Tapaculo's en Miervogels"
+      },
+      "groups": [
+        "tapaculos",
+        "antthrushes"
+      ],
+      "species": [
+        "rubtap1",
+        "rucant2"
+      ]
+    },
+    {
+      "slug": "woodcreepers",
+      "title": {
+        "en": "Woodcreepers",
+        "nl": "Muisspechten"
+      },
+      "groups": [
+        "woodcreepers"
+      ],
+      "species": [
+        "whcwoo1",
+        "citwoo1",
+        "sptwoo1",
+        "lobwoo1"
+      ]
+    },
+    {
+      "slug": "ovenbirds",
+      "title": {
+        "en": "Ovenbirds and Manakins",
+        "nl": "Ovenvogels en Manakins"
+      },
+      "groups": [
+        "ovenbirds",
+        "manakins"
+      ],
+      "species": [
+        "potpal1",
+        "pabhor2",
+        "leshor1",
+        "sctman1"
+      ]
+    },
+    {
+      "slug": "cotingas",
+      "title": {
+        "en": "Cotingas, Becards, Tityras, and Allies and Tyrant Flycatchers: Elaenias, Tyrannulets, and Allies",
+        "nl": "Cotinga's, Tityra's en Tirannen: Breekbektirannen en aanverwanten"
+      },
+      "groups": [
+        "cotingas",
+        "becards-tityras-and-allies",
+        "tyrant-flycatchers-elaenias-tyrannulets-and-allies"
+      ],
+      "species": [
+        "blttit1",
+        "amaumb1",
+        "thlsch3",
+        "stptyr1",
+        "ybtfly1"
+      ]
+    },
+    {
+      "slug": "tyrant-flycatchers-pewees-kingbirds-and-allies",
+      "title": {
+        "en": "Tyrant Flycatchers: Pewees, Kingbirds, and Allies",
+        "nl": "Tirannen: Peewees, Koningstirannen en aanverwanten"
+      },
+      "groups": [
+        "tyrant-flycatchers-pewees-kingbirds-and-allies"
+      ],
+      "species": [
+        "lottyr1",
+        "cibatt1",
+        "gramou1",
+        "drwtyr1",
+        "yetfly2"
+      ]
+    },
+    {
+      "slug": "gnatcatchers",
+      "title": {
+        "en": "Gnatcatchers, Wrens, Finches, Euphonias, and Allies and New World Sparrows",
+        "nl": "Gnatcatchers, Winterkoningen, Vinken, Euphonia's en aanverwanten en Gorzen van de Nieuwe Wereld"
+      },
+      "groups": [
+        "gnatcatchers",
+        "wrens",
+        "finches-euphonias-and-allies",
+        "new-world-sparrows"
+      ],
+      "species": [
+        "thlwre1",
+        "colgna1",
+        "muswre2",
+        "chbwre1",
+        "plueup1",
+        "pecspa1"
+      ]
+    },
+    {
+      "slug": "blackbirds",
+      "title": {
+        "en": "Blackbirds and Cardinals, Grosbeaks, and Allies",
+        "nl": "Troepialen en Epauletspreeuwen en Kardinalen, Dikbekken en aanverwanten"
+      },
+      "groups": [
+        "blackbirds",
+        "cardinals-grosbeaks-and-allies"
+      ],
+      "species": [
+        "epaori1",
+        "rercac1",
+        "ruboro1",
+        "greoro1",
+        "olioro1",
+        "yeggro1",
+        "cartan2"
+      ]
+    },
+    {
+      "slug": "tanagers-and-allies-1",
+      "title": {
+        "en": "Tanagers and Allies",
+        "nl": "Tangaren"
+      },
+      "groups": [
+        "tanagers-and-allies"
+      ],
+      "species": [
+        "turtan1",
+        "reccar4",
+        "flctan1",
+        "fustan1",
+        "mactan1",
+        "yebtan2",
+        "mastan1"
+      ]
+    },
+    {
+      "slug": "tanagers-and-allies-2",
+      "title": {
+        "en": "Tanagers and Allies",
+        "nl": "Tangaren"
+      },
+      "groups": [
+        "tanagers-and-allies"
+      ],
+      "species": [
+        "partan1",
+        "oprtan1",
+        "opctan1",
+        "gagtan2",
+        "whbdac1",
+        "yebdac1"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

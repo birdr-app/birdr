@@ -1,0 +1,22 @@
+{
+  "code": "bufhum1",
+  "name": {
+    "en": "Buffy Hummingbird",
+    "nl": "Bruine kolibrie"
+  },
+  "latin": "Leucippus fallax",
+  "look_for": [
+    {
+      "en": "Plain buff **underparts**, pale cinnamon wing flash",
+      "nl": "Egaal geelbruine **onderkant**, kaneelkleurige vleugelflits"
+    },
+    {
+      "en": "Pale **eyebrow** and a darker line through the eye",
+      "nl": "Lichte **wenkbrauw** en donkere streep door het oog"
+    },
+    {
+      "en": "Thin red-pink **bill** base, dark tip, pale throat",
+      "nl": "Dunne roze **snavel**basis met donkere punt, lichte keel"
+    }
+  ]
+}

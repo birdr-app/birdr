@@ -1,0 +1,22 @@
+{
+  "code": "cocant1",
+  "name": {
+    "en": "Cocha Antshrike",
+    "nl": "Cochamierklauwier"
+  },
+  "latin": "Thamnophilus praecox",
+  "look_for": [
+    {
+      "en": "Male black with white **back** patch, bushy **crest**",
+      "nl": "Mannetje zwart met witte **rug**vlek, volle **kuif**"
+    },
+    {
+      "en": "Black **crown**, white-edged black wing coverts",
+      "nl": "Zwarte **kruin**, zwarte dekveren met witte randen"
+    },
+    {
+      "en": "Female rufous **crown**, buff streaked below",
+      "nl": "Vrouwtje met roestrode **kruin**, onder bruin gestreept"
+    }
+  ]
+}

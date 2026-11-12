@@ -1,0 +1,22 @@
+{
+  "code": "oilbir1",
+  "name": {
+    "en": "Oilbird",
+    "nl": "Vetvogel"
+  },
+  "latin": "Steatornis caripensis",
+  "look_for": [
+    {
+      "en": "Large, long-winged, hawk-like nocturnal bird",
+      "nl": "Grote nachtvogel met lange vleugels als een havik"
+    },
+    {
+      "en": "Chestnut-brown with white **spots** and hooked bill",
+      "nl": "Kastanjebruin met witte **vlekken** en haaksnavel"
+    },
+    {
+      "en": "Loud screaming calls from cave colonies at night",
+      "nl": "Luid gekrijs uit grotkolonies in de nacht"
+    }
+  ]
+}

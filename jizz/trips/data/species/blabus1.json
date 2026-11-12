@@ -1,0 +1,22 @@
+{
+  "code": "blabus1",
+  "name": {
+    "en": "Black Bushbird",
+    "nl": "Struikmiervogel"
+  },
+  "latin": "Neoctantes niger",
+  "look_for": [
+    {
+      "en": "Heavy, hooked **bill** on a long black bird",
+      "nl": "Zware, haakvormige **snavel** op een lange zwarte vogel"
+    },
+    {
+      "en": "All black, big-headed, no white",
+      "nl": "Helemaal zwart, grote kop, geen wit"
+    },
+    {
+      "en": "Perches upright and still in dark understorey",
+      "nl": "Zit rechtop en stil in donker struikgewas"
+    }
+  ]
+}

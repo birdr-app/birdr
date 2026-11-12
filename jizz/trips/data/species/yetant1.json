@@ -1,0 +1,22 @@
+{
+  "code": "yetant1",
+  "name": {
+    "en": "Yellow-throated Antwren",
+    "nl": "Geelkeelmiersluiper"
+  },
+  "latin": "Myrmotherula ambigua",
+  "look_for": [
+    {
+      "en": "Male has a yellow **throat** and grey **crown**",
+      "nl": "Mannetje met gele **keel** en grijze **kruin**"
+    },
+    {
+      "en": "Streaked back and pale yellow belly",
+      "nl": "Gestreepte **rug** en lichtgele buik"
+    },
+    {
+      "en": "Forages in canopy vine tangles",
+      "nl": "Foerageert in lianen in de kroon"
+    }
+  ]
+}

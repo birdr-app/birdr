@@ -1,0 +1,22 @@
+{
+  "code": "bluflo1",
+  "name": {
+    "en": "Bluish Flowerpiercer",
+    "nl": "Grijsblauwe berghoningkruiper"
+  },
+  "latin": "Diglossa caerulescens",
+  "look_for": [
+    {
+      "en": "Blue-grey **body** with a pale blue brow",
+      "nl": "Blauwgrijs **lijf** met een lichtblauwe wenkbrauw"
+    },
+    {
+      "en": "Black **mask** and hooked bill",
+      "nl": "Zwart **masker** en haakvormige snavel"
+    },
+    {
+      "en": "Paler grey than Masked Flowerpiercer",
+      "nl": "Lichter grijs dan Maskerberghoningkruiper"
+    }
+  ]
+}

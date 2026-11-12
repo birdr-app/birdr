@@ -1,0 +1,22 @@
+{
+  "code": "glgtan1",
+  "name": {
+    "en": "Glistening-green Tanager",
+    "nl": "Zilver-groene tangare"
+  },
+  "latin": "Chlorochrysa phoenicotis",
+  "look_for": [
+    {
+      "en": "Bright green **body** with a small orange ear",
+      "nl": "Helder groen **lijf** met een oranje oorvlek"
+    },
+    {
+      "en": "Silvery-green **sheen** and a dark eye-patch",
+      "nl": "Zilvergroene **glans** en een donkere oogvlek"
+    },
+    {
+      "en": "Orange ear patch smaller than Orange-eared",
+      "nl": "Oranje oorvlek kleiner dan Oranjeoortangare"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "trumpeters",
+  "about": {
+    "en": "Chicken-sized birds with a rounded, hunched body, long legs, a short bill and a small head. They are mostly black with a glossy sheen and a paler back. They walk in noisy groups on the forest floor, and their loud, deep trumpeting or drumming calls carry through the forest.",
+    "nl": "Vogels ter grootte van een kip met een rond, gebogen lijf, lange poten, een korte snavel en een kleine kop. Ze zijn meest zwart met een glanzende gloed en een lichtere rug. Ze lopen in luidruchtige groepjes over de bosbodem, en hun diepe, trompetterende of trommelende roep klinkt door het bos."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "cranes"
+      ],
+      "text": {
+        "en": "Despite the name, trumpeters are not cranes. They are far smaller, with a hunched shape and a short bill, and live in groups on the forest floor rather than in open wetlands, though both groups are noisy.",
+        "nl": "Ondanks de naam zijn trompetvogels geen kraanvogels. Ze zijn veel kleiner, met een gebogen postuur en een korte snavel, en leven in groepen op de bosbodem in plaats van in open moerassen, al maken beide groepen veel lawaai."
+      }
+    },
+    {
+      "if_known": [
+        "chachalacas-guans-and-curassows"
+      ],
+      "text": {
+        "en": "Trumpeters can be mistaken for guans or curassows, which also walk about the forest floor. Trumpeters have a hunched back, longer legs and a short bill, and are not crested or wattled.",
+        "nl": "Trompetvogels zijn te verwarren met hokko's en sjakohoenders, die ook over de bosbodem lopen. Trompetvogels hebben een gebogen rug, langere poten en een korte snavel, en hebben geen kuif of lellen."
+      }
+    }
+  ]
+}

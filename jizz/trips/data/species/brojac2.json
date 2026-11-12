@@ -1,0 +1,22 @@
+{
+  "code": "brojac2",
+  "name": {
+    "en": "Brown Jacamar",
+    "nl": "Bruinkeelglansvogel"
+  },
+  "latin": "Brachygalba lugubris",
+  "look_for": [
+    {
+      "en": "Small, short-billed brown jacamar with a pale **throat**",
+      "nl": "Kleine bruine glansvogel met korte **snavel** en bleke keel"
+    },
+    {
+      "en": "Dark brown **upperparts**, rufous underparts",
+      "nl": "Donkerbruine **bovenkant**, roestkleurige onderkant"
+    },
+    {
+      "en": "Groups sit in the open on bare branches",
+      "nl": "Groepjes zitten open op kale takken"
+    }
+  ]
+}

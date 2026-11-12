@@ -1,0 +1,22 @@
+{
+  "code": "strtre1",
+  "name": {
+    "en": "Striped Treehunter",
+    "nl": "Gestreepte boomjager"
+  },
+  "latin": "Thripadectes holostictus",
+  "look_for": [
+    {
+      "en": "Streaked buff and brown underparts",
+      "nl": "Gestreepte okerbruine onderkant"
+    },
+    {
+      "en": "Streaked **back**, rufous-chestnut tail",
+      "nl": "Gestreepte **rug**, kastanjebruine staart"
+    },
+    {
+      "en": "Probes mossy trunks in cloud forest",
+      "nl": "Peutert in bemoste stammen in nevelbos"
+    }
+  ]
+}

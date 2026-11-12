@@ -1,0 +1,22 @@
+{
+  "code": "bawant1",
+  "name": {
+    "en": "Black-and-white Antbird",
+    "nl": "Zwart-witte mierkruiper"
+  },
+  "latin": "Myrmochanes hemileucus",
+  "look_for": [
+    {
+      "en": "Pied: black **back**, white underparts",
+      "nl": "Zwart-wit: zwarte **rug**, witte onderkant"
+    },
+    {
+      "en": "Black **head** and throat, white **wing** patches",
+      "nl": "Zwarte **kop** en keel, witte **vleugel**vlekken"
+    },
+    {
+      "en": "Perches on river-island scrub, low and still",
+      "nl": "Zit laag en stil in struweel op rivier-eilanden"
+    }
+  ]
+}

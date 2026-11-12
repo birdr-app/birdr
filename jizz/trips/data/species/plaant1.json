@@ -1,0 +1,22 @@
+{
+  "code": "plaant1",
+  "name": {
+    "en": "Plain Antvireo",
+    "nl": "Bosmiervireo"
+  },
+  "latin": "Dysithamnus mentalis",
+  "look_for": [
+    {
+      "en": "Male dull grey with olive-brown **back**",
+      "nl": "Mannetje dofgrijs met olijfbruine **rug**"
+    },
+    {
+      "en": "Plain, no wing spots, pale grey **belly**",
+      "nl": "Effen, geen vleugelvlekken, lichtgrijze **buik**"
+    },
+    {
+      "en": "Female rufous-brown **crown**, buffy-olive below",
+      "nl": "Vrouwtje met roestbruine **kruin**, olijfgeel onder"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "aplfal",
+  "name": {
+    "en": "Aplomado Falcon",
+    "nl": "Aplomadovalk"
+  },
+  "latin": "Falco femoralis",
+  "look_for": [
+    {
+      "en": "Black belly **band** over rufous underparts",
+      "nl": "Zwarte **buikband** over roodbruine onderzijde"
+    },
+    {
+      "en": "Bold pale eyebrow, dark face line",
+      "nl": "Lichte wenkbrauwstreep, donkere oogstreep"
+    },
+    {
+      "en": "Long **tail**, hunts over open grassland",
+      "nl": "Lange **staart**, jaagt boven open grasland"
+    }
+  ]
+}

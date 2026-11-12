@@ -1,0 +1,22 @@
+{
+  "code": "peaant1",
+  "name": {
+    "en": "Pearly Antshrike",
+    "nl": "Parelmierklauwier"
+  },
+  "latin": "Megastictus margaritatus",
+  "look_for": [
+    {
+      "en": "Male grey, covered in pearly-white spots",
+      "nl": "Mannetje grijs, overdekt met parelwitte stippen"
+    },
+    {
+      "en": "Female rufous, spotted **back** and **wings**",
+      "nl": "Vrouwtje roestbruin, gevlekte **rug** en **vleugels**"
+    },
+    {
+      "en": "High in canopy, with mixed flocks",
+      "nl": "Hoog in de kroon met gemengde groepen"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "screamers",
+  "about": {
+    "en": "Big, heavy, dark birds with small chicken-like heads, large feet and a long, thin horn or crest on the forehead in some. They walk and wade in marshes and wet meadows, grazing on plants. Their very loud, booming calls carry far over the wetland.",
+    "nl": "Grote, zware, donkere vogels met een kleine kippenkop, grote poten en bij sommige een lange, dunne hoorn of kuif op het voorhoofd. Ze lopen en waden door moerassen en natte weiden en eten planten. Hun zeer luide, dreunende roep draagt ver over het moeras."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "waterfowl"
+      ],
+      "text": {
+        "en": "Screamers look more like big, long-legged chickens than ducks or geese, with a small head, a short hooked bill and no webbed feet. They are in fact distant relatives of waterfowl, but they walk rather than swim and rarely do more than wade.",
+        "nl": "Hoenderkoeten lijken meer op grote hoenders op hoge poten dan op eenden of ganzen, met een kleine kop, een korte haaksnavel en geen zwemvliezen. Ze zijn wel verre verwanten van de watervogels, maar lopen liever dan dat ze zwemmen en waden hooguit."
+      }
+    }
+  ]
+}

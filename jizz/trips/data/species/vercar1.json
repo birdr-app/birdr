@@ -1,0 +1,22 @@
+{
+  "code": "vercar1",
+  "name": {
+    "en": "Vermilion Cardinal",
+    "nl": "Vermiljoenkardinaal"
+  },
+  "latin": "Cardinalis phoeniceus",
+  "look_for": [
+    {
+      "en": "Bright red with a pointed **crest**",
+      "nl": "Fel rood met een puntige **kuif**"
+    },
+    {
+      "en": "Black **face** mask and bib",
+      "nl": "Zwart **gezichtsmasker** en bef"
+    },
+    {
+      "en": "Female pale buff-grey, reddish crest",
+      "nl": "Vrouwtje bleek grijsbeige, roodachtige kuif"
+    }
+  ]
+}

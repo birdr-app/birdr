@@ -1,0 +1,22 @@
+{
+  "code": "crcwoo1",
+  "name": {
+    "en": "Crimson-crested Woodpecker",
+    "nl": "Zwartkeelspecht"
+  },
+  "latin": "Campephilus melanoleucos",
+  "look_for": [
+    {
+      "en": "Large black, red pointed **crest**",
+      "nl": "Groot en zwart met rode puntige **kuif**"
+    },
+    {
+      "en": "White face lines, white V on back",
+      "nl": "Witte gezichtsstrepen, witte V op de rug"
+    },
+    {
+      "en": "Pale bill, barred black-and-white belly",
+      "nl": "Lichte snavel, zwartwit gebandeerde buik"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "verfly",
+  "name": {
+    "en": "Vermilion Flycatcher",
+    "nl": "Rode tiran"
+  },
+  "latin": "Pyrocephalus rubinus",
+  "look_for": [
+    {
+      "en": "Male with flaming red **crown** and underparts",
+      "nl": "Mannetje met vurig rode **kruin** en onderkant"
+    },
+    {
+      "en": "Dark brown mask and back",
+      "nl": "Donkerbruin masker en rug"
+    },
+    {
+      "en": "Female brown with pink-orange belly",
+      "nl": "Vrouwtje bruin met roze-oranje buik"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "andcot1",
+  "name": {
+    "en": "Andean Cock-of-the-rock",
+    "nl": "Rode rotshaan"
+  },
+  "latin": "Rupicola peruvianus",
+  "look_for": [
+    {
+      "en": "Male fiery orange-red with a disc **crest**",
+      "nl": "Mannetje vuurrood met een schijfvormige **kuif**"
+    },
+    {
+      "en": "Black **wings** and tail, grey inner wing",
+      "nl": "Zwarte **vleugels** en staart, grijze binnenvleugel"
+    },
+    {
+      "en": "Female dull brown, small crest",
+      "nl": "Vrouwtje dofbruin, kleine kuif"
+    }
+  ]
+}

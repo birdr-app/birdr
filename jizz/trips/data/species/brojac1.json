@@ -1,0 +1,22 @@
+{
+  "code": "brojac1",
+  "name": {
+    "en": "Bronzy Jacamar",
+    "nl": "Bronsglansvogel"
+  },
+  "latin": "Galbula leucogastra",
+  "look_for": [
+    {
+      "en": "Dark bronzy-green jacamar with a white **belly**",
+      "nl": "Donkere bronsgroene glansvogel met witte **buik**"
+    },
+    {
+      "en": "Long thin black **bill** and metallic upperparts",
+      "nl": "Lange dunne zwarte **snavel** en metaalglanzende bovenkant"
+    },
+    {
+      "en": "Sallies for insects from low perches",
+      "nl": "Vangt insecten vanaf lage zitplekken"
+    }
+  ]
+}
