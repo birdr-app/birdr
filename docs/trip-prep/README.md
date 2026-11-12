@@ -13,6 +13,7 @@ frequency cut. Their photos are reviewed (see `sc/report.md` and `ug/report.md`)
 published in `TRIPS`. Australia (`au/`, 293 species, hand-picked, plus six region packs, see `regions.md`) has all its texts in English and Dutch, its photos reviewed (see `au/` report in `au-photos.md`; a few look-alike picks wait for the owner's eye) and is published in `TRIPS` with the packs. A country folder that is not in `TRIPS` counts as a draft: the test suite checks
 its texts and units, but not its photos.
 Spain (`es/`, 217 species, hand-picked, one pack without regions, 10 lookalike pairs, no endemics chapter) has its texts in English and Dutch and its photos picked by the owner. It is published in `TRIPS`, together with the Canary Islands region pack (`es-canaries/`, 21 species, 4 units). The picked photos still need approving in the media review page on production.
+Colombia (`co/`, 379 species, hand-picked from an occurrence assessment of all 1,959 species) is a draft with five region packs: `co-caribbean` (73), `co-choco` (158), `co-andes` (112), `co-amazon` (187) and `co-llanos` (50). Texts in English and Dutch are complete and the build check shows 0 errors. Card and quiz photos were picked by review agents from contact sheets and are not approved on production; 17 species with no usable photo were left out of the scopes (see each `scope.json`). Not in `TRIPS` yet: check the photos on `/trip-photos` first.
 The texts still need a human review.
 
 The web app has the screens (`app/src/pages/trip/`, routes `/trips`, `/trips/<cc>`, `.../families`,

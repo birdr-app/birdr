@@ -54,8 +54,6 @@
         "ecupie1",
         "grepuf1",
         "hoapuf1",
-        "gorpuf1",
-        "colpuf2",
         "broinc2",
         "dussta1",
         "vepcor1",
@@ -72,8 +70,6 @@
         "tabher1"
       ],
       "endemics": [
-        "gorpuf1",
-        "colpuf2",
         "dussta1"
       ]
     },
@@ -196,7 +192,6 @@
       },
       "species": [
         "rurant1",
-        "aswant1",
         "spcant1",
         "bicant4",
         "chtant1",
@@ -349,7 +344,6 @@
         "vabtyr1",
         "olsfly1",
         "fubfla1",
-        "spbtyr1",
         "dbptyr1"
       ],
       "endemics": []
@@ -495,7 +489,6 @@
         "chbflo1",
         "indflo1",
         "chbsee1",
-        "blfdac1",
         "grhtan1"
       ],
       "endemics": [
@@ -555,8 +548,7 @@
         "hummingbirds"
       ],
       "species": [
-        "gorpuf1",
-        "colpuf2",
+        "dussta1",
         "ecupie1",
         "hoapuf1",
         "broinc2",
@@ -574,7 +566,6 @@
         "hummingbirds"
       ],
       "species": [
-        "dussta1",
         "vepcor1",
         "whthil2",
         "pubwhi1",
@@ -715,10 +706,10 @@
         "antbirds"
       ],
       "species": [
+        "pacant",
         "mouant",
         "spcant1",
         "chtant1",
-        "aswant1",
         "bicant4",
         "rurant1"
       ]
@@ -734,10 +725,10 @@
       ],
       "species": [
         "whfant2",
-        "pacant",
         "leaant1",
         "wesfie1",
         "dusant1",
+        "bacant1",
         "dowant1"
       ]
     },
@@ -755,8 +746,7 @@
         "zelant1",
         "whbant1",
         "esmant1",
-        "sttant3",
-        "bacant1"
+        "sttant3"
       ]
     },
     {
@@ -895,7 +885,6 @@
         "gocspa1",
         "vabtyr1",
         "fubfla1",
-        "spbtyr1",
         "dbptyr1"
       ]
     },
@@ -1038,7 +1027,6 @@
         "scbtan2",
         "indflo1",
         "chbsee1",
-        "blfdac1",
         "grhtan1"
       ]
     }

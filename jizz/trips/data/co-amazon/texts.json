@@ -1,8 +1,8 @@
 {
   "country": "CO-AMAZON",
   "intro": {
-    "en": "This pack is for trips to the Colombian Amazon: Leticia, Amacayacu and Puerto Nariño on the Amazon, the Putumayo and Caquetá rivers and the south-eastern foothills. The birds live in terra firme forest, flooded várzea, on river islands and around oxbow lakes, and they come on top of the Colombia trip. The pack covers 193 species.",
-    "nl": "Dit pakket is voor reizen naar het Colombiaanse Amazonegebied: Leticia, Amacayacu en Puerto Nariño aan de Amazone, de rivieren Putumayo en Caquetá en de uitlopers van de bergen in het zuidoosten. De vogels leven in terra firme-bos, overstroomd várzea-bos, op rivier-eilanden en bij oude rivierarmen en komen bovenop de reis door Colombia. Het pakket bevat 193 soorten."
+    "en": "This pack is for trips to the Colombian Amazon: Leticia, Amacayacu and Puerto Nariño on the Amazon, the Putumayo and Caquetá rivers and the south-eastern foothills. The birds live in terra firme forest, flooded várzea, on river islands and around oxbow lakes, and they come on top of the Colombia trip. The pack covers 187 species.",
+    "nl": "Dit pakket is voor reizen naar het Colombiaanse Amazonegebied: Leticia, Amacayacu en Puerto Nariño aan de Amazone, de rivieren Putumayo en Caquetá en de uitlopers van de bergen in het zuidoosten. De vogels leven in terra firme-bos, overstroomd várzea-bos, op rivier-eilanden en bij oude rivierarmen en komen bovenop de reis door Colombia. Het pakket bevat 187 soorten."
   },
   "units": {
     "chachalacas-guans-and-curassows": {
@@ -275,16 +275,6 @@
         "nl": "Beide lopen en kruipen over de bosbodem en je hoort ze veel vaker dan je ze ziet. De tapaculo leeft in het bos van de uitlopers in het zuidoosten, de mierlijster in het laagland; geduldig wachten en een opname kunnen er één in zicht lokken."
       }
     },
-    "woodcreepers": {
-      "title": {
-        "en": "Woodcreepers",
-        "nl": "Boomklimmers"
-      },
-      "intro": {
-        "en": "Woodcreepers climb tree trunks with a stiff tail as support and a long, curved bill that probes bark. Judge size, bill shape and the streaking on the head and back; they are often seen with mixed flocks.",
-        "nl": "Boomklimmers klimmen langs boomstammen met de stijve staart als steun en een lange, gebogen snavel waarmee ze in de bast zoeken. Beoordeel grootte, snavelvorm en de strepen op kop en rug; ze zijn vaak te zien met gemengde groepen."
-      }
-    },
     "ovenbirds": {
       "title": {
         "en": "Hornero, palmcreeper and manakin",
@@ -293,16 +283,6 @@
       "intro": {
         "en": "The two horneros walk on sandbars and river banks and build mud nests. The palmcreeper clings to palm fronds and the tyrant-manakin works through the canopy in pairs. Look for the horneros on river islands and in clearings by the water.",
         "nl": "De twee ovenvogels lopen over zandbanken en rivieroevers en bouwen nesten van modder. De palmklimmer hangt aan palmbladeren en de manakin-tiran werkt in paren door het kronendak. Zoek de ovenvogels op rivier-eilanden en open plekken aan het water."
-      }
-    },
-    "cotingas": {
-      "title": {
-        "en": "Umbrellabird, tityra and flycatchers",
-        "nl": "Parasolvogel, tityra en vliegenvangers"
-      },
-      "intro": {
-        "en": "The Amazonian Umbrellabird is a rare, large black bird of river islands and flooded forest; its crest and wattle are striking if you find it. The tityra sits high in the canopy, and the pygmy-tyrant and tody-flycatcher are small birds of the understorey.",
-        "nl": "De amazoneparasolvogel is een zeldzame, grote zwarte vogel van rivier-eilanden en overstroomd bos; zijn kuif en lel vallen op als je hem vindt. De tityra zit hoog in het kronendak, en de dwergtiran en de tody-tiran zijn kleine vogels van de onderlaag."
       }
     },
     "tyrant-flycatchers-pewees-kingbirds-and-allies": {
@@ -353,6 +333,16 @@
       "intro": {
         "en": "Paradise and Opal tanagers travel in colourful mixed flocks through the canopy. The dacnises are small and feed at flowers and in fruit. Both are easy to see from a canopy tower or a tall tree on a forest edge.",
         "nl": "Paradijstangaren en opaaltangaren trekken in kleurrijke gemengde groepen door het kronendak. De dacnissen zijn klein en eten bij bloemen en in fruit. Beide zijn goed te zien vanaf een uitkijktoren of een hoge boom aan een bosrand."
+      }
+    },
+    "becards-tityras-and-allies": {
+      "title": {
+        "en": "Tityra, schiffornis and tiny tyrants",
+        "nl": "Tityra, schiffornis en dwergtirannen"
+      },
+      "intro": {
+        "en": "A mixed unit of understorey and canopy birds. The tityra sits high in the canopy, while the Brown-winged Schiffornis stays low and is easier to hear than see. The pygmy-tyrant and tody-flycatcher are tiny birds of the understorey.",
+        "nl": "Een gemengde groep van vogels uit de onderlaag en het kronendak. De tityra zit hoog in het kronendak, terwijl de bruinvleugelschiffornis laag blijft en makkelijker te horen is dan te zien. De dwergtiran en de schoffelsnavel zijn kleine vogels van de onderlaag."
       }
     }
   }

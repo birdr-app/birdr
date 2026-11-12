@@ -245,7 +245,6 @@
         "nl": "Miervogels"
       },
       "species": [
-        "fulant1",
         "perwaa1",
         "slcant3",
         "gryant2",
@@ -267,9 +266,7 @@
         "rubsti1",
         "fooant1",
         "ornant1",
-        "rutant3",
         "pygant1",
-        "yetant1",
         "amasta1",
         "lowant1",
         "gryant1",
@@ -339,7 +336,6 @@
       "species": [
         "whcwoo1",
         "citwoo1",
-        "sptwoo1",
         "lobwoo1"
       ],
       "endemics": []
@@ -351,7 +347,6 @@
         "nl": "Ovenvogels"
       },
       "species": [
-        "potpal1",
         "pabhor2",
         "leshor1"
       ],
@@ -509,7 +504,6 @@
         "oprtan1",
         "opctan1",
         "gagtan2",
-        "whbdac1",
         "yebdac1"
       ],
       "endemics": []
@@ -825,11 +819,11 @@
       ],
       "species": [
         "perwaa1",
-        "fulant1",
         "slcant3",
         "gryant2",
         "plwant1",
         "mocant1",
+        "cocant1",
         "greant1"
       ]
     },
@@ -843,13 +837,13 @@
         "antbirds"
       ],
       "species": [
-        "cocant1",
         "casant1",
         "blgant2",
         "norsla1",
         "whsant2",
         "blbant1",
-        "amaant2"
+        "amaant2",
+        "peaant1"
       ]
     },
     {
@@ -862,13 +856,13 @@
         "antbirds"
       ],
       "species": [
-        "peaant1",
         "dutant2",
         "cinant1",
         "pltant1",
         "spwant2",
         "rubsti1",
-        "fooant1"
+        "fooant1",
+        "ornant1"
       ]
     },
     {
@@ -881,13 +875,12 @@
         "antbirds"
       ],
       "species": [
-        "ornant1",
-        "rutant3",
         "pygant1",
-        "yetant1",
         "amasta1",
         "lowant1",
-        "gryant1"
+        "gryant1",
+        "banant2",
+        "dugant1"
       ]
     },
     {
@@ -900,12 +893,11 @@
         "antbirds"
       ],
       "species": [
-        "banant2",
-        "dugant1",
         "spbant4",
         "ruwant3",
         "imewaa1",
         "blaant2",
+        "jetant1",
         "yebant2"
       ]
     },
@@ -924,7 +916,6 @@
         "blfant2",
         "blcant3",
         "bawant1",
-        "jetant1",
         "silant1"
       ]
     },
@@ -990,26 +981,14 @@
       },
       "groups": [
         "tapaculos",
-        "antthrushes"
-      ],
-      "species": [
-        "rubtap1",
-        "rucant2"
-      ]
-    },
-    {
-      "slug": "woodcreepers",
-      "title": {
-        "en": "Woodcreepers",
-        "nl": "Muisspechten"
-      },
-      "groups": [
+        "antthrushes",
         "woodcreepers"
       ],
       "species": [
+        "rubtap1",
+        "rucant2",
         "whcwoo1",
         "citwoo1",
-        "sptwoo1",
         "lobwoo1"
       ]
     },
@@ -1021,29 +1000,28 @@
       },
       "groups": [
         "ovenbirds",
-        "manakins"
+        "manakins",
+        "cotingas"
       ],
       "species": [
-        "potpal1",
         "pabhor2",
         "leshor1",
-        "sctman1"
+        "sctman1",
+        "amaumb1"
       ]
     },
     {
-      "slug": "cotingas",
+      "slug": "becards-tityras-and-allies",
       "title": {
-        "en": "Cotingas, Becards, Tityras, and Allies and Tyrant Flycatchers: Elaenias, Tyrannulets, and Allies",
-        "nl": "Cotinga's, Tityra's en Tirannen: Breekbektirannen en aanverwanten"
+        "en": "Becards, Tityras, and Allies and Tyrant Flycatchers: Elaenias, Tyrannulets, and Allies",
+        "nl": "Tityra's en Tirannen: Breekbektirannen en aanverwanten"
       },
       "groups": [
-        "cotingas",
         "becards-tityras-and-allies",
         "tyrant-flycatchers-elaenias-tyrannulets-and-allies"
       ],
       "species": [
         "blttit1",
-        "amaumb1",
         "thlsch3",
         "stptyr1",
         "ybtfly1"
@@ -1117,7 +1095,6 @@
         "tanagers-and-allies"
       ],
       "species": [
-        "turtan1",
         "reccar4",
         "flctan1",
         "fustan1",
@@ -1137,10 +1114,10 @@
       ],
       "species": [
         "partan1",
+        "turtan1",
         "oprtan1",
         "opctan1",
         "gagtan2",
-        "whbdac1",
         "yebdac1"
       ]
     }

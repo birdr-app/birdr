@@ -61,7 +61,6 @@
         "goujew1",
         "fabbri1",
         "vifbri1",
-        "gorwoo2",
         "ruswoo1",
         "tolblo1",
         "chbhum1",
@@ -137,7 +136,6 @@
         "nl": "Papegaaien, Parkieten en aanverwanten"
       },
       "species": [
-        "spwpar2",
         "rufpar1",
         "rufpar2",
         "inwpar1",
@@ -202,7 +200,6 @@
       },
       "species": [
         "ocetap1",
-        "asctap1",
         "upmtap1",
         "stitap1",
         "mattap1"
@@ -261,12 +258,9 @@
         "mfbtyr1",
         "rubfly2",
         "whttyr1",
-        "anbtyr1",
         "agitit1"
       ],
-      "endemics": [
-        "anbtyr1"
-      ]
+      "endemics": []
     },
     {
       "slug": "tyrant-flycatchers-pewees-kingbirds-and-allies",
@@ -473,8 +467,7 @@
         "savpuf1",
         "gobpuf1",
         "embpuf1",
-        "goujew1",
-        "fabbri1"
+        "goujew1"
       ]
     },
     {
@@ -489,8 +482,8 @@
       "species": [
         "tolblo1",
         "chbhum1",
+        "fabbri1",
         "vifbri1",
-        "gorwoo2",
         "ruswoo1",
         "shghum1"
       ]
@@ -555,7 +548,6 @@
       "species": [
         "rufpar1",
         "inwpar1",
-        "spwpar2",
         "rufpar2",
         "rebpar2",
         "spfpar1"
@@ -627,7 +619,6 @@
         "stitap1",
         "upmtap1",
         "ocetap1",
-        "asctap1",
         "mattap1"
       ]
     },
@@ -673,7 +664,6 @@
         "tyrant-flycatchers-elaenias-tyrannulets-and-allies"
       ],
       "species": [
-        "anbtyr1",
         "mfbtyr1",
         "rubfly2",
         "whttyr1",
