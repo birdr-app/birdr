@@ -201,6 +201,8 @@ export function BirdPhotos({
   const [adding, setAdding] = useState(false);
   const [addError, setAddError] = useState('');
   const [added, setAdded] = useState<CandidatePhoto[]>([]);
+  // A bird that is done folds away; the owner can unfold it again.
+  const [folded, setFolded] = useState(() => !!startingPick(bird).done);
 
   const addFromCommons = async () => {
     if (!commonsLink.trim()) return;
@@ -292,13 +294,23 @@ export function BirdPhotos({
           size="sm"
           variant={pick.done ? 'solid' : 'outline'}
           colorPalette="secondary"
-          onClick={() => save({ ...pick, done: !pick.done })}
+          onClick={() => {
+            setFolded(!pick.done);
+            void save({ ...pick, done: !pick.done });
+          }}
         >
           {pick.done ? '✓ ' : ''}
           <FormattedMessage id="course_photos_done" defaultMessage="Done" />
         </Button>
+        <Button size="sm" variant="ghost" colorPalette="primary" onClick={() => setFolded((f) => !f)}>
+          {folded ? '▸ ' : '▾ '}
+          {folded
+            ? intl.formatMessage({ id: 'course_photos_unfold', defaultMessage: 'Show' })
+            : intl.formatMessage({ id: 'course_photos_fold', defaultMessage: 'Hide' })}
+        </Button>
       </Flex>
 
+      {!folded && (<>
       <Flex gap={4} mt={3} wrap="wrap" align="flex-start">
         <Box w={{ base: 'full', md: '280px' }} aspectRatio={4 / 3} bg="gray.800" borderRadius="lg" overflow="hidden" flexShrink={0}>
           {main ? (
@@ -381,6 +393,7 @@ export function BirdPhotos({
           </SimpleGrid>
         </>
       )}
+      </>)}
 
       {open !== null && byId.get(open) ? (
         <PhotoSheet
