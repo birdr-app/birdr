@@ -26,8 +26,16 @@ class Media(models.Model):
         related_name='media',
         on_delete=models.CASCADE
     )
+    subspecies = models.ForeignKey(
+        'jizz.Subspecies',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='media',
+        help_text='Form this media shows (set on a lump so a later split can move it).',
+    )
     source = models.CharField(max_length=200, choices=IMAGE_SOURCES, blank=True, default='')
-    contributor = models.CharField(max_length=500, blank=True, default='')
+    contributor =models.CharField(max_length=500, blank=True, default='')
     copyright_text = models.CharField(max_length=500, blank=True, default='', help_text='Copyright text as received from scraper')
     copyright_standardized = models.CharField(max_length=100, blank=True, default='', help_text='Standardized copyright notation (e.g., CC BY, CC BY-NC, etc.)')
     non_commercial_only = models.BooleanField(default=False, help_text='If checked, media is for non-commercial use only. If unchecked, media is free to use with attribution.')
@@ -306,3 +314,52 @@ class MediaBirdDetection(models.Model):
 
     def __str__(self):
         return f"{self.status} ({self.detector_version}) for {self.media_id}"
+
+
+class MediaPlumage(models.Model):
+    """Sex, age and season of the bird in an image, with where the label came from.
+
+    Source metadata (iNaturalist, GBIF) is stored as scraped; AI and human labels
+    come in later phases. A human label overrides the other sources.
+    """
+
+    SEX_CHOICES = [
+        ('male', 'Male'),
+        ('female', 'Female'),
+    ]
+    STAGE_CHOICES = [
+        ('adult', 'Adult'),
+        ('immature', 'Immature'),
+        ('juvenile', 'Juvenile'),
+        ('chick', 'Chick'),
+    ]
+    SEASON_CHOICES = [
+        ('breeding', 'Breeding'),
+        ('non_breeding', 'Non-breeding'),
+        ('eclipse', 'Eclipse'),
+    ]
+    SOURCE_CHOICES = [
+        ('inaturalist', 'iNaturalist'),
+        ('gbif', 'GBIF'),
+        ('wikimedia', 'Wikimedia'),
+        ('ai', 'AI'),
+        ('human', 'Human'),
+    ]
+
+    media = models.OneToOneField(Media, on_delete=models.CASCADE, related_name='plumage')
+    sex = models.CharField(max_length=10, choices=SEX_CHOICES, blank=True, default='')
+    stage = models.CharField(max_length=10, choices=STAGE_CHOICES, blank=True, default='')
+    season = models.CharField(max_length=15, choices=SEASON_CHOICES, blank=True, default='')
+    source = models.CharField(max_length=20, choices=SOURCE_CHOICES, db_index=True)
+    confidence = models.FloatField(null=True, blank=True)
+    model_version = models.CharField(max_length=64, blank=True, default='')
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Media plumage'
+        verbose_name_plural = 'Media plumages'
+        indexes = [models.Index(fields=['stage', 'sex'], name='mediaplumage_stage_sex_idx')]
+
+    def __str__(self):
+        return f"{self.stage or '?'}/{self.sex or '?'} ({self.source}) for {self.media_id}"

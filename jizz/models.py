@@ -269,6 +269,19 @@ class Species(models.Model):
     tax_ordering = models.FloatField(null=True, blank=True, db_index=True)
     code = models.CharField(max_length=10)
     slug = models.SlugField(max_length=220, unique=True, blank=True)
+    ebird_category = models.CharField(max_length=20, blank=True, default='species')
+    taxon_concept_id = models.CharField(
+        max_length=30, blank=True, default='',
+        help_text='eBird/Avibase taxon concept id, when the taxonomy export provides it.',
+    )
+    retired_at = models.DateTimeField(
+        null=True, blank=True,
+        help_text='Set when eBird no longer lists this species (lumped or otherwise retired).',
+    )
+    merged_into = models.ForeignKey(
+        'self', null=True, blank=True, on_delete=models.SET_NULL, related_name='merged_from',
+        help_text='Audit only: surviving species after a lump.',
+    )
 
     @property
     def tax_order(self):
@@ -324,6 +337,120 @@ class Species(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Subspecies(models.Model):
+    """
+    A subspecies (eBird 'issf') or a former species that was lumped into ``species``.
+    Stored only for now; not playable. Media can be tagged with it (``Media.subspecies``)
+    so that a later split can move the right media to the new species.
+    """
+
+    SOURCE_EBIRD = 'ebird-import'
+    SOURCE_LUMP = 'lump'
+    SOURCE_CHOICES = [(SOURCE_EBIRD, 'eBird import'), (SOURCE_LUMP, 'Former species (lump)')]
+
+    species = models.ForeignKey(Species, on_delete=models.CASCADE, related_name='subspecies')
+    code = models.CharField(max_length=20, unique=True)
+    name = models.CharField(max_length=200)
+    name_latin = models.CharField(max_length=200, blank=True, default='')
+    ebird_category = models.CharField(max_length=20, blank=True, default='issf')
+    tax_ordering = models.FloatField(null=True, blank=True)
+    active = models.BooleanField(default=True)
+    source = models.CharField(max_length=20, choices=SOURCE_CHOICES, default=SOURCE_EBIRD)
+    former_species_id = models.IntegerField(
+        null=True, blank=True, help_text='Audit: id of the Species row this was before a lump.',
+    )
+
+    class Meta:
+        verbose_name = 'subspecies'
+        verbose_name_plural = 'subspecies'
+        ordering = ['species_id', 'tax_ordering', 'id']
+
+    def __str__(self):
+        return self.name_latin or self.name
+
+
+class SpeciesAlias(models.Model):
+    """A retired eBird code that still resolves to a species (after a lump, split or rename)."""
+
+    REASON_LUMP = 'lump'
+    REASON_SPLIT = 'split'
+    REASON_RENAME = 'rename'
+    REASON_CHOICES = [(REASON_LUMP, 'Lump'), (REASON_SPLIT, 'Split'), (REASON_RENAME, 'Rename')]
+
+    code = models.CharField(max_length=20, unique=True)
+    species = models.ForeignKey(Species, on_delete=models.CASCADE, related_name='aliases')
+    reason = models.CharField(max_length=10, choices=REASON_CHOICES, default=REASON_LUMP)
+    taxonomy_version = models.CharField(max_length=20, blank=True, default='')
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'species aliases'
+
+    def __str__(self):
+        return f'{self.code} -> {self.species_id}'
+
+
+def resolve_species_by_code(code):
+    """Species for a current eBird code, falling back to a retired-code alias. None if unknown."""
+    code = (code or '').strip()
+    if not code:
+        return None
+    species = Species.objects.filter(code=code).first()
+    if species:
+        return species
+    alias = SpeciesAlias.objects.select_related('species').filter(code=code).first()
+    return alias.species if alias else None
+
+
+class TaxonomyVersion(models.Model):
+    version = models.CharField(max_length=20, unique=True)
+    imported_at = models.DateTimeField(auto_now_add=True)
+    summary = models.JSONField(default=dict, blank=True)
+
+    class Meta:
+        ordering = ['-imported_at']
+
+    def __str__(self):
+        return self.version
+
+
+class TaxonomyChange(models.Model):
+    """Review queue and audit trail for taxonomy changes found in an eBird release."""
+
+    TYPE_LUMP = 'lump'
+    TYPE_SPLIT = 'split'
+    TYPE_RENAME = 'rename'
+    TYPE_NEW = 'new'
+    TYPE_RETIRED = 'retired'
+    TYPE_CHOICES = [
+        (TYPE_LUMP, 'Lump'), (TYPE_SPLIT, 'Split'), (TYPE_RENAME, 'Rename'),
+        (TYPE_NEW, 'New species'), (TYPE_RETIRED, 'Retired'),
+    ]
+    STATUS_PROPOSED = 'proposed'
+    STATUS_APPLIED = 'applied'
+    STATUS_IGNORED = 'ignored'
+    STATUS_CHOICES = [
+        (STATUS_PROPOSED, 'Proposed'), (STATUS_APPLIED, 'Applied'), (STATUS_IGNORED, 'Ignored'),
+    ]
+
+    version = models.ForeignKey(
+        TaxonomyVersion, null=True, blank=True, on_delete=models.SET_NULL, related_name='changes',
+    )
+    change_type = models.CharField(max_length=10, choices=TYPE_CHOICES)
+    old_codes = models.JSONField(default=list, blank=True)
+    new_codes = models.JSONField(default=list, blank=True)
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default=STATUS_PROPOSED)
+    applied_at = models.DateTimeField(null=True, blank=True)
+    report = models.JSONField(default=dict, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created', 'id']
+
+    def __str__(self):
+        return f'{self.change_type}: {self.old_codes} -> {self.new_codes}'
 
 
 class SpeciesIllustration(models.Model):
@@ -697,13 +824,13 @@ class Game(models.Model):
         (SEASON_SUMMER, 'Summer'),
         (SEASON_AUTUMN, 'Autumn'),
         (SEASON_WINTER, 'Winter'),
-    ]
+    ] + [(f'm{n}', f'Month {n}') for n in range(1, 13)]
     season = models.CharField(
         max_length=10,
         null=True,
         blank=True,
         choices=SEASON_CHOICES,
-        help_text='When set, question selection uses monthly eBird frequency for this season.',
+        help_text='When set, question selection uses monthly eBird frequency for this season or month (m1..m12).',
     )
 
     @classmethod
@@ -1369,6 +1496,35 @@ class CountrySpeciesFrequency(models.Model):
             ),
         ]
         ordering = ['country_species', 'reference_year', 'month']
+
+
+class RegionSpeciesMonth(models.Model):
+    """Records of a species per region and month, from GBIF's copy of the eBird dataset.
+
+    ``region_code`` is a country (``CO``) or an ISO 3166-2 subdivision (``CO-ANT``).
+    ``rel_freq`` is records of the species / all bird records in that region and month,
+    a ranking signal, not a checklist percentage.
+    """
+
+    region_code = models.CharField(max_length=12, db_index=True)
+    species = models.ForeignKey(Species, on_delete=models.CASCADE, related_name='region_months')
+    month = models.PositiveSmallIntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(12)],
+    )
+    records = models.PositiveIntegerField(default=0)
+    total_records = models.PositiveIntegerField(default=0, help_text='All bird records in region+month.')
+    rel_freq = models.FloatField(default=0.0)
+    source = models.CharField(max_length=32, default='gbif_ebird')
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=('region_code', 'species', 'month'),
+                name='jizz_regionspeciesmonth_unique',
+            ),
+        ]
+        ordering = ['region_code', 'month', '-rel_freq']
 
 
 class Feedback(models.Model):

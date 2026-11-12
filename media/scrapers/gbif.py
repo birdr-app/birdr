@@ -7,6 +7,8 @@ from .base import BaseMediaScraper
 import logging
 import re
 
+from media.plumage import from_gbif_occurrence
+
 logger = logging.getLogger(__name__)
 
 
@@ -130,7 +132,7 @@ class GBIFScraper(BaseMediaScraper):
                 for m in occ.get("media", []):
                     if m.get("type") == "StillImage" and "identifier" in m:
                         # Process the media item
-                        photo_item = self._process_media_item(m, gbif_id)
+                        photo_item = self._process_media_item(m, gbif_id, plumage=from_gbif_occurrence(occ))
                         if photo_item:
                             # Check if we've already seen this link
                             link = photo_item.get('link', '')
@@ -157,7 +159,7 @@ class GBIFScraper(BaseMediaScraper):
         
         return images
     
-    def _process_media_item(self, media_item: Dict, gbif_id: Optional[int] = None) -> Optional[Dict]:
+    def _process_media_item(self, media_item: Dict, gbif_id: Optional[int] = None, plumage: Optional[Dict] = None) -> Optional[Dict]:
         """Process a GBIF media item into our format."""
         try:
             # Get image URL - identifier should be a string URL
@@ -218,7 +220,8 @@ class GBIFScraper(BaseMediaScraper):
                 'copyright_text': copyright_text,
                 'title': title,
                 'source': 'gbif',
-                'quality_score': quality_score
+                'quality_score': quality_score,
+                'plumage': plumage or {},
             }
         except Exception as e:
             logger.debug(f"Error processing GBIF media item: {e}")

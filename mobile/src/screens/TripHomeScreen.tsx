@@ -7,6 +7,7 @@ import { FoldedAbout, Kicker, TripBackLink, TripLoading, TripRing, UnitRow, trip
 import { TripStory } from '../components/TripStory';
 import { UnderConstruction } from '../components/UnderConstruction';
 import { useRegionKnown, useTrip } from '../hooks/useTrip';
+import { useTripMonth } from '../hooks/useTripMonth';
 import { useTranslation } from '../i18n/TranslationContext';
 import { leagueFlag } from '../lib/league';
 import { orderedUnits, tripComplete } from '../lib/tripQuiz';
@@ -25,9 +26,11 @@ export function TripHomeScreen() {
   const route = useRoute<RouteProp<TripRoutes, 'TripHome'>>();
   const navigation = useNavigation<NativeStackNavigationProp<TripRoutes>>();
   const country = route.params.country.toUpperCase();
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const { trip, error, reload, local, setLocal, known, knownGroups, progress } = useTrip(country);
   const regionKnown = useRegionKnown(trip?.regions ?? []);
+  const travel = useTripMonth(country);
+  const monthNames = Array.from({ length: 12 }, (_, i) => new Date(2000, i, 1).toLocaleString(locale, { month: 'short' }));
   // On a region pack: whether the player added it to the country's trip (stored with the country).
   const [inParent, setInParent] = useState<boolean | null>(null);
   useEffect(() => {
@@ -184,13 +187,41 @@ export function TripHomeScreen() {
       ) : null}
 
 
+      {travel.hasData ? (
+        <View style={styles.monthBox}>
+          <Text style={tripStyles.sectionTitle}>{t('trip_month_title')}</Text>
+          <View style={styles.monthChips}>
+            {[0, ...monthNames.map((_, i) => i + 1)].map((m) => (
+              <TouchableOpacity
+                key={m}
+                onPress={() => travel.setMonth(m)}
+                style={[styles.chip, travel.month === m && styles.chipOn]}
+                testID={`trip.month.${m}`}
+              >
+                <Text style={[styles.chipText, travel.month === m && styles.chipTextOn]}>
+                  {m === 0 ? t('trip_month_any') : monthNames[m - 1]}
+                </Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+          {travel.month ? (
+            <Text style={tripStyles.small}>
+              {t('trip_month_summary', {
+                count: codes.filter(travel.inSeason).length,
+                total: codes.length,
+                month: monthNames[travel.month - 1],
+              })}
+            </Text>
+          ) : null}
+        </View>
+      ) : null}
       <Text style={tripStyles.sectionTitle}>{t('trip_units_section')}</Text>
       <Text style={tripStyles.small}>{t('trip_units_hint')}</Text>
       {units.map((unit) => (
         <UnitRow
           key={unit.slug}
           title={unit.title}
-          subtitle={`${knownIn(unit)}/${unit.species.length}`}
+          subtitle={`${knownIn(unit)}/${unit.species.length}${travel.month ? ` · ${unit.species.filter(travel.inSeason).length} ${t('trip_month_likely')}` : ''}`}
           image={unitImage(unit)}
           known={knownIn(unit)}
           total={unit.species.length}
@@ -262,6 +293,12 @@ export function TripHomeScreen() {
 }
 
 const styles = StyleSheet.create({
+  monthBox: { backgroundColor: '#fff', borderRadius: 16, padding: 12, borderWidth: 1, borderColor: colors.primary[200], gap: 8 },
+  monthChips: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+  chip: { paddingVertical: 4, paddingHorizontal: 10, borderRadius: 14, borderWidth: 1, borderColor: colors.primary[300] },
+  chipOn: { backgroundColor: colors.primary[700], borderColor: colors.primary[700] },
+  chipText: { color: colors.primary[800], fontSize: 13 },
+  chipTextOn: { color: '#fff' },
   hero: { flexDirection: 'row', alignItems: 'center', gap: 16, backgroundColor: colors.secondary[700], borderRadius: 16, padding: 16 },
   heroKicker: { color: colors.secondary[100], fontSize: 13, fontWeight: '700' },
   heroTitle: { color: '#fff', fontSize: 18, fontWeight: '700', marginTop: 2 },

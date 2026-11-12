@@ -7,6 +7,8 @@ from .base import BaseMediaScraper
 import logging
 import re
 
+from media.plumage import from_inat_annotations
+
 logger = logging.getLogger(__name__)
 
 MAX_RESULTS = 50
@@ -249,6 +251,7 @@ class iNaturalistScraper(BaseMediaScraper):
             'source': 'inaturalist',
             'quality_score': quality_score,
             'photo_id': photo.get('id'),
+            'plumage': from_inat_annotations(observation.get('annotations')),
         }
     
     def _process_video(self, video: Dict, observation: Dict) -> Dict:
@@ -320,6 +323,7 @@ class iNaturalistScraper(BaseMediaScraper):
             fields = (
                 "(id:!t,quality_grade:!t,identifications_count:!t,location:!t,faves_count:!t,"
                 "place_guess:!t,description:!t,user:(id:!t,login:!t,name:!t),"
+                "annotations:(vote_score:!t,controlled_attribute_id:!t,controlled_value_id:!t),"
                 "photos:(id:!t,url:!t,license_code:!t,attribution:!t,original_url:!t,"
                 "large_url:!t,medium_url:!t,small_url:!t))"
             )
@@ -427,6 +431,7 @@ class iNaturalistScraper(BaseMediaScraper):
             "faves_count": observation.get("faves_count", 0),
             "description": observation.get("description") or observation.get("place_guess", ""),
             "user": observation.get("user") or {},
+            "annotations": observation.get("annotations") or [],
         }
     
     def _build_photo_from_observation(self, photo: Dict, observation: Dict) -> Optional[Dict]:

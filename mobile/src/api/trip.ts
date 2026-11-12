@@ -110,6 +110,34 @@ export async function fetchTrip(country: string, lang: string): Promise<Trip> {
   return res.json();
 }
 
+/** Per bird, 12 numbers (Jan..Dec): how likely it is that month, 1 = its best month, 0 = not recorded. */
+export type TripSeasonality = { country: string; months: Record<string, number[]> };
+
+export async function fetchTripSeasonality(country: string): Promise<TripSeasonality> {
+  const res = await fetch(apiUrl(`/api/trips/${country}/seasonality/`));
+  if (!res.ok) throw new Error(`trip seasonality ${res.status}`);
+  return res.json();
+}
+
+const monthKey = (country: string) => `trip:${country}:month`;
+
+export async function loadTripMonth(country: string): Promise<number> {
+  try {
+    const n = Number(await AsyncStorage.getItem(monthKey(country)));
+    return n >= 1 && n <= 12 ? n : 0;
+  } catch {
+    return 0;
+  }
+}
+
+export async function saveTripMonth(country: string, month: number): Promise<void> {
+  try {
+    await AsyncStorage.setItem(monthKey(country), String(month));
+  } catch {
+    // The month then lasts only while the app is open.
+  }
+}
+
 /** Logged in: the JWT (all of the account's players count). Guest: the local player token. */
 async function playerHeaders(): Promise<Record<string, string>> {
   const headers: Record<string, string> = {

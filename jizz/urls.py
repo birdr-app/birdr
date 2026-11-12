@@ -88,7 +88,7 @@ from jizz.app_version_views import AppVersionView
 from jizz.courses.views import CourseDetailView, CourseLessonView, CourseProgressView
 from jizz.courses.admin_views import CourseCommonsPhotoView, CoursePhotoPickView, CoursePhotosView, CourseSpeciesMediaView
 from jizz.trips.admin_views import TripCommonsPhotoView, TripPhotoPickView, TripPhotosView, TripSpeciesMediaView
-from jizz.trips.views import TripAnswersView, TripDetailView, TripListView, TripProgressView
+from jizz.trips.views import TripAnswersView, TripDetailView, TripListView, TripProgressView, TripSeasonalityView
 from jizz.geo_views import GeoCountryView
 from jizz.practice_views import (
     GlobalTroubleSpotsView,
@@ -599,6 +599,7 @@ urlpatterns = [
     path('api/trips/<str:country>/photos/species/<int:species_id>/commons/', TripCommonsPhotoView.as_view(), name='trip-photos-commons'),
     path('api/trips/<str:country>/photos/<int:species_id>/', TripPhotoPickView.as_view(), name='trip-photos-pick'),
     path('api/trips/<str:country>/', TripDetailView.as_view(), name='trip-detail'),
+    path('api/trips/<str:country>/seasonality/', TripSeasonalityView.as_view(), name='trip-seasonality'),
     path('api/trips/<str:country>/progress/', TripProgressView.as_view(), name='trip-progress'),
     path('api/trips/<str:country>/answers/', TripAnswersView.as_view(), name='trip-answers'),
     path('api/geo/country/', GeoCountryView.as_view(), name='geo-country'),

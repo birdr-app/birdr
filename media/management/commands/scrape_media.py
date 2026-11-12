@@ -20,6 +20,9 @@ import logging
 logger = logging.getLogger(__name__)
 
 
+from media.plumage import save_source_plumage
+
+
 class Command(BaseCommand):
     help = 'Scrape media (image, video, audio) for species from various platforms'
     
@@ -230,7 +233,7 @@ class Command(BaseCommand):
             copyright_text = safe_truncate(item.get('copyright_text'), 500)
             copyright_standardized, non_commercial_only = parse_copyright(copyright_text)
             
-            Media.objects.create(
+            media = Media.objects.create(
                 species=species,
                 type='image',
                 source=source,
@@ -241,6 +244,7 @@ class Command(BaseCommand):
                 url=item.get('url'),
                 link=item.get('link'),
             )
+            save_source_plumage(media, source, item.get('plumage') or {})
             created_count += 1
         
         if created_count > 0:

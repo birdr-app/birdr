@@ -98,12 +98,32 @@ def filter_country_species_ids_for_game(
         return []
     species_ids = [species_id for _, species_id, _ in rows]
     tier_map = seasonal_tier_map(game.country_id, species_ids, months)
+    present = _present_in_months(game.country_id, species_ids, months)
     allowed: list[int] = []
     for _, species_id, year_round in rows:
+        if present is not None and species_id not in present:
+            continue
         tier = tier_map.get(species_id, year_round)
         if _tier_allowed(tier, rarity):
             allowed.append(species_id)
     return allowed
+
+
+def _present_in_months(country_id, species_ids, months) -> set[int] | None:
+    """Species recorded in the country in any of ``months`` (GBIF/eBird), or None if no data.
+
+    Used when monthly eBird frequency rows are missing, so a month filter still bites.
+    A species with no row at all for the country is kept out only if the country has data.
+    """
+    from jizz.models import RegionSpeciesMonth
+
+    base = RegionSpeciesMonth.objects.filter(region_code=country_id)
+    if not base.exists():
+        return None
+    return set(
+        base.filter(species_id__in=species_ids, month__in=list(months), records__gt=0)
+        .values_list('species_id', flat=True)
+    )
 
 
 def frequency_map_for_game(game: Game, species_ids: Sequence[int]) -> dict[int, str | None]:

@@ -118,6 +118,15 @@ export async function fetchTrip(country: string, lang: string): Promise<Trip> {
   return res.json();
 }
 
+/** Per bird, 12 numbers (Jan..Dec): how likely it is that month, 1 = its best month, 0 = not recorded. */
+export type TripSeasonality = { country: string; months: Record<string, number[]> };
+
+export async function fetchTripSeasonality(country: string): Promise<TripSeasonality> {
+  const res = await fetch(`${getApiBaseUrl()}/api/trips/${country}/seasonality/`);
+  if (!res.ok) throw new Error(`trip seasonality ${res.status}`);
+  return res.json();
+}
+
 const EMPTY_PROGRESS = (country: string): TripProgress => ({ country, known: [], known_group_slugs: [] });
 
 /** The player's known species. Without a player or a network, the trip starts from nothing. */

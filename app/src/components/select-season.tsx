@@ -1,7 +1,7 @@
 import {Box, Heading, RadioCard} from "@chakra-ui/react";
 import {useContext, type ComponentType, type ReactNode} from "react";
 import AppContext from "../core/app-context";
-import {FormattedMessage} from "react-intl";
+import {FormattedMessage, useIntl} from "react-intl";
 
 const RcItem = RadioCard.Item as unknown as ComponentType<{
   value: string;
@@ -26,6 +26,12 @@ export const SEASON_OPTIONS: {
 
 const SelectSeason = () => {
   const { season, setSeason } = useContext(AppContext);
+  const { locale } = useIntl();
+  // Single travel months (m1..m12) sit beside the seasons; names come from Intl.
+  const monthOptions = Array.from({ length: 12 }, (_, i) => ({
+    value: `m${i + 1}`,
+    label: new Date(2000, i, 1).toLocaleString(locale, { month: 'short' }),
+  }));
 
   return (
     <Box>
@@ -49,6 +55,14 @@ const SelectSeason = () => {
                 <RcItemText>
                   <FormattedMessage id={opt.titleId} defaultMessage={opt.titleDefault} />
                 </RcItemText>
+              </RadioCard.ItemControl>
+            </RcItem>
+          ))}
+          {monthOptions.map((opt) => (
+            <RcItem key={opt.value} value={opt.value} w="auto">
+              <RadioCard.ItemHiddenInput />
+              <RadioCard.ItemControl>
+                <RcItemText>{opt.label}</RcItemText>
               </RadioCard.ItemControl>
             </RcItem>
           ))}

@@ -365,6 +365,8 @@ def months_for_game(game) -> tuple[int, ...]:
     season = getattr(game, "season", None)
     if not season:
         return ()
+    if season.startswith("m") and season[1:].isdigit() and 1 <= int(season[1:]) <= 12:
+        return (int(season[1:]),)  # a single travel month, hemisphere-independent
     country = getattr(game, "country", None)
     hemi = hemisphere_for_country(country) if country is not None else HEMISPHERE_NORTH
     return months_for_season(season, hemi)

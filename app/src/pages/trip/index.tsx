@@ -8,6 +8,7 @@ import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
 import { FoldedAbout, ProgressRing, TripBackLink, TripLoading, UnitRow } from './parts';
 import { TripRequestForm } from './request';
+import { TripMonthPicker, useTripMonth } from './month';
 import { TripStory } from './story';
 import { UnderConstruction } from '../../components/under-construction';
 import { TripCelebration } from './celebration';
@@ -108,6 +109,7 @@ export function TripHomePage() {
   const lang = useTripLang();
   const navigate = useNavigate();
   const { trip, error, reload, local, setLocal, known, knownGroups, progress } = useTrip(country);
+  const travel = useTripMonth(country);
   const [showKnown, setShowKnown] = useState(false);
   const regionKnown = useRegionKnown(trip?.regions ?? []);
   // On a region pack: whether the player added it to the country's trip (stored with the country).
@@ -303,6 +305,14 @@ export function TripHomePage() {
           ) : null}
 
 
+          {travel.hasData ? (
+            <TripMonthPicker
+              month={travel.month}
+              setMonth={travel.setMonth}
+              inCount={Object.keys(trip.species).filter(travel.inSeason).length}
+              total={Object.keys(trip.species).length}
+            />
+          ) : null}
           <Text fontSize="lg" fontWeight="700" color="primary.800" mt={2}>
             {t('trip_units_section', 'Units')}
           </Text>
@@ -313,7 +323,7 @@ export function TripHomePage() {
             <UnitRow
               key={unit.slug}
               title={unit.title}
-              subtitle={`${knownIn(unit)}/${unit.species.length}`}
+              subtitle={`${knownIn(unit)}/${unit.species.length}${travel.month ? ` · ${unit.species.filter(travel.inSeason).length} ${t('trip_month_likely', 'likely')}` : ''}`}
               image={unitImage(unit)}
               known={knownIn(unit)}
               total={unit.species.length}

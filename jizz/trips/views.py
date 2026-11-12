@@ -2,6 +2,7 @@
 
 GET  /api/trips/                      countries on offer (region packs hang off their country's trip)
 GET  /api/trips/<cc>/?lang=           everything the screens show (public, cached)
+GET  /api/trips/<cc>/seasonality/     per-bird 12-month index for the travel-month picker (cached)
 GET  /api/trips/<cc>/progress/        the player's known species and groups (JWT user or player token)
 POST /api/trips/<cc>/answers/         store a unit quiz as a trip_prep game
 """
@@ -18,6 +19,7 @@ from jizz.trips.api import (
     trip_language,
     trip_payload,
     trip_progress,
+    trip_seasonality,
     trip_summary,
 )
 from jizz.trips.content import TRIPS, is_region
@@ -53,6 +55,20 @@ class TripDetailView(APIView):
         payload = cache.get(key)
         if payload is None:
             payload = trip_payload(country, lang)
+            cache.set(key, payload, CACHE_SECONDS)
+        return Response(payload)
+
+
+class TripSeasonalityView(APIView):
+    permission_classes = [AllowAny]
+    authentication_classes = []
+
+    def get(self, request, country):
+        country = _country(country)
+        key = f'trip-season:{country}'
+        payload = cache.get(key)
+        if payload is None:
+            payload = trip_seasonality(country)
             cache.set(key, payload, CACHE_SECONDS)
         return Response(payload)
 
