@@ -21,7 +21,7 @@ from django.utils.html import format_html, format_html_join
 from django.utils.http import urlencode
 from django.utils.safestring import mark_safe
 
-from jizz.models import CourseLessonResult, CoursePhotoPick
+from jizz.models import CourseLessonResult, CoursePhotoPick, QuestionMediaReady
 from jizz.models import (Answer, FlockSharedGame, SharedGame, SharedGameAttempt, BirdrJourney, BirdrJourneyGame, Country,
                          CountrySpecies, CountrySpeciesFrequency, Feedback, FlagQuestion, Game, JourneyLevel,
                          JourneyStep, Page, Player,
@@ -1131,8 +1131,20 @@ class SpeciesNameAdmin(admin.ModelAdmin):
 class QuestionInline(admin.TabularInline):
     model = Question
     can_delete = False
-    readonly_fields = ['answered', 'correct']
-    fields = ['species'] + readonly_fields
+    readonly_fields = ['answered', 'correct', 'media_link']
+    fields = ['species', 'number', 'sequence'] + readonly_fields
+    show_change_link = True
+    ordering = ['sequence', 'id']
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related('species', 'media')
+
+    def media_link(self, obj):
+        # Only pregenerated/locked questions store their media; others pick one at play time.
+        if not obj.media_id:
+            return '—'
+        return admin_link(obj.media, f'Media #{obj.media_id}')
+    media_link.short_description = 'Media'
 
     def answered(self, obj):
         return obj.answers.count()
@@ -1355,10 +1367,47 @@ class QuestionOptionInline(admin.TabularInline):
     readonly_fields = ['question', 'species']
 
 
+class AnswerInline(admin.TabularInline):
+    model = Answer
+    can_delete = False
+    extra = 0
+    verbose_name_plural = 'Answers'
+    readonly_fields = ['player', 'answer', 'correct', 'score', 'reaction_time', 'created']
+    fields = readonly_fields
+    ordering = ['created']
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related(
+            'player_score__player', 'answer', 'question',
+        )
+
+    def player(self, obj):
+        score = obj.player_score
+        return admin_link(score.player) if score and score.player_id else '—'
+
+    def reaction_time(self, obj):
+        """Seconds from the question being shown (or its media being ready) to the answer."""
+        if not obj.player_score_id:
+            return '—'
+        start = obj.question.created
+        ready = QuestionMediaReady.objects.filter(
+            question_id=obj.question_id, player_id=obj.player_score.player_id,
+        ).values_list('ready_at', flat=True).first()
+        if ready:
+            start = max(start, ready)
+        return f'{max(0.0, (obj.created - start).total_seconds()):.1f}s'
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+
 @register(Question)
 class QuestionAdmin(admin.ModelAdmin):
-    raw_id_fields = ['species']
-    inlines = [QuestionOptionInline]
+    raw_id_fields = ['species', 'game', 'media']
+    inlines = [AnswerInline, QuestionOptionInline]
 
 
 @register(Player)
