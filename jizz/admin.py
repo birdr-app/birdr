@@ -1128,6 +1128,21 @@ class SpeciesNameAdmin(admin.ModelAdmin):
 
 
 
+def question_media_link(question):
+    """Link to the media a question shows: the locked asset, else the one that
+    ``question.number`` picks from the species' approved media (see ``current_question_media``)."""
+    from jizz.serializers import current_question_media
+
+    try:
+        media = current_question_media(question)
+    except Exception:
+        media = None
+    if media is None:
+        return '—'
+    suffix = '' if question.media_id else f' (#{question.number or 0} of approved)'
+    return admin_link(media, f'Media #{media.pk}{suffix}')
+
+
 class QuestionInline(admin.TabularInline):
     model = Question
     can_delete = False
@@ -1140,10 +1155,7 @@ class QuestionInline(admin.TabularInline):
         return super().get_queryset(request).select_related('species', 'media')
 
     def media_link(self, obj):
-        # Only pregenerated/locked questions store their media; others pick one at play time.
-        if not obj.media_id:
-            return '—'
-        return admin_link(obj.media, f'Media #{obj.media_id}')
+        return question_media_link(obj)
     media_link.short_description = 'Media'
 
     def answered(self, obj):
@@ -1361,6 +1373,11 @@ class GameAdmin(ExtraLookupsMixin, admin.ModelAdmin):
 @register(Answer)
 class AnswerAdmin(admin.ModelAdmin):
     raw_id_fields = ['answer']
+    readonly_fields = ['question_media']
+
+    def question_media(self, obj):
+        return question_media_link(obj.question) if obj and obj.question_id else '—'
+    question_media.short_description = 'Question media'
 
 class QuestionOptionInline(admin.TabularInline):
     model = QuestionOption
@@ -1407,7 +1424,13 @@ class AnswerInline(admin.TabularInline):
 @register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     raw_id_fields = ['species', 'game', 'media']
+    readonly_fields = ['shown_media']
     inlines = [AnswerInline, QuestionOptionInline]
+
+    def shown_media(self, obj):
+        return question_media_link(obj) if obj and obj.pk else '—'
+    shown_media.short_description = 'Media shown (by number)'
+
 
 
 @register(Player)
