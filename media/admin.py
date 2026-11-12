@@ -183,6 +183,11 @@ class MediaAdmin(HideableAdminMixin, admin.ModelAdmin):
     raw_id_fields = ['species', 'duplicate_of', 'subspecies', 'held_for_change']
     actions = ['mark_hidden', 'mark_visible', 'release_taxonomy_hold']
 
+    def lookup_allowed(self, lookup, value, *args, **kwargs):
+        if lookup == 'subspecies__id__exact':
+            return True  # linked from a lumped species' admin page
+        return super().lookup_allowed(lookup, value, *args, **kwargs)
+
     @admin.action(description='Release taxonomy hold (make visible on its current species)')
     def release_taxonomy_hold(self, request, queryset):
         n = queryset.exclude(held_for_change=None).update(held_for_change=None, hide=False)

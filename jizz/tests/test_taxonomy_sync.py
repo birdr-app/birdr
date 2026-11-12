@@ -142,3 +142,21 @@ class SupersedeTests(TestCase):
         stats = record_changes([], None)
         self.assertEqual(stats['superseded'], 1)
         self.assertEqual(TaxonomyChange.objects.get().status, 'ignored')
+
+
+class LumpedFormAdminTests(TestCase):
+    def test_retired_species_page_links_to_its_tagged_media(self):
+        from django.contrib.auth.models import User
+        from jizz.services.taxonomy_sync import apply_proposed
+        survivor = Species.objects.create(name='Redpoll', name_latin='Acanthis flammea', code='redpol1', slug='r')
+        old = Species.objects.create(name='Arctic Redpoll', name_latin='Acanthis hornemanni', code='hoared', slug='a')
+        Media.objects.create(species=old, type='image', url='http://x/1.jpg')
+        TaxonomyChange.objects.create(change_type='lump', old_codes=['hoared'], new_codes=['redpol1'])
+        apply_proposed()
+        admin_user = User.objects.create_superuser('adm', 'a@example.com', 'pw')
+        self.client.force_login(admin_user)
+        page = self.client.get(f'/admin/jizz/species/{old.pk}/change/')
+        self.assertContains(page, 'Media of this form is stored on')
+        self.assertContains(page, '1 images')
+        form = Subspecies.objects.get(code='hoared')
+        self.assertEqual(self.client.get(f'/admin/media/media/?subspecies__id__exact={form.pk}').status_code, 200)

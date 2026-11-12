@@ -758,11 +758,28 @@ class SpeciesAdmin(admin.ModelAdmin):
     inlines = [SpeciesIllustrationInline, MediaInline]
     search_fields = ['name', 'name_nl', 'name_latin', 'slug']
     raw_id_fields = ['merged_into', 'taxonomic_order', 'taxonomic_family']
-    readonly_fields = ['sync_media', 'pic_count', 'infer_machine_predictions']
+    readonly_fields = ['sync_media', 'pic_count', 'infer_machine_predictions', 'lumped_form_media']
     list_display = ['name', 'name_nl', 'slug', 'taxonomic_genus', 'species_group', 'tax_ordering', 'pic_count']
     prepopulated_fields = {'slug': ('name',)}
     list_filter = ['taxonomic_order', 'taxonomic_genus', 'species_group']
     actions = ['scrape_traits', 'generate_comparison']
+
+    def lumped_form_media(self, obj):
+        """A lumped species keeps no media of its own: it lives on the survivor, tagged with this form."""
+        if not obj or not obj.pk or not obj.retired_at or not obj.merged_into_id:
+            return '-'
+        form = Subspecies.objects.filter(code=obj.code, source=Subspecies.SOURCE_LUMP).first()
+        if form is None:
+            return '-'
+        counts = {t: form.media.filter(type=t).count() for t in ('image', 'audio', 'video')}
+        url = reverse('admin:media_media_changelist') + f'?subspecies__id__exact={form.pk}'
+        return format_html(
+            'Media of this form is stored on <a href="{}">{}</a>, tagged "{}": '
+            '<a href="{}">{} images, {} audio, {} video</a>.',
+            reverse('admin:jizz_species_change', args=(obj.merged_into_id,)), obj.merged_into, form.name,
+            url, counts['image'], counts['audio'], counts['video'],
+        )
+    lumped_form_media.short_description = 'Media of this form'
 
     def pic_count(self, obj):
         return obj.images.count()
