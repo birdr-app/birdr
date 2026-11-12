@@ -1,0 +1,80 @@
+from django.test import TestCase
+
+from jizz.models import (
+    Country, CountrySpecies, Species, SpeciesAlias, Subspecies, TaxonomyChange, resolve_species_by_code,
+)
+from jizz.services.taxonomy_sync import apply_lump, apply_proposed, detect_changes, record_changes
+from media.models import Media
+
+
+def sp(code, name='X', sci='G s'):
+    return {'category': 'species', 'speciesCode': code, 'comName': name, 'sciName': sci}
+
+
+def sub(code, report_as, cat='issf'):
+    return {'category': cat, 'speciesCode': code, 'reportAs': report_as, 'comName': code, 'sciName': 'G s f'}
+
+
+class DetectTests(TestCase):
+    def setUp(self):
+        self.redpoll = Species.objects.create(name='Redpoll', name_latin='Acanthis flammea', code='redpol1')
+        self.lesser = Species.objects.create(name='Lesser Redpoll', name_latin='Acanthis cabaret', code='lesred1')
+        self.gone = Species.objects.create(name='Gone', name_latin='Gone gone', code='gone1')
+
+    def kinds(self, rows):
+        return {(c['change_type'], tuple(c['old_codes']), tuple(c['new_codes'])) for c in detect_changes(rows)}
+
+    def test_lump_retired_new_rename(self):
+        rows = [
+            sp('redpol1', sci='Acanthis flammea'), sub('lesred1', 'redpol1'),
+            sp('brandnew'),
+        ]
+        k = self.kinds(rows)
+        self.assertIn(('lump', ('lesred1',), ('redpol1',)), k)
+        self.assertIn(('retired', ('gone1',), ()), k)
+        self.assertIn(('new', (), ('brandnew',)), k)
+        rows[0]['sciName'] = 'Acanthis new'
+        self.assertIn(('rename', ('redpol1',), ('redpol1',)), self.kinds(rows))
+
+    def test_split_when_subspecies_becomes_species(self):
+        Subspecies.objects.create(species=self.redpoll, code='mealy', name='Mealy')
+        rows = [sp('redpol1', sci='Acanthis flammea'), sp('lesred1', sci='Acanthis cabaret'),
+                sp('gone1', sci='Gone gone'), sp('mealy')]
+        self.assertIn(('split', ('redpol1',), ('mealy',)), self.kinds(rows))
+
+    def test_empty_feed_refused(self):
+        with self.assertRaises(ValueError):
+            detect_changes([])
+
+    def test_record_is_idempotent(self):
+        changes = detect_changes([sp('redpol1', sci='Acanthis flammea'), sub('lesred1', 'redpol1'), sp('gone1', sci='Gone gone')])
+        self.assertEqual(record_changes(changes, None)['recorded'], 1)
+        self.assertEqual(record_changes(changes, None)['recorded'], 0)
+
+
+class ApplyLumpTests(TestCase):
+    def test_lump_moves_media_country_and_retires(self):
+        survivor = Species.objects.create(name='Redpoll', name_latin='Acanthis flammea', code='redpol1')
+        old = Species.objects.create(name='Lesser Redpoll', name_latin='Acanthis cabaret', code='lesred1')
+        nl, be = Country.objects.get_or_create(code='NL')[0], Country.objects.get_or_create(code='BE')[0]
+        CountrySpecies.objects.create(country=nl, species=survivor)
+        CountrySpecies.objects.create(country=nl, species=old)
+        CountrySpecies.objects.create(country=be, species=old)
+        m = Media.objects.create(species=old, type='image', url='http://x/1.jpg')
+        Subspecies.objects.create(species=survivor, code='lesred1', name='L', source=Subspecies.SOURCE_EBIRD)
+        change = TaxonomyChange.objects.create(change_type='lump', old_codes=['lesred1'], new_codes=['redpol1'])
+
+        stats = apply_proposed('2025')
+
+        self.assertEqual(stats['lumps'], 1)
+        m.refresh_from_db(); old.refresh_from_db(); change.refresh_from_db()
+        self.assertEqual(m.species, survivor)
+        self.assertEqual(m.subspecies.code, 'lesred1')
+        self.assertEqual(old.merged_into, survivor)
+        self.assertIsNotNone(old.retired_at)
+        self.assertEqual(Subspecies.objects.get(code='lesred1').source, Subspecies.SOURCE_LUMP)
+        self.assertEqual(resolve_species_by_code('lesred1'), old)  # still a current Species row
+        self.assertTrue(SpeciesAlias.objects.filter(code='lesred1', species=survivor).exists())
+        self.assertFalse(CountrySpecies.objects.filter(species=old).exists())
+        self.assertEqual(CountrySpecies.objects.filter(species=survivor).count(), 2)
+        self.assertEqual(change.status, 'applied')

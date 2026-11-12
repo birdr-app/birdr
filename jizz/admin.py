@@ -34,7 +34,8 @@ from jizz.models import (Answer, FlockSharedGame, SharedGame, SharedGameAttempt,
                          IpGeoCache, Flock, FlockChallenge, FlockChallengeAttempt,
                          FlockInvite, FlockMembership, LeagueAttempt, LeagueDay, LeagueMembership,
                          LeagueNotificationLog, LeagueWeekResult,
-                         MailSettings, UpdateEmailDelivery, UpdateEmailRecipient, UpdateThumbsUp)
+                         MailSettings, UpdateEmailDelivery, UpdateEmailRecipient, UpdateThumbsUp,
+                         Subspecies, SpeciesAlias, TaxonomyChange, TaxonomyVersion)
 from jizz.notifications import send_welcome_email
 from jizz.utils import (get_country_images, get_images, get_media_citation,
                         get_sounds, get_videos, sync_country, sync_species, get_media)
@@ -2597,3 +2598,55 @@ class CoursePhotoPickAdmin(admin.ModelAdmin):
         for course in courses:
             clear_cache(course)
 
+
+
+@register(TaxonomyChange)
+class TaxonomyChangeAdmin(admin.ModelAdmin):
+    list_display = ['id', 'change_type', 'old_codes', 'new_codes', 'status', 'version', 'created', 'applied_at']
+    list_filter = ['status', 'change_type', 'version']
+    search_fields = ['old_codes', 'new_codes']
+    readonly_fields = ['created', 'applied_at', 'report']
+    actions = ['apply_selected', 'ignore_selected']
+
+    @admin.action(description='Apply selected lumps / renames')
+    def apply_selected(self, request, queryset):
+        from jizz.services.taxonomy_sync import apply_lump, apply_rename
+        done = failed = 0
+        for change in queryset.filter(status=TaxonomyChange.STATUS_PROPOSED):
+            try:
+                if change.change_type == TaxonomyChange.TYPE_LUMP:
+                    apply_lump(change)
+                elif change.change_type == TaxonomyChange.TYPE_RENAME:
+                    apply_rename(change)
+                else:
+                    continue
+                done += 1
+            except Exception as exc:
+                failed += 1
+                self.message_user(request, f'{change}: {exc}', level='error')
+        self.message_user(request, f'Applied {done}, failed {failed}.')
+
+    @admin.action(description='Mark selected as ignored')
+    def ignore_selected(self, request, queryset):
+        queryset.filter(status=TaxonomyChange.STATUS_PROPOSED).update(status=TaxonomyChange.STATUS_IGNORED)
+
+
+@register(Subspecies)
+class SubspeciesAdmin(admin.ModelAdmin):
+    list_display = ['name', 'name_latin', 'code', 'species', 'source', 'active']
+    list_filter = ['source', 'active', 'ebird_category']
+    search_fields = ['name', 'name_latin', 'code']
+    raw_id_fields = ['species']
+
+
+@register(SpeciesAlias)
+class SpeciesAliasAdmin(admin.ModelAdmin):
+    list_display = ['code', 'species', 'reason', 'taxonomy_version', 'created']
+    search_fields = ['code']
+    raw_id_fields = ['species']
+
+
+@register(TaxonomyVersion)
+class TaxonomyVersionAdmin(admin.ModelAdmin):
+    list_display = ['version', 'imported_at']
+    readonly_fields = ['imported_at', 'summary']
