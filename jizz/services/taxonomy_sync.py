@@ -196,6 +196,32 @@ def record_changes(changes: list[dict[str, Any]], version: TaxonomyVersion | Non
     return stats
 
 
+# Commonest first: a lumped species is at least as common as its commonest form.
+_FREQUENCY_RANK = ['abundant', 'very_common', 'common', 'fairly_common', 'uncommon', 'rare', 'very_rare', 'vagrant']
+_PRESENT_STATUSES = ('native', 'endemic')
+
+
+def merge_country_rows(row: CountrySpecies, others: list[dict[str, Any]]) -> bool:
+    """
+    Fold the country data of lumped forms into the survivor's row. Checklist frequencies add up
+    (a checklist with any form counts, forms rarely overlap; capped at 100), the tier is the
+    commonest of the lot, and a native status beats a rare/vagrant one. Returns True if changed.
+    """
+    freqs = [row.frequency] + [o.get('frequency') for o in others]
+    tiers = [f for f in freqs if f in _FREQUENCY_RANK]
+    pcts = [p for p in [row.frequency_pct] + [o.get('frequency_pct') for o in others] if p is not None]
+    new_freq = min(tiers, key=_FREQUENCY_RANK.index) if tiers else row.frequency
+    new_pct = min(100.0, sum(pcts)) if pcts else row.frequency_pct
+    new_status = row.status
+    if row.status not in _PRESENT_STATUSES and any(o.get('status') in _PRESENT_STATUSES for o in others):
+        new_status = next(o['status'] for o in others if o.get('status') in _PRESENT_STATUSES)
+    if (new_freq, new_pct, new_status) == (row.frequency, row.frequency_pct, row.status):
+        return False
+    row.frequency, row.frequency_pct, row.status = new_freq, new_pct, new_status
+    row.save(update_fields=['frequency', 'frequency_pct', 'status'])
+    return True
+
+
 def _move_country_species(old: Species, survivor: Species) -> dict[str, Any]:
     """
     Repoint country records the survivor lacks. Overlapping ones are removed so the retired
@@ -219,6 +245,12 @@ def _move_country_species(old: Species, survivor: Species) -> dict[str, Any]:
         })
     result['country_dropped'] = len(snapshot)
     result['country_dropped_snapshot'] = snapshot
+    merged = 0
+    for snap in snapshot:
+        row = CountrySpecies.objects.filter(species=survivor, country_id=snap['country_id']).first()
+        if row is not None and merge_country_rows(row, [snap]):
+            merged += 1
+    result['country_commonness_merged'] = merged
     leftover.delete()
     return result
 

@@ -84,6 +84,21 @@ class ApplyLumpTests(TestCase):
         self.assertEqual(change.report['applied']['former_species']['name'], 'Lesser Redpoll')
 
 
+class LumpCommonnessTests(TestCase):
+    def test_lump_merges_country_commonness_into_survivor(self):
+        survivor = Species.objects.create(name='Redpoll', name_latin='Acanthis flammea', code='redpol1')
+        old = Species.objects.create(name='Common Redpoll', name_latin='Acanthis flammea', code='comred')
+        nl = Country.objects.get_or_create(code='NL')[0]
+        CountrySpecies.objects.create(country=nl, species=survivor, status='rare', frequency='vagrant')
+        CountrySpecies.objects.create(country=nl, species=old, status='native', frequency='common', frequency_pct=30.0)
+        TaxonomyChange.objects.create(change_type='lump', old_codes=['comred'], new_codes=['redpol1'])
+
+        apply_proposed('2026')
+
+        row = CountrySpecies.objects.get(country=nl, species=survivor)
+        self.assertEqual((row.status, row.frequency, row.frequency_pct), ('native', 'common', 30.0))
+
+
 class LumpGamesAndApiTests(TestCase):
     def setUp(self):
         from jizz.models import Game
