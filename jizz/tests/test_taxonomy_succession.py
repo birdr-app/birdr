@@ -304,3 +304,32 @@ class RegionClassifyTests(ApplySuccessionTests):
         self.assertEqual(west.media.filter(hide=False).count(), 1)        # California -> Western
         self.assertEqual(self.old.media.filter(hide=False).count(), 1)    # Florida -> Eastern
         self.assertEqual(Media.objects.filter(held_for_change=self.change).count(), 1)  # US only: both occur
+
+
+class RepairCountriesTests(TestCase):
+    def test_regions_an_earlier_recode_removed_are_rechecked_after_a_split(self):
+        from jizz.services.taxonomy_succession import reconcile_countries, reopen_countries
+
+        salt = Species.objects.create(name='Saltmarsh Willet', name_latin='Tringa semipalmata', code='willet2')
+        prairie = Species.objects.create(name='Prairie Willet', name_latin='Tringa inornata', code='willet3')
+        Country.objects.get_or_create(code='US')
+        Country.objects.get_or_create(code='US-CA')
+        CountrySpecies.objects.create(country_id='US', species=salt)
+        TaxonomyChange.objects.create(
+            change_type='rename', old_codes=['willet1'], new_codes=['willet2'], status='applied',
+            report={'kind': 'recode', 'species_id': salt.id, 'survivor_id': salt.id, 'targets': {'willet2': salt.id},
+                    'country_removed_snapshot': [{'country_id': 'US-CA', 'species_id': salt.id, 'status': 'native',
+                                                  'frequency': 'rare', 'frequency_pct': 3.0}]},
+        )
+        split = TaxonomyChange.objects.create(
+            change_type='split', old_codes=['willet2'], new_codes=['willet2', 'willet3'], status='applied',
+            report={'species_id': salt.id, 'survivor_id': salt.id, 'countries_pending': ['US'],
+                    'targets': {'willet2': salt.id, 'willet3': prairie.id}, 'country_seeds': {}},
+        )
+        self.assertEqual(reopen_countries(split), 1)
+        split.refresh_from_db()
+        lists = {'US': ['willet2', 'willet3'], 'US-CA': ['willet3']}
+        reconcile_countries(split, fetch=lambda c: lists[c])
+        self.assertTrue(CountrySpecies.objects.filter(country_id='US-CA', species=prairie).exists())
+        self.assertFalse(CountrySpecies.objects.filter(country_id='US-CA', species=salt).exists())
+        self.assertTrue(CountrySpecies.objects.filter(country_id='US', species=prairie).exists())

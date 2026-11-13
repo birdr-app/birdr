@@ -12,7 +12,7 @@ from jizz.services.taxonomy_sync import (
     refresh_species_names,
     record_changes,
 )
-from jizz.services.taxonomy_succession import finish_successions
+from jizz.services.taxonomy_succession import fetch_spplist, finish_successions, reconcile_countries, reopen_countries
 from jizz.services.taxonomy_texts import fetch_ebird_taxonomy
 
 
@@ -38,11 +38,32 @@ class Command(BaseCommand):
         parser.add_argument('--refresh-names', action='store_true',
                             help='Only refresh the translated names (SpeciesName) of every species touched by '
                                  'an applied lump, split, recode or rename, then stop.')
+        parser.add_argument('--repair-countries', action='store_true',
+                            help='Only re-check the country lists of applied splits/recodes against regions that '
+                                 'earlier recodes took away from the same species, then stop.')
         parser.add_argument('--dry-run', action='store_true', help='Report only, write nothing.')
 
     def handle(self, *args, **options):
         if options['refresh_names']:
             self.stdout.write(f'names: {refresh_species_names()}')
+            return
+        if options['repair_countries']:
+            cache: dict = {}
+            totals = {'reopened': 0, 'added': 0, 'removed': 0, 'unverified': 0}
+            changes = TaxonomyChange.objects.filter(status=TaxonomyChange.STATUS_APPLIED, report__has_key='targets') \
+                .exclude(change_type=TaxonomyChange.TYPE_LUMP).order_by('id')
+            for change in changes:
+                totals['reopened'] += reopen_countries(change)
+                change.refresh_from_db()
+                r = reconcile_countries(change, fetch=lambda c: fetch_spplist(c, token=(settings.EBIRD_API_TOKEN or '')), cache=cache)
+                for k in ('added', 'removed', 'unverified'):
+                    totals[k] += r[k]
+                if r['added']:  # new rows carry seeded commonness until the next rescoring
+                    rep = {**(change.report or {})}
+                    rep.pop('commonness_rescored', None)
+                    change.report = rep
+                    change.save(update_fields=['report'])
+            self.stdout.write(f'countries: {totals}')
             return
         dry = options['dry_run']
         prefix = '[dry-run] ' if dry else ''

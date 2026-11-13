@@ -113,6 +113,47 @@ def _snapshot_and_delete_countries(species: Species) -> list[dict[str, Any]]:
     return snap
 
 
+def earlier_country_rows(species_ids: set[int], *, exclude_change_id: int | None = None) -> dict[str, dict[str, Any]]:
+    """
+    Country rows that earlier changes took away from these species. A recode shrinks a species to
+    the regions eBird lists under its new code; when the species is split later, the regions that
+    only the new child occurs in are gone from every row and would never be looked at again.
+    """
+    out: dict[str, dict[str, Any]] = {}
+    for ch in TaxonomyChange.objects.filter(status=TaxonomyChange.STATUS_APPLIED).exclude(
+        change_type=TaxonomyChange.TYPE_LUMP,
+    ).exclude(id=exclude_change_id):
+        rep = ch.report or {}
+        ids = set((rep.get('targets') or {}).values()) | {rep.get('species_id'), rep.get('survivor_id')}
+        if not ids & species_ids:
+            continue
+        for snap in (rep.get('country_removed_snapshot') or []) + (rep.get('country_dropped_snapshot') or []):
+            code = snap.get('country_id')
+            if code and code not in out:
+                out[code] = {'status': snap.get('status'), 'frequency': snap.get('frequency'),
+                             'frequency_pct': snap.get('frequency_pct')}
+    return out
+
+
+def reopen_countries(change: TaxonomyChange) -> int:
+    """Queue the regions earlier recodes took from this change's species for another country check."""
+    rep = change.report or {}
+    ids = set((rep.get('targets') or {}).values()) | {rep.get('species_id'), rep.get('survivor_id')}
+    earlier = earlier_country_rows({i for i in ids if i}, exclude_change_id=change.id)
+    pending = set(rep.get('countries_pending') or [])
+    seeds = dict(rep.get('country_seeds') or {})
+    added = 0
+    for code, seed in earlier.items():
+        if code not in pending and Country.objects.filter(pk=code).exists():
+            pending.add(code)
+            seeds.setdefault(code, seed)
+            added += 1
+    if added:
+        change.report = {**rep, 'countries_pending': sorted(pending), 'country_seeds': seeds}
+        change.save(update_fields=['report'])
+    return added
+
+
 # ---------------------------------------------------------------------------
 # apply
 # ---------------------------------------------------------------------------
@@ -216,6 +257,8 @@ def apply_succession(change: TaxonomyChange, *, version: str = '') -> dict[str, 
             )
 
     # 6. record for the network follow-ups
+    earlier = earlier_country_rows({old.id}, exclude_change_id=change.id)
+    seeds = {**earlier, **seeds}
     country_codes = set(seeds) | set(
         CountrySpecies.objects.filter(species__in=targets.values()).values_list('country_id', flat=True)
     )
