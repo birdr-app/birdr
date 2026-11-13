@@ -7,6 +7,7 @@ from jizz.services.taxonomy_sync import (
     apply_proposed,
     detect_changes,
     fetch_latest_taxonomy_version,
+    fetch_previous_taxonomy_version,
     import_subspecies,
     record_changes,
 )
@@ -30,6 +31,9 @@ class Command(BaseCommand):
                             help='With --apply: skip scraping new media for successor species.')
         parser.add_argument('--classify-limit', type=int, default=500,
                             help='Held media to look up per split per run (default 500).')
+        parser.add_argument('--split-from', action='append', default=[], metavar='NEW=PARENT',
+                            help='Name a split eBird data does not show: NEW species code is a child of our '
+                                 'species PARENT (code). Repeatable.')
         parser.add_argument('--dry-run', action='store_true', help='Report only, write nothing.')
 
     def handle(self, *args, **options):
@@ -37,7 +41,10 @@ class Command(BaseCommand):
         prefix = '[dry-run] ' if dry else ''
         version = fetch_latest_taxonomy_version()
         rows = fetch_ebird_taxonomy(categories=EBIRD_ALL_CATEGORIES)
-        changes = detect_changes(rows)
+        previous = fetch_previous_taxonomy_version()
+        previous_rows = fetch_ebird_taxonomy(categories=EBIRD_ALL_CATEGORIES, version=previous) if previous else None
+        manual = dict(pair.split('=', 1) for pair in options['split_from'])
+        changes = detect_changes(rows, previous_rows, manual)
         counts = {}
         for ch in changes:
             counts[ch['change_type']] = counts.get(ch['change_type'], 0) + 1

@@ -99,6 +99,88 @@ def fetch_latest_taxonomy_version(*, timeout: int = 60) -> str:
     return ''
 
 
+def fetch_previous_taxonomy_version(*, timeout: int = 60) -> str:
+    """The eBird taxonomy release just before the latest one (e.g. '2025'), '' if unknown."""
+    response = requests.get(EBIRD_TAXONOMY_VERSIONS_URL, headers=_ebird_headers(), timeout=timeout)
+    response.raise_for_status()
+    versions = response.json()
+    if not isinstance(versions, list):
+        return ''
+    ordered = sorted((float(v['authorityVer']) for v in versions if v.get('authorityVer') is not None), reverse=True)
+    latest = next((float(v['authorityVer']) for v in versions if v.get('latest')), ordered[0] if ordered else None)
+    older = [v for v in ordered if latest is not None and v < latest]
+    if not older:
+        return ''
+    prev = older[0]
+    return str(int(prev)) if prev == int(prev) else str(prev)
+
+
+def _lineage_children(
+    species_rows: dict[str, dict[str, Any]],
+    current_rows: Iterable[dict[str, Any]],
+    previous_rows: Iterable[dict[str, Any]],
+    ours: dict[str, Species],
+    alias_codes: set[str],
+    manual_parents: dict[str, str] | None = None,
+) -> dict[int, dict[str, dict[str, Any]]]:
+    """
+    Species of ours that gave birth to species we do not hold yet, read from the previous release.
+
+    eBird promotes a subspecies/group (issf/form) to a species; in the previous release that code
+    (or a sibling of it) was still listed under the old parent. When exactly one species of ours
+    descends from that parent, the new species is its split-off child. Returns
+    ``{our species id: {child code: child info}}``.
+    """
+    prev_parent: dict[str, str] = {}
+    prev_species: set[str] = set()
+    for r in previous_rows:
+        code = r.get('speciesCode')
+        if not code:
+            continue
+        if r.get('category') == 'species':
+            prev_species.add(code)
+        elif r.get('category') in SUBSPECIES_CATEGORIES and r.get('reportAs'):
+            prev_parent[code] = r['reportAs']
+    now_members: dict[str, list[str]] = {}  # new species -> the subspecies codes that report as it now
+    for r in current_rows:
+        if r.get('category') in SUBSPECIES_CATEGORIES and r.get('reportAs') and r.get('speciesCode'):
+            now_members.setdefault(r['reportAs'], []).append(r['speciesCode'])
+    aliases = {a.code: a.species for a in SpeciesAlias.objects.select_related('species')}
+    held_codes = {sp.code for sp in ours.values()}
+
+    def owner(code: str) -> Species | None:
+        sp = ours.get(code)
+        if sp is None:
+            alias_sp = aliases.get(code)
+            if alias_sp is not None and alias_sp.retired_at is None:
+                sp = alias_sp
+        return sp
+
+    out: dict[int, dict[str, dict[str, Any]]] = {}
+    for code, parent_code in (manual_parents or {}).items():
+        sp, row = owner(parent_code), species_rows.get(code)
+        if sp is not None and row is not None and code not in held_codes and code not in alias_codes:
+            out.setdefault(sp.id, {})[code] = _child_info(row, None)
+    for code, row in species_rows.items():
+        if code in held_codes or code in alias_codes or code in prev_species:
+            continue
+        if any(code in kids for kids in out.values()):
+            continue
+        # the new species itself, or the subspecies now filed under it, sat under an old parent
+        old_parents = {prev_parent[c] for c in [code, *now_members.get(code, [])] if c in prev_parent}
+        owners: dict[int, Species] = {}
+        for old_parent in old_parents:
+            for c in [old_parent] + [c for c, p in prev_parent.items() if p == old_parent and c != code]:
+                sp = owner(c)
+                if sp is not None:
+                    owners[sp.id] = sp
+        if len(owners) != 1:
+            continue
+        sp = next(iter(owners.values()))
+        out.setdefault(sp.id, {})[code] = _child_info(row, None)
+    return out
+
+
 def _child_info(row: dict[str, Any], existing: Species | None) -> dict[str, Any]:
     return {
         'code': row['speciesCode'], 'name': row.get('comName') or '', 'name_latin': row.get('sciName') or '',
@@ -107,12 +189,10 @@ def _child_info(row: dict[str, Any], existing: Species | None) -> dict[str, Any]
     }
 
 
-def ours_by_code_stem(ours: dict[str, Species], stem: str) -> set[str]:
-    """Codes of our species that share the stem but are not this species (never a successor by stem)."""
-    return set()
-
-
-def detect_changes(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
+def detect_changes(
+    rows: Iterable[dict[str, Any]], previous_rows: Iterable[dict[str, Any]] | None = None,
+    manual_parents: dict[str, str] | None = None,
+) -> list[dict[str, Any]]:
     """
     Compare the eBird taxonomy (species + issf + form rows) with our species table.
 
@@ -124,8 +204,14 @@ def detect_changes(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
                on under a new code (one successor, possibly already in our table)
     - new:     a species code we do not know and that replaces nothing of ours
     - retired: our species code is gone from the feed with no successor
+
+    ``previous_rows`` (the release before this one) reveals splits the current feed no longer
+    links: a new species that was a subspecies of one of ours there is that species' child.
+    ``manual_parents`` ({new code: code of our parent species}) names splits eBird's data does not show.
     """
     rows = list(rows)
+    previous_rows = list(previous_rows) if previous_rows else []
+    manual_parents = manual_parents or {}
     species_rows = {r['speciesCode']: r for r in rows if r.get('category') == 'species' and r.get('speciesCode')}
     sub_rows = {
         r['speciesCode']: r for r in rows
@@ -147,6 +233,10 @@ def detect_changes(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
         r.get('sciName'): c for c, r in species_rows.items()
         if c not in ours and c not in alias_codes and r.get('sciName')
     }
+    lineage = (
+        _lineage_children(species_rows, rows, previous_rows, ours, alias_codes, manual_parents)
+        if previous_rows or manual_parents else {}
+    )
     changes: list[dict[str, Any]] = []
     consumed_new: set[str] = set()
 
@@ -159,16 +249,29 @@ def detect_changes(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
                 if sub.source == Subspecies.SOURCE_EBIRD and sub.code in species_rows
                 and sub.code not in ours and sub.code not in alias_codes
             }
+            lineage_kids = dict(lineage.get(sp.id, {}))
+            for sub in subs_by_species.get(sp.id, []):
+                # a subspecies we hold now reports as a species we do not hold: that species split off
+                child = (sub_rows.get(sub.code) or {}).get('reportAs')
+                if child and child in species_rows and child != code and child not in ours \
+                        and child not in alias_codes and child not in carved:
+                    lineage_kids[child] = _child_info(species_rows[child], None)
+            carved = {**carved, **lineage_kids}
             if carved:
                 consumed_new.update(carved)
                 children = {code: _child_info(species_rows[code], sp), **carved}
+                sub_map = {c: c for c in carved if c not in lineage_kids}
+                for sub in subs_by_species.get(sp.id, []):
+                    child = (sub_rows.get(sub.code) or {}).get('reportAs')
+                    if child in lineage_kids:
+                        sub_map[sub.code] = child
                 changes.append({
                     'change_type': TaxonomyChange.TYPE_SPLIT,
                     'old_codes': [code], 'new_codes': sorted(children),
                     'report': {
                         'species_id': sp.id, 'name': sp.name, 'name_latin': sp.name_latin,
                         'children': children, 'continuing': code,
-                        'subspecies_map': {c: c for c in carved},
+                        'subspecies_map': sub_map,
                     },
                 })
             latin = species_rows[code].get('sciName') or ''
@@ -207,17 +310,14 @@ def detect_changes(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
             if child and child in species_rows and child != code:
                 sub_map[sub.code] = child
                 child_codes[child] = _child_info(species_rows[child], ours.get(child))
-        # eBird subspecies codes share the species code stem ('marwre' -> 'marwre3', 'marwre5').
-        stem = code.rstrip('0123456789')
-        for sub_code, feed in sub_rows.items():
-            if sub_code.startswith(stem) and sub_code[len(stem):].isdigit() and sub_code not in sub_map:
-                child = feed.get('reportAs')
-                if child and child in species_rows and child != code and child not in ours_by_code_stem(ours, stem):
-                    sub_map[sub_code] = child
-                    child_codes[child] = _child_info(species_rows[child], ours.get(child))
         for other in ours_by_latin.get(sp.name_latin, []):
             if other.id != sp.id and other.code in species_rows:
                 child_codes[other.code] = _child_info(species_rows[other.code], other)
+        for child, info in lineage.get(sp.id, {}).items():
+            child_codes[child] = info
+            for sub in subs_by_species.get(sp.id, []):
+                if (sub_rows.get(sub.code) or {}).get('reportAs') == child:
+                    sub_map[sub.code] = child
         same_new = new_by_latin.get(sp.name_latin)
         if same_new:
             child_codes[same_new] = _child_info(species_rows[same_new], None)

@@ -361,6 +361,8 @@ def _target_table(change: TaxonomyChange) -> list[dict[str, Any]]:
             for chunk in sub.name_latin.split()[2:]:
                 epithets.update(e.strip('[]') for e in chunk.split('/') if e)
         epithets.discard('Group')
+        if len(sp.name_latin.split()) >= 2:
+            epithets.add(sp.name_latin.split()[1])  # 'Tringa semipalmata inornata' -> Tringa inornata
         table.append({'code': code, 'species': sp, 'latin': sp.name_latin, 'epithets': epithets})
     return table
 

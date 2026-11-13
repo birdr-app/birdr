@@ -36,11 +36,15 @@ def fetch_ebird_taxonomy(
     *,
     locale: str = EBIRD_LOCALE_EN,
     categories: str = 'species',
+    version: str | None = None,
     timeout: int = 180,
 ) -> list[dict[str, Any]]:
+    params = {'fmt': 'json', 'locale': locale, 'cat': categories}
+    if version:
+        params['version'] = version  # an older taxonomy release, e.g. '2025'
     response = requests.get(
         EBIRD_TAXONOMY_URL,
-        params={'fmt': 'json', 'locale': locale, 'cat': categories},
+        params=params,
         headers=_ebird_headers(),
         timeout=timeout,
     )

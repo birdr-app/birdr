@@ -34,7 +34,9 @@ class DetectSuccessionTests(TestCase):
             sub_row('marwre5', 'wesmwr1', 'Cistothorus paludicola paludicola'),
         ]
 
-    def test_split_found_through_subspecies_code_stem(self):
+    def test_split_found_through_previously_linked_subspecies(self):
+        for code in ("marwre3", "marwre5"):
+            Subspecies.objects.create(species=self.wren, code=code, name=code)
         ch = [c for c in detect_changes(self.feed()) if c['change_type'] == 'split']
         self.assertEqual(len(ch), 1)
         rep = ch[0]['report']
@@ -52,6 +54,71 @@ class DetectSuccessionTests(TestCase):
         self.assertEqual(ch[0]['change_type'], 'rename')
         self.assertEqual(ch[0]['report']['kind'], 'recode')
         self.assertEqual(ch[0]['report']['species_id'], old.id)
+
+
+class DetectLineageTests(TestCase):
+    """Splits the current feed no longer links, found through the previous release."""
+
+    def prev_willet(self):
+        return [
+            sp_row('willet1', 'Saltmarsh/Prairie Willet', 'Tringa semipalmata'),
+            {**sub_row('willet2', 'willet1', 'Tringa semipalmata semipalmata'), 'category': 'issf'},
+            {**sub_row('willet3', 'willet1', 'Tringa semipalmata inornata'), 'category': 'issf'},
+        ]
+
+    def now_willet(self):
+        return [sp_row('willet2', 'Saltmarsh Willet', 'Tringa semipalmata'),
+                sp_row('willet3', 'Prairie Willet', 'Tringa inornata')]
+
+    def test_child_of_a_recoded_species_is_a_split_not_a_new_species(self):
+        sp = Species.objects.create(name='Saltmarsh Willet', name_latin='Tringa semipalmata', code='willet2')
+        SpeciesAlias.objects.create(code='willet1', species=sp, reason='rename')
+        ch = detect_changes(self.now_willet(), self.prev_willet())
+        self.assertEqual([c['change_type'] for c in ch], ['split'])
+        self.assertEqual(ch[0]['old_codes'], ['willet2'])
+        self.assertEqual(ch[0]['new_codes'], ['willet2', 'willet3'])
+        self.assertEqual(ch[0]['report']['continuing'], 'willet2')
+        self.assertEqual(ch[0]['report']['species_id'], sp.id)
+
+    def test_without_previous_release_the_child_stays_new(self):
+        Species.objects.create(name='Saltmarsh Willet', name_latin='Tringa semipalmata', code='willet2')
+        ch = detect_changes(self.now_willet())
+        self.assertEqual([c['change_type'] for c in ch], ['new'])
+
+    def test_parent_gone_from_feed_splits_into_both(self):
+        sp = Species.objects.create(name='Willet', name_latin='Tringa semipalmata', code='willet1')
+        ch = detect_changes(self.now_willet(), self.prev_willet())
+        self.assertEqual([c['change_type'] for c in ch], ['split'])
+        self.assertEqual(ch[0]['old_codes'], ['willet1'])
+        self.assertEqual(ch[0]['new_codes'], ['willet2', 'willet3'])
+        self.assertEqual(ch[0]['report']['species_id'], sp.id)
+
+    def test_child_with_two_possible_parents_is_left_alone(self):
+        Species.objects.create(name='A', name_latin='Tringa a', code='willet2')
+        Species.objects.create(name='B', name_latin='Tringa b', code='willet1')
+        prev = [sub_row('willet3', 'willet1'), sub_row('willet2', 'willet1')]
+        ch = detect_changes([sp_row('willet2', 'A', 'Tringa a'), sp_row('willet3', 'Prairie Willet', 'Tringa inornata')], prev)
+        self.assertEqual([c['change_type'] for c in ch if c['change_type'] != 'retired'], ['new'])
+
+    def test_manual_parent_names_a_split_the_feed_does_not_show(self):
+        sp = Species.objects.create(name='Mexican Motmot', name_latin='Momotus mexicanus', code='rucmot1')
+        feed = [sp_row('rucmot1', 'Mexican Motmot', 'Momotus mexicanus'),
+                sp_row('rucmot6', 'Guatemalan Motmot', 'Momotus castaneiceps')]
+        self.assertEqual([c['change_type'] for c in detect_changes(feed)], ['new'])
+        ch = detect_changes(feed, manual_parents={'rucmot6': 'rucmot1'})
+        self.assertEqual([c['change_type'] for c in ch], ['split'])
+        self.assertEqual(ch[0]['new_codes'], ['rucmot1', 'rucmot6'])
+        self.assertEqual(ch[0]['report']['species_id'], sp.id)
+
+    def test_trinomial_of_the_child_resolves_through_its_own_epithet(self):
+        parent = Species.objects.create(name='Saltmarsh Willet', name_latin='Tringa semipalmata', code='willet2')
+        child = Species.objects.create(name='Prairie Willet', name_latin='Tringa inornata', code='willet3')
+        change = TaxonomyChange.objects.create(
+            change_type='split', old_codes=['willet2'], new_codes=['willet2', 'willet3'],
+            report={'targets': {'willet2': parent.id, 'willet3': child.id}, 'name_latin': 'Tringa semipalmata'},
+        )
+        from jizz.services.taxonomy_succession import _target_table
+        self.assertEqual(match_taxon('Tringa semipalmata inornata', _target_table(change), 'Tringa semipalmata'), 'willet3')
 
 
 class ApplySuccessionTests(TestCase):
