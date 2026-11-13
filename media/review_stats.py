@@ -27,6 +27,7 @@ LEFT JOIN (
     FROM media_mediareview r
     INNER JOIN media_media vis
         ON vis.id = r.media_id AND vis.hide = FALSE AND vis.type = %s
+        {inner_species_clause}
     GROUP BY r.media_id
 ) r ON r.media_id = m.id
 WHERE m.type = %s AND m.hide = FALSE
@@ -59,32 +60,45 @@ def invalidate_species_media_review_stats() -> None:
 
 
 def _fetch_species_media_review_stats(media_type: str, species_ids=None, source: str = '') -> dict[int, dict]:
-    visible_params = [media_type, media_type]
+    # Placeholders appear in the SQL in this order: inner type, inner species,
+    # outer type, source, outer species.
+    inner_params = [media_type]
+    outer_params = [media_type]
     hidden_params = [media_type]
+    inner_clause = ''
     visible_source_clause = ''
     hidden_source_clause = ''
+    visible_clause = ''
+    hidden_clause = ''
+    if species_ids is not None:
+        species_ids = list(species_ids)
+        if not species_ids:
+            return {}
+        # Also restrict the review subquery, otherwise it aggregates every review
+        # in the table even when only one country's species are asked for.
+        inner_clause = 'AND vis.species_id = ANY(%s)'
+        inner_params.append(species_ids)
     if source:
         # Reviews are only joined onto rows that pass the outer WHERE, so filtering
         # m.source is enough; the inner vis join can stay source-agnostic.
         visible_source_clause = 'AND m.source = %s'
         hidden_source_clause = 'AND source = %s'
-        visible_params.append(source)
+        outer_params.append(source)
         hidden_params.append(source)
     if species_ids is not None:
-        species_ids = list(species_ids)
-        if not species_ids:
-            return {}
         visible_clause = 'AND m.species_id = ANY(%s)'
         hidden_clause = 'AND species_id = ANY(%s)'
-        visible_params.append(species_ids)
+        outer_params.append(species_ids)
         hidden_params.append(species_ids)
-    else:
-        visible_clause = ''
-        hidden_clause = ''
+    visible_params = inner_params + outer_params
 
     with connection.cursor() as cursor:
         cursor.execute(
-            _VISIBLE_STATS_SQL.format(source_clause=visible_source_clause, species_clause=visible_clause),
+            _VISIBLE_STATS_SQL.format(
+                inner_species_clause=inner_clause,
+                source_clause=visible_source_clause,
+                species_clause=visible_clause,
+            ),
             visible_params,
         )
         visible_rows = cursor.fetchall()

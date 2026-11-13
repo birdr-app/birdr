@@ -7,7 +7,7 @@ from urllib.parse import quote
 
 from django.conf import settings
 from django.core.cache import cache
-from django.db.models import Q
+from django.db.models import Exists, OuterRef, Q
 from django.utils.safestring import mark_safe
 
 from jizz.marketing.i18n import (
@@ -25,9 +25,9 @@ from jizz.marketing.i18n import (
 )
 from jizz.marketing.slugs import country_is_indexable
 from jizz.marketing.testimonials import FAQ, TESTIMONIALS
-from jizz.models import Country, Species
+from jizz.models import Country, CountrySpecies, Species
 from jizz.store_ratings import write_review_url
-from media.models import MediaReview
+from media.models import Media, MediaReview
 
 SITE_NAME = 'Motmot'
 SITE_HOME = '/site/'
@@ -491,16 +491,27 @@ def indexable_country_codes() -> list[str]:
 
 
 def public_species_qs():
-    """Species with a slug, public photo, and membership on a real country list."""
+    """Species with a slug, public photo, and membership on a real country list.
+
+    Uses EXISTS rather than joining media and countryspecies and de-duplicating: a
+    species with thousands of photos made that join (and its DISTINCT) take seconds.
+    """
     return (
         Species.objects.filter(
             retired_at__isnull=True,
-            media__type='image',
-            media__hide=False,
-            countryspecies__country_id__in=indexable_country_codes(),
+            slug__isnull=False,
         )
-        .exclude(Q(slug='') | Q(slug__isnull=True))
-        .distinct()
+        .exclude(slug='')
+        .filter(
+            Exists(
+                Media.objects.filter(species=OuterRef('pk'), type='image', hide=False)
+            ),
+            Exists(
+                CountrySpecies.objects.filter(
+                    species=OuterRef('pk'), country_id__in=indexable_country_codes()
+                )
+            ),
+        )
     )
 
 

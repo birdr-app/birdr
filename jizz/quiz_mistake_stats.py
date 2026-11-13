@@ -847,7 +847,6 @@ def get_confused_partners_for_species(
     pairs = (
         Answer.objects.filter(correct=False)
         .exclude(question__species_id=F("answer_id"))
-        .filter(Q(question__species_id=species_id) | Q(answer_id=species_id))
     )
     if cc:
         allowed = _allowed_species_ids_for_country(cc)
@@ -859,8 +858,17 @@ def get_confused_partners_for_species(
             answer_id__in=allowed,
         )
 
+    # Two index-driven queries instead of one with an OR across both tables, which
+    # made Postgres seq-scan jizz_answer and jizz_question for every bird page.
+    # The two sets are disjoint (a row with target == pick is excluded above).
     directed = list(
-        pairs.values("question__species_id", "answer_id").annotate(c=Count("id"))
+        pairs.filter(question__species_id=species_id)
+        .values("question__species_id", "answer_id")
+        .annotate(c=Count("id"))
+    ) + list(
+        pairs.filter(answer_id=species_id)
+        .values("question__species_id", "answer_id")
+        .annotate(c=Count("id"))
     )
     totals: dict[int, int] = defaultdict(int)
     for row in directed:

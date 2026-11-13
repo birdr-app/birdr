@@ -598,15 +598,18 @@ class SpeciesReviewStatsView(APIView):
         source = _review_source_param(request)
         language = (request.query_params.get('language') or '').strip()
 
-        stats = get_species_media_review_stats(media_type, source=source)
         if country_code:
+            # Ask the database for just this country's species; computing stats for
+            # every species and filtering afterwards scanned all media and reviews.
             allowed = set(
                 CountrySpecies.objects.filter(
                     country__code=country_code.upper(),
                     status__in=['native', 'endemic', 'rare'],
                 ).values_list('species_id', flat=True)
             )
-            stats = {species_id: row for species_id, row in stats.items() if species_id in allowed}
+            stats = get_species_media_review_stats(media_type, allowed, source=source)
+        else:
+            stats = get_species_media_review_stats(media_type, source=source)
 
         species_ids = [
             species_id
@@ -655,18 +658,15 @@ class MediaReviewSpeciesListView(APIView):
         source = _review_source_param(request)
         language = (request.query_params.get('language') or '').strip()
 
-        stats = get_species_media_review_stats(media_type, source=source)
         if country_code:
             country_species_ids = set(
                 CountrySpecies.objects.exclude(
                     status__in=['introduced', 'extirpated', 'uncertain', 'unknown']
                 ).filter(country__code=country_code.upper()).values_list('species_id', flat=True)
             )
-            stats = {
-                species_id: row
-                for species_id, row in stats.items()
-                if species_id in country_species_ids
-            }
+            stats = get_species_media_review_stats(media_type, country_species_ids, source=source)
+        else:
+            stats = get_species_media_review_stats(media_type, source=source)
 
         species_ids = species_ids_for_review_level(stats, level)
         if species_id_param:
