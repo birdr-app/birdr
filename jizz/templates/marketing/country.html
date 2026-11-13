@@ -33,6 +33,19 @@
     <a href="/play">{% mt "Open Motmot" %}</a>
   </p>
 </section>
+{% if trip_href %}
+<section>
+  <h2>{% mt "Trip prep for {name}" name=country_name %}</h2>
+  <p>{% mt "Going birding in {name}? Get to know the birds you are likely to meet with photo cards and identification tips, then see what you remember in short quizzes." name=country_name %}</p>
+  <p><a class="btn" href="{{ trip_href }}">{% mt "Start trip prep" %}</a></p>
+  {% if trip_regions %}
+  <p>
+    {% mt "Region packs" %}:
+    {% for r in trip_regions %}<a href="{{ r.href }}">{{ r.name }}</a>{% if not forloop.last %} · {% endif %}{% endfor %}
+  </p>
+  {% endif %}
+</section>
+{% endif %}
 {% if regions %}
 <section>
   <h2>{% mt "Quizzes for regions of {name}" name=country_name %}</h2>

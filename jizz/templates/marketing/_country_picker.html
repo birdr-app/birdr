@@ -7,6 +7,10 @@
       <option value="{{ c.code }}">{% if c.flag %}{{ c.flag }} {% endif %}{{ c.name }}</option>
       {% endfor %}
     </select>
+    <div class="combo" id="picker-combo" hidden>
+      <input type="text" id="picker-input" role="combobox" aria-expanded="false" aria-controls="picker-list" aria-autocomplete="list" autocomplete="off" spellcheck="false" placeholder="{% mt "Search for a country" %}" aria-label="{% mt "Country" %}">
+      <ul class="combo-list" id="picker-list" role="listbox" aria-label="{% mt "Country" %}" data-empty="{% mt "No country found" %}" hidden></ul>
+    </div>
     <select id="picker-region" aria-label="{% mt "Region" %}" hidden>
       <option value="">{% mt "Whole country" %}</option>
     </select>
@@ -21,6 +25,109 @@
   var region = document.getElementById('picker-region');
   var go = document.getElementById('picker-go');
   var touched = false;
+
+  // Searchable combobox over the select's options. The select stays in the page as the
+  // source of truth (and as the fallback without JavaScript); the combobox just drives it.
+  var combo = document.getElementById('picker-combo');
+  var input = document.getElementById('picker-input');
+  var list = document.getElementById('picker-list');
+  var emptyLabel = list.getAttribute('data-empty');
+  var options = Array.prototype.slice.call(country.options, 1).map(function (o) {
+    return { code: o.value, label: o.text, key: fold(o.text) };
+  });
+  var shown = [];
+  var active = -1;
+
+  function fold(text) {
+    // Case- and accent-insensitive, and ignore the flag emoji: "cote" finds Côte d'Ivoire.
+    var t = text.toLowerCase();
+    if (t.normalize) t = t.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    return t.replace(/[^a-z0-9\u3040-\u30ff\u4e00-\u9fff ]+/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+
+  function closeList() {
+    list.hidden = true;
+    input.setAttribute('aria-expanded', 'false');
+    input.removeAttribute('aria-activedescendant');
+    active = -1;
+  }
+
+  function setActive(i) {
+    var items = list.querySelectorAll('li[role="option"]');
+    if (!items.length) return;
+    active = (i + items.length) % items.length;
+    Array.prototype.forEach.call(items, function (li, n) {
+      li.setAttribute('aria-selected', n === active ? 'true' : 'false');
+    });
+    input.setAttribute('aria-activedescendant', items[active].id);
+    items[active].scrollIntoView({ block: 'nearest' });
+  }
+
+  function render(query) {
+    var q = fold(query || '');
+    // Names starting with the query first, then names with a word starting with it.
+    var starts = [], words = [];
+    options.forEach(function (o) {
+      if (!q || o.key.indexOf(q) === 0) starts.push(o);
+      else if (o.key.indexOf(' ' + q) !== -1) words.push(o);
+    });
+    shown = starts.concat(words);
+    list.innerHTML = '';
+    shown.forEach(function (o, n) {
+      var li = document.createElement('li');
+      li.id = 'picker-opt-' + o.code;
+      li.setAttribute('role', 'option');
+      li.setAttribute('aria-selected', 'false');
+      li.textContent = o.label;
+      li.addEventListener('mousedown', function (e) { e.preventDefault(); choose(o); });
+      list.appendChild(li);
+    });
+    if (!shown.length) {
+      var empty = document.createElement('li');
+      empty.className = 'combo-empty';
+      empty.textContent = emptyLabel;
+      list.appendChild(empty);
+    }
+    list.hidden = false;
+    input.setAttribute('aria-expanded', 'true');
+    active = -1;
+    input.removeAttribute('aria-activedescendant');
+    if (q && shown.length) setActive(0);
+  }
+
+  function choose(o) {
+    touched = true;
+    country.value = o.code;
+    input.value = o.label;
+    update();
+    closeList();
+  }
+
+  function syncInput() {
+    var o = country.selectedIndex > 0 ? country.options[country.selectedIndex] : null;
+    input.value = o ? o.text : '';
+  }
+
+  if (combo && list.addEventListener) {
+    country.hidden = true;
+    combo.hidden = false;
+    input.addEventListener('focus', function () { input.select(); render(''); });
+    input.addEventListener('input', function () { render(input.value); });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (list.hidden) render(input.value);
+        setActive(active + (e.key === 'ArrowDown' ? 1 : -1));
+      } else if (e.key === 'Enter') {
+        if (!list.hidden && active > -1) { e.preventDefault(); choose(shown[active]); }
+        else if (!list.hidden && shown.length === 1) { e.preventDefault(); choose(shown[0]); }
+      } else if (e.key === 'Escape') {
+        closeList();
+        syncInput();
+      }
+    });
+    input.addEventListener('blur', function () { closeList(); syncInput(); });
+  }
 
   function update() {
     var entry = data[country.value];
@@ -45,6 +152,7 @@
     if (touched || !code || !data[code]) return false;
     country.value = code;
     update();
+    syncInput();
     return true;
   }
 

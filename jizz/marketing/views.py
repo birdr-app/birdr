@@ -496,6 +496,23 @@ def region_page(request, country: str, slug: str):
     )
 
 
+def _trip_prep_context(code: str, locale: str | None) -> dict:
+    """Trip prep for a country, when a pack is published: its link and its region packs."""
+    from jizz.trips.content import TRIPS, region_ids
+
+    code = (code or '').upper()
+    if code not in TRIPS:
+        return {}
+    lang = locale if locale in TRIPS[code]['languages'] else 'en'
+    return {
+        'trip_href': f'/trips/{code}',
+        'trip_regions': [
+            {'name': TRIPS[r]['name'].get(lang) or TRIPS[r]['name']['en'], 'href': f'/trips/{r}'}
+            for r in region_ids(code)
+        ],
+    }
+
+
 def _country_response(request, country, species_count, *, country_name, path, breadcrumbs, **extra):
     """The quiz page of a country, or of a region with parent_name and parent_href."""
     locale = locale_from_request(request)
@@ -525,6 +542,7 @@ def _country_response(request, country, species_count, *, country_name, path, br
         quiz_href='/start/',
         challenge_href='/journey/intro',
         is_region=is_region,
+        **_trip_prep_context(country.code, locale),
         **extra,
         **stats,
         **store_review_context(),

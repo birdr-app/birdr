@@ -578,6 +578,18 @@ class MarketingPagesTests(TestCase):
             self.assertEqual(_indexable_countries(), countries)
             self.assertEqual(public_species_ids(), ids)
 
+    def test_country_page_links_published_trip_prep(self):
+        co, _ = Country.objects.get_or_create(code='CO', defaults={'name': 'Colombia'})
+        CountrySpecies.objects.get_or_create(country=co, species=self.sparrow)
+        html = self.client.get('/site/countries/colombia/').content.decode()
+        self.assertIn('Trip prep for Colombia', html)
+        self.assertIn('href="/trips/CO"', html)
+        self.assertIn('href="/trips/CO-CARIBBEAN"', html)
+        # No published trip pack for the Netherlands: no trip prep block.
+        nl = self.client.get('/site/countries/netherlands/').content.decode()
+        self.assertNotIn('Trip prep for', nl)
+        self.assertIn('Zoek een land', self.client.get('/nl/site/bird-quiz-by-country/').content.decode())
+
     def test_country_page_stats_from_data_section(self):
         CountrySpecies.objects.filter(country=self.nl).update(status='native')
         game = Game.objects.create(
