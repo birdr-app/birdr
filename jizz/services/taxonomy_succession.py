@@ -572,10 +572,26 @@ def rescore_commonness(
         if sp is None or sid in done:
             continue
         df = load(normalize_st_species_code(sp.code))
+        exclusive_only = False
+        if df is None:
+            # A brand-new species: eBird's data still carries its old, undivided parent. That is
+            # right wherever no other child of the change lives, and unknowable where several do.
+            old_codes = [rep.get('old_code'), *SpeciesAlias.objects.filter(
+                species_id__in=(rep.get('targets') or {}).values()).values_list('code', flat=True)]
+            for old_code in dict.fromkeys(c for c in old_codes if c and c != sp.code):
+                df = load(normalize_st_species_code(old_code))
+                if df is not None:
+                    exclusive_only = True
+                    break
         if df is None:
             stats['no_data'] += 1
             continue
         mine = list(CountrySpecies.objects.filter(species=sp).values_list('country_id', flat=True))
+        if exclusive_only:
+            others = set((rep.get('targets') or {}).values()) - {sid}
+            shared = set(CountrySpecies.objects.filter(species_id__in=others, country_id__in=mine)
+                         .values_list('country_id', flat=True))
+            mine = [c for c in mine if c not in shared]
         rows = 0
         for country in countries_in_regional_stats(df, mine):
             parsed = parse_species_commonness(df, country)
@@ -589,7 +605,8 @@ def rescore_commonness(
             rows += _update_country_species_frequency_one(country, sp.code, freq, pct)
         stats['rows'] += rows
         stats['rescored'] += 1
-        done.add(sid)
+        if not exclusive_only:
+            done.add(sid)  # a stand-in from the parent is tried again once the species has data of its own
     change.report = {**rep, 'commonness_rescored': sorted(done)}
     change.save(update_fields=['report'])
     return stats

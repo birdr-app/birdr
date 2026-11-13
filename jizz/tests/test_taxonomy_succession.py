@@ -214,6 +214,30 @@ class ApplySuccessionTests(TestCase):
         self.assertEqual(again['rescored'], 1)  # only the one that had no data before
         self.assertEqual(CountrySpecies.objects.get(country=self.us, species=west).frequency, 'uncommon')
 
+    def test_new_species_without_data_borrows_the_parent_only_where_it_lives_alone(self):
+        apply_succession(self.change)
+        west = Species.objects.get(code='wesmwr1')
+        CountrySpecies.objects.create(country=self.us, species=west, status='native', frequency='common', frequency_pct=40.0)
+        CountrySpecies.objects.create(country=self.nl, species=west, status='native', frequency='common', frequency_pct=40.0)
+        CountrySpecies.objects.filter(species=self.old).exclude(country=self.us).delete()  # east lives in the US only
+        frames = {'marwre': object(), 'eamwre1': None, 'wesmwr1': None}
+        asked = {}
+
+        def countries(df, mine):
+            asked['mine'] = list(mine)
+            return list(mine)
+
+        with mock.patch('jizz.ebird_st_commonness.countries_in_regional_stats', side_effect=countries), \
+                mock.patch('jizz.ebird_st_commonness.parse_species_commonness',
+                           return_value={'abundance_mean_max': 1.0, 'frequency_pct': 5.0}), \
+                mock.patch('jizz.ebird_st_commonness.classify_from_abundance', return_value=('uncommon', None)):
+            stats = rescore_commonness(self.change, access_key='k', load=lambda code: frames.get(code))
+        self.assertEqual(stats['no_data'], 0)
+        self.assertEqual(CountrySpecies.objects.get(country=self.nl, species=west).frequency, 'uncommon')   # alone there
+        self.assertEqual(CountrySpecies.objects.get(country=self.us, species=west).frequency, 'common')     # shared: untouched
+        self.change.refresh_from_db()
+        self.assertEqual(self.change.report.get('commonness_rescored') or [], [])  # retried once real data exists
+
     def test_unverified_countries_stay_pending(self):
         apply_succession(self.change)
         stats = reconcile_countries(self.change, fetch=lambda c: None)
