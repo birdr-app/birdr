@@ -160,3 +160,29 @@ class LumpedFormAdminTests(TestCase):
         self.assertContains(page, '1 images')
         form = Subspecies.objects.get(code='hoared')
         self.assertEqual(self.client.get(f'/admin/media/media/?subspecies__id__exact={form.pk}').status_code, 200)
+
+
+class RefreshSpeciesNamesTests(TestCase):
+    def test_names_of_split_and_lumped_species_are_refreshed_per_language(self):
+        from jizz.models import Language, SpeciesName, TaxonomyChange
+        from jizz.services.taxonomy_sync import refresh_species_names
+
+        nl = Language.objects.create(code='nl', name='Dutch')
+        keep = Species.objects.create(name='Saltmarsh Willet', name_latin='Tringa semipalmata', code='willet2')
+        kid = Species.objects.create(name='Prairie Willet', name_latin='Tringa inornata', code='willet3')
+        lump = Species.objects.create(name='Survivor', name_latin='Genus survivor', code='survvr')
+        other = Species.objects.create(name='Other', name_latin='Genus other', code='other1')
+        SpeciesName.objects.create(species=keep, language=nl, name='Willet')
+        TaxonomyChange.objects.create(change_type='split', old_codes=['willet2'], new_codes=['willet2', 'willet3'],
+                                      status='applied', report={'targets': {'willet2': keep.id, 'willet3': kid.id}})
+        TaxonomyChange.objects.create(change_type='lump', old_codes=['x'], new_codes=['survvr'], status='applied',
+                                      report={'into_species_id': lump.id})
+        feed = {'nl': [
+            {'speciesCode': 'willet2', 'comName': 'Zoutmoeras-Willet'}, {'speciesCode': 'willet3', 'comName': 'Prairie-Willet'},
+            {'speciesCode': 'survvr', 'comName': 'Overlever'}, {'speciesCode': 'other1', 'comName': 'Ander'},
+        ]}
+        stats = refresh_species_names(fetch=lambda locale, categories: feed[locale])
+        self.assertEqual((stats['created'], stats['updated']), (2, 1))
+        self.assertEqual(SpeciesName.objects.get(species=keep, language=nl).name, 'Zoutmoeras-Willet')
+        self.assertEqual(SpeciesName.objects.get(species=kid, language=nl).name, 'Prairie-Willet')
+        self.assertFalse(SpeciesName.objects.filter(species=other).exists())

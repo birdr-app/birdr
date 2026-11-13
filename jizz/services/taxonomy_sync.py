@@ -589,6 +589,58 @@ def apply_change(change: TaxonomyChange, version: str = '') -> dict[str, Any]:
     raise ValueError(f'{change.change_type} changes are not applied automatically')
 
 
+def affected_species_ids() -> set[int]:
+    """Live species that the applied lumps, splits, recodes and renames left standing (names to refresh)."""
+    ids: set[int] = set()
+    for change in TaxonomyChange.objects.filter(status=TaxonomyChange.STATUS_APPLIED):
+        rep = change.report or {}
+        if change.change_type == TaxonomyChange.TYPE_LUMP:
+            ids.add(rep.get('into_species_id'))
+        else:
+            ids.update((rep.get('targets') or {}).values())
+            ids.add(rep.get('survivor_id') or rep.get('species_id'))
+    return {i for i in ids if i}
+
+
+def refresh_species_names(species_ids: Iterable[int] | None = None, *, fetch=None) -> dict[str, int]:
+    """
+    Pull the eBird common names (every app language) for the given species into SpeciesName.
+    Defaults to everything touched by applied lumps/splits/renames, so survivors carry their new
+    names and the species a split created get theirs. Names eBird has no row for are left alone.
+    """
+    from jizz.models import Language, SpeciesName
+    from jizz.services.taxonomy_texts import fetch_ebird_taxonomy
+
+    fetch = fetch or fetch_ebird_taxonomy
+    ids = set(affected_species_ids() if species_ids is None else species_ids)
+    species_by_code = {s.code: s for s in Species.objects.filter(id__in=ids, retired_at__isnull=True)}
+    stats = {'languages': 0, 'created': 0, 'updated': 0, 'unchanged': 0, 'failed_languages': 0}
+    for lang in Language.objects.all():
+        try:
+            rows = fetch(locale=lang.code, categories='species')
+        except Exception:  # one unsupported locale must not stop the rest
+            stats['failed_languages'] += 1
+            continue
+        stats['languages'] += 1
+        have = {n.species_id: n for n in SpeciesName.objects.filter(language=lang, species_id__in=[s.id for s in species_by_code.values()])}
+        for row in rows:
+            sp = species_by_code.get(row.get('speciesCode'))
+            name = row.get('comName')
+            if sp is None or not name:
+                continue
+            existing = have.get(sp.id)
+            if existing is None:
+                SpeciesName.objects.create(species=sp, language=lang, name=name)
+                stats['created'] += 1
+            elif existing.name != name:
+                existing.name = name
+                existing.save(update_fields=['name'])
+                stats['updated'] += 1
+            else:
+                stats['unchanged'] += 1
+    return stats
+
+
 AUTO_TYPES = (TaxonomyChange.TYPE_LUMP, TaxonomyChange.TYPE_SPLIT, TaxonomyChange.TYPE_RENAME)
 
 

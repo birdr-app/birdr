@@ -9,6 +9,7 @@ from jizz.services.taxonomy_sync import (
     fetch_latest_taxonomy_version,
     fetch_previous_taxonomy_version,
     import_subspecies,
+    refresh_species_names,
     record_changes,
 )
 from jizz.services.taxonomy_succession import finish_successions
@@ -34,9 +35,15 @@ class Command(BaseCommand):
         parser.add_argument('--split-from', action='append', default=[], metavar='NEW=PARENT',
                             help='Name a split eBird data does not show: NEW species code is a child of our '
                                  'species PARENT (code). Repeatable.')
+        parser.add_argument('--refresh-names', action='store_true',
+                            help='Only refresh the translated names (SpeciesName) of every species touched by '
+                                 'an applied lump, split, recode or rename, then stop.')
         parser.add_argument('--dry-run', action='store_true', help='Report only, write nothing.')
 
     def handle(self, *args, **options):
+        if options['refresh_names']:
+            self.stdout.write(f'names: {refresh_species_names()}')
+            return
         dry = options['dry_run']
         prefix = '[dry-run] ' if dry else ''
         version = fetch_latest_taxonomy_version()
@@ -65,6 +72,8 @@ class Command(BaseCommand):
         self.stdout.write(f'subspecies: {import_subspecies(rows)}')
         if options['apply'] and not options['skip_network']:
             self.stdout.write(f'follow-up: {finish_successions(token=(settings.EBIRD_API_TOKEN or ""), classify_limit=options["classify_limit"], collect=not options["no_collect_media"])}')
+        if options['apply'] and not options['skip_network']:
+            self.stdout.write(f'names: {refresh_species_names()}')
         if tv:
             tv.summary = {'rows': len(rows), 'detected': counts}
             tv.save(update_fields=['summary'])
