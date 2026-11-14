@@ -8,7 +8,8 @@
         "nl": "Meeuwen, Sterns en Schaarbekken"
       },
       "species": [
-        "roster"
+        "roster",
+        "ribgul"
       ],
       "endemics": []
     },
@@ -52,6 +53,34 @@
         "comcha16",
         "eurbul1"
       ]
+    },
+    {
+      "slug": "waterfowl",
+      "name": {
+        "en": "Waterfowl",
+        "nl": "Watervogels"
+      },
+      "species": [
+        "ambduc",
+        "amewig",
+        "buwtea"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "shorebirds",
+      "name": {
+        "en": "Shorebirds",
+        "nl": "Steltlopers"
+      },
+      "species": [
+        "lesyel",
+        "pecsan",
+        "semsan",
+        "killde",
+        "amgplo"
+      ],
+      "endemics": []
     }
   ],
   "first_day": [],
@@ -89,6 +118,40 @@
         "corshe1",
         "litshe1",
         "roster"
+      ]
+    },
+    {
+      "slug": "azores-american-gull-ducks",
+      "title": {
+        "en": "azores-american-gull-ducks",
+        "nl": "azores-american-gull-ducks"
+      },
+      "groups": [
+        "gulls-terns-and-skimmers",
+        "waterfowl"
+      ],
+      "species": [
+        "ribgul",
+        "ambduc",
+        "amewig",
+        "buwtea"
+      ]
+    },
+    {
+      "slug": "azores-american-waders",
+      "title": {
+        "en": "azores-american-waders",
+        "nl": "azores-american-waders"
+      },
+      "groups": [
+        "shorebirds"
+      ],
+      "species": [
+        "lesyel",
+        "pecsan",
+        "semsan",
+        "killde",
+        "amgplo"
       ]
     }
   ],

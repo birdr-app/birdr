@@ -1,0 +1,22 @@
+{
+  "code": "pecsan",
+  "name": {
+    "en": "Pectoral Sandpiper",
+    "nl": "Gestreepte strandloper"
+  },
+  "latin": "Calidris melanotos",
+  "look_for": [
+    {
+      "en": "Streaked **breast** ends sharply at a white belly",
+      "nl": "Gestreepte **borst** scherp afgesneden van witte buik"
+    },
+    {
+      "en": "Yellowish **legs** and a pale-based **bill**",
+      "nl": "Geelachtige **poten** en een lichte **snavelbasis**"
+    },
+    {
+      "en": "Long thin **neck**, small head, upright stance",
+      "nl": "Lange dunne **hals**, kleine kop, rechtop"
+    }
+  ]
+}

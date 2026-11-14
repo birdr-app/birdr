@@ -1,0 +1,22 @@
+{
+  "code": "ambduc",
+  "name": {
+    "en": "American Black Duck",
+    "nl": "Amerikaanse zwarte eend"
+  },
+  "latin": "Anas rubripes",
+  "look_for": [
+    {
+      "en": "Dark brown body, paler grey-brown **head**",
+      "nl": "Donkerbruin lijf, lichtere grijsbruine **kop**"
+    },
+    {
+      "en": "Yellow-olive **bill** and orange legs",
+      "nl": "Geelgroene **snavel** en oranje poten"
+    },
+    {
+      "en": "Purple **speculum** with no white edges",
+      "nl": "Paarse **spiegel** zonder witte randen"
+    }
+  ]
+}
