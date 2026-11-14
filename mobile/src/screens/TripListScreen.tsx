@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { fetchTrips, tripLanguage, type TripSummary } from '../api/trip';
+import { fetchTrips, tripLanguage, tripRows, type TripSummary } from '../api/trip';
 import { TripLoading, tripStyles } from '../components/TripParts';
 import { TripRequestForm } from '../components/TripRequestForm';
 import { UnderConstruction } from '../components/UnderConstruction';
@@ -38,18 +38,18 @@ export function TripListScreen() {
     >
       <Text style={tripStyles.body}>{t('trip_list_intro')}</Text>
       <UnderConstruction feature="Trip prep" lang={lang} />
-      {trips.filter((trip) => !trip.parent).map((trip) => (
+      {tripRows(trips, lang).map(({ key, trip, code, label }) => (
         <TouchableOpacity
-          key={trip.country}
+          key={key}
           style={styles.trip}
           onPress={() => navigation.navigate('TripHome', { country: trip.country })}
           accessibilityRole="button"
-          accessibilityLabel={trip.name}
-          testID={`trip.list.${trip.country}`}
+          accessibilityLabel={label}
+          testID={`trip.list.${key.replace(':', '.')}`}
         >
-          <Text style={styles.flag}>{tripFlag(trip.country)}</Text>
+          <Text style={styles.flag}>{tripFlag(code)}</Text>
           <View style={tripStyles.flex}>
-            <Text style={styles.name}>{trip.name}</Text>
+            <Text style={styles.name}>{label}</Text>
             <Text style={tripStyles.small}>
               {t('trip_list_counts', { species: trip.species_count, endemics: trip.endemic_count })}
             </Text>

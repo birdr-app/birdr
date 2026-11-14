@@ -59,6 +59,8 @@ export type TripSummary = {
   endemic_count: number;
   group_count: number;
   languages: string[];
+  /** The countries of a trip over several (Iberia, Baltics): the overview shows a row for each. */
+  countries?: { code: string; name: string }[];
   /** A region pack names the country trip it adds to (e.g. CR for CR-CARIBBEAN). */
   parent?: string | null;
   parent_name?: string | null;
@@ -97,6 +99,25 @@ export type TripProgress = {
 };
 
 export type TripAnswer = { species_id: number; answer_id: number; media_id: number | null };
+
+/** One row of the trip overview: a country, with its trip (Spain – Iberia and Portugal – Iberia share one). */
+export type TripRow = { key: string; trip: TripSummary; code: string; label: string };
+
+/** The overview focuses on countries: a trip over several countries gets a row per country,
+ *  labelled "Spain – Iberia". Rows are sorted by label, ignoring case and accents. */
+export function tripRows(trips: TripSummary[], lang: string): TripRow[] {
+  const rows: TripRow[] = [];
+  for (const trip of trips.filter((t) => !t.parent)) {
+    if (trip.countries && trip.countries.length > 1) {
+      for (const c of trip.countries) {
+        rows.push({ key: `${trip.country}:${c.code}`, trip, code: c.code, label: `${c.name} – ${trip.name}` });
+      }
+    } else {
+      rows.push({ key: trip.country, trip, code: trip.country, label: trip.name });
+    }
+  }
+  return rows.sort((a, b) => a.label.localeCompare(b.label, lang, { sensitivity: 'base' }));
+}
 
 export async function fetchTrips(lang: string): Promise<TripSummary[]> {
   const res = await fetch(apiUrl(`/api/trips/?lang=${encodeURIComponent(lang)}`));

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { countryCodeToFlag } from '../../api/birdrJourney';
 import { unitKnown } from '../../core/trip-quiz';
-import { fetchTrips, fetchTripProgress, loadTripState, updateTripState, type TripRegion, type TripSummary, type TripUnit } from '../../api/trip';
+import { fetchTrips, fetchTripProgress, loadTripState, tripRows, updateTripState, type TripRegion, type TripSummary, type TripUnit } from '../../api/trip';
 import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
 import { FoldedAbout, ProgressRing, TripBackLink, TripLoading, UnitRow } from './parts';
@@ -43,9 +43,9 @@ export function TripListPage() {
             {t('trip_list_intro', "Going abroad? Learn the birds before you go: first the kinds of birds, then the species, group by group. Birds you already know from other games count straight away.")}
           </Text>
           <UnderConstruction feature="Trip prep" lang={lang} />
-          {trips.filter((trip) => !trip.parent).map((trip) => (
+          {tripRows(trips, lang).map(({ key, trip, code, label }) => (
             <Button
-              key={trip.country}
+              key={key}
               variant="outline"
               height="auto"
               py={3}
@@ -58,10 +58,10 @@ export function TripListPage() {
               onClick={() => navigate(`/trips/${trip.country}`)}
             >
               <Flex align="center" gap={3} w="full" textAlign="left">
-                <Text fontSize="3xl">{countryCodeToFlag(trip.country)}</Text>
+                <Text fontSize="3xl">{countryCodeToFlag(code)}</Text>
                 <Box flex={1}>
                   <Text fontSize="lg" fontWeight="700" color="primary.800">
-                    {trip.name}
+                    {label}
                   </Text>
                   <Text fontSize="sm" color="primary.700">
                     {[

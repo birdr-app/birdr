@@ -111,6 +111,19 @@ def _media_rows(ids) -> dict[int, dict]:
     return rows
 
 
+def country_rows(country: str, lang: str) -> list[dict]:
+    """The countries of a multi-country trip (Iberia: Spain and Portugal), named in the reader's
+    language, so the overview can show one row per country. Empty for a single-country trip."""
+    codes = trip_countries(country)
+    if len(codes) < 2:
+        return []
+    from jizz.marketing.local_names import country_display_name
+    from jizz.models import Country
+
+    known = {c.code: c for c in Country.objects.filter(code__in=codes)}
+    return [{'code': code, 'name': country_display_name(known.get(code) or {'code': code, 'name': code}, lang)} for code in codes]
+
+
 def trip_summary(country: str, lang: str) -> dict:
     files = _files(country)
     units = files['units']
@@ -124,6 +137,7 @@ def trip_summary(country: str, lang: str) -> dict:
         'lookalike_count': len(files['lookalikes']),
         'group_count': len(units['groups']),
         'languages': list(meta['languages']),
+        'countries': country_rows(country, lang),
         # A region pack names its country trip; the country trip lists its packs in trip_payload.
         'parent': parent_trip(country),
         'parent_name': text(TRIPS[parent_trip(country)]['name'], lang) if parent_trip(country) in TRIPS else None,

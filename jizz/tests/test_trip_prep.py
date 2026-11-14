@@ -117,6 +117,24 @@ class IberiaTripTestCase(SimpleTestCase):
         self.assertNotIn('ES', TRIPS)
 
 
+class TripCountryRowsTestCase(TestCase):
+    """The overview shows a row per country for a trip over several (Iberia, the Baltics)."""
+
+    def test_multi_country_trip_lists_its_countries_in_the_readers_language(self):
+        from jizz.trips.api import country_rows
+
+        Country.objects.get_or_create(code='ES', defaults={'name': 'Spain'})
+        Country.objects.get_or_create(code='PT', defaults={'name': 'Portugal'})
+        self.assertEqual(country_rows('IBERIA', 'en'), [{'code': 'ES', 'name': 'Spain'}, {'code': 'PT', 'name': 'Portugal'}])
+        self.assertEqual([c['name'] for c in country_rows('IBERIA', 'nl')], ['Spanje', 'Portugal'])
+
+    def test_single_country_trip_has_no_rows(self):
+        from jizz.trips.api import country_rows
+
+        self.assertEqual(country_rows('LK', 'en'), [])
+        self.assertEqual(country_rows('IBERIA-CANARIES', 'en'), [])
+
+
 class TripFilesTestCase(SimpleTestCase):
     """Every country folder with a units.json must be complete before it ships."""
 
