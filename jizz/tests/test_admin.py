@@ -243,6 +243,27 @@ class AdminSpeciesCustomUrlsTestCase(TestCase):
         )
         mock_get_species_media.assert_called_once_with(self.species)
 
+    @patch('jizz.admin.get_species_media')
+    def test_get_media_on_retired_species_says_media_went_to_survivor(self, mock_get_species_media):
+        from django.contrib.messages import get_messages
+        from django.utils import timezone
+        survivor = Species.objects.create(name='Scopoli', name_latin='Erithacus', code='SCO01')
+        self.species.retired_at = timezone.now()
+        self.species.merged_into = survivor
+        self.species.save()
+        mock_get_species_media.return_value = {'image': [{
+            'url': 'https://example.com/a.jpg', 'link': 'https://example.com/a',
+            'contributor': 'x', 'copyright_text': '', 'source': 'gbif', 'type': 'image',
+        }], 'video': [], 'audio': []}
+        url = reverse('admin:get-media', args=(self.species.pk,))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(survivor.media.count(), 1)
+        self.assertEqual(self.species.media.count(), 0)
+        texts = [str(m) for m in get_messages(response.wsgi_request)]
+        self.assertTrue(any('retired and merged into' in t and 'Scopoli' in t for t in texts))
+        self.assertTrue(any('Found 1 images' in t for t in texts))
+
 
 class AdminSpeciesCompareViewTestCase(TestCase):
     """Species admin compare view (GET shows form; POST with missing data redirects)."""

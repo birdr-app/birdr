@@ -970,7 +970,19 @@ class SpeciesAdmin(admin.ModelAdmin):
                         copyright_standardized=cc[0],
                         non_commercial_only=cc[1],
                     )
-        counted = store_species.media.filter(subspecies=form) if form else species.media
+        if store_species != species:
+            # Retired: the media was saved on the survivor, so say so instead of reporting 0 on this page.
+            survivor_url = reverse('admin:jizz_species_change', args=(store_species.pk,))
+            messages.add_message(
+                request, messages.WARNING,
+                format_html(
+                    '{} is retired and merged into <a href="{}">{}</a>: the media found by this search '
+                    'was saved there, not on this species. After a split, run Get media on the '
+                    'successor species instead.',
+                    species.name, survivor_url, store_species.name,
+                ),
+            )
+        counted = store_species.media.filter(subspecies=form) if form else store_species.media
         image_count = counted.filter(type='image').count()
         video_count = counted.filter(type='video').count()
         audio_count = counted.filter(type='audio').count()
