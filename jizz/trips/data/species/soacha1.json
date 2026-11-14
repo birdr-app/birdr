@@ -1,0 +1,22 @@
+{
+  "code": "soacha1",
+  "name": {
+    "en": "Southern Anteater-Chat",
+    "nl": "Kaapse miertapuit"
+  },
+  "latin": "Myrmecocichla formicivora",
+  "look_for": [
+    {
+      "en": "Plain sooty brown, male almost black",
+      "nl": "Egaal roetbruin, mannetje bijna zwart"
+    },
+    {
+      "en": "White patches in the **wings** in flight",
+      "nl": "Witte vlekken in de **vleugels** in de vlucht"
+    },
+    {
+      "en": "Perches on termite mounds, drops onto insects",
+      "nl": "Zit op termietenheuvels en duikt op insecten"
+    }
+  ]
+}

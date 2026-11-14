@@ -1,0 +1,22 @@
+{
+  "code": "miswoo1",
+  "name": {
+    "en": "Middle Spotted Woodpecker",
+    "nl": "Middelste bonte specht"
+  },
+  "latin": "Dendrocoptes medius",
+  "look_for": [
+    {
+      "en": "Red **crown**, paler than Great Spotted",
+      "nl": "Rode **kruin**, lichter dan grote bonte specht"
+    },
+    {
+      "en": "Streaked **flanks**, pink-red under the tail",
+      "nl": "Gestreepte **flanken**, roze-rood onder de staart"
+    },
+    {
+      "en": "Short, slim **bill**; calls more than it drums",
+      "nl": "Korte, slanke **snavel**; roept meer dan hij trommelt"
+    }
+  ]
+}

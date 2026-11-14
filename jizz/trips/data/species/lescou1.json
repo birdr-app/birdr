@@ -1,0 +1,22 @@
+{
+  "code": "lescou1",
+  "name": {
+    "en": "Lesser Coucal",
+    "nl": "Bengaalse spoorkoekoek"
+  },
+  "latin": "Centropus bengalensis",
+  "look_for": [
+    {
+      "en": "Slim coucal, chestnut **wings**, black **head**",
+      "nl": "Slanke spoorkoekoek, kastanjebruine **vleugels**, zwarte **kop**"
+    },
+    {
+      "en": "Non-breeding: streaky buff-brown, pale **eyebrow**",
+      "nl": "Buiten broedtijd gestreept bruinbeige, bleke **wenkbrauwstreep**"
+    },
+    {
+      "en": "Climbs grass stems in rank grassland",
+      "nl": "Klimt langs grashalmen in hoog gras"
+    }
+  ]
+}

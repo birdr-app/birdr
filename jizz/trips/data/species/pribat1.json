@@ -1,0 +1,22 @@
+{
+  "code": "pribat1",
+  "name": {
+    "en": "Pririt Batis",
+    "nl": "Priritvliegenvanger"
+  },
+  "latin": "Batis pririt",
+  "look_for": [
+    {
+      "en": "Male: broad black **breast** band, grey-speckled **flanks**",
+      "nl": "Mannetje: brede zwarte **borstband**, grijsgespikkelde **flanken**"
+    },
+    {
+      "en": "Female: warm buff **throat** and **breast**, white **wing** bar",
+      "nl": "Vrouwtje: warm bruingele **keel** en **borst**, witte **vleugelstreep**"
+    },
+    {
+      "en": "Flits between thorn trees in dry country",
+      "nl": "Fladdert tussen doornbomen in droog struikland"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "grygab1",
+  "name": {
+    "en": "Grey Go-away-bird",
+    "nl": "Vale toerako"
+  },
+  "latin": "Crinifer concolor",
+  "look_for": [
+    {
+      "en": "Grey bird with a long pointed **crest**",
+      "nl": "Grijze vogel met een lange puntige **kuif**"
+    },
+    {
+      "en": "Long grey **tail**, clumsy flight between trees",
+      "nl": "Lange grijze **staart**, onhandige vlucht tussen bomen"
+    },
+    {
+      "en": "Loud nasal 'go-away' call from treetops",
+      "nl": "Luid nasaal 'go-away' geroep uit boomtoppen"
+    }
+  ]
+}

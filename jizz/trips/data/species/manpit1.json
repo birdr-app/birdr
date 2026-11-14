@@ -1,0 +1,22 @@
+{
+  "code": "manpit1",
+  "name": {
+    "en": "Mangrove Pitta",
+    "nl": "Mangrovepitta"
+  },
+  "latin": "Pitta megarhyncha",
+  "look_for": [
+    {
+      "en": "Much heavier **bill** than Blue-winged Pitta",
+      "nl": "Veel zwaardere **snavel** dan de blauwvleugelpitta"
+    },
+    {
+      "en": "Buff **crown**, black eye-stripe, white **chin**",
+      "nl": "Okerkleurige **kruin**, zwarte **oogstreep**, witte **kin**"
+    },
+    {
+      "en": "Pale buff **belly**, red **vent**; hops on mangrove mud",
+      "nl": "Lichte okerkleurige **buik**, rode onderstaartdekveren; hupt over mangrovemodder"
+    }
+  ]
+}

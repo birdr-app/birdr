@@ -1,0 +1,22 @@
+{
+  "code": "chtsta2",
+  "name": {
+    "en": "Chestnut-tailed Starling",
+    "nl": "Grijskopspreeuw"
+  },
+  "latin": "Sturnia malabarica",
+  "look_for": [
+    {
+      "en": "Pale grey **head** with fine pale streaks",
+      "nl": "Lichtgrijze **kop** met fijne lichte streepjes"
+    },
+    {
+      "en": "Rusty-chestnut **breast** and **belly**",
+      "nl": "Roestbruine **borst** en **buik**"
+    },
+    {
+      "en": "Grey **back**, yellow **bill** with blue base",
+      "nl": "Grijze **rug**, gele **snavel** met blauwe basis"
+    }
+  ]
+}

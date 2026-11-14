@@ -1,0 +1,22 @@
+{
+  "code": "puctur2",
+  "name": {
+    "en": "Purple-crested Turaco",
+    "nl": "Purperkuiftoerako"
+  },
+  "latin": "Gallirex porphyreolophus",
+  "look_for": [
+    {
+      "en": "Dark purple **crest** on a green **head**",
+      "nl": "Donkerpaarse **kuif** op een groene **kop**"
+    },
+    {
+      "en": "Crimson **wings** flash in flight",
+      "nl": "Karmozijnrode **vleugels** flitsen op in de vlucht"
+    },
+    {
+      "en": "Loud barking calls, runs along branches",
+      "nl": "Luid blaffend geroep, rent over takken"
+    }
+  ]
+}

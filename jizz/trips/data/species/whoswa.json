@@ -1,0 +1,22 @@
+{
+  "code": "whoswa",
+  "name": {
+    "en": "Whooper Swan",
+    "nl": "Wilde zwaan"
+  },
+  "latin": "Cygnus cygnus",
+  "look_for": [
+    {
+      "en": "Yellow wedge on the **bill**, black tip",
+      "nl": "Gele wig op de **snavel**, zwarte punt"
+    },
+    {
+      "en": "Long straight neck, flat **back**",
+      "nl": "Lange rechte hals, vlakke **rug**"
+    },
+    {
+      "en": "Larger than Bewick's, loud bugling call",
+      "nl": "Groter dan kleine zwaan, luide trompetroep"
+    }
+  ]
+}

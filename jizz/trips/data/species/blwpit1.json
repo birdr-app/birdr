@@ -1,0 +1,22 @@
+{
+  "code": "blwpit1",
+  "name": {
+    "en": "Blue-winged Pitta",
+    "nl": "Blauwvleugelpitta"
+  },
+  "latin": "Pitta moluccensis",
+  "look_for": [
+    {
+      "en": "Green **back**, bright blue **shoulder** and **rump**",
+      "nl": "Groene **rug**, felblauwe **schouder** en **stuit**"
+    },
+    {
+      "en": "Black eye-stripe, buff **eyebrow**, dark **crown**",
+      "nl": "Zwarte **oogstreep**, okerkleurige **wenkbrauwstreep**, donkere **kruin**"
+    },
+    {
+      "en": "Buff **belly**, red **vent**; white **wing** patch in flight",
+      "nl": "Okerkleurige **buik**, rode onderstaartdekveren; witte vleugelvlek in vlucht"
+    }
+  ]
+}

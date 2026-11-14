@@ -1,0 +1,22 @@
+{
+  "code": "moipig1",
+  "name": {
+    "en": "Mountain Imperial-Pigeon",
+    "nl": "Indische muskaatduif"
+  },
+  "latin": "Ducula badia",
+  "look_for": [
+    {
+      "en": "Large pigeon, maroon-brown **back** and **wings**",
+      "nl": "Grote duif, kastanjebruine **rug** en **vleugels**"
+    },
+    {
+      "en": "Vinous-grey **head** and **underparts**, white **throat**",
+      "nl": "Wijnrode grijze **kop** en **onderzijde**, witte **keel**"
+    },
+    {
+      "en": "Dark **tail** with a pale grey band",
+      "nl": "Donkere **staart** met een bleekgrijze band"
+    }
+  ]
+}

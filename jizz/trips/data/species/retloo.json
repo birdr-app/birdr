@@ -1,0 +1,22 @@
+{
+  "code": "retloo",
+  "name": {
+    "en": "Red-throated Diver",
+    "nl": "Roodkeelduiker"
+  },
+  "latin": "Gavia stellata",
+  "look_for": [
+    {
+      "en": "Thin **bill** tilted slightly upwards",
+      "nl": "Dunne **snavel**, licht omhoog gericht"
+    },
+    {
+      "en": "Summer: red **throat**, grey head",
+      "nl": "Zomer: rode **keel**, grijze kop"
+    },
+    {
+      "en": "Winter: pale face, **back** speckled white",
+      "nl": "Winter: lichte kop, **rug** wit gespikkeld"
+    }
+  ]
+}

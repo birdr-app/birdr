@@ -1,0 +1,22 @@
+{
+  "code": "rebmer",
+  "name": {
+    "en": "Red-breasted Merganser",
+    "nl": "Middelste zaagbek"
+  },
+  "latin": "Mergus serrator",
+  "look_for": [
+    {
+      "en": "Male: shaggy **crest**, green head, rusty breast",
+      "nl": "Woerd: slordige **kuif**, groene kop, roestkleurige borst"
+    },
+    {
+      "en": "Thin red **bill**, white collar",
+      "nl": "Dunne rode **snavel**, witte halsband"
+    },
+    {
+      "en": "Female: untidy crest, throat fades into neck",
+      "nl": "Eend: slordige kuif, keel loopt vloeiend over in de hals"
+    }
+  ]
+}

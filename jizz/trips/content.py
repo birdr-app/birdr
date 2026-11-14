@@ -71,6 +71,9 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'parent': 'ES',
     },
+    'TH': {'name': {'en': 'Thailand', 'nl': 'Thailand'}, 'languages': ('en', 'nl')},
+    'ZA': {'name': {'en': 'South Africa', 'nl': 'Zuid-Afrika'}, 'languages': ('en', 'nl')},
+    'KH': {'name': {'en': 'Cambodia', 'nl': 'Cambodja'}, 'languages': ('en', 'nl')},
     'CO': {'name': {'en': 'Colombia', 'nl': 'Colombia'}, 'languages': ('en', 'nl')},
     'CO-CARIBBEAN': {
         'name': {'en': 'Caribbean coast and Santa Marta', 'nl': 'Caribische kust en Santa Marta'},
@@ -117,6 +120,11 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'parent': 'CR',
     },
+    'BALTICS': {
+        'name': {'en': 'Baltics', 'nl': 'Baltische staten'},
+        'languages': ('en', 'nl'),
+        'countries': ['EE', 'LV', 'LT'],
+    },
 }
 
 LANGUAGES = ('en', 'nl')
@@ -125,6 +133,12 @@ LANGUAGES = ('en', 'nl')
 def db_country(trip: str) -> str:
     """The country behind a trip id: ``CR`` for ``CR`` and for the region pack ``CR-CARIBBEAN``."""
     return trip.upper().split('-')[0]
+
+
+def trip_countries(trip: str) -> list[str]:
+    """The countries whose birds a trip covers: one, except for a trip that spans several
+    (``BALTICS`` lists ``countries`` in ``TRIPS``)."""
+    return list(TRIPS.get(trip.upper(), {}).get('countries') or [db_country(trip)])
 
 
 def is_region(trip: str) -> bool:
@@ -238,7 +252,7 @@ def scope_species(country: str) -> list[ScopeSpecies]:
         wanted = Q(species__code__in=scope['add'])
         own = set(parent_codes(country))
         rows = list(
-            CountrySpecies.objects.filter(country_id=db_country(country))
+            CountrySpecies.objects.filter(country_id__in=trip_countries(country))
             .filter(wanted)
             .exclude(species__code__in=list(scope['drop']) + sorted(own))
             .select_related('species', 'species__species_group')
@@ -246,11 +260,22 @@ def scope_species(country: str) -> list[ScopeSpecies]:
     else:
         regular = Q(status__in=('native', 'introduced'), frequency__in=REGULAR_FREQUENCIES) | Q(status='endemic')
         rows = list(
-            CountrySpecies.objects.filter(country_id=db_country(country))
+            CountrySpecies.objects.filter(country_id__in=trip_countries(country))
             .filter(regular | Q(species__code__in=scope['add']))
             .exclude(species__code__in=scope['drop'])
             .select_related('species', 'species__species_group')
         )
+
+    # A trip over several countries: a bird on more than one list counts once, at its commonest.
+    best: dict[int, object] = {}
+    for cs in rows:
+        cur = best.get(cs.species_id)
+        if cur is None or (FREQUENCY_RANK.get(cs.frequency, 99), -(cs.frequency_pct or 0)) < (
+            FREQUENCY_RANK.get(cur.frequency, 99),
+            -(cur.frequency_pct or 0),
+        ):
+            best[cs.species_id] = cs
+    rows = list(best.values())
 
     family_group = {}
     family_ids = {cs.species.taxonomic_family_id for cs in rows if cs.species.species_group_id is None}

@@ -1,0 +1,22 @@
+{
+  "code": "fisfly1",
+  "name": {
+    "en": "Fiscal Flycatcher",
+    "nl": "Klauwiervliegenvanger"
+  },
+  "latin": "Sigelus silens",
+  "look_for": [
+    {
+      "en": "Male black above, white below; female brown above",
+      "nl": "Mannetje zwart boven, wit onder; vrouwtje bruin boven"
+    },
+    {
+      "en": "White patch on the lower **wing**, white **tail** sides",
+      "nl": "Witte vlek op de **vleugel**, witte **staart**zijden"
+    },
+    {
+      "en": "Slim straight **bill**, unlike a shrike's hooked one",
+      "nl": "Slanke rechte **snavel**, niet haaks zoals bij klauwieren"
+    }
+  ]
+}

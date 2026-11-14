@@ -1,0 +1,22 @@
+{
+  "code": "milsto1",
+  "name": {
+    "en": "Milky Stork",
+    "nl": "Maleise nimmerzat"
+  },
+  "latin": "Mycteria cinerea",
+  "look_for": [
+    {
+      "en": "Milky-white stork with black flight feathers and **tail**",
+      "nl": "Melkwitte ooievaar met zwarte slagpennen en **staart**"
+    },
+    {
+      "en": "Bare reddish face, yellow decurved **bill**",
+      "nl": "Kaal roodachtig gezicht, gele gebogen **snavel**"
+    },
+    {
+      "en": "Plain white body, no breast band",
+      "nl": "Effen wit lijf, geen borstband"
+    }
+  ]
+}

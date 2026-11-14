@@ -1,0 +1,22 @@
+{
+  "code": "grests1",
+  "name": {
+    "en": "Greater Striped Swallow",
+    "nl": "Kaapse zwaluw"
+  },
+  "latin": "Cecropis cucullata",
+  "look_for": [
+    {
+      "en": "Chestnut **crown** and pale orange **rump**",
+      "nl": "Kastanjebruine **kruin** en bleekoranje **stuit**"
+    },
+    {
+      "en": "Creamy underparts finely streaked dark",
+      "nl": "Roomwitte onderkant met fijne donkere strepen"
+    },
+    {
+      "en": "Long **tail** streamers, slow buoyant flight",
+      "nl": "Lange **staart**pennen, trage zwevende vlucht"
+    }
+  ]
+}

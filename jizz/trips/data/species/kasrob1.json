@@ -1,0 +1,22 @@
+{
+  "code": "kasrob1",
+  "name": {
+    "en": "Kalahari Scrub Robin",
+    "nl": "Kalahariwaaierstaart"
+  },
+  "latin": "Cercotrichas paena",
+  "look_for": [
+    {
+      "en": "Sandy-brown above, bold white **eyebrow**",
+      "nl": "Zandbruin boven, opvallende witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Rusty **tail** with black band and white tip",
+      "nl": "Roestkleurige **staart** met zwarte band en witte punt"
+    },
+    {
+      "en": "Runs and hops on open ground, **tail** cocked",
+      "nl": "Rent en hipt over open grond, **staart** omhoog"
+    }
+  ]
+}

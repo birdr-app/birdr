@@ -1,0 +1,22 @@
+{
+  "code": "whnrav1",
+  "name": {
+    "en": "White-necked Raven",
+    "nl": "Witnekraaf"
+  },
+  "latin": "Corvus albicollis",
+  "look_for": [
+    {
+      "en": "Huge black crow, deep white-tipped **bill**",
+      "nl": "Enorme zwarte kraai met een diepe, witgepunte **snavel**"
+    },
+    {
+      "en": "White half-collar on the back of the **neck**",
+      "nl": "Witte halve kraag op de **nek**"
+    },
+    {
+      "en": "Short **tail**, husky croak, soars on shallow beats",
+      "nl": "Korte **staart**, hese kraak, zweeft op ondiepe vleugelslagen"
+    }
+  ]
+}

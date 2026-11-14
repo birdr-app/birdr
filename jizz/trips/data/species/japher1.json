@@ -1,0 +1,22 @@
+{
+  "code": "japher1",
+  "name": {
+    "en": "Javan Pond Heron",
+    "nl": "Javaanse ralreiger"
+  },
+  "latin": "Ardeola speciosa",
+  "look_for": [
+    {
+      "en": "Breeding bird has a plain buff head and neck",
+      "nl": "Broedvogel heeft een effen bruingele kop en hals"
+    },
+    {
+      "en": "Winter bird streaked brown, like Chinese Pond Heron",
+      "nl": "Wintervogel bruin gestreept, als Chinese ralreiger"
+    },
+    {
+      "en": "White **wings** flash open in flight",
+      "nl": "Witte **vleugels** vlammen open in vlucht"
+    }
+  ]
+}

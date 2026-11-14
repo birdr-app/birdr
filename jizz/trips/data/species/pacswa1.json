@@ -1,0 +1,22 @@
+{
+  "code": "pacswa1",
+  "name": {
+    "en": "Pacific Swallow",
+    "nl": "Kustzwaluw"
+  },
+  "latin": "Hirundo javanica",
+  "look_for": [
+    {
+      "en": "Rusty **forehead** and **throat**",
+      "nl": "Roestkleurig **voorhoofd** en **keel**"
+    },
+    {
+      "en": "Blue-black **back**, dusky grey **belly**",
+      "nl": "Blauwzwarte **rug**, donkergrijze **buik**"
+    },
+    {
+      "en": "Short **tail** with a shallow fork",
+      "nl": "Korte **staart** met een ondiepe vork"
+    }
+  ]
+}

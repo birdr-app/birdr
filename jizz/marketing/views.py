@@ -497,11 +497,14 @@ def region_page(request, country: str, slug: str):
 
 
 def _trip_prep_context(code: str, locale: str | None) -> dict:
-    """Trip prep for a country, when a pack is published: its link and its region packs."""
+    """Trip prep for a country, when a pack is published: its link and its region packs.
+    A country inside a multi-country trip (the Baltics) links to that trip."""
     from jizz.trips.content import TRIPS, region_ids
 
     code = (code or '').upper()
     if code not in TRIPS:
+        code = next((t for t, meta in TRIPS.items() if code in meta.get('countries', ())), '')
+    if not code:
         return {}
     lang = locale if locale in TRIPS[code]['languages'] else 'en'
     return {

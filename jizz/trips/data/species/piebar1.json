@@ -1,0 +1,22 @@
+{
+  "code": "piebar1",
+  "name": {
+    "en": "Pied Barbet",
+    "nl": "Kaapse baardvogel"
+  },
+  "latin": "Tricholaema leucomelas",
+  "look_for": [
+    {
+      "en": "Black-and-white striped **head** with red **forehead**",
+      "nl": "Zwartwit gestreepte **kop** met rood **voorhoofd**"
+    },
+    {
+      "en": "Black **throat** patch, yellow **eyebrow** stripe",
+      "nl": "Zwarte **keelvlek** en gele **wenkbrauwstreep**"
+    },
+    {
+      "en": "Small barbet of dry bush, often at fruiting trees",
+      "nl": "Kleine baardvogel van droog struikgewas, vaak in vruchtbomen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "lotshr1",
+  "name": {
+    "en": "Long-tailed Shrike",
+    "nl": "Langstaartklauwier"
+  },
+  "latin": "Lanius schach",
+  "look_for": [
+    {
+      "en": "Broad black **mask** reaching the **forehead**",
+      "nl": "Brede zwarte oogstreep tot op het **voorhoofd**"
+    },
+    {
+      "en": "Grey **crown** and **back**, orange-rufous **flanks**",
+      "nl": "Grijze **kruin** en **rug**, oranjeroestbruine **flanken**"
+    },
+    {
+      "en": "Long, black, rounded **tail**; perches on wires",
+      "nl": "Lange, zwarte, afgeronde **staart**; zit op draden"
+    }
+  ]
+}

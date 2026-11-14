@@ -1,0 +1,22 @@
+{
+  "code": "rivlap1",
+  "name": {
+    "en": "River Lapwing",
+    "nl": "Indische sporenkievit"
+  },
+  "latin": "Vanellus duvaucelii",
+  "look_for": [
+    {
+      "en": "Black **head** and **throat**, white stripe behind the eye",
+      "nl": "Zwarte **kop** en **keel**, witte streep achter het oog"
+    },
+    {
+      "en": "Grey-brown back, white **belly**",
+      "nl": "Grijsbruine rug, witte **buik**"
+    },
+    {
+      "en": "Runs and stops on sandbars and shingle",
+      "nl": "Rent en stopt op zandbanken en grindbanken"
+    }
+  ]
+}

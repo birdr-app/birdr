@@ -1,0 +1,22 @@
+{
+  "code": "gragoo",
+  "name": {
+    "en": "Greylag Goose",
+    "nl": "Grauwe gans"
+  },
+  "latin": "Anser anser",
+  "look_for": [
+    {
+      "en": "Large, plain grey-brown goose",
+      "nl": "Grote, eenvoudig grijsbruine gans"
+    },
+    {
+      "en": "Orange **bill** and pink legs",
+      "nl": "Oranje **snavel** en roze poten"
+    },
+    {
+      "en": "Pale grey **forewing** in flight",
+      "nl": "Lichtgrijze **voorvleugel** in vlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "bohwax",
+  "name": {
+    "en": "Bohemian Waxwing",
+    "nl": "Pestvogel"
+  },
+  "latin": "Bombycilla garrulus",
+  "look_for": [
+    {
+      "en": "Pink-brown, with a swept-back **crest**",
+      "nl": "Roze-bruin, met een naar achteren wijzende **kuif**"
+    },
+    {
+      "en": "Black **throat** and mask, yellow **tail** tip",
+      "nl": "Zwarte **keel** en masker, gele **staartpunt**"
+    },
+    {
+      "en": "Yellow and white **wing** marks, ringing trill",
+      "nl": "Gele en witte **vleugel**tekening, rinkelende triller"
+    }
+  ]
+}

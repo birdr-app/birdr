@@ -1,0 +1,22 @@
+{
+  "code": "capwhe2",
+  "name": {
+    "en": "Cape White-eye",
+    "nl": "Kaapse brilvogel"
+  },
+  "latin": "Zosterops virens",
+  "look_for": [
+    {
+      "en": "Bold white ring around the **eye**",
+      "nl": "Opvallende witte ring om het **oog**"
+    },
+    {
+      "en": "Olive-green back, yellow-green **throat**",
+      "nl": "Olijfgroene rug, geelgroene **keel**"
+    },
+    {
+      "en": "Restless small flocks, thin contact calls",
+      "nl": "Onrustige kleine groepjes, dunne contactroepjes"
+    }
+  ]
+}

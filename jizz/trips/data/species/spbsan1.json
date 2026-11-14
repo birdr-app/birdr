@@ -1,0 +1,22 @@
+{
+  "code": "spbsan1",
+  "name": {
+    "en": "Spoon-billed Sandpiper",
+    "nl": "Lepelbekstrandloper"
+  },
+  "latin": "Calidris pygmaea",
+  "look_for": [
+    {
+      "en": "**Bill** flattened into a spoon at the tip",
+      "nl": "**Snavel** met een lepelvormige, platte punt"
+    },
+    {
+      "en": "Breeding: rusty-red **head** and **breast**; winter white",
+      "nl": "Zomer: roestrode **kop** en **borst**; winter wit"
+    },
+    {
+      "en": "Sweeps its **bill** side to side when feeding",
+      "nl": "Zwaait tijdens het foerageren met de **snavel** heen en weer"
+    }
+  ]
+}

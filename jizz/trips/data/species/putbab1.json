@@ -1,0 +1,22 @@
+{
+  "code": "putbab1",
+  "name": {
+    "en": "Puff-throated Babbler",
+    "nl": "Gevlekte jungletimalia"
+  },
+  "latin": "Pellorneum ruficeps",
+  "look_for": [
+    {
+      "en": "Rufous **crown**, white **throat**",
+      "nl": "Roestbruine **kruin**, witte **keel**"
+    },
+    {
+      "en": "Faint streaks on pale **breast**, olive-brown **back**",
+      "nl": "Vage streepjes op lichte **borst**, olijfbruine **rug**"
+    },
+    {
+      "en": "Skulks on the forest floor",
+      "nl": "Sluipt rond op de bosbodem"
+    }
+  ]
+}

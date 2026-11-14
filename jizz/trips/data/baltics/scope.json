@@ -1,0 +1,107 @@
+{
+  "country": "BALTICS",
+  "notes": "One combined trip for Estonia, Latvia and Lithuania: the union of the three national lists, a bird on several lists counted once at its commonest. The automatic frequency cut gives 165 species. It covers the common birds and the coastal and passage waterbirds well, but it leaves out most of the forest and wetland specialities that the three countries are visited for, because eBird models them as rare: Western Capercaillie, Hazel Grouse, Eurasian Pygmy-Owl, Ural Owl, Tengmalm's Owl, Black Stork, White-tailed Eagle, Osprey, Northern Goshawk, Eurasian Hobby, Eurasian Bittern, Great Snipe, Spotted Crake, Water Rail, Thrush Nightingale, Bluethroat, Red-breasted Flycatcher, Aquatic Warbler, Citrine Wagtail, White-backed, Middle Spotted and Green Woodpecker, plus Common Kingfisher, House Sparrow, Long-tailed Tit, Eurasian Treecreeper, Redwing and a few more widespread birds that are modelled as rare. These are added by hand (add). Dropped (drop): Red Knot, Purple Sandpiper, Grey Plover, Razorbill, Sandwich Tern and Snow Bunting, which a visitor meets only by luck on the coast in winter or on passage. Kept although seasonal: the geese and swans of the spring and autumn passage (Matsalu, the west Estonian islands), the sea ducks and divers of the Baltic coast, Black Guillemot of the Estonian islands, and the winter flocks of Bohemian Waxwing. Left out as too rare or too hard for a normal trip: Eurasian Eagle Owl, Great Grey and Northern Hawk Owl, Greater Spotted and Golden Eagle, Steller's Eider, Lesser White-fronted Goose, Ortolan Bunting, Corn Bunting, Penduline and Bearded Tit, White-throated Dipper and the vagrants. There are no endemic birds, so the trip has no endemics chapter. The Eurasian/Green-winged Teal entry is the combined eBird taxon the database uses for Eurasian Teal.",
+  "add": [
+    "wescap1",
+    "hazgro1",
+    "eupowl1",
+    "uraowl1",
+    "borowl",
+    "blasto1",
+    "whteag",
+    "osprey",
+    "norgos1",
+    "eurhob",
+    "grebit1",
+    "litgre1",
+    "rengre",
+    "comkin1",
+    "whimbr5",
+    "comsan",
+    "lirplo",
+    "spored",
+    "pieavo1",
+    "rudtur",
+    "gresni1",
+    "spocra1",
+    "watrai1",
+    "commoo3",
+    "lbbgul",
+    "eurtre1",
+    "lottit1",
+    "houspa",
+    "thrnig1",
+    "blueth",
+    "rebfly",
+    "redwin",
+    "barwar1",
+    "marwar3",
+    "eurwar1",
+    "eurwar2",
+    "aquwar1",
+    "citwag",
+    "whbwoo1",
+    "miswoo1",
+    "eugwoo2",
+    "eutdov",
+    "rocpig"
+  ],
+  "drop": [
+    "redkno",
+    "pursan",
+    "razorb",
+    "santer1",
+    "snobun",
+    "bkbplo"
+  ],
+  "group_overrides": {},
+  "regional_specialities": [],
+  "first_day": [
+    "hoocro1",
+    "eurjac",
+    "eurmag1",
+    "whisto1",
+    "barswa",
+    "comswi",
+    "comhom1",
+    "gretit1",
+    "blutit",
+    "comcha",
+    "cowpig1",
+    "mallar3",
+    "bkhgul",
+    "euhgul1",
+    "mutswa",
+    "norlap",
+    "eurbla",
+    "whiwag",
+    "eursta",
+    "houspa"
+  ],
+  "lookalikes": [
+    {
+      "here": "hoocro1",
+      "home": "carcro1"
+    },
+    {
+      "here": "thrnig1",
+      "home": "comnig1"
+    },
+    {
+      "here": "citwag",
+      "home": "eaywag1"
+    },
+    {
+      "here": "wiltit1",
+      "home": "martit2"
+    },
+    {
+      "here": "marwar3",
+      "home": "eurwar1"
+    },
+    {
+      "here": "gyfwoo1",
+      "home": "eugwoo2"
+    }
+  ]
+}

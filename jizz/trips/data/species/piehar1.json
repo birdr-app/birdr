@@ -1,0 +1,22 @@
+{
+  "code": "piehar1",
+  "name": {
+    "en": "Pied Harrier",
+    "nl": "Bonte kiekendief"
+  },
+  "latin": "Circus melanoleucos",
+  "look_for": [
+    {
+      "en": "Male black and white with grey **wings**",
+      "nl": "Man zwart-wit met grijze **vleugels**"
+    },
+    {
+      "en": "Female brown above, streaked buff below",
+      "nl": "Vrouw bruin boven, gestreept bruingeel onder"
+    },
+    {
+      "en": "Glides low over grassland on raised wings",
+      "nl": "Glijdt laag over grasland met opgeheven vleugels"
+    }
+  ]
+}

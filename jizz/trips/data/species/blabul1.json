@@ -1,0 +1,22 @@
+{
+  "code": "blabul1",
+  "name": {
+    "en": "Black Bulbul",
+    "nl": "Aziatische zwarte buulbuul"
+  },
+  "latin": "Hypsipetes leucocephalus",
+  "look_for": [
+    {
+      "en": "Red **bill** and red **legs** on a dark body",
+      "nl": "Rode **snavel** en rode **poten** op een donker lijf"
+    },
+    {
+      "en": "Shallow-forked **tail**, shaggy **crest**",
+      "nl": "Ondiep gevorkte **staart**, ragfijne **kuif**"
+    },
+    {
+      "en": "Grey to black body; some have a white **head**",
+      "nl": "Grijs tot zwart lijf; sommige hebben een witte **kop**"
+    }
+  ]
+}

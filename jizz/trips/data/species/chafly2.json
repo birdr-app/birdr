@@ -1,0 +1,22 @@
+{
+  "code": "chafly2",
+  "name": {
+    "en": "Chat Flycatcher",
+    "nl": "Lijstervliegenvanger"
+  },
+  "latin": "Agricola infuscatus",
+  "look_for": [
+    {
+      "en": "Earthy brown with large pale edges on the **wings**",
+      "nl": "Aardbruin met brede bleke randen op de **vleugels**"
+    },
+    {
+      "en": "Upright, chat-like stance on low bushes or wires",
+      "nl": "Rechtop, tapuitachtig op lage struiken of draden"
+    },
+    {
+      "en": "Drops to the ground for termites and beetles",
+      "nl": "Duikt naar de grond voor termieten en kevers"
+    }
+  ]
+}

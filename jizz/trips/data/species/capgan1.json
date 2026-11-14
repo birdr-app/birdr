@@ -1,0 +1,22 @@
+{
+  "code": "capgan1",
+  "name": {
+    "en": "Cape Gannet",
+    "nl": "Kaapse jan-van-gent"
+  },
+  "latin": "Morus capensis",
+  "look_for": [
+    {
+      "en": "White seabird with golden-buff **head** and black **tail**",
+      "nl": "Witte zeevogel met goudgele **kop** en zwarte **staart**"
+    },
+    {
+      "en": "Black line from the **bill** down the **throat**",
+      "nl": "Zwarte streep van de **snavel** langs de **keel**"
+    },
+    {
+      "en": "Plunge-dives from height, often in dense flocks",
+      "nl": "Duikt vanaf grote hoogte, vaak in dichte groepen"
+    }
+  ]
+}

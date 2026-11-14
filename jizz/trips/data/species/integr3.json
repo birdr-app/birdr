@@ -1,0 +1,22 @@
+{
+  "code": "integr3",
+  "name": {
+    "en": "Yellow-billed Egret",
+    "nl": "Geelsnavelzilverreiger"
+  },
+  "latin": "Ardea brachyrhyncha",
+  "look_for": [
+    {
+      "en": "Mid-sized white egret with a short yellow **bill**",
+      "nl": "Middelgrote witte reiger met een korte gele **snavel**"
+    },
+    {
+      "en": "The **gape** line ends below the eye",
+      "nl": "De **mondhoek** eindigt onder het oog"
+    },
+    {
+      "en": "Black **legs**, hunts in fields and shallows",
+      "nl": "Zwarte **poten**, jaagt op land en in ondiep water"
+    }
+  ]
+}

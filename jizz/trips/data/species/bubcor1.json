@@ -1,0 +1,22 @@
+{
+  "code": "bubcor1",
+  "name": {
+    "en": "Southern Cordonbleu",
+    "nl": "Angolees blauwfazantje"
+  },
+  "latin": "Uraeginthus angolensis",
+  "look_for": [
+    {
+      "en": "Pale sky-blue **face** and **breast**",
+      "nl": "Lichtblauw **gezicht** en **borst**"
+    },
+    {
+      "en": "Brown **back**, buff **belly**, blue **tail**",
+      "nl": "Bruine **rug**, buffe **buik**, blauwe **staart**"
+    },
+    {
+      "en": "Hops about in small flocks, thin calls",
+      "nl": "Hipt in kleine groepjes rond, dunne roepjes"
+    }
+  ]
+}

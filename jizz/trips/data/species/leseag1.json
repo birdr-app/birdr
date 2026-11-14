@@ -1,0 +1,22 @@
+{
+  "code": "leseag1",
+  "name": {
+    "en": "Lesser Spotted Eagle",
+    "nl": "Schreeuwarend"
+  },
+  "latin": "Clanga pomarina",
+  "look_for": [
+    {
+      "en": "Dark brown, small for an eagle",
+      "nl": "Donkerbruin, klein voor een arend"
+    },
+    {
+      "en": "Pale **upperwing** patch, white V on **rump**",
+      "nl": "Lichte **bovenvleugel**vlek, witte V op de **stuit**"
+    },
+    {
+      "en": "Dog-like yapping call",
+      "nl": "Blaffende, hondachtige roep"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "marfly1",
+  "name": {
+    "en": "Marico Flycatcher",
+    "nl": "Maricovliegenvanger"
+  },
+  "latin": "Bradornis mariquensis",
+  "look_for": [
+    {
+      "en": "Plain brown above, boldly white underparts",
+      "nl": "Effen bruin boven, opvallend witte onderkant"
+    },
+    {
+      "en": "Upright on an open perch, long **tail**",
+      "nl": "Rechtop op een open zitplaats, lange **staart**"
+    },
+    {
+      "en": "Thin buff ring round the **eye**",
+      "nl": "Dunne beige ring rond het **oog**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rafmal1",
+  "name": {
+    "en": "Raffles's Malkoha",
+    "nl": "Rafflesmalkoha"
+  },
+  "latin": "Rhinortha chlorophaea",
+  "look_for": [
+    {
+      "en": "Grey **head**, rufous **throat** and **breast**",
+      "nl": "Grijze **kop**, roestbruine **keel** en **borst**"
+    },
+    {
+      "en": "Bare red skin round the **eye**, pale **bill**",
+      "nl": "Kale rode huid rond het **oog**, bleke **snavel**"
+    },
+    {
+      "en": "Long graduated **tail** tipped white",
+      "nl": "Lange getrapte **staart** met witte punten"
+    }
+  ]
+}

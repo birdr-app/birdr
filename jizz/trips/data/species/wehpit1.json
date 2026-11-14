@@ -1,0 +1,22 @@
+{
+  "code": "wehpit1",
+  "name": {
+    "en": "Western Hooded Pitta",
+    "nl": "Kappitta"
+  },
+  "latin": "Pitta sordida",
+  "look_for": [
+    {
+      "en": "Black **head** with chestnut **crown**",
+      "nl": "Zwarte **kop** met kastanjebruine **kruin**"
+    },
+    {
+      "en": "Green **back** and **underparts**, red **vent**",
+      "nl": "Groene **rug** en **onderzijde**, rode onderstaartdekveren"
+    },
+    {
+      "en": "Blue **shoulder**; white **wing** patch in flight",
+      "nl": "Blauwe **schouder**; witte vleugelvlek in vlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "vereag1",
+  "name": {
+    "en": "Verreaux's Eagle",
+    "nl": "Zwarte arend"
+  },
+  "latin": "Aquila verreauxii",
+  "look_for": [
+    {
+      "en": "Black eagle with a white V on the **back**",
+      "nl": "Zwarte arend met een witte V op de **rug**"
+    },
+    {
+      "en": "Yellow **cere**, eye-ring and feet",
+      "nl": "Gele **waslaag**, oogring en poten"
+    },
+    {
+      "en": "Soars along cliffs, **wings** narrow at the base",
+      "nl": "Zweeft langs kliffen, **vleugels** smal aan de basis"
+    }
+  ]
+}

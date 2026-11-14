@@ -1,0 +1,22 @@
+{
+  "code": "capbun1",
+  "name": {
+    "en": "Cape Bunting",
+    "nl": "Kaapse gors"
+  },
+  "latin": "Fringillaria capensis",
+  "look_for": [
+    {
+      "en": "Black-and-white striped **head**, grey **breast**",
+      "nl": "Zwart-wit gestreepte **kop**, grijze **borst**"
+    },
+    {
+      "en": "Rufous **wings**, greyish-brown **back**",
+      "nl": "Roestkleurige **vleugels**, grijsbruine **rug**"
+    },
+    {
+      "en": "Forages on bare rocky ground, often in pairs",
+      "nl": "Zoekt op kale rotsige grond, vaak in paren"
+    }
+  ]
+}

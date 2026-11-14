@@ -1,0 +1,22 @@
+{
+  "code": "yebduc1",
+  "name": {
+    "en": "Yellow-billed Duck",
+    "nl": "Geelsnaveleend"
+  },
+  "latin": "Anas undulata",
+  "look_for": [
+    {
+      "en": "Bright yellow **bill** with a black saddle",
+      "nl": "Felgele **snavel** met een zwarte zadelvlek"
+    },
+    {
+      "en": "Pale streaked **head**, dark mottled body",
+      "nl": "Lichte gestreepte **kop**, donker gevlekt lijf"
+    },
+    {
+      "en": "Glossy green-blue patch on the **wing**",
+      "nl": "Glanzende groenblauwe vlek op de **vleugel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "lafvul1",
+  "name": {
+    "en": "Lappet-faced Vulture",
+    "nl": "Oorgier"
+  },
+  "latin": "Torgos tracheliotos",
+  "look_for": [
+    {
+      "en": "Huge vulture, bare pink **head** with skin folds",
+      "nl": "Enorme gier, kale roze **kop** met huidlobben"
+    },
+    {
+      "en": "Heavy pale **bill**, white **thighs**, dark body",
+      "nl": "Zware lichte **snavel**, witte **dijen**, donker lijf"
+    },
+    {
+      "en": "Dominates other vultures at carcasses",
+      "nl": "Domineert andere gieren bij kadavers"
+    }
+  ]
+}

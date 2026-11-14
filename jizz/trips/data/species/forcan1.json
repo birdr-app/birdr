@@ -1,0 +1,22 @@
+{
+  "code": "forcan1",
+  "name": {
+    "en": "Forest Canary",
+    "nl": "Boskanarie"
+  },
+  "latin": "Crithagra scotops",
+  "look_for": [
+    {
+      "en": "Black **face** mask on a yellow-green bird",
+      "nl": "Zwart masker op het **gezicht** van een geelgroene vogel"
+    },
+    {
+      "en": "Black-streaked **back**, yellow **underparts**",
+      "nl": "Zwart gestreepte **rug**, gele **onderzijde**"
+    },
+    {
+      "en": "Keeps low under cover, in pairs or groups",
+      "nl": "Blijft laag en verscholen, in paartjes of groepjes"
+    }
+  ]
+}

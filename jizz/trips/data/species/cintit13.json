@@ -1,0 +1,22 @@
+{
+  "code": "cintit13",
+  "name": {
+    "en": "Asian Tit",
+    "nl": "Grijze koolmees"
+  },
+  "latin": "Parus cinereus",
+  "look_for": [
+    {
+      "en": "Black **head** with a white **cheek** patch",
+      "nl": "Zwarte **kop** met een witte **wangvlek**"
+    },
+    {
+      "en": "Grey **back**, white **nape** spot",
+      "nl": "Grijze **rug**, witte **nekvlek**"
+    },
+    {
+      "en": "Black **belly** stripe on pale grey underparts",
+      "nl": "Zwarte **buik**streep op lichtgrijze onderzijde"
+    }
+  ]
+}

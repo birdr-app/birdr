@@ -1,0 +1,22 @@
+{
+  "code": "jacpen1",
+  "name": {
+    "en": "African Penguin",
+    "nl": "Zwartvoetpinguïn"
+  },
+  "latin": "Spheniscus demersus",
+  "look_for": [
+    {
+      "en": "Black horseshoe band on the white **breast**",
+      "nl": "Zwarte hoefijzerband over de witte **borst**"
+    },
+    {
+      "en": "Bare pink patch above the **eye**",
+      "nl": "Roze kale plek boven het **oog**"
+    },
+    {
+      "en": "Waddles upright and brays like a donkey",
+      "nl": "Waggelt rechtop en balkt als een ezel"
+    }
+  ]
+}

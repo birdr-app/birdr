@@ -1,0 +1,22 @@
+{
+  "code": "norgre1",
+  "name": {
+    "en": "Nordmann's Greenshank",
+    "nl": "Gevlekte groenpootruiter"
+  },
+  "latin": "Tringa guttifer",
+  "look_for": [
+    {
+      "en": "Thick, slightly upturned **bill**, yellowish base",
+      "nl": "Dikke, licht opgewipte **snavel** met geelachtige basis"
+    },
+    {
+      "en": "Shorter, stockier than Common Greenshank",
+      "nl": "Kleiner en gedrongener dan Groenpootruiter"
+    },
+    {
+      "en": "Short yellow **legs**; breeding **breast** black-spotted",
+      "nl": "Korte gele **poten**; zomers **borst** zwart gevlekt"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "linbar1",
+  "name": {
+    "en": "Lineated Barbet",
+    "nl": "Gestreepte baardvogel"
+  },
+  "latin": "Psilopogon lineatus",
+  "look_for": [
+    {
+      "en": "Green barbet with streaked brown **head** and **breast**",
+      "nl": "Groene baardvogel met gestreepte bruine **kop** en **borst**"
+    },
+    {
+      "en": "Pale yellowish **bill**, bare yellow skin round the **eye**",
+      "nl": "Bleekgele **snavel**, kale gele huid rond het **oog**"
+    },
+    {
+      "en": "Perches high; long monotonous call",
+      "nl": "Zit hoog; lange eentonige roep"
+    }
+  ]
+}

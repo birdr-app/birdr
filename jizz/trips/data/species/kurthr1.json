@@ -1,0 +1,22 @@
+{
+  "code": "kurthr1",
+  "name": {
+    "en": "Kurrichane Thrush",
+    "nl": "Kurrichanelijster"
+  },
+  "latin": "Turdus libonyana",
+  "look_for": [
+    {
+      "en": "Orange **bill** and orange-buff **flanks**",
+      "nl": "Oranje **snavel** en oranjebeige **flanken**"
+    },
+    {
+      "en": "Grey **head** and **breast**, white **belly**",
+      "nl": "Grijze **kop** en **borst**, witte **buik**"
+    },
+    {
+      "en": "White **throat** streaked black at the sides",
+      "nl": "Witte **keel** met zwarte streepjes aan de zijkant"
+    }
+  ]
+}

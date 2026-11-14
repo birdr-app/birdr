@@ -1,0 +1,22 @@
+{
+  "code": "soufis1",
+  "name": {
+    "en": "Southern Fiscal",
+    "nl": "Zuidelijke gekraagde klauwier"
+  },
+  "latin": "Lanius collaris",
+  "look_for": [
+    {
+      "en": "Black above, white below, hooked **bill**",
+      "nl": "Zwart boven, wit onder, haakvormige **snavel**"
+    },
+    {
+      "en": "White **shoulder** stripe, long black **tail**",
+      "nl": "Witte **schouder**streep, lange zwarte **staart**"
+    },
+    {
+      "en": "Watches from open perches, impales prey on thorns",
+      "nl": "Speurt vanaf open zitplekken, spiest prooi op doorns"
+    }
+  ]
+}

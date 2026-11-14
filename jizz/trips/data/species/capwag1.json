@@ -1,0 +1,22 @@
+{
+  "code": "capwag1",
+  "name": {
+    "en": "Cape Wagtail",
+    "nl": "Kaapse kwikstaart"
+  },
+  "latin": "Motacilla capensis",
+  "look_for": [
+    {
+      "en": "Grey-brown above, white below, grey wash on **breast**",
+      "nl": "Grijsbruin boven, wit onder, grijze waas op de **borst**"
+    },
+    {
+      "en": "Wags long **tail** constantly, outer feathers white",
+      "nl": "Wipt voortdurend met de lange **staart**, buitenste veren wit"
+    },
+    {
+      "en": "Pale **eyebrow**, runs over lawns and shores",
+      "nl": "Lichte **wenkbrauwstreep**, rent over gazons en oevers"
+    }
+  ]
+}

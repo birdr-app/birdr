@@ -1,0 +1,22 @@
+{
+  "code": "bltbar2",
+  "name": {
+    "en": "Blue-throated Barbet",
+    "nl": "Blauwkeelbaardvogel"
+  },
+  "latin": "Psilopogon asiaticus",
+  "look_for": [
+    {
+      "en": "Bright blue **face** and **throat**",
+      "nl": "Helderblauwe **kop** en **keel**"
+    },
+    {
+      "en": "Red patch on the **forehead**, another on the **nape**",
+      "nl": "Rode vlek op het **voorhoofd**, nog een in de **nek**"
+    },
+    {
+      "en": "Leaf-green **body**, heavy **bill**",
+      "nl": "Bladgroen **lijf**, zware **snavel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "famcha1",
+  "name": {
+    "en": "Familiar Chat",
+    "nl": "Roodstaartspekvreter"
+  },
+  "latin": "Oenanthe familiaris",
+  "look_for": [
+    {
+      "en": "Dull brown with a rufous **rump**",
+      "nl": "Dofbruin met een roestkleurige **stuit**"
+    },
+    {
+      "en": "Rufous **tail** with dark brown tip and centre",
+      "nl": "Roestrode **staart** met donkerbruine punt en middenstreep"
+    },
+    {
+      "en": "Flicks its **wings** and hops, tame near buildings",
+      "nl": "Wipt met de **vleugels** en hopt, tam bij gebouwen"
+    }
+  ]
+}

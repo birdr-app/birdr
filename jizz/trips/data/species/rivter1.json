@@ -1,0 +1,22 @@
+{
+  "code": "rivter1",
+  "name": {
+    "en": "River Tern",
+    "nl": "Rivierstern"
+  },
+  "latin": "Sterna aurantia",
+  "look_for": [
+    {
+      "en": "Bright yellow-orange **bill**",
+      "nl": "Felgeeloranje **snavel**"
+    },
+    {
+      "en": "Black cap when breeding, pale grey above",
+      "nl": "Zwarte kap in broedkleed, lichtgrijs boven"
+    },
+    {
+      "en": "Deeply forked **tail**, hunts over rivers",
+      "nl": "Diep gevorkte **staart**, jaagt boven rivieren"
+    }
+  ]
+}

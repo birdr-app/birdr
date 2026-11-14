@@ -1,0 +1,22 @@
+{
+  "code": "rufroc1",
+  "name": {
+    "en": "Cape Rockjumper",
+    "nl": "Kaapse rotsspringer"
+  },
+  "latin": "Chaetops frenatus",
+  "look_for": [
+    {
+      "en": "Rufous-red underparts and **rump**, grey **back**",
+      "nl": "Roestrode onderkant en **stuit**, grijze **rug**"
+    },
+    {
+      "en": "Dark **head**, broad white **moustache**, thin white **eyebrow**",
+      "nl": "Donkere **kop**, brede witte **snor**, smalle witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Bounds over boulders, long black **tail**",
+      "nl": "Springt over rotsblokken, lange zwarte **staart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "dantai1",
+  "name": {
+    "en": "Dark-necked Tailorbird",
+    "nl": "Gestreepte snijdervogel"
+  },
+  "latin": "Orthotomus atrogularis",
+  "look_for": [
+    {
+      "en": "Rufous **crown**, olive **back**",
+      "nl": "Roestbruine **kruin**, olijfgroene **rug**"
+    },
+    {
+      "en": "Dark **throat** on male, whitish on female",
+      "nl": "Donkere **keel** bij het mannetje, witachtig bij het vrouwtje"
+    },
+    {
+      "en": "Cocked **tail**, yellowish under the **tail**",
+      "nl": "Opgerichte **staart**, geelachtig onder de **staart**"
+    }
+  ]
+}

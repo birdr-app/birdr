@@ -1,0 +1,22 @@
+{
+  "code": "woowar",
+  "name": {
+    "en": "Wood Warbler",
+    "nl": "Fluiter"
+  },
+  "latin": "Phylloscopus sibilatrix",
+  "look_for": [
+    {
+      "en": "Bright green above, lemon **throat**, white **belly**",
+      "nl": "Helder groen boven, citroengele **keel**, witte **buik**"
+    },
+    {
+      "en": "Bold yellow **eyebrow**, long wings",
+      "nl": "Brede gele **wenkbrauw**, lange vleugels"
+    },
+    {
+      "en": "Song like a coin spinning on a plate",
+      "nl": "Zang als een tollend muntstuk op een bord"
+    }
+  ]
+}

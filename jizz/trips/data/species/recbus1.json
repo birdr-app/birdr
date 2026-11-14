@@ -1,0 +1,22 @@
+{
+  "code": "recbus1",
+  "name": {
+    "en": "Red-crested Bustard",
+    "nl": "Roodkuiftrap"
+  },
+  "latin": "Lophotis ruficrista",
+  "look_for": [
+    {
+      "en": "Male: grey-blue **head** and black **breast**; female browner",
+      "nl": "Mannetje: grijsblauwe **kop**, zwarte **borst**; vrouwtje bruiner"
+    },
+    {
+      "en": "Cream V-markings on the folded **wings**",
+      "nl": "Crèmekleurige V-tekening op de gevouwen **vleugels**"
+    },
+    {
+      "en": "Male flies up and tumbles in display",
+      "nl": "Mannetje stijgt op en tuimelt tijdens de baltsvlucht"
+    }
+  ]
+}

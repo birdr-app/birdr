@@ -1,0 +1,22 @@
+{
+  "code": "sablar2",
+  "name": {
+    "en": "Sabota Lark",
+    "nl": "Sabotaleeuwerik"
+  },
+  "latin": "Calendulauda sabota",
+  "look_for": [
+    {
+      "en": "Bold white stripe over the **eye**",
+      "nl": "Brede witte streep boven het **oog**"
+    },
+    {
+      "en": "Heavily spotted **breast**, streaked brown **back**",
+      "nl": "Zwaar gevlekte **borst**, gestreepte bruine **rug**"
+    },
+    {
+      "en": "Sings from a bush top or low tree",
+      "nl": "Zingt vanaf een struiktop of lage boom"
+    }
+  ]
+}

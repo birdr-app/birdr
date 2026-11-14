@@ -1,0 +1,22 @@
+{
+  "code": "benflo2",
+  "name": {
+    "en": "Bengal Florican",
+    "nl": "Baardtrap"
+  },
+  "latin": "Houbaropsis bengalensis",
+  "look_for": [
+    {
+      "en": "Male black, with big white **wing** panels",
+      "nl": "Man zwart, met grote witte **vleugel**vlakken"
+    },
+    {
+      "en": "Female buff and streaked, like a small bustard",
+      "nl": "Vrouw bruingeel en gestreept, als een kleine trap"
+    },
+    {
+      "en": "Stands tall in open grassland, flies low",
+      "nl": "Staat rechtop in open grasland, vliegt laag"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "terbro1",
+  "name": {
+    "en": "Terrestrial Brownbul",
+    "nl": "Kaapse loofbuulbuul"
+  },
+  "latin": "Phyllastrephus terrestris",
+  "look_for": [
+    {
+      "en": "Plain brown bulbul with a whitish **throat**",
+      "nl": "Egaal bruine buulbuul met een witachtige **keel**"
+    },
+    {
+      "en": "Warm brown **tail**, olive-brown back, no crest",
+      "nl": "Warmbruine **staart**, olijfbruine rug, geen kuif"
+    },
+    {
+      "en": "Scratches in leaf litter on the ground",
+      "nl": "Scharrelt in het bladstrooisel op de grond"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "sedwar1",
+  "name": {
+    "en": "Sedge Warbler",
+    "nl": "Rietzanger"
+  },
+  "latin": "Acrocephalus schoenobaenus",
+  "look_for": [
+    {
+      "en": "Bold creamy **eyebrow**, streaked brown back",
+      "nl": "Brede roomkleurige **wenkbrauw**, gestreepte bruine rug"
+    },
+    {
+      "en": "Unstreaked rusty **rump**",
+      "nl": "Ongestreepte roestbruine **stuit**"
+    },
+    {
+      "en": "Fast, scratchy song with sudden changes",
+      "nl": "Snelle, krassende zang met plotselinge wisselingen"
+    }
+  ]
+}

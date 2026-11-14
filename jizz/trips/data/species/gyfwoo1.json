@@ -1,0 +1,22 @@
+{
+  "code": "gyfwoo1",
+  "name": {
+    "en": "Grey-headed Woodpecker",
+    "nl": "Grijskopspecht"
+  },
+  "latin": "Picus canus",
+  "look_for": [
+    {
+      "en": "Green with a grey **head**, thin black **moustache**",
+      "nl": "Groen met grijze **kop**, dunne zwarte **baardstreep**"
+    },
+    {
+      "en": "Male: red patch on the **forehead** only",
+      "nl": "Mannetje: alleen rode vlek op het **voorhoofd**"
+    },
+    {
+      "en": "Smaller than Green Woodpecker, no red **crown**",
+      "nl": "Kleiner dan groene specht, geen rode **kruin**"
+    }
+  ]
+}

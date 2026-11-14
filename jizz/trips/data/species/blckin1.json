@@ -1,0 +1,22 @@
+{
+  "code": "blckin1",
+  "name": {
+    "en": "Black-capped Kingfisher",
+    "nl": "Zwartkapijsvogel"
+  },
+  "latin": "Halcyon pileata",
+  "look_for": [
+    {
+      "en": "Black **cap** over the **head** and **nape**",
+      "nl": "Zwarte **kap** over **kop** en **nek**"
+    },
+    {
+      "en": "White **collar** and **throat**, orange **belly**",
+      "nl": "Witte **kraag** en **keel**, oranje **buik**"
+    },
+    {
+      "en": "Purple-blue **back**, big coral-red **bill**",
+      "nl": "Paarsblauwe **rug**, grote koraalrode **snavel**"
+    }
+  ]
+}

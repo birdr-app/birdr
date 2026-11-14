@@ -1,0 +1,22 @@
+{
+  "code": "ruftre2",
+  "name": {
+    "en": "Rufous Treepie",
+    "nl": "Rosse boomekster"
+  },
+  "latin": "Dendrocitta vagabunda",
+  "look_for": [
+    {
+      "en": "Sooty **head**, rich rufous **back** and **belly**",
+      "nl": "Roetzwarte **kop**, diep roestbruine **rug** en **buik**"
+    },
+    {
+      "en": "Grey **wing** with a white patch",
+      "nl": "Grijze **vleugel** met een witte vlek"
+    },
+    {
+      "en": "Very long grey **tail** tipped black",
+      "nl": "Zeer lange grijze **staart** met zwarte punt"
+    }
+  ]
+}

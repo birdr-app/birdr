@@ -1,0 +1,22 @@
+{
+  "code": "beawoo1",
+  "name": {
+    "en": "Bearded Woodpecker",
+    "nl": "Baardspecht"
+  },
+  "latin": "Chloropicus namaquus",
+  "look_for": [
+    {
+      "en": "Large woodpecker, black moustache stripe on white **face**",
+      "nl": "Grote specht met zwarte baardstreep op een wit **gezicht**"
+    },
+    {
+      "en": "Male has red on the hind **crown**",
+      "nl": "Mannetje heeft rood op de achterkant van de **kruin**"
+    },
+    {
+      "en": "Barred grey **underparts** and brownish, barred **back**",
+      "nl": "Gebande grijze **onderkant** en bruinachtige gebande **rug**"
+    }
+  ]
+}

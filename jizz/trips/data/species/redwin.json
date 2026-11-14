@@ -1,0 +1,22 @@
+{
+  "code": "redwin",
+  "name": {
+    "en": "Redwing",
+    "nl": "Koperwiek"
+  },
+  "latin": "Turdus iliacus",
+  "look_for": [
+    {
+      "en": "Rusty **flanks** and underwing",
+      "nl": "Roestrode **flanken** en onderkant van de vleugel"
+    },
+    {
+      "en": "Bold creamy **eyebrow** and cheek stripe",
+      "nl": "Brede roomkleurige **wenkbrauw** en wangstreep"
+    },
+    {
+      "en": "Smaller and darker than Song Thrush",
+      "nl": "Kleiner en donkerder dan zanglijster"
+    }
+  ]
+}

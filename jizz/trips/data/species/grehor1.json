@@ -1,0 +1,22 @@
+{
+  "code": "grehor1",
+  "name": {
+    "en": "Great Hornbill",
+    "nl": "Dubbelhoornige neushoornvogel"
+  },
+  "latin": "Buceros bicornis",
+  "look_for": [
+    {
+      "en": "Huge, with a yellow **casque** on the **bill**",
+      "nl": "Reusachtig, met een gele **helm** op de **snavel**"
+    },
+    {
+      "en": "Black face; white **neck** and **wing** bars",
+      "nl": "Zwart gezicht; witte **hals** en **vleugel**banden"
+    },
+    {
+      "en": "White **tail** with one black band",
+      "nl": "Witte **staart** met één zwarte band"
+    }
+  ]
+}

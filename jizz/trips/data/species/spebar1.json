@@ -1,0 +1,22 @@
+{
+  "code": "spebar1",
+  "name": {
+    "en": "Spectacled Barwing",
+    "nl": "Brilstreepvleugel"
+  },
+  "latin": "Actinodura ramsayi",
+  "look_for": [
+    {
+      "en": "Bold white **eye-ring** like spectacles",
+      "nl": "Opvallende witte **oogring**, als een bril"
+    },
+    {
+      "en": "Densely barred **wings** and long **tail**",
+      "nl": "Dicht gebandeerde **vleugels** en lange **staart**"
+    },
+    {
+      "en": "Unstreaked buff **underparts**, long-tailed",
+      "nl": "Ongestreepte bruingele **onderzijde**, langstaartig"
+    }
+  ]
+}

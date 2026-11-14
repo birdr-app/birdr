@@ -1,0 +1,22 @@
+{
+  "code": "stonec7",
+  "name": {
+    "en": "Amur Stonechat",
+    "nl": "Stejnegers roodborsttapuit"
+  },
+  "latin": "Saxicola stejnegeri",
+  "look_for": [
+    {
+      "en": "Male: dark **head**, white neck patch, orange **breast**",
+      "nl": "Mannetje: donkere **kop**, witte nekvlek, oranje **borst**"
+    },
+    {
+      "en": "Whitish **rump**, white **wing** patch",
+      "nl": "Witachtige **stuit**, wit **vleugelvlak**"
+    },
+    {
+      "en": "Female streaked brown, perches on stems and wires",
+      "nl": "Vrouwtje gestreept bruin, zit op stengels en draden"
+    }
+  ]
+}

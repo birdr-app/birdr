@@ -1,0 +1,22 @@
+{
+  "code": "grypar",
+  "name": {
+    "en": "Grey Partridge",
+    "nl": "Patrijs"
+  },
+  "latin": "Perdix perdix",
+  "look_for": [
+    {
+      "en": "Round grey-brown bird with an orange face",
+      "nl": "Ronde grijsbruine vogel met oranje gezicht"
+    },
+    {
+      "en": "Dark horseshoe on the grey **belly**",
+      "nl": "Donkere hoefijzervlek op de grijze **buik**"
+    },
+    {
+      "en": "Rusty **tail**, whirring flight low over fields",
+      "nl": "Roestbruine **staart**, snorrende vlucht laag over akkers"
+    }
+  ]
+}

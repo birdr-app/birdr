@@ -1,0 +1,22 @@
+{
+  "code": "gresni1",
+  "name": {
+    "en": "Great Snipe",
+    "nl": "Poelsnip"
+  },
+  "latin": "Gallinago media",
+  "look_for": [
+    {
+      "en": "Heavy, short-billed snipe with barred **flanks**",
+      "nl": "Zware snip met korte snavel en gebandeerde **flanken**"
+    },
+    {
+      "en": "White outer **tail** feathers in flight",
+      "nl": "Witte buitenste **staartveren** in vlucht"
+    },
+    {
+      "en": "Rows of white spots on the **wing**",
+      "nl": "Rijen witte stippen op de **vleugel**"
+    }
+  ]
+}

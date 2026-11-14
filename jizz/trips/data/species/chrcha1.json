@@ -1,0 +1,22 @@
+{
+  "code": "chrcha1",
+  "name": {
+    "en": "Chorister Robin-Chat",
+    "nl": "Choristerlawaaimaker"
+  },
+  "latin": "Cossypha dichroa",
+  "look_for": [
+    {
+      "en": "Black **face**, long white **eyebrow**, orange below",
+      "nl": "Zwart **gezicht**, lange witte **wenkbrauwstreep**, oranje eronder"
+    },
+    {
+      "en": "Dark grey **back**, orange sides to dark **tail**",
+      "nl": "Donkergrijze **rug**, donkere **staart** met oranje zijkanten"
+    },
+    {
+      "en": "Loud mimicking song from dense undergrowth",
+      "nl": "Luid, imiterend lied uit dicht struikgewas"
+    }
+  ]
+}

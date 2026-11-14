@@ -1,0 +1,22 @@
+{
+  "code": "arcter",
+  "name": {
+    "en": "Arctic Tern",
+    "nl": "Noordse stern"
+  },
+  "latin": "Sterna paradisaea",
+  "look_for": [
+    {
+      "en": "Blood-red **bill** without a black tip",
+      "nl": "Bloedrode **snavel** zonder zwarte punt"
+    },
+    {
+      "en": "Very short red legs, long **tail** streamers",
+      "nl": "Heel korte rode poten, lange **staartpennen**"
+    },
+    {
+      "en": "Translucent **wings** with a thin black rear edge",
+      "nl": "Doorschijnende **vleugels** met smalle zwarte achterrand"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "ludbus1",
+  "name": {
+    "en": "Ludwig's Bustard",
+    "nl": "Ludwigtrap"
+  },
+  "latin": "Neotis ludwigii",
+  "look_for": [
+    {
+      "en": "Grey-brown front of the **neck**, dull orange **nape**",
+      "nl": "Grijsbruine voorkant van de **hals**, dof oranje **nek**"
+    },
+    {
+      "en": "Lacks the black **crest** of Kori Bustard",
+      "nl": "Mist de zwarte **kuif** van de Koritrap"
+    },
+    {
+      "en": "Walks steadily across open, dry plains",
+      "nl": "Loopt gestaag over open, droge vlaktes"
+    }
+  ]
+}

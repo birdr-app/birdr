@@ -1,0 +1,22 @@
+{
+  "code": "asbowl1",
+  "name": {
+    "en": "Asian Barred Owlet",
+    "nl": "Koekoeksdwerguil"
+  },
+  "latin": "Glaucidium cuculoides",
+  "look_for": [
+    {
+      "en": "Round **head**, no **ear** tufts, yellow **eyes**",
+      "nl": "Ronde **kop**, geen **oor**pluimen, gele **ogen**"
+    },
+    {
+      "en": "Fully barred brown **body**, white **throat**",
+      "nl": "Helemaal bruin gebande **romp**, witte **keel**"
+    },
+    {
+      "en": "Often calls and hunts by day",
+      "nl": "Roept en jaagt vaak overdag"
+    }
+  ]
+}

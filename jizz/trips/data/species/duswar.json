@@ -1,0 +1,22 @@
+{
+  "code": "duswar",
+  "name": {
+    "en": "Dusky Warbler",
+    "nl": "Bruine boszanger"
+  },
+  "latin": "Phylloscopus fuscatus",
+  "look_for": [
+    {
+      "en": "Dull brown above, no wing-bars",
+      "nl": "Dofbruin boven, geen vleugelstrepen"
+    },
+    {
+      "en": "Long creamy **eyebrow**, dark eye-stripe",
+      "nl": "Lange crèmekleurige **wenkbrauwstreep**, donkere **oogstreep**"
+    },
+    {
+      "en": "Skulks low, flicking **wings**, hard tak call",
+      "nl": "Sluipt laag, wipt met de **vleugels**, harde tak-roep"
+    }
+  ]
+}

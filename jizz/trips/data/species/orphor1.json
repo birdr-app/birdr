@@ -1,0 +1,22 @@
+{
+  "code": "orphor1",
+  "name": {
+    "en": "Oriental Pied-Hornbill",
+    "nl": "Indische neushoornvogel"
+  },
+  "latin": "Anthracoceros albirostris",
+  "look_for": [
+    {
+      "en": "Black above, white **belly**, white outer **tail**",
+      "nl": "Zwart boven, witte **buik**, witte buitenste **staart**"
+    },
+    {
+      "en": "Pale yellow **bill**, black-marked **casque**",
+      "nl": "Bleekgele **snavel**, zwart gekleurde **helm**"
+    },
+    {
+      "en": "Bare pale skin around the **eye**; noisy flocks",
+      "nl": "Kale bleke huid rond het **oog**; luidruchtige groepen"
+    }
+  ]
+}

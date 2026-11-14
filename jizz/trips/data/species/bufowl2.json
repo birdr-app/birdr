@@ -1,0 +1,22 @@
+{
+  "code": "bufowl2",
+  "name": {
+    "en": "Buffy Fish-Owl",
+    "nl": "Maleise visuil"
+  },
+  "latin": "Ketupa ketupu",
+  "look_for": [
+    {
+      "en": "Large buff owl with long **ear** tufts",
+      "nl": "Grote beige uil met lange **oor**pluimen"
+    },
+    {
+      "en": "Yellow **eyes**, pale **forehead** and eyebrows",
+      "nl": "Gele **ogen**, bleek **voorhoofd** en wenkbrauwen"
+    },
+    {
+      "en": "Streaked buff **underparts**; fishes from posts",
+      "nl": "Gestreepte beige **onderzijde**; vist vanaf paaltjes"
+    }
+  ]
+}

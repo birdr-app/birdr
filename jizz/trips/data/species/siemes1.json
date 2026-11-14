@@ -1,0 +1,22 @@
+{
+  "code": "siemes1",
+  "name": {
+    "en": "Silver-eared Mesia",
+    "nl": "Zilveroortimalia"
+  },
+  "latin": "Leiothrix argentauris",
+  "look_for": [
+    {
+      "en": "Black **cap**, silvery **ear** patch",
+      "nl": "Zwarte **kap**, zilvergrijze **oorvlek**"
+    },
+    {
+      "en": "Orange-yellow **throat**, yellowish **bill**",
+      "nl": "Oranjegele **keel**, gelige **snavel**"
+    },
+    {
+      "en": "Red **rump** and undertail, bright wing patches",
+      "nl": "Rode **stuit** en onderstaart, felle vleugelvlekken"
+    }
+  ]
+}

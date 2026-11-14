@@ -1,0 +1,22 @@
+{
+  "code": "rehfin1",
+  "name": {
+    "en": "Red-headed Finch",
+    "nl": "Roodkopamadine"
+  },
+  "latin": "Amadina erythrocephala",
+  "look_for": [
+    {
+      "en": "Male with red **head** and **throat**",
+      "nl": "Mannetje met rode **kop** en **keel**"
+    },
+    {
+      "en": "Fine dark barring on sandy-brown **body**",
+      "nl": "Fijne donkere barring op zandbruin **lijf**"
+    },
+    {
+      "en": "Female without red, barred sandy-brown, pale **bill**",
+      "nl": "Vrouwtje zonder rood, gebandeerd zandbruin, lichte **snavel**"
+    }
+  ]
+}

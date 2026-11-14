@@ -1,0 +1,22 @@
+{
+  "code": "hargul1",
+  "name": {
+    "en": "Hartlaub's Gull",
+    "nl": "Hartlaubmeeuw"
+  },
+  "latin": "Chroicocephalus hartlaubii",
+  "look_for": [
+    {
+      "en": "Small pale gull, white **head**, red **bill**",
+      "nl": "Kleine bleke meeuw, witte **kop**, rode **snavel**"
+    },
+    {
+      "en": "Deep red **legs**, thin **bill**",
+      "nl": "Dieprode **poten**, dunne **snavel**"
+    },
+    {
+      "en": "Black wingtips with white mirrors",
+      "nl": "Zwarte vleugelpunten met witte spiegels"
+    }
+  ]
+}

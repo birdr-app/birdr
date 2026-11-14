@@ -1,0 +1,22 @@
+{
+  "code": "ostric2",
+  "name": {
+    "en": "Common Ostrich",
+    "nl": "Struisvogel"
+  },
+  "latin": "Struthio camelus",
+  "look_for": [
+    {
+      "en": "Huge flightless bird, long bare **neck** and **legs**",
+      "nl": "Enorme loopvogel met lange kale **nek** en **poten**"
+    },
+    {
+      "en": "Male black with white **wing** and **tail** plumes",
+      "nl": "Mannetje zwart met witte **vleugel**- en **staart**veren"
+    },
+    {
+      "en": "Female and young dull grey-brown, runs fast",
+      "nl": "Vrouwtje en jong dof grijsbruin, rent snel"
+    }
+  ]
+}

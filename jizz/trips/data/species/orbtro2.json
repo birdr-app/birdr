@@ -1,0 +1,22 @@
+{
+  "code": "orbtro2",
+  "name": {
+    "en": "Orange-breasted Trogon",
+    "nl": "Groenkoptrogon"
+  },
+  "latin": "Harpactes oreskios",
+  "look_for": [
+    {
+      "en": "Male: grey **head**, orange-yellow **breast** and **belly**",
+      "nl": "Mannetje: grijze **kop**, oranjegele **borst** en **buik**"
+    },
+    {
+      "en": "Rufous **back**, **tail** tipped black",
+      "nl": "Roestbruine **rug**, **staart** met zwarte punt"
+    },
+    {
+      "en": "Female brown-headed; sits upright and still",
+      "nl": "Vrouwtje met bruine kop; zit rechtop en stil"
+    }
+  ]
+}

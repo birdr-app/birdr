@@ -1,0 +1,22 @@
+{
+  "code": "crebar1",
+  "name": {
+    "en": "Crested Barbet",
+    "nl": "Kuifbaardvogel"
+  },
+  "latin": "Trachyphonus vaillantii",
+  "look_for": [
+    {
+      "en": "Shaggy black **crest** and yellow **face**",
+      "nl": "Warrige zwarte **kuif** en geel **gezicht**"
+    },
+    {
+      "en": "Yellow **underparts**, black-and-white speckled **back**",
+      "nl": "Gele **onderkant**, zwart met witte spikkels op de **rug**"
+    },
+    {
+      "en": "Long, ringing trill repeated for minutes",
+      "nl": "Lange, rinkelende triller die minutenlang doorgaat"
+    }
+  ]
+}

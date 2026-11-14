@@ -1,0 +1,22 @@
+{
+  "code": "tufduc",
+  "name": {
+    "en": "Tufted Duck",
+    "nl": "Kuifeend"
+  },
+  "latin": "Aythya fuligula",
+  "look_for": [
+    {
+      "en": "Male black with white **flanks**",
+      "nl": "Woerd zwart met witte **flanken**"
+    },
+    {
+      "en": "Drooping **tuft** on the back of the head",
+      "nl": "Hangende **kuif** achter op de kop"
+    },
+    {
+      "en": "Yellow eye, blue-grey **bill** with black tip",
+      "nl": "Gele oog, blauwgrijze **snavel** met zwarte punt"
+    }
+  ]
+}

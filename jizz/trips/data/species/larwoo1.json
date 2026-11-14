@@ -1,0 +1,22 @@
+{
+  "code": "larwoo1",
+  "name": {
+    "en": "Large Woodshrike",
+    "nl": "Grote rupsklauwier"
+  },
+  "latin": "Tephrodornis virgatus",
+  "look_for": [
+    {
+      "en": "Brown-grey above, whitish below",
+      "nl": "Bruingrijs boven, witachtig onder"
+    },
+    {
+      "en": "Dark mask under a pale **eyebrow**",
+      "nl": "Donker masker onder een lichte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Larger than Common Woodshrike, thick hooked **bill**",
+      "nl": "Groter dan de gewone rupsklauwier, dikke gehaakte **snavel**"
+    }
+  ]
+}

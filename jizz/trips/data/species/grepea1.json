@@ -1,0 +1,22 @@
+{
+  "code": "grepea1",
+  "name": {
+    "en": "Green Peafowl",
+    "nl": "Groene pauw"
+  },
+  "latin": "Pavo muticus",
+  "look_for": [
+    {
+      "en": "Metallic green, scaly-looking **neck** and body",
+      "nl": "Metaalgroene, geschubd ogende **hals** en lijf"
+    },
+    {
+      "en": "Tall, pointed **crest** held upright",
+      "nl": "Hoge, spitse **kuif** die rechtop staat"
+    },
+    {
+      "en": "Male has a long green **train**; female plainer",
+      "nl": "Man heeft een lange groene **sleep**; vrouw saaier"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "mutswa",
+  "name": {
+    "en": "Mute Swan",
+    "nl": "Knobbelzwaan"
+  },
+  "latin": "Cygnus olor",
+  "look_for": [
+    {
+      "en": "Orange **bill** with a black **knob**",
+      "nl": "Oranje **snavel** met zwarte **knobbel**"
+    },
+    {
+      "en": "Neck held in a graceful S-curve",
+      "nl": "Hals in een sierlijke S-bocht"
+    },
+    {
+      "en": "Loud, throbbing wingbeats in flight",
+      "nl": "Luide, zoevende vleugelslag in vlucht"
+    }
+  ]
+}

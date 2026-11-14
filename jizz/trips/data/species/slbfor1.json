@@ -1,0 +1,22 @@
+{
+  "code": "slbfor1",
+  "name": {
+    "en": "Slaty-backed Forktail",
+    "nl": "Grijsrugvorkstaart"
+  },
+  "latin": "Enicurus schistaceus",
+  "look_for": [
+    {
+      "en": "Slate-grey **crown** and **back**, white belly",
+      "nl": "Leigrijze **kruin** en **rug**, witte buik"
+    },
+    {
+      "en": "Long, forked **tail** with black-and-white bands",
+      "nl": "Lange gevorkte **staart** met zwart-witte banden"
+    },
+    {
+      "en": "Walks along streams, wagging the **tail**",
+      "nl": "Loopt langs beken en kwispelt met de **staart**"
+    }
+  ]
+}

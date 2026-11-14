@@ -1,0 +1,22 @@
+{
+  "code": "strbul2",
+  "name": {
+    "en": "Striated Bulbul",
+    "nl": "Gestreepte buulbuul"
+  },
+  "latin": "Alcurus striatus",
+  "look_for": [
+    {
+      "en": "Dark brown, boldly streaked white all over",
+      "nl": "Donkerbruin, overal opvallend wit gestreept"
+    },
+    {
+      "en": "Untidy shaggy **crest**, slender **bill**",
+      "nl": "Slordige ragfijne **kuif**, slanke **snavel**"
+    },
+    {
+      "en": "Noisy flocks in hill forest treetops",
+      "nl": "Luidruchtige groepen in boomtoppen van heuvelbos"
+    }
+  ]
+}

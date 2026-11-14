@@ -1,0 +1,22 @@
+{
+  "code": "karcha1",
+  "name": {
+    "en": "Karoo Chat",
+    "nl": "Karoospekvreter"
+  },
+  "latin": "Emarginata schlegelii",
+  "look_for": [
+    {
+      "en": "Grey above, white below, rufous patch behind **eye**",
+      "nl": "Grijs boven, wit onder, roestbruine vlek achter het **oog**"
+    },
+    {
+      "en": "Black **tail** with white outer feathers",
+      "nl": "Zwarte **staart** met witte buitenste veren"
+    },
+    {
+      "en": "Grey **rump**; forages on the ground in open scrub",
+      "nl": "Grijze **stuit**; zoekt op de grond in open struikgewas"
+    }
+  ]
+}

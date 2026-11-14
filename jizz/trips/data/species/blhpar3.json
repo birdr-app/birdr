@@ -1,0 +1,22 @@
+{
+  "code": "blhpar3",
+  "name": {
+    "en": "Blossom-headed Parakeet",
+    "nl": "Bloesemkopparkiet"
+  },
+  "latin": "Psittacula roseata",
+  "look_for": [
+    {
+      "en": "Male **head** plum-red, fading to blue; female grey",
+      "nl": "Mannetje met pruimrode **kop** die naar blauw vervaagt; vrouwtje grijs"
+    },
+    {
+      "en": "Black **chin**, thin black **collar**",
+      "nl": "Zwarte **kin**, smalle zwarte **halsband**"
+    },
+    {
+      "en": "Yellow **bill**, long **tail** tipped white",
+      "nl": "Gele **snavel**, lange **staart** met witte punt"
+    }
+  ]
+}

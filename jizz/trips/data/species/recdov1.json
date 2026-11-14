@@ -1,0 +1,22 @@
+{
+  "code": "recdov1",
+  "name": {
+    "en": "Red Collared Dove",
+    "nl": "Rode tortel"
+  },
+  "latin": "Streptopelia tranquebarica",
+  "look_for": [
+    {
+      "en": "Male brick-pink with a blue-grey **head**",
+      "nl": "Mannetje baksteenroze met blauwgrijze **kop**"
+    },
+    {
+      "en": "Narrow black half-**collar** across the **nape**",
+      "nl": "Smalle zwarte halve **halsband** in de **nek**"
+    },
+    {
+      "en": "Small and compact; female brownish-grey",
+      "nl": "Klein en gedrongen; vrouwtje bruingrijs"
+    }
+  ]
+}

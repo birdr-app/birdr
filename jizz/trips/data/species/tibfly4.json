@@ -1,0 +1,22 @@
+{
+  "code": "tibfly4",
+  "name": {
+    "en": "Indochinese Blue Flycatcher",
+    "nl": "Indochinese niltava"
+  },
+  "latin": "Cyornis sumatrensis",
+  "look_for": [
+    {
+      "en": "Male: blue **upperparts**, darker **face**",
+      "nl": "Mannetje: blauwe **bovenzijde**, donkerder **gezicht**"
+    },
+    {
+      "en": "Orange **throat** and **breast**, white lower **belly**",
+      "nl": "Oranje **keel** en **borst**, witte **onderbuik**"
+    },
+    {
+      "en": "Female duller brown with a blue **tail**",
+      "nl": "Vrouwtje dofbruin met een blauwe **staart**"
+    }
+  ]
+}

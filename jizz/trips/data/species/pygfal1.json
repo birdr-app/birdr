@@ -1,0 +1,22 @@
+{
+  "code": "pygfal1",
+  "name": {
+    "en": "Pygmy Falcon",
+    "nl": "Afrikaanse dwergvalk"
+  },
+  "latin": "Polihierax semitorquatus",
+  "look_for": [
+    {
+      "en": "Tiny falcon, grey above, white **face** and **underparts**",
+      "nl": "Piepkleine valk, grijs boven, wit **gezicht** en witte **onderkant**"
+    },
+    {
+      "en": "Female has a chestnut **back**",
+      "nl": "Vrouwtje heeft een kastanjebruine **rug**"
+    },
+    {
+      "en": "Lives in the big nests of weaver colonies",
+      "nl": "Woont in de grote nesten van wevers"
+    }
+  ]
+}

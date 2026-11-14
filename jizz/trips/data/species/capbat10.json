@@ -1,0 +1,22 @@
+{
+  "code": "capbat10",
+  "name": {
+    "en": "Cape Batis",
+    "nl": "Bruinflankvliegenvanger"
+  },
+  "latin": "Batis capensis",
+  "look_for": [
+    {
+      "en": "Male: broad black **breast** band, rufous **flanks**",
+      "nl": "Mannetje: brede zwarte **borstband**, roestbruine **flanken**"
+    },
+    {
+      "en": "Female: narrow rufous **breast** band and **throat** patch",
+      "nl": "Vrouwtje: smalle roestbruine **borstband** en **keelvlek**"
+    },
+    {
+      "en": "Rufous **wings**, brown **back**, busy in forest",
+      "nl": "Roestbruine **vleugels**, bruine **rug**, druk in het bos"
+    }
+  ]
+}

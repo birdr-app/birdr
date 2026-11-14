@@ -1,0 +1,22 @@
+{
+  "code": "pltsun2",
+  "name": {
+    "en": "Brown-throated Sunbird",
+    "nl": "Bruinkeelhoningzuiger"
+  },
+  "latin": "Anthreptes malacensis",
+  "look_for": [
+    {
+      "en": "Male: glossy green **crown**, coppery-brown **throat**",
+      "nl": "Mannetje: glanzend groene **kruin**, koperbruine **keel**"
+    },
+    {
+      "en": "Purple-blue **rump**, yellow **belly**",
+      "nl": "Paarsblauwe **stuit**, gele **buik**"
+    },
+    {
+      "en": "Female olive above, yellow below",
+      "nl": "Vrouwtje olijf boven, geel onder"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "whhlap1",
+  "name": {
+    "en": "White-crowned Lapwing",
+    "nl": "Witkruinkievit"
+  },
+  "latin": "Vanellus albiceps",
+  "look_for": [
+    {
+      "en": "White **crown**, grey **face** with yellow **wattles**",
+      "nl": "Witte **kruin**, grijs **gezicht** met gele **lellen**"
+    },
+    {
+      "en": "Bold black-and-white **wings** and **tail** in flight",
+      "nl": "Opvallend zwart-witte **vleugels** en **staart** in de vlucht"
+    },
+    {
+      "en": "Stands on sandbanks and shingle beside rivers",
+      "nl": "Staat op zandbanken en grindbanken langs rivieren"
+    }
+  ]
+}

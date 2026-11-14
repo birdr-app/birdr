@@ -1,0 +1,22 @@
+{
+  "code": "sibbro3",
+  "name": {
+    "en": "Silver-breasted Broadbill",
+    "nl": "Zwartbrauwbreedbek"
+  },
+  "latin": "Serilophus lunatus",
+  "look_for": [
+    {
+      "en": "Silvery-grey **head** and **breast**",
+      "nl": "Zilvergrijze **kop** en **borst**"
+    },
+    {
+      "en": "Broad black **eyebrow** meeting on the **nape**",
+      "nl": "Brede zwarte **wenkbrauwstreep** die in de **nek** samenkomt"
+    },
+    {
+      "en": "Chestnut **back**, blue-and-black **wings**, long **tail**",
+      "nl": "Kastanjebruine **rug**, blauwzwarte **vleugels**, lange **staart**"
+    }
+  ]
+}

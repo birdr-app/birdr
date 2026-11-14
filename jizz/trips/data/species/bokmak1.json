@@ -1,0 +1,22 @@
+{
+  "code": "bokmak1",
+  "name": {
+    "en": "Bokmakierie",
+    "nl": "Bokmakierie"
+  },
+  "latin": "Telophorus zeylonus",
+  "look_for": [
+    {
+      "en": "Black necklace on a yellow **breast**",
+      "nl": "Zwarte halsband op een gele **borst**"
+    },
+    {
+      "en": "Olive-green back, yellow-tipped **tail**",
+      "nl": "Olijfgroene rug, geelgepunte **staart**"
+    },
+    {
+      "en": "Loud bubbling duets from bushtops",
+      "nl": "Luide borrelende duetten vanaf struiktoppen"
+    }
+  ]
+}

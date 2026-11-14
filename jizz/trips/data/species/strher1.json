@@ -1,0 +1,22 @@
+{
+  "code": "strher1",
+  "name": {
+    "en": "Little Heron",
+    "nl": "Mangrovereiger"
+  },
+  "latin": "Butorides atricapilla",
+  "look_for": [
+    {
+      "en": "Small, hunched heron, dark grey **back**",
+      "nl": "Kleine, ineengedoken reiger met donkergrijze **rug**"
+    },
+    {
+      "en": "Black **cap**, grey **underparts**, streaked **throat**",
+      "nl": "Zwarte **kap**, grijze **onderzijde**, gestreepte **keel**"
+    },
+    {
+      "en": "Stalks creeks and mangroves; short yellow **legs**",
+      "nl": "Sluipt langs kreken en mangrove; korte gele **poten**"
+    }
+  ]
+}

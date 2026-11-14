@@ -1,0 +1,22 @@
+{
+  "code": "pacgos1",
+  "name": {
+    "en": "Pale Chanting-Goshawk",
+    "nl": "Kaapse zanghavik"
+  },
+  "latin": "Melierax canorus",
+  "look_for": [
+    {
+      "en": "Pale grey hawk with long orange-red **legs**",
+      "nl": "Lichtgrijze havik met lange oranjerode **poten**"
+    },
+    {
+      "en": "White **rump** and barred **tail**",
+      "nl": "Witte **stuit** en gebande **staart**"
+    },
+    {
+      "en": "Perches openly on posts, whistles at dawn",
+      "nl": "Zit vrij op palen en fluit in de ochtend"
+    }
+  ]
+}

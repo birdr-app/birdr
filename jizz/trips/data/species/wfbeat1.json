@@ -1,0 +1,22 @@
+{
+  "code": "wfbeat1",
+  "name": {
+    "en": "White-fronted Bee-eater",
+    "nl": "Witvoorhoofdbijeneter"
+  },
+  "latin": "Merops bullockoides",
+  "look_for": [
+    {
+      "en": "White **forehead** above a black eye stripe",
+      "nl": "Wit **voorhoofd** boven een zwarte oogstreep"
+    },
+    {
+      "en": "Red **throat** and cinnamon-buff **belly**",
+      "nl": "Rode **keel** en kaneelkleurige **buik**"
+    },
+    {
+      "en": "Nests in noisy colonies in earth banks",
+      "nl": "Broedt in luidruchtige kolonies in steile oevers"
+    }
+  ]
+}

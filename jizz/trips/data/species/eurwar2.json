@@ -1,0 +1,22 @@
+{
+  "code": "eurwar2",
+  "name": {
+    "en": "River Warbler",
+    "nl": "Krekelzanger"
+  },
+  "latin": "Locustella fluviatilis",
+  "look_for": [
+    {
+      "en": "Streaked **breast**, long **undertail** with white tips",
+      "nl": "Gestreepte **borst**, lange **onderstaart** met witte punten"
+    },
+    {
+      "en": "Skulks in dense, damp thickets",
+      "nl": "Sluipt rond in dichte, vochtige struiken"
+    },
+    {
+      "en": "Song a long, mechanical sewing-machine reel",
+      "nl": "Zang: een lange, mechanische naaimachinetriller"
+    }
+  ]
+}

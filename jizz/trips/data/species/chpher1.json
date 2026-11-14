@@ -1,0 +1,22 @@
+{
+  "code": "chpher1",
+  "name": {
+    "en": "Chinese Pond Heron",
+    "nl": "Chinese ralreiger"
+  },
+  "latin": "Ardeola bacchus",
+  "look_for": [
+    {
+      "en": "Breeding: chestnut **head** and **breast**, dark **back**",
+      "nl": "Zomer: kastanjebruine **kop** en **borst**, donkere **rug**"
+    },
+    {
+      "en": "Non-breeding: streaky brown, yellow **bill** with dark tip",
+      "nl": "Winter: gestreept bruin, gele **snavel** met donkere punt"
+    },
+    {
+      "en": "Pure white **wings** flash in flight",
+      "nl": "Spierwitte **vleugels** flitsen in de vlucht"
+    }
+  ]
+}

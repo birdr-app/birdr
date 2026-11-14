@@ -1,0 +1,22 @@
+{
+  "code": "greadj1",
+  "name": {
+    "en": "Greater Adjutant",
+    "nl": "Indische maraboe"
+  },
+  "latin": "Leptoptilos dubius",
+  "look_for": [
+    {
+      "en": "Huge, bare-headed stork, hunched at rest",
+      "nl": "Enorme ooievaar met een kale kop, gebogen als hij rust"
+    },
+    {
+      "en": "Dangling **pouch** at the front of the neck",
+      "nl": "Hangende **keelzak** voor aan de hals"
+    },
+    {
+      "en": "Pale grey **wing** panel, thick wedge-shaped bill",
+      "nl": "Lichtgrijs **vleugel**vlak, dikke wigvormige snavel"
+    }
+  ]
+}

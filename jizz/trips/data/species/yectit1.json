@@ -1,0 +1,22 @@
+{
+  "code": "yectit1",
+  "name": {
+    "en": "Yellow-cheeked Tit",
+    "nl": "Geelwangmees"
+  },
+  "latin": "Machlolophus spilonotus",
+  "look_for": [
+    {
+      "en": "Tall black **crest** and yellow **cheeks**",
+      "nl": "Hoge zwarte **kuif** en gele **wangen**"
+    },
+    {
+      "en": "Black **throat** and belly line on yellow",
+      "nl": "Zwarte **keel** en buikstreep op geel"
+    },
+    {
+      "en": "Olive-green **back**, yellow **nape** patch",
+      "nl": "Olijfgroene **rug**, gele **nekvlek**"
+    }
+  ]
+}

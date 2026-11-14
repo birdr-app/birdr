@@ -1,0 +1,22 @@
+{
+  "code": "mewgul",
+  "name": {
+    "en": "Common Gull",
+    "nl": "Stormmeeuw"
+  },
+  "latin": "Larus canus",
+  "look_for": [
+    {
+      "en": "Smaller than Herring Gull, rounder head",
+      "nl": "Kleiner dan zilvermeeuw, ronde kop"
+    },
+    {
+      "en": "Greenish-yellow **bill** without a red spot",
+      "nl": "Groengele **snavel** zonder rode vlek"
+    },
+    {
+      "en": "Black **wingtip** with large white mirrors",
+      "nl": "Zwarte **vleugelpunt** met grote witte spiegels"
+    }
+  ]
+}

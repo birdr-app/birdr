@@ -1,0 +1,22 @@
+{
+  "code": "blaher1",
+  "name": {
+    "en": "Black Heron",
+    "nl": "Zwarte reiger"
+  },
+  "latin": "Egretta ardesiaca",
+  "look_for": [
+    {
+      "en": "Slaty-black heron with yellow **feet**",
+      "nl": "Leikleurige zwarte reiger met gele **voeten**"
+    },
+    {
+      "en": "Hunts under a canopy of spread **wings**",
+      "nl": "Jaagt onder een parasol van gespreide **vleugels**"
+    },
+    {
+      "en": "Small and slim, wades in shallow water",
+      "nl": "Klein en slank, waadt door ondiep water"
+    }
+  ]
+}

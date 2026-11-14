@@ -1,0 +1,22 @@
+{
+  "code": "eurwoo",
+  "name": {
+    "en": "Eurasian Woodcock",
+    "nl": "Houtsnip"
+  },
+  "latin": "Scolopax rusticola",
+  "look_for": [
+    {
+      "en": "Plump, rusty-brown, with a long straight **bill**",
+      "nl": "Gedrongen, roestbruin, met lange rechte **snavel**"
+    },
+    {
+      "en": "Barred **crown**, big dark eyes set high",
+      "nl": "Dwarsgestreepte **kruin**, grote donkere ogen hoog op de kop"
+    },
+    {
+      "en": "Slow display flight at dusk, with croaks",
+      "nl": "Langzame baltsvlucht in de schemering, met gekwaak"
+    }
+  ]
+}

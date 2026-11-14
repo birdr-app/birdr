@@ -1,0 +1,22 @@
+{
+  "code": "comwoo1",
+  "name": {
+    "en": "Common Woodshrike",
+    "nl": "Kleine rupsklauwier"
+  },
+  "latin": "Tephrodornis pondicerianus",
+  "look_for": [
+    {
+      "en": "Broad dark mask through the **eye**",
+      "nl": "Brede donkere oogstreep onder een lichte wenkbrauwstreep"
+    },
+    {
+      "en": "Grey-brown above, pale **rump**, white-cornered **tail**",
+      "nl": "Grijsbruin boven, lichte **stuit**, **staart** met witte hoeken"
+    },
+    {
+      "en": "Heavy hooked **bill**; sits upright in trees",
+      "nl": "Zware, gehaakte **snavel**; zit rechtop in bomen"
+    }
+  ]
+}

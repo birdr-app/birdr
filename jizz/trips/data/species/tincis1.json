@@ -1,0 +1,22 @@
+{
+  "code": "tincis1",
+  "name": {
+    "en": "Levaillant's Cisticola",
+    "nl": "Valleigraszanger"
+  },
+  "latin": "Cisticola tinniens",
+  "look_for": [
+    {
+      "en": "Rufous **cap**, bold black streaks on a grey **back**",
+      "nl": "Roestbruine **kap**, brede zwarte strepen op een grijze **rug**"
+    },
+    {
+      "en": "Rufous panel in the **wing**, buff-white face",
+      "nl": "Roestbruin vlak in de **vleugel**, bleekbeige gezicht"
+    },
+    {
+      "en": "Perches on reed tops, wailing 'tee-tee-tee'",
+      "nl": "Zit op rietpluimen, klaagt 'tie-tie-tie'"
+    }
+  ]
+}

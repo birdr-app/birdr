@@ -1,0 +1,22 @@
+{
+  "code": "redjun",
+  "name": {
+    "en": "Red Junglefowl",
+    "nl": "Bankivahoen"
+  },
+  "latin": "Gallus gallus",
+  "look_for": [
+    {
+      "en": "Male: gold-red **hackles**, glossy green-black **tail**",
+      "nl": "Haan: goudrode **halskraag**, glanzend groenzwarte **staart**"
+    },
+    {
+      "en": "Large red **comb** and bare red face",
+      "nl": "Grote rode **kam** en kale rode kop"
+    },
+    {
+      "en": "Female: streaky buff-brown, plain **tail**",
+      "nl": "Hen: gestreept bruinbeige, effen **staart**"
+    }
+  ]
+}

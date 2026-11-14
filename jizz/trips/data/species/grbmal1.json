@@ -1,0 +1,22 @@
+{
+  "code": "grbmal1",
+  "name": {
+    "en": "Green-billed Malkoha",
+    "nl": "Grote groensnavelmalkoha"
+  },
+  "latin": "Phaenicophaeus tristis",
+  "look_for": [
+    {
+      "en": "Grey malkoha with long, white-tipped **tail**",
+      "nl": "Grijze malkoha met lange **staart** met witte punten"
+    },
+    {
+      "en": "Red face patch with a white border",
+      "nl": "Rode gezichtsvlek met witte rand"
+    },
+    {
+      "en": "Dark grey **back**, green gloss on **wings**",
+      "nl": "Donkergrijze **rug**, groene glans op de **vleugels**"
+    }
+  ]
+}

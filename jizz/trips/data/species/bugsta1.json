@@ -1,0 +1,22 @@
+{
+  "code": "bugsta1",
+  "name": {
+    "en": "Burchell's Starling",
+    "nl": "Grote glansspreeuw"
+  },
+  "latin": "Lamprotornis australis",
+  "look_for": [
+    {
+      "en": "Large, dark glossy starling, longish **tail**",
+      "nl": "Grote, donkere glansspreeuw met een vrij lange **staart**"
+    },
+    {
+      "en": "Bronze patch on the **ear**, purple **rump**",
+      "nl": "Bronskleurige vlek op het **oor**, paarse **stuit**"
+    },
+    {
+      "en": "Dark **eye**, unlike the orange-eyed Cape Starling",
+      "nl": "Donker **oog**, anders dan bij de roodschouderglansspreeuw"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "btbeat2",
+  "name": {
+    "en": "Blue-throated Bee-eater",
+    "nl": "Maleise bijeneter"
+  },
+  "latin": "Merops viridis",
+  "look_for": [
+    {
+      "en": "Chestnut **head** and **nape**, green **wings**",
+      "nl": "Kastanjebruine **kop** en **nek**, groene **vleugels**"
+    },
+    {
+      "en": "Bright blue **throat**, black **eye**-stripe",
+      "nl": "Helderblauwe **keel**, zwarte **oog**streep"
+    },
+    {
+      "en": "Blue **rump**, long **tail** streamers",
+      "nl": "Blauwe **stuit**, lange **staart**pennen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "capcro1",
+  "name": {
+    "en": "Long-billed Crombec",
+    "nl": "Kaapse krombek"
+  },
+  "latin": "Sylvietta rufescens",
+  "look_for": [
+    {
+      "en": "Tiny warbler with a stubby **tail**",
+      "nl": "Piepklein zangertje met een stompe **staart**"
+    },
+    {
+      "en": "Long, slightly curved **bill**, dark eye-stripe",
+      "nl": "Lange, licht gebogen **snavel**, donkere oogstreep"
+    },
+    {
+      "en": "Rusty-buff **breast**, grey back, forages in pairs",
+      "nl": "Roestbuffe **borst**, grijze rug, foerageert in paartjes"
+    }
+  ]
+}

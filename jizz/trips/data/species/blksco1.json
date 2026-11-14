@@ -1,0 +1,22 @@
+{
+  "code": "blksco1",
+  "name": {
+    "en": "Common Scoter",
+    "nl": "Zwarte zee-eend"
+  },
+  "latin": "Melanitta nigra",
+  "look_for": [
+    {
+      "en": "Male all black, yellow knob on the **bill**",
+      "nl": "Woerd helemaal zwart, gele knobbel op de **snavel**"
+    },
+    {
+      "en": "Female dark brown with pale **cheeks**",
+      "nl": "Eend donkerbruin met lichte **wangen**"
+    },
+    {
+      "en": "Flocks at sea, no white in the wings",
+      "nl": "Groepen op zee, geen wit in de vleugels"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "strkin1",
+  "name": {
+    "en": "Striped Kingfisher",
+    "nl": "Gestreepte ijsvogel"
+  },
+  "latin": "Halcyon chelicuti",
+  "look_for": [
+    {
+      "en": "Streaked **head** and **breast**, blue **back**",
+      "nl": "Gestreepte **kop** en **borst**, blauwe **rug**"
+    },
+    {
+      "en": "**Bill** black above, red below",
+      "nl": "**Snavel** boven zwart, onder rood"
+    },
+    {
+      "en": "Sits on bare branches, calls a loud trill",
+      "nl": "Zit op kale takken en roept een luide triller"
+    }
+  ]
+}

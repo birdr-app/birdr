@@ -120,7 +120,7 @@ class TripApiTestCase(TestCase):
     def test_lists_trips(self):
         res = self.client.get('/api/trips/?lang=nl')
         self.assertEqual(res.status_code, 200)
-        self.assertEqual(res.json()[0]['country'], 'LK')
+        self.assertIn('LK', [t['country'] for t in res.json()])
 
     def test_trip_payload_in_dutch(self):
         res = self.client.get('/api/trips/LK/?lang=nl')
@@ -193,6 +193,11 @@ class TripRegionApiTestCase(TestCase):
         codes = [t['country'] for t in self.client.get('/api/trips/').json()]
         self.assertIn('CR', codes)
         self.assertNotIn('CR-CARIBBEAN', codes)
+
+    def test_list_is_sorted_by_name(self):
+        for lang in ('en', 'nl'):
+            names = [t['name'] for t in self.client.get(f'/api/trips/?lang={lang}').json()]
+            self.assertEqual(names, sorted(names, key=lambda n: n.lower().replace('ë', 'e')))
 
     def test_country_payload_lists_its_regions(self):
         data = self.client.get('/api/trips/CR/?lang=nl').json()

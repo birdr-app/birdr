@@ -1,0 +1,22 @@
+{
+  "code": "procan1",
+  "name": {
+    "en": "Protea Canary",
+    "nl": "Witbandkanarie"
+  },
+  "latin": "Crithagra leucoptera",
+  "look_for": [
+    {
+      "en": "Black **chin**, white **throat**, big pale **bill**",
+      "nl": "Zwarte **kin**, witte **keel**, grote lichte **snavel**"
+    },
+    {
+      "en": "Grey-brown above with two buff **wing** bars",
+      "nl": "Grijsbruin boven met twee bleekgele **vleugelstrepen**"
+    },
+    {
+      "en": "Shy, dives into thick bush, mimicking warble",
+      "nl": "Schuw, duikt in dichte struiken, imiterende zang"
+    }
+  ]
+}

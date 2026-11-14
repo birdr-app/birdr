@@ -1,0 +1,22 @@
+{
+  "code": "hazgro1",
+  "name": {
+    "en": "Hazel Grouse",
+    "nl": "Hazelhoen"
+  },
+  "latin": "Tetrastes bonasia",
+  "look_for": [
+    {
+      "en": "Small, grey-brown grouse of dense woods",
+      "nl": "Klein, grijsbruin hoen van dicht bos"
+    },
+    {
+      "en": "Male: black **throat** edged with white",
+      "nl": "Haan: zwarte **keel** met witte rand"
+    },
+    {
+      "en": "Small **crest**, grey **tail** with a black band",
+      "nl": "Kleine **kuif**, grijze **staart** met zwarte band"
+    }
+  ]
+}

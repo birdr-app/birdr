@@ -1,0 +1,22 @@
+{
+  "code": "ruewar2",
+  "name": {
+    "en": "Rufous-eared Warbler",
+    "nl": "Roodoorprinia"
+  },
+  "latin": "Malcorus pectoralis",
+  "look_for": [
+    {
+      "en": "Rufous **ear** patches on a streaked brown **head**",
+      "nl": "Roodbruine **oor**vlekken op een gestreepte bruine **kop**"
+    },
+    {
+      "en": "Black band across the **breast** in summer",
+      "nl": "Zwarte band over de **borst** in de zomer"
+    },
+    {
+      "en": "Hops on the ground, long **tail** cocked",
+      "nl": "Hipt over de grond, lange **staart** omhoog"
+    }
+  ]
+}

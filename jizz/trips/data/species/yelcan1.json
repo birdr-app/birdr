@@ -1,0 +1,22 @@
+{
+  "code": "yelcan1",
+  "name": {
+    "en": "Yellow Canary",
+    "nl": "Geelbuikkanarie"
+  },
+  "latin": "Crithagra flaviventris",
+  "look_for": [
+    {
+      "en": "Bright yellow male, lightly streaked olive **back**",
+      "nl": "Felgeel mannetje met licht gestreepte olijfgroene **rug**"
+    },
+    {
+      "en": "Yellow **rump** and yellow sides to the **tail**",
+      "nl": "Gele **stuit** en gele zijkanten aan de **staart**"
+    },
+    {
+      "en": "Female streaky grey-brown with pale **eyebrow**",
+      "nl": "Vrouwtje gestreept grijsbruin met lichte **wenkbrauwstreep**"
+    }
+  ]
+}

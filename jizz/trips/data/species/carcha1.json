@@ -1,0 +1,22 @@
+{
+  "code": "carcha1",
+  "name": {
+    "en": "Cape Robin-Chat",
+    "nl": "Kaapse lawaaimaker"
+  },
+  "latin": "Dessonornis caffer",
+  "look_for": [
+    {
+      "en": "Orange **breast** and face, white eyebrow, no red cap",
+      "nl": "Oranje **borst** en gezicht, witte wenkbrauwstreep, geen rode kap"
+    },
+    {
+      "en": "Orange **rump** and outer **tail** flash in flight",
+      "nl": "Oranje **stuit** en buitenste **staart** flitsen in de vlucht"
+    },
+    {
+      "en": "Hops on lawns, sings from low perches",
+      "nl": "Huppelt over gazons, zingt vanaf lage zitplaatsen"
+    }
+  ]
+}

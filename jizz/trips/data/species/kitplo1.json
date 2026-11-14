@@ -1,0 +1,22 @@
+{
+  "code": "kitplo1",
+  "name": {
+    "en": "Kittlitz's Plover",
+    "nl": "Herdersplevier"
+  },
+  "latin": "Anarhynchus pecuarius",
+  "look_for": [
+    {
+      "en": "Black eye-stripe and a white **forehead** band",
+      "nl": "Zwarte oogstreep en een wit **voorhoofd**"
+    },
+    {
+      "en": "Orange-buff **breast**, no dark breast band",
+      "nl": "Oranjebuff **borst**, zonder donkere borstband"
+    },
+    {
+      "en": "Small and long-**legged**, runs over short grass",
+      "nl": "Klein met lange **poten**, rent over gras en slik"
+    }
+  ]
+}

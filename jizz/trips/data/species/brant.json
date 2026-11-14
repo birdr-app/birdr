@@ -1,0 +1,22 @@
+{
+  "code": "brant",
+  "name": {
+    "en": "Brent Goose",
+    "nl": "Rotgans"
+  },
+  "latin": "Branta bernicla",
+  "look_for": [
+    {
+      "en": "Small, dark goose with a black head",
+      "nl": "Kleine, donkere gans met zwarte kop"
+    },
+    {
+      "en": "Small white patch on the **neck**",
+      "nl": "Klein wit vlekje op de **hals**"
+    },
+    {
+      "en": "Dark body with a white **rear end**",
+      "nl": "Donker lijf met wit **achterlijf**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "barwar1",
+  "name": {
+    "en": "Barred Warbler",
+    "nl": "Sperwergrasmus"
+  },
+  "latin": "Curruca nisoria",
+  "look_for": [
+    {
+      "en": "Large, heavy grey warbler, barred **underparts**",
+      "nl": "Grote, zware grijze zanger, gebandeerde **onderkant**"
+    },
+    {
+      "en": "Two pale **wing bars**, white outer **tail**",
+      "nl": "Twee lichte **vleugelstrepen**, wit op de buitenste **staart**"
+    },
+    {
+      "en": "Pale yellow **eye** in adults",
+      "nl": "Lichtgele **ogen** bij volwassen vogels"
+    }
+  ]
+}

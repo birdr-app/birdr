@@ -1,0 +1,22 @@
+{
+  "code": "blucra2",
+  "name": {
+    "en": "Blue Crane",
+    "nl": "Stanleykraanvogel"
+  },
+  "latin": "Grus paradisea",
+  "look_for": [
+    {
+      "en": "Pale blue-grey crane with a bulbous **head**",
+      "nl": "Lichtblauwgrijze kraanvogel met een bolle **kop**"
+    },
+    {
+      "en": "Long dark **wing** plumes trail to the ground",
+      "nl": "Lange donkere **vleugel**pennen slepen over de grond"
+    },
+    {
+      "en": "Pairs walk open grassland, harsh croaking calls",
+      "nl": "Paartjes lopen door open grasland, rauw krakend geroep"
+    }
+  ]
+}

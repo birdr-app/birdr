@@ -1,0 +1,22 @@
+{
+  "code": "spocra1",
+  "name": {
+    "en": "Spotted Crake",
+    "nl": "Porseleinhoen"
+  },
+  "latin": "Porzana porzana",
+  "look_for": [
+    {
+      "en": "Brown, spotted with white, streaked back",
+      "nl": "Bruin met witte stippen en gestreepte rug"
+    },
+    {
+      "en": "Yellow **bill** with a red base",
+      "nl": "Gele **snavel** met rode basis"
+    },
+    {
+      "en": "Buff **undertail**, whip-crack call at night",
+      "nl": "Beige **onderstaart**, zweepslagroep 's nachts"
+    }
+  ]
+}

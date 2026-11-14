@@ -1,0 +1,22 @@
+{
+  "code": "soashe1",
+  "name": {
+    "en": "South African Shelduck",
+    "nl": "Kaapse casarca"
+  },
+  "latin": "Tadorna cana",
+  "look_for": [
+    {
+      "en": "Male grey **head**; female white face, rusty body",
+      "nl": "Mannetje grijze **kop**; vrouwtje wit gezicht, roestkleurig lijf"
+    },
+    {
+      "en": "Large rusty-orange duck with a black **bill**",
+      "nl": "Grote roestoranje eend met een zwarte **snavel**"
+    },
+    {
+      "en": "Big white **wing** patch, honking calls in flight",
+      "nl": "Grote witte **vleugel**vlek, toetert in de vlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "yebwar3",
+  "name": {
+    "en": "Yellow-browed Warbler",
+    "nl": "Bladkoning"
+  },
+  "latin": "Phylloscopus inornatus",
+  "look_for": [
+    {
+      "en": "Long yellowish-white **eyebrow**, dark eye-stripe",
+      "nl": "Lange geelwitte **wenkbrauwstreep**, donkere **oogstreep**"
+    },
+    {
+      "en": "Two pale **wing**-bars on green **wing**",
+      "nl": "Twee lichte vleugelstrepen op de groene **vleugel**"
+    },
+    {
+      "en": "Tiny, restless, flicks its **wings** in the canopy",
+      "nl": "Piepklein en onrustig, wipt met de **vleugels** in het bladerdak"
+    }
+  ]
+}

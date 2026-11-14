@@ -1,0 +1,22 @@
+{
+  "code": "drasis2",
+  "name": {
+    "en": "Drakensberg Siskin",
+    "nl": "Basutokanarie"
+  },
+  "latin": "Crithagra symonsi",
+  "look_for": [
+    {
+      "en": "Bright yellow **throat**, duller yellow **belly**",
+      "nl": "Felgele **keel**, doffer gele **buik**"
+    },
+    {
+      "en": "White sides to the **tail**, light brown **back**",
+      "nl": "Witte zijkanten aan de **staart**, lichtbruine **rug**"
+    },
+    {
+      "en": "Female buff and streaked, without yellow",
+      "nl": "Vrouwtje bruinbuff en gestreept, zonder geel"
+    }
+  ]
+}

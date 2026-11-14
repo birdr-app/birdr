@@ -1,0 +1,22 @@
+{
+  "code": "hacdro1",
+  "name": {
+    "en": "Hair-crested Drongo",
+    "nl": "Haarkuifdrongo"
+  },
+  "latin": "Dicrurus hottentottus",
+  "look_for": [
+    {
+      "en": "Glossy black spangled with blue spots",
+      "nl": "Glanzend zwart met blauwe stippen"
+    },
+    {
+      "en": "Hair-like **crest** feathers on the **forehead**",
+      "nl": "Haarachtige **kuif** op het **voorhoofd**"
+    },
+    {
+      "en": "Long **tail** with outer tips curling upwards",
+      "nl": "Lange **staart** met omhoog krullende buitenste punten"
+    }
+  ]
+}

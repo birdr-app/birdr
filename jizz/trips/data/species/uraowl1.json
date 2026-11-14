@@ -1,0 +1,22 @@
+{
+  "code": "uraowl1",
+  "name": {
+    "en": "Ural Owl",
+    "nl": "Oeraluil"
+  },
+  "latin": "Strix uralensis",
+  "look_for": [
+    {
+      "en": "Large, pale grey-brown owl with a long **tail**",
+      "nl": "Grote, lichtgrijsbruine uil met lange **staart**"
+    },
+    {
+      "en": "Round pale **face**, small dark eyes",
+      "nl": "Ronde lichte **gezichtsschijf**, kleine donkere ogen"
+    },
+    {
+      "en": "Streaked **underparts**, deep barking hoots",
+      "nl": "Gestreepte **onderkant**, diepe blaffende roep"
+    }
+  ]
+}

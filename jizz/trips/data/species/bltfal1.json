@@ -1,0 +1,22 @@
+{
+  "code": "bltfal1",
+  "name": {
+    "en": "Black-thighed Falconet",
+    "nl": "Musvalk"
+  },
+  "latin": "Microhierax fringillarius",
+  "look_for": [
+    {
+      "en": "Sparrow-sized falcon, glossy black above",
+      "nl": "Valkje ter grootte van een mus, glanzend zwart boven"
+    },
+    {
+      "en": "White **forehead** streak arcing round black **cheeks**",
+      "nl": "Witte **voorhoofd**streep om zwarte **wangen**"
+    },
+    {
+      "en": "White **breast**, rufous **belly**, black **thighs**",
+      "nl": "Witte **borst**, roestbruine **buik**, zwarte **dijen**"
+    }
+  ]
+}

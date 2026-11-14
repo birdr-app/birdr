@@ -1,0 +1,22 @@
+{
+  "code": "marori2",
+  "name": {
+    "en": "Maroon Oriole",
+    "nl": "Indische bloedwielewaal"
+  },
+  "latin": "Oriolus traillii",
+  "look_for": [
+    {
+      "en": "Male deep maroon with black **head** and **wings**",
+      "nl": "Mannetje diep kastanjerood met zwarte **kop** en **vleugels**"
+    },
+    {
+      "en": "Bluish **bill**, chestnut-maroon **tail**",
+      "nl": "Blauwachtige **snavel**, kastanjerode **staart**"
+    },
+    {
+      "en": "Female: streaked grey-white **underparts**",
+      "nl": "Vrouwtje: grijswitte **onderzijde** met zwarte strepen"
+    }
+  ]
+}

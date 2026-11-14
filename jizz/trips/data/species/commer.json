@@ -1,0 +1,22 @@
+{
+  "code": "commer",
+  "name": {
+    "en": "Goosander",
+    "nl": "Grote zaagbek"
+  },
+  "latin": "Mergus merganser",
+  "look_for": [
+    {
+      "en": "Male white with a green-black **head**",
+      "nl": "Woerd wit met groenzwarte **kop**"
+    },
+    {
+      "en": "Long thin red **bill** with a hooked tip",
+      "nl": "Lange dunne rode **snavel** met haakpunt"
+    },
+    {
+      "en": "Female grey, rusty head, sharp white **chin**",
+      "nl": "Eend grijs met roodbruine kop en scherp wit **kinvlekje**"
+    }
+  ]
+}

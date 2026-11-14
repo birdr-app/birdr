@@ -1,0 +1,22 @@
+{
+  "code": "capcan1",
+  "name": {
+    "en": "Cape Canary",
+    "nl": "Grijsnekkanarie"
+  },
+  "latin": "Serinus canicollis",
+  "look_for": [
+    {
+      "en": "Grey **nape** and **neck**, green **back**",
+      "nl": "Grijze **nek** en **hals**, groene **rug**"
+    },
+    {
+      "en": "Yellow **rump** and **underparts**, white lower **belly**",
+      "nl": "Gele **stuit** en **onderzijde**, witte onderbuik"
+    },
+    {
+      "en": "Gregarious flocks, trilling song in display flight",
+      "nl": "Groepsvogel, trillende zang in baltsvlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "cosbil1",
+  "name": {
+    "en": "Common Scimitarbill",
+    "nl": "Zuid-Afrikaanse boomhop"
+  },
+  "latin": "Rhinopomastus cyanomelas",
+  "look_for": [
+    {
+      "en": "Black, with a long, thin, curved **bill**",
+      "nl": "Zwart, met een lange, dunne, gebogen **snavel**"
+    },
+    {
+      "en": "White **wing** bar and white **tail** spots in flight",
+      "nl": "Witte **vleugelband** en witte **staartpunten**"
+    },
+    {
+      "en": "Hops along branches and trunks, probing bark",
+      "nl": "Hupt langs takken en stammen, peutert in schors"
+    }
+  ]
+}

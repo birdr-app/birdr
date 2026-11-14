@@ -1,0 +1,22 @@
+{
+  "code": "lotbro1",
+  "name": {
+    "en": "Long-tailed Broadbill",
+    "nl": "Papegaaibreedbek"
+  },
+  "latin": "Psarisomus dalhousiae",
+  "look_for": [
+    {
+      "en": "Black **head** with blue **crown** patch",
+      "nl": "Zwarte **kop** met een blauwe vlek op de **kruin**"
+    },
+    {
+      "en": "Yellow **throat** and neck patch, green body",
+      "nl": "Gele **keel** en nekvlek, groen lijf"
+    },
+    {
+      "en": "Very long blue **tail**, restless canopy flocks",
+      "nl": "Heel lange blauwe **staart**, onrustige groepen in het bladerdak"
+    }
+  ]
+}

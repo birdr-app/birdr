@@ -1,0 +1,22 @@
+{
+  "code": "captea1",
+  "name": {
+    "en": "Cape Teal",
+    "nl": "Kaapse taling"
+  },
+  "latin": "Anas capensis",
+  "look_for": [
+    {
+      "en": "Small, very pale speckled grey-pink duck",
+      "nl": "Kleine, zeer bleke gespikkelde grijsroze eend"
+    },
+    {
+      "en": "Pink **bill**, plain pale **head**",
+      "nl": "Roze **snavel**, effen bleke **kop**"
+    },
+    {
+      "en": "Green patch on the **wing** in flight",
+      "nl": "Groene vlek op de **vleugel** in de vlucht"
+    }
+  ]
+}

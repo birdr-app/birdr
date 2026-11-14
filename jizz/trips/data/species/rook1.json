@@ -1,0 +1,22 @@
+{
+  "code": "rook1",
+  "name": {
+    "en": "Rook",
+    "nl": "Roek"
+  },
+  "latin": "Corvus frugilegus",
+  "look_for": [
+    {
+      "en": "Glossy black with a bare grey-white **face**",
+      "nl": "Glanzend zwart met kale grijswitte **snavelbasis**"
+    },
+    {
+      "en": "Baggy **thigh** feathers like trousers",
+      "nl": "Slobberige **broekveren**"
+    },
+    {
+      "en": "Nests in noisy treetop colonies",
+      "nl": "Broedt in lawaaiige kolonies in boomtoppen"
+    }
+  ]
+}

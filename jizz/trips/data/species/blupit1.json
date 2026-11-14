@@ -1,0 +1,22 @@
+{
+  "code": "blupit1",
+  "name": {
+    "en": "Blue Pitta",
+    "nl": "Blauwe pitta"
+  },
+  "latin": "Hydrornis cyaneus",
+  "look_for": [
+    {
+      "en": "Male: yellow **crown**, black eye-stripe, orange **nape**",
+      "nl": "Mannetje: gele **kruin**, zwarte **oogstreep**, oranje **nek**"
+    },
+    {
+      "en": "Blue **back** and **tail**, pale **breast** dotted black",
+      "nl": "Blauwe **rug** en **staart**, lichte **borst** met zwarte stippen"
+    },
+    {
+      "en": "Female has a grey **back**; hops on the forest floor",
+      "nl": "Vrouwtje heeft een grijze **rug**; hupt over de bosbodem"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rampig1",
+  "name": {
+    "en": "Rameron Pigeon",
+    "nl": "Olijfduif"
+  },
+  "latin": "Columba arquatrix",
+  "look_for": [
+    {
+      "en": "Large, dark maroon pigeon with a yellow **bill**",
+      "nl": "Grote, donkerroodbruine duif met een gele **snavel**"
+    },
+    {
+      "en": "Yellow **feet**, yellow patches around the **eye**",
+      "nl": "Gele **poten**, gele plekken rond het **oog**"
+    },
+    {
+      "en": "Feeds high in fruiting forest trees",
+      "nl": "Eet hoog in vruchtdragende bomen in het bos"
+    }
+  ]
+}

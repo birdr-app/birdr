@@ -1,0 +1,22 @@
+{
+  "code": "yevbul1",
+  "name": {
+    "en": "Yellow-vented Bulbul",
+    "nl": "Wenkbrauwbuulbuul"
+  },
+  "latin": "Pycnonotus goiavier",
+  "look_for": [
+    {
+      "en": "Dark **cap**, white **eyebrow**, dark eye-stripe",
+      "nl": "Donkere **kruin**, witte **wenkbrauwstreep**, donkere **oogstreep**"
+    },
+    {
+      "en": "Whitish **underparts** with a brown flank smudge",
+      "nl": "Witachtige **onderzijde** met een bruine vlek op de **flank**"
+    },
+    {
+      "en": "Bright yellow **vent**",
+      "nl": "Felgele onderstaartdekveren"
+    }
+  ]
+}

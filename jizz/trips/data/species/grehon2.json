@@ -1,0 +1,22 @@
+{
+  "code": "grehon2",
+  "name": {
+    "en": "Greater Honeyguide",
+    "nl": "Grote honingspeurder"
+  },
+  "latin": "Indicator indicator",
+  "look_for": [
+    {
+      "en": "Male has a black **throat** and pink **bill**",
+      "nl": "Mannetje heeft een zwarte **keel** en roze **snavel**"
+    },
+    {
+      "en": "Female plain greyish-brown, darker **bill**",
+      "nl": "Vrouwtje egaal grijsbruin met donkerder **snavel**"
+    },
+    {
+      "en": "Loud, repeated 'vic-torr' call from a perch",
+      "nl": "Luide, herhaalde 'vic-torr' roep vanaf een zitplek"
+    }
+  ]
+}

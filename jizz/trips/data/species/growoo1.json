@@ -1,0 +1,22 @@
+{
+  "code": "growoo1",
+  "name": {
+    "en": "Ground Woodpecker",
+    "nl": "Kaapse grondspecht"
+  },
+  "latin": "Geocolaptes olivaceus",
+  "look_for": [
+    {
+      "en": "Lives on rocky slopes, feeds on the ground",
+      "nl": "Leeft op rotsige hellingen, zoekt op de grond"
+    },
+    {
+      "en": "Pinkish-red wash on the **breast** and **belly**",
+      "nl": "Roze-rode waas over **borst** en **buik**"
+    },
+    {
+      "en": "Perches upright on boulders, calling loudly",
+      "nl": "Zit rechtop op rotsblokken en roept luid"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "knytur1",
+  "name": {
+    "en": "Knysna Turaco",
+    "nl": "Knysnatoerako"
+  },
+  "latin": "Tauraco corythaix",
+  "look_for": [
+    {
+      "en": "Green turaco with a white-tipped **crest**",
+      "nl": "Groene toerako met een witgepunte **kuif**"
+    },
+    {
+      "en": "Crimson in the **wing** flashes in flight",
+      "nl": "Karmozijnrood in de **vleugel** flitst in de vlucht"
+    },
+    {
+      "en": "White line under the red-ringed **eye**",
+      "nl": "Witte streep onder het roodomrande **oog**"
+    }
+  ]
+}

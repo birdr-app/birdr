@@ -1,0 +1,22 @@
+{
+  "code": "soubou1",
+  "name": {
+    "en": "Southern Boubou",
+    "nl": "Waterfiskaal"
+  },
+  "latin": "Laniarius ferrugineus",
+  "look_for": [
+    {
+      "en": "Black above with a white **wing** stripe",
+      "nl": "Zwart boven met een witte **vleugel**streep"
+    },
+    {
+      "en": "Pale pinkish underparts, white **throat**",
+      "nl": "Lichte roze onderzijde, witte **keel**"
+    },
+    {
+      "en": "Pairs duet with bell-like whistles from thickets",
+      "nl": "Paartjes zingen duetten met klokkende fluittonen uit struikgewas"
+    }
+  ]
+}

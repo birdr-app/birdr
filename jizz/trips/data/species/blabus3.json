@@ -1,0 +1,22 @@
+{
+  "code": "blabus3",
+  "name": {
+    "en": "Black Bustard",
+    "nl": "Zwarte trap"
+  },
+  "latin": "Afrotis afra",
+  "look_for": [
+    {
+      "en": "Black **head** and underparts, white **cheek** patch",
+      "nl": "Zwarte **kop** en onderkant, witte vlek op de **wang**"
+    },
+    {
+      "en": "Orange-red **bill** and **legs**",
+      "nl": "Oranjerode **snavel** en **poten**"
+    },
+    {
+      "en": "Brown-mottled **back**, female streaky buff",
+      "nl": "Bruingevlekte **rug**, vrouwtje gestreept bruinbuff"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "cosowl1",
+  "name": {
+    "en": "Collared Scops Owl",
+    "nl": "Gekraagde dwergooruil"
+  },
+  "latin": "Otus lettia",
+  "look_for": [
+    {
+      "en": "Small owl with **ear** tufts, grey-brown",
+      "nl": "Kleine uil met oorpluimen, grijsbruin"
+    },
+    {
+      "en": "Pale buff **collar** around the **nape**",
+      "nl": "Bleke beige **kraag** om de **nek**"
+    },
+    {
+      "en": "Dark **eyes**; streaked and barred **underparts**",
+      "nl": "Donkere **ogen**; gestreepte en gebande **onderzijde**"
+    }
+  ]
+}

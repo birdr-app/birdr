@@ -1,0 +1,22 @@
+{
+  "code": "rucsun2",
+  "name": {
+    "en": "Ruby-cheeked Sunbird",
+    "nl": "Roodwanghoningzuiger"
+  },
+  "latin": "Chalcoparia singalensis",
+  "look_for": [
+    {
+      "en": "Male: coppery-red **cheeks**, glossy green **crown**",
+      "nl": "Mannetje: koperrode **wangen**, glanzend groene **kruin**"
+    },
+    {
+      "en": "Bright yellow **underparts**",
+      "nl": "Felgele **onderzijde**"
+    },
+    {
+      "en": "Short stubby **bill**, female olive above",
+      "nl": "Korte dikke **snavel**, vrouwtje olijf boven"
+    }
+  ]
+}

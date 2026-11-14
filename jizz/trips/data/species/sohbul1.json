@@ -1,0 +1,22 @@
+{
+  "code": "sohbul1",
+  "name": {
+    "en": "Sooty-headed Bulbul",
+    "nl": "Roetkopbuulbuul"
+  },
+  "latin": "Pycnonotus aurigaster",
+  "look_for": [
+    {
+      "en": "Black **head** with a short **crest**",
+      "nl": "Zwarte **kop** met een korte **kuif**"
+    },
+    {
+      "en": "Pale grey-white body, brown **wings**",
+      "nl": "Lichtgrijswit lijf, bruine **vleugels**"
+    },
+    {
+      "en": "Yellow to orange-red **vent**",
+      "nl": "Gele tot oranjerode onderstaartdekveren"
+    }
+  ]
+}

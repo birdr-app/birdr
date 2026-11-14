@@ -1,0 +1,22 @@
+{
+  "code": "corcra",
+  "name": {
+    "en": "Corncrake",
+    "nl": "Kwartelkoning"
+  },
+  "latin": "Crex crex",
+  "look_for": [
+    {
+      "en": "Buff-brown rail with a streaked **back**",
+      "nl": "Beigebruine ral met gestreepte **rug**"
+    },
+    {
+      "en": "Chestnut **wings**, dangling legs in flight",
+      "nl": "Kastanjebruine **vleugels**, bungelende poten in vlucht"
+    },
+    {
+      "en": "Dry, two-note rasp from meadows at night",
+      "nl": "Droge, tweetonige rasproep uit weilanden 's nachts"
+    }
+  ]
+}

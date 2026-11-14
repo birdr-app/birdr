@@ -1,0 +1,22 @@
+{
+  "code": "gycmin1",
+  "name": {
+    "en": "Grey-chinned Minivet",
+    "nl": "Grijskeelmenievogel"
+  },
+  "latin": "Pericrocotus solaris",
+  "look_for": [
+    {
+      "en": "Dark grey **head** and **back**, orange below",
+      "nl": "Donkergrijze **kop** en **rug**, oranje eronder"
+    },
+    {
+      "en": "Pale grey **chin** above an orange **throat**",
+      "nl": "Lichtgrijze **kin** boven een oranje **keel**"
+    },
+    {
+      "en": "Female yellow where male is orange",
+      "nl": "Vrouwtje geel waar het mannetje oranje is"
+    }
+  ]
+}

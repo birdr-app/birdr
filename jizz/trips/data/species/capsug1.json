@@ -1,0 +1,22 @@
+{
+  "code": "capsug1",
+  "name": {
+    "en": "Cape Sugarbird",
+    "nl": "Kaapse suikervogel"
+  },
+  "latin": "Promerops cafer",
+  "look_for": [
+    {
+      "en": "Male has a very long, drooping **tail**",
+      "nl": "Mannetje heeft een zeer lange, hangende **staart**"
+    },
+    {
+      "en": "Long curved **bill**, streaky brown **breast**",
+      "nl": "Lange gebogen **snavel**, gestreepte bruine **borst**"
+    },
+    {
+      "en": "Yellow patch under the **tail**, feeds on proteas",
+      "nl": "Gele vlek onder de **staart**, eet van proteas"
+    }
+  ]
+}

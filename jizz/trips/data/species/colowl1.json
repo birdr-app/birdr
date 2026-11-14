@@ -1,0 +1,22 @@
+{
+  "code": "colowl1",
+  "name": {
+    "en": "Collared Owlet",
+    "nl": "Gekraagde dwerguil"
+  },
+  "latin": "Taenioptynx brodiei",
+  "look_for": [
+    {
+      "en": "Tiny, hunched owl with a pale **nape** collar",
+      "nl": "Piepkleine, gebogen uil met bleke **nek**kraag"
+    },
+    {
+      "en": "False dark eyes on the back of the **head**",
+      "nl": "Valse donkere ogen op de achterkant van de **kop**"
+    },
+    {
+      "en": "Barred rufous-brown **back**, streaked **belly**",
+      "nl": "Gebande roodbruine **rug**, gestreepte **buik**"
+    }
+  ]
+}

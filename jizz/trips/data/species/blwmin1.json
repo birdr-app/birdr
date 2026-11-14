@@ -1,0 +1,22 @@
+{
+  "code": "blwmin1",
+  "name": {
+    "en": "Blue-winged Minla",
+    "nl": "Blauwvleugelminla"
+  },
+  "latin": "Actinodura cyanouroptera",
+  "look_for": [
+    {
+      "en": "Bright blue **wings** and long **tail**",
+      "nl": "Felblauwe **vleugels** en lange **staart**"
+    },
+    {
+      "en": "Blue-grey **crown** with dark side stripe",
+      "nl": "Blauwgrijze **kruin** met donkere zijstreep"
+    },
+    {
+      "en": "Pale pinkish-grey **underparts**, active in flocks",
+      "nl": "Bleek roze-grijze **onderzijde**, actief in groepjes"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "lenlau1",
+  "name": {
+    "en": "Lesser Necklaced Laughingthrush",
+    "nl": "Witbeflijstergaai"
+  },
+  "latin": "Garrulax monileger",
+  "look_for": [
+    {
+      "en": "White **eyebrow**, black **mask** through the eye",
+      "nl": "Witte **wenkbrauwstreep**, zwart **masker** door het oog"
+    },
+    {
+      "en": "Dark necklace across the **breast**",
+      "nl": "Donkere ketting over de **borst**"
+    },
+    {
+      "en": "Olive-brown **back**, noisy groups on the ground",
+      "nl": "Olijfbruine **rug**, luidruchtige groepen op de grond"
+    }
+  ]
+}

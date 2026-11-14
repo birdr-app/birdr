@@ -1,0 +1,22 @@
+{
+  "code": "cretit2",
+  "name": {
+    "en": "Crested Tit",
+    "nl": "Kuifmees"
+  },
+  "latin": "Lophophanes cristatus",
+  "look_for": [
+    {
+      "en": "Pointed black and white **crest**",
+      "nl": "Spitse zwart-witte **kuif**"
+    },
+    {
+      "en": "Pale face, curved black line behind eye",
+      "nl": "Lichte kop met gebogen zwarte streep achter het oog"
+    },
+    {
+      "en": "Brown **back**, creamy underparts, in pines",
+      "nl": "Bruine **rug**, roomkleurige onderkant, in dennen"
+    }
+  ]
+}

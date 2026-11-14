@@ -1,0 +1,22 @@
+{
+  "code": "brambl",
+  "name": {
+    "en": "Brambling",
+    "nl": "Keep"
+  },
+  "latin": "Fringilla montifringilla",
+  "look_for": [
+    {
+      "en": "Orange **shoulder** and breast, white belly",
+      "nl": "Oranje **schouder** en borst, witte buik"
+    },
+    {
+      "en": "Bold white **rump**, dark forked **tail**",
+      "nl": "Opvallende witte **stuit**, donkere gevorkte **staart**"
+    },
+    {
+      "en": "Male in summer: black **head**",
+      "nl": "Mannetje in zomer: zwarte **kop**"
+    }
+  ]
+}

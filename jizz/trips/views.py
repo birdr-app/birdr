@@ -7,6 +7,8 @@ GET  /api/trips/<cc>/progress/        the player's known species and groups (JWT
 POST /api/trips/<cc>/answers/         store a unit quiz as a trip_prep game
 """
 
+import unicodedata
+
 from django.core.cache import cache
 from django.http import Http404
 from rest_framework.permissions import AllowAny
@@ -41,7 +43,10 @@ class TripListView(APIView):
 
     def get(self, request):
         lang = (request.query_params.get('lang') or 'en').lower()[:2]
-        return Response([trip_summary(code, trip_language(code, lang)) for code in TRIPS if not is_region(code)])
+        trips = [trip_summary(code, trip_language(code, lang)) for code in TRIPS if not is_region(code)]
+        # By name in the reader's language; accents and case don't count (Australië sits with the A's).
+        trips.sort(key=lambda t: unicodedata.normalize('NFKD', t['name']).encode('ascii', 'ignore').decode().lower())
+        return Response(trips)
 
 
 class TripDetailView(APIView):

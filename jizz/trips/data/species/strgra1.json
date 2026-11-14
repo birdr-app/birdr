@@ -1,0 +1,22 @@
+{
+  "code": "strgra1",
+  "name": {
+    "en": "Striated Grassbird",
+    "nl": "Gestreepte grasvogel"
+  },
+  "latin": "Megalurus palustris",
+  "look_for": [
+    {
+      "en": "Streaky brown **back**, long ragged **tail**",
+      "nl": "Gestreepte bruine **rug**, lange rafelige **staart**"
+    },
+    {
+      "en": "Rufous streaked **crown**, pale **eyebrow**",
+      "nl": "Roestbruine gestreepte **kruin**, lichte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Sings from exposed perches in tall grass",
+      "nl": "Zingt vanaf open zitplaatsen in hoog gras"
+    }
+  ]
+}

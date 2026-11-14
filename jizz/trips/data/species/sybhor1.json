@@ -1,0 +1,22 @@
+{
+  "code": "sybhor1",
+  "name": {
+    "en": "Southern Yellow-billed Hornbill",
+    "nl": "Zuidelijke geelsnaveltok"
+  },
+  "latin": "Tockus leucomelas",
+  "look_for": [
+    {
+      "en": "Long, curved yellow **bill**, no casque",
+      "nl": "Lange gebogen gele **snavel** zonder hoornknobbel"
+    },
+    {
+      "en": "White spots on dark **wings**, pale **back** stripe",
+      "nl": "Witte vlekken op donkere **vleugels**, lichte **rug**streep"
+    },
+    {
+      "en": "Loud accelerating 'tok-tok-tokotoko' call",
+      "nl": "Luide, versnellende 'tok-tok-tokotoko'-roep"
+    }
+  ]
+}

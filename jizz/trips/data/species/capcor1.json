@@ -1,0 +1,22 @@
+{
+  "code": "capcor1",
+  "name": {
+    "en": "Cape Cormorant",
+    "nl": "Kaapse aalscholver"
+  },
+  "latin": "Phalacrocorax capensis",
+  "look_for": [
+    {
+      "en": "Glossy black cormorant with an orange-yellow **throat** patch",
+      "nl": "Glanzend zwarte aalscholver met oranjegele vlek op de **keel**"
+    },
+    {
+      "en": "Short **tail**, slim **bill** with a hooked tip",
+      "nl": "Korte **staart**, slanke **snavel** met haakpunt"
+    },
+    {
+      "en": "Flies in long, low lines over the sea",
+      "nl": "Vliegt in lange, lage rijen over zee"
+    }
+  ]
+}

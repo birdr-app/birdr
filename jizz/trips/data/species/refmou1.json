@@ -1,0 +1,22 @@
+{
+  "code": "refmou1",
+  "name": {
+    "en": "Red-faced Mousebird",
+    "nl": "Roodwangmuisvogel"
+  },
+  "latin": "Urocolius indicus",
+  "look_for": [
+    {
+      "en": "Bare red **face** and pale cinnamon **breast**",
+      "nl": "Kaal rood **gezicht** en bleek kaneelkleurige **borst**"
+    },
+    {
+      "en": "Slaty grey, long **tail**, pale **rump** in flight",
+      "nl": "Leigrijs met lange **staart** en lichtere **stuit**"
+    },
+    {
+      "en": "Moves in noisy groups, fast single-file flights",
+      "nl": "Trekt in luidruchtige groepjes, vliegt snel achter elkaar aan"
+    }
+  ]
+}

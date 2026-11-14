@@ -1,0 +1,22 @@
+{
+  "code": "litspi1",
+  "name": {
+    "en": "Little Spiderhunter",
+    "nl": "Kleine spinnenjager"
+  },
+  "latin": "Arachnothera longirostra",
+  "look_for": [
+    {
+      "en": "Very long downcurved **bill**, olive-brown **back**",
+      "nl": "Zeer lange gebogen **snavel**, olijfbruine **rug**"
+    },
+    {
+      "en": "Grey-white **throat**, yellow **belly**",
+      "nl": "Grijswitte **keel**, gele **buik**"
+    },
+    {
+      "en": "Small and slim, works low flowers",
+      "nl": "Klein en slank, zoekt laag bij bloemen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "tunbeg1",
+  "name": {
+    "en": "Tundra Bean Goose",
+    "nl": "Toendrarietgans"
+  },
+  "latin": "Anser serrirostris",
+  "look_for": [
+    {
+      "en": "Short, stubby **bill**, narrow orange band",
+      "nl": "Korte, dikke **snavel**, smalle oranje band"
+    },
+    {
+      "en": "Smaller, with a shorter neck than Taiga",
+      "nl": "Kleiner, met kortere hals dan taigarietgans"
+    },
+    {
+      "en": "Rounder head, orange legs",
+      "nl": "Rondere kop, oranje poten"
+    }
+  ]
+}

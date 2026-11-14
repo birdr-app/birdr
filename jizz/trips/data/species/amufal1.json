@@ -1,0 +1,22 @@
+{
+  "code": "amufal1",
+  "name": {
+    "en": "Amur Falcon",
+    "nl": "Amoerroodpootvalk"
+  },
+  "latin": "Falco amurensis",
+  "look_for": [
+    {
+      "en": "Male slate grey with rusty **thighs** and **vent**",
+      "nl": "Mannetje leigrijs met roestkleurige **dijen** en **onderstaart**"
+    },
+    {
+      "en": "Red-orange **legs** and eye-ring, hunts insects in flocks",
+      "nl": "Roodoranje **poten** en oogring, jaagt in groepen op insecten"
+    },
+    {
+      "en": "Female barred grey above, streaked cream below",
+      "nl": "Vrouwtje grijs gebandeerd boven, crème gestreept onder"
+    }
+  ]
+}

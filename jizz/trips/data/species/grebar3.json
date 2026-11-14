@@ -1,0 +1,22 @@
+{
+  "code": "grebar3",
+  "name": {
+    "en": "Green-eared Barbet",
+    "nl": "Groenoorbaardvogel"
+  },
+  "latin": "Psilopogon faiostrictus",
+  "look_for": [
+    {
+      "en": "Brown **head** and **breast** with white streaks",
+      "nl": "Bruine **kop** en **borst** met witte strepen"
+    },
+    {
+      "en": "Green **ear** patch",
+      "nl": "Groene **oor**vlek"
+    },
+    {
+      "en": "Dark **bill**, unlike Lineated Barbet",
+      "nl": "Donkere **snavel**, anders dan Gestreepte baardvogel"
+    }
+  ]
+}

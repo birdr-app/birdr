@@ -1,0 +1,22 @@
+{
+  "code": "blagro1",
+  "name": {
+    "en": "Black Grouse",
+    "nl": "Korhoen"
+  },
+  "latin": "Lyrurus tetrix",
+  "look_for": [
+    {
+      "en": "Male glossy black with a lyre-shaped **tail**",
+      "nl": "Haan glanzend zwart met lierstaart"
+    },
+    {
+      "en": "White **wing** bar, red wattle above the eye",
+      "nl": "Witte **vleugelstreep**, rode wenkbrauw"
+    },
+    {
+      "en": "Female barred brown with a notched **tail**",
+      "nl": "Hen gebandeerd bruin met ingekeepte **staart**"
+    }
+  ]
+}

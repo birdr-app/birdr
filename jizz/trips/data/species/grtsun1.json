@@ -1,0 +1,22 @@
+{
+  "code": "grtsun1",
+  "name": {
+    "en": "Green-tailed Sunbird",
+    "nl": "Groenstaarthoningzuiger"
+  },
+  "latin": "Aethopyga nipalensis",
+  "look_for": [
+    {
+      "en": "Male: metallic green **head** and **tail**",
+      "nl": "Mannetje: metaalgroene **kop** en **staart**"
+    },
+    {
+      "en": "Maroon upper **back**, yellow **rump**",
+      "nl": "Kastanjebruine bovenrug, gele **stuit**"
+    },
+    {
+      "en": "Yellow underparts, streaked red on **breast**",
+      "nl": "Gele onderzijde, rood gestreept op de **borst**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "truhor1",
+  "name": {
+    "en": "Trumpeter Hornbill",
+    "nl": "Trompetneushoornvogel"
+  },
+  "latin": "Bycanistes bucinator",
+  "look_for": [
+    {
+      "en": "Big black-and-white hornbill with a large **casque**",
+      "nl": "Grote zwartwitte neushoornvogel met een enorme **helm**"
+    },
+    {
+      "en": "Black above, white **belly**, white trailing **wing** edge",
+      "nl": "Zwart boven, witte **buik**, witte achterrand van de **vleugel**"
+    },
+    {
+      "en": "Loud wailing calls like a crying baby",
+      "nl": "Luide jammerende roep als een huilende baby"
+    }
+  ]
+}

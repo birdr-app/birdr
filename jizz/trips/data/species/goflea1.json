@@ -1,0 +1,22 @@
+{
+  "code": "goflea1",
+  "name": {
+    "en": "Golden-fronted Leafbird",
+    "nl": "Goudvoorhoofdbladvogel"
+  },
+  "latin": "Chloropsis aurifrons",
+  "look_for": [
+    {
+      "en": "Golden-orange **forehead** and **crown**",
+      "nl": "Goudoranje **voorhoofd** en **kruin**"
+    },
+    {
+      "en": "Black **bib** edged with blue",
+      "nl": "Zwarte **bef** met blauwe rand"
+    },
+    {
+      "en": "Otherwise green, feeds in treetops",
+      "nl": "Verder groen, zoekt voedsel in boomtoppen"
+    }
+  ]
+}

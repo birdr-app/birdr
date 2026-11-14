@@ -1,0 +1,22 @@
+{
+  "code": "gobbun1",
+  "name": {
+    "en": "Golden-breasted Bunting",
+    "nl": "Acaciagors"
+  },
+  "latin": "Fringillaria flaviventris",
+  "look_for": [
+    {
+      "en": "Black-and-white striped **head**",
+      "nl": "Zwart-wit gestreepte **kop**"
+    },
+    {
+      "en": "Golden-orange **breast** and belly",
+      "nl": "Goudoranje **borst** en buik"
+    },
+    {
+      "en": "Chestnut **shoulder** patch, forages on bare ground",
+      "nl": "Kastanjebruine **schouder**vlek, foerageert op kale grond"
+    }
+  ]
+}

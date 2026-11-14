@@ -1,0 +1,22 @@
+{
+  "code": "rhihor1",
+  "name": {
+    "en": "Rhinoceros Hornbill",
+    "nl": "Gewone neushoornvogel"
+  },
+  "latin": "Buceros rhinoceros",
+  "look_for": [
+    {
+      "en": "Huge; **casque** curves up like a horn",
+      "nl": "Reusachtig; **helm** buigt omhoog als een hoorn"
+    },
+    {
+      "en": "Black body, white **thighs**, white **tail** with black band",
+      "nl": "Zwart lijf, witte **dijen**, witte **staart** met zwarte band"
+    },
+    {
+      "en": "Orange-red **casque** over a creamy **bill**",
+      "nl": "Oranjerode **helm** boven een roomkleurige **snavel**"
+    }
+  ]
+}

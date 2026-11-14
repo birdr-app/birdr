@@ -1,0 +1,22 @@
+{
+  "code": "mekwag1",
+  "name": {
+    "en": "Mekong Wagtail",
+    "nl": "Mekongkwikstaart"
+  },
+  "latin": "Motacilla samveasnae",
+  "look_for": [
+    {
+      "en": "Black-and-white wagtail of big rivers",
+      "nl": "Zwart-witte kwikstaart van grote rivieren"
+    },
+    {
+      "en": "Bold white **eyebrow** over a black face",
+      "nl": "Duidelijke witte **wenkbrauwstreep** boven een zwart gezicht"
+    },
+    {
+      "en": "White throat patch above a black **breast**",
+      "nl": "Witte keelvlek boven een zwarte **borst**"
+    }
+  ]
+}

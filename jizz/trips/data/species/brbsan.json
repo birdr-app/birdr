@@ -1,0 +1,22 @@
+{
+  "code": "brbsan",
+  "name": {
+    "en": "Broad-billed Sandpiper",
+    "nl": "Breedbekstrandloper"
+  },
+  "latin": "Calidris falcinellus",
+  "look_for": [
+    {
+      "en": "Small wader; long **bill** kinked down at the tip",
+      "nl": "Klein steltloper; lange **snavel** met een knik naar beneden"
+    },
+    {
+      "en": "Split pale **eyebrow**, striped **head**",
+      "nl": "Gespleten bleke **wenkbrauwstreep**, gestreepte **kop**"
+    },
+    {
+      "en": "Short legs, dark **back** edged with pale",
+      "nl": "Korte poten, donkere **rug** met lichte randen"
+    }
+  ]
+}

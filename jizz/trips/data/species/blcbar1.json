@@ -1,0 +1,22 @@
+{
+  "code": "blcbar1",
+  "name": {
+    "en": "Black-collared Barbet",
+    "nl": "Zwarthalsbaardvogel"
+  },
+  "latin": "Lybius torquatus",
+  "look_for": [
+    {
+      "en": "Red **face** and **throat** above a black **collar**",
+      "nl": "Rood **gezicht** en **keel** boven een zwarte **kraag**"
+    },
+    {
+      "en": "Plump, large-headed barbet with a heavy **bill**",
+      "nl": "Gedrongen baardvogel met grote kop en zware **snavel**"
+    },
+    {
+      "en": "Pairs duet 'too-puddly', flicking their **wings**",
+      "nl": "Paartjes zingen duet 'too-puddly' en wippen met de **vleugels**"
+    }
+  ]
+}

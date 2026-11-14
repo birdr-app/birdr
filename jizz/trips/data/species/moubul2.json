@@ -1,0 +1,22 @@
+{
+  "code": "moubul2",
+  "name": {
+    "en": "Mountain Bulbul",
+    "nl": "Groenvleugelbuulbuul"
+  },
+  "latin": "Ixos mcclellandii",
+  "look_for": [
+    {
+      "en": "Rufous-brown **cap** with a short **crest**",
+      "nl": "Roodbruine **kruin** met een korte **kuif**"
+    },
+    {
+      "en": "Pale-streaked **throat**, greyish **breast**",
+      "nl": "Licht gestreepte **keel**, grijzige **borst**"
+    },
+    {
+      "en": "Olive-green **wings** and **back**",
+      "nl": "Olijfgroene **vleugels** en **rug**"
+    }
+  ]
+}

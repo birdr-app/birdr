@@ -1,0 +1,22 @@
+{
+  "code": "ashmin1",
+  "name": {
+    "en": "Ashy Minivet",
+    "nl": "Grijze menievogel"
+  },
+  "latin": "Pericrocotus divaricatus",
+  "look_for": [
+    {
+      "en": "Pale grey **back**, white **forehead** and underparts",
+      "nl": "Lichtgrijze **rug**, wit **voorhoofd** en witte onderzijde"
+    },
+    {
+      "en": "Black **eye-stripe** on a white face",
+      "nl": "Zwarte **oogstreep** op een wit gezicht"
+    },
+    {
+      "en": "Black **wings** with a white bar; no red or yellow",
+      "nl": "Zwarte **vleugels** met een witte vleugelstreep; geen rood of geel"
+    }
+  ]
+}

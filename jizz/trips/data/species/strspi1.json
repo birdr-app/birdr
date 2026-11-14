@@ -1,0 +1,22 @@
+{
+  "code": "strspi1",
+  "name": {
+    "en": "Streaked Spiderhunter",
+    "nl": "Gestreepte spinnenjager"
+  },
+  "latin": "Arachnothera magna",
+  "look_for": [
+    {
+      "en": "Very long, heavy, curved **bill**",
+      "nl": "Zeer lange, zware, gebogen **snavel**"
+    },
+    {
+      "en": "Dark streaks on yellow-olive **underparts**",
+      "nl": "Donkere streepjes op geelolijfkleurige **onderzijde**"
+    },
+    {
+      "en": "Large, feeds at wild banana flowers",
+      "nl": "Groot, bezoekt wilde bananenbloemen"
+    }
+  ]
+}

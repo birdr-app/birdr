@@ -1,0 +1,22 @@
+{
+  "code": "capfra2",
+  "name": {
+    "en": "Cape Spurfowl",
+    "nl": "Kaapse frankolijn"
+  },
+  "latin": "Pternistis capensis",
+  "look_for": [
+    {
+      "en": "Mottled grey-brown bird with red **bill** and **legs**",
+      "nl": "Gevlekte grijsbruine vogel met rode **snavel** en **poten**"
+    },
+    {
+      "en": "Heavily streaked and barred brown plumage",
+      "nl": "Sterk gestreept en gebandeerd bruin verenkleed"
+    },
+    {
+      "en": "Loud grating calls from a rock at dawn",
+      "nl": "Luid krassend geroep vanaf een rots bij zonsopgang"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "reebul1",
+  "name": {
+    "en": "Red-eyed Bulbul",
+    "nl": "Roodoogbuulbuul"
+  },
+  "latin": "Pycnonotus brunneus",
+  "look_for": [
+    {
+      "en": "Plain, dull brown with a red **eye**",
+      "nl": "Egaal, dofbruin met een rood **oog**"
+    },
+    {
+      "en": "No **crest**, paler **throat** and **belly**",
+      "nl": "Geen **kuif**, lichtere **keel** en **buik**"
+    },
+    {
+      "en": "Rounded **tail**, rather nondescript",
+      "nl": "Afgeronde **staart**, tamelijk onopvallend"
+    }
+  ]
+}

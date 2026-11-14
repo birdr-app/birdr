@@ -1,0 +1,22 @@
+{
+  "code": "vehpar1",
+  "name": {
+    "en": "Vernal Hanging-Parrot",
+    "nl": "Indische vleermuisparkiet"
+  },
+  "latin": "Loriculus vernalis",
+  "look_for": [
+    {
+      "en": "Tiny green parrot, short square **tail**",
+      "nl": "Piepkleine groene papegaai, korte rechte **staart**"
+    },
+    {
+      "en": "Red **bill**, red **rump**, small blue **throat** patch",
+      "nl": "Rode **snavel**, rode **stuit**, kleine blauwe **keel**vlek"
+    },
+    {
+      "en": "Hangs upside down in blossoming trees",
+      "nl": "Hangt ondersteboven in bloeiende bomen"
+    }
+  ]
+}

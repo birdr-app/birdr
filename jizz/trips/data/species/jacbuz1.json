@@ -1,0 +1,22 @@
+{
+  "code": "jacbuz1",
+  "name": {
+    "en": "Jackal Buzzard",
+    "nl": "Jakhalsbuizerd"
+  },
+  "latin": "Buteo rufofuscus",
+  "look_for": [
+    {
+      "en": "Black **head** and **back**, chestnut **breast**",
+      "nl": "Zwarte **kop** en **rug**, kastanjebruine **borst**"
+    },
+    {
+      "en": "Chestnut **tail** and black **wings** in flight",
+      "nl": "Kastanjebruine **staart** en zwarte **vleugels** in de vlucht"
+    },
+    {
+      "en": "Barking, yelping call, soars along rocky slopes",
+      "nl": "Blaffende, keffende roep, zweeft langs rotsige hellingen"
+    }
+  ]
+}

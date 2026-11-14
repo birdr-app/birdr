@@ -1,0 +1,22 @@
+{
+  "code": "bnnpar2",
+  "name": {
+    "en": "Cape Parrot",
+    "nl": "Kaapse papegaai"
+  },
+  "latin": "Poicephalus robustus",
+  "look_for": [
+    {
+      "en": "Big parrot with a heavy, pale **bill**",
+      "nl": "Grote papegaai met een zware, lichte **snavel**"
+    },
+    {
+      "en": "Olive-gold **head**, dark green body",
+      "nl": "Olijfgouden **kop**, donkergroen lijf"
+    },
+    {
+      "en": "Orange-red on the **wing**; female with red **forehead**",
+      "nl": "Oranjerood op de **vleugel**; vrouwtje met rood **voorhoofd**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "eacsun1",
+  "name": {
+    "en": "Crimson Sunbird",
+    "nl": "Geelrughoningzuiger"
+  },
+  "latin": "Aethopyga siparaja",
+  "look_for": [
+    {
+      "en": "Male: crimson **breast**, maroon **back**",
+      "nl": "Mannetje: karmijnrode **borst**, kastanjebruine **rug**"
+    },
+    {
+      "en": "Metallic blue **crown**, purple **moustache**",
+      "nl": "Metallisch blauwe **kruin**, paarse **baardstreep**"
+    },
+    {
+      "en": "Olive-grey **belly**, yellow **rump**, long **tail**",
+      "nl": "Olijfgrijze **buik**, gele **stuit**, lange **staart**"
+    }
+  ]
+}

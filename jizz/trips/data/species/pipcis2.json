@@ -1,0 +1,22 @@
+{
+  "code": "pipcis2",
+  "name": {
+    "en": "Piping Cisticola",
+    "nl": "Bruinkopgraszanger"
+  },
+  "latin": "Cisticola fulvicapilla",
+  "look_for": [
+    {
+      "en": "Rusty **cap** and an unstreaked brown **back**",
+      "nl": "Roestbruine **kap** en een ongestreepte bruine **rug**"
+    },
+    {
+      "en": "Buff underparts, darker on the **breast**",
+      "nl": "Beige onderkant, donkerder op de **borst**"
+    },
+    {
+      "en": "Monotonous 'weep weep weep', clicking alarm call",
+      "nl": "Eentonig 'wiep wiep wiep', tikkende alarmroep"
+    }
+  ]
+}

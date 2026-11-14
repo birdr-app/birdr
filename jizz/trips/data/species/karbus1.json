@@ -1,0 +1,22 @@
+{
+  "code": "karbus1",
+  "name": {
+    "en": "Karoo Bustard",
+    "nl": "Zwartkintrap"
+  },
+  "latin": "Heterotetrax vigorsii",
+  "look_for": [
+    {
+      "en": "Black chin and **throat** edged with white",
+      "nl": "Zwarte kin en **keel** met een witte rand"
+    },
+    {
+      "en": "Plain grey-brown **head**, **neck** and **breast**",
+      "nl": "Egaal grijsbruine **kop**, **hals** en **borst**"
+    },
+    {
+      "en": "Croaking call, cream patches in the **wing** in flight",
+      "nl": "Kwakkende roep, crème vlekken in de **vleugel**"
+    }
+  ]
+}

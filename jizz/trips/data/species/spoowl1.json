@@ -1,0 +1,22 @@
+{
+  "code": "spoowl1",
+  "name": {
+    "en": "Spotted Owlet",
+    "nl": "Brahmaanse uil"
+  },
+  "latin": "Athene brama",
+  "look_for": [
+    {
+      "en": "Stocky, round-headed, no **ear** tufts",
+      "nl": "Gedrongen, ronde **kop**, geen **oor**pluimen"
+    },
+    {
+      "en": "Grey-brown **back** spotted white, pale collar",
+      "nl": "Grijsbruine **rug** met witte vlekken, bleke kraag"
+    },
+    {
+      "en": "Fierce yellow **eyes**, white eyebrow",
+      "nl": "Felgele **ogen**, witte wenkbrauw"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rehcis2",
+  "name": {
+    "en": "Grey-backed Cisticola",
+    "nl": "Rotsgraszanger"
+  },
+  "latin": "Cisticola subruficapilla",
+  "look_for": [
+    {
+      "en": "Dark rufous **crown**, grey **back** streaked black",
+      "nl": "Donker roestbruine **kruin**, grijze **rug** met zwarte strepen"
+    },
+    {
+      "en": "Rufous panel in the folded **wing**",
+      "nl": "Roestbruin vlak in de gevouwen **vleugel**"
+    },
+    {
+      "en": "Dull greyish-white underparts, no bold marks",
+      "nl": "Doffe grijswitte onderkant zonder opvallende tekening"
+    }
+  ]
+}

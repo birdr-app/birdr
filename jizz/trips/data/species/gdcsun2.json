@@ -1,0 +1,22 @@
+{
+  "code": "gdcsun2",
+  "name": {
+    "en": "Greater Double-collared Sunbird",
+    "nl": "Grote kraaghoningzuiger"
+  },
+  "latin": "Cinnyris afer",
+  "look_for": [
+    {
+      "en": "Larger than other double-collared sunbirds, long **bill**",
+      "nl": "Groter dan andere kraaghoningzuigers, lange **snavel**"
+    },
+    {
+      "en": "Metallic green **head** and **throat**, blue collar",
+      "nl": "Metaalgroene **kop** en **keel**, blauwe kraag"
+    },
+    {
+      "en": "Broad red **breast** band, grey **belly**",
+      "nl": "Brede rode **borst**band, grijze **buik**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "capspa1",
+  "name": {
+    "en": "Cape Sparrow",
+    "nl": "Kaapse mus"
+  },
+  "latin": "Passer melanurus",
+  "look_for": [
+    {
+      "en": "Male black **head** with a white crescent",
+      "nl": "Mannetje zwarte **kop** met een witte halve maan"
+    },
+    {
+      "en": "Rich chestnut **back**, grey underparts",
+      "nl": "Rijk kastanjebruine **rug**, grijze onderzijde"
+    },
+    {
+      "en": "Female grey **head** with pale eyebrow stripe",
+      "nl": "Vrouwtje grijze **kop** met lichte wenkbrauwstreep"
+    }
+  ]
+}

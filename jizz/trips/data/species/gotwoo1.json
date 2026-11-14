@@ -1,0 +1,22 @@
+{
+  "code": "gotwoo1",
+  "name": {
+    "en": "Golden-tailed Woodpecker",
+    "nl": "Goudstaartspecht"
+  },
+  "latin": "Campethera abingoni",
+  "look_for": [
+    {
+      "en": "Heavily spotted yellowish underparts, olive barred **back**",
+      "nl": "Sterk gevlekte gelige onderkant, olijfgroen gebandeerde **rug**"
+    },
+    {
+      "en": "Male has red **crown** and red moustache",
+      "nl": "Mannetje met rode **kruin** en rode **snorstreep**"
+    },
+    {
+      "en": "Gold-washed **tail**, taps and creeps up trunks",
+      "nl": "Goudkleurige **staart**, tikt en klimt langs stammen"
+    }
+  ]
+}

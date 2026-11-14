@@ -1,0 +1,22 @@
+{
+  "code": "rolhaw",
+  "name": {
+    "en": "Rough-legged Buzzard",
+    "nl": "Ruigpootbuizerd"
+  },
+  "latin": "Buteo lagopus",
+  "look_for": [
+    {
+      "en": "Pale head and breast, dark **belly** patch",
+      "nl": "Lichte kop en borst, donkere **buik**vlek"
+    },
+    {
+      "en": "White **tail** with a broad dark end band",
+      "nl": "Witte **staart** met brede donkere eindband"
+    },
+    {
+      "en": "Hovers over open fields",
+      "nl": "Hangt biddend boven open land"
+    }
+  ]
+}

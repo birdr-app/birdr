@@ -1,0 +1,22 @@
+{
+  "code": "grwpyt1",
+  "name": {
+    "en": "Green-winged Pytilia",
+    "nl": "Melba-astrild"
+  },
+  "latin": "Pytilia melba",
+  "look_for": [
+    {
+      "en": "Male has a red **bill** and face, grey **head**",
+      "nl": "Mannetje met rode **snavel** en gezicht, grijze **kop**"
+    },
+    {
+      "en": "Barred grey-and-white **belly**, green **wings**",
+      "nl": "Grijswit gebandeerde **buik**, groene **vleugels**"
+    },
+    {
+      "en": "Red **tail**; female has no red face",
+      "nl": "Rode **staart**; vrouwtje heeft geen rood gezicht"
+    }
+  ]
+}

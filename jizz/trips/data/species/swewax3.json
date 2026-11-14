@@ -1,0 +1,22 @@
+{
+  "code": "swewax3",
+  "name": {
+    "en": "Swee Waxbill",
+    "nl": "Groenrugastrild"
+  },
+  "latin": "Coccopygia melanotis",
+  "look_for": [
+    {
+      "en": "Grey **head** and **breast**, olive-green **back**",
+      "nl": "Grijze **kop** en **borst**, olijfgroene **rug**"
+    },
+    {
+      "en": "Bright red **rump**, black **tail**",
+      "nl": "Felrode **stuit**, zwarte **staart**"
+    },
+    {
+      "en": "Black **bill** with red base to lower half",
+      "nl": "Zwarte **snavel** met rode basis aan de onderkant"
+    }
+  ]
+}

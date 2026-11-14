@@ -1,0 +1,22 @@
+{
+  "code": "lotduc",
+  "name": {
+    "en": "Long-tailed Duck",
+    "nl": "IJseend"
+  },
+  "latin": "Clangula hyemalis",
+  "look_for": [
+    {
+      "en": "Male pied, with a very long thin **tail**",
+      "nl": "Woerd bont, met zeer lange dunne **staart**"
+    },
+    {
+      "en": "Winter: white **head** with a dark cheek patch",
+      "nl": "Winter: witte **kop** met donkere wangvlek"
+    },
+    {
+      "en": "Short **bill** with a pink band, yodelling call",
+      "nl": "Korte **snavel** met roze band, jodelende roep"
+    }
+  ]
+}

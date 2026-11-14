@@ -1,0 +1,22 @@
+{
+  "code": "whteag",
+  "name": {
+    "en": "White-tailed Eagle",
+    "nl": "Zeearend"
+  },
+  "latin": "Haliaeetus albicilla",
+  "look_for": [
+    {
+      "en": "Huge, with broad, barn-door **wings**",
+      "nl": "Enorm, met brede, plankachtige **vleugels**"
+    },
+    {
+      "en": "Adult: pale **head**, yellow bill, short white **tail**",
+      "nl": "Volwassen: lichte **kop**, gele snavel, korte witte **staart**"
+    },
+    {
+      "en": "Young birds darker and mottled, bill dark",
+      "nl": "Jonge vogels donkerder en gevlekt, snavel donker"
+    }
+  ]
+}

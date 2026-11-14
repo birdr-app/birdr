@@ -1,0 +1,22 @@
+{
+  "code": "cregui4",
+  "name": {
+    "en": "Southern Crested Guineafowl",
+    "nl": "Geelnekkroonparelhoen"
+  },
+  "latin": "Guttera edouardi",
+  "look_for": [
+    {
+      "en": "Black, white-spotted guineafowl with a curly **crest**",
+      "nl": "Zwart parelhoen met witte stippen en een krullende **kuif**"
+    },
+    {
+      "en": "Bare bluish **head**, without a bony helmet",
+      "nl": "Kale blauwachtige **kop** zonder benen helm"
+    },
+    {
+      "en": "Noisy cackling flocks in forest undergrowth",
+      "nl": "Luidruchtige, kakelende groepen in de ondergroei van het bos"
+    }
+  ]
+}

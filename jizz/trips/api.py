@@ -18,6 +18,7 @@ from jizz.trips.content import (
     load_scope,
     lookalike_path,
     parent_trip,
+    trip_countries,
     read_json,
     region_ids,
 )
@@ -271,7 +272,7 @@ def counts_payload(country: str, trip_count: int) -> dict:
 
     if country != db_country(country):
         return {}
-    recorded = CountrySpecies.objects.filter(country_id=country).count()
+    recorded = CountrySpecies.objects.filter(country_id__in=trip_countries(country)).values('species_id').distinct().count()
     return {'recorded': recorded, 'trip': trip_count, 'plus': len(_advanced_gap(country, trip_species_ids(country)))}
 PLUS_CARD_PHOTOS = 3
 
@@ -282,7 +283,7 @@ def _advanced_gap(country: str, known_ids: set[int]) -> list[int]:
     from jizz.game_question_selection import _query_option_species_ids
     from jizz.models import Country, Game, Species
 
-    if country != db_country(country) or not Country.objects.filter(code=country).exists():
+    if country != db_country(country) or len(trip_countries(country)) > 1 or not Country.objects.filter(code=country).exists():
         return []
     game = Game(country=Country.objects.get(code=country), level='advanced', rarity=Game.RARIT_REGULAR,
                 media='images', game_type=Game.GAME_TYPE_STANDARD)

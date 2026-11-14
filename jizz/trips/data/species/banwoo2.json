@@ -1,0 +1,22 @@
+{
+  "code": "banwoo2",
+  "name": {
+    "en": "Banded Woodpecker",
+    "nl": "Meniespecht"
+  },
+  "latin": "Chrysophlegma miniaceum",
+  "look_for": [
+    {
+      "en": "Rufous-brown **head** with a shaggy yellow **nape**",
+      "nl": "Roodbruine **kop** met een warrige gele **nek**"
+    },
+    {
+      "en": "Yellow **rump**, scaly olive **back**",
+      "nl": "Gele **stuit**, geschubde olijfgroene **rug**"
+    },
+    {
+      "en": "Barred **belly**; male redder on the **face**",
+      "nl": "Gebande **buik**; mannetje roder in het **gezicht**"
+    }
+  ]
+}

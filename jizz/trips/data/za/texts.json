@@ -1,0 +1,1295 @@
+{
+  "country": "ZA",
+  "intro": {
+    "en": "South Africa fits a lot of birding into one country: penguins and sugarbirds at the Cape, larks and chats in the dry Karoo, forest on the south coast, grassland and mountains in the east, and the thornveld of Kruger. Many birds live here all year, and the summer from October to March adds waders, swallows, cuckoos and raptors from the north. This trip covers 334 of the birds you are most likely to meet.",
+    "nl": "Zuid-Afrika brengt veel vogelkijken samen in één land: pinguïns en suikervogels aan de Kaap, leeuweriken en tapuiten in de droge Karoo, bos aan de zuidkust, grasland en bergen in het oosten en het doornveld van Kruger. Veel vogels leven hier het hele jaar, en de zomer van oktober tot maart voegt steltlopers, zwaluwen, koekoeken en roofvogels uit het noorden toe. Deze reis omvat 334 vogels die je het meest waarschijnlijk tegenkomt."
+  },
+  "groups": {
+    "ostriches": {
+      "here": {
+        "en": "One species, the Common Ostrich. You see it on open ground in the Karoo, on the Kalahari edge and in Kruger, and even on the roads at Cape Point.",
+        "nl": "Eén soort, de struisvogel. Je ziet hem op open terrein in de Karoo, aan de rand van de Kalahari en in Kruger, en zelfs op de wegen bij Cape Point."
+      }
+    },
+    "waterfowl": {
+      "here": {
+        "en": "Ten waterfowl, from the Egyptian Goose on every lawn to the African Black Duck of fast, rocky streams. The Cape Teal and Cape Shoveler like the shallow wetlands of the south-west, while the Knob-billed Duck and White-faced Whistling-Duck belong to warm pans in the north.",
+        "nl": "Tien watervogels, van de nijlgans op elk grasveld tot de Afrikaanse zwarte eend van snelle, rotsachtige beken. De Kaapse taling en de Kaapse slobeend houden van de ondiepe wetlands in het zuidwesten, terwijl de Afrikaanse knobbeleend en de witwangfluiteend horen bij warme pannen in het noorden."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "here": {
+        "en": "Seven game birds: two guineafowl and five francolins and spurfowl. The Helmeted Guineafowl is everywhere. Which spurfowl you meet depends on where you are: Cape Spurfowl in the west, Natal Spurfowl in the east, Swainson's Spurfowl on the highveld and in the north.",
+        "nl": "Zeven hoenderachtigen: twee parelhoenders en vijf frankolijnen. Het helmparelhoen zie je overal. Welke frankolijn je ziet hangt af van waar je bent: de Kaapse frankolijn in het westen, de natalfrankolijn in het oosten en de Swainsonfrankolijn op de hooglanden en in het noorden."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "Nine pigeons and doves. The Speckled Pigeon, Laughing Dove, Ring-necked Dove and Red-eyed Dove fill towns and camp sites. The Rameron Pigeon and African Green-Pigeon feed high in fruiting trees, and the Emerald-spotted Wood-Dove calls from open woodland.",
+        "nl": "Negen duiven. De gespikkelde duif, palmtortel, Kaapse tortel en roodoogtortel vullen steden en kampeerterreinen. De olijfduif en de Afrikaanse papegaaiduif eten hoog in vruchtdragende bomen, en de smaragdvlekduif roept vanuit open bos."
+      }
+    },
+    "sandgrouse": {
+      "here": {
+        "en": "One sandgrouse, the Namaqua Sandgrouse. In dry country it flies in to waterholes in the first hours after sunrise, calling as it comes.",
+        "nl": "Eén zandhoen, het namaquazandhoen. In droog gebied vliegt het in de eerste uren na zonsopgang naar drinkplaatsen, onderweg roepend."
+      }
+    },
+    "bustards": {
+      "here": {
+        "en": "Five bustards. The Kori Bustard walks the plains of Kruger and the Kalahari, while Ludwig's Bustard and the Karoo Bustard live in the dry west. The Black Bustard, known as a korhaan, stands on termite mounds and fence posts in the wheat fields of the south-west.",
+        "nl": "Vijf trappen. De koritrap loopt over de vlakten van Kruger en de Kalahari, terwijl de Ludwigtrap en de zwartkintrap in het droge westen leven. De zwarte trap, in Zuid-Afrika een korhaan genoemd, staat op termietenheuvels en hekpalen in de tarwevelden van het zuidwesten."
+      }
+    },
+    "turacos": {
+      "here": {
+        "en": "Three turacos. The Knysna Turaco lives in the forests of the south and east coast, the Purple-crested Turaco in coastal and Lowveld forest, and the Grey Go-away-bird in thornveld and in gardens of the north.",
+        "nl": "Drie toerako's. De knysnatoerako leeft in de bossen van de zuid- en oostkust, de purperkuiftoerako in kustbos en in het Lowveld, en de vale toerako in doornveld en in tuinen in het noorden."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "Four cuckoos, all summer visitors that you hear long before you see. The Red-chested Cuckoo's three-note call, 'piet-my-vrou', belongs to the South African summer, and the Pied Cuckoo is the black-and-white one with a crest.",
+        "nl": "Vier koekoeken, allemaal zomergasten die je lang voor je ze ziet al hoort. De drietonige roep van de heremietkoekoek, 'piet-my-vrou', hoort bij de Zuid-Afrikaanse zomer, en de jacobijnkoekoek is de zwart-witte met een kuif."
+      }
+    },
+    "nightjars": {
+      "here": {
+        "en": "One nightjar, the Fiery-necked Nightjar. Its call at dusk is written as 'good lord, deliver us', and its eyes glow red in the headlights on a dirt road.",
+        "nl": "Eén nachtzwaluw, de roesthalsnachtzwaluw. Zijn roep bij schemer wordt weergegeven als 'good lord, deliver us', en zijn ogen gloeien rood in het licht van je koplampen op een zandweg."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "Three swifts. The Little Swift nests under bridges and on buildings, the African Palm Swift lives around palms, and the White-rumped Swift is the slim one with a white rump above a dark, forked tail.",
+        "nl": "Drie gierzwaluwen. De huisgierzwaluw nestelt onder bruggen en op gebouwen, de Afrikaanse palmgierzwaluw leeft bij palmen, en de pijlstaartgierzwaluw is de slanke met een witte stuit boven een donkere, gevorkte staart."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Four marsh birds: Red-knobbed Coot, Common Moorhen, African Swamphen and Black Crake. The coot and moorhen swim in open water, and the crake walks over floating plants at the edge of the reeds.",
+        "nl": "Vier moerasvogels: de knobbelmeerkoet, het waterhoen, de smaragdpurperkoet en het zwart porseleinhoen. Koet en waterhoen zwemmen in open water, en het porseleinhoen loopt over drijvende planten aan de rand van het riet."
+      }
+    },
+    "cranes": {
+      "here": {
+        "en": "Two cranes. The Blue Crane, the national bird, lives on farmland and grassland in the south and in the Karoo, and the Grey Crowned-Crane prefers wet grassland in the east.",
+        "nl": "Twee kraanvogels. De stanleykraanvogel, de nationale vogel, leeft op akkers en graslanden in het zuiden en in de Karoo, en de grijze kroonkraanvogel houdt van vochtig grasland in het oosten."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "Twenty-three waders. The residents are easy: Blacksmith and Crowned Lapwings in every field, thick-knees by rivers and oystercatchers on the rocks. From October to March migrants arrive from the north, best seen on the lagoons and mudflats of the west coast.",
+        "nl": "Drieëntwintig steltlopers. De standvogels zijn makkelijk: smidsplevier en diadeemkievit in elk veld, grielen langs rivieren en scholeksters op de rotsen. Van oktober tot maart komen trekvogels uit het noorden, het best te zien op de lagunes en slikken van de westkust."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Six gulls and terns. The Kelp Gull and Hartlaub's Gull are on every coast, the Grey-hooded Gull works lakes and shores, and the three terns fish and rest on beaches. South Africans call the Great Crested Tern the Swift Tern.",
+        "nl": "Zes meeuwen en sterns. De kelpmeeuw en de hartlaubmeeuw zie je aan elke kust, de grijskopmeeuw werkt langs meren en oevers, en de drie sterns vissen en rusten op stranden. In Zuid-Afrika heet de grote kuifstern 'Swift Tern'."
+      }
+    },
+    "flamingos": {
+      "here": {
+        "en": "One flamingo, the Greater Flamingo. It feeds in shallow lagoons and salt pans; Langebaan, Strandfontein and Rietvlei near Cape Town are dependable places.",
+        "nl": "Eén flamingo, de flamingo. Hij foerageert in ondiepe lagunes en zoutpannen; Langebaan, Strandfontein en Rietvlei bij Kaapstad zijn betrouwbare plekken."
+      }
+    },
+    "grebes": {
+      "here": {
+        "en": "Two grebes. The Little Grebe is a small, round diver on every dam and pond, and the Great Crested Grebe is a much larger bird of open lakes.",
+        "nl": "Twee futen. De dodaars is een kleine, ronde duiker op elke dam en elk vijvertje, en de fuut is een veel grotere vogel van open meren."
+      }
+    },
+    "penguins": {
+      "here": {
+        "en": "One penguin, the African Penguin. Boulders Beach near Simon's Town has a colony you can walk among on boardwalks, and Stony Point at Betty's Bay is quieter.",
+        "nl": "Eén pinguïn, de zwartvoetpinguïn. Bij Boulders Beach bij Simon's Town loop je over loopbruggen langs een kolonie, en Stony Point bij Betty's Bay is rustiger."
+      }
+    },
+    "storks": {
+      "here": {
+        "en": "Four storks, all easy in Kruger and Zululand: Yellow-billed, African Woolly-necked, Saddle-billed and Marabou. The Saddle-billed has a red-and-black bill with a yellow saddle, and the Marabou is the huge, bare-headed scavenger.",
+        "nl": "Vier ooievaars, allemaal makkelijk in Kruger en Zoeloeland: de Afrikaanse nimmerzat, de wolhalsooievaar, de zadelbekooievaar en de Afrikaanse maraboe. De zadelbek heeft een rood-zwarte snavel met een geel zadel, en de maraboe is de enorme aaseter met de kale kop."
+      }
+    },
+    "frigatebirds-boobies-and-gannets": {
+      "here": {
+        "en": "One gannet, the Cape Gannet. Lines of them fly offshore at Cape Point and plunge-dive along the west coast; Bird Island at Lambert's Bay is the easiest colony to see.",
+        "nl": "Eén jan-van-gent, de Kaapse jan-van-gent. Rijen vliegen voor de kust bij Cape Point en duiken langs de westkust; Bird Island bij Lambert's Bay is de makkelijkste kolonie om te bezoeken."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "Six cormorants and the African Darter. Great and Reed Cormorants are common inland, while the Cape, Crowned and Bank Cormorants are seabirds. The Bank Cormorant is the dark, compact one on harbour jetties and offshore rocks.",
+        "nl": "Zes aalscholvers en de Afrikaanse slangenhalsvogel. De aalscholver en de Afrikaanse dwergaalscholver zijn algemeen in het binnenland, terwijl de Kaapse, de kroon- en de kustaalscholver zeevogels zijn. De kustaalscholver is de donkere, gedrongen vogel op havendammen en rotsen voor de kust."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Fourteen herons, egrets and ibises, from the Hadada Ibis, the loud bird on every lawn, to the Goliath Heron, the largest heron in the world. The Black Heron fishes under a canopy of its own wings, and the Southern Bald Ibis feeds on burnt grassland.",
+        "nl": "Veertien reigers, zilverreigers en ibissen, van de hadadaibis, de luidruchtige vogel op elk grasveld, tot de reuzenreiger, de grootste reiger ter wereld. De zwarte reiger vist onder een dak van zijn eigen vleugels, en de kalkoenibis foerageert op verbrand grasland."
+      }
+    },
+    "shoebill-and-hammerkop": {
+      "here": {
+        "en": "One hamerkop, the Hamerkop. It builds a huge domed nest of sticks in a tree fork, on a cliff or on a pylon, and walks the shallow edges of dams and streams.",
+        "nl": "Eén hamerkop, de hamerkop. Hij bouwt een enorm koepelvormig nest van takken in een boomvork, op een klif of op een mast, en loopt langs de ondiepe randen van dammen en beken."
+      }
+    },
+    "pelicans": {
+      "here": {
+        "en": "One pelican, the Great White Pelican. Flocks fish together on lagoons and big lakes, and Langebaan Lagoon is a good place to see them.",
+        "nl": "Eén pelikaan, de roze pelikaan. Groepen vissen samen op lagunes en grote meren, en de lagune van Langebaan is een goede plek om ze te zien."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "Twenty-two birds of prey, from the Black-winged Kite on every roadside pole to the vultures and eagles of Kruger. In the Cape, look for the Black Harrier over the fynbos, the Jackal Buzzard on road verges and Verreaux's Eagle on the cliffs.",
+        "nl": "Tweeëntwintig roofvogels, van de grijze wouw op elke paal langs de weg tot de gieren en arenden van Kruger. Let in de Kaap op de zwarte kiekendief boven de fynbos, de jakhalsbuizerd langs de wegkant en de zwarte arend op de kliffen."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "Two owls, both easy near a lodge or camp. The Spotted Eagle Owl hoots at dusk and sits on road verges at night, and the Pearl-spotted Owlet whistles in the daytime.",
+        "nl": "Twee uilen, allebei makkelijk bij een lodge of kamp. De Afrikaanse oehoe hoeit in de schemering en zit 's nachts langs de weg, en de pareldwerguil fluit overdag."
+      }
+    },
+    "mousebirds": {
+      "here": {
+        "en": "Two mousebirds. The Speckled Mousebird feeds in gardens and fruit trees nearly everywhere, and the Red-faced Mousebird lives in the bush of the Lowveld. They travel in small groups, creeping along branches like mice.",
+        "nl": "Twee muisvogels. De bruine muisvogel eet in tuinen en fruitbomen bijna overal, en de roodwangmuisvogel leeft in de bush van het Lowveld. Ze reizen in kleine groepen en kruipen als muizen langs takken."
+      }
+    },
+    "hoopoes": {
+      "here": {
+        "en": "One hoopoe, the Common Hoopoe, walking on lawns and bare ground in the bushveld and the Karoo and flashing its crest.",
+        "nl": "Eén hop, de hop, die over grasvelden en kale grond loopt in de bushveld en de Karoo en zijn kuif laat zien."
+      }
+    },
+    "woodhoopoes-and-scimitarbills": {
+      "here": {
+        "en": "Two woodland birds. The Green Woodhoopoe cackles in family groups in the bushveld, and the Common Scimitarbill works along branches alone or in pairs.",
+        "nl": "Twee bosvogels. De groene kakelaar kakelt in familiegroepen in de bushveld, en de Zuid-Afrikaanse boomhop werkt alleen of in paren langs takken."
+      }
+    },
+    "hornbills": {
+      "here": {
+        "en": "Six hornbills. The Southern Yellow-billed and Southern Red-billed Hornbills hop around camp sites in Kruger and the Kalahari, and the Southern Ground-Hornbill is a huge black bird that walks in family groups. The Crowned and Trumpeter Hornbills live in eastern forest.",
+        "nl": "Zes neushoornvogels. De zuidelijke geelsnaveltok en de zuidelijke roodsnaveltok hippen rond op kampeerterreinen in Kruger en de Kalahari, en de zuidelijke hoornraaf is een enorme zwarte vogel die in familiegroepen loopt. De kuiftok en de trompetneushoornvogel leven in bos in het oosten."
+      }
+    },
+    "bee-eaters": {
+      "here": {
+        "en": "Four bee-eaters: the European Bee-eater, which winters in large numbers, the Little Bee-eater of bush gardens, the White-fronted Bee-eater nesting in river banks, and the Southern Carmine Bee-eater, a summer visitor to river bluffs in the north of Kruger.",
+        "nl": "Vier bijeneters: de bijeneter, die in groten getale overwintert, de dwergbijeneter van tuinen in de bush, de witvoorhoofdbijeneter die in rivierbanken nestelt, en de zuidelijke karmijnrode bijeneter, een zomergast bij rivierkliffen in het noorden van Kruger."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "Six kingfishers, and only some eat fish. The Brown-hooded, Woodland and Striped Kingfishers hunt insects from perches in woodland, while the Pied, Malachite and Giant Kingfishers fish over water.",
+        "nl": "Zes ijsvogels, en niet allemaal eten ze vis. De bruinkap-, de senegal- en de gestreepte ijsvogel jagen op insecten vanaf zitplekken in bos, terwijl de bonte, de malachiet- en de Afrikaanse reuzenijsvogel boven water vissen."
+      }
+    },
+    "rollers-and-allies": {
+      "here": {
+        "en": "Three rollers. The Lilac-breasted Roller sits on wires and bare branches along every bush road, the Purple Roller is a quieter bird of woodland, and the European Roller is a summer visitor from the north.",
+        "nl": "Drie scharrelaars. De vorkstaartscharrelaar zit op draden en kale takken langs elke weg in de bush, de roodkruinscharrelaar is een rustiger bosvogel, en de scharrelaar is een zomergast uit het noorden."
+      }
+    },
+    "barbets-and-toucans": {
+      "here": {
+        "en": "Three barbets that eat figs and other fruit. The Black-collared Barbet is a red-faced bird of gardens in the east and south, the Crested Barbet lives in the bushveld, and the Pied Barbet in the dry west and centre.",
+        "nl": "Drie baardvogels die vijgen en ander fruit eten. De zwarthalsbaardvogel is een roodgezichtige tuinvogel in het oosten en zuiden, de kuifbaardvogel leeft in de bushveld, en de Kaapse baardvogel in het droge westen en midden."
+      }
+    },
+    "woodpeckers": {
+      "here": {
+        "en": "Four woodpeckers, including the unusual Ground Woodpecker of rocky slopes. The Cardinal Woodpecker is the small one that taps in bushveld thorn trees, and the Bearded and Golden-tailed Woodpeckers are larger birds of woodland and forest edge.",
+        "nl": "Vier spechten, waaronder de bijzondere Kaapse grondspecht van rotsachtige hellingen. De kardinaalspecht is de kleine die tikt in doornbomen van de bushveld, en de baardspecht en goudstaartspecht zijn grotere vogels van bos en bosrand."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "Four falcons. The Rock Kestrel hovers over cliffs and roadsides, the Lanner Falcon hunts open country, and the Amur Falcon is a summer visitor that roosts in huge flocks. The tiny Pygmy Falcon nests in the nests of Sociable Weavers on the Kalahari edge.",
+        "nl": "Vier valken. De rotsvalk bidt boven kliffen en wegbermen, de lannervalk jaagt in open land, en de Amoerroodpootvalk is een zomergast die in enorme groepen slaapt. De kleine Afrikaanse dwergvalk nestelt in de nesten van republikeinwevers aan de rand van de Kalahari."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "Two parrots. The Brown-headed Parrot lives in the bushveld and the Lowveld, and the Ring-necked Parakeet, introduced from elsewhere, is a bird of parks and gardens in Durban, Johannesburg and Cape Town.",
+        "nl": "Twee papegaaien. De bruinkoppapegaai leeft in de bushveld en het Lowveld, en de halsbandparkiet, hier door de mens ingevoerd, is een vogel van parken en tuinen in Durban, Johannesburg en Kaapstad."
+      }
+    },
+    "old-world-orioles": {
+      "here": {
+        "en": "One oriole, the African Black-headed Oriole, a yellow bird with a black head that whistles from the canopy of gardens and woodland in the north and east.",
+        "nl": "Eén wielewaal, de maskerwielewaal, een gele vogel met een zwarte kop die fluit vanuit het bladerdak van tuinen en bos in het noorden en oosten."
+      }
+    },
+    "wattle-eyes-and-batises": {
+      "here": {
+        "en": "Three batises. The Cape Batis lives in forest and mountain scrub of the south and east, the Pririt Batis in dry thornveld and the Karoo, and the Chinspot Batis in the bushveld. Males wear a black chest band and females a chestnut one.",
+        "nl": "Drie vliegenvangers. De bruinflankvliegenvanger leeft in bos en bergstruweel in het zuiden en oosten, de priritvliegenvanger in droog doornveld en de Karoo, en de witflankvliegenvanger in de bushveld. Mannetjes hebben een zwarte borstband en vrouwtjes een kastanjebruine."
+      }
+    },
+    "vangas-helmetshrikes-and-allies": {
+      "here": {
+        "en": "One helmetshrike, the White-crested Helmetshrike. It moves in noisy, sociable groups through bushveld, with a yellow wattle round each eye.",
+        "nl": "Eén helmklauwier, de helmklauwier. Hij trekt in luidruchtige, sociale groepen door de bushveld, met een gele lel rond elk oog."
+      }
+    },
+    "bushshrikes-and-allies": {
+      "here": {
+        "en": "Seven bushshrikes, bold birds of thickets and gardens that are heard more than seen. The Bokmakierie is named after its call, and the Crimson-breasted Gonolek, called Crimson-breasted Shrike in South Africa, is the red-bellied bird that duets in the bushveld.",
+        "nl": "Zeven bosklauwieren, brutale vogels van struikgewas en tuinen die je vaker hoort dan ziet. De bokmakierie is genoemd naar zijn roep, en de burchellfiskaal, in Zuid-Afrika Crimson-breasted Shrike genoemd, is de roodbuikige vogel die in duet zingt in de bushveld."
+      }
+    },
+    "drongos": {
+      "here": {
+        "en": "One drongo, the Fork-tailed Drongo. It sits on an open perch, flicks out to catch insects and copies the alarm calls of other birds.",
+        "nl": "Eén drongo, de treurdrongo. Hij zit op een vrije uitkijkpost, schiet erop uit om insecten te vangen en bootst de alarmroepen van andere vogels na."
+      }
+    },
+    "monarch-flycatchers": {
+      "here": {
+        "en": "One monarch, the African Paradise-Flycatcher, a bird of gardens and shady woodland. The male has long white or chestnut tail streamers in summer.",
+        "nl": "Eén monarch, de Afrikaanse paradijsmonarch, een vogel van tuinen en schaduwrijk bos. Het mannetje heeft in de zomer lange witte of kastanjebruine staartlinten."
+      }
+    },
+    "shrikes": {
+      "here": {
+        "en": "Four shrikes. The Southern Fiscal sits on fences and wires almost everywhere, the Red-backed Shrike arrives from the north in summer, and the Magpie Shrike and White-crowned Shrike live in the bushveld.",
+        "nl": "Vier klauwieren. De zuidelijke gekraagde klauwier zit bijna overal op hekken en draden, de grauwe klauwier komt in de zomer uit het noorden, en de eksterklauwier en de zuidelijke witkruinklauwier leven in de bushveld."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "Three crows. The Pied Crow is in every town and camp site, the all-black Cape Crow prefers open farmland, and the White-necked Raven is a bird of the mountains, such as the Drakensberg.",
+        "nl": "Drie kraaiachtigen. De schildraaf zit in elke stad en elk kamp, de geheel zwarte Kaapse roek geeft de voorkeur aan open akkerland, en de witnekraaf is een vogel van bergen zoals de Drakensberg."
+      }
+    },
+    "rockjumpers": {
+      "here": {
+        "en": "Two rockjumpers: the Cape Rockjumper on rocky mountain slopes in the south-west, and the Drakensberg Rockjumper on high basalt in the east. Their family lives only in southern Africa.",
+        "nl": "Twee rotsspringers: de Kaapse rotsspringer op rotsachtige berghellingen in het zuidwesten, en de roodborstrotsspringer op hoog basalt in het oosten. Hun familie komt alleen in zuidelijk Afrika voor."
+      }
+    },
+    "fairy-flycatchers": {
+      "here": {
+        "en": "One fairy flycatcher, the Fairy Flycatcher, a small, pale bird of Karoo scrub that moves north in winter.",
+        "nl": "Eén elfvliegenvanger, de elfvliegenvanger, een kleine, lichte vogel van Karoostruweel die in de winter naar het noorden trekt."
+      }
+    },
+    "tits-chickadees-and-titmice": {
+      "here": {
+        "en": "One tit, the Southern Black-Tit, a black-and-white bird that moves through woodland with mixed bird parties.",
+        "nl": "Eén mees, de roetmees, een zwart-witte vogel die met gemengde groepjes door bos trekt."
+      }
+    },
+    "larks": {
+      "here": {
+        "en": "Eight larks of open country. Brown larks look much alike in the grass, so go by place and song: Karoo Lark and Cape Long-billed Lark in the dry west, Eastern Long-billed Lark on the grasslands of the east, and Sabota Lark in thornveld.",
+        "nl": "Acht leeuweriken van open land. Bruine leeuweriken lijken in het gras erg op elkaar, dus ga af op plek en zang: de karooleeuwerik en Kaapse langsnavelleeuwerik in het droge westen, de oostelijke langsnavelleeuwerik op de graslanden in het oosten, en de sabotaleeuwerik in doornveld."
+      }
+    },
+    "crombecs-longbills-and-allies": {
+      "here": {
+        "en": "Two birds of scrub. The Long-billed Crombec is a tiny, almost tailless warbler of bushveld, and the Cape Grassbird is a rusty bird that sings from the tops of bushes in the south.",
+        "nl": "Twee vogels van struweel. De Kaapse krombek is een kleine, bijna staartloze zanger van de bushveld, en de Kaapse grasvogel is een roestkleurige vogel die in het zuiden zingt vanaf struiktoppen."
+      }
+    },
+    "cisticolas-and-allies": {
+      "here": {
+        "en": "Twelve cisticolas, prinias and apalises, small birds of grass and scrub. Start with the Tawny-flanked Prinia and the Karoo Prinia, which are common and noisy in their own regions.",
+        "nl": "Twaalf graszangers, prinia's en apalissen, kleine vogels van gras en struweel. Begin met de roestflankprinia en de karooprinia, die in hun eigen streken algemeen en luidruchtig zijn."
+      }
+    },
+    "reed-warblers-and-allies": {
+      "here": {
+        "en": "One reed warbler, the Lesser Swamp Warbler, which sings from the stems of reedbeds and papyrus on dams and wetlands.",
+        "nl": "Eén rietzanger, de Kaapse rietzanger, die zingt vanaf rietstengels en papyrus langs dammen en wetlands."
+      }
+    },
+    "grassbirds-and-allies": {
+      "here": {
+        "en": "One rush warbler, the Little Rush Warbler, a skulker of reeds and wet grass that you find by its rattling song.",
+        "nl": "Eén struikzanger, de moerasstruikzanger, een verborgen vogel van riet en nat gras die je vindt aan zijn ratelende zang."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "Ten swallows and martins. The Barn Swallow is a summer visitor from the north, the Greater and Lesser Striped Swallows nest under bridges, and the Montane Blue Swallow is a rare summer visitor to a few misty grasslands.",
+        "nl": "Tien zwaluwen. De boerenzwaluw is een zomergast uit het noorden, de Kaapse en de savannezwaluw nestelen onder bruggen, en de blauwe zwaluw is een zeldzame zomergast op enkele nevelige graslanden."
+      }
+    },
+    "bulbuls": {
+      "here": {
+        "en": "Six bulbuls and greenbuls. The Common Bulbul lives in the north and east, the Cape Bulbul in the south-west and the Black-fronted Bulbul in the dry west, while the greenbuls and brownbul hide in forest and thicket.",
+        "nl": "Zes buulbuuls. De grauwe buulbuul leeft in het noorden en oosten, de Kaapse buulbuul in het zuidwesten en de maskerbuulbuul in het droge westen, terwijl de vale en geelborstbuulbuul en de loofbuulbuul zich verstoppen in bos en struikgewas."
+      }
+    },
+    "leaf-warblers": {
+      "here": {
+        "en": "One leaf warbler, the Willow Warbler, a summer visitor from the north. It is plain olive-brown, so go by its descending song in bush and gardens from November to March.",
+        "nl": "Eén boszanger, de fitis, een zomergast uit het noorden. Hij is effen olijfbruin, dus ga af op zijn dalende zang in struikgewas en tuinen van november tot maart."
+      }
+    },
+    "sylviid-warblers": {
+      "here": {
+        "en": "One warbler of dry bush, the Chestnut-vented Warbler, which works through scrub in pairs and gives a quick, scolding song.",
+        "nl": "Eén zanger van droog struikgewas, de Kaapse meeszanger, die in paren door struweel werkt en een snel, mopperend lied laat horen."
+      }
+    },
+    "white-eyes-yuhinas-and-allies": {
+      "here": {
+        "en": "One white-eye, the Cape White-eye, in every garden, thicket and forest edge, usually in small restless flocks.",
+        "nl": "Eén brilvogel, de Kaapse brilvogel, in elke tuin, elk struikgewas en elke bosrand, meestal in kleine, onrustige groepjes."
+      }
+    },
+    "laughingthrushes-and-allies": {
+      "here": {
+        "en": "Two babblers. The Arrow-marked Babbler is a brown, noisy group bird of the bushveld, and the Southern Pied-Babbler is a white-and-brown babbler of the Kalahari.",
+        "nl": "Twee babbelaars. De pijlpuntbabbelaar is een bruine, luidruchtige groepsvogel van de bushveld, en de eksterbabbelaar is een wit-bruine babbelaar van de Kalahari."
+      }
+    },
+    "oxpeckers": {
+      "here": {
+        "en": "Two oxpeckers that ride on big game. In Kruger and Zululand look for them on buffalo, giraffe and rhino, where they pick off ticks.",
+        "nl": "Twee ossenpikkers die op groot wild meerijden. Zoek ze in Kruger en Zoeloeland op buffels, giraffen en neushoorns, waar ze teken eten."
+      }
+    },
+    "starlings-and-mynas": {
+      "here": {
+        "en": "Nine starlings. The Common Starling and Common Myna were introduced, the Red-winged Starling nests on cliffs and buildings, and the glossy starlings of the bushveld are the ones that gleam in the sun at camp sites.",
+        "nl": "Negen spreeuwen. De spreeuw en de treurmaina zijn ingevoerd, de roodvleugelspreeuw nestelt op kliffen en gebouwen, en de glansspreeuwen van de bushveld zijn de vogels die in de zon glanzen op kampeerterreinen."
+      }
+    },
+    "thrushes": {
+      "here": {
+        "en": "Four thrushes. The Olive Thrush is a garden bird of the south and east, the Karoo Thrush lives in drier country, and the Kurrichane Thrush and Groundscraper Thrush are birds of the bushveld.",
+        "nl": "Vier lijsters. De Kaapse lijster is een tuinvogel van het zuiden en oosten, de karoolijster leeft in droger land, en de kurrichanelijster en de acacialijster zijn vogels van de bushveld."
+      }
+    },
+    "old-world-flycatchers": {
+      "here": {
+        "en": "Twenty-three flycatchers, chats and robin-chats. The Cape Robin-Chat is in every garden in the south and east, the Familiar Chat visits camp sites, and the Karoo and Kalahari have their own chats and scrub robins.",
+        "nl": "Drieëntwintig vliegenvangers, tapuiten en lawaaimakers. De Kaapse lawaaimaker zit in elke tuin in het zuiden en oosten, de roodstaartspekvreter bezoekt kampeerterreinen, en de Karoo en de Kalahari hebben hun eigen tapuiten en waaierstaarten."
+      }
+    },
+    "sugarbirds": {
+      "here": {
+        "en": "Two sugarbirds: the Cape Sugarbird on proteas in the south-west mountains, and Gurney's Sugarbird on aloes in the highlands of the east. Their family lives only in southern Africa.",
+        "nl": "Twee suikervogels: de Kaapse suikervogel op proteas in de bergen van het zuidwesten, en de Gurneysuikervogel op aloë's in het hoogland van het oosten. Hun familie komt alleen in zuidelijk Afrika voor."
+      }
+    },
+    "sunbirds-and-spiderhunters": {
+      "here": {
+        "en": "Ten sunbirds. The Southern Double-collared Sunbird is the one in every garden, the Orange-breasted Sunbird belongs to the fynbos, and the Amethyst and White-bellied Sunbirds are the dark and the pale-bellied birds of the bushveld.",
+        "nl": "Tien honingzuigers. De kleine kraaghoningzuiger is die in elke tuin, de oranjeborsthoningzuiger hoort bij de fynbos, en de amethisthoningzuiger en de witbuikhoningzuiger zijn de donkere en de witbuikige vogels van de bushveld."
+      }
+    },
+    "weavers-and-allies": {
+      "here": {
+        "en": "Thirteen weavers, bishops and widowbirds. Look for the nest colonies hanging over water, the red and yellow bishops in the reeds and the widowbirds with their long tails in tall grass. The Sociable Weaver builds the giant communal nests of the Kalahari edge.",
+        "nl": "Dertien wevers en widavinken. Zoek naar de nestkolonies boven het water, de grenadier- en napoleonwevers in het riet en de widavinken met hun lange staarten in hoog gras. De republikeinwever bouwt de reusachtige gemeenschappelijke nesten aan de rand van de Kalahari."
+      }
+    },
+    "estrildids": {
+      "here": {
+        "en": "Eight waxbills, firefinches and mannikins, tiny seed-eaters that come to bird baths and garden feeders. The Southern Cordonbleu and Common Waxbill are the ones you will meet first.",
+        "nl": "Acht astrilden, vuurvinkjes en ekstertjes, kleine zaadeters die naar vogelbadjes en voederplekken in tuinen komen. Het Angolees blauwfazantje en het Sint-Helenafazantje zie je als eerste."
+      }
+    },
+    "whydahs-and-indigobirds": {
+      "here": {
+        "en": "Two whydahs. In summer the male Pin-tailed Whydah shows off his very long tail over lawns and fields, and the male Eastern Paradise-Whydah grows an even longer one in woodland.",
+        "nl": "Twee wida's. In de zomer laat het mannetje van de dominicanerwida zijn erg lange staart zien boven gazons en velden, en het mannetje van de smalstaartparadijswida laat in bos een nog langere groeien."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "Three sparrows. The Cape Sparrow is the common garden bird in the south and on the highveld, the Southern Grey-headed Sparrow lives in the bushveld, and the House Sparrow was introduced to a few cities.",
+        "nl": "Drie mussen. De Kaapse mus is de gewone tuinvogel in het zuiden en op de hooglanden, de Mozambikaanse mus leeft in de bushveld, en de huismus is in enkele steden ingevoerd."
+      }
+    },
+    "wagtails-and-pipits": {
+      "here": {
+        "en": "Five wagtails, pipits and longclaws. The Cape Wagtail walks on every lawn, the African Pied Wagtail follows rivers and streams, and the Orange-throated and Yellow-throated Longclaws are the bright-throated ones of the grassland.",
+        "nl": "Vijf kwikstaarten, piepers en langklauwen. De Kaapse kwikstaart loopt over elk grasveld, de Afrikaanse bonte kwikstaart volgt rivieren en beken, en de Kaapse en geelkeellangklauw zijn de felgekeelde vogels van het grasland."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "here": {
+        "en": "Ten canaries, siskins and seedeaters. The Yellow-fronted Canary, Cape Canary and Streaky-headed Seedeater come to gardens, the Forest Canary stays in the forest, and the Protea Canary, Cape Siskin and Drakensberg Siskin keep to the mountains.",
+        "nl": "Tien kanaries, sijzen en zaadeters. De Mozambiquesijs, de grijsnekkanarie en de streepkopkanarie komen in tuinen, de boskanarie blijft in het bos, en de witbandkanarie, de Kaapse kanarie en de basutokanarie houden zich op in de bergen."
+      }
+    },
+    "old-world-buntings": {
+      "here": {
+        "en": "Two buntings. The Cape Bunting hops over rocky ground in the south, and the Golden-breasted Bunting lives in the thornveld of the north-east.",
+        "nl": "Twee gorzen. De Kaapse gors hipt over rotsachtige grond in het zuiden, en de acaciagors leeft in het doornveld van het noordoosten."
+      }
+    }
+  },
+  "units": {
+    "ostriches": {
+      "title": {
+        "en": "An ostrich and the big waterfowl",
+        "nl": "Een struisvogel en grote watervogels"
+      },
+      "intro": {
+        "en": "The Common Ostrich walks open ground, while the Egyptian Goose, Spur-winged Goose and South African Shelduck graze on lawns and fields all year. The Knob-billed Duck and White-faced Whistling-Duck stay close to water.",
+        "nl": "De struisvogel loopt over open terrein, terwijl de nijlgans, de spoorwiekgans en de Kaapse casarca het hele jaar op grasvelden en akkers grazen. De Afrikaanse knobbeleend en de witwangfluiteend blijven dicht bij water."
+      }
+    },
+    "waterfowl-1": {
+      "title": {
+        "en": "Ducks of ponds and streams",
+        "nl": "Eenden van vijvers en beken"
+      },
+      "intro": {
+        "en": "Five dabbling ducks. The Yellow-billed and Red-billed Ducks are named after their bills, the Cape Teal is pale with a pink bill, the Cape Shoveler has a broad spoon-shaped bill, and the African Black Duck keeps to fast rocky streams.",
+        "nl": "Vijf eenden die in ondiep water zoeken. De geelsnaveleend en de roodsnavelpijlstaart danken hun naam aan de snavel, de Kaapse taling is bleek met een roze snavel, de Kaapse slobeend heeft een brede lepelsnavel, en de Afrikaanse zwarte eend blijft bij snelle, rotsachtige beken."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "title": {
+        "en": "Guineafowl, francolins and spurfowl",
+        "nl": "Parelhoenders en frankolijnen"
+      },
+      "intro": {
+        "en": "Two guineafowl and five francolins and spurfowl, plump, chicken-like birds that scuttle across tracks. At dawn the francolins call loudly from a rock, a termite mound or a fence post, so listen first.",
+        "nl": "Twee parelhoenders en vijf frankolijnen, gedrongen, kippachtige vogels die over paden rennen. Bij zonsopgang roepen de frankolijnen luid vanaf een rots, een termietenheuvel of een hekpaal, dus luister eerst."
+      }
+    },
+    "pigeons-and-doves-1": {
+      "title": {
+        "en": "Town doves and forest pigeons",
+        "nl": "Stadsduiven en bosduiven"
+      },
+      "intro": {
+        "en": "The Rock Dove and Laughing Dove live around houses, and the Namaqua Dove is a tiny, long-tailed dove of dry country. The Rameron Pigeon and African Green-Pigeon sit high in fruiting trees.",
+        "nl": "De rotsduif en de palmtortel leven rond huizen, en de maskerduif is een kleine duif met een lange staart uit droog land. De olijfduif en de Afrikaanse papegaaiduif zitten hoog in vruchtdragende bomen."
+      }
+    },
+    "pigeons-and-doves-2": {
+      "title": {
+        "en": "Garden doves and a sandgrouse",
+        "nl": "Tuinduiven en een zandhoen"
+      },
+      "intro": {
+        "en": "The Ring-necked Dove, Red-eyed Dove and Speckled Pigeon fill gardens and farmland, each with a call you will learn on the first day. The Emerald-spotted Wood-Dove sings from woodland, and the Namaqua Sandgrouse flies in to waterholes at dawn.",
+        "nl": "De Kaapse tortel, de roodoogtortel en de gespikkelde duif vullen tuinen en akkers, elk met een roep die je de eerste dag leert. De smaragdvlekduif zingt vanuit bos, en het namaquazandhoen vliegt bij zonsopgang naar drinkplaatsen."
+      }
+    },
+    "bustards": {
+      "title": {
+        "en": "Bustards of open country",
+        "nl": "Trappen van open land"
+      },
+      "intro": {
+        "en": "Big, long-legged birds that walk rather than fly. The Kori Bustard is the heavyweight, and the smaller bustards display with loud calls from termite mounds. Scan open ground and fence posts from the car.",
+        "nl": "Grote vogels met lange poten die liever lopen dan vliegen. De koritrap is het zwaargewicht, en de kleinere trappen laten zich horen met luide roepen vanaf termietenheuvels. Speur open terrein en hekpalen af vanuit de auto."
+      }
+    },
+    "turacos": {
+      "title": {
+        "en": "Turacos",
+        "nl": "Toerako's"
+      },
+      "intro": {
+        "en": "Large, long-tailed birds that run along branches rather than fly. The Knysna and Purple-crested Turacos are green with a crimson patch in the wing that shows in flight, and the Grey Go-away-bird is grey, crested and shouts its own name.",
+        "nl": "Grote vogels met een lange staart die liever langs takken rennen dan vliegen. De knysnatoerako en de purperkuiftoerako zijn groen met een karmijnrode vlek in de vleugel die je in de vlucht ziet, en de vale toerako is grijs, heeft een kuif en roept zijn eigen naam."
+      }
+    },
+    "cuckoos": {
+      "title": {
+        "en": "Cuckoos you hear first",
+        "nl": "Koekoeken die je eerst hoort"
+      },
+      "intro": {
+        "en": "Four cuckoos that arrive for the summer and call from tree tops for hours. Learn the call, then search the canopy for a bird that sits still on an open branch.",
+        "nl": "Vier koekoeken die voor de zomer komen en uren vanuit boomtoppen roepen. Leer de roep en zoek dan het bladerdak af naar een vogel die stil op een open tak zit."
+      }
+    },
+    "nightjars": {
+      "title": {
+        "en": "Swifts and a nightjar",
+        "nl": "Gierzwaluwen en een nachtzwaluw"
+      },
+      "intro": {
+        "en": "Three swifts that nest on buildings and in palms, and a nightjar of the night. Swifts are told apart by size, rump colour and tail shape, as they dash past overhead.",
+        "nl": "Drie gierzwaluwen die op gebouwen en in palmen nestelen, en een nachtzwaluw van de nacht. Gierzwaluwen herken je aan grootte, kleur van de stuit en vorm van de staart terwijl ze over je heen vliegen."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "title": {
+        "en": "Cranes and birds of the marsh",
+        "nl": "Kraanvogels en moerasvogels"
+      },
+      "intro": {
+        "en": "Two cranes of grassland, then four marsh birds. The cranes are tall and graceful; the coot, moorhen, swamphen and crake all live in or beside reeds and are told apart by their bills and legs.",
+        "nl": "Twee kraanvogels van grasland en vier moerasvogels. De kraanvogels zijn lang en sierlijk; koet, waterhoen, purperkoet en porseleinhoen leven allemaal in of naast riet en zijn te herkennen aan snavel en poten."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Thick-knees, lapwings and oystercatcher",
+        "nl": "Grielen, kieviten en scholekster"
+      },
+      "intro": {
+        "en": "Resident waders of rivers, fields and rocky shores. The thick-knees are well camouflaged and often sit still in the day, and the lapwings and the oystercatcher are bold and loud.",
+        "nl": "Standvogels van rivieren, velden en rotskusten. De grielen zijn goed gecamoufleerd en zitten overdag vaak stil, en de kieviten en de scholekster zijn brutaal en luid."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Stilt, avocet and plovers",
+        "nl": "Steltkluut, kluut en plevieren"
+      },
+      "intro": {
+        "en": "A tall stilt and an avocet of shallow water, and a mix of plovers on beaches, mud and short grass. The sandy beaches near estuaries hold the small plovers.",
+        "nl": "Een hoge steltkluut en een kluut van ondiep water, en een mengeling van plevieren op stranden, slik en kort gras. De zandstranden bij estuaria herbergen de kleine plevieren."
+      }
+    },
+    "shorebirds-3": {
+      "title": {
+        "en": "Lapwing, jacana and bigger waders",
+        "nl": "Kievit, lelieloper en grote steltlopers"
+      },
+      "intro": {
+        "en": "The Blacksmith Lapwing is on almost every wet field, and the African Jacana walks on lily pads. The sandpipers, greenshank and godwit are summer visitors from the north.",
+        "nl": "De smidsplevier zit op bijna elk nat veld, en de lelieloper loopt over waterlelies. De ruiters en de grutto zijn zomergasten uit het noorden."
+      }
+    },
+    "shorebirds-4": {
+      "title": {
+        "en": "Migrant waders from the north",
+        "nl": "Trekkende steltlopers uit het noorden"
+      },
+      "intro": {
+        "en": "Small waders that arrive in October and stay until March, feeding in flocks on lagoons and mudflats. Judge them by size, bill length and leg colour, and look at the flock before you pick one bird.",
+        "nl": "Kleine steltlopers die in oktober aankomen en tot maart blijven, in groepen foeragerend op lagunes en slikken. Kijk naar grootte, snavellengte en kleur van de poten, en bekijk eerst de hele groep voor je één vogel kiest."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {
+        "en": "Gulls and terns",
+        "nl": "Meeuwen en sterns"
+      },
+      "intro": {
+        "en": "Birds of the coast and the lakes. Gulls are bulky and take any food, while terns are slimmer, with pointed wings, and dive for fish.",
+        "nl": "Vogels van kust en meren. Meeuwen zijn zwaar gebouwd en eten alles, terwijl sterns slanker zijn, met spitse vleugels, en naar vis duiken."
+      }
+    },
+    "flamingos": {
+      "title": {
+        "en": "Flamingo, grebes and penguin",
+        "nl": "Flamingo, futen en pinguïn"
+      },
+      "intro": {
+        "en": "Waterbirds of the coast and of ponds. The flamingo sweeps its bill through shallow water, the grebes dive and surface, and the penguin stands on the beach among the boulders.",
+        "nl": "Watervogels van de kust en van vijvers. De flamingo haalt zijn snavel door ondiep water, de futen duiken en komen weer boven, en de pinguïn staat op het strand tussen de rotsblokken."
+      }
+    },
+    "storks": {
+      "title": {
+        "en": "Storks and a gannet",
+        "nl": "Ooievaars en een jan-van-gent"
+      },
+      "intro": {
+        "en": "Four big storks of rivers, pans and bush, and the Cape Gannet, a seabird that dives from a height. Storks soar on thermals with neck outstretched, so check bill colour and the head.",
+        "nl": "Vier grote ooievaars van rivieren, pannen en bush, en de Kaapse jan-van-gent, een zeevogel die van hoogte naar beneden duikt. Ooievaars zweven op thermiek met uitgestrekte hals, dus let op snavelkleur en kop."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "title": {
+        "en": "Cormorants and the darter",
+        "nl": "Aalscholvers en de slangenhalsvogel"
+      },
+      "intro": {
+        "en": "Dark fish-eaters of water and coast. The Reed Cormorant and African Darter perch with wings spread to dry, and the three coastal cormorants differ in size, the colour of the face and the bill.",
+        "nl": "Donkere viseters van water en kust. De Afrikaanse dwergaalscholver en de slangenhalsvogel zitten met gespreide vleugels te drogen, en de drie kustaalscholvers verschillen in grootte en in kleur van gezicht en snavel."
+      }
+    },
+    "herons-ibis-and-allies-1": {
+      "title": {
+        "en": "Egrets, herons and a bald ibis",
+        "nl": "Zilverreigers, reigers en een ibis"
+      },
+      "intro": {
+        "en": "Four white egrets that are easy to confuse, a grey heron, a black one and a bald ibis of cliffs and grassland. Start with bill and leg colour.",
+        "nl": "Vier witte reigers die makkelijk te verwarren zijn, een blauwe reiger, een zwarte en een kale ibis van kliffen en grasland. Begin bij de kleur van snavel en poten."
+      }
+    },
+    "herons-ibis-and-allies-2": {
+      "title": {
+        "en": "Ibises, spoonbill and big herons",
+        "nl": "Ibissen, lepelaar en grote reigers"
+      },
+      "intro": {
+        "en": "Seven big wading birds with long bills. The Hadada and Sacred Ibises are common on any lawn or shore, and the Goliath and Purple Herons stand in reeds and shallow water.",
+        "nl": "Zeven grote waadvogels met lange snavels. De hadadaibis en de heilige ibis zijn gewoon op elk grasveld of strand, en de reuzenreiger en purperreiger staan in riet en ondiep water."
+      }
+    },
+    "shoebill-and-hammerkop": {
+      "title": {
+        "en": "Hamerkop and a pelican",
+        "nl": "Hamerkop en een pelikaan"
+      },
+      "intro": {
+        "en": "Two odd waterbirds. The Hamerkop is a brown, hammer-headed bird that builds a huge nest, and the Great White Pelican is a very large white bird that fishes in groups.",
+        "nl": "Twee eigenaardige watervogels. De hamerkop is een bruine vogel met een hamervormige kop die een enorm nest bouwt, en de roze pelikaan is een zeer grote witte vogel die in groepen vist."
+      }
+    },
+    "vultures-hawks-and-allies-1": {
+      "title": {
+        "en": "Raptors of open country",
+        "nl": "Roofvogels van open land"
+      },
+      "intro": {
+        "en": "Six raptors of grassland and thornveld, from the long-legged Secretarybird that walks through the grass to the Jackal Buzzard on a roadside pole. Look at the shape in flight and the colour of face and legs.",
+        "nl": "Zes roofvogels van grasland en doornveld, van de langpotige secretarisvogel die door het gras loopt tot de jakhalsbuizerd op een paal langs de weg. Let op de vorm in de vlucht en de kleur van gezicht en poten."
+      }
+    },
+    "vultures-hawks-and-allies-2": {
+      "title": {
+        "en": "Vultures, a kite and the Bateleur",
+        "nl": "Gieren, een wouw en de bateleur"
+      },
+      "intro": {
+        "en": "Four vultures, a small kite and the Bateleur, birds that soar on warm air. At a carcass in Kruger the vultures differ in size, head colour and bill.",
+        "nl": "Vier gieren, een kleine wouw en de bateleur, vogels die op warme lucht zweven. Bij een kadaver in Kruger verschillen de gieren in grootte, kopkleur en snavel."
+      }
+    },
+    "vultures-hawks-and-allies-3": {
+      "title": {
+        "en": "Big eagles",
+        "nl": "Grote arenden"
+      },
+      "intro": {
+        "en": "Five large eagles of bushveld, grassland and cliffs. Check the colour of the underparts, the head and the tail, and whether the bird soars or sits.",
+        "nl": "Vijf grote arenden van bushveld, grasland en kliffen. Let op de kleur van de onderzijde, de kop en de staart, en of de vogel zweeft of zit."
+      }
+    },
+    "vultures-hawks-and-allies-4": {
+      "title": {
+        "en": "Fish-eagle, kite and buzzard",
+        "nl": "Zeearend, wouw en buizerd"
+      },
+      "intro": {
+        "en": "Five raptors that you see from the road and the shore. The fish-eagle perches near water and calls loudly, and the kite, buzzard and marsh harrier hunt over open ground.",
+        "nl": "Vijf roofvogels die je vanaf de weg en de oever ziet. De zeearend zit bij water en roept luid, en de wouw, buizerd en kiekendief jagen boven open terrein."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Mousebirds and two owls",
+        "nl": "Muisvogels en twee uilen"
+      },
+      "intro": {
+        "en": "Two mousebirds that creep through fruit trees in groups, and two owls of the night and the day. The mousebirds have a long, stiff tail and a crest, and the owls are easy to hear.",
+        "nl": "Twee muisvogels die in groepen door fruitbomen kruipen en twee uilen van de nacht en de dag. De muisvogels hebben een lange, stijve staart en een kuif, en de uilen zijn makkelijk te horen."
+      }
+    },
+    "hoopoes": {
+      "title": {
+        "en": "Hoopoe, woodhoopoe and scimitarbill",
+        "nl": "Hop, kakelaar en boomhop"
+      },
+      "intro": {
+        "en": "Three birds with long, curved bills that probe the ground and bark. The hoopoe walks on the ground with a crest, and the two woodhoopoes work the trunks and branches.",
+        "nl": "Drie vogels met lange, gebogen snavels waarmee ze de grond en schors afzoeken. De hop loopt over de grond met een kuif, en de twee boomhoppen werken langs stammen en takken."
+      }
+    },
+    "hornbills": {
+      "title": {
+        "en": "Hornbills",
+        "nl": "Neushoornvogels"
+      },
+      "intro": {
+        "en": "Big birds with a huge bill, in many sizes. They fly with a heavy, undulating flight and are easiest to find on the ground at camp sites or on a branch in the morning sun.",
+        "nl": "Grote vogels met een enorme snavel, in veel maten. Ze vliegen met een zware, golvende vlucht en zijn het makkelijkst te vinden op de grond bij kampen of op een tak in de ochtendzon."
+      }
+    },
+    "bee-eaters": {
+      "title": {
+        "en": "Bee-eaters",
+        "nl": "Bijeneters"
+      },
+      "intro": {
+        "en": "Slender, colourful birds that catch bees and wasps in the air from a perch. Look for them on bare branches and wires, and in colonies at sandy banks.",
+        "nl": "Slanke, kleurige vogels die bijen en wespen in de lucht vangen vanaf een zitplek. Zoek ze op kale takken en draden, en in kolonies bij zandbanken."
+      }
+    },
+    "kingfishers": {
+      "title": {
+        "en": "Kingfishers",
+        "nl": "IJsvogels"
+      },
+      "intro": {
+        "en": "Six kingfishers, three that catch fish and three that hunt insects away from water. The size, bill colour and the pattern of the head tell them apart.",
+        "nl": "Zes ijsvogels, drie die vis vangen en drie die op insecten jagen, ver van het water. Grootte, snavelkleur en tekening van de kop maken het verschil."
+      }
+    },
+    "rollers-and-allies": {
+      "title": {
+        "en": "Rollers and barbets",
+        "nl": "Scharrelaars en baardvogels"
+      },
+      "intro": {
+        "en": "Three rollers that watch for prey from a perch, and three barbets, round-headed birds that sit up in fruiting trees and call in a duet. The rollers are the colourful ones, the barbets the noisy ones.",
+        "nl": "Drie scharrelaars die vanaf een zitplek op prooi letten, en drie baardvogels, rondkoppige vogels die in vruchtdragende bomen zitten en in duet roepen. De scharrelaars zijn de kleurrijke, de baardvogels de luidruchtige."
+      }
+    },
+    "woodpeckers": {
+      "title": {
+        "en": "Woodpeckers",
+        "nl": "Spechten"
+      },
+      "intro": {
+        "en": "Four woodpeckers, from a species that lives on the ground among rocks to the small, barred birds of thorn trees. Listen for tapping and a sharp call.",
+        "nl": "Vier spechten, van een soort die op de grond tussen rotsen leeft tot de kleine, gestreepte vogels van doornbomen. Luister naar getik en een scherpe roep."
+      }
+    },
+    "falcons-and-caracaras": {
+      "title": {
+        "en": "Falcons and kestrels",
+        "nl": "Valken"
+      },
+      "intro": {
+        "en": "Four fast, long-winged falcons. The Rock Kestrel hovers, the Lanner chases birds, and the Pygmy Falcon sits on a thorn tree looking like a very small shrike.",
+        "nl": "Vier snelle valken met lange vleugels. De rotsvalk bidt, de lannervalk jaagt op vogels, en de Afrikaanse dwergvalk zit op een doornboom en lijkt op een heel kleine klauwier."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "title": {
+        "en": "Parrots, an oriole and batises",
+        "nl": "Papegaaien, wielewaal en vliegenvangers"
+      },
+      "intro": {
+        "en": "Two parrots, an oriole, three batises and a helmetshrike, small flycatcher-like birds with a bold face pattern. The parrots fly fast with screeches, and the batises flit through the foliage.",
+        "nl": "Twee papegaaien, een wielewaal, drie vliegenvangers en een helmklauwier, kleine vogels met een opvallend gezichtspatroon. De papegaaien vliegen snel en krijsend, en de vliegenvangers fladderen door het gebladerte."
+      }
+    },
+    "bushshrikes-and-allies": {
+      "title": {
+        "en": "Bushshrikes",
+        "nl": "Bosklauwieren"
+      },
+      "intro": {
+        "en": "Seven birds of thicket and thornveld, from the red-bellied gonolek to the black-and-white Black-backed Puffback. Many call in duets, and a few have a whistle you will learn quickly.",
+        "nl": "Zeven vogels van struikgewas en doornveld, van de roodbuikige burchellfiskaal tot de zwart-witte zwartrugpoederdonsklauwier. Veel soorten roepen in duet, en een paar hebben een fluit die je snel leert."
+      }
+    },
+    "drongos": {
+      "title": {
+        "en": "A drongo and a paradise-flycatcher",
+        "nl": "Een drongo en een paradijsmonarch"
+      },
+      "intro": {
+        "en": "Two birds that hunt from a perch. The Fork-tailed Drongo is glossy black with a forked tail, and the African Paradise-Flycatcher has a chestnut or white body and, in the male, a long tail.",
+        "nl": "Twee vogels die vanaf een zitplek jagen. De treurdrongo is glanzend zwart met een gevorkte staart, en de Afrikaanse paradijsmonarch heeft een kastanjebruin of wit lijf en, bij het mannetje, een lange staart."
+      }
+    },
+    "shrikes": {
+      "title": {
+        "en": "Shrikes",
+        "nl": "Klauwieren"
+      },
+      "intro": {
+        "en": "Four shrikes that watch from fences, wires and bush tops. They hunt insects and small lizards and hang their prey on thorns.",
+        "nl": "Vier klauwieren die vanaf hekken, draden en struiktoppen spieden. Ze jagen op insecten en kleine hagedissen en hangen hun prooi aan doorns."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "title": {
+        "en": "Crows, rockjumpers and two small birds",
+        "nl": "Kraaien, rotsspringers en kleine vogels"
+      },
+      "intro": {
+        "en": "Three crows and ravens, the two rockjumpers of mountain slopes, a small Karoo flycatcher and a tit. The rockjumpers live on rocky hills and hop over boulders, and the crows are the big black-and-white or all-black birds.",
+        "nl": "Drie kraaiachtigen, de twee rotsspringers van berghellingen, een kleine vliegenvanger van de Karoo en een mees. De rotsspringers leven op rotsachtige heuvels en hippen over rotsblokken, en de kraaien zijn de grote zwart-witte of geheel zwarte vogels."
+      }
+    },
+    "larks-1": {
+      "title": {
+        "en": "Larks of dry country",
+        "nl": "Leeuweriken van droog land"
+      },
+      "intro": {
+        "en": "Four larks of the dry west and the thornveld. Brown, streaked birds that stand on the ground, with songs given in display flight, so listen for the song.",
+        "nl": "Vier leeuweriken van het droge westen en het doornveld. Bruine, gestreepte vogels die op de grond staan, met zang tijdens de baltsvlucht, dus luister naar de zang."
+      }
+    },
+    "larks-2": {
+      "title": {
+        "en": "Larks, a grassbird and a crombec",
+        "nl": "Leeuweriken, grasvogel en krombek"
+      },
+      "intro": {
+        "en": "Four more larks, and two small birds of scrub. Look at the bill length, the colour of the back and the crown, and where the bird sings from.",
+        "nl": "Nog vier leeuweriken, en twee kleine vogels van struweel. Let op de snavellengte, de kleur van rug en kruin, en waar de vogel vandaan zingt."
+      }
+    },
+    "cisticolas-and-allies-1": {
+      "title": {
+        "en": "Prinias, apalises and cisticolas",
+        "nl": "Prinia's, apalissen en graszangers"
+      },
+      "intro": {
+        "en": "Six small, active birds of scrub and grass. The Tawny-flanked Prinia flicks its tail and calls non-stop, and the apalises are the neat grey-and-yellow ones in the trees.",
+        "nl": "Zes kleine, levendige vogels van struweel en gras. De roestflankprinia wipt met de staart en roept non-stop, en de apalissen zijn de nette grijs-gele vogels in de bomen."
+      }
+    },
+    "cisticolas-and-allies-2": {
+      "title": {
+        "en": "Prinias, camaroptera and cisticolas",
+        "nl": "Prinia, camaroptera en graszangers"
+      },
+      "intro": {
+        "en": "Six more small birds of grass and thicket. Cisticolas are brown and streaked and look alike, so use habitat and call, and look for the crown colour.",
+        "nl": "Nog zes kleine vogels van gras en struikgewas. Graszangers zijn bruin en gestreept en lijken op elkaar, dus gebruik leefgebied en roep, en kijk naar de kleur van de kruin."
+      }
+    },
+    "reed-warblers-and-allies": {
+      "title": {
+        "en": "Warblers of reeds and wet grass",
+        "nl": "Zangers van riet en nat gras"
+      },
+      "intro": {
+        "en": "Two small brown warblers that stay hidden in reeds and wet grass. Find them by their songs, a rich warble from one and a rattling trill from the other.",
+        "nl": "Twee kleine bruine zangers die zich verbergen in riet en nat gras. Vind ze aan hun zang, een rijke kwinkelering van de ene en een ratelende triller van de andere."
+      }
+    },
+    "martins-and-swallows-1": {
+      "title": {
+        "en": "Swallows and martins, part one",
+        "nl": "Zwaluwen, deel één"
+      },
+      "intro": {
+        "en": "Five swallows and martins that hawk insects over water and grassland. Look at the colour of the throat, the rump and the tail streamers.",
+        "nl": "Vijf zwaluwen die insecten vangen boven water en grasland. Kijk naar de kleur van keel, stuit en staartlinten."
+      }
+    },
+    "martins-and-swallows-2": {
+      "title": {
+        "en": "Swallows and martins, part two",
+        "nl": "Zwaluwen, deel twee"
+      },
+      "intro": {
+        "en": "Five more swallows and martins, with a summer visitor from the north among them. They nest under bridges, in culverts and on cliffs.",
+        "nl": "Nog vijf zwaluwen, waaronder een zomergast uit het noorden. Ze nestelen onder bruggen, in duikers en op kliffen."
+      }
+    },
+    "bulbuls": {
+      "title": {
+        "en": "Bulbuls and greenbuls",
+        "nl": "Buulbuuls"
+      },
+      "intro": {
+        "en": "Medium brown birds of gardens, thicket and forest. The bulbuls sit up and whistle, while the greenbuls and the brownbul hide in cover and call from within.",
+        "nl": "Middelgrote bruine vogels van tuinen, struikgewas en bos. De buulbuuls zitten vrij en fluiten, terwijl de groene buulbuuls en de loofbuulbuul zich verbergen en vanuit de dekking roepen."
+      }
+    },
+    "leaf-warblers": {
+      "title": {
+        "en": "White-eye, babblers and oxpeckers",
+        "nl": "Brilvogel, babbelaars en ossenpikkers"
+      },
+      "intro": {
+        "en": "Seven small birds that live in groups. The white-eye and the babblers travel in noisy flocks, the oxpeckers ride on big game, and a warbler from the north is hiding in the foliage.",
+        "nl": "Zeven kleine vogels die in groepen leven. De brilvogel en de babbelaars reizen in luidruchtige groepen, de ossenpikkers rijden mee op groot wild, en een zanger uit het noorden verbergt zich in het gebladerte."
+      }
+    },
+    "starlings-and-mynas-1": {
+      "title": {
+        "en": "Glossy starlings and Wattled Starling",
+        "nl": "Glansspreeuwen en lelspreeuw"
+      },
+      "intro": {
+        "en": "Five starlings of the bushveld and the dry country, shiny in the sun. Look at the eye colour, the belly and the back.",
+        "nl": "Vijf spreeuwen van de bushveld en het droge land, glanzend in de zon. Let op de kleur van het oog, de buik en de rug."
+      }
+    },
+    "starlings-and-mynas-2": {
+      "title": {
+        "en": "Starlings and a myna",
+        "nl": "Spreeuwen en een maina"
+      },
+      "intro": {
+        "en": "Four more starlings. Two are introduced and live in towns, the Red-winged Starling nests in cliffs, and the Violet-backed Starling is a summer visitor.",
+        "nl": "Nog vier spreeuwen. Twee zijn ingevoerd en leven in steden, de roodvleugelspreeuw nestelt in kliffen, en de amethistspreeuw is een zomergast."
+      }
+    },
+    "thrushes": {
+      "title": {
+        "en": "Thrushes",
+        "nl": "Lijsters"
+      },
+      "intro": {
+        "en": "Four thrushes. The garden thrushes hop on lawns and tilt their head, while the groundscraper stands upright in open woodland.",
+        "nl": "Vier lijsters. De lijsters van de tuin hippen over grasvelden en houden hun kop schuin, terwijl de acacialijster rechtop staat in open bos."
+      }
+    },
+    "old-world-flycatchers-1": {
+      "title": {
+        "en": "Flycatchers and a scrub robin",
+        "nl": "Vliegenvangers en een waaierstaart"
+      },
+      "intro": {
+        "en": "Six small birds that sit up and fly out to catch insects. Look at the face, the wings and the tail, and note the habitat, a thornveld or a rocky hill.",
+        "nl": "Zes kleine vogels die rechtop zitten en uitvliegen om insecten te vangen. Kijk naar gezicht, vleugels en staart, en noteer het leefgebied, een doornveld of een rotsachtige heuvel."
+      }
+    },
+    "old-world-flycatchers-2": {
+      "title": {
+        "en": "Rock thrushes and robin-chats",
+        "nl": "Rotslijsters en lawaaimakers"
+      },
+      "intro": {
+        "en": "Six birds of rocky slopes and thicket. The rock thrushes sit on boulders, and the scrub robins and robin-chats are shy and often sing from cover.",
+        "nl": "Zes vogels van rotsachtige hellingen en struikgewas. De rotslijsters zitten op rotsblokken, en de waaierstaarten en lawaaimakers zijn schuw en zingen vaak vanuit dekking."
+      }
+    },
+    "old-world-flycatchers-3": {
+      "title": {
+        "en": "Chats",
+        "nl": "Tapuiten"
+      },
+      "intro": {
+        "en": "Six chats of open and rocky ground. They perch low, flick their wings and tail, and hop on the ground. The Cape Robin-Chat is the one in every garden.",
+        "nl": "Zes tapuiten van open en rotsachtig terrein. Ze zitten laag, bewegen vleugels en staart en hippen over de grond. De Kaapse lawaaimaker is die in elke tuin."
+      }
+    },
+    "old-world-flycatchers-4": {
+      "title": {
+        "en": "Chats and two sugarbirds",
+        "nl": "Tapuiten en twee suikervogels"
+      },
+      "intro": {
+        "en": "Five chats and flycatchers, and the two sugarbirds, long-tailed nectar-eaters of the proteas and aloes. Look for the sugarbirds on flowering plants.",
+        "nl": "Vijf tapuiten en vliegenvangers, en de twee suikervogels, nectaretende vogels met een lange staart van proteas en aloë's. Zoek de suikervogels op bloeiende planten."
+      }
+    },
+    "sunbirds-and-spiderhunters-1": {
+      "title": {
+        "en": "Sunbirds, part one",
+        "nl": "Honingzuigers, deel één"
+      },
+      "intro": {
+        "en": "Five sunbirds with a curved bill. The males are glossy and the females olive, so look at the breast, the collar and the colour of the belly.",
+        "nl": "Vijf honingzuigers met een gebogen snavel. De mannetjes zijn glanzend en de vrouwtjes olijfkleurig, dus let op de borst, de kraag en de kleur van de buik."
+      }
+    },
+    "sunbirds-and-spiderhunters-2": {
+      "title": {
+        "en": "Sunbirds, part two",
+        "nl": "Honingzuigers, deel twee"
+      },
+      "intro": {
+        "en": "Five more sunbirds, mostly of gardens and the bushveld. Look for them on flowering shrubs and aloes.",
+        "nl": "Nog vijf honingzuigers, meest van tuinen en de bushveld. Zoek ze op bloeiende struiken en aloë's."
+      }
+    },
+    "weavers-and-allies-1": {
+      "title": {
+        "en": "Weavers and widowbirds, part one",
+        "nl": "Wevers en widavinken, deel één"
+      },
+      "intro": {
+        "en": "Seven weavers and relatives. In the breeding season the males are bright and easy; out of season they look like brown sparrows, so learn the breeding males first.",
+        "nl": "Zeven wevers en verwanten. In het broedseizoen zijn de mannetjes fel en makkelijk; buiten het seizoen lijken ze op bruine mussen, dus leer eerst de mannetjes in broedkleed."
+      }
+    },
+    "weavers-and-allies-2": {
+      "title": {
+        "en": "Weavers and widowbirds, part two",
+        "nl": "Wevers en widavinken, deel twee"
+      },
+      "intro": {
+        "en": "Six more weavers and relatives, with the Sociable Weaver, the builder of huge communal nests, among them. Look at the face and the back.",
+        "nl": "Nog zes wevers en verwanten, met de republikeinwever, de bouwer van enorme gemeenschappelijke nesten, ertussen. Let op het gezicht en de rug."
+      }
+    },
+    "estrildids-1": {
+      "title": {
+        "en": "Waxbills and finches, part one",
+        "nl": "Astrilden, deel één"
+      },
+      "intro": {
+        "en": "Four tiny seed-eating birds that move in small flocks. They are best seen where they come to drink and at bird baths.",
+        "nl": "Vier kleine zaadetende vogels die in kleine groepjes bewegen. Je ziet ze het best waar ze komen drinken en bij vogelbadjes."
+      }
+    },
+    "estrildids-2": {
+      "title": {
+        "en": "Waxbills and finches, part two",
+        "nl": "Astrilden, deel twee"
+      },
+      "intro": {
+        "en": "Four more tiny seed-eaters. Look at the face and the bill colour, and expect them in grass and scrub.",
+        "nl": "Nog vier kleine zaadeters. Let op het gezicht en de snavelkleur, en verwacht ze in gras en struweel."
+      }
+    },
+    "whydahs-and-indigobirds": {
+      "title": {
+        "en": "Sparrows and whydahs",
+        "nl": "Mussen en wida's"
+      },
+      "intro": {
+        "en": "Three sparrows and two whydahs. The sparrows are the brown birds of every town, and the long tails of the male whydahs make them easy to spot in summer.",
+        "nl": "Drie mussen en twee wida's. De mussen zijn de bruine vogels van elke stad, en de lange staarten van de mannetjeswida's maken ze in de zomer makkelijk te zien."
+      }
+    },
+    "wagtails-and-pipits": {
+      "title": {
+        "en": "Wagtails, pipits and longclaws",
+        "nl": "Kwikstaarten, piepers en langklauwen"
+      },
+      "intro": {
+        "en": "Five slim birds that walk on the ground. The wagtails wag their tail, the pipit is plain brown, and the longclaws have a bright throat.",
+        "nl": "Vijf slanke vogels die over de grond lopen. De kwikstaarten wippen met hun staart, de pieper is effen bruin, en de langklauwen hebben een felle keel."
+      }
+    },
+    "finches-euphonias-and-allies-1": {
+      "title": {
+        "en": "Canaries, part one",
+        "nl": "Kanaries, deel één"
+      },
+      "intro": {
+        "en": "Five canaries, small yellow or green finches with a stout bill. Some come to gardens and others hide in forest or on dry plains.",
+        "nl": "Vijf kanaries, kleine gele of groene vinken met een stevige snavel. Sommige komen in tuinen en andere verbergen zich in bos of op droge vlakten."
+      }
+    },
+    "finches-euphonias-and-allies-2": {
+      "title": {
+        "en": "Canaries, siskins and buntings",
+        "nl": "Kanaries, sijzen en gorzen"
+      },
+      "intro": {
+        "en": "Seven more finches and two buntings. The Cape Siskin and Drakensberg Siskin live in the mountains, and the buntings forage on the ground.",
+        "nl": "Zeven vinken en twee gorzen. De Kaapse kanarie en de basutokanarie leven in de bergen, en de gorzen foerageren op de grond."
+      }
+    }
+  },
+  "species": {
+    "jacpen1": {
+      "here": {
+        "en": "Boulders Beach near Simon's Town has a colony you can walk among on boardwalks; Stony Point at Betty's Bay is quieter.",
+        "nl": "Bij Boulders Beach bij Simon's Town loop je over loopbruggen langs een kolonie; Stony Point bij Betty's Bay is rustiger."
+      }
+    },
+    "capgan1": {
+      "here": {
+        "en": "Breeds on a few islands; Bird Island at Lambert's Bay is the easiest, and lines of gannets pass Cape Point.",
+        "nl": "Broedt op enkele eilanden; Bird Island bij Lambert's Bay is het makkelijkst, en rijen jan-van-genten vliegen langs Cape Point."
+      }
+    },
+    "capsug1": {
+      "here": {
+        "en": "Sits on the tops of flowering proteas at Kirstenbosch and in the Cape Point reserve; the males' tails are longest in summer.",
+        "nl": "Zit bovenop bloeiende proteas in Kirstenbosch en in het reservaat bij Cape Point; de staarten van de mannetjes zijn het langst in de zomer."
+      }
+    },
+    "gursug1": {
+      "here": {
+        "en": "Look for it on flowering aloes in the highlands of Mpumalanga and the Drakensberg, best in winter when the aloes bloom.",
+        "nl": "Zoek hem op bloeiende aloë's in het hoogland van Mpumalanga en de Drakensberg, het best in de winter als de aloë's bloeien."
+      }
+    },
+    "orbsun2": {
+      "here": {
+        "en": "Feeds on proteas and ericas on the mountain slopes of the Cape, including Kirstenbosch and Rooi-Els.",
+        "nl": "Eet van proteas en heide op de berghellingen van de Kaap, waaronder Kirstenbosch en Rooi-Els."
+      }
+    },
+    "rufroc1": {
+      "here": {
+        "en": "Rooi-Els on the False Bay coast is the usual place: look at the base of the cliffs and on boulders.",
+        "nl": "Rooi-Els aan de kust van False Bay is de gebruikelijke plek: kijk onderaan de kliffen en op rotsblokken."
+      }
+    },
+    "orbroc1": {
+      "here": {
+        "en": "Lives high on the basalt slopes of the Drakensberg; Sani Pass and Naude's Nek are the usual places.",
+        "nl": "Leeft hoog op de basalthellingen van de Drakensberg; Sani Pass en Naude's Nek zijn de gebruikelijke plekken."
+      }
+    },
+    "drasis2": {
+      "here": {
+        "en": "Found on the high slopes of the Drakensberg, with Sani Pass and Giant's Castle the usual places.",
+        "nl": "Te vinden op de hoge hellingen van de Drakensberg, met Sani Pass en Giant's Castle als gebruikelijke plekken."
+      }
+    },
+    "procan1": {
+      "here": {
+        "en": "A shy bird of mountain fynbos in the south-west; it feeds on protea seeds, and you often find it by its call.",
+        "nl": "Een schuwe vogel van berg-fynbos in het zuidwesten; hij eet protea-zaden, en je vindt hem vaak aan zijn roep."
+      }
+    },
+    "forcan1": {
+      "here": {
+        "en": "Lives in the forests of the Garden Route, from Wilderness to Tsitsikamma; listen for its fluting song in the canopy.",
+        "nl": "Leeft in de bossen van de Garden Route, van Wilderness tot Tsitsikamma; luister naar zijn fluitende zang in het bladerdak."
+      }
+    },
+    "bluswa1": {
+      "here": {
+        "en": "A summer visitor to a few misty hill grasslands; sites near Graskop and Dullstroom are the usual places.",
+        "nl": "Een zomergast op enkele nevelige heuvelgraslanden; plekken bij Graskop en Dullstroom zijn de gebruikelijke."
+      }
+    },
+    "balibi1": {
+      "here": {
+        "en": "Nests on cliffs and feeds on burnt grassland; Wakkerstroom, Dullstroom and the Drakensberg foothills are good places.",
+        "nl": "Nestelt op kliffen en foerageert op verbrand grasland; Wakkerstroom, Dullstroom en de uitlopers van de Drakensberg zijn goede plekken."
+      }
+    },
+    "knytur1": {
+      "here": {
+        "en": "Lives in the forests of the Garden Route at Wilderness, Knysna and Tsitsikamma, and in the forests of the east.",
+        "nl": "Leeft in de bossen van de Garden Route bij Wilderness, Knysna en Tsitsikamma, en in de bossen van het oosten."
+      }
+    },
+    "growoo1": {
+      "here": {
+        "en": "Lives on rocky slopes and cliffs, not in trees, at Cape Point and in the Drakensberg.",
+        "nl": "Leeft op rotsachtige hellingen en kliffen, niet in bomen, bij Cape Point en in de Drakensberg."
+      }
+    },
+    "socwea1": {
+      "here": {
+        "en": "Builds giant communal nests on telephone poles and camel thorn trees on the Kalahari edge, near Upington.",
+        "nl": "Bouwt reusachtige gemeenschappelijke nesten op telefoonpalen en kameeldoornbomen aan de rand van de Kalahari, bij Upington."
+      }
+    },
+    "pygfal1": {
+      "here": {
+        "en": "Nests and roosts in the nests of Sociable Weavers, so look at weaver nests on the Kalahari edge.",
+        "nl": "Nestelt en slaapt in de nesten van republikeinwevers, dus kijk naar wevernesten aan de rand van de Kalahari."
+      }
+    },
+    "soghor1": {
+      "here": {
+        "en": "A family group walks the tracks in Kruger and the Lowveld, often giving a deep booming call.",
+        "nl": "Een familiegroep loopt over de paden in Kruger en het Lowveld en laat vaak een diepe, dreunende roep horen."
+      }
+    },
+    "grcter1": {
+      "here": {
+        "en": "Called Swift Tern in South Africa; it rests on beaches and harbour walls along the coast.",
+        "nl": "In Zuid-Afrika Swift Tern genoemd; hij rust op stranden en havenmuren langs de kust."
+      }
+    },
+    "amufal1": {
+      "here": {
+        "en": "In summer huge roosts gather in the evening in Mpumalanga and the north-east, often in blue gums.",
+        "nl": "In de zomer verzamelen zich 's avonds enorme slaapgroepen in Mpumalanga en het noordoosten, vaak in blauwe gomboomen."
+      }
+    },
+    "bancor1": {
+      "here": {
+        "en": "Nests on harbour walls and jetties at Cape Town and on offshore rocks; all dark and stocky, with a short neck.",
+        "nl": "Nestelt op havenmuren en steigers bij Kaapstad en op rotsen voor de kust; helemaal donker en gedrongen, met een korte hals."
+      }
+    }
+  },
+  "first_day": {
+    "title": {
+      "en": "Your first day in South Africa",
+      "nl": "Je eerste dag in Zuid-Afrika"
+    },
+    "intro": {
+      "en": "Twenty birds you are very likely to meet on the first day: on the lawns and in the gardens of your lodge, along the road, on wires and at the nearest pond.",
+      "nl": "Twintig vogels die je de eerste dag vrijwel zeker tegenkomt: op de grasvelden en in de tuinen van je lodge, langs de weg, op draden en bij de dichtstbijzijnde vijver."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "South Africa has about 30 birds that live nowhere else, and this trip has 19 of them. They cluster in three places: the Cape fynbos at the south-west tip, the dry west and the Karoo, and the mountains and grasslands of the east. The Cape's fynbos is a plant kingdom of its own, and its sugarbirds, sunbirds and canaries are as special as its flowers. The rarest endemics, such as Knysna Woodpecker, Rudd's Lark and Botha's Lark, are very local and are left out.",
+      "nl": "Zuid-Afrika heeft ongeveer 30 vogels die nergens anders leven, en 19 daarvan staan in deze reis. Ze zitten op drie plekken: de Kaapse fynbos in het zuidwesten, het droge westen en de Karoo, en de bergen en graslanden van het oosten. De fynbos van de Kaap is een plantenrijk op zich, en de suikervogels, honingzuigers en kanaries zijn net zo bijzonder als de bloemen. De zeldzaamste endemen, zoals de knysnaspecht, Rudds leeuwerik en Botha's leeuwerik, zijn erg plaatselijk en vallen daarom af."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "Fynbos and the Cape Peninsula",
+          "nl": "Fynbos en het schiereiland van de Kaap"
+        },
+        "text": {
+          "en": "Proteas and ericas hold the Cape Sugarbird, Orange-breasted Sunbird, Cape Siskin and Cape Bulbul. Kirstenbosch, Cape Point and the hills at Rooi-Els and Betty's Bay are the places to go, and Rooi-Els is the usual spot for the Cape Rockjumper.",
+          "nl": "Proteas en heide houden de Kaapse suikervogel, de oranjeborsthoningzuiger, de Kaapse kanarie en de Kaapse buulbuul vast. Kirstenbosch, Cape Point en de heuvels bij Rooi-Els en Betty's Bay zijn de plekken om te zijn, en Rooi-Els is de gebruikelijke plek voor de Kaapse rotsspringer."
+        }
+      },
+      {
+        "title": {
+          "en": "The dry west and the Karoo",
+          "nl": "Het droge westen en de Karoo"
+        },
+        "text": {
+          "en": "The Karoo Lark and the Black Bustard live on stony plains and wheat fields. The West Coast National Park near Langebaan and the roads of the Karoo are good places to look, and the Cape Cormorant is easy along the coast.",
+          "nl": "De karooleeuwerik en de zwarte trap leven op stenige vlakten en tarwevelden. Het West Coast National Park bij Langebaan en de wegen door de Karoo zijn goede plekken om te zoeken, en de Kaapse aalscholver is makkelijk langs de kust."
+        }
+      },
+      {
+        "title": {
+          "en": "Forests of the south coast",
+          "nl": "Bossen aan de zuidkust"
+        },
+        "text": {
+          "en": "The Forest Canary lives in the evergreen forests of the Garden Route. Wilderness, Knysna and Tsitsikamma have walks through tall forest, and you find the canary by its flute-like song high in the canopy.",
+          "nl": "De boskanarie leeft in de groenblijvende bossen van de Garden Route. Wilderness, Knysna en Tsitsikamma hebben wandelingen door hoog bos, en je vindt de kanarie aan zijn fluitende zang hoog in het bladerdak."
+        }
+      },
+      {
+        "title": {
+          "en": "Drakensberg and the eastern grasslands",
+          "nl": "Drakensberg en de graslanden in het oosten"
+        },
+        "text": {
+          "en": "The Drakensberg Rockjumper, Drakensberg Siskin, Drakensberg Prinia and Eastern Long-billed Lark live on the high slopes and grasslands. Sani Pass, Giant's Castle and the grassland around Wakkerstroom are the best-known places.",
+          "nl": "De roodborstrotsspringer, de basutokanarie, de Drakensbergprinia en de oostelijke langsnavelleeuwerik leven op de hoge hellingen en graslanden. Sani Pass, Giant's Castle en het grasland bij Wakkerstroom zijn de bekendste plekken."
+        }
+      }
+    ],
+    "families": [
+      {
+        "title": {
+          "en": "Rockjumpers and sugarbirds",
+          "nl": "Rotsspringers en suikervogels"
+        },
+        "text": {
+          "en": "Two small bird families live only in southern Africa: the rockjumpers of rocky slopes, and the sugarbirds of the proteas. Each has two species, and you can find one of each in the Cape.",
+          "nl": "Twee kleine vogelfamilies komen alleen in zuidelijk Afrika voor: de rotsspringers van rotsachtige hellingen en de suikervogels van de proteas. Elke familie heeft twee soorten, en je kunt van allebei één vinden in de Kaap."
+        }
+      }
+    ],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "Rockjumpers and rocky slopes",
+          "nl": "Rotsspringers en rotsachtige hellingen"
+        }
+      },
+      "endemics-2": {
+        "title": {
+          "en": "Karoo, mountains and the Cape",
+          "nl": "Karoo, bergen en de Kaap"
+        }
+      },
+      "endemics-3": {
+        "title": {
+          "en": "Canaries and the Cape Weaver",
+          "nl": "Kanaries en de Kaapse wever"
+        }
+      },
+      "endemics-4": {
+        "title": {
+          "en": "Spurfowl, bustard and sugarbird",
+          "nl": "Frankolijn, trap en suikervogel"
+        }
+      }
+    }
+  }
+}

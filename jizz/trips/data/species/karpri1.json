@@ -1,0 +1,22 @@
+{
+  "code": "karpri1",
+  "name": {
+    "en": "Karoo Prinia",
+    "nl": "Karooprinia"
+  },
+  "latin": "Prinia maculosa",
+  "look_for": [
+    {
+      "en": "Slender grey-brown bird with a long **tail**",
+      "nl": "Slank grijsbruin vogeltje met een lange **staart**"
+    },
+    {
+      "en": "Black streaks on **breast** and yellowish belly",
+      "nl": "Zwarte strepen op de **borst** en gelige buik"
+    },
+    {
+      "en": "Sharp 'chleet' calls from low bushes",
+      "nl": "Scherpe 'chleet'-roepjes uit lage struiken"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "hibfly1",
+  "name": {
+    "en": "Hill Blue Flycatcher",
+    "nl": "Bergniltava"
+  },
+  "latin": "Cyornis whitei",
+  "look_for": [
+    {
+      "en": "Deep blue **upperparts**, bright blue **forehead**",
+      "nl": "Diepblauwe **bovenzijde**, felblauw **voorhoofd**"
+    },
+    {
+      "en": "Orange **throat** and **breast**, white **belly**",
+      "nl": "Oranje **keel** en **borst**, witte **buik**"
+    },
+    {
+      "en": "Female brown with a rufous **tail**",
+      "nl": "Vrouwtje bruin met een roodbruine **staart**"
+    }
+  ]
+}

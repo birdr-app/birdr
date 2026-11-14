@@ -1,0 +1,22 @@
+{
+  "code": "natfra2",
+  "name": {
+    "en": "Natal Spurfowl",
+    "nl": "Natalfrankolijn"
+  },
+  "latin": "Pternistis natalensis",
+  "look_for": [
+    {
+      "en": "Orange-red **bill** and **legs**, no bare face",
+      "nl": "Oranjerode **snavel** en **poten**, geen kale gezichtshuid"
+    },
+    {
+      "en": "Scaly pale underparts, mottled brown **back**",
+      "nl": "Schubbige lichte onderkant, gevlekte bruine **rug**"
+    },
+    {
+      "en": "Skulks in thickets, runs rather than flies",
+      "nl": "Houdt zich schuil in struikgewas, rent liever dan vliegt"
+    }
+  ]
+}

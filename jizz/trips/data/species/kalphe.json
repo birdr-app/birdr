@@ -1,0 +1,22 @@
+{
+  "code": "kalphe",
+  "name": {
+    "en": "Kalij Pheasant",
+    "nl": "Nepalese fazant"
+  },
+  "latin": "Lophura leucomelanos",
+  "look_for": [
+    {
+      "en": "Male glossy blue-black with a shaggy **crest**",
+      "nl": "Haan glanzend blauwzwart met een warrige **kuif**"
+    },
+    {
+      "en": "Bare red face patch, red **legs**",
+      "nl": "Kale rode gezichtsvlek, rode **poten**"
+    },
+    {
+      "en": "Female rich brown, finely scaled, shorter **crest**",
+      "nl": "Hen roodbruin, fijn geschubd, kortere **kuif**"
+    }
+  ]
+}

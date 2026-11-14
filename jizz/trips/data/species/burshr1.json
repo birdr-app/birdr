@@ -1,0 +1,22 @@
+{
+  "code": "burshr1",
+  "name": {
+    "en": "Burmese Shrike",
+    "nl": "Birmese klauwier"
+  },
+  "latin": "Lanius collurioides",
+  "look_for": [
+    {
+      "en": "Grey **crown**, black **mask** through the **eye**",
+      "nl": "Grijze **kruin**, zwart masker door het **oog**"
+    },
+    {
+      "en": "Chestnut **back** and **flanks**, white underparts",
+      "nl": "Kastanjebruine **rug** en **flanken**, witte onderzijde"
+    },
+    {
+      "en": "Small white **wing** patch, long black **tail**",
+      "nl": "Kleine witte vleugelvlek, lange zwarte **staart**"
+    }
+  ]
+}

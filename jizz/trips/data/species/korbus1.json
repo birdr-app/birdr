@@ -1,0 +1,22 @@
+{
+  "code": "korbus1",
+  "name": {
+    "en": "Kori Bustard",
+    "nl": "Koritrap"
+  },
+  "latin": "Ardeotis kori",
+  "look_for": [
+    {
+      "en": "Huge, heavy bustard, among the world's heaviest flyers",
+      "nl": "Enorme, zware trap, een van de zwaarste vliegende vogels"
+    },
+    {
+      "en": "Black **crest** and finely barred grey **neck**",
+      "nl": "Zwarte **kuif** en fijn gebande grijze **hals**"
+    },
+    {
+      "en": "Strides slowly over open ground, rarely flies",
+      "nl": "Schrijdt langzaam over open terrein, vliegt zelden"
+    }
+  ]
+}

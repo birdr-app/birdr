@@ -1,0 +1,22 @@
+{
+  "code": "flabul1",
+  "name": {
+    "en": "Flavescent Bulbul",
+    "nl": "Geelwangbuulbuul"
+  },
+  "latin": "Pycnonotus flavescens",
+  "look_for": [
+    {
+      "en": "Short pale **eyebrow** over a dusky **cap**",
+      "nl": "Korte lichte **wenkbrauwstreep** boven een donkere **kruin**"
+    },
+    {
+      "en": "Olive-green **back**, yellowish **underparts**",
+      "nl": "Olijfgroene **rug**, geelachtige **onderzijde**"
+    },
+    {
+      "en": "Greyish **head** and short **crest**",
+      "nl": "Grijzige **kop** en korte **kuif**"
+    }
+  ]
+}

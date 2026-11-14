@@ -1,0 +1,22 @@
+{
+  "code": "serthr1",
+  "name": {
+    "en": "Sentinel Rock Thrush",
+    "nl": "Langteenrotslijster"
+  },
+  "latin": "Monticola explorator",
+  "look_for": [
+    {
+      "en": "Blue-grey **head**, **back** and **breast**",
+      "nl": "Blauwgrijze **kop**, **rug** en **borst**"
+    },
+    {
+      "en": "Rich orange **belly** against the blue-grey front",
+      "nl": "Oranje **buik** tegen de blauwgrijze voorkant"
+    },
+    {
+      "en": "Sits upright on rocks, drops onto insects",
+      "nl": "Zit rechtop op rotsen en duikt op insecten"
+    }
+  ]
+}

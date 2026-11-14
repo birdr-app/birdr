@@ -1,0 +1,22 @@
+{
+  "code": "gobger1",
+  "name": {
+    "en": "Golden-bellied Gerygone",
+    "nl": "Goudbuikmangrovezanger"
+  },
+  "latin": "Gerygone sulphurea",
+  "look_for": [
+    {
+      "en": "Tiny bird, bright yellow **underparts**",
+      "nl": "Piepklein vogeltje met felgele **onderzijde**"
+    },
+    {
+      "en": "Olive-grey **back**, pale **eyebrow**, red **eye**",
+      "nl": "Olijfgrijze **rug**, lichte **wenkbrauwstreep**, rood **oog**"
+    },
+    {
+      "en": "Flicks a white-spotted **tail**, often in mangrove",
+      "nl": "Wipt met een wit gevlekte **staart**, vaak in mangrove"
+    }
+  ]
+}

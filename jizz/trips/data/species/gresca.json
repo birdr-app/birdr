@@ -1,0 +1,22 @@
+{
+  "code": "gresca",
+  "name": {
+    "en": "Greater Scaup",
+    "nl": "Topper"
+  },
+  "latin": "Aythya marila",
+  "look_for": [
+    {
+      "en": "Male: green-glossed black **head**, pale grey **back**",
+      "nl": "Woerd: zwarte **kop** met groene glans, lichtgrijze **rug**"
+    },
+    {
+      "en": "Larger and rounder-headed than Tufted Duck",
+      "nl": "Groter dan kuifeend, ronde kop zonder kuif"
+    },
+    {
+      "en": "Broad blue-grey **bill**, long white wing stripe",
+      "nl": "Brede blauwgrijze **snavel**, lange witte vleugelstreep"
+    }
+  ]
+}

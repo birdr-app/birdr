@@ -1,0 +1,22 @@
+{
+  "code": "blahar1",
+  "name": {
+    "en": "Black Harrier",
+    "nl": "Zwarte kiekendief"
+  },
+  "latin": "Circus maurus",
+  "look_for": [
+    {
+      "en": "Slender, dark harrier; male black, female browner",
+      "nl": "Slanke, donkere kiekendief; man zwart, vrouw bruiner"
+    },
+    {
+      "en": "Bold white **rump** and banded **tail**",
+      "nl": "Opvallend witte **stuit** en gebande **staart**"
+    },
+    {
+      "en": "Glides low over scrub, **wings** in a shallow V",
+      "nl": "Zweeft laag boven struikgewas, **vleugels** licht in V-stand"
+    }
+  ]
+}

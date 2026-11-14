@@ -1,0 +1,22 @@
+{
+  "code": "blabaz1",
+  "name": {
+    "en": "Black Baza",
+    "nl": "Zwarte koekoekswouw"
+  },
+  "latin": "Aviceda leuphotes",
+  "look_for": [
+    {
+      "en": "Long thin black **crest** standing up",
+      "nl": "Lange dunne zwarte **kuif** die rechtop staat"
+    },
+    {
+      "en": "Black with a white **breast** band",
+      "nl": "Zwart met een witte **borst**band"
+    },
+    {
+      "en": "Rusty-barred **belly**; perches upright in forest",
+      "nl": "Roestbruin gebandeerde **buik**; zit rechtop in bos"
+    }
+  ]
+}

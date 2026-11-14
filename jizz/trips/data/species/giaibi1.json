@@ -1,0 +1,22 @@
+{
+  "code": "giaibi1",
+  "name": {
+    "en": "Giant Ibis",
+    "nl": "Reuzenibis"
+  },
+  "latin": "Pseudibis gigantea",
+  "look_for": [
+    {
+      "en": "Huge, dark grey-brown ibis",
+      "nl": "Enorme, donker grijsbruine ibis"
+    },
+    {
+      "en": "Very long, thick, downcurved **bill**",
+      "nl": "Zeer lange, dikke, gebogen **snavel**"
+    },
+    {
+      "en": "Bare grey **head** and neck, wades at forest pools",
+      "nl": "Kale grijze **kop** en hals, waadt in boszwampen"
+    }
+  ]
+}

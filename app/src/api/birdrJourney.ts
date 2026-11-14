@@ -584,7 +584,11 @@ export function levelDescription(level: JourneyLevel | null | undefined, locale:
   return level.description;
 }
 
+/** Trips over several countries: their flags side by side. */
+const MULTI_COUNTRY_FLAGS: Record<string, string> = { BALTICS: '🇪🇪🇱🇻🇱🇹' };
+
 export function countryCodeToFlag(code: string): string {
+  if (MULTI_COUNTRY_FLAGS[code]) return MULTI_COUNTRY_FLAGS[code];
   if (!code || code.length !== 2) return '';
   const base = 0x1f1e6;
   const c1 = code.charCodeAt(0) - 65;

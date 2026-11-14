@@ -1,0 +1,22 @@
+{
+  "code": "aquwar1",
+  "name": {
+    "en": "Aquatic Warbler",
+    "nl": "Waterrietzanger"
+  },
+  "latin": "Acrocephalus paludicola",
+  "look_for": [
+    {
+      "en": "Pale **crown** stripe between dark bands",
+      "nl": "Lichte **kruin**streep tussen donkere banden"
+    },
+    {
+      "en": "Streaked **back** and streaked **rump**",
+      "nl": "Gestreepte **rug** en gestreepte **stuit**"
+    },
+    {
+      "en": "Skulks in wet sedge meadows",
+      "nl": "Sluipt rond in natte zeggeweiden"
+    }
+  ]
+}

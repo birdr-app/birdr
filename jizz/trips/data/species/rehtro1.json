@@ -1,0 +1,22 @@
+{
+  "code": "rehtro1",
+  "name": {
+    "en": "Red-headed Trogon",
+    "nl": "Roodkoptrogon"
+  },
+  "latin": "Harpactes erythrocephalus",
+  "look_for": [
+    {
+      "en": "Male: red **head**, white **breast** band, red **belly**",
+      "nl": "Mannetje: rode **kop**, witte **borst**band, rode **buik**"
+    },
+    {
+      "en": "Female: brown **head**, buff **belly**, brown **back**",
+      "nl": "Vrouwtje: bruine **kop**, beige **buik**, bruine **rug**"
+    },
+    {
+      "en": "Sits upright and still, long **tail** hanging",
+      "nl": "Zit rechtop en stil, lange **staart** hangend"
+    }
+  ]
+}

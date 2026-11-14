@@ -1,0 +1,22 @@
+{
+  "code": "gousun1",
+  "name": {
+    "en": "Mrs. Gould's Sunbird",
+    "nl": "Gouldhoningzuiger"
+  },
+  "latin": "Aethopyga gouldiae",
+  "look_for": [
+    {
+      "en": "Male: red **throat** and **breast**, bright yellow **belly**",
+      "nl": "Mannetje: rode **keel** en **borst**, felgele **buik**"
+    },
+    {
+      "en": "Metallic blue **crown** and long **tail**",
+      "nl": "Metallisch blauwe **kruin** en lange **staart**"
+    },
+    {
+      "en": "Yellow **rump**, crimson **back**",
+      "nl": "Gele **stuit**, karmijnrode **rug**"
+    }
+  ]
+}

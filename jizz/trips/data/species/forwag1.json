@@ -1,0 +1,22 @@
+{
+  "code": "forwag1",
+  "name": {
+    "en": "Forest Wagtail",
+    "nl": "Boomkwikstaart"
+  },
+  "latin": "Dendronanthus indicus",
+  "look_for": [
+    {
+      "en": "Two black bands across white **breast**",
+      "nl": "Twee zwarte banden over witte **borst**"
+    },
+    {
+      "en": "Sways **tail** and rear body sideways",
+      "nl": "Beweegt **staart** en achterlijf zijwaarts heen en weer"
+    },
+    {
+      "en": "Olive-brown **back**, double white **wing** bars",
+      "nl": "Olijfbruine **rug**, dubbele witte **vleugelstreep**"
+    }
+  ]
+}

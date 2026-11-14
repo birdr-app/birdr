@@ -1,0 +1,22 @@
+{
+  "code": "blaplo1",
+  "name": {
+    "en": "Blacksmith Lapwing",
+    "nl": "Smidsplevier"
+  },
+  "latin": "Vanellus armatus",
+  "look_for": [
+    {
+      "en": "Bold black, white and grey lapwing",
+      "nl": "Opvallende zwart-wit-grijze kievit"
+    },
+    {
+      "en": "White **crown**, black **breast**, grey **back**",
+      "nl": "Witte **kruin**, zwarte **borst**, grijze **rug**"
+    },
+    {
+      "en": "Metallic 'tink-tink' alarm call",
+      "nl": "Metalen 'tink-tink' alarmroep"
+    }
+  ]
+}

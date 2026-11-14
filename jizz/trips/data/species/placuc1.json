@@ -1,0 +1,22 @@
+{
+  "code": "placuc1",
+  "name": {
+    "en": "Plaintive Cuckoo",
+    "nl": "Piet-van-Vliet"
+  },
+  "latin": "Cacomantis merulinus",
+  "look_for": [
+    {
+      "en": "Small cuckoo, grey **head** and **breast**",
+      "nl": "Kleine koekoek, grijze **kop** en **borst**"
+    },
+    {
+      "en": "Orange-rufous **belly**, long dark graduated **tail**",
+      "nl": "Oranjeroestbruine **buik**, lange donkere getrapte **staart**"
+    },
+    {
+      "en": "Female barred brown; calls from open perches",
+      "nl": "Vrouwtje gebandeerd bruin; roept vanaf open zitplaatsen"
+    }
+  ]
+}

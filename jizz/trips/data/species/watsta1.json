@@ -1,0 +1,22 @@
+{
+  "code": "watsta1",
+  "name": {
+    "en": "Wattled Starling",
+    "nl": "Lelspreeuw"
+  },
+  "latin": "Creatophora cinerea",
+  "look_for": [
+    {
+      "en": "Grey, with black **wings** and a white **rump**",
+      "nl": "Grijs, met zwarte **vleugels** en een witte **stuit**"
+    },
+    {
+      "en": "Breeding male: bare yellow **head**, black wattles",
+      "nl": "Broedend mannetje: kale gele **kop**, zwarte lellen"
+    },
+    {
+      "en": "Nomadic flocks, often following locusts",
+      "nl": "Zwervende groepen, vaak achter sprinkhanen aan"
+    }
+  ]
+}

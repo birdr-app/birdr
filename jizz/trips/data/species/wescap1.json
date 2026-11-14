@@ -1,0 +1,22 @@
+{
+  "code": "wescap1",
+  "name": {
+    "en": "Western Capercaillie",
+    "nl": "Auerhoen"
+  },
+  "latin": "Tetrao urogallus",
+  "look_for": [
+    {
+      "en": "Turkey-sized, dark grey male with a fanned **tail**",
+      "nl": "Haan zo groot als een kalkoen, donkergrijs met waaierstaart"
+    },
+    {
+      "en": "Pale hooked **bill**, red patch above the eye",
+      "nl": "Lichte gehaakte **snavel**, rode vlek boven het oog"
+    },
+    {
+      "en": "Female mottled brown with a rusty **breast**",
+      "nl": "Hen gevlekt bruin met roestkleurige **borst**"
+    }
+  ]
+}

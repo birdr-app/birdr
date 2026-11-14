@@ -1,0 +1,22 @@
+{
+  "code": "eurkes1",
+  "name": {
+    "en": "Rock Kestrel",
+    "nl": "Rotsvalk"
+  },
+  "latin": "Falco rupicolus",
+  "look_for": [
+    {
+      "en": "Hovers over open ground hunting small prey",
+      "nl": "Hangt biddend boven open terrein op zoek naar prooi"
+    },
+    {
+      "en": "Rufous **back** with black spots",
+      "nl": "Roestbruine **rug** met zwarte vlekken"
+    },
+    {
+      "en": "Buff **underparts** with dark streaks and spots",
+      "nl": "Okergele **onderkant** met donkere strepen en vlekken"
+    }
+  ]
+}

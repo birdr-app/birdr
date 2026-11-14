@@ -1,0 +1,22 @@
+{
+  "code": "plaflo2",
+  "name": {
+    "en": "Plain Flowerpecker",
+    "nl": "Groengrijze honingvogel"
+  },
+  "latin": "Dicaeum minullum",
+  "look_for": [
+    {
+      "en": "Tiny and dull, olive above, pale below",
+      "nl": "Piepklein en doffig, olijf boven, licht onder"
+    },
+    {
+      "en": "No streaks, wing bars or face pattern",
+      "nl": "Geen strepen, vleugelstrepen of gezichtstekening"
+    },
+    {
+      "en": "Short stubby **bill** and short **tail**",
+      "nl": "Korte dikke **snavel** en korte **staart**"
+    }
+  ]
+}

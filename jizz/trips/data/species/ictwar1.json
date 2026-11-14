@@ -1,0 +1,22 @@
+{
+  "code": "ictwar1",
+  "name": {
+    "en": "Icterine Warbler",
+    "nl": "Spotvogel"
+  },
+  "latin": "Hippolais icterina",
+  "look_for": [
+    {
+      "en": "Yellow below, greenish above, orange **bill**",
+      "nl": "Geel onder, groenig boven, oranje **snavel**"
+    },
+    {
+      "en": "Peaked **crown**, long wings",
+      "nl": "Hoge **kruin**, lange vleugels"
+    },
+    {
+      "en": "Long, jumbled song with mimicry",
+      "nl": "Lange, rommelige zang met imitaties"
+    }
+  ]
+}

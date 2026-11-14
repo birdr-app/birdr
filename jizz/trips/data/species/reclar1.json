@@ -1,0 +1,22 @@
+{
+  "code": "reclar1",
+  "name": {
+    "en": "Red-capped Lark",
+    "nl": "Roodkruinleeuwerik"
+  },
+  "latin": "Calandrella cinerea",
+  "look_for": [
+    {
+      "en": "Rufous **crown**, white underparts, red-brown **shoulders**",
+      "nl": "Roodbruine **kruin**, witte onderkant, roodbruine **schouders**"
+    },
+    {
+      "en": "Upright stance on short grass and bare fields",
+      "nl": "Rechtopstaand op kort gras en kale velden"
+    },
+    {
+      "en": "Sparrow-like 'tshwerp' call, jumbled song in flight",
+      "nl": "Mosachtig 'tsjwerp', rommelig lied in de vlucht"
+    }
+  ]
+}

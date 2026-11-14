@@ -1,0 +1,22 @@
+{
+  "code": "scbeat1",
+  "name": {
+    "en": "Southern Carmine Bee-eater",
+    "nl": "Zuidelijke karmijnrode bijeneter"
+  },
+  "latin": "Merops nubicoides",
+  "look_for": [
+    {
+      "en": "Carmine red **body** with a blue **crown**",
+      "nl": "Karmijnrood **lijf** met een blauwe **kruin**"
+    },
+    {
+      "en": "Carmine **throat**, where Northern Carmine has blue",
+      "nl": "Karmijnrode **keel**, waar de noordelijke karmijnrode bijeneter blauw heeft"
+    },
+    {
+      "en": "Long **tail** streamers, hunts insects over open ground",
+      "nl": "Lange **staartpennen**, jaagt op insecten boven open terrein"
+    }
+  ]
+}

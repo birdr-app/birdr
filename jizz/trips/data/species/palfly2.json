@@ -1,0 +1,22 @@
+{
+  "code": "palfly2",
+  "name": {
+    "en": "Pale Flycatcher",
+    "nl": "Vale vliegenvanger"
+  },
+  "latin": "Agricola pallidus",
+  "look_for": [
+    {
+      "en": "Plain pale grey-brown, almost no marks",
+      "nl": "Effen bleek grijsbruin, bijna zonder tekening"
+    },
+    {
+      "en": "Paler below, with pale edges to the **wings**",
+      "nl": "Bleker eronder, met bleke randen aan de **vleugels**"
+    },
+    {
+      "en": "Drops from a low perch onto insects",
+      "nl": "Duikt vanaf een lage zitplaats op insecten"
+    }
+  ]
+}

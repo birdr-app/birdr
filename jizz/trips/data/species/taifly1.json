@@ -1,0 +1,22 @@
+{
+  "code": "taifly1",
+  "name": {
+    "en": "Taiga Flycatcher",
+    "nl": "Taigavliegenvanger"
+  },
+  "latin": "Ficedula albicilla",
+  "look_for": [
+    {
+      "en": "Black **tail** with white at the base",
+      "nl": "Zwarte **staart** met wit aan de basis"
+    },
+    {
+      "en": "Grey-brown **upperparts**, pale **eye-ring**",
+      "nl": "Grijsbruine **bovenzijde**, lichte **oogring**"
+    },
+    {
+      "en": "Cocks and flicks the **tail**, hunts from low perches",
+      "nl": "Houdt de **staart** omhoog en wipt ermee, jaagt vanaf lage takken"
+    }
+  ]
+}

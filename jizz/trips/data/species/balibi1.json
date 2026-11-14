@@ -1,0 +1,22 @@
+{
+  "code": "balibi1",
+  "name": {
+    "en": "Southern Bald Ibis",
+    "nl": "Kalkoenibis"
+  },
+  "latin": "Geronticus calvus",
+  "look_for": [
+    {
+      "en": "Bare **head** with red **crown**, long curved red **bill**",
+      "nl": "Kale **kop** met rode **kruin**, lange gebogen rode **snavel**"
+    },
+    {
+      "en": "Dark glossy plumage, coppery **shoulders**",
+      "nl": "Donker glanzend verenkleed, koperkleurige **schouders**"
+    },
+    {
+      "en": "Walks through short grassland in groups, roosts on cliffs",
+      "nl": "Loopt door kort grasland in groepjes, slaapt op kliffen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "crocor1",
+  "name": {
+    "en": "Crowned Cormorant",
+    "nl": "Kroonaalscholver"
+  },
+  "latin": "Microcarbo coronatus",
+  "look_for": [
+    {
+      "en": "Small marine cormorant with a short **crest**",
+      "nl": "Kleine aalscholver van de zeekust met een korte **kuif**"
+    },
+    {
+      "en": "Orange-red patch of bare skin on the **face**",
+      "nl": "Oranjerode kale huid op het **gezicht**"
+    },
+    {
+      "en": "Short **tail**, perches on offshore rocks",
+      "nl": "Korte **staart**, zit op rotsen voor de kust"
+    }
+  ]
+}

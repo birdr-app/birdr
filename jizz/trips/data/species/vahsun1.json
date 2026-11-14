@@ -1,0 +1,22 @@
+{
+  "code": "vahsun1",
+  "name": {
+    "en": "Van Hasselt's Sunbird",
+    "nl": "Vanhasselthoningzuiger"
+  },
+  "latin": "Leptocoma brasiliana",
+  "look_for": [
+    {
+      "en": "Male looks dark, with a crimson throat and **breast**",
+      "nl": "Man ziet er donker uit, met een karmijnrode keel en **borst**"
+    },
+    {
+      "en": "Glossy green-blue **crown**",
+      "nl": "Glanzend groenblauwe **kruin**"
+    },
+    {
+      "en": "Female olive above, pale below",
+      "nl": "Vrouw olijfgroen boven, bleek onder"
+    }
+  ]
+}

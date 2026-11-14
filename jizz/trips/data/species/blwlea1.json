@@ -1,0 +1,22 @@
+{
+  "code": "blwlea1",
+  "name": {
+    "en": "Blue-winged Leafbird",
+    "nl": "Blauwvleugelbladvogel"
+  },
+  "latin": "Chloropsis moluccensis",
+  "look_for": [
+    {
+      "en": "Green body with blue **wings** and **tail**",
+      "nl": "Groen lijf met blauwe **vleugels** en **staart**"
+    },
+    {
+      "en": "Black **face** and **throat** ringed with yellow",
+      "nl": "Zwart **gezicht** en zwarte **keel** met gele rand"
+    },
+    {
+      "en": "Short cobalt-blue **moustache** stripe",
+      "nl": "Korte kobaltblauwe **baardstreep**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "waterc1",
+  "name": {
+    "en": "Watercock",
+    "nl": "Waterhaan"
+  },
+  "latin": "Gallicrex cinerea",
+  "look_for": [
+    {
+      "en": "Breeding male black with a red **shield**",
+      "nl": "Man in broedkleed zwart met een rood **schild**"
+    },
+    {
+      "en": "Female and young buff-brown, streaked",
+      "nl": "Vrouw en jonge vogel bruingeel, gestreept"
+    },
+    {
+      "en": "Long-legged skulker of rice and reeds",
+      "nl": "Langpotige verstopper van rijst en riet"
+    }
+  ]
+}

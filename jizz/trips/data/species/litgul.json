@@ -1,0 +1,22 @@
+{
+  "code": "litgul",
+  "name": {
+    "en": "Little Gull",
+    "nl": "Dwergmeeuw"
+  },
+  "latin": "Hydrocoloeus minutus",
+  "look_for": [
+    {
+      "en": "Tiny and delicate, with a dark grey **underwing**",
+      "nl": "Klein en tenger, met donkergrijze **onderkant van de vleugel**"
+    },
+    {
+      "en": "Adult: black **hood**, no black wing tips",
+      "nl": "Volwassen: zwarte **kap**, geen zwarte vleugelpunten"
+    },
+    {
+      "en": "Dips to the water like a tern",
+      "nl": "Tikt het water aan als een stern"
+    }
+  ]
+}

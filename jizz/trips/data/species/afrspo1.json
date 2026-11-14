@@ -1,0 +1,22 @@
+{
+  "code": "afrspo1",
+  "name": {
+    "en": "African Spoonbill",
+    "nl": "Afrikaanse lepelaar"
+  },
+  "latin": "Platalea alba",
+  "look_for": [
+    {
+      "en": "White with a long, flat, spoon-tipped **bill**",
+      "nl": "Wit met een lange, platte, lepelvormige **snavel**"
+    },
+    {
+      "en": "Red bare **face** and red **legs**",
+      "nl": "Rood kaal **gezicht** en rode **poten**"
+    },
+    {
+      "en": "Sweeps **bill** sideways through shallow water",
+      "nl": "Zwiept met de **snavel** zijwaarts door ondiep water"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "indbar1",
+  "name": {
+    "en": "Indochinese Barbet",
+    "nl": "Indochinese baardvogel"
+  },
+  "latin": "Psilopogon annamensis",
+  "look_for": [
+    {
+      "en": "Green barbet with a blue **face** and throat",
+      "nl": "Groene baardvogel met een blauw **gezicht** en keel"
+    },
+    {
+      "en": "Thick dark **bill**, short **tail**",
+      "nl": "Dikke donkere **snavel**, korte **staart**"
+    },
+    {
+      "en": "Sits still high in fruiting fig trees",
+      "nl": "Zit stil hoog in vruchtdragende vijgenbomen"
+    }
+  ]
+}

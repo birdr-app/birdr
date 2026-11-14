@@ -1,0 +1,22 @@
+{
+  "code": "carthr1",
+  "name": {
+    "en": "Cape Rock Thrush",
+    "nl": "Kaapse rotslijster"
+  },
+  "latin": "Monticola rupestris",
+  "look_for": [
+    {
+      "en": "Blue-grey **head** and **throat**, brown **back**",
+      "nl": "Blauwgrijze **kop** en **keel**, bruine **rug**"
+    },
+    {
+      "en": "Orange **breast** and **belly**, orange outer **tail**",
+      "nl": "Oranje **borst** en **buik**, oranje buitenste **staartveren**"
+    },
+    {
+      "en": "Female brown, with rich orange **underparts**",
+      "nl": "Vrouwtje bruin, met rijk oranje **onderzijde**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "camlau1",
+  "name": {
+    "en": "Cambodian Laughingthrush",
+    "nl": "Cambodjaanse lijstergaai"
+  },
+  "latin": "Garrulax ferrarius",
+  "look_for": [
+    {
+      "en": "Chocolate-brown laughingthrush with a dark **hood**",
+      "nl": "Chocoladebruine lijstergaai met een donkere **kap**"
+    },
+    {
+      "en": "Pale blue patch behind the **eye**",
+      "nl": "Lichtblauwe vlek achter het **oog**"
+    },
+    {
+      "en": "Bright white patch on the upper **neck**",
+      "nl": "Felwitte vlek op de bovenkant van de **hals**"
+    }
+  ]
+}

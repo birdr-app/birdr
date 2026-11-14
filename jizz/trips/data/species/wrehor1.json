@@ -1,0 +1,22 @@
+{
+  "code": "wrehor1",
+  "name": {
+    "en": "Wreathed Hornbill",
+    "nl": "Gewone jaarvogel"
+  },
+  "latin": "Rhyticeros undulatus",
+  "look_for": [
+    {
+      "en": "Male: pale buff-white **head**; female all black",
+      "nl": "Mannetje: bleek beigewitte **kop**; vrouwtje helemaal zwart"
+    },
+    {
+      "en": "Bare yellow **throat** pouch with a black bar",
+      "nl": "Kale gele **keel**zak met een zwarte streep"
+    },
+    {
+      "en": "White **tail**, wrinkled **bill** with a low **casque**",
+      "nl": "Witte **staart**, gegroefde **snavel** met een lage **helm**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "orrwar1",
+  "name": {
+    "en": "Oriental Reed Warbler",
+    "nl": "Chinese karekiet"
+  },
+  "latin": "Acrocephalus orientalis",
+  "look_for": [
+    {
+      "en": "Large, long-billed warbler with pale **eyebrow**",
+      "nl": "Grote rietzanger met lange snavel en lichte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Brown **back**, buff **belly**, faint **breast** streaks",
+      "nl": "Bruine **rug**, okerkleurige **buik**, vage strepen op de **borst**"
+    },
+    {
+      "en": "Clings to reed stems, harsh churring song",
+      "nl": "Klampt zich vast aan rietstengels, harde ratelende zang"
+    }
+  ]
+}

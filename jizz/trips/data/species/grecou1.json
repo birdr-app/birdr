@@ -1,0 +1,22 @@
+{
+  "code": "grecou1",
+  "name": {
+    "en": "Greater Coucal",
+    "nl": "Chinese spoorkoekoek"
+  },
+  "latin": "Centropus sinensis",
+  "look_for": [
+    {
+      "en": "Large; black **head** and **body**, chestnut **wings**",
+      "nl": "Groot; zwarte **kop** en **lijf**, kastanjebruine **vleugels**"
+    },
+    {
+      "en": "Long broad black **tail**, red **eye**",
+      "nl": "Lange brede zwarte **staart**, rood **oog**"
+    },
+    {
+      "en": "Clambers through scrub; deep booming call",
+      "nl": "Klautert door struikgewas; diepe, bonzende roep"
+    }
+  ]
+}

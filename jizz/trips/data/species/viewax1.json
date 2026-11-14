@@ -1,0 +1,22 @@
+{
+  "code": "viewax1",
+  "name": {
+    "en": "Violet-eared Waxbill",
+    "nl": "Granaatastrild"
+  },
+  "latin": "Granatina granatina",
+  "look_for": [
+    {
+      "en": "Vivid violet-blue **cheek** patch, chestnut **body**",
+      "nl": "Felviolette vlek op de **wang**, kastanjebruin **lijf**"
+    },
+    {
+      "en": "Blue **rump** and long black **tail**",
+      "nl": "Blauwe **stuit** en lange zwarte **staart**"
+    },
+    {
+      "en": "Female duller, with a smaller, paler **cheek** patch",
+      "nl": "Vrouwtje doffer, kleinere en bleekere vlek op de **wang**"
+    }
+  ]
+}

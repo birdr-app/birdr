@@ -1,0 +1,22 @@
+{
+  "code": "capsis2",
+  "name": {
+    "en": "Cape Siskin",
+    "nl": "Kaapse kanarie"
+  },
+  "latin": "Crithagra totta",
+  "look_for": [
+    {
+      "en": "Yellow **underparts**, light brown **back**, grey streaked **head**",
+      "nl": "Gele **onderzijde**, lichtbruine **rug**, grijsgestreepte **kop**"
+    },
+    {
+      "en": "White spots on **wing** and **tail** tips",
+      "nl": "Witte vlekjes op de uiteinden van **vleugel** en **staart**"
+    },
+    {
+      "en": "Quiet in pairs or flocks, calling in flight",
+      "nl": "Rustig in paartjes of groepjes, roept in de vlucht"
+    }
+  ]
+}

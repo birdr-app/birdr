@@ -1,0 +1,22 @@
+{
+  "code": "thrnig1",
+  "name": {
+    "en": "Thrush Nightingale",
+    "nl": "Noordse nachtegaal"
+  },
+  "latin": "Luscinia luscinia",
+  "look_for": [
+    {
+      "en": "Dull olive-brown, **tail** not rusty",
+      "nl": "Doffe olijfbruine kleur, **staart** niet roestrood"
+    },
+    {
+      "en": "Faintly mottled **breast**",
+      "nl": "Vaag gevlekte **borst**"
+    },
+    {
+      "en": "Loud song with a machine-gun rattle, from dense thickets",
+      "nl": "Luide zang met ratelende noten, uit dicht struikgewas"
+    }
+  ]
+}

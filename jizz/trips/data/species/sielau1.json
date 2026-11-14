@@ -1,0 +1,22 @@
+{
+  "code": "sielau1",
+  "name": {
+    "en": "Silver-eared Laughingthrush",
+    "nl": "Zilveroorlijstergaai"
+  },
+  "latin": "Trochalopteron melanostigma",
+  "look_for": [
+    {
+      "en": "Silvery **ear** patch, blackish **face**",
+      "nl": "Zilvergrijze **oorvlek**, zwartachtig **gezicht**"
+    },
+    {
+      "en": "Chestnut **crown**, grey body",
+      "nl": "Kastanjebruine **kruin**, grijs lijf"
+    },
+    {
+      "en": "Golden-green **wing** and **tail** panels",
+      "nl": "Goudgroene vlakken in **vleugel** en **staart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "spored",
+  "name": {
+    "en": "Spotted Redshank",
+    "nl": "Zwarte ruiter"
+  },
+  "latin": "Tringa erythropus",
+  "look_for": [
+    {
+      "en": "Summer: sooty black with white spots",
+      "nl": "Zomer: zwart met witte stippen"
+    },
+    {
+      "en": "Long thin **bill**, red at the base",
+      "nl": "Lange dunne **snavel**, rood aan de basis"
+    },
+    {
+      "en": "Winter: pale grey with a white **eyebrow**",
+      "nl": "Winter: lichtgrijs met witte **wenkbrauw**"
+    }
+  ]
+}

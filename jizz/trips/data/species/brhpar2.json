@@ -1,0 +1,22 @@
+{
+  "code": "brhpar2",
+  "name": {
+    "en": "Brown-headed Parrot",
+    "nl": "Bruinkoppapegaai"
+  },
+  "latin": "Poicephalus cryptoxanthus",
+  "look_for": [
+    {
+      "en": "Small green parrot with a brown **head**",
+      "nl": "Kleine groene papegaai met een bruine **kop**"
+    },
+    {
+      "en": "Bright yellow underside to the **wings** in flight",
+      "nl": "Felgele onderkant van de **vleugels** in de vlucht"
+    },
+    {
+      "en": "Flies fast in noisy pairs or small groups",
+      "nl": "Vliegt snel in luidruchtige paren of kleine groepen"
+    }
+  ]
+}

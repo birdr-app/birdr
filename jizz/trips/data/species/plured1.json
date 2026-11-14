@@ -1,0 +1,22 @@
+{
+  "code": "plured1",
+  "name": {
+    "en": "Plumbeous Redstart",
+    "nl": "Waterroodstaart"
+  },
+  "latin": "Phoenicurus fuliginosus",
+  "look_for": [
+    {
+      "en": "Male slate-blue, with a chestnut **tail** and **rump**",
+      "nl": "Mannetje leiblauw, met kastanjebruine **staart** en **stuit**"
+    },
+    {
+      "en": "Female grey, white at the **tail** base",
+      "nl": "Vrouwtje grijs, wit aan de basis van de **staart**"
+    },
+    {
+      "en": "Flicks and fans its **tail** by fast streams",
+      "nl": "Wipt en waaiert met de **staart** langs snelle beken"
+    }
+  ]
+}

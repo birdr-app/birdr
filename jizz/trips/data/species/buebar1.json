@@ -1,0 +1,22 @@
+{
+  "code": "buebar1",
+  "name": {
+    "en": "Blue-eared Barbet",
+    "nl": "Blauwoorbaardvogel"
+  },
+  "latin": "Psilopogon cyanotis",
+  "look_for": [
+    {
+      "en": "Green barbet with crimson cheek spots",
+      "nl": "Groene baardvogel met karmozijnrode wangvlekken"
+    },
+    {
+      "en": "Blue **throat** and blue **ear** patch",
+      "nl": "Blauwe **keel** en blauwe **oor**vlek"
+    },
+    {
+      "en": "Black **forehead** and black band below **throat**",
+      "nl": "Zwart **voorhoofd** en zwarte band onder de **keel**"
+    }
+  ]
+}

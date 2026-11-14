@@ -1,0 +1,22 @@
+{
+  "code": "capbul1",
+  "name": {
+    "en": "Cape Bulbul",
+    "nl": "Kaapse buulbuul"
+  },
+  "latin": "Pycnonotus capensis",
+  "look_for": [
+    {
+      "en": "Bold white ring round the **eye**",
+      "nl": "Opvallende witte ring rond het **oog**"
+    },
+    {
+      "en": "Dull blackish-brown, yellow under the **tail**",
+      "nl": "Dof zwartbruin, geel onder de **staart**"
+    },
+    {
+      "en": "Perches on bush tops, liquid whistles",
+      "nl": "Zit op struiktoppen, vloeiend gefluit"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "bancor1",
+  "name": {
+    "en": "Bank Cormorant",
+    "nl": "Kustaalscholver"
+  },
+  "latin": "Phalacrocorax neglectus",
+  "look_for": [
+    {
+      "en": "Bulky, all-black cormorant with a thick **neck**",
+      "nl": "Plompe, geheel zwarte aalscholver met een dikke **hals**"
+    },
+    {
+      "en": "White patch on the **rump** in breeding season",
+      "nl": "Witte vlek op de **stuit** in het broedseizoen"
+    },
+    {
+      "en": "Small **crest**, white threads on the **head**",
+      "nl": "Kleine **kuif**, witte draadveertjes op de **kop**"
+    }
+  ]
+}

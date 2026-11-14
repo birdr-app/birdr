@@ -1,0 +1,22 @@
+{
+  "code": "borowl",
+  "name": {
+    "en": "Tengmalm's Owl",
+    "nl": "Ruigpootuil"
+  },
+  "latin": "Aegolius funereus",
+  "look_for": [
+    {
+      "en": "Small owl with a big square head",
+      "nl": "Kleine uil met grote vierkante kop"
+    },
+    {
+      "en": "Pale **facial disc** with dark frame, yellow eyes",
+      "nl": "Lichte **gezichtsschijf** met donkere rand, gele ogen"
+    },
+    {
+      "en": "Rapid series of soft hoots at night",
+      "nl": "Snelle reeks zachte roepjes 's nachts"
+    }
+  ]
+}

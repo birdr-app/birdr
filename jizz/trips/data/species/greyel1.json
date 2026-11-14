@@ -1,0 +1,22 @@
+{
+  "code": "greyel1",
+  "name": {
+    "en": "Greater Yellownape",
+    "nl": "Grote geelkuifspecht"
+  },
+  "latin": "Chrysophlegma flavinucha",
+  "look_for": [
+    {
+      "en": "Large green woodpecker, yellow shaggy **crest**",
+      "nl": "Grote groene specht, gele warrige **kuif**"
+    },
+    {
+      "en": "Yellow **throat**, rufous-barred **wings**",
+      "nl": "Gele **keel**, roestbruin gebande **vleugels**"
+    },
+    {
+      "en": "Olive-green **back**, pale greyish **underparts**",
+      "nl": "Olijfgroene **rug**, bleek grijzige **onderzijde**"
+    }
+  ]
+}

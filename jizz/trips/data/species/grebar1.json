@@ -1,0 +1,22 @@
+{
+  "code": "grebar1",
+  "name": {
+    "en": "Great Barbet",
+    "nl": "Grote baardvogel"
+  },
+  "latin": "Psilopogon virens",
+  "look_for": [
+    {
+      "en": "Largest barbet, massive yellow **bill**",
+      "nl": "Grootste baardvogel, enorme gele **snavel**"
+    },
+    {
+      "en": "Dark blue-black **head**, brown **breast**",
+      "nl": "Donkere blauwzwarte **kop**, bruine **borst**"
+    },
+    {
+      "en": "Red **undertail**, green **wings**",
+      "nl": "Rode **onderstaart**, groene **vleugels**"
+    }
+  ]
+}

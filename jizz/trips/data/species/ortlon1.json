@@ -1,0 +1,22 @@
+{
+  "code": "ortlon1",
+  "name": {
+    "en": "Orange-throated Longclaw",
+    "nl": "Kaapse langklauw"
+  },
+  "latin": "Macronyx capensis",
+  "look_for": [
+    {
+      "en": "Orange **throat** edged with a black necklace",
+      "nl": "Oranje **keel** omzoomd door een zwarte halsband"
+    },
+    {
+      "en": "Yellowish-buff underparts, streaked brown **back**",
+      "nl": "Geelbuff onderkant, bruin gestreepte **rug**"
+    },
+    {
+      "en": "Upright stance in short grass, runs between tussocks",
+      "nl": "Staat rechtop in kort gras en rent tussen pollen"
+    }
+  ]
+}

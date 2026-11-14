@@ -1,0 +1,22 @@
+{
+  "code": "comgol",
+  "name": {
+    "en": "Common Goldeneye",
+    "nl": "Brilduiker"
+  },
+  "latin": "Bucephala clangula",
+  "look_for": [
+    {
+      "en": "Male: round white **spot** on the cheek",
+      "nl": "Woerd: ronde witte **vlek** op de wang"
+    },
+    {
+      "en": "Triangular head, bright yellow eye",
+      "nl": "Driehoekige kop, felgele ogen"
+    },
+    {
+      "en": "Whistling wingbeats, big white wing **patches**",
+      "nl": "Fluitende vleugelslag, grote witte **vleugelvlakken**"
+    }
+  ]
+}

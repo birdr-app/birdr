@@ -1,0 +1,22 @@
+{
+  "code": "banbro1",
+  "name": {
+    "en": "Banded Broadbill",
+    "nl": "Purperhapvogel"
+  },
+  "latin": "Eurylaimus javanicus",
+  "look_for": [
+    {
+      "en": "Purplish-red **head**, wine-pink **underparts**",
+      "nl": "Purperrode **kop**, wijnroze **onderzijde**"
+    },
+    {
+      "en": "Black **collar** band, yellow-streaked black **back**",
+      "nl": "Zwarte band om de **hals**, zwarte **rug** met gele strepen"
+    },
+    {
+      "en": "Broad, hooked turquoise **bill**",
+      "nl": "Brede, gehaakte turkooisblauwe **snavel**"
+    }
+  ]
+}

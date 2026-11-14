@@ -1,0 +1,22 @@
+{
+  "code": "pinpig3",
+  "name": {
+    "en": "Pink-necked Green-Pigeon",
+    "nl": "Maleise papegaaiduif"
+  },
+  "latin": "Treron vernans",
+  "look_for": [
+    {
+      "en": "Male: grey **crown**, pink **neck**, orange **breast**",
+      "nl": "Mannetje: grijze **kruin**, roze **hals**, oranje **borst**"
+    },
+    {
+      "en": "Female plain green with a paler **belly**",
+      "nl": "Vrouwtje effen groen met een lichtere **buik**"
+    },
+    {
+      "en": "Flocks at fruiting trees and mangroves",
+      "nl": "Groepen bij fruitbomen en in mangrove"
+    }
+  ]
+}

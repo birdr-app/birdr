@@ -1,0 +1,22 @@
+{
+  "code": "rebpar4",
+  "name": {
+    "en": "Red-breasted Parakeet",
+    "nl": "Kleine alexanderparkiet"
+  },
+  "latin": "Psittacula alexandri",
+  "look_for": [
+    {
+      "en": "Grey-lilac **head**, pinkish-orange **breast**",
+      "nl": "Grijslila **kop**, roze-oranje **borst**"
+    },
+    {
+      "en": "Black chin stripe, red **bill** on male",
+      "nl": "Zwarte kinstreep, rode **snavel** bij het mannetje"
+    },
+    {
+      "en": "Long tapering **tail**, noisy fast flocks",
+      "nl": "Lange spitse **staart**, luidruchtige snelle groepen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "baybro1",
+  "name": {
+    "en": "Black-and-yellow Broadbill",
+    "nl": "Zwart-gele hapvogel"
+  },
+  "latin": "Eurylaimus ochromalus",
+  "look_for": [
+    {
+      "en": "Black **head** with a white neckband",
+      "nl": "Zwarte **kop** met een witte halsband"
+    },
+    {
+      "en": "Vinous-pink **underparts**, black **breast** band",
+      "nl": "Wijnroze **onderzijde**, zwarte band over de **borst**"
+    },
+    {
+      "en": "Yellow-streaked black **back**, bright blue **bill**",
+      "nl": "Zwarte **rug** met gele strepen, felblauwe **snavel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "capgls1",
+  "name": {
+    "en": "Cape Starling",
+    "nl": "Roodschouderglansspreeuw"
+  },
+  "latin": "Lamprotornis nitens",
+  "look_for": [
+    {
+      "en": "Glossy blue **head** and **throat**, greener below",
+      "nl": "Glanzend blauwe **kop** en **keel**, groener eronder"
+    },
+    {
+      "en": "Bright orange-yellow **eye**, no contrasting ear patch",
+      "nl": "Feloranjegeel **oog**, geen afstekende oorvlek"
+    },
+    {
+      "en": "Long warbling song, often mimicking other birds",
+      "nl": "Lang kwinkelerend lied, vaak met nagebootste vogels"
+    }
+  ]
+}

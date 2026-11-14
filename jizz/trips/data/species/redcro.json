@@ -1,0 +1,22 @@
+{
+  "code": "redcro",
+  "name": {
+    "en": "Common Crossbill",
+    "nl": "Kruisbek"
+  },
+  "latin": "Loxia curvirostra",
+  "look_for": [
+    {
+      "en": "Crossed **bill** tips",
+      "nl": "Gekruiste **snavelpunten**"
+    },
+    {
+      "en": "Male red-orange, female green-yellow",
+      "nl": "Mannetje roodoranje, vrouwtje groengeel"
+    },
+    {
+      "en": "Hangs acrobatically in cones, hard \"jip-jip\" call",
+      "nl": "Hangt acrobatisch in kegels, harde \"jip-jip\" roep"
+    }
+  ]
+}

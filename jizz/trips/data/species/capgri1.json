@@ -1,0 +1,22 @@
+{
+  "code": "capgri1",
+  "name": {
+    "en": "Cape Griffon",
+    "nl": "Kaapse gier"
+  },
+  "latin": "Gyps coprotheres",
+  "look_for": [
+    {
+      "en": "Large pale buff vulture, dark flight **feathers**",
+      "nl": "Grote bleekbuffe gier met donkere slag**pennen**"
+    },
+    {
+      "en": "Bare pale **neck** with a whitish ruff",
+      "nl": "Kale bleke **nek** met een witachtige kraag"
+    },
+    {
+      "en": "Soars in groups, breeds on cliffs",
+      "nl": "Zweeft in groepen, broedt op kliffen"
+    }
+  ]
+}

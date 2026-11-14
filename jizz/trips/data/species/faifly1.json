@@ -1,0 +1,22 @@
+{
+  "code": "faifly1",
+  "name": {
+    "en": "Fairy Flycatcher",
+    "nl": "Elfvliegenvanger"
+  },
+  "latin": "Stenostira scita",
+  "look_for": [
+    {
+      "en": "Black mask, white **eyebrow**, pale grey **head**",
+      "nl": "Zwart masker, witte **wenkbrauwstreep**, bleekgrijze **kop**"
+    },
+    {
+      "en": "Long black **tail** with white sides, white **wing** stripe",
+      "nl": "Lange zwarte **staart** met witte zijkanten, witte **vleugel**streep"
+    },
+    {
+      "en": "Tiny, flits through foliage like a warbler",
+      "nl": "Piepklein, fladdert als een zanger door het blad"
+    }
+  ]
+}

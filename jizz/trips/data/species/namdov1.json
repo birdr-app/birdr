@@ -1,0 +1,22 @@
+{
+  "code": "namdov1",
+  "name": {
+    "en": "Namaqua Dove",
+    "nl": "Maskerduif"
+  },
+  "latin": "Oena capensis",
+  "look_for": [
+    {
+      "en": "Tiny dove with a very long, pointed **tail**",
+      "nl": "Piepkleine duif met een lange, spitse **staart**"
+    },
+    {
+      "en": "Male: black face and **throat**; female plain",
+      "nl": "Mannetje: zwart gezicht en **keel**; vrouwtje egaal"
+    },
+    {
+      "en": "Rusty patches on the **wing** flash in flight",
+      "nl": "Roestbruine plekken op de **vleugel** flitsen in de vlucht"
+    }
+  ]
+}

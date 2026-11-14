@@ -1,0 +1,22 @@
+{
+  "code": "abbbab1",
+  "name": {
+    "en": "Abbott's Babbler",
+    "nl": "Roodstaartmuistimalia"
+  },
+  "latin": "Malacocincla abbotti",
+  "look_for": [
+    {
+      "en": "Plain brown **back**, rufous **rump** and **tail**",
+      "nl": "Effen bruine **rug**, roestrode **stuit** en **staart**"
+    },
+    {
+      "en": "White **throat** and belly, buff **flanks**",
+      "nl": "Witte **keel** en buik, bruingele **flanken**"
+    },
+    {
+      "en": "Stout **bill**, skulks low in the undergrowth",
+      "nl": "Stevige **snavel**, sluipt laag door de ondergroei"
+    }
+  ]
+}

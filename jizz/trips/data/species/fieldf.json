@@ -1,0 +1,22 @@
+{
+  "code": "fieldf",
+  "name": {
+    "en": "Fieldfare",
+    "nl": "Kramsvogel"
+  },
+  "latin": "Turdus pilaris",
+  "look_for": [
+    {
+      "en": "Blue-grey **head** and **rump**, chestnut back",
+      "nl": "Blauwgrijze **kop** en **stuit**, kastanjebruine rug"
+    },
+    {
+      "en": "Black **tail**, speckled orange **breast**",
+      "nl": "Zwarte **staart**, oranje **borst** met zwarte vlekken"
+    },
+    {
+      "en": "Noisy flocks with harsh \"chak-chak\" calls",
+      "nl": "Luidruchtige groepen met rauwe \"tsjak-tsjak\" roep"
+    }
+  ]
+}

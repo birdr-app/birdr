@@ -1,0 +1,22 @@
+{
+  "code": "scamin1",
+  "name": {
+    "en": "Scarlet Minivet",
+    "nl": "Scharlaken menievogel"
+  },
+  "latin": "Pericrocotus speciosus",
+  "look_for": [
+    {
+      "en": "Male glossy black and scarlet; female yellow",
+      "nl": "Mannetje glanzend zwart en scharlakenrood; vrouwtje geel"
+    },
+    {
+      "en": "Broken red patch across black **wing**",
+      "nl": "Gebroken rode vlek op de zwarte **vleugel**"
+    },
+    {
+      "en": "Long **tail**, restless flocks in treetops",
+      "nl": "Lange **staart**, onrustige groepen in boomtoppen"
+    }
+  ]
+}

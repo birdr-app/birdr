@@ -1,0 +1,22 @@
+{
+  "code": "piefan1",
+  "name": {
+    "en": "Malaysian Pied-Fantail",
+    "nl": "Maleise bonte waaierstaart"
+  },
+  "latin": "Rhipidura javanica",
+  "look_for": [
+    {
+      "en": "Black above, white **eyebrow** and **throat**",
+      "nl": "Zwart boven, witte **wenkbrauwstreep** en **keel**"
+    },
+    {
+      "en": "Black **breast** band, white belly",
+      "nl": "Zwarte band over de **borst**, witte buik"
+    },
+    {
+      "en": "Fans and wags its white-tipped **tail**",
+      "nl": "Spreidt en kwispelt met de wit getipte **staart**"
+    }
+  ]
+}

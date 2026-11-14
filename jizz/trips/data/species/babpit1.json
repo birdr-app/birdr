@@ -1,0 +1,22 @@
+{
+  "code": "babpit1",
+  "name": {
+    "en": "Bar-bellied Pitta",
+    "nl": "Elliotpitta"
+  },
+  "latin": "Hydrornis elliotii",
+  "look_for": [
+    {
+      "en": "Green **crown**, broad black eye-mask",
+      "nl": "Groene **kruin**, brede zwarte oogmasker"
+    },
+    {
+      "en": "Yellow **belly** finely barred black",
+      "nl": "Gele **buik** met fijne zwarte banden"
+    },
+    {
+      "en": "Blue patch at the **vent**, hops on the forest floor",
+      "nl": "Blauwe vlek bij de **anaalstreek**, hupt over de bosbodem"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "busbus1",
+  "name": {
+    "en": "Buff-streaked Chat",
+    "nl": "Streeptapuit"
+  },
+  "latin": "Campicoloides bifasciatus",
+  "look_for": [
+    {
+      "en": "Male black **face** and **throat**, buff **eyebrow**",
+      "nl": "Mannetje met zwart **gezicht** en zwarte **keel**, roomgele **wenkbrauwstreep**"
+    },
+    {
+      "en": "Buff **rump** and orange-buff **belly**",
+      "nl": "Roomgele **stuit** en oranjegele **buik**"
+    },
+    {
+      "en": "Perches openly on rocks and shrubs, pounces on insects",
+      "nl": "Zit open op rotsen en struiken, duikt op insecten"
+    }
+  ]
+}

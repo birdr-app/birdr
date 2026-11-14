@@ -1,0 +1,22 @@
+{
+  "code": "norhar1",
+  "name": {
+    "en": "Hen Harrier",
+    "nl": "Blauwe kiekendief"
+  },
+  "latin": "Circus cyaneus",
+  "look_for": [
+    {
+      "en": "Male pale grey with black **wingtips**",
+      "nl": "Mannetje lichtgrijs met zwarte **vleugelpunten**"
+    },
+    {
+      "en": "White **rump**, low gliding flight",
+      "nl": "Witte **stuit**, laag glijdende vlucht"
+    },
+    {
+      "en": "Female brown and streaked, barred **tail**",
+      "nl": "Vrouwtje bruin en gestreept, gebandeerde **staart**"
+    }
+  ]
+}

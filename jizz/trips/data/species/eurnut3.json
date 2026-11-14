@@ -1,0 +1,22 @@
+{
+  "code": "eurnut3",
+  "name": {
+    "en": "Spotted Nutcracker",
+    "nl": "Notenkraker"
+  },
+  "latin": "Nucifraga caryocatactes",
+  "look_for": [
+    {
+      "en": "Dark chocolate-brown, heavily spotted with white",
+      "nl": "Donkerbruin met veel witte vlekken"
+    },
+    {
+      "en": "Long, straight, dark **bill**",
+      "nl": "Lange, rechte, donkere **snavel**"
+    },
+    {
+      "en": "White **vent** and white tail corners",
+      "nl": "Wit **onderstaartdek** en witte staarthoeken"
+    }
+  ]
+}

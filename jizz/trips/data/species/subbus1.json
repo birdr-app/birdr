@@ -1,0 +1,22 @@
+{
+  "code": "subbus1",
+  "name": {
+    "en": "Sulphur-breasted Bushshrike",
+    "nl": "Oranje bosklauwier"
+  },
+  "latin": "Chlorophoneus sulfureopectus",
+  "look_for": [
+    {
+      "en": "Yellow **forehead** and **eyebrow**, grey **crown**",
+      "nl": "Geel **voorhoofd** en gele **wenkbrauwstreep**, grijze **kruin**"
+    },
+    {
+      "en": "Orange **breast** on bright yellow underparts",
+      "nl": "Oranje **borst** op felgele onderkant"
+    },
+    {
+      "en": "Whistled 'kew-tee-tee-tee' from dense foliage",
+      "nl": "Gefluit 'kjoe-tie-tie-tie' uit dicht gebladerte"
+    }
+  ]
+}

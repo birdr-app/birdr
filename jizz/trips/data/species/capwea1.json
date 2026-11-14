@@ -1,0 +1,22 @@
+{
+  "code": "capwea1",
+  "name": {
+    "en": "Cape Weaver",
+    "nl": "Kaapse wever"
+  },
+  "latin": "Ploceus capensis",
+  "look_for": [
+    {
+      "en": "Male yellow with orange-tinged **face**",
+      "nl": "Mannetje geel met oranje getinte **kop**"
+    },
+    {
+      "en": "Pale cream **eye**, heavy dark **bill**",
+      "nl": "Bleek roomwit **oog**, zware donkere **snavel**"
+    },
+    {
+      "en": "Olive-mottled **back**, colonies of woven nests",
+      "nl": "Olijfgevlekte **rug**, kolonies met geweven nesten"
+    }
+  ]
+}

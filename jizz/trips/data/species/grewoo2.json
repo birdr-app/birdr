@@ -1,0 +1,22 @@
+{
+  "code": "grewoo2",
+  "name": {
+    "en": "Green Woodhoopoe",
+    "nl": "Groene kakelaar"
+  },
+  "latin": "Phoeniculus purpureus",
+  "look_for": [
+    {
+      "en": "Glossy dark body, red curved **bill** and **legs**",
+      "nl": "Glanzend donker lijf, rode gebogen **snavel** en **poten**"
+    },
+    {
+      "en": "White **wing** patches, white spots on long **tail**",
+      "nl": "Witte **vleugel**vlekken, witte stippen op de lange **staart**"
+    },
+    {
+      "en": "Noisy cackling groups probing bark, often upside down",
+      "nl": "Luidruchtige kakelende groepen die in schors peuteren"
+    }
+  ]
+}

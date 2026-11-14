@@ -1,0 +1,22 @@
+{
+  "code": "rucrol2",
+  "name": {
+    "en": "Purple Roller",
+    "nl": "Roodkruinscharrelaar"
+  },
+  "latin": "Coracias naevius",
+  "look_for": [
+    {
+      "en": "Large roller with a streaked, purplish-pink **breast**",
+      "nl": "Grote scharrelaar met een gestreepte, paarsroze **borst**"
+    },
+    {
+      "en": "White **eyebrow** and a pale patch on the **nape**",
+      "nl": "Witte **wenkbrauwstreep** en lichte vlek in de **nek**"
+    },
+    {
+      "en": "Harsh, repeated 'ka' calls; square-ended **tail**",
+      "nl": "Rauwe, herhaalde 'ka'-roep; rechte **staart**"
+    }
+  ]
+}

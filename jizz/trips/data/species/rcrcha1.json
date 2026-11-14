@@ -1,0 +1,22 @@
+{
+  "code": "rcrcha1",
+  "name": {
+    "en": "Red-capped Robin-Chat",
+    "nl": "Roodkoplawaaimaker"
+  },
+  "latin": "Cossypha natalensis",
+  "look_for": [
+    {
+      "en": "Orange-rufous head and underparts, no white eyebrow",
+      "nl": "Oranjeroestkleurige kop en onderzijde, geen witte wenkbrauwstreep"
+    },
+    {
+      "en": "Dark central **tail**, bright orange sides",
+      "nl": "Donkere middelste **staart**, felle oranje zijkanten"
+    },
+    {
+      "en": "Melodious, mimicking song, forages in leaf litter",
+      "nl": "Melodieuze, nabootsende zang, foerageert in bladstrooisel"
+    }
+  ]
+}

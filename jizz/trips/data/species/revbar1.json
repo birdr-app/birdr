@@ -1,0 +1,22 @@
+{
+  "code": "revbar1",
+  "name": {
+    "en": "Red-vented Barbet",
+    "nl": "Lagrandierbaardvogel"
+  },
+  "latin": "Psilopogon lagrandieri",
+  "look_for": [
+    {
+      "en": "Large green barbet with a brown **head**",
+      "nl": "Grote groene baardvogel met een bruine **kop**"
+    },
+    {
+      "en": "Grey cheek patches, blue line over the eye",
+      "nl": "Grijze wangvlekken, blauwe streep boven het oog"
+    },
+    {
+      "en": "Red patch under the **tail**, hooting call",
+      "nl": "Rode vlek onder de **staart**, roept als een uil"
+    }
+  ]
+}

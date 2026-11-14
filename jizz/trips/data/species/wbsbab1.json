@@ -1,0 +1,22 @@
+{
+  "code": "wbsbab1",
+  "name": {
+    "en": "White-browed Scimitar-Babbler",
+    "nl": "Witbrauwkruiplijster"
+  },
+  "latin": "Pomatorhinus schisticeps",
+  "look_for": [
+    {
+      "en": "Long white **eyebrow**, dark **mask**",
+      "nl": "Lange witte **wenkbrauwstreep**, donker **masker**"
+    },
+    {
+      "en": "Long yellow, downcurved **bill**",
+      "nl": "Lange gele, gebogen **snavel**"
+    },
+    {
+      "en": "Clean white **breast**, olive-brown **back**",
+      "nl": "Zuiver witte **borst**, olijfbruine **rug**"
+    }
+  ]
+}

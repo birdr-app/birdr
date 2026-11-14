@@ -1,0 +1,22 @@
+{
+  "code": "marsun2",
+  "name": {
+    "en": "Marico Sunbird",
+    "nl": "Maricohoningzuiger"
+  },
+  "latin": "Cinnyris mariquensis",
+  "look_for": [
+    {
+      "en": "Green **head** and **back**, dark **belly**",
+      "nl": "Groene **kop** en **rug**, donkere **buik**"
+    },
+    {
+      "en": "Blue band above broad maroon **breast** band",
+      "nl": "Blauwe band boven een brede kastanjebruine **borst**band"
+    },
+    {
+      "en": "Long strongly curved **bill**, thin jumbled song",
+      "nl": "Lange sterk gebogen **snavel**, ijle rommelige zang"
+    }
+  ]
+}

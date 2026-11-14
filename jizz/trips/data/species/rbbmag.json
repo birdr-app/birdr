@@ -1,0 +1,22 @@
+{
+  "code": "rbbmag",
+  "name": {
+    "en": "Red-billed Blue-Magpie",
+    "nl": "Roodsnavelkitta"
+  },
+  "latin": "Urocissa erythroryncha",
+  "look_for": [
+    {
+      "en": "Black **head** with a white **nape** patch",
+      "nl": "Zwarte **kop** met een witte **nekvlek**"
+    },
+    {
+      "en": "Red **bill** and red **legs**",
+      "nl": "Rode **snavel** en rode **poten**"
+    },
+    {
+      "en": "Very long blue **tail** tipped with white",
+      "nl": "Zeer lange blauwe **staart** met witte punt"
+    }
+  ]
+}

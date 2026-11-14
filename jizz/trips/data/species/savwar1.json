@@ -1,0 +1,22 @@
+{
+  "code": "savwar1",
+  "name": {
+    "en": "Savi's Warbler",
+    "nl": "Snor"
+  },
+  "latin": "Locustella luscinioides",
+  "look_for": [
+    {
+      "en": "Plain russet-brown, unstreaked",
+      "nl": "Eenkleurig roodbruin, zonder strepen"
+    },
+    {
+      "en": "Long rounded **tail**, pale **throat**",
+      "nl": "Lange afgeronde **staart**, lichte **keel**"
+    },
+    {
+      "en": "Fast buzzing reel from the reed tops",
+      "nl": "Snelle zoemende triller vanuit de rietpluimen"
+    }
+  ]
+}

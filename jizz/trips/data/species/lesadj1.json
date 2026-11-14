@@ -1,0 +1,22 @@
+{
+  "code": "lesadj1",
+  "name": {
+    "en": "Lesser Adjutant",
+    "nl": "Javaanse maraboe"
+  },
+  "latin": "Leptoptilos javanicus",
+  "look_for": [
+    {
+      "en": "Large stork with a bare yellowish head and neck",
+      "nl": "Grote ooievaar met een kale gelige kop en hals"
+    },
+    {
+      "en": "Dark glossy **back** and wings, white belly",
+      "nl": "Donkere glanzende **rug** en vleugels, witte buik"
+    },
+    {
+      "en": "Heavy pale **bill**, no hanging pouch",
+      "nl": "Zware lichte **snavel**, geen hangende keelzak"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "redpol1",
+  "name": {
+    "en": "Redpoll",
+    "nl": "Barmsijs"
+  },
+  "latin": "Acanthis flammea",
+  "look_for": [
+    {
+      "en": "Red **forehead** patch and black **chin**",
+      "nl": "Rode **voorhoofd**vlek en zwarte **kin**"
+    },
+    {
+      "en": "Streaked brown back, pale wing bar",
+      "nl": "Gestreepte bruine rug, lichte vleugelstreep"
+    },
+    {
+      "en": "Small flocks in birch and alder",
+      "nl": "Kleine groepen in berk en els"
+    }
+  ]
+}

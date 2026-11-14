@@ -1,0 +1,22 @@
+{
+  "code": "blkgui",
+  "name": {
+    "en": "Black Guillemot",
+    "nl": "Zwarte zeekoet"
+  },
+  "latin": "Cepphus grylle",
+  "look_for": [
+    {
+      "en": "Summer: black with a large white **wing** patch",
+      "nl": "Zomer: zwart met grote witte **vleugelvlek**"
+    },
+    {
+      "en": "Bright red **legs** and red mouth",
+      "nl": "Felrode **poten** en rode bek"
+    },
+    {
+      "en": "Winter: pale grey and white, dark wings",
+      "nl": "Winter: lichtgrijs en wit met donkere vleugels"
+    }
+  ]
+}

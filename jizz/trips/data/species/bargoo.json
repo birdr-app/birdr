@@ -1,0 +1,22 @@
+{
+  "code": "bargoo",
+  "name": {
+    "en": "Barnacle Goose",
+    "nl": "Brandgans"
+  },
+  "latin": "Branta leucopsis",
+  "look_for": [
+    {
+      "en": "White **face**, black neck and chest",
+      "nl": "Wit **gezicht**, zwarte hals en borst"
+    },
+    {
+      "en": "Pale grey **back** barred black and white",
+      "nl": "Lichtgrijze **rug** met zwart-witte strepen"
+    },
+    {
+      "en": "Small, with a short black **bill**",
+      "nl": "Klein, met korte zwarte **snavel**"
+    }
+  ]
+}

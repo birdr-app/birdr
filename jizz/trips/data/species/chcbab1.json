@@ -1,0 +1,22 @@
+{
+  "code": "chcbab1",
+  "name": {
+    "en": "Chestnut-capped Babbler",
+    "nl": "Roodkoptimalia"
+  },
+  "latin": "Timalia pileata",
+  "look_for": [
+    {
+      "en": "Chestnut **cap**, black mask through the **eye**",
+      "nl": "Kastanjebruine **kap**, zwart masker door het **oog**"
+    },
+    {
+      "en": "White **face** and **breast**, fine black streaks",
+      "nl": "Wit **gezicht** en witte **borst** met fijne zwarte streepjes"
+    },
+    {
+      "en": "Thick black **bill**, long **tail**, in tall grass",
+      "nl": "Dikke zwarte **snavel**, lange **staart**, in hoog gras"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "hoocro1",
+  "name": {
+    "en": "Hooded Crow",
+    "nl": "Bonte kraai"
+  },
+  "latin": "Corvus cornix",
+  "look_for": [
+    {
+      "en": "Grey body, black head, wings and tail",
+      "nl": "Grijs lijf, zwarte kop, vleugels en staart"
+    },
+    {
+      "en": "Black **hood** and bib, grey back and belly",
+      "nl": "Zwarte **kap** en bef, grijze rug en buik"
+    },
+    {
+      "en": "Stout black **bill**, croaking call",
+      "nl": "Stevige zwarte **snavel**, krassende roep"
+    }
+  ]
+}

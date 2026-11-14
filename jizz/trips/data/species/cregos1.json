@@ -1,0 +1,22 @@
+{
+  "code": "cregos1",
+  "name": {
+    "en": "Crested Goshawk",
+    "nl": "Kuifhavik"
+  },
+  "latin": "Lophospiza trivirgata",
+  "look_for": [
+    {
+      "en": "Grey **head** with a short **crest**, dark throat stripe",
+      "nl": "Grijze **kop** met een korte **kuif**, donkere keelstreep"
+    },
+    {
+      "en": "Streaked **breast**, rufous-barred **belly**",
+      "nl": "Gestreepte **borst**, roestbruin gebande **buik**"
+    },
+    {
+      "en": "Fluffy white **undertail**; orange-yellow **eye**",
+      "nl": "Pluizige witte **onderstaart**; oranjegeel **oog**"
+    }
+  ]
+}

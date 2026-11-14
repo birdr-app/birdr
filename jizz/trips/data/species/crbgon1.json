@@ -1,0 +1,22 @@
+{
+  "code": "crbgon1",
+  "name": {
+    "en": "Crimson-breasted Gonolek",
+    "nl": "Burchellfiskaal"
+  },
+  "latin": "Laniarius atrococcineus",
+  "look_for": [
+    {
+      "en": "Scarlet **breast** and **belly**, glossy black above",
+      "nl": "Felrode **borst** en **buik**, glanzend zwart erboven"
+    },
+    {
+      "en": "Bold white stripe along the black **wing**",
+      "nl": "Brede witte streep langs de zwarte **vleugel**"
+    },
+    {
+      "en": "Skulks in thickets, loud ringing duets",
+      "nl": "Zit verscholen in struikgewas, luide klinkende duetten"
+    }
+  ]
+}

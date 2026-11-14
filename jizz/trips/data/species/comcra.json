@@ -1,0 +1,22 @@
+{
+  "code": "comcra",
+  "name": {
+    "en": "Common Crane",
+    "nl": "Kraanvogel"
+  },
+  "latin": "Grus grus",
+  "look_for": [
+    {
+      "en": "Tall, grey, with a long neck and long legs",
+      "nl": "Hoog, grijs, met lange hals en lange poten"
+    },
+    {
+      "en": "Black and white **head**, red crown patch",
+      "nl": "Zwart-witte **kop**, rode kruinvlek"
+    },
+    {
+      "en": "Bushy **plume** over the tail, trumpeting call",
+      "nl": "Borstelige **pluim** boven de staart, trompetterende roep"
+    }
+  ]
+}

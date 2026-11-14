@@ -1,0 +1,22 @@
+{
+  "code": "tunswa",
+  "name": {
+    "en": "Bewick's Swan",
+    "nl": "Kleine zwaan"
+  },
+  "latin": "Cygnus columbianus",
+  "look_for": [
+    {
+      "en": "Smaller than Whooper, short neck",
+      "nl": "Kleiner dan wilde zwaan, kortere hals"
+    },
+    {
+      "en": "Small, rounded yellow patch on the **bill**",
+      "nl": "Kleine, ronde gele vlek op de **snavel**"
+    },
+    {
+      "en": "Goose-like, softly honking call",
+      "nl": "Gansachtige, zacht toeterende roep"
+    }
+  ]
+}

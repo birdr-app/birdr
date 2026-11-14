@@ -1,0 +1,22 @@
+{
+  "code": "rebduc1",
+  "name": {
+    "en": "Red-billed Duck",
+    "nl": "Roodsnavelpijlstaart"
+  },
+  "latin": "Anas erythrorhyncha",
+  "look_for": [
+    {
+      "en": "Red **bill** and dark brown cap",
+      "nl": "Rode **snavel** en donkerbruine kap"
+    },
+    {
+      "en": "Pale buff cheeks below the dark **crown**",
+      "nl": "Bleekbuffe wangen onder de donkere **kruin**"
+    },
+    {
+      "en": "Mottled brown body, feeds in shallows at dusk",
+      "nl": "Gevlekt bruin lijf, foerageert in de schemering"
+    }
+  ]
+}

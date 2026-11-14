@@ -1,0 +1,22 @@
+{
+  "code": "arcloo",
+  "name": {
+    "en": "Black-throated Diver",
+    "nl": "Parelduiker"
+  },
+  "latin": "Gavia arctica",
+  "look_for": [
+    {
+      "en": "Straight, dagger-like **bill** held level",
+      "nl": "Rechte, dolkvormige **snavel**, horizontaal gehouden"
+    },
+    {
+      "en": "Summer: black throat, grey head, striped neck",
+      "nl": "Zomer: zwarte keel, grijze kop, gestreepte hals"
+    },
+    {
+      "en": "Winter: white **flank** patch at the waterline",
+      "nl": "Winter: witte **flank**vlek op de waterlijn"
+    }
+  ]
+}

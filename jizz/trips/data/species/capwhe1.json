@@ -1,0 +1,22 @@
+{
+  "code": "capwhe1",
+  "name": {
+    "en": "Capped Wheatear",
+    "nl": "Aardtapuit"
+  },
+  "latin": "Oenanthe pileata",
+  "look_for": [
+    {
+      "en": "Black cap and ear patch, white eyebrow",
+      "nl": "Zwarte kap en oorstreek, witte wenkbrauwstreep"
+    },
+    {
+      "en": "White **throat** above black **breast** band, orange belly",
+      "nl": "Witte **keel** boven een zwarte **borst**band, oranje buik"
+    },
+    {
+      "en": "Upright stance, runs and bobs over bare ground",
+      "nl": "Rechtop houding, rent en buigt over kale grond"
+    }
+  ]
+}

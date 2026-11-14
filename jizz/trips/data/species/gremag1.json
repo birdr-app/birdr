@@ -1,0 +1,22 @@
+{
+  "code": "gremag1",
+  "name": {
+    "en": "Common Green-Magpie",
+    "nl": "Groene kitta"
+  },
+  "latin": "Cissa chinensis",
+  "look_for": [
+    {
+      "en": "Bright green all over, red **bill**",
+      "nl": "Helemaal felgroen, rode **snavel**"
+    },
+    {
+      "en": "Black band through the **eye**",
+      "nl": "Zwarte band door het **oog**"
+    },
+    {
+      "en": "Chestnut **wings**, long **tail** tipped white",
+      "nl": "Kastanjebruine **vleugels**, lange **staart** met witte punt"
+    }
+  ]
+}

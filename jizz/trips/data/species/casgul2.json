@@ -1,0 +1,22 @@
+{
+  "code": "casgul2",
+  "name": {
+    "en": "Caspian Gull",
+    "nl": "Pontische meeuw"
+  },
+  "latin": "Larus cachinnans",
+  "look_for": [
+    {
+      "en": "Long, thin **bill**, flat sloping **forehead**",
+      "nl": "Lange dunne **snavel**, vlak aflopend **voorhoofd**"
+    },
+    {
+      "en": "Small dark eye in a pale head",
+      "nl": "Klein donker oog in een lichte kop"
+    },
+    {
+      "en": "Long legs, pale grey **back**",
+      "nl": "Lange poten, lichtgrijze **rug**"
+    }
+  ]
+}

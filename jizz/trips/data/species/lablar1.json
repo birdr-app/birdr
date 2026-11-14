@@ -1,0 +1,22 @@
+{
+  "code": "lablar1",
+  "name": {
+    "en": "Large-billed Lark",
+    "nl": "Grootsnavelleeuwerik"
+  },
+  "latin": "Galerida magnirostris",
+  "look_for": [
+    {
+      "en": "Thick, two-coloured **bill** with a yellow base",
+      "nl": "Dikke, tweekleurige **snavel** met gele basis"
+    },
+    {
+      "en": "Long white stripe over the **eye**, short **crest**",
+      "nl": "Lange witte streep boven het **oog**, korte **kuif**"
+    },
+    {
+      "en": "Heavy dark streaks on a cream **breast**",
+      "nl": "Zware donkere strepen op een crèmekleurige **borst**"
+    }
+  ]
+}

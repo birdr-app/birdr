@@ -1,0 +1,22 @@
+{
+  "code": "plbspa1",
+  "name": {
+    "en": "Plain-backed Sparrow",
+    "nl": "Geelbuikmus"
+  },
+  "latin": "Passer flaveolus",
+  "look_for": [
+    {
+      "en": "Male: black **throat**, grey **crown**",
+      "nl": "Mannetje: zwarte **keel**, grijze **kruin**"
+    },
+    {
+      "en": "Reddish **eyebrow** and plain chestnut **back**",
+      "nl": "Roodbruine **wenkbrauwstreep** en effen kastanjebruine **rug**"
+    },
+    {
+      "en": "Yellowish underparts; female plain, pale **eyebrow**",
+      "nl": "Gelige onderzijde; vrouwtje effen met lichte **wenkbrauwstreep**"
+    }
+  ]
+}

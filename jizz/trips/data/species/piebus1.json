@@ -1,0 +1,22 @@
+{
+  "code": "piebus1",
+  "name": {
+    "en": "Pied Bushchat",
+    "nl": "Zwarte roodborsttapuit"
+  },
+  "latin": "Saxicola caprata",
+  "look_for": [
+    {
+      "en": "Male: black with a white **wing** patch",
+      "nl": "Mannetje: zwart met wit **vleugelvlak**"
+    },
+    {
+      "en": "White **rump** and undertail",
+      "nl": "Witte **stuit** en onderstaart"
+    },
+    {
+      "en": "Female brown with a rusty **rump**",
+      "nl": "Vrouwtje bruin met roestrode **stuit**"
+    }
+  ]
+}

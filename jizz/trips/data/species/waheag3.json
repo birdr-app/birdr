@@ -1,0 +1,22 @@
+{
+  "code": "waheag3",
+  "name": {
+    "en": "Wahlberg's Eagle",
+    "nl": "Wahlbergs arend"
+  },
+  "latin": "Hieraaetus wahlbergi",
+  "look_for": [
+    {
+      "en": "Slim eagle with a short, pointed **crest**",
+      "nl": "Slanke arend met een korte, puntige **kuif**"
+    },
+    {
+      "en": "Long, square-ended **tail**, flat straight **wings** when soaring",
+      "nl": "Lange, rechte **staart** en vlakke **vleugels** bij het zweven"
+    },
+    {
+      "en": "Mostly dark brown, paler forms occur",
+      "nl": "Meestal donkerbruin, lichtere vormen komen voor"
+    }
+  ]
+}
