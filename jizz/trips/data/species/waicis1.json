@@ -1,0 +1,22 @@
+{
+  "code": "waicis1",
+  "name": {
+    "en": "Wailing Cisticola",
+    "nl": "Jammergraszanger"
+  },
+  "latin": "Cisticola lais",
+  "look_for": [
+    {
+      "en": "Dull brown, pale below, long **tail**",
+      "nl": "Dofbruin, bleek eronder, lange **staart**"
+    },
+    {
+      "en": "Grassy slopes with rocks and shrubs",
+      "nl": "Grazige hellingen met rotsen en struiken"
+    },
+    {
+      "en": "Plaintive, wailing whistles from a perch",
+      "nl": "Klagende fluitjes vanaf een zitplaats"
+    }
+  ]
+}

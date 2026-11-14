@@ -1,0 +1,22 @@
+{
+  "code": "yenalb2",
+  "name": {
+    "en": "Atlantic Yellow-nosed Albatross",
+    "nl": "Atlantische geelneusalbatros"
+  },
+  "latin": "Thalassarche chlororhynchos",
+  "look_for": [
+    {
+      "en": "Slim albatross, white underwings with black edge",
+      "nl": "Slanke albatros, witte onderkant van de vleugel met zwarte rand"
+    },
+    {
+      "en": "Grey **head**, black **bill** with yellow top edge",
+      "nl": "Grijze **kop**, zwarte **snavel** met gele bovenrand"
+    },
+    {
+      "en": "Head darker than Indian Yellow-nosed",
+      "nl": "Kop donkerder dan bij de Indische geelneusalbatros"
+    }
+  ]
+}

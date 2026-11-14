@@ -1,0 +1,22 @@
+{
+  "code": "stalar2",
+  "name": {
+    "en": "Stark's Lark",
+    "nl": "Starkleeuwerik"
+  },
+  "latin": "Spizocorys starki",
+  "look_for": [
+    {
+      "en": "Stout, pale **bill**, slightly swollen",
+      "nl": "Stevige, bleke **snavel**, licht gezwollen"
+    },
+    {
+      "en": "Pale eyebrow and a streaked **crest**",
+      "nl": "Bleke wenkbrauwstreep en een gestreepte **kuif**"
+    },
+    {
+      "en": "Flocks on gravel plains, nomadic after rain",
+      "nl": "Groepen op grindvlaktes, zwervend na regen"
+    }
+  ]
+}

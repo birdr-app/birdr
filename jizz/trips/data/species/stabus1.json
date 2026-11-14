@@ -1,0 +1,22 @@
+{
+  "code": "stabus1",
+  "name": {
+    "en": "Denham's Bustard",
+    "nl": "Denhams trap"
+  },
+  "latin": "Neotis denhami",
+  "look_for": [
+    {
+      "en": "Huge bustard with a pale grey **neck**",
+      "nl": "Reusachtige trap met een lichtgrijze **hals**"
+    },
+    {
+      "en": "Orange **nape**, black-and-white **wings**",
+      "nl": "Oranje **nek**, zwart-witte **vleugels**"
+    },
+    {
+      "en": "Strides slowly over wheat stubble and grass",
+      "nl": "Loopt langzaam over stoppelvelden en gras"
+    }
+  ]
+}

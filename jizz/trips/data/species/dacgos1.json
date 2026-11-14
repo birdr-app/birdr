@@ -1,0 +1,22 @@
+{
+  "code": "dacgos1",
+  "name": {
+    "en": "Dark Chanting-Goshawk",
+    "nl": "Donkere zanghavik"
+  },
+  "latin": "Melierax metabates",
+  "look_for": [
+    {
+      "en": "Dark slate-grey above, finely barred below",
+      "nl": "Donker leigrijs boven, fijn gebandeerd onder"
+    },
+    {
+      "en": "Orange-red **cere** and legs",
+      "nl": "Oranjerode **waslaag** en poten"
+    },
+    {
+      "en": "Rump barred grey, not white like Pale Chanting-Goshawk",
+      "nl": "Stuit grijs gebandeerd, niet wit als bij de Kaapse zanghavik"
+    }
+  ]
+}

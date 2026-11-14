@@ -1,0 +1,22 @@
+{
+  "code": "coqfra2",
+  "name": {
+    "en": "Coqui Francolin",
+    "nl": "Coquifrankolijn"
+  },
+  "latin": "Campocolinus coqui",
+  "look_for": [
+    {
+      "en": "Small francolin of open grassland",
+      "nl": "Kleine frankolijn van open grasland"
+    },
+    {
+      "en": "Male: buff **head**, barred black-and-white underparts",
+      "nl": "Mannetje: bruingele **kop**, zwart-wit gebandeerde onderzijde"
+    },
+    {
+      "en": "Yellow **legs**; flushes only at close range",
+      "nl": "Gele **poten**; vliegt pas van dichtbij op"
+    }
+  ]
+}

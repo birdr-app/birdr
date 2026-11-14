@@ -1,0 +1,22 @@
+{
+  "code": "dobsan1",
+  "name": {
+    "en": "Double-banded Sandgrouse",
+    "nl": "Dubbelbandzandhoen"
+  },
+  "latin": "Pterocles bicinctus",
+  "look_for": [
+    {
+      "en": "Male has black and white bands across the **forehead**",
+      "nl": "Man heeft zwarte en witte banden over het **voorhoofd**"
+    },
+    {
+      "en": "Female buff, finely barred and speckled",
+      "nl": "Vrouw bruingeel, fijn gebandeerd en gespikkeld"
+    },
+    {
+      "en": "Flies to waterholes at dusk and after dark",
+      "nl": "Vliegt in de schemering en na donker naar drinkplaatsen"
+    }
+  ]
+}

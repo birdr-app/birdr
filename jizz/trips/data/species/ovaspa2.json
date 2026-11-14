@@ -1,0 +1,22 @@
+{
+  "code": "ovaspa2",
+  "name": {
+    "en": "Ovambo Sparrowhawk",
+    "nl": "Ovambosperwer"
+  },
+  "latin": "Accipiter ovampensis",
+  "look_for": [
+    {
+      "en": "Slender slate-grey hawk, **tail** with white spots",
+      "nl": "Slanke leigrijze havik, **staart** met witte vlekken"
+    },
+    {
+      "en": "Yellow-orange **cere** and legs",
+      "nl": "Geeloranje **waslaag** en poten"
+    },
+    {
+      "en": "Hunts doves and small birds along woodland edges",
+      "nl": "Jaagt op duiven en kleine vogels langs bosranden"
+    }
+  ]
+}

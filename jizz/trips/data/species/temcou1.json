@@ -1,0 +1,22 @@
+{
+  "code": "temcou1",
+  "name": {
+    "en": "Temminck's Courser",
+    "nl": "Temmincks renvogel"
+  },
+  "latin": "Cursorius temminckii",
+  "look_for": [
+    {
+      "en": "Chestnut **crown** with a black eye-stripe",
+      "nl": "Kastanjebruine **kruin** met een zwarte oogstreep"
+    },
+    {
+      "en": "Sandy back and a dark belly patch",
+      "nl": "Zandkleurige rug en een donkere buikvlek"
+    },
+    {
+      "en": "Runs in groups over burnt ground and short grass",
+      "nl": "Rent in groepjes over verbrande grond en kort gras"
+    }
+  ]
+}

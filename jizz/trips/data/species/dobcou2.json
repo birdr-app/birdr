@@ -1,0 +1,22 @@
+{
+  "code": "dobcou2",
+  "name": {
+    "en": "Double-banded Courser",
+    "nl": "Dubbelbandrenvogel"
+  },
+  "latin": "Smutsornis africanus",
+  "look_for": [
+    {
+      "en": "Two dark **bands** across the white chest",
+      "nl": "Twee donkere **banden** over de witte borst"
+    },
+    {
+      "en": "Pale sandy back, bold white **eyebrow**",
+      "nl": "Bleke zandkleurige rug, opvallende witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Runs in short bursts across bare ground",
+      "nl": "Rent in korte spurten over kale grond"
+    }
+  ]
+}

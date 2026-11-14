@@ -1,0 +1,22 @@
+{
+  "code": "rucspa2",
+  "name": {
+    "en": "Rufous-breasted Sparrowhawk",
+    "nl": "Roodborstsperwer"
+  },
+  "latin": "Accipiter rufiventris",
+  "look_for": [
+    {
+      "en": "Slate-grey back, plain rufous underparts",
+      "nl": "Leigrijze rug, effen roestrode onderkant"
+    },
+    {
+      "en": "Long yellow legs, barred **tail**",
+      "nl": "Lange gele poten, gebandeerde **staart**"
+    },
+    {
+      "en": "Dashes through forest edges and gardens",
+      "nl": "Schiet door bosranden en tuinen"
+    }
+  ]
+}

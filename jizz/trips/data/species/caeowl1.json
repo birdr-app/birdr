@@ -1,0 +1,22 @@
+{
+  "code": "caeowl1",
+  "name": {
+    "en": "Cape Eagle Owl",
+    "nl": "Kaapse oehoe"
+  },
+  "latin": "Bubo capensis",
+  "look_for": [
+    {
+      "en": "Big eagle-owl with **ear** tufts",
+      "nl": "Grote oehoe met oorpluimen"
+    },
+    {
+      "en": "Orange **eyes**, bold dark blotches on the **breast**",
+      "nl": "Oranje **ogen**, forse donkere vlekken op de **borst**"
+    },
+    {
+      "en": "Roosts on rocky cliffs and in gullies",
+      "nl": "Slaapt op rotsige kliffen en in kloven"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "knswar1",
+  "name": {
+    "en": "Knysna Warbler",
+    "nl": "Kaapse struikzanger"
+  },
+  "latin": "Bradypterus sylvaticus",
+  "look_for": [
+    {
+      "en": "Plain dark olive-brown, paler below",
+      "nl": "Effen donker olijfbruin, onderaan lichter"
+    },
+    {
+      "en": "Mottled whitish **throat**, short squared **tail**",
+      "nl": "Gevlekte witachtige **keel**, korte rechte **staart**"
+    },
+    {
+      "en": "Skulks low in thicket along streams",
+      "nl": "Sluipt laag door struikgewas langs beken"
+    }
+  ]
+}

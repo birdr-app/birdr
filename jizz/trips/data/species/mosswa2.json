@@ -1,0 +1,22 @@
+{
+  "code": "mosswa2",
+  "name": {
+    "en": "Mosque Swallow",
+    "nl": "Moskeezwaluw"
+  },
+  "latin": "Cecropis senegalensis",
+  "look_for": [
+    {
+      "en": "Big swallow with rufous underparts and **rump**",
+      "nl": "Grote zwaluw met roestkleurige onderzijde en **stuit**"
+    },
+    {
+      "en": "Deeply forked **tail** with long streamers",
+      "nl": "Diep gevorkte **staart** met lange slierten"
+    },
+    {
+      "en": "Hunts over bush and nests in big hollow trees",
+      "nl": "Jaagt boven het struikgewas en broedt in grote holle bomen"
+    }
+  ]
+}

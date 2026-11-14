@@ -1,0 +1,22 @@
+{
+  "code": "dickes1",
+  "name": {
+    "en": "Dickinson's Kestrel",
+    "nl": "Dickinsontorenvalk"
+  },
+  "latin": "Falco dickinsoni",
+  "look_for": [
+    {
+      "en": "Pale grey **head**, darker grey body",
+      "nl": "Lichtgrijze **kop**, donkerder grijs lijf"
+    },
+    {
+      "en": "Yellow face skin and white **rump**",
+      "nl": "Gele gezichtshuid en witte **stuit**"
+    },
+    {
+      "en": "Sits upright in palms and baobabs",
+      "nl": "Zit rechtop in palmen en baobabs"
+    }
+  ]
+}

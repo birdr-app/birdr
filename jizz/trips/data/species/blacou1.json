@@ -1,0 +1,22 @@
+{
+  "code": "blacou1",
+  "name": {
+    "en": "Black Coucal",
+    "nl": "Zwarte spoorkoekoek"
+  },
+  "latin": "Centropus grillii",
+  "look_for": [
+    {
+      "en": "Breeding male: black **head** and body",
+      "nl": "Broedend mannetje: zwarte **kop** en lijf"
+    },
+    {
+      "en": "Rich chestnut **wings** and back",
+      "nl": "Diep kastanjebruine **vleugels** en rug"
+    },
+    {
+      "en": "Female and winter birds streaked buff",
+      "nl": "Vrouwtje en wintervogels gestreept beige"
+    }
+  ]
+}

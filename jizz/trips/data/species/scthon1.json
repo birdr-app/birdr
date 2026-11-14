@@ -1,0 +1,22 @@
+{
+  "code": "scthon1",
+  "name": {
+    "en": "Scaly-throated Honeyguide",
+    "nl": "Schubkeelhoningspeurder"
+  },
+  "latin": "Indicator variegatus",
+  "look_for": [
+    {
+      "en": "Black and white scaly pattern on the **throat**",
+      "nl": "Zwart-wit schubpatroon op de **keel**"
+    },
+    {
+      "en": "Olive-brown above, pale streaked **breast**",
+      "nl": "Olijfbruin boven, lichte gestreepte **borst**"
+    },
+    {
+      "en": "White outer **tail** feathers show in flight",
+      "nl": "Witte buitenste **staart**veren vallen op in vlucht"
+    }
+  ]
+}

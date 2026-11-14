@@ -1,0 +1,22 @@
+{
+  "code": "mankin2",
+  "name": {
+    "en": "Mangrove Kingfisher",
+    "nl": "Mangrove-ijsvogel"
+  },
+  "latin": "Halcyon senegaloides",
+  "look_for": [
+    {
+      "en": "Large red **bill** and pale grey head",
+      "nl": "Grote rode **snavel** en lichtgrijze kop"
+    },
+    {
+      "en": "Blue **wings** and tail, white underparts",
+      "nl": "Blauwe **vleugels** en staart, witte onderzijde"
+    },
+    {
+      "en": "Sits in coastal mangroves and wooded estuaries",
+      "nl": "Zit in kustmangroven en beboste estuaria"
+    }
+  ]
+}

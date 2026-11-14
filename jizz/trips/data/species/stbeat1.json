@@ -1,0 +1,22 @@
+{
+  "code": "stbeat1",
+  "name": {
+    "en": "Swallow-tailed Bee-eater",
+    "nl": "Zwaluwstaartbijeneter"
+  },
+  "latin": "Merops hirundineus",
+  "look_for": [
+    {
+      "en": "Green bee-eater with a deeply forked blue **tail**",
+      "nl": "Groene bijeneter met een diep gevorkte blauwe **staart**"
+    },
+    {
+      "en": "Yellow throat edged with a black **collar**",
+      "nl": "Gele keel met een zwarte **kraag**"
+    },
+    {
+      "en": "Hawks insects from low bushes",
+      "nl": "Vangt insecten vanaf lage struiken"
+    }
+  ]
+}

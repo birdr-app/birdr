@@ -1,0 +1,22 @@
+{
+  "code": "hottea1",
+  "name": {
+    "en": "Blue-billed Teal",
+    "nl": "Gouden taling"
+  },
+  "latin": "Spatula hottentota",
+  "look_for": [
+    {
+      "en": "Tiny teal with a pale blue-grey **bill**",
+      "nl": "Piepkleine taling met lichtblauwgrijze **snavel**"
+    },
+    {
+      "en": "Dark **crown**, pale face, dark patch on the ear",
+      "nl": "Donkere **kruin**, bleek gezicht, donkere vlek op het oor"
+    },
+    {
+      "en": "Spotted **breast**, light brown flanks",
+      "nl": "Gevlekte **borst**, lichtbruine flanken"
+    }
+  ]
+}

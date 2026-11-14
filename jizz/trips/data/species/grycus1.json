@@ -1,0 +1,22 @@
+{
+  "code": "grycus1",
+  "name": {
+    "en": "Grey Cuckooshrike",
+    "nl": "Bosrupsvogel"
+  },
+  "latin": "Ceblepyris caesius",
+  "look_for": [
+    {
+      "en": "Soft blue-grey all over, no bold marks",
+      "nl": "Zachtblauwgrijs, zonder opvallende tekening"
+    },
+    {
+      "en": "Large dark **eye** with thin white ring",
+      "nl": "Groot donker **oog** met dunne witte ring"
+    },
+    {
+      "en": "Moves slowly through the forest canopy",
+      "nl": "Beweegt langzaam door het bladerdak van het bos"
+    }
+  ]
+}

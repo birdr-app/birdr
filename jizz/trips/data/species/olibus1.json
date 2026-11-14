@@ -1,0 +1,22 @@
+{
+  "code": "olibus1",
+  "name": {
+    "en": "Olive Bushshrike",
+    "nl": "Olijfgroene bosklauwier"
+  },
+  "latin": "Chlorophoneus olivaceus",
+  "look_for": [
+    {
+      "en": "Olive-green **back**; breast yellow to orange",
+      "nl": "Olijfgroene **rug**; borst geel tot oranje"
+    },
+    {
+      "en": "Grey **head** with a black eye-mask",
+      "nl": "Grijze **kop** met een zwart oogmasker"
+    },
+    {
+      "en": "Hidden in dense forest, the whistle gives it away",
+      "nl": "Verborgen in dicht bos, het gefluit verraadt hem"
+    }
+  ]
+}

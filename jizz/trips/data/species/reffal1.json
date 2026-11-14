@@ -1,0 +1,22 @@
+{
+  "code": "reffal1",
+  "name": {
+    "en": "Red-footed Falcon",
+    "nl": "Roodpootvalk"
+  },
+  "latin": "Falco vespertinus",
+  "look_for": [
+    {
+      "en": "Male slate-grey with chestnut **thighs** and vent",
+      "nl": "Man leigrijs met kastanjebruine **dijen** en onderstaartdekveren"
+    },
+    {
+      "en": "Red-orange legs, feet and bill base",
+      "nl": "Roodoranje poten, voeten en snavelbasis"
+    },
+    {
+      "en": "Female orange-buff below, with a dark mask",
+      "nl": "Vrouw oranjebeige onder, met een donker masker"
+    }
+  ]
+}

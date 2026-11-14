@@ -1,0 +1,22 @@
+{
+  "code": "magman1",
+  "name": {
+    "en": "Magpie Mannikin",
+    "nl": "Reuzenekstertje"
+  },
+  "latin": "Spermestes fringilloides",
+  "look_for": [
+    {
+      "en": "Large mannikin with a thick, blue-grey **bill**",
+      "nl": "Groot ekstertje met een dikke, blauwgrijze **snavel**"
+    },
+    {
+      "en": "Black head and breast, white belly",
+      "nl": "Zwarte kop en borst, witte buik"
+    },
+    {
+      "en": "Black-and-white barred flanks",
+      "nl": "Zwart-wit gebandeerde flanken"
+    }
+  ]
+}

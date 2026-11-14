@@ -1,0 +1,22 @@
+{
+  "code": "sabgul",
+  "name": {
+    "en": "Sabine's Gull",
+    "nl": "Vorkstaartmeeuw"
+  },
+  "latin": "Xema sabini",
+  "look_for": [
+    {
+      "en": "Small gull with a forked **tail**",
+      "nl": "Kleine meeuw met een gevorkte **staart**"
+    },
+    {
+      "en": "**Wings** in three triangles: black, white, grey",
+      "nl": "**Vleugels** met drie driehoeken: zwart, wit, grijs"
+    },
+    {
+      "en": "Black **bill**, often yellow-tipped; dark smudge behind eye",
+      "nl": "Zwarte **snavel**, vaak met gele punt; donkere vlek achter het oog"
+    }
+  ]
+}

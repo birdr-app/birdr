@@ -1,0 +1,22 @@
+{
+  "code": "afbowl1",
+  "name": {
+    "en": "African Barred Owlet",
+    "nl": "Kaapse dwerguil"
+  },
+  "latin": "Glaucidium capense",
+  "look_for": [
+    {
+      "en": "Small, round-headed owlet, active by day",
+      "nl": "Klein uiltje met ronde kop, ook overdag actief"
+    },
+    {
+      "en": "Barred back, white underparts spotted brown",
+      "nl": "Gebandeerde rug, witte onderzijde met bruine vlekken"
+    },
+    {
+      "en": "Yellow **eyes**; back barred, not spotted",
+      "nl": "Gele **ogen**; rug gebandeerd, niet gespikkeld"
+    }
+  ]
+}

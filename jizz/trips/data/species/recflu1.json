@@ -1,0 +1,22 @@
+{
+  "code": "recflu1",
+  "name": {
+    "en": "Red-chested Flufftail",
+    "nl": "Roodborstral"
+  },
+  "latin": "Sarothrura rufa",
+  "look_for": [
+    {
+      "en": "Male: rufous head and breast",
+      "nl": "Mannetje: roestrode kop en borst"
+    },
+    {
+      "en": "Black body spotted white",
+      "nl": "Zwart lijf met witte stippen"
+    },
+    {
+      "en": "Tiny, creeps along marsh edges at dawn",
+      "nl": "Piepklein, sluipt bij zonsopgang langs moerasranden"
+    }
+  ]
+}

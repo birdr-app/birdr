@@ -1,0 +1,22 @@
+{
+  "code": "laywar2",
+  "name": {
+    "en": "Layard's Warbler",
+    "nl": "Grijze meeszanger"
+  },
+  "latin": "Curruca layardi",
+  "look_for": [
+    {
+      "en": "Plain grey above, whitish below",
+      "nl": "Effen grijs bovenop, witachtig onderaan"
+    },
+    {
+      "en": "Pale **eye** in a dark face",
+      "nl": "Bleek **oog** in een donker gezicht"
+    },
+    {
+      "en": "White edges to the **tail**, skulks in bushes",
+      "nl": "Witte randen aan de **staart**, schuilt in struiken"
+    }
+  ]
+}

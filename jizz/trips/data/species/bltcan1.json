@@ -1,0 +1,22 @@
+{
+  "code": "bltcan1",
+  "name": {
+    "en": "Black-throated Canary",
+    "nl": "Zwartkeelkanarie"
+  },
+  "latin": "Crithagra atrogularis",
+  "look_for": [
+    {
+      "en": "Black patch on the **throat**, whitish below",
+      "nl": "Zwarte vlek op de **keel**, witachtig onderaan"
+    },
+    {
+      "en": "Streaked brown above, yellow **rump**",
+      "nl": "Gestreept bruin bovenop, gele **stuit**"
+    },
+    {
+      "en": "Small flocks, often at waterholes",
+      "nl": "Kleine groepjes, vaak bij drinkplaatsen"
+    }
+  ]
+}

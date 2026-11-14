@@ -1,0 +1,159 @@
+{
+  "country": "ZA-NATAL",
+  "intro": {
+    "en": "KwaZulu-Natal and Zululand run from the warm Indian Ocean coast to the forests of the midlands. You bird the wetlands of iSimangaliso at St Lucia and Cape Vidal, the sand forest and pans of Mkuze, Phinda and Ndumo, the bushveld of Hluhluwe-iMfolozi, the palms and mangroves around Mtunzini, and the gardens of Durban. This pack covers 79 species, on top of the South Africa trip.",
+    "nl": "KwaZulu-Natal en Zululand lopen van de warme kust van de Indische Oceaan tot de bossen van de midlands. Je kijkt vogels in de wetlands van iSimangaliso bij St Lucia en Cape Vidal, in het zandbos en bij de pannen van Mkuze, Phinda en Ndumo, in het bushveld van Hluhluwe-iMfolozi, bij de palmen en mangroven rond Mtunzini en in de tuinen van Durban. Dit pakket omvat 79 soorten, bovenop de reis naar Zuid-Afrika."
+  },
+  "units": {
+    "waterfowl": {
+      "title": {
+        "en": "Pans, ducks and francolins",
+        "nl": "Poelen, eenden en frankolijnen"
+      },
+      "intro": {
+        "en": "Three ducks of the pans and pools of Zululand, and two ground birds of grassland and thicket. Scan lily-covered water for the ducks at places like Mkuze and Ndumo; the francolins and spurfowl walk out onto tracks at dawn.",
+        "nl": "Drie eenden van de poelen en meertjes van Zululand en twee grondvogels van grasland en struikgewas. Speur het met waterlelies bedekte water af naar de eenden, bijvoorbeeld bij Mkuze en Ndumo; de frankolijnen lopen bij zonsopgang over paden."
+      }
+    },
+    "pigeons-and-doves": {
+      "title": {
+        "en": "Pigeon, turaco, bustard and skulkers",
+        "nl": "Duif, toerako, trap en schuwe soorten"
+      },
+      "intro": {
+        "en": "Seven birds from different corners. A forest pigeon, a turaco and a malkoha live in the trees, a bustard and a coucal in the grass, and a flufftail and a finfoot hide beside water. Most are shy, so learn the shapes before you go.",
+        "nl": "Zeven vogels uit verschillende hoeken. Een bosduif, een toerako en een malkoha leven in de bomen, een trap en een spoorkoekoek in het gras, en een rallier en een watertrapper verstoppen zich langs het water. De meeste zijn schuw, dus leer vooraf hun vormen kennen."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Plovers, waders and a painted-snipe",
+        "nl": "Plevieren, steltlopers en een goudsnip"
+      },
+      "intro": {
+        "en": "Waders of the estuaries and lagoons of the Indian Ocean coast, mostly summer visitors from the north, plus the Senegal Lapwing of inland pans and the painted-snipe of marshy edges. On the mudflats look at bill shape and leg colour first.",
+        "nl": "Steltlopers van de estuaria en lagunes aan de Indische Oceaan, meest zomergasten uit het noorden, plus de rouwkievit van pannen in het binnenland en de goudsnip van moerassige oevers. Let op de mudvlakten eerst op snavelvorm en pootkleur."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Waders, a pratincole and a jacana",
+        "nl": "Steltlopers, vorkstaartplevier, jacana"
+      },
+      "intro": {
+        "en": "Three coastal waders that winter on the shore, and two birds of fresh water: the Lesser Jacana walks on lily pads, and the Collared Pratincole hawks insects over pans and open ground.",
+        "nl": "Drie kustsoorten die aan de kust overwinteren en twee vogels van zoet water: de dwergjaçana loopt over waterlelieblad, en de vorkstaartplevier vangt insecten boven pannen en open terrein."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {
+        "en": "Five terns, a flamingo and an openbill",
+        "nl": "Vijf sterns, een flamingo en een gaper"
+      },
+      "intro": {
+        "en": "Three terns hunt along the coast and estuaries, and two marsh terns hawk over fresh water in summer. The Lesser Flamingo and the African Openbill feed in the shallows of lake edges and pans.",
+        "nl": "Drie sterns jagen langs de kust en in estuaria, en twee moerassterns jagen in de zomer boven zoet water. De kleine flamingo en de Afrikaanse gaper foerageren in het ondiepe water van meeroevers en pannen."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "title": {
+        "en": "Wetland herons and a pelican",
+        "nl": "Reigers en een pelikaan van wetlands"
+      },
+      "intro": {
+        "en": "Squacco and Rufous-bellied Herons wade in shallow, vegetated water, while the two night herons hide in riverside trees by day. The Pink-backed Pelican fishes lakes and estuaries such as Lake St Lucia.",
+        "nl": "Ralreigers en roodbuikreigers waden door ondiep, begroeid water, terwijl de twee kwakken overdag in bomen langs de rivier zitten. De kleine pelikaan vist in meren en estuaria zoals het St Lucia-meer."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "title": {
+        "en": "Raptors of the coast and bushveld",
+        "nl": "Roofvogels van kust en bushveld"
+      },
+      "intro": {
+        "en": "The Palm-nut Vulture lives around raffia and oil palms near the coast, as at Mtunzini, and the Osprey fishes estuaries in summer. The Long-crested Eagle and the Lizard Buzzard watch from poles and treetops over open bush.",
+        "nl": "De palmgier leeft bij raffia- en oliepalmen vlak bij de kust, zoals bij Mtunzini, en de visarend vist in de zomer in estuaria. De Afrikaanse kuifarend en de hagedisbuizerd speuren vanaf palen en boomtoppen over open bush."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Owlet, kingfishers and a roller",
+        "nl": "Uiltje, ijsvogels en een scharrelaar"
+      },
+      "intro": {
+        "en": "A small owlet that is active by day, and three perch-hunters of woodland and forest edge. The two kingfishers take insects and lizards far from water, and the Broad-billed Roller sallies from high bare branches in summer.",
+        "nl": "Een klein uiltje dat ook overdag actief is en drie loerjagers van bos en bosrand. De twee ijsvogels vangen insecten en hagedissen ver van het water, en de breedbekscharrelaar vliegt in de zomer vanaf hoge kale takken uit."
+      }
+    },
+    "barbets-and-toucans": {
+      "title": {
+        "en": "Barbets, woodpeckers and forest birds",
+        "nl": "Ketellappers, spechten en bosvogels"
+      },
+      "intro": {
+        "en": "Two barbets and a tinkerbird that call from the canopy, two woodpecker relatives that work trunks and the ground, and a broadbill and a batis of coastal and sand forest. Listen first: most of these are heard before they are seen.",
+        "nl": "Twee baardvogels en een ketellapper die vanuit het kronendak roepen, twee spechtachtigen die stammen en de grond afzoeken, en een breedbek en een vliegenvanger van kust- en zandbos. Luister eerst: de meeste hoor je eerder dan je ze ziet."
+      }
+    },
+    "bushshrikes-and-allies": {
+      "title": {
+        "en": "Bushshrikes and a nicator",
+        "nl": "Bosklauwieren en een nicator"
+      },
+      "intro": {
+        "en": "Skulkers of thicket and woodland, easier to hear than to see. The Four-coloured Bushshrike, also called Gorgeous Bushshrike, is the star. The tchagra and the boubou sometimes sit in the open, and the nicator sings from dense coastal thicket.",
+        "nl": "Sluipers van struikgewas en bos, makkelijker te horen dan te zien. De bonte bosklauwier, in het Engels ook Gorgeous Bushshrike genoemd, is de ster. De tsjagra en de fiskaal zitten soms in het open, en de nicator zingt vanuit dicht kuststruikgewas."
+      }
+    },
+    "cisticolas-and-allies": {
+      "title": {
+        "en": "Eremomelas, apalis and warblers",
+        "nl": "Eremomela's, apalis en zangertjes"
+      },
+      "intro": {
+        "en": "Small insect-eaters of thornveld, sand forest and rank grass. The eremomelas and Rudd's Apalis work the canopy in small groups, the wren-warbler skulks low with its tail up, and the Red-faced Cisticola calls from tall grass near water.",
+        "nl": "Kleine insecteneters van doornveld, zandbos en hoog gras. De eremomela's en de ruddapalis doorzoeken in groepjes het kronendak, de savannezanger sluipt laag met de staart omhoog, en de roodmaskergraszanger roept vanuit hoog gras bij water."
+      }
+    },
+    "reed-warblers-and-allies": {
+      "title": {
+        "en": "Warbler, greenbul and ground-thrushes",
+        "nl": "Rietzanger, buulbuul en lijsters"
+      },
+      "intro": {
+        "en": "Four birds from different habitats. The African Yellow-Warbler sings from reeds and rank growth near water and the Yellow-streaked Greenbul keeps to forest. The two ground-thrushes are shy birds of the forest floor and prized finds in midlands and coastal forest.",
+        "nl": "Vier vogels uit verschillende leefgebieden. De gele rietzanger zingt vanuit riet en hoge begroeiing bij water en de gestreepte loofbuulbuul blijft in het bos. De twee lijsters zijn schuwe vogels van de bosbodem en gewilde vondsten in het bos van de midlands en de kust."
+      }
+    },
+    "old-world-flycatchers": {
+      "title": {
+        "en": "Flycatchers and a robin-chat",
+        "nl": "Vliegenvangers en een lawaaimaker"
+      },
+      "intro": {
+        "en": "Three grey-brown flycatchers that sit upright on a branch and sally for insects, and a robin-chat that sings from thicket. Look at the underparts and the tail to tell the flycatchers apart; the Grey Tit-Flycatcher flashes white in its outer tail.",
+        "nl": "Drie grijsbruine vliegenvangers die rechtop op een tak zitten en insecten in de vlucht vangen, en een lawaaimaker die vanuit struikgewas zingt. Let op de onderzijde en de staart om de vliegenvangers uit elkaar te houden; de meesvliegenvanger flitst wit in de buitenste staartpennen."
+      }
+    },
+    "sunbirds-and-spiderhunters": {
+      "title": {
+        "en": "Sunbirds and two weavers",
+        "nl": "Honingzuigers en twee wevers"
+      },
+      "intro": {
+        "en": "Neergaard's Sunbird, a Near Threatened bird of the Zululand coastal belt, and the Purple-banded Sunbird feed on nectar at flowering trees and shrubs. The golden-weaver and the Grosbeak Weaver nest in reeds and trees by the water.",
+        "nl": "De Neergaardhoningzuiger, een bijna bedreigde vogel van de kuststrook van Zululand, en de purperbandhoningzuiger eten nectar bij bloeiende bomen en struiken. De goudwever en de dikbekwever nestelen in riet en bomen langs het water."
+      }
+    },
+    "estrildids": {
+      "title": {
+        "en": "Mannikins, finches and a longclaw",
+        "nl": "Ekstertjes, vinkjes en een langklauw"
+      },
+      "intro": {
+        "en": "Small finches that feed on seeds at the edge of forest and in tall grass, plus the Rosy-throated Longclaw of wet grassland. The Pink-throated Twinspot, a Zululand speciality, shuffles on the ground, and the Lemon-breasted Seedeater is a local bird of dry savanna.",
+        "nl": "Kleine vinkjes die zaden eten aan de rand van het bos en in hoog gras, plus de roodkeellangklauw van vochtig grasland. De parelastrild, een specialiteit van Zululand, schuifelt over de grond, en de geelborstkanarie is een plaatselijke vogel van droge savanne."
+      }
+    }
+  }
+}

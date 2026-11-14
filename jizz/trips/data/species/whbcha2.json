@@ -1,0 +1,22 @@
+{
+  "code": "whbcha2",
+  "name": {
+    "en": "Arnot's Chat",
+    "nl": "Arnotmiertapuit"
+  },
+  "latin": "Myrmecocichla arnotti",
+  "look_for": [
+    {
+      "en": "Male black with a white **crown**",
+      "nl": "Man zwart met een witte **kruin**"
+    },
+    {
+      "en": "White shoulder patch on the wing",
+      "nl": "Witte schoudervlek op de vleugel"
+    },
+    {
+      "en": "Female has a black crown and white **throat**",
+      "nl": "Vrouw heeft een zwarte kruin en een witte **keel**"
+    }
+  ]
+}

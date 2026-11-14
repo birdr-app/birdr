@@ -1,0 +1,22 @@
+{
+  "code": "easnic1",
+  "name": {
+    "en": "Eastern Nicator",
+    "nl": "Bruinkopnicator"
+  },
+  "latin": "Nicator gularis",
+  "look_for": [
+    {
+      "en": "Brown **head**, olive back, pale yellowish underparts",
+      "nl": "Bruine **kop**, olijfgroene rug, lichtgele onderzijde"
+    },
+    {
+      "en": "Yellow-tipped wing feathers",
+      "nl": "Gele toppen aan de vleugelpennen"
+    },
+    {
+      "en": "Heavy **bill**; heard far more than seen",
+      "nl": "Stevige **snavel**; vaker gehoord dan gezien"
+    }
+  ]
+}

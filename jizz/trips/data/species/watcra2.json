@@ -1,0 +1,22 @@
+{
+  "code": "watcra2",
+  "name": {
+    "en": "Wattled Crane",
+    "nl": "Lelkraanvogel"
+  },
+  "latin": "Grus carunculata",
+  "look_for": [
+    {
+      "en": "Tall, with a white **neck** and two long **wattles**",
+      "nl": "Hoog, met een witte **hals** en twee lange **lellen**"
+    },
+    {
+      "en": "Slate-black underparts, bare red face",
+      "nl": "Leisteenzwarte onderkant, kaal rood gezicht"
+    },
+    {
+      "en": "Pairs or families on marsh and wet grass",
+      "nl": "Paartjes of gezinnen in moeras en nat gras"
+    }
+  ]
+}

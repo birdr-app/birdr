@@ -1,0 +1,22 @@
+{
+  "code": "macduc1",
+  "name": {
+    "en": "Maccoa Duck",
+    "nl": "Afrikaanse stekelstaart"
+  },
+  "latin": "Oxyura maccoa",
+  "look_for": [
+    {
+      "en": "Stiff **tail**, often cocked up",
+      "nl": "Stijve **staart**, vaak omhoog gehouden"
+    },
+    {
+      "en": "Male: chestnut body, black head, blue **bill**",
+      "nl": "Mannetje: kastanjebruin lijf, zwarte kop, blauwe **snavel**"
+    },
+    {
+      "en": "Female brown, dark stripe across pale cheek",
+      "nl": "Vrouwtje bruin, donkere streep over de lichte wang"
+    }
+  ]
+}

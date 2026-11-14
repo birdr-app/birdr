@@ -1,0 +1,22 @@
+{
+  "code": "senlap1",
+  "name": {
+    "en": "Senegal Lapwing",
+    "nl": "Rouwkievit"
+  },
+  "latin": "Vanellus lugubris",
+  "look_for": [
+    {
+      "en": "Brown-grey lapwing with a white **forehead**",
+      "nl": "Bruingrijze kievit met een wit **voorhoofd**"
+    },
+    {
+      "en": "Brown back, grey-brown breast, white belly",
+      "nl": "Bruine rug, grijsbruine borst, witte buik"
+    },
+    {
+      "en": "Often alone on short or burnt grass",
+      "nl": "Vaak alleen op kort of verbrand gras"
+    }
+  ]
+}

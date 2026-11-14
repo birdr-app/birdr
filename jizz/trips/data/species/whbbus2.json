@@ -1,0 +1,22 @@
+{
+  "code": "whbbus2",
+  "name": {
+    "en": "White-bellied Bustard",
+    "nl": "Senegalese trap"
+  },
+  "latin": "Eupodotis senegalensis",
+  "look_for": [
+    {
+      "en": "Slim, long-legged bustard standing tall in grass",
+      "nl": "Slanke, langpotige trap die rechtop in het gras staat"
+    },
+    {
+      "en": "Male has a blue-grey **neck** and white belly",
+      "nl": "Man heeft een blauwgrijze **hals** en een witte buik"
+    },
+    {
+      "en": "Tawny-brown **back**; female plainer",
+      "nl": "Roodbruine **rug**; vrouw eenvoudiger"
+    }
+  ]
+}

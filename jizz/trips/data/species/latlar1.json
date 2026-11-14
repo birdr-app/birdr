@@ -1,0 +1,22 @@
+{
+  "code": "latlar1",
+  "name": {
+    "en": "Melodious Lark",
+    "nl": "Spotleeuwerik"
+  },
+  "latin": "Mirafra cheniana",
+  "look_for": [
+    {
+      "en": "Streaked brown above, spotted **breast**",
+      "nl": "Gestreept bruin boven, gevlekte **borst**"
+    },
+    {
+      "en": "Pale line over the **eye**, short tail",
+      "nl": "Bleke streep boven het **oog**, korte staart"
+    },
+    {
+      "en": "Long, mimicking song, often from a wire",
+      "nl": "Lang, nabootsend lied, vaak vanaf een draad"
+    }
+  ]
+}

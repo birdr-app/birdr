@@ -1,0 +1,109 @@
+{
+  "country": "ZA-FYNBOS",
+  "intro": {
+    "en": "The south-western Cape has its own world of birds: mountain fynbos on the Peninsula and the Overberg, fields and wetlands on the Cape Flats and the West Coast, and cold Atlantic water full of seabirds. This pack adds 44 species to the South Africa trip, from skulking fynbos endemics to albatrosses seen from Cape Point.",
+    "nl": "Het zuidwesten van Kaapland heeft een eigen vogelwereld: bergfynbos op het schiereiland en in de Overberg, velden en wetlands op de Cape Flats en langs de westkust, en koud Atlantisch water vol zeevogels. Dit pakket voegt 44 soorten toe aan de reis naar Zuid-Afrika, van schuwe fynbos-endemen tot albatrossen vanaf Kaap de Goede Hoop."
+  },
+  "units": {
+    "fynbos-specials": {
+      "title": {
+        "en": "Fynbos skulkers and a lark",
+        "nl": "Fynbosvogels en een leeuwerik"
+      },
+      "intro": {
+        "en": "Three birds of the mountain fynbos that stay low and hidden. Victorin's Warbler and the Fynbos Buttonquail are found nowhere else and need patience and good light, while the Cape Clapper Lark gives itself away by singing and clapping its wings over open slopes.",
+        "nl": "Drie vogels van de bergfynbos die laag en verborgen blijven. De Victorinzanger en de Fynbosvechtkwartel komen nergens anders voor en vragen geduld en goed licht. De Klapperleeuwerik verraadt zich door te zingen en met de vleugels te klappen boven open hellingen."
+      }
+    },
+    "overberg-fields": {
+      "title": {
+        "en": "Overberg fields",
+        "nl": "Velden van de Overberg"
+      },
+      "intro": {
+        "en": "Wheat, canola and fallow fields east of Cape Town hold big birds in plain view. Scan from the road for White Storks and Lesser Kestrels, which arrive from the north in the southern summer.",
+        "nl": "Tarwe-, koolzaad- en braakliggende velden ten oosten van Kaapstad herbergen grote vogels die goed te zien zijn. Speur vanaf de weg naar Ooievaars en Kleine torenvalken, die in de zuidelijke zomer uit het noorden komen."
+      }
+    },
+    "forest-edge": {
+      "title": {
+        "en": "Forest edge hawks and a finch",
+        "nl": "Havikken van de bosrand en een vink"
+      },
+      "intro": {
+        "en": "The wooded slopes of the Peninsula, such as Newlands and Kirstenbosch, hide three hawks that dash through the trees. Watch for them over the canopy in the morning. The finch is a settler from Europe that lives in the same pines and oaks.",
+        "nl": "De beboste hellingen van het schiereiland, zoals Newlands en Kirstenbosch, verbergen drie havikken die door de bomen schieten. Let 's ochtends op ze boven het bladerdak. De vink is een Europese kolonist die in dezelfde dennen en eiken leeft."
+      }
+    },
+    "peninsula-cliffs-and-sky": {
+      "title": {
+        "en": "Cliffs and sky",
+        "nl": "Kliffen en lucht"
+      },
+      "intro": {
+        "en": "The sandstone cliffs of Table Mountain and the Peninsula hold nesting Peregrines and Alpine Swifts. Booted Eagles soar along the slopes, and Common Swifts pass over in summer.",
+        "nl": "De zandsteenkliffen van de Tafelberg en het schiereiland herbergen broedende Slechtvalken en Alpengierzwaluwen. Dwergarenden zweven langs de hellingen en in de zomer trekken Gierzwaluwen over."
+      }
+    },
+    "flats-water": {
+      "title": {
+        "en": "Ducks and a grebe",
+        "nl": "Eenden en een fuut"
+      },
+      "intro": {
+        "en": "The lakes and sewage ponds of the Cape Flats, such as Strandfontein and Rondevlei, are the place for diving and dabbling ducks. Look for the stiff-tailed Maccoa Duck, the dark Southern Pochard, the tiny Blue-billed Teal and flocks of Black-necked Grebes.",
+        "nl": "De meren en bezinkvijvers van de Cape Flats, zoals Strandfontein en Rondevlei, zijn de plek voor duik- en zwemeenden. Zoek naar de Afrikaanse stekelstaart met zijn stijve staart, de donkere Bruine krooneend, de piepkleine Gouden taling en groepen Geoorde futen."
+      }
+    },
+    "reedbed-and-mud": {
+      "title": {
+        "en": "Reedbed, mud and wet grass",
+        "nl": "Rietkraag, slik en nat gras"
+      },
+      "intro": {
+        "en": "Five small birds of the same wetlands, each in its own corner. The African Rail and the Common Reed Warbler stay in the reeds, the African Snipe in wet grass, and the Chestnut-banded Plover on bare salt pans. The Western Yellow Wagtail is a summer visitor on short, damp grass.",
+        "nl": "Vijf kleine vogels van dezelfde wetlands, elk in een eigen hoek. De Afrikaanse waterral en de Kleine karekiet blijven in het riet, de Afrikaanse snip in nat gras en de Kaapse plevier op kale zoutpannen. De Gele kwikstaart is een zomergast op kort, vochtig gras."
+      }
+    },
+    "albatrosses": {
+      "title": {
+        "en": "Albatrosses off the Cape",
+        "nl": "Albatrossen voor de Kaap"
+      },
+      "intro": {
+        "en": "The cold waters off the Cape are one of the best places to see albatrosses, from Cape Point in a strong wind or on a boat trip from Simon's Town or Hout Bay. Winter is best. The yellow-nosed albatrosses are slim with a thin yellow stripe on the bill, and the two forms differ in head colour.",
+        "nl": "De koude wateren voor de Kaap zijn een van de beste plekken om albatrossen te zien, vanaf Kaap de Goede Hoop bij harde wind of tijdens een boottocht vanuit Simon's Town of Hout Bay. De winter is het best. De geelneusalbatrossen zijn slank met een dunne gele streep op de snavel, en de twee vormen verschillen in kopkleur."
+      }
+    },
+    "big-petrels": {
+      "title": {
+        "en": "Giant petrels and petrels",
+        "nl": "Reuzenstormvogels en stormvogels"
+      },
+      "intro": {
+        "en": "Heavy, stiff-winged petrels that follow trawlers and fishing boats. The giant petrels are huge and brown, and the Pintado Petrel is easy to spot by its black-and-white chequered back. The dark gadfly petrels are hard and mostly need a boat.",
+        "nl": "Zware stormvogels met stijve vleugels die vissersboten en trawlers volgen. De reuzenstormvogels zijn enorm en bruin en de Kaapse stormvogel valt op door zijn zwart-wit geblokte rug. De donkere stormvogels zijn lastig en vragen meestal een boot."
+      }
+    },
+    "shearwaters-and-small-petrels": {
+      "title": {
+        "en": "Shearwaters, a prion and a storm-petrel",
+        "nl": "Pijlstormvogels, prion en stormvogeltje"
+      },
+      "intro": {
+        "en": "Smaller seabirds that skim the waves. Sooty Shearwaters pass the headlands in large numbers, and a boat adds the other shearwaters, the pale-bellied Antarctic Prion and the tiny Wilson's Storm-Petrel that patters over the water.",
+        "nl": "Kleinere zeevogels die over de golven scheren. Grauwe pijlstormvogels trekken in grote aantallen langs de kapen, en een boot voegt de andere pijlstormvogels toe, de lichte Antarctische prion en het kleine Wilsons stormvogeltje dat over het water trippelt."
+      }
+    },
+    "skuas-and-gull": {
+      "title": {
+        "en": "Skuas and Sabine's Gull",
+        "nl": "Jagers en Vorkstaartmeeuw"
+      },
+      "intro": {
+        "en": "Piratical seabirds that chase terns and shearwaters until they drop their catch. The Brown Skua is a heavy bird of the southern oceans, while the Arctic and Pomarine Skuas and Sabine's Gull pass in the southern summer.",
+        "nl": "Piraatachtige zeevogels die sterns en pijlstormvogels najagen tot ze hun vangst laten vallen. De Subantarctische grote jager is een zware vogel van de zuidelijke oceanen, terwijl de Kleine en Middelste jager en de Vorkstaartmeeuw in de zuidelijke zomer langstrekken."
+      }
+    }
+  }
+}

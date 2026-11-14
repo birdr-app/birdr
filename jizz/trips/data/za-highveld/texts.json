@@ -1,0 +1,89 @@
+{
+  "country": "ZA-HIGHVELD",
+  "intro": {
+    "en": "The Highveld is South Africa's high, open grassland, running from Gauteng to the Drakensberg escarpment. Wakkerstroom, Dullstroom and Verloren Vallei hold larks and pipits found almost nowhere else, and marshes and rocky hillsides add skulkers and mountain birds. Summer, from November to March, is best, when larks and pipits sing and display. This pack covers 34 species, on top of the South Africa trip.",
+    "nl": "De Highveld is het hoge, open grasland van Zuid-Afrika, van Gauteng tot de Drakensberg-escarpment. Rond Wakkerstroom, Dullstroom en Verloren Vallei leven leeuweriken en piepers die je bijna nergens anders vindt, en moerassen en rotsige hellingen voegen schuwe vogels en berggasten toe. De zomer, van november tot maart, is het beste moment, want dan zingen en baltsen de leeuweriken en piepers. Dit pakket omvat 34 soorten, bovenop de reis naar Zuid-Afrika."
+  },
+  "units": {
+    "highveld-larks": {
+      "title": {
+        "en": "Larks of the short grass",
+        "nl": "Leeuweriken van het korte gras"
+      },
+      "intro": {
+        "en": "The grassland around Wakkerstroom and Verloren Vallei. Rudd's and Botha's Larks are rare, patchy birds of high grassland, so a local guide helps a lot. The Eastern Clapper and Melodious Larks are easier, perching on posts and wires between display flights.",
+        "nl": "Het grasland rond Wakkerstroom en Verloren Vallei. De Sporen- en Bothaleeuwerik zijn zeldzame vogels van hoog grasland die zeer verspreid voorkomen, dus een lokale gids helpt enorm. De Oostelijke klapperleeuwerik en de Spotleeuwerik zijn makkelijker, want ze zitten op palen en draden tussen de baltsvluchten."
+      }
+    },
+    "highveld-pipits": {
+      "title": {
+        "en": "Pipits of grass and rock",
+        "nl": "Piepers van gras en rots"
+      },
+      "intro": {
+        "en": "High grassland and rocky slopes. The Yellow-breasted Pipit is a bright, localised bird of the eastern escarpment, and the Mountain Pipit breeds high in the Drakensberg. The rest are streaky brown pipits: go by bill, breast streaking and habitat, and accept that some stay unnamed.",
+        "nl": "Hoog grasland en rotsige hellingen. De Geelborstpieper is een opvallende, plaatselijke vogel van de oostelijke escarpment en de Bergpieper broedt hoog in de Drakensberg. De rest zijn gestreepte bruine piepers: let op snavel, borststreping en leefgebied, en accepteer dat een enkele onbenoemd blijft."
+      }
+    },
+    "highveld-grassland-game": {
+      "title": {
+        "en": "Bustards, francolin and quails",
+        "nl": "Trappen, frankolijn en kwartels"
+      },
+      "intro": {
+        "en": "Open grassland, farmland and wide valleys. The two bustards walk slowly across the fields, while the francolin and quails hide in long grass and often show only when flushed. Scan from the car along quiet gravel roads.",
+        "nl": "Open grasland, akkers en brede dalen. De twee trappen lopen langzaam over de velden, terwijl de frankolijn en de kwartels zich verstoppen in hoog gras en vaak pas opvliegen vlak voor je voeten. Speur vanuit de auto langs rustige onverharde wegen."
+      }
+    },
+    "highveld-crane-lapwing": {
+      "title": {
+        "en": "Crane, lapwing and pratincole",
+        "nl": "Kraanvogel, kievit en vorkstaartplevier"
+      },
+      "intro": {
+        "en": "Wet grassland, marshes and ploughed fields. The Wattled Crane is a tall, threatened bird of escarpment wetlands, best found with local advice. The lapwing and the pratincole gather in flocks on short grass.",
+        "nl": "Natte graslanden, moerassen en geploegde akkers. De Lelkraanvogel is een hoge, bedreigde vogel van wetlands op de escarpment, die je het best met lokaal advies vindt. De kievit en de vorkstaartplevier verzamelen in groepen op kort gras."
+      }
+    },
+    "highveld-cisticolas": {
+      "title": {
+        "en": "Cisticolas of grass and rock",
+        "nl": "Graszangers van gras en rots"
+      },
+      "intro": {
+        "en": "Tiny brown birds of grass and rocky hillsides, hard to separate by looks alone. Watch where each one sits and how it displays: Cloud and Wing-snapping fly up and sing, Wailing and Rock-loving use rocks and bushes, Pale-crowned likes damp grass.",
+        "nl": "Kleine bruine vogeltjes van gras en rotsige hellingen, op uiterlijk alleen moeilijk uit elkaar te houden. Let op waar elk exemplaar zit en hoe het baltst: de Tinktinkgraszanger en de Dwerggraszanger vliegen zingend op, de Jammer- en Langstaartgraszanger gebruiken rotsen en struiken, de Bleekkopgraszanger houdt van vochtig gras."
+      }
+    },
+    "highveld-escarpment-raptors": {
+      "title": {
+        "en": "Raptors and owls of cliff and grass",
+        "nl": "Roofvogels en uilen van kliffen en gras"
+      },
+      "intro": {
+        "en": "Cliffs, gorges and open grassland. The Bearded Vulture glides along the high Drakensberg, and the Cape Eagle Owl sits tight on a ledge by day. Montagu's Harrier, a summer visitor, and the Marsh Owl quarter open grass low over the ground.",
+        "nl": "Kliffen, kloven en open grasland. De Lammergier zweeft langs de hoge Drakensberg en de Kaapse oehoe zit overdag onbeweeglijk op een rotsrichel. De Grauwe kiekendief, een zomergast, en de Afrikaanse velduil jagen laag over open gras."
+      }
+    },
+    "highveld-swallows": {
+      "title": {
+        "en": "Swallows, a martin and a swift",
+        "nl": "Zwaluwen, een oeverzwaluw en een gierzwaluw"
+      },
+      "intro": {
+        "en": "Birds of the air over grassland, bridges and cliffs. The African Swift is all dark and fast, while the swallows and the martin often sit on wires, which makes a first good look easy.",
+        "nl": "Vogels van de lucht boven grasland, bruggen en kliffen. De Kaapse gierzwaluw is helemaal donker en snel, terwijl de zwaluwen en de Witbrauwzwaluw vaak op draden zitten, zodat je makkelijk een eerste goede kijk krijgt."
+      }
+    },
+    "highveld-marsh": {
+      "title": {
+        "en": "Marsh and thicket birds",
+        "nl": "Vogels van moeras en struikgewas"
+      },
+      "intro": {
+        "en": "Marshes, reedbeds and thickets. The Red-chested Flufftail and Little Bittern stay low and hidden, so watch the reed edge early and late. White-winged Widowbird males sing from stems, while the Fan-tailed Grassbird and Bush Blackcap sit in tall grass and bushes by streams and forest edges.",
+        "nl": "Moerassen, rietvelden en struikgewas. De Roodborstral en de Woudaap blijven laag en verborgen, dus kijk vroeg en laat naar de rietrand. Mannetjes van de Spiegelwidavink zingen vanaf stengels, terwijl de Waaierstaartzanger en de Kaapse zwartkop in hoog gras en struiken zitten langs beken en bosranden."
+      }
+    }
+  }
+}

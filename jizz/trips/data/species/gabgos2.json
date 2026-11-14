@@ -1,0 +1,22 @@
+{
+  "code": "gabgos2",
+  "name": {
+    "en": "Gabar Goshawk",
+    "nl": "Gabarhavik"
+  },
+  "latin": "Micronisus gabar",
+  "look_for": [
+    {
+      "en": "Small slate-grey hawk with a white **rump**",
+      "nl": "Kleine leigrijze havik met een witte **stuit**"
+    },
+    {
+      "en": "Red-orange **cere** and legs",
+      "nl": "Roodoranje **waslaag** en poten"
+    },
+    {
+      "en": "Finely barred **chest**; a black form also occurs",
+      "nl": "Fijn gebandeerde **borst**; er is ook een zwarte vorm"
+    }
+  ]
+}

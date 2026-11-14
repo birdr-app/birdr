@@ -1,0 +1,69 @@
+{
+  "country": "ZA-GARDENROUTE",
+  "intro": {
+    "en": "The Garden Route and the Eastern Cape hold the evergreen forests of the south coast, from Wilderness and Knysna through Tsitsikamma and Hogsback to Port St Johns on the Wild Coast. Here live the forest birds a visitor wants most, among them Knysna Woodpecker, Narina Trogon and Cape Parrot, plus the thicket birds of Addo and the estuary kingfishers of the Wild Coast. This pack covers 28 species, on top of the South Africa trip.",
+    "nl": "De Garden Route en de Oost-Kaap hebben de groenblijvende bossen van de zuidkust, van Wilderness en Knysna via Tsitsikamma en Hogsback tot Port St Johns aan de Wild Coast. Hier leven de bosvogels die je het liefst wilt zien, zoals Knysnaspecht, Narinatrogon en Kaapse papegaai, plus de struikgewasvogels van Addo en de ijsvogels van de estuaria aan de Wild Coast. Dit pakket omvat 28 soorten, bovenop de reis naar Zuid-Afrika."
+  },
+  "units": {
+    "pigeons-and-doves": {
+      "title": {
+        "en": "Forest doves, a cuckoo and an eagle",
+        "nl": "Bosduiven, een koekoek en een arend"
+      },
+      "intro": {
+        "en": "These birds live in tall evergreen forest, and most are heard before they are seen. The doves feed on quiet tracks and forest floors, the emerald cuckoo sits high in the canopy and the Crowned Eagle hunts monkeys from the treetops.",
+        "nl": "Deze vogels leven in hoog, groenblijvend bos en de meeste hoor je eerder dan je ze ziet. De duiven zoeken voedsel op rustige paden en op de bosbodem, de smaragdkoekoek zit hoog in het bladerdak en de kroonarend jaagt vanuit de boomtoppen op apen."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "A wood-owl, a trogon and kingfishers",
+        "nl": "Een bosuil, een trogon en ijsvogels"
+      },
+      "intro": {
+        "en": "Forest, streams and estuaries each give one of these. The African Wood-Owl roosts in dense cover by day, the Narina Trogon sits very still in the mid-canopy and the Half-collared Kingfisher perches over shaded streams. The Mangrove Kingfisher belongs to the mangroves and wooded estuaries of the Wild Coast.",
+        "nl": "Bos, beken en estuaria leveren elk een van deze vogels. De Afrikaanse bosuil rust overdag in dichte begroeiing, de Narinatrogon zit doodstil in het middelste bladerdak en de kobaltijsvogel zit boven beschaduwde beken. De mangrove-ijsvogel hoort thuis in de mangroven en beboste estuaria van de Wild Coast."
+      }
+    },
+    "woodpeckers": {
+      "title": {
+        "en": "Woodpeckers, a parrot, cuckooshrikes",
+        "nl": "Spechten, een papegaai, rupsvogels"
+      },
+      "intro": {
+        "en": "Two woodpeckers share this unit with the Cape Parrot and two cuckooshrikes of the canopy. The Knysna Woodpecker lives nowhere outside South Africa. Listen for tapping on trunks, the shrieks of parrots over the treetops and the thin calls of the cuckooshrikes.",
+        "nl": "Twee spechten delen deze groep met de Kaapse papegaai en twee rupsvogels uit het bladerdak. De Knysnaspecht komt nergens buiten Zuid-Afrika voor. Let op getik op stammen, op het gekrijs van papegaaien boven de boomtoppen en op de dunne roepjes van de rupsvogels."
+      }
+    },
+    "wattle-eyes-and-batises": {
+      "title": {
+        "en": "Wattle-eye, bushshrikes and a drongo",
+        "nl": "Lelvliegenvanger, klauwieren en drongo"
+      },
+      "intro": {
+        "en": "Most of these are heard before they are seen. The Olive Bushshrike and the Southern Tchagra call from dense cover, the wattle-eye hunts along forest edges like a flycatcher and the Square-tailed Drongo sits inside the forest, away from the open perches of the Fork-tailed Drongo.",
+        "nl": "De meeste hoor je eerder dan je ze ziet. De olijfgroene bosklauwier en de Kaapse tsjagra roepen vanuit dichte begroeiing, de lelvliegenvanger jaagt langs bosranden als een vliegenvanger en de rechtstaartdrongo zit in het bos, weg van de open zitplaatsen van de treurdrongo."
+      }
+    },
+    "monarch-flycatchers": {
+      "title": {
+        "en": "Forest warblers and a flycatcher",
+        "nl": "Boszangers en een kuifmonarch"
+      },
+      "intro": {
+        "en": "Knysna and Barratt's Warblers skulk low in tangles along streams and forest edges, and are easiest to find by their songs. The woodland warbler and the crested flycatcher work through the trees, so look for movement in the leaves.",
+        "nl": "Kaapse struikzanger en Barrattstruikzanger sluipen laag door wirwar langs beken en bosranden en zijn het makkelijkst te vinden aan hun zang. De boszanger en de kuifmonarch werken zich door de bomen, let dus op beweging in het blad."
+      }
+    },
+    "white-eyes-yuhinas-and-allies": {
+      "title": {
+        "en": "White-eye, robins, weavers and more",
+        "nl": "Brilvogel, paapje, wevers en meer"
+      },
+      "intro": {
+        "en": "Small birds of the forest floor, scrub and canopy. The White-starred Robin and the Brown Scrub Robin stay low and the scrub robin cocks its tail as it hops, while the yellow white-eye feeds in small flocks higher up. The two weavers hang their nests in forest trees, the Green-backed Twinspot feeds quietly on the ground and the Mountain Wagtail walks along rocky streams.",
+        "nl": "Kleine vogels van de bosbodem, het struikgewas en het bladerdak. Het sterrenpaapje en de bruine waaierstaart blijven laag, waarbij de waaierstaart zijn staart omhoog houdt als hij huppelt, terwijl de gele brilvogel hoger in kleine groepjes voedsel zoekt. De twee wevers hangen hun nest in bosbomen, de groene druppelastrild zoekt rustig voedsel op de grond en de bergkwikstaart loopt langs rotsachtige beken."
+      }
+    }
+  }
+}

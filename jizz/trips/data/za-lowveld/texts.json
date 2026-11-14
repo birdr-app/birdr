@@ -1,0 +1,178 @@
+{
+  "intro": {
+    "en": "This pack is for trips to Kruger National Park and the bushveld around it: the lowveld of Mpumalanga and Limpopo, from Sabi Sand and Satara to Pafuri and Punda Maria, with the Waterberg and Pilanesberg inland. Its 71 birds come on top of the South Africa trip. They are the raptors and owls of the night drive, the cuckoos, rollers and bee-eaters of the summer, and the weavers, waxbills and warblers of thornveld and mopane woodland.",
+    "nl": "Dit pakket is voor reizen naar het Krugerpark en het bosveld eromheen: de lowveld van Mpumalanga en Limpopo, van Sabi Sand en Satara tot Pafuri en Punda Maria, met de Waterberg en Pilanesberg in het binnenland. De 71 vogels komen bovenop de reis door Zuid-Afrika. Het zijn de roofvogels en uilen van de nachtrit, de koekoeken, scharrelaars en bijeneters van de zomer en de wevers, astrilden en zangers van doornveld en mopanebos."
+  },
+  "units": {
+    "bushveld-raptors": {
+      "title": {
+        "en": "Hawks and goshawks",
+        "nl": "Haviken en sperwers"
+      },
+      "intro": {
+        "en": "Small hawks work the woodland edges and riverbanks of the lowveld. The chanting-goshawk sits on an open perch, while the sparrowhawks and the Shikra ambush birds from cover. Check the colour of the bill base and legs, and the rump.",
+        "nl": "Kleine haviken jagen langs bosranden en rivieroevers van de lowveld. De zanghavik zit op een open uitkijkpost, terwijl de sperwers en de Shikra vogels vanuit dekking overvallen. Let op de kleur van de snavelbasis en de poten, en op de stuit."
+      }
+    },
+    "eagles-vultures": {
+      "title": {
+        "en": "A vulture, eagles and a bat hawk",
+        "nl": "Een gier, arenden en een vleermuiswouw"
+      },
+      "intro": {
+        "en": "The lowveld still holds big birds of prey. The White-headed Vulture comes to carcasses, usually in pairs, and the Steppe Eagle is a summer visitor from Eurasia. The snake-eagle sits in shady riverside trees and the Bat Hawk shows up at dusk.",
+        "nl": "In de lowveld zie je nog grote roofvogels. De witkopgier komt op kadavers af, meestal in paren, en de steppearend is een zomergast uit Eurazië. De slangenarend zit in schaduwrijke bomen langs de rivier en de vleermuiswouw verschijnt in de schemering."
+      }
+    },
+    "falcons": {
+      "title": {
+        "en": "Falcons and kestrel",
+        "nl": "Valken en torenvalk"
+      },
+      "intro": {
+        "en": "Falcons and a kestrel hunt in the open bushveld. Dickinson's Kestrel and the Red-necked Falcon like palms, baobabs and dry woodland. The Red-footed Falcon and the Hobby are summer visitors from Europe and Asia, often over grassland.",
+        "nl": "Valken en een torenvalk jagen in het open bosveld. De dickinsontorenvalk en de roodkopvalk houden van palmen, baobabs en droog bos. De roodpootvalk en de boomvalk zijn zomergasten uit Europa en Azië, vaak boven grasland."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Owls of the night drive",
+        "nl": "Uilen van de nachtrit"
+      },
+      "intro": {
+        "en": "Most owls here are heard before they are seen. Night drives in Kruger and the private reserves turn up the eagle owl and the white-faced owl. The scops owl sits motionless against a branch, and Pel's Fishing-Owl is a rare prize along wooded rivers such as the Luvuvhu at Pafuri.",
+        "nl": "De meeste uilen hoor je hier eerder dan je ze ziet. Nachtritten in Kruger en de privéreservaten leveren de oehoe en de witwanguil op. De dwergooruil zit roerloos tegen een tak en de Pel-visuil is een zeldzame prijs langs beboste rivieren zoals de Luvuvhu bij Pafuri."
+      }
+    },
+    "nightjars": {
+      "title": {
+        "en": "Nightjars at dusk",
+        "nl": "Nachtzwaluwen in de schemering"
+      },
+      "intro": {
+        "en": "Nightjars come out at dusk and often sit on dirt roads, where headlights catch their eyeshine. By day they sleep on the ground or on rocks, hidden by their plumage. Look at the throat, the collar and the corners of the tail.",
+        "nl": "Nachtzwaluwen komen in de schemering tevoorschijn en zitten vaak op zandwegen, waar koplampen hun oogglans vangen. Overdag slapen ze op de grond of op rotsen, onzichtbaar door hun verenkleed. Let op de keel, de kraag en de hoeken van de staart."
+      }
+    },
+    "swallows": {
+      "title": {
+        "en": "Swallows and a spinetail",
+        "nl": "Zwaluwen en een Böhmgierzwaluw"
+      },
+      "intro": {
+        "en": "Two swallows and a swift relative hunt over the bush and the big trees. The Mosque Swallow nests in hollow trees and the Pearl-breasted Swallow is white below. The Bat-like Spinetail is a bird of the baobabs in the far north.",
+        "nl": "Twee zwaluwen en een verwant van de gierzwaluwen jagen boven het struikgewas en de grote bomen. De moskeezwaluw broedt in holle bomen en de parelborstzwaluw is wit onder. De Böhmgierzwaluw is een vogel van de baobabs in het verre noorden."
+      }
+    },
+    "rollers-bee-eaters": {
+      "title": {
+        "en": "A roller and two bee-eaters",
+        "nl": "Een scharrelaar en twee bijeneters"
+      },
+      "intro": {
+        "en": "Bright birds on bare branches and wires. The two bee-eaters catch insects in the air, and the Racket-tailed Roller is a scarce bird of the tall woodland in the far north.",
+        "nl": "Felgekleurde vogels op kale takken en draden. De twee bijeneters vangen insecten in de lucht en de vlagstaartscharrelaar is een schaarse vogel van het hoge bos in het verre noorden."
+      }
+    },
+    "cuckoos": {
+      "title": {
+        "en": "Cuckoos",
+        "nl": "Koekoeken"
+      },
+      "intro": {
+        "en": "Summer brings the cuckoos, and most are easier to hear than to see. They lay their eggs in other birds' nests, so each one follows its own hosts. Check the back and the underparts, and listen for the call.",
+        "nl": "In de zomer komen de koekoeken, en de meeste hoor je gemakkelijker dan je ze ziet. Ze leggen hun eieren in de nesten van andere vogels, dus elke soort volgt zijn eigen gastheren. Kijk naar de rug en de onderzijde en luister naar de roep."
+      }
+    },
+    "canopy": {
+      "title": {
+        "en": "Canopy of the riverine woodland",
+        "nl": "Kroonlaag van het oeverbos"
+      },
+      "intro": {
+        "en": "These birds live high in riverside trees and mopane. Look up for the tinkerbird, the oriole and the helmetshrikes moving in a noisy group. The parrot flies fast and calls, and Meves's Starling stands out by its very long tail.",
+        "nl": "Deze vogels leven hoog in bomen langs de rivier en in mopane. Kijk omhoog naar de ketellapper, de wielewaal en de klauwieren die in een luidruchtige groep voorbijtrekken. De papegaai vliegt snel en roept, en de meveglansspreeuw valt op door zijn zeer lange staart."
+      }
+    },
+    "tits-honeyguide": {
+      "title": {
+        "en": "Tits, a honeyguide and a sunbird",
+        "nl": "Mezen, honingspeurder en honingzuiger"
+      },
+      "intro": {
+        "en": "Small birds of the thornveld canopy. The tits and the penduline tit forage in bird parties, the honeyguide calls from a high bare branch, and the sunbird is plain grey-brown.",
+        "nl": "Kleine vogels van de kroonlaag in het doornveld. De mezen en de kapokmees zoeken in gemengde groepjes naar voedsel, de honingspeurder roept vanaf een hoge kale tak en de honingzuiger is effen grijsbruin."
+      }
+    },
+    "chats-thrushes": {
+      "title": {
+        "en": "Robins, thrushes and chats",
+        "nl": "Roodborsten, lijsters en tapuiten"
+      },
+      "intro": {
+        "en": "Four birds of the northern woodland and thickets. The Collared Palm-Thrush and Arnot's Chat are scarce in South Africa and best looked for around Pafuri and the Limpopo valley. The scrub robin skulks in tangles and the rock thrush winters on rocky outcrops.",
+        "nl": "Vier vogels van het noordelijke bos en struikgewas. De zambezipalmlijster en de arnotmiertapuit zijn schaars in Zuid-Afrika en je zoekt ze het best rond Pafuri en de Limpopovallei. De waaierstaart sluipt door wirwar en de rotslijster overwintert op rotsachtige uitstekers."
+      }
+    },
+    "warblers": {
+      "title": {
+        "en": "Warblers of thornveld and mopane",
+        "nl": "Zangers van doornveld en mopane"
+      },
+      "intro": {
+        "en": "Small brown and grey birds of thornveld and mopane woodland, easy to miss. Find them by sound and by joining bird parties. The prinia sits up and wags its tail, while the others stay inside the bush.",
+        "nl": "Kleine bruine en grijze vogels van doornveld en mopanebos, gemakkelijk te missen. Je vindt ze op geluid en door aan te sluiten bij gemengde groepjes. De prinia zit zichtbaar en wipt met zijn staart, de andere blijven in het struikgewas."
+      }
+    },
+    "weavers": {
+      "title": {
+        "en": "Weavers and a sparrow",
+        "nl": "Wevers en een mus"
+      },
+      "intro": {
+        "en": "Weavers hang their nests from branches over water or in thorn trees. Breeding males are bright, while females and young are dull, so check the bill and the face. The golden-weavers and the masked-weaver nest in colonies over water.",
+        "nl": "Wevers hangen hun nesten aan takken boven water of in doornbomen. Mannetjes in broedkleed zijn fel, vrouwtjes en jonge vogels saai, dus let op de snavel en het gezicht. De goudwevers en de textorwever nestelen in kolonies boven water."
+      }
+    },
+    "finches": {
+      "title": {
+        "en": "Waxbills and firefinches",
+        "nl": "Prachtvinken en vuurvinken"
+      },
+      "intro": {
+        "en": "Small seedeaters of grass and thorn scrub that come to drink at pools. The waxbill and the firefinch are pretty but tiny, the Cut-throat feeds on bare ground, and the Quailfinch rises from short grass, calling.",
+        "nl": "Kleine zaadeters van gras en doornstruweel die bij plassen komen drinken. De astrild en de amarant zijn mooi maar klein, de bandvink zoekt voedsel op kale grond en de kwartelastrild vliegt roepend op uit kort gras."
+      }
+    },
+    "whydahs": {
+      "title": {
+        "en": "Whydahs, an indigobird and a bunting",
+        "nl": "Weduwen, een indigovink en een gors"
+      },
+      "intro": {
+        "en": "The whydah and the indigobird lay their eggs in the nests of waxbills and firefinches. Males in breeding dress are easy to recognise, outside the season they look like sparrows. The Cinnamon-breasted Bunting sits on rocks.",
+        "nl": "De wida en de indigovink leggen hun eieren in de nesten van astrilden en amaranten. Mannetjes in broedkleed herken je gemakkelijk, buiten het seizoen lijken ze op mussen. De zevenstrepengors zit op rotsen."
+      }
+    },
+    "open-ground": {
+      "title": {
+        "en": "Doves, sandgrouse and the grass",
+        "nl": "Duiven, zandhoenders en het gras"
+      },
+      "intro": {
+        "en": "Open grass and bare ground hold birds that stay low. The sandgrouse visit waterholes at dusk, the lark and the bustard display in summer, and the Striped Pipit sits in trees on rocky slopes.",
+        "nl": "Open gras en kale grond herbergen vogels die laag blijven. De zandhoenders bezoeken in de schemering drinkplaatsen, de leeuwerik en de trap baltsen in de zomer en de gestreepte pieper zit in bomen op rotsachtige hellingen."
+      }
+    },
+    "coursers-storks": {
+      "title": {
+        "en": "Coursers and storks of the plains",
+        "nl": "Renvogels en ooievaars van de vlakte"
+      },
+      "intro": {
+        "en": "The coursers run over bare and burnt ground and are mostly active at dusk and at night. Abdim's Stork arrives in flocks in the summer, and the Black Stork stands alone at rivers and pools.",
+        "nl": "De renvogels rennen over kale en verbrande grond en zijn vooral in de schemering en 's nachts actief. Abdims ooievaar komt in de zomer in groepen aan en de zwarte ooievaar staat alleen bij rivieren en poelen."
+      }
+    }
+  }
+}

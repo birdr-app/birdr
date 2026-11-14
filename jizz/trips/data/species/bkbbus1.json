@@ -1,0 +1,22 @@
+{
+  "code": "bkbbus1",
+  "name": {
+    "en": "Black-bellied Bustard",
+    "nl": "Zwartbuiktrap"
+  },
+  "latin": "Lissotis melanogaster",
+  "look_for": [
+    {
+      "en": "Male: black **belly** and breast, long neck",
+      "nl": "Mannetje: zwarte **buik** en borst, lange hals"
+    },
+    {
+      "en": "Mottled brown back; female has a buff belly",
+      "nl": "Gevlekte bruine rug; vrouwtje heeft een lichte buik"
+    },
+    {
+      "en": "Stands tall in long grass",
+      "nl": "Staat rechtop in hoog gras"
+    }
+  ]
+}

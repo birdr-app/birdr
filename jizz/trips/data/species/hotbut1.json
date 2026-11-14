@@ -1,0 +1,22 @@
+{
+  "code": "hotbut1",
+  "name": {
+    "en": "Fynbos Buttonquail",
+    "nl": "Fynbosvechtkwartel"
+  },
+  "latin": "Turnix hottentottus",
+  "look_for": [
+    {
+      "en": "Tiny, plump, quail-like bird",
+      "nl": "Klein, rond, kwartelachtig vogeltje"
+    },
+    {
+      "en": "Rufous **throat** and breast, scaled back",
+      "nl": "Roestbruine **keel** en borst, geschubde rug"
+    },
+    {
+      "en": "Flushes at your feet, drops back into cover",
+      "nl": "Vliegt vlak voor je voeten op en duikt weer weg"
+    }
+  ]
+}

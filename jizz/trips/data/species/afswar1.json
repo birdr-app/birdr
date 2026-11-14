@@ -1,0 +1,22 @@
+{
+  "code": "afswar1",
+  "name": {
+    "en": "Barratt's Warbler",
+    "nl": "Barrattstruikzanger"
+  },
+  "latin": "Bradypterus barratti",
+  "look_for": [
+    {
+      "en": "Rusty-brown **crown**, back and **tail**",
+      "nl": "Roestbruine **kruin**, rug en **staart**"
+    },
+    {
+      "en": "Whitish **breast** streaked grey, buff throat",
+      "nl": "Witachtige **borst** met grijze strepen, bruingele keel"
+    },
+    {
+      "en": "Creeps mouse-like through tangled bracken",
+      "nl": "Kruipt muisachtig door verward adelaarsvaren"
+    }
+  ]
+}

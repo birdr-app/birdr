@@ -1,0 +1,22 @@
+{
+  "code": "orgthr1",
+  "name": {
+    "en": "Orange Ground-Thrush",
+    "nl": "Gurneylijster"
+  },
+  "latin": "Geokichla gurneyi",
+  "look_for": [
+    {
+      "en": "Orange **breast** and flanks, white belly",
+      "nl": "Oranje **borst** en flanken, witte buik"
+    },
+    {
+      "en": "Slate-grey back and head, white wing bars",
+      "nl": "Leigrijze rug en kop, witte vleugelstrepen"
+    },
+    {
+      "en": "Hops on the forest floor, flipping leaves",
+      "nl": "Hipt over de bosbodem en keert bladeren om"
+    }
+  ]
+}

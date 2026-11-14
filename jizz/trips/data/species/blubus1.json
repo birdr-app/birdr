@@ -1,0 +1,22 @@
+{
+  "code": "blubus1",
+  "name": {
+    "en": "Blue Bustard",
+    "nl": "Blauwe trap"
+  },
+  "latin": "Eupodotis caerulescens",
+  "look_for": [
+    {
+      "en": "Blue-grey **neck** and breast, black **belly**",
+      "nl": "Blauwgrijze **hals** en borst, zwarte **buik**"
+    },
+    {
+      "en": "Female sandy and finely barred, no blue",
+      "nl": "Vrouwtje zandbruin en fijn gebandeerd, zonder blauw"
+    },
+    {
+      "en": "Open short grassland, croaking in display flight",
+      "nl": "Open kortgrazig land, schorre balts in de lucht"
+    }
+  ]
+}

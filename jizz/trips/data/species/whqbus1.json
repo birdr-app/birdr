@@ -1,0 +1,22 @@
+{
+  "code": "whqbus1",
+  "name": {
+    "en": "White-quilled Bustard",
+    "nl": "Botswanatrap"
+  },
+  "latin": "Afrotis afraoides",
+  "look_for": [
+    {
+      "en": "Male black below with a white **cheek** patch",
+      "nl": "Mannetje zwart onderaan met een witte **wang**vlek"
+    },
+    {
+      "en": "White panels in the **wings** show in flight",
+      "nl": "Witte vlakken in de **vleugels** zichtbaar in vlucht"
+    },
+    {
+      "en": "Replaces Black Bustard in the Kalahari",
+      "nl": "Vervangt de Zwarte trap in de Kalahari"
+    }
+  ]
+}

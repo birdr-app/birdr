@@ -1,0 +1,22 @@
+{
+  "code": "ratrol2",
+  "name": {
+    "en": "Racket-tailed Roller",
+    "nl": "Vlagstaartscharrelaar"
+  },
+  "latin": "Coracias spatulatus",
+  "look_for": [
+    {
+      "en": "Fawn-brown **head** and back, pale blue underparts",
+      "nl": "Beigebruine **kop** en rug, lichtblauwe onderzijde"
+    },
+    {
+      "en": "Long tail streamers ending in rackets",
+      "nl": "Lange staartslierten met een racketvormig uiteinde"
+    },
+    {
+      "en": "No lilac breast, unlike Lilac-breasted Roller",
+      "nl": "Geen lila borst, anders dan de vorkstaartscharrelaar"
+    }
+  ]
+}

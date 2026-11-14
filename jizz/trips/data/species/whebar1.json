@@ -1,0 +1,22 @@
+{
+  "code": "whebar1",
+  "name": {
+    "en": "White-eared Barbet",
+    "nl": "Witoorbaardvogel"
+  },
+  "latin": "Stactolaema leucotis",
+  "look_for": [
+    {
+      "en": "Black **head** with white stripes by the eye",
+      "nl": "Zwarte **kop** met witte strepen bij het oog"
+    },
+    {
+      "en": "White ear stripe; pale underparts",
+      "nl": "Witte oorstreep; lichte onderzijde"
+    },
+    {
+      "en": "Dark **back**; calls from fruiting trees",
+      "nl": "Donkere **rug**; roept uit vruchtdragende bomen"
+    }
+  ]
+}

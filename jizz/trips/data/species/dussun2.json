@@ -1,0 +1,22 @@
+{
+  "code": "dussun2",
+  "name": {
+    "en": "Dusky Sunbird",
+    "nl": "Roethoningzuiger"
+  },
+  "latin": "Cinnyris fuscus",
+  "look_for": [
+    {
+      "en": "Male dark, with a glossy green **head**",
+      "nl": "Mannetje donker, met een glanzend groene **kop**"
+    },
+    {
+      "en": "Female dull grey-brown, pale below",
+      "nl": "Vrouwtje dof grijsbruin, bleek onderaan"
+    },
+    {
+      "en": "Feeds at aloes and flowers in dry scrub",
+      "nl": "Voedt zich bij aloë's en bloemen in droog struweel"
+    }
+  ]
+}

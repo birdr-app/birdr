@@ -1,0 +1,22 @@
+{
+  "code": "ashfly1",
+  "name": {
+    "en": "Ashy Flycatcher",
+    "nl": "Blauwgrijze vliegenvanger"
+  },
+  "latin": "Fraseria caerulescens",
+  "look_for": [
+    {
+      "en": "Blue-grey **head** and back, plain face",
+      "nl": "Blauwgrijze **kop** en rug, effen gezicht"
+    },
+    {
+      "en": "White throat grading into a grey breast",
+      "nl": "Witte keel die overgaat in een grijze borst"
+    },
+    {
+      "en": "Sits upright on a branch, sallies for insects",
+      "nl": "Zit rechtop op een tak, vangt insecten in de vlucht"
+    }
+  ]
+}

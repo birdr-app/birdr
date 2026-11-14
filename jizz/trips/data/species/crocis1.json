@@ -1,0 +1,22 @@
+{
+  "code": "crocis1",
+  "name": {
+    "en": "Croaking Cisticola",
+    "nl": "Natalgraszanger"
+  },
+  "latin": "Cisticola natalensis",
+  "look_for": [
+    {
+      "en": "Big, strongly streaked cisticola with a heavy **bill**",
+      "nl": "Grote, sterk gestreepte graszanger met een zware **snavel**"
+    },
+    {
+      "en": "Dark streaks on **back** and crown",
+      "nl": "Donkere strepen op **rug** en kruin"
+    },
+    {
+      "en": "Calls a croaking, rattling song from tall grass",
+      "nl": "Roept een krakend, ratelend lied uit hoog gras"
+    }
+  ]
+}

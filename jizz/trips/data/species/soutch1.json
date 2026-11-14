@@ -1,0 +1,22 @@
+{
+  "code": "soutch1",
+  "name": {
+    "en": "Southern Tchagra",
+    "nl": "Kaapse tsjagra"
+  },
+  "latin": "Tchagra tchagra",
+  "look_for": [
+    {
+      "en": "Brown **crown** with a pale eyebrow stripe",
+      "nl": "Bruine **kruin** met lichte wenkbrauwstreep"
+    },
+    {
+      "en": "Chestnut **wings** in flight, dark tail",
+      "nl": "Kastanjebruine **vleugels** in vlucht, donkere staart"
+    },
+    {
+      "en": "Skulks in thicket, sings from a bush top",
+      "nl": "Sluipt door struikgewas, zingt vanaf een struiktop"
+    }
+  ]
+}

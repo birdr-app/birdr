@@ -1,0 +1,22 @@
+{
+  "code": "grekes1",
+  "name": {
+    "en": "Greater Kestrel",
+    "nl": "Grote torenvalk"
+  },
+  "latin": "Falco rupicoloides",
+  "look_for": [
+    {
+      "en": "Pale, whitish **eye**, unlike other kestrels",
+      "nl": "Bleek, witachtig **oog**, anders dan andere torenvalken"
+    },
+    {
+      "en": "Larger and paler than Rock Kestrel",
+      "nl": "Groter en bleker dan de Rotsvalk"
+    },
+    {
+      "en": "Hovers over open ground or sits on posts",
+      "nl": "Bidt boven open grond of zit op palen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "botlar1",
+  "name": {
+    "en": "Botha's Lark",
+    "nl": "Bothaleeuwerik"
+  },
+  "latin": "Spizocorys fringillaris",
+  "look_for": [
+    {
+      "en": "Pinkish, cone-shaped **bill**",
+      "nl": "Roze, kegelvormige **snavel**"
+    },
+    {
+      "en": "Streaked **flanks**, buff **breast**, bold face",
+      "nl": "Gestreepte **flanken**, beige **borst**, opvallend gezicht"
+    },
+    {
+      "en": "Bare or grazed patches in short grassland",
+      "nl": "Kale of begraasde plekken in kort grasland"
+    }
+  ]
+}

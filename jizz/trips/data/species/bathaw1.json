@@ -1,0 +1,22 @@
+{
+  "code": "bathaw1",
+  "name": {
+    "en": "Bat Hawk",
+    "nl": "Vleermuiswouw"
+  },
+  "latin": "Macheiramphus alcinus",
+  "look_for": [
+    {
+      "en": "Dark chocolate-brown with a white **throat** patch",
+      "nl": "Donkerbruin met een witte **keel**vlek"
+    },
+    {
+      "en": "White eye crescents, big yellow **eyes**",
+      "nl": "Witte oogbogen, grote gele **ogen**"
+    },
+    {
+      "en": "Hunts bats at dusk on long, falcon-like wings",
+      "nl": "Jaagt in de schemering op vleermuizen met lange valkachtige vleugels"
+    }
+  ]
+}

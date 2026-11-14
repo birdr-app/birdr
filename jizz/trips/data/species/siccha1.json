@@ -1,0 +1,22 @@
+{
+  "code": "siccha1",
+  "name": {
+    "en": "Sickle-winged Chat",
+    "nl": "Vlaktespekvreter"
+  },
+  "latin": "Emarginata sinuata",
+  "look_for": [
+    {
+      "en": "Dark grey back, off-white underparts, rufous patch behind **eye**",
+      "nl": "Donkergrijze rug, gebroken witte onderzijde, roestvlek achter het **oog**"
+    },
+    {
+      "en": "Buff-pink **rump** and tail base, black tail tip",
+      "nl": "Buff-roze **stuit** en staartbasis, zwarte staartpunt"
+    },
+    {
+      "en": "Runs fast on stony ground and Karoo scrub",
+      "nl": "Rent snel over stenige grond en Karoo-struweel"
+    }
+  ]
+}

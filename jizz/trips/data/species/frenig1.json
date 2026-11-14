@@ -1,0 +1,22 @@
+{
+  "code": "frenig1",
+  "name": {
+    "en": "Freckled Nightjar",
+    "nl": "Rotsnachtzwaluw"
+  },
+  "latin": "Caprimulgus tristigma",
+  "look_for": [
+    {
+      "en": "Big, dark nightjar, finely **freckled**",
+      "nl": "Grote, donkere nachtzwaluw, fijn **gespikkeld**"
+    },
+    {
+      "en": "Roosts by day on boulders and rock slopes",
+      "nl": "Rust overdag op rotsblokken en rotshellingen"
+    },
+    {
+      "en": "Whitish **throat** patch, no rufous collar",
+      "nl": "Witachtige **keel**vlek, geen roestkleurige kraag"
+    }
+  ]
+}

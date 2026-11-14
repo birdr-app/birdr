@@ -1,0 +1,22 @@
+{
+  "code": "bufpip1",
+  "name": {
+    "en": "Buffy Pipit",
+    "nl": "Vaalrivierpieper"
+  },
+  "latin": "Anthus vaalensis",
+  "look_for": [
+    {
+      "en": "Small, pale sandy-buff pipit",
+      "nl": "Kleine, bleke, zandbeige pieper"
+    },
+    {
+      "en": "Faintly streaked **breast**, plain belly",
+      "nl": "Vaag gestreepte **borst**, effen buik"
+    },
+    {
+      "en": "Bobs its **tail** on bare or short ground",
+      "nl": "Wipt met de **staart** op kale grond of kort gras"
+    }
+  ]
+}

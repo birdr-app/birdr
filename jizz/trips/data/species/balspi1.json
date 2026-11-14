@@ -1,0 +1,22 @@
+{
+  "code": "balspi1",
+  "name": {
+    "en": "Bat-like Spinetail",
+    "nl": "Böhmgierzwaluw"
+  },
+  "latin": "Neafrapus boehmi",
+  "look_for": [
+    {
+      "en": "Stubby, short-tailed swift with a pale belly",
+      "nl": "Gedrongen gierzwaluw met een korte staart en een lichte buik"
+    },
+    {
+      "en": "Fluttering, bat-like flight on broad wings",
+      "nl": "Fladderende, vleermuisachtige vlucht op brede vleugels"
+    },
+    {
+      "en": "Hawks round baobabs and tall riverside trees",
+      "nl": "Jaagt rond baobabs en hoge bomen langs de rivier"
+    }
+  ]
+}

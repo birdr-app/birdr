@@ -1,0 +1,22 @@
+{
+  "code": "faseag1",
+  "name": {
+    "en": "Southern Banded Snake-Eagle",
+    "nl": "Grijze slangenarend"
+  },
+  "latin": "Circaetus fasciolatus",
+  "look_for": [
+    {
+      "en": "Grey-brown with a heavily barred belly",
+      "nl": "Grijsbruin met een sterk gebandeerde buik"
+    },
+    {
+      "en": "Large round head, big yellow **eyes**",
+      "nl": "Grote ronde kop, grote gele **ogen**"
+    },
+    {
+      "en": "Dark **tail** with a pale central band",
+      "nl": "Donkere **staart** met een lichte middenband"
+    }
+  ]
+}

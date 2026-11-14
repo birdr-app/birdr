@@ -1,0 +1,22 @@
+{
+  "code": "shclar1",
+  "name": {
+    "en": "Short-clawed Lark",
+    "nl": "Botswanaleeuwerik"
+  },
+  "latin": "Certhilauda chuana",
+  "look_for": [
+    {
+      "en": "Dark-streaked **back**, buff-brown overall",
+      "nl": "Donker gestreepte **rug**, overal buffbruin"
+    },
+    {
+      "en": "Streaked breast, shorter **bill** than the long-billed larks",
+      "nl": "Gestreepte borst, kortere **snavel** dan de langsnavelleeuweriken"
+    },
+    {
+      "en": "Stands upright on stony ground at thornveld edges",
+      "nl": "Staat rechtop op stenige grond aan de rand van doornveld"
+    }
+  ]
+}

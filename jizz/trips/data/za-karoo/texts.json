@@ -1,0 +1,79 @@
+{
+  "country": "ZA-KAROO",
+  "intro": {
+    "en": "This pack is for the dry west and north of South Africa: the Karoo and Namaqualand, Upington and the Orange River, and the Kalahari thornveld of the Kgalagadi. Its 35 birds come on top of the South Africa trip and are mostly larks, small warblers and seed-eaters of gravel plains, red dunes, rocky hills and thorn scrub. Many follow the rain, so one place can be full of birds in one year and empty in the next.",
+    "nl": "Dit pakket is voor het droge westen en noorden van Zuid-Afrika: de Karoo en Namaqualand, Upington en de Oranjerivier, en het Kalahari-doornveld van de Kgalagadi. De 35 vogels komen bovenop de reis door Zuid-Afrika en zijn vooral leeuweriken, kleine zangers en zaadeters van grindvlaktes, rode duinen, rotsachtige heuvels en doornstruweel. Veel soorten volgen de regen, dus dezelfde plek kan het ene jaar vol vogels zitten en het volgende jaar leeg zijn."
+  },
+  "units": {
+    "korhaans-and-sandgrouse": {
+      "title": {
+        "en": "Korhaans, sandgrouse and a courser",
+        "nl": "Trappen, zandhoenders en een renvogel"
+      },
+      "intro": {
+        "en": "Birds of bare ground and open plains. The two bustards, called korhaans locally, stalk through grass and scrub, the francolin runs for cover among the hills and the sandgrouse fly in to drink in flocks. The courser trusts its legs and runs over gravel instead of flying; look for its blue-grey crown.",
+        "nl": "Vogels van kale grond en open vlaktes. De twee trappen, hier korhaans genoemd, schrijden door gras en struiken, de frankolijn rent tussen de heuvels weg en de zandhoenders komen in groepen drinken. De renvogel vertrouwt op zijn poten en rent over het grind in plaats van te vliegen; let op zijn blauwgrijze kruin."
+      }
+    },
+    "big-larks": {
+      "title": {
+        "en": "Larks of sand and scrub",
+        "nl": "Leeuweriken van zand en struweel"
+      },
+      "intro": {
+        "en": "The Northern Cape is lark country, and many of its larks look alike. These six are the bigger ones: stocky, streaked brown birds of red sand, scrub and stony ground. Start with the rusty Red Lark and the long curved bill of the Karoo Long-billed Lark, then go by habitat and posture.",
+        "nl": "De Noord-Kaap is leeuwerikenland, en veel van die leeuweriken lijken op elkaar. Deze zes zijn de grotere: gedrongen, gestreept bruine vogels van rood zand, struweel en stenige grond. Begin met de roestrode Rode leeuwerik en de lange gebogen snavel van de Karoolangsnavelleeuwerik, en let voor de rest op leefgebied en houding."
+      }
+    },
+    "small-larks": {
+      "title": {
+        "en": "Small larks and sparrow-larks",
+        "nl": "Kleine leeuweriken en vinkleeuweriken"
+      },
+      "intro": {
+        "en": "Small, pale birds of gravel plains that move in flocks after rain and come to drink at pans and troughs. The sparrow-larks are the easy ones: males are dark with a pale bill, females streaked. Stark's, Sclater's and Pink-billed Lark differ in bill shape and breast markings, so look closely.",
+        "nl": "Kleine, bleke vogels van grindvlaktes die na regen in groepen rondtrekken en komen drinken bij pannen en drinkbakken. De vinkleeuweriken zijn het makkelijkst: mannetjes zijn donker met een bleke snavel, vrouwtjes gestreept. De Starkleeuwerik, de Namaqualeeuwerik en de Roodsnavelleeuwerik verschillen in snavelvorm en borsttekening, dus kijk goed."
+      }
+    },
+    "rocky-hills-and-gorges": {
+      "title": {
+        "en": "Rocky hills and gorges",
+        "nl": "Rotsachtige heuvels en kloven"
+      },
+      "intro": {
+        "en": "Boulder slopes and river gorges have a few birds of their own. The Cinnamon-breasted Warbler hops among the rocks, the Pale-winged Starling and Bradfield's Swift use the cliffs, and Rosy-faced Lovebirds nest in crevices. The Greater Kestrel hunts the open ground below.",
+        "nl": "Rotshellingen en rivierkloven hebben een paar eigen vogels. De Kopjeszanger hupt tussen de rotsen, de Vaalvleugelspreeuw en de Damaragierzwaluw gebruiken de kliffen en Perzikkopagapornissen nestelen in spleten. De Grote torenvalk jaagt op het open terrein eronder."
+      }
+    },
+    "chat-and-scrub-warblers": {
+      "title": {
+        "en": "A chat and the scrub warblers",
+        "nl": "Een spekvreter en de struikzangers"
+      },
+      "intro": {
+        "en": "Low Karoo scrub holds small, plain birds that are easier to hear than to see. The Sickle-winged Chat stands upright on stony ground, while the warblers hide in bushes and along dry river gullies. Look at tail length, posture and eye colour.",
+        "nl": "In het lage Karoo-struweel zitten kleine, effen vogels die je makkelijker hoort dan ziet. De Vlaktespekvreter staat rechtop op stenige grond, terwijl de zangers zich verstoppen in struiken en langs droge rivierbeddingen. Let op staartlengte, houding en oogkleur."
+      }
+    },
+    "tits-white-eye-sunbird": {
+      "title": {
+        "en": "Tits, a white-eye and a sunbird",
+        "nl": "Mezen, een brilvogel en een honingzuiger"
+      },
+      "intro": {
+        "en": "Small birds of thorn scrub and river bush. The Grey Tit and Southern Penduline Tit work through the twigs in small groups, the Orange River White-eye comes in flocks to gardens and riverside trees, and the Dusky Sunbird feeds at flowers, especially aloes.",
+        "nl": "Kleine vogels van doornstruweel en oeverbos. De Kaapse mees en de Kaapse kapokmees werken in kleine groepjes langs de twijgen, de Oranjerivierbrilvogel komt in groepen naar tuinen en bomen langs de rivier en de Roethoningzuiger voedt zich bij bloemen, vooral aloë's."
+      }
+    },
+    "seed-eaters": {
+      "title": {
+        "en": "Seed-eaters of the dry plains",
+        "nl": "Zaadeters van de droge vlakten"
+      },
+      "intro": {
+        "en": "Seed-eaters follow the rain, so their numbers change a lot between years. Two canaries and a bunting come in flocks to drink at waterholes, while the Scaly Weaver and Great Rufous Sparrow stay put and are easy to find around farms and thorn trees.",
+        "nl": "Zaadeters volgen de regen, dus hun aantallen verschillen sterk van jaar tot jaar. Twee kanaries en een gors komen in groepen drinken bij drinkplaatsen, terwijl de Baardmanwever en de Roestmus op één plek blijven en makkelijk te vinden zijn rond boerderijen en doornbomen."
+      }
+    }
+  }
+}

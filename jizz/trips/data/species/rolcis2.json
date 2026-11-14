@@ -1,0 +1,22 @@
+{
+  "code": "rolcis2",
+  "name": {
+    "en": "Rock-loving Cisticola",
+    "nl": "Langstaartgraszanger"
+  },
+  "latin": "Cisticola aberrans",
+  "look_for": [
+    {
+      "en": "Rufous **cap**, long dark **tail**",
+      "nl": "Roodbruine **kap**, lange donkere **staart**"
+    },
+    {
+      "en": "Rocky hillsides with scrub",
+      "nl": "Rotsachtige hellingen met struikgewas"
+    },
+    {
+      "en": "Sings from a rock or bush, flicking the tail",
+      "nl": "Zingt vanaf rots of struik en wipt met de staart"
+    }
+  ]
+}

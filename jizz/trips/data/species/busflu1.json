@@ -1,0 +1,22 @@
+{
+  "code": "busflu1",
+  "name": {
+    "en": "Buff-spotted Flufftail",
+    "nl": "Bruinvlekral"
+  },
+  "latin": "Sarothrura elegans",
+  "look_for": [
+    {
+      "en": "Male: chestnut **head** and breast",
+      "nl": "Mannetje: kastanjebruine **kop** en borst"
+    },
+    {
+      "en": "Black body with buff spots on wings and flanks",
+      "nl": "Zwart lijf met beige vlekjes op vleugels en flanken"
+    },
+    {
+      "en": "Skulks on the forest floor; very shy",
+      "nl": "Sluipt over de bosbodem; erg schuw"
+    }
+  ]
+}

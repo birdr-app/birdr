@@ -1,0 +1,22 @@
+{
+  "code": "strpip1",
+  "name": {
+    "en": "Striped Pipit",
+    "nl": "Gestreepte pieper"
+  },
+  "latin": "Anthus lineiventris",
+  "look_for": [
+    {
+      "en": "Boldly streaked breast and flanks",
+      "nl": "Opvallend gestreepte borst en flanken"
+    },
+    {
+      "en": "Plain grey-brown **back**, pale eyebrow",
+      "nl": "Effen grijsbruine **rug**, lichte wenkbrauwstreep"
+    },
+    {
+      "en": "Perches in trees on rocky woodland slopes",
+      "nl": "Zit in bomen op rotsachtige beboste hellingen"
+    }
+  ]
+}

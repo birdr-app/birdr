@@ -1,0 +1,22 @@
+{
+  "code": "soupoc1",
+  "name": {
+    "en": "Southern Pochard",
+    "nl": "Bruine krooneend"
+  },
+  "latin": "Netta erythrophthalma",
+  "look_for": [
+    {
+      "en": "Dark chocolate-brown diving duck",
+      "nl": "Donkerbruine duikeend"
+    },
+    {
+      "en": "Male: red **eye**; female: white patch at **bill** base",
+      "nl": "Mannetje: rood **oog**; vrouwtje: witte vlek aan de **snavel**basis"
+    },
+    {
+      "en": "White stripe along the **wing** in flight",
+      "nl": "Witte streep langs de **vleugel** in vlucht"
+    }
+  ]
+}

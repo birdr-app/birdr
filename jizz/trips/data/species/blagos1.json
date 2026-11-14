@@ -1,0 +1,22 @@
+{
+  "code": "blagos1",
+  "name": {
+    "en": "Black Goshawk",
+    "nl": "Zwarte havik"
+  },
+  "latin": "Astur melanoleucus",
+  "look_for": [
+    {
+      "en": "Big, long-legged hawk, black above",
+      "nl": "Grote havik op lange poten, boven zwart"
+    },
+    {
+      "en": "Pied form white below; dark form all black",
+      "nl": "Bonte vorm onder wit; donkere vorm helemaal zwart"
+    },
+    {
+      "en": "Short broad **wings**, yellow legs",
+      "nl": "Korte, brede **vleugels**, gele poten"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "burcou2",
+  "name": {
+    "en": "Burchell's Courser",
+    "nl": "Rosse renvogel"
+  },
+  "latin": "Cursorius rufus",
+  "look_for": [
+    {
+      "en": "Blue-grey **crown**, unlike Temminck's Courser",
+      "nl": "Blauwgrijze **kruin**, anders dan Temmincks renvogel"
+    },
+    {
+      "en": "Pale sandy-rufous, upright and long-legged",
+      "nl": "Bleek zandroest, rechtop en langbenig"
+    },
+    {
+      "en": "Runs in short bursts over bare gravel",
+      "nl": "Rent in korte spurtjes over kaal grind"
+    }
+  ]
+}

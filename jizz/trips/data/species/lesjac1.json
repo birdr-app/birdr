@@ -1,0 +1,22 @@
+{
+  "code": "lesjac1",
+  "name": {
+    "en": "Lesser Jacana",
+    "nl": "Dwergjaçana"
+  },
+  "latin": "Microparra capensis",
+  "look_for": [
+    {
+      "en": "Tiny jacana, much smaller than African Jacana",
+      "nl": "Piepkleine jacana, veel kleiner dan de lelieloper"
+    },
+    {
+      "en": "Chestnut cap, white stripe over the **eye**",
+      "nl": "Kastanjebruine kap, witte streep boven het **oog**"
+    },
+    {
+      "en": "Short bill, no frontal shield",
+      "nl": "Korte snavel, geen voorhoofdsschild"
+    }
+  ]
+}

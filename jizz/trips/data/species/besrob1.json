@@ -1,0 +1,22 @@
+{
+  "code": "besrob1",
+  "name": {
+    "en": "Bearded Scrub Robin",
+    "nl": "Streepkopwaaierstaart"
+  },
+  "latin": "Tychaedon quadrivirgata",
+  "look_for": [
+    {
+      "en": "Black-and-white face stripes, buff-orange **breast**",
+      "nl": "Zwart-witte gezichtsstrepen, oranjebeige **borst**"
+    },
+    {
+      "en": "White **wing-bars**, rusty **tail**",
+      "nl": "Witte **vleugelstrepen**, roestkleurige **staart**"
+    },
+    {
+      "en": "Hops through thicket, tail cocked and fanned",
+      "nl": "Huppelt door struikgewas, staart opgericht en gespreid"
+    }
+  ]
+}

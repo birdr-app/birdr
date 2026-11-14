@@ -1,0 +1,22 @@
+{
+  "code": "beslar1",
+  "name": {
+    "en": "Black-eared Sparrow-Lark",
+    "nl": "Zwartoorleeuwerik"
+  },
+  "latin": "Eremopterix australis",
+  "look_for": [
+    {
+      "en": "Male dark brown-black from head to belly",
+      "nl": "Mannetje donkerbruinzwart van kop tot buik"
+    },
+    {
+      "en": "Pale, heavy **bill** on the dark head",
+      "nl": "Bleke, zware **snavel** op de donkere kop"
+    },
+    {
+      "en": "Female sandy-brown, streaked, like a lark",
+      "nl": "Vrouwtje zandbruin en gestreept, als een leeuwerik"
+    }
+  ]
+}

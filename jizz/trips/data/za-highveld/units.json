@@ -1,0 +1,344 @@
+{
+  "country": "ZA-HIGHVELD",
+  "groups": [
+    {
+      "slug": "grouse-quail-and-allies",
+      "name": {
+        "en": "Grouse, Quail, and Allies",
+        "nl": "Hoenders, Kwartels en aanverwanten"
+      },
+      "species": [
+        "rewfra2",
+        "comqua1",
+        "harqua1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "bustards",
+      "name": {
+        "en": "Bustards",
+        "nl": "Trappen"
+      },
+      "species": [
+        "stabus1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "swifts",
+      "name": {
+        "en": "Swifts",
+        "nl": "Gierzwaluwen"
+      },
+      "species": [
+        "afrswi1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "flufftails",
+      "name": {
+        "en": "Flufftails",
+        "nl": "Donsstaartrallen"
+      },
+      "species": [
+        "recflu1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "cranes",
+      "name": {
+        "en": "Cranes",
+        "nl": "Kraanvogels"
+      },
+      "species": [
+        "watcra2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "shorebirds",
+      "name": {
+        "en": "Shorebirds",
+        "nl": "Steltlopers"
+      },
+      "species": [
+        "blwlap1",
+        "blwpra1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "herons-ibis-and-allies",
+      "name": {
+        "en": "Herons, Ibis, and Allies",
+        "nl": "Reigers, Ibissen en aanverwanten"
+      },
+      "species": [
+        "litbit1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "vultures-hawks-and-allies",
+      "name": {
+        "en": "Vultures, Hawks, and Allies",
+        "nl": "Gieren, Arenden, Buizerds, Haviken en aanverwanten"
+      },
+      "species": [
+        "lammer1",
+        "monhar1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "owls",
+      "name": {
+        "en": "Owls",
+        "nl": "Uilen"
+      },
+      "species": [
+        "caeowl1",
+        "marowl2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "larks",
+      "name": {
+        "en": "Larks",
+        "nl": "Leeuweriken"
+      },
+      "species": [
+        "rudlar1",
+        "eaclar1",
+        "latlar1",
+        "botlar1"
+      ],
+      "endemics": [
+        "rudlar1",
+        "botlar1"
+      ]
+    },
+    {
+      "slug": "cisticolas-and-allies",
+      "name": {
+        "en": "Cisticolas and Allies",
+        "nl": "Graszangers, Prinia's en aanverwanten"
+      },
+      "species": [
+        "rolcis2",
+        "waicis1",
+        "clocis1",
+        "paccis1",
+        "wiscis1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "grassbirds-and-allies",
+      "name": {
+        "en": "Grassbirds and Allies",
+        "nl": "Grassbirds and Allies"
+      },
+      "species": [
+        "fatgra1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "martins-and-swallows",
+      "name": {
+        "en": "Martins and Swallows",
+        "nl": "Zwaluwen"
+      },
+      "species": [
+        "banmar1",
+        "rucswa2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "sylviid-warblers",
+      "name": {
+        "en": "Sylviid Warblers",
+        "nl": "Grasmussen"
+      },
+      "species": [
+        "busbla1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "weavers-and-allies",
+      "name": {
+        "en": "Weavers and Allies",
+        "nl": "Wevers en aanverwanten"
+      },
+      "species": [
+        "whwwid1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "wagtails-and-pipits",
+      "name": {
+        "en": "Wagtails and Pipits",
+        "nl": "Kwikstaarten en Piepers"
+      },
+      "species": [
+        "yebpip2",
+        "moupip1",
+        "lobpip7",
+        "plbpip1",
+        "bufpip1"
+      ],
+      "endemics": [
+        "yebpip2"
+      ]
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "highveld-larks",
+      "title": {
+        "en": "Larks of the short grass",
+        "nl": "Leeuweriken van het korte gras"
+      },
+      "groups": [
+        "larks"
+      ],
+      "species": [
+        "rudlar1",
+        "botlar1",
+        "eaclar1",
+        "latlar1"
+      ]
+    },
+    {
+      "slug": "highveld-pipits",
+      "title": {
+        "en": "Pipits of grass and rock",
+        "nl": "Piepers van gras en rots"
+      },
+      "groups": [
+        "wagtails-and-pipits"
+      ],
+      "species": [
+        "yebpip2",
+        "moupip1",
+        "bufpip1",
+        "plbpip1",
+        "lobpip7"
+      ]
+    },
+    {
+      "slug": "highveld-grassland-game",
+      "title": {
+        "en": "Bustards, francolin and quails",
+        "nl": "Trappen, frankolijn en kwartels"
+      },
+      "groups": [
+        "bustards",
+        "grouse-quail-and-allies"
+      ],
+      "species": [
+        "stabus1",
+        "rewfra2",
+        "comqua1",
+        "harqua1"
+      ]
+    },
+    {
+      "slug": "highveld-crane-lapwing",
+      "title": {
+        "en": "Crane, lapwing and pratincole",
+        "nl": "Kraanvogel, kievit en vorkstaartplevier"
+      },
+      "groups": [
+        "cranes",
+        "shorebirds"
+      ],
+      "species": [
+        "watcra2",
+        "blwlap1",
+        "blwpra1"
+      ]
+    },
+    {
+      "slug": "highveld-cisticolas",
+      "title": {
+        "en": "Cisticolas of grass and rock",
+        "nl": "Graszangers van gras en rots"
+      },
+      "groups": [
+        "cisticolas-and-allies"
+      ],
+      "species": [
+        "clocis1",
+        "waicis1",
+        "wiscis1",
+        "paccis1",
+        "rolcis2"
+      ]
+    },
+    {
+      "slug": "highveld-escarpment-raptors",
+      "title": {
+        "en": "Raptors and owls of cliff and grass",
+        "nl": "Roofvogels en uilen van kliffen en gras"
+      },
+      "groups": [
+        "vultures-hawks-and-allies",
+        "owls"
+      ],
+      "species": [
+        "lammer1",
+        "caeowl1",
+        "monhar1",
+        "marowl2"
+      ]
+    },
+    {
+      "slug": "highveld-swallows",
+      "title": {
+        "en": "Swallows, a martin and a swift",
+        "nl": "Zwaluwen, een oeverzwaluw en een gierzwaluw"
+      },
+      "groups": [
+        "martins-and-swallows",
+        "swifts"
+      ],
+      "species": [
+        "rucswa2",
+        "banmar1",
+        "afrswi1"
+      ]
+    },
+    {
+      "slug": "highveld-marsh",
+      "title": {
+        "en": "Marsh and thicket birds",
+        "nl": "Vogels van moeras en struikgewas"
+      },
+      "groups": [
+        "weavers-and-allies",
+        "flufftails",
+        "herons-ibis-and-allies",
+        "grassbirds-and-allies",
+        "sylviid-warblers"
+      ],
+      "species": [
+        "whwwid1",
+        "recflu1",
+        "litbit1",
+        "fatgra1",
+        "busbla1"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

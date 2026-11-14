@@ -1,0 +1,22 @@
+{
+  "code": "moupip1",
+  "name": {
+    "en": "Mountain Pipit",
+    "nl": "Bergpieper"
+  },
+  "latin": "Anthus hoeschi",
+  "look_for": [
+    {
+      "en": "Streaked brown **back**, pale **eyebrow**",
+      "nl": "Gestreepte bruine **rug**, bleke **wenkbrauwstreep**"
+    },
+    {
+      "en": "Lightly streaked buff **breast**",
+      "nl": "Licht gestreepte beige **borst**"
+    },
+    {
+      "en": "Rocky, shrubby grassland high in the mountains",
+      "nl": "Rotsachtig grasland met struiken hoog in de bergen"
+    }
+  ]
+}

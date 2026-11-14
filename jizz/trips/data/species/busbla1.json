@@ -1,0 +1,22 @@
+{
+  "code": "busbla1",
+  "name": {
+    "en": "Bush Blackcap",
+    "nl": "Kaapse zwartkop"
+  },
+  "latin": "Sylvia nigricapillus",
+  "look_for": [
+    {
+      "en": "Black **cap**, grey face and underparts",
+      "nl": "Zwarte **kap**, grijs gezicht en grijze onderkant"
+    },
+    {
+      "en": "Orange-red **bill** and **legs**",
+      "nl": "Oranjerode **snavel** en **poten**"
+    },
+    {
+      "en": "Brown **back**, moves through forest-edge bushes",
+      "nl": "Bruine **rug**, zit in struiken langs bosranden"
+    }
+  ]
+}

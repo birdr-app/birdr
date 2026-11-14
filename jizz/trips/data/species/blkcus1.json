@@ -1,0 +1,22 @@
+{
+  "code": "blkcus1",
+  "name": {
+    "en": "Black Cuckooshrike",
+    "nl": "Kaapse rupsvogel"
+  },
+  "latin": "Campephaga flava",
+  "look_for": [
+    {
+      "en": "Male glossy blue-black, yellow **shoulder** patch",
+      "nl": "Man glanzend blauwzwart met gele **schouder**vlek"
+    },
+    {
+      "en": "Female yellow-olive, barred below",
+      "nl": "Vrouw geelgroen, van onderen gebandeerd"
+    },
+    {
+      "en": "Hunts quietly in the tree canopy",
+      "nl": "Jaagt rustig in de kruin van bomen"
+    }
+  ]
+}

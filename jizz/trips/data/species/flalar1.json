@@ -1,0 +1,22 @@
+{
+  "code": "flalar1",
+  "name": {
+    "en": "Flappet Lark",
+    "nl": "Ratelleeuwerik"
+  },
+  "latin": "Amirafra rufocinnamomea",
+  "look_for": [
+    {
+      "en": "Small, rufous-washed lark with a short **crest**",
+      "nl": "Kleine, roestgetinte leeuwerik met een korte **kuif**"
+    },
+    {
+      "en": "Rufous patch in the **wing**, bright in flight",
+      "nl": "Roestkleurige vlek in de **vleugel**, opvallend in vlucht"
+    },
+    {
+      "en": "Male claps his wings in display flight over grass",
+      "nl": "Man klapt in baltsvlucht boven het gras met zijn vleugels"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "woobat1",
+  "name": {
+    "en": "Woodwards' Batis",
+    "nl": "Woodwardvliegenvanger"
+  },
+  "latin": "Batis fratrum",
+  "look_for": [
+    {
+      "en": "Male: black **mask** on a blue-grey head",
+      "nl": "Mannetje: zwart **masker** op een blauwgrijze kop"
+    },
+    {
+      "en": "White throat, pale rufous breast",
+      "nl": "Witte keel, lichte roodbruine borst"
+    },
+    {
+      "en": "Female browner, with reddish underparts",
+      "nl": "Vrouwtje bruiner, met roodbruine onderzijde"
+    }
+  ]
+}

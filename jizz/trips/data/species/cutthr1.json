@@ -1,0 +1,22 @@
+{
+  "code": "cutthr1",
+  "name": {
+    "en": "Cut-throat",
+    "nl": "Bandvink"
+  },
+  "latin": "Amadina fasciata",
+  "look_for": [
+    {
+      "en": "Male has a red **band** across the throat",
+      "nl": "Man heeft een rode **band** over de keel"
+    },
+    {
+      "en": "Barred and spotted sandy-brown body",
+      "nl": "Gebandeerd en gespikkeld zandbruin lijf"
+    },
+    {
+      "en": "Female lacks the red, scalloped buff-brown",
+      "nl": "Vrouw mist het rood, geschubd bruingeel"
+    }
+  ]
+}

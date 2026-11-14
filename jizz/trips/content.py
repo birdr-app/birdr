@@ -93,6 +93,36 @@ TRIPS: dict[str, dict] = {
     },
     'TH': {'name': {'en': 'Thailand', 'nl': 'Thailand'}, 'languages': ('en', 'nl')},
     'ZA': {'name': {'en': 'South Africa', 'nl': 'Zuid-Afrika'}, 'languages': ('en', 'nl')},
+    'ZA-FYNBOS': {
+        'name': {'en': 'Fynbos and the Cape', 'nl': 'Fynbos en de Kaap'},
+        'languages': ('en', 'nl'),
+        'parent': 'ZA',
+    },
+    'ZA-KAROO': {
+        'name': {'en': 'Karoo and Kalahari', 'nl': 'Karoo en Kalahari'},
+        'languages': ('en', 'nl'),
+        'parent': 'ZA',
+    },
+    'ZA-LOWVELD': {
+        'name': {'en': 'Kruger and the Lowveld', 'nl': 'Kruger en de Lowveld'},
+        'languages': ('en', 'nl'),
+        'parent': 'ZA',
+    },
+    'ZA-NATAL': {
+        'name': {'en': 'KwaZulu-Natal and Zululand', 'nl': 'KwaZulu-Natal en Zululand'},
+        'languages': ('en', 'nl'),
+        'parent': 'ZA',
+    },
+    'ZA-HIGHVELD': {
+        'name': {'en': 'Highveld and Drakensberg', 'nl': 'Highveld en Drakensberg'},
+        'languages': ('en', 'nl'),
+        'parent': 'ZA',
+    },
+    'ZA-GARDENROUTE': {
+        'name': {'en': 'Garden Route and Eastern Cape', 'nl': 'Garden Route en Oost-Kaap'},
+        'languages': ('en', 'nl'),
+        'parent': 'ZA',
+    },
     'KH': {'name': {'en': 'Cambodia', 'nl': 'Cambodja'}, 'languages': ('en', 'nl')},
     'CO': {'name': {'en': 'Colombia', 'nl': 'Colombia'}, 'languages': ('en', 'nl')},
     'CO-CARIBBEAN': {

@@ -1,0 +1,22 @@
+{
+  "code": "viswar1",
+  "name": {
+    "en": "Victorin's Warbler",
+    "nl": "Victorinzanger"
+  },
+  "latin": "Cryptillas victorini",
+  "look_for": [
+    {
+      "en": "Grey-brown above, rusty-orange below",
+      "nl": "Grijsbruin boven, roestoranje onder"
+    },
+    {
+      "en": "Slim, with a long narrow **tail**",
+      "nl": "Slank, met een lange smalle **staart**"
+    },
+    {
+      "en": "Skulks in dense fynbos, sings from bush tops",
+      "nl": "Sluipt door dichte fynbos, zingt vanaf struiktoppen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "afrrai1",
+  "name": {
+    "en": "African Rail",
+    "nl": "Afrikaanse waterral"
+  },
+  "latin": "Rallus caerulescens",
+  "look_for": [
+    {
+      "en": "Long red **bill** and red legs",
+      "nl": "Lange rode **snavel** en rode poten"
+    },
+    {
+      "en": "Slate-grey breast, barred black-and-white **flanks**",
+      "nl": "Leigrijze borst, zwart-wit gebandeerde **flanken**"
+    },
+    {
+      "en": "Creeps along reed edges, easily missed",
+      "nl": "Sluipt langs de rietrand, makkelijk te missen"
+    }
+  ]
+}

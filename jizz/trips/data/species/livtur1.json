@@ -1,0 +1,22 @@
+{
+  "code": "livtur1",
+  "name": {
+    "en": "Livingstone's Turaco",
+    "nl": "Livingstones toerako"
+  },
+  "latin": "Tauraco livingstonii",
+  "look_for": [
+    {
+      "en": "Green **crest** tipped with white",
+      "nl": "Groene **kuif** met een witte punt"
+    },
+    {
+      "en": "Red **bill**, white lines above and below the eye",
+      "nl": "Rode **snavel**, witte strepen boven en onder het oog"
+    },
+    {
+      "en": "Crimson flight feathers flash as it glides",
+      "nl": "Karmozijnrode slagpennen flitsen tijdens het glijden"
+    }
+  ]
+}

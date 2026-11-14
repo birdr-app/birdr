@@ -1,0 +1,22 @@
+{
+  "code": "harqua1",
+  "name": {
+    "en": "Harlequin Quail",
+    "nl": "Harlekijnkwartel"
+  },
+  "latin": "Coturnix delegorguei",
+  "look_for": [
+    {
+      "en": "Male: black-and-white striped face, chestnut belly",
+      "nl": "Mannetje: zwartwit gestreept gezicht, kastanjebruine buik"
+    },
+    {
+      "en": "Female buff and streaked, near Common Quail",
+      "nl": "Vrouwtje beige en gestreept, lijkt op de Kwartel"
+    },
+    {
+      "en": "Summer visitor, flushed from long grass",
+      "nl": "Zomergast, vliegt op uit hoog gras"
+    }
+  ]
+}
