@@ -79,20 +79,17 @@ TRIPS: dict[str, dict] = {
         'parent': 'IBERIA',
         'countries': ['ES'],
     },
-    # Drafts: texts are done, but the endemics still wait for photo review. Remove 'draft' to publish.
     'IBERIA-MADEIRA': {
         'name': {'en': 'Madeira', 'nl': 'Madeira'},
         'languages': ('en', 'nl'),
         'parent': 'IBERIA',
         'countries': ['PT'],
-        'draft': True,
     },
     'IBERIA-AZORES': {
         'name': {'en': 'Azores', 'nl': 'Azoren'},
         'languages': ('en', 'nl'),
         'parent': 'IBERIA',
         'countries': ['PT'],
-        'draft': True,
     },
     'TH': {'name': {'en': 'Thailand', 'nl': 'Thailand'}, 'languages': ('en', 'nl')},
     'ZA': {'name': {'en': 'South Africa', 'nl': 'Zuid-Afrika'}, 'languages': ('en', 'nl')},

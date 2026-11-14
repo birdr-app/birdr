@@ -91,13 +91,10 @@ class IberiaTripTestCase(SimpleTestCase):
     """Iberia is one trip over Spain and Portugal, with the island groups as region packs."""
 
     def test_iberia_spans_spain_and_portugal(self):
-        from jizz.trips.content import TRIPS, region_ids, trip_countries
+        from jizz.trips.content import region_ids, trip_countries
 
         self.assertEqual(trip_countries('IBERIA'), ['ES', 'PT'])
-        # Madeira and the Azores are drafts until their photos are reviewed.
-        self.assertEqual(region_ids('IBERIA'), ['IBERIA-CANARIES'])
-        self.assertEqual([c for c, m in TRIPS.items() if m.get('parent') == 'IBERIA'],
-                         ['IBERIA-CANARIES', 'IBERIA-MADEIRA', 'IBERIA-AZORES'])
+        self.assertEqual(region_ids('IBERIA'), ['IBERIA-CANARIES', 'IBERIA-MADEIRA', 'IBERIA-AZORES'])
 
     def test_island_packs_use_the_country_their_birds_are_recorded_under(self):
         from jizz.trips.content import parent_trip, trip_countries
