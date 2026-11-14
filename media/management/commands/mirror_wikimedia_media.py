@@ -1,7 +1,10 @@
 """Copy Wikimedia photo thumbnails to our own bucket (see ``media.mirror``).
 
 Resumable: media with ``mirrored_at`` set are skipped, so it can run for days
-in the background or from cron to pick up newly scraped photos:
+in the background or from cron to pick up newly scraped photos. When Wikimedia
+answers 404 the file was usually renamed or deleted on Commons: renamed files
+are followed (new url and link) and copied, unless the new name is another
+species or a photo the species already has; those and deleted files are rejected.
 
     python manage.py mirror_wikimedia_media --limit 1000
     python manage.py mirror_wikimedia_media --check-deleted
@@ -12,7 +15,9 @@ removed as copyright violations), deletes our copies and rejects the media.
 
 from __future__ import annotations
 
+import re
 import time
+from urllib.parse import quote, unquote
 
 import requests
 from django.conf import settings
@@ -73,7 +78,7 @@ class Command(BaseCommand):
             ids = ids[:limit]
         total = len(ids)
         self.stdout.write(f'Found {total} Wikimedia photos to copy, most played first')
-        mirrored = skipped = failed = 0
+        mirrored = skipped = failed = moved = rejected = 0
         verified_public = False
         for media in _in_order(ids):
             thumbs = mirror_thumb_urls(media.url)
@@ -84,7 +89,21 @@ class Command(BaseCommand):
                 mirrored += 1
                 continue
             try:
-                self.copy(*thumbs)
+                try:
+                    self.copy(*thumbs)
+                except requests.HTTPError as exc:
+                    if exc.response is None or exc.response.status_code != 404:
+                        raise
+                    outcome = self.follow_commons(media)
+                    if outcome == 'rejected':
+                        rejected += 1
+                        continue
+                    if outcome != 'moved':
+                        raise
+                    moved += 1
+                    if self.dry_run:
+                        continue
+                    self.copy(*mirror_thumb_urls(media.url))
                 if not verified_public:
                     # The bucket policy must make the mirror public, or players get 403s.
                     self.verify_public(thumbs[0])
@@ -100,7 +119,71 @@ class Command(BaseCommand):
             if mirrored % 100 == 0:
                 self.stdout.write(f'  copied {mirrored}/{total}')
                 self.stdout.flush()
-        self.stdout.write(self.style.SUCCESS(f'Done. copied={mirrored} skipped={skipped} failed={failed}'))
+        self.stdout.write(self.style.SUCCESS(
+            f'Done. copied={mirrored} skipped={skipped} failed={failed} renamed={moved} rejected={rejected}'
+        ))
+
+    def follow_commons(self, media) -> str | None:
+        """After a 404: follow a rename on Commons, or reject the photo. 'moved', 'rejected' or None."""
+        title = commons_file_title(media.url)
+        if not title:
+            return None
+        response = self.session.get(COMMONS_API, params={
+            'action': 'query', 'titles': title, 'redirects': 1, 'prop': 'imageinfo', 'iiprop': 'url',
+            'format': 'json', 'formatversion': 2,
+        }, timeout=60)
+        response.raise_for_status()
+        query = response.json().get('query', {})
+        page = (query.get('pages') or [{}])[0]
+        if page.get('missing'):
+            return self.reject(media, 'Automatic: file deleted from Wikimedia Commons')
+        if not query.get('redirects'):
+            return None
+        new_title = page.get('title', '')
+        new_url = ((page.get('imageinfo') or [{}])[0].get('url') or '').split('?')[0]
+        if not new_url:
+            return None
+        name = new_title.removeprefix('File:')
+        other = self.other_species_in(name, media.species_id)
+        if other:
+            return self.reject(media, f'Automatic: renamed on Wikimedia Commons as {other} ({name})')
+        path = new_url.split('/wikipedia/commons/', 1)[-1]
+        if Media.objects.filter(species_id=media.species_id, url__endswith=path).exclude(pk=media.pk).exists():
+            return self.reject(media, 'Automatic: renamed on Wikimedia Commons to a file this species already has')
+        self.stdout.write(f'  media {media.id}: renamed to {new_title}')
+        media.url = new_url
+        media.link = 'https://commons.wikimedia.org/wiki/' + quote(new_title.replace(' ', '_'), safe=":(),'")
+        if not self.dry_run:
+            media.save(update_fields=['url', 'link'])
+        return 'moved'
+
+    def other_species_in(self, name: str, species_id) -> str | None:
+        """Scientific name of another species in a file name, when the name does not mention this one."""
+        if not hasattr(self, '_species_names'):
+            from jizz.models import Species
+
+            self._species_names = {
+                latin.lower(): (pk, latin)
+                for pk, latin in Species.objects.values_list('id', 'name_latin') if ' ' in latin
+            }
+        words = ' ' + re.sub(r'[^a-z]+', ' ', unquote(name).lower()) + ' '
+        found = {pk: latin for latin_lower, (pk, latin) in self._species_names.items() if f' {latin_lower} ' in words}
+        if not found or species_id in found:
+            return None
+        return next(iter(found.values()))
+
+    def reject(self, media, description: str) -> str:
+        from media.non_photo_sweep import auto_reviewer
+
+        self.stdout.write(f'  media {media.id}: {description}')
+        if not self.dry_run:
+            user, _player = auto_reviewer()
+            # save() syncs Media.hide, so the photo leaves games.
+            MediaReview.objects.update_or_create(
+                media=media, user=user,
+                defaults={'review_type': MediaReview.REJECTED, 'description': description},
+            )
+        return 'rejected'
 
     def copy(self, preview_url: str, full_url: str):
         """Download the full (960px) thumbnail once; the preview is scaled from it here."""
@@ -239,7 +322,7 @@ def play_order(queryset) -> list[int]:
 def _in_order(ids: list[int], chunk_size: int = 500):
     for start in range(0, len(ids), chunk_size):
         chunk = ids[start:start + chunk_size]
-        by_id = Media.objects.only('id', 'url').in_bulk(chunk)
+        by_id = Media.objects.only('id', 'url', 'link', 'species_id').in_bulk(chunk)
         for media_id in chunk:
             if media_id in by_id:
                 yield by_id[media_id]

@@ -1,6 +1,7 @@
 from io import BytesIO, StringIO
 from unittest import mock
 
+import requests
 from PIL import Image
 
 from django.core.management import call_command
@@ -108,9 +109,35 @@ def _response(status=200, content=JPEG_960, content_type='image/jpeg', headers=N
     response = mock.Mock(status_code=status, content=content)
     response.headers = {'Content-Type': content_type, **(headers or {})}
     response.raise_for_status = mock.Mock(
-        side_effect=None if status < 400 else Exception(f'HTTP {status}')
+        side_effect=None if status < 400 else requests.HTTPError(f'HTTP {status}', response=response)
     )
     return response
+
+
+def _api(pages, redirects=None):
+    response = _response(content_type='application/json')
+    query = {'pages': pages}
+    if redirects:
+        query['redirects'] = redirects
+    response.json = lambda: {'query': query}
+    return response
+
+
+RENAMED = 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Oenanthe_oenanthe_Texel.jpg'
+
+
+def _renamed_to(title, url=RENAMED):
+    """Wikimedia 404s the stored file; Commons redirects its title to ``title``."""
+    api = _api(
+        [{'title': title, 'imageinfo': [{'url': url + '?utm_source=commons.wikimedia.org'}]}],
+        redirects=[{'from': 'File:Northern Wheatear (Oenanthe).jpg', 'to': title}],
+    )
+
+    def get(url, **kwargs):
+        if 'api.php' in url:
+            return api
+        return _response(404) if 'Northern_Wheatear' in url else _response()
+    return get
 
 
 @override_settings(**S3)
@@ -210,3 +237,77 @@ class MirrorCommandTests(TestCase):
         self.assertIsNone(self.media.mirrored_at)
         self.assertTrue(self.media.hide)
         self.assertTrue(MediaReview.objects.filter(media=self.media, review_type=MediaReview.REJECTED).exists())
+
+
+@override_settings(**S3)
+class MirrorFollowsCommonsTests(TestCase):
+    """A 404 from Wikimedia: follow the rename on Commons, or reject the photo."""
+
+    def setUp(self):
+        from django.contrib.auth import get_user_model
+
+        self.species = Species.objects.create(name='Northern Wheatear', name_latin='Oenanthe oenanthe', code='norwhe')
+        Species.objects.create(name='Isabelline Wheatear', name_latin='Oenanthe isabellina', code='isawhe')
+        self.media = Media.objects.create(species=self.species, type='image', source='wikimedia', url=ORIGINAL)
+        self.client_mock = mock.Mock()
+        bot = get_user_model().objects.create(username='bot')
+        patches = [
+            mock.patch('media.management.commands.mirror_wikimedia_media.bucket_client', return_value=self.client_mock),
+            mock.patch('media.management.commands.mirror_wikimedia_media.time.sleep'),
+            mock.patch('media.non_photo_sweep.auto_reviewer', return_value=(bot, None)),
+            mock.patch('requests.head', return_value=mock.Mock(status_code=200)),
+        ]
+        for p in patches:
+            p.start()
+            self.addCleanup(p.stop)
+
+    def run_command(self, get):
+        with mock.patch('requests.Session.get', side_effect=get):
+            out = StringIO()
+            call_command('mirror_wikimedia_media', stdout=out, stderr=StringIO())
+            return out.getvalue()
+
+    def assert_rejected(self, reason):
+        self.media.refresh_from_db()
+        self.assertTrue(self.media.hide)
+        self.assertIsNone(self.media.mirrored_at)
+        self.assertEqual(self.media.url, ORIGINAL)
+        review = MediaReview.objects.get(media=self.media, review_type=MediaReview.REJECTED)
+        self.assertIn(reason, review.description)
+        self.client_mock.put_object.assert_not_called()
+
+    def test_follows_rename_and_copies(self):
+        out = self.run_command(_renamed_to('File:Oenanthe oenanthe Texel.jpg'))
+        self.media.refresh_from_db()
+        self.assertEqual(self.media.url, RENAMED)
+        self.assertEqual(self.media.link, 'https://commons.wikimedia.org/wiki/File:Oenanthe_oenanthe_Texel.jpg')
+        self.assertIsNotNone(self.media.mirrored_at)
+        self.assertFalse(self.media.hide)
+        keys = {c.kwargs['Key'] for c in self.client_mock.put_object.call_args_list}
+        self.assertIn('upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Oenanthe_oenanthe_Texel.jpg/'
+                      '960px-Oenanthe_oenanthe_Texel.jpg', keys)
+        self.assertIn('copied=1', out)
+        self.assertIn('renamed=1', out)
+
+    def test_rejects_rename_to_other_species(self):
+        out = self.run_command(_renamed_to('File:Isabelline Wheatear (Oenanthe isabellina).jpg'))
+        self.assert_rejected('as Oenanthe isabellina')
+        self.assertIn('rejected=1', out)
+
+    def test_rejects_rename_to_photo_species_already_has(self):
+        Media.objects.create(species=self.species, type='image', url=RENAMED, hide=True)
+        self.run_command(_renamed_to('File:Oenanthe oenanthe Texel.jpg'))
+        self.assert_rejected('already has')
+
+    def test_rejects_file_deleted_from_commons(self):
+        api = _api([{'title': 'File:Northern Wheatear (Oenanthe).jpg', 'missing': True}])
+        self.run_command(lambda url, **k: api if 'api.php' in url else _response(404))
+        self.assert_rejected('deleted from Wikimedia Commons')
+
+    def test_other_errors_left_for_next_run(self):
+        api = _api([{'title': 'File:Northern Wheatear (Oenanthe).jpg', 'imageinfo': [{'url': ORIGINAL}]}])
+        out = self.run_command(lambda url, **k: api if 'api.php' in url else _response(404))
+        self.media.refresh_from_db()
+        self.assertFalse(self.media.hide)
+        self.assertIsNone(self.media.mirrored_at)
+        self.assertIn('failed=1', out)
