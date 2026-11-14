@@ -5,9 +5,13 @@ Please do not disclose security vulnerabilities in a pull request. Follow the
 private reporting process in SECURITY.md instead.
 -->
 
-## Summary
+## What does this code do?
 
-<!-- What changed, and why is this the right approach? -->
+<!-- Describe the behaviour: what will a player, contributor or admin see or be able to do differently? -->
+
+## Why was it added?
+
+<!-- The problem it solves or the improvement it makes, and why this is the right approach. Pull requests without a clear what and why are sent back for one. -->
 
 ## Related issue
 

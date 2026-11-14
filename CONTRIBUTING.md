@@ -4,6 +4,25 @@ Thank you for helping Motmot teach people to identify birds. Contributions to
 code, accessibility, translations, documentation, bird data, and media quality
 are all welcome.
 
+**Everyone can open a pull request and add to the code.** You do not need to be
+a maintainer, and you do not need permission first for a small change.
+
+## How review works
+
+Every pull request is reviewed by a maintainer before it is merged. The thing
+that matters most is that your description makes the change easy to review:
+
+- **What the code does.** Describe the behaviour in plain language: what a
+  player, contributor, or admin will see or be able to do differently.
+- **Why it was added.** Explain the problem it solves or the improvement it
+  makes. Link the issue if there is one.
+
+A pull request with a clear description of what and why is reviewed and, if it
+fits the project, merged. A pull request without one will be sent back with a
+request for it, so writing it up front saves time for everyone. Maintainers may
+also ask for changes, tests, or a smaller scope, or may decline a change that
+does not fit the direction of the project. If so, they will say why.
+
 ## Before you start
 
 1. Search the [existing issues](https://github.com/birdr-app/birdr/issues) to
@@ -109,8 +128,9 @@ short recording in the pull request.
 2. Follow the style of the surrounding code and avoid unrelated refactors.
 3. Update documentation and translated interface strings when behavior or
    user-facing text changes.
-4. In the pull-request description, explain what changed and why, list the
-   tests you ran, and link the issue with `Closes #123` when appropriate.
+4. In the pull-request description, explain **what the code does and why it
+   was added**, list the tests you ran, and link the issue with `Closes #123`
+   when appropriate. The pull-request template walks you through this.
 5. Respond to review comments and keep the branch current if requested.
 
 Keep commits understandable and never commit secrets, production data,
