@@ -1,0 +1,22 @@
+{
+  "code": "comcha16",
+  "name": {
+    "en": "Azores Chaffinch",
+    "nl": "Azorenvink"
+  },
+  "latin": "Fringilla moreletti",
+  "look_for": [
+    {
+      "en": "Male blue-grey head, peach-pink underparts",
+      "nl": "Man met blauwgrijze kop en perzikroze onderkant"
+    },
+    {
+      "en": "Black patch behind the **eye**",
+      "nl": "Zwarte vlek achter het **oog**"
+    },
+    {
+      "en": "Two white wing bars, white **outer tail**",
+      "nl": "Twee witte vleugelbanden, wit in de buitenste **staart**"
+    }
+  ]
+}

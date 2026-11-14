@@ -1,0 +1,29 @@
+{
+  "country": "IBERIA-AZORES",
+  "intro": {
+    "en": "The Azores are nine volcanic islands in the middle of the Atlantic, with laurel forest, crater lakes and rich seas. Two of the land birds live nowhere else: the Azores Bullfinch, found only in the high forest at the eastern end of São Miguel, and the Azores Chaffinch. Boat trips add shearwaters and storm-petrels, and the Roseate Tern nests on the coast. This pack covers 9 species, on top of the Iberia trip.",
+    "nl": "De Azoren zijn negen vulkanische eilanden midden in de Atlantische Oceaan, met laurierbos, kratermeren en een rijke zee. Twee van de landvogels leven nergens anders: de Azorengoudvink, die alleen voorkomt in het hoge bos aan de oostkant van São Miguel, en de Azorenvink. Boottochten voegen pijlstormvogels en stormvogeltjes toe, en de dougalls stern broedt aan de kust. Dit pakket omvat 9 soorten, bovenop de reis naar Iberië."
+  },
+  "units": {
+    "azores-land-birds": {
+      "title": {
+        "en": "Bullfinch, chaffinch and canary",
+        "nl": "Goudvink, vink en kanarie"
+      },
+      "intro": {
+        "en": "Three finches. The Azores Bullfinch is a rare bird with a tiny range in the high laurel forest of São Miguel, so go early and stay quiet. The chaffinch and the canary are easier, in woods, parks and gardens.",
+        "nl": "Drie vinken. De Azorengoudvink is een zeldzame vogel met een klein verspreidingsgebied in het hoge laurierbos van São Miguel, dus ga vroeg op pad en blijf stil. De vink en de kanarie zijn makkelijker, in bossen, parken en tuinen."
+      }
+    },
+    "azores-seabirds": {
+      "title": {
+        "en": "Storm-petrels, shearwaters and terns",
+        "nl": "Stormvogeltjes, pijlstormvogels en sterns"
+      },
+      "intro": {
+        "en": "Six birds of the sea and the coast. Look at the size, the wing shape and how they fly over the waves. The storm-petrels look alike, so enjoy the view and let local guides name the species by call and place.",
+        "nl": "Zes vogels van de zee en de kust. Let op de grootte, de vleugelvorm en hoe ze over de golven vliegen. De stormvogeltjes lijken op elkaar, dus geniet van het uitzicht en laat lokale gidsen de soort bepalen op roep en plaats."
+      }
+    }
+  }
+}

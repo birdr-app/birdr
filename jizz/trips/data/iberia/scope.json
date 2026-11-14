@@ -1,6 +1,6 @@
 {
-  "country": "ES",
-  "notes": "Spain's birds are mostly modelled as rare or unknown in the database, so the list is hand-picked from the default regular species: what a visitor meets on a mainland tour (Doñana and the Guadalquivir marshes, Extremadura's dehesa and steppe, the Pyrenees, Ebro delta, Gibraltar strait and the Mediterranean coast), plus the Iberian specialities (Spanish Imperial Eagle, Iberian Magpie, Iberian Grey Shrike, Black Wheatear, Rufous-tailed Scrub Robin, Spotless Starling, Spanish Sparrow, White-headed Duck, Great Bustard). The Canary Islands birds (blue chaffinches, laurel pigeons, Canary Islands Chiffchaff, Fuerteventura Stonechat, Berthelot's Pipit) and the Balearic Warbler are dropped; Balearic Warbler is the only endemic, which would make a one-bird chapter. Northern and pelagic birds are dropped too. Spain has no endemic birds on the mainland, so the trip has no endemics chapter. The main chapter is Lookalikes from home.",
+  "country": "IBERIA",
+  "notes": "One combined trip for Spain and Portugal: the union of the two national lists, a bird on both lists counted once at its commonest. Spain's birds are mostly modelled as rare or unknown in the database, so the list is hand-picked from the default regular species: what a visitor meets on a mainland tour (Doñana and the Guadalquivir marshes, Extremadura's dehesa and steppe, the Pyrenees, Ebro delta, Gibraltar strait and the Mediterranean coast), plus the Iberian specialities (Spanish Imperial Eagle, Iberian Magpie, Iberian Grey Shrike, Black Wheatear, Rufous-tailed Scrub Robin, Spotless Starling, Spanish Sparrow, White-headed Duck, Great Bustard). Portugal's list is far better modelled and adds the birds that Spain's data misses, such as Common Crane, White Wagtail and Eurasian Teal, plus Crested Tit, Lesser Black-backed Gull and Sanderling; the Tagus estuary, Algarve lagoons, Sagres and the Alentejo plains are covered by the same list. The island birds live in region packs: the Canary Islands (blue chaffinches, laurel pigeons, Canary Islands Chiffchaff, Fuerteventura Stonechat, Berthelot's Pipit), Madeira (Trocaz Pigeon, Madeira Firecrest, Madeira Chaffinch, Zino's Petrel) and the Azores (Azores Bullfinch, Azores Chaffinch, Monteiro's Storm-Petrel), so they are dropped here, as are the Balearic Warbler and the Mediterranean Flycatcher (Balearic birds; the warbler is the only endemic, which would make a one-bird chapter), the pelagic birds and the northern winter birds. Common Scoter, Egyptian Goose, Common Waxbill and Yellow-crowned Bishop are dropped as too local or feral. There are no endemic birds on the mainland, so the trip has no endemics chapter. The main chapter is Lookalikes from home.",
   "add": [
     "lammer1",
     "blasto1",
@@ -63,7 +63,7 @@
     "dunlin",
     "litsti",
     "ruff",
-    "whimbr",
+    "whimbr5",
     "eurcur",
     "squher1",
     "comter",
@@ -101,15 +101,24 @@
     "martit2",
     "eurbul",
     "rudtur",
-    "cretit2",
     "redcro",
     "eursis",
-    "lbbgul",
     "corshe1",
     "eurwar1",
-    "comwax",
     "redwin",
-    "balwar1"
+    "balwar1",
+    "eurbul1",
+    "comcha16",
+    "comcha17",
+    "firecr3",
+    "tropig1",
+    "scoshe1",
+    "blksco1",
+    "egygoo",
+    "yecbis",
+    "bripet",
+    "comwax",
+    "spofly3"
   ],
   "group_overrides": {},
   "regional_specialities": [],
@@ -169,7 +178,7 @@
       "home": "eugwoo2"
     },
     {
-      "here": "rerswa1",
+      "here": "y00621",
       "home": "barswa"
     }
   ]

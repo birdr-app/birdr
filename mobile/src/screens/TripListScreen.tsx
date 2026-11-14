@@ -7,7 +7,7 @@ import { TripLoading, tripStyles } from '../components/TripParts';
 import { TripRequestForm } from '../components/TripRequestForm';
 import { UnderConstruction } from '../components/UnderConstruction';
 import { useTranslation } from '../i18n/TranslationContext';
-import { leagueFlag } from '../lib/league';
+import { tripFlag } from '../lib/league';
 import { colors } from '../theme';
 
 type Nav = NativeStackNavigationProp<{ TripHome: { country: string } }>;
@@ -47,7 +47,7 @@ export function TripListScreen() {
           accessibilityLabel={trip.name}
           testID={`trip.list.${trip.country}`}
         >
-          <Text style={styles.flag}>{leagueFlag(trip.country)}</Text>
+          <Text style={styles.flag}>{tripFlag(trip.country)}</Text>
           <View style={tripStyles.flex}>
             <Text style={styles.name}>{trip.name}</Text>
             <Text style={tripStyles.small}>

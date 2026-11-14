@@ -1,0 +1,22 @@
+{
+  "code": "monstp1",
+  "name": {
+    "en": "Monteiro's Storm-Petrel",
+    "nl": "Monteiro's stormvogeltje"
+  },
+  "latin": "Hydrobates monteiroi",
+  "look_for": [
+    {
+      "en": "Small dark storm-petrel, white band over **rump**",
+      "nl": "Klein donker stormvogeltje, witte band over de **stuit**"
+    },
+    {
+      "en": "Looks like Band-rumped Storm-Petrel at sea",
+      "nl": "Op zee niet te onderscheiden van het madeirastormvogeltje"
+    },
+    {
+      "en": "Breeds only on Azores islets",
+      "nl": "Broedt alleen op eilandjes van de Azoren"
+    }
+  ]
+}

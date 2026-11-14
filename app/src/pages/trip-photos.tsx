@@ -23,9 +23,9 @@ export function TripPhotosPage() {
   const isStaff = !!(profile?.is_staff || profile?.is_superuser);
   const [trip, setTrip] = useState(() => {
     try {
-      return localStorage.getItem('trip-photos-trip') || 'ES';
+      return localStorage.getItem('trip-photos-trip') || 'IBERIA';
     } catch {
-      return 'ES';
+      return 'IBERIA';
     }
   });
   const [data, setData] = useState<TripPhotos | null>(null);

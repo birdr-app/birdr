@@ -9,6 +9,14 @@ export function leagueFlag(code: string | null | undefined): string {
   return String.fromCodePoint(0x1f1e6 + c1, 0x1f1e6 + c2);
 }
 
+/** Trips over several countries show their flags side by side. */
+const MULTI_COUNTRY_FLAGS: Record<string, string> = { BALTICS: '🇪🇪🇱🇻🇱🇹', IBERIA: '🇪🇸🇵🇹' };
+
+/** Flag of a Trip prep trip: one country's, or the flags of every country in a multi-country trip. */
+export function tripFlag(code: string | null | undefined): string {
+  return MULTI_COUNTRY_FLAGS[(code ?? '').toUpperCase()] ?? leagueFlag(code);
+}
+
 /** Joining the league is the moment to ask for push permission. */
 export async function requestLeaguePushPermission(): Promise<void> {
   try {

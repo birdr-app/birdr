@@ -1,0 +1,22 @@
+{
+  "code": "madpet",
+  "name": {
+    "en": "Zino's Petrel",
+    "nl": "Freira"
+  },
+  "latin": "Pterodroma madeira",
+  "look_for": [
+    {
+      "en": "Medium petrel, grey-brown above, white below",
+      "nl": "Middelgrote stormvogel, grijsbruin boven, wit onder"
+    },
+    {
+      "en": "Dark **underwing** edges and bar",
+      "nl": "Donkere randen en balk op de **onderkant van de vleugel**"
+    },
+    {
+      "en": "Fast, high arcs over the sea",
+      "nl": "Snelle, hoge bogen boven zee"
+    }
+  ]
+}

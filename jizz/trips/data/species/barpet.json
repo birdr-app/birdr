@@ -1,0 +1,22 @@
+{
+  "code": "barpet",
+  "name": {
+    "en": "Band-rumped Storm-Petrel",
+    "nl": "Madeirastormvogeltje"
+  },
+  "latin": "Hydrobates castro",
+  "look_for": [
+    {
+      "en": "Small dark storm-petrel, broad white **rump**",
+      "nl": "Klein donker stormvogeltje, brede witte **stuit**"
+    },
+    {
+      "en": "Slightly forked **tail**, long wings",
+      "nl": "Licht gevorkte **staart**, lange vleugels"
+    },
+    {
+      "en": "Direct flight with glides, little fluttering",
+      "nl": "Directe vlucht met glijden, weinig fladderen"
+    }
+  ]
+}

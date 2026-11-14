@@ -1,0 +1,96 @@
+{
+  "country": "IBERIA-AZORES",
+  "groups": [
+    {
+      "slug": "gulls-terns-and-skimmers",
+      "name": {
+        "en": "Gulls, Terns, and Skimmers",
+        "nl": "Meeuwen, Sterns en Schaarbekken"
+      },
+      "species": [
+        "roster"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "storm-petrels",
+      "name": {
+        "en": "Storm-Petrels",
+        "nl": "Stormvogeltjes"
+      },
+      "species": [
+        "barpet",
+        "monstp1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "petrels-shearwaters-and-diving-petrels",
+      "name": {
+        "en": "Petrels, Shearwaters, and Diving-Petrels",
+        "nl": "Stormvogels en Pijlstormvogels"
+      },
+      "species": [
+        "corshe1",
+        "bulpet",
+        "litshe1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "finches-euphonias-and-allies",
+      "name": {
+        "en": "Finches, Euphonias, and Allies",
+        "nl": "Vinken, Euphonia's en aanverwanten"
+      },
+      "species": [
+        "comcha16",
+        "eurbul1",
+        "comcan"
+      ],
+      "endemics": [
+        "comcha16",
+        "eurbul1"
+      ]
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "azores-land-birds",
+      "title": {
+        "en": "azores-land-birds",
+        "nl": "azores-land-birds"
+      },
+      "groups": [
+        "finches-euphonias-and-allies"
+      ],
+      "species": [
+        "eurbul1",
+        "comcha16",
+        "comcan"
+      ]
+    },
+    {
+      "slug": "azores-seabirds",
+      "title": {
+        "en": "azores-seabirds",
+        "nl": "azores-seabirds"
+      },
+      "groups": [
+        "gulls-terns-and-skimmers",
+        "storm-petrels",
+        "petrels-shearwaters-and-diving-petrels"
+      ],
+      "species": [
+        "monstp1",
+        "barpet",
+        "bulpet",
+        "corshe1",
+        "litshe1",
+        "roster"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

@@ -16,6 +16,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from jizz.trips.api import (
+    overview_counts,
     players_for_request,
     record_answers,
     trip_language,
@@ -24,14 +25,14 @@ from jizz.trips.api import (
     trip_seasonality,
     trip_summary,
 )
-from jizz.trips.content import TRIPS, is_region
+from jizz.trips.content import TRIPS, is_region, resolve_trip
 
 CACHE_SECONDS = 10 * 60
 MAX_ANSWERS = 60
 
 
 def _country(code: str) -> str:
-    code = code.upper()
+    code = resolve_trip(code)
     if code not in TRIPS:
         raise Http404
     return code
@@ -43,7 +44,15 @@ class TripListView(APIView):
 
     def get(self, request):
         lang = (request.query_params.get('lang') or 'en').lower()[:2]
-        trips = [trip_summary(code, trip_language(code, lang)) for code in TRIPS if not is_region(code)]
+        trips = []
+        for code in TRIPS:
+            if is_region(code):
+                continue
+            counts = cache.get(f'trip-overview:{code}')
+            if counts is None:
+                counts = overview_counts(code)
+                cache.set(f'trip-overview:{code}', counts, CACHE_SECONDS)
+            trips.append({**trip_summary(code, trip_language(code, lang)), **counts})
         # By name in the reader's language; accents and case don't count (Australië sits with the A's).
         trips.sort(key=lambda t: unicodedata.normalize('NFKD', t['name']).encode('ascii', 'ignore').decode().lower())
         return Response(trips)

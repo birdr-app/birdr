@@ -10,12 +10,12 @@ from jizz.courses.admin_views import MAX_CARD, _candidate
 from jizz.courses.content import text
 from jizz.models import Species, TripPhotoPick
 from jizz.trips.api import _static_files, clear_cache, photo_picks
-from jizz.trips.content import TRIPS, country_dir
+from jizz.trips.content import TRIPS, country_dir, resolve_trip
 from media.models import Media
 
 
 def _trip(code):
-    code = code.upper()
+    code = resolve_trip(code)
     if code not in TRIPS:
         raise Http404
     return code

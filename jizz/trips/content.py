@@ -8,6 +8,9 @@ Layout under ``jizz/trips/data/``:
   ``group_overrides`` and regional specialities.
 - ``<cc>-<region>/``: a region pack, the same files as a country (see ``is_region``). Its species
   are hand-picked in ``scope.json`` (``"manual": true``) and never repeat the country's own.
+- A trip over several countries (``BALTICS``, ``IBERIA``) has its own id and lists ``countries`` in
+  ``TRIPS``; its region packs list the ``countries`` their birds are recorded under (the Canary
+  Islands under ``ES``, Madeira and the Azores under ``PT``).
 - ``<cc>/units.json``: groups, units and the endemics units, written by ``trip_prep_units``.
 - ``<cc>/texts.json``: ``here`` texts for groups and species, and the endemics chapter.
 - ``lookalikes/<here>__<home>.json``: how to tell a local bird from a lookalike at home (for a
@@ -65,11 +68,31 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'parent': 'AU',
     },
-    'ES': {'name': {'en': 'Spain', 'nl': 'Spanje'}, 'languages': ('en', 'nl')},
-    'ES-CANARIES': {
+    'IBERIA': {
+        'name': {'en': 'Iberia', 'nl': 'Iberië'},
+        'languages': ('en', 'nl'),
+        'countries': ['ES', 'PT'],
+    },
+    'IBERIA-CANARIES': {
         'name': {'en': 'Canary Islands', 'nl': 'Canarische Eilanden'},
         'languages': ('en', 'nl'),
-        'parent': 'ES',
+        'parent': 'IBERIA',
+        'countries': ['ES'],
+    },
+    # Drafts: texts are done, but the endemics still wait for photo review. Remove 'draft' to publish.
+    'IBERIA-MADEIRA': {
+        'name': {'en': 'Madeira', 'nl': 'Madeira'},
+        'languages': ('en', 'nl'),
+        'parent': 'IBERIA',
+        'countries': ['PT'],
+        'draft': True,
+    },
+    'IBERIA-AZORES': {
+        'name': {'en': 'Azores', 'nl': 'Azoren'},
+        'languages': ('en', 'nl'),
+        'parent': 'IBERIA',
+        'countries': ['PT'],
+        'draft': True,
     },
     'TH': {'name': {'en': 'Thailand', 'nl': 'Thailand'}, 'languages': ('en', 'nl')},
     'ZA': {'name': {'en': 'South Africa', 'nl': 'Zuid-Afrika'}, 'languages': ('en', 'nl')},
@@ -129,6 +152,15 @@ TRIPS: dict[str, dict] = {
 
 LANGUAGES = ('en', 'nl')
 
+# Ids that older apps and links still use: Spain became Iberia (Spain and Portugal) in November 2026.
+TRIP_ALIASES = {'ES': 'IBERIA', 'ES-CANARIES': 'IBERIA-CANARIES'}
+
+
+def resolve_trip(code: str) -> str:
+    """The current trip id for ``code``, in upper case, following ``TRIP_ALIASES``."""
+    code = (code or '').upper()
+    return TRIP_ALIASES.get(code, code)
+
 
 def db_country(trip: str) -> str:
     """The country behind a trip id: ``CR`` for ``CR`` and for the region pack ``CR-CARIBBEAN``."""
@@ -151,8 +183,8 @@ def parent_trip(trip: str) -> str | None:
 
 
 def region_ids(country: str) -> list[str]:
-    """The published region packs of a country, in the order of ``TRIPS``."""
-    return [code for code, meta in TRIPS.items() if meta.get('parent') == country]
+    """The published region packs of a country, in the order of ``TRIPS`` (drafts are left out)."""
+    return [code for code, meta in TRIPS.items() if meta.get('parent') == country and not meta.get('draft')]
 
 # Frequencies that count as "regular": the cut used for the main percentage.
 REGULAR_FREQUENCIES = ('abundant', 'very_common', 'common', 'fairly_common', 'uncommon')

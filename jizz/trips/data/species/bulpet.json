@@ -1,0 +1,22 @@
+{
+  "code": "bulpet",
+  "name": {
+    "en": "Bulwer's Petrel",
+    "nl": "Bulwers stormvogel"
+  },
+  "latin": "Bulweria bulwerii",
+  "look_for": [
+    {
+      "en": "All dark brown, long wedge-shaped **tail**",
+      "nl": "Geheel donkerbruin, lange wigvormige **staart**"
+    },
+    {
+      "en": "Pale diagonal bar across the upper wing",
+      "nl": "Lichte schuine balk over de bovenvleugel"
+    },
+    {
+      "en": "Low, buoyant flight close to the waves",
+      "nl": "Laag, zweverig vliegen vlak boven de golven"
+    }
+  ]
+}

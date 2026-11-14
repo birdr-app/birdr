@@ -1,0 +1,22 @@
+{
+  "code": "comcha17",
+  "name": {
+    "en": "Madeira Chaffinch",
+    "nl": "Madeiravink"
+  },
+  "latin": "Fringilla maderensis",
+  "look_for": [
+    {
+      "en": "Male blue head and **nape**, green upper back",
+      "nl": "Man met blauwe kop en **nek**, groene bovenrug"
+    },
+    {
+      "en": "Peach-pink face and underparts, paler belly",
+      "nl": "Perzikroze kop en onderkant, lichtere buik"
+    },
+    {
+      "en": "Common in laurel forest, parks and gardens",
+      "nl": "Algemeen in laurierbos, parken en tuinen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "eurbul1",
+  "name": {
+    "en": "Azores Bullfinch",
+    "nl": "Azorengoudvink"
+  },
+  "latin": "Pyrrhula murina",
+  "look_for": [
+    {
+      "en": "Stocky finch with a stubby, deep **bill**",
+      "nl": "Gedrongen vink met een korte, dikke **snavel**"
+    },
+    {
+      "en": "Black cap and face, dull grey-brown below",
+      "nl": "Zwarte kap en kop, dofgrijsbruin onder"
+    },
+    {
+      "en": "White **rump** and white bar on the wing",
+      "nl": "Witte **stuit** en een witte balk op de vleugel"
+    }
+  ]
+}

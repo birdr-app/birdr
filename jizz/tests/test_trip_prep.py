@@ -87,13 +87,43 @@ class RegionHelpersTestCase(SimpleTestCase):
         self.assertIsNone(parent_trip('CR'))
 
 
+class IberiaTripTestCase(SimpleTestCase):
+    """Iberia is one trip over Spain and Portugal, with the island groups as region packs."""
+
+    def test_iberia_spans_spain_and_portugal(self):
+        from jizz.trips.content import TRIPS, region_ids, trip_countries
+
+        self.assertEqual(trip_countries('IBERIA'), ['ES', 'PT'])
+        # Madeira and the Azores are drafts until their photos are reviewed.
+        self.assertEqual(region_ids('IBERIA'), ['IBERIA-CANARIES'])
+        self.assertEqual([c for c, m in TRIPS.items() if m.get('parent') == 'IBERIA'],
+                         ['IBERIA-CANARIES', 'IBERIA-MADEIRA', 'IBERIA-AZORES'])
+
+    def test_island_packs_use_the_country_their_birds_are_recorded_under(self):
+        from jizz.trips.content import parent_trip, trip_countries
+
+        self.assertEqual(trip_countries('IBERIA-CANARIES'), ['ES'])
+        self.assertEqual(trip_countries('IBERIA-MADEIRA'), ['PT'])
+        self.assertEqual(trip_countries('IBERIA-AZORES'), ['PT'])
+        for pack in ('IBERIA-CANARIES', 'IBERIA-MADEIRA', 'IBERIA-AZORES'):
+            self.assertEqual(parent_trip(pack), 'IBERIA')
+
+    def test_old_spain_ids_resolve_to_iberia(self):
+        from jizz.trips.content import TRIPS, resolve_trip
+
+        self.assertEqual(resolve_trip('es'), 'IBERIA')
+        self.assertEqual(resolve_trip('ES-CANARIES'), 'IBERIA-CANARIES')
+        self.assertEqual(resolve_trip('lk'), 'LK')
+        self.assertNotIn('ES', TRIPS)
+
+
 class TripFilesTestCase(SimpleTestCase):
     """Every country folder with a units.json must be complete before it ships."""
 
     def test_country_files_are_complete(self):
         for country in country_codes():
             errors, _ = check_files(country)
-            if country not in TRIPS:
+            if country not in TRIPS or TRIPS[country].get('draft'):
                 # A draft waits for photo review; its units and texts must still be complete.
                 errors = [e for e in errors if not e.startswith('media:')]
             self.assertEqual(errors, [], country)
@@ -194,6 +224,14 @@ class TripRegionApiTestCase(TestCase):
         self.assertIn('CR', codes)
         self.assertNotIn('CR-CARIBBEAN', codes)
 
+    def test_list_carries_the_overview_counts(self):
+        trips = {t['country']: t for t in self.client.get('/api/trips/?lang=en').json()}
+        cr = trips['CR']
+        self.assertEqual(cr['region_species_count'], sum(r['species_count'] for r in self.client.get('/api/trips/CR/').json()['regions']))
+        self.assertIn('extra_count', cr)
+        self.assertIn('recorded_count', cr)
+        self.assertEqual(trips['LK']['region_species_count'], 0)
+
     def test_list_is_sorted_by_name(self):
         for lang in ('en', 'nl'):
             names = [t['name'] for t in self.client.get(f'/api/trips/?lang={lang}').json()]
@@ -238,7 +276,7 @@ class TripPhotoPicksTests(TestCase):
 
         from jizz.trips.api import _static_files
 
-        entry = _static_files('ES-CANARIES')['media']['barpar2']
+        entry = _static_files('IBERIA-CANARIES')['media']['barpar2']
         self.file_card = entry['card']
         self.species = Species.objects.create(id=entry['species_id'], name='Barbary Partridge', code='barpar2')
         self.photos = [
@@ -249,30 +287,30 @@ class TripPhotoPicksTests(TestCase):
         self.client = APIClient()
 
     def test_staff_only(self):
-        self.assertIn(self.client.get('/api/trips/ES-CANARIES/photos/').status_code, (401, 403))
-        self.assertIn(self.client.put(f'/api/trips/ES-CANARIES/photos/{self.species.id}/', {}, format='json').status_code, (401, 403))
+        self.assertIn(self.client.get('/api/trips/IBERIA-CANARIES/photos/').status_code, (401, 403))
+        self.assertIn(self.client.put(f'/api/trips/IBERIA-CANARIES/photos/{self.species.id}/', {}, format='json').status_code, (401, 403))
 
     def test_pick_replaces_file_photos(self):
         from jizz.trips.api import _files
 
         self.client.force_authenticate(self.staff)
-        listing = self.client.get('/api/trips/ES-CANARIES/photos/').json()
+        listing = self.client.get('/api/trips/IBERIA-CANARIES/photos/').json()
         birds = [b for sec in listing['sections'] for b in sec['birds']]
         self.assertTrue(any(b['code'] == 'barpar2' for b in birds))
         ids = [m.id for m in self.photos]
         res = self.client.put(
-            f'/api/trips/ES-CANARIES/photos/{self.species.id}/',
+            f'/api/trips/IBERIA-CANARIES/photos/{self.species.id}/',
             {'card': ids[:2], 'quiz': ids[2:3], 'reject': [], 'done': True},
             format='json',
         )
         self.assertEqual(res.status_code, 200)
-        entry = _files('ES-CANARIES')['media']['barpar2']
+        entry = _files('IBERIA-CANARIES')['media']['barpar2']
         self.assertEqual(entry['card'], ids[:2])
         self.assertEqual(entry['quiz'], ids[2:3])
 
     def test_rejects_other_species_photos(self):
         self.client.force_authenticate(self.staff)
         res = self.client.put(
-            f'/api/trips/ES-CANARIES/photos/{self.species.id}/', {'card': [999999999]}, format='json'
+            f'/api/trips/IBERIA-CANARIES/photos/{self.species.id}/', {'card': [999999999]}, format='json'
         )
         self.assertEqual(res.status_code, 400)

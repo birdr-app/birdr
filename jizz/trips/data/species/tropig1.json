@@ -1,0 +1,22 @@
+{
+  "code": "tropig1",
+  "name": {
+    "en": "Trocaz Pigeon",
+    "nl": "Trocazduif"
+  },
+  "latin": "Columba trocaz",
+  "look_for": [
+    {
+      "en": "Large dark grey pigeon of laurel forest",
+      "nl": "Grote donkergrijze duif van laurierbos"
+    },
+    {
+      "en": "Pale grey band across the **tail** tip",
+      "nl": "Lichtgrijze band over de **staartpunt**"
+    },
+    {
+      "en": "No white patches on **neck** or wing",
+      "nl": "Geen witte vlekken op **hals** of vleugel"
+    }
+  ]
+}

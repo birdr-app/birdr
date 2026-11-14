@@ -1,0 +1,29 @@
+{
+  "country": "IBERIA-MADEIRA",
+  "intro": {
+    "en": "Madeira is a mountainous island in the Atlantic, west of Morocco, with ancient laurel forest on its northern slopes. Three of its birds live nowhere else: the Trocaz Pigeon, the Madeira Firecrest and the Madeira Chaffinch. Boat trips from Funchal and to the Desertas add shearwaters and petrels, and Zino's Petrel breeds only in the island's high mountains. This pack covers 12 species, on top of the Iberia trip.",
+    "nl": "Madeira is een bergachtig eiland in de Atlantische Oceaan, ten westen van Marokko, met oud laurierbos op de noordhellingen. Drie van de vogels leven nergens anders: de trocazduif, de madeiragoudhaan en de madeiravink. Boottochten vanuit Funchal en naar de Desertas voegen pijlstormvogels en stormvogels toe, en de freira broedt alleen in de hoge bergen van het eiland. Dit pakket omvat 12 soorten, bovenop de reis naar Iberië."
+  },
+  "units": {
+    "madeira-land-birds": {
+      "title": {
+        "en": "Island forest and open ground",
+        "nl": "Eilandbos en open terrein"
+      },
+      "intro": {
+        "en": "Six land birds. The pigeon, firecrest and chaffinch live only on Madeira, mostly in laurel forest. The canary, the pipit and the swift are birds of gardens, open slopes and cliffs.",
+        "nl": "Zes landvogels. De duif, de goudhaan en de vink leven alleen op Madeira, vooral in laurierbos. De kanarie, de pieper en de gierzwaluw zijn vogels van tuinen, open hellingen en kliffen."
+      }
+    },
+    "madeira-seabirds": {
+      "title": {
+        "en": "Petrels, shearwaters and storm-petrels",
+        "nl": "Stormvogels, pijlstormvogels en stormvogeltjes"
+      },
+      "intro": {
+        "en": "Six seabirds of the waters around Madeira. Look at the size, the wing shape and how they fly over the waves. Zino's Petrel is the rare prize and is seen mostly on trips to the high seas.",
+        "nl": "Zes zeevogels van de wateren rond Madeira. Let op de grootte, de vleugelvorm en hoe ze over de golven vliegen. De freira is de zeldzame prijs en wordt vooral gezien op tochten naar open zee."
+      }
+    }
+  }
+}

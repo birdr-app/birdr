@@ -585,7 +585,7 @@ export function levelDescription(level: JourneyLevel | null | undefined, locale:
 }
 
 /** Trips over several countries: their flags side by side. */
-const MULTI_COUNTRY_FLAGS: Record<string, string> = { BALTICS: '🇪🇪🇱🇻🇱🇹' };
+const MULTI_COUNTRY_FLAGS: Record<string, string> = { BALTICS: '🇪🇪🇱🇻🇱🇹', IBERIA: '🇪🇸🇵🇹' };
 
 export function countryCodeToFlag(code: string): string {
   if (MULTI_COUNTRY_FLAGS[code]) return MULTI_COUNTRY_FLAGS[code];

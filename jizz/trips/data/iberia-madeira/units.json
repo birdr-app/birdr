@@ -1,0 +1,138 @@
+{
+  "country": "IBERIA-MADEIRA",
+  "groups": [
+    {
+      "slug": "pigeons-and-doves",
+      "name": {
+        "en": "Pigeons and Doves",
+        "nl": "Duiven"
+      },
+      "species": [
+        "tropig1"
+      ],
+      "endemics": [
+        "tropig1"
+      ]
+    },
+    {
+      "slug": "swifts",
+      "name": {
+        "en": "Swifts",
+        "nl": "Gierzwaluwen"
+      },
+      "species": [
+        "plaswi1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "storm-petrels",
+      "name": {
+        "en": "Storm-Petrels",
+        "nl": "Stormvogeltjes"
+      },
+      "species": [
+        "barpet",
+        "wfspet"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "petrels-shearwaters-and-diving-petrels",
+      "name": {
+        "en": "Petrels, Shearwaters, and Diving-Petrels",
+        "nl": "Stormvogels en Pijlstormvogels"
+      },
+      "species": [
+        "corshe1",
+        "madpet",
+        "bulpet",
+        "litshe1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "kinglets",
+      "name": {
+        "en": "Kinglets",
+        "nl": "Goudhanen"
+      },
+      "species": [
+        "firecr3"
+      ],
+      "endemics": [
+        "firecr3"
+      ]
+    },
+    {
+      "slug": "wagtails-and-pipits",
+      "name": {
+        "en": "Wagtails and Pipits",
+        "nl": "Kwikstaarten en Piepers"
+      },
+      "species": [
+        "berpip1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "finches-euphonias-and-allies",
+      "name": {
+        "en": "Finches, Euphonias, and Allies",
+        "nl": "Vinken, Euphonia's en aanverwanten"
+      },
+      "species": [
+        "comcha17",
+        "comcan"
+      ],
+      "endemics": [
+        "comcha17"
+      ]
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "madeira-land-birds",
+      "title": {
+        "en": "madeira-land-birds",
+        "nl": "madeira-land-birds"
+      },
+      "groups": [
+        "pigeons-and-doves",
+        "swifts",
+        "kinglets",
+        "wagtails-and-pipits",
+        "finches-euphonias-and-allies"
+      ],
+      "species": [
+        "tropig1",
+        "firecr3",
+        "comcha17",
+        "comcan",
+        "berpip1",
+        "plaswi1"
+      ]
+    },
+    {
+      "slug": "madeira-seabirds",
+      "title": {
+        "en": "madeira-seabirds",
+        "nl": "madeira-seabirds"
+      },
+      "groups": [
+        "storm-petrels",
+        "petrels-shearwaters-and-diving-petrels"
+      ],
+      "species": [
+        "madpet",
+        "bulpet",
+        "corshe1",
+        "litshe1",
+        "barpet",
+        "wfspet"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

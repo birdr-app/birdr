@@ -1,0 +1,22 @@
+{
+  "code": "firecr3",
+  "name": {
+    "en": "Madeira Firecrest",
+    "nl": "Madeiragoudhaan"
+  },
+  "latin": "Regulus madeirensis",
+  "look_for": [
+    {
+      "en": "Tiny olive-green bird, always on the move",
+      "nl": "Piepklein olijfgroen vogeltje, altijd in beweging"
+    },
+    {
+      "en": "Orange (male) or yellow (female) **crown** stripe",
+      "nl": "Oranje (man) of gele (vrouw) **kruinstreep**"
+    },
+    {
+      "en": "Short white **eyebrow** and dark eye stripe",
+      "nl": "Korte witte **wenkbrauwstreep** en donkere oogstreep"
+    }
+  ]
+}
