@@ -491,6 +491,20 @@ def subspecies_latin_name(survivor_latin: str, former_latin: str) -> str:
     return f'{survivor_latin} {parts[1]}'
 
 
+def demote_retired_species(old: Species, survivor: Species | None, category: str = 'issf') -> list[str]:
+    """Make a retired species row look like what it now is: no longer a species of its own.
+
+    The category drops to issf/form and the binomial becomes a trinomial of its survivor (the same
+    convention a lump uses). Only touches rows still marked 'species' that have a survivor.
+    Returns the fields that changed; the caller saves them.
+    """
+    if survivor is None or survivor.id == old.id or old.ebird_category != 'species':
+        return []
+    old.ebird_category = category
+    old.name_latin = subspecies_latin_name(survivor.name_latin, old.name_latin)
+    return ['ebird_category', 'name_latin']
+
+
 @transaction.atomic
 def apply_lump(change: TaxonomyChange, *, version: str = '') -> dict[str, Any]:
     """

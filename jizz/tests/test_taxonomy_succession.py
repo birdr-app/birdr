@@ -269,6 +269,9 @@ class RecodeMergeTests(TestCase):
         self.assertFalse(only_old.hide)
         self.assertIsNotNone(old.retired_at)
         self.assertEqual(old.merged_into, new)
+        # the retired row stops looking like a species: issf with a trinomial, like a lumped one
+        self.assertEqual((old.ebird_category, old.name_latin), ('issf', 'Myzomela obscura obscura'))
+        self.assertEqual(new.ebird_category, 'species')
         self.assertEqual(resolve_species_by_code('dusmyz1'), old)
         self.assertTrue(SpeciesAlias.objects.filter(code='dusmyz1', species=new).exists())
         self.assertEqual(Media.objects.filter(held_for_change__isnull=False).count(), 0)
@@ -357,3 +360,26 @@ class RepairCountriesTests(TestCase):
         self.assertTrue(CountrySpecies.objects.filter(country_id='US-CA', species=prairie).exists())
         self.assertFalse(CountrySpecies.objects.filter(country_id='US-CA', species=salt).exists())
         self.assertTrue(CountrySpecies.objects.filter(country_id='US', species=prairie).exists())
+
+
+class DemoteRetiredSpeciesCommandTests(TestCase):
+    def test_backfills_merged_retired_species_and_dry_run_changes_nothing(self):
+        from io import StringIO
+        from django.core.management import call_command
+        from django.utils import timezone
+
+        survivor = Species.objects.create(name="Scopoli's Shearwater", name_latin='Calonectris diomedea', code='scoshe1', slug='s')
+        old = Species.objects.create(name="Cory's Shearwater", name_latin='Calonectris diomedea', code='corshe', slug='c',
+                                     retired_at=timezone.now(), merged_into=survivor)
+        orphan = Species.objects.create(name='Gone', name_latin='Foo bar', code='gone', slug='g', retired_at=timezone.now())
+        call_command('demote_retired_species', '--dry-run', stdout=StringIO())
+        old.refresh_from_db()
+        self.assertEqual((old.ebird_category, old.name_latin), ('species', 'Calonectris diomedea'))
+        call_command('demote_retired_species', stdout=StringIO())
+        old.refresh_from_db(); survivor.refresh_from_db(); orphan.refresh_from_db()
+        self.assertEqual((old.ebird_category, old.name_latin), ('issf', 'Calonectris diomedea diomedea'))
+        self.assertEqual((survivor.ebird_category, survivor.name_latin), ('species', 'Calonectris diomedea'))
+        self.assertEqual(orphan.ebird_category, 'species')  # no survivor: left alone
+        call_command('demote_retired_species', stdout=StringIO())  # idempotent
+        old.refresh_from_db()
+        self.assertEqual(old.name_latin, 'Calonectris diomedea diomedea')

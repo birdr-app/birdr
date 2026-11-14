@@ -34,7 +34,7 @@ from jizz.models import (
     Country, CountrySpecies, Species, SpeciesAlias, Subspecies, TaxonomicFamily, TaxonomicGenus,
     TaxonomyChange,
 )
-from jizz.services.taxonomy_sync import _repoint_games
+from jizz.services.taxonomy_sync import _repoint_games, demote_retired_species
 
 EBIRD_SPPLIST_URL = 'https://api.ebird.org/v2/product/spplist/{code}'
 MIN_VISIBLE_IMAGES = 20  # below this a species gets a media scrape after a split
@@ -247,7 +247,8 @@ def apply_succession(change: TaxonomyChange, *, version: str = '') -> dict[str, 
         result['country_dropped_snapshot'] = _snapshot_and_delete_countries(old)
         old.retired_at = timezone.now()
         old.merged_into = survivor
-        old.save(update_fields=['retired_at', 'merged_into'])
+        changed = demote_retired_species(old, survivor)  # no longer a species: issf, trinomial latin
+        old.save(update_fields=['retired_at', 'merged_into', *changed])
         if survivor is not None:
             SpeciesAlias.objects.update_or_create(
                 code=old_code,
