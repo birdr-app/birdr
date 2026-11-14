@@ -64,6 +64,10 @@ export type TripSummary = {
   lookalike_count?: number;
   group_count: number;
   languages: string[];
+  /** Overview only: birds in the region packs, other regular birds for Advanced, birds on record. */
+  region_species_count?: number;
+  extra_count?: number;
+  recorded_count?: number;
   /** A region pack names the country trip it adds to (e.g. CR for CR-CARIBBEAN). */
   parent?: string | null;
   parent_name?: string | null;

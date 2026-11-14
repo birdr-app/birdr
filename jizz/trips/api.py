@@ -130,6 +130,31 @@ def trip_summary(country: str, lang: str) -> dict:
     }
 
 
+def overview_counts(country: str) -> dict:
+    """The numbers on a trip's card in the overview: birds in the trip, birds in its region packs,
+    other regular birds an Advanced game asks about (the bonus rounds, minus what a pack covers)
+    and the birds on record. The bonus count costs a database query, so the view caches this."""
+    from jizz.models import CountrySpecies
+
+    known = set(trip_species_ids(country))
+    region_species = 0
+    for region in region_ids(country):
+        try:
+            files = _files(region)
+        except TripNotFound:
+            continue
+        region_species += sum(len(g['species']) for g in files['units']['groups'])
+        known |= trip_species_ids(region)
+    return {
+        'region_species_count': region_species,
+        'extra_count': len(_advanced_gap(country, known)),
+        'recorded_count': CountrySpecies.objects.filter(country_id__in=trip_countries(country))
+        .values('species_id')
+        .distinct()
+        .count(),
+    }
+
+
 def region_summaries(country: str, lang: str) -> list[dict]:
     """The region packs of a country: name, size and a short intro, for the trip home."""
     out = []

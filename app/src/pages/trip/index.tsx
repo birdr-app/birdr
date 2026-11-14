@@ -64,10 +64,21 @@ export function TripListPage() {
                     {trip.name}
                   </Text>
                   <Text fontSize="sm" color="primary.700">
-                    {t('trip_list_counts', '{species} species · {endemics} endemics', {
-                      species: trip.species_count,
-                      endemics: trip.endemic_count,
-                    })}
+                    {[
+                      t('trip_list_start', '{count} species to get you started', { count: trip.species_count }),
+                      trip.region_species_count
+                        ? t('trip_list_regions', '{count} more in regions', { count: trip.region_species_count })
+                        : '',
+                      trip.extra_count && trip.recorded_count
+                        ? t('trip_list_extra', '{extra} additional of {recorded} recorded', {
+                            extra: trip.extra_count,
+                            recorded: trip.recorded_count,
+                          })
+                        : '',
+                      trip.endemic_count ? t('trip_list_endemics', '{count} endemics', { count: trip.endemic_count }) : '',
+                    ]
+                      .filter(Boolean)
+                      .join(' · ')}
                   </Text>
                 </Box>
               </Flex>
