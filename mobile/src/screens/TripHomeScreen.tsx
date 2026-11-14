@@ -173,7 +173,7 @@ export function TripHomeScreen() {
         onPress={() => openUnit(trip.first_day.slug)}
         testID="trip.firstDay"
       /> : null}
-      {endemicCodes.length ? (
+      {endemicCodes.length && trip.endemics.units.length ? (
         <UnitRow
           title={t('trip_endemics_title', { country: trip.name })}
           subtitle={`${endemicsKnown}/${endemicCodes.length}`}

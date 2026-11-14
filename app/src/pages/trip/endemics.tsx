@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
 import { TripBackLink, TripLoading, UnitRow } from './parts';
@@ -15,6 +15,8 @@ export function TripEndemicsPage() {
   if (!trip) return <TripLoading error={error} onRetry={reload} />;
   const done = new Set(local.units_done);
   const { endemics } = trip;
+  // A region pack, or a country without an endemics chapter, has nothing to show here.
+  if (!endemics.units.length) return <Navigate to={`/trips/${trip.country}`} replace />;
   return (
     <Page>
       <Page.Header>

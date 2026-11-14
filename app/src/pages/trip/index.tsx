@@ -303,7 +303,7 @@ export function TripHomePage() {
               onClick={() => navigate(`/trips/${country}/lookalikes`)}
             />
           ) : null}
-          {endemicCodes.length ? (
+          {endemicCodes.length && trip.endemics.units.length ? (
             <UnitRow
               title={t('trip_endemics_title', 'Endemics of {country}', { country: trip.name })}
               subtitle={`${endemicsKnown}/${endemicCodes.length}`}
