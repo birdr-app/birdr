@@ -1,0 +1,22 @@
+{
+  "code": "corshe1",
+  "name": {
+    "en": "Cory's Shearwater",
+    "nl": "Geelsnavelpijlstormvogel"
+  },
+  "latin": "Calonectris borealis",
+  "look_for": [
+    {
+      "en": "Large shearwater, brown above, white below",
+      "nl": "Grote pijlstormvogel, bruin boven, wit onder"
+    },
+    {
+      "en": "Heavy pale yellow **bill**",
+      "nl": "Zware lichtgele **snavel**"
+    },
+    {
+      "en": "Slow, bowing glides on stiff **wings**",
+      "nl": "Langzaam glijden met stijve **vleugels**"
+    }
+  ]
+}
