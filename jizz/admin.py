@@ -768,7 +768,7 @@ class SpeciesAdmin(admin.ModelAdmin):
         """A lumped species keeps no media of its own: it lives on the survivor, tagged with this form."""
         if not obj or not obj.pk or not obj.retired_at or not obj.merged_into_id:
             return '-'
-        form = Subspecies.objects.filter(code=obj.code, source=Subspecies.SOURCE_LUMP).first()
+        form = Subspecies.objects.filter(code=obj.code).first()
         if form is None:
             return '-'
         counts = {t: form.media.filter(type=t).count() for t in ('image', 'audio', 'video')}
@@ -927,7 +927,7 @@ class SpeciesAdmin(admin.ModelAdmin):
         # A species lumped into another: its media belongs to the survivor, tagged with the form.
         store_species, form = species, None
         if species.retired_at and species.merged_into_id:
-            form = Subspecies.objects.filter(code=species.code, source=Subspecies.SOURCE_LUMP).first()
+            form = Subspecies.objects.filter(code=species.code).first()
             store_species = species.merged_into
         if media_type:
             results = get_species_media(species, [media_type])
@@ -973,13 +973,13 @@ class SpeciesAdmin(admin.ModelAdmin):
         if store_species != species:
             # Retired: the media was saved on the survivor, so say so instead of reporting 0 on this page.
             survivor_url = reverse('admin:jizz_species_change', args=(store_species.pk,))
+            tag = format_html(', tagged "{}"', form.name) if form else ''
             messages.add_message(
                 request, messages.WARNING,
                 format_html(
                     '{} is retired and merged into <a href="{}">{}</a>: the media found by this search '
-                    'was saved there, not on this species. After a split, run Get media on the '
-                    'successor species instead.',
-                    species.name, survivor_url, store_species.name,
+                    'was saved there{}, not on this species.',
+                    species.name, survivor_url, store_species.name, tag,
                 ),
             )
         counted = store_species.media.filter(subspecies=form) if form else store_species.media

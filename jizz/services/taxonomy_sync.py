@@ -505,6 +505,23 @@ def demote_retired_species(old: Species, survivor: Species | None, category: str
     return ['ebird_category', 'name_latin']
 
 
+def ensure_retired_form(old: Species, survivor: Species | None) -> Subspecies | None:
+    """Give a retired species the form it became under its survivor, as a lump does.
+
+    Its media is stored on the survivor and tagged with this form (admin Get media does that), and
+    the species admin shows 'Media of this form'. Returns the new form, or None when there is
+    nothing to do (no survivor, or a Subspecies with that code already exists).
+    """
+    if survivor is None or survivor.id == old.id or Subspecies.objects.filter(code=old.code).exists():
+        return None
+    return Subspecies.objects.create(
+        species=survivor, code=old.code, name=old.name, name_latin=old.name_latin,
+        ebird_category=old.ebird_category if old.ebird_category in ('issf', 'form') else 'issf',
+        tax_ordering=old.tax_ordering, active=True,
+        source=Subspecies.SOURCE_LUMP, former_species_id=old.id,
+    )
+
+
 @transaction.atomic
 def apply_lump(change: TaxonomyChange, *, version: str = '') -> dict[str, Any]:
     """

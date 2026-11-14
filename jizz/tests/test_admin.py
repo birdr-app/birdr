@@ -247,10 +247,15 @@ class AdminSpeciesCustomUrlsTestCase(TestCase):
     def test_get_media_on_retired_species_says_media_went_to_survivor(self, mock_get_species_media):
         from django.contrib.messages import get_messages
         from django.utils import timezone
+        from jizz.models import Subspecies
         survivor = Species.objects.create(name='Scopoli', name_latin='Erithacus', code='SCO01')
         self.species.retired_at = timezone.now()
         self.species.merged_into = survivor
         self.species.save()
+        form = Subspecies.objects.create(
+            species=survivor, code='ROB01', name='Robin', name_latin='Erithacus rubecula',
+            source=Subspecies.SOURCE_LUMP, former_species_id=self.species.pk,
+        )
         mock_get_species_media.return_value = {'image': [{
             'url': 'https://example.com/a.jpg', 'link': 'https://example.com/a',
             'contributor': 'x', 'copyright_text': '', 'source': 'gbif', 'type': 'image',
@@ -261,7 +266,8 @@ class AdminSpeciesCustomUrlsTestCase(TestCase):
         self.assertEqual(survivor.media.count(), 1)
         self.assertEqual(self.species.media.count(), 0)
         texts = [str(m) for m in get_messages(response.wsgi_request)]
-        self.assertTrue(any('retired and merged into' in t and 'Scopoli' in t for t in texts))
+        self.assertTrue(any('retired and merged into' in t and 'Scopoli' in t and 'tagged "Robin"' in t for t in texts))
+        self.assertEqual(survivor.media.get().subspecies, form)  # tagged with the form, listed under it
         self.assertTrue(any('Found 1 images' in t for t in texts))
 
 

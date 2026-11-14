@@ -272,6 +272,8 @@ class RecodeMergeTests(TestCase):
         # the retired row stops looking like a species: issf with a trinomial, like a lumped one
         self.assertEqual((old.ebird_category, old.name_latin), ('issf', 'Myzomela obscura obscura'))
         self.assertEqual(new.ebird_category, 'species')
+        form = Subspecies.objects.get(code='dusmyz1')  # the retired row's form, so its media can be tagged
+        self.assertEqual((form.species, form.source, form.former_species_id), (new, 'lump', old.id))
         self.assertEqual(resolve_species_by_code('dusmyz1'), old)
         self.assertTrue(SpeciesAlias.objects.filter(code='dusmyz1', species=new).exists())
         self.assertEqual(Media.objects.filter(held_for_change__isnull=False).count(), 0)
@@ -378,6 +380,9 @@ class DemoteRetiredSpeciesCommandTests(TestCase):
         call_command('demote_retired_species', stdout=StringIO())
         old.refresh_from_db(); survivor.refresh_from_db(); orphan.refresh_from_db()
         self.assertEqual((old.ebird_category, old.name_latin), ('issf', 'Calonectris diomedea diomedea'))
+        form = Subspecies.objects.get(code='corshe')
+        self.assertEqual((form.species, form.name_latin, form.ebird_category), (survivor, 'Calonectris diomedea diomedea', 'issf'))
+        self.assertFalse(Subspecies.objects.filter(code='gone').exists())
         self.assertEqual((survivor.ebird_category, survivor.name_latin), ('species', 'Calonectris diomedea'))
         self.assertEqual(orphan.ebird_category, 'species')  # no survivor: left alone
         call_command('demote_retired_species', stdout=StringIO())  # idempotent
