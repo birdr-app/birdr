@@ -16,7 +16,6 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from jizz.trips.api import (
-    overview_counts,
     players_for_request,
     record_answers,
     trip_language,
@@ -44,15 +43,7 @@ class TripListView(APIView):
 
     def get(self, request):
         lang = (request.query_params.get('lang') or 'en').lower()[:2]
-        trips = []
-        for code in TRIPS:
-            if is_region(code):
-                continue
-            counts = cache.get(f'trip-overview:{code}')
-            if counts is None:
-                counts = overview_counts(code)
-                cache.set(f'trip-overview:{code}', counts, CACHE_SECONDS)
-            trips.append({**trip_summary(code, trip_language(code, lang)), **counts})
+        trips = [trip_summary(code, trip_language(code, lang)) for code in TRIPS if not is_region(code)]
         # By name in the reader's language; accents and case don't count (Australië sits with the A's).
         trips.sort(key=lambda t: unicodedata.normalize('NFKD', t['name']).encode('ascii', 'ignore').decode().lower())
         return Response(trips)
