@@ -7,7 +7,14 @@ import {
 } from './challenge';
 import { PLAYER_TOKEN_STORAGE_KEY } from './player';
 
-export type CountryRef = { code: string; name: string };
+export type CountryRef = {
+  code: string;
+  name: string;
+  /** Set for a region (state, province, aggregate): the country it belongs to. */
+  parent?: string | null;
+  parent_name?: string | null;
+  kind?: string;
+};
 
 export type JourneyStepStatus = 'completed' | 'current' | 'locked';
 
@@ -146,6 +153,10 @@ export type CountryChallengeLeaderboardRow = {
   player_name: string;
   country_code: string;
   country_name: string;
+  is_region?: boolean;
+  country_kind?: string;
+  parent_code?: string | null;
+  parent_name?: string | null;
   level_index: number;
   level_title: string;
   level_title_nl?: string;

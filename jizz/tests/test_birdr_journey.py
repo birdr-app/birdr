@@ -752,3 +752,92 @@ class BirdrJourneyFamilyStepTestCase(TestCase):
         self.assertEqual(game.game_type, Game.GAME_TYPE_EXTREME)
         self.assertEqual(game.rarity, Game.RARIT_EXCEPTIONAL)
         self.assertFalse(game.difficult_species)
+
+
+class BirdrJourneyRegionTestCase(TestCase):
+    """The challenge can be played for a region (province, state) on that region's own list."""
+
+    def setUp(self):
+        self.client = APIClient()
+        JourneyLevel.objects.all().delete()
+        self.canada = Country.objects.get_or_create(code='CA', defaults={'name': 'Canada'})[0]
+        self.ontario = Country.objects.get_or_create(
+            code='CA-ON',
+            defaults={'name': 'Ontario', 'parent': self.canada, 'kind': Country.KIND_SUBNATIONAL},
+        )[0]
+        self.player = Player.objects.create(name='RegionGuest', language='en')
+        self.level, self.steps = _make_family_level(self.ontario, [(0, 'standard'), (1, 'family')])
+        # Ontario's own list holds loons; the Canada-wide list also holds a species Ontario lacks.
+        self.ontario_species = _add_eligible_species(
+            self.ontario, family_latin='Gaviidae', order_latin='Gaviiformes', count=6, code_prefix='ont'
+        )
+        self.national_only = _add_eligible_species(
+            self.canada, family_latin='Alcidae', order_latin='Charadriiformes', count=6, code_prefix='can'
+        )
+        _player_auth(self.client, self.player)
+
+    def test_regional_journey_is_separate_from_country_journey(self):
+        whole = self.client.post('/api/birdr-journey/', {'country_code': 'CA'}, format='json')
+        regional = self.client.post('/api/birdr-journey/', {'country_code': 'CA-ON'}, format='json')
+        self.assertEqual(whole.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(regional.status_code, status.HTTP_201_CREATED)
+        self.assertNotEqual(whole.data['id'], regional.data['id'])
+        self.assertEqual(regional.data['country']['code'], 'CA-ON')
+        self.assertEqual(regional.data['country']['parent'], 'CA')
+        self.assertEqual(regional.data['country']['parent_name'], 'Canada')
+        self.assertEqual(regional.data['country']['kind'], 'subnational')
+        self.assertEqual(BirdrJourney.objects.filter(player=self.player).count(), 2)
+        # Posting the region again is idempotent.
+        again = self.client.post('/api/birdr-journey/', {'country_code': 'ca-on'}, format='json')
+        self.assertEqual(again.status_code, status.HTTP_200_OK)
+        self.assertEqual(again.data['id'], regional.data['id'])
+
+    def test_list_and_lookup_carry_region_parent(self):
+        self.client.post('/api/birdr-journey/', {'country_code': 'CA-ON'}, format='json')
+        listing = self.client.get('/api/birdr-journey/')
+        self.assertEqual(listing.status_code, status.HTTP_200_OK)
+        self.assertEqual(listing.data[0]['country']['code'], 'CA-ON')
+        self.assertEqual(listing.data[0]['country']['parent'], 'CA')
+        detail = self.client.get('/api/birdr-journey/', {'country_code': 'CA-ON'})
+        self.assertEqual(detail.status_code, status.HTTP_200_OK)
+        self.assertEqual(detail.data['country']['code'], 'CA-ON')
+
+    def test_step_game_uses_the_regions_species_list(self):
+        journey = self.client.post('/api/birdr-journey/', {'country_code': 'CA-ON'}, format='json').data
+        response = self.client.post(f"/api/birdr-journey/{journey['id']}/start-step/", format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        game = Game.objects.get(token=response.data['journey_game']['game']['token'])
+        self.assertEqual(game.country_id, 'CA-ON')
+        create_question_for_game(game)
+        asked = game.questions.get().species
+        self.assertIn(asked.id, [s.id for s in self.ontario_species])
+        self.assertNotIn(asked.id, [s.id for s in self.national_only])
+
+    def test_family_step_resolves_from_regional_list(self):
+        journey = BirdrJourney.objects.create(
+            player=self.player, country=self.ontario, current_sequence=0, current_step_sequence=1, user=None
+        )
+        response = self.client.post(f'/api/birdr-journey/{journey.id}/start-step/', format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        game = Game.objects.get(token=response.data['journey_game']['game']['token'])
+        self.assertEqual(game.tax_family, 'Gaviidae')
+
+    def test_progress_is_tracked_per_region(self):
+        regional = BirdrJourney.objects.create(
+            player=self.player, country=self.ontario, current_step_sequence=1, user=None
+        )
+        whole = BirdrJourney.objects.create(player=self.player, country=self.canada, user=None)
+        fetched = self.client.get('/api/birdr-journey/', {'country_code': 'CA-ON'})
+        self.assertEqual(fetched.data['id'], regional.id)
+        self.assertEqual(fetched.data['current_step_sequence'], 1)
+        whole_fetched = self.client.get('/api/birdr-journey/', {'country_code': 'CA'})
+        self.assertEqual(whole_fetched.data['id'], whole.id)
+        self.assertEqual(whole_fetched.data['current_step_sequence'], 0)
+
+    def test_country_without_regions_is_unchanged(self):
+        netherlands = Country.objects.get_or_create(code='NL', defaults={'name': 'Netherlands'})[0]
+        response = self.client.post('/api/birdr-journey/', {'country_code': 'NL'}, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertIsNone(response.data['country']['parent'])
+        self.assertEqual(response.data['country']['kind'], Country.KIND_COUNTRY)
+        self.assertEqual(response.data['country']['code'], netherlands.code)

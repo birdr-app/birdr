@@ -50,7 +50,7 @@ import {
   widePlayMediaHeight,
 } from '../constants/questionMediaLayout';
 import { useTranslation } from '../i18n/TranslationContext';
-import { getCountryDisplayName } from '../i18n/countryNames';
+import { getChallengeCountryName } from '../i18n/countryNames';
 import { useGame } from '../context/GameContext';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
@@ -586,7 +586,7 @@ export function ChallengePlayScreen() {
 
   useEffect(() => {
     const title = journeyCountry
-      ? t('country_challenge_named', { country: getCountryDisplayName(journeyCountry, locale) })
+      ? t('country_challenge_named', { country: getChallengeCountryName(journeyCountry, locale) })
       : t('country_challenge');
     navigation.setOptions({ title });
   }, [navigation, journeyCountry, locale, t]);

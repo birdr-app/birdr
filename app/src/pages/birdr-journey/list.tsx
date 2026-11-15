@@ -32,7 +32,7 @@ import { BirdrLevelImage } from '../../components/birdr-level-image';
 import { Page } from '../../shared/components/layout';
 import AppContext from '../../core/app-context';
 import { useAuthProfile } from '../../core/auth-profile-context';
-import { getCountryDisplayName } from '../../data/country-names-nl';
+import { getChallengeCountryName } from '../../data/country-names-nl';
 
 export function BirdrJourneyListPage() {
   const navigate = useNavigate();
@@ -110,7 +110,7 @@ export function BirdrJourneyListPage() {
   };
 
   const handleRemove = async (journey: BirdrJourneyListItem) => {
-    const countryName = getCountryDisplayName(journey.country, locale);
+    const countryName = getChallengeCountryName(journey.country, locale);
     const confirmed = window.confirm(
       intl.formatMessage(
         { id: 'country_challenge_remove_confirm', defaultMessage: 'Remove your {country} challenge and all its progress?' },
@@ -189,7 +189,7 @@ export function BirdrJourneyListPage() {
               {journeys.map((journey) => {
                 const code = journey.country.code;
                 const flag = countryCodeToFlag(code);
-                const countryName = getCountryDisplayName(journey.country, locale);
+                const countryName = getChallengeCountryName(journey.country, locale);
                 const level = levelTitle(journey.current_level, locale);
                 const isActive = activeCountryCode === code;
                 const statusId = journey.is_champion ? 'country_challenge_champion' : 'country_challenge_in_progress';

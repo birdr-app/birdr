@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { View, Text, StyleSheet, type StyleProp, type ViewStyle } from 'react-native';
+import { View, Text, StyleSheet, type StyleProp, type TextStyle, type ViewStyle } from 'react-native';
 import { loadCountries, type Country } from '../api/countries';
 import { useTranslation } from '../i18n/TranslationContext';
 import { colors } from '../theme';
@@ -16,8 +16,13 @@ export type CountryRegionSelectProps = {
   emptyLabel?: string;
   placeholder?: string;
   title?: string;
+  /** Label of the region picker's "keep the whole country" option (default "All"). */
+  allRegionsLabel?: string;
   testID?: string;
   style?: StyleProp<ViewStyle>;
+  /** Passed to both pickers. */
+  buttonStyle?: StyleProp<ViewStyle>;
+  buttonTextStyle?: StyleProp<TextStyle>;
 };
 
 /**
@@ -32,8 +37,11 @@ export function CountryRegionSelect({
   emptyLabel,
   placeholder,
   title,
+  allRegionsLabel,
   testID,
   style,
+  buttonStyle,
+  buttonTextStyle,
 }: CountryRegionSelectProps) {
   const { t } = useTranslation();
   const [loadedCountries, setLoadedCountries] = useState<Country[]>([]);
@@ -76,6 +84,8 @@ export function CountryRegionSelect({
         placeholder={placeholder}
         title={title}
         testID={testID}
+        buttonStyle={buttonStyle}
+        buttonTextStyle={buttonTextStyle}
       />
       {parent && regions.length > 0 ? (
         <View style={styles.regionBlock}>
@@ -85,11 +95,13 @@ export function CountryRegionSelect({
             onChange={(next) => onChange(next || parent)}
             countries={regions}
             allowEmpty
-            emptyLabel={t('all_regions')}
+            emptyLabel={allRegionsLabel ?? t('all_regions')}
             excludeRegionCodes={false}
             groupRegions
             title={t('region')}
             testID={testID ? `${testID}.region` : undefined}
+            buttonStyle={buttonStyle}
+            buttonTextStyle={buttonTextStyle}
           />
         </View>
       ) : null}

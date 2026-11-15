@@ -16,7 +16,7 @@ import { BirdrLevelImage } from '../../components/birdr-level-image';
 import AppContext from '../../core/app-context';
 import { persistCountryChallengeSpeciesLanguage } from '../../core/journey-species-language';
 import { useAuthProfile } from '../../core/auth-profile-context';
-import { getCountryDisplayName } from '../../data/country-names-nl';
+import { getChallengeCountryName } from '../../data/country-names-nl';
 import { Page } from '../../shared/components/layout';
 import { UseLanguages } from '../../user/use-languages';
 import LanguageCombobox from '../../components/language-combobox';
@@ -115,7 +115,7 @@ export function BirdrJourneyProgressPage() {
     );
   }
 
-  const countryName = getCountryDisplayName(journey.country, locale);
+  const countryName = getChallengeCountryName(journey.country, locale);
   const currentLevel = journey.current_level;
   const currentTitle = levelTitle(currentLevel, locale);
 

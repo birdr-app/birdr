@@ -80,10 +80,17 @@ def journey_leaderboard_row(
 
     sort_step = step_count if (champion or pending_celebration) and step_count else journey.current_step_sequence
 
+    country = journey.country
+    parent = country.parent if country.parent_id else None
     return {
         'player_name': journey_player_name(journey, players_by_user=players_by_user),
         'country_code': journey.country_id,
-        'country_name': journey.country.name or journey.country_id,
+        'country_name': country.name or journey.country_id,
+        # A region (state, province, aggregate) is its own challenge with its own board.
+        'is_region': parent is not None,
+        'country_kind': country.kind,
+        'parent_code': parent.code if parent else None,
+        'parent_name': (parent.name or parent.code) if parent else None,
         'level_index': journey.current_sequence,
         'level_title': level.title if level else '—',
         'level_title_nl': (level.title_nl or '') if level else '',
@@ -105,11 +112,14 @@ def country_challenge_leaderboard(
 ) -> list[dict[str, Any]]:
     """All-time Country Challenge progress, highest level first.
 
-    When ``country_code`` is set, only journeys for that quiz country are included.
+    Every quiz country, including a region such as ``CA-ON``, has its own board: levels are
+    earned on that region's bird list, so regional play never counts toward the country.
+    When ``country_code`` is set only journeys for exactly that country or region are
+    included (``CA`` is the whole-country board, ``CA-ON`` the Ontario board).
     """
     levels = get_journey_levels_ordered()
 
-    journeys = BirdrJourney.objects.select_related('country', 'user', 'player')
+    journeys = BirdrJourney.objects.select_related('country', 'country__parent', 'user', 'player')
     if country_code:
         journeys = journeys.filter(country_id=country_code)
     journeys = list(journeys)

@@ -2,7 +2,14 @@ import { apiUrl } from './baseUrl';
 import { authService } from './services/auth.service';
 import type { Answer, Question } from '../core/app-context';
 
-export type CountryRef = { code: string; name: string };
+export type CountryRef = {
+  code: string;
+  name: string;
+  /** Set for a region (state, province, aggregate): the country it belongs to. */
+  parent?: string | null;
+  parent_name?: string | null;
+  kind?: string;
+};
 
 export type JourneyStepStatus = 'completed' | 'current' | 'locked';
 
@@ -140,6 +147,10 @@ export type CountryChallengeLeaderboardRow = {
   player_name: string;
   country_code: string;
   country_name: string;
+  is_region?: boolean;
+  country_kind?: string;
+  parent_code?: string | null;
+  parent_name?: string | null;
   level_index: number;
   level_title: string;
   level_title_nl?: string;
@@ -587,7 +598,9 @@ export function levelDescription(level: JourneyLevel | null | undefined, locale:
 /** Trips over several countries: their flags side by side. */
 const MULTI_COUNTRY_FLAGS: Record<string, string> = { BALTICS: '🇪🇪🇱🇻🇱🇹', IBERIA: '🇪🇸🇵🇹' };
 
-export function countryCodeToFlag(code: string): string {
+export function countryCodeToFlag(rawCode: string): string {
+  // A region (CA-ON, US-EAST) shows its country's flag.
+  const code = rawCode?.includes('-') ? rawCode.split('-')[0] : rawCode;
   if (MULTI_COUNTRY_FLAGS[code]) return MULTI_COUNTRY_FLAGS[code];
   if (!code || code.length !== 2) return '';
   const base = 0x1f1e6;

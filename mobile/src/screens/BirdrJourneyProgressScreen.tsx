@@ -23,7 +23,7 @@ import { useGame } from '../context/GameContext';
 import { useTranslation } from '../i18n/TranslationContext';
 import { LanguageSelect } from '../components/LanguageSelect';
 import { persistCountryChallengeSpeciesLanguage } from '../lib/journeySpeciesLanguage';
-import { getCountryDisplayName } from '../i18n/countryNames';
+import { getChallengeCountryName } from '../i18n/countryNames';
 import { colors } from '../theme';
 
 type RouteParams = {
@@ -158,7 +158,7 @@ export function BirdrJourneyProgressScreen() {
     );
   }
 
-  const countryName = getCountryDisplayName(journey.country, locale);
+  const countryName = getChallengeCountryName(journey.country, locale);
   const currentLevel = journey.current_level;
   const currentTitle = levelTitle(currentLevel, locale);
 

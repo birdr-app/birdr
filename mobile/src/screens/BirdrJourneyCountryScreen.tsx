@@ -19,11 +19,12 @@ import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
 import { useGame } from '../context/GameContext';
 import { useTranslation } from '../i18n/TranslationContext';
-import { CountrySelect } from '../components/CountrySelect';
+import { CountryRegionSelect } from '../components/CountryRegionSelect';
 import { LanguageSelect } from '../components/LanguageSelect';
 import { persistCountryChallengeSpeciesLanguage } from '../lib/journeySpeciesLanguage';
 import { colors } from '../theme';
 import { runBirdrJourneyPushOnboarding } from '../lib/notifications';
+import { statePickerParentCode } from '../lib/countryGroups';
 import { matchCountry, resolveDefaultCountry, writeStoredCountryCode } from '../lib/countryPreference';
 
 type RouteParams = {
@@ -61,7 +62,10 @@ export function BirdrJourneyCountryScreen() {
           filtered,
           profileReady ? profile?.country_code : null,
         );
-        if (!cancelled && resolved) setCountry(resolved);
+        if (cancelled || !resolved) return;
+        // The whole country is the default, even when a region was picked elsewhere in the app.
+        const rootCode = statePickerParentCode(resolved);
+        setCountry((rootCode && matchCountry(filtered, rootCode)) || resolved);
       })
       .finally(() => {
         if (!cancelled) setLoadingCountries(false);
@@ -128,14 +132,14 @@ export function BirdrJourneyCountryScreen() {
       <Text style={styles.subtitle}>{t('birdr_journey_country_hint')}</Text>
 
       <Text style={styles.label}>{t('country')}</Text>
-      <CountrySelect
+      <CountryRegionSelect
         value={country}
         onChange={(c) => {
           setCountry(c);
           if (c?.code) void writeStoredCountryCode(c.code);
         }}
         countries={countries}
-        excludeRegionCodes={false}
+        allRegionsLabel={t('country_challenge_whole_country')}
         style={styles.fieldSelect}
         testID="journey.selectCountry"
       />

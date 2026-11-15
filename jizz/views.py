@@ -162,6 +162,7 @@ class CountryViewSet(viewsets.ModelViewSet):
             )
         )
         .exclude(countryspecies__isnull=True)
+        .select_related("parent")
         .order_by("custom_order", "name")
     )
 

@@ -27,17 +27,9 @@ import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
 import { useGame } from '../context/GameContext';
 import { useTranslation } from '../i18n/TranslationContext';
-import { getCountryDisplayName } from '../i18n/countryNames';
+import { getChallengeCountryName } from '../i18n/countryNames';
 import { colors } from '../theme';
-
-function countryCodeToFlag(code: string): string {
-  if (!code || code.length !== 2) return '';
-  const base = 0x1f1e6;
-  const c1 = code.charCodeAt(0) - 65;
-  const c2 = code.charCodeAt(1) - 65;
-  if (c1 < 0 || c1 > 25 || c2 < 0 || c2 > 25) return code;
-  return String.fromCodePoint(base + c1, base + c2);
-}
+import { leagueFlag } from '../lib/league';
 
 function levelTitle(
   level: { title: string; title_nl?: string } | null | undefined,
@@ -72,8 +64,8 @@ function sortCountryChallenges(
   return [...journeys].sort((a, b) => {
     const diff = priority(a) - priority(b);
     if (diff !== 0) return diff;
-    return getCountryDisplayName(a.country, locale).localeCompare(
-      getCountryDisplayName(b.country, locale),
+    return getChallengeCountryName(a.country, locale).localeCompare(
+      getChallengeCountryName(b.country, locale),
       undefined,
       { sensitivity: 'base' }
     );
@@ -181,7 +173,7 @@ export function BirdrJourneyListScreen() {
   };
 
   const handleRemove = (journey: BirdrJourneyListItem) => {
-    const countryName = getCountryDisplayName(journey.country, locale);
+    const countryName = getChallengeCountryName(journey.country, locale);
     Alert.alert(
       t('country_challenge_remove_title'),
       t('country_challenge_remove_confirm', { country: countryName }),
@@ -256,8 +248,8 @@ export function BirdrJourneyListScreen() {
       ) : (
         sortedJourneys.map((journey) => {
           const code = journey.country.code;
-          const flag = countryCodeToFlag(code);
-          const countryName = getCountryDisplayName(journey.country, locale);
+          const flag = leagueFlag(code);
+          const countryName = getChallengeCountryName(journey.country, locale);
           const level = levelTitle(journey.current_level, locale);
           const isActive = homeActiveCountryCode === normalizeCountryCode(code);
           const statusLabel = journey.is_champion

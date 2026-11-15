@@ -24,7 +24,7 @@ import { Loading } from '../components/loading';
 import AppContext from '../core/app-context';
 import { useAuthProfile } from '../core/auth-profile-context';
 import { loadUpdates, type UpdateListItem } from '../core/updates';
-import { getCountryDisplayName } from '../data/country-names-nl';
+import { getChallengeCountryName } from '../data/country-names-nl';
 import { Page } from '../shared/components/layout';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/motmot-bird-id-quiz/id6745144189';
@@ -95,7 +95,7 @@ const HomePage = () => {
 
   const countryCode = activeJourney?.country?.code ?? '';
   const countryLabel = activeJourney?.country
-    ? getCountryDisplayName(activeJourney.country, locale)
+    ? getChallengeCountryName(activeJourney.country, locale)
     : '';
   const flag = countryCodeToFlag(countryCode);
   const currentLevelTitle = levelTitle(activeJourney?.current_level, locale);

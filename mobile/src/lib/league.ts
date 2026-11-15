@@ -1,7 +1,8 @@
 import { requestPushPermissionAndRegister } from './notifications';
 
+/** Flag of a quiz country; a region (CA-ON, US-EAST) shows its country's flag. */
 export function leagueFlag(code: string | null | undefined): string {
-  const upper = (code ?? '').toUpperCase();
+  const upper = (code ?? '').toUpperCase().split('-')[0];
   if (upper.length !== 2) return '';
   const c1 = upper.charCodeAt(0) - 65;
   const c2 = upper.charCodeAt(1) - 65;

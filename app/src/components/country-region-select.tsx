@@ -19,6 +19,8 @@ interface CountryRegionSelectProps<T extends RegionCountry> {
   emptyLabel?: string;
   /** Replaces the default small "Region" label above the region picker. */
   regionHeading?: ReactNode;
+  /** Label of the region picker's "keep the whole country" option (default "All"). */
+  allRegionsLabel?: string;
 }
 
 /**
@@ -33,6 +35,7 @@ export function CountryRegionSelect<T extends RegionCountry>({
   allowEmpty = false,
   emptyLabel,
   regionHeading,
+  allRegionsLabel,
 }: CountryRegionSelectProps<T>) {
   const intl = useIntl();
   const parentCode = statePickerParentCode(value);
@@ -69,7 +72,7 @@ export function CountryRegionSelect<T extends RegionCountry>({
             value={value && (isAggregate(value) || value.code !== parentCountry.code) ? value : null}
             onChange={(c) => onChange((c as T | null) || parentCountry)}
             allowEmpty
-            emptyLabel={intl.formatMessage({ id: "all_regions", defaultMessage: "All" })}
+            emptyLabel={allRegionsLabel ?? intl.formatMessage({ id: "all_regions", defaultMessage: "All" })}
             excludeRegionCodes={false}
             hideNestedStatesUntilSearch={false}
             groupRegions

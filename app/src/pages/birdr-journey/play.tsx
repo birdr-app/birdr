@@ -36,7 +36,7 @@ import { PLAY_IMAGE_STAGE_HEIGHT, ZoomablePlayImage } from '../../components/zoo
 import { playFullSrc, playPreviewSrc } from '../../utils/play-image-url';
 import { SpeedChallengeTimer } from '../../components/speed-challenge-timer';
 import AppContext, { Answer, Question, Species } from '../../core/app-context';
-import { getCountryDisplayName } from '../../data/country-names-nl';
+import { getChallengeCountryName } from '../../data/country-names-nl';
 import { isStalePlayQuestion } from '../../core/apply-incoming-question';
 import {
   currentPlayMediaItem,
@@ -106,7 +106,7 @@ export function BirdrJourneyPlayPage() {
     try {
       const journey = await getBirdrJourney(countryCode);
       if (journey?.country) {
-        setCountryName(getCountryDisplayName(journey.country, locale));
+        setCountryName(getChallengeCountryName(journey.country, locale));
       }
       const currentGame =
         journey?.current_game?.game?.token === gameToken ? journey.current_game : null;

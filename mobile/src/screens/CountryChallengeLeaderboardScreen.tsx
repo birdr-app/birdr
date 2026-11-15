@@ -14,19 +14,11 @@ import {
 } from '../api/birdrJourney';
 import { loadCountries, type Country } from '../api/countries';
 import { BirdrLevelImage } from '../components/BirdrLevelImage';
-import { CountrySelect } from '../components/CountrySelect';
+import { CountryRegionSelect } from '../components/CountryRegionSelect';
 import { useTranslation } from '../i18n/TranslationContext';
-import { getCountryDisplayName } from '../i18n/countryNames';
+import { getChallengeCountryName } from '../i18n/countryNames';
 import { colors } from '../theme';
-
-function countryCodeToFlag(code: string): string {
-  if (!code || code.length !== 2) return '';
-  const base = 0x1f1e6;
-  const c1 = code.charCodeAt(0) - 65;
-  const c2 = code.charCodeAt(1) - 65;
-  if (c1 < 0 || c1 > 25 || c2 < 0 || c2 > 25) return code;
-  return String.fromCodePoint(base + c1, base + c2);
-}
+import { leagueFlag } from '../lib/league';
 
 function leaderboardLevelTitle(row: CountryChallengeLeaderboardRow, locale: string): string {
   if (locale === 'nl' && row.level_title_nl?.trim()) return row.level_title_nl;
@@ -127,12 +119,13 @@ export function CountryChallengeLeaderboardScreen() {
       <Text style={styles.hint}>{t('country_challenge_leaderboard_hint')}</Text>
 
       <View style={styles.filterRow}>
-        <CountrySelect
+        <CountryRegionSelect
           value={country}
           onChange={setCountry}
           countries={countries}
           allowEmpty
           emptyLabel={t('all_countries')}
+          allRegionsLabel={t('country_challenge_whole_country')}
           title={t('country')}
           style={styles.filterSelect}
           buttonStyle={styles.filterButton}
@@ -156,8 +149,14 @@ export function CountryChallengeLeaderboardScreen() {
 
       {rows.map((row, index) => {
         const code = row.country_code?.trim() ?? '';
-        const countryLabel = getCountryDisplayName(
-          { code, name: row.country_name },
+        const countryLabel = getChallengeCountryName(
+          {
+            code,
+            name: row.country_name,
+            parent: row.parent_code,
+            parent_name: row.parent_name,
+            kind: row.country_kind,
+          },
           locale
         );
         const rank = rowRank(row, index);
@@ -196,7 +195,7 @@ export function CountryChallengeLeaderboardScreen() {
                 {row.player_name}
               </Text>
               <Text style={styles.countryLine} numberOfLines={1}>
-                {countryCodeToFlag(code)} {code} · {countryLabel}
+                {leagueFlag(code)} {code} · {countryLabel}
               </Text>
               {groupStart ? (
                 <>

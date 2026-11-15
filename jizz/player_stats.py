@@ -63,13 +63,13 @@ def member_stats_for_user(user, *, request=None) -> dict:
 
     levels = get_journey_levels_ordered()
     journeys = list(
-        BirdrJourney.objects.filter(user=user).select_related('country', 'user', 'player')
+        BirdrJourney.objects.filter(user=user).select_related('country', 'country__parent', 'user', 'player')
     )
     # Guest players linked to this account may also have journeys.
     journeys += list(
         BirdrJourney.objects.filter(player__user=user)
         .exclude(pk__in=[j.pk for j in journeys])
-        .select_related('country', 'user', 'player')
+        .select_related('country', 'country__parent', 'user', 'player')
     )
     country_challenges = []
     for journey in journeys:
@@ -78,6 +78,10 @@ def member_stats_for_user(user, *, request=None) -> dict:
             {
                 'country_code': row['country_code'],
                 'country_name': row['country_name'],
+                'is_region': row['is_region'],
+                'country_kind': row['country_kind'],
+                'parent_code': row['parent_code'],
+                'parent_name': row['parent_name'],
                 'level_title': row['level_title'],
                 'level_icon_url': row['level_icon_url'],
                 'step_label': row['step_label'],

@@ -5,7 +5,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
 import { useTranslation } from '../i18n/TranslationContext';
-import { getCountryDisplayName } from '../i18n/countryNames';
+import { getChallengeCountryName, getCountryDisplayName } from '../i18n/countryNames';
 import { loadUpdates, UpdateListItem } from '../api/updates';
 import { UpdateListItemCard } from '../components/UpdateListItemCard';
 import {
@@ -30,15 +30,6 @@ import {
   formatChallengeCountdown,
   getChallengeTimeRemaining,
 } from '../utils/challengeCountdown';
-
-function countryCodeToFlag(code: string): string {
-  if (!code || code.length !== 2) return '';
-  const base = 0x1f1e6;
-  const c1 = code.charCodeAt(0) - 65;
-  const c2 = code.charCodeAt(1) - 65;
-  if (c1 < 0 || c1 > 25 || c2 < 0 || c2 > 25) return code;
-  return String.fromCodePoint(base + c1, base + c2);
-}
 
 function levelTitle(
   level: { title: string; title_nl?: string } | null | undefined,
@@ -168,9 +159,9 @@ export function HomeScreen() {
 
   const countryCode = activeJourney?.country?.code ?? '';
   const countryLabel = activeJourney?.country
-    ? getCountryDisplayName(activeJourney.country, locale)
+    ? getChallengeCountryName(activeJourney.country, locale)
     : '';
-  const flag = countryCodeToFlag(countryCode);
+  const flag = leagueFlag(countryCode);
   const currentLevelTitle = levelTitle(activeJourney?.current_level, locale);
   // The beginners course is written in Dutch, so only the Dutch app offers it for now.
   const showCourse = COURSE_ON_HOME && COURSE_LOCALES.includes(locale);

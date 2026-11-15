@@ -3,6 +3,10 @@ import axios from './axios-config';
 export type MemberCountryChallenge = {
   country_code: string;
   country_name: string;
+  is_region?: boolean;
+  country_kind?: string;
+  parent_code?: string | null;
+  parent_name?: string | null;
   level_title: string;
   level_icon_url: string;
   step_label: string;

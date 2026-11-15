@@ -33,13 +33,17 @@ def _species_name_for_language(species, language: str | None) -> str:
 
 class CountrySerializer(serializers.ModelSerializer):
     parent = serializers.CharField(source='parent_id', read_only=True, allow_null=True)
+    parent_name = serializers.SerializerMethodField()
+
+    def get_parent_name(self, obj):
+        return obj.parent.name if obj.parent_id else None
 
     def to_internal_value(self, data):
         return Country.objects.get(code=data)
 
     class Meta:
         model = Country
-        fields = ('code', 'name', 'count', 'parent', 'kind', 'hemisphere')
+        fields = ('code', 'name', 'count', 'parent', 'parent_name', 'kind', 'hemisphere')
 
 
 

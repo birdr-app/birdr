@@ -191,14 +191,14 @@ class BirdrJourneyMixin(GetPlayerMixin):
     def _journey_queryset(self, owner):
         # No prefetch of games: every lookup below filters journey.games, which
         # bypasses a prefetch cache anyway.
-        qs = BirdrJourney.objects.select_related('country', 'user', 'player')
+        qs = BirdrJourney.objects.select_related('country', 'country__parent', 'user', 'player')
         if owner['user']:
             return qs.filter(user=owner['user'])
         return qs.filter(player=owner['player'])
 
     def _list_queryset(self, owner):
         """Slim queryset for the overview list — no games/scores/answers."""
-        qs = BirdrJourney.objects.select_related('country', 'user', 'player')
+        qs = BirdrJourney.objects.select_related('country', 'country__parent', 'user', 'player')
         if owner['user']:
             return qs.filter(user=owner['user'])
         return qs.filter(player=owner['player'])

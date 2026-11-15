@@ -65,6 +65,7 @@ class ApiCountriesTestCase(TestCase):
         self.assertIn('parent', response.data)
         self.assertIn('kind', response.data)
         self.assertIn('hemisphere', response.data)
+        self.assertIn('parent_name', response.data)
 
 
 class ApiGeoCountryTestCase(TestCase):

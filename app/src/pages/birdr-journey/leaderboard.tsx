@@ -20,10 +20,10 @@ import {
   type CountryChallengeLeaderboardRow,
 } from '../../api/birdrJourney';
 import { BirdrLevelImage } from '../../components/birdr-level-image';
-import CountryCombobox from '../../components/country-combobox';
+import CountryRegionSelect from '../../components/country-region-select';
 import { Page } from '../../shared/components/layout';
 import AppContext from '../../core/app-context';
-import { getCountryDisplayName } from '../../data/country-names-nl';
+import { getChallengeCountryName } from '../../data/country-names-nl';
 import { UseCountries, type Country } from '../../user/use-countries';
 
 function leaderboardLevelTitle(row: CountryChallengeLeaderboardRow, locale: string): string {
@@ -104,12 +104,13 @@ export function CountryChallengeLeaderboardPage() {
         </Text>
 
         <Box maxW="320px">
-          <CountryCombobox
+          <CountryRegionSelect
             countries={countriesList}
             value={country}
             onChange={setCountry}
             allowEmpty
             emptyLabel={intl.formatMessage({ id: 'all countries', defaultMessage: 'All countries' })}
+            allRegionsLabel={intl.formatMessage({ id: 'country_challenge_whole_country', defaultMessage: 'Whole country' })}
           />
         </Box>
 
@@ -148,8 +149,14 @@ export function CountryChallengeLeaderboardPage() {
               <TableBody>
                 {rows.map((row, index) => {
                   const code = row.country_code?.trim() ?? '';
-                  const countryLabel = getCountryDisplayName(
-                    { code, name: row.country_name },
+                  const countryLabel = getChallengeCountryName(
+                    {
+                      code,
+                      name: row.country_name,
+                      parent: row.parent_code,
+                      parent_name: row.parent_name,
+                      kind: row.country_kind,
+                    },
                     locale
                   );
                   const groupStart = isScoreGroupStart(rows, index);

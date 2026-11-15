@@ -22,6 +22,7 @@ import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
 import { useGame } from '../context/GameContext';
 import { useTranslation } from '../i18n/TranslationContext';
+import { getChallengeCountryName } from '../i18n/countryNames';
 import { setSpeciesLanguageIndependent } from '../i18n/speciesLanguagePreference';
 import { getProfile, updateProfile, updateProfileAvatar, getAvatarUrl, deleteAccount, type UserProfile } from '../api/profile';
 import { useVisualStyle } from '../context/VisualStyleContext';
@@ -604,7 +605,17 @@ export function ProfileScreen() {
                     <View key={row.country_code} style={styles.challengeCard}>
                       <View style={styles.challengeBody}>
                         <Text style={styles.challengeCountry} numberOfLines={1}>
-                          {leagueFlag(row.country_code)} {row.country_name}
+                          {leagueFlag(row.country_code)}{' '}
+                          {getChallengeCountryName(
+                            {
+                              code: row.country_code,
+                              name: row.country_name,
+                              parent: row.parent_code,
+                              parent_name: row.parent_name,
+                              kind: row.country_kind,
+                            },
+                            locale,
+                          )}
                         </Text>
                         <Text style={styles.challengeLevel} numberOfLines={2}>
                           {row.is_champion ? '🏆 ' : ''}

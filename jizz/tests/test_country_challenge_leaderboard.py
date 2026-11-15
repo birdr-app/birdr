@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import TestCase
+from rest_framework.test import APIClient
 
 from jizz.country_challenge_leaderboard import country_challenge_leaderboard, journey_player_name
 from jizz.models import BirdrJourney, Country, JourneyLevel, JourneyStep, Player
@@ -163,3 +164,59 @@ class CountryChallengeLeaderboardTests(TestCase):
         self.assertEqual(journey_player_name(journey), 'Bird User')
         rows = country_challenge_leaderboard(limit=10)
         self.assertEqual(rows[0]['player_name'], 'Bird User')
+
+
+class RegionalLeaderboardTests(TestCase):
+    """A region (province, state, aggregate) is its own challenge with its own board."""
+
+    def setUp(self):
+        self.canada = Country.objects.get_or_create(code='CA', defaults={'name': 'Canada'})[0]
+        self.ontario = Country.objects.get_or_create(
+            code='CA-ON',
+            defaults={'name': 'Ontario', 'parent': self.canada, 'kind': Country.KIND_SUBNATIONAL},
+        )[0]
+        self.quebec = Country.objects.get_or_create(
+            code='CA-QC',
+            defaults={'name': 'Quebec', 'parent': self.canada, 'kind': Country.KIND_SUBNATIONAL},
+        )[0]
+        self.netherlands = Country.objects.get_or_create(code='NL', defaults={'name': 'Netherlands'})[0]
+        _make_level(0, 'Nestling', step_count=2)
+        _make_level(1, 'Fledgling', step_count=2)
+        self.ada = Player.objects.create(name='Ada', language='en')
+        self.ben = Player.objects.create(name='Ben', language='en')
+        BirdrJourney.objects.create(player=self.ada, country=self.canada, current_sequence=1)
+        BirdrJourney.objects.create(player=self.ada, country=self.ontario, current_sequence=0, current_step_sequence=1)
+        BirdrJourney.objects.create(player=self.ben, country=self.quebec, current_sequence=1)
+        BirdrJourney.objects.create(player=self.ben, country=self.netherlands, current_sequence=0)
+
+    def test_row_marks_regions_with_parent(self):
+        rows = {row['country_code']: row for row in country_challenge_leaderboard(limit=10)}
+        self.assertFalse(rows['CA']['is_region'])
+        self.assertIsNone(rows['CA']['parent_code'])
+        self.assertFalse(rows['NL']['is_region'])
+        self.assertTrue(rows['CA-ON']['is_region'])
+        self.assertEqual(rows['CA-ON']['parent_code'], 'CA')
+        self.assertEqual(rows['CA-ON']['parent_name'], 'Canada')
+        self.assertEqual(rows['CA-ON']['country_name'], 'Ontario')
+        self.assertEqual(rows['CA-ON']['country_kind'], 'subnational')
+        self.assertEqual(rows['CA']['country_kind'], 'country')
+
+    def test_country_filter_is_whole_country_only(self):
+        rows = country_challenge_leaderboard(limit=10, country_code='CA')
+        self.assertEqual([row['country_code'] for row in rows], ['CA'])
+
+    def test_region_filter_shows_only_that_region(self):
+        rows = country_challenge_leaderboard(limit=10, country_code='CA-ON')
+        self.assertEqual([row['country_code'] for row in rows], ['CA-ON'])
+        self.assertEqual(rows[0]['rank'], 1)
+
+    def test_endpoint_passes_filters(self):
+        client = APIClient()
+        whole = client.get('/api/birdr-journey/leaderboard/', {'country': 'CA'})
+        self.assertEqual([r['country_code'] for r in whole.data['leaderboard']], ['CA'])
+        regional = client.get('/api/birdr-journey/leaderboard/', {'country': 'ca-qc'})
+        self.assertEqual([r['country_code'] for r in regional.data['leaderboard']], ['CA-QC'])
+        everything = client.get('/api/birdr-journey/leaderboard/')
+        self.assertEqual(
+            {r['country_code'] for r in everything.data['leaderboard']}, {'CA', 'CA-ON', 'CA-QC', 'NL'}
+        )

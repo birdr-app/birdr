@@ -4,7 +4,13 @@
  */
 import countryNamesJson from './country-names.json';
 
-export type CountryLike = { code: string; name: string };
+export type CountryLike = {
+  code: string;
+  name: string;
+  parent?: string | null;
+  parent_name?: string | null;
+  kind?: string;
+};
 
 const COUNTRY_NAMES = countryNamesJson as Record<string, Record<string, string>>;
 
@@ -109,4 +115,15 @@ export function getCountryDisplayName(country: CountryLike | null | undefined, l
     }
   }
   return country.name;
+}
+
+/**
+ * Country Challenge title: a region carries its country ("Ontario, Canada") so it is not
+ * mistaken for a country. Aggregates ("United States – Eastern") already name their country.
+ */
+export function getChallengeCountryName(country: CountryLike | null | undefined, locale: string): string {
+  const own = getCountryDisplayName(country, locale);
+  if (!country?.parent || !country.parent_name || country.kind === 'aggregate') return own;
+  const parent = getCountryDisplayName({ code: country.parent, name: country.parent_name }, locale);
+  return `${own}, ${parent}`;
 }

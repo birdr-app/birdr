@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   Box,
   Button,
@@ -14,6 +14,8 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { format, parseISO } from 'date-fns';
 import { fetchMemberStats, type MemberStats } from '../api/member-stats';
 import { countryCodeToFlag } from '../api/birdrJourney';
+import AppContext from '../core/app-context';
+import { getChallengeCountryName } from '../data/country-names-nl';
 
 const {
   Root: DialogRoot,
@@ -59,6 +61,8 @@ function Section({ title, children }: { title: React.ReactNode; children: React.
 
 export function MemberStatsModal({ isOpen, onClose }: Props) {
   const intl = useIntl();
+  const { appLanguage } = useContext(AppContext);
+  const locale = appLanguage || 'en';
   const [stats, setStats] = useState<MemberStats | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -169,7 +173,17 @@ export function MemberStatsModal({ isOpen, onClose }: Props) {
                           )}
                           <Box minW={0}>
                             <Text fontSize="sm" fontWeight="600" truncate>
-                              {countryCodeToFlag(row.country_code)} {row.country_name}
+                              {countryCodeToFlag(row.country_code)}{' '}
+                              {getChallengeCountryName(
+                                {
+                                  code: row.country_code,
+                                  name: row.country_name,
+                                  parent: row.parent_code,
+                                  parent_name: row.parent_name,
+                                  kind: row.country_kind,
+                                },
+                                locale
+                              )}
                             </Text>
                             <Text fontSize="xs" color="gray.500">
                               {row.level_title}

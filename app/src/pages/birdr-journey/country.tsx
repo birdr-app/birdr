@@ -1,29 +1,31 @@
 import { Box, Button, Spinner, Text, VStack } from '@chakra-ui/react';
 import { useContext, useEffect, useState } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { useNavigate } from 'react-router-dom';
 import {
   createBirdrJourneyPlayer,
   getStoredBirdrJourneyPlayerToken,
   startBirdrJourney,
 } from '../../api/birdrJourney';
-import CountryCombobox from '../../components/country-combobox';
+import CountryRegionSelect from '../../components/country-region-select';
 import LanguageCombobox from '../../components/language-combobox';
 import AppContext from '../../core/app-context';
 import { persistCountryChallengeSpeciesLanguage } from '../../core/journey-species-language';
 import { useAuthProfile } from '../../core/auth-profile-context';
 import { Page } from '../../shared/components/layout';
-import { UseCountries } from '../../user/use-countries';
+import { statePickerParentCode } from '../../data/country-groups';
+import { UseCountries, type Country } from '../../user/use-countries';
 import { UseLanguages } from '../../user/use-languages';
 import { resolveDefaultCountry, writeStoredCountryCode } from '../../user/country-preference';
 
 export function BirdrJourneyCountryPage() {
   const navigate = useNavigate();
+  const intl = useIntl();
   const { language, applySpeciesLanguage } = useContext(AppContext);
   const { isAuthenticated, profile, applyProfile } = useAuthProfile();
   const { countries } = UseCountries();
   const { languages } = UseLanguages();
-  const [country, setCountry] = useState<{ code: string; name: string } | null>(null);
+  const [country, setCountry] = useState<Country | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -33,7 +35,10 @@ export function BirdrJourneyCountryPage() {
     const profileCode = isAuthenticated ? profile?.country_code ?? null : null;
     let cancelled = false;
     resolveDefaultCountry(filtered, profileCode).then((match) => {
-      if (!cancelled && match) setCountry(match);
+      if (cancelled || !match) return;
+      // The whole country is the default, even when a region was picked elsewhere in the app.
+      const rootCode = statePickerParentCode(match);
+      setCountry((rootCode && filtered.find((c) => c.code === rootCode)) || match);
     });
     return () => {
       cancelled = true;
@@ -103,13 +108,14 @@ export function BirdrJourneyCountryPage() {
           <FormattedMessage id="country" defaultMessage="Country" />
         </Text>
         <Box mb={4}>
-          <CountryCombobox
+          <CountryRegionSelect
             countries={countries.filter((c) => !c.code.includes('NL-NH'))}
             value={country}
             onChange={(c) => {
               setCountry(c);
               if (c?.code) writeStoredCountryCode(c.code);
             }}
+            allRegionsLabel={intl.formatMessage({ id: 'country_challenge_whole_country', defaultMessage: 'Whole country' })}
           />
         </Box>
 

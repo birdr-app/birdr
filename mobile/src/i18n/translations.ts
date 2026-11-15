@@ -529,7 +529,8 @@ export const translations: Record<string, Record<string, string>> = {
     country_challenges: 'Country challenges',
     country_challenge_new_improved: 'Multiple levels, from easy to hard',
     country_challenges_overview_hint:
-      'You can play one challenge per country. Continue an existing one or start a new country.',
+      'You can play one challenge per country or region. Continue an existing one or start a new one.',
+    country_challenge_whole_country: 'Whole country',
     my_country_challenges: 'My country challenges',
     no_country_challenges_yet: 'No country challenges yet.',
     new_country_challenge: 'New country challenge',
@@ -541,7 +542,7 @@ export const translations: Record<string, Record<string, string>> = {
     country_leaderboard: 'Country leaderboard',
     country_challenge_leaderboard: 'Country Challenge leaderboard',
     country_challenge_leaderboard_hint:
-      'Highest level reached per player and quiz country. A player can appear multiple times for different countries.',
+      'Highest level reached per player and quiz country. A player can appear multiple times for different countries. Every region (state, province) has its own board.',
     country_challenge_leaderboard_empty: 'No Country Challenge progress yet.',
     remove: 'Remove',
     your_name: 'Your name',
@@ -648,7 +649,8 @@ export const translations: Record<string, Record<string, string>> = {
     birdr_journey_step_daily: 'Play a quick quiz every day',
     birdr_journey_step_hatch: 'Advance through eight bird stages',
     birdr_journey_select_country: 'Choose your country',
-    birdr_journey_country_hint: 'Your journey uses birds found in this country.',
+    birdr_journey_country_hint:
+      'Your journey uses birds found in this country. For some countries you can also pick a state or province and play its own bird list.',
     birdr_journey_begin: 'Start my journey',
     birdr_journey_continue_guest: 'Continue as guest',
     birdr_journey_guest_save_hint: 'Sign up to save progress on all your devices.',
@@ -1573,7 +1575,8 @@ export const translations: Record<string, Record<string, string>> = {
     country_challenges: 'Landenuitdagingen',
     country_challenge_new_improved: 'Meerdere levels, van makkelijk naar lastig',
     country_challenges_overview_hint:
-      'Je kunt één uitdaging per land spelen. Ga verder met een bestaande of start een nieuw land.',
+      'Je kunt één uitdaging per land of regio spelen. Ga verder met een bestaande of start een nieuwe.',
+    country_challenge_whole_country: 'Heel land',
     my_country_challenges: 'Mijn landenuitdagingen',
     no_country_challenges_yet: 'Nog geen landenuitdagingen.',
     new_country_challenge: 'Nieuwe landenuitdaging',
@@ -1585,7 +1588,7 @@ export const translations: Record<string, Record<string, string>> = {
     country_leaderboard: 'Landenleaderboard',
     country_challenge_leaderboard: 'Landenuitdaging leaderboard',
     country_challenge_leaderboard_hint:
-      'Hoogste bereikte level per speler en quizland. Een speler kan meerdere keren voorkomen voor verschillende landen.',
+      'Hoogste bereikte level per speler en quizland. Een speler kan meerdere keren voorkomen voor verschillende landen. Elke regio (staat, provincie) heeft een eigen leaderboard.',
     country_challenge_leaderboard_empty: 'Nog geen voortgang in landenuitdagingen.',
     remove: 'Verwijderen',
     your_name: 'Je naam',
@@ -1689,7 +1692,8 @@ export const translations: Record<string, Record<string, string>> = {
     birdr_journey_step_daily: 'Speel elke dag een korte quiz',
     birdr_journey_step_hatch: 'Groei door acht vogelniveaus',
     birdr_journey_select_country: 'Kies je land',
-    birdr_journey_country_hint: 'Je reis gebruikt vogels uit dit land.',
+    birdr_journey_country_hint:
+      'Je reis gebruikt vogels uit dit land. Bij sommige landen kun je ook een staat of provincie kiezen en de eigen vogellijst spelen.',
     birdr_journey_begin: 'Start mijn reis',
     birdr_journey_continue_guest: 'Doorgaan als gast',
     birdr_journey_guest_save_hint: 'Meld je aan om je voortgang op al je apparaten te bewaren.',
