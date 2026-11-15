@@ -1,0 +1,24 @@
+name: Store listing
+
+# Fails when a store title or subtitle drifts from mobile/store-listing/titles.lock.json,
+# or a field is over a store's length limit.
+on:
+  push:
+    paths:
+      - 'mobile/store-listing/**'
+      - 'mobile/scripts/check-store-listing.cjs'
+  pull_request:
+    paths:
+      - 'mobile/store-listing/**'
+      - 'mobile/scripts/check-store-listing.cjs'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - run: node mobile/scripts/check-store-listing.cjs

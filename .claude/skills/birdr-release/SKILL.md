@@ -19,6 +19,11 @@ has to be synced. `mobile/scripts/set-release.cjs` does both.
    unrelated staged or unstaged changes — a release commit should contain only the
    version files. If there are other changes, stop and ask what to do with them.
 
+   Also run `node scripts/check-store-listing.cjs` from `mobile/`. It fails if a store title
+   or subtitle no longer matches `store-listing/titles.lock.json`, so a stray edit cannot
+   ship an old title. If the App Store keys are available, `scripts/check-appstore-listing.cjs`
+   shows whether App Store Connect has the same texts.
+
 2. **Set the version.** From `mobile/`:
 
    ```

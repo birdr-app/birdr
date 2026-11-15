@@ -13,6 +13,15 @@ below for what is live where. Release notes live separately in `../release-notes
 | `play.short_description` | Google Play | 80 characters |
 | `description` | both | 4000 characters |
 
+## Titles and subtitles are locked
+
+`titles.lock.json` pins every language's App Store name and subtitle (the Play title
+must equal the name). `node scripts/check-store-listing.cjs` checks the listing files
+against it, plus every character limit above; the "Store listing" workflow runs it on
+any change here and the Android release workflow runs it before building. The lock
+exists because the retitle was once undone by accident inside an unrelated commit. To
+change a title on purpose, edit the listing file and the lock in the same commit.
+
 ## How the texts are written for search
 
 - **Name and title carry the strongest words.** "Bird ID", "Quiz" and "Song" are what

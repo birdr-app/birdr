@@ -23,6 +23,7 @@
     "build:android:push": "eas build --platform android --profile production-local --local --non-interactive && eas submit --platform android --profile production --latest --non-interactive",
     "release:store": "eas build --platform all --profile production --auto-submit --non-interactive",
     "release:ios": "eas build --platform ios --profile production --auto-submit --non-interactive",
+    "check:store-listing": "node scripts/check-store-listing.cjs",
     "release:android": "node scripts/release-android.cjs",
     "release:android:eas": "eas build --platform android --profile production --auto-submit --non-interactive",
     "build:android:debug": "bash scripts/gradle-with-node22.sh app:assembleDebug -x lint -x test",
