@@ -33,6 +33,29 @@
     <a href="/play">{% mt "Open Motmot" %}</a>
   </p>
 </section>
+{% if species_groups %}
+<section id="species">
+  <h2>{% mt "Birds on the {name} list" name=country_name %}</h2>
+  <p>{% mt "{count} species in {families} families. Open a species for photos, sounds and lookalikes." count=species_listed families=species_family_count %}</p>
+  {% if top_families %}
+  <p>
+    {% mt "Largest families" %}:
+    {% for f in top_families %}<a href="{{ f.url|mpath }}">{{ f.name }}</a> ({{ f.count }}){% if not forloop.last %} · {% endif %}{% endfor %}
+  </p>
+  {% endif %}
+  {% for group in species_groups %}
+  <h3>
+    {% if group.url %}<a href="{{ group.url|mpath }}">{{ group.name }}</a>{% else %}{% mt "Other birds" %}{% endif %}
+    <span class="latin">{% if group.latin %}{{ group.latin }} · {% endif %}{{ group.count }}</span>
+  </h3>
+  <ul class="species-results">
+    {% for s in group.species %}
+    <li><a href="{{ '/site/birds/'|mpath }}{{ s.slug }}/">{{ s.name }}</a> <span class="latin">{{ s.latin }}</span></li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</section>
+{% endif %}
 {% if trip_href %}
 <section>
   <h2>{% mt "Trip prep for {name}" name=country_name %}</h2>

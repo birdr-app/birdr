@@ -122,6 +122,66 @@ def _species_rows(qs, locale: str) -> list[dict]:
     return rows
 
 
+def country_species_by_family(country, locale: str) -> dict:
+    """The species of a country's list grouped by family, for the country page.
+
+    Every species links to its page and every family to its family page, so the
+    country page carries real, country-specific content and hands crawlers a path
+    to each bird."""
+    public = set(public_species_ids())
+    rows = [
+        row for row in Species.objects.filter(countryspecies__country=country)
+        .order_by('name_latin')
+        .values('id', 'slug', 'name', 'name_latin', 'taxonomic_family_id')
+        .distinct()
+        if row['id'] in public
+    ]
+    if not rows:
+        return {'species_groups': [], 'species_listed': 0, 'species_family_count': 0, 'top_families': []}
+    names = species_display_names([row['id'] for row in rows], locale)
+    families = {
+        family['id']: family
+        for order in taxa_index()['orders']
+        for family in order['families']
+    }
+    groups: dict[int | None, dict] = {}
+    for row in rows:
+        family = families.get(row['taxonomic_family_id'])
+        key = family['id'] if family else None
+        group = groups.get(key)
+        if group is None:
+            group = groups[key] = {
+                'name': _taxon_name(family, locale) if family else '',
+                'latin': family['latin'] if family else '',
+                'url': family['url'] if family else '',
+                'species': [],
+            }
+        group['species'].append({
+            'slug': row['slug'],
+            'name': names.get(row['id']) or row['name'],
+            'latin': row['name_latin'],
+        })
+    # Alphabetical in the reader's language: tax_ordering is not filled in for most species.
+    ordered = sorted(
+        (g for key, g in groups.items() if key is not None),
+        key=lambda g: g['name'].casefold(),
+    )
+    other = groups.get(None)
+    if other:
+        ordered.append(other)
+    for group in ordered:
+        group['species'].sort(key=lambda s: s['name'].casefold())
+        group['count'] = len(group['species'])
+    named = [g for g in ordered if g['name']]
+    top = sorted(named, key=lambda g: (-g['count'], g['name']))[:5]
+    return {
+        'species_groups': ordered,
+        'species_listed': len(rows),
+        'species_family_count': len(named),
+        'top_families': [{'name': g['name'], 'url': g['url'], 'count': g['count']} for g in top],
+    }
+
+
 def _comparison_rows(species_ids: list[int], locale: str) -> list[dict]:
     """AI comparisons between two species of the same taxon, for links to the compare pages."""
     pairs = list(

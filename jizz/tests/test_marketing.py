@@ -492,6 +492,45 @@ class MarketingPagesTests(TestCase):
         self.assertEqual(self.client.get('/site/countries/north-holland/').status_code, 404)
         self.assertEqual(self.client.get('/site/countries/not-a-country/').status_code, 404)
 
+    def test_country_page_lists_species_by_family_in_every_language(self):
+        from jizz.models import Language, SpeciesName, TaxonomicFamily, TaxonomicOrder
+
+        order = TaxonomicOrder.objects.create(
+            name_latin='Accipitriformes', name_en='Hawks and allies', name_nl='Roofvogels',
+        )
+        family = TaxonomicFamily.objects.create(
+            name_latin='Accipitridae',
+            name_en='Hawks, eagles and kites',
+            name_nl='Haviken',
+            taxonomic_order=order,
+        )
+        Species.objects.filter(id__in=[self.sparrow.id, self.goshawk.id]).update(taxonomic_family=family)
+        Language.objects.get_or_create(code='nl', defaults={'name': 'Dutch'})
+        SpeciesName.objects.create(species=self.sparrow, language_id='nl', name='Sperwer')
+        SpeciesName.objects.create(species=self.goshawk, language_id='nl', name='Havik')
+        cache.clear()
+
+        html = self.client.get('/site/countries/netherlands/').content.decode()
+        self.assertIn('Birds on the Netherlands list', html)
+        self.assertIn('2 species in 1 families.', html)
+        self.assertIn('Largest families', html)
+        # The family links to its family page, every species to its bird page.
+        self.assertIn('href="/site/families/accipitridae/">Hawks, eagles and kites</a>', html)
+        self.assertIn(f'href="/site/birds/{self.sparrow.slug}/">Eurasian Sparrowhawk</a>', html)
+        self.assertIn(f'href="/site/birds/{self.goshawk.slug}/">Northern Goshawk</a>', html)
+        self.assertIn('Accipiter nisus', html)
+
+        nl = self.client.get('/nl/site/countries/netherlands/').content.decode()
+        self.assertIn('Vogels op de lijst van Nederland', nl)
+        self.assertIn(f'href="/nl/site/birds/{self.sparrow.slug}/">Sperwer</a>', nl)
+        self.assertIn('href="/nl/site/families/accipitridae/">Haviken</a>', nl)
+        self.assertNotIn('Birds on the', nl)
+
+        es = self.client.get('/es/site/countries/netherlands/').content.decode()
+        self.assertIn('Aves de la lista de', es)
+        self.assertIn('especies en', es)
+        self.assertNotIn('Birds on the', es)
+
     def test_species_index_search_and_sections(self):
         from jizz.models import TaxonomicFamily
 

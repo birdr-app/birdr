@@ -69,7 +69,7 @@ from jizz.marketing.country_stats import confusion_pairs, country_page_stats, mi
 from jizz.marketing.mode_countries import national_league_countries, survival_countries
 from jizz.marketing.html import markdown_to_safe_html, sanitize_html
 from compare.descriptions import description_context, generation_unavailable
-from jizz.marketing.taxa import taxon_links
+from jizz.marketing.taxa import country_species_by_family, taxon_links
 from jizz.marketing.species_index import (
     FAMILY_LIMIT,
     SEARCH_LIMIT,
@@ -546,6 +546,7 @@ def _country_response(request, country, species_count, *, country_name, path, br
         challenge_href='/journey/intro',
         is_region=is_region,
         **_trip_prep_context(country.code, locale),
+        **country_species_by_family(country, locale),
         **extra,
         **stats,
         **store_review_context(),
