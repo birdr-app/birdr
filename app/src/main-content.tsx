@@ -30,6 +30,7 @@ import { MyGamesPage } from "./pages/my-games"
 import ChecklistPage from "./pages/checklist"
 import TroubleSpotsPage from "./pages/trouble-spots"
 import TroubleSpotPairPage from "./pages/trouble-spot-pair"
+import TroubleSpotsCustomPage from "./pages/trouble-spots-custom"
 import TroubleSpotSpeciesPage from "./pages/trouble-spot-species"
 import SpeciesPracticePage from "./pages/practice-species"
 import PairPracticePage from "./pages/practice-pair"
@@ -153,6 +154,7 @@ export const MainContent = () => {
             <Route path="/checklist" element={<ChecklistPage />} />
             <Route path="/trouble-spots" element={<TroubleSpotsPage />} />
             <Route path="/tricky-birds" element={<TroubleSpotsPage scope="everyone" />} />
+            <Route path="/trouble-spots/custom" element={<TroubleSpotsCustomPage />} />
             <Route path="/trouble-spots/species/:speciesId" element={<TroubleSpotSpeciesPage />} />
             <Route path="/trouble-spots/pair/:lowId/:highId" element={<TroubleSpotPairPage />} />
             <Route path="/practice/species/:slug" element={<SpeciesPracticePage />} />

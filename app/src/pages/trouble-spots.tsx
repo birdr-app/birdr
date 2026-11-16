@@ -23,12 +23,14 @@ import {
   fetchTroubleSpots,
   practiceApiErrorMessage,
   startConfusionPairPractice,
+  startCustomPickPractice,
   startMixupPractice,
   startSpeciesPractice,
   type TroubleSpotFlock,
   type TroubleSpotPair,
   type TroubleSpotSpecies,
 } from '../api/practice';
+import { readCustomPicks, removeCustomPick, type CustomPick } from '../user/custom-picks';
 
 const SPECIES_THUMB = '48px';
 
@@ -100,6 +102,8 @@ export default function TroubleSpotsPage({ scope = 'me' }: { scope?: TroubleSpot
   const [startingPairKey, setStartingPairKey] = useState<string | null>(null);
   const [startingSpeciesId, setStartingSpeciesId] = useState<number | null>(null);
   const [startingFlockKey, setStartingFlockKey] = useState<string | null>(null);
+  const [customPicks, setCustomPicks] = useState<CustomPick[]>(() => readCustomPicks());
+  const [startingCustomKey, setStartingCustomKey] = useState<string | null>(null);
   const [countryCode, setCountryCode] = useState<string | undefined>();
   const [includeFixed, setIncludeFixed] = useState(false);
   const { countries } = UseCountries();
@@ -217,6 +221,30 @@ export default function TroubleSpotsPage({ scope = 'me' }: { scope?: TroubleSpot
     }
   };
 
+  const handlePracticeCustom = async (pick: CustomPick) => {
+    if (requireLogin()) return;
+    setStartingCustomKey(pick.key);
+    setError(null);
+    try {
+      const result = await startCustomPickPractice(
+        pick.species.map((member) => member.id),
+        effectiveCountryCode,
+      );
+      localStorage.setItem('player-token', result.player_token);
+      localStorage.setItem('game-token', result.game.token);
+      await loadPlayer(result.player_token);
+      const game = await loadGame(result.game.token);
+      if (game) {
+        setGame(game);
+        navigate('/game/play');
+      }
+    } catch (e: unknown) {
+      setError(practiceApiErrorMessage(e));
+    } finally {
+      setStartingCustomKey(null);
+    }
+  };
+
   useEffect(() => {
     setActiveTab(tabFromSearch(searchParams.get('tab')));
   }, [searchParams]);
@@ -247,6 +275,10 @@ export default function TroubleSpotsPage({ scope = 'me' }: { scope?: TroubleSpot
     : '';
   const speciesNameById = (speciesId: number, fallback: string, nameNl?: string) =>
     pairDisplayName(fallback, nameNl, speciesId, allSpecies, speciesLanguage || 'en');
+
+  const customPicksForTab = customPicks.filter((pick) =>
+    activeTab === 'pairs' ? pick.species.length === 2 : pick.species.length > 2,
+  );
 
   const pageTitle = (
     <Heading color="gray.800" size="lg" m={0}>
@@ -389,6 +421,82 @@ export default function TroubleSpotsPage({ scope = 'me' }: { scope?: TroubleSpot
             <Text color="red.600" fontSize="sm">
               {error}
             </Text>
+          ) : null}
+
+          {activeTab !== 'species' ? (
+            <VStack gap={3} align="stretch">
+              <Button
+                alignSelf="flex-start"
+                variant="outline"
+                colorPalette="primary"
+                onClick={() => navigate('/trouble-spots/custom')}
+              >
+                <FormattedMessage
+                  id="trouble_spots_custom_create"
+                  defaultMessage="Create your own pick"
+                />
+              </Button>
+              {customPicksForTab.map((pick) => {
+                const busy = startingCustomKey === pick.key;
+                return (
+                  <Flex
+                    key={pick.key}
+                    align="flex-start"
+                    gap={3}
+                    py={3}
+                    borderBottomWidth="1px"
+                    borderColor="primary.100"
+                  >
+                    <Box flex={1} minW={0}>
+                      <Text
+                        as="span"
+                        fontSize="2xs"
+                        fontWeight="extrabold"
+                        color="primary.700"
+                        bg="primary.50"
+                        borderWidth="1px"
+                        borderColor="primary.500"
+                        borderRadius="md"
+                        px={2}
+                        py={0.5}
+                        mb={1}
+                        display="inline-block"
+                      >
+                        <FormattedMessage id="trouble_spots_custom_badge" defaultMessage="Your pick" />
+                      </Text>
+                      {pick.species.map((member) => (
+                        <Text key={member.id} fontWeight="semibold" lineClamp={1}>
+                          {speciesNameById(member.id, member.name)}
+                        </Text>
+                      ))}
+                    </Box>
+                    <Flex direction="column" gap={2} flexShrink={0}>
+                      <Button
+                        size="sm"
+                        colorPalette="primary"
+                        loading={busy}
+                        disabled={startingCustomKey != null && !busy}
+                        onClick={() => void handlePracticeCustom(pick)}
+                      >
+                        <FormattedMessage
+                          id="trouble_spots_practice_species"
+                          defaultMessage="Practice"
+                        />
+                      </Button>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        colorPalette="primary"
+                        disabled={busy}
+                        onClick={() => setCustomPicks(removeCustomPick(pick.key))}
+                      >
+                        <FormattedMessage id="trouble_spots_custom_remove" defaultMessage="Remove" />
+                      </Button>
+                    </Flex>
+                  </Flex>
+                );
+              })}
+            </VStack>
           ) : null}
 
           {activeTab === 'species' ? (
