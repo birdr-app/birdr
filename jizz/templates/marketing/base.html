@@ -1687,7 +1687,7 @@
         <a href="{{ '/site/community/'|mpath }}"{% if nav_section == 'community' %} aria-current="page"{% endif %}>{% mt "Community" %}</a>
         {% if locale == 'nl' %}<a href="{{ '/site/vogelcursus/'|mpath }}"{% if nav_section == 'course' %} aria-current="page"{% endif %}>Vogelcursus</a>{% endif %}
         {% if not nav_user_name %}
-        <a class="nav-login" id="nav-login" href="{{ login_href }}" aria-haspopup="dialog" aria-controls="login-dialog">{% mt "Log in" %}</a>
+        <a class="nav-login" id="nav-login" href="{{ login_href }}" rel="nofollow" aria-haspopup="dialog" aria-controls="login-dialog">{% mt "Log in" %}</a>
         {% endif %}
         <details class="nav-account" id="nav-account"{% if not nav_user_name %} hidden{% endif %}>
           <summary class="nav-user" id="nav-user">{{ nav_user_name }}</summary>

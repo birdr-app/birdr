@@ -993,6 +993,9 @@ def robots_txt(request):
         'Disallow: /admin/\n'
         'Disallow: /api/\n'
         'Disallow: /token/\n'
+        # /login?next=<page> is linked from every bird and compare page and serves the
+        # noindex web-app shell; blocking it keeps Googlebot's crawl on the real pages.
+        'Disallow: /login\n'
         'Disallow: /site/my-edits/\n'
         'Disallow: /site/logout/\n'
         'Disallow: /*/site/my-edits/\n'

@@ -1055,6 +1055,13 @@ class MarketingPagesTests(TestCase):
         self.assertIn('Disallow: /admin/', text)
         self.assertIn('Disallow: /api/', text)
         self.assertIn('Disallow: /token/', text)
+        self.assertIn('Disallow: /login\n', text)
+        # Species and compare pages (every locale) must stay crawlable.
+        self.assertIn('Allow: /\n', text)
+        self.assertNotIn('Disallow: /site/birds', text)
+        self.assertNotIn('Disallow: /site/compare', text)
+        self.assertNotIn('Disallow: /*/site/birds', text)
+        self.assertNotIn('Disallow: /*/site/compare', text)
         self.assertIn('Disallow: /site/my-edits/', text)
         self.assertIn('Disallow: /site/logout/', text)
         self.assertIn('Sitemap: https://motmot.club/sitemap.xml', text)
