@@ -1,0 +1,22 @@
+{
+  "code": "manduc",
+  "name": {
+    "en": "Mandarin Duck",
+    "nl": "Mandarijneend"
+  },
+  "latin": "Aix galericulata",
+  "look_for": [
+    {
+      "en": "Male: orange **cheek** ruff, white **eyebrow**",
+      "nl": "Mannetje: oranje **wangpluimen**, witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Male: upright orange \"sails\" on the **wings**",
+      "nl": "Mannetje: rechtopstaande oranje \"zeilen\" op de **vleugels**"
+    },
+    {
+      "en": "Female grey-brown, white spectacle and eye-stripe",
+      "nl": "Vrouwtje grijsbruin, witte bril en oogstreep"
+    }
+  ]
+}

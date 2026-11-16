@@ -1,0 +1,22 @@
+{
+  "code": "scocro1",
+  "name": {
+    "en": "Scottish Crossbill",
+    "nl": "Schotse kruisbek"
+  },
+  "latin": "Loxia scotica",
+  "look_for": [
+    {
+      "en": "Heavy, crossed **bill**, deeper than Common Crossbill's",
+      "nl": "Zware, gekruiste **snavel**, dikker dan die van de kruisbek"
+    },
+    {
+      "en": "Male red, female greenish-yellow",
+      "nl": "Mannetje rood, vrouwtje groengeel"
+    },
+    {
+      "en": "Feeds on cones, often hanging upside down",
+      "nl": "Eet zaad uit dennenappels, vaak ondersteboven"
+    }
+  ]
+}

@@ -11,7 +11,7 @@ export function leagueFlag(code: string | null | undefined): string {
 }
 
 /** Trips over several countries show their flags side by side. */
-const MULTI_COUNTRY_FLAGS: Record<string, string> = { BALTICS: '🇪🇪🇱🇻🇱🇹', IBERIA: '🇪🇸🇵🇹' };
+const MULTI_COUNTRY_FLAGS: Record<string, string> = { BALTICS: '🇪🇪🇱🇻🇱🇹', IBERIA: '🇪🇸🇵🇹', BRITISHISLES: '🇬🇧🇮🇪' };
 
 /** Flag of a Trip prep trip: one country's, or the flags of every country in a multi-country trip. */
 export function tripFlag(code: string | null | undefined): string {

@@ -1,0 +1,22 @@
+{
+  "code": "wilpta",
+  "name": {
+    "en": "Willow Ptarmigan",
+    "nl": "Moerassneeuwhoen"
+  },
+  "latin": "Lagopus lagopus",
+  "look_for": [
+    {
+      "en": "Plump grouse with a red **comb** over the eye",
+      "nl": "Gedrongen hoen met een rode **kam** boven het oog"
+    },
+    {
+      "en": "Summer: rich brown with white **wings** and belly",
+      "nl": "Zomer: roodbruin met witte **vleugels** en buik"
+    },
+    {
+      "en": "Winter: all white except the black **tail**",
+      "nl": "Winter: geheel wit, alleen de **staart** zwart"
+    }
+  ]
+}

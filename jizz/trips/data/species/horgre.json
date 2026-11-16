@@ -1,0 +1,22 @@
+{
+  "code": "horgre",
+  "name": {
+    "en": "Slavonian Grebe",
+    "nl": "Kuifduiker"
+  },
+  "latin": "Podiceps auritus",
+  "look_for": [
+    {
+      "en": "Summer: black head, golden **ear tufts**, chestnut neck",
+      "nl": "Zomer: zwarte kop, gouden **oorpluimen**, roestrode hals"
+    },
+    {
+      "en": "Winter: black cap, clean white **cheeks**",
+      "nl": "Winter: zwarte kap, schone witte **wangen**"
+    },
+    {
+      "en": "Small, straight, pale-tipped **bill**; flat-topped head",
+      "nl": "Kleine, rechte **snavel** met lichte punt; platte kop"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "pifgoo",
+  "name": {
+    "en": "Pink-footed Goose",
+    "nl": "Kleine rietgans"
+  },
+  "latin": "Anser brachyrhynchus",
+  "look_for": [
+    {
+      "en": "Small grey-brown goose, dark head and neck",
+      "nl": "Kleine grijsbruine gans, donkere kop en hals"
+    },
+    {
+      "en": "Pink **legs**, pink band across the **bill**",
+      "nl": "Roze **poten**, roze band over de **snavel**"
+    },
+    {
+      "en": "Short, rounded **bill**; flocks fly in noisy skeins",
+      "nl": "Korte, ronde **snavel**; trekt in luidruchtige groepen"
+    }
+  ]
+}

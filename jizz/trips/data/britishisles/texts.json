@@ -1,0 +1,846 @@
+{
+  "country": "BRITISHISLES",
+  "intro": {
+    "en": "Britain and Ireland pack a lot into a small area: hedgerow farmland and gardens, estuaries with winter wildfowl, seabird colonies on the cliffs of the north and west, Highland pine forest and moors, East Anglian reedbeds and southern heaths. This trip covers 195 species, from garden birds to puffins, Capercaillie and Bearded Tit. Spring and summer are best for seabirds, woods and moors, and winter for geese, ducks and waders.",
+    "nl": "Groot-Brittannië en Ierland hebben veel te bieden op een klein oppervlak: heggenlandschap en tuinen, estuaria met wintergroepen watervogels, zeevogelkolonies op de kliffen van het noorden en westen, Schotse dennenbossen en heidevelden, rietmoerassen in Oost-Anglia en heide in het zuiden. Deze reis omvat 195 soorten, van tuinvogels tot papegaaiduikers, auerhoenen en baardmannen. Lente en zomer zijn het mooist voor zeevogels, bossen en heidevelden, en de winter voor ganzen, eenden en steltlopers."
+  },
+  "groups": {
+    "waterfowl": {
+      "here": {
+        "en": "Twenty-five swans, geese and ducks. Mallard, Mute Swan and Canada Goose are on lakes and rivers everywhere, and in winter Brent and Barnacle Geese, Pink-footed Geese and a long list of ducks arrive from the north. Whooper Swans winter in Scotland, northern England and Ireland, and the Bewick's Swan is now scarce at its old haunts such as Slimbridge and the Ouse Washes.",
+        "nl": "Vijfentwintig zwanen, ganzen en eenden. Wilde eend, knobbelzwaan en grote Canadese gans zie je overal op meren en rivieren, en in de winter komen rotganzen, brandganzen, kleine rietganzen en een lange rij eenden uit het noorden. Wilde zwanen overwinteren in Schotland, Noord-Engeland en Ierland, en de kleine zwaan is nu schaars op zijn oude plekken zoals Slimbridge en de Ouse Washes."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "here": {
+        "en": "Seven game birds in two worlds. Pheasant, Red-legged Partridge and Grey Partridge live on farmland, and Red Grouse (listed under Willow Ptarmigan), Black Grouse, Capercaillie and Rock Ptarmigan live on moors, in pine forest and on the high tops, mostly in Scotland.",
+        "nl": "Zeven hoenderachtigen uit twee werelden. Fazant, rode patrijs en patrijs leven op akkers, en moerassneeuwhoen (de Red Grouse), korhoen, auerhoen en alpensneeuwhoen leven op heidemoeren, in dennenbos en op de hoge toppen, vooral in Schotland."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "Four pigeons and doves. Woodpigeon and Collared Dove are in every town and village, Stock Dove prefers farmland and parkland, and the Rock Dove covers the town pigeon and the wild birds of the sea cliffs in the north and west.",
+        "nl": "Vier duiven. Houtduif en Turkse tortel zitten in elke stad en elk dorp, de holenduif houdt van akkers en parken, en onder de rotsduif vallen de stadsduif en de wilde vogels van de zeekliffen in het noorden en westen."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "One cuckoo, the Common Cuckoo. It arrives in April, calls over farmland, heaths and moors, and is much easier to hear than to see.",
+        "nl": "Eén koekoek: de koekoek zelf. Hij komt in april aan, roept boven akkers, heide en heidemoeren en is veel makkelijker te horen dan te zien."
+      }
+    },
+    "nightjars": {
+      "here": {
+        "en": "One nightjar, the Eurasian Nightjar, a summer visitor of heaths, moors and forest clearings. Go at dusk from late May and listen for its long, dry churring.",
+        "nl": "Eén nachtzwaluw: de nachtzwaluw zelf, een zomergast van heide, heidemoeren en open plekken in het bos. Ga vanaf eind mei in de schemering en luister naar zijn lange, droge gesnor."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "One swift, the Common Swift. It is here from May to August, screaming over towns, villages and church towers.",
+        "nl": "Eén gierzwaluw: de gierzwaluw zelf. Hij is er van mei tot augustus en krijst boven steden, dorpen en kerktorens."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Four rails and relatives. Coot and Moorhen are on almost every pond and canal, the Water Rail hides in reedbeds, and the Corncrake lives in hay meadows of the Hebrides and north-west Ireland, where it calls through the night.",
+        "nl": "Vier rallen en verwanten. Meerkoet en waterhoen zitten op bijna elke vijver en elk kanaal, de waterral verstopt zich in rietmoeras, en de kwartelkoning leeft in hooilanden op de Hebriden en in het noordwesten van Ierland, waar hij de hele nacht roept."
+      }
+    },
+    "cranes": {
+      "here": {
+        "en": "One crane, the Common Crane. A few pairs breed in East Anglia and a few other wetlands, and small flocks stay in winter, so count it as a bonus.",
+        "nl": "Eén kraanvogel: de kraanvogel zelf. Een paar paar broeden in East Anglia en op enkele andere wetlands en kleine groepen blijven in de winter, dus zie het als een meevaller."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "Twenty-three waders. Oystercatcher, Lapwing, Curlew and Redshank are widespread, estuaries such as the Wash, Morecambe Bay and the Dee hold huge winter flocks of Knot, Dunlin and godwits, and Avocet and Stone-curlew are East Anglian specialities.",
+        "nl": "Drieëntwintig steltlopers. Scholekster, kievit, wulp en tureluur zie je overal, estuaria als de Wash, Morecambe Bay en de Dee houden in de winter enorme groepen kanoeten, bonte strandlopers en grutto's vast, en kluut en griel zijn specialiteiten van East Anglia."
+      }
+    },
+    "skuas-and-jaegers": {
+      "here": {
+        "en": "Two skuas, Great and Arctic. Both breed on moors and islands in the far north and Hebrides, where they chase gulls and terns for food, and you can see them off the coast on migration in late summer.",
+        "nl": "Twee jagers: de grote en de kleine jager. Beide broeden op heide en eilanden in het hoge noorden en op de Hebriden, waar ze meeuwen en sterns achternazitten voor voedsel, en je ziet ze in de late zomer tijdens de trek langs de kust."
+      }
+    },
+    "alcids": {
+      "here": {
+        "en": "Four auks. Common Guillemot, Razorbill and Atlantic Puffin breed in crowded colonies on sea cliffs and islands, and the Black Guillemot nests alone in harbours and rocky coves in the north and west.",
+        "nl": "Vier alken. Zeekoet, alk en papegaaiduiker broeden in drukke kolonies op zeekliffen en eilanden, en de zwarte zeekoet nestelt alleen in havens en rotsbaaien in het noorden en westen."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Twelve gulls and terns, including the Kittiwake. Black-headed, Herring and Lesser Black-backed Gulls are everywhere, and Sandwich, Common, Arctic and Little Terns nest in colonies on beaches and islands from April to August.",
+        "nl": "Twaalf meeuwen en sterns, waaronder de drieteenmeeuw. Kokmeeuw, zilvermeeuw en kleine mantelmeeuw zijn overal, en grote stern, visdief, noordse stern en dwergstern nestelen van april tot augustus in kolonies op stranden en eilanden."
+      }
+    },
+    "grebes": {
+      "here": {
+        "en": "Three grebes. Great Crested and Little Grebe are on lakes, gravel pits and slow rivers, and the Slavonian Grebe is a rarity that breeds on a few Scottish lochs and winters on sheltered coasts.",
+        "nl": "Drie futen. Fuut en dodaars zitten op meren, grindgaten en trage rivieren, en de kuifduiker is een zeldzaamheid die op enkele Schotse meren broedt en langs beschutte kusten overwintert."
+      }
+    },
+    "loons": {
+      "here": {
+        "en": "Three divers. Red-throated Diver breeds on small lochs in Scotland, Great Northern Diver is a winter bird of sheltered coasts, especially in the north and west, and Black-throated Diver is scarce, breeding on a few big Highland lochs.",
+        "nl": "Drie duikers. De roodkeelduiker broedt op kleine meren in Schotland, de ijsduiker is een wintervogel van beschutte kusten, vooral in het noorden en westen, en de parelduiker is schaars en broedt op enkele grote meren in de Highlands."
+      }
+    },
+    "storm-petrels": {
+      "here": {
+        "en": "One storm-petrel, the European Storm-Petrel. It nests in burrows on remote islands and visits them only at night, so a boat trip or a dusk watch from a headland is the way to see it.",
+        "nl": "Eén stormvogeltje, het stormvogeltje zelf. Het nestelt in holen op afgelegen eilanden en komt alleen 's nachts aan land, dus een boottocht of een schemerwacht op een kaap is de manier om het te zien."
+      }
+    },
+    "petrels-shearwaters-and-diving-petrels": {
+      "here": {
+        "en": "Two petrels. The Fulmar nests on cliffs all around the coast, and the Manx Shearwater breeds in burrows on western islands such as Skomer and Rum and is seen skimming the sea from headlands and boats.",
+        "nl": "Twee stormvogels. De noordse stormvogel nestelt op kliffen langs de hele kust, en de noordse pijlstormvogel broedt in holen op westelijke eilanden als Skomer en Rum en scheert vanaf kapen en boten over zee."
+      }
+    },
+    "frigatebirds-boobies-and-gannets": {
+      "here": {
+        "en": "One gannet, the Northern Gannet. Huge white colonies sit on Bass Rock, Bempton Cliffs, Grassholme and the Saltee Islands, and you can watch the birds plunge into the sea from almost any headland.",
+        "nl": "Eén jan-van-gent. Enorme witte kolonies zitten op Bass Rock, Bempton Cliffs, Grassholme en de Saltee-eilanden, en je ziet de vogels vanaf bijna elke kaap in zee storten."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "Two cormorants. Great Cormorant fishes on the coast, rivers and gravel pits, and the European Shag is the slimmer bird of rocky coasts and seabird cliffs.",
+        "nl": "Twee aalscholvers. De aalscholver vist langs de kust, op rivieren en in grindgaten, en de kuifaalscholver is de slankere vogel van rotskusten en vogelkliffen."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Four long-legged birds of water. Grey Heron is everywhere, Little Egret has spread through the south, east and Ireland, Spoonbill breeds in small numbers in Norfolk and Dorset, and the Bittern hides in reedbeds, with East Anglia and Lancashire the best places to hear one.",
+        "nl": "Vier langpotige vogels van het water. De blauwe reiger zie je overal, de kleine zilverreiger heeft zich over het zuiden, oosten en Ierland verspreid, de lepelaar broedt in kleine aantallen in Norfolk en Dorset, en de roerdomp verstopt zich in het riet, met East Anglia en Lancashire als beste plekken om er een te horen."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "Seven birds of prey of the hawk and eagle kind. Common Buzzard and Red Kite are the ones you see from the car, and Sparrowhawk hunts in gardens and woods. Marsh Harrier, Hen Harrier, Golden Eagle and Osprey need the right place: reedbeds, moors, Highland glens and lochs.",
+        "nl": "Zeven roofvogels uit de familie van haviken en arenden. Buizerd en rode wouw zie je vanuit de auto, en de sperwer jaagt in tuinen en bossen. Voor bruine kiekendief, blauwe kiekendief, steenarend en visarend moet je op de juiste plek zijn: rietmoerassen, heidevelden, Schotse bergdalen en meren."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "Three owls. Tawny Owl is widespread in the woods of Britain but does not occur in Ireland, Little Owl lives on farmland in England and Wales, and Short-eared Owl hunts over moors and coastal marsh.",
+        "nl": "Drie uilen. De bosuil komt in Groot-Brittannië in veel bossen voor maar niet in Ierland, de steenuil leeft op akkerland in Engeland en Wales, en de velduil jaagt boven heidevelden en kustmoeras."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "One kingfisher: the Common Kingfisher, along slow rivers, canals and lakes in England, Wales and Ireland, and scarcer in Scotland. Look for a blue flash low over the water.",
+        "nl": "Eén ijsvogel: de ijsvogel zelf, langs rustige rivieren, kanalen en meren in Engeland, Wales en Ierland, en schaarser in Schotland. Let op een blauwe flits laag over het water."
+      }
+    },
+    "woodpeckers": {
+      "here": {
+        "en": "Two woodpeckers. Great Spotted Woodpecker is common in the woods of Britain, and Green Woodpecker feeds on lawns and grassland in England and Wales. Neither is a regular breeding bird in Ireland.",
+        "nl": "Twee spechten. De grote bonte specht is algemeen in de bossen van Groot-Brittannië, en de groene specht zoekt voedsel op gazons en graslanden in Engeland en Wales. Geen van beide is een vaste broedvogel in Ierland."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "Four falcons. Kestrel is the one you see hovering over roadsides, Peregrine nests on sea cliffs and city buildings, Merlin hunts over moors and coastal fields, and Hobby is a summer visitor to southern heaths and wetlands.",
+        "nl": "Vier valken. De torenvalk zie je bidden boven bermen, de slechtvalk broedt op zeekliffen en stadsgebouwen, het smelleken jaagt boven heidevelden en velden aan de kust, en de boomvalk is een zomergast van heide en wetlands in het zuiden."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "One parakeet: the Ring-necked Parakeet, an escaped bird that now lives wild around London and the south-east of England. It is loud and bright green and easy to spot in parks.",
+        "nl": "Eén parkiet: de halsbandparkiet, een ontsnapte vogel die nu in het wild leeft rond Londen en in het zuidoosten van Engeland. Hij is luid en felgroen en makkelijk te vinden in parken."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "Eight crows. Magpie, Jackdaw, Rook and Carrion Crow are everywhere in lowland Britain, and the Hooded Crow takes over in Ireland and north-west Scotland. Raven is a bird of hills and coasts, Jay hides in woods, and Chough needs wild western coasts.",
+        "nl": "Acht kraaiachtigen. Ekster, kauw, roek en zwarte kraai zitten overal in het laagland van Groot-Brittannië, en in Ierland en het noordwesten van Schotland neemt de bonte kraai het over. De raaf is een vogel van heuvels en kusten, de gaai verstopt zich in bossen en de alpenkraai heeft ruwe westkusten nodig."
+      }
+    },
+    "tits-chickadees-and-titmice": {
+      "here": {
+        "en": "Five tits. Blue, Great and Coal Tit are in every garden, the Marsh Tit lives in the broadleaf woods of England and Wales, and the Crested Tit lives only in the Highland pine forests.",
+        "nl": "Vijf mezen. Pimpelmees, koolmees en zwarte mees zitten in elke tuin, de glanskop leeft in loofbos in Engeland en Wales, en de kuifmees leeft alleen in de dennenbossen van de Hooglanden."
+      }
+    },
+    "larks": {
+      "here": {
+        "en": "One lark, the Skylark. It sings high over farmland, moors and dunes almost everywhere, and you often hear it before you find it.",
+        "nl": "Eén leeuwerik, de veldleeuwerik. Hij zingt bijna overal hoog boven akkers, heidevelden en duinen, en je hoort hem vaak eerder dan je hem ziet."
+      }
+    },
+    "bearded-reedling": {
+      "here": {
+        "en": "One bird, the Bearded Tit. It lives in big reedbeds, mostly in East Anglia and a few other wetlands such as Leighton Moss, and is easiest to see on still mornings in summer.",
+        "nl": "Eén vogel, de baardman. Hij leeft in grote rietmoerassen, vooral in Oost-Anglia en op enkele andere plekken zoals Leighton Moss, en is op windstille zomerochtenden het makkelijkst te zien."
+      }
+    },
+    "reed-warblers-and-allies": {
+      "here": {
+        "en": "Two reed warblers. Sedge Warbler is common in reeds and wet scrub across Britain and Ireland, while Reed Warbler is mostly in the reedbeds of southern and eastern England and is scarce in Ireland.",
+        "nl": "Twee karekieten. De rietzanger is algemeen in riet en nat struikgewas in Groot-Brittannië en Ierland, terwijl de kleine karekiet vooral in de rietmoerassen van het zuiden en oosten van Engeland zit en in Ierland schaars is."
+      }
+    },
+    "grassbirds-and-allies": {
+      "here": {
+        "en": "One grass warbler: the Common Grasshopper Warbler. It is secretive, and you will mostly hear its long insect-like reel at dusk from rough grass and scrub.",
+        "nl": "Eén zanger van ruig gras: de sprinkhaanzanger. Hij leeft verborgen en je hoort vooral zijn lange, insectachtige gesnor in de schemering vanuit ruig gras en struikgewas."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "Three swallows and martins, all summer visitors. Sand Martin arrives first in March, and Swallow and House Martin nest in barns, houses and under eaves across Britain and Ireland.",
+        "nl": "Drie zwaluwen, allemaal zomergasten. De oeverzwaluw komt in maart als eerste aan, en boerenzwaluw en huiszwaluw nestelen in schuren, huizen en onder dakranden in heel Groot-Brittannië en Ierland."
+      }
+    },
+    "leaf-warblers": {
+      "here": {
+        "en": "Two leaf warblers. Willow Warbler and Common Chiffchaff are summer visitors found in woods and scrub, and you tell them by song. A few Chiffchaffs stay for the winter in the south and south-west.",
+        "nl": "Twee boszangers. Fitis en tjiftjaf zijn zomergasten van bossen en struikgewas, en je herkent ze aan de zang. Enkele tjiftjaffen blijven in de winter in het zuiden en zuidwesten."
+      }
+    },
+    "bush-warblers-and-allies": {
+      "here": {
+        "en": "One bush warbler: Cetti's Warbler. It lives in thick wet scrub in southern and eastern England and Wales, and its loud, sudden song is heard far more often than the bird is seen.",
+        "nl": "Eén struikzanger: de Cetti's zanger. Hij leeft in dicht nat struikgewas in het zuiden en oosten van Engeland en in Wales, en zijn luide, plotselinge zang hoor je veel vaker dan je de vogel ziet."
+      }
+    },
+    "long-tailed-tits-and-bushtit": {
+      "here": {
+        "en": "One bird, the Long-tailed Tit. It moves through hedges and woods in small, chattering flocks all year, with a tiny body and a tail longer than the rest of the bird.",
+        "nl": "Eén vogel, de staartmees. Hij trekt het hele jaar in kleine, kwetterende groepjes door heggen en bossen, met een klein lijf en een staart die langer is dan de rest van de vogel."
+      }
+    },
+    "sylviid-warblers": {
+      "here": {
+        "en": "Five warblers. Common Whitethroat and Blackcap are common across Britain and Ireland, Garden Warbler and Lesser Whitethroat are less so, and the Dartford Warbler is found only on southern heaths.",
+        "nl": "Vijf grasmussen. Grasmus en zwartkop komen veel voor in Groot-Brittannië en Ierland, tuinfluiter en braamsluiper minder, en de Provençaalse grasmus zit alleen op heidevelden in het zuiden."
+      }
+    },
+    "kinglets": {
+      "here": {
+        "en": "Two crests. Goldcrest is widespread in conifers and gardens, while the Firecrest is scarce, with a few breeding in southern England and more along the south coast in winter.",
+        "nl": "Twee goudhaantjes. Het goudhaantje komt veel voor in naaldbomen en tuinen, terwijl de vuurgoudhaan schaars is, met enkele broedvogels in het zuiden van Engeland en in de winter meer langs de zuidkust."
+      }
+    },
+    "nuthatches": {
+      "here": {
+        "en": "One nuthatch, found in woods and parks across England and Wales and spreading into southern Scotland. It is absent from Ireland.",
+        "nl": "Eén boomklever, te vinden in bossen en parken in Engeland en Wales en zich uitbreidend naar het zuiden van Schotland. In Ierland komt hij niet voor."
+      }
+    },
+    "treecreepers": {
+      "here": {
+        "en": "One treecreeper, in woods and parks. It creeps up trunks in small spirals and is easy to miss unless you watch bark closely.",
+        "nl": "Eén boomkruiper, in bossen en parken. Hij kruipt in kleine spiralen langs stammen omhoog en is makkelijk te missen als je niet goed naar de bast kijkt."
+      }
+    },
+    "wrens": {
+      "here": {
+        "en": "One wren, the tiny, loud Eurasian Wren, in gardens, hedges and woods everywhere. It is among the commonest birds of Britain and Ireland.",
+        "nl": "Eén winterkoning, klein en luid, in tuinen, heggen en bossen overal. Hij behoort tot de talrijkste vogels van Groot-Brittannië en Ierland."
+      }
+    },
+    "dippers": {
+      "here": {
+        "en": "One dipper, the White-throated Dipper. Look for it on fast, rocky streams in the north and west of Britain and in Ireland, bobbing on a stone before it dives.",
+        "nl": "Eén waterspreeuw. Zoek hem op snelle, stenige beken in het noorden en westen van Groot-Brittannië en in Ierland, waar hij op een steen wipt voor hij duikt."
+      }
+    },
+    "starlings-and-mynas": {
+      "here": {
+        "en": "One starling, the Common Starling. It is everywhere, and in winter huge flocks gather at roosts at dusk.",
+        "nl": "Eén spreeuw. Hij komt overal voor, en in de winter verzamelen enorme groepen zich bij de slaapplaats bij schemering."
+      }
+    },
+    "thrushes": {
+      "here": {
+        "en": "Six thrushes. Blackbird and Song Thrush are in every garden, Mistle Thrush is a bit less common, Redwing and Fieldfare come from the north in autumn, and Ring Ouzel is a summer visitor to the uplands.",
+        "nl": "Zes lijsters. Merel en zanglijster zitten in elke tuin, de grote lijster is wat minder algemeen, koperwiek en kramsvogel komen in het najaar uit het noorden, en de beflijster is een zomergast van de bergen."
+      }
+    },
+    "old-world-flycatchers": {
+      "here": {
+        "en": "Eight birds. The Robin is in every garden, Pied and Spotted Flycatcher are summer visitors of woods and churchyards, and Whinchat, Stonechat and Wheatear live on open ground. Common and Black Redstart are the other two, the second on industrial buildings and coasts.",
+        "nl": "Acht vogels. De roodborst zit in elke tuin, bonte en grauwe vliegenvanger zijn zomergasten van bossen en kerkhoven, en paapje, roodborsttapuit en tapuit leven in open terrein. Gekraagde en zwarte roodstaart zijn de overige twee, de tweede op industriële gebouwen en langs de kust."
+      }
+    },
+    "accentors": {
+      "here": {
+        "en": "One accentor, the Dunnock. It is a quiet, shuffling bird of hedges and garden borders, grey and brown with a thin bill.",
+        "nl": "Eén heggenmus. Het is een rustige, schuifelende vogel van heggen en tuinranden, grijs en bruin met een dunne snavel."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "Two sparrows. House Sparrow is in towns and villages, and the Tree Sparrow is a scarcer bird of farmland and hedges.",
+        "nl": "Twee mussen. De huismus zit in steden en dorpen, en de ringmus is een schaarsere vogel van akkerland en heggen."
+      }
+    },
+    "wagtails-and-pipits": {
+      "here": {
+        "en": "Six birds. Pied Wagtail is everywhere, Grey Wagtail is on fast streams, and Yellow Wagtail is in damp meadows. Meadow Pipit and Rock Pipit are the common pipits, and Tree Pipit is a summer visitor to wood edges and heath.",
+        "nl": "Zes vogels. De witte kwikstaart zit overal, de grote gele kwikstaart langs snelle beken en de gele kwikstaart in vochtige weilanden. Graspieper en oeverpieper zijn de algemene piepers, en de boompieper is een zomergast van bosranden en heide."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "here": {
+        "en": "Twelve finches. Chaffinch, Goldfinch, Greenfinch and Linnet are widespread, Siskin and Redpoll come to feeders, and Brambling and Hawfinch are harder to find. Common Crossbill and Scottish Crossbill live in pines, and the Scottish one is found only in the Highlands.",
+        "nl": "Twaalf vinken. Vink, putter, groenling en kneu komen veel voor, sijs en barmsijs komen op voederplekken, en keep en appelvink zijn moeilijker te vinden. Kruisbek en Schotse kruisbek leven in dennen, en de Schotse komt alleen in de Hooglanden voor."
+      }
+    },
+    "old-world-buntings": {
+      "here": {
+        "en": "Four buntings. Yellowhammer and Reed Bunting are widespread, Corn Bunting is a bird of open arable land, and Cirl Bunting lives almost only in south Devon.",
+        "nl": "Vier gorzen. Geelgors en rietgors komen veel voor, de grauwe gors is een vogel van open akkerland, en de cirlgors leeft bijna alleen in het zuiden van Devon."
+      }
+    }
+  },
+  "units": {
+    "swans-and-grey-geese": {
+      "title": {
+        "en": "Swans and grey geese",
+        "nl": "Zwanen en grauwe ganzen"
+      },
+      "intro": {
+        "en": "Big birds of lakes, wet fields and estuaries. Mute Swan sits on every park pond, Whooper and Bewick's Swans come down from the north for the winter, and the grey geese (Greylag, Pink-footed and White-fronted) are told apart by bill and leg colour.",
+        "nl": "Grote vogels van meren, natte weilanden en estuaria. De knobbelzwaan zit op elke parkvijver, wilde en kleine zwaan komen in de winter uit het noorden, en de grijze ganzen (grauwe gans, kleine rietgans en kolgans) herken je aan de kleur van snavel en poten."
+      }
+    },
+    "coastal-geese-and-shelduck": {
+      "title": {
+        "en": "Coastal geese, shelduck and park birds",
+        "nl": "Rotganzen, bergeend en parkvogels"
+      },
+      "intro": {
+        "en": "Brent and Barnacle Geese are small, dark winter geese of estuaries, salt marsh and islands. Canada Goose, Egyptian Goose and Mandarin Duck are introduced birds of park lakes and rivers, and the Shelduck is the bold black-and-white duck of the mudflats.",
+        "nl": "Rotgans en brandgans zijn kleine, donkere wintergasten van estuaria, kwelders en eilanden. Grote Canadese gans, nijlgans en mandarijneend zijn ingevoerde vogels van parkvijvers en rivieren, en de bergeend is de opvallende zwart-witte eend van de wadplaten."
+      }
+    },
+    "dabbling-ducks": {
+      "title": {
+        "en": "Dabbling ducks",
+        "nl": "Eenden van ondiep water"
+      },
+      "intro": {
+        "en": "Six ducks that feed at the surface of shallow water, on flooded fields and on estuaries. Mallard is everywhere, while Wigeon, Teal and Pintail gather in big winter flocks on the coast and the washes. Look at the drakes: head colour, bill shape and the wing patch settle it.",
+        "nl": "Zes eenden die aan het oppervlak foerageren op ondiep water, onder water gelopen weiland en estuaria. De wilde eend zie je overal, terwijl smient, wintertaling en pijlstaart in de winter in grote groepen aan de kust en op overstroomde graslanden samenkomen. Kijk naar de woerden: kopkleur, snavelvorm en vleugelspiegel geven de doorslag."
+      }
+    },
+    "diving-and-sea-ducks": {
+      "title": {
+        "en": "Diving ducks and sea ducks",
+        "nl": "Duikeenden en zeeeenden"
+      },
+      "intro": {
+        "en": "Pochard and Tufted Duck dive on lakes and reservoirs all year. Goldeneye winter on lakes and sheltered coasts, Eider, Common Scoter and Red-breasted Merganser live on the sea, and Goosander on clear rivers, mostly in the north and west.",
+        "nl": "Tafeleend en kuifeend duiken het hele jaar op meren en plassen. De brilduiker overwintert op meren en beschutte kusten, eider, zwarte zee-eend en middelste zaagbek horen bij de zee, en de grote zaagbek zie je op heldere rivieren, vooral in het noorden en westen."
+      }
+    },
+    "pheasant-and-partridges": {
+      "title": {
+        "en": "Pheasant and partridges",
+        "nl": "Fazant en patrijzen"
+      },
+      "intro": {
+        "en": "Three game birds of farmland, hedges and field edges. Pheasant and Red-legged Partridge are introduced and released in large numbers, and the Grey Partridge is the native one that has become scarce. Scan field margins early and late in the day.",
+        "nl": "Drie hoenderachtigen van akkers, heggen en bermen. Fazant en rode patrijs zijn ingevoerd en worden in grote aantallen uitgezet, de patrijs is de inheemse soort die schaars is geworden. Kijk vroeg en laat langs akkerranden."
+      }
+    },
+    "moor-and-forest-grouse": {
+      "title": {
+        "en": "Grouse of moor, forest and mountain",
+        "nl": "Hoenderachtigen van heide, bos en berg"
+      },
+      "intro": {
+        "en": "Four grouse in four habitats. Red Grouse, listed here under Willow Ptarmigan, lives on heather moors, Black Grouse on moorland edges and birch woods, Capercaillie in old Caledonian pine forest and Rock Ptarmigan on the highest Scottish tops. Red Grouse is the easy one, the other three take early starts and some luck.",
+        "nl": "Vier hoenderachtigen in vier landschappen. De Red Grouse, hier onder het moerassneeuwhoen geplaatst, leeft op heidemoeren, het korhoen op de randen van heide en berkenbos, het auerhoen in oud Caledonisch dennenbos en het alpensneeuwhoen op de hoogste toppen van Schotland. Het moerassneeuwhoen is makkelijk, voor de andere drie moet je vroeg op en geluk hebben."
+      }
+    },
+    "pigeons-and-doves": {
+      "title": {
+        "en": "Pigeons and doves",
+        "nl": "Duiven"
+      },
+      "intro": {
+        "en": "Four pigeons and doves you will see without trying. Woodpigeon is the big one with a white neck patch, Collared Dove the pale one on wires and in gardens, and Stock Dove a plain grey bird of farmland and parkland. Rock Dove is the wild ancestor of the town pigeon.",
+        "nl": "Vier duiven die je zonder moeite ziet. De houtduif is de grote met een witte nekvlek, de Turkse tortel de bleke op draden en in tuinen, en de holenduif een egaal grijze vogel van akkers en parken. De rotsduif is de wilde voorouder van de stadsduif."
+      }
+    },
+    "cuckoo-nightjar-and-swift": {
+      "title": {
+        "en": "Cuckoo, nightjar and swift",
+        "nl": "Koekoek, nachtzwaluw en gierzwaluw"
+      },
+      "intro": {
+        "en": "Three summer visitors, all more often heard or seen in the air than sitting. The Cuckoo calls over farmland and moors from late April, the Nightjar churrs at dusk on heaths and in forest clearings, and the Swift screams over towns and villages from May to August.",
+        "nl": "Drie zomergasten, die je vaker hoort of in de lucht ziet dan zittend. De koekoek roept vanaf eind april boven akkers en heide, de nachtzwaluw snort in de schemering op heide en in open plekken in het bos, en de gierzwaluw krijst van mei tot augustus boven dorpen en steden."
+      }
+    },
+    "rails-and-crane": {
+      "title": {
+        "en": "Rails, coot and crane",
+        "nl": "Rallen, meerkoet en kraanvogel"
+      },
+      "intro": {
+        "en": "Birds of reeds, ditches and wet meadows. Coot and Moorhen swim openly on ponds, the Water Rail squeals from the reedbed and rarely shows, and the Corncrake is a bird of Hebridean and north-western Irish hay meadows that you will mostly hear. The Common Crane is a rare breeder in East Anglia and a few other wetlands.",
+        "nl": "Vogels van riet, sloten en natte weilanden. Meerkoet en waterhoen zwemmen in het open water van vijvers, de waterral gilt vanuit het riet en laat zich zelden zien, en de kwartelkoning is een vogel van hooilanden op de Hebriden en in het noordwesten van Ierland, die je vooral hoort. De kraanvogel broedt zeldzaam in East Anglia en op enkele andere plekken."
+      }
+    },
+    "plovers-and-lapwing": {
+      "title": {
+        "en": "Plovers and lapwing",
+        "nl": "Plevieren en kievit"
+      },
+      "intro": {
+        "en": "Round-headed, short-billed waders. The Lapwing is the crested one of fields, Golden Plover flocks on ploughland in winter and breeds on northern moors, and Grey Plover is a bird of winter estuaries. Ringed Plover nests on shingle and sand, Little Ringed Plover on gravel pits in summer.",
+        "nl": "Steltlopers met een ronde kop en korte snavel. De kievit is de kuifdrager van akkers en weilanden, de goudplevier trekt in de winter in groepen over omgeploegd land en broedt op heidemoeren in het noorden, en de zilverplevier hoort bij estuaria in de winter. De bontbekplevier broedt op kiezel en zand, de kleine plevier in de zomer op grindgaten."
+      }
+    },
+    "big-waders-and-oystercatcher": {
+      "title": {
+        "en": "Oystercatcher, avocet and curlews",
+        "nl": "Scholekster, kluut en wulpen"
+      },
+      "intro": {
+        "en": "Big waders with long legs or long bills. The Oystercatcher is the black-and-white one with an orange bill, the Avocet has an upturned bill, and Curlew and Whimbrel are the two big streaky birds with curved bills (Whimbrel has a striped crown). Stone-curlew is a bird of dusk on open, stony ground in the Brecks and on the Wiltshire downs.",
+        "nl": "Grote steltlopers met lange poten of een lange snavel. De scholekster is de zwart-witte met een oranje snavel, de kluut heeft een omhoog gebogen snavel, en wulp en regenwulp zijn de twee grote gestreepte vogels met een gebogen snavel (de regenwulp heeft een gestreepte kruin). De griel is een vogel van de schemering op open, stenig land in de Brecks en op de Wiltshire downs."
+      }
+    },
+    "godwits-snipe-and-woodcock": {
+      "title": {
+        "en": "Godwits, snipe and woodcock",
+        "nl": "Grutto's, snip en houtsnip"
+      },
+      "intro": {
+        "en": "Long-billed waders of mud, wet meadows and woods. The two godwits stand tall on estuaries: Black-tailed has a straight bill and white wing bars, Bar-tailed a slightly upturned bill and a barred tail. Snipe probe soft ground in marshes, and Woodcock is a secretive woodland bird best seen at dusk.",
+        "nl": "Steltlopers met een lange snavel van modder, natte weilanden en bossen. De twee grutto's staan hoog op estuaria: de grutto heeft een rechte snavel en witte vleugelstrepen, de rosse grutto een licht opgewipte snavel en een gebande staart. De watersnip prikt in zacht moeras en de houtsnip is een schuwe bosvogel die je het best in de schemering ziet."
+      }
+    },
+    "shanks-and-sandpipers": {
+      "title": {
+        "en": "Redshank, greenshank and sandpipers",
+        "nl": "Tureluur, groenpoot en oeverlopers"
+      },
+      "intro": {
+        "en": "Medium waders of creeks, shores and freshwater edges. Redshank is the noisy one of every estuary and saltmarsh, Greenshank is paler and longer-billed, Common Sandpiper bobs along upland rivers and lake shores in summer, and Green Sandpiper turns up on quiet freshwater pools on passage and in winter.",
+        "nl": "Middelgrote steltlopers van kreken, kusten en zoetwaterranden. De tureluur is de luidruchtige van elk estuarium en elke kwelder, de groenpootruiter is bleker met een langere snavel, de oeverloper wipt in de zomer langs bergrivieren en meeroevers, en het witgat duikt op stille zoetwaterpoelen op tijdens de trek en in de winter."
+      }
+    },
+    "shoreline-sandpipers": {
+      "title": {
+        "en": "Small waders of the tideline",
+        "nl": "Kleine steltlopers van de vloedlijn"
+      },
+      "intro": {
+        "en": "Small and medium waders of mudflats and rocky shores. Dunlin, Knot and Sanderling feed in flocks on estuaries and sandy beaches, while Turnstone and Purple Sandpiper work the seaweed and rocks. Look at bill length, leg colour and where the bird feeds.",
+        "nl": "Kleine en middelgrote steltlopers van wadplaten en rotskusten. Bonte strandloper, kanoet en drieteenstrandloper foerageren in groepen op estuaria en zandstranden, terwijl steenloper en paarse strandloper het wier en de rotsen afzoeken. Let op snavellengte, pootkleur en de plek waar de vogel eet."
+      }
+    },
+    "skuas-and-auks": {
+      "title": {
+        "en": "Skuas and auks",
+        "nl": "Jagers en alken"
+      },
+      "intro": {
+        "en": "Seabirds of the northern and western coasts. Puffin, Razorbill and Guillemot breed on cliffs and islands from spring until July and then head out to sea, Black Guillemot nests in harbours and rocky coves, and the two skuas chase gulls and terns over the Northern Isles and the Hebrides.",
+        "nl": "Zeevogels van de noordelijke en westelijke kusten. Papegaaiduiker, alk en zeekoet broeden van het voorjaar tot juli op kliffen en eilanden en trekken daarna de zee op, de zwarte zeekoet nestelt in havens en rotsbaaien, en de twee jagers jagen boven de noordelijke eilanden en de Hebriden op meeuwen en sterns."
+      }
+    },
+    "gulls": {
+      "title": {
+        "en": "Gulls",
+        "nl": "Meeuwen"
+      },
+      "intro": {
+        "en": "Six gulls, from the commonest to the biggest. Black-headed Gull is in every field and car park, Common Gull is a winter bird of fields and coasts, and Herring Gull and Lesser Black-backed Gull are the standard sights of coasts and rubbish tips. Great Black-backed Gull is the heavyweight, and Mediterranean Gull is the black-hooded one, scarce but increasing on the south and east coasts.",
+        "nl": "Zes meeuwen, van de gewoonste tot de grootste. De kokmeeuw zit op elk veld en elk parkeerterrein, de stormmeeuw is een wintervogel van weilanden en kusten, en zilvermeeuw en kleine mantelmeeuw zijn de vaste gasten van kusten en vuilstorten. De grote mantelmeeuw is het zwaargewicht en de zwartkopmeeuw is de met de zwarte kap, schaars maar toenemend aan de zuid- en oostkust."
+      }
+    },
+    "kittiwake-and-terns": {
+      "title": {
+        "en": "Kittiwake and terns",
+        "nl": "Drieteenmeeuw en sterns"
+      },
+      "intro": {
+        "en": "The Kittiwake is a small cliff-nesting gull with black wingtips. The five terns are slim, forked-tailed fish divers: Sandwich Tern and Common Tern on most coasts, Arctic Tern in the north, Little Tern on a few shingle and sandy beaches, and Roseate Tern at a handful of island colonies.",
+        "nl": "De drieteenmeeuw is een kleine meeuw die op kliffen broedt, met zwarte vleugelpunten. De vijf sterns zijn slank, met een gevorkte staart, en duiken naar vis: grote stern en visdief aan de meeste kusten, noordse stern in het noorden, dwergstern op enkele kiezel- en zandstranden en Dougalls stern bij een handvol eilandkolonies."
+      }
+    },
+    "divers-and-grebes": {
+      "title": {
+        "en": "Divers and grebes",
+        "nl": "Duikers en futen"
+      },
+      "intro": {
+        "en": "Six diving birds. Great Northern Diver is mainly a winter bird of sheltered coasts, Red-throated Diver breeds on small hill lochs and winters at sea, and Black-throated Diver is scarce. Little and Great Crested Grebe live on lakes and pools, and Slavonian Grebe breeds on a few Scottish lochs and winters on sheltered coasts.",
+        "nl": "Zes vogels die duiken. De ijsduiker is vooral een wintervogel van beschutte kusten, de roodkeelduiker broedt op kleine meertjes in de heuvels en overwintert op zee, en de parelduiker is schaars. Dodaars en fuut leven op meren en poelen, en de kuifduiker broedt op enkele Schotse meren en overwintert langs beschutte kusten."
+      }
+    },
+    "seabirds": {
+      "title": {
+        "en": "Seabirds of the open sea",
+        "nl": "Zeevogels van open water"
+      },
+      "intro": {
+        "en": "Fulmar, Gannet and Manx Shearwater are the birds of open water, seen from cliffs, headlands and boat trips. European Storm-Petrel is the tiny one that comes ashore at night, and Cormorant and Shag are the dark fish-eaters of the coast. Cormorant also fishes inland, and Shag is slimmer with a steep forehead.",
+        "nl": "Noordse stormvogel, jan-van-gent en noordse pijlstormvogel zijn de vogels van open water, te zien vanaf kliffen, kapen en boottochten. Het stormvogeltje is de kleine die 's nachts aan land komt, en aalscholver en kuifaalscholver zijn de donkere viseters van de kust. De aalscholver vist ook in het binnenland, en de kuifaalscholver is slanker met een steil voorhoofd."
+      }
+    },
+    "herons-egret-and-spoonbill": {
+      "title": {
+        "en": "Herons, egret and spoonbill",
+        "nl": "Reigers, zilverreiger en lepelaar"
+      },
+      "intro": {
+        "en": "Tall, patient fishers of wetlands. Grey Heron stands in every ditch, pond and estuary, Little Egret is the small white one, now common in the south and east and in Ireland, and Spoonbill is a white bird with a flat, spoon-shaped bill, scarce in Norfolk and on the south coast. Bittern lives in reedbeds and is far easier to hear than to see.",
+        "nl": "Hoge, geduldige vissers van wetlands. De blauwe reiger staat in elke sloot, vijver en elk estuarium, de kleine zilverreiger is de kleine witte, nu algemeen in het zuiden en oosten en in Ierland, en de lepelaar is een witte vogel met een platte lepelsnavel, schaars in Norfolk en aan de zuidkust. De roerdomp leeft in rietmoeras en is veel makkelijker te horen dan te zien."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Owls",
+        "nl": "Uilen"
+      },
+      "intro": {
+        "en": "Three owls that live in very different places. Tawny Owl is a woodland bird you mostly hear after dark. Little Owl sits on fence posts and old trees in England and Wales, and Short-eared Owl hunts by day over moors and coastal marsh.",
+        "nl": "Drie uilen die op heel verschillende plekken leven. De bosuil is een bosvogel die je vooral na zonsondergang hoort. De steenuil zit op hekpalen en oude bomen in Engeland en Wales, en de velduil jaagt overdag boven heidevelden en kustmoeras."
+      }
+    },
+    "woodpeckers-kingfisher-and-parakeet": {
+      "title": {
+        "en": "Woodpeckers, kingfisher and a parakeet",
+        "nl": "Spechten, ijsvogel en een parkiet"
+      },
+      "intro": {
+        "en": "Four birds you often hear before you see them. Great Spotted Woodpecker drums in woods and visits garden feeders, Green Woodpecker laughs from lawns and grassland, and the Kingfisher is a blue flash along slow water. The Ring-necked Parakeet is an escaped bird that is now common around London.",
+        "nl": "Vier vogels die je vaak eerder hoort dan ziet. De grote bonte specht trommelt in bossen en komt op voederplanken, de groene specht lacht vanaf graslanden en gazons, en de ijsvogel is een blauwe flits langs rustig water. De halsbandparkiet is een ontsnapte vogel die nu veel voorkomt rond Londen."
+      }
+    },
+    "crows-and-rooks": {
+      "title": {
+        "en": "Crows, rook and jackdaw",
+        "nl": "Kraaien, roek en kauw"
+      },
+      "intro": {
+        "en": "Four crows with different habits. The all-black Carrion Crow is the one in most of Britain, and the grey-bodied Hooded Crow takes its place in Ireland and north-west Scotland. Rooks nest in noisy treetop colonies and show a pale bare face, and the Jackdaw is the small one with a grey nape.",
+        "nl": "Vier kraaiachtigen met elk hun eigen gewoonten. De zwarte kraai hoort bij het grootste deel van Groot-Brittannië, en in Ierland en het noordwesten van Schotland neemt de grijslijvige bonte kraai zijn plaats in. Roeken nestelen in luidruchtige kolonies in boomtoppen en hebben een lichte, kale snavelbasis, en de kauw is de kleine met een grijze nek."
+      }
+    },
+    "raven-jay-magpie-and-chough": {
+      "title": {
+        "en": "Raven, jay, magpie and chough",
+        "nl": "Raaf, gaai, ekster en alpenkraai"
+      },
+      "intro": {
+        "en": "Four more members of the crow family. The Raven is huge and hoarse over hills and sea cliffs, and Jay and Magpie are colourful birds of woods and hedgerows. The Red-billed Chough is the rare one, a cliff-top crow with a red bill and legs on the western coasts of Ireland, Wales, Cornwall and the Isle of Man, and on Islay in the Hebrides.",
+        "nl": "Vier andere kraaiachtigen. De raaf is groot en hees boven heuvels en zeekliffen, en gaai en ekster zijn kleurige vogels van bossen en heggen. De alpenkraai is de zeldzame, een kraai van kliffen met rode snavel en poten, aan de westkust van Ierland, Wales, Cornwall en het eiland Man, en op Islay in de Hebriden."
+      }
+    },
+    "tits": {
+      "title": {
+        "en": "Tits",
+        "nl": "Mezen"
+      },
+      "intro": {
+        "en": "Six small, acrobatic birds. Blue, Great and Coal Tit come to garden feeders, the Marsh Tit stays in broadleaf woods in England and Wales, and the Long-tailed Tit moves in chattering flocks. The Crested Tit is the one to plan for: it lives only in the pine forests of the Scottish Highlands.",
+        "nl": "Zes kleine, behendige vogels. Pimpelmees, koolmees en zwarte mees komen op voedertafels in tuinen, de glanskop blijft in loofbos in Engeland en Wales, en de staartmees trekt rond in kwetterende groepjes. De kuifmees is degene waar je een plan voor nodig hebt: hij leeft alleen in de dennenbossen van de Schotse Hooglanden."
+      }
+    },
+    "reedbed-and-wetland-warblers": {
+      "title": {
+        "en": "Reedbed and wetland warblers",
+        "nl": "Zangers van riet en moeras"
+      },
+      "intro": {
+        "en": "Five birds of reeds, ditches and wet scrub, more often heard than seen. Bearded Tit lives in big reedbeds, with East Anglia the best bet. Sedge and Reed Warblers sing from the reeds in summer, the Grasshopper Warbler reels from rough grass, and Cetti's Warbler bursts into song from thick cover in southern England.",
+        "nl": "Vijf vogels van riet, sloten en nat struikgewas, die je vaker hoort dan ziet. De baardman leeft in grote rietmoerassen, en Oost-Anglia is de beste plek. Rietzanger en kleine karekiet zingen in de zomer vanuit het riet, de sprinkhaanzanger snort vanuit ruig gras, en de Cetti's zanger schalt zijn lied vanuit dichte begroeiing in Zuid-Engeland."
+      }
+    },
+    "skylark-swallow-and-martins": {
+      "title": {
+        "en": "Skylark, swallow and martins",
+        "nl": "Veldleeuwerik, zwaluw en oeverzwaluw"
+      },
+      "intro": {
+        "en": "Four birds of the open sky. The Skylark sings high over fields and moors, and the three swallow relatives are summer visitors. Sand Martin nests in riverbanks and arrives first, Swallow has long tail streamers, and House Martin shows a white rump.",
+        "nl": "Vier vogels van de open lucht. De veldleeuwerik zingt hoog boven akkers en heidevelden, en de drie zwaluwachtigen zijn zomergasten. De oeverzwaluw nestelt in rivieroevers en komt als eerste aan, de boerenzwaluw heeft lange staartpennen, en de huiszwaluw heeft een witte stuit."
+      }
+    },
+    "leaf-warblers-and-crests": {
+      "title": {
+        "en": "Leaf warblers and crests",
+        "nl": "Boszangers en goudhaantjes"
+      },
+      "intro": {
+        "en": "Four tiny, restless birds of trees. Willow Warbler and Chiffchaff look almost the same and are told apart by song: a falling run of notes or a repeated chiff-chaff. The Goldcrest is Britain's smallest bird, and the rarer Firecrest has a bold white eyebrow.",
+        "nl": "Vier kleine, onrustige vogels van bomen. Fitis en tjiftjaf lijken bijna op elkaar en onderscheid je op de zang: een dalende reeks tonen of een herhaald tjif-tjaf. Het goudhaantje is de kleinste vogel van Groot-Brittannië, en de zeldzamere vuurgoudhaan heeft een opvallende witte wenkbrauwstreep."
+      }
+    },
+    "scrub-warblers": {
+      "title": {
+        "en": "Warblers of scrub and hedgerow",
+        "nl": "Zangers van struweel en heg"
+      },
+      "intro": {
+        "en": "Five warblers of hedges, bramble and gorse. Common Whitethroat and Blackcap are the easy ones, and Garden Warbler and Lesser Whitethroat are plainer and shyer. The Dartford Warbler is the speciality, a long-tailed, dark bird of southern heathland that stays all year.",
+        "nl": "Vijf zangers van heggen, braamstruiken en gaspeldoorn. Grasmus en zwartkop zijn de makkelijke, en tuinfluiter en braamsluiper zijn onopvallender en schuwer. De Provençaalse grasmus is de specialiteit, een donkere vogel met lange staart van de heide in het zuiden die het hele jaar blijft."
+      }
+    },
+    "nuthatch-wren-dipper-and-starling": {
+      "title": {
+        "en": "Nuthatch, treecreeper, wren, dipper and starling",
+        "nl": "Boomklever, boomkruiper, winterkoning, waterspreeuw en spreeuw"
+      },
+      "intro": {
+        "en": "Five birds you meet in woods, gardens and streams. Nuthatch and Treecreeper climb tree trunks, the Wren is tiny and loud, the Dipper bobs on rocks in fast streams, and the Starling is the glossy, noisy bird of lawns and rooftops.",
+        "nl": "Vijf vogels die je tegenkomt in bossen, tuinen en beken. Boomklever en boomkruiper klimmen langs stammen, de winterkoning is klein en luid, de waterspreeuw duikelt op stenen in snelle beken, en de spreeuw is de glanzende, luidruchtige vogel van gazons en daken."
+      }
+    },
+    "thrushes": {
+      "title": {
+        "en": "Thrushes",
+        "nl": "Lijsters"
+      },
+      "intro": {
+        "en": "Six thrushes. Blackbird and Song Thrush are in every garden and Mistle Thrush sings from the treetops. Redwing and Fieldfare arrive from the north in autumn to feed in fields and hedgerows, and the Ring Ouzel is a summer visitor to upland crags.",
+        "nl": "Zes lijsters. Merel en zanglijster zitten in elke tuin en de grote lijster zingt vanuit boomtoppen. Koperwiek en kramsvogel komen in het najaar uit het noorden om op akkers en in heggen te foerageren, en de beflijster is een zomergast van rotsige berghellingen."
+      }
+    },
+    "robin-redstarts-and-chats": {
+      "title": {
+        "en": "Robin, redstarts and chats",
+        "nl": "Roodborst, roodstaarten en tapuiten"
+      },
+      "intro": {
+        "en": "Six small birds of gardens, open ground and walls. The Robin is the tame one. Redstarts flick red tails, Wheatear flashes a white rump, and Stonechat and Whinchat perch on top of gorse and fence posts. Black Redstart is scarce and likes industrial buildings and sea cliffs.",
+        "nl": "Zes kleine vogels van tuinen, open terrein en muren. De roodborst is de tamme. Roodstaarten trillen met hun rode staart, de tapuit toont een witte stuit, en roodborsttapuit en paapje zitten op de top van gaspeldoorn en hekpalen. De zwarte roodstaart is schaars en houdt van industriële gebouwen en zeekliffen."
+      }
+    },
+    "flycatchers-dunnock-and-sparrows": {
+      "title": {
+        "en": "Flycatchers, Dunnock and sparrows",
+        "nl": "Vliegenvangers, heggenmus en mussen"
+      },
+      "intro": {
+        "en": "Five small birds of gardens and woods. House and Tree Sparrow are the sparrows, the Dunnock creeps about under hedges, and Pied and Spotted Flycatcher are summer visitors that snatch insects in the air from a perch.",
+        "nl": "Vijf kleine vogels van tuinen en bossen. Huismus en ringmus zijn de mussen, de heggenmus sluipt onder heggen rond, en bonte en grauwe vliegenvanger zijn zomergasten die vanaf een zitplaats insecten uit de lucht happen."
+      }
+    },
+    "wagtails-and-pipits": {
+      "title": {
+        "en": "Wagtails and pipits",
+        "nl": "Kwikstaarten en piepers"
+      },
+      "intro": {
+        "en": "Six slim birds that walk across open ground. Wagtails bob their long tails: the Pied Wagtail is everywhere, Grey Wagtail is on fast streams, and Yellow Wagtail is in damp meadows. Meadow, Tree and Rock Pipit are streaky brown and are best told by place and song flight.",
+        "nl": "Zes slanke vogels die over open terrein lopen. Kwikstaarten wippen met hun lange staart: de witte kwikstaart zit overal, de grote gele kwikstaart langs snelle beken en de gele kwikstaart in vochtige weilanden. Graspieper, boompieper en oeverpieper zijn gestreept bruin en herken je het best aan de plek en de zangvlucht."
+      }
+    },
+    "finches-1": {
+      "title": {
+        "en": "Common finches",
+        "nl": "Algemene vinken"
+      },
+      "intro": {
+        "en": "Six finches with strong seed-cracking bills. Chaffinch, Greenfinch, Bullfinch and Linnet are widespread in hedges and gardens, Brambling visits in winter, and Hawfinch is a shy bird with an outsize bill that is very hard to find.",
+        "nl": "Zes vinken met een stevige snavel om zaden te kraken. Vink, groenling, goudvink en kneu komen veel voor in heggen en tuinen, de keep komt in de winter op bezoek, en de appelvink is een schuwe vogel met een enorme snavel die heel moeilijk te vinden is."
+      }
+    },
+    "finches-2": {
+      "title": {
+        "en": "Goldfinch, siskin, redpolls and crossbills",
+        "nl": "Putter, sijs, barmsijzen en kruisbekken"
+      },
+      "intro": {
+        "en": "Six smaller finches. Goldfinch and Siskin come to garden feeders, Redpoll and Twite are streaky birds of birch woods and moors, and the crossbills hang in pines. Scottish Crossbill is the one found nowhere else, and it looks almost identical to Common Crossbill.",
+        "nl": "Zes kleinere vinken. Putter en sijs komen op voederplekken in tuinen, barmsijs en frater zijn gestreepte vogels van berkenbossen en heidevelden, en de kruisbekken hangen in dennen. De Schotse kruisbek is de enige die nergens anders voorkomt, en hij lijkt bijna precies op de kruisbek."
+      }
+    },
+    "buntings": {
+      "title": {
+        "en": "Buntings",
+        "nl": "Gorzen"
+      },
+      "intro": {
+        "en": "Four buntings. Yellowhammer is the bright yellow one of hedges and field edges, Reed Bunting sits in wet fields and reeds, and Corn Bunting sings from wires over open farmland. Cirl Bunting is the rare one, found almost only in south Devon.",
+        "nl": "Vier gorzen. De geelgors is de felgele van heggen en akkerranden, de rietgors zit in natte velden en riet, en de grauwe gors zingt vanaf draden boven open akkerland. De cirlgors is de zeldzame en komt bijna alleen voor in het zuiden van Devon."
+      }
+    },
+    "buzzards-kites-and-harriers": {
+      "title": {
+        "en": "Buzzards, kites and harriers",
+        "nl": "Buizerd, wouwen en kiekendieven"
+      },
+      "intro": {
+        "en": "Five birds of prey you can see from the roadside. Buzzard and Red Kite soar over farmland and woods, Sparrowhawk dashes through gardens, Marsh Harrier quarters reedbeds, and Hen Harrier glides low over moorland and marsh.",
+        "nl": "Vijf roofvogels die je vanaf de weg kunt zien. Buizerd en rode wouw zweven boven akkers en bossen, de sperwer schiet door tuinen, de bruine kiekendief zoekt rietmoerassen af, en de blauwe kiekendief glijdt laag over heide en moeras."
+      }
+    },
+    "eagle-osprey-and-falcons": {
+      "title": {
+        "en": "Golden Eagle, Osprey and falcons",
+        "nl": "Steenarend, visarend en valken"
+      },
+      "intro": {
+        "en": "Six birds of prey that need the right place and some patience. Golden Eagle is a bird of the Highland glens, and Osprey nests at a few lochs and rivers, mostly in Scotland. Kestrel hovers over road verges, Peregrine nests on sea cliffs and city buildings, Merlin hunts over moors, and Hobby hunts over southern heaths in summer.",
+        "nl": "Zes roofvogels waar je de juiste plek en wat geduld voor nodig hebt. De steenarend is een vogel van de Schotse bergdalen, en de visarend nestelt bij enkele meren en rivieren, vooral in Schotland. De torenvalk bidt boven bermen, de slechtvalk broedt op zeekliffen en stadsgebouwen, het smelleken jaagt boven heidevelden en de boomvalk jaagt in de zomer boven heide in het zuiden."
+      }
+    }
+  },
+  "species": {
+    "wilpta": {
+      "here": {
+        "en": "In Britain and Ireland this is the Red Grouse: dark red-brown all year, with no white winter plumage, on heather moorland.",
+        "nl": "In Groot-Brittannië en Ierland is dit het Schotse sneeuwhoen, het Red Grouse: het hele jaar donker roodbruin, zonder witte winterkleed, op heidevelden."
+      }
+    },
+    "rocpta1": {
+      "here": {
+        "en": "Lives only on the highest Scottish tops, such as the Cairngorms plateau, and takes a long walk to find.",
+        "nl": "Leeft alleen op de hoogste toppen van Schotland, zoals het Cairngorms-plateau, en vraagt een flinke wandeling."
+      }
+    },
+    "wescap1": {
+      "here": {
+        "en": "Lives in old Caledonian pine forest in the Highlands, for example around Abernethy and Strathspey, and is scarce and shy.",
+        "nl": "Leeft in oud Caledonisch dennenbos in de Highlands, bijvoorbeeld rond Abernethy en Strathspey, en is schaars en schuw."
+      }
+    },
+    "rocpig": {
+      "here": {
+        "en": "Wild birds with a clean white rump live on sea cliffs in northern and western Scotland and Ireland, and the rest are town pigeons.",
+        "nl": "Wilde vogels met een schone witte stuit leven op zeekliffen in het noorden en westen van Schotland en in Ierland, de rest zijn stadsduiven."
+      }
+    },
+    "gnwtea": {
+      "here": {
+        "en": "In Britain and Ireland this is the Eurasian Teal, and the American Green-winged Teal is a rare vagrant.",
+        "nl": "In Groot-Brittannië en Ierland is dit de wintertaling, en de Amerikaanse groenvleugeltaling is een zeldzame dwaalgast."
+      }
+    },
+    "tunswa": {
+      "here": {
+        "en": "Now scarce, with a few wintering on the Ouse Washes, at Welney and at Slimbridge.",
+        "nl": "Nu schaars, met een paar overwinteraars op de Ouse Washes, bij Welney en bij Slimbridge."
+      }
+    },
+    "manduc": {
+      "here": {
+        "en": "An escaped bird from East Asia, now breeding on wooded ponds and rivers, mostly in southern England.",
+        "nl": "Een ontsnapte vogel uit Oost-Azië die nu broedt op beboste vijvers en rivieren, vooral in het zuiden van Engeland."
+      }
+    },
+    "corcra": {
+      "here": {
+        "en": "Found mostly in the Outer Hebrides, Tiree, Coll and north-west Ireland from late April to August, and it calls through the night.",
+        "nl": "Vooral te vinden op de Buiten-Hebriden, Tiree, Coll en in het noordwesten van Ierland van eind april tot augustus, en hij roept de hele nacht."
+      }
+    },
+    "eutkne1": {
+      "here": {
+        "en": "Look on the stony fields of the Brecks in Norfolk and Suffolk and on the Wiltshire downs, best at dusk.",
+        "nl": "Zoek op de stenige velden van de Brecks in Norfolk en Suffolk en op de Wiltshire downs, het best in de schemering."
+      }
+    },
+    "comcra": {
+      "here": {
+        "en": "A few pairs breed in the Norfolk Broads, the Fens and the Somerset Levels, with small flocks in winter.",
+        "nl": "Een paar paar broeden in de Norfolk Broads, de Fens en de Somerset Levels, met kleine groepen in de winter."
+      }
+    },
+    "roster": {
+      "here": {
+        "en": "A scarce summer visitor at a handful of island colonies, notably Rockabill off Dublin and Coquet Island in Northumberland.",
+        "nl": "Een schaarse zomergast bij een handvol eilandkolonies, vooral Rockabill voor Dublin en Coquet Island in Northumberland."
+      }
+    },
+    "scocro1": {
+      "here": {
+        "en": "The only bird found nowhere else. It lives in the Caledonian pine forest of the Highlands, best known around Abernethy and Strathspey, and looks almost the same as Common Crossbill.",
+        "nl": "De enige vogel die nergens anders voorkomt. Hij leeft in het Caledonische dennenbos van de Hooglanden, het bekendst rond Abernethy en Strathspey, en lijkt bijna precies op de kruisbek."
+      }
+    },
+    "hoocro1": {
+      "here": {
+        "en": "It replaces the Carrion Crow in Ireland and in north-west Scotland, including the Hebrides, and on the Isle of Man.",
+        "nl": "Hij vervangt de zwarte kraai in Ierland en in het noordwesten van Schotland, inclusief de Hebriden, en op het eiland Man."
+      }
+    },
+    "cretit2": {
+      "here": {
+        "en": "Only in the Caledonian pine forest of the Highlands, around Strathspey and a few other glens.",
+        "nl": "Alleen in het Caledonische dennenbos van de Hooglanden, rond Strathspey en enkele andere dalen."
+      }
+    },
+    "darwar1": {
+      "here": {
+        "en": "Lives all year on southern heaths and gorse, for example in the New Forest, Dorset and Surrey.",
+        "nl": "Leeft het hele jaar op heide en gaspeldoorn in het zuiden, bijvoorbeeld in de New Forest, Dorset en Surrey."
+      }
+    },
+    "cirbun1": {
+      "here": {
+        "en": "Almost all live on coastal farmland in south Devon.",
+        "nl": "Bijna alle vogels leven op akkerland langs de kust in het zuiden van Devon."
+      }
+    },
+    "litowl1": {
+      "here": {
+        "en": "Introduced to England in the 19th century, now on farmland in England and Wales, and absent from Scotland and Ireland.",
+        "nl": "In de 19e eeuw in Engeland uitgezet, nu op akkerland in Engeland en Wales, en afwezig in Schotland en Ierland."
+      }
+    }
+  },
+  "first_day": {
+    "title": {
+      "en": "Your first day in the British Isles",
+      "nl": "Je eerste dag op de Britse Eilanden"
+    },
+    "intro": {
+      "en": "Twenty birds you are very likely to meet on the first day: in gardens and parks, along roads, on farmland and on the water.",
+      "nl": "Twintig vogels die je de eerste dag vrijwel zeker tegenkomt: in tuinen en parken, langs wegen, op akkers en op het water."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "After the last ice age the great pine forest of the Highlands shrank to a few remnants, and its crossbills slowly became a population of their own with a deeper bill and a different call. The Scottish Crossbill is the only bird found nowhere else in Britain and Ireland, and many birders still find it hard to tell from Common Crossbill. The islands also hold distinctive forms of wider species, such as the Red Grouse, which is the local Willow Ptarmigan, and the grey-bodied Hooded Crows of Ireland and the Hebrides.",
+      "nl": "Na de laatste ijstijd kromp het grote dennenbos van de Hooglanden tot een paar resten, en de kruisbekken daar werden langzaam een eigen populatie met een dikkere snavel en een andere roep. De Schotse kruisbek is de enige vogel die nergens anders in Groot-Brittannië en Ierland voorkomt, en veel vogelaars vinden hem nog steeds moeilijk te onderscheiden van de kruisbek. De eilanden hebben ook opvallende vormen van soorten die ook elders leven, zoals het Red Grouse, de plaatselijke moerassneeuwhoen, en de grijslijvige bonte kraaien van Ierland en de Hebriden."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "Highland pine forest and Strathspey",
+          "nl": "Dennenbos in de Hooglanden en Strathspey"
+        },
+        "text": {
+          "en": "The Scottish Crossbill needs old Scots pine. Abernethy Forest with Loch Garten, and the Glenmore forest around Loch Morlich, are the best-known places, and Crested Tit and Capercaillie live in the same woods.",
+          "nl": "De Schotse kruisbek heeft oud bos van grove den nodig. Abernethy Forest met Loch Garten en het Glenmore-bos rond Loch Morlich zijn de bekendste plekken, en kuifmees en auerhoen leven in dezelfde bossen."
+        }
+      },
+      {
+        "title": {
+          "en": "Other forms to look for",
+          "nl": "Andere vormen om naar te zoeken"
+        },
+        "text": {
+          "en": "Red Grouse is the dark, red-brown grouse of heather moor in the Pennines, Wales, Scotland and Ireland, and it counts as Willow Ptarmigan here. Hooded Crow is easiest in the Hebrides, the north-west Highlands and Ireland.",
+          "nl": "Het Red Grouse is het donkere, roodbruine hoen van heidevelden in de Pennines, Wales, Schotland en Ierland, en telt hier als moerassneeuwhoen. De bonte kraai zie je het makkelijkst op de Hebriden, in de noordwestelijke Hooglanden en in Ierland."
+        }
+      }
+    ],
+    "families": [],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "The Scottish Crossbill",
+          "nl": "De Schotse kruisbek"
+        }
+      }
+    }
+  }
+}

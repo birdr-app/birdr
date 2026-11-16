@@ -1,0 +1,22 @@
+{
+  "code": "comloo",
+  "name": {
+    "en": "Great Northern Diver",
+    "nl": "IJsduiker"
+  },
+  "latin": "Gavia immer",
+  "look_for": [
+    {
+      "en": "Big, heavy diver with a dagger **bill**",
+      "nl": "Grote, zware duiker met een dolkvormige **snavel**"
+    },
+    {
+      "en": "Summer: black head, white necklace, chequered **back**",
+      "nl": "Zomer: zwarte kop, witte halsband, geblokte **rug**"
+    },
+    {
+      "en": "Winter: grey-brown, white **throat**, darker half-collar",
+      "nl": "Winter: grijsbruin, witte **keel**, donkere halve kraag"
+    }
+  ]
+}

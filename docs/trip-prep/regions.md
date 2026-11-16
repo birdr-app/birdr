@@ -19,7 +19,7 @@ country. A **region pack** adds the birds of one part of it, on top of the count
 - `TRIPS` registers a pack like a country, with `'parent': 'CR'`. `/api/trips/` lists countries only
   (older apps never see a pack as a country). The country's payload carries `regions`: name, species
   count and intro of each published pack. A pack's payload has `parent` and `parent_name`.
-- A trip over several countries (`BALTICS`, `IBERIA`) has its own id and lists `countries`. Its packs
+- A trip over several countries (`BALTICS`, `IBERIA`, `BRITISHISLES`) has its own id and lists `countries`. Its packs
   list the `countries` their birds are recorded under (`IBERIA-MADEIRA` and `IBERIA-AZORES` use `PT`,
   `IBERIA-CANARIES` uses `ES`), so a pack can sit below country level.
 - A pack with `'draft': True` in `TRIPS` is built and checked like the others, but left out of the

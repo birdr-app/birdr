@@ -8,7 +8,7 @@ Layout under ``jizz/trips/data/``:
   ``group_overrides`` and regional specialities.
 - ``<cc>-<region>/``: a region pack, the same files as a country (see ``is_region``). Its species
   are hand-picked in ``scope.json`` (``"manual": true``) and never repeat the country's own.
-- A trip over several countries (``BALTICS``, ``IBERIA``) has its own id and lists ``countries`` in
+- A trip over several countries (``BALTICS``, ``IBERIA``, ``BRITISHISLES``) has its own id and lists ``countries`` in
   ``TRIPS``; its region packs list the ``countries`` their birds are recorded under (the Canary
   Islands under ``ES``, Madeira and the Azores under ``PT``).
 - ``<cc>/units.json``: groups, units and the endemics units, written by ``trip_prep_units``.
@@ -207,6 +207,11 @@ def is_region(trip: str) -> bool:
 
 def parent_trip(trip: str) -> str | None:
     return db_country(trip) if is_region(trip) else None
+    'BRITISHISLES': {
+        'name': {'en': 'British Isles', 'nl': 'Britse Eilanden'},
+        'languages': ('en', 'nl'),
+        'countries': ['GB', 'IE'],
+    },
 
 
 def region_ids(country: str) -> list[str]:

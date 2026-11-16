@@ -1,0 +1,22 @@
+{
+  "code": "gresku1",
+  "name": {
+    "en": "Great Skua",
+    "nl": "Grote jager"
+  },
+  "latin": "Stercorarius skua",
+  "look_for": [
+    {
+      "en": "Bulky, dark brown, built like a big gull",
+      "nl": "Logge, donkerbruine vogel, gebouwd als een grote meeuw"
+    },
+    {
+      "en": "White flashes in the **wings** in flight",
+      "nl": "Witte vlekken in de **vleugels** in vlucht"
+    },
+    {
+      "en": "Chases gannets and gulls to steal fish",
+      "nl": "Jaagt genten en meeuwen hun vis af"
+    }
+  ]
+}

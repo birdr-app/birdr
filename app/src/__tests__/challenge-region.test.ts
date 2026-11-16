@@ -33,5 +33,6 @@ describe('Country Challenge region labels', () => {
     expect(countryCodeToFlag('CA-ON')).toBe('🇨🇦');
     expect(countryCodeToFlag('US-EAST')).toBe('🇺🇸');
     expect(countryCodeToFlag('IBERIA')).toBe('🇪🇸🇵🇹');
+    expect(countryCodeToFlag('BRITISHISLES')).toBe('🇬🇧🇮🇪');
   });
 });

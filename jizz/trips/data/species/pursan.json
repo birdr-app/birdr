@@ -1,0 +1,22 @@
+{
+  "code": "pursan",
+  "name": {
+    "en": "Purple Sandpiper",
+    "nl": "Paarse strandloper"
+  },
+  "latin": "Calidris maritima",
+  "look_for": [
+    {
+      "en": "Stocky, dark slate-grey wader of rocky shores",
+      "nl": "Gedrongen, donkergrijze steltloper van rotskusten"
+    },
+    {
+      "en": "Orange-yellow **legs** and **bill** base",
+      "nl": "Oranjegele **poten** en **snavelbasis**"
+    },
+    {
+      "en": "Feeds on wave-washed rocks, often very tame",
+      "nl": "Foerageert op door golven bespoelde rotsen, vaak tam"
+    }
+  ]
+}
