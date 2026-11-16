@@ -1302,6 +1302,15 @@ class MarketingPagesTests(TestCase):
             self.assertEqual(index['https://motmot.club/sitemap-birds.xml'], '2026-10-07')
             self.assertIsNone(index['https://motmot.club/sitemap-birds.xml?page=2'])
 
+    def test_sitemap_index_is_cached_so_google_gets_it_fast(self):
+        cache.clear()
+        first = self.client.get('/sitemap.xml').content
+        # A second request must not rebuild the index: it walks every section.
+        with patch.dict('jizz.marketing.sitemaps.SECTIONS', {}, clear=True):
+            second = self.client.get('/sitemap.xml').content
+        self.assertEqual(first, second)
+        cache.clear()
+
     def test_large_sitemap_sections_are_split_into_pages(self):
         paths = [f'/site/birds/bird-{i}/' for i in range(5)]
         with patch.dict('jizz.marketing.sitemaps.SECTIONS', {'birds': lambda: paths}), \

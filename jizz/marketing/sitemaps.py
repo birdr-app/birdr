@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from datetime import date, datetime
 
+from django.core.cache import cache
 from django.db.models import Q
 from django.http import Http404, HttpResponse
 from django.urls import reverse
@@ -99,16 +100,27 @@ def _page_paths(paths: list[str], page: int) -> list[str]:
     return paths[start:start + PATHS_PER_SITEMAP]
 
 
+# Building the index walks every section (all comparisons, taxa, countries), which takes
+# 2-4 s. Search Console reported the file as "couldn't fetch", so the finished XML is kept
+# for an hour; the per-section files Google reads next are built on demand as before.
+SITEMAP_INDEX_TTL = 60 * 60
+
+
 def sitemap_index(request):
     origin = canonical_origin(request)
-    entries = []
-    for name, paths_fn in SECTIONS.items():
-        paths = paths_fn()
-        lastmods = section_lastmods(name)
-        for page in range(1, _page_count(paths) + 1):
-            dates = [lastmods[p] for p in _page_paths(paths, page) if p in lastmods]
-            entries.append((origin + _section_url(name, page), max(dates, default=None)))
-    return _xml(_index(entries))
+    cache_key = f'marketing-sitemap-index:{origin}'
+    body = cache.get(cache_key)
+    if body is None:
+        entries = []
+        for name, paths_fn in SECTIONS.items():
+            paths = paths_fn()
+            lastmods = section_lastmods(name)
+            for page in range(1, _page_count(paths) + 1):
+                dates = [lastmods[p] for p in _page_paths(paths, page) if p in lastmods]
+                entries.append((origin + _section_url(name, page), max(dates, default=None)))
+        body = _index(entries)
+        cache.set(cache_key, body, SITEMAP_INDEX_TTL)
+    return _xml(body)
 
 
 def pages_paths() -> list[str]:
