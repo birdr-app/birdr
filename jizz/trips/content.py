@@ -175,6 +175,11 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'countries': ['EE', 'LV', 'LT'],
     },
+    'BRITISHISLES': {
+        'name': {'en': 'British Isles', 'nl': 'Britse Eilanden'},
+        'languages': ('en', 'nl'),
+        'countries': ['GB', 'IE'],
+    },
 }
 
 LANGUAGES = ('en', 'nl')
@@ -207,11 +212,6 @@ def is_region(trip: str) -> bool:
 
 def parent_trip(trip: str) -> str | None:
     return db_country(trip) if is_region(trip) else None
-    'BRITISHISLES': {
-        'name': {'en': 'British Isles', 'nl': 'Britse Eilanden'},
-        'languages': ('en', 'nl'),
-        'countries': ['GB', 'IE'],
-    },
 
 
 def region_ids(country: str) -> list[str]:
