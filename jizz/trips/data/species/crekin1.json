@@ -1,0 +1,22 @@
+{
+  "code": "crekin1",
+  "name": {
+    "en": "Crested Kingfisher",
+    "nl": "Chinese reuzenijsvogel"
+  },
+  "latin": "Megaceryle lugubris",
+  "look_for": [
+    {
+      "en": "Huge kingfisher with a shaggy black-and-white **crest**",
+      "nl": "Enorme ijsvogel met een warrige zwart-witte **kuif**"
+    },
+    {
+      "en": "Barred black-and-white back, speckled **breast** band",
+      "nl": "Zwart-witte gebande rug, gespikkelde **borst**band"
+    },
+    {
+      "en": "Perches high over rocky mountain rivers",
+      "nl": "Zit hoog boven rotsachtige bergrivieren"
+    }
+  ]
+}

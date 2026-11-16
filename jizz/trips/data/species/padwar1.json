@@ -1,0 +1,22 @@
+{
+  "code": "padwar1",
+  "name": {
+    "en": "Paddyfield Warbler",
+    "nl": "Veldrietzanger"
+  },
+  "latin": "Acrocephalus agricola",
+  "look_for": [
+    {
+      "en": "Warm brown with a rusty **rump**",
+      "nl": "Warmbruin met een roestkleurige **stuit**"
+    },
+    {
+      "en": "Strong pale eyebrow with a dark edge above",
+      "nl": "Sterke lichte wenkbrauw met een donkere rand erboven"
+    },
+    {
+      "en": "Short **bill**; skulks low in reeds and grass",
+      "nl": "Korte **snavel**; sluipt laag door riet en gras"
+    }
+  ]
+}

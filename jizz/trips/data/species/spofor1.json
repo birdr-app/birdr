@@ -1,0 +1,22 @@
+{
+  "code": "spofor1",
+  "name": {
+    "en": "Spotted Forktail",
+    "nl": "Gevlekte vorkstaart"
+  },
+  "latin": "Enicurus maculatus",
+  "look_for": [
+    {
+      "en": "Black **back** spotted white, white underparts",
+      "nl": "Zwarte **rug** met witte vlekken, witte onderkant"
+    },
+    {
+      "en": "Long, deeply forked **tail** barred black and white",
+      "nl": "Lange, diep gevorkte **staart** met zwart-witte banden"
+    },
+    {
+      "en": "Wags tail on boulders in forest streams",
+      "nl": "Kwispelt met de staart op keien in bosbeken"
+    }
+  ]
+}

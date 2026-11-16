@@ -1,0 +1,22 @@
+{
+  "code": "ibisbi1",
+  "name": {
+    "en": "Ibisbill",
+    "nl": "Ibissnavel"
+  },
+  "latin": "Ibidorhyncha struthersii",
+  "look_for": [
+    {
+      "en": "Long red downcurved **bill**, ibis-like",
+      "nl": "Lange rode neergebogen **snavel**, als een ibis"
+    },
+    {
+      "en": "Grey above, black face and black-and-white **breast** bands",
+      "nl": "Grijs bovenop, zwart gezicht en zwart-witte **borst**banden"
+    },
+    {
+      "en": "Probes among stones on shingle riverbeds",
+      "nl": "Zoekt tussen stenen op grindbedden van rivieren"
+    }
+  ]
+}

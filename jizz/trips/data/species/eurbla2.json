@@ -1,0 +1,22 @@
+{
+  "code": "eurbla2",
+  "name": {
+    "en": "Indian Blackbird",
+    "nl": "Indische merel"
+  },
+  "latin": "Turdus simillimus",
+  "look_for": [
+    {
+      "en": "Male dark brownish-black, orange-yellow **bill**",
+      "nl": "Mannetje donker bruinzwart, oranjegele **snavel**"
+    },
+    {
+      "en": "Female plain brown, bill duller",
+      "nl": "Vrouwtje effen bruin, snavel doffer"
+    },
+    {
+      "en": "Feeds on the ground in gardens and forest",
+      "nl": "Zoekt voedsel op de grond in tuinen en bos"
+    }
+  ]
+}

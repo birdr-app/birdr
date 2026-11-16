@@ -1,0 +1,22 @@
+{
+  "code": "malpar1",
+  "name": {
+    "en": "Malabar Parakeet",
+    "nl": "Malabarparkiet"
+  },
+  "latin": "Psittacula columboides",
+  "look_for": [
+    {
+      "en": "Blue-grey head, green back, long tail",
+      "nl": "Blauwgrijze kop, groene rug, lange staart"
+    },
+    {
+      "en": "Male has a black collar",
+      "nl": "Mannetje met zwarte halsband"
+    },
+    {
+      "en": "Female duller, no black collar",
+      "nl": "Vrouwtje doffer, zonder zwarte halsband"
+    }
+  ]
+}

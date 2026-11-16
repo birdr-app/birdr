@@ -1,0 +1,22 @@
+{
+  "code": "sinspa1",
+  "name": {
+    "en": "Sind Sparrow",
+    "nl": "Sindmus"
+  },
+  "latin": "Passer pyrrhonotus",
+  "look_for": [
+    {
+      "en": "Male has a broad chestnut stripe behind the **eye**",
+      "nl": "Mannetje heeft een brede kastanjebruine streep achter het **oog**"
+    },
+    {
+      "en": "Grey crown, short black bib, rufous rump",
+      "nl": "Grijze kruin, korte zwarte bef, roestkleurige stuit"
+    },
+    {
+      "en": "Stays close to water in thorny scrub and reeds",
+      "nl": "Blijft dicht bij water in doornstruweel en riet"
+    }
+  ]
+}

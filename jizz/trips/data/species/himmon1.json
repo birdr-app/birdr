@@ -1,0 +1,22 @@
+{
+  "code": "himmon1",
+  "name": {
+    "en": "Himalayan Monal",
+    "nl": "Himalayaglansfazant"
+  },
+  "latin": "Lophophorus impejanus",
+  "look_for": [
+    {
+      "en": "Male glossy blue-green, bronze neck, long **crest**",
+      "nl": "Haan glanzend blauwgroen, bronzen nek, lange **kuif**"
+    },
+    {
+      "en": "Big white **rump** patch, rusty **tail**",
+      "nl": "Grote witte vlek op de **stuit**, roestbruine **staart**"
+    },
+    {
+      "en": "Female brown and streaked, white **throat**",
+      "nl": "Hen bruin en gestreept, witte **keel**"
+    }
+  ]
+}

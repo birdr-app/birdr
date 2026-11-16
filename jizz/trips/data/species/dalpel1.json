@@ -1,0 +1,22 @@
+{
+  "code": "dalpel1",
+  "name": {
+    "en": "Dalmatian Pelican",
+    "nl": "Kroeskoppelikaan"
+  },
+  "latin": "Pelecanus crispus",
+  "look_for": [
+    {
+      "en": "Huge pelican, greyish-white, curly **crest**",
+      "nl": "Enorme pelikaan, grijswit, met een krullende **kuif**"
+    },
+    {
+      "en": "Grey legs, pale eye, yellow-orange **pouch**",
+      "nl": "Grijze poten, lichte ogen, geeloranje **keelzak**"
+    },
+    {
+      "en": "**Underwing** pale, less black than Great White Pelican",
+      "nl": "**Onderkant van de vleugel** licht, minder zwart dan de roze pelikaan"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rocpta1",
+  "name": {
+    "en": "Rock Ptarmigan",
+    "nl": "Alpensneeuwhoen"
+  },
+  "latin": "Lagopus muta",
+  "look_for": [
+    {
+      "en": "Mottled grey-brown in summer, **white** in winter",
+      "nl": "In de zomer grijsbruin gevlekt, in de winter **wit**"
+    },
+    {
+      "en": "Black tail; male has a red **comb** over the eye",
+      "nl": "Zwarte staart; mannetje heeft een rode **kam** boven het oog"
+    },
+    {
+      "en": "Sits tight on scree above the tree line",
+      "nl": "Blijft stilzitten op puin boven de boomgrens"
+    }
+  ]
+}

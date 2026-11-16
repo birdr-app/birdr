@@ -1,0 +1,22 @@
+{
+  "code": "ortdov",
+  "name": {
+    "en": "Rufous Turtle Dove",
+    "nl": "Oosterse tortel"
+  },
+  "latin": "Streptopelia orientalis",
+  "look_for": [
+    {
+      "en": "Scaly **back**, dark feathers with rusty edges",
+      "nl": "Geschubde **rug**, donkere veren met roestkleurige randen"
+    },
+    {
+      "en": "Black-and-grey striped patch on the neck",
+      "nl": "Zwartgrijs gestreepte vlek op de hals"
+    },
+    {
+      "en": "Pinkish-grey underparts, grey tip to the tail",
+      "nl": "Roze-grijze onderzijde, grijze punt aan de staart"
+    }
+  ]
+}

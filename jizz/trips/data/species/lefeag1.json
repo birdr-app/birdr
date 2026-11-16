@@ -1,0 +1,22 @@
+{
+  "code": "lefeag1",
+  "name": {
+    "en": "Lesser Fish-Eagle",
+    "nl": "Kleine rivierarend"
+  },
+  "latin": "Icthyophaga humilis",
+  "look_for": [
+    {
+      "en": "Grey-brown eagle with white lower **belly** and thighs",
+      "nl": "Grijsbruine arend met witte onderbuik en dijen"
+    },
+    {
+      "en": "Smaller than Grey-headed Fish-Eagle, rounded tail",
+      "nl": "Kleiner dan de grijskopvisarend, ronde staart"
+    },
+    {
+      "en": "Perches quietly over forest rivers",
+      "nl": "Zit rustig boven bosrivieren"
+    }
+  ]
+}

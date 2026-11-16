@@ -1,0 +1,22 @@
+{
+  "code": "beanut1",
+  "name": {
+    "en": "Beautiful Nuthatch",
+    "nl": "Prachtboomklever"
+  },
+  "latin": "Sitta formosa",
+  "look_for": [
+    {
+      "en": "Black and azure-blue upperparts",
+      "nl": "Zwarte en azuurblauwe bovenzijde"
+    },
+    {
+      "en": "Orange underparts, white **eyebrow** and throat",
+      "nl": "Oranje onderzijde, witte **wenkbrauw** en keel"
+    },
+    {
+      "en": "Climbs trunks in hill forest, often with flocks",
+      "nl": "Klimt langs stammen in heuvelbos, vaak in groepen"
+    }
+  ]
+}

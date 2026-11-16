@@ -1,0 +1,22 @@
+{
+  "code": "cohcuc1",
+  "name": {
+    "en": "Common Hawk-Cuckoo",
+    "nl": "Indische sperwerkoekoek"
+  },
+  "latin": "Hierococcyx varius",
+  "look_for": [
+    {
+      "en": "Hawk-like, grey above, barred below",
+      "nl": "Roofvogelachtig, grijs boven, gebandeerd onder"
+    },
+    {
+      "en": "Barred **tail** with a broad dark band at the end",
+      "nl": "Gebandeerde **staart** met een brede donkere band aan het eind"
+    },
+    {
+      "en": "Rising, repeated whistles, day and night",
+      "nl": "Oplopende, herhaalde fluitjes, dag en nacht"
+    }
+  ]
+}

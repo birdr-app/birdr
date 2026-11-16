@@ -1,0 +1,22 @@
+{
+  "code": "temsti",
+  "name": {
+    "en": "Temminck's Stint",
+    "nl": "Temmincks strandloper"
+  },
+  "latin": "Calidris temminckii",
+  "look_for": [
+    {
+      "en": "Plain grey-brown **back**, greyish breast",
+      "nl": "Egaal grijsbruine **rug**, grijsachtige borst"
+    },
+    {
+      "en": "Short, pale yellowish legs",
+      "nl": "Korte, lichtgeelachtige poten"
+    },
+    {
+      "en": "Shuffles low on muddy pond edges",
+      "nl": "Schuifelt laag over modderige vijverranden"
+    }
+  ]
+}

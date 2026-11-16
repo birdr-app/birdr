@@ -1,0 +1,22 @@
+{
+  "code": "slbfly2",
+  "name": {
+    "en": "Slaty-blue Flycatcher",
+    "nl": "Leiblauwe vliegenvanger"
+  },
+  "latin": "Ficedula tricolor",
+  "look_for": [
+    {
+      "en": "Male slaty blue above, white below",
+      "nl": "Mannetje leiblauw van boven, wit eronder"
+    },
+    {
+      "en": "White at the **tail** base, flashed in flight",
+      "nl": "Wit aan de basis van de **staart**, zichtbaar in vlucht"
+    },
+    {
+      "en": "Female olive-brown with rufous **tail** and rump",
+      "nl": "Wijfje olijfbruin met roestbruine **staart** en stuit"
+    }
+  ]
+}

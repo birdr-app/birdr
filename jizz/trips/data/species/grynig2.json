@@ -1,0 +1,22 @@
+{
+  "code": "grynig2",
+  "name": {
+    "en": "Jungle Nightjar",
+    "nl": "Junglenachtzwaluw"
+  },
+  "latin": "Caprimulgus indicus",
+  "look_for": [
+    {
+      "en": "Large, grey nightjar without rufous wing patch",
+      "nl": "Grote, grijze nachtzwaluw zonder roestbruine vleugelvlek"
+    },
+    {
+      "en": "Male has a white **throat** patch, split in two",
+      "nl": "Mannetje heeft een witte **keelvlek**, in tweeën gedeeld"
+    },
+    {
+      "en": "Calls like a distant engine at dusk",
+      "nl": "Roept als een verre motor in de schemering"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "razorb",
+  "name": {
+    "en": "Razorbill",
+    "nl": "Alk"
+  },
+  "latin": "Alca torda",
+  "look_for": [
+    {
+      "en": "Deep, flat-sided black **bill** with a white line",
+      "nl": "Hoge, zwarte **snavel** met een witte streep"
+    },
+    {
+      "en": "Jet-black above, darker than Common Guillemot",
+      "nl": "Zwart van boven, donkerder dan de Zeekoet"
+    },
+    {
+      "en": "Long, pointed **tail**, often cocked on the water",
+      "nl": "Lange, spitse **staart**, op het water vaak omhoog"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rutlar2",
+  "name": {
+    "en": "Rufous-tailed Lark",
+    "nl": "Roodstaartleeuwerik"
+  },
+  "latin": "Ammomanes phoenicura",
+  "look_for": [
+    {
+      "en": "Stocky brown lark with a rufous **rump**",
+      "nl": "Gedrongen bruine leeuwerik met een roestkleurige **stuit**"
+    },
+    {
+      "en": "Rusty tail with a dark triangle at the end",
+      "nl": "Roestkleurige staart met een donkere driehoek aan het eind"
+    },
+    {
+      "en": "Runs and stops on dry stony open ground",
+      "nl": "Rent en staat stil op droge stenige open grond"
+    }
+  ]
+}

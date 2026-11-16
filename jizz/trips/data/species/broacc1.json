@@ -1,0 +1,22 @@
+{
+  "code": "broacc1",
+  "name": {
+    "en": "Brown Accentor",
+    "nl": "Bruine heggenmus"
+  },
+  "latin": "Prunella fulvescens",
+  "look_for": [
+    {
+      "en": "Plain sandy-brown with a **blackish** cheek mask",
+      "nl": "Eenvoudig zandbruin met een **zwartachtig** wangmasker"
+    },
+    {
+      "en": "Broad white **eyebrow**, yellowish buff underparts",
+      "nl": "Brede witte **wenkbrauwstreep**, geelachtig vale onderkant"
+    },
+    {
+      "en": "Runs on dry open slopes and rocky ground",
+      "nl": "Rent over droge open hellingen en rotsgrond"
+    }
+  ]
+}

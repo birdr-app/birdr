@@ -1,0 +1,22 @@
+{
+  "code": "runhor1",
+  "name": {
+    "en": "Rufous-necked Hornbill",
+    "nl": "Himalayajaarvogel"
+  },
+  "latin": "Aceros nipalensis",
+  "look_for": [
+    {
+      "en": "Male: rufous head, neck and underparts",
+      "nl": "Mannetje: roodbruine kop, hals en onderzijde"
+    },
+    {
+      "en": "Female black with a white-tipped **tail**",
+      "nl": "Vrouwtje zwart met witte **staartpunt**"
+    },
+    {
+      "en": "Ridged **bill**, no big casque",
+      "nl": "Geribbelde **snavel**, geen grote helm"
+    }
+  ]
+}

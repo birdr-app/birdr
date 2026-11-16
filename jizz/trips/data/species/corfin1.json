@@ -1,0 +1,22 @@
+{
+  "code": "corfin1",
+  "name": {
+    "en": "Corsican Finch",
+    "nl": "Corsicaanse citroensijs"
+  },
+  "latin": "Carduelis corsicana",
+  "look_for": [
+    {
+      "en": "Small, yellow-washed face and breast, brown **back**",
+      "nl": "Klein, geel getinte kop en borst, bruine **rug**"
+    },
+    {
+      "en": "Dark streaks on the back, greyish **rump**",
+      "nl": "Donkere strepen op de rug, grijsachtige **stuit**"
+    },
+    {
+      "en": "Small flocks in pines and scrub; tremulous call",
+      "nl": "Kleine groepjes in dennen en struikgewas; trillende roep"
+    }
+  ]
+}

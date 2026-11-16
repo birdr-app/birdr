@@ -1,0 +1,22 @@
+{
+  "code": "mouimp1",
+  "name": {
+    "en": "Malabar Imperial-Pigeon",
+    "nl": "Malabarmuskaatduif"
+  },
+  "latin": "Ducula cuprea",
+  "look_for": [
+    {
+      "en": "Large pigeon with pale grey **underparts**",
+      "nl": "Grote duif met lichtgrijze **onderkant**"
+    },
+    {
+      "en": "Glossy bronze-green back and wings",
+      "nl": "Glanzend brons-groene rug en vleugels"
+    },
+    {
+      "en": "Chestnut under the **tail**",
+      "nl": "Kastanjebruin onder de **staart**"
+    }
+  ]
+}

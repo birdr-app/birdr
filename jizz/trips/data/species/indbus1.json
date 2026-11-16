@@ -1,0 +1,22 @@
+{
+  "code": "indbus1",
+  "name": {
+    "en": "Great Indian Bustard",
+    "nl": "Grote Indische trap"
+  },
+  "latin": "Ardeotis nigriceps",
+  "look_for": [
+    {
+      "en": "Huge, long-legged, long-necked ground bird",
+      "nl": "Enorme grondvogel met lange poten en lange hals"
+    },
+    {
+      "en": "Black **crown**, pale neck, black breast band",
+      "nl": "Zwarte **kruin**, lichte hals, zwarte borstband"
+    },
+    {
+      "en": "Walks slowly through grass and scrub",
+      "nl": "Loopt langzaam door gras en struweel"
+    }
+  ]
+}

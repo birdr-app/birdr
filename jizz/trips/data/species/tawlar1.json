@@ -1,0 +1,22 @@
+{
+  "code": "tawlar1",
+  "name": {
+    "en": "Tawny Lark",
+    "nl": "Sykeskuifleeuwerik"
+  },
+  "latin": "Galerida deva",
+  "look_for": [
+    {
+      "en": "Rufous-toned lark with a pointed **crest**",
+      "nl": "Roestkleurige leeuwerik met een puntige **kuif**"
+    },
+    {
+      "en": "Warm buff, only faint breast streaks",
+      "nl": "Warm buff, maar zwakke borststrepen"
+    },
+    {
+      "en": "Walks on dry open ground and stony fields",
+      "nl": "Loopt over droge open grond en stenige velden"
+    }
+  ]
+}

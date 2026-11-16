@@ -1,0 +1,22 @@
+{
+  "code": "varlau1",
+  "name": {
+    "en": "Variegated Laughingthrush",
+    "nl": "Prachtlijstergaai"
+  },
+  "latin": "Trochalopteron variegatum",
+  "look_for": [
+    {
+      "en": "Soft brown, black face and **throat**, pale cheek",
+      "nl": "Zachtbruin, zwart gezicht en **keel**, lichte wang"
+    },
+    {
+      "en": "Grey, black and white **wings**, white-tipped dark tail",
+      "nl": "Grijze, zwarte en witte **vleugels**, donkere staart met witte punt"
+    },
+    {
+      "en": "Rufous belly, no golden wing panels",
+      "nl": "Roestrode buik, geen gouden vleugelvlakken"
+    }
+  ]
+}

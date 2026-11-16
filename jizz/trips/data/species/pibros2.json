@@ -1,0 +1,22 @@
+{
+  "code": "pibros2",
+  "name": {
+    "en": "Pink-browed Rosefinch",
+    "nl": "Wenkbrauwroodmus"
+  },
+  "latin": "Carpodacus rodochroa",
+  "look_for": [
+    {
+      "en": "Male crimson-pink with a pale pink **eyebrow**",
+      "nl": "Man karmozijnroze met een lichtroze **wenkbrauwstreep**"
+    },
+    {
+      "en": "Dark-streaked brown **back** and shoulders",
+      "nl": "Donker gestreepte bruine **rug** en schouders"
+    },
+    {
+      "en": "Female streaked brown, pale eyebrow; scrubby slopes",
+      "nl": "Vrouw gestreept bruin met lichte wenkbrauw; struikhellingen"
+    }
+  ]
+}

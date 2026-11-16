@@ -1,0 +1,22 @@
+{
+  "code": "soclap1",
+  "name": {
+    "en": "Sociable Lapwing",
+    "nl": "Steppekievit"
+  },
+  "latin": "Vanellus gregarius",
+  "look_for": [
+    {
+      "en": "Pale **eyebrow** and dark cap",
+      "nl": "Lichte **wenkbrauwstreep** en donkere kruin"
+    },
+    {
+      "en": "Black-and-white **wings** and tail band in flight",
+      "nl": "Zwart-witte **vleugels** en staartband in de vlucht"
+    },
+    {
+      "en": "Stands upright on dry fields among lapwings",
+      "nl": "Staat rechtop op droge velden tussen kieviten"
+    }
+  ]
+}

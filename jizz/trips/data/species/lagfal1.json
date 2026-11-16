@@ -1,0 +1,22 @@
+{
+  "code": "lagfal1",
+  "name": {
+    "en": "Laggar Falcon",
+    "nl": "Indische lannervalk"
+  },
+  "latin": "Falco jugger",
+  "look_for": [
+    {
+      "en": "Large brown falcon with a rufous **crown**",
+      "nl": "Grote bruine valk met een roestkleurige **kruin**"
+    },
+    {
+      "en": "Thick dark moustache stripe, pale below",
+      "nl": "Dikke donkere baardstreep, licht onderaan"
+    },
+    {
+      "en": "Hunts low and fast, sits on poles",
+      "nl": "Jaagt laag en snel, zit op palen"
+    }
+  ]
+}

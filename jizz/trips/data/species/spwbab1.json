@@ -1,0 +1,22 @@
+{
+  "code": "spwbab1",
+  "name": {
+    "en": "Spotted Elachura",
+    "nl": "Elachura"
+  },
+  "latin": "Elachura formosa",
+  "look_for": [
+    {
+      "en": "Tiny, dark brown, **speckled** with white all over",
+      "nl": "Piepklein, donkerbruin, overal wit **gespikkeld**"
+    },
+    {
+      "en": "Rufous **wings** and short tail, barred black",
+      "nl": "Roodbruine **vleugels** en korte staart, zwart gebandeerd"
+    },
+    {
+      "en": "Creeps low over the ground, almost mouse-like",
+      "nl": "Kruipt laag over de grond, bijna muisachtig"
+    }
+  ]
+}

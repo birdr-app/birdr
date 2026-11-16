@@ -1,0 +1,22 @@
+{
+  "code": "kokphe1",
+  "name": {
+    "en": "Koklass Pheasant",
+    "nl": "Koklasfazant"
+  },
+  "latin": "Pucrasia macrolopha",
+  "look_for": [
+    {
+      "en": "Male dark green **head** with long ear tufts",
+      "nl": "Haan met donkergroene **kop** en lange oorpluimen"
+    },
+    {
+      "en": "White neck patch, chestnut **breast**",
+      "nl": "Witte nekvlek, kastanjebruine **borst**"
+    },
+    {
+      "en": "Female mottled brown, long pale-tipped **tail**",
+      "nl": "Hen bruingevlekt, lange **staart** met lichte punt"
+    }
+  ]
+}

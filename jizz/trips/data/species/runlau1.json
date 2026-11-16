@@ -1,0 +1,22 @@
+{
+  "code": "runlau1",
+  "name": {
+    "en": "Rufous-necked Laughingthrush",
+    "nl": "Roodneklijstergaai"
+  },
+  "latin": "Pterorhinus ruficollis",
+  "look_for": [
+    {
+      "en": "Black face and **breast**, slate-grey crown",
+      "nl": "Zwart gezicht en **borst**, leigrijze kruin"
+    },
+    {
+      "en": "Bright rufous patch on the neck side",
+      "nl": "Felroestrode vlek op de halszijde"
+    },
+    {
+      "en": "Olive-brown back, rufous belly, blackish tail",
+      "nl": "Olijfbruine rug, roestrode buik, zwartige staart"
+    }
+  ]
+}

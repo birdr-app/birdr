@@ -1,0 +1,22 @@
+{
+  "code": "reblei",
+  "name": {
+    "en": "Red-billed Leiothrix",
+    "nl": "Japanse nachtegaal"
+  },
+  "latin": "Leiothrix lutea",
+  "look_for": [
+    {
+      "en": "Bright red-orange **bill**, olive upperparts",
+      "nl": "Felrood-oranje **snavel**, olijfgroene bovenkant"
+    },
+    {
+      "en": "Yellow **throat**, orange-yellow breast",
+      "nl": "Gele **keel**, oranjegele borst"
+    },
+    {
+      "en": "Red and yellow patches on the **wing**",
+      "nl": "Rode en gele vlakken op de **vleugel**"
+    }
+  ]
+}

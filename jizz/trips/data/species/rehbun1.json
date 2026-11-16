@@ -1,0 +1,22 @@
+{
+  "code": "rehbun1",
+  "name": {
+    "en": "Red-headed Bunting",
+    "nl": "Bruinkopgors"
+  },
+  "latin": "Melophus bruniceps",
+  "look_for": [
+    {
+      "en": "Male has a rich chestnut **head** and breast",
+      "nl": "Mannetje heeft een diep kastanjebruine **kop** en borst"
+    },
+    {
+      "en": "Female and winter birds dull buff, finely streaked",
+      "nl": "Vrouwtje en wintervogels dof beige, fijn gestreept"
+    },
+    {
+      "en": "Winter flocks feed in stubble and crop fields",
+      "nl": "Wintergroepen eten in stoppelvelden en akkers"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "palhar1",
+  "name": {
+    "en": "Pallid Harrier",
+    "nl": "Steppekiekendief"
+  },
+  "latin": "Circus macrourus",
+  "look_for": [
+    {
+      "en": "Male pale grey with a black wingtip wedge",
+      "nl": "Mannetje lichtgrijs met een zwarte wig aan de vleugelpunt"
+    },
+    {
+      "en": "Female brown and streaked, white **collar**",
+      "nl": "Vrouwtje bruin en gestreept, witte **kraag**"
+    },
+    {
+      "en": "Glides low over fields, wings in a shallow V",
+      "nl": "Glijdt laag over velden, vleugels in een ondiepe V"
+    }
+  ]
+}

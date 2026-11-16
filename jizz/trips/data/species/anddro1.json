@@ -1,0 +1,22 @@
+{
+  "code": "anddro1",
+  "name": {
+    "en": "Andaman Drongo",
+    "nl": "Andamanendrongo"
+  },
+  "latin": "Dicrurus andamanensis",
+  "look_for": [
+    {
+      "en": "All **glossy black** with a green sheen",
+      "nl": "Helemaal **glanzend zwart** met groene glans"
+    },
+    {
+      "en": "Plain forked **tail**, no rackets",
+      "nl": "Gewone gevorkte **staart**, geen rakettips"
+    },
+    {
+      "en": "Hunts insects in the mid-canopy",
+      "nl": "Jaagt op insecten in het middelste bladerdak"
+    }
+  ]
+}

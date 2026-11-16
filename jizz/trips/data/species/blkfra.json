@@ -1,0 +1,22 @@
+{
+  "code": "blkfra",
+  "name": {
+    "en": "Black Francolin",
+    "nl": "Zwarte frankolijn"
+  },
+  "latin": "Francolinus francolinus",
+  "look_for": [
+    {
+      "en": "Male black, with white-spotted flanks",
+      "nl": "Mannetje zwart, met witgespikkelde flanken"
+    },
+    {
+      "en": "Chestnut collar and white cheek patch",
+      "nl": "Kastanjebruine kraag en witte wangvlek"
+    },
+    {
+      "en": "Female brown and barred, rusty **nape**",
+      "nl": "Vrouwtje bruin en gebandeerd, roestkleurige **nek**"
+    }
+  ]
+}

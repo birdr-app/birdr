@@ -1,0 +1,22 @@
+{
+  "code": "strlau1",
+  "name": {
+    "en": "Streaked Laughingthrush",
+    "nl": "Borstellijstergaai"
+  },
+  "latin": "Trochalopteron lineatum",
+  "look_for": [
+    {
+      "en": "Grey-brown body with fine pale streaks",
+      "nl": "Grijsbruin lijf met fijne lichte streepjes"
+    },
+    {
+      "en": "Rufous **ear** patch, **wing** and **tail** edges",
+      "nl": "Roestrode **oorvlek**, **vleugel**- en **staart**randen"
+    },
+    {
+      "en": "Shaggy, long grey-tipped **tail**, noisy flocks",
+      "nl": "Warrig, lange **staart** met grijze punt, luidruchtige groepjes"
+    }
+  ]
+}

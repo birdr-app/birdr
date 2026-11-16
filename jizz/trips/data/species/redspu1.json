@@ -1,0 +1,22 @@
+{
+  "code": "redspu1",
+  "name": {
+    "en": "Red Spurfowl",
+    "nl": "Rode dwergfazant"
+  },
+  "latin": "Galloperdix spadicea",
+  "look_for": [
+    {
+      "en": "Male brick-red, with a grey **face** and neck",
+      "nl": "Mannetje baksteenrood, met een grijs **gezicht** en hals"
+    },
+    {
+      "en": "Female duller, reddish-brown; red facial skin",
+      "nl": "Vrouwtje doffer, roodbruin; rode kale gezichtshuid"
+    },
+    {
+      "en": "Runs in pairs through scrub, tail held up",
+      "nl": "Rent in paartjes door struweel, staart omhoog"
+    }
+  ]
+}

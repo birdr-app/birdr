@@ -1,0 +1,22 @@
+{
+  "code": "hilpig1",
+  "name": {
+    "en": "Hill Pigeon",
+    "nl": "Klipduif"
+  },
+  "latin": "Columba rupestris",
+  "look_for": [
+    {
+      "en": "Broad white band across black **tail**",
+      "nl": "Brede witte band over de zwarte **staart**"
+    },
+    {
+      "en": "Plain pale grey; no black **head** or collar",
+      "nl": "Egaal lichtgrijs; geen zwarte **kop** of witte kraag"
+    },
+    {
+      "en": "Cliffs, gorges and villages high in the mountains",
+      "nl": "Rotswanden, kloven en dorpen hoog in de bergen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "sibsto1",
+  "name": {
+    "en": "Siberian Stonechat",
+    "nl": "Aziatische roodborsttapuit"
+  },
+  "latin": "Saxicola maurus",
+  "look_for": [
+    {
+      "en": "Male black head, white neck patch, orange breast",
+      "nl": "Mannetje zwarte kop, witte halsvlek, oranje borst"
+    },
+    {
+      "en": "Female and winter birds streaked, pale **rump**",
+      "nl": "Vrouwtje en wintervogels gestreept, lichte **stuit**"
+    },
+    {
+      "en": "Perches upright on stalks and fence tops",
+      "nl": "Zit rechtop op stengels en hekken"
+    }
+  ]
+}

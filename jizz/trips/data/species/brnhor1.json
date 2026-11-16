@@ -1,0 +1,22 @@
+{
+  "code": "brnhor1",
+  "name": {
+    "en": "Brown Hornbill",
+    "nl": "Bruine neushoornvogel"
+  },
+  "latin": "Anorrhinus austeni",
+  "look_for": [
+    {
+      "en": "Dark brown hornbill with a pale yellow **bill**",
+      "nl": "Donkerbruine neushoornvogel met een bleekgele **snavel**"
+    },
+    {
+      "en": "Bare bluish **skin** around the eye",
+      "nl": "Kale blauwachtige **huid** rond het oog"
+    },
+    {
+      "en": "Noisy, travels in groups through hill forest",
+      "nl": "Luidruchtig, reist in groepen door heuvelbos"
+    }
+  ]
+}

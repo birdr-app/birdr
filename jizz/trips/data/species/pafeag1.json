@@ -1,0 +1,22 @@
+{
+  "code": "pafeag1",
+  "name": {
+    "en": "Pallas's Fish-Eagle",
+    "nl": "Witbandzeearend"
+  },
+  "latin": "Haliaeetus leucoryphus",
+  "look_for": [
+    {
+      "en": "Pale sandy **head** and whitish face",
+      "nl": "Lichtzandkleurige **kop** met witachtig gezicht"
+    },
+    {
+      "en": "Black **tail** with one broad white band",
+      "nl": "Zwarte **staart** met één brede witte band"
+    },
+    {
+      "en": "Dark **wings**, rufous **back**; perches by big rivers",
+      "nl": "Donkere **vleugels**, roodbruine **rug**; zit bij grote rivieren"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "boowar1",
+  "name": {
+    "en": "Booted Warbler",
+    "nl": "Kleine spotvogel"
+  },
+  "latin": "Iduna caligata",
+  "look_for": [
+    {
+      "en": "Small, plain grey-brown warbler, pale eyebrow",
+      "nl": "Kleine, egaal grijsbruine zanger, lichte wenkbrauw"
+    },
+    {
+      "en": "Short **bill** and short tail",
+      "nl": "Korte **snavel** en korte staart"
+    },
+    {
+      "en": "Low in scrub, flicks its tail",
+      "nl": "Laag in struweel, wipt met de staart"
+    }
+  ]
+}

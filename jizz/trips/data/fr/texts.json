@@ -1,0 +1,1026 @@
+{
+  "country": "FR",
+  "intro": {
+    "en": "France holds almost every habitat of western Europe: Atlantic cliffs and estuaries, the lagoons of the Camargue, the stony Crau steppe, Mediterranean scrub, big forests, the Pyrenees and the Alps, and Corsica with a nuthatch of its own. This trip covers 252 species, from garden birds to flamingos and vultures. The south is best in spring, the mountains in summer, and the coasts and lakes in winter and on passage.",
+    "nl": "Frankrijk heeft bijna alle landschappen van West-Europa: kliffen en estuaria aan de Atlantische kust, de lagunes van de Camargue, de steenvlakte van de Crau, mediterraan struikgewas, uitgestrekte bossen, de Pyreneeën en de Alpen, en Corsica met een eigen boomklever. Deze reis omvat 252 soorten, van tuinvogels tot flamingo's en gieren. Het zuiden is het mooist in het voorjaar, de bergen in de zomer en de kust en de meren in winter en tijdens de trek."
+  },
+  "groups": {
+    "waterfowl": {
+      "here": {
+        "en": "Fourteen swans, geese and ducks. Mallard, Mute Swan and Greylag Goose are on lakes and rivers everywhere. Brent Geese winter on the Channel and Atlantic coasts, and the Red-crested Pochard is a speciality of the Camargue and the big lakes.",
+        "nl": "Veertien zwanen, ganzen en eenden. Wilde eend, knobbelzwaan en grauwe gans zie je overal op meren en rivieren. Rotganzen overwinteren aan de kust van het Kanaal en de Atlantische Oceaan, en de krooneend is een specialiteit van de Camargue en de grote meren."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "here": {
+        "en": "Seven game birds that live in two different worlds. Grey Partridge, Red-legged Partridge, Pheasant and Quail live on farmland and scrub. Black Grouse, Rock Ptarmigan and Western Capercaillie live in the mountains and are much harder to find.",
+        "nl": "Zeven hoenderachtigen uit twee werelden. Patrijs, rode patrijs, fazant en kwartel leven op akkers en in struikgewas. Korhoen, alpensneeuwhoen en auerhoen leven in de bergen en zijn veel moeilijker te vinden."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "Five pigeons and doves. Woodpigeon and Collared Dove are in every town, Stock Dove and Turtle Dove prefer farmland and woods, and the Rock Dove covers the town pigeon and the wild birds of sea cliffs.",
+        "nl": "Vijf duiven. Houtduif en Turkse tortel zitten in elke stad, holenduif en zomertortel houden van akkers en bossen, en onder de rotsduif vallen de stadsduif en de wilde vogels van zeekliffen."
+      }
+    },
+    "sandgrouse": {
+      "here": {
+        "en": "One sandgrouse lives here: the Pin-tailed Sandgrouse, a shy bird of the stony Crau steppe, its stronghold in France.",
+        "nl": "Hier leeft één zandhoen: het witbuikzandhoen, een schuwe vogel van de steenvlakte van de Crau, zijn bolwerk in Frankrijk."
+      }
+    },
+    "bustards": {
+      "here": {
+        "en": "The Little Bustard is the only bustard on the trip. It lives on steppe and open farmland, is scarce and declining, and the Crau is the easiest place to look.",
+        "nl": "De kleine trap is de enige trap op deze reis. Hij leeft op steppe en open akkers, is schaars en wordt zeldzamer, en de Crau is de makkelijkste plek om te zoeken."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "Two cuckoos. The Common Cuckoo is heard in almost every wood and field in spring. The Great Spotted Cuckoo is a bird of the Mediterranean south, where it follows magpies.",
+        "nl": "Twee koekoeken. De koekoek hoor je in het voorjaar in bijna elk bos en elke akker. De kuifkoekoek is een vogel van het mediterrane zuiden, waar hij eksters volgt."
+      }
+    },
+    "nightjars": {
+      "here": {
+        "en": "The Eurasian Nightjar is a summer visitor to heaths and open woods. You will mostly hear its long churring after dusk.",
+        "nl": "De nachtzwaluw is een zomergast van heide en open bos. Meestal hoor je vooral zijn lange, snorrende zang na zonsondergang."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "Three swifts. Common Swift fills the sky over towns in summer, Alpine Swift nests on cliffs and old towers, and Pallid Swift is a bird of the Mediterranean coast.",
+        "nl": "Drie gierzwaluwen. De gierzwaluw vult in de zomer de lucht boven steden, de alpengierzwaluw broedt op kliffen en oude torens, en de vale gierzwaluw is een vogel van de Middellandse Zeekust."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Coot and Moorhen are easy on any pond. The Water Rail is far shyer and is mostly heard, a pig-like squeal from the reeds.",
+        "nl": "Meerkoet en waterhoen zie je makkelijk op elke vijver. De waterral is veel schuwer en wordt vooral gehoord, als een varkensachtig gekrijs uit het riet."
+      }
+    },
+    "cranes": {
+      "here": {
+        "en": "The Common Crane passes through in large numbers in autumn and spring, and thousands winter in the south-west. Lac du Der in the north-east is the famous stopover.",
+        "nl": "De kraanvogel trekt in het najaar en het voorjaar in grote aantallen door, en duizenden overwinteren in het zuidwesten. Het Lac du Der in het noordoosten is de beroemde rustplaats."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "Twenty-six waders. The Baie de Somme, Mont-Saint-Michel and the Atlantic estuaries hold the winter flocks, the Camargue holds the stilts, avocets and pratincoles, and the Crau holds the Stone-curlew.",
+        "nl": "Zesentwintig steltlopers. De Baie de Somme, Mont-Saint-Michel en de Atlantische estuaria herbergen de wintergroepen, de Camargue de steltkluten, kluten en vorkstaartplevieren, en de Crau de griel."
+      }
+    },
+    "alcids": {
+      "here": {
+        "en": "Three auks: Razorbill, Guillemot and Atlantic Puffin. They nest on the sea cliffs of Brittany and Normandy, and the Sept-Îles off Brittany is the place for puffins.",
+        "nl": "Drie alkachtigen: alk, zeekoet en papegaaiduiker. Ze broeden op de zeekliffen van Bretagne en Normandië, en de Sept-Îles voor de kust van Bretagne is dé plek voor papegaaiduikers."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Fifteen gulls and terns. Black-headed Gull is the common one nearly everywhere, and Yellow-legged Gull is the big gull of the south. The Camargue adds Slender-billed Gull, Gull-billed and Whiskered Tern, and Audouin's Gull breeds on Corsica.",
+        "nl": "Vijftien meeuwen en sterns. De kokmeeuw is bijna overal algemeen en de geelpootmeeuw is de grote meeuw van het zuiden. De Camargue voegt dunbekmeeuw, lachstern en witwangstern toe, en Audouins meeuw broedt op Corsica."
+      }
+    },
+    "flamingos": {
+      "here": {
+        "en": "Greater Flamingos live all year in the lagoons and salt pans of the Camargue and the Languedoc coast. Look for the pink flocks standing in shallow water.",
+        "nl": "Flamingo's leven het hele jaar in de lagunes en zoutpannen van de Camargue en de kust van de Languedoc. Zoek de roze groepen die in ondiep water staan."
+      }
+    },
+    "grebes": {
+      "here": {
+        "en": "Little Grebe, Great Crested Grebe and Black-necked Grebe live on lakes, ponds and reservoirs. The Black-necked Grebe is the least common, on southern lakes and on the coast in winter.",
+        "nl": "Dodaars, fuut en geoorde fuut leven op meren, vijvers en stuwmeren. De geoorde fuut is het minst algemeen, op meren in het zuiden en in de winter aan de kust."
+      }
+    },
+    "petrels-shearwaters-and-diving-petrels": {
+      "here": {
+        "en": "The Northern Fulmar nests on sea cliffs in Brittany and Normandy. Watch for it gliding on stiff wings along the cliff edge.",
+        "nl": "De noordse stormvogel broedt op zeekliffen in Bretagne en Normandië. Let op hem terwijl hij op stijve vleugels langs de klifrand glijdt."
+      }
+    },
+    "storks": {
+      "here": {
+        "en": "The White Stork nests on church towers and pylons, above all in Alsace and on the Atlantic coast, and is now widespread.",
+        "nl": "De ooievaar nestelt op kerktorens en hoogspanningsmasten, vooral in de Elzas en aan de Atlantische kust, en is nu wijdverbreid."
+      }
+    },
+    "frigatebirds-boobies-and-gannets": {
+      "here": {
+        "en": "The Northern Gannet breeds on the Sept-Îles off Brittany, the only colony in France. You see it fishing along the coasts of Brittany and Normandy.",
+        "nl": "De jan-van-gent broedt op de Sept-Îles voor de kust van Bretagne, de enige kolonie van Frankrijk. Je ziet hem vissen langs de kusten van Bretagne en Normandië."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "Great Cormorant is on every lake, river and coast. The European Shag is slimmer and darker and sticks to rocky sea coasts, such as Brittany and Corsica.",
+        "nl": "De aalscholver zit op elk meer, elke rivier en elke kust. De kuifaalscholver is slanker en donkerder en blijft bij rotskusten, zoals in Bretagne en op Corsica."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Ten herons, egrets and ibises. Grey Heron and Little Egret are widespread. The Camargue is the place for Squacco Heron, Purple Heron, Night Heron, Little Bittern and Glossy Ibis, and Spoonbills nest in the Atlantic marshes.",
+        "nl": "Tien reigers, zilverreigers en ibissen. Blauwe reiger en kleine zilverreiger zijn wijdverbreid. De Camargue is dé plek voor ralreiger, purperreiger, kwak, woudaap en zwarte ibis, en lepelaars broeden in de Atlantische moerassen."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "Eighteen birds of prey. Common Buzzard and Red Kite are easy in open country. Griffon, Bearded, Egyptian and Black Vultures soar over the Pyrenees, the Alps and the Cévennes, and Short-toed and Booted Eagles hunt in the south.",
+        "nl": "Achttien roofvogels. Buizerd en rode wouw zie je makkelijk in open land. Vale gier, lammergier, aasgier en monniksgier zweven boven de Pyreneeën, de Alpen en de Cevennen, en slangenarend en dwergarend jagen in het zuiden."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "Four owls. Tawny Owl and Little Owl are the common ones, Long-eared Owl hides in dense trees, and Scops Owl calls on summer nights in the south.",
+        "nl": "Vier uilen. Bosuil en steenuil zijn de algemene soorten, de ransuil houdt zich schuil in dichte bomen en de dwergooruil roept in de zomernachten in het zuiden."
+      }
+    },
+    "hoopoes": {
+      "here": {
+        "en": "The Common Hoopoe is a summer visitor to orchards, vineyards and open woodland, above all in the south and west.",
+        "nl": "De hop is een zomergast van boomgaarden, wijngaarden en open bos, vooral in het zuiden en westen."
+      }
+    },
+    "bee-eaters": {
+      "here": {
+        "en": "The European Bee-eater is a summer visitor that nests in sandy banks in the south, from Provence to the Camargue. Look and listen for it on wires.",
+        "nl": "De bijeneter is een zomergast die in het zuiden nestelt in zandwanden, van de Provence tot de Camargue. Zoek hem op draden en luister naar zijn roep."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "The Common Kingfisher lives along clear rivers and ponds. A flash of blue low over the water is often all you get.",
+        "nl": "De ijsvogel leeft langs heldere rivieren en vijvers. Een blauwe flits laag over het water is vaak alles wat je ziet."
+      }
+    },
+    "rollers-and-allies": {
+      "here": {
+        "en": "The European Roller is a summer visitor to the south, with the Crau and the Languedoc as its main areas. Look for it on posts and wires.",
+        "nl": "De scharrelaar is een zomergast van het zuiden, met de Crau en de Languedoc als belangrijkste gebieden. Zoek hem op palen en draden."
+      }
+    },
+    "woodpeckers": {
+      "here": {
+        "en": "Seven woodpeckers, including the Wryneck. Great Spotted and Green Woodpecker are widespread. Black, Middle Spotted and Grey-headed live in older forest, and the Wryneck is a summer visitor to orchards.",
+        "nl": "Zeven spechten, inclusief de draaihals. Grote bonte specht en groene specht zijn wijdverbreid. Zwarte specht, middelste bonte specht en grijskopspecht leven in ouder bos, en de draaihals is een zomergast van boomgaarden."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "Four falcons. The Kestrel is the roadside bird. Lesser Kestrel nests in colonies in the Crau and the Languedoc, Hobby hunts over heath and wetland in summer, and Peregrine nests on cliffs and city towers.",
+        "nl": "Vier valken. De torenvalk is de vogel langs de weg. De kleine torenvalk broedt in kolonies in de Crau en de Languedoc, de boomvalk jaagt in de zomer boven heide en wetland, en de slechtvalk broedt op kliffen en stadstorens."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "The Ring-necked Parakeet is an introduced bird that lives wild in Paris and other cities, where noisy flocks fly between the parks.",
+        "nl": "De halsbandparkiet is een uitheemse vogel die in het wild leeft in Parijs en andere steden, waar luidruchtige groepen tussen de parken vliegen."
+      }
+    },
+    "old-world-orioles": {
+      "here": {
+        "en": "The Eurasian Golden Oriole is a summer visitor to poplar woods and riverside trees. It is far easier to hear than to see.",
+        "nl": "De wielewaal is een zomergast van populierenbossen en bomen langs rivieren. Hij is veel makkelijker te horen dan te zien."
+      }
+    },
+    "shrikes": {
+      "here": {
+        "en": "Three shrikes. Red-backed Shrike is a summer visitor to hedgerows and scrub, Woodchat Shrike belongs to the south, and Iberian Grey Shrike to the Mediterranean plains.",
+        "nl": "Drie klauwieren. De grauwe klauwier is een zomergast van heggen en struikgewas, de roodkopklauwier hoort bij het zuiden en de Iberische klapekster bij de mediterrane vlakten."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "Ten crows and their kin. Carrion Crow, Magpie, Jay, Jackdaw and Rook are common. Alpine Chough, Red-billed Chough, Raven and Nutcracker live on cliffs and in the mountains, and the Hooded Crow lives on Corsica.",
+        "nl": "Tien kraaiachtigen. Zwarte kraai, ekster, gaai, kauw en roek zijn algemeen. Alpenkauw, alpenkraai, raaf en notenkraker leven op kliffen en in de bergen, en de bonte kraai leeft op Corsica."
+      }
+    },
+    "tits-chickadees-and-titmice": {
+      "here": {
+        "en": "Six tits. Blue and Great Tit are in every garden, Coal Tit and Crested Tit prefer conifers, and Marsh and Willow Tit are the look-alike pair of the woods.",
+        "nl": "Zes mezen. Pimpelmees en koolmees zitten in elke tuin, zwarte mees en kuifmees houden van naaldbos, en glanskop en matkop vormen het lastige tweetal van het bos."
+      }
+    },
+    "larks": {
+      "here": {
+        "en": "Five larks. Skylark and Woodlark are widespread and Crested Lark lives along roads and fields in the south. Calandra and Greater Short-toed Lark are Mediterranean specialities.",
+        "nl": "Vijf leeuweriken. Veldleeuwerik en boomleeuwerik zijn wijdverbreid en de kuifleeuwerik leeft langs wegen en akkers in het zuiden. Kalanderleeuwerik en kortteenleeuwerik zijn specialiteiten van het Middellandse Zeegebied."
+      }
+    },
+    "bearded-reedling": {
+      "here": {
+        "en": "The Bearded Tit lives in large reed beds such as those of the Camargue and the Baie de Somme. It is a resident and easiest to see on calm mornings.",
+        "nl": "De baardman leeft in grote rietvelden, zoals die van de Camargue en de Baie de Somme. Hij is een standvogel en het makkelijkst te zien op windstille ochtenden."
+      }
+    },
+    "cisticolas-and-allies": {
+      "here": {
+        "en": "The Zitting Cisticola is a tiny streaked bird of rough fields and marshes in the south and west. Its song flight, with a repeated click, gives it away.",
+        "nl": "De graszanger is een klein gestreept vogeltje van ruige velden en moerassen in het zuiden en westen. Zijn zangvlucht met een herhaald tikkend geluid verraadt hem."
+      }
+    },
+    "reed-warblers-and-allies": {
+      "here": {
+        "en": "Four warblers of reeds and thickets. Reed Warbler and Sedge Warbler are common, Great Reed Warbler is the loud one in big reed beds, and Melodious Warbler sings from hedges and scrub.",
+        "nl": "Vier zangers van riet en struikgewas. Kleine karekiet en rietzanger zijn algemeen, de grote karekiet is de luide soort van grote rietvelden en de orpheusspotvogel zingt uit heggen en struikgewas."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "Four swallows and martins. Barn Swallow and House Martin nest on buildings, Sand Martin in river banks, and Crag Martin on cliffs and bridges in the south and the mountains.",
+        "nl": "Vier zwaluwen. Boerenzwaluw en huiszwaluw broeden aan gebouwen, de oeverzwaluw in rivieroevers en de rotszwaluw op kliffen en bruggen in het zuiden en de bergen."
+      }
+    },
+    "leaf-warblers": {
+      "here": {
+        "en": "Five leaf warblers. Chiffchaff and Willow Warbler are everywhere, Wood Warbler lives in tall woods, Bonelli's Warbler on dry slopes in the south and the Alps, and Iberian Chiffchaff in the south-west.",
+        "nl": "Vijf boszangers. Tjiftjaf en fitis zitten overal, de fluiter leeft in hoog bos, de bergfluiter op droge hellingen in het zuiden en de Alpen, en de Iberische tjiftjaf in het zuidwesten."
+      }
+    },
+    "bush-warblers-and-allies": {
+      "here": {
+        "en": "Cetti's Warbler is heard more than seen. Its sudden loud burst of song comes from thickets by rivers and ponds, mainly in the south and west.",
+        "nl": "De Cetti's zanger hoor je vaker dan je hem ziet. Zijn plotselinge, luide zang komt uit struikgewas langs rivieren en vijvers, vooral in het zuiden en westen."
+      }
+    },
+    "long-tailed-tits-and-bushtit": {
+      "here": {
+        "en": "The Long-tailed Tit moves through woods and hedges in noisy little flocks. Look for the tiny round body and the very long tail.",
+        "nl": "De staartmees trekt in luidruchtige groepjes door bossen en heggen. Let op het kleine, ronde lijf en de zeer lange staart."
+      }
+    },
+    "sylviid-warblers": {
+      "here": {
+        "en": "Ten warblers. Blackcap, Garden Warbler and Whitethroat sing from woods and hedges. The Mediterranean scrub has its own set: Sardinian, Subalpine, Spectacled, Dartford and Orphean Warbler and, on Corsica, Marmora's Warbler.",
+        "nl": "Tien grasmussen en verwanten. Zwartkop, tuinfluiter en grasmus zingen uit bossen en heggen. Het mediterrane struikgewas heeft een eigen groep: kleine zwartkop, baardgrasmus, brilgrasmus, Provençaalse grasmus en orpheusgrasmus en, op Corsica, de Sardijnse grasmus."
+      }
+    },
+    "kinglets": {
+      "here": {
+        "en": "Goldcrest and Firecrest are among Europe's smallest birds. Goldcrest likes conifers, and Firecrest likes mixed woods and gardens and is the commoner in the south.",
+        "nl": "Goudhaan en vuurgoudhaan behoren tot de kleinste vogels van Europa. De goudhaan houdt van naaldbos, de vuurgoudhaan van gemengd bos en tuinen en is in het zuiden algemener."
+      }
+    },
+    "wallcreeper": {
+      "here": {
+        "en": "The Wallcreeper lives on cliffs in the Pyrenees and the Alps and drops lower in winter, sometimes onto old buildings and quarries.",
+        "nl": "De rotskruiper leeft op kliffen in de Pyreneeën en de Alpen en zakt in de winter lager, soms naar oude gebouwen en steengroeven."
+      }
+    },
+    "nuthatches": {
+      "here": {
+        "en": "Eurasian Nuthatch is widespread in woods. The Corsican Nuthatch lives only on Corsica, in the old pine forests of the mountains.",
+        "nl": "De boomklever is wijdverbreid in bossen. De Corsicaanse boomklever leeft alleen op Corsica, in de oude dennenbossen van de bergen."
+      }
+    },
+    "treecreepers": {
+      "here": {
+        "en": "Two treecreepers that are hard to tell apart. Short-toed Treecreeper is the bird of lowland woods and parks, and Eurasian Treecreeper of mountain conifers.",
+        "nl": "Twee boomkruipers die moeilijk uit elkaar te houden zijn. De boomkruiper is de vogel van laaglandbossen en parken, de taigaboomkruiper van bergnaaldbos."
+      }
+    },
+    "wrens": {
+      "here": {
+        "en": "The Eurasian Wren is tiny, loud and found wherever there is cover, from gardens to mountain boulders.",
+        "nl": "De winterkoning is klein, luid en overal te vinden waar dekking is, van tuinen tot bergblokken."
+      }
+    },
+    "dippers": {
+      "here": {
+        "en": "The White-throated Dipper lives on fast, clear streams in hills and mountains. Look for it bobbing on a boulder.",
+        "nl": "De waterspreeuw leeft aan snelle, heldere beken in heuvels en bergen. Zoek hem knikkend op een rotsblok."
+      }
+    },
+    "starlings-and-mynas": {
+      "here": {
+        "en": "Common Starling is everywhere. The Spotless Starling is the starling of Corsica and the Mediterranean south, black in summer and without spots.",
+        "nl": "De spreeuw is overal. De zwarte spreeuw is de spreeuw van Corsica en het mediterrane zuiden, in de zomer zwart en zonder vlekken."
+      }
+    },
+    "thrushes": {
+      "here": {
+        "en": "Six thrushes. Blackbird, Song Thrush and Mistle Thrush are widespread residents. Redwing and Fieldfare come from the north in winter, and Ring Ouzel is a mountain bird.",
+        "nl": "Zes lijsters. Merel, zanglijster en grote lijster zijn wijdverbreide standvogels. Koperwiek en kramsvogel komen in de winter uit het noorden, en de beflijster is een bergvogel."
+      }
+    },
+    "old-world-flycatchers": {
+      "here": {
+        "en": "Twelve chats, redstarts and flycatchers. Robin, Black Redstart and Stonechat are easy. The south adds Blue Rock Thrush, Rock Thrush and Black-eared Wheatear on rocky slopes.",
+        "nl": "Twaalf tapuiten, roodstaarten en vliegenvangers. Roodborst, zwarte roodstaart en roodborsttapuit zijn makkelijk. Het zuiden voegt blauwe rotslijster, rode rotslijster en westelijke blonde tapuit toe op rotsachtige hellingen."
+      }
+    },
+    "accentors": {
+      "here": {
+        "en": "Dunnock is a quiet garden bird. Alpine Accentor is its mountain cousin, found on rocks and ski slopes above the trees.",
+        "nl": "De heggenmus is een stille tuinvogel. De alpenheggenmus is zijn bergneef, te vinden op rotsen en skipistes boven de boomgrens."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "Five sparrows and the snowfinch. House and Tree Sparrow are common, Rock Sparrow lives in the south, Italian Sparrow on Corsica, and White-winged Snowfinch in the high mountains.",
+        "nl": "Vijf mussen en de sneeuwvink. Huismus en ringmus zijn algemeen, de rotsmus leeft in het zuiden, de Italiaanse mus op Corsica en de sneeuwvink in de hoge bergen."
+      }
+    },
+    "wagtails-and-pipits": {
+      "here": {
+        "en": "Eight wagtails and pipits. White, Grey and Yellow Wagtail and Meadow Pipit are widespread. Water Pipit lives above the tree line, Rock Pipit on rocky shores and Tawny Pipit on dry steppe.",
+        "nl": "Acht kwikstaarten en piepers. Witte, grote gele en gele kwikstaart en graspieper zijn wijdverbreid. De waterpieper leeft boven de boomgrens, de oeverpieper op rotskusten en de duinpieper op droge steppe."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "here": {
+        "en": "Twelve finches. Chaffinch, Goldfinch and Greenfinch are everywhere. Citril Finch belongs to the high mountains and Corsican Finch to Corsica.",
+        "nl": "Twaalf vinken. Vink, putter en groenling zitten overal. De citroensijs hoort bij de hoge bergen en de Corsicaanse citroensijs bij Corsica."
+      }
+    },
+    "old-world-buntings": {
+      "here": {
+        "en": "Five buntings. Yellowhammer and Reed Bunting are common, Corn Bunting sings from wires in open farmland, Cirl Bunting is a southern bird, and Rock Bunting lives on dry rocky slopes.",
+        "nl": "Vijf gorzen. Geelgors en rietgors zijn algemeen, de grauwe gors zingt van draden in open akkerland, de cirlgors is een vogel van het zuiden en de grijze gors leeft op droge rotshellingen."
+      }
+    }
+  },
+  "units": {
+    "swans-and-geese": {
+      "title": {
+        "en": "Swans, geese and shelduck",
+        "nl": "Zwanen, ganzen en bergeend"
+      },
+      "intro": {
+        "en": "Big, easy waterbirds of lakes, rivers and estuaries. Brent Goose is a winter bird of the coast, and the Shelduck is the bold black-and-white duck of the mudflats.",
+        "nl": "Grote, makkelijke watervogels van meren, rivieren en estuaria. De rotgans is een wintervogel van de kust en de bergeend is de opvallende zwart-witte eend van de wadplaten."
+      }
+    },
+    "dabbling-ducks": {
+      "title": {
+        "en": "Dabbling ducks",
+        "nl": "Eenden van ondiep water"
+      },
+      "intro": {
+        "en": "Six ducks that feed at the surface of shallow water. Look at the drakes: bill shape, head colour and the patch on the wing tell them apart.",
+        "nl": "Zes eenden die aan het oppervlak van ondiep water foerageren. Kijk naar de woerden: snavelvorm, kopkleur en de vleugelspiegel maken het verschil."
+      }
+    },
+    "diving-ducks-and-grebes": {
+      "title": {
+        "en": "Diving ducks and grebes",
+        "nl": "Duikeenden en futen"
+      },
+      "intro": {
+        "en": "Three diving ducks and three grebes from lakes and ponds. The Red-crested Pochard is the showy one, with a bright orange head. All of them dive instead of dabbling.",
+        "nl": "Drie duikeenden en drie futen van meren en vijvers. De krooneend is de opvallende, met een feloranje kop. Ze duiken allemaal in plaats van te grondelen."
+      }
+    },
+    "partridges-and-quail": {
+      "title": {
+        "en": "Partridges, pheasant and quail",
+        "nl": "Patrijzen, fazant en kwartel"
+      },
+      "intro": {
+        "en": "Game birds of farmland and scrub. Partridges run and then burst into flight, and the Quail is a summer visitor you mostly hear.",
+        "nl": "Hoenderachtigen van akkers en struikgewas. Patrijzen rennen en schieten dan weg, en de kwartel is een zomergast die je vooral hoort."
+      }
+    },
+    "mountain-grouse": {
+      "title": {
+        "en": "Grouse of forest and mountain",
+        "nl": "Hoenderachtigen van bos en berg"
+      },
+      "intro": {
+        "en": "Three grouse of cold, high places. Rock Ptarmigan lives above the tree line, Black Grouse on its edge and Capercaillie in old forest. All three are scarce, and local guides help with them.",
+        "nl": "Drie hoenders van koude, hoge streken. Het alpensneeuwhoen leeft boven de boomgrens, het korhoen aan de rand ervan en het auerhoen in oud bos. Alle drie zijn schaars en lokale gidsen helpen je op weg."
+      }
+    },
+    "pigeons-and-doves": {
+      "title": {
+        "en": "Pigeons and doves",
+        "nl": "Duiven"
+      },
+      "intro": {
+        "en": "Five pigeons that look similar at first glance. Wing patches, neck marks and the setting help to tell them apart.",
+        "nl": "Vijf duiven die op het eerste gezicht op elkaar lijken. Vleugelvlekken, nekvlekken en de omgeving helpen om ze uit elkaar te houden."
+      }
+    },
+    "cuckoos-and-nightjar": {
+      "title": {
+        "en": "Cuckoos and a nightjar",
+        "nl": "Koekoeken en een nachtzwaluw"
+      },
+      "intro": {
+        "en": "Three birds you mostly hear. The Cuckoo calls by day in spring, the Nightjar churrs at dusk, and the Great Spotted Cuckoo is a crested bird of the south.",
+        "nl": "Drie vogels die je vooral hoort. De koekoek roept overdag in het voorjaar, de nachtzwaluw snort in de schemering en de kuifkoekoek is een gekuifde vogel van het zuiden."
+      }
+    },
+    "swifts-and-swallows": {
+      "title": {
+        "en": "Swifts, swallows and martins",
+        "nl": "Gierzwaluwen en zwaluwen"
+      },
+      "intro": {
+        "en": "Seven fast fliers of the open sky. Swifts never perch and have sickle-shaped wings, while swallows and martins perch on wires and nest on buildings and cliffs. Check the tail and the rump.",
+        "nl": "Zeven snelle vliegers van de open lucht. Gierzwaluwen gaan nooit zitten en hebben sikkelvormige vleugels, zwaluwen zitten op draden en nestelen aan gebouwen en kliffen. Let op staart en stuit."
+      }
+    },
+    "steppe-birds": {
+      "title": {
+        "en": "Birds of the dry steppe",
+        "nl": "Vogels van de droge steppe"
+      },
+      "intro": {
+        "en": "Four birds of dry, open ground, with the stony Crau steppe near Arles as the classic site. Little Bustard and Pin-tailed Sandgrouse are shy, the Stone-curlew is a big-eyed wader, and the Collared Pratincole hawks insects over the Camargue.",
+        "nl": "Vier vogels van droge, open grond, met de steenvlakte van de Crau bij Arles als klassieke plek. Kleine trap en witbuikzandhoen zijn schuw, de griel is een steltloper met grote ogen en de vorkstaartplevier vangt insecten boven de Camargue."
+      }
+    },
+    "rails-and-cranes": {
+      "title": {
+        "en": "Rails, coot and crane",
+        "nl": "Rallen, meerkoet en kraanvogel"
+      },
+      "intro": {
+        "en": "Three water birds and a crane. Coot and Moorhen swim in the open, the Water Rail hides in reeds, and the Common Crane is a tall grey bird of fields and lakes.",
+        "nl": "Drie watervogels en een kraanvogel. Meerkoet en waterhoen zwemmen in het open water, de waterral verstopt zich in het riet en de kraanvogel is een hoge grijze vogel van velden en meren."
+      }
+    },
+    "plovers-and-lapwing": {
+      "title": {
+        "en": "Plovers and lapwing",
+        "nl": "Plevieren en kievit"
+      },
+      "intro": {
+        "en": "Round-headed waders with short bills. Lapwing and Golden Plover form big flocks on fields, while the small plovers run and stop on sand and gravel. Look at the breast band and the legs.",
+        "nl": "Steltlopers met een ronde kop en korte snavel. Kievit en goudplevier vormen grote groepen op akkers, de kleine plevieren rennen en stoppen op zand en grind. Let op de borstband en de poten."
+      }
+    },
+    "oystercatcher-avocet-stilt": {
+      "title": {
+        "en": "Oystercatcher, avocet and stilt",
+        "nl": "Scholekster, kluut en steltkluut"
+      },
+      "intro": {
+        "en": "Four striking waders. Oystercatcher, avocet and stilt are black and white with unmistakable bills and legs, and the turnstone flips stones along the tideline.",
+        "nl": "Vier opvallende steltlopers. Scholekster, kluut en steltkluut zijn zwart-wit met onmiskenbare snavels en poten, en de steenloper keert stenen om langs de vloedlijn."
+      }
+    },
+    "curlews-godwits-snipe": {
+      "title": {
+        "en": "Curlews, godwits and snipe",
+        "nl": "Wulpen, grutto's en snip"
+      },
+      "intro": {
+        "en": "Long-billed waders of mudflats and wet meadows. The bill shape and the wing pattern in flight are the key: curved for the curlews, straight for godwits and snipe.",
+        "nl": "Steltlopers met een lange snavel van wadplaten en natte weilanden. Snavelvorm en vleugeltekening in vlucht zijn de sleutel: gebogen bij de wulpen, recht bij grutto's en snip."
+      }
+    },
+    "redshanks-and-sandpipers": {
+      "title": {
+        "en": "Redshank and sandpipers",
+        "nl": "Tureluur en strandlopers"
+      },
+      "intro": {
+        "en": "Medium-sized waders with slim bills and long legs. The colour of the legs, the white rump and the call help to sort them.",
+        "nl": "Middelgrote steltlopers met een slanke snavel en lange poten. De kleur van de poten, de witte stuit en de roep helpen om ze te onderscheiden."
+      }
+    },
+    "small-waders": {
+      "title": {
+        "en": "Small waders of the mudflats",
+        "nl": "Kleine steltlopers van de wadplaten"
+      },
+      "intro": {
+        "en": "Small waders in big flocks on the mudflats. They run along the water's edge. Sanderling is the palest, and Dunlin the commonest.",
+        "nl": "Kleine steltlopers in grote groepen op de wadplaten. Ze rennen langs de waterlijn. De drieteenstrandloper is de lichtste en de bonte strandloper de algemeenste."
+      }
+    },
+    "lagoon-gulls": {
+      "title": {
+        "en": "Lagoon and Mediterranean gulls",
+        "nl": "Meeuwen van lagunes en Middellandse Zee"
+      },
+      "intro": {
+        "en": "Four gulls with dark hoods or thin bills. Learn Black-headed Gull first, then compare the others by bill and head.",
+        "nl": "Vier meeuwen met een donkere kap of dunne snavel. Leer eerst de kokmeeuw kennen en vergelijk de andere dan op snavel en kop."
+      }
+    },
+    "large-gulls": {
+      "title": {
+        "en": "Large gulls",
+        "nl": "Grote meeuwen"
+      },
+      "intro": {
+        "en": "Large gulls that are hard to tell apart. The colour of the legs and of the back is the best start. Adults are far easier than young birds.",
+        "nl": "Grote meeuwen die moeilijk uit elkaar te houden zijn. De kleur van poten en rug is de beste start. Volwassen vogels zijn veel makkelijker dan jonge."
+      }
+    },
+    "terns": {
+      "title": {
+        "en": "Terns",
+        "nl": "Sterns"
+      },
+      "intro": {
+        "en": "Five pale, slender terns that hunt over water. Bill colour, tail length and the extent of the black cap tell them apart.",
+        "nl": "Vijf lichte, slanke sterns die boven water jagen. Snavelkleur, staartlengte en de omvang van de zwarte kap maken het verschil."
+      }
+    },
+    "cliff-seabirds": {
+      "title": {
+        "en": "Seabirds of the sea cliffs",
+        "nl": "Zeevogels van de kliffen"
+      },
+      "intro": {
+        "en": "Five birds that nest on sea cliffs. The auks stand upright and whirr low over the sea, the Kittiwake is a small gull, and the Fulmar glides on stiff wings.",
+        "nl": "Vijf vogels die op zeekliffen broeden. De alkachtigen staan rechtop en snorren laag over zee, de drieteenmeeuw is een kleine meeuw en de noordse stormvogel glijdt op stijve vleugels."
+      }
+    },
+    "gannet-and-cormorants": {
+      "title": {
+        "en": "Gannet, cormorant and shag",
+        "nl": "Jan-van-gent en aalscholvers"
+      },
+      "intro": {
+        "en": "Three big fishing birds of the coast. The Gannet plunges from height, and the cormorants dive from the surface and stand with their wings spread to dry.",
+        "nl": "Drie grote vissers van de kust. De jan-van-gent stort zich van hoogte, en de aalscholvers duiken vanaf het oppervlak en staan met gespreide vleugels te drogen."
+      }
+    },
+    "flamingo-and-marsh-herons": {
+      "title": {
+        "en": "Flamingo and herons of the marsh",
+        "nl": "Flamingo en reigers van het moeras"
+      },
+      "intro": {
+        "en": "The Camargue's showpieces. The Flamingo is unmistakable, while the three small herons are secretive and best seen from reed edges at dawn and dusk.",
+        "nl": "De paradepaardjes van de Camargue. De flamingo is onmiskenbaar, de drie kleine reigers zijn heimelijk en het best te zien vanaf rietranden bij zonsopgang en zonsondergang."
+      }
+    },
+    "herons-and-egrets": {
+      "title": {
+        "en": "Herons and egrets",
+        "nl": "Reigers en zilverreigers"
+      },
+      "intro": {
+        "en": "Five herons and egrets of fields, rivers and marshes. Size, bill colour and leg colour separate the egrets. The Purple Heron is the slim, dark one in the reeds.",
+        "nl": "Vijf reigers en zilverreigers van velden, rivieren en moerassen. Grootte, snavelkleur en pootkleur onderscheiden de zilverreigers. De purperreiger is de slanke, donkere soort in het riet."
+      }
+    },
+    "ibises-spoonbill-stork": {
+      "title": {
+        "en": "Ibis, spoonbill and stork",
+        "nl": "Ibis, lepelaar en ooievaar"
+      },
+      "intro": {
+        "en": "Three large wading birds with unusual bills. The Glossy Ibis is dark with a curved bill, the Spoonbill is white with a flat spoon, and the White Stork has a long red bill and nests on rooftops.",
+        "nl": "Drie grote steltlopers met bijzondere snavels. De zwarte ibis is donker met een gebogen snavel, de lepelaar is wit met een platte lepel en de ooievaar heeft een lange rode snavel en nestelt op daken."
+      }
+    },
+    "vultures": {
+      "title": {
+        "en": "Vultures",
+        "nl": "Gieren"
+      },
+      "intro": {
+        "en": "Four vultures of mountains and gorges. Griffon is the one you will see most, while Bearded, Egyptian and Black are scarcer. Check size, tail shape and head colour as they soar.",
+        "nl": "Vier gieren van bergen en kloven. De vale gier zie je het vaakst, lammergier, aasgier en monniksgier zijn schaarser. Let op grootte, staartvorm en kopkleur terwijl ze zweven."
+      }
+    },
+    "eagles-and-osprey": {
+      "title": {
+        "en": "Eagles and Osprey",
+        "nl": "Arenden en visarend"
+      },
+      "intro": {
+        "en": "Large raptors that soar or hunt on the wing. Golden Eagle is a mountain bird, Short-toed and Booted Eagle are summer visitors to the south, and the Osprey fishes along rivers and coasts.",
+        "nl": "Grote roofvogels die zweven of in de vlucht jagen. De steenarend is een bergvogel, slangenarend en dwergarend zijn zomergasten van het zuiden en de visarend vist langs rivieren en kusten."
+      }
+    },
+    "harriers-and-kites": {
+      "title": {
+        "en": "Harriers and kites",
+        "nl": "Kiekendieven en wouwen"
+      },
+      "intro": {
+        "en": "Long-winged hunters that glide low or high. Kites have forked tails, harriers hold their wings in a shallow V, and the Black-winged Kite hovers.",
+        "nl": "Langvleugelige jagers die laag of hoog glijden. Wouwen hebben een gevorkte staart, kiekendieven houden hun vleugels in een ondiepe V en de grijze wouw staat te bidden in de lucht."
+      }
+    },
+    "buzzards-and-hawks": {
+      "title": {
+        "en": "Buzzards and hawks",
+        "nl": "Buizerds en haviken"
+      },
+      "intro": {
+        "en": "Broad-winged raptors of woods and farmland. Buzzard is the commonest, Honey-buzzard is a summer visitor, and Sparrowhawk and Goshawk dash through the woods.",
+        "nl": "Breedvleugelige roofvogels van bossen en akkerland. De buizerd is de algemeenste, de wespendief is een zomergast en sperwer en havik schieten door het bos."
+      }
+    },
+    "falcons": {
+      "title": {
+        "en": "Falcons",
+        "nl": "Valken"
+      },
+      "intro": {
+        "en": "Four falcons, narrow-winged and fast. Kestrels hover, the Hobby hawks insects over wetlands, and the Peregrine stoops on its prey.",
+        "nl": "Vier valken, smalvleugelig en snel. Torenvalken staan te bidden, de boomvalk vangt insecten boven wetlands en de slechtvalk stoot op zijn prooi."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Owls",
+        "nl": "Uilen"
+      },
+      "intro": {
+        "en": "Four owls of woods and farmland. Most are heard at night, but the Little Owl sits out by day on posts and walls.",
+        "nl": "Vier uilen van bossen en akkerland. De meeste hoor je 's nachts, maar de steenuil zit overdag op palen en muren."
+      }
+    },
+    "colourful-summer-birds": {
+      "title": {
+        "en": "Bee-eater, roller, hoopoe and kingfisher",
+        "nl": "Bijeneter, scharrelaar, hop en ijsvogel"
+      },
+      "intro": {
+        "en": "Four of France's most colourful birds. Three arrive in summer and perch in the open, and the Kingfisher stays by the water all year.",
+        "nl": "Vier van de kleurrijkste vogels van Frankrijk. Drie komen in de zomer aan en zitten in het open, en de ijsvogel blijft het hele jaar bij het water."
+      }
+    },
+    "woodpeckers-1": {
+      "title": {
+        "en": "Woodpeckers and the wryneck",
+        "nl": "Spechten en draaihals"
+      },
+      "intro": {
+        "en": "Four birds that climb or probe for food. Great Spotted Woodpecker drums, Green Woodpecker yaffles and feeds on the ground, and the Wryneck is a summer visitor that hardly climbs at all.",
+        "nl": "Vier vogels die klimmen of in de bodem prikken. De grote bonte specht trommelt, de groene specht lacht en foerageert op de grond, en de draaihals is een zomergast die nauwelijks klimt."
+      }
+    },
+    "woodpeckers-2": {
+      "title": {
+        "en": "Woodpeckers of old forest",
+        "nl": "Spechten van oud bos"
+      },
+      "intro": {
+        "en": "Three woodpeckers of old forest, harder to find. Black Woodpecker is crow-sized, Middle Spotted has a red cap, and Grey-headed is a quiet, green woodpecker. Learn their calls.",
+        "nl": "Drie spechten van oud bos, moeilijker te vinden. De zwarte specht is zo groot als een kraai, de middelste bonte specht heeft een rode kruin en de grijskopspecht is een stille, groene specht. Leer hun roepen."
+      }
+    },
+    "shrikes-and-oriole": {
+      "title": {
+        "en": "Shrikes, oriole and a parakeet",
+        "nl": "Klauwieren, wielewaal en een parkiet"
+      },
+      "intro": {
+        "en": "Birds of hedges and orchards. Shrikes perch in the open and watch for prey, the oriole stays hidden in the treetops, and the parakeet is a bright arrival in city parks.",
+        "nl": "Vogels van heggen en boomgaarden. Klauwieren zitten in het open en loeren op prooi, de wielewaal blijft verborgen in de boomtoppen en de parkiet is een felgekleurde nieuwkomer in stadsparken."
+      }
+    },
+    "jays-magpies-choughs": {
+      "title": {
+        "en": "Jays, magpie, jackdaw and choughs",
+        "nl": "Gaai, ekster, kauwen en notenkraker"
+      },
+      "intro": {
+        "en": "Colourful, clever crows. Jay and Magpie live near woods and towns, Jackdaw nests on buildings, and the choughs and Nutcracker live on cliffs and in the mountains.",
+        "nl": "Kleurrijke, slimme kraaiachtigen. Gaai en ekster leven bij bossen en dorpen, de kauw nestelt aan gebouwen, en de alpenkauw, alpenkraai en notenkraker leven op kliffen en in de bergen."
+      }
+    },
+    "crows": {
+      "title": {
+        "en": "Crows and raven",
+        "nl": "Kraaien en raaf"
+      },
+      "intro": {
+        "en": "Four large black or grey-and-black crows. Rook has a bare pale face, Carrion Crow is all black, Hooded Crow has a grey body, and Raven is much bigger with a deep call.",
+        "nl": "Vier grote zwarte of grijszwarte kraaien. De roek heeft een kaal, bleek gezicht, de zwarte kraai is helemaal zwart, de bonte kraai heeft een grijs lijf en de raaf is veel groter met een diepe roep."
+      }
+    },
+    "tits": {
+      "title": {
+        "en": "Tits",
+        "nl": "Mezen"
+      },
+      "intro": {
+        "en": "Six tits that feed in woods and gardens. Cap, cheek and wing marks sort them. Marsh and Willow Tit are best separated by their calls.",
+        "nl": "Zes mezen die in bossen en tuinen foerageren. Kap, wang en vleugeltekening onderscheiden ze. Glanskop en matkop zijn het best uit elkaar te houden aan hun roep."
+      }
+    },
+    "reed-and-scrub-small": {
+      "title": {
+        "en": "Small birds of reeds and hedges",
+        "nl": "Kleine vogels van riet en heggen"
+      },
+      "intro": {
+        "en": "Three tiny birds with long tails. The Bearded Tit lives in reeds, the Zitting Cisticola in rough fields and the Long-tailed Tit in woods and hedges.",
+        "nl": "Drie kleine vogels met een lange staart. De baardman leeft in het riet, de graszanger in ruige velden en de staartmees in bossen en heggen."
+      }
+    },
+    "larks": {
+      "title": {
+        "en": "Larks",
+        "nl": "Leeuweriken"
+      },
+      "intro": {
+        "en": "Five streaky brown birds of open ground. Crests, tail edges and bill shape help, and the song flight is often the best clue.",
+        "nl": "Vijf gestreepte bruine vogels van open terrein. Kuif, staartranden en snavelvorm helpen, en de zangvlucht is vaak de beste aanwijzing."
+      }
+    },
+    "reed-warblers": {
+      "title": {
+        "en": "Warblers of reeds and wet scrub",
+        "nl": "Zangers van riet en natte struiken"
+      },
+      "intro": {
+        "en": "Five brown warblers of reeds and thickets. Song is the best clue. Cetti's is loud and abrupt, Reed Warbler is monotone, Great Reed Warbler is harsh and Sedge Warbler jumbled.",
+        "nl": "Vijf bruine zangers van riet en struikgewas. De zang is de beste aanwijzing. Cetti's zanger is luid en abrupt, de kleine karekiet eentonig, de grote karekiet schor en de rietzanger rommelig."
+      }
+    },
+    "leaf-warblers": {
+      "title": {
+        "en": "Leaf warblers",
+        "nl": "Boszangers"
+      },
+      "intro": {
+        "en": "Five small greenish warblers of woods. They look alike, so listen for the song. Bonelli's shows a bright rump and pale underparts.",
+        "nl": "Vijf kleine groenige zangers van bossen. Ze lijken op elkaar, dus luister naar de zang. De bergfluiter heeft een heldere stuit en een lichte onderkant."
+      }
+    },
+    "sylvia-woodland": {
+      "title": {
+        "en": "Blackcap and whitethroats",
+        "nl": "Zwartkop en grasmussen"
+      },
+      "intro": {
+        "en": "Four warblers of woods and hedges. Blackcap shows its cap, Garden Warbler shows almost nothing, Whitethroat has a white throat and Lesser Whitethroat a dark mask.",
+        "nl": "Vier zangers van bossen en heggen. De zwartkop heeft zijn kap, de tuinfluiter laat bijna niets zien, de grasmus heeft een witte keel en de braamsluiper een donker masker."
+      }
+    },
+    "sylvia-mediterranean": {
+      "title": {
+        "en": "Warblers of the Mediterranean scrub",
+        "nl": "Zangers van de mediterrane struiken"
+      },
+      "intro": {
+        "en": "Six warblers of the dry southern scrub. Most skulk, and you find them by their rattling or chattering songs. Head colour, eye-ring and underparts sort the males.",
+        "nl": "Zes zangers van het droge struikgewas in het zuiden. De meeste houden zich schuil en je vindt ze aan hun ratelende of snaterende zang. Kopkleur, oogring en onderkant onderscheiden de mannetjes."
+      }
+    },
+    "nuthatches-and-treecreepers": {
+      "title": {
+        "en": "Nuthatches, treecreepers and crests",
+        "nl": "Boomklevers, boomkruipers, goudhaantjes"
+      },
+      "intro": {
+        "en": "Six small climbers. Nuthatches go up and down trunks, treecreepers only up, and the crests flit in conifers. The Corsican Nuthatch is the endemic of Corsica.",
+        "nl": "Zes kleine klimmers. Boomklevers gaan langs stammen omhoog en omlaag, boomkruipers alleen omhoog, en de goudhaantjes fladderen in naaldbomen. De Corsicaanse boomklever is de endemische soort van Corsica."
+      }
+    },
+    "wallcreeper-dipper-wren": {
+      "title": {
+        "en": "Wallcreeper, dipper, wren and accentors",
+        "nl": "Rotsklever, waterspreeuw, winterkoning"
+      },
+      "intro": {
+        "en": "Five brown or grey birds of rocks, streams and thickets. The Wallcreeper and Alpine Accentor are mountain birds, the Dipper lives at fast water, and the Wren and Dunnock live in gardens.",
+        "nl": "Vijf bruine of grijze vogels van rotsen, beken en struikgewas. Rotskruiper en alpenheggenmus zijn bergvogels, de waterspreeuw leeft aan snel water, en winterkoning en heggenmus leven in tuinen."
+      }
+    },
+    "starlings-and-sparrows": {
+      "title": {
+        "en": "Starlings and sparrows",
+        "nl": "Spreeuwen en mussen"
+      },
+      "intro": {
+        "en": "Seven chunky birds of towns and farms. Male sparrows differ in the colour of the crown, and the starlings are black with a glossy sheen. The Snowfinch lives above the trees.",
+        "nl": "Zeven gedrongen vogels van dorpen en boerderijen. Mannetjesmussen verschillen in de kleur van de kruin en de spreeuwen zijn zwart met een glans. De sneeuwvink leeft boven de boomgrens."
+      }
+    },
+    "thrushes": {
+      "title": {
+        "en": "Thrushes",
+        "nl": "Lijsters"
+      },
+      "intro": {
+        "en": "Six thrushes. Look at the breast pattern and the colour under the wing. Redwing and Fieldfare come from the north in winter.",
+        "nl": "Zes lijsters. Kijk naar de borsttekening en de kleur onder de vleugel. Koperwiek en kramsvogel komen in de winter uit het noorden."
+      }
+    },
+    "rock-thrushes-and-chats": {
+      "title": {
+        "en": "Rock thrushes, wheatears and chats",
+        "nl": "Rotslijsters, tapuiten en roodborsten"
+      },
+      "intro": {
+        "en": "Six birds of open ground and rocky slopes. The two rock thrushes and the Black-eared Wheatear are birds of the south and the mountains, and Stonechat and Whinchat perch on stems.",
+        "nl": "Zes vogels van open terrein en rotshellingen. De twee rotslijsters en de westelijke blonde tapuit zijn vogels van het zuiden en de bergen, en roodborsttapuit en paapje zitten op stengels."
+      }
+    },
+    "robin-and-redstarts": {
+      "title": {
+        "en": "Robin, redstarts and flycatchers",
+        "nl": "Roodborst, roodstaarten, vliegenvangers"
+      },
+      "intro": {
+        "en": "Six small insect-eaters of woods and gardens, many with an orange-red tail or breast. The flycatchers sally out from a perch to catch flies.",
+        "nl": "Zes kleine insecteneters van bossen en tuinen, veel met een oranjerode staart of borst. De vliegenvangers schieten vanaf een uitkijkpost uit om vliegen te vangen."
+      }
+    },
+    "wagtails": {
+      "title": {
+        "en": "Wagtails",
+        "nl": "Kwikstaarten"
+      },
+      "intro": {
+        "en": "Three wagtails that pump their long tails. White Wagtail is on pavements and car parks, Grey Wagtail on streams, and Yellow Wagtail in meadows.",
+        "nl": "Drie kwikstaarten die hun lange staart op en neer bewegen. De witte kwikstaart loopt over straten en parkeerplaatsen, de grote gele kwikstaart langs beken en de gele kwikstaart in weilanden."
+      }
+    },
+    "pipits": {
+      "title": {
+        "en": "Pipits",
+        "nl": "Piepers"
+      },
+      "intro": {
+        "en": "Five streaky brown ground birds. Habitat helps: Tree Pipit on woodland edges, Meadow Pipit on grassland, Water Pipit in the mountains and wet fields, Rock Pipit on rocky coasts and Tawny Pipit on dry steppe.",
+        "nl": "Vijf gestreepte bruine grondvogels. De omgeving helpt: boompieper aan bosranden, graspieper op grasland, waterpieper in de bergen en natte velden, oeverpieper op rotskusten en duinpieper op droge steppe."
+      }
+    },
+    "finches-woods-gardens": {
+      "title": {
+        "en": "Finches of woods and gardens",
+        "nl": "Vinken van bos en tuin"
+      },
+      "intro": {
+        "en": "Five finches with heavy bills. Look for wing bars and face patterns. The Chaffinch has two white wing bars, and the Hawfinch has a huge bill.",
+        "nl": "Vijf vinken met een zware snavel. Let op vleugelstrepen en gezichtstekening. De vink heeft twee witte vleugelstrepen en de appelvink een enorme snavel."
+      }
+    },
+    "finches-open-country": {
+      "title": {
+        "en": "Goldfinch, linnet, siskin and crossbill",
+        "nl": "Putter, kneu, sijs en kruisbek"
+      },
+      "intro": {
+        "en": "Four small finches of fields, weeds and conifers. The Goldfinch has a red face, the male Linnet a red chest, the Siskin is small and streaky, and the Crossbill has crossed bill tips.",
+        "nl": "Vier kleine vinken van akkers, onkruid en naaldbomen. De putter heeft een rood gezicht, het mannetje van de kneu een rode borst, de sijs is klein en gestreept en de kruisbek heeft gekruiste snavelpunten."
+      }
+    },
+    "serins": {
+      "title": {
+        "en": "Serin, Citril Finch and Corsican Finch",
+        "nl": "Kanarie en citroensijzen"
+      },
+      "intro": {
+        "en": "Three small yellow-green finches of the south and the mountains. They look alike, so go by place: Serin in the south, Citril Finch in the high mountains, and Corsican Finch on Corsica.",
+        "nl": "Drie kleine geelgroene vinken van het zuiden en de bergen. Ze lijken op elkaar, dus ga op de plaats af: kanarie in het zuiden, citroensijs in de hoge bergen en Corsicaanse citroensijs op Corsica."
+      }
+    },
+    "buntings": {
+      "title": {
+        "en": "Buntings",
+        "nl": "Gorzen"
+      },
+      "intro": {
+        "en": "Five buntings, with bright males. Head and rump patterns tell them apart. Corn Bunting is plain brown and sings from wires.",
+        "nl": "Vijf gorzen, met felgekleurde mannetjes. Kop- en stuittekening onderscheiden ze. De grauwe gors is egaal bruin en zingt van draden."
+      }
+    }
+  },
+  "species": {
+    "cornut1": {
+      "here": {
+        "en": "Only on Corsica, in mountain pine forest from about 1,000 metres.",
+        "nl": "Alleen op Corsica, in dennenbos in de bergen vanaf ongeveer 1000 meter."
+      }
+    },
+    "corfin1": {
+      "here": {
+        "en": "Only on Corsica in France, in pines and scrub, often in small flocks.",
+        "nl": "In Frankrijk alleen op Corsica, in dennen en struikgewas, vaak in kleine groepjes."
+      }
+    },
+    "marwar1": {
+      "here": {
+        "en": "In France only on Corsica, in maquis and heath.",
+        "nl": "In Frankrijk alleen op Corsica, in maquis en heide."
+      }
+    },
+    "hoocro1": {
+      "here": {
+        "en": "In France it lives on Corsica, where it is the common crow.",
+        "nl": "In Frankrijk leeft hij op Corsica, waar hij de algemene kraai is."
+      }
+    },
+    "ibechi2": {
+      "here": {
+        "en": "A local bird of the south-west, near the Spanish border. Song is the safest way to separate it from Common Chiffchaff.",
+        "nl": "Een lokale vogel van het zuidwesten, bij de Spaanse grens. De zang is de veiligste manier om hem van de tjiftjaf te onderscheiden."
+      }
+    },
+    "itaspa1": {
+      "here": {
+        "en": "On Corsica this is the usual sparrow of villages.",
+        "nl": "Op Corsica is dit de gewone mus van de dorpen."
+      }
+    },
+    "sposta1": {
+      "here": {
+        "en": "A resident of Corsica and the Mediterranean coast.",
+        "nl": "Een standvogel van Corsica en de Middellandse Zeekust."
+      }
+    },
+    "yelgul1": {
+      "here": {
+        "en": "The common big gull of the Mediterranean coast and of inland rivers and lakes.",
+        "nl": "De algemene grote meeuw van de Middellandse Zeekust en van rivieren en meren in het binnenland."
+      }
+    },
+    "shttre1": {
+      "here": {
+        "en": "In France this is the treecreeper of towns, parks and lowland woods.",
+        "nl": "In Frankrijk is dit de boomkruiper van steden, parken en laaglandbossen."
+      }
+    },
+    "medgul1": {
+      "here": {
+        "en": "Nests in colonies on the Atlantic and Channel coasts and in the Camargue, and winters along the coast.",
+        "nl": "Broedt in kolonies aan de Atlantische kust, het Kanaal en in de Camargue, en overwintert langs de kust."
+      }
+    },
+    "atlpuf": {
+      "here": {
+        "en": "The Sept-Îles off Brittany hold the only colony in France. Boat trips leave from Perros-Guirec in season.",
+        "nl": "De Sept-Îles voor de kust van Bretagne herbergen de enige kolonie van Frankrijk. In het seizoen varen er boten vanuit Perros-Guirec."
+      }
+    },
+    "norgan": {
+      "here": {
+        "en": "The Sept-Îles off Brittany hold the only colony in France, and boat trips pass close to it.",
+        "nl": "De Sept-Îles voor de kust van Bretagne herbergen de enige kolonie van Frankrijk, en boottochten varen er dichtbij langs."
+      }
+    },
+    "wescap1": {
+      "here": {
+        "en": "Rare and shy, in the Pyrenees, Vosges and Jura. Local guides know the sites.",
+        "nl": "Zeldzaam en schuw, in de Pyreneeën, de Vogezen en de Jura. Lokale gidsen kennen de plekken."
+      }
+    },
+    "brant": {
+      "here": {
+        "en": "Winters in big flocks on the Baie de Somme, at Mont-Saint-Michel and in the bays of Brittany.",
+        "nl": "Overwintert in grote groepen in de Baie de Somme, bij Mont-Saint-Michel en in de baaien van Bretagne."
+      }
+    },
+    "ibgshr1": {
+      "here": {
+        "en": "A shrike of the Mediterranean plains, on bushes and wires.",
+        "nl": "Een klauwier van de mediterrane vlakten, op struiken en draden."
+      }
+    }
+  },
+  "first_day": {
+    "title": {
+      "en": "Your first day in France",
+      "nl": "Je eerste dag in Frankrijk"
+    },
+    "intro": {
+      "en": "Twenty birds you are very likely to meet on the first morning: in towns, along roads, on farmland and at the coast.",
+      "nl": "Twintig vogels die je de eerste ochtend vrijwel zeker tegenkomt: in dorpen, langs wegen, op akkers en aan de kust."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "Corsica has been an island for millions of years, and its old mountain pine forests have produced one bird found nowhere else: the Corsican Nuthatch. It is a small bird with a small range, so it is a real target for a visit.",
+      "nl": "Corsica is al miljoenen jaren een eiland, en de oude dennenbossen in de bergen hebben één vogel voortgebracht die nergens anders voorkomt: de Corsicaanse boomklever. Het is een kleine vogel met een klein verspreidingsgebied en dus een echt doelwit voor een bezoek."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "Corsica's mountain pine forests",
+          "nl": "De dennenbossen van Corsica"
+        },
+        "text": {
+          "en": "The Corsican Nuthatch needs mature Corsican pine, mostly between about 1,000 and 1,500 metres. The forests of Aïtone and Valdu Niellu, and those around Vizzavona and Bavella, are the places to look.",
+          "nl": "De Corsicaanse boomklever heeft oud Corsicaans dennenbos nodig, vooral tussen ongeveer 1000 en 1500 meter. De bossen van Aïtone en Valdu Niellu en die rond Vizzavona en Bavella zijn de plekken om te zoeken."
+        }
+      },
+      {
+        "title": {
+          "en": "Scrub and maquis",
+          "nl": "Struikgewas en maquis"
+        },
+        "text": {
+          "en": "Corsican Finch and Marmora's Warbler are shared with Sardinia and sit in their normal units. Look for the finch in pines and scrub, and for the warbler in maquis and heath.",
+          "nl": "De Corsicaanse citroensijs en de Sardijnse grasmus komen ook op Sardinië voor en staan in hun gewone units. Zoek de vink in dennen en struikgewas en de grasmus in maquis en heide."
+        }
+      }
+    ],
+    "families": [],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "The Corsican Nuthatch",
+          "nl": "De Corsicaanse boomklever"
+        }
+      }
+    }
+  }
+}

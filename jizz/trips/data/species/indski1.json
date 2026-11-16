@@ -1,0 +1,22 @@
+{
+  "code": "indski1",
+  "name": {
+    "en": "Indian Skimmer",
+    "nl": "Indische schaarbek"
+  },
+  "latin": "Rynchops albicollis",
+  "look_for": [
+    {
+      "en": "Long orange-red **bill**, lower half longer",
+      "nl": "Lange oranjerode **snavel**, onderste helft langer"
+    },
+    {
+      "en": "Dark brown above, white below, white **collar**",
+      "nl": "Donkerbruin boven, wit onder, witte **kraag**"
+    },
+    {
+      "en": "Flies low over rivers, bill tip dipping in water",
+      "nl": "Vliegt laag over rivieren, snavelpunt door het water"
+    }
+  ]
+}

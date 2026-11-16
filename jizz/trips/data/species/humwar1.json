@@ -1,0 +1,22 @@
+{
+  "code": "humwar1",
+  "name": {
+    "en": "Hume's Warbler",
+    "nl": "Humes bladkoning"
+  },
+  "latin": "Phylloscopus humei",
+  "look_for": [
+    {
+      "en": "Dull grey-green above, darker **crown**",
+      "nl": "Doffe grijsgroen boven, donkerder **kruin**"
+    },
+    {
+      "en": "One strong and one faint wing bar",
+      "nl": "Eén sterke en één vage vleugelstreep"
+    },
+    {
+      "en": "Dark legs and a mostly dark **bill**",
+      "nl": "Donkere poten en een grotendeels donkere **snavel**"
+    }
+  ]
+}

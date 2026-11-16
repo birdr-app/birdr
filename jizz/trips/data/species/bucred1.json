@@ -1,0 +1,22 @@
+{
+  "code": "bucred1",
+  "name": {
+    "en": "Blue-capped Redstart",
+    "nl": "Blauwkoproodstaart"
+  },
+  "latin": "Phoenicurus coeruleocephala",
+  "look_for": [
+    {
+      "en": "Male pale blue-grey **cap** on a dark head",
+      "nl": "Mannetje met bleek blauwgrijze **kap** op een donkere kop"
+    },
+    {
+      "en": "White **wingbars**, bright chestnut rump and tail",
+      "nl": "Witte **vleugelstrepen**, felkastanjebruine stuit en staart"
+    },
+    {
+      "en": "Perches on rocks on dry juniper slopes",
+      "nl": "Zit op rotsen op droge hellingen met jeneverbes"
+    }
+  ]
+}

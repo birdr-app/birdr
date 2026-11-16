@@ -1,0 +1,22 @@
+{
+  "code": "snopig1",
+  "name": {
+    "en": "Snow Pigeon",
+    "nl": "Sneeuwduif"
+  },
+  "latin": "Columba leuconota",
+  "look_for": [
+    {
+      "en": "Blackish **head** with white neck collar",
+      "nl": "Zwartachtige **kop** met witte nekband"
+    },
+    {
+      "en": "White underparts, white patch on lower **back**",
+      "nl": "Witte onderzijde, witte vlek op de **onderrug**"
+    },
+    {
+      "en": "Black **tail** crossed by white band; high cliffs",
+      "nl": "Zwarte **staart** met witte band; hoge rotswanden"
+    }
+  ]
+}

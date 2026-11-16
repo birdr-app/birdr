@@ -1,0 +1,22 @@
+{
+  "code": "ticthr1",
+  "name": {
+    "en": "Tickell's Thrush",
+    "nl": "Tickell-lijster"
+  },
+  "latin": "Turdus unicolor",
+  "look_for": [
+    {
+      "en": "Male plain blue-grey above, whitish belly",
+      "nl": "Mannetje effen blauwgrijs boven, witachtige buik"
+    },
+    {
+      "en": "Yellow **bill** and yellow legs",
+      "nl": "Gele **snavel** en gele poten"
+    },
+    {
+      "en": "Female and young browner; feeds on lawns",
+      "nl": "Vrouwtje en jong bruiner; foerageert op gazons"
+    }
+  ]
+}

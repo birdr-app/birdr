@@ -1,0 +1,22 @@
+{
+  "code": "paisan1",
+  "name": {
+    "en": "Painted Sandgrouse",
+    "nl": "Indisch zandhoen"
+  },
+  "latin": "Pterocles indicus",
+  "look_for": [
+    {
+      "en": "Male has black-and-white bands on **forehead** and chest",
+      "nl": "Mannetje met zwart-witte banden op **voorhoofd** en borst"
+    },
+    {
+      "en": "Female and young finely barred buff and brown",
+      "nl": "Vrouwtje en jong fijn gebandeerd in buff en bruin"
+    },
+    {
+      "en": "Crouches on bare stony ground, well hidden",
+      "nl": "Drukt zich op kale stenige grond, goed verborgen"
+    }
+  ]
+}

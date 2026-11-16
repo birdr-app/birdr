@@ -1,0 +1,22 @@
+{
+  "code": "indbus2",
+  "name": {
+    "en": "Indian Bushlark",
+    "nl": "Roodvleugelleeuwerik"
+  },
+  "latin": "Plocealauda erythroptera",
+  "look_for": [
+    {
+      "en": "Pale, heavily streaked **back**, spotted breast",
+      "nl": "Lichte, sterk gestreepte **rug**, gevlekte borst"
+    },
+    {
+      "en": "Rufous patches on the **wings**",
+      "nl": "Roestbruine vlekken op de **vleugels**"
+    },
+    {
+      "en": "Dry, stony ground; sings from bush tops",
+      "nl": "Droge, stenige grond; zingt vanaf struiktoppen"
+    }
+  ]
+}

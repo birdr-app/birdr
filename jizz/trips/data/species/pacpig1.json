@@ -1,0 +1,22 @@
+{
+  "code": "pacpig1",
+  "name": {
+    "en": "Pale-capped Pigeon",
+    "nl": "Bleekkopduif"
+  },
+  "latin": "Columba punicea",
+  "look_for": [
+    {
+      "en": "Large, dark chestnut-maroon pigeon",
+      "nl": "Grote, donkere kastanje-bruinrode duif"
+    },
+    {
+      "en": "Pale grey-white **crown**",
+      "nl": "Lichtgrijze tot witte **kruin**"
+    },
+    {
+      "en": "Creamy eye, red legs, in forest canopy",
+      "nl": "Crème oog, rode poten, in het bladerdak"
+    }
+  ]
+}

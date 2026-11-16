@@ -1,0 +1,22 @@
+{
+  "code": "swafra1",
+  "name": {
+    "en": "Swamp Francolin",
+    "nl": "Moerasfrankolijn"
+  },
+  "latin": "Ortygornis gularis",
+  "look_for": [
+    {
+      "en": "Bright rust-red **throat**",
+      "nl": "Felroestrode **keel**"
+    },
+    {
+      "en": "Brown underparts streaked with white",
+      "nl": "Bruine onderzijde met witte strepen"
+    },
+    {
+      "en": "Long-legged, stays in tall wet grass",
+      "nl": "Hoog op de poten, in hoog nat gras"
+    }
+  ]
+}

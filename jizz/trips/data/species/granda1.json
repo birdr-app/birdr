@@ -1,0 +1,22 @@
+{
+  "code": "granda1",
+  "name": {
+    "en": "Grandala",
+    "nl": "Grandala"
+  },
+  "latin": "Grandala coelicolor",
+  "look_for": [
+    {
+      "en": "Male glittering violet-blue with black **wings**",
+      "nl": "Mannetje glinsterend violetblauw met zwarte **vleugels**"
+    },
+    {
+      "en": "Female brown, streaked white, pale **wing** patches",
+      "nl": "Wijfje bruin met witte streping en bleke **vleugelvlekken**"
+    },
+    {
+      "en": "Large flocks on bare slopes above the treeline",
+      "nl": "Grote groepen op kale hellingen boven de boomgrens"
+    }
+  ]
+}

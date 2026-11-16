@@ -1,0 +1,22 @@
+{
+  "code": "grybus1",
+  "name": {
+    "en": "Grey Bushchat",
+    "nl": "Grijs paapje"
+  },
+  "latin": "Saxicola ferreus",
+  "look_for": [
+    {
+      "en": "Male slate-grey, dark mask, long white **eyebrow**",
+      "nl": "Mannetje leigrijs met donker masker en lange witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Female warm brown with rufous **rump** and tail",
+      "nl": "Wijfje warmbruin met roestbruine **stuit** en staart"
+    },
+    {
+      "en": "Perches on bush tops and wires, drops to ground",
+      "nl": "Zit op struiktoppen en draden, laat zich op de grond zakken"
+    }
+  ]
+}

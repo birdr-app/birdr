@@ -1,0 +1,22 @@
+{
+  "code": "renibi1",
+  "name": {
+    "en": "Red-naped Ibis",
+    "nl": "Wrattenibis"
+  },
+  "latin": "Pseudibis papillosa",
+  "look_for": [
+    {
+      "en": "Dark ibis with a bare black **head**",
+      "nl": "Donkere ibis met een kale zwarte **kop**"
+    },
+    {
+      "en": "Red patch on the nape, red legs",
+      "nl": "Rode vlek in de nek, rode poten"
+    },
+    {
+      "en": "White shoulder patch on the folded **wing**",
+      "nl": "Witte schouderlap op de gesloten **vleugel**"
+    }
+  ]
+}

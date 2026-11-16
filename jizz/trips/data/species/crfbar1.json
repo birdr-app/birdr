@@ -1,0 +1,22 @@
+{
+  "code": "crfbar1",
+  "name": {
+    "en": "Malabar Barbet",
+    "nl": "Karmijnkeelbaardvogel"
+  },
+  "latin": "Psilopogon malabaricus",
+  "look_for": [
+    {
+      "en": "Small, short-tailed green barbet",
+      "nl": "Kleine groene baardvogel met korte staart"
+    },
+    {
+      "en": "Crimson **face** and **throat**",
+      "nl": "Karmijnrood **gezicht** en **keel**"
+    },
+    {
+      "en": "Calls from a treetop, hard to see",
+      "nl": "Roept vanuit een boomtop, moeilijk te zien"
+    }
+  ]
+}

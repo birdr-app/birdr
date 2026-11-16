@@ -1,0 +1,22 @@
+{
+  "code": "indvul1",
+  "name": {
+    "en": "Indian Vulture",
+    "nl": "Indische gier"
+  },
+  "latin": "Gyps indicus",
+  "look_for": [
+    {
+      "en": "Sandy-brown **body**, dark flight feathers",
+      "nl": "Zandbruin **lijf**, donkere slagpennen"
+    },
+    {
+      "en": "Bare, dusky head on a narrow neck",
+      "nl": "Kale, donkere kop op een smalle hals"
+    },
+    {
+      "en": "No white **rump**, unlike White-rumped Vulture",
+      "nl": "Geen witte **stuit**, anders dan Bengaalse gier"
+    }
+  ]
+}

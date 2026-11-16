@@ -1,0 +1,22 @@
+{
+  "code": "sattra1",
+  "name": {
+    "en": "Satyr Tragopan",
+    "nl": "Rood saterhoen"
+  },
+  "latin": "Tragopan satyra",
+  "look_for": [
+    {
+      "en": "Male deep red with white-ringed spots",
+      "nl": "Haan dieprood met witomrande vlekken"
+    },
+    {
+      "en": "Black **head**; blue horns and **throat** wattle in display",
+      "nl": "Zwarte **kop**; in de balts blauwe hoorntjes en een **keel**lel"
+    },
+    {
+      "en": "Female mottled brown; shy in oak and rhododendron forest",
+      "nl": "Hen bruingevlekt; schuw in eiken- en rododendronbos"
+    }
+  ]
+}

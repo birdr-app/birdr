@@ -1,0 +1,22 @@
+{
+  "code": "rocpip1",
+  "name": {
+    "en": "Rock Pipit",
+    "nl": "Oeverpieper"
+  },
+  "latin": "Anthus petrosus",
+  "look_for": [
+    {
+      "en": "Dark olive-brown, blurred streaks, no clear **eyebrow**",
+      "nl": "Donker olijfbruin, vage strepen, geen duidelijke **wenkbrauw**"
+    },
+    {
+      "en": "Dark **legs** and outer tail feathers greyish",
+      "nl": "Donkere **poten**, buitenste staartveren grijsachtig"
+    },
+    {
+      "en": "Only on rocky shores, never far from the sea",
+      "nl": "Alleen op rotskusten, nooit ver van zee"
+    }
+  ]
+}

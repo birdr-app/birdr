@@ -1,0 +1,22 @@
+{
+  "code": "orbpig1",
+  "name": {
+    "en": "Orange-breasted Green-Pigeon",
+    "nl": "Oranjeborstpapegaaiduif"
+  },
+  "latin": "Treron bicinctus",
+  "look_for": [
+    {
+      "en": "Male has an orange-yellow patch on the **breast**",
+      "nl": "Mannetje met oranjegele vlek op de **borst**"
+    },
+    {
+      "en": "Grey **crown**, green back",
+      "nl": "Grijze **kruin**, groene rug"
+    },
+    {
+      "en": "Female plain green; feeds in fruiting figs",
+      "nl": "Vrouwtje effen groen; eet in vruchtdragende vijgen"
+    }
+  ]
+}

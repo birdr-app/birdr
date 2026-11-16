@@ -1,0 +1,22 @@
+{
+  "code": "crbsun2",
+  "name": {
+    "en": "Crimson-backed Sunbird",
+    "nl": "Dwerghoningzuiger"
+  },
+  "latin": "Leptocoma minima",
+  "look_for": [
+    {
+      "en": "Male has a velvety crimson back",
+      "nl": "Mannetje met fluweelrode rug"
+    },
+    {
+      "en": "Shiny green **crown**, broad red breast band",
+      "nl": "Glanzend groene **kruin**, brede rode borstband"
+    },
+    {
+      "en": "Female olive-brown with a red **rump**",
+      "nl": "Vrouwtje olijfbruin met rode **stuit**"
+    }
+  ]
+}

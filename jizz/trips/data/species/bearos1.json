@@ -1,0 +1,22 @@
+{
+  "code": "bearos1",
+  "name": {
+    "en": "Himalayan Beautiful Rosefinch",
+    "nl": "Himalayaprachtroodmus"
+  },
+  "latin": "Carpodacus pulcherrimus",
+  "look_for": [
+    {
+      "en": "Male pink with silvery-streaked **crown** and cheeks",
+      "nl": "Man roze met zilverig gestreepte **kruin** en wangen"
+    },
+    {
+      "en": "Pink **breast** fading to a pale belly",
+      "nl": "Roze **borst** die overgaat in een lichte buik"
+    },
+    {
+      "en": "Female heavily streaked; dry alpine scrub",
+      "nl": "Vrouw sterk gestreept; droog alpien struikgewas"
+    }
+  ]
+}

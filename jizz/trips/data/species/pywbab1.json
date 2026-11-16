@@ -1,0 +1,22 @@
+{
+  "code": "pywbab1",
+  "name": {
+    "en": "Pygmy Cupwing",
+    "nl": "Mosdwergsluiper"
+  },
+  "latin": "Pnoepyga pusilla",
+  "look_for": [
+    {
+      "en": "Tiny round bird, almost no **tail**",
+      "nl": "Piepklein, rond vogeltje, bijna geen **staart**"
+    },
+    {
+      "en": "Dark brown, scaled and spotted with buff",
+      "nl": "Donkerbruin, geschubd en gespikkeld met okergeel"
+    },
+    {
+      "en": "Creeps over mossy rocks on the forest floor",
+      "nl": "Kruipt over bemoste rotsen op de bosbodem"
+    }
+  ]
+}

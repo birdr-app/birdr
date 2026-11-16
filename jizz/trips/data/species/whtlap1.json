@@ -1,0 +1,22 @@
+{
+  "code": "whtlap1",
+  "name": {
+    "en": "White-tailed Lapwing",
+    "nl": "Witstaartkievit"
+  },
+  "latin": "Vanellus leucurus",
+  "look_for": [
+    {
+      "en": "Very long yellow **legs**",
+      "nl": "Zeer lange gele **poten**"
+    },
+    {
+      "en": "Plain pale grey-brown, no breast band",
+      "nl": "Egaal lichtgrijsbruin, geen borstband"
+    },
+    {
+      "en": "White tail; black and white wings in flight",
+      "nl": "Witte staart; zwart-witte vleugels in de vlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "barfly1",
+  "name": {
+    "en": "Black-and-orange Flycatcher",
+    "nl": "Zwart-rode vliegenvanger"
+  },
+  "latin": "Ficedula nigrorufa",
+  "look_for": [
+    {
+      "en": "Male black head and wings, orange body",
+      "nl": "Mannetje met zwarte kop en vleugels, oranje lijf"
+    },
+    {
+      "en": "Female duller, brown where male is black",
+      "nl": "Vrouwtje doffer, bruin waar het mannetje zwart is"
+    },
+    {
+      "en": "Sits low in shola grass and scrub",
+      "nl": "Zit laag in shola-gras en struikgewas"
+    }
+  ]
+}

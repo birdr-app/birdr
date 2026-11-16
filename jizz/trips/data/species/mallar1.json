@@ -1,0 +1,22 @@
+{
+  "code": "mallar1",
+  "name": {
+    "en": "Malabar Lark",
+    "nl": "Malabarkuifleeuwerik"
+  },
+  "latin": "Galerida malabarica",
+  "look_for": [
+    {
+      "en": "Streaked reddish-brown lark, long spiky **crest**",
+      "nl": "Gestreepte roodbruine leeuwerik, lange spitse **kuif**"
+    },
+    {
+      "en": "Whitish belly, streaked breast",
+      "nl": "Witachtige buik, gestreepte borst"
+    },
+    {
+      "en": "Runs on short grass, perches on rocks",
+      "nl": "Rent over kort gras, zit op rotsen"
+    }
+  ]
+}

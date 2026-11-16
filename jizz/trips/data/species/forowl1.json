@@ -1,0 +1,22 @@
+{
+  "code": "forowl1",
+  "name": {
+    "en": "Forest Owlet",
+    "nl": "Bossteenuil"
+  },
+  "latin": "Athene blewitti",
+  "look_for": [
+    {
+      "en": "Stocky, with a plain **crown** without spots",
+      "nl": "Gedrongen, met een effen **kruin** zonder vlekjes"
+    },
+    {
+      "en": "Solid brown **breast**, barred sides, white wedge",
+      "nl": "Egaal bruine **borst**, gebandeerde zijden, witte punt"
+    },
+    {
+      "en": "Hunts by day from a perch",
+      "nl": "Jaagt overdag vanaf een uitkijkpost"
+    }
+  ]
+}

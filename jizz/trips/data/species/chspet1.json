@@ -1,0 +1,22 @@
+{
+  "code": "chspet1",
+  "name": {
+    "en": "Yellow-throated Sparrow",
+    "nl": "Indische rotsmus"
+  },
+  "latin": "Gymnoris xanthocollis",
+  "look_for": [
+    {
+      "en": "Pale grey-brown, male has a yellow **throat** patch",
+      "nl": "Lichtgrijsbruin, mannetje heeft een gele **keel**vlek"
+    },
+    {
+      "en": "Two white wing bars, slim pointed bill",
+      "nl": "Twee witte vleugelstrepen, slanke spitse snavel"
+    },
+    {
+      "en": "Feeds in pairs on the ground, nests in holes",
+      "nl": "Eet in paartjes op de grond, nestelt in holtes"
+    }
+  ]
+}

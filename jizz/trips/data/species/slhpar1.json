@@ -1,0 +1,22 @@
+{
+  "code": "slhpar1",
+  "name": {
+    "en": "Slaty-headed Parakeet",
+    "nl": "Himalayaparkiet"
+  },
+  "latin": "Psittacula himalayana",
+  "look_for": [
+    {
+      "en": "Slaty-grey **head** with black collar",
+      "nl": "Leigrijze **kop** met zwarte halsband"
+    },
+    {
+      "en": "Green body, maroon patch on **shoulder**",
+      "nl": "Groen lijf, kastanjebruine vlek op de **schouder**"
+    },
+    {
+      "en": "Long pale-tipped **tail**; fast, noisy flocks",
+      "nl": "Lange **staart** met lichte punt; snelle, luide groepen"
+    }
+  ]
+}

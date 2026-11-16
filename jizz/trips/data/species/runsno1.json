@@ -1,0 +1,22 @@
+{
+  "code": "runsno1",
+  "name": {
+    "en": "Rufous-necked Snowfinch",
+    "nl": "Roodhalssneeuwvink"
+  },
+  "latin": "Pyrgilauda ruficollis",
+  "look_for": [
+    {
+      "en": "White face, black **lores**, chestnut neck sides",
+      "nl": "Wit gezicht, zwarte **teugel**, kastanjebruine halszijden"
+    },
+    {
+      "en": "Streaked buff-brown **back**, two white wingbars",
+      "nl": "Gestreepte vaalbruine **rug**, twee witte vleugelstrepen"
+    },
+    {
+      "en": "Hops about pika burrows on stony plains",
+      "nl": "Hipt rond pikaholen op steenachtige vlakten"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "pomgrp2",
+  "name": {
+    "en": "Grey-fronted Green-Pigeon",
+    "nl": "Indiase papegaaiduif"
+  },
+  "latin": "Treron affinis",
+  "look_for": [
+    {
+      "en": "Green pigeon with a grey **forehead** and crown",
+      "nl": "Groene duif met grijs **voorhoofd** en grijze kruin"
+    },
+    {
+      "en": "Male has a maroon patch on the **shoulder**",
+      "nl": "Mannetje met kastanjebruine vlek op de **schouder**"
+    },
+    {
+      "en": "Feeds quietly in fruiting figs",
+      "nl": "Eet rustig in vruchtdragende vijgen"
+    }
+  ]
+}

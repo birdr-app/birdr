@@ -1,0 +1,22 @@
+{
+  "code": "combab3",
+  "name": {
+    "en": "Common Babbler",
+    "nl": "Gewone babbelaar"
+  },
+  "latin": "Argya caudata",
+  "look_for": [
+    {
+      "en": "Slim, streaked brown babbler, whitish throat",
+      "nl": "Slanke, gestreepte bruine babbelaar, witachtige keel"
+    },
+    {
+      "en": "Long, tapered **tail** held up as it hops",
+      "nl": "Lange, taps toelopende **staart**, omhoog tijdens het hippen"
+    },
+    {
+      "en": "Noisy groups of six to twenty in thorn scrub",
+      "nl": "Luidruchtige groepen van zes tot twintig in doornstruweel"
+    }
+  ]
+}

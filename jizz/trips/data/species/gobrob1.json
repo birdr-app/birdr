@@ -1,0 +1,22 @@
+{
+  "code": "gobrob1",
+  "name": {
+    "en": "Golden Bush-Robin",
+    "nl": "Goudstaart"
+  },
+  "latin": "Tarsiger chrysaeus",
+  "look_for": [
+    {
+      "en": "Male black face, golden-yellow **eyebrow** and underparts",
+      "nl": "Mannetje met zwart gezicht, goudgele **wenkbrauwstreep** en onderzijde"
+    },
+    {
+      "en": "Golden **rump** and tail sides, olive-brown back",
+      "nl": "Goudgele **stuit** en staartzijden, olijfbruine rug"
+    },
+    {
+      "en": "Female duller; feeds on the ground in bamboo",
+      "nl": "Wijfje doffer; foerageert op de grond in bamboe"
+    }
+  ]
+}

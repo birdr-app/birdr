@@ -1,0 +1,22 @@
+{
+  "code": "itaspa1",
+  "name": {
+    "en": "Italian Sparrow",
+    "nl": "Italiaanse mus"
+  },
+  "latin": "Passer italiae",
+  "look_for": [
+    {
+      "en": "Male: **chestnut** crown and nape, white cheeks",
+      "nl": "Mannetje: **kastanjebruine** kruin en nek, witte wangen"
+    },
+    {
+      "en": "Clean black **bib**, no streaks on the flanks",
+      "nl": "Zuivere zwarte **bef**, geen strepen op de flanken"
+    },
+    {
+      "en": "Female looks like female House Sparrow",
+      "nl": "Vrouwtje lijkt op het vrouwtje van de Huismus"
+    }
+  ]
+}

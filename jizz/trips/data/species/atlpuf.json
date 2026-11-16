@@ -1,0 +1,22 @@
+{
+  "code": "atlpuf",
+  "name": {
+    "en": "Atlantic Puffin",
+    "nl": "Papegaaiduiker"
+  },
+  "latin": "Fratercula arctica",
+  "look_for": [
+    {
+      "en": "Deep, triangular **bill** banded orange, yellow and grey",
+      "nl": "Hoge, driehoekige **snavel** met oranje, gele en grijze banden"
+    },
+    {
+      "en": "Black above, white face and underparts",
+      "nl": "Zwart van boven, witte wangen en onderkant"
+    },
+    {
+      "en": "Orange **legs**; whirring flight low over the waves",
+      "nl": "Oranje **poten**; snorrende vlucht laag over de golven"
+    }
+  ]
+}

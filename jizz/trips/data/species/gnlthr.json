@@ -1,0 +1,22 @@
+{
+  "code": "gnlthr",
+  "name": {
+    "en": "Greater Necklaced Laughingthrush",
+    "nl": "Borstbandlijstergaai"
+  },
+  "latin": "Pterorhinus pectoralis",
+  "look_for": [
+    {
+      "en": "Large laughingthrush with a broad black **necklace**",
+      "nl": "Grote lijstergaai met een brede zwarte **halsband**"
+    },
+    {
+      "en": "White-tipped tail, **bluish** patch on the cheek",
+      "nl": "Staart met witte punt, **blauwachtige** wangvlek"
+    },
+    {
+      "en": "Bigger than Lesser Necklaced, often in groups",
+      "nl": "Groter dan de kleine halsbandlijstergaai, vaak in groepen"
+    }
+  ]
+}

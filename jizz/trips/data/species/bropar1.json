@@ -1,0 +1,22 @@
+{
+  "code": "bropar1",
+  "name": {
+    "en": "Brown Parrotbill",
+    "nl": "Bruine diksnavelmees"
+  },
+  "latin": "Paradoxornis unicolor",
+  "look_for": [
+    {
+      "en": "Grey-brown parrotbill, long tail",
+      "nl": "Grijsbruine diksnavelmees, lange staart"
+    },
+    {
+      "en": "Small, yellowish, parrot-like **bill**",
+      "nl": "Kleine, gelige **snavel** als van een papegaai"
+    },
+    {
+      "en": "Dark **stripe** over the eye and crown side",
+      "nl": "Donkere **streep** boven het oog en langs de kruin"
+    }
+  ]
+}

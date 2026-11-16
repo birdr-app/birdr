@@ -1,0 +1,22 @@
+{
+  "code": "norful",
+  "name": {
+    "en": "Northern Fulmar",
+    "nl": "Noordse stormvogel"
+  },
+  "latin": "Fulmarus glacialis",
+  "look_for": [
+    {
+      "en": "Stocky, thick-necked, grey above, white below",
+      "nl": "Gedrongen, dikke nek, grijs boven, wit onder"
+    },
+    {
+      "en": "Glides on stiff, straight **wings** low over waves",
+      "nl": "Glijdt op stijve, rechte **vleugels** laag over de golven"
+    },
+    {
+      "en": "Thick yellowish **bill** with a tube on top",
+      "nl": "Dikke gelige **snavel** met een buisje bovenop"
+    }
+  ]
+}

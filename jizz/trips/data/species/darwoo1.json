@@ -1,0 +1,22 @@
+{
+  "code": "darwoo1",
+  "name": {
+    "en": "Darjeeling Woodpecker",
+    "nl": "Darjeelingspecht"
+  },
+  "latin": "Dendrocopos darjellensis",
+  "look_for": [
+    {
+      "en": "Yellowish **neck** sides, long black moustache",
+      "nl": "Geelachtige zijkanten van de **hals**, lange zwarte snorstreep"
+    },
+    {
+      "en": "Streaked buff-yellow **underparts**, red vent",
+      "nl": "Gestreepte geelbeige **onderzijde**, rode onderstaart"
+    },
+    {
+      "en": "Big white shoulder patches; male red **nape**",
+      "nl": "Grote witte schoudervlekken; mannetje met rode **nek**"
+    }
+  ]
+}

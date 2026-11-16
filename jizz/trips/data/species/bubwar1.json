@@ -1,0 +1,22 @@
+{
+  "code": "bubwar1",
+  "name": {
+    "en": "Buff-barred Warbler",
+    "nl": "Goudbandboszanger"
+  },
+  "latin": "Phylloscopus pulcher",
+  "look_for": [
+    {
+      "en": "Orange-buff double **wingbars**, faint yellow crown stripe",
+      "nl": "Oranjebeige dubbele **vleugelstreep**, vage gele kruinstreep"
+    },
+    {
+      "en": "Pale yellow **rump**, white outer tail feathers",
+      "nl": "Bleekgele **stuit**, witte buitenste staartveren"
+    },
+    {
+      "en": "Forages high in oak and conifers, splaying **tail**",
+      "nl": "Foerageert hoog in eiken en naaldbomen, met gespreide **staart**"
+    }
+  ]
+}

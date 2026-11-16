@@ -1,0 +1,22 @@
+{
+  "code": "sheowl",
+  "name": {
+    "en": "Short-eared Owl",
+    "nl": "Velduil"
+  },
+  "latin": "Asio flammeus",
+  "look_for": [
+    {
+      "en": "Yellow **eyes** in dark patches",
+      "nl": "Gele **ogen** in donkere vlekken"
+    },
+    {
+      "en": "Buff and brown, streaked chest, pale belly",
+      "nl": "Buff en bruin, gestreepte borst, lichte buik"
+    },
+    {
+      "en": "Glides low over grassland, often by day",
+      "nl": "Zweeft laag over grasland, vaak overdag"
+    }
+  ]
+}

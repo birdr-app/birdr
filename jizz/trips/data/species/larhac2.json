@@ -1,0 +1,22 @@
+{
+  "code": "larhac2",
+  "name": {
+    "en": "Large Hawk-Cuckoo",
+    "nl": "Grote sperwerkoekoek"
+  },
+  "latin": "Hierococcyx sparverioides",
+  "look_for": [
+    {
+      "en": "Hawk-like, grey above, barred below",
+      "nl": "Sperwerachtig, grijs boven, gebandeerd onder"
+    },
+    {
+      "en": "Streaked breast, barred belly",
+      "nl": "Gestreepte borst, gebandeerde buik"
+    },
+    {
+      "en": "Broad dark bands across the **tail**",
+      "nl": "Brede donkere banden over de **staart**"
+    }
+  ]
+}

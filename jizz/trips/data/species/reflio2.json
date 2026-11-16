@@ -1,0 +1,22 @@
+{
+  "code": "reflio2",
+  "name": {
+    "en": "Red-faced Liocichla",
+    "nl": "Roodmaskertimalia"
+  },
+  "latin": "Liocichla phoenicea",
+  "look_for": [
+    {
+      "en": "Plain olive-brown with a crimson face",
+      "nl": "Effen olijfbruin met een karmozijnrood gezicht"
+    },
+    {
+      "en": "Bold black stripe along the **crown** side",
+      "nl": "Brede zwarte streep langs de zijkant van de **kruin**"
+    },
+    {
+      "en": "Scarlet-fringed **wing**, dark tail with pale tip",
+      "nl": "Scharlaken omrande **vleugel**, donkere staart met lichte punt"
+    }
+  ]
+}

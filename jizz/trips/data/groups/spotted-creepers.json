@@ -1,0 +1,18 @@
+{
+  "slug": "spotted-creepers",
+  "about": {
+    "en": "Small, marbled grey and white birds with a thin, slightly curved bill. They look like a cross between a nuthatch and a treecreeper and move up and down trunks and along thick branches, searching for insects and spiders. They go alone or join mixed flocks, and they are easy to overlook against the bark.",
+    "nl": "Kleine, grijs-wit gemarmerde vogels met een dunne, licht gebogen snavel. Ze lijken op een kruising van een boomklever en een boomkruiper en bewegen op en neer langs stammen en dikke takken, op zoek naar insecten en spinnen. Ze zitten alleen of sluiten aan bij gemengde groepen en zijn tegen de schors makkelijk over het hoofd te zien."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "treecreepers"
+      ],
+      "text": {
+        "en": "Unlike a treecreeper it has no stiff tail to prop itself on, and it moves up and down like a nuthatch instead of spiralling up.",
+        "nl": "Anders dan een boomkruiper heeft hij geen stijve staart om op te steunen en beweegt hij op en neer als een boomklever in plaats van in een spiraal omhoog."
+      }
+    }
+  ]
+}

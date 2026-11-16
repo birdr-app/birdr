@@ -1,0 +1,22 @@
+{
+  "code": "whebul1",
+  "name": {
+    "en": "White-eared Bulbul",
+    "nl": "Witoorbuulbuul"
+  },
+  "latin": "Pycnonotus leucotis",
+  "look_for": [
+    {
+      "en": "Black **head** with a bold white cheek patch",
+      "nl": "Zwarte **kop** met een opvallende witte wangvlek"
+    },
+    {
+      "en": "Black throat and a rounded head, no tall crest",
+      "nl": "Zwarte keel en een ronde kop, geen hoge kuif"
+    },
+    {
+      "en": "Yellow under the **tail**; pairs in dry scrub",
+      "nl": "Geel onder de **staart**; paartjes in droog struweel"
+    }
+  ]
+}

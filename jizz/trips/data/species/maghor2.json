@@ -1,0 +1,22 @@
+{
+  "code": "maghor2",
+  "name": {
+    "en": "Malabar Grey Hornbill",
+    "nl": "Malabartok"
+  },
+  "latin": "Ocyceros griseus",
+  "look_for": [
+    {
+      "en": "Grey hornbill with a pale **eyebrow**",
+      "nl": "Grijze neushoornvogel met lichte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Orange-yellow curved **bill**, small **casque**",
+      "nl": "Oranjegele gebogen **snavel**, kleine **hoornknobbel**"
+    },
+    {
+      "en": "Noisy, in small groups in tall trees",
+      "nl": "Luidruchtig, in kleine groepen in hoge bomen"
+    }
+  ]
+}

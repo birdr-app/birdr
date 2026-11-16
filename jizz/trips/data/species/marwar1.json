@@ -1,0 +1,22 @@
+{
+  "code": "marwar1",
+  "name": {
+    "en": "Marmora's Warbler",
+    "nl": "Sardijnse grasmus"
+  },
+  "latin": "Curruca sarda",
+  "look_for": [
+    {
+      "en": "Small, slate-grey all over, no red below",
+      "nl": "Klein, leigrijs over het hele lijf, niet rood eronder"
+    },
+    {
+      "en": "Red **eye**; long **tail**, often cocked",
+      "nl": "Rood **oog**; lange **staart**, vaak omhoog gehouden"
+    },
+    {
+      "en": "Skulks in thorny scrub; fast, rattling song",
+      "nl": "Leeft verborgen in doornig struikgewas; snelle, ratelende zang"
+    }
+  ]
+}

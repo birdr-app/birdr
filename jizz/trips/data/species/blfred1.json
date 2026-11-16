@@ -1,0 +1,22 @@
+{
+  "code": "blfred1",
+  "name": {
+    "en": "Blue-fronted Redstart",
+    "nl": "Himalayaroodstaart"
+  },
+  "latin": "Phoenicurus frontalis",
+  "look_for": [
+    {
+      "en": "Male ultramarine blue **head**, back and chest",
+      "nl": "Mannetje met ultramarijnblauwe **kop**, rug en borst"
+    },
+    {
+      "en": "Orange belly and **rump**, tail shivered often",
+      "nl": "Oranje buik en **stuit**, trilt vaak met de staart"
+    },
+    {
+      "en": "Female brown, orange **tail** with dark inverted T",
+      "nl": "Wijfje bruin, oranje **staart** met donkere omgekeerde T"
+    }
+  ]
+}

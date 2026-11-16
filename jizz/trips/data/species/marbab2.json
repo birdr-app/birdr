@@ -1,0 +1,22 @@
+{
+  "code": "marbab2",
+  "name": {
+    "en": "Marsh Babbler",
+    "nl": "Moerasjungletimalia"
+  },
+  "latin": "Pellorneum palustre",
+  "look_for": [
+    {
+      "en": "Plain brown above, pale below, rufous **crown**",
+      "nl": "Effen bruin boven, licht onder, roodbruine **kruin**"
+    },
+    {
+      "en": "Dark **streaks** on the breast",
+      "nl": "Donkere **strepen** op de borst"
+    },
+    {
+      "en": "Skulks in reeds and wet grass, easily heard",
+      "nl": "Sluipt door riet en nat gras, vooral te horen"
+    }
+  ]
+}

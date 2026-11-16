@@ -1,0 +1,22 @@
+{
+  "code": "sauter2",
+  "name": {
+    "en": "Saunders's Tern",
+    "nl": "Saunders' dwergstern"
+  },
+  "latin": "Sternula saundersi",
+  "look_for": [
+    {
+      "en": "Tiny tern with yellow, black-tipped **bill**",
+      "nl": "Piepkleine stern met gele **snavel** met zwarte punt"
+    },
+    {
+      "en": "More black in outer **primaries** than Little Tern",
+      "nl": "Meer zwart in de buitenste **handpennen** dan de dwergstern"
+    },
+    {
+      "en": "Straight-edged white patch on the forehead",
+      "nl": "Wit voorhoofdsvlak met een rechte rand"
+    }
+  ]
+}

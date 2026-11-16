@@ -1,0 +1,22 @@
+{
+  "code": "wartro1",
+  "name": {
+    "en": "Ward's Trogon",
+    "nl": "Wardtrogon"
+  },
+  "latin": "Harpactes wardi",
+  "look_for": [
+    {
+      "en": "Male: pink-red **belly** and forehead",
+      "nl": "Mannetje: roze-rode **buik** en voorhoofd"
+    },
+    {
+      "en": "Dark slate back with maroon wash",
+      "nl": "Donkere leigrijze rug met bruinrode waas"
+    },
+    {
+      "en": "Female yellow where male is red",
+      "nl": "Vrouwtje geel waar het mannetje rood is"
+    }
+  ]
+}

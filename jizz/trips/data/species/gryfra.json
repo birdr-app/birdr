@@ -1,0 +1,22 @@
+{
+  "code": "gryfra",
+  "name": {
+    "en": "Grey Francolin",
+    "nl": "Grijze frankolijn"
+  },
+  "latin": "Ortygornis pondicerianus",
+  "look_for": [
+    {
+      "en": "Barred sandy-brown, with a rusty **tail** in flight",
+      "nl": "Gebandeerd zandbruin, met een roestkleurige **staart** in de vlucht"
+    },
+    {
+      "en": "Buff throat edged with a fine dark line",
+      "nl": "Beige keel met een fijne donkere rand"
+    },
+    {
+      "en": "Loud, ringing call from a bush or mound",
+      "nl": "Luide, galmende roep vanaf een struik of heuveltje"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "spocre3",
+  "name": {
+    "en": "Indian Spotted Creeper",
+    "nl": "Indiase gevlekte boomkruiper"
+  },
+  "latin": "Salpornis spilonota",
+  "look_for": [
+    {
+      "en": "Marbled grey and white, spotted and barred",
+      "nl": "Grijs-wit marmerpatroon met vlekjes en banden"
+    },
+    {
+      "en": "Pale eyebrow, dark eye-stripe, thin curved **bill**",
+      "nl": "Lichte wenkbrauw, donkere oogstreep, dunne gebogen **snavel**"
+    },
+    {
+      "en": "Climbs trunks up and down; square **tail**",
+      "nl": "Klautert op en neer langs stammen, vierkante **staart**"
+    }
+  ]
+}

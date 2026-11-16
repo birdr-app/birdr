@@ -1,0 +1,22 @@
+{
+  "code": "indcou1",
+  "name": {
+    "en": "Indian Courser",
+    "nl": "Indische renvogel"
+  },
+  "latin": "Cursorius coromandelicus",
+  "look_for": [
+    {
+      "en": "Chestnut **crown**, black eye-stripe, white stripe above",
+      "nl": "Kastanjebruine **kruin**, zwarte oogstreep, witte streep erboven"
+    },
+    {
+      "en": "Rufous breast; runs in short spurts",
+      "nl": "Roestkleurige borst; rent in korte spurten"
+    },
+    {
+      "en": "White rump and low, creaky flight",
+      "nl": "Witte stuit en lage, krakende vlucht"
+    }
+  ]
+}

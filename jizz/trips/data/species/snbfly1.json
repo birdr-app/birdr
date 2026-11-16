@@ -1,0 +1,22 @@
+{
+  "code": "snbfly1",
+  "name": {
+    "en": "Snowy-browed Flycatcher",
+    "nl": "Witbrauwvliegenvanger"
+  },
+  "latin": "Ficedula hyperythra",
+  "look_for": [
+    {
+      "en": "Male blue above, short white **eyebrow**",
+      "nl": "Mannetje blauw van boven, korte witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Bright orange **throat** fading towards the belly",
+      "nl": "Felle oranje **keel** die naar de buik toe vervaagt"
+    },
+    {
+      "en": "Female brown, pale eyering, rufous-tinged **wings**",
+      "nl": "Wijfje bruin, bleke oogring, roestbruin getinte **vleugels**"
+    }
+  ]
+}

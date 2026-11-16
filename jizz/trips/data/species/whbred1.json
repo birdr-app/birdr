@@ -1,0 +1,22 @@
+{
+  "code": "whbred1",
+  "name": {
+    "en": "White-bellied Redstart",
+    "nl": "Witbuikroodstaart"
+  },
+  "latin": "Luscinia phaenicuroides",
+  "look_for": [
+    {
+      "en": "Male dark slate-blue with white lower **belly**",
+      "nl": "Mannetje donker leiblauw met witte **onderbuik**"
+    },
+    {
+      "en": "Long **tail** with orange sides, constantly flicked",
+      "nl": "Lange **staart** met oranje zijkanten, steeds heen en weer bewogen"
+    },
+    {
+      "en": "Female dark brown, whitish belly; skulks in thickets",
+      "nl": "Wijfje donkerbruin, witachtige buik; schuilt in struikgewas"
+    }
+  ]
+}

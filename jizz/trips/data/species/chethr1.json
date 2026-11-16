@@ -1,0 +1,22 @@
+{
+  "code": "chethr1",
+  "name": {
+    "en": "Chestnut Thrush",
+    "nl": "Kastanjelijster"
+  },
+  "latin": "Turdus rubrocanus",
+  "look_for": [
+    {
+      "en": "Chestnut body with a clean grey **hood**",
+      "nl": "Kastanjebruin lijf met een duidelijke grijze **kap**"
+    },
+    {
+      "en": "Black **wings** and tail, yellow bill and legs",
+      "nl": "Zwarte **vleugels** en staart, gele snavel en poten"
+    },
+    {
+      "en": "Female duller, browner on **wings** and tail",
+      "nl": "Wijfje doffer, bruiner op **vleugels** en staart"
+    }
+  ]
+}

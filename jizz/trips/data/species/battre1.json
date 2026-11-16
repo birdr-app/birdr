@@ -1,0 +1,22 @@
+{
+  "code": "battre1",
+  "name": {
+    "en": "Bar-tailed Treecreeper",
+    "nl": "Himalayaboomkruiper"
+  },
+  "latin": "Certhia himalayana",
+  "look_for": [
+    {
+      "en": "Creeps up trunks, braced on stiff **tail**",
+      "nl": "Kruipt omhoog langs stammen, steunend op stijve **staart**"
+    },
+    {
+      "en": "Thin curved **bill**, streaked brown back",
+      "nl": "Dunne gebogen **snavel**, gestreepte bruine rug"
+    },
+    {
+      "en": "Plain grey-buff underparts, fine bars on **wing**",
+      "nl": "Effen grijsbruine onderkant, fijne banden op **vleugel**"
+    }
+  ]
+}

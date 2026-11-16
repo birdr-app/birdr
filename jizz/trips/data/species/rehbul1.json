@@ -1,0 +1,22 @@
+{
+  "code": "rehbul1",
+  "name": {
+    "en": "Red-headed Bullfinch",
+    "nl": "Roodkopgoudvink"
+  },
+  "latin": "Pyrrhula erythrocephala",
+  "look_for": [
+    {
+      "en": "Male orange-red **head** with a black chin",
+      "nl": "Man met oranjerode **kop** en zwarte kin"
+    },
+    {
+      "en": "Grey back, black **wings** and tail",
+      "nl": "Grijze rug, zwarte **vleugels** en staart"
+    },
+    {
+      "en": "Short thick **bill**; female head dull olive",
+      "nl": "Korte dikke **snavel**; vrouw met doffe olijfkleurige kop"
+    }
+  ]
+}

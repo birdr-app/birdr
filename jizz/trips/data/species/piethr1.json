@@ -1,0 +1,22 @@
+{
+  "code": "piethr1",
+  "name": {
+    "en": "Pied Thrush",
+    "nl": "Eksterlijster"
+  },
+  "latin": "Geokichla wardii",
+  "look_for": [
+    {
+      "en": "Male black above, white below",
+      "nl": "Mannetje zwart boven, wit onder"
+    },
+    {
+      "en": "White wing bar and **eyebrow** patch",
+      "nl": "Witte vleugelstreep en vlek bij de **wenkbrauw**"
+    },
+    {
+      "en": "Female brown with scaly underparts",
+      "nl": "Vrouwtje bruin met geschubde onderkant"
+    }
+  ]
+}

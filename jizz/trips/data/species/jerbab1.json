@@ -1,0 +1,22 @@
+{
+  "code": "jerbab1",
+  "name": {
+    "en": "Jerdon's Babbler",
+    "nl": "Jerdontimalia"
+  },
+  "latin": "Chrysomma altirostre",
+  "look_for": [
+    {
+      "en": "Buffy brown, long tail, plain pale breast",
+      "nl": "Bruingeel, lange staart, effen lichte borst"
+    },
+    {
+      "en": "Thick grey-horn **bill**, yellowish eye",
+      "nl": "Dikke grijsbruine **snavel**, geelachtig oog"
+    },
+    {
+      "en": "Climbs and creeps through tall grass stems",
+      "nl": "Klimt en kruipt door hoge grashalmen"
+    }
+  ]
+}

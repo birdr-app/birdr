@@ -1,0 +1,22 @@
+{
+  "code": "ingori1",
+  "name": {
+    "en": "Indian Golden Oriole",
+    "nl": "Indiase wielewaal"
+  },
+  "latin": "Oriolus kundoo",
+  "look_for": [
+    {
+      "en": "Male bright golden yellow with black **wings**",
+      "nl": "Mannetje helder goudgeel met zwarte **vleugels**"
+    },
+    {
+      "en": "Black stripe through and behind the **eye**",
+      "nl": "Zwarte streep door en achter het **oog**"
+    },
+    {
+      "en": "Female duller yellow-green, streaked below",
+      "nl": "Vrouwtje doffer geelgroen, gestreept onderaan"
+    }
+  ]
+}

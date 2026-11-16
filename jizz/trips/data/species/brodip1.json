@@ -1,0 +1,22 @@
+{
+  "code": "brodip1",
+  "name": {
+    "en": "Brown Dipper",
+    "nl": "Zwarte waterspreeuw"
+  },
+  "latin": "Cinclus pallasii",
+  "look_for": [
+    {
+      "en": "Plump, uniformly chocolate-brown **plumage**",
+      "nl": "Gedrongen, egaal chocoladebruin **verenkleed**"
+    },
+    {
+      "en": "Bobs on boulders in fast mountain streams",
+      "nl": "Buigt door de knieën op rotsblokken in snelle bergbeken"
+    },
+    {
+      "en": "Walks underwater, short **tail** cocked",
+      "nl": "Loopt onder water, korte **staart** omhoog"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "tibsan1",
+  "name": {
+    "en": "Tibetan Sandgrouse",
+    "nl": "Tibetaans steppehoen"
+  },
+  "latin": "Syrrhaptes tibetanus",
+  "look_for": [
+    {
+      "en": "Orange **face**, finely barred grey breast and crown",
+      "nl": "Oranje **gezicht**, fijn gebande grijze borst en kruin"
+    },
+    {
+      "en": "White belly and black underwings in flight",
+      "nl": "Witte buik en zwarte onderzijde van de vleugel in de vlucht"
+    },
+    {
+      "en": "Flocks fly to water at dawn, clanging calls",
+      "nl": "Groepen vliegen bij zonsopgang naar water, schallende roep"
+    }
+  ]
+}

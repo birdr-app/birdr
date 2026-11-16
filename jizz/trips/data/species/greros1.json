@@ -1,0 +1,22 @@
+{
+  "code": "greros1",
+  "name": {
+    "en": "Great Rosefinch",
+    "nl": "Grote roodmus"
+  },
+  "latin": "Carpodacus rubicilla",
+  "look_for": [
+    {
+      "en": "Large, heavy-billed rosefinch of high rocky slopes",
+      "nl": "Grote roodmus met zware snavel van hoge rotshellingen"
+    },
+    {
+      "en": "Male crimson with pale pearly spots on **head**",
+      "nl": "Man karmozijn met parelachtige lichte stippen op de **kop**"
+    },
+    {
+      "en": "Female heavily streaked brown, long **tail**",
+      "nl": "Vrouw sterk gestreept bruin, lange **staart**"
+    }
+  ]
+}

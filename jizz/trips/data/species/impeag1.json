@@ -1,0 +1,22 @@
+{
+  "code": "impeag1",
+  "name": {
+    "en": "Imperial Eagle",
+    "nl": "Keizerarend"
+  },
+  "latin": "Aquila heliaca",
+  "look_for": [
+    {
+      "en": "Large, dark eagle with a golden-buff **nape**",
+      "nl": "Grote, donkere arend met een goudbeige **nek**"
+    },
+    {
+      "en": "Adults show white patches on the shoulders",
+      "nl": "Volwassen vogels hebben witte vlekken op de schouders"
+    },
+    {
+      "en": "Young bird streaky buff-brown, pale **rump**",
+      "nl": "Jonge vogel gestreept beigebruin, lichte **stuit**"
+    }
+  ]
+}

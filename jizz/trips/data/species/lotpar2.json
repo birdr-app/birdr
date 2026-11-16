@@ -1,0 +1,22 @@
+{
+  "code": "lotpar2",
+  "name": {
+    "en": "Long-tailed Parakeet",
+    "nl": "Langstaartparkiet"
+  },
+  "latin": "Psittacula longicauda",
+  "look_for": [
+    {
+      "en": "Green parakeet with a very long **tail**",
+      "nl": "Groene parkiet met een zeer lange **staart**"
+    },
+    {
+      "en": "Red patch on the male's cheek",
+      "nl": "Rode vlek op de wang van de man"
+    },
+    {
+      "en": "Noisy, fast flocks over the forest",
+      "nl": "Luidruchtige, snelle groepen boven het bos"
+    }
+  ]
+}

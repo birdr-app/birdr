@@ -1,0 +1,22 @@
+{
+  "code": "bbbeat1",
+  "name": {
+    "en": "Blue-bearded Bee-eater",
+    "nl": "Blauwbaardbijeneter"
+  },
+  "latin": "Nyctyornis athertoni",
+  "look_for": [
+    {
+      "en": "Large and green, with a blue **beard**",
+      "nl": "Groot en groen, met een blauwe **baard**"
+    },
+    {
+      "en": "Heavy, curved **bill**, no tail streamers",
+      "nl": "Zware, gebogen **snavel**, geen staartspillen"
+    },
+    {
+      "en": "Sits still in the forest canopy",
+      "nl": "Zit stil in het bladerdak van het bos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "gobmag1",
+  "name": {
+    "en": "Yellow-billed Blue-Magpie",
+    "nl": "Geelsnavelkitta"
+  },
+  "latin": "Urocissa flavirostris",
+  "look_for": [
+    {
+      "en": "Bright yellow **bill** and red **legs**",
+      "nl": "Felgele **snavel** en rode **poten**"
+    },
+    {
+      "en": "Blue **back**, black **head** with white nape",
+      "nl": "Blauwe **rug**, zwarte **kop** met witte nek"
+    },
+    {
+      "en": "Very long white-tipped blue **tail**",
+      "nl": "Zeer lange blauwe **staart** met witte punt"
+    }
+  ]
+}

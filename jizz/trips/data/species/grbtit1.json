@@ -1,0 +1,22 @@
+{
+  "code": "grbtit1",
+  "name": {
+    "en": "Green-backed Tit",
+    "nl": "Bergkoolmees"
+  },
+  "latin": "Parus monticolus",
+  "look_for": [
+    {
+      "en": "Black **head** with big white cheek patch",
+      "nl": "Zwarte **kop** met grote witte wangvlek"
+    },
+    {
+      "en": "Yellow underparts, black stripe down **belly**",
+      "nl": "Gele onderzijde, zwarte streep over de **buik**"
+    },
+    {
+      "en": "Green **back**, two white bars on the **wing**",
+      "nl": "Groene **rug**, twee witte strepen op de **vleugel**"
+    }
+  ]
+}

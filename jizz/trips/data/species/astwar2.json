@@ -1,0 +1,22 @@
+{
+  "code": "astwar2",
+  "name": {
+    "en": "Ashy-throated Warbler",
+    "nl": "Grijskeelboszanger"
+  },
+  "latin": "Phylloscopus maculipennis",
+  "look_for": [
+    {
+      "en": "Grey face, **throat** and breast, yellowish belly",
+      "nl": "Grijs gezicht, **keel** en borst, geelachtige buik"
+    },
+    {
+      "en": "White **eyebrow** and whitish central crown stripe",
+      "nl": "Witte **wenkbrauwstreep** en lichte kruinstreep"
+    },
+    {
+      "en": "Two yellowish-white **wingbars** on a tiny, restless bird",
+      "nl": "Twee geelwitte **vleugelstrepen** bij een klein, onrustig vogeltje"
+    }
+  ]
+}

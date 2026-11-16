@@ -1,0 +1,22 @@
+{
+  "code": "grseag1",
+  "name": {
+    "en": "Greater Spotted Eagle",
+    "nl": "Bastaardarend"
+  },
+  "latin": "Clanga clanga",
+  "look_for": [
+    {
+      "en": "Large dark brown eagle with baggy leg feathers",
+      "nl": "Grote donkerbruine arend met zware broekveren"
+    },
+    {
+      "en": "White crescent above the **tail**",
+      "nl": "Witte halve maan boven de **staart**"
+    },
+    {
+      "en": "Soars on flat or slightly drooped **wings**",
+      "nl": "Zweeft op platte of licht hangende **vleugels**"
+    }
+  ]
+}

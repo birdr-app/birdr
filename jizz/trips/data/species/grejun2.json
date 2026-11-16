@@ -1,0 +1,22 @@
+{
+  "code": "grejun2",
+  "name": {
+    "en": "Grey Junglefowl",
+    "nl": "Sonnerathoen"
+  },
+  "latin": "Gallus sonneratii",
+  "look_for": [
+    {
+      "en": "Male grey with fine white streaks, red **comb**",
+      "nl": "Mannetje grijs met fijne witte streepjes, rode **kam**"
+    },
+    {
+      "en": "Golden-yellow, pointed feathers on the neck",
+      "nl": "Goudgele, spitse veren op de nek"
+    },
+    {
+      "en": "Female plain brown; both feed along tracks",
+      "nl": "Vrouwtje egaal bruin; beide eten langs paden"
+    }
+  ]
+}

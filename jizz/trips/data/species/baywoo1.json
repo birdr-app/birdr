@@ -1,0 +1,22 @@
+{
+  "code": "baywoo1",
+  "name": {
+    "en": "Bay Woodpecker",
+    "nl": "Roodoorspecht"
+  },
+  "latin": "Blythipicus pyrrhotis",
+  "look_for": [
+    {
+      "en": "Rich chestnut-bay woodpecker with barred **wings**",
+      "nl": "Roodbruine specht met gebandeerde **vleugels**"
+    },
+    {
+      "en": "Long, pale **bill**, short crest",
+      "nl": "Lange, bleke **snavel**, korte kuif"
+    },
+    {
+      "en": "Hitches up trunks in dense forest",
+      "nl": "Klimt langs stammen in dichtbegroeid bos"
+    }
+  ]
+}

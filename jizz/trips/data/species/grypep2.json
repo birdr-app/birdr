@@ -1,0 +1,22 @@
+{
+  "code": "grypep2",
+  "name": {
+    "en": "Grey Peacock-Pheasant",
+    "nl": "Spiegelpauw"
+  },
+  "latin": "Polyplectron bicalcaratum",
+  "look_for": [
+    {
+      "en": "Grey-brown, finely speckled pheasant with long **tail**",
+      "nl": "Grijsbruine, fijn gespikkelde fazant met lange **staart**"
+    },
+    {
+      "en": "Shiny blue-green eye-spots on tail and wings",
+      "nl": "Glanzende blauwgroene oogvlekken op staart en vleugels"
+    },
+    {
+      "en": "Short crest, white **throat**",
+      "nl": "Korte kuif, witte **keel**"
+    }
+  ]
+}

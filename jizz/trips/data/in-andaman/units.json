@@ -1,0 +1,582 @@
+{
+  "country": "IN-ANDAMAN",
+  "groups": [
+    {
+      "slug": "waterfowl",
+      "name": {
+        "en": "Waterfowl",
+        "nl": "Watervogels"
+      },
+      "species": [
+        "andtea1"
+      ],
+      "endemics": [
+        "andtea1"
+      ]
+    },
+    {
+      "slug": "pigeons-and-doves",
+      "name": {
+        "en": "Pigeons and Doves",
+        "nl": "Duiven"
+      },
+      "species": [
+        "anwpig1",
+        "ancdov1",
+        "pomgrp4",
+        "gripig1",
+        "piipig1"
+      ],
+      "endemics": [
+        "anwpig1",
+        "ancdov1",
+        "pomgrp4"
+      ]
+    },
+    {
+      "slug": "cuckoos",
+      "name": {
+        "en": "Cuckoos",
+        "nl": "Koekoes"
+      },
+      "species": [
+        "andcou1",
+        "viocuc1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "nightjars",
+      "name": {
+        "en": "Nightjars",
+        "nl": "Nachtzwaluwen"
+      },
+      "species": [
+        "andnig1"
+      ],
+      "endemics": [
+        "andnig1"
+      ]
+    },
+    {
+      "slug": "rails-gallinules-and-allies",
+      "name": {
+        "en": "Rails, Gallinules, and Allies",
+        "nl": "Rallen, Koeten en aanverwanten"
+      },
+      "species": [
+        "andcra1"
+      ],
+      "endemics": [
+        "andcra1"
+      ]
+    },
+    {
+      "slug": "shorebirds",
+      "name": {
+        "en": "Shorebirds",
+        "nl": "Steltlopers"
+      },
+      "species": [
+        "batgod",
+        "gyttat1",
+        "grekno",
+        "beathk1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "gulls-terns-and-skimmers",
+      "name": {
+        "en": "Gulls, Terns, and Skimmers",
+        "nl": "Meeuwen, Sterns en Schaarbekken"
+      },
+      "species": [
+        "brnnod",
+        "briter1",
+        "blnter1",
+        "lecter2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tropicbirds",
+      "name": {
+        "en": "Tropicbirds",
+        "nl": "Keerkringvogels"
+      },
+      "species": [
+        "whttro",
+        "rettro"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "frigatebirds-boobies-and-gannets",
+      "name": {
+        "en": "Frigatebirds, Boobies, and Gannets",
+        "nl": "Fregatvogels en Genten"
+      },
+      "species": [
+        "grefri",
+        "refboo",
+        "brnboo",
+        "masboo",
+        "lesfri"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "herons-ibis-and-allies",
+      "name": {
+        "en": "Herons, Ibis, and Allies",
+        "nl": "Reigers, Ibissen en aanverwanten"
+      },
+      "species": [
+        "pacreh1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "vultures-hawks-and-allies",
+      "name": {
+        "en": "Vultures, Hawks, and Allies",
+        "nl": "Gieren, Arenden, Buizerds, Haviken en aanverwanten"
+      },
+      "species": [
+        "wbseag1",
+        "anseag1"
+      ],
+      "endemics": [
+        "anseag1"
+      ]
+    },
+    {
+      "slug": "owls",
+      "name": {
+        "en": "Owls",
+        "nl": "Uilen"
+      },
+      "species": [
+        "ansowl1",
+        "barowl5",
+        "andhao1"
+      ],
+      "endemics": [
+        "ansowl1",
+        "barowl5",
+        "andhao1"
+      ]
+    },
+    {
+      "slug": "kingfishers",
+      "name": {
+        "en": "Kingfishers",
+        "nl": "IJsvogels"
+      },
+      "species": [
+        "rudkin1",
+        "colkin1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "rollers-and-allies",
+      "name": {
+        "en": "Rollers and Allies",
+        "nl": "Scharrelaars en aanverwanten"
+      },
+      "species": [
+        "dollar1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "woodpeckers",
+      "name": {
+        "en": "Woodpeckers",
+        "nl": "Spechten"
+      },
+      "species": [
+        "andwoo1"
+      ],
+      "endemics": [
+        "andwoo1"
+      ]
+    },
+    {
+      "slug": "parrots-parakeets-and-allies",
+      "name": {
+        "en": "Parrots, Parakeets, and Allies",
+        "nl": "Papegaaien, Parkieten en aanverwanten"
+      },
+      "species": [
+        "rebpar4",
+        "lotpar2",
+        "vehpar1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "cuckooshrikes",
+      "name": {
+        "en": "Cuckooshrikes",
+        "nl": "Cuckooshrikes"
+      },
+      "species": [
+        "andcus1"
+      ],
+      "endemics": [
+        "andcus1"
+      ]
+    },
+    {
+      "slug": "whistlers-and-allies",
+      "name": {
+        "en": "Whistlers and Allies",
+        "nl": "Whistlers and Allies"
+      },
+      "species": [
+        "manwhi1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "drongos",
+      "name": {
+        "en": "Drongos",
+        "nl": "Drongo's"
+      },
+      "species": [
+        "anddro1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "monarch-flycatchers",
+      "name": {
+        "en": "Monarch Flycatchers",
+        "nl": "Monarch Flycatchers"
+      },
+      "species": [
+        "blnmon1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "jays-magpies-crows-and-ravens",
+      "name": {
+        "en": "Jays, Magpies, Crows, and Ravens",
+        "nl": "Gaaien, Eksters, Kraaien en Raven"
+      },
+      "species": [
+        "andtre1"
+      ],
+      "endemics": [
+        "andtre1"
+      ]
+    },
+    {
+      "slug": "martins-and-swallows",
+      "name": {
+        "en": "Martins and Swallows",
+        "nl": "Zwaluwen"
+      },
+      "species": [
+        "pacswa1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "bulbuls",
+      "name": {
+        "en": "Bulbuls",
+        "nl": "Buulbuuls"
+      },
+      "species": [
+        "andbul1"
+      ],
+      "endemics": [
+        "andbul1"
+      ]
+    },
+    {
+      "slug": "starlings-and-mynas",
+      "name": {
+        "en": "Starlings and Mynas",
+        "nl": "Spreeuwen en Glansspreeuwen"
+      },
+      "species": [
+        "asgsta1",
+        "hilmyn",
+        "whhsta2"
+      ],
+      "endemics": [
+        "whhsta2"
+      ]
+    },
+    {
+      "slug": "old-world-flycatchers",
+      "name": {
+        "en": "Old World Flycatchers",
+        "nl": "Vliegenvangers van de Oude Wereld"
+      },
+      "species": [
+        "andsha1"
+      ],
+      "endemics": [
+        "andsha1"
+      ]
+    },
+    {
+      "slug": "flowerpeckers",
+      "name": {
+        "en": "Flowerpeckers",
+        "nl": "Flowerpeckers"
+      },
+      "species": [
+        "andflo1"
+      ],
+      "endemics": [
+        "andflo1"
+      ]
+    },
+    {
+      "slug": "sunbirds-and-spiderhunters",
+      "name": {
+        "en": "Sunbirds and Spiderhunters",
+        "nl": "Honingzuigers"
+      },
+      "species": [
+        "olbsun4"
+      ],
+      "endemics": []
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "owls-and-nightjar",
+      "title": {
+        "en": "owls-and-nightjar",
+        "nl": "owls-and-nightjar"
+      },
+      "groups": [
+        "owls",
+        "nightjars"
+      ],
+      "species": [
+        "ansowl1",
+        "andhao1",
+        "barowl5",
+        "andnig1"
+      ]
+    },
+    {
+      "slug": "pigeons-and-doves",
+      "title": {
+        "en": "pigeons-and-doves",
+        "nl": "pigeons-and-doves"
+      },
+      "groups": [
+        "pigeons-and-doves"
+      ],
+      "species": [
+        "anwpig1",
+        "ancdov1",
+        "pomgrp4",
+        "gripig1",
+        "piipig1"
+      ]
+    },
+    {
+      "slug": "parrots",
+      "title": {
+        "en": "parrots",
+        "nl": "parrots"
+      },
+      "groups": [
+        "parrots-parakeets-and-allies"
+      ],
+      "species": [
+        "lotpar2",
+        "rebpar4",
+        "vehpar1"
+      ]
+    },
+    {
+      "slug": "woodpecker-and-kingfishers",
+      "title": {
+        "en": "woodpecker-and-kingfishers",
+        "nl": "woodpecker-and-kingfishers"
+      },
+      "groups": [
+        "woodpeckers",
+        "kingfishers",
+        "rollers-and-allies"
+      ],
+      "species": [
+        "andwoo1",
+        "colkin1",
+        "rudkin1",
+        "dollar1"
+      ]
+    },
+    {
+      "slug": "undergrowth",
+      "title": {
+        "en": "undergrowth",
+        "nl": "undergrowth"
+      },
+      "groups": [
+        "cuckoos",
+        "rails-gallinules-and-allies"
+      ],
+      "species": [
+        "andcou1",
+        "andcra1",
+        "viocuc1"
+      ]
+    },
+    {
+      "slug": "forest-songbirds",
+      "title": {
+        "en": "forest-songbirds",
+        "nl": "forest-songbirds"
+      },
+      "groups": [
+        "bulbuls",
+        "old-world-flycatchers",
+        "flowerpeckers",
+        "sunbirds-and-spiderhunters",
+        "jays-magpies-crows-and-ravens"
+      ],
+      "species": [
+        "andbul1",
+        "andsha1",
+        "andflo1",
+        "olbsun4",
+        "andtre1"
+      ]
+    },
+    {
+      "slug": "canopy-songbirds",
+      "title": {
+        "en": "canopy-songbirds",
+        "nl": "canopy-songbirds"
+      },
+      "groups": [
+        "drongos",
+        "cuckooshrikes",
+        "monarch-flycatchers",
+        "whistlers-and-allies"
+      ],
+      "species": [
+        "anddro1",
+        "andcus1",
+        "blnmon1",
+        "manwhi1"
+      ]
+    },
+    {
+      "slug": "town-and-roadside",
+      "title": {
+        "en": "town-and-roadside",
+        "nl": "town-and-roadside"
+      },
+      "groups": [
+        "starlings-and-mynas",
+        "martins-and-swallows"
+      ],
+      "species": [
+        "hilmyn",
+        "whhsta2",
+        "asgsta1",
+        "pacswa1"
+      ]
+    },
+    {
+      "slug": "eagles-heron-teal",
+      "title": {
+        "en": "eagles-heron-teal",
+        "nl": "eagles-heron-teal"
+      },
+      "groups": [
+        "vultures-hawks-and-allies",
+        "herons-ibis-and-allies",
+        "waterfowl"
+      ],
+      "species": [
+        "anseag1",
+        "wbseag1",
+        "pacreh1",
+        "andtea1"
+      ]
+    },
+    {
+      "slug": "long-billed-waders",
+      "title": {
+        "en": "long-billed-waders",
+        "nl": "long-billed-waders"
+      },
+      "groups": [
+        "shorebirds"
+      ],
+      "species": [
+        "batgod",
+        "gyttat1",
+        "grekno",
+        "beathk1"
+      ]
+    },
+    {
+      "slug": "terns",
+      "title": {
+        "en": "terns",
+        "nl": "terns"
+      },
+      "groups": [
+        "gulls-terns-and-skimmers"
+      ],
+      "species": [
+        "blnter1",
+        "briter1",
+        "lecter2",
+        "brnnod"
+      ]
+    },
+    {
+      "slug": "boobies",
+      "title": {
+        "en": "boobies",
+        "nl": "boobies"
+      },
+      "groups": [
+        "frigatebirds-boobies-and-gannets"
+      ],
+      "species": [
+        "brnboo",
+        "refboo",
+        "masboo"
+      ]
+    },
+    {
+      "slug": "frigatebirds-tropicbirds",
+      "title": {
+        "en": "frigatebirds-tropicbirds",
+        "nl": "frigatebirds-tropicbirds"
+      },
+      "groups": [
+        "frigatebirds-boobies-and-gannets",
+        "tropicbirds"
+      ],
+      "species": [
+        "grefri",
+        "lesfri",
+        "rettro",
+        "whttro"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

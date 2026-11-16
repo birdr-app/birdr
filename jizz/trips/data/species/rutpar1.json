@@ -1,0 +1,22 @@
+{
+  "code": "rutpar1",
+  "name": {
+    "en": "Rufous-throated Partridge",
+    "nl": "Roodkeelbospatrijs"
+  },
+  "latin": "Arborophila rufogularis",
+  "look_for": [
+    {
+      "en": "Orange-rufous **throat** with black speckles",
+      "nl": "Oranjeroestbruine **keel** met zwarte spikkels"
+    },
+    {
+      "en": "Blue-grey **breast**, olive-brown back",
+      "nl": "Blauwgrijze **borst**, olijfbruine rug"
+    },
+    {
+      "en": "Round forest partridge with red legs",
+      "nl": "Rond bospatrijsje met rode poten"
+    }
+  ]
+}

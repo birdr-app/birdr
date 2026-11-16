@@ -1,0 +1,22 @@
+{
+  "code": "bahgoo",
+  "name": {
+    "en": "Bar-headed Goose",
+    "nl": "Indische gans"
+  },
+  "latin": "Anser indicus",
+  "look_for": [
+    {
+      "en": "White **head** with two black bars",
+      "nl": "Witte **kop** met twee zwarte banden"
+    },
+    {
+      "en": "Pale grey body, white stripe down the neck",
+      "nl": "Lichtgrijs lijf, witte streep langs de hals"
+    },
+    {
+      "en": "Yellow bill and legs; flocks fly very high",
+      "nl": "Gele snavel en poten; groepen vliegen erg hoog"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "crebun1",
+  "name": {
+    "en": "Crested Bunting",
+    "nl": "Kuifgors"
+  },
+  "latin": "Melophus lathami",
+  "look_for": [
+    {
+      "en": "Male black with a pointed **crest**",
+      "nl": "Mannetje zwart met een spitse **kuif**"
+    },
+    {
+      "en": "Rufous **wings** and **tail**",
+      "nl": "Roestbruine **vleugels** en **staart**"
+    },
+    {
+      "en": "Female olive-brown, streaked, shorter crest",
+      "nl": "Vrouwtje olijfbruin, gestreept, kortere kuif"
+    }
+  ]
+}

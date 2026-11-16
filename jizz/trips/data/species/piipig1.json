@@ -1,0 +1,22 @@
+{
+  "code": "piipig1",
+  "name": {
+    "en": "Pied Imperial-Pigeon",
+    "nl": "Bonte muskaatduif"
+  },
+  "latin": "Ducula bicolor",
+  "look_for": [
+    {
+      "en": "Large pigeon, white with black **flight feathers**",
+      "nl": "Grote duif, wit met zwarte **slagpennen**"
+    },
+    {
+      "en": "Black band at the **tail** tip",
+      "nl": "Zwarte band aan de **staartpunt**"
+    },
+    {
+      "en": "Flocks fly from island to island",
+      "nl": "Groepen vliegen van eiland naar eiland"
+    }
+  ]
+}

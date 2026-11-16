@@ -1,0 +1,22 @@
+{
+  "code": "anseag1",
+  "name": {
+    "en": "Andaman Serpent-Eagle",
+    "nl": "Andamanenslangenarend"
+  },
+  "latin": "Spilornis elgini",
+  "look_for": [
+    {
+      "en": "Dark brown eagle, spotted **wings** and chest",
+      "nl": "Donkerbruine arend, gevlekte **vleugels** en borst"
+    },
+    {
+      "en": "Bright yellow face and legs",
+      "nl": "Felgeel gezicht en felgele poten"
+    },
+    {
+      "en": "Black-banded **tail**, short chipping whistles",
+      "nl": "Zwart gebandeerde **staart**, korte fluitende tsjips"
+    }
+  ]
+}

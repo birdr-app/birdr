@@ -1,0 +1,22 @@
+{
+  "code": "mowowl1",
+  "name": {
+    "en": "Mottled Wood-Owl",
+    "nl": "Indische bosuil"
+  },
+  "latin": "Strix ocellata",
+  "look_for": [
+    {
+      "en": "Large owl without **ear tufts**, mottled brown",
+      "nl": "Grote uil zonder **oorpluimen**, bruin gevlekt"
+    },
+    {
+      "en": "**Face disc** finely barred black and white",
+      "nl": "**Gezichtsmasker** fijn zwart-wit gebandeerd"
+    },
+    {
+      "en": "Eerie, wavering duet at dusk",
+      "nl": "Spookachtig, trillend duet in de schemering"
+    }
+  ]
+}

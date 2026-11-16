@@ -1,0 +1,22 @@
+{
+  "code": "gotbar2",
+  "name": {
+    "en": "Golden-throated Barbet",
+    "nl": "Goudkeelbaardvogel"
+  },
+  "latin": "Psilopogon franklinii",
+  "look_for": [
+    {
+      "en": "Bright orange-gold **throat**, crimson **forehead**",
+      "nl": "Fel oranjegouden **keel**, karmozijnrood **voorhoofd**"
+    },
+    {
+      "en": "Leaf-green body, black around the **eye**",
+      "nl": "Bladgroen lijf, zwart rond het **oog**"
+    },
+    {
+      "en": "Loud, far-carrying call from high in trees",
+      "nl": "Luide, ver dragende roep hoog uit de bomen"
+    }
+  ]
+}

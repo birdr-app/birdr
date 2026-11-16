@@ -1,0 +1,22 @@
+{
+  "code": "gobful1",
+  "name": {
+    "en": "Golden-breasted Fulvetta",
+    "nl": "Gouden fulvetta"
+  },
+  "latin": "Lioparus chrysotis",
+  "look_for": [
+    {
+      "en": "Orange-yellow breast, grey-black upperparts",
+      "nl": "Oranjegele borst, grijszwarte bovenkant"
+    },
+    {
+      "en": "Yellow and orange patches on blackish **wings**",
+      "nl": "Gele en oranje vlakken op zwartige **vleugels**"
+    },
+    {
+      "en": "Dark head with silvery **ear** patch",
+      "nl": "Donkere kop met zilvergrijze **oorvlek**"
+    }
+  ]
+}

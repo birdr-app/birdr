@@ -1,0 +1,22 @@
+{
+  "code": "babshr1",
+  "name": {
+    "en": "Bay-backed Shrike",
+    "nl": "Bruinrugklauwier"
+  },
+  "latin": "Lanius vittatus",
+  "look_for": [
+    {
+      "en": "Grey crown, black mask, chestnut **back**",
+      "nl": "Grijze kruin, zwart masker, kastanjebruine **rug**"
+    },
+    {
+      "en": "White patch on the black **wing**",
+      "nl": "Witte vlek op de zwarte **vleugel**"
+    },
+    {
+      "en": "Sits on wires and bushes, drops on insects",
+      "nl": "Zit op draden en struiken, duikt op insecten"
+    }
+  ]
+}

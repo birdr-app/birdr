@@ -1,0 +1,22 @@
+{
+  "code": "brodro1",
+  "name": {
+    "en": "Bronzed Drongo",
+    "nl": "Bronsdrongo"
+  },
+  "latin": "Dicrurus aeneus",
+  "look_for": [
+    {
+      "en": "Small drongo, glossy black with bronze sheen",
+      "nl": "Kleine drongo, glanzend zwart met bronsglans"
+    },
+    {
+      "en": "Short, shallow-forked **tail**",
+      "nl": "Korte, ondiep gevorkte **staart**"
+    },
+    {
+      "en": "Catches insects in the air below the canopy",
+      "nl": "Vangt insecten in de lucht onder het bladerdak"
+    }
+  ]
+}

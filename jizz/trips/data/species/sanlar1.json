@@ -1,0 +1,22 @@
+{
+  "code": "sanlar1",
+  "name": {
+    "en": "Sand Lark",
+    "nl": "Indische zandleeuwerik"
+  },
+  "latin": "Alaudala raytal",
+  "look_for": [
+    {
+      "en": "Small, pale sandy lark, streaked **breast**",
+      "nl": "Kleine, lichte zandkleurige leeuwerik, gestreepte **borst**"
+    },
+    {
+      "en": "Short, stubby bill; white-edged tail",
+      "nl": "Korte, stompe snavel; staart met witte rand"
+    },
+    {
+      "en": "Lives on sandbanks and dry riverbeds",
+      "nl": "Leeft op zandbanken en droge rivierbeddingen"
+    }
+  ]
+}

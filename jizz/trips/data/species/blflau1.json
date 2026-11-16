@@ -1,0 +1,22 @@
+{
+  "code": "blflau1",
+  "name": {
+    "en": "Black-faced Laughingthrush",
+    "nl": "Zwartmaskerlijstergaai"
+  },
+  "latin": "Trochalopteron affine",
+  "look_for": [
+    {
+      "en": "Black face, white **moustache** and neck patches",
+      "nl": "Zwart gezicht, witte **snorstreep** en nekvlekken"
+    },
+    {
+      "en": "Golden-green panels on **wing** and tail",
+      "nl": "Goudgroene vlakken op **vleugel** en staart"
+    },
+    {
+      "en": "Dark brown body, scaled pale grey",
+      "nl": "Donkerbruin lijf, lichtgrijs geschubd"
+    }
+  ]
+}

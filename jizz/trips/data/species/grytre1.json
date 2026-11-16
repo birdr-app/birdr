@@ -1,0 +1,22 @@
+{
+  "code": "grytre1",
+  "name": {
+    "en": "Grey Treepie",
+    "nl": "Grijsborstboomekster"
+  },
+  "latin": "Dendrocitta formosae",
+  "look_for": [
+    {
+      "en": "Dark face and throat, grey **head**",
+      "nl": "Donker gezicht en keel, grijze **kop**"
+    },
+    {
+      "en": "Long black **tail**, white **wing** patch",
+      "nl": "Lange zwarte **staart**, witte vlek op de **vleugel**"
+    },
+    {
+      "en": "Brown **back**, grey underparts, rufous **vent**",
+      "nl": "Bruine **rug**, grijze onderzijde, roodbruine **onderstaart**"
+    }
+  ]
+}

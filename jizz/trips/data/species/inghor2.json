@@ -1,0 +1,22 @@
+{
+  "code": "inghor2",
+  "name": {
+    "en": "Indian Grey Hornbill",
+    "nl": "Wigstaarttok"
+  },
+  "latin": "Ocyceros birostris",
+  "look_for": [
+    {
+      "en": "Grey-brown hornbill with a long, white-tipped **tail**",
+      "nl": "Grijsbruine neushoornvogel met een lange **staart** met witte punten"
+    },
+    {
+      "en": "Heavy curved bill topped by a short casque",
+      "nl": "Zware gebogen snavel met een korte helm"
+    },
+    {
+      "en": "Flaps and glides in an undulating flight",
+      "nl": "Klapwiekt en glijdt in een golvende vlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "sibbro2",
+  "name": {
+    "en": "Grey-lored Broadbill",
+    "nl": "Grijsbrauwbreedbek"
+  },
+  "latin": "Serilophus rubropygius",
+  "look_for": [
+    {
+      "en": "Small grey-brown broadbill with a long, black-edged **tail**",
+      "nl": "Kleine grijsbruine breedbek met lange **staart** met zwarte rand"
+    },
+    {
+      "en": "Black **eyebrow** meets behind the head",
+      "nl": "Zwarte **wenkbrauwstreep** loopt door in de nek"
+    },
+    {
+      "en": "Blue and chestnut patches in the wing",
+      "nl": "Blauwe en kastanjebruine vlakken in de vleugel"
+    }
+  ]
+}

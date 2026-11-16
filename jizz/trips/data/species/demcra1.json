@@ -1,0 +1,22 @@
+{
+  "code": "demcra1",
+  "name": {
+    "en": "Demoiselle Crane",
+    "nl": "Jufferkraanvogel"
+  },
+  "latin": "Grus virgo",
+  "look_for": [
+    {
+      "en": "Small, slim crane, grey with black **neck**",
+      "nl": "Kleine, slanke kraanvogel, grijs met zwarte **hals**"
+    },
+    {
+      "en": "White **ear tufts** trail behind the eye",
+      "nl": "Witte **oorpluimen** hangen achter het oog"
+    },
+    {
+      "en": "Winters in big flocks on fields and lakes",
+      "nl": "Overwintert in grote groepen op velden en meren"
+    }
+  ]
+}

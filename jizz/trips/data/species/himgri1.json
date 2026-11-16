@@ -1,0 +1,22 @@
+{
+  "code": "himgri1",
+  "name": {
+    "en": "Himalayan Griffon",
+    "nl": "Himalayagier"
+  },
+  "latin": "Gyps himalayensis",
+  "look_for": [
+    {
+      "en": "Huge pale buff vulture, dark flight feathers",
+      "nl": "Enorme lichtbeige gier, donkere slagpennen"
+    },
+    {
+      "en": "Creamy-white **neck** ruff and pale head",
+      "nl": "Crèmewitte kraag om de **hals** en lichte kop"
+    },
+    {
+      "en": "Broad wings held flat as it soars",
+      "nl": "Brede vleugels plat gehouden tijdens het zweven"
+    }
+  ]
+}

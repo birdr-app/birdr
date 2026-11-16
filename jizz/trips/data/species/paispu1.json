@@ -1,0 +1,22 @@
+{
+  "code": "paispu1",
+  "name": {
+    "en": "Painted Spurfowl",
+    "nl": "Pareldwergfazant"
+  },
+  "latin": "Galloperdix lunulata",
+  "look_for": [
+    {
+      "en": "Male chestnut above, spotted white below",
+      "nl": "Mannetje kastanjebruin boven, wit gespikkeld onder"
+    },
+    {
+      "en": "Female plain dark brown, long **tail**",
+      "nl": "Vrouwtje effen donkerbruin, lange **staart**"
+    },
+    {
+      "en": "Runs over rocks with **tail** cocked",
+      "nl": "Rent over rotsen met opgerichte **staart**"
+    }
+  ]
+}

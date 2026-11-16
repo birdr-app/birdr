@@ -1,0 +1,22 @@
+{
+  "code": "ferduc",
+  "name": {
+    "en": "Ferruginous Duck",
+    "nl": "Witoogeend"
+  },
+  "latin": "Aythya nyroca",
+  "look_for": [
+    {
+      "en": "Rich chestnut duck with a peaked **head**",
+      "nl": "Diep kastanjebruine eend met een puntige **kop**"
+    },
+    {
+      "en": "Bright white **undertail**; male has a white eye",
+      "nl": "Felwitte **onderstaart**; mannetje heeft een witte iris"
+    },
+    {
+      "en": "White belly and wing bar in flight",
+      "nl": "Witte buik en vleugelstreep in de vlucht"
+    }
+  ]
+}

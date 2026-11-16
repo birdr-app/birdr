@@ -1,0 +1,22 @@
+{
+  "code": "himblu1",
+  "name": {
+    "en": "Himalayan Bluetail",
+    "nl": "Himalayablauwstaart"
+  },
+  "latin": "Tarsiger rufilatus",
+  "look_for": [
+    {
+      "en": "Male bright blue above, orange **flanks**",
+      "nl": "Mannetje fel blauw van boven, oranje **flanken**"
+    },
+    {
+      "en": "White throat and belly, short pale **eyebrow**",
+      "nl": "Witte keel en buik, korte bleke **wenkbrauwstreep**"
+    },
+    {
+      "en": "Female greyer; dips **tail** along forest tracks",
+      "nl": "Wijfje grijzer; wipt langzaam met de **staart** langs bospaden"
+    }
+  ]
+}

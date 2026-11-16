@@ -1,0 +1,18 @@
+{
+  "slug": "hypocolius",
+  "about": {
+    "en": "A single species in a family of its own: a slim, soft-feathered grey bird with a long tail and a small crest. It is shy, travels in flocks and feeds mainly on fruit in scrub, palm groves and gardens of dry country, often sitting still and upright in the top of a bush.",
+    "nl": "Eén enkele soort in een eigen familie: een slanke, zachtveerige grijze vogel met een lange staart en een kleine kuif. Hij is schuw, trekt in groepen rond en eet vooral vruchten in struikgewas, palmbosjes en tuinen van droog land. Vaak zit hij stil en rechtop in de top van een struik."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "waxwings"
+      ],
+      "text": {
+        "en": "The shape and soft look recall a waxwing, but it is grey, has no red wax tips on the wings and has a long tail with a dark band near the end.",
+        "nl": "Vorm en zachte uiterlijk doen aan een pestvogel denken, maar hij is grijs, heeft geen rode lakpuntjes aan de vleugels en heeft een lange staart met een donkere band bij het uiteinde."
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "cornut1",
+  "name": {
+    "en": "Corsican Nuthatch",
+    "nl": "Corsicaanse boomklever"
+  },
+  "latin": "Sitta whiteheadi",
+  "look_for": [
+    {
+      "en": "Male: black **cap** and eye-stripe, white eyebrow",
+      "nl": "Mannetje: zwarte **kap** en oogstreep, witte wenkbrauw"
+    },
+    {
+      "en": "Blue-grey back, pale buff underparts, small size",
+      "nl": "Blauwgrijze rug, lichte, bruinige onderkant, klein"
+    },
+    {
+      "en": "Forages high in Corsican pine, often head-down",
+      "nl": "Zoekt hoog in Corsicaanse den, vaak met de kop omlaag"
+    }
+  ]
+}

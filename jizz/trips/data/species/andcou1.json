@@ -1,0 +1,22 @@
+{
+  "code": "andcou1",
+  "name": {
+    "en": "Andaman Coucal",
+    "nl": "Andamanenspoorkoekoek"
+  },
+  "latin": "Centropus andamanensis",
+  "look_for": [
+    {
+      "en": "Fawn-brown body, chestnut **wings**",
+      "nl": "Beigebruin lijf, kastanjebruine **vleugels**"
+    },
+    {
+      "en": "Paler, tawny **head**, not glossy black",
+      "nl": "Lichtere, geelbruine **kop**, niet glanzend zwart"
+    },
+    {
+      "en": "Clambers through thickets and mangroves",
+      "nl": "Klautert door struikgewas en mangroven"
+    }
+  ]
+}

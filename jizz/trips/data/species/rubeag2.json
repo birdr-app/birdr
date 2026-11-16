@@ -1,0 +1,22 @@
+{
+  "code": "rubeag2",
+  "name": {
+    "en": "Rufous-bellied Eagle",
+    "nl": "Roodbuikdwergarend"
+  },
+  "latin": "Lophotriorchis kienerii",
+  "look_for": [
+    {
+      "en": "Small eagle, black above, rufous below",
+      "nl": "Kleine arend, zwart boven, roodbruin onder"
+    },
+    {
+      "en": "White throat with black streaks",
+      "nl": "Witte keel met zwarte strepen"
+    },
+    {
+      "en": "Short **crest**; soars over the canopy",
+      "nl": "Korte **kuif**; zweeft boven de boomtoppen"
+    }
+  ]
+}

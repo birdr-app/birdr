@@ -1,0 +1,22 @@
+{
+  "code": "hypoco1",
+  "name": {
+    "en": "Hypocolius",
+    "nl": "Zijdestaart"
+  },
+  "latin": "Hypocolius ampelinus",
+  "look_for": [
+    {
+      "en": "Slim, silky grey, long **tail**, slight crest",
+      "nl": "Slank, zijdegrijs, lange **staart**, kleine kuif"
+    },
+    {
+      "en": "Male has black **mask** and white-tipped wings",
+      "nl": "Mannetje met zwart **masker** en witgepunte vleugels"
+    },
+    {
+      "en": "Female plain sandy-grey; shy, in flocks",
+      "nl": "Vrouwtje effen zandgrijs; schuw, in groepen"
+    }
+  ]
+}

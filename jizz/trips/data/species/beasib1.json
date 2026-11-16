@@ -1,0 +1,22 @@
+{
+  "code": "beasib1",
+  "name": {
+    "en": "Beautiful Sibia",
+    "nl": "Prachtsibia"
+  },
+  "latin": "Heterophasia pulchella",
+  "look_for": [
+    {
+      "en": "Blue-grey body with a black face mask",
+      "nl": "Blauwgrijs lijf met een zwart gezichtsmasker"
+    },
+    {
+      "en": "Black **wing** coverts, brown tertials",
+      "nl": "Zwarte dekveren op de **vleugel**, bruine tertials"
+    },
+    {
+      "en": "Brown **tail** with broad black band",
+      "nl": "Bruine **staart** met brede zwarte band"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "ricpip1",
+  "name": {
+    "en": "Richard's Pipit",
+    "nl": "Grote pieper"
+  },
+  "latin": "Anthus richardi",
+  "look_for": [
+    {
+      "en": "Large, upright, long-legged pipit",
+      "nl": "Grote, rechtopstaande pieper met lange poten"
+    },
+    {
+      "en": "Streaked **breast**, plain buff belly",
+      "nl": "Gestreepte **borst**, effen buffe buik"
+    },
+    {
+      "en": "Walks fast, stops upright, flies off calling",
+      "nl": "Loopt snel, staat stil rechtop, vliegt roepend weg"
+    }
+  ]
+}

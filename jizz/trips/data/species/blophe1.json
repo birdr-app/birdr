@@ -1,0 +1,22 @@
+{
+  "code": "blophe1",
+  "name": {
+    "en": "Blood Pheasant",
+    "nl": "Bloedfazant"
+  },
+  "latin": "Ithaginis cruentus",
+  "look_for": [
+    {
+      "en": "Small, plump, pale grey pheasant, short **crest**",
+      "nl": "Kleine, gedrongen, lichtgrijze fazant met korte **kuif**"
+    },
+    {
+      "en": "Male has red **face** and red **legs**",
+      "nl": "Haan met rood **gezicht** en rode **poten**"
+    },
+    {
+      "en": "Female plain brown; groups near the snowline",
+      "nl": "Hen egaal bruin; in groepjes bij de sneeuwgrens"
+    }
+  ]
+}

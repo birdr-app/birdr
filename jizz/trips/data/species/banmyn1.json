@@ -1,0 +1,22 @@
+{
+  "code": "banmyn1",
+  "name": {
+    "en": "Bank Myna",
+    "nl": "Oevermaina"
+  },
+  "latin": "Acridotheres ginginianus",
+  "look_for": [
+    {
+      "en": "Dull grey myna with a black **cap**",
+      "nl": "Doffe grijze maina met een zwarte **kap**"
+    },
+    {
+      "en": "Orange-red skin patch behind the eye",
+      "nl": "Oranjerode huidvlek achter het oog"
+    },
+    {
+      "en": "Rusty patch in the wing, pale tail tip",
+      "nl": "Roestkleurige vlek in de vleugel, lichte staartpunt"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "macbus1",
+  "name": {
+    "en": "Asian Houbara",
+    "nl": "Oostelijke kraagtrap"
+  },
+  "latin": "Chlamydotis macqueenii",
+  "look_for": [
+    {
+      "en": "Sandy-brown bustard with white underparts",
+      "nl": "Zandbruine trap met witte onderkant"
+    },
+    {
+      "en": "Black-and-white stripe down the **neck** side",
+      "nl": "Zwart-witte streep langs de **hals**zijde"
+    },
+    {
+      "en": "Runs or crouches; in flight black-and-white **wings**",
+      "nl": "Rent of drukt zich; in de vlucht zwart-witte **vleugels**"
+    }
+  ]
+}

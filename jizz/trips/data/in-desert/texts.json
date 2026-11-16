@@ -1,0 +1,215 @@
+{
+  "country": "IN-DESERT",
+  "intro": {
+    "en": "This pack covers the dry west of India: the Rann of Kutch and the Banni grasslands, the blackbuck plains of Velavadar, the flamingo lakes, the Gulf of Kutch coast and the Thar desert from Jaisalmer to Bikaner. Winter, from November to February, is the time to come. Its 76 birds come on top of the India trip and are mostly desert larks, wheatears, sandgrouse, bustards, harriers and the waders and terns of the coast.",
+    "nl": "Dit pakket gaat over het droge westen van India: de Rann van Kutch en de graslanden van Banni, de zwarte antilopevlakten van Velavadar, de flamingomeren, de kust van de Golf van Kutch en de Thar-woestijn van Jaisalmer tot Bikaner. De winter, van november tot februari, is de tijd om te komen. De 76 vogels komen bovenop de reis door India en zijn vooral woestijnleeuweriken, tapuiten, zandhoenders, trappen, kiekendieven en de steltlopers en sterns van de kust."
+  },
+  "units": {
+    "bustards-and-crane": {
+      "title": {
+        "en": "Bustards and the Demoiselle Crane",
+        "nl": "Trappen en de jufferkraanvogel"
+      },
+      "intro": {
+        "en": "The big birds of open grassland and dry plains. The Great Indian Bustard is one of the rarest birds in the country and survives in only a few reserves on the edge of the Thar, so a sighting is a stroke of luck. The Lesser Florican comes with the monsoon, and the Demoiselle Crane winters in flocks on fields and lakes.",
+        "nl": "De grote vogels van open grasland en droge vlakten. De Grote Indische trap is een van de zeldzaamste vogels van het land en leeft nog maar in een paar reservaten aan de rand van de Thar, dus een waarneming is een meevaller. De Kleine Indische trap komt met de moesson en de jufferkraanvogel overwintert in groepen op akkers en meren."
+      }
+    },
+    "sandgrouse": {
+      "title": {
+        "en": "Sandgrouse",
+        "nl": "Zandhoenders"
+      },
+      "intro": {
+        "en": "Pigeon-like birds of dry country with pointed wings and a fast, direct flight. They sit hidden on bare ground by day and fly in to water in flocks, often at dawn, and their calls give them away before you see them. Look at belly, throat and tail shape to tell the three apart.",
+        "nl": "Duifachtige vogels van droog land met puntige vleugels en een snelle, rechte vlucht. Overdag zitten ze verborgen op kale grond en 's ochtends vliegen ze in groepen naar het water, en hun roep verraadt ze voordat je ze ziet. Let op buik, keel en staartvorm om de drie uit elkaar te houden."
+      }
+    },
+    "coursers-and-pratincoles": {
+      "title": {
+        "en": "Coursers and pratincoles",
+        "nl": "Renvogels en vorkstaartplevieren"
+      },
+      "intro": {
+        "en": "Long-legged birds of dry, bare ground that run more than they fly. The coursers hunt insects on dry fields and stony flats, and the pratincoles hawk over open ground and water like swallows with a wader's legs. In flight the rump and the wing pattern separate them.",
+        "nl": "Langbenige vogels van droge, kale grond die meer rennen dan vliegen. De renvogels jagen op insecten op droge velden en stenige vlakten, en de vorkstaartplevieren jagen boven open grond en water als zwaluwen met de poten van een steltloper. In de vlucht onderscheiden stuit en vleugeltekening ze."
+      }
+    },
+    "quails": {
+      "title": {
+        "en": "Quails of grass and fields",
+        "nl": "Kwartels van gras en akkers"
+      },
+      "intro": {
+        "en": "Two small, round ground birds that you usually flush by accident. The Rain Quail comes with the monsoon to grassland and the Common Quail visits fields in winter. A Rain Quail male has black on the throat and chest, and calls at dawn help to find them.",
+        "nl": "Twee kleine, ronde grondvogels die je meestal per ongeluk opjaagt. De regenkwartel komt met de moesson naar grasland en de kwartel bezoekt in de winter akkers. Een mannetje regenkwartel heeft zwart op keel en borst, en de roep bij zonsopgang helpt om ze te vinden."
+      }
+    },
+    "desert-larks": {
+      "title": {
+        "en": "Larks of the desert",
+        "nl": "Leeuweriken van de woestijn"
+      },
+      "intro": {
+        "en": "Larks do well on open ground, so desert country holds many. Here are the big hoopoe-lark with its curved bill and pied wings, plain sandy larks of stony ground and the finch-like sparrow-lark. Look at the bill, the marks on the breast and the wing pattern.",
+        "nl": "Leeuweriken doen het goed op open grond, dus woestijnland heeft er veel. Hier de grote witbandleeuwerik met zijn gebogen snavel en zwart-witte vleugels, effen zandkleurige leeuweriken van stenige grond en de vinkachtige vinkleeuwerik. Let op de snavel, de tekening op de borst en de vleugeltekening."
+      }
+    },
+    "wheatears": {
+      "title": {
+        "en": "Wheatears",
+        "nl": "Tapuiten"
+      },
+      "intro": {
+        "en": "Wheatears perch on rocks, mounds and wires and drop to the ground for insects. Males are black, white or rufous, and the pattern of rump and tail tells the species apart. All four spend the winter in the Thar and Kutch, from October.",
+        "nl": "Tapuiten zitten op rotsen, heuveltjes en draden en laten zich vallen voor insecten. De mannetjes zijn zwart, wit of roestbruin, en de tekening van stuit en staart onderscheidt de soorten. Alle vier overwinteren in de Thar en Kutch, vanaf oktober."
+      }
+    },
+    "scrub-birds": {
+      "title": {
+        "en": "Birds of the dry scrub",
+        "nl": "Vogels van het droge struweel"
+      },
+      "intro": {
+        "en": "Small birds of thorn scrub and dry gardens. The Asian Desert Warbler and the Rufous-fronted Prinia skulk low and flick their tails, and the Rufous-tailed Scrub Robin hops over the ground with its tail cocked. The Hypocolius is a winter visitor that feeds on fruit in flocks.",
+        "nl": "Kleine vogels van doornstruweel en droge tuinen. De Aziatische woestijngrasmus en de Roodkruinprinia sluipen laag door het struikgewas en flappen met de staart, en de Rosse waaierstaart hipt met opgerichte staart over de grond. De Zijdestaart is een wintergast die in groepen vruchten eet."
+      }
+    },
+    "perches": {
+      "title": {
+        "en": "Shrikes, raven and woodpecker",
+        "nl": "Klapeksters, raaf en specht"
+      },
+      "intro": {
+        "en": "Birds that watch from posts, wires and bare branches. Two shrikes winter here, each with a dark mask and a hooked bill. The Common Raven is a heavy desert crow, the European Bee-eater passes through on migration and the Sind Woodpecker is a pied woodpecker of thorn scrub and palms.",
+        "nl": "Vogels die vanaf palen, draden en kale takken uitkijken. Twee klauwieren overwinteren hier, allebei met een donker masker en een haaksnavel. De Raaf is een zware kraai van het woestijnland, de Bijeneter trekt hier door en de Tamariskspecht is een zwart-witte specht van doornstruweel en palmen."
+      }
+    },
+    "sparrows-buntings": {
+      "title": {
+        "en": "Sparrows, buntings and a pipit",
+        "nl": "Mussen, gorzen en een pieper"
+      },
+      "intro": {
+        "en": "Small seed-eaters of dry fields, rocks and villages. The Rock Sparrow and the Spanish Sparrow winter here, the Trumpeter Finch is a stubby-billed desert finch and the Striolated Bunting lives on rocky hills. Richard's Pipit walks upright on fallow land.",
+        "nl": "Kleine zaadeters van droge velden, rotsen en dorpen. De Rotsmus en de Spaanse mus overwinteren hier, de Woestijnvink is een dikbekkige woestijnvink en de Gestreepte gors leeft op rotsachtige heuvels. De Grote pieper loopt rechtop over braakliggend land."
+      }
+    },
+    "harriers-and-owls": {
+      "title": {
+        "en": "Harriers and owls of the grassland",
+        "nl": "Kiekendieven en uilen van het grasland"
+      },
+      "intro": {
+        "en": "Birds that quarter open grassland. Harriers glide low with their wings held in a shallow V, and in winter they gather to roost on the ground in the grass, as at Velavadar. The Short-eared Owl hunts over the same grass, often in daylight, and the Little Owl sits on rocks and walls in dry country.",
+        "nl": "Vogels die open grasland afzoeken. Kiekendieven zweven laag met de vleugels in een ondiepe V, en in de winter slapen ze in groepen op de grond in het gras, zoals bij Velavadar. De Velduil jaagt boven hetzelfde gras, vaak overdag, en de Steenuil zit op rotsen en muren in droog land."
+      }
+    },
+    "vultures-and-falcons": {
+      "title": {
+        "en": "Vultures and small falcons",
+        "nl": "Gieren en kleine valken"
+      },
+      "intro": {
+        "en": "Raptors of the winter months. The Griffon Vulture and the huge Cinereous Vulture come from the north to feed on dead animals in dry country, while the Lesser Kestrel and the Merlin chase insects and small birds. Look at the colour and the pointed wings of the falcons.",
+        "nl": "Roofvogels van de wintermaanden. De Vale gier en de enorme Monniksgier komen uit het noorden om dode dieren in droog land te eten, terwijl de Kleine torenvalk en het Smelleken achter insecten en kleine vogels aan zitten. Let op de kleur en de puntige vleugels van de valken."
+      }
+    },
+    "flamingos-and-wetland": {
+      "title": {
+        "en": "Flamingos and winter waterbirds",
+        "nl": "Flamingo's en wintergasten van het water"
+      },
+      "intro": {
+        "en": "Shallow lakes and salt pans fill with winter birds. Lesser Flamingos feed in thousands on salt lakes and mudflats, as at Sambhar Lake and the Gulf of Kutch. The Dalmatian Pelican, the White Stork, the Common Shelduck and the Fulvous Whistling-Duck use the same water.",
+        "nl": "Ondiepe meren en zoutpannen lopen vol met wintergasten. Kleine flamingo's foerageren met duizenden op zoutmeren en slikken, zoals bij Sambhar Lake en de Golf van Kutch. De Kroeskoppelikaan, de Ooievaar, de Bergeend en de Rosse fluiteend gebruiken hetzelfde water."
+      }
+    },
+    "reef-herons": {
+      "title": {
+        "en": "Reef-heron, Crab-Plover and skimmer",
+        "nl": "Rifreiger, krabplevier en schaarbek"
+      },
+      "intro": {
+        "en": "Birds of the Gulf of Kutch shore and the coast. The Western Reef-Heron feeds in tidal shallows in a dark and a white form, and the Crab-Plover is a black-and-white wader with a heavy bill that eats crabs. The Indian Skimmer is a rare bird of rivers and estuaries, with an orange bill that cuts through the water.",
+        "nl": "Vogels van de kust van de Golf van Kutch. De westelijke rifreiger foerageert in getijdenondiepten, in een donkere en een witte vorm, en de krabplevier is een zwart-witte steltloper met een zware snavel die krabben eet. De Indische schaarbek is een zeldzame vogel van rivieren en estuaria, met een oranje snavel die door het water snijdt."
+      }
+    },
+    "big-gulls-terns": {
+      "title": {
+        "en": "Gulls and big terns",
+        "nl": "Meeuwen en grote sterns"
+      },
+      "intro": {
+        "en": "The big gulls and terns of the coast and large lakes. Pallas's Gull is huge with a yellow bill and the Lesser Black-backed Gull has dark grey wings. The Caspian Tern shows a heavy red bill, the Great Crested Tern a shaggy black crest. Check the bill colour and the head pattern.",
+        "nl": "De grote meeuwen en sterns van de kust en grote meren. De Reuzenzwartkopmeeuw is enorm met een gele snavel en de Kleine mantelmeeuw heeft donkergrijze vleugels. De Reuzenstern heeft een zware rode snavel, de Grote kuifstern een warrige zwarte kuif. Let op de kleur van de snavel en de kop."
+      }
+    },
+    "small-terns": {
+      "title": {
+        "en": "Terns of the coast",
+        "nl": "Sterns van de kust"
+      },
+      "intro": {
+        "en": "Smaller terns that dive from the air along creeks, beaches and salt pans. Check the bill colour first and then the tail streamers. Saunders's Tern is a tiny version, and the Roseate Tern has the longest tail streamers.",
+        "nl": "Kleinere sterns die vanuit de lucht duiken langs kreken, stranden en zoutpannen. Kijk eerst naar de kleur van de snavel en daarna naar de staartpluimen. De Saunders' dwergstern is een heel klein exemplaar en de Dougalls stern heeft de langste staartpluimen."
+      }
+    },
+    "plovers": {
+      "title": {
+        "en": "Plovers and lapwings",
+        "nl": "Plevieren en kieviten"
+      },
+      "intro": {
+        "en": "Round-headed waders with short bills that run, stop and pick. The Pacific Golden Plover and the Grey Plover stand on mudflats, the Greater Sand Plover feeds along the tideline and the Northern Lapwing visits fields. The Sociable Lapwing is critically endangered and a rare winter visitor.",
+        "nl": "Waders met een ronde kop en een korte snavel die rennen, stilstaan en pikken. De Aziatische goudplevier en de Zilverplevier staan op slikken, de Woestijnplevier foerageert langs de vloedlijn en de Kievit bezoekt akkers. De Steppekievit is ernstig bedreigd en een zeldzame wintergast."
+      }
+    },
+    "small-sandpipers": {
+      "title": {
+        "en": "Small sandpipers on the mud",
+        "nl": "Kleine strandlopers op de modder"
+      },
+      "intro": {
+        "en": "Flocks of small waders feed fast on mudflats and shores, probing the mud. Dunlin and Curlew Sandpiper have a downcurved bill, the Curlew Sandpiper more so. The Sanderling runs along the water's edge, the Red-necked Stint is tiny and the Broad-billed Sandpiper has a double eyebrow.",
+        "nl": "Groepen kleine steltlopers foerageren snel op slikken en oevers en steken in de modder. De Bonte strandloper en de Krombekstrandloper hebben een naar beneden gebogen snavel, de Krombek het sterkst. De Drieteenstrandloper rent langs de waterrand, de Roodkeelstrandloper is piepklein en de Breedbekstrandloper heeft een dubbele wenkbrauwstreep."
+      }
+    },
+    "big-waders": {
+      "title": {
+        "en": "Whimbrel and other big waders",
+        "nl": "Regenwulp en andere grote steltlopers"
+      },
+      "intro": {
+        "en": "Big waders of the tidal flats. The whimbrel has a curved bill and a striped crown, and the Terek Sandpiper an upturned bill and orange legs. The Ruddy Turnstone flips stones, and the Eurasian Oystercatcher is black and white with a red bill.",
+        "nl": "Grote steltlopers van de getijdenvlakten. De regenwulp heeft een gebogen snavel en een gestreepte kruin en de terekruiter een opwaartse snavel en oranje poten. De steenloper keert stenen om en de scholekster is zwart-wit met een rode snavel."
+      }
+    }
+  },
+  "species": {
+    "indbus1": {
+      "here": {
+        "en": "Desert National Park near Jaisalmer is the last good place, and the bird is very rare.",
+        "nl": "Het Desert National Park bij Jaisalmer is de laatste goede plek, en de vogel is zeer zeldzaam."
+      }
+    },
+    "hypoco1": {
+      "here": {
+        "en": "A regular winter visitor to the bushes of Kutch and Jamnagar.",
+        "nl": "Een vaste wintergast in de struiken van Kutch en Jamnagar."
+      }
+    },
+    "sheowl": {
+      "here": {
+        "en": "Look over the grassland at Velavadar, where it hunts in the late afternoon.",
+        "nl": "Zoek boven het grasland van Velavadar, waar hij aan het eind van de middag jaagt."
+      }
+    },
+    "lesfla1": {
+      "here": {
+        "en": "Sambhar Lake, Nalsarovar and the Gulf of Kutch mudflats hold thousands in winter.",
+        "nl": "Sambhar Lake, Nalsarovar en de slikken van de Golf van Kutch houden 's winters duizenden vast."
+      }
+    }
+  }
+}

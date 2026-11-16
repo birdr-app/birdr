@@ -1,0 +1,22 @@
+{
+  "code": "buglio1",
+  "name": {
+    "en": "Bugun Liocichla",
+    "nl": "Buguntimalia"
+  },
+  "latin": "Liocichla bugunorum",
+  "look_for": [
+    {
+      "en": "Olive-grey bird with a black **cap**",
+      "nl": "Olijfgrijze vogel met een zwarte **kap**"
+    },
+    {
+      "en": "Orange-yellow patch between eye and bill",
+      "nl": "Oranjegele vlek tussen oog en snavel"
+    },
+    {
+      "en": "Yellow, red and white patches in the wing",
+      "nl": "Gele, rode en witte vlekken in de vleugel"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "merlin",
+  "name": {
+    "en": "Merlin",
+    "nl": "Smelleken"
+  },
+  "latin": "Falco columbarius",
+  "look_for": [
+    {
+      "en": "Small, compact falcon with pointed **wings**",
+      "nl": "Kleine, gedrongen valk met puntige **vleugels**"
+    },
+    {
+      "en": "Male blue-grey above; female brown, streaked below",
+      "nl": "Mannetje blauwgrijs boven; vrouwtje bruin, gestreept onder"
+    },
+    {
+      "en": "Dashes low over fields after small birds",
+      "nl": "Schiet laag over velden achter kleine vogels aan"
+    }
+  ]
+}

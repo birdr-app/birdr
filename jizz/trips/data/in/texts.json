@@ -1,0 +1,1054 @@
+{
+  "country": "IN",
+  "intro": {
+    "en": "India holds more than a thousand bird species, and a first trip usually follows the north: the parks of Delhi, the Yamuna at Agra, the wetlands of Keoladeo at Bharatpur, and the dry forests of Ranthambore and the Corbett lowlands. The best months are November to March, when the weather is cool and winter visitors fill every lake and field. This trip covers 277 of the birds you are most likely to meet, plus 4 birds found nowhere else.",
+    "nl": "India telt meer dan duizend vogelsoorten, en een eerste reis volgt meestal het noorden: de parken van Delhi, de Yamuna bij Agra, de wetlands van Keoladeo bij Bharatpur en de droge bossen van Ranthambore en de laaglanden bij Corbett. De beste maanden zijn november tot en met maart, als het weer koel is en wintergasten elk meer en elk veld vullen. Deze reis omvat 277 van de vogels die je het meest waarschijnlijk tegenkomt, plus 4 vogels die nergens anders leven."
+  },
+  "groups": {
+    "waterfowl": {
+      "here": {
+        "en": "Eighteen ducks and geese are on this trip. Lesser Whistling-Duck, Indian Spot-billed Duck and Cotton Pygmy-Goose stay all year on village ponds and marshes, while the rest arrive in winter by the thousand at Keoladeo, Sultanpur and the lakes along the Yamuna.",
+        "nl": "Deze reis omvat achttien eenden en ganzen. De Indische fluiteend, de Indische vlekbekeend en de coromandeleend blijven het hele jaar op dorpsvijvers en in moerassen, de rest komt in de winter bij duizenden naar Keoladeo, Sultanpur en de meren langs de Yamuna."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "here": {
+        "en": "Seven ground birds. The Indian Peafowl is everywhere, Grey Francolin calls from field edges and village scrub, and the junglefowl and spurfowl live in dry forest such as Ranthambore and the Corbett foothills.",
+        "nl": "Zeven grondvogels. De blauwe pauw is overal, de grijze frankolijn roept vanaf akkerranden en dorpsstruweel, en de bankivahoenders, sonnerathoenders en dwergfazanten leven in droog bos zoals Ranthambore en de uitlopers bij Corbett."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "Eight pigeons and doves. Rock Dove, Spotted Dove, Laughing Dove and Eurasian Collared-Dove live around houses and fields, while the Yellow-footed Green-Pigeon feeds high in fruiting fig trees.",
+        "nl": "Acht duiven. De rotsduif, de parelhalstortel, de palmtortel en de Turkse tortel leven bij huizen en velden, terwijl de geelpootpapegaaiduif hoog in vruchtdragende vijgenbomen eet."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "Five cuckoos on this trip. The Asian Koel and Greater Coucal are heard in every garden and village, and the Common Hawk-Cuckoo is the bird behind the endless rising whistle of the hot season.",
+        "nl": "Vijf koekoeken in deze reis. De Indische koël en de Chinese spoorkoekoek hoor je in elke tuin en elk dorp, en de Indische sperwerkoekoek is de vogel achter het eindeloze stijgende gefluit van het hete seizoen."
+      }
+    },
+    "nightjars": {
+      "here": {
+        "en": "One nightjar, the Indian Nightjar, which sits on bare ground or tracks at dusk and is easy to spot in a headlight.",
+        "nl": "Eén nachtzwaluw, de Hindoenachtzwaluw, die in de schemering op kale grond of paden zit en gemakkelijk te vinden is in een koplamp."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "Two swifts, both small and common. Little Swift nests on buildings in towns, Asian Palm Swift circles above palms and old trees.",
+        "nl": "Twee gierzwaluwen, allebei klein en algemeen. De huisgierzwaluw nestelt op gebouwen in steden, de Aziatische palmgierzwaluw cirkelt boven palmen en oude bomen."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Five waterbirds of reedy ponds. White-breasted Waterhen walks out on lawns and roadsides in the open, Grey-headed Swamphen and the coots and moorhens swim in the marsh, and the Ruddy-breasted Crake stays hidden.",
+        "nl": "Vijf waterkippen van rietrijke vijvers. Het witborstwaterhoen loopt in het open op gazons en langs wegen, de grijskoppurperkoet, de meerkoet en het waterhoen zwemmen in het moeras, en het bruin porseleinhoen houdt zich verborgen."
+      }
+    },
+    "cranes": {
+      "here": {
+        "en": "Two cranes. The Sarus Crane lives in pairs on farmland and wetlands all year, and the Common Crane comes in winter, mainly to Rajasthan and the north-west.",
+        "nl": "Twee kraanvogels. De saruskraanvogel leeft het hele jaar in paren op akkers en in wetlands, en de kraanvogel komt in de winter, vooral naar Rajasthan en het noordwesten."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "Twenty-eight waders and their relatives, the biggest group on the trip. Red-wattled Lapwing and Indian Thick-knee stay all year near villages and fields, the jacanas live on lily ponds, and most of the sandpipers, stints and snipes are winter visitors on muddy shores.",
+        "nl": "Achtentwintig steltlopers en verwanten, de grootste groep van de reis. De Indische kievit en de Indische griel blijven het hele jaar bij dorpen en velden, de jaçana's leven op lelievijvers, en de meeste ruiters, strandlopers en snippen zijn wintergasten op modderige oevers."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Six gulls and terns, all of inland water. River Tern and Whiskered Tern work lakes and rivers all year, and the gulls arrive in winter.",
+        "nl": "Zes meeuwen en sterns, allemaal van binnenwater. De rivierstern en de witwangstern vissen het hele jaar op meren en rivieren, de meeuwen komen in de winter."
+      }
+    },
+    "flamingos": {
+      "here": {
+        "en": "The Greater Flamingo, a pink wader in shallow lakes. Look for it at Sultanpur and the big salt lakes of Rajasthan, usually in winter.",
+        "nl": "De flamingo, een roze steltloper in ondiepe meren. Zoek hem bij Sultanpur en de grote zoutmeren van Rajasthan, meestal in de winter."
+      }
+    },
+    "grebes": {
+      "here": {
+        "en": "Two grebes: the Little Grebe, common on every pond, and the larger Great Crested Grebe, a winter bird of bigger lakes.",
+        "nl": "Twee futen: de dodaars, algemeen op elke vijver, en de grotere fuut, een wintervogel van grotere meren."
+      }
+    },
+    "storks": {
+      "here": {
+        "en": "Five storks. Painted Stork and Asian Openbill nest in colonies at Keoladeo and feed on every wetland, the Asian Woolly-necked Stork hunts quietly in fields and marsh edges, and the Black-necked Stork is the tall rarity.",
+        "nl": "Vijf ooievaars. De Indische nimmerzat en de Indische gaper nestelen in kolonies bij Keoladeo en foerageren in elke wetland, de bisschopsooievaar jaagt rustig in velden en moerasranden, en de zwarthalsooievaar is de lange zeldzaamheid."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "Four fish-eaters of pools and rivers. Little Cormorant is on almost every pond, and the Oriental Darter swims with only its snake-like neck above water.",
+        "nl": "Vier viseters van poelen en rivieren. De Indische dwergaalscholver zit op bijna elke vijver, en de Indische slangenhalsvogel zwemt met alleen zijn slangachtige hals boven water."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Twelve herons, egrets, ibises and a spoonbill. Eastern Cattle-Egret and Indian Pond Heron are in every paddy and ditch, and Keoladeo is the place to see the big mixed colonies.",
+        "nl": "Twaalf reigers, zilverreigers, ibissen en een lepelaar. De oostelijke koereiger en de Indische ralreiger zitten in elke rijstakker en sloot, en Keoladeo is de plek voor de grote gemengde kolonies."
+      }
+    },
+    "pelicans": {
+      "here": {
+        "en": "Two pelicans: the Spot-billed Pelican, a resident of big lakes, and the Great White Pelican, which visits in winter.",
+        "nl": "Twee pelikanen: de grijze pelikaan, een standvogel van grote meren, en de roze pelikaan, die in de winter op bezoek komt."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "Twenty-six birds of prey, the second biggest group. Black Kite and Brahminy Kite are over every town and river, the vultures gather at carcasses, and winter brings eagles and harriers from the north to the open country around Bharatpur and Delhi.",
+        "nl": "Zesentwintig roofvogels, de tweede grote groep. De zwarte wouw en de Brahmaanse wouw vliegen boven elke stad en rivier, de gieren verzamelen zich bij kadavers, en de winter brengt arenden en kiekendieven uit het noorden naar het open land rond Bharatpur en Delhi."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "Six owls. Spotted Owlet sits at the entrance of holes in every town, and the big eagle-owls and the Brown Fish-Owl are the rewards of guided walks in old trees and rocky gorges.",
+        "nl": "Zes uilen. De Brahmaanse uil zit bij het gat van elke stad, en de grote oehoes en de bruine visuil zijn de beloning van begeleide wandelingen langs oude bomen en rotskloven."
+      }
+    },
+    "hoopoes": {
+      "here": {
+        "en": "The Common Hoopoe walks on lawns and fields across the north, with its crest folded flat until it lands.",
+        "nl": "De hop loopt over gazons en velden in het hele noorden, met een plat gevouwen kuif tot hij landt."
+      }
+    },
+    "hornbills": {
+      "here": {
+        "en": "One hornbill, the Indian Grey Hornbill, in tall trees of towns, temples and forest, easy to hear and see.",
+        "nl": "Eén neushoornvogel, de wigstaarttok, in hoge bomen van steden, tempels en bos, gemakkelijk te horen en te zien."
+      }
+    },
+    "bee-eaters": {
+      "here": {
+        "en": "Three bee-eaters, slim and green. Asian Green Bee-eater sits on wires in every field, while the Blue-tailed and Blue-cheeked Bee-eaters are visitors with a blue-green tone.",
+        "nl": "Drie bijeneters, slank en groen. De Indische groene bijeneter zit op draden bij elk veld, terwijl de blauwstaartbijeneter en de groene bijeneter bezoekers zijn met een blauwgroene tint."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "Four kingfishers. White-throated Kingfisher is far from water as often as near it, Pied Kingfisher hovers over pools, and the Stork-billed Kingfisher fishes in wooded streams.",
+        "nl": "Vier ijsvogels. De smyrnaijsvogel zit net zo vaak ver van water als erbij, de bonte ijsvogel bidt boven vijvers, en de ooievaarsbekijsvogel vist in beboste beken."
+      }
+    },
+    "rollers-and-allies": {
+      "here": {
+        "en": "Two rollers. The Indian Roller is the blue bird on every wire and fence post, and the European Roller passes through on migration.",
+        "nl": "Twee scharrelaars. De Indische scharrelaar is de blauwe vogel op elke draad en hekpaal, en de scharrelaar trekt door op doortrek."
+      }
+    },
+    "barbets-and-toucans": {
+      "here": {
+        "en": "Three barbets. The Coppersmith Barbet's metronome call is heard all day, and the larger Brown-headed and Lineated Barbets sit in fig trees in gardens and forest edges.",
+        "nl": "Drie baardvogels. De metronoomroep van de koperslager klinkt de hele dag, en de grotere bruinkopbaardvogel en gestreepte baardvogel zitten in vijgenbomen in tuinen en aan boszomen."
+      }
+    },
+    "woodpeckers": {
+      "here": {
+        "en": "Seven woodpeckers. Black-rumped Flameback and Brown-capped Pygmy Woodpecker are in Delhi gardens, and the forest birds are easier at Ranthambore and Corbett.",
+        "nl": "Zeven spechten. De kleine goudrugspecht en de Indiase specht zitten in tuinen in Delhi, en de bosvogels zijn makkelijker bij Ranthambore en Corbett."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "Four falcons. The Common Kestrel hovers over fields in winter, and the Laggar and Peregrine Falcons hunt birds in open country and around tall buildings.",
+        "nl": "Vier valken. De torenvalk bidt in de winter boven velden, en de Indische lannervalk en de slechtvalk jagen op vogels in open land en bij hoge gebouwen."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "Three parakeets, all noisy and green. Ring-necked Parakeet is the common one, Plum-headed Parakeet prefers wooded country, and Alexandrine is the big one.",
+        "nl": "Drie parkieten, allemaal luidruchtig en groen. De halsbandparkiet is de gewone, de pruimkopparkiet verkiest bosrijk land, en de grote alexanderparkiet is de grote."
+      }
+    },
+    "old-world-pittas": {
+      "here": {
+        "en": "One pitta, the Indian Pitta, a summer visitor to dry forest and scrub that is hard to find in winter.",
+        "nl": "Eén pitta, de negenkleurige pitta, een zomergast van droog bos en struweel die in de winter moeilijk te vinden is."
+      }
+    },
+    "cuckooshrikes": {
+      "here": {
+        "en": "Four birds of the treetops. The Small Minivet and the Scarlet Minivet move in flocks through woodland, the two cuckooshrikes work the canopy alone or in pairs.",
+        "nl": "Vier vogels van de boomtoppen. De kleine menievogel en de scharlaken menievogel trekken in groepen door bos, de twee rupsvogels werken alleen of in paren in het bladerdak."
+      }
+    },
+    "old-world-orioles": {
+      "here": {
+        "en": "Two orioles: the Indian Golden Oriole, with its flute-like song, and the Black-hooded Oriole, which is common in gardens and groves.",
+        "nl": "Twee wielewalen: de Indiase wielewaal, met zijn fluitende lied, en de zwartkopwielewaal, die algemeen is in tuinen en bosjes."
+      }
+    },
+    "vangas-helmetshrikes-and-allies": {
+      "here": {
+        "en": "Two woodland birds: the Common Woodshrike and the Bar-winged Flycatcher-shrike, both easy to miss in tree canopies.",
+        "nl": "Twee bosvogels: de kleine rupsklauwier en de bonte dwergtriller, allebei gemakkelijk te missen in boomkronen."
+      }
+    },
+    "ioras": {
+      "here": {
+        "en": "The Common Iora, a small yellow-and-green bird of gardens and woodland that fluffs up its rump feathers in display.",
+        "nl": "De gewone iora, een klein geelgroen vogeltje van tuinen en bos dat tijdens de baltsvlucht zijn stuitveren opzet."
+      }
+    },
+    "fantails": {
+      "here": {
+        "en": "Two fantails. White-browed Fantail dances through Delhi gardens, and the Spot-breasted Fantail is the rarer bird of dry hills.",
+        "nl": "Twee waaierstaartjes. De Indische waaierstaart danst door tuinen in Delhi, en de witvlekwaaierstaart is de schaarsere vogel van droge heuvels."
+      }
+    },
+    "drongos": {
+      "here": {
+        "en": "Four drongos and a flycatcher. Black Drongo sits on every wire and chases crows and kites, and the Indian Paradise-Flycatcher is the white bird with the long tail ribbons in woods.",
+        "nl": "Vier drongo's en een vliegenvanger. De koningsdrongo zit op elke draad en jaagt kraaien en wouwen weg, en de Indische paradijsmonarch is de witte vogel met lange staartlinten in bossen."
+      }
+    },
+    "monarch-flycatchers": {
+      "here": {
+        "en": "The Indian Paradise-Flycatcher. Males are white with a very long tail, while females and young males are rufous.",
+        "nl": "De Indische paradijsmonarch. Mannetjes zijn wit met een zeer lange staart, vrouwtjes en jonge mannetjes zijn roestkleurig."
+      }
+    },
+    "shrikes": {
+      "here": {
+        "en": "Five shrikes, the bandits of wires and bushes. Long-tailed Shrike and Bay-backed Shrike stay all year, while the Brown, Isabelline and Great Grey Shrikes are visitors.",
+        "nl": "Vijf klauwieren, de bandieten van draden en struiken. De langstaartklauwier en de bruinrugklauwier blijven het hele jaar, terwijl de bruine, de daurische en de klapekster bezoekers zijn."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "Three crows and relatives. House Crow and Large-billed Crow are everywhere, and the Rufous Treepie is the long-tailed bird of scrub and gardens.",
+        "nl": "Drie kraaiachtigen. De huiskraai en de dikbekkraai zijn overal, en de rosse boomekster is de langstaartige vogel van struweel en tuinen."
+      }
+    },
+    "tits-chickadees-and-titmice": {
+      "here": {
+        "en": "The Asian Tit, a neat black-and-white tit of woods and gardens, often in mixed flocks.",
+        "nl": "De grijze koolmees, een nette zwart-witte mees van bossen en tuinen, vaak in gemengde groepen."
+      }
+    },
+    "larks": {
+      "here": {
+        "en": "Six larks of open ground. Ashy-crowned Sparrow-Lark and Crested Lark are common around fields and tracks, and the others are winter birds or specialities of drier country.",
+        "nl": "Zes leeuweriken van open grond. De grijskruinvinkleeuwerik en de kuifleeuwerik zijn algemeen rond velden en paden, en de andere zijn wintervogels of specialiteiten van droger land."
+      }
+    },
+    "cisticolas-and-allies": {
+      "here": {
+        "en": "Seven small birds of scrub and grass. Common Tailorbird and Ashy Prinia are in every garden, and the other prinias are best found in grass and reeds by their songs.",
+        "nl": "Zeven kleine vogels van struweel en gras. De langstaartsnijdervogel en de grijze prinia zitten in elke tuin, en de andere prinia's vind je het best in gras en riet aan hun zang."
+      }
+    },
+    "reed-warblers-and-allies": {
+      "here": {
+        "en": "Four warblers of reeds and scrub, most of them winter visitors. They skulk, so listen for their songs and follow the sound to the reed edge.",
+        "nl": "Vier zangers van riet en struweel, de meeste wintergasten. Ze sluipen, dus luister naar hun zang en loop op het geluid af naar de rietrand."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "Three swallows. Barn Swallow is a winter visitor in huge numbers, Wire-tailed Swallow nests under bridges, and the Eastern Red-rumped Swallow is easy to spot by its rusty rump.",
+        "nl": "Drie zwaluwen. De boerenzwaluw is in de winter in grote aantallen aanwezig, de roodkruinzwaluw nestelt onder bruggen, en de amoerroodstuitzwaluw herken je makkelijk aan zijn roestkleurige stuit."
+      }
+    },
+    "bulbuls": {
+      "here": {
+        "en": "Four bulbuls. Red-vented and Red-whiskered Bulbuls are in every garden, while the White-eared Bulbul of dry country and the Himalayan Bulbul of the foothills are the ones to look for.",
+        "nl": "Vier buulbuuls. De roodbuikbuulbuul en de roodoorbuulbuul zitten in elke tuin, terwijl de witoorbuulbuul van droog land en de witwangbuulbuul van de uitlopers de vogels zijn om naar te zoeken."
+      }
+    },
+    "leaf-warblers": {
+      "here": {
+        "en": "Four leaf warblers, all winter visitors from the north. They are tiny and restless, so look for the wing bars and listen for calls.",
+        "nl": "Vier boszangers, allemaal wintergasten uit het noorden. Ze zijn klein en onrustig, dus let op de vleugelstrepen en luister naar de roep."
+      }
+    },
+    "sylviid-warblers": {
+      "here": {
+        "en": "One warbler, the Lesser Whitethroat, a winter visitor to thorn scrub and gardens.",
+        "nl": "Eén zanger, de braamsluiper, een wintergast van doornstruweel en tuinen."
+      }
+    },
+    "parrotbills-wrentit-and-allies": {
+      "here": {
+        "en": "One babbler of reedbeds and tall grass, the Yellow-eyed Babbler, noisy in groups at Keoladeo and around wetlands.",
+        "nl": "Eén babbelaar van rietvelden en hoog gras, de goudoogtimalia, luidruchtig in groepen bij Keoladeo en rond wetlands."
+      }
+    },
+    "white-eyes-yuhinas-and-allies": {
+      "here": {
+        "en": "The Indian White-eye, a small green bird with a white eye ring, in flocks in gardens and groves.",
+        "nl": "De Indische brilvogel, een klein groen vogeltje met een witte oogring, in groepen in tuinen en bosjes."
+      }
+    },
+    "laughingthrushes-and-allies": {
+      "here": {
+        "en": "Four babblers of village and scrub. Jungle Babbler and Large Grey Babbler move in noisy groups, and the Velvet-fronted Nuthatch is the odd one out, climbing trunks.",
+        "nl": "Vier babbelaars van dorpen en struweel. De junglebabbelaar en de malcolmbabbelaar trekken in luidruchtige groepen, en de pluchekapboomklever is de buitenstaander, die langs stammen klimt."
+      }
+    },
+    "nuthatches": {
+      "here": {
+        "en": "The Velvet-fronted Nuthatch, a small blue-and-lilac bird that climbs trunks and branches in forest.",
+        "nl": "De pluchekapboomklever, een klein blauwpaars vogeltje dat langs stammen en takken klimt in bos."
+      }
+    },
+    "starlings-and-mynas": {
+      "here": {
+        "en": "Eight starlings and mynas. Common Myna is the first bird of every city and village, Brahminy Starling and Indian Pied Starling are in gardens and fields, and the Rosy Starling arrives by the thousand in winter and spring.",
+        "nl": "Acht spreeuwen en maina's. De treurmaina is de eerste vogel van elke stad en elk dorp, de pagodespreeuw en de Indiase eksterspreeuw zitten in tuinen en velden, en de roze spreeuw komt in de winter en het voorjaar bij duizenden."
+      }
+    },
+    "old-world-flycatchers": {
+      "here": {
+        "en": "Fourteen chats, robins and flycatchers. The Oriental Magpie-Robin and Indian Robin live around houses all year, and most of the others are winter visitors on fences, bushes and bare fields.",
+        "nl": "Veertien tapuiten, roodborsten en vliegenvangers. De dayallijster en het Indisch paapje leven het hele jaar rond huizen, en de meeste andere zijn wintergasten op hekken, struiken en kale velden."
+      }
+    },
+    "flowerpeckers": {
+      "here": {
+        "en": "The Pale-billed Flowerpecker, a tiny, dull bird that feeds on mistletoe berries.",
+        "nl": "De geelsnavelhoningvogel, een klein, doffe vogeltje dat bessen van maretak eet."
+      }
+    },
+    "sunbirds-and-spiderhunters": {
+      "here": {
+        "en": "Two sunbirds. The Purple Sunbird is a garden bird everywhere, and the Purple-rumped Sunbird is just as common in the south and the dry west.",
+        "nl": "Twee honingzuigers. De purperhoningzuiger is overal een tuinvogel, en de purperstuithoningzuiger is net zo algemeen in het zuiden en het droge westen."
+      }
+    },
+    "leafbirds": {
+      "here": {
+        "en": "The Golden-fronted Leafbird, a bright green bird of forest edges and fruiting trees.",
+        "nl": "De goudvoorhoofdbladvogel, een felgroene vogel van bosranden en vruchtdragende bomen."
+      }
+    },
+    "weavers-and-allies": {
+      "here": {
+        "en": "Three weavers. Baya Weaver hangs its bottle-shaped nests over water and palms, and the other two like reeds and grass at Keoladeo.",
+        "nl": "Drie wevers. De bayawever hangt zijn flesvormige nesten boven water en palmen, en de andere twee houden van riet en gras bij Keoladeo."
+      }
+    },
+    "estrildids": {
+      "here": {
+        "en": "Four small finch-like birds. Indian Silverbill and Scaly-breasted Munia feed in flocks on seeding grass, and the Red Avadavat is a tiny red bird of reeds and grass.",
+        "nl": "Vier kleine vinkachtigen. Het loodbekje en de muskaatvink eten in groepen van zaden in gras, en de tijgervink is een klein rood vogeltje van riet en gras."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "Two sparrows. House Sparrow is in every town, and the Yellow-throated Sparrow is the paler bird of dry open woods and old trees.",
+        "nl": "Twee mussen. De huismus zit in elke stad, en de Indische rotsmus is de lichtere vogel van droge open bossen en oude bomen."
+      }
+    },
+    "wagtails-and-pipits": {
+      "here": {
+        "en": "Nine wagtails and pipits. White-browed Wagtail lives by water all year, and most of the others are winter visitors that walk on fields, lawns and shores.",
+        "nl": "Negen kwikstaarten en piepers. De Indische bonte kwikstaart leeft het hele jaar langs water, en de meeste andere zijn wintergasten die lopen over velden, gazons en oevers."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "here": {
+        "en": "One finch, the Common Rosefinch, a winter visitor to scrub and gardens in which males show a rosy-red head.",
+        "nl": "Eén vink, de roodmus, een wintergast van struweel en tuinen waarin mannetjes een rozerode kop laten zien."
+      }
+    },
+    "old-world-buntings": {
+      "here": {
+        "en": "Two buntings, the Red-headed and the Black-headed Bunting, which come in winter and feed in flocks in crop fields.",
+        "nl": "Twee gorzen, de bruinkopgors en de zwartkopgors, die in de winter komen en in groepen in akkers eten."
+      }
+    }
+  },
+  "units": {
+    "waterfowl-1": {
+      "title": {
+        "en": "Whistling-ducks, geese and shelducks",
+        "nl": "Fluiteenden, ganzen en casarca's"
+      },
+      "intro": {
+        "en": "Ducks that stay and ducks that come for the winter. Look at the colour of the head, the bill and the wing patch to tell them apart.",
+        "nl": "Eenden die blijven en eenden die voor de winter komen. Let op de kleur van kop, snavel en vleugelvlek om ze uit elkaar te houden."
+      }
+    },
+    "waterfowl-2": {
+      "title": {
+        "en": "Surface-feeding ducks",
+        "nl": "Eenden die van het oppervlak eten"
+      },
+      "intro": {
+        "en": "Dabbling ducks that tip up in shallow water. The males are easy by their head and flank patterns, while the females need a look at the bill and the wing mirror.",
+        "nl": "Eenden die in ondiep water kopstaan. De mannetjes herken je makkelijk aan hun kop en flanktekening, bij de vrouwtjes let je op snavel en spiegel."
+      }
+    },
+    "waterfowl-3": {
+      "title": {
+        "en": "Pintail, teal and diving ducks",
+        "nl": "Pijlstaart, taling en duikeenden"
+      },
+      "intro": {
+        "en": "A long-necked pintail, a tiny teal and four ducks that dive for their food. The chestnut and the white undertail help to sort the pochards out.",
+        "nl": "Een langhalzige pijlstaart, een kleine taling en vier eenden die duiken om te eten. Het kastanjebruin en de witte onderstaart helpen bij het uitzoeken van de tafeleenden."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "title": {
+        "en": "Peafowl, francolins and junglefowl",
+        "nl": "Pauw, frankolijnen en bankivahoenders"
+      },
+      "intro": {
+        "en": "The Indian Peafowl is the easy one, then two francolins of fields, a small quail and the forest fowl of Ranthambore and Corbett. The forest birds are shy, so look along tracks at dawn and dusk.",
+        "nl": "De blauwe pauw is de makkelijke, daarna twee frankolijnen van velden, een kleine kwartel en de bosfazanten van Ranthambore en Corbett. De bosvogels zijn schuw, dus zoek langs paden bij zonsopgang en zonsondergang."
+      }
+    },
+    "pigeons-and-doves-1": {
+      "title": {
+        "en": "Doves of towns and fields",
+        "nl": "Duiven van steden en velden"
+      },
+      "intro": {
+        "en": "Four doves you will see on the first day. The neck pattern and the colour of the back tell them apart.",
+        "nl": "Vier duiven die je op de eerste dag ziet. De tekening op de hals en de kleur van de rug onderscheiden ze."
+      }
+    },
+    "pigeons-and-doves-2": {
+      "title": {
+        "en": "Spotted doves and green pigeons",
+        "nl": "Parelhalstortels en papegaaiduiven"
+      },
+      "intro": {
+        "en": "A dove of gardens, a green pigeon that blends into fig trees, a small collared dove and a green dove of the forest floor.",
+        "nl": "Een tuinduif, een papegaaiduif die opgaat in vijgenbomen, een kleine tortel met halsband en een groene duif van de bosbodem."
+      }
+    },
+    "cuckoos": {
+      "title": {
+        "en": "Koel, coucal and cuckoos",
+        "nl": "Koël, spoorkoekoek en koekoeken"
+      },
+      "intro": {
+        "en": "The Asian Koel and Greater Coucal are the loud ones, then three cuckoos that are often heard more than seen.",
+        "nl": "De Indische koël en de Chinese spoorkoekoek zijn de luidruchtigen, daarna drie koekoeken die je vaak eerder hoort dan ziet."
+      }
+    },
+    "nightjars": {
+      "title": {
+        "en": "Swifts and a nightjar",
+        "nl": "Gierzwaluwen en een nachtzwaluw"
+      },
+      "intro": {
+        "en": "Two small swifts that scream round buildings and an Indian Nightjar that sits on the ground until you almost step on it.",
+        "nl": "Twee kleine gierzwaluwen die schreeuwend rond gebouwen vliegen en een Hindoenachtzwaluw die op de grond blijft zitten tot je er bijna op stapt."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "title": {
+        "en": "Cranes, coots and crakes",
+        "nl": "Kraanvogels, koeten en porseleinhoenders"
+      },
+      "intro": {
+        "en": "Two cranes, some birds of open water and a crake that stays in the reeds. Start with the Sarus, the tallest flying bird in the world.",
+        "nl": "Twee kraanvogels, wat vogels van open water en een porseleinhoen dat in het riet blijft. Begin met de saruskraanvogel, de langste vliegende vogel ter wereld."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Stilts, plovers and thick-knees",
+        "nl": "Steltkluten, plevieren en grielen"
+      },
+      "intro": {
+        "en": "Waders with long legs and big eyes. The two thick-knees are the odd ones out, big-headed birds of dry banks and fields.",
+        "nl": "Steltlopers met lange poten en grote ogen. De twee grielen zijn de buitenstaanders, grootkoppige vogels van droge oevers en velden."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Lapwings, jacanas and a painted-snipe",
+        "nl": "Kieviten, jaçana's en een goudsnip"
+      },
+      "intro": {
+        "en": "Noisy lapwings and two jacanas that walk on lily leaves. The Kentish Plover and the painted-snipe are quieter, with a more hidden life.",
+        "nl": "Luidruchtige kieviten en twee jaçana's die over lelieblaadjes lopen. De strandplevier en de goudsnip zijn stiller, met een verborgener leven."
+      }
+    },
+    "shorebirds-3": {
+      "title": {
+        "en": "Sandpipers, snipe and godwit",
+        "nl": "Ruiters, snip en grutto"
+      },
+      "intro": {
+        "en": "Winter visitors on muddy shores. Look at the leg colour, the bill length and the pattern on the back.",
+        "nl": "Wintergasten op modderige oevers. Kijk naar de kleur van de poten, de lengte van de snavel en de tekening op de rug."
+      }
+    },
+    "shorebirds-4": {
+      "title": {
+        "en": "Stints, redshanks and a pratincole",
+        "nl": "Strandlopers, ruiters en een pratincole"
+      },
+      "intro": {
+        "en": "More waders for the shore, from the tiny stints to the long-legged redshanks. Leg colour is the first thing to check.",
+        "nl": "Meer steltlopers voor de oever, van de piepkleine strandlopers tot de langpotige ruiters. De kleur van de poten is het eerste om te controleren."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {
+        "en": "Gulls and terns of inland water",
+        "nl": "Meeuwen en sterns van binnenwater"
+      },
+      "intro": {
+        "en": "Terns that dive and terns that dip, and two gulls that come in winter. The bill colour and the wing pattern are the quickest clues.",
+        "nl": "Sterns die duiken en sterns die scheren, en twee meeuwen die in de winter komen. De snavelkleur en de vleugeltekening zijn de snelste aanwijzingen."
+      }
+    },
+    "flamingos": {
+      "title": {
+        "en": "A flamingo and two grebes",
+        "nl": "Een flamingo en twee futen"
+      },
+      "intro": {
+        "en": "A pink flamingo wading in a salt lake, then two grebes that swim low and dive. Look for the long neck of the one and the crest of the other.",
+        "nl": "Een roze flamingo die door een zoutmeer waadt, daarna twee futen die laag zwemmen en duiken. Let op de lange hals van de een en de kuif van de ander."
+      }
+    },
+    "storks": {
+      "title": {
+        "en": "Storks",
+        "nl": "Ooievaars"
+      },
+      "intro": {
+        "en": "Five big storks with very different bills. The openbill has a gap in its bill, the Painted Stork a long yellow one with a pink wash.",
+        "nl": "Vijf grote ooievaars met heel verschillende snavels. De gaper heeft een gat in zijn snavel, de nimmerzat een lange gele met een roze waas."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "title": {
+        "en": "Cormorants and the darter",
+        "nl": "Aalscholvers en de slangenhalsvogel"
+      },
+      "intro": {
+        "en": "Four dark fish-eaters that dry their wings. Size and the colour of the throat patch separate the cormorants, and the darter has a thin neck.",
+        "nl": "Vier donkere viseters die hun vleugels drogen. Grootte en de kleur van de keelvlek onderscheiden de aalscholvers, en de slangenhalsvogel heeft een dunne hals."
+      }
+    },
+    "herons-ibis-and-allies-1": {
+      "title": {
+        "en": "Egrets and small herons",
+        "nl": "Zilverreigers en kleine reigers"
+      },
+      "intro": {
+        "en": "Six white and brown herons you will see on the first day. Compare size, bill colour and leg colour.",
+        "nl": "Zes witte en bruine reigers die je op de eerste dag ziet. Vergelijk grootte, snavelkleur en kleur van de poten."
+      }
+    },
+    "herons-ibis-and-allies-2": {
+      "title": {
+        "en": "Ibises, spoonbill and big herons",
+        "nl": "Ibissen, lepelaar en grote reigers"
+      },
+      "intro": {
+        "en": "Three ibises and a spoonbill, then two big grey and purple herons. The ibises have curved bills, the spoonbill a flat tip.",
+        "nl": "Drie ibissen en een lepelaar, daarna twee grote grijze en purperkleurige reigers. De ibissen hebben gebogen snavels, de lepelaar een platte punt."
+      }
+    },
+    "pelicans": {
+      "title": {
+        "en": "Pelicans",
+        "nl": "Pelikanen"
+      },
+      "intro": {
+        "en": "Two big white pelicans that fish together on big lakes. The Spot-billed is greyer, with spotted bill and a dusky tail.",
+        "nl": "Twee grote witte pelikanen die samen vissen op grote meren. De grijze pelikaan is grijzer, met een gevlekte snavel en een donkere staart."
+      }
+    },
+    "vultures-hawks-and-allies-1": {
+      "title": {
+        "en": "Vultures, a kite and fish-eaters",
+        "nl": "Gieren, een wouw en viseters"
+      },
+      "intro": {
+        "en": "Three vultures of Ranthambore and Bharatpur, a kite, a buzzard, a fish-eagle and an osprey. The vultures differ in the bare head and the rump.",
+        "nl": "Drie gieren van Ranthambore en Bharatpur, een wouw, een buizerd, een rivierarend en een visarend. De gieren verschillen in de kale kop en de stuit."
+      }
+    },
+    "vultures-hawks-and-allies-2": {
+      "title": {
+        "en": "Vultures, honey-buzzard and eagles",
+        "nl": "Gieren, wespendief en arenden"
+      },
+      "intro": {
+        "en": "A scavenger of towns, a honey-buzzard, a griffon from the mountains and four eagles. Look at the tail, the head and the shape of the wings in flight.",
+        "nl": "Een aaseter van steden, een wespendief, een gier uit de bergen en vier arenden. Let op staart, kop en vleugelvorm in de vlucht."
+      }
+    },
+    "vultures-hawks-and-allies-3": {
+      "title": {
+        "en": "Big eagles of the plains",
+        "nl": "Grote arenden van de vlakte"
+      },
+      "intro": {
+        "en": "Five eagles that are hard to tell apart in flight, and a buzzard. The shape of the wings, the colour of the nape and the leg feathers help.",
+        "nl": "Vijf arenden die in de vlucht moeilijk te onderscheiden zijn, en een buizerd. De vorm van de vleugels, de kleur van de nek en de broekveren helpen."
+      }
+    },
+    "vultures-hawks-and-allies-4": {
+      "title": {
+        "en": "Kites, harriers and hawks",
+        "nl": "Wouwen, kiekendieven en haviken"
+      },
+      "intro": {
+        "en": "The commonest birds of prey, the Black and Brahminy Kites, then a hawk, two harriers and a sparrowhawk. Harriers glide low with raised wings.",
+        "nl": "De algemeenste roofvogels, de zwarte en Brahmaanse wouw, daarna een havik, twee kiekendieven en een sperwer. Kiekendieven glijden laag met opgeheven vleugels."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Owlets and eagle-owls",
+        "nl": "Uiltjes en oehoes"
+      },
+      "intro": {
+        "en": "Small owls that call from holes and three big ones that sit in trees or on rocks. Most are best found by day with a guide.",
+        "nl": "Kleine uilen die roepen uit holen en drie grote die in bomen of op rotsen zitten. De meeste vind je het best overdag met een gids."
+      }
+    },
+    "hoopoes": {
+      "title": {
+        "en": "A hornbill, bee-eaters and a hoopoe",
+        "nl": "Een tok, bijeneters en een hop"
+      },
+      "intro": {
+        "en": "Colourful birds of wires and tree tops. The Common Hoopoe crest is unmistakable, and the three bee-eaters differ in the colour of the throat.",
+        "nl": "Kleurrijke vogels van draden en boomtoppen. De kuif van de hop is onmiskenbaar, en de drie bijeneters verschillen in de kleur van de keel."
+      }
+    },
+    "kingfishers": {
+      "title": {
+        "en": "Kingfishers",
+        "nl": "IJsvogels"
+      },
+      "intro": {
+        "en": "Four kingfishers with four lifestyles. The white-throated is the common one on wires, the pied one hovers, the stork-billed one has a huge red bill.",
+        "nl": "Vier ijsvogels met vier levenswijzen. De smyrnaijsvogel is de gewone op draden, de bonte bidt boven water, de ooievaarsbekijsvogel heeft een enorme rode snavel."
+      }
+    },
+    "rollers-and-allies": {
+      "title": {
+        "en": "Rollers and barbets",
+        "nl": "Scharrelaars en baardvogels"
+      },
+      "intro": {
+        "en": "Two blue rollers and three barbets that call from the tree tops. The Coppersmith is small and hammers away, the others are bigger.",
+        "nl": "Twee blauwe scharrelaars en drie baardvogels die roepen vanuit de boomtoppen. De koperslager is klein en hamert door, de andere zijn groter."
+      }
+    },
+    "woodpeckers": {
+      "title": {
+        "en": "Woodpeckers and a wryneck",
+        "nl": "Spechten en een draaihals"
+      },
+      "intro": {
+        "en": "Golden flamebacks and small woodpeckers from garden to forest. The Eurasian Wryneck is the odd one out, a streaky brown bird of the ground.",
+        "nl": "Gouden goudrugspechten en kleine spechten van tuin tot bos. De draaihals is de buitenstaander, een gestreepte bruine vogel van de grond."
+      }
+    },
+    "falcons-and-caracaras": {
+      "title": {
+        "en": "Falcons",
+        "nl": "Valken"
+      },
+      "intro": {
+        "en": "Four falcons, from the hovering kestrel to the fast peregrine. The Red-necked has a rufous cap, the Laggar a long, rufous head.",
+        "nl": "Vier valken, van de biddende torenvalk tot de snelle slechtvalk. De roodkopvalk heeft een roestkleurige kap, de lannervalk een lange, roestkleurige kop."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "title": {
+        "en": "Parakeets and a pitta",
+        "nl": "Parkieten en een pitta"
+      },
+      "intro": {
+        "en": "Three green parakeets with different collars and heads, then a colourful pitta that hops on the forest floor.",
+        "nl": "Drie groene parkieten met verschillende kragen en koppen, daarna een kleurrijke pitta die over de bosbodem hipt."
+      }
+    },
+    "cuckooshrikes": {
+      "title": {
+        "en": "Minivets and cuckooshrikes",
+        "nl": "Menievogels en rupsvogels"
+      },
+      "intro": {
+        "en": "Birds of the treetops that move in flocks. The male minivets are red or orange, the cuckooshrikes grey and barred.",
+        "nl": "Vogels van de boomtoppen die in groepen trekken. De mannelijke menievogels zijn rood of oranje, de rupsvogels grijs en gebandeerd."
+      }
+    },
+    "old-world-orioles": {
+      "title": {
+        "en": "Orioles and two woodland birds",
+        "nl": "Wielewalen en twee bosvogels"
+      },
+      "intro": {
+        "en": "Two bright orioles and two quiet greyish woodland birds. Orioles are easier to hear than to see.",
+        "nl": "Twee felle wielewalen en twee rustige grijsachtige bosvogels. Wielewalen hoor je eerder dan je ze ziet."
+      }
+    },
+    "ioras": {
+      "title": {
+        "en": "An iora and two fantails",
+        "nl": "Een iora en twee waaierstaartjes"
+      },
+      "intro": {
+        "en": "Small active birds of gardens and dry forest. The fantails fan their tails and swivel, the iora puffs out its rump in display.",
+        "nl": "Kleine actieve vogels van tuinen en droog bos. De waaierstaartjes waaieren hun staart en draaien, de iora zet zijn stuit op bij de baltsvlucht."
+      }
+    },
+    "drongos": {
+      "title": {
+        "en": "Drongos and a paradise-flycatcher",
+        "nl": "Drongo's en een paradijsmonarch"
+      },
+      "intro": {
+        "en": "Drongos are black with forked tails and sit upright on wires. The paradise-flycatcher is the white bird with the long tail ribbons.",
+        "nl": "Drongo's zijn zwart met een gevorkte staart en zitten rechtop op draden. De paradijsmonarch is de witte vogel met lange staartlinten."
+      }
+    },
+    "shrikes": {
+      "title": {
+        "en": "Shrikes",
+        "nl": "Klauwieren"
+      },
+      "intro": {
+        "en": "Five shrikes that sit up on wires and bush tops. Look for the face mask, the colour of the back and the length of the tail.",
+        "nl": "Vijf klauwieren die rechtop zitten op draden en struiktoppen. Let op het gezichtsmasker, de kleur van de rug en de lengte van de staart."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "title": {
+        "en": "Crows, a treepie and a tit",
+        "nl": "Kraaien, een boomekster en een mees"
+      },
+      "intro": {
+        "en": "Two crows of the towns, a long-tailed treepie and a small tit. House Crow has a grey neck, Large-billed Crow is all black.",
+        "nl": "Twee kraaien van de steden, een langstaartige boomekster en een kleine mees. De huiskraai heeft een grijze hals, de dikbekkraai is helemaal zwart."
+      }
+    },
+    "larks": {
+      "title": {
+        "en": "Larks and sparrow-larks",
+        "nl": "Leeuweriken en vinkleeuweriken"
+      },
+      "intro": {
+        "en": "Streaky birds of bare ground that sing in flight. Look at the face, the tail and the bill to tell them apart.",
+        "nl": "Gestreepte vogels van kale grond die zingend vliegen. Let op gezicht, staart en snavel om ze uit elkaar te houden."
+      }
+    },
+    "cisticolas-and-allies": {
+      "title": {
+        "en": "Prinias and tailorbirds",
+        "nl": "Prinia's en snijdervogels"
+      },
+      "intro": {
+        "en": "Small, long-tailed birds of gardens, grass and scrub. Check the tail length, the colour of the underparts and the pale eyebrow.",
+        "nl": "Kleine vogels met een lange staart van tuinen, gras en struweel. Let op de lengte van de staart, de kleur van de onderzijde en de lichte wenkbrauw."
+      }
+    },
+    "reed-warblers-and-allies": {
+      "title": {
+        "en": "Reed warblers and scrub warblers",
+        "nl": "Rietzangers en struikzangers"
+      },
+      "intro": {
+        "en": "Plain brown warblers that skulk in reeds and scrub in winter. Look at the eyebrow and the bill shape.",
+        "nl": "Effen bruine zangers die in de winter door riet en struweel sluipen. Let op de wenkbrauw en de vorm van de snavel."
+      }
+    },
+    "martins-and-swallows": {
+      "title": {
+        "en": "Swallows",
+        "nl": "Zwaluwen"
+      },
+      "intro": {
+        "en": "Three swallows over fields and rivers. Look for the long tail wires of one and the rusty rump of another.",
+        "nl": "Drie zwaluwen boven velden en rivieren. Let op de lange staartdraden van de een en de roestkleurige stuit van een ander."
+      }
+    },
+    "bulbuls": {
+      "title": {
+        "en": "Bulbuls",
+        "nl": "Buulbuuls"
+      },
+      "intro": {
+        "en": "Four bulbuls of gardens and dry country. The red vent, the white cheek and the crest tell them apart.",
+        "nl": "Vier buulbuuls van tuinen en droog land. De rode onderstaart, de witte wang en de kuif onderscheiden ze."
+      }
+    },
+    "leaf-warblers": {
+      "title": {
+        "en": "Leaf warblers and a chiffchaff",
+        "nl": "Boszangers en een tjiftjaf"
+      },
+      "intro": {
+        "en": "Four tiny winter visitors that flit through trees. Wing bars and the colour of the bill and legs are the clues.",
+        "nl": "Vier piepkleine wintergasten die door bomen vliegen. Vleugelstrepen en de kleur van snavel en poten zijn de aanwijzingen."
+      }
+    },
+    "sylviid-warblers": {
+      "title": {
+        "en": "A whitethroat, a white-eye and a babbler",
+        "nl": "Braamsluiper, brilvogel en babbelaar"
+      },
+      "intro": {
+        "en": "Three small birds of thorn scrub and gardens. The white-eye wears a white ring, the babbler a yellow one.",
+        "nl": "Drie kleine vogels van doornstruweel en tuinen. De brilvogel draagt een witte ring, de babbelaar een gele."
+      }
+    },
+    "laughingthrushes-and-allies": {
+      "title": {
+        "en": "Babblers and a nuthatch",
+        "nl": "Babbelaars en een boomklever"
+      },
+      "intro": {
+        "en": "Noisy groups of babblers that hop on the ground, and a nuthatch that climbs trunks. The groups tell you which one it is: Jungle Babbler goes in sevens.",
+        "nl": "Luidruchtige groepen babbelaars die over de grond hippen, en een boomklever die langs stammen klimt. Het groepsgedrag zegt welke het is: de junglebabbelaar gaat met z'n zevenen."
+      }
+    },
+    "starlings-and-mynas-1": {
+      "title": {
+        "en": "Starlings",
+        "nl": "Spreeuwen"
+      },
+      "intro": {
+        "en": "Four starlings of fields and gardens. The pink Rosy Starling and the black-and-white pied starling are the easy ones.",
+        "nl": "Vier spreeuwen van velden en tuinen. De roze spreeuw en de zwart-witte eksterspreeuw zijn de makkelijke."
+      }
+    },
+    "starlings-and-mynas-2": {
+      "title": {
+        "en": "Mynas",
+        "nl": "Maina's"
+      },
+      "intro": {
+        "en": "The first bird of every Indian town, and its three cousins. Look at the face patch, the tuft and the colour of the bill.",
+        "nl": "De eerste vogel van elke Indiase stad, en zijn drie neven. Let op de gezichtsvlek, het kuifje en de kleur van de snavel."
+      }
+    },
+    "old-world-flycatchers-1": {
+      "title": {
+        "en": "Robins, bluethroat and flycatchers",
+        "nl": "Roodborsten en vliegenvangers"
+      },
+      "intro": {
+        "en": "Birds that sit still on a perch and drop on insects. Look at the tail, the throat and the colour of the back.",
+        "nl": "Vogels die stil op een zitplek wachten en op insecten duiken. Kijk naar de staart, de keel en de kleur van de rug."
+      }
+    },
+    "old-world-flycatchers-2": {
+      "title": {
+        "en": "Redstarts, chats and wheatears",
+        "nl": "Roodstaarten, tapuiten en rotslijsters"
+      },
+      "intro": {
+        "en": "Chats of fences and bare ground, most of them winter visitors. Flicking tails and bobbing give them away.",
+        "nl": "Tapuiten van hekken en kale grond, de meeste wintergasten. Wippende staarten en buigen verraden ze."
+      }
+    },
+    "flowerpeckers": {
+      "title": {
+        "en": "Sunbirds, a flowerpecker and a leafbird",
+        "nl": "Honingzuigers, honingvogel en bladvogel"
+      },
+      "intro": {
+        "en": "Small nectar and fruit eaters of flowering trees. The male sunbirds are dark and glossy in breeding plumage.",
+        "nl": "Kleine nectar- en vruchteneters van bloeiende bomen. De mannelijke honingzuigers zijn donker en glanzend in broedkleed."
+      }
+    },
+    "weavers-and-allies": {
+      "title": {
+        "en": "Weavers",
+        "nl": "Wevers"
+      },
+      "intro": {
+        "en": "Three weavers, yellow-capped in the breeding season and streaky brown at other times. Look at the colour of the head and breast.",
+        "nl": "Drie wevers, geel gekapt in het broedseizoen en gestreept bruin op andere tijden. Let op de kleur van kop en borst."
+      }
+    },
+    "estrildids": {
+      "title": {
+        "en": "Sparrows, munias and an avadavat",
+        "nl": "Mussen, muskaatvinken en een tijgervink"
+      },
+      "intro": {
+        "en": "Small seed-eaters of grass and village edges. The House Sparrow is the easy one, and the others are quicker to place by their colours.",
+        "nl": "Kleine zaadeters van gras en dorpsranden. De huismus is de makkelijke, en de andere plaats je sneller aan hun kleuren."
+      }
+    },
+    "wagtails-and-pipits-1": {
+      "title": {
+        "en": "Wagtails",
+        "nl": "Kwikstaarten"
+      },
+      "intro": {
+        "en": "Slim birds that walk and wag their long tails near water. Yellow and white wagtails differ in the colour of the head and the back.",
+        "nl": "Slanke vogels die lopen en met hun lange staart wippen langs water. Gele en witte kwikstaarten verschillen in de kleur van kop en rug."
+      }
+    },
+    "wagtails-and-pipits-2": {
+      "title": {
+        "en": "Pipits",
+        "nl": "Piepers"
+      },
+      "intro": {
+        "en": "Streaky brown birds that walk on fields. Pipits are best told by the call, the leg colour and the pattern of the breast.",
+        "nl": "Gestreepte bruine vogels die over velden lopen. Piepers herken je het best aan de roep, de kleur van de poten en de tekening van de borst."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "title": {
+        "en": "Buntings and a rosefinch",
+        "nl": "Gorzen en een roodmus"
+      },
+      "intro": {
+        "en": "Three seed-eaters of winter fields. The male buntings are bright, the rosefinch a rosy red.",
+        "nl": "Drie zaadeters van winterse velden. De mannelijke gorzen zijn fel, de roodmus rozerood."
+      }
+    }
+  },
+  "species": {
+    "compea": {
+      "here": {
+        "en": "India's national bird. Wild birds strut through villages, fields and tiger reserves, and the male's call carries a long way.",
+        "nl": "De nationale vogel van India. Wilde vogels stappen door dorpen, velden en tijgerreservaten, en de roep van het mannetje draagt ver."
+      }
+    },
+    "sarcra1": {
+      "here": {
+        "en": "The tallest flying bird in the world. Pairs stand on farmland and wetlands, and Keoladeo and the fields around Bharatpur are reliable places.",
+        "nl": "De langste vliegende vogel ter wereld. Paartjes staan op akkers en in wetlands, en Keoladeo en de velden rond Bharatpur zijn betrouwbare plekken."
+      }
+    },
+    "paisto1": {
+      "here": {
+        "en": "Nests in colonies in the trees at Keoladeo, together with other storks and herons.",
+        "nl": "Nestelt in kolonies in de bomen bij Keoladeo, samen met andere ooievaars en reigers."
+      }
+    },
+    "spbpel1": {
+      "here": {
+        "en": "Keoladeo at Bharatpur is one of the places to look, but it is local, so check recent reports.",
+        "nl": "Keoladeo bij Bharatpur is een van de plekken om te zoeken, maar hij is plaatselijk, dus kijk eerst naar recente meldingen."
+      }
+    },
+    "dueowl1": {
+      "here": {
+        "en": "Keoladeo at Bharatpur is the classic place. It sits hidden in dense old trees, so ask a guide.",
+        "nl": "Keoladeo bij Bharatpur is de klassieke plek. Hij zit verscholen in dichte oude bomen, dus vraag het een gids."
+      }
+    },
+    "roeowl1": {
+      "here": {
+        "en": "Look in rocky gorges and old quarries around Ranthambore and the hills of Rajasthan.",
+        "nl": "Zoek in rotskloven en oude groeven rond Ranthambore en de heuvels van Rajasthan."
+      }
+    },
+    "grejun2": {
+      "here": {
+        "en": "Walks along tracks in the dry forest and hills of Ranthambore, best at dawn and dusk.",
+        "nl": "Loopt langs paden in het droge bos en de heuvels van Ranthambore, het best bij zonsopgang en zonsondergang."
+      }
+    },
+    "redspu1": {
+      "here": {
+        "en": "Look for it on rocky tracks in dry forest at Ranthambore, running for cover.",
+        "nl": "Zoek hem op rotsige paden in droog bos bij Ranthambore, rennend naar dekking."
+      }
+    },
+    "yefpig1": {
+      "here": {
+        "en": "A green pigeon of parks and old tree avenues in the north, Delhi included, found by its whistling call.",
+        "nl": "Een papegaaiduif van parken en oude lanen in het noorden, Delhi inbegrepen, te vinden aan zijn fluitende roep."
+      }
+    },
+    "whrvul1": {
+      "here": {
+        "en": "Vultures crashed in the 1990s after a drug poisoned their food, so look for them at carcasses and protected sites.",
+        "nl": "De gieren stortten in de jaren negentig in nadat een medicijn hun voedsel vergiftigde, dus zoek ze bij kadavers en op beschermde plekken."
+      }
+    },
+    "comcra": {
+      "here": {
+        "en": "A winter visitor to the wetlands of Rajasthan and the north-west, usually in small groups.",
+        "nl": "Een wintergast van de wetlands van Rajasthan en het noordwesten, meestal in kleine groepen."
+      }
+    },
+    "banmyn1": {
+      "here": {
+        "en": "Nests in holes in river banks and old walls, so look along the Yamuna and around old monuments.",
+        "nl": "Nestelt in gaten in rivieroevers en oude muren, dus kijk langs de Yamuna en bij oude monumenten."
+      }
+    },
+    "rossta2": {
+      "here": {
+        "en": "A winter visitor from Central Asia that arrives in huge flocks, often in fruiting trees and fields.",
+        "nl": "Een wintergast uit Centraal-Azië die in enorme zwermen aankomt, vaak in vruchtdragende bomen en velden."
+      }
+    },
+    "indpit1": {
+      "here": {
+        "en": "Arrives for the monsoon, so it is hard to find in winter.",
+        "nl": "Komt voor de moesson aan en is dus in de winter moeilijk te vinden."
+      }
+    }
+  },
+  "first_day": {
+    "title": {
+      "en": "Your first day in India",
+      "nl": "Je eerste dag in India"
+    },
+    "intro": {
+      "en": "Twenty birds you are very likely to meet on the first day: in parks and gardens, along roads, on wires and over village ponds.",
+      "nl": "Twintig vogels die je de eerste dag vrijwel zeker tegenkomt: in parken en tuinen, langs wegen, op draden en boven dorpsvijvers."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "India has around 80 birds that live nowhere else, most of them in the Western Ghats, on the Andaman and Nicobar islands and in the north-eastern hills. This trip has 4 that a visitor on the northern route can meet: two game birds, a fantail and a lark of dry hills and open ground south of the Ganges. The rest live in regions this trip does not cover.",
+      "nl": "India heeft ongeveer tachtig vogels die nergens anders leven, de meeste in de Westelijke Ghats, op de Andamanen en Nicobaren en in de heuvels van het noordoosten. Deze reis heeft er 4 die je op de noordelijke route kunt tegenkomen: twee hoenderachtigen, een waaierstaart en een leeuwerik van droge heuvels en open grond ten zuiden van de Ganges. De rest leeft in regio's die deze reis niet behandelt."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "Ranthambore and the Aravalli hills",
+          "nl": "Ranthambore en de Aravalli-heuvels"
+        },
+        "text": {
+          "en": "Dry deciduous forest and rocky hills hold the Grey Junglefowl, the Red Spurfowl and the Spot-breasted Fantail. Ranthambore National Park is the best-known place, and the birds come out onto tracks early and late in the day.",
+          "nl": "Droog loofverliezend bos en rotsachtige heuvels herbergen de sonnerathoen, de rode dwergfazant en de witvlekwaaierstaart. Het nationaal park Ranthambore is de bekendste plek, en de vogels komen vroeg en laat op de dag op de paden."
+        }
+      },
+      {
+        "title": {
+          "en": "Dry stony open ground",
+          "nl": "Droge stenige open grond"
+        },
+        "text": {
+          "en": "The Rufous-tailed Lark lives on stony hillsides and bare scrub in Rajasthan and the plateau to the south. It runs and stops on the ground, and its rusty rump and tail show best when it flies off.",
+          "nl": "De roodstaartleeuwerik leeft op stenige heuvelhellingen en kaal struweel in Rajasthan en op het plateau daarzuiden. Hij rent en blijft stilstaan op de grond, en zijn roestkleurige stuit en staart zie je het best als hij wegvliegt."
+        }
+      }
+    ],
+    "families": [],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "The endemics of India",
+          "nl": "De endemen van India"
+        }
+      }
+    }
+  }
+}

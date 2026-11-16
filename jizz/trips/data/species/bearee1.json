@@ -1,0 +1,22 @@
+{
+  "code": "bearee1",
+  "name": {
+    "en": "Bearded Tit",
+    "nl": "Baardman"
+  },
+  "latin": "Panurus biarmicus",
+  "look_for": [
+    {
+      "en": "Male has a grey head and black **moustache**",
+      "nl": "Mannetje heeft een grijze kop en zwarte **knevel**"
+    },
+    {
+      "en": "Tawny body with a very long **tail**",
+      "nl": "Roodbruin lijf met een zeer lange **staart**"
+    },
+    {
+      "en": "Reed beds only; ringing, metallic \"ping\" call",
+      "nl": "Alleen in rietland; metalen \"ping\"-roep"
+    }
+  ]
+}

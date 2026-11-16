@@ -1,0 +1,22 @@
+{
+  "code": "junmyn1",
+  "name": {
+    "en": "Jungle Myna",
+    "nl": "Junglemaina"
+  },
+  "latin": "Acridotheres fuscus",
+  "look_for": [
+    {
+      "en": "Grey-brown myna with a small tuft above the **bill**",
+      "nl": "Grijsbruine maina met een klein kuifje boven de **snavel**"
+    },
+    {
+      "en": "Pale yellow eye, no bare patch behind it",
+      "nl": "Lichtgele iris, geen kale vlek erachter"
+    },
+    {
+      "en": "White wing patches and tail tips in flight",
+      "nl": "Witte vleugelvlekken en staartpunten in de vlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "andflo1",
+  "name": {
+    "en": "Andaman Flowerpecker",
+    "nl": "Andamanenhoningvogel"
+  },
+  "latin": "Dicaeum virescens",
+  "look_for": [
+    {
+      "en": "Tiny, plain olive-grey above",
+      "nl": "Piepklein, effen olijfgrijs boven"
+    },
+    {
+      "en": "Paler grey-buff below, short **tail**",
+      "nl": "Lichter grijsbruin onder, korte **staart**"
+    },
+    {
+      "en": "Visits fruiting and flowering trees",
+      "nl": "Bezoekt vruchtdragende en bloeiende bomen"
+    }
+  ]
+}

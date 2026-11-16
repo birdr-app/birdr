@@ -1,0 +1,22 @@
+{
+  "code": "brwowl1",
+  "name": {
+    "en": "Brown Wood-Owl",
+    "nl": "Bruine bosuil"
+  },
+  "latin": "Strix leptogrammica",
+  "look_for": [
+    {
+      "en": "Large owl, round head, no **ear tufts**",
+      "nl": "Grote uil met ronde kop, zonder **oorpluimen**"
+    },
+    {
+      "en": "Dark brown face with white **eyebrows**",
+      "nl": "Donkerbruin gezicht met witte **wenkbrauwen**"
+    },
+    {
+      "en": "Buff underparts barred brown, dark eyes",
+      "nl": "Lichtbruine onderkant met bruine banden, donkere ogen"
+    }
+  ]
+}

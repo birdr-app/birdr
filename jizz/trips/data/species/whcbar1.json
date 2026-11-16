@@ -1,0 +1,22 @@
+{
+  "code": "whcbar1",
+  "name": {
+    "en": "White-cheeked Barbet",
+    "nl": "Groene baardvogel"
+  },
+  "latin": "Psilopogon viridis",
+  "look_for": [
+    {
+      "en": "Green barbet with a streaked brown head",
+      "nl": "Groene baardvogel met gestreepte bruine kop"
+    },
+    {
+      "en": "Broad white band on the **cheek**, pale pink **bill**",
+      "nl": "Brede witte band op de **wang**, lichtroze **snavel**"
+    },
+    {
+      "en": "Sits in fruiting figs, calls loudly",
+      "nl": "Zit in vruchtdragende vijgen, roept luid"
+    }
+  ]
+}

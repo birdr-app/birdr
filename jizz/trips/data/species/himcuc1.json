@@ -1,0 +1,22 @@
+{
+  "code": "himcuc1",
+  "name": {
+    "en": "Himalayan Cuckoo",
+    "nl": "Himalayakoekoek"
+  },
+  "latin": "Cuculus saturatus",
+  "look_for": [
+    {
+      "en": "Slate-grey **head** and **back**, yellow eye-ring",
+      "nl": "Leigrijze **kop** en **rug**, gele oogring"
+    },
+    {
+      "en": "Broad black bars on white **underparts**",
+      "nl": "Brede zwarte banden op witte **onderzijde**"
+    },
+    {
+      "en": "Muffled, hoopoe-like call from high perches",
+      "nl": "Gedempte roep als van een hop, vanaf hoge zitplekken"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "blytra1",
+  "name": {
+    "en": "Blyth's Tragopan",
+    "nl": "Blythsaterhoen"
+  },
+  "latin": "Tragopan blythii",
+  "look_for": [
+    {
+      "en": "Male: rusty-red head, yellow bare **face**",
+      "nl": "Mannetje: roestrode kop, gele kale **kop**"
+    },
+    {
+      "en": "Back and underparts spotted with white",
+      "nl": "Rug en onderzijde met witte stippen"
+    },
+    {
+      "en": "Female mottled brown, skulks on forest floor",
+      "nl": "Vrouwtje gevlekt bruin, schuw op de bosbodem"
+    }
+  ]
+}

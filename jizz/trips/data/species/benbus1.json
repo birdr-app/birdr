@@ -1,0 +1,22 @@
+{
+  "code": "benbus1",
+  "name": {
+    "en": "Bengal Bushlark",
+    "nl": "Bengaalse leeuwerik"
+  },
+  "latin": "Plocealauda assamica",
+  "look_for": [
+    {
+      "en": "Short-tailed, stocky lark with stout **bill**",
+      "nl": "Kortstaartige, gedrongen leeuwerik met stevige **snavel**"
+    },
+    {
+      "en": "Rufous **wings**, spotted buff breast",
+      "nl": "Roestbruine **vleugels**, gevlekte, bruingele borst"
+    },
+    {
+      "en": "Thin song given in a short display flight",
+      "nl": "Dunne zang tijdens een korte zangvlucht"
+    }
+  ]
+}

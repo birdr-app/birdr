@@ -1,0 +1,22 @@
+{
+  "code": "indcha1",
+  "name": {
+    "en": "Brown Rock Chat",
+    "nl": "Bruine rotsspekvreter"
+  },
+  "latin": "Oenanthe fusca",
+  "look_for": [
+    {
+      "en": "Plain dark brown chat, no markings",
+      "nl": "Egaal donkerbruine tapuit, zonder tekening"
+    },
+    {
+      "en": "Flicks its **wings** and tail while perched",
+      "nl": "Klapt met de **vleugels** en staart tijdens het zitten"
+    },
+    {
+      "en": "Lives on rocks, walls and old buildings",
+      "nl": "Leeft op rotsen, muren en oude gebouwen"
+    }
+  ]
+}

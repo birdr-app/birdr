@@ -1,0 +1,22 @@
+{
+  "code": "malwoo1",
+  "name": {
+    "en": "Malabar Woodshrike",
+    "nl": "Malabarrupsklauwier"
+  },
+  "latin": "Tephrodornis sylvicola",
+  "look_for": [
+    {
+      "en": "Broad dark eye-mask, pale grey-brown back",
+      "nl": "Brede donkere oogstreep, bleek grijsbruine rug"
+    },
+    {
+      "en": "Thick, hooked **bill**",
+      "nl": "Dikke, gehaakte **snavel**"
+    },
+    {
+      "en": "Pale **rump**; small noisy groups",
+      "nl": "Lichte **stuit**; kleine luidruchtige groepjes"
+    }
+  ]
+}

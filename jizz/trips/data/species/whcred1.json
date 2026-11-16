@@ -1,0 +1,22 @@
+{
+  "code": "whcred1",
+  "name": {
+    "en": "White-capped Redstart",
+    "nl": "Rivierroodstaart"
+  },
+  "latin": "Phoenicurus leucocephalus",
+  "look_for": [
+    {
+      "en": "Male white **crown**, black head and chest",
+      "nl": "Mannetje met witte **kruin**, zwarte kop en borst"
+    },
+    {
+      "en": "Chestnut **belly**, rump and tail",
+      "nl": "Kastanjebruine **buik**, stuit en staart"
+    },
+    {
+      "en": "Bobs its **tail** on boulders beside fast streams",
+      "nl": "Wipt met de **staart** op rotsblokken langs snelstromende beken"
+    }
+  ]
+}

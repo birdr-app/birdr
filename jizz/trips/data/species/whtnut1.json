@@ -1,0 +1,22 @@
+{
+  "code": "whtnut1",
+  "name": {
+    "en": "White-tailed Nuthatch",
+    "nl": "Witstaartboomklever"
+  },
+  "latin": "Sitta himalayensis",
+  "look_for": [
+    {
+      "en": "Pale blue-grey **back**, buffy-orange underparts",
+      "nl": "Bleek blauwgrijze **rug**, bruinoranje onderkant"
+    },
+    {
+      "en": "Black eye-stripe widening behind the **eye**",
+      "nl": "Zwarte oogstreep die achter het **oog** breder wordt"
+    },
+    {
+      "en": "Unmarked rufous under the **tail**, climbs headfirst",
+      "nl": "Ongetekend roestrood onder de **staart**, klimt met kop omlaag"
+    }
+  ]
+}
