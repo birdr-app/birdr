@@ -183,3 +183,14 @@ export async function startMixupPractice(
   );
   return data;
 }
+
+export async function startCustomPickPractice(
+  speciesIds: number[],
+  countryCode?: string,
+): Promise<StartPairPracticeResponse> {
+  if (speciesIds.length === 2) {
+    const [lowId, highId] = [...speciesIds].sort((a, b) => a - b);
+    return startConfusionPairPractice(lowId, highId, countryCode);
+  }
+  return startMixupPractice(speciesIds, countryCode);
+}
