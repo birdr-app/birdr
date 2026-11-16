@@ -11,7 +11,7 @@ from django.db.models import Q
 from django.http import Http404, HttpResponse
 from django.urls import reverse
 
-from compare.indexable import current_comparisons, translated_languages
+from compare.indexable import indexable_comparisons, translated_languages
 from compare.models import CommunityComparison, SpeciesDescription
 from jizz.marketing.i18n import MARKETING_LOCALES, localize_path
 from jizz.marketing.pages import INTENT_PAGES, canonical_origin, public_species_qs
@@ -226,7 +226,7 @@ def _build_indexable_comparisons() -> dict[str, tuple[datetime, frozenset[str]]]
     """
     found: dict[str, tuple[datetime, set[str]]] = {}
     rows = list(
-        current_comparisons()
+        indexable_comparisons()
         .filter(
             species_1__isnull=False,
             species_2__isnull=False,

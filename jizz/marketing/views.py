@@ -800,6 +800,7 @@ def _compare_page_response(
     # stay out of the index and the sitemap until the content exists; see compare.indexable.
     index_languages = indexable_languages(
         comparison, community=bool(community), all_languages=MARKETING_LOCALES,
+        species_pair=(low, high),
     )
     if show_ai and not summary_html and not sections and not detailed_html:
         summary_html, sections, detailed_html = '', [], ''

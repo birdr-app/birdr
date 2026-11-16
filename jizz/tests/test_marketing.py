@@ -1088,6 +1088,7 @@ class MarketingPagesTests(TestCase):
         self.assertIn(f'Sitemap: {settings.MARKETING_URL}/sitemap.xml', spa_robots.read_text())
 
     def test_robots_and_sitemaps(self):
+        self._same_family(self.sparrow, self.goshawk)
         robots = self.client.get('/robots.txt')
         self.assertEqual(robots.status_code, 200)
         text = robots.content.decode()
@@ -1251,6 +1252,7 @@ class MarketingPagesTests(TestCase):
     def test_sitemaps_list_lastmod_from_page_content(self):
         from django.contrib.auth.models import User
 
+        self._same_family(self.sparrow, self.goshawk)
         from compare.models import CommunityComparison, SpeciesDescription
 
         def at(day):
@@ -1311,10 +1313,20 @@ class MarketingPagesTests(TestCase):
         self.assertEqual(first, second)
         cache.clear()
 
+    def _same_family(self, *species):
+        """Compare pages are listed only for two birds of the same family."""
+        from jizz.models import TaxonomicFamily
+
+        family, _ = TaxonomicFamily.objects.get_or_create(
+            name_latin='Testidae', defaults={'name_en': 'Test birds', 'name_nl': 'Testvogels'},
+        )
+        Species.objects.filter(pk__in=[sp.pk for sp in species]).update(taxonomic_family=family)
+        return family
+
     def _stale_and_translated_pairs(self):
         """The sparrow/goshawk pair (current text, German only) and a pair with outdated text."""
         from compare.models import ComparisonTranslation
-
+        self._same_family(self.sparrow, self.goshawk)
         gull = Species.objects.create(name='Little Gull', name_latin='Hydrocoloeus minutus', code='litgul')
         tern = Species.objects.create(name='Black Tern', name_latin='Chlidonias niger', code='blkter')
         gull.refresh_from_db()
@@ -1356,6 +1368,34 @@ class MarketingPagesTests(TestCase):
         self.assertNotIn('hreflang="fr"', body)
         self.assertIn('hreflang="de"', body)
         self.assertNotIn(stale_pair, body)
+
+    def test_a_pair_from_different_families_is_not_listed_or_indexed(self):
+        cache.clear()
+        current_pair, _stale = self._stale_and_translated_pairs()
+        from jizz.models import TaxonomicFamily
+
+        # Same text and prompt as the listed pair, but a lark against a hawk.
+        lark_family = TaxonomicFamily.objects.create(name_latin='Alaudidae', name_en='Larks', name_nl='Leeuweriken')
+        lark = Species.objects.create(
+            name='Crested Lark', name_latin='Galerida cristata', code='creler', taxonomic_family=lark_family,
+        )
+        lark.refresh_from_db()
+        low, high = (self.sparrow, lark) if self.sparrow.id < lark.id else (lark, self.sparrow)
+        SpeciesComparison.objects.create(
+            comparison_type='species',
+            species_1=low,
+            species_2=high,
+            summary='Nothing alike.',
+            detailed_comparison='A hawk and a lark are not a useful comparison.',
+            ai_model=comparison_model_name(),
+            ai_prompt_version=comparison_prompt_version(),
+        )
+        silly = f'{low.slug}-vs-{high.slug}'
+        body = self.client.get('/sitemap-compare.xml').content.decode()
+        self.assertIn(f'/site/compare/{current_pair}/', body)
+        self.assertNotIn(silly, body)
+        html = self.client.get(f'/site/compare/{silly}/').content.decode()
+        self.assertIn('<meta name="robots" content="noindex', html)
 
     def test_compare_page_is_indexable_only_where_it_has_text(self):
         current_pair, stale_pair = self._stale_and_translated_pairs()
