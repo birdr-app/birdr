@@ -686,7 +686,17 @@ def localized_intent_page(slug: str) -> dict | None:
     return translate_copy(page)
 
 
-def base_context(request, *, title: str, description: str, path: str, breadcrumbs=None, extra_json_ld=None, **extra):
+def base_context(
+    request,
+    *,
+    title: str,
+    description: str,
+    path: str,
+    breadcrumbs=None,
+    extra_json_ld=None,
+    hreflang_codes=None,
+    **extra,
+):
     origin = canonical_origin(request)
     locale = locale_from_request(request)
     app_store_url, play_store_url = store_urls()
@@ -751,6 +761,11 @@ def base_context(request, *, title: str, description: str, path: str, breadcrumb
         'locale': locale,
         'html_lang': html_lang(locale),
         'locale_alternates': alts,
+        # hreflang names only the languages a page really exists in; the language switcher
+        # (locale_alternates) keeps all of them.
+        'hreflang_alternates': [
+            row for row in alts if hreflang_codes is None or row['code'] in hreflang_codes
+        ],
         'locale_default_url': origin + localize_path(logical_path if logical_path.startswith('/site/') else SITE_HOME, 'en'),
         'js_i18n': mark_safe(json.dumps(js_messages(locale), ensure_ascii=False)),
         'request_path': request_path,

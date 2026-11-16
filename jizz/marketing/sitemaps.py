@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import threading
+from contextlib import contextmanager, nullcontext
 from datetime import date, datetime
 
 from django.core.cache import cache
@@ -9,11 +11,13 @@ from django.db.models import Q
 from django.http import Http404, HttpResponse
 from django.urls import reverse
 
-from compare.models import CommunityComparison, SpeciesComparison, SpeciesDescription
+from compare.indexable import current_comparisons, translated_languages
+from compare.models import CommunityComparison, SpeciesDescription
 from jizz.marketing.i18n import MARKETING_LOCALES, localize_path
 from jizz.marketing.pages import INTENT_PAGES, canonical_origin, public_species_qs
 from jizz.marketing.slugs import compare_pair_slug
 from jizz.marketing.views import _indexable_countries, _indexable_regions
+from jizz.update_i18n import DEFAULT_LANGUAGE
 
 
 def _urlset(
@@ -21,18 +25,22 @@ def _urlset(
     origin: str,
     lastmods: dict[str, date] | None = None,
     locales: tuple[str, ...] = MARKETING_LOCALES,
+    path_locales: dict[str, tuple[str, ...]] | None = None,
 ) -> str:
     lastmods = lastmods or {}
     items = []
     for path in paths:
+        # A page may exist in some languages only (compare pages are listed in the
+        # languages they have been translated to); hreflang then names just those.
+        page_locales = path_locales.get(path, ()) if path_locales is not None else locales
         lastmod = lastmods.get(path)
         lastmod_line = f'    <lastmod>{lastmod.isoformat()}</lastmod>\n' if lastmod else ''
-        for locale in locales:
+        for locale in page_locales:
             loc = origin + localize_path(path, locale)
             alts = []
             # A page in one language only has no alternates.
-            if len(locales) > 1:
-                for other in locales:
+            if len(page_locales) > 1:
+                for other in page_locales:
                     href = origin + localize_path(path, other)
                     alts.append(
                         f'    <xhtml:link rel="alternate" hreflang="{other}" href="{href}"/>'
@@ -112,12 +120,13 @@ def sitemap_index(request):
     body = cache.get(cache_key)
     if body is None:
         entries = []
-        for name, paths_fn in SECTIONS.items():
-            paths = paths_fn()
-            lastmods = section_lastmods(name)
-            for page in range(1, _page_count(paths) + 1):
-                dates = [lastmods[p] for p in _page_paths(paths, page) if p in lastmods]
-                entries.append((origin + _section_url(name, page), max(dates, default=None)))
+        with comparison_snapshot():
+            for name, paths_fn in SECTIONS.items():
+                paths = paths_fn()
+                lastmods = section_lastmods(name)
+                for page in range(1, _page_count(paths) + 1):
+                    dates = [lastmods[p] for p in _page_paths(paths, page) if p in lastmods]
+                    entries.append((origin + _section_url(name, page), max(dates, default=None)))
         body = _index(entries)
         cache.set(cache_key, body, SITEMAP_INDEX_TTL)
     return _xml(body)
@@ -188,43 +197,86 @@ def _compare_path(a_id: int, a_slug: str, b_id: int, b_slug: str) -> str:
     return reverse('marketing-compare', kwargs={'pair': compare_pair_slug(low, high)})
 
 
-def _comparisons() -> dict[str, datetime]:
-    """Compare page path -> latest AI comparison update, in order of first comparison."""
-    latest: dict[str, datetime] = {}
-    comparisons = SpeciesComparison.objects.filter(
-        comparison_type='species',
-        species_1__isnull=False,
-        species_2__isnull=False,
-        species_1__retired_at__isnull=True,
-        species_2__retired_at__isnull=True,
-    ).order_by('id').values_list(
-        'species_1_id', 'species_1__slug', 'species_2_id', 'species_2__slug', 'updated_at',
+_snapshot = threading.local()
+
+
+@contextmanager
+def comparison_snapshot():
+    """Build the compare data once for everything inside the block (one sitemap request)."""
+    previous = getattr(_snapshot, 'value', None)
+    _snapshot.value = _build_indexable_comparisons()
+    try:
+        yield
+    finally:
+        _snapshot.value = previous
+
+
+def _indexable_comparisons() -> dict[str, tuple[datetime, frozenset[str]]]:
+    snapshot = getattr(_snapshot, 'value', None)
+    return snapshot if snapshot is not None else _build_indexable_comparisons()
+
+
+def _build_indexable_comparisons() -> dict[str, tuple[datetime, frozenset[str]]]:
+    """Compare page path -> (last update, languages) for pages with real content.
+
+    Derived from the data on every request, so a pair appears as soon as its comparison is
+    generated, and a language appears as soon as its translation is stored. Pairs whose
+    text is missing or outdated (the page would show a "Writing a comparison…" placeholder)
+    are left out; see compare.indexable.
+    """
+    found: dict[str, tuple[datetime, set[str]]] = {}
+    rows = list(
+        current_comparisons()
+        .filter(
+            species_1__isnull=False,
+            species_2__isnull=False,
+            species_1__retired_at__isnull=True,
+            species_2__retired_at__isnull=True,
+        )
+        .order_by('id')
+        .values_list('id', 'species_1_id', 'species_1__slug', 'species_2_id', 'species_2__slug', 'updated_at')
     )
-    for a_id, a_slug, b_id, b_slug, updated in comparisons:
+    translated = translated_languages(row[0] for row in rows)
+    for comparison_id, a_id, a_slug, b_id, b_slug, updated in rows:
         if not a_slug or not b_slug:
             continue
         path = _compare_path(a_id, a_slug, b_id, b_slug)
-        if path not in latest or updated > latest[path]:
-            latest[path] = updated
-    return latest
-
-
-def compare_paths() -> list[str]:
-    return list(_comparisons())
-
-
-def compare_lastmods() -> dict[str, date]:
-    latest = _comparisons()
-    community = CommunityComparison.objects.filter(published=True).values_list(
-        'species_low_id', 'species_low__slug', 'species_high_id', 'species_high__slug', 'updated',
-    )
+        languages = {DEFAULT_LANGUAGE} | (translated.get(comparison_id, set()) & set(MARKETING_LOCALES))
+        if path in found:
+            updated = max(updated, found[path][0])
+            languages |= found[path][1]
+        found[path] = (updated, languages)
+    # A published community comparison replaces the AI text on the page, in every language
+    # alike, so such a pair is listed in the default language only.
+    community = CommunityComparison.objects.filter(
+        published=True,
+        species_low__retired_at__isnull=True,
+        species_high__retired_at__isnull=True,
+    ).values_list('species_low_id', 'species_low__slug', 'species_high_id', 'species_high__slug', 'updated')
     for a_id, a_slug, b_id, b_slug, updated in community:
         if not a_slug or not b_slug:
             continue
         path = _compare_path(a_id, a_slug, b_id, b_slug)
-        if path in latest and updated > latest[path]:
-            latest[path] = updated
-    return {path: updated.date() for path, updated in latest.items()}
+        if path in found:
+            updated = max(updated, found[path][0])
+        found[path] = (updated, {DEFAULT_LANGUAGE})
+    return {path: (updated, frozenset(languages)) for path, (updated, languages) in found.items()}
+
+
+def compare_paths() -> list[str]:
+    return list(_indexable_comparisons())
+
+
+def compare_path_locales() -> dict[str, tuple[str, ...]]:
+    """Languages each listed compare page is available in, in sitemap order."""
+    return {
+        path: tuple(locale for locale in MARKETING_LOCALES if locale in languages)
+        for path, (_updated, languages) in _indexable_comparisons().items()
+    }
+
+
+def compare_lastmods() -> dict[str, date]:
+    return {path: updated.date() for path, (updated, _languages) in _indexable_comparisons().items()}
 
 
 def taxa_paths() -> list[str]:
@@ -259,6 +311,17 @@ def section_locales(section: str) -> tuple[str, ...]:
     return SECTION_LOCALES.get(section, MARKETING_LOCALES)
 
 
+# Sections that list each page in its own set of languages: path -> languages.
+SECTION_PATH_LOCALES = {
+    'compare': compare_path_locales,
+}
+
+
+def section_path_locales(section: str) -> dict[str, tuple[str, ...]] | None:
+    fn = SECTION_PATH_LOCALES.get(section)
+    return fn() if fn else None
+
+
 # Last modification date per path, for the sections whose pages have one. Countries and
 # taxa pages are lists built from many records without a timestamp of their own.
 LASTMODS = {
@@ -273,12 +336,17 @@ def section_lastmods(section: str) -> dict[str, date]:
     return lastmods_fn() if lastmods_fn else {}
 
 
-def localized_urls(paths: list[str], origin: str, locales: tuple[str, ...] = MARKETING_LOCALES) -> list[str]:
+def localized_urls(
+    paths: list[str],
+    origin: str,
+    locales: tuple[str, ...] = MARKETING_LOCALES,
+    path_locales: dict[str, tuple[str, ...]] | None = None,
+) -> list[str]:
     """Every locale's absolute URL for each path, as the sitemaps list them."""
     return [
         origin + localize_path(path, locale)
         for path in paths
-        for locale in locales
+        for locale in (path_locales.get(path, ()) if path_locales is not None else locales)
     ]
 
 
@@ -288,7 +356,14 @@ def sitemap_section(request, section: str):
     if paths_fn is None or not page.isdigit():
         raise Http404
     page = int(page)
-    paths = paths_fn()
-    if not 1 <= page <= _page_count(paths):
-        raise Http404
-    return _xml(_urlset(_page_paths(paths, page), canonical_origin(request), section_lastmods(section), section_locales(section)))
+    with comparison_snapshot() if section == 'compare' else nullcontext():
+        paths = paths_fn()
+        if not 1 <= page <= _page_count(paths):
+            raise Http404
+        return _xml(_urlset(
+            _page_paths(paths, page),
+            canonical_origin(request),
+            section_lastmods(section),
+            section_locales(section),
+            section_path_locales(section),
+        ))

@@ -1311,6 +1311,68 @@ class MarketingPagesTests(TestCase):
         self.assertEqual(first, second)
         cache.clear()
 
+    def _stale_and_translated_pairs(self):
+        """The sparrow/goshawk pair (current text, German only) and a pair with outdated text."""
+        from compare.models import ComparisonTranslation
+
+        gull = Species.objects.create(name='Little Gull', name_latin='Hydrocoloeus minutus', code='litgul')
+        tern = Species.objects.create(name='Black Tern', name_latin='Chlidonias niger', code='blkter')
+        gull.refresh_from_db()
+        tern.refresh_from_db()
+        low, high = (gull, tern) if gull.id < tern.id else (tern, gull)
+        SpeciesComparison.objects.create(
+            comparison_type='species',
+            species_1=low,
+            species_2=high,
+            summary='An older text.',
+            detailed_comparison='Written with an earlier prompt, so the page shows a placeholder.',
+            ai_model=comparison_model_name(),
+            ai_prompt_version='v0-outdated',
+        )
+        current = SpeciesComparison.objects.get(species_1=self.sparrow, species_2=self.goshawk)
+        ComparisonTranslation.objects.create(
+            comparison=current, language='de', source_hash='x', fields={'summary': 'Kurz.'},
+        )
+        # A failed translation stored no text, so it does not count.
+        ComparisonTranslation.objects.create(
+            comparison=current, language='fr', source_hash='x', fields={'summary': ''},
+        )
+        return (
+            f'{self.sparrow.slug}-vs-{self.goshawk.slug}'
+            if self.sparrow.id < self.goshawk.id
+            else f'{self.goshawk.slug}-vs-{self.sparrow.slug}',
+            f'{low.slug}-vs-{high.slug}',
+        )
+
+    def test_compare_sitemap_lists_only_pages_with_current_text_in_translated_languages(self):
+        cache.clear()
+        current_pair, stale_pair = self._stale_and_translated_pairs()
+        body = self.client.get('/sitemap-compare.xml').content.decode()
+        self.assertIn(f'<loc>https://motmot.club/site/compare/{current_pair}/</loc>', body)
+        self.assertIn(f'<loc>https://motmot.club/de/site/compare/{current_pair}/</loc>', body)
+        # No translation (or an empty one): not listed, and not named in hreflang either.
+        for language in ('fr', 'es', 'nl', 'ja'):
+            self.assertNotIn(f'/{language}/site/compare/{current_pair}/', body)
+        self.assertNotIn('hreflang="fr"', body)
+        self.assertIn('hreflang="de"', body)
+        self.assertNotIn(stale_pair, body)
+
+    def test_compare_page_is_indexable_only_where_it_has_text(self):
+        current_pair, stale_pair = self._stale_and_translated_pairs()
+        noindex = '<meta name="robots" content="noindex'
+
+        english = self.client.get(f'/site/compare/{current_pair}/').content.decode()
+        self.assertNotIn(noindex, english)
+        # The head names only the languages that exist; the language switcher keeps all.
+        self.assertIn('<link rel="alternate" hreflang="de"', english)
+        self.assertNotIn('<link rel="alternate" hreflang="fr"', english)
+
+        self.assertNotIn(noindex, self.client.get(f'/de/site/compare/{current_pair}/').content.decode())
+        # Not translated yet: English text under another language's URL.
+        self.assertIn(noindex, self.client.get(f'/fr/site/compare/{current_pair}/').content.decode())
+        # Text from an earlier prompt: the page only shows a placeholder.
+        self.assertIn(noindex, self.client.get(f'/site/compare/{stale_pair}/').content.decode())
+
     def test_large_sitemap_sections_are_split_into_pages(self):
         paths = [f'/site/birds/bird-{i}/' for i in range(5)]
         with patch.dict('jizz.marketing.sitemaps.SECTIONS', {'birds': lambda: paths}), \

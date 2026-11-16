@@ -28,6 +28,7 @@ from compare.community import (
     user_from_request,
 )
 from compare.generation import comparison_cache_is_current, find_species_comparison
+from compare.indexable import indexable_languages
 from compare.models import CommunityComparison
 from jizz.marketing.pages import (
     INTENT_MASCOTS,
@@ -46,7 +47,7 @@ from jizz.marketing.pages import (
     site_path,
     species_approved_image_count,
 )
-from jizz.marketing.i18n import locale_from_request, localize_path, translate
+from jizz.marketing.i18n import MARKETING_LOCALES, locale_from_request, localize_path, translate
 from jizz.marketing.local_names import (
     country_display_name,
     localize_country_rows,
@@ -794,6 +795,12 @@ def _compare_page_response(
     else:
         active = community if not show_ai else comparison
     summary_html, sections, detailed_html = rendered_parts(active)
+    # Only a page with real text in this language is worth indexing. The others (no current
+    # comparison yet, or not translated yet) show a placeholder or English text, so they
+    # stay out of the index and the sitemap until the content exists; see compare.indexable.
+    index_languages = indexable_languages(
+        comparison, community=bool(community), all_languages=MARKETING_LOCALES,
+    )
     if show_ai and not summary_html and not sections and not detailed_html:
         summary_html, sections, detailed_html = '', [], ''
     left_name = species_display_name(low, locale)
@@ -858,6 +865,8 @@ def _compare_page_response(
         login_href=f'/login?next={quote(localized_path + "?edit=1")}',
         community_action=_loc(request, reverse('marketing-compare-community', kwargs={'pair': pair})),
         compare_path=localized_path,
+        noindex=locale not in index_languages,
+        hreflang_codes=index_languages,
     )
     return render(request, 'marketing/compare.html', context)
 

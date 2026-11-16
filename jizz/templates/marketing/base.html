@@ -6,7 +6,7 @@
   <title>{{ page_title }}</title>
   <meta name="description" content="{{ meta_description }}">
   <link rel="canonical" href="{{ canonical_url }}">
-  {% for alt in locale_alternates %}
+  {% for alt in hreflang_alternates %}
   <link rel="alternate" hreflang="{{ alt.hreflang }}" href="{{ alt.absolute_url }}">
   {% endfor %}
   <link rel="alternate" hreflang="x-default" href="{{ locale_default_url }}">

@@ -59,6 +59,7 @@ def _context(request, *, title, description, path, breadcrumbs, extra_json_ld=No
     )
     # One language only: no hreflang alternates, and x-default is the Dutch page itself.
     context['locale_alternates'] = []
+    context['hreflang_alternates'] = []
     context['locale_default_url'] = context['canonical_url']
     context['nav_section'] = 'course'
     return context
