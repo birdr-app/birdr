@@ -10,6 +10,7 @@ import {
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { advanceJourneyLevel, getBirdrJourney, type JourneyLevel } from '../api/birdrJourney';
 import { BirdrLevelImage } from '../components/BirdrLevelImage';
+import { useReviewPrompt } from '../hooks/useReviewPrompt';
 import { useTranslation } from '../i18n/TranslationContext';
 import { colors } from '../theme';
 
@@ -42,6 +43,9 @@ export function BirdrJourneyLevelCelebrationScreen() {
   const [error, setError] = useState<string | null>(null);
   const [nextLevel, setNextLevel] = useState<JourneyLevel | null>(null);
   const advancingRef = useRef(false);
+
+  // Reaching a new bird stage is a proud moment: a good time to ask for a rating.
+  useReviewPrompt(!loading && !error);
 
   useEffect(() => {
     let cancelled = false;

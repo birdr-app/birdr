@@ -35,6 +35,7 @@ import {
 } from "../../../api/gameShare"
 import { recordGameFinished } from "../../../core/game-modes"
 import { SharedGameResultBlock } from "../../../components/shared-game-result-block"
+import AppStoreBanner from "../../../components/app-store-banner"
 
 const PRACTICE_PASS_CORRECT = 18;
 
@@ -522,6 +523,7 @@ export const ResultsComponent = () => {
             })}
           </ListRoot>
           {sharedGameToken ? <SharedGameResultBlock token={sharedGameToken} /> : null}
+          <AppStoreBanner minGames={2} dismissible />
           {shareable && shareUrl ? (
             <FlockShareBlock
               titleId="game_result_share"

@@ -6,6 +6,7 @@ import { useGameWebSocket } from '../context/GameWebSocketContext';
 import { useAuth } from '../context/AuthContext';
 import { useGameModes } from '../context/GameModesContext';
 import { useTranslation } from '../i18n/TranslationContext';
+import { RateAppLink } from '../components/RateAppLink';
 import { colors } from '../theme';
 import type { Game } from '../api/games';
 import type { MultiPlayer } from '../types/game';
@@ -534,6 +535,7 @@ export function GameResultsScreen() {
           <Text style={styles.outlineButtonText}>{t('play_again')}</Text>
         </TouchableOpacity>
       </View>
+      <RateAppLink testID="gameResults.rateApp" />
     </ScrollView>
     </View>
   );

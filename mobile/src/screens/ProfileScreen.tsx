@@ -34,6 +34,7 @@ import { CountryRegionSelect } from '../components/CountryRegionSelect';
 import { SpeciesLanguageLabel } from '../components/SpeciesLanguageLabel';
 import { AppLanguagePicker } from '../components/AppLanguagePicker';
 import { speciesLanguageFromAppLocale } from '../i18n/appLocales';
+import { RateAppLink } from '../components/RateAppLink';
 import { colors } from '../theme';
 import { fetchLeagueOverview, type LeagueOverview } from '../api/league';
 import { fetchMemberStats, type MemberStats } from '../api/memberStats';
@@ -479,6 +480,8 @@ export function ProfileScreen() {
           <Text style={styles.saveButtonText}>{t('save')}</Text>
         )}
       </TouchableOpacity>
+
+      <RateAppLink testID="profile.rateApp" />
 
       <View style={styles.deleteSection}>
         <TouchableOpacity

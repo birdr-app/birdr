@@ -3,7 +3,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as StoreReview from 'expo-store-review';
 import { useGameModes } from '../context/GameModesContext';
 import { getAppVersionDisplay } from '../utils/appVersion';
-import { REVIEW_ASKED_VERSION_STORAGE_KEY, shouldAskForReview } from '../game/reviewPrompt';
+import {
+  REVIEW_ASKED_AT_STORAGE_KEY,
+  REVIEW_ASKED_VERSION_STORAGE_KEY,
+  shouldAskForReview,
+} from '../game/reviewPrompt';
 
 /** Let the results land (and the confetti play) before the rating sheet covers them. */
 const ASK_DELAY_MS = 1500;
@@ -25,11 +29,14 @@ export function useReviewPrompt(goodResult: boolean): void {
       void (async () => {
         try {
           const askedVersion = await AsyncStorage.getItem(REVIEW_ASKED_VERSION_STORAGE_KEY);
+          const askedAtRaw = Number(await AsyncStorage.getItem(REVIEW_ASKED_AT_STORAGE_KEY));
+          const askedAt = Number.isFinite(askedAtRaw) && askedAtRaw > 0 ? askedAtRaw : null;
           if (cancelled || askedRef.current) return;
-          if (!shouldAskForReview({ goodResult, gamesPlayed, appVersion, askedVersion })) return;
+          if (!shouldAskForReview({ goodResult, gamesPlayed, appVersion, askedVersion, askedAt })) return;
           if (!(await StoreReview.isAvailableAsync()) || cancelled) return;
           askedRef.current = true;
           await AsyncStorage.setItem(REVIEW_ASKED_VERSION_STORAGE_KEY, appVersion!);
+          await AsyncStorage.setItem(REVIEW_ASKED_AT_STORAGE_KEY, String(Date.now()));
           await StoreReview.requestReview();
         } catch {
           /* ignore */

@@ -16,6 +16,7 @@ import { TripCelebration } from '../components/TripCelebration';
 import { TripBackArrow, EndemicBadge, Kicker, TripLoading, TripPhoto, TripThumb, tripStyles } from '../components/TripParts';
 import { getMoodImage } from '../constants/birdrMoodImages';
 import { useVisualStyle } from '../context/VisualStyleContext';
+import { useReviewPrompt } from '../hooks/useReviewPrompt';
 import { useTrip, type TripData } from '../hooks/useTrip';
 import { useTranslation } from '../i18n/TranslationContext';
 import {
@@ -62,6 +63,9 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
   const [step, setStep] = useState<Step>({ kind: 'intro' });
   const scrollRef = useRef<ScrollView>(null);
   const birds = unit.species.map((c) => trip.species[c]).filter((s): s is TripSpecies => !!s);
+
+  // A finished unit with mostly right answers (or the whole trip) is a good moment to ask for a rating.
+  useReviewPrompt(step.kind === 'done' && (step.celebrate || step.wrong <= Math.floor(step.asked * 0.3)));
 
   useEffect(() => {
     navigation.setOptions({ title: unit.title, headerLeft: () => <TripBackArrow country={trip.country} name={trip.name} parentCountry={trip.parent} /> });

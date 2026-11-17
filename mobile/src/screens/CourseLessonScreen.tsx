@@ -8,6 +8,8 @@ import { BoldText, CourseSoundButton, StepBar } from '../components/CourseParts'
 import { GameArtImage } from '../components/GameArtImage';
 import { getMoodImage } from '../constants/birdrMoodImages';
 import { useVisualStyle } from '../context/VisualStyleContext';
+import { useReviewPrompt } from '../hooks/useReviewPrompt';
+import { isGoodAccuracy } from '../game/reviewPrompt';
 import { colors } from '../theme';
 
 type Params = { CourseLesson: { week: number } };
@@ -41,6 +43,9 @@ export function CourseLessonScreen() {
   const [step, setStep] = useState(0);
   const [result, setResult] = useState<{ score: number; total: number } | null>(null);
   const scrollRef = useRef<ScrollView>(null);
+
+  // A finished lesson with a good quiz score is a good moment to ask for a rating.
+  useReviewPrompt(result != null && isGoodAccuracy(result.score, result.total));
 
   const load = useCallback(() => {
     setError(false);

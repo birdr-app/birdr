@@ -35,6 +35,8 @@ change a title on purpose, edit the listing file and the lock in the same commit
   shows the first lines before "more", so they say what the app does and for whom.
 - **Feature names match the app** in each language (Mijn lastige vogels, Meine Liste…).
 
+See `growth-plan.md` for what the store analytics showed and the prepared next steps.
+
 ## Status (7 Nov 2026)
 
 - **Google Play** has these texts in all nine listings (en-US, it-IT and ja-JP were

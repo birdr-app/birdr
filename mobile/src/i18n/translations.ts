@@ -343,6 +343,7 @@ export const translations: Record<string, Record<string, string>> = {
       'If you use the iPhone or Android app, a rating is one of the simplest ways to help. It tells other birders the quiz is worth trying.',
     community_review_app_store: 'Review on the App Store',
     community_review_play: 'Review on Google Play',
+    rate_motmot: 'Enjoying Motmot? Rate the app',
     community_support: 'Support Motmot',
     community_support_body:
       'Motmot is free, open source, and built in spare time. There is no funding behind it right now. A donation via Buy Me a Coffee helps cover hosting and AI credits so the quiz can stay free.',
@@ -1401,6 +1402,7 @@ export const translations: Record<string, Record<string, string>> = {
       'Als je de iPhone- of Android-app gebruikt, is een beoordeling een van de eenvoudigste manieren om te helpen. Andere vogelaars zien dan dat de quiz de moeite waard is.',
     community_review_app_store: 'Review in de App Store',
     community_review_play: 'Review op Google Play',
+    rate_motmot: 'Vind je Motmot leuk? Beoordeel de app',
     community_support: 'Steun Motmot',
     community_support_body:
       'Motmot is gratis, open source, en gemaakt in vrije tijd. Er is nu geen financiering. Een donatie via Buy Me a Coffee helpt hosting en AI-credits te betalen, zodat de quiz gratis kan blijven.',
