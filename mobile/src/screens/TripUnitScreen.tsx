@@ -28,9 +28,10 @@ import {
   hasNextQuestion,
   learnedCodes,
   makeQuestion,
+  nextUnit,
+  PASS_SCORE,
   tripComplete,
   withPlus,
-  remaining,
   type TripQuestion,
 } from '../lib/tripQuiz';
 import { colors } from '../theme';
@@ -40,7 +41,10 @@ type Step =
   | { kind: 'intro' }
   | { kind: 'card'; index: number }
   | { kind: 'quiz'; round: number }
-  | { kind: 'done'; asked: number; wrong: number; saved: boolean | null; celebrate: boolean };
+  | { kind: 'done'; asked: number; wrong: number; correct: number; total: number; saved: boolean | null; celebrate: boolean };
+
+/** Right answers on the first try, out of the planned questions of one quiz. */
+type QuizScore = { correct: number; total: number };
 
 /** One unit: introduction, one card per bird, the quiz, the result. */
 export function TripUnitScreen() {
@@ -65,7 +69,7 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
   const birds = unit.species.map((c) => trip.species[c]).filter((s): s is TripSpecies => !!s);
 
   // A finished unit with mostly right answers (or the whole trip) is a good moment to ask for a rating.
-  useReviewPrompt(step.kind === 'done' && (step.celebrate || step.wrong <= Math.floor(step.asked * 0.3)));
+  useReviewPrompt(step.kind === 'done' && (step.celebrate || step.correct >= step.total * PASS_SCORE));
 
   useEffect(() => {
     navigation.setOptions({ title: unit.title, headerLeft: () => <TripBackArrow country={trip.country} name={trip.name} parentCountry={trip.parent} /> });
@@ -77,16 +81,26 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
   };
   const stepIndex = step.kind === 'intro' ? 0 : step.kind === 'card' ? step.index + 1 : birds.length + 1;
 
-  const finish = async (answers: TripAnswer[], rightCodes: string[], wrongCodes: string[]) => {
+  const finish = async (answers: TripAnswer[], rightCodes: string[], wrongCodes: string[], score: QuizScore) => {
     const before = tripComplete(trip, data.local, data.knownGroups);
     const local = await updateTripState(trip.country, (s) => finishUnit(s, unit, rightCodes, wrongCodes));
     // This unit finished the trip: celebrate, then offer the regular game.
-    go({ kind: 'done', asked: answers.length, wrong: wrongCodes.length, saved: null, celebrate: !before && tripComplete(trip, local, data.knownGroups) });
+    go({ kind: 'done', asked: answers.length, wrong: wrongCodes.length, correct: score.correct, total: score.total, saved: null, celebrate: !before && tripComplete(trip, local, data.knownGroups) });
     data.setLocal(local);
     const progress = await postTripAnswers(trip.country, answers);
     if (progress) data.setProgress(progress);
     setStep((s) => (s.kind === 'done' ? { ...s, saved: !!progress } : s));
   };
+
+  // The further into the trip, the closer the lookalikes among the answers.
+  const difficulty = Math.min(1, data.local.units_done.filter((slug) => slug !== unit.slug).length / Math.max(1, trip.units.length));
+  // The result: a first-try score decides whether to send the player on or to the quiz again.
+  const result = step.kind === 'done' ? step : null;
+  const score = result && result.total ? result.correct / result.total : 1;
+  const passed = score >= PASS_SCORE;
+  const following = result ? nextUnit(trip, unit, data.knownGroups, data.local) : null;
+  const primaryStyle = (primary: boolean) => (primary ? tripStyles.primaryButton : tripStyles.secondaryButton);
+  const primaryText = (primary: boolean) => (primary ? tripStyles.primaryButtonText : tripStyles.secondaryButtonText);
 
   const cardNav =
     step.kind === 'card'
@@ -127,6 +141,7 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
           trip={trip}
           unit={unit}
           learned={learnedCodes(trip, data.local.units_done)}
+          difficulty={difficulty}
           onDone={finish}
           onAnswered={() => scrollRef.current?.scrollToEnd({ animated: true })}
           onNextQuestion={() => scrollRef.current?.scrollTo({ y: 0, animated: false })}
@@ -151,16 +166,35 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
               <Text style={tripStyles.small}>{t('trip_not_saved')}</Text>
             </View>
           ) : null}
-          <TouchableOpacity style={tripStyles.primaryButton} onPress={() => navigation.goBack()} accessibilityRole="button" testID="trip.unit.back">
-            <Text style={tripStyles.primaryButtonText}>{t('trip_back_home')}</Text>
-          </TouchableOpacity>
+          <Text style={[tripStyles.small, { fontWeight: '700' }]}>
+            {t('trip_unit_score', { correct: step.correct, total: step.total, percent: Math.round(score * 100) })}
+          </Text>
+          {!passed ? <Text style={tripStyles.small}>{t('trip_unit_retry_hint', { target: Math.round(PASS_SCORE * 100) })}</Text> : null}
           <TouchableOpacity
-            style={tripStyles.secondaryButton}
+            style={primaryStyle(passed && !following)}
+            onPress={() => navigation.goBack()}
+            accessibilityRole="button"
+            testID="trip.unit.back"
+          >
+            <Text style={primaryText(passed && !following)}>{t('trip_back_home')}</Text>
+          </TouchableOpacity>
+          {following ? (
+            <TouchableOpacity
+              style={primaryStyle(passed)}
+              onPress={() => navigation.replace('TripUnit', { country: trip.country, slug: following.slug })}
+              accessibilityRole="button"
+              testID="trip.unit.next"
+            >
+              <Text style={primaryText(passed)}>{t('trip_continue_to', { name: following.title })}</Text>
+            </TouchableOpacity>
+          ) : null}
+          <TouchableOpacity
+            style={primaryStyle(!passed)}
             onPress={() => go({ kind: 'quiz', round: Date.now() })}
             accessibilityRole="button"
             testID="trip.unit.again"
           >
-            <Text style={tripStyles.secondaryButtonText}>{t('trip_quiz_again')}</Text>
+            <Text style={primaryText(!passed)}>{t('trip_quiz_again')}</Text>
           </TouchableOpacity>
         </View>
       ) : null}
@@ -291,6 +325,7 @@ function Quiz({
   trip,
   unit,
   learned,
+  difficulty,
   onDone,
   onAnswered,
   onNextQuestion,
@@ -298,7 +333,9 @@ function Quiz({
   trip: Trip;
   unit: TripUnit;
   learned: string[];
-  onDone: (answers: TripAnswer[], right: string[], wrong: string[]) => void;
+  /** 0 to 1: how far into the trip the player is; later units use closer lookalikes as wrong answers. */
+  difficulty: number;
+  onDone: (answers: TripAnswer[], right: string[], wrong: string[], score: QuizScore) => void;
   onAnswered: () => void;
   onNextQuestion: () => void;
 }) {
@@ -308,12 +345,14 @@ function Quiz({
   const [flagMedia, setFlagMedia] = useState<FlagMediaInfo | null>(null);
   const flagged = useRef<number[]>([]);
   // Built once per round: the learned list changes when the unit finishes, the quiz must not.
-  const [queue, setQueue] = useState<TripQuestion[]>(() => buildUnitQuiz(trip, unit.species, learned));
+  const [queue, setQueue] = useState<TripQuestion[]>(() => buildUnitQuiz(trip, unit.species, learned, Math.random, unit.species, difficulty));
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const rightOnce = useRef(new Set<string>());
   const wrongOnce = useRef(new Set<string>());
   const asked = useRef(new Map<string, number>());
+  const shown = useRef(new Map<string, number[]>());
+  const score = useRef<QuizScore>({ correct: 0, total: 0 });
   const answers = useRef<TripAnswer[]>([]);
   const learnedAtStart = useMemo(() => learned, []); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -321,7 +360,7 @@ function Quiz({
     return (
       <View style={tripStyles.section}>
         <Text style={tripStyles.body}>{t('trip_no_questions')}</Text>
-        <TouchableOpacity style={tripStyles.primaryButton} onPress={() => onDone([], [], [])} accessibilityRole="button">
+        <TouchableOpacity style={tripStyles.primaryButton} onPress={() => onDone([], [], [], { correct: 0, total: 0 })} accessibilityRole="button">
           <Text style={tripStyles.primaryButtonText}>{t('trip_finish')}</Text>
         </TouchableOpacity>
       </View>
@@ -332,27 +371,34 @@ function Quiz({
   const sp = trip.species[q.code];
   const answered = picked !== null;
   const right = picked === q.code;
-  const left = remaining(unit.species, rightOnce.current).length;
 
   const choose = (option: string) => {
     if (answered) return;
     setPicked(option);
     answers.current.push({ species_id: sp.species_id, answer_id: trip.species[option].species_id, media_id: q.image.id });
     asked.current.set(q.code, (asked.current.get(q.code) ?? 0) + 1);
+    // The score counts the planned questions on the first try; review birds and second chances don't.
+    if (!q.review && !q.retry) {
+      score.current.total += 1;
+      if (option === q.code) score.current.correct += 1;
+    }
     if (option === q.code) {
       rightOnce.current.add(q.code);
     } else {
       wrongOnce.current.add(q.code);
       if (!q.review) {
-        const again = makeQuestion(trip, q.code, unit.species, learnedAtStart, asked.current.get(q.code) ?? 1, false);
-        if (again) setQueue((list) => [...list, again]);
+        // Another photo of the bird at the same difficulty as its first round.
+        const seen = [...(shown.current.get(q.code) ?? []), q.image.id];
+        shown.current.set(q.code, seen);
+        const again = makeQuestion(trip, q.code, unit.species, learnedAtStart, asked.current.get(q.code) ?? 1, false, Math.random, difficulty, seen);
+        if (again) setQueue((list) => [...list, { ...again, retry: true }]);
       }
     }
     setTimeout(onAnswered, 50);
   };
   const next = () => {
     setImageError(null);
-    if (hasNextQuestion(queue, index, unit.species, rightOnce.current)) {
+    if (hasNextQuestion(queue, index)) {
       setIndex(index + 1);
       setPicked(null);
       onNextQuestion();
@@ -361,14 +407,15 @@ function Quiz({
     onDone(
       answers.current,
       Array.from(rightOnce.current),
-      Array.from(wrongOnce.current).filter((c) => unit.species.includes(c))
+      Array.from(wrongOnce.current).filter((c) => unit.species.includes(c)),
+      score.current
     );
   };
 
   return (
     <View style={tripStyles.section}>
       <Kicker>
-        {t('trip_quiz_left', { left })}
+        {t('trip_quiz_progress', { n: index + 1, total: queue.length })}
         {q.review ? ` · ${t('trip_review')}` : ''}
       </Kicker>
       <QuestionMediaView

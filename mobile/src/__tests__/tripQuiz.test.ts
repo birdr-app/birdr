@@ -17,11 +17,15 @@ import {
   pickOptions,
   remaining,
   REVIEW_QUESTIONS,
+  ROUNDS,
+  lookalikeWindow,
+  nextUnit,
 } from '../lib/tripQuiz';
 
 function bird(code: string, group: string): TripSpecies {
-  const photo = { id: code.length * 100 + code.charCodeAt(0), url: `https://x/${code}.jpg`, contributor: '', license: '', source: '' };
-  return { code, species_id: code.charCodeAt(0), name: code, latin: code, group, endemic: false, look_for: [], here: '', images: [photo], quiz_images: [photo] };
+  // Two photos each, so a second round can show another one.
+  const photos = [1, 2].map((n) => ({ id: code.charCodeAt(0) * 10 + n, url: `https://x/${code}${n}.jpg`, contributor: '', license: '', source: '' }));
+  return { code, species_id: code.charCodeAt(0), name: code, latin: code, group, endemic: false, look_for: [], here: '', images: photos, quiz_images: photos };
 }
 
 const unit = (slug: string, species: string[], groups: string[] = []): TripUnit => ({ slug, title: slug, intro: '', groups, species });
@@ -65,13 +69,43 @@ describe('trip quiz', () => {
   test('a small unit fills its options from the same group', () => {
     const options = pickOptions(trip, 'e', ['e', 'h'], [], random);
     expect(options).toHaveLength(4);
-    expect(options).toEqual(expect.arrayContaining(['e', 'h', 'f', 'g']));
+    // The two other herons, then the nearest bird of a neighbouring group.
+    expect(options).toEqual(expect.arrayContaining(['e', 'f', 'g']));
   });
 
-  test('a unit asks each of its birds once plus review birds', () => {
+  test('a unit asks each of its birds at least twice, with another photo, plus review birds', () => {
     const quiz = buildUnitQuiz(trip, ['a', 'b', 'c'], ['e', 'f', 'g'], random);
-    expect(quiz.filter((q) => !q.review).map((q) => q.code).sort()).toEqual(['a', 'b', 'c']);
+    expect(ROUNDS).toBeGreaterThanOrEqual(2);
+    const asked = quiz.filter((q) => !q.review);
+    expect(asked.map((q) => q.code).sort()).toEqual(['a', 'a', 'b', 'b', 'c', 'c']);
+    for (const code of ['a', 'b', 'c']) {
+      const images = asked.filter((q) => q.code === code).map((q) => q.image.id);
+      expect(new Set(images).size).toBe(images.length);
+    }
     expect(quiz.filter((q) => q.review)).toHaveLength(REVIEW_QUESTIONS);
+  });
+
+  test('the same bird never follows itself', () => {
+    for (let i = 0; i < 50; i++) {
+      const quiz = buildUnitQuiz(trip, ['a', 'b', 'c'], []);
+      quiz.slice(1).forEach((q, n) => expect(q.code).not.toBe(quiz[n].code));
+    }
+  });
+
+  test('wrong answers narrow to the nearest lookalikes as the trip goes on', () => {
+    expect(lookalikeWindow(0)).toBeGreaterThan(lookalikeWindow(1));
+    expect(lookalikeWindow(1)).toBe(3);
+    const codes = Array.from({ length: 12 }, (_, i) => String.fromCharCode(97 + i));
+    const big = {
+      ...trip,
+      species: Object.fromEntries(codes.map((c) => [c, bird(c, 'tits')])),
+      groups: [{ ...trip.groups[0], slug: 'tits', species: codes }],
+    } as Trip;
+    for (let i = 0; i < 30; i++) {
+      pickOptions(big, 'f', [], [], Math.random, 1)
+        .filter((c) => c !== 'f')
+        .forEach((c) => expect(['d', 'e', 'g', 'h']).toContain(c));
+    }
   });
 
   test('a bird without photos is left out', () => {
@@ -84,13 +118,23 @@ describe('trip quiz', () => {
     expect(remaining(['a', 'b'], new Set(['a', 'b']))).toEqual([]);
   });
 
-  test('the quiz goes on while unit birds are open or review birds are left', () => {
+  test('the quiz goes on until every planned question and second chance is asked', () => {
     const queue = buildUnitQuiz(trip, ['a', 'b'], [], random);
-    expect(hasNextQuestion(queue, 0, ['a', 'b'], new Set(['a']))).toBe(true);
-    expect(hasNextQuestion(queue, 0, ['a', 'b'], new Set(['a', 'b']))).toBe(false);
-    const withReview = [queue[0], { ...queue[1], review: true }];
-    expect(hasNextQuestion(withReview, 0, ['a', 'b'], new Set(['a', 'b']))).toBe(true);
-    expect(hasNextQuestion(queue, 1, ['a', 'b'], new Set(['a']))).toBe(false);
+    expect(queue).toHaveLength(4);
+    expect(hasNextQuestion(queue, 0)).toBe(true);
+    expect(hasNextQuestion(queue, 3)).toBe(false);
+  });
+
+  test('after a unit comes the next open one, and none once every unit is done', () => {
+    const units = [unit('u1', ['a']), unit('u2', ['e']), unit('u3', ['f'])];
+    const withUnits = { ...trip, units, endemics: { ...trip.endemics, units: [unit('endemics-1', ['a']), unit('endemics-2', ['b'])] } };
+    const local = (done: string[]) => ({ ...EMPTY_TRIP_STATE, units_done: done });
+    const none = new Set<string>();
+    expect(nextUnit(withUnits, units[0], none, local(['u1']))?.slug).toBe('u2');
+    expect(nextUnit(withUnits, units[0], none, local(['u1', 'u2']))?.slug).toBe('u3');
+    expect(nextUnit(withUnits, units[2], none, local(['u1', 'u2', 'u3']))).toBeNull();
+    expect(nextUnit(withUnits, withUnits.endemics.units[0], none, local([]))?.slug).toBe('endemics-2');
+    expect(nextUnit(withUnits, withUnits.endemics.units[1], none, local([]))).toBeNull();
   });
 
   test('the family quiz asks about groups with four group names', () => {
@@ -99,7 +143,7 @@ describe('trip quiz', () => {
     quiz.forEach((q) => {
       expect(q.options).toHaveLength(4);
       expect(q.options).toContain(q.group);
-      expect(trip.groups.find((g) => g.slug === q.group)?.species.map((c) => trip.species[c].images[0].id)).toContain(q.image.id);
+      expect(trip.groups.find((g) => g.slug === q.group)?.species.flatMap((c) => trip.species[c].images.map((m) => m.id))).toContain(q.image.id);
     });
   });
 });

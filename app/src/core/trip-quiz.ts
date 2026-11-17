@@ -90,11 +90,11 @@ export function pickOptions(
   difficulty = 0
 ): string[] {
   const familiar = new Set([...unitCodes, ...learned]);
+  // The bird's own group first; a small group is topped up with the nearest birds of the neighbouring groups.
   const ranked = similarBirds(trip, code, familiar, difficulty);
-  // The bird's own group while it has enough birds; otherwise the nearest ones from the neighbouring groups too.
-  const sameGroup = ranked.filter((c) => trip.species[c].group === trip.species[code]?.group);
-  const close = (sameGroup.length >= 3 ? sameGroup : ranked).slice(0, lookalikeWindow(difficulty));
-  const picked = shuffle(close, random).slice(0, 3);
+  const inGroup = ranked.filter((c) => trip.species[c].group === trip.species[code]?.group);
+  const picked = shuffle(inGroup.slice(0, lookalikeWindow(difficulty)), random).slice(0, 3);
+  if (picked.length < 3) picked.push(...ranked.filter((c) => !inGroup.includes(c)).slice(0, 3 - picked.length));
   return shuffle([code, ...picked], random);
 }
 
