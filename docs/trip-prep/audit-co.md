@@ -54,9 +54,9 @@ best month.
 | Bronze-tailed Thornbill (`brttho1`) | 0.02 | CO-ANDES 0.03, CO-CARIBBEAN 0.00 | 100% of its strength is in CO-ANDES |
 | Tufted Tit-Tyrant (`tuttyr1`) | 0.01 | CO-AMAZON 0.01, CO-CARIBBEAN 0.00 | 100% of its strength is in CO-AMAZON |
 
-### The model has no view on these (17)
+### The model has no view on these (18)
 
-Black-and-white Becard (`bawbec7`), Black-cheeked Mountain Tanager (`bkcmot1`), Black-headed Tanager (`blhtan1`), Chestnut-breasted Coronet (`chbcor1`), Collared Aracari (`colara1`), Grey-hooded Bush Tanager (`gyhbut1`), masflo1 (`masflo1`), Black-lored Yellowthroat (`masyel4`), Paramo Pipit (`parpip1`), Slaty Brushfinch (`slbfin2`), Slate-coloured Coot (`slccoo1`), sobtyr1 (`sobtyr1`), Sooty Grassquit (`soogra2`), Spot-flanked Gallinule (`spfgal1`), Striated Heron (`strher`), Yellow-breasted Brushfinch (`yebbrf1`), Yellow Warbler (`yelwar`)
+Black-and-white Becard (`bawbec7`), Black-cheeked Mountain Tanager (`bkcmot1`), Black-headed Tanager (`blhtan1`), Chestnut-breasted Coronet (`chbcor1`), Collared Aracari (`colara1`), Grey-hooded Bush Tanager (`gyhbut1`), Northern House Wren (`houwre`), masflo1 (`masflo1`), Black-lored Yellowthroat (`masyel4`), Paramo Pipit (`parpip1`), Slaty Brushfinch (`slbfin2`), Slate-coloured Coot (`slccoo1`), sobtyr1 (`sobtyr1`), Sooty Grassquit (`soogra2`), Spot-flanked Gallinule (`spfgal1`), Striated Heron (`strher`), Yellow-breasted Brushfinch (`yebbrf1`), Yellow Warbler (`yelwar`)
 
 ### Likely here but in no list (28)
 

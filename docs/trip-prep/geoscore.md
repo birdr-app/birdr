@@ -24,6 +24,9 @@ gives sparse specialists low scores even at their classic sites (Black Inca peak
 
 - Month score = mean of the 4 BirdNET weeks of that month. Birds are matched to `Species` by scientific
   name (the labels file has no eBird codes; a trinomial `name_latin` also matches by its binomial).
+- Only birds eBird lists for the trip's countries are stored (`product/spplist`, old codes mapped): GeoModel's
+  taxonomy is not eBird's and can credit a country with the wrong half of a split (Northern House Wren in
+  Colombia). Pass `--no-ebird-filter` to skip it.
 - Per trip and month, over its areas (weighted): `p_mean`, `p_max` (best area) and `breadth`, the share
   of areas where the score is at least `TAU` = 0.5 ("likely").
 - **First day** = birds with breadth >= 0.6, ranked by `breadth * p_mean`, at most 2 per bird group.
@@ -44,3 +47,11 @@ gives sparse specialists low scores even at their classic sites (Black Inca peak
 4. Commit `areas.json`, `geoscore.csv`, `geoscore.meta.json`.
 
 eBird hotspot data is from the eBird API (Cornell Lab of Ornithology); Motmot uses it non-commercially.
+
+## How well does it agree with eBird?
+
+Colombia, November 2026: 1,184 of the 1,192 birds the model calls likely (breadth >= 0.5) in a pack are on
+eBird's species lists for that pack's departments (99%), and all 20 first-day birds are on eBird's Colombia
+list. That says the model rarely invents birds; it does not say its ranking is right (that rests on the
+spot checks and Carolyn's feedback). The same check found 23 hand-picked pack birds that eBird does not
+list for their pack's departments (for example Gould's Jewelfront in `CO-ANDES`): worth a look.

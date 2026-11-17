@@ -2,32 +2,33 @@
   "model": "BirdNET GeoModel v3.0.4 (Apache-2.0, birdnet-team/geomodel)",
   "model_version": "v3.0.4",
   "likely_threshold": 0.5,
+  "ebird_filter": true,
   "month_score": "mean of the 4 BirdNET weeks of the month",
   "generated": "2026-11-17",
   "regions": {
     "CO": {
       "areas": 74,
-      "species": 1638
+      "species": 1528
     },
     "CO-CARIBBEAN": {
       "areas": 14,
-      "species": 679
+      "species": 672
     },
     "CO-CHOCO": {
       "areas": 14,
-      "species": 1152
+      "species": 1096
     },
     "CO-ANDES": {
       "areas": 14,
-      "species": 953
+      "species": 943
     },
     "CO-AMAZON": {
       "areas": 14,
-      "species": 1227
+      "species": 1173
     },
     "CO-LLANOS": {
       "areas": 14,
-      "species": 953
+      "species": 946
     }
   }
 }

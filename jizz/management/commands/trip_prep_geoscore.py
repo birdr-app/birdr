@@ -15,12 +15,13 @@ import datetime
 from pathlib import Path
 
 import numpy as np
+import requests
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 
-from jizz.models import RegionSpeciesScore, Species
+from jizz.models import RegionSpeciesScore, Species, SpeciesAlias
 from jizz.services.geomodel import GeoModel
-from jizz.trips.content import TRIPS, country_dir, read_json, write_json
+from jizz.trips.content import TRIPS, country_dir, read_json, trip_countries, write_json
 from jizz.trips.geoscore import SOURCE, STORE_MIN_P_MAX, TAU, summarize, trip_areas
 
 CSV_FIELDS = ['region', 'species_code', 'month', 'p_mean', 'p_max', 'breadth']
@@ -37,6 +38,17 @@ def species_by_latin(species) -> dict:
     return by_latin
 
 
+def ebird_species_codes(countries: list[str], token: str) -> set[str]:
+    """Species codes eBird lists for these countries (``product/spplist``), old codes mapped to current."""
+    alias = dict(SpeciesAlias.objects.values_list('code', 'species__code'))
+    codes: set[str] = set()
+    for cc in countries:
+        r = requests.get(f'https://api.ebird.org/v2/product/spplist/{cc}', headers={'X-eBirdApiToken': token}, timeout=60)
+        r.raise_for_status()
+        codes |= {alias.get(c, c) for c in r.json()}
+    return codes
+
+
 def trips_of(country: str) -> list[str]:
     """The country's own trip and its region packs (drafts too), in ``TRIPS`` order."""
     return [country] + [c for c, meta in TRIPS.items() if meta.get('parent') == country]
@@ -49,6 +61,10 @@ class Command(BaseCommand):
         parser.add_argument('--country', required=True, help='Trip id of the country, e.g. CO')
         parser.add_argument('--from-csv', action='store_true', help='Load geoscore.csv instead of running the model')
         parser.add_argument('--dry-run', action='store_true')
+        parser.add_argument(
+            '--no-ebird-filter', action='store_true',
+            help='Keep birds eBird does not list for the trip countries (GeoModel names can follow other splits)',
+        )
 
     def handle(self, *args, **opts):
         country = opts['country'].upper()
@@ -65,6 +81,15 @@ class Command(BaseCommand):
         by_latin = species_by_latin(Species.objects.filter(retired_at__isnull=True).only('id', 'code', 'name_latin'))
         label_to_species = {i: by_latin[n] for n, i in model.species_index().items() if n in by_latin}
         self.stdout.write(f'model labels {model.label_count}, matched to species {len(label_to_species)}')
+        if not opts['no_ebird_filter']:
+            # GeoModel's taxonomy is not eBird's: it can credit a country with the wrong half of a split
+            # (Northern House Wren in Colombia). Keep only birds eBird lists for the trip's countries.
+            if not settings.EBIRD_API_TOKEN:
+                raise CommandError('EBIRD_API_TOKEN is not set (or pass --no-ebird-filter)')
+            listed = ebird_species_codes(trip_countries(country), settings.EBIRD_API_TOKEN)
+            before = len(label_to_species)
+            label_to_species = {i: sp for i, sp in label_to_species.items() if sp.code in listed}
+            self.stdout.write(f'eBird lists {len(listed)} birds for {", ".join(trip_countries(country))}: kept {len(label_to_species)} of {before}')
         idx = np.array(sorted(label_to_species))
 
         # Each distinct point is scored once; packs may share places.
@@ -97,6 +122,7 @@ class Command(BaseCommand):
             'model': f'BirdNET GeoModel {settings.GEOMODEL_VERSION} (Apache-2.0, birdnet-team/geomodel)',
             'model_version': settings.GEOMODEL_VERSION,
             'likely_threshold': TAU,
+            'ebird_filter': not opts['no_ebird_filter'],
             'month_score': 'mean of the 4 BirdNET weeks of the month',
             'generated': datetime.date.today().isoformat(),
             'regions': meta_regions,

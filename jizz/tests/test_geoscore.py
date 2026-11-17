@@ -264,3 +264,18 @@ class AuditTestCase(SimpleTestCase):
         text = render_markdown('XX', self._result(scores, {'XX': set(), 'XX-ANDES': set()}), {'new': 'New Bird'}, 'test model')
         self.assertIn('New Bird (`new`)', text)
         self.assertIn('## XX-ANDES', text)
+
+
+class EbirdFilterTestCase(TestCase):
+    def test_codes_come_from_the_ebird_species_list_with_old_codes_mapped(self):
+        from jizz.management.commands.trip_prep_geoscore import ebird_species_codes
+        from jizz.models import SpeciesAlias
+
+        sp = Species.objects.create(name='New', name_latin='Genus new', code='newcod')
+        SpeciesAlias.objects.create(code='oldcod', species=sp)
+        response = mock.Mock(json=lambda: ['oldcod', 'other1'], raise_for_status=lambda: None)
+        with mock.patch('jizz.management.commands.trip_prep_geoscore.requests.get', return_value=response) as get:
+            codes = ebird_species_codes(['CO', 'PE'], 'token')
+        self.assertEqual(codes, {'newcod', 'other1'})
+        self.assertEqual(get.call_count, 2)
+        self.assertEqual(get.call_args.kwargs['headers'], {'X-eBirdApiToken': 'token'})
