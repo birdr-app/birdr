@@ -8,9 +8,19 @@ const IN_SEASON = 0.5;
 export function useTripMonth(country: string) {
   const [month, setMonthState] = useState(0);
   const [seasonality, setSeasonality] = useState<TripSeasonality | null>(null);
+  const [loaded, setLoaded] = useState(false);
+  const [monthLoaded, setMonthLoaded] = useState(false);
   useEffect(() => {
-    loadTripMonth(country).then(setMonthState);
-    fetchTripSeasonality(country).then(setSeasonality).catch(() => setSeasonality(null));
+    setLoaded(false);
+    setMonthLoaded(false);
+    loadTripMonth(country).then((m) => {
+      setMonthState(m);
+      setMonthLoaded(true);
+    });
+    fetchTripSeasonality(country)
+      .then(setSeasonality)
+      .catch(() => setSeasonality(null))
+      .finally(() => setLoaded(true));
   }, [country]);
   const setMonth = useCallback(
     (m: number) => {
@@ -29,5 +39,9 @@ export function useTripMonth(country: string) {
     [month, seasonality]
   );
   const hasData = !!seasonality && Object.keys(seasonality.months).length > 0;
-  return { month, setMonth, inSeason, hasData };
+  /** The first day's birds for the travel month, or null (any month, or no scores). */
+  const firstDay = (month && seasonality?.first_day?.[String(month)]) || null;
+  /** False until the stored month is read and, with a month, its first day has arrived. */
+  const ready = monthLoaded && (!month || loaded);
+  return { month, setMonth, inSeason, hasData, firstDay, ready };
 }

@@ -1527,6 +1527,36 @@ class RegionSpeciesMonth(models.Model):
         ordering = ['region_code', 'month', '-rel_freq']
 
 
+class RegionSpeciesScore(models.Model):
+    """How likely a visitor is to meet a species on a trip or region pack, per month.
+
+    Computed by ``trip_prep_geoscore`` from BirdNET GeoModel scores sampled at the trip's areas
+    (``jizz/trips/data/<cc>/areas.json``). ``region_code`` is a trip id (``CO``, ``CO-ANDES``).
+    ``p_mean`` is the area-weighted mean score, ``p_max`` the best area, ``breadth`` the
+    area-weighted share of areas where the score is at least the likely threshold. Scores are a
+    smoothed prior, not checklist frequencies: use them to rank, not to quote.
+    """
+
+    region_code = models.CharField(max_length=24, db_index=True)
+    species = models.ForeignKey(Species, on_delete=models.CASCADE, related_name='region_scores')
+    month = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(12)])
+    p_mean = models.FloatField(default=0.0)
+    p_max = models.FloatField(default=0.0)
+    breadth = models.FloatField(default=0.0)
+    source = models.CharField(max_length=32, default='birdnet_geomodel')
+    model_version = models.CharField(max_length=16, default='')
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=('region_code', 'species', 'month', 'source'),
+                name='jizz_regionspeciesscore_unique',
+            ),
+        ]
+        ordering = ['region_code', 'month', '-p_mean']
+
+
 class Feedback(models.Model):
     user = models.ForeignKey(
         'auth.User',

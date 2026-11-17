@@ -1,0 +1,152 @@
+{
+  "note": "Sample areas for GeoModel scores: the busiest eBird hotspots of the regions below. Edit by hand to add or drop places; weight 1 unless a place matters more.",
+  "source": "eBird hotspots (eBird API, Cornell Lab of Ornithology)",
+  "ebird_regions": [
+    "CO-MET",
+    "CO-CAS",
+    "CO-ARA",
+    "CO-VID"
+  ],
+  "areas": [
+    {
+      "name": "RN Rancho Camaná",
+      "lat": 4.2846,
+      "lon": -73.5618,
+      "weight": 1,
+      "loc_id": "L6979724",
+      "region": "CO-MET",
+      "checklists": 3261,
+      "species": 336
+    },
+    {
+      "name": "RN Matabambu Laguna",
+      "lat": 2.8772,
+      "lon": -72.0967,
+      "weight": 1,
+      "loc_id": "L8005219",
+      "region": "CO-MET",
+      "checklists": 2841,
+      "species": 495
+    },
+    {
+      "name": "Bosque Bavaria",
+      "lat": 4.183,
+      "lon": -73.6518,
+      "weight": 1,
+      "loc_id": "L1924284",
+      "region": "CO-MET",
+      "checklists": 1759,
+      "species": 438
+    },
+    {
+      "name": "Hato La Aurora--Ecolodge Juan Solito",
+      "lat": 6.014,
+      "lon": -71.2991,
+      "weight": 1,
+      "loc_id": "L2147708",
+      "region": "CO-CAS",
+      "checklists": 1634,
+      "species": 397
+    },
+    {
+      "name": "Happy Life Home",
+      "lat": 2.5765,
+      "lon": -72.6462,
+      "weight": 1,
+      "loc_id": "L10047928",
+      "region": "CO-MET",
+      "checklists": 1433,
+      "species": 333
+    },
+    {
+      "name": "Vda Bella Suiza - Condominio Bella Suiza Exclusivo",
+      "lat": 4.0666,
+      "lon": -73.4978,
+      "weight": 1,
+      "loc_id": "L17046936",
+      "region": "CO-MET",
+      "checklists": 1138,
+      "species": 205
+    },
+    {
+      "name": "Río Manacacias - Puerto Gaitán a Río Meta",
+      "lat": 4.3438,
+      "lon": -72.0777,
+      "weight": 1,
+      "loc_id": "L6971705",
+      "region": "CO-MET",
+      "checklists": 1077,
+      "species": 396
+    },
+    {
+      "name": "Paseo por las Nubes",
+      "lat": 5.2374,
+      "lon": -72.9143,
+      "weight": 1,
+      "loc_id": "L18216678",
+      "region": "CO-CAS",
+      "checklists": 672,
+      "species": 454
+    },
+    {
+      "name": "RN El Encanto De Guanapalo",
+      "lat": 5.2569,
+      "lon": -71.7832,
+      "weight": 1,
+      "loc_id": "L7792765",
+      "region": "CO-CAS",
+      "checklists": 508,
+      "species": 354
+    },
+    {
+      "name": "Hato Barley",
+      "lat": 4.8074,
+      "lon": -72.5763,
+      "weight": 1,
+      "loc_id": "L11173826",
+      "region": "CO-CAS",
+      "checklists": 499,
+      "species": 325
+    },
+    {
+      "name": "La Rompida",
+      "lat": 3.9677,
+      "lon": -67.967,
+      "weight": 1,
+      "loc_id": "L9076208",
+      "region": "CO-VID",
+      "checklists": 374,
+      "species": 314
+    },
+    {
+      "name": "Ecolodge Reserva Natural Buenaventura",
+      "lat": 5.3362,
+      "lon": -70.7709,
+      "weight": 1,
+      "loc_id": "L5865278",
+      "region": "CO-CAS",
+      "checklists": 367,
+      "species": 317
+    },
+    {
+      "name": "Vereda La Primavera",
+      "lat": 5.4003,
+      "lon": -72.4738,
+      "weight": 1,
+      "loc_id": "L6245410",
+      "region": "CO-CAS",
+      "checklists": 349,
+      "species": 392
+    },
+    {
+      "name": "PNN El Tuparro",
+      "lat": 5.2837,
+      "lon": -68.5005,
+      "weight": 1,
+      "loc_id": "L465434",
+      "region": "CO-VID",
+      "checklists": 231,
+      "species": 306
+    }
+  ]
+}

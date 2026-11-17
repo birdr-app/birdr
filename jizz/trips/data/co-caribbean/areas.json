@@ -1,0 +1,156 @@
+{
+  "note": "Sample areas for GeoModel scores: the busiest eBird hotspots of the regions below. Edit by hand to add or drop places; weight 1 unless a place matters more.",
+  "source": "eBird hotspots (eBird API, Cornell Lab of Ornithology)",
+  "ebird_regions": [
+    "CO-MAG",
+    "CO-ATL",
+    "CO-BOL",
+    "CO-LAG",
+    "CO-CES",
+    "CO-COR",
+    "CO-SUC",
+    "CO-SAP"
+  ],
+  "areas": [
+    {
+      "name": "El Dorado ProAves Reserve",
+      "lat": 11.1041,
+      "lon": -74.0695,
+      "weight": 1,
+      "loc_id": "L652746",
+      "region": "CO-MAG",
+      "checklists": 5694,
+      "species": 384
+    },
+    {
+      "name": "Chamicero del Perijá Proaves Reserve",
+      "lat": 10.3627,
+      "lon": -72.9492,
+      "weight": 1,
+      "loc_id": "L3054544",
+      "region": "CO-CES",
+      "checklists": 4121,
+      "species": 375
+    },
+    {
+      "name": "SFF Los Flamencos--Resguardo Perratpu/Boca de Camarones",
+      "lat": 11.4288,
+      "lon": -73.0876,
+      "weight": 1,
+      "loc_id": "L2080823",
+      "region": "CO-LAG",
+      "checklists": 2833,
+      "species": 360
+    },
+    {
+      "name": "Via Parque Isla de Salamanca--Centro Administrativo Los Cocos",
+      "lat": 11.0061,
+      "lon": -74.6836,
+      "weight": 1,
+      "loc_id": "L1856337",
+      "region": "CO-MAG",
+      "checklists": 1967,
+      "species": 362
+    },
+    {
+      "name": "Agrícola Camelias",
+      "lat": 10.3342,
+      "lon": -75.3833,
+      "weight": 1,
+      "loc_id": "L15083845",
+      "region": "CO-BOL",
+      "checklists": 1492,
+      "species": 303
+    },
+    {
+      "name": "Barranquilla, Universidad del Norte",
+      "lat": 11.023,
+      "lon": -74.8489,
+      "weight": 1,
+      "loc_id": "L2768674",
+      "region": "CO-ATL",
+      "checklists": 921,
+      "species": 244
+    },
+    {
+      "name": "Chincherry ProAves Reserve",
+      "lat": 12.5035,
+      "lon": -81.7168,
+      "weight": 1,
+      "loc_id": "L12902187",
+      "region": "CO-SAP",
+      "checklists": 850,
+      "species": 125
+    },
+    {
+      "name": "PNN Tayrona",
+      "lat": 11.3058,
+      "lon": -73.947,
+      "weight": 1,
+      "loc_id": "L465334",
+      "region": "CO-MAG",
+      "checklists": 796,
+      "species": 450
+    },
+    {
+      "name": "Parque de la Marina",
+      "lat": 10.4206,
+      "lon": -75.5524,
+      "weight": 1,
+      "loc_id": "L1335325",
+      "region": "CO-BOL",
+      "checklists": 688,
+      "species": 223
+    },
+    {
+      "name": "Gaviotas, Palomino",
+      "lat": 11.2327,
+      "lon": -73.4871,
+      "weight": 1,
+      "loc_id": "L10143772",
+      "region": "CO-LAG",
+      "checklists": 642,
+      "species": 313
+    },
+    {
+      "name": "RN Los Tananeos",
+      "lat": 10.3878,
+      "lon": -73.0561,
+      "weight": 1,
+      "loc_id": "L4801010",
+      "region": "CO-CES",
+      "checklists": 527,
+      "species": 298
+    },
+    {
+      "name": "Universidad Nacional - Sede La Paz",
+      "lat": 10.3885,
+      "lon": -73.1999,
+      "weight": 1,
+      "loc_id": "L21565357",
+      "region": "CO-CES",
+      "checklists": 414,
+      "species": 194
+    },
+    {
+      "name": "Quinta de San Pedro Alejandrino",
+      "lat": 11.2282,
+      "lon": -74.1795,
+      "weight": 1,
+      "loc_id": "L4282305",
+      "region": "CO-MAG",
+      "checklists": 400,
+      "species": 236
+    },
+    {
+      "name": "Aeropuerto Simon Bolivar",
+      "lat": 11.1201,
+      "lon": -74.2307,
+      "weight": 1,
+      "loc_id": "L1285624",
+      "region": "CO-MAG",
+      "checklists": 380,
+      "species": 174
+    }
+  ]
+}

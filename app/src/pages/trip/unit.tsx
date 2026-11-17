@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import { useMemo, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { postTripAnswers, updateTripState, type Trip, type TripAnswer, type TripSpecies, type TripUnit } from '../../api/trip';
+import { postTripAnswers, updateTripState, withTravelMonth, type Trip, type TripAnswer, type TripSpecies, type TripUnit } from '../../api/trip';
 import { FlagMediaButton } from '../../components/flag-media-button';
 import { MediaCredits } from '../../components/media-credits';
 import { ZoomablePlayImage } from '../../components/zoomable-play-image';
@@ -16,6 +16,8 @@ import { Page } from '../../shared/components/layout';
 import { BoldText, Kicker, StepBar } from '../course/parts';
 import { EndemicBadge, TripLoading, TripPhoto, TripThumb, credit } from './parts';
 import { TripCelebration } from './celebration';
+import { useTripMonth } from './month';
+import { useIntl } from 'react-intl';
 import { findUnit, nextUnit, tripComplete, useTrip, withPlus, useTripText, type TripData } from './use-trip';
 
 type Step = { kind: 'intro' } | { kind: 'card'; index: number } | { kind: 'quiz' } | { kind: 'done'; asked: number; wrong: number; correct: number; total: number; saved: boolean | null; celebrate: boolean };
@@ -46,15 +48,21 @@ export function TripUnitPage() {
   const { country: countryParam = '', slug = '' } = useParams();
   const country = countryParam.toUpperCase();
   const data = useTrip(country);
-  const { trip, error, reload } = data;
-  if (!trip) return <TripLoading error={error} onRetry={reload} />;
+  const travel = useTripMonth(country);
+  const { trip: baseTrip, error, reload } = data;
+  if (!baseTrip) return <TripLoading error={error} onRetry={reload} />;
+  // The first day follows the travel month; wait for it so the quiz does not restart with other birds.
+  if (slug === baseTrip.first_day.slug && !travel.ready) return <TripLoading error={error} onRetry={reload} />;
+  const trip = withTravelMonth(baseTrip, travel.firstDay);
   const unit = findUnit(trip, slug);
   if (!unit) return <TripLoading error onRetry={reload} />;
-  return <UnitFlow key={unit.slug} trip={withPlus(trip)} unit={unit} data={data} />;
+  return <UnitFlow key={unit.slug} trip={withPlus(trip)} unit={unit} data={data} travel={travel} />;
 }
 
-function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: TripData }) {
+function UnitFlow({ trip, unit, data, travel }: { trip: Trip; unit: TripUnit; data: TripData; travel: ReturnType<typeof useTripMonth> }) {
   const t = useTripText();
+  const { locale } = useIntl();
+  const monthName = travel.month ? new Date(2000, travel.month - 1, 1).toLocaleString(locale, { month: 'long' }) : '';
   const navigate = useNavigate();
   const [step, setStep] = useState<Step>({ kind: 'intro' });
   // The birds to learn, fixed when the player leaves the intro: the new ones, or all on request.
@@ -129,6 +137,7 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
               key={step.index}
               trip={trip}
               bird={birds[step.index]}
+              offSeason={travel.month && !travel.inSeason(birds[step.index].code) ? monthName : ''}
               index={step.index}
               total={birds.length}
               onBack={() => go(step.index === 0 ? { kind: 'intro' } : { kind: 'card', index: step.index - 1 })}
@@ -269,6 +278,7 @@ function Intro({
 function Card({
   trip,
   bird,
+  offSeason,
   index,
   total,
   onBack,
@@ -276,6 +286,8 @@ function Card({
 }: {
   trip: Trip;
   bird: TripSpecies;
+  /** The travel month's name when the bird is unlikely then, else empty. */
+  offSeason: string;
   index: number;
   total: number;
   onBack: () => void;
@@ -301,6 +313,11 @@ function Card({
             {bird.name}
           </Text>
           {bird.endemic ? <EndemicBadge /> : null}
+          {offSeason ? (
+            <Text as="span" fontSize="xs" px={2} py={0.5} borderRadius="full" bg="gray.100" color="gray.700">
+              {t('trip_month_off', 'Not here in {month}', { month: offSeason })}
+            </Text>
+          ) : null}
         </Flex>
         <Text fontStyle="italic" color="primary.700">
           {bird.latin}

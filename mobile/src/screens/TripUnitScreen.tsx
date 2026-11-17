@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-nati
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useNavigation, useRoute, type RouteProp } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { postTripAnswers, updateTripState, type Trip, type TripAnswer, type TripSpecies, type TripUnit } from '../api/trip';
+import { postTripAnswers, updateTripState, withTravelMonth, type Trip, type TripAnswer, type TripSpecies, type TripUnit } from '../api/trip';
 import { BoldText, StepBar } from '../components/CourseParts';
 import { FlagMediaModal, type FlagMediaInfo } from '../components/FlagMediaModal';
 import { QuestionMediaView } from '../components/QuestionMediaView';
@@ -18,6 +18,7 @@ import { getMoodImage } from '../constants/birdrMoodImages';
 import { useVisualStyle } from '../context/VisualStyleContext';
 import { useReviewPrompt } from '../hooks/useReviewPrompt';
 import { useTrip, type TripData } from '../hooks/useTrip';
+import { useTripMonth } from '../hooks/useTripMonth';
 import { useTranslation } from '../i18n/TranslationContext';
 import {
   buildUnitQuiz,
@@ -51,15 +52,20 @@ export function TripUnitScreen() {
   const route = useRoute<RouteProp<TripRoutes, 'TripUnit'>>();
   const country = route.params.country.toUpperCase();
   const data = useTrip(country);
-  const { trip, error, reload } = data;
-  if (!trip) return <TripLoading error={error} onRetry={reload} />;
+  const travel = useTripMonth(country);
+  const { trip: baseTrip, error, reload } = data;
+  if (!baseTrip) return <TripLoading error={error} onRetry={reload} />;
+  // The first day follows the travel month; wait for it so the quiz does not restart with other birds.
+  if (route.params.slug === baseTrip.first_day.slug && !travel.ready) return <TripLoading error={error} onRetry={reload} />;
+  const trip = withTravelMonth(baseTrip, travel.firstDay);
   const unit = findUnit(trip, route.params.slug);
   if (!unit) return <TripLoading error onRetry={reload} />;
-  return <UnitFlow key={unit.slug} trip={withPlus(trip)} unit={unit} data={data} />;
+  return <UnitFlow key={unit.slug} trip={withPlus(trip)} unit={unit} data={data} travel={travel} />;
 }
 
-function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: TripData }) {
-  const { t } = useTranslation();
+function UnitFlow({ trip, unit, data, travel }: { trip: Trip; unit: TripUnit; data: TripData; travel: ReturnType<typeof useTripMonth> }) {
+  const { t, locale } = useTranslation();
+  const monthName = travel.month ? new Date(2000, travel.month - 1, 1).toLocaleString(locale, { month: 'long' }) : '';
   const navigation = useNavigation<NativeStackNavigationProp<TripRoutes>>();
   const { visualStyle } = useVisualStyle();
   const insets = useSafeAreaInsets();
@@ -129,6 +135,7 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
           key={step.index}
           trip={trip}
           bird={birds[step.index]}
+          offSeason={travel.month && !travel.inSeason(birds[step.index].code) ? monthName : ''}
           index={step.index}
           total={birds.length}
           onBack={() => go(step.index === 0 ? { kind: 'intro' } : { kind: 'card', index: step.index - 1 })}
@@ -255,6 +262,7 @@ function Intro({
 function Card({
   trip,
   bird,
+  offSeason,
   index,
   total,
   onBack,
@@ -262,6 +270,8 @@ function Card({
 }: {
   trip: Trip;
   bird: TripSpecies;
+  /** The travel month's name when the bird is unlikely then, else empty. */
+  offSeason?: string;
   index: number;
   total: number;
   onBack?: () => void;
@@ -283,6 +293,7 @@ function Card({
         <View style={styles.nameRow}>
           <Text style={styles.name}>{bird.name}</Text>
           {bird.endemic ? <EndemicBadge /> : null}
+          {offSeason ? <Text style={styles.offSeason}>{t('trip_month_off', { month: offSeason })}</Text> : null}
         </View>
         <Text style={styles.latin}>
           {bird.latin}
@@ -497,6 +508,7 @@ function Quiz({
 }
 
 const styles = StyleSheet.create({
+  offSeason: { fontSize: 12, color: colors.primary[700], backgroundColor: colors.primary[100], borderRadius: 999, paddingHorizontal: 8, paddingVertical: 2, overflow: 'hidden' },
   thumbs: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
   nameRow: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: 8 },
   name: { fontSize: 24, fontWeight: '700', color: colors.primary[800] },

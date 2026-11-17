@@ -1,9 +1,9 @@
 import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { countryCodeToFlag } from '../../api/birdrJourney';
 import { unitKnown } from '../../core/trip-quiz';
-import { fetchTrips, fetchTripProgress, loadTripState, tripRows, updateTripState, type TripRegion, type TripSummary, type TripUnit } from '../../api/trip';
+import { fetchTrips, fetchTripProgress, loadTripState, tripRows, updateTripState, withTravelMonth, type TripRegion, type TripSummary, type TripUnit } from '../../api/trip';
 import { Page } from '../../shared/components/layout';
 import { Kicker } from '../course/parts';
 import { FoldedAbout, ProgressRing, TripBackLink, TripLoading, UnitRow } from './parts';
@@ -119,8 +119,10 @@ export function TripHomePage() {
   const t = useTripText();
   const lang = useTripLang();
   const navigate = useNavigate();
-  const { trip, error, reload, local, setLocal, known, knownGroups, progress } = useTrip(country);
+  const { trip: baseTrip, error, reload, local, setLocal, known, knownGroups, progress } = useTrip(country);
   const travel = useTripMonth(country);
+  // In a travel month the first day holds the birds that are likely then (not the migrants that have left).
+  const trip = useMemo(() => (baseTrip ? withTravelMonth(baseTrip, travel.firstDay) : baseTrip), [baseTrip, travel.firstDay]);
   const [showKnown, setShowKnown] = useState(false);
   const regionKnown = useRegionKnown(trip?.regions ?? []);
   // On a region pack: whether the player added it to the country's trip (stored with the country).

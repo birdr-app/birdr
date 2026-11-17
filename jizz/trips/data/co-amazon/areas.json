@@ -1,0 +1,153 @@
+{
+  "note": "Sample areas for GeoModel scores: the busiest eBird hotspots of the regions below. Edit by hand to add or drop places; weight 1 unless a place matters more.",
+  "source": "eBird hotspots (eBird API, Cornell Lab of Ornithology)",
+  "ebird_regions": [
+    "CO-AMA",
+    "CO-PUT",
+    "CO-CAQ",
+    "CO-GUV",
+    "CO-VAU"
+  ],
+  "areas": [
+    {
+      "name": "Reserva Natural La Isla Escondida",
+      "lat": 0.6542,
+      "lon": -77.0738,
+      "weight": 1,
+      "loc_id": "L5390586",
+      "region": "CO-PUT",
+      "checklists": 3674,
+      "species": 554
+    },
+    {
+      "name": "Parque Santander (Parque de Los Loros)",
+      "lat": -4.2126,
+      "lon": -69.943,
+      "weight": 1,
+      "loc_id": "L2760361",
+      "region": "CO-AMA",
+      "checklists": 1347,
+      "species": 254
+    },
+    {
+      "name": "El Escondite Reserva Natural",
+      "lat": 0.7949,
+      "lon": -76.5836,
+      "weight": 1,
+      "loc_id": "L17054356",
+      "region": "CO-PUT",
+      "checklists": 1104,
+      "species": 415
+    },
+    {
+      "name": "Comunidad Indígena Mocagua",
+      "lat": -3.8251,
+      "lon": -70.2533,
+      "weight": 1,
+      "loc_id": "L11551443",
+      "region": "CO-AMA",
+      "checklists": 801,
+      "species": 406
+    },
+    {
+      "name": "Comunidad Bora Muinane, Km17",
+      "lat": -4.0844,
+      "lon": -69.9942,
+      "weight": 1,
+      "loc_id": "L25323793",
+      "region": "CO-AMA",
+      "checklists": 721,
+      "species": 391
+    },
+    {
+      "name": "Comunidad Mitu Cachivera -- Bosque Arena Blanca (varillal)",
+      "lat": 1.2241,
+      "lon": -70.2367,
+      "weight": 1,
+      "loc_id": "L1450896",
+      "region": "CO-VAU",
+      "checklists": 707,
+      "species": 510
+    },
+    {
+      "name": "Finca Biodiversa",
+      "lat": 1.3242,
+      "lon": -76.5774,
+      "weight": 1,
+      "loc_id": "L18440698",
+      "region": "CO-PUT",
+      "checklists": 673,
+      "species": 202
+    },
+    {
+      "name": "Puerto Nariño (pueblo)",
+      "lat": -3.7793,
+      "lon": -70.364,
+      "weight": 1,
+      "loc_id": "L5841973",
+      "region": "CO-AMA",
+      "checklists": 665,
+      "species": 385
+    },
+    {
+      "name": "Vereda Campucana",
+      "lat": 1.2038,
+      "lon": -76.713,
+      "weight": 1,
+      "loc_id": "L3822476",
+      "region": "CO-PUT",
+      "checklists": 643,
+      "species": 480
+    },
+    {
+      "name": "Pueblo Nuevo",
+      "lat": 1.1381,
+      "lon": -70.1135,
+      "weight": 1,
+      "loc_id": "L3571110",
+      "region": "CO-VAU",
+      "checklists": 597,
+      "species": 452
+    },
+    {
+      "name": "Donde se Oculta El Sol",
+      "lat": 1.0052,
+      "lon": -76.6618,
+      "weight": 1,
+      "loc_id": "L7895345",
+      "region": "CO-PUT",
+      "checklists": 580,
+      "species": 315
+    },
+    {
+      "name": "San José del Guaviare--Buena Vista",
+      "lat": 2.5706,
+      "lon": -72.6622,
+      "weight": 1,
+      "loc_id": "L2697642",
+      "region": "CO-GUV",
+      "checklists": 576,
+      "species": 454
+    },
+    {
+      "name": "Mirador de Los Tucanes",
+      "lat": 1.8182,
+      "lon": -75.6666,
+      "weight": 1,
+      "loc_id": "L4593619",
+      "region": "CO-CAQ",
+      "checklists": 519,
+      "species": 406
+    },
+    {
+      "name": "Páramo Bordoncillo",
+      "lat": 1.1504,
+      "lon": -77.0957,
+      "weight": 1,
+      "loc_id": "L3662791",
+      "region": "CO-PUT",
+      "checklists": 489,
+      "species": 183
+    }
+  ]
+}

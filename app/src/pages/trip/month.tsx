@@ -22,8 +22,13 @@ function loadMonth(country: string): number {
 export function useTripMonth(country: string) {
   const [month, setMonthState] = useState(() => loadMonth(country));
   const [seasonality, setSeasonality] = useState<TripSeasonality | null>(null);
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
-    fetchTripSeasonality(country).then(setSeasonality).catch(() => setSeasonality(null));
+    setLoaded(false);
+    fetchTripSeasonality(country)
+      .then(setSeasonality)
+      .catch(() => setSeasonality(null))
+      .finally(() => setLoaded(true));
   }, [country]);
   const setMonth = (m: number) => {
     setMonthState(m);
@@ -40,7 +45,11 @@ export function useTripMonth(country: string) {
     return curve[month - 1] >= IN_SEASON;
   };
   const hasData = !!seasonality && Object.keys(seasonality.months).length > 0;
-  return { month, setMonth, inSeason, hasData };
+  /** The first day's birds for the travel month, or null (any month, or no scores). */
+  const firstDay = (month && seasonality?.first_day?.[String(month)]) || null;
+  /** False while the month's first day is still on its way: do not start its quiz before. */
+  const ready = !month || loaded;
+  return { month, setMonth, inSeason, hasData, firstDay, ready };
 }
 
 /** "Going in…" chips: pick the month of the trip; the unit rows then show how many birds are likely. */

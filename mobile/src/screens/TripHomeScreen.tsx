@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation, useRoute, type RouteProp } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { loadTripState, updateTripState, type TripUnit } from '../api/trip';
+import { loadTripState, updateTripState, withTravelMonth, type TripUnit } from '../api/trip';
 import { FoldedAbout, Kicker, TripBackLink, TripLoading, TripRing, UnitRow, tripStyles } from '../components/TripParts';
 import { TripStory } from '../components/TripStory';
 import { UnderConstruction } from '../components/UnderConstruction';
@@ -27,9 +27,11 @@ export function TripHomeScreen() {
   const navigation = useNavigation<NativeStackNavigationProp<TripRoutes>>();
   const country = route.params.country.toUpperCase();
   const { t, locale } = useTranslation();
-  const { trip, error, reload, local, setLocal, known, knownGroups, progress } = useTrip(country);
-  const regionKnown = useRegionKnown(trip?.regions ?? []);
+  const { trip: baseTrip, error, reload, local, setLocal, known, knownGroups, progress } = useTrip(country);
   const travel = useTripMonth(country);
+  // In a travel month the first day holds the birds that are likely then (not the migrants that have left).
+  const trip = useMemo(() => (baseTrip ? withTravelMonth(baseTrip, travel.firstDay) : baseTrip), [baseTrip, travel.firstDay]);
+  const regionKnown = useRegionKnown(trip?.regions ?? []);
   const monthNames = Array.from({ length: 12 }, (_, i) => new Date(2000, i, 1).toLocaleString(locale, { month: 'short' }));
   // On a region pack: whether the player added it to the country's trip (stored with the country).
   const [inParent, setInParent] = useState<boolean | null>(null);

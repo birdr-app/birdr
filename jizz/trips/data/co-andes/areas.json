@@ -1,0 +1,157 @@
+{
+  "note": "Sample areas for GeoModel scores: the busiest eBird hotspots of the regions below. Edit by hand to add or drop places; weight 1 unless a place matters more.",
+  "source": "eBird hotspots (eBird API, Cornell Lab of Ornithology)",
+  "ebird_regions": [
+    "CO-DC",
+    "CO-CUN",
+    "CO-BOY",
+    "CO-SAN",
+    "CO-ANT",
+    "CO-CAL",
+    "CO-RIS",
+    "CO-QUI",
+    "CO-TOL"
+  ],
+  "areas": [
+    {
+      "name": "PNN Tatamá--Camino Montezuma (area general; acceso restringido)",
+      "lat": 5.2447,
+      "lon": -76.1006,
+      "weight": 1,
+      "loc_id": "L3856029",
+      "region": "CO-RIS",
+      "checklists": 17100,
+      "species": 664
+    },
+    {
+      "name": "Reserva Ecológica Río Blanco--Lodge y parte alta",
+      "lat": 5.0732,
+      "lon": -75.4379,
+      "weight": 1,
+      "loc_id": "L1252500",
+      "region": "CO-CAL",
+      "checklists": 9272,
+      "species": 540
+    },
+    {
+      "name": "Hotel Tinamú Birding Nature Reserve",
+      "lat": 5.0647,
+      "lon": -75.5922,
+      "weight": 1,
+      "loc_id": "L3218682",
+      "region": "CO-CAL",
+      "checklists": 7482,
+      "species": 446
+    },
+    {
+      "name": "Hotel Termales del Ruíz",
+      "lat": 4.97,
+      "lon": -75.378,
+      "weight": 1,
+      "loc_id": "L4057071",
+      "region": "CO-CAL",
+      "checklists": 7371,
+      "species": 301
+    },
+    {
+      "name": "RN Cañon del Río Claro",
+      "lat": 5.8923,
+      "lon": -74.8553,
+      "weight": 1,
+      "loc_id": "L2339182",
+      "region": "CO-ANT",
+      "checklists": 4258,
+      "species": 594
+    },
+    {
+      "name": "Parque Natural Chicaque",
+      "lat": 4.6065,
+      "lon": -74.3055,
+      "weight": 1,
+      "loc_id": "L1612184",
+      "region": "CO-CUN",
+      "checklists": 4069,
+      "species": 551
+    },
+    {
+      "name": "El Paujil Proaves Reserve",
+      "lat": 6.0475,
+      "lon": -74.262,
+      "weight": 1,
+      "loc_id": "L5668662",
+      "region": "CO-BOY",
+      "checklists": 3832,
+      "species": 503
+    },
+    {
+      "name": "Parque La Florida",
+      "lat": 4.7303,
+      "lon": -74.1493,
+      "weight": 1,
+      "loc_id": "L656882",
+      "region": "CO-CUN",
+      "checklists": 3526,
+      "species": 400
+    },
+    {
+      "name": "Arrierito Antioqueño ProAves Reserve",
+      "lat": 6.9888,
+      "lon": -75.1202,
+      "weight": 1,
+      "loc_id": "L603931",
+      "region": "CO-ANT",
+      "checklists": 3243,
+      "species": 617
+    },
+    {
+      "name": "SFF Otún Quimbaya",
+      "lat": 4.7253,
+      "lon": -75.5705,
+      "weight": 1,
+      "loc_id": "L1433708",
+      "region": "CO-RIS",
+      "checklists": 3207,
+      "species": 527
+    },
+    {
+      "name": "Reinita Cielo Azul ProAves Reserve",
+      "lat": 6.8522,
+      "lon": -73.3768,
+      "weight": 1,
+      "loc_id": "L1925997",
+      "region": "CO-SAN",
+      "checklists": 3051,
+      "species": 622
+    },
+    {
+      "name": "RN Jardín de Rocas",
+      "lat": 5.5964,
+      "lon": -75.8214,
+      "weight": 1,
+      "loc_id": "L20269613",
+      "region": "CO-ANT",
+      "checklists": 2944,
+      "species": 429
+    },
+    {
+      "name": "Refugio de las aves - La Piñuela",
+      "lat": 6.0045,
+      "lon": -75.1507,
+      "weight": 1,
+      "loc_id": "L22132962",
+      "region": "CO-ANT",
+      "checklists": 2749,
+      "species": 327
+    },
+    {
+      "name": "RN La Romera",
+      "lat": 6.1266,
+      "lon": -75.6008,
+      "weight": 1,
+      "loc_id": "L2328561",
+      "region": "CO-ANT",
+      "checklists": 2673,
+      "species": 453
+    }
+  ]
+}

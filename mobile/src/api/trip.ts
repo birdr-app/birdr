@@ -132,7 +132,19 @@ export async function fetchTrip(country: string, lang: string): Promise<Trip> {
 }
 
 /** Per bird, 12 numbers (Jan..Dec): how likely it is that month, 1 = its best month, 0 = not recorded. */
-export type TripSeasonality = { country: string; months: Record<string, number[]> };
+export type TripSeasonality = {
+  country: string;
+  months: Record<string, number[]>;
+  /** The first day's birds per travel month ("1".."12"); empty when the trip has no scores yet. */
+  first_day?: Record<string, string[]>;
+  source?: string;
+};
+
+/** The trip with the first day of the travel month, when the server has one. Every bird of it is a bird of the trip. */
+export function withTravelMonth(trip: Trip, firstDay: string[] | null): Trip {
+  const codes = (firstDay ?? []).filter((c) => trip.species[c]);
+  return codes.length ? { ...trip, first_day: { ...trip.first_day, species: codes } } : trip;
+}
 
 export async function fetchTripSeasonality(country: string): Promise<TripSeasonality> {
   const res = await fetch(apiUrl(`/api/trips/${country}/seasonality/`));

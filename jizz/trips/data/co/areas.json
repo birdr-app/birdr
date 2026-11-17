@@ -1,0 +1,16 @@
+{
+  "note": "Where a visitor on a normal 2 to 3 week trip goes, for GeoModel scores (trip_prep_geoscore). `packs` is the route mix: each region pack's areas share the weight given here, so a pack with more hotspots does not count for more. `areas` are entry cities where trips start and end, so town birds count for the first day. Edit by hand.",
+  "packs": {
+    "CO-ANDES": 3,
+    "CO-CARIBBEAN": 2,
+    "CO-CHOCO": 2,
+    "CO-AMAZON": 1,
+    "CO-LLANOS": 1
+  },
+  "areas": [
+    {"name": "Bogota (Jardin Botanico)", "lat": 4.6672, "lon": -74.0998, "weight": 0.5},
+    {"name": "Medellin (Jardin Botanico)", "lat": 6.2699, "lon": -75.5640, "weight": 0.5},
+    {"name": "Cali", "lat": 3.4516, "lon": -76.5320, "weight": 0.5},
+    {"name": "Cartagena", "lat": 10.4236, "lon": -75.5469, "weight": 0.5}
+  ]
+}

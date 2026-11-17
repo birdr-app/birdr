@@ -376,6 +376,10 @@ EBIRD_API_TOKEN = os.environ.get('EBIRD_API_TOKEN', '') or os.environ.get('EBIRD
 # eBird Status and Trends (for regional abundance CSV downloads); get key at https://ebird.org/st/request
 EBIRD_ST_ACCESS_KEY = os.environ.get('EBIRD_ST_ACCESS_KEY', '')
 
+# BirdNET GeoModel (ONNX + labels), see scripts/download_geomodel.sh. Only management commands use it.
+GEOMODEL_VERSION = 'v3.0.4'
+GEOMODEL_DIR = Path(os.environ.get('GEOMODEL_DIR') or BASE_DIR / 'geomodel_models' / GEOMODEL_VERSION)
+
 # Ensure errors are visible in the server process (runserver, gunicorn, etc.)
 LOGGING = {
     'version': 1,

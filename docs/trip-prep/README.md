@@ -287,6 +287,11 @@ country later; until then the trip is shown only in the languages listed in `TRI
 
 ## Travel month
 
+**Update (November 2026):** the month picker now runs on BirdNET GeoModel scores, which also choose the
+first day per month: see [geoscore.md](geoscore.md). Colombia is done; other trips still use the GBIF
+curves (`RegionSpeciesMonth`) until `trip_prep_geoscore` is run for them. The text below is the
+original plan.
+
 No new eBird integration is needed. The building blocks exist:
 
 - `CountrySpeciesFrequency` stores frequency per month, and games already have a season filter

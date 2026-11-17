@@ -1,0 +1,152 @@
+{
+  "note": "Sample areas for GeoModel scores: the busiest eBird hotspots of the regions below. Edit by hand to add or drop places; weight 1 unless a place matters more.",
+  "source": "eBird hotspots (eBird API, Cornell Lab of Ornithology)",
+  "ebird_regions": [
+    "CO-CHO",
+    "CO-VAC",
+    "CO-CAU",
+    "CO-NAR"
+  ],
+  "areas": [
+    {
+      "name": "El Pangán ProAves reserve",
+      "lat": 1.35,
+      "lon": -78.0944,
+      "weight": 1,
+      "loc_id": "L11106610",
+      "region": "CO-NAR",
+      "checklists": 8704,
+      "species": 362
+    },
+    {
+      "name": "Avistamiento de Aves Doña Dora (El Descanso)",
+      "lat": 3.5347,
+      "lon": -76.7534,
+      "weight": 1,
+      "loc_id": "L4375590",
+      "region": "CO-VAC",
+      "checklists": 6897,
+      "species": 470
+    },
+    {
+      "name": "La Florida - Bosque de Las Aves",
+      "lat": 3.5281,
+      "lon": -76.617,
+      "weight": 1,
+      "loc_id": "L10440585",
+      "region": "CO-VAC",
+      "checklists": 5323,
+      "species": 395
+    },
+    {
+      "name": "RN San Cipriano-Escalerete",
+      "lat": 3.8296,
+      "lon": -76.892,
+      "weight": 1,
+      "loc_id": "L2711479",
+      "region": "CO-VAC",
+      "checklists": 5284,
+      "species": 400
+    },
+    {
+      "name": "RN Laguna de Sonso",
+      "lat": 3.8814,
+      "lon": -76.3509,
+      "weight": 1,
+      "loc_id": "L465353",
+      "region": "CO-VAC",
+      "checklists": 5192,
+      "species": 397
+    },
+    {
+      "name": "Las Tangaras ProAves Reserve",
+      "lat": 5.8206,
+      "lon": -76.1727,
+      "weight": 1,
+      "loc_id": "L856448",
+      "region": "CO-CHO",
+      "checklists": 3646,
+      "species": 575
+    },
+    {
+      "name": "Mallama y Alrededores",
+      "lat": 1.1725,
+      "lon": -77.9095,
+      "weight": 1,
+      "loc_id": "L13229494",
+      "region": "CO-NAR",
+      "checklists": 2368,
+      "species": 181
+    },
+    {
+      "name": "Providencia Parque Ecológico - Piedechinche",
+      "lat": 3.6267,
+      "lon": -76.2231,
+      "weight": 1,
+      "loc_id": "L11882674",
+      "region": "CO-VAC",
+      "checklists": 1789,
+      "species": 251
+    },
+    {
+      "name": "Ecohotel El Diamante",
+      "lat": 3.8935,
+      "lon": -76.224,
+      "weight": 1,
+      "loc_id": "L14020896",
+      "region": "CO-VAC",
+      "checklists": 1527,
+      "species": 323
+    },
+    {
+      "name": "Gorrión de Andivia ProAves Reserve",
+      "lat": 5.9947,
+      "lon": -76.1663,
+      "weight": 1,
+      "loc_id": "L2694741",
+      "region": "CO-CHO",
+      "checklists": 991,
+      "species": 356
+    },
+    {
+      "name": "Titi Cabeciblanco ProAves Reserve",
+      "lat": 7.2266,
+      "lon": -76.5263,
+      "weight": 1,
+      "loc_id": "L11166154",
+      "region": "CO-CHO",
+      "checklists": 880,
+      "species": 424
+    },
+    {
+      "name": "Finca Discosura",
+      "lat": 1.3797,
+      "lon": -76.5119,
+      "weight": 1,
+      "loc_id": "L27467428",
+      "region": "CO-CAU",
+      "checklists": 694,
+      "species": 336
+    },
+    {
+      "name": "Reserva Amalaka",
+      "lat": 2.554,
+      "lon": -76.5687,
+      "weight": 1,
+      "loc_id": "L7323816",
+      "region": "CO-CAU",
+      "checklists": 687,
+      "species": 242
+    },
+    {
+      "name": "Jardín Botánico del Pacífico",
+      "lat": 6.272,
+      "lon": -77.384,
+      "weight": 1,
+      "loc_id": "L7336540",
+      "region": "CO-CHO",
+      "checklists": 595,
+      "species": 376
+    }
+  ]
+}

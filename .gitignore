@@ -33,3 +33,6 @@ node_modules
 *.sql
 *.sql.bzip
 /jizz/sitemaps/
+
+# BirdNET GeoModel weights (scripts/download_geomodel.sh)
+/jizz/geomodel_models/

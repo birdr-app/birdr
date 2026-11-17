@@ -12,6 +12,7 @@ import math
 from itertools import groupby
 
 from jizz.trips.content import LANGUAGES, ScopeSpecies
+from jizz.trips.geoscore import first_day_from_scores
 
 MIN_UNIT = 4
 MAX_UNIT = 7
@@ -52,9 +53,14 @@ def _unit(slug: str, groups: list[list[ScopeSpecies]]) -> dict:
     }
 
 
-def build_units(species: list[ScopeSpecies], first_day: list[str] | None = None, region: bool = False) -> dict:
+def build_units(
+    species: list[ScopeSpecies], first_day: list[str] | None = None, region: bool = False, trip: str | None = None
+) -> dict:
     """Groups, units, the first day and the endemics units. A region pack (``region=True``) has no
-    first day and no endemics chapter of its own: those belong to the country's trip."""
+    first day and no endemics chapter of its own: those belong to the country's trip.
+
+    Without a hand-set ``first_day`` the first day comes from the trip's GeoModel scores (birds likely
+    across the trip's areas, see ``geoscore.py``) when ``trip`` has any, else from the commonness tiers."""
     by_group = []
     for _, members in groupby(sorted(species, key=lambda s: (s.group_sort, s.tax_ordering)), key=lambda s: s.group_slug):
         by_group.append(list(members))
@@ -126,7 +132,9 @@ def build_units(species: list[ScopeSpecies], first_day: list[str] | None = None,
     elif first_day:
         day = [c for c in first_day if c in codes]
     else:
-        day = [s.code for s in sorted(species, key=lambda s: s.commonness)[:FIRST_DAY_SIZE]]
+        day = (trip and first_day_from_scores(trip, species, FIRST_DAY_SIZE)) or [
+            s.code for s in sorted(species, key=lambda s: s.commonness)[:FIRST_DAY_SIZE]
+        ]
 
     return {'groups': groups, 'first_day': day, 'units': units, 'endemic_units': endemic_units}
 

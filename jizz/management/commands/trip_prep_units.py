@@ -38,7 +38,7 @@ class Command(BaseCommand):
             raise CommandError(f'No species in scope for {country}')
 
         scope = load_scope(country)
-        data = build_units(species, scope['first_day'], region=is_region(country))
+        data = build_units(species, scope['first_day'], region=is_region(country), trip=country)
 
         path = country_dir(country) / 'units.json'
         old = read_json(path, {}) or {}
@@ -58,7 +58,7 @@ class Command(BaseCommand):
         if is_region(country):
             pass
         elif not scope['first_day']:
-            self.stdout.write('First day (suggested; set first_day in scope.json to choose):')
+            self.stdout.write('First day (suggested from GeoModel scores when the trip has them, else commonness; set first_day in scope.json to choose):')
         else:
             self.stdout.write('First day:')
         if data['first_day']:

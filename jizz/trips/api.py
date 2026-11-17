@@ -17,6 +17,7 @@ from jizz.trips.content import (
     db_country,
     load_scope,
     lookalike_path,
+    is_region,
     parent_trip,
     trip_countries,
     read_json,
@@ -530,19 +531,24 @@ def record_answers(country: str, player, answers: list[dict]) -> int:
 def trip_seasonality(country: str) -> dict:
     """Per-bird seasonal index for a trip, for the travel-month picker.
 
-    ``months[code]`` is 12 numbers (Jan..Dec): the bird's share of bird records that month,
-    scaled so its own best month is 1.0. 0.0 = not recorded in that month. Region packs
-    use their own pack data; the country trip uses the country-wide data. Packs of a
-    country trip are merged so every bird shown in the trip has a curve.
-    ``None`` data (nothing imported yet) gives an empty ``months``.
+    ``months[code]`` is 12 numbers (Jan..Dec), scaled so the bird's own best month is 1.0 and
+    0.0 means not there. Birds use the trip's BirdNET GeoModel scores (``RegionSpeciesScore``,
+    ``trip_prep_geoscore``) when it has them, else GBIF's copy of eBird (``RegionSpeciesMonth``:
+    a region's own data first, then its packs'). ``first_day[month]`` ("1".."12") is the first
+    day's birds for that travel month, empty without scores. ``source`` says where curves came from.
     """
     from jizz.models import RegionSpeciesMonth
+    from jizz.trips import geoscore
 
     files = _files(country)
     codes = {c for g in files['units']['groups'] for c in g['species']}
+    months = geoscore.season_curves(country, codes)
+    has_geo = bool(months)
+    first_day = {} if is_region(country) else geoscore.first_day_by_month(country, files['units'])
+
     regions = [country] + list(region_ids(country))
     rows = RegionSpeciesMonth.objects.filter(
-        region_code__in=regions, species__code__in=codes,
+        region_code__in=regions, species__code__in=codes - set(months),
     ).values_list('species__code', 'region_code', 'month', 'rel_freq')
     # Prefer the trip's own region data; fall back to the sub-packs' data.
     best: dict[str, tuple[int, list[float]]] = {}
@@ -553,8 +559,12 @@ def trip_seasonality(country: str) -> dict:
             cur = best[code] = (rank, [0.0] * 12)
         if rank == cur[0]:
             cur[1][month - 1] = max(cur[1][month - 1], rel)
-    months = {}
     for code, (_, vals) in best.items():
         peak = max(vals) or 1.0
         months[code] = [round(v / peak, 3) for v in vals]
-    return {'country': country, 'months': months}
+    return {
+        'country': country,
+        'months': months,
+        'first_day': first_day,
+        'source': 'birdnet_geomodel' if has_geo else ('gbif_ebird' if best else ''),
+    }
