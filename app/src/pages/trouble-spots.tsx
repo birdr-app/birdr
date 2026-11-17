@@ -425,17 +425,43 @@ export default function TroubleSpotsPage({ scope = 'me' }: { scope?: TroubleSpot
 
           {activeTab !== 'species' ? (
             <VStack gap={3} align="stretch">
-              <Button
-                alignSelf="flex-start"
-                variant="outline"
-                colorPalette="primary"
-                onClick={() => navigate('/trouble-spots/custom')}
+              <Flex
+                align="center"
+                gap={3}
+                px={3}
+                py={3}
+                borderRadius="lg"
+                borderWidth="1px"
+                borderColor="primary.200"
+                bg="primary.50"
+                data-testid="trouble-spots-custom-create"
               >
-                <FormattedMessage
-                  id="trouble_spots_custom_create"
-                  defaultMessage="Create your own pick"
-                />
-              </Button>
+                <Box flex={1} minW={0}>
+                  <Text fontWeight="bold" color="primary.800">
+                    <FormattedMessage
+                      id="trouble_spots_custom_create"
+                      defaultMessage="Create your own pick"
+                    />
+                  </Text>
+                  <Text fontSize="xs" color="primary.700" mt={0.5}>
+                    <FormattedMessage
+                      id="trouble_spots_custom_intro"
+                      defaultMessage="Pick 2 to 6 birds and quiz yourself on just those."
+                    />
+                  </Text>
+                </Box>
+                <Button
+                  size="sm"
+                  colorPalette="primary"
+                  flexShrink={0}
+                  onClick={() => navigate('/trouble-spots/custom')}
+                >
+                  <FormattedMessage
+                    id="trouble_spots_custom_create_button"
+                    defaultMessage="Create"
+                  />
+                </Button>
+              </Flex>
               {customPicksForTab.map((pick) => {
                 const busy = startingCustomKey === pick.key;
                 return (

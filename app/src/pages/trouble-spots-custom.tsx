@@ -1,4 +1,4 @@
-import { useContext, useMemo, useState } from 'react';
+import { useContext, useEffect, useMemo, useState } from 'react';
 import { Box, Button, Flex, Heading, Text, VStack } from '@chakra-ui/react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useNavigate } from 'react-router-dom';
@@ -7,6 +7,9 @@ import { Page } from '../shared/components/layout';
 import { SpeciesCoverThumb } from '../components/species-cover-thumb';
 import { SpeciesName } from '../components/species-name';
 import SpeciesCombobox from '../components/species-combobox';
+import CountryCombobox from '../components/country-combobox';
+import { UseCountries } from '../user/use-countries';
+import { apiUrl } from '../api/baseUrl';
 import { useAuthProfile } from '../core/auth-profile-context';
 import { practiceApiErrorMessage, startCustomPickPractice } from '../api/practice';
 import { readStoredCountryCode } from '../user/country-preference';
@@ -15,20 +18,65 @@ import { addCustomPick, CUSTOM_PICK_MAX, CUSTOM_PICK_MIN } from '../user/custom-
 export default function TroubleSpotsCustomPage() {
   const navigate = useNavigate();
   const intl = useIntl();
-  const { loadGame, loadPlayer, setGame, speciesLanguage, species: allSpecies } =
-    useContext(AppContext);
+  const { loadGame, loadPlayer, setGame, speciesLanguage } = useContext(AppContext);
   const { isAuthenticated: authenticated, profile } = useAuthProfile();
   const [picked, setPicked] = useState<Species[]>([]);
   const [starting, setStarting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const { countries } = UseCountries();
+  const countriesList = Array.isArray(countries) ? countries : [];
+  // The country picked here decides which birds the search offers. Defaults to the profile
+  // country, else the one remembered on this device.
+  const [chosenCountry, setChosenCountry] = useState<string>('');
   const countryCode =
-    profile?.country_code?.trim()?.toUpperCase() || readStoredCountryCode() || undefined;
+    chosenCountry ||
+    profile?.country_code?.trim()?.toUpperCase() ||
+    readStoredCountryCode() ||
+    undefined;
+
+  const [countrySpecies, setCountrySpecies] = useState<Species[]>([]);
+  const [speciesLoading, setSpeciesLoading] = useState(false);
+
+  useEffect(() => {
+    if (!countryCode) {
+      setCountrySpecies([]);
+      return undefined;
+    }
+    let cancelled = false;
+    setSpeciesLoading(true);
+    fetch(
+      apiUrl(
+        `/api/species/?countryspecies__country=${encodeURIComponent(countryCode)}&language=${encodeURIComponent(speciesLanguage || 'en')}`,
+      ),
+      { headers: { Accept: 'application/json' } },
+    )
+      .then((response) => (response.ok ? response.json() : []))
+      .then((data) => {
+        if (cancelled) return;
+        const list: Species[] = Array.isArray(data) ? data : data?.results || data?.data || [];
+        setCountrySpecies(list);
+        // Birds picked for another country that are not on this list drop out of the pick.
+        if (list.length > 0) {
+          const ids = new Set(list.map((s) => s.id));
+          setPicked((prev) => prev.filter((s) => ids.has(s.id)));
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setCountrySpecies([]);
+      })
+      .finally(() => {
+        if (!cancelled) setSpeciesLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [countryCode, speciesLanguage]);
 
   const available = useMemo(() => {
     const pickedIds = new Set(picked.map((s) => s.id));
-    return (Array.isArray(allSpecies) ? allSpecies : []).filter((s) => !pickedIds.has(s.id));
-  }, [allSpecies, picked]);
+    return countrySpecies.filter((s) => !pickedIds.has(s.id));
+  }, [countrySpecies, picked]);
 
   const canStart = picked.length >= CUSTOM_PICK_MIN && picked.length <= CUSTOM_PICK_MAX;
 
@@ -85,11 +133,28 @@ export default function TroubleSpotsCustomPage() {
             </Box>
           ) : (
             <>
+              {countriesList.length > 0 ? (
+                <Box>
+                  <Text fontSize="sm" fontWeight="semibold" color="primary.700" mb={1}>
+                    <FormattedMessage id="checklist_country" defaultMessage="Country" />
+                  </Text>
+                  <CountryCombobox
+                    countries={countriesList}
+                    value={
+                      countriesList.find((c) => c.code === countryCode) ??
+                      (countryCode ? { code: countryCode, name: countryCode } : null)
+                    }
+                    onChange={(c) => {
+                      if (c?.code) setChosenCountry(c.code);
+                    }}
+                  />
+                </Box>
+              ) : null}
               {picked.length < CUSTOM_PICK_MAX ? (
                 <SpeciesCombobox
                   species={available}
                   playerLanguage={speciesLanguage}
-                  loading={available.length === 0}
+                  loading={speciesLoading}
                   placeholder={intl.formatMessage({
                     id: 'trouble_spots_custom_placeholder',
                     defaultMessage: 'Search for a bird...',

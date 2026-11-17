@@ -868,5 +868,15 @@
   "flock_extra_games_finished": "Beendet",
   "flock_extra_games_show_all": "Alle beendeten Spiele anzeigen ({count})",
   "flock_extra_games_show_fewer": "Weniger anzeigen",
-  "flock_extra_games_none_open": "Gerade gibt es keine offenen Spiele. Erstelle ein Spiel, wähle Teilen und füge es diesem Flock hinzu."
+  "flock_extra_games_none_open": "Gerade gibt es keine offenen Spiele. Erstelle ein Spiel, wähle Teilen und füge es diesem Flock hinzu.",
+  "trouble_spots_custom_create": "Eigene Auswahl erstellen",
+  "trouble_spots_custom_title": "Deine eigene Auswahl",
+  "trouble_spots_custom_intro": "Wähle 2 bis 6 Vögel und übe nur mit diesen Arten.",
+  "trouble_spots_custom_placeholder": "Vogel suchen...",
+  "trouble_spots_custom_count": "{count}/{max} Vögel",
+  "trouble_spots_custom_remove": "Entfernen",
+  "trouble_spots_custom_remove_bird": "{name} entfernen",
+  "trouble_spots_custom_start": "Quiz starten",
+  "trouble_spots_custom_badge": "Deine Auswahl",
+  "trouble_spots_custom_create_button": "Erstellen"
 }

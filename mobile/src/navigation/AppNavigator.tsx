@@ -37,6 +37,7 @@ import { CountryChallengeLeaderboardScreen } from '../screens/CountryChallengeLe
 import { ChecklistScreen } from '../screens/ChecklistScreen';
 import { TroubleSpotsScreen } from '../screens/TroubleSpotsScreen';
 import { TroubleSpotPairScreen } from '../screens/TroubleSpotPairScreen';
+import { TroubleSpotCustomScreen } from '../screens/TroubleSpotCustomScreen';
 import { TroubleSpotSpeciesScreen } from '../screens/TroubleSpotSpeciesScreen';
 import { PairPracticeScreen, SpeciesPracticeScreen } from '../screens/PracticeStartScreen';
 import { FlockListScreen } from '../screens/FlockListScreen';
@@ -127,6 +128,7 @@ const SCREENS: { name: string; titleKey: string; component: React.ComponentType<
   { name: 'GlobalTroubleSpots', titleKey: 'trouble_spots_everyone', component: GlobalTroubleSpotsScreen },
   { name: 'TroubleSpotSpecies', titleKey: 'trouble_spots_species_title', component: TroubleSpotSpeciesScreen },
   { name: 'TroubleSpotPair', titleKey: 'trouble_spots_pair_detail', component: TroubleSpotPairScreen },
+  { name: 'TroubleSpotCustom', titleKey: 'trouble_spots_custom_title', component: TroubleSpotCustomScreen },
   { name: 'SpeciesPractice', titleKey: 'practice', component: SpeciesPracticeScreen },
   { name: 'PairPractice', titleKey: 'practice', component: PairPracticeScreen },
   { name: 'GameDetail', titleKey: 'game_details', component: GameDetailScreen },

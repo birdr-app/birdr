@@ -924,5 +924,6 @@
   "game_hiscores": "Highscores spellen",
   "league_all_countries": "Competities wereldwijd",
   "league_members_count": "{count, plural, one {# vogelaar} other {# vogelaars}}",
-  "league_players_ever_week": "{ever} spelers · {week} deze week"
+  "league_players_ever_week": "{ever} spelers · {week} deze week",
+  "trouble_spots_custom_create_button": "Maken"
 }

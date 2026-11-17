@@ -868,5 +868,15 @@
   "flock_extra_games_finished": "Terminées",
   "flock_extra_games_show_all": "Voir toutes les parties terminées ({count})",
   "flock_extra_games_show_fewer": "Voir moins",
-  "flock_extra_games_none_open": "Aucune partie ouverte pour l'instant. Créez une partie, choisissez Partager et ajoutez-la à ce flock."
+  "flock_extra_games_none_open": "Aucune partie ouverte pour l'instant. Créez une partie, choisissez Partager et ajoutez-la à ce flock.",
+  "trouble_spots_custom_create": "Créer votre propre sélection",
+  "trouble_spots_custom_title": "Votre propre sélection",
+  "trouble_spots_custom_intro": "Choisissez 2 à 6 oiseaux et entraînez-vous uniquement sur ceux-ci.",
+  "trouble_spots_custom_placeholder": "Rechercher un oiseau...",
+  "trouble_spots_custom_count": "{count}/{max} oiseaux",
+  "trouble_spots_custom_remove": "Supprimer",
+  "trouble_spots_custom_remove_bird": "Supprimer {name}",
+  "trouble_spots_custom_start": "Démarrer le quiz",
+  "trouble_spots_custom_badge": "Votre sélection",
+  "trouble_spots_custom_create_button": "Créer"
 }

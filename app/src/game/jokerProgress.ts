@@ -28,6 +28,30 @@ export function remainingJokers(
   return Math.max(0, totalJokers - countWrongAnswers(answers, pending));
 }
 
+/**
+ * Union of several answer lists by question sequence; the first list wins when two know the
+ * same question. The game's scores only refresh now and then, so the screen also remembers
+ * the results it has seen itself and merges both.
+ */
+export function mergeSessionAnswers(...lists: SessionAnswer[][]): SessionAnswer[] {
+  const bySequence = new Map<number, SessionAnswer>();
+  lists.forEach((list) =>
+    list.forEach((a) => {
+      if (!bySequence.has(a.sequence)) bySequence.set(a.sequence, a);
+    }),
+  );
+  return Array.from(bySequence.values()).sort((a, b) => a.sequence - b.sequence);
+}
+
+/** More wrong answers than jokers: the practice quiz is not passed (the player may still finish it). */
+export function practiceFailed(
+  totalJokers: number,
+  answers: SessionAnswer[],
+  pending?: SessionAnswer | null,
+): boolean {
+  return countWrongAnswers(answers, pending) > totalJokers;
+}
+
 export function sessionAnswersFromGameScores(
   scores: Array<{ name?: string; answers?: Array<{ sequence?: number; correct?: boolean }> }> | undefined,
   playerName: string | undefined,

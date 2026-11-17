@@ -211,3 +211,15 @@ export async function startMixupPractice(
   }
   return (await response.json()) as StartPairPracticeResponse;
 }
+
+/** Two birds start a confusion-pair practice, three to six a mixup practice. */
+export async function startCustomPickPractice(
+  speciesIds: number[],
+  countryCode?: string,
+): Promise<StartPairPracticeResponse> {
+  if (speciesIds.length === 2) {
+    const [lowId, highId] = [...speciesIds].sort((a, b) => a - b);
+    return startConfusionPairPractice(lowId, highId, countryCode);
+  }
+  return startMixupPractice(speciesIds, countryCode);
+}

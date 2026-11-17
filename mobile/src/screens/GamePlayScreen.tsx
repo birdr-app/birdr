@@ -45,10 +45,12 @@ import {
 } from '../utils/questionMediaIndex';
 import { playPreviewSrc } from '../utils/playImageUrl';
 import {
-  countWrongAnswers,
+  mergeSessionAnswers,
+  practiceFailed,
   PRACTICE_JOKERS,
   remainingJokers,
   sessionAnswersFromGameScores,
+  type SessionAnswer,
 } from '../game/jokerProgress';
 import type { Species } from '../types/game';
 import * as playerApi from '../api/player';
@@ -122,7 +124,6 @@ export function GamePlayScreen() {
   const [timedOutQuestionId, setTimedOutQuestionId] = useState<number | null>(null);
   const [refreshingQuestion, setRefreshingQuestion] = useState(false);
   const [advancingQuestion, setAdvancingQuestion] = useState(false);
-  const practiceEndSent = useRef(false);
 
   const handleRefreshQuestion = useCallback(async () => {
     setRefreshingQuestion(true);
@@ -407,12 +408,22 @@ export function GamePlayScreen() {
   const isMixupPractice = game?.game_type === 'mixup_practice';
   const isPracticeGame = isPairPractice || isSpeciesPractice || isMixupPractice;
 
+  // The game's scores only refresh now and then, so remember the results seen on this screen too.
+  // Without that the used hearts would fill up again on the next question.
+  const [seenPracticeAnswers, setSeenPracticeAnswers] = useState<SessionAnswer[]>([]);
+  useEffect(() => {
+    setSeenPracticeAnswers([]);
+  }, [game?.token]);
+
   const practiceAnswers = useMemo(
     () =>
       isPracticeGame && game && player
-        ? sessionAnswersFromGameScores(game.scores, player.name)
+        ? mergeSessionAnswers(
+            sessionAnswersFromGameScores(game.scores, player.name),
+            seenPracticeAnswers,
+          )
         : [],
-    [isPracticeGame, game, player],
+    [isPracticeGame, game, player, seenPracticeAnswers],
   );
 
   const practicePendingAnswer = useMemo(() => {
@@ -426,6 +437,8 @@ export function GamePlayScreen() {
     practiceAnswers,
     practicePendingAnswer,
   );
+  // More wrong answers than jokers: not passed. The player can still finish the quiz.
+  const practiceNotPassed = practiceFailed(PRACTICE_JOKERS, practiceAnswers, practicePendingAnswer);
 
   const resultsReadyForCurrentQuestion =
     !!question &&
@@ -458,20 +471,14 @@ export function GamePlayScreen() {
   const showSlowHostWait = useDelayedFlag(waitingForHost, 4000);
 
   useEffect(() => {
-    if (!isPracticeGame || !resultsReadyForCurrentQuestion || !answer || answer.correct) return;
-    const wrongBefore = countWrongAnswers(practiceAnswers);
-    if (wrongBefore >= PRACTICE_JOKERS && !practiceEndSent.current) {
-      practiceEndSent.current = true;
-      const timer = setTimeout(() => endGameSession(), 1200);
-      return () => clearTimeout(timer);
-    }
-  }, [
-    isPracticeGame,
-    resultsReadyForCurrentQuestion,
-    answer,
-    practiceAnswers,
-    endGameSession,
-  ]);
+    const sequence = question?.sequence;
+    if (!isPracticeGame || !resultsReadyForCurrentQuestion || !answer || !sequence) return;
+    setSeenPracticeAnswers((prev) =>
+      prev.some((a) => a.sequence === sequence)
+        ? prev
+        : [...prev, { sequence, correct: !!answer.correct }],
+    );
+  }, [isPracticeGame, resultsReadyForCurrentQuestion, answer, question?.sequence]);
 
   const advanceToNextMedia = useCallback(() => {
     if (!question) return;
@@ -718,7 +725,9 @@ export function GamePlayScreen() {
             </View>
             <View style={styles.jokersHearts}>
               {Array.from({ length: PRACTICE_JOKERS }).map((_, i) =>
-                i < practiceRemainingJokers ? (
+                practiceNotPassed ? (
+                  <FontAwesome5 key={i} name="skull" solid size={22} color={colors.primary[300]} />
+                ) : i < practiceRemainingJokers ? (
                   <FontAwesome5 key={i} name="heart" solid size={22} color={colors.primary[500]} />
                 ) : (
                   <FontAwesome5 key={i} name="heart-broken" solid size={22} color={colors.primary[300]} />
@@ -726,7 +735,6 @@ export function GamePlayScreen() {
               )}
             </View>
           </View>
-
         </>
       ) : null}
 

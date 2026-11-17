@@ -910,5 +910,6 @@
   "game_hiscores": "Game high scores",
   "league_all_countries": "Leagues around the world",
   "league_members_count": "{count, plural, one {# birder} other {# birders}}",
-  "league_players_ever_week": "{ever} players · {week} this week"
+  "league_players_ever_week": "{ever} players · {week} this week",
+  "trouble_spots_custom_create_button": "Create"
 }

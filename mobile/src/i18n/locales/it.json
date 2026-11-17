@@ -868,5 +868,15 @@
   "flock_extra_games_finished": "Terminate",
   "flock_extra_games_show_all": "Mostra tutte le partite terminate ({count})",
   "flock_extra_games_show_fewer": "Mostra meno",
-  "flock_extra_games_none_open": "Al momento non ci sono partite aperte. Crea una partita, scegli Condividi e aggiungila a questo flock."
+  "flock_extra_games_none_open": "Al momento non ci sono partite aperte. Crea una partita, scegli Condividi e aggiungila a questo flock.",
+  "trouble_spots_custom_create": "Crea la tua selezione",
+  "trouble_spots_custom_title": "La tua selezione",
+  "trouble_spots_custom_intro": "Scegli da 2 a 6 uccelli ed esercitati solo su quelli.",
+  "trouble_spots_custom_placeholder": "Cerca un uccello...",
+  "trouble_spots_custom_count": "{count}/{max} uccelli",
+  "trouble_spots_custom_remove": "Rimuovi",
+  "trouble_spots_custom_remove_bird": "Rimuovi {name}",
+  "trouble_spots_custom_start": "Inizia il quiz",
+  "trouble_spots_custom_badge": "La tua selezione",
+  "trouble_spots_custom_create_button": "Crea"
 }

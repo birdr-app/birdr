@@ -24,6 +24,7 @@ import {
   fetchGlobalTroubleSpots,
   fetchTroubleSpots,
   startConfusionPairPractice,
+  startCustomPickPractice,
   startMixupPractice,
   startSpeciesPractice,
   type TroubleSpotFlock,
@@ -33,6 +34,12 @@ import {
 import { loadCountries, type Country } from '../api/countries';
 import { CountrySelect } from '../components/CountrySelect';
 import * as playerApi from '../api/player';
+import {
+  customPicksForTab,
+  readCustomPicks,
+  removeCustomPick,
+  type CustomPick,
+} from '../lib/customPicks';
 import { colors } from '../theme';
 
 type TabKey = 'species' | 'pairs' | 'flocks';
@@ -68,6 +75,8 @@ export function TroubleSpotsScreen({ scope = 'me' }: { scope?: TroubleSpotsScope
   const [startingPairKey, setStartingPairKey] = useState<string | null>(null);
   const [startingSpeciesId, setStartingSpeciesId] = useState<number | null>(null);
   const [startingFlockKey, setStartingFlockKey] = useState<string | null>(null);
+  const [customPicks, setCustomPicks] = useState<CustomPick[]>([]);
+  const [startingCustomKey, setStartingCustomKey] = useState<string | null>(null);
   const [country, setCountry] = useState<Country | null>(null);
   const [countries, setCountries] = useState<Country[]>([]);
   const [includeFixed, setIncludeFixed] = useState(false);
@@ -131,6 +140,7 @@ export function TroubleSpotsScreen({ scope = 'me' }: { scope?: TroubleSpotsScope
       const tab = (route.params as { tab?: string } | undefined)?.tab;
       if (tab === 'pairs' || tab === 'species' || tab === 'flocks') setActiveTab(tab);
       void load();
+      void readCustomPicks().then(setCustomPicks);
     }, [load, route.params]),
   );
 
@@ -200,6 +210,29 @@ export function TroubleSpotsScreen({ scope = 'me' }: { scope?: TroubleSpotsScope
       setError(e instanceof Error ? e.message : t('failed_load'));
     } finally {
       setStartingFlockKey(null);
+    }
+  };
+
+  const handlePracticeCustom = async (pick: CustomPick) => {
+    if (requireLogin()) return;
+    setStartingCustomKey(pick.key);
+    setError(null);
+    try {
+      const result = await startCustomPickPractice(
+        pick.species.map((member) => member.id),
+        effectiveCountryCode,
+      );
+      const p = await playerApi.getPlayer(result.player_token);
+      if (p) setPlayer(p);
+      const game = await loadGame(result.game.token);
+      if (game) {
+        setGame(game);
+        navigation.navigate('GamePlay' as never);
+      }
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : t('failed_load'));
+    } finally {
+      setStartingCustomKey(null);
     }
   };
 
@@ -274,6 +307,70 @@ export function TroubleSpotsScreen({ scope = 'me' }: { scope?: TroubleSpotsScope
       <Text style={styles.subtitle}>{t('trouble_spots_set_country')}</Text>
     </TouchableOpacity>
   );
+
+  const customSection =
+    activeTab === 'species' ? null : (
+      <View style={styles.customSection}>
+        <View style={styles.customCreateRow}>
+          <View style={styles.rowText}>
+            <Text style={styles.customCreateTitle}>{t('trouble_spots_custom_create')}</Text>
+            <Text style={styles.customCreateHint}>{t('trouble_spots_custom_intro')}</Text>
+          </View>
+          <TouchableOpacity
+            style={styles.practiceButtonCompact}
+            onPress={() =>
+              navigation.navigate('TroubleSpotCustom', { countryCode: effectiveCountryCode })
+            }
+            accessibilityRole="button"
+            testID="troubleSpots.customCreate"
+          >
+            <Text style={styles.practiceButtonTextCompact}>
+              {t('trouble_spots_custom_create_button')}
+            </Text>
+          </TouchableOpacity>
+        </View>
+        {customPicksForTab(customPicks, activeTab).map((pick) => {
+          const busy = startingCustomKey === pick.key;
+          return (
+            <View key={pick.key} style={styles.speciesRow}>
+              <View style={styles.rowText}>
+                <View style={styles.customBadge}>
+                  <Text style={styles.customBadgeText}>{t('trouble_spots_custom_badge')}</Text>
+                </View>
+                {pick.species.map((member) => (
+                  <Text key={member.id} style={styles.rowTitle} numberOfLines={1}>
+                    {member.name}
+                  </Text>
+                ))}
+              </View>
+              <View style={styles.customActions}>
+                <TouchableOpacity
+                  style={[styles.practiceButtonCompact, busy && styles.practiceButtonDisabled]}
+                  onPress={() => void handlePracticeCustom(pick)}
+                  disabled={busy || startingCustomKey != null}
+                >
+                  {busy ? (
+                    <ActivityIndicator size="small" color={colors.primary[50]} />
+                  ) : (
+                    <Text style={styles.practiceButtonTextCompact}>
+                      {t('trouble_spots_practice_species')}
+                    </Text>
+                  )}
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.removeButtonCompact}
+                  onPress={() => void removeCustomPick(pick.key).then(setCustomPicks)}
+                  disabled={busy}
+                  accessibilityRole="button"
+                >
+                  <Text style={styles.removeButtonTextCompact}>{t('trouble_spots_custom_remove')}</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          );
+        })}
+      </View>
+    );
 
   const listBody =
     loading && !refreshing ? (
@@ -483,6 +580,7 @@ export function TroubleSpotsScreen({ scope = 'me' }: { scope?: TroubleSpotsScope
       >
         {everyone ? <Text style={styles.intro}>{t('trouble_spots_everyone_intro')}</Text> : null}
         {error ? <Text style={styles.error}>{error}</Text> : null}
+        {customSection}
         {listBody}
       </ScrollView>
     </View>
@@ -621,6 +719,47 @@ const styles = StyleSheet.create({
   rowTitle: { fontSize: 15, fontWeight: '600', color: colors.primary[800] },
   rowSub: { fontSize: 12, color: colors.primary[600], marginTop: 1 },
   rowStatCompact: { fontSize: 11, color: colors.primary[600], marginTop: 2 },
+  customSection: { marginBottom: 12 },
+  customCreateRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    padding: 12,
+    marginBottom: 4,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: colors.primary[200],
+    backgroundColor: colors.primary[50],
+  },
+  customCreateTitle: { fontSize: 15, fontWeight: '700', color: colors.primary[800] },
+  customCreateHint: { fontSize: 12, color: colors.primary[600], marginTop: 2 },
+  customBadge: {
+    alignSelf: 'flex-start',
+    backgroundColor: colors.primary[50],
+    borderColor: colors.primary[500],
+    borderWidth: 1,
+    borderRadius: 6,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    marginBottom: 4,
+  },
+  customBadgeText: {
+    fontSize: 11,
+    fontWeight: '800',
+    color: colors.primary[700],
+    letterSpacing: 0.5,
+  },
+  customActions: { gap: 6, alignItems: 'stretch' },
+  removeButtonCompact: {
+    paddingVertical: 7,
+    paddingHorizontal: 12,
+    borderRadius: 6,
+    borderWidth: 1,
+    borderColor: colors.primary[400],
+    minWidth: 72,
+    alignItems: 'center',
+  },
+  removeButtonTextCompact: { color: colors.primary[700], fontSize: 13, fontWeight: '600' },
   practiceButtonDisabled: { opacity: 0.7 },
   practiceButtonCompact: {
     flexShrink: 0,

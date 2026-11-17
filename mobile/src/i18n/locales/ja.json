@@ -868,5 +868,15 @@
   "flock_extra_games_finished": "終了したゲーム",
   "flock_extra_games_show_all": "終了したゲームをすべて表示（{count}）",
   "flock_extra_games_show_fewer": "表示を減らす",
-  "flock_extra_games_none_open": "現在、参加できるゲームはありません。ゲームを作成して「共有」を選び、このFlockに追加しましょう。"
+  "flock_extra_games_none_open": "現在、参加できるゲームはありません。ゲームを作成して「共有」を選び、このFlockに追加しましょう。",
+  "trouble_spots_custom_create": "自分で選ぶ",
+  "trouble_spots_custom_title": "自分で選ぶ",
+  "trouble_spots_custom_intro": "2〜6種の鳥を選んで、その鳥だけでクイズに挑戦しましょう。",
+  "trouble_spots_custom_placeholder": "鳥を検索...",
+  "trouble_spots_custom_count": "{count}/{max}種",
+  "trouble_spots_custom_remove": "削除",
+  "trouble_spots_custom_remove_bird": "{name}を削除",
+  "trouble_spots_custom_start": "クイズを始める",
+  "trouble_spots_custom_badge": "自分の選択",
+  "trouble_spots_custom_create_button": "作成"
 }

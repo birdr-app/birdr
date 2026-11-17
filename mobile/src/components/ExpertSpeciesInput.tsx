@@ -25,6 +25,9 @@ type Props = {
   emptyResultText: string;
   testID?: string;
   accessibilityLabel?: string;
+  /** 'above' floats over the content above the input (answer bars at the bottom of a screen);
+   * 'inline' lists the matches in the page flow under the input (a form near the top). */
+  listPlacement?: 'above' | 'inline';
 };
 
 function normalize(text: string): string {
@@ -44,6 +47,7 @@ export function ExpertSpeciesInput({
   emptyResultText,
   testID,
   accessibilityLabel,
+  listPlacement = 'above',
 }: Props) {
   const [query, setQuery] = useState('');
   const [focused, setFocused] = useState(false);
@@ -121,9 +125,9 @@ export function ExpertSpeciesInput({
         <ActivityIndicator size="small" color={colors.primary[500]} style={styles.loader} />
       ) : null}
       {showList ? (
-        // Opens above the input so the on-screen keyboard doesn't cover it.
+        // Opens above the input so the on-screen keyboard doesn't cover it, unless inline.
         <ScrollView
-          style={styles.list}
+          style={listPlacement === 'inline' ? styles.listInline : styles.list}
           keyboardShouldPersistTaps="always"
           nestedScrollEnabled
         >
@@ -181,6 +185,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.15,
     shadowRadius: 6,
     shadowOffset: { width: 0, height: -2 },
+  },
+  listInline: {
+    maxHeight: 240,
+    marginTop: 4,
+    borderWidth: 1,
+    borderColor: colors.primary[200],
+    borderRadius: 8,
+    backgroundColor: '#fff',
   },
   item: {
     paddingVertical: 12,

@@ -868,5 +868,15 @@
   "flock_extra_games_finished": "Encerrados",
   "flock_extra_games_show_all": "Ver todos os jogos encerrados ({count})",
   "flock_extra_games_show_fewer": "Ver menos",
-  "flock_extra_games_none_open": "Não há jogos abertos agora. Crie um jogo, escolha Compartilhar e adicione-o a este flock."
+  "flock_extra_games_none_open": "Não há jogos abertos agora. Crie um jogo, escolha Compartilhar e adicione-o a este flock.",
+  "trouble_spots_custom_create": "Crie sua própria seleção",
+  "trouble_spots_custom_title": "Sua própria seleção",
+  "trouble_spots_custom_intro": "Escolha de 2 a 6 aves e pratique só com elas.",
+  "trouble_spots_custom_placeholder": "Buscar uma ave...",
+  "trouble_spots_custom_count": "{count}/{max} aves",
+  "trouble_spots_custom_remove": "Remover",
+  "trouble_spots_custom_remove_bird": "Remover {name}",
+  "trouble_spots_custom_start": "Iniciar quiz",
+  "trouble_spots_custom_badge": "Sua seleção",
+  "trouble_spots_custom_create_button": "Criar"
 }

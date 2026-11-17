@@ -11,7 +11,7 @@ import {
   useDisclosure
 } from "@chakra-ui/react"
 import React, {useContext, useState, useEffect, useCallback, useRef, useMemo} from "react"
-import { FaHeart, FaHeartBroken } from "react-icons/fa"
+import { FaHeart, FaHeartBroken, FaSkull } from "react-icons/fa"
 import ReactPlayer from "react-player"
 import { PlayableVideo } from "../../../components/playable-video"
 import WebsocketContext from "../../../core/websocket-context"
@@ -47,10 +47,12 @@ import {
 import { QuestionLoadingFeather } from "../../../components/question-loading-feather"
 import { bindHtmlMediaCanPlay } from "../../../core/html-media-canplay"
 import {
-  countWrongAnswers,
+  mergeSessionAnswers,
+  practiceFailed,
   PRACTICE_JOKERS,
   remainingJokers,
   sessionAnswersFromGameScores,
+  type SessionAnswer,
 } from "../../../game/jokerProgress"
 
 export const QuestionComponent = () => {
@@ -74,7 +76,6 @@ export const QuestionComponent = () => {
   const [audioPlaying, setAudioPlaying] = useState(true)
   const [advancingQuestion, setAdvancingQuestion] = useState(false)
   const mediaPostedKey = useRef<string | null>(null)
-  const pairPracticeEndSent = useRef(false)
 
   const isPairPractice = game?.game_type === 'pair_practice'
   const isSpeciesPractice = game?.game_type === 'species_practice'
@@ -88,12 +89,22 @@ export const QuestionComponent = () => {
   const [timedOutQuestionId, setTimedOutQuestionId] = useState<number | null>(null)
   const timedOut = !!question && timedOutQuestionId === question.id
 
+  // The game's scores only refresh now and then, so remember the results seen on this page too.
+  // Without that the used hearts would fill up again on the next question.
+  const [seenPracticeAnswers, setSeenPracticeAnswers] = useState<SessionAnswer[]>([])
+  useEffect(() => {
+    setSeenPracticeAnswers([])
+  }, [game?.token])
+
   const practiceAnswers = useMemo(
     () =>
       isPracticeGame && game && player
-        ? sessionAnswersFromGameScores(game.scores, player.name)
+        ? mergeSessionAnswers(
+            sessionAnswersFromGameScores(game.scores, player.name),
+            seenPracticeAnswers,
+          )
         : [],
-    [isPracticeGame, game, player],
+    [isPracticeGame, game, player, seenPracticeAnswers],
   )
 
   const practicePendingAnswer = useMemo(() => {
@@ -107,6 +118,8 @@ export const QuestionComponent = () => {
     practiceAnswers,
     practicePendingAnswer,
   )
+  // More wrong answers than jokers: not passed. The player can still finish the quiz.
+  const practiceNotPassed = practiceFailed(PRACTICE_JOKERS, practiceAnswers, practicePendingAnswer)
 
   const resultsReadyForCurrentQuestion =
     !!question &&
@@ -117,20 +130,14 @@ export const QuestionComponent = () => {
         answer.sequence === question.sequence))
 
   useEffect(() => {
-    if (!isPracticeGame || !resultsReadyForCurrentQuestion || !answer || answer.correct) return
-    const wrongBefore = countWrongAnswers(practiceAnswers)
-    if (wrongBefore >= PRACTICE_JOKERS && !pairPracticeEndSent.current) {
-      pairPracticeEndSent.current = true
-      const timer = window.setTimeout(() => endGameSession(), 1200)
-      return () => window.clearTimeout(timer)
-    }
-  }, [
-    isPracticeGame,
-    resultsReadyForCurrentQuestion,
-    answer,
-    practiceAnswers,
-    endGameSession,
-  ])
+    const sequence = question?.sequence
+    if (!isPracticeGame || !resultsReadyForCurrentQuestion || !answer || !sequence) return
+    setSeenPracticeAnswers((prev) =>
+      prev.some((a) => a.sequence === sequence)
+        ? prev
+        : [...prev, { sequence, correct: !!answer.correct }],
+    )
+  }, [isPracticeGame, resultsReadyForCurrentQuestion, answer, question?.sequence])
 
   const done = (game?.length || 1) <= (question?.sequence || 0)
 
@@ -451,12 +458,20 @@ export const QuestionComponent = () => {
             </Box>
             <Flex gap={2} flexShrink={0}>
               {Array.from({ length: PRACTICE_JOKERS }).map((_, i) => {
-                const Icon = i < practiceRemainingJokers ? FaHeart : FaHeartBroken
+                const Icon = practiceNotPassed
+                  ? FaSkull
+                  : i < practiceRemainingJokers
+                    ? FaHeart
+                    : FaHeartBroken
                 return (
                   <Icon
                     key={i}
                     size={22}
-                    color={i < practiceRemainingJokers ? 'var(--chakra-colors-primary-600)' : 'var(--chakra-colors-primary-300)'}
+                    color={
+                      !practiceNotPassed && i < practiceRemainingJokers
+                        ? 'var(--chakra-colors-primary-600)'
+                        : 'var(--chakra-colors-primary-300)'
+                    }
                   />
                 )
               })}
