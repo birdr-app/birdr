@@ -1,0 +1,22 @@
+{
+  "code": "lucwar",
+  "name": {
+    "en": "Lucy's Warbler",
+    "nl": "Lucyzanger"
+  },
+  "latin": "Leiothlypis luciae",
+  "look_for": [
+    {
+      "en": "Tiny, pale grey **back**, whitish below",
+      "nl": "Piepklein, lichtgrijze **rug**, wit eronder"
+    },
+    {
+      "en": "Chestnut patch on the **rump**",
+      "nl": "Kastanjebruine vlek op de **stuit**"
+    },
+    {
+      "en": "Gleans in mesquite and streamside trees",
+      "nl": "Pikt insecten uit mesquite en bomen langs beken"
+    }
+  ]
+}

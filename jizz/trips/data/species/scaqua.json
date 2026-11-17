@@ -1,0 +1,22 @@
+{
+  "code": "scaqua",
+  "name": {
+    "en": "Scaled Quail",
+    "nl": "Geschubde kwartel"
+  },
+  "latin": "Callipepla squamata",
+  "look_for": [
+    {
+      "en": "Scaly blue-grey **breast** and belly",
+      "nl": "Geschubde blauwgrijze **borst** en buik"
+    },
+    {
+      "en": "Short white-tipped **crest** like cotton",
+      "nl": "Korte **kuif** met witte top als watten"
+    },
+    {
+      "en": "Prefers running to flying on dry flats",
+      "nl": "Rent liever dan dat hij vliegt over droge vlaktes"
+    }
+  ]
+}

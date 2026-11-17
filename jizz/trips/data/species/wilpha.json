@@ -1,0 +1,22 @@
+{
+  "code": "wilpha",
+  "name": {
+    "en": "Wilson's Phalarope",
+    "nl": "Grote franjepoot"
+  },
+  "latin": "Phalaropus tricolor",
+  "look_for": [
+    {
+      "en": "Long needle-thin **bill**",
+      "nl": "Lange naaldfijne **snavel**"
+    },
+    {
+      "en": "Plain pale grey **back**, white **rump**",
+      "nl": "Effen lichtgrijze **rug**, witte **stuit**"
+    },
+    {
+      "en": "Yellow **legs**, wades in shallow lakes",
+      "nl": "Gele **poten**, waadt in ondiepe meren"
+    }
+  ]
+}

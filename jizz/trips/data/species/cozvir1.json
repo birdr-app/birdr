@@ -1,0 +1,22 @@
+{
+  "code": "cozvir1",
+  "name": {
+    "en": "Cozumel Vireo",
+    "nl": "Cozumelvireo"
+  },
+  "latin": "Vireo bairdi",
+  "look_for": [
+    {
+      "en": "Found only on Cozumel island",
+      "nl": "Alleen te vinden op het eiland Cozumel"
+    },
+    {
+      "en": "Greyish-olive **back**, yellowish **flanks**",
+      "nl": "Grijsolijfgroene **rug**, geelachtige **flanken**"
+    },
+    {
+      "en": "Whitish **eye-ring**, two pale wingbars",
+      "nl": "Witachtige **oogring**, twee bleke vleugelstrepen"
+    }
+  ]
+}

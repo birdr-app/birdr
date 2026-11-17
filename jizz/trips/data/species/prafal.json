@@ -1,0 +1,22 @@
+{
+  "code": "prafal",
+  "name": {
+    "en": "Prairie Falcon",
+    "nl": "Prairievalk"
+  },
+  "latin": "Falco mexicanus",
+  "look_for": [
+    {
+      "en": "Pale sandy brown above, streaked below",
+      "nl": "Bleek zandbruin boven, gestreept onder"
+    },
+    {
+      "en": "Black **armpits** in flight",
+      "nl": "Zwarte **oksels** in vlucht"
+    },
+    {
+      "en": "Narrow dark **moustache** stripe",
+      "nl": "Smalle donkere **snor**streep"
+    }
+  ]
+}

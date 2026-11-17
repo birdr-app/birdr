@@ -1,0 +1,22 @@
+{
+  "code": "hutvir",
+  "name": {
+    "en": "Hutton's Vireo",
+    "nl": "Huttonvireo"
+  },
+  "latin": "Vireo huttoni",
+  "look_for": [
+    {
+      "en": "Broken white **eye-ring**, two wingbars",
+      "nl": "Onderbroken witte **oogring**, twee vleugelstrepen"
+    },
+    {
+      "en": "Short thick **bill**, olive-grey **back**",
+      "nl": "Korte dikke **snavel**, olijfgrijze **rug**"
+    },
+    {
+      "en": "Resembles a kinglet but moves more slowly",
+      "nl": "Lijkt op een goudhaantje maar beweegt rustiger"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "sinwre1",
+  "name": {
+    "en": "Sinaloa Wren",
+    "nl": "Sinaloawinterkoning"
+  },
+  "latin": "Thryophilus sinaloa",
+  "look_for": [
+    {
+      "en": "Long white **eyebrow**, black streak behind the **eye**",
+      "nl": "Lange witte **wenkbrauwstreep**, zwarte streep achter het **oog**"
+    },
+    {
+      "en": "Streaked black-and-white **neck**",
+      "nl": "Zwart-wit gestreepte **hals**"
+    },
+    {
+      "en": "Dull brown **back**, rufous **rump**, barred **tail**",
+      "nl": "Doffe bruine **rug**, roodbruine **stuit**, gebande **staart**"
+    }
+  ]
+}

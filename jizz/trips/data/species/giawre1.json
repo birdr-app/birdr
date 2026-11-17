@@ -1,0 +1,22 @@
+{
+  "code": "giawre1",
+  "name": {
+    "en": "Giant Wren",
+    "nl": "Reuzenwinterkoning"
+  },
+  "latin": "Campylorhynchus chiapensis",
+  "look_for": [
+    {
+      "en": "Largest wren, black **crown**, white **face**",
+      "nl": "Grootste winterkoning, zwarte **kruin**, wit **gezicht**"
+    },
+    {
+      "en": "Bright chestnut **back**, white **underparts**",
+      "nl": "Fel kastanjebruine **rug**, witte **onderkant**"
+    },
+    {
+      "en": "Groups in hedgerows, orchards and farmyards",
+      "nl": "Groepen in heggen, boomgaarden en boerenerven"
+    }
+  ]
+}

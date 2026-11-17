@@ -1,0 +1,22 @@
+{
+  "code": "goceme1",
+  "name": {
+    "en": "Golden-crowned Emerald",
+    "nl": "Goudkruinsmaragdkolibrie"
+  },
+  "latin": "Cynanthus auriceps",
+  "look_for": [
+    {
+      "en": "Dark shiny green **body**, golden **crown**",
+      "nl": "Donker glanzend groen **lijf**, gouden **kruin**"
+    },
+    {
+      "en": "Red **bill** with a dark tip",
+      "nl": "Rode **snavel** met een donkere punt"
+    },
+    {
+      "en": "Slightly forked bronzy **tail**",
+      "nl": "Licht gevorkte bronskleurige **staart**"
+    }
+  ]
+}

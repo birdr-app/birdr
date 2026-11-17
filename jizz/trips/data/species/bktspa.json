@@ -1,0 +1,22 @@
+{
+  "code": "bktspa",
+  "name": {
+    "en": "Black-throated Sparrow",
+    "nl": "Zwartkeelgors"
+  },
+  "latin": "Amphispiza bilineata",
+  "look_for": [
+    {
+      "en": "Black **throat** and bib on a grey breast",
+      "nl": "Zwarte **keel** en borstvlek op grijze borst"
+    },
+    {
+      "en": "Bold white **eyebrow** and moustache",
+      "nl": "Brede witte **wenkbrauw** en snorstreep"
+    },
+    {
+      "en": "White corners to the dark **tail**",
+      "nl": "Witte hoeken aan de donkere **staart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "pilfly1",
+  "name": {
+    "en": "Pileated Flycatcher",
+    "nl": "Mexicaanse kuiftiran"
+  },
+  "latin": "Xenotriccus mexicanus",
+  "look_for": [
+    {
+      "en": "Tall pointed **crest**",
+      "nl": "Hoge puntige **kuif**"
+    },
+    {
+      "en": "Olive-brown **back**, two buff **wingbars**",
+      "nl": "Olijfbruine **rug**, twee bruingele **vleugelstrepen**"
+    },
+    {
+      "en": "Pale **throat**, yellowish **belly**",
+      "nl": "Bleke **keel**, geelachtige **buik**"
+    }
+  ]
+}

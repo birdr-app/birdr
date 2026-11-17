@@ -1,0 +1,22 @@
+{
+  "code": "grawar",
+  "name": {
+    "en": "Grace's Warbler",
+    "nl": "Gracezanger"
+  },
+  "latin": "Setophaga graciae",
+  "look_for": [
+    {
+      "en": "Yellow **throat** and eyebrow",
+      "nl": "Gele **keel** en wenkbrauwstreep"
+    },
+    {
+      "en": "Grey **back** with black streaks",
+      "nl": "Grijze **rug** met zwarte strepen"
+    },
+    {
+      "en": "White **belly**, feeds high in pines",
+      "nl": "Witte **buik**, foerageert hoog in dennen"
+    }
+  ]
+}

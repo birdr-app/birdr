@@ -1,0 +1,22 @@
+{
+  "code": "btywar",
+  "name": {
+    "en": "Black-throated Grey Warbler",
+    "nl": "Grijze zwartkeelzanger"
+  },
+  "latin": "Setophaga nigrescens",
+  "look_for": [
+    {
+      "en": "Black-and-white striped **head**",
+      "nl": "Zwart-wit gestreepte **kop**"
+    },
+    {
+      "en": "Small yellow spot between **eye** and **bill**",
+      "nl": "Kleine gele vlek tussen **oog** en **snavel**"
+    },
+    {
+      "en": "Black **throat**, white **belly**, streaked **flanks**",
+      "nl": "Zwarte **keel**, witte **buik**, gestreepte **flanken**"
+    }
+  ]
+}

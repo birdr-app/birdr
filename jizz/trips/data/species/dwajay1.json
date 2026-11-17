@@ -1,0 +1,22 @@
+{
+  "code": "dwajay1",
+  "name": {
+    "en": "Dwarf Jay",
+    "nl": "Witkeeldwerggaai"
+  },
+  "latin": "Cyanolyca nanus",
+  "look_for": [
+    {
+      "en": "Black **mask** below a blue **crown**",
+      "nl": "Zwart **masker** onder een blauwe **kruin**"
+    },
+    {
+      "en": "Thin pale blue stripe above the mask",
+      "nl": "Smalle lichtblauwe streep boven het masker"
+    },
+    {
+      "en": "Blue-grey **underparts**, pale bluish throat",
+      "nl": "Blauwgrijze **onderzijde**, bleekblauwe keel"
+    }
+  ]
+}

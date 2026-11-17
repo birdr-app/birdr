@@ -1,0 +1,22 @@
+{
+  "code": "citspa1",
+  "name": {
+    "en": "Cinnamon-tailed Sparrow",
+    "nl": "Kaneelstaartgors"
+  },
+  "latin": "Peucaea sumichrasti",
+  "look_for": [
+    {
+      "en": "Warm cinnamon **tail**",
+      "nl": "Warme kaneelkleurige **staart**"
+    },
+    {
+      "en": "Rufous **crown**, grey face, white throat",
+      "nl": "Roestbruine **kruin**, grijs gezicht, witte keel"
+    },
+    {
+      "en": "Two black lines down the **throat**",
+      "nl": "Twee zwarte lijnen langs de **keel**"
+    }
+  ]
+}

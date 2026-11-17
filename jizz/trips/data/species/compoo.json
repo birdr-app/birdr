@@ -1,0 +1,22 @@
+{
+  "code": "compoo",
+  "name": {
+    "en": "Common Poorwill",
+    "nl": "Winternachtzwaluw"
+  },
+  "latin": "Phalaenoptilus nuttallii",
+  "look_for": [
+    {
+      "en": "Smaller than other nightjars, stubby **tail**",
+      "nl": "Kleiner dan andere nachtzwaluwen, korte **staart**"
+    },
+    {
+      "en": "Pale grey, finely mottled **plumage**",
+      "nl": "Lichtgrijs, fijn gevlekt **verenkleed**"
+    },
+    {
+      "en": "Male has white **tail** corners",
+      "nl": "Mannetje heeft witte **staart**hoeken"
+    }
+  ]
+}

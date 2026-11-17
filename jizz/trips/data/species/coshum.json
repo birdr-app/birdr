@@ -1,0 +1,22 @@
+{
+  "code": "coshum",
+  "name": {
+    "en": "Costa's Hummingbird",
+    "nl": "Costakolibrie"
+  },
+  "latin": "Calypte costae",
+  "look_for": [
+    {
+      "en": "Male violet **crown** and **throat** flare like whiskers",
+      "nl": "Violette **kruin** en **keel** van het mannetje wijken als snorharen"
+    },
+    {
+      "en": "Pale green-grey **back**, dull underparts",
+      "nl": "Bleekgroengrijze **rug**, doffe onderzijde"
+    },
+    {
+      "en": "Short **tail** and **bill**, lives in desert scrub",
+      "nl": "Korte **staart** en **snavel**, leeft in woestijnstruiken"
+    }
+  ]
+}

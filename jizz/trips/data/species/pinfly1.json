@@ -1,0 +1,22 @@
+{
+  "code": "pinfly1",
+  "name": {
+    "en": "Pine Flycatcher",
+    "nl": "Dennenfeetiran"
+  },
+  "latin": "Empidonax affinis",
+  "look_for": [
+    {
+      "en": "Bold white **eye-ring**, two wingbars",
+      "nl": "Duidelijke witte **oogring**, twee vleugelstrepen"
+    },
+    {
+      "en": "Long **tail** and long **bill**",
+      "nl": "Lange **staart** en lange **snavel**"
+    },
+    {
+      "en": "Lower **bill** pale at the base",
+      "nl": "Onderkant van de **snavel** bleek aan de basis"
+    }
+  ]
+}

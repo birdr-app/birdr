@@ -1,0 +1,22 @@
+{
+  "code": "belspa2",
+  "name": {
+    "en": "Bell's Sparrow",
+    "nl": "Bellgors"
+  },
+  "latin": "Artemisiospiza belli",
+  "look_for": [
+    {
+      "en": "Grey **head**, white eye-ring and lores",
+      "nl": "Grijze **kop**, witte oogring en teugel"
+    },
+    {
+      "en": "Dark **moustache** stripe, faint breast spot",
+      "nl": "Donkere **snorstreep**, vage borstvlek"
+    },
+    {
+      "en": "Long dark **tail** it flicks upward",
+      "nl": "Lange donkere **staart** die ze omhoog flipt"
+    }
+  ]
+}

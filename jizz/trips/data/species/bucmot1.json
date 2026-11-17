@@ -1,0 +1,22 @@
+{
+  "code": "bucmot1",
+  "name": {
+    "en": "Blue-capped Motmot",
+    "nl": "Blauwkruinmotmot"
+  },
+  "latin": "Momotus coeruliceps",
+  "look_for": [
+    {
+      "en": "Blue centre to the **crown**, black eye mask",
+      "nl": "Blauwe **kruinmidden**, zwart oogmasker"
+    },
+    {
+      "en": "Blue **tail** with racket tips",
+      "nl": "Blauwe **staart** met rakettippen"
+    },
+    {
+      "en": "Black spot on the **chest**",
+      "nl": "Zwarte vlek op de **borst**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "audori",
+  "name": {
+    "en": "Audubon's Oriole",
+    "nl": "Zwartkoptroepiaal"
+  },
+  "latin": "Icterus graduacauda",
+  "look_for": [
+    {
+      "en": "Black **hood** on a yellow body",
+      "nl": "Zwarte **kap** op een geel lijf"
+    },
+    {
+      "en": "Olive-yellow **back**, black wings and tail",
+      "nl": "Olijfgele **rug**, zwarte vleugels en staart"
+    },
+    {
+      "en": "Shy, keeps to dense thickets",
+      "nl": "Schuw, blijft in dichte struiken"
+    }
+  ]
+}

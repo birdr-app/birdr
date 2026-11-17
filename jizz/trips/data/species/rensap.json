@@ -1,0 +1,22 @@
+{
+  "code": "rensap",
+  "name": {
+    "en": "Red-naped Sapsucker",
+    "nl": "Roodneksapspecht"
+  },
+  "latin": "Sphyrapicus nuchalis",
+  "look_for": [
+    {
+      "en": "Red **forehead** and **crown**, red nape patch",
+      "nl": "Rood **voorhoofd** en rode **kruin**, rode nekvlek"
+    },
+    {
+      "en": "Black-and-white **face**, white **wing** patch",
+      "nl": "Zwart-witte **kop**, witte **vleugelvlek**"
+    },
+    {
+      "en": "Male has a red **throat**",
+      "nl": "Mannetje heeft een rode **keel**"
+    }
+  ]
+}

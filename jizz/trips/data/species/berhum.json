@@ -1,0 +1,22 @@
+{
+  "code": "berhum",
+  "name": {
+    "en": "Berylline Hummingbird",
+    "nl": "Berylamazilia"
+  },
+  "latin": "Saucerottia beryllina",
+  "look_for": [
+    {
+      "en": "Chestnut **wing** patch shows in flight",
+      "nl": "Kastanjebruine **vleugelvlek** zichtbaar in de vlucht"
+    },
+    {
+      "en": "Chestnut **tail** and red **bill** tipped black",
+      "nl": "Kastanjebruine **staart** en rode **snavel** met zwarte punt"
+    },
+    {
+      "en": "Glittering green **breast**, pale buff **belly**",
+      "nl": "Glinsterende groene **borst**, bleek bruingele **buik**"
+    }
+  ]
+}

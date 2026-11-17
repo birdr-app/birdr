@@ -1,0 +1,107 @@
+{
+  "country": "MX-NORTH",
+  "intro": {
+    "en": "Northern Mexico runs from the Sonoran and Chihuahuan deserts up into the pine-oak forest of the Sierra Madre Occidental, with dry thorn forest on the lower Pacific slope. Desert birds, mountain birds and several Mexican specialities live in a few hours' drive of each other. This pack covers 37 species, on top of the Mexico trip.",
+    "nl": "Noord-Mexico loopt van de woestijnen van Sonora en Chihuahua omhoog tot het dennen-eikenbos van de Sierra Madre Occidental, met droog doornbos op de lagere Pacifische helling. Woestijnvogels, bergvogels en enkele Mexicaanse specialiteiten leven binnen een paar uur rijden van elkaar. Dit pakket omvat 37 soorten, bovenop de reis naar Mexico."
+  },
+  "units": {
+    "waterfowl": {
+      "title": {
+        "en": "Snow Goose, Canvasback, Wood Duck",
+        "nl": "Sneeuwgans, tafeleend, Carolinaeend"
+      },
+      "intro": {
+        "en": "Winter visitors and a few residents of lakes, reservoirs and slow rivers. The Snow Goose and Canvasback gather on open water in winter, and the Wood Duck prefers wooded pools. Scan flocks for the white goose and the long-headed, pale-backed diver.",
+        "nl": "Wintergasten en enkele standvogels van meren, stuwmeren en trage rivieren. De Sneeuwgans en de Grote tafeleend verzamelen zich in de winter op open water, en de Carolinaeend houdt meer van beboste poelen. Scan groepen op de witte gans en de langkoppige duikeend met lichte rug."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "title": {
+        "en": "Quail and Wild Turkey",
+        "nl": "Kwartels en kalkoen"
+      },
+      "intro": {
+        "en": "Ground birds of scrub and open woods. Gambel's Quail lives in Sonoran desert, the Scaled Quail in Chihuahuan desert and grassland, and the Elegant Quail in brushy foothills. Head plumes and the pattern of the belly separate the quail, and the turkey is a pine-oak bird of the mountains.",
+        "nl": "Vogels van de grond in struikgewas en open bos. De Gambelkuifkwartel leeft in de woestijn van Sonora, de Geschubde kwartel in de woestijn en het grasland van Chihuahua, en de Douglaskuifkwartel in struikrijke heuvelvoeten. De kuif en de tekening van de buik onderscheiden de kwartels, en de kalkoen is een vogel van het dennen-eikenbos in de bergen."
+      }
+    },
+    "cuckoos": {
+      "title": {
+        "en": "Cuckoo, rail, Surfbird, Golden Eagle",
+        "nl": "Koekoek, ral, brandingloper, steenarend"
+      },
+      "intro": {
+        "en": "A mixed set from many habitats. The Yellow-billed Cuckoo is a summer bird of riverside woods, the Virginia Rail hides in marsh, the Surfbird belongs to rocky shores in winter, and the Golden Eagle soars over mountains and open country.",
+        "nl": "Een gemengd stel uit veel habitats. De Geelsnavelkoekoek is een zomervogel van bos langs rivieren, de Virginiaral blijft verscholen in moeras, de Brandingloper hoort in de winter bij rotsachtige kusten, en de Steenarend zweeft boven bergen en open land."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Owls and Eared Quetzal",
+        "nl": "Uilen en Geoorde trogon"
+      },
+      "intro": {
+        "en": "Night birds of desert and mountain, and one trogon of the high forest. The Burrowing Owl stands by burrows in open ground, the screech-owl and pygmy-owl are small and heard more than seen, and the Eared Quetzal lives in pine-oak forest of the Sierra Madre.",
+        "nl": "Nachtvogels van woestijn en berg, en een trogon van het hoge bos. De Holenuil staat bij holen in open terrein, de schreeuwuil en de dwerguil zijn klein en vaker te horen dan te zien, en de Geoorde trogon leeft in het dennen-eikenbos van de Sierra Madre."
+      }
+    },
+    "woodpeckers": {
+      "title": {
+        "en": "Sapsucker, Prairie Falcon, amazon",
+        "nl": "Sapspecht, prairievalk, amazone"
+      },
+      "intro": {
+        "en": "Three birds with little in common. The Red-naped Sapsucker is a winter visitor that drills neat rows of holes in trees, the Prairie Falcon hunts over open desert and grassland, and the Lilac-crowned Amazon is a noisy parrot of the Pacific side.",
+        "nl": "Drie vogels met weinig gemeen. De Roodneksapspecht is een wintergast die nette rijen gaatjes in bomen boort, de Prairievalk jaagt boven open woestijn en grasland, en de Blauwkruinamazone is een luidruchtige papegaai van de Pacifische kant."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "title": {
+        "en": "Jays and Chihuahuan Raven",
+        "nl": "Gaaien en woestijnraaf"
+      },
+      "intro": {
+        "en": "Four corvids of different habitats. The Mexican Jay moves in noisy groups through oak and pine, the Tufted Jay is a Sierra Madre speciality of the high forest, the Purplish-backed Jay lives lower in dry forest, and the Chihuahuan Raven is a bird of open desert.",
+        "nl": "Vier kraaiachtigen van verschillende habitats. De Mexicaanse gaai trekt in luidruchtige groepen door eiken en dennen, de Kroongaai is een specialiteit van het hoge bos in de Sierra Madre, de Purperruggaai leeft lager in droog bos, en de Woestijnraaf is een vogel van open woestijn."
+      }
+    },
+    "tits-chickadees-and-titmice": {
+      "title": {
+        "en": "Titmice, gnatcatchers and thrasher",
+        "nl": "Mezen, muggenvangers en spotlijster"
+      },
+      "intro": {
+        "en": "Small birds of scrub and oak. The Bridled Titmouse lives in mountain oaks and the Black-crested Titmouse further east, while the two gnatcatchers flick their tails in desert and thorn scrub. The Long-billed Thrasher feeds on the ground with a long curved bill.",
+        "nl": "Kleine vogels van struikgewas en eiken. De Harlekijnmees leeft in bergeiken en de Zwartkruinmees verder naar het oosten, terwijl de twee muggenvangers met de staart wippen in woestijn en doornstruweel. De Langsnavelspotlijster foerageert op de grond met een lange gebogen snavel."
+      }
+    },
+    "new-world-sparrows": {
+      "title": {
+        "en": "Sparrows and Lark Bunting",
+        "nl": "Gorzen en Prairiegors"
+      },
+      "intro": {
+        "en": "Streaky birds of desert scrub and grassland, many of them winter visitors. The Black-throated Sparrow and Rufous-winged Sparrow live in desert, while Cassin's, Grasshopper, Vesper and Brewer's Sparrow and the Lark Bunting prefer grass and open scrub. Check the face pattern and the tail first.",
+        "nl": "Gestreepte vogels van woestijnstruweel en grasland, veel ervan wintergasten. De Zwartkeelgors en de Roestvleugelgors leven in woestijn, terwijl de Cassingors, de Sprinkhaangors, de Avondgors, de Brewergors en de Prairiegors gras en open struikgewas verkiezen. Let eerst op de kop en de staart."
+      }
+    },
+    "wood-warblers": {
+      "title": {
+        "en": "Lucy's Warbler and two cardinals",
+        "nl": "Lucyzanger en twee kardinalen"
+      },
+      "intro": {
+        "en": "A small warbler and two seed-eaters. Lucy's Warbler is a bird of mesquite and desert washes, the Pyrrhuloxia is a grey cardinal of desert scrub, and the Crimson-collared Grosbeak is a Mexican speciality of forest edges and thickets on the Pacific slope.",
+        "nl": "Een kleine zanger en twee zaadeters. De Lucyzanger leeft in mesquite en droge rivierbeddingen, de Grijze kardinaal is een kardinaal van woestijnstruweel, en de Roodkraagkardinaal is een Mexicaanse specialiteit van bosranden en struweel op de Pacifische helling."
+      }
+    }
+  },
+  "species": {
+    "tufjay1": {
+      "here": {
+        "en": "Look for it in the high pine-oak forest along the Mazatlán to Durango road.",
+        "nl": "Zoek hem in het hoge dennen-eikenbos langs de weg van Mazatlán naar Durango."
+      }
+    }
+  }
+}

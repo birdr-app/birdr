@@ -1,0 +1,22 @@
+{
+  "code": "moutro1",
+  "name": {
+    "en": "Mountain Trogon",
+    "nl": "Mexicaanse trogon"
+  },
+  "latin": "Trogon mexicanus",
+  "look_for": [
+    {
+      "en": "Dark green **head**, **chest** and **back**",
+      "nl": "Donkergroene **kop**, **borst** en **rug**"
+    },
+    {
+      "en": "Bright red **belly**",
+      "nl": "Felrode **buik**"
+    },
+    {
+      "en": "Yellow **bill**, sits still in highland forest",
+      "nl": "Gele **snavel**, zit stil in bergbos"
+    }
+  ]
+}

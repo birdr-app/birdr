@@ -1,0 +1,22 @@
+{
+  "code": "gobwar1",
+  "name": {
+    "en": "Golden-browed Warbler",
+    "nl": "Goudbrauwzanger"
+  },
+  "latin": "Basileuterus belli",
+  "look_for": [
+    {
+      "en": "Bright yellow **eyebrow**, black-edged **crown**",
+      "nl": "Felgele **wenkbrauwstreep**, zwart omrande **kruin**"
+    },
+    {
+      "en": "Olive **back**, bright yellow **underparts**",
+      "nl": "Olijfgroene **rug**, felgele **onderkant**"
+    },
+    {
+      "en": "Active at mid-level in damp highland forest",
+      "nl": "Actief op middenhoogte in vochtig bergbos"
+    }
+  ]
+}

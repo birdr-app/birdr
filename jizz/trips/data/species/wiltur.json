@@ -1,0 +1,22 @@
+{
+  "code": "wiltur",
+  "name": {
+    "en": "Wild Turkey",
+    "nl": "Kalkoen"
+  },
+  "latin": "Meleagris gallopavo",
+  "look_for": [
+    {
+      "en": "Big dark bronze bird, bare blue-grey **head**",
+      "nl": "Grote donkerbronzen vogel, kale blauwgrijze **kop**"
+    },
+    {
+      "en": "Red **wattles**, hairlike **beard** on the chest",
+      "nl": "Rode **lellen**, haarachtige **baard** op de borst"
+    },
+    {
+      "en": "Fanned **tail** with pale tips in display",
+      "nl": "Waaiervormige **staart** met lichte punten bij de baltsvlucht"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "bltmot1",
+  "name": {
+    "en": "Blue-throated Motmot",
+    "nl": "Blauwkeelmotmot"
+  },
+  "latin": "Aspatha gularis",
+  "look_for": [
+    {
+      "en": "Green, with a blue **throat** patch",
+      "nl": "Groen, met een blauwe **keelvlek**"
+    },
+    {
+      "en": "Ochre face with a black ear spot",
+      "nl": "Okerkleurig gezicht met een zwarte oorvlek"
+    },
+    {
+      "en": "Long **tail** without racket tips",
+      "nl": "Lange **staart** zonder rakettippen"
+    }
+  ]
+}

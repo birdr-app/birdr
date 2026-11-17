@@ -1,0 +1,22 @@
+{
+  "code": "norcar",
+  "name": {
+    "en": "Northern Cardinal",
+    "nl": "Rode kardinaal"
+  },
+  "latin": "Cardinalis cardinalis",
+  "look_for": [
+    {
+      "en": "Male all red with a pointed **crest**",
+      "nl": "Mannetje geheel rood met puntige **kuif**"
+    },
+    {
+      "en": "Black **face** around a thick red bill",
+      "nl": "Zwart **gezicht** rond een dikke rode snavel"
+    },
+    {
+      "en": "Female warm brown with red tinge on **wings**",
+      "nl": "Vrouwtje warmbruin met rode gloed op **vleugels**"
+    }
+  ]
+}

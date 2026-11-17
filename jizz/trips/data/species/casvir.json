@@ -1,0 +1,22 @@
+{
+  "code": "casvir",
+  "name": {
+    "en": "Cassin's Vireo",
+    "nl": "Cassinvireo"
+  },
+  "latin": "Vireo cassinii",
+  "look_for": [
+    {
+      "en": "White **spectacles** on a dull grey **head**",
+      "nl": "Witte **bril** op een doffe grijze **kop**"
+    },
+    {
+      "en": "Olive-green **back**, pale yellow **flanks**",
+      "nl": "Olijfgroene **rug**, bleekgele **flanken**"
+    },
+    {
+      "en": "Duller than Blue-headed Vireo, less contrast",
+      "nl": "Doffer dan Brilvireo, minder contrast"
+    }
+  ]
+}

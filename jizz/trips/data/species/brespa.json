@@ -1,0 +1,22 @@
+{
+  "code": "brespa",
+  "name": {
+    "en": "Brewer's Sparrow",
+    "nl": "Brewergors"
+  },
+  "latin": "Spizella breweri",
+  "look_for": [
+    {
+      "en": "Pale, plain grey-brown, streaked **back**",
+      "nl": "Bleek, effen grijsbruin, gestreepte **rug**"
+    },
+    {
+      "en": "Fine streaks on the **crown**",
+      "nl": "Fijne strepen op de **kruin**"
+    },
+    {
+      "en": "Thin pale **eye-ring**, unmarked breast",
+      "nl": "Smalle lichte **oogring**, ongetekende borst"
+    }
+  ]
+}

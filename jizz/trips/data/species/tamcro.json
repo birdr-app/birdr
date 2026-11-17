@@ -1,0 +1,22 @@
+{
+  "code": "tamcro",
+  "name": {
+    "en": "Tamaulipas Crow",
+    "nl": "Mexicaanse kraai"
+  },
+  "latin": "Corvus imparatus",
+  "look_for": [
+    {
+      "en": "Small, glossy black crow, bluish gloss",
+      "nl": "Kleine, glanzend zwarte kraai, blauwe glans"
+    },
+    {
+      "en": "Croaking, frog-like call",
+      "nl": "Kwakkende, kikkerachtige roep"
+    },
+    {
+      "en": "Soft, silky look to the **plumage**",
+      "nl": "Zacht, zijdeachtig **verenkleed**"
+    }
+  ]
+}

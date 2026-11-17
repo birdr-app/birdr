@@ -1,0 +1,22 @@
+{
+  "code": "willet2",
+  "name": {
+    "en": "Saltmarsh Willet",
+    "nl": "Willet"
+  },
+  "latin": "Tringa semipalmata",
+  "look_for": [
+    {
+      "en": "Large grey wader, plain **plumage**",
+      "nl": "Grote grijze steltloper, effen **verenkleed**"
+    },
+    {
+      "en": "Bold black and white **wings** in flight",
+      "nl": "Opvallende zwart-witte **vleugels** in de vlucht"
+    },
+    {
+      "en": "Thick straight **bill**, blue-grey **legs**",
+      "nl": "Dikke rechte **snavel**, blauwgrijze **poten**"
+    }
+  ]
+}

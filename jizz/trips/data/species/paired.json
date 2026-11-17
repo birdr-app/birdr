@@ -1,0 +1,22 @@
+{
+  "code": "paired",
+  "name": {
+    "en": "Painted Redstart",
+    "nl": "Roodbuikzanger"
+  },
+  "latin": "Myioborus pictus",
+  "look_for": [
+    {
+      "en": "Black **body** with a red **belly**",
+      "nl": "Zwart **lijf** met een rode **buik**"
+    },
+    {
+      "en": "Fans its **tail** to show white sides",
+      "nl": "Waaiert de **staart** open en toont witte zijkanten"
+    },
+    {
+      "en": "White patch in the **wing**",
+      "nl": "Witte vlek in de **vleugel**"
+    }
+  ]
+}

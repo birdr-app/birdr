@@ -1,0 +1,22 @@
+{
+  "code": "rucwar",
+  "name": {
+    "en": "Rufous-capped Warbler",
+    "nl": "Roodkruinzanger"
+  },
+  "latin": "Basileuterus rufifrons",
+  "look_for": [
+    {
+      "en": "Rufous **crown**, white eyebrow, black eyestripe",
+      "nl": "Roodbruine **kruin**, witte wenkbrauwstreep, zwarte oogstreep"
+    },
+    {
+      "en": "Yellow **throat** and **breast**, olive **back**",
+      "nl": "Gele **keel** en **borst**, olijfgroene **rug**"
+    },
+    {
+      "en": "Cocks its **tail**, low in scrub",
+      "nl": "Houdt de **staart** schuin omhoog, laag in struikgewas"
+    }
+  ]
+}

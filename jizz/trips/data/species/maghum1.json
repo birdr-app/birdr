@@ -1,0 +1,22 @@
+{
+  "code": "maghum1",
+  "name": {
+    "en": "Rivoli's Hummingbird",
+    "nl": "Rivolikolibrie"
+  },
+  "latin": "Eugenes fulgens",
+  "look_for": [
+    {
+      "en": "Large, long **bill**, dark body",
+      "nl": "Groot, lange **snavel**, donker lijf"
+    },
+    {
+      "en": "Male violet **crown** and green **throat**",
+      "nl": "Mannetje met violette **kruin** en groene **keel**"
+    },
+    {
+      "en": "Small white spot behind the **eye**",
+      "nl": "Klein wit vlekje achter het **oog**"
+    }
+  ]
+}

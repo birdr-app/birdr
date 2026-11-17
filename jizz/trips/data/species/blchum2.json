@@ -1,0 +1,22 @@
+{
+  "code": "blchum2",
+  "name": {
+    "en": "Blue-capped Hummingbird",
+    "nl": "Oaxacakolibrie"
+  },
+  "latin": "Eupherusa cyanophrys",
+  "look_for": [
+    {
+      "en": "Violet-blue **crown**, green **back**",
+      "nl": "Violetblauwe **kruin**, groene **rug**"
+    },
+    {
+      "en": "Rufous **wing** patches show in flight",
+      "nl": "Roestbruine **vleugelvlekken** zichtbaar in de vlucht"
+    },
+    {
+      "en": "Rare, in damp cloud forest of Oaxaca",
+      "nl": "Zeldzaam, in vochtig nevelwoud van Oaxaca"
+    }
+  ]
+}

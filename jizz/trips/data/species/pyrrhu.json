@@ -1,0 +1,22 @@
+{
+  "code": "pyrrhu",
+  "name": {
+    "en": "Pyrrhuloxia",
+    "nl": "Grijze kardinaal"
+  },
+  "latin": "Cardinalis sinuatus",
+  "look_for": [
+    {
+      "en": "Grey body with a tall red **crest**",
+      "nl": "Grijs lijf met hoge rode **kuif**"
+    },
+    {
+      "en": "Short, parrot-like yellow **bill**",
+      "nl": "Korte, papegaaiachtige gele **snavel**"
+    },
+    {
+      "en": "Red face and stripe down the **breast**",
+      "nl": "Rood gezicht en streep over de **borst**"
+    }
+  ]
+}

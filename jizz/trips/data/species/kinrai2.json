@@ -1,0 +1,22 @@
+{
+  "code": "kinrai2",
+  "name": {
+    "en": "Aztec Rail",
+    "nl": "Mexicaanse ral"
+  },
+  "latin": "Rallus tenuirostris",
+  "look_for": [
+    {
+      "en": "Large marsh rail with a long **bill**",
+      "nl": "Grote moerasral met een lange **snavel**"
+    },
+    {
+      "en": "Rusty **breast**, strongly barred **flanks**",
+      "nl": "Roestrode **borst**, sterk gebande **flanken**"
+    },
+    {
+      "en": "Stays hidden in cattails and reeds",
+      "nl": "Blijft verborgen in lisdodden en riet"
+    }
+  ]
+}

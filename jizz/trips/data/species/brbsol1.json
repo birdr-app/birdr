@@ -1,0 +1,22 @@
+{
+  "code": "brbsol1",
+  "name": {
+    "en": "Brown-backed Solitaire",
+    "nl": "Bruinrugsolitaire"
+  },
+  "latin": "Myadestes occidentalis",
+  "look_for": [
+    {
+      "en": "Brown **back**, grey **underparts**",
+      "nl": "Bruine **rug**, grijze **onderkant**"
+    },
+    {
+      "en": "White **eye-ring**, pale **cheek** stripe",
+      "nl": "Witte **oogring**, lichte **wangstreep**"
+    },
+    {
+      "en": "Rich flute-like song from the canopy",
+      "nl": "Rijke fluitende zang vanuit het bladerdak"
+    }
+  ]
+}

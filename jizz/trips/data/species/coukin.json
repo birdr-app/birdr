@@ -1,0 +1,22 @@
+{
+  "code": "coukin",
+  "name": {
+    "en": "Couch's Kingbird",
+    "nl": "Texaanse koningstiran"
+  },
+  "latin": "Tyrannus couchii",
+  "look_for": [
+    {
+      "en": "Dark **mask**, yellow **belly**",
+      "nl": "Donker **masker**, gele **buik**"
+    },
+    {
+      "en": "Olive **chest** and grey **head**",
+      "nl": "Olijfgroene **borst** en grijze **kop**"
+    },
+    {
+      "en": "Best told from Tropical Kingbird by call",
+      "nl": "Het best van Tropische koningstiran te onderscheiden op de roep"
+    }
+  ]
+}

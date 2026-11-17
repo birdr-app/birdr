@@ -1,0 +1,22 @@
+{
+  "code": "caneme1",
+  "name": {
+    "en": "Canivet's Emerald",
+    "nl": "Vorkstaartsmaragdkolibrie"
+  },
+  "latin": "Cynanthus canivetii",
+  "look_for": [
+    {
+      "en": "Forked dark **tail**, bronze-green **back**",
+      "nl": "Gevorkte donkere **staart**, bronsgroene **rug**"
+    },
+    {
+      "en": "Pink-red **bill** with a dark tip",
+      "nl": "Roze-rode **snavel** met een donkere punt"
+    },
+    {
+      "en": "Pale stripe behind the **eye**, grey belly",
+      "nl": "Lichte streep achter het **oog**, grijze buik"
+    }
+  ]
+}

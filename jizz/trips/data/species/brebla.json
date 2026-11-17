@@ -1,0 +1,22 @@
+{
+  "code": "brebla",
+  "name": {
+    "en": "Brewer's Blackbird",
+    "nl": "Brewertroepiaal"
+  },
+  "latin": "Euphagus cyanocephalus",
+  "look_for": [
+    {
+      "en": "Male glossy black with a pale **eye**",
+      "nl": "Mannetje glanzend zwart met lichte **iris**"
+    },
+    {
+      "en": "Female grey-brown with a dark **eye**",
+      "nl": "Vrouwtje grijsbruin met donkere **iris**"
+    },
+    {
+      "en": "Walks with head-bobbing on open ground",
+      "nl": "Loopt knikkend over open terrein"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "cozeme1",
+  "name": {
+    "en": "Cozumel Emerald",
+    "nl": "Cozumelsmaragdkolibrie"
+  },
+  "latin": "Cynanthus forficatus",
+  "look_for": [
+    {
+      "en": "Green hummingbird with a forked **tail**",
+      "nl": "Groene kolibrie met een gevorkte **staart**"
+    },
+    {
+      "en": "Red-orange **bill** with a dark tip",
+      "nl": "Rood-oranje **snavel** met een donkere punt"
+    },
+    {
+      "en": "Found only on Cozumel, in gardens and scrub",
+      "nl": "Alleen op Cozumel, in tuinen en struikgewas"
+    }
+  ]
+}

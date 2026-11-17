@@ -1,0 +1,22 @@
+{
+  "code": "baisan",
+  "name": {
+    "en": "Baird's Sandpiper",
+    "nl": "Bairds strandloper"
+  },
+  "latin": "Calidris bairdii",
+  "look_for": [
+    {
+      "en": "**Wings** reach past the **tail** tip",
+      "nl": "**Vleugels** steken voorbij de **staart**punt uit"
+    },
+    {
+      "en": "Buff **breast** with fine streaks",
+      "nl": "Beige **borst** met fijne streepjes"
+    },
+    {
+      "en": "Scaly brown **back**, black **legs**",
+      "nl": "Geschubde bruine **rug**, zwarte **poten**"
+    }
+  ]
+}

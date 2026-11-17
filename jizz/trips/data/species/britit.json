@@ -1,0 +1,22 @@
+{
+  "code": "britit",
+  "name": {
+    "en": "Bridled Titmouse",
+    "nl": "Harlekijnmees"
+  },
+  "latin": "Baeolophus wollweberi",
+  "look_for": [
+    {
+      "en": "Black-and-white striped **face**",
+      "nl": "Zwart-wit gestreept **gezicht**"
+    },
+    {
+      "en": "Short black **crest**",
+      "nl": "Korte zwarte **kuif**"
+    },
+    {
+      "en": "Plain grey **back**, pale **underparts**",
+      "nl": "Effen grijze **rug**, bleke **onderkant**"
+    }
+  ]
+}

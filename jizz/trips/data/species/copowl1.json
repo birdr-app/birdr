@@ -1,0 +1,22 @@
+{
+  "code": "copowl1",
+  "name": {
+    "en": "Colima Pygmy-Owl",
+    "nl": "Colimadwerguil"
+  },
+  "latin": "Glaucidium palmarum",
+  "look_for": [
+    {
+      "en": "Tiny, round-headed owl without ear tufts",
+      "nl": "Piepkleine uil met ronde kop zonder oorpluimen"
+    },
+    {
+      "en": "Black false eyes on the **nape**",
+      "nl": "Zwarte schijnogen op de **nek**"
+    },
+    {
+      "en": "Long **tail** with narrow pale bars",
+      "nl": "Lange **staart** met smalle lichte banden"
+    }
+  ]
+}

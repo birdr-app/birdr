@@ -1,0 +1,22 @@
+{
+  "code": "yewtan1",
+  "name": {
+    "en": "Yellow-winged Tanager",
+    "nl": "Geelvleugeltangare"
+  },
+  "latin": "Thraupis abbas",
+  "look_for": [
+    {
+      "en": "Greyish-blue **head** with a black **mask**",
+      "nl": "Grijsblauwe **kop** met een zwart **masker**"
+    },
+    {
+      "en": "Yellow **wing** patch on black wings",
+      "nl": "Gele **vleugel**vlek op zwarte vleugels"
+    },
+    {
+      "en": "Olive-yellow **back**, yellow **underparts**",
+      "nl": "Olijfgele **rug**, gele **onderkant**"
+    }
+  ]
+}

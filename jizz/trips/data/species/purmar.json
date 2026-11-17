@@ -1,0 +1,22 @@
+{
+  "code": "purmar",
+  "name": {
+    "en": "Purple Martin",
+    "nl": "Purperzwaluw"
+  },
+  "latin": "Progne subis",
+  "look_for": [
+    {
+      "en": "Male glossy blue-black, even below",
+      "nl": "Mannetje glanzend blauwzwart, ook onderaan"
+    },
+    {
+      "en": "Big swallow, shallowly forked **tail**",
+      "nl": "Grote zwaluw, ondiep gevorkte **staart**"
+    },
+    {
+      "en": "Female has a paler **collar** and belly",
+      "nl": "Vrouwtje met bleker **halsband** en buik"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "buhvir",
+  "name": {
+    "en": "Blue-headed Vireo",
+    "nl": "Brilvireo"
+  },
+  "latin": "Vireo solitarius",
+  "look_for": [
+    {
+      "en": "Blue-grey **head** with white **spectacles**",
+      "nl": "Blauwgrijze **kop** met een witte **bril**"
+    },
+    {
+      "en": "Clean white **throat**, yellow **flanks**",
+      "nl": "Zuiver witte **keel**, gele **flanken**"
+    },
+    {
+      "en": "Two white **wingbars**, olive-green back",
+      "nl": "Twee witte **vleugelstrepen**, olijfgroene rug"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "vesspa",
+  "name": {
+    "en": "Vesper Sparrow",
+    "nl": "Avondgors"
+  },
+  "latin": "Pooecetes gramineus",
+  "look_for": [
+    {
+      "en": "Streaky brown, white outer **tail** feathers",
+      "nl": "Gestreept bruin, witte buitenste **staartveren**"
+    },
+    {
+      "en": "Pale **eye-ring** on a plain face",
+      "nl": "Lichte **oogring** in een vlak gezicht"
+    },
+    {
+      "en": "Chestnut **shoulder** patch, often hidden",
+      "nl": "Kastanjebruine **schouderstreep**, vaak verborgen"
+    }
+  ]
+}

@@ -175,6 +175,37 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'countries': ['EE', 'LV', 'LT'],
     },
+    'MX': {'name': {'en': 'Mexico', 'nl': 'Mexico'}, 'languages': ('en', 'nl')},
+    'MX-BAJA': {
+        'name': {'en': 'Baja California', 'nl': 'Baja California'},
+        'languages': ('en', 'nl'),
+        'parent': 'MX',
+    },
+    'MX-NORTH': {
+        'name': {'en': 'North and the Sierra Madre Occidental', 'nl': 'Noorden en de Sierra Madre Occidental'},
+        'languages': ('en', 'nl'),
+        'parent': 'MX',
+    },
+    'MX-WEST': {
+        'name': {'en': 'West Mexico and the Pacific slope', 'nl': 'West-Mexico en de Pacifische helling'},
+        'languages': ('en', 'nl'),
+        'parent': 'MX',
+    },
+    'MX-CENTRAL': {
+        'name': {'en': 'Central highlands and the Gulf slope', 'nl': 'Centraal hoogland en de Golfhelling'},
+        'languages': ('en', 'nl'),
+        'parent': 'MX',
+    },
+    'MX-SOUTH': {
+        'name': {'en': 'Oaxaca and Chiapas', 'nl': 'Oaxaca en Chiapas'},
+        'languages': ('en', 'nl'),
+        'parent': 'MX',
+    },
+    'MX-YUCATAN': {
+        'name': {'en': 'Yucatan Peninsula', 'nl': 'Yucatán'},
+        'languages': ('en', 'nl'),
+        'parent': 'MX',
+    },
     'BRITISHISLES': {
         'name': {'en': 'British Isles', 'nl': 'Britse Eilanden'},
         'languages': ('en', 'nl'),

@@ -1,0 +1,22 @@
+{
+  "code": "ameavo",
+  "name": {
+    "en": "American Avocet",
+    "nl": "Amerikaanse kluut"
+  },
+  "latin": "Recurvirostra americana",
+  "look_for": [
+    {
+      "en": "Slender, upcurved **bill**",
+      "nl": "Dunne, opwaarts gebogen **snavel**"
+    },
+    {
+      "en": "Black and white striped **back** and **wings**",
+      "nl": "Zwart-wit gestreepte **rug** en **vleugels**"
+    },
+    {
+      "en": "Orange **head** in summer, pale grey in winter",
+      "nl": "Oranje **kop** in de zomer, lichtgrijs in de winter"
+    }
+  ]
+}

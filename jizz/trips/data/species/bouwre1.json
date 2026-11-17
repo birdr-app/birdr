@@ -1,0 +1,22 @@
+{
+  "code": "bouwre1",
+  "name": {
+    "en": "Boucard's Wren",
+    "nl": "Harlekijnwinterkoning"
+  },
+  "latin": "Campylorhynchus jocosus",
+  "look_for": [
+    {
+      "en": "Chocolate **crown**, white eyebrow, dark grey **face**",
+      "nl": "Chocoladebruine **kruin**, witte wenkbrauwstreep, donkergrijs **gezicht**"
+    },
+    {
+      "en": "Black-spotted white **underparts**, buff **flanks**",
+      "nl": "Witte **onderkant** met zwarte vlekken, bruingele **flanken**"
+    },
+    {
+      "en": "Family groups in dry scrub and cactus",
+      "nl": "Familiegroepen in droog struikgewas en cactussen"
+    }
+  ]
+}

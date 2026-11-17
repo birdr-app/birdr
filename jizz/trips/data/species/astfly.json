@@ -1,0 +1,22 @@
+{
+  "code": "astfly",
+  "name": {
+    "en": "Ash-throated Flycatcher",
+    "nl": "Grijskeeltiran"
+  },
+  "latin": "Myiarchus cinerascens",
+  "look_for": [
+    {
+      "en": "Pale grey **throat** and **breast**",
+      "nl": "Lichtgrijze **keel** en **borst**"
+    },
+    {
+      "en": "Pale yellow **belly**",
+      "nl": "Bleekgele **buik**"
+    },
+    {
+      "en": "Rufous **tail** and wing edges",
+      "nl": "Roestrode **staart** en vleugelranden"
+    }
+  ]
+}

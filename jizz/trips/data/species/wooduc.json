@@ -1,0 +1,22 @@
+{
+  "code": "wooduc",
+  "name": {
+    "en": "Wood Duck",
+    "nl": "Carolinaeend"
+  },
+  "latin": "Aix sponsa",
+  "look_for": [
+    {
+      "en": "Male has a glossy green, swept-back **crest**",
+      "nl": "Mannetje heeft een glanzend groene, naar achteren hangende **kuif**"
+    },
+    {
+      "en": "White face stripes, chestnut **breast**",
+      "nl": "Witte strepen op de kop, kastanjebruine **borst**"
+    },
+    {
+      "en": "Female grey-brown with a white teardrop around the **eye**",
+      "nl": "Vrouwtje grijsbruin met een witte druppel om het **oog**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "sursco",
+  "name": {
+    "en": "Surf Scoter",
+    "nl": "Brilzee-eend"
+  },
+  "latin": "Melanitta perspicillata",
+  "look_for": [
+    {
+      "en": "Male black with white **forehead** and **nape**",
+      "nl": "Mannetje zwart met wit **voorhoofd** en witte **nek**"
+    },
+    {
+      "en": "Huge **bill** in orange, red and white",
+      "nl": "Enorme **snavel** in oranje, rood en wit"
+    },
+    {
+      "en": "Female brown with two pale **cheek** spots",
+      "nl": "Vrouwtje bruin met twee lichte vlekken op de **wang**"
+    }
+  ]
+}

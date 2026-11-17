@@ -1,0 +1,22 @@
+{
+  "code": "cssvir1",
+  "name": {
+    "en": "Chestnut-sided Shrike-Vireo",
+    "nl": "Bruinflankklauwiervireo"
+  },
+  "latin": "Vireolanius melitophrys",
+  "look_for": [
+    {
+      "en": "Thick **bill**, grey **crown**, yellow brow",
+      "nl": "Dikke **snavel**, grijze **kruin**, gele wenkbrauwstreep"
+    },
+    {
+      "en": "Chestnut band across the **breast**",
+      "nl": "Kastanjebruine band over de **borst**"
+    },
+    {
+      "en": "Bright yellow **throat** and belly",
+      "nl": "Felgele **keel** en buik"
+    }
+  ]
+}

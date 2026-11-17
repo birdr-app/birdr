@@ -1,0 +1,22 @@
+{
+  "code": "hobkit",
+  "name": {
+    "en": "Hook-billed Kite",
+    "nl": "Langsnavelwouw"
+  },
+  "latin": "Chondrohierax uncinatus",
+  "look_for": [
+    {
+      "en": "Heavy, deeply hooked **bill**",
+      "nl": "Zware, diep gehaakte **snavel**"
+    },
+    {
+      "en": "Pale **eye**, greenish bare face",
+      "nl": "Bleek **oog**, groenig kaal gezicht"
+    },
+    {
+      "en": "Grey male, brown female, barred **belly**",
+      "nl": "Grijs mannetje, bruin vrouwtje, gebandeerde **buik**"
+    }
+  ]
+}

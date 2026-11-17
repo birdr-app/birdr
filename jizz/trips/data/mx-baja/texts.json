@@ -1,0 +1,149 @@
+{
+  "country": "MX-BAJA",
+  "intro": {
+    "en": "Baja is a long, dry peninsula between the Pacific and the Sea of Cortez, with desert, chaparral, mangrove lagoons and a pine forest on its highest ridges. Many of its birds are winter visitors that gather on the lagoons and rocky shores, and a few live nowhere else. This pack covers 52 species, on top of the Mexico trip.",
+    "nl": "Baja is een lang, droog schiereiland tussen de Stille Oceaan en de Zee van Cortés, met woestijn, chaparral, mangrovelagunes en dennenbos op de hoogste ruggen. Veel van de vogels zijn wintergasten die zich verzamelen op de lagunes en rotsachtige kusten, en een paar leven nergens anders. Dit pakket omvat 52 soorten, bovenop de reis naar Mexico."
+  },
+  "units": {
+    "waterfowl": {
+      "title": {
+        "en": "Geese, scoters, Redhead, merganser",
+        "nl": "Ganzen, zee-eenden, tafeleend, zaagbek"
+      },
+      "intro": {
+        "en": "Winter visitors on the coastal lagoons and bays. Brent Geese gather on the shallow lagoons of the Pacific side, and the scoter and merganser feed on open water just off the shore. Look at the head pattern and bill shape first.",
+        "nl": "Wintergasten op de kustlagunes en baaien. Rotganzen verzamelen zich op de ondiepe lagunes aan de Pacifische kant, en de zee-eend en de zaagbek foerageren op open water vlak voor de kust. Let eerst op de kopstekening en de snavelvorm."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "title": {
+        "en": "Quail, poorwill, hummingbirds, rail",
+        "nl": "Kwartel, nachtzwaluw, kolibries, ral"
+      },
+      "intro": {
+        "en": "Birds of scrub, desert and salt marsh. The California Quail runs in groups through chaparral, three hummingbirds work the gardens and desert flowers, and the Ridgway's Rail hides in coastal marsh. The poorwill is a nightjar that you find at dusk or by its call.",
+        "nl": "Vogels van struikgewas, woestijn en kwelder. De Californische kuifkwartel rent in groepjes door de chaparral, drie kolibries bezoeken tuinen en woestijnbloemen, en de Californische ral blijft verscholen in kustmoeras. De winternachtzwaluw is een nachtzwaluw die je in de schemering of aan zijn roep vindt."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Curlew, godwit, Dunlin, oystercatcher",
+        "nl": "Wulp, grutto, strandloper, scholekster"
+      },
+      "intro": {
+        "en": "Large and medium waders of the lagoons and shores. The curlew and godwit probe the mud at low tide, the Dunlin feeds in flocks, and the Black Oystercatcher stays on rocky Pacific shores. Bill length and shape do most of the work.",
+        "nl": "Grote en middelgrote steltlopers van lagunes en kusten. De wulp en de grutto prikken bij eb in de modder, de Bonte strandloper foerageert in groepen, en de zwarte scholekster blijft op rotsachtige Pacifische kusten. Lengte en vorm van de snavel doen het meeste werk."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Knot, phalarope, tattler, turnstone",
+        "nl": "Kanoet, franjepoot, ruiter, steenloper"
+      },
+      "intro": {
+        "en": "Smaller shorebirds of beaches, rocks and open water. The Black Turnstone and the Wandering Tattler work the rocky shore, the knot rests in tight flocks on beaches, and the phalarope swims in rafts offshore. Check leg colour and how each bird moves.",
+        "nl": "Kleinere steltlopers van stranden, rotsen en open water. De Zwarte steenloper en de Amerikaanse grijze ruiter lopen over de rotskust, de Kanoet rust in dichte groepen op stranden, en de Grauwe franjepoot zwemt in groepen op zee. Let op de pootkleur en op hoe elke vogel zich beweegt."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {
+        "en": "Gulls of both Baja coasts",
+        "nl": "Meeuwen van beide kusten"
+      },
+      "intro": {
+        "en": "Winter gulls on beaches, harbours and bays. The Western Gull belongs to the Pacific side and the Yellow-footed Gull to the Sea of Cortez. Mantle shade and leg colour separate the large gulls from each other.",
+        "nl": "Meeuwen in de winter op stranden, havens en baaien. De Californische meeuw hoort bij de Pacifische kant en de Mexicaanse meeuw bij de Zee van Cortés. De tint van de mantel en de pootkleur scheiden de grote meeuwen van elkaar."
+      }
+    },
+    "grebes": {
+      "title": {
+        "en": "Grebes and divers",
+        "nl": "Futen en duikers"
+      },
+      "intro": {
+        "en": "Fish-eating diving birds of sheltered bays and lagoons in winter. The Western Grebe has a long neck and a pale face, and the divers are heavier, with thick bills held level. Scan calm water at some distance with a telescope.",
+        "nl": "Vissende duikers van beschutte baaien en lagunes in de winter. De Zwanenhalsfuut heeft een lange hals en een licht gezicht, en de duikers zijn zwaarder, met een dikke snavel die ze recht houden. Scan rustig water op afstand met een telescoop."
+      }
+    },
+    "storm-petrels": {
+      "title": {
+        "en": "Storm-petrels and shearwaters",
+        "nl": "Stormvogeltjes en pijlstormvogels"
+      },
+      "intro": {
+        "en": "Seabirds that you see mostly from a boat. The shearwaters pass in lines low over the water along the Pacific coast, and the small storm-petrels flutter close to the surface offshore and in the Sea of Cortez. Look at size, flight and any white on the body.",
+        "nl": "Zeevogels die je vooral vanaf een boot ziet. De pijlstormvogels vliegen in rijen laag over het water langs de Pacifische kust, en de kleine stormvogeltjes fladderen vlak boven het oppervlak op zee en in de Zee van Cortés. Let op de grootte, de vlucht en eventueel wit op het lichaam."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "title": {
+        "en": "Cormorant, hawk and woodpeckers",
+        "nl": "Aalscholver, buizerd en spechten"
+      },
+      "intro": {
+        "en": "A mixed set. Brandt's Cormorant nests on rocky coasts and islands, the flicker lives among the giant cactus of the desert, and the Nuttall's Woodpecker and the hawk prefer wooded canyons and oaks in the north.",
+        "nl": "Een gemengd stel. De Brandtaalscholver broedt op rotskusten en eilanden, de grondspecht leeft tussen de reuzencactussen van de woestijn, en de Nuttallspecht en de buizerd houden meer van beboste kloven en eiken in het noorden."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "title": {
+        "en": "Scrub-jay, Wrentit, titmouse, crow",
+        "nl": "Gaai, winterkoningmees, mees, kraai"
+      },
+      "intro": {
+        "en": "Birds of oak woodland and chaparral in the north. The California Scrub-Jay and Oak Titmouse live in oaks, while the Wrentit skulks in dense scrub and is easier to hear than to see. The American Crow is a rare sight here.",
+        "nl": "Vogels van eikenbos en chaparral in het noorden. De Westelijke struikgaai en de Grijze mees leven in eiken, terwijl de Winterkoningmees zich in dicht struikgewas schuilhoudt en makkelijker te horen is dan te zien. De Amerikaanse kraai is hier zeldzaam."
+      }
+    },
+    "gnatcatchers": {
+      "title": {
+        "en": "Wren, thrashers, gnatcatcher, starling",
+        "nl": "Winterkoning, spotlijsters, spreeuw e.a."
+      },
+      "intro": {
+        "en": "Birds of scrub and desert. The Cactus Wren sings from the tops of cactus, the two thrashers feed on the ground with long curved bills, and the California Gnatcatcher flicks its tail in coastal scrub. The Common Starling is an introduced bird of towns.",
+        "nl": "Vogels van struikgewas en woestijn. De Cactuswinterkoning zingt vanaf de toppen van cactussen, de twee spotlijsters foerageren met lange gebogen snavels op de grond, en de Californische muggenvanger wipt met de staart in kuststruweel. De Spreeuw is hier een uitheemse vogel van dorpen en steden."
+      }
+    },
+    "new-world-sparrows": {
+      "title": {
+        "en": "Sparrows, towhees and junco",
+        "nl": "Gorzen, towies en junco"
+      },
+      "intro": {
+        "en": "Ground birds of scrub, desert and pine forest. The towhees scratch under bushes, the Dark-eyed Junco lives in the mountain pines, and the White-crowned Sparrow is common in winter. Head pattern and the colour under the tail tell most of them apart.",
+        "nl": "Vogels van de grond in struikgewas, woestijn en dennenbos. De towies scharrelen onder struiken, de Grijze junco leeft in de dennen van de bergen, en de Witkruingors is in de winter algemeen. De kopstekening en de kleur onder de staart onderscheiden de meeste soorten."
+      }
+    },
+    "blackbirds": {
+      "title": {
+        "en": "Blackbird, meadowlark, yellowthroat",
+        "nl": "Troepiaal, weidespreeuw, maskerzanger"
+      },
+      "intro": {
+        "en": "Birds of open ground and wet places. Brewer's Blackbird forages around towns and farms, the Western Meadowlark sings from fence posts, and Belding's Yellowthroat lives in the marshes at the southern end of the peninsula.",
+        "nl": "Vogels van open terrein en natte plekken. De Brewertroepiaal foerageert rond dorpen en boerderijen, de Geelkaakweidespreeuw zingt vanaf hekpalen, en de Beldingmaskerzanger leeft in de moerassen aan de zuidpunt van het schiereiland."
+      }
+    }
+  },
+  "species": {
+    "xanhum": {
+      "here": {
+        "en": "This hummingbird lives only in the Cape region at the southern tip of the peninsula.",
+        "nl": "Deze kolibrie leeft alleen in de Kaapstreek aan de zuidpunt van het schiereiland."
+      }
+    },
+    "belyel1": {
+      "here": {
+        "en": "Look in the marshes of the Cape region, for example around the San José del Cabo estuary.",
+        "nl": "Zoek in de moerassen van de Kaapstreek, bijvoorbeeld rond het estuarium van San José del Cabo."
+      }
+    },
+    "yefgul": {
+      "here": {
+        "en": "Look for it along the shores of the Sea of Cortez.",
+        "nl": "Zoek hem langs de kusten van de Zee van Cortés."
+      }
+    }
+  }
+}

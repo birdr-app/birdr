@@ -1,0 +1,22 @@
+{
+  "code": "scapig2",
+  "name": {
+    "en": "Scaled Pigeon",
+    "nl": "Geschubde duif"
+  },
+  "latin": "Patagioenas speciosa",
+  "look_for": [
+    {
+      "en": "Scaled pattern on the **neck** and **breast**",
+      "nl": "Geschubd patroon op **nek** en **borst**"
+    },
+    {
+      "en": "Red **bill** with a pale tip",
+      "nl": "Rode **snavel** met een lichte punt"
+    },
+    {
+      "en": "Red **legs**, whitish **belly**",
+      "nl": "Rode **poten**, witachtige **buik**"
+    }
+  ]
+}

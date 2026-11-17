@@ -1,0 +1,22 @@
+{
+  "code": "rthhum",
+  "name": {
+    "en": "Ruby-throated Hummingbird",
+    "nl": "Robijnkeelkolibrie"
+  },
+  "latin": "Archilochus colubris",
+  "look_for": [
+    {
+      "en": "Male **throat** flame red, black in poor light",
+      "nl": "**Keel** van het mannetje vuurrood, zwart bij slecht licht"
+    },
+    {
+      "en": "Plain green **back**, no rufous anywhere",
+      "nl": "Effen groene **rug**, nergens roestbruin"
+    },
+    {
+      "en": "Female **throat** plain white, **tail** tipped white",
+      "nl": "Vrouwtje met effen witte **keel** en wit getipte **staart**"
+    }
+  ]
+}

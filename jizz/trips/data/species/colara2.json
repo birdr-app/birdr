@@ -1,0 +1,22 @@
+{
+  "code": "colara2",
+  "name": {
+    "en": "Collared Aracari",
+    "nl": "Halsbandarassari"
+  },
+  "latin": "Pteroglossus torquatus",
+  "look_for": [
+    {
+      "en": "Long **bill**, ivory above, black below",
+      "nl": "Lange **snavel**, ivoor boven, zwart onder"
+    },
+    {
+      "en": "Black **hood** and olive-green **back**",
+      "nl": "Zwarte **kap** en olijfgroene **rug**"
+    },
+    {
+      "en": "Red-and-black band across yellow **belly**",
+      "nl": "Rood-zwarte band over gele **buik**"
+    }
+  ]
+}

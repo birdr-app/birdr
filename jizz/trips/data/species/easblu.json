@@ -1,0 +1,22 @@
+{
+  "code": "easblu",
+  "name": {
+    "en": "Eastern Bluebird",
+    "nl": "Roodkeelsialia"
+  },
+  "latin": "Sialia sialis",
+  "look_for": [
+    {
+      "en": "Male bright blue **back**",
+      "nl": "Mannetje felblauwe **rug**"
+    },
+    {
+      "en": "Orange-rust **throat** and **breast**",
+      "nl": "Oranjeroestrode **keel** en **borst**"
+    },
+    {
+      "en": "White **belly**, perches on wires",
+      "nl": "Witte **buik**, zit op draden"
+    }
+  ]
+}

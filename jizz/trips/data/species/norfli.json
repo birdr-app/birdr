@@ -1,0 +1,22 @@
+{
+  "code": "norfli",
+  "name": {
+    "en": "Northern Flicker",
+    "nl": "Gouden grondspecht"
+  },
+  "latin": "Colaptes auratus",
+  "look_for": [
+    {
+      "en": "Barred brown **back**, black crescent **bib**",
+      "nl": "Gebande bruine **rug**, zwarte halvemaanvormige **bef**"
+    },
+    {
+      "en": "Pale spotted **belly**, white **rump** in flight",
+      "nl": "Lichte gevlekte **buik**, witte **stuit** in vlucht"
+    },
+    {
+      "en": "Male has a red **moustache**",
+      "nl": "Mannetje heeft een rode **snorstreep**"
+    }
+  ]
+}

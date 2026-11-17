@@ -1,0 +1,22 @@
+{
+  "code": "runthr1",
+  "name": {
+    "en": "Russet Nightingale-Thrush",
+    "nl": "Bruinkopdwerglijster"
+  },
+  "latin": "Catharus occidentalis",
+  "look_for": [
+    {
+      "en": "Plain russet-brown **back** and **crown**",
+      "nl": "Effen roestbruine **rug** en **kruin**"
+    },
+    {
+      "en": "Orange-pink **bill** and **legs**",
+      "nl": "Oranjeroze **snavel** en **poten**"
+    },
+    {
+      "en": "Unspotted greyish **underparts**, skulks low",
+      "nl": "Ongevlekte grijzige **onderkant**, skulkt laag"
+    }
+  ]
+}

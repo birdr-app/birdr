@@ -1,0 +1,22 @@
+{
+  "code": "yeejun",
+  "name": {
+    "en": "Yellow-eyed Junco",
+    "nl": "Geeloogjunco"
+  },
+  "latin": "Junco phaeonotus",
+  "look_for": [
+    {
+      "en": "Staring yellow **eye** on a dark face",
+      "nl": "Starend geel **oog** in een donker gezicht"
+    },
+    {
+      "en": "Grey head, rufous patch on the **back**",
+      "nl": "Grijze kop, roodbruine vlek op de **rug**"
+    },
+    {
+      "en": "White outer **tail** feathers when it flies",
+      "nl": "Witte buitenste **staartveren** in de vlucht"
+    }
+  ]
+}

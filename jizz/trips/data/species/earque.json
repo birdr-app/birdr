@@ -1,0 +1,22 @@
+{
+  "code": "earque",
+  "name": {
+    "en": "Eared Quetzal",
+    "nl": "Geoorde trogon"
+  },
+  "latin": "Euptilotis neoxenus",
+  "look_for": [
+    {
+      "en": "Thin white **ear-tufts**",
+      "nl": "Dunne witte **oorpluimen**"
+    },
+    {
+      "en": "Grey **breast**, red lower **belly**",
+      "nl": "Grijze **borst**, rode onderste **buik**"
+    },
+    {
+      "en": "Long **tail**, white from below",
+      "nl": "Lange **staart**, van onderen wit"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "blubun",
+  "name": {
+    "en": "Blue Bunting",
+    "nl": "Azuurbisschop"
+  },
+  "latin": "Cyanocompsa parellina",
+  "look_for": [
+    {
+      "en": "Male deep blue, looks black in shade",
+      "nl": "Mannetje diepblauw, in de schaduw bijna zwart"
+    },
+    {
+      "en": "Brighter blue **forehead** and shoulder",
+      "nl": "Helderblauw **voorhoofd** en schouder"
+    },
+    {
+      "en": "Female plain warm brown, thick **bill**",
+      "nl": "Vrouwtje effen warmbruin, dikke **snavel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rudduc",
+  "name": {
+    "en": "Ruddy Duck",
+    "nl": "Rosse stekelstaart"
+  },
+  "latin": "Oxyura jamaicensis",
+  "look_for": [
+    {
+      "en": "Stiff **tail** often cocked upward",
+      "nl": "Stijve **staart** vaak omhoog gehouden"
+    },
+    {
+      "en": "Big white **cheek**, dark cap",
+      "nl": "Grote witte **wang**, donkere kap"
+    },
+    {
+      "en": "Chunky, round body, broad bill",
+      "nl": "Gedrongen, ronde romp, brede snavel"
+    }
+  ]
+}

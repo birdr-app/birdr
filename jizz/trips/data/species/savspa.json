@@ -1,0 +1,22 @@
+{
+  "code": "savspa",
+  "name": {
+    "en": "Savannah Sparrow",
+    "nl": "Savannahgors"
+  },
+  "latin": "Passerculus sandwichensis",
+  "look_for": [
+    {
+      "en": "Streaked **breast** and flanks, short notched tail",
+      "nl": "Gestreepte **borst** en flanken, korte ingesneden staart"
+    },
+    {
+      "en": "Often yellow in front of the **eye**",
+      "nl": "Vaak geel voor het **oog**"
+    },
+    {
+      "en": "Pale central **crown** stripe, pink legs",
+      "nl": "Lichte **kruinstreep**, roze poten"
+    }
+  ]
+}

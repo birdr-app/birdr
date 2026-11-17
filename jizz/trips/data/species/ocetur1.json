@@ -1,0 +1,22 @@
+{
+  "code": "ocetur1",
+  "name": {
+    "en": "Ocellated Turkey",
+    "nl": "Pauwkalkoen"
+  },
+  "latin": "Meleagris ocellata",
+  "look_for": [
+    {
+      "en": "Bright blue bare **head** with orange warts",
+      "nl": "Felblauwe kale **kop** met oranje wratjes"
+    },
+    {
+      "en": "Bronze-green body, shining like oil",
+      "nl": "Bronsgroen lijf met een olieachtige glans"
+    },
+    {
+      "en": "Blue-grey **tail** with eyespots and gold tip",
+      "nl": "Blauwgrijze **staart** met oogvlekken en gouden punt"
+    }
+  ]
+}

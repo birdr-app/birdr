@@ -1,0 +1,22 @@
+{
+  "code": "yefgul",
+  "name": {
+    "en": "Yellow-footed Gull",
+    "nl": "Mexicaanse meeuw"
+  },
+  "latin": "Larus livens",
+  "look_for": [
+    {
+      "en": "Bright yellow **legs**, unlike Western Gull's pink",
+      "nl": "Felgele **poten**, anders dan de roze van de Californische meeuw"
+    },
+    {
+      "en": "Slate-grey **back** and white **head**",
+      "nl": "Leigrijze **rug** en witte **kop**"
+    },
+    {
+      "en": "Red **eye-ring**, red spot on yellow **bill**",
+      "nl": "Rode **oogring**, rode vlek op gele **snavel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "strwoo",
+  "name": {
+    "en": "Strickland's Woodpecker",
+    "nl": "Stricklandspecht"
+  },
+  "latin": "Leuconotopicus stricklandi",
+  "look_for": [
+    {
+      "en": "Brown **back**, two white **face** stripes",
+      "nl": "Bruine **rug**, twee witte strepen op de **kop**"
+    },
+    {
+      "en": "Heavily spotted white **underparts**",
+      "nl": "Witte **onderkant** met veel vlekken"
+    },
+    {
+      "en": "Pine and pine-oak slopes of central Mexico",
+      "nl": "Dennen- en dennen-eikenhellingen van Midden-Mexico"
+    }
+  ]
+}

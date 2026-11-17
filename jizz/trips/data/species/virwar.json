@@ -1,0 +1,22 @@
+{
+  "code": "virwar",
+  "name": {
+    "en": "Virginia's Warbler",
+    "nl": "Virginiazanger"
+  },
+  "latin": "Leiothlypis virginiae",
+  "look_for": [
+    {
+      "en": "Plain grey **head** and **back**, white eye-ring",
+      "nl": "Effen grijze **kop** en **rug**, witte oogring"
+    },
+    {
+      "en": "Yellow **rump**, yellow patch on **breast**",
+      "nl": "Gele **stuit**, gele vlek op de **borst**"
+    },
+    {
+      "en": "Bobs its **tail** in oak scrub",
+      "nl": "Wipt met de **staart** in eikenstruikgewas"
+    }
+  ]
+}

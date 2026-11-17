@@ -1,0 +1,22 @@
+{
+  "code": "amerob",
+  "name": {
+    "en": "American Robin",
+    "nl": "Roodborstlijster"
+  },
+  "latin": "Turdus migratorius",
+  "look_for": [
+    {
+      "en": "Grey **back**, orange **breast**",
+      "nl": "Grijze **rug**, oranje **borst**"
+    },
+    {
+      "en": "Dark **head** with white eye arcs",
+      "nl": "Donkere **kop** met witte oogbogen"
+    },
+    {
+      "en": "Yellow **bill**, hops on lawns",
+      "nl": "Gele **snavel**, huppelt over gazons"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "yehbla",
+  "name": {
+    "en": "Yellow-headed Blackbird",
+    "nl": "Geelkoptroepiaal"
+  },
+  "latin": "Xanthocephalus xanthocephalus",
+  "look_for": [
+    {
+      "en": "Male black with a yellow **head** and breast",
+      "nl": "Mannetje zwart met gele **kop** en borst"
+    },
+    {
+      "en": "White **wing** patch on black body",
+      "nl": "Wit **vleugelveld** op zwart lijf"
+    },
+    {
+      "en": "Female brown with dull yellow **throat**",
+      "nl": "Vrouwtje bruin met doffe gele **keel**"
+    }
+  ]
+}

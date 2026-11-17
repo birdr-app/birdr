@@ -1,0 +1,22 @@
+{
+  "code": "saypho",
+  "name": {
+    "en": "Say's Phoebe",
+    "nl": "Rosse phoebe"
+  },
+  "latin": "Sayornis saya",
+  "look_for": [
+    {
+      "en": "Rusty **belly** and undertail",
+      "nl": "Roestkleurige **buik** en onderstaart"
+    },
+    {
+      "en": "Grey-brown **head** and **breast**",
+      "nl": "Grijsbruine **kop** en **borst**"
+    },
+    {
+      "en": "Black **tail**, which it flicks",
+      "nl": "Zwarte **staart** waarmee hij wipt"
+    }
+  ]
+}

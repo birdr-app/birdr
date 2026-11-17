@@ -1,0 +1,22 @@
+{
+  "code": "gycyel",
+  "name": {
+    "en": "Grey-crowned Yellowthroat",
+    "nl": "Weidemaskerzanger"
+  },
+  "latin": "Geothlypis poliocephala",
+  "look_for": [
+    {
+      "en": "Grey **head**, black **lores**, white eye crescents",
+      "nl": "Grijze **kop**, zwarte **teugel**, witte halve maantjes om het **oog**"
+    },
+    {
+      "en": "Yellow **throat** and **breast**, pale **belly**",
+      "nl": "Gele **keel** en **borst**, lichte **buik**"
+    },
+    {
+      "en": "Long **tail**, stout curved **bill**, in tall grass",
+      "nl": "Lange **staart**, stevige gebogen **snavel**, in hoog gras"
+    }
+  ]
+}

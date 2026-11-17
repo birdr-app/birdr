@@ -1,0 +1,22 @@
+{
+  "code": "grbspa1",
+  "name": {
+    "en": "Green-backed Sparrow",
+    "nl": "Groenruggors"
+  },
+  "latin": "Arremonops chloronotus",
+  "look_for": [
+    {
+      "en": "Slate-grey **head** with dark crown bands",
+      "nl": "Leigrijze **kop** met donkere kruinbanden"
+    },
+    {
+      "en": "Vivid olive **back**, yellow wing edges",
+      "nl": "Felolijfgroene **rug**, gele vleugelranden"
+    },
+    {
+      "en": "Grey **breast**, white belly",
+      "nl": "Grijze **borst**, witte buik"
+    }
+  ]
+}

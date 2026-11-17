@@ -1,0 +1,22 @@
+{
+  "code": "blctit4",
+  "name": {
+    "en": "Black-crested Titmouse",
+    "nl": "Zwartkruinmees"
+  },
+  "latin": "Baeolophus atricristatus",
+  "look_for": [
+    {
+      "en": "Pointed black **crest**",
+      "nl": "Puntige zwarte **kuif**"
+    },
+    {
+      "en": "Whitish **forehead** and pale grey face",
+      "nl": "Witachtig **voorhoofd** en bleekgrijs gezicht"
+    },
+    {
+      "en": "Plain grey **back**, rusty **flanks**",
+      "nl": "Effen grijze **rug**, roestkleurige **flanken**"
+    }
+  ]
+}

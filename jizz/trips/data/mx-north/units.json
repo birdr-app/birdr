@@ -1,0 +1,391 @@
+{
+  "country": "MX-NORTH",
+  "groups": [
+    {
+      "slug": "waterfowl",
+      "name": {
+        "en": "Waterfowl",
+        "nl": "Watervogels"
+      },
+      "species": [
+        "snogoo",
+        "wooduc",
+        "canvas"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "grouse-quail-and-allies",
+      "name": {
+        "en": "Grouse, Quail, and Allies",
+        "nl": "Hoenders, Kwartels en aanverwanten"
+      },
+      "species": [
+        "scaqua",
+        "elequa",
+        "gamqua",
+        "wiltur"
+      ],
+      "endemics": [
+        "elequa"
+      ]
+    },
+    {
+      "slug": "cuckoos",
+      "name": {
+        "en": "Cuckoos",
+        "nl": "Koekoes"
+      },
+      "species": [
+        "yebcuc"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "rails-gallinules-and-allies",
+      "name": {
+        "en": "Rails, Gallinules, and Allies",
+        "nl": "Rallen, Koeten en aanverwanten"
+      },
+      "species": [
+        "virrai"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "shorebirds",
+      "name": {
+        "en": "Shorebirds",
+        "nl": "Steltlopers"
+      },
+      "species": [
+        "surfbi"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "vultures-hawks-and-allies",
+      "name": {
+        "en": "Vultures, Hawks, and Allies",
+        "nl": "Gieren, Arenden, Buizerds, Haviken en aanverwanten"
+      },
+      "species": [
+        "goleag"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "owls",
+      "name": {
+        "en": "Owls",
+        "nl": "Uilen"
+      },
+      "species": [
+        "wesowl1",
+        "nopowl",
+        "burowl"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "trogons-and-quetzals",
+      "name": {
+        "en": "Trogons and Quetzals",
+        "nl": "Trogons en Quetzals"
+      },
+      "species": [
+        "earque"
+      ],
+      "endemics": [
+        "earque"
+      ]
+    },
+    {
+      "slug": "woodpeckers",
+      "name": {
+        "en": "Woodpeckers",
+        "nl": "Spechten"
+      },
+      "species": [
+        "rensap"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "falcons-and-caracaras",
+      "name": {
+        "en": "Falcons and Caracaras",
+        "nl": "Valken en Caracaras"
+      },
+      "species": [
+        "prafal"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "parrots-parakeets-and-allies",
+      "name": {
+        "en": "Parrots, Parakeets, and Allies",
+        "nl": "Papegaaien, Parkieten en aanverwanten"
+      },
+      "species": [
+        "licpar"
+      ],
+      "endemics": [
+        "licpar"
+      ]
+    },
+    {
+      "slug": "jays-magpies-crows-and-ravens",
+      "name": {
+        "en": "Jays, Magpies, Crows, and Ravens",
+        "nl": "Gaaien, Eksters, Kraaien en Raven"
+      },
+      "species": [
+        "chirav",
+        "tufjay1",
+        "pubjay1",
+        "mexjay4"
+      ],
+      "endemics": [
+        "tufjay1",
+        "pubjay1"
+      ]
+    },
+    {
+      "slug": "tits-chickadees-and-titmice",
+      "name": {
+        "en": "Tits, Chickadees, and Titmice",
+        "nl": "Mezen"
+      },
+      "species": [
+        "britit",
+        "blctit4"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "gnatcatchers",
+      "name": {
+        "en": "Gnatcatchers",
+        "nl": "Gnatcatchers"
+      },
+      "species": [
+        "bktgna",
+        "bkcgna"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "catbirds-mockingbirds-and-thrashers",
+      "name": {
+        "en": "Catbirds, Mockingbirds, and Thrashers",
+        "nl": "Spotlijsters"
+      },
+      "species": [
+        "lobthr"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "new-world-sparrows",
+      "name": {
+        "en": "New World Sparrows",
+        "nl": "Gorzen van de Nieuwe Wereld"
+      },
+      "species": [
+        "larbun",
+        "ruwspa",
+        "casspa",
+        "graspa",
+        "brespa",
+        "bktspa",
+        "vesspa"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "wood-warblers",
+      "name": {
+        "en": "Wood-Warblers",
+        "nl": "Amerikaanse zangers"
+      },
+      "species": [
+        "lucwar"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "cardinals-grosbeaks-and-allies",
+      "name": {
+        "en": "Cardinals, Grosbeaks, and Allies",
+        "nl": "Kardinalen, Dikbekken en aanverwanten"
+      },
+      "species": [
+        "pyrrhu",
+        "crcgro"
+      ],
+      "endemics": [
+        "crcgro"
+      ]
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "waterfowl",
+      "title": {
+        "en": "Waterfowl",
+        "nl": "Watervogels"
+      },
+      "groups": [
+        "waterfowl"
+      ],
+      "species": [
+        "snogoo",
+        "canvas",
+        "wooduc"
+      ]
+    },
+    {
+      "slug": "grouse-quail-and-allies",
+      "title": {
+        "en": "Grouse, Quail, and Allies",
+        "nl": "Hoenders, Kwartels en aanverwanten"
+      },
+      "groups": [
+        "grouse-quail-and-allies"
+      ],
+      "species": [
+        "scaqua",
+        "gamqua",
+        "wiltur",
+        "elequa"
+      ]
+    },
+    {
+      "slug": "cuckoos",
+      "title": {
+        "en": "Cuckoos, Rails, Gallinules, and Allies, Shorebirds and Vultures, Hawks, and Allies",
+        "nl": "Koekoes, Rallen, Koeten en aanverwanten, Steltlopers en Gieren, Arenden, Buizerds, Haviken en aanverwanten"
+      },
+      "groups": [
+        "cuckoos",
+        "rails-gallinules-and-allies",
+        "shorebirds",
+        "vultures-hawks-and-allies"
+      ],
+      "species": [
+        "yebcuc",
+        "surfbi",
+        "goleag",
+        "virrai"
+      ]
+    },
+    {
+      "slug": "owls",
+      "title": {
+        "en": "Owls and Trogons and Quetzals",
+        "nl": "Uilen en Trogons en Quetzals"
+      },
+      "groups": [
+        "owls",
+        "trogons-and-quetzals"
+      ],
+      "species": [
+        "wesowl1",
+        "earque",
+        "burowl",
+        "nopowl"
+      ]
+    },
+    {
+      "slug": "woodpeckers",
+      "title": {
+        "en": "Woodpeckers, Falcons and Caracaras and Parrots, Parakeets, and Allies",
+        "nl": "Spechten, Valken en Caracaras en Papegaaien, Parkieten en aanverwanten"
+      },
+      "groups": [
+        "woodpeckers",
+        "falcons-and-caracaras",
+        "parrots-parakeets-and-allies"
+      ],
+      "species": [
+        "licpar",
+        "rensap",
+        "prafal"
+      ]
+    },
+    {
+      "slug": "jays-magpies-crows-and-ravens",
+      "title": {
+        "en": "Jays, Magpies, Crows, and Ravens",
+        "nl": "Gaaien, Eksters, Kraaien en Raven"
+      },
+      "groups": [
+        "jays-magpies-crows-and-ravens"
+      ],
+      "species": [
+        "mexjay4",
+        "chirav",
+        "tufjay1",
+        "pubjay1"
+      ]
+    },
+    {
+      "slug": "tits-chickadees-and-titmice",
+      "title": {
+        "en": "Tits, Chickadees, and Titmice, Gnatcatchers and Catbirds, Mockingbirds, and Thrashers",
+        "nl": "Mezen, Gnatcatchers en Spotlijsters"
+      },
+      "groups": [
+        "tits-chickadees-and-titmice",
+        "gnatcatchers",
+        "catbirds-mockingbirds-and-thrashers"
+      ],
+      "species": [
+        "blctit4",
+        "bktgna",
+        "britit",
+        "bkcgna",
+        "lobthr"
+      ]
+    },
+    {
+      "slug": "new-world-sparrows",
+      "title": {
+        "en": "New World Sparrows",
+        "nl": "Gorzen van de Nieuwe Wereld"
+      },
+      "groups": [
+        "new-world-sparrows"
+      ],
+      "species": [
+        "larbun",
+        "bktspa",
+        "brespa",
+        "vesspa",
+        "ruwspa",
+        "casspa",
+        "graspa"
+      ]
+    },
+    {
+      "slug": "wood-warblers",
+      "title": {
+        "en": "Wood-Warblers and Cardinals, Grosbeaks, and Allies",
+        "nl": "Amerikaanse zangers en Kardinalen, Dikbekken en aanverwanten"
+      },
+      "groups": [
+        "wood-warblers",
+        "cardinals-grosbeaks-and-allies"
+      ],
+      "species": [
+        "pyrrhu",
+        "lucwar",
+        "crcgro"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

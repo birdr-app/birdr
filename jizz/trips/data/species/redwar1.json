@@ -1,0 +1,22 @@
+{
+  "code": "redwar1",
+  "name": {
+    "en": "Red Warbler",
+    "nl": "Rode zanger"
+  },
+  "latin": "Cardellina rubra",
+  "look_for": [
+    {
+      "en": "Red **body** with a silvery-white **ear** patch",
+      "nl": "Rood **lijf** met een zilverwitte vlek op het **oor**"
+    },
+    {
+      "en": "Brilliant red from **head** to **belly**",
+      "nl": "Fel rood van **kop** tot **buik**"
+    },
+    {
+      "en": "Works through fir and pine forest",
+      "nl": "Zoekt voedsel in sparren- en dennenbos"
+    }
+  ]
+}

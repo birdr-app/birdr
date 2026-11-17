@@ -1,0 +1,22 @@
+{
+  "code": "linspa",
+  "name": {
+    "en": "Lincoln's Sparrow",
+    "nl": "Lincolngors"
+  },
+  "latin": "Melospiza lincolnii",
+  "look_for": [
+    {
+      "en": "Fine black streaks on a buffy **breast** band",
+      "nl": "Fijne zwarte strepen op een okerkleurige **borstband**"
+    },
+    {
+      "en": "Grey **eyebrow**, buffy moustache",
+      "nl": "Grijze **wenkbrauw**, okerkleurige snorstreep"
+    },
+    {
+      "en": "Skulks low in thick cover",
+      "nl": "Sluipt laag door dichte begroeiing"
+    }
+  ]
+}

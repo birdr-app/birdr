@@ -1,0 +1,22 @@
+{
+  "code": "mexchi",
+  "name": {
+    "en": "Mexican Chickadee",
+    "nl": "Grijsflankmees"
+  },
+  "latin": "Poecile sclateri",
+  "look_for": [
+    {
+      "en": "Black **cap** and **bib**, white cheek",
+      "nl": "Zwarte **kap** en **slabbetje**, witte wang"
+    },
+    {
+      "en": "Grey **flanks** and **underparts**",
+      "nl": "Grijze **flanken** en **onderkant**"
+    },
+    {
+      "en": "Busy in pine, fir and oak forest",
+      "nl": "Druk in dennen-, sparren- en eikenbos"
+    }
+  ]
+}

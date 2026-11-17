@@ -1,0 +1,22 @@
+{
+  "code": "blumoc",
+  "name": {
+    "en": "Blue Mockingbird",
+    "nl": "Blauwe spotlijster"
+  },
+  "latin": "Melanotis caerulescens",
+  "look_for": [
+    {
+      "en": "Dark blue-grey all over",
+      "nl": "Overal donker blauwgrijs"
+    },
+    {
+      "en": "Black **mask** and bright red **eye**",
+      "nl": "Zwart **masker** en felrood **oog**"
+    },
+    {
+      "en": "Slim, long **tail**, secretive in thick brush",
+      "nl": "Slank, lange **staart**, schuw in dicht struikgewas"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rucspa",
+  "name": {
+    "en": "Rufous-crowned Sparrow",
+    "nl": "Roestkruingors"
+  },
+  "latin": "Aimophila ruficeps",
+  "look_for": [
+    {
+      "en": "Rufous **crown**, plain grey face",
+      "nl": "Roestbruine **kruin**, effen grijs gezicht"
+    },
+    {
+      "en": "White **eye-ring**, dark moustache stripe",
+      "nl": "Witte **oogring**, donkere snorstreep"
+    },
+    {
+      "en": "Plain grey **breast**, no spot",
+      "nl": "Effen grijze **borst**, geen vlek"
+    }
+  ]
+}

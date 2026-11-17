@@ -1,0 +1,22 @@
+{
+  "code": "hooyel1",
+  "name": {
+    "en": "Hooded Yellowthroat",
+    "nl": "Nelsonmaskerzanger"
+  },
+  "latin": "Geothlypis nelsoni",
+  "look_for": [
+    {
+      "en": "Male has a black **mask** with a grey border",
+      "nl": "Mannetje heeft een zwart **masker** met grijze rand"
+    },
+    {
+      "en": "Olive **back**, yellow **throat**, paler **belly**",
+      "nl": "Olijfgroene **rug**, gele **keel**, lichtere **buik**"
+    },
+    {
+      "en": "Skulks in dense, tangled highland growth",
+      "nl": "Sluipt door dichte, verwarde begroeiing in de bergen"
+    }
+  ]
+}

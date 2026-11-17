@@ -1,0 +1,22 @@
+{
+  "code": "daejun",
+  "name": {
+    "en": "Dark-eyed Junco",
+    "nl": "Grijze junco"
+  },
+  "latin": "Junco hyemalis",
+  "look_for": [
+    {
+      "en": "Grey **hood** and back, white belly",
+      "nl": "Grijze **kap** en rug, witte buik"
+    },
+    {
+      "en": "White outer **tail** feathers in flight",
+      "nl": "Witte buitenste **staartveren** in vlucht"
+    },
+    {
+      "en": "Pale pinkish **bill**",
+      "nl": "Lichtroze **snavel**"
+    }
+  ]
+}

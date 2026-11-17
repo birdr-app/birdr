@@ -1,0 +1,22 @@
+{
+  "code": "crahaw",
+  "name": {
+    "en": "Crane Hawk",
+    "nl": "Langpootbuizerd"
+  },
+  "latin": "Geranospiza caerulescens",
+  "look_for": [
+    {
+      "en": "Long red-orange **legs**",
+      "nl": "Lange roodoranje **poten**"
+    },
+    {
+      "en": "Slate-grey **back**, finely barred **belly**",
+      "nl": "Leigrijze **rug**, fijn gebandeerde **buik**"
+    },
+    {
+      "en": "Broad white band across the **tail**",
+      "nl": "Brede witte band over de **staart**"
+    }
+  ]
+}

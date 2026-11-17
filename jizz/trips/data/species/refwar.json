@@ -1,0 +1,22 @@
+{
+  "code": "refwar",
+  "name": {
+    "en": "Red-faced Warbler",
+    "nl": "Roodmaskerzanger"
+  },
+  "latin": "Cardellina rubrifrons",
+  "look_for": [
+    {
+      "en": "Red **face** and **breast**, black **crown**",
+      "nl": "Rood **gezicht** en rode **borst**, zwarte **kruin**"
+    },
+    {
+      "en": "Grey **back**, pale **rump**",
+      "nl": "Grijze **rug**, lichte **stuit**"
+    },
+    {
+      "en": "Active in the pine-oak canopy",
+      "nl": "Actief in de kronen van dennen-eikenbos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "blacat1",
+  "name": {
+    "en": "Black Catbird",
+    "nl": "Zwarte katvogel"
+  },
+  "latin": "Melanoptila glabrirostris",
+  "look_for": [
+    {
+      "en": "All black, slim with a long **tail**",
+      "nl": "Helemaal zwart, slank met lange **staart**"
+    },
+    {
+      "en": "Dark **eye** and slender bill",
+      "nl": "Donker **oog** en slanke snavel"
+    },
+    {
+      "en": "Skulks in dense coastal scrub and forest",
+      "nl": "Sluipt door dicht kustkreupelhout en bos"
+    }
+  ]
+}

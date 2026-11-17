@@ -1,0 +1,22 @@
+{
+  "code": "blcspa1",
+  "name": {
+    "en": "Black-chested Sparrow",
+    "nl": "Zwartborstgors"
+  },
+  "latin": "Peucaea humeralis",
+  "look_for": [
+    {
+      "en": "Black **chest** band below a white throat",
+      "nl": "Zwarte **borstband** onder een witte keel"
+    },
+    {
+      "en": "White patch by the **bill**, white cheek stripe",
+      "nl": "Witte vlek bij de **snavel**, witte wangstreep"
+    },
+    {
+      "en": "Reddish-brown **back**, two white wing bars",
+      "nl": "Roodbruine **rug**, twee witte vleugelstrepen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "brnowl",
+  "name": {
+    "en": "American Barn Owl",
+    "nl": "Amerikaanse kerkuil"
+  },
+  "latin": "Tyto furcata",
+  "look_for": [
+    {
+      "en": "Heart-shaped white **face**",
+      "nl": "Hartvormig wit **gezicht**"
+    },
+    {
+      "en": "Golden-buff **back** with grey speckles",
+      "nl": "Goudbeige **rug** met grijze spikkels"
+    },
+    {
+      "en": "White **underparts**, ghostly in flight",
+      "nl": "Witte **onderkant**, spookachtig in de vlucht"
+    }
+  ]
+}

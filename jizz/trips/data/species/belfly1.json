@@ -1,0 +1,22 @@
+{
+  "code": "belfly1",
+  "name": {
+    "en": "Belted Flycatcher",
+    "nl": "Gordeltiran"
+  },
+  "latin": "Xenotriccus callizonus",
+  "look_for": [
+    {
+      "en": "Pointed **crest** on a dark olive **head**",
+      "nl": "Puntige **kuif** op een donkerolijfgroene **kop**"
+    },
+    {
+      "en": "Two cinnamon **wingbars**",
+      "nl": "Twee kaneelkleurige **vleugelstrepen**"
+    },
+    {
+      "en": "Pale **throat**, olive breast band",
+      "nl": "Bleke **keel**, olijfgroene borstband"
+    }
+  ]
+}

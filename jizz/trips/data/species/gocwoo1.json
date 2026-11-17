@@ -1,0 +1,22 @@
+{
+  "code": "gocwoo1",
+  "name": {
+    "en": "Golden-cheeked Woodpecker",
+    "nl": "Goudwangspecht"
+  },
+  "latin": "Melanerpes chrysogenys",
+  "look_for": [
+    {
+      "en": "Barred black-and-white **back**, golden-yellow **cheeks**",
+      "nl": "Zwart-wit gebande **rug**, goudgele **wangen**"
+    },
+    {
+      "en": "Male has a red **crown**, golden **nape**",
+      "nl": "Mannetje heeft een rode **kruin** en gouden **nek**"
+    },
+    {
+      "en": "Orange-yellow patch on the **belly**",
+      "nl": "Oranjegele vlek op de **buik**"
+    }
+  ]
+}

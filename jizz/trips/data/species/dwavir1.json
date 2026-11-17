@@ -1,0 +1,22 @@
+{
+  "code": "dwavir1",
+  "name": {
+    "en": "Dwarf Vireo",
+    "nl": "Dwergvireo"
+  },
+  "latin": "Vireo nelsoni",
+  "look_for": [
+    {
+      "en": "Tiny, short-tailed, greyish-olive vireo",
+      "nl": "Klein, kortstaartig, grijsolijfgroen vireootje"
+    },
+    {
+      "en": "Two pale **wingbars**, whitish **underparts**",
+      "nl": "Twee bleke **vleugelstrepen**, witachtige **onderkant**"
+    },
+    {
+      "en": "Pale **eye-ring** and short **bill**",
+      "nl": "Bleke **oogring** en korte **snavel**"
+    }
+  ]
+}

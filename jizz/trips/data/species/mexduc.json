@@ -1,0 +1,22 @@
+{
+  "code": "mexduc",
+  "name": {
+    "en": "Mexican Duck",
+    "nl": "Mexicaanse eend"
+  },
+  "latin": "Anas diazi",
+  "look_for": [
+    {
+      "en": "Dark brown, like a female Mallard",
+      "nl": "Donkerbruin, als een vrouwtje wilde eend"
+    },
+    {
+      "en": "Sexes alike, no curled **tail** feathers",
+      "nl": "Beide seksen gelijk, geen gekrulde **staart**veren"
+    },
+    {
+      "en": "Blue **wing** patch edged with white",
+      "nl": "Blauwe **vleugel**spiegel met witte randen"
+    }
+  ]
+}

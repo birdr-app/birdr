@@ -1,0 +1,22 @@
+{
+  "code": "snogoo",
+  "name": {
+    "en": "Snow Goose",
+    "nl": "Sneeuwgans"
+  },
+  "latin": "Anser caerulescens",
+  "look_for": [
+    {
+      "en": "White all over, black **wingtips**",
+      "nl": "Helemaal wit met zwarte **vleugelpunten**"
+    },
+    {
+      "en": "Blue morph has a white **head**, dark body",
+      "nl": "Blauwe vorm heeft een witte **kop** en donker lijf"
+    },
+    {
+      "en": "Thick pink **bill** with a black grin patch",
+      "nl": "Dikke roze **snavel** met een zwarte lachmond"
+    }
+  ]
+}

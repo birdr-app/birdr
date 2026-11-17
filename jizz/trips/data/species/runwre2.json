@@ -1,0 +1,22 @@
+{
+  "code": "runwre2",
+  "name": {
+    "en": "Veracruz Wren",
+    "nl": "Veracruzwinterkoning"
+  },
+  "latin": "Campylorhynchus rufinucha",
+  "look_for": [
+    {
+      "en": "Blackish **crown**, bold white **eyebrow**",
+      "nl": "Zwartige **kruin**, brede witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "Chestnut **nape** and **back**, streaked shoulders",
+      "nl": "Kastanjebruine **nek** en **rug**, gestreepte schouders"
+    },
+    {
+      "en": "Buff **breast** with brown spots",
+      "nl": "Bruingele **borst** met bruine vlekken"
+    }
+  ]
+}

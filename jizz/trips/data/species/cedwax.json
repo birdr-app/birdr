@@ -1,0 +1,22 @@
+{
+  "code": "cedwax",
+  "name": {
+    "en": "Cedar Waxwing",
+    "nl": "Cederpestvogel"
+  },
+  "latin": "Bombycilla cedrorum",
+  "look_for": [
+    {
+      "en": "Silky brown bird with a swept-back **crest**",
+      "nl": "Zijdezacht bruin met een naar achteren hangende **kuif**"
+    },
+    {
+      "en": "Black **mask**, yellow band at the **tail** tip",
+      "nl": "Zwart **masker**, gele band aan het eind van de **staart**"
+    },
+    {
+      "en": "Red waxy tips on the **wings**",
+      "nl": "Rode, wasachtige punten aan de **vleugels**"
+    }
+  ]
+}

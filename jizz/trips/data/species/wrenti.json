@@ -1,0 +1,22 @@
+{
+  "code": "wrenti",
+  "name": {
+    "en": "Wrentit",
+    "nl": "Winterkoningmees"
+  },
+  "latin": "Chamaea fasciata",
+  "look_for": [
+    {
+      "en": "Small brown bird with a very long **tail**",
+      "nl": "Klein bruin vogeltje met een zeer lange **staart**"
+    },
+    {
+      "en": "Pale yellow **eye** on a plain face",
+      "nl": "Lichtgeel **oog** in een vlak gezicht"
+    },
+    {
+      "en": "Cocks its **tail**, skulks in chaparral",
+      "nl": "Houdt de **staart** omhoog, sluipt door struikgewas"
+    }
+  ]
+}

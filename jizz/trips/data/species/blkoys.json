@@ -1,0 +1,22 @@
+{
+  "code": "blkoys",
+  "name": {
+    "en": "Black Oystercatcher",
+    "nl": "Noord-Amerikaanse zwarte scholekster"
+  },
+  "latin": "Haematopus bachmani",
+  "look_for": [
+    {
+      "en": "All-dark sooty **body**",
+      "nl": "Helemaal donker roetkleurig **lijf**"
+    },
+    {
+      "en": "Bright red-orange **bill**",
+      "nl": "Felrood-oranje **snavel**"
+    },
+    {
+      "en": "Pink **legs**, yellow **eye**",
+      "nl": "Roze **poten**, geel **oog**"
+    }
+  ]
+}

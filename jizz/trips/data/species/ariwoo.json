@@ -1,0 +1,22 @@
+{
+  "code": "ariwoo",
+  "name": {
+    "en": "Arizona Woodpecker",
+    "nl": "Arizonaspecht"
+  },
+  "latin": "Leuconotopicus arizonae",
+  "look_for": [
+    {
+      "en": "Plain brown **back**, two white **face** stripes",
+      "nl": "Effen bruine **rug**, twee witte strepen op de **kop**"
+    },
+    {
+      "en": "White **underparts** heavily spotted with brown",
+      "nl": "Witte **onderkant** met veel bruine vlekken"
+    },
+    {
+      "en": "Male has a red **nape** patch",
+      "nl": "Mannetje heeft een rode vlek in de **nek**"
+    }
+  ]
+}

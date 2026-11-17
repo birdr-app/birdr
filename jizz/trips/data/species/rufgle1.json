@@ -1,0 +1,22 @@
+{
+  "code": "rufgle1",
+  "name": {
+    "en": "Ruddy Foliage-gleaner",
+    "nl": "Rosse bladspeurder"
+  },
+  "latin": "Clibanornis rubiginosus",
+  "look_for": [
+    {
+      "en": "Rufous-brown all over, plain",
+      "nl": "Roodbruin en effen"
+    },
+    {
+      "en": "Brighter rufous **tail** and **wings**",
+      "nl": "Feller roodbruine **staart** en **vleugels**"
+    },
+    {
+      "en": "Probes dead leaves in dense understorey",
+      "nl": "Peutert in dode bladeren in dichte ondergroei"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "dushum1",
+  "name": {
+    "en": "Dusky Hummingbird",
+    "nl": "Bruinkopkolibrie"
+  },
+  "latin": "Phaeoptila sordida",
+  "look_for": [
+    {
+      "en": "Dull, dusky grey-brown **underparts**",
+      "nl": "Doffe, donker grijsbruine **onderzijde**"
+    },
+    {
+      "en": "Plain bronze-green **back**, dusky **tail**",
+      "nl": "Effen bronsgroene **rug**, donkere **staart**"
+    },
+    {
+      "en": "Red lower **bill** with a black tip",
+      "nl": "Rode onderste **snavelhelft** met een zwarte punt"
+    }
+  ]
+}

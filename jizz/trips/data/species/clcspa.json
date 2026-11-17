@@ -1,0 +1,22 @@
+{
+  "code": "clcspa",
+  "name": {
+    "en": "Clay-coloured Sparrow",
+    "nl": "Bleke gors"
+  },
+  "latin": "Spizella pallida",
+  "look_for": [
+    {
+      "en": "Pale central **crown** stripe, white eyebrow",
+      "nl": "Lichte **kruinstreep**, witte wenkbrauw"
+    },
+    {
+      "en": "Brown ear patch edged with dark lines",
+      "nl": "Bruine oorstreek met donkere randen"
+    },
+    {
+      "en": "Pale grey **nape**, plain breast",
+      "nl": "Lichtgrijze **nek**, effen borst"
+    }
+  ]
+}

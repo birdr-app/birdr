@@ -1,0 +1,22 @@
+{
+  "code": "grcwoo1",
+  "name": {
+    "en": "Grey-crowned Woodpecker",
+    "nl": "Grijskruinspecht"
+  },
+  "latin": "Colaptes auricularis",
+  "look_for": [
+    {
+      "en": "Pale grey **crown** and **nape**",
+      "nl": "Lichtgrijze **kruin** en **nek**"
+    },
+    {
+      "en": "Male has a wide red **moustache**",
+      "nl": "Mannetje heeft een brede rode **snorstreep**"
+    },
+    {
+      "en": "Olive-green **back**, barred pale **underparts**",
+      "nl": "Olijfgroene **rug**, gebande lichte **onderkant**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "rubspi2",
+  "name": {
+    "en": "Rufous-breasted Spinetail",
+    "nl": "Roodborststekelstaart"
+  },
+  "latin": "Synallaxis erythrothorax",
+  "look_for": [
+    {
+      "en": "Black **throat** with a rufous breast",
+      "nl": "Zwarte **keel** met een roestrode borst"
+    },
+    {
+      "en": "Long, ragged **tail**, often cocked",
+      "nl": "Lange, rafelige **staart**, vaak omhoog"
+    },
+    {
+      "en": "Skulks low in thick tangles",
+      "nl": "Sluipt laag door dichte wirwar"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "greroa",
+  "name": {
+    "en": "Greater Roadrunner",
+    "nl": "Grote renkoekoek"
+  },
+  "latin": "Geococcyx californianus",
+  "look_for": [
+    {
+      "en": "Slim, long **tail** with white tips",
+      "nl": "Slank met lange **staart** met witte toppen"
+    },
+    {
+      "en": "Dark streaks on the **throat** and breast",
+      "nl": "Donkere strepen op **keel** en borst"
+    },
+    {
+      "en": "Runs along tracks, rarely flies",
+      "nl": "Rent langs paden, vliegt zelden"
+    }
+  ]
+}

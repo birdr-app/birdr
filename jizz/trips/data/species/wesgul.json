@@ -1,0 +1,22 @@
+{
+  "code": "wesgul",
+  "name": {
+    "en": "Western Gull",
+    "nl": "Californische meeuw"
+  },
+  "latin": "Larus occidentalis",
+  "look_for": [
+    {
+      "en": "Dark slate **back**, much darker than other big gulls",
+      "nl": "Donker leigrijze **rug**, veel donkerder dan andere grote meeuwen"
+    },
+    {
+      "en": "Pink **legs**, yellow **bill** with a red spot",
+      "nl": "Roze **poten**, gele **snavel** met een rode vlek"
+    },
+    {
+      "en": "White **head** and underparts, heavy **bill**",
+      "nl": "Witte **kop** en onderzijde, zware **snavel**"
+    }
+  ]
+}

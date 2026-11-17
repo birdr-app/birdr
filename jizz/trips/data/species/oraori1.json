@@ -1,0 +1,22 @@
+{
+  "code": "oraori1",
+  "name": {
+    "en": "Orange Oriole",
+    "nl": "Yucatantroepiaal"
+  },
+  "latin": "Icterus auratus",
+  "look_for": [
+    {
+      "en": "Bright orange **head**, **back** and underparts",
+      "nl": "Felle oranje **kop**, **rug** en onderkant"
+    },
+    {
+      "en": "Black **face** and bib",
+      "nl": "Zwart **gezicht** en bef"
+    },
+    {
+      "en": "Black **wings** and **tail**",
+      "nl": "Zwarte **vleugels** en **staart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "blarob1",
+  "name": {
+    "en": "Black Thrush",
+    "nl": "Guatemalteekse lijster"
+  },
+  "latin": "Turdus infuscatus",
+  "look_for": [
+    {
+      "en": "Male uniform sooty-black with a dark **bill**",
+      "nl": "Mannetje egaal roetzwart met een donkere **snavel**"
+    },
+    {
+      "en": "Female dark olive-brown, plain",
+      "nl": "Vrouwtje donker olijfbruin, effen"
+    },
+    {
+      "en": "Forages on the forest floor",
+      "nl": "Zoekt voedsel op de bosbodem"
+    }
+  ]
+}

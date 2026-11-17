@@ -1,0 +1,22 @@
+{
+  "code": "chirav",
+  "name": {
+    "en": "Chihuahuan Raven",
+    "nl": "Woestijnraaf"
+  },
+  "latin": "Corvus cryptoleucus",
+  "look_for": [
+    {
+      "en": "Black all over, smaller than Common Raven",
+      "nl": "Helemaal zwart, kleiner dan raaf"
+    },
+    {
+      "en": "Shorter, slimmer **bill** than Common Raven",
+      "nl": "Kortere, slankere **snavel** dan raaf"
+    },
+    {
+      "en": "Gathers in flocks on dry plains",
+      "nl": "Groepen op droge vlakten"
+    }
+  ]
+}

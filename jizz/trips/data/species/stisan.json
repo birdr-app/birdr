@@ -1,0 +1,22 @@
+{
+  "code": "stisan",
+  "name": {
+    "en": "Stilt Sandpiper",
+    "nl": "Steltstrandloper"
+  },
+  "latin": "Calidris himantopus",
+  "look_for": [
+    {
+      "en": "Long greenish-yellow **legs**",
+      "nl": "Lange groengele **poten**"
+    },
+    {
+      "en": "Long, slightly drooping **bill**",
+      "nl": "Lange, licht neerwaarts gebogen **snavel**"
+    },
+    {
+      "en": "Pale **eyebrow**, feeds head down",
+      "nl": "Lichte **wenkbrauwstreep**, foerageert met kop omlaag"
+    }
+  ]
+}

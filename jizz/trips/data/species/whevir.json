@@ -1,0 +1,22 @@
+{
+  "code": "whevir",
+  "name": {
+    "en": "White-eyed Vireo",
+    "nl": "Witoogvireo"
+  },
+  "latin": "Vireo griseus",
+  "look_for": [
+    {
+      "en": "White **eye** and yellow spectacles",
+      "nl": "Wit **oog** en gele bril"
+    },
+    {
+      "en": "Two bright white **wingbars**",
+      "nl": "Twee heldere witte **vleugelstrepen**"
+    },
+    {
+      "en": "Grey **head**, yellow **flanks**",
+      "nl": "Grijze **kop**, gele **flanken**"
+    }
+  ]
+}

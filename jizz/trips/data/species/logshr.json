@@ -1,0 +1,22 @@
+{
+  "code": "logshr",
+  "name": {
+    "en": "Loggerhead Shrike",
+    "nl": "Amerikaanse klapekster"
+  },
+  "latin": "Lanius ludovicianus",
+  "look_for": [
+    {
+      "en": "Black **mask** on a grey head",
+      "nl": "Zwart **masker** op een grijze kop"
+    },
+    {
+      "en": "Hooked **bill**, white patches in the **wings**",
+      "nl": "Gehaakte **snavel**, witte vlekken in de **vleugels**"
+    },
+    {
+      "en": "Watches from wires and fence posts",
+      "nl": "Speurt vanaf draden en hekpalen"
+    }
+  ]
+}

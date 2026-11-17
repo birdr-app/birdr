@@ -1,0 +1,22 @@
+{
+  "code": "strspa1",
+  "name": {
+    "en": "Striped Sparrow",
+    "nl": "Zwartwanggors"
+  },
+  "latin": "Oriturus superciliosus",
+  "look_for": [
+    {
+      "en": "Broad white **eyebrow** above a dark face patch",
+      "nl": "Brede witte **wenkbrauw** boven een donkere wangvlek"
+    },
+    {
+      "en": "Reddish **crown**, bold black streaks on the back",
+      "nl": "Roodbruine **kruin**, brede zwarte rugstrepen"
+    },
+    {
+      "en": "Off-white grey **underparts**, buffy flanks",
+      "nl": "Gebroken wit-grijze **onderzijde**, okerkleurige flanken"
+    }
+  ]
+}

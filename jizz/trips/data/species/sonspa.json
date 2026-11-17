@@ -1,0 +1,22 @@
+{
+  "code": "sonspa",
+  "name": {
+    "en": "Song Sparrow",
+    "nl": "Zanggors"
+  },
+  "latin": "Melospiza melodia",
+  "look_for": [
+    {
+      "en": "Heavy streaks merging in a central **spot**",
+      "nl": "Zware strepen die samenkomen in een centrale **vlek**"
+    },
+    {
+      "en": "Grey **eyebrow**, dark moustache stripe",
+      "nl": "Grijze **wenkbrauw**, donkere snorstreep"
+    },
+    {
+      "en": "Long rounded **tail**, pumped in flight",
+      "nl": "Lange afgeronde **staart**, op en neer in vlucht"
+    }
+  ]
+}

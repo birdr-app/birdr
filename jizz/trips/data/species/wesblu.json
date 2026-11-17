@@ -1,0 +1,22 @@
+{
+  "code": "wesblu",
+  "name": {
+    "en": "Western Bluebird",
+    "nl": "Blauwkeelsialia"
+  },
+  "latin": "Sialia mexicana",
+  "look_for": [
+    {
+      "en": "Deep blue **head**, **back** and **wings**",
+      "nl": "Diepblauwe **kop**, **rug** en **vleugels**"
+    },
+    {
+      "en": "Rusty orange **breast**, grey **belly**",
+      "nl": "Roestoranje **borst**, grijze **buik**"
+    },
+    {
+      "en": "Perches upright on wires and posts",
+      "nl": "Zit rechtop op draden en palen"
+    }
+  ]
+}

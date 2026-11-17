@@ -1,0 +1,22 @@
+{
+  "code": "labwoo",
+  "name": {
+    "en": "Ladder-backed Woodpecker",
+    "nl": "Ladderspecht"
+  },
+  "latin": "Dryobates scalaris",
+  "look_for": [
+    {
+      "en": "Zebra-barred **back**, spotted **flanks**",
+      "nl": "Zebragebande **rug**, gevlekte **flanken**"
+    },
+    {
+      "en": "Black-and-white striped **face**, red **crown** on male",
+      "nl": "Zwart-wit gestreepte **kop**, mannetje met rode **kruin**"
+    },
+    {
+      "en": "Small and busy in desert scrub",
+      "nl": "Klein en druk in woestijnstruweel"
+    }
+  ]
+}

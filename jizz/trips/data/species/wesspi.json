@@ -1,0 +1,22 @@
+{
+  "code": "wesspi",
+  "name": {
+    "en": "Western Spindalis",
+    "nl": "Westelijke spindalis"
+  },
+  "latin": "Spindalis zena",
+  "look_for": [
+    {
+      "en": "Male has a striped black-and-white **head**",
+      "nl": "Mannetje met zwart-wit gestreepte **kop**"
+    },
+    {
+      "en": "Orange-yellow back and breast",
+      "nl": "Oranjegele rug en borst"
+    },
+    {
+      "en": "White **wing** patch on black wings",
+      "nl": "Wit **vleugelveld** op zwarte vleugels"
+    }
+  ]
+}

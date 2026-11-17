@@ -1,0 +1,219 @@
+{
+  "country": "MX-CENTRAL",
+  "intro": {
+    "en": "Central Mexico packs very different birds into short drives. The pine and oak forest of the volcanic belt around Mexico City, the lakes and marshes of the plateau, and the warm, wet Gulf lowlands of Veracruz, Tamaulipas and Tabasco each have their own species. In autumn, hawks funnel south along the Veracruz coast. This pack covers 89 species, on top of the Mexico trip.",
+    "nl": "In Centraal-Mexico vind je binnen korte afstand heel verschillende vogels. Het dennen- en eikenbos van de vulkanische gordel rond Mexico-Stad, de meren en moerassen van het plateau en het warme, natte laagland aan de Golf in Veracruz, Tamaulipas en Tabasco hebben elk hun eigen soorten. In het najaar trekken roofvogels over de kust van Veracruz naar het zuiden. Dit pakket omvat 89 soorten, bovenop de reis naar Mexico."
+  },
+  "units": {
+    "waterfowl": {
+      "title": {
+        "en": "Ducks and wood-partridges",
+        "nl": "Eenden en bospatrijzen"
+      },
+      "intro": {
+        "en": "Water and forest birds of the highlands and Gulf slope. The Mexican Duck lives on lakes and ponds of the plateau, and the Fulvous Whistling-Duck stands upright on shallow lowland water. The two wood-partridges stay hidden in mountain forest, so you will hear their loud calls more often than you see them.",
+        "nl": "Water- en bosvogels van de hooglanden en de Golfhelling. De Mexicaanse eend leeft op meren en poelen van het plateau en de Rosse fluiteend staat rechtop in ondiep water in het laagland. De twee bospatrijzen blijven verborgen in bergbos, dus je hoort hun luide roep vaker dan dat je ze ziet."
+      }
+    },
+    "pigeons-and-doves": {
+      "title": {
+        "en": "Pigeon, swifts and Northern Potoo",
+        "nl": "Duif, gierzwaluwen en reuzennachtzwaluw"
+      },
+      "intro": {
+        "en": "A pigeon, two swifts and a night bird. The Pale-vented Pigeon is a big pigeon of lowland forest edges and farmland. Scan the sky over mountains for the Black Swift, which is large with a shallow fork in the tail, and for the White-naped Swift with its white collar. The Northern Potoo sits on a stump by day, perfectly camouflaged, and calls at night.",
+        "nl": "Een duif, twee gierzwaluwen en een nachtvogel. De Rosse duif is een grote duif van bosranden en akkers in het laagland. Scan de lucht boven de bergen naar de Zwarte gierzwaluw, groot met een ondiepe vork in de staart, en naar de Witnekgierzwaluw met zijn witte kraag. De Noordelijke reuzennachtzwaluw zit overdag op een stronk, perfect gecamoufleerd, en roept 's nachts."
+      }
+    },
+    "hummingbirds-1": {
+      "title": {
+        "en": "Hummingbirds of the highlands",
+        "nl": "Kolibries van de hooglanden"
+      },
+      "intro": {
+        "en": "Hummingbirds of pine-oak mountains and dry slopes. Rivoli's Hummingbird and the Blue-throated Mountain-gem are large, the Lucifer has a long curved bill, and the Bumblebee is tiny with a short tail. Watch flowers and feeders at higher elevations.",
+        "nl": "Kolibries van bergen met dennen en eiken en van droge hellingen. De Rivolikolibrie en de Blauwkeeljuweelkolibrie zijn groot, de Luciferkolibrie heeft een lange gebogen snavel en de Hommelkolibrie is piepklein met een korte staart. Let op bloemen en voederplekken op grotere hoogte."
+      }
+    },
+    "hummingbirds-2": {
+      "title": {
+        "en": "Sabrewing and amazilia hummingbirds",
+        "nl": "Sabelvleugel en amazilia's"
+      },
+      "intro": {
+        "en": "Hummingbirds of Gulf-slope forest edges and gardens. The Wedge-tailed Sabrewing is large and dull green with a heavy curved bill. The Azure-crowned, Berylline and Buff-bellied Hummingbirds are smaller and need a good look: check the belly colour, the bill and any rufous in the wing.",
+        "nl": "Kolibries van bosranden en tuinen op de Golfhelling. De Wigstaartsabelvleugel is groot en dofgroen met een zware gebogen snavel. De Hemelsblauwe amazilia, de Berylamazilia en de Yucatanamazilia zijn kleiner en vragen om een goede blik: let op de kleur van de buik, de snavel en roodbruin in de vleugel."
+      }
+    },
+    "shorebirds": {
+      "title": {
+        "en": "Snipe, phalarope and sandpipers",
+        "nl": "Watersnip, franjepoot en strandlopers"
+      },
+      "intro": {
+        "en": "Waders of shallow lakes, wet fields and marsh edges, all visitors from the north. Wilson's Snipe hides in damp grass and flushes with a rasping call. Wilson's Phalarope spins on the water as it feeds. Baird's and Pectoral Sandpipers walk in short grass and mud, and the Pectoral shows a sharp line where the streaked breast ends.",
+        "nl": "Steltlopers van ondiepe meren, natte weilanden en moerasranden, allemaal gasten uit het noorden. De Amerikaanse watersnip zit verscholen in vochtig gras en vliegt op met een rauwe roep. De Grote franjepoot draait rondjes op het water terwijl hij eet. Bairds strandloper en de Gestreepte strandloper lopen in kort gras en modder, en bij de Gestreepte strandloper eindigt de gestreepte borst met een scherpe lijn."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {
+        "en": "Grebe, bittern and Franklin's Gull",
+        "nl": "Fuut, roerdomp en Franklins meeuw"
+      },
+      "intro": {
+        "en": "Birds of lakes and marsh. Clark's Grebe has a long neck and an orange-yellow bill, and swims on open water. The Pinnated Bittern is streaked and shy and stands in tall grass marsh in the Gulf lowlands. Franklin's Gull is a visitor from the north with a black hood and white crescents around the eye.",
+        "nl": "Vogels van meren en moeras. De Clarkfuut heeft een lange hals en een oranjegele snavel en zwemt op open water. De Zuid-Amerikaanse roerdomp is gestreept en schuw en staat in hoog gras in moerassen in het Golflaagland. Franklins meeuw is een gast uit het noorden met een zwarte kap en witte halvemaantjes rond het oog."
+      }
+    },
+    "vultures-hawks-and-allies-1": {
+      "title": {
+        "en": "Raptors of the Gulf lowlands",
+        "nl": "Roofvogels van het Golflaagland"
+      },
+      "intro": {
+        "en": "Four raptors of the wet, wooded lowlands. The Swallow-tailed Kite is black and white with a deeply forked tail and glides over the canopy. The Hook-billed Kite is a heavy-billed hawk of forest edges, the Ornate Hawk-Eagle is a crested forest raptor, and the Black-collared Hawk hunts over water.",
+        "nl": "Vier roofvogels van het natte, beboste laagland. De Zwaluwstaartwouw is zwart-wit met een diep gevorkte staart en glijdt over het kronendak. De Langsnavelwouw is een roofvogel met een zware snavel langs bosranden, de Bonte kuifarend is een roofvogel met een kuif in het bos en de Moerasbuizerd jaagt boven water."
+      }
+    },
+    "vultures-hawks-and-allies-2": {
+      "title": {
+        "en": "Migrant raptors and Great Black Hawk",
+        "nl": "Trekroofvogels en Zwarte arendbuizerd"
+      },
+      "intro": {
+        "en": "In autumn, thousands of raptors funnel down the Veracruz coast, and the Mississippi Kite, Sharp-shinned Hawk and Broad-winged Hawk are among them. Look at wing shape and size to sort them in flight. The Great Black Hawk lives here all year: big and black with a white band across the tail, perched along rivers and forest edges.",
+        "nl": "In het najaar trekken duizenden roofvogels langs de kust van Veracruz en de Mississippiwouw, de Amerikaanse sperwer en de Breedvleugelbuizerd horen daarbij. Let op vleugelvorm en grootte om ze in de vlucht te onderscheiden. De Zwarte arendbuizerd leeft hier het hele jaar: groot en zwart met een witte band over de staart, op een uitkijkpunt langs rivieren en bosranden."
+      }
+    },
+    "motmots": {
+      "title": {
+        "en": "Kingfisher, woodpeckers and motmot",
+        "nl": "IJsvogel, spechten en motmot"
+      },
+      "intro": {
+        "en": "A kingfisher, two woodpeckers and a motmot. The Amazon Kingfisher fishes from low perches over streams. The Blue-capped Motmot sits still in the shade at forest edges, with a racket-tipped tail. Strickland's Woodpecker lives in pine and oak forest in the mountains, and the Smoky-brown Woodpecker is a plain brown bird of the Gulf slope.",
+        "nl": "Een ijsvogel, twee spechten en een motmot. De Amazone-ijsvogel vist vanaf lage zitplaatsen boven beken. De Blauwkruinmotmot zit stil in de schaduw langs bosranden, met een staart met rakettjes aan het eind. De Stricklandspecht leeft in dennen- en eikenbos in de bergen en de Roetspecht is een eenvoudig bruine vogel van de Golfhelling."
+      }
+    },
+    "falcons-and-caracaras": {
+      "title": {
+        "en": "Falcon, parakeet and spinetail",
+        "nl": "Valk, parkiet en stekelstaart"
+      },
+      "intro": {
+        "en": "Three unrelated birds of open country and towns. The Aplomado Falcon is a slim, long-tailed falcon of open grassland. The Monk Parakeet is an introduced bird that builds big stick nests on poles and trees. The Rufous-breasted Spinetail is a small rufous bird that skulks in dense brush.",
+        "nl": "Drie niet verwante vogels van open land en dorpen. De Aplomadovalk is een slanke valk met een lange staart in open grasland. De Monniksparkiet is een uitheemse vogel die grote takkennesten bouwt op palen en in bomen. De Roodborststekelstaart is een klein roodbruin vogeltje dat zich door dichte begroeiing beweegt."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies": {
+      "title": {
+        "en": "Tyrant flycatchers, four to know",
+        "nl": "Tirannen, vier om te kennen"
+      },
+      "intro": {
+        "en": "Flycatchers that sit upright on a perch and sally out for insects. The Olive-sided Flycatcher and the Eastern Phoebe are winter visitors, and the phoebe wags its tail. The Buff-breasted Flycatcher is a small bird of pine-oak forest, and the Fork-tailed Flycatcher is unmistakable for its very long, split tail.",
+        "nl": "Tirannen die rechtop op een tak zitten en erop uit vliegen voor insecten. De Sparrenpiewie en de Grijze phoebe zijn wintergasten en de phoebe wipt met zijn staart. De Blonde feetiran is een klein vogeltje van dennen-eikenbos en de Vorkstaartkoningstiran herken je meteen aan zijn zeer lange, gespleten staart."
+      }
+    },
+    "vireos": {
+      "title": {
+        "en": "Vireo, two jays and Tamaulipas Crow",
+        "nl": "Vireo, twee gaaien en Mexicaanse kraai"
+      },
+      "intro": {
+        "en": "A vireo, two jays and a crow of the highlands and Gulf plain. The Transvolcanic Jay is blue and grey and lives in pine-oak forest. Woodhouse's Scrub-Jay is blue with a brownish back and white throat, found in oak scrub. The Tamaulipas Crow is a small black crow with a croaking call. The Brown-capped Vireo feeds slowly in shady forest.",
+        "nl": "Een vireo, twee gaaien en een kraai van de hooglanden en de Golfvlakte. De Trans-Mexicaanse gaai is blauw en grijs en leeft in dennen-eikenbos. De Pinyonstruikgaai is blauw met een bruinige rug en een witte keel en leeft in eikenstruweel. De Mexicaanse kraai is een kleine zwarte kraai met een krakende roep. De Witbrauwvireo foerageert traag in schaduwrijk bos."
+      }
+    },
+    "tits-chickadees-and-titmice": {
+      "title": {
+        "en": "Tits, nuthatches, kinglet and a martin",
+        "nl": "Mezen, boomklevers, goudhaan en zwaluw"
+      },
+      "intro": {
+        "en": "Small birds of pine-oak forest that move in mixed flocks. The Mexican Chickadee and the tiny, long-tailed Bushtit flit through the branches. The two nuthatches creep head-first down trunks, and the Golden-crowned Kinglet has a bright stripe on its crown. The Sand Martin is a migrant that hawks insects over lakes and rivers.",
+        "nl": "Kleine vogels van dennen-eikenbos die in gemengde groepen rondtrekken. De Grijsflankmees en de kleine Struikmees met zijn lange staart fladderen door de takken. De twee boomklevers klimmen met de kop naar beneden langs stammen en de Amerikaanse goudhaan heeft een felle streep op de kruin. De Oeverzwaluw is een trekvogel die insecten vangt boven meren en rivieren."
+      }
+    },
+    "wrens": {
+      "title": {
+        "en": "Wrens of forest, rocks and scrub",
+        "nl": "Winterkoningen van bos, rots en struweel"
+      },
+      "intro": {
+        "en": "Five wrens in very different places. Sumichrast's Wren lives among limestone boulders and the White-breasted Wood-Wren stays in the leaf litter of wet forest. The Band-backed and Bewick's Wrens work scrub and open woodland, so look for them on branches and fences. Listen first: the song finds most of them.",
+        "nl": "Vijf winterkoningen op heel verschillende plekken. De Dunsnavelwinterkoning leeft tussen kalksteenblokken en de Boswinterkoning blijft in het bladstrooisel van nat bos. De Tijgerwinterkoning en de Bewickwinterkoning werken in struweel en open bos, dus zoek ze op takken en hekken. Luister eerst: de zang vindt de meeste."
+      }
+    },
+    "dippers": {
+      "title": {
+        "en": "Mountain stream, scrub and forest birds",
+        "nl": "Vogels van bergbeek, struweel en bos"
+      },
+      "intro": {
+        "en": "Five birds from five habitats. The American Dipper bobs on boulders in fast mountain streams, and the Curve-billed Thrasher probes dry scrub with a long curved bill. The Black-headed Nightingale-Thrush skulks on the floor of cloud forest, the American Robin feeds in oak and pine woods, and the Grey Silky-flycatcher sits crested and upright in treetops.",
+        "nl": "Vijf vogels uit vijf leefgebieden. De Noord-Amerikaanse waterspreeuw wipt op stenen in snelstromende bergbeken en de Krombekspotlijster peurt met een lange gebogen snavel door droog struweel. De Zwartkopdwerglijster sluipt over de bodem van nevelwoud, de Roodborstlijster foerageert in eiken- en dennenbos en de Grijze zijdevliegenvanger zit met zijn kuif rechtop in boomtoppen."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "title": {
+        "en": "Euphonia, grosbeak, crossbill, siskin",
+        "nl": "Organist, dikbek, kruisbek en sijs"
+      },
+      "intro": {
+        "en": "Seed and fruit eaters of conifer and oak forest. The Common Crossbill and the Pine Siskin feed in pine tops in flocks, and the crossbill has a bill with crossed tips. The Hooded Grosbeak is large-billed, with an orange and black male. The Elegant Euphonia is a small, colourful fruit eater.",
+        "nl": "Zaad- en vruchteneters van naald- en eikenbos. De Kruisbek en de Dennensijs foerageren in groepen in dennentoppen en de kruisbek heeft een snavel met gekruiste punten. De Witschouderdikbek heeft een dikke snavel en een oranje-zwart mannetje. De Blauwkaporganist is een kleine, kleurige vruchteneter."
+      }
+    },
+    "new-world-sparrows-1": {
+      "title": {
+        "en": "Junco, brushfinch and scrub sparrows",
+        "nl": "Junco, struikgors en struweelgorzen"
+      },
+      "intro": {
+        "en": "Ground and scrub birds of the highlands. The Yellow-eyed Junco has a yellow eye and a rusty back, and lives on high volcanic slopes. The Green-striped Brushfinch scratches in the undergrowth, and the Common Chlorospingus is an olive, flocking bird at forest edges. Botteri's and Black-chinned Sparrows live in grass and chaparral.",
+        "nl": "Grond- en struweelvogels van de hooglanden. De Geeloogjunco heeft een gele iris en een roestkleurige rug en leeft op hoge vulkaanhellingen. De Groenkruinstruikgors scharrelt in het kreupelhout en de Briltangare is een olijfgroene groepsvogel langs bosranden. De Botterigors en de Zwartkingors leven in gras en struikgewas."
+      }
+    },
+    "new-world-sparrows-2": {
+      "title": {
+        "en": "Grassland sparrows, towhee, brushfinch",
+        "nl": "Graslandgorzen, towie, struikgors"
+      },
+      "intro": {
+        "en": "Sparrows of bunch grass and brushy hillsides. The Sierra Madre Sparrow is scarce and hides in bunch grass. The Striped Sparrow, Rusty Sparrow and Rufous-capped Brushfinch all have bold head patterns, so check the crown and face. The Canyon Towhee is plain brown and walks about on dry slopes and in towns, and the Song Sparrow has a streaked breast with a central spot.",
+        "nl": "Gorzen van pollengras en struikrijke heuvels. De Sierra-Madregors is schaars en verstopt zich in pollengras. De Zwartwanggors, de Roestruggors en de Roestkruinstruikgors hebben allemaal een opvallende kopkleur of koptekening, dus let op de kruin en het gezicht. De Bruine towie is egaal bruin en loopt over droge hellingen en door dorpen, en de Zanggors heeft een gestreepte borst met een vlek in het midden."
+      }
+    },
+    "blackbirds": {
+      "title": {
+        "en": "Oropendolas and Black-backed Oriole",
+        "nl": "Oropendola's en Zwartstuittroepiaal"
+      },
+      "intro": {
+        "en": "Two big oropendolas and an oriole. The oropendolas nest in colonies of hanging pouches in tall trees of the Gulf rainforest, and the Montezuma has a bare pink cheek patch. The Black-backed Oriole is yellow and black and lives in highland woods.",
+        "nl": "Twee grote oropendola's en een troepiaal. De oropendola's nestelen in kolonies met hangende zakvormige nesten in hoge bomen van het regenwoud aan de Golf. De Montezumaoropendola heeft een kale roze wangvlek. De Zwartstuittroepiaal is geel en zwart en leeft in bergbos."
+      }
+    },
+    "wood-warblers": {
+      "title": {
+        "en": "Yellowthroats and two forest warblers",
+        "nl": "Maskerzangers en twee boszangers"
+      },
+      "intro": {
+        "en": "Two Mexican yellowthroats and two forest warblers. The yellowthroats live in damp scrub, grass and marsh, and the males show black on the head. The Golden-crowned Warbler walks on forest floors with an orange crown stripe. The Canada Warbler is a migrant, passing through with a necklace of streaks on its yellow breast.",
+        "nl": "Twee Mexicaanse maskerzangers en twee boszangers. De maskerzangers leven in vochtig struweel, gras en moeras en de mannetjes hebben zwart op de kop. De Goudhaanzanger loopt over de bosbodem met een oranje streep op de kruin. De Canadese zanger is een trekvogel met een ketting van streepjes op de gele borst."
+      }
+    },
+    "cardinals-grosbeaks-and-allies": {
+      "title": {
+        "en": "Tanagers, flowerpiercer and Dickcissel",
+        "nl": "Tangaren, honingkruiper en Dickcissel"
+      },
+      "intro": {
+        "en": "Colourful forest birds and one visitor from the grass. The White-winged and Yellow-winged Tanagers feed on fruit in the canopy and at forest edges. The Cinnamon-bellied Flowerpiercer has a hooked bill and pierces flowers at the base. The Dickcissel is a winter visitor that moves in flocks over grassland and fields.",
+        "nl": "Kleurige bosvogels en een gast uit het grasland. De Witvleugeltangare en de Geelvleugeltangare eten vruchten in het kronendak en langs bosranden. De Mexicaanse berghoningkruiper heeft een haakvormige snavel en prikt bloemen aan de voet open. De Dickcissel is een wintergast die in groepen over grasland en akkers trekt."
+      }
+    }
+  }
+}

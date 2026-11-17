@@ -1,0 +1,22 @@
+{
+  "code": "oaxspa1",
+  "name": {
+    "en": "Oaxaca Sparrow",
+    "nl": "Oaxacagors"
+  },
+  "latin": "Aimophila notosticta",
+  "look_for": [
+    {
+      "en": "Reddish-brown **crown** with a thin grey centre",
+      "nl": "Roodbruine **kruin** met dunne grijze middenstreep"
+    },
+    {
+      "en": "White **eye-ring**, white streak above the lores",
+      "nl": "Witte **oogring**, witte streep boven de teugel"
+    },
+    {
+      "en": "Dark stripe at the side of the **throat**",
+      "nl": "Donkere streep naast de **keel**"
+    }
+  ]
+}

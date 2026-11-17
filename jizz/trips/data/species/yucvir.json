@@ -1,0 +1,22 @@
+{
+  "code": "yucvir",
+  "name": {
+    "en": "Yucatan Vireo",
+    "nl": "Yucatanvireo"
+  },
+  "latin": "Vireo magister",
+  "look_for": [
+    {
+      "en": "Heavy **bill** and pale **eyebrow**",
+      "nl": "Zware **snavel** en bleke **wenkbrauwstreep**"
+    },
+    {
+      "en": "Plain brown-grey **back**, no wingbars",
+      "nl": "Effen bruingrijze **rug**, geen vleugelstrepen"
+    },
+    {
+      "en": "Skulks in coastal scrub and mangrove",
+      "nl": "Skulkt in kuststruweel en mangrove"
+    }
+  ]
+}

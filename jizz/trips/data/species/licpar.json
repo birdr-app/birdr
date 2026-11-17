@@ -1,0 +1,22 @@
+{
+  "code": "licpar",
+  "name": {
+    "en": "Lilac-crowned Amazon",
+    "nl": "Blauwkruinamazone"
+  },
+  "latin": "Amazona finschi",
+  "look_for": [
+    {
+      "en": "Green parrot with a lilac **crown**",
+      "nl": "Groene papegaai met een lila **kruin**"
+    },
+    {
+      "en": "Maroon **forehead** above a pale bill",
+      "nl": "Kastanjebruin **voorhoofd** boven een lichte snavel"
+    },
+    {
+      "en": "Red **wing** patch, short square **tail**",
+      "nl": "Rode **vleugel**vlek, korte rechte **staart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "belvir",
+  "name": {
+    "en": "Bell's Vireo",
+    "nl": "Bellvireo"
+  },
+  "latin": "Vireo bellii",
+  "look_for": [
+    {
+      "en": "Faint pale **spectacles** on a grey **head**",
+      "nl": "Vage bleke **bril** op een grijze **kop**"
+    },
+    {
+      "en": "One or two weak **wingbars**",
+      "nl": "Een of twee zwakke **vleugelstrepen**"
+    },
+    {
+      "en": "Restless, flicks and cocks its **tail**",
+      "nl": "Onrustig, wipt en spert met de **staart**"
+    }
+  ]
+}

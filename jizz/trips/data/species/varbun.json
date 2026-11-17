@@ -1,0 +1,22 @@
+{
+  "code": "varbun",
+  "name": {
+    "en": "Varied Bunting",
+    "nl": "Veelkleurengors"
+  },
+  "latin": "Passerina versicolor",
+  "look_for": [
+    {
+      "en": "Male looks black in poor light",
+      "nl": "Mannetje lijkt zwart bij slecht licht"
+    },
+    {
+      "en": "Red **nape** patch, purple-blue body",
+      "nl": "Rode **nek**vlek, paarsblauw lijf"
+    },
+    {
+      "en": "Female plain pale brown, no marks",
+      "nl": "Vrouwtje effen bleekbruin, zonder tekening"
+    }
+  ]
+}

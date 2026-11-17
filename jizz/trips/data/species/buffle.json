@@ -1,0 +1,22 @@
+{
+  "code": "buffle",
+  "name": {
+    "en": "Bufflehead",
+    "nl": "Buffelkopeend"
+  },
+  "latin": "Bucephala albeola",
+  "look_for": [
+    {
+      "en": "Male has a big white **head** patch",
+      "nl": "Mannetje met een grote witte **kopvlek**"
+    },
+    {
+      "en": "Small, compact diving duck",
+      "nl": "Kleine, compacte duikeend"
+    },
+    {
+      "en": "White **flanks**, black **back**",
+      "nl": "Witte **flanken**, zwarte **rug**"
+    }
+  ]
+}

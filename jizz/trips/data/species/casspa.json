@@ -1,0 +1,22 @@
+{
+  "code": "casspa",
+  "name": {
+    "en": "Cassin's Sparrow",
+    "nl": "Cassingors"
+  },
+  "latin": "Peucaea cassinii",
+  "look_for": [
+    {
+      "en": "Plain pale **breast**, few flank streaks",
+      "nl": "Effen lichte **borst**, weinig flankstrepen"
+    },
+    {
+      "en": "Grey scaly edges to the **back** feathers",
+      "nl": "Grijze schubrandjes aan de **rugveren**"
+    },
+    {
+      "en": "Rounded **tail** with faint cross bars",
+      "nl": "Afgeronde **staart** met vage dwarsbanden"
+    }
+  ]
+}

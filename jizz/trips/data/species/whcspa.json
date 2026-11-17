@@ -1,0 +1,22 @@
+{
+  "code": "whcspa",
+  "name": {
+    "en": "White-crowned Sparrow",
+    "nl": "Witkruingors"
+  },
+  "latin": "Zonotrichia leucophrys",
+  "look_for": [
+    {
+      "en": "Bold black and white striped **crown**",
+      "nl": "Opvallend zwart-wit gestreepte **kruin**"
+    },
+    {
+      "en": "Plain grey face and **breast**",
+      "nl": "Effen grijs gezicht en **borst**"
+    },
+    {
+      "en": "Short pinkish-yellow **bill**",
+      "nl": "Korte roze-gele **snavel**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "larspa",
+  "name": {
+    "en": "Lark Sparrow",
+    "nl": "Roodoorgors"
+  },
+  "latin": "Chondestes grammacus",
+  "look_for": [
+    {
+      "en": "Harlequin **face**, chestnut ear patch",
+      "nl": "Harlekijnachtig **gezicht**, kastanjebruine oorstreek"
+    },
+    {
+      "en": "Dark spot on a pale **breast**",
+      "nl": "Donkere vlek op een lichte **borst**"
+    },
+    {
+      "en": "Long rounded **tail** with big white corners",
+      "nl": "Lange afgeronde **staart** met grote witte hoeken"
+    }
+  ]
+}

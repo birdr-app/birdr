@@ -1,0 +1,22 @@
+{
+  "code": "yebsap",
+  "name": {
+    "en": "Yellow-bellied Sapsucker",
+    "nl": "Geelbuiksapspecht"
+  },
+  "latin": "Sphyrapicus varius",
+  "look_for": [
+    {
+      "en": "Red **forehead** and **crown**, black-and-white **face**",
+      "nl": "Rood **voorhoofd** en rode **kruin**, zwart-witte **kop**"
+    },
+    {
+      "en": "Long white stripe on the folded **wing**",
+      "nl": "Lange witte streep op de gevouwen **vleugel**"
+    },
+    {
+      "en": "Pale yellow wash on the **belly**",
+      "nl": "Lichtgele waas op de **buik**"
+    }
+  ]
+}

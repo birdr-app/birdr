@@ -1,0 +1,22 @@
+{
+  "code": "verdin",
+  "name": {
+    "en": "Verdin",
+    "nl": "Geelkopmees"
+  },
+  "latin": "Auriparus flaviceps",
+  "look_for": [
+    {
+      "en": "Tiny grey bird with a yellow **head**",
+      "nl": "Klein grijs vogeltje met een gele **kop**"
+    },
+    {
+      "en": "Rusty **shoulder** patch",
+      "nl": "Roestbruine **schouder**vlek"
+    },
+    {
+      "en": "Short sharp **bill**, busy in thorn scrub",
+      "nl": "Korte scherpe **snavel**, druk in doornstruiken"
+    }
+  ]
+}

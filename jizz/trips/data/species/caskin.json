@@ -1,0 +1,22 @@
+{
+  "code": "caskin",
+  "name": {
+    "en": "Cassin's Kingbird",
+    "nl": "Cassinkoningstiran"
+  },
+  "latin": "Tyrannus vociferans",
+  "look_for": [
+    {
+      "en": "White **chin** on a dark grey **head**",
+      "nl": "Witte **kin** op een donkergrijze **kop**"
+    },
+    {
+      "en": "Grey **breast**, bright yellow **belly**",
+      "nl": "Grijze **borst**, felgele **buik**"
+    },
+    {
+      "en": "Brown **tail** with a pale tip",
+      "nl": "Bruine **staart** met een bleke punt"
+    }
+  ]
+}

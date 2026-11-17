@@ -1,0 +1,22 @@
+{
+  "code": "nutfly1",
+  "name": {
+    "en": "Nutting's Flycatcher",
+    "nl": "Bleekkeeltiran"
+  },
+  "latin": "Myiarchus nuttingi",
+  "look_for": [
+    {
+      "en": "Bright rufous **tail** and wing edges",
+      "nl": "Fel roestrode **staart** en vleugelranden"
+    },
+    {
+      "en": "Grey **throat**, yellow **belly**",
+      "nl": "Grijze **keel**, gele **buik**"
+    },
+    {
+      "en": "Told from Ash-throated by sharp whistles",
+      "nl": "Van Grijskeeltiran te onderscheiden aan scherpe fluitroepen"
+    }
+  ]
+}

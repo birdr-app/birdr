@@ -1,0 +1,22 @@
+{
+  "code": "abetow",
+  "name": {
+    "en": "Abert's Towhee",
+    "nl": "Zwartkintowie"
+  },
+  "latin": "Melozone aberti",
+  "look_for": [
+    {
+      "en": "Plain brown, no streaks",
+      "nl": "Effen bruin, zonder strepen"
+    },
+    {
+      "en": "Black **face** patch around the bill",
+      "nl": "Zwart **gezicht** rond de snavel"
+    },
+    {
+      "en": "Pale **bill**, rusty undertail",
+      "nl": "Lichte **snavel**, roestkleurige onderstaart"
+    }
+  ]
+}

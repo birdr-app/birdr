@@ -1,0 +1,22 @@
+{
+  "code": "belyel1",
+  "name": {
+    "en": "Belding's Yellowthroat",
+    "nl": "Beldingmaskerzanger"
+  },
+  "latin": "Geothlypis beldingi",
+  "look_for": [
+    {
+      "en": "Male has a broad black **mask**, yellow border",
+      "nl": "Mannetje heeft een breed zwart **masker** met gele rand"
+    },
+    {
+      "en": "Bright yellow **throat** and **breast**, olive **back**",
+      "nl": "Felgele **keel** en **borst**, olijfgroene **rug**"
+    },
+    {
+      "en": "Only in marshes at the tip of Baja",
+      "nl": "Alleen in moerassen op de zuidpunt van Baja"
+    }
+  ]
+}

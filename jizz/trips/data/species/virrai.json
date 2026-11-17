@@ -1,0 +1,22 @@
+{
+  "code": "virrai",
+  "name": {
+    "en": "Virginia Rail",
+    "nl": "Virginiaral"
+  },
+  "latin": "Rallus limicola",
+  "look_for": [
+    {
+      "en": "Small rail with a long red **bill**",
+      "nl": "Kleine ral met een lange rode **snavel**"
+    },
+    {
+      "en": "Grey **cheeks**, rusty **breast**",
+      "nl": "Grijze **wangen**, roestrode **borst**"
+    },
+    {
+      "en": "Black and white barred **flanks**",
+      "nl": "Zwart-wit gebande **flanken**"
+    }
+  ]
+}

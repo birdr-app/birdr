@@ -1,0 +1,22 @@
+{
+  "code": "amecro",
+  "name": {
+    "en": "American Crow",
+    "nl": "Amerikaanse kraai"
+  },
+  "latin": "Corvus brachyrhynchos",
+  "look_for": [
+    {
+      "en": "All black, thick straight **bill**",
+      "nl": "Helemaal zwart, dikke rechte **snavel**"
+    },
+    {
+      "en": "Fan-shaped **tail** in flight",
+      "nl": "Waaiervormige **staart** in vlucht"
+    },
+    {
+      "en": "Smaller than ravens, shorter **bill**",
+      "nl": "Kleiner dan raven, kortere **snavel**"
+    }
+  ]
+}

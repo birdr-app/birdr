@@ -1,0 +1,22 @@
+{
+  "code": "bewwre",
+  "name": {
+    "en": "Bewick's Wren",
+    "nl": "Bewickwinterkoning"
+  },
+  "latin": "Thryomanes bewickii",
+  "look_for": [
+    {
+      "en": "Long white **eyebrow**, plain brown **back**",
+      "nl": "Lange witte **wenkbrauwstreep**, effen bruine **rug**"
+    },
+    {
+      "en": "Long **tail** with white corners, flicked sideways",
+      "nl": "Lange **staart** met witte hoeken, zwiept zijwaarts"
+    },
+    {
+      "en": "Greyish-white **breast** and **belly**, unspotted",
+      "nl": "Grijswitte **borst** en **buik**, zonder vlekken"
+    }
+  ]
+}

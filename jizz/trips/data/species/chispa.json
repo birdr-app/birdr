@@ -1,0 +1,22 @@
+{
+  "code": "chispa",
+  "name": {
+    "en": "Chipping Sparrow",
+    "nl": "Musgors"
+  },
+  "latin": "Spizella passerina",
+  "look_for": [
+    {
+      "en": "Bright rusty **crown** in summer",
+      "nl": "Felroestbruine **kruin** in de zomer"
+    },
+    {
+      "en": "White eyebrow, black line through the **eye**",
+      "nl": "Witte wenkbrauw, zwarte streep door het **oog**"
+    },
+    {
+      "en": "Plain grey **breast**, black bill",
+      "nl": "Effen grijze **borst**, zwarte snavel"
+    }
+  ]
+}

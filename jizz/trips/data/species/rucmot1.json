@@ -1,0 +1,22 @@
+{
+  "code": "rucmot1",
+  "name": {
+    "en": "Russet-crowned Motmot",
+    "nl": "Bruinkopmotmot"
+  },
+  "latin": "Momotus mexicanus",
+  "look_for": [
+    {
+      "en": "Rufous **crown** and nape",
+      "nl": "Roestbruine **kruin** en nek"
+    },
+    {
+      "en": "Black eye **mask** edged with blue and violet",
+      "nl": "Zwart **oogmasker** met blauwe en paarse rand"
+    },
+    {
+      "en": "Long blue **tail** with racket tip",
+      "nl": "Lange blauwe **staart** met rakettip"
+    }
+  ]
+}

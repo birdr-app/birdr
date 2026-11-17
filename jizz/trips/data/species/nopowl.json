@@ -1,0 +1,22 @@
+{
+  "code": "nopowl",
+  "name": {
+    "en": "Northern Pygmy-Owl",
+    "nl": "Bergdwerguil"
+  },
+  "latin": "Glaucidium gnoma",
+  "look_for": [
+    {
+      "en": "Tiny, round-headed owl with a long **tail**",
+      "nl": "Piepkleine uil met ronde kop en lange **staart**"
+    },
+    {
+      "en": "Black false eyes on the **nape**",
+      "nl": "Zwarte schijnogen op de **nek**"
+    },
+    {
+      "en": "Streaked **flanks**, finely spotted **crown**",
+      "nl": "Gestreepte **flanken**, fijn gespikkelde **kruin**"
+    }
+  ]
+}

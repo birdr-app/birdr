@@ -1,0 +1,22 @@
+{
+  "code": "grnpar",
+  "name": {
+    "en": "Green Parakeet",
+    "nl": "Groene aratinga"
+  },
+  "latin": "Psittacara holochlorus",
+  "look_for": [
+    {
+      "en": "Plain green, long pointed **tail**",
+      "nl": "Egaal groen, lange puntige **staart**"
+    },
+    {
+      "en": "Paler yellowish-green **underparts**",
+      "nl": "Lichtere geelgroene **onderkant**"
+    },
+    {
+      "en": "Pale bare **eye-ring**, horn-coloured **bill**",
+      "nl": "Lichte kale **oogring**, hoornkleurige **snavel**"
+    }
+  ]
+}

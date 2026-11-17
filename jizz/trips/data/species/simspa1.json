@@ -1,0 +1,22 @@
+{
+  "code": "simspa1",
+  "name": {
+    "en": "Sierra Madre Sparrow",
+    "nl": "Sierra-Madregors"
+  },
+  "latin": "Xenospiza baileyi",
+  "look_for": [
+    {
+      "en": "Small, short-tailed sparrow of high grassland",
+      "nl": "Kleine gors met korte staart op hoog grasland"
+    },
+    {
+      "en": "Streaked brown **back**, buffy underparts",
+      "nl": "Gestreepte bruine **rug**, okerkleurige onderzijde"
+    },
+    {
+      "en": "Skulks low in bunchgrass, reluctant to fly",
+      "nl": "Sluipt laag door pollengras, vliegt node op"
+    }
+  ]
+}

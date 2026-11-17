@@ -1,0 +1,22 @@
+{
+  "code": "azchum1",
+  "name": {
+    "en": "Azure-crowned Hummingbird",
+    "nl": "Hemelsblauwe amazilia"
+  },
+  "latin": "Saucerottia cyanocephala",
+  "look_for": [
+    {
+      "en": "Bright blue **crown** on a green **head**",
+      "nl": "Helderblauwe **kruin** op een groene **kop**"
+    },
+    {
+      "en": "Red **bill** with a black tip",
+      "nl": "Rode **snavel** met een zwarte punt"
+    },
+    {
+      "en": "Greenish **throat** and breast, paler **belly**",
+      "nl": "Groenige **keel** en borst, lichtere **buik**"
+    }
+  ]
+}

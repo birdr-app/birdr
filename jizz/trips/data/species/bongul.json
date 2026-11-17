@@ -1,0 +1,22 @@
+{
+  "code": "bongul",
+  "name": {
+    "en": "Bonaparte's Gull",
+    "nl": "Kleine kokmeeuw"
+  },
+  "latin": "Chroicocephalus philadelphia",
+  "look_for": [
+    {
+      "en": "Small, tern-like gull with a black **bill**",
+      "nl": "Kleine sternachtige meeuw met een zwarte **snavel**"
+    },
+    {
+      "en": "In winter white **head** with a dark ear spot",
+      "nl": "In de winter witte **kop** met een donkere oorvlek"
+    },
+    {
+      "en": "White wedge on the outer **wing**",
+      "nl": "Witte wig op de buitenste **vleugel**"
+    }
+  ]
+}

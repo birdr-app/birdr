@@ -1,0 +1,22 @@
+{
+  "code": "plsvir",
+  "name": {
+    "en": "Plumbeous Vireo",
+    "nl": "Loodkleurige vireo"
+  },
+  "latin": "Vireo plumbeus",
+  "look_for": [
+    {
+      "en": "White **spectacles** on a grey **head**",
+      "nl": "Witte **bril** op een grijze **kop**"
+    },
+    {
+      "en": "Grey **back**, white **underparts**",
+      "nl": "Grijze **rug**, witte **onderkant**"
+    },
+    {
+      "en": "Two white **wingbars**, no yellow",
+      "nl": "Twee witte **vleugelstrepen**, geen geel"
+    }
+  ]
+}

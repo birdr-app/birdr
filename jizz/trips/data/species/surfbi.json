@@ -1,0 +1,22 @@
+{
+  "code": "surfbi",
+  "name": {
+    "en": "Surfbird",
+    "nl": "Brandingloper"
+  },
+  "latin": "Calidris virgata",
+  "look_for": [
+    {
+      "en": "Plump, slate-grey **plumage** on rocks",
+      "nl": "Gedrongen, leigrijs **verenkleed** op rotsen"
+    },
+    {
+      "en": "Short yellow **bill** with a dark tip",
+      "nl": "Korte gele **snavel** met een donkere punt"
+    },
+    {
+      "en": "Yellow **legs**, feeds in the surf",
+      "nl": "Gele **poten**, foerageert in de branding"
+    }
+  ]
+}

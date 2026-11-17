@@ -1,0 +1,22 @@
+{
+  "code": "spotow",
+  "name": {
+    "en": "Spotted Towhee",
+    "nl": "Gevlekte towie"
+  },
+  "latin": "Pipilo maculatus",
+  "look_for": [
+    {
+      "en": "Male has a black **hood**, rufous flanks",
+      "nl": "Mannetje met zwarte **kap**, roestbruine flanken"
+    },
+    {
+      "en": "White belly, red **eye**",
+      "nl": "Witte buik, rode **iris**"
+    },
+    {
+      "en": "Long **tail** with white corners",
+      "nl": "Lange **staart** met witte hoeken"
+    }
+  ]
+}

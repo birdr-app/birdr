@@ -1,0 +1,22 @@
+{
+  "code": "spowre1",
+  "name": {
+    "en": "Spotted Wren",
+    "nl": "Gevlekte winterkoning"
+  },
+  "latin": "Campylorhynchus gularis",
+  "look_for": [
+    {
+      "en": "Chestnut **crown**, white eyebrow, buffy cheeks",
+      "nl": "Kastanjebruine **kruin**, witte wenkbrauwstreep, bruingele wangen"
+    },
+    {
+      "en": "Black spots on the side of the **chest**",
+      "nl": "Zwarte vlekken op de zijkant van de **borst**"
+    },
+    {
+      "en": "Buffy **belly**, groups in dry oak scrub",
+      "nl": "Bruingele **buik**, groepen in droog eikenstruweel"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "yelgro",
+  "name": {
+    "en": "Yellow Grosbeak",
+    "nl": "Gele kardinaal"
+  },
+  "latin": "Pheucticus chrysopeplus",
+  "look_for": [
+    {
+      "en": "Golden-yellow body, black **wings**",
+      "nl": "Goudgeel lijf, zwarte **vleugels**"
+    },
+    {
+      "en": "White patches and spots on wings and **tail**",
+      "nl": "Witte vlekken en stippen op vleugels en **staart**"
+    },
+    {
+      "en": "Huge, pale, conical **bill**",
+      "nl": "Enorme, lichte, kegelvormige **snavel**"
+    }
+  ]
+}

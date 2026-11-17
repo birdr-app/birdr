@@ -1,0 +1,22 @@
+{
+  "code": "bubhum",
+  "name": {
+    "en": "Buff-bellied Hummingbird",
+    "nl": "Yucatanamazilia"
+  },
+  "latin": "Amazilia yucatanensis",
+  "look_for": [
+    {
+      "en": "Red **bill** with a dark tip",
+      "nl": "Rode **snavel** met een donkere punt"
+    },
+    {
+      "en": "Green **throat** and chest, buff **belly**",
+      "nl": "Groene **keel** en borst, bruingele **buik**"
+    },
+    {
+      "en": "Rufous **tail**, bronzy **back**",
+      "nl": "Roodbruine **staart**, bronskleurige **rug**"
+    }
+  ]
+}

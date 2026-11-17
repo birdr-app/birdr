@@ -1,0 +1,22 @@
+{
+  "code": "relpar10",
+  "name": {
+    "en": "Red-lored Amazon",
+    "nl": "Geelwangamazone"
+  },
+  "latin": "Amazona autumnalis",
+  "look_for": [
+    {
+      "en": "Red **forehead** and **lores**",
+      "nl": "Rood **voorhoofd** en rode **teugels**"
+    },
+    {
+      "en": "Yellow **cheeks**, lilac-blue **crown**",
+      "nl": "Gele **wangen**, lilablauwe **kruin**"
+    },
+    {
+      "en": "Green body, red **wing** patch",
+      "nl": "Groen lijf, rode **vleugel**vlek"
+    }
+  ]
+}

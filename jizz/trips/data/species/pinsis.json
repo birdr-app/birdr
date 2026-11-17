@@ -1,0 +1,22 @@
+{
+  "code": "pinsis",
+  "name": {
+    "en": "Pine Siskin",
+    "nl": "Dennensijs"
+  },
+  "latin": "Spinus pinus",
+  "look_for": [
+    {
+      "en": "Heavily streaked brown, pale underparts",
+      "nl": "Sterk gestreept bruin, bleke onderkant"
+    },
+    {
+      "en": "Yellow flashes in **wings** and **tail**",
+      "nl": "Gele flitsen in **vleugels** en **staart**"
+    },
+    {
+      "en": "Thin, pointed **bill**, notched tail",
+      "nl": "Dunne, spitse **snavel**, ingekeepte staart"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "phaino",
+  "name": {
+    "en": "Phainopepla",
+    "nl": "Zwarte zijdevliegenvanger"
+  },
+  "latin": "Phainopepla nitens",
+  "look_for": [
+    {
+      "en": "Male glossy black with a **crest**",
+      "nl": "Mannetje glanzend zwart met een **kuif**"
+    },
+    {
+      "en": "Red **eye** in a dark face",
+      "nl": "Rood **oog** in een donker gezicht"
+    },
+    {
+      "en": "White **wing** patches in flight",
+      "nl": "Witte **vleugel**vlekken in de vlucht"
+    }
+  ]
+}

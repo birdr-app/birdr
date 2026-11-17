@@ -1,0 +1,22 @@
+{
+  "code": "bfoboo",
+  "name": {
+    "en": "Blue-footed Booby",
+    "nl": "Blauwvoetgent"
+  },
+  "latin": "Sula nebouxii",
+  "look_for": [
+    {
+      "en": "Bright blue **feet**, unmistakable",
+      "nl": "Felblauwe **poten**, onmiskenbaar"
+    },
+    {
+      "en": "Brown upperparts with a white **rump** patch",
+      "nl": "Bruine bovenzijde met een witte **stuitvlek**"
+    },
+    {
+      "en": "Plunge-dives steeply for fish",
+      "nl": "Duikt steil naar beneden op vis"
+    }
+  ]
+}

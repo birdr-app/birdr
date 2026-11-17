@@ -1,0 +1,22 @@
+{
+  "code": "plcsta",
+  "name": {
+    "en": "Plain-capped Starthroat",
+    "nl": "Vonkkeelkolibrie"
+  },
+  "latin": "Heliomaster constantii",
+  "look_for": [
+    {
+      "en": "Large, with a long straight **bill**",
+      "nl": "Groot, met een lange rechte **snavel**"
+    },
+    {
+      "en": "Male has a rose-red **throat**",
+      "nl": "Mannetje heeft een rozerode **keel**"
+    },
+    {
+      "en": "White streak behind the **eye**, white **rump** patch",
+      "nl": "Witte streep achter het **oog**, witte **stuitvlek**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "houfin",
+  "name": {
+    "en": "House Finch",
+    "nl": "Mexicaanse roodmus"
+  },
+  "latin": "Haemorhous mexicanus",
+  "look_for": [
+    {
+      "en": "Male has rosy-red **head**, breast and **rump**",
+      "nl": "Mannetje met rozerode **kop**, borst en **stuit**"
+    },
+    {
+      "en": "Brown streaked **flanks** and belly",
+      "nl": "Bruin gestreepte **flanken** en buik"
+    },
+    {
+      "en": "Female plain streaked brown, no face pattern",
+      "nl": "Vrouwtje effen gestreept bruin, geen gezichtstekening"
+    }
+  ]
+}

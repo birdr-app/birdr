@@ -1,0 +1,22 @@
+{
+  "code": "whtrob1",
+  "name": {
+    "en": "White-throated Thrush",
+    "nl": "Witkeellijster"
+  },
+  "latin": "Turdus assimilis",
+  "look_for": [
+    {
+      "en": "White **throat** streaked with dark brown",
+      "nl": "Witte **keel** met donkerbruine strepen"
+    },
+    {
+      "en": "Plain olive-brown **back**",
+      "nl": "Effen olijfbruine **rug**"
+    },
+    {
+      "en": "Grey-brown **breast**, white **belly**",
+      "nl": "Grijsbruine **borst**, witte **buik**"
+    }
+  ]
+}

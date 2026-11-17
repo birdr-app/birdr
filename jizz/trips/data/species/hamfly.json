@@ -1,0 +1,22 @@
+{
+  "code": "hamfly",
+  "name": {
+    "en": "Hammond's Flycatcher",
+    "nl": "Sparrenfeetiran"
+  },
+  "latin": "Empidonax hammondii",
+  "look_for": [
+    {
+      "en": "Slim, short dark **bill**",
+      "nl": "Smalle, korte donkere **snavel**"
+    },
+    {
+      "en": "Olive-grey **breast** wash, white **eye-ring**",
+      "nl": "Olijfgrijze **borst**, witte **oogring**"
+    },
+    {
+      "en": "Long wing tips and a short **tail**",
+      "nl": "Lange vleugelpunten en een korte **staart**"
+    }
+  ]
+}

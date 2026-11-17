@@ -1,0 +1,22 @@
+{
+  "code": "rucrob1",
+  "name": {
+    "en": "Rufous-collared Robin",
+    "nl": "Roodkraaglijster"
+  },
+  "latin": "Turdus rufitorques",
+  "look_for": [
+    {
+      "en": "Dark **head** with a broad rufous **collar**",
+      "nl": "Donkere **kop** met een brede roestrode **kraag**"
+    },
+    {
+      "en": "Grey **back** and **wings**",
+      "nl": "Grijze **rug** en **vleugels**"
+    },
+    {
+      "en": "Rusty **breast** and flanks, paler belly",
+      "nl": "Roestrode **borst** en flanken, bleker buik"
+    }
+  ]
+}

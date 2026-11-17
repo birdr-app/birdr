@@ -1,0 +1,22 @@
+{
+  "code": "manwar1",
+  "name": {
+    "en": "Mangrove Yellow Warbler",
+    "nl": "Mangrovezanger"
+  },
+  "latin": "Setophaga petechia",
+  "look_for": [
+    {
+      "en": "Male has a chestnut **head**, yellow body",
+      "nl": "Mannetje heeft een kastanjebruine **kop** en geel lijf"
+    },
+    {
+      "en": "Female plain yellow with a greenish **back**",
+      "nl": "Vrouwtje effen geel met een groenige **rug**"
+    },
+    {
+      "en": "Stays in mangroves and coastal scrub",
+      "nl": "Blijft in mangrove en kuststruikgewas"
+    }
+  ]
+}

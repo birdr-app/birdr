@@ -1,0 +1,22 @@
+{
+  "code": "easpho",
+  "name": {
+    "en": "Eastern Phoebe",
+    "nl": "Grijze phoebe"
+  },
+  "latin": "Sayornis phoebe",
+  "look_for": [
+    {
+      "en": "Dark **head** and plain olive-grey **back**",
+      "nl": "Donkere **kop** en effen olijfgrijze **rug**"
+    },
+    {
+      "en": "Wags its **tail** while perched",
+      "nl": "Wipt met de **staart** terwijl hij zit"
+    },
+    {
+      "en": "Pale **underparts**, no wingbars",
+      "nl": "Bleke **onderkant**, geen vleugelstrepen"
+    }
+  ]
+}

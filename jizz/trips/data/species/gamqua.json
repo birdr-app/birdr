@@ -1,0 +1,22 @@
+{
+  "code": "gamqua",
+  "name": {
+    "en": "Gambel's Quail",
+    "nl": "Gambelkuifkwartel"
+  },
+  "latin": "Callipepla gambelii",
+  "look_for": [
+    {
+      "en": "Comma-shaped black **plume** on the head",
+      "nl": "Komvormige zwarte **kuif** op de kop"
+    },
+    {
+      "en": "Black **face** edged white, chestnut **crown**",
+      "nl": "Zwart **gezicht** met witte rand, kastanjebruine **kruin**"
+    },
+    {
+      "en": "Black belly patch, **flanks** streaked white",
+      "nl": "Zwarte buikvlek, **flanken** wit gestreept"
+    }
+  ]
+}

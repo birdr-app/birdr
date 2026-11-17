@@ -1,0 +1,22 @@
+{
+  "code": "bewpar1",
+  "name": {
+    "en": "Bearded Wood-Partridge",
+    "nl": "Grijskeelbospatrijs"
+  },
+  "latin": "Dendrortyx barbatus",
+  "look_for": [
+    {
+      "en": "Red **bill**, red eye-ring and red **legs**",
+      "nl": "Rode **snavel**, rode oogring en rode **poten**"
+    },
+    {
+      "en": "Grey **underparts**, rufous-brown **back**",
+      "nl": "Grijze **onderzijde**, roodbruine **rug**"
+    },
+    {
+      "en": "Shy, walks in small groups in cloud forest",
+      "nl": "Schuw, loopt in kleine groepjes door nevelwoud"
+    }
+  ]
+}

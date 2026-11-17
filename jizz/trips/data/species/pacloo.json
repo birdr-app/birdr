@@ -1,0 +1,22 @@
+{
+  "code": "pacloo",
+  "name": {
+    "en": "Pacific Diver",
+    "nl": "Pacifische parelduiker"
+  },
+  "latin": "Gavia pacifica",
+  "look_for": [
+    {
+      "en": "Slim, straight grey **bill**",
+      "nl": "Slanke, rechte grijze **snavel**"
+    },
+    {
+      "en": "Dark **nape** against a white throat",
+      "nl": "Donkere **nek** tegen een witte keel"
+    },
+    {
+      "en": "White **flank** patch above the water",
+      "nl": "Witte **flankvlek** boven het water"
+    }
+  ]
+}

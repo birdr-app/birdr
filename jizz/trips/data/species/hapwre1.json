@@ -1,0 +1,22 @@
+{
+  "code": "hapwre1",
+  "name": {
+    "en": "Happy Wren",
+    "nl": "Sonorawinterkoning"
+  },
+  "latin": "Pheugopedius felix",
+  "look_for": [
+    {
+      "en": "Black-and-white striped **face**",
+      "nl": "Zwart-wit gestreepte **kop**"
+    },
+    {
+      "en": "Chestnut **back**, cream **underparts**",
+      "nl": "Kastanjebruine **rug**, roomwitte **onderkant**"
+    },
+    {
+      "en": "Forages low in dry forest and scrub",
+      "nl": "Zoekt laag voedsel in droog bos en struikgewas"
+    }
+  ]
+}

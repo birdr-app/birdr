@@ -1,0 +1,22 @@
+{
+  "code": "calgul",
+  "name": {
+    "en": "California Gull",
+    "nl": "Prairiemeeuw"
+  },
+  "latin": "Larus californicus",
+  "look_for": [
+    {
+      "en": "Yellow **bill** with red and black spots",
+      "nl": "Gele **snavel** met rode en zwarte vlekken"
+    },
+    {
+      "en": "Dark **eye**, greenish-yellow **legs**",
+      "nl": "Donker **oog**, groengele **poten**"
+    },
+    {
+      "en": "Mid-grey **back**, darker than Ring-billed Gull",
+      "nl": "Middengrijze **rug**, donkerder dan de Ringsnavelmeeuw"
+    }
+  ]
+}

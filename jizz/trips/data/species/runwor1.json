@@ -1,0 +1,22 @@
+{
+  "code": "runwor1",
+  "name": {
+    "en": "Russet-naped Wood-Rail",
+    "nl": "Witbuikbosral"
+  },
+  "latin": "Aramides albiventris",
+  "look_for": [
+    {
+      "en": "Chunky rail with a yellow-green **bill**",
+      "nl": "Forse ral met een geelgroene **snavel**"
+    },
+    {
+      "en": "Grey **head**, rufous **nape**",
+      "nl": "Grijze **kop**, roodbruine **nek**"
+    },
+    {
+      "en": "Rusty **breast**, black **rump**, red **legs**",
+      "nl": "Roestrode **borst**, zwarte **stuit**, rode **poten**"
+    }
+  ]
+}

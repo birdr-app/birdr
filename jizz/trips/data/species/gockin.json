@@ -1,0 +1,22 @@
+{
+  "code": "gockin",
+  "name": {
+    "en": "Golden-crowned Kinglet",
+    "nl": "Amerikaanse goudhaan"
+  },
+  "latin": "Regulus satrapa",
+  "look_for": [
+    {
+      "en": "Orange-yellow **crown** edged with black",
+      "nl": "Oranjegele **kruin** met zwarte rand"
+    },
+    {
+      "en": "Bold white **eyebrow** above a dark eye line",
+      "nl": "Brede witte **wenkbrauw** boven een donkere oogstreep"
+    },
+    {
+      "en": "Tiny, plump, olive-grey, with a short **tail**",
+      "nl": "Klein, rond, olijfgrijs, met korte **staart**"
+    }
+  ]
+}

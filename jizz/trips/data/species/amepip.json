@@ -1,0 +1,22 @@
+{
+  "code": "amepip",
+  "name": {
+    "en": "Buff-bellied Pipit",
+    "nl": "Amerikaanse waterpieper"
+  },
+  "latin": "Anthus rubescens",
+  "look_for": [
+    {
+      "en": "Streaked buffy **breast**, plain **back**",
+      "nl": "Gestreepte bruingele **borst**, effen **rug**"
+    },
+    {
+      "en": "Dark **legs**, white outer **tail**",
+      "nl": "Donkere **poten**, witte buitenste **staart**"
+    },
+    {
+      "en": "Walks on open ground, bobbing its **tail**",
+      "nl": "Loopt over open grond en wipt met de **staart**"
+    }
+  ]
+}

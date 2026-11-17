@@ -1,0 +1,22 @@
+{
+  "code": "reshaw",
+  "name": {
+    "en": "Red-shouldered Hawk",
+    "nl": "Roodschouderbuizerd"
+  },
+  "latin": "Buteo lineatus",
+  "look_for": [
+    {
+      "en": "Rusty, barred **underparts**",
+      "nl": "Roestkleurige, gebandeerde **onderkant**"
+    },
+    {
+      "en": "Chequered black-and-white **wings**",
+      "nl": "Zwart-wit geblokte **vleugels**"
+    },
+    {
+      "en": "Narrow white bands on a black **tail**",
+      "nl": "Smalle witte banden op een zwarte **staart**"
+    }
+  ]
+}

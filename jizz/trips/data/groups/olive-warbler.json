@@ -1,0 +1,16 @@
+{
+  "slug": "olive-warbler",
+  "about": {
+    "en": "A small songbird of mountain pine and fir forest, with long wings and a fairly slim bill. The male has an orange-tan hood with a black mask, a grey back and two white wing bars. The female is duller and yellower. It works the high branches slowly and deliberately, often with mixed flocks.",
+    "nl": "Een kleine zangvogel van berggebieden met dennen- en sparrenbos, met lange vleugels en een vrij slanke snavel. Het mannetje heeft een oranjebruine kap met een zwart masker, een grijze rug en twee witte vleugelstrepen. Het vrouwtje is doffer en geler. Het diertje zoekt langzaam en bedachtzaam in de hoge takken, vaak met gemengde groepen."
+  },
+  "false_friends": [
+    {
+      "if_known": ["wood-warblers", "leaf-warblers"],
+      "text": {
+        "en": "Despite the name it is not a warbler of either group. It is the only member of its own family, and its longer wings and heavier build set it apart from the warblers around it.",
+        "nl": "Ondanks de naam is het geen zanger uit een van beide groepen. Het is het enige lid van een eigen familie, en met langere vleugels en een zwaardere bouw valt het op tussen de zangers om hem heen."
+      }
+    }
+  ]
+}

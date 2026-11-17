@@ -1,0 +1,22 @@
+{
+  "code": "heegul",
+  "name": {
+    "en": "Heermann's Gull",
+    "nl": "Heermannmeeuw"
+  },
+  "latin": "Larus heermanni",
+  "look_for": [
+    {
+      "en": "Dark slate-grey body, white **head** when breeding",
+      "nl": "Donker leigrijs lijf, witte **kop** in broedkleed"
+    },
+    {
+      "en": "Bright red **bill** with a black tip",
+      "nl": "Felrode **snavel** met een zwarte punt"
+    },
+    {
+      "en": "Black **tail** with a narrow white tip",
+      "nl": "Zwarte **staart** met een smalle witte punt"
+    }
+  ]
+}

@@ -1,0 +1,964 @@
+{
+  "country": "MX",
+  "intro": {
+    "en": "Mexico has more than a thousand bird species, from desert and cactus country to pine-oak mountains, tropical forest and two long coasts. In winter the country also fills with birds from North America. This trip covers 291 species that you meet almost anywhere, and Mexico's regional birds are in six region packs: Baja California; north and the Sierra Madre Occidental; West Mexico and the Pacific slope; central highlands and the Gulf slope; Oaxaca and Chiapas; and Yucatan.",
+    "nl": "Mexico heeft meer dan duizend vogelsoorten, van woestijn en cactusland tot dennen-eikenbergen, tropisch bos en twee lange kusten. In de winter komen er bovendien veel vogels uit Noord-Amerika bij. Deze reis omvat 291 soorten die je bijna overal tegenkomt, en de regionale vogels van Mexico zitten in zes regiopakketten: Baja California; het noorden en de Sierra Madre Occidental; West-Mexico en de Pacifische helling; het centrale hoogland en de Golfhelling; Oaxaca en Chiapas; en Yucatán."
+  },
+  "groups": {
+    "waterfowl": {
+      "here": {
+        "en": "Fourteen ducks are on this trip. Most are winter visitors from North America on lagoons, reservoirs and flooded fields, from about October to March, while the Black-bellied Whistling-Duck stays all year.",
+        "nl": "Deze reis omvat veertien eenden. De meeste zijn wintergasten uit Noord-Amerika op lagunes, stuwmeren en onder water staande velden, van ongeveer oktober tot maart. De Zwartbuikfluiteend blijft het hele jaar."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "here": {
+        "en": "One game bird is on this trip, the Northern Bobwhite, a small quail of brushy fields and farmland that you hear before you see.",
+        "nl": "Deze reis omvat een hoenderachtige, de Bobwhite, een kleine kwartel van struikrijke velden en akkers die je eerder hoort dan ziet."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "Nine pigeons and doves are on this trip. White-winged and Mourning Doves are everyday birds of towns and farmland, and the Band-tailed Pigeon keeps to the mountain forests.",
+        "nl": "Deze reis omvat negen duiven. Witvleugeltreurduif en Treurduif zijn alledaagse vogels van dorpen en akkers, en de Bandstaartduif houdt zich op in het bergbos."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "Three cuckoos are on this trip: the Groove-billed Ani in pastures, the Greater Roadrunner in dry country and the Common Squirrel-Cuckoo in the forest canopy.",
+        "nl": "Deze reis omvat drie koekoeksvogels: de Groefsnavelani in weiden, de Grote renkoekoek in droog land en de Eekhoornkoekoek in het kronendak van het bos."
+      }
+    },
+    "nightjars": {
+      "here": {
+        "en": "Two nightjars are on this trip. The Lesser Nighthawk hunts over open country at dusk, and the Common Pauraque sits on tracks and roads at night, where its eyes shine red in a torch beam.",
+        "nl": "Deze reis omvat twee nachtzwaluwen. De Texaanse nachtzwaluw jaagt in de schemering boven open land, en de Pauraque zit 's nachts op paden en wegen, waar zijn ogen rood oplichten in het licht van een zaklamp."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "One swift is on this trip, the White-throated Swift, a fast black-and-white bird of canyons and cliffs.",
+        "nl": "Deze reis omvat een gierzwaluw, de Bonte gierzwaluw, een snelle zwart-witte vogel van canyons en kliffen."
+      }
+    },
+    "hummingbirds": {
+      "here": {
+        "en": "Eight hummingbirds are on this trip, the ones you meet most easily in gardens and at flowering shrubs. Mexico has many more, and the regional packs add them.",
+        "nl": "Deze reis omvat acht kolibries, de soorten die je het gemakkelijkst ziet in tuinen en bij bloeiende struiken. Mexico heeft er veel meer, en die komen in de regionale pakketten."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Five rails, gallinules and coots are on this trip. The American Coot is the one you see on almost every open lake, and the others hide in reeds and marsh edges.",
+        "nl": "Deze reis omvat vijf rallen, waterhoenders en meerkoeten. De Amerikaanse meerkoet zie je op bijna elk open meer, de andere soorten verstoppen zich in riet en moerasranden."
+      }
+    },
+    "limpkin": {
+      "here": {
+        "en": "The Limpkin is the one bird of its family on this trip, a long-legged marsh bird that eats apple snails and gives a wild, wailing call.",
+        "nl": "De Koerlan is de enige vertegenwoordiger van zijn familie op deze reis, een langpotige moerasvogel die appelslakken eet en een wilde, jammerende roep laat horen."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "Sixteen shorebirds are on this trip. Nearly all are winter visitors from North America on beaches, mudflats and lagoon edges, and the Northern Jacana is the resident that walks on floating plants.",
+        "nl": "Deze reis omvat zestien steltlopers. Bijna alle zijn wintergasten uit Noord-Amerika op stranden, wadplaten en lagunerand, en de Nestmanjaçana is de standvogel die over drijvende planten loopt."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Ten gulls, terns and skimmers are on this trip, all of them birds of the coast and of large lagoons. Heermann's Gull and the Elegant Tern are most at home along the Pacific coast.",
+        "nl": "Deze reis omvat tien meeuwen, sterns en schaarbekken, allemaal vogels van de kust en van grote lagunes. De Heermannmeeuw en de Sierlijke stern voelen zich het meest thuis langs de Pacifische kust."
+      }
+    },
+    "grebes": {
+      "here": {
+        "en": "Two grebes are on this trip, the tiny Least Grebe and the stockier Pied-billed Grebe. Look for them on small ponds with reeds, as well as on lakes.",
+        "nl": "Deze reis omvat twee futen, de kleine Amerikaanse dodaars en de gedrongen Dikbekfuut. Zoek ze op kleine, rietrijke poelen en op meren."
+      }
+    },
+    "storks": {
+      "here": {
+        "en": "The Wood Stork is the one stork on this trip, a big white bird with a bare grey head that stands in shallow marshes and lagoons.",
+        "nl": "De Kaalkopooievaar is de enige ooievaar op deze reis, een grote witte vogel met een kale grijze kop die in ondiepe moerassen en lagunes staat."
+      }
+    },
+    "frigatebirds-boobies-and-gannets": {
+      "here": {
+        "en": "Two seabirds are on this trip. The Magnificent Frigatebird glides over almost every harbour and beach, and the Blue-footed Booby needs a boat trip or a viewpoint on the Pacific coast.",
+        "nl": "Deze reis omvat twee zeevogels. De Amerikaanse fregatvogel zweeft boven bijna elke haven en elk strand, voor de Blauwvoetgent heb je een boottocht of een uitkijkpunt aan de Pacifische kust nodig."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "Three of these fish-eaters are on this trip. The Neotropic Cormorant is the common one, and the Double-crested Cormorant is a winter visitor.",
+        "nl": "Deze reis omvat drie van deze viseters. De Bigua-aalscholver is de algemene soort, en de Geoorde aalscholver is een wintergast."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Fifteen herons, egrets, ibises and spoonbills are on this trip. The Western Cattle-Egret and Great White Egret are easy to find, and the night herons and Boat-billed Heron wait for dusk or a quiet mangrove.",
+        "nl": "Deze reis omvat vijftien reigers, ibissen en lepelaars. De Westelijke koereiger en de Grote zilverreiger vind je gemakkelijk, de kwakken en de Schuitbekreiger wachten op de schemering of een rustige mangrove."
+      }
+    },
+    "pelicans": {
+      "here": {
+        "en": "Two pelicans are on this trip. The Brown Pelican fishes along the coasts, and the American White Pelican spends the winter on lagoons and large lakes.",
+        "nl": "Deze reis omvat twee pelikanen. De Bruine pelikaan vist langs de kust, en de Witte pelikaan brengt de winter door op lagunes en grote meren."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "Fifteen vultures, kites and hawks are on this trip. Turkey and Black Vultures are in the sky almost everywhere, and the hawks are easiest to find on fence posts, wires and thermals.",
+        "nl": "Deze reis omvat vijftien gieren, wouwen en buizerds. Roodkopgieren en Zwarte gieren zie je bijna overal in de lucht, en de buizerds vind je het gemakkelijkst op hekpalen, draden en in thermiek."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "Four owls are on this trip. The Ferruginous Pygmy-Owl calls by day, the others by night, so a bit of luck or a good guide helps.",
+        "nl": "Deze reis omvat vier uilen. De Braziliaanse dwerguil roept overdag, de andere 's nachts, dus een beetje geluk of een goede gids helpt."
+      }
+    },
+    "trogons-and-quetzals": {
+      "here": {
+        "en": "Two trogons are on this trip, the Gartered Violaceous Trogon of lowland forest and the Mountain Trogon of the highlands. Mexico has more trogons, and the regional packs add them.",
+        "nl": "Deze reis omvat twee trogons, de Gouldtrogon van het laaglandbos en de Mexicaanse trogon van het bergland. Mexico heeft er meer, en de regionale pakketten voegen die toe."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "Three kingfishers are on this trip: the big Ringed Kingfisher, the small Green Kingfisher and the Belted Kingfisher, a winter visitor. All three sit on branches over water.",
+        "nl": "Deze reis omvat drie ijsvogels: de grote Amerikaanse reuzenijsvogel, de kleine Groene ijsvogel en de Bandijsvogel, een wintergast. Alle drie zitten op takken boven water."
+      }
+    },
+    "barbets-and-toucans": {
+      "here": {
+        "en": "One toucan is on this trip, the Keel-billed Toucan, a big-billed bird of humid lowland forest in the south and east.",
+        "nl": "Deze reis omvat een toekan, de Zwavelborsttoekan, een vogel met een enorme snavel uit vochtig laaglandbos in het zuiden en oosten."
+      }
+    },
+    "woodpeckers": {
+      "here": {
+        "en": "Ten woodpeckers are on this trip, from desert birds that nest in cacti to forest species. The Yellow-bellied Sapsucker is a winter visitor from further north.",
+        "nl": "Deze reis omvat tien spechten, van woestijnvogels die in cactussen broeden tot soorten van het bos. De Geelbuiksapspecht is een wintergast uit het noorden."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "Seven falcons and caracaras are on this trip. The American Kestrel and Crested Caracara are the ones you will see most from the road, and the forest-falcons are heard more than seen.",
+        "nl": "Deze reis omvat zeven valken en caracara's. De Amerikaanse torenvalk en de Kuifcaracara zie je het vaakst vanaf de weg, en de bosvalken hoor je vaker dan je ze ziet."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "Four parrots are on this trip, all loud and green. Look for pairs and flocks flying over at dawn and dusk, then check the head colours when they land.",
+        "nl": "Deze reis omvat vier papegaaien, allemaal luid en groen. Let op paren en groepen die bij zonsopgang en zonsondergang overvliegen en kijk naar de kleuren van de kop als ze landen."
+      }
+    },
+    "antbirds": {
+      "here": {
+        "en": "One antbird is on this trip, the Barred Antshrike, a skulking bird of thickets and forest edge in the lowlands. The male is barred black and white with a small crest.",
+        "nl": "Deze reis omvat een miervogel, de Gebandeerde mierklauwier, een schuwe vogel van struikgewas en bosrand in het laagland. Het mannetje is zwart en wit gebandeerd met een kleine kuif."
+      }
+    },
+    "woodcreepers": {
+      "here": {
+        "en": "Three woodcreepers are on this trip, all of lowland and foothill forest. The White-striped Woodcreeper lives only in Mexico.",
+        "nl": "Deze reis omvat drie muisspechten, allemaal van bos in het laagland en de heuvels. De Witbuikmuisspecht leeft alleen in Mexico."
+      }
+    },
+    "becards-tityras-and-allies": {
+      "here": {
+        "en": "Two birds of this group are on this trip, the Masked Tityra and the Rose-throated Becard. Both sit upright in the tops of trees in forest and tall scrub.",
+        "nl": "Deze reis omvat twee vogels uit deze groep, de Maskertityra en de Grote bekarde. Beide zitten rechtop in boomtoppen in bos en hoog struikgewas."
+      }
+    },
+    "tyrant-flycatchers-elaenias-tyrannulets-and-allies": {
+      "here": {
+        "en": "Three small tyrants are on this trip, the Greenish Elaenia, the Northern Beardless-Tyrannulet and the Common Tody-Flycatcher. All three are easy to overlook in scrub and light woodland.",
+        "nl": "Deze reis omvat drie kleine tirannen, de Groene elenia, de Chaparralvliegenpikker en de Geelbuikschoffelsnavel. Alle drie zijn makkelijk te missen in struikgewas en open bos."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies": {
+      "here": {
+        "en": "This is the largest group on the trip, with 27 species. Many are winter visitors from North America, while Vermilion Flycatcher, Great Kiskadee and the kingbirds are easy residents of open country and towns.",
+        "nl": "Dit is de grootste groep van deze reis, met 27 soorten. Veel zijn wintergasten uit Noord-Amerika, terwijl de Rode tiran, de Grote kiskadie en de koningstirannen makkelijke standvogels van open land en dorpen zijn."
+      }
+    },
+    "vireos": {
+      "here": {
+        "en": "Five vireos are on this trip. The Bell's and Yellow-green Vireos are the ones you meet most often, in scrub and light woodland.",
+        "nl": "Deze reis omvat vijf vireo's. De Bellvireo en de Geelgroene vireo kom je het vaakst tegen, in struikgewas en open bos."
+      }
+    },
+    "shrikes": {
+      "here": {
+        "en": "One shrike is on this trip, the Loggerhead Shrike. It sits on wires and fence posts in open country, mostly in the north.",
+        "nl": "Deze reis omvat een klapekster, de Amerikaanse klapekster. Hij zit op draden en hekpalen in open land, vooral in het noorden."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "Two birds of this group are on this trip, the Brown Jay of humid lowland forest edge and the Common Raven of mountains and deserts.",
+        "nl": "Deze reis omvat twee vogels uit deze groep, de Bruine gaai van de vochtige bosrand in het laagland en de Raaf van bergen en woestijnen."
+      }
+    },
+    "penduline-tits-and-verdin": {
+      "here": {
+        "en": "One bird of this group is on this trip, the Verdin, a small grey bird of the northern deserts that works through thorny scrub.",
+        "nl": "Deze reis omvat een vogel uit deze groep, de Geelkopmees, een klein grijs vogeltje van de noordelijke woestijnen dat door doornig struikgewas zoekt."
+      }
+    },
+    "larks": {
+      "here": {
+        "en": "One lark is on this trip, the Shore Lark, a bird of bare fields and short grass on the plains and in the highlands.",
+        "nl": "Deze reis omvat een leeuwerik, de Strandleeuwerik, een vogel van kale velden en kort gras op de vlakten en in het bergland."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "Seven swallows and martins are on this trip. The Barn Swallow is the most common, abundant in winter, and the Mangrove Swallow is the one to look for over water.",
+        "nl": "Deze reis omvat zeven zwaluwen. De Boerenzwaluw is de algemeenste, in de winter talrijk, en de Mangrovezwaluw zoek je boven water."
+      }
+    },
+    "kinglets": {
+      "here": {
+        "en": "One kinglet is on this trip, the Ruby-crowned Kinglet, a winter visitor that joins mixed flocks in pine-oak woods and scrub.",
+        "nl": "Deze reis omvat een goudhaan, de Roodkroonhaan, een wintergast die zich aansluit bij gemengde groepen in dennen-eikenbos en struikgewas."
+      }
+    },
+    "treecreepers": {
+      "here": {
+        "en": "One treecreeper is on this trip, the Brown Creeper, a quiet bird of the pine and oak woods in the mountains.",
+        "nl": "Deze reis omvat een boomkruiper, de Amerikaanse boomkruiper, een stille vogel van dennen- en eikenbos in de bergen."
+      }
+    },
+    "gnatcatchers": {
+      "here": {
+        "en": "One gnatcatcher is on this trip, the Blue-grey Gnatcatcher, common in scrub and open woodland across much of the country.",
+        "nl": "Deze reis omvat een muggenvanger, de Blauwgrijze muggenvanger, algemeen in struikgewas en open bos in een groot deel van het land."
+      }
+    },
+    "wrens": {
+      "here": {
+        "en": "Five wrens are on this trip, from the Rock and Canyon Wrens of cliffs and rocky slopes to the Spot-breasted Wren of lowland scrub. The Northern House Wren is the one in gardens.",
+        "nl": "Deze reis omvat vijf winterkoningen, van de Amerikaanse rotswinterkoning en de Kloofwinterkoning van wanden en rotsige hellingen tot de Vlekborstwinterkoning van struikgewas in het laagland. De Huiswinterkoning is die van de tuinen."
+      }
+    },
+    "catbirds-mockingbirds-and-thrashers": {
+      "here": {
+        "en": "Three birds of this group are on this trip. The Northern Mockingbird is a common voice in towns and scrub, and the Blue Mockingbird lives only in Mexico.",
+        "nl": "Deze reis omvat drie vogels uit deze groep. De Noordelijke spotlijster laat zich veel horen in dorpen en struikgewas, en de Blauwe spotlijster leeft alleen in Mexico."
+      }
+    },
+    "thrushes": {
+      "here": {
+        "en": "Eleven thrushes are on this trip. The Clay-coloured Thrush is the one you meet in town gardens, and two of the others, the Rufous-backed Robin and the Russet Nightingale-Thrush, live only in Mexico.",
+        "nl": "Deze reis omvat elf lijsters. De Graylijster kom je tegen in tuinen in dorpen, en twee van de andere, de Roestruglijster en de Bruinkopdwerglijster, leven alleen in Mexico."
+      }
+    },
+    "waxwings": {
+      "here": {
+        "en": "One waxwing is on this trip, the Cedar Waxwing, a winter visitor that moves in flocks to wherever berries are ripe.",
+        "nl": "Deze reis omvat een pestvogel, de Cederpestvogel, een wintergast die in groepen rondtrekt naar plekken met rijpe bessen."
+      }
+    },
+    "silky-flycatchers": {
+      "here": {
+        "en": "One silky-flycatcher is on this trip, the Phainopepla, a glossy black bird of desert scrub that feeds on mistletoe berries.",
+        "nl": "Deze reis omvat een zijdevliegenvanger, de Zwarte zijdevliegenvanger, een glanzend zwarte vogel van woestijnstruikgewas die bessen van maretak eet."
+      }
+    },
+    "olive-warbler": {
+      "here": {
+        "en": "One bird of its own group is on this trip, the Olive Warbler, a rarely seen resident of high pine and fir forest in the mountains.",
+        "nl": "Deze reis omvat een vogel uit een eigen groep, de Oranjekopzanger, een zelden geziene standvogel van hoog dennen- en sparrenbos in de bergen."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "One bird of this group is on this trip, the House Sparrow, an introduced bird that lives in towns and villages.",
+        "nl": "Deze reis omvat een vogel uit deze groep, de Huismus, een ingevoerde soort die in steden en dorpen leeft."
+      }
+    },
+    "wagtails-and-pipits": {
+      "here": {
+        "en": "One pipit is on this trip, the Buff-bellied Pipit, a winter visitor to fields, shores and wet grass.",
+        "nl": "Deze reis omvat een piper, de Amerikaanse waterpieper, een wintergast op velden, oevers en nat gras."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "here": {
+        "en": "Five birds of this group are on this trip. The House Finch is common in towns and dry country, and the euphonias are small fruit-eaters of tropical forest edge.",
+        "nl": "Deze reis omvat vijf vogels uit deze groep. De Mexicaanse roodmus is algemeen in dorpen en droog land, en de organisten zijn kleine vruchteneters van de tropische bosrand."
+      }
+    },
+    "new-world-sparrows": {
+      "here": {
+        "en": "Nine sparrows and towhees are on this trip, most of them winter visitors from North America. Chipping and Clay-coloured Sparrows are the ones you find in flocks on open ground.",
+        "nl": "Deze reis omvat negen gorzen en towies, de meeste wintergasten uit Noord-Amerika. De Musgors en de Bleke gors vind je in groepen op open grond."
+      }
+    },
+    "yellow-breasted-chat": {
+      "here": {
+        "en": "One chat is on this trip, the Yellow-breasted Chat, which skulks in thickets and is more often heard than seen.",
+        "nl": "Deze reis omvat een zanger uit deze groep, de Geelborstzanger, die zich verscholen houdt in struikgewas en vaker te horen is dan te zien."
+      }
+    },
+    "blackbirds": {
+      "here": {
+        "en": "Fourteen birds of this group are on this trip, from the Great-tailed Grackle of every town square to seven orioles. The Baltimore and Orchard Orioles are winter visitors.",
+        "nl": "Deze reis omvat veertien vogels uit deze groep, van de Langstaarttroepiaal op elk dorpsplein tot zeven troepialen. De Baltimoretroepiaal en de Tuintroepiaal zijn wintergasten."
+      }
+    },
+    "wood-warblers": {
+      "here": {
+        "en": "Twenty-two wood-warblers are on this trip, many of them winter visitors from North America. The Yellow-rumped Warbler is the one you see almost everywhere.",
+        "nl": "Deze reis omvat tweeëntwintig Amerikaanse zangers, veel daarvan wintergasten uit Noord-Amerika. De Geelstuitzanger zie je bijna overal."
+      }
+    },
+    "cardinals-grosbeaks-and-allies": {
+      "here": {
+        "en": "Fourteen cardinals, grosbeaks, buntings and tanagers are on this trip. The Northern Cardinal lives in gardens and scrub, and the Orange-breasted Bunting is a Mexican endemic.",
+        "nl": "Deze reis omvat veertien kardinalen, dikbekken, gorzen en tangaren. De Rode kardinaal leeft in tuinen en struikgewas, en de Regenbooggors is endemisch in Mexico."
+      }
+    },
+    "tanagers-and-allies": {
+      "here": {
+        "en": "Five birds of this group are on this trip, two saltators, a tanager, a grassquit and a seedeater. Most live in scrub and weedy fields in the lowlands.",
+        "nl": "Deze reis omvat vijf vogels uit deze groep, twee saltators, een tangare, een jacarinagors en een zaadeter. De meeste leven in struikgewas en onkruidrijke velden in het laagland."
+      }
+    }
+  },
+  "units": {
+    "waterfowl-1": {
+      "title": {
+        "en": "Dabbling ducks and a whistling-duck",
+        "nl": "Eenden van ondiep water en een fluiteend"
+      },
+      "intro": {
+        "en": "Seven ducks of shallow lagoons and marshes, plus the long-legged Black-bellied Whistling-Duck that stays all year. Males show the clearest colours in winter: shoveler bill, wigeon cream forehead, chestnut Cinnamon Teal.",
+        "nl": "Zeven eenden van ondiepe lagunes en moerassen, plus de langpotige Zwartbuikfluiteend die het hele jaar blijft. De mannetjes zijn in de winter het mooist gekleurd: de brede snavel van de slobeend, het crèmekleurige voorhoofd van de smient en de kastanjebruine Kaneeltaling."
+      }
+    },
+    "waterfowl-2": {
+      "title": {
+        "en": "Teal, pintail and diving ducks",
+        "nl": "Taling, pijlstaart en duikeenden"
+      },
+      "intro": {
+        "en": "Winter ducks of open lakes and reservoirs. Dabbling ducks like the pintail and teal pick food at the surface, while the scaup, Ring-necked Duck, Bufflehead and Ruddy Duck dive.",
+        "nl": "Wintereenden van open meren en stuwmeren. Eenden als de pijlstaart en de taling zoeken hun voedsel aan het oppervlak, terwijl de topper, de Ringsnaveleend, de Buffelkopeend en de Rosse stekelstaart duiken."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "title": {
+        "en": "Northern Bobwhite",
+        "nl": "Bobwhite"
+      },
+      "intro": {
+        "en": "A small, round quail of brushy fields and farmland. Listen for the whistled bob-white and watch for coveys running across tracks.",
+        "nl": "Een kleine, ronde kwartel van struikrijke velden en akkers. Luister naar het gefluit bob-white en let op groepjes die over paden rennen."
+      }
+    },
+    "pigeons-and-doves-1": {
+      "title": {
+        "en": "Town doves and larger pigeons",
+        "nl": "Stadsduiven en grotere duiven"
+      },
+      "intro": {
+        "en": "Five doves, from the Inca Dove with its scaly look and the Collared Dove of towns to the Red-billed Pigeon of lowland woods and the Band-tailed Pigeon of mountain forest. Check bill colour and the pattern at the neck.",
+        "nl": "Vijf duiven, van de geschubde Aztekenduif en de Turkse tortel in dorpen tot de Roodsnavelduif van laaglandbos en de Bandstaartduif van het bergbos. Let op de kleur van de snavel en de tekening in de nek."
+      }
+    },
+    "pigeons-and-doves-2": {
+      "title": {
+        "en": "Everyday doves of fields and gardens",
+        "nl": "Alledaagse duiven van velden en tuinen"
+      },
+      "intro": {
+        "en": "Four doves that walk on the ground in gardens, plazas, farmland and road verges. The White-winged and Mourning Doves are the common ones everywhere. Look at the wing pattern and the face.",
+        "nl": "Vier duiven die op de grond lopen in tuinen, op plein, akker en berm. De Witvleugeltreurduif en de Treurduif zijn overal algemeen. Let op de tekening van de vleugel en het gezicht."
+      }
+    },
+    "cuckoos": {
+      "title": {
+        "en": "Cuckoos, nightjars and a swift",
+        "nl": "Koekoeken, nachtzwaluwen, gierzwaluw"
+      },
+      "intro": {
+        "en": "A mixed group of birds with long tails or long wings. The ani and roadrunner are on the ground by day, the squirrel-cuckoo is in the trees, and the nightjars and swift fly at dusk or sit on the road at night.",
+        "nl": "Een gemengde groep vogels met lange staarten of lange vleugels. De ani en de renkoekoek zitten overdag op de grond, de eekhoornkoekoek zit in de bomen, en de nachtzwaluwen en de gierzwaluw vliegen in de schemering of zitten 's nachts op de weg."
+      }
+    },
+    "hummingbirds-1": {
+      "title": {
+        "en": "Migrant hummingbirds and a violetear",
+        "nl": "Trekkende kolibries en een violetoor"
+      },
+      "intro": {
+        "en": "Three of the four spend the winter in Mexico, arriving in autumn from further north. Check the throat colour on the males. The females are harder, so look at the flanks and the tail.",
+        "nl": "Drie van de vier brengen de winter in Mexico door en komen in het najaar uit het noorden. Kijk bij de mannetjes naar de kleur van de keel. De vrouwtjes zijn lastiger, let dan op de flanken en de staart."
+      }
+    },
+    "hummingbirds-2": {
+      "title": {
+        "en": "Hummingbirds of garden and hillside",
+        "nl": "Kolibries van tuin en berghelling"
+      },
+      "intro": {
+        "en": "Four hummingbirds of gardens, dry scrub and mountain slopes. Look for the red bill with a black tip on the Broad-billed, and the white ear stripe on the White-eared.",
+        "nl": "Vier kolibries van tuinen, droog struikgewas en berghellingen. Let op de rode snavel met zwarte punt van de Breedsnavelkolibrie en de witte oorstreep van de Witoorsaffierkolibrie."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "title": {
+        "en": "Coots, rails and the Limpkin",
+        "nl": "Meerkoeten, rallen en de Koerlan"
+      },
+      "intro": {
+        "en": "Birds of reedy water. The American Coot swims in open water, while the rails and gallinules keep at the reed edge, and the Limpkin wades in marshes.",
+        "nl": "Vogels van rietrijk water. De Amerikaanse meerkoet zwemt op open water, de rallen en waterhoenders blijven aan de rietrand, en de Koerlan loopt door moerassen."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Stilt, avocet, plovers, oystercatcher",
+        "nl": "Steltkluut, kluut en plevieren"
+      },
+      "intro": {
+        "en": "Larger, bold-patterned shorebirds of mudflats and lagoon edges. Look at bill shape and leg colour, and at the pattern of the breast band on the Killdeer. The Spotted Sandpiper bobs along stream banks.",
+        "nl": "Grotere steltlopers met een opvallende tekening, van wadplaten en lagunerand. Kijk naar de vorm van de snavel en de kleur van de poten, en naar de borstbanden van de Killdeerplevier. De Amerikaanse oeverloper wipt langs beekoevers."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Dowitchers, jacana and yellowlegs",
+        "nl": "Snippen, jaçana en geelpootruiters"
+      },
+      "intro": {
+        "en": "Medium-sized shorebirds that wade in shallow water. The two dowitchers look almost the same, so listen to the call. The jacana has long toes and yellow wings and walks on floating plants.",
+        "nl": "Middelgrote steltlopers die door ondiep water waden. De twee grijze snippen lijken bijna op elkaar, dus luister naar de roep. De jaçana heeft lange tenen en gele vleugels en loopt over drijvende planten."
+      }
+    },
+    "shorebirds-3": {
+      "title": {
+        "en": "Sandpipers, yellowlegs and sanderling",
+        "nl": "Strandlopers, geelpootruiters en drieteenstrandloper"
+      },
+      "intro": {
+        "en": "Small sandpipers in big flocks on tidal flats, and the larger yellowlegs and sanderling on beaches. Look at leg colour and bill length to separate the small ones.",
+        "nl": "Kleine strandlopers in grote groepen op getijdenvlakten, en de grotere geelpootruiters en drieteenstrandloper op stranden. Let op de kleur van de poten en de lengte van de snavel om de kleintjes uit elkaar te houden."
+      }
+    },
+    "gulls-terns-and-skimmers-1": {
+      "title": {
+        "en": "Gulls, a small tern and the skimmer",
+        "nl": "Meeuwen, een dwergstern en de schaarbek"
+      },
+      "intro": {
+        "en": "Three gulls with different looks, plus the Least Tern and Black Skimmer of sandy shores. Look for the dark body and red bill of Heermann's Gull, and the black hood of the Laughing Gull.",
+        "nl": "Drie meeuwen die er elk anders uitzien, plus de Amerikaanse dwergstern en de Amerikaanse schaarbek van zandige kusten. Let op het donkere lijf en de rode snavel van de Heermannmeeuw en de zwarte kap van de Lachmeeuw."
+      }
+    },
+    "gulls-terns-and-skimmers-2": {
+      "title": {
+        "en": "Terns of beach and lagoon",
+        "nl": "Sterns van strand en lagune"
+      },
+      "intro": {
+        "en": "Five terns that plunge-dive for fish along the coast and over big lagoons. The most helpful clues are the bill colour and the shape of the crest.",
+        "nl": "Vijf sterns die langs de kust en boven grote lagunes naar vis duiken. De kleur van de snavel en de vorm van de kuif helpen het meest."
+      }
+    },
+    "grebes": {
+      "title": {
+        "en": "Grebes, frigatebird, stork and booby",
+        "nl": "Futen, fregatvogel, ooievaar en gent"
+      },
+      "intro": {
+        "en": "A mix of waterbirds. The grebes are small and dive on ponds and lakes, the Wood Stork stands in marshes, and the frigatebird and booby belong to the sea.",
+        "nl": "Een mengelmoes van watervogels. De futen zijn klein en duiken op poelen en meren, de Kaalkopooievaar staat in moerassen, en de fregatvogel en de gent horen bij de zee."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "title": {
+        "en": "Cormorants and the Anhinga",
+        "nl": "Aalscholvers en de slangenhalsvogel"
+      },
+      "intro": {
+        "en": "Dark fish-eaters that perch with their wings held out to dry. Look at the length of the tail and the throat patch to tell the cormorants apart, and for the very thin neck of the Anhinga.",
+        "nl": "Donkere viseters die met uitgespreide vleugels zitten te drogen. Kijk naar de lengte van de staart en de keelvlek om de aalscholvers uit elkaar te houden, en naar de zeer dunne hals van de slangenhalsvogel."
+      }
+    },
+    "herons-ibis-and-allies-1": {
+      "title": {
+        "en": "Night herons and other quiet herons",
+        "nl": "Kwakken en andere stille reigers"
+      },
+      "intro": {
+        "en": "Five herons that keep to shade, mangroves and stream edges. Several are active at dusk, and the Boat-billed Heron and the tiger-heron are the ones you need patience for.",
+        "nl": "Vijf reigers die in de schaduw, in mangroves en langs beken blijven. Verscheidene zijn actief in de schemering, en voor de Schuitbekreiger en de tijgerroerdomp heb je geduld nodig."
+      }
+    },
+    "herons-ibis-and-allies-2": {
+      "title": {
+        "en": "Egrets and small herons",
+        "nl": "Zilverreigers en kleine reigers"
+      },
+      "intro": {
+        "en": "Five small to medium herons of wet fields, shores and pools. Look at the colour of the bill and the feet, and at how they hunt. The Reddish Egret runs and dances while it fishes.",
+        "nl": "Vijf kleine tot middelgrote reigers van natte velden, oevers en poelen. Let op de kleur van snavel en poten en op de manier waarop ze jagen. De Roodhalsreiger rent en danst terwijl hij vist."
+      }
+    },
+    "herons-ibis-and-allies-3": {
+      "title": {
+        "en": "Big herons, ibises, spoonbill, pelicans",
+        "nl": "Reigers, ibissen, lepelaar, pelikanen"
+      },
+      "intro": {
+        "en": "The largest waterbirds of the lagoons: two ibises, the pink Roseate Spoonbill and two pelicans, plus the tall Great Blue Heron and Great White Egret. Look at the bill shape first.",
+        "nl": "De grootste watervogels van de lagunes: twee ibissen, de roze Rode lepelaar en twee pelikanen, plus de hoge Amerikaanse blauwe reiger en Grote zilverreiger. Kijk eerst naar de vorm van de snavel."
+      }
+    },
+    "vultures-hawks-and-allies-1": {
+      "title": {
+        "en": "Vultures, kites and the Osprey",
+        "nl": "Gieren, wouwen en de Visarend"
+      },
+      "intro": {
+        "en": "Two vultures that you will see circling over almost any town, plus two kites and the Osprey. Look at the wing shape and the tail as they glide overhead.",
+        "nl": "Twee gieren die je boven bijna elk dorp ziet cirkelen, plus twee wouwen en de Visarend. Let op de vorm van de vleugels en de staart als ze overzweven."
+      }
+    },
+    "vultures-hawks-and-allies-2": {
+      "title": {
+        "en": "Hawks of open country and water",
+        "nl": "Buizerds van open land en water"
+      },
+      "intro": {
+        "en": "Five hawks of roadsides, marshes, scrub and rivers. The Northern Harrier flies low over fields with a white rump, and the Harris's Hawk perches in desert scrub, often in groups.",
+        "nl": "Vijf roofvogels van bermen, moerassen, struikgewas en rivieren. De Amerikaanse blauwe kiekendief vliegt laag over velden met een witte stuit, en de Woestijnbuizerd zit vaak in groepjes in woestijnstruikgewas."
+      }
+    },
+    "vultures-hawks-and-allies-3": {
+      "title": {
+        "en": "Soaring hawks of hills and forest",
+        "nl": "Zweefbuizerds van heuvels en bos"
+      },
+      "intro": {
+        "en": "Five hawks that soar on warm air over hills, farmland and forest. Swainson's Hawk passes through in big flocks on migration, and the Zone-tailed Hawk soars like a Turkey Vulture.",
+        "nl": "Vijf buizerds die op warme lucht zweven boven heuvels, akkers en bos. De Prairiebuizerd trekt in grote groepen door, en de Bandstaartbuizerd zweeft als een Roodkopgier."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Owls of fields, forest and scrub",
+        "nl": "Uilen van velden, bos en struikgewas"
+      },
+      "intro": {
+        "en": "Four owls of different sizes, from the Great Horned Owl with its ear tufts to the tiny Ferruginous Pygmy-Owl. Calls are the surest way to find them.",
+        "nl": "Vier uilen van verschillende grootte, van de Amerikaanse oehoe met zijn oorpluimen tot de kleine Braziliaanse dwerguil. Hun roep is de zekerste manier om ze te vinden."
+      }
+    },
+    "trogons-and-quetzals": {
+      "title": {
+        "en": "Trogons, kingfishers and a toucan",
+        "nl": "Trogons, ijsvogels en een toekan"
+      },
+      "intro": {
+        "en": "Colourful birds of forest and water. The trogons sit upright and still in the shade, the kingfishers watch from branches over rivers, and the Keel-billed Toucan flies over the canopy.",
+        "nl": "Kleurrijke vogels van bos en water. De trogons zitten rechtop en stil in de schaduw, de ijsvogels loeren vanaf takken boven rivieren, en de Zwavelborsttoekan vliegt over het kronendak."
+      }
+    },
+    "woodpeckers-1": {
+      "title": {
+        "en": "Woodpeckers of desert, scrub and oak",
+        "nl": "Spechten van woestijn en eikenbos"
+      },
+      "intro": {
+        "en": "Four resident woodpeckers and the winter-visiting Yellow-bellied Sapsucker. Check the pattern of the back and the colour of the crown and belly.",
+        "nl": "Vier standspechten en de overwinterende Geelbuiksapspecht. Let op de tekening van de rug en de kleur van de kruin en de buik."
+      }
+    },
+    "woodpeckers-2": {
+      "title": {
+        "en": "Woodpeckers of forest and woodland",
+        "nl": "Spechten van bos en bosrand"
+      },
+      "intro": {
+        "en": "Five woodpeckers, from the huge Pale-billed to the small Hairy. The Northern Flicker feeds on the ground and shows a white rump in flight.",
+        "nl": "Vijf spechten, van de enorme Koningsspecht tot de kleine Haarspecht. De Gouden grondspecht zoekt voedsel op de grond en toont een witte stuit in de vlucht."
+      }
+    },
+    "falcons-and-caracaras": {
+      "title": {
+        "en": "Falcons, caracara and forest-falcon",
+        "nl": "Valken, caracara en bosvalk"
+      },
+      "intro": {
+        "en": "Seven birds of prey with pointed wings or long legs. Look for the American Kestrel on wires, and the Crested Caracara walking on the ground. The Laughing Falcon and forest-falcons live in forest and are easiest to hear.",
+        "nl": "Zeven roofvogels met puntige vleugels of lange poten. Zoek de Amerikaanse torenvalk op draden en de Kuifcaracara lopend op de grond. De Lachvalk en de bosvalken leven in bos en zijn het gemakkelijkst te horen."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "title": {
+        "en": "Parrots, amazons and a parakeet",
+        "nl": "Papegaaien, amazones en een parkiet"
+      },
+      "intro": {
+        "en": "Four green parrots that fly in noisy pairs and flocks. Look at the colour on the forehead, crown and face when they land.",
+        "nl": "Vier groene papegaaien die in luidruchtige paren en groepen vliegen. Kijk naar de kleur van voorhoofd, kruin en gezicht als ze landen."
+      }
+    },
+    "antbirds": {
+      "title": {
+        "en": "Antshrike and woodcreepers",
+        "nl": "Mierklauwier en muisspechten"
+      },
+      "intro": {
+        "en": "Four forest and thicket birds. The Barred Antshrike skulks in dense growth, while the woodcreepers prop themselves on a stiff tail and climb tree trunks. Size, bill length and the streaking on the back tell the woodcreepers apart.",
+        "nl": "Vier vogels van bos en struikgewas. De Gebandeerde mierklauwier sluipt door dichte begroeiing, terwijl de muisspechten op hun stijve staart steunen en langs boomstammen omhoog klimmen. Grootte, snavellengte en de streping op de rug onderscheiden de muisspechten."
+      }
+    },
+    "becards-tityras-and-allies": {
+      "title": {
+        "en": "Becards, tityras and small tyrants",
+        "nl": "Bekarde, tityra en kleine tirannen"
+      },
+      "intro": {
+        "en": "Two chunky canopy birds and three small tyrant flycatchers. The Masked Tityra and Rose-throated Becard sit upright in the tops of trees, and the little tyrants are best told by head pattern and the way they hold the tail.",
+        "nl": "Twee gedrongen vogels uit het kronendak en drie kleine tirannen. De Maskertityra en de Grote bekarde zitten rechtop in boomtoppen, en de kleine tirannen herken je het best aan de kopstekening en de staarthouding."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies-1": {
+      "title": {
+        "en": "Pewees and small olive flycatchers",
+        "nl": "Piewies en kleine feetirannen"
+      },
+      "intro": {
+        "en": "Seven plain olive-grey flycatchers, most of them winter visitors from North America. The small ones with an eye-ring and wing bars are hard to separate in silence, so wait for a call. The wood-pewees lack the eye-ring and have longer wings.",
+        "nl": "Zeven eenvoudige olijfgrijze tirannen, de meeste wintergasten uit Noord-Amerika. De kleine soorten met een oogring en vleugelstrepen zijn zonder geluid lastig uit elkaar te houden, dus wacht op een roep. De bospiewies hebben geen oogring en hebben langere vleugels."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies-2": {
+      "title": {
+        "en": "Phoebes, Vermilion Flycatcher and more",
+        "nl": "Phoebes, Rode tiran en andere tirannen"
+      },
+      "intro": {
+        "en": "Flycatchers that sit on a low perch, dart out after an insect and come back. The male Vermilion Flycatcher is unmistakable, and the phoebes are easy by their dark colours and the way they wag the tail. The rest are smaller olive birds of woods and scrub.",
+        "nl": "Tirannen die op een lage zitplaats wachten, een insect achternaschieten en terugkeren. Het mannetje van de Rode tiran is onmiskenbaar, en de phoebes herken je aan hun donkere kleuren en het kwispelen met de staart. De rest zijn kleinere olijfkleurige vogels van bos en struikgewas."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies-3": {
+      "title": {
+        "en": "Kiskadee and yellow-bellied flycatchers",
+        "nl": "Kiskadie en geelbuiktirannen"
+      },
+      "intro": {
+        "en": "Yellow-bellied flycatchers with brown backs and heavy bills, the commonest tyrants of towns, scrub and forest edge. The Great Kiskadee and Social Flycatcher are bold and noisy. The crested flycatchers look alike, so go by throat colour, belly colour and voice.",
+        "nl": "Geelbuiktirannen met een bruine rug en een zware snavel, de algemeenste tirannen van dorpen, struikgewas en bosrand. De Grote kiskadie en de Roodkruintiran zijn brutaal en luidruchtig. De kuiftirannen lijken op elkaar, dus let op de kleur van keel en buik en op de stem."
+      }
+    },
+    "tyrant-flycatchers-pewees-kingbirds-and-allies-4": {
+      "title": {
+        "en": "Kingbirds and other big flycatchers",
+        "nl": "Koningstirannen en andere tirannen"
+      },
+      "intro": {
+        "en": "Kingbirds sit in the open on wires, fences and treetops, with a grey head, yellow belly and a dark tail. Tell them by tail edge, throat and call. The Scissor-tailed Flycatcher is the one with the very long forked tail.",
+        "nl": "Koningstirannen zitten in het open op draden, hekken en boomtoppen, met een grijze kop, gele buik en donkere staart. Je onderscheidt ze aan de staartrand, de keel en de roep. De Zwaluwstaartkoningstiran is die met de zeer lange gevorkte staart."
+      }
+    },
+    "vireos": {
+      "title": {
+        "en": "Vireos",
+        "nl": "Vireo's"
+      },
+      "intro": {
+        "en": "Small, greenish songbirds that move slowly through leaves and look closely at each twig. Check the eye-ring or spectacles, the wing bars and the head colour. The vireos here are mostly winter visitors, plus a few residents.",
+        "nl": "Kleine, groenige zangvogels die langzaam door het blad bewegen en elke twijg nauwkeurig bekijken. Let op de oogring of bril, de vleugelstrepen en de kleur van de kop. De vireo's hier zijn vooral wintergasten, aangevuld met een paar standvogels."
+      }
+    },
+    "shrikes": {
+      "title": {
+        "en": "Shrike, jay, raven, Verdin and lark",
+        "nl": "Klapekster, gaai, raaf, mees, leeuwerik"
+      },
+      "intro": {
+        "en": "Five birds from five groups, mostly of open and dry country. The Loggerhead Shrike sits on wires with its black mask, the Verdin is a tiny grey bird with a yellow head, and the Brown Jay is a big, noisy bird of forest edge.",
+        "nl": "Vijf vogels uit vijf groepen, vooral van open en droog land. De Amerikaanse klapekster zit met zijn zwarte masker op draden, de Geelkopmees is een klein grijs vogeltje met een gele kop, en de Bruine gaai is een grote, luidruchtige vogel van de bosrand."
+      }
+    },
+    "martins-and-swallows": {
+      "title": {
+        "en": "Swallows and martins",
+        "nl": "Zwaluwen"
+      },
+      "intro": {
+        "en": "Seven swallows that you see over water, fields and towns. Look at the underparts and the rump: the white flank patches of the Violet-green, the pale rump of the Cliff Swallow and the white belly of the Mangrove Swallow help, along with the tail shape.",
+        "nl": "Zeven zwaluwen die je boven water, velden en dorpen ziet. Kijk naar de onderkant en de stuit: de witte flankvlekken van de Groene zwaluw, de lichte stuit van de Amerikaanse klifzwaluw en de witte buik van de Mangrovezwaluw helpen, net als de staartvorm."
+      }
+    },
+    "kinglets": {
+      "title": {
+        "en": "Gnatcatcher, kinglet and creeper",
+        "nl": "Muggenvanger, goudhaan en boomkruiper"
+      },
+      "intro": {
+        "en": "Three small insect-eaters that never sit still. The gnatcatcher cocks a long black tail with white edges, the kinglet flicks its wings, and the creeper spirals up trunks in pine and oak woods.",
+        "nl": "Drie kleine insecteneters die nooit stilzitten. De muggenvanger houdt een lange zwarte staart met witte randen omhoog, de goudhaan wipt met zijn vleugels, en de boomkruiper klimt in spiralen langs stammen in dennen- en eikenbos."
+      }
+    },
+    "wrens": {
+      "title": {
+        "en": "Wrens",
+        "nl": "Winterkoningen"
+      },
+      "intro": {
+        "en": "Small brown birds that cock the tail and sing loudly from cover. The Rock and Canyon Wrens live on rocky slopes and cliffs, the Marsh Wren in reeds, and the House Wren in gardens and scrub. The Spot-breasted Wren has a boldly marked breast.",
+        "nl": "Kleine bruine vogels die de staart omhoog houden en luid zingen vanuit dekking. De Amerikaanse rotswinterkoning en de Kloofwinterkoning leven op rotsige hellingen en wanden, de Moeraswinterkoning in riet en de Huiswinterkoning in tuinen en struikgewas. De Vlekborstwinterkoning heeft een opvallend getekende borst."
+      }
+    },
+    "catbirds-mockingbirds-and-thrashers": {
+      "title": {
+        "en": "Mockingbirds and a catbird",
+        "nl": "Spotlijsters en een katvogel"
+      },
+      "intro": {
+        "en": "Slim, long-tailed birds of scrub and gardens with a rich, varied song. The Northern Mockingbird is grey with white wing patches, the Grey Catbird is slate grey with a black cap, and the Blue Mockingbird is a dark blue-grey bird found only in Mexico.",
+        "nl": "Slanke vogels met een lange staart uit struikgewas en tuinen, met een rijk en gevarieerd lied. De Noordelijke spotlijster is grijs met witte vleugelvlekken, de Katvogel is leigrijs met een zwarte kap, en de Blauwe spotlijster is een donkerblauwgrijze vogel die alleen in Mexico leeft."
+      }
+    },
+    "thrushes-1": {
+      "title": {
+        "en": "Bluebirds, solitaire and shy thrushes",
+        "nl": "Sialia's, solitaire en schuwe lijsters"
+      },
+      "intro": {
+        "en": "The bluebirds are easy to spot, perched in the open. The Brown-backed Solitaire sings from forest trees, and the nightingale-thrushes and Swainson's Thrush stay low and quiet in the shade, so look for the orange bill or the buff eye-ring.",
+        "nl": "De sialia's vallen op als ze in het open zitten. De Bruinrugsolitaire zingt vanuit bomen in het bos, en de dwerglijsters blijven laag en stil in de schaduw, dus let op de oranje snavel of de bruingele oogring."
+      }
+    },
+    "thrushes-2": {
+      "title": {
+        "en": "Robins and thrushes of gardens and woods",
+        "nl": "Lijsters van tuinen en bossen"
+      },
+      "intro": {
+        "en": "The Clay-coloured Thrush is the plain brown garden bird of lowland towns, and the Rufous-backed Robin is the one to find in highland gardens. The Wood and Hermit Thrushes are winter visitors that hop on the forest floor.",
+        "nl": "De Graylijster is de eenvoudige bruine tuinvogel van dorpen in het laagland, en de Roestruglijster zoek je in tuinen in het bergland. De Amerikaanse boslijster en de Heremietlijster zijn wintergasten die over de bosbodem huppelen."
+      }
+    },
+    "waxwings": {
+      "title": {
+        "en": "Waxwing, Phainopepla, pipit and more",
+        "nl": "Pestvogel, zijdevliegenvanger en meer"
+      },
+      "intro": {
+        "en": "Five birds from five different groups. The Cedar Waxwing and Phainopepla both wear a crest and eat berries, the Buff-bellied Pipit walks on open ground, and the Olive Warbler lives high in pine forest.",
+        "nl": "Vijf vogels uit vijf verschillende groepen. De Cederpestvogel en de Zwarte zijdevliegenvanger hebben allebei een kuif en eten bessen, de Amerikaanse waterpieper loopt over open grond en de Oranjekopzanger leeft hoog in dennenbos."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "title": {
+        "en": "Finches, goldfinch and euphonias",
+        "nl": "Vinken, sijzen en organisten"
+      },
+      "intro": {
+        "en": "Small seed- and fruit-eaters with short, thick bills. The House Finch and Lesser Goldfinch visit gardens and dry scrub, and the stubby-billed euphonias feed in fruiting trees. The Black-headed Siskin is rare.",
+        "nl": "Kleine zaad- en vruchteneters met een korte, dikke snavel. De Mexicaanse roodmus en de Witbandsijs bezoeken tuinen en droog struikgewas, en de organisten met hun stompe snavel eten in vruchtdragende bomen. De Zwartkopsijs is zeldzaam."
+      }
+    },
+    "new-world-sparrows-1": {
+      "title": {
+        "en": "Sparrows of fields and scrub",
+        "nl": "Gorzen van velden en struikgewas"
+      },
+      "intro": {
+        "en": "Five streaky or plain brown sparrows that feed on the ground. Look at the head: the rufous cap of the Chipping Sparrow, the bold face pattern of the Lark Sparrow and the pale crown stripe of the Clay-coloured Sparrow.",
+        "nl": "Vijf gestreepte of effen bruine gorzen die op de grond foerageren. Kijk naar de kop: de roestbruine kruin van de Musgors, de opvallende gezichtstekening van de Roodoorgors en de lichte kruinstreep van de Bleke gors."
+      }
+    },
+    "new-world-sparrows-2": {
+      "title": {
+        "en": "Towhees, sparrows and a chat",
+        "nl": "Towies, gorzen en een geelborstzanger"
+      },
+      "intro": {
+        "en": "Two towhees that scratch in leaf litter, two sparrows of brush and rocky slopes, and the Yellow-breasted Chat, a large, yellow-breasted thicket bird with white spectacles. All are shy, so listen for scratching and sharp calls.",
+        "nl": "Twee towies die door het bladstrooisel scharrelen, twee gorzen van struikgewas en rotsige hellingen, en de Geelborstzanger, een grote struikvogel met gele borst en witte bril. Allemaal schuw, dus luister naar geschrabbel en scherpe roepjes."
+      }
+    },
+    "blackbirds-1": {
+      "title": {
+        "en": "Meadowlarks, orioles and a blackbird",
+        "nl": "Weidespreeuwen en troepialen"
+      },
+      "intro": {
+        "en": "Yellow-breasted meadowlarks of grassland and orange or yellow orioles of trees and gardens. The two meadowlarks look alike, so go by song and place. The Yellow-headed Blackbird gathers in noisy flocks in marshes and fields.",
+        "nl": "Weidespreeuwen met gele borst van grasland en oranje of gele troepialen van bomen en tuinen. De twee weidespreeuwen lijken op elkaar, dus ga af op zang en plaats. De Geelkoptroepiaal verzamelt zich in luidruchtige groepen in moerassen en velden."
+      }
+    },
+    "blackbirds-2": {
+      "title": {
+        "en": "Grackles, cowbirds and more orioles",
+        "nl": "Koevogels, grakels en meer troepialen"
+      },
+      "intro": {
+        "en": "The Great-tailed Grackle is the big black bird of every plaza, and the cowbirds are smaller. Scott's, Baltimore and Audubon's Orioles are the bright ones, and the Red-winged Blackbird sits in reeds with a red shoulder.",
+        "nl": "De Langstaarttroepiaal is de grote zwarte vogel van elk dorpsplein, en de koevogels zijn kleiner. Scott-troepiaal, Baltimoretroepiaal en Zwartkoptroepiaal zijn de felgekleurde, en de Epauletspreeuw zit in riet met een rode schouder."
+      }
+    },
+    "wood-warblers-1": {
+      "title": {
+        "en": "Plain warblers and a waterthrush",
+        "nl": "Sobere zangers en een waterlijster"
+      },
+      "intro": {
+        "en": "The Orange-crowned, Nashville and Tennessee Warblers are small and greenish with few markings. The Black-and-white Warbler creeps along branches like a nuthatch, and the Louisiana Waterthrush walks and bobs along streams.",
+        "nl": "De Groene zanger, Nashvillezanger en Tennesseezanger zijn klein en groenig met weinig tekening. De Bonte zanger kruipt langs takken als een boomklever, en de Louisianawaterlijster loopt en wipt langs beken."
+      }
+    },
+    "wood-warblers-2": {
+      "title": {
+        "en": "Yellowthroats, yellow-rumps and others",
+        "nl": "Maskerzangers, geelstuit en meer"
+      },
+      "intro": {
+        "en": "Yellow-rumped Warblers are everywhere in winter, with a bright rump patch. The yellowthroats stay low in marshes and wet grass. The American Redstart fans its tail, and the Tropical Parula feeds in the canopy.",
+        "nl": "Geelstuitzangers zijn in de winter overal te zien, met een felgele stuit. De maskerzangers blijven laag in moerassen en nat gras. De Amerikaanse roodstaart waaiert met zijn staart en de Maskerparulazanger zoekt voedsel in het kronendak."
+      }
+    },
+    "wood-warblers-3": {
+      "title": {
+        "en": "Warblers of the pine-oak forest",
+        "nl": "Zangers van het dennen-eikenbos"
+      },
+      "intro": {
+        "en": "Black-throated Green, Black-throated Grey, Townsend's and Hermit Warblers join mixed flocks in pines and oaks in winter. Look at the face pattern, as the yellow, black and white differ in each. The Rufous-capped Warbler stays low on brushy slopes.",
+        "nl": "Gele zwartkeelzanger, Grijze zwartkeelzanger, Townsendzanger en Heremietzanger sluiten zich in de winter aan bij gemengde groepen in dennen en eiken. Let op de kopstekening, want het geel, zwart en wit verschilt bij elke soort. De Roodkruinzanger blijft laag op struikrijke hellingen."
+      }
+    },
+    "wood-warblers-4": {
+      "title": {
+        "en": "Redstarts and warblers of the highlands",
+        "nl": "Gekleurde zangers van het bergbos"
+      },
+      "intro": {
+        "en": "Highland warblers with a lot of colour. The Painted and Slate-throated Redstarts flash white in the tail and wings, the Red Warbler is red all over with a silvery cheek patch, and the Wilson's Warbler is a small yellow bird with a black cap.",
+        "nl": "Zangers van het bergland met veel kleur. De Roodbuikzanger en de Meniezanger laten wit zien in staart en vleugels, de Rode zanger is helemaal rood met een zilverwitte wangvlek, en Wilsons zanger is een klein geel vogeltje met een zwarte kap."
+      }
+    },
+    "cardinals-grosbeaks-and-allies-1": {
+      "title": {
+        "en": "Cardinal, tanagers and a grosbeak",
+        "nl": "Kardinaal, tangaren en een dikbek"
+      },
+      "intro": {
+        "en": "The Northern Cardinal is the red, crested bird of gardens and scrub. The Summer, Hepatic and Western Tanagers are winter visitors or highland birds, and the Rose-breasted Grosbeak has a heavy bill and a rose-red breast.",
+        "nl": "De Rode kardinaal is de rode vogel met kuif van tuinen en struikgewas. De Zomertangare, Levertangare en Dennentangare zijn wintergasten of vogels van het bergland, en de Roodborstkardinaal heeft een zware snavel en een rozerode borst."
+      }
+    },
+    "cardinals-grosbeaks-and-allies-2": {
+      "title": {
+        "en": "Buntings and grosbeaks",
+        "nl": "Gorzen, bisschoppen en dikbekken"
+      },
+      "intro": {
+        "en": "Heavy-billed seed-eaters, many of them blue. The male Indigo, Lazuli and Painted Buntings are easy, while the females are brown and need a close look at wing bars. The Orange-breasted Bunting is a Mexican endemic.",
+        "nl": "Zaadeters met een zware snavel, veel met blauw in het verenkleed. De mannetjes van Indigogors, Lazuligors en Purpergors zijn makkelijk, de vrouwtjes zijn bruin en vragen om een goede blik op de vleugelstrepen. De Regenbooggors is endemisch in Mexico."
+      }
+    },
+    "tanagers-and-allies": {
+      "title": {
+        "en": "Saltators, tanager and small seedeaters",
+        "nl": "Saltators, tangare en zaadeters"
+      },
+      "intro": {
+        "en": "Two saltators with heavy bills, one blue-grey tanager and two small seed-eaters. The Blue-black Grassquit male jumps straight up from the grass, and the Morelet's Seedeater feeds on grass seed in weedy fields.",
+        "nl": "Twee saltators met een zware snavel, een blauwgrijze tangare en twee kleine zaadeters. Het mannetje van de Jacarinagors springt recht omhoog uit het gras, en het Withalsdikbekje eet grassaad in onkruidrijke velden."
+      }
+    }
+  },
+  "species": {
+    "gnwtea": {
+      "here": {
+        "en": "In Mexico nearly all are the American form, with a vertical white stripe on the side of the chest.",
+        "nl": "In Mexico zijn het bijna allemaal de Amerikaanse vorm, met een verticale witte streep op de zijkant van de borst."
+      }
+    },
+    "whwdov": {
+      "here": {
+        "en": "The commonest dove in Mexican towns and plazas, and an easy way into the group.",
+        "nl": "De algemeenste duif in Mexicaanse dorpen en op pleinen, en een makkelijke start voor deze groep."
+      }
+    },
+    "heegul": {
+      "here": {
+        "en": "The gull you will see most in Pacific coast harbours, so the bird to learn first.",
+        "nl": "De meeuw die je het meest ziet in havens aan de Pacifische kust, dus de soort om eerst te leren."
+      }
+    },
+    "bfoboo": {
+      "here": {
+        "en": "Look for it from the Pacific coast and around the islands of the Gulf of California.",
+        "nl": "Zoek hem vanaf de Pacifische kust en rond de eilanden in de Golf van Californië."
+      }
+    },
+    "zothaw": {
+      "here": {
+        "en": "It looks and soars like a Turkey Vulture. Check for the feathered head and the banded tail.",
+        "nl": "Hij ziet er uit en zweeft als een Roodkopgier. Let op de bevederde kop en de gebande staart."
+      }
+    }
+  },
+  "first_day": {
+    "title": {
+      "en": "Your first day in Mexico",
+      "nl": "Je eerste dag in Mexico"
+    },
+    "intro": {
+      "en": "Twenty birds you are very likely to meet in your first days: in plazas and gardens, on wires and fields, over roads and along the coast. The Great-tailed Grackle, Inca Dove and House Sparrow are where it starts.",
+      "nl": "Twintig vogels die je de eerste dagen vrijwel zeker tegenkomt: op pleinen en in tuinen, op draden en velden, boven wegen en langs de kust. De Langstaarttroepiaal, Incaduif en Huismus zijn waar het mee begint."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "Mexico has about 110 bird species that live nowhere else. Deserts, high mountain ranges, two coasts and isolated islands keep populations apart, so many birds have a small range. This trip holds only six of them, the ones that are widespread enough to meet on a normal route. The rest are in the six region packs.",
+      "nl": "Mexico heeft zo'n 110 vogelsoorten die nergens anders leven. Woestijnen, hoge bergketens, twee kusten en geïsoleerde eilanden houden populaties gescheiden, dus veel vogels hebben een klein verspreidingsgebied. Deze reis bevat er maar zes van, de soorten die wijdverbreid genoeg zijn voor een gewone route. De rest zit in de zes regiopakketten."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "Highlands and pine-oak forest",
+          "nl": "Hoogland en dennen-eikenbos"
+        },
+        "text": {
+          "en": "The Red Warbler, Russet Nightingale-Thrush and Rufous-backed Robin live in mountain forest and in highland gardens. Try the pine and fir forest at Desierto de los Leones near Mexico City, or the pine-oak forest on the road from Mazatlán to Durango.",
+          "nl": "De Rode zanger, Bruinkopdwerglijster en Roestruglijster leven in bergbos en in tuinen in het hoogland. Probeer het dennen- en sparrenbos bij Desierto de los Leones vlak bij Mexico-Stad, of het dennen-eikenbos langs de weg van Mazatlán naar Durango."
+        }
+      },
+      {
+        "title": {
+          "en": "Dry forest of the Pacific slope",
+          "nl": "Droog bos van de Pacifische helling"
+        },
+        "text": {
+          "en": "The Orange-breasted Bunting, White-striped Woodcreeper and Blue Mockingbird live in dry forest and scrub along the Pacific side. San Blas in Nayarit and the hills around Mazatlán are good places to start.",
+          "nl": "De Regenbooggors, Witbuikmuisspecht en Blauwe spotlijster leven in droog bos en struikgewas langs de Pacifische kant. San Blas in Nayarit en de heuvels rond Mazatlán zijn goede plekken om te beginnen."
+        }
+      }
+    ],
+    "families": [],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "Birds found only in Mexico",
+          "nl": "Vogels die alleen in Mexico leven"
+        }
+      }
+    }
+  }
+}

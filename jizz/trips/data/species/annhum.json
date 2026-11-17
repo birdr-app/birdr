@@ -1,0 +1,22 @@
+{
+  "code": "annhum",
+  "name": {
+    "en": "Anna's Hummingbird",
+    "nl": "Annakolibrie"
+  },
+  "latin": "Calypte anna",
+  "look_for": [
+    {
+      "en": "Male has a rose-red **crown** and **throat**",
+      "nl": "Mannetje heeft een rozerode **kruin** en **keel**"
+    },
+    {
+      "en": "Dull grey-green body, no white **collar**",
+      "nl": "Dof grijsgroen lijf, geen witte **kraag**"
+    },
+    {
+      "en": "Female has a red patch on the **throat**",
+      "nl": "Vrouwtje heeft een rode vlek op de **keel**"
+    }
+  ]
+}

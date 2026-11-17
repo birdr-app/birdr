@@ -1,0 +1,22 @@
+{
+  "code": "canvas",
+  "name": {
+    "en": "Canvasback",
+    "nl": "Grote tafeleend"
+  },
+  "latin": "Aythya valisineria",
+  "look_for": [
+    {
+      "en": "Sloping **forehead** into a long black **bill**",
+      "nl": "Aflopend **voorhoofd** naar een lange zwarte **snavel**"
+    },
+    {
+      "en": "Rusty-red **head**, black **chest**",
+      "nl": "Roodbruine **kop**, zwarte **borst**"
+    },
+    {
+      "en": "Whitish **back** and flanks",
+      "nl": "Witachtige **rug** en flanken"
+    }
+  ]
+}
