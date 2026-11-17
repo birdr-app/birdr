@@ -194,7 +194,16 @@ location = /robots.txt {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
 }
+# sitemap.xml is built hourly by `manage.py build_sitemaps` (docs/CRON.md); nginx serves the
+# file and only asks Django when it is missing. The section files stay with Django, which
+# also reads them from disk.
 location = /sitemap.xml {
+    root /var/www/jizz/jizz/jizz/sitemaps;   # SITEMAP_DIR
+    default_type application/xml;
+    add_header Cache-Control "public, max-age=3600";
+    try_files /sitemap.xml @jizz_sitemap;
+}
+location @jizz_sitemap {
     proxy_pass http://jizz;
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;

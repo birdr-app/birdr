@@ -2,10 +2,14 @@
 
 from __future__ import annotations
 
+import os
+import tempfile
 import threading
 from contextlib import contextmanager, nullcontext
 from datetime import date, datetime
+from pathlib import Path
 
+from django.conf import settings
 from django.core.cache import cache
 from django.db.models import Q
 from django.http import Http404, HttpResponse
@@ -114,22 +118,90 @@ def _page_paths(paths: list[str], page: int) -> list[str]:
 SITEMAP_INDEX_TTL = 60 * 60
 
 
+def static_sitemap_name(section: str | None = None, page: int = 1) -> str:
+    """File name of a built sitemap: the index, or one page of a section."""
+    if section is None:
+        return 'sitemap.xml'
+    return f'sitemap-{section}.xml' if page == 1 else f'sitemap-{section}.{page}.xml'
+
+
+def _read_static(name: str) -> str | None:
+    """A sitemap file written by `build_sitemaps`, or None when it hasn't been built."""
+    try:
+        return (Path(settings.SITEMAP_DIR) / name).read_text(encoding='utf-8')
+    except OSError:
+        return None
+
+
+def _build_index_entries(origin: str) -> list[tuple[str, date | None]]:
+    entries = []
+    with comparison_snapshot():
+        for name, paths_fn in SECTIONS.items():
+            paths = paths_fn()
+            lastmods = section_lastmods(name)
+            for page in range(1, _page_count(paths) + 1):
+                dates = [lastmods[p] for p in _page_paths(paths, page) if p in lastmods]
+                entries.append((origin + _section_url(name, page), max(dates, default=None)))
+    return entries
+
+
 def sitemap_index(request):
+    body = _read_static(static_sitemap_name())
+    if body is not None:
+        return _xml(body)
     origin = canonical_origin(request)
     cache_key = f'marketing-sitemap-index:{origin}'
     body = cache.get(cache_key)
     if body is None:
-        entries = []
-        with comparison_snapshot():
-            for name, paths_fn in SECTIONS.items():
-                paths = paths_fn()
-                lastmods = section_lastmods(name)
-                for page in range(1, _page_count(paths) + 1):
-                    dates = [lastmods[p] for p in _page_paths(paths, page) if p in lastmods]
-                    entries.append((origin + _section_url(name, page), max(dates, default=None)))
-        body = _index(entries)
+        body = _index(_build_index_entries(origin))
         cache.set(cache_key, body, SITEMAP_INDEX_TTL)
     return _xml(body)
+
+
+def _write_atomically(directory: Path, name: str, body: str) -> None:
+    # Written next to the target and renamed, so nginx and Django never read half a file.
+    fd, tmp = tempfile.mkstemp(dir=directory, prefix=f'.{name}.')
+    try:
+        with os.fdopen(fd, 'w', encoding='utf-8') as handle:
+            handle.write(body)
+        os.chmod(tmp, 0o644)
+        os.replace(tmp, directory / name)
+    except BaseException:
+        os.unlink(tmp)
+        raise
+
+
+def build_static_sitemaps(origin: str, directory: Path | str | None = None) -> list[str]:
+    """Write the index and every section page to disk; return the file names written.
+
+    The index goes last, so it only ever names files that exist. Files of pages that no
+    longer exist (a section that shrank) are removed afterwards.
+    """
+    directory = Path(directory or settings.SITEMAP_DIR)
+    directory.mkdir(parents=True, exist_ok=True)
+    written: list[str] = []
+    entries: list[tuple[str, date | None]] = []
+    with comparison_snapshot():
+        for name, paths_fn in SECTIONS.items():
+            paths = paths_fn()
+            lastmods = section_lastmods(name)
+            path_locales = section_path_locales(name)
+            for page in range(1, _page_count(paths) + 1):
+                page_paths = _page_paths(paths, page)
+                dates = [lastmods[p] for p in page_paths if p in lastmods]
+                entries.append((origin + _section_url(name, page), max(dates, default=None)))
+                file_name = static_sitemap_name(name, page)
+                _write_atomically(directory, file_name, _urlset(
+                    page_paths, origin, lastmods, section_locales(name), path_locales,
+                ))
+                written.append(file_name)
+    index_name = static_sitemap_name()
+    _write_atomically(directory, index_name, _index(entries))
+    written.append(index_name)
+    for stale in directory.glob('sitemap*.xml'):
+        if stale.name not in written:
+            stale.unlink()
+    return written
 
 
 def pages_paths() -> list[str]:
@@ -356,6 +428,9 @@ def sitemap_section(request, section: str):
     if paths_fn is None or not page.isdigit():
         raise Http404
     page = int(page)
+    body = _read_static(static_sitemap_name(section, page))
+    if body is not None:
+        return _xml(body)
     with comparison_snapshot() if section == 'compare' else nullcontext():
         paths = paths_fn()
         if not 1 <= page <= _page_count(paths):

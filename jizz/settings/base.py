@@ -497,6 +497,9 @@ SITE_URL = os.environ.get('SITE_URL', 'https://motmot.club')
 OAUTH_URL = os.environ.get('OAUTH_URL', 'https://birdr.pro')
 # Origin of the marketing website, for canonical URLs, sitemaps and Open Graph.
 MARKETING_URL = os.environ.get('MARKETING_URL', 'https://motmot.club')
+# Where `manage.py build_sitemaps` writes the finished sitemap files. nginx serves
+# sitemap.xml from here and Django serves the section files from here (see docs/CRON.md).
+SITEMAP_DIR = os.environ.get('SITEMAP_DIR', str(BASE_DIR / 'sitemaps'))
 # Marketing pages requested on these hosts are redirected to MARKETING_URL, so Google
 # indexes one host: the old birdr.pro and the www variant of motmot.club.
 MARKETING_REDIRECT_HOSTS = ('birdr.pro', 'www.birdr.pro', 'www.motmot.club')

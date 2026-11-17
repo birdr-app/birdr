@@ -32,3 +32,4 @@ node_modules
 # ignore db dumps
 *.sql
 *.sql.bzip
+/jizz/sitemaps/

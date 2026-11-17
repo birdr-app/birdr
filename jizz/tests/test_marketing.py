@@ -1,6 +1,8 @@
 """Public marketing pages, sitemap and robots."""
 
 import re
+import tempfile
+from io import StringIO
 from datetime import datetime, timezone as dt_timezone
 from pathlib import Path
 from unittest.mock import patch
@@ -43,6 +45,12 @@ _SAMPLE_STORE_RATINGS = {
 class MarketingPagesTests(TestCase):
     def setUp(self):
         cache.clear()
+        # Built sitemap files on a dev machine must not stand in for the dynamic ones.
+        self.sitemap_dir = tempfile.TemporaryDirectory()
+        self.addCleanup(self.sitemap_dir.cleanup)
+        sitemap_override = override_settings(SITEMAP_DIR=self.sitemap_dir.name)
+        sitemap_override.enable()
+        self.addCleanup(sitemap_override.disable)
         self.ratings_patcher = patch(
             'jizz.store_ratings.get_store_ratings',
             return_value=_SAMPLE_STORE_RATINGS,
@@ -1312,6 +1320,43 @@ class MarketingPagesTests(TestCase):
             second = self.client.get('/sitemap.xml').content
         self.assertEqual(first, second)
         cache.clear()
+
+    def test_build_sitemaps_writes_files_that_are_served_instead_of_building(self):
+        from django.core.management import call_command
+
+        paths = [f'/site/birds/bird-{i}/' for i in range(3)]
+        with patch.dict('jizz.marketing.sitemaps.SECTIONS', {'birds': lambda: paths}, clear=True), \
+                patch('jizz.marketing.sitemaps.PATHS_PER_SITEMAP', 2):
+            call_command('build_sitemaps', stdout=StringIO())
+        built = {p.name for p in Path(self.sitemap_dir.name).iterdir()}
+        self.assertEqual(built, {'sitemap.xml', 'sitemap-birds.xml', 'sitemap-birds.2.xml'})
+
+        # Nothing is built any more: not the index, not the sections.
+        def explode():
+            raise AssertionError('sitemap built per request')
+
+        with patch.dict('jizz.marketing.sitemaps.SECTIONS', {'birds': explode}, clear=True):
+            index = self.client.get('/sitemap.xml').content.decode()
+            page1 = self.client.get('/sitemap-birds.xml').content.decode()
+            page2 = self.client.get('/sitemap-birds.xml?page=2').content.decode()
+        self.assertIn('https://motmot.club/sitemap-birds.xml?page=2', index)
+        self.assertIn('/site/birds/bird-1/', page1)
+        self.assertNotIn('/site/birds/bird-2/', page1)
+        self.assertIn('/site/birds/bird-2/', page2)
+
+    def test_build_sitemaps_removes_files_of_pages_that_no_longer_exist(self):
+        from jizz.marketing.sitemaps import build_static_sitemaps
+
+        paths = [f'/site/birds/bird-{i}/' for i in range(3)]
+        with patch.dict('jizz.marketing.sitemaps.SECTIONS', {'birds': lambda: paths}, clear=True), \
+                patch('jizz.marketing.sitemaps.PATHS_PER_SITEMAP', 2):
+            build_static_sitemaps('https://motmot.club')
+            self.assertTrue((Path(self.sitemap_dir.name) / 'sitemap-birds.2.xml').exists())
+        with patch.dict('jizz.marketing.sitemaps.SECTIONS', {'birds': lambda: paths[:2]}, clear=True), \
+                patch('jizz.marketing.sitemaps.PATHS_PER_SITEMAP', 2):
+            build_static_sitemaps('https://motmot.club')
+        self.assertFalse((Path(self.sitemap_dir.name) / 'sitemap-birds.2.xml').exists())
+        self.assertEqual(self.client.get('/sitemap-birds.xml?page=2').status_code, 404)
 
     def _same_family(self, *species):
         """Compare pages are listed only for two birds of the same family."""

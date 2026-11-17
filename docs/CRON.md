@@ -15,6 +15,16 @@ capital-local time themselves and are idempotent, so a missed or doubled run is 
 5 * * * *     cd /path/to/jizz && ./venv/bin/python manage.py flock_tick >> /var/log/birdr/cron.log 2>&1
 ```
 
+```cron
+# Sitemaps: build sitemap.xml and the section files once an hour instead of per request
+20 * * * *    cd /path/to/jizz && ./venv/bin/python manage.py build_sitemaps >> /var/log/birdr/build_sitemaps.log 2>&1
+```
+
+`build_sitemaps` writes to `SITEMAP_DIR` (default `jizz/sitemaps/` in the checkout). Django serves
+the files from there as soon as they exist, and falls back to building per request when they
+don't. nginx can serve `sitemap.xml` straight from the directory; see docs/GOOGLE_OAUTH_PRODUCTION.md.
+Run it once by hand after deploying this, so the first request doesn't hit the slow path.
+
 `league_generate` runs hourly so every timezone has tomorrow's quiz well before its midnight.
 
 One-off launch invite (check counts first):
