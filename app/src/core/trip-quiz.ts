@@ -8,9 +8,15 @@ export type TripQuestion = {
   options: string[];
   /** A bird from an earlier unit: asked once, never re-queued. */
   review: boolean;
+  /** A second chance at a bird the player got wrong: it doesn't count towards the score. */
+  retry?: boolean;
 };
 
 export const REVIEW_QUESTIONS = 2;
+/** Every bird the unit teaches is asked this many times, each time with a different photo. */
+export const ROUNDS = 2;
+/** The share of right answers (first try) a unit needs before the quiz sends the player on. */
+export const PASS_SCORE = 0.8;
 
 export function shuffle<T>(items: T[], random: () => number = Math.random): T[] {
   const out = [...items];
@@ -33,28 +39,62 @@ export function otherPhoto(trip: Trip, code: string, excludeIds: number[]): Trip
   return left.length ? left[Math.floor(Math.random() * left.length)] : null;
 }
 
+/** Every bird in taxonomic order: groups as the trip lists them, then any bird outside the groups. */
+const orderCache = new WeakMap<Trip, Map<string, number>>();
+function taxonomicIndex(trip: Trip): Map<string, number> {
+  const cached = orderCache.get(trip);
+  if (cached) return cached;
+  const index = new Map<string, number>();
+  for (const group of trip.groups) for (const code of group.species) if (!index.has(code)) index.set(code, index.size);
+  for (const code of Object.keys(trip.species)) if (!index.has(code)) index.set(code, index.size);
+  orderCache.set(trip, index);
+  return index;
+}
+
+/** How many of the closest lookalikes a wrong answer is drawn from: wide at first, the nearest three when hard. */
+export function lookalikeWindow(difficulty: number): number {
+  return Math.max(3, Math.round(8 - 5 * Math.min(1, Math.max(0, difficulty))));
+}
+
 /**
- * Wrong answers that make the player look: the unit's other birds first, then the same group,
- * then anything already learned, then the rest of the trip.
+ * The birds most like ``code``: the rest of its group in taxonomic order, nearest first, then the
+ * neighbouring groups. Birds the player is meeting in this unit or has learned already count a little
+ * closer while the quiz is still easy.
+ */
+export function similarBirds(trip: Trip, code: string, familiar: Set<string>, difficulty: number): string[] {
+  const order = taxonomicIndex(trip);
+  const here = order.get(code) ?? 0;
+  const group = trip.species[code]?.group;
+  const bonus = 2 * (1 - Math.min(1, Math.max(0, difficulty)));
+  return Object.keys(trip.species)
+    .filter((other) => other !== code && photos(trip, other).length)
+    .map((other) => {
+      const sameGroup = trip.species[other].group === group ? 0 : 1;
+      const distance = Math.abs((order.get(other) ?? 0) - here) - (familiar.has(other) ? bonus : 0);
+      return { other, sameGroup, distance };
+    })
+    .sort((a, b) => a.sameGroup - b.sameGroup || a.distance - b.distance)
+    .map((x) => x.other);
+}
+
+/**
+ * Wrong answers that make the player look: birds of the same group nearest to the answer, drawn from a
+ * window that narrows as the quiz gets harder (the further the player is into the trip).
  */
 export function pickOptions(
   trip: Trip,
   code: string,
   unitCodes: string[],
   learned: string[],
-  random: () => number = Math.random
+  random: () => number = Math.random,
+  difficulty = 0
 ): string[] {
-  const group = trip.species[code]?.group;
-  const sameGroup = trip.groups.find((g) => g.slug === group)?.species ?? [];
-  const tiers = [unitCodes, sameGroup, learned, Object.keys(trip.species)];
-  const picked: string[] = [];
-  for (const tier of tiers) {
-    for (const other of shuffle(tier, random)) {
-      if (picked.length === 3) break;
-      if (other !== code && !picked.includes(other) && photos(trip, other).length) picked.push(other);
-    }
-    if (picked.length === 3) break;
-  }
+  const familiar = new Set([...unitCodes, ...learned]);
+  const ranked = similarBirds(trip, code, familiar, difficulty);
+  // The bird's own group while it has enough birds; otherwise the nearest ones from the neighbouring groups too.
+  const sameGroup = ranked.filter((c) => trip.species[c].group === trip.species[code]?.group);
+  const close = (sameGroup.length >= 3 ? sameGroup : ranked).slice(0, lookalikeWindow(difficulty));
+  const picked = shuffle(close, random).slice(0, 3);
   return shuffle([code, ...picked], random);
 }
 
@@ -65,33 +105,61 @@ export function makeQuestion(
   learned: string[],
   asked: number,
   review: boolean,
-  random: () => number = Math.random
+  random: () => number = Math.random,
+  difficulty = 0,
+  /** Photos of this bird already shown: a different one is used while there is another. */
+  avoid: number[] = []
 ): TripQuestion | null {
   const media = photos(trip, code);
   if (!media.length) return null;
-  // A different photo each time the same bird comes back.
-  const image = media[(asked + Math.floor(random() * media.length)) % media.length];
-  return { code, image, options: pickOptions(trip, code, unitCodes, learned, random), review };
+  const fresh = media.filter((m) => !avoid.includes(m.id));
+  const choices = fresh.length ? fresh : media;
+  const image = choices[((fresh.length ? 0 : asked) + Math.floor(random() * choices.length)) % choices.length];
+  return { code, image, options: pickOptions(trip, code, unitCodes, learned, random, difficulty), review };
 }
 
 /**
- * The first round of a unit: each target bird once, plus a few review birds mixed in. Targets are
- * the unit's birds, or only the ones new to the player; the whole unit (``pool``) still supplies
- * the wrong answers, so a known bird stays a choice.
+ * A unit's quiz: every target bird ``ROUNDS`` times, each time with another photo and, in the later
+ * rounds, harder lookalikes as the wrong answers. A few review birds from earlier units are mixed into
+ * the first round. Targets are the unit's birds, or only the ones new to the player; the whole unit
+ * (``pool``) still supplies wrong answers, so a known bird stays a choice. ``difficulty`` (0 to 1) is how
+ * far the player is into the trip.
  */
 export function buildUnitQuiz(
   trip: Trip,
   targets: string[],
   learned: string[],
   random: () => number = Math.random,
-  pool: string[] = targets
+  pool: string[] = targets,
+  difficulty = 0
 ): TripQuestion[] {
   const review = shuffle(learned.filter((c) => !pool.includes(c)), random).slice(0, REVIEW_QUESTIONS);
-  const questions = [
-    ...targets.map((c) => makeQuestion(trip, c, pool, learned, 0, false, random)),
-    ...review.map((c) => makeQuestion(trip, c, pool, learned, 0, true, random)),
-  ].filter((q): q is TripQuestion => q !== null);
-  return shuffle(questions, random);
+  const shown = new Map<string, number[]>();
+  const rounds: TripQuestion[][] = [];
+  for (let round = 0; round < ROUNDS; round++) {
+    // Each round is a notch harder than the one before.
+    const level = Math.min(1, difficulty + round * 0.4);
+    const questions: TripQuestion[] = [];
+    for (const code of shuffle(targets, random)) {
+      const q = makeQuestion(trip, code, pool, learned, round, false, random, level, shown.get(code) ?? []);
+      if (!q) continue;
+      shown.set(code, [...(shown.get(code) ?? []), q.image.id]);
+      questions.push(q);
+    }
+    if (round === 0) {
+      const reviews = review.map((c) => makeQuestion(trip, c, pool, learned, 0, true, random, difficulty)).filter((q): q is TripQuestion => q !== null);
+      rounds.push(shuffle([...questions, ...reviews], random));
+    } else {
+      rounds.push(questions);
+    }
+  }
+  // The same bird never comes twice in a row where one round meets the next.
+  for (let r = 1; r < rounds.length; r++) {
+    const before = rounds[r - 1][rounds[r - 1].length - 1];
+    const after = rounds[r];
+    if (before && after.length > 1 && after[0].code === before.code) [after[0], after[1]] = [after[1], after[0]];
+  }
+  return rounds.flat();
 }
 
 /** The birds of a unit to learn: the new ones, or all of them when the player knows every bird. */

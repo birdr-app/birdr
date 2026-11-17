@@ -11,14 +11,17 @@ import { SpeciesModal } from '../../components/species-modal';
 import type { Species, SpeciesImage } from '../../core/app-context';
 import { countryCodeToFlag } from '../../api/birdrJourney';
 import { BirdrArtImage } from '../../components/birdr-art-image';
-import { buildUnitQuiz, focusCodes, makeQuestion, otherPhoto, remaining, type TripQuestion } from '../../core/trip-quiz';
+import { PASS_SCORE, buildUnitQuiz, focusCodes, makeQuestion, otherPhoto, type TripQuestion } from '../../core/trip-quiz';
 import { Page } from '../../shared/components/layout';
 import { BoldText, Kicker, StepBar } from '../course/parts';
 import { EndemicBadge, TripLoading, TripPhoto, TripThumb, credit } from './parts';
 import { TripCelebration } from './celebration';
-import { findUnit, tripComplete, useTrip, withPlus, useTripText, type TripData } from './use-trip';
+import { findUnit, nextUnit, tripComplete, useTrip, withPlus, useTripText, type TripData } from './use-trip';
 
-type Step = { kind: 'intro' } | { kind: 'card'; index: number } | { kind: 'quiz' } | { kind: 'done'; asked: number; wrong: number; saved: boolean | null; celebrate: boolean };
+type Step = { kind: 'intro' } | { kind: 'card'; index: number } | { kind: 'quiz' } | { kind: 'done'; asked: number; wrong: number; correct: number; total: number; saved: boolean | null; celebrate: boolean };
+
+/** Right answers on the first try, out of the planned questions of one quiz. */
+type QuizScore = { correct: number; total: number };
 
 /** The minimal Species the species modal needs; it loads the photos, videos and sounds itself. */
 function tripToSpecies(sp: TripSpecies): Species {
@@ -59,6 +62,8 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
   const birds = focus.map((c) => trip.species[c]).filter((s): s is TripSpecies => !!s);
   const allBirds = unit.species.map((c) => trip.species[c]).filter((s): s is TripSpecies => !!s);
   const newCodes = focusCodes(unit.species, data.known);
+  // The further into the trip, the closer the lookalikes among the answers.
+  const difficulty = Math.min(1, data.local.units_done.filter((slug) => slug !== unit.slug).length / Math.max(1, trip.units.length));
   const start = (codes: string[], next: Step) => {
     setFocus(codes);
     go(next);
@@ -70,7 +75,7 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
   };
   const stepIndex = step.kind === 'intro' ? 0 : step.kind === 'card' ? step.index + 1 : birds.length + 1;
 
-  const finish = async (answers: TripAnswer[], rightCodes: string[], wrongCodes: string[]) => {
+  const finish = async (answers: TripAnswer[], rightCodes: string[], wrongCodes: string[], score: QuizScore) => {
     const local = updateTripState(trip.country, (s) => ({
       ...s,
       units_done: Array.from(new Set([...s.units_done, unit.slug])),
@@ -85,11 +90,18 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
     const groupsNow = new Set(data.knownGroups);
     knownNow.forEach((code) => trip.species[code] && groupsNow.add(trip.species[code].group));
     const celebrate = !tripComplete(trip, data.known, data.knownGroups, data.local) && tripComplete(trip, knownNow, groupsNow, local);
-    go({ kind: 'done', asked: answers.length, wrong: wrongCodes.length, saved: null, celebrate });
+    go({ kind: 'done', asked: answers.length, wrong: wrongCodes.length, correct: score.correct, total: score.total, saved: null, celebrate });
     const progress = await postTripAnswers(trip.country, answers);
     if (progress) data.setProgress(progress);
     setStep((s) => (s.kind === 'done' ? { ...s, saved: !!progress } : s));
   };
+
+  // The result: a first-try score decides whether to send the player on or to the quiz again.
+  const result = step.kind === 'done' ? step : null;
+  const score = result && result.total ? result.correct / result.total : 1;
+  const passed = score >= PASS_SCORE;
+  const following = result ? nextUnit(trip, unit, data.known, data.knownGroups, data.local) : null;
+  const buttonStyle = (primary: boolean) => (primary ? ({ colorPalette: 'primary' } as const) : ({ variant: 'outline', colorPalette: 'primary' } as const));
 
   return (
     <Page>
@@ -123,7 +135,7 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
               onNext={() => go(step.index + 1 < birds.length ? { kind: 'card', index: step.index + 1 } : { kind: 'quiz' })}
             />
           ) : null}
-          {step.kind === 'quiz' ? <Quiz trip={trip} unit={unit} targets={focus} learned={learnedCodes(trip, data)} onDone={finish} /> : null}
+          {step.kind === 'quiz' ? <Quiz trip={trip} unit={unit} targets={focus} learned={learnedCodes(trip, data)} difficulty={difficulty} onDone={finish} /> : null}
           {step.kind === 'done' && step.celebrate ? <TripCelebration country={trip.parent || trip.country} name={trip.parent_name || trip.name} onBack={back} /> : null}
           {step.kind === 'done' && !step.celebrate ? (
             <Flex direction="column" gap={3}>
@@ -145,10 +157,37 @@ function UnitFlow({ trip, unit, data }: { trip: Trip; unit: TripUnit; data: Trip
                   {t('trip_not_saved', "Your answers are kept on this device only. Play a game or sign in, and later units will count in your checklist too.")}
                 </Text>
               ) : null}
-              <Button colorPalette="primary" onClick={back}>
+              <Text fontWeight="700" color="primary.800">
+                {t('trip_unit_score', '{correct} of {total} right the first time · {percent}%', {
+                  correct: step.correct,
+                  total: step.total,
+                  percent: Math.round(score * 100),
+                })}
+              </Text>
+              {!passed ? (
+                <Text color="primary.700" fontSize="sm">
+                  {t('trip_unit_retry_hint', 'Get to {target}% before you move on. The lookalikes need another look.', { target: Math.round(PASS_SCORE * 100) })}
+                </Text>
+              ) : null}
+              <Button {...buttonStyle(passed && !following)} onClick={back}>
                 {t('trip_back_home', 'Back to the trip')}
               </Button>
-              <Button variant="outline" colorPalette="primary" onClick={() => go({ kind: 'quiz' })}>
+              {following ? (
+                <Button
+                  {...buttonStyle(passed)}
+                  whiteSpace="normal"
+                  h="auto"
+                  minH={10}
+                  py={2}
+                  onClick={() => {
+                    navigate(`/trips/${trip.country}/units/${following.slug}`);
+                    window.scrollTo({ top: 0 });
+                  }}
+                >
+                  {t('trip_continue_to', 'Continue to {name}', { name: following.title })}
+                </Button>
+              ) : null}
+              <Button {...buttonStyle(!passed)} onClick={() => go({ kind: 'quiz' })}>
                 {t('trip_quiz_again', 'Quiz again')}
               </Button>
             </Flex>
@@ -314,6 +353,7 @@ function Quiz({
   unit,
   targets,
   learned,
+  difficulty,
   onDone,
 }: {
   trip: Trip;
@@ -321,10 +361,12 @@ function Quiz({
   /** The birds to ask about; the rest of the unit only appears as wrong answers. */
   targets: string[];
   learned: string[];
-  onDone: (answers: TripAnswer[], right: string[], wrong: string[]) => void;
+  /** 0 to 1: how far into the trip the player is; later units use closer lookalikes as wrong answers. */
+  difficulty: number;
+  onDone: (answers: TripAnswer[], right: string[], wrong: string[], score: QuizScore) => void;
 }) {
   const t = useTripText();
-  const initial = useMemo(() => buildUnitQuiz(trip, targets, learned, Math.random, unit.species), [trip, unit, targets, learned]);
+  const initial = useMemo(() => buildUnitQuiz(trip, targets, learned, Math.random, unit.species, difficulty), [trip, unit, targets, learned, difficulty]);
   const [queue, setQueue] = useState<TripQuestion[]>(initial);
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
@@ -333,13 +375,15 @@ function Quiz({
   const rightOnce = useRef(new Set<string>());
   const wrongOnce = useRef(new Set<string>());
   const asked = useRef(new Map<string, number>());
+  const shown = useRef(new Map<string, number[]>());
+  const score = useRef<QuizScore>({ correct: 0, total: 0 });
   const answers = useRef<TripAnswer[]>([]);
 
   if (!queue.length) {
     return (
       <Flex direction="column" gap={3}>
         <Text>{t('trip_no_questions', 'There are no quiz photos for this unit yet.')}</Text>
-        <Button colorPalette="primary" onClick={() => onDone([], [], [])}>
+        <Button colorPalette="primary" onClick={() => onDone([], [], [], { correct: 0, total: 0 })}>
           {t('trip_finish', 'Finish')}
         </Button>
       </Flex>
@@ -350,7 +394,6 @@ function Quiz({
   const sp = trip.species[q.code];
   const answered = picked !== null;
   const right = picked === q.code;
-  const left = remaining(targets, rightOnce.current).length;
 
   const choose = (option: string) => {
     if (answered) return;
@@ -361,19 +404,27 @@ function Quiz({
       media_id: q.image.id,
     });
     asked.current.set(q.code, (asked.current.get(q.code) ?? 0) + 1);
+    // The score counts the planned questions on the first try; review birds and second chances don't.
+    if (!q.review && !q.retry) {
+      score.current.total += 1;
+      if (option === q.code) score.current.correct += 1;
+    }
     if (option === q.code) {
       rightOnce.current.add(q.code);
     } else {
       wrongOnce.current.add(q.code);
       if (!q.review) {
-        const again = makeQuestion(trip, q.code, unit.species, learned, asked.current.get(q.code) ?? 1, false);
-        if (again) setQueue((list) => [...list, again]);
+        // Another photo of the bird at the same difficulty as its first round.
+        const seen = [...(shown.current.get(q.code) ?? []), q.image.id];
+        shown.current.set(q.code, seen);
+        const again = makeQuestion(trip, q.code, unit.species, learned, asked.current.get(q.code) ?? 1, false, Math.random, difficulty, seen);
+        if (again) setQueue((list) => [...list, { ...again, retry: true }]);
       }
     }
   };
   const next = () => {
-    const stillOpen = remaining(targets, rightOnce.current).length > 0;
-    if (index + 1 < queue.length && (stillOpen || queue.slice(index + 1).some((x) => x.review))) {
+    // Every planned question is asked, then the second chances for what went wrong.
+    if (index + 1 < queue.length) {
       setIndex(index + 1);
       setPicked(null);
       return;
@@ -381,14 +432,15 @@ function Quiz({
     onDone(
       answers.current,
       Array.from(rightOnce.current),
-      Array.from(wrongOnce.current).filter((c) => targets.includes(c))
+      Array.from(wrongOnce.current).filter((c) => targets.includes(c)),
+      score.current
     );
   };
 
   return (
     <Flex direction="column" gap={3}>
       <Kicker>
-        {t('trip_quiz_left', 'Quiz · {left} birds to go', { left })}
+        {t('trip_quiz_progress', 'Quiz · question {n} of {total}', { n: index + 1, total: queue.length })}
         {q.review ? ` · ${t('trip_review', 'review')}` : ''}
       </Kicker>
       <ZoomablePlayImage

@@ -46,6 +46,17 @@ export function findUnit(trip: Trip, slug: string): TripUnit | undefined {
   );
 }
 
+/** The unit to offer after ``current``: the next open one, in the order the trip's home suggests; null when none is left. */
+export function nextUnit(trip: Trip, current: TripUnit, known: Set<string>, knownGroups: Set<string>, local: TripLocalState): TripUnit | null {
+  const done = new Set(local.units_done);
+  const isOpen = (u: TripUnit) => u.slug !== current.slug && !done.has(u.slug) && !unitKnown(u.species, known);
+  if (current.slug.startsWith('endemics-')) {
+    const after = trip.endemics.units.slice(trip.endemics.units.findIndex((u) => u.slug === current.slug) + 1);
+    return after.find(isOpen) ?? null;
+  }
+  return [...orderedUnits(trip, knownGroups), ...(trip.plus?.units ?? [])].find(isOpen) ?? null;
+}
+
 /** Every part of the trip is done: families, first day, lookalikes, all units and the Plus units (a region pack only has units). */
 export function tripComplete(trip: Trip, known: Set<string>, knownGroups: Set<string>, local: TripLocalState): boolean {
   const done = new Set(local.units_done);
