@@ -31,6 +31,10 @@ change a title on purpose, edit the listing file and the lock in the same commit
 - **Every app language gets its own listing.** Each localisation is searched in its own
   store, and each adds another 100 keyword characters. en-GB uses different keywords
   from en-US (twitcher, garden, British) because both are indexed in the UK.
+- **Lead with coverage, competition and learning, not songs.** Motmot's strengths are full
+  country lists (every bird recorded there), feedback and practice on mistakes, and real-time
+  head-to-head play, Flocks and National Leagues. Sound is one media type among photo and video.
+  Do not claim "adaptive" learning: there is no spaced repetition.
 - **The first lines of the description matter most.** Play indexes the whole text and
   shows the first lines before "more", so they say what the app does and for whom.
 - **Feature names match the app** in each language (Mijn lastige vogels, Meine Liste…).

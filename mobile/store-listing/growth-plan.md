@@ -20,20 +20,21 @@ Edited in the listing files and pinned in `titles.lock.json`; `check-store-listi
 
 | Locale | Subtitle was | Subtitle now |
 |---|---|---|
-| en-US, en-GB | Improve your skills & compete | Birdsong, photos & leagues |
+| en-US, en-GB | Improve your skills & compete | Learn every bird & compete |
 | nl-NL | Word beter & speel competitie | Vogelzang, foto's & competitie |
 
-Why: Apple indexes the subtitle, and the old ones used words nobody searches. The new ones carry
-*birdsong*, *photos* and *leagues* (nl: *vogelzang*, *foto's*, *competitie*) and do not repeat "bird",
-which the name already has. The keyword fields drop words that moved into the subtitle or were already
+Why: Apple indexes the subtitle, and the old ones used words nobody searches. The English one now
+carries *learn*, *every* and *compete* (full country coverage plus competition; songs are not the
+headline). The Dutch one still has *vogelzang*, *foto's*, *competitie* and should get the same
+treatment. The keyword fields drop words that moved into the subtitle or were already
 in the name (*trainer*, *league*, *birdsong*) and add *sound*, *species*, *ornithology*, *learn*,
 *trivia*, *identify*, *song* (nl: *leren*, *trivia*). "Trivia" is the category Apple benchmarks us against.
 
 Also: Japanese keywords now use 73 of 100 characters (was 55).
 
-The other locales (de, es, fr, it, pt-BR, ja) keep their generic "improve and compete" subtitles. They
-need a native-speaker pass before changing; same recipe: put the searched words (song, photos, league)
-in the subtitle and keep them out of the keyword field.
+The other locales (de, es, fr, it, pt-BR, ja) and Dutch now carry the same message ("learn every bird
+and compete") in subtitles written without a native-speaker review. Their keyword fields and
+descriptions were not rewritten yet, and every locale has a new evergreen promotional text.
 
 App Store text can only change while a version is being prepared, so these go in with the next
 version. Play can take the new texts any time through the API.
