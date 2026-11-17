@@ -206,6 +206,47 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'parent': 'MX',
     },
+    'IN': {'name': {'en': 'India', 'nl': 'India'}, 'languages': ('en', 'nl')},
+    'IN-WESTHIMALAYA': {
+        'name': {'en': 'Western Himalaya', 'nl': 'Westelijke Himalaya'},
+        'languages': ('en', 'nl'),
+        'parent': 'IN',
+    },
+    'IN-SIKKIM': {
+        'name': {'en': 'Darjeeling and Sikkim', 'nl': 'Darjeeling en Sikkim'},
+        'languages': ('en', 'nl'),
+        'parent': 'IN',
+    },
+    'IN-LADAKH': {
+        'name': {'en': 'Ladakh and the high Himalaya', 'nl': 'Ladakh en de hoge Himalaya'},
+        'languages': ('en', 'nl'),
+        'parent': 'IN',
+    },
+    'IN-NORTHEAST': {
+        'name': {'en': 'Northeast India', 'nl': 'Noordoost-India'},
+        'languages': ('en', 'nl'),
+        'parent': 'IN',
+    },
+    'IN-WESTERNGHATS': {
+        'name': {'en': 'Western Ghats and the south', 'nl': 'Westelijke Ghats en het zuiden'},
+        'languages': ('en', 'nl'),
+        'parent': 'IN',
+    },
+    'IN-CENTRAL': {
+        'name': {'en': 'Central India and its tiger forests', 'nl': 'Midden-India en zijn tijgerbossen'},
+        'languages': ('en', 'nl'),
+        'parent': 'IN',
+    },
+    'IN-DESERT': {
+        'name': {'en': 'Kutch, Gujarat and the Thar desert', 'nl': 'Kutch, Gujarat en de Thar-woestijn'},
+        'languages': ('en', 'nl'),
+        'parent': 'IN',
+    },
+    'IN-ANDAMAN': {
+        'name': {'en': 'Andaman and Nicobar Islands', 'nl': 'Andamanen en Nicobaren'},
+        'languages': ('en', 'nl'),
+        'parent': 'IN',
+    },
     'BRITISHISLES': {
         'name': {'en': 'British Isles', 'nl': 'Britse Eilanden'},
         'languages': ('en', 'nl'),

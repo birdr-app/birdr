@@ -474,8 +474,8 @@
     {
       "slug": "parrots-and-malkoha",
       "title": {
-        "en": "Parakeet and malkoha",
-        "nl": "Parkiet en malkoha"
+        "en": "Parakeet, malkoha and cuckoos",
+        "nl": "Parkiet, malkoha en koekoeken"
       },
       "groups": [
         "parrots-parakeets-and-allies",
@@ -483,19 +483,7 @@
       ],
       "species": [
         "malpar1",
-        "blfmal1"
-      ]
-    },
-    {
-      "slug": "cuckoos",
-      "title": {
-        "en": "Cuckoos of woodland and scrub",
-        "nl": "Koekoeken van bos en struikgewas"
-      },
-      "groups": [
-        "cuckoos"
-      ],
-      "species": [
+        "blfmal1",
         "placuc3",
         "asidrc2",
         "larhac2"
@@ -523,47 +511,41 @@
     {
       "slug": "backwaters",
       "title": {
-        "en": "Backwaters, paddy and tall grass",
-        "nl": "Achterwateren, rijstvelden en hoog gras"
+        "en": "Backwater birds, kingfishers and a bee-eater",
+        "nl": "Vogels van de backwaters, ijsvogels en een bijeneter"
       },
       "groups": [
         "herons-ibis-and-allies",
-        "grassbirds-and-allies"
+        "grassbirds-and-allies",
+        "kingfishers",
+        "bee-eaters"
       ],
       "species": [
         "cinbit1",
         "manher1",
-        "strgra1"
-      ]
-    },
-    {
-      "slug": "eagles-and-harriers",
-      "title": {
-        "en": "Eagles of the forested hills",
-        "nl": "Arenden van de beboste heuvels"
-      },
-      "groups": [
-        "vultures-hawks-and-allies"
-      ],
-      "species": [
-        "blaeag1",
-        "rubeag2"
+        "strgra1",
+        "blckin1",
+        "blekin1",
+        "bbbeat1"
       ]
     },
     {
       "slug": "hornbills-and-trogon",
       "title": {
-        "en": "Hornbills and a trogon",
-        "nl": "Neushoornvogels en een trogon"
+        "en": "Hornbills, a trogon and eagles",
+        "nl": "Neushoornvogels, een trogon en arenden"
       },
       "groups": [
         "hornbills",
-        "trogons-and-quetzals"
+        "trogons-and-quetzals",
+        "vultures-hawks-and-allies"
       ],
       "species": [
         "maghor2",
         "maphor1",
-        "maltro1"
+        "maltro1",
+        "blaeag1",
+        "rubeag2"
       ]
     },
     {
@@ -585,48 +567,21 @@
       ]
     },
     {
-      "slug": "kingfishers-and-bee-eaters",
-      "title": {
-        "en": "Kingfishers and bee-eaters",
-        "nl": "IJsvogels en bijeneters"
-      },
-      "groups": [
-        "kingfishers",
-        "bee-eaters"
-      ],
-      "species": [
-        "blckin1",
-        "blekin1",
-        "bbbeat1"
-      ]
-    },
-    {
       "slug": "drongos",
       "title": {
-        "en": "Drongos",
-        "nl": "Drongo's"
+        "en": "Drongos, minivets and treetop birds",
+        "nl": "Drongo's, menievogels en vogels van de boomtoppen"
       },
       "groups": [
-        "drongos"
-      ],
-      "species": [
-        "brodro1",
-        "lrtdro1"
-      ]
-    },
-    {
-      "slug": "minivets-and-canopy",
-      "title": {
-        "en": "Minivets and treetop birds",
-        "nl": "Menievogels en boomtopvogels"
-      },
-      "groups": [
+        "drongos",
         "cuckooshrikes",
         "vangas-helmetshrikes-and-allies",
         "tits-chickadees-and-titmice",
         "jays-magpies-crows-and-ravens"
       ],
       "species": [
+        "brodro1",
+        "lrtdro1",
         "whbmin3",
         "malwoo1",
         "indtit1",
@@ -653,28 +608,17 @@
     {
       "slug": "leafbird-bluebird-flowerpecker",
       "title": {
-        "en": "Leafbird and flowerpecker",
-        "nl": "Bladvogel en honingvogel"
+        "en": "Sunbirds, a spiderhunter, a leafbird and a flowerpecker",
+        "nl": "Honingzuigers, een spinnenjager, een bladvogel en een honingvogel"
       },
       "groups": [
         "leafbirds",
-        "flowerpeckers"
-      ],
-      "species": [
-        "jerlea1",
-        "plaflo1"
-      ]
-    },
-    {
-      "slug": "sunbirds",
-      "title": {
-        "en": "Sunbirds and a spiderhunter",
-        "nl": "Honingzuigers en een spinnenjager"
-      },
-      "groups": [
+        "flowerpeckers",
         "sunbirds-and-spiderhunters"
       ],
       "species": [
+        "jerlea1",
+        "plaflo1",
         "lobsun2",
         "crbsun2",
         "wecsun1",
@@ -718,29 +662,17 @@
     {
       "slug": "winter-flycatchers",
       "title": {
-        "en": "Winter flycatchers",
-        "nl": "Wintervliegenvangers"
-      },
-      "groups": [
-        "old-world-flycatchers"
-      ],
-      "species": [
-        "dasfly",
-        "rutfly6",
-        "kasfly1"
-      ]
-    },
-    {
-      "slug": "forest-floor",
-      "title": {
-        "en": "Whistling-thrush, shama, robin and wagtail",
-        "nl": "Fluitlijster, shama, nachtegaal en kwikstaart"
+        "en": "Flycatchers and robins of the forest floor",
+        "nl": "Vliegenvangers en roodborsten van de bosbodem"
       },
       "groups": [
         "old-world-flycatchers",
         "wagtails-and-pipits"
       ],
       "species": [
+        "dasfly",
+        "rutfly6",
+        "kasfly1",
         "mawthr1",
         "whrsha",
         "inbrob1"

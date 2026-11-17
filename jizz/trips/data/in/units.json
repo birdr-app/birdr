@@ -1034,17 +1034,21 @@
     {
       "slug": "nightjars",
       "title": {
-        "en": "Nightjars and Swifts",
-        "nl": "Nachtzwaluwen en Gierzwaluwen"
+        "en": "Swifts, swallows and a nightjar",
+        "nl": "Gierzwaluwen, zwaluwen en een nachtzwaluw"
       },
       "groups": [
         "nightjars",
-        "swifts"
+        "swifts",
+        "martins-and-swallows"
       ],
       "species": [
         "y00960",
         "aspswi1",
-        "indnig1"
+        "indnig1",
+        "barswa",
+        "witswa1",
+        "y00621"
       ]
     },
     {
@@ -1164,17 +1168,20 @@
     {
       "slug": "flamingos",
       "title": {
-        "en": "Flamingos and Grebes",
-        "nl": "Flamingo's en Futen"
+        "en": "A flamingo, grebes and pelicans",
+        "nl": "Een flamingo, futen en pelikanen"
       },
       "groups": [
         "flamingos",
-        "grebes"
+        "grebes",
+        "pelicans"
       ],
       "species": [
         "grefla3",
         "litgre1",
-        "grcgre1"
+        "grcgre1",
+        "spbpel1",
+        "grwpel1"
       ]
     },
     {
@@ -1244,20 +1251,6 @@
         "renibi1",
         "graher1",
         "purher1"
-      ]
-    },
-    {
-      "slug": "pelicans",
-      "title": {
-        "en": "Pelicans",
-        "nl": "Pelikanen"
-      },
-      "groups": [
-        "pelicans"
-      ],
-      "species": [
-        "spbpel1",
-        "grwpel1"
       ]
     },
     {
@@ -1476,31 +1469,20 @@
     {
       "slug": "old-world-orioles",
       "title": {
-        "en": "Old World Orioles and Vangas, Helmetshrikes, and Allies",
-        "nl": "Wielewalen en Vanga's"
+        "en": "Orioles, an iora, fantails and woodland birds",
+        "nl": "Wielewalen, een iora, waaierstaarten en rupsklauwieren"
       },
       "groups": [
         "old-world-orioles",
-        "vangas-helmetshrikes-and-allies"
+        "vangas-helmetshrikes-and-allies",
+        "ioras",
+        "fantails"
       ],
       "species": [
         "ingori1",
         "blhori1",
         "comwoo1",
-        "bwfshr1"
-      ]
-    },
-    {
-      "slug": "ioras",
-      "title": {
-        "en": "Ioras and Fantails",
-        "nl": "Ioras en Fantails"
-      },
-      "groups": [
-        "ioras",
-        "fantails"
-      ],
-      "species": [
+        "bwfshr1",
         "comior1",
         "spbfan1",
         "whbfan2"
@@ -1612,21 +1594,6 @@
       ]
     },
     {
-      "slug": "martins-and-swallows",
-      "title": {
-        "en": "Martins and Swallows",
-        "nl": "Zwaluwen"
-      },
-      "groups": [
-        "martins-and-swallows"
-      ],
-      "species": [
-        "barswa",
-        "witswa1",
-        "y00621"
-      ]
-    },
-    {
       "slug": "bulbuls",
       "title": {
         "en": "Bulbuls",
@@ -1645,31 +1612,20 @@
     {
       "slug": "leaf-warblers",
       "title": {
-        "en": "Leaf Warblers",
-        "nl": "Boszangers"
+        "en": "Leaf warblers, a whitethroat, a white-eye and a babbler",
+        "nl": "Boszangers, een braamsluiper, een brilvogel en een timalia"
       },
       "groups": [
-        "leaf-warblers"
-      ],
-      "species": [
-        "comchi1",
-        "grewar3",
-        "duswar",
-        "humwar1"
-      ]
-    },
-    {
-      "slug": "sylviid-warblers",
-      "title": {
-        "en": "Sylviid Warblers, Parrotbills, Wrentit, and Allies and White-eyes, Yuhinas, and Allies",
-        "nl": "Grasmussen, Parrotbills, Wrentit, and Allies en White-eyes, Yuhinas, and Allies"
-      },
-      "groups": [
+        "leaf-warblers",
         "sylviid-warblers",
         "parrotbills-wrentit-and-allies",
         "white-eyes-yuhinas-and-allies"
       ],
       "species": [
+        "comchi1",
+        "grewar3",
+        "duswar",
+        "humwar1",
         "leswhi4",
         "indwhe1",
         "yeebab1"
@@ -1784,16 +1740,21 @@
     {
       "slug": "weavers-and-allies",
       "title": {
-        "en": "Weavers and Allies",
-        "nl": "Wevers en aanverwanten"
+        "en": "Weavers, buntings and a rosefinch",
+        "nl": "Wevers, gorzen en een roodmus"
       },
       "groups": [
-        "weavers-and-allies"
+        "weavers-and-allies",
+        "finches-euphonias-and-allies",
+        "old-world-buntings"
       ],
       "species": [
         "baywea1",
         "benwea1",
-        "strwea2"
+        "strwea2",
+        "blhbun1",
+        "comros",
+        "rehbun1"
       ]
     },
     {
@@ -1846,22 +1807,6 @@
         "trepip",
         "olbpip",
         "tawpip1"
-      ]
-    },
-    {
-      "slug": "finches-euphonias-and-allies",
-      "title": {
-        "en": "Finches, Euphonias, and Allies and Old World Buntings",
-        "nl": "Vinken, Euphonia's en aanverwanten en Gorzen van de Oude Wereld"
-      },
-      "groups": [
-        "finches-euphonias-and-allies",
-        "old-world-buntings"
-      ],
-      "species": [
-        "blhbun1",
-        "comros",
-        "rehbun1"
       ]
     }
   ],

@@ -17,32 +17,22 @@
     },
     "storks-crane": {
       "title": {
-        "en": "Adjutants and a rare duck",
-        "nl": "Maraboes en een zeldzame eend"
+        "en": "Adjutants, a duck, a rail and a watercock",
+        "nl": "Adjutants, een eend, een ral en een waterhaan"
       },
       "intro": {
-        "en": "Big, scarce waterbirds. The adjutants stand hunched at wetland edges and village trees in Assam, and the White-winged Duck hides on forest pools.",
-        "nl": "Grote, schaarse watervogels. De maraboes staan gebogen bij moerasranden en dorpsbomen in Assam en de witvleugelboseend verbergt zich op bospoelen."
-      }
-    },
-    "river-marsh": {
-      "title": {
-        "en": "Rail and Watercock of the marsh",
-        "nl": "Ral en waterhaan van het moeras"
-      },
-      "intro": {
-        "en": "Wet grass edges, ditches and marshes below the hills hide a shy rail and a Watercock. Look at the water's edge first, then at the stones and the base of the reeds.",
-        "nl": "Natte graskanten, sloten en moerassen onder de heuvels verbergen een schuwe ral en een waterhaan. Kijk eerst naar de waterkant en dan naar de stenen en de voet van het riet."
+        "en": "Scarce birds of the wetlands and wet grass of the Brahmaputra plain. The adjutants stand hunched at wetland edges and village trees in Assam, and the White-winged Duck hides on forest pools. Look at the water's edge first, then at the stones and the base of the reeds.",
+        "nl": "Zeldzame vogels van de moerassen en natte graslanden van de Brahmaputra-vlakte. De maraboes staan gebogen bij moerasranden en dorpsbomen in Assam en de witvleugelboseend verbergt zich op bospoelen. Kijk eerst naar de waterkant en dan naar de stenen en de voet van het riet."
       }
     },
     "kingfishers": {
       "title": {
-        "en": "Kingfishers from forest to mangrove",
-        "nl": "IJsvogels van bos tot mangrove"
+        "en": "Kingfishers and trogons of the forest",
+        "nl": "IJsvogels en trogons van het bos"
       },
       "intro": {
-        "en": "Two kingfishers that go well beyond the river. The Black-backed Dwarf-Kingfisher darts low through forest, and the Brown-winged Kingfisher is a bird of mangroves and tidal creeks such as the Sundarbans.",
-        "nl": "Twee ijsvogels die veel meer doen dan langs de rivier zitten. De jungledwergijsvogel schiet laag door het bos en de bruinvleugelijsvogel is een vogel van mangrove en getijdengeulen zoals in de Sundarbans."
+        "en": "Colourful birds that sit and wait, in the shade of the forest and by tidal creeks. The Black-backed Dwarf-Kingfisher darts low through forest, and the Brown-winged Kingfisher is a bird of mangroves and tidal creeks such as the Sundarbans. The two trogons perch upright in the shade of hill forest and are easy to miss until one turns its head. Listen for a soft, repeated call, then scan the mid-storey.",
+        "nl": "Kleurrijke vogels die stilzitten en wachten, in de schaduw van het bos en bij getijdengeulen. De jungledwergijsvogel schiet laag door het bos en de bruinvleugelijsvogel is een vogel van mangrove en getijdengeulen zoals in de Sundarbans. De twee trogons zitten rechtop in de schaduw van heuvelbos en zijn makkelijk te missen tot er een zijn kop draait. Luister naar een zachte, herhaalde roep en speur dan de middenlaag af."
       }
     },
     "raptors": {
@@ -65,16 +55,6 @@
         "nl": "Noordoost-India heeft meer neushoornvogels dan elders in het land. De dubbelhoornige, de gewone jaarvogel en de Indische neushoornvogel zie je het vaakst; de Himalayajaarvogel en de bruine neushoornvogel vragen heuvelbos en geluk. Luister eerst naar de zware vleugelslagen."
       }
     },
-    "trogons": {
-      "title": {
-        "en": "Trogons",
-        "nl": "Trogons"
-      },
-      "intro": {
-        "en": "Colourful birds that sit still and wait. The two trogons perch upright in the shade of hill forest and are easy to miss until one turns its head. Listen for a soft, repeated call, then scan the mid-storey.",
-        "nl": "Kleurrijke vogels die stilzitten en wachten. De twee trogons zitten rechtop in de schaduw van heuvelbos en zijn makkelijk te missen tot er een zijn kop draait. Luister naar een zachte, herhaalde roep en speur dan de middenlaag af."
-      }
-    },
     "pittas": {
       "title": {
         "en": "Pittas, broadbills and a cochoa",
@@ -95,34 +75,24 @@
         "nl": "Heuvel- en laaglandbos zitten vol spechten. De dwergspechten zijn piepklein en tikken op dunne takjes en bamboe; de grote geelkuifspecht en de poederspecht zijn grote vogels die langs stammen omhoog klimmen en luid roepen. De Himalayahoningspeurder is een kleine, bescheiden vogel die rotswanden met wilde bijennesten bezoekt."
       }
     },
-    "pigeons": {
-      "title": {
-        "en": "Fruit pigeons and a parakeet",
-        "nl": "Fruitduiven en een parkiet"
-      },
-      "intro": {
-        "en": "Fruit-eating birds of the forest canopy. Green-pigeons blend with the leaves and show as a flash of yellow-green; the imperial-pigeon is large and flies high. The Blossom-headed Parakeet travels in noisy, fast-flying flocks over forest and fields, so look at the head colour and the long tail. Watch fruiting fig trees at dawn.",
-        "nl": "Fruiteters van het bladerdak. Groene duiven vallen weg tussen de bladeren en vallen op als een flits geelgroen; de keizerduif is groot en vliegt hoog. De bloesemkopparkiet trekt in luidruchtige, snelle groepen boven bos en akkers, dus kijk naar de kopkleur en de lange staart. Let bij zonsopgang op fruitdragende vijgenbomen."
-      }
-    },
     "cuckoos": {
       "title": {
-        "en": "Malkoha, coucal and emerald cuckoo",
-        "nl": "Malkoha, spoorkoekoek en bronskoekoek"
+        "en": "Fruit pigeons, a parakeet and cuckoos",
+        "nl": "Fruitduiven, een parkiet en koekoeken"
       },
       "intro": {
-        "en": "Three cuckoos with different lives. The malkoha creeps through thick foliage, the Lesser Coucal walks through tall grass and the little emerald cuckoo sings from forest canopy.",
-        "nl": "Drie koekoeken met een verschillend leven. De malkoha sluipt door dicht gebladerte, de spoorkoekoek loopt door hoog gras en de gevlekte bronskoekoek zingt vanuit het bladerdak van het bos."
+        "en": "Birds of the forest canopy and its edges. The malkoha creeps through thick foliage, the Lesser Coucal walks through tall grass and the little emerald cuckoo sings from forest canopy. Green-pigeons blend with the leaves and show as a flash of yellow-green; the imperial-pigeon is large and flies high. The Blossom-headed Parakeet travels in noisy, fast-flying flocks over forest and fields, so look at the head colour and the long tail. Watch fruiting fig trees at dawn.",
+        "nl": "Vogels van het kronendak van het bos en de randen ervan. De malkoha sluipt door dicht gebladerte, de spoorkoekoek loopt door hoog gras en de gevlekte bronskoekoek zingt vanuit het bladerdak van het bos. Groene duiven vallen weg tussen de bladeren en vallen op als een flits geelgroen; de keizerduif is groot en vliegt hoog. De bloesemkopparkiet trekt in luidruchtige, snelle groepen boven bos en akkers, dus kijk naar de kopkleur en de lange staart. Let bij zonsopgang op fruitdragende vijgenbomen."
       }
     },
     "gamebirds": {
       "title": {
-        "en": "Pheasants and partridges",
-        "nl": "Fazanten en patrijzen"
+        "en": "Pheasants, partridges, parrotbills and a myzornis",
+        "nl": "Fazanten, patrijzen, diksnavelmezen en een myzornis"
       },
       "intro": {
-        "en": "Ground birds of hill forest that mostly come out onto tracks at dawn and dusk. Walk quietly, scan the road edge, and stop when you hear scratching in the leaf litter.",
-        "nl": "Grondvogels van heuvelbos die meestal bij zonsopgang en schemering op paden komen. Loop rustig, bekijk de rand van de weg en blijf staan als je gescharrel in het bladstrooisel hoort."
+        "en": "Birds of the hill forest floor and its bamboo and rhododendron. Walk quietly, scan the road edge, and stop when you hear scratching in the leaf litter. Parrotbills move in chattering groups; the Fire-tailed Myzornis is a bright green nectar-feeder of high rhododendron forest.",
+        "nl": "Vogels van de bosbodem in de heuvels en van het bamboe en de rododendron. Loop rustig, bekijk de rand van de weg en blijf staan als je gescharrel in het bladstrooisel hoort. Diksnavelmezen trekken in kwetterende groepjes rond; het vuurstaartje is een felgroene nectareter van hoog rododendronbos."
       }
     },
     "treepies-tits": {
@@ -137,12 +107,12 @@
     },
     "bulbuls": {
       "title": {
-        "en": "Bulbuls of the forest",
-        "nl": "Buulbuuls van het bos"
+        "en": "Bulbuls, a liocichla and a cutia",
+        "nl": "Buulbuuls, een liocichla en een cutia"
       },
       "intro": {
-        "en": "Three forest bulbuls that sit in the open and call. Look for the crest, the colour of the belly and the throat; bulbul flocks are often the first sign of a mixed flock.",
-        "nl": "Drie bosbuulbuuls die in het open zitten en roepen. Let op de kuif, de kleur van de buik en de keel; buulbuulgroepen zijn vaak het eerste teken van een gemengde groep."
+        "en": "Songbirds of the hill forest, in flocks and in the mixed flocks. Look for the crest, the colour of the belly and the throat; bulbul flocks are often the first sign of a mixed flock. The Bugun Liocichla lives in one tiny area in Arunachal Pradesh, and the Cutia climbs mossy trunks like a nuthatch.",
+        "nl": "Zangvogels van het bergbos, in groepen en in de gemengde groepen. Let op de kuif, de kleur van de buik en de keel; buulbuulgroepen zijn vaak het eerste teken van een gemengde groep. De Buguntimalia leeft in één klein gebied in Arunachal Pradesh en de Himalayacutia klimt langs bemoste stammen als een boomklever."
       }
     },
     "wren-scimitar": {
@@ -165,44 +135,14 @@
         "nl": "Grote, luidruchtige lijstergaaien van laaglandbos en heuvels die in luide groepen rondtrekken. Let op de patronen op gezicht en borst; de twee soorten met halsband zijn op grootte alleen moeilijk uit elkaar te houden. De blauwvleugellijstergaai komt vroeg op de dag vaak op paden en wegranden."
       }
     },
-    "mesia": {
-      "title": {
-        "en": "Liocichla and a cutia",
-        "nl": "Buguntimalia en een cutia"
-      },
-      "intro": {
-        "en": "Two bright babbler relatives of the hills. The Bugun Liocichla lives in one tiny area in Arunachal Pradesh, and the Cutia climbs mossy trunks like a nuthatch.",
-        "nl": "Twee kleurige timalia's van de heuvels. De Buguntimalia leeft in één klein gebied in Arunachal Pradesh en de Himalayacutia klimt langs bemoste stammen als een boomklever."
-      }
-    },
-    "parrotbills": {
-      "title": {
-        "en": "Parrotbills and a myzornis",
-        "nl": "Diksnavelmezen en een vuurstaartje"
-      },
-      "intro": {
-        "en": "Small, social birds with short, thick bills that cling to stems of bamboo and tall grass. Parrotbills move in chattering groups; the Fire-tailed Myzornis is a bright green nectar-feeder of high rhododendron forest.",
-        "nl": "Kleine, sociale vogels met korte, dikke snavels die zich vastklampen aan stengels van bamboe en hoog gras. Diksnavelmezen trekken in kwetterende groepjes rond; het vuurstaartje is een felgroene nectareter van hoog rododendronbos."
-      }
-    },
     "leafbirds": {
       "title": {
-        "en": "Leafbirds, bluebird and spiderhunter",
-        "nl": "Bladvogels, blauwrug en spinnenjager"
+        "en": "Leafbird, bluebird, spiderhunter and munias",
+        "nl": "Bladvogel, blauwrug, spinnenjager en bronzemannetjes"
       },
       "intro": {
-        "en": "Canopy birds of fruit and flowers. The leafbird and the fairy-bluebird are bright green or blue and easy to miss among leaves, so wait by a fruiting tree. The Streaked Spiderhunter is olive, with a very long bill, and visits flowering trees and bananas.",
-        "nl": "Vogels van het bladerdak die van fruit en bloemen leven. De bladvogel en de blauwrug zijn felgroen of blauw en tussen het blad makkelijk te missen, dus wacht bij een fruitdragende boom. De gestreepte spinnenjager is olijfgroen met een heel lange snavel en bezoekt bloeiende bomen en bananen."
-      }
-    },
-    "mynas-munias": {
-      "title": {
-        "en": "Two munias of grass and villages",
-        "nl": "Twee munia's van gras en dorpen"
-      },
-      "intro": {
-        "en": "Two small seed-eaters of villages, rice fields and grass edges. They feed in flocks on the ground and on grass heads. Look at the rump and the belly colour to tell them apart.",
-        "nl": "Twee kleine zaadeters van dorpen, rijstvelden en graskanten. Ze foerageren in groepen op de grond en op grasaren. Kijk naar de kleur van de stuit en de buik om ze uit elkaar te houden."
+        "en": "Small, colourful birds of fruit and flowers, and of grass and villages. The leafbird and the fairy-bluebird are bright green or blue and easy to miss among leaves, so wait by a fruiting tree. The Streaked Spiderhunter is olive, with a very long bill, and visits flowering trees and bananas. The two munias are small seed-eaters of villages, rice fields and grass edges that feed in flocks on the ground and on grass heads; look at the rump and the belly colour to tell them apart.",
+        "nl": "Kleine, kleurrijke vogels van vruchten en bloemen, en van gras en dorpen. De bladvogel en de blauwrug zijn felgroen of blauw en tussen het blad makkelijk te missen, dus wacht bij een fruitdragende boom. De gestreepte spinnenjager is olijfgroen met een heel lange snavel en bezoekt bloeiende bomen en bananen. De twee bronzemannetjes zijn kleine zaadeters van dorpen, rijstvelden en graskanten die in groepen op de grond en op grasaren foerageren; kijk naar de kleur van de stuit en de buik om ze uit elkaar te houden."
       }
     }
   }

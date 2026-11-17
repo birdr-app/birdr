@@ -358,18 +358,23 @@
     {
       "slug": "owls-and-nightjar",
       "title": {
-        "en": "owls-and-nightjar",
-        "nl": "owls-and-nightjar"
+        "en": "Owls, a nightjar, a coucal, a crake and a cuckoo",
+        "nl": "Uilen, een nachtzwaluw, een spoorkoekoek, een ral en een koekoek"
       },
       "groups": [
         "owls",
-        "nightjars"
+        "nightjars",
+        "cuckoos",
+        "rails-gallinules-and-allies"
       ],
       "species": [
         "ansowl1",
         "andhao1",
         "barowl5",
-        "andnig1"
+        "andnig1",
+        "andcou1",
+        "andcra1",
+        "viocuc1"
       ]
     },
     {
@@ -392,50 +397,23 @@
     {
       "slug": "parrots",
       "title": {
-        "en": "parrots",
-        "nl": "parrots"
+        "en": "Parrots, a woodpecker, kingfishers and a dollarbird",
+        "nl": "Papegaaien, een specht, ijsvogels en een dollarvogel"
       },
       "groups": [
-        "parrots-parakeets-and-allies"
-      ],
-      "species": [
-        "lotpar2",
-        "rebpar4",
-        "vehpar1"
-      ]
-    },
-    {
-      "slug": "woodpecker-and-kingfishers",
-      "title": {
-        "en": "woodpecker-and-kingfishers",
-        "nl": "woodpecker-and-kingfishers"
-      },
-      "groups": [
+        "parrots-parakeets-and-allies",
         "woodpeckers",
         "kingfishers",
         "rollers-and-allies"
       ],
       "species": [
+        "lotpar2",
+        "rebpar4",
+        "vehpar1",
         "andwoo1",
         "colkin1",
         "rudkin1",
         "dollar1"
-      ]
-    },
-    {
-      "slug": "undergrowth",
-      "title": {
-        "en": "undergrowth",
-        "nl": "undergrowth"
-      },
-      "groups": [
-        "cuckoos",
-        "rails-gallinules-and-allies"
-      ],
-      "species": [
-        "andcou1",
-        "andcra1",
-        "viocuc1"
       ]
     },
     {
@@ -548,29 +526,17 @@
     {
       "slug": "boobies",
       "title": {
-        "en": "boobies",
-        "nl": "boobies"
-      },
-      "groups": [
-        "frigatebirds-boobies-and-gannets"
-      ],
-      "species": [
-        "brnboo",
-        "refboo",
-        "masboo"
-      ]
-    },
-    {
-      "slug": "frigatebirds-tropicbirds",
-      "title": {
-        "en": "frigatebirds-tropicbirds",
-        "nl": "frigatebirds-tropicbirds"
+        "en": "Boobies, frigatebirds and tropicbirds",
+        "nl": "Genten, fregatvogels en keerkringvogels"
       },
       "groups": [
         "frigatebirds-boobies-and-gannets",
         "tropicbirds"
       ],
       "species": [
+        "brnboo",
+        "refboo",
+        "masboo",
         "grefri",
         "lesfri",
         "rettro",

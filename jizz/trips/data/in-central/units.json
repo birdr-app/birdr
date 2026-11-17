@@ -312,17 +312,23 @@
     {
       "slug": "raptors",
       "title": {
-        "en": "Fish-eagle, tern and baza",
-        "nl": "Rivierarend, stern en koekoekswouw"
+        "en": "Raptors, a treeswift, a bee-eater and a woodswallow",
+        "nl": "Roofvogels, een boomgierzwaluw, een bijeneter en een spitsvogel"
       },
       "groups": [
         "vultures-hawks-and-allies",
-        "gulls-terns-and-skimmers"
+        "gulls-terns-and-skimmers",
+        "treeswifts",
+        "bee-eaters",
+        "woodswallows"
       ],
       "species": [
         "lefeag1",
         "blabaz1",
-        "blbter1"
+        "blbter1",
+        "cretre1",
+        "chbeat1",
+        "ashwoo2"
       ]
     },
     {
@@ -346,33 +352,23 @@
     {
       "slug": "cuckoos",
       "title": {
-        "en": "Cuckoos of the dry forest",
-        "nl": "Koekoeken van het droge bos"
+        "en": "Cuckoos, orioles, a minivet and a woodshrike",
+        "nl": "Koekoeken, wielewalen, een menievogel en een rupsklauwier"
       },
       "groups": [
-        "cuckoos"
+        "cuckoos",
+        "old-world-orioles",
+        "cuckooshrikes",
+        "vangas-helmetshrikes-and-allies"
       ],
       "species": [
         "indcuc1",
         "babcuc2",
-        "placuc1"
-      ]
-    },
-    {
-      "slug": "canopy",
-      "title": {
-        "en": "Canopy birds and aerial hunters",
-        "nl": "Vogels van het bladerdak en luchtjagers"
-      },
-      "groups": [
-        "treeswifts",
-        "bee-eaters",
-        "woodswallows"
-      ],
-      "species": [
-        "cretre1",
-        "chbeat1",
-        "ashwoo2"
+        "placuc1",
+        "marori2",
+        "blnori1",
+        "scamin3",
+        "larwoo1"
       ]
     },
     {
@@ -394,48 +390,18 @@
       ]
     },
     {
-      "slug": "orioles",
-      "title": {
-        "en": "Orioles, minivet and woodshrike",
-        "nl": "Wielewalen, menievogel en rupsklauwier"
-      },
-      "groups": [
-        "old-world-orioles",
-        "cuckooshrikes",
-        "vangas-helmetshrikes-and-allies"
-      ],
-      "species": [
-        "marori2",
-        "blnori1",
-        "scamin3",
-        "larwoo1"
-      ]
-    },
-    {
       "slug": "flycatchers",
       "title": {
-        "en": "Winter flycatchers",
-        "nl": "Wintervliegenvangers"
+        "en": "Flycatchers, thrushes and a rock thrush",
+        "nl": "Vliegenvangers, lijsters en een rotslijster"
       },
       "groups": [
-        "old-world-flycatchers"
+        "old-world-flycatchers",
+        "thrushes"
       ],
       "species": [
         "brbfly2",
-        "ultfly1"
-      ]
-    },
-    {
-      "slug": "thrushes",
-      "title": {
-        "en": "Thrushes and a rock thrush",
-        "nl": "Lijsters en een rotslijster"
-      },
-      "groups": [
-        "thrushes",
-        "old-world-flycatchers"
-      ],
-      "species": [
+        "ultfly1",
         "orhthr1",
         "ticthr1",
         "cbrthr1"
@@ -444,45 +410,23 @@
     {
       "slug": "babblers",
       "title": {
-        "en": "Babbler, warbler and wagtail",
-        "nl": "Timalia, zanger en kwikstaart"
+        "en": "Scrub and grassland birds",
+        "nl": "Vogels van struweel en grasland"
       },
       "groups": [
         "ground-babblers-and-allies",
         "leaf-warblers",
-        "wagtails-and-pipits"
-      ],
-      "species": [
-        "putbab1",
-        "subwar2",
-        "forwag1"
-      ]
-    },
-    {
-      "slug": "larks",
-      "title": {
-        "en": "Bushlarks",
-        "nl": "Struikleeuweriken"
-      },
-      "groups": [
-        "larks"
-      ],
-      "species": [
-        "benbus1",
-        "indbus2"
-      ]
-    },
-    {
-      "slug": "finches",
-      "title": {
-        "en": "Avadavat and bunting",
-        "nl": "Astrild en gors"
-      },
-      "groups": [
+        "wagtails-and-pipits",
+        "larks",
         "estrildids",
         "old-world-buntings"
       ],
       "species": [
+        "putbab1",
+        "subwar2",
+        "forwag1",
+        "benbus1",
+        "indbus2",
         "grnava1",
         "crebun1"
       ]

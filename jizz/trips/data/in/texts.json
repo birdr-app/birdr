@@ -439,12 +439,12 @@
     },
     "nightjars": {
       "title": {
-        "en": "Swifts and a nightjar",
-        "nl": "Gierzwaluwen en een nachtzwaluw"
+        "en": "Swifts, swallows and a nightjar",
+        "nl": "Gierzwaluwen, zwaluwen en een nachtzwaluw"
       },
       "intro": {
-        "en": "Two small swifts that scream round buildings and an Indian Nightjar that sits on the ground until you almost step on it.",
-        "nl": "Twee kleine gierzwaluwen die schreeuwend rond gebouwen vliegen en een Hindoenachtzwaluw die op de grond blijft zitten tot je er bijna op stapt."
+        "en": "Birds of the air over towns and fields, and one that sits on the ground. Two small swifts and three swallows scream and swoop around buildings, wires and fields; look for the long tail wires of one swallow and the rusty rump of another. The Indian Nightjar sits on the ground until you almost step on it.",
+        "nl": "Vogels van de lucht boven steden en velden, en één die op de grond zit. Twee kleine gierzwaluwen en drie zwaluwen schreeuwen en duiken rond gebouwen, draden en velden; let op de lange staartdraden van de ene zwaluw en de roestkleurige stuit van de andere. De Hindoenachtzwaluw blijft op de grond zitten tot je er bijna op stapt."
       }
     },
     "rails-gallinules-and-allies": {
@@ -509,12 +509,12 @@
     },
     "flamingos": {
       "title": {
-        "en": "A flamingo and two grebes",
-        "nl": "Een flamingo en twee futen"
+        "en": "A flamingo, grebes and pelicans",
+        "nl": "Een flamingo, futen en pelikanen"
       },
       "intro": {
-        "en": "A pink flamingo wading in a salt lake, then two grebes that swim low and dive. Look for the long neck of the one and the crest of the other.",
-        "nl": "Een roze flamingo die door een zoutmeer waadt, daarna twee futen die laag zwemmen en duiken. Let op de lange hals van de een en de kuif van de ander."
+        "en": "Big and small waterbirds of salt lakes and reservoirs. A pink flamingo wades in a salt lake, two grebes swim low and dive, and two big white pelicans fish together. Look for the long neck of the flamingo, the crest of the Great Crested Grebe and the greyer plumage and spotted bill of the Spot-billed Pelican.",
+        "nl": "Grote en kleine watervogels van zoutmeren en stuwmeren. Een roze flamingo waadt in een zoutmeer, twee futen zwemmen laag en duiken, en twee grote witte pelikanen vissen samen. Let op de lange hals van de flamingo, de kuif van de fuut en het grijzere verenkleed en de gevlekte snavel van de grijze pelikaan."
       }
     },
     "storks": {
@@ -555,16 +555,6 @@
       "intro": {
         "en": "Three ibises and a spoonbill, then two big grey and purple herons. The ibises have curved bills, the spoonbill a flat tip.",
         "nl": "Drie ibissen en een lepelaar, daarna twee grote grijze en purperkleurige reigers. De ibissen hebben gebogen snavels, de lepelaar een platte punt."
-      }
-    },
-    "pelicans": {
-      "title": {
-        "en": "Pelicans",
-        "nl": "Pelikanen"
-      },
-      "intro": {
-        "en": "Two big white pelicans that fish together on big lakes. The Spot-billed is greyer, with spotted bill and a dusky tail.",
-        "nl": "Twee grote witte pelikanen die samen vissen op grote meren. De grijze pelikaan is grijzer, met een gevlekte snavel en een donkere staart."
       }
     },
     "vultures-hawks-and-allies-1": {
@@ -689,22 +679,12 @@
     },
     "old-world-orioles": {
       "title": {
-        "en": "Orioles and two woodland birds",
-        "nl": "Wielewalen en twee bosvogels"
+        "en": "Orioles, an iora, fantails and woodland birds",
+        "nl": "Wielewalen, een iora, waaierstaarten en rupsklauwieren"
       },
       "intro": {
-        "en": "Two bright orioles and two quiet greyish woodland birds. Orioles are easier to hear than to see.",
-        "nl": "Twee felle wielewalen en twee rustige grijsachtige bosvogels. Wielewalen hoor je eerder dan je ze ziet."
-      }
-    },
-    "ioras": {
-      "title": {
-        "en": "An iora and two fantails",
-        "nl": "Een iora en twee waaierstaartjes"
-      },
-      "intro": {
-        "en": "Small active birds of gardens and dry forest. The fantails fan their tails and swivel, the iora puffs out its rump in display.",
-        "nl": "Kleine actieve vogels van tuinen en droog bos. De waaierstaartjes waaieren hun staart en draaien, de iora zet zijn stuit op bij de baltsvlucht."
+        "en": "Bright and quiet birds of gardens and open woodland. Orioles are easier to hear than to see. The fantails fan their tails and swivel, the iora puffs out its rump in display.",
+        "nl": "Felle en rustige vogels van tuinen en open bos. Wielewalen hoor je eerder dan je ze ziet. De waaierstaartjes waaieren hun staart en draaien, de iora zet zijn stuit op bij de baltsvlucht."
       }
     },
     "drongos": {
@@ -767,16 +747,6 @@
         "nl": "Effen bruine zangers die in de winter door riet en struweel sluipen. Let op de wenkbrauw en de vorm van de snavel."
       }
     },
-    "martins-and-swallows": {
-      "title": {
-        "en": "Swallows",
-        "nl": "Zwaluwen"
-      },
-      "intro": {
-        "en": "Three swallows over fields and rivers. Look for the long tail wires of one and the rusty rump of another.",
-        "nl": "Drie zwaluwen boven velden en rivieren. Let op de lange staartdraden van de een en de roestkleurige stuit van een ander."
-      }
-    },
     "bulbuls": {
       "title": {
         "en": "Bulbuls",
@@ -789,22 +759,12 @@
     },
     "leaf-warblers": {
       "title": {
-        "en": "Leaf warblers and a chiffchaff",
-        "nl": "Boszangers en een tjiftjaf"
+        "en": "Leaf warblers, a whitethroat, a white-eye and a babbler",
+        "nl": "Boszangers, een braamsluiper, een brilvogel en een timalia"
       },
       "intro": {
-        "en": "Four tiny winter visitors that flit through trees. Wing bars and the colour of the bill and legs are the clues.",
-        "nl": "Vier piepkleine wintergasten die door bomen vliegen. Vleugelstrepen en de kleur van snavel en poten zijn de aanwijzingen."
-      }
-    },
-    "sylviid-warblers": {
-      "title": {
-        "en": "A whitethroat, a white-eye and a babbler",
-        "nl": "Braamsluiper, brilvogel en babbelaar"
-      },
-      "intro": {
-        "en": "Three small birds of thorn scrub and gardens. The white-eye wears a white ring, the babbler a yellow one.",
-        "nl": "Drie kleine vogels van doornstruweel en tuinen. De brilvogel draagt een witte ring, de babbelaar een gele."
+        "en": "Small, busy birds of trees and thorn scrub. Four tiny winter visitors, the leaf warblers and the chiffchaff, flit through trees; wing bars and the colour of the bill and legs are the clues. The whitethroat, the white-eye and the babbler are three small birds of thorn scrub and gardens: the white-eye wears a white ring, the babbler a yellow one.",
+        "nl": "Kleine, drukke vogels van bomen en doornstruweel. Vier kleine wintergasten, de boszangers en de tjiftjaf, vliegen door de bomen; vleugelstrepen en de kleur van snavel en poten zijn de aanwijzingen. De braamsluiper, de brilvogel en de timalia zijn drie kleine vogels van doornstruweel en tuinen: de brilvogel draagt een witte ring, de timalia een gele."
       }
     },
     "laughingthrushes-and-allies": {
@@ -869,12 +829,12 @@
     },
     "weavers-and-allies": {
       "title": {
-        "en": "Weavers",
-        "nl": "Wevers"
+        "en": "Weavers, buntings and a rosefinch",
+        "nl": "Wevers, gorzen en een roodmus"
       },
       "intro": {
-        "en": "Three weavers, yellow-capped in the breeding season and streaky brown at other times. Look at the colour of the head and breast.",
-        "nl": "Drie wevers, geel gekapt in het broedseizoen en gestreept bruin op andere tijden. Let op de kleur van kop en borst."
+        "en": "Seed-eaters of fields and reed beds. The three weavers are yellow-capped in the breeding season and streaky brown at other times; look at the colour of the head and breast. The two buntings and the rosefinch are seed-eaters of winter fields: the male buntings are bright, the rosefinch a rosy red.",
+        "nl": "Zaadeters van velden en rietkragen. De drie wevers hebben in het broedseizoen een gele kruin en zijn de rest van het jaar bruin gestreept; let op de kleur van kop en borst. De twee gorzen en de roodmus zijn zaadeters van winterse velden: de mannelijke gorzen zijn fel, de roodmus rozerood."
       }
     },
     "estrildids": {
@@ -905,16 +865,6 @@
       "intro": {
         "en": "Streaky brown birds that walk on fields. Pipits are best told by the call, the leg colour and the pattern of the breast.",
         "nl": "Gestreepte bruine vogels die over velden lopen. Piepers herken je het best aan de roep, de kleur van de poten en de tekening van de borst."
-      }
-    },
-    "finches-euphonias-and-allies": {
-      "title": {
-        "en": "Buntings and a rosefinch",
-        "nl": "Gorzen en een roodmus"
-      },
-      "intro": {
-        "en": "Three seed-eaters of winter fields. The male buntings are bright, the rosefinch a rosy red.",
-        "nl": "Drie zaadeters van winterse velden. De mannelijke gorzen zijn fel, de roodmus rozerood."
       }
     }
   },

@@ -17,12 +17,12 @@
     },
     "sandgrouse": {
       "title": {
-        "en": "Sandgrouse",
-        "nl": "Zandhoenders"
+        "en": "Sandgrouse and quails",
+        "nl": "Steppehoenders en kwartels"
       },
       "intro": {
-        "en": "Pigeon-like birds of dry country with pointed wings and a fast, direct flight. They sit hidden on bare ground by day and fly in to water in flocks, often at dawn, and their calls give them away before you see them. Look at belly, throat and tail shape to tell the three apart.",
-        "nl": "Duifachtige vogels van droog land met puntige vleugels en een snelle, rechte vlucht. Overdag zitten ze verborgen op kale grond en 's ochtends vliegen ze in groepen naar het water, en hun roep verraadt ze voordat je ze ziet. Let op buik, keel en staartvorm om de drie uit elkaar te houden."
+        "en": "Round ground birds of dry grass and bare plains. They sit hidden on bare ground by day and fly in to water in flocks, often at dawn, and their calls give them away before you see them. Look at belly, throat and tail shape to tell the three apart. The Rain Quail comes with the monsoon to grassland and the Common Quail visits fields in winter. A Rain Quail male has black on the throat and chest, and calls at dawn help to find them.",
+        "nl": "Ronde grondvogels van droog gras en kale vlakten. Overdag zitten ze verborgen op kale grond en 's ochtends vliegen ze in groepen naar het water, en hun roep verraadt ze voordat je ze ziet. Let op buik, keel en staartvorm om de drie uit elkaar te houden. De regenkwartel komt met de moesson naar grasland en de kwartel bezoekt in de winter akkers. Een mannetje regenkwartel heeft zwart op keel en borst, en de roep bij zonsopgang helpt om ze te vinden."
       }
     },
     "coursers-and-pratincoles": {
@@ -33,16 +33,6 @@
       "intro": {
         "en": "Long-legged birds of dry, bare ground that run more than they fly. The coursers hunt insects on dry fields and stony flats, and the pratincoles hawk over open ground and water like swallows with a wader's legs. In flight the rump and the wing pattern separate them.",
         "nl": "Langbenige vogels van droge, kale grond die meer rennen dan vliegen. De renvogels jagen op insecten op droge velden en stenige vlakten, en de vorkstaartplevieren jagen boven open grond en water als zwaluwen met de poten van een steltloper. In de vlucht onderscheiden stuit en vleugeltekening ze."
-      }
-    },
-    "quails": {
-      "title": {
-        "en": "Quails of grass and fields",
-        "nl": "Kwartels van gras en akkers"
-      },
-      "intro": {
-        "en": "Two small, round ground birds that you usually flush by accident. The Rain Quail comes with the monsoon to grassland and the Common Quail visits fields in winter. A Rain Quail male has black on the throat and chest, and calls at dawn help to find them.",
-        "nl": "Twee kleine, ronde grondvogels die je meestal per ongeluk opjaagt. De regenkwartel komt met de moesson naar grasland en de kwartel bezoekt in de winter akkers. Een mannetje regenkwartel heeft zwart op keel en borst, en de roep bij zonsopgang helpt om ze te vinden."
       }
     },
     "desert-larks": {
@@ -127,12 +117,12 @@
     },
     "reef-herons": {
       "title": {
-        "en": "Reef-heron, Crab-Plover and skimmer",
-        "nl": "Rifreiger, krabplevier en schaarbek"
+        "en": "Reef-heron, Crab-Plover, skimmer and big waders",
+        "nl": "Rifreiger, krabplevier, schaarbek en grote steltlopers"
       },
       "intro": {
-        "en": "Birds of the Gulf of Kutch shore and the coast. The Western Reef-Heron feeds in tidal shallows in a dark and a white form, and the Crab-Plover is a black-and-white wader with a heavy bill that eats crabs. The Indian Skimmer is a rare bird of rivers and estuaries, with an orange bill that cuts through the water.",
-        "nl": "Vogels van de kust van de Golf van Kutch. De westelijke rifreiger foerageert in getijdenondiepten, in een donkere en een witte vorm, en de krabplevier is een zwart-witte steltloper met een zware snavel die krabben eet. De Indische schaarbek is een zeldzame vogel van rivieren en estuaria, met een oranje snavel die door het water snijdt."
+        "en": "Birds of the tidal flats and shores of the Gujarat coast. The Western Reef-Heron feeds in tidal shallows in a dark and a white form, and the Crab-Plover is a black-and-white wader with a heavy bill that eats crabs. The Indian Skimmer is a rare bird of rivers and estuaries, with an orange bill that cuts through the water. The whimbrel has a curved bill and a striped crown, and the Terek Sandpiper an upturned bill and orange legs. The Ruddy Turnstone flips stones, and the Eurasian Oystercatcher is black and white with a red bill.",
+        "nl": "Vogels van de getijdenvlakten en oevers van de kust van Gujarat. De westelijke rifreiger foerageert in getijdenondiepten, in een donkere en een witte vorm, en de krabplevier is een zwart-witte steltloper met een zware snavel die krabben eet. De Indische schaarbek is een zeldzame vogel van rivieren en estuaria, met een oranje snavel die door het water snijdt. De regenwulp heeft een gebogen snavel en een gestreepte kruin en de terekruiter een opwaartse snavel en oranje poten. De steenloper keert stenen om en de scholekster is zwart-wit met een rode snavel."
       }
     },
     "big-gulls-terns": {
@@ -173,16 +163,6 @@
       "intro": {
         "en": "Flocks of small waders feed fast on mudflats and shores, probing the mud. Dunlin and Curlew Sandpiper have a downcurved bill, the Curlew Sandpiper more so. The Sanderling runs along the water's edge, the Red-necked Stint is tiny and the Broad-billed Sandpiper has a double eyebrow.",
         "nl": "Groepen kleine steltlopers foerageren snel op slikken en oevers en steken in de modder. De Bonte strandloper en de Krombekstrandloper hebben een naar beneden gebogen snavel, de Krombek het sterkst. De Drieteenstrandloper rent langs de waterrand, de Roodkeelstrandloper is piepklein en de Breedbekstrandloper heeft een dubbele wenkbrauwstreep."
-      }
-    },
-    "big-waders": {
-      "title": {
-        "en": "Whimbrel and other big waders",
-        "nl": "Regenwulp en andere grote steltlopers"
-      },
-      "intro": {
-        "en": "Big waders of the tidal flats. The whimbrel has a curved bill and a striped crown, and the Terek Sandpiper an upturned bill and orange legs. The Ruddy Turnstone flips stones, and the Eurasian Oystercatcher is black and white with a red bill.",
-        "nl": "Grote steltlopers van de getijdenvlakten. De regenwulp heeft een gebogen snavel en een gestreepte kruin en de terekruiter een opwaartse snavel en oranje poten. De steenloper keert stenen om en de scholekster is zwart-wit met een rode snavel."
       }
     }
   },

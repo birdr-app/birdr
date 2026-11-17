@@ -1,0 +1,344 @@
+{
+  "country": "IN-LADAKH",
+  "groups": [
+    {
+      "slug": "waterfowl",
+      "name": {
+        "en": "Waterfowl",
+        "nl": "Watervogels"
+      },
+      "species": [
+        "commer"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "grouse-quail-and-allies",
+      "name": {
+        "en": "Grouse, Quail, and Allies",
+        "nl": "Hoenders, Kwartels en aanverwanten"
+      },
+      "species": [
+        "tibsno1",
+        "himsno",
+        "chukar"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "pigeons-and-doves",
+      "name": {
+        "en": "Pigeons and Doves",
+        "nl": "Duiven"
+      },
+      "species": [
+        "snopig1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "sandgrouse",
+      "name": {
+        "en": "Sandgrouse",
+        "nl": "Zandhoenders"
+      },
+      "species": [
+        "tibsan1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "swifts",
+      "name": {
+        "en": "Swifts",
+        "nl": "Gierzwaluwen"
+      },
+      "species": [
+        "alpswi1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "cranes",
+      "name": {
+        "en": "Cranes",
+        "nl": "Kraanvogels"
+      },
+      "species": [
+        "blncra1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "shorebirds",
+      "name": {
+        "en": "Shorebirds",
+        "nl": "Steltlopers"
+      },
+      "species": [
+        "ibisbi1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "vultures-hawks-and-allies",
+      "name": {
+        "en": "Vultures, Hawks, and Allies",
+        "nl": "Gieren, Arenden, Buizerds, Haviken en aanverwanten"
+      },
+      "species": [
+        "lammer1",
+        "pafeag1",
+        "goleag"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "jays-magpies-crows-and-ravens",
+      "name": {
+        "en": "Jays, Magpies, Crows, and Ravens",
+        "nl": "Gaaien, Eksters, Kraaien en Raven"
+      },
+      "species": [
+        "rebcho1",
+        "yebcho1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "larks",
+      "name": {
+        "en": "Larks",
+        "nl": "Leeuweriken"
+      },
+      "species": [
+        "horlar",
+        "tiblar1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "martins-and-swallows",
+      "name": {
+        "en": "Martins and Swallows",
+        "nl": "Zwaluwen"
+      },
+      "species": [
+        "eurcrm1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "long-tailed-tits-and-bushtit",
+      "name": {
+        "en": "Long-tailed Tits and Bushtit",
+        "nl": "Long-tailed Tits and Bushtit"
+      },
+      "species": [
+        "wbtwar1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "wallcreeper",
+      "name": {
+        "en": "Wallcreeper",
+        "nl": "Rotskruiper"
+      },
+      "species": [
+        "wallcr1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "dippers",
+      "name": {
+        "en": "Dippers",
+        "nl": "Waterspreeuwen"
+      },
+      "species": [
+        "whtdip1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "thrushes",
+      "name": {
+        "en": "Thrushes",
+        "nl": "Lijsters"
+      },
+      "species": [
+        "granda1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "accentors",
+      "name": {
+        "en": "Accentors",
+        "nl": "Heggenmussen"
+      },
+      "species": [
+        "alpacc1",
+        "broacc1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "old-world-sparrows",
+      "name": {
+        "en": "Old World Sparrows",
+        "nl": "Mussen van de Oude Wereld"
+      },
+      "species": [
+        "blwsno1",
+        "runsno1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "finches-euphonias-and-allies",
+      "name": {
+        "en": "Finches, Euphonias, and Allies",
+        "nl": "Vinken, Euphonia's en aanverwanten"
+      },
+      "species": [
+        "greros1",
+        "plmfin1",
+        "bhmfin1",
+        "twite1",
+        "fifser1"
+      ],
+      "endemics": []
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "snowcocks",
+      "title": {
+        "en": "Snowcocks, Chukar and Snow Pigeon",
+        "nl": "Berghoenders, steenpatrijs en sneeuwduif"
+      },
+      "groups": [
+        "grouse-quail-and-allies",
+        "pigeons-and-doves"
+      ],
+      "species": [
+        "tibsno1",
+        "himsno",
+        "chukar",
+        "snopig1"
+      ]
+    },
+    {
+      "slug": "raptors",
+      "title": {
+        "en": "Lammergeier, eagles and the Alpine Swift",
+        "nl": "Lammergier, arenden en de Alpengierzwaluw"
+      },
+      "groups": [
+        "vultures-hawks-and-allies",
+        "swifts"
+      ],
+      "species": [
+        "lammer1",
+        "goleag",
+        "pafeag1",
+        "alpswi1"
+      ]
+    },
+    {
+      "slug": "cliffs",
+      "title": {
+        "en": "Cliffs and gorges",
+        "nl": "Kliffen en kloven"
+      },
+      "groups": [
+        "martins-and-swallows",
+        "wallcreeper",
+        "jays-magpies-crows-and-ravens"
+      ],
+      "species": [
+        "eurcrm1",
+        "wallcr1",
+        "rebcho1",
+        "yebcho1"
+      ]
+    },
+    {
+      "slug": "river-birds",
+      "title": {
+        "en": "Rivers and wetlands of the high plateau",
+        "nl": "Rivieren en moerassen van het hoge plateau"
+      },
+      "groups": [
+        "dippers",
+        "shorebirds",
+        "waterfowl",
+        "cranes"
+      ],
+      "species": [
+        "whtdip1",
+        "ibisbi1",
+        "commer",
+        "blncra1"
+      ]
+    },
+    {
+      "slug": "ladakh-plateau",
+      "title": {
+        "en": "The Ladakh plateau",
+        "nl": "Het plateau van Ladakh"
+      },
+      "groups": [
+        "larks",
+        "sandgrouse",
+        "old-world-sparrows"
+      ],
+      "species": [
+        "tiblar1",
+        "horlar",
+        "tibsan1",
+        "blwsno1",
+        "runsno1"
+      ]
+    },
+    {
+      "slug": "mountain-finches",
+      "title": {
+        "en": "Mountain finches, serin, twite and Great Rosefinch",
+        "nl": "Bergvinken, kanarie, frater en Grote roodmus"
+      },
+      "groups": [
+        "finches-euphonias-and-allies"
+      ],
+      "species": [
+        "plmfin1",
+        "bhmfin1",
+        "fifser1",
+        "twite1",
+        "greros1"
+      ]
+    },
+    {
+      "slug": "high-ground",
+      "title": {
+        "en": "Accentors, Grandala and tit-warbler of the high ground",
+        "nl": "Heggenmussen, Grandala en struikhaantje van het hoge terrein"
+      },
+      "groups": [
+        "accentors",
+        "thrushes",
+        "long-tailed-tits-and-bushtit"
+      ],
+      "species": [
+        "alpacc1",
+        "broacc1",
+        "granda1",
+        "wbtwar1"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

@@ -1,0 +1,79 @@
+{
+  "country": "IN-LADAKH",
+  "intro": {
+    "en": "Ladakh and the high Himalaya: the cold, dry mountains above the tree line, around Leh, the Hemis valley, Nubra, Pangong and Tso Moriri, and the high passes of Spiti and Lahaul. Few birds live up here, but several are birds you find nowhere else in India: snowcocks, larks and snowfinches of the Tibetan plateau, the Black-necked Crane, the Ibisbill and the big raptors of the cliffs. This pack covers 30 species, on top of the India trip.",
+    "nl": "Ladakh en de hoge Himalaya: de koude, droge bergen boven de boomgrens, rond Leh, de Hemis-vallei, Nubra, Pangong en Tso Moriri en de hoge passen van Spiti en Lahaul. Er leven weinig vogels, maar verschillende vind je nergens anders in India: berghoenders, leeuweriken en sneeuwvinken van het Tibetaanse plateau, de Zwarthalskraanvogel, de Ibissnavel en de grote roofvogels van de kliffen. Dit pakket omvat 30 soorten, bovenop de reis naar India."
+  },
+  "units": {
+    "snowcocks": {
+      "title": {
+        "en": "Snowcocks, Chukar and Snow Pigeon",
+        "nl": "Berghoenders, steenpatrijs en sneeuwduif"
+      },
+      "intro": {
+        "en": "Four birds of rocky slopes, scree and cliffs above the tree line and in the dry valleys of Ladakh. Scan the crags for the big grey snowcocks, which often betray themselves with ringing whistles. Chukar keeps to lower, drier hillsides.",
+        "nl": "Vier vogels van rotsige hellingen, steengruis en kliffen boven de boomgrens en in de droge dalen van Ladakh. Speur de rotsen af naar de grote grijze berghoenders, die zich vaak verraden met klinkende fluittonen. De Aziatische steenpatrijs blijft op lagere, drogere hellingen."
+      }
+    },
+    "raptors": {
+      "title": {
+        "en": "Lammergeier, eagles and the Alpine Swift",
+        "nl": "Lammergier, arenden en de Alpengierzwaluw"
+      },
+      "intro": {
+        "en": "Big birds of the sky over valleys and ridges. Learn the flight shapes first: the long wedge-shaped tail of the Lammergeier, the broad wings of the eagles. Pallas's Fish-Eagle is a bird of the big lakes and rivers. The Alpine Swift is fast and large for a swift and nests on the same cliffs.",
+        "nl": "Grote vogels boven dalen en bergkammen. Leer eerst de vliegsilhouetten: de lange, wigvormige staart van de lammergier en de brede vleugels van de arenden. De Witbandzeearend hoort bij grote meren en rivieren. De Alpengierzwaluw is snel en groot voor een gierzwaluw en broedt op dezelfde kliffen."
+      }
+    },
+    "cliffs": {
+      "title": {
+        "en": "Cliffs and gorges",
+        "nl": "Kliffen en kloven"
+      },
+      "intro": {
+        "en": "Four birds that live on rock faces and fly around them. The Eurasian Crag Martin hunts over the gorge; the choughs wheel in noisy flocks; the Wallcreeper is the prize, flitting over the rock like a red-winged butterfly, most often in winter on lower cliffs and dam walls.",
+        "nl": "Vier vogels die op rotswanden leven en er omheen vliegen. De Rotszwaluw jaagt boven de kloof, de choughs cirkelen in luidruchtige groepen en de Rotskruiper is de hoofdprijs: hij fladdert als een roodvleugelige vlinder langs de rots, vooral in de winter op lagere kliffen en dammuren."
+      }
+    },
+    "river-birds": {
+      "title": {
+        "en": "Rivers and wetlands of the high plateau",
+        "nl": "Rivieren en moerassen van het hoge plateau"
+      },
+      "intro": {
+        "en": "Glacial rivers and high marshes hold their own birds. The White-throated Dipper bobs on boulders and walks into the current; the Ibisbill probes shingle banks; the Goosander dives for fish. The Black-necked Crane breeds in the high marshes and is one of the great sights of Ladakh.",
+        "nl": "Gletsjerrivieren en hoge moerassen hebben hun eigen vogels. De Waterspreeuw knikt op keien en loopt de stroming in, de Ibissnavel prikt in grindbanken en de Grote zaagbek duikt naar vis. De Zwarthalskraanvogel broedt in de hoge moerassen en is een van de grote verschijningen van Ladakh."
+      }
+    },
+    "ladakh-plateau": {
+      "title": {
+        "en": "The Ladakh plateau",
+        "nl": "Het plateau van Ladakh"
+      },
+      "intro": {
+        "en": "The high, dry plateau of Ladakh and the Tibetan side has its own few birds. Look on bare slopes, around lakes and on gravel plains, and walk slowly. Birds here are tough and stay close to the ground: the larks, the sandgrouse and the two snowfinches.",
+        "nl": "Het hoge, droge plateau van Ladakh en de Tibetaanse kant heeft een eigen handvol vogels. Kijk op kale hellingen, rond meren en op grindvlakten, en loop langzaam. De vogels hier zijn taai en blijven dicht bij de grond: de leeuweriken, het steppehoen en de twee sneeuwvinken."
+      }
+    },
+    "mountain-finches": {
+      "title": {
+        "en": "Mountain finches, serin, twite and Great Rosefinch",
+        "nl": "Bergvinken, kanarie, frater en Grote roodmus"
+      },
+      "intro": {
+        "en": "Finches that feed in flocks on the ground in alpine meadows and dry valleys. They are streaked brown and are not easy at first. Find the flock, then look at each bird for rump colour and head pattern. The male Great Rosefinch is the red giant among them.",
+        "nl": "Vinken die in groepen op de grond foerageren in alpiene weiden en droge dalen. Ze zijn bruin gestreept en in het begin niet makkelijk. Zoek de groep en kijk dan bij elke vogel naar de kleur van de stuit en de kopstreep. Het mannetje van de Grote roodmus is de rode reus onder hen."
+      }
+    },
+    "high-ground": {
+      "title": {
+        "en": "Accentors, Grandala and tit-warbler of the high ground",
+        "nl": "Heggenmussen, Grandala en struikhaantje van het hoge terrein"
+      },
+      "intro": {
+        "en": "Birds of stony slopes, scree and juniper above the tree line. The accentors are quiet, sparrow-like and creep along the ground; the pattern of the face and flanks tells them apart. The Grandala is an odd bird of high bare slopes that travels in flocks, and the tit-warbler is a bird of scrub and juniper, bright blue and chestnut in the male.",
+        "nl": "Vogels van stenige hellingen, steengruis en jeneverbes boven de boomgrens. De heggenmussen zijn rustig, mus-achtig en kruipen over de grond; het patroon van gezicht en flanken onderscheidt ze. De Grandala is een vreemde vogel van hoge, kale hellingen die in groepen rondtrekt en het struikhaantje is een vogel van struweel en jeneverbes, het mannetje is helderblauw en kastanjebruin."
+      }
+    }
+  }
+}

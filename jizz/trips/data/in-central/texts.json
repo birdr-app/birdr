@@ -17,12 +17,12 @@
     },
     "raptors": {
       "title": {
-        "en": "Fish-eagle, tern and baza",
-        "nl": "Rivierarend, stern en koekoekswouw"
+        "en": "Raptors, a treeswift, a bee-eater and a woodswallow",
+        "nl": "Roofvogels, een boomgierzwaluw, een bijeneter en een spitsvogel"
       },
       "intro": {
-        "en": "The Chambal and other slow rivers hold a few specialities. The Lesser Fish-Eagle watches the water from a tree, and the Black-bellied Tern fishes the sandbars below. The Black Baza is a small crested hawk that arrives for the winter and sits at forest edges. Scan sandbars and shores first.",
-        "nl": "De Chambal en andere trage rivieren hebben een paar specialiteiten. De kleine rivierarend speurt vanuit een boom over het water en de zwartbuikstern vist langs de zandbanken eronder. De zwarte koekoekswouw is een kleine, gekuifde roofvogel die voor de winter komt en aan bosranden zit. Scan eerst de zandbanken en oevers."
+        "en": "Birds of the air over the rivers and the forest. The Lesser Fish-Eagle watches the water from a tree, and the Black-bellied Tern fishes the sandbars below. The Black Baza is a small crested hawk that arrives for the winter and sits at forest edges. Scan sandbars and shores first. The treeswift perches upright on bare branches, and the Chestnut-headed Bee-eater and the Ashy Woodswallow sally out after insects from open perches.",
+        "nl": "Vogels van de lucht boven de rivieren en het bos. De kleine rivierarend speurt vanuit een boom over het water en de zwartbuikstern vist langs de zandbanken eronder. De zwarte koekoekswouw is een kleine, gekuifde roofvogel die voor de winter komt en aan bosranden zit. Scan eerst de zandbanken en oevers. De boomgierzwaluw zit rechtop op kale takken en de bruinkopbijeneter en de spitsvogel vliegen vanaf open zitplaatsen uit achter insecten aan."
       }
     },
     "ground-birds": {
@@ -37,22 +37,12 @@
     },
     "cuckoos": {
       "title": {
-        "en": "Cuckoos of the dry forest",
-        "nl": "Koekoeken van het droge bos"
+        "en": "Cuckoos, orioles, a minivet and a woodshrike",
+        "nl": "Koekoeken, wielewalen, een menievogel en een rupsklauwier"
       },
       "intro": {
-        "en": "Three cuckoos call loudly in the forest long before one shows. They sit in dense foliage and stay still, so learn the voices first. When one does show, check the underparts for bars and the colour of the belly.",
-        "nl": "Drie koekoeken roepen luid in het bos, lang voordat er een zichtbaar is. Ze zitten stil in dichte begroeiing, dus leer eerst de stemmen. Laat er een zien, let dan op de strepen op de onderkant en de kleur van de buik."
-      }
-    },
-    "canopy": {
-      "title": {
-        "en": "Canopy birds and aerial hunters",
-        "nl": "Vogels van het bladerdak en luchtjagers"
-      },
-      "intro": {
-        "en": "These birds hunt in and above the canopy. The treeswift perches upright on bare branches, and the Chestnut-headed Bee-eater and the Ashy Woodswallow sally out after insects from open perches.",
-        "nl": "Deze vogels jagen in en boven het bladerdak. De boomgierzwaluw zit rechtop op kale takken en de bruinkopbijeneter en de spitsvogel vliegen vanaf open zitplaatsen uit achter insecten aan."
+        "en": "Birds of the tree crowns that you find by voice. They sit in dense foliage and stay still, so learn the voices first. When one does show, check the underparts for bars and the colour of the belly. The males of the orioles and the minivet are bright and easy to spot in good light. The woodshrike is plainer, grey-brown with a dark mask.",
+        "nl": "Vogels van de boomkruinen die je op de stem vindt. Ze zitten stil in dichte begroeiing, dus leer eerst de stemmen. Laat er een zien, let dan op de strepen op de onderkant en de kleur van de buik. De mannetjes van de wielewalen en de menievogel zijn fel gekleurd en bij goed licht makkelijk te zien. De rupsklauwier is eenvoudiger, grijsbruin met een donker masker."
       }
     },
     "bark": {
@@ -65,64 +55,24 @@
         "nl": "Kijk naar stammen en dikke takken. De spechten hakken en klimmen omhoog, terwijl de boomklever en de gevlekte boomkruiper de schors in beide richtingen afzoeken. De boomkruiper is plaatselijk en makkelijk te missen, dus kijk goed bij bomen met diep gescheurde schors."
       }
     },
-    "orioles": {
-      "title": {
-        "en": "Orioles, minivet and woodshrike",
-        "nl": "Wielewalen, menievogel en rupsklauwier"
-      },
-      "intro": {
-        "en": "Orioles, a minivet and a woodshrike share the canopy of tall forest. The males of the orioles and the minivet are bright and easy to spot in good light. The woodshrike is plainer, grey-brown with a dark mask.",
-        "nl": "Wielewalen, een menievogel en een rupsklauwier delen het bladerdak van hoog bos. De mannetjes van de wielewalen en de menievogel zijn fel gekleurd en bij goed licht makkelijk te zien. De rupsklauwier is eenvoudiger, grijsbruin met een donker masker."
-      }
-    },
     "flycatchers": {
       "title": {
-        "en": "Winter flycatchers",
-        "nl": "Wintervliegenvangers"
+        "en": "Flycatchers, thrushes and a rock thrush",
+        "nl": "Vliegenvangers, lijsters en een rotslijster"
       },
       "intro": {
-        "en": "Two small insect-eaters of the forest understorey and clearings. Both are winter visitors from the hills. Look at the face, throat and breast colours.",
-        "nl": "Twee kleine insecteneters van de onderbegroeiing en open plekken in het bos. Allebei zijn het wintergasten uit de bergen. Let op de kleuren van gezicht, keel en borst."
-      }
-    },
-    "thrushes": {
-      "title": {
-        "en": "Thrushes and a rock thrush",
-        "nl": "Lijsters en een rotslijster"
-      },
-      "intro": {
-        "en": "Thrushes that feed on the ground in shade, flicking over leaf litter. Several are winter visitors from the Himalaya. The Orange-headed Thrush is the one to look for first, on damp, shady forest floors. The Chestnut-bellied Rock Thrush sits on boulders and open perches on rocky slopes.",
-        "nl": "Lijsters die in de schaduw op de grond foerageren en het bladstrooisel omkeren. Verschillende zijn wintergasten uit de Himalaya. De damalijster is de eerste om naar te zoeken, op vochtige, schaduwrijke bosbodems. De roodbuikrotslijster zit op rotsblokken en open zitplekken op rotsige hellingen."
+        "en": "Birds of the shaded floor and understorey of the forest, many of them winter visitors. The two flycatchers are small insect-eaters of the understorey and clearings; look at the face, throat and breast colours. The thrushes feed on the ground in shade, flicking over leaf litter, and several are winter visitors from the Himalaya. The Orange-headed Thrush is the one to look for first, on damp, shady forest floors. The Chestnut-bellied Rock Thrush sits on boulders and open perches on rocky slopes.",
+        "nl": "Vogels van de schaduwrijke bosbodem en struiklaag, vaak wintergasten. De twee vliegenvangers zijn kleine insecteneters van het kreupelhout en open plekken; let op de kleuren van gezicht, keel en borst. De lijsters foerageren op de grond in de schaduw en keren het bladstrooisel om, en verschillende zijn wintergasten uit de Himalaya. De Damalijster is de eerste om naar te zoeken, op vochtige, schaduwrijke bosbodems. De Roodbuikrotslijster zit op rotsblokken en open uitkijkposten op rotsige hellingen."
       }
     },
     "babblers": {
       "title": {
-        "en": "Babbler, warbler and wagtail",
-        "nl": "Timalia, zanger en kwikstaart"
+        "en": "Scrub and grassland birds",
+        "nl": "Vogels van struweel en grasland"
       },
       "intro": {
-        "en": "Three birds of the shady understorey. The Puff-throated Babbler hops and scolds in dry scrub and forest undergrowth, so listen for the chatter and wait. The Sulphur-bellied Warbler gleans low in bushes in winter, and the Forest Wagtail walks along tracks, swaying its tail from side to side.",
-        "nl": "Drie vogels van de schaduwrijke onderbegroeiing. De gevlekte jungletimalia hipt en scheldt in droog struikgewas en onderbegroeiing van het bos, dus luister naar het gekwebbel en wacht af. De steenboszanger zoekt in de winter laag in struiken naar insecten en de boomkwikstaart loopt over paden en wiegt zijn staart van links naar rechts."
-      }
-    },
-    "larks": {
-      "title": {
-        "en": "Bushlarks",
-        "nl": "Struikleeuweriken"
-      },
-      "intro": {
-        "en": "Two larks of open, stony country that look much alike on the ground. Look at the wing colour, the bill and the head shape, and listen to the song in the display flight.",
-        "nl": "Twee leeuweriken van open, stenig terrein die op de grond veel op elkaar lijken. Let op de kleur van de vleugel, de snavel en de kopvorm, en luister naar de zang tijdens de zangvlucht."
-      }
-    },
-    "finches": {
-      "title": {
-        "en": "Avadavat and bunting",
-        "nl": "Astrild en gors"
-      },
-      "intro": {
-        "en": "Two small seed-eaters of dry grass and scrub. The Green Avadavat goes about in small groups, and the male Crested Bunting is black with a pointed crest, easy to pick out on open ground.",
-        "nl": "Twee kleine zaadeters van droog gras en struikgewas. De olijfastrild zit in kleine groepjes en het mannetje van de kuifgors is zwart met een spitse kuif, goed te herkennen op open terrein."
+        "en": "Small birds of dry scrub, stony ground and grass. The Puff-throated Babbler hops and scolds in dry scrub and forest undergrowth, so listen for the chatter and wait. The Sulphur-bellied Warbler gleans low in bushes in winter, and the Forest Wagtail walks along tracks, swaying its tail from side to side. Two bushlarks of open, stony country look much alike on the ground: look at the wing colour, the bill and the head shape, and listen to the song in the display flight. The Green Avadavat goes about in small groups, and the male Crested Bunting is black with a pointed crest, easy to pick out on open ground.",
+        "nl": "Kleine vogels van droog struweel, stenige grond en gras. De gevlekte jungletimalia hipt en scheldt in droog struikgewas en onderbegroeiing van het bos, dus luister naar het gekwebbel en wacht af. De steenboszanger zoekt in de winter laag in struiken naar insecten en de boomkwikstaart loopt over paden en wiegt zijn staart van links naar rechts. Twee leeuweriken van open, stenig terrein lijken op de grond sterk op elkaar: let op de kleur van de vleugel, de snavel en de kopvorm, en luister naar de zang tijdens de zangvlucht. De olijfastrild zit in kleine groepjes en het mannetje van de kuifgors is zwart met een spitse kuif, goed te herkennen op open terrein."
       }
     }
   }

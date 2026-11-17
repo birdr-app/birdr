@@ -1,0 +1,99 @@
+{
+  "country": "IN-SIKKIM",
+  "intro": {
+    "en": "Darjeeling and Sikkim: the hill forests of Singalila, Lava, Lolegaon, Pelling and Yumthang, from warm broadleaf forest at about 1,000 metres up to the rhododendron zone near the tree line. This is where the colourful eastern Himalayan babblers live, with tragopans, niltavas and sunbirds. This pack covers 38 species, on top of the India trip. The forests of Uttarakhand and Himachal have their own pack, and so do Arunachal Pradesh and Assam (Northeast India).",
+    "nl": "Darjeeling en Sikkim: de bergbossen van Singalila, Lava, Lolegaon, Pelling en Yumthang, van warm loofbos op ongeveer 1.000 meter tot de rododendronzone bij de boomgrens. Hier leven de kleurrijke timalia's van de oostelijke Himalaya, samen met saterhoenders, niltava's en honingzuigers. Dit pakket omvat 38 soorten, bovenop de reis naar India. De bossen van Uttarakhand en Himachal hebben een eigen pakket, en ook Arunachal Pradesh en Assam (Noordoost-India)."
+  },
+  "units": {
+    "high-forest": {
+      "title": {
+        "en": "Pheasants and birds of the rhododendron zone",
+        "nl": "Fazanten en vogels van de rododendronzone"
+      },
+      "intro": {
+        "en": "The highest forest of Sikkim and Singalila, with rhododendron and fir near the tree line. Satyr Tragopan and Blood Pheasant are shy and walk the forest floor, best looked for at dawn on trails and in clearings. The Golden Bush-Robin and the Dark-breasted Rosefinch share the same dense, mossy thickets.",
+        "nl": "Het hoogste bos van Sikkim en Singalila, met rododendron en spar bij de boomgrens. Het Rood saterhoen en de Bloedfazant zijn schuw en lopen over de bosbodem, je zoekt ze het best bij zonsopgang op paden en open plekken. De Goudstaart en de Donkere roodmus zitten in dezelfde dichte, bemoste struiken."
+      }
+    },
+    "forest-floor": {
+      "title": {
+        "en": "Forktails and skulkers of the forest floor",
+        "nl": "Vorkstaarten en schuwe soorten van de bosbodem"
+      },
+      "intro": {
+        "en": "Small birds that live low, beside streams and in mossy undergrowth. The Little and the Slaty-backed Forktail pick their way over wet rocks, flicking a long black-and-white tail. The cupwing and the tesia are tiny, nearly tailless and heard far more often than seen.",
+        "nl": "Kleine vogels die laag leven, langs beken en in bemost kreupelhout. De Kleine vorkstaart en de Grijsrugvorkstaart lopen behoedzaam over natte rotsen en wippen met hun lange zwart-witte staart. De dwergsluiper en de tesia zijn piepklein, bijna staartloos en je hoort ze veel vaker dan je ze ziet."
+      }
+    },
+    "barbets-leafbird": {
+      "title": {
+        "en": "Barbets, woodpecker and leafbird",
+        "nl": "Baardvogels, specht en bladvogel"
+      },
+      "intro": {
+        "en": "Four birds of the middle hills that you find by sound. The barbets are green, thickset and far easier to hear than to see; check fruiting trees. The Darjeeling Woodpecker taps on trunks, and the Orange-bellied Leafbird is bright green and orange and often high in a flowering tree.",
+        "nl": "Vier vogels van de middelhoge heuvels die je op geluid vindt. Baardvogels zijn groen en gedrongen en veel makkelijker te horen dan te zien; kijk in bomen met vruchten. De Darjeelingspecht tikt op stammen en de Oranjebuikbladvogel is felgroen en oranje en zit vaak hoog in een bloeiende boom."
+      }
+    },
+    "sunbirds": {
+      "title": {
+        "en": "Sunbirds and the Sultan Tit",
+        "nl": "Honingzuigers en de Sultanmees"
+      },
+      "intro": {
+        "en": "Colour in the treetops. Sunbirds are tiny and feed on rhododendron and other flowers; watch flowering trees in spring. The Sultan Tit is a big, crested, yellow-and-black tit that joins the mixed flocks.",
+        "nl": "Kleur in de boomtoppen. Honingzuigers zijn piepklein en eten van rododendron en andere bloemen; let in het voorjaar op bloeiende bomen. De Sultanmees is een grote, gekuifde geelzwarte mees die zich bij de gemengde groepen aansluit."
+      }
+    },
+    "niltavas": {
+      "title": {
+        "en": "Niltavas, fantail and canary-flycatcher",
+        "nl": "Niltava's, waaierstaart en vliegenvanger"
+      },
+      "intro": {
+        "en": "Flycatchers of the forest edge and the shady trails. The male niltavas are bright blue or deep blue with orange or rufous underparts; the females are plain brown with a small blue patch. The fairy-fantail and the canary-flycatcher are yellow, active and always on the move.",
+        "nl": "Vliegenvangers van de bosrand en de beschaduwde paden. De mannetjes van de niltava's zijn helderblauw of donkerblauw met oranje of roestbruine onderkant, de vrouwtjes zijn bruin met een klein blauw plekje. De Geelbuikwaaierstaart en de Grijskopvliegenvanger zijn geel, levendig en altijd in beweging."
+      }
+    },
+    "laughingthrushes-east": {
+      "title": {
+        "en": "Laughingthrushes of the east Himalaya",
+        "nl": "Lijstergaaien van de oostelijke Himalaya"
+      },
+      "intro": {
+        "en": "Four more laughingthrushes, found from Nepal eastwards to Sikkim and Darjeeling. They keep low in dense forest undergrowth and rhododendron thickets, often in the early morning along the trails of places like Singalila.",
+        "nl": "Nog vier lijstergaaien, te vinden van Nepal oostwaarts tot Sikkim en Darjeeling. Ze blijven laag in dicht kreupelhout en rododendronstruiken, vaak vroeg in de ochtend langs de paden van plekken als Singalila."
+      }
+    },
+    "colourful-babblers": {
+      "title": {
+        "en": "Liocichla, leiothrix, mesia and minlas",
+        "nl": "Timalia's in felle kleuren"
+      },
+      "intro": {
+        "en": "Small, colourful relatives of the laughingthrushes. They forage in lively flocks at low and middle height in the forest, and several have bright red, orange or silver in the plumage. They are the birds that make a flock of babblers worth stopping for.",
+        "nl": "Kleine, kleurige verwanten van de lijstergaaien. Ze foerageren in levendige groepen op lage en middelhoge hoogte in het bos en bij verschillende soorten zit fel rood, oranje of zilver in het verenkleed. Door hen is een groep timalia's de moeite van het stoppen waard."
+      }
+    },
+    "sibias": {
+      "title": {
+        "en": "Sibias and a fulvetta",
+        "nl": "Sibia's en een fulvetta"
+      },
+      "intro": {
+        "en": "Flocks of loud, long-tailed birds in the canopy and the bushes of the hill forest. Sibias are easy to hear and quick to find once a flock moves through; the Golden-breasted Fulvetta is small and moves in busy groups. Look at the head pattern and the tail.",
+        "nl": "Groepen luidruchtige vogels met een lange staart in het kronendak en de struiken van het bergbos. Sibia's hoor je makkelijk en je vindt ze snel als een groep voorbijtrekt; de Gouden fulvetta is klein en trekt in drukke groepjes. Let op de kopstreep en de staart."
+      }
+    },
+    "scimitar-babblers": {
+      "title": {
+        "en": "Babblers, a parrotbill and leaf warblers",
+        "nl": "Timalia's, een diksnavelmees en boszangers"
+      },
+      "intro": {
+        "en": "Birds of dense undergrowth and bamboo that are heard first. The scimitar-babbler has a long curved bill and calls in duets; the Black-chinned Babbler works the middle storey; the parrotbill has a short, deep, parrot-like bill and moves in groups through bamboo. Two tiny leaf warblers flick their wings in the canopy; separate them by crown stripe and wingbars.",
+        "nl": "Vogels van dicht kreupelhout en bamboe die je eerst hoort. De kruiplijster heeft een lange gebogen snavel en zingt duetten, de Zwartkinboomtimalia werkt in de middenlaag, de diksnavelmees heeft een korte, hoge, papegaaiachtige snavel en trekt in groepjes door bamboe. Twee kleine boszangers knippen in het kronendak met hun vleugels; onderscheid ze aan de kruinstreep en de vleugelstrepen."
+      }
+    }
+  }
+}

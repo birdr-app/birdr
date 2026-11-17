@@ -374,16 +374,19 @@
     {
       "slug": "sandgrouse",
       "title": {
-        "en": "Sandgrouse",
-        "nl": "Zandhoenders"
+        "en": "Sandgrouse and quails",
+        "nl": "Steppehoenders en kwartels"
       },
       "groups": [
-        "sandgrouse"
+        "sandgrouse",
+        "grouse-quail-and-allies"
       ],
       "species": [
         "chbsan",
         "sposan1",
-        "paisan1"
+        "paisan1",
+        "comqua1",
+        "raiqua1"
       ]
     },
     {
@@ -400,20 +403,6 @@
         "indcou1",
         "oripra",
         "colpra"
-      ]
-    },
-    {
-      "slug": "quails",
-      "title": {
-        "en": "Quails of grass and fields",
-        "nl": "Kwartels van gras en akkers"
-      },
-      "groups": [
-        "grouse-quail-and-allies"
-      ],
-      "species": [
-        "comqua1",
-        "raiqua1"
       ]
     },
     {
@@ -566,8 +555,8 @@
     {
       "slug": "reef-herons",
       "title": {
-        "en": "Reef-heron, Crab-Plover and skimmer",
-        "nl": "Rifreiger, krabplevier en schaarbek"
+        "en": "Reef-heron, Crab-Plover, skimmer and big waders",
+        "nl": "Rifreiger, krabplevier, schaarbek en grote steltlopers"
       },
       "groups": [
         "herons-ibis-and-allies",
@@ -577,7 +566,11 @@
       "species": [
         "werher",
         "craplo1",
-        "indski1"
+        "indski1",
+        "whimbr5",
+        "tersan",
+        "rudtur",
+        "euroys1"
       ]
     },
     {
@@ -645,22 +638,6 @@
         "sander",
         "rensti",
         "brbsan"
-      ]
-    },
-    {
-      "slug": "big-waders",
-      "title": {
-        "en": "Whimbrel and other big waders",
-        "nl": "Regenwulp en andere grote steltlopers"
-      },
-      "groups": [
-        "shorebirds"
-      ],
-      "species": [
-        "whimbr5",
-        "tersan",
-        "rudtur",
-        "euroys1"
       ]
     }
   ],

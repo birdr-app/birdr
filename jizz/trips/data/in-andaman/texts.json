@@ -7,12 +7,12 @@
   "units": {
     "owls-and-nightjar": {
       "title": {
-        "en": "Owls and a nightjar after dark",
-        "nl": "Uilen en een nachtzwaluw in het donker"
+        "en": "Owls, a nightjar, a coucal, a crake and a cuckoo",
+        "nl": "Uilen, een nachtzwaluw, een spoorkoekoek, een ral en een koekoek"
       },
       "intro": {
-        "en": "Four night birds, all heard before they are seen. The Andaman Scops Owl and the Andaman Boobook call from gardens and forest edges around Port Blair and Mount Harriet, the Andaman Masked-Owl hunts over farmland and villages, and the Andaman Nightjar sits on open tracks at dusk. Learn the calls first.",
-        "nl": "Vier nachtvogels, die je allemaal eerder hoort dan ziet. De Andamanendwergooruil en de Andamanenboeboek roepen vanuit tuinen en bosranden rond Port Blair en Mount Harriet, de Andamanenkerkuil jaagt boven akkers en dorpen en de Andamanennachtzwaluw zit bij schemer op open paden. Leer eerst de roepen."
+        "en": "Birds of the night and of the thickets, all heard before they are seen. The Andaman Scops Owl and the Andaman Boobook call from gardens and forest edges around Port Blair and Mount Harriet, the Andaman Masked-Owl hunts over farmland and villages, and the Andaman Nightjar sits on open tracks at dusk. Learn the calls first. The Andaman Coucal clambers through thickets and mangroves, the Andaman Crake slips through marshy forest and paddy edges, and the Violet Cuckoo searches branches for insects. Wait quietly near cover and watch the gaps.",
+        "nl": "Vogels van de nacht en van het kreupelhout, die je allemaal eerst hoort. De Andamanendwergooruil en de Andamanenboeboek roepen vanuit tuinen en bosranden rond Port Blair en Mount Harriet, de Andamanenkerkuil jaagt boven akkers en dorpen en de Andamanennachtzwaluw zit bij schemer op open paden. Leer eerst de roepen. De Andamanenspoorkoekoek klautert door struikgewas en mangroven, de Andamanenral sluipt door moerasbos en randen van rijstvelden en de amethistkoekoek zoekt takken af naar insecten. Wacht rustig bij dekking en let op de openingen."
       }
     },
     "pigeons-and-doves": {
@@ -27,32 +27,12 @@
     },
     "parrots": {
       "title": {
-        "en": "Parakeets and a hanging-parrot",
-        "nl": "Parkieten en een vleermuisparkiet"
+        "en": "Parrots, a woodpecker, kingfishers and a dollarbird",
+        "nl": "Papegaaien, een specht, ijsvogels en een dollarvogel"
       },
       "intro": {
-        "en": "Three green parrots, heard long before you see them. The two parakeets fly fast in noisy flocks over the forest and gardens. The Vernal Hanging-Parrot is tiny and hangs upside down in flowering trees, so it is easiest to find by its thin, high call.",
-        "nl": "Drie groene papegaaiachtigen, die je lang voor je ze ziet al hoort. De twee parkieten vliegen snel in luidruchtige groepen boven bos en tuinen. De Indische vleermuisparkiet is piepklein en hangt ondersteboven in bloeiende bomen, dus je vindt hem het makkelijkst aan zijn dunne, hoge roep."
-      }
-    },
-    "woodpecker-and-kingfishers": {
-      "title": {
-        "en": "A woodpecker, kingfishers, a dollarbird",
-        "nl": "Een specht, ijsvogels en een dollarvogel"
-      },
-      "intro": {
-        "en": "Four striking birds of the forest and its edges. The Andaman Woodpecker is a big black bird that works large trunks. The Ruddy Kingfisher sits low in shade, the Collared Kingfisher watches from wires and mangroves, and the Dollarbird hawks insects from a high bare branch.",
-        "nl": "Vier opvallende vogels van het bos en de bosrand. De Andamanenspecht is een grote zwarte vogel die op dikke stammen werkt. De rosse ijsvogel zit laag in de schaduw, de witkraagijsvogel loert vanaf draden en mangroven en de dollarvogel vangt insecten vanaf een hoge, kale tak."
-      }
-    },
-    "undergrowth": {
-      "title": {
-        "en": "Cuckoos and a crake in the thickets",
-        "nl": "Koekoeken en een ral in het struikgewas"
-      },
-      "intro": {
-        "en": "These three keep low or out of sight. The Andaman Coucal clambers through thickets and mangroves, the Andaman Crake slips through marshy forest and paddy edges, and the Violet Cuckoo searches branches for insects. Wait quietly near cover and watch the gaps.",
-        "nl": "Deze drie blijven laag of uit het zicht. De Andamanenspoorkoekoek klautert door struikgewas en mangroven, de Andamanenral sluipt door moerasbos en randen van rijstvelden en de amethistkoekoek zoekt takken af naar insecten. Wacht rustig bij dekking en let op de openingen."
+        "en": "Colourful, noisy birds of the forest and its edges. The two parakeets fly fast in noisy flocks over the forest and gardens. The Vernal Hanging-Parrot is tiny and hangs upside down in flowering trees, so it is easiest to find by its thin, high call. The Andaman Woodpecker is a big black bird that works large trunks. The Ruddy Kingfisher sits low in shade, the Collared Kingfisher watches from wires and mangroves, and the Dollarbird hawks insects from a high bare branch.",
+        "nl": "Kleurrijke, luidruchtige vogels van het bos en de randen ervan. De twee parkieten vliegen snel in luidruchtige groepen boven bos en tuinen. De Indische vleermuisparkiet is piepklein en hangt ondersteboven in bloeiende bomen, dus je vindt hem het makkelijkst aan zijn dunne, hoge roep. De Andamanenspecht is een grote zwarte vogel die op dikke stammen werkt. De rosse ijsvogel zit laag in de schaduw, de witkraagijsvogel loert vanaf draden en mangroven en de dollarvogel vangt insecten vanaf een hoge, kale tak."
       }
     },
     "forest-songbirds": {
@@ -117,22 +97,12 @@
     },
     "boobies": {
       "title": {
-        "en": "Boobies at sea",
-        "nl": "Genten op zee"
+        "en": "Boobies, frigatebirds and tropicbirds",
+        "nl": "Genten, fregatvogels en keerkringvogels"
       },
       "intro": {
-        "en": "Three boobies that you meet from ferries and boats, usually at some distance. Brown and Masked Booby are the larger ones with a clear contrast between wings and body, and the Red-footed Booby is slimmer and occurs in a pale and a brown form.",
-        "nl": "Drie genten die je ziet vanaf veerboten en andere boten, meestal op enige afstand. De bruine gent en de maskergent zijn de grotere, met een duidelijk contrast tussen vleugels en lijf, en de roodpootgent is slanker en komt voor in een lichte en een bruine vorm."
-      }
-    },
-    "frigatebirds-tropicbirds": {
-      "title": {
-        "en": "Frigatebirds and tropicbirds",
-        "nl": "Fregatvogels en keerkringvogels"
-      },
-      "intro": {
-        "en": "Four seabirds of the open water. Frigatebirds soar with a black, forked tail and rob other birds of their fish, while the tropicbirds fly with fast beats and two long tail streamers. Your best chance is a boat trip off the outer islands, and all four stay small and far away.",
-        "nl": "Vier zeevogels van open water. Fregatvogels zweven met een zwarte, gevorkte staart en roven vis van andere vogels, de keerkringvogels vliegen met snelle vleugelslagen en twee lange staartpennen. Je grootste kans is een boottocht naar de buitenste eilanden en alle vier blijven klein en ver weg."
+        "en": "Seabirds that you meet from ferries and boats, usually at some distance. Brown and Masked Booby are the larger ones with a clear contrast between wings and body, and the Red-footed Booby is slimmer and occurs in a pale and a brown form. Frigatebirds soar with a black, forked tail and rob other birds of their fish, while the tropicbirds fly with fast beats and two long tail streamers. Your best chance is a boat trip off the outer islands; all of them stay small and far away.",
+        "nl": "Zeevogels die je vanaf veerboten en boten ziet, meestal op afstand. De Bruine en de Maskergent zijn de grotere soorten met een duidelijk contrast tussen vleugels en lichaam, en de Roodpootgent is slanker en komt voor in een lichte en een bruine vorm. Fregatvogels zweven met een zwarte, gevorkte staart en nemen andere vogels hun vis af, terwijl de keerkringvogels met snelle vleugelslagen en twee lange staartveren vliegen. Je beste kans is een boottocht naar de buitenste eilanden; ze blijven allemaal klein en ver weg."
       }
     }
   }

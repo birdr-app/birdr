@@ -460,29 +460,18 @@
     {
       "slug": "storks-crane",
       "title": {
-        "en": "Adjutants and a rare duck",
-        "nl": "Maraboes en een zeldzame eend"
+        "en": "Adjutants, a duck, a rail and a watercock",
+        "nl": "Adjutants, een eend, een ral en een waterhaan"
       },
       "groups": [
         "storks",
-        "waterfowl"
+        "waterfowl",
+        "rails-gallinules-and-allies"
       ],
       "species": [
         "greadj1",
         "lesadj1",
-        "whwduc1"
-      ]
-    },
-    {
-      "slug": "river-marsh",
-      "title": {
-        "en": "Rail and Watercock of the marsh",
-        "nl": "Ral en waterhaan van het moeras"
-      },
-      "groups": [
-        "rails-gallinules-and-allies"
-      ],
-      "species": [
+        "whwduc1",
         "waterc1",
         "slbrai1"
       ]
@@ -490,15 +479,18 @@
     {
       "slug": "kingfishers",
       "title": {
-        "en": "Kingfishers from forest to mangrove",
-        "nl": "IJsvogels van bos tot mangrove"
+        "en": "Kingfishers and trogons of the forest",
+        "nl": "IJsvogels en trogons van het bos"
       },
       "groups": [
-        "kingfishers"
+        "kingfishers",
+        "trogons-and-quetzals"
       ],
       "species": [
         "bkbkin1",
-        "bnwkin1"
+        "bnwkin1",
+        "rehtro1",
+        "wartro1"
       ]
     },
     {
@@ -535,20 +527,6 @@
         "orphor1",
         "runhor1",
         "brnhor1"
-      ]
-    },
-    {
-      "slug": "trogons",
-      "title": {
-        "en": "Trogons",
-        "nl": "Trogons"
-      },
-      "groups": [
-        "trogons-and-quetzals"
-      ],
-      "species": [
-        "rehtro1",
-        "wartro1"
       ]
     },
     {
@@ -591,16 +569,20 @@
       ]
     },
     {
-      "slug": "pigeons",
+      "slug": "cuckoos",
       "title": {
-        "en": "Fruit pigeons and a parakeet",
-        "nl": "Fruitduiven en een parkiet"
+        "en": "Fruit pigeons, a parakeet and cuckoos",
+        "nl": "Fruitduiven, een parkiet en koekoeken"
       },
       "groups": [
+        "cuckoos",
         "pigeons-and-doves",
         "parrots-parakeets-and-allies"
       ],
       "species": [
+        "grbmal1",
+        "lescou1",
+        "asecuc1",
         "pacpig1",
         "moipig1",
         "pitpig1",
@@ -608,33 +590,22 @@
       ]
     },
     {
-      "slug": "cuckoos",
-      "title": {
-        "en": "Malkoha, coucal and emerald cuckoo",
-        "nl": "Malkoha, spoorkoekoek en bronskoekoek"
-      },
-      "groups": [
-        "cuckoos"
-      ],
-      "species": [
-        "grbmal1",
-        "lescou1",
-        "asecuc1"
-      ]
-    },
-    {
       "slug": "gamebirds",
       "title": {
-        "en": "Pheasants and partridges",
-        "nl": "Fazanten en patrijzen"
+        "en": "Pheasants, partridges, parrotbills and a myzornis",
+        "nl": "Fazanten, patrijzen, diksnavelmezen en een myzornis"
       },
       "groups": [
-        "grouse-quail-and-allies"
+        "grouse-quail-and-allies",
+        "parrotbills-wrentit-and-allies"
       ],
       "species": [
         "grypep2",
         "blytra1",
-        "rutpar1"
+        "rutpar1",
+        "bropar1",
+        "spbpar1",
+        "fitmyz1"
       ]
     },
     {
@@ -659,16 +630,19 @@
     {
       "slug": "bulbuls",
       "title": {
-        "en": "Bulbuls of the forest",
-        "nl": "Buulbuuls van het bos"
+        "en": "Bulbuls, a liocichla and a cutia",
+        "nl": "Buulbuuls, een liocichla en een cutia"
       },
       "groups": [
-        "bulbuls"
+        "bulbuls",
+        "laughingthrushes-and-allies"
       ],
       "species": [
         "flabul1",
         "whtbul1",
-        "moubul2"
+        "moubul2",
+        "buglio1",
+        "cutia1"
       ]
     },
     {
@@ -706,61 +680,21 @@
       ]
     },
     {
-      "slug": "mesia",
-      "title": {
-        "en": "Liocichla and a cutia",
-        "nl": "Buguntimalia en een cutia"
-      },
-      "groups": [
-        "laughingthrushes-and-allies"
-      ],
-      "species": [
-        "buglio1",
-        "cutia1"
-      ]
-    },
-    {
-      "slug": "parrotbills",
-      "title": {
-        "en": "Parrotbills and a myzornis",
-        "nl": "Diksnavelmezen en een vuurstaartje"
-      },
-      "groups": [
-        "parrotbills-wrentit-and-allies"
-      ],
-      "species": [
-        "bropar1",
-        "spbpar1",
-        "fitmyz1"
-      ]
-    },
-    {
       "slug": "leafbirds",
       "title": {
-        "en": "Leafbirds, bluebird and spiderhunter",
-        "nl": "Bladvogels, blauwrug en spinnenjager"
+        "en": "Leafbird, bluebird, spiderhunter and munias",
+        "nl": "Bladvogel, blauwrug, spinnenjager en bronzemannetjes"
       },
       "groups": [
         "leafbirds",
         "fairy-bluebirds",
-        "sunbirds-and-spiderhunters"
+        "sunbirds-and-spiderhunters",
+        "estrildids"
       ],
       "species": [
         "blwlea1",
         "asfblu1",
-        "strspi1"
-      ]
-    },
-    {
-      "slug": "mynas-munias",
-      "title": {
-        "en": "Two munias of grass and villages",
-        "nl": "Twee munia's van gras en dorpen"
-      },
-      "groups": [
-        "estrildids"
-      ],
-      "species": [
+        "strspi1",
         "whrmun",
         "chemun"
       ]
