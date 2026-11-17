@@ -195,19 +195,22 @@ location = /robots.txt {
     proxy_set_header X-Forwarded-Proto $scheme;
 }
 # sitemap.xml is built hourly by `manage.py build_sitemaps` (docs/CRON.md); nginx serves the
-# file and only asks Django when it is missing. The section files stay with Django, which
-# also reads them from disk.
+# file and only asks Django when it is missing. Old hosts still 301 to motmot.club. The
+# section files stay with Django, which also reads them from disk. Live since 17 Nov 2026,
+# in the regex-location area of sites-available/birdr (before the big `location ~ ^/(nl|…` block).
 location = /sitemap.xml {
+    if ($host != motmot.club) { return 301 https://motmot.club$request_uri; }
     root /var/www/jizz/jizz/jizz/sitemaps;   # SITEMAP_DIR
-    default_type application/xml;
-    add_header Cache-Control "public, max-age=3600";
+    types { } default_type application/xml;  # mime.types would say text/xml
+    expires off;
+    add_header Cache-Control "public, max-age=3600" always;
     try_files /sitemap.xml @jizz_sitemap;
 }
 location @jizz_sitemap {
-    proxy_pass http://jizz;
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Scheme $scheme;
+    proxy_pass http://jizz;
 }
 location ^~ /sitemap- {
     proxy_pass http://jizz;
