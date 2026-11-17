@@ -1117,6 +1117,9 @@ class MarketingPagesTests(TestCase):
         index = self.client.get('/sitemap.xml')
         self.assertEqual(index.status_code, 200)
         self.assertIn('sitemap-pages.xml', index.content.decode())
+        alias = self.client.get('/sitemap-index.xml')
+        self.assertEqual(alias.status_code, 200)
+        self.assertEqual(alias.content, index.content)
 
         pages = self.client.get('/sitemap-pages.xml')
         body = pages.content.decode()

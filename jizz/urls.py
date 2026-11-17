@@ -346,6 +346,9 @@ def open_league_redirect(request, country_code=None):
 urlpatterns = [
     path('robots.txt', robots_txt, name='marketing-robots'),
     path('sitemap.xml', marketing_sitemaps.sitemap_index, name='marketing-sitemap'),
+    # Same index under a second name, for Search Console, which keeps showing an old fetch
+    # failure for sitemap.xml. Must come before the section pattern below.
+    path('sitemap-index.xml', marketing_sitemaps.sitemap_index, name='marketing-sitemap-index'),
     path('sitemap-<slug:section>.xml', marketing_sitemaps.sitemap_section, name='marketing-sitemap-section'),
     path('site/', landing, name='marketing-landing'),
     path(

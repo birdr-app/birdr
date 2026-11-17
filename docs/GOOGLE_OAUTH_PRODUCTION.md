@@ -206,6 +206,8 @@ location = /sitemap.xml {
     add_header Cache-Control "public, max-age=3600" always;
     try_files /sitemap.xml @jizz_sitemap;
 }
+# The same file under a second name (17 Nov 2026), for Search Console: an identical block
+# for `location = /sitemap-index.xml`, with `try_files /sitemap.xml @jizz_sitemap;`.
 location @jizz_sitemap {
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
