@@ -41,6 +41,13 @@ change a title on purpose, edit the listing file and the lock in the same commit
 
 See `growth-plan.md` for what the store analytics showed and the prepared next steps.
 
+## Status (17 Nov 2026)
+
+- **Uploaded 17 Nov:** every field in these files is in App Store Connect on version Cape Shoveler
+  (1.147.0, Ready for Review, not yet submitted), and all nine Play titles plus the en-US and en-GB
+  Play short description and description are live. The non-English descriptions and Play texts are
+  unchanged from 7 Nov.
+
 ## Status (7 Nov 2026)
 
 - **Google Play** has these texts in all nine listings (en-US, it-IT and ja-JP were
