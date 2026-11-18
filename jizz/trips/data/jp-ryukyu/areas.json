@@ -1,0 +1,192 @@
+{
+  "note": "Sample areas for GeoModel scores: Amami and Okinawa hotspots (Yanbaru, Naha, Motobu, Amami Oshima) plus Yaeyama and Miyako (Ishigaki, Iriomote, Yonaguni, Miyakojima), the Ryukyu Islands a birder visits. Edit by hand.",
+  "source": "eBird hotspots (eBird API, Cornell Lab of Ornithology)",
+  "ebird_regions": [
+    "JP-46-16",
+    "JP-46-38",
+    "JP-47-12",
+    "JP-47-14",
+    "JP-47-13",
+    "JP-47-05",
+    "JP-47-16",
+    "JP-47-01",
+    "JP-47-06",
+    "JP-47-37",
+    "JP-47-03",
+    "JP-47-40",
+    "JP-47-41",
+    "JP-47-10"
+  ],
+  "areas": [
+    {
+      "name": "国頭村--アダ・ガーデンホテル沖縄 (Kunigami--Ada Garden Hotel Okinawa)",
+      "lat": 26.7514,
+      "lon": 128.2986,
+      "weight": 1,
+      "loc_id": "L5434363",
+      "region": "JP-47",
+      "checklists": 1048,
+      "species": 79
+    },
+    {
+      "name": "本部町--海洋博公園 (Motobu--Ocean Expo Park)",
+      "lat": 26.6917,
+      "lon": 127.8768,
+      "weight": 1,
+      "loc_id": "L2760759",
+      "region": "JP-47",
+      "checklists": 550,
+      "species": 75
+    },
+    {
+      "name": "奄美大島--大瀬海岸 (Amami--Ose Coast)",
+      "lat": 28.4513,
+      "lon": 129.7171,
+      "weight": 1,
+      "loc_id": "L18932943",
+      "region": "JP-46",
+      "checklists": 374,
+      "species": 136
+    },
+    {
+      "name": "国頭村--鏡地水田 (Kunigami--Kaganji rice paddies)",
+      "lat": 26.7345,
+      "lon": 128.1652,
+      "weight": 1,
+      "loc_id": "L8503661",
+      "region": "JP-47",
+      "checklists": 293,
+      "species": 90
+    },
+    {
+      "name": "奄美大島--奄美市--金作原原生林 (Amami--Amami City--Kinsakubaru Virgin Forest Reserve)",
+      "lat": 28.3515,
+      "lon": 129.4517,
+      "weight": 1,
+      "loc_id": "L3936217",
+      "region": "JP-46",
+      "checklists": 288,
+      "species": 90
+    },
+    {
+      "name": "名護市--真喜屋川 (Nago--Makiya River)",
+      "lat": 26.6301,
+      "lon": 128.0325,
+      "weight": 1,
+      "loc_id": "L10745160",
+      "region": "JP-47",
+      "checklists": 256,
+      "species": 55
+    },
+    {
+      "name": "国頭村--辺戸岬 (Kunigami--Cape Hedo)",
+      "lat": 26.8733,
+      "lon": 128.2643,
+      "weight": 1,
+      "loc_id": "L1101816",
+      "region": "JP-47",
+      "checklists": 193,
+      "species": 68
+    },
+    {
+      "name": "糸満市--米須海岸 (Itoman--Komesu Beach)",
+      "lat": 26.0884,
+      "lon": 127.7013,
+      "weight": 1,
+      "loc_id": "L5411279",
+      "region": "JP-47",
+      "checklists": 143,
+      "species": 112
+    },
+    {
+      "name": "那覇市--首里城 (Naha--Shuri Castle)",
+      "lat": 26.217,
+      "lon": 127.7194,
+      "weight": 1,
+      "loc_id": "L6081392",
+      "region": "JP-47",
+      "checklists": 132,
+      "species": 43
+    },
+    {
+      "name": "徳之島 (Tokunoshima (island))",
+      "lat": 27.7916,
+      "lon": 128.9609,
+      "weight": 0.5,
+      "loc_id": "L6866440",
+      "region": "JP-46",
+      "checklists": 13,
+      "species": 51
+    },
+    {
+      "name": "石垣市--平田原 (Ishigaki--Hiratabaru ricefields)",
+      "lat": 24.3545,
+      "lon": 124.1506,
+      "weight": 0.7,
+      "loc_id": "L7188032",
+      "region": "JP-47",
+      "checklists": 254,
+      "species": 140
+    },
+    {
+      "name": "与那国島--祖内の南の水田 (Yonaguni--rice paddies S of Sonai)",
+      "lat": 24.4636,
+      "lon": 123.0064,
+      "weight": 0.7,
+      "loc_id": "L2106082",
+      "region": "JP-47",
+      "checklists": 66,
+      "species": 147
+    },
+    {
+      "name": "西表島--西表島トレイルスタート (Iriomote--Iriomote Cross Island Trailhead)",
+      "lat": 24.2975,
+      "lon": 123.8709,
+      "weight": 0.7,
+      "loc_id": "L8899547",
+      "region": "JP-47",
+      "checklists": 41,
+      "species": 68
+    },
+    {
+      "name": "宮古島--宮古島市熱帯植物園 (Miyakojima--Miyakojima Botanical Garden)",
+      "lat": 24.8007,
+      "lon": 125.3153,
+      "weight": 0.7,
+      "loc_id": "L7190479",
+      "region": "JP-47",
+      "checklists": 32,
+      "species": 42
+    },
+    {
+      "name": "池間島--池間湿原 (Ikemajima--Ikema Wetlands)",
+      "lat": 24.9336,
+      "lon": 125.2434,
+      "weight": 0.7,
+      "loc_id": "L2572731",
+      "region": "JP-47",
+      "checklists": 28,
+      "species": 61
+    },
+    {
+      "name": "西表島--美田良の水田 (Iriomote-jima--Mitayoshi rice paddies)",
+      "lat": 24.3707,
+      "lon": 123.7532,
+      "weight": 0.7,
+      "loc_id": "L9120591",
+      "region": "JP-47",
+      "checklists": 26,
+      "species": 45
+    },
+    {
+      "name": "宮古島-- 東平安名崎 (Miyakojima--Cape Higashihennazaki)",
+      "lat": 24.7197,
+      "lon": 125.4682,
+      "weight": 0.7,
+      "loc_id": "L2572724",
+      "region": "JP-47",
+      "checklists": 19,
+      "species": 39
+    }
+  ]
+}

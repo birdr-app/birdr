@@ -1,0 +1,22 @@
+{
+  "code": "rinphe2",
+  "name": {
+    "en": "Green Pheasant",
+    "nl": "Groene fazant"
+  },
+  "latin": "Phasianus versicolor",
+  "look_for": [
+    {
+      "en": "Male dark glossy green below, red **face**",
+      "nl": "Mannetje onder donkergroen glanzend, rood **gezicht**"
+    },
+    {
+      "en": "Pale blue-grey **shoulders** and **rump**",
+      "nl": "Lichtblauwgrijze **schouders** en **stuit**"
+    },
+    {
+      "en": "Long barred **tail**; female buff, spotted",
+      "nl": "Lange gebande **staart**; vrouwtje beige, gevlekt"
+    }
+  ]
+}

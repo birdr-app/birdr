@@ -1,0 +1,22 @@
+{
+  "code": "blafio4",
+  "name": {
+    "en": "Blakiston's Fish-Owl",
+    "nl": "Blakistonvisuil"
+  },
+  "latin": "Ketupa blakistoni",
+  "look_for": [
+    {
+      "en": "Huge buff-brown owl, heavily streaked above",
+      "nl": "Reusachtige bruingele uil, boven zwaar gestreept"
+    },
+    {
+      "en": "Broad, ragged **ear** tufts, yellow **eyes**",
+      "nl": "Brede, rafelige **oorpluimen**, gele **ogen**"
+    },
+    {
+      "en": "Waits on a bank or log beside open water",
+      "nl": "Wacht op een oever of boomstam bij open water"
+    }
+  ]
+}

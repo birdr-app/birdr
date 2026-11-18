@@ -1,0 +1,22 @@
+{
+  "code": "strshe",
+  "name": {
+    "en": "Streaked Shearwater",
+    "nl": "Gestreepte pijlstormvogel"
+  },
+  "latin": "Calonectris leucomelas",
+  "look_for": [
+    {
+      "en": "Whitish **head** streaked with brown",
+      "nl": "Witachtige **kop** met bruine strepen"
+    },
+    {
+      "en": "Brown **back** with pale scaly edges",
+      "nl": "Bruine **rug** met lichte, schubachtige randen"
+    },
+    {
+      "en": "Lazy, loose wingbeats and low glides",
+      "nl": "Luie, losse vleugelslagen en lage glijvluchten"
+    }
+  ]
+}

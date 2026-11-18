@@ -1,0 +1,22 @@
+{
+  "code": "sibthr1",
+  "name": {
+    "en": "Siberian Thrush",
+    "nl": "Siberische lijster"
+  },
+  "latin": "Geokichla sibirica",
+  "look_for": [
+    {
+      "en": "Male dark slate-blue, bold white **eyebrow**",
+      "nl": "Mannetje donker leiblauw, felle witte **wenkbrauwstreep**"
+    },
+    {
+      "en": "White lower **belly**, black band under the **wing**",
+      "nl": "Witte onder**buik**, zwarte band onder de **vleugel**"
+    },
+    {
+      "en": "Female brown, buff **eyebrow**, scaly below",
+      "nl": "Vrouwtje bruin, bruingele **wenkbrauwstreep**, geschubd eronder"
+    }
+  ]
+}

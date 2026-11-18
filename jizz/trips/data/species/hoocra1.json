@@ -1,0 +1,22 @@
+{
+  "code": "hoocra1",
+  "name": {
+    "en": "Hooded Crane",
+    "nl": "Monnikskraanvogel"
+  },
+  "latin": "Grus monacha",
+  "look_for": [
+    {
+      "en": "Small dark crane with a white **head** and neck",
+      "nl": "Kleine donkere kraanvogel met witte **kop** en hals"
+    },
+    {
+      "en": "Black face, red **crown** patch",
+      "nl": "Zwart gezicht, rode **kruin**vlek"
+    },
+    {
+      "en": "Slate-grey body, dark legs",
+      "nl": "Leigrijs lijf, donkere poten"
+    }
+  ]
+}

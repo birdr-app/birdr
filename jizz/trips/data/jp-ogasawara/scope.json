@@ -1,0 +1,31 @@
+{
+  "country": "JP-OGASAWARA",
+  "notes": "Izu and Ogasawara islands (Miyakejima, Hachijojima, Chichijima, Hahajima) and the 24-hour ferry from Tokyo: the seabirds of the Pacific (Bonin Petrel, Matsudaira's and Tristram's Storm-Petrels, tropicbirds, boobies, albatrosses, shearwaters, noddies, terns) and the island songbirds (Bonin White-eye, Izu Thrush, Izu Robin, Owston's Tit, Ijima's Leaf Warbler, Japanese Murrelet). The model has no view on these; the list is hand-picked from eBird's lists for Ogasawara and the Izu islands. Photos are review-agent picks from unreviewed candidates (not approved on production): check them on /trip-photos. Shaky picks: Bonin White-eye (only 2 usable (others specimen/drawing/habitat); 882023 possibly captive); Japanese Murrelet (only distant birds at sea); Matsudaira's Storm-Petrel (only distant flight shots at sea; ID by pale primary shafts, moderate confidence); Izu Robin (several candidates look like Japanese Robin (grey belly) and were skipped; picks are brown-bellied orange-headed birds); Ijima's Leaf Warbler (leaf warbler lookalikes (Eastern Crowned/Arctic)).",
+  "manual": true,
+  "add": [
+    "bonhon1",
+    "izuthr1",
+    "japrob3",
+    "vartit4",
+    "bonpet",
+    "bulpet",
+    "trspet",
+    "maspet2",
+    "rettro",
+    "masboo",
+    "brnboo",
+    "refboo",
+    "brnnod",
+    "sooter1",
+    "wetshe",
+    "strshe",
+    "bkfalb",
+    "layalb",
+    "shtalb",
+    "japmur1",
+    "ijlwar1"
+  ],
+  "drop": [],
+  "first_day": [],
+  "lookalikes": []
+}

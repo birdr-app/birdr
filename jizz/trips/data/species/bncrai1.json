@@ -1,0 +1,22 @@
+{
+  "code": "bncrai1",
+  "name": {
+    "en": "Brown-cheeked Rail",
+    "nl": "Bruinwangral"
+  },
+  "latin": "Rallus indicus",
+  "look_for": [
+    {
+      "en": "Long **bill**, red at the base",
+      "nl": "Lange **snavel**, rood aan de basis"
+    },
+    {
+      "en": "Brown **cap** and **cheek**, grey **eyebrow**",
+      "nl": "Bruine **kruin** en **wang**, grijze **wenkbrauw**"
+    },
+    {
+      "en": "Barred **flanks**, skulks in reeds and marsh",
+      "nl": "Gebande **flanken**, sluipt door riet en moeras"
+    }
+  ]
+}

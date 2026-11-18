@@ -1,0 +1,22 @@
+{
+  "code": "dusthr1",
+  "name": {
+    "en": "Naumann's Thrush",
+    "nl": "Naumanns lijster"
+  },
+  "latin": "Turdus naumanni",
+  "look_for": [
+    {
+      "en": "Rusty-orange **eyebrow**, **breast** and **tail**",
+      "nl": "Roestoranje **wenkbrauw**, **borst** en **staart**"
+    },
+    {
+      "en": "Rusty, where Dusky Thrush is black and white",
+      "nl": "Roestkleurig, waar Bruine lijster zwart-wit is"
+    },
+    {
+      "en": "Feeds on open fields, in flocks",
+      "nl": "Foerageert in groepen op open velden"
+    }
+  ]
+}

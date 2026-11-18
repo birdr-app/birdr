@@ -1,0 +1,22 @@
+{
+  "code": "arcwar1",
+  "name": {
+    "en": "Arctic Warbler",
+    "nl": "Noordse boszanger"
+  },
+  "latin": "Phylloscopus borealis",
+  "look_for": [
+    {
+      "en": "Greenish-grey above, dull white below",
+      "nl": "Groengrijs boven, vuilwit onder"
+    },
+    {
+      "en": "Long pale **eyebrow** over a dark eye-line",
+      "nl": "Lange lichte **wenkbrauwstreep** boven een donkere oogstreep"
+    },
+    {
+      "en": "Thin pale **wing** bar, restless in trees",
+      "nl": "Smalle lichte **vleugel**streep, onrustig in bomen"
+    }
+  ]
+}

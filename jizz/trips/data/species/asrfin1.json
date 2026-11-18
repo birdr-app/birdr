@@ -1,0 +1,22 @@
+{
+  "code": "asrfin1",
+  "name": {
+    "en": "Asian Rosy-Finch",
+    "nl": "Roze bergvink"
+  },
+  "latin": "Leucosticte arctoa",
+  "look_for": [
+    {
+      "en": "Stout, dark brown finch",
+      "nl": "Stevige, donkerbruine vink"
+    },
+    {
+      "en": "Pinkish wash on **flanks** and **wings**",
+      "nl": "Roze waas op **flanken** en **vleugels**"
+    },
+    {
+      "en": "Feeds in flocks on open, windswept ground",
+      "nl": "Zoekt in groepen voedsel op open, winderige grond"
+    }
+  ]
+}

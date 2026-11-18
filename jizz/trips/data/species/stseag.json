@@ -1,0 +1,22 @@
+{
+  "code": "stseag",
+  "name": {
+    "en": "Steller's Sea-Eagle",
+    "nl": "Stellers zeearend"
+  },
+  "latin": "Haliaeetus pelagicus",
+  "look_for": [
+    {
+      "en": "Huge, dark brown, white **shoulders** and **thighs**",
+      "nl": "Enorm, donkerbruin, met witte **schouders** en **dijen**"
+    },
+    {
+      "en": "Huge orange-yellow **bill**",
+      "nl": "Enorme oranjegele **snavel**"
+    },
+    {
+      "en": "Diamond-shaped white **tail**",
+      "nl": "Ruitvormige witte **staart**"
+    }
+  ]
+}

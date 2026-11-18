@@ -1,0 +1,22 @@
+{
+  "code": "tufpuf",
+  "name": {
+    "en": "Tufted Puffin",
+    "nl": "Kuifpapegaaiduiker"
+  },
+  "latin": "Fratercula cirrhata",
+  "look_for": [
+    {
+      "en": "Black body, bright white **face** in summer",
+      "nl": "Zwart lijf, in de zomer een felwit **gezicht**"
+    },
+    {
+      "en": "Huge, thick, mostly red **bill**",
+      "nl": "Enorme, dikke, grotendeels rode **snavel**"
+    },
+    {
+      "en": "Yellow **tufts** sweep back behind the **eye**",
+      "nl": "Gele **kuiven** wapperen achter het **oog**"
+    }
+  ]
+}

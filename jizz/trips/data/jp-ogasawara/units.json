@@ -1,0 +1,235 @@
+{
+  "country": "JP-OGASAWARA",
+  "groups": [
+    {
+      "slug": "alcids",
+      "name": {
+        "en": "Alcids",
+        "nl": "Alken en Zeekoeten"
+      },
+      "species": [
+        "japmur1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "gulls-terns-and-skimmers",
+      "name": {
+        "en": "Gulls, Terns, and Skimmers",
+        "nl": "Meeuwen, Sterns en Schaarbekken"
+      },
+      "species": [
+        "brnnod",
+        "sooter1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tropicbirds",
+      "name": {
+        "en": "Tropicbirds",
+        "nl": "Keerkringvogels"
+      },
+      "species": [
+        "rettro"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "albatrosses",
+      "name": {
+        "en": "Albatrosses",
+        "nl": "Albatrossen"
+      },
+      "species": [
+        "layalb",
+        "bkfalb",
+        "shtalb"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "storm-petrels",
+      "name": {
+        "en": "Storm-Petrels",
+        "nl": "Stormvogeltjes"
+      },
+      "species": [
+        "maspet2",
+        "trspet"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "petrels-shearwaters-and-diving-petrels",
+      "name": {
+        "en": "Petrels, Shearwaters, and Diving-Petrels",
+        "nl": "Stormvogels en Pijlstormvogels"
+      },
+      "species": [
+        "bonpet",
+        "bulpet",
+        "strshe",
+        "wetshe"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "frigatebirds-boobies-and-gannets",
+      "name": {
+        "en": "Frigatebirds, Boobies, and Gannets",
+        "nl": "Fregatvogels en Genten"
+      },
+      "species": [
+        "refboo",
+        "brnboo",
+        "masboo"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tits-chickadees-and-titmice",
+      "name": {
+        "en": "Tits, Chickadees, and Titmice",
+        "nl": "Mezen"
+      },
+      "species": [
+        "vartit4"
+      ],
+      "endemics": [
+        "vartit4"
+      ]
+    },
+    {
+      "slug": "leaf-warblers",
+      "name": {
+        "en": "Leaf Warblers",
+        "nl": "Boszangers"
+      },
+      "species": [
+        "ijlwar1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "white-eyes-yuhinas-and-allies",
+      "name": {
+        "en": "White-eyes, Yuhinas, and Allies",
+        "nl": "White-eyes, Yuhinas, and Allies"
+      },
+      "species": [
+        "bonhon1"
+      ],
+      "endemics": [
+        "bonhon1"
+      ]
+    },
+    {
+      "slug": "thrushes",
+      "name": {
+        "en": "Thrushes",
+        "nl": "Lijsters"
+      },
+      "species": [
+        "izuthr1"
+      ],
+      "endemics": [
+        "izuthr1"
+      ]
+    },
+    {
+      "slug": "old-world-flycatchers",
+      "name": {
+        "en": "Old World Flycatchers",
+        "nl": "Vliegenvangers van de Oude Wereld"
+      },
+      "species": [
+        "japrob3"
+      ],
+      "endemics": [
+        "japrob3"
+      ]
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "albatrosses-storm-petrels",
+      "title": {
+        "en": "The open ocean",
+        "nl": "De open oceaan"
+      },
+      "groups": [
+        "albatrosses",
+        "storm-petrels"
+      ],
+      "species": [
+        "bkfalb",
+        "layalb",
+        "shtalb",
+        "maspet2",
+        "trspet"
+      ]
+    },
+    {
+      "slug": "petrels-shearwaters",
+      "title": {
+        "en": "Petrels and shearwaters",
+        "nl": "Stormvogels en pijlstormvogels"
+      },
+      "groups": [
+        "petrels-shearwaters-and-diving-petrels"
+      ],
+      "species": [
+        "bonpet",
+        "bulpet",
+        "strshe",
+        "wetshe"
+      ]
+    },
+    {
+      "slug": "boobies-terns-seabirds",
+      "title": {
+        "en": "Boobies, terns and other seabirds",
+        "nl": "Genten, sterns en andere zeevogels"
+      },
+      "groups": [
+        "frigatebirds-boobies-and-gannets",
+        "tropicbirds",
+        "gulls-terns-and-skimmers",
+        "alcids"
+      ],
+      "species": [
+        "masboo",
+        "brnboo",
+        "refboo",
+        "rettro",
+        "brnnod",
+        "sooter1",
+        "japmur1"
+      ]
+    },
+    {
+      "slug": "island-songbirds",
+      "title": {
+        "en": "Songbirds of the islands",
+        "nl": "Zangvogels van de eilanden"
+      },
+      "groups": [
+        "white-eyes-yuhinas-and-allies",
+        "thrushes",
+        "old-world-flycatchers",
+        "tits-chickadees-and-titmice",
+        "leaf-warblers"
+      ],
+      "species": [
+        "bonhon1",
+        "izuthr1",
+        "japrob3",
+        "vartit4",
+        "ijlwar1"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

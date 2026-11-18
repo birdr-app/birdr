@@ -1,0 +1,22 @@
+{
+  "code": "narfly2",
+  "name": {
+    "en": "Narcissus Flycatcher",
+    "nl": "Geelbrauwvliegenvanger"
+  },
+  "latin": "Ficedula narcissina",
+  "look_for": [
+    {
+      "en": "Male black above, bold yellow **eyebrow**",
+      "nl": "Mannetje zwart boven, felgele **wenkbrauw**"
+    },
+    {
+      "en": "Orange-yellow **throat** and **breast**, white belly",
+      "nl": "Oranjegele **keel** en **borst**, witte buik"
+    },
+    {
+      "en": "White **wing** patch; female olive-brown",
+      "nl": "Witte **vleugelvlek**; vrouwtje olijfbruin"
+    }
+  ]
+}

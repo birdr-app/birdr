@@ -1,0 +1,29 @@
+{
+  "country": "JP-KYUSHU",
+  "notes": "Kyushu and Tsushima: the winter birds a birder drives to Kyushu for. About 15,000 Hooded and White-naped Cranes winter at Izumi, the Saga and Fukuoka tidal flats hold Black-faced Spoonbill and Saunders's Gull, and Tsushima is a stopover for Asian migrants (buntings, flycatchers, Daurian Jackdaw, Rook). A small pack on purpose: Kyushu shares most of its birds with the Honshu trip. The GeoModel scores these specialists low (Hooded Crane 0.17), so the list is hand-picked from eBird's lists for Izumi, Saga, Fukuoka and Tsushima. Mongolian Gull (casgul4) is not in the country species table for Japan and was left out. Photos are review-agent picks from unreviewed candidates (not approved on production): check them on /trip-photos. Shaky picks: Black-faced Bunting (winter/female plumages); Ochre-rumped Bunting (Reed Bunting-group ID doubt); Saunders's Gull (mostly small/distant shots); Oriental Stork (mostly distant/flight).",
+  "manual": true,
+  "add": [
+    "hoocra1",
+    "whncra1",
+    "comcra",
+    "blfspo1",
+    "saugul2",
+    "chptit1",
+    "rook1",
+    "daujac1",
+    "orimag1",
+    "oristo1",
+    "ocrbun1",
+    "pinbun",
+    "bkfbun1",
+    "chiegr",
+    "korfly1",
+    "mugfly",
+    "crekin1",
+    "euroys1",
+    "taibeg1"
+  ],
+  "drop": [],
+  "first_day": [],
+  "lookalikes": []
+}

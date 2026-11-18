@@ -1,0 +1,22 @@
+{
+  "code": "bonhon1",
+  "name": {
+    "en": "Bonin White-eye",
+    "nl": "Boninbrilvogel"
+  },
+  "latin": "Apalopteron familiare",
+  "look_for": [
+    {
+      "en": "**Head** and throat bright yellow",
+      "nl": "**Kop** en keel heldergeel"
+    },
+    {
+      "en": "Black eye-patch, broken white **eye-ring**",
+      "nl": "Zwarte vlek rond het oog, onderbroken witte **oogring**"
+    },
+    {
+      "en": "Olive-green **back**, often hops on the ground",
+      "nl": "Olijfgroene **rug**, hupt vaak over de grond"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "palros2",
+  "name": {
+    "en": "Pallas's Rosefinch",
+    "nl": "Pallas' roodmus"
+  },
+  "latin": "Carpodacus roseus",
+  "look_for": [
+    {
+      "en": "Male rose-red, silvery-white spots on **crown** and **throat**",
+      "nl": "Mannetje roserood, zilverwitte stippen op **kruin** en **keel**"
+    },
+    {
+      "en": "Short grey **bill**, long notched **tail**",
+      "nl": "Korte grijze **snavel**, lange, ingekeepte **staart**"
+    },
+    {
+      "en": "Female streaked brown, white **belly**, pale **wing** bars",
+      "nl": "Vrouwtje gestreept bruin, witte **buik**, lichte **vleugelstrepen**"
+    }
+  ]
+}

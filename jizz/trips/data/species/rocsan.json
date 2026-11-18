@@ -1,0 +1,22 @@
+{
+  "code": "rocsan",
+  "name": {
+    "en": "Rock Sandpiper",
+    "nl": "Beringstrandloper"
+  },
+  "latin": "Calidris ptilocnemis",
+  "look_for": [
+    {
+      "en": "Stocky, dark grey shorebird of rocky coasts",
+      "nl": "Gedrongen, donkergrijze steltloper van rotskusten"
+    },
+    {
+      "en": "Short yellow **legs**, medium thin dark **bill**",
+      "nl": "Korte gele **poten**, middellange dunne donkere **snavel**"
+    },
+    {
+      "en": "Grey-smudged **breast**, white **belly**",
+      "nl": "Grijs getinte **borst**, witte **buik**"
+    }
+  ]
+}

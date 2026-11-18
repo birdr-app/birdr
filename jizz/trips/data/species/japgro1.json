@@ -1,0 +1,22 @@
+{
+  "code": "japgro1",
+  "name": {
+    "en": "Japanese Grosbeak",
+    "nl": "Maskerdikbek"
+  },
+  "latin": "Eophona personata",
+  "look_for": [
+    {
+      "en": "Massive bright yellow **bill**",
+      "nl": "Enorme felgele **snavel**"
+    },
+    {
+      "en": "Black **mask** around the bill and face",
+      "nl": "Zwart **masker** rond de snavel en het gezicht"
+    },
+    {
+      "en": "Grey-brown body, tawny **flanks**, white **wing** patch",
+      "nl": "Grijsbruin lijf, oker **flanken**, witte **vleugelvlek**"
+    }
+  ]
+}

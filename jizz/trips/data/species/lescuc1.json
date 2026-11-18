@@ -1,0 +1,22 @@
+{
+  "code": "lescuc1",
+  "name": {
+    "en": "Lesser Cuckoo",
+    "nl": "Kleine koekoek"
+  },
+  "latin": "Cuculus poliocephalus",
+  "look_for": [
+    {
+      "en": "Small grey cuckoo, **head** and **back** dark grey",
+      "nl": "Kleine grijze koekoek, **kop** en **rug** donkergrijs"
+    },
+    {
+      "en": "Broad dark barring on whitish **underparts**",
+      "nl": "Brede donkere strepen op witachtige **onderkant**"
+    },
+    {
+      "en": "Fast, loud, ringing song, even at night",
+      "nl": "Snelle, luide, rinkelende zang, ook 's nachts"
+    }
+  ]
+}

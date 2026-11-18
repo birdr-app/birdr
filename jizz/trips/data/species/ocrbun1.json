@@ -1,0 +1,22 @@
+{
+  "code": "ocrbun1",
+  "name": {
+    "en": "Ochre-rumped Bunting",
+    "nl": "Okerstuitrietgors"
+  },
+  "latin": "Schoeniclus yessoensis",
+  "look_for": [
+    {
+      "en": "Streaky reed bunting of marsh and wet grass",
+      "nl": "Gestreepte rietgors van moeras en vochtig grasland"
+    },
+    {
+      "en": "Unstreaked ochre-buff **rump**",
+      "nl": "Ongestreepte okerbruine **stuit**"
+    },
+    {
+      "en": "Rich chestnut **back**, dark moustache stripe",
+      "nl": "Rijk kastanjebruine **rug**, donkere baardstreep"
+    }
+  ]
+}

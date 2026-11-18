@@ -1,0 +1,22 @@
+{
+  "code": "livbul1",
+  "name": {
+    "en": "Light-vented Bulbul",
+    "nl": "Chinese buulbuul"
+  },
+  "latin": "Pycnonotus sinensis",
+  "look_for": [
+    {
+      "en": "Black **crown**, white patch on the **nape**",
+      "nl": "Zwarte **kruin**, witte vlek in de **nek**"
+    },
+    {
+      "en": "Grey-brown **back**, pale grey **underparts**",
+      "nl": "Grijsbruine **rug**, lichtgrijze **onderkant**"
+    },
+    {
+      "en": "Bold and noisy, perches in the open",
+      "nl": "Brutaal en luidruchtig, zit in het open"
+    }
+  ]
+}

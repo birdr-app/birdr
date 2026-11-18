@@ -1,0 +1,22 @@
+{
+  "code": "japacc1",
+  "name": {
+    "en": "Japanese Accentor",
+    "nl": "Japanse heggenmus"
+  },
+  "latin": "Prunella rubida",
+  "look_for": [
+    {
+      "en": "Dark brown, streaked above, greyish **head**",
+      "nl": "Donkerbruin, gestreept boven, grijzige **kop**"
+    },
+    {
+      "en": "Rusty-chestnut **flanks**, pale throat",
+      "nl": "Roestbruine **flanken**, lichte keel"
+    },
+    {
+      "en": "Creeps over rocks and mountain scrub",
+      "nl": "Kruipt over rotsen en bergstruiken"
+    }
+  ]
+}

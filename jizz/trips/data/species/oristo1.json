@@ -1,0 +1,22 @@
+{
+  "code": "oristo1",
+  "name": {
+    "en": "Oriental Stork",
+    "nl": "Zwartsnavelooievaar"
+  },
+  "latin": "Ciconia boyciana",
+  "look_for": [
+    {
+      "en": "Huge white stork with black **flight feathers**",
+      "nl": "Enorme witte ooievaar met zwarte **slagpennen**"
+    },
+    {
+      "en": "All-black **bill**, red skin round the eye",
+      "nl": "Helemaal zwarte **snavel**, rode huid rond het oog"
+    },
+    {
+      "en": "Wades wet rice fields on red **legs**",
+      "nl": "Loopt door natte rijstvelden op rode **poten**"
+    }
+  ]
+}

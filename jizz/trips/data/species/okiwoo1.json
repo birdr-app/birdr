@@ -1,0 +1,22 @@
+{
+  "code": "okiwoo1",
+  "name": {
+    "en": "Okinawa Woodpecker",
+    "nl": "Okinawaspecht"
+  },
+  "latin": "Dendrocopos noguchii",
+  "look_for": [
+    {
+      "en": "Dark brown woodpecker with a paler **head**",
+      "nl": "Donkerbruine specht met een lichtere **kop**"
+    },
+    {
+      "en": "Male has a dark red **crown**, female blackish",
+      "nl": "Mannetje met donkerrode **kruin**, vrouwtje zwartachtig"
+    },
+    {
+      "en": "White spots on the dark **wings**",
+      "nl": "Witte vlekken op de donkere **vleugels**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "vartit4",
+  "name": {
+    "en": "Owston's Tit",
+    "nl": "Izumees"
+  },
+  "latin": "Sittiparus owstoni",
+  "look_for": [
+    {
+      "en": "Dark **head**, no buff on the **forehead**",
+      "nl": "Donkere **kop**, geen bruingeel op het **voorhoofd**"
+    },
+    {
+      "en": "Chestnut **belly** and flanks",
+      "nl": "Kastanjebruine **buik** en flanken"
+    },
+    {
+      "en": "Plump, restless tit of island forest",
+      "nl": "Gedrongen, onrustige mees van het eilandbos"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "reccra1",
+  "name": {
+    "en": "Red-crowned Crane",
+    "nl": "Chinese kraanvogel"
+  },
+  "latin": "Grus japonensis",
+  "look_for": [
+    {
+      "en": "Huge white crane with a red **crown**",
+      "nl": "Enorme witte kraanvogel met rode **kruin**"
+    },
+    {
+      "en": "Dark **neck** and cheeks, white **nape** stripe",
+      "nl": "Donkere **hals** en wangen, witte streep in de **nek**"
+    },
+    {
+      "en": "Black wing feathers look like a **tail**",
+      "nl": "Zwarte vleugelveren lijken op een **staart**"
+    }
+  ]
+}

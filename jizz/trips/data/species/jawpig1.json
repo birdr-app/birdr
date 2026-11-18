@@ -1,0 +1,22 @@
+{
+  "code": "jawpig1",
+  "name": {
+    "en": "Japanese Woodpigeon",
+    "nl": "Zwarte houtduif"
+  },
+  "latin": "Columba janthina",
+  "look_for": [
+    {
+      "en": "Large, all-dark pigeon with a green-purple gloss",
+      "nl": "Grote, geheel donkere duif met groenpaarse glans"
+    },
+    {
+      "en": "Bluish **bill** with a pale tip, red **legs**",
+      "nl": "Blauwige **snavel** met lichte punt, rode **poten**"
+    },
+    {
+      "en": "Perches in the open on high bare branches",
+      "nl": "Zit in het open op hoge, kale takken"
+    }
+  ]
+}

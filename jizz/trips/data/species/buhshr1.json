@@ -1,0 +1,22 @@
+{
+  "code": "buhshr1",
+  "name": {
+    "en": "Bull-headed Shrike",
+    "nl": "Buffelkopklauwier"
+  },
+  "latin": "Lanius bucephalus",
+  "look_for": [
+    {
+      "en": "Chestnut **crown**, black **mask**, white **brow**",
+      "nl": "Kastanjebruine **kruin**, zwart **masker**, witte **wenkbrauw**"
+    },
+    {
+      "en": "Male has a small white **wing** patch",
+      "nl": "Mannetje met kleine witte **vleugelvlek**"
+    },
+    {
+      "en": "Perches upright on wires and treetops",
+      "nl": "Zit rechtop op draden en boomtoppen"
+    }
+  ]
+}

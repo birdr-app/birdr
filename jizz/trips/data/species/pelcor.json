@@ -1,0 +1,22 @@
+{
+  "code": "pelcor",
+  "name": {
+    "en": "Pelagic Cormorant",
+    "nl": "Pelagische aalscholver"
+  },
+  "latin": "Urile pelagicus",
+  "look_for": [
+    {
+      "en": "Slim, glossy black, with a small **head**",
+      "nl": "Slank, glanzend zwart, met een kleine **kop**"
+    },
+    {
+      "en": "Long, thin **bill** and slim **neck**",
+      "nl": "Lange, dunne **snavel** en slanke **hals**"
+    },
+    {
+      "en": "White patches on the **thighs** in summer",
+      "nl": "In de zomer witte vlekken op de **dijen**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "norboo1",
+  "name": {
+    "en": "Northern Boobook",
+    "nl": "Noord-Aziatische valkuil"
+  },
+  "latin": "Ninox japonica",
+  "look_for": [
+    {
+      "en": "Hawk-like owl with no **ear tufts**",
+      "nl": "Roofvogelachtige uil zonder **oorpluimen**"
+    },
+    {
+      "en": "Dark brown **back**, bold streaks on pale **underparts**",
+      "nl": "Donkerbruine **rug**, brede strepen op lichte **onderkant**"
+    },
+    {
+      "en": "Long **tail**, yellow **eyes**, small round head",
+      "nl": "Lange **staart**, gele **ogen**, kleine ronde kop"
+    }
+  ]
+}

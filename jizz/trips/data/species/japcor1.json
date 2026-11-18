@@ -1,0 +1,22 @@
+{
+  "code": "japcor1",
+  "name": {
+    "en": "Japanese Cormorant",
+    "nl": "Japanse aalscholver"
+  },
+  "latin": "Phalacrocorax capillatus",
+  "look_for": [
+    {
+      "en": "Glossy black cormorant of rocky coasts",
+      "nl": "Glanzend zwarte aalscholver van rotskusten"
+    },
+    {
+      "en": "Pale **throat** and **cheeks**, partly yellow **bill**",
+      "nl": "Lichte **keel** en **wangen**, deels gele **snavel**"
+    },
+    {
+      "en": "Roosts on sea cliffs and breakwaters",
+      "nl": "Rust op zeekliffen en golfbrekers"
+    }
+  ]
+}

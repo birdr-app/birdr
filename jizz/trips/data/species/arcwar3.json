@@ -1,0 +1,22 @@
+{
+  "code": "arcwar3",
+  "name": {
+    "en": "Japanese Leaf Warbler",
+    "nl": "Japanse boszanger"
+  },
+  "latin": "Phylloscopus xanthodryas",
+  "look_for": [
+    {
+      "en": "Long pale **eyebrow**, dark **eyestripe**",
+      "nl": "Lange lichte **wenkbrauw**, donkere **oogstreep**"
+    },
+    {
+      "en": "One faint **wingbar**, olive back",
+      "nl": "Eén flauwe **vleugelstreep**, olijfkleurige rug"
+    },
+    {
+      "en": "Yellowish wash below, pale **legs**",
+      "nl": "Gelige waas onder, lichte **poten**"
+    }
+  ]
+}

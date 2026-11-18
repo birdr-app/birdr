@@ -1,0 +1,22 @@
+{
+  "code": "spegui1",
+  "name": {
+    "en": "Spectacled Guillemot",
+    "nl": "Brilzeekoet"
+  },
+  "latin": "Cepphus carbo",
+  "look_for": [
+    {
+      "en": "Sooty black with white spectacles on the **face**",
+      "nl": "Roetzwart met een witte bril op het **gezicht**"
+    },
+    {
+      "en": "No white **wing** patch, red **legs**",
+      "nl": "Geen witte **vleugelvlek**, rode **poten**"
+    },
+    {
+      "en": "White **underparts** in winter",
+      "nl": "In de winter witte **onderkant**"
+    }
+  ]
+}

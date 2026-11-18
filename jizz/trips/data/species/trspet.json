@@ -1,0 +1,22 @@
+{
+  "code": "trspet",
+  "name": {
+    "en": "Tristram's Storm-Petrel",
+    "nl": "Tristramstormvogeltje"
+  },
+  "latin": "Hydrobates tristrami",
+  "look_for": [
+    {
+      "en": "Largest storm-petrel, dark brown all over",
+      "nl": "Grootste stormvogeltje, overal donkerbruin"
+    },
+    {
+      "en": "Pale grey bar across the upper **wing**",
+      "nl": "Lichtgrijze balk over de bovenkant van de **vleugel**"
+    },
+    {
+      "en": "Long, angular **wings**, slightly paler **rump**",
+      "nl": "Lange, hoekige **vleugels**, iets lichtere **stuit**"
+    }
+  ]
+}

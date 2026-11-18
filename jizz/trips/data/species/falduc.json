@@ -1,0 +1,22 @@
+{
+  "code": "falduc",
+  "name": {
+    "en": "Falcated Duck",
+    "nl": "Bronskopeend"
+  },
+  "latin": "Mareca falcata",
+  "look_for": [
+    {
+      "en": "Bronze-green **head** with a drooping **crest**",
+      "nl": "Bronsgroene **kop** met hangende **kuif**"
+    },
+    {
+      "en": "Long curved **tertials** drooping over the rear",
+      "nl": "Lange, gebogen **tertials** hangen over de achterkant"
+    },
+    {
+      "en": "White **throat** with a black collar",
+      "nl": "Witte **keel** met zwarte halsband"
+    }
+  ]
+}

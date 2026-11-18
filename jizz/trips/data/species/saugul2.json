@@ -1,0 +1,22 @@
+{
+  "code": "saugul2",
+  "name": {
+    "en": "Saunders's Gull",
+    "nl": "Saundersmeeuw"
+  },
+  "latin": "Saundersilarus saundersi",
+  "look_for": [
+    {
+      "en": "Small pale gull with a short black **bill**",
+      "nl": "Kleine lichte meeuw met korte zwarte **snavel**"
+    },
+    {
+      "en": "Winter **head** whitish with a dark ear spot",
+      "nl": "Witte **kop** in de winter met donkere oorvlek"
+    },
+    {
+      "en": "Picks crabs and mudskippers off the mud",
+      "nl": "Pikt krabben en slijkspringers van de modder"
+    }
+  ]
+}

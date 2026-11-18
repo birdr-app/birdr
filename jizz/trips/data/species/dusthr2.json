@@ -1,0 +1,22 @@
+{
+  "code": "dusthr2",
+  "name": {
+    "en": "Dusky Thrush",
+    "nl": "Bruine lijster"
+  },
+  "latin": "Turdus eunomus",
+  "look_for": [
+    {
+      "en": "Bold white **eyebrow**, dark **cheek** patch",
+      "nl": "Brede witte **wenkbrauw**, donkere **wangvlek**"
+    },
+    {
+      "en": "Black spots on **breast**, scaly **flanks**",
+      "nl": "Zwarte vlekken op **borst**, geschubde **flanken**"
+    },
+    {
+      "en": "Rusty **wing** panel, often in flocks",
+      "nl": "Roestkleurig **vleugelvlak**, vaak in groepen"
+    }
+  ]
+}

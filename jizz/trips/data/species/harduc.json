@@ -1,0 +1,22 @@
+{
+  "code": "harduc",
+  "name": {
+    "en": "Harlequin Duck",
+    "nl": "Harlekijneend"
+  },
+  "latin": "Histrionicus histrionicus",
+  "look_for": [
+    {
+      "en": "Male slate-blue with white streaks and spots",
+      "nl": "Woerd leiblauw met witte strepen en vlekken"
+    },
+    {
+      "en": "Chestnut **flanks**, white crescent before the **eye**",
+      "nl": "Kastanjebruine **flanken**, witte halve maan voor het **oog**"
+    },
+    {
+      "en": "Small and round-headed, rides rocky surf",
+      "nl": "Klein en rondkoppig, zwemt in de branding bij rotsen"
+    }
+  ]
+}

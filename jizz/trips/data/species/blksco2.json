@@ -1,0 +1,22 @@
+{
+  "code": "blksco2",
+  "name": {
+    "en": "Black Scoter",
+    "nl": "Amerikaanse zee-eend"
+  },
+  "latin": "Melanitta americana",
+  "look_for": [
+    {
+      "en": "Male all black, with no white",
+      "nl": "Woerd helemaal zwart, zonder wit"
+    },
+    {
+      "en": "Big orange-yellow **knob** on the **bill**",
+      "nl": "Grote oranjegele **knobbel** op de **snavel**"
+    },
+    {
+      "en": "Female brown, pale **cheeks**, dark **cap**",
+      "nl": "Wijfje bruin, lichte **wangen**, donkere **kap**"
+    }
+  ]
+}

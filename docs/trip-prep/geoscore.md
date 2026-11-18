@@ -55,3 +55,18 @@ eBird's species lists for that pack's departments (99%), and all 20 first-day bi
 list. That says the model rarely invents birds; it does not say its ranking is right (that rests on the
 spot checks and Carolyn's feedback). The same check found 23 hand-picked pack birds that eBird does not
 list for their pack's departments (for example Gould's Jewelfront in `CO-ANDES`): worth a look.
+
+## Japan (November 2026)
+
+Japan is the second trip scored with the model and the first whose species list comes from it. Notes:
+
+- The country's `areas.json` lists Honshu places directly and the packs under `packs` with a route mix
+  (Hokkaido 3, Kyushu 2, Ryukyu 2, Ogasawara 0.5), so the first day stays a Honshu day. The country scope
+  was cut at a best-month `p_mean` of 0.25 over the Honshu places only (not the mix), with the packs' hand
+  lists taking precedence.
+- The model is blind to small-island endemics and to scarce specialists: Okinawa Rail 0.04, Amami Woodcock 0,
+  Hooded Crane 0.17, Red-crowned Crane 0.34 even in Hokkaido. Island and specialist packs therefore come from
+  eBird's `product/spplist` for the region plus hand-picking; the audit's *no model view* list shows them.
+- Ryukyu is one pack: Okinawa and Yaeyama score within a few hundredths of each other for almost every bird.
+- eBird hotspots are picked by checklist count, which put a ferry stop near Iwo Jima and a hot-spring inn in
+  the sample; those were edited by hand in `areas.json`.

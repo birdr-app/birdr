@@ -1,0 +1,22 @@
+{
+  "code": "melthr",
+  "name": {
+    "en": "Chinese Hwamei",
+    "nl": "Witbrauwlijstergaai"
+  },
+  "latin": "Garrulax canorus",
+  "look_for": [
+    {
+      "en": "Warm brown, streaked **head** and **back**",
+      "nl": "Warmbruin, gestreepte **kop** en **rug**"
+    },
+    {
+      "en": "White **eye-ring** running back as a **brow**",
+      "nl": "Witte **oogring** die doorloopt als **wenkbrauw**"
+    },
+    {
+      "en": "Skulks in thickets, loud musical song",
+      "nl": "Sluipt door struiken, luide muzikale zang"
+    }
+  ]
+}

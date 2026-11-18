@@ -1,0 +1,22 @@
+{
+  "code": "japthr1",
+  "name": {
+    "en": "Japanese Thrush",
+    "nl": "Zwartkaplijster"
+  },
+  "latin": "Turdus cardis",
+  "look_for": [
+    {
+      "en": "Male sooty black **head** and **breast**, white **belly**",
+      "nl": "Mannetje roetzwarte **kop** en **borst**, witte **buik**"
+    },
+    {
+      "en": "Yellow **bill** and yellow **eye-ring**",
+      "nl": "Gele **snavel** en gele **oogring**"
+    },
+    {
+      "en": "Female browner with spotted **underparts**",
+      "nl": "Vrouwtje bruiner met gevlekte **onderkant**"
+    }
+  ]
+}

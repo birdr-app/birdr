@@ -1,0 +1,22 @@
+{
+  "code": "daured1",
+  "name": {
+    "en": "Daurian Redstart",
+    "nl": "Spiegelroodstaart"
+  },
+  "latin": "Phoenicurus auroreus",
+  "look_for": [
+    {
+      "en": "Male grey **crown**, black **face** and back",
+      "nl": "Mannetje grijze **kruin**, zwart **gezicht** en rug"
+    },
+    {
+      "en": "Orange-chestnut **breast**, **rump** and **tail**",
+      "nl": "Oranjebruine **borst**, **stuit** en **staart**"
+    },
+    {
+      "en": "White **wing** patch; female brown, orange tail",
+      "nl": "Witte **vleugelvlek**; vrouwtje bruin, oranje staart"
+    }
+  ]
+}

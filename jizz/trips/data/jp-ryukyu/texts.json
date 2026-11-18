@@ -1,0 +1,109 @@
+{
+  "country": "JP-RYUKYU",
+  "intro": {
+    "en": "The Ryukyu Islands run from Amami Oshima past Okinawa and Miyako to Ishigaki, Iriomote and Yonaguni, a chain of subtropical forest, rice fields and reefs. Each island group has its own birds, and eBird lists Okinawa, Amami, Miyako and Yaeyama (Ishigaki, Iriomote, Yonaguni) as separate areas. This pack adds 47 birds on top of the Japan trip, nine of them found nowhere else.",
+    "nl": "De Ryukyu-eilanden lopen van Amami Oshima langs Okinawa en Miyako tot Ishigaki, Iriomote en Yonaguni: een keten van subtropisch bos, rijstvelden en riffen. Elke eilandengroep heeft eigen vogels, en eBird behandelt Okinawa, Amami, Miyako en Yaeyama (Ishigaki, Iriomote, Yonaguni) als aparte gebieden. Dit pakket voegt 47 vogels toe aan de reis naar Japan, negen daarvan komen nergens anders voor."
+  },
+  "units": {
+    "forest-floor": {
+      "title": {
+        "en": "Ground birds of the forest",
+        "nl": "Grondvogels van het bos"
+      },
+      "intro": {
+        "en": "Birds of the dark forest floor, best looked for at dawn and dusk. The flightless Okinawa Rail lives only in Yanbaru, the forested north of Okinawa. The Amami Woodcock lives mostly on Amami Oshima, where it comes onto quiet forest roads at dusk. The Slaty-legged Crake skulks on several islands, and the Fairy Pitta passes through in spring and autumn.",
+        "nl": "Vogels van de donkere bosbodem, je zoekt ze het best bij zonsopgang en in de schemering. De Okinawaral kan niet vliegen en leeft alleen in Yanbaru, het beboste noorden van Okinawa. De Amamihoutsnip zit vooral op Amami Oshima en komt in de schemering op rustige bosweggetjes. De Zwartpootral sluipt rond op meerdere eilanden en de Chinese pitta trekt in het voorjaar en het najaar door."
+      }
+    },
+    "forest-songbirds": {
+      "title": {
+        "en": "Robins, thrush and flycatchers",
+        "nl": "Roodborsten, lijster en vliegenvangers"
+      },
+      "intro": {
+        "en": "Songbirds of the forest undergrowth, often heard before they are seen. The Ryukyu Robin lives on Amami, the Okinawa Robin in northern Okinawa, and the Amami Thrush only on Amami Oshima and nearby Kakeroma. The Ryukyu Flycatcher and the Black Paradise-Flycatcher live in the lower and middle layers of forest on several islands.",
+        "nl": "Zangvogels van het bosonderhout, die je vaak eerder hoort dan ziet. De Ryukyuroodborst leeft op Amami, de Okinawaroodborst in het noorden van Okinawa en de Amamilijster alleen op Amami Oshima en het nabije Kakeroma. De Ryukyuvliegenvanger en de Japanse paradijsmonarch zitten in de lage en middelhoge lagen van het bos op meerdere eilanden."
+      }
+    },
+    "forest-endemics": {
+      "title": {
+        "en": "Woodpecker, jay, tit and minivet",
+        "nl": "Specht, gaai, mees en menievogel"
+      },
+      "intro": {
+        "en": "Four more endemics of the forest, most of them tied to a single island. The Okinawa Woodpecker lives in Yanbaru, Lidth's Jay on Amami Oshima, and the Iriomote Tit on Iriomote and Ishigaki. The Ryukyu Minivet is the exception: a slim grey bird that works the canopy on most islands.",
+        "nl": "Vier andere endemen van het bos, de meeste gebonden aan één eiland. De Okinawaspecht leeft in Yanbaru, de Lidthgaai op Amami Oshima en de Iriomotemees op Iriomote en Ishigaki. De Ryukyumenievogel is de uitzondering: een slanke grijze vogel die op de meeste eilanden door de boomkruinen zoekt."
+      }
+    },
+    "pigeons-kingfisher": {
+      "title": {
+        "en": "Pigeons, kingfisher and Dollarbird",
+        "nl": "Duiven, ijsvogel en Dollarvogel"
+      },
+      "intro": {
+        "en": "Larger birds of tall forest and its edge. The Japanese Woodpigeon is dark and heavy and lives in forests from Amami to Iriomote. The Whistling Green-Pigeon is a southern bird of Yanbaru and Yaeyama, and the Asian Emerald Dove walks on shady forest floors. The Ruddy Kingfisher and the Dollarbird are seen mostly from spring to autumn, the first by forest streams and the second on high bare branches.",
+        "nl": "Grotere vogels van hoog bos en de bosrand. De Zwarte houtduif is donker en zwaar en leeft in bossen van Amami tot Iriomote. De Taiwanese papegaaiduif is een zuidelijke soort van Yanbaru en Yaeyama en de Indische smaragdduif loopt over beschaduwde bosbodems. De Rosse ijsvogel en de Dollarvogel zie je vooral van voorjaar tot najaar, de eerste bij bosbeken en de tweede op hoge, kale takken."
+      }
+    },
+    "raptors-owls": {
+      "title": {
+        "en": "Raptors and owls",
+        "nl": "Roofvogels en uilen"
+      },
+      "intro": {
+        "en": "Two birds of prey and two owls. The Crested Serpent-Eagle lives on Ishigaki and Iriomote and calls loudly as it soars over the forest. The Grey-faced Buzzard passes through in spring and autumn and often sits on poles. The Ryukyu Scops Owl and the Northern Boobook are found at night, mostly by their calls.",
+        "nl": "Twee roofvogels en twee uilen. De Indische slangenarend leeft op Ishigaki en Iriomote en roept luid terwijl hij boven het bos zweeft. De Grijswangbuizerd trekt in het voorjaar en het najaar door en zit vaak op palen. De Ryukyudwergooruil en de Noord-Aziatische valkuil vind je 's nachts, vooral op hun roep."
+      }
+    },
+    "herons-bitterns": {
+      "title": {
+        "en": "Herons and bitterns",
+        "nl": "Reigers en woudapen"
+      },
+      "intro": {
+        "en": "Five herons of reef, paddy and forest. The Pacific Reef-Heron works the shore at low tide, and the Chinese Pond Heron stands at the edge of paddies and ponds. The Yellow and Cinnamon Bitterns hide in reeds and rice. The Malayan Night Heron is a forest bird that walks the shady floor, mainly on Ishigaki and Iriomote.",
+        "nl": "Vijf reigers van rif, rijstveld en bos. De Rifreiger zoekt bij laag water langs de kust naar eten en de Chinese ralreiger staat aan de rand van rijstvelden en poelen. De Chinese woudaap en de Rossige woudaap verstoppen zich in riet en rijst. De Indische kwak is een bosvogel die langzaam over de schaduwrijke bosbodem loopt, vooral op Ishigaki en Iriomote."
+      }
+    },
+    "paddy-skulkers": {
+      "title": {
+        "en": "Skulkers of paddies and reeds",
+        "nl": "Schuwe vogels van rijstvelden en riet"
+      },
+      "intro": {
+        "en": "Shy birds of rice fields, reed beds and rough grass. The White-breasted Waterhen is the boldest and walks out at the edge of fields. The Watercock is mostly seen in summer, and the Greater Painted-Snipe keeps low in wet fields. The Barred Buttonquail hides in rough grass and rarely flies.",
+        "nl": "Schuwe vogels van rijstvelden, rietkragen en ruig gras. Het Witborstwaterhoen is het brutaalst en loopt aan de rand van velden het open in. De Waterhaan zie je vooral in de zomer en de Goudsnip houdt zich laag in natte velden. De Zwartkeelvechtkwartel verstopt zich in ruig gras en vliegt zelden op."
+      }
+    },
+    "terns": {
+      "title": {
+        "en": "Terns of the reef and coast",
+        "nl": "Sterns van het rif en de kust"
+      },
+      "intro": {
+        "en": "Five terns that fish and nest around the reefs and rocky islets. The Black-naped Tern is the most regular, a very pale tern that perches on posts and rocks. The Bridled and Roseate Terns come to nest in summer, the Great Crested Tern is big with a shaggy crest, and the Little Tern hovers over the shallows.",
+        "nl": "Vijf sterns die rond de riffen en rotseilandjes vissen en nestelen. De Zwartnekstern is de meest gewone, een zeer lichte stern die op palen en rotsen zit. De Brilstern en de Dougalls stern komen in de zomer om te broeden, de Grote kuifstern is groot met een warrige kuif en de Dwergstern bidt boven het ondiepe water."
+      }
+    },
+    "farmland-town": {
+      "title": {
+        "en": "Birds of fields and villages",
+        "nl": "Vogels van velden en dorpen"
+      },
+      "intro": {
+        "en": "Birds of villages, cane fields and paddies. The Pacific Swallow nests under bridges and eaves, and the Light-vented Bulbul is a bold, noisy bird of Yaeyama. The Common Myna and the Scaly-breasted Munia were introduced and live near people. The Oriental Pratincole hawks insects over open fields in summer.",
+        "nl": "Vogels van dorpen, suikerrietvelden en rijstvelden. De Kustzwaluw nestelt onder bruggen en dakranden en de Chinese buulbuul is een brutale, luidruchtige vogel van Yaeyama. De Treurmaina en de Muskaatvink zijn uitgezet en leven dicht bij mensen. De Oosterse vorkstaartplevier jaagt in de zomer op insecten boven open velden."
+      }
+    },
+    "migrants": {
+      "title": {
+        "en": "Migrants and winter visitors",
+        "nl": "Trekvogels en wintergasten"
+      },
+      "intro": {
+        "en": "The Ryukyus are the first land for many birds that cross the East China Sea, so spring and autumn bring the most variety. The White-shouldered Starling, the Eastern Yellow Wagtail and the Red-throated Pipit feed in fields and on short grass. The Brown Shrike watches from open perches, and the Black-naped Oriole and the Arctic Warbler stay in trees.",
+        "nl": "De Ryukyu-eilanden zijn voor veel vogels het eerste land na de Oost-Chinese Zee, dus in het voorjaar en het najaar zie je de meeste variatie. De Mandarijnspreeuw, de Oostelijke gele kwikstaart en de Roodkeelpieper zoeken eten op velden en op kort gras. De Bruine klauwier zit op open uitkijkposten en de Chinese wielewaal en de Noordse boszanger blijven in de bomen."
+      }
+    }
+  }
+}

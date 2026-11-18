@@ -1,0 +1,22 @@
+{
+  "code": "lidjay1",
+  "name": {
+    "en": "Lidth's Jay",
+    "nl": "Lidthgaai"
+  },
+  "latin": "Garrulus lidthi",
+  "look_for": [
+    {
+      "en": "Velvety black **head**, deep purple-blue **wings**",
+      "nl": "Fluweelzwarte **kop**, diep paarsblauwe **vleugels**"
+    },
+    {
+      "en": "Rich purple-chestnut **belly**",
+      "nl": "Warm paarsbruine **buik**"
+    },
+    {
+      "en": "Jay shape, long **tail**, harsh calls",
+      "nl": "Gaaivorm, lange **staart**, krassende roep"
+    }
+  ]
+}

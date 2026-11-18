@@ -1,0 +1,22 @@
+{
+  "code": "salwar1",
+  "name": {
+    "en": "Sakhalin Leaf Warbler",
+    "nl": "Japanse fitis"
+  },
+  "latin": "Phylloscopus borealoides",
+  "look_for": [
+    {
+      "en": "Long white **eyebrow**, broad dark eye-stripe",
+      "nl": "Lange witte **wenkbrauwstreep**, brede donkere oogstreep"
+    },
+    {
+      "en": "Dark brown **crown**, greenish-brown **back**",
+      "nl": "Donkerbruine **kruin**, groenbruine **rug**"
+    },
+    {
+      "en": "Pale pinkish-brown **legs**, lower-pitched song",
+      "nl": "Bleek roze-bruine **poten**, lager gezang"
+    }
+  ]
+}

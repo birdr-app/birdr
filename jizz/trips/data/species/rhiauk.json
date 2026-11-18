@@ -1,0 +1,22 @@
+{
+  "code": "rhiauk",
+  "name": {
+    "en": "Rhinoceros Auklet",
+    "nl": "Neushoornalk"
+  },
+  "latin": "Cerorhinca monocerata",
+  "look_for": [
+    {
+      "en": "Chunky dark seabird, paler underneath",
+      "nl": "Gedrongen donkere zeevogel, lichter aan de onderkant"
+    },
+    {
+      "en": "Orange-brown **bill**, upright **horn** in summer",
+      "nl": "Oranjebruine **snavel**, in de zomer met een rechtopstaande **hoorn**"
+    },
+    {
+      "en": "White plumes above the **eye** and behind the **bill**",
+      "nl": "Witte pluimen boven het **oog** en achter de **snavel**"
+    }
+  ]
+}

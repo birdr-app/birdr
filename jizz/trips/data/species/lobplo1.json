@@ -1,0 +1,22 @@
+{
+  "code": "lobplo1",
+  "name": {
+    "en": "Long-billed Plover",
+    "nl": "Japanse bontbekplevier"
+  },
+  "latin": "Thinornis placidus",
+  "look_for": [
+    {
+      "en": "Plover with a long, dark **bill**",
+      "nl": "Plevier met een lange, donkere **snavel**"
+    },
+    {
+      "en": "Black **breast** band, white **collar**, brown **cap**",
+      "nl": "Zwarte **borstband**, witte **kraag**, bruine **kruin**"
+    },
+    {
+      "en": "Pale pink **legs**, on stony river banks",
+      "nl": "Lichtroze **poten**, op stenige rivieroevers"
+    }
+  ]
+}

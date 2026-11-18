@@ -1,0 +1,22 @@
+{
+  "code": "lobmur",
+  "name": {
+    "en": "Long-billed Murrelet",
+    "nl": "Aziatische marmeralk"
+  },
+  "latin": "Brachyramphus perdix",
+  "look_for": [
+    {
+      "en": "Small, chunky auk with a slender black **bill**",
+      "nl": "Klein, gedrongen alk met een slanke zwarte **snavel**"
+    },
+    {
+      "en": "Winter: black **cap** and **back**, white below",
+      "nl": "Winter: zwarte **kap** en **rug**, wit eronder"
+    },
+    {
+      "en": "White **eye** ring, no white collar",
+      "nl": "Witte **oogring**, geen witte kraag"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "layalb",
+  "name": {
+    "en": "Laysan Albatross",
+    "nl": "Laysanalbatros"
+  },
+  "latin": "Phoebastria immutabilis",
+  "look_for": [
+    {
+      "en": "White **head** and body, dark brown **back**",
+      "nl": "Witte **kop** en buik, donkerbruine **rug**"
+    },
+    {
+      "en": "Pale pink **bill**, dark smudge round the eye",
+      "nl": "Roze **snavel**, donkere vlek rond het oog"
+    },
+    {
+      "en": "Narrow **wings**, long glides low over waves",
+      "nl": "Smalle **vleugels**, lange glijvluchten vlak boven de golven"
+    }
+  ]
+}

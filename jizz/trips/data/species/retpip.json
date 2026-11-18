@@ -1,0 +1,22 @@
+{
+  "code": "retpip",
+  "name": {
+    "en": "Red-throated Pipit",
+    "nl": "Roodkeelpieper"
+  },
+  "latin": "Anthus cervinus",
+  "look_for": [
+    {
+      "en": "Brick-red **face** and **throat** in spring",
+      "nl": "Steenrood **gezicht** en steenrode **keel** in het voorjaar"
+    },
+    {
+      "en": "Heavily streaked **back** with pale braces",
+      "nl": "Sterk gestreepte **rug** met lichte bretels"
+    },
+    {
+      "en": "Streaked **rump**, dark streaks on **flanks**",
+      "nl": "Gestreepte **stuit**, donkere strepen op de **flanken**"
+    }
+  ]
+}

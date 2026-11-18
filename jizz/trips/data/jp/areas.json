@@ -1,0 +1,187 @@
+{
+  "note": "Where a visitor on a normal 2 to 3 week trip to Honshu goes, for GeoModel scores (trip_prep_geoscore): Tokyo and Kanto parks and wetlands, Mt Fuji and the Japan Alps, Kyoto and Osaka, Hiroshima. `packs` is the route mix of the region packs (Hokkaido, Kyushu, Ryukyu, Izu and Ogasawara): each pack's areas share the weight given, so the first day stays a Honshu day. Edit by hand.",
+  "source": "eBird hotspots (eBird API, Cornell Lab of Ornithology)",
+  "ebird_regions": [
+    "JP-13-04",
+    "JP-13-13",
+    "JP-13-01",
+    "JP-13-08",
+    "JP-13-11",
+    "JP-13-53",
+    "JP-14",
+    "JP-12",
+    "JP-11",
+    "JP-20",
+    "JP-19",
+    "JP-22",
+    "JP-26",
+    "JP-27",
+    "JP-34"
+  ],
+  "areas": [
+    {
+      "name": "大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond))",
+      "lat": 35.582,
+      "lon": 139.7649,
+      "weight": 1,
+      "loc_id": "L927941",
+      "region": "JP-13",
+      "checklists": 2808,
+      "species": 213
+    },
+    {
+      "name": "船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park)",
+      "lat": 35.6727,
+      "lon": 139.9673,
+      "weight": 1,
+      "loc_id": "L1484347",
+      "region": "JP-12",
+      "checklists": 1904,
+      "species": 186
+    },
+    {
+      "name": "京都市--京都御苑 (Kyoto--Kyoto Gyoen Garden / Kyoto Imperial Palace Park)",
+      "lat": 35.023,
+      "lon": 135.7633,
+      "weight": 1,
+      "loc_id": "L1757949",
+      "region": "JP-26",
+      "checklists": 1500,
+      "species": 136
+    },
+    {
+      "name": "大阪市--大阪城・大阪城公園 (Osaka--Osaka Castle and Osaka Castle Park)",
+      "lat": 34.6873,
+      "lon": 135.5259,
+      "weight": 1,
+      "loc_id": "L1123077",
+      "region": "JP-27",
+      "checklists": 1461,
+      "species": 148
+    },
+    {
+      "name": "新宿区--新宿御苑 (Shinjuku Ward--Shinjuku Gyoen National Garden)",
+      "lat": 35.6852,
+      "lon": 139.7098,
+      "weight": 1,
+      "loc_id": "L1416996",
+      "region": "JP-13",
+      "checklists": 1455,
+      "species": 117
+    },
+    {
+      "name": "横浜市--横浜自然観察の森 (Yokohama--Yokohama Nature Sanctuary)",
+      "lat": 35.3389,
+      "lon": 139.5858,
+      "weight": 1,
+      "loc_id": "L28678261",
+      "region": "JP-14",
+      "checklists": 1227,
+      "species": 89
+    },
+    {
+      "name": "軽井沢町--軽井沢野鳥の森 (Karuizawa--Karuizawa Wild Bird Sanctuary)",
+      "lat": 36.366,
+      "lon": 138.5975,
+      "weight": 1,
+      "loc_id": "L1756020",
+      "region": "JP-20",
+      "checklists": 1196,
+      "species": 148
+    },
+    {
+      "name": "大阪市--大阪南港野鳥園 (Osaka--Osaka Nanko Bird Sanctuary)",
+      "lat": 34.635,
+      "lon": 135.4009,
+      "weight": 1,
+      "loc_id": "L1122065",
+      "region": "JP-27",
+      "checklists": 862,
+      "species": 190
+    },
+    {
+      "name": "川崎市--多摩川と二ヶ領用水の合流--二ヶ領用水の合流--二ヶ領宿河原堰 (Kawasaki--Confluence of Tama River and Nikaryo Aqueduct--Nikaryo Shukugawara Weir)",
+      "lat": 35.6214,
+      "lon": 139.5758,
+      "weight": 1,
+      "loc_id": "L6669771",
+      "region": "JP-14",
+      "checklists": 788,
+      "species": 122
+    },
+    {
+      "name": "川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park)",
+      "lat": 35.923,
+      "lon": 139.5152,
+      "weight": 1,
+      "loc_id": "L2704124",
+      "region": "JP-11",
+      "checklists": 712,
+      "species": 145
+    },
+    {
+      "name": "廿日市市--厳島(宮島) (Hatsukaichi--Itsukushima (Miyajima) (island))",
+      "lat": 34.2793,
+      "lon": 132.3113,
+      "weight": 1,
+      "loc_id": "L2208956",
+      "region": "JP-34",
+      "checklists": 511,
+      "species": 127
+    },
+    {
+      "name": "佐久市--佐久調整池 (Saku--Saku Regulating Pond)",
+      "lat": 36.2462,
+      "lon": 138.4547,
+      "weight": 1,
+      "loc_id": "L1890450",
+      "region": "JP-20",
+      "checklists": 420,
+      "species": 104
+    },
+    {
+      "name": "北印旛沼 (North Lake Inbanuma)",
+      "lat": 35.801,
+      "lon": 140.2497,
+      "weight": 1,
+      "loc_id": "L1668036",
+      "region": "JP-12",
+      "checklists": 415,
+      "species": 155
+    },
+    {
+      "name": "厚木市--相模川--相模大橋 (Atsugi--Sagami River--Sagami-ohashi Bridge)",
+      "lat": 35.4439,
+      "lon": 139.3718,
+      "weight": 1,
+      "loc_id": "L1890606",
+      "region": "JP-14",
+      "checklists": 402,
+      "species": 104
+    },
+    {
+      "name": "Lake Kawaguchi and Mt Fuji (Yamanashi)",
+      "lat": 35.51,
+      "lon": 138.75,
+      "weight": 1
+    },
+    {
+      "name": "Kamikochi (Japan Alps)",
+      "lat": 36.25,
+      "lon": 137.64,
+      "weight": 1
+    },
+    {
+      "name": "Hakone and Odawara (Kanagawa)",
+      "lat": 35.23,
+      "lon": 139.03,
+      "weight": 1
+    }
+  ],
+  "packs": {
+    "JP-HOKKAIDO": 3,
+    "JP-KYUSHU": 2,
+    "JP-RYUKYU": 2,
+    "JP-OGASAWARA": 0.5
+  }
+}

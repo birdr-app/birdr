@@ -1,0 +1,22 @@
+{
+  "code": "refblu1",
+  "name": {
+    "en": "Red-flanked Bluetail",
+    "nl": "Blauwstaart"
+  },
+  "latin": "Tarsiger cyanurus",
+  "look_for": [
+    {
+      "en": "Orange **flanks** on a white underside",
+      "nl": "Oranje **flanken** op een witte onderkant"
+    },
+    {
+      "en": "Male blue above; female olive-brown, blue **tail**",
+      "nl": "Mannetje blauw boven; vrouwtje olijfbruin, blauwe **staart**"
+    },
+    {
+      "en": "Bobs and flicks **tail** on low perches",
+      "nl": "Wipt en trilt met de **staart** op lage zitposten"
+    }
+  ]
+}

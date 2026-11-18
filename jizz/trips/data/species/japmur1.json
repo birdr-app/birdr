@@ -1,0 +1,22 @@
+{
+  "code": "japmur1",
+  "name": {
+    "en": "Japanese Murrelet",
+    "nl": "Japanse alk"
+  },
+  "latin": "Synthliboramphus wumizusume",
+  "look_for": [
+    {
+      "en": "**Head** black with a white stripe over each eye",
+      "nl": "Zwarte **kop** met een witte streep boven elk oog"
+    },
+    {
+      "en": "Blue-grey **back**, white throat and belly",
+      "nl": "Blauwgrijze **rug**, witte keel en buik"
+    },
+    {
+      "en": "Short, thick, bluish-grey **bill**",
+      "nl": "Korte, dikke, blauwgrijze **snavel**"
+    }
+  ]
+}

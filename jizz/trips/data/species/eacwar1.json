@@ -1,0 +1,22 @@
+{
+  "code": "eacwar1",
+  "name": {
+    "en": "Eastern Crowned Warbler",
+    "nl": "Kroonboszanger"
+  },
+  "latin": "Phylloscopus coronatus",
+  "look_for": [
+    {
+      "en": "Pale **crown** stripe, darker sides",
+      "nl": "Lichte **kruinstreep**, donkerder zijkanten"
+    },
+    {
+      "en": "Long yellowish **eyebrow**, faint **wingbar**",
+      "nl": "Lange gelige **wenkbrauw**, flauwe **vleugelstreep**"
+    },
+    {
+      "en": "Whitish underparts, yellow **undertail**",
+      "nl": "Witachtige onderkant, gele **onderstaart**"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "pingro",
+  "name": {
+    "en": "Pine Grosbeak",
+    "nl": "Haakbek"
+  },
+  "latin": "Pinicola enucleator",
+  "look_for": [
+    {
+      "en": "Large, plump finch with a short stubby **bill**",
+      "nl": "Grote, ronde vink met een korte, dikke **snavel**"
+    },
+    {
+      "en": "Male raspberry red; female grey with olive-yellow wash",
+      "nl": "Mannetje framboosrood; vrouwtje grijs met olijfgeel waas"
+    },
+    {
+      "en": "Two white **wing** bars, long notched **tail**",
+      "nl": "Twee witte **vleugelbalken**, lange, ingekeepte **staart**"
+    }
+  ]
+}

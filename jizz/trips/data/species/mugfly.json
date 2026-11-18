@@ -1,0 +1,22 @@
+{
+  "code": "mugfly",
+  "name": {
+    "en": "Mugimaki Flycatcher",
+    "nl": "Mugimakivliegenvanger"
+  },
+  "latin": "Ficedula mugimaki",
+  "look_for": [
+    {
+      "en": "Male black above with orange **throat** and breast",
+      "nl": "Man zwart boven met oranje **keel** en borst"
+    },
+    {
+      "en": "White **belly**, white spot behind the eye",
+      "nl": "Witte **buik**, witte vlek achter het oog"
+    },
+    {
+      "en": "Female brown with an orange-buff breast",
+      "nl": "Vrouw bruin met een oranjebeige borst"
+    }
+  ]
+}

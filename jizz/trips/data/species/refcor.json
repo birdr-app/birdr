@@ -1,0 +1,22 @@
+{
+  "code": "refcor",
+  "name": {
+    "en": "Red-faced Cormorant",
+    "nl": "Roodmaskeraalscholver"
+  },
+  "latin": "Urile urile",
+  "look_for": [
+    {
+      "en": "Bulkier than Pelagic Cormorant, thick **neck**",
+      "nl": "Forser dan de Pelagische aalscholver, dikke **hals**"
+    },
+    {
+      "en": "Bright red bare **face** between **eye** and **bill**",
+      "nl": "Felrood naakt **gezicht** tussen **oog** en **snavel**"
+    },
+    {
+      "en": "Bluish patch at the base of the **bill**",
+      "nl": "Blauwachtige vlek aan de basis van de **snavel**"
+    }
+  ]
+}

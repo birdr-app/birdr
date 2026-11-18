@@ -1,0 +1,145 @@
+{
+  "note": "Sample areas for GeoModel scores: the busiest eBird hotspots of the regions below. Edit by hand to add or drop places; weight 1 unless a place matters more.",
+  "source": "eBird hotspots (eBird API, Cornell Lab of Ornithology)",
+  "ebird_regions": [
+    "JP-46-05",
+    "JP-42-08",
+    "JP-40",
+    "JP-41",
+    "JP-43",
+    "JP-46-32",
+    "JP-42-10"
+  ],
+  "areas": [
+    {
+      "name": "出水市--出水市ツル観察センター (Izumi--Izumi Crane Observation Center)",
+      "lat": 32.103,
+      "lon": 130.275,
+      "weight": 1,
+      "loc_id": "L986398",
+      "region": "JP-46",
+      "checklists": 1180,
+      "species": 219
+    },
+    {
+      "name": "佐賀市--大授搦・東与賀海岸・干潟よか公園 (Saga--Daijugarami / Higashiyoka Coast / Higatayoka Park)",
+      "lat": 33.1774,
+      "lon": 130.2655,
+      "weight": 1,
+      "loc_id": "L1494364",
+      "region": "JP-41",
+      "checklists": 522,
+      "species": 188
+    },
+    {
+      "name": "出水市--高川ダム (Izumi--Kogawa Dam)",
+      "lat": 32.0646,
+      "lon": 130.4126,
+      "weight": 1,
+      "loc_id": "L1756207",
+      "region": "JP-46",
+      "checklists": 505,
+      "species": 117
+    },
+    {
+      "name": "熊本市--下江津湖 (Kumamoto--Shimoezu Lake)",
+      "lat": 32.7699,
+      "lon": 130.7515,
+      "weight": 1,
+      "loc_id": "L2374559",
+      "region": "JP-43",
+      "checklists": 364,
+      "species": 124
+    },
+    {
+      "name": "福岡市--大濠公園 (Fukuoka--Ohori Park)",
+      "lat": 33.5858,
+      "lon": 130.3764,
+      "weight": 1,
+      "loc_id": "L2266910",
+      "region": "JP-40",
+      "checklists": 315,
+      "species": 106
+    },
+    {
+      "name": "八代市--水島 (Yatsushiro--Mizushima)",
+      "lat": 32.4765,
+      "lon": 130.5589,
+      "weight": 1,
+      "loc_id": "L27536810",
+      "region": "JP-43",
+      "checklists": 202,
+      "species": 103
+    },
+    {
+      "name": "佐賀市--巨勢川調整池 (Saga--Kosegawa Regulating Pond)",
+      "lat": 33.295,
+      "lon": 130.305,
+      "weight": 1,
+      "loc_id": "L17306477",
+      "region": "JP-41",
+      "checklists": 173,
+      "species": 99
+    },
+    {
+      "name": "福岡市--和白干潟 (Fukuoka--Wajiro tidal flats)",
+      "lat": 33.6842,
+      "lon": 130.4309,
+      "weight": 1,
+      "loc_id": "L1756248",
+      "region": "JP-40",
+      "checklists": 76,
+      "species": 105
+    },
+    {
+      "name": "太宰府市--太宰府天満宮 (Dazaifu--Dazaifu Tenmangu Shrine)",
+      "lat": 33.5212,
+      "lon": 130.5348,
+      "weight": 1,
+      "loc_id": "L4347938",
+      "region": "JP-40",
+      "checklists": 49,
+      "species": 45
+    },
+    {
+      "name": "対馬--内院の水田 (Tsushima--Naiin rice paddies)",
+      "lat": 34.1156,
+      "lon": 129.2309,
+      "weight": 1,
+      "loc_id": "L9114759",
+      "region": "JP-42",
+      "checklists": 47,
+      "species": 117
+    },
+    {
+      "name": "高森町--南阿蘇ビジターセンター (Takamori--Minamiaso Visitor Center)",
+      "lat": 32.8438,
+      "lon": 131.1455,
+      "weight": 1,
+      "loc_id": "L18459669",
+      "region": "JP-43",
+      "checklists": 44,
+      "species": 54
+    },
+    {
+      "name": "宇城市--砂川と八枚戸川の川口 (Uki--mouth of Suna and Hachimaido Rivers)",
+      "lat": 32.6142,
+      "lon": 130.6531,
+      "weight": 1,
+      "loc_id": "L6975007",
+      "region": "JP-43",
+      "checklists": 44,
+      "species": 93
+    },
+    {
+      "name": "対馬--佐護の水田 (Tsushima--Sago rice paddies)",
+      "lat": 34.6302,
+      "lon": 129.3378,
+      "weight": 1,
+      "loc_id": "L7988756",
+      "region": "JP-42",
+      "checklists": 40,
+      "species": 86
+    }
+  ]
+}

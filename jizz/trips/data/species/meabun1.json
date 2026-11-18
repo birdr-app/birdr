@@ -1,0 +1,22 @@
+{
+  "code": "meabun1",
+  "name": {
+    "en": "Meadow Bunting",
+    "nl": "Weidegors"
+  },
+  "latin": "Emberiza cioides",
+  "look_for": [
+    {
+      "en": "Striped **head**: black eyestripe, white **brow**",
+      "nl": "Gestreepte **kop**: zwarte oogstreep, witte **wenkbrauw**"
+    },
+    {
+      "en": "Rufous **breast** and **rump**, streaked back",
+      "nl": "Roestbruine **borst** en **stuit**, gestreepte rug"
+    },
+    {
+      "en": "Sings from bush tops and wires",
+      "nl": "Zingt vanaf struiktoppen en draden"
+    }
+  ]
+}

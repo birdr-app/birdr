@@ -1,0 +1,22 @@
+{
+  "code": "glagul",
+  "name": {
+    "en": "Glaucous Gull",
+    "nl": "Grote burgemeester"
+  },
+  "latin": "Larus hyperboreus",
+  "look_for": [
+    {
+      "en": "Big, pale gull with a pale grey **back**",
+      "nl": "Grote, bleke meeuw met een lichtgrijze **rug**"
+    },
+    {
+      "en": "White **wing** tips, no black",
+      "nl": "Witte **vleugel**punten, geen zwart"
+    },
+    {
+      "en": "Thick, pale yellow **bill** with a red spot",
+      "nl": "Dikke, lichtgele **snavel** met een rode vlek"
+    }
+  ]
+}

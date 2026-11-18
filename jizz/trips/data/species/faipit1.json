@@ -1,0 +1,22 @@
+{
+  "code": "faipit1",
+  "name": {
+    "en": "Fairy Pitta",
+    "nl": "Chinese pitta"
+  },
+  "latin": "Pitta nympha",
+  "look_for": [
+    {
+      "en": "Chestnut **crown** with a black centre stripe",
+      "nl": "Kastanjebruine **kruin** met zwarte middenstreep"
+    },
+    {
+      "en": "Green **back**, bright blue patch on the **wing**",
+      "nl": "Groene **rug**, felblauwe vlek op de **vleugel**"
+    },
+    {
+      "en": "Cream **underparts**, red **belly** and undertail",
+      "nl": "Crèmekleurige **onderkant**, rode **buik** en onderstaart"
+    }
+  ]
+}

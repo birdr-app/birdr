@@ -1,0 +1,22 @@
+{
+  "code": "chebun2",
+  "name": {
+    "en": "Chestnut-eared Bunting",
+    "nl": "Grijskopgors"
+  },
+  "latin": "Emberiza fucata",
+  "look_for": [
+    {
+      "en": "Chestnut **cheeks** on a streaked grey **crown**",
+      "nl": "Kastanjebruine **wangen** op een gestreepte grijze **kruin**"
+    },
+    {
+      "en": "White **throat** edged with a dark necklace",
+      "nl": "Witte **keel** met een donkere ketting"
+    },
+    {
+      "en": "Chestnut band across the lower **breast**",
+      "nl": "Kastanjebruine band over de onderste **borst**"
+    }
+  ]
+}

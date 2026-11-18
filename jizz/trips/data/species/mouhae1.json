@@ -1,0 +1,22 @@
+{
+  "code": "mouhae1",
+  "name": {
+    "en": "Mountain Hawk-Eagle",
+    "nl": "Bergkuifarend"
+  },
+  "latin": "Nisaetus nipalensis",
+  "look_for": [
+    {
+      "en": "Large forest eagle with broad **wings**",
+      "nl": "Grote bosarend met brede **vleugels**"
+    },
+    {
+      "en": "White **chest** streaked dark, barred **belly**",
+      "nl": "Witte **borst** met donkere strepen, gebandeerde **buik**"
+    },
+    {
+      "en": "Dark stripe down the white **throat**",
+      "nl": "Donkere streep over de witte **keel**"
+    }
+  ]
+}

@@ -247,6 +247,27 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'parent': 'IN',
     },
+    'JP': {'name': {'en': 'Japan', 'nl': 'Japan'}, 'languages': ('en', 'nl')},
+    'JP-HOKKAIDO': {
+        'name': {'en': 'Hokkaido', 'nl': 'Hokkaido'},
+        'languages': ('en', 'nl'),
+        'parent': 'JP',
+    },
+    'JP-KYUSHU': {
+        'name': {'en': 'Kyushu and Tsushima', 'nl': 'Kyushu en Tsushima'},
+        'languages': ('en', 'nl'),
+        'parent': 'JP',
+    },
+    'JP-RYUKYU': {
+        'name': {'en': 'Ryukyu Islands', 'nl': 'Ryukyu-eilanden'},
+        'languages': ('en', 'nl'),
+        'parent': 'JP',
+    },
+    'JP-OGASAWARA': {
+        'name': {'en': 'Izu and Ogasawara islands', 'nl': 'Izu- en Ogasawara-eilanden'},
+        'languages': ('en', 'nl'),
+        'parent': 'JP',
+    },
     'BRITISHISLES': {
         'name': {'en': 'British Isles', 'nl': 'Britse Eilanden'},
         'languages': ('en', 'nl'),

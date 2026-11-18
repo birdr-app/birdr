@@ -1,0 +1,22 @@
+{
+  "code": "japspa1",
+  "name": {
+    "en": "Japanese Sparrowhawk",
+    "nl": "Kleine sperwer"
+  },
+  "latin": "Tachyspiza gularis",
+  "look_for": [
+    {
+      "en": "Small hawk, male blue-grey above, pinkish below",
+      "nl": "Kleine havik, mannetje blauwgrijs boven, roze onder"
+    },
+    {
+      "en": "Fine dark line down the white **throat**",
+      "nl": "Fijne donkere lijn over de witte **keel**"
+    },
+    {
+      "en": "Short rounded **wings**, long barred **tail**",
+      "nl": "Korte, ronde **vleugels**, lange gebande **staart**"
+    }
+  ]
+}

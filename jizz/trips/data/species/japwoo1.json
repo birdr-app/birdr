@@ -1,0 +1,22 @@
+{
+  "code": "japwoo1",
+  "name": {
+    "en": "Japanese Woodpecker",
+    "nl": "Japanse groene specht"
+  },
+  "latin": "Picus awokera",
+  "look_for": [
+    {
+      "en": "Green **back**, grey **head** and underparts",
+      "nl": "Groene **rug**, grijze **kop** en onderkant"
+    },
+    {
+      "en": "Red **crown**; **moustache** red or black",
+      "nl": "Rode **kruin**; **snorstreep** rood of zwart"
+    },
+    {
+      "en": "Often feeds on the ground, loud calls",
+      "nl": "Foerageert vaak op de grond, luide roep"
+    }
+  ]
+}

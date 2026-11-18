@@ -1,0 +1,22 @@
+{
+  "code": "piggui",
+  "name": {
+    "en": "Pigeon Guillemot",
+    "nl": "Duifzeekoet"
+  },
+  "latin": "Cepphus columba",
+  "look_for": [
+    {
+      "en": "Black, with a big white **wing** patch",
+      "nl": "Zwart met een grote witte **vleugelvlek**"
+    },
+    {
+      "en": "Dark wedge cuts into the white patch",
+      "nl": "Een donkere wig snijdt in de witte vlek"
+    },
+    {
+      "en": "Red **legs** and **mouth**, no white spectacles",
+      "nl": "Rode **poten** en **bek**, geen witte bril"
+    }
+  ]
+}

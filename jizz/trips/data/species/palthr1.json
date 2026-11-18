@@ -1,0 +1,22 @@
+{
+  "code": "palthr1",
+  "name": {
+    "en": "Pale Thrush",
+    "nl": "Bleke lijster"
+  },
+  "latin": "Turdus pallidus",
+  "look_for": [
+    {
+      "en": "Grey-brown **head**, olive-brown **back**",
+      "nl": "Grijsbruine **kop**, olijfbruine **rug**"
+    },
+    {
+      "en": "Dull buff-grey **breast**, white **belly**",
+      "nl": "Doffe beigegrijze **borst**, witte **buik**"
+    },
+    {
+      "en": "White tips to the outer **tail** feathers",
+      "nl": "Witte punten aan de buitenste **staart**veren"
+    }
+  ]
+}

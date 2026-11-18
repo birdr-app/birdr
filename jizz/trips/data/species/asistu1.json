@@ -1,0 +1,22 @@
+{
+  "code": "asistu1",
+  "name": {
+    "en": "Asian Stubtail",
+    "nl": "Kortstaartstruikzanger"
+  },
+  "latin": "Urosphena squameiceps",
+  "look_for": [
+    {
+      "en": "Tiny, hunched, with a very short **tail**",
+      "nl": "Piepklein, gebocheld, met een zeer korte **staart**"
+    },
+    {
+      "en": "Long pale **eyebrow** over a dark eyestripe",
+      "nl": "Lange lichte **wenkbrauw** boven een donkere oogstreep"
+    },
+    {
+      "en": "Thin insect-like song, creeps on forest floor",
+      "nl": "Dun insectachtig lied, kruipt over de bosbodem"
+    }
+  ]
+}

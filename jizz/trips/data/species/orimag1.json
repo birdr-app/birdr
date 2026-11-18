@@ -1,0 +1,22 @@
+{
+  "code": "orimag1",
+  "name": {
+    "en": "Oriental Magpie",
+    "nl": "Oosterse ekster"
+  },
+  "latin": "Pica serica",
+  "look_for": [
+    {
+      "en": "Black-and-white magpie with a long **tail**",
+      "nl": "Zwart-witte ekster met een lange **staart**"
+    },
+    {
+      "en": "White **shoulder** patches, glossy dark wings",
+      "nl": "Witte **schouder**vlekken, glanzend donkere vleugels"
+    },
+    {
+      "en": "Lives around villages in north-west Kyushu",
+      "nl": "Leeft bij dorpen in het noordwesten van Kyushu"
+    }
+  ]
+}

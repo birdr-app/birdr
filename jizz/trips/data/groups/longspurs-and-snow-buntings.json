@@ -1,0 +1,27 @@
+{
+  "slug": "longspurs-and-snow-buntings",
+  "about": {
+    "en": "Small songbirds of open, windswept ground in the far north: tundra, beaches and bare fields. Snow Buntings are mostly white with black wing tips; longspurs are streaky brown with a long claw on the hind toe. They feed in flocks on the ground, walking or running, and rise together in twittering swirls.",
+    "nl": "Kleine zangvogels van open, winderige grond in het hoge noorden: toendra, stranden en kale velden. Sneeuwgorzen zijn grotendeels wit met zwarte vleugelpunten; ijsgorzen zijn bruin gestreept met een lange klauw aan de achterteen. Ze zoeken in groepen op de grond naar voedsel, lopend of rennend, en stijgen samen op in kwetterende zwermen."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "old-world-buntings"
+      ],
+      "text": {
+        "en": "Snow and Lapland Buntings are close relatives of the buntings of woods and farmland, yet they live on tundra, beaches and bare ground. Look for much more white, or for a rusty nape, and for flocks that run over open ground.",
+        "nl": "Sneeuwgors en ijsgors zijn verwant aan de gorzen van bossen en akkers, maar leven op toendra, stranden en kale grond. Let op veel meer wit, of een roestkleurige nek, en op groepen die over open grond rennen."
+      }
+    },
+    {
+      "if_known": [
+        "new-world-sparrows"
+      ],
+      "text": {
+        "en": "Longspurs look like streaky brown sparrows. They live in open country, have a long hind claw and show white on the outer tail.",
+        "nl": "IJsgorzen lijken op gestreepte bruine mussen en gorzen. Ze leven in open land, hebben een lange achterklauw en tonen wit op de buitenste staartveren."
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "okirai1",
+  "name": {
+    "en": "Okinawa Rail",
+    "nl": "Okinawaral"
+  },
+  "latin": "Gallirallus okinawae",
+  "look_for": [
+    {
+      "en": "Bright red **bill** and **legs**",
+      "nl": "Felrode **snavel** en **poten**"
+    },
+    {
+      "en": "Black **underparts** finely barred with white",
+      "nl": "Zwarte **onderkant** met fijne witte banden"
+    },
+    {
+      "en": "Olive-brown **back**, white line behind the **eye**",
+      "nl": "Olijfbruine **rug**, witte streep achter het **oog**"
+    }
+  ]
+}

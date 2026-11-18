@@ -1,0 +1,22 @@
+{
+  "code": "thbmur",
+  "name": {
+    "en": "Brünnich's Guillemot",
+    "nl": "Kortbekzeekoet"
+  },
+  "latin": "Uria lomvia",
+  "look_for": [
+    {
+      "en": "Darker **head** and **back** than Common Guillemot",
+      "nl": "Donkerder **kop** en **rug** dan de Zeekoet"
+    },
+    {
+      "en": "Short, thick **bill** with a white gape stripe",
+      "nl": "Korte, dikke **snavel** met een witte streep bij de mondhoek"
+    },
+    {
+      "en": "Less white on the **face** in winter",
+      "nl": "In de winter minder wit in het **gezicht**"
+    }
+  ]
+}

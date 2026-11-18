@@ -1,0 +1,49 @@
+{
+  "country": "JP-KYUSHU",
+  "intro": {
+    "en": "Kyushu and Tsushima in winter, from November to March. This small pack adds 19 birds on top of the Japan trip: the cranes at Izumi, the tidal flats of Saga and Fukuoka, and the Asian migrants and winter birds that turn up in the south-west.",
+    "nl": "Kyushu en Tsushima in de winter, van november tot maart. Dit kleine pakket voegt 19 vogels toe aan de reis naar Japan: de kraanvogels bij Izumi, de wadplaten van Saga en Fukuoka en de Aziatische trekvogels en wintergasten van het zuidwesten."
+  },
+  "units": {
+    "cranes-and-geese": {
+      "title": {
+        "en": "Cranes and the Taiga Bean Goose",
+        "nl": "Kraanvogels en de Taigarietgans"
+      },
+      "intro": {
+        "en": "About 15,000 cranes winter at Izumi in Kagoshima prefecture, most of them Hooded and White-naped, on flooded rice fields. The Hooded Crane is smaller and darker, with a white head and neck. The White-naped Crane is paler, with a red face and a white stripe up the neck. A few Common Cranes mix in, and the Taiga Bean Goose is a scarce winter visitor to open farmland.",
+        "nl": "Zo'n 15.000 kraanvogels overwinteren bij Izumi in de prefectuur Kagoshima, vooral Monnikskraanvogels en Witnekkraanvogels, op natgelegde rijstvelden. De Monnikskraanvogel is kleiner en donkerder, met een witte kop en hals. De Witnekkraanvogel is lichter, met een rood gezicht en een witte streep langs de hals. Er zitten ook enkele Kraanvogels tussen en de Taigarietgans is een schaarse wintergast op open akkers."
+      }
+    },
+    "tidal-flats": {
+      "title": {
+        "en": "Spoonbill, stork and the tidal flats",
+        "nl": "Lepelaar, ooievaar en de wadplaten"
+      },
+      "intro": {
+        "en": "The tidal flats of Saga and Fukuoka and the fields behind them hold the wetland birds of this pack. Black-faced Spoonbills sweep their bills through shallow water, and Saunders's Gulls pick crabs from the mud. Check every white egret for the Chinese Egret. The Oriental Stork is rare, so scan wet farmland for a big white bird with black wings.",
+        "nl": "De wadplaten van Saga en Fukuoka en de velden erachter herbergen de watervogels van dit pakket. Kleine lepelaars zwaaien hun snavel door ondiep water en Saundersmeeuwen pikken krabben uit de modder. Kijk elke witte reiger goed na op de Chinese zilverreiger. De Zwartsnavelooievaar is zeldzaam, dus speur natte landbouwgrond af naar een grote witte vogel met zwarte vleugels."
+      }
+    },
+    "crows-and-kingfisher": {
+      "title": {
+        "en": "Crows, magpie and a kingfisher",
+        "nl": "Kraaien, ekster en een ijsvogel"
+      },
+      "intro": {
+        "en": "Farmland and villages in north-west Kyushu and on Tsushima. In winter Rooks and Daurian Jackdaws feed together in the fields; the jackdaw is much smaller, and the pale-bellied ones stand out. The Oriental Magpie lives around villages here. The Crested Kingfisher is a huge kingfisher that sits high over rocky streams.",
+        "nl": "Akkers en dorpen in het noordwesten van Kyushu en op Tsushima. In de winter foerageren Roeken en Daurische kauwen samen op de velden; de kauw is een stuk kleiner en de exemplaren met een lichte buik vallen op. De Oosterse ekster leeft hier bij de dorpen. De Chinese reuzenijsvogel is een enorme ijsvogel die hoog boven rotsachtige beken zit."
+      }
+    },
+    "flycatchers-and-buntings": {
+      "title": {
+        "en": "Flycatchers, tit and buntings",
+        "nl": "Vliegenvangers, mees en gorzen"
+      },
+      "intro": {
+        "en": "Small birds of reedbeds, scrub and farmland edges. The Yellow-rumped and Mugimaki Flycatchers are migrants that pass through in spring and autumn, and Tsushima is a good place to find them; the males are bright, the females plain brown. The Chinese Penduline Tit and the buntings are winter birds. Look for the tits in reeds, and for the buntings on the ground in bushy fields and wet grass.",
+        "nl": "Kleine vogels van rietland, struweel en akkerranden. De Driekleurenvliegenvanger en de Mugimakivliegenvanger zijn trekvogels die in het voorjaar en in het najaar langskomen, en Tsushima is een goede plek om ze te vinden; de mannen zijn fel gekleurd, de vrouwen effen bruin. De Chinese buidelmees en de gorzen zijn wintervogels. Zoek de mezen in het riet en de gorzen op de grond in struikrijke velden en vochtig grasland."
+      }
+    }
+  }
+}

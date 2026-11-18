@@ -1,0 +1,22 @@
+{
+  "code": "steeid",
+  "name": {
+    "en": "Steller's Eider",
+    "nl": "Stellers eider"
+  },
+  "latin": "Polysticta stelleri",
+  "look_for": [
+    {
+      "en": "Male has white **head**, black eye-ring and chin",
+      "nl": "Woerd met witte **kop**, zwarte oogring en kin"
+    },
+    {
+      "en": "Cinnamon **breast** with one black spot",
+      "nl": "Kaneelkleurige **borst** met één zwarte vlek"
+    },
+    {
+      "en": "Female dark brown, blue **speculum** edged white",
+      "nl": "Wijfje donkerbruin, blauwe **spiegel** met witte rand"
+    }
+  ]
+}

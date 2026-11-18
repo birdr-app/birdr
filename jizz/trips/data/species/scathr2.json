@@ -1,0 +1,22 @@
+{
+  "code": "scathr2",
+  "name": {
+    "en": "White's Thrush",
+    "nl": "Goudlijster"
+  },
+  "latin": "Zoothera aurea",
+  "look_for": [
+    {
+      "en": "Big golden-brown thrush on the forest floor",
+      "nl": "Grote goudbruine lijster op de bosbodem"
+    },
+    {
+      "en": "Black crescent scaling all over",
+      "nl": "Zwarte halvemaanschubben over het hele lijf"
+    },
+    {
+      "en": "Banded black-and-white **underwing** in flight",
+      "nl": "Zwart-wit gebande **onderkant van de vleugel** in vlucht"
+    }
+  ]
+}

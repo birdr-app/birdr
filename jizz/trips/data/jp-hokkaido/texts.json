@@ -1,0 +1,129 @@
+{
+  "country": "JP-HOKKAIDO",
+  "intro": {
+    "en": "Hokkaido is Japan's cold northern island, where the birds are those of Siberia and the north Pacific. This pack adds 56 birds on top of the Japan trip. Winter is the best season, for Red-crowned Cranes, sea-eagles on the drift ice and sea ducks on the coast; summer adds grasshopper warblers, Siberian Rubythroat and Tufted Puffin.",
+    "nl": "Hokkaido is het koude noordelijke eiland van Japan, met vogels uit Siberië en de noordelijke Stille Oceaan. Dit pakket voegt 56 vogels toe bovenop de reis naar Japan. De winter is het beste seizoen, voor Chinese kraanvogels, zeearenden op het pakijs en zee-eenden langs de kust; in de zomer komen er sprinkhaanzangers, Roodkeelnachtegaal en Kuifpapegaaiduiker bij."
+  },
+  "units": {
+    "cranes-grouse-snipe": {
+      "title": {
+        "en": "Cranes, grouse, snipe and sandpiper",
+        "nl": "Kraanvogel, hoen, snip en strandloper"
+      },
+      "intro": {
+        "en": "Four very different birds. Red-crowned Cranes feed in the snow near Tsurui in winter, and pairs dance and bugle together. Hazel Grouse is shy and walks quietly through forest. Latham's Snipe is a summer visitor that breeds on grassland, and the Rock Sandpiper feeds on rocky shores in winter.",
+        "nl": "Vier heel verschillende vogels. In de winter foerageren Chinese kraanvogels in de sneeuw bij Tsurui, waar paren samen dansen en trompetteren. Het Hazelhoen is schuw en loopt stil door het bos. De Japanse snip is een zomergast die op grasland broedt, en de Beringstrandloper zoekt in de winter voedsel op rotskusten."
+      }
+    },
+    "eagles-owls": {
+      "title": {
+        "en": "Sea-eagles, hawk-eagle and owls",
+        "nl": "Zeearenden, bergkuifarend en uilen"
+      },
+      "intro": {
+        "en": "In late winter drift ice from the Sea of Okhotsk reaches the Nemuro Strait and the Rausu coast, and the sea-eagles follow it. Steller's has white shoulders and a huge yellow bill, and the White-tailed is smaller and browner. Blakiston's Fish-Owl, the largest owl in the world, is watched at night at inns near Rausu and Yoroushi, while the Ural Owl and the Mountain Hawk-Eagle keep to the forest.",
+        "nl": "Aan het eind van de winter drijft pakijs uit de Zee van Ochotsk tot in de Straat van Nemuro en langs de kust bij Rausu, en de zeearenden volgen het. De Stellers zeearend heeft witte schouders en een enorme gele snavel, de Zeearend is kleiner en bruiner. De Blakistonvisuil, de grootste uil ter wereld, kijk je 's nachts bij herbergen bij Rausu en Yoroushi, terwijl de Oeraluil en de Bergkuifarend in het bos blijven."
+      }
+    },
+    "sea-ducks": {
+      "title": {
+        "en": "Sea ducks of the winter coast",
+        "nl": "Zee-eenden van de winterkust"
+      },
+      "intro": {
+        "en": "Winter is the season for sea ducks along the Nemuro coast. Look from harbour walls and capes such as Cape Nosappu, where they rest and dive in the surf. The scoters are black with a knob on the bill, Long-tailed and Harlequin Ducks are smaller and patterned, and Steller's Eider is the rarest.",
+        "nl": "De winter is het seizoen van de zee-eenden langs de kust bij Nemuro. Kijk vanaf havenmuren en kapen zoals Kaap Nosappu, waar ze rusten en in de branding duiken. De zee-eenden zijn zwart met een knobbel op de snavel, de IJseend en de Harlekijneend zijn kleiner en getekend, en Stellers eider is de zeldzaamste."
+      }
+    },
+    "divers-fulmar": {
+      "title": {
+        "en": "Divers, grebe, fulmar and shearwater",
+        "nl": "Duikers, fuut en stormvogels"
+      },
+      "intro": {
+        "en": "The divers and the grebe rest in bays and harbours, and the fulmar and the shearwater live on the open sea, seen from capes and ferry decks. Red-throated Diver is the palest, with a thin, upturned bill. Black-throated and Pacific Divers are very close; Pacific is smaller and rounder-headed.",
+        "nl": "De duikers en de fuut rusten in baaien en havens, en de stormvogel en de pijlstormvogel leven op open zee, te zien vanaf kapen en veerboten. De Roodkeelduiker is de lichtste, met een dunne, opwaarts gebogen snavel. De Parelduiker en de Pacifische parelduiker lijken sterk op elkaar; de Pacifische is kleiner en heeft een ronder hoofd."
+      }
+    },
+    "gulls-cormorants": {
+      "title": {
+        "en": "Gulls, kittiwake and cormorants",
+        "nl": "Meeuwen, drieteenmeeuw en aalscholvers"
+      },
+      "intro": {
+        "en": "The Glaucous and Glaucous-winged Gulls turn up at harbours and fishing ports in winter. Pale wing tips with no black set them apart from darker gulls, and the kittiwake is a small ocean gull with black wing tips. Pelagic and Red-faced Cormorants sit on sea cliffs and rocks; the Red-faced is bulkier, with a red face.",
+        "nl": "De Grote burgemeester en de Beringmeeuw verschijnen in de winter bij havens en vissersplaatsen. Lichte vleugelpunten zonder zwart onderscheiden ze van donkerder meeuwen, en de Drieteenmeeuw is een kleine zeemeeuw met zwarte vleugelpunten. Pelagische en Roodmaskeraalscholvers zitten op zeekliffen en rotsen; de Roodmaskeraalscholver is forser en heeft een rood gezicht."
+      }
+    },
+    "guillemots": {
+      "title": {
+        "en": "Guillemots of the rocky coast",
+        "nl": "Zeekoeten van de rotskust"
+      },
+      "intro": {
+        "en": "Two big guillemots and two small ones. Common and Brünnich's Guillemots are black above and white below, and the head pattern and the bill tell them apart. Spectacled and Pigeon Guillemots are smaller, with red legs, and sit in rocky bays near the shore. Look from capes and harbour walls on calm days.",
+        "nl": "Twee grote zeekoeten en twee kleine. De Zeekoet en de Kortbekzeekoet zijn zwart boven en wit onder, en de kopstekening en de snavel maken het verschil. De Brilzeekoet en de Duifzeekoet zijn kleiner, met rode poten, en zitten in rotsachtige baaien dicht bij de kust. Kijk op kalme dagen vanaf kapen en havenmuren."
+      }
+    },
+    "puffins-murrelets": {
+      "title": {
+        "en": "Puffin, auklet and murrelets",
+        "nl": "Papegaaiduiker en kleine alken"
+      },
+      "intro": {
+        "en": "Tufted Puffins and Rhinoceros Auklets nest on islands such as Teuri and Yagishiri, and the summer ferry is the way to see them. The murrelets are small and spend winter off the coast. The Ancient Murrelet banks from side to side in flight.",
+        "nl": "Kuifpapegaaiduikers en Neushoornalken broeden op eilanden als Teuri en Yagishiri, en de zomerveerboot is de manier om ze te zien. De kleine alken zijn klein en brengen de winter voor de kust door. De Zilveralk helt in de vlucht van links naar rechts."
+      }
+    },
+    "woodpeckers": {
+      "title": {
+        "en": "Woodpeckers of the northern forest",
+        "nl": "Spechten van het noordelijke bos"
+      },
+      "intro": {
+        "en": "The forests of Hokkaido hold four woodpeckers, from the crow-sized Black Woodpecker to the sparrow-sized Lesser Spotted. Listen for drumming and calls on quiet mornings. Winter is easiest, when the trees are bare.",
+        "nl": "In de bossen van Hokkaido leven vier spechten, van de kraaiengrote Zwarte specht tot de mussengrote Kleine bonte specht. Luister op stille ochtenden naar trommelen en roepen. De winter is het makkelijkst, als de bomen kaal zijn."
+      }
+    },
+    "tits-nutcracker-raven": {
+      "title": {
+        "en": "Tit, nutcracker, treecreeper, raven",
+        "nl": "Mees, notenkraker, boomkruiper en raaf"
+      },
+      "intro": {
+        "en": "Four birds of the forest and its edge. The Marsh Tit and the Eurasian Treecreeper join the small flocks that move through bare winter woods. The Spotted Nutcracker is a dark, white-spotted bird of conifer woods with a harsh call, and the Common Raven is much bigger than the crows, with a heavy bill and a wedge-shaped tail.",
+        "nl": "Vier vogels van het bos en de bosrand. De Glanskop en de Taigaboomkruiper sluiten aan bij de kleine groepjes die door kale winterbossen trekken. De Notenkraker is een donkere vogel met witte vlekken die in naaldbos leeft en hard roept, en de Raaf is veel groter dan de kraaien, met een zware snavel en een wigvormige staart."
+      }
+    },
+    "finches-buntings": {
+      "title": {
+        "en": "Finches, waxwing and Snow Bunting",
+        "nl": "Vinken, pestvogel en sneeuwgors"
+      },
+      "intro": {
+        "en": "Winter brings northern finches to Hokkaido's forests, fields and berry trees. Pine Grosbeak and Pallas's Rosefinch are the prize, and the Bohemian Waxwing comes to trees with berries. The Snow Bunting and the Asian Rosy-Finch feed in flocks on open, windswept ground.",
+        "nl": "In de winter komen noordelijke vinken naar de bossen, velden en bessenbomen van Hokkaido. De Haakbek en de Pallas' roodmus zijn de blikvangers, en de Pestvogel komt op bomen met bessen af. De Sneeuwgors en de Roze bergvink zoeken in groepen voedsel op open, winderige grond."
+      }
+    },
+    "thrushes-chats": {
+      "title": {
+        "en": "Thrush, robin, rubythroat, stonechat",
+        "nl": "Lijster, nachtegalen en roodborsttapuit"
+      },
+      "intro": {
+        "en": "Birds of late spring and summer, shy and best found by song at dawn. Siberian Rubythroat and Amur Stonechat perch on bushes and tall stems in grassy bogs and coastal meadows. Siberian Thrush and Rufous-tailed Robin stay on the forest floor.",
+        "nl": "Vogels van late lente en zomer, schuw en het best te vinden op hun zang bij zonsopgang. De Roodkeelnachtegaal en de Stejnegers roodborsttapuit zitten op struiken en hoge stengels in grazige moerassen en kustweiden. De Siberische lijster en de Snornachtegaal blijven op de bosbodem."
+      }
+    },
+    "warblers": {
+      "title": {
+        "en": "Warblers of bog, scrub and forest",
+        "nl": "Zangers van moeras, struweel en bos"
+      },
+      "intro": {
+        "en": "Summer birds that you hear far more often than you see. The grasshopper warblers keep low in thick scrub and tall grass, so learn the songs first. The Black-browed Reed Warbler lives in wet grassland and reeds, and the Sakhalin Leaf Warbler sings in forest trees.",
+        "nl": "Zomervogels die je veel vaker hoort dan ziet. De sprinkhaanzangers houden zich laag in dicht struweel en hoog gras, dus leer eerst de zang. De Zwartbrauwrietzanger leeft in nat grasland en riet, en de Japanse fitis zingt in bomen in het bos."
+      }
+    }
+  }
+}

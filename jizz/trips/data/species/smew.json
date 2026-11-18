@@ -1,0 +1,22 @@
+{
+  "code": "smew",
+  "name": {
+    "en": "Smew",
+    "nl": "Nonnetje"
+  },
+  "latin": "Mergellus albellus",
+  "look_for": [
+    {
+      "en": "Male gleaming white with fine black lines",
+      "nl": "Mannetje stralend wit met fijne zwarte lijnen"
+    },
+    {
+      "en": "Black **eye** patch on a white **head**",
+      "nl": "Zwarte vlek rond het **oog** op een witte **kop**"
+    },
+    {
+      "en": "Female grey with a chestnut **cap**",
+      "nl": "Vrouwtje grijs met roestbruine **kap**"
+    }
+  ]
+}

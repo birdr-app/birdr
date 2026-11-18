@@ -1,0 +1,22 @@
+{
+  "code": "copphe1",
+  "name": {
+    "en": "Copper Pheasant",
+    "nl": "Koperfazant"
+  },
+  "latin": "Syrmaticus soemmerringii",
+  "look_for": [
+    {
+      "en": "Male glossy copper-chestnut, scaly **flanks**",
+      "nl": "Mannetje glanzend koperbruin, geschubde **flanken**"
+    },
+    {
+      "en": "Extremely long, barred **tail**, over a metre",
+      "nl": "Extreem lange, gebande **staart**, ruim een meter"
+    },
+    {
+      "en": "Bare red **face** skin; female brown, barred",
+      "nl": "Rode kale **gezichtshuid**; vrouwtje bruin, gebandeerd"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "blfspo1",
+  "name": {
+    "en": "Black-faced Spoonbill",
+    "nl": "Kleine lepelaar"
+  },
+  "latin": "Platalea minor",
+  "look_for": [
+    {
+      "en": "White wader with a black, spoon-shaped **bill**",
+      "nl": "Witte vogel met een zwarte lepelvormige **snavel**"
+    },
+    {
+      "en": "Bare black **face** runs from bill to eye",
+      "nl": "Kaal zwart **gezicht** van snavel tot oog"
+    },
+    {
+      "en": "Sweeps its bill sideways through shallow water",
+      "nl": "Zwaait de snavel zijwaarts door ondiep water"
+    }
+  ]
+}

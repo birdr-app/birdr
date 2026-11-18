@@ -1,0 +1,212 @@
+{
+  "country": "JP-KYUSHU",
+  "groups": [
+    {
+      "slug": "waterfowl",
+      "name": {
+        "en": "Waterfowl",
+        "nl": "Watervogels"
+      },
+      "species": [
+        "taibeg1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "cranes",
+      "name": {
+        "en": "Cranes",
+        "nl": "Kraanvogels"
+      },
+      "species": [
+        "whncra1",
+        "comcra",
+        "hoocra1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "shorebirds",
+      "name": {
+        "en": "Shorebirds",
+        "nl": "Steltlopers"
+      },
+      "species": [
+        "euroys1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "gulls-terns-and-skimmers",
+      "name": {
+        "en": "Gulls, Terns, and Skimmers",
+        "nl": "Meeuwen, Sterns en Schaarbekken"
+      },
+      "species": [
+        "saugul2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "storks",
+      "name": {
+        "en": "Storks",
+        "nl": "Ooievaars"
+      },
+      "species": [
+        "oristo1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "herons-ibis-and-allies",
+      "name": {
+        "en": "Herons, Ibis, and Allies",
+        "nl": "Reigers, Ibissen en aanverwanten"
+      },
+      "species": [
+        "chiegr",
+        "blfspo1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "kingfishers",
+      "name": {
+        "en": "Kingfishers",
+        "nl": "IJsvogels"
+      },
+      "species": [
+        "crekin1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "jays-magpies-crows-and-ravens",
+      "name": {
+        "en": "Jays, Magpies, Crows, and Ravens",
+        "nl": "Gaaien, Eksters, Kraaien en Raven"
+      },
+      "species": [
+        "orimag1",
+        "daujac1",
+        "rook1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "penduline-tits-and-verdin",
+      "name": {
+        "en": "Penduline-Tits and Verdin",
+        "nl": "Buidelmezen en Staartmezen"
+      },
+      "species": [
+        "chptit1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "old-world-flycatchers",
+      "name": {
+        "en": "Old World Flycatchers",
+        "nl": "Vliegenvangers van de Oude Wereld"
+      },
+      "species": [
+        "korfly1",
+        "mugfly"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "old-world-buntings",
+      "name": {
+        "en": "Old World Buntings",
+        "nl": "Gorzen van de Oude Wereld"
+      },
+      "species": [
+        "bkfbun1",
+        "pinbun",
+        "ocrbun1"
+      ],
+      "endemics": []
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "cranes-and-geese",
+      "title": {
+        "en": "Cranes and the Taiga Bean Goose",
+        "nl": "Kraanvogels en de Taigarietgans"
+      },
+      "groups": [
+        "waterfowl",
+        "cranes"
+      ],
+      "species": [
+        "hoocra1",
+        "whncra1",
+        "comcra",
+        "taibeg1"
+      ]
+    },
+    {
+      "slug": "tidal-flats",
+      "title": {
+        "en": "Spoonbill, stork and the tidal flats",
+        "nl": "Lepelaar, ooievaar en de wadplaten"
+      },
+      "groups": [
+        "shorebirds",
+        "gulls-terns-and-skimmers",
+        "storks",
+        "herons-ibis-and-allies"
+      ],
+      "species": [
+        "blfspo1",
+        "saugul2",
+        "chiegr",
+        "oristo1",
+        "euroys1"
+      ]
+    },
+    {
+      "slug": "crows-and-kingfisher",
+      "title": {
+        "en": "Crows, magpie and a kingfisher",
+        "nl": "Kraaien, ekster en een ijsvogel"
+      },
+      "groups": [
+        "kingfishers",
+        "jays-magpies-crows-and-ravens"
+      ],
+      "species": [
+        "rook1",
+        "daujac1",
+        "orimag1",
+        "crekin1"
+      ]
+    },
+    {
+      "slug": "flycatchers-and-buntings",
+      "title": {
+        "en": "Flycatchers, tit and buntings",
+        "nl": "Vliegenvangers, mees en gorzen"
+      },
+      "groups": [
+        "penduline-tits-and-verdin",
+        "old-world-flycatchers",
+        "old-world-buntings"
+      ],
+      "species": [
+        "korfly1",
+        "mugfly",
+        "chptit1",
+        "bkfbun1",
+        "pinbun",
+        "ocrbun1"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

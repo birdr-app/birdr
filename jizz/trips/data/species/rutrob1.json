@@ -1,0 +1,22 @@
+{
+  "code": "rutrob1",
+  "name": {
+    "en": "Rufous-tailed Robin",
+    "nl": "Snornachtegaal"
+  },
+  "latin": "Larvivora sibilans",
+  "look_for": [
+    {
+      "en": "Small, plain grey-brown robin of dark forest",
+      "nl": "Klein, effen grijsbruin vogeltje van donker bos"
+    },
+    {
+      "en": "Bright rufous **rump** and **tail**",
+      "nl": "Helder roodbruine **stuit** en **staart**"
+    },
+    {
+      "en": "Flicks its **tail** often, stays low",
+      "nl": "Wipt vaak met de **staart**, blijft laag"
+    }
+  ]
+}

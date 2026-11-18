@@ -1,0 +1,22 @@
+{
+  "code": "pinbun",
+  "name": {
+    "en": "Pine Bunting",
+    "nl": "Witkopgors"
+  },
+  "latin": "Emberiza leucocephalos",
+  "look_for": [
+    {
+      "en": "Male white **crown** and cheek, chestnut throat",
+      "nl": "Man witte **kruin** en wang, kastanjebruine keel"
+    },
+    {
+      "en": "Streaked brown back, chestnut **rump**",
+      "nl": "Gestreepte bruine rug, kastanjebruine **stuit**"
+    },
+    {
+      "en": "Female duller and more streaked below",
+      "nl": "Vrouw doffer en meer gestreept onder"
+    }
+  ]
+}

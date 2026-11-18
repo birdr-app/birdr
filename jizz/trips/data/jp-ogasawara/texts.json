@@ -1,0 +1,49 @@
+{
+  "country": "JP-OGASAWARA",
+  "intro": {
+    "en": "The islands south of Tokyo, from Miyakejima and Hachijojima to Chichijima and Hahajima, and the long ferry crossings that lead to them. This pack adds 21 birds on top of the Japan trip: Pacific seabirds seen from the ferries and a few boat trips, and songbirds of the island forests. Four of the songbirds live nowhere outside Japan, and most seabirds stay far from the boat, so a good view takes patience and some luck.",
+    "nl": "De eilanden ten zuiden van Tokio, van Miyakejima en Hachijojima tot Chichijima en Hahajima, en de lange veerdiensten die ernaartoe lopen. Dit pakket voegt 21 vogels toe bovenop de reis naar Japan: zeevogels van de Grote Oceaan die je vanaf de veerboten en op een paar boottochten ziet, en zangvogels van het eilandbos. Vier van de zangvogels leven nergens buiten Japan en de meeste zeevogels blijven ver van de boot, dus een goed beeld kost geduld en een beetje geluk."
+  },
+  "units": {
+    "albatrosses-storm-petrels": {
+      "title": {
+        "en": "The open ocean",
+        "nl": "De open oceaan"
+      },
+      "intro": {
+        "en": "Open-ocean birds, mostly seen from the ferries far from land. Black-footed Albatross is the likeliest of the three, Laysan is rare, and Short-tailed is mainly a bird of Torishima and its special boat trips. The two storm-petrels are big for their group and gone in seconds, so look at the wings.",
+        "nl": "Vogels van de open oceaan, meestal vanaf de veerboot te zien en ver van het land. De Zwartvoetalbatros is de meest waarschijnlijke van de drie, de Laysanalbatros is zeldzaam en de Stelleralbatros zie je vooral bij Torishima, op speciale boottochten. De twee stormvogeltjes zijn groot voor hun groep en na een paar seconden alweer weg, dus let op de vleugels."
+      }
+    },
+    "petrels-shearwaters": {
+      "title": {
+        "en": "Petrels and shearwaters",
+        "nl": "Stormvogels en pijlstormvogels"
+      },
+      "intro": {
+        "en": "Medium-sized seabirds that skim low over the waves, best looked for from the ferry in good light. Streaked Shearwater is the one you will see most. The Bonin and Bulwer's Petrel nest on the Ogasawara islands and come ashore only at night, so you meet them at sea.",
+        "nl": "Middelgrote zeevogels die laag over de golven scheren, het best vanaf de veerboot te zoeken bij goed licht. De Gestreepte pijlstormvogel zie je het vaakst. De Boninstormvogel en de Bulwers stormvogel broeden op de Ogasawara-eilanden en komen alleen 's nachts aan land, dus je ziet ze op zee."
+      }
+    },
+    "boobies-terns-seabirds": {
+      "title": {
+        "en": "Boobies, terns and other seabirds",
+        "nl": "Genten, sterns en andere zeevogels"
+      },
+      "intro": {
+        "en": "Seabirds of the warm southern waters, seen from the ferry and around the Ogasawara islands. Three boobies, a tropicbird with long red tail streamers, a noddy and a tern are the easier ones. The Japanese Murrelet is the hard one: a small alcid that breeds on rocky islets and is met at sea.",
+        "nl": "Zeevogels van de warme zuidelijke wateren, te zien vanaf de veerboot en rond de Ogasawara-eilanden. Drie genten, een keerkringvogel met lange rode staartpennen, een noddy en een stern zijn de makkelijkere soorten. De Japanse alk is de moeilijke: een kleine alk die op rotseilandjes broedt en die je op zee tegenkomt."
+      }
+    },
+    "island-songbirds": {
+      "title": {
+        "en": "Songbirds of the islands",
+        "nl": "Zangvogels van de eilanden"
+      },
+      "intro": {
+        "en": "Forest birds that you look for on land. Izu Thrush, Izu Robin, Owston's Tit and Ijima's Leaf Warbler live on the Izu islands, above all Miyakejima and Hachijojima, and Ijima's is there in summer only. The Bonin White-eye lives on Hahajima, south of Chichijima by ferry.",
+        "nl": "Bosvogels die je op het land zoekt. De Izulijster, de Izuroodborst, de Izumees en de Izuboszanger leven op de Izu-eilanden, vooral op Miyakejima en Hachijojima, en de Izuboszanger is er alleen in de zomer. De Boninbrilvogel leeft op Hahajima, per veerboot ten zuiden van Chichijima."
+      }
+    }
+  }
+}

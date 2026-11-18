@@ -1,0 +1,72 @@
+{
+  "note": "Sample areas for GeoModel scores: the busiest eBird hotspots of the regions below. Edit by hand to add or drop places; weight 1 unless a place matters more.",
+  "source": "eBird hotspots (eBird API, Cornell Lab of Ornithology)",
+  "ebird_regions": [
+    "JP-13-62",
+    "JP-13-58",
+    "JP-13-60",
+    "JP-13-54",
+    "JP-13-57",
+    "JP-13-56"
+  ],
+  "areas": [
+    {
+      "name": "三宅島--大路池 (Miyakejima--Tairo-ike)",
+      "lat": 34.0547,
+      "lon": 139.5257,
+      "weight": 1,
+      "loc_id": "L1494147",
+      "region": "JP-13",
+      "checklists": 431,
+      "species": 141
+    },
+    {
+      "name": "八丈航路 --大島の南東 (Hachijojima Ferry--SE of Oshima)",
+      "lat": 34.546,
+      "lon": 139.534,
+      "weight": 1,
+      "loc_id": "L23227828",
+      "region": "JP-13",
+      "checklists": 309,
+      "species": 64
+    },
+    {
+      "name": "父島--大村 (Chichijima--Omura)",
+      "lat": 27.0939,
+      "lon": 142.1916,
+      "weight": 1,
+      "loc_id": "L1756121",
+      "region": "JP-13",
+      "checklists": 146,
+      "species": 62
+    },
+    {
+      "name": "八丈島--底土港 (Hachijojima--Sokodo Port)",
+      "lat": 33.1231,
+      "lon": 139.8176,
+      "weight": 1,
+      "loc_id": "L1480134",
+      "region": "JP-13",
+      "checklists": 140,
+      "species": 78
+    },
+    {
+      "name": "Hahajima (Ogasawara)",
+      "lat": 26.65,
+      "lon": 142.16,
+      "weight": 1
+    },
+    {
+      "name": "Chichijima, Mt Asahi and Cape Kominato",
+      "lat": 27.08,
+      "lon": 142.21,
+      "weight": 1
+    },
+    {
+      "name": "Ogasawara Maru ferry, open Pacific (half way)",
+      "lat": 30.0,
+      "lon": 140.7,
+      "weight": 1
+    }
+  ]
+}

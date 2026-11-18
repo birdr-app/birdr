@@ -1,0 +1,169 @@
+{
+  "note": "Sample areas for GeoModel scores: the busiest eBird hotspots of the regions below. Edit by hand to add or drop places; weight 1 unless a place matters more.",
+  "source": "eBird hotspots (eBird API, Cornell Lab of Ornithology)",
+  "ebird_regions": [
+    "JP-01"
+  ],
+  "areas": [
+    {
+      "name": "中標津町--養老牛温泉 (Nakashibetsu--Yoroushi Hot Spring)",
+      "lat": 43.5876,
+      "lon": 144.7223,
+      "weight": 1,
+      "loc_id": "L1113929",
+      "region": "JP-01",
+      "checklists": 1556,
+      "species": 97
+    },
+    {
+      "name": "羅臼町--鷲の宿民宿 (Rausu--Washi-no-yado Inn)",
+      "lat": 44.0341,
+      "lon": 145.2085,
+      "weight": 1,
+      "loc_id": "L1557875",
+      "region": "JP-01",
+      "checklists": 981,
+      "species": 105
+    },
+    {
+      "name": "根室市--納沙布岬 (Nemuro--Cape Nosappu)",
+      "lat": 43.3852,
+      "lon": 145.8166,
+      "weight": 1,
+      "loc_id": "L1560010",
+      "region": "JP-01",
+      "checklists": 975,
+      "species": 173
+    },
+    {
+      "name": "鶴居村--音羽橋 (Tsurui--Otowa Bridge)",
+      "lat": 43.1877,
+      "lon": 144.3342,
+      "weight": 1,
+      "loc_id": "L1113182",
+      "region": "JP-01",
+      "checklists": 705,
+      "species": 105
+    },
+    {
+      "name": "札幌市--前田森林公園 (Sapporo--Maeda Forest Park)",
+      "lat": 43.1456,
+      "lon": 141.2568,
+      "weight": 1,
+      "loc_id": "L31801696",
+      "region": "JP-01",
+      "checklists": 575,
+      "species": 100
+    },
+    {
+      "name": "根室市--根室市春国岱原生野鳥公園ネイチャーセンター (Nemuro--Shunkunitai Nature Center)",
+      "lat": 43.2699,
+      "lon": 145.4765,
+      "weight": 1,
+      "loc_id": "L1236845",
+      "region": "JP-01",
+      "checklists": 472,
+      "species": 139
+    },
+    {
+      "name": "別海町--野付半島-- ナラワラ (Betsukai--Notsuke Peninsula--Narawara)",
+      "lat": 43.609,
+      "lon": 145.2748,
+      "weight": 1,
+      "loc_id": "L2384992",
+      "region": "JP-01",
+      "checklists": 441,
+      "species": 172
+    },
+    {
+      "name": "美唄市--宮島沼水鳥・湿地センター (Bibai--Miyajimanuma Waterfowl and Wetland Center)",
+      "lat": 43.3291,
+      "lon": 141.7158,
+      "weight": 1,
+      "loc_id": "L2387330",
+      "region": "JP-01",
+      "checklists": 417,
+      "species": 139
+    },
+    {
+      "name": "浜中村--霧多布岬 (Hamanaka--Cape Kiritappu)",
+      "lat": 43.0786,
+      "lon": 145.1639,
+      "weight": 1,
+      "loc_id": "L1952959",
+      "region": "JP-01",
+      "checklists": 383,
+      "species": 152
+    },
+    {
+      "name": "網走市--濤沸湖--白鳥公園 (Abashiri--Lake Tofutsu--Swan Park)",
+      "lat": 43.9526,
+      "lon": 144.3593,
+      "weight": 1,
+      "loc_id": "L6855485",
+      "region": "JP-01",
+      "checklists": 369,
+      "species": 166
+    },
+    {
+      "name": "枝幸町--かもめ島 (Esashi (Hiyama)--Kamome-jima (island))",
+      "lat": 41.8677,
+      "lon": 140.1146,
+      "weight": 1,
+      "loc_id": "L7015112",
+      "region": "JP-01",
+      "checklists": 336,
+      "species": 159
+    },
+    {
+      "name": "標津町--標津港 (Shibetsu Town--Shibetsu Port)",
+      "lat": 43.6677,
+      "lon": 145.1325,
+      "weight": 1,
+      "loc_id": "L4457595",
+      "region": "JP-01",
+      "checklists": 320,
+      "species": 78
+    },
+    {
+      "name": "札幌市--中島公園 (Sapporo--Nakajima Park)",
+      "lat": 43.0461,
+      "lon": 141.3543,
+      "weight": 1,
+      "loc_id": "L4471751",
+      "region": "JP-01",
+      "checklists": 299,
+      "species": 78
+    },
+    {
+      "name": "帯広市--帯広畜産大学 (Obihiro--Obihiro University of Agriculture and Medicine)",
+      "lat": 42.8749,
+      "lon": 143.175,
+      "weight": 1,
+      "loc_id": "L15910414",
+      "region": "JP-01",
+      "checklists": 287,
+      "species": 87
+    },
+    {
+      "name": "羽幌町--天売島IBA (Haboro--Teuri Island IBA (island))",
+      "lat": 44.4256,
+      "lon": 141.3163,
+      "weight": 1,
+      "loc_id": "L1481697",
+      "region": "JP-01",
+      "checklists": 284,
+      "species": 216
+    },
+    {
+      "name": "釧路市--釧路市阿寒国際ツルセンター (Kushiro City--Kushiro Akan International Crane Center)",
+      "lat": 43.1434,
+      "lon": 144.1492,
+      "weight": 1,
+      "loc_id": "L3109078",
+      "region": "JP-01",
+      "checklists": 281,
+      "species": 92
+    }
+  ]
+}

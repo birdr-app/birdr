@@ -1,0 +1,22 @@
+{
+  "code": "maspet2",
+  "name": {
+    "en": "Matsudaira's Storm-Petrel",
+    "nl": "Iwostormvogeltje"
+  },
+  "latin": "Hydrobates matsudairae",
+  "look_for": [
+    {
+      "en": "Large, all-dark storm-petrel with long **wings**",
+      "nl": "Groot, geheel donker stormvogeltje met lange **vleugels**"
+    },
+    {
+      "en": "White flash at the base of the **primaries**",
+      "nl": "Witte vlek aan de basis van de **handpennen**"
+    },
+    {
+      "en": "Long, forked **tail**",
+      "nl": "Lange, gevorkte **staart**"
+    }
+  ]
+}

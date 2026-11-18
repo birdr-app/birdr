@@ -1,0 +1,1018 @@
+{
+  "country": "JP",
+  "intro": {
+    "en": "Japan runs from snowy Hokkaido to subtropical islands, but a first trip usually stays on Honshu: the tidal flats and parks of Tokyo, the cool forests of Karuizawa and the Japan Alps, Mount Fuji, and Kyoto, Osaka and Hiroshima. Winter brings ducks, gulls and thrushes to the bays and city parks, spring and autumn bring waders to the mudflats, and summer fills the mountain woods with flycatchers, cuckoos and thrushes. This trip covers 157 birds of Honshu, including 3 found nowhere else. More birds of Hokkaido, of Kyushu and Tsushima, of the Ryukyu Islands and of Izu and Ogasawara are in four region packs.",
+    "nl": "Japan loopt van het besneeuwde Hokkaido tot subtropische eilanden, maar een eerste reis blijft meestal op Honshu: de wadplaten en parken van Tokio, de koele bossen van Karuizawa en de Japanse Alpen, de berg Fuji, en Kyoto, Osaka en Hiroshima. In de winter komen eenden, meeuwen en lijsters naar de baaien en stadsparken, in voorjaar en najaar komen steltlopers naar de wadplaten, en in de zomer vullen vliegenvangers, koekoeken en lijsters de bergbossen. Deze reis omvat 157 vogels van Honshu, waaronder 3 die nergens anders leven. Meer vogels van Hokkaido, van Kyushu en Tsushima, van de Ryukyu-eilanden en van Izu en Ogasawara zitten in vier regiopakketten."
+  },
+  "groups": {
+    "waterfowl": {
+      "here": {
+        "en": "Twenty-three ducks, geese and swans. Eastern Spot-billed Duck and Mallard stay all year on ponds, rivers and park lakes, Mandarin Duck lives on wooded streams, and most of the others arrive in October and stay until March on bays, reservoirs, rice fields and river mouths.",
+        "nl": "Drieëntwintig eenden, ganzen en zwanen. De Chinese vlekbekeend en de wilde eend blijven het hele jaar op vijvers, rivieren en parkmeren, de mandarijneend leeft aan bosbeken, en de meeste andere komen in oktober en blijven tot maart op baaien, stuwmeren, rijstvelden en riviermondingen."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "here": {
+        "en": "Three ground birds. The Green Pheasant walks along field edges and river banks, the Copper Pheasant is a shy bird of hill forest, and the Chinese Bamboo-Partridge is a local introduction that lives in scrubby, bamboo-covered hills.",
+        "nl": "Drie grondvogels. De groene fazant loopt langs akkerranden en rivieroevers, de koperfazant is een schuwe vogel van heuvelbos, en de Chinese bamboepatrijs is een plaatselijke uitzetting die leeft in struikrijke heuvels met bamboe."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "Three pigeons. Rock Dove lives on squares and bridges, Rufous Turtle Dove on farmland and in parks, and the White-bellied Green-Pigeon in the tops of tall trees, where it is easy to miss until it calls.",
+        "nl": "Drie duiven. De rotsduif leeft op pleinen en bruggen, de oosterse tortel op akkers en in parken, en de Japanse papegaaiduif in de toppen van hoge bomen, waar je hem makkelijk mist tot hij roept."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "Three cuckoos, all summer visitors. They arrive in May, are heard far more than seen, and leave again by September.",
+        "nl": "Drie koekoeken, allemaal zomergasten. Ze komen in mei aan, je hoort ze veel vaker dan je ze ziet, en in september zijn ze weer weg."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "One swift, the Pacific Swift. It is a summer visitor that hunts over mountain ridges, coastal cliffs and towns, and it passes in loose flocks in spring and autumn.",
+        "nl": "Eén gierzwaluw, de Siberische gierzwaluw. Het is een zomergast die jaagt boven bergruggen, kustkliffen en steden, en in voorjaar en najaar in losse groepen doortrekt."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Four marsh birds. Eurasian Coot and Common Moorhen swim on ponds in plain view, while Brown-cheeked Rail and Ruddy-breasted Crake hide in reeds and wet ditches.",
+        "nl": "Vier moerasvogels. De meerkoet en het waterhoen zwemmen in het zicht op vijvers, terwijl de bruinwangral en het bruine porseleinhoen zich verstoppen in riet en natte sloten."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "Twenty-seven waders, the biggest group on the trip. The tidal flats of Tokyo Bay, at Tokyo Port Wild Bird Park, Yatsu-higata and Sanbanze, are the places to go. The best months are late April to May and August to October, when birds pass through, and a few stay the whole winter.",
+        "nl": "Zevenentwintig steltlopers, de grootste groep van de reis. De wadplaten van de baai van Tokio, bij het Tokyo Port Wild Bird Park, Yatsu-higata en Sanbanze, zijn de plekken om heen te gaan. De beste maanden zijn eind april tot mei en augustus tot oktober, als vogels doortrekken, en een paar blijven de hele winter."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "here": {
+        "en": "Four gulls. Black-tailed Gull stays all year in every harbour, and Black-headed Gull, Common Gull and Slaty-backed Gull come for the winter to the bay and the river mouths.",
+        "nl": "Vier meeuwen. De Japanse meeuw blijft het hele jaar in elke haven, en de kokmeeuw, de stormmeeuw en de Kamtsjatkameeuw komen voor de winter naar de baai en de riviermondingen."
+      }
+    },
+    "grebes": {
+      "here": {
+        "en": "Four grebes. Little Grebe breeds on ponds, and the other three arrive in autumn on the bay, reservoirs and big lakes.",
+        "nl": "Vier futen. De dodaars broedt op vijvers, en de andere drie komen in de herfst naar de baai, stuwmeren en grote meren."
+      }
+    },
+    "cormorants-and-anhingas": {
+      "here": {
+        "en": "Two cormorants. Great Cormorant is on rivers, ponds and in harbours, and Japanese Cormorant keeps to rocky coasts and breakwaters.",
+        "nl": "Twee aalscholvers. De aalscholver zit op rivieren, vijvers en in havens, en de Japanse aalscholver houdt zich aan rotskusten en golfbrekers."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Seven herons and egrets and one spoonbill. Grey Heron and the egrets stand in rice fields, rivers and tidal pools, and Black-crowned Night Heron sits hunched in park trees by day.",
+        "nl": "Zeven reigers en zilverreigers en één lepelaar. De blauwe reiger en de zilverreigers staan in rijstvelden, rivieren en getijdenpoelen, en de kwak zit overdag in elkaar gedoken in parkbomen."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "Seven birds of prey. Black Kite is the one you meet every day, over harbours, rivers and temples, and the others are birds of fields, coasts and forest edges, with harriers over the reeds in winter.",
+        "nl": "Zeven roofvogels. De zwarte wouw zie je elke dag, boven havens, rivieren en tempels, en de andere zijn vogels van akkers, kusten en bosranden, met kiekendieven boven het riet in de winter."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "One kingfisher, the Common Kingfisher. It lives all year along clear streams, rivers and park ponds, even in Tokyo.",
+        "nl": "Eén ijsvogel, de ijsvogel. Hij leeft het hele jaar langs heldere beken, rivieren en parkvijvers, zelfs in Tokio."
+      }
+    },
+    "woodpeckers": {
+      "here": {
+        "en": "Three woodpeckers. Japanese Pygmy Woodpecker is the common one, even in city parks, Great Spotted Woodpecker lives in bigger woods, and the green Japanese Woodpecker is found only in Japan.",
+        "nl": "Drie spechten. De kizukispecht is de gewone, zelfs in stadsparken, de grote bonte specht leeft in grotere bossen, en de Japanse groene specht leeft alleen in Japan."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "Three falcons. Peregrine Falcon hunts pigeons around cities and coasts, Common Kestrel hovers over open land, and Eurasian Hobby is a summer visitor.",
+        "nl": "Drie valken. De slechtvalk jaagt op duiven rond steden en kusten, de torenvalk bidt boven open land, en de boomvalk is een zomergast."
+      }
+    },
+    "cuckooshrikes": {
+      "here": {
+        "en": "One minivet, the Ashy Minivet. It mostly passes through in April and May and again in September and October, in small flocks high in the trees.",
+        "nl": "Eén menievogel, de grijze menievogel. Hij trekt vooral door in april en mei en weer in september en oktober, in kleine groepen hoog in de bomen."
+      }
+    },
+    "shrikes": {
+      "here": {
+        "en": "One shrike, the Bull-headed Shrike. It lives here all year and sits on bush tops and wires in farmland and river edges.",
+        "nl": "Eén klauwier, de buffelkopklauwier. Hij leeft hier het hele jaar en zit op struiktoppen en draden in akkerland en langs rivieren."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "Four members of the crow family. Large-billed Crow is the city crow and is on every street, Carrion Crow is more of a farmland bird, the Eurasian Jay lives in woods, and the Azure-winged Magpie is very scarce.",
+        "nl": "Vier leden van de kraaienfamilie. De dikbekkraai is de stadskraai en zit in elke straat, de zwarte kraai is meer een vogel van akkerland, de gaai leeft in bossen, en de Aziatische blauwe ekster is erg schaars."
+      }
+    },
+    "tits-chickadees-and-titmice": {
+      "here": {
+        "en": "Four tits. Asian Tit is in every park and garden, Varied Tit and Coal Tit prefer woods, and Willow Tit lives in woods in the hills.",
+        "nl": "Vier mezen. De grijze koolmees zit in elk park en elke tuin, de bonte mees en de zwarte mees geven de voorkeur aan bossen, en de matkop leeft in heuvelbossen."
+      }
+    },
+    "larks": {
+      "here": {
+        "en": "One lark, the Eurasian Skylark. It sings above fields, rice paddies and river banks, and flocks on bare fields in winter.",
+        "nl": "Eén leeuwerik, de veldleeuwerik. Hij zingt boven akkers, rijstvelden en rivieroevers, en in de winter zit hij in groepen op kale velden."
+      }
+    },
+    "cisticolas-and-allies": {
+      "here": {
+        "en": "One cisticola, the Zitting Cisticola. It lives in grassland, rice field edges and river banks, and flutters up with a ticking call.",
+        "nl": "Eén graszanger, de graszanger. Hij leeft in grasland, aan randen van rijstvelden en op rivieroevers, en fladdert op met een tikkende roep."
+      }
+    },
+    "reed-warblers-and-allies": {
+      "here": {
+        "en": "One reed warbler, the Oriental Reed Warbler. It arrives in May and sings loudly from reedbeds along rivers and lakes.",
+        "nl": "Eén karekiet, de Chinese karekiet. Hij komt in mei aan en zingt luid uit rietvelden langs rivieren en meren."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "Four swallows and martins, all summer visitors. Barn Swallow nests on houses and shop fronts, and Asian House Martin and the red-rumped swallow under bridges and eaves.",
+        "nl": "Vier zwaluwen, allemaal zomergasten. De boerenzwaluw nestelt op huizen en winkelpuien, en de Aziatische huiszwaluw en de roodstuitzwaluw onder bruggen en dakranden."
+      }
+    },
+    "bulbuls": {
+      "here": {
+        "en": "One bulbul, the Brown-eared Bulbul. It is loud and everywhere, in parks, gardens and woods, all year.",
+        "nl": "Eén buulbuul, de bruinoorbuulbuul. Hij is luidruchtig en overal, het hele jaar in parken, tuinen en bossen."
+      }
+    },
+    "leaf-warblers": {
+      "here": {
+        "en": "Two leaf warblers. Eastern Crowned Warbler and Japanese Leaf Warbler breed in the forests of the hills and mountains and pass through city parks in spring.",
+        "nl": "Twee boszangers. De kroonboszanger en de Japanse boszanger broeden in de bossen van heuvels en bergen en trekken in het voorjaar door stadsparken."
+      }
+    },
+    "bush-warblers-and-allies": {
+      "here": {
+        "en": "Two bush warblers. Japanese Bush Warbler is everywhere in scrub and woods and sings from February, and the Asian Stubtail is a summer bird of cool mountain forest.",
+        "nl": "Twee struikzangers. De Japanse struikzanger zit overal in struweel en bossen en zingt vanaf februari, en de kortstaartstruikzanger is een zomervogel van koel bergbos."
+      }
+    },
+    "long-tailed-tits-and-bushtit": {
+      "here": {
+        "en": "One long-tailed tit, the Long-tailed Tit. It moves through woods in small flocks, often with other tits.",
+        "nl": "Eén staartmees, de staartmees. Hij trekt in kleine groepen door bossen, vaak samen met andere mezen."
+      }
+    },
+    "white-eyes-yuhinas-and-allies": {
+      "here": {
+        "en": "One white-eye, the Warbling White-eye. It lives in every garden and park and feeds on nectar from camellias and plum blossom.",
+        "nl": "Eén brilvogel, de zangbrilvogel. Hij leeft in elke tuin en elk park en eet nectar uit camelia's en pruimenbloesem."
+      }
+    },
+    "laughingthrushes-and-allies": {
+      "here": {
+        "en": "Two babblers, both introduced. Red-billed Leiothrix is common in thick scrub on hillsides, and the Hwamei is scarcer.",
+        "nl": "Twee babbelaars, allebei uitgezet. De Japanse nachtegaal is algemeen in dicht struweel op berghellingen, en de witbrauwlijstergaai is schaarser."
+      }
+    },
+    "kinglets": {
+      "here": {
+        "en": "One kinglet, the Goldcrest. It lives in conifers in the mountains in summer and in parks and woods lower down in winter.",
+        "nl": "Eén goudhaan, de goudhaan. Hij leeft in de zomer in naaldbomen in de bergen en in de winter in parken en bossen lager."
+      }
+    },
+    "nuthatches": {
+      "here": {
+        "en": "One nuthatch, the Eurasian Nuthatch. It runs up and down tree trunks in woods with big old trees, and joins tit flocks.",
+        "nl": "Eén klever, de boomklever. Hij rent langs boomstammen in bossen met grote oude bomen en voegt zich bij vluchten mezen."
+      }
+    },
+    "dippers": {
+      "here": {
+        "en": "One dipper, the Brown Dipper. It lives on fast, clear mountain streams all year.",
+        "nl": "Eén waterspreeuw, de zwarte waterspreeuw. Hij leeft het hele jaar aan snelle, heldere bergbeken."
+      }
+    },
+    "starlings-and-mynas": {
+      "here": {
+        "en": "Two starlings. White-cheeked Starling is common in towns and fields, and Chestnut-cheeked Starling is mostly a passage bird.",
+        "nl": "Twee spreeuwen. De grijze spreeuw is algemeen in steden en velden, en de roodwangspreeuw is vooral een doortrekker."
+      }
+    },
+    "thrushes": {
+      "here": {
+        "en": "Six thrushes. In winter Dusky, Naumann's, Pale and Brown-headed Thrush feed on lawns and in leaf litter in parks and fields, and in summer Japanese Thrush and White's Thrush sing in mountain forest.",
+        "nl": "Zes lijsters. In de winter eten de bruine lijster, Naumanns lijster, de bleke lijster en de Japanse lijster op gazons en tussen het bladstrooisel in parken en velden, en in de zomer zingen de zwartkaplijster en de goudlijster in bergbos."
+      }
+    },
+    "old-world-flycatchers": {
+      "here": {
+        "en": "Nine flycatchers, robins and chats. Narcissus Flycatcher, Blue-and-white Flycatcher and the robins breed in mountain forest such as Karuizawa, and Red-flanked Bluetail, Daurian Redstart and Blue Rock Thrush are easier to find in winter on lower ground.",
+        "nl": "Negen vliegenvangers, roodborsten en tapuiten. De geelbrauwvliegenvanger, de blauw-witte vliegenvanger en de roodborsten broeden in bergbos zoals Karuizawa, en de blauwstaart, de spiegelroodstaart en de blauwe rotslijster zijn in de winter makkelijker te vinden op lager gelegen terrein."
+      }
+    },
+    "waxwings": {
+      "here": {
+        "en": "One waxwing, the Japanese Waxwing. It is a winter visitor in flocks that come and go from year to year.",
+        "nl": "Eén pestvogel, de Japanse pestvogel. Hij is een wintergast in groepen die van jaar tot jaar komen en gaan."
+      }
+    },
+    "accentors": {
+      "here": {
+        "en": "One accentor, the Japanese Accentor. It breeds in mountain scrub high up and spends winter in woods and parks lower down.",
+        "nl": "Eén heggenmus, de Japanse heggenmus. Hij broedt hoog in bergstruweel en brengt de winter lager door in bossen en parken."
+      }
+    },
+    "old-world-sparrows": {
+      "here": {
+        "en": "One sparrow, the Eurasian Tree Sparrow. Japan has no House Sparrow, so every sparrow in a town or village is this one.",
+        "nl": "Eén mus, de ringmus. Japan heeft geen huismus, dus elke mus in een stad of dorp is deze."
+      }
+    },
+    "wagtails-and-pipits": {
+      "here": {
+        "en": "Four wagtails and pipits. White Wagtail, Grey Wagtail and Japanese Wagtail walk on river banks and roofs, and Olive-backed Pipit feeds on the ground under trees.",
+        "nl": "Vier kwikstaarten en piepers. De witte kwikstaart, de grote gele kwikstaart en de Japanse kwikstaart lopen op rivieroevers en daken, en de Siberische boompieper zoekt voedsel op de grond onder bomen."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "here": {
+        "en": "Seven finches. Oriental Greenfinch and Eurasian Siskin are common, Brambling and Hawfinch arrive in winter, and the grosbeaks have heavy bills.",
+        "nl": "Zeven vinken. De Chinese groenling en de sijs zijn algemeen, de keep en de appelvink komen in de winter, en de dikbekken hebben zware snavels."
+      }
+    },
+    "old-world-buntings": {
+      "here": {
+        "en": "Two buntings. Meadow Bunting sings from bush tops in fields and scrub all year, and Chestnut-eared Bunting lives in grassy river banks.",
+        "nl": "Twee gorzen. De weidegors zingt het hele jaar vanaf struiktoppen in velden en struweel, en de grijskopgors leeft op begroeide rivieroevers."
+      }
+    }
+  },
+  "units": {
+    "waterfowl-1": {
+      "title": {
+        "en": "Geese, swans and a shelduck",
+        "nl": "Ganzen, zwanen en een bergeend"
+      },
+      "intro": {
+        "en": "Big, loud winter birds. They arrive in autumn and feed on lakes, rivers and harvested rice fields, mostly in northern Honshu. Look at size, bill colour and head pattern to tell them apart.",
+        "nl": "Grote, luidruchtige wintervogels. Ze komen in de herfst en eten op meren, rivieren en afgeoogste rijstvelden, vooral in het noorden van Honshu. Let op grootte, snavelkleur en kopaftekening om ze uit elkaar te houden."
+      }
+    },
+    "waterfowl-2": {
+      "title": {
+        "en": "Dabbling ducks",
+        "nl": "Eenden van het oppervlak"
+      },
+      "intro": {
+        "en": "Ducks that feed at the surface and tip up in shallow water. Eastern Spot-billed Duck and Mallard stay all year, the others come for winter. The males are easy by head and flank, and for the females check the bill and the wing patch.",
+        "nl": "Eenden die van het oppervlak eten en kopstaan in ondiep water. De Chinese vlekbekeend en de wilde eend blijven het hele jaar, de rest komt voor de winter. De mannetjes herken je aan kop en flank, bij de vrouwtjes let je op snavel en vleugelspiegel."
+      }
+    },
+    "waterfowl-3": {
+      "title": {
+        "en": "Mandarin, teal and Falcated Duck",
+        "nl": "Mandarijneend, taling en bronskopeend"
+      },
+      "intro": {
+        "en": "Smaller, more colourful ducks. Mandarin Duck sits in shaded water under trees, the teal like shallow ponds and rice fields, and Falcated Duck and Baikal Teal are scarce winter birds among bigger flocks.",
+        "nl": "Kleinere, kleurrijkere eenden. De mandarijneend zit in beschaduwd water onder bomen, de talingen houden van ondiepe vijvers en rijstvelden, en de bronskopeend en de Siberische taling zijn schaarse wintervogels tussen grotere groepen."
+      }
+    },
+    "waterfowl-4": {
+      "title": {
+        "en": "Diving ducks and mergansers",
+        "nl": "Duikeenden en zaagbekken"
+      },
+      "intro": {
+        "en": "Ducks that dive for their food, on bays, reservoirs and deeper lakes in winter. Pochard, scaup and Tufted Duck look alike from far, so check head colour and flanks. The mergansers have thin, hooked bills for catching fish.",
+        "nl": "Eenden die duiken om te eten, in de winter op baaien, stuwmeren en diepere meren. Tafeleend, topper en kuifeend lijken van veraf op elkaar, dus kijk naar kopkleur en flanken. De zaagbekken hebben een dunne snavel met haakje om vis te vangen."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "title": {
+        "en": "Pheasants, partridge and pigeons",
+        "nl": "Fazanten, patrijs en duiven"
+      },
+      "intro": {
+        "en": "Two pheasants found only in Japan, a partridge from China and three pigeons. The pheasants are ground birds of field edges and forest, so scan the open ground early in the day. The pigeons sit on wires, in parks and in tall trees.",
+        "nl": "Twee fazanten die alleen in Japan leven, een patrijs uit China en drie duiven. De fazanten zijn grondvogels van akkerranden en bos, dus kijk vroeg op de dag over open grond. De duiven zitten op draden, in parken en in hoge bomen."
+      }
+    },
+    "cuckoos": {
+      "title": {
+        "en": "Cuckoos and the Pacific Swift",
+        "nl": "Koekoeken en de Siberische gierzwaluw"
+      },
+      "intro": {
+        "en": "Summer visitors that arrive in spring and leave in autumn. The three cuckoos are far easier to hear than to see, so learn the calls and scan the high branches. The Pacific Swift is a fast flyer with a white rump over ridges and coasts.",
+        "nl": "Zomergasten die in het voorjaar komen en in de herfst vertrekken. De drie koekoeken hoor je veel makkelijker dan je ze ziet, dus leer de roepen en kijk naar de hoge takken. De Siberische gierzwaluw is een snelle vlieger met een witte stuit boven bergruggen en kusten."
+      }
+    },
+    "martins-and-swallows": {
+      "title": {
+        "en": "Swallows and martins",
+        "nl": "Zwaluwen"
+      },
+      "intro": {
+        "en": "Birds of the air over rivers, rice fields and towns, from spring to autumn. Check the rump and the underside: a white rump marks Asian House Martin, a rusty rump the red-rumped swallow, and a brown breast band the Sand Martin.",
+        "nl": "Vogels van de lucht boven rivieren, rijstvelden en steden, van voorjaar tot herfst. Let op stuit en onderzijde: een witte stuit hoort bij de Aziatische huiszwaluw, een roestkleurige stuit bij de roodstuitzwaluw, en een bruine borstband bij de oeverzwaluw."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "title": {
+        "en": "Rails, moorhen and coot",
+        "nl": "Rallen, waterhoen en meerkoet"
+      },
+      "intro": {
+        "en": "Birds of ponds and marshes. Coot and moorhen swim in the open and are easy. The rail and the crake hide in reeds and wet ditches and show only for a moment, so wait quietly at the edge.",
+        "nl": "Vogels van vijvers en moerassen. Meerkoet en waterhoen zwemmen in het open en zijn makkelijk. De ral en het porseleinhoen verstoppen zich in riet en natte sloten en laten zich maar even zien, dus wacht rustig aan de rand."
+      }
+    },
+    "shorebirds-1": {
+      "title": {
+        "en": "Small plovers and the stilt",
+        "nl": "Kleine plevieren en de steltkluut"
+      },
+      "intro": {
+        "en": "Small waders of mudflats, sandy shores, gravel river banks and fields. Plovers run, stop and run again. Breast bands, collars and leg colour sort the species out, and the stilt is easy by its very long red legs.",
+        "nl": "Kleine steltlopers van wadplaten, zandstranden, grindbanken langs rivieren en velden. Plevieren rennen, blijven staan en rennen weer. Borstbanden, kragen en pootkleur sorteren de soorten, en de steltkluut herken je makkelijk aan zijn erg lange rode poten."
+      }
+    },
+    "shorebirds-2": {
+      "title": {
+        "en": "Plovers, lapwings and snipe",
+        "nl": "Plevieren, kieviten en watersnip"
+      },
+      "intro": {
+        "en": "Bigger plovers of fields and tidal flats, two lapwings and the snipe. In spring Grey Plover and Pacific Golden Plover change into bold black plumage with white or gold. Look on wet fields and paddies as well as on the shore.",
+        "nl": "Grotere plevieren van velden en wadplaten, twee kieviten en de watersnip. In het voorjaar krijgen de zilverplevier en de Aziatische goudplevier een opvallend zwart kleed met wit of goud. Kijk op natte velden en rijstvelden en ook aan de kust."
+      }
+    },
+    "shorebirds-3": {
+      "title": {
+        "en": "Curlews, godwits and Great Knot",
+        "nl": "Wulpen, grutto's en grote kanoet"
+      },
+      "intro": {
+        "en": "The big waders of the tidal flats. Compare bill length and shape, and look at the rump and the underwing when they fly. Far Eastern Curlew is the giant, godwits have long straight bills, and Great Knot gathers in tight flocks.",
+        "nl": "De grote steltlopers van de wadplaten. Vergelijk lengte en vorm van de snavel en kijk naar stuit en onderkant van de vleugel als ze wegvliegen. De Siberische wulp is de reus, grutto's hebben een lange rechte snavel, en de grote kanoet verzamelt zich in dichte groepen."
+      }
+    },
+    "shorebirds-4": {
+      "title": {
+        "en": "Shanks, sandpipers and tattler",
+        "nl": "Ruiters, loopers en grijze ruiter"
+      },
+      "intro": {
+        "en": "Medium-sized waders of creeks, shores and wet fields. Leg colour, a white rump and a bobbing tail are the main clues. The Terek Sandpiper stands out by its upturned bill and short orange legs.",
+        "nl": "Middelgrote steltlopers van kreken, kusten en natte velden. Pootkleur, een witte stuit en een wippende staart zijn de belangrijkste aanwijzingen. De terekruiter valt op door zijn opwaarts gebogen snavel en korte oranje poten."
+      }
+    },
+    "shorebirds-5": {
+      "title": {
+        "en": "Stints, Dunlin and turnstone",
+        "nl": "Strandlopers en steenloper"
+      },
+      "intro": {
+        "en": "Small sandpipers that feed in flocks at the water's edge. Most are tiny, so compare size, bill length and back pattern, and watch how they feed. Red-necked Stint and the others pass through in spring and autumn, and Dunlin stays all winter.",
+        "nl": "Kleine strandlopers die in groepen aan de waterrand eten. De meeste zijn klein, dus vergelijk grootte, snavellengte en rugtekening en kijk hoe ze eten. De roodkeelstrandloper en de andere trekken in voorjaar en najaar door, en de bonte strandloper blijft de hele winter."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {
+        "en": "Gulls of the bays",
+        "nl": "Meeuwen van de baaien"
+      },
+      "intro": {
+        "en": "Four gulls of harbours, river mouths and tidal flats. Black-tailed Gull has a black band on the tail and a yellow bill with a red tip. Slaty-backed Gull is big, with a dark grey back and pink legs. In winter Black-headed Gull shows a dark spot behind the eye.",
+        "nl": "Vier meeuwen van havens, riviermondingen en wadplaten. De Japanse meeuw heeft een zwarte band aan de staart en een gele snavel met rode punt. De Kamtsjatkameeuw is groot, met een donkergrijze rug en roze poten. In de winter heeft de kokmeeuw een donkere vlek achter het oog."
+      }
+    },
+    "grebes": {
+      "title": {
+        "en": "Grebes and cormorants",
+        "nl": "Futen en aalscholvers"
+      },
+      "intro": {
+        "en": "Diving waterbirds of bays, ponds and rivers. The grebes are small to medium, with pointed bills, and mostly in grey and white winter dress. The cormorants are big and black and stand with open wings on posts and rocks to dry.",
+        "nl": "Duikende watervogels van baaien, vijvers en rivieren. De futen zijn klein tot middelgroot, met een spitse snavel, en meestal in grijs en wit winterkleed. De aalscholvers zijn groot en zwart en staan met open vleugels op palen en rotsen te drogen."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "title": {
+        "en": "Egrets and herons",
+        "nl": "Zilverreigers en reigers"
+      },
+      "intro": {
+        "en": "Tall wading birds of rice fields, rivers and tidal pools. The white egrets look alike, so check the bill colour, the colour of legs and feet, and how far the gape runs behind the eye. The big Grey Heron and the hunched night heron are easy.",
+        "nl": "Hoge waadvogels van rijstvelden, rivieren en getijdenpoelen. De witte reigers lijken op elkaar, dus kijk naar snavelkleur, de kleur van poten en voeten, en hoe ver de mondhoek achter het oog doorloopt. De grote blauwe reiger en de ineengedoken kwak zijn makkelijk."
+      }
+    },
+    "vultures-hawks-and-allies-1": {
+      "title": {
+        "en": "Kite, buzzard, Osprey and harriers",
+        "nl": "Wouw, buizerd, visarend en kiekendieven"
+      },
+      "intro": {
+        "en": "Large birds of prey of coasts, rivers and open land. Black Kite has a notched tail and is everywhere. Eastern Buzzard soars on broad wings, Osprey is white below and dives for fish, and the harriers glide low over reedbeds in winter.",
+        "nl": "Grote roofvogels van kusten, rivieren en open land. De zwarte wouw heeft een ingekeepte staart en is overal. De Japanse buizerd zweeft op brede vleugels, de visarend is wit van onderen en duikt op vis, en de kiekendieven glijden in de winter laag over rietvelden."
+      }
+    },
+    "vultures-hawks-and-allies-2": {
+      "title": {
+        "en": "Sparrowhawks and falcons",
+        "nl": "Sperwers en valken"
+      },
+      "intro": {
+        "en": "Fast hunters. Sparrowhawks have short rounded wings and a long tail and dash through woods. Falcons have pointed wings, and the Peregrine stoops on pigeons over cities and the coast.",
+        "nl": "Snelle jagers. Sperwers hebben korte ronde vleugels en een lange staart en schieten door bossen. Valken hebben puntige vleugels, en de slechtvalk stoot op duiven boven steden en kust."
+      }
+    },
+    "woodpeckers": {
+      "title": {
+        "en": "Woodpeckers and the nuthatch",
+        "nl": "Spechten en de boomklever"
+      },
+      "intro": {
+        "en": "Birds that climb tree trunks. Woodpeckers hitch upwards, and the nuthatch runs down head first. Japanese Pygmy Woodpecker is tiny, Great Spotted Woodpecker is black and white with red under the tail, and the Japanese Woodpecker is green.",
+        "nl": "Vogels die langs boomstammen klimmen. Spechten klimmen omhoog, en de boomklever rent met de kop naar beneden. De kizukispecht is piepklein, de grote bonte specht is zwart-wit met rood onder de staart, en de Japanse groene specht is groen."
+      }
+    },
+    "streamside": {
+      "title": {
+        "en": "Kingfisher, dipper and wagtails",
+        "nl": "IJsvogel, waterspreeuw en kwikstaarten"
+      },
+      "intro": {
+        "en": "Birds of streams, rivers and park ponds. The Common Kingfisher flies past low like a blue spark, the Brown Dipper bobs on boulders and dives, and the wagtails pump their tails on gravel and shore. Walk a river bank slowly.",
+        "nl": "Vogels van beken, rivieren en parkvijvers. De ijsvogel vliegt laag voorbij als een blauwe vonk, de zwarte waterspreeuw wipt op keien en duikt, en de kwikstaarten wippen met hun staart op grind en oever. Loop langzaam langs een rivieroever."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "title": {
+        "en": "Crows, jay and magpie",
+        "nl": "Kraaien, gaai en ekster"
+      },
+      "intro": {
+        "en": "Two black crows live side by side. Large-billed Crow has a steep forehead and a heavy bill. Carrion Crow is slimmer, with a flatter head. The jay and the magpie are colourful birds of woods.",
+        "nl": "Twee zwarte kraaien leven naast elkaar. De dikbekkraai heeft een steil voorhoofd en een zware snavel. De zwarte kraai is slanker, met een platter hoofd. De gaai en de ekster zijn kleurrijke vogels van bossen."
+      }
+    },
+    "tits-chickadees-and-titmice": {
+      "title": {
+        "en": "Forest flocks: tits, goldcrest, minivet",
+        "nl": "Bosvluchten: mezen, goudhaan, menievogel"
+      },
+      "intro": {
+        "en": "Small birds that move through woods in mixed flocks. Find a flock and pick through it for the tits, the tiny Goldcrest and the Long-tailed Tit. In spring and autumn the Ashy Minivet joins them high in the trees.",
+        "nl": "Kleine vogels die in gemengde vluchten door bossen trekken. Zoek een vlucht en loop hem door op mezen, de piepkleine goudhaan en de staartmees. In voorjaar en najaar voegt de grijze menievogel zich hoog in de bomen bij hen."
+      }
+    },
+    "bush-warblers-and-allies": {
+      "title": {
+        "en": "Scrub skulkers: warblers and babblers",
+        "nl": "Struikskippers: zangers en babbelaars"
+      },
+      "intro": {
+        "en": "Birds of dense undergrowth, easier to hear than to see. Japanese Bush Warbler sings its famous song from scrub, and the Asian Stubtail is a tiny bird with hardly any tail. The leiothrix and the Hwamei are introduced birds of hill scrub.",
+        "nl": "Vogels van dichte ondergroei, makkelijker te horen dan te zien. De Japanse struikzanger zingt zijn beroemde lied vanuit struweel, en de kortstaartstruikzanger is een piepklein vogeltje met bijna geen staart. De Japanse nachtegaal en de witbrauwlijstergaai zijn uitgezette vogels van heuvelstruweel."
+      }
+    },
+    "leaf-warblers": {
+      "title": {
+        "en": "Leaf and reed warblers and a cisticola",
+        "nl": "Boszangers, karekiet en graszanger"
+      },
+      "intro": {
+        "en": "Summer singers. The two leaf warblers sing from the tops of broadleaf trees in forest, the Oriental Reed Warbler shouts from reedbeds, and the Zitting Cisticola flutters over grassland. All are easier to tell by song.",
+        "nl": "Zomerzangers. De twee boszangers zingen vanuit de toppen van loofbomen in het bos, de Chinese karekiet schreeuwt uit rietvelden, en de graszanger fladdert boven grasland. Allemaal zijn ze makkelijker aan hun zang te herkennen."
+      }
+    },
+    "fruit-eaters": {
+      "title": {
+        "en": "Bulbul, white-eye, starlings, waxwing",
+        "nl": "Buulbuul, brilvogel, spreeuw, pestvogel"
+      },
+      "intro": {
+        "en": "Birds that gather in fruiting and flowering trees. Brown-eared Bulbul and Warbling White-eye visit gardens all year, the starlings come in flocks to fields, and the Japanese Waxwing is a winter visitor to berry trees.",
+        "nl": "Vogels die zich verzamelen in bomen met vruchten en bloesem. De bruinoorbuulbuul en de zangbrilvogel bezoeken het hele jaar tuinen, de spreeuwen komen in groepen naar velden, en de Japanse pestvogel is een wintergast in bessenbomen."
+      }
+    },
+    "thrushes": {
+      "title": {
+        "en": "Thrushes and the Blue Rock Thrush",
+        "nl": "Lijsters en de blauwe rotslijster"
+      },
+      "intro": {
+        "en": "Winter thrushes feed on lawns and in leaf litter in parks and fields: Pale, Dusky, Naumann's and Brown-headed. Japanese Thrush and White's Thrush are birds of summer forest, and the Blue Rock Thrush sits on rocks along the coast.",
+        "nl": "Winterlijsters eten op gazons en tussen het bladstrooisel in parken en velden: de bleke lijster, de bruine lijster, Naumanns lijster en de Japanse lijster. De zwartkaplijster en de goudlijster zijn vogels van zomerbos, en de blauwe rotslijster zit op rotsen langs de kust."
+      }
+    },
+    "old-world-flycatchers-1": {
+      "title": {
+        "en": "Robins, redstart and accentor",
+        "nl": "Roodborsten, roodstaart en heggenmus"
+      },
+      "intro": {
+        "en": "Small birds of the forest floor and undergrowth. Japanese Robin and Siberian Blue Robin breed in cool mountain forest and are shy. Red-flanked Bluetail and Daurian Redstart come down to parks and fields in winter, where they are much easier.",
+        "nl": "Kleine vogels van de bosbodem en de ondergroei. De Japanse roodborst en de blauwe nachtegaal broeden in koel bergbos en zijn schuw. De blauwstaart en de spiegelroodstaart komen in de winter naar parken en velden, waar ze veel makkelijker te zien zijn."
+      }
+    },
+    "old-world-flycatchers-2": {
+      "title": {
+        "en": "Flycatchers of the summer woods",
+        "nl": "Vliegenvangers van de zomerbossen"
+      },
+      "intro": {
+        "en": "Small birds that watch from a perch and dart out after insects. Narcissus and Blue-and-white Flycatcher breed in mountain forest such as Karuizawa. Asian Brown and Grey-streaked Flycatcher pass through parks in spring and autumn.",
+        "nl": "Kleine vogels die vanaf een zitplaats uitkijken en uitschieten naar insecten. De geelbrauwvliegenvanger en de blauw-witte vliegenvanger broeden in bergbos zoals Karuizawa. De bruine en de gestreepte vliegenvanger trekken in voorjaar en najaar door parken."
+      }
+    },
+    "fields-and-hedges": {
+      "title": {
+        "en": "Birds of fields and hedges",
+        "nl": "Vogels van akkers en heggen"
+      },
+      "intro": {
+        "en": "Open-country birds. The Eurasian Tree Sparrow is the sparrow of towns and farms, the Bull-headed Shrike watches from a bush, the buntings sing from bush tops, and the skylark sings high above fields and river banks. The Olive-backed Pipit feeds on the ground under trees.",
+        "nl": "Vogels van open land. De ringmus is de mus van steden en boerderijen, de buffelkopklauwier kijkt vanaf een struik uit, de gorzen zingen vanaf struiktoppen, en de veldleeuwerik zingt hoog boven velden en rivieroevers. De Siberische boompieper zoekt voedsel op de grond onder bomen."
+      }
+    },
+    "finches-euphonias-and-allies": {
+      "title": {
+        "en": "Finches and grosbeaks",
+        "nl": "Vinken en dikbekken"
+      },
+      "intro": {
+        "en": "Seed-eaters in flocks. Oriental Greenfinch and Eurasian Siskin are common, Brambling and Hawfinch come in winter, and the grosbeaks have thick yellow bills. The Long-tailed Rosefinch is a winter bird of weedy thickets.",
+        "nl": "Zaadeters in groepen. De Chinese groenling en de sijs zijn algemeen, de keep en de appelvink komen in de winter, en de dikbekken hebben een dikke gele snavel. De langstaartroodmus is een wintervogel van onkruidrijke struwelen."
+      }
+    }
+  },
+  "species": {
+    "tunswa": {
+      "here": {
+        "en": "Smaller than the Whooper Swan, with less yellow on the bill.",
+        "nl": "Kleiner dan de wilde zwaan, met minder geel op de snavel."
+      }
+    },
+    "whoswa": {
+      "here": {
+        "en": "Bigger than Bewick's Swan, with a long yellow wedge on the bill.",
+        "nl": "Groter dan de kleine zwaan, met een lange gele wig op de snavel."
+      }
+    },
+    "manduc": {
+      "here": {
+        "en": "Lives on wooded streams in the hills, and in winter also on park ponds under big trees.",
+        "nl": "Leeft aan bosbeken in de heuvels, en in de winter ook op parkvijvers onder grote bomen."
+      }
+    },
+    "spbduc": {
+      "here": {
+        "en": "The duck of city ponds and rivers all year, with a black bill that has a yellow tip.",
+        "nl": "De eend van stadsvijvers en rivieren het hele jaar, met een zwarte snavel met gele punt."
+      }
+    },
+    "baitea": {
+      "here": {
+        "en": "A scarce winter bird, so look through the flocks of other teal on freshwater ponds.",
+        "nl": "Een schaarse wintervogel, dus zoek tussen de groepen andere talingen op zoetwatervijvers."
+      }
+    },
+    "falduc": {
+      "here": {
+        "en": "A scarce winter duck that often feeds with Eurasian Wigeon and Gadwall.",
+        "nl": "Een schaarse winterse eend die vaak samen met smienten en krakeenden eet."
+      }
+    },
+    "rinphe2": {
+      "here": {
+        "en": "The national bird of Japan. Males walk along rice field edges and grassy river banks and call loudly, followed by a whirr of wings.",
+        "nl": "De nationale vogel van Japan. Mannetjes lopen langs randen van rijstvelden en grazige rivieroevers en roepen luid, gevolgd door vleugelgeratel."
+      }
+    },
+    "copphe1": {
+      "here": {
+        "en": "Found only in Japan, in hill and mountain forest with thick undergrowth. The very long barred tail shows on forest tracks and clearings early and late in the day.",
+        "nl": "Leeft alleen in Japan, in heuvel- en bergbos met dichte ondergroei. De zeer lange gebandeerde staart zie je op bospaden en open plekken vroeg en laat op de dag."
+      }
+    },
+    "chbpar3": {
+      "here": {
+        "en": "An introduced bird that lives in only a few hill areas, so check recent reports.",
+        "nl": "Een uitgezette vogel die maar in een paar heuvelgebieden leeft, dus kijk naar recente meldingen."
+      }
+    },
+    "whbpig1": {
+      "here": {
+        "en": "In summer flocks come to drink seawater at Terugasaki in Oiso, Kanagawa. Elsewhere listen for its eerie, drawn-out whine from tall trees.",
+        "nl": "In de zomer komen groepen zeewater drinken bij Terugasaki in Oiso, Kanagawa. Elders luister je naar zijn spookachtige, langgerekte gejammer uit hoge bomen."
+      }
+    },
+    "lescuc1": {
+      "here": {
+        "en": "This is the hototogisu of Japanese poetry. It arrives in May and its loud call carries from mountains to city parks.",
+        "nl": "Dit is de hototogisu uit de Japanse poëzie. Hij komt in mei aan en zijn luide roep draagt van de bergen tot stadsparken."
+      }
+    },
+    "comcuc": {
+      "here": {
+        "en": "A summer visitor to cooler highland woods, such as around Karuizawa.",
+        "nl": "Een zomergast van koelere hooglandbossen, zoals rond Karuizawa."
+      }
+    },
+    "oricuc2": {
+      "here": {
+        "en": "Its hollow, drumming call is the sound of the Alps and the highland woods in early summer.",
+        "nl": "Zijn holle, trommelende roep is het geluid van de Alpen en de hooglandbossen in de vroege zomer."
+      }
+    },
+    "bncrai1": {
+      "here": {
+        "en": "A very shy bird of reedbeds and coastal marsh. A few spend winter in coastal marshes on Honshu.",
+        "nl": "Een zeer schuwe vogel van rietvelden en kustmoeras. Een paar brengen de winter door in kustmoerassen op Honshu."
+      }
+    },
+    "lobplo1": {
+      "here": {
+        "en": "Lives on gravel banks of rivers on Honshu and nests there.",
+        "nl": "Leeft op grindbanken van rivieren op Honshu en broedt daar."
+      }
+    },
+    "gyhlap1": {
+      "here": {
+        "en": "Breeds in rice fields and on river banks in spring and summer and leaves in autumn.",
+        "nl": "Broedt in rijstvelden en op rivieroevers in lente en zomer en vertrekt in de herfst."
+      }
+    },
+    "faecur": {
+      "here": {
+        "en": "Larger than Eurasian Curlew, with an even longer bill and no white on the rump or under the wing.",
+        "nl": "Groter dan de wulp, met een nog langere snavel en geen wit op stuit of onder de vleugel."
+      }
+    },
+    "grekno": {
+      "here": {
+        "en": "Gathers in big flocks on the Tokyo Bay flats on spring and autumn passage.",
+        "nl": "Verzamelt zich in grote groepen op de wadplaten van de baai van Tokio in voorjaar en najaar."
+      }
+    },
+    "bkhgul": {
+      "here": {
+        "en": "The Yurikamome, the official bird of Tokyo. Look along the Sumida River and the bay front from October to April.",
+        "nl": "De Yurikamome, de officiële vogel van Tokio. Kijk van oktober tot april langs de Sumida en de baaikust."
+      }
+    },
+    "bktgul": {
+      "here": {
+        "en": "Stays all year in ports like Yokohama and nests on islands and sea cliffs.",
+        "nl": "Blijft het hele jaar in havens zoals Yokohama en broedt op eilanden en zeekliffen."
+      }
+    },
+    "slbgul": {
+      "here": {
+        "en": "A winter gull, big, with pink legs and a slate-grey back.",
+        "nl": "Een wintermeeuw, groot, met roze poten en een leigrijze rug."
+      }
+    },
+    "japcor1": {
+      "here": {
+        "en": "Keeps to rocky coasts and breakwaters. The cormorants of the traditional ukai fishing on the Nagara River at Gifu are of this species.",
+        "nl": "Houdt zich aan rotskusten en golfbrekers. De aalscholvers van het traditionele ukai-vissen op de Nagara bij Gifu zijn van deze soort."
+      }
+    },
+    "bcnher": {
+      "here": {
+        "en": "Sits hunched in park trees and by moats by day and hunts at dusk.",
+        "nl": "Zit overdag ineengedoken in parkbomen en bij grachten en jaagt in de schemering."
+      }
+    },
+    "categr2": {
+      "here": {
+        "en": "A summer visitor to rice fields, often near cattle or tractors.",
+        "nl": "Een zomergast in rijstvelden, vaak bij vee of tractoren."
+      }
+    },
+    "integr1": {
+      "here": {
+        "en": "A summer visitor to rice fields and rivers that moves south in winter.",
+        "nl": "Een zomergast in rijstvelden en langs rivieren die in de winter naar het zuiden trekt."
+      }
+    },
+    "eurspo1": {
+      "here": {
+        "en": "A rare visitor, so check recent reports for the tidal flats and wet fields.",
+        "nl": "Een zeldzame bezoeker, dus kijk naar recente meldingen voor de wadplaten en natte velden."
+      }
+    },
+    "blakit1": {
+      "here": {
+        "en": "The tobi. At Kamakura and Enoshima kites swoop down to take food from people's hands, so keep snacks covered.",
+        "nl": "De tobi. Bij Kamakura en Enoshima duiken wouwen omlaag om eten uit handen te pakken, dus houd je snacks bedekt."
+      }
+    },
+    "easmah1": {
+      "here": {
+        "en": "Winters over reedbeds, for example at Watarase Reservoir north of Tokyo.",
+        "nl": "Overwintert boven rietvelden, bijvoorbeeld bij het Watarase-reservoir ten noorden van Tokio."
+      }
+    },
+    "norhar1": {
+      "here": {
+        "en": "Winters over reedbeds, for example at Watarase Reservoir north of Tokyo.",
+        "nl": "Overwintert boven rietvelden, bijvoorbeeld bij het Watarase-reservoir ten noorden van Tokio."
+      }
+    },
+    "japspa1": {
+      "here": {
+        "en": "A summer visitor to broadleaf woods that also passes through on migration.",
+        "nl": "Een zomergast van loofbossen die ook op trek doortrekt."
+      }
+    },
+    "perfal": {
+      "here": {
+        "en": "Hunts pigeons around cities, harbours and coastal cliffs, so scan tall buildings and pylons.",
+        "nl": "Jaagt op duiven rond steden, havens en kustkliffen, dus kijk naar hoge gebouwen en masten."
+      }
+    },
+    "japwoo1": {
+      "here": {
+        "en": "Found only in Japan. It often feeds on the ground, and Mount Takao west of Tokyo is a good place to try.",
+        "nl": "Leeft alleen in Japan. Hij eet vaak op de grond, en de berg Takao ten westen van Tokio is een goede plek om te zoeken."
+      }
+    },
+    "pygwoo1": {
+      "here": {
+        "en": "The smallest woodpecker in Japan, often with tit flocks, even in city parks.",
+        "nl": "De kleinste specht van Japan, vaak bij vluchten mezen, zelfs in stadsparken."
+      }
+    },
+    "ashmin1": {
+      "here": {
+        "en": "Passes through in spring and autumn in small flocks in the tops of trees, and some stay in the summer woods around Karuizawa.",
+        "nl": "Trekt in voorjaar en najaar door in kleine groepen in boomtoppen, en sommige blijven in de zomerbossen rond Karuizawa."
+      }
+    },
+    "buhshr1": {
+      "here": {
+        "en": "Males have a bright orange-brown head and sit on open perches all year.",
+        "nl": "Mannetjes hebben een felle oranjebruine kop en zitten het hele jaar op open uitkijkposten."
+      }
+    },
+    "eurjay1": {
+      "here": {
+        "en": "The Japanese birds are warmer brown than elsewhere. Look in hill woods such as Mount Takao.",
+        "nl": "De Japanse vogels zijn warmer bruin dan elders. Zoek in heuvelbossen zoals de berg Takao."
+      }
+    },
+    "azwmag2": {
+      "here": {
+        "en": "Very scarce and local in Japan, so check recent reports before you go.",
+        "nl": "Erg schaars en plaatselijk in Japan, dus kijk voor je gaat naar recente meldingen."
+      }
+    },
+    "carcro1": {
+      "here": {
+        "en": "Slimmer than the Large-billed Crow, with a thinner bill and a flatter forehead.",
+        "nl": "Slanker dan de dikbekkraai, met een dunnere snavel en een platter voorhoofd."
+      }
+    },
+    "vartit1": {
+      "here": {
+        "en": "Likes broadleaf and mixed woods in hills and large wooded parks.",
+        "nl": "Houdt van loof- en gemengd bos in heuvels en grote bosrijke parken."
+      }
+    },
+    "jabwar": {
+      "here": {
+        "en": "The famous uguisu. Its song from late February announces spring, and you hear it far more than you see it.",
+        "nl": "De beroemde uguisu. Zijn zang vanaf eind februari kondigt de lente aan, en je hoort hem veel vaker dan je hem ziet."
+      }
+    },
+    "asistu1": {
+      "here": {
+        "en": "A summer bird of cool mountain forest, walking on the ground, and also a passage bird in Tokyo parks.",
+        "nl": "Een zomervogel van koel bergbos die op de grond loopt, en ook een doortrekker in parken van Tokio."
+      }
+    },
+    "reblei": {
+      "here": {
+        "en": "Brought from China as a cage bird and now common in thick scrub on hillsides.",
+        "nl": "Uit China meegebracht als kooivogel en nu algemeen in dicht struweel op berghellingen."
+      }
+    },
+    "melthr": {
+      "here": {
+        "en": "Scarcer than the leiothrix, with a white eye-ring that runs back in a line.",
+        "nl": "Schaarser dan de Japanse nachtegaal, met een witte oogring die als een streep naar achteren loopt."
+      }
+    },
+    "brodip1": {
+      "here": {
+        "en": "Look for it on boulders in mountain streams, such as the Azusa River at Kamikochi.",
+        "nl": "Zoek hem op keien in bergbeken, zoals de Azusa bij Kamikochi."
+      }
+    },
+    "chcsta1": {
+      "here": {
+        "en": "Mostly a passage bird in spring and autumn, often with White-cheeked Starlings.",
+        "nl": "Vooral een doortrekker in voorjaar en najaar, vaak samen met grijze spreeuwen."
+      }
+    },
+    "dusthr1": {
+      "here": {
+        "en": "Scarcer than Dusky Thrush, with a rusty tail and rusty underparts, and often in the same flocks.",
+        "nl": "Schaarser dan de bruine lijster, met een roestkleurige staart en onderzijde, en vaak in dezelfde groepen."
+      }
+    },
+    "brhthr1": {
+      "here": {
+        "en": "Comes to lowland parks and fields in winter and breeds in mountain forest, where it is a common bird of Karuizawa in summer.",
+        "nl": "Komt in de winter naar laaglandparken en velden en broedt in bergbos, waar hij in de zomer een algemene vogel van Karuizawa is."
+      }
+    },
+    "palthr1": {
+      "here": {
+        "en": "A winter bird of parks and wooded gardens, with a white belly and dark spots.",
+        "nl": "Een wintervogel van parken en bosrijke tuinen, met een witte buik en donkere vlekken."
+      }
+    },
+    "scathr2": {
+      "here": {
+        "en": "Its thin, eerie whistle at night and dawn is the sound of the forest in early summer.",
+        "nl": "Zijn dunne, spookachtige gefluit 's nachts en bij zonsopgang is het geluid van het bos in de vroege zomer."
+      }
+    },
+    "japthr1": {
+      "here": {
+        "en": "A summer singer of broadleaf mountain forest, with a black hood.",
+        "nl": "Een zomerzanger van loofbergbos, met een zwarte kap."
+      }
+    },
+    "burthr": {
+      "here": {
+        "en": "Sits on rocks along the coast and in harbours, and in summer also in the mountains.",
+        "nl": "Zit op rotsen langs de kust en in havens, en in de zomer ook in de bergen."
+      }
+    },
+    "japrob2": {
+      "here": {
+        "en": "A summer bird of dense undergrowth in cool mountain forest, with a clear, fluting song.",
+        "nl": "Een zomervogel van dichte ondergroei in koel bergbos, met een heldere, fluitende zang."
+      }
+    },
+    "sibrob": {
+      "here": {
+        "en": "A summer bird of dense mountain forest, and a shy passage bird in Tokyo parks.",
+        "nl": "Een zomervogel van dicht bergbos, en een schuwe doortrekker in parken van Tokio."
+      }
+    },
+    "refblu1": {
+      "here": {
+        "en": "Breeds in high conifer forest and comes down to lowland parks and gardens in winter.",
+        "nl": "Broedt in hoog naaldbos en komt in de winter naar laaglandparken en tuinen."
+      }
+    },
+    "daured1": {
+      "here": {
+        "en": "A winter visitor to farmland, river banks and gardens.",
+        "nl": "Een wintergast op akkerland, rivieroevers en in tuinen."
+      }
+    },
+    "narfly2": {
+      "here": {
+        "en": "A bright summer singer of broadleaf forest, easy to find around Karuizawa.",
+        "nl": "Een felle zomerzanger van loofbos, makkelijk te vinden rond Karuizawa."
+      }
+    },
+    "bawfly2": {
+      "here": {
+        "en": "A summer bird of mountain forest, where males sing from a high perch.",
+        "nl": "Een zomervogel van bergbos, waar mannetjes zingen vanaf een hoge zitplaats."
+      }
+    },
+    "asbfly": {
+      "here": {
+        "en": "Passes through in spring and autumn, often in park woods.",
+        "nl": "Trekt in voorjaar en najaar door, vaak in parkbossen."
+      }
+    },
+    "gysfly1": {
+      "here": {
+        "en": "Passes through in spring and autumn, often in park woods.",
+        "nl": "Trekt in voorjaar en najaar door, vaak in parkbossen."
+      }
+    },
+    "japwax1": {
+      "here": {
+        "en": "A winter visitor whose flocks come and go from year to year, so luck plays a part.",
+        "nl": "Een wintergast wiens groepen van jaar tot jaar komen en gaan, dus geluk speelt een rol."
+      }
+    },
+    "japacc1": {
+      "here": {
+        "en": "Breeds in high mountain scrub and spends winter in woods and parks at lower altitude.",
+        "nl": "Broedt in hoog bergstruweel en brengt de winter door in bossen en parken op lagere hoogte."
+      }
+    },
+    "japwag1": {
+      "here": {
+        "en": "Has a black back and a black line through the eye, and nests along rivers on Honshu.",
+        "nl": "Heeft een zwarte rug en een zwarte streep door het oog, en broedt langs rivieren op Honshu."
+      }
+    },
+    "whiwag": {
+      "here": {
+        "en": "Several forms occur, some with a grey back and some with a black back.",
+        "nl": "Er komen verschillende vormen voor, sommige met een grijze rug en sommige met een zwarte rug."
+      }
+    },
+    "olbpip": {
+      "here": {
+        "en": "Feeds on the ground under trees and bobs its tail.",
+        "nl": "Zoekt voedsel op de grond onder bomen en wipt met zijn staart."
+      }
+    },
+    "japgro1": {
+      "here": {
+        "en": "A summer bird of broadleaf forest, with a black head and a yellow bill.",
+        "nl": "Een zomervogel van loofbos, met een zwarte kop en een gele snavel."
+      }
+    },
+    "yebgro1": {
+      "here": {
+        "en": "A scarce winter visitor, often among other finches and thrushes in wooded parks.",
+        "nl": "Een schaarse wintergast, vaak tussen andere vinken en lijsters in bosrijke parken."
+      }
+    },
+    "lotros1": {
+      "here": {
+        "en": "A winter visitor in small flocks in weedy fields and riverside thickets.",
+        "nl": "Een wintergast in kleine groepen in onkruidrijke velden en struwelen langs rivieren."
+      }
+    }
+  },
+  "first_day": {
+    "title": {
+      "en": "Your first day in Japan",
+      "nl": "Je eerste dag in Japan"
+    },
+    "intro": {
+      "en": "Twenty birds you are very likely to meet on the first day: in Tokyo parks, along rivers and canals, on rooftops and over the bay.",
+      "nl": "Twintig vogels die je de eerste dag vrijwel zeker tegenkomt: in parken van Tokio, langs rivieren en grachten, op daken en boven de baai."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "Japan is a chain of islands, and about twenty of its birds live nowhere else, most of them on small islands in the south and east. This trip has the 3 that a visitor on Honshu can meet: two pheasants and a woodpecker. The island birds are not in this trip.",
+      "nl": "Japan is een keten van eilanden, en ongeveer twintig van de vogels leven nergens anders, de meeste op kleine eilanden in het zuiden en oosten. Deze reis heeft de 3 die je op Honshu kunt tegenkomen: twee fazanten en een specht. De eilandvogels zitten niet in deze reis."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "Farmland and river banks",
+          "nl": "Akkerland en rivieroevers"
+        },
+        "text": {
+          "en": "The Green Pheasant walks along rice field edges, grassy river banks and the margins of woods. The park on the edge of Teganuma marsh in Kashiwa, Chiba, and the farmland on the outskirts of Tokyo are good places, and the loud call gives the male away.",
+          "nl": "De groene fazant loopt langs randen van rijstvelden, grazige rivieroevers en bosranden. Het park aan de rand van het Teganuma-moeras in Kashiwa, Chiba, en het akkerland aan de rand van Tokio zijn goede plekken, en de luide roep verraadt het mannetje."
+        }
+      },
+      {
+        "title": {
+          "en": "Wooded hills near Tokyo",
+          "nl": "Beboste heuvels bij Tokio"
+        },
+        "text": {
+          "en": "The Japanese Woodpecker lives in woods with old trees and often comes down to feed on the ground. Mount Takao, less than an hour from the city centre by train, is a good place to look, together with Eurasian Jay and Varied Tit.",
+          "nl": "De Japanse groene specht leeft in bossen met oude bomen en komt vaak naar beneden om op de grond te eten. De berg Takao, minder dan een uur met de trein van het centrum, is een goede plek om te zoeken, samen met de gaai en de bonte mees."
+        }
+      },
+      {
+        "title": {
+          "en": "Mountain forest",
+          "nl": "Bergbos"
+        },
+        "text": {
+          "en": "The Copper Pheasant keeps to hill and mountain forest up to about 1,800 metres, on floors with thick undergrowth. It is shy and not very vocal, so walk quietly on forest tracks in places such as Karuizawa and the Fuji and Japan Alps foothills, and ask a local guide.",
+          "nl": "De koperfazant houdt zich op in heuvel- en bergbos tot ongeveer 1800 meter, op bodems met dichte ondergroei. Hij is schuw en laat zich niet vaak horen, dus loop rustig over bospaden op plekken als Karuizawa en de voeten van de Fuji en de Japanse Alpen, en vraag het een lokale gids."
+        }
+      }
+    ],
+    "families": [],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "The endemics of Japan",
+          "nl": "De endemen van Japan"
+        }
+      }
+    }
+  }
+}

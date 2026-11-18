@@ -1,0 +1,22 @@
+{
+  "code": "baitea",
+  "name": {
+    "en": "Baikal Teal",
+    "nl": "Siberische taling"
+  },
+  "latin": "Sibirionetta formosa",
+  "look_for": [
+    {
+      "en": "Drake's **face** has a green and cream swirl",
+      "nl": "Mannetje met groen-crème **gezichtspatroon**"
+    },
+    {
+      "en": "Pink-buff **breast** dotted with black",
+      "nl": "Roze-bruine **borst** met zwarte stippen"
+    },
+    {
+      "en": "Female brown, white spot at **bill** base",
+      "nl": "Vrouwtje bruin, witte vlek bij de **snavelbasis**"
+    }
+  ]
+}

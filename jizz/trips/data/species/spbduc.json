@@ -1,0 +1,22 @@
+{
+  "code": "spbduc",
+  "name": {
+    "en": "Eastern Spot-billed Duck",
+    "nl": "Chinese vlekbekeend"
+  },
+  "latin": "Anas zonorhyncha",
+  "look_for": [
+    {
+      "en": "Large, scaly dark brown dabbling duck",
+      "nl": "Grote, geschubde donkerbruine eend"
+    },
+    {
+      "en": "Black **bill** with a yellow tip",
+      "nl": "Zwarte **snavel** met gele punt"
+    },
+    {
+      "en": "Pale buff **face**, dark **eyestripe**",
+      "nl": "Lichtbeige **gezicht**, donkere **oogstreep**"
+    }
+  ]
+}

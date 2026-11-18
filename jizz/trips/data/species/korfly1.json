@@ -1,0 +1,22 @@
+{
+  "code": "korfly1",
+  "name": {
+    "en": "Yellow-rumped Flycatcher",
+    "nl": "Driekleurenvliegenvanger"
+  },
+  "latin": "Ficedula zanthopygia",
+  "look_for": [
+    {
+      "en": "Male black above, bright yellow below",
+      "nl": "Man zwart boven, felgeel onder"
+    },
+    {
+      "en": "Yellow **rump**, white **eyebrow** and wing patch",
+      "nl": "Gele **stuit**, witte **wenkbrauwstreep** en vleugelvlek"
+    },
+    {
+      "en": "Female olive-brown, yellowish rump, white wing patch",
+      "nl": "Vrouw olijfbruin, gelige stuit, wit vleugelvlekje"
+    }
+  ]
+}
