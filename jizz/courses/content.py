@@ -26,6 +26,11 @@ COURSES = {
         },
         'languages': ('nl',),
     },
+    'uk-beginners': {
+        'title': {'en': 'Birds of Britain'},
+        'subtitle': {'en': 'A course for beginners: one short lesson a week'},
+        'languages': ('en',),
+    },
 }
 
 

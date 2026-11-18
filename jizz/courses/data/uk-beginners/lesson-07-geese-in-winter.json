@@ -1,0 +1,454 @@
+{
+  "course": "uk-beginners",
+  "week": 7,
+  "slug": "geese-in-winter",
+  "part": 1,
+  "kind": "species",
+  "season": "winter",
+  "minutes": 12,
+  "title": {
+    "en": "Geese in winter"
+  },
+  "subtitle": {
+    "en": "Five geese you can see on British fields and estuaries"
+  },
+  "intro": {
+    "en": "Winter is goose season. From October, hundreds of thousands of geese arrive from Iceland, Greenland, Svalbard and Siberia, and the fields and estuaries of Britain fill with the sound of them. If you hear a wild, honking chorus overhead, look up: geese fly in lines and V-shapes, called skeins.\n\nGeese are easier than you think. Each of these five has one detail that gives it away: a black neck with a white chinstrap, a pink bill, a white face. We start with the one you have probably already seen on a park pond.\n\nAt the end there's a quiz of eight questions, with birds from the last two weeks mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "forewing"
+      },
+      "explain": {
+        "en": "The front part of the wing. Easy to see in flight."
+      }
+    },
+    {
+      "term": {
+        "en": "chinstrap"
+      },
+      "explain": {
+        "en": "A white band from cheek to cheek, under the chin."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 87,
+      "latin": "Branta canadensis",
+      "name": {
+        "en": "Canada Goose"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Big, with a long black neck"
+        },
+        {
+          "en": "White **chinstrap** under the head"
+        },
+        {
+          "en": "Brown body, pale breast"
+        }
+      ],
+      "where_when": {
+        "en": "Park lakes, reservoirs and farmland all year, all over the country. Brought here from North America as an ornamental bird, in the 1600s."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, nasal \"ah-honk\", and a lot of it."
+        },
+        "chosen": [
+          {
+            "media_id": 1193903,
+            "xeno_canto": "XC994358",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 32.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1193907,
+            "xeno_canto": "XC879215",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 40.0,
+            "background_species": 0,
+            "recordist": "Agris Celmins"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It is not a winter visitor but a resident, so you can practise on it any time of the year."
+      },
+      "media": {
+        "card": [
+          118712,
+          118771,
+          118643
+        ],
+        "quiz": [
+          118644,
+          118719,
+          118728,
+          118786,
+          118770,
+          118711,
+          118739,
+          118781
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 7
+      }
+    },
+    {
+      "species_id": 77,
+      "latin": "Anser anser",
+      "name": {
+        "en": "Greylag Goose"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Big and grey-brown, with a thick neck"
+        },
+        {
+          "en": "Heavy orange bill, pink legs"
+        },
+        {
+          "en": "Pale grey **forewing** in flight"
+        }
+      ],
+      "where_when": {
+        "en": "Lakes and fields, in flocks. Our only native goose that nests here, though many on park lakes are semi-tame. In winter, thousands more arrive from Iceland."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "The farmyard goose of old: a loud, cackling \"aang-ung-ung\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1193698,
+            "xeno_canto": "XC1037394",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 36.6,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1193701,
+            "xeno_canto": "XC1031817",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35.0,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "en": "The farmyard goose is a descendant of the Greylag."
+      },
+      "media": {
+        "card": [
+          116886,
+          117001,
+          116998
+        ],
+        "quiz": [
+          116952,
+          116953,
+          116985,
+          117013,
+          116960,
+          117007,
+          117032,
+          116963
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 7
+      }
+    },
+    {
+      "species_id": 83,
+      "latin": "Anser brachyrhynchus",
+      "name": {
+        "en": "Pink-footed Goose"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Smaller and darker than a Greylag, with a dark brown head"
+        },
+        {
+          "en": "Short bill, pink band in the middle"
+        },
+        {
+          "en": "Pink legs"
+        }
+      ],
+      "where_when": {
+        "en": "Estuaries and stubble fields in eastern England, Lancashire and Scotland, from October to March. At dawn they leave the roost in huge skeins, with a babble of calls."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "High, quick, nasal \"wink-wink\" calls, from a whole flock at once."
+        },
+        "chosen": [
+          {
+            "media_id": 1193817,
+            "xeno_canto": "XC1049085",
+            "type": "call, flight call, nocturnal flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 47.4,
+            "background_species": 0,
+            "recordist": "Mark Pearson"
+          },
+          {
+            "media_id": 1193819,
+            "xeno_canto": "XC993252",
+            "type": "flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 36.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "Most Pink-footed Geese in Britain breed in Iceland and Greenland, and come here for the winter."
+      },
+      "dont_confuse": {
+        "en": "Greylag (just before): a bigger, paler goose with an orange bill."
+      },
+      "media": {
+        "card": [
+          118024,
+          118002,
+          118098
+        ],
+        "quiz": [
+          118085,
+          118044,
+          118041,
+          117938
+        ]
+      }
+    },
+    {
+      "species_id": 85,
+      "latin": "Branta leucopsis",
+      "name": {
+        "en": "Barnacle Goose"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "White face, black neck and breast"
+        },
+        {
+          "en": "Grey back with black-and-white barring"
+        },
+        {
+          "en": "Small, with a short black bill"
+        }
+      ],
+      "where_when": {
+        "en": "Grassy estuaries and islands, mostly on the Solway Firth and Islay in winter. Some feral birds now live on park lakes."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A yapping, dog-like \"wuk-wuk-wuk\", from a big flock."
+        },
+        "chosen": [
+          {
+            "media_id": 1193867,
+            "xeno_canto": "XC589833",
+            "type": "flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 37.0,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1193861,
+            "xeno_canto": "XC691722",
+            "type": "flight call, nocturnal flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 50.4,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "In the Middle Ages people thought these geese grew out of barnacles on driftwood. That is how they got their name."
+      },
+      "media": {
+        "card": [
+          118299,
+          118303,
+          118328
+        ],
+        "quiz": [
+          118363,
+          118378,
+          118333,
+          118335,
+          118311,
+          118359,
+          118296,
+          118309
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 7
+      }
+    },
+    {
+      "species_id": 84,
+      "latin": "Branta bernicla",
+      "name": {
+        "en": "Brent Goose"
+      },
+      "plumage": {
+        "en": "adult, dark-bellied"
+      },
+      "look_for": [
+        {
+          "en": "Small, only a little bigger than a Mallard"
+        },
+        {
+          "en": "Black head, neck and breast, with a small white neck patch"
+        },
+        {
+          "en": "Dark body with a white rear end"
+        }
+      ],
+      "where_when": {
+        "en": "Muddy estuaries and saltmarshes on the south and east coast, from October to March. They graze on eelgrass and seaweed."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, rolling \"rronk, rronk\", from a flock out on the mud."
+        },
+        "chosen": [
+          {
+            "media_id": 1193852,
+            "xeno_canto": "XC973943",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 33.8,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1193844,
+            "xeno_canto": "XC994307",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 36.9,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "The dark-bellied birds here come from Siberia. A paler, light-bellied form winters in Ireland and at Lindisfarne; we leave that one for later."
+      },
+      "media": {
+        "card": [
+          118182,
+          118207,
+          118133
+        ],
+        "quiz": [
+          118195,
+          118137,
+          118134,
+          118132,
+          118215
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 83,
+    "species_ids": [
+      77,
+      83
+    ],
+    "title": {
+      "en": "Greylag or Pink-footed Goose?"
+    },
+    "text": {
+      "en": "Look at the bill and the head. Greylag: big, heavy orange bill and a pale head. Pink-footed: smaller, with a dark head and a short bill with just a pink band. Both have pink legs."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      5,
+      6
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Go and look at the geese near you: a park lake, a reservoir or the estuary. Find the Canada Goose first. If you are near the coast, try to be there at dawn or dusk, when the skeins fly."
+  },
+  "next": {
+    "en": "Next week: ducks, the males."
+  },
+  "flow": [
+    "intro",
+    "bird:87",
+    "bird:77",
+    "bird:83",
+    "bird:85",
+    "bird:84",
+    "quiz",
+    "done"
+  ]
+}

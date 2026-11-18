@@ -14,13 +14,14 @@ class CourseContentTestCase(TestCase):
 
     def test_lessons_are_complete(self):
         for slug in COURSES:
+            lang = COURSES[slug]['languages'][0]  # each course is written in one language
             lessons = course_lessons(slug)
             self.assertEqual([lesson['week'] for lesson in lessons], list(range(1, len(lessons) + 1)))
             for lesson in lessons:
                 where = f"{slug} week {lesson['week']}"
-                self.assertTrue(lesson['title'].get('nl'), where)
-                self.assertTrue(lesson['intro'].get('nl'), where)
-                self.assertTrue(lesson['outside'].get('nl'), where)
+                self.assertTrue(lesson['title'].get(lang), where)
+                self.assertTrue(lesson['intro'].get(lang), where)
+                self.assertTrue(lesson['outside'].get(lang), where)
                 if lesson.get('kind') == 'review':
                     self.assertEqual(lesson['birds'], [], where)
                     self.assertTrue(lesson['quiz']['review_from'], where)
@@ -28,16 +29,16 @@ class CourseContentTestCase(TestCase):
                 self.assertTrue(lesson['birds'], where)
                 bold = set()
                 for bird in lesson['birds']:
-                    label = f"{where} {bird['name'].get('nl')}"
+                    label = f"{where} {bird['name'].get(lang)}"
                     self.assertEqual(len(bird['look_for']), 3, label)
                     if not bird.get('needs_photos'):
                         self.assertTrue(bird['media']['card'], label)
                         self.assertGreaterEqual(len(bird['media']['quiz']), 3, label)
                     self.assertTrue(bird['sound'].get('chosen'), label)
                     for line in bird['look_for']:
-                        bold.update(re.findall(r'\*\*(.+?)\*\*', line['nl']))
+                        bold.update(re.findall(r'\*\*(.+?)\*\*', line[lang]))
                 for word in lesson.get('words', []):
-                    term = word['term']['nl'].lower()
+                    term = word['term'][lang].lower()
                     # Plurals count: "wang" as "wangen", "vleugelstreep" as "vleugelstrepen".
                     stem = term[:max(4, len(term) - 2)]
                     used = any(b.lower().startswith(stem) for b in bold)

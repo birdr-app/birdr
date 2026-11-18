@@ -1,0 +1,60 @@
+{
+  "course": "uk-beginners",
+  "week": 20,
+  "slug": "final-test",
+  "part": 2,
+  "kind": "review",
+  "season": "any",
+  "minutes": 15,
+  "title": {
+    "en": "Final test"
+  },
+  "subtitle": {
+    "en": "Twenty weeks of birds in one quiz"
+  },
+  "intro": {
+    "en": "Twenty weeks ago you started at the window, with a cup of coffee and five garden birds. Since then you have been to the pond, the street, the field, the wood, the reed bed and the coast. You now know more than seventy birds, and you know what to look at: the crown, the bib, the wing bar, the shape of the bill and the way a bird flies.\n\nToday you put it all together. The final test has twenty questions, with birds from all nineteen lessons mixed up. No new birds. In doubt? Look at the shape first, then the head, and only then the details.\n\nMistakes are fine. Look up the birds you got wrong in their lesson afterwards, and look again at what to look for. Good luck!"
+  },
+  "words": [],
+  "birds": [],
+  "compare": null,
+  "quiz": {
+    "questions": 20,
+    "photos_from": "quiz",
+    "answers_from": "lessons 1-19",
+    "review_from": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "review_questions": 20,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "This week, choose a half-hour walking route near you and walk it. Write down every bird you recognise. Walk the same route again in a month: which birds have joined, and which have gone? That is how you see the seasons change."
+  },
+  "next": {
+    "en": "The beginners course is finished, congratulations! Keep practising with the daily challenge, or play the country challenge for the United Kingdom."
+  },
+  "flow": [
+    "intro",
+    "quiz",
+    "done"
+  ]
+}

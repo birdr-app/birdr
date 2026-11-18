@@ -1,0 +1,383 @@
+{
+  "course": "uk-beginners",
+  "week": 12,
+  "slug": "birds-of-prey",
+  "part": 2,
+  "kind": "species",
+  "season": "any",
+  "minutes": 10,
+  "title": {
+    "en": "Birds of prey"
+  },
+  "subtitle": {
+    "en": "Four hunters you can see from almost any road"
+  },
+  "intro": {
+    "en": "Birds of prey seem difficult: they are often far away, and they are usually in the air. But you don't need to see every feather. Look at shape and behaviour: the way it flies is half the identification.\n\nBritain's birds of prey have had an extraordinary comeback. The Red Kite was almost extinct, down to a few pairs in Wales. Today you can see one from the motorway in the Chilterns. In this lesson we meet four of the ones you are most likely to see: one circling, one hovering, one flashing through a garden, and one forked-tailed glider.\n\nAt the end there's a quiz of eight questions, with two birds from last week mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "wrist patch"
+      },
+      "explain": {
+        "en": "A dark patch on the underside of the wing, at the bend."
+      }
+    },
+    {
+      "term": {
+        "en": "hooked bill"
+      },
+      "explain": {
+        "en": "A bill with a sharp hook at the tip, for tearing meat."
+      }
+    },
+    {
+      "term": {
+        "en": "cere"
+      },
+      "explain": {
+        "en": "A bare patch of skin, often yellow, at the top of the bill, where the nostrils are."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2944,
+      "latin": "Buteo buteo",
+      "name": {
+        "en": "Buzzard"
+      },
+      "plumage": {
+        "en": "adult, pale to dark"
+      },
+      "look_for": [
+        {
+          "en": "Stocky, broad wings, short tail"
+        },
+        {
+          "en": "Often a pale breast band"
+        },
+        {
+          "en": "In flight: dark **wrist patch** under the wing"
+        }
+      ],
+      "where_when": {
+        "en": "Over woods and fields, soaring in circles, or sitting on a post or a pylon. The commonest bird of prey in Britain, especially in the west."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A far-carrying, mewing \"pee-ow\", often given high up in the sky."
+        },
+        "chosen": [
+          {
+            "media_id": 1228099,
+            "xeno_canto": "XC1019332",
+            "type": "call, flight call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 33.4,
+            "background_species": 0,
+            "recordist": "Beatrix Saadi-Varchmin"
+          },
+          {
+            "media_id": 1228092,
+            "xeno_canto": "XC1052241",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 47.4,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "They vary a lot, from almost white to nearly black. The shape does not."
+      },
+      "media": {
+        "card": [
+          439662,
+          439739,
+          439800
+        ],
+        "quiz": [
+          439723,
+          439721,
+          439661,
+          439762,
+          439675,
+          439775,
+          439722
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 12
+      }
+    },
+    {
+      "species_id": 3980,
+      "latin": "Falco tinnunculus",
+      "name": {
+        "en": "Kestrel"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Hovers: hangs in the air with fluttering wings"
+        },
+        {
+          "en": "Grey head, chestnut back with black spots"
+        },
+        {
+          "en": "Grey tail with a black band near the tip"
+        }
+      ],
+      "where_when": {
+        "en": "Roadside verges, fields and motorways. Hovers over the grass, looking for voles. Sits on poles and wires."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A shrill, quick \"kee-kee-kee-kee\", usually near the nest."
+        },
+        "chosen": [
+          {
+            "media_id": 1242175,
+            "xeno_canto": "XC1012105",
+            "type": "alarm call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 34.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1242178,
+            "xeno_canto": "XC1004092",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 46.7,
+            "background_species": 0,
+            "recordist": "Thierry THOMAS"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The female has a brown, barred tail, and a brown head."
+      },
+      "media": {
+        "card": [
+          548588,
+          548643
+        ],
+        "quiz": [
+          548671,
+          548564,
+          548597,
+          548692,
+          548638,
+          548559
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 12
+      }
+    },
+    {
+      "species_id": 2874,
+      "latin": "Accipiter nisus",
+      "name": {
+        "en": "Sparrowhawk"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Short, rounded wings and a long tail"
+        },
+        {
+          "en": "Grey back, fine bars underneath"
+        },
+        {
+          "en": "Yellow **cere** above a small **hooked bill**"
+        }
+      ],
+      "where_when": {
+        "en": "Woods, hedges and gardens. Flies low and fast, then bursts out from behind a hedge to catch a small bird. You often see a flash, then a puff of feathers."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A fast, chattering \"kek-kek-kek-kek\", usually only heard near the nest."
+        },
+        "chosen": [
+          {
+            "media_id": 1227193,
+            "xeno_canto": "XC1024300",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 35.9,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1227194,
+            "xeno_canto": "XC1015205",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 37.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "dont_confuse": {
+        "en": "Kestrel (just before): longer, pointed wings, and a habit of hovering."
+      },
+      "media": {
+        "card": [
+          430445,
+          430472,
+          430401
+        ],
+        "quiz": [
+          430386,
+          430449,
+          430364,
+          430429,
+          430491,
+          430459,
+          430358
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 12
+      }
+    },
+    {
+      "species_id": 2890,
+      "latin": "Milvus milvus",
+      "name": {
+        "en": "Red Kite"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Rusty-red body, with a pale grey head"
+        },
+        {
+          "en": "Long, deeply forked tail, twisting as it steers"
+        },
+        {
+          "en": "Long wings, with white patches under the tips"
+        }
+      ],
+      "where_when": {
+        "en": "Open countryside in the Chilterns, Wales, central Scotland, Yorkshire and the east Midlands, soaring slowly and gliding low over fields. Often seen over villages and roads, and at feeding stations."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A thin, mewing \"weeoo-weeoo-weeoo\", higher and thinner than a Buzzard."
+        },
+        "chosen": [
+          {
+            "media_id": 1227271,
+            "xeno_canto": "XC811505",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 39.6,
+            "background_species": 0,
+            "recordist": "Paul Driver"
+          },
+          {
+            "media_id": 1227259,
+            "xeno_canto": "XC1015811",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 46.8,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "Red Kites were reintroduced to England and Scotland from 1989, with birds from Spain and Sweden."
+      },
+      "media": {
+        "card": [
+          431999,
+          432006,
+          431888
+        ],
+        "quiz": [
+          432020,
+          432002,
+          431963,
+          431938,
+          431951
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 2890,
+    "species_ids": [
+      2944,
+      2890
+    ],
+    "title": {
+      "en": "Buzzard or Red Kite?"
+    },
+    "text": {
+      "en": "Look at the tail and the wings. A Red Kite has a long, forked tail that it twists as it steers, and long, narrow wings with a bend. A Buzzard has a short, rounded tail and broader wings, held in a shallow V when it soars."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      11
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Watch the sky next time you are on a car trip or walk. Is the bird soaring in circles (Buzzard), hovering (Kestrel) or twisting its forked tail (Red Kite)? Write down what the bird did, not just what it looked like."
+  },
+  "next": {
+    "en": "Next week: in the woods."
+  },
+  "flow": [
+    "intro",
+    "bird:2944",
+    "bird:3980",
+    "bird:2874",
+    "bird:2890",
+    "quiz",
+    "done"
+  ]
+}

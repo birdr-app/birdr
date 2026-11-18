@@ -1,0 +1,458 @@
+{
+  "course": "uk-beginners",
+  "week": 14,
+  "slug": "reeds-and-wetlands",
+  "part": 2,
+  "kind": "species",
+  "season": "spring",
+  "minutes": 12,
+  "title": {
+    "en": "Reeds and wetlands"
+  },
+  "subtitle": {
+    "en": "Five birds from the reed beds and the open water"
+  },
+  "intro": {
+    "en": "Today we visit a reed bed. A nature reserve with reeds, a few pools and a hide is one of the best places to practise bird watching, and all five of today's birds live there, or on a river nearby.\n\nReed bed birds are easy to hear and hard to see. In spring they sing from the top of a stem, which gives you a few seconds to look. On the open water, grebes are much easier: they dive, but they come up again. And then there is the one everyone wants to see, a flash of electric blue along the river.\n\nAt the end there's a quiz of ten questions, with birds from the last two lessons mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "collar"
+      },
+      "explain": {
+        "en": "A narrow ring of a different colour around the neck."
+      }
+    },
+    {
+      "term": {
+        "en": "ruff"
+      },
+      "explain": {
+        "en": "A frill of long feathers around the head and neck."
+      }
+    },
+    {
+      "term": {
+        "en": "gape"
+      },
+      "explain": {
+        "en": "The corner where the upper and lower bill meet."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 10200,
+      "latin": "Emberiza schoeniclus",
+      "name": {
+        "en": "Reed Bunting"
+      },
+      "plumage": {
+        "en": "adult male, summer"
+      },
+      "look_for": [
+        {
+          "en": "Black head and black bib"
+        },
+        {
+          "en": "White moustache and white **collar**"
+        },
+        {
+          "en": "Streaky brown back"
+        }
+      ],
+      "where_when": {
+        "en": "Reed beds, ditches and wet fields. The male sings from the top of a reed or a bush in spring, a plain, short song."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A simple, halting \"tink... tink... tink-tink-tissik\", a few notes with pauses."
+        },
+        "chosen": [
+          {
+            "media_id": 1330076,
+            "xeno_canto": "XC810337",
+            "type": "song",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 36.0,
+            "background_species": 0,
+            "recordist": "Dries Van de Loock"
+          },
+          {
+            "media_id": 1330074,
+            "xeno_canto": "XC897913",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 87.1,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "In winter the male's black head is hidden behind brown feather tips, and looks like the female."
+      },
+      "media": {
+        "card": [
+          1079534,
+          1079503,
+          1079533
+        ],
+        "quiz": [
+          1079546,
+          1079523,
+          1079520
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 14
+      }
+    },
+    {
+      "species_id": 7471,
+      "latin": "Acrocephalus scirpaceus",
+      "name": {
+        "en": "Reed Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Plain warm brown, with no streaks"
+        },
+        {
+          "en": "Pale throat, long pointed bill"
+        },
+        {
+          "en": "Clings to reed stems"
+        }
+      ],
+      "where_when": {
+        "en": "Reed beds, from April to September. Slides up and down the stems and sings from deep inside the reeds. It winters in Africa."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A steady, chattering stream: \"churr-churr, chirruc-chirruc, jag-jag\", each phrase repeated two or three times."
+        },
+        "chosen": [
+          {
+            "media_id": 1293055,
+            "xeno_canto": "XC1009419",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 31.4,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1293068,
+            "xeno_canto": "XC987076",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 53.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A Cuckoo's favourite foster parent: it often lays its egg in a Reed Warbler's nest."
+      },
+      "media": {
+        "card": [
+          834582,
+          834541,
+          834562
+        ],
+        "quiz": [
+          834475,
+          834507,
+          834506,
+          834539,
+          834550,
+          834511
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 14
+      }
+    },
+    {
+      "species_id": 3351,
+      "latin": "Alcedo atthis",
+      "name": {
+        "en": "Kingfisher"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Electric blue-green back, orange underneath"
+        },
+        {
+          "en": "Dagger-shaped bill, short tail"
+        },
+        {
+          "en": "Perches low over water, then dives"
+        }
+      ],
+      "where_when": {
+        "en": "Slow rivers, canals and lakes with overhanging branches, all year. Usually seen as a blue flash flying low over the water."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, piercing \"chee!\" or \"chi-kee\", usually in flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1233051,
+            "xeno_canto": "XC1023418",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 31.6,
+            "background_species": 0,
+            "recordist": "GIRARD"
+          },
+          {
+            "media_id": 1233049,
+            "xeno_canto": "XC1059623",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 33.4,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "You hear one far more often than you see one. If you hear that whistle, look low, over the water."
+      },
+      "media": {
+        "card": [
+          479405,
+          479331,
+          479309
+        ],
+        "quiz": [
+          479420,
+          479419,
+          479298,
+          479324,
+          479321,
+          479301
+        ]
+      }
+    },
+    {
+      "species_id": 563,
+      "latin": "Podiceps cristatus",
+      "name": {
+        "en": "Great Crested Grebe"
+      },
+      "plumage": {
+        "en": "adult, summer"
+      },
+      "look_for": [
+        {
+          "en": "Long white neck, pointed bill"
+        },
+        {
+          "en": "Orange-brown **ruff** with a black edge"
+        },
+        {
+          "en": "Two black ear tufts on the head"
+        }
+      ],
+      "where_when": {
+        "en": "Lakes, reservoirs and gravel pits. Dives for fish, and in spring the pairs perform a famous courtship dance, shaking their heads and offering weed."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A barking \"rah-rah\" and a growling \"gorr\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1200468,
+            "xeno_canto": "XC280993",
+            "type": "call (call pulli)",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 38.2,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1200477,
+            "xeno_canto": "XC473226",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 10.6,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 18
+      },
+      "media": {
+        "card": [
+          173751,
+          173760,
+          173887
+        ],
+        "quiz": [
+          173756,
+          173733,
+          173761,
+          173734,
+          173765,
+          173749,
+          173743,
+          173766
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 14
+      }
+    },
+    {
+      "species_id": 552,
+      "latin": "Tachybaptus ruficollis",
+      "name": {
+        "en": "Little Grebe"
+      },
+      "plumage": {
+        "en": "adult, summer"
+      },
+      "look_for": [
+        {
+          "en": "Small and round, like a fluffy ball"
+        },
+        {
+          "en": "Chestnut cheeks and neck"
+        },
+        {
+          "en": "Pale yellow spot at the **gape**"
+        }
+      ],
+      "where_when": {
+        "en": "Small ponds, ditches, lakes and slow rivers. Dives often, and pops up again somewhere else. Hides in vegetation."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A whinnying trill, like a small horse: \"bibibibibibi\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1200294,
+            "xeno_canto": "XC727068",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 45.0,
+            "background_species": 0,
+            "recordist": "Olivier SWIFT"
+          },
+          {
+            "media_id": 1200303,
+            "xeno_canto": "XC572376",
+            "type": "call (copulation)",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 69.1,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Also called a Dabchick."
+      },
+      "media": {
+        "card": [
+          172171,
+          172255,
+          172167
+        ],
+        "quiz": [
+          172143,
+          172245,
+          172139,
+          172235,
+          172159,
+          172144,
+          172147
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 14
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 552,
+    "species_ids": [
+      563,
+      552
+    ],
+    "title": {
+      "en": "Great Crested Grebe or Little Grebe?"
+    },
+    "text": {
+      "en": "Size is the clue. The Great Crested Grebe is big and elegant, with a long white neck. The Little Grebe is tiny and round, and looks like a fluffy ball with a short neck."
+    }
+  },
+  "quiz": {
+    "questions": 10,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      12,
+      13
+    ],
+    "review_questions": 3,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Visit a nature reserve with reeds and open water this week, or a river bank. Which of the five can you find? Listen first, then look. If you are near a river, scan the overhanging branches for a small blue-and-orange bird."
+  },
+  "next": {
+    "en": "Next week: swallows and swifts."
+  },
+  "flow": [
+    "intro",
+    "bird:10200",
+    "bird:7471",
+    "bird:3351",
+    "bird:563",
+    "bird:552",
+    "quiz",
+    "done"
+  ]
+}

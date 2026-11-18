@@ -1,0 +1,550 @@
+{
+  "course": "uk-beginners",
+  "week": 9,
+  "slug": "your-first-songs",
+  "part": 1,
+  "kind": "sound",
+  "season": "spring",
+  "minutes": 12,
+  "title": {
+    "en": "Your first songs"
+  },
+  "subtitle": {
+    "en": "Six birds you can recognise by their song"
+  },
+  "intro": {
+    "en": "Today we're doing something different: you close your eyes. On an early spring morning, Britain is full of singing birds, and most of them stay hidden in the trees. If you can recognise their songs, a walk to the shops turns into a tour of the neighbourhood.\n\nSix birds you have already met, and one new one, the Chiffchaff, which arrives in March. Each bird has a recording, and a description of what to listen for. Play each one a few times.\n\nThe quiz at the end has no photos. You hear a song, and you choose the bird: eight questions."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "song"
+      },
+      "explain": {
+        "en": "The tune of a bird, especially in spring. It is usually the male singing, to claim a territory and attract a female."
+      }
+    },
+    {
+      "term": {
+        "en": "call"
+      },
+      "explain": {
+        "en": "A short sound used to keep in touch or to warn. Birds call all year round."
+      }
+    },
+    {
+      "term": {
+        "en": "phrase"
+      },
+      "explain": {
+        "en": "One song from start to finish, until the bird stops for a moment."
+      }
+    },
+    {
+      "term": {
+        "en": "trill"
+      },
+      "explain": {
+        "en": "A series of very fast, identical notes, like a rolling r."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 8861,
+      "latin": "Turdus merula",
+      "name": {
+        "en": "Blackbird"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Low, warm and fluting"
+        },
+        {
+          "en": "Every **phrase** different, with pauses in between"
+        },
+        {
+          "en": "Sounds relaxed, as if it has all the time in the world"
+        }
+      ],
+      "where_when": {
+        "en": "From a rooftop, a TV aerial or a treetop, mostly at dawn and dusk, from February."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "Slow, relaxed, fluting phrases, never quite repeated."
+        },
+        "chosen": [
+          {
+            "media_id": 1312715,
+            "xeno_canto": "XC1075814",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 51.5,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          },
+          {
+            "media_id": 1312716,
+            "xeno_canto": "XC1075796",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 82.9,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          948633,
+          948634,
+          948763
+        ],
+        "quiz": [
+          948653,
+          948768,
+          948651,
+          948736,
+          948750,
+          948770,
+          948769
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 9
+      },
+      "photos_from_week": 1
+    },
+    {
+      "species_id": 9078,
+      "latin": "Erithacus rubecula",
+      "name": {
+        "en": "Robin"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "High, thin and wistful"
+        },
+        {
+          "en": "Ripples up and down, with short pauses"
+        },
+        {
+          "en": "Sings in autumn and winter too"
+        }
+      ],
+      "where_when": {
+        "en": "Alone, from a low branch or a fence post. It sings all year, and at night under street lights."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A wistful, rippling song, with a slightly watery sound."
+        },
+        "chosen": [
+          {
+            "media_id": 1315592,
+            "xeno_canto": "XC1080724",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 41.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1315603,
+            "xeno_canto": "XC1072480",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 37.9,
+            "background_species": 0,
+            "recordist": "Pablo Guillemaud"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "media": {
+        "card": [
+          970534,
+          970437,
+          970472
+        ],
+        "quiz": [
+          970462,
+          970448,
+          970445,
+          970557,
+          970463,
+          970542,
+          970505,
+          970567
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 9
+      },
+      "photos_from_week": 1
+    },
+    {
+      "species_id": 8529,
+      "latin": "Troglodytes troglodytes",
+      "name": {
+        "en": "Wren"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Amazingly loud for such a tiny bird"
+        },
+        {
+          "en": "Fast and clear, around five seconds"
+        },
+        {
+          "en": "With a rattling **trill** in it"
+        }
+      ],
+      "where_when": {
+        "en": "From low in a bush or a bramble patch, all year but mostly in spring."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A loud, fast burst with a rattling trill, over in a few seconds."
+        },
+        "chosen": [
+          {
+            "media_id": 1308225,
+            "xeno_canto": "XC1055856",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 62.1,
+            "background_species": 0,
+            "recordist": "François Guibert"
+          },
+          {
+            "media_id": 1308207,
+            "xeno_canto": "XC1079264",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 34.0,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          916216,
+          916142,
+          916148
+        ],
+        "quiz": [
+          916156,
+          916168,
+          916223,
+          916210,
+          916144,
+          916287,
+          916179,
+          916260
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 9
+      },
+      "photos_from_week": 4
+    },
+    {
+      "species_id": 7132,
+      "latin": "Parus major",
+      "name": {
+        "en": "Great Tit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "The **song**: two notes, \"tea-cher\""
+        },
+        {
+          "en": "Repeated again and again, like a squeaky bicycle pump"
+        },
+        {
+          "en": "Loud and sawing, from as early as January"
+        }
+      ],
+      "where_when": {
+        "en": "From a treetop or a branch near a feeder. The first spring song you will hear every year."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "\"Tea-cher, tea-cher, tea-cher\": two notes, repeated, with a sawing sound."
+        },
+        "chosen": [
+          {
+            "media_id": 1288063,
+            "xeno_canto": "XC996274",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 79.1,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1288057,
+            "xeno_canto": "XC1046158",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 63.8,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 16
+      },
+      "media": {
+        "card": [
+          805368,
+          805387,
+          805456
+        ],
+        "quiz": [
+          805393,
+          805391,
+          805392,
+          805444,
+          805438,
+          805405,
+          805362,
+          805376,
+          805493
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 9
+      },
+      "photos_from_week": 1
+    },
+    {
+      "species_id": 7854,
+      "latin": "Phylloscopus collybita",
+      "name": {
+        "en": "Chiffchaff"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small and greenish-brown, with no striking markings"
+        },
+        {
+          "en": "Dark legs, a short pale eyebrow stripe"
+        },
+        {
+          "en": "Keeps bobbing its tail"
+        }
+      ],
+      "where_when": {
+        "en": "Woods, parks and hedges with some trees, from March. One of the first summer visitors to arrive. A few stay for the winter."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "Its name is its song: \"chiff-chaff-chiff-chiff-chaff\", with the notes jumping up and down at random."
+        },
+        "chosen": [
+          {
+            "media_id": 1298458,
+            "xeno_canto": "XC985808",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 73.8,
+            "background_species": 0,
+            "recordist": "Abe Bakker"
+          },
+          {
+            "media_id": 1298460,
+            "xeno_canto": "XC985275",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 127.5,
+            "background_species": 0,
+            "recordist": "Olivier SWIFT"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "en": "If you hear this in March, spring is here."
+      },
+      "media": {
+        "card": [
+          866074,
+          866072,
+          866083
+        ],
+        "quiz": [
+          865987,
+          866081,
+          865971,
+          866035,
+          866104,
+          865996,
+          865978,
+          865990
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 9
+      }
+    },
+    {
+      "species_id": 9925,
+      "latin": "Fringilla coelebs",
+      "name": {
+        "en": "Chaffinch"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A cheerful rattle that runs downhill"
+        },
+        {
+          "en": "Ends with a flourish"
+        },
+        {
+          "en": "Its **call**: a clear \"pink\""
+        }
+      ],
+      "where_when": {
+        "en": "From a tree in a wood, park or large garden, from February."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A rattle that runs downhill and finishes with a flourish."
+        },
+        "chosen": [
+          {
+            "media_id": 1326230,
+            "xeno_canto": "XC1013520",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 76.0,
+            "background_species": 0,
+            "recordist": "Romuald Mikusek"
+          },
+          {
+            "media_id": 1326214,
+            "xeno_canto": "XC1079234",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 68.2,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "media": {
+        "card": [
+          1050523,
+          1050520,
+          1050504
+        ],
+        "quiz": [
+          1050481,
+          1050596,
+          1050586,
+          1050521,
+          1050486,
+          1050551,
+          1050518,
+          1050554
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 9
+      },
+      "photos_from_week": 4
+    }
+  ],
+  "compare": {
+    "after_species_id": 7854,
+    "species_ids": [
+      7132,
+      7854
+    ],
+    "title": {
+      "en": "Great Tit or Chiffchaff?"
+    },
+    "text": {
+      "en": "Both repeat two notes, but not in the same way. The Great Tit is loud and sawing, in a steady rhythm: \"tea-cher, tea-cher, tea-cher\". The Chiffchaff is softer and irregular: \"chiff-chaff-chiff-chiff-chaff\", the notes jump up and down at random."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "kind": "sound",
+    "answers_from": "this lesson",
+    "review_from": [],
+    "review_questions": 0,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Go outside early in the morning this week, with the window open or a coat on, and listen. How many of the six can you hear? Bonus: record the singing and try to pick out each bird."
+  },
+  "next": {
+    "en": "Next week is a review: everything from the first nine weeks in one quiz."
+  },
+  "flow": [
+    "intro",
+    "bird:8861",
+    "bird:9078",
+    "bird:8529",
+    "bird:7132",
+    "bird:7854",
+    "bird:9925",
+    "quiz",
+    "done"
+  ]
+}

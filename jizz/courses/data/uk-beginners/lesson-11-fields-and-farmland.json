@@ -1,0 +1,443 @@
+{
+  "course": "uk-beginners",
+  "week": 11,
+  "slug": "fields-and-farmland",
+  "part": 2,
+  "kind": "species",
+  "season": "spring",
+  "minutes": 12,
+  "title": {
+    "en": "Fields and farmland"
+  },
+  "subtitle": {
+    "en": "Five birds of the open countryside in spring"
+  },
+  "intro": {
+    "en": "Today we leave the town behind and walk out onto the fields. On a spring morning, the open countryside is full of life: a bird that seems to climb a ladder of song in the sky, another tumbling over a ploughed field, a long-tailed gamebird that bursts out of the hedge.\n\nFarmland birds are among the ones that have declined most in Britain. That makes each one you find worth a bit more. We start with the black-and-white ones, then turn to the brown and the yellow.\n\nAt the end there's a quiz of eight questions, with birds from the last two lessons mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "breast band"
+      },
+      "explain": {
+        "en": "A dark band across the breast."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 1997,
+      "latin": "Vanellus vanellus",
+      "name": {
+        "en": "Lapwing"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Black and white, with a long, thin crest"
+        },
+        {
+          "en": "Green gloss on the back"
+        },
+        {
+          "en": "Black **breast band**, white belly"
+        }
+      ],
+      "where_when": {
+        "en": "Ploughed fields, wet meadows and the edges of lakes. In spring the male tumbles in the air, to impress the females. In winter they gather in big flocks."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A wheezy, whining \"pee-wit\", the bird's other name."
+        },
+        "chosen": [
+          {
+            "media_id": 1217857,
+            "xeno_canto": "XC803319",
+            "type": "call (wing beats)",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 38.7,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1217850,
+            "xeno_canto": "XC972650",
+            "type": "call, flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 32.0,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Also called a Peewit, after its call, and a Green Plover, after the gloss on its back."
+      },
+      "media": {
+        "card": [
+          310184,
+          310160,
+          310189
+        ],
+        "quiz": [
+          310165,
+          310267,
+          310262,
+          310271,
+          310287,
+          310244,
+          310227,
+          310152
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 11
+      }
+    },
+    {
+      "species_id": 1965,
+      "latin": "Haematopus ostralegus",
+      "name": {
+        "en": "Oystercatcher"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Black and white, stocky"
+        },
+        {
+          "en": "Long, straight orange-red bill"
+        },
+        {
+          "en": "Pink legs and a red eye"
+        }
+      ],
+      "where_when": {
+        "en": "Estuaries and beaches, and more and more on fields, riverbanks and even roofs in the north. Noisy, in groups, probing the ground."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A shrill, piping \"kleep, kleep, kleep\", from a whole group at once."
+        },
+        "chosen": [
+          {
+            "media_id": 1217426,
+            "xeno_canto": "XC879409",
+            "type": "flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 38.1,
+            "background_species": 0,
+            "recordist": "Jorge Leitão"
+          },
+          {
+            "media_id": 1217425,
+            "xeno_canto": "XC881081",
+            "type": "flight call, nocturnal flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 42.9,
+            "background_species": 0,
+            "recordist": "Steve Flynn"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "dont_confuse": {
+        "en": "Lapwing (just before): a crest and a black breast band, with a short, thin bill."
+      },
+      "media": {
+        "card": [
+          305031,
+          305052,
+          305103
+        ],
+        "quiz": [
+          305034,
+          305015,
+          305083,
+          305044,
+          305013,
+          305007,
+          305037
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 11
+      }
+    },
+    {
+      "species_id": 7249,
+      "latin": "Alauda arvensis",
+      "name": {
+        "en": "Skylark"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Streaky brown, a bit bigger than a sparrow"
+        },
+        {
+          "en": "A short crest that it can raise"
+        },
+        {
+          "en": "White along the sides of the tail"
+        }
+      ],
+      "where_when": {
+        "en": "Open fields, moors and dunes. Sings while hovering high in the sky, for minutes at a time. On the ground it is very well hidden."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A non-stop, bubbling song that goes on for minutes, while the bird climbs and hovers high above you."
+        },
+        "chosen": [
+          {
+            "media_id": 1289587,
+            "xeno_canto": "XC971992",
+            "type": "call, song",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 35.3,
+            "background_species": 0,
+            "recordist": "Bram Piot"
+          },
+          {
+            "media_id": 1289580,
+            "xeno_canto": "XC1008315",
+            "type": "song (Ocean.)",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 64.9,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 18
+      },
+      "note": {
+        "en": "Skylarks have declined sharply on farmland since the 1970s."
+      },
+      "media": {
+        "card": [
+          817216,
+          817168,
+          817178
+        ],
+        "quiz": [
+          817210,
+          817189,
+          817111,
+          817112,
+          817176,
+          817209,
+          817132,
+          817172
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 11
+      }
+    },
+    {
+      "species_id": 10180,
+      "latin": "Emberiza citrinella",
+      "name": {
+        "en": "Yellowhammer"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Bright yellow head and underparts"
+        },
+        {
+          "en": "Streaky chestnut-brown back"
+        },
+        {
+          "en": "Long tail with white on the sides"
+        }
+      ],
+      "where_when": {
+        "en": "Hedges and field edges with scattered trees. The male sings from the top of a bush, on a warm day."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "The famous \"little-bit-of-bread-and-no-che-e-ese\": a rattle of short notes, ending with a long, wheezy one."
+        },
+        "chosen": [
+          {
+            "media_id": 1329696,
+            "xeno_canto": "XC919282",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 36.6,
+            "background_species": 0,
+            "recordist": "Martin Billard"
+          },
+          {
+            "media_id": 1329697,
+            "xeno_canto": "XC919281",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 108.0,
+            "background_species": 0,
+            "recordist": "Martin Billard"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "The females are much duller, brownish-yellow with streaks."
+      },
+      "media": {
+        "card": [
+          1076839,
+          1076810,
+          1076785
+        ],
+        "quiz": [
+          1076822,
+          1076815,
+          1076808,
+          1076806,
+          1076799,
+          1076833
+        ]
+      }
+    },
+    {
+      "species_id": 425,
+      "latin": "Phasianus colchicus",
+      "name": {
+        "en": "Pheasant"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Big and chunky, with a very long tail"
+        },
+        {
+          "en": "Red face, bottle-green head and a white neck ring"
+        },
+        {
+          "en": "Coppery body with dark spots"
+        }
+      ],
+      "where_when": {
+        "en": "Fields, woods and hedges. Walks along the ground, and bursts out of the undergrowth with a clatter when startled. Roosts in trees."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, hoarse \"kok-kok\" crow, followed by a whirr of the wings."
+        },
+        "chosen": [
+          {
+            "media_id": 1198640,
+            "xeno_canto": "XC591925",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 31.1,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          },
+          {
+            "media_id": 1198632,
+            "xeno_canto": "XC929867",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 31.0,
+            "background_species": 0,
+            "recordist": "Bram Piot"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "Pheasants were brought here long ago, and tens of millions are released every year for shooting. The female is brown, with a shorter tail."
+      },
+      "media": {
+        "card": [
+          159252,
+          159351,
+          159339
+        ],
+        "quiz": [
+          159249,
+          159325,
+          159344,
+          159356
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 1965,
+    "species_ids": [
+      1997,
+      1965
+    ],
+    "title": {
+      "en": "Lapwing or Oystercatcher?"
+    },
+    "text": {
+      "en": "Both are black and white. The Lapwing has a thin crest, a short bill and a black band across the breast. The Oystercatcher has a long, bright orange bill, and its black goes all the way up to its chest. It also has pink legs."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      8,
+      9
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Walk a field edge, a footpath or a country lane this week, in the morning if you can. Count the Skylarks you hear. Look up, and then look at the hedge: is a Yellowhammer singing from the top?"
+  },
+  "next": {
+    "en": "Next week: birds of prey."
+  },
+  "flow": [
+    "intro",
+    "bird:1997",
+    "bird:1965",
+    "bird:7249",
+    "bird:10180",
+    "bird:425",
+    "quiz",
+    "done"
+  ]
+}

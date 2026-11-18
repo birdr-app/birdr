@@ -5,6 +5,7 @@ import {
   addCommonsPhoto,
   fetchCoursePhotos,
   fetchSpeciesPhotos,
+  photoCourseSlug,
   savePhotoPick,
   startingPick,
   type CandidatePhoto,
@@ -24,13 +25,15 @@ const ROLE_COLOR: Record<Exclude<PhotoRole, ''>, string> = {
 
 /** Staff page: choose the main, card and quiz photos of every bird in the beginners course. */
 export function CoursePhotosPage() {
+  const courseSlug = photoCourseSlug();
+  const weekKey = courseSlug === 'nl-beginners' ? 'course-photos-week' : `course-photos-week:${courseSlug}`;
   const { profile, ready } = useAuthProfile();
   const isStaff = !!(profile?.is_staff || profile?.is_superuser);
   const [lessons, setLessons] = useState<CoursePhotoLesson[] | null>(null);
   const [error, setError] = useState(false);
   const [week, setWeek] = useState(() => {
     try {
-      const w = Number(localStorage.getItem('course-photos-week'));
+      const w = Number(localStorage.getItem(weekKey));
       return w >= 1 ? w : 1;
     } catch {
       return 1;
@@ -47,7 +50,7 @@ export function CoursePhotosPage() {
   const chooseWeek = (w: number) => {
     setWeek(w);
     try {
-      localStorage.setItem('course-photos-week', String(w));
+      localStorage.setItem(weekKey, String(w));
     } catch {
       // only a convenience
     }

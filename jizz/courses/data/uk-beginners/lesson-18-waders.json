@@ -1,0 +1,467 @@
+{
+  "course": "uk-beginners",
+  "week": 18,
+  "slug": "waders",
+  "part": 2,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "en": "Waders"
+  },
+  "subtitle": {
+    "en": "Five birds of the estuary and the shore"
+  },
+  "intro": {
+    "en": "Today we go to the coast. At high tide on an estuary, thousands of waders gather on the last bits of dry land, and there's nothing quite like it. Waders are birds with long legs and bills, which feed in the mud and the shallows.\n\nThey are among the hardest birds for beginners: lots of brown, grey and white, and a lot of birds that look alike. To keep it simple we look at five, each with an obvious feature: the huge curved bill, the red legs, the black belly, the white sprinter, the orange legs.\n\nAt the end there's a quiz of ten questions, with birds from the last two lessons mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "belly patch"
+      },
+      "explain": {
+        "en": "A patch in the middle of the belly."
+      }
+    },
+    {
+      "term": {
+        "en": "upperparts"
+      },
+      "explain": {
+        "en": "The whole top side of a bird: crown, nape, back and wings."
+      }
+    },
+    {
+      "term": {
+        "en": "underparts"
+      },
+      "explain": {
+        "en": "The whole underside of a bird: throat, breast, belly and undertail."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2070,
+      "latin": "Numenius arquata",
+      "name": {
+        "en": "Curlew"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Big and streaky brown"
+        },
+        {
+          "en": "A very long, downward-curved bill"
+        },
+        {
+          "en": "A white wedge on the back in flight"
+        }
+      ],
+      "where_when": {
+        "en": "Estuaries and mudflats in winter, and moorland and rough fields in spring. Probes the mud with its long bill."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A rising, bubbling \"cur-lee\", and a long, bubbling trill in spring: one of the great sounds of the countryside."
+        },
+        "chosen": [
+          {
+            "media_id": 1218618,
+            "xeno_canto": "XC996167",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 44.4,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1218633,
+            "xeno_canto": "XC731275",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 32.7,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It is Britain's largest wader, and is in serious decline."
+      },
+      "media": {
+        "card": [
+          321035,
+          321101,
+          321073
+        ],
+        "quiz": [
+          321010,
+          320997,
+          321064,
+          321096,
+          321108,
+          321081,
+          321014,
+          321021
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 18
+      }
+    },
+    {
+      "species_id": 2122,
+      "latin": "Tringa totanus",
+      "name": {
+        "en": "Redshank"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Bright orange-red legs"
+        },
+        {
+          "en": "Brown with fine spots, and a red base to the bill"
+        },
+        {
+          "en": "In flight: a broad white edge on the back of the wing"
+        }
+      ],
+      "where_when": {
+        "en": "Saltmarshes, estuaries and wet meadows. Often the first bird to see you and give the alarm, flying off with a ringing call."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A ringing, yodelling \"tyu-hu-hu\", the alarm call of the shore."
+        },
+        "chosen": [
+          {
+            "media_id": 1219453,
+            "xeno_canto": "XC922571",
+            "type": "call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 32.2,
+            "background_species": 0,
+            "recordist": "Markus Jacobs"
+          },
+          {
+            "media_id": 1219458,
+            "xeno_canto": "XC859544",
+            "type": "alarm call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 73.7,
+            "background_species": 0,
+            "recordist": "Maarten Sluijter"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          327054,
+          327020,
+          327123
+        ],
+        "quiz": [
+          327015,
+          327103,
+          327112,
+          327162,
+          327165,
+          327136,
+          327027
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 11
+      }
+    },
+    {
+      "species_id": 2149,
+      "latin": "Calidris alpina",
+      "name": {
+        "en": "Dunlin"
+      },
+      "plumage": {
+        "en": "adult, summer and winter"
+      },
+      "look_for": [
+        {
+          "en": "The bill droops a little at the tip"
+        },
+        {
+          "en": "Summer: black **belly patch**, chestnut back"
+        },
+        {
+          "en": "Winter: grey above, white **underparts**"
+        }
+      ],
+      "where_when": {
+        "en": "Estuaries and mudflats, in big flocks that twist and turn in the air. In summer on upland moors."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A rough, buzzing \"treeep\", from a flock."
+        },
+        "chosen": [
+          {
+            "media_id": 1219878,
+            "xeno_canto": "XC282218",
+            "type": "call (social calls)",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 34.6,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1219883,
+            "xeno_canto": "XC172379",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 58.9,
+            "background_species": 0,
+            "recordist": "Michele Peron"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "One of the commonest waders on British estuaries in winter."
+      },
+      "media": {
+        "card": [
+          330962,
+          330975,
+          330987
+        ],
+        "quiz": [
+          330945,
+          330984,
+          330986,
+          331046,
+          331015,
+          331025,
+          331055,
+          331048
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 18
+      }
+    },
+    {
+      "species_id": 2148,
+      "latin": "Calidris alba",
+      "name": {
+        "en": "Sanderling"
+      },
+      "plumage": {
+        "en": "winter plumage"
+      },
+      "look_for": [
+        {
+          "en": "Very pale: silver-grey **upperparts**, snow-white below"
+        },
+        {
+          "en": "Black bill and black legs"
+        },
+        {
+          "en": "Runs like a clockwork toy along the waves"
+        }
+      ],
+      "where_when": {
+        "en": "Sandy beaches, in winter. Chases the waves in and out, picking up small creatures from the sand."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, sharp \"twick\", from a small flock."
+        },
+        "chosen": [
+          {
+            "media_id": 1219867,
+            "xeno_canto": "XC938622",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 14.4,
+            "background_species": 0,
+            "recordist": "Sonothèque ADVL"
+          },
+          {
+            "media_id": 1219855,
+            "xeno_canto": "XC589109",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 31.2,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          330859,
+          330909,
+          330927
+        ],
+        "quiz": [
+          330861,
+          330845,
+          330777,
+          330790,
+          330885,
+          330796,
+          330776,
+          330903
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 18
+      }
+    },
+    {
+      "species_id": 2133,
+      "latin": "Arenaria interpres",
+      "name": {
+        "en": "Turnstone"
+      },
+      "plumage": {
+        "en": "adult, winter"
+      },
+      "look_for": [
+        {
+          "en": "Stocky, with short orange legs"
+        },
+        {
+          "en": "Short, pointed bill"
+        },
+        {
+          "en": "Dark on the breast, white belly"
+        }
+      ],
+      "where_when": {
+        "en": "Rocky shores, harbours and piers. Flips over seaweed and pebbles with its bill, to find food."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A quick, rattling \"tuk-a-tuk-tuk\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1219588,
+            "xeno_canto": "XC1031757",
+            "type": "nocturnal flight call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 35.3,
+            "background_species": 0,
+            "recordist": "Christophe Gruwier"
+          },
+          {
+            "media_id": 1219590,
+            "xeno_canto": "XC673874",
+            "type": "nocturnal flight call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 55.6,
+            "background_species": 0,
+            "recordist": "Mathis Pfreundt"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Turnstones are very confiding: you can often get very close in a harbour."
+      },
+      "media": {
+        "card": [
+          328266,
+          328362
+        ],
+        "quiz": [
+          328388,
+          328391,
+          328245,
+          328240,
+          328302,
+          328328,
+          328392
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 18
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 2148,
+    "species_ids": [
+      2149,
+      2148
+    ],
+    "title": {
+      "en": "Dunlin or Sanderling?"
+    },
+    "text": {
+      "en": "Look at the colour and where they are. A Sanderling in winter is very pale: silver-grey above and snow-white below, and it runs along the waves on a sandy beach. A Dunlin is browner and greyer, with a drooping bill, and feeds in the mud of an estuary."
+    }
+  },
+  "quiz": {
+    "questions": 10,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      16,
+      17
+    ],
+    "review_questions": 3,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Visit an estuary or a beach this week, at high tide if you can. How many kinds of wader can you find? Listen for the Curlew's call and the Redshank's alarm."
+  },
+  "next": {
+    "en": "Next week: big birds of the coast."
+  },
+  "flow": [
+    "intro",
+    "bird:2070",
+    "bird:2122",
+    "bird:2149",
+    "bird:2148",
+    "bird:2133",
+    "quiz",
+    "done"
+  ]
+}

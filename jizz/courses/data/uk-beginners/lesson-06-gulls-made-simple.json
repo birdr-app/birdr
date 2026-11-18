@@ -1,0 +1,390 @@
+{
+  "course": "uk-beginners",
+  "week": 6,
+  "slug": "gulls-made-simple",
+  "part": 1,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "en": "Gulls made simple"
+  },
+  "subtitle": {
+    "en": "The four gulls you will meet almost everywhere"
+  },
+  "intro": {
+    "en": "\"Seagull\" is not a bird. Britain has a dozen or more regular species of gull, and many of the ones you see in a car park are far from the sea. Today we learn the four that cover most of what you will meet: two big ones and two smaller ones.\n\nGulls are hard because they change plumage as they grow up: a young Herring Gull is brown and speckled, and takes four years to turn white and grey. To keep things easy we only look at adults today. Whenever you see a brown gull, just say \"young\" and move on.\n\nAt the end there's a quiz of eight questions, with birds from the last two weeks mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "hood"
+      },
+      "explain": {
+        "en": "A dark head, like a hood over a white body."
+      }
+    },
+    {
+      "term": {
+        "en": "ear spot"
+      },
+      "explain": {
+        "en": "A dark spot behind the eye, where the ear is."
+      }
+    },
+    {
+      "term": {
+        "en": "wing tip"
+      },
+      "explain": {
+        "en": "The end of the wing. On a resting gull it sticks out past the tail."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2241,
+      "latin": "Chroicocephalus ridibundus",
+      "name": {
+        "en": "Black-headed Gull"
+      },
+      "plumage": {
+        "en": "adult, summer and winter"
+      },
+      "look_for": [
+        {
+          "en": "Summer: chocolate-brown **hood**"
+        },
+        {
+          "en": "Winter: white head with a dark **ear spot**"
+        },
+        {
+          "en": "Small and slim, red bill and legs"
+        }
+      ],
+      "where_when": {
+        "en": "Parks, fields, reservoirs and rubbish tips, far from the sea too. In winter it is the gull on the park pond, begging for bread."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A harsh, grating \"kree-ar\", and a lot of squabbling."
+        },
+        "chosen": [
+          {
+            "media_id": 1220919,
+            "xeno_canto": "XC992784",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 33.9,
+            "background_species": 0,
+            "recordist": "Kelle Moreau"
+          },
+          {
+            "media_id": 1220929,
+            "xeno_canto": "XC792490",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 40.0,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The hood is chocolate-brown, not black. It is only worn from spring to late summer."
+      },
+      "media": {
+        "card": [
+          343145,
+          343200
+        ],
+        "quiz": [
+          343109,
+          343144,
+          343107,
+          343234,
+          343197,
+          343122
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 6
+      }
+    },
+    {
+      "species_id": 2261,
+      "latin": "Larus canus",
+      "name": {
+        "en": "Common Gull"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Medium-sized, with a round head and a dark eye"
+        },
+        {
+          "en": "Thin yellow-green bill, with no red spot"
+        },
+        {
+          "en": "Black **wing tip** with big white spots"
+        }
+      ],
+      "where_when": {
+        "en": "Playing fields, farmland and coasts, mostly in winter in the south. In Scotland it also breeds on moors and lochs."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, laughing \"kee-ya, kee-ya\", higher than a Herring Gull."
+        },
+        "chosen": [
+          {
+            "media_id": 1221241,
+            "xeno_canto": "XC801975",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 42.2,
+            "background_species": 0,
+            "recordist": "guus van duin"
+          },
+          {
+            "media_id": 1221240,
+            "xeno_canto": "XC801979",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 57.1,
+            "background_species": 0,
+            "recordist": "guus van duin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Despite its name, it is not the most common gull. That's the Black-headed Gull."
+      },
+      "media": {
+        "card": [
+          346535,
+          346446,
+          346448
+        ],
+        "quiz": [
+          346556,
+          346597,
+          346532,
+          346582,
+          346587,
+          346534,
+          346581,
+          346552
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 6
+      }
+    },
+    {
+      "species_id": 2268,
+      "latin": "Larus argentatus",
+      "name": {
+        "en": "Herring Gull"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Big and bulky, with a pale grey back"
+        },
+        {
+          "en": "Yellow bill with a red spot"
+        },
+        {
+          "en": "Pink legs"
+        }
+      ],
+      "where_when": {
+        "en": "The classic seaside gull, and increasingly in towns too, nesting on roofs. It steals chips from your hand."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "The long, wailing \"kyow-kyow-kyow\" you hear at every seaside."
+        },
+        "chosen": [
+          {
+            "media_id": 1221373,
+            "xeno_canto": "XC953928",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 55.9,
+            "background_species": 0,
+            "recordist": "Sonothèque ADVL"
+          },
+          {
+            "media_id": 1221369,
+            "xeno_canto": "XC1025218",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 38.5,
+            "background_species": 0,
+            "recordist": "Colm Philpott"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It has declined a lot in Britain, and is now on the red list of birds of conservation concern."
+      },
+      "media": {
+        "card": [
+          347808,
+          347777,
+          347819
+        ],
+        "quiz": [
+          347729,
+          347698,
+          347726,
+          347723,
+          347677,
+          347739,
+          347727,
+          347671
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 6
+      }
+    },
+    {
+      "species_id": 2273,
+      "latin": "Larus fuscus",
+      "name": {
+        "en": "Lesser Black-backed Gull"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A little smaller and slimmer than a Herring Gull"
+        },
+        {
+          "en": "Dark grey back"
+        },
+        {
+          "en": "Yellow legs"
+        }
+      ],
+      "where_when": {
+        "en": "Coasts, reservoirs, landfill sites and city rooftops. Many fly south for the winter; some stay."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A deeper, hoarser \"kyow\" than a Herring Gull."
+        },
+        "chosen": [
+          {
+            "media_id": 1221471,
+            "xeno_canto": "XC281182",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 76.4,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1221458,
+            "xeno_canto": "XC1023979",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 73.5,
+            "background_species": 0,
+            "recordist": "Anthony McGeehan"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          348676,
+          348673,
+          348684
+        ],
+        "quiz": [
+          348685,
+          348689,
+          348699,
+          348700,
+          348698,
+          348629,
+          348656
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 6
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 2273,
+    "species_ids": [
+      2268,
+      2273
+    ],
+    "title": {
+      "en": "Herring Gull or Lesser Black-backed Gull?"
+    },
+    "text": {
+      "en": "Look at the back and the legs. Pale grey back and pink legs: Herring Gull. Dark grey back and yellow legs: Lesser Black-backed Gull. The Lesser Black-backed is also a little slimmer."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      4,
+      5
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Look at the gulls near you this week. Is it a Black-headed Gull with a red bill? Or a big one: check the back and the legs. And is it an adult, or one of the brown ones?"
+  },
+  "next": {
+    "en": "Next week: geese in winter."
+  },
+  "flow": [
+    "intro",
+    "bird:2241",
+    "bird:2261",
+    "bird:2268",
+    "bird:2273",
+    "quiz",
+    "done"
+  ]
+}

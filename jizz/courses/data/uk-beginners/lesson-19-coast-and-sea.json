@@ -1,0 +1,358 @@
+{
+  "course": "uk-beginners",
+  "week": 19,
+  "slug": "coast-and-sea",
+  "part": 2,
+  "kind": "species",
+  "season": "any",
+  "minutes": 10,
+  "title": {
+    "en": "Coast and sea"
+  },
+  "subtitle": {
+    "en": "Four big birds of the shore and open water"
+  },
+  "intro": {
+    "en": "For the last lesson of part 2, we stay on the coast, with four big birds. They are easy to recognise when you know what to look for, and some are a surprisingly new sight in Britain: the Little Egret was a rarity until the 1990s.\n\nBig birds are good news for beginners: you can see them from far away, and their shape tells you a lot. A gull-like bird that dives from the sky, a snow-white heron with golden feet, a black bird with its wings hung out to dry, and a smart black-and-white duck.\n\nAt the end there's a quiz of eight questions, with birds from the last two lessons mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "primaries"
+      },
+      "explain": {
+        "en": "The long flight feathers at the tip of the wing."
+      }
+    },
+    {
+      "term": {
+        "en": "thigh patch"
+      },
+      "explain": {
+        "en": "A patch on the thigh, just above the leg."
+      }
+    },
+    {
+      "term": {
+        "en": "plume"
+      },
+      "explain": {
+        "en": "A long, wispy feather, on the head, neck or back."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2630,
+      "latin": "Egretta garzetta",
+      "name": {
+        "en": "Little Egret"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small, slim and all white"
+        },
+        {
+          "en": "Black bill and black legs, with yellow feet"
+        },
+        {
+          "en": "In spring: long **plumes** on the head and back"
+        }
+      ],
+      "where_when": {
+        "en": "Estuaries, marshes, rivers and lakes, mostly in the south and east. Runs through the shallows, stirring up fish with its feet."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A harsh, croaking \"arrk\", given in flight or at a roost."
+        },
+        "chosen": [
+          {
+            "media_id": 1224762,
+            "xeno_canto": "XC1049198",
+            "type": "flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 8.7,
+            "background_species": 0,
+            "recordist": "Agris Celmins"
+          },
+          {
+            "media_id": 1224754,
+            "xeno_canto": "XC773992",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 45.8,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "The first Little Egrets bred in Britain in 1996. Now there are thousands."
+      },
+      "dont_confuse": {
+        "en": "Grey Heron (week 2): bigger and grey, with a pale yellow bill."
+      },
+      "media": {
+        "card": [
+          396495,
+          396570,
+          396438
+        ],
+        "quiz": [
+          396491,
+          396536,
+          396475,
+          396439
+        ]
+      }
+    },
+    {
+      "species_id": 2552,
+      "latin": "Phalacrocorax carbo",
+      "name": {
+        "en": "Cormorant"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Black, with a white **thigh patch** in spring"
+        },
+        {
+          "en": "White cheek, yellow at the gape"
+        },
+        {
+          "en": "Perches with its wings spread out to dry"
+        }
+      ],
+      "where_when": {
+        "en": "Coasts, estuaries, rivers and lakes, inland too. Dives for fish and then sits on a post, with its wings held out."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A deep, croaking \"gorrk\", usually only heard at colonies."
+        },
+        "chosen": [
+          {
+            "media_id": 1224134,
+            "xeno_canto": "XC1059525",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 33.6,
+            "background_species": 0,
+            "recordist": "Sonothèque ADVL"
+          },
+          {
+            "media_id": 1224151,
+            "xeno_canto": "XC771643",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 42.1,
+            "background_species": 0,
+            "recordist": "SonoNatura"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "media": {
+        "card": [
+          385786,
+          385711,
+          385769
+        ],
+        "quiz": [
+          385808,
+          385768,
+          385788,
+          385817,
+          385829,
+          385697,
+          385701,
+          385820
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 19
+      }
+    },
+    {
+      "species_id": 117,
+      "latin": "Tadorna tadorna",
+      "name": {
+        "en": "Shelduck"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Big, black-and-white duck, with a dark green head"
+        },
+        {
+          "en": "Broad chestnut band round the breast"
+        },
+        {
+          "en": "Bright red bill (a knob in the male, in spring)"
+        }
+      ],
+      "where_when": {
+        "en": "Muddy estuaries and shores, and the occasional gravel pit. Sweeps its bill through the mud, and nests in rabbit burrows."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A deep, nasal \"ah-ah-ah\" and, in spring, a whistled \"wheee\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1194304,
+            "xeno_canto": "XC936128",
+            "type": "call, song",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 51.9,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          },
+          {
+            "media_id": 1194310,
+            "xeno_canto": "XC793117",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 62.6,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "It is closer to a goose than to a duck, and much bigger than a Mallard."
+      },
+      "media": {
+        "card": [
+          123367,
+          123352,
+          123305
+        ],
+        "quiz": [
+          123341,
+          123285,
+          123374,
+          123312
+        ]
+      }
+    },
+    {
+      "species_id": 2527,
+      "latin": "Morus bassanus",
+      "name": {
+        "en": "Gannet"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Big and white, with a long pointed bill"
+        },
+        {
+          "en": "Black **primaries** at the tip of the wings"
+        },
+        {
+          "en": "Dives into the sea from a great height, with folded wings"
+        }
+      ],
+      "where_when": {
+        "en": "Over the sea, and at big cliff colonies like Bass Rock, Grassholm and Bempton. Around half the world's Gannets nest in Britain and Ireland."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A harsh, rhythmic \"arrah-arrah\", from a colony, with thousands going at once."
+        },
+        "chosen": [
+          {
+            "media_id": 1223885,
+            "xeno_canto": "XC321464",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 31.8,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1223890,
+            "xeno_canto": "XC134228",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 96.1,
+            "background_species": 0,
+            "recordist": "Fernand DEROUSSEN"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "note": {
+        "en": "Young birds are dark brown with white spots, and slowly turn white over five years."
+      },
+      "media": {
+        "card": [
+          381761,
+          381741,
+          381744
+        ],
+        "quiz": [
+          381696,
+          381697,
+          381695,
+          381694
+        ]
+      }
+    }
+  ],
+  "compare": null,
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      17,
+      18
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Go to the coast this week. Scan the sea for a white bird, diving with its wings folded. Look at the rocks, the posts and the groynes for a Cormorant with its wings spread. In the south or east, check the estuary for a snow-white egret."
+  },
+  "next": {
+    "en": "Next week: the final test."
+  },
+  "flow": [
+    "intro",
+    "bird:2630",
+    "bird:2552",
+    "bird:117",
+    "bird:2527",
+    "quiz",
+    "done"
+  ]
+}

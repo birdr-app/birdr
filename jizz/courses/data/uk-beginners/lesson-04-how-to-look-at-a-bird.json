@@ -1,0 +1,394 @@
+{
+  "course": "uk-beginners",
+  "week": 4,
+  "slug": "how-to-look-at-a-bird",
+  "part": 1,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "en": "How to look at a bird"
+  },
+  "subtitle": {
+    "en": "Four birds and a fixed order for looking"
+  },
+  "intro": {
+    "en": "Today we sit on a bench by a hedge in the park. A small bird shoots into the bushes, and it's gone. A bird often sits still for just a few seconds. Anyone who looks at the colours straight away usually sees too little. That's why experienced birdwatchers look in a fixed order.\n\nFirst size and shape: smaller than a sparrow, about as big as a Blackbird, or bigger? Round or slim, with a long or a short tail? Then the bill: thick, for cracking seeds, or thin, for picking up insects? Only then the colours and markings. And finally behaviour: does it hop, walk, or bob its tail?\n\nWe practise that with four birds from the garden and the park. Each bird has the things to look for in that order. At the end there's a quiz of eight questions, with two birds from earlier lessons mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "mantle"
+      },
+      "explain": {
+        "en": "The upper back, between the wings."
+      }
+    },
+    {
+      "term": {
+        "en": "throat"
+      },
+      "explain": {
+        "en": "The front of the neck, below the bill."
+      }
+    },
+    {
+      "term": {
+        "en": "eyebrow stripe"
+      },
+      "explain": {
+        "en": "A pale stripe above the eye, like an eyebrow."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 8649,
+      "latin": "Sturnus vulgaris",
+      "name": {
+        "en": "Starling"
+      },
+      "plumage": {
+        "en": "adult, speckled (winter) or glossy (summer)"
+      },
+      "look_for": [
+        {
+          "en": "Short and stocky, with a short tail"
+        },
+        {
+          "en": "Long, pointed bill, yellow in summer"
+        },
+        {
+          "en": "Summer: glossy green-purple. Winter: speckled with white"
+        }
+      ],
+      "where_when": {
+        "en": "Everywhere, all year. Walks in small groups over the grass, prodding the ground with its bill. In autumn and winter, huge flocks gather to roost at dusk."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A rambling jumble of clicks, whistles and copied sounds: from a Buzzard to a car alarm, even a mobile ringtone."
+        },
+        "chosen": [
+          {
+            "media_id": 1309991,
+            "xeno_canto": "XC1079535",
+            "type": "imitation, song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 89.7,
+            "background_species": 0,
+            "recordist": "Jorge Leitão"
+          },
+          {
+            "media_id": 1310005,
+            "xeno_canto": "XC946413",
+            "type": "alarm call, call, flight call, song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 423.5,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "en": "The white spots are the tips of new feathers. Over the winter they wear off, and by spring the Starling is glossy and dark."
+      },
+      "dont_confuse": {
+        "en": "Blackbird (week 1): longer tail, hops instead of walking, and often alone."
+      },
+      "media": {
+        "card": [
+          927133,
+          927131,
+          927124
+        ],
+        "quiz": [
+          927220,
+          927136,
+          927125,
+          927204,
+          927119,
+          927277,
+          927278,
+          927266
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 4
+      }
+    },
+    {
+      "species_id": 9925,
+      "latin": "Fringilla coelebs",
+      "name": {
+        "en": "Chaffinch"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "As big as a sparrow, with a longer tail"
+        },
+        {
+          "en": "Short, thick bill: a seed-eater"
+        },
+        {
+          "en": "Blue-grey cap, pinkish breast, chestnut **mantle**"
+        }
+      ],
+      "where_when": {
+        "en": "Woods, parks, gardens and hedges. Scratches around under feeders. In flight you see a lot of white in wing and tail. One of the commonest birds in Britain."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A cheerful rattle that runs downhill and ends with a flourish, from February to July. Its call is a ringing \"pink\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1326230,
+            "xeno_canto": "XC1013520",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 76.0,
+            "background_species": 0,
+            "recordist": "Romuald Mikusek"
+          },
+          {
+            "media_id": 1326214,
+            "xeno_canto": "XC1079234",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 68.2,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "media": {
+        "card": [
+          1050523,
+          1050520,
+          1050504
+        ],
+        "quiz": [
+          1050481,
+          1050596,
+          1050586,
+          1050521,
+          1050486,
+          1050551,
+          1050518,
+          1050554
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 4
+      }
+    },
+    {
+      "species_id": 9810,
+      "latin": "Prunella modularis",
+      "name": {
+        "en": "Dunnock"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "About as big as a sparrow, but slimmer"
+        },
+        {
+          "en": "Thin, pointed bill: an insect-eater"
+        },
+        {
+          "en": "Grey head and **throat**, streaky brown back"
+        }
+      ],
+      "where_when": {
+        "en": "Shuffles along the ground under hedges and shrubs, flicking its wings. Alone or in pairs. Often called a hedge sparrow, but it is not a sparrow at all."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A fast, high, tinkling warble from the top of a bush, quieter than a Wren's."
+        },
+        "chosen": [
+          {
+            "media_id": 1324457,
+            "xeno_canto": "XC982393",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 37.4,
+            "background_species": 0,
+            "recordist": "Benjamin Drillat"
+          },
+          {
+            "media_id": 1324451,
+            "xeno_canto": "XC1011603",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 35.4,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "dont_confuse": {
+        "en": "House Sparrow (week 1): thick bill, and the male has a black bib."
+      },
+      "media": {
+        "card": [
+          1037380,
+          1037394,
+          1037435
+        ],
+        "quiz": [
+          1037361,
+          1037507,
+          1037489,
+          1037445,
+          1037502,
+          1037523,
+          1037384,
+          1037439
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 4
+      }
+    },
+    {
+      "species_id": 8529,
+      "latin": "Troglodytes troglodytes",
+      "name": {
+        "en": "Wren"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Tiny and round, tail cocked up"
+        },
+        {
+          "en": "Thin, slightly curved bill"
+        },
+        {
+          "en": "Warm brown, with a pale **eyebrow stripe**"
+        }
+      ],
+      "where_when": {
+        "en": "Low in bushes, ivy and log piles. Rarely sits in the open, except to sing. In cold winters, dozens roost together in one nest box."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "Deafening for such a little bird: fast and clear, about five seconds long, with a rattling trill."
+        },
+        "chosen": [
+          {
+            "media_id": 1308225,
+            "xeno_canto": "XC1055856",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 62.1,
+            "background_species": 0,
+            "recordist": "François Guibert"
+          },
+          {
+            "media_id": 1308207,
+            "xeno_canto": "XC1079264",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 34.0,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          916216,
+          916142,
+          916148
+        ],
+        "quiz": [
+          916156,
+          916168,
+          916223,
+          916210,
+          916144,
+          916287,
+          916179,
+          916260
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 4
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 8529,
+    "species_ids": [
+      9810,
+      8529
+    ],
+    "title": {
+      "en": "Dunnock or Wren?"
+    },
+    "text": {
+      "en": "Look at size and tail first. A Wren is tiny and round, and holds its tail cocked up. A Dunnock is slimmer, holds its tail low, and has a grey head and throat."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      2,
+      3
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Pick a hedge near you and watch it for ten minutes. In which order do you see things: size, bill, colours, behaviour? Try saying them out loud."
+  },
+  "next": {
+    "en": "Next week: the other half. Female and young birds of birds you already know."
+  },
+  "flow": [
+    "intro",
+    "bird:8649",
+    "bird:9925",
+    "bird:9810",
+    "bird:8529",
+    "quiz",
+    "done"
+  ]
+}

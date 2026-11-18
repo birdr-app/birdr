@@ -69,3 +69,78 @@ class MarketingCourseTestCase(TestCase):
     def test_english_pages_have_no_course_link(self):
         page = self.client.get('/site/').content.decode()
         self.assertNotIn('vogelcursus', page)
+
+
+class MarketingUkCourseTestCase(TestCase):
+    def setUp(self):
+        cache.clear()
+        from jizz.courses.content import course_lessons
+
+        self.first = course_lessons('uk-beginners')[0]
+        bird = self.first['birds'][0]
+        self.bird_name = bird['name']['en'] if isinstance(bird['name'], dict) else bird['name']
+        species = Species.objects.create(
+            id=bird['species_id'], name='Eurasian Blackbird', name_latin='Turdus merula', code='eurbla',
+        )
+        for media_id in bird['media']['card']:
+            Media.objects.create(
+                id=media_id, species=species, type='image', source='inaturalist', contributor='Sam',
+                url='https://inaturalist-open-data.s3.amazonaws.com/photos/1/original.jpg',
+            )
+
+    def test_other_languages_go_to_the_english_page(self):
+        response = self.client.get('/nl/site/bird-course/')
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response['Location'], '/site/bird-course/')
+        response = self.client.get('/de/site/bird-course/lesson-1-your-first-five/')
+        self.assertEqual(response['Location'], '/site/bird-course/lesson-1-your-first-five/')
+
+    def test_overview_lists_the_lessons(self):
+        response = self.client.get('/site/bird-course/')
+        self.assertEqual(response.status_code, 200)
+        page = response.content.decode()
+        self.assertIn('Your first five', page)
+        self.assertIn('/site/bird-course/lesson-20-', page)
+        self.assertIn('Part 1: the basics', page)
+        self.assertIn('Part 2: habitats', page)
+        self.assertIn('"@type": "Course"', page)
+        self.assertIn('"inLanguage": "en"', page)
+        self.assertIn('"storage_key": "course:uk-beginners:progress"', page)
+        self.assertNotIn('hreflang="nl"', page)
+        self.assertRegex(page, r'rel="canonical" href="https?://[^"]+/site/bird-course/"')
+        self.assertIn('Bird course</a>', page)  # menu link for English visitors
+
+    def test_lesson_page_has_the_birds_and_the_quiz(self):
+        response = self.client.get('/site/bird-course/lesson-1-your-first-five/')
+        self.assertEqual(response.status_code, 200)
+        page = response.content.decode()
+        self.assertIn(f'<h2>{self.bird_name}</h2>', page)
+        self.assertIn('Bird course · Lesson 1', page)
+        self.assertIn('Start the quiz', page)
+        self.assertIn('medium.jpg', page)
+        data = json.loads(re.search(r'<script id="quiz-data" type="application/json">(.*?)</script>', page, re.S).group(1))
+        self.assertEqual(data['week'], 1)
+        ui = json.loads(re.search(r'<script id="course-ui" type="application/json">(.*?)</script>', page, re.S).group(1))
+        self.assertEqual(ui['which_see'], 'Which bird is this?')
+        self.assertEqual(ui['storage_key'], 'course:uk-beginners:progress')
+
+    def test_wrong_slug_redirects_and_unknown_week_is_404(self):
+        response = self.client.get('/site/bird-course/lesson-1-something-else/')
+        self.assertEqual(response.status_code, 301)
+        self.assertEqual(response['Location'], '/site/bird-course/lesson-1-your-first-five/')
+        self.assertEqual(self.client.get('/site/bird-course/lesson-99-nothing/').status_code, 404)
+
+    def test_sitemap_lists_each_course_in_its_own_language(self):
+        xml = self.client.get('/sitemap-course.xml').content.decode()
+        self.assertIn('/site/bird-course/</loc>', xml)
+        self.assertIn('/site/bird-course/lesson-1-your-first-five/</loc>', xml)
+        self.assertNotIn('/nl/site/bird-course/', xml)
+        self.assertNotIn('/de/site/bird-course/', xml)
+        self.assertNotIn('<loc>http://testserver/site/vogelcursus/</loc>', xml)
+        self.assertIn('/nl/site/vogelcursus/</loc>', xml)
+        self.assertNotIn('hreflang', xml)
+
+    def test_english_home_links_to_the_course(self):
+        page = self.client.get('/site/').content.decode()
+        self.assertIn('/site/bird-course/', page)
+        self.assertNotIn('vogelcursus', page)

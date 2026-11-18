@@ -38,7 +38,17 @@ export type CandidatePhoto = {
   rejected: number;
 };
 
-const base = () => `${getApiBaseUrl()}/api/courses/${COURSE_SLUG}/photos`;
+/** The course being edited: `?course=uk-beginners` in the page address, else the Dutch course. */
+export function photoCourseSlug(): string {
+  try {
+    const slug = new URLSearchParams(window.location.search).get('course');
+    return slug && /^[a-z0-9-]+$/.test(slug) ? slug : COURSE_SLUG;
+  } catch {
+    return COURSE_SLUG;
+  }
+}
+
+const base = () => `${getApiBaseUrl()}/api/courses/${photoCourseSlug()}/photos`;
 
 export async function fetchCoursePhotos(): Promise<CoursePhotoLesson[]> {
   const res = await axios.get<{ lessons: CoursePhotoLesson[] }>(`${base()}/`);

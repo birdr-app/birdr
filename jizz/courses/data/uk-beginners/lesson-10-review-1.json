@@ -1,0 +1,50 @@
+{
+  "course": "uk-beginners",
+  "week": 10,
+  "slug": "review-1",
+  "part": 1,
+  "kind": "review",
+  "season": "any",
+  "minutes": 15,
+  "title": {
+    "en": "Review"
+  },
+  "subtitle": {
+    "en": "All of the first nine weeks in one quiz"
+  },
+  "intro": {
+    "en": "Congratulations: you have nearly finished part 1 of the course! Nine weeks ago you started with five garden birds. Now you recognise Blackbirds, sparrows and tits, ducks, geese and gulls, and a few birds even by their song. You know 35 species, plus the females and young birds from week 5. That is about forty birds in all.\n\nThis week you don't learn anything new. Instead there is a longer quiz of fifteen questions, with birds from all nine lessons mixed up. That's harder than a normal quiz, because now any bird can come up. Take your time and look the way you learned in week 4: first size and shape, then the bill, then the colours.\n\nGot a bird wrong? Look it up in the lesson where it came, and read again what to look for. Don't worry if there are a few: experienced birdwatchers get stuck sometimes too."
+  },
+  "words": [],
+  "birds": [],
+  "compare": null,
+  "quiz": {
+    "questions": 15,
+    "photos_from": "quiz",
+    "answers_from": "review",
+    "review_from": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "review_questions": 15,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Take a half-hour walk this week through your neighbourhood, the park or along the water. How many species from part 1 do you see or hear? Write them down. Twenty is very good. Bonus: pick a bird you got wrong in the quiz, and go looking for it on purpose."
+  },
+  "next": {
+    "en": "Next week part 2 begins: farmland birds."
+  },
+  "flow": [
+    "intro",
+    "quiz",
+    "done"
+  ]
+}

@@ -1,0 +1,465 @@
+{
+  "course": "uk-beginners",
+  "week": 2,
+  "slug": "at-the-pond",
+  "part": 1,
+  "kind": "species",
+  "season": "any",
+  "minutes": 10,
+  "title": {
+    "en": "At the pond"
+  },
+  "subtitle": {
+    "en": "Five birds of every park pond and canal"
+  },
+  "intro": {
+    "en": "Today we walk to the pond in the park. Britain is full of water, and the five birds in this lesson live on almost all of it: from the canal in town to the lake in the country park.\n\nWater birds are the perfect place to train your eye. They are big, they sit still, and they let you look closely. We start with the most familiar duck in the country and end with a bird that can stand still for half an hour.\n\nAt the end there's a quiz of eight questions, with two birds from last week mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "bill"
+      },
+      "explain": {
+        "en": "The beak."
+      }
+    },
+    {
+      "term": {
+        "en": "frontal shield"
+      },
+      "explain": {
+        "en": "A bare, coloured plate above the bill."
+      }
+    },
+    {
+      "term": {
+        "en": "flank"
+      },
+      "explain": {
+        "en": "The side of the body, below the wing."
+      }
+    },
+    {
+      "term": {
+        "en": "undertail"
+      },
+      "explain": {
+        "en": "The feathers under the tail."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 165,
+      "latin": "Anas platyrhynchos",
+      "name": {
+        "en": "Mallard"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Shiny green head"
+        },
+        {
+          "en": "Thin white neck ring"
+        },
+        {
+          "en": "Yellow **bill**, and a little black curl on the tail"
+        }
+      ],
+      "where_when": {
+        "en": "Every pond, canal and ditch, all year."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "The famous \"quack\" is the female; the male gives a soft, nasal \"rhaeb\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1194961,
+            "xeno_canto": "XC1029063",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 81.1,
+            "background_species": 0,
+            "recordist": "Xavier Riera"
+          },
+          {
+            "media_id": 1194970,
+            "xeno_canto": "XC705240",
+            "type": "call (take-off call)",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35.8,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Ducks with odd white patches in parks are usually farmyard Mallards. Leave them for later. The brown female comes in week 5."
+      },
+      "media": {
+        "card": [
+          130461,
+          130413,
+          130495
+        ],
+        "quiz": [
+          130479,
+          130478,
+          130492,
+          130521,
+          130532
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 2
+      }
+    },
+    {
+      "species_id": 1851,
+      "latin": "Fulica atra",
+      "name": {
+        "en": "Coot"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "All black, round body"
+        },
+        {
+          "en": "White **bill** and white **frontal shield**"
+        },
+        {
+          "en": "Dives and pops back up like a cork"
+        }
+      ],
+      "where_when": {
+        "en": "Open water, often in groups in winter. Quarrels loudly in spring."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, sharp \"kowp!\", like a cork leaving a bottle."
+        },
+        "chosen": [
+          {
+            "media_id": 1215918,
+            "xeno_canto": "XC747271",
+            "type": "call (various calls)",
+            "country": "Denmark",
+            "quality": "A",
+            "seconds": 84.5,
+            "background_species": 0,
+            "recordist": "Agris Celmins"
+          },
+          {
+            "media_id": 1215903,
+            "xeno_canto": "XC993311",
+            "type": "call",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 42.7,
+            "background_species": 0,
+            "recordist": "Uku Paal"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          291407,
+          291278,
+          291296
+        ],
+        "quiz": [
+          291419,
+          291277,
+          291337,
+          291408,
+          291340
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 2
+      }
+    },
+    {
+      "species_id": 1843,
+      "latin": "Gallinula chloropus",
+      "name": {
+        "en": "Moorhen"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Red **frontal shield** and bill with a yellow tip"
+        },
+        {
+          "en": "White line along the **flank**"
+        },
+        {
+          "en": "Flicks its white **undertail** as it walks"
+        }
+      ],
+      "where_when": {
+        "en": "Edges of ditches and ponds, often on the grass. Nods its head while swimming."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A sudden, gurgling \"kurruk\" from the reeds."
+        },
+        "chosen": [
+          {
+            "media_id": 1215784,
+            "xeno_canto": "XC792811",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 32.4,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          },
+          {
+            "media_id": 1215790,
+            "xeno_canto": "XC655648",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 47.0,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          290130,
+          290129,
+          290191
+        ],
+        "quiz": [
+          290192,
+          290253,
+          290111,
+          290185,
+          290246,
+          290248
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 2
+      }
+    },
+    {
+      "species_id": 93,
+      "latin": "Cygnus olor",
+      "name": {
+        "en": "Mute Swan"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Big and all white"
+        },
+        {
+          "en": "Orange **bill** with a black knob at the base"
+        },
+        {
+          "en": "Swims with the neck in an elegant S-curve"
+        }
+      ],
+      "where_when": {
+        "en": "Rivers, canals, lakes and flooded fields, all year."
+      },
+      "sound": {
+        "type": "other",
+        "describe": {
+          "en": "Not a voice: listen to the throbbing \"wing-wing-wing\" of its wings in flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1193992,
+            "xeno_canto": "XC780323",
+            "type": "flight call (wingbeats)",
+            "country": "France",
+            "quality": "A",
+            "seconds": 45.3,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1193997,
+            "xeno_canto": "XC706444",
+            "type": "not specified (wingbeats)",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 40.7,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Grey-brown swans are this year's young: week 5."
+      },
+      "media": {
+        "card": [
+          119769,
+          119695,
+          119784
+        ],
+        "quiz": [
+          119699,
+          119737,
+          119733,
+          119785,
+          119672,
+          119729,
+          119783
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 2
+      }
+    },
+    {
+      "species_id": 2652,
+      "latin": "Ardea cinerea",
+      "name": {
+        "en": "Grey Heron"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Tall and grey, with a long neck and legs"
+        },
+        {
+          "en": "Black stripe from the eye ending in a thin plume"
+        },
+        {
+          "en": "Flies with the neck pulled in, legs sticking out behind"
+        }
+      ],
+      "where_when": {
+        "en": "Stands motionless at the water's edge, in fields, and beside garden fish ponds."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, hoarse \"fraank\" in flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1224971,
+            "xeno_canto": "XC947557",
+            "type": "call, flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 41.1,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1224968,
+            "xeno_canto": "XC996264",
+            "type": "flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 88.2,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          399944,
+          399818,
+          399832
+        ],
+        "quiz": [
+          399827,
+          399811,
+          399855,
+          399894,
+          399951,
+          399949,
+          399837,
+          399958
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 2
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 1843,
+    "species_ids": [
+      1851,
+      1843
+    ],
+    "title": {
+      "en": "Coot or Moorhen?"
+    },
+    "text": {
+      "en": "Look at the face. White shield: Coot. Red shield with a yellow tip: Moorhen. The Moorhen also has that white line along its side and walks on the grass much more."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      1
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Walk past a pond or canal. Coots or Moorhens: which do you see more? Find a heron and time how long it stands still."
+  },
+  "next": {
+    "en": "Next week: pigeons and crows."
+  },
+  "flow": [
+    "intro",
+    "bird:165",
+    "bird:1851",
+    "bird:1843",
+    "bird:93",
+    "bird:2652",
+    "quiz",
+    "done"
+  ]
+}

@@ -1,0 +1,455 @@
+{
+  "course": "uk-beginners",
+  "week": 13,
+  "slug": "in-the-woods",
+  "part": 2,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "en": "In the woods"
+  },
+  "subtitle": {
+    "en": "Five birds of the trunk, the branches and the treetops"
+  },
+  "intro": {
+    "en": "Today we walk into the wood. Woodland birds are often heard before they are seen, and when you do spot one it is usually high up, in a tangle of branches. That is why it helps to know what they do: some climb up the trunk, one climbs down it, and one just flies through with a screech.\n\nA wood is also a good place to practise what you learned in week 4: size and shape first, then colours. We start with the woodpecker, the one everybody wants to see.\n\nAt the end there's a quiz of ten questions, with birds from the last two lessons mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "moustache"
+      },
+      "explain": {
+        "en": "A stripe that runs down from the bill, along the side of the throat."
+      }
+    },
+    {
+      "term": {
+        "en": "tail feathers"
+      },
+      "explain": {
+        "en": "The long, stiff feathers of the tail."
+      }
+    },
+    {
+      "term": {
+        "en": "wing patch"
+      },
+      "explain": {
+        "en": "A patch of a different colour on the folded wing."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 3813,
+      "latin": "Dendrocopos major",
+      "name": {
+        "en": "Great Spotted Woodpecker"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Black and white, with big white shoulder patches"
+        },
+        {
+          "en": "Bright red undertail"
+        },
+        {
+          "en": "Male: a red patch on the nape"
+        }
+      ],
+      "where_when": {
+        "en": "Woods, parks and big gardens, and on peanut feeders. Climbs up a tree trunk in jerks, and hammers on the wood."
+      },
+      "sound": {
+        "type": "other",
+        "describe": {
+          "en": "Not a song but a drum: a fast, short burst of hammering on a branch, in late winter and spring."
+        },
+        "chosen": [
+          {
+            "media_id": 1239975,
+            "xeno_canto": "XC1079930",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 39.8,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          },
+          {
+            "media_id": 1239978,
+            "xeno_canto": "XC1061195",
+            "type": "song (feeding)",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 49.4,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The young bird has a red crown. The adult female has no red on the head at all."
+      },
+      "media": {
+        "card": [
+          529602,
+          529631,
+          529558
+        ],
+        "quiz": [
+          529610,
+          529599,
+          529526,
+          529576,
+          529513,
+          529556,
+          529502
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 13
+      }
+    },
+    {
+      "species_id": 8474,
+      "latin": "Sitta europaea",
+      "name": {
+        "en": "Nuthatch"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Blue-grey back, orange-buff belly"
+        },
+        {
+          "en": "Black stripe through the eye"
+        },
+        {
+          "en": "Climbs down the trunk head first"
+        }
+      ],
+      "where_when": {
+        "en": "Old woods and parks with big trees, mostly in England and Wales. Wedges nuts in the bark and hammers them open."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, ringing \"chwit-chwit-chwit\" and a piping whistle."
+        },
+        "chosen": [
+          {
+            "media_id": 1307305,
+            "xeno_canto": "XC883622",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 41.6,
+            "background_species": 0,
+            "recordist": "SonoNatura"
+          },
+          {
+            "media_id": 1307294,
+            "xeno_canto": "XC972628",
+            "type": "call",
+            "country": "Italy",
+            "quality": "A",
+            "seconds": 63.1,
+            "background_species": 0,
+            "recordist": "Francesco Sottile"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          911352,
+          911317,
+          911336
+        ],
+        "quiz": [
+          911337,
+          911316,
+          911401,
+          911322,
+          911360,
+          911358,
+          911459
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 13
+      }
+    },
+    {
+      "species_id": 6914,
+      "latin": "Garrulus glandarius",
+      "name": {
+        "en": "Jay"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Pinkish-brown body, black tail"
+        },
+        {
+          "en": "Blue and black barred **wing patch**"
+        },
+        {
+          "en": "Black **moustache** by the bill"
+        }
+      ],
+      "where_when": {
+        "en": "Woods, parks and gardens with oak trees. Buries acorns for the winter, and forgets many, which grow into new oaks."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A harsh, screeching \"skraaak!\", often the first sign it is there."
+        },
+        "chosen": [
+          {
+            "media_id": 1284927,
+            "xeno_canto": "XC1075821",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 36.0,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          },
+          {
+            "media_id": 1284929,
+            "xeno_canto": "XC1063204",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 40.4,
+            "background_species": 0,
+            "recordist": "Jacobo Ramil Millarengo"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          782723,
+          782811,
+          782827
+        ],
+        "quiz": [
+          782740,
+          782714,
+          782829,
+          782828,
+          782796,
+          782778,
+          782732
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 13
+      }
+    },
+    {
+      "species_id": 8477,
+      "latin": "Certhia familiaris",
+      "name": {
+        "en": "Treecreeper"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small, speckled brown above, white below"
+        },
+        {
+          "en": "Thin, curved bill"
+        },
+        {
+          "en": "Props itself on stiff **tail feathers** against the trunk"
+        }
+      ],
+      "where_when": {
+        "en": "Trunks of old trees, spiralling upwards, then flying down to the bottom of the next tree. Easy to miss: it looks like a bit of moving bark."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A thin, high, tinkling song, ending in a little flourish."
+        },
+        "chosen": [
+          {
+            "media_id": 1307355,
+            "xeno_canto": "XC636121",
+            "type": "song",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 41.1,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1307340,
+            "xeno_canto": "XC1005084",
+            "type": "call, song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 37.0,
+            "background_species": 0,
+            "recordist": "Ulf Elman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use"
+      },
+      "media": {
+        "card": [
+          911848,
+          911774,
+          911842
+        ],
+        "quiz": [
+          911841,
+          911836,
+          911829,
+          911796,
+          911762,
+          911856
+        ]
+      }
+    },
+    {
+      "species_id": 7948,
+      "latin": "Aegithalos caudatus",
+      "name": {
+        "en": "Long-tailed Tit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A round ball with a very long tail"
+        },
+        {
+          "en": "Pink, black and white"
+        },
+        {
+          "en": "White head, with a broad black stripe over the eye"
+        }
+      ],
+      "where_when": {
+        "en": "Woods, hedges and, in winter, gardens. Moves around in flocks of up to a dozen, calling all the time."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A thin, high \"see-see-see\" and a short, rolling \"tsrrup\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1300074,
+            "xeno_canto": "XC973579",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35.1,
+            "background_species": 0,
+            "recordist": "Esteban Vilboux"
+          },
+          {
+            "media_id": 1300070,
+            "xeno_canto": "XC1067264",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 56.7,
+            "background_species": 0,
+            "recordist": "Laura Martin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It is not a real tit but belongs to a family of its own. The nest is a ball of moss, spider webs and feathers."
+      },
+      "media": {
+        "card": [
+          872951,
+          872987,
+          872944
+        ],
+        "quiz": [
+          872945,
+          872989,
+          873054,
+          872941,
+          872927,
+          872922
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 13
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 8477,
+    "species_ids": [
+      8474,
+      8477
+    ],
+    "title": {
+      "en": "Nuthatch or Treecreeper?"
+    },
+    "text": {
+      "en": "Both climb trunks, but they look different. The Nuthatch is bigger, blue-grey above and orange below, with a black eye stripe, and it climbs down head first. The Treecreeper is small, brown and speckled with a thin curved bill, and it only climbs up."
+    }
+  },
+  "quiz": {
+    "questions": 10,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      11,
+      12
+    ],
+    "review_questions": 3,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Walk through a wood this week and stop every few minutes to listen. Look at the trunks: is something climbing? Look for a Great Spotted Woodpecker's hole, a round hole in a dead branch."
+  },
+  "next": {
+    "en": "Next week: reeds and wetlands."
+  },
+  "flow": [
+    "intro",
+    "bird:3813",
+    "bird:8474",
+    "bird:6914",
+    "bird:8477",
+    "bird:7948",
+    "quiz",
+    "done"
+  ]
+}

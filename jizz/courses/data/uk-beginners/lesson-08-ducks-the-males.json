@@ -1,0 +1,456 @@
+{
+  "course": "uk-beginners",
+  "week": 8,
+  "slug": "ducks-the-males",
+  "part": 1,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "en": "Ducks: the males"
+  },
+  "subtitle": {
+    "en": "Five ducks, each with one striking feature"
+  },
+  "intro": {
+    "en": "Today it's the ducks' turn. In winter, drakes wear their smartest plumage, and they are easy to tell apart. The females look much more alike, and we leave those to a later course. Look for the males.\n\nEach of these five has one thing that gives it away: a hanging crest, a green eye stripe, a yellow forehead, a black rear end, a huge spoon-shaped bill. If you have the habit of looking at the shape first, as in week 4, you will get these quickly.\n\nAt the end there's a quiz of eight questions, with birds from the last two weeks mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "crest"
+      },
+      "explain": {
+        "en": "Long feathers on the head that stand up or hang down."
+      }
+    },
+    {
+      "term": {
+        "en": "eye stripe"
+      },
+      "explain": {
+        "en": "A stripe through or behind the eye."
+      }
+    },
+    {
+      "term": {
+        "en": "rump"
+      },
+      "explain": {
+        "en": "The area between the back and the tail."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 202,
+      "latin": "Aythya fuligula",
+      "name": {
+        "en": "Tufted Duck"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Black, with bright white flanks"
+        },
+        {
+          "en": "A hanging **crest** at the back of the head"
+        },
+        {
+          "en": "Bright yellow eye"
+        }
+      ],
+      "where_when": {
+        "en": "Park lakes, reservoirs and gravel pits, all year. Dives for food and bobs up like a cork."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Not very vocal; a soft, whistled \"wheeoo\" in the breeding season."
+        },
+        "chosen": [
+          {
+            "media_id": 1195388,
+            "xeno_canto": "XC1001514",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 36.8,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1195390,
+            "xeno_canto": "XC736695",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 53.9,
+            "background_species": 0,
+            "recordist": "Alan Dalton"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          135672,
+          135677,
+          135611
+        ],
+        "quiz": [
+          135604,
+          135537,
+          135519,
+          135518,
+          135635,
+          135638
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 8
+      }
+    },
+    {
+      "species_id": 175,
+      "latin": "Anas crecca",
+      "name": {
+        "en": "Teal"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Small: much smaller than a Mallard"
+        },
+        {
+          "en": "Chestnut head with a green **eye stripe**"
+        },
+        {
+          "en": "A yellow triangle by the tail"
+        }
+      ],
+      "where_when": {
+        "en": "Shallow pools and marshes, mostly in winter. Hides at the edge of the reeds, and takes off straight up when disturbed."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, clear \"krrit\" or \"pip\", like a whistle on a squeaky toy."
+        },
+        "chosen": [
+          {
+            "media_id": 1195118,
+            "xeno_canto": "XC698774",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 66.4,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          },
+          {
+            "media_id": 1195108,
+            "xeno_canto": "XC998356",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 49.4,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          132066,
+          132048,
+          131951
+        ],
+        "quiz": [
+          131965,
+          131970,
+          132019,
+          131991,
+          132086,
+          131957,
+          132065
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 8
+      }
+    },
+    {
+      "species_id": 152,
+      "latin": "Mareca penelope",
+      "name": {
+        "en": "Wigeon"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Chestnut head with a yellow forehead"
+        },
+        {
+          "en": "Pinkish-grey breast"
+        },
+        {
+          "en": "Short, blue-grey bill"
+        }
+      ],
+      "where_when": {
+        "en": "Estuaries, wet grassland and flooded fields in winter, in big flocks. Grazes on grass, like a small goose."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A clear, whistled \"whee-oo\" from a flock, one of the great sounds of winter wetlands."
+        },
+        "chosen": [
+          {
+            "media_id": 1194774,
+            "xeno_canto": "XC994797",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 43.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1194775,
+            "xeno_canto": "XC994796",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 34.8,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          128595,
+          128645,
+          128560
+        ],
+        "quiz": [
+          128600,
+          128680,
+          128662,
+          128574,
+          128687,
+          128714,
+          128724
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 8
+      }
+    },
+    {
+      "species_id": 150,
+      "latin": "Mareca strepera",
+      "name": {
+        "en": "Gadwall"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Grey, with fine wavy lines up close"
+        },
+        {
+          "en": "Black **rump** and undertail"
+        },
+        {
+          "en": "Small white patch on the wing"
+        }
+      ],
+      "where_when": {
+        "en": "Lakes and gravel pits, mostly in the south and east. Easy to overlook; a plain grey duck with a smart black rear end."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, rasping \"reb\" or \"kaak\", a bit like a Mallard."
+        },
+        "chosen": [
+          {
+            "media_id": 1194731,
+            "xeno_canto": "XC995001",
+            "type": "alarm call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 37.7,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1194748,
+            "xeno_canto": "XC323621",
+            "type": "alarm call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 33.9,
+            "background_species": 0,
+            "recordist": "Ashley Fisher"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          128233,
+          128247,
+          128262
+        ],
+        "quiz": [
+          128242,
+          128255,
+          128254,
+          128379,
+          128299,
+          128336,
+          128383,
+          128374
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 8
+      }
+    },
+    {
+      "species_id": 149,
+      "latin": "Spatula clypeata",
+      "name": {
+        "en": "Shoveler"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Enormous bill, as broad as a spade"
+        },
+        {
+          "en": "Green head, with a yellow eye"
+        },
+        {
+          "en": "White breast, chestnut flanks"
+        }
+      ],
+      "where_when": {
+        "en": "Shallow lakes, flooded fields and marshes. Swims low, with the bill held down, sweeping it through the water."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, hollow \"took-took\" in the breeding season."
+        },
+        "chosen": [
+          {
+            "media_id": 1194729,
+            "xeno_canto": "XC992752",
+            "type": "flight call, nocturnal flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 12.7,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1194726,
+            "xeno_canto": "XC996356",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 10.0,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 16
+      },
+      "media": {
+        "card": [
+          128168,
+          128054,
+          128088
+        ],
+        "quiz": [
+          128186,
+          128214,
+          128064,
+          128152,
+          128085,
+          128162,
+          128139
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 8
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 152,
+    "species_ids": [
+      175,
+      152
+    ],
+    "title": {
+      "en": "Teal or Wigeon?"
+    },
+    "text": {
+      "en": "Both have a chestnut head. The Teal is small, with a green stripe through the eye and a yellow triangle by the tail. The Wigeon is bigger, with a yellow forehead and a pinkish breast."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      6,
+      7
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Go to a lake, a reservoir or a nature reserve in winter and look through the ducks. Which of the five can you find? Take a good look at the head and the bill first."
+  },
+  "next": {
+    "en": "Next week: your first songs."
+  },
+  "flow": [
+    "intro",
+    "bird:202",
+    "bird:175",
+    "bird:152",
+    "bird:150",
+    "bird:149",
+    "quiz",
+    "done"
+  ]
+}

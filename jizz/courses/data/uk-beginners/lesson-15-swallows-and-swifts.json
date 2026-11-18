@@ -1,0 +1,380 @@
+{
+  "course": "uk-beginners",
+  "week": 15,
+  "slug": "swallows-and-swifts",
+  "part": 2,
+  "kind": "species",
+  "season": "summer",
+  "minutes": 10,
+  "title": {
+    "en": "Swallows and swifts"
+  },
+  "subtitle": {
+    "en": "Four fast fliers, and one of them is not a swallow"
+  },
+  "intro": {
+    "en": "In April a small bird lands on a telephone wire, and summer has begun. Swallows, martins and swifts spend their winters in Africa and come back here to breed. They catch insects in the air, so you mostly see them in flight.\n\nThat makes them tricky for beginners: they are fast, and they don't sit still. But each one has a clear mark. A forked tail with long streamers, a white rump, a brown band across the chest. And one of the four is not a swallow at all, despite how it looks.\n\nAt the end there's a quiz of eight questions, with birds from the last two lessons mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "streamers"
+      },
+      "explain": {
+        "en": "The two long, thin points on the tail of a Swallow."
+      }
+    },
+    {
+      "term": {
+        "en": "forehead"
+      },
+      "explain": {
+        "en": "The part of the head between the bill and the crown."
+      }
+    },
+    {
+      "term": {
+        "en": "throat patch"
+      },
+      "explain": {
+        "en": "A patch of a different colour on the throat."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 7643,
+      "latin": "Hirundo rustica",
+      "name": {
+        "en": "Swallow"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Long tail **streamers**, a deeply forked tail"
+        },
+        {
+          "en": "Red-brown **forehead** and throat"
+        },
+        {
+          "en": "Blue-black above, pale below"
+        }
+      ],
+      "where_when": {
+        "en": "Farmland, villages and lakes, from April to October. Skims low over fields, and nests inside barns and stables. Sits on wires."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A pleasant, twittering song, ending in a dry trill, often from a wire."
+        },
+        "chosen": [
+          {
+            "media_id": 1295416,
+            "xeno_canto": "XC1043386",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 78.5,
+            "background_species": 0,
+            "recordist": "Beatrix Saadi-Varchmin"
+          },
+          {
+            "media_id": 1295424,
+            "xeno_canto": "XC1029397",
+            "type": "call, song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 80.5,
+            "background_species": 0,
+            "recordist": "João Tomás"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "media": {
+        "card": [
+          846528,
+          846542,
+          846540
+        ],
+        "quiz": [
+          846589,
+          846604,
+          846573,
+          846647,
+          846652,
+          846606,
+          846605
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 15
+      }
+    },
+    {
+      "species_id": 7651,
+      "latin": "Delichon urbicum",
+      "name": {
+        "en": "House Martin"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A bright white rump"
+        },
+        {
+          "en": "Short, forked tail with no streamers"
+        },
+        {
+          "en": "Blue-black above, pure white below"
+        }
+      ],
+      "where_when": {
+        "en": "Villages and towns, nesting in mud cups under the eaves of houses. Flies higher than a Swallow, in groups."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A dry, short \"prrt\" or \"chirrp\", given in flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1345444,
+            "xeno_canto": "XC1022103",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 46.8,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1345458,
+            "xeno_canto": "XC727373",
+            "type": "call",
+            "country": "Switzerland",
+            "quality": "A",
+            "seconds": 53.5,
+            "background_species": 0,
+            "recordist": "Nicolas Martinez"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 18
+      },
+      "media": {
+        "card": [
+          847730,
+          847595,
+          847611
+        ],
+        "quiz": [
+          847621,
+          847668,
+          847715,
+          847705,
+          847718,
+          847594,
+          847722
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 15
+      }
+    },
+    {
+      "species_id": 7601,
+      "latin": "Riparia riparia",
+      "name": {
+        "en": "Sand Martin"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small, and brown above"
+        },
+        {
+          "en": "A brown band across the chest, on a white underside"
+        },
+        {
+          "en": "Short, slightly forked tail"
+        }
+      ],
+      "where_when": {
+        "en": "Rivers, lakes and gravel pits, the first of the three to arrive in March. Nests in holes in a sandy bank, in colonies."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A dry, buzzing \"brrrt\", given in flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1345265,
+            "xeno_canto": "XC281322",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 44.1,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1345262,
+            "xeno_canto": "XC426148",
+            "type": "alarm call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 74.2,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "media": {
+        "card": [
+          841581,
+          841584,
+          841580
+        ],
+        "quiz": [
+          841591,
+          841585,
+          841590
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 15
+      }
+    },
+    {
+      "species_id": 1352,
+      "latin": "Apus apus",
+      "name": {
+        "en": "Swift"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "All dark brown, almost black"
+        },
+        {
+          "en": "Long, narrow, sickle-shaped wings"
+        },
+        {
+          "en": "Pale **throat patch**, only up close"
+        }
+      ],
+      "where_when": {
+        "en": "Over towns and villages, from May to August, in screaming groups around the rooftops at dusk. It hardly ever lands: it eats, drinks, mates and even sleeps in the air."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, screaming \"sree-ee-ee\", from a whole group racing round the roofs."
+        },
+        "chosen": [
+          {
+            "media_id": 1209950,
+            "xeno_canto": "XC935410",
+            "type": "call, flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 60.6,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          },
+          {
+            "media_id": 1209964,
+            "xeno_canto": "XC493899",
+            "type": "call",
+            "country": "Italy",
+            "quality": "A",
+            "seconds": 34.2,
+            "background_species": 0,
+            "recordist": "Gianluca Congi"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "en": "Not related to swallows at all. A Swift spends almost all of its life in the air, and only lands to nest."
+      },
+      "media": {
+        "card": [
+          240295,
+          240293,
+          240270
+        ],
+        "quiz": [
+          240304,
+          240216,
+          240212,
+          240294,
+          240306,
+          240192,
+          240303
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 15
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 1352,
+    "species_ids": [
+      7643,
+      1352
+    ],
+    "title": {
+      "en": "Swallow or Swift?"
+    },
+    "text": {
+      "en": "Look at the wings and the colour. A Swift is all dark, with long, narrow, sickle-shaped wings, and flaps in quick bursts. A Swallow is blue-black above and pale below, with a red throat and long tail streamers, and it glides in loops."
+    }
+  },
+  "quiz": {
+    "questions": 8,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      13,
+      14
+    ],
+    "review_questions": 2,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "On a summer evening, look up above your street or over a field. Do you see sharp, dark crescents, screaming round the roofs? That's the Swifts. Also check the wires for Swallows, and the eaves for House Martin nests."
+  },
+  "next": {
+    "en": "Next week: finches."
+  },
+  "flow": [
+    "intro",
+    "bird:7643",
+    "bird:7651",
+    "bird:7601",
+    "bird:1352",
+    "quiz",
+    "done"
+  ]
+}

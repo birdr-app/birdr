@@ -1,0 +1,471 @@
+{
+  "course": "uk-beginners",
+  "week": 16,
+  "slug": "finches",
+  "part": 2,
+  "kind": "species",
+  "season": "any",
+  "minutes": 12,
+  "title": {
+    "en": "Finches"
+  },
+  "subtitle": {
+    "en": "Five seed-eaters with a sturdy bill"
+  },
+  "intro": {
+    "en": "On a winter morning, there's a good chance the birds at your feeder are finches. They are seed-eaters, with a short, strong bill for cracking seeds, and the males are some of our most colourful birds.\n\nThat makes them a good group to practise on: the bill shape is the same, so you have to look at the colours. Red, yellow, green, black and white: one for each.\n\nAt the end there's a quiz of ten questions, with birds from the last two lessons mixed in."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "cone-shaped bill"
+      },
+      "explain": {
+        "en": "A short, thick bill, shaped like a cone: handy for cracking seeds."
+      }
+    },
+    {
+      "term": {
+        "en": "face mask"
+      },
+      "explain": {
+        "en": "A patch of a different colour around the bill, like a mask."
+      }
+    },
+    {
+      "term": {
+        "en": "chin"
+      },
+      "explain": {
+        "en": "The part right under the bill, above the throat."
+      }
+    },
+    {
+      "term": {
+        "en": "wing edge"
+      },
+      "explain": {
+        "en": "The outer edge of the folded wing."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 10129,
+      "latin": "Carduelis carduelis",
+      "name": {
+        "en": "Goldfinch"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Red **face mask** around the bill"
+        },
+        {
+          "en": "Black-and-white head"
+        },
+        {
+          "en": "A broad yellow stripe across the black wing"
+        }
+      ],
+      "where_when": {
+        "en": "Gardens, weedy fields and wasteland. Hangs on thistles and teasels, and at nyjer-seed feeders. Moves around in flocks called charms."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A liquid, tinkling twitter, with a bright \"tswitt-witt-witt\"."
+        },
+        "chosen": [
+          {
+            "media_id": 1328825,
+            "xeno_canto": "XC1052341",
+            "type": "song (Traffic Noise, light aircraft, industrial noise)",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 52.0,
+            "background_species": 0,
+            "recordist": "Lee Alder"
+          },
+          {
+            "media_id": 1328833,
+            "xeno_canto": "XC819266",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 46.9,
+            "background_species": 0,
+            "recordist": "Alain Malengreau"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          1070237,
+          1070151,
+          1070283
+        ],
+        "quiz": [
+          1070209,
+          1070139,
+          1070256,
+          1070173,
+          1070168,
+          1070184,
+          1070179,
+          1070205
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 16
+      }
+    },
+    {
+      "species_id": 10072,
+      "latin": "Chloris chloris",
+      "name": {
+        "en": "Greenfinch"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Olive-green, with a thick, pale **cone-shaped bill**"
+        },
+        {
+          "en": "Yellow stripe along the **wing edge**"
+        },
+        {
+          "en": "Yellow at the sides of the tail"
+        }
+      ],
+      "where_when": {
+        "en": "Gardens, hedges and woods. Heavy and slow at a feeder, often bossing smaller birds."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A wheezy, drawn-out \"dzweee\", and a twittering song, often in a display flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1328022,
+            "xeno_canto": "XC937275",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 39.1,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1328033,
+            "xeno_canto": "XC707458",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 42.7,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Greenfinches have been hit hard by a disease spread at feeders, so clean yours regularly."
+      },
+      "media": {
+        "card": [
+          1064700,
+          1064678,
+          1064719
+        ],
+        "quiz": [
+          1064717,
+          1064718,
+          1064687,
+          1064727,
+          1064680,
+          1064726,
+          1064722,
+          1064699
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 16
+      }
+    },
+    {
+      "species_id": 10116,
+      "latin": "Linaria cannabina",
+      "name": {
+        "en": "Linnet"
+      },
+      "plumage": {
+        "en": "adult male, summer"
+      },
+      "look_for": [
+        {
+          "en": "Red forehead and red breast"
+        },
+        {
+          "en": "Grey head, warm brown back"
+        },
+        {
+          "en": "White edges on wing and tail"
+        }
+      ],
+      "where_when": {
+        "en": "Heaths, hedges and scrub. A bird of the open countryside, often in flocks that twitter in flight."
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A pleasant, twittering song, with a sweet, liquid sound."
+        },
+        "chosen": [
+          {
+            "media_id": 1328621,
+            "xeno_canto": "XC793053",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 34.2,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1328614,
+            "xeno_canto": "XC917311",
+            "type": "song",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 43.1,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "en": "In winter the male loses the red, and looks like the female: streaky brown."
+      },
+      "media": {
+        "card": [
+          1068700,
+          1068748
+        ],
+        "quiz": [
+          1068673,
+          1068672,
+          1068748
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 16
+      }
+    },
+    {
+      "species_id": 10141,
+      "latin": "Spinus spinus",
+      "name": {
+        "en": "Siskin"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Yellow-green, with a black crown"
+        },
+        {
+          "en": "A small black patch on the **chin**"
+        },
+        {
+          "en": "Yellow stripes on a black wing"
+        }
+      ],
+      "where_when": {
+        "en": "Conifer woods in the north, and in winter alder trees and gardens all over Britain. A tiny acrobat, hanging upside down on a feeder."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A bright, rising \"tsu-ee\" or \"tszeu\", often from a flock."
+        },
+        "chosen": [
+          {
+            "media_id": 1329045,
+            "xeno_canto": "XC711220",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 39.8,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1329042,
+            "xeno_canto": "XC780084",
+            "type": "call (chatter)",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 58.0,
+            "background_species": 0,
+            "recordist": "Frode Falkenberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "media": {
+        "card": [
+          1071757,
+          1071649,
+          1071623
+        ],
+        "quiz": [
+          1071651,
+          1071765,
+          1071631,
+          1071710,
+          1071669,
+          1071748,
+          1071630
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 16
+      }
+    },
+    {
+      "species_id": 10051,
+      "latin": "Pyrrhula pyrrhula",
+      "name": {
+        "en": "Bullfinch"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Pinkish-red breast and cheeks"
+        },
+        {
+          "en": "Black cap, grey back"
+        },
+        {
+          "en": "A white rump, clear in flight"
+        }
+      ],
+      "where_when": {
+        "en": "Hedges, woods and big gardens. Shy: it feeds quietly on buds and berries, and only shows itself in short flights."
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, low, piping \"peeu\", easy to miss."
+        },
+        "chosen": [
+          {
+            "media_id": 1327686,
+            "xeno_canto": "XC704729",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 33.0,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          },
+          {
+            "media_id": 1327683,
+            "xeno_canto": "XC938052",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 39.3,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The females are a plain pinkish-brown, but with the same black cap and white rump."
+      },
+      "media": {
+        "card": [
+          1062074,
+          1062039,
+          1062158
+        ],
+        "quiz": [
+          1062046,
+          1062049,
+          1062073,
+          1062072,
+          1062173,
+          1062034,
+          1062152,
+          1062114
+        ]
+      },
+      "media_from": {
+        "course": "nl-beginners",
+        "week": 16
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 10141,
+    "species_ids": [
+      10072,
+      10141
+    ],
+    "title": {
+      "en": "Greenfinch or Siskin?"
+    },
+    "text": {
+      "en": "Both are green and yellow. A Greenfinch is bigger and heavier, with a thick bill and no black on the head. A Siskin is small and neat, with a black cap, a black chin and a thin bill."
+    }
+  },
+  "quiz": {
+    "questions": 10,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      14,
+      15
+    ],
+    "review_questions": 3,
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Fill a feeder with seeds, or visit a garden with one, for twenty minutes this week. Which finches come? Write down which colours you see first, then name the bird."
+  },
+  "next": {
+    "en": "Next week: thrushes."
+  },
+  "flow": [
+    "intro",
+    "bird:10129",
+    "bird:10072",
+    "bird:10116",
+    "bird:10141",
+    "bird:10051",
+    "quiz",
+    "done"
+  ]
+}

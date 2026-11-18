@@ -358,7 +358,7 @@ def taxa_paths() -> list[str]:
 
 
 def course_paths() -> list[str]:
-    from jizz.marketing.course import course_paths as paths
+    from jizz.marketing.course import all_course_paths as paths
 
     return paths()
 
@@ -373,9 +373,9 @@ SECTIONS = {
     'course': course_paths,
 }
 
-# Sections whose pages exist in some languages only (the course is Dutch).
+# Sections whose pages exist in some languages only (each course is in one language).
 SECTION_LOCALES = {
-    'course': ('nl',),
+    'course': ('nl', 'en'),
 }
 
 
@@ -384,8 +384,15 @@ def section_locales(section: str) -> tuple[str, ...]:
 
 
 # Sections that list each page in its own set of languages: path -> languages.
+def course_path_locales() -> dict[str, tuple[str, ...]]:
+    from jizz.marketing.course import course_path_locales as locales
+
+    return locales()
+
+
 SECTION_PATH_LOCALES = {
     'compare': compare_path_locales,
+    'course': course_path_locales,
 }
 
 
