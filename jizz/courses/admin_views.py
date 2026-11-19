@@ -2,6 +2,7 @@
 
 import re
 
+from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Count, Q
 from django.http import Http404
 from rest_framework import status
@@ -13,6 +14,8 @@ from jizz.courses.content import COURSES, clear_cache, course_lessons, photo_pic
 from jizz.models import CoursePhotoPick, Species
 from media.display_urls import media_object_display_url
 from media.models import Media
+from media.plumage import FIELD_VALUES, FIELDS, set_human_plumage
+from media.plumage_jobs import AlreadyRunning, CoolingDown, start_backfill, status as backfill_status
 
 MAX_CARD = 3
 
@@ -78,15 +81,39 @@ class CourseSpeciesMediaView(APIView):
         _course(slug)
         rows = (
             Media.objects.filter(species_id=species_id, type='image', hide=False)
+            .select_related('plumage')
             .annotate(
                 approved=Count('reviews', filter=Q(reviews__review_type='approved')),
                 rejected=Count('reviews', filter=Q(reviews__review_type='rejected')),
             )
             .order_by('-created')
         )
+        # ?sex=female&stage=juvenile&season=breeding; the value `none` means not labelled.
+        for field in FIELDS:
+            wanted = request.query_params.get(field, '')
+            if not wanted:
+                continue
+            if wanted == 'none':
+                rows = rows.filter(Q(**{f'plumage__{field}': ''}) | Q(plumage__isnull=True))
+            elif wanted in FIELD_VALUES[field]:
+                rows = rows.filter(**{f'plumage__{field}': wanted})
+            else:
+                return Response({'error': f'Unknown {field} "{wanted}".'}, status=status.HTTP_400_BAD_REQUEST)
         media = [_candidate(m, m.approved, m.rejected) for m in rows]
-        media.sort(key=lambda m: -(m['approved'] - 2 * m['rejected']))
+        # Approved photos first (the others are often small or far away), rejected ones last.
+        media.sort(key=lambda m: (m['approved'] == 0, m['rejected'] > 0, -(m['approved'] - 2 * m['rejected'])))
         return Response({'species_id': species_id, 'media': media})
+
+
+def _plumage_fields(m):
+    try:
+        p = m.plumage
+    except ObjectDoesNotExist:
+        return {'sex': '', 'stage': '', 'season': '', 'plumage_source': None, 'plumage_confidence': None}
+    return {
+        'sex': p.sex, 'stage': p.stage, 'season': p.season,
+        'plumage_source': p.source, 'plumage_confidence': p.confidence,
+    }
 
 
 def _candidate(m, approved=0, rejected=0):
@@ -101,6 +128,7 @@ def _candidate(m, approved=0, rejected=0):
         'source': m.source,
         'approved': approved,
         'rejected': rejected,
+        **_plumage_fields(m),
     }
 
 
@@ -164,3 +192,67 @@ class CoursePhotoPickView(APIView):
         )
         clear_cache(slug)
         return Response({'card': pick.card, 'quiz': pick.quiz, 'reject': pick.reject, 'done': pick.done})
+
+
+class CoursePhotoPlumageView(APIView):
+    """Confirm or correct the plumage of one photo: a human label, which nothing overwrites.
+
+    Body: any of `sex`, `stage`, `season` ('' clears a field). Fields left out keep their value,
+    so `{}` confirms the labels as they are (400 when there are none to confirm).
+    """
+
+    permission_classes = [IsAdminUser]
+
+    def put(self, request, slug, media_id):
+        _course(slug)
+        media = Media.objects.filter(id=media_id, type='image').first()
+        if media is None:
+            raise Http404
+        fields = {}
+        for field in FIELDS:
+            if field not in request.data:
+                continue
+            value = request.data[field] or ''
+            if value not in ('', *FIELD_VALUES[field]):
+                return Response({'error': f'Unknown {field} "{value}".'}, status=status.HTTP_400_BAD_REQUEST)
+            fields[field] = value
+        if not fields and not _has_labels(media):
+            return Response({'error': 'There are no labels to confirm.'}, status=status.HTTP_400_BAD_REQUEST)
+        set_human_plumage(media, **fields)
+        media = Media.objects.select_related('plumage').get(id=media_id)
+        return Response({'id': media.id, **_plumage_fields(media)})
+
+
+def _has_labels(media) -> bool:
+    try:
+        return any(getattr(media.plumage, f) for f in FIELDS)
+    except ObjectDoesNotExist:
+        return False
+
+
+class CoursePlumageBackfillView(APIView):
+    """Start the plumage backfill for the photos of a course, and see how it is going.
+
+    POST body: `approved` (only approved photos) and `dry_run` (look up, write nothing), both optional.
+    One run at a time per course (409), and a cooldown between real runs (429 with `retry_after`).
+    """
+
+    permission_classes = [IsAdminUser]
+
+    def get(self, request, slug):
+        _course(slug)
+        return Response(backfill_status(slug))
+
+    def post(self, request, slug):
+        _course(slug)
+        try:
+            data = start_backfill(
+                slug, request.user.get_username(),
+                approved=bool(request.data.get('approved', False)),
+                dry_run=bool(request.data.get('dry_run', False)),
+            )
+        except AlreadyRunning:
+            return Response({'error': 'A backfill is already running.', **backfill_status(slug)}, status=status.HTTP_409_CONFLICT)
+        except CoolingDown as exc:
+            return Response({'error': 'A backfill ran recently.', **backfill_status(slug)}, status=status.HTTP_429_TOO_MANY_REQUESTS)
+        return Response(data, status=status.HTTP_202_ACCEPTED)

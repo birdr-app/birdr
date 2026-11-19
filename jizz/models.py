@@ -72,6 +72,10 @@ class Country(models.Model):
 
     @property
     def count(self):
+        # List views annotate species_total so serializing N countries is one query, not N.
+        annotated = getattr(self, 'species_total', None)
+        if annotated is not None:
+            return annotated
         return self.countryspecies.count()
 
     @property

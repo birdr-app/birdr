@@ -38,7 +38,7 @@ export function TripListPage() {
         </Heading>
       </Page.Header>
       <Page.Body>
-        <Flex direction="column" gap={3} w="full" maxW="640px" mx="auto">
+        <Flex direction="column" gap={2} w="full" maxW="640px" mx="auto">
           <Text color="primary.800">
             {t('trip_list_intro', "Going abroad? Learn the birds before you go: first the kinds of birds, then the species, group by group. Birds you already know from other games count straight away.")}
           </Text>
@@ -48,7 +48,7 @@ export function TripListPage() {
               key={key}
               variant="outline"
               height="auto"
-              py={3}
+              py={1.5}
               px={4}
               justifyContent="flex-start"
               whiteSpace="normal"
@@ -58,27 +58,10 @@ export function TripListPage() {
               onClick={() => navigate(`/trips/${trip.country}`)}
             >
               <Flex align="center" gap={3} w="full" textAlign="left">
-                <Text fontSize="3xl">{countryCodeToFlag(code)}</Text>
+                <Text fontSize="2xl" lineHeight="1.2">{countryCodeToFlag(code)}</Text>
                 <Box flex={1}>
                   <Text fontSize="lg" fontWeight="700" color="primary.800">
                     {label}
-                  </Text>
-                  <Text fontSize="sm" color="primary.700">
-                    {[
-                      t('trip_list_start', '{count} species to get you started', { count: trip.species_count }),
-                      trip.region_species_count
-                        ? t('trip_list_regions', '{count} more in regions', { count: trip.region_species_count })
-                        : '',
-                      trip.extra_count && trip.recorded_count
-                        ? t('trip_list_extra', '{extra} additional of {recorded} recorded', {
-                            extra: trip.extra_count,
-                            recorded: trip.recorded_count,
-                          })
-                        : '',
-                      trip.endemic_count ? t('trip_list_endemics', '{count} endemics', { count: trip.endemic_count }) : '',
-                    ]
-                      .filter(Boolean)
-                      .join(' · ')}
                   </Text>
                 </Box>
               </Flex>

@@ -837,7 +837,7 @@ EXTRA_ENTRIES: list[tuple[str, tuple[str, ...]]] = [
     ('No country found', ('Geen land gevonden', 'No se encontró ningún país', 'Aucun pays trouvé', 'Kein Land gefunden', 'Nessun paese trovato', 'Nenhum país encontrado', '国が見つかりません')),
     ('Region', ('Regio', 'Región', 'Région', 'Region', 'Regione', 'Região', '地域')),
     ('Whole country', ('Heel het land', 'Todo el país', 'Tout le pays', 'Ganzes Land', 'Tutto il paese', 'País inteiro', '国全体')),
-    ('Show quizzes', ('Toon quizzen', 'Ver quizzes', 'Voir les quiz', 'Quiz anzeigen', 'Mostra i quiz', 'Ver quizzes', 'クイズを見る')),
+    ('Show country', ('Toon land', 'Ver país', 'Voir le pays', 'Land anzeigen', 'Mostra il paese', 'Ver país', '国を表示')),
     ('Show all {count} countries', ('Toon alle {count} landen', 'Ver los {count} países', 'Voir les {count} pays', 'Alle {count} Länder anzeigen', 'Mostra tutti i {count} paesi', 'Ver todos os {count} países', '全{count}か国を表示')),
     # Search result titles and descriptions of bird, comparison and country pages.
     (

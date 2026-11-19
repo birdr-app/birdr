@@ -79,7 +79,7 @@ TODY_IMAGE_SIZES = {
 INTENT_MASCOTS = {
     'how-it-works': 'birding',
     'learn-bird-identification': 'listening',
-    'bird-quiz-by-country': 'explorer',
+    'countries': 'explorer',
     'birding-app': 'hello',
     'my-tricky-birds': 'studying',
     'flocks': 'flock',
@@ -200,7 +200,7 @@ INTENT_PAGES = {
         'links': [
             ('/play', 'Start a quiz'),
             ('/site/my-tricky-birds/', 'My Tricky Birds'),
-            ('/site/bird-quiz-by-country/', 'Country Challenges'),
+            ('/site/countries/', 'Country Challenges'),
             ('/site/birding-app/', 'Get the app'),
         ],
     },
@@ -233,7 +233,7 @@ INTENT_PAGES = {
             ('/site/my-tricky-birds/', 'Practise difficult birds'),
         ],
     },
-    'bird-quiz-by-country': {
+    'countries': {
         'title': 'Bird Quizzes by Country – Country Challenges | Motmot',
         'description': (
             'Play bird quizzes by country, take Country Challenges, and compete in the '
@@ -390,7 +390,7 @@ INTENT_PAGES = {
         ],
         'links': [
             ('/play', 'Photo quizzes'),
-            ('/site/bird-quiz-by-country/', 'Country quizzes'),
+            ('/site/countries/', 'Country quizzes'),
             ('/site/community/', 'Community'),
         ],
     },
@@ -660,8 +660,7 @@ def nav_section_for_path(path: str) -> str:
     if current.startswith('/site/birds/') or current.startswith('/site/compare/'):
         return 'species'
     if (
-        current.startswith('/site/bird-quiz-by-country/')
-        or current.startswith('/site/countries/')
+        current.startswith('/site/countries/')
         or current.startswith('/site/national-league/')
         or current.startswith('/site/survival/')
     ):

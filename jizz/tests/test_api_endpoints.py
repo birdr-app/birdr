@@ -58,6 +58,28 @@ class ApiCountriesTestCase(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertIsInstance(response.data, list)
 
+    def test_countries_list_query_count_does_not_grow_with_countries(self):
+        """The species count is annotated, not one COUNT query per country."""
+        species = Species.objects.get(code='T001')
+
+        def count_queries():
+            with CaptureQueriesContext(connection) as ctx:
+                response = self.client.get('/api/countries/')
+            self.assertEqual(response.status_code, status.HTTP_200_OK)
+            return len(ctx), response.data
+
+        baseline, _ = count_queries()
+        for code in ('BE', 'DE', 'FR', 'ES'):
+            country, _ = Country.objects.get_or_create(code=code, defaults={'name': code})
+            CountrySpecies.objects.get_or_create(
+                country=country, species=species, defaults={'status': 'native'}
+            )
+        after, data = count_queries()
+        self.assertEqual(after, baseline)
+        self.assertGreaterEqual(len(data), 5)
+        by_code = {row['code']: row['count'] for row in data}
+        self.assertEqual(by_code['NL'], self.country.countryspecies.count())
+
     def test_countries_retrieve_returns_200(self):
         response = self.client.get(f'/api/countries/{self.country.code}/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)

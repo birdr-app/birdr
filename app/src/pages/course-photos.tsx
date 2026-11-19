@@ -1,18 +1,33 @@
-import { Box, Button, Flex, Heading, Image, Input, Link, SimpleGrid, Spinner, Text } from '@chakra-ui/react';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { Box, Button, chakra, Flex, Heading, Image, Input, Link, SimpleGrid, Spinner, Text } from '@chakra-ui/react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import {
   addCommonsPhoto,
   fetchCoursePhotos,
+  fetchPlumageBackfill,
   fetchSpeciesPhotos,
   photoCourseSlug,
   savePhotoPick,
+  savePhotoPlumage,
   startingPick,
+  startPlumageBackfill,
   type CandidatePhoto,
   type CoursePhotoBird,
   type CoursePhotoLesson,
 } from '../api/course-photos';
 import { roleOf, withRole, type PhotoPick, type PhotoRole } from '../core/course-photo-roles';
+import {
+  formatWait,
+  hasPlumageFilter,
+  matchesPlumageFilter,
+  PLUMAGE_OPTIONS,
+  plumageBadge,
+  type BackfillStatus,
+  type BadgeKind,
+  type PlumageField,
+  type PlumageFields,
+  type PlumageFilter,
+} from '../core/photo-plumage';
 import { useAuthProfile } from '../core/auth-profile-context';
 import { Page } from '../shared/components/layout';
 
@@ -23,6 +38,17 @@ const ROLE_COLOR: Record<Exclude<PhotoRole, ''>, string> = {
   reject: 'error.500',
 };
 
+/** Who gave a plumage label: a person (checked), the AI (maybe wrong), or the photo's source. */
+const BADGE_COLOR: Record<Exclude<BadgeKind, 'none'>, string> = {
+  human: 'secondary.600',
+  ai: 'orange.500',
+  source: 'blue.600',
+};
+
+const Select = chakra('select');
+
+const FIELD_TITLE: Record<PlumageField, string> = { sex: 'Sex', stage: 'Age', season: 'Season' };
+
 /** Staff page: choose the main, card and quiz photos of every bird in the beginners course. */
 export function CoursePhotosPage() {
   const courseSlug = photoCourseSlug();
@@ -31,6 +57,8 @@ export function CoursePhotosPage() {
   const isStaff = !!(profile?.is_staff || profile?.is_superuser);
   const [lessons, setLessons] = useState<CoursePhotoLesson[] | null>(null);
   const [error, setError] = useState(false);
+  // Bumped when a plumage backfill finishes, so the photo lists reload with the new labels.
+  const [reload, setReload] = useState(0);
   const [week, setWeek] = useState(() => {
     try {
       const w = Number(localStorage.getItem(weekKey));
@@ -105,6 +133,7 @@ export function CoursePhotosPage() {
               values={{ done: doneCount, total: allBirds.length }}
             />
           </Text>
+          <PlumageBackfillPanel onDone={() => setReload((n) => n + 1)} />
           <Flex gap={2} wrap="wrap">
             {lessons.map((l) => {
               // A lesson without birds of its own (a review lesson) has nothing to choose.
@@ -145,11 +174,12 @@ export function CoursePhotosPage() {
           )}
           {lesson.birds.map((bird) => (
             <BirdPhotos
-              key={`${lesson.week}-${bird.species_id}`}
+              key={`${lesson.week}-${bird.species_id}-${reload}`}
               api={{
                 fetchPhotos: fetchSpeciesPhotos,
                 addCommons: addCommonsPhoto,
                 save: (speciesId, pick) => savePhotoPick(lesson.week, speciesId, pick),
+                setPlumage: savePhotoPlumage,
               }}
               subtitle={
                 <FormattedMessage id="course_photos_teaches" defaultMessage="Lesson teaches: {plumage}" values={{ plumage: bird.plumage || 'volwassen' }} />
@@ -161,6 +191,100 @@ export function CoursePhotosPage() {
         </Flex>
       </Page.Body>
     </Page>
+  );
+}
+
+/** Start the plumage backfill of this course's photos, with its status and the wait until the next run. */
+function PlumageBackfillPanel({ onDone }: { onDone: () => void }) {
+  const [status, setStatus] = useState<BackfillStatus | null>(null);
+  const [approved, setApproved] = useState(true);
+  const [busy, setBusy] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [retryAt, setRetryAt] = useState(0);
+  const [now, setNow] = useState(() => Date.now());
+  const wasRunning = useRef(false);
+
+  const apply = useCallback(
+    (next: BackfillStatus) => {
+      setStatus(next);
+      setRetryAt(Date.now() + next.retry_after * 1000);
+      if (wasRunning.current && next.state !== 'running') onDone();
+      wasRunning.current = next.state === 'running';
+    },
+    [onDone]
+  );
+
+  useEffect(() => {
+    fetchPlumageBackfill().then(apply).catch(() => setFailed(true));
+  }, [apply]);
+
+  // While a run is going, look at it every few seconds; while waiting, tick the countdown.
+  useEffect(() => {
+    const running = status?.state === 'running';
+    const waiting = retryAt > Date.now();
+    if (!running && !waiting) return;
+    const id = window.setInterval(() => {
+      setNow(Date.now());
+      if (running) fetchPlumageBackfill().then(apply).catch(() => undefined);
+    }, running ? 4000 : 15000);
+    return () => window.clearInterval(id);
+  }, [status?.state, retryAt, apply]);
+
+  const start = async (dry_run: boolean) => {
+    setBusy(true);
+    setFailed(false);
+    try {
+      apply(await startPlumageBackfill({ approved, dry_run }));
+    } catch {
+      setFailed(true);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  if (!status) return failed ? <Text fontSize="sm" color="error.500">The plumage backfill status could not be loaded.</Text> : null;
+  const running = status.state === 'running';
+  const wait = Math.max(0, Math.round((retryAt - now) / 1000));
+  return (
+    <Box bg="white" borderRadius="xl" borderWidth="1px" borderColor="primary.200" p={3}>
+      <Flex gap={3} align="center" wrap="wrap">
+        <Box flex={1} minW="220px">
+          <Text fontSize="sm" fontWeight="800" color="primary.800">
+            <FormattedMessage id="course_photos_backfill" defaultMessage="Plumage from the photo sources" />
+          </Text>
+          <Text fontSize="xs" color="primary.700">
+            <FormattedMessage
+              id="course_photos_backfill_help"
+              defaultMessage="Looks up sex, age and season at iNaturalist, GBIF and Wikimedia Commons for the photos of this course. Never changes labels a person confirmed."
+            />
+          </Text>
+        </Box>
+        <label style={{ fontSize: '0.8rem', display: 'flex', gap: 6, alignItems: 'center' }}>
+          <input type="checkbox" checked={approved} onChange={(e) => setApproved(e.target.checked)} disabled={running} />
+          <FormattedMessage id="course_photos_backfill_approved" defaultMessage="Approved photos only" />
+        </label>
+        <Button size="sm" variant="outline" colorPalette="primary" onClick={() => void start(true)} disabled={running || busy}>
+          <FormattedMessage id="course_photos_backfill_dry" defaultMessage="Dry run" />
+        </Button>
+        <Button size="sm" colorPalette="primary" onClick={() => void start(false)} loading={busy} disabled={running || wait > 0}>
+          <FormattedMessage id="course_photos_backfill_run" defaultMessage="Run backfill" />
+        </Button>
+      </Flex>
+      <Text fontSize="xs" mt={2} color={status.state === 'error' || failed ? 'error.500' : 'primary.700'}>
+        {running && `Running since ${new Date((status.started_at ?? 0) * 1000).toLocaleTimeString()}${status.dry_run ? ' (dry run)' : ''}…`}
+        {status.state === 'done' && `Last run by ${status.by} finished ${new Date((status.finished_at ?? 0) * 1000).toLocaleString()}${status.dry_run ? ' (dry run, nothing written)' : ''}.`}
+        {status.state === 'error' && 'The last run failed.'}
+        {status.state === 'idle' && 'No run yet.'}
+        {!running && wait > 0 ? ` A real run can start again in ${formatWait(wait)}.` : ''}
+        {status.error && status.state !== 'running' ? ` ${status.error}` : ''}
+        {failed ? ' The request failed.' : ''}
+      </Text>
+      {(status.output ?? []).length > 0 ? (
+        <Box as="pre" mt={1} fontSize="2xs" color="primary.700" whiteSpace="pre-wrap" maxH="140px" overflowY="auto">
+          {(status.output ?? []).join('\n')}
+        </Box>
+      ) : null}
+    </Box>
   );
 }
 
@@ -181,6 +305,8 @@ export type PhotoPickApi = {
   fetchPhotos: (speciesId: number) => Promise<CandidatePhoto[]>;
   addCommons: (speciesId: number, link: string) => Promise<CandidatePhoto>;
   save: (speciesId: number, pick: PhotoPick) => Promise<PhotoPick>;
+  /** Confirm or correct a photo's plumage (a human label). Without it the plumage is shown, not editable. */
+  setPlumage?: (mediaId: number, fields: Partial<Record<PlumageField, string>>) => Promise<PlumageFields>;
 };
 
 export function BirdPhotos({
@@ -204,6 +330,12 @@ export function BirdPhotos({
   const [adding, setAdding] = useState(false);
   const [addError, setAddError] = useState('');
   const [added, setAdded] = useState<CandidatePhoto[]>([]);
+  const [filter, setFilter] = useState<PlumageFilter>({});
+  // Only photos a reviewer approved (plus the chosen ones): the rest are often small or far away.
+  const [approvedOnly, setApprovedOnly] = useState(true);
+  // Labels a person confirmed or corrected here, laid over the photos as they were loaded.
+  const [overrides, setOverrides] = useState<Record<number, PlumageFields>>({});
+  const [plumageError, setPlumageError] = useState(false);
   // A bird that is done folds away; the owner can unfold it again.
   const [folded, setFolded] = useState(() => !!startingPick(bird).done);
 
@@ -230,7 +362,10 @@ export function BirdPhotos({
       .catch(() => setPhotos([]));
   }, [bird.species_id]);
 
-  const byId = useMemo(() => new Map((photos ?? []).map((p) => [p.id, p])), [photos]);
+  const byId = useMemo(
+    () => new Map((photos ?? []).map((p) => [p.id, { ...p, ...overrides[p.id] } as CandidatePhoto])),
+    [photos, overrides]
+  );
   // Chosen photos first, then the rest in the order the server gave (best reviewed first).
   const ordered = useMemo(() => {
     if (!photos) return [];
@@ -239,7 +374,26 @@ export function BirdPhotos({
     return [...chosen, ...added.filter((a) => !chosen.some((c) => c.id === a.id)), ...rest];
     // Order is fixed when the photos load, so tiles don't jump while choosing.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [photos, byId, added]);
+  }, [photos, added]);
+  const shown = useMemo(
+    () =>
+      ordered
+        .map((p) => byId.get(p.id) ?? p)
+        .filter((p) => matchesPlumageFilter(p, filter))
+        .filter((p) => !approvedOnly || p.approved > 0 || pick.card.includes(p.id) || pick.quiz.includes(p.id)),
+    [ordered, byId, filter, approvedOnly, pick]
+  );
+
+  const setPlumage = async (mediaId: number, fields: Partial<Record<PlumageField, string>>) => {
+    if (!api.setPlumage) return;
+    setPlumageError(false);
+    try {
+      const saved = await api.setPlumage(mediaId, fields);
+      setOverrides((all) => ({ ...all, [mediaId]: saved }));
+    } catch {
+      setPlumageError(true);
+    }
+  };
   const missing = photos ? [...pick.card, ...pick.quiz].filter((id) => !byId.has(id)) : [];
 
   const save = useCallback(
@@ -340,7 +494,12 @@ export function BirdPhotos({
           <Flex mt={4} mb={2} gap={2} align="center" wrap="wrap">
             <Text fontSize="xs" color="primary.600" flex={1} minW="120px">
               <FormattedMessage id="course_photos_count" defaultMessage="{count} visible photos" values={{ count: photos.length }} />
+              {hasPlumageFilter(filter) || approvedOnly ? ` · ${shown.length} shown` : ''}
             </Text>
+            <label style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12 }}>
+              <input type="checkbox" checked={approvedOnly} onChange={(e) => setApprovedOnly(e.target.checked)} />
+              <FormattedMessage id="course_photos_approved_only" defaultMessage="Approved only" />
+            </label>
             <Input
               size="sm"
               maxW="420px"
@@ -361,8 +520,9 @@ export function BirdPhotos({
               {addError}
             </Text>
           ) : null}
+          <PlumageFilterRow filter={filter} onChange={setFilter} />
           <SimpleGrid minChildWidth="120px" gap={2}>
-            {ordered.map((p) => {
+            {shown.map((p) => {
               const role = roleOf(pick, p.id);
               return (
                 <Box
@@ -384,6 +544,23 @@ export function BirdPhotos({
                       {role === 'main' ? 'MAIN' : role === 'card' ? 'CARD' : role === 'quiz' ? 'QUIZ' : '✗'}
                     </Text>
                   ) : null}
+                  {plumageBadge(p).kind !== 'none' ? (
+                    <Text
+                      position="absolute"
+                      bottom={1}
+                      left={1}
+                      fontSize="2xs"
+                      fontWeight="800"
+                      color="white"
+                      bg={BADGE_COLOR[plumageBadge(p).kind as Exclude<BadgeKind, 'none'>]}
+                      px={1}
+                      borderRadius="sm"
+                      title={plumageBadge(p).title}
+                    >
+                      {plumageBadge(p).kind === 'human' ? '✓ ' : ''}
+                      {plumageBadge(p).text}
+                    </Text>
+                  ) : null}
                   {p.approved || p.rejected ? (
                     <Text position="absolute" bottom={1} right={1} fontSize="2xs" fontWeight="700" color="white" bg="blackAlpha.700" px={1} borderRadius="sm">
                       {p.approved ? `✓${p.approved}` : ''}
@@ -403,18 +580,83 @@ export function BirdPhotos({
           photo={byId.get(open)!}
           role={roleOf(pick, open)}
           onRole={(role) => save(withRole(pick, open, role))}
+          onPlumage={api.setPlumage ? (fields) => setPlumage(open, fields) : undefined}
+          plumageError={plumageError}
           onPrev={() => {
-            const i = ordered.findIndex((p) => p.id === open);
-            if (i > 0) setOpen(ordered[i - 1].id);
+            const i = shown.findIndex((p) => p.id === open);
+            if (i > 0) setOpen(shown[i - 1].id);
           }}
           onNext={() => {
-            const i = ordered.findIndex((p) => p.id === open);
-            if (i < ordered.length - 1) setOpen(ordered[i + 1].id);
+            const i = shown.findIndex((p) => p.id === open);
+            if (i >= 0 && i < shown.length - 1) setOpen(shown[i + 1].id);
           }}
           onClose={() => setOpen(null)}
         />
       ) : null}
     </Box>
+  );
+}
+
+function PlumageFilterRow({ filter, onChange }: { filter: PlumageFilter; onChange: (f: PlumageFilter) => void }) {
+  return (
+    <Flex gap={2} align="center" wrap="wrap" mb={2}>
+      <Text fontSize="xs" fontWeight="800" textTransform="uppercase" color="primary.700">
+        <FormattedMessage id="course_photos_plumage_filter" defaultMessage="Plumage" />
+      </Text>
+      {(Object.keys(PLUMAGE_OPTIONS) as PlumageField[]).map((field) => (
+        <PlumageSelect
+          key={field}
+          field={field}
+          value={filter[field] ?? ''}
+          anyLabel={`${FIELD_TITLE[field]}: all`}
+          noneLabel="not labelled"
+          onChange={(value) => onChange({ ...filter, [field]: value })}
+        />
+      ))}
+      {hasPlumageFilter(filter) ? (
+        <Button size="xs" variant="ghost" onClick={() => onChange({})}>
+          <FormattedMessage id="course_photos_plumage_clear" defaultMessage="Clear" />
+        </Button>
+      ) : null}
+    </Flex>
+  );
+}
+
+function PlumageSelect({
+  field,
+  value,
+  anyLabel,
+  noneLabel,
+  onChange,
+}: {
+  field: PlumageField;
+  value: string;
+  anyLabel: string;
+  /** Adds a "not labelled" choice (for the filter); the editor has an empty choice instead. */
+  noneLabel?: string;
+  onChange: (value: string) => void;
+}) {
+  return (
+    <Select
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      aria-label={FIELD_TITLE[field]}
+      fontSize="sm"
+      borderWidth="1px"
+      borderColor="primary.200"
+      borderRadius="md"
+      px={2}
+      py={1}
+      bg="white"
+    >
+      <option value="">{anyLabel}</option>
+      {PLUMAGE_OPTIONS[field].map((o) => (
+        <option key={o.value} value={o.value}>
+          {o.label}
+        </option>
+      ))}
+      {noneLabel ? <option value="none">{noneLabel}</option> : null}
+    </Select>
   );
 }
 
@@ -464,6 +706,8 @@ function PhotoSheet({
   photo,
   role,
   onRole,
+  onPlumage,
+  plumageError,
   onPrev,
   onNext,
   onClose,
@@ -471,6 +715,9 @@ function PhotoSheet({
   photo: CandidatePhoto;
   role: PhotoRole;
   onRole: (role: PhotoRole) => void;
+  /** Confirm (no fields) or correct the plumage; missing when the page cannot edit it. */
+  onPlumage?: (fields: Partial<Record<PlumageField, string>>) => void;
+  plumageError?: boolean;
   onPrev: () => void;
   onNext: () => void;
   onClose: () => void;
@@ -509,6 +756,7 @@ function PhotoSheet({
             </>
           ) : null}
         </Text>
+        <PlumageEditor photo={photo} onPlumage={onPlumage} error={plumageError} />
         <SimpleGrid columns={2} gap={2} mt={3}>
           {roles.map((r) => (
             <Button
@@ -538,6 +786,62 @@ function PhotoSheet({
           </Button>
         </Flex>
       </Box>
+    </Box>
+  );
+}
+
+/** The plumage labels of the open photo, who gave them, and the controls to confirm or correct them. */
+function PlumageEditor({
+  photo,
+  onPlumage,
+  error,
+}: {
+  photo: CandidatePhoto;
+  onPlumage?: (fields: Partial<Record<PlumageField, string>>) => void;
+  error?: boolean;
+}) {
+  const badge = plumageBadge(photo);
+  const human = photo.plumage_source === 'human';
+  return (
+    <Box mt={3} p={3} borderWidth="1px" borderColor="primary.200" borderRadius="lg">
+      <Flex gap={2} align="center" wrap="wrap">
+        <Text fontSize="xs" fontWeight="800" textTransform="uppercase" color="primary.700">
+          <FormattedMessage id="course_photos_plumage" defaultMessage="Plumage" />
+        </Text>
+        {badge.kind === 'none' ? (
+          <Text fontSize="sm" color="primary.600">
+            <FormattedMessage id="course_photos_plumage_none" defaultMessage="not labelled" />
+          </Text>
+        ) : (
+          <Text fontSize="xs" fontWeight="800" color="white" bg={BADGE_COLOR[badge.kind]} px={1.5} borderRadius="sm" title={badge.title}>
+            {human ? '✓ ' : ''}
+            {badge.title}
+          </Text>
+        )}
+        {onPlumage && badge.kind !== 'none' && !human ? (
+          <Button size="xs" colorPalette="secondary" onClick={() => onPlumage({})}>
+            <FormattedMessage id="course_photos_plumage_confirm" defaultMessage="Confirm" />
+          </Button>
+        ) : null}
+      </Flex>
+      {onPlumage ? (
+        <Flex gap={2} mt={2} wrap="wrap">
+          {(Object.keys(PLUMAGE_OPTIONS) as PlumageField[]).map((field) => (
+            <PlumageSelect
+              key={field}
+              field={field}
+              value={photo[field] ?? ''}
+              anyLabel={`${FIELD_TITLE[field]}: unknown`}
+              onChange={(value) => onPlumage({ [field]: value })}
+            />
+          ))}
+        </Flex>
+      ) : null}
+      {error ? (
+        <Text fontSize="sm" color="error.500" mt={1}>
+          <FormattedMessage id="course_photos_plumage_error" defaultMessage="The plumage could not be saved." />
+        </Text>
+      ) : null}
     </Box>
   );
 }

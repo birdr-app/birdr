@@ -5,6 +5,7 @@ import { COURSE_SLUG } from './course';
 /** Admin API for choosing the photos of the beginners course (staff only). */
 
 import type { PhotoPick } from '../core/course-photo-roles';
+import type { BackfillStatus, PlumageField, PlumageFields, PlumageFilter } from '../core/photo-plumage';
 
 export type { PhotoPick };
 
@@ -26,7 +27,7 @@ export type CoursePhotoLesson = {
   reused?: { name: string; week: number }[];
 };
 
-export type CandidatePhoto = {
+export type CandidatePhoto = Partial<PlumageFields> & {
   id: number;
   url: string;
   thumb: string;
@@ -55,9 +56,23 @@ export async function fetchCoursePhotos(): Promise<CoursePhotoLesson[]> {
   return res.data.lessons;
 }
 
-export async function fetchSpeciesPhotos(speciesId: number): Promise<CandidatePhoto[]> {
-  const res = await axios.get<{ media: CandidatePhoto[] }>(`${base()}/species/${speciesId}/`);
+/** Visible photos of a species; `filter` is applied by the server (value `none` = not labelled). */
+export async function fetchSpeciesPhotos(speciesId: number, filter: PlumageFilter = {}): Promise<CandidatePhoto[]> {
+  const params = Object.fromEntries(Object.entries(filter).filter(([, v]) => !!v));
+  const res = await axios.get<{ media: CandidatePhoto[] }>(`${base()}/species/${speciesId}/`, { params });
   return res.data.media;
+}
+
+/**
+ * Confirm (no fields) or correct (the fields to change; '' clears one) the plumage of a photo.
+ * The label becomes a human label with confidence 1, which nothing overwrites.
+ */
+export async function savePhotoPlumage(
+  mediaId: number,
+  fields: Partial<Record<PlumageField, string>> = {}
+): Promise<PlumageFields> {
+  const res = await axios.put<PlumageFields>(`${base()}/media/${mediaId}/plumage/`, fields);
+  return res.data;
 }
 
 export async function savePhotoPick(week: number, speciesId: number, pick: PhotoPick): Promise<PhotoPick> {
@@ -77,5 +92,24 @@ export async function addCommonsPhoto(speciesId: number, link: string): Promise<
     return res.data.photo;
   } catch (error: any) {
     throw new Error(error?.response?.data?.error || 'De foto kon niet worden toegevoegd.');
+  }
+}
+
+export async function fetchPlumageBackfill(): Promise<BackfillStatus> {
+  return (await axios.get<BackfillStatus>(`${base()}/plumage-backfill/`)).data;
+}
+
+/**
+ * Start the plumage backfill of the course's photos (iNaturalist, GBIF and Commons lookups).
+ * One run at a time, and a cooldown between real runs: when refused, the current status comes back
+ * with an `error` text instead of throwing.
+ */
+export async function startPlumageBackfill(options: { approved?: boolean; dry_run?: boolean }): Promise<BackfillStatus> {
+  try {
+    return (await axios.post<BackfillStatus>(`${base()}/plumage-backfill/`, options)).data;
+  } catch (error: any) {
+    const data = error?.response?.data;
+    if (data && (error.response.status === 409 || error.response.status === 429)) return data;
+    throw error;
   }
 }

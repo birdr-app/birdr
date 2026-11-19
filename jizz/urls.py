@@ -13,6 +13,7 @@ from jizz.marketing.views import (
     bird_page,
     birds_index,
     cms_legacy_redirect,
+    legacy_countries_redirect,
     update_page,
     updates_index,
     compare_page,
@@ -86,7 +87,7 @@ from jizz.birdr_journey_views import (
 from jizz.checklist_views import ChecklistView
 from jizz.app_version_views import AppVersionView
 from jizz.courses.views import CourseDetailView, CourseLessonView, CoursePracticeBirdsView, CourseProgressView, CourseSrsView
-from jizz.courses.admin_views import CourseCommonsPhotoView, CoursePhotoPickView, CoursePhotosView, CourseSpeciesMediaView
+from jizz.courses.admin_views import CourseCommonsPhotoView, CoursePhotoPickView, CoursePhotoPlumageView, CoursePhotosView, CoursePlumageBackfillView, CourseSpeciesMediaView
 from jizz.trips.admin_views import TripCommonsPhotoView, TripPhotoPickView, TripPhotosView, TripSpeciesMediaView
 from jizz.trips.views import TripAnswersView, TripDetailView, TripListView, TripProgressView, TripSeasonalityView
 from jizz.geo_views import GeoCountryView
@@ -368,12 +369,8 @@ urlpatterns = [
         {'slug': 'learn-bird-identification'},
         name='marketing-learn-bird-identification',
     ),
-    path(
-        'site/bird-quiz-by-country/',
-        intent_page,
-        {'slug': 'bird-quiz-by-country'},
-        name='marketing-bird-quiz-by-country',
-    ),
+    path('site/countries/', intent_page, {'slug': 'countries'}, name='marketing-countries'),
+    path('site/bird-quiz-by-country/', legacy_countries_redirect),
     path('site/birding-app/', intent_page, {'slug': 'birding-app'}, name='marketing-birding-app'),
     path('site/flocks/', intent_page, {'slug': 'flocks'}, name='marketing-flocks'),
     path('site/community/', intent_page, {'slug': 'community'}, name='marketing-community'),
@@ -420,10 +417,7 @@ urlpatterns = [
         'learn-bird-identification/',
         RedirectView.as_view(url='/site/learn-bird-identification/', permanent=True, query_string=True),
     ),
-    path(
-        'bird-quiz-by-country/',
-        RedirectView.as_view(url='/site/bird-quiz-by-country/', permanent=True, query_string=True),
-    ),
+    path('bird-quiz-by-country/', legacy_countries_redirect),
     path('birding-app/', RedirectView.as_view(url='/site/birding-app/', permanent=True, query_string=True)),
     path('flocks/', RedirectView.as_view(url='/site/flocks/', permanent=True, query_string=True)),
     path('community/', RedirectView.as_view(url='/site/community/', permanent=True, query_string=True)),
@@ -603,6 +597,8 @@ urlpatterns = [
     path('api/courses/<slug:slug>/photos/species/<int:species_id>/', CourseSpeciesMediaView.as_view(), name='course-photos-species'),
     path('api/courses/<slug:slug>/photos/species/<int:species_id>/commons/', CourseCommonsPhotoView.as_view(), name='course-photos-commons'),
     path('api/courses/<slug:slug>/photos/<int:week>/<int:species_id>/', CoursePhotoPickView.as_view(), name='course-photo-pick'),
+    path('api/courses/<slug:slug>/photos/media/<int:media_id>/plumage/', CoursePhotoPlumageView.as_view(), name='course-photo-plumage'),
+    path('api/courses/<slug:slug>/photos/plumage-backfill/', CoursePlumageBackfillView.as_view(), name='course-plumage-backfill'),
     path('api/trips/', TripListView.as_view(), name='trip-list'),
     path('api/trips/<str:country>/photos/', TripPhotosView.as_view(), name='trip-photos'),
     path('api/trips/<str:country>/photos/species/<int:species_id>/', TripSpeciesMediaView.as_view(), name='trip-photos-species'),

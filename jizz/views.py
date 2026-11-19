@@ -159,7 +159,8 @@ class CountryViewSet(viewsets.ModelViewSet):
             custom_order=Case(
                 When(code="world", then=Value(0)),
                 default=Value(1),
-            )
+            ),
+            species_total=Count("countryspecies"),
         )
         .exclude(countryspecies__isnull=True)
         .select_related("parent")

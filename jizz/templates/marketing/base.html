@@ -1683,7 +1683,7 @@
       <nav class="site" aria-label="{% mt "Primary" %}">
         <a href="{{ '/site/how-it-works/'|mpath }}"{% if nav_section == 'how-it-works' %} aria-current="page"{% endif %}>{% mt "How it works" %}</a>
         <a href="{{ '/site/birds/'|mpath }}"{% if nav_section == 'species' %} aria-current="page"{% endif %}>{% mt "Species" %}</a>
-        <a href="{{ '/site/bird-quiz-by-country/'|mpath }}"{% if nav_section == 'countries' %} aria-current="page"{% endif %}>{% mt "Countries" %}</a>
+        <a href="{{ '/site/countries/'|mpath }}"{% if nav_section == 'countries' %} aria-current="page"{% endif %}>{% mt "Countries" %}</a>
         <a href="{{ '/site/community/'|mpath }}"{% if nav_section == 'community' %} aria-current="page"{% endif %}>{% mt "Community" %}</a>
         {% if locale == 'nl' %}<a href="{{ '/site/vogelcursus/'|mpath }}"{% if nav_section == 'course' %} aria-current="page"{% endif %}>Vogelcursus</a>{% elif locale == 'en' %}<a href="{{ '/site/bird-course/'|mpath }}"{% if nav_section == 'course' %} aria-current="page"{% endif %}>Bird course</a>{% endif %}
         {% if not nav_user_name %}
@@ -1748,10 +1748,10 @@
           <li><a href="{{ '/site/birds/'|mpath }}">{% mt "Species" %}</a></li>
           <li><a href="{{ '/site/learn-bird-identification/'|mpath }}">{% mt "Learn bird identification" %}</a></li>
           <li><a href="{{ '/site/my-tricky-birds/'|mpath }}">{% mt "My Tricky Birds" %}</a></li>
-          <li><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "Quizzes by country" %}</a></li>
+          <li><a href="{{ '/site/countries/'|mpath }}">{% mt "Quizzes by country" %}</a></li>
           <li><a href="{{ '/site/national-league/'|mpath }}">{% mt "National League" %}</a></li>
           <li><a href="{{ '/site/survival/'|mpath }}">{% mt "Survival" %}</a></li>
-          {% if locale == 'nl' %}<li><a href="{{ '/site/vogelcursus/'|mpath }}">Vogelcursus voor beginners</a></li>{% elif locale == 'en' %}<li><a href="{{ '/site/bird-course/'|mpath }}">Bird course for beginners</a></li>{% endif %}
+          {% if locale == 'nl' %}<li><a href="{{ '/site/vogelcursus/'|mpath }}">Vogelcursus voor beginners</a></li>{% elif locale == 'en' %}<li><a href="{{ '/site/bird-course/'|mpath }}">Bird course for beginners</a></li><li><a href="{{ '/site/advanced-bird-course/'|mpath }}">Advanced birding course</a></li>{% endif %}
         </ul>
       </div>
       <div>

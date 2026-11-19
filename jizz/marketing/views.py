@@ -457,7 +457,7 @@ def country_page(request, slug: str):
         path=path,
         breadcrumbs=[
             ('Home', SITE_HOME),
-            ('Quizzes by country', site_path('bird-quiz-by-country')),
+            ('Quizzes by country', site_path('countries')),
             (country_name, path),
         ],
         regions=group['regions'] if group else [],
@@ -488,7 +488,7 @@ def region_page(request, country: str, slug: str):
         path=path,
         breadcrumbs=[
             ('Home', SITE_HOME),
-            ('Quizzes by country', site_path('bird-quiz-by-country')),
+            ('Quizzes by country', site_path('countries')),
             (group['name'], parent_path),
             (row['name'], path),
         ],
@@ -1046,6 +1046,12 @@ def my_edits(request):
         **snapshot,
     )
     return render(request, 'marketing/my_edits.html', context)
+
+
+def legacy_countries_redirect(request):
+    """/site/bird-quiz-by-country/ became /site/countries/; keep the language and query string."""
+    query = request.META.get('QUERY_STRING')
+    return redirect(_loc(request, '/site/countries/') + (f'?{query}' if query else ''), permanent=True)
 
 
 def cms_legacy_redirect(request, slug: str):

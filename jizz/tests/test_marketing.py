@@ -286,7 +286,7 @@ class MarketingPagesTests(TestCase):
         paths = [
             '/site/how-it-works/',
             '/site/learn-bird-identification/',
-            '/site/bird-quiz-by-country/',
+            '/site/countries/',
             '/site/birding-app/',
             '/site/my-tricky-birds/',
             '/site/flocks/',
@@ -349,7 +349,7 @@ class MarketingPagesTests(TestCase):
         self.assertIn('Flocks: quizzes for bird clubs', flocks)
         self.assertIn('/flocks/intro', flocks)
 
-        by_country = self.client.get('/site/bird-quiz-by-country/').content.decode()
+        by_country = self.client.get('/site/countries/').content.decode()
         self.assertIn('National League is the real competition', by_country)
         self.assertIn('href="/league"', by_country)
         self.assertIn('Open the National League', by_country)
@@ -635,7 +635,7 @@ class MarketingPagesTests(TestCase):
         # No published trip pack for the Netherlands: no trip prep block.
         nl = self.client.get('/site/countries/netherlands/').content.decode()
         self.assertNotIn('Trip prep for', nl)
-        self.assertIn('Zoek een land', self.client.get('/nl/site/bird-quiz-by-country/').content.decode())
+        self.assertIn('Zoek een land', self.client.get('/nl/site/countries/').content.decode())
 
     def test_country_page_stats_from_data_section(self):
         CountrySpecies.objects.filter(country=self.nl).update(status='native')
@@ -1161,7 +1161,7 @@ class MarketingPagesTests(TestCase):
         country('US-EAST', 'United States - Eastern', kind='aggregate', parent=us)
         country('NL-TX', 'Texel Bird Week', kind='specialty', parent=self.nl)
 
-        page = self.client.get('/site/bird-quiz-by-country/').content.decode()
+        page = self.client.get('/site/countries/').content.decode()
         self.assertIn('All the birds of the world', page)
         self.assertIn('States, provinces and regions', page)
         self.assertIn('href="/site/countries/united-states/georgia/"', page)
@@ -1172,8 +1172,14 @@ class MarketingPagesTests(TestCase):
         self.assertIn('<option value="US">', page)
         self.assertIn('"US": {"url": "/site/countries/united-states/"', page)
         self.assertIn('"url": "/site/countries/united-states/alaska/"', page)
-        self.assertIn('Show all', page)
-        nl_page = self.client.get('/nl/site/bird-quiz-by-country/').content.decode()
+        self.assertIn('Show country', page)
+        self.assertNotIn('<details', page.split('id="all-countries"')[1].split('class="band"')[0])
+        self.assertLess(page.index('id="all-countries"'), page.index('id="all-regions"'))
+        old = self.client.get('/nl/site/bird-quiz-by-country/?x=1')
+        self.assertEqual(old.status_code, 301)
+        self.assertEqual(old['Location'], '/nl/site/countries/?x=1')
+        self.assertEqual(self.client.get('/site/bird-quiz-by-country/')['Location'], '/site/countries/')
+        nl_page = self.client.get('/nl/site/countries/').content.decode()
         self.assertIn('"url": "/nl/site/countries/united-states/alaska/"', nl_page)
 
         state = self.client.get('/site/countries/united-states/georgia/')

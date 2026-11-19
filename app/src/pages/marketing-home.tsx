@@ -101,7 +101,7 @@ export function MarketingHomePage() {
             <Flex gap={4} wrap="wrap" fontWeight="600" fontSize="sm" align="center">
               <Link href="/site/how-it-works/">How it works</Link>
               <Link href="/site/birds/">Species</Link>
-              <Link href="/site/bird-quiz-by-country/">Countries</Link>
+              <Link href="/site/countries/">Countries</Link>
               <Link href="/site/community/">Community</Link>
               <Link
                 href="#get-the-app"
@@ -203,7 +203,7 @@ export function MarketingHomePage() {
             ['High scores', 'See how you rank after a quiz.', '/scores/'],
             ['My checklist', 'See which birds you named correctly in your country, and which ones you missed.', '/checklist'],
             ['Species', 'Look up a bird, see what people miss most, and open comparisons for lookalikes.', '/site/birds/'],
-            ['Country Challenges', 'Structured levels for the birds of a country—from the Netherlands to Japan to Colombia.', '/site/bird-quiz-by-country/'],
+            ['Country Challenges', 'Structured levels for the birds of a country—from the Netherlands to Japan to Colombia.', '/site/countries/'],
             ['My Tricky Birds', 'Focused drills on the species and confusing pairs you actually mix up.', '/site/my-tricky-birds/'],
           ].map(([title, body, href]) => (
             <Box key={title} {...cardProps}>
@@ -289,7 +289,7 @@ export function MarketingHomePage() {
                 <Link href="/play">Play a quiz</Link>
                 <Link href="/site/birds/">Species</Link>
                 <Link href="/site/my-tricky-birds/">My Tricky Birds</Link>
-                <Link href="/site/bird-quiz-by-country/">Quizzes by country</Link>
+                <Link href="/site/countries/">Quizzes by country</Link>
               </Flex>
             </Box>
             <Box>

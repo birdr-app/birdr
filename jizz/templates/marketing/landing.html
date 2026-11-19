@@ -104,7 +104,7 @@
         <h3 class="feature-title">{% mt "Country Challenge" %}</h3>
         <p>{% mt "Study the birds of one country from start to finish. It begins quite easy, but as you progress through levels things get tougher—be warned, the end is really tough." %}</p>
         <p><a class="btn" href="/journey/intro">{% mt "Start a Country Challenge" %}</a></p>
-        <p><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "Quizzes by country" %}</a></p>
+        <p><a href="{{ '/site/countries/'|mpath }}">{% mt "Quizzes by country" %}</a></p>
       </div>
       <div class="feature-art">
         {% mt "Country Challenge for Ecuador: level 3, Casual Birder, with the next step ready to play" as alt %}{% include "marketing/mockups/_shot.html" with shot="journey" alt=alt %}
@@ -225,7 +225,7 @@
 <section>
   <h2>{% mt "Study a country list" %}</h2>
   {% include "marketing/_country_pills.html" %}
-  <p><a href="{{ '/site/bird-quiz-by-country/'|mpath }}">{% mt "All country quizzes" %}</a></p>
+  <p><a href="{{ '/site/countries/'|mpath }}">{% mt "All country quizzes" %}</a></p>
 </section>
 {% endif %}
 
