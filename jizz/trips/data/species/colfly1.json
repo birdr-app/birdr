@@ -1,0 +1,22 @@
+{
+  "code": "colfly1",
+  "name": {
+    "en": "Collared Flycatcher",
+    "nl": "Withalsvliegenvanger"
+  },
+  "latin": "Ficedula albicollis",
+  "look_for": [
+    {
+      "en": "Male black above with a full white **collar**",
+      "nl": "Mannetje zwart boven met een volledige witte **kraag**"
+    },
+    {
+      "en": "Big white **forehead** patch",
+      "nl": "Grote witte **voorhoofdsvlek**"
+    },
+    {
+      "en": "Large white **wing** patch; female grey-brown",
+      "nl": "Grote witte **vleugelvlek**; vrouwtje grijsbruin"
+    }
+  ]
+}

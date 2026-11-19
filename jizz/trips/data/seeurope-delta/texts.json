@@ -1,0 +1,90 @@
+{
+  "country": "SEEUROPE-DELTA",
+  "intro": {
+    "en": "The Danube Delta and the Black Sea coast of Romania and Bulgaria, with the lower Prut in Moldova: reedbeds, lagoons, steppe and oak forest on one flyway. Both pelicans nest here, terns and gulls gather on the lagoons, and eagles hunt the hills around. This pack adds 35 species.",
+    "nl": "De Donaudelta en de kust van de Zwarte Zee in Roemenië en Bulgarije, met de benedenloop van de Proet in Moldavië: rietvelden, lagunes, steppe en eikenbos langs één trekroute. Beide pelikanen broeden hier, sterns en meeuwen verzamelen zich op de lagunes en arenden jagen in de heuvels eromheen. Dit pakket voegt 35 soorten toe."
+  },
+  "units": {
+    "waterfowl": {
+      "title": {
+        "en": "Waterfowl and waders of the delta",
+        "nl": "Watervogels en steltlopers van de delta"
+      },
+      "intro": {
+        "en": "Five birds of shallow water and wet fields: Ruddy Shelduck and Red-crested Pochard on lakes, Avocet and Collared Pratincole on mud, and Red-breasted Goose in winter flocks.",
+        "nl": "Vijf vogels van ondiep water en natte velden: casarca en krooneend op meren, kluut en vorkstaartplevier op modder, en de roodhalsgans in winterse groepen."
+      }
+    },
+    "gulls-terns-and-skimmers-1": {
+      "title": {
+        "en": "Gulls and small terns",
+        "nl": "Meeuwen en kleine sterns"
+      },
+      "intro": {
+        "en": "Five birds of lagoons and beaches: Mediterranean, Little and Slender-billed Gulls, and Little and Gull-billed Terns. Look at hood and bill shape.",
+        "nl": "Vijf vogels van lagunes en stranden: zwartkopmeeuw, dwergmeeuw en dunbekmeeuw, en dwergstern en lachstern. Let op kap en snavelvorm."
+      }
+    },
+    "gulls-terns-and-skimmers-2": {
+      "title": {
+        "en": "Terns of marsh and sea",
+        "nl": "Sterns van moeras en zee"
+      },
+      "intro": {
+        "en": "Four terns. Black and White-winged Black Terns hawk insects over marshes; Sandwich and Caspian Terns dive at sea and in lagoons. Look at size and bill colour.",
+        "nl": "Vier sterns. Zwarte stern en witvleugelstern vangen insecten boven moerassen; grote stern en reuzenstern duiken op zee en in lagunes. Let op grootte en snavelkleur."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "title": {
+        "en": "Pelicans, ibis and herons",
+        "nl": "Pelikanen, ibis en reigers"
+      },
+      "intro": {
+        "en": "Five big wetland birds: two pelicans, Glossy Ibis, Squacco Heron and Bittern. The pelicans are easiest in flocks on open water and in the air; the bittern you mostly hear.",
+        "nl": "Vijf grote moerasvogels: twee pelikanen, de zwarte ibis, de ralreiger en de roerdomp. De pelikanen zie je het makkelijkst in groepen op open water en in de lucht; de roerdomp hoor je vooral."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "title": {
+        "en": "Eagles of the delta",
+        "nl": "Arenden van de delta"
+      },
+      "intro": {
+        "en": "Four eagles: Booted, Imperial, Lesser Spotted and Greater Spotted. Look at size, wing shape and pale patches; many pass at migration.",
+        "nl": "Vier arenden: dwergarend, keizerarend, schreeuwarend en bastaardarend. Let op grootte, vleugelvorm en lichte vlekken; veel exemplaren trekken door."
+      }
+    },
+    "falcons-and-caracaras": {
+      "title": {
+        "en": "Steppe larks, falcon and warbler",
+        "nl": "Steppeleeuweriken, valk en zanger"
+      },
+      "intro": {
+        "en": "Calandra and Greater Short-toed Larks live on dry steppe, Red-footed Falcon hunts insects over meadows, and Moustached Warbler skulks in reedbeds.",
+        "nl": "Kalanderleeuwerik en kortteenleeuwerik leven op droge steppe, de roodpootvalk jaagt op insecten boven weiden, en de zwartkoprietzanger sluipt door rietvelden."
+      }
+    },
+    "grassbirds-and-allies": {
+      "title": {
+        "en": "Warblers and starling of scrub and reeds",
+        "nl": "Zangers en spreeuw van struweel en riet"
+      },
+      "intro": {
+        "en": "Three warblers best known by song: Savi's reels, River Warbler sounds like a sewing machine, Barred Warbler chatters. The Rose-coloured Starling wanders in flocks to fruit trees and steppe.",
+        "nl": "Drie zangers die je het best aan hun zang kent: de snor tikt aaneen, de krekelzanger klinkt als een naaimachine, de sperwergrasmus ratelt. De roze spreeuw trekt in groepen naar fruitbomen en steppe."
+      }
+    },
+    "old-world-flycatchers": {
+      "title": {
+        "en": "Nightingale, wheatear, bluethroat",
+        "nl": "Nachtegaal, tapuit, blauwborst"
+      },
+      "intro": {
+        "en": "Four small songbirds. Thrush Nightingale sings from thick scrub at the water's edge, Bluethroat from reeds, Isabelline Wheatear stands on bare steppe, and Red-breasted Flycatcher lives in old woods.",
+        "nl": "Vier kleine zangvogels. De noordse nachtegaal zingt uit dicht struweel aan het water, de blauwborst uit riet, de izabeltapuit staat op kale steppe en de kleine vliegenvanger leeft in oude bossen."
+      }
+    }
+  },
+  "species": {}
+}

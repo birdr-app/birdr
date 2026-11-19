@@ -1,0 +1,22 @@
+{
+  "code": "pygcor2",
+  "name": {
+    "en": "Pygmy Cormorant",
+    "nl": "Dwergaalscholver"
+  },
+  "latin": "Microcarbo pygmaeus",
+  "look_for": [
+    {
+      "en": "**Small** cormorant, not much bigger than a duck",
+      "nl": "**Kleine** aalscholver, nauwelijks groter dan een eend"
+    },
+    {
+      "en": "Short, thin **bill** and long **tail**",
+      "nl": "Korte, dunne **snavel** en lange **staart**"
+    },
+    {
+      "en": "Dark all over, chestnut **head** when breeding",
+      "nl": "Helemaal donker, kastanjebruine **kop** in broedkleed"
+    }
+  ]
+}

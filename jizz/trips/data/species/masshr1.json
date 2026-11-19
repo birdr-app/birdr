@@ -1,0 +1,22 @@
+{
+  "code": "masshr1",
+  "name": {
+    "en": "Masked Shrike",
+    "nl": "Maskerklauwier"
+  },
+  "latin": "Lanius nubicus",
+  "look_for": [
+    {
+      "en": "Black **crown**, **mask** and **back**",
+      "nl": "Zwarte **kruin**, **masker** en **rug**"
+    },
+    {
+      "en": "White **shoulder** patch and orange **flanks**",
+      "nl": "Witte **schouderstreep** en oranje **flanken**"
+    },
+    {
+      "en": "Slimmer than Woodchat Shrike; female browner",
+      "nl": "Slanker dan roodkopklauwier; vrouwtje bruiner"
+    }
+  ]
+}

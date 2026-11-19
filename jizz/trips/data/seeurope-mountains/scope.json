@@ -1,0 +1,44 @@
+{
+  "country": "SEEUROPE-MOUNTAINS",
+  "notes": "Alps, Carpathians and Balkan mountains: Julian Alps, Velebit, Durmitor and Sutjeska, Rila, Pirin and the Rhodopes, the Romanian Carpathians. Hand-picked, since the model scores these birds low (Capercaillie 0.10, Hazel Grouse 0.10, Ural Owl 0.04, Black Grouse 0.09): grouse, owls and woodpeckers of the old forests, Wallcreeper, Alpine Accentor, the choughs, Rock Partridge and Rock Bunting, Golden Eagle and Egyptian Vulture. Rock Ptarmigan has no model score. Most are hard to find in a short visit: a note for the writer, who should say so on the cards. Photos: Spotted Nutcracker, Red-billed Chough, Semicollared Flycatcher, White-winged Snowfinch and Rock Bunting had no approved photos, so their picks are review-agent picks from unreviewed candidates and need approving on /trip-photos. Shaky: Semicollared Flycatcher (many shots could be Collared or Pied Flycatcher, 4 photos only). Some Spotted Nutcracker photos may be at human-fed spots.",
+  "manual": true,
+  "add": [
+    "alpacc1",
+    "yebcho1",
+    "blagro1",
+    "redcro",
+    "rtrthr1",
+    "corcra",
+    "cretit2",
+    "egyvul1",
+    "eueowl1",
+    "eupowl1",
+    "ettwoo1",
+    "goleag",
+    "hazgro1",
+    "rebcho1",
+    "rinouz1",
+    "rocbun1",
+    "rocpar2",
+    "rocpta1",
+    "semfly1",
+    "horlar",
+    "eurnut3",
+    "borowl",
+    "uraowl1",
+    "wallcr1",
+    "wescap1",
+    "whbwoo1",
+    "whtdip1",
+    "whwsno1",
+    "wiltit1"
+  ],
+  "drop": [],
+  "first_day": [],
+  "lookalikes": [
+    {
+      "here": "semfly1",
+      "home": "colfly1"
+    }
+  ]
+}

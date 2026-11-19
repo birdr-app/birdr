@@ -1,0 +1,26 @@
+{
+  "model": "BirdNET GeoModel v3.0.4 (Apache-2.0, birdnet-team/geomodel)",
+  "model_version": "v3.0.4",
+  "likely_threshold": 0.5,
+  "ebird_filter": true,
+  "month_score": "mean of the 4 BirdNET weeks of the month",
+  "generated": "2026-11-19",
+  "regions": {
+    "SEEUROPE": {
+      "areas": 66,
+      "species": 365
+    },
+    "SEEUROPE-MEDITERRANEAN": {
+      "areas": 24,
+      "species": 343
+    },
+    "SEEUROPE-DELTA": {
+      "areas": 12,
+      "species": 328
+    },
+    "SEEUROPE-MOUNTAINS": {
+      "areas": 14,
+      "species": 335
+    }
+  }
+}

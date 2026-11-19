@@ -1,0 +1,90 @@
+{
+  "country": "SEEUROPE-MEDITERRANEAN",
+  "intro": {
+    "en": "The Mediterranean side of the region: Greece and the coast from Slovenia to Albania. Olive groves, scrubby hillsides, salt pans and sea cliffs hold birds of the south and east that the main trip lacks, among them Eleonora's Falcon, Krüper's Nuthatch and Rüppell's Warbler. This pack adds 36 species.",
+    "nl": "De mediterrane kant van de regio: Griekenland en de kust van Slovenië tot Albanië. Olijfgaarden, struikrijke heuvels, zoutpannen en zeekliffen herbergen vogels van het zuiden en oosten die de hoofdreis niet heeft, zoals de Eleonora's valk, de Turkse boomklever en Rüppells grasmus. Dit pakket voegt 36 soorten toe."
+  },
+  "units": {
+    "grouse-quail-and-allies": {
+      "title": {
+        "en": "Dry hills and open ground",
+        "nl": "Droge heuvels en open terrein"
+      },
+      "intro": {
+        "en": "Six birds of dry, open country: Chukar on stony slopes, Stone-curlew on bare ground, Kentish Plover on salt pans, Spur-winged Lapwing on wet fields, and Great Spotted Cuckoo and Pallid Swift in the air.",
+        "nl": "Zes vogels van droog, open land: de Aziatische steenpatrijs op stenige hellingen, de griel op kale grond, de strandplevier op zoutpannen, de sporenkievit op natte velden, en de kuifkoekoek en vale gierzwaluw in de lucht."
+      }
+    },
+    "gulls-terns-and-skimmers": {
+      "title": {
+        "en": "Sea and lagoons",
+        "nl": "Zee en lagunes"
+      },
+      "intro": {
+        "en": "Six birds of salt water: two shearwaters offshore, Shag on rocky coasts, Audouin's Gull, flamingos on lagoons and Cattle Egret among livestock nearby.",
+        "nl": "Zes vogels van zout water: twee pijlstormvogels op zee, de kuifaalscholver op rotskusten, Audouins meeuw, flamingo's op lagunes en de koereiger tussen het vee in de buurt."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "title": {
+        "en": "Vultures and raptors of the hills",
+        "nl": "Gieren en roofvogels van de heuvels"
+      },
+      "intro": {
+        "en": "Two vultures, an eagle and a hawk. Griffon and Black Vulture soar on thermals, Bonelli's Eagle hunts around cliffs, and Levant Sparrowhawk crosses in tight flocks on migration.",
+        "nl": "Twee gieren, een arend en een havik. Vale gier en monniksgier zweven op thermiek, de havikarend jaagt bij rotsen, en de Balkansperwer trekt in compacte groepen over."
+      }
+    },
+    "falcons-and-caracaras": {
+      "title": {
+        "en": "Falcons, Masked Shrike and Sombre Tit",
+        "nl": "Valken, maskerklauwier en rouwmees"
+      },
+      "intro": {
+        "en": "Four birds of the dry south. Lesser Kestrel hovers over fields, Eleonora's Falcon hunts over islands and sea cliffs, and Masked Shrike and Sombre Tit live in oak and olive woods.",
+        "nl": "Vier vogels van het droge zuiden. De kleine torenvalk bidt boven velden, de Eleonora's valk jaagt boven eilanden en zeekliffen, en maskerklauwier en rouwmees leven in eiken- en olijfbos."
+      }
+    },
+    "cisticolas-and-allies": {
+      "title": {
+        "en": "Warblers of scrub and olive groves",
+        "nl": "Zangers van struweel en olijfgaarden"
+      },
+      "intro": {
+        "en": "Four small warblers. Zitting Cisticola ticks over open fields in a bouncing flight; Eastern Olivaceous, Olive-tree and Eastern Bonelli's Warbler sing from trees and scrub. Learn the song first.",
+        "nl": "Vier kleine zangers. De graszanger tikt boven open velden in een golvende vlucht; Oostelijke vale spotvogel, Griekse spotvogel en Balkanbergfluiter zingen vanuit bomen en struweel. Leer eerst de zang."
+      }
+    },
+    "sylviid-warblers": {
+      "title": {
+        "en": "Mediterranean scrub warblers",
+        "nl": "Zangers van mediterraan struikgewas"
+      },
+      "intro": {
+        "en": "Four warblers of dry scrub. Males show the key marks: Sardinian a black head and red eye-ring, Rüppell's a black throat and white moustache, Orphean a dark hood and pale eye, Subalpine an orange throat.",
+        "nl": "Vier zangers van droog struikgewas. Mannetjes tonen de kenmerken: de kleine zwartkop een zwarte kop en rode oogring, Rüppells grasmus een zwarte keel en witte baardstreep, de orpheusgrasmus een donkere kap en lichte iris, de baardgrasmus een oranje keel."
+      }
+    },
+    "nuthatches": {
+      "title": {
+        "en": "Rock slopes and pine woods",
+        "nl": "Rotshellingen en dennenbos"
+      },
+      "intro": {
+        "en": "A rock thrush, a wheatear and two nuthatches. Rock Nuthatch calls loudly from cliffs, Krüper's lives in pine forest, Black-eared Wheatear stands on stony slopes and Blue Rock Thrush sits on rocks and ruins.",
+        "nl": "Een rotslijster, een tapuit en twee boomklevers. De rotsklever roept luid vanaf rotsen, de Turkse boomklever leeft in dennenbos, de blonde tapuit staat op stenige hellingen en de blauwe rotslijster zit op rotsen en ruïnes."
+      }
+    },
+    "old-world-sparrows": {
+      "title": {
+        "en": "Buntings and Rock Sparrow",
+        "nl": "Gorzen en rotsmus"
+      },
+      "intro": {
+        "en": "Four seed-eaters of stony hillsides: Cretzschmar's, Cinereous and Black-headed Buntings and Rock Sparrow. In spring males sing from the top of a rock or bush.",
+        "nl": "Vier zaadeters van stenige heuvels: bruinkeelortolaan, smyrnagors, zwartkopgors en rotsmus. In het voorjaar zingen de mannetjes vanaf een rots of struiktop."
+      }
+    }
+  },
+  "species": {}
+}

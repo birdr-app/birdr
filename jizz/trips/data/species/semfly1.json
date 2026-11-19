@@ -1,0 +1,22 @@
+{
+  "code": "semfly1",
+  "name": {
+    "en": "Semicollared Flycatcher",
+    "nl": "Balkanvliegenvanger"
+  },
+  "latin": "Ficedula semitorquata",
+  "look_for": [
+    {
+      "en": "Male black above, **collar** only a narrow white line",
+      "nl": "Mannetje zwart boven, **kraag** slechts een smalle witte streep"
+    },
+    {
+      "en": "Large white **forehead** and **wing** patches",
+      "nl": "Grote witte **voorhoofds**- en **vleugelvlek**"
+    },
+    {
+      "en": "Mountain forests; female brown-grey like Collared",
+      "nl": "Bergbossen; vrouwtje bruingrijs zoals withalsvliegenvanger"
+    }
+  ]
+}

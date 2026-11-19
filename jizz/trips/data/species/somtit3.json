@@ -1,0 +1,22 @@
+{
+  "code": "somtit3",
+  "name": {
+    "en": "Sombre Tit",
+    "nl": "Rouwmees"
+  },
+  "latin": "Poecile lugubris",
+  "look_for": [
+    {
+      "en": "**Cap** dull brown-black, not glossy like Marsh Tit",
+      "nl": "Dof bruinzwarte **kap**, niet glanzend zoals bij de glanskopmees"
+    },
+    {
+      "en": "Big black **bib** and pale **cheek**",
+      "nl": "Grote zwarte **bef** en lichte **wang**"
+    },
+    {
+      "en": "Grey-brown **back**, plain buff-white below",
+      "nl": "Grijsbruine **rug**, effen bruinwitte onderkant"
+    }
+  ]
+}

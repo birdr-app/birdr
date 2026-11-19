@@ -1,0 +1,320 @@
+{
+  "country": "SEEUROPE-MOUNTAINS",
+  "groups": [
+    {
+      "slug": "grouse-quail-and-allies",
+      "name": {
+        "en": "Grouse, Quail, and Allies",
+        "nl": "Hoenders, Kwartels en aanverwanten"
+      },
+      "species": [
+        "hazgro1",
+        "rocpta1",
+        "wescap1",
+        "blagro1",
+        "rocpar2"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "rails-gallinules-and-allies",
+      "name": {
+        "en": "Rails, Gallinules, and Allies",
+        "nl": "Rallen, Koeten en aanverwanten"
+      },
+      "species": [
+        "corcra"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "vultures-hawks-and-allies",
+      "name": {
+        "en": "Vultures, Hawks, and Allies",
+        "nl": "Gieren, Arenden, Buizerds, Haviken en aanverwanten"
+      },
+      "species": [
+        "egyvul1",
+        "goleag"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "owls",
+      "name": {
+        "en": "Owls",
+        "nl": "Uilen"
+      },
+      "species": [
+        "eueowl1",
+        "eupowl1",
+        "uraowl1",
+        "borowl"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "woodpeckers",
+      "name": {
+        "en": "Woodpeckers",
+        "nl": "Spechten"
+      },
+      "species": [
+        "ettwoo1",
+        "whbwoo1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "jays-magpies-crows-and-ravens",
+      "name": {
+        "en": "Jays, Magpies, Crows, and Ravens",
+        "nl": "Gaaien, Eksters, Kraaien en Raven"
+      },
+      "species": [
+        "eurnut3",
+        "rebcho1",
+        "yebcho1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tits-chickadees-and-titmice",
+      "name": {
+        "en": "Tits, Chickadees, and Titmice",
+        "nl": "Mezen"
+      },
+      "species": [
+        "cretit2",
+        "wiltit1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "larks",
+      "name": {
+        "en": "Larks",
+        "nl": "Leeuweriken"
+      },
+      "species": [
+        "horlar"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "wallcreeper",
+      "name": {
+        "en": "Wallcreeper",
+        "nl": "Rotskruiper"
+      },
+      "species": [
+        "wallcr1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "dippers",
+      "name": {
+        "en": "Dippers",
+        "nl": "Waterspreeuwen"
+      },
+      "species": [
+        "whtdip1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "thrushes",
+      "name": {
+        "en": "Thrushes",
+        "nl": "Lijsters"
+      },
+      "species": [
+        "rinouz1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "old-world-flycatchers",
+      "name": {
+        "en": "Old World Flycatchers",
+        "nl": "Vliegenvangers van de Oude Wereld"
+      },
+      "species": [
+        "semfly1",
+        "rtrthr1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "accentors",
+      "name": {
+        "en": "Accentors",
+        "nl": "Heggenmussen"
+      },
+      "species": [
+        "alpacc1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "old-world-sparrows",
+      "name": {
+        "en": "Old World Sparrows",
+        "nl": "Mussen van de Oude Wereld"
+      },
+      "species": [
+        "whwsno1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "finches-euphonias-and-allies",
+      "name": {
+        "en": "Finches, Euphonias, and Allies",
+        "nl": "Vinken, Euphonia's en aanverwanten"
+      },
+      "species": [
+        "redcro"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "old-world-buntings",
+      "name": {
+        "en": "Old World Buntings",
+        "nl": "Gorzen van de Oude Wereld"
+      },
+      "species": [
+        "rocbun1"
+      ],
+      "endemics": []
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "grouse-quail-and-allies",
+      "title": {
+        "en": "Grouse and mountain partridges",
+        "nl": "Hoenderachtigen van het gebergte"
+      },
+      "groups": [
+        "grouse-quail-and-allies"
+      ],
+      "species": [
+        "wescap1",
+        "rocpar2",
+        "hazgro1",
+        "blagro1",
+        "rocpta1"
+      ]
+    },
+    {
+      "slug": "rails-gallinules-and-allies",
+      "title": {
+        "en": "Golden Eagle, vulture and Corncrake",
+        "nl": "Steenarend, aasgier, kwartelkoning"
+      },
+      "groups": [
+        "rails-gallinules-and-allies",
+        "vultures-hawks-and-allies"
+      ],
+      "species": [
+        "goleag",
+        "corcra",
+        "egyvul1"
+      ]
+    },
+    {
+      "slug": "owls",
+      "title": {
+        "en": "Owls of the mountain forests",
+        "nl": "Uilen van de bergbossen"
+      },
+      "groups": [
+        "owls"
+      ],
+      "species": [
+        "borowl",
+        "eueowl1",
+        "uraowl1",
+        "eupowl1"
+      ]
+    },
+    {
+      "slug": "woodpeckers",
+      "title": {
+        "en": "Woodpeckers, nutcracker and choughs",
+        "nl": "Spechten, notenkraker en alpenkauwen"
+      },
+      "groups": [
+        "woodpeckers",
+        "jays-magpies-crows-and-ravens"
+      ],
+      "species": [
+        "eurnut3",
+        "yebcho1",
+        "ettwoo1",
+        "whbwoo1",
+        "rebcho1"
+      ]
+    },
+    {
+      "slug": "tits-chickadees-and-titmice",
+      "title": {
+        "en": "Tits, Shore Lark and Wallcreeper",
+        "nl": "Mezen, strandleeuwerik en rotskruiper"
+      },
+      "groups": [
+        "tits-chickadees-and-titmice",
+        "larks",
+        "wallcreeper"
+      ],
+      "species": [
+        "cretit2",
+        "wiltit1",
+        "horlar",
+        "wallcr1"
+      ]
+    },
+    {
+      "slug": "dippers",
+      "title": {
+        "en": "Dipper, thrushes and flycatcher",
+        "nl": "Waterspreeuw, lijsters en vliegenvanger"
+      },
+      "groups": [
+        "dippers",
+        "thrushes",
+        "old-world-flycatchers"
+      ],
+      "species": [
+        "whtdip1",
+        "rinouz1",
+        "rtrthr1",
+        "semfly1"
+      ]
+    },
+    {
+      "slug": "accentors",
+      "title": {
+        "en": "Accentor, snowfinch, crossbill, bunting",
+        "nl": "Heggenmus, sneeuwvink, kruisbek, gors"
+      },
+      "groups": [
+        "accentors",
+        "old-world-sparrows",
+        "finches-euphonias-and-allies",
+        "old-world-buntings"
+      ],
+      "species": [
+        "redcro",
+        "rocbun1",
+        "alpacc1",
+        "whwsno1"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

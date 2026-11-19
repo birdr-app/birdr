@@ -1,0 +1,22 @@
+{
+  "code": "ruewar1",
+  "name": {
+    "en": "Rüppell's Warbler",
+    "nl": "Rüppells grasmus"
+  },
+  "latin": "Curruca ruppeli",
+  "look_for": [
+    {
+      "en": "Male: black **head** and **throat**",
+      "nl": "Mannetje: zwarte **kop** en **keel**"
+    },
+    {
+      "en": "Broad white **moustache** stripe",
+      "nl": "Brede witte **baardstreep**"
+    },
+    {
+      "en": "Red-orange **eye-ring**, long **tail**",
+      "nl": "Roodoranje **oogring**, lange **staart**"
+    }
+  ]
+}

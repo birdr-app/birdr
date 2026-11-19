@@ -1,0 +1,22 @@
+{
+  "code": "rocpar2",
+  "name": {
+    "en": "Rock Partridge",
+    "nl": "Steenpatrijs"
+  },
+  "latin": "Alectoris graeca",
+  "look_for": [
+    {
+      "en": "White **throat** edged by a black **band**",
+      "nl": "Witte **keel** omlijst door een zwarte **band**"
+    },
+    {
+      "en": "Barred black-and-white **flanks**",
+      "nl": "Zwart-wit gebandeerde **flanken**"
+    },
+    {
+      "en": "Red **bill** and **legs**; rocky slopes",
+      "nl": "Rode **snavel** en **poten**; rotsachtige hellingen"
+    }
+  ]
+}
