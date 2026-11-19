@@ -273,13 +273,12 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'countries': ['GB', 'IE'],
     },
-    # South-eastern Europe: the country trip is a draft (unlisted) until its photos are approved; the three packs
-    # are not drafts so they show under Regions on the country's trip home.
+    # South-eastern Europe: one trip over 11 countries (a row per country in the trip list), with three packs.
+    # Some photos are unreviewed picks: see each scope.json and approve them on /trip-photos.
     'SEEUROPE': {
         'name': {'en': 'South-eastern Europe', 'nl': 'Zuidoost-Europa'},
         'languages': ('en', 'nl'),
         'countries': ['SI', 'HR', 'BA', 'RS', 'ME', 'AL', 'MK', 'BG', 'RO', 'MD', 'GR'],
-        'draft': True,
     },
     'SEEUROPE-MEDITERRANEAN': {
         'name': {'en': 'Greece and the Adriatic coast', 'nl': 'Griekenland en de Adriatische kust'},
