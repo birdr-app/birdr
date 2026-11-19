@@ -31,6 +31,11 @@ COURSES = {
         'subtitle': {'en': 'A course for beginners: one short lesson a week'},
         'languages': ('en',),
     },
+    'nw-europe-advanced': {
+        'title': {'en': 'Advanced birding: North-West Europe'},
+        'subtitle': {'en': 'Gulls, warblers, waders, seabirds, female ducks and strays, with lots of repetition'},
+        'languages': ('en',),
+    },
 }
 
 
@@ -134,16 +139,21 @@ def _media_ids(lessons) -> set[int]:
 
 
 def _media_rows(ids) -> dict[int, dict]:
+    """Display data per media id; photos also carry what is known about the bird's plumage."""
     from media.models import Media
 
     rows = {}
-    for media in Media.objects.filter(id__in=ids, hide=False):
+    for media in Media.objects.filter(id__in=ids, hide=False).select_related('plumage'):
+        plumage = getattr(media, 'plumage', None)
         rows[media.id] = {
             'id': media.id,
             'url': media_object_display_url(media),
             'contributor': media.contributor,
             'license': media.copyright_standardized,
             'source': media.source,
+            'plumage': {
+                'sex': plumage.sex, 'stage': plumage.stage, 'season': plumage.season, 'source': plumage.source,
+            } if plumage else None,
         }
     return rows
 
@@ -174,6 +184,54 @@ def _bird(bird: dict, rows: dict, lang: str) -> dict:
     }
 
 
+def _review_entry(bird: dict, week: int, rows: dict, lang: str) -> dict:
+    """A bird of an earlier lesson as the quiz needs it: photos, sounds, and where it was taught."""
+    full = _bird(bird, rows, lang)
+    return {
+        'species_id': full['species_id'],
+        'name': full['name'],
+        'plumage': full['plumage'],
+        'from_week': week,
+        'quiz_images': full['quiz_images'] or full['images'],
+        'sounds': full['sounds'],
+    }
+
+
+def srs_key(species_id: int, plumage: str) -> str:
+    """Spaced repetition tracks a bird in one plumage: "8861|adult female"."""
+    return f'{species_id}|{plumage}'
+
+
+def srs_pool(slug: str, keys: list[str], lang: str) -> dict:
+    """Quiz material for the birds a learner has to repeat, wherever in the course they were taught.
+
+    Newest lesson first, so a bird taught again later (a female in another block) uses that card.
+    Also returns every bird name and the look-alike groups, for the wrong answers.
+    """
+    lessons = effective_lessons(slug)
+    wanted = set(keys)
+    found: dict[str, tuple[dict, int]] = {}
+    for lesson in reversed(lessons):
+        for bird in lesson.get('birds', []):
+            key = srs_key(bird['species_id'], text(bird.get('plumage'), lang))
+            if key in wanted and key not in found:
+                found[key] = (bird, lesson['week'])
+    rows = _media_rows(_media_ids([{'birds': [bird for bird, _ in found.values()]}]))
+    birds = [
+        {**_review_entry(bird, week, rows, lang), 'key': key}
+        for key, (bird, week) in found.items()
+    ]
+    known: dict[int, str] = {}
+    for lesson in lessons:
+        for bird in lesson.get('birds', []):
+            known.setdefault(bird['species_id'], text(bird['name'], lang))
+    return {
+        'birds': [b for b in birds if b['quiz_images'] or b['sounds']],
+        'known_species': [{'species_id': sid, 'name': name} for sid, name in known.items()],
+        'lookalikes': [list(group) for group in lookalike_groups(slug)],
+    }
+
+
 def lesson_payload(slug: str, week: int, lang: str = 'nl') -> dict:
     lesson_by_week(slug, week)  # raises LessonNotFound
     lessons = effective_lessons(slug)
@@ -190,15 +248,7 @@ def lesson_payload(slug: str, week: int, lang: str = 'nl') -> dict:
             if key in seen:
                 continue
             seen.add(key)
-            full = _bird(bird, rows, lang)
-            review_birds.append({
-                'species_id': full['species_id'],
-                'name': full['name'],
-                'plumage': full['plumage'],
-                'from_week': other['week'],
-                'quiz_images': full['quiz_images'] or full['images'],
-                'sounds': full['sounds'],
-            })
+            review_birds.append(_review_entry(bird, other['week'], rows, lang))
 
     # Every bird taught up to and including this lesson: the quiz takes its wrong answers from
     # these, look-alikes of the right answer first.
@@ -239,6 +289,8 @@ def lesson_payload(slug: str, week: int, lang: str = 'nl') -> dict:
             'questions': quiz.get('questions', 8),
             'kind': quiz.get('kind', 'photo'),
             'review_questions': quiz.get('review_questions', 0),
+            # Mix of question kinds, e.g. {"photo": 4, "photo_sound": 3, "sound": 1}; absent = all photo or all sound.
+            'modes': quiz.get('modes'),
         },
         'review_birds': review_birds,
         'known_species': [{'species_id': sid, 'name': name} for sid, name in known.items()],

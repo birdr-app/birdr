@@ -132,120 +132,21 @@
 
 {{ js_ui|json_script:"course-ui" }}
 <script id="quiz-data" type="application/json">{{ quiz_json }}</script>
+{% include "marketing/_course_quiz_js.html" %}
 <script>
 (function () {
-  var data = JSON.parse(document.getElementById('quiz-data').textContent);
-  var root = document.getElementById('quiz-root');
-  var nextHref = '{{ next_href|escapejs }}';
   var ui = JSON.parse(document.getElementById('course-ui').textContent);
-  var KEY = ui.storage_key;
-  function f(s, v) { return s.replace(/\{(\w+)\}/g, function (m, k) { return v[k]; }); }
-
-  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
-
-  // Same rules as the apps: every new bird at least once, a few from earlier lessons, and wrong
-  // answers that look like the right one first (gulls with gulls), then the lesson, then the rest.
-  function buildQuiz() {
-    var bySound = data.quiz.kind === 'sound';
-    var usable = function (b) { return bySound ? b.sounds.length : b.images.length; };
-    var lessonBirds = data.birds.map(function (b) { return { sid: b.species_id, name: b.name, images: b.quiz_images.length ? b.quiz_images : b.images, sounds: b.sounds, review: false }; }).filter(usable);
-    var reviewBirds = data.review_birds.map(function (b) { return { sid: b.species_id, name: b.name, images: b.quiz_images, sounds: b.sounds, review: true }; }).filter(usable);
-    var total = data.quiz.questions;
-    var reviewCount = (data.kind === 'review' || !lessonBirds.length) ? Math.min(total, reviewBirds.length * 3) : Math.min(data.quiz.review_questions || 0, reviewBirds.length);
-    var lessonCount = lessonBirds.length ? total - reviewCount : 0;
-    var picks = [];
-    while (picks.length < lessonCount) picks = picks.concat(shuffle(lessonBirds).slice(0, lessonCount - picks.length));
-    var reviews = [];
-    while (reviews.length < reviewCount) reviews = reviews.concat(shuffle(reviewBirds).slice(0, reviewCount - reviews.length));
-    picks = picks.concat(reviews);
-    var nameOf = {};
-    (data.known_species || []).forEach(function (k) { nameOf[k.species_id] = k.name; });
-    lessonBirds.concat(reviewBirds).forEach(function (b) { if (!nameOf[b.sid]) nameOf[b.sid] = b.name; });
-    var lessonSids = lessonBirds.map(function (b) { return b.sid; });
-    var lookalikesOf = function (sid) {
-      var out = [];
-      (data.lookalikes || []).forEach(function (g) { if (g.indexOf(sid) >= 0) g.forEach(function (x) { if (x !== sid && nameOf[x] && out.indexOf(x) < 0) out.push(x); }); });
-      return out;
-    };
-    var used = {};
-    return shuffle(picks.map(function (b) {
-      var media = bySound ? b.sounds : b.images;
-      var n = used[b.name] || 0; used[b.name] = n + 1;
-      var item = media[(n + Math.floor(Math.random() * media.length)) % media.length];
-      var candidates = shuffle(lookalikesOf(b.sid)).concat(shuffle(lessonSids), shuffle(Object.keys(nameOf).map(Number)));
-      var wrong = [];
-      for (var i = 0; i < candidates.length && wrong.length < 3; i++) {
-        var nm = nameOf[candidates[i]];
-        if (candidates[i] === b.sid || !nm || nm === b.name || wrong.indexOf(nm) >= 0) continue;
-        wrong.push(nm);
-      }
-      return { answer: b.name, image: bySound ? null : item, sound: bySound ? item : null, options: shuffle([b.name].concat(wrong)), review: b.review };
-    }));
-  }
-
-  function el(tag, attrs, text) {
-    var e = document.createElement(tag);
-    Object.keys(attrs || {}).forEach(function (k) { if (k === 'class') e.className = attrs[k]; else e.setAttribute(k, attrs[k]); });
-    if (text != null) e.textContent = text;
-    return e;
-  }
-
-  function save(score, total) {
-    try {
-      var p = JSON.parse(localStorage.getItem(KEY) || '{}'); p.completed = p.completed || {};
-      var prev = p.completed[data.week];
-      if (!prev || score >= prev.score) p.completed[data.week] = { score: score, total: total, completedAt: new Date().toISOString() };
-      localStorage.setItem(KEY, JSON.stringify(p));
-    } catch (e) {}
-  }
-
-  function run() {
-    var questions = buildQuiz(), index = 0, score = 0;
-    function show() {
-      var q = questions[index];
-      root.textContent = '';
-      root.append(el('p', { class: 'lesson-kicker' }, f(ui.question_n_of, { n: index + 1, total: questions.length }) + (q.review ? ui.review : '')));
-      if (q.image) {
-        var ph = el('div', { class: 'quiz-photo' }); ph.append(el('img', { src: q.image.url, alt: ui.which_see })); root.append(ph);
-        root.append(el('p', { class: 'quiz-feedback' }, ui.which_see));
-      } else {
-        var sd = el('div', { class: 'quiz-sound' }); sd.append(el('span', {}, ui.which_hear));
-        var au = el('audio', { controls: '', src: q.sound.url, preload: 'auto' }); sd.append(au); root.append(sd);
-      }
-      var opts = el('div', { class: 'quiz-options' });
-      q.options.forEach(function (o) {
-        var b = el('button', { class: 'quiz-option', type: 'button' }, o);
-        b.onclick = function () {
-          var right = o === q.answer; if (right) score++;
-          opts.querySelectorAll('button').forEach(function (x) {
-            x.disabled = true;
-            if (x.textContent === q.answer) x.classList.add('right');
-            else if (x === b) x.classList.add('wrong');
-          });
-          root.append(el('p', { class: 'quiz-feedback ' + (right ? 'right' : 'wrong') }, f(right ? ui.right : ui.wrong, { name: q.answer })));
-          var next = el('button', { class: 'btn', type: 'button' }, index + 1 < questions.length ? ui.next_question : ui.see_score);
-          next.onclick = function () { index++; if (index < questions.length) show(); else done(); };
-          root.append(next); next.focus();
-        };
-        opts.append(b);
-      });
-      root.append(opts);
-      root.scrollIntoView({ block: 'start', behavior: 'smooth' });
-    }
-    function done() {
-      save(score, questions.length);
-      root.textContent = '';
-      root.append(el('p', { class: 'quiz-score' }, score + '/' + questions.length));
-      root.append(el('p', {}, score / questions.length >= 0.6 ? f(score / questions.length >= 0.6 ? ui.good : ui.try_again, { week: data.week })));
-      var row = el('p', { class: 'cta-row' });
-      var again = el('button', { class: 'btn secondary', type: 'button' }, ui.again); again.onclick = run; row.append(again);
-      if (nextHref) { var nx = el('a', { class: 'btn', href: nextHref }, ui.next_lesson); row.append(nx); }
-      root.append(row);
-    }
-    if (!questions.length) { root.textContent = ui.no_questions; return; }
-    show();
-  }
-  document.getElementById('quiz-start').onclick = run;
+  var quiz = window.CourseQuiz.start({
+    root: document.getElementById('quiz-root'),
+    data: JSON.parse(document.getElementById('quiz-data').textContent),
+    ui: ui,
+    nextHref: '{{ next_href|escapejs }}',
+    week: {{ lesson.week }},
+    progressKey: ui.storage_key,
+    srsKey: ui.srs_key || null,
+    apiBase: ui.api_base || null
+  });
+  document.getElementById('quiz-start').onclick = quiz.run;
 })();
 </script>
 {% endblock %}

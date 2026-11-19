@@ -24,6 +24,7 @@ from jizz.marketing.pages import SITE_HOME, base_context, canonical_origin, dump
 COURSE = 'nl-beginners'
 LOCALE = 'nl'
 UK_COURSE = 'uk-beginners'
+ADVANCED_COURSE = 'nw-europe-advanced'
 
 # What the pages say around the lesson texts, per course. "{x}" parts are filled in by the page.
 SITES = {
@@ -183,11 +184,123 @@ SITES = {
             'no_questions': 'There are no quiz questions for this lesson yet.',
         },
     },
+    ADVANCED_COURSE: {
+        'locale': 'en',
+        'index_name': 'marketing-course-advanced',
+        'lesson_name': 'marketing-course-advanced-lesson',
+        'practice_name': 'marketing-course-advanced-practice',
+        'srs': True,
+        'ui': {
+            'level': 'Advanced',
+            'index_title': 'Advanced birding course for North-West Europe: gulls, warblers, waders and strays | Motmot',
+            'index_description': (
+                'Free advanced bird identification course for the UK, Ireland, the Netherlands, Germany, France and Scandinavia: '
+                'big gulls, leaf warblers, stints, seabirds from land, female ducks and rarities, with photos, calls and spaced repetition.'
+            ),
+            'crumb_course': 'Advanced birding course',
+            'crumb_lesson': 'Lesson {week}',
+            'syllabus_name': 'Lesson {week}: {title}',
+            'lesson_title': 'Lesson {week}: {title} | Advanced birding course | Motmot',
+            'lesson_description': '{subtitle}. Lesson {week} of Motmot’s advanced birding course for North-West Europe, with photos, calls and spaced repetition.',
+            'h1': 'Advanced birding: North-West Europe',
+            'lead': (
+                'You know a Chiffchaff from a Willow Warbler and a Dunlin from a Little Stint. Now go group by group: '
+                'big gulls, Siberian leaf warblers, stints and sandpipers, seabirds from the shore in an autumn gale, '
+                'female ducks, and the strays that turn up when the wind is right. Forty lessons, with photos, calls and '
+                'a lot of repetition, so that the birds you have seen come back just before you forget them. Free, and no account needed.'
+            ),
+            'start': 'Start lesson 1',
+            'practice': 'Practice',
+            'how_title': 'How a lesson works',
+            'steps': [
+                ('Group by group', 'One family at a time: what separates the look-alikes, and the words to describe it.'),
+                ('Seasons and migration', 'When each bird is here, and where in North-West Europe it is regular or a stray.'),
+                ('Photos and calls', 'Questions with a photo, a recording, or both, including females, young birds and winter plumages.'),
+                ('Repetition', 'Birds you get wrong come back soon; birds you know come back later. Practice has the ones that are due.'),
+            ],
+            'all_title': 'All lessons',
+            'all_lead': 'Every fifth lesson is a review. Your progress and the birds you have to repeat are saved in this browser, and in your account when you are signed in.',
+            'parts': [
+                (1, 'Block 1: gulls'), (6, 'Block 2: warblers'), (11, 'Block 3: waders'), (16, 'Block 4: seabirds from land'),
+                (21, 'Block 5: ducks and geese'), (26, 'Block 6: field birds'), (31, 'Block 7: strays'), (36, 'Block 8: pro'),
+            ],
+            'birds_count': '{n} birds',
+            'minutes_short': '{n} min',
+            'kicker': 'Advanced birding · Lesson {week} · {minutes} minutes',
+            'today': 'Today: {n} birds',
+            'anchor': 'bird',
+            'to_quiz': 'Go to the quiz',
+            'photo_by': 'Photo:',
+            'unknown': 'unknown',
+            'bird_word': 'Bird',
+            'of_word': 'of',
+            'look_for': 'How to recognise it',
+            'where_when': 'Where and when',
+            'recording': 'Recording:',
+            'dont_confuse': 'Don’t confuse with:',
+            'quiz': 'Quiz',
+            'quiz_questions': '{n} questions',
+            'quiz_sound_only': ', sound only',
+            'quiz_with_review': ', with birds you have to repeat mixed in',
+            'quiz_tail': '. Your answers decide when each bird comes back.',
+            'quiz_start': 'Start the quiz',
+            'outside': 'Out and about this week',
+            'lessons_nav': 'Lessons',
+            'prev': '← Lesson {week}',
+            'all_lessons': 'All lessons',
+            'next': 'Lesson {week} →',
+            'sound_label': {'song': 'Song', 'call': 'Call', 'other': 'Sound'},
+            'practice_title': 'Practice',
+            'practice_lead': 'Ten questions with the birds that are due to come back. Right answers push a bird further away, wrong answers bring it back tomorrow.',
+            'practice_start': 'Start practice',
+            'practice_back': 'Back to the course',
+        },
+        'js': {
+            'done_line': 'Done · {score} of {total} right',
+            'continue': 'Continue with lesson {week}',
+            'progress': '{done} of {total} lessons done',
+            'question_n_of': 'Question {n} of {total}',
+            'review': ' · repeat',
+            'which_see': 'Which bird is this?',
+            'which_hear': 'Which bird can you hear?',
+            'which_both': 'Which bird is this? Look and listen.',
+            'right': 'Yes, {name}.',
+            'wrong': 'That was {name}.',
+            'next_question': 'Next question',
+            'see_score': 'See your score',
+            'good': 'Well done! Lesson {week} is done.',
+            'try_again': 'Lesson {week} is done. Have another look at the birds you got wrong, and try again.',
+            'again': 'Quiz again',
+            'next_lesson': 'On to the next lesson',
+            'no_questions': 'There are no quiz questions for this lesson yet.',
+            'show_plumage': True,
+            'photo_shows': 'This photo shows: {label}.',
+            'loading': 'Loading…',
+            'due_count': '{n} birds to repeat',
+            'none_due': 'Nothing is due right now. Come back later, or revisit a lesson.',
+        },
+        'practice_js': {
+            'good': 'Well done! Practice is done.',
+            'try_again': 'Practice is done. The birds you got wrong will be back soon.',
+            'again': 'Practise again',
+            'next_lesson': 'Back to the course',
+        },
+    },
 }
 
 
 def _fmt(template: str, **values) -> str:
     return template.format(**values)
+
+
+def _js_ui(course: str, **overrides) -> dict:
+    """The texts and keys the page scripts need; courses with spaced repetition also get their storage keys."""
+    site = SITES[course]
+    ui = {**site['js'], 'storage_key': f'course:{course}:progress', **overrides}
+    if site.get('srs'):
+        ui['srs_key'] = f'course:{course}:srs'
+        ui['api_base'] = f'/api/courses/{course}'
+    return ui
 
 
 def lesson_slug(lesson: dict, course: str = COURSE) -> str:
@@ -276,7 +389,7 @@ def _course_index(request, course: str):
         'name': payload['title'],
         'description': payload['subtitle'],
         'inLanguage': locale,
-        'educationalLevel': 'Beginner',
+        'educationalLevel': ui.get('level', 'Beginner'),
         'isAccessibleForFree': True,
         'url': origin + localize_path(path, locale),
         'provider': {'@type': 'Organization', 'name': 'Motmot', 'url': origin + SITE_HOME},
@@ -300,7 +413,8 @@ def _course_index(request, course: str):
         course=payload,
         lessons=lessons,
         ui=ui,
-        js_ui={**site['js'], 'storage_key': f'course:{course}:progress'},
+        js_ui=_js_ui(course),
+        practice_href=localize_path(reverse(site['practice_name']), locale) if site.get('srs') else '',
     )
     return render(request, 'marketing/course_index.html', context)
 
@@ -375,7 +489,7 @@ def _course_lesson(request, course: str, week: int, slug: str):
         next_week=next_week,
         quiz_json=mark_safe(json.dumps(quiz_data, ensure_ascii=False).replace('</', '<\\/')),
         ui=ui,
-        js_ui={**site['js'], 'storage_key': f'course:{course}:progress'},
+        js_ui=_js_ui(course),
         kicker=_fmt(ui['kicker'], week=week, minutes=payload['minutes']),
         today=_fmt(ui['today'], n=len(birds)),
         quiz_intro=quiz_intro,
@@ -383,6 +497,28 @@ def _course_lesson(request, course: str, week: int, slug: str):
         next_label=_fmt(ui['next'], week=next_week) if next_week else '',
     )
     return render(request, 'marketing/course_lesson.html', context)
+
+
+def _course_practice(request, course: str):
+    """Ten questions with the birds that are due, from the spaced repetition in this browser."""
+    site = SITES[course]
+    locale, ui = site['locale'], site['ui']
+    path = reverse(site['practice_name'])
+    if response := _own_language_only(request, path, locale):
+        return response
+    course_path = reverse(site['index_name'])
+    context = _context(
+        request,
+        title=f"{ui['practice_title']} | {ui['crumb_course']} | Motmot",
+        description=ui['practice_lead'],
+        path=path,
+        breadcrumbs=[('Home', SITE_HOME), (ui['crumb_course'], course_path), (ui['practice_title'], path)],
+        ui=ui,
+        js_ui=_js_ui(course, **site.get('practice_js', {})),
+        course_href=localize_path(course_path, locale),
+    )
+    context['noindex'] = True
+    return render(request, 'marketing/course_practice.html', context)
 
 
 @require_GET
@@ -403,3 +539,18 @@ def course_index_uk(request):
 @require_GET
 def course_lesson_uk(request, week: int, slug: str):
     return _course_lesson(request, UK_COURSE, week, slug)
+
+
+@require_GET
+def course_index_advanced(request):
+    return _course_index(request, ADVANCED_COURSE)
+
+
+@require_GET
+def course_lesson_advanced(request, week: int, slug: str):
+    return _course_lesson(request, ADVANCED_COURSE, week, slug)
+
+
+@require_GET
+def course_practice_advanced(request):
+    return _course_practice(request, ADVANCED_COURSE)

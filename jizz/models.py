@@ -2875,6 +2875,32 @@ class TripPhotoPick(models.Model):
         return f'{self.trip}: {self.species_id}'
 
 
+class CourseBirdResult(models.Model):
+    """Spaced repetition state of one bird (in one plumage) for a logged-in user of a course.
+
+    A Leitner box and the moment the bird is due again; the website keeps the same state in the
+    browser and merges it with these rows (the most recently seen side wins).
+    """
+
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='course_bird_results')
+    course = models.SlugField(max_length=64)
+    species = models.ForeignKey(Species, on_delete=models.CASCADE, related_name='course_bird_results')
+    plumage = models.CharField(max_length=100, blank=True, default='')
+    box = models.PositiveSmallIntegerField(default=0)
+    due_at = models.DateTimeField()
+    last_seen = models.DateTimeField()
+    right = models.PositiveIntegerField(default=0)
+    wrong = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        unique_together = [('user', 'course', 'species', 'plumage')]
+        ordering = ['due_at']
+        indexes = [models.Index(fields=['user', 'course', 'due_at'], name='coursebird_user_due_idx')]
+
+    def __str__(self):
+        return f'{self.user_id} {self.course} {self.species_id} {self.plumage}: box {self.box}'
+
+
 class CourseLessonResult(models.Model):
     """A logged-in user's best result for one course lesson, so progress follows them across devices."""
 

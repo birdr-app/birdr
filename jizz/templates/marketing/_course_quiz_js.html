@@ -1,0 +1,267 @@
+<style>
+  .quiz-plumage { color: var(--ink-muted); font-size: .92rem; margin: -4px 0 8px; }
+  .quiz-both { display: grid; gap: 10px; max-width: 560px; }
+  .quiz-both .quiz-sound { padding: 12px 16px; }
+</style>
+<script>
+/* The quiz of a course lesson or of the practice page, and the spaced repetition behind it.
+   Needs: window.CourseQuiz.start({...}); see the two pages that include this file. */
+(function () {
+  // SRS-BEGIN  (same rules as app/src/core/course-srs.ts; the jest test runs both)
+  var DAY = 86400000, INTERVAL_DAYS = [0.5, 1, 3, 7, 14, 30, 60], MAX_BOX = 6;
+  var SRS = {
+    key: function (sid, plumage) { return sid + '|' + (plumage || ''); },
+    record: function (store, key, correct, now) {
+      var out = {};
+      Object.keys(store).forEach(function (k) { out[k] = store[k]; });
+      var before = out[key];
+      var it = before ? { box: before.box, due: before.due, seen: before.seen, right: before.right, wrong: before.wrong } : { box: 0, due: 0, seen: 0, right: 0, wrong: 0 };
+      if (correct) {
+        it.right += 1;
+        if (!before || now >= it.due) { it.box = Math.min(it.box + 1, MAX_BOX); it.due = now + INTERVAL_DAYS[it.box] * DAY; }
+      } else {
+        it.wrong += 1; it.box = 0; it.due = now + INTERVAL_DAYS[0] * DAY;
+      }
+      it.seen = now;
+      out[key] = it;
+      return out;
+    },
+    due: function (store, now, limit, exclude) {
+      exclude = exclude || [];
+      return Object.keys(store)
+        .filter(function (k) { return store[k].due <= now && exclude.indexOf(k) < 0; })
+        .sort(function (a, b) { return store[a].due - store[b].due; })
+        .slice(0, limit);
+    },
+    merge: function (a, b) {
+      var out = {};
+      Object.keys(a).forEach(function (k) { out[k] = a[k]; });
+      Object.keys(b).forEach(function (k) { if (!out[k] || b[k].seen > out[k].seen) out[k] = b[k]; });
+      return out;
+    },
+    toApi: function (store) {
+      var out = {};
+      Object.keys(store).forEach(function (k) {
+        var it = store[k];
+        out[k] = { box: it.box, due: new Date(it.due).toISOString(), seen: new Date(it.seen).toISOString(), right: it.right, wrong: it.wrong };
+      });
+      return out;
+    },
+    fromApi: function (birds) {
+      var out = {};
+      Object.keys(birds || {}).forEach(function (k) {
+        var it = birds[k];
+        out[k] = { box: it.box, due: Date.parse(it.due), seen: Date.parse(it.seen), right: it.right, wrong: it.wrong };
+      });
+      return out;
+    }
+  };
+  // SRS-END
+
+  function f(s, v) { return s.replace(/\{(\w+)\}/g, function (m, k) { return v[k]; }); }
+  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function el(tag, attrs, text) {
+    var e = document.createElement(tag);
+    Object.keys(attrs || {}).forEach(function (k) { if (k === 'class') e.className = attrs[k]; else e.setAttribute(k, attrs[k]); });
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function loadJson(key) { try { return JSON.parse(localStorage.getItem(key) || '{}') || {}; } catch (e) { return {}; } }
+  function saveJson(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {} }
+  function token() { try { return localStorage.getItem('access_token') || localStorage.getItem('jw_token'); } catch (e) { return null; } }
+
+  // "photo": 4, "photo_sound": 3, "sound": 1 -> one mode per question, in random order.
+  function modeList(modes, total) {
+    var list = [];
+    Object.keys(modes).forEach(function (m) { for (var i = 0; i < modes[m]; i++) list.push(m); });
+    if (!list.length) list = ['photo'];
+    var out = [];
+    while (out.length < total) out = out.concat(shuffle(list));
+    return shuffle(out.slice(0, total));
+  }
+
+  function plumageLabel(p) {
+    if (!p) return '';
+    return [p.sex, p.stage, p.season ? p.season.replace('_', '-') : ''].filter(Boolean).join(', ');
+  }
+
+  // Same rules as the apps: every new bird at least once, a few from earlier lessons, and wrong
+  // answers that look like the right one first (gulls with gulls), then the lesson, then the rest.
+  // dueBirds: birds the learner has to repeat (spaced repetition); they take the review slots first.
+  function buildQuiz(data, dueBirds, knownOnly) {
+    var modes = data.quiz.modes || null;
+    var bySound = !modes && data.quiz.kind === 'sound';
+    var usable = function (b) { return modes ? (b.images.length || b.sounds.length) : (bySound ? b.sounds.length : b.images.length); };
+    var toBird = function (b, review) {
+      var plumage = b.plumage || '';
+      return { sid: b.species_id, key: SRS.key(b.species_id, plumage), name: b.name, plumage: plumage, images: b.quiz_images && b.quiz_images.length ? b.quiz_images : (b.images || []), sounds: b.sounds || [], review: review };
+    };
+    var lessonBirds = data.birds.map(function (b) { return toBird(b, false); }).filter(usable);
+    var fixed = data.review_birds.map(function (b) { return toBird(b, true); }).filter(usable);
+    var due = (dueBirds || []).map(function (b) { return toBird(b, true); }).filter(usable);
+    var reviewPool = due.concat(fixed.filter(function (b) { return !due.some(function (d) { return d.key === b.key; }); }));
+    var total = data.quiz.questions;
+    var reviewCount = (data.kind === 'review' || !lessonBirds.length) ? Math.min(total, reviewPool.length * 3) : Math.min(data.quiz.review_questions || 0, reviewPool.length);
+    var lessonCount = lessonBirds.length ? total - reviewCount : 0;
+    var picks = [];
+    while (picks.length < lessonCount) picks = picks.concat(shuffle(lessonBirds).slice(0, lessonCount - picks.length));
+    var reviews = due.slice(0, reviewCount);
+    var rest = shuffle(fixed.filter(function (b) { return !reviews.some(function (r) { return r.key === b.key; }); }));
+    while (reviews.length < reviewCount && rest.length) reviews.push(rest.shift());
+    while (reviews.length < reviewCount && reviewPool.length) reviews = reviews.concat(shuffle(reviewPool).slice(0, reviewCount - reviews.length));
+    picks = picks.concat(reviews);
+    var nameOf = {};
+    var knownSids = knownOnly || null;
+    (data.known_species || []).forEach(function (k) { if (!knownSids || knownSids.indexOf(k.species_id) >= 0) nameOf[k.species_id] = k.name; });
+    lessonBirds.concat(reviewPool).forEach(function (b) { if (!nameOf[b.sid]) nameOf[b.sid] = b.name; });
+    var lessonSids = lessonBirds.map(function (b) { return b.sid; });
+    var lookalikesOf = function (sid) {
+      var out = [];
+      (data.lookalikes || []).forEach(function (g) { if (g.indexOf(sid) >= 0) g.forEach(function (x) { if (x !== sid && nameOf[x] && out.indexOf(x) < 0) out.push(x); }); });
+      return out;
+    };
+    var modeFor = modes ? modeList(modes, picks.length) : null;
+    var used = {};
+    return shuffle(picks.map(function (b, i) {
+      var mode = modeFor ? modeFor[i] : (bySound ? 'sound' : 'photo');
+      var hasI = b.images.length > 0, hasS = b.sounds.length > 0;
+      if (mode === 'photo_sound' && !(hasI && hasS)) mode = hasI ? 'photo' : 'sound';
+      if (mode === 'photo' && !hasI) mode = 'sound';
+      if (mode === 'sound' && !hasS) mode = 'photo';
+      var n = used[b.name] || 0; used[b.name] = n + 1;
+      var pick = function (list) { return list[(n + Math.floor(Math.random() * list.length)) % list.length]; };
+      var candidates = shuffle(lookalikesOf(b.sid)).concat(shuffle(lessonSids), shuffle(Object.keys(nameOf).map(Number)));
+      var wrong = [];
+      for (var c = 0; c < candidates.length && wrong.length < 3; c++) {
+        var nm = nameOf[candidates[c]];
+        if (candidates[c] === b.sid || !nm || nm === b.name || wrong.indexOf(nm) >= 0) continue;
+        wrong.push(nm);
+      }
+      return {
+        answer: b.name, key: b.key, plumage: b.plumage, mode: mode,
+        image: mode === 'sound' ? null : pick(b.images), sound: mode === 'photo' ? null : pick(b.sounds),
+        options: shuffle([b.name].concat(wrong)), review: b.review
+      };
+    }));
+  }
+
+  // opts: root, data, ui, nextHref, week (lesson results are saved when set), progressKey,
+  //       srsKey + apiBase (spaced repetition), practice (the practice page: only the birds that are due)
+  function start(opts) {
+    var root = opts.root, data = opts.data, ui = opts.ui;
+    var store = opts.srsKey ? loadJson(opts.srsKey) : null;
+
+    function saveLesson(score, total) {
+      if (!opts.progressKey || !opts.week) return;
+      var p = loadJson(opts.progressKey); p.completed = p.completed || {};
+      var prev = p.completed[opts.week];
+      if (!prev || score >= prev.score) p.completed[opts.week] = { score: score, total: total, completedAt: new Date().toISOString() };
+      saveJson(opts.progressKey, p);
+    }
+
+    // Push this browser's state to the server and take the merged result back; quiet when signed out.
+    function sync(cb) {
+      var t = token();
+      if (!store || !t || !opts.apiBase || !window.fetch) return cb();
+      fetch(opts.apiBase + '/srs/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + t },
+        body: JSON.stringify({ birds: SRS.toApi(store) })
+      }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+        if (j) { store = SRS.merge(store, SRS.fromApi(j.birds)); saveJson(opts.srsKey, store); }
+        cb();
+      }).catch(function () { cb(); });
+    }
+
+    // Birds to repeat: the learner's due birds from the server's quiz material.
+    function fetchDue(wanted, exclude, cb) {
+      if (!store || !wanted || !opts.apiBase || !window.fetch) return cb([]);
+      var keys = SRS.due(store, Date.now(), wanted, exclude);
+      if (!keys.length) return cb([]);
+      var url = opts.apiBase + '/practice-birds/?' + keys.map(function (k) { return 'key=' + encodeURIComponent(k); }).join('&');
+      fetch(url).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+        if (!j) return cb([]);
+        data.known_species = data.known_species && data.known_species.length ? data.known_species : j.known_species;
+        data.lookalikes = (data.lookalikes && data.lookalikes.length ? data.lookalikes : j.lookalikes);
+        var byKey = {}; j.birds.forEach(function (b) { byKey[b.key] = b; });
+        cb(keys.map(function (k) { return byKey[k]; }).filter(Boolean));
+      }).catch(function () { cb([]); });
+    }
+
+    function run() {
+      root.textContent = ui.loading || '…';
+      var lessonKeys = data.birds.map(function (b) { return SRS.key(b.species_id, b.plumage || ''); });
+      var wanted = data.kind === 'review' ? data.quiz.questions : (data.quiz.review_questions || 0);
+      sync(function () {
+        fetchDue(wanted, lessonKeys, function (dueBirds) {
+          var knownSids = null;
+          if (opts.practice) {
+            if (!dueBirds.length) { root.textContent = ui.none_due; return; }
+            data.quiz.questions = Math.min(data.quiz.questions, dueBirds.length);
+            knownSids = Object.keys(store || {}).map(function (k) { return parseInt(k, 10); });
+          }
+          play(buildQuiz(data, dueBirds, knownSids && knownSids.length >= 4 ? knownSids : null));
+        });
+      });
+    }
+
+    function play(questions) {
+      var index = 0, score = 0;
+      if (!questions.length) { root.textContent = ui.no_questions; return; }
+      function show() {
+        var q = questions[index];
+        root.textContent = '';
+        root.append(el('p', { class: 'lesson-kicker' }, f(ui.question_n_of, { n: index + 1, total: questions.length }) + (q.review ? ui.review : '')));
+        var holder = root;
+        if (q.image && q.sound) { holder = el('div', { class: 'quiz-both' }); root.append(holder); }
+        if (q.image) {
+          var ph = el('div', { class: 'quiz-photo' }); ph.append(el('img', { src: q.image.url, alt: ui.which_see })); holder.append(ph);
+          if (!q.sound) holder.append(el('p', { class: 'quiz-feedback' }, ui.which_see));
+        }
+        if (q.sound) {
+          var sd = el('div', { class: 'quiz-sound' }); sd.append(el('span', {}, q.image ? (ui.which_both || ui.which_see) : ui.which_hear));
+          sd.append(el('audio', { controls: '', src: q.sound.url, preload: 'auto' })); holder.append(sd);
+        }
+        var opts2 = el('div', { class: 'quiz-options' });
+        q.options.forEach(function (o) {
+          var b = el('button', { class: 'quiz-option', type: 'button' }, o);
+          b.onclick = function () {
+            var right = o === q.answer; if (right) score++;
+            if (store) { store = SRS.record(store, q.key, right, Date.now()); saveJson(opts.srsKey, store); }
+            opts2.querySelectorAll('button').forEach(function (x) {
+              x.disabled = true;
+              if (x.textContent === q.answer) x.classList.add('right');
+              else if (x === b) x.classList.add('wrong');
+            });
+            root.append(el('p', { class: 'quiz-feedback ' + (right ? 'right' : 'wrong') }, f(right ? ui.right : ui.wrong, { name: q.answer })));
+            var label = plumageLabel(q.image && q.image.plumage) || q.plumage;
+            if (ui.show_plumage && label && q.mode !== 'sound') root.append(el('p', { class: 'quiz-plumage' }, f(ui.photo_shows, { label: label })));
+            var next = el('button', { class: 'btn', type: 'button' }, index + 1 < questions.length ? ui.next_question : ui.see_score);
+            next.onclick = function () { index++; if (index < questions.length) show(); else done(); };
+            root.append(next); next.focus();
+          };
+          opts2.append(b);
+        });
+        root.append(opts2);
+        root.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      }
+      function done() {
+        saveLesson(score, questions.length);
+        sync(function () {});
+        root.textContent = '';
+        root.append(el('p', { class: 'quiz-score' }, score + '/' + questions.length));
+        root.append(el('p', {}, score / questions.length >= 0.6 ? f(ui.good, { week: opts.week || '' }) : f(ui.try_again, { week: opts.week || '' })));
+        var row = el('p', { class: 'cta-row' });
+        var again = el('button', { class: 'btn secondary', type: 'button' }, ui.again); again.onclick = run; row.append(again);
+        if (opts.nextHref) { row.append(el('a', { class: 'btn', href: opts.nextHref }, ui.next_lesson)); }
+        root.append(row);
+      }
+      show();
+    }
+
+    return { run: run };
+  }
+
+  window.CourseQuiz = { start: start, SRS: SRS, buildQuiz: buildQuiz, modeList: modeList };
+})();
+</script>

@@ -26,6 +26,7 @@
   </p>
   <div class="cta-row">
     <a class="btn" id="course-start" href="{{ lessons.0.href }}">{{ ui.start }}</a>
+    {% if practice_href %}<a class="btn secondary" href="{{ practice_href }}">{{ ui.practice }} <span id="practice-due"></span></a>{% endif %}
     <span class="course-progress" id="course-progress" hidden></span>
   </div>
 </section>
@@ -63,6 +64,14 @@
 (function () {
   var ui = JSON.parse(document.getElementById('course-ui').textContent);
   function f(s, v) { return s.replace(/\{(\w+)\}/g, function (m, k) { return v[k]; }); }
+  var dueBadge = document.getElementById('practice-due');
+  if (dueBadge && ui.srs_key) {
+    try {
+      var srs = JSON.parse(localStorage.getItem(ui.srs_key) || '{}'), now = Date.now();
+      var n = Object.keys(srs).filter(function (k) { return srs[k].due <= now; }).length;
+      if (n) dueBadge.textContent = '(' + n + ')';
+    } catch (e) {}
+  }
   var progress = {};
   try { progress = (JSON.parse(localStorage.getItem(ui.storage_key) || '{}').completed) || {}; } catch (e) {}
   var done = Object.keys(progress).length;

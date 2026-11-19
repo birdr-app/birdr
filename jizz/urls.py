@@ -85,7 +85,7 @@ from jizz.birdr_journey_views import (
 )
 from jizz.checklist_views import ChecklistView
 from jizz.app_version_views import AppVersionView
-from jizz.courses.views import CourseDetailView, CourseLessonView, CourseProgressView
+from jizz.courses.views import CourseDetailView, CourseLessonView, CoursePracticeBirdsView, CourseProgressView, CourseSrsView
 from jizz.courses.admin_views import CourseCommonsPhotoView, CoursePhotoPickView, CoursePhotosView, CourseSpeciesMediaView
 from jizz.trips.admin_views import TripCommonsPhotoView, TripPhotoPickView, TripPhotosView, TripSpeciesMediaView
 from jizz.trips.views import TripAnswersView, TripDetailView, TripListView, TripProgressView, TripSeasonalityView
@@ -386,6 +386,9 @@ urlpatterns = [
     path('site/vogelcursus/les-<int:week>-<slug:slug>/', marketing_course.course_lesson, name='marketing-course-lesson'),
     path('site/bird-course/', marketing_course.course_index_uk, name='marketing-course-uk'),
     path('site/bird-course/lesson-<int:week>-<slug:slug>/', marketing_course.course_lesson_uk, name='marketing-course-uk-lesson'),
+    path('site/advanced-bird-course/', marketing_course.course_index_advanced, name='marketing-course-advanced'),
+    path('site/advanced-bird-course/practice/', marketing_course.course_practice_advanced, name='marketing-course-advanced-practice'),
+    path('site/advanced-bird-course/lesson-<int:week>-<slug:slug>/', marketing_course.course_lesson_advanced, name='marketing-course-advanced-lesson'),
     path('site/my-edits/', my_edits, name='marketing-my-edits'),
     path('site/logout/', site_logout, name='marketing-logout'),
     path('site/countries/<slug:slug>/', country_page, name='marketing-country'),
@@ -593,6 +596,8 @@ urlpatterns = [
     path('api/app-version/', AppVersionView.as_view(), name='app-version'),
     path('api/courses/<slug:slug>/', CourseDetailView.as_view(), name='course-detail'),
     path('api/courses/<slug:slug>/progress/', CourseProgressView.as_view(), name='course-progress'),
+    path('api/courses/<slug:slug>/srs/', CourseSrsView.as_view(), name='course-srs'),
+    path('api/courses/<slug:slug>/practice-birds/', CoursePracticeBirdsView.as_view(), name='course-practice-birds'),
     path('api/courses/<slug:slug>/lessons/<int:week>/', CourseLessonView.as_view(), name='course-lesson'),
     path('api/courses/<slug:slug>/photos/', CoursePhotosView.as_view(), name='course-photos'),
     path('api/courses/<slug:slug>/photos/species/<int:species_id>/', CourseSpeciesMediaView.as_view(), name='course-photos-species'),
