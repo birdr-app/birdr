@@ -892,38 +892,38 @@
         },
         "chosen": [
           {
-            "media_id": 1325235,
-            "xeno_canto": "XC991858",
-            "type": "alarm call, call",
+            "media_id": 1350798,
+            "xeno_canto": "XC594897",
+            "type": "call, anxiety",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 119,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          },
+          {
+            "media_id": 1350791,
+            "xeno_canto": "XC1190538",
+            "type": "flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 3,
+            "background_species": 0,
+            "recordist": "rudolf amersfoort"
+          },
+          {
+            "media_id": 1350790,
+            "xeno_canto": "XC1193745",
+            "type": "flight call",
             "country": "France",
-            "quality": "B",
-            "seconds": 51,
+            "quality": "A",
+            "seconds": 9,
             "background_species": 0,
-            "recordist": "Noé Ferrari"
-          },
-          {
-            "media_id": 1325239,
-            "xeno_canto": "XC925007",
-            "type": "call, duet",
-            "country": "Ukraine",
-            "quality": "B",
-            "seconds": 37,
-            "background_species": 0,
-            "recordist": "Rostyslav Romanyshyn"
-          },
-          {
-            "media_id": 1325227,
-            "xeno_canto": "XC1076082",
-            "type": "song",
-            "country": "Germany",
-            "quality": "B",
-            "seconds": 89,
-            "background_species": 0,
-            "recordist": "Lars Lachmann"
+            "recordist": "Lucien Hueber"
           }
         ],
         "status": "chosen on xeno-canto details; listen before use",
-        "available": 20
+        "available": 32
       },
       "note": {
         "en": "The wagtail of clear streams. The long tail is the longest of any wagtail, and the yellow belly is easily seen when it perches on a rock."

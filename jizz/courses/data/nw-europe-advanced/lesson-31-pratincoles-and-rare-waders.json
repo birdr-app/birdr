@@ -410,41 +410,38 @@
         },
         "chosen": [
           {
-            "media_id": null,
+            "media_id": 1350723,
             "xeno_canto": "XC1045965",
             "type": "call, flight call",
             "country": "Netherlands",
             "quality": "A",
             "seconds": 8,
             "background_species": 0,
-            "recordist": "Hans van Loon",
-            "needs_import": true
+            "recordist": "Hans van Loon"
           },
           {
-            "media_id": null,
+            "media_id": 1350718,
             "xeno_canto": "XC1036900",
             "type": "flight call",
             "country": "Netherlands",
             "quality": "A",
             "seconds": 63,
             "background_species": 0,
-            "recordist": "Toy Janssen",
-            "needs_import": true
+            "recordist": "Toy Janssen"
           },
           {
-            "media_id": null,
+            "media_id": 1350727,
             "xeno_canto": "XC545531",
             "type": "flight call, nocturnal flight call",
             "country": "France",
             "quality": "A",
             "seconds": 8,
             "background_species": 0,
-            "recordist": "AUDEVARD Aurélien",
-            "needs_import": true
+            "recordist": "AUDEVARD Aurélien"
           }
         ],
         "status": "chosen on xeno-canto details; listen before use",
-        "available": 0
+        "available": 20
       },
       "note": {
         "en": "The female is the brighter bird and the male incubates the eggs. In spring, a few birds visit the same Dutch fields every year."

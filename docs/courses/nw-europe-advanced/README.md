@@ -131,21 +131,19 @@ the same slot of the previous block; of a review lesson the weeks of its block p
    Photos of unfiltered cards (most passerines) are approved, adult-labelled where possible, and were not
    looked at one by one.
 2. **Sounds.**
-   - Picks were last made from a fresh production dump (quality-A recordings first, then B). Five species have
-     **no audio in that dump**: Little Ringed Plover and Kentish Plover (week 13), Eurasian Dotterel (31),
-     Common Hoopoe (34), Eurasian Goshawk (37). Their `chosen` entries carry the xeno-canto details but
-     `media_id: null` and `needs_import: true`. Run `scrape_media --sources xeno_canto --media-types audio` on
-     the server for them (the scraper searches under a newer genus name than xeno-canto uses for the plovers,
-     Dotterel and Goshawk, so it finds nothing by itself; `scrape_missing_audio.py` in the builder folder
-     fetches them under the old name), then put the new media ids into the files.
-   - No quality-A recording in the dump for Iceland Gull (week 3), Grey Plover (13), Grey Wagtail (27) and
-     Siberian Accentor (32). On xeno-canto itself Grey Plover and Grey Wagtail do have A recordings that were
-     never scraped (`scrape_a_audio.py`); Iceland Gull and Siberian Accentor have none.
+   - Picks were made from a production dump. The audio that was missing there was then scraped **on the
+     server** (xeno-canto, 20 recordings each): Little Ringed Plover and Kentish Plover (week 13), Eurasian
+     Dotterel (31), Common Hoopoe (34), Eurasian Goshawk (37); plus 12 quality-A recordings each for Grey Plover
+     (13) and Grey Wagtail (27). The new prod media ids are in the files. (The scraper itself searches under a
+     newer genus name than xeno-canto uses for the plovers, Dotterel and Goshawk; those were fetched under the
+     old name.) These ids do not exist in a local copy made before the scrape.
+   - No quality-A recording exists on xeno-canto for Iceland Gull (week 3) or Siberian Accentor (week 32);
+     B recordings are used.
    - All recordings of Herring Gull (weeks 1, 2), Spotted Flycatcher (29) and Red-flanked Bluetail (32), and some
      of Grasshopper Warbler (8) and Short-toed Treecreeper (39) are hidden in the dump
      (`hidden_locally: true`): check why before shipping.
    - Recordings are long (mostly 20-90 s); no start/end times are stored.
-3. **Birds without photos or sounds.** Every card has at least 7 photos (European Honey-buzzard has the fewest). Every bird has at least one recording in the files, except that five entries wait for an import (above).
+3. **Birds without photos or sounds.** Every card has at least 7 photos (European Honey-buzzard has the fewest). Every bird has at least one recording.
 4. **Texts.** The ID features and the call descriptions are mine and unchecked; the quiz distractors come from
    `lookalikes.json`. The intro texts mention a few things (the 2016 Siberian Accentor arrival, winter Blackcaps,
    Pied Avocet history) from memory.
@@ -155,7 +153,7 @@ the same slot of the previous block; of a review lesson the weeks of its block p
 1. Run the plumage labelling (`label_media_plumage`, then the picker's confirm action) for the species of the
    plumage-required lessons, then re-pick and run `check_course_plumage nw-europe-advanced` until it is clean.
    Start with weeks 21-23 (female and eclipse ducks), 2, 11 and 18.
-2. Run the audio scrape for the five species above (and the A-quality scrape for Grey Plover and Grey Wagtail) and fill in the `media_id`s.
+2. Listen to the recordings that were scraped last (week 13, 27, 31, 34, 37).
 3. Walk through the lessons in the photo picker (`/course-photos?course=nw-europe-advanced`); the rarities of
    weeks 7, 31-34 have the thinnest choice.
 4. Listen to the recordings (especially the rarities) and trim the long ones.

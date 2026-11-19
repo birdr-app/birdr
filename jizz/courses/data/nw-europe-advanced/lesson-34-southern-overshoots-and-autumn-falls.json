@@ -86,41 +86,38 @@
         },
         "chosen": [
           {
-            "media_id": null,
-            "xeno_canto": "XC793074",
-            "type": "call, raspy call",
+            "media_id": 1350770,
+            "xeno_canto": "XC560383",
+            "type": "call, flight call, interaction calls",
             "country": "France",
             "quality": "A",
-            "seconds": 9,
+            "seconds": 52,
             "background_species": 0,
-            "recordist": "Stanislas Wroza",
-            "needs_import": true
+            "recordist": "Stanislas Wroza"
           },
           {
-            "media_id": null,
+            "media_id": 1350758,
+            "xeno_canto": "XC1153997",
+            "type": "call, flight call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 63,
+            "background_species": 0,
+            "recordist": "Esperanza Poveda"
+          },
+          {
+            "media_id": 1350768,
             "xeno_canto": "XC681365",
             "type": "song",
             "country": "Netherlands",
             "quality": "A",
             "seconds": 453,
             "background_species": 0,
-            "recordist": "Joost van Bruggen",
-            "needs_import": true
-          },
-          {
-            "media_id": null,
-            "xeno_canto": "XC917761",
-            "type": "song",
-            "country": "Germany",
-            "quality": "A",
-            "seconds": 41,
-            "background_species": 0,
-            "recordist": "Regina Eidner",
-            "needs_import": true
+            "recordist": "Joost van Bruggen"
           }
         ],
         "status": "chosen on xeno-canto details; listen before use",
-        "available": 0
+        "available": 20
       },
       "note": {
         "en": "Probably the most obvious of all overshoots. A bird that stands on a lawn is an event."

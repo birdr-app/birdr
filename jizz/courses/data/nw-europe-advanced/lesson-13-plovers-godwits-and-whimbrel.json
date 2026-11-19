@@ -262,41 +262,38 @@
         },
         "chosen": [
           {
-            "media_id": null,
-            "xeno_canto": "XC647877",
-            "type": "flight call",
-            "country": "Netherlands",
+            "media_id": 1350692,
+            "xeno_canto": "XC570030",
+            "type": "alarm call, call, hatchling or nestling",
+            "country": "Germany",
             "quality": "A",
-            "seconds": 26,
+            "seconds": 57,
             "background_species": 0,
-            "recordist": "Albert Noorlander",
-            "needs_import": true
+            "recordist": "Regina Eidner"
           },
           {
-            "media_id": null,
+            "media_id": 1350691,
             "xeno_canto": "XC669005",
             "type": "alarm call, call, flight call, various calls",
             "country": "France",
             "quality": "A",
             "seconds": 31,
             "background_species": 0,
-            "recordist": "Stanislas Wroza",
-            "needs_import": true
+            "recordist": "Stanislas Wroza"
           },
           {
-            "media_id": null,
-            "xeno_canto": "XC735737",
+            "media_id": 1350695,
+            "xeno_canto": "XC541214",
             "type": "call",
-            "country": "Denmark",
+            "country": "France",
             "quality": "A",
-            "seconds": 11,
+            "seconds": 57,
             "background_species": 0,
-            "recordist": "Agris Celmins",
-            "needs_import": true
+            "recordist": "AUDEVARD Aurélien"
           }
         ],
         "status": "chosen on xeno-canto details; listen before use",
-        "available": 0
+        "available": 20
       },
       "note": {
         "en": "It arrives in spring weeks before most summer migrants and breeds on gravel pits and shingle. The yellow eye ring is the first thing you see."
@@ -382,41 +379,38 @@
         },
         "chosen": [
           {
-            "media_id": null,
-            "xeno_canto": "XC655041",
-            "type": "call",
-            "country": "Netherlands",
-            "quality": "A",
-            "seconds": 8,
-            "background_species": 0,
-            "recordist": "Maarten Sluijter",
-            "needs_import": true
-          },
-          {
-            "media_id": null,
-            "xeno_canto": "XC820173",
-            "type": "flight call",
-            "country": "France",
-            "quality": "A",
-            "seconds": 9,
-            "background_species": 0,
-            "recordist": "Sonothèque ADVL",
-            "needs_import": true
-          },
-          {
-            "media_id": null,
-            "xeno_canto": "XC552784",
+            "media_id": 1350716,
+            "xeno_canto": "XC671979",
             "type": "call",
             "country": "France",
             "quality": "A",
-            "seconds": 9,
+            "seconds": 52,
             "background_species": 0,
-            "recordist": "AUDEVARD Aurélien",
-            "needs_import": true
+            "recordist": "Jack Berteau"
+          },
+          {
+            "media_id": 1350698,
+            "xeno_canto": "XC1165363",
+            "type": "alarm call, call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 56,
+            "background_species": 0,
+            "recordist": "Lionel FREDERIC"
+          },
+          {
+            "media_id": 1350708,
+            "xeno_canto": "XC907241",
+            "type": "nocturnal flight call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Sergi Carreras"
           }
         ],
         "status": "chosen on xeno-canto details; listen before use",
-        "available": 0
+        "available": 20
       },
       "note": {
         "en": "A pale, small plover with a small head. Incomplete breast patches and dark legs are the marks."
@@ -522,38 +516,38 @@
         },
         "chosen": [
           {
-            "media_id": 1217611,
-            "xeno_canto": "XC1055098",
+            "media_id": 1350779,
+            "xeno_canto": "XC767680",
             "type": "nocturnal flight call",
-            "country": "France",
-            "quality": "B",
-            "seconds": 52,
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 17,
             "background_species": 0,
-            "recordist": "Stanislas Wroza"
+            "recordist": "Irish Wildlife Sounds"
           },
           {
-            "media_id": 1217610,
-            "xeno_canto": "XC1055987",
-            "type": "call",
-            "country": "France",
-            "quality": "B",
-            "seconds": 56,
+            "media_id": 1350788,
+            "xeno_canto": "XC416969",
+            "type": "flight call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 15,
             "background_species": 0,
-            "recordist": "Julien Birard"
+            "recordist": "Hans Matheve"
           },
           {
-            "media_id": 1217623,
-            "xeno_canto": "XC879912",
+            "media_id": 1350784,
+            "xeno_canto": "XC626246",
             "type": "call",
-            "country": "Egypt",
-            "quality": "B",
-            "seconds": 46,
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 142,
             "background_species": 0,
-            "recordist": "Stephan Risch"
+            "recordist": "Peter Boesman"
           }
         ],
         "status": "chosen on xeno-canto details; listen before use",
-        "available": 20
+        "available": 32
       },
       "note": {
         "en": "The black armpits are the thing: the biggest difference to the Golden Plover, which has white ones. It is a coastal bird, rarely seen on fields."

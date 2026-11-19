@@ -202,41 +202,38 @@
         },
         "chosen": [
           {
-            "media_id": null,
-            "xeno_canto": "XC756187",
+            "media_id": 1350738,
+            "xeno_canto": "XC1163231",
             "type": "call",
-            "country": "Germany",
+            "country": "Austria",
             "quality": "A",
-            "seconds": 9,
+            "seconds": 48,
             "background_species": 0,
-            "recordist": "brickegickel",
-            "needs_import": true
+            "recordist": "Walter Wallner"
           },
           {
-            "media_id": null,
-            "xeno_canto": "XC610200",
+            "media_id": 1350756,
+            "xeno_canto": "XC626018",
+            "type": "call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 114,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1350747,
+            "xeno_canto": "XC797056",
             "type": "call",
             "country": "Sweden",
             "quality": "A",
-            "seconds": 7,
-            "background_species": 0,
-            "recordist": "Lars Edenius",
-            "needs_import": true
-          },
-          {
-            "media_id": null,
-            "xeno_canto": "XC877694",
-            "type": "song",
-            "country": "Netherlands",
-            "quality": "A",
-            "seconds": 43,
-            "background_species": 0,
-            "recordist": "Henk Schreuders",
-            "needs_import": true
+            "seconds": 113,
+            "background_species": 2,
+            "recordist": "Alan Dalton"
           }
         ],
         "status": "chosen on xeno-canto details; listen before use",
-        "available": 0
+        "available": 20
       },
       "note": {
         "en": "A huge and powerful hawk. In the spring, a high display flight with white undertail feathers puffed out is the best way to see one."
