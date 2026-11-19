@@ -926,17 +926,6 @@
             "recordist": "Jérémy Simar"
           },
           {
-            "media_id": 1293602,
-            "xeno_canto": "XC900843",
-            "type": "song",
-            "country": "France",
-            "quality": "A",
-            "seconds": 32,
-            "background_species": 0,
-            "recordist": "Martin Billard",
-            "hidden_locally": true
-          },
-          {
             "media_id": 1293612,
             "xeno_canto": "XC702145",
             "type": "song",
@@ -945,6 +934,16 @@
             "seconds": 47,
             "background_species": 0,
             "recordist": "Dominique Guillerme"
+          },
+          {
+            "media_id": 1293604,
+            "xeno_canto": "XC897917",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 48,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
           }
         ],
         "status": "chosen on xeno-canto details; listen before use",

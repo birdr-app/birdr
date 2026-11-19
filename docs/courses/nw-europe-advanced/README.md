@@ -139,9 +139,11 @@ the same slot of the previous block; of a review lesson the weeks of its block p
      old name.) These ids do not exist in a local copy made before the scrape.
    - No quality-A recording exists on xeno-canto for Iceland Gull (week 3) or Siberian Accentor (week 32);
      B recordings are used.
-   - All recordings of Herring Gull (weeks 1, 2), Spotted Flycatcher (29) and Red-flanked Bluetail (32), and some
-     of Grasshopper Warbler (8) and Short-toed Treecreeper (39) are hidden in the dump
-     (`hidden_locally: true`): check why before shipping.
+   - Hidden recordings were sorted out on prod: Herring Gull and Red-flanked Bluetail had only hidden
+     duplicate rows picked, so the files now point at the visible copies; the rejected recordings of
+     Grasshopper Warbler and Short-toed Treecreeper are no longer chosen. All Spotted Flycatcher recordings are
+     held by the November 2026 split (Mediterranean Flycatcher); two Spotted Flycatcher recordings from Sweden
+     and Finland (XC1014948, XC1027523) were released by hand, the rest stay held.
    - Recordings are long (mostly 20-90 s); no start/end times are stored.
 3. **Birds without photos or sounds.** Every card has at least 7 photos (European Honey-buzzard has the fewest). Every bird has at least one recording.
 4. **Texts.** The ID features and the call descriptions are mine and unchecked; the quiz distractors come from

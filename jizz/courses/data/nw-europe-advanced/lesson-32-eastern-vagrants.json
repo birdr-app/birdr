@@ -160,37 +160,34 @@
         },
         "chosen": [
           {
-            "media_id": 1316588,
+            "media_id": 1344697,
             "xeno_canto": "XC1051415",
             "type": "alarm call, call",
             "country": "Russian Federation",
             "quality": "A",
             "seconds": 37,
             "background_species": 0,
-            "recordist": "Albert Lastukhin",
-            "hidden_locally": true
+            "recordist": "Albert Lastukhin"
           },
           {
-            "media_id": 1316594,
+            "media_id": 1344703,
             "xeno_canto": "XC992604",
             "type": "call",
             "country": "China",
             "quality": "A",
             "seconds": 46,
             "background_species": 0,
-            "recordist": "小菜鸟",
-            "hidden_locally": true
+            "recordist": "小菜鸟"
           },
           {
-            "media_id": 1316597,
+            "media_id": 1344706,
             "xeno_canto": "XC972071",
             "type": "call",
             "country": "China",
             "quality": "A",
             "seconds": 72,
             "background_species": 0,
-            "recordist": "Ray Tsu 诸仁",
-            "hidden_locally": true
+            "recordist": "Ray Tsu 诸仁"
           }
         ],
         "status": "chosen on xeno-canto details; listen before use",

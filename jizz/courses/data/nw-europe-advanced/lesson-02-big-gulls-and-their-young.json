@@ -92,37 +92,34 @@
         },
         "chosen": [
           {
-            "media_id": 1221369,
+            "media_id": 1343834,
             "xeno_canto": "XC1025218",
             "type": "flight call",
             "country": "Ireland",
             "quality": "A",
             "seconds": 38,
             "background_species": 0,
-            "recordist": "Colm Philpott",
-            "hidden_locally": true
+            "recordist": "Colm Philpott"
           },
           {
-            "media_id": 1221384,
+            "media_id": 1343849,
             "xeno_canto": "XC717834",
             "type": "flight call",
             "country": "Ireland",
             "quality": "A",
             "seconds": 69,
             "background_species": 0,
-            "recordist": "Irish Wildlife Sounds",
-            "hidden_locally": true
+            "recordist": "Irish Wildlife Sounds"
           },
           {
-            "media_id": 1221374,
+            "media_id": 1343839,
             "xeno_canto": "XC928132",
             "type": "call, duet, song",
             "country": "France",
             "quality": "A",
             "seconds": 44,
             "background_species": 0,
-            "recordist": "FREDERIC Lionel",
-            "hidden_locally": true
+            "recordist": "FREDERIC Lionel"
           }
         ],
         "status": "chosen on xeno-canto details; listen before use",

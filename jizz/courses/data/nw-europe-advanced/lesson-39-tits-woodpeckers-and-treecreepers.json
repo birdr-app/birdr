@@ -957,28 +957,6 @@
         },
         "chosen": [
           {
-            "media_id": 1307424,
-            "xeno_canto": "XC1070409",
-            "type": "call",
-            "country": "Netherlands",
-            "quality": "A",
-            "seconds": 35,
-            "background_species": 0,
-            "recordist": "David Darrell-Lambert",
-            "hidden_locally": true
-          },
-          {
-            "media_id": 1307417,
-            "xeno_canto": "XC1076764",
-            "type": "song",
-            "country": "Germany",
-            "quality": "A",
-            "seconds": 53,
-            "background_species": 0,
-            "recordist": "Lars Lachmann",
-            "hidden_locally": true
-          },
-          {
             "media_id": 1307425,
             "xeno_canto": "XC1068697",
             "type": "call",
@@ -987,6 +965,26 @@
             "seconds": 45,
             "background_species": 0,
             "recordist": "Francesco Sottile"
+          },
+          {
+            "media_id": 1307423,
+            "xeno_canto": "XC1073542",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 118,
+            "background_species": 0,
+            "recordist": "François Guibert"
+          },
+          {
+            "media_id": 1307419,
+            "xeno_canto": "XC1075784",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 64,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
           }
         ],
         "status": "chosen on xeno-canto details; listen before use",
