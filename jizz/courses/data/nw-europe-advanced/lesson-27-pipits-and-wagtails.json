@@ -1,0 +1,1138 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 27,
+  "slug": "pipits-and-wagtails",
+  "part": 6,
+  "kind": "species",
+  "season": "any",
+  "minutes": 22,
+  "title": {
+    "en": "Pipits and wagtails"
+  },
+  "subtitle": {
+    "en": "Meadow, Tree, Rock, Water and Red-throated Pipit, with Yellow, Grey and White Wagtail"
+  },
+  "intro": {
+    "en": "Pipits look alike and sound different. Wagtails look different and sound alike, almost. In both groups, the call helps more than the plumage, and a good birder can name a pipit in the dark. The streaking on the breast and flanks, the colour of the legs and the white on the tail are the other clues.\n\nThe pipits of today are from three habitats: Meadow Pipit (open ground), Tree Pipit (woods and heath) and Rock Pipit (rocky shore), with the winter Water Pipit and the rarer Red-throated Pipit. Wagtails are much easier, but the Yellow Wagtail comes in many forms that differ by region and have different head colours.\n\nSeason: Tree Pipits arrive in mid-April and leave in August to September, passing through the coast in a rush. Water Pipits spend the winter on watercress beds and flooded fields, from October to March. Yellow Wagtails are summer visitors, April to September."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "streaking"
+      },
+      "explain": {
+        "en": "The dark lines on the breast and flanks. Their width and sharpness differ in each pipit."
+      }
+    },
+    {
+      "term": {
+        "en": "hind claw"
+      },
+      "explain": {
+        "en": "The claw of the back toe. Long and nearly straight in a Meadow Pipit, short and curved in a Tree Pipit."
+      }
+    },
+    {
+      "term": {
+        "en": "outer tail feathers"
+      },
+      "explain": {
+        "en": "The outermost feathers of the tail. They are white in pipits and wagtails and show in flight."
+      }
+    },
+    {
+      "term": {
+        "en": "head pattern"
+      },
+      "explain": {
+        "en": "The pattern of eyebrow, cheek and crown on a bird's head."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 9892,
+      "latin": "Anthus pratensis",
+      "name": {
+        "en": "Meadow Pipit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Brown and streaky, with a thin bill and pink-brown legs"
+        },
+        {
+          "en": "A fine pattern of **streaking** on the breast and flanks"
+        },
+        {
+          "en": "A long **hind claw**, and white **outer tail feathers**"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: common on open ground, moors and fields, all year, with northern birds moving south in autumn. Many winter on the coast and in fields."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A thin, high “tsip-tsip-tsip” in flight, and a parachuting song flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1325747,
+            "xeno_canto": "XC666827",
+            "type": "alarm call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1325737,
+            "xeno_canto": "XC1000070",
+            "type": "song",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 67,
+            "background_species": 0,
+            "recordist": "Paul Archer"
+          },
+          {
+            "media_id": 1325744,
+            "xeno_canto": "XC788055",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 59,
+            "background_species": 0,
+            "recordist": "Twan Mols"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The most common small streaky bird of open ground. In October, a stream of Meadow Pipits passes overhead calling."
+      },
+      "dont_confuse": {
+        "en": "Tree Pipit (this week): a heavier bill, bolder streaks on the flank, and a short hind claw."
+      },
+      "media": {
+        "card": [
+          1046832,
+          1046850,
+          1046847
+        ],
+        "quiz": [
+          1046958,
+          1046849,
+          1046954,
+          1046848,
+          1046823,
+          1046959,
+          1046800
+        ]
+      }
+    },
+    {
+      "species_id": 9894,
+      "latin": "Anthus trivialis",
+      "name": {
+        "en": "Tree Pipit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A buffy breast with bold black **streaking** on the flanks, and a pale, thick bill"
+        },
+        {
+          "en": "A short, curved **hind claw**, and a streaked back"
+        },
+        {
+          "en": "Sings from a tree top and parachutes down to the ground"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, FR, DK, SE, FI, NO: fairly common to uncommon summer visitors in woods, heath and clear-fells, from mid-April. IE: rare. Passage in August and September. Declining in the south and west."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A buzzing “teez” in flight and a loud, trilling song that ends with “see-ah, see-ah”."
+        },
+        "chosen": [
+          {
+            "media_id": 1325785,
+            "xeno_canto": "XC917776",
+            "type": "alarm call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Jacobo Ramil Millarengo"
+          },
+          {
+            "media_id": 1325780,
+            "xeno_canto": "XC998357",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 60,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1325788,
+            "xeno_canto": "XC910114",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 74,
+            "background_species": 4,
+            "recordist": "Olivier SWIFT, Hélène CARTAUD"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The song flight, up from a treetop and down on stiff wings, is the best mark. In migration it is the call that you hear overhead."
+      },
+      "dont_confuse": {
+        "en": "Meadow Pipit (this week): a smaller bill, thin, fine streaks and a long hind claw."
+      },
+      "media": {
+        "card": [
+          1047203,
+          1047211,
+          1047208
+        ],
+        "quiz": [
+          1047210,
+          1047200,
+          1047191,
+          1047173,
+          1047198,
+          1047201,
+          1047190
+        ]
+      }
+    },
+    {
+      "species_id": 9899,
+      "latin": "Anthus petrosus",
+      "name": {
+        "en": "Eurasian Rock Pipit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A dark olive-grey bird with dull streaks and dark legs"
+        },
+        {
+          "en": "A grey, not white, **outer tail feathers** and a dark bill"
+        },
+        {
+          "en": "Sits on rocks and seaweed at the sea's edge"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, FR, NO, DK: common on rocky coasts, all year, and the Scandinavian race winters on the coast in the south. NL, BE, DE: scarce, in winter. SE, FI: rare. It is the pipit of the shore."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A thin, rather harsh “fiist” or “feest”, and a rising, trilling song."
+        },
+        "chosen": [
+          {
+            "media_id": 1325873,
+            "xeno_canto": "XC1080868",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 55,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1325887,
+            "xeno_canto": "XC687124",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 51,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1325874,
+            "xeno_canto": "XC1031273",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 63,
+            "background_species": 0,
+            "recordist": "Meena Haribal"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A pipit that lives on the shore. A dark, olive-grey pipit on rocks in winter is a Rock Pipit."
+      },
+      "dont_confuse": {
+        "en": "Water Pipit (this week): paler, whiter below, and a strong eyebrow."
+      },
+      "media": {
+        "card": [
+          1048037,
+          1048045,
+          1047991
+        ],
+        "quiz": [
+          1048075,
+          1048035,
+          1047993,
+          1048087,
+          1048126,
+          1047992,
+          1048002,
+          1048133
+        ]
+      }
+    },
+    {
+      "species_id": 9898,
+      "latin": "Anthus spinoletta",
+      "name": {
+        "en": "Water Pipit"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "A paler, greyer pipit with a strong white eyebrow"
+        },
+        {
+          "en": "White underparts, with fine **streaking** on the breast, and dark legs"
+        },
+        {
+          "en": "White **outer tail feathers**, and a plain grey back"
+        }
+      ],
+      "where_when": {
+        "en": "FR, NL, BE, DE, UK: uncommon in winter, October to March, in wet fields and watercress beds. IE, DK, SE: rare. NO, FI: almost never. Breeds in the Alps and Pyrenees."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A thin, sharp “pipit” or “tsweep”, higher than a Rock Pipit."
+        },
+        "chosen": [
+          {
+            "media_id": 1325864,
+            "xeno_canto": "XC924582",
+            "type": "call, flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 69,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          },
+          {
+            "media_id": 1325854,
+            "xeno_canto": "XC1048860",
+            "type": "flight call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 0,
+            "recordist": "Diego Fernandez Martinez"
+          },
+          {
+            "media_id": 1325860,
+            "xeno_canto": "XC953463",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A winter pipit of watercress beds, a bird of the mountains in summer. Check the strong eyebrow and the clean underparts."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Rock Pipit (this week): darker, olive, and a weak eyebrow."
+      },
+      "media": {
+        "card": [
+          1047936,
+          1047907,
+          1047886
+        ],
+        "quiz": [
+          1047921,
+          1047902,
+          1047892,
+          1047894,
+          1047875,
+          1047924,
+          1047940,
+          1047975
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 9897,
+      "latin": "Anthus cervinus",
+      "name": {
+        "en": "Red-throated Pipit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A heavily streaked back with pale braces, and heavy streaks on the flanks"
+        },
+        {
+          "en": "In spring: a brick-red face and throat. Plain buff in autumn"
+        },
+        {
+          "en": "A dark, **streaked** rump, unlike other pipits"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO: breeds on the tundra in the north, from June. UK, NL, BE, DE, DK, FR, IE: rare on passage, in spring and autumn. A bird of the far north that migrates to Africa."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A thin, drawn-out, descending “pssseeeeu”, a very characteristic call."
+        },
+        "chosen": [
+          {
+            "media_id": 1325844,
+            "xeno_canto": "XC755042",
+            "type": "flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Toy Janssen"
+          },
+          {
+            "media_id": 1325836,
+            "xeno_canto": "XC934982",
+            "type": "flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Jan Erik Kikkert"
+          },
+          {
+            "media_id": 1325833,
+            "xeno_canto": "XC991740",
+            "type": "flight call, song",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 85,
+            "background_species": 0,
+            "recordist": "Chèvremont Fabian"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A pipit with a long, thin whistle. Known by its call, which is longer and thinner than any other pipit's."
+      },
+      "dont_confuse": {
+        "en": "Meadow Pipit (this week): a plain rump and a short call. Tree Pipit: less streaked back."
+      },
+      "media": {
+        "card": [
+          1047744,
+          1047721,
+          1047736
+        ],
+        "quiz": [
+          1047745,
+          1047766,
+          1047760,
+          1047752,
+          1047739,
+          1047730,
+          1047761
+        ]
+      }
+    },
+    {
+      "species_id": 9862,
+      "latin": "Motacilla flava",
+      "name": {
+        "en": "Western Yellow Wagtail"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A bright yellow breast and belly, and an olive back"
+        },
+        {
+          "en": "A different **head pattern** by region: blue-headed, grey-headed or yellow-headed"
+        },
+        {
+          "en": "A slim shape, with a medium-long tail, and black legs"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: fairly common to uncommon summer visitors, from April to September, in meadows and fields. The blue-headed race breeds on the Continent; the yellow-headed form is British; the grey-headed race nests in Scandinavia."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A clear, high “tsweep” in flight, and a short, simple song."
+        },
+        "chosen": [
+          {
+            "media_id": 1325256,
+            "xeno_canto": "XC903293",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1325253,
+            "xeno_canto": "XC913257",
+            "type": "alarm call, call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "Martin Billard"
+          },
+          {
+            "media_id": 1325251,
+            "xeno_canto": "XC956834",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "julien Birard"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It follows cattle, catching the insects they disturb. Several races meet in the area, and a male with a blue head in England is a Continental bird."
+      },
+      "dont_confuse": {
+        "en": "Grey Wagtail (this week): a longer tail, grey back, and yellow only on the underparts."
+      },
+      "media": {
+        "card": [
+          1043306,
+          1043329,
+          1043308
+        ],
+        "quiz": [
+          1043314,
+          1043355,
+          1043345,
+          1043352,
+          1043322,
+          1043274,
+          1043346
+        ]
+      }
+    },
+    {
+      "species_id": 9861,
+      "latin": "Motacilla cinerea",
+      "name": {
+        "en": "Grey Wagtail"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A long, constantly wagging tail and a blue-grey back"
+        },
+        {
+          "en": "A bright yellow belly and undertail, and a black bib in summer"
+        },
+        {
+          "en": "Near running water: rivers, weirs and mill streams"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE: fairly common to uncommon, mostly resident, with a few moving in winter. NO, FI: rare. It breeds by fast, clear streams and moves to lower ground and the coast in winter."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, sharp “tzi-zit”, higher and sharper than a Pied Wagtail."
+        },
+        "chosen": [
+          {
+            "media_id": 1325235,
+            "xeno_canto": "XC991858",
+            "type": "alarm call, call",
+            "country": "France",
+            "quality": "B",
+            "seconds": 51,
+            "background_species": 0,
+            "recordist": "Noé Ferrari"
+          },
+          {
+            "media_id": 1325239,
+            "xeno_canto": "XC925007",
+            "type": "call, duet",
+            "country": "Ukraine",
+            "quality": "B",
+            "seconds": 37,
+            "background_species": 0,
+            "recordist": "Rostyslav Romanyshyn"
+          },
+          {
+            "media_id": 1325227,
+            "xeno_canto": "XC1076082",
+            "type": "song",
+            "country": "Germany",
+            "quality": "B",
+            "seconds": 89,
+            "background_species": 0,
+            "recordist": "Lars Lachmann"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The wagtail of clear streams. The long tail is the longest of any wagtail, and the yellow belly is easily seen when it perches on a rock."
+      },
+      "dont_confuse": {
+        "en": "Western Yellow Wagtail (this week): a short tail, a green-olive back, yellow all over below."
+      },
+      "media": {
+        "card": [
+          1043100,
+          1043103,
+          1043176
+        ],
+        "quiz": [
+          1043178,
+          1043117,
+          1043179,
+          1043143,
+          1043175,
+          1043114,
+          1043168
+        ]
+      }
+    },
+    {
+      "species_id": 9869,
+      "latin": "Motacilla alba",
+      "name": {
+        "en": "Pied Wagtail / White Wagtail"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Black-and-white, with a long tail that wags up and down"
+        },
+        {
+          "en": "A black back in the Pied Wagtail of the UK and a grey back in the White Wagtail of the Continent"
+        },
+        {
+          "en": "A black bib and a white face, with a bounding flight"
+        }
+      ],
+      "where_when": {
+        "en": "All ten countries. UK, IE: Pied Wagtail, common all year. NL, BE, DE, FR, DK, NO, SE, FI: White Wagtail, common in summer. Passage White Wagtails pass through the UK in spring and autumn."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A bright, two-note “chi-sik” in flight, and a twittering song."
+        },
+        "chosen": [
+          {
+            "media_id": 1325384,
+            "xeno_canto": "XC880693",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 74,
+            "background_species": 0,
+            "recordist": "Olivier SWIFT"
+          },
+          {
+            "media_id": 1325380,
+            "xeno_canto": "XC941738",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Ulf Elman"
+          },
+          {
+            "media_id": 1325388,
+            "xeno_canto": "XC813162",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The familiar wagtail of car parks and fields. In spring, many of the \"Pied\" Wagtails you see in England are grey-backed Continental visitors."
+      },
+      "dont_confuse": {
+        "en": "Grey Wagtail (this week): a longer tail, and a yellow belly."
+      },
+      "media": {
+        "card": [
+          1044299,
+          1044293,
+          1044298
+        ],
+        "quiz": [
+          1044288,
+          1044263,
+          1044287,
+          1044266,
+          1044289,
+          1044300,
+          1044262,
+          1044419
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 10,
+        "verified": true,
+        "note": ""
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 9894,
+    "species_ids": [
+      9892,
+      9894
+    ],
+    "title": {
+      "en": "Meadow or Tree Pipit?"
+    },
+    "text": {
+      "en": "Habitat and call first. Meadow Pipits live on open ground and call a thin 'tsip-tsip'. Tree Pipits live around trees and call a buzzing 'teez'. Up close, a Tree Pipit has a heavier bill, a buffy breast with bold streaks on the flank and a short, curved hind claw."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      22,
+      24,
+      26
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 5,
+      "photo_sound": 4,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In April, go to a heath or a wood edge and listen for the Tree Pipit's song flight. In October, stand on a hill or a coast and listen to the calls overhead: Meadow Pipits (thin) and Yellow Wagtails (a clear 'tsweep') on the move."
+  },
+  "next": {
+    "en": "Next week: larks and buntings."
+  },
+  "flow": [
+    "intro",
+    "bird:9892",
+    "bird:9894",
+    "bird:9899",
+    "bird:9898",
+    "bird:9897",
+    "bird:9862",
+    "bird:9861",
+    "bird:9869",
+    "quiz",
+    "done"
+  ]
+}

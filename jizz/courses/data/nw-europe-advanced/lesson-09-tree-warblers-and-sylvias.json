@@ -1,0 +1,1018 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 9,
+  "slug": "tree-warblers-and-sylvias",
+  "part": 2,
+  "kind": "species",
+  "season": "summer",
+  "minutes": 20,
+  "title": {
+    "en": "Tree warblers and Sylvias"
+  },
+  "subtitle": {
+    "en": "Icterine, Melodious, Booted, Eastern Olivaceous, Garden Warbler, Blackcap and two Whitethroats"
+  },
+  "intro": {
+    "en": "The tree warblers (Hippolais and Iduna) are bigger than leaf warblers, with a flat head and a long, pointed bill. The Sylvia warblers are plumper, with a different build, a strong song and a hedge to hide in. In this lesson they come together because they overlap in habitat, and because the plain ones, Garden Warbler and Booted Warbler, are famous for being featureless.\n\nIcterine and Melodious are the standard overshoots in late May and June. They arrive in a spring rush on the south and east coasts. In autumn, in August and September, young birds of both species and of the rarer Booted and Eastern Olivaceous Warbler turn up. Their identification is a classic: Icterine has a long wing, a pale wing panel and blue-grey legs, Melodious has a short wing and a rounded head.\n\nBlackcap, Garden Warbler and the two Whitethroats are more regular. The Blackcap now spends the winter in the UK and IE, which has surprised many people: most of these winter birds are German and Austrian breeders."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "wing panel"
+      },
+      "explain": {
+        "en": "A pale panel on the folded wing, made by the pale edges of the flight feathers. Icterine has a clear one."
+      }
+    },
+    {
+      "term": {
+        "en": "primary projection"
+      },
+      "explain": {
+        "en": "How far the wing tip sticks out beyond the tertials. Long in Icterine, short in Melodious."
+      }
+    },
+    {
+      "term": {
+        "en": "blank face"
+      },
+      "explain": {
+        "en": "A face with no marks, a round dark eye and no eyebrow, as in a Garden Warbler."
+      }
+    },
+    {
+      "term": {
+        "en": "cap"
+      },
+      "explain": {
+        "en": "The dark crown of a bird. Male Blackcaps have a black one, the females a rusty-brown one."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 7459,
+      "latin": "Hippolais icterina",
+      "name": {
+        "en": "Icterine Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A bright lemon-yellow throat and breast, a pale yellow **supercilium**, and a pale **wing panel**"
+        },
+        {
+          "en": "Long wings: a long **primary projection**, a flat, steep head, and a thick bill"
+        },
+        {
+          "en": "Blue-grey legs and a loud, jumbled song"
+        }
+      ],
+      "where_when": {
+        "en": "NL, DE, DK: uncommon breeders in the east, from mid-May. BE, NO, SE, FI: rare to scarce. UK and FR: very rare, mostly in autumn. IE: almost never. Late migrants, arriving in late May and gone by August."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A very loud, fast, jumbled song of sweet notes mixed with harsh “chack” notes, with a high ‘ee’ squeak."
+        },
+        "chosen": [
+          {
+            "media_id": 1292835,
+            "xeno_canto": "XC1011627",
+            "type": "alarm call, call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 55,
+            "background_species": 0,
+            "recordist": "Bodo Sonnenburg"
+          },
+          {
+            "media_id": 1292841,
+            "xeno_canto": "XC1003570",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 159,
+            "background_species": 0,
+            "recordist": "Paul J Willoughby"
+          },
+          {
+            "media_id": 1292843,
+            "xeno_canto": "XC1000240",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Susanne Kuijpers"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A summer visitor with a lot of sparrow-like, mimicking song. The wing panel and the long wing separate it from a Melodious Warbler."
+      },
+      "dont_confuse": {
+        "en": "Melodious Warbler (this week): a shorter wing, no wing panel and a rounder head."
+      },
+      "media": {
+        "card": [
+          833170,
+          833144,
+          833143
+        ],
+        "quiz": [
+          833104,
+          833126,
+          833146,
+          833134,
+          833135,
+          833133,
+          833088
+        ]
+      }
+    },
+    {
+      "species_id": 7458,
+      "latin": "Hippolais polyglotta",
+      "name": {
+        "en": "Melodious Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Pale yellow, with a rounded head and a short **primary projection**"
+        },
+        {
+          "en": "Rather plain wings, with no pale **wing panel**, and brown-grey legs"
+        },
+        {
+          "en": "Song: a continuous, babbling warble, with sparrow-like chirps mixed in"
+        }
+      ],
+      "where_when": {
+        "en": "FR: fairly common in the south and west. BE, NL, DE: rare. UK: very rare in spring and autumn, mostly on the south coast. IE: almost never. Arrives in late April and leaves in August."
+      },
+      "where_data": {
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A musical, rapid, sustained babble, with a sparrow-like chirrup in it."
+        },
+        "chosen": [
+          {
+            "media_id": 1292825,
+            "xeno_canto": "XC1007930",
+            "type": "alarm call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 41,
+            "background_species": 0,
+            "recordist": "Lionel FREDERIC"
+          },
+          {
+            "media_id": 1292830,
+            "xeno_canto": "XC1001688",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Christian Kerihuel"
+          },
+          {
+            "media_id": 1292819,
+            "xeno_canto": "XC1020500",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 71,
+            "background_species": 0,
+            "recordist": "Étienne Leroy"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A southern bird that overshoots in spring. When it stops singing, the shape does the work: a short wing and a rounder head."
+      },
+      "dont_confuse": {
+        "en": "Icterine Warbler (this week): a long wing, a wing panel and a flat, steep head."
+      },
+      "media": {
+        "card": [
+          833024,
+          833066,
+          833053
+        ],
+        "quiz": [
+          832940,
+          832944,
+          832951,
+          832999,
+          833067,
+          832981,
+          833006
+        ]
+      }
+    },
+    {
+      "species_id": 7450,
+      "latin": "Iduna caligata",
+      "name": {
+        "en": "Booted Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small and plain, pale grey-brown above and off-white below"
+        },
+        {
+          "en": "A short, thin bill, a short, pale **supercilium** and a rounded head"
+        },
+        {
+          "en": "Call: a hard “tchek”, and a small, rapid, rather weak song"
+        }
+      ],
+      "where_when": {
+        "en": "FI: very rare breeder in the east. UK, NL, DK, SE, NO, DE: very rare, in autumn, mostly in late August and September. BE, FR, IE: almost never. A bird from the Russian steppe, often on the east coast."
+      },
+      "where_data": {
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A hard “chek-chek” and a small, quick warble like a Sedge Warbler with no energy."
+        },
+        "chosen": [
+          {
+            "media_id": 1292673,
+            "xeno_canto": "XC575441",
+            "type": "call",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 78,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1292656,
+            "xeno_canto": "XC914170",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1292663,
+            "xeno_canto": "XC755949",
+            "type": "call",
+            "country": "Laos",
+            "quality": "A",
+            "seconds": 51,
+            "background_species": 0,
+            "recordist": "Bram Piot"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Easily overlooked: a small, pale bird that looks like a Sylvia warbler without a pattern. The tiny bill and a quick, flicking tail help."
+      },
+      "dont_confuse": {
+        "en": "Eastern Olivaceous Warbler (this week): longer bill, longer tail, and more extensive pale on the tail edges."
+      },
+      "media": {
+        "card": [
+          831884,
+          831934,
+          831899
+        ],
+        "quiz": [
+          831895,
+          831993,
+          831896,
+          832003,
+          832004,
+          831902,
+          831913,
+          832000
+        ]
+      }
+    },
+    {
+      "species_id": 7452,
+      "latin": "Iduna pallida",
+      "name": {
+        "en": "Eastern Olivaceous Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Plain pale grey-brown, with a long bill, a flat head and a long tail"
+        },
+        {
+          "en": "A paler face with a short eyebrow, and a faint pale **wing panel**"
+        },
+        {
+          "en": "Dips its tail slowly downwards, like a chat, not sideways"
+        }
+      ],
+      "where_when": {
+        "en": "UK: very rare, in autumn. NL, DE, DK, FR, SE: almost never. A bird from south-eastern Europe and western Asia, usually seen in autumn."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, hard “tchek” and a quiet, scratchy warble."
+        },
+        "chosen": [
+          {
+            "media_id": 1292712,
+            "xeno_canto": "XC894301",
+            "type": "song",
+            "country": "Turkey",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 0,
+            "recordist": "Grégoire Chauvot"
+          },
+          {
+            "media_id": 1292698,
+            "xeno_canto": "XC999518",
+            "type": "song, subsong",
+            "country": "Kuwait",
+            "quality": "A",
+            "seconds": 65,
+            "background_species": 0,
+            "recordist": "AUDEVARD Aurélien"
+          },
+          {
+            "media_id": 1292709,
+            "xeno_canto": "XC903204",
+            "type": "song",
+            "country": "Azerbaijan",
+            "quality": "A",
+            "seconds": 207,
+            "background_species": 0,
+            "recordist": "Teet Sirotkin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A very grey, long-billed bird that looks \"wrong\" for any other warbler. The slow downward tail dip is a unique habit among the warblers."
+      },
+      "dont_confuse": {
+        "en": "Booted Warbler (this week): a smaller bill, a shorter tail and a flick of the wings."
+      },
+      "media": {
+        "card": [
+          832309,
+          832181,
+          832304
+        ],
+        "quiz": [
+          832254,
+          832235,
+          832231,
+          832340,
+          832232,
+          832250,
+          832189
+        ]
+      }
+    },
+    {
+      "species_id": 7958,
+      "latin": "Sylvia borin",
+      "name": {
+        "en": "Garden Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Plain brown above and buff-grey below, with a **blank face** and a big dark eye"
+        },
+        {
+          "en": "A short, thick bill, a rounded head and a plump shape"
+        },
+        {
+          "en": "Song: a long, even, mellow warble, a bit like a Blackbird being fast"
+        }
+      ],
+      "where_when": {
+        "en": "BE, DE, DK, FI, UK, NL, FR and SE: fairly common in woods and scrub. NO: scarce. IE: rare. Arrives in late April and leaves in August and September."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A long, smooth, mellow warble that goes on for a minute or more, on the same pitch."
+        },
+        "chosen": [
+          {
+            "media_id": 1300227,
+            "xeno_canto": "XC996394",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 47,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1300229,
+            "xeno_canto": "XC994932",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 50,
+            "background_species": 0,
+            "recordist": "Abe Bakker"
+          },
+          {
+            "media_id": 1300225,
+            "xeno_canto": "XC998464",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 51,
+            "background_species": 0,
+            "recordist": "Jorge Leitão"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The bird with no features: its name is easy to remember, because there is a garden warbler in every garden but is never seen in one. If a plain brown warbler has a round eye, it is this one."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Blackcap (this week): the male has a black cap, and the song ends in a flourish. Common Reed Warbler (week 8): warm brown, with a longer bill."
+      },
+      "media": {
+        "card": [
+          874028,
+          874016,
+          874030
+        ],
+        "quiz": [
+          874061,
+          874032,
+          874088,
+          874047,
+          874070,
+          874037,
+          874063
+        ]
+      }
+    },
+    {
+      "species_id": 7957,
+      "latin": "Sylvia atricapilla",
+      "name": {
+        "en": "Eurasian Blackcap"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A neat black **cap** on a grey head, and a grey body"
+        },
+        {
+          "en": "Slightly plump, with a short bill, and a clean, dark eye"
+        },
+        {
+          "en": "Song: a rich, flutey warble that ends in a flourish, with some harsh notes"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK and SE: common in woods, hedges and gardens from March. FI and NO: uncommon. Many central European birds now winter in UK and IE gardens, in the winter feeding on fat balls."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A loud, clear, flutey warble that begins hesitantly and ends with a flourish, with a hard “tac-tac” call."
+        },
+        "chosen": [
+          {
+            "media_id": 1300211,
+            "xeno_canto": "XC1069849",
+            "type": "call, subsong, Plastic song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 97,
+            "background_species": 2,
+            "recordist": "Jacobo Ramil Millarengo"
+          },
+          {
+            "media_id": 1300209,
+            "xeno_canto": "XC1074961",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 181,
+            "background_species": 0,
+            "recordist": "Lars Lachmann"
+          },
+          {
+            "media_id": 1300206,
+            "xeno_canto": "XC1075026",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 50,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A common bird, and now a winter garden bird too. Females and young birds have a rusty-brown cap, so look for the face shape, not just the cap."
+      },
+      "dont_confuse": {
+        "en": "Garden Warbler (this week): plain, with a blank face and a smoother, longer song."
+      },
+      "media": {
+        "card": [
+          873993,
+          873991,
+          873876
+        ],
+        "quiz": [
+          873955,
+          873935,
+          873974,
+          873917,
+          873960
+        ]
+      }
+    },
+    {
+      "species_id": 7968,
+      "latin": "Curruca curruca",
+      "name": {
+        "en": "Lesser Whitethroat"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small and grey, with a dark mask through the eye and a white throat"
+        },
+        {
+          "en": "Dark grey legs and a dark bill, and a thin white eye ring"
+        },
+        {
+          "en": "Song: a dry rattle, “chikka-chikka-chikka-chikka”, on a single note"
+        }
+      ],
+      "where_when": {
+        "en": "BE, DE, DK, FI, SE: fairly common in hedges and scrub from late April. UK, NL, FR: uncommon, mostly in the east and south in the UK. IE and NO: rare. The Siberian form is a pale vagrant in autumn."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A short, dry rattle, “chikka-chikka-chikka”, on one note, preceded by a quiet warble if you are close enough."
+        },
+        "chosen": [
+          {
+            "media_id": 1300419,
+            "xeno_canto": "XC951265",
+            "type": "call",
+            "country": "Oman",
+            "quality": "A",
+            "seconds": 76,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1300405,
+            "xeno_canto": "XC1024202",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 141,
+            "background_species": 0,
+            "recordist": "Paul Driver"
+          },
+          {
+            "media_id": 1300408,
+            "xeno_canto": "XC1006515",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "Franck Hollander"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A skulker, so the song is the key. If you see it, the grey back with no rusty wing panel and the dark mask separate it from a Whitethroat."
+      },
+      "dont_confuse": {
+        "en": "Common Whitethroat (this week): a rusty wing panel and a white throat on a grey head. Garden Warbler: plain and brown."
+      },
+      "media": {
+        "card": [
+          875099,
+          874972,
+          875093
+        ],
+        "quiz": [
+          874970,
+          874957,
+          874952,
+          875097,
+          875080,
+          875078
+        ]
+      }
+    },
+    {
+      "species_id": 7984,
+      "latin": "Curruca communis",
+      "name": {
+        "en": "Common Whitethroat"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A grey head and a brilliant white throat that puffs when it sings"
+        },
+        {
+          "en": "A bright rusty **wing panel** and a pale eye ring"
+        },
+        {
+          "en": "Song: a short, scratchy burst, “chit-chit-whit-whit-chuh”, from a bush or in a display flight"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK: common in hedges and scrub from mid-April. SE and FI: fairly common. NO: rare. After the Sahel drought crash of 1969, numbers recovered partly."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A short, scratchy, hurried burst, with a rising and falling sound, often in a song flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1300716,
+            "xeno_canto": "XC1001979",
+            "type": "alarm call, song",
+            "country": "Finland",
+            "quality": "A",
+            "seconds": 173,
+            "background_species": 8,
+            "recordist": "Eetu Paljakka"
+          },
+          {
+            "media_id": 1300726,
+            "xeno_canto": "XC985582",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1300712,
+            "xeno_canto": "XC1008095",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 122,
+            "background_species": 0,
+            "recordist": "Bodo Sonnenburg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The commonest Sylvia of scrub and field edges. Its song flight is very distinctive: a short flight up and then back down into the bush."
+      },
+      "dont_confuse": {
+        "en": "Lesser Whitethroat (this week): a grey back, a dark mask and a dry rattle."
+      },
+      "media": {
+        "card": [
+          877251,
+          877256,
+          877234
+        ],
+        "quiz": [
+          877226,
+          877225,
+          877261,
+          877266,
+          877177
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 7458,
+    "species_ids": [
+      7459,
+      7458
+    ],
+    "title": {
+      "en": "Icterine or Melodious?"
+    },
+    "text": {
+      "en": "Wing first, then the head and the legs. Icterine has a long wing (the tips reach almost halfway down the tail), a pale wing panel, a flat head and blue-grey legs. Melodious has a short wing, no wing panel, a rounded head and brown legs. Both sing a lot, but the Icterine sings louder and harsher, the Melodious faster and more musical."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      4,
+      7,
+      8
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 5,
+      "photo_sound": 4,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In May or June look for a singing Whitethroat and Blackcap in a hedge near you. Compare the two songs, then try to find a Garden Warbler: its song is the longest, smoothest and most even of the three."
+  },
+  "next": {
+    "en": "Next week is the second review: all the warblers of block 2."
+  },
+  "flow": [
+    "intro",
+    "bird:7459",
+    "bird:7458",
+    "bird:7450",
+    "bird:7452",
+    "bird:7958",
+    "bird:7957",
+    "bird:7968",
+    "bird:7984",
+    "quiz",
+    "done"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 20,
+  "slug": "review-seabirds",
+  "part": 4,
+  "kind": "review",
+  "season": "any",
+  "minutes": 22,
+  "title": {
+    "en": "Review: seabirds from land"
+  },
+  "subtitle": {
+    "en": "Shearwaters, skuas, auks, divers and seaduck in one quiz"
+  },
+  "intro": {
+    "en": "On a seawatch you read the bird, not the plumage: size, flight, shape and company. This review quiz has twenty questions with birds from all four seabird lessons, plus waders from block 3. Look at the flight and the shape first, then the colours.\n\nSeveral questions pair a photo with a call. For a seabird the call is mostly the one it gives at the colony, which you will rarely hear from a headland, so they are a bonus. Many questions are photo questions, and some of the photos are not sharp: that is real seawatching.\n\nA score of fifteen is good. If you got a diver or a skua wrong, go back to the comparison in that lesson."
+  },
+  "words": [],
+  "birds": [],
+  "compare": null,
+  "quiz": {
+    "questions": 20,
+    "photos_from": "quiz",
+    "answers_from": "review",
+    "review_from": [
+      16,
+      17,
+      18,
+      19,
+      11,
+      12,
+      13,
+      14
+    ],
+    "review_questions": 20,
+    "modes": {
+      "photo": 10,
+      "photo_sound": 6,
+      "sound": 4
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Plan a seawatch for the next gale: write down the date, the wind direction, and your counts. After the watch, check your list against local bird reports for the day."
+  },
+  "next": {
+    "en": "Next block: ducks and geese, with a lot of females."
+  },
+  "flow": [
+    "intro",
+    "quiz",
+    "done"
+  ]
+}

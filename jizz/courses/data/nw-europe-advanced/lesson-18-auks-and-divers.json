@@ -1,0 +1,1161 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 18,
+  "slug": "auks-and-divers",
+  "part": 4,
+  "kind": "species",
+  "season": "winter",
+  "minutes": 20,
+  "title": {
+    "en": "Auks and divers"
+  },
+  "subtitle": {
+    "en": "Guillemot, Razorbill, Puffin, Black Guillemot, Little Auk and the three divers"
+  },
+  "intro": {
+    "en": "Auks and divers are the diving birds of the sea. Auks (guillemots, Razorbills, Puffins) fly low with a fast whirr of wings, and breed on cliffs in summer. In winter they are at sea, and you often see them in winter plumage with white faces. Divers (loons) breed on lakes in the far north and spend the winter at sea.\n\nMost auks pass any sea-watch point from July to October as they leave the colonies, and in winter large numbers sit offshore. The Little Auk is a bird of north Atlantic winters: the species is nowhere near as common as Guillemots, but gales in November can push thousands past the east coast.\n\nThe three divers are the real test. Red-throated is slim with an up-tilted bill; Black-throated is mid-sized, with a straight bill and a neat flank patch; Great Northern is huge, with a thick bill and a dark head."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "flank patch"
+      },
+      "explain": {
+        "en": "A white patch on the rear flank, near the water line. Black-throated Diver has a neat one that shows when it swims."
+      }
+    },
+    {
+      "term": {
+        "en": "up-tilted"
+      },
+      "explain": {
+        "en": "A bill pointing slightly upwards, as in the Red-throated Diver."
+      }
+    },
+    {
+      "term": {
+        "en": "collar"
+      },
+      "explain": {
+        "en": "A band round the neck. A Great Northern Diver in winter has a pale half-collar."
+      }
+    },
+    {
+      "term": {
+        "en": "winter plumage"
+      },
+      "explain": {
+        "en": "The plain plumage seen outside the breeding season. Auks have white faces and divers a white throat in winter."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2221,
+      "latin": "Uria aalge",
+      "name": {
+        "en": "Common Guillemot"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "In **winter plumage**: dark brown above, a white face and a dark line behind the eye"
+        },
+        {
+          "en": "A long, thin, pointed bill, and a slim shape on the water"
+        },
+        {
+          "en": "A fast, direct flight, low over the waves, with a whirr of wings"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, DK: common at colonies in summer, and fairly common offshore in winter. NL, BE, DE, FR, SE: fairly common to scarce offshore. FI: very rare. Pairs of adults and chicks leave the colonies in July."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "abundant",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "abundant",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "At the colony a loud, growling “aaarrr” and a purr."
+        },
+        "chosen": [
+          {
+            "media_id": 1220659,
+            "xeno_canto": "XC986509",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1220663,
+            "xeno_canto": "XC944246",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          },
+          {
+            "media_id": 1220671,
+            "xeno_canto": "XC734672",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The cliff-ledge breeder. In summer the face is dark brown, in winter it is white with a thin dark line behind the eye."
+      },
+      "dont_confuse": {
+        "en": "Razorbill (this week): a black head, a deeper, blunt bill and a thick neck."
+      },
+      "media": {
+        "card": [
+          340082,
+          340164,
+          340075
+        ],
+        "quiz": [
+          340050,
+          340012,
+          340112,
+          340097,
+          340096,
+          340054,
+          339996,
+          340005
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2217,
+      "latin": "Alca torda",
+      "name": {
+        "en": "Razorbill"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Black above and white below, with a heavy, deep bill with a white line"
+        },
+        {
+          "en": "A black head and neck, without the white face of the Guillemot"
+        },
+        {
+          "en": "Pointed tail, held cocked when swimming"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO: common at colonies in summer, and fairly common offshore in winter. DK, NL, BE, DE, FR, SE: scarce to fairly common offshore. FI: very rare."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "At the colony, a low, growling purr."
+        },
+        "chosen": [
+          {
+            "media_id": 1220611,
+            "xeno_canto": "XC611010",
+            "type": "calling club, chick calling, just fledged chick in surf",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 361,
+            "background_species": 0,
+            "recordist": "Rombout de Wijs"
+          },
+          {
+            "media_id": 1220609,
+            "xeno_canto": "XC734707",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 72,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1220608,
+            "xeno_canto": "XC764872",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 48,
+            "background_species": 0,
+            "recordist": "Sergi Carreras"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A guillemot's cousin, with the sharper-looking, blunt bill and the black, not brown, upperparts. It cocks its tail when swimming."
+      },
+      "dont_confuse": {
+        "en": "Common Guillemot (this week): brown, a thin pointed bill and a white face in winter."
+      },
+      "media": {
+        "card": [
+          339483,
+          339551,
+          339571
+        ],
+        "quiz": [
+          339484,
+          339517,
+          339596,
+          339460,
+          339473,
+          339458,
+          339465,
+          339468
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2204,
+      "latin": "Fratercula arctica",
+      "name": {
+        "en": "Atlantic Puffin"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Small and plump, with a grey face and a dull, smaller bill in winter"
+        },
+        {
+          "en": "Black above and white below, with orange feet"
+        },
+        {
+          "en": "A fast, whirring flight on small wings"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO: common at colonies in April to August, and far out at sea in winter. FR, DK, NL, BE, DE, SE: rare offshore, in winter. FI: very rare. In summer the bright bill is unmistakable, but in winter the bird is plain and drab."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "abundant",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "At the burrow a low, growling “arrr”."
+        },
+        "chosen": [
+          {
+            "media_id": 1220503,
+            "xeno_canto": "XC318408",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 53,
+            "background_species": 0,
+            "recordist": "david m"
+          },
+          {
+            "media_id": 1220495,
+            "xeno_canto": "XC572384",
+            "type": "call, moaning call underground",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 89,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          },
+          {
+            "media_id": 1220493,
+            "xeno_canto": "XC611009",
+            "type": "call, calls in burrow, chick in burrow, chick and adult in burrow",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 433,
+            "background_species": 0,
+            "recordist": "Rombout de Wijs"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Seabird photos show the bright summer Puffin, but a bird seen from land in October is likely to be a dull, grey-faced one. Look at the small size and the stubby bill."
+      },
+      "dont_confuse": {
+        "en": "Little Auk (this week): even smaller, with a very short bill and a white throat."
+      },
+      "media": {
+        "card": [
+          337726,
+          337807,
+          337787
+        ],
+        "quiz": [
+          337799,
+          337691,
+          337735,
+          337740,
+          337780,
+          337803,
+          337773,
+          337711
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2214,
+      "latin": "Cepphus grylle",
+      "name": {
+        "en": "Black Guillemot"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Mostly white in winter, with a grey-barred back and black wings with a white patch"
+        },
+        {
+          "en": "Bright red legs and a thin black bill"
+        },
+        {
+          "en": "A white wing patch that stands out on the dark wing"
+        }
+      ],
+      "where_when": {
+        "en": "UK (Scotland), IE, NO, SE, FI, DK: fairly common around rocky coasts and harbours all year. NL, BE, DE, FR: very rare. It does not migrate far."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, thin, whistling “peeeee”."
+        },
+        "chosen": [
+          {
+            "media_id": 1220576,
+            "xeno_canto": "XC664357",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 125,
+            "background_species": 0,
+            "recordist": "Anthony McGeehan "
+          },
+          {
+            "media_id": 1220571,
+            "xeno_canto": "XC734751",
+            "type": "call, display",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 108,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1220567,
+            "xeno_canto": "XC795139",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 120,
+            "background_species": 0,
+            "recordist": "Tom Gale"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A resident of rocky coasts, easy to see from a harbour wall. The white wing patch and red legs are the signs."
+      },
+      "dont_confuse": {
+        "en": "Common Guillemot (this week): dark brown, with no white wing patch."
+      },
+      "media": {
+        "card": [
+          339021,
+          339013,
+          339116
+        ],
+        "quiz": [
+          339101,
+          339122,
+          339051,
+          339098,
+          338957,
+          339012,
+          339016,
+          339031
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2219,
+      "latin": "Alle alle",
+      "name": {
+        "en": "Little Auk"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Tiny, the size of a Starling, with a very short, stubby bill"
+        },
+        {
+          "en": "Black above and white below, with a white throat and dark cap"
+        },
+        {
+          "en": "A fast whirr of wings, in flocks, low over the waves"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NO, DK, NL, DE, FR, SE: scarce to rare, mostly in November to February, with big flocks in northerly gales on the east coast. IE: rare. FI: very rare. Breeds in Greenland and Svalbard."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, trilling, chattering “kree-ee-ee”."
+        },
+        "chosen": [
+          {
+            "media_id": 1220632,
+            "xeno_canto": "XC428867",
+            "type": "call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 16,
+            "background_species": 0,
+            "recordist": "Jacob Lotz"
+          },
+          {
+            "media_id": 1220627,
+            "xeno_canto": "XC193958",
+            "type": "flight call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 66,
+            "background_species": 0,
+            "recordist": "Rob van Bemmelen"
+          },
+          {
+            "media_id": 1220626,
+            "xeno_canto": "XC321238",
+            "type": "call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 98,
+            "background_species": 0,
+            "recordist": "Tim de Boer"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 15
+      },
+      "note": {
+        "en": "A tiny seabird that arrives with northerly gales. A wreck can strand dozens inland after a winter storm."
+      },
+      "dont_confuse": {
+        "en": "Atlantic Puffin (this week): bigger, with a deeper bill and orange feet."
+      },
+      "media": {
+        "card": [
+          339673,
+          339708,
+          339663
+        ],
+        "quiz": [
+          339711,
+          339675,
+          339765,
+          339805,
+          339656,
+          339674,
+          339670,
+          339788
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2332,
+      "latin": "Gavia stellata",
+      "name": {
+        "en": "Red-throated Diver"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Slim, with a pale, speckled grey back and a white face"
+        },
+        {
+          "en": "A thin, **up-tilted** bill, held a bit upwards"
+        },
+        {
+          "en": "Often flies fast and low, with a hunched look, in a line"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, SE, FI: breeds on small lakes in the north, April to August. DK, NL, BE, DE, FR, UK: common in winter offshore, from October to March. Large numbers pass in the North Sea."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "In flight, a goose-like, rapid “kak-kak-kak”. At the lake, a wailing cry."
+        },
+        "chosen": [
+          {
+            "media_id": 1222434,
+            "xeno_canto": "XC803778",
+            "type": "flight call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 49,
+            "background_species": 0,
+            "recordist": "Grégoire Chauvot"
+          },
+          {
+            "media_id": 1222437,
+            "xeno_canto": "XC740791",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Alan Dalton"
+          },
+          {
+            "media_id": 1222435,
+            "xeno_canto": "XC745896",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The commonest diver at sea. The thin, upturned bill and the pale, speckled back are the marks."
+      },
+      "dont_confuse": {
+        "en": "Black-throated Diver (this week): a straight, stout bill, a darker head and a neat flank patch."
+      },
+      "media": {
+        "card": [
+          357942,
+          357930,
+          357851
+        ],
+        "quiz": [
+          357863,
+          357817,
+          357819,
+          357943,
+          357877,
+          357933,
+          357825,
+          357925
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2333,
+      "latin": "Gavia arctica",
+      "name": {
+        "en": "Black-throated Diver"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "A straight, stout dagger of a bill, with a dark crown and a clean, white throat"
+        },
+        {
+          "en": "A white **flank patch** that shows when it is on the water"
+        },
+        {
+          "en": "A sharp line between the dark nape and the white throat"
+        }
+      ],
+      "where_when": {
+        "en": "NO, SE, FI: breeds on larger lakes, May to August. UK: scarce on the coast in winter, with a few breeding in Scotland. DK, DE, NL, BE, FR, IE: scarce to rare in winter. Winter flocks can include hundreds in Danish waters."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A rarely heard, loud, mournful wail."
+        },
+        "chosen": [
+          {
+            "media_id": 1222458,
+            "xeno_canto": "XC675952",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1222464,
+            "xeno_canto": "XC197897",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 3,
+            "recordist": "Patrik Åberg"
+          },
+          {
+            "media_id": 1222451,
+            "xeno_canto": "XC922071",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 116,
+            "background_species": 0,
+            "recordist": "Teet Sirotkin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Compare with the other divers in poor light: it is the bird in the middle. The neat black-and-white line between neck and throat is the mark."
+      },
+      "dont_confuse": {
+        "en": "Red-throated Diver (this week): a thin, up-tilted bill and a paler look. Great Northern Diver: bigger, a heavy bill."
+      },
+      "media": {
+        "card": [
+          358092,
+          358099,
+          358055
+        ],
+        "quiz": [
+          358074,
+          358082,
+          358090,
+          358104,
+          358094,
+          358098,
+          358000,
+          358053
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2335,
+      "latin": "Gavia immer",
+      "name": {
+        "en": "Great Northern Diver"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Large and heavy, with a thick, strong, dagger-like bill"
+        },
+        {
+          "en": "A dark head and a pale half-**collar** on the neck"
+        },
+        {
+          "en": "A square, flat-backed profile, with a flat forehead"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO: fairly common in winter off the north and west coasts, from October to April. DK, NL, BE, DE, FR, SE: rare to scarce. FI: very rare. Breeds in Iceland and North America."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Silent in winter; a loud, yodelling wail in summer."
+        },
+        "chosen": [
+          {
+            "media_id": 1222501,
+            "xeno_canto": "XC488026",
+            "type": "call, tremelo",
+            "country": "Iceland",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1222494,
+            "xeno_canto": "XC601772",
+            "type": "call",
+            "country": "Canada",
+            "quality": "A",
+            "seconds": 41,
+            "background_species": 0,
+            "recordist": "Peter Ward and Ken Hall"
+          },
+          {
+            "media_id": 1222497,
+            "xeno_canto": "XC579491",
+            "type": "song",
+            "country": "Iceland",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Panvert Robin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The biggest diver, and a bird that dives for minutes. Look for the flat forehead and the heavy bill."
+      },
+      "dont_confuse": {
+        "en": "Black-throated Diver (this week): smaller, a slimmer bill and a rounder head."
+      },
+      "media": {
+        "card": [
+          358361,
+          358454,
+          358326
+        ],
+        "quiz": [
+          358471,
+          358467,
+          358363,
+          358383,
+          358483,
+          358478,
+          358378,
+          358388
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 2333,
+    "species_ids": [
+      2332,
+      2333,
+      2335
+    ],
+    "title": {
+      "en": "Which diver?"
+    },
+    "text": {
+      "en": "Size and bill. Red-throated: small and slim, with a thin, up-tilted bill and a speckled grey back. Black-throated: medium, with a straight, slim dagger bill and a neat white flank patch. Great Northern: large, with a thick bill, a flat forehead and a dark, heavy head."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      13,
+      16,
+      17
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 3,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In winter, look for divers off a headland or in a sheltered bay. Compare them in the same view: size, bill, forehead. In October to November, check the flocks of auks passing for a Little Auk."
+  },
+  "next": {
+    "en": "Next week: seaduck: Eider, scoters, Long-tailed Duck and the Shag."
+  },
+  "flow": [
+    "intro",
+    "bird:2221",
+    "bird:2217",
+    "bird:2204",
+    "bird:2214",
+    "bird:2219",
+    "bird:2332",
+    "bird:2333",
+    "bird:2335",
+    "quiz",
+    "done"
+  ]
+}

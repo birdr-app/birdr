@@ -1,0 +1,1127 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 24,
+  "slug": "geese-and-swans",
+  "part": 5,
+  "kind": "species",
+  "season": "winter",
+  "minutes": 22,
+  "title": {
+    "en": "Geese and swans"
+  },
+  "subtitle": {
+    "en": "White-fronted, both Bean Geese, Pink-footed, Lesser White-fronted, Red-breasted, Whooper and Bewick's"
+  },
+  "intro": {
+    "en": "Winter in north-west Europe is goose time. From October to March, flocks from Siberia, Greenland, Iceland and Svalbard feed on grassland and fields. The grey geese (white-fronted, bean, pink-footed) look alike at a distance, and they differ in the bill, the legs, and the voice. A flock of thousands of geese is a good place to look for the rarer species.\n\nLearn the bill: the black-and-orange bill of the Bean Goose, the white blaze of the White-fronted, the small pink-banded bill of the Pink-footed. Then the legs: orange (White-fronted, Bean) or pink (Pink-footed). Finally the shape: Taiga Bean is long-necked and long-billed, Tundra Bean is more compact.\n\nThe two white swans are a classic pair: the Whooper Swan, with its big, yellow, wedge-shaped bill patch, and the Bewick's, smaller, with a rounder yellow patch. Both come from the north in late autumn. In winter listen: swans call across the fields at dusk."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "bill band"
+      },
+      "explain": {
+        "en": "A coloured band across the bill. The Pink-footed Goose has a pink one; Bean Geese have an orange one."
+      }
+    },
+    {
+      "term": {
+        "en": "blaze"
+      },
+      "explain": {
+        "en": "The white patch at the base of the bill, as on the White-fronted Goose."
+      }
+    },
+    {
+      "term": {
+        "en": "belly bars"
+      },
+      "explain": {
+        "en": "The black bars on the belly of an adult White-fronted Goose. No two birds are the same."
+      }
+    },
+    {
+      "term": {
+        "en": "wing tips"
+      },
+      "explain": {
+        "en": "The ends of the folded wings. In a Lesser White-fronted Goose they project beyond the tail."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 79,
+      "latin": "Anser albifrons",
+      "name": {
+        "en": "Greater White-fronted Goose"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A white **blaze** at the base of a pink bill, and orange legs"
+        },
+        {
+          "en": "Irregular black **belly bars**, different on every bird"
+        },
+        {
+          "en": "A grey-brown body with white edges on the flank feathers"
+        }
+      ],
+      "where_when": {
+        "en": "NL, DE, DK, UK: common to abundant in winter, from October, on grassland and fields. BE, FR: fairly common. IE: uncommon (Greenland race). NO, SE, FI: passage birds. About a million winter in Europe."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, laughing, musical “kyow-yow-yow”, quite shrill, from a flock."
+        },
+        "chosen": [
+          {
+            "media_id": 1193748,
+            "xeno_canto": "XC989209",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1193746,
+            "xeno_canto": "XC996275",
+            "type": "flight call, nocturnal flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 134,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1193736,
+            "xeno_canto": "XC1073870",
+            "type": "nocturnal flight call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Astrid Cervantes"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Flocks of thousands graze on Dutch and German grassland. Juveniles have no white on the face and no black belly bars, so they are harder."
+      },
+      "dont_confuse": {
+        "en": "Greylag Goose (beginners): bigger, a pale, heavy, orange bill and a plain belly."
+      },
+      "media": {
+        "card": [
+          117360,
+          117392,
+          117377
+        ],
+        "quiz": [
+          117395,
+          117308,
+          117348,
+          117304,
+          117314,
+          117338,
+          117321,
+          117315
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 3,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 81,
+      "latin": "Anser fabalis",
+      "name": {
+        "en": "Taiga Bean Goose"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A long, deep bill with a long orange band, and an orange leg"
+        },
+        {
+          "en": "Long, slim neck and a long, flat head, a lanky shape"
+        },
+        {
+          "en": "Dark brown head and neck, and a dark, scaly back"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO: breeds in the taiga from May. SE, DK, DE: scarce in winter, with a small flock in the south of Sweden. UK: very rare, a few in Scotland and Norfolk. NL, BE, FR, IE: rare. A declining bird."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A deep, nasal “ung-ank” or “ka-yak”, lower than a White-fronted."
+        },
+        "chosen": [
+          {
+            "media_id": 1193779,
+            "xeno_canto": "XC944400",
+            "type": "flight call, nocturnal flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "Scott Wotherspoon"
+          },
+          {
+            "media_id": 1193791,
+            "xeno_canto": "XC562286",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 8,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1193785,
+            "xeno_canto": "XC511819",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Patrik Åberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A rare bird in winter, and a tall, lanky goose with a long bill. The orange band along the bill is longer and brighter than on the Tundra Bean Goose."
+      },
+      "dont_confuse": {
+        "en": "Tundra Bean Goose (this week): shorter, with a compact bill with a narrow orange band."
+      },
+      "media": {
+        "card": [
+          117602,
+          117601,
+          117600
+        ],
+        "quiz": [
+          117666,
+          117649,
+          117624,
+          117654,
+          117684,
+          117594,
+          117718,
+          117697
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 3,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 82,
+      "latin": "Anser serrirostris",
+      "name": {
+        "en": "Tundra Bean Goose"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A shorter, stockier shape, with a bill that is mostly black with a narrow orange band"
+        },
+        {
+          "en": "A short neck, rounded head and a heavy body"
+        },
+        {
+          "en": "Orange legs and a brownish, scaly back"
+        }
+      ],
+      "where_when": {
+        "en": "NL, DE, BE, DK: common in winter, on fields and grassland, mostly in NL and DE. UK: scarce. FR, SE: uncommon. NO, FI: breeds in the north. The Bean Goose of the north-west European winter."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A deep, nasal “ung-unk” or “ka-yak”, a bit higher than a Taiga Bean."
+        },
+        "chosen": [
+          {
+            "media_id": 1193802,
+            "xeno_canto": "XC951544",
+            "type": "call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "brickegickel"
+          },
+          {
+            "media_id": 1193806,
+            "xeno_canto": "XC855137",
+            "type": "flight call, flock",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 79,
+            "background_species": 0,
+            "recordist": "Jorge Leitão"
+          },
+          {
+            "media_id": 1193812,
+            "xeno_canto": "XC772673",
+            "type": "nocturnal flight call",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Benoit Paepegaey"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A compact grey-brown goose. The bill is the key: black with a thin orange band across."
+      },
+      "dont_confuse": {
+        "en": "Taiga Bean Goose (this week): taller, a longer bill with a longer orange band."
+      },
+      "media": {
+        "card": [
+          117838,
+          117856,
+          117767
+        ],
+        "quiz": [
+          117783,
+          117851,
+          117776,
+          117800,
+          117768,
+          117818,
+          117809,
+          117784
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 1,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 83,
+      "latin": "Anser brachyrhynchus",
+      "name": {
+        "en": "Pink-footed Goose"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A small, round head and a short, dark bill with a pink **bill band**"
+        },
+        {
+          "en": "Pink legs and a pale blue-grey forewing, and a clean, uniform look"
+        },
+        {
+          "en": "A dark head and neck contrasting with a pale breast"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DK, BE: common in winter, with a huge number in Norfolk, Lancashire and Scotland (hundreds of thousands). DE, NO: uncommon. IE, FR: rare. Arrives from Iceland and Svalbard in October."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, lively, “wink-wink” or “ahng-ahng”, higher than other grey geese."
+        },
+        "chosen": [
+          {
+            "media_id": 1193819,
+            "xeno_canto": "XC993252",
+            "type": "flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1193824,
+            "xeno_canto": "XC787561",
+            "type": "flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          },
+          {
+            "media_id": 1193828,
+            "xeno_canto": "XC545552",
+            "type": "flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "B Whyte"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "They roost on estuaries and fly out at dawn in big skeins. The high calls are the sound of autumn in East Anglia."
+      },
+      "dont_confuse": {
+        "en": "Tundra Bean Goose (this week): orange legs, a bigger bill and a longer neck."
+      },
+      "media": {
+        "card": [
+          117938,
+          118002,
+          117931
+        ],
+        "quiz": [
+          118041,
+          117991,
+          117992,
+          117993,
+          118098,
+          117961,
+          117935,
+          117945
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 1,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 80,
+      "latin": "Anser erythropus",
+      "name": {
+        "en": "Lesser White-fronted Goose"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small, with a white **blaze** that reaches up to the forehead"
+        },
+        {
+          "en": "A yellow eye ring, a short, pink bill and a short neck"
+        },
+        {
+          "en": "The folded **wing tips** project beyond the tail"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO: very rare breeders, and almost gone, with a few in winter in Sweden and Finland. DE, DK, NL, UK: very rare. FR, BE, IE: almost never. A critically endangered bird, with a few reintroduced in Sweden."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, squeaky “kyu-yu-yu”, higher than a White-fronted."
+        },
+        "chosen": [
+          {
+            "media_id": 1193760,
+            "xeno_canto": "XC564390",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 14,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1193763,
+            "xeno_canto": "XC340581",
+            "type": "call",
+            "country": "Finland",
+            "quality": "A",
+            "seconds": 5,
+            "background_species": 0,
+            "recordist": "Tero Linjama"
+          },
+          {
+            "media_id": 1193757,
+            "xeno_canto": "XC910353",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 22,
+            "background_species": 5,
+            "recordist": "Johan Södercrantz"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bird to look for in every flock of White-fronted Geese. The yellow eye ring and the white blaze that reaches the forehead are the marks."
+      },
+      "dont_confuse": {
+        "en": "Greater White-fronted Goose (this week): bigger, a blaze that stops below the forehead, and no yellow ring."
+      },
+      "media": {
+        "card": [
+          117454,
+          117482,
+          117489
+        ],
+        "quiz": [
+          117481,
+          117480,
+          117485,
+          117492,
+          117479,
+          117503,
+          117483,
+          117496
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 1,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 89,
+      "latin": "Branta ruficollis",
+      "name": {
+        "en": "Red-breasted Goose"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A small, neat goose, with a chestnut breast and white patches on a black head"
+        },
+        {
+          "en": "A very short, small bill and a round head"
+        },
+        {
+          "en": "A bold white line along the flank, and a black belly"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DE, DK, BE, FR: very rare, often with Brent Geese in winter. SE, FI, NO: almost never. IE: almost never. Breeds in Siberia and winters on the Black Sea. Some are escapes."
+      },
+      "where_data": {
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, shrill “kik-yoik”, a sharp squeak."
+        },
+        "chosen": [
+          {
+            "media_id": 1193938,
+            "xeno_canto": "XC769280",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 8,
+            "background_species": 0,
+            "recordist": "Michel Veldt"
+          },
+          {
+            "media_id": 1193943,
+            "xeno_canto": "XC699552",
+            "type": "song",
+            "country": "Switzerland",
+            "quality": "A",
+            "seconds": 10,
+            "background_species": 0,
+            "recordist": "Pascal Christe"
+          },
+          {
+            "media_id": 1193933,
+            "xeno_canto": "XC483580",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 105,
+            "background_species": 3,
+            "recordist": "Mark Pearse"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The most colourful goose of the Palearctic. A single bird among a flock of dark-bellied Brent Geese is a classic find."
+      },
+      "dont_confuse": {
+        "en": "Brent Goose (beginners): a bigger black head, no chestnut breast."
+      },
+      "media": {
+        "card": [
+          119048,
+          119057,
+          119031
+        ],
+        "quiz": [
+          119044,
+          119066,
+          118991,
+          119046,
+          118997,
+          119049,
+          119059,
+          119050
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 98,
+      "latin": "Cygnus cygnus",
+      "name": {
+        "en": "Whooper Swan"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A long, straight neck and a long, flat head, with a wedge-shaped yellow patch on the bill"
+        },
+        {
+          "en": "The yellow patch comes to a point, below the nostril, on a black tip"
+        },
+        {
+          "en": "Loud, bugling calls from a flock, often at dusk"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, DK, DE: fairly common in winter, with Icelandic birds in the UK and IE. NO, SE, FI: breeds in the north and the lakes. BE, FR: scarce. A bird of fields and lakes, from October."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, bugling “whoop-whoop”, deeper than a Mute Swan, from a flock."
+        },
+        "chosen": [
+          {
+            "media_id": 1194095,
+            "xeno_canto": "XC942680",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          },
+          {
+            "media_id": 1194084,
+            "xeno_canto": "XC1074257",
+            "type": "call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 56,
+            "background_species": 0,
+            "recordist": "bert de bruin"
+          },
+          {
+            "media_id": 1194092,
+            "xeno_canto": "XC989694",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 91,
+            "background_species": 0,
+            "recordist": "Thomas Bergman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The wild swan of the north. It holds its neck straight, unlike a Mute Swan's curved neck, and calls constantly."
+      },
+      "dont_confuse": {
+        "en": "Bewick's Swan (this week): smaller, with a rounder, smaller yellow patch."
+      },
+      "media": {
+        "card": [
+          120550,
+          120618,
+          120607
+        ],
+        "quiz": [
+          120662,
+          120648,
+          120534,
+          120530,
+          120651,
+          120564,
+          120643,
+          120572
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 7,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 97,
+      "latin": "Cygnus columbianus",
+      "name": {
+        "en": "Bewick's Swan"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Smaller than a Whooper Swan, with a shorter neck and a rounder head"
+        },
+        {
+          "en": "A rounded yellow patch on a mostly black bill"
+        },
+        {
+          "en": "Goose-like in size and shape, in small family groups"
+        }
+      ],
+      "where_when": {
+        "en": "NL, DE, UK, DK, BE: uncommon in winter, from November, with its best-known flock at Slimbridge. FR, IE: rare. NO, SE, FI: rare. Declining a lot over the last 20 years."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, goose-like, yelping “wow-wow-woo”, higher than a Whooper."
+        },
+        "chosen": [
+          {
+            "media_id": 1194066,
+            "xeno_canto": "XC834097",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "Michel Veldt"
+          },
+          {
+            "media_id": 1194081,
+            "xeno_canto": "XC695836",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 37,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1194076,
+            "xeno_canto": "XC721034",
+            "type": "flight call, nocturnal flight call",
+            "country": "Denmark",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Lars Mogensen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A small swan from the Siberian tundra. Each one has a unique bill pattern, and the Slimbridge researchers have named hundreds of them."
+      },
+      "dont_confuse": {
+        "en": "Whooper Swan (this week): bigger, a long, straight neck and a pointed yellow patch."
+      },
+      "media": {
+        "card": [
+          120433,
+          120395,
+          120383
+        ],
+        "quiz": [
+          120441,
+          120456,
+          120392,
+          120426,
+          120400,
+          120436,
+          120394,
+          120448
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 5,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 82,
+    "species_ids": [
+      81,
+      82
+    ],
+    "title": {
+      "en": "Taiga or Tundra Bean Goose?"
+    },
+    "text": {
+      "en": "Look at the bill and the neck. A Taiga Bean Goose is tall, with a long neck and a long, deep bill with a long orange band, and it looks rather flat-headed. A Tundra Bean Goose is stocky and short-necked, with a short, mostly black bill with a thin orange band. The Tundra is by far the commoner in the Netherlands and Germany."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      19,
+      22,
+      23
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 4,
+      "sound": 2
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In winter, find a flock of geese in a field and scan it, one bird at a time. Look first for the bill, then the legs. A good goose-spotting walk can include a Whooper or a Bewick's Swan too: check the yellow on the bill."
+  },
+  "next": {
+    "en": "Next week is the review of ducks and geese."
+  },
+  "flow": [
+    "intro",
+    "bird:79",
+    "bird:81",
+    "bird:82",
+    "bird:83",
+    "bird:80",
+    "bird:89",
+    "bird:98",
+    "bird:97",
+    "quiz",
+    "done"
+  ]
+}

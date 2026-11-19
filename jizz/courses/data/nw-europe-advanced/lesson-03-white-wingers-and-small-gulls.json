@@ -1,0 +1,942 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 3,
+  "slug": "white-wingers-and-small-gulls",
+  "part": 1,
+  "kind": "species",
+  "season": "winter",
+  "minutes": 20,
+  "title": {
+    "en": "White-wingers and small gulls"
+  },
+  "subtitle": {
+    "en": "Iceland, Glaucous, Little, Kittiwake and the rarer small gulls"
+  },
+  "intro": {
+    "en": "Two types of gull are worth looking for in a flock of Herrings: the pale ones from the Arctic and the small ones that look at first like Black-headed Gulls. The first are Iceland and Glaucous Gulls, the white-wingers. They breed on Greenland, Iceland and Svalbard and come south from November to March. Both have wing tips with no black.\n\nThe second group is a different challenge. Little Gull, Kittiwake, Ring-billed and Slender-billed Gull and the Sabine's Gull are all small, and each has a trick. Kittiwakes are seabirds that you meet on the coast in storms; Little Gulls pass in spring and autumn; Sabine's is the one to look for in an autumn gale.\n\nIn this lesson we meet them as young birds where that is what you will actually see. Iceland and Glaucous are nearly always seen as first-winters, creamy-white and speckled. Sabine's Gull is nearly always a juvenile, which is a bird of the first autumn."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "wing tip"
+      },
+      "explain": {
+        "en": "The end of the folded wing. In white-winged gulls it is pale, with no black."
+      }
+    },
+    {
+      "term": {
+        "en": "carpal bar"
+      },
+      "explain": {
+        "en": "The dark diagonal band across the upper wing, from the wrist to the body. Typical for small gulls in their first year."
+      }
+    },
+    {
+      "term": {
+        "en": "hood"
+      },
+      "explain": {
+        "en": "The dark head of a gull in summer plumage."
+      }
+    },
+    {
+      "term": {
+        "en": "trailing edge"
+      },
+      "explain": {
+        "en": "The back edge of the wing. A black or white trailing edge is a fast way to separate small gulls in flight."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2277,
+      "latin": "Larus glaucoides",
+      "name": {
+        "en": "Iceland Gull"
+      },
+      "plumage": {
+        "en": "first-winter"
+      },
+      "plumage_filter": {
+        "stage": "immature"
+      },
+      "look_for": [
+        {
+          "en": "Creamy-white to pale biscuit overall, with delicate pale brown speckling"
+        },
+        {
+          "en": "Pale **wing tip** with no dark in it, and a round, dove-like head"
+        },
+        {
+          "en": "Short, slim bill that is pink with a dark tip, and a gentle look"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO: regular in winter, mainly November to March and mostly in the north and west. NL, BE, FR, DK: rare. DE, SE, FI: very rare. Always a few reported from fishing ports in the UK and IE."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A mewing “kyow” and a high, thin begging call."
+        },
+        "chosen": [
+          {
+            "media_id": 1221543,
+            "xeno_canto": "XC523094",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "B",
+            "seconds": 16,
+            "background_species": 0,
+            "recordist": "Frank Roos"
+          },
+          {
+            "media_id": 1221545,
+            "xeno_canto": "XC402260",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "B",
+            "seconds": 14,
+            "background_species": 0,
+            "recordist": "Hans Matheve"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The Glaucous Gull's smaller cousin: about the size of a Herring Gull, but with a rounder head and a thinner bill, and wing tips that stick out past the tail like a Herring Gull's."
+      },
+      "dont_confuse": {
+        "en": "Glaucous Gull (this week): bigger, a long heavy bill with a black tip, and wings that do not reach beyond the tail."
+      },
+      "media": {
+        "card": [
+          349343,
+          349311,
+          349335
+        ],
+        "quiz": [
+          349364,
+          349344,
+          349324,
+          349341,
+          349386,
+          349345,
+          349334,
+          349358
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2272,
+      "latin": "Larus hyperboreus",
+      "name": {
+        "en": "Glaucous Gull"
+      },
+      "plumage": {
+        "en": "first-winter"
+      },
+      "plumage_filter": {
+        "stage": "immature"
+      },
+      "look_for": [
+        {
+          "en": "Large and heavy, creamy-white and pale, with a flat-headed, bulky look"
+        },
+        {
+          "en": "Thick, pink bill with a sharply defined black tip, like a dipped brush"
+        },
+        {
+          "en": "Pale **wing tip**, and the wings barely reach the tail tip at rest"
+        }
+      ],
+      "where_when": {
+        "en": "NO: fairly common on the coast, mainly in spring. UK, IE, NL, BE, DK, DE, FR, SE and FI: scarce to rare, in winter, with more in the northern UK, IE and NO. Often at fish docks and rubbish tips."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A deep “kow-kow” like a Great Black-backed Gull, and a hoarse begging call."
+        },
+        "chosen": [
+          {
+            "media_id": 1221440,
+            "xeno_canto": "XC514048",
+            "type": "alarm call, call, flight call",
+            "country": "Denmark",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Timo Janhonen"
+          },
+          {
+            "media_id": 1221441,
+            "xeno_canto": "XC432754",
+            "type": "alarm call, call, flight call",
+            "country": "Iceland",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1221457,
+            "xeno_canto": "XC1045651",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 17,
+            "background_species": 0,
+            "recordist": "AUDEVARD Aurélien"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bulky bird, as big as a Great Black-backed Gull when it stands by one. The bill is the clincher: thick, pink and with a neat black tip."
+      },
+      "dont_confuse": {
+        "en": "Iceland Gull (this week): smaller, round-headed, a thin bill and longer wings."
+      },
+      "media": {
+        "card": [
+          348489,
+          348478,
+          348491
+        ],
+        "quiz": [
+          348406,
+          348481,
+          348407,
+          348421,
+          348477,
+          348485,
+          348416,
+          348373
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2230,
+      "latin": "Rissa tridactyla",
+      "name": {
+        "en": "Black-legged Kittiwake"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small and neat, with grey back, white head and a clean yellow bill"
+        },
+        {
+          "en": "Wing tips dipped in black, as if in ink, with no white mirrors"
+        },
+        {
+          "en": "Short black legs, and a dark eye that gives it a gentle look"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO: common, with huge colonies on cliffs from March to August. DK, NL, BE and FR: fairly common offshore, especially in winter and during storms. DE, SE and FI: scarce, mostly on passage."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "abundant",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Its own name: a high, nasal “kitti-wa-aake”."
+        },
+        "chosen": [
+          {
+            "media_id": 1220758,
+            "xeno_canto": "XC929958",
+            "type": "call, flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          },
+          {
+            "media_id": 1220763,
+            "xeno_canto": "XC928148",
+            "type": "call, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "FREDERIC Lionel"
+          },
+          {
+            "media_id": 1220755,
+            "xeno_canto": "XC930790",
+            "type": "song",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 67,
+            "background_species": 0,
+            "recordist": "Paul Lynch"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A true seabird. In winter it is usually far offshore, and only comes to land in storms. It is the gull to pick out when you seawatch in autumn."
+      },
+      "dont_confuse": {
+        "en": "Common Gull (week 1): yellow-green legs, white mirrors on a black tip, and a bigger, roundish head."
+      },
+      "media": {
+        "card": [
+          341329,
+          341401,
+          341325
+        ],
+        "quiz": [
+          341330,
+          341311,
+          341310,
+          341328,
+          341370,
+          341392,
+          341440,
+          341315
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 8,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2228,
+      "latin": "Hydrocoloeus minutus",
+      "name": {
+        "en": "Little Gull"
+      },
+      "plumage": {
+        "en": "first-winter"
+      },
+      "plumage_filter": {
+        "stage": "immature"
+      },
+      "look_for": [
+        {
+          "en": "A black zig-zag across the open wing, made by the dark **carpal bar** and the dark outer primaries"
+        },
+        {
+          "en": "Dark cap and ear smudge on a white head, and a thin dark bill"
+        },
+        {
+          "en": "The smallest gull: tern-like, with a floating, buoyant flight and a dark-tipped tail"
+        }
+      ],
+      "where_when": {
+        "en": "FI: fairly common in spring and autumn. NL: scarce, on passage in spring and autumn. UK, IE, BE, DE, FR, DK, NO and SE: rare to very rare away from a few hotspots, mostly on passage, April to May and August to November."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, soft “kek-kek-kek” and a quiet, high “keea”."
+        },
+        "chosen": [
+          {
+            "media_id": 1220710,
+            "xeno_canto": "XC1001546",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Ulf Elman"
+          },
+          {
+            "media_id": 1220722,
+            "xeno_canto": "XC415952",
+            "type": "call, flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 53,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1220725,
+            "xeno_canto": "XC243996",
+            "type": "call, song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Terje Kolaas"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It feeds like a tern, dipping to the water surface. Adults are even easier to spot: they have a black underwing with a thin white edge, visible from far away."
+      },
+      "dont_confuse": {
+        "en": "Black-headed Gull (week 1): bigger, with a white leading edge to the wing and an orange bill."
+      },
+      "media": {
+        "card": [
+          340970,
+          341023,
+          341026
+        ],
+        "quiz": [
+          340967,
+          341070,
+          341018,
+          341031,
+          341025,
+          341024,
+          341067,
+          341000
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2263,
+      "latin": "Larus delawarensis",
+      "name": {
+        "en": "Ring-billed Gull"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Common Gull size, with a pale eye and a clean, flat head"
+        },
+        {
+          "en": "Yellow bill with a neat black ring and a pale grey **mantle**"
+        },
+        {
+          "en": "Yellow legs, and black wing tips with only small white mirrors"
+        }
+      ],
+      "where_when": {
+        "en": "IE: the commonest American gull, very rare to scarce in winter. UK: very rare to scarce, in winter, with a few each year. NL, BE, DE, FR, DK: very rare. NO, SE and FI: almost never."
+      },
+      "where_data": {
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A shrill, high “kree-ow”, like a Common Gull but with a harsher edge."
+        },
+        "chosen": [
+          {
+            "media_id": 1221271,
+            "xeno_canto": "XC169250",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "Paul Marvin"
+          },
+          {
+            "media_id": 1221267,
+            "xeno_canto": "XC771232",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 10,
+            "background_species": 0,
+            "recordist": "Richard E. Webster"
+          },
+          {
+            "media_id": 1221276,
+            "xeno_canto": "XC53947",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 16,
+            "background_species": 0,
+            "recordist": "Todd Wilson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A visitor from North America that turns up with Common Gulls in the west. The ring on the bill is the sign, but check the pale eye and the clean mantle too."
+      },
+      "dont_confuse": {
+        "en": "Common Gull (week 1): a dark eye, no ring on the bill, and greenish-yellow legs."
+      },
+      "media": {
+        "card": [
+          346815,
+          346798,
+          346802
+        ],
+        "quiz": [
+          346797,
+          346810,
+          346917,
+          346887,
+          346898,
+          346813,
+          346800,
+          346801
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 28,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2235,
+      "latin": "Chroicocephalus genei",
+      "name": {
+        "en": "Slender-billed Gull"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A pale, white-headed gull with a long neck and a sloping forehead"
+        },
+        {
+          "en": "Long, dark red bill, with no black tip, and a pale eye"
+        },
+        {
+          "en": "A white head all year, never a **hood**, and a pink flush on the breast in summer"
+        }
+      ],
+      "where_when": {
+        "en": "FR: very rare, mainly in the Mediterranean south. UK, IE, NL, BE, DE, DK: rare overshoots, usually spring. NO, SE and FI: almost never."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, nasal “krrr” and a croaking call."
+        },
+        "chosen": [
+          {
+            "media_id": 1220805,
+            "xeno_canto": "XC839679",
+            "type": "call, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Corentin Rivière"
+          },
+          {
+            "media_id": 1220809,
+            "xeno_canto": "XC793025",
+            "type": "call, short calls",
+            "country": "France",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1220821,
+            "xeno_canto": "XC413266",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "AUDEVARD Aurélien"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A Mediterranean bird that sometimes overshoots in spring. In shape it is the opposite of a Black-headed Gull: a long neck and a sloping head."
+      },
+      "dont_confuse": {
+        "en": "Black-headed Gull (week 1): shorter bill with a dark tip and a dark ear spot."
+      },
+      "media": {
+        "card": [
+          342168,
+          342112,
+          342184
+        ],
+        "quiz": [
+          342201,
+          342215,
+          342198,
+          342146,
+          342197,
+          342158,
+          342225,
+          342152
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 3,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2233,
+      "latin": "Xema sabini",
+      "name": {
+        "en": "Sabine's Gull"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "Small, tern-like gull with a pale grey-brown back and scaly upperparts"
+        },
+        {
+          "en": "In flight: a black, white and grey triangle pattern, a clean white **trailing edge** to the inner wing, and a black band on a forked tail"
+        },
+        {
+          "en": "Short black bill, and a pale grey-brown head and nape"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, FR: very rare, in autumn after westerly gales, September and October. NO: very rare. DE, DK, SE, FI: almost never."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A grating, tern-like “krrr” and a short high call."
+        },
+        "chosen": [
+          {
+            "media_id": 1220794,
+            "xeno_canto": "XC135855",
+            "type": "flight call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 25,
+            "background_species": 0,
+            "recordist": "Fernand DEROUSSEN"
+          },
+          {
+            "media_id": 1220791,
+            "xeno_canto": "XC185601",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 10,
+            "background_species": 0,
+            "recordist": "Andrew Spencer"
+          },
+          {
+            "media_id": 1220786,
+            "xeno_canto": "XC406448",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Patrik Åberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The only gull with a forked tail and a three-colour wing. It is a juvenile that you see in autumn, and a seawatcher's autumn dream."
+      },
+      "dont_confuse": {
+        "en": "Kittiwake (this week): a black trailing edge and a broad dark carpal bar, not the three-colour triangles."
+      },
+      "media": {
+        "card": [
+          341791,
+          341822,
+          341920
+        ],
+        "quiz": [
+          341823,
+          341877,
+          341805,
+          341826,
+          341915,
+          341898,
+          341863,
+          341832
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 1,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 2272,
+    "species_ids": [
+      2277,
+      2272
+    ],
+    "title": {
+      "en": "Iceland or Glaucous?"
+    },
+    "text": {
+      "en": "Size and bill. Glaucous Gull is as big as a Great Black-backed Gull, with a heavy, flat-headed look and a thick pink bill with a sharp black tip. Iceland Gull is Herring-sized, with a round head, a thin bill and wings that reach beyond the tail. If you cannot decide, look at the wings at rest: long for Iceland, short for Glaucous."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      1,
+      2
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 7,
+      "photo_sound": 4,
+      "sound": 1
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Look for a Kittiwake this week: a coastal walk or a headland on a windy day is ideal. If you cannot get to the coast, practice by scanning gull photos of the Iceland and Glaucous Gull and noting the shape of the bill and the head."
+  },
+  "next": {
+    "en": "Next week the terns: spring, summer and autumn terns on the coast and over the pits."
+  },
+  "flow": [
+    "intro",
+    "bird:2277",
+    "bird:2272",
+    "bird:2230",
+    "bird:2228",
+    "bird:2263",
+    "bird:2235",
+    "bird:2233",
+    "quiz",
+    "done"
+  ]
+}

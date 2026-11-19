@@ -1,0 +1,852 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 7,
+  "slug": "siberian-leaf-warblers",
+  "part": 2,
+  "kind": "species",
+  "season": "autumn",
+  "minutes": 20,
+  "title": {
+    "en": "Siberian leaf warblers"
+  },
+  "subtitle": {
+    "en": "Yellow-browed, Pallas's, Hume's, Arctic, Greenish, Radde's and Dusky Warbler"
+  },
+  "intro": {
+    "en": "Each autumn thousands of leaf warblers set off from the Siberian taiga on a south-western course. Most go to south-east Asia, but a stream of Yellow-browed Warblers takes a wrong turn and arrives on the North Sea coast. From mid-September to early November, the east coast of the UK, the Netherlands, the German Bight and the Danish and Swedish coasts are the best places to look.\n\nA Yellow-browed Warbler is the bird to know first: it is tiny, it calls loudly and it is regular. After that come the rarer ones. Pallas's Leaf Warbler arrives later, from late October, and is smaller still. Hume's, Arctic, Greenish, Radde's and Dusky are scarce to very rare, and each one is an event.\n\nMethod: do not trust the wing bars alone. Listen first, then look at the head pattern, the number of wing bars, the colour of the legs and the bill. Photos here are mostly of birds in the hand or in the open in autumn."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "wing bar"
+      },
+      "explain": {
+        "en": "A pale line across the folded wing, made by the pale tips of the wing coverts. Many leaf warblers have one or two."
+      }
+    },
+    {
+      "term": {
+        "en": "rump patch"
+      },
+      "explain": {
+        "en": "A pale patch on the lower back, just above the tail. Pallas's Warbler has a lemon-yellow one."
+      }
+    },
+    {
+      "term": {
+        "en": "crown stripe"
+      },
+      "explain": {
+        "en": "A pale or coloured stripe along the middle of the crown."
+      }
+    },
+    {
+      "term": {
+        "en": "eye-stripe"
+      },
+      "explain": {
+        "en": "The dark line through the eye. Its width, and whether it reaches the bill, are good clues."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 7834,
+      "latin": "Phylloscopus inornatus",
+      "name": {
+        "en": "Yellow-browed Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Tiny, with a long, pale yellow-white eyebrow and a dark **eye-stripe**"
+        },
+        {
+          "en": "Two clear **wing bars**, the upper one shorter"
+        },
+        {
+          "en": "Call: a loud, rising “tsu-eest” that carries across a wood"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DK, DE, BE, NO, SE: scarce but annual, mostly on the coast from mid-September to early November, with hundreds in the UK in a good year, and a few overwinter. FR, IE, FI: rare. Never breeds here."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, thin, rising “tsoo-eest” (a bit like a cross between a sparrow and a Pied Wagtail)."
+        },
+        "chosen": [
+          {
+            "media_id": 1298063,
+            "xeno_canto": "XC1055765",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1298065,
+            "xeno_canto": "XC1049525",
+            "type": "call",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 96,
+            "background_species": 0,
+            "recordist": "Uku Paal"
+          },
+          {
+            "media_id": 1298058,
+            "xeno_canto": "XC1069937",
+            "type": "call",
+            "country": "Portugal",
+            "quality": "A",
+            "seconds": 200,
+            "background_species": 0,
+            "recordist": "Paweł Malczyk"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The commonest Siberian bird in autumn: more are seen every year. Listen for the call in a tit flock or in a sycamore in October."
+      },
+      "dont_confuse": {
+        "en": "Pallas's Warbler (this week): smaller still, with a pale crown stripe and a lemon rump. Goldcrest (week 6): a crown stripe, and no eyebrow."
+      },
+      "media": {
+        "card": [
+          864318,
+          864376,
+          864302
+        ],
+        "quiz": [
+          864359,
+          864342,
+          864341,
+          864386,
+          864329,
+          864411,
+          864382
+        ]
+      }
+    },
+    {
+      "species_id": 7838,
+      "latin": "Phylloscopus proregulus",
+      "name": {
+        "en": "Pallas's Leaf Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Tiny, bright and busy, with a lemon-yellow **rump patch**"
+        },
+        {
+          "en": "Pale yellow **crown stripe** and a bold eyebrow, with two wing bars"
+        },
+        {
+          "en": "Call: a soft, plaintive “chu-ee”"
+        }
+      ],
+      "where_when": {
+        "en": "UK: scarce but annual, in late October and November, mainly on the east coast. NL, DE, DK, SE: very rare, a few each year. BE, FI, NO, FR, IE: almost never."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, high, fluty “chwee” or a quiet “wee-wee”."
+        },
+        "chosen": [
+          {
+            "media_id": 1298147,
+            "xeno_canto": "XC893014",
+            "type": "call",
+            "country": "China",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Bo Shunqi"
+          },
+          {
+            "media_id": 1298136,
+            "xeno_canto": "XC992673",
+            "type": "song",
+            "country": "China",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Feather V"
+          },
+          {
+            "media_id": 1298133,
+            "xeno_canto": "XC1016402",
+            "type": "song",
+            "country": "China",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Dave Guo"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A gem. It often hovers in front of foliage like a miniature hummingbird, and flashes its yellow rump. The size is smaller than a Yellow-browed Warbler and the call is quieter."
+      },
+      "dont_confuse": {
+        "en": "Yellow-browed Warbler (this week): bigger, with no pale crown stripe or yellow rump."
+      },
+      "media": {
+        "card": [
+          864756,
+          864797,
+          864659
+        ],
+        "quiz": [
+          864723,
+          864801,
+          864724,
+          864800,
+          864720,
+          864658,
+          864721
+        ]
+      }
+    },
+    {
+      "species_id": 7835,
+      "latin": "Phylloscopus humei",
+      "name": {
+        "en": "Hume's Leaf Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Duller and greyer than a Yellow-browed Warbler, with one clear **wing bar** (the greater coverts)"
+        },
+        {
+          "en": "Dark bill, dark legs and a weak, pale eyebrow"
+        },
+        {
+          "en": "Call: a flatter, two-note “wee-soo”, with no rise at the end"
+        }
+      ],
+      "where_when": {
+        "en": "UK: very rare, in October and November, with a few records in a good year. NL, BE, DE, DK, SE, FI: almost never. Not recorded regularly in the other countries."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A disyllabic, flat “tsiu-eet”, less shrill and with the stress on the first syllable."
+        },
+        "chosen": [
+          {
+            "media_id": 1298091,
+            "xeno_canto": "XC936280",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 49,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          },
+          {
+            "media_id": 1298079,
+            "xeno_canto": "XC1060840",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 64,
+            "background_species": 0,
+            "recordist": "Julien Birard"
+          },
+          {
+            "media_id": 1298081,
+            "xeno_canto": "XC1054073",
+            "type": "call",
+            "country": "Denmark",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Jens Kirkeby"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Hume's is the one you get by call: a rare, dull Yellow-browed look-alike. The call tells you, and a photograph of the wing bars tells the rest."
+      },
+      "dont_confuse": {
+        "en": "Yellow-browed Warbler (this week): two clear wing bars, brighter green, and a rising call."
+      },
+      "media": {
+        "card": [
+          864503,
+          864428,
+          864489
+        ],
+        "quiz": [
+          864478,
+          864490,
+          864509,
+          864584,
+          864508,
+          864480,
+          864429
+        ]
+      }
+    },
+    {
+      "species_id": 7882,
+      "latin": "Phylloscopus borealis",
+      "name": {
+        "en": "Arctic Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A large, robust warbler with a long, white **supercilium** and a thick **eye-stripe**"
+        },
+        {
+          "en": "One faint **wing bar**, and a bill that is quite long and heavy"
+        },
+        {
+          "en": "Flesh-pink legs and a rather dull, grey-green look"
+        }
+      ],
+      "where_when": {
+        "en": "NO, SE, FI: uncommon on breeding grounds in the far north, from June to August. UK: very rare, in September. DK, NL, DE, BE, FR, IE: almost never. It winters in south-east Asia."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A hard, short “tzik” call, and a fast, dry trill as a song."
+        },
+        "chosen": [
+          {
+            "media_id": 1298983,
+            "xeno_canto": "XC763589",
+            "type": "call",
+            "country": "Singapore",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Ding Li Yong"
+          },
+          {
+            "media_id": 1298982,
+            "xeno_canto": "XC785236",
+            "type": "song",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 89,
+            "background_species": 0,
+            "recordist": "Teet Sirotkin"
+          },
+          {
+            "media_id": 1298968,
+            "xeno_canto": "XC929906",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Yoann Blanchon"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A big, plain leaf warbler for a late September gale. It is a long-distance migrant, wintering in the Philippines and Indonesia."
+      },
+      "dont_confuse": {
+        "en": "Greenish Warbler (this week): smaller, a shorter bill, and a call like a House Sparrow's. Willow Warbler (week 6): no wing bar."
+      },
+      "media": {
+        "card": [
+          868285,
+          868260,
+          868232
+        ],
+        "quiz": [
+          868153,
+          868257,
+          868245,
+          868271,
+          868287,
+          868242,
+          868133
+        ]
+      }
+    },
+    {
+      "species_id": 7875,
+      "latin": "Phylloscopus trochiloides",
+      "name": {
+        "en": "Greenish Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A neat, grey-green warbler with one thin pale **wing bar**"
+        },
+        {
+          "en": "Long, whitish **supercilium** with a dark **eye-stripe**"
+        },
+        {
+          "en": "Call: a loud, high two-note “chi-wee”, more like a sparrow than a warbler"
+        }
+      ],
+      "where_when": {
+        "en": "FI, SE, NO, DE, DK: rare to scarce breeders in the east and north. UK: very rare, in autumn, with a few each year. NL, BE: almost never. A bird of the eastern edge of the region."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A loud, high “chi-wee” and a hurried song that ends with a flourish."
+        },
+        "chosen": [
+          {
+            "media_id": 1298840,
+            "xeno_canto": "XC916494",
+            "type": "call",
+            "country": "China",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1298843,
+            "xeno_canto": "XC913920",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1298832,
+            "xeno_canto": "XC1009041",
+            "type": "song",
+            "country": "Kazakhstan",
+            "quality": "A",
+            "seconds": 97,
+            "background_species": 0,
+            "recordist": "Erik Hansson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A leaf warbler, with a 'something not quite right' look: a thin wing bar, a pale supercilium and a long bill. Often found by its call."
+      },
+      "dont_confuse": {
+        "en": "Willow Warbler (week 6): no wing bar, and a different song. Arctic Warbler (this week): bigger, and a much longer bill."
+      },
+      "media": {
+        "card": [
+          867518,
+          867582,
+          867537
+        ],
+        "quiz": [
+          867514,
+          867515,
+          867547,
+          867513,
+          867511,
+          867447,
+          867519
+        ]
+      }
+    },
+    {
+      "species_id": 7843,
+      "latin": "Phylloscopus schwarzi",
+      "name": {
+        "en": "Radde's Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A big, chunky warbler, olive-brown above with a bold buff **supercilium** that curves down at the back"
+        },
+        {
+          "en": "A thick, short bill, a thick **eye-stripe** and orange-pink legs"
+        },
+        {
+          "en": "Call: a hard, dry “tchk”, like a Dusky Warbler's"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DK, DE, SE: very rare, in October. BE, FR, IE, NO, FI: almost never. Typically one or two a year in each country, mostly on the east coast, skulking low in dense cover."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, hard “tchk” or “chk”, like a stone being tapped."
+        },
+        "chosen": [
+          {
+            "media_id": 1298245,
+            "xeno_canto": "XC961178",
+            "type": "alarm call",
+            "country": "Thailand",
+            "quality": "A",
+            "seconds": 24,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1298239,
+            "xeno_canto": "XC711682",
+            "type": "subsong",
+            "country": "Laos",
+            "quality": "A",
+            "seconds": 59,
+            "background_species": 0,
+            "recordist": "Bram Piot"
+          },
+          {
+            "media_id": 1298231,
+            "xeno_canto": "XC923571",
+            "type": "song",
+            "country": "China",
+            "quality": "A",
+            "seconds": 62,
+            "background_species": 0,
+            "recordist": "Ding Li Yong"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A skulker: it moves like a mouse in thick scrub, and a view of the bold eyebrow and the heavy legs tells you what it is."
+      },
+      "dont_confuse": {
+        "en": "Dusky Warbler (this week): slimmer, a dark leg and a thin, black bill."
+      },
+      "media": {
+        "card": [
+          865210,
+          865205,
+          865144
+        ],
+        "quiz": [
+          865098,
+          865124,
+          865103,
+          865104,
+          865170,
+          865138,
+          865187
+        ]
+      }
+    },
+    {
+      "species_id": 7847,
+      "latin": "Phylloscopus fuscatus",
+      "name": {
+        "en": "Dusky Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Brown above and pale below, with a buff-white **supercilium** that starts at the bill"
+        },
+        {
+          "en": "A dark **eye-stripe**, a thin, dark bill with a yellow base, and dark legs"
+        },
+        {
+          "en": "Restless, flicking wings and tail, and a call that is hard and loud: “tchack”"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DK, DE, SE: very rare, in October and November, with a few overwintering. BE, FR, IE, FI: almost never. A bird of reeds, brambles and ditches."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A very hard, sharp “tchak”, like two pebbles knocked together, often repeated."
+        },
+        "chosen": [
+          {
+            "media_id": 1298314,
+            "xeno_canto": "XC943575",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 70,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          },
+          {
+            "media_id": 1298311,
+            "xeno_canto": "XC1026797",
+            "type": "call",
+            "country": "Mongolia",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Ding Li Yong"
+          },
+          {
+            "media_id": 1298320,
+            "xeno_canto": "XC889961",
+            "type": "call",
+            "country": "China",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Bo Shunqi薄顺奇"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Even when it hides, the call betrays it. Like a Chiffchaff that has been dipped in tea and has had a stronger eyebrow added."
+      },
+      "dont_confuse": {
+        "en": "Radde's Warbler (this week): bigger, with a heavier bill and pinker legs. Common Chiffchaff (week 6): no strong eyebrow."
+      },
+      "media": {
+        "card": [
+          865624,
+          865653,
+          865660
+        ],
+        "quiz": [
+          865658,
+          865676,
+          865655,
+          865752,
+          865688,
+          865749,
+          865724
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 7838,
+    "species_ids": [
+      7834,
+      7838
+    ],
+    "title": {
+      "en": "Yellow-browed or Pallas's?"
+    },
+    "text": {
+      "en": "Pallas's Leaf Warbler is smaller and brighter. It has a lemon-yellow rump patch, a pale crown stripe, and a more rounded head. A Yellow-browed Warbler is plain green on the back, with no stripe on the crown, and calls with a loud rising “tsu-eest”. Pallas's has a quiet, soft call."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      2,
+      4,
+      6
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 5,
+      "photo_sound": 4,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Between mid-September and early November, spend a morning in a coastal wood or hedgerow, or the sycamores of a park near the east coast, and listen for the Yellow-browed call. If you do not live near the coast, watch the bird reports of the nearest hotspot and try to see a bird that has been found."
+  },
+  "next": {
+    "en": "Next week the reed warblers: Reed, Marsh, Sedge and the rarities of the reedbed."
+  },
+  "flow": [
+    "intro",
+    "bird:7834",
+    "bird:7838",
+    "bird:7835",
+    "bird:7882",
+    "bird:7875",
+    "bird:7843",
+    "bird:7847",
+    "quiz",
+    "done"
+  ]
+}

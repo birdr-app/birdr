@@ -1,0 +1,54 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 30,
+  "slug": "review-field-birds",
+  "part": 6,
+  "kind": "review",
+  "season": "any",
+  "minutes": 24,
+  "title": {
+    "en": "Review: field birds"
+  },
+  "subtitle": {
+    "en": "Raptors, pipits, wagtails, larks, buntings, chats and flycatchers in one quiz"
+  },
+  "intro": {
+    "en": "Block 6 covers a lot of ground: raptors in flight, the small brown birds of fields and hedges, and the chats and flycatchers of spring and autumn migration. The twenty questions mix birds from the four lessons with ducks and geese from block 5.\n\nMany of the birds here are best known by their calls: pipits, larks and buntings especially. Several questions give you a recording together with the photo, as in real life. Look at the shape and listen to the voice, and decide what the bird is doing.\n\nA good score is fifteen. If you got the pipits wrong, listen to the calls again."
+  },
+  "words": [],
+  "birds": [],
+  "compare": null,
+  "quiz": {
+    "questions": 20,
+    "photos_from": "quiz",
+    "answers_from": "review",
+    "review_from": [
+      26,
+      27,
+      28,
+      29,
+      21,
+      22,
+      23,
+      24
+    ],
+    "review_questions": 20,
+    "modes": {
+      "photo": 10,
+      "photo_sound": 6,
+      "sound": 4
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Walk a route through fields, a hedge and a wood at dawn in spring or autumn. Keep a list of every species you hear. How many of them were new to your list?"
+  },
+  "next": {
+    "en": "Next block: strays. Pratincoles and other waders, eastern and American vagrants, and southern overshoots."
+  },
+  "flow": [
+    "intro",
+    "quiz",
+    "done"
+  ]
+}

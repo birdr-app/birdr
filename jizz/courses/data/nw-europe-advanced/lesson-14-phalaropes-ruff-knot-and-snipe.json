@@ -1,0 +1,1172 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 14,
+  "slug": "phalaropes-ruff-knot-and-snipe",
+  "part": 3,
+  "kind": "species",
+  "season": "autumn",
+  "minutes": 22,
+  "title": {
+    "en": "Phalaropes, Ruff, Knot and snipe"
+  },
+  "subtitle": {
+    "en": "Red-necked and Grey Phalarope, Ruff, Knot, Purple Sandpiper, both snipes and the Avocet"
+  },
+  "intro": {
+    "en": "The odd ones out. Phalaropes swim, snipes skulk, a Purple Sandpiper sits on a rock in the surf. Each of the eight birds in this lesson is a specialist, so each has a trick or a habit that gives it away.\n\nRed-necked Phalarope breeds on a few pools in the north of the UK, Ireland and Scandinavia, and passes in autumn on its way to the Arabian Sea. The Grey Phalarope is a seabird that you meet on land only after autumn gales. Ruff pass in huge numbers in spring and autumn, with the juveniles being the most distinctive. Knots gather in tens of thousands on a few estuaries in winter, and Purple Sandpipers keep to rocky coasts from October to April.\n\nSnipes and the Avocet finish the lesson. A Jack Snipe is a small, secretive winter bird that sits tight until you almost step on it."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "lobed toes"
+      },
+      "explain": {
+        "en": "Toes with a flap of skin on each side, like a paddle. Phalaropes have them and swim."
+      }
+    },
+    {
+      "term": {
+        "en": "crown stripe"
+      },
+      "explain": {
+        "en": "A pale line along the middle of the crown. A Common Snipe has one; a Jack Snipe does not."
+      }
+    },
+    {
+      "term": {
+        "en": "scaly"
+      },
+      "explain": {
+        "en": "With pale edges to each feather on the back, giving a scale-like pattern. Typical of juveniles."
+      }
+    },
+    {
+      "term": {
+        "en": "spinning"
+      },
+      "explain": {
+        "en": "The way a phalarope swims in tight circles to stir up food."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2112,
+      "latin": "Phalaropus lobatus",
+      "name": {
+        "en": "Red-necked Phalarope"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "Swims by **spinning** in tight circles on **lobed toes**, like a tiny duck"
+        },
+        {
+          "en": "Dark brown back with golden-buff lines, a black eye-patch and a white belly"
+        },
+        {
+          "en": "A needle-fine black bill and a calm, tame manner"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, SE, FI: scarce breeders in the north and west, from late May to August. Passage in August and September: NL, BE, DE, DK, FR rare. Very rare in autumn on reservoirs after gales."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, hard “twit” or “krit”, low and often repeated."
+        },
+        "chosen": [
+          {
+            "media_id": 1219267,
+            "xeno_canto": "XC260177",
+            "type": "call, flight call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 50,
+            "background_species": 0,
+            "recordist": "Tomek Tumiel"
+          },
+          {
+            "media_id": 1219254,
+            "xeno_canto": "XC487870",
+            "type": "alarm call",
+            "country": "Iceland",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1219265,
+            "xeno_canto": "XC354726",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 48,
+            "background_species": 0,
+            "recordist": "Frank Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A phalarope is a small wader that swims. In breeding plumage the female is brighter than the male, and it is the male that incubates."
+      },
+      "dont_confuse": {
+        "en": "Grey Phalarope (this week): paler, a stouter bill and a plain grey back in winter."
+      },
+      "media": {
+        "card": [
+          325304,
+          325306,
+          325424
+        ],
+        "quiz": [
+          325352,
+          325314,
+          325327,
+          325326,
+          325345,
+          325317,
+          325348,
+          325351
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2111,
+      "latin": "Phalaropus fulicarius",
+      "name": {
+        "en": "Grey Phalarope"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Pale grey back, white underparts and a black patch through the eye"
+        },
+        {
+          "en": "A short, stout bill, with a yellowish base, and a dark crown"
+        },
+        {
+          "en": "Sits on the sea and the water surface, tame and spinning, on **lobed toes**"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, FR: scarce, in September to November, mostly after Atlantic gales on the west coast. NL, BE, DE, DK: rare, in autumn. NO, SE, FI: rare. It breeds in the High Arctic and spends the winter at sea."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, sharp “twit”, a bit like a Sanderling."
+        },
+        "chosen": [
+          {
+            "media_id": 1219234,
+            "xeno_canto": "XC947744",
+            "type": "nocturnal flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Paul Coiffard"
+          },
+          {
+            "media_id": 1219241,
+            "xeno_canto": "XC420151",
+            "type": "call, song, mating calls",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Stein Ø. Nilsen"
+          },
+          {
+            "media_id": 1219235,
+            "xeno_canto": "XC942505",
+            "type": "nocturnal flight call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 37,
+            "background_species": 0,
+            "recordist": "Ricardo Hevia"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A true seabird that is blown ashore in storms. In winter plumage it looks like a tiny, pale gull sitting on the water."
+      },
+      "dont_confuse": {
+        "en": "Red-necked Phalarope (this week): a thinner bill, a darker back and a darker look."
+      },
+      "media": {
+        "card": [
+          325151,
+          325145,
+          325203
+        ],
+        "quiz": [
+          325183,
+          325207,
+          325125,
+          325177,
+          325184,
+          325150,
+          325181,
+          325193
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2138,
+      "latin": "Calidris pugnax",
+      "name": {
+        "en": "Ruff"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "A **scaly** buff back, with pale feather edges, and a buff breast"
+        },
+        {
+          "en": "A small head, a long neck and a slightly drooping short bill"
+        },
+        {
+          "en": "White ovals on each side of the tail in flight, and orange-buff legs"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, DK, FR: fairly common to scarce on passage in autumn, juveniles from late July to September. Passage in spring, March to May. NO, SE, FI: breeds on marshes. IE: uncommon. A few overwinter in the UK, NL and FR."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Normally silent. A low “tu-wit” when flushed."
+        },
+        "chosen": [
+          {
+            "media_id": 1219680,
+            "xeno_canto": "XC263046",
+            "type": "call, call of pullus",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 5,
+            "background_species": 0,
+            "recordist": "Tomek Tumiel"
+          },
+          {
+            "media_id": 1219678,
+            "xeno_canto": "XC647848",
+            "type": "call, wing flutter",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 11,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1219672,
+            "xeno_canto": "XC436967",
+            "type": "call, flight call, wings",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The juvenile has a buff scaly back and long legs, quite unlike the male in spring, with a ruff of feathers that can be orange, black or white."
+      },
+      "dont_confuse": {
+        "en": "Pectoral Sandpiper (week 11): a streaked breast with a sharp edge, and yellow legs. Common Redshank (week 12): red legs."
+      },
+      "media": {
+        "card": [
+          329249,
+          329096,
+          329118
+        ],
+        "quiz": [
+          329135,
+          329148,
+          329181,
+          329153,
+          329172,
+          329133,
+          329165,
+          329132
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2136,
+      "latin": "Calidris canutus",
+      "name": {
+        "en": "Red Knot"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Stocky and plain pale grey, with a short, straight, dark bill"
+        },
+        {
+          "en": "Short, greenish legs, and a pale, barred rump in flight"
+        },
+        {
+          "en": "In flocks of thousands that turn in unison, showing grey, then white"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DE, DK, FR, IE, BE: abundant on a few big estuaries and the Wadden Sea, from August to April. NO, SE, FI: passage. Numbers: the Wash and the Wadden Sea each hold over 100,000."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, soft, nasal “knut”, a rough, growling sound in a flock."
+        },
+        "chosen": [
+          {
+            "media_id": 1219638,
+            "xeno_canto": "XC687493",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 48,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1219632,
+            "xeno_canto": "XC932172",
+            "type": "nocturnal flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 99,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1219637,
+            "xeno_canto": "XC745711",
+            "type": "flight call, nocturnal flight call",
+            "country": "Denmark",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Lars Mogensen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bird of enormous flocks. Individually it is a plain, round grey wader, far less interesting than its group behaviour."
+      },
+      "dont_confuse": {
+        "en": "Dunlin (week 11): smaller, with a drooping bill and a darker look. Bar-tailed Godwit (week 13): a long bill."
+      },
+      "media": {
+        "card": [
+          328828,
+          328805,
+          328757
+        ],
+        "quiz": [
+          328811,
+          328762,
+          328832,
+          328816,
+          328795,
+          328794,
+          328743,
+          328807
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2150,
+      "latin": "Calidris maritima",
+      "name": {
+        "en": "Purple Sandpiper"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Dark slate-grey, with a dull purple gloss in good light"
+        },
+        {
+          "en": "Orange-yellow legs and an orange base to a slightly drooping bill"
+        },
+        {
+          "en": "On rocks and breakwaters, close to the waves, often very tame"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, DK, SE: uncommon on rocky shores, October to April. NL, BE, DE, FR: scarce, on breakwaters and groynes. FI: rare. It breeds in the Arctic and on Fennoscandian mountains."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, quiet “weet” or “twit”, higher than a Turnstone."
+        },
+        "chosen": [
+          {
+            "media_id": 1219903,
+            "xeno_canto": "XC588531",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1219893,
+            "xeno_canto": "XC623303",
+            "type": "call, short calls",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 77,
+            "background_species": 0,
+            "recordist": "Stein Ø. Nilsen"
+          },
+          {
+            "media_id": 1219902,
+            "xeno_canto": "XC1000324",
+            "type": "song",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 10,
+            "background_species": 0,
+            "recordist": "Aku Kalliomäki"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The wader that walks into the surf and runs back. It is easily overlooked on dark rocks, until a wave makes it fly."
+      },
+      "dont_confuse": {
+        "en": "Ruddy Turnstone (week 12): shorter legs, a brighter orange, a white belly, and a wedge-shaped bill."
+      },
+      "media": {
+        "card": [
+          331190,
+          331207,
+          331161
+        ],
+        "quiz": [
+          331232,
+          331191,
+          331193,
+          331202,
+          331159,
+          331208,
+          331189,
+          331185
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2078,
+      "latin": "Lymnocryptes minimus",
+      "name": {
+        "en": "Jack Snipe"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small, with a short bill and a dark crown with no pale **crown stripe**"
+        },
+        {
+          "en": "Two pale golden stripes down the back, and a bobbing, bouncing feeding action"
+        },
+        {
+          "en": "Sits tight until almost trodden on, then flies off silently and drops"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR: uncommon winter visitors, October to March, in wet marshes. NO, SE, FI: breeds in northern bogs, from May. It sits so still that it is easily missed."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Usually silent in winter; a low, weak “gah” when flushed. On the breeding grounds, a galloping, hollow “kloppa-kloppa”."
+        },
+        "chosen": [
+          {
+            "media_id": 1218784,
+            "xeno_canto": "XC130281",
+            "type": "flight call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 10,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1218782,
+            "xeno_canto": "XC342362",
+            "type": "song",
+            "country": "Finland",
+            "quality": "A",
+            "seconds": 12,
+            "background_species": 0,
+            "recordist": "Tero Linjama"
+          },
+          {
+            "media_id": 1218768,
+            "xeno_canto": "XC166406",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 69,
+            "background_species": 2,
+            "recordist": "Patrik Åberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A tiny, secretive, bobbing snipe. Look for the dark crown, the short bill and the lack of a stripe on the crown."
+      },
+      "dont_confuse": {
+        "en": "Common Snipe (this week): a longer bill, a pale crown stripe, and a loud call when flushed."
+      },
+      "media": {
+        "card": [
+          322441,
+          322455,
+          322371
+        ],
+        "quiz": [
+          322390,
+          322417,
+          322394,
+          322373,
+          322370,
+          322440,
+          322451,
+          322456
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2102,
+      "latin": "Gallinago gallinago",
+      "name": {
+        "en": "Common Snipe"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A very long, straight bill and a striped head with a pale **crown stripe**"
+        },
+        {
+          "en": "Striped, camouflaged back, and a quick zig-zag flight"
+        },
+        {
+          "en": "A harsh “scaap” when flushed"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR, SE, FI, NO: fairly common in wet meadows, bogs and marshes, all year, with passage birds in spring and autumn. Its display flight produces a drumming noise."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A harsh, rasping “scaap” when it flies up, and a loud “chip-per, chip-per” in display."
+        },
+        "chosen": [
+          {
+            "media_id": 1219075,
+            "xeno_canto": "XC595647",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 97,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          },
+          {
+            "media_id": 1219063,
+            "xeno_canto": "XC836175",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          },
+          {
+            "media_id": 1219077,
+            "xeno_canto": "XC571514",
+            "type": "call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 232,
+            "background_species": 0,
+            "recordist": "Stein Ø. Nilsen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "In spring the male flies in circles and dives, with the tail feathers producing a drumming or bleating sound."
+      },
+      "dont_confuse": {
+        "en": "Jack Snipe (this week): small, short bill, no crown stripe, and silent."
+      },
+      "media": {
+        "card": [
+          324204,
+          324171,
+          324173
+        ],
+        "quiz": [
+          324100,
+          324193,
+          324082,
+          324166,
+          324150,
+          324103,
+          324123,
+          324130
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 8,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 1960,
+      "latin": "Recurvirostra avosetta",
+      "name": {
+        "en": "Pied Avocet"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Black and white, with a slender, upturned bill"
+        },
+        {
+          "en": "Long blue-grey legs and an elegant, slender shape"
+        },
+        {
+          "en": "Sweeps the bill from side to side through shallow water"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, DK, FR: fairly common on coastal lagoons and estuaries, March to September, and increasingly in winter. IE: scarce. NO, SE, FI: rare. The symbol of the RSPB."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A clear, ringing “kluit-kluit”, quite loud."
+        },
+        "chosen": [
+          {
+            "media_id": 1217340,
+            "xeno_canto": "XC806850",
+            "type": "alarm call, call, flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "David Bissett"
+          },
+          {
+            "media_id": 1217342,
+            "xeno_canto": "XC784492",
+            "type": "alarm call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 72,
+            "background_species": 0,
+            "recordist": "Olivier SWIFT"
+          },
+          {
+            "media_id": 1217345,
+            "xeno_canto": "XC766581",
+            "type": "call",
+            "country": "China",
+            "quality": "A",
+            "seconds": 95,
+            "background_species": 0,
+            "recordist": "Geoff Carey"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A comeback story: it disappeared from Britain in the 1840s and returned in the 1940s on the Suffolk coast. Today large numbers breed in the Netherlands, Germany and Denmark."
+      },
+      "dont_confuse": {
+        "en": "Black-winged Stilt (a rarity, block 7): far longer legs, a straight bill, and a black back."
+      },
+      "media": {
+        "card": [
+          304250,
+          304299,
+          304203
+        ],
+        "quiz": [
+          304288,
+          304259,
+          304226,
+          304266,
+          304265,
+          304249,
+          304200,
+          304293
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 10,
+        "verified": true,
+        "note": ""
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 2102,
+    "species_ids": [
+      2078,
+      2102
+    ],
+    "title": {
+      "en": "Jack Snipe or Common Snipe?"
+    },
+    "text": {
+      "en": "Jack Snipe is smaller, with a short bill and a dark crown with no pale stripe down the middle. It bobs as it feeds, sits very tight, and flies off without a call. Common Snipe is bigger, with a long bill, a clear pale crown stripe, and a loud 'scaap' when flushed."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      9,
+      12,
+      13
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 5,
+      "photo_sound": 4,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In winter, find a rocky shore or breakwater and look for Purple Sandpipers and Turnstones. In autumn, check a wet meadow edge for a Ruff among other waders. If you see a snipe, try to decide if it is a Jack or a Common."
+  },
+  "next": {
+    "en": "Next week is the review of block 3: all the waders in one quiz."
+  },
+  "flow": [
+    "intro",
+    "bird:2112",
+    "bird:2111",
+    "bird:2138",
+    "bird:2136",
+    "bird:2150",
+    "bird:2078",
+    "bird:2102",
+    "bird:1960",
+    "quiz",
+    "done"
+  ]
+}

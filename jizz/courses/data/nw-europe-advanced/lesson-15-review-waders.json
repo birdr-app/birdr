@@ -1,0 +1,54 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 15,
+  "slug": "review-waders",
+  "part": 3,
+  "kind": "review",
+  "season": "any",
+  "minutes": 22,
+  "title": {
+    "en": "Review: waders"
+  },
+  "subtitle": {
+    "en": "Small waders, shanks, plovers and the specialists in one quiz"
+  },
+  "intro": {
+    "en": "After the gulls and the warblers, the waders. You should now be able to separate a Dunlin from a Little Stint by the tiny things: the V on the back, the legs, the split eyebrow. You know three kinds of snipe and plover, and which of the shanks has red legs, green legs or yellow legs.\n\nThis quiz has twenty questions with birds from all four wader lessons, plus some gulls and warblers from earlier blocks. Many of the waders are best identified by their call, so some questions give you a recording and a photo together. In the field, call and shape come first and the plumage details second.\n\nA good score is fifteen out of twenty. If a pair gave you trouble (Green and Wood Sandpiper, Ringed and Little Ringed Plover), go back to the comparison in that lesson."
+  },
+  "words": [],
+  "birds": [],
+  "compare": null,
+  "quiz": {
+    "questions": 20,
+    "photos_from": "quiz",
+    "answers_from": "review",
+    "review_from": [
+      11,
+      12,
+      13,
+      14,
+      6,
+      7,
+      8,
+      9
+    ],
+    "review_questions": 20,
+    "modes": {
+      "photo": 9,
+      "photo_sound": 6,
+      "sound": 5
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Visit an estuary or a wetland reserve at high tide. Choose one flock and name every species in it. Write down the time and how many of each kind. Do it again at a different state of the tide."
+  },
+  "next": {
+    "en": "Next block: seabirds from land. Autumn gales, seawatching, shearwaters and skuas."
+  },
+  "flow": [
+    "intro",
+    "quiz",
+    "done"
+  ]
+}

@@ -1,0 +1,1026 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 8,
+  "slug": "reed-and-marsh-warblers",
+  "part": 2,
+  "kind": "species",
+  "season": "summer",
+  "minutes": 20,
+  "title": {
+    "en": "Reed and marsh warblers"
+  },
+  "subtitle": {
+    "en": "Reed, Marsh, Sedge, Great Reed, Blyth's Reed, Paddyfield, Aquatic and Grasshopper Warbler"
+  },
+  "intro": {
+    "en": "Acrocephalus warblers are brown, secretive and hard to see. They live in reeds, willows, nettles and thick grass. By ear they are a lot easier than by eye: each species has a different song, and Marsh and Blyth's Reed Warblers copy other birds as well. The standard trio is Reed, Sedge and Marsh Warbler. After that come the rarities that make birders get up before dawn.\n\nSeason: they all arrive late. Sedge Warblers come first, in mid-April, then Reed Warblers in late April, and Marsh Warblers not until late May or June, when the others are already feeding young. The Great Reed Warbler is a southern bird that overshoots in May. Autumn adds a different set: Aquatic Warblers pass in August, and the eastern Blyth's Reed and Paddyfield Warblers turn up from September.\n\nHabitat helps. Reed Warblers live in reeds, Sedge Warblers in rank vegetation on the edge, Marsh Warblers in tall herbage and nettles by the water, and the Grasshopper Warbler is a bird of rough, damp grass."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "supercilium"
+      },
+      "explain": {
+        "en": "The pale stripe above the eye (\"eyebrow\")."
+      }
+    },
+    {
+      "term": {
+        "en": "crown stripe"
+      },
+      "explain": {
+        "en": "A pale stripe along the middle of the crown."
+      }
+    },
+    {
+      "term": {
+        "en": "primary projection"
+      },
+      "explain": {
+        "en": "The length of the wing tip sticking out past the tertials on a resting bird."
+      }
+    },
+    {
+      "term": {
+        "en": "mimic"
+      },
+      "explain": {
+        "en": "To copy the sounds of other birds. Marsh Warblers can imitate dozens of species, including African ones."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 7471,
+      "latin": "Acrocephalus scirpaceus",
+      "name": {
+        "en": "Common Reed Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Plain warm brown above and buff below, with a rusty rump"
+        },
+        {
+          "en": "Long, thin bill, a flat crown and a short, weak **supercilium**"
+        },
+        {
+          "en": "Song: a steady, churring “chirruc-chirruc-jag-jag”, repeated"
+        }
+      ],
+      "where_when": {
+        "en": "NL, DE, FR, BE: common in reedbeds, from late April to August. UK: fairly common in the south and east. DK: uncommon. IE: very rare. NO, SE, FI: rare. Arrives in late April and leaves in August and September."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A monotonous, rhythmic, churring song, each phrase repeated two or three times."
+        },
+        "chosen": [
+          {
+            "media_id": 1293069,
+            "xeno_canto": "XC936438",
+            "type": "call, \"tscheck\"",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 4,
+            "recordist": "Thomas Bergman"
+          },
+          {
+            "media_id": 1293067,
+            "xeno_canto": "XC987078",
+            "type": "aberrant, song, minicking",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1293058,
+            "xeno_canto": "XC1007377",
+            "type": "call",
+            "country": "Italy",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 3,
+            "recordist": "Francesco Sottile"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The reed warbler is the bird you hear in the reeds all day in May. A long, sloping head and a rusty rump are the best marks."
+      },
+      "dont_confuse": {
+        "en": "Marsh Warbler (this week): olive, paler, with pink legs and a musical, mimicking song."
+      },
+      "media": {
+        "card": [
+          834582,
+          834591,
+          834522
+        ],
+        "quiz": [
+          834609,
+          834632,
+          834505,
+          834515,
+          834560,
+          834577,
+          834507
+        ]
+      }
+    },
+    {
+      "species_id": 7470,
+      "latin": "Acrocephalus palustris",
+      "name": {
+        "en": "Marsh Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Olive-brown above, colder and greyer than a Reed Warbler, with a paler throat"
+        },
+        {
+          "en": "Pale pink legs, and a longer, more elegant wing with a long **primary projection**"
+        },
+        {
+          "en": "Song: rich, fast and musical, a **mimic** of other birds"
+        }
+      ],
+      "where_when": {
+        "en": "NL, DE, DK, SE, FI: fairly common in tall damp herbage from late May. BE and FR: uncommon. UK: very rare, a handful of pairs. IE and NO: almost never. One of the last migrants to arrive, late May to June, and gone by August."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A rich, fast, sweet song that mimics other birds, with a lot of ‘chee-chee’ and ‘tchuk’ notes."
+        },
+        "chosen": [
+          {
+            "media_id": 1293045,
+            "xeno_canto": "XC1017234",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 916,
+            "background_species": 0,
+            "recordist": "Ulf Elman"
+          },
+          {
+            "media_id": 1293048,
+            "xeno_canto": "XC1008447",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 98,
+            "background_species": 0,
+            "recordist": "Bodo Sonnenburg"
+          },
+          {
+            "media_id": 1293039,
+            "xeno_canto": "XC1026832",
+            "type": "call",
+            "country": "Ukraine",
+            "quality": "A",
+            "seconds": 58,
+            "background_species": 1,
+            "recordist": "Taras Vykhovanets"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A song that is almost impossible to describe, which includes copies of House Sparrow, Blackbird, Swallow and African species. You will not see the singer: it sings from deep in the nettles."
+      },
+      "dont_confuse": {
+        "en": "Reed Warbler (this week): warm brown, a rusty rump and a repetitive song."
+      },
+      "media": {
+        "card": [
+          834464,
+          834400,
+          834389
+        ],
+        "quiz": [
+          834349,
+          834375,
+          834410,
+          834361,
+          834397,
+          834345
+        ]
+      }
+    },
+    {
+      "species_id": 7464,
+      "latin": "Acrocephalus schoenobaenus",
+      "name": {
+        "en": "Sedge Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Streaked brown back and a clear, creamy **supercilium**"
+        },
+        {
+          "en": "Dark crown and a plain rusty rump"
+        },
+        {
+          "en": "Song: a fast, noisy mix of whistles, rattles and buzzes, going off in all directions"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FI: fairly common to common in rank vegetation, reedbeds and scrub. FR, SE, NO: uncommon. Arrives in mid-April, the first of the reed warblers, and leaves in August."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A rapid, chattering, random mix of harsh and sweet notes, with no repeating pattern."
+        },
+        "chosen": [
+          {
+            "media_id": 1292930,
+            "xeno_canto": "XC1001237",
+            "type": "alarm call, song",
+            "country": "Russian Federation",
+            "quality": "A",
+            "seconds": 50,
+            "background_species": 2,
+            "recordist": "Albert Lastukhin"
+          },
+          {
+            "media_id": 1292925,
+            "xeno_canto": "XC1014935",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 50,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1292923,
+            "xeno_canto": "XC1015778",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 267,
+            "background_species": 0,
+            "recordist": "SonoNatura"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The loudest, most excited singer of the reedbed. If there is a bold eyebrow and streaked back, it is a Sedge Warbler."
+      },
+      "dont_confuse": {
+        "en": "Aquatic Warbler (this week): a pale crown stripe, streaked back with buff lines."
+      },
+      "media": {
+        "card": [
+          833741,
+          833727,
+          833689
+        ],
+        "quiz": [
+          833734,
+          833752,
+          833749,
+          833693,
+          833674,
+          833729,
+          833755
+        ]
+      }
+    },
+    {
+      "species_id": 7479,
+      "latin": "Acrocephalus arundinaceus",
+      "name": {
+        "en": "Great Reed Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "The size of a thrush, with a thick bill and a long, strong head"
+        },
+        {
+          "en": "A pale **supercilium** that is longer in front of the eye, and a rusty brown back"
+        },
+        {
+          "en": "Song: loud and harsh, “karra-karra-kit-kit-gurk-gurk”"
+        }
+      ],
+      "where_when": {
+        "en": "DE: rare in reedbeds in the south and east. NL, BE, DK, SE, FI: rare to very rare. UK: very rare, in May and June. FR: rare in the south. IE, NO: almost never. A few overshoot north every spring."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A loud, hoarse, croaking “karra-karra-gurk-gurk” that can be heard 200 metres away."
+        },
+        "chosen": [
+          {
+            "media_id": 1293205,
+            "xeno_canto": "XC999281",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Maarten Sluijter"
+          },
+          {
+            "media_id": 1293190,
+            "xeno_canto": "XC1035845",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 102,
+            "background_species": 0,
+            "recordist": "Mat Eric Hart"
+          },
+          {
+            "media_id": 1293189,
+            "xeno_canto": "XC1049412",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 57,
+            "background_species": 0,
+            "recordist": "Fredrik Grahn"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Twice the size of a Reed Warbler, with a song like a frog in a bucket. If a reed warbler is bigger than expected, check the bill."
+      },
+      "dont_confuse": {
+        "en": "Common Reed Warbler (this week): smaller, with a thin bill and a steady, quiet churring."
+      },
+      "media": {
+        "card": [
+          835220,
+          835053,
+          835177
+        ],
+        "quiz": [
+          835086,
+          835094,
+          835104,
+          835106,
+          835052,
+          835080,
+          835138
+        ]
+      }
+    },
+    {
+      "species_id": 7468,
+      "latin": "Acrocephalus dumetorum",
+      "name": {
+        "en": "Blyth's Reed Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Plain, cold grey-brown, with no rusty rump"
+        },
+        {
+          "en": "A short **primary projection**, a rounded head and a short supercilium"
+        },
+        {
+          "en": "Song: a mimic, with each phrase repeated several times, “chak-chak-chee-chee”"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI: rare breeders in the north and east, with the song heard in June. UK, NL, DE, DK, NO: very rare, mainly in autumn, from September. BE, FR, IE: almost never. A bird from Russia."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A rich, varied warble in which phrases are repeated three or four times, plus a hard “tchak” call."
+        },
+        "chosen": [
+          {
+            "media_id": 1293004,
+            "xeno_canto": "XC1005619",
+            "type": "alarm call",
+            "country": "Finland",
+            "quality": "A",
+            "seconds": 43,
+            "background_species": 0,
+            "recordist": "Aku Kalliomäki"
+          },
+          {
+            "media_id": 1292994,
+            "xeno_canto": "XC1008594",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 58,
+            "background_species": 0,
+            "recordist": "Gregorio Para"
+          },
+          {
+            "media_id": 1292992,
+            "xeno_canto": "XC1058309",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 63,
+            "background_species": 0,
+            "recordist": "Kalle Brinell"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Close to a Marsh Warbler in song, and plain in looks. If it is cold-toned, with a short wing, singing in June in Finland or Sweden, it is probably a Blyth's."
+      },
+      "dont_confuse": {
+        "en": "Marsh Warbler (this week): more olive, a long wing, and a song with fewer repeats."
+      },
+      "media": {
+        "card": [
+          834117,
+          834165,
+          834118
+        ],
+        "quiz": [
+          834196,
+          834200,
+          834283,
+          834231,
+          834173,
+          834209,
+          834136
+        ]
+      }
+    },
+    {
+      "species_id": 7465,
+      "latin": "Acrocephalus agricola",
+      "name": {
+        "en": "Paddyfield Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small and warm rufous-brown, with a rusty rump and a short bill"
+        },
+        {
+          "en": "A bold white **supercilium** with a dark upper border"
+        },
+        {
+          "en": "A short, rounded wing with a short **primary projection**"
+        }
+      ],
+      "where_when": {
+        "en": "UK: very rare, in October. NL, DE, DK, SE, FI: almost never. BE, FR, IE, NO: almost never. A rarity from central Asia, found in reedbeds on the east coast."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A hard “tchak” and a fast, scratchy, Reed-Warbler-like song."
+        },
+        "chosen": [
+          {
+            "media_id": 1292935,
+            "xeno_canto": "XC1032757",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 50,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1292948,
+            "xeno_canto": "XC813201",
+            "type": "song",
+            "country": "Kazakhstan",
+            "quality": "A",
+            "seconds": 63,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1292944,
+            "xeno_canto": "XC818994",
+            "type": "alarm call",
+            "country": "Russian Federation",
+            "quality": "A",
+            "seconds": 52,
+            "background_species": 0,
+            "recordist": "Albert Lastukhin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A small reed warbler with a strong head pattern, like a mini Sedge Warbler with a rusty back. Check the short bill, the rusty rump and the dark upper edge to the eyebrow."
+      },
+      "dont_confuse": {
+        "en": "Common Reed Warbler (this week): larger, a longer bill and a flat head. Sedge Warbler: a streaked back."
+      },
+      "media": {
+        "card": [
+          833921,
+          834013,
+          833996
+        ],
+        "quiz": [
+          834011,
+          833919,
+          833955,
+          833999,
+          833987,
+          833949,
+          833990
+        ]
+      }
+    },
+    {
+      "species_id": 7460,
+      "latin": "Acrocephalus paludicola",
+      "name": {
+        "en": "Aquatic Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A pale **crown stripe** between two dark stripes"
+        },
+        {
+          "en": "A streaked back with two buff stripes down the sides"
+        },
+        {
+          "en": "A bold buff **supercilium** and a streaked rump"
+        }
+      ],
+      "where_when": {
+        "en": "FR, UK, DE, NL, BE: rare on passage, in late July and August in wet reed and sedge beds. A small breeding population remains in Poland and Belarus. DK, SE, NO, FI, IE: almost never."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A Sedge-Warbler-like, but quieter and more musical, song with a whistling note at the end."
+        },
+        "chosen": [
+          {
+            "media_id": 1345019,
+            "xeno_canto": "XC912912",
+            "type": "alarm call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 53,
+            "background_species": 1,
+            "recordist": "Romuald Mikusek"
+          },
+          {
+            "media_id": 1345011,
+            "xeno_canto": "XC1068467",
+            "type": "song",
+            "country": "Hungary",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "András Schmidt"
+          },
+          {
+            "media_id": 1345021,
+            "xeno_canto": "XC837216",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 47,
+            "background_species": 3,
+            "recordist": "Manuel Oudard"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Europe's rarest passerine, and a conservation icon. The pale crown stripe, not the streaked back, is the one reliable mark."
+      },
+      "dont_confuse": {
+        "en": "Sedge Warbler (this week): a dark crown, with no pale stripe, and a plain rump."
+      },
+      "media": {
+        "card": [
+          1344991,
+          1344963,
+          1344961
+        ],
+        "quiz": [
+          1344987,
+          1344933,
+          1344952,
+          1344951,
+          1344985,
+          1344965,
+          1344913,
+          1344964
+        ]
+      }
+    },
+    {
+      "species_id": 7516,
+      "latin": "Locustella naevia",
+      "name": {
+        "en": "Common Grasshopper Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Streaked olive-brown above and plain buff below"
+        },
+        {
+          "en": "A rounded, graduated tail with pale tips, and a thin, pale **supercilium**"
+        },
+        {
+          "en": "Song: a long, high, insect-like reel, like a fishing reel"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, DE, DK: uncommon in rough grass and scrub from mid-April, and hard to see. BE, FR, SE, FI: scarce. NO: rare. It sings at dusk and dawn, and moves through the grass like a mouse."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A continuous, mechanical “zzzzzzzzzzzz”, 30 seconds or more, that seems to move around when the bird turns its head."
+        },
+        "chosen": [
+          {
+            "media_id": 1293614,
+            "xeno_canto": "XC653413",
+            "type": "song",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 197,
+            "background_species": 0,
+            "recordist": "Jérémy Simar"
+          },
+          {
+            "media_id": 1293602,
+            "xeno_canto": "XC900843",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Martin Billard",
+            "hidden_locally": true
+          },
+          {
+            "media_id": 1293612,
+            "xeno_canto": "XC702145",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 47,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Easier to hear than to see. Like a mouse running along a hedge bottom, it creeps out only when you stay still."
+      },
+      "dont_confuse": {
+        "en": "Sedge Warbler (this week): a streaked back, a bold eyebrow, and a chaotic, noisy song."
+      },
+      "media": {
+        "card": [
+          836885,
+          836892,
+          836835
+        ],
+        "quiz": [
+          836938,
+          836914,
+          836896,
+          836864,
+          836992,
+          836890,
+          836907
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 7470,
+    "species_ids": [
+      7471,
+      7470
+    ],
+    "title": {
+      "en": "Reed or Marsh Warbler?"
+    },
+    "text": {
+      "en": "The song is the sure way. The Reed Warbler is a rhythmic, churring repeat of two or three notes. The Marsh Warbler is a long, musical, quick improvisation with a lot of mimicry. By eye: Reed is warm brown with a rusty rump and dark legs, Marsh is olive-brown, colder and paler, with pink legs and a longer wing."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      3,
+      6,
+      7
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 5,
+      "photo_sound": 4,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In May and June, go to a reedbed, a ditch with nettles and tall herbs, and a patch of rough grass. Listen for the three songs: the churring Reed, the chattering Sedge, and the reeling Grasshopper. Try to find a Marsh Warbler after the third week of May."
+  },
+  "next": {
+    "en": "Next week: the tree warblers (Icterine and friends) and the Sylvia warblers."
+  },
+  "flow": [
+    "intro",
+    "bird:7471",
+    "bird:7470",
+    "bird:7464",
+    "bird:7479",
+    "bird:7468",
+    "bird:7465",
+    "bird:7460",
+    "bird:7516",
+    "quiz",
+    "done"
+  ]
+}

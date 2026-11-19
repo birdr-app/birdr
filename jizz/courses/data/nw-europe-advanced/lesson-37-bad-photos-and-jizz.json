@@ -1,0 +1,1016 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 37,
+  "slug": "bad-photos-and-jizz",
+  "part": 8,
+  "kind": "species",
+  "season": "any",
+  "minutes": 22,
+  "title": {
+    "en": "Bad photos and jizz"
+  },
+  "subtitle": {
+    "en": "Hawks, falcons, a cuckoo and a swift: naming a bird from its shape alone"
+  },
+  "intro": {
+    "en": "Most birds that you see are poor views: far away, against the light, in a hurry or half behind a branch. This lesson is about reading shape and movement. Experienced birders call it jizz: the 'general impression of size and shape' that tells them the species before they see a single field mark.\n\nThe test is the group that most often shows up as a dark shape in the sky: the hawks and the falcons. The Sparrowhawk, Goshawk, Peregrine, Hobby, Merlin and Kestrel all hunt birds or small animals on the wing, and each has a distinctive silhouette and wingbeat. We add the Cuckoo, which looks like a hawk, and the Alpine Swift, which looks like a big, pale Swift.\n\nThe photos in this lesson are deliberately not perfect: silhouettes, backlit birds, distant views. In the quiz, the answers are other birds of the same shape, so the pros' advice applies: do not guess from colour, look at the wings, the tail and the way it flies."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "silhouette"
+      },
+      "explain": {
+        "en": "The outline of a bird against the sky, with no colour or detail. Wing and tail shape alone often tells the species."
+      }
+    },
+    {
+      "term": {
+        "en": "wingbeat"
+      },
+      "explain": {
+        "en": "The rhythm and depth of the wing strokes. A Hobby's is quick and scythe-like, a Sparrowhawk's is flap, flap, glide."
+      }
+    },
+    {
+      "term": {
+        "en": "jizz"
+      },
+      "explain": {
+        "en": "The overall impression of a bird: its size, shape, movement and behaviour together."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2874,
+      "latin": "Accipiter nisus",
+      "name": {
+        "en": "Eurasian Sparrowhawk"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Short, broad, rounded wings and a long, barred tail: a **silhouette** like a boomerang with a tail"
+        },
+        {
+          "en": "Flap-flap-glide **wingbeat**, low and fast through a hedge"
+        },
+        {
+          "en": "Female is much bigger than the male, and has a grey-brown back and barred underparts"
+        }
+      ],
+      "where_when": {
+        "en": "All ten countries. UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: fairly common, resident, in woods, gardens and farmland. A bird you see in a garden hunting small birds, with a very fast, low flight."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A fast, sharp “kek-kek-kek-kek”, near the nest."
+        },
+        "chosen": [
+          {
+            "media_id": 1227210,
+            "xeno_canto": "XC589041",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 113,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          },
+          {
+            "media_id": 1227192,
+            "xeno_canto": "XC1027383",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 172,
+            "background_species": 0,
+            "recordist": "Richard Brahmstaedt"
+          },
+          {
+            "media_id": 1227195,
+            "xeno_canto": "XC905385",
+            "type": "call",
+            "country": "Portugal",
+            "quality": "A",
+            "seconds": 84,
+            "background_species": 3,
+            "recordist": "Jorge Leitão"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Sparrowhawk is the hawk of the garden and the hedge. Rounded wings and a long tail are the first things to see."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Goshawk (this week): bigger, broader-bodied, with a thicker neck and a shorter, more powerful flight."
+      },
+      "media": {
+        "card": [
+          430373,
+          430399,
+          430448
+        ],
+        "quiz": [
+          430406,
+          430392,
+          430446,
+          430466,
+          430465,
+          430405,
+          430386,
+          430410
+        ]
+      }
+    },
+    {
+      "species_id": 2883,
+      "latin": "Astur gentilis",
+      "name": {
+        "en": "Eurasian Goshawk"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Like a large Sparrowhawk: bigger, deeper-chested, with broad, rounded wings"
+        },
+        {
+          "en": "A thick neck, a long head, and bulging rear edge to the wing"
+        },
+        {
+          "en": "A bold white eyebrow and a white undertail, which puffs out in display"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO, DE, FR: uncommon to fairly common in big forests, resident. UK, NL, BE, DK: scarce, with a few in woods. IE: very rare. A bird of old forests that is easy to overlook."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A fast, hard “gik-gik-gik-gik” near the nest, much deeper than a Sparrowhawk's."
+        },
+        "chosen": [
+          {
+            "media_id": null,
+            "xeno_canto": "XC756187",
+            "type": "call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "brickegickel",
+            "needs_import": true
+          },
+          {
+            "media_id": null,
+            "xeno_canto": "XC610200",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 7,
+            "background_species": 0,
+            "recordist": "Lars Edenius",
+            "needs_import": true
+          },
+          {
+            "media_id": null,
+            "xeno_canto": "XC877694",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 43,
+            "background_species": 0,
+            "recordist": "Henk Schreuders",
+            "needs_import": true
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 0
+      },
+      "note": {
+        "en": "A huge and powerful hawk. In the spring, a high display flight with white undertail feathers puffed out is the best way to see one."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Sparrowhawk (this week): smaller, slimmer and a more rapid wingbeat."
+      },
+      "media": {
+        "card": [
+          431290,
+          431286,
+          431308
+        ],
+        "quiz": [
+          431279,
+          431291,
+          431301,
+          431340,
+          431333,
+          431342,
+          431343
+        ]
+      }
+    },
+    {
+      "species_id": 4015,
+      "latin": "Falco peregrinus",
+      "name": {
+        "en": "Peregrine Falcon"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A heavy, broad-based, anchor-shaped **silhouette**, with a short tail"
+        },
+        {
+          "en": "A dark hood and a clear 'moustache', and barred underparts"
+        },
+        {
+          "en": "Fast, powerful **wingbeat**, and a stoop of up to 300 km/h"
+        }
+      ],
+      "where_when": {
+        "en": "All ten countries. UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: scarce to fairly common, resident or on passage, on cliffs, towers and on coasts. In winter, many hunt waders on estuaries."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A harsh, repeated “kak-kak-kak-kak” near the nest."
+        },
+        "chosen": [
+          {
+            "media_id": 1242545,
+            "xeno_canto": "XC1013434",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 49,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1242544,
+            "xeno_canto": "XC1025334",
+            "type": "alarm call, call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 193,
+            "background_species": 0,
+            "recordist": "David Boyle"
+          },
+          {
+            "media_id": 1242553,
+            "xeno_canto": "XC974043",
+            "type": "alarm call, call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 107,
+            "background_species": 0,
+            "recordist": "Dean McDonnell"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bird that nests on cathedrals and tall buildings. A pigeon flock that suddenly scatters often means a Peregrine."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Hobby (this week): smaller, slimmer, with scythe-like wings and a red thigh."
+      },
+      "media": {
+        "card": [
+          553534,
+          553535,
+          553602
+        ],
+        "quiz": [
+          553696,
+          553651,
+          553600,
+          553581,
+          553578,
+          553575,
+          553596
+        ]
+      }
+    },
+    {
+      "species_id": 4000,
+      "latin": "Falco subbuteo",
+      "name": {
+        "en": "Eurasian Hobby"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A slim, swift-like **silhouette**, with long, pointed, scythe wings and a short tail"
+        },
+        {
+          "en": "A dark moustache on a white cheek and red thighs"
+        },
+        {
+          "en": "Fast, agile, hunts dragonflies and swallows on the wing"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, FR, DK, SE, FI: uncommon summer visitors from late April to September, over heaths, wetlands and farmland. NO, IE: rare. A bird that appears overhead like a big Swift."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A clear, quick “kew-kew-kew-kew”, higher than a Kestrel."
+        },
+        "chosen": [
+          {
+            "media_id": 1242391,
+            "xeno_canto": "XC101462",
+            "type": "alarm call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Elias A. Ryberg"
+          },
+          {
+            "media_id": 1242377,
+            "xeno_canto": "XC798255",
+            "type": "call, duet",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 41,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1242383,
+            "xeno_canto": "XC577476",
+            "type": "flight call, song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 58,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Hobbies follow Swifts and hunt martins. A falcon with a Swift-like silhouette in summer is a Hobby."
+      },
+      "dont_confuse": {
+        "en": "Merlin (this week): smaller, a plain face, a low, fast flight. Peregrine Falcon: heavier."
+      },
+      "media": {
+        "card": [
+          551292,
+          551305,
+          551284
+        ],
+        "quiz": [
+          551362,
+          551335,
+          551336,
+          551381,
+          551340,
+          551341,
+          551332
+        ]
+      }
+    },
+    {
+      "species_id": 3999,
+      "latin": "Falco columbarius",
+      "name": {
+        "en": "Merlin"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small, compact, fast: the smallest falcon, the size of a Mistle Thrush"
+        },
+        {
+          "en": "A plain face with no moustache, and a barred tail in the female"
+        },
+        {
+          "en": "Flies low over open ground, chasing small birds"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, SE, FI: scarce, breeding on moors and in the north from May. NL, BE, DE, DK, FR: scarce in winter, on coasts and fields, from October to March. A bird of open ground."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A fast, high “kee-kee-kee-kee” near the nest."
+        },
+        "chosen": [
+          {
+            "media_id": 1242369,
+            "xeno_canto": "XC588891",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 212,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          },
+          {
+            "media_id": 1242360,
+            "xeno_canto": "XC861876",
+            "type": "alarm call, call, flight call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Stein Ø. Nilsen"
+          },
+          {
+            "media_id": 1242364,
+            "xeno_canto": "XC731075",
+            "type": "alarm call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A small, fast falcon, with a low, dashing flight over a field of Meadow Pipits."
+      },
+      "dont_confuse": {
+        "en": "Common Kestrel (this week): bigger, hovers, a long tail with a black band."
+      },
+      "media": {
+        "card": [
+          551129,
+          551107,
+          551247
+        ],
+        "quiz": [
+          551144,
+          551172,
+          551197,
+          551141,
+          551110,
+          551242,
+          551191
+        ]
+      }
+    },
+    {
+      "species_id": 3980,
+      "latin": "Falco tinnunculus",
+      "name": {
+        "en": "Common Kestrel"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Hovers on rapidly beating wings, with its head still"
+        },
+        {
+          "en": "A long tail with a black band at the tip, and chestnut upperparts with black spots"
+        },
+        {
+          "en": "A long, pointed **silhouette**, with pointed wings and a thin body"
+        }
+      ],
+      "where_when": {
+        "en": "All ten countries. UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: common to fairly common over fields and verges, resident, though northern birds migrate. A very familiar bird of the roadside."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A shrill, repeated “kee-kee-kee-kee”."
+        },
+        "chosen": [
+          {
+            "media_id": 1242175,
+            "xeno_canto": "XC1012105",
+            "type": "alarm call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1242178,
+            "xeno_canto": "XC1004092",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Thierry THOMAS"
+          },
+          {
+            "media_id": 1242180,
+            "xeno_canto": "XC986903",
+            "type": "alarm call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The hovering falcon of the roadside. A silhouette hovering is almost always a Kestrel, and only a hovering Buzzard or Rough-legged Buzzard is similar."
+      },
+      "dont_confuse": {
+        "en": "Merlin (this week): smaller, a plain face and a short tail without a band."
+      },
+      "media": {
+        "card": [
+          548563,
+          548588,
+          548611
+        ],
+        "quiz": [
+          548715,
+          548726,
+          548682,
+          548672,
+          548564,
+          548703,
+          548612
+        ]
+      }
+    },
+    {
+      "species_id": 1137,
+      "latin": "Cuculus canorus",
+      "name": {
+        "en": "Common Cuckoo"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A hawk-like **jizz**, but with a long, graduated tail and long, pointed wings"
+        },
+        {
+          "en": "A slim grey body, a barred belly and a slightly drooped wing"
+        },
+        {
+          "en": "A very flat, level, whirring flight, with the wings below the body line"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: fairly common summer visitors, from mid-April to July (the adults leave in July). The male's song is the first sign of spring. Declining in the UK."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A clear, two-note “cu-coo” from the male, and a bubbling, rolling call from the female."
+        },
+        "chosen": [
+          {
+            "media_id": 1207487,
+            "xeno_canto": "XC1041513",
+            "type": "flight call",
+            "country": "China",
+            "quality": "B",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Lim Ying Hien 林勇贤"
+          },
+          {
+            "media_id": 1207475,
+            "xeno_canto": "XC1079919",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 86,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          },
+          {
+            "media_id": 1207478,
+            "xeno_canto": "XC1050838",
+            "type": "song",
+            "country": "Germany",
+            "quality": "B",
+            "seconds": 52,
+            "background_species": 0,
+            "recordist": "Lars Lachmann"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bird with the shape of a Sparrowhawk and the flight of a pigeon, that you hear more often than you see."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Sparrowhawk (this week): short, round wings and a flap-flap-glide flight."
+      },
+      "media": {
+        "card": [
+          225617,
+          225596,
+          225581
+        ],
+        "quiz": [
+          225584,
+          225543,
+          225580,
+          225562,
+          225605,
+          225536,
+          225588,
+          225569
+        ]
+      }
+    },
+    {
+      "species_id": 1349,
+      "latin": "Tachymarptis melba",
+      "name": {
+        "en": "Alpine Swift"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A very large, pale swift, with a white belly and a brown breast band"
+        },
+        {
+          "en": "Long, scythe-shaped wings, the size of a small falcon"
+        },
+        {
+          "en": "Powerful, fast flight, often over cliffs and towns"
+        }
+      ],
+      "where_when": {
+        "en": "FR: fairly common in the south, May to September. UK, NL, BE, DE, DK: rare overshoots in April to June. IE, NO, SE, FI: almost never. A species of cliffs and towers in southern Europe."
+      },
+      "where_data": {
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, trilling, chattering “trrrrree-ree-ree-ree”, much louder than a Common Swift."
+        },
+        "chosen": [
+          {
+            "media_id": 1209927,
+            "xeno_canto": "XC570117",
+            "type": "flight call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Beatrix Saadi-Varchmin"
+          },
+          {
+            "media_id": 1209936,
+            "xeno_canto": "XC1048775",
+            "type": "flight call",
+            "country": "Italy",
+            "quality": "A",
+            "seconds": 11,
+            "background_species": 0,
+            "recordist": "Gianluca Congi"
+          },
+          {
+            "media_id": 1209932,
+            "xeno_canto": "XC1052507",
+            "type": "nocturnal flight call",
+            "country": "Italy",
+            "quality": "A",
+            "seconds": 23,
+            "background_species": 0,
+            "recordist": "Francesco Sottile"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A swift that is the size of a Hobby, with a white belly, which looks like a Swift that has been to a gym."
+      },
+      "dont_confuse": {
+        "en": "Common Swift (beginners): all dark, smaller, and a thin, screaming call."
+      },
+      "media": {
+        "card": [
+          239944,
+          240039,
+          239951
+        ],
+        "quiz": [
+          240019,
+          240075,
+          240055,
+          239949,
+          239943,
+          240018,
+          239950,
+          240059
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 4000,
+    "species_ids": [
+      4000,
+      4015,
+      3999
+    ],
+    "title": {
+      "en": "Which falcon?"
+    },
+    "text": {
+      "en": "Look at size and wing shape. Peregrine: heavy, broad-based, with a short tail. Hobby: slim and swift-like, with a clear moustache and long scythe wings. Merlin: small, fast and low, with a plain face. A Kestrel hovers and has a long tail."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      32,
+      34,
+      36
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 7,
+      "photo_sound": 3,
+      "sound": 2
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Photograph a distant bird of prey, a bird in flight against the sky or any difficult shape. Try to name it from the silhouette alone: wings, tail, wingbeat. Then check your guess in a field guide or ask an expert."
+  },
+  "next": {
+    "en": "Next week: finches, shrikes and waxwings, with a lot of different plumages."
+  },
+  "flow": [
+    "intro",
+    "bird:2874",
+    "bird:2883",
+    "bird:4015",
+    "bird:4000",
+    "bird:3999",
+    "bird:3980",
+    "bird:1137",
+    "bird:1349",
+    "quiz",
+    "done"
+  ]
+}

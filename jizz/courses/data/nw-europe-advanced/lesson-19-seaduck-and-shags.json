@@ -1,0 +1,1029 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 19,
+  "slug": "seaduck-and-shags",
+  "part": 4,
+  "kind": "species",
+  "season": "winter",
+  "minutes": 20,
+  "title": {
+    "en": "Seaduck, Shag and Cormorant"
+  },
+  "subtitle": {
+    "en": "Eider, Common, Velvet and Surf Scoter, Long-tailed Duck, King Eider, Shag and Cormorant"
+  },
+  "intro": {
+    "en": "Offshore ducks gather in rafts on the sea, and in winter they are a big part of every seawatch from the east coast of Britain to Denmark. Most are dark, far away and in poor light, so the group works with silhouettes: the size of the raft, the shape of the head, whether there is white on the head or wing.\n\nThe big numbers come from the Baltic and the Arctic: hundreds of thousands of Eiders and scoters winter in Danish and German waters, in the Wadden Sea and off the east coast of Scotland. Common Scoters pass in huge flocks in spring and autumn. A Velvet Scoter or a Surf Scoter is a matter of scanning a raft for one with a white head patch or wing patch.\n\nIn the same view you usually find a Cormorant or a Shag sitting on a post or a rock. They are not ducks but they belong to the same coastal list: the Shag is smaller, slimmer, and has a thinner neck and bill."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "raft"
+      },
+      "explain": {
+        "en": "A flock of ducks sitting together on the sea."
+      }
+    },
+    {
+      "term": {
+        "en": "wing patch"
+      },
+      "explain": {
+        "en": "A patch of white on the wing. A Velvet Scoter shows a white wing patch when it flaps, and a Common Scoter does not."
+      }
+    },
+    {
+      "term": {
+        "en": "bill knob"
+      },
+      "explain": {
+        "en": "A lump at the base of the bill. A male Common Scoter has a yellow-orange knob."
+      }
+    },
+    {
+      "term": {
+        "en": "crest"
+      },
+      "explain": {
+        "en": "A tuft of feathers on the head. Shags grow a curly crest in spring."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 210,
+      "latin": "Somateria mollissima",
+      "name": {
+        "en": "Common Eider"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Large and heavy, in big **rafts**, with a white back and breast and a black belly and cap"
+        },
+        {
+          "en": "A long, sloping profile, with a bill that continues in line with the forehead"
+        },
+        {
+          "en": "A pale green nape patch, visible close up"
+        }
+      ],
+      "where_when": {
+        "en": "UK (Scotland, north-east), IE, NO, SE, DK, FI: common at colonies and in winter. NL, DE: common in winter in the Wadden Sea. BE, FR: scarce. Breeds in the north from April."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "abundant",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "common",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A soft, moaning, crooning “aah-oooh”, like someone shocked, from a raft."
+        },
+        "chosen": [
+          {
+            "media_id": 1195491,
+            "xeno_canto": "XC539071",
+            "type": "call, display-call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 61,
+            "background_species": 3,
+            "recordist": "Thomas Bergman"
+          },
+          {
+            "media_id": 1195486,
+            "xeno_canto": "XC830964",
+            "type": "call, song",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": null,
+            "background_species": 2,
+            "recordist": "Stein Ø. Nilsen"
+          },
+          {
+            "media_id": 1195496,
+            "xeno_canto": "XC448701",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 82,
+            "background_species": 3,
+            "recordist": "Patrik Åberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The big, chunky duck of the sea, often in lines or in rafts of hundreds. The females are brown and barred, and many in a raft are young or female."
+      },
+      "dont_confuse": {
+        "en": "King Eider (this week): a more orange bill, a black back, and a rounded head."
+      },
+      "media": {
+        "card": [
+          136715,
+          136747,
+          136712
+        ],
+        "quiz": [
+          136714,
+          136719,
+          136745,
+          136834,
+          136805,
+          136735,
+          136853,
+          136759
+        ]
+      }
+    },
+    {
+      "species_id": 216,
+      "latin": "Melanitta nigra",
+      "name": {
+        "en": "Common Scoter"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "All black, with a bright yellow-orange **bill knob**"
+        },
+        {
+          "en": "Smaller and neater than a Velvet Scoter, with no white at all"
+        },
+        {
+          "en": "Flies in long lines low over the sea, and sits in huge rafts"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR: common offshore, with massive numbers in Liverpool Bay, Carmarthen Bay and Denmark, mostly in winter. NO, SE, FI: breeds in the north. Passes in spring and autumn."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, piping whistle, a melancholic “cour-lou”, from rafts."
+        },
+        "chosen": [
+          {
+            "media_id": 1195569,
+            "xeno_canto": "XC101006",
+            "type": "call",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 118,
+            "background_species": 2,
+            "recordist": "Jarek Matusiak"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The ducks in a long dark line flying past are Common Scoters. A female has a pale cheek and a dark cap, and it is dark brown, not black."
+      },
+      "dont_confuse": {
+        "en": "Velvet Scoter (this week): bigger, with a white **wing patch** and a white eye mark."
+      },
+      "media": {
+        "card": [
+          137730,
+          137724,
+          137737
+        ],
+        "quiz": [
+          137735,
+          137725,
+          137721,
+          137794,
+          137722,
+          137731,
+          137805,
+          137825
+        ]
+      }
+    },
+    {
+      "species_id": 213,
+      "latin": "Melanitta fusca",
+      "name": {
+        "en": "Velvet Scoter"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Bigger and heavier than a Common Scoter, with a thick bill"
+        },
+        {
+          "en": "A white **wing patch**, visible on the water or in flight"
+        },
+        {
+          "en": "A small white mark beneath the eye, and a bright, orange-red bill"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR, NO, SE, FI: scarce to uncommon in winter, mostly in the east, with big numbers in the Baltic. Often a single bird among Common Scoters."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A hoarse, low “rrrrr”, rarely heard except in spring."
+        },
+        "chosen": [
+          {
+            "media_id": 1195555,
+            "xeno_canto": "XC448663",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 13,
+            "background_species": 0,
+            "recordist": "Patrik Åberg"
+          },
+          {
+            "media_id": 1195541,
+            "xeno_canto": "XC659692",
+            "type": "alarm call, call, ice-tinkling electric calls",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 53,
+            "background_species": 2,
+            "recordist": "Stein Ø. Nilsen"
+          },
+          {
+            "media_id": 1195545,
+            "xeno_canto": "XC610920",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 11,
+            "background_species": 2,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A scoter with a white wing. A single bird in a raft of Common Scoters is easy to find if you scan for white."
+      },
+      "dont_confuse": {
+        "en": "Common Scoter (this week): all black, a yellow knob and no white. Surf Scoter: white patches on the head."
+      },
+      "media": {
+        "card": [
+          137300,
+          137303,
+          137306
+        ],
+        "quiz": [
+          137287,
+          137236,
+          137282,
+          137234,
+          137225,
+          137389,
+          137365,
+          137388
+        ]
+      }
+    },
+    {
+      "species_id": 212,
+      "latin": "Melanitta perspicillata",
+      "name": {
+        "en": "Surf Scoter"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A black duck with white patches on the forehead and nape"
+        },
+        {
+          "en": "A big, colourful bill, with white, orange and black"
+        },
+        {
+          "en": "A heavy, wedge-shaped bill, which makes it look large-headed"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: rare but regular, in winter and autumn. NL, BE, DE, DK, FR, NO, SE: very rare to rare. FI: very rare. A North American duck that overshoots in autumn."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Silent on its wintering grounds."
+        },
+        "chosen": [
+          {
+            "media_id": 1195521,
+            "xeno_canto": "XC1013572",
+            "type": "flight call, wingbeats",
+            "country": "Canada",
+            "quality": "A",
+            "seconds": 12,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1195520,
+            "xeno_canto": "XC1013573",
+            "type": "flight call, wingbeats",
+            "country": "Canada",
+            "quality": "A",
+            "seconds": 13,
+            "background_species": 1,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A scoter with a clown's face: white patches on the head and a multicoloured bill. One of the rarer ducks, found by scanning flocks of Common Scoters."
+      },
+      "dont_confuse": {
+        "en": "Common Scoter (this week): all black with a yellow knob. Velvet Scoter: white wing patch."
+      },
+      "media": {
+        "card": [
+          137210,
+          137166,
+          137086
+        ],
+        "quiz": [
+          137142,
+          137179,
+          137174,
+          137076,
+          137052,
+          137101,
+          137105,
+          137219
+        ]
+      }
+    },
+    {
+      "species_id": 218,
+      "latin": "Clangula hyemalis",
+      "name": {
+        "en": "Long-tailed Duck"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A very long, thin tail, and a pied, black-and-white pattern in winter"
+        },
+        {
+          "en": "A pale head with a dark cheek patch, and a short, bicoloured bill"
+        },
+        {
+          "en": "A buoyant, bobbing habit on the sea, and fast, whirring flight, with black wings"
+        }
+      ],
+      "where_when": {
+        "en": "DK, SE, FI, NO: common in winter in the Baltic and on the coast. UK: fairly common in winter in the north-east. DE, NL: uncommon. IE, BE, FR: rare. Breeds on the arctic tundra, from June."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A yodelling, musical “ow-ow-owdle-ow” from a raft, quite loud."
+        },
+        "chosen": [
+          {
+            "media_id": 1195621,
+            "xeno_canto": "XC263941",
+            "type": "call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "Terje Kolaas"
+          },
+          {
+            "media_id": 1195623,
+            "xeno_canto": "XC202050",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1195609,
+            "xeno_canto": "XC909900",
+            "type": "call, duet",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 142,
+            "background_species": 0,
+            "recordist": "Uku Paal"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The call is the best clue, and it carries over the waves. It is the noisiest duck on the sea in winter, and one of the most beautiful."
+      },
+      "dont_confuse": {
+        "en": "Common Eider (this week): much bigger, with no long tail and a different shape."
+      },
+      "media": {
+        "card": [
+          138190,
+          138130,
+          138073
+        ],
+        "quiz": [
+          138200,
+          138207,
+          138156,
+          138193,
+          138113,
+          138202,
+          138106,
+          138132
+        ]
+      }
+    },
+    {
+      "species_id": 209,
+      "latin": "Somateria spectabilis",
+      "name": {
+        "en": "King Eider"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A black back and white breast, with a rounded orange-red frontal shield"
+        },
+        {
+          "en": "A pale blue head with a green cheek and a black, white and pink pattern"
+        },
+        {
+          "en": "A shorter, rounder head than the Common Eider"
+        }
+      ],
+      "where_when": {
+        "en": "NO, SE, FI, UK (Scotland), IE, DK, NL, DE: very rare, with a few every year. FR, BE: almost never. It is an Arctic species that winters off Norway and sometimes joins a flock of Eiders."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A crooning “ah-oo”, deeper than the Common Eider."
+        },
+        "chosen": [
+          {
+            "media_id": 1195469,
+            "xeno_canto": "XC181186",
+            "type": "call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 8,
+            "background_species": 0,
+            "recordist": "Stein Ø. Nilsen"
+          },
+          {
+            "media_id": 1195465,
+            "xeno_canto": "XC203481",
+            "type": "call, wing noise",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Andrew Spencer"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 19
+      },
+      "note": {
+        "en": "A rare bird in a flock of Common Eiders. Look for the black back, which stands out in profile, and the rounded head."
+      },
+      "dont_confuse": {
+        "en": "Common Eider (this week): a white back, a long, sloping bill and a flat head."
+      },
+      "media": {
+        "card": [
+          136541,
+          136637,
+          136537
+        ],
+        "quiz": [
+          136597,
+          136592,
+          136548,
+          136648,
+          136643,
+          136596,
+          136570,
+          136608
+        ]
+      }
+    },
+    {
+      "species_id": 2561,
+      "latin": "Gulosus aristotelis",
+      "name": {
+        "en": "European Shag"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A slim, glossy dark green bird with a thin neck and a thin bill"
+        },
+        {
+          "en": "A small curly **crest** in spring and a steep forehead"
+        },
+        {
+          "en": "Often seen diving or perched on rocks, holding its wings out to dry"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, FR, DK: common on rocky coasts all year, with breeding colonies on cliffs. SE: scarce. NL, BE, DE: scarce in winter. FI: almost never. A seabird, not a bird of rivers and lakes."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A hoarse, grunting “arrk” at the colony, and a hissing croak."
+        },
+        "chosen": [
+          {
+            "media_id": 1224208,
+            "xeno_canto": "XC661641",
+            "type": "call, hatchling or nestling",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 10,
+            "background_species": 0,
+            "recordist": "Sean Morris"
+          },
+          {
+            "media_id": 1224209,
+            "xeno_canto": "XC642381",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 12,
+            "background_species": 0,
+            "recordist": "Andrew Harrop"
+          },
+          {
+            "media_id": 1224197,
+            "xeno_canto": "XC734723",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 52,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It is the Cormorant's smaller, slimmer, sea-going cousin. It rarely goes inland and it does not have a white thigh patch."
+      },
+      "dont_confuse": {
+        "en": "Great Cormorant (this week): bigger, a thick neck, a heavy bill with a yellow face patch."
+      },
+      "media": {
+        "card": [
+          387229,
+          387300,
+          387253
+        ],
+        "quiz": [
+          387251,
+          387228,
+          387282,
+          387268,
+          387211,
+          387263
+        ]
+      }
+    },
+    {
+      "species_id": 2552,
+      "latin": "Phalacrocorax carbo",
+      "name": {
+        "en": "Great Cormorant"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Big, heavy and dark, with a thick neck and a stout, hooked bill"
+        },
+        {
+          "en": "A yellow face patch and a white chin, and a white thigh patch in spring"
+        },
+        {
+          "en": "Often seen standing with wings spread, on a post or a rock"
+        }
+      ],
+      "where_when": {
+        "en": "All ten countries. UK, IE, NL, BE, DE, DK, FR, NO, SE, FI: common to abundant on the coast, lakes and rivers, all year. Many from northern Europe winter along the coast."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "abundant",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A hoarse, guttural “gorrk” at the colony."
+        },
+        "chosen": [
+          {
+            "media_id": 1224134,
+            "xeno_canto": "XC1059525",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Sonothèque ADVL"
+          },
+          {
+            "media_id": 1224151,
+            "xeno_canto": "XC771643",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 0,
+            "recordist": "SonoNatura"
+          },
+          {
+            "media_id": 1224152,
+            "xeno_canto": "XC738996",
+            "type": "call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 58,
+            "background_species": 0,
+            "recordist": "Ireneusz Oleksik"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A familiar bird, but the pale-faced adult and the first-winter, with its white belly, can look different from each other."
+      },
+      "dont_confuse": {
+        "en": "European Shag (this week): smaller, with a thin neck and a thin, dark bill."
+      },
+      "media": {
+        "card": [
+          385856,
+          385743,
+          385774
+        ],
+        "quiz": [
+          385740,
+          385748,
+          385711,
+          385690,
+          385758,
+          385712,
+          385692
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 213,
+    "species_ids": [
+      216,
+      213,
+      212
+    ],
+    "title": {
+      "en": "Which scoter?"
+    },
+    "text": {
+      "en": "Scan a raft for white. Common Scoter is all black with a yellow-orange bill knob and no white at all. Velvet Scoter is bigger and has a white wing patch, with a small white mark by the eye. Surf Scoter has white patches on the forehead and nape, and a bill with white, orange and black."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      14,
+      17,
+      18
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 4,
+      "sound": 2
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "On a winter walk on a coast with a big bay, scan a raft of seaduck for a duck with a white patch on its wing or head. Look at the bill first: the one with a bright yellow knob is the Common Scoter."
+  },
+  "next": {
+    "en": "Next week is the review of the seabirds from land."
+  },
+  "flow": [
+    "intro",
+    "bird:210",
+    "bird:216",
+    "bird:213",
+    "bird:212",
+    "bird:218",
+    "bird:209",
+    "bird:2561",
+    "bird:2552",
+    "quiz",
+    "done"
+  ]
+}

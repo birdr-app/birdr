@@ -1,0 +1,1120 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 26,
+  "slug": "raptors-in-flight",
+  "part": 6,
+  "kind": "species",
+  "season": "autumn",
+  "minutes": 22,
+  "title": {
+    "en": "Raptors in flight"
+  },
+  "subtitle": {
+    "en": "Buzzards, Honey-buzzard, three harriers, Osprey and Black Kite"
+  },
+  "intro": {
+    "en": "Raptors are mostly seen in the air, and mostly from far away. The skill is to read the silhouette: how the wings are held (flat, in a shallow V, or in a deep V), the length of the tail, the size of the head, and how the bird flaps. Colour comes last, because the light is often behind the bird.\n\nAutumn migration is the best time. From late August to October, buzzards, harriers, Honey-buzzards, Ospreys and Black Kites move south on the same narrow routes. Coastal headlands, the Falsterbo peninsula in Sweden, the Danish islands and the Dutch and German coasts see thousands pass in a day. In winter the Hen Harrier and the Rough-legged Buzzard come south from Scandinavia, and Marsh Harriers move to the west.\n\nToday's pictures show the common plumages: adult buzzards, a female Marsh Harrier, a female Hen Harrier (the \"ringtail\") and a male Montagu's Harrier."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "dihedral"
+      },
+      "explain": {
+        "en": "A V-shape of the wings when seen from the front. Harriers hold their wings in a clear dihedral when gliding."
+      }
+    },
+    {
+      "term": {
+        "en": "ringtail"
+      },
+      "explain": {
+        "en": "A female or young harrier, with a white band across the rump above a barred tail."
+      }
+    },
+    {
+      "term": {
+        "en": "carpal patch"
+      },
+      "explain": {
+        "en": "A dark patch at the \"wrist\" of the underwing, where the leading edge bends. Large and black on a Rough-legged Buzzard."
+      }
+    },
+    {
+      "term": {
+        "en": "fingers"
+      },
+      "explain": {
+        "en": "The spread feathers at the tip of the wing in soaring raptors. Their number and shape help with identification."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2944,
+      "latin": "Buteo buteo",
+      "name": {
+        "en": "Common Buzzard"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Broad wings held in a shallow V, a short tail and a rounded head"
+        },
+        {
+          "en": "Very variable in colour, from dark brown to nearly white, but with a pale breast band"
+        },
+        {
+          "en": "Soars in circles, with the **fingers** spread, and a dark trailing edge to the wing"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE, FI: common to fairly common, all year, in woods and farmland. NO: uncommon. Birds from northern Europe move south in autumn. The commonest raptor in much of the region."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, mewing, drawn-out “pee-ay” while soaring."
+        },
+        "chosen": [
+          {
+            "media_id": 1228099,
+            "xeno_canto": "XC1019332",
+            "type": "call, flight call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Beatrix Saadi-Varchmin"
+          },
+          {
+            "media_id": 1228092,
+            "xeno_canto": "XC1052241",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 47,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          },
+          {
+            "media_id": 1228104,
+            "xeno_canto": "XC993000",
+            "type": "flight call",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Alvin Tarkmees"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Common in the west and the south, and the bird people call an \"eagle\". The shape is the key: broad wings and a short tail."
+      },
+      "dont_confuse": {
+        "en": "European Honey-buzzard (this week): a small, cuckoo-like head, a longer tail and flat wings. Rough-legged Buzzard: a white tail with a dark band."
+      },
+      "media": {
+        "card": [
+          439802,
+          439813,
+          439711
+        ],
+        "quiz": [
+          439667,
+          439665,
+          439752,
+          439760,
+          439757,
+          439806,
+          439803
+        ]
+      }
+    },
+    {
+      "species_id": 2942,
+      "latin": "Buteo lagopus",
+      "name": {
+        "en": "Rough-legged Buzzard"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A white tail with a broad dark band at the tip"
+        },
+        {
+          "en": "Large black **carpal patches** on a pale underwing, and a dark belly patch"
+        },
+        {
+          "en": "Hovers in place, like a Kestrel, and glides on long wings"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO: breeds in the mountains and tundra, from May. DK, DE, NL, UK: uncommon to scarce in winter, mostly in the east, with a peak in November to January. BE, FR, IE: rare. A winter visitor from Fennoscandia."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A mewing “piyaah”, similar to a Common Buzzard."
+        },
+        "chosen": [
+          {
+            "media_id": 1228058,
+            "xeno_canto": "XC182145",
+            "type": "alarm call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 72,
+            "background_species": 0,
+            "recordist": "Elias A. Ryberg"
+          },
+          {
+            "media_id": 1228061,
+            "xeno_canto": "XC106028",
+            "type": "call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 77,
+            "background_species": 0,
+            "recordist": "Stein Ø. Nilsen"
+          },
+          {
+            "media_id": 1228066,
+            "xeno_canto": "XC666513",
+            "type": "alarm call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 17,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Numbers swing with the lemming cycle in the north. In a good year many reach the coast. The white tail with a black band is the first thing you see."
+      },
+      "dont_confuse": {
+        "en": "Common Buzzard (this week): a brown tail with fine bars, and no dark carpal patches."
+      },
+      "media": {
+        "card": [
+          439454,
+          439451,
+          439356
+        ],
+        "quiz": [
+          439354,
+          439435,
+          439469,
+          439303,
+          439344,
+          439465,
+          439462
+        ]
+      }
+    },
+    {
+      "species_id": 2722,
+      "latin": "Pernis apivorus",
+      "name": {
+        "en": "European Honey-buzzard"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A small, narrow head on a long neck, like a cuckoo or a pigeon"
+        },
+        {
+          "en": "A long tail with a broad dark band at the tip and two bars at the base"
+        },
+        {
+          "en": "Holds the wings flat, and soars with a slightly drooped wing"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO, DK, DE, FR, NL, BE: uncommon summer visitors, breeding in woods from May. UK: scarce, with a few pairs in the south and Scotland. IE: very rare. A migrant to Africa, passing in large numbers over Falsterbo and the Bosporus in late August."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, thin, clear “pee-ee-ee-ee”."
+        },
+        "chosen": [
+          {
+            "media_id": 1225872,
+            "xeno_canto": "XC817997",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 50,
+            "background_species": 0,
+            "recordist": "Alain Malengreau"
+          },
+          {
+            "media_id": 1225862,
+            "xeno_canto": "XC1027226",
+            "type": "call, duet",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "Mathieu Franzkeit "
+          },
+          {
+            "media_id": 1225880,
+            "xeno_canto": "XC502410",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 37,
+            "background_species": 0,
+            "recordist": "Olivier SWIFT"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A buzzard-like bird, but it eats wasp grubs, not mice. The long tail and the small head separate it from Common Buzzard."
+      },
+      "dont_confuse": {
+        "en": "Common Buzzard (this week): a short tail, a rounder, bigger head and wings in a V."
+      },
+      "media": {
+        "card": [
+          409853,
+          409985,
+          409904
+        ],
+        "quiz": [
+          409851,
+          409885,
+          409890,
+          409935
+        ]
+      }
+    },
+    {
+      "species_id": 2824,
+      "latin": "Circus aeruginosus",
+      "name": {
+        "en": "Western Marsh Harrier"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "Dark chocolate-brown, with a creamy crown and throat and a cream shoulder patch"
+        },
+        {
+          "en": "Wings held in a clear **dihedral** over reeds, quartering low"
+        },
+        {
+          "en": "Long, rounded tail and broad wings, a heavy-looking harrier"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, FR, DK, SE, FI: fairly common to uncommon, in reedbeds, all year. NO, IE: rare. Many northern birds migrate to Africa in September."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A thin, high, whistling “kwee-ay” in display."
+        },
+        "chosen": [
+          {
+            "media_id": 1226990,
+            "xeno_canto": "XC782713",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Pere Josa"
+          },
+          {
+            "media_id": 1226994,
+            "xeno_canto": "XC709822",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "SonoNatura"
+          },
+          {
+            "media_id": 1226996,
+            "xeno_canto": "XC608666",
+            "type": "alarm call, flight call",
+            "country": "Hungary",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 1,
+            "recordist": "Jarek Matusiak"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The commonest harrier of the reedbeds. The female is dark with a pale head, and the male has a grey tail and wings."
+      },
+      "dont_confuse": {
+        "en": "Hen Harrier (this week): a slim body, with a white rump, and a striped tail."
+      },
+      "media": {
+        "card": [
+          424000,
+          424003,
+          423997
+        ],
+        "quiz": [
+          424037,
+          424047,
+          423963,
+          423953,
+          423965,
+          423992,
+          423921,
+          423899
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 3,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2835,
+      "latin": "Circus cyaneus",
+      "name": {
+        "en": "Hen Harrier"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "A white rump above a barred tail, the **ringtail**"
+        },
+        {
+          "en": "A slim, owl-like face disc, and wings held in a clear **dihedral**"
+        },
+        {
+          "en": "Glides low, quartering fields and moors"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: scarce in winter on moors and fields, and in the north in summer. NL, BE, DE, DK, FR: uncommon in winter. SE, FI, NO: uncommon to fairly common in summer, breeding. A bird of open land."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A chattering “ke-ke-ke-ke” near the nest."
+        },
+        "chosen": [
+          {
+            "media_id": 1227093,
+            "xeno_canto": "XC674537",
+            "type": "call, flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "Peter Stronach"
+          },
+          {
+            "media_id": 1227094,
+            "xeno_canto": "XC642296",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 14,
+            "background_species": 0,
+            "recordist": "Cureau Hervé"
+          },
+          {
+            "media_id": 1227086,
+            "xeno_canto": "XC973843",
+            "type": "alarm call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 19,
+            "background_species": 0,
+            "recordist": "Robin et Julien SOURIOU"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "In winter, ringtails (females and young) outnumber the grey males five to one. The white rump is the sign."
+      },
+      "dont_confuse": {
+        "en": "Montagu's Harrier (this week): slimmer, with longer wings and a black wing bar in the male."
+      },
+      "media": {
+        "card": [
+          425593,
+          425526,
+          425510
+        ],
+        "quiz": [
+          425460,
+          425535,
+          425505,
+          425531,
+          425459,
+          425574,
+          425451,
+          425453
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 9,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2839,
+      "latin": "Circus pygargus",
+      "name": {
+        "en": "Montagu's Harrier"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "plumage_filter": {
+        "sex": "male"
+      },
+      "look_for": [
+        {
+          "en": "Ash-grey above, with a black wing tip and a thin black bar across the wing"
+        },
+        {
+          "en": "Very slim and elegant, with long, pointed wings in a shallow **dihedral**"
+        },
+        {
+          "en": "Chestnut streaks on the belly and a light, buoyant flight"
+        }
+      ],
+      "where_when": {
+        "en": "FR, NL, DE, DK, SE: uncommon summer visitors, from late April to August, in cereal fields. UK: very rare, a handful of pairs. BE, FI, NO, IE: rare. A bird that nests in barley and wheat."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A rapid “kek-kek-kek-kek”, near the nest."
+        },
+        "chosen": [
+          {
+            "media_id": 1227142,
+            "xeno_canto": "XC502909",
+            "type": "alarm call, immature",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1227149,
+            "xeno_canto": "XC433712",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 47,
+            "background_species": 0,
+            "recordist": "José Carlos Sires"
+          },
+          {
+            "media_id": 1227136,
+            "xeno_canto": "XC921847",
+            "type": "alarm call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 57,
+            "background_species": 4,
+            "recordist": "João Tomás"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The most graceful of the harriers. Many nests are now protected by farmers and volunteers who mark and fence them."
+      },
+      "dont_confuse": {
+        "en": "Hen Harrier (this week): a white rump on the male, a bigger body and wings with no black bar."
+      },
+      "media": {
+        "card": [
+          426216,
+          426118,
+          426226
+        ],
+        "quiz": [
+          426122,
+          426209,
+          426210,
+          426221,
+          426119,
+          426237,
+          426204,
+          426198
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 22,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2705,
+      "latin": "Pandion haliaetus",
+      "name": {
+        "en": "Osprey"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "White underparts with a dark band across the breast, and a bold dark eye-stripe"
+        },
+        {
+          "en": "Long, narrow, angled wings, like a big gull's, with a dark carpal mark"
+        },
+        {
+          "en": "Hovers over water, then plunges feet-first for fish"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, SE, FI, NO, DE, FR: uncommon summer visitors, breeding from April, and on passage from August to October. NL, BE, DK: scarce on passage. A migrant to West Africa. Nests on a platform on a tall pine."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A series of short, sharp, whistled notes, “pyew-pyew-pyew”."
+        },
+        "chosen": [
+          {
+            "media_id": 1225625,
+            "xeno_canto": "XC721671",
+            "type": "flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 63,
+            "background_species": 0,
+            "recordist": "Peter Stronach"
+          },
+          {
+            "media_id": 1225623,
+            "xeno_canto": "XC799597",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1225622,
+            "xeno_canto": "XC996742",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 78,
+            "background_species": 0,
+            "recordist": "Ulf Elman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A fish-eating raptor that pulls itself from the water with a fish in its talons. It appears on reservoirs and lakes on migration."
+      },
+      "dont_confuse": {
+        "en": "Common Buzzard (this week): a brown bird, with no dark eye-stripe."
+      },
+      "media": {
+        "card": [
+          407575,
+          407584,
+          407583
+        ],
+        "quiz": [
+          407632,
+          407705,
+          407715,
+          407559,
+          407597,
+          407713,
+          407612
+        ]
+      }
+    },
+    {
+      "species_id": 2891,
+      "latin": "Milvus migrans",
+      "name": {
+        "en": "Black Kite"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A dark brown, slim raptor with a shallow-forked tail"
+        },
+        {
+          "en": "Long, flat wings held flat or a little arched, with fingers at the tips"
+        },
+        {
+          "en": "A paler head and a pale patch on the underwing, near the tip"
+        }
+      ],
+      "where_when": {
+        "en": "FR, DE: fairly common summer visitors, from March to August. NL, BE, DK, SE: rare, mostly in spring. UK: very rare, with a few most years. IE, NO, FI: almost never. It follows river valleys, and scavenges at landfills."
+      },
+      "where_data": {
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A shrill, trembling whinny, “pi-ii-i-i-i-i-i”."
+        },
+        "chosen": [
+          {
+            "media_id": 1227282,
+            "xeno_canto": "XC884100",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Christian Kerihuel"
+          },
+          {
+            "media_id": 1227284,
+            "xeno_canto": "XC788899",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Bernard BOUSQUET"
+          },
+          {
+            "media_id": 1227278,
+            "xeno_canto": "XC1080296",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Frank Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A kite that is a migrant, not a resident. The tail is less deeply forked than a Red Kite's, and the bird is darker overall."
+      },
+      "dont_confuse": {
+        "en": "Red Kite (beginners): a deeper-forked tail, a reddish body and white patches under the wing."
+      },
+      "media": {
+        "card": [
+          432186,
+          432196,
+          432180
+        ],
+        "quiz": [
+          432097,
+          432178,
+          432066,
+          432103,
+          432190,
+          432035,
+          432181,
+          432094
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 2942,
+    "species_ids": [
+      2944,
+      2942
+    ],
+    "title": {
+      "en": "Common or Rough-legged Buzzard?"
+    },
+    "text": {
+      "en": "Look at the tail. A Rough-legged has a white tail with a broad dark band at the tip, while a Common Buzzard's tail is brown with fine bars. Under the wing, the Rough-legged has big black carpal patches and a dark belly. A Rough-legged Buzzard also hovers on long wings."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      21,
+      23,
+      24
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 3,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Go to a headland or a viewpoint on a clear autumn day, with some wind from the north-east, and scan the sky. Note the wing shape of each raptor: flat, shallow V, deep V. Try to name each from the silhouette before you reach for your binoculars."
+  },
+  "next": {
+    "en": "Next week: pipits and wagtails."
+  },
+  "flow": [
+    "intro",
+    "bird:2944",
+    "bird:2942",
+    "bird:2722",
+    "bird:2824",
+    "bird:2835",
+    "bird:2839",
+    "bird:2705",
+    "bird:2891",
+    "quiz",
+    "done"
+  ]
+}

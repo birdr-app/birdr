@@ -1,0 +1,1067 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 39,
+  "slug": "tits-woodpeckers-and-treecreepers",
+  "part": 8,
+  "kind": "species",
+  "season": "any",
+  "minutes": 22,
+  "title": {
+    "en": "Marsh and Willow Tit, woodpeckers and treecreepers"
+  },
+  "subtitle": {
+    "en": "The last of the lookalikes: tits, woodpeckers and the other treecreeper"
+  },
+  "intro": {
+    "en": "Some pairs have a reputation. Marsh Tit and Willow Tit were not separated until 1897, and many experienced birders still prefer to hear the bird before they commit. The Treecreeper and the Short-toed Treecreeper can't be separated at all without the song or call. This lesson is for those pairs.\n\nThe tits are best separated by the cap (glossy or dull), the wing panel and above all the call. The woodpeckers (Lesser Spotted, Middle Spotted and Black) are the ones that you almost never see, but you can hear: drumming in spring, and calls year-round.\n\nAfter this lesson comes the final exam. You will be able to name the main birds of the whole course, from gulls to waders and from warblers to ducks."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "bib"
+      },
+      "explain": {
+        "en": "The patch of black on the throat and chest. Marsh Tit has a small neat one; Willow Tit has a larger, untidy one."
+      }
+    },
+    {
+      "term": {
+        "en": "cap"
+      },
+      "explain": {
+        "en": "The dark crown of the head. Glossy black in a Marsh Tit, dull sooty in a Willow Tit."
+      }
+    },
+    {
+      "term": {
+        "en": "wing panel"
+      },
+      "explain": {
+        "en": "A pale panel on the folded wing. A Willow Tit often shows a pale one; a Marsh Tit does not."
+      }
+    },
+    {
+      "term": {
+        "en": "crest"
+      },
+      "explain": {
+        "en": "A tuft of feathers on the head. The Crested Tit has a pointed, speckled black-and-white one."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 7110,
+      "latin": "Poecile palustris",
+      "name": {
+        "en": "Marsh Tit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A glossy black **cap** and a small, neat **bib**"
+        },
+        {
+          "en": "A plain wing, without a pale **wing panel**, and a pale spot at the base of the bill"
+        },
+        {
+          "en": "A sharp, explosive “pitchou!” call"
+        }
+      ],
+      "where_when": {
+        "en": "UK (England and Wales), BE, NL, DE, FR, DK, SE: uncommon to fairly common, resident, in deciduous woods. IE, NO: absent. FI: rare. Declining in the UK."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, explosive “pit-choo!” and a scolding “chika-dee-dee”."
+        },
+        "chosen": [
+          {
+            "media_id": 1287626,
+            "xeno_canto": "XC822176",
+            "type": "alarm call, call, slightly excited bird",
+            "country": "France",
+            "quality": "A",
+            "seconds": 62,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          },
+          {
+            "media_id": 1287612,
+            "xeno_canto": "XC983198",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 55,
+            "background_species": 0,
+            "recordist": "Jorge Leitão"
+          },
+          {
+            "media_id": 1287623,
+            "xeno_canto": "XC841246",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 235,
+            "background_species": 0,
+            "recordist": "Ulf Elman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The call is the way to tell it from the Willow Tit, and a shiny cap from a dull cap helps if you get a good view."
+      },
+      "dont_confuse": {
+        "en": "Willow Tit (this week): a dull cap, a bigger bib, a pale wing panel and a nasal, buzzing call."
+      },
+      "media": {
+        "card": [
+          802098,
+          802210,
+          802106
+        ],
+        "quiz": [
+          802178,
+          802246,
+          802083,
+          802136,
+          802211,
+          802149,
+          802249
+        ]
+      }
+    },
+    {
+      "species_id": 7113,
+      "latin": "Poecile montanus",
+      "name": {
+        "en": "Willow Tit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A dull, sooty-black **cap** and a bigger, untidy **bib**"
+        },
+        {
+          "en": "A pale **wing panel** on the folded wing, and a thick, short neck"
+        },
+        {
+          "en": "A nasal, buzzing “tchay-tchay-tchay” call"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, FR, DK, SE, FI, NO: scarce to fairly common, resident, in damp woods, birch, alder and conifer. IE: absent. A bird that excavates its own nest hole in rotten wood. Declining a lot in the UK."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "resident"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "NO": {
+          "frequency": "common",
+          "peak": "resident"
+        },
+        "SE": {
+          "frequency": "common",
+          "peak": "resident"
+        },
+        "FI": {
+          "frequency": "common",
+          "peak": "resident"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A nasal, buzzing “tchay-tchay-tchay” and a high, thin “tsee-tsee”."
+        },
+        "chosen": [
+          {
+            "media_id": 1287672,
+            "xeno_canto": "XC981981",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1287681,
+            "xeno_canto": "XC910961",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 57,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1287674,
+            "xeno_canto": "XC979668",
+            "type": "song",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 85,
+            "background_species": 0,
+            "recordist": "Hans Matheve"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It excavates a hole in rotten birch or alder, which is why it likes damp woods. The call is a nasal buzz, unlike any other tit."
+      },
+      "dont_confuse": {
+        "en": "Marsh Tit (this week): a glossy cap, a small bib and an explosive call."
+      },
+      "media": {
+        "card": [
+          802377,
+          802447,
+          802354
+        ],
+        "quiz": [
+          802480,
+          802370,
+          802405,
+          802423,
+          802435,
+          802459
+        ]
+      }
+    },
+    {
+      "species_id": 7100,
+      "latin": "Lophophanes cristatus",
+      "name": {
+        "en": "Crested Tit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A pointed, speckled black-and-white **crest**"
+        },
+        {
+          "en": "A pale face, with a dark curved line behind the eye"
+        },
+        {
+          "en": "A small, buff-brown bird of pine forest"
+        }
+      ],
+      "where_when": {
+        "en": "UK (Scottish Highlands), SE, FI, NO, DE, FR, DK: uncommon to fairly common, resident, in conifer forests. NL, BE: rare. IE: absent. A bird of Caledonian pine forest in the UK."
+      },
+      "where_data": {
+        "NL": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "resident"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "resident"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, purring, trilling “tsee-tsee-trrrr” call."
+        },
+        "chosen": [
+          {
+            "media_id": 1287466,
+            "xeno_canto": "XC853238",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Rob van Bemmelen"
+          },
+          {
+            "media_id": 1287458,
+            "xeno_canto": "XC979681",
+            "type": "song",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Hans Matheve"
+          },
+          {
+            "media_id": 1287461,
+            "xeno_canto": "XC950455",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 43,
+            "background_species": 0,
+            "recordist": "Olivier SWIFT"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The only British tit with a crest. It lives in old pine forest, in the Highlands."
+      },
+      "dont_confuse": {
+        "en": "Coal Tit (this week): a white nape patch, and no crest."
+      },
+      "media": {
+        "card": [
+          801297,
+          801279,
+          801205
+        ],
+        "quiz": [
+          801275,
+          801239,
+          801342,
+          801345,
+          801241,
+          801267,
+          801200
+        ]
+      }
+    },
+    {
+      "species_id": 7094,
+      "latin": "Periparus ater",
+      "name": {
+        "en": "Coal Tit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A black head with a bold white patch on the nape"
+        },
+        {
+          "en": "Two thin white wing bars and an olive back"
+        },
+        {
+          "en": "Small, active, often in conifers, and a quick, high-pitched call"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: common, resident, in conifers and mixed woods, and at garden feeders. A bird that takes seeds and hides them in tree bark."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "resident"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "resident"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A thin, high, “tsee-tsee-tsee” and a repeated, ringing song, “weetsy-weetsy-weetsy”."
+        },
+        "chosen": [
+          {
+            "media_id": 1287408,
+            "xeno_canto": "XC995207",
+            "type": "call",
+            "country": "Portugal",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Jorge Leitão"
+          },
+          {
+            "media_id": 1287397,
+            "xeno_canto": "XC1075334",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 241,
+            "background_species": 0,
+            "recordist": "Olivier SWIFT"
+          },
+          {
+            "media_id": 1287411,
+            "xeno_canto": "XC991634",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 124,
+            "background_species": 0,
+            "recordist": "Jacobo Ramil Millarengo"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A small tit with a white spot on the nape, that you see at a garden feeder. It takes a seed and flies away to hide it."
+      },
+      "dont_confuse": {
+        "en": "Crested Tit (this week): a crest and no white nape."
+      },
+      "media": {
+        "card": [
+          800462,
+          800531,
+          800573
+        ],
+        "quiz": [
+          800407,
+          800412,
+          800517,
+          800547,
+          800456,
+          800461,
+          800491
+        ]
+      }
+    },
+    {
+      "species_id": 3818,
+      "latin": "Dryobates minor",
+      "name": {
+        "en": "Lesser Spotted Woodpecker"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Tiny, the size of a sparrow, with a barred black-and-white back"
+        },
+        {
+          "en": "A red crown on the male, and no red on the underparts"
+        },
+        {
+          "en": "Drums in a quick, long burst, in spring"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, FR, DK, SE, FI, NO: scarce, resident, in old woods and parks, declining. IE: absent. A bird of the treetops. Drums from February to April."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A fast, high “pee-pee-pee-pee-pee” and a soft “kik”."
+        },
+        "chosen": [
+          {
+            "media_id": 1240065,
+            "xeno_canto": "XC989608",
+            "type": "call, drumming",
+            "country": "France",
+            "quality": "A",
+            "seconds": 90,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1240064,
+            "xeno_canto": "XC989701",
+            "type": "drumming, song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 190,
+            "background_species": 0,
+            "recordist": "Thomas Bergman"
+          },
+          {
+            "media_id": 1240075,
+            "xeno_canto": "XC877585",
+            "type": "call, drumming, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 102,
+            "background_species": 0,
+            "recordist": "Vincent Pourchaire"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A woodpecker that is rarely seen, as it spends its time in the high branches of a tree. A bird to find by the drumming in March."
+      },
+      "dont_confuse": {
+        "en": "Great Spotted Woodpecker (beginners): larger, with large white shoulder patches and red under the tail."
+      },
+      "media": {
+        "card": [
+          530253,
+          530238,
+          530203
+        ],
+        "quiz": [
+          530340,
+          530351,
+          530242,
+          530259,
+          530202,
+          530258,
+          530343
+        ]
+      }
+    },
+    {
+      "species_id": 3788,
+      "latin": "Dendrocoptes medius",
+      "name": {
+        "en": "Middle Spotted Woodpecker"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A red crown (in both sexes), and a pale face with a thin dark line"
+        },
+        {
+          "en": "Pink-red undertail, and a finely streaked, pale breast"
+        },
+        {
+          "en": "No red moustache, and a rather gentle, thin-billed look"
+        }
+      ],
+      "where_when": {
+        "en": "DE, FR: uncommon, in old oak woods. SE, FI, NO, DK, NL, BE, UK, IE: very rare or almost never (a few records in the UK). A bird of ancient oak woods in central Europe."
+      },
+      "where_data": {
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A nasal, wailing “gwek-gwek-gwek”, and a soft “kik”."
+        },
+        "chosen": [
+          {
+            "media_id": 1239635,
+            "xeno_canto": "XC976658",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Christian Kerihuel"
+          },
+          {
+            "media_id": 1239623,
+            "xeno_canto": "XC1076671",
+            "type": "song",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 49,
+            "background_species": 3,
+            "recordist": "Kelle Moreau"
+          },
+          {
+            "media_id": 1239637,
+            "xeno_canto": "XC943935",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 74,
+            "background_species": 0,
+            "recordist": "FREDERIC Lionel"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A woodpecker of old oak woods that does not drum much. A bird with a red cap and a pale breast."
+      },
+      "dont_confuse": {
+        "en": "Great Spotted Woodpecker (beginners): a black crown (in the female), red moustache and black back."
+      },
+      "media": {
+        "card": [
+          527031,
+          527073,
+          527012
+        ],
+        "quiz": [
+          527063,
+          527040,
+          527108,
+          527028,
+          527021,
+          527056,
+          527042
+        ]
+      }
+    },
+    {
+      "species_id": 3918,
+      "latin": "Dryocopus martius",
+      "name": {
+        "en": "Black Woodpecker"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A crow-sized, all-black woodpecker with a pale bill"
+        },
+        {
+          "en": "A bright red crown in the male, and a pale eye"
+        },
+        {
+          "en": "A loud, laughing call and a deep, roaring drumming"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO, DE, FR, DK: uncommon to fairly common, resident, in big forests. NL, BE: scarce. UK, IE: absent. A bird of mature pine and beech forest that is expanding west."
+      },
+      "where_data": {
+        "NL": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, ringing “kri-kri-kri-kri” in flight, and a long, penetrating “kwee-ah” call."
+        },
+        "chosen": [
+          {
+            "media_id": 1241239,
+            "xeno_canto": "XC922070",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Teet Sirotkin"
+          },
+          {
+            "media_id": 1241245,
+            "xeno_canto": "XC902134",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 54,
+            "background_species": 0,
+            "recordist": "Ulf Elman"
+          },
+          {
+            "media_id": 1241242,
+            "xeno_canto": "XC910236",
+            "type": "drumming",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 221,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The biggest woodpecker of the region, with a call that echoes through the forest."
+      },
+      "dont_confuse": {
+        "en": "Carrion Crow (beginners): a black bird with a black bill, and no red."
+      },
+      "media": {
+        "card": [
+          540677,
+          540686,
+          540776
+        ],
+        "quiz": [
+          540755,
+          540718,
+          540779,
+          540743,
+          540750,
+          540829,
+          540732
+        ]
+      }
+    },
+    {
+      "species_id": 8481,
+      "latin": "Certhia brachydactyla",
+      "name": {
+        "en": "Short-toed Treecreeper"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Looks almost identical to the Eurasian Treecreeper: a brown, streaked back and white underparts"
+        },
+        {
+          "en": "A slightly longer bill and a dirtier flank"
+        },
+        {
+          "en": "The call is the key: a loud, penetrating “tiit”"
+        }
+      ],
+      "where_when": {
+        "en": "FR, BE, DE, NL, UK (Channel Islands): fairly common to uncommon, resident, in woods and parks in the south and west of the range. UK mainland, IE, DK, SE, FI, NO: absent (a rare vagrant in the south-east of England). A bird that lives with Eurasian Treecreeper in the same woods in the south."
+      },
+      "where_data": {
+        "NL": {
+          "frequency": "common",
+          "peak": "resident"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "resident"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "resident"
+        },
+        "FR": {
+          "frequency": "common",
+          "peak": "resident"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, sharp “tiit-tiit” and a song of a short, steady series ending in a note, “tit-tit-tit-teeroyee”."
+        },
+        "chosen": [
+          {
+            "media_id": 1307424,
+            "xeno_canto": "XC1070409",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert",
+            "hidden_locally": true
+          },
+          {
+            "media_id": 1307417,
+            "xeno_canto": "XC1076764",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 53,
+            "background_species": 0,
+            "recordist": "Lars Lachmann",
+            "hidden_locally": true
+          },
+          {
+            "media_id": 1307425,
+            "xeno_canto": "XC1068697",
+            "type": "call",
+            "country": "Italy",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Francesco Sottile"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Many Short-toed Treecreepers are recorded as Eurasian Treecreepers, unless you hear the song or call."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Treecreeper (beginners): a thin, high “tsee” call and a bright, flowing song."
+      },
+      "media": {
+        "card": [
+          912230,
+          912193,
+          912211
+        ],
+        "quiz": [
+          912293,
+          912284,
+          912222,
+          912182,
+          912187,
+          912167
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 7113,
+    "species_ids": [
+      7110,
+      7113
+    ],
+    "title": {
+      "en": "Marsh Tit or Willow Tit?"
+    },
+    "text": {
+      "en": "Voice first. A Marsh Tit calls an explosive “pitchou!”, a Willow Tit a nasal, buzzing “tchay-tchay”. Then the cap: glossy and neat for the Marsh Tit, dull and sooty for the Willow Tit. A Willow Tit has a larger, untidy bib and a pale wing panel. The habitat helps: Marsh Tit in dry deciduous woods, Willow Tit in damp woods."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      34,
+      37,
+      38
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 5,
+      "photo_sound": 4,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Go to a mixed wood in winter and try to find tit flocks. Listen for the calls: the explosive “pitchou” of the Marsh Tit and the buzzing call of the Willow Tit. If you are in the south-east of the range, check the treecreepers by call."
+  },
+  "next": {
+    "en": "Next week: the final exam. Forty questions on everything in the course."
+  },
+  "flow": [
+    "intro",
+    "bird:7110",
+    "bird:7113",
+    "bird:7100",
+    "bird:7094",
+    "bird:3818",
+    "bird:3788",
+    "bird:3918",
+    "bird:8481",
+    "quiz",
+    "done"
+  ]
+}

@@ -1,0 +1,930 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 16,
+  "slug": "seawatching-shearwaters-and-petrels",
+  "part": 4,
+  "kind": "species",
+  "season": "autumn",
+  "minutes": 22,
+  "title": {
+    "en": "Seawatching: shearwaters and petrels"
+  },
+  "subtitle": {
+    "en": "How to watch the sea from land, and the tubenoses that pass in autumn gales"
+  },
+  "intro": {
+    "en": "Seawatching is birding without the bird being close. You sit on a headland, facing the sea, with a telescope, and birds pass you a kilometre out, low over the waves, for hours. You rarely see colours. You learn to read the bird by size, shape and the way it flies, which is the best training in jizz there is.\n\nThe best time is autumn, from late August to November, after a deep Atlantic low-pressure system has passed and the wind turns north-west. Birds that have been blown into the North Sea or the Irish Sea are pushed back past headlands. Go at dawn, dress for the wind, count everything, and write down the times. Good places: the south-west coast of the UK and IE, the east coast of England and Scotland, the Dutch and Danish North Sea coast, and Brittany.\n\nToday's birds are the tubenoses: Fulmar, Manx, Balearic, Sooty, Great and Cory's Shearwater and the two storm petrels. Look at the flight first. Shearwaters shear: they glide low, tilting from side to side on stiff wings, and flap in short bursts. Petrels flutter."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "shearing"
+      },
+      "explain": {
+        "en": "The way a shearwater glides low over the waves on stiff wings, tilting from side to side so that one wing tip nearly touches the water."
+      }
+    },
+    {
+      "term": {
+        "en": "underwing"
+      },
+      "explain": {
+        "en": "The underside of the wing. Its colour (white, grey or dark) is a fast way to name a shearwater."
+      }
+    },
+    {
+      "term": {
+        "en": "rump patch"
+      },
+      "explain": {
+        "en": "A white patch on the lower back, just above the tail. Both storm petrels have one."
+      }
+    },
+    {
+      "term": {
+        "en": "stiff-winged"
+      },
+      "explain": {
+        "en": "Gliding on straight, stiff wings with few wingbeats, like a Fulmar."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2405,
+      "latin": "Fulmarus glacialis",
+      "name": {
+        "en": "Northern Fulmar"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Gull-like, but with a thick neck and a short, tubular bill"
+        },
+        {
+          "en": "Glides on **stiff-winged**, straight wings with few wingbeats"
+        },
+        {
+          "en": "Pale grey above and white below; darker birds from the far north"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, DK: common at colonies on cliffs, all year (back at the cliffs in November). NL, BE, DE, FR, SE, FI: rare to scarce offshore, mainly in autumn. The bird that follows boats and eats fish offal."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "common",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "At the colony a harsh, cackling “ag-ag-ag-aaar”, a hoarse chuckle."
+        },
+        "chosen": [
+          {
+            "media_id": 1223070,
+            "xeno_canto": "XC1031275",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "Meena Haribal"
+          },
+          {
+            "media_id": 1223077,
+            "xeno_canto": "XC666877",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1223073,
+            "xeno_canto": "XC979686",
+            "type": "call, song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 210,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It looks like a gull, but is not related to one: the stiff wings, thick neck and tubular nostrils give it away. It can spit stinking oil at intruders."
+      },
+      "dont_confuse": {
+        "en": "Herring Gull (week 1): floppy wing-beats, a yellow bill and a black wing tip."
+      },
+      "media": {
+        "card": [
+          367760,
+          367832,
+          367801
+        ],
+        "quiz": [
+          367809,
+          367753,
+          367754,
+          367759,
+          367728
+        ]
+      }
+    },
+    {
+      "species_id": 2478,
+      "latin": "Puffinus puffinus",
+      "name": {
+        "en": "Manx Shearwater"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Black above and white below, clear black-and-white in the way it tilts"
+        },
+        {
+          "en": "**Shearing** low over the water, a few flaps and a long glide"
+        },
+        {
+          "en": "Slim, long, narrow wings and a thin dark bill"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: common offshore from March to October, with breeding colonies on islands off Wales, Scotland and Ireland. FR: fairly common. NL, BE, DE, DK, NO, SE: scarce to rare, in autumn in North Sea gales. FI: almost never."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "abundant",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "At the colony at night, a wild, crowing, cackling “kaah-kok-kok-aah”."
+        },
+        "chosen": [
+          {
+            "media_id": 1223519,
+            "xeno_canto": "XC1042285",
+            "type": "nocturnal flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1223524,
+            "xeno_canto": "XC1023582",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "David Boyle"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The commonest shearwater in the region. Flocks of thousands pass headlands in July and August. A big flock appears black, then white, as they tilt."
+      },
+      "dont_confuse": {
+        "en": "Balearic Shearwater (this week): brown above, dirty white below, and a heavier flight."
+      },
+      "media": {
+        "card": [
+          375409,
+          375479,
+          375407
+        ],
+        "quiz": [
+          375442,
+          375423,
+          375339,
+          375347,
+          375478,
+          375355,
+          375405
+        ]
+      }
+    },
+    {
+      "species_id": 2480,
+      "latin": "Puffinus mauretanicus",
+      "name": {
+        "en": "Balearic Shearwater"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Dusky brown above and dirty-white below, with a **brown underwing**"
+        },
+        {
+          "en": "Heavier and slower than a Manx Shearwater, with a more laboured flight"
+        },
+        {
+          "en": "A bill that is a bit thicker, and no sharp contrast between back and belly"
+        }
+      ],
+      "where_when": {
+        "en": "UK: scarce, from July to October, mainly off the south-west and south coast. FR: fairly common in autumn in the Bay of Biscay and off Brittany. IE, NL, BE, DE, DK: rare. Critically endangered; breeds only in the Balearic Islands."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Rarely heard at sea; a hoarse, rolling cackle at the colony."
+        },
+        "chosen": [
+          {
+            "media_id": 1223556,
+            "xeno_canto": "XC645385",
+            "type": "call, song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 155,
+            "background_species": 2,
+            "recordist": "Maties"
+          },
+          {
+            "media_id": 1223557,
+            "xeno_canto": "XC580257",
+            "type": "song, hatchling or nestling",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 52,
+            "background_species": 0,
+            "recordist": "eloisa matheu"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 8
+      },
+      "note": {
+        "en": "A critically endangered bird that moves north in late summer to feed off the western coasts of Europe, with a peak in August and September."
+      },
+      "dont_confuse": {
+        "en": "Manx Shearwater (this week): black and white, narrower wings, and a quicker flap."
+      },
+      "media": {
+        "card": [
+          375798,
+          375803,
+          375780
+        ],
+        "quiz": [
+          375778,
+          375790,
+          375804,
+          375679,
+          375805,
+          375670,
+          375784
+        ]
+      }
+    },
+    {
+      "species_id": 2474,
+      "latin": "Ardenna grisea",
+      "name": {
+        "en": "Sooty Shearwater"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Dark chocolate brown all over, with long, narrow wings"
+        },
+        {
+          "en": "A silvery-white stripe down the centre of the **underwing**"
+        },
+        {
+          "en": "A fast, powerful, direct flight, quite high above the waves"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, DK: scarce, on passage in August to October, with peaks in autumn gales. FR: scarce. NL, BE, DE, SE: rare. FI: almost never. It breeds in the southern hemisphere and spends the northern summer in the Atlantic."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Silent at sea; rarely recorded."
+        },
+        "chosen": [
+          {
+            "media_id": 1223477,
+            "xeno_canto": "XC1054712",
+            "type": "call, song",
+            "country": "New Zealand",
+            "quality": "A",
+            "seconds": 370,
+            "background_species": 0,
+            "recordist": "Jenna Hoverd/David Boyle"
+          },
+          {
+            "media_id": 1223481,
+            "xeno_canto": "XC1011959",
+            "type": "song",
+            "country": "New Zealand",
+            "quality": "A",
+            "seconds": 21,
+            "background_species": 0,
+            "recordist": "David Boyle"
+          },
+          {
+            "media_id": 1223480,
+            "xeno_canto": "XC341686",
+            "type": "song",
+            "country": "New Zealand",
+            "quality": "A",
+            "seconds": 154,
+            "background_species": 0,
+            "recordist": "Olivier SWIFT"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bird that has made a figure-of-eight over the Atlantic, from New Zealand and Chile. The silver stripe under the wing is the best mark."
+      },
+      "dont_confuse": {
+        "en": "Manx Shearwater (this week): smaller, with a white belly. Great Skua (week 17): a white flash on the wing, and heavier."
+      },
+      "media": {
+        "card": [
+          374832,
+          374897,
+          374835
+        ],
+        "quiz": [
+          374837,
+          374819,
+          374934,
+          374892,
+          374947,
+          374821,
+          374894
+        ]
+      }
+    },
+    {
+      "species_id": 2471,
+      "latin": "Ardenna gravis",
+      "name": {
+        "en": "Great Shearwater"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A dark cap, a white collar and a white band across the **rump patch**"
+        },
+        {
+          "en": "Brown above, white below, with a dark patch on the belly"
+        },
+        {
+          "en": "Large, with a long, straight-winged, effortless glide"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: rare, mostly off the south-west in August and September in strong gales. FR: rare. NL, BE, DE, DK, NO, SE: very rare. It breeds on Tristan da Cunha in the South Atlantic."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Silent at sea."
+        },
+        "chosen": [
+          {
+            "media_id": 1223440,
+            "xeno_canto": "XC936582",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 11,
+            "background_species": 0,
+            "recordist": "Sven Normant"
+          },
+          {
+            "media_id": 1223438,
+            "xeno_canto": "XC310326",
+            "type": "call",
+            "country": "South Africa",
+            "quality": "A",
+            "seconds": 49,
+            "background_species": 1,
+            "recordist": "Derren Fox"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 18
+      },
+      "note": {
+        "en": "Another visitor from the South Atlantic. If you see a dark-capped, white-collared shearwater, check the white rump band."
+      },
+      "dont_confuse": {
+        "en": "Cory's Shearwater (this week): paler head, a yellow bill and a slower, floppier flight."
+      },
+      "media": {
+        "card": [
+          374413,
+          374414,
+          374417
+        ],
+        "quiz": [
+          374424,
+          374404,
+          374420,
+          374442,
+          374409,
+          374433,
+          374397
+        ]
+      }
+    },
+    {
+      "species_id": 11039,
+      "latin": "Calonectris borealis",
+      "name": {
+        "en": "Cory's Shearwater"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Large and heavy-winged, with a slow, floppy, almost gull-like glide"
+        },
+        {
+          "en": "Brown above and whitish below, with a pale, yellowish bill"
+        },
+        {
+          "en": "A pale, grey-brown head, with no dark cap, and white on the sides of the rump"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: rare, with annual sightings off the south-west from July to October. FR: scarce, in the Bay of Biscay. NL, BE, DE, DK, NO, SE: very rare. It breeds on the Azores and Canaries."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Silent at sea; a loud, wailing “kee-aw” at the colony."
+        },
+        "chosen": [
+          {
+            "media_id": 1343851,
+            "xeno_canto": "XC1015526",
+            "type": "call, flight call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 62,
+            "background_species": 0,
+            "recordist": "Rubén Barone"
+          },
+          {
+            "media_id": 1343867,
+            "xeno_canto": "XC835456",
+            "type": "flight call, song",
+            "country": "Portugal",
+            "quality": "A",
+            "seconds": 63,
+            "background_species": 0,
+            "recordist": "Pere Josa"
+          },
+          {
+            "media_id": 1343863,
+            "xeno_canto": "XC987627",
+            "type": "song",
+            "country": "Portugal",
+            "quality": "A",
+            "seconds": 68,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The big, heavy one. The wings are broad and the glide is slow and relaxed, like a large gull with a different bill."
+      },
+      "dont_confuse": {
+        "en": "Great Shearwater (this week): a dark cap, a white collar and a rump band."
+      },
+      "media": {
+        "card": [
+          1179710,
+          1179711,
+          1179712
+        ],
+        "quiz": [
+          1179717,
+          1179696,
+          1179753,
+          1179797,
+          1179695,
+          1179761,
+          1179699,
+          1179706
+        ]
+      }
+    },
+    {
+      "species_id": 2385,
+      "latin": "Hydrobates pelagicus",
+      "name": {
+        "en": "European Storm Petrel"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Tiny and dark, with a clean white **rump patch**"
+        },
+        {
+          "en": "Flutters over the waves like a swallow, often pattering on the water"
+        },
+        {
+          "en": "A white bar under the wing, and a square-ended tail"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO: common at island colonies at night from May to September. FR: fairly common offshore. NL, BE, DE, DK, SE: rare, in autumn gales. FI: almost never. Rarely seen from the land, except in gales."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "At the colony at night, a purring trill that ends in a hiccup, “prrrr-chikka”."
+        },
+        "chosen": [
+          {
+            "media_id": 1222950,
+            "xeno_canto": "XC748779",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 52,
+            "background_species": 0,
+            "recordist": "Tristan Guillebot de Nerville"
+          },
+          {
+            "media_id": 1222946,
+            "xeno_canto": "XC957958",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Leander Khil"
+          },
+          {
+            "media_id": 1222960,
+            "xeno_canto": "XC738805",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": null,
+            "background_species": 0,
+            "recordist": "Shaun Micklewright"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Tiny, black, with a white rump. It dances over the wave tops like a bat in daytime, and it is the smallest seabird in the north Atlantic."
+      },
+      "dont_confuse": {
+        "en": "Leach's Storm Petrel (this week): bigger, a forked tail, a bounding flight and a rump patch divided by a thin line."
+      },
+      "media": {
+        "card": [
+          365816,
+          365736,
+          365753
+        ],
+        "quiz": [
+          365813,
+          365737,
+          365772,
+          365748,
+          365685,
+          365784,
+          365771
+        ]
+      }
+    },
+    {
+      "species_id": 2388,
+      "latin": "Hydrobates leucorhous",
+      "name": {
+        "en": "Leach's Storm Petrel"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Larger than a European Storm Petrel, with long, angled wings"
+        },
+        {
+          "en": "A white **rump patch** divided by a thin dark line, and a forked tail"
+        },
+        {
+          "en": "A buoyant, bounding, tern-like flight, quite different from a storm petrel's flutter"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, FR: rare in autumn gales (September to November), usually after westerlies, with big wrecks sometimes. NL, BE, DE, DK, NO, SE: rare. It breeds on remote islands (St Kilda, Faroes) and winters at sea."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "At the colony at night, a purring chatter ending in a crooning “oo-ah”."
+        },
+        "chosen": [
+          {
+            "media_id": 1222975,
+            "xeno_canto": "XC256948",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 0,
+            "recordist": "Steph"
+          },
+          {
+            "media_id": 1222978,
+            "xeno_canto": "XC667990",
+            "type": "nocturnal flight call, song",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 5,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1222973,
+            "xeno_canto": "XC663893",
+            "type": "song",
+            "country": "Denmark",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Simon S. Christiansen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The seawatching bird of autumn gales. It can appear in inland places after a strong storm, exhausted."
+      },
+      "dont_confuse": {
+        "en": "European Storm Petrel (this week): smaller, a square tail and a flutter."
+      },
+      "media": {
+        "card": [
+          366139,
+          366242,
+          366141
+        ],
+        "quiz": [
+          366161,
+          366174,
+          366193,
+          366190,
+          366194,
+          366142
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 2480,
+    "species_ids": [
+      2478,
+      2480
+    ],
+    "title": {
+      "en": "Manx or Balearic Shearwater?"
+    },
+    "text": {
+      "en": "Contrast. A Manx is clean black and white, with a thin dark bill and a quick flap-and-glide. A Balearic is dusky brown above and dirty white below, with a dark underwing, heavier and slower. In poor light look at the underwing and at the speed of the wingbeats."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      11,
+      13,
+      14
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 4,
+      "sound": 2
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Pick the next day with a strong north-west wind after a deep low, between August and November, and spend two hours at a headland or a sea wall. Count every bird and note the time. Do not worry about naming everything: write \"small dark shearwater\" and look it up later."
+  },
+  "next": {
+    "en": "Next week the skuas: pirates of the autumn sea."
+  },
+  "flow": [
+    "intro",
+    "bird:2405",
+    "bird:2478",
+    "bird:2480",
+    "bird:2474",
+    "bird:2471",
+    "bird:11039",
+    "bird:2385",
+    "bird:2388",
+    "quiz",
+    "done"
+  ]
+}

@@ -1,0 +1,908 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 11,
+  "slug": "small-calidris-and-stints",
+  "part": 3,
+  "kind": "species",
+  "season": "autumn",
+  "minutes": 20,
+  "title": {
+    "en": "Dunlin, stints and small sandpipers"
+  },
+  "subtitle": {
+    "en": "Dunlin, Little and Temminck's Stint, Curlew Sandpiper, Sanderling and Pectoral Sandpiper"
+  },
+  "intro": {
+    "en": "You know a Dunlin from a Little Stint. Now we put the whole small-wader family in order, and look at the plumages you really meet. In spring the adults are in breeding colours and most of the birds pass through in a hurry in May. In autumn, from late July, the adults return in worn plumage and the juveniles follow in August and September, and the juveniles are the key: fresh, neat and easy to separate.\n\nThe method is the same for every small wader: size and shape first (bill length and curve, leg colour), then the pattern on the back, then the head, then the voice. A Little Stint in September has a pale V on the back and a split eyebrow. A Curlew Sandpiper is taller, with a long curved bill and peachy breast. A Pectoral Sandpiper stands upright, with a sharp line between its streaked breast and white belly.\n\nWhere to look: muddy edges of reservoirs and pits, brackish pools, and estuaries at high tide. The Dunlin is the standard. Everything else is compared with it."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "mantle V"
+      },
+      "explain": {
+        "en": "A pale V on the back of a juvenile Little Stint or Sanderling, made by pale edges on the back feathers."
+      }
+    },
+    {
+      "term": {
+        "en": "supercilium"
+      },
+      "explain": {
+        "en": "The pale stripe above the eye. On Little Stint it is often split in two in front of the eye."
+      }
+    },
+    {
+      "term": {
+        "en": "breast band"
+      },
+      "explain": {
+        "en": "A band of streaks across the breast, which ends sharply against the white belly, as in the Pectoral Sandpiper."
+      }
+    },
+    {
+      "term": {
+        "en": "hind toe"
+      },
+      "explain": {
+        "en": "The small toe at the back of the foot. Sanderling has none, which is why it runs so smoothly."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2149,
+      "latin": "Calidris alpina",
+      "name": {
+        "en": "Dunlin"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Grey-brown above and white below, with a grey wash across the breast"
+        },
+        {
+          "en": "A long black bill with a slight droop at the tip, and black legs"
+        },
+        {
+          "en": "Rolling, buzzing “treeep” from a flock; the flock itself twists and wheels"
+        }
+      ],
+      "where_when": {
+        "en": "All ten countries. UK, IE, NL, BE, DE, DK, FR: abundant on estuaries from September to March. NO, SE, FI: breeds on tundra and bogs in summer and passes in autumn. Mid-winter flocks run into the tens of thousands."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A rough, rolling “treeep” or “kree”, always from a flock."
+        },
+        "chosen": [
+          {
+            "media_id": 1219883,
+            "xeno_canto": "XC172379",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 58,
+            "background_species": 0,
+            "recordist": "Michele Peron"
+          },
+          {
+            "media_id": 1219878,
+            "xeno_canto": "XC282218",
+            "type": "call, social calls",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1219877,
+            "xeno_canto": "XC323109",
+            "type": "song",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Everything else is compared with the Dunlin. In summer a black belly patch and a chestnut back make it easy; in winter it is a plain grey-brown wader."
+      },
+      "dont_confuse": {
+        "en": "Sanderling (this week): paler, a straight bill, and running at the water's edge. Curlew Sandpiper (this week): a longer, more curved bill, and a white rump."
+      },
+      "media": {
+        "card": [
+          331020,
+          330944,
+          330964
+        ],
+        "quiz": [
+          331069,
+          330951,
+          330970,
+          330987,
+          331004,
+          331012,
+          331055,
+          331087
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2153,
+      "latin": "Calidris minuta",
+      "name": {
+        "en": "Little Stint"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "Tiny: a pale, split **supercilium** and a clean white **mantle V** on a rusty back"
+        },
+        {
+          "en": "Short, straight black bill, black legs and a white belly"
+        },
+        {
+          "en": "Restless, picking quickly like a mouse at the mud's edge"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, DK, FR: scarce passage migrant, in August to October (juveniles from mid-August) and in May. IE: rare. NO, SE, FI: passes in autumn, with breeding on the far north tundra. A few overwinter in southern UK and FR."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, sharp “tit” or “stit”, quite unlike the Dunlin."
+        },
+        "chosen": [
+          {
+            "media_id": 1219958,
+            "xeno_canto": "XC383562",
+            "type": "call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 37,
+            "background_species": 0,
+            "recordist": "Terje Kolaas"
+          },
+          {
+            "media_id": 1219961,
+            "xeno_canto": "XC1036115",
+            "type": "flight call",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 6,
+            "background_species": 0,
+            "recordist": "Uku Paal"
+          },
+          {
+            "media_id": 1219963,
+            "xeno_canto": "XC989490",
+            "type": "call",
+            "country": "Chad",
+            "quality": "A",
+            "seconds": 25,
+            "background_species": 0,
+            "recordist": "Julien Birard"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A juvenile in September is one of the most attractive waders, with rusty edges and a clean V. The size is the key: the size of a House Sparrow, not a Starling."
+      },
+      "dont_confuse": {
+        "en": "Temminck's Stint (this week): plain brown with no V, and yellow-green legs. Dunlin: bigger, with a longer bill."
+      },
+      "media": {
+        "card": [
+          331685,
+          331680,
+          331693
+        ],
+        "quiz": [
+          331639,
+          331724,
+          331779,
+          331783,
+          331667,
+          331741,
+          331692,
+          331691
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2143,
+      "latin": "Calidris temminckii",
+      "name": {
+        "en": "Temminck's Stint"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Plain brownish-grey above and across the breast, with no **mantle V**"
+        },
+        {
+          "en": "Yellow-green to olive legs, and a short, fine bill"
+        },
+        {
+          "en": "White outer tail feathers show when it flies, and it often creeps along a pool's edge"
+        }
+      ],
+      "where_when": {
+        "en": "FI, NO, SE: scarce breeders in the north, from June. UK, NL, BE, DE, DK, FR, IE: rare, on passage in May and from late July to September. It prefers freshwater edges to the open mud."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A dry, high trill, “tirrr-rr”, often given as it flies up and away, like a tiny ringing bell."
+        },
+        "chosen": [
+          {
+            "media_id": 1219783,
+            "xeno_canto": "XC903063",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 19,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1219782,
+            "xeno_canto": "XC994979",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 3,
+            "background_species": 2,
+            "recordist": "Johan Södercrantz"
+          },
+          {
+            "media_id": 1219770,
+            "xeno_canto": "XC1052890",
+            "type": "flight call",
+            "country": "United Arab Emirates",
+            "quality": "B",
+            "seconds": 3,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It sits in a crouch, creeps like a mouse, and often flushes to a rattling call. A grey-brown stint with yellow-green legs is it."
+      },
+      "dont_confuse": {
+        "en": "Little Stint (this week): brighter, a pale V on the mantle, and black legs."
+      },
+      "media": {
+        "card": [
+          330004,
+          330016,
+          330017
+        ],
+        "quiz": [
+          329976,
+          329961,
+          329947,
+          329998,
+          329969,
+          329955,
+          330051,
+          330067
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 4,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2141,
+      "latin": "Calidris ferruginea",
+      "name": {
+        "en": "Curlew Sandpiper"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "A long, downcurved black bill and long black legs, a taller bird than a Dunlin"
+        },
+        {
+          "en": "A scaly brown back and a peach-buff wash on the breast"
+        },
+        {
+          "en": "A clean white rump in flight and a clear white **supercilium**"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, DK, FR: scarce passage migrant, mostly juveniles in August to October. IE: rare. NO, SE, FI: rare. Numbers vary greatly from year to year, depending on lemming cycles in Siberia."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, rippling “chirrup” or “chirri”, more liquid than the Dunlin."
+        },
+        "chosen": [
+          {
+            "media_id": 1219726,
+            "xeno_canto": "XC1041776",
+            "type": "flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1219737,
+            "xeno_canto": "XC923464",
+            "type": "nocturnal flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 4,
+            "background_species": 0,
+            "recordist": "Stefan van Schaik"
+          },
+          {
+            "media_id": 1219733,
+            "xeno_canto": "XC1050782",
+            "type": "nocturnal flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 4,
+            "background_species": 0,
+            "recordist": "MILLON Xavier"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A juvenile Curlew Sandpiper is a stunner. Its numbers swing wildly: a good year is when the Siberian lemmings crash."
+      },
+      "dont_confuse": {
+        "en": "Dunlin (this week): a smaller bird, a shorter bill and a dark centre to the rump. Little Stint: much smaller."
+      },
+      "media": {
+        "card": [
+          329656,
+          329677,
+          329601
+        ],
+        "quiz": [
+          329674,
+          329728,
+          329715,
+          329652,
+          329636,
+          329617,
+          329609,
+          329655
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2148,
+      "latin": "Calidris alba",
+      "name": {
+        "en": "Sanderling"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Very pale: silver-grey above and snow-white below, with a dark wing edge"
+        },
+        {
+          "en": "A short, straight black bill and black legs with no **hind toe**"
+        },
+        {
+          "en": "Runs along the waves like a clockwork toy"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR: fairly common on sandy beaches, from August to May, with big flocks on the Wadden coast. NO, SE, FI: passage birds. A few stay in summer."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, hard “twick” or “tchik”."
+        },
+        "chosen": [
+          {
+            "media_id": 1219864,
+            "xeno_canto": "XC1030106",
+            "type": "call, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 12,
+            "background_species": 0,
+            "recordist": "Lionel FREDERIC"
+          },
+          {
+            "media_id": 1219867,
+            "xeno_canto": "XC938622",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 14,
+            "background_species": 0,
+            "recordist": "Sonothèque ADVL"
+          },
+          {
+            "media_id": 1219855,
+            "xeno_canto": "XC589109",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A beach bird more than a mud bird. The black shoulder patch and the pale look are the features, and it runs in and out with the waves."
+      },
+      "dont_confuse": {
+        "en": "Dunlin (this week): browner, a drooping bill, and prefers mud. Little Stint: smaller, with a V on the back."
+      },
+      "media": {
+        "card": [
+          330865,
+          330813,
+          330861
+        ],
+        "quiz": [
+          330797,
+          330808,
+          330845,
+          330812,
+          330859,
+          330775,
+          330780,
+          330798
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2156,
+      "latin": "Calidris melanotos",
+      "name": {
+        "en": "Pectoral Sandpiper"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "A streaked **breast band** that ends sharply against a white belly"
+        },
+        {
+          "en": "Yellow-green legs, a long neck and an upright stance"
+        },
+        {
+          "en": "A scaly brown back with a pale **mantle V**, and a bill with a yellow base"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: scarce but annual in September and October, with a few most years in each. NL, BE, DE, DK, FR: rare. NO, SE, FI: very rare. A visitor from Siberia and North America."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, reedy “krrrk”, a bit like a grasshopper."
+        },
+        "chosen": [
+          {
+            "media_id": 1220014,
+            "xeno_canto": "XC735511",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1220023,
+            "xeno_canto": "XC935128",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 3,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1220018,
+            "xeno_canto": "XC113150",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "Tayler Brooks"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A juvenile Pectoral is a classic autumn rarity. It stands higher than a Dunlin and stretches its neck up, and it hides in the grass at the edge of a pool."
+      },
+      "dont_confuse": {
+        "en": "Ruff (week 14) juvenile: a smaller head, a browner back, buff breast. Dunlin: a streaked breast, a darker belly, and short legs."
+      },
+      "media": {
+        "card": [
+          332275,
+          332161,
+          332271
+        ],
+        "quiz": [
+          332253,
+          332155,
+          332207,
+          332297,
+          332305,
+          332223,
+          332148,
+          332265
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 2153,
+    "species_ids": [
+      2153,
+      2143
+    ],
+    "title": {
+      "en": "Little or Temminck's Stint?"
+    },
+    "text": {
+      "en": "Temminck's is plain and cold brown-grey above and across the breast, with yellow-green legs and no pale V on the back. Little Stint has black legs and (in juvenile) a rusty back with a clean white V. In flight Temminck's shows white outer tail feathers, and its call is a dry trill, not a sharp 'tit'."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      6,
+      8,
+      9
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 5,
+      "photo_sound": 4,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Between mid-August and early October, visit a reservoir with muddy edges or a brackish pool. Scan the Dunlins for a tiny, rusty, quick bird: that is a Little Stint. If you see a Curlew Sandpiper, notice that it is taller than every Dunlin around it."
+  },
+  "next": {
+    "en": "Next week: the larger waders of fresh water and mud, from the Redshank to the Common Sandpiper."
+  },
+  "flow": [
+    "intro",
+    "bird:2149",
+    "bird:2153",
+    "bird:2143",
+    "bird:2141",
+    "bird:2148",
+    "bird:2156",
+    "quiz",
+    "done"
+  ]
+}

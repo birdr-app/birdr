@@ -1,0 +1,54 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 10,
+  "slug": "review-warblers",
+  "part": 2,
+  "kind": "review",
+  "season": "any",
+  "minutes": 22,
+  "title": {
+    "en": "Review: warblers"
+  },
+  "subtitle": {
+    "en": "Leaf warblers, reed warblers and tree warblers in one quiz"
+  },
+  "intro": {
+    "en": "Warblers are a test of patience. After four lessons you can tell a Chiffchaff from a Willow Warbler and you know what the Siberian birds look like, and how a Marsh Warbler sings. This week there is a long quiz with twenty questions, with birds from all of block 2, and a few gulls from block 1 to keep you honest.\n\nMany questions here are sound questions or photo-and-sound questions: warblers are mostly identified by their voice. Listen first, then look. If you get a Reed Warbler and a Marsh Warbler wrong, go back to the song descriptions and play the recordings again.\n\nA good result is fifteen right. Do not worry about the Siberian birds: they are rare, and many experienced birders still need a second look at a Yellow-browed Warbler."
+  },
+  "words": [],
+  "birds": [],
+  "compare": null,
+  "quiz": {
+    "questions": 20,
+    "photos_from": "quiz",
+    "answers_from": "review",
+    "review_from": [
+      6,
+      7,
+      8,
+      9,
+      1,
+      2,
+      3,
+      4
+    ],
+    "review_questions": 20,
+    "modes": {
+      "photo": 9,
+      "photo_sound": 6,
+      "sound": 5
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Go for a walk at dawn in May or at the coast in autumn. Write down every warbler you hear, with the key notes about its voice. Compare your list with a bird app or a friend."
+  },
+  "next": {
+    "en": "Next block: waders. Dunlin, Little Stint, Curlew Sandpiper and other small waders."
+  },
+  "flow": [
+    "intro",
+    "quiz",
+    "done"
+  ]
+}

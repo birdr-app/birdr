@@ -1,0 +1,1145 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 13,
+  "slug": "plovers-godwits-and-whimbrel",
+  "part": 3,
+  "kind": "species",
+  "season": "any",
+  "minutes": 22,
+  "title": {
+    "en": "Plovers, godwits and Whimbrel"
+  },
+  "subtitle": {
+    "en": "Ringed, Little Ringed, Kentish, Grey and Golden Plover, both godwits and the Whimbrel"
+  },
+  "intro": {
+    "en": "Plovers run, stop and look. Their eyes are big, their bills are short and they feed by sight. Godwits and curlews have long bills and probe the mud. Between them the group has some of the most confusing pairs in the field: Ringed and Little Ringed Plover, Grey and Golden Plover, Bar-tailed and Black-tailed Godwit, and Whimbrel and Curlew.\n\nSeason: Ringed Plovers are on the coast all year, with huge numbers of Arctic breeders passing in May and August. Little Ringed Plovers arrive in late March and breed on gravel pits. Golden Plovers come south in autumn to ploughed fields and stay until March, Grey Plovers do the same on the estuaries. Whimbrels pass in April and May and again in July to September.\n\nPairs and tools: for each pair we use one fast clue (leg colour for the ringed plovers, armpit colour for the big plovers, wing bar for the godwits) and one slow one (the voice)."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "eye ring"
+      },
+      "explain": {
+        "en": "A ring of bare skin around the eye. Bright yellow in Little Ringed Plover."
+      }
+    },
+    {
+      "term": {
+        "en": "wing bar"
+      },
+      "explain": {
+        "en": "A pale line along the folded or open wing. Ringed Plover has a bold white one; Little Ringed Plover has none."
+      }
+    },
+    {
+      "term": {
+        "en": "axillaries"
+      },
+      "explain": {
+        "en": "The \"armpit\" feathers under the wing. Black in Grey Plover, white in Golden Plover."
+      }
+    },
+    {
+      "term": {
+        "en": "breast band"
+      },
+      "explain": {
+        "en": "A dark band across the breast of a plover."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 1987,
+      "latin": "Charadrius hiaticula",
+      "name": {
+        "en": "Common Ringed Plover"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A complete black **breast band** and a white collar, and a black mask"
+        },
+        {
+          "en": "Orange legs and an orange bill with a black tip"
+        },
+        {
+          "en": "A bold white **wing bar** in flight"
+        }
+      ],
+      "where_when": {
+        "en": "All ten countries. UK, IE, NL, BE, DE, DK, FR: common on shingle and sandy shores all year. NO, SE, FI: breeds from May. Arctic breeders pass in May and August."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, fluty “tu-li” or “too-li”, rising at the end."
+        },
+        "chosen": [
+          {
+            "media_id": 1217775,
+            "xeno_canto": "XC592489",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 74,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          },
+          {
+            "media_id": 1217774,
+            "xeno_canto": "XC594696",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 71,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1217784,
+            "xeno_canto": "XC401958",
+            "type": "call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 41,
+            "background_species": 0,
+            "recordist": "Karl-Birger Strann"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The ringed plover of the beach. Its call, a soft double note, is quite different from the Little Ringed Plover's “pew”."
+      },
+      "dont_confuse": {
+        "en": "Little Ringed Plover (this week): yellow legs, a thin dark bill, a yellow eye ring and no wing bar."
+      },
+      "media": {
+        "card": [
+          308518,
+          308566,
+          308563
+        ],
+        "quiz": [
+          308561,
+          308632,
+          308562,
+          308512,
+          308584,
+          308573,
+          308571,
+          308581
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 1,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 1995,
+      "latin": "Thinornis dubius",
+      "name": {
+        "en": "Little Ringed Plover"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Yellow-pink legs, a thin dark bill and a bright yellow **eye ring**"
+        },
+        {
+          "en": "No **wing bar** in flight, and a slim, small shape"
+        },
+        {
+          "en": "A black band on the breast and a white band above the black forehead"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, DK, FR: fairly common on gravel pits and shingle banks, from late March to August. IE, NO, SE, FI: very rare. A bird of inland freshwater, not the coast."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, clear, falling “pee-oo”, less musical than the Ringed Plover."
+        },
+        "chosen": [
+          {
+            "media_id": null,
+            "xeno_canto": "XC647877",
+            "type": "flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 26,
+            "background_species": 0,
+            "recordist": "Albert Noorlander",
+            "needs_import": true
+          },
+          {
+            "media_id": null,
+            "xeno_canto": "XC669005",
+            "type": "alarm call, call, flight call, various calls",
+            "country": "France",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza",
+            "needs_import": true
+          },
+          {
+            "media_id": null,
+            "xeno_canto": "XC735737",
+            "type": "call",
+            "country": "Denmark",
+            "quality": "A",
+            "seconds": 11,
+            "background_species": 0,
+            "recordist": "Agris Celmins",
+            "needs_import": true
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 0
+      },
+      "note": {
+        "en": "It arrives in spring weeks before most summer migrants and breeds on gravel pits and shingle. The yellow eye ring is the first thing you see."
+      },
+      "dont_confuse": {
+        "en": "Common Ringed Plover (this week): orange legs and bill, a wing bar and a rising call."
+      },
+      "media": {
+        "card": [
+          309851,
+          309903,
+          309829
+        ],
+        "quiz": [
+          309971,
+          309891,
+          309884,
+          309840,
+          309835,
+          309831,
+          309908,
+          309909
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 4,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2044,
+      "latin": "Anarhynchus alexandrinus",
+      "name": {
+        "en": "Kentish Plover"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Pale sandy above and white below, with a thin black bill and dark legs"
+        },
+        {
+          "en": "Dark patches on the sides of the breast, not a full **breast band**"
+        },
+        {
+          "en": "Male: a rusty cap and a thin black eye line"
+        }
+      ],
+      "where_when": {
+        "en": "FR: uncommon breeder on the Atlantic and Mediterranean coasts. DE, NL, BE, DK, UK: rare to very rare overshoots, mostly in spring. IE, NO, SE, FI: almost never. A species of sandy and salty places, once a British breeder."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, soft “wit” and a hard, rapid “prrrp”."
+        },
+        "chosen": [
+          {
+            "media_id": null,
+            "xeno_canto": "XC655041",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 8,
+            "background_species": 0,
+            "recordist": "Maarten Sluijter",
+            "needs_import": true
+          },
+          {
+            "media_id": null,
+            "xeno_canto": "XC820173",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "Sonothèque ADVL",
+            "needs_import": true
+          },
+          {
+            "media_id": null,
+            "xeno_canto": "XC552784",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "AUDEVARD Aurélien",
+            "needs_import": true
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 0
+      },
+      "note": {
+        "en": "A pale, small plover with a small head. Incomplete breast patches and dark legs are the marks."
+      },
+      "dont_confuse": {
+        "en": "Common Ringed Plover (this week): orange legs, a complete breast band and a black-tipped orange bill."
+      },
+      "media": {
+        "card": [
+          317331,
+          317339,
+          317332
+        ],
+        "quiz": [
+          317341,
+          317340,
+          317323,
+          317364,
+          317322,
+          317324,
+          317335,
+          317363
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 16,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 1977,
+      "latin": "Pluvialis squatarola",
+      "name": {
+        "en": "Grey Plover"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Silver-grey, spangled, with a black eye in a pale face"
+        },
+        {
+          "en": "Black **axillaries** in flight, plus a white rump and a wing bar"
+        },
+        {
+          "en": "A heavy black bill and a hunched posture"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR: fairly common on estuaries, from August to May. NO, SE, FI: passage. It breeds in the Arctic tundra, and in summer is black below with a silvery back."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A plaintive, three-note “tlee-oo-ee”, melancholic and clear."
+        },
+        "chosen": [
+          {
+            "media_id": 1217611,
+            "xeno_canto": "XC1055098",
+            "type": "nocturnal flight call",
+            "country": "France",
+            "quality": "B",
+            "seconds": 52,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1217610,
+            "xeno_canto": "XC1055987",
+            "type": "call",
+            "country": "France",
+            "quality": "B",
+            "seconds": 56,
+            "background_species": 0,
+            "recordist": "Julien Birard"
+          },
+          {
+            "media_id": 1217623,
+            "xeno_canto": "XC879912",
+            "type": "call",
+            "country": "Egypt",
+            "quality": "B",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Stephan Risch"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The black armpits are the thing: the biggest difference to the Golden Plover, which has white ones. It is a coastal bird, rarely seen on fields."
+      },
+      "dont_confuse": {
+        "en": "European Golden Plover (this week): golden spangles and white armpits, and a smaller, rounder head."
+      },
+      "media": {
+        "card": [
+          306909,
+          306882,
+          306917
+        ],
+        "quiz": [
+          306857,
+          307001,
+          306861,
+          306881,
+          306958,
+          306945,
+          306921,
+          306887
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 1978,
+      "latin": "Pluvialis apricaria",
+      "name": {
+        "en": "European Golden Plover"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Gold-spangled brown above and a pale, buff-yellow breast"
+        },
+        {
+          "en": "White **axillaries** and a plain white underwing"
+        },
+        {
+          "en": "A small, round head and a short bill"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR: fairly common on fields and moors from October to March. NO, SE, FI: breeds on moors from May. A bird of open ground, not the shore."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "abundant",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A clear, mournful “tlu-ee”, one or two notes, from a flock in flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1217645,
+            "xeno_canto": "XC592663",
+            "type": "alarm call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 58,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          },
+          {
+            "media_id": 1217639,
+            "xeno_canto": "XC836757",
+            "type": "call, flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          },
+          {
+            "media_id": 1217636,
+            "xeno_canto": "XC1006087",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Dag Österlund"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A flock of Golden Plovers on a ploughed field is a good sight, often with Lapwings. The white armpits are the best way to separate it from a Grey Plover."
+      },
+      "dont_confuse": {
+        "en": "Grey Plover (this week): black armpits, and a heavier, shorter, greyer look."
+      },
+      "media": {
+        "card": [
+          307114,
+          307074,
+          307111
+        ],
+        "quiz": [
+          307105,
+          307030,
+          307104,
+          307070,
+          307024,
+          307192,
+          307071,
+          307072
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2072,
+      "latin": "Limosa limosa",
+      "name": {
+        "en": "Black-tailed Godwit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A long, straight bill and long legs, a tall, upright bird"
+        },
+        {
+          "en": "A black tail band and a broad white **wing bar** in flight"
+        },
+        {
+          "en": "In summer: orange-chestnut neck and breast; in winter: plain grey"
+        }
+      ],
+      "where_when": {
+        "en": "NL: common breeder in wet meadows. IE, UK: common on estuaries in winter, with Icelandic birds. BE, DE, DK, FR: fairly common on passage. NO, SE, FI: uncommon breeders. It arrives in March in NL."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A ringing “wicka-wicka-wicka” in the display flight, and a short “weet” in flocks."
+        },
+        "chosen": [
+          {
+            "media_id": 1218674,
+            "xeno_canto": "XC745163",
+            "type": "alarm call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Romuald Mikusek"
+          },
+          {
+            "media_id": 1218666,
+            "xeno_canto": "XC841380",
+            "type": "call",
+            "country": "China",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Bo Shunqi 薄顺奇"
+          },
+          {
+            "media_id": 1218670,
+            "xeno_canto": "XC813470",
+            "type": "call",
+            "country": "Kazakhstan",
+            "quality": "A",
+            "seconds": 61,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The wet meadow bird of the Netherlands. Its bold white wing bar sets it apart from every other wader in flight."
+      },
+      "dont_confuse": {
+        "en": "Bar-tailed Godwit (this week): shorter legs, a slightly upturned bill, and no wing bar."
+      },
+      "media": {
+        "card": [
+          321429,
+          321359,
+          321387
+        ],
+        "quiz": [
+          321367,
+          321360,
+          321454,
+          321382,
+          321386,
+          321381,
+          321471,
+          321372
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 4,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2071,
+      "latin": "Limosa lapponica",
+      "name": {
+        "en": "Bar-tailed Godwit"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "A long, slightly upturned bill with a pinkish base"
+        },
+        {
+          "en": "Shorter legs and a barred tail, with no **wing bar**"
+        },
+        {
+          "en": "Streaked grey-brown above and pale buff below"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR: fairly common on estuaries and sandy shores, August to May, with huge numbers in the Wadden Sea. NO, SE, FI: passage. A bird from Siberia and Lapland."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A hard, yapping “kirruc” and a short “wik-wik”."
+        },
+        "chosen": [
+          {
+            "media_id": 1218641,
+            "xeno_canto": "XC926152",
+            "type": "nocturnal flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 47,
+            "background_species": 0,
+            "recordist": "Martin Sutherland"
+          },
+          {
+            "media_id": 1218648,
+            "xeno_canto": "XC686279",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1218647,
+            "xeno_canto": "XC742406",
+            "type": "nocturnal flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 73,
+            "background_species": 0,
+            "recordist": "Gosse Hoekstra"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The estuary godwit, as the Black-tailed is the meadow one. The shorter legs and the uptilted bill make it look compact."
+      },
+      "dont_confuse": {
+        "en": "Black-tailed Godwit (this week): taller, longer-legged, and a bold white wing bar."
+      },
+      "media": {
+        "card": [
+          321318,
+          321279,
+          321319
+        ],
+        "quiz": [
+          321202,
+          321181,
+          321205,
+          321316,
+          321266,
+          321285,
+          321212,
+          321191
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 11213,
+      "latin": "Numenius phaeopus",
+      "name": {
+        "en": "Eurasian Whimbrel"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Smaller than a Curlew, with a bill that bends sharply near the tip"
+        },
+        {
+          "en": "Dark crown with a pale central stripe and a pale eyebrow"
+        },
+        {
+          "en": "A rippling, trilling whistle of seven notes"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR: scarce on passage in April to May and July to September. NO, SE, FI: breeds on moors and bogs from May, and is common there. A few remain in winter in IE and the south-west UK."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A rapid, rippling series of seven notes, “pi-pi-pi-pi-pi-pi-pi”."
+        },
+        "chosen": [
+          {
+            "media_id": 1218553,
+            "xeno_canto": "XC898663",
+            "type": "flight call, nocturnal flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 211,
+            "background_species": 0,
+            "recordist": "guus van duin"
+          },
+          {
+            "media_id": 1218557,
+            "xeno_canto": "XC836060",
+            "type": "call",
+            "country": "China",
+            "quality": "A",
+            "seconds": 88,
+            "background_species": 0,
+            "recordist": "Ray Tsu 诸仁"
+          },
+          {
+            "media_id": 1218559,
+            "xeno_canto": "XC835271",
+            "type": "alarm call, call",
+            "country": "Iceland",
+            "quality": "A",
+            "seconds": 130,
+            "background_species": 1,
+            "recordist": "Frantz Barrault"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The call is the best clue: seven even whistles, quite different from the sad, bubbling “cur-lee” of a Curlew."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Curlew (beginners): bigger, a longer, smoothly curved bill, and a plain head."
+      },
+      "media": {
+        "card": [
+          320317,
+          320413,
+          320428
+        ],
+        "quiz": [
+          320338,
+          320352,
+          320334,
+          320391,
+          320409,
+          320345,
+          320431,
+          320447
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 3,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 1995,
+    "species_ids": [
+      1987,
+      1995
+    ],
+    "title": {
+      "en": "Ringed or Little Ringed Plover?"
+    },
+    "text": {
+      "en": "Look at the legs and eye ring first: Ringed has orange legs, Little Ringed yellow-pink. Little Ringed has a bright yellow eye ring, a thin dark bill and no white wing bar. In flight, the Ringed Plover shows a bold white stripe along the wing. The call is different too: a soft fluting double note for Ringed, a sharp, falling “pew” for Little Ringed."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      8,
+      11,
+      12
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 5,
+      "photo_sound": 4,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Visit a beach or shingle bank in May or an estuary in winter and compare as many plovers as you can. Learn the three calls: Ringed (“too-li”), Grey (“tlee-oo-ee”) and Golden (“tlu”). If you can, find a flock of Golden Plovers on a field and look for the white armpits."
+  },
+  "next": {
+    "en": "Next week: phalaropes, Ruff, Knot, Purple Sandpiper and the snipes."
+  },
+  "flow": [
+    "intro",
+    "bird:1987",
+    "bird:1995",
+    "bird:2044",
+    "bird:1977",
+    "bird:1978",
+    "bird:2072",
+    "bird:2071",
+    "bird:11213",
+    "quiz",
+    "done"
+  ]
+}

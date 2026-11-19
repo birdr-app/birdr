@@ -1,0 +1,1062 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 12,
+  "slug": "redshanks-and-sandpipers",
+  "part": 3,
+  "kind": "species",
+  "season": "autumn",
+  "minutes": 20,
+  "title": {
+    "en": "Redshanks and sandpipers"
+  },
+  "subtitle": {
+    "en": "Redshank, Spotted Redshank, Greenshank, Green, Wood and Common Sandpiper, and Turnstone"
+  },
+  "intro": {
+    "en": "The medium waders are the ones most often confused in flight. The key is the rump and the wing: a white rump patch, a white trailing edge, a white wedge up the back. All seven birds in this lesson show a different pattern when they fly up, and a different call.\n\nSeason: adults of most of these leave their northern breeding grounds as early as late June, so July and August are good months, and the juveniles follow in September. Common Sandpipers breed along rivers in the north and west and return in April and again in the autumn. Spotted Redshanks pass in spring in their black summer plumage, and in autumn they are pale grey.\n\nLook and listen: the calls of these waders are some of the easiest to learn, and they work better than the plumages. Try to say the call out loud when you hear it."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "trailing edge"
+      },
+      "explain": {
+        "en": "The back edge of the wing. A broad white one shows in flight in the Redshank."
+      }
+    },
+    {
+      "term": {
+        "en": "rump"
+      },
+      "explain": {
+        "en": "The lower back, just above the tail. White in Green and Wood Sandpipers, and in Greenshank a white wedge runs up the back."
+      }
+    },
+    {
+      "term": {
+        "en": "supercilium"
+      },
+      "explain": {
+        "en": "The pale stripe above the eye. Long in Wood Sandpiper and Spotted Redshank."
+      }
+    },
+    {
+      "term": {
+        "en": "flight call"
+      },
+      "explain": {
+        "en": "The call a bird gives when it takes off or flies over. For many waders this is the best way to identify them."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2122,
+      "latin": "Tringa totanus",
+      "name": {
+        "en": "Common Redshank"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Orange-red legs and an orange-red base to the bill"
+        },
+        {
+          "en": "A broad white **trailing edge** to the wing in flight"
+        },
+        {
+          "en": "A loud, yelping alarm: “tu-hu-hu”, the sentry of the marsh"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR: common on estuaries and wet meadows. NO, SE, FI: breeds in the south, May to July. Winters on the coast. It is the first wader to give the alarm when anything disturbs the marsh."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, ringing “tyu-hu-hu”, and a yodelling song in the display flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1219466,
+            "xeno_canto": "XC766638",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1219458,
+            "xeno_canto": "XC859544",
+            "type": "alarm call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 73,
+            "background_species": 0,
+            "recordist": "Maarten Sluijter"
+          },
+          {
+            "media_id": 1219453,
+            "xeno_canto": "XC922571",
+            "type": "call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Markus Jacobs"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The bird everyone else listens to. The white trailing edge and the red legs are enough, and you hear it long before you see it."
+      },
+      "dont_confuse": {
+        "en": "Spotted Redshank (this week): a longer bill, a long white eyebrow, no white trailing edge and a very different call."
+      },
+      "media": {
+        "card": [
+          327036,
+          327098,
+          327104
+        ],
+        "quiz": [
+          327012,
+          327170,
+          327151,
+          327148,
+          327139,
+          327162,
+          327152,
+          327137
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 5,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2126,
+      "latin": "Tringa erythropus",
+      "name": {
+        "en": "Spotted Redshank"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Pale grey above and white below, with a long white **supercilium**"
+        },
+        {
+          "en": "A long, thin bill with a red base, and long red legs"
+        },
+        {
+          "en": "A white rump patch, and no white trailing edge to the wing"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, DK, FR: scarce on passage, in autumn (July to October) and spring, when adults are black. NO, SE, FI: breeds in the north from May. IE: rare. A few overwinter on the south coast."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A clear, ringing “chu-it!”, quite unlike a Redshank."
+        },
+        "chosen": [
+          {
+            "media_id": 1219523,
+            "xeno_canto": "XC535544",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1219537,
+            "xeno_canto": "XC799609",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 11,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1219528,
+            "xeno_canto": "XC67294",
+            "type": "alarm call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Patrik Åberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A tall, elegant wader that likes to swim and upend like a duck. In winter it is a ghostly pale grey; in May it is jet black with white spots."
+      },
+      "dont_confuse": {
+        "en": "Common Redshank (this week): brown, with orange-red legs, a thick bill, a white trailing edge and a yelping call."
+      },
+      "media": {
+        "card": [
+          327752,
+          327708,
+          327804
+        ],
+        "quiz": [
+          327751,
+          327714,
+          327759,
+          327771,
+          327782,
+          327750,
+          327733,
+          327716
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2127,
+      "latin": "Tringa nebularia",
+      "name": {
+        "en": "Common Greenshank"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Long, greenish legs and a thick, slightly upturned bill"
+        },
+        {
+          "en": "Pale grey above and white below, and a white wedge up the back in flight"
+        },
+        {
+          "en": "A loud, ringing three-note **flight call**: “tew-tew-tew”"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, DK, FR, IE: uncommon on passage from July to October and in April and May. NO, SE, FI: breeds on bogs and in forests from May. A few stay for the winter in the UK, IE and FR."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, ringing, rapid “tew-tew-tew”, always three notes, and carries a long way."
+        },
+        "chosen": [
+          {
+            "media_id": 1219550,
+            "xeno_canto": "XC831860",
+            "type": "alarm call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 49,
+            "background_species": 0,
+            "recordist": "W. Agster"
+          },
+          {
+            "media_id": 1219540,
+            "xeno_canto": "XC1029380",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Ulf Elman"
+          },
+          {
+            "media_id": 1219556,
+            "xeno_canto": "XC723199",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 55,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A tall, pale wader. The three-note call is the easiest way to know it and you hear it before you see the bird."
+      },
+      "dont_confuse": {
+        "en": "Spotted Redshank (this week): a slender red-based bill and red legs. Common Redshank: shorter, brown, orange-red legs."
+      },
+      "media": {
+        "card": [
+          327982,
+          327980,
+          327990
+        ],
+        "quiz": [
+          327977,
+          327962,
+          327876,
+          328004,
+          327979,
+          327993,
+          328006,
+          327967
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 11,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2116,
+      "latin": "Tringa ochropus",
+      "name": {
+        "en": "Green Sandpiper"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Dark, almost black above with fine white speckles, white below"
+        },
+        {
+          "en": "A bold white **rump** and black underwings in flight"
+        },
+        {
+          "en": "Bobs its tail, and flies up from a ditch with a ringing call"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, DK, FR: uncommon passage migrant, from July to October, with a few that winter in the UK, IE, NL and FR. NO, SE, FI: breeds in forest bogs, in May to August, nesting in old thrush nests in trees."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A ringing, rising “tluit-weet-weet” as it flies off."
+        },
+        "chosen": [
+          {
+            "media_id": 1219330,
+            "xeno_canto": "XC1029203",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "Xavier Riera"
+          },
+          {
+            "media_id": 1219346,
+            "xeno_canto": "XC667394",
+            "type": "call, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Quentin Giraud"
+          },
+          {
+            "media_id": 1219341,
+            "xeno_canto": "XC755124",
+            "type": "alarm call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 111,
+            "background_species": 0,
+            "recordist": "Mats Olsson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The bird you flush from a ditch, with a ringing call and a flash of white rump on a black bird. It nests in old thrush nests, not on the ground."
+      },
+      "dont_confuse": {
+        "en": "Wood Sandpiper (this week): paler and browner, with a long pale eyebrow and a paler underwing."
+      },
+      "media": {
+        "card": [
+          326063,
+          326079,
+          326106
+        ],
+        "quiz": [
+          326001,
+          326000,
+          325999,
+          326075,
+          326107,
+          326086,
+          326149,
+          326048
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 8,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2121,
+      "latin": "Tringa glareola",
+      "name": {
+        "en": "Wood Sandpiper"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Paler and browner than a Green Sandpiper, with golden spots on the back"
+        },
+        {
+          "en": "A long, pale **supercilium** that extends behind the eye, and yellowish legs"
+        },
+        {
+          "en": "A white **rump** and a pale underwing, with a high “chiff-iff-iff” **flight call**"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, DK, FR: scarce on passage from July to September, and in May. NO, SE, FI: breeds on bogs and marshes from May. IE: rare. In autumn, on pools, with a few at a time."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, rapid, rather sharp “chiff-iff-iff”, always three notes."
+        },
+        "chosen": [
+          {
+            "media_id": 1219448,
+            "xeno_canto": "XC431212",
+            "type": "alarm call, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "AUDEVARD Aurélien"
+          },
+          {
+            "media_id": 1219437,
+            "xeno_canto": "XC799978",
+            "type": "alarm call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 56,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1219438,
+            "xeno_canto": "XC747223",
+            "type": "alarm call, call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 95,
+            "background_species": 0,
+            "recordist": "Stein Ø. Nilsen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A very pretty, slim, elegant wader. The long white eyebrow and the pale underwing say it is not a Green Sandpiper."
+      },
+      "dont_confuse": {
+        "en": "Green Sandpiper (this week): darker, with black underwings. Common Sandpiper: shorter-legged, bobbing."
+      },
+      "media": {
+        "card": [
+          326914,
+          326912,
+          326974
+        ],
+        "quiz": [
+          326979,
+          326873,
+          326934,
+          326911,
+          326971,
+          326905,
+          326926,
+          326874
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 18,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2114,
+      "latin": "Actitis hypoleucos",
+      "name": {
+        "en": "Common Sandpiper"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Brown above and white below, with a white wedge in front of the folded wing"
+        },
+        {
+          "en": "Short legs, and a constant bobbing of the tail and rear"
+        },
+        {
+          "en": "Flies low over water on stiff, flickering wings, with a high, thin call"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, SE, FI: common on rivers and lake shores, April to August. NL, BE, DE, DK, FR: passage migrant, April to May and July to September. A few overwinter in the south of the UK, IE and FR."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, thin, piping “tswee-wee-wee”, repeated."
+        },
+        "chosen": [
+          {
+            "media_id": 1219306,
+            "xeno_canto": "XC281134",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 52,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1219307,
+            "xeno_canto": "XC241902",
+            "type": "call, flight call, display",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 50,
+            "background_species": 0,
+            "recordist": "Terje Kolaas"
+          },
+          {
+            "media_id": 1219305,
+            "xeno_canto": "XC373910",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "Mats Rellmar"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bobbing wader of rivers and reservoir edges. The flight is distinctive: low over the water, with shallow, flickering wingbeats and a white wing bar."
+      },
+      "dont_confuse": {
+        "en": "Green Sandpiper (this week): darker, with a white rump and black underwings."
+      },
+      "media": {
+        "card": [
+          325756,
+          325661,
+          325747
+        ],
+        "quiz": [
+          325663,
+          325731,
+          325769,
+          325642,
+          325662,
+          325647,
+          325752,
+          325741
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 11,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2133,
+      "latin": "Arenaria interpres",
+      "name": {
+        "en": "Ruddy Turnstone"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "Short, bright orange legs and a short, stout, wedge-shaped bill"
+        },
+        {
+          "en": "Dark brown upper breast, like a bib, and a white belly"
+        },
+        {
+          "en": "In flight a bold pattern of black and white, with white on the back and tail"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR: fairly common on rocky and stony shores, from July to May. NO, SE, FI: breeds on coasts and islands, from late May. A bird that flips pebbles and seaweed for food."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A hard, rattling “tuk-a-tuk” and a clear “kyu”."
+        },
+        "chosen": [
+          {
+            "media_id": 1219603,
+            "xeno_canto": "XC1030053",
+            "type": "call, flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 13,
+            "background_species": 0,
+            "recordist": "Krzysztof Deoniziak"
+          },
+          {
+            "media_id": 1219598,
+            "xeno_canto": "XC403054",
+            "type": "alarm call, call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 63,
+            "background_species": 0,
+            "recordist": "Fraser Simpson"
+          },
+          {
+            "media_id": 1219592,
+            "xeno_canto": "XC592488",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 89,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It turns stones. In winter it is a dark, chunky wader of rocky shores and harbours. In May it is a harlequin, with a chestnut back and a black-and-white head."
+      },
+      "dont_confuse": {
+        "en": "Purple Sandpiper (week 14): dusky, with a drooping bill, and orange at the base only."
+      },
+      "media": {
+        "card": [
+          328295,
+          328240,
+          328238
+        ],
+        "quiz": [
+          328373,
+          328352,
+          328396,
+          328374,
+          328393,
+          328388,
+          328362,
+          328246
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 2121,
+    "species_ids": [
+      2116,
+      2121
+    ],
+    "title": {
+      "en": "Green or Wood Sandpiper?"
+    },
+    "text": {
+      "en": "Green Sandpiper: dark, almost black above with fine speckles, black underwing, short supercilium, and a loud, ringing call. Wood Sandpiper: paler brown, golden spots, a long supercilium behind the eye, a pale underwing, longer, yellowish legs and a high, rapid, three-note call."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      7,
+      9,
+      11
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 5,
+      "photo_sound": 4,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In July or August, look for a Green Sandpiper at a muddy ditch or sewage pond. Practise the calls on a recording: Redshank, Greenshank, Green, Wood and Common Sandpiper are all different and very distinct."
+  },
+  "next": {
+    "en": "Next week: plovers, godwits and the big waders."
+  },
+  "flow": [
+    "intro",
+    "bird:2122",
+    "bird:2126",
+    "bird:2127",
+    "bird:2116",
+    "bird:2121",
+    "bird:2114",
+    "bird:2133",
+    "quiz",
+    "done"
+  ]
+}

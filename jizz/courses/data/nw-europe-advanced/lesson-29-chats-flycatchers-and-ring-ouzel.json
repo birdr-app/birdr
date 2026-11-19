@@ -1,0 +1,1062 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 29,
+  "slug": "chats-flycatchers-and-ring-ouzel",
+  "part": 6,
+  "kind": "species",
+  "season": "spring",
+  "minutes": 22,
+  "title": {
+    "en": "Chats, flycatchers and Ring Ouzel"
+  },
+  "subtitle": {
+    "en": "Redstart, Black Redstart, Whinchat, Stonechat, Wheatear, Spotted and Pied Flycatcher and Ring Ouzel"
+  },
+  "intro": {
+    "en": "Chats and flycatchers are birds of the spring and autumn migration. They perch in the open, on a post or a twig, and fly out for insects. Most of the birds in this lesson are long-distance migrants, going to Africa for winter, and they pass through north-west Europe in April to May and August to October. Autumn falls, when a night of east wind brings thousands to the coast, are the best days for them.\n\nThe tail is the key for many: a Redstart has a rusty tail that it quivers, a Wheatear has a white rump and a black T on the tail, a Black Redstart has a dark tail with a rusty edge. The Whinchat has white at the base of the tail and a strong eyebrow, the Stonechat has a dark head and a white neck patch. For flycatchers, look at the way they sit and fly out to catch a fly.\n\nMales in spring are bright and easy. In autumn, males, females and young are all in a dull plumage, and the pro skill is to read what is left."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "rump"
+      },
+      "explain": {
+        "en": "The lower back, just above the tail. White in Wheatear, a white patch in a Stonechat."
+      }
+    },
+    {
+      "term": {
+        "en": "supercilium"
+      },
+      "explain": {
+        "en": "The pale stripe above the eye. Strong in a Whinchat and weak in a Stonechat."
+      }
+    },
+    {
+      "term": {
+        "en": "wing panel"
+      },
+      "explain": {
+        "en": "A pale patch on the folded wing. Pied Flycatcher males have a white one."
+      }
+    },
+    {
+      "term": {
+        "en": "gorget"
+      },
+      "explain": {
+        "en": "A band or patch on the throat, often a different colour from the breast. A Ring Ouzel has a white one."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 9203,
+      "latin": "Phoenicurus phoenicurus",
+      "name": {
+        "en": "Common Redstart"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A rusty-orange breast and tail, and a grey back"
+        },
+        {
+          "en": "A black face and throat, with a white forehead"
+        },
+        {
+          "en": "Quivers its tail constantly, and sits in the open on a branch"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, FR, DK, SE, FI, NO: uncommon to fairly common summer visitors, from mid-April to September, in woods and heath. IE: rare. Passage birds on the coast in autumn."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A sweet, short song that ends in a jingle, and a call that sounds like “hweet-tic-tic”."
+        },
+        "chosen": [
+          {
+            "media_id": 1317381,
+            "xeno_canto": "XC1080029",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          },
+          {
+            "media_id": 1317391,
+            "xeno_canto": "XC1048966",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          },
+          {
+            "media_id": 1317398,
+            "xeno_canto": "XC1005205",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 57,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A male in spring is one of the loveliest birds of the woodland. The tail is the key: rusty, and always on the move."
+      },
+      "dont_confuse": {
+        "en": "Black Redstart (this week): a darker, sooty body and a dark tail with rusty edges."
+      },
+      "media": {
+        "card": [
+          981330,
+          981269,
+          981308
+        ],
+        "quiz": [
+          981315,
+          981248,
+          981256,
+          981249,
+          981262,
+          981305,
+          981314
+        ]
+      }
+    },
+    {
+      "species_id": 9207,
+      "latin": "Phoenicurus ochruros",
+      "name": {
+        "en": "Black Redstart"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Sooty black body, with a white wing patch and a rusty-orange tail"
+        },
+        {
+          "en": "Quivers its tail, and sits on a rooftop, a wall or a rock"
+        },
+        {
+          "en": "A harsh, scratchy song, from a high perch"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK: uncommon to common, resident in the south, and a passage bird from March to November. SE, NO, FI: rare. A bird of towns and cliffs. In winter on the south coast."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A short, scratchy song with a pause and a crackle like a stone being tapped, “tsip-tsip, ti-tic-tic”."
+        },
+        "chosen": [
+          {
+            "media_id": 1317469,
+            "xeno_canto": "XC1012319",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 107,
+            "background_species": 3,
+            "recordist": "Olivier SWIFT"
+          },
+          {
+            "media_id": 1317455,
+            "xeno_canto": "XC1068571",
+            "type": "song",
+            "country": "Hungary",
+            "quality": "A",
+            "seconds": 99,
+            "background_species": 1,
+            "recordist": "András Schmidt"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A town bird: a male on a church roof, singing, is a Black Redstart. Females and young are brown-grey with a rusty tail."
+      },
+      "dont_confuse": {
+        "en": "Common Redstart (this week): a rusty breast, grey back and a white forehead."
+      },
+      "media": {
+        "card": [
+          981955,
+          981946,
+          981874
+        ],
+        "quiz": [
+          981921,
+          981933,
+          981960,
+          981882,
+          981870,
+          981941
+        ]
+      }
+    },
+    {
+      "species_id": 9223,
+      "latin": "Saxicola rubetra",
+      "name": {
+        "en": "Whinchat"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A bold, white **supercilium** above a dark cheek, and an orange-buff breast"
+        },
+        {
+          "en": "A streaked brown back and a white patch on the wing"
+        },
+        {
+          "en": "White at the base of the tail, and a short, dark tail"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: uncommon to scarce summer visitors, from late April, in rough grassland, with a peak on passage in May and August to September. Declining. Winters in Africa."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A short, scratchy song, with a few notes borrowed from other birds, and a call of “tic-tic”."
+        },
+        "chosen": [
+          {
+            "media_id": 1317721,
+            "xeno_canto": "XC732132",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Hans Matheve"
+          },
+          {
+            "media_id": 1317705,
+            "xeno_canto": "XC1002724",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 138,
+            "background_species": 0,
+            "recordist": "Christian Kerihuel"
+          },
+          {
+            "media_id": 1317704,
+            "xeno_canto": "XC1040356",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 230,
+            "background_species": 0,
+            "recordist": "Chèvremont Fabian"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bird of meadows and rough grass that perches on a stem or a fence post. It is the one you find on a fence in September."
+      },
+      "dont_confuse": {
+        "en": "European Stonechat (this week): a dark head, a white neck patch and a rusty breast."
+      },
+      "media": {
+        "card": [
+          984162,
+          984195,
+          984226
+        ],
+        "quiz": [
+          984165,
+          984112,
+          984161,
+          984171,
+          984174,
+          984160,
+          984125
+        ]
+      }
+    },
+    {
+      "species_id": 9227,
+      "latin": "Saxicola rubicola",
+      "name": {
+        "en": "European Stonechat"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A black head, a white patch on the neck side and a rusty orange breast"
+        },
+        {
+          "en": "A small white patch on the wing and a white patch on the **rump**"
+        },
+        {
+          "en": "Perches on a gorse bush and makes a call like two stones being tapped"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, FR, NL, BE, DE, DK: fairly common to uncommon, resident, on heaths, coasts and gorse. SE, NO, FI: very rare. Many move to the coast in winter. Numbers fall in hard winters."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A hard “tsak-tsak” like two stones being knocked together, and a high, scratchy song."
+        },
+        "chosen": [
+          {
+            "media_id": 1317762,
+            "xeno_canto": "XC1001029",
+            "type": "alarm call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 180,
+            "background_species": 5,
+            "recordist": "João Tomás"
+          },
+          {
+            "media_id": 1317753,
+            "xeno_canto": "XC1068179",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 69,
+            "background_species": 0,
+            "recordist": "Esperanza Poveda"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A heath and coast bird that sits on top of a gorse bush. The male's black head and white neck patch are distinct."
+      },
+      "dont_confuse": {
+        "en": "Whinchat (this week): a strong eyebrow and no white neck patch."
+      },
+      "media": {
+        "card": [
+          984547,
+          984548,
+          984556
+        ],
+        "quiz": [
+          984549,
+          984524,
+          984553,
+          984623,
+          984527,
+          984571,
+          984558,
+          984616
+        ]
+      }
+    },
+    {
+      "species_id": 9250,
+      "latin": "Oenanthe oenanthe",
+      "name": {
+        "en": "Northern Wheatear"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A grey back, a black mask and a white **supercilium**"
+        },
+        {
+          "en": "A white **rump** and a black T on the tail, in flight"
+        },
+        {
+          "en": "Runs and bobs on the ground, and flies low from rock to rock"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, SE, FI, DK: fairly common on moors and coastal grassland, from March. NL, BE, DE, FR: scarce, on passage in April to May and August to October. Winters in the Sahel, with some of the longest migrations of any songbird."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A short, scratchy song with a rattle, and a hard “chak-chak”."
+        },
+        "chosen": [
+          {
+            "media_id": 1318136,
+            "xeno_canto": "XC809903",
+            "type": "call, Ocean",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 69,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          },
+          {
+            "media_id": 1318131,
+            "xeno_canto": "XC942272",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 219,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          },
+          {
+            "media_id": 1318141,
+            "xeno_canto": "XC724009",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Camille Monnet"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "One of the first spring migrants, often seen on coastal fields in late March. The white rump is the sign."
+      },
+      "dont_confuse": {
+        "en": "Northern Wheatear female: a duller brown and buff, with the same rump."
+      },
+      "media": {
+        "card": [
+          1345797,
+          1345937,
+          1345847
+        ],
+        "quiz": [
+          1345832,
+          1345838,
+          1345846,
+          987429,
+          1345949,
+          987422,
+          1345942
+        ]
+      }
+    },
+    {
+      "species_id": 8949,
+      "latin": "Muscicapa striata",
+      "name": {
+        "en": "Spotted Flycatcher"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Grey-brown, with a streaked crown and a streaked breast"
+        },
+        {
+          "en": "Sits upright on an open perch, and sallies out for flies"
+        },
+        {
+          "en": "A plain face with a big dark eye, and a short, straight bill"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: uncommon to fairly common summer visitors, from mid-May to September, in gardens, parks and woods. Declining. A late migrant, arriving in May."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A thin, high “tzee” call, and a very short, squeaky song."
+        },
+        "chosen": [
+          {
+            "media_id": 1314173,
+            "xeno_canto": "XC1014948",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "Lars Edenius",
+            "hidden_locally": true
+          },
+          {
+            "media_id": 1314178,
+            "xeno_canto": "XC993955",
+            "type": "song",
+            "country": "France",
+            "quality": "B",
+            "seconds": 38,
+            "background_species": 4,
+            "recordist": "Olivier SWIFT",
+            "hidden_locally": true
+          },
+          {
+            "media_id": 1314167,
+            "xeno_canto": "XC1027523",
+            "type": "alarm call",
+            "country": "Finland",
+            "quality": "A",
+            "seconds": 37,
+            "background_species": 1,
+            "recordist": "Miika Silfverberg",
+            "hidden_locally": true
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It sits on a perch and flies out, catches a fly and returns to the same perch. Small and quiet, and not spotted."
+      },
+      "dont_confuse": {
+        "en": "European Pied Flycatcher (this week): a black-and-white male, and a dark brown female with white wing patches."
+      },
+      "media": {
+        "card": [
+          958728,
+          958694,
+          958703
+        ],
+        "quiz": [
+          958714,
+          958741,
+          958717,
+          958748,
+          958604
+        ]
+      }
+    },
+    {
+      "species_id": 9179,
+      "latin": "Ficedula hypoleuca",
+      "name": {
+        "en": "European Pied Flycatcher"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A black back and white underparts, with a white forehead patch"
+        },
+        {
+          "en": "A big, white **wing panel**, and white outer tail feathers"
+        },
+        {
+          "en": "Nests in tree holes and nest boxes in old oak woods"
+        }
+      ],
+      "where_when": {
+        "en": "UK (west and north), DE, NL, BE, FR, DK, SE, FI, NO: uncommon to common summer visitors, from mid-April. IE: rare. A migrant to West Africa. Passage in the coast in autumn."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A short, sweet, repeated song with a clear, rhythmic “tsee-tsee-tsee-tsee”, and a sharp “whit” call."
+        },
+        "chosen": [
+          {
+            "media_id": 1317061,
+            "xeno_canto": "XC1032384",
+            "type": "alarm call, \"Pinch\" call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 1,
+            "recordist": "João Ferreira Tomás"
+          },
+          {
+            "media_id": 1317075,
+            "xeno_canto": "XC991541",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "David Pennington"
+          },
+          {
+            "media_id": 1317074,
+            "xeno_canto": "XC992746",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 69,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A woodland bird that often nests in boxes. Males in spring are clear, but in autumn all birds are brown."
+      },
+      "dont_confuse": {
+        "en": "Spotted Flycatcher (this week): grey-brown and streaky, and perching upright."
+      },
+      "media": {
+        "card": [
+          979488,
+          979471,
+          979573
+        ],
+        "quiz": [
+          979490,
+          979435,
+          979485,
+          979451,
+          979487,
+          979443,
+          979572
+        ]
+      }
+    },
+    {
+      "species_id": 8932,
+      "latin": "Turdus torquatus",
+      "name": {
+        "en": "Ring Ouzel"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A black thrush with a bold white **gorget** on the breast"
+        },
+        {
+          "en": "A pale wing panel on the folded wing, and a yellow bill"
+        },
+        {
+          "en": "A wary bird of uplands, rocky slopes and berry bushes"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NO, SE: scarce, on high ground and moors in summer, from April. FR, DE, NL, BE, DK, IE: scarce on passage, in April and from September to October, often in berry bushes. FI: rare."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A short, loud, piping song of two or three repeated notes, and a rattling “tac-tac-tac” call."
+        },
+        "chosen": [
+          {
+            "media_id": 1313924,
+            "xeno_canto": "XC989587",
+            "type": "alarm call, call, flight call, various calls",
+            "country": "France",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1313923,
+            "xeno_canto": "XC990710",
+            "type": "call, song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 149,
+            "background_species": 0,
+            "recordist": "Ulf Elman"
+          },
+          {
+            "media_id": 1313922,
+            "xeno_canto": "XC1075167",
+            "type": "alarm call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Romuald Mikusek"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A mountain blackbird. On passage in autumn it stops at the coast to feed on hawthorn and rowan berries."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Blackbird (beginners): all black, a yellow eye ring, and no white bib."
+      },
+      "media": {
+        "card": [
+          956587,
+          956610,
+          956638
+        ],
+        "quiz": [
+          956601,
+          956589,
+          956604,
+          956599,
+          956606,
+          956630
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 9227,
+    "species_ids": [
+      9223,
+      9227
+    ],
+    "title": {
+      "en": "Whinchat or Stonechat?"
+    },
+    "text": {
+      "en": "Look at the head. A Whinchat has a bold white eyebrow above a dark cheek and no black head. A Stonechat has a black head (male) with a white patch on the neck side and a rusty breast. A Whinchat is a summer visitor and a Stonechat is resident, so the season helps too."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      24,
+      27,
+      28
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 5,
+      "photo_sound": 4,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Look for a Whinchat on a fence in May or September in rough grassland. In April, check a heath or a coast for a Wheatear and a Stonechat. Try to find each one by its habit: perching in the open."
+  },
+  "next": {
+    "en": "Next week is the review of block 6: field birds."
+  },
+  "flow": [
+    "intro",
+    "bird:9203",
+    "bird:9207",
+    "bird:9223",
+    "bird:9227",
+    "bird:9250",
+    "bird:8949",
+    "bird:9179",
+    "bird:8932",
+    "quiz",
+    "done"
+  ]
+}

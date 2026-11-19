@@ -1,0 +1,949 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 34,
+  "slug": "southern-overshoots-and-autumn-falls",
+  "part": 7,
+  "kind": "species",
+  "season": "spring",
+  "minutes": 22,
+  "title": {
+    "en": "Southern overshoots and autumn falls"
+  },
+  "subtitle": {
+    "en": "Hoopoe, Bee-eater, Woodchat Shrike, Squacco Heron, Glossy Ibis, Subalpine Warbler, Rosefinch and Wryneck"
+  },
+  "intro": {
+    "en": "When a warm spell and south winds arrive in April and May, a few birds from the Mediterranean fly past their breeding grounds and arrive on the coasts of north-west Europe. These are 'overshoots'. Hoopoes, Bee-eaters, Woodchat Shrikes and Subalpine Warblers are the best-known, and each year a handful appear in southern England, the Netherlands and Denmark. Some of them stay to breed in a warm year.\n\nIn autumn the pattern is different: east winds and low cloud in September bring a 'fall' of migrants from Scandinavia: thousands of thrushes, warblers and flycatchers on the east coast overnight. Rosefinches and Wrynecks are two birds that turn up in falls.\n\nBoth are a matter of weather. Check the forecast, and go to the coast the morning after."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "crest"
+      },
+      "explain": {
+        "en": "A tuft of long feathers on the head. A Hoopoe has a large, fan-shaped one."
+      }
+    },
+    {
+      "term": {
+        "en": "moustache"
+      },
+      "explain": {
+        "en": "A stripe on the side of the throat. A Subalpine Warbler male has a white one."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 3256,
+      "latin": "Upupa epops",
+      "name": {
+        "en": "Common Hoopoe"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Pinkish-cinnamon, with a long, curved bill and a fan-shaped **crest**"
+        },
+        {
+          "en": "Boldly striped black-and-white wings and tail"
+        },
+        {
+          "en": "Probes the ground on a lawn, with a bobbing, undulating flight"
+        }
+      ],
+      "where_when": {
+        "en": "FR: fairly common breeder, April to September. NL, BE, DE, DK, UK: rare overshoots in March to May and in autumn. IE, NO, SE, FI: rare to very rare. A bird that can turn up in a garden for a day or two."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, deep, far-carrying “hoop-hoop-hoop”, three notes."
+        },
+        "chosen": [
+          {
+            "media_id": null,
+            "xeno_canto": "XC793074",
+            "type": "call, raspy call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza",
+            "needs_import": true
+          },
+          {
+            "media_id": null,
+            "xeno_canto": "XC681365",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 453,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen",
+            "needs_import": true
+          },
+          {
+            "media_id": null,
+            "xeno_canto": "XC917761",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 41,
+            "background_species": 0,
+            "recordist": "Regina Eidner",
+            "needs_import": true
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 0
+      },
+      "note": {
+        "en": "Probably the most obvious of all overshoots. A bird that stands on a lawn is an event."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Jay (beginners): a crest-less, pink-brown bird with blue wing patches."
+      },
+      "media": {
+        "card": [
+          467469,
+          467522,
+          467403
+        ],
+        "quiz": [
+          467514,
+          467466,
+          467451,
+          467456,
+          467437,
+          467399,
+          467431
+        ]
+      }
+    },
+    {
+      "species_id": 3493,
+      "latin": "Merops apiaster",
+      "name": {
+        "en": "European Bee-eater"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Blue underparts, chestnut crown and back, and a golden-yellow throat"
+        },
+        {
+          "en": "Long, pointed wings and a slender, curved bill"
+        },
+        {
+          "en": "Hawks insects from a wire or a branch, in groups"
+        }
+      ],
+      "where_when": {
+        "en": "FR: fairly common breeder in the south, April to September. NL, BE, DE, DK, UK: rare overshoots in May and June, with a few breeding attempts. IE, NO, SE, FI: very rare. A bird that can arrive in a flock."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A rolling, liquid “prrip-prrip”, often heard before the bird is seen."
+        },
+        "chosen": [
+          {
+            "media_id": 1234821,
+            "xeno_canto": "XC910218",
+            "type": "flight call",
+            "country": "Italy",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Gianluca Congi"
+          },
+          {
+            "media_id": 1234815,
+            "xeno_canto": "XC919762",
+            "type": "flight call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 1,
+            "recordist": "Romuald Mikusek"
+          },
+          {
+            "media_id": 1234822,
+            "xeno_canto": "XC908887",
+            "type": "call, flight call",
+            "country": "Italy",
+            "quality": "A",
+            "seconds": 254,
+            "background_species": 4,
+            "recordist": "Francesco Sottile"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bird of unbelievable colour that you hear first. It is regular in small flocks that stay a day or two."
+      },
+      "dont_confuse": {
+        "en": "Common Kingfisher (beginners): a blue back with orange underparts, and a long, dagger-shaped bill."
+      },
+      "media": {
+        "card": [
+          492601,
+          492594,
+          492484
+        ],
+        "quiz": [
+          492501,
+          492600,
+          492506,
+          492504,
+          492478
+        ]
+      }
+    },
+    {
+      "species_id": 6869,
+      "latin": "Lanius senator",
+      "name": {
+        "en": "Woodchat Shrike"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A chestnut cap and nape, a black mask and a white shoulder patch"
+        },
+        {
+          "en": "White underparts and a black back with white at the base of the tail"
+        },
+        {
+          "en": "Sits upright on a bush, scanning for insects"
+        }
+      ],
+      "where_when": {
+        "en": "FR: scarce breeder in the south. NL, BE, DE, DK, UK: rare overshoots, in April to June, and a few in autumn. IE, NO, SE, FI: very rare. A bird that is easy to find when it sits in the open."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, harsh “kwik”, and a soft, warbling song."
+        },
+        "chosen": [
+          {
+            "media_id": 1284135,
+            "xeno_canto": "XC736008",
+            "type": "alarm call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 80,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          },
+          {
+            "media_id": 1284125,
+            "xeno_canto": "XC834425",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Esperanza Poveda"
+          },
+          {
+            "media_id": 1284124,
+            "xeno_canto": "XC839897",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 90,
+            "background_species": 0,
+            "recordist": "Corentin Rivière"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bright, striking shrike that turns up almost every spring. Juveniles in autumn are scaly brown-grey."
+      },
+      "dont_confuse": {
+        "en": "Red-backed Shrike (week 38): a grey head and a black mask, and a chestnut back."
+      },
+      "media": {
+        "card": [
+          776694,
+          776791,
+          776715
+        ],
+        "quiz": [
+          776761,
+          776732,
+          776790,
+          776733,
+          776742,
+          776717,
+          776746
+        ]
+      }
+    },
+    {
+      "species_id": 2640,
+      "latin": "Ardeola ralloides",
+      "name": {
+        "en": "Squacco Heron"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A small, buff-brown heron, streaked, with a short neck"
+        },
+        {
+          "en": "In flight, bright white wings appear, like a pale butterfly"
+        },
+        {
+          "en": "A thin yellow bill with a dark tip, and a hunched posture"
+        }
+      ],
+      "where_when": {
+        "en": "FR: scarce summer visitor in the south, April to September. NL, BE, DE, DK, UK: very rare overshoots in May and June. IE, NO, SE, FI: almost never. A bird that can sit for hours, hidden in the reeds."
+      },
+      "where_data": {
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, harsh croak, “kra”, usually silent."
+        },
+        "chosen": [
+          {
+            "media_id": 1224877,
+            "xeno_canto": "XC577793",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "Cedric Mroczko"
+          },
+          {
+            "media_id": 1224874,
+            "xeno_canto": "XC800189",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 11,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1224875,
+            "xeno_canto": "XC749814",
+            "type": "call",
+            "country": "Portugal",
+            "quality": "A",
+            "seconds": 4,
+            "background_species": 0,
+            "recordist": "Jorge Leitão"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A hidden bird, until it flies and the white wings flash. A small, buff bird crouched at the edge of a pond."
+      },
+      "dont_confuse": {
+        "en": "Little Egret (beginners): all white, with a long black bill and black legs."
+      },
+      "media": {
+        "card": [
+          397911,
+          397935,
+          397922
+        ],
+        "quiz": [
+          397834,
+          397917,
+          397942,
+          397974,
+          397902,
+          397975,
+          397824,
+          397933
+        ]
+      }
+    },
+    {
+      "species_id": 2663,
+      "latin": "Plegadis falcinellus",
+      "name": {
+        "en": "Glossy Ibis"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Dark, with a dull, glossy sheen, chestnut and green in good light"
+        },
+        {
+          "en": "A long, downcurved bill and long legs, and a slim, curved shape"
+        },
+        {
+          "en": "In flight: a neck held straight out, and a flap-and-glide action"
+        }
+      ],
+      "where_when": {
+        "en": "FR: uncommon, breeding in the south. UK, NL, BE, DE, DK, IE: rare but increasing, mostly from April to October, with regular winter flocks in the UK and IE. SE, NO, FI: very rare. A bird that is spreading north."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A deep, grunting “graaa”, hoarse and croaking."
+        },
+        "chosen": [
+          {
+            "media_id": 1225124,
+            "xeno_canto": "XC749206",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 106,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1225126,
+            "xeno_canto": "XC632947",
+            "type": "call, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 0,
+            "recordist": "Charlie Bodin"
+          },
+          {
+            "media_id": 1225131,
+            "xeno_canto": "XC145799",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Paul Marvin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Not so long ago a very rare bird; now flocks overwinter in Ireland and England, and birds breed in the UK."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Curlew (beginners): a brown, streaked bird with a long, curved bill."
+      },
+      "media": {
+        "card": [
+          401685,
+          401717,
+          401741
+        ],
+        "quiz": [
+          401617,
+          401640,
+          401625,
+          401734,
+          401683,
+          401716,
+          401711
+        ]
+      }
+    },
+    {
+      "species_id": 7983,
+      "latin": "Curruca cantillans",
+      "name": {
+        "en": "Eastern Subalpine Warbler"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "Slate-grey above, with brick-pink throat and breast"
+        },
+        {
+          "en": "A bold white **moustache** and a red eye ring"
+        },
+        {
+          "en": "A long, dark tail with white outer feathers, cocked and flicked"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DE, DK, NO, SE: rare overshoots, in April and May, and a few in autumn. FR: uncommon in the south. BE, FI, IE: very rare. A bird of Mediterranean scrub that turns up on the east and south coasts."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A dry, ticking “tek-tek” like a Stonechat, and a fast, rattling song."
+        },
+        "chosen": [
+          {
+            "media_id": 1300705,
+            "xeno_canto": "XC561056",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 70,
+            "background_species": 0,
+            "recordist": "François Grimal"
+          },
+          {
+            "media_id": 1300706,
+            "xeno_canto": "XC559444",
+            "type": "song",
+            "country": "Italy",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Gianluca Congi"
+          },
+          {
+            "media_id": 1300708,
+            "xeno_canto": "XC476499",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 100,
+            "background_species": 1,
+            "recordist": "Patrik Åberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A pale, pink warbler of the spring overshoots. A male is easy; females and autumn birds are paler and harder."
+      },
+      "dont_confuse": {
+        "en": "Common Whitethroat (week 9): a rusty wing panel and a white throat, but no moustache."
+      },
+      "media": {
+        "card": [
+          877034,
+          877074,
+          877109
+        ],
+        "quiz": [
+          877026,
+          877113,
+          877069,
+          877068,
+          877108,
+          877100,
+          877013
+        ]
+      }
+    },
+    {
+      "species_id": 10016,
+      "latin": "Carpodacus erythrinus",
+      "name": {
+        "en": "Common Rosefinch"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "look_for": [
+        {
+          "en": "A bright raspberry-red head, breast and rump on a brown back"
+        },
+        {
+          "en": "A stout, short bill and a plain, round head"
+        },
+        {
+          "en": "In autumn, most birds are streaked olive-brown with a big, dark eye"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO, DE, DK, NL: uncommon to common breeders in the east and north, from May. UK, BE, FR, IE: rare in spring and in autumn falls. A bird that is spreading west."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A loud, whistled, rising “pleased to meet you!”, and a clear “too-ee” call."
+        },
+        "chosen": [
+          {
+            "media_id": 1327219,
+            "xeno_canto": "XC916112",
+            "type": "call, song",
+            "country": "China",
+            "quality": "A",
+            "seconds": 48,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1327224,
+            "xeno_canto": "XC912797",
+            "type": "song",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 58,
+            "background_species": 0,
+            "recordist": "Hans Matheve"
+          },
+          {
+            "media_id": 1327223,
+            "xeno_canto": "XC913323",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 37,
+            "background_species": 0,
+            "recordist": "Lennart Jeppsson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A male in spring is a spectacular red bird. In autumn, the plain, big-eyed young birds in a fall are harder to find."
+      },
+      "dont_confuse": {
+        "en": "House Sparrow (beginners): no red, a grey crown and a black bib."
+      },
+      "media": {
+        "card": [
+          1058795,
+          1058843,
+          1058789
+        ],
+        "quiz": [
+          1058799,
+          1058772,
+          1058788,
+          1058782,
+          1058842,
+          1058892,
+          1058786
+        ]
+      }
+    },
+    {
+      "species_id": 3716,
+      "latin": "Jynx torquilla",
+      "name": {
+        "en": "Eurasian Wryneck"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A bark-patterned grey-brown plumage, like a nightjar's, with a dark central stripe"
+        },
+        {
+          "en": "A woodpecker that does not climb: it sits on the ground, eating ants"
+        },
+        {
+          "en": "Twists its head round like a snake, when disturbed"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO, DE, FR, DK: uncommon to fairly common breeders, from April. NL, BE, UK: rare in spring and in autumn falls (August to September). IE: very rare. A migrant to Africa."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A repeated series of piercing, nasal “quee-quee-quee-quee”, like a small falcon."
+        },
+        "chosen": [
+          {
+            "media_id": 1238404,
+            "xeno_canto": "XC796278",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 129,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1238395,
+            "xeno_canto": "XC919143",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 43,
+            "background_species": 0,
+            "recordist": "Markus Jacobs"
+          },
+          {
+            "media_id": 1238402,
+            "xeno_canto": "XC801185",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bird to find by luck after an autumn east wind: on the ground, in a bramble hedge, in the early morning."
+      },
+      "dont_confuse": {
+        "en": "Great Spotted Woodpecker (beginners): black and white, and climbs on trees."
+      },
+      "media": {
+        "card": [
+          517782,
+          517894,
+          517906
+        ],
+        "quiz": [
+          517851,
+          517826,
+          517811,
+          517822,
+          517793,
+          517908,
+          517780,
+          517897
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 7983,
+    "species_ids": [
+      7983,
+      7984
+    ],
+    "title": {
+      "en": "Subalpine Warbler or Whitethroat?"
+    },
+    "text": {
+      "en": "A male Subalpine Warbler has pink-brick underparts and a bright white moustache with a red eye ring, and a slate-grey back. A Whitethroat has a white throat, a rusty wing panel and a pale eye. The Subalpine is smaller and shorter-tailed."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      29,
+      32,
+      33
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 3,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Watch the weather forecast for south winds in April and May and check a coastal park or scrub the morning after. In September, with east winds and low cloud, go to the nearest coast at dawn and see what has arrived overnight."
+  },
+  "next": {
+    "en": "Next week is the review of block 7: strays."
+  },
+  "flow": [
+    "intro",
+    "bird:3256",
+    "bird:3493",
+    "bird:6869",
+    "bird:2640",
+    "bird:2663",
+    "bird:7983",
+    "bird:10016",
+    "bird:3716",
+    "quiz",
+    "done"
+  ]
+}

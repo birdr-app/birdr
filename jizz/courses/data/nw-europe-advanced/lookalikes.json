@@ -1,0 +1,943 @@
+{
+ "about": "Groups of birds in this course that are easily mixed up, from beginner pairs to advanced look-alikes. The quiz offers them as wrong answers for each other first, once both have been taught. Groups marked (same sex) or (same plumage) are only meant for the matching female or eclipse cards. Names are only for reading; the ids count.",
+ "groups": [
+  {
+   "name": "small gulls",
+   "ids": [
+    2241,
+    2261,
+    2228,
+    2253,
+    2230,
+    2263,
+    2235,
+    2233
+   ]
+  },
+  {
+   "name": "black-headed, Mediterranean and Little Gull",
+   "ids": [
+    2241,
+    2253,
+    2228
+   ]
+  },
+  {
+   "name": "common, ring-billed and herring-type gulls",
+   "ids": [
+    2261,
+    2263,
+    11038
+   ]
+  },
+  {
+   "name": "big gulls",
+   "ids": [
+    11038,
+    2269,
+    2266,
+    2273,
+    2271
+   ]
+  },
+  {
+   "name": "pale-headed big gulls",
+   "ids": [
+    2269,
+    2266,
+    11038
+   ]
+  },
+  {
+   "name": "black-backed gulls",
+   "ids": [
+    2273,
+    2271
+   ]
+  },
+  {
+   "name": "white-winged gulls",
+   "ids": [
+    2277,
+    2272
+   ]
+  },
+  {
+   "name": "gulls at sea in autumn",
+   "ids": [
+    2230,
+    2233,
+    2228,
+    2195
+   ]
+  },
+  {
+   "name": "common, Arctic and Roseate Tern",
+   "ids": [
+    2314,
+    2310,
+    2317
+   ]
+  },
+  {
+   "name": "big terns",
+   "ids": [
+    2320,
+    2301,
+    2314
+   ]
+  },
+  {
+   "name": "small and marsh terns",
+   "ids": [
+    2291,
+    2305,
+    2306
+   ]
+  },
+  {
+   "name": "chiffchaff and willow warbler",
+   "ids": [
+    7854,
+    7851,
+    7855
+   ]
+  },
+  {
+   "name": "leaf warblers",
+   "ids": [
+    7854,
+    7851,
+    7829,
+    7855,
+    7830
+   ]
+  },
+  {
+   "name": "crests",
+   "ids": [
+    8443,
+    8446
+   ]
+  },
+  {
+   "name": "tiny striped leaf warblers",
+   "ids": [
+    7834,
+    7838,
+    7835,
+    8443
+   ]
+  },
+  {
+   "name": "Siberian leaf warblers",
+   "ids": [
+    7834,
+    7838,
+    7835,
+    7882,
+    7875,
+    7843,
+    7847
+   ]
+  },
+  {
+   "name": "greenish, arctic and willow warblers",
+   "ids": [
+    7875,
+    7882,
+    7851
+   ]
+  },
+  {
+   "name": "brown skulking warblers",
+   "ids": [
+    7843,
+    7847,
+    7854
+   ]
+  },
+  {
+   "name": "reed warblers",
+   "ids": [
+    7471,
+    7470,
+    7468,
+    7465,
+    7479
+   ]
+  },
+  {
+   "name": "reed and marsh warbler",
+   "ids": [
+    7471,
+    7470
+   ]
+  },
+  {
+   "name": "marsh and Blyth's reed warbler",
+   "ids": [
+    7470,
+    7468
+   ]
+  },
+  {
+   "name": "streaked reedbed warblers",
+   "ids": [
+    7464,
+    7460,
+    7516
+   ]
+  },
+  {
+   "name": "tree warblers",
+   "ids": [
+    7459,
+    7458,
+    7450,
+    7452
+   ]
+  },
+  {
+   "name": "booted and olivaceous warblers",
+   "ids": [
+    7450,
+    7452,
+    7465
+   ]
+  },
+  {
+   "name": "sylvia warblers",
+   "ids": [
+    7958,
+    7957,
+    7968,
+    7984,
+    7983
+   ]
+  },
+  {
+   "name": "small stints and sandpipers",
+   "ids": [
+    2149,
+    2153,
+    2143,
+    2141,
+    2148,
+    2156
+   ]
+  },
+  {
+   "name": "stints",
+   "ids": [
+    2153,
+    2143,
+    2158
+   ]
+  },
+  {
+   "name": "American small sandpipers",
+   "ids": [
+    2154,
+    2152,
+    2158,
+    2153,
+    2156
+   ]
+  },
+  {
+   "name": "dunlin and curlew sandpiper",
+   "ids": [
+    2149,
+    2141,
+    2139
+   ]
+  },
+  {
+   "name": "pectoral, buff-breasted sandpiper and ruff",
+   "ids": [
+    2156,
+    2147,
+    2138
+   ]
+  },
+  {
+   "name": "shanks",
+   "ids": [
+    2122,
+    2126,
+    2127,
+    2120,
+    2123
+   ]
+  },
+  {
+   "name": "green, wood and common sandpiper",
+   "ids": [
+    2116,
+    2121,
+    2114
+   ]
+  },
+  {
+   "name": "ringed plovers",
+   "ids": [
+    1987,
+    1995,
+    2044
+   ]
+  },
+  {
+   "name": "big plovers",
+   "ids": [
+    1977,
+    1978,
+    1979
+   ]
+  },
+  {
+   "name": "golden plover and dotterel",
+   "ids": [
+    1978,
+    1985
+   ]
+  },
+  {
+   "name": "godwits",
+   "ids": [
+    2072,
+    2071
+   ]
+  },
+  {
+   "name": "whimbrel and curlew",
+   "ids": [
+    11213,
+    2070
+   ]
+  },
+  {
+   "name": "phalaropes",
+   "ids": [
+    2112,
+    2111,
+    2110
+   ]
+  },
+  {
+   "name": "snipe-like waders",
+   "ids": [
+    2102,
+    2078,
+    2077,
+    2080
+   ]
+  },
+  {
+   "name": "rocky-shore waders",
+   "ids": [
+    2150,
+    2133
+   ]
+  },
+  {
+   "name": "black-and-white long-legged waders",
+   "ids": [
+    1955,
+    1960
+   ]
+  },
+  {
+   "name": "pratincoles",
+   "ids": [
+    2193,
+    2192
+   ]
+  },
+  {
+   "name": "shearwaters",
+   "ids": [
+    2478,
+    2480,
+    2474,
+    2471,
+    11039
+   ]
+  },
+  {
+   "name": "shearwater and fulmar",
+   "ids": [
+    2405,
+    2478,
+    11038
+   ]
+  },
+  {
+   "name": "manx and balearic shearwater",
+   "ids": [
+    2478,
+    2480
+   ]
+  },
+  {
+   "name": "storm petrels",
+   "ids": [
+    2385,
+    2388
+   ]
+  },
+  {
+   "name": "skuas",
+   "ids": [
+    2198,
+    2196,
+    2197,
+    2195
+   ]
+  },
+  {
+   "name": "skuas and big gulls",
+   "ids": [
+    2198,
+    2271,
+    2273
+   ]
+  },
+  {
+   "name": "auks",
+   "ids": [
+    2221,
+    2217,
+    2204,
+    2214,
+    2219
+   ]
+  },
+  {
+   "name": "guillemot and razorbill",
+   "ids": [
+    2221,
+    2217
+   ]
+  },
+  {
+   "name": "divers",
+   "ids": [
+    2332,
+    2333,
+    2335
+   ]
+  },
+  {
+   "name": "scoters",
+   "ids": [
+    216,
+    213,
+    212
+   ]
+  },
+  {
+   "name": "eiders",
+   "ids": [
+    210,
+    209
+   ]
+  },
+  {
+   "name": "shag and cormorant",
+   "ids": [
+    2561,
+    2552
+   ]
+  },
+  {
+   "name": "seaduck and divers offshore",
+   "ids": [
+    218,
+    216,
+    2332,
+    210
+   ]
+  },
+  {
+   "name": "female dabbling ducks (same sex)",
+   "ids": [
+    165,
+    150,
+    152,
+    172,
+    175,
+    140,
+    149
+   ]
+  },
+  {
+   "name": "female mallard and gadwall (same sex)",
+   "ids": [
+    165,
+    150
+   ]
+  },
+  {
+   "name": "female teal and garganey (same sex)",
+   "ids": [
+    175,
+    140
+   ]
+  },
+  {
+   "name": "female wigeon, gadwall and pintail (same sex)",
+   "ids": [
+    152,
+    150,
+    172
+   ]
+  },
+  {
+   "name": "female diving ducks (same sex)",
+   "ids": [
+    202,
+    204,
+    196,
+    198,
+    191,
+    197,
+    220
+   ]
+  },
+  {
+   "name": "female tufted duck, scaup and ring-necked duck (same sex)",
+   "ids": [
+    202,
+    204,
+    197
+   ]
+  },
+  {
+   "name": "female pochard, ferruginous and red-crested (same sex)",
+   "ids": [
+    196,
+    198,
+    191
+   ]
+  },
+  {
+   "name": "eclipse drakes (same plumage)",
+   "ids": [
+    165,
+    149,
+    140,
+    152
+   ]
+  },
+  {
+   "name": "female sawbills (same sex)",
+   "ids": [
+    225,
+    227,
+    222
+   ]
+  },
+  {
+   "name": "grey geese",
+   "ids": [
+    79,
+    81,
+    82,
+    83,
+    80,
+    77
+   ]
+  },
+  {
+   "name": "bean geese",
+   "ids": [
+    81,
+    82
+   ]
+  },
+  {
+   "name": "white-fronted geese",
+   "ids": [
+    79,
+    80
+   ]
+  },
+  {
+   "name": "pink-footed and bean geese",
+   "ids": [
+    83,
+    82,
+    81
+   ]
+  },
+  {
+   "name": "swans",
+   "ids": [
+    98,
+    97,
+    93
+   ]
+  },
+  {
+   "name": "small geese",
+   "ids": [
+    89,
+    84,
+    80
+   ]
+  },
+  {
+   "name": "buzzards",
+   "ids": [
+    2944,
+    2942,
+    2722
+   ]
+  },
+  {
+   "name": "harriers",
+   "ids": [
+    2824,
+    2835,
+    2839,
+    2837
+   ]
+  },
+  {
+   "name": "kites",
+   "ids": [
+    2890,
+    2891
+   ]
+  },
+  {
+   "name": "hawks",
+   "ids": [
+    2874,
+    2883
+   ]
+  },
+  {
+   "name": "falcons",
+   "ids": [
+    4015,
+    4000,
+    3999,
+    3980
+   ]
+  },
+  {
+   "name": "hawk-shaped birds",
+   "ids": [
+    2874,
+    1137,
+    4000
+   ]
+  },
+  {
+   "name": "swifts",
+   "ids": [
+    1352,
+    1349
+   ]
+  },
+  {
+   "name": "pipits",
+   "ids": [
+    9892,
+    9894,
+    9899,
+    9898,
+    9897,
+    9872,
+    9895
+   ]
+  },
+  {
+   "name": "meadow and tree pipit",
+   "ids": [
+    9892,
+    9894
+   ]
+  },
+  {
+   "name": "rock and water pipit",
+   "ids": [
+    9899,
+    9898
+   ]
+  },
+  {
+   "name": "richard's and olive-backed pipit",
+   "ids": [
+    9872,
+    9895,
+    9894
+   ]
+  },
+  {
+   "name": "wagtails",
+   "ids": [
+    9862,
+    9861,
+    9869
+   ]
+  },
+  {
+   "name": "yellow wagtails",
+   "ids": [
+    9862,
+    9861
+   ]
+  },
+  {
+   "name": "larks",
+   "ids": [
+    7249,
+    7240,
+    7219
+   ]
+  },
+  {
+   "name": "buntings of the beach",
+   "ids": [
+    10164,
+    10160,
+    7219
+   ]
+  },
+  {
+   "name": "buntings",
+   "ids": [
+    10171,
+    10178,
+    10200,
+    10180,
+    10202,
+    10203
+   ]
+  },
+  {
+   "name": "reed, little and rustic bunting",
+   "ids": [
+    10200,
+    10202,
+    10203
+   ]
+  },
+  {
+   "name": "redstarts",
+   "ids": [
+    9203,
+    9207
+   ]
+  },
+  {
+   "name": "whinchat, stonechat and wheatear",
+   "ids": [
+    9223,
+    9227,
+    9250
+   ]
+  },
+  {
+   "name": "whinchat and stonechat",
+   "ids": [
+    9223,
+    9227
+   ]
+  },
+  {
+   "name": "flycatchers",
+   "ids": [
+    8949,
+    9179,
+    9177
+   ]
+  },
+  {
+   "name": "black thrushes",
+   "ids": [
+    8932,
+    8861
+   ]
+  },
+  {
+   "name": "bluetail and robin-like chats",
+   "ids": [
+    11186,
+    9078,
+    9203
+   ]
+  },
+  {
+   "name": "accentor and dunnock",
+   "ids": [
+    9805,
+    9810
+   ]
+  },
+  {
+   "name": "crakes and rails",
+   "ids": [
+    1773,
+    1836,
+    1781,
+    502
+   ]
+  },
+  {
+   "name": "corncrake and quail",
+   "ids": [
+    1781,
+    502
+   ]
+  },
+  {
+   "name": "night birds",
+   "ids": [
+    1220,
+    2080,
+    3152,
+    3136
+   ]
+  },
+  {
+   "name": "owls",
+   "ids": [
+    3152,
+    3136
+   ]
+  },
+  {
+   "name": "shrikes",
+   "ids": [
+    6853,
+    6840,
+    6869,
+    6843
+   ]
+  },
+  {
+   "name": "brown shrikes",
+   "ids": [
+    6840,
+    6843
+   ]
+  },
+  {
+   "name": "winter finches",
+   "ids": [
+    9932,
+    9925,
+    10115,
+    10116,
+    11200,
+    10141
+   ]
+  },
+  {
+   "name": "big-billed finches",
+   "ids": [
+    10124,
+    9974,
+    10072
+   ]
+  },
+  {
+   "name": "pink, red and rosefinches",
+   "ids": [
+    10016,
+    11200,
+    10124
+   ]
+  },
+  {
+   "name": "marsh, willow and coal tit",
+   "ids": [
+    7110,
+    7113,
+    7094,
+    7132
+   ]
+  },
+  {
+   "name": "marsh and willow tit",
+   "ids": [
+    7110,
+    7113
+   ]
+  },
+  {
+   "name": "tits with a crest or a white nape",
+   "ids": [
+    7100,
+    7094
+   ]
+  },
+  {
+   "name": "treecreepers",
+   "ids": [
+    8477,
+    8481
+   ]
+  },
+  {
+   "name": "woodpeckers",
+   "ids": [
+    3818,
+    3788,
+    3918,
+    3813
+   ]
+  },
+  {
+   "name": "spotted woodpeckers",
+   "ids": [
+    3818,
+    3788,
+    3813
+   ]
+  },
+  {
+   "name": "southern overshoots",
+   "ids": [
+    3256,
+    3493,
+    6869,
+    2640
+   ]
+  },
+  {
+   "name": "small herons and egrets",
+   "ids": [
+    2640,
+    2630
+   ]
+  },
+  {
+   "name": "ibis and curlew",
+   "ids": [
+    2663,
+    2070
+   ]
+  },
+  {
+   "name": "overshoot warblers",
+   "ids": [
+    7983,
+    7984,
+    7968
+   ]
+  },
+  {
+   "name": "rare shrike-like and chat-like strays",
+   "ids": [
+    6843,
+    9177,
+    11186
+   ]
+  }
+ ]
+}

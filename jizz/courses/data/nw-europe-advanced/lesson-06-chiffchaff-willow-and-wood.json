@@ -1,0 +1,921 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 6,
+  "slug": "chiffchaff-willow-and-wood",
+  "part": 2,
+  "kind": "species",
+  "season": "spring",
+  "minutes": 20,
+  "title": {
+    "en": "Chiffchaff, Willow and Wood"
+  },
+  "subtitle": {
+    "en": "The classic leaf warblers, and the tiny birds that get mistaken for them"
+  },
+  "intro": {
+    "en": "You know a Chiffchaff from a Willow Warbler by ear. Now we add the eye, and the birds that complicate things. Leaf warblers are small, olive and green, and they never keep still. They differ in tiny things: the leg colour, the length of the wing, the strength of the eyebrow, and above all the voice. In the field a lot of them are identified by call alone.\n\nThis lesson has the three \"normal\" leaf warblers: Chiffchaff, Willow Warbler and Wood Warbler, two lookalikes you will meet later in the south (Iberian Chiffchaff and Western Bonelli's Warbler) and the two crests, Goldcrest and Firecrest. They are not leaf warblers, but in the canopy in autumn they are the birds you check twice.\n\nSeason: Chiffchaffs arrive from mid-March, a month before Willow Warblers, and a few spend the winter in the southwest of the UK and in IE. Wood Warblers arrive in late April and May and have gone by August. In autumn the same birds move through again, plus Scandinavian Goldcrests by the thousand in October."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "supercilium"
+      },
+      "explain": {
+        "en": "The \"eyebrow\": the pale stripe above the eye. Its length, colour and width are a main clue in warblers."
+      }
+    },
+    {
+      "term": {
+        "en": "primary projection"
+      },
+      "explain": {
+        "en": "How far the wing tip sticks out beyond the tertials on a resting bird. Long in Willow Warbler, short in Chiffchaff."
+      }
+    },
+    {
+      "term": {
+        "en": "wing panel"
+      },
+      "explain": {
+        "en": "A pale, greenish or yellowish panel on the folded wing, made by the pale edges of the flight feathers."
+      }
+    },
+    {
+      "term": {
+        "en": "crown stripe"
+      },
+      "explain": {
+        "en": "A pale or coloured stripe along the middle of the crown, as in the crests."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 7854,
+      "latin": "Phylloscopus collybita",
+      "name": {
+        "en": "Common Chiffchaff"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Olive-brown above and buff below, with a faint pale **supercilium**"
+        },
+        {
+          "en": "Dark, almost black legs, short **primary projection** and a habit of dipping the tail"
+        },
+        {
+          "en": "Song: a repeated “chiff-chaff”; call: a thin, rising “hweet”"
+        }
+      ],
+      "where_when": {
+        "en": "All ten countries. UK, IE, NL, BE, DE, FR and DK: common summer visitors from mid-March (FR is a winter bird too). FI, SE and NO: fairly common, from April. A few overwinter in the southern UK and IE."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A bouncy “chiff-chaff-chiff-chiff-chaff” in no fixed order, and a thin “hweet” call."
+        },
+        "chosen": [
+          {
+            "media_id": 1298449,
+            "xeno_canto": "XC994607",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 3,
+            "recordist": "João Tomás"
+          },
+          {
+            "media_id": 1298458,
+            "xeno_canto": "XC985808",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 73,
+            "background_species": 0,
+            "recordist": "Abe Bakker"
+          },
+          {
+            "media_id": 1298460,
+            "xeno_canto": "XC985275",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 127,
+            "background_species": 0,
+            "recordist": "Olivier SWIFT"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The first migrant warbler in spring, and the one you hear in winter in a sewage works in Cornwall. Birds in the east may be Siberian Chiffchaffs, paler and buff, with a very different call."
+      },
+      "dont_confuse": {
+        "en": "Willow Warbler (this week): paler legs, a longer wing, a clearer yellow eyebrow and a falling song."
+      },
+      "media": {
+        "card": [
+          865954,
+          866016,
+          866006
+        ],
+        "quiz": [
+          866113,
+          866042,
+          866063,
+          866104,
+          866082,
+          866074,
+          866120
+        ]
+      }
+    },
+    {
+      "species_id": 7851,
+      "latin": "Phylloscopus trochilus",
+      "name": {
+        "en": "Willow Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Clean greenish above and white-yellow below, with a clear yellow-white **supercilium**"
+        },
+        {
+          "en": "Pale brown-pink legs, and a long **primary projection**"
+        },
+        {
+          "en": "Song: a silvery, descending cascade; call: a soft “hoo-eet”"
+        }
+      ],
+      "where_when": {
+        "en": "NO, SE, FI, IE and UK: common summer birds, with declines in southern England. NL, DE, DK: fairly common. BE and FR: uncommon, mostly on passage. Arrives in mid-April and leaves in August and September."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "common",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A sweet, falling phrase that fades at the end, and a soft “hoo-eet”."
+        },
+        "chosen": [
+          {
+            "media_id": 1298389,
+            "xeno_canto": "XC1047057",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 47,
+            "background_species": 2,
+            "recordist": "João Tomás"
+          },
+          {
+            "media_id": 1298398,
+            "xeno_canto": "XC1000141",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "David Pennington"
+          },
+          {
+            "media_id": 1298402,
+            "xeno_canto": "XC989893",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 49,
+            "background_species": 0,
+            "recordist": "Noé Ferrari"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The commonest bird in a Scandinavian forest in May. Its numbers have fallen heavily in southern England in the last thirty years."
+      },
+      "dont_confuse": {
+        "en": "Common Chiffchaff (this week): darker legs, a shorter wing, a duller look and a two-note song."
+      },
+      "media": {
+        "card": [
+          865895,
+          865947,
+          865936
+        ],
+        "quiz": [
+          865934,
+          865949,
+          865951,
+          865946,
+          865950,
+          865933,
+          865912
+        ]
+      }
+    },
+    {
+      "species_id": 7829,
+      "latin": "Phylloscopus sibilatrix",
+      "name": {
+        "en": "Wood Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Bright lemon-yellow throat and breast, sharply cut off from a pure white belly"
+        },
+        {
+          "en": "Strong yellow **supercilium** and a green **wing panel**"
+        },
+        {
+          "en": "Song: a silvery trill that accelerates like a spinning coin; call: a clear “piu”"
+        }
+      ],
+      "where_when": {
+        "en": "DE, SE, FI: uncommon breeding birds in beech and oak woods. UK: a scarce and declining bird of the oak woods in the west and north, from May. NL, BE, DK, NO, FR: rare to scarce. IE: very rare. Arrives in late April and leaves in July and August."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A single note that falls and speeds up into a shivering trill, and a soft, sad “piu, piu”."
+        },
+        "chosen": [
+          {
+            "media_id": 1297963,
+            "xeno_canto": "XC997377",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1297967,
+            "xeno_canto": "XC937151",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 315,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          },
+          {
+            "media_id": 1297969,
+            "xeno_canto": "XC911175",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 37,
+            "background_species": 0,
+            "recordist": "W. Agster"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A wood warbler needs old woods with little undergrowth, and it is declining. The song and the clean white belly are what you look for."
+      },
+      "dont_confuse": {
+        "en": "Willow Warbler (this week): less lemon, no sharp edge to the yellow, and a falling song."
+      },
+      "media": {
+        "card": [
+          863623,
+          863507,
+          863630
+        ],
+        "quiz": [
+          863617,
+          863598,
+          863641,
+          863501,
+          863599,
+          863604,
+          863573
+        ]
+      }
+    },
+    {
+      "species_id": 7855,
+      "latin": "Phylloscopus ibericus",
+      "name": {
+        "en": "Iberian Chiffchaff"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Greener on the back than a Chiffchaff, with a yellower **supercilium** and breast"
+        },
+        {
+          "en": "Dark legs and a short wing, looking like a bright Chiffchaff"
+        },
+        {
+          "en": "Song: a stuttering, more varied “chiff-chiff”, often ending in a short rattle"
+        }
+      ],
+      "where_when": {
+        "en": "FR: breeds in the south-west and passes through on its way north. UK: very rare, in spring, usually singing. Other countries: almost never. It winters in West Africa and arrives in April."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A stuttering, repeated “chip-chip-chip-chiff-chaff” with a rattle at the end."
+        },
+        "chosen": [
+          {
+            "media_id": 1345627,
+            "xeno_canto": "XC1097725",
+            "type": "call",
+            "country": "Portugal",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Jorge Leitão"
+          },
+          {
+            "media_id": 1345637,
+            "xeno_canto": "XC1089131",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Pere Josa"
+          },
+          {
+            "media_id": 1345623,
+            "xeno_canto": "XC1103735",
+            "type": "call, song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 118,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bird to identify by ear, not by sight. In Britain a singing bird in April, with a song that does not match a Chiffchaff's, is the one to record."
+      },
+      "dont_confuse": {
+        "en": "Common Chiffchaff (this week): a duller bird with an unmistakable “chiff-chaff” song."
+      },
+      "media": {
+        "card": [
+          1345613,
+          1345609,
+          1345565
+        ],
+        "quiz": [
+          1345612,
+          1345513,
+          1345589,
+          1345544,
+          1345523,
+          1345476,
+          1345570
+        ]
+      }
+    },
+    {
+      "species_id": 7830,
+      "latin": "Phylloscopus bonelli",
+      "name": {
+        "en": "Western Bonelli's Warbler"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Pale and clean: grey-brown above with a bright green **wing panel**"
+        },
+        {
+          "en": "Very white underparts, with no yellow in the breast and a weak **supercilium**"
+        },
+        {
+          "en": "Song: a dry, quick trill; call: a soft “hu-eet”"
+        }
+      ],
+      "where_when": {
+        "en": "FR: uncommon summer visitor in the south and centre, April to August. DE: very rare. UK, IE, NL, BE, DK, NO, SE, FI: almost never, in spring and autumn, perhaps once or twice a year in the UK."
+      },
+      "where_data": {
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A short, dry trill on one note, like a sewing machine, and a clear two-note call."
+        },
+        "chosen": [
+          {
+            "media_id": 1297979,
+            "xeno_canto": "XC1048995",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 43,
+            "background_species": 4,
+            "recordist": "Jack Berteau"
+          },
+          {
+            "media_id": 1297992,
+            "xeno_canto": "XC919843",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 73,
+            "background_species": 0,
+            "recordist": "Markus Jacobs"
+          },
+          {
+            "media_id": 1297986,
+            "xeno_canto": "XC1008593",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 92,
+            "background_species": 0,
+            "recordist": "Chèvremont Fabian"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A southern bird that, with its pale back and green wing, looks quite different from Willow Warbler. In the UK it is a spring or autumn rarity."
+      },
+      "dont_confuse": {
+        "en": "Willow Warbler (this week): a yellower, darker, more olive look and an eyebrow that is clear."
+      },
+      "media": {
+        "card": [
+          863754,
+          863686,
+          863731
+        ],
+        "quiz": [
+          863749,
+          863719,
+          863780,
+          863712,
+          863664,
+          863705,
+          863789
+        ]
+      }
+    },
+    {
+      "species_id": 8443,
+      "latin": "Regulus regulus",
+      "name": {
+        "en": "Goldcrest"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Tiny, with a golden-orange **crown stripe** bordered with black"
+        },
+        {
+          "en": "A plain face with a big dark eye, and two white wing bars"
+        },
+        {
+          "en": "A very high, thin “si-si-si”, almost too high for older ears"
+        }
+      ],
+      "where_when": {
+        "en": "All ten countries. UK, IE, NL, BE, DE, DK, SE, FI, FR and NO: fairly common, with many more in autumn and winter, when Scandinavian birds arrive. In October, thousands from Scandinavia arrive on the east coast, sometimes landing exhausted."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A very high-pitched, thin “see-see-see” and a rapid, high little song with a flourish at the end."
+        },
+        "chosen": [
+          {
+            "media_id": 1306735,
+            "xeno_canto": "XC520603",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 57,
+            "background_species": 0,
+            "recordist": "Tanguy Loïs"
+          },
+          {
+            "media_id": 1306733,
+            "xeno_canto": "XC569378",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 208,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1306724,
+            "xeno_canto": "XC740238",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The smallest bird in Europe, and it often travels with tits in winter. In autumn, a tree-top full of Goldcrests is a good sign that other rarities are about."
+      },
+      "dont_confuse": {
+        "en": "Common Firecrest (this week): a bold white eyebrow and a black eye-stripe, brighter bronze shoulders."
+      },
+      "media": {
+        "card": [
+          907522,
+          907536,
+          907527
+        ],
+        "quiz": [
+          907570,
+          907612,
+          907553,
+          907600,
+          907541,
+          907568,
+          907556
+        ]
+      }
+    },
+    {
+      "species_id": 8446,
+      "latin": "Regulus ignicapilla",
+      "name": {
+        "en": "Common Firecrest"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A bold white **supercilium** with a black eye-stripe below it"
+        },
+        {
+          "en": "Orange-gold **crown stripe** (male) and a bronze patch on the shoulder"
+        },
+        {
+          "en": "Call: a lower, harder “zit-zit” than the Goldcrest's"
+        }
+      ],
+      "where_when": {
+        "en": "FR: fairly common, resident and migrant. BE and DE: uncommon, spring and autumn. UK: scarce, mostly in autumn, with a few that winter in the south. NL, DK, SE: very rare to rare, on passage. IE, NO and FI: almost never."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A short, thin “zit-zit-zit”, a bit lower and harder than a Goldcrest's, and a song that speeds up."
+        },
+        "chosen": [
+          {
+            "media_id": 1306780,
+            "xeno_canto": "XC1058994",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          },
+          {
+            "media_id": 1306789,
+            "xeno_canto": "XC1032044",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 51,
+            "background_species": 0,
+            "recordist": "bert de bruin"
+          },
+          {
+            "media_id": 1306784,
+            "xeno_canto": "XC1051287",
+            "type": "call, flight call, nocturnal flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Thierry THOMAS"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Very smart: the face looks painted. In the UK it is a scarce bird of south coast woods and gardens in winter."
+      },
+      "dont_confuse": {
+        "en": "Goldcrest (this week): a plain face with no stripes, and a higher call."
+      },
+      "media": {
+        "card": [
+          908032,
+          908036,
+          908022
+        ],
+        "quiz": [
+          908033,
+          908075,
+          908067,
+          908031,
+          908078,
+          908041
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 7851,
+    "species_ids": [
+      7854,
+      7851
+    ],
+    "title": {
+      "en": "Chiffchaff or Willow Warbler?"
+    },
+    "text": {
+      "en": "Voice first: the Chiffchaff says its own name in two notes, the Willow Warbler sings a falling, sweet phrase. Legs: black for Chiffchaff, pale brown for Willow Warbler. Wing: short for Chiffchaff, long for Willow Warbler, so that in the Willow Warbler the tips reach about two-thirds of the way down the tail. Colour: Willow Warbler is cleaner, with a clearer eyebrow."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      1,
+      3,
+      4
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 5,
+      "photo_sound": 4,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In spring, go to a wood or a pit on a calm morning and listen. Try to separate Chiffchaffs from Willow Warblers by song first, then confirm with the legs and the wing. Try this with a friend: one calls the species, the other checks."
+  },
+  "next": {
+    "en": "Next week the autumn lesson: Siberian leaf warblers, the birds that arrive from the east in October."
+  },
+  "flow": [
+    "intro",
+    "bird:7854",
+    "bird:7851",
+    "bird:7829",
+    "bird:7855",
+    "bird:7830",
+    "bird:8443",
+    "bird:8446",
+    "quiz",
+    "done"
+  ]
+}

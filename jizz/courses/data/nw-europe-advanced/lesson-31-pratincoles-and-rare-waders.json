@@ -1,0 +1,848 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 31,
+  "slug": "pratincoles-and-rare-waders",
+  "part": 7,
+  "kind": "species",
+  "season": "autumn",
+  "minutes": 22,
+  "title": {
+    "en": "Pratincoles and rare waders"
+  },
+  "subtitle": {
+    "en": "Collared and Black-winged Pratincole, Stilt, Dotterel and four sandpipers that are not on the usual list"
+  },
+  "intro": {
+    "en": "Not every wader on a muddy edge is a Dunlin. Some of the best birds of a good day are rare waders: a pratincole in a field in May, a Black-winged Stilt on a flooded meadow, a Broad-billed Sandpiper in with the Dunlins. You do not need to be an expert to find one. You need to scan every flock carefully and to know what \"odd\" looks like.\n\nPratincoles are a strange group: waders that hunt insects in the air like a swallow, and run on the ground like a plover. They breed in southern Europe and sometimes overshoot in May and June. The Stilt does the same. The Dotterel is a different story: it is a very tame mountain breeder that stops in the same fields on spring passage, and Dutch birders go to Flevoland to see it each May.\n\nThe three sandpipers (Broad-billed, Marsh and Terek) are scarce passage migrants. We look at the features that separate them from the commoner species you already know."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "forked tail"
+      },
+      "explain": {
+        "en": "A tail with a deep notch in it, like a swallow's. Pratincoles have one, and it shows well in flight."
+      }
+    },
+    {
+      "term": {
+        "en": "underwing"
+      },
+      "explain": {
+        "en": "The underside of the wing. Chestnut in a Collared Pratincole, black in a Black-winged."
+      }
+    },
+    {
+      "term": {
+        "en": "split supercilium"
+      },
+      "explain": {
+        "en": "An eyebrow that forks in front of the eye into two stripes, as in the Broad-billed Sandpiper."
+      }
+    },
+    {
+      "term": {
+        "en": "upturned bill"
+      },
+      "explain": {
+        "en": "A bill that curves upwards, like the Terek Sandpiper's."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2193,
+      "latin": "Glareola pratincola",
+      "name": {
+        "en": "Collared Pratincole"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Brown-grey, with a creamy throat bordered by a thin black line"
+        },
+        {
+          "en": "A deeply **forked tail**, a white rump and white trailing edge to the inner wing"
+        },
+        {
+          "en": "Chestnut **underwing**, seen as it hunts insects like a big swallow"
+        }
+      ],
+      "where_when": {
+        "en": "FR: scarce summer visitor in the south, from April. NL, BE, DE, DK, UK, SE: very rare overshoots, mostly May and June. IE, NO, FI: almost never. A bird of the Mediterranean that sometimes turns up on a flooded field."
+      },
+      "where_data": {
+        "FR": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A tern-like, rolling “kikik” or “kitik” in flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1220355,
+            "xeno_canto": "XC379451",
+            "type": "call, flight call, trill",
+            "country": "France",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1220351,
+            "xeno_canto": "XC712463",
+            "type": "call, flight call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "SonoNatura"
+          },
+          {
+            "media_id": 1220349,
+            "xeno_canto": "XC758484",
+            "type": "call",
+            "country": "Zambia",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Dries Van de Loock"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A strange bird that seems half wader, half swallow. A perched bird looks plover-like, a flying bird looks like a tern."
+      },
+      "dont_confuse": {
+        "en": "Black-winged Pratincole (this week): a black underwing, and no white trailing edge to the wing."
+      },
+      "media": {
+        "card": [
+          336085,
+          336102,
+          336090
+        ],
+        "quiz": [
+          336074,
+          336092,
+          336100,
+          336101,
+          335994,
+          336093,
+          336078
+        ]
+      }
+    },
+    {
+      "species_id": 2192,
+      "latin": "Glareola nordmanni",
+      "name": {
+        "en": "Black-winged Pratincole"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Like a Collared Pratincole, but with a black **underwing**"
+        },
+        {
+          "en": "No white trailing edge to the wing, and a bit darker above"
+        },
+        {
+          "en": "A **forked tail** and a white rump, and a short, red-based black bill"
+        }
+      ],
+      "where_when": {
+        "en": "NL, DE, DK, UK, FR, SE, FI: very rare, usually in May and June. BE, IE, NO: almost never. A bird of the Russian steppes, much rarer than the Collared in the west."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A dry, ringing “kirli” or “kit-kit”, harsher than the Collared."
+        },
+        "chosen": [
+          {
+            "media_id": 1220325,
+            "xeno_canto": "XC1031152",
+            "type": "flight call",
+            "country": "Kazakhstan",
+            "quality": "A",
+            "seconds": 12,
+            "background_species": 0,
+            "recordist": "Frank Lambert"
+          },
+          {
+            "media_id": 1220330,
+            "xeno_canto": "XC304519",
+            "type": "alarm call, call",
+            "country": "Russian Federation",
+            "quality": "A",
+            "seconds": 13,
+            "background_species": 0,
+            "recordist": "Vladimir Arkhipov"
+          },
+          {
+            "media_id": 1220328,
+            "xeno_canto": "XC813414",
+            "type": "call",
+            "country": "Kazakhstan",
+            "quality": "A",
+            "seconds": 21,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A black underwing is the sure sign, but it is easier said than done: the bird must fly with the sun at a good angle."
+      },
+      "dont_confuse": {
+        "en": "Collared Pratincole (this week): a chestnut underwing and a white trailing edge."
+      },
+      "media": {
+        "card": [
+          335958,
+          335976,
+          335950
+        ],
+        "quiz": [
+          335963,
+          335984,
+          335945,
+          335968,
+          335930,
+          335942,
+          335949
+        ]
+      }
+    },
+    {
+      "species_id": 1955,
+      "latin": "Himantopus himantopus",
+      "name": {
+        "en": "Black-winged Stilt"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A black back and wings, and a white head and underparts"
+        },
+        {
+          "en": "Extremely long, pink-red legs that trail behind in flight"
+        },
+        {
+          "en": "A long, thin, straight black bill"
+        }
+      ],
+      "where_when": {
+        "en": "FR: fairly common breeder in the south and the west, from March. NL, BE, DE, UK, DK: rare overshoots in April to June, with an increasing number of breeders in the Netherlands and in the UK. IE, NO, SE, FI: very rare."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A sharp, yelping “kyik, kyik” or “kek”, repeated."
+        },
+        "chosen": [
+          {
+            "media_id": 1217264,
+            "xeno_canto": "XC1073345",
+            "type": "call, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Adrien Peillon"
+          },
+          {
+            "media_id": 1217268,
+            "xeno_canto": "XC1067146",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 55,
+            "background_species": 0,
+            "recordist": "Esperanza Poveda"
+          },
+          {
+            "media_id": 1217276,
+            "xeno_canto": "XC1059438",
+            "type": "call, flight call",
+            "country": "Saudi Arabia",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Lucas-Chen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Its legs are the longest of any wader relative to the body. A pair that attempts to breed in the UK or the Netherlands is a big event."
+      },
+      "dont_confuse": {
+        "en": "Pied Avocet (week 14): an upturned bill, black-and-white wings, and short blue-grey legs."
+      },
+      "media": {
+        "card": [
+          303343,
+          303423,
+          303344
+        ],
+        "quiz": [
+          303426,
+          303413,
+          303432,
+          303414,
+          303410,
+          303366,
+          303370,
+          303374
+        ]
+      }
+    },
+    {
+      "species_id": 1985,
+      "latin": "Eudromias morinellus",
+      "name": {
+        "en": "Eurasian Dotterel"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A bold white eyebrow that meets at the back of the neck in a V"
+        },
+        {
+          "en": "A white band across the breast, a chestnut belly and a grey-brown back"
+        },
+        {
+          "en": "Very tame, running in short bursts across ploughed fields and mountain tops"
+        }
+      ],
+      "where_when": {
+        "en": "UK (Scottish Highlands), NO, SE, FI: scarce breeders on mountains, from May. NL, DE, DK, FR: rare on spring passage, especially late April to May, in Flevoland. BE, IE: very rare. A bird that stops on regular fields each spring."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, short, trilling “pit-pit-pit” and a gentle “wit”."
+        },
+        "chosen": [
+          {
+            "media_id": null,
+            "xeno_canto": "XC1045965",
+            "type": "call, flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 8,
+            "background_species": 0,
+            "recordist": "Hans van Loon",
+            "needs_import": true
+          },
+          {
+            "media_id": null,
+            "xeno_canto": "XC1036900",
+            "type": "flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 63,
+            "background_species": 0,
+            "recordist": "Toy Janssen",
+            "needs_import": true
+          },
+          {
+            "media_id": null,
+            "xeno_canto": "XC545531",
+            "type": "flight call, nocturnal flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 8,
+            "background_species": 0,
+            "recordist": "AUDEVARD Aurélien",
+            "needs_import": true
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 0
+      },
+      "note": {
+        "en": "The female is the brighter bird and the male incubates the eggs. In spring, a few birds visit the same Dutch fields every year."
+      },
+      "dont_confuse": {
+        "en": "European Golden Plover (week 13): a gold-spangled back and a black belly, but no white V on the head."
+      },
+      "media": {
+        "card": [
+          308257,
+          308245,
+          308254
+        ],
+        "quiz": [
+          308239,
+          308233,
+          308185,
+          308218,
+          308236,
+          308224,
+          308222,
+          308252
+        ]
+      }
+    },
+    {
+      "species_id": 2139,
+      "latin": "Calidris falcinellus",
+      "name": {
+        "en": "Broad-billed Sandpiper"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A small, dark-backed sandpiper with a **split supercilium**"
+        },
+        {
+          "en": "A long, heavy bill with a slight droop at the tip"
+        },
+        {
+          "en": "A short-legged, hunched shape, smaller than a Dunlin"
+        }
+      ],
+      "where_when": {
+        "en": "FI, NO, SE: scarce breeders on northern bogs, from late May. UK, NL, DE, DK, FR: rare on passage, May to June and August to September. BE, IE: very rare. A species that is always in a flock of Dunlins."
+      },
+      "where_data": {
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A dry, short, buzzing “tirrek” or “tr-r-rit”."
+        },
+        "chosen": [
+          {
+            "media_id": 1219694,
+            "xeno_canto": "XC875299",
+            "type": "flight call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 55,
+            "background_species": 0,
+            "recordist": "Stein Ø. Nilsen"
+          },
+          {
+            "media_id": 1219711,
+            "xeno_canto": "XC835230",
+            "type": "nocturnal flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 15,
+            "background_species": 0,
+            "recordist": "Alan Dalton"
+          },
+          {
+            "media_id": 1219706,
+            "xeno_canto": "XC837723",
+            "type": "call, flight call",
+            "country": "China",
+            "quality": "A",
+            "seconds": 8,
+            "background_species": 0,
+            "recordist": "Ray Tsu 诸仁"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bird to find by looking at each Dunlin in a flock. The double eyebrow and the heavy bill show up at a good distance."
+      },
+      "dont_confuse": {
+        "en": "Dunlin (week 11): a plain face with no split eyebrow, and a longer, thinner bill."
+      },
+      "media": {
+        "card": [
+          329338,
+          329306,
+          329314
+        ],
+        "quiz": [
+          329298,
+          329353,
+          329265,
+          329302,
+          329266,
+          329315,
+          329305,
+          329301
+        ]
+      }
+    },
+    {
+      "species_id": 2120,
+      "latin": "Tringa stagnatilis",
+      "name": {
+        "en": "Marsh Sandpiper"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Like a small, slim Greenshank, with a needle-thin bill"
+        },
+        {
+          "en": "Very long, greenish legs that trail beyond the tail in flight"
+        },
+        {
+          "en": "A white wedge up the back and a delicate, elegant shape"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, DK, FR: very rare on passage, May and August to September. SE, FI, NO: very rare. IE: almost never. A bird of the steppe that turns up on freshwater pools."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, clear, single “tiu” or a thin “yeep”, quite different from a Greenshank."
+        },
+        "chosen": [
+          {
+            "media_id": 1219419,
+            "xeno_canto": "XC835957",
+            "type": "flight call",
+            "country": "Mongolia",
+            "quality": "A",
+            "seconds": 8,
+            "background_species": 0,
+            "recordist": "Martin Billard"
+          },
+          {
+            "media_id": 1219416,
+            "xeno_canto": "XC840657",
+            "type": "call",
+            "country": "China",
+            "quality": "A",
+            "seconds": 10,
+            "background_species": 0,
+            "recordist": "Bo Shunqi 薄顺奇"
+          },
+          {
+            "media_id": 1219428,
+            "xeno_canto": "XC722947",
+            "type": "call, song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 11,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A Greenshank that has been to a gym for the wrong exercises: smaller, slimmer, and very long-legged. A bird for a warm day in May."
+      },
+      "dont_confuse": {
+        "en": "Common Greenshank (week 12): bigger, a thick, slightly upturned bill, and a loud, ringing three-note call."
+      },
+      "media": {
+        "card": [
+          326794,
+          326822,
+          326809
+        ],
+        "quiz": [
+          326810,
+          326821,
+          326819,
+          326824,
+          326817,
+          326793,
+          326816
+        ]
+      }
+    },
+    {
+      "species_id": 2113,
+      "latin": "Xenus cinereus",
+      "name": {
+        "en": "Terek Sandpiper"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A long, **upturned bill** with an orange base"
+        },
+        {
+          "en": "Short, bright orange-yellow legs and a grey-brown back"
+        },
+        {
+          "en": "Runs fast, bobbing and flicking the tail, like a Common Sandpiper"
+        }
+      ],
+      "where_when": {
+        "en": "FI: very rare breeder on the eastern edge. UK, NL, DE, DK, SE, NO: very rare, in May and June, with one or two a year. BE, FR, IE: almost never. A bird from the Russian taiga."
+      },
+      "where_data": {
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A rapid, fluty trill, “wiwiwiwi”, with a ringing quality."
+        },
+        "chosen": [
+          {
+            "media_id": 1219284,
+            "xeno_canto": "XC135150",
+            "type": "call",
+            "country": "Oman",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "R. Martin"
+          },
+          {
+            "media_id": 1219277,
+            "xeno_canto": "XC580778",
+            "type": "call",
+            "country": "Russian Federation",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Albert Lastukhin"
+          },
+          {
+            "media_id": 1219274,
+            "xeno_canto": "XC745858",
+            "type": "song",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 134,
+            "background_species": 3,
+            "recordist": "Stein Ø. Nilsen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "An odd bird: the upturned bill and the orange legs make it look like a Common Sandpiper that has gone wrong."
+      },
+      "dont_confuse": {
+        "en": "Common Sandpiper (week 12): a straight bill and greenish legs, and a bobbing action."
+      },
+      "media": {
+        "card": [
+          325557,
+          325521,
+          325596
+        ],
+        "quiz": [
+          325482,
+          325533,
+          325534,
+          325550,
+          325468,
+          325495,
+          325523,
+          325597
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 2192,
+    "species_ids": [
+      2193,
+      2192
+    ],
+    "title": {
+      "en": "Collared or Black-winged Pratincole?"
+    },
+    "text": {
+      "en": "It is all in the underwing. A Collared has a chestnut underwing and a white trailing edge to the inner wing. A Black-winged has a black underwing and no white trailing edge. Both have a forked tail and a white rump, and a cream throat patch. A perched bird is difficult: look at the wing tip, which projects beyond the tail in the Black-winged."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      26,
+      28,
+      29
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 3,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In May, check the flooded fields and the mudflats near your coast, and look for the unusual: a long-legged wader, an odd bird among the Dunlins. Take a photograph and compare with the lesson."
+  },
+  "next": {
+    "en": "Next week: eastern vagrants, the Siberian strays of autumn."
+  },
+  "flow": [
+    "intro",
+    "bird:2193",
+    "bird:2192",
+    "bird:1955",
+    "bird:1985",
+    "bird:2139",
+    "bird:2120",
+    "bird:2113",
+    "quiz",
+    "done"
+  ]
+}

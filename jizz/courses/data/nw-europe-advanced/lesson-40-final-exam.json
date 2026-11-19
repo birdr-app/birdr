@@ -1,0 +1,78 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 40,
+  "slug": "final-exam",
+  "part": 8,
+  "kind": "review",
+  "season": "any",
+  "minutes": 40,
+  "title": {
+    "en": "Final exam"
+  },
+  "subtitle": {
+    "en": "Forty questions on every bird of the course"
+  },
+  "intro": {
+    "en": "This is it. Forty weeks ago you could probably name a Dunlin and a Chiffchaff. Now you can say \"first-winter Caspian Gull\", \"female Garganey\", \"Yellow-browed Warbler by call\", and you know when to look for a Pomarine Skua. The final exam has forty questions, with birds from every lesson, in every plumage that you have learned, as photos, as photos with sound, and as sound alone.\n\nTake it in two sittings if you like. Do not try to beat the clock. Look at the shape first, then the colours, then listen. For a hard question, think about the season and the habitat before you guess.\n\nA score of thirty is a great result. Whatever your score, the birds you got wrong are the ones to go back to, and they will keep coming back in your daily practice until you know them."
+  },
+  "words": [],
+  "birds": [],
+  "compare": null,
+  "quiz": {
+    "questions": 40,
+    "photos_from": "quiz",
+    "answers_from": "review",
+    "review_from": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23,
+      24,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      36,
+      37,
+      38,
+      39
+    ],
+    "review_questions": 40,
+    "modes": {
+      "photo": 20,
+      "photo_sound": 12,
+      "sound": 8
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Take your list of the birds you got wrong and learn them over the coming months. Visit each habitat in the right season: the estuary in winter, the headland in autumn gales, the wood in May. Good luck, and good birding."
+  },
+  "next": {
+    "en": "You have finished the course. Keep practising: a few birds a day is all it takes."
+  },
+  "flow": [
+    "intro",
+    "quiz",
+    "done"
+  ]
+}

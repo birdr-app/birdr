@@ -1,0 +1,50 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 5,
+  "slug": "review-gulls-and-terns",
+  "part": 1,
+  "kind": "review",
+  "season": "any",
+  "minutes": 20,
+  "title": {
+    "en": "Review: gulls and terns"
+  },
+  "subtitle": {
+    "en": "Everything from block 1 in one long quiz"
+  },
+  "intro": {
+    "en": "Four lessons ago a gull was a gull. Now you can say \"first-winter Herring\", pick a Caspian out by its small head and name the three terns by the colour of the bill. This week there is nothing new to learn, only a longer quiz of fifteen questions with birds from all four lessons mixed up, including some of each bird's different plumages.\n\nTake your time. Look at the head and the bill first, then the back, then the legs. Questions with a sound ask for the call: most gulls are easy to separate by voice, terns are harder.\n\nIf you got one wrong, go back to the lesson and read the card again. Gulls repay repetition: the more flocks you scan, the quicker the pattern clicks."
+  },
+  "words": [],
+  "birds": [],
+  "compare": null,
+  "quiz": {
+    "questions": 15,
+    "photos_from": "quiz",
+    "answers_from": "review",
+    "review_from": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "review_questions": 15,
+    "modes": {
+      "photo": 8,
+      "photo_sound": 5,
+      "sound": 2
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Spend an hour at a gull roost, a harbour or a tip this month and keep a list of every gull species and every age you can name. Ten is a good score for one visit."
+  },
+  "next": {
+    "en": "Next block: the warblers. We start with Chiffchaff, Willow Warbler and Wood Warbler."
+  },
+  "flow": [
+    "intro",
+    "quiz",
+    "done"
+  ]
+}

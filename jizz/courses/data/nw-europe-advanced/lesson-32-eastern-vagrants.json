@@ -1,0 +1,912 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 32,
+  "slug": "eastern-vagrants",
+  "part": 7,
+  "kind": "species",
+  "season": "autumn",
+  "minutes": 22,
+  "title": {
+    "en": "Eastern vagrants"
+  },
+  "subtitle": {
+    "en": "Siberian Accentor, Red-flanked Bluetail, two pipits, two buntings, Red-breasted Flycatcher and Brown Shrike"
+  },
+  "intro": {
+    "en": "Easterly winds in October bring birds from Siberia to the coasts of north-west Europe. These birds were migrating south-east to the tropics of Asia, and some pointed the wrong way: 'reversed migration'. In the autumn of 2016 thousands of Siberian Accentors arrived in western Europe, and the event is still talked about.\n\nThe birds of today are the ones that you may well find: Richard's and Olive-backed Pipit, Little and Rustic Bunting, Red-breasted Flycatcher. The bluetail and the accentor are rare, and the Brown Shrike is a mega. On the day, when the wind has gone round to the east, check hedges and bushes on the east coast of the UK and the Dutch, German and Danish coasts, the Swedish islands and Norway.\n\nLook for oddities: a bird that does not fit what you know. The first thing to do is to take a photograph, then look at the head, the tail and the call."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "eye ring"
+      },
+      "explain": {
+        "en": "A pale ring round the eye. Bold in Little Bunting."
+      }
+    },
+    {
+      "term": {
+        "en": "breast band"
+      },
+      "explain": {
+        "en": "A band across the breast, as in the chestnut band of a Rustic Bunting."
+      }
+    },
+    {
+      "term": {
+        "en": "mask"
+      },
+      "explain": {
+        "en": "A dark patch through the eye, like a bandit's mask. Brown Shrikes have a strong one."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 9805,
+      "latin": "Prunella montanella",
+      "name": {
+        "en": "Siberian Accentor"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Warm buff-orange face and breast, with a dark crown and ear patch"
+        },
+        {
+          "en": "A bold, buff-yellow eyebrow, a dark eye-stripe and a streaked back"
+        },
+        {
+          "en": "Hops on the ground like a Dunnock, but looks richer and warmer"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DE, DK, SE, NO, FI: very rare, though there have been big arrivals (2016) in October. BE, FR, IE: almost never. A bird of the Siberian taiga that sometimes overwinters in Europe."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, soft, trilling “tirrirrirri”."
+        },
+        "chosen": [
+          {
+            "media_id": 1324351,
+            "xeno_canto": "XC616469",
+            "type": "call",
+            "country": "Poland",
+            "quality": "B",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1324364,
+            "xeno_canto": "XC112643",
+            "type": "call",
+            "country": "China",
+            "quality": "B",
+            "seconds": 16,
+            "background_species": 0,
+            "recordist": "Dong Bei"
+          },
+          {
+            "media_id": 1324363,
+            "xeno_canto": "XC401647",
+            "type": "call",
+            "country": "China",
+            "quality": "B",
+            "seconds": 11,
+            "background_species": 0,
+            "recordist": "Oscar Campbell"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "In 2016, hundreds appeared across north-west Europe. A bird that looks like a bright Dunnock in an October garden."
+      },
+      "dont_confuse": {
+        "en": "Dunnock (beginners): greyer, with a plain face and a thin, dark bill."
+      },
+      "media": {
+        "card": [
+          1036822,
+          1036794,
+          1036798
+        ],
+        "quiz": [
+          1036784,
+          1036793,
+          1036824,
+          1036818,
+          1036820,
+          1036804,
+          1036799
+        ]
+      }
+    },
+    {
+      "species_id": 11186,
+      "latin": "Tarsiger cyanurus",
+      "name": {
+        "en": "Red-flanked Bluetail"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "look_for": [
+        {
+          "en": "A brown-grey bird with a bright blue tail, and orange flanks"
+        },
+        {
+          "en": "A white throat and a pale eye ring, with a rather upright stance"
+        },
+        {
+          "en": "Flicks and bobs its tail down, like a Robin"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DE, DK, SE, NO, FI: very rare, from late September to early November, with a few every year. FR, BE, IE: almost never. First-winters and females, brown with a blue tail, are the usual sight."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, short “tic” and a low “whit”, and a descending song."
+        },
+        "chosen": [
+          {
+            "media_id": 1316588,
+            "xeno_canto": "XC1051415",
+            "type": "alarm call, call",
+            "country": "Russian Federation",
+            "quality": "A",
+            "seconds": 37,
+            "background_species": 0,
+            "recordist": "Albert Lastukhin",
+            "hidden_locally": true
+          },
+          {
+            "media_id": 1316594,
+            "xeno_canto": "XC992604",
+            "type": "call",
+            "country": "China",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "小菜鸟",
+            "hidden_locally": true
+          },
+          {
+            "media_id": 1316597,
+            "xeno_canto": "XC972071",
+            "type": "call",
+            "country": "China",
+            "quality": "A",
+            "seconds": 72,
+            "background_species": 0,
+            "recordist": "Ray Tsu 诸仁",
+            "hidden_locally": true
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bird that surprises: from a distance it is a dull brown bird, but when it flies, a flash of blue. An adult male is deep blue above."
+      },
+      "dont_confuse": {
+        "en": "European Robin (beginners): a red-orange breast and no blue."
+      },
+      "media": {
+        "card": [
+          1190063,
+          1190059,
+          1190064
+        ],
+        "quiz": [
+          1190065,
+          1190058,
+          1190067,
+          1190061,
+          1190062,
+          1190060,
+          1190057,
+          1190066
+        ]
+      }
+    },
+    {
+      "species_id": 9872,
+      "latin": "Anthus richardi",
+      "name": {
+        "en": "Richard's Pipit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Big, long-legged and upright, a pipit the size of a Skylark"
+        },
+        {
+          "en": "A long hind claw, a long tail and a strong, thick bill"
+        },
+        {
+          "en": "A loud, rasping call, quite different from a Meadow Pipit's"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DE, DK, FR, BE, SE, NO: rare but annual, in late September to October, on coastal fields and dunes. IE, FI: rare. A bird of Siberia that overshoots every autumn."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, harsh, rasping “shreep” or “rrrp”, quite unlike any other pipit."
+        },
+        "chosen": [
+          {
+            "media_id": 1325444,
+            "xeno_canto": "XC947328",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 13,
+            "background_species": 0,
+            "recordist": "Testaert Dominique"
+          },
+          {
+            "media_id": 1325446,
+            "xeno_canto": "XC938255",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 28,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1325445,
+            "xeno_canto": "XC943898",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 30,
+            "background_species": 0,
+            "recordist": "Sonothèque ADVL"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Called a 'bruiser' of a pipit, it stands upright like a wagtail. It is a classic find on an autumn coast."
+      },
+      "dont_confuse": {
+        "en": "Meadow Pipit (week 27): smaller, a thin call, shorter legs and short tail."
+      },
+      "media": {
+        "card": [
+          1044856,
+          1044776,
+          1044852
+        ],
+        "quiz": [
+          1044920,
+          1044790,
+          1044850,
+          1044845,
+          1044868
+        ]
+      }
+    },
+    {
+      "species_id": 9895,
+      "latin": "Anthus hodgsoni",
+      "name": {
+        "en": "Olive-backed Pipit"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "An olive-green back with few streaks, and a buff-white eyebrow"
+        },
+        {
+          "en": "White underparts with bold black streaks on the breast"
+        },
+        {
+          "en": "A pale spot and a dark spot on the back of the ear coverts"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DE, DK, SE, NO, FI: rare but annual, in late September to October, in trees and bushes on the coast. FR, BE, IE: rare. A pipit that sits in trees."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A thin, sharp, buzzy “tseeep”, like a Tree Pipit but thinner."
+        },
+        "chosen": [
+          {
+            "media_id": 1325794,
+            "xeno_canto": "XC1063896",
+            "type": "call, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 54,
+            "background_species": 0,
+            "recordist": "Julien Birard"
+          },
+          {
+            "media_id": 1325795,
+            "xeno_canto": "XC1055806",
+            "type": "call, flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 60,
+            "background_species": 0,
+            "recordist": "Kasper Wieck"
+          },
+          {
+            "media_id": 1325799,
+            "xeno_canto": "XC1046324",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 65,
+            "background_species": 0,
+            "recordist": "Mårten Müller"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A pipit of the trees, sitting up in a sycamore. The plain olive back and the bold, black breast streaks stand out."
+      },
+      "dont_confuse": {
+        "en": "Tree Pipit (week 27): browner, more streaked, buff, and with a buzzing call."
+      },
+      "media": {
+        "card": [
+          1047407,
+          1047429,
+          1047387
+        ],
+        "quiz": [
+          1047305,
+          1047395,
+          1047390,
+          1047420,
+          1047396,
+          1047422,
+          1047409
+        ]
+      }
+    },
+    {
+      "species_id": 10202,
+      "latin": "Schoeniclus pusillus",
+      "name": {
+        "en": "Little Bunting"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A small bunting with a chestnut cheek patch framed by a dark border"
+        },
+        {
+          "en": "A bold pale **eye ring** and a rufous crown with dark stripes"
+        },
+        {
+          "en": "Thin, streaked flanks, and a small, sharp bill"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO: breeds in the north, from June. UK, NL, DE, DK, FR, BE: rare but annual, from late September to November. IE: rare. A shy bird that skulks in vegetation and mixes with Reed Buntings."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A hard, short “tik” or “tsik”."
+        },
+        "chosen": [
+          {
+            "media_id": 1330103,
+            "xeno_canto": "XC766255",
+            "type": "alarm call, call, two types of calls",
+            "country": "Mongolia",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1330106,
+            "xeno_canto": "XC675908",
+            "type": "alarm call",
+            "country": "Russian Federation",
+            "quality": "A",
+            "seconds": 60,
+            "background_species": 0,
+            "recordist": "Albert Lastukhin"
+          },
+          {
+            "media_id": 1330099,
+            "xeno_canto": "XC809482",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Kasper Wieck"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A small, tidy bunting. The rufous cheek with the dark edge is the mark, and the call is the first clue."
+      },
+      "dont_confuse": {
+        "en": "Common Reed Bunting (week 28): a bigger bunting with a white collar and a brown cheek."
+      },
+      "media": {
+        "card": [
+          1079833,
+          1079929,
+          1079835
+        ],
+        "quiz": [
+          1079875,
+          1079983,
+          1079992,
+          1079936,
+          1079872,
+          1079939,
+          1079938
+        ]
+      }
+    },
+    {
+      "species_id": 10203,
+      "latin": "Schoeniclus rusticus",
+      "name": {
+        "en": "Rustic Bunting"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "White underparts, with a chestnut **breast band** and flank streaks"
+        },
+        {
+          "en": "A white throat, a dark crown with a short crest, and a pale spot on the ear coverts"
+        },
+        {
+          "en": "A bright, pink-based bill and a white eyebrow"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO: uncommon breeders in the north, from June. UK, NL, DE, DK, FR, BE: rare, in spring and autumn. IE: almost never. A bunting of the Siberian forest, uncommon but regular."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, hard “tik” or “tsip”."
+        },
+        "chosen": [
+          {
+            "media_id": 1330124,
+            "xeno_canto": "XC830805",
+            "type": "call, flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Alan Dalton"
+          },
+          {
+            "media_id": 1330107,
+            "xeno_canto": "XC1046348",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 53,
+            "background_species": 0,
+            "recordist": "Maties"
+          },
+          {
+            "media_id": 1330114,
+            "xeno_canto": "XC916023",
+            "type": "alarm call, contact-alarm call, \"tzit\"",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 55,
+            "background_species": 4,
+            "recordist": "Thomas Bergman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A smart bunting, which often turns up in a spring flock of Reed Buntings. The chestnut breast band is a good clue."
+      },
+      "dont_confuse": {
+        "en": "Common Reed Bunting (week 28): a white collar and a streaked, not a white, breast."
+      },
+      "media": {
+        "card": [
+          1080081,
+          1080054,
+          1080117
+        ],
+        "quiz": [
+          1080108,
+          1080076,
+          1080138,
+          1080102,
+          1080025,
+          1080062,
+          1080126
+        ]
+      }
+    },
+    {
+      "species_id": 9177,
+      "latin": "Ficedula parva",
+      "name": {
+        "en": "Red-breasted Flycatcher"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A small, brown-grey flycatcher with a bright white base to the tail"
+        },
+        {
+          "en": "A pale eye ring and a black tail with white outer sides, often cocked"
+        },
+        {
+          "en": "A male in spring has an orange throat, but in autumn most birds have a buff throat"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO, DE, DK: scarce breeders in the east, from May. UK, NL, BE, FR: rare in autumn on the coast, September to October. IE: rare. A bird that moves in the open, flicking its tail."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A dry, rattling “trrrt” and a clear, soft “tzik”."
+        },
+        "chosen": [
+          {
+            "media_id": 1317031,
+            "xeno_canto": "XC834591",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1317026,
+            "xeno_canto": "XC915704",
+            "type": "call, song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1317019,
+            "xeno_canto": "XC1003209",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Maarten Sluijter"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The white tail base when it flits is the best sign. In autumn many are brown, with no red in them."
+      },
+      "dont_confuse": {
+        "en": "Spotted Flycatcher (week 29): a streaked crown and breast, and no white tail base."
+      },
+      "media": {
+        "card": [
+          979230,
+          979132,
+          979247
+        ],
+        "quiz": [
+          979261,
+          979254,
+          979167,
+          979142,
+          979214,
+          979272,
+          979180,
+          979144
+        ]
+      }
+    },
+    {
+      "species_id": 6843,
+      "latin": "Lanius cristatus",
+      "name": {
+        "en": "Brown Shrike"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A rufous-brown shrike with a strong black **mask** and white eyebrow"
+        },
+        {
+          "en": "A long, rounded rufous tail and a pale underside"
+        },
+        {
+          "en": "Sits upright on a bush top, scanning for prey"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DE, DK, SE, NO, FI, FR: very rare, in autumn, with a few records in Europe each year. BE, IE: almost never. A bird from East Asia that is among the rarest on the list."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A harsh “chek-chek”, a hard, dry rattle."
+        },
+        "chosen": [
+          {
+            "media_id": 1283735,
+            "xeno_canto": "XC1043058",
+            "type": "call",
+            "country": "India",
+            "quality": "A",
+            "seconds": 25,
+            "background_species": 0,
+            "recordist": "Ujjal Kishor De"
+          },
+          {
+            "media_id": 1283727,
+            "xeno_canto": "XC844614",
+            "type": "alarm call",
+            "country": "India",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Sandip das"
+          },
+          {
+            "media_id": 1283728,
+            "xeno_canto": "XC776336",
+            "type": "call",
+            "country": "Singapore",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 0,
+            "recordist": "Ding Li Yong"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A shrike that belongs to the Far East. A bird to check carefully against Red-backed Shrike: the tail and the mask."
+      },
+      "dont_confuse": {
+        "en": "Red-backed Shrike (week 38): a grey head and a black tail with white sides."
+      },
+      "media": {
+        "card": [
+          773277,
+          773313,
+          773338
+        ],
+        "quiz": [
+          773235,
+          773293,
+          773339,
+          773213,
+          773347,
+          773264,
+          773284
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 9895,
+    "species_ids": [
+      9872,
+      9895
+    ],
+    "title": {
+      "en": "Richard's or Olive-backed Pipit?"
+    },
+    "text": {
+      "en": "Richard's is big, long-legged and upright, with a strong bill and a loud, rasping call. Olive-backed is the size of a Tree Pipit, with a plain olive back and bold black breast streaks and a pale-and-dark spot on the ear coverts. Olive-backed sits in trees, Richard's stays on the ground."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      27,
+      29,
+      31
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 3,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "When the wind goes round to the east in October, spend a morning on a coast with hedges and trees. Look for a bird that you do not recognise. Photograph it from every angle and look carefully at the head, tail and call."
+  },
+  "next": {
+    "en": "Next week: vagrants from North America."
+  },
+  "flow": [
+    "intro",
+    "bird:9805",
+    "bird:11186",
+    "bird:9872",
+    "bird:9895",
+    "bird:10202",
+    "bird:10203",
+    "bird:9177",
+    "bird:6843",
+    "quiz",
+    "done"
+  ]
+}

@@ -1,0 +1,1056 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 23,
+  "slug": "eclipse-drakes-and-sawbills",
+  "part": 5,
+  "kind": "species",
+  "season": "autumn",
+  "minutes": 22,
+  "title": {
+    "en": "Eclipse drakes and sawbills"
+  },
+  "subtitle": {
+    "en": "Males in disguise, and the fish-eating ducks with saw-toothed bills"
+  },
+  "intro": {
+    "en": "In summer, after the breeding season, male ducks lose their bright feathers and moult into a dull, brown plumage called eclipse. For a couple of months, from June to September, a drake looks like a female. He is not quite the same: the bill, the eye and the wing are still male, and often some of the colour remains. The four ducks in the first half of the lesson are all in eclipse.\n\nThe second half of the lesson is the sawbills: Goosander, Red-breasted Merganser and Smew. They are fish-eating ducks with thin, serrated bills. The drakes are easy. We look at the females: the grey-bodied ones with a brown head are the ones that turn up in winter on lakes and the coast.\n\nSeason: eclipse is a summer-and-early-autumn plumage, so this lesson fits August to October. Sawbills are winter ducks, from November to March, especially in cold weather."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "eclipse"
+      },
+      "explain": {
+        "en": "The dull, female-like plumage that male ducks wear for a couple of months after breeding. The wing stays male."
+      }
+    },
+    {
+      "term": {
+        "en": "sawbill"
+      },
+      "explain": {
+        "en": "A fish-eating duck (Goosander, merganser, Smew) with a thin bill with tooth-like edges."
+      }
+    },
+    {
+      "term": {
+        "en": "crest"
+      },
+      "explain": {
+        "en": "A tuft of long feathers on the head. The female Red-breasted Merganser has a shaggy one."
+      }
+    },
+    {
+      "term": {
+        "en": "chin patch"
+      },
+      "explain": {
+        "en": "A white patch on the chin and throat. A female Goosander has a sharp-edged one."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 165,
+      "latin": "Anas platyrhynchos",
+      "name": {
+        "en": "Mallard"
+      },
+      "plumage": {
+        "en": "adult male, eclipse"
+      },
+      "plumage_filter": {
+        "season": "eclipse",
+        "sex": "male"
+      },
+      "look_for": [
+        {
+          "en": "In **eclipse**: dull brown like a female, but with a plain yellow-olive bill"
+        },
+        {
+          "en": "A dark crown and a dark brown back, with a chestnut tint on the breast"
+        },
+        {
+          "en": "The male's blue speculum and white tail are still visible"
+        }
+      ],
+      "where_when": {
+        "en": "All ten countries. From June to September, most drakes in lakes and parks. The dull ones in July are mostly male birds; the clue is the bill."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "SE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A softer, raspy “rhab” from the drake, quite different from the female's loud quack."
+        },
+        "chosen": [
+          {
+            "media_id": 1194968,
+            "xeno_canto": "XC774434",
+            "type": "nocturnal flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 41,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1194961,
+            "xeno_canto": "XC1029063",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 81,
+            "background_species": 0,
+            "recordist": "Xavier Riera"
+          },
+          {
+            "media_id": 1194970,
+            "xeno_canto": "XC705240",
+            "type": "call, take-off call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The bill is the key: yellow and plain in a male in eclipse; orange with a dark blotch in a female."
+      },
+      "dont_confuse": {
+        "en": "Mallard female (week 21): an orange bill with a dark blotch."
+      },
+      "media": {
+        "card": [
+          130455,
+          130418,
+          1345973
+        ],
+        "quiz": [
+          1345988,
+          1345978,
+          1345995,
+          1345983,
+          130527,
+          1345994,
+          130434,
+          1345996
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 149,
+      "latin": "Spatula clypeata",
+      "name": {
+        "en": "Northern Shoveler"
+      },
+      "plumage": {
+        "en": "adult male, eclipse"
+      },
+      "plumage_filter": {
+        "season": "eclipse",
+        "sex": "male"
+      },
+      "look_for": [
+        {
+          "en": "In **eclipse**: dull brown, but with a hint of the pale blue forewing"
+        },
+        {
+          "en": "A big spoon-shaped bill that is now dark"
+        },
+        {
+          "en": "A rufous belly and flanks still show through the dull body"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK: fairly common, with eclipse males in July to September. SE, FI, NO: uncommon. The spoon bill is the sure sign."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low “thuk-thuk” and a soft quack."
+        },
+        "chosen": [
+          {
+            "media_id": 1194723,
+            "xeno_canto": "XC996367",
+            "type": "nocturnal flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1194729,
+            "xeno_canto": "XC992752",
+            "type": "flight call, nocturnal flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 12,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1194730,
+            "xeno_canto": "XC800553",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The male gets a plain, dull look, but the spoon bill and the rufous flanks are a giveaway."
+      },
+      "dont_confuse": {
+        "en": "Northern Shoveler female (week 21): a paler bill, with an orange edge, and no rufous on the flanks."
+      },
+      "media": {
+        "card": [
+          128091,
+          128168,
+          128127
+        ],
+        "quiz": [
+          128132,
+          128102,
+          128053,
+          128054,
+          128099,
+          128081,
+          128097,
+          128055
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 140,
+      "latin": "Spatula querquedula",
+      "name": {
+        "en": "Garganey"
+      },
+      "plumage": {
+        "en": "adult male, eclipse"
+      },
+      "plumage_filter": {
+        "season": "eclipse",
+        "sex": "male"
+      },
+      "look_for": [
+        {
+          "en": "In **eclipse**: looks like a female, with a bold pale eyebrow"
+        },
+        {
+          "en": "The pale blue-grey forewing of the male still shows in flight"
+        },
+        {
+          "en": "A dark eye-stripe, a pale spot at the bill base, and a pale belly"
+        }
+      ],
+      "where_when": {
+        "en": "NL, DE, DK, BE, FR, UK: scarce, July to September, on passage. IE, NO, SE, FI: rare. The male leaves the breeding area in July and flies south in eclipse plumage."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, dry rattle, “krrk”."
+        },
+        "chosen": [
+          {
+            "media_id": 1194600,
+            "xeno_canto": "XC735748",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 64,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1194609,
+            "xeno_canto": "XC544441",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 75,
+            "background_species": 0,
+            "recordist": "Hans Matheve"
+          },
+          {
+            "media_id": 1194607,
+            "xeno_canto": "XC632957",
+            "type": "call, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Charlie Bodin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The males leave first and are mostly in eclipse when they fly south. The blue-grey forewing is the best mark that it is a male."
+      },
+      "dont_confuse": {
+        "en": "Garganey female (week 21): a brown forewing and no blue-grey."
+      },
+      "media": {
+        "card": [
+          126692,
+          126630,
+          126756
+        ],
+        "quiz": [
+          126667,
+          126635,
+          126682,
+          126647,
+          126676,
+          126632,
+          126677,
+          126636
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 152,
+      "latin": "Mareca penelope",
+      "name": {
+        "en": "Eurasian Wigeon"
+      },
+      "plumage": {
+        "en": "adult male, eclipse"
+      },
+      "plumage_filter": {
+        "season": "eclipse",
+        "sex": "male"
+      },
+      "look_for": [
+        {
+          "en": "In **eclipse**: dark rufous-brown, with a rounder, rusty head"
+        },
+        {
+          "en": "A white patch on the forewing, still showing"
+        },
+        {
+          "en": "A short, blue-grey bill with a black tip"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK: common from September, when the first males are still in eclipse. SE, FI, NO: breeds in the north. The drakes moult into breeding plumage again in September to October."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "abundant",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, quiet “whee” from the male."
+        },
+        "chosen": [
+          {
+            "media_id": 1194775,
+            "xeno_canto": "XC994796",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1194782,
+            "xeno_canto": "XC780322",
+            "type": "call, nocturnal flight call, song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 69,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1194784,
+            "xeno_canto": "XC774516",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "B",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A male Wigeon in September is half and half: the grey and the pink are coming back, patch by patch."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Wigeon female (week 21): a grey forewing, with no white patch."
+      },
+      "media": {
+        "card": [
+          128607,
+          128610,
+          128624
+        ],
+        "quiz": [
+          128616,
+          128618,
+          128590,
+          128619,
+          128603,
+          128597,
+          128601,
+          128609
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 225,
+      "latin": "Mergus merganser",
+      "name": {
+        "en": "Goosander"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "A **sawbill** with a long, thin red bill with a hooked tip"
+        },
+        {
+          "en": "A chestnut head, with a sharp, white **chin patch** and a clear edge to the white neck"
+        },
+        {
+          "en": "Grey body and a white belly, with a shaggy rear crown"
+        }
+      ],
+      "where_when": {
+        "en": "UK, DE, NO, SE, FI: fairly common on rivers and lakes. IE, NL, BE, FR, DK: scarce in winter. The commonest sawbill on fresh water, and it breeds in holes in trees."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Silent in winter; a low, harsh croak."
+        },
+        "chosen": [
+          {
+            "media_id": 1195739,
+            "xeno_canto": "XC94636",
+            "type": "call, call female",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 43,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1195737,
+            "xeno_canto": "XC96429",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 69,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A big, sleek, fish-eating duck. A sharp line between the brown head and the white neck is the key mark."
+      },
+      "dont_confuse": {
+        "en": "Red-breasted Merganser (this week): a shaggy crest and a blurred edge between the head and neck."
+      },
+      "media": {
+        "card": [
+          139100,
+          139210,
+          139224
+        ],
+        "quiz": [
+          139242,
+          139147,
+          139234,
+          139138,
+          139131,
+          139154,
+          139135,
+          139088
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 3,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 227,
+      "latin": "Mergus serrator",
+      "name": {
+        "en": "Red-breasted Merganser"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "A **sawbill** with a shaggy **crest** on a brown head"
+        },
+        {
+          "en": "A blurred, not sharp, line between the head and the white neck"
+        },
+        {
+          "en": "A thin red bill, and a greyer, slimmer look than a Goosander"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, SE, FI, DK: common on the coast and on lakes. NL, BE, DE, FR: fairly common in winter on the sea and the coast. A bird of the sea in winter."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Silent in winter; a low, hoarse croak in display."
+        },
+        "chosen": [
+          {
+            "media_id": 1195770,
+            "xeno_canto": "XC1029233",
+            "type": "call, flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 13,
+            "background_species": 0,
+            "recordist": "Astrid Cervantes"
+          },
+          {
+            "media_id": 1195776,
+            "xeno_canto": "XC605164",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 8,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1195781,
+            "xeno_canto": "XC449749",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 12,
+            "background_species": 0,
+            "recordist": "Patrik Åberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "More coastal than a Goosander. The shaggy crest gives a punk look, and the dull head merges into the neck."
+      },
+      "dont_confuse": {
+        "en": "Goosander (this week): a smoother head, a sharp white chin and a thicker bill."
+      },
+      "media": {
+        "card": [
+          139428,
+          139501,
+          139498
+        ],
+        "quiz": [
+          139515,
+          139410,
+          139467,
+          139420,
+          139365,
+          139396,
+          139380,
+          139391
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 4,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 222,
+      "latin": "Mergellus albellus",
+      "name": {
+        "en": "Smew"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "A small, neat **sawbill** with a chestnut cap and white cheeks"
+        },
+        {
+          "en": "A short, grey bill, and a grey body with a white belly"
+        },
+        {
+          "en": "Often called a 'redhead', and it dives in small groups"
+        }
+      ],
+      "where_when": {
+        "en": "NL, DE, DK, BE, UK: uncommon in winter, mainly in cold weather, on lakes and ponds. FR, IE, NO, SE, FI: scarce. Breeds in the Arctic forest and winters in the south and west."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Silent in winter; a low, soft croak in display."
+        },
+        "chosen": [
+          {
+            "media_id": 1195698,
+            "xeno_canto": "XC564365",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 10,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1195690,
+            "xeno_canto": "XC26577",
+            "type": "call, calls of a pair",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 3,
+            "recordist": "Stuart Fisher"
+          },
+          {
+            "media_id": 1195701,
+            "xeno_canto": "XC466526",
+            "type": "song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 12,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The female Smew is a small, neat duck. In very cold winters, groups of redheads fly west from the Baltic."
+      },
+      "dont_confuse": {
+        "en": "Red-breasted Merganser (this week): bigger, with a shaggy head and a long, thin bill."
+      },
+      "media": {
+        "card": [
+          138751,
+          138750,
+          138838
+        ],
+        "quiz": [
+          138831,
+          138837,
+          138845,
+          138901,
+          138796,
+          138792,
+          138842,
+          138766
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 4,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 227,
+    "species_ids": [
+      225,
+      227
+    ],
+    "title": {
+      "en": "Goosander or Red-breasted Merganser, female?"
+    },
+    "text": {
+      "en": "Look at the line between the brown head and the white neck. In a Goosander it is sharp, with a clean white chin. In a Red-breasted Merganser it is blurred, and the head has a shaggy crest. The Goosander is bigger, with a heavier bill, and prefers fresh water; the merganser is more often on the sea."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      18,
+      21,
+      22
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 3,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In winter, scan a lake or an estuary for sawbills. Look for the sharp border on a Goosander female and a shaggy head on a merganser. In July to September, look at the drakes of the commonest ducks on a pond: how many are in eclipse?"
+  },
+  "next": {
+    "en": "Next week: geese and swans."
+  },
+  "flow": [
+    "intro",
+    "bird:165",
+    "bird:149",
+    "bird:140",
+    "bird:152",
+    "bird:225",
+    "bird:227",
+    "bird:222",
+    "quiz",
+    "done"
+  ]
+}

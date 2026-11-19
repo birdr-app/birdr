@@ -1,0 +1,1125 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 36,
+  "slug": "calls-and-night-migration",
+  "part": 8,
+  "kind": "species",
+  "season": "autumn",
+  "minutes": 22,
+  "title": {
+    "en": "Calls and night migration"
+  },
+  "subtitle": {
+    "en": "Birds you hear but rarely see: crakes, Quail, Nightjar, Woodcock and the owls"
+  },
+  "intro": {
+    "en": "A large part of birding is listening. On a spring night you can hear a Corncrake, a Quail and a Spotted Crake from the same field. On an October night, thousands of Redwings, Song Thrushes and Robins pass overhead, calling to each other in the dark, and an experienced birder can tell what is flying over by the calls alone. This lesson trains your ear on birds that are shy, nocturnal or both.\n\nMost of the birds here are not in your photos for a reason: they hide. Water Rail, Corncrake, Spotted Crake and Quail live in thick vegetation. The Nightjar and the owls come out at dusk. The Woodcock is a wader that behaves like an owl. For each, the recording is the main item, and the photo is the reward.\n\nSeason: calls peak in the breeding season, from April to July, but nights in autumn (September to November) are the best for flight calls of migrants. A good way to start is with a nocturnal microphone in the garden."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "roding"
+      },
+      "explain": {
+        "en": "The slow display flight of a male Woodcock over woodland at dusk, calling as he goes."
+      }
+    },
+    {
+      "term": {
+        "en": "churring"
+      },
+      "explain": {
+        "en": "A long, continuous, buzzing trill, as in the song of a Nightjar."
+      }
+    },
+    {
+      "term": {
+        "en": "squeal"
+      },
+      "explain": {
+        "en": "A high, drawn-out cry like a piglet. The Water Rail's call."
+      }
+    },
+    {
+      "term": {
+        "en": "territorial call"
+      },
+      "explain": {
+        "en": "The call that a bird gives to defend its patch, usually heard at dusk or dawn."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 1773,
+      "latin": "Rallus aquaticus",
+      "name": {
+        "en": "Water Rail"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A slim, long-legged rail with a long, red bill"
+        },
+        {
+          "en": "Grey face and breast, with a black-and-white barred flank"
+        },
+        {
+          "en": "A pig-like **squeal** and grunting from deep in the reeds"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK: fairly common, mostly resident, in reedbeds, with more in winter when northern birds arrive. SE, FI, NO: uncommon in summer. Rarely seen, often heard."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A long, descending, pig-like squeal that ends in grunts, and a sharp “kip-kip-kip”."
+        },
+        "chosen": [
+          {
+            "media_id": 1215224,
+            "xeno_canto": "XC1079253",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 56,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          },
+          {
+            "media_id": 1215228,
+            "xeno_canto": "XC1070183",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 73,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1215229,
+            "xeno_canto": "XC1059475",
+            "type": "call",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 133,
+            "background_species": 0,
+            "recordist": "Uku Paal"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "You hear it on a winter walk by a frozen reedbed: a sound like a pig being squeezed. A bird that walks out onto the ice in the cold."
+      },
+      "dont_confuse": {
+        "en": "Corncrake (this week): a dry, rasping 'crex-crex', from a hay meadow."
+      },
+      "media": {
+        "card": [
+          284960,
+          284849,
+          284847
+        ],
+        "quiz": [
+          284972,
+          284867,
+          284848,
+          284957,
+          284947,
+          284962,
+          284918,
+          284969
+        ]
+      }
+    },
+    {
+      "species_id": 1781,
+      "latin": "Crex crex",
+      "name": {
+        "en": "Corncrake"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A buff bird with chestnut wing patches and a short, pale bill"
+        },
+        {
+          "en": "Rarely seen, it skulks in tall grass"
+        },
+        {
+          "en": "A dry, rasping “crex-crex”, repeated for hours at night"
+        }
+      ],
+      "where_when": {
+        "en": "IE (Donegal, Mayo), UK (Hebrides): scarce, from April to August, protected by farming schemes. DE, FR, DK, SE, FI, NO: uncommon. NL, BE: rare. A bird of hay meadows, which is vulnerable to the early mowing."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A dry, rasping, two-part “crex-crex” that sounds like a comb being drawn across a matchbox."
+        },
+        "chosen": [
+          {
+            "media_id": 1215333,
+            "xeno_canto": "XC810141",
+            "type": "call, song, Ocean",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 96,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          },
+          {
+            "media_id": 1215321,
+            "xeno_canto": "XC1006946",
+            "type": "call, song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Ryan Boswarthick"
+          },
+          {
+            "media_id": 1215331,
+            "xeno_canto": "XC909741",
+            "type": "aberrant, call, song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 65,
+            "background_species": 4,
+            "recordist": "Johan Södercrantz"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The sound of an unmown hay meadow. The call is so loud that it can be heard from 1 km."
+      },
+      "dont_confuse": {
+        "en": "Common Quail (this week): a short, liquid “whit-whit-whit”, quite a different pattern."
+      },
+      "media": {
+        "card": [
+          285526,
+          285623,
+          285532
+        ],
+        "quiz": [
+          285669,
+          285525,
+          285625,
+          285563,
+          285518,
+          285535,
+          285603,
+          285635
+        ]
+      }
+    },
+    {
+      "species_id": 1836,
+      "latin": "Porzana porzana",
+      "name": {
+        "en": "Spotted Crake"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A small, brown crake with white spots on the breast and flanks"
+        },
+        {
+          "en": "A buff undertail and a short, yellow-and-red bill"
+        },
+        {
+          "en": "A sharp, whip-like “whit” once a second, at night"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, FR, DK, SE, FI, NO: rare to scarce summer visitors, from late April to August, in wet marshes. IE: very rare. A bird that is more often heard than seen, in wet sedge."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A sharp, rhythmic “whit-whit-whit”, one a second, like a whiplash, at night."
+        },
+        "chosen": [
+          {
+            "media_id": 1215730,
+            "xeno_canto": "XC1026504",
+            "type": "call, song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 141,
+            "background_species": 0,
+            "recordist": "SonoNatura"
+          },
+          {
+            "media_id": 1215739,
+            "xeno_canto": "XC896120",
+            "type": "song",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 261,
+            "background_species": 0,
+            "recordist": "Jan Vanwynsberghe"
+          },
+          {
+            "media_id": 1215731,
+            "xeno_canto": "XC1005475",
+            "type": "song",
+            "country": "Finland",
+            "quality": "A",
+            "seconds": 287,
+            "background_species": 0,
+            "recordist": "Aku Kalliomäki"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A night bird of marshes that is found by its call, often by chance on a spring night."
+      },
+      "dont_confuse": {
+        "en": "Water Rail (this week): a longer bill, and a grunting, squealing voice."
+      },
+      "media": {
+        "card": [
+          289641,
+          289586,
+          289573
+        ],
+        "quiz": [
+          289576,
+          289631,
+          289579,
+          289610,
+          289650,
+          289625,
+          289621,
+          289637
+        ]
+      }
+    },
+    {
+      "species_id": 502,
+      "latin": "Coturnix coturnix",
+      "name": {
+        "en": "Common Quail"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A small, round, brown, streaked, partridge-like bird"
+        },
+        {
+          "en": "A cream stripe above the eye and on the crown"
+        },
+        {
+          "en": "Hardly ever seen: it sits tight in a crop and calls"
+        }
+      ],
+      "where_when": {
+        "en": "FR, DE: uncommon summer visitors in fields, from May. UK, NL, BE, DK, SE: scarce, with irruption years. IE, NO, FI: rare. A migrant to Africa that calls in summer from the middle of a barley field."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A liquid, three-note “whit, whit-whit”, often rendered as “wet-my-lips”, and a lot of repeats."
+        },
+        "chosen": [
+          {
+            "media_id": 1199627,
+            "xeno_canto": "XC1017817",
+            "type": "nocturnal flight call, Wingbeats.",
+            "country": "Denmark",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Lars Mogensen"
+          },
+          {
+            "media_id": 1199634,
+            "xeno_canto": "XC914741",
+            "type": "call, song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 217,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1199625,
+            "xeno_canto": "XC1022431",
+            "type": "nocturnal flight call, song, two-types",
+            "country": "France",
+            "quality": "A",
+            "seconds": 86,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The only migratory game bird of the region. Easy to hear on a May evening, hard to see."
+      },
+      "dont_confuse": {
+        "en": "Corncrake (this week): a rasping, two-note 'crex-crex'."
+      },
+      "media": {
+        "card": [
+          166795,
+          166790,
+          166871
+        ],
+        "quiz": [
+          166793,
+          166791,
+          166835,
+          166861,
+          166789,
+          166845,
+          166877,
+          166857
+        ]
+      }
+    },
+    {
+      "species_id": 1220,
+      "latin": "Caprimulgus europaeus",
+      "name": {
+        "en": "Eurasian Nightjar"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A long-winged, long-tailed bird with bark-like, grey-brown plumage"
+        },
+        {
+          "en": "A flat head, a tiny bill and a huge mouth; sits along a branch"
+        },
+        {
+          "en": "At dusk: the continuous **churring** of the male, and wing claps"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, DE, FR, DK, SE, FI, NO: uncommon to scarce summer visitors, on heaths and in forest clearings, from mid-May to August. BE: scarce. IE: very rare. A bird of dusk, found by its song."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A long, even, mechanical churr, changing pitch, for minutes, and a sharp “koo-ik” flight call."
+        },
+        "chosen": [
+          {
+            "media_id": 1208696,
+            "xeno_canto": "XC1010531",
+            "type": "call, wing clapping",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 69,
+            "background_species": 0,
+            "recordist": "Jacobo Ramil Millarengo"
+          },
+          {
+            "media_id": 1208692,
+            "xeno_canto": "XC1011928",
+            "type": "song, Wing clapping",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 48,
+            "background_species": 0,
+            "recordist": "David Boyle"
+          },
+          {
+            "media_id": 1208703,
+            "xeno_canto": "XC997494",
+            "type": "song, winbeat",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Timo Roeke"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A heath on a warm June evening at dusk is the place. The churring seems to come from all directions."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Woodcock (this week): a long bill and a different, soft, croaking voice."
+      },
+      "media": {
+        "card": [
+          232038,
+          232116,
+          232035
+        ],
+        "quiz": [
+          232047,
+          232036,
+          232049,
+          232037,
+          232034,
+          232048,
+          232122,
+          232118
+        ]
+      }
+    },
+    {
+      "species_id": 2080,
+      "latin": "Scolopax rusticola",
+      "name": {
+        "en": "Eurasian Woodcock"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A plump, brown, barred wader with a long, straight bill"
+        },
+        {
+          "en": "Large, dark eyes set high on the head, to see all around"
+        },
+        {
+          "en": "At dusk: the slow, owl-like **roding** flight of the male"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: uncommon, resident or breeding in woods, with more in winter (October to March) when big numbers come from Scandinavia and Russia. Rarely seen in the day."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A soft, deep, croaking “orrt-orrt-orrt” and a sharp “tsiwick” in the roding flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1218814,
+            "xeno_canto": "XC636310",
+            "type": "flight call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 54,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1218819,
+            "xeno_canto": "XC471936",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 52,
+            "background_species": 0,
+            "recordist": "Jérémy Simar"
+          },
+          {
+            "media_id": 1218821,
+            "xeno_canto": "XC922073",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 13,
+            "background_species": 0,
+            "recordist": "Teet Sirotkin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A wader that lives in the wood, and flies in the evening above the treetops. The first Woodcock of the winter flies in on a moonlit night in October."
+      },
+      "dont_confuse": {
+        "en": "Common Snipe (week 14): a striped head, a short, straight flight and a different call."
+      },
+      "media": {
+        "card": [
+          322753,
+          322743,
+          322719
+        ],
+        "quiz": [
+          322812,
+          322764,
+          322771,
+          322817,
+          322720,
+          322782,
+          322769,
+          322721
+        ]
+      }
+    },
+    {
+      "species_id": 3152,
+      "latin": "Asio otus",
+      "name": {
+        "en": "Long-eared Owl"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Slim, with long ear tufts and bright orange eyes"
+        },
+        {
+          "en": "A streaked, buff-brown body, and a upright, slender pose at rest"
+        },
+        {
+          "en": "A low, soft “hoo” every few seconds, and a squeaky-gate begging call from the young"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: uncommon to scarce residents, in woods and scrub, with winter roosts of several birds. Often found in a thorn thicket, in a group, in winter."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A low, soft, regular “hoo” (one every 2-3 seconds), and a creaky, squeaking call from the young in summer."
+        },
+        "chosen": [
+          {
+            "media_id": 1230973,
+            "xeno_canto": "XC964799",
+            "type": "interaction calls, clapping",
+            "country": "France",
+            "quality": "A",
+            "seconds": 63,
+            "background_species": 0,
+            "recordist": "PAULUS"
+          },
+          {
+            "media_id": 1230965,
+            "xeno_canto": "XC986925",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1230963,
+            "xeno_canto": "XC996840",
+            "type": "alarm call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 115,
+            "background_species": 0,
+            "recordist": "João Tomás"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A woodland owl that roosts in groups in winter, in a dense hawthorn or a conifer."
+      },
+      "dont_confuse": {
+        "en": "Tawny Owl (this week): bigger, a round head, no ear tufts and a dark eye."
+      },
+      "media": {
+        "card": [
+          457531,
+          457597,
+          457600
+        ],
+        "quiz": [
+          457508,
+          457540,
+          457518,
+          457516,
+          457612,
+          457546,
+          457512
+        ]
+      }
+    },
+    {
+      "species_id": 3136,
+      "latin": "Strix aluco",
+      "name": {
+        "en": "Tawny Owl"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A large, round-headed owl with big, dark eyes"
+        },
+        {
+          "en": "Mottled brown, with a face disc and no ear tufts"
+        },
+        {
+          "en": "A famous **territorial call**: “ke-wick” answered by a long, wavering “hoo-hoo-hooo”"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, FR, DK, SE, FI, NO: common, resident, in woods, parks and gardens. IE: absent. The owl you hear in the garden at night, from October to March."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "resident"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "resident"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "The female’s sharp “ke-wick” and the male’s long, quavering “hoo-hoo-hoooo”."
+        },
+        "chosen": [
+          {
+            "media_id": 1230725,
+            "xeno_canto": "XC1043088",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 51,
+            "background_species": 0,
+            "recordist": "Mark Plummer"
+          },
+          {
+            "media_id": 1230710,
+            "xeno_canto": "XC1075999",
+            "type": "song",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 74,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          },
+          {
+            "media_id": 1230715,
+            "xeno_canto": "XC1069938",
+            "type": "song",
+            "country": "Portugal",
+            "quality": "A",
+            "seconds": 103,
+            "background_species": 0,
+            "recordist": "Nelson Conceição"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 34
+      },
+      "note": {
+        "en": "Not a single bird: it takes a pair to give the full call, “ke-wick” and “hoo-hoo-hooo”. They usually sit in a tree near a house."
+      },
+      "dont_confuse": {
+        "en": "Long-eared Owl (this week): slimmer, ear tufts, orange eyes, and a softer, simpler call."
+      },
+      "media": {
+        "card": [
+          455704,
+          455655,
+          455736
+        ],
+        "quiz": [
+          455633,
+          455785,
+          455694,
+          455786,
+          455693,
+          455671,
+          455697
+        ]
+      }
+    }
+  ],
+  "compare": {
+    "after_species_id": 1781,
+    "species_ids": [
+      1781,
+      502
+    ],
+    "title": {
+      "en": "Corncrake or Quail?"
+    },
+    "text": {
+      "en": "Both call from the grass at night. The Corncrake gives a dry, rasping 'crex-crex', two notes with a pause, like a comb across a matchbox. The Quail gives a short, liquid 'whit, whit-whit', with three notes, like “wet-my-lips”. The Corncrake is in damp hay meadows, the Quail in crops."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      31,
+      33,
+      34
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 3,
+      "photo_sound": 5,
+      "sound": 4
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Choose a clear night in October, step outside and listen for 15 minutes. How many flight calls do you hear? Try Redwing (a thin 'tseep'), Song Thrush (a short 'tsip') and Robin (a thin 'tic'). In spring, visit a heath at dusk for a Nightjar."
+  },
+  "next": {
+    "en": "Next week: bad photos and jizz. How to name a bird from the silhouette."
+  },
+  "flow": [
+    "intro",
+    "bird:1773",
+    "bird:1781",
+    "bird:1836",
+    "bird:502",
+    "bird:1220",
+    "bird:2080",
+    "bird:3152",
+    "bird:3136",
+    "quiz",
+    "done"
+  ]
+}

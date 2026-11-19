@@ -1,0 +1,974 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 33,
+  "slug": "american-vagrants",
+  "part": 7,
+  "kind": "species",
+  "season": "autumn",
+  "minutes": 22,
+  "title": {
+    "en": "American vagrants"
+  },
+  "subtitle": {
+    "en": "Waders from North America: six sandpipers, a plover, a dowitcher and a phalarope"
+  },
+  "intro": {
+    "en": "Every September and October, a few young waders from North America cross the Atlantic with the first autumn gales. They are juveniles, on their first migration, and they are blown from their usual route along the American east coast. Ireland, south-west England, Scotland and the Scilly Isles are the best places, and the Netherlands and Denmark get a few each year.\n\nA lot of the skill is looking at the juveniles of the commoner birds: a Pectoral Sandpiper you know, but what about a Baird's or a White-rumped? The new ones are very small and the differences between them are small too, so use the checklist: wings (do they project beyond the tail?), rump colour, leg colour, bill shape and call.\n\nIn the quiz, the wrong answers are the European waders from the earlier blocks: the lesson is as much about what they are not."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "primary projection"
+      },
+      "explain": {
+        "en": "How far the wing tips stick out beyond the tail on a standing bird. Long in White-rumped and Baird's Sandpipers."
+      }
+    },
+    {
+      "term": {
+        "en": "rump"
+      },
+      "explain": {
+        "en": "The lower back, above the tail. Pure white in a White-rumped Sandpiper."
+      }
+    },
+    {
+      "term": {
+        "en": "scaly"
+      },
+      "explain": {
+        "en": "With pale edges to every back feather, making a scale pattern. A juvenile Baird's has a scaly back."
+      }
+    },
+    {
+      "term": {
+        "en": "supercilium"
+      },
+      "explain": {
+        "en": "The pale stripe above the eye. Bold in a Long-billed Dowitcher."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2154,
+      "latin": "Calidris fuscicollis",
+      "name": {
+        "en": "White-rumped Sandpiper"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "Looks like a long, slim Dunlin, with wings that project far beyond the tail: a long **primary projection**"
+        },
+        {
+          "en": "A pure white **rump**, which shows in flight, with no dark stripe"
+        },
+        {
+          "en": "A short, thin bill with a pale base, and a rusty edge on the scapulars"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: rare but annual, from September to October, mostly on the west coast. NL, BE, DE, DK, FR, NO, SE: very rare. FI: almost never. A bird that migrates from the Arctic to Patagonia."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A thin, high, mouse-like squeak, “jeeet”, quite unlike any European wader."
+        },
+        "chosen": [
+          {
+            "media_id": 1219979,
+            "xeno_canto": "XC526479",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 2,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1219984,
+            "xeno_canto": "XC185625",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 8,
+            "background_species": 0,
+            "recordist": "Andrew Spencer"
+          },
+          {
+            "media_id": 1219975,
+            "xeno_canto": "XC711562",
+            "type": "flight call",
+            "country": "Chile",
+            "quality": "A",
+            "seconds": 10,
+            "background_species": 0,
+            "recordist": "Ignacio Escobar"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The call is the best clue, and the wings projecting beyond the tail make it look long and slim."
+      },
+      "dont_confuse": {
+        "en": "Curlew Sandpiper (week 11): a longer, more curved bill and a longer neck."
+      },
+      "media": {
+        "card": [
+          331895,
+          331898,
+          331885
+        ],
+        "quiz": [
+          331810,
+          331890,
+          331824,
+          331871,
+          331918,
+          331891,
+          331903,
+          331946
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2152,
+      "latin": "Calidris bairdii",
+      "name": {
+        "en": "Baird's Sandpiper"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "A buffy, **scaly** back and a buff wash across the breast"
+        },
+        {
+          "en": "Long wings that project well beyond the tail, with a long **primary projection**"
+        },
+        {
+          "en": "Short, black legs and a short, straight, black bill"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: rare but annual, in September, often on the coast. NL, BE, DE, DK, FR, NO, SE: very rare. FI: almost never. A bird that migrates from the Arctic tundra to the Andes."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, trilling, low “kreep”, quite different from a Little Stint."
+        },
+        "chosen": [
+          {
+            "media_id": 1219938,
+            "xeno_canto": "XC767039",
+            "type": "call, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 5,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1219948,
+            "xeno_canto": "XC185624",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 21,
+            "background_species": 0,
+            "recordist": "Andrew Spencer"
+          },
+          {
+            "media_id": 1219931,
+            "xeno_canto": "XC470766",
+            "type": "call, alarm call?",
+            "country": "Argentina",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 0,
+            "recordist": "Bobby Wilcox"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A juvenile Baird's is the most beautiful: scaly buff, with a long body, like a stint in a tweed jacket."
+      },
+      "dont_confuse": {
+        "en": "Little Stint (week 11): a pale V on the back and a split eyebrow, and shorter wings."
+      },
+      "media": {
+        "card": [
+          331612,
+          331474,
+          331518
+        ],
+        "quiz": [
+          331603,
+          331530,
+          331579,
+          331559,
+          331610,
+          331595,
+          331467,
+          331469
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2147,
+      "latin": "Calidris subruficollis",
+      "name": {
+        "en": "Buff-breasted Sandpiper"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "Buff underparts from chin to belly, with a plain buff face and a big, dark eye"
+        },
+        {
+          "en": "A scaly brown back, a small round head and a short, thin bill"
+        },
+        {
+          "en": "Bright yellow-orange legs and a long neck, standing upright"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: rare but annual, in September and October, in short grass and on fields. NL, BE, DE, DK, FR: very rare. NO, SE, FI: almost never. A bird that likes fields more than mud."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Mostly silent; a low, soft “tick” or “preet”."
+        },
+        "chosen": [
+          {
+            "media_id": 1219836,
+            "xeno_canto": "XC997531",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 14,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1219840,
+            "xeno_canto": "XC48603",
+            "type": "alarm call",
+            "country": "Uruguay",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "Bernabe Lopez-Lanus"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 13
+      },
+      "note": {
+        "en": "A tame, upright, pale-buff wader of dry fields. It looks like a small Ruff with a plainer face."
+      },
+      "dont_confuse": {
+        "en": "Ruff (week 14): a longer bill, a scaly back and orange-buff legs."
+      },
+      "media": {
+        "card": [
+          330608,
+          330609,
+          330613
+        ],
+        "quiz": [
+          330607,
+          330616,
+          330669,
+          330614,
+          330612,
+          330620,
+          330615,
+          330617
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 15,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 1979,
+      "latin": "Pluvialis dominica",
+      "name": {
+        "en": "American Golden Plover"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "Darker and greyer than a European Golden Plover, with a bold white eyebrow"
+        },
+        {
+          "en": "A dark cap and a grey, scaly back with gold spangles"
+        },
+        {
+          "en": "Long wings that project beyond the tail, and grey, not white, underwings"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: rare but annual, from September to October, among flocks of Golden Plovers. NL, BE, DE, DK, FR, NO, SE: very rare. FI: almost never. A bird of the American tundra."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A sharp, two-note “queedle” or “chu-wee”, quite different from the European bird."
+        },
+        "chosen": [
+          {
+            "media_id": 1217668,
+            "xeno_canto": "XC806658",
+            "type": "flight call",
+            "country": "Brazil",
+            "quality": "A",
+            "seconds": 8,
+            "background_species": 0,
+            "recordist": "Vinícius Soares Domingues"
+          },
+          {
+            "media_id": 1217654,
+            "xeno_canto": "XC356253",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Frank Lambert"
+          },
+          {
+            "media_id": 1217660,
+            "xeno_canto": "XC322809",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Check every Golden Plover flock for one with a bold eyebrow and a grey look. The grey, not white, underwing is the sign."
+      },
+      "dont_confuse": {
+        "en": "European Golden Plover (week 13): a white underwing, a gold look and a shorter wing projection."
+      },
+      "media": {
+        "card": [
+          307220,
+          307307,
+          307357
+        ],
+        "quiz": [
+          307235,
+          307305,
+          307255,
+          307339,
+          307242,
+          307234,
+          307349,
+          307253
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 2,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2123,
+      "latin": "Tringa flavipes",
+      "name": {
+        "en": "Lesser Yellowlegs"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "Slim and elegant, with very long, bright yellow legs"
+        },
+        {
+          "en": "A thin, straight, dark bill, as long as the head"
+        },
+        {
+          "en": "Greyish upperparts with white spots, and a white rump"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: rare but annual, from August to October. NL, BE, DE, DK, FR: very rare. NO, SE, FI: almost never. A bird of the American wetlands."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, soft “tu” or “tu-tu”, one or two notes, quieter than a Greenshank."
+        },
+        "chosen": [
+          {
+            "media_id": 1219487,
+            "xeno_canto": "XC1048819",
+            "type": "alarm call, call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "AUDEVARD Aurélien"
+          },
+          {
+            "media_id": 1219486,
+            "xeno_canto": "XC54361",
+            "type": "alarm call",
+            "country": "Colombia",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Bernabe Lopez-Lanus"
+          },
+          {
+            "media_id": 1219485,
+            "xeno_canto": "XC147744",
+            "type": "alarm call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Davyd Betchkal"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A Redshank-sized wader with yellow legs. The call is one or two soft notes, unlike the three-note call of a Greenshank."
+      },
+      "dont_confuse": {
+        "en": "Common Greenshank (week 12): a thicker bill, an upturned look and greenish legs."
+      },
+      "media": {
+        "card": [
+          327285,
+          327326,
+          327240
+        ],
+        "quiz": [
+          327284,
+          327241,
+          327190,
+          327316,
+          327315,
+          327206,
+          327336,
+          327262
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2077,
+      "latin": "Limnodromus scolopaceus",
+      "name": {
+        "en": "Long-billed Dowitcher"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "A very long, straight bill, like a snipe's, and a hunched look"
+        },
+        {
+          "en": "A dark, plain-backed juvenile, with a bold pale **supercilium**"
+        },
+        {
+          "en": "Feeds with a quick, up-and-down stitching action, like a sewing machine"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: rare but annual, in October, mostly on the coast. NL, BE, DE, DK, FR: very rare. NO, SE, FI: almost never. A bird that comes in on the same gales as the other American waders."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A thin, high “keek”, single or a short series, like a Turnstone."
+        },
+        "chosen": [
+          {
+            "media_id": 1218756,
+            "xeno_canto": "XC323112",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 37,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          },
+          {
+            "media_id": 1218758,
+            "xeno_canto": "XC203540",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Andrew Spencer"
+          },
+          {
+            "media_id": 1218765,
+            "xeno_canto": "XC1046345",
+            "type": "song",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 22,
+            "background_species": 0,
+            "recordist": "AUDEVARD Aurélien"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A big, fat, dark wader with a snipe's bill, often seen asleep. Its call, a thin “keek”, is the thing that gives it away."
+      },
+      "dont_confuse": {
+        "en": "Common Snipe (week 14): a striped head and a zig-zag flight."
+      },
+      "media": {
+        "card": [
+          322343,
+          322314,
+          322242
+        ],
+        "quiz": [
+          322338,
+          322321,
+          322345,
+          322328,
+          322288,
+          322291,
+          322229,
+          322354
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2158,
+      "latin": "Calidris pusilla",
+      "name": {
+        "en": "Semipalmated Sandpiper"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "A tiny sandpiper with a short, thick, blunt-tipped black bill"
+        },
+        {
+          "en": "Black legs and a scaly, grey-brown back, with a paler head"
+        },
+        {
+          "en": "Looks like a Little Stint, but plainer and less rusty"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: very rare, in September, mostly in the south-west. NL, BE, DE, DK, FR: almost never. A bird that is very hard to separate from Little Stint, and usually recorded from photographs."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, dry, rather sparrow-like “cherk”, quite different from the sharp “tit” of a Little Stint."
+        },
+        "chosen": [
+          {
+            "media_id": 1220054,
+            "xeno_canto": "XC1027132",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 41,
+            "background_species": 0,
+            "recordist": "Paul Driver"
+          },
+          {
+            "media_id": 1220049,
+            "xeno_canto": "XC1060879",
+            "type": "song, song",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 61,
+            "background_species": 0,
+            "recordist": "Benjamin Drillat"
+          },
+          {
+            "media_id": 1220064,
+            "xeno_canto": "XC424198",
+            "type": "song",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 81,
+            "background_species": 0,
+            "recordist": "Jarmo Pirhonen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A very hard bird: a good photograph of the bill and a recording of the call are both needed to be sure."
+      },
+      "dont_confuse": {
+        "en": "Little Stint (week 11): a split supercilium and a pale V on the back."
+      },
+      "media": {
+        "card": [
+          332626,
+          332538,
+          332624
+        ],
+        "quiz": [
+          332621,
+          332629,
+          332601,
+          332484,
+          332622,
+          332608,
+          332637,
+          332628
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2110,
+      "latin": "Phalaropus tricolor",
+      "name": {
+        "en": "Wilson's Phalarope"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "A long, needle-thin black bill, a long neck and long, yellow legs"
+        },
+        {
+          "en": "Pale grey-brown back with pale feather edges, and a white face with a dark eye-stripe"
+        },
+        {
+          "en": "Often feeds on land, running about, not just swimming"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: very rare, in September and October. NL, BE, DE, DK, FR, NO, SE: almost never. FI: almost never. A bird of North American prairie wetlands."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, grunting “wurk” or “yurp”, quite unlike the other phalaropes."
+        },
+        "chosen": [
+          {
+            "media_id": 1219213,
+            "xeno_canto": "XC294469",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 10,
+            "background_species": 0,
+            "recordist": "Paul Marvin"
+          },
+          {
+            "media_id": 1219211,
+            "xeno_canto": "XC877030",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 3,
+            "background_species": 0,
+            "recordist": "Skyler Bol"
+          },
+          {
+            "media_id": 1219210,
+            "xeno_canto": "XC105342",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 129,
+            "background_species": 0,
+            "recordist": "Andrew Spencer"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The biggest of the phalaropes, and the one that feeds on land more than the other two."
+      },
+      "dont_confuse": {
+        "en": "Red-necked Phalarope (week 14): a darker back, shorter legs and swimming."
+      },
+      "media": {
+        "card": [
+          325112,
+          325116,
+          325012
+        ],
+        "quiz": [
+          324950,
+          324951,
+          324977,
+          324999,
+          325106,
+          325107,
+          325096,
+          325063
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 2152,
+    "species_ids": [
+      2154,
+      2152
+    ],
+    "title": {
+      "en": "White-rumped or Baird's Sandpiper?"
+    },
+    "text": {
+      "en": "Both have long wings that project beyond the tail. White-rumped has a white rump and a streaked flank, with a bill with a pale base. Baird's has a buffy, scaly back, a dark rump and a short, black bill, and the legs are always black. The calls differ too: White-rumped squeaks, Baird's trills."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      28,
+      31,
+      32
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 3,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In September and October, check a wet field or the edge of a pool on the west coast, or your nearest hotspot. Look at every wader: is it a Dunlin, a Pectoral Sandpiper or something rarer? Write down what makes you think so."
+  },
+  "next": {
+    "en": "Next week: southern overshoots and autumn falls."
+  },
+  "flow": [
+    "intro",
+    "bird:2154",
+    "bird:2152",
+    "bird:2147",
+    "bird:1979",
+    "bird:2123",
+    "bird:2077",
+    "bird:2158",
+    "bird:2110",
+    "quiz",
+    "done"
+  ]
+}

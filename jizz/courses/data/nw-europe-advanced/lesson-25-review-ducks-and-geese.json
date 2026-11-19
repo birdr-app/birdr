@@ -1,0 +1,54 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 25,
+  "slug": "review-ducks-and-geese",
+  "part": 5,
+  "kind": "review",
+  "season": "any",
+  "minutes": 24,
+  "title": {
+    "en": "Review: ducks and geese"
+  },
+  "subtitle": {
+    "en": "Female ducks, eclipse drakes, sawbills, geese and swans in one quiz"
+  },
+  "intro": {
+    "en": "This is the quiz with the brown ducks. After four lessons you can say \"female Garganey\" and \"eclipse Shoveler\". The twenty questions use birds from all four duck and goose lessons, plus seabirds from block 4. Several questions show you a female duck. Look at the head and the bill first, then the wing.\n\nIn real life, many ducks are not identified. A flock of brown dabbling ducks far away on a lake is \"duck sp.\". Here, you get a close photo and a fair chance.\n\nA good score is fifteen. If you got a pair wrong (Tufted and Scaup, Teal and Garganey), go back to the comparison in that lesson, and try again."
+  },
+  "words": [],
+  "birds": [],
+  "compare": null,
+  "quiz": {
+    "questions": 20,
+    "photos_from": "quiz",
+    "answers_from": "review",
+    "review_from": [
+      21,
+      22,
+      23,
+      24,
+      16,
+      17,
+      18,
+      19
+    ],
+    "review_questions": 20,
+    "modes": {
+      "photo": 11,
+      "photo_sound": 5,
+      "sound": 4
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Go to a lake with a big duck flock and photograph every female you can. At home, name each one from your photos, and check your list against a field guide. Which ones did you get wrong?"
+  },
+  "next": {
+    "en": "Next block: field birds, from raptors in flight to chats and flycatchers."
+  },
+  "flow": [
+    "intro",
+    "quiz",
+    "done"
+  ]
+}

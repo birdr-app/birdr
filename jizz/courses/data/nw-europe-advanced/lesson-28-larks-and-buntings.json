@@ -1,0 +1,1156 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 28,
+  "slug": "larks-and-buntings",
+  "part": 6,
+  "kind": "species",
+  "season": "winter",
+  "minutes": 22,
+  "title": {
+    "en": "Larks and buntings"
+  },
+  "subtitle": {
+    "en": "Skylark, Woodlark, Shore Lark, Snow and Lapland Bunting, Corn, Cirl and Reed Bunting"
+  },
+  "intro": {
+    "en": "Larks and buntings are the small brown birds of fields, dunes and reedbeds. Larks walk, buntings hop, and both give calls that identify them. They are easy to overlook, and winter is the best time to see them, because flocks gather on stubble fields, saltmarshes and the coast.\n\nThe rarities of today live on the beach: Shore Larks, Snow Buntings and Lapland Buntings are Arctic birds that winter on the coast of the North Sea. The Woodlark and the Cirl Bunting are southern birds in the UK and France, and the Corn Bunting is declining over most of the region.\n\nLearn them by call: the Skylark's liquid trill, the Corn Bunting's jingling keys, the Reed Bunting's single high note."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "song flight"
+      },
+      "explain": {
+        "en": "A flight in which the bird sings while hovering or circling high. Skylarks and Woodlarks do it."
+      }
+    },
+    {
+      "term": {
+        "en": "crest"
+      },
+      "explain": {
+        "en": "A short tuft on the head that can be raised. The Skylark has a small one."
+      }
+    },
+    {
+      "term": {
+        "en": "wing patch"
+      },
+      "explain": {
+        "en": "A white patch on the wing, as on the Snow Bunting."
+      }
+    },
+    {
+      "term": {
+        "en": "tail pattern"
+      },
+      "explain": {
+        "en": "The pattern of white on the tail. Larks and buntings often show white outer tail feathers."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 7249,
+      "latin": "Alauda arvensis",
+      "name": {
+        "en": "Eurasian Skylark"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Streaky brown, with a short **crest** on the head, and a white trailing edge to the wing"
+        },
+        {
+          "en": "White outer tail feathers show as it flies"
+        },
+        {
+          "en": "Rises from the ground in a long **song flight**, singing without a break"
+        }
+      ],
+      "where_when": {
+        "en": "All ten countries. UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: common on fields and moors, with many arriving from the north in autumn. Declining in farmland. In winter large flocks gather on stubble."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A long, continuous, bubbling song of trills and whistles, and a liquid, rolling “chirrup” call."
+        },
+        "chosen": [
+          {
+            "media_id": 1289570,
+            "xeno_canto": "XC1033972",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1289580,
+            "xeno_canto": "XC1008315",
+            "type": "song, Ocean.",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 64,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          },
+          {
+            "media_id": 1289569,
+            "xeno_canto": "XC1040618",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 343,
+            "background_species": 0,
+            "recordist": "Esperanza Poveda"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The sound of the countryside in spring. The white trailing edge to the wing and the crest are the marks."
+      },
+      "dont_confuse": {
+        "en": "Woodlark (this week): shorter tail, a pale eyebrow that meets on the nape and a descending song."
+      },
+      "media": {
+        "card": [
+          817127,
+          817126,
+          817106
+        ],
+        "quiz": [
+          817147,
+          817124,
+          817220,
+          817209,
+          817156,
+          817123,
+          817102,
+          817223
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 3,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 7240,
+      "latin": "Lullula arborea",
+      "name": {
+        "en": "Woodlark"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Smaller than a Skylark, with a very short tail, and no white in it"
+        },
+        {
+          "en": "A bold pale eyebrow that meets behind the neck, and a black-and-white mark on the wing edge"
+        },
+        {
+          "en": "A song of falling, fluty notes, “lu-lu-lu”, in a circling **song flight**"
+        }
+      ],
+      "where_when": {
+        "en": "FR, UK (south), DE, NL, BE, DK, SE: uncommon to scarce, on heath and clear-fells. NO, FI, IE: rare. It sings in March and April, and sometimes at night."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "song and call",
+        "describe": {
+          "en": "A fluty, descending “lu-lu-lu-lu-lu” song, and a call of a liquid “tit-looeet”."
+        },
+        "chosen": [
+          {
+            "media_id": 1289494,
+            "xeno_canto": "XC980998",
+            "type": "flight call, song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 114,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1289504,
+            "xeno_canto": "XC852698",
+            "type": "song",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 136,
+            "background_species": 0,
+            "recordist": "Rob van Bemmelen"
+          },
+          {
+            "media_id": 1289501,
+            "xeno_canto": "XC913649",
+            "type": "song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 222,
+            "background_species": 0,
+            "recordist": "Leo"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A lark of heaths and forest clearings. A short tail and a delicate, stubby look make it clear."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Skylark (this week): a longer tail, a crest and a white edge to the tail."
+      },
+      "media": {
+        "card": [
+          816381,
+          816380,
+          816378
+        ],
+        "quiz": [
+          816391,
+          816379,
+          816448,
+          816424,
+          816383,
+          816488,
+          816430,
+          816485
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 5,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 7219,
+      "latin": "Eremophila alpestris",
+      "name": {
+        "en": "Shore Lark"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "A yellow face with a black mask and a black band on the breast"
+        },
+        {
+          "en": "Small black 'horns' on the sides of the head"
+        },
+        {
+          "en": "A pale pink-brown back, and a white belly, found on beaches"
+        }
+      ],
+      "where_when": {
+        "en": "NO, SE, FI: breeds in the mountains, from May. UK, NL, DE, DK: scarce in winter on the east coast, usually in small flocks from October to March. FR, BE, IE: rare. A small, pretty lark of the Arctic."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A thin, high, silvery “tsee-ree” and a tinkling song."
+        },
+        "chosen": [
+          {
+            "media_id": 1289141,
+            "xeno_canto": "XC412102",
+            "type": "call",
+            "country": "Mongolia",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Frank Lambert"
+          },
+          {
+            "media_id": 1289130,
+            "xeno_canto": "XC765169",
+            "type": "flight call, modulated call",
+            "country": "Mongolia",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1289142,
+            "xeno_canto": "XC406171",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 66,
+            "background_species": 0,
+            "recordist": "Patrik Åberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A lark of the beach and the saltmarsh. Look for the yellow face and the black mask, even in winter."
+      },
+      "dont_confuse": {
+        "en": "Snow Bunting (this week): white wing patches and a different shape."
+      },
+      "media": {
+        "card": [
+          814169,
+          814193,
+          814102
+        ],
+        "quiz": [
+          814172,
+          814197,
+          814180,
+          814077,
+          814156,
+          814093,
+          814200,
+          814057
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 10164,
+      "latin": "Plectrophenax nivalis",
+      "name": {
+        "en": "Snow Bunting"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "A white head and belly with warm buff-rusty on the crown and cheek"
+        },
+        {
+          "en": "Large white **wing patches** and white outer tail, which flash in flight"
+        },
+        {
+          "en": "A yellow bill, and a short-legged, plump look, often on a beach"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NO, SE, FI, DK, NL, DE: fairly common to uncommon in winter, October to March, on shingle, dunes and saltmarshes. Breeds in the Scottish Highlands and the Arctic. FR, BE, IE: scarce."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A rippling, whistling “tirrirrip” and a clear “peu” call."
+        },
+        "chosen": [
+          {
+            "media_id": 1329419,
+            "xeno_canto": "XC1072438",
+            "type": "call",
+            "country": "Denmark",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "Christian Bøggild"
+          },
+          {
+            "media_id": 1329420,
+            "xeno_canto": "XC1027418",
+            "type": "alarm call",
+            "country": "Denmark",
+            "quality": "A",
+            "seconds": 74,
+            "background_species": 0,
+            "recordist": "brickegickel"
+          },
+          {
+            "media_id": 1329430,
+            "xeno_canto": "XC487582",
+            "type": "alarm call, call, flight call",
+            "country": "Iceland",
+            "quality": "A",
+            "seconds": 90,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A snowflake: a flock of Snow Buntings flies up like a flurry of white wings. They are bold and approachable."
+      },
+      "dont_confuse": {
+        "en": "Lapland Bunting (this week): a darker, rusty look with no big white patches."
+      },
+      "media": {
+        "card": [
+          1074571,
+          1074616,
+          1074652
+        ],
+        "quiz": [
+          1074568,
+          1074574,
+          1074556,
+          1074614,
+          1074566,
+          1074604,
+          1074543,
+          1074617
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 10160,
+      "latin": "Calcarius lapponicus",
+      "name": {
+        "en": "Lapland Bunting"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "season": "non_breeding"
+      },
+      "look_for": [
+        {
+          "en": "A rusty nape and a dark, framed cheek, with a pale eyebrow"
+        },
+        {
+          "en": "A streaky back and flanks, and a yellow bill with a dark tip"
+        },
+        {
+          "en": "Short, dry rattle in flight, followed by a clear 'tew' call"
+        }
+      ],
+      "where_when": {
+        "en": "NO, SE, FI: breeds in the Arctic, from June. UK, NL, DE, DK: scarce in winter, on saltmarsh and coast, October to March. FR, BE, IE: rare. A bird that likes a fresh field of weeds."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A dry, rattling “ticky-tick-tick” followed by a clear, short “tew”."
+        },
+        "chosen": [
+          {
+            "media_id": 1329348,
+            "xeno_canto": "XC1005159",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 49,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1329346,
+            "xeno_canto": "XC1008930",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 50,
+            "background_species": 0,
+            "recordist": "Dag Österlund"
+          },
+          {
+            "media_id": 1329341,
+            "xeno_canto": "XC1009219",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 3,
+            "recordist": "Ulf Elman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A shy bird that crouches. It is found by its call, and is often with Snow Buntings or Skylarks."
+      },
+      "dont_confuse": {
+        "en": "Snow Bunting (this week): paler, with large white wing patches, and bolder."
+      },
+      "media": {
+        "card": [
+          1074008,
+          1073991,
+          1074023
+        ],
+        "quiz": [
+          1074043,
+          1074032,
+          1074033,
+          1074040,
+          1074037,
+          1073992,
+          1074031,
+          1073999
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 10171,
+      "latin": "Emberiza calandra",
+      "name": {
+        "en": "Corn Bunting"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A big, streaky, dull brown bunting with a heavy bill"
+        },
+        {
+          "en": "No white in the **tail pattern**, and no pattern on the face"
+        },
+        {
+          "en": "Sings from a wire with a call like a bunch of jingling keys"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, FR, DE, NL, BE, DK, SE: uncommon to scarce, declining, on open farmland. NO, FI: almost never. A bird of cereal and open fields, with a male that dangles its legs in flight."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A short, sharp, jingling song, like a bunch of keys being shaken: “tzik-tzik-tzik-zzzrrrip”."
+        },
+        "chosen": [
+          {
+            "media_id": 1329548,
+            "xeno_canto": "XC986495",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 84,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1329552,
+            "xeno_canto": "XC896500",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Martin Billard"
+          },
+          {
+            "media_id": 1329538,
+            "xeno_canto": "XC1010464",
+            "type": "call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Bodo Sonnenburg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The most plain and streaky of the buntings, and a farmland bird in steep decline over most of the region."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Skylark (this week): a crest and a white edge to the wing."
+      },
+      "media": {
+        "card": [
+          1075470,
+          1075484,
+          1075469
+        ],
+        "quiz": [
+          1075496,
+          1075485,
+          1075479,
+          1075483,
+          1075498,
+          1075495,
+          1075486,
+          1075471
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 15,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 10178,
+      "latin": "Emberiza cirlus",
+      "name": {
+        "en": "Cirl Bunting"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "plumage_filter": {
+        "sex": "male"
+      },
+      "look_for": [
+        {
+          "en": "A black throat and eye-stripe on a yellow-green head"
+        },
+        {
+          "en": "A chestnut breast band, and a bright yellow underside"
+        },
+        {
+          "en": "Sings from a hedge top, a rattle on one note"
+        }
+      ],
+      "where_when": {
+        "en": "FR: fairly common in the south and west. UK: scarce, mostly in south Devon. BE, DE, NL, DK, SE, NO, FI, IE: almost never. A species of the Mediterranean that is declining in the north."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "FR": {
+          "frequency": "common",
+          "peak": "resident"
+        }
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A dry, metallic rattle on one note, “zi-zi-zi-zi-zi-zi”, like a Lesser Whitethroat but sweeter."
+        },
+        "chosen": [
+          {
+            "media_id": 1329660,
+            "xeno_canto": "XC1018593",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 185,
+            "background_species": 0,
+            "recordist": "Grégoire Chauvot"
+          },
+          {
+            "media_id": 1329654,
+            "xeno_canto": "XC1049182",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 205,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          },
+          {
+            "media_id": 1329665,
+            "xeno_canto": "XC994997",
+            "type": "song",
+            "country": "Greece",
+            "quality": "A",
+            "seconds": 43,
+            "background_species": 0,
+            "recordist": "David Pennington"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The male's head is a bold black, green and yellow pattern. A very rare bird in Britain, known only from a small area in the south-west."
+      },
+      "dont_confuse": {
+        "en": "Yellowhammer (beginners): a yellow head with no black throat or green."
+      },
+      "media": {
+        "card": [
+          1076355,
+          1076349,
+          1076350
+        ],
+        "quiz": [
+          1076351,
+          1076444,
+          1076494,
+          1076456,
+          1076500,
+          1076441,
+          1076508,
+          1076452
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 4,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 10200,
+      "latin": "Schoeniclus schoeniclus",
+      "name": {
+        "en": "Common Reed Bunting"
+      },
+      "plumage": {
+        "en": "adult male"
+      },
+      "plumage_filter": {
+        "sex": "male"
+      },
+      "look_for": [
+        {
+          "en": "A black head and bib with a white collar and moustache"
+        },
+        {
+          "en": "A streaky brown back, and a chestnut-and-black pattern"
+        },
+        {
+          "en": "White outer tail feathers, and a short, thick bill"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: common to fairly common in reedbeds, wet fields and ditches, mostly resident. A few move south in winter, and many visit gardens in cold snaps."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "song",
+        "describe": {
+          "en": "A monotonous, simple “tseek-tseek-tseek-tissik”, with long gaps between phrases."
+        },
+        "chosen": [
+          {
+            "media_id": 1330076,
+            "xeno_canto": "XC810337",
+            "type": "song",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Dries Van de Loock"
+          },
+          {
+            "media_id": 1330074,
+            "xeno_canto": "XC897913",
+            "type": "song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 87,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1330071,
+            "xeno_canto": "XC931851",
+            "type": "call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 0,
+            "recordist": "Bodo Sonnenburg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A common and familiar bird of wet places, but easily overlooked as a bird that sings in a reed top without moving."
+      },
+      "dont_confuse": {
+        "en": "House Sparrow (beginners): a black bib but no white collar, and a grey crown."
+      },
+      "media": {
+        "card": [
+          1079533,
+          1079505,
+          1079503
+        ],
+        "quiz": [
+          1079555,
+          1079661,
+          1079553,
+          1079590,
+          1079584,
+          1079589,
+          1079601,
+          1079600
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 3,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 7240,
+    "species_ids": [
+      7249,
+      7240
+    ],
+    "title": {
+      "en": "Skylark or Woodlark?"
+    },
+    "text": {
+      "en": "A Skylark is bigger, with a longer tail with white edges and a small crest, and sings in a long, unbroken song in the air. A Woodlark is smaller, with a short tail, a bold pale eyebrow that meets on the nape and a descending, fluty song. In flight the Woodlark looks tailless and bat-like."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      23,
+      26,
+      27
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 5,
+      "photo_sound": 4,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In winter, walk along the strandline of a beach or a saltmarsh and listen for the rippling call of Snow Buntings and the thin call of Shore Larks. In spring, find a heath at dawn and listen for the song of a Woodlark."
+  },
+  "next": {
+    "en": "Next week: chats, thrushes and flycatchers."
+  },
+  "flow": [
+    "intro",
+    "bird:7249",
+    "bird:7240",
+    "bird:7219",
+    "bird:10164",
+    "bird:10160",
+    "bird:10171",
+    "bird:10178",
+    "bird:10200",
+    "quiz",
+    "done"
+  ]
+}

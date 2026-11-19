@@ -1,0 +1,1180 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 38,
+  "slug": "mixed-plumages-finches-shrikes-waxwings",
+  "part": 8,
+  "kind": "species",
+  "season": "winter",
+  "minutes": 24,
+  "title": {
+    "en": "Mixed plumages: finches, shrikes and waxwings"
+  },
+  "subtitle": {
+    "en": "Males, females and youngsters that look like different birds"
+  },
+  "intro": {
+    "en": "The same species can look like three different birds. A male Crossbill is red, a female is green, a young bird is streaky. A male Red-backed Shrike has a grey head and a chestnut back, a female is brown with a scaly belly. This lesson is the gauntlet: it pushes you to name each bird in a plumage that you do not expect.\n\nThe birds are the winter finches and the shrikes. Bramblings, Twites and Redpolls arrive from Scandinavia in autumn and winter, in numbers that vary from year to year. Crossbills, Hawfinches and Waxwings can come in irruptions, when a food shortage in the north sends them south. The two shrikes are quite different: the Great Grey Shrike is a winter visitor, the Red-backed a summer one.\n\nThe plumages we use here are chosen for their difficulty: the female Crossbill and the female Red-backed Shrike are harder than the males. In the quiz you may meet the same species in a different plumage from the one you learned."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "irruption"
+      },
+      "explain": {
+        "en": "A sudden, large movement of a species outside its normal range, driven by a food shortage in the north."
+      }
+    },
+    {
+      "term": {
+        "en": "mask"
+      },
+      "explain": {
+        "en": "A dark patch through the eye. Shrikes have one; its size and shape differ."
+      }
+    },
+    {
+      "term": {
+        "en": "crossed bill"
+      },
+      "explain": {
+        "en": "A bill with tips that cross over, which a Crossbill uses to open pine cones."
+      }
+    },
+    {
+      "term": {
+        "en": "rump"
+      },
+      "explain": {
+        "en": "The lower back, above the tail. White in a Brambling, pink in a male Twite."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 9932,
+      "latin": "Fringilla montifringilla",
+      "name": {
+        "en": "Brambling"
+      },
+      "plumage": {
+        "en": "adult male, non-breeding"
+      },
+      "plumage_filter": {
+        "sex": "male"
+      },
+      "look_for": [
+        {
+          "en": "Orange breast and shoulder, with a mottled brown-and-black head and back"
+        },
+        {
+          "en": "A bold white **rump** that shows in flight"
+        },
+        {
+          "en": "A yellow bill with a dark tip, and a white belly"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NL, BE, DE, FR, DK, SE: uncommon to fairly common in winter, from October to March, in beech woods and fields, with numbers that vary with the beech mast. NO, FI: breeds in the north from May. IE: scarce."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A nasal, hard “tsweek” or “chwek”, and a harsh wheezing song."
+        },
+        "chosen": [
+          {
+            "media_id": 1326270,
+            "xeno_canto": "XC792024",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 124,
+            "background_species": 0,
+            "recordist": "Twan Mols"
+          },
+          {
+            "media_id": 1326271,
+            "xeno_canto": "XC743861",
+            "type": "call, various call types",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 49,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1326254,
+            "xeno_canto": "XC1079914",
+            "type": "song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It flocks in beech woods. In winter a male has a mottled head, and in summer he is jet black. Look for the white rump."
+      },
+      "dont_confuse": {
+        "en": "Chaffinch (beginners): a pink breast, a grey cap, and a white wing bar."
+      },
+      "media": {
+        "card": [
+          1051528,
+          1051525,
+          1051557
+        ],
+        "quiz": [
+          1051527,
+          1051556,
+          1051526,
+          1051558,
+          1051566,
+          1051572,
+          1051667,
+          1051576
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 8,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 10115,
+      "latin": "Linaria flavirostris",
+      "name": {
+        "en": "Twite"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A streaky, brown, buff finch with a long tail"
+        },
+        {
+          "en": "A yellow bill in winter and a pink **rump** in the male"
+        },
+        {
+          "en": "Feeds in flocks on saltmarsh seeds, often on the coast"
+        }
+      ],
+      "where_when": {
+        "en": "UK, NO: uncommon, breeding on the Pennines, the Scottish moors and in Norway, and wintering on the coast. IE: scarce. DK, NL, DE, BE: scarce on the coast in winter. SE, FI, FR: rare."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A nasal “twit” or “chwee-eet”, the sound that gives it its name."
+        },
+        "chosen": [
+          {
+            "media_id": 1328596,
+            "xeno_canto": "XC686401",
+            "type": "call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1328587,
+            "xeno_canto": "XC992942",
+            "type": "call, flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 2,
+            "recordist": "Johan Södercrantz"
+          },
+          {
+            "media_id": 1328597,
+            "xeno_canto": "XC679082",
+            "type": "song",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 68,
+            "background_species": 1,
+            "recordist": "Stein Ø. Nilsen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A finch of the moors and the saltmarsh. It is seen on a winter beach, feeding on the seeds of sea-aster and glasswort."
+      },
+      "dont_confuse": {
+        "en": "Linnet (beginners): a smaller bill, a red breast, and no yellow bill in winter."
+      },
+      "media": {
+        "card": [
+          1068500,
+          1068499,
+          1068498
+        ],
+        "quiz": [
+          1068531,
+          1068649,
+          1068548,
+          1068544,
+          1068570,
+          1068487,
+          1068536,
+          1068488
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 3,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 11200,
+      "latin": "Acanthis flammea",
+      "name": {
+        "en": "Redpoll"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A small, streaky finch with a red forehead and a black chin"
+        },
+        {
+          "en": "A short, yellow bill and a streaked rump"
+        },
+        {
+          "en": "Flocks acrobatically in birches and alders, upside down"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, SE, FI: fairly common, in birch and conifer woods, breeding in the north. NL, BE, DE, DK, FR: uncommon in winter, with more in irruption years. Look in birches and alders."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A dry, rattling “chet-chet-chet” in flight, and a buzzing trill."
+        },
+        "chosen": [
+          {
+            "media_id": 1328659,
+            "xeno_canto": "XC791647",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 12,
+            "background_species": 0,
+            "recordist": "Teet Sirotkin"
+          },
+          {
+            "media_id": 1328661,
+            "xeno_canto": "XC710795",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 18,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1328652,
+            "xeno_canto": "XC535779",
+            "type": "alarm call, call, flight call, song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 73,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 60
+      },
+      "note": {
+        "en": "A bird of birches, in tight flocks that hang upside down. The size of a Siskin but with a red forehead."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Siskin (beginners): a yellow-green body, a black cap and a yellow wing bar."
+      },
+      "media": {
+        "card": [
+          1069238,
+          1191188,
+          1069028
+        ],
+        "quiz": [
+          1068892,
+          1068854,
+          1069131,
+          1069135,
+          1068916,
+          1069341,
+          1069297,
+          1069353
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 4,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 10124,
+      "latin": "Loxia curvirostra",
+      "name": {
+        "en": "Common Crossbill"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "Stocky, with a big head and a **crossed bill**"
+        },
+        {
+          "en": "Dull olive-green, with a yellower rump"
+        },
+        {
+          "en": "Clings to a cone and climbs like a small parrot"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: uncommon to fairly common, resident, in conifer forests, with big irruptions from the north and east in some years. A bird of pine and spruce, and a breeder in late winter."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, hard, repeated “jip-jip-jip” in flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1328761,
+            "xeno_canto": "XC837959",
+            "type": "flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1328758,
+            "xeno_canto": "XC856750",
+            "type": "call, flight call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Richard E. Webster"
+          },
+          {
+            "media_id": 1328751,
+            "xeno_canto": "XC962284",
+            "type": "call",
+            "country": "Cyprus",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "Hans Matheve"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The male is red, the female green, the young streaked. The call is the best way to find them in a pine tree top."
+      },
+      "dont_confuse": {
+        "en": "European Greenfinch (beginners): a green body with a yellow wing patch, and a thick, pale bill."
+      },
+      "media": {
+        "card": [
+          1069624,
+          1069621,
+          1069648
+        ],
+        "quiz": [
+          1069622,
+          1069696,
+          1069673,
+          1069715,
+          1069614,
+          1069708,
+          1069586,
+          1069571
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 9974,
+      "latin": "Coccothraustes coccothraustes",
+      "name": {
+        "en": "Hawfinch"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A huge, triangular, steel-blue bill, and a big head with a short neck"
+        },
+        {
+          "en": "Chestnut head, a black bib and a bold white wing bar"
+        },
+        {
+          "en": "A short, white-tipped tail and a heavy, thick-set body"
+        }
+      ],
+      "where_when": {
+        "en": "DE, FR, UK, NL, BE, DK, SE: uncommon to scarce, in old woods, especially hornbeam, and parks. FI, NO, IE: rare. A shy bird that sits at the top of a tall tree. In winter it may come to yew trees to eat berries."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A hard, explosive “tzik” or “tick”, like a camera click."
+        },
+        "chosen": [
+          {
+            "media_id": 1327000,
+            "xeno_canto": "XC975647",
+            "type": "alarm call",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 37,
+            "background_species": 0,
+            "recordist": "Stephan Börnecke"
+          },
+          {
+            "media_id": 1326996,
+            "xeno_canto": "XC989993",
+            "type": "call",
+            "country": "Hungary",
+            "quality": "B",
+            "seconds": 59,
+            "background_species": 2,
+            "recordist": "András Schmidt"
+          },
+          {
+            "media_id": 1327002,
+            "xeno_canto": "XC974829",
+            "type": "call, song, subsong",
+            "country": "Sweden",
+            "quality": "B",
+            "seconds": 111,
+            "background_species": 3,
+            "recordist": "Mats Cornmark"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The bill can crack cherry stones. A bird that is quite easy to overlook, sitting still at the top of a tall tree."
+      },
+      "dont_confuse": {
+        "en": "European Greenfinch (beginners): a smaller bill and a green body."
+      },
+      "media": {
+        "card": [
+          1056512,
+          1056494,
+          1056503
+        ],
+        "quiz": [
+          1056495,
+          1056506,
+          1056497,
+          1056536,
+          1056501,
+          1056500,
+          1056505,
+          1056504
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 14,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 9282,
+      "latin": "Bombycilla garrulus",
+      "name": {
+        "en": "Bohemian Waxwing"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A pinkish-brown bird with a pointed **crest**, a black mask and a black bib"
+        },
+        {
+          "en": "A yellow tip to the tail, and white-and-yellow wing marks with red, wax-like tips"
+        },
+        {
+          "en": "Feeds on berries in groups, in a winter **irruption** from the north"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO: uncommon to fairly common in the north in summer, and on passage in winter. UK, NL, BE, DE, DK, FR: scarce in winter in most years, but in an irruption year, hundreds or thousands, from November to March. IE: very rare."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, ringing, trilling “sirrrr”, like a small bell."
+        },
+        "chosen": [
+          {
+            "media_id": 1318621,
+            "xeno_canto": "XC523093",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 12,
+            "background_species": 0,
+            "recordist": "Alwin van Lubeck"
+          },
+          {
+            "media_id": 1318606,
+            "xeno_canto": "XC342797",
+            "type": "call, flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 50,
+            "background_species": 0,
+            "recordist": "Lars Buckx"
+          },
+          {
+            "media_id": 1318623,
+            "xeno_canto": "XC449650",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 28,
+            "background_species": 0,
+            "recordist": "Patrik Åberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "In an irruption year, flocks of Waxwings eat berries in supermarket car parks and gardens."
+      },
+      "dont_confuse": {
+        "en": "Common Starling (beginners): a black, speckled body, and no crest."
+      },
+      "media": {
+        "card": [
+          991337,
+          991339,
+          991327
+        ],
+        "quiz": [
+          991329,
+          991328,
+          991326,
+          991341,
+          991338,
+          991330,
+          991346,
+          991340
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 12,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 6853,
+      "latin": "Lanius excubitor",
+      "name": {
+        "en": "Great Grey Shrike"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A pale grey and white, with a bold black **mask** through the eye"
+        },
+        {
+          "en": "Black wings and tail with white patches, and a long tail"
+        },
+        {
+          "en": "Sits on the top of a bush or a tree, and hovers"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI, NO: uncommon, breeding in the north. UK, NL, BE, DE, DK, FR: scarce in winter, from October to March. IE: very rare. A bird that hunts mice and small birds from a high perch."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A harsh, scolding “shek-shek”, and a quiet, varied song."
+        },
+        "chosen": [
+          {
+            "media_id": 1283881,
+            "xeno_canto": "XC875491",
+            "type": "call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Michael John O Mahony"
+          },
+          {
+            "media_id": 1283887,
+            "xeno_canto": "XC710446",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 3,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1283885,
+            "xeno_canto": "XC758866",
+            "type": "call, song",
+            "country": "Germany",
+            "quality": "A",
+            "seconds": 36,
+            "background_species": 0,
+            "recordist": "Bodo Sonnenburg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A pale grey predator of open heath in winter. It impales its prey on thorns, a habit that gives the shrikes their name “butcher birds”."
+      },
+      "dont_confuse": {
+        "en": "Red-backed Shrike (this week): smaller, with a rufous back, and only here in summer."
+      },
+      "media": {
+        "card": [
+          774570,
+          774606,
+          774587
+        ],
+        "quiz": [
+          774589,
+          774607,
+          774609,
+          774568,
+          774608,
+          774572,
+          774569,
+          774588
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 12,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 6840,
+      "latin": "Lanius collurio",
+      "name": {
+        "en": "Red-backed Shrike"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "Brown-grey, with scaly, barred underparts and a faint dark **mask**"
+        },
+        {
+          "en": "A rufous-brown back and a rounded tail with white edges"
+        },
+        {
+          "en": "Sits on top of a bush and watches, with a bold, upright look"
+        }
+      ],
+      "where_when": {
+        "en": "DE, FR, SE, FI, NO, DK, NL, BE: uncommon to fairly common summer visitors, from mid-May to August, in open scrub. UK: very rare, with a few pairs. IE: almost never. A migrant to southern Africa that arrives late in spring."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A harsh, short “chek-chek”, and a quiet, rambling song."
+        },
+        "chosen": [
+          {
+            "media_id": 1283670,
+            "xeno_canto": "XC817766",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          },
+          {
+            "media_id": 1283675,
+            "xeno_canto": "XC802208",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 68,
+            "background_species": 0,
+            "recordist": "Alan Dalton"
+          },
+          {
+            "media_id": 1283674,
+            "xeno_canto": "XC803339",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 73,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A female is brown and scaly, and much harder than the male with his grey head. Look at the scaly flanks and the rufous back."
+      },
+      "dont_confuse": {
+        "en": "Woodchat Shrike (week 34): a chestnut cap and a white shoulder patch, and a black back."
+      },
+      "media": {
+        "card": [
+          772712,
+          772686,
+          772782
+        ],
+        "quiz": [
+          772774,
+          772756,
+          772765,
+          772823,
+          772731,
+          772732,
+          772778,
+          772821
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 2,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 6853,
+    "species_ids": [
+      6853,
+      6840
+    ],
+    "title": {
+      "en": "Great Grey or Red-backed Shrike?"
+    },
+    "text": {
+      "en": "Great Grey Shrike is a winter bird, big and pale grey, with black wings and a long tail. Red-backed Shrike is a summer bird, smaller, with a rufous back and, in the male, a grey head. A female Red-backed is brown with scaly underparts. Look at the date: a shrike in January is a Great Grey."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      33,
+      36,
+      37
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 7,
+      "photo_sound": 3,
+      "sound": 2
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "In winter, search for Waxwings in car parks and gardens with berries, and for a Great Grey Shrike on the top of a heath bush. In summer, look for a Red-backed Shrike in open scrub with thorny bushes."
+  },
+  "next": {
+    "en": "Next week: the last teaching lesson, with tits, woodpeckers and treecreepers."
+  },
+  "flow": [
+    "intro",
+    "bird:9932",
+    "bird:10115",
+    "bird:11200",
+    "bird:10124",
+    "bird:9974",
+    "bird:9282",
+    "bird:6853",
+    "bird:6840",
+    "quiz",
+    "done"
+  ]
+}

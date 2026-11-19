@@ -1,0 +1,1163 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 4,
+  "slug": "terns",
+  "part": 1,
+  "kind": "species",
+  "season": "summer",
+  "minutes": 20,
+  "title": {
+    "en": "Terns"
+  },
+  "subtitle": {
+    "en": "Sandwich, Common, Arctic, Roseate, Little, Black, White-winged and Caspian Tern"
+  },
+  "intro": {
+    "en": "Terns are the elegant relatives of the gulls. They are lighter, they fly with their bill pointing down, and they dive for fish. In summer you find them on the beach and the pits, and in autumn the juveniles gather in estuaries before the long flight to West Africa and beyond. Arctic Terns winter in Antarctica.\n\nThe big trio of Common, Arctic and Roseate Tern is the one that decides a birder's skill: they are almost the same size, nearly the same colour, and they differ in small things, like the bill, the tail and the call. Then come the others: Little Tern, the small one, Sandwich Tern, the big one with a shaggy crest, and the marsh terns, Black and White-winged.\n\nMay to August is the time. In spring the Common and Arctic Terns arrive in late April and May, with the biggest numbers going through on the coast. Autumn passage runs from August to October. Black Terns pass inland in May and again in August and September."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "tail streamers"
+      },
+      "explain": {
+        "en": "The long outer tail feathers of an adult tern. They reach past the wing tip in Arctic and Roseate Terns."
+      }
+    },
+    {
+      "term": {
+        "en": "cap"
+      },
+      "explain": {
+        "en": "The black crown of a tern. In autumn it shrinks to a black mask with a white forehead."
+      }
+    },
+    {
+      "term": {
+        "en": "translucent"
+      },
+      "explain": {
+        "en": "Light shines through. The flight feathers of an Arctic Tern look glassy when seen against the sky."
+      }
+    },
+    {
+      "term": {
+        "en": "marsh tern"
+      },
+      "explain": {
+        "en": "A tern of fresh water: Black, White-winged and Whiskered. They pick insects from the surface instead of diving."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2320,
+      "latin": "Thalasseus sandvicensis",
+      "name": {
+        "en": "Sandwich Tern"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Big and pale, with a shaggy black **cap** and a long black bill with a yellow tip"
+        },
+        {
+          "en": "Very white, with a short tail and long wings"
+        },
+        {
+          "en": "Black legs, and a heavy flight with the bill pointing down"
+        }
+      ],
+      "where_when": {
+        "en": "NL, DK: fairly common, with colonies on the coast. UK and IE: uncommon, from March to September, mostly in the east and south. BE, DE, FR, NO, SE and FI: scarce to rare. Arrives in March, the first tern, and leaves in October."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A loud, grating “kirrick”, like a squeaking door."
+        },
+        "chosen": [
+          {
+            "media_id": 1222228,
+            "xeno_canto": "XC991738",
+            "type": "call, flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 78,
+            "background_species": 3,
+            "recordist": "Lennart Jeppsson"
+          },
+          {
+            "media_id": 1222223,
+            "xeno_canto": "XC1036780",
+            "type": "flight call",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1222215,
+            "xeno_canto": "XC1071777",
+            "type": "flight call",
+            "country": "Germany",
+            "quality": "B",
+            "seconds": 81,
+            "background_species": 0,
+            "recordist": "Kai Frueh"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The first tern to arrive in spring, often at the end of March. The big size and the pale, white look are enough, and you can pick out the call from far away."
+      },
+      "dont_confuse": {
+        "en": "Common Tern (this week): smaller, red bill, and a dark tip, not a yellow one."
+      },
+      "media": {
+        "card": [
+          355833,
+          355945,
+          355840
+        ],
+        "quiz": [
+          355909,
+          355914,
+          355920,
+          355923,
+          355881,
+          355915,
+          355866,
+          355823
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 4,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2314,
+      "latin": "Sterna hirundo",
+      "name": {
+        "en": "Common Tern"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Red bill with a black tip, and a black **cap**"
+        },
+        {
+          "en": "Wing tips look dark above, with a dark wedge on the outer **primaries**"
+        },
+        {
+          "en": "Tail is shorter than the folded wing tip, and the legs are orange-red"
+        }
+      ],
+      "where_when": {
+        "en": "NL, UK, DK, SE, FI: fairly common to common, breeding from May to August. IE, BE, DE, FR: uncommon, with breeding colonies. NO: scarce. Passes in April to May and August to October."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A harsh “kee-arr”, with the stress on the last part, and a rapid “kik-kik-kik”."
+        },
+        "chosen": [
+          {
+            "media_id": 1222123,
+            "xeno_canto": "XC953262",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 63,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          },
+          {
+            "media_id": 1222121,
+            "xeno_canto": "XC1015562",
+            "type": "alarm call, call, flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 76,
+            "background_species": 0,
+            "recordist": "Anthony McGeehan "
+          },
+          {
+            "media_id": 1222126,
+            "xeno_canto": "XC906138",
+            "type": "alarm call, call, flight call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 58,
+            "background_species": 0,
+            "recordist": "Niclas Backstrom"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The standard tern, and everything else is compared to it. If the bill is red with a black tip, the wings have a dark wedge at the tip, and the tail is short, it is a Common Tern."
+      },
+      "dont_confuse": {
+        "en": "Arctic Tern (this week): all-red bill, shorter legs, long tail streamers and a very narrow dark trailing edge."
+      },
+      "media": {
+        "card": [
+          354890,
+          354968,
+          354893
+        ],
+        "quiz": [
+          354954,
+          354892,
+          354891,
+          354925,
+          354866,
+          354979,
+          354900,
+          354859
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 6,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2310,
+      "latin": "Sterna paradisaea",
+      "name": {
+        "en": "Arctic Tern"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Blood-red bill with no black tip, and very short red legs"
+        },
+        {
+          "en": "Long **tail streamers** that reach beyond the folded wings"
+        },
+        {
+          "en": "**Translucent** flight feathers from below, with a thin, clean, dark edge to the wing"
+        }
+      ],
+      "where_when": {
+        "en": "NO, SE: common, with big colonies. IE, DK: uncommon. UK, NL, FI: scarce to fairly common, with strongholds in Scotland and the Wadden Sea. BE, DE, FR: rare, on passage. The longest migration of any bird."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, ringing “kee-yeah”, a bit more squeaky than a Common Tern."
+        },
+        "chosen": [
+          {
+            "media_id": 1222068,
+            "xeno_canto": "XC699760",
+            "type": "alarm call, call, flight call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Niels Van Doninck"
+          },
+          {
+            "media_id": 1222057,
+            "xeno_canto": "XC1022099",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1222072,
+            "xeno_canto": "XC664081",
+            "type": "alarm call, call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Thomas Bergman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A longer tail, a shorter neck and the red bill make it a more graceful bird. The white wing, with no dark wedge, is the field mark that leaps out."
+      },
+      "dont_confuse": {
+        "en": "Common Tern (this week): a black tip to the bill, a dark wedge at the wing tip, and a longer neck."
+      },
+      "media": {
+        "card": [
+          354331,
+          354451,
+          354334
+        ],
+        "quiz": [
+          354333,
+          354329,
+          354325,
+          354437,
+          354330,
+          354328,
+          354396,
+          354418
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 18,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2317,
+      "latin": "Sterna dougallii",
+      "name": {
+        "en": "Roseate Tern"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Very pale, almost white above, with a pink flush on the breast in spring"
+        },
+        {
+          "en": "Long white **tail streamers**, longer than the wings"
+        },
+        {
+          "en": "Black bill with a red base, and a shallow, quick wingbeat"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: very rare breeding bird, on a few islands, from May to August. NL, BE, FR: very rare, mostly on the coast. DE, DK, NO, SE, FI: almost never."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, two-syllable “chi-vik” and a harsh “aaach”."
+        },
+        "chosen": [
+          {
+            "media_id": 1222187,
+            "xeno_canto": "XC741015",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1222180,
+            "xeno_canto": "XC931527",
+            "type": "nocturnal flight call",
+            "country": "Spain",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Ricardo Hevia"
+          },
+          {
+            "media_id": 1222178,
+            "xeno_canto": "XC993637",
+            "type": "call",
+            "country": "Canada",
+            "quality": "A",
+            "seconds": 102,
+            "background_species": 0,
+            "recordist": "Doug Hynes"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The ghost of the three: pale like a Sandwich Tern in miniature, with a long tail. Listen for the soft “chi-vik”, which no other tern gives."
+      },
+      "dont_confuse": {
+        "en": "Common and Arctic Tern (this week): darker backs, and no pink flush."
+      },
+      "media": {
+        "card": [
+          355510,
+          355480,
+          355470
+        ],
+        "quiz": [
+          355475,
+          355511,
+          355399,
+          355489,
+          355377,
+          355457,
+          355491,
+          355498
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 4,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2291,
+      "latin": "Sternula albifrons",
+      "name": {
+        "en": "Little Tern"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Tiny, with a white forehead patch on a black **cap**"
+        },
+        {
+          "en": "Yellow bill with a black tip, and yellow legs"
+        },
+        {
+          "en": "Very fast wingbeats, hovering before it dives"
+        }
+      ],
+      "where_when": {
+        "en": "NL: uncommon on the coast. UK, IE, DK: scarce, on shingle beaches from May to August. BE, DE, FR, NO, SE, FI: rare, on the coast. Arrives in late April and leaves in August."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, sharp “kit-kit-kit” and a buzzing “zreek”."
+        },
+        "chosen": [
+          {
+            "media_id": 1221744,
+            "xeno_canto": "XC1035828",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1221759,
+            "xeno_canto": "XC665292",
+            "type": "flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 74,
+            "background_species": 0,
+            "recordist": "Frank Lambert"
+          },
+          {
+            "media_id": 1221762,
+            "xeno_canto": "XC648572",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The size is the first thing you notice: the size of a starling. Its colonies on the shingle beaches are very exposed, and walkers and dogs are the main danger."
+      },
+      "dont_confuse": {
+        "en": "Common Tern (this week): bigger, a red bill, and slower wingbeats."
+      },
+      "media": {
+        "card": [
+          351256,
+          351304,
+          351257
+        ],
+        "quiz": [
+          351369,
+          351312,
+          351371,
+          351305,
+          351310,
+          351380,
+          351361,
+          351255
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 11,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2305,
+      "latin": "Chlidonias niger",
+      "name": {
+        "en": "Black Tern"
+      },
+      "plumage": {
+        "en": "adult, non-breeding"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small and dark, with a grey back and a dark smudge on the side of the breast"
+        },
+        {
+          "en": "A dark patch behind the eye, and a white forehead and underparts in autumn"
+        },
+        {
+          "en": "A **marsh tern**: flies low over water, picking insects off the surface"
+        }
+      ],
+      "where_when": {
+        "en": "NL: uncommon, breeding in a few marshes from May. DE: scarce on passage. UK, IE, BE, FR, DK, NO, SE: rare on passage in May and from August to September. FI: very rare."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, sharp “kik” and a nasal “kreee”."
+        },
+        "chosen": [
+          {
+            "media_id": 1221976,
+            "xeno_canto": "XC768428",
+            "type": "call, flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Michel Veldt"
+          },
+          {
+            "media_id": 1221966,
+            "xeno_canto": "XC931952",
+            "type": "nocturnal flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 48,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1221979,
+            "xeno_canto": "XC664449",
+            "type": "flight call",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Uku Paal"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A marsh tern is not a seabird. In autumn it is the dark-backed small tern you see on a reservoir."
+      },
+      "dont_confuse": {
+        "en": "White-winged Black Tern (this week): a pale grey back, white rump, and a black smudge only behind the eye."
+      },
+      "media": {
+        "card": [
+          353479,
+          353533,
+          353551
+        ],
+        "quiz": [
+          353520,
+          353527,
+          353546,
+          353531,
+          353488,
+          353525,
+          353523,
+          353507
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 1,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2306,
+      "latin": "Chlidonias leucopterus",
+      "name": {
+        "en": "White-winged Black Tern"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "Dark brown saddle contrasting with a pale grey wing, and a white rump"
+        },
+        {
+          "en": "White underparts and a black patch behind the eye, with no dark on the breast"
+        },
+        {
+          "en": "Flies low over water like a Black Tern, but looks cleaner and more contrasty"
+        }
+      ],
+      "where_when": {
+        "en": "NL, BE, DE, FR, DK, SE: rare, on passage in May and from late July to September. UK: very rare. IE, NO, FI: almost never."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A harsh “kesch” and a dry, rasping “kek”."
+        },
+        "chosen": [
+          {
+            "media_id": 1221987,
+            "xeno_canto": "XC609427",
+            "type": "call, flight call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1221988,
+            "xeno_canto": "XC328630",
+            "type": "call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Patrik Åberg"
+          },
+          {
+            "media_id": 1221998,
+            "xeno_canto": "XC91181",
+            "type": "call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Lars Lachmann"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The juvenile has a dark brown saddle that stands out against a pale rump, a pattern that no other tern shows."
+      },
+      "dont_confuse": {
+        "en": "Black Tern (this week): a grey back, a dark smudge on the breast side and a grey rump."
+      },
+      "media": {
+        "card": [
+          353752,
+          353680,
+          353677
+        ],
+        "quiz": [
+          353647,
+          353678,
+          353643,
+          353646,
+          353666,
+          353770,
+          353711,
+          353645
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2301,
+      "latin": "Hydroprogne caspia",
+      "name": {
+        "en": "Caspian Tern"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "The biggest tern, as big as a Herring Gull, with a huge red bill"
+        },
+        {
+          "en": "Black cap and a heavy, powerful flight with slow wingbeats"
+        },
+        {
+          "en": "Dark underside of the wing tip, a pale grey back, and black legs"
+        }
+      ],
+      "where_when": {
+        "en": "SE, FI: scarce breeding bird on the coast, May to August. NL: rare on passage. UK, IE, BE, DE, FR, DK, NO: very rare to rare, usually single birds on the coast or inland pits in spring and autumn."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A deep, hoarse “kraa-uk”, like a heron."
+        },
+        "chosen": [
+          {
+            "media_id": 1221906,
+            "xeno_canto": "XC740253",
+            "type": "flight call",
+            "country": "Estonia",
+            "quality": "A",
+            "seconds": 60,
+            "background_species": 0,
+            "recordist": "Uku Paal"
+          },
+          {
+            "media_id": 1221904,
+            "xeno_canto": "XC794739",
+            "type": "alarm call, flight call",
+            "country": "Saudi Arabia",
+            "quality": "A",
+            "seconds": 54,
+            "background_species": 0,
+            "recordist": "Oscar Campbell"
+          },
+          {
+            "media_id": 1221905,
+            "xeno_canto": "XC765579",
+            "type": "call, interaction calls",
+            "country": "Mongolia",
+            "quality": "A",
+            "seconds": 143,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "You notice the size first, and the bill is the clincher. It is a rare bird in many of the ten countries and is usually on its own."
+      },
+      "dont_confuse": {
+        "en": "Sandwich Tern (this week): smaller, a black bill with a yellow tip and a shaggy crest."
+      },
+      "media": {
+        "card": [
+          352897,
+          352861,
+          352919
+        ],
+        "quiz": [
+          352921,
+          352857,
+          352907,
+          352834,
+          352806,
+          352833,
+          352877,
+          352845
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 7,
+        "verified": true,
+        "note": ""
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 2310,
+    "species_ids": [
+      2314,
+      2310
+    ],
+    "title": {
+      "en": "Common or Arctic Tern?"
+    },
+    "text": {
+      "en": "Three things. The bill: Common has a black tip, Arctic is all red. The neck and head: Common has a longer neck and a bigger head, Arctic is round-headed with a short neck. The wings from above: Common has a dark wedge on the outer primaries, Arctic has pale, clean wings with a thin black trailing edge."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      2,
+      3
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 7,
+      "photo_sound": 4,
+      "sound": 1
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Look for terns this week on a beach, a pit or an estuary, ideally between May and September. For each one, check three things in this order: the bill (red or black-tipped), the length of the tail, and the shape of the head."
+  },
+  "next": {
+    "en": "Next week is your first review: all of the gulls and terns of the block in one quiz."
+  },
+  "flow": [
+    "intro",
+    "bird:2320",
+    "bird:2314",
+    "bird:2310",
+    "bird:2317",
+    "bird:2291",
+    "bird:2305",
+    "bird:2306",
+    "bird:2301",
+    "quiz",
+    "done"
+  ]
+}

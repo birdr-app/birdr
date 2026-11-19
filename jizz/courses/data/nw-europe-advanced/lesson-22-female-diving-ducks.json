@@ -1,0 +1,1010 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 22,
+  "slug": "female-diving-ducks",
+  "part": 5,
+  "kind": "species",
+  "season": "winter",
+  "minutes": 22,
+  "title": {
+    "en": "Female diving ducks"
+  },
+  "subtitle": {
+    "en": "Tufted, Scaup, Pochard, Ferruginous, Red-crested Pochard, Ring-necked Duck and Goldeneye"
+  },
+  "intro": {
+    "en": "The diving ducks are rounder, lower in the water and more compact than the dabbling ducks. The females are brown and grey, and the same rules apply: head shape, bill pattern and the pale marks on the face. The most useful clue for a diving duck is the shape of the head: peaked, rounded, or flat.\n\nLakes, reservoirs and gravel pits are the best habitats from October to March. In hard winters, Tufted Ducks, Pochards, Scaup and Goldeneyes arrive from the Baltic and from Russia, and pits on the coast fill with them. The rarer ones, like the Ring-necked Duck and Ferruginous Duck, hide in a flock of the common ones. The females are what you look at.\n\nAs in lesson 21, every photo here is a female, and the wrong answers in the quiz are other females."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "nail"
+      },
+      "explain": {
+        "en": "The hard tip at the end of a duck's bill. Its size and colour differ: a Tufted Duck has a broad black nail."
+      }
+    },
+    {
+      "term": {
+        "en": "peaked crown"
+      },
+      "explain": {
+        "en": "A head shape where the highest point is at the back of the crown, as in the Ring-necked Duck."
+      }
+    },
+    {
+      "term": {
+        "en": "face patch"
+      },
+      "explain": {
+        "en": "A pale patch on the face at the base of the bill. It is wide and white on a Scaup."
+      }
+    },
+    {
+      "term": {
+        "en": "eye ring"
+      },
+      "explain": {
+        "en": "A pale ring around the eye. It is bold on a female Ring-necked Duck."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 202,
+      "latin": "Aythya fuligula",
+      "name": {
+        "en": "Tufted Duck"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "Dark brown overall, with a yellow eye and a small tuft on the nape"
+        },
+        {
+          "en": "A blue-grey bill with a black **nail**, and sometimes a little white at the base"
+        },
+        {
+          "en": "A rounded head, and a white wing bar in flight"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK, SE, FI: common to abundant, on lakes and gravel pits, all year, with big numbers in winter. NO: fairly common. The commonest diving duck of the region."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, growling “kurr-kurr” from the female."
+        },
+        "chosen": [
+          {
+            "media_id": 1195402,
+            "xeno_canto": "XC590631",
+            "type": "alarm call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 52,
+            "background_species": 0,
+            "recordist": "Simon Elliott"
+          },
+          {
+            "media_id": 1195393,
+            "xeno_canto": "XC730564",
+            "type": "alarm call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 59,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1195396,
+            "xeno_canto": "XC667392",
+            "type": "alarm call, call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 61,
+            "background_species": 0,
+            "recordist": "Quentin Giraud"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The standard female diving duck. Some have a bit of white at the bill base, which makes people think of Scaup."
+      },
+      "dont_confuse": {
+        "en": "Greater Scaup (this week): bigger, with a wide, white face patch and a grey back."
+      },
+      "media": {
+        "card": [
+          135594,
+          135661,
+          135642
+        ],
+        "quiz": [
+          135667,
+          135652,
+          135628,
+          135588,
+          135543,
+          135540,
+          135653,
+          135567
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 204,
+      "latin": "Aythya marila",
+      "name": {
+        "en": "Greater Scaup"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "A large, rounded head with a broad white **face patch** around the bill base"
+        },
+        {
+          "en": "A grey back with fine barring, which shows in good light"
+        },
+        {
+          "en": "A blue-grey bill with a small black **nail**, and a heavier look than a Tufted"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR: scarce to uncommon in winter, at the coast, with big flocks in the Wadden Sea and Baltic. NO, SE, FI: breeds in the north. A duck that likes the coast more than a Tufted Duck."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "abundant",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, soft, purring “arr-arr” from the female."
+        },
+        "chosen": [
+          {
+            "media_id": 1195409,
+            "xeno_canto": "XC142583",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 11,
+            "background_species": 0,
+            "recordist": "Andrew Spencer"
+          },
+          {
+            "media_id": 1195418,
+            "xeno_canto": "XC862263",
+            "type": "call, Traffic.",
+            "country": "Ireland",
+            "quality": "B",
+            "seconds": 15,
+            "background_species": 0,
+            "recordist": "Paul Kelly"
+          },
+          {
+            "media_id": 1195424,
+            "xeno_canto": "XC210266",
+            "type": "call",
+            "country": "Norway",
+            "quality": "B",
+            "seconds": 13,
+            "background_species": 0,
+            "recordist": "Stein Ø. Nilsen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Look at the width of the white patch: Scaup has a broad band round the bill, while a Tufted has a smudge. The rounder head and the grey back also help."
+      },
+      "dont_confuse": {
+        "en": "Tufted Duck (this week): smaller, with a small tuft and a darker back."
+      },
+      "media": {
+        "card": [
+          135889,
+          135924,
+          135958
+        ],
+        "quiz": [
+          135920,
+          135982,
+          135935,
+          135971,
+          135885,
+          135942,
+          135993,
+          135976
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 196,
+      "latin": "Aythya ferina",
+      "name": {
+        "en": "Common Pochard"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "Grey-brown, with a paler face and a pale **eye ring** and eyeline"
+        },
+        {
+          "en": "A dark bill with a pale grey band across, and a sloping, peaked head"
+        },
+        {
+          "en": "A greyish wing bar, with no white in the wing"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK: fairly common in winter, with a smaller breeding population. NO, SE, FI: breeds in the south. Declining in many countries. A duck of reservoirs and open water."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A soft, rough “krr-krr” and a hoarse “karr”."
+        },
+        "chosen": [
+          {
+            "media_id": 1195344,
+            "xeno_canto": "XC706937",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 49,
+            "background_species": 0,
+            "recordist": "Alain Malengreau"
+          },
+          {
+            "media_id": 1195332,
+            "xeno_canto": "XC918474",
+            "type": "call, whistle",
+            "country": "France",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Sonothèque ADVL"
+          },
+          {
+            "media_id": 1195343,
+            "xeno_canto": "XC769835",
+            "type": "Nocturnal calls",
+            "country": "France",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A tubby, brownish-grey duck with a sloping head that rises to a peak. She is much plainer than the male."
+      },
+      "dont_confuse": {
+        "en": "Ferruginous Duck (this week): darker, richer chestnut, with a white undertail. Tufted Duck: a black bill nail."
+      },
+      "media": {
+        "card": [
+          134752,
+          134796,
+          134770
+        ],
+        "quiz": [
+          134714,
+          134685,
+          134650,
+          134700,
+          134653,
+          134730,
+          134716,
+          134655
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 198,
+      "latin": "Aythya nyroca",
+      "name": {
+        "en": "Ferruginous Duck"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "Dark chestnut-brown all over, with a peaked head and a steep forehead"
+        },
+        {
+          "en": "A white undertail, and a small, dark **nail** on a grey bill"
+        },
+        {
+          "en": "A clear white wing bar and a white belly"
+        }
+      ],
+      "where_when": {
+        "en": "DE, FR: rare, breeds in small numbers, with a few in winter. UK, IE, NL, BE, DK, SE: very rare, in autumn and winter. NO, FI: almost never. A rare bird, often among the Tufted Ducks."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, harsh “gaa-gaa” and a soft purr."
+        },
+        "chosen": [
+          {
+            "media_id": 1195369,
+            "xeno_canto": "XC712563",
+            "type": "flight call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 8,
+            "background_species": 0,
+            "recordist": "Paweł Malczyk"
+          },
+          {
+            "media_id": 1195375,
+            "xeno_canto": "XC296088",
+            "type": "call",
+            "country": "Italy",
+            "quality": "A",
+            "seconds": 17,
+            "background_species": 0,
+            "recordist": "Marco Dragonetti"
+          },
+          {
+            "media_id": 1195376,
+            "xeno_canto": "XC220832",
+            "type": "call, song",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 16,
+            "background_species": 0,
+            "recordist": "Jarek Matusiak"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The rich brown is the best mark: if a diving duck looks chestnut and dark, check the white undertail."
+      },
+      "dont_confuse": {
+        "en": "Common Pochard (this week): greyer, a pale ring on the bill. Tufted Duck: a tuft and a yellow eye."
+      },
+      "media": {
+        "card": [
+          135059,
+          135062,
+          135050
+        ],
+        "quiz": [
+          135079,
+          135072,
+          135008,
+          134999,
+          134998,
+          135101,
+          135104,
+          135040
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 191,
+      "latin": "Netta rufina",
+      "name": {
+        "en": "Red-crested Pochard"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "Pale brown, with a dark cap that runs down to the eye, contrasting with a pale cheek"
+        },
+        {
+          "en": "A dark bill with a pinkish tip, and a plain pale face"
+        },
+        {
+          "en": "A big, rounded head and a broad white wing bar"
+        }
+      ],
+      "where_when": {
+        "en": "FR, DE, NL, BE: uncommon, with growing numbers on gravel pits and lakes. UK: scarce, mostly escapes. DK, SE: rare. IE, NO, FI: very rare. A species that is mostly from the south of Europe and Asia."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NL": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, grating “krr-krr” and a rough, hoarse call."
+        },
+        "chosen": [
+          {
+            "media_id": 1195263,
+            "xeno_canto": "XC996808",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 20,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1195273,
+            "xeno_canto": "XC523179",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 6,
+            "background_species": 0,
+            "recordist": "Andrew Harrop"
+          },
+          {
+            "media_id": 1195274,
+            "xeno_canto": "XC479714",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 23,
+            "background_species": 0,
+            "recordist": "Hans Groot"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A pale-faced duck with a dark cap, like a dabbling duck that has gone diving. Many in the UK are escapes from collections."
+      },
+      "dont_confuse": {
+        "en": "Common Pochard (this week): a darker, more uniform face. Mallard (week 21): a dabbling duck with an orange bill."
+      },
+      "media": {
+        "card": [
+          133939,
+          133922,
+          133881
+        ],
+        "quiz": [
+          133883,
+          133893,
+          133898,
+          133892,
+          133942,
+          133896,
+          133956,
+          133882
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 2,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 197,
+      "latin": "Aythya collaris",
+      "name": {
+        "en": "Ring-necked Duck"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "A white **eye ring** that extends back as a thin line, and a pale ring round the bill"
+        },
+        {
+          "en": "A **peaked crown** and a steep forehead, and a grey bill with a black tip"
+        },
+        {
+          "en": "A grey wing bar, not a white one"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE: rare but annual, from autumn to spring, among the Tufted Ducks. NL, BE, DE, FR, DK, SE, NO: very rare. FI: almost never. A North American duck, regular in the west."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Rarely heard; a low, soft purring “brrr”."
+        },
+        "chosen": [
+          {
+            "media_id": 1195358,
+            "xeno_canto": "XC100902",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 12,
+            "background_species": 0,
+            "recordist": "Andrew Spencer"
+          },
+          {
+            "media_id": 1195356,
+            "xeno_canto": "XC1012781",
+            "type": "flight call",
+            "country": "Canada",
+            "quality": "A",
+            "seconds": 14,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1195350,
+            "xeno_canto": "XC333894",
+            "type": "call",
+            "country": "Canada",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "James Bradley"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A smart, quiet duck of the west, found by scanning flocks of Tufted and Pochard. The ring on the bill, not the neck, gives it its name."
+      },
+      "dont_confuse": {
+        "en": "Tufted Duck (this week): a rounded head with a tuft, and a white wing bar. Common Pochard: a plainer face."
+      },
+      "media": {
+        "card": [
+          134834,
+          134824,
+          134833
+        ],
+        "quiz": [
+          134974,
+          134881,
+          134893,
+          134861,
+          134883,
+          134968,
+          134888,
+          134843
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 3,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 220,
+      "latin": "Bucephala clangula",
+      "name": {
+        "en": "Common Goldeneye"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "A chocolate-brown head with a white **collar**-like ring around the neck"
+        },
+        {
+          "en": "A dark grey body and a short, dark bill with a yellow tip"
+        },
+        {
+          "en": "A big, domed head and a pale yellow eye"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK: fairly common in winter, mostly from November to March. NO, SE, FI: breeds in forest lakes, nesting in boxes. A diver that bobs up and down."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Silent in winter; a short, harsh “gack” in flight."
+        },
+        "chosen": [
+          {
+            "media_id": 1195645,
+            "xeno_canto": "XC998246",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 45,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1195662,
+            "xeno_canto": "XC621986",
+            "type": "flight call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 84,
+            "background_species": 3,
+            "recordist": "Jarek Matusiak"
+          },
+          {
+            "media_id": 1195657,
+            "xeno_canto": "XC715620",
+            "type": "call, song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 121,
+            "background_species": 2,
+            "recordist": "Alan Dalton"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The wings whistle in flight. Females have a brown head and a white collar, a clean-cut pattern."
+      },
+      "dont_confuse": {
+        "en": "Smew female (week 23): small, chestnut cap, white cheek. Tufted Duck: a dark head and a tuft."
+      },
+      "media": {
+        "card": [
+          138545,
+          138513,
+          138432
+        ],
+        "quiz": [
+          138470,
+          138399,
+          138461,
+          138512,
+          138515,
+          138528,
+          138525,
+          138460
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 5,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 204,
+    "species_ids": [
+      202,
+      204
+    ],
+    "title": {
+      "en": "Tufted Duck or Scaup, female?"
+    },
+    "text": {
+      "en": "Size and head shape come first: a Scaup is bigger, with a rounder, tuftless head. The white at the bill base is the best clue: a Scaup has a broad white band all the way round the base of the bill, while a Tufted Duck has at most a small smudge. In good light a Scaup's back is finely barred grey."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      17,
+      19,
+      21
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 3,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Choose a lake or reservoir with a mixed flock of diving ducks, between November and February. Count the females only and name them. Check the bill and the head shape of every one."
+  },
+  "next": {
+    "en": "Next week: eclipse males and sawbills."
+  },
+  "flow": [
+    "intro",
+    "bird:202",
+    "bird:204",
+    "bird:196",
+    "bird:198",
+    "bird:191",
+    "bird:197",
+    "bird:220",
+    "quiz",
+    "done"
+  ]
+}

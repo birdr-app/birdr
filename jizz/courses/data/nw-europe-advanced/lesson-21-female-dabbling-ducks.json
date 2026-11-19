@@ -1,0 +1,1062 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 21,
+  "slug": "female-dabbling-ducks",
+  "part": 5,
+  "kind": "species",
+  "season": "winter",
+  "minutes": 22,
+  "title": {
+    "en": "Female dabbling ducks"
+  },
+  "subtitle": {
+    "en": "Mallard, Gadwall, Wigeon, Pintail, Teal, Garganey and Shoveler: the brown ones"
+  },
+  "intro": {
+    "en": "Every duck in this lesson is a female, and that is the point. From a distance a flock of female dabbling ducks is a mass of mottled brown. The males are easy: you learned them in the beginners course. The females are a different matter, and they decide whether you are a duck birder or not.\n\nThe rules: size and shape first (the head, the bill, the neck), then the bill colour and pattern, then the face (eyebrow, eye-stripe, spot at the bill base) and last the wing patch, the speculum, if she opens a wing. In winter, from October to March, the lakes of north-west Europe are full of ducks from Siberia, Scandinavia and the Baltic. A single flock can hold five of today's species. The Garganey is the odd one out: it is a summer visitor that arrives in March to April and leaves in August.\n\nToday's photos show females only, and every photo is checked against that. In the quiz, the wrong answers are other females, not males."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "speculum"
+      },
+      "explain": {
+        "en": "The coloured patch on the wing, usually iridescent, bordered by white lines. Its colour differs by species."
+      }
+    },
+    {
+      "term": {
+        "en": "loral spot"
+      },
+      "explain": {
+        "en": "A pale spot at the base of the bill, as in the Teal and Garganey female."
+      }
+    },
+    {
+      "term": {
+        "en": "eye-stripe"
+      },
+      "explain": {
+        "en": "A dark line running back from the eye. In Teal and Garganey it is strong."
+      }
+    },
+    {
+      "term": {
+        "en": "bill pattern"
+      },
+      "explain": {
+        "en": "The colours on the bill. The female Mallard has an orange bill with a dark blotch on top."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 165,
+      "latin": "Anas platyrhynchos",
+      "name": {
+        "en": "Mallard"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "Mottled brown, with an orange **bill pattern**: a dark saddle on the top"
+        },
+        {
+          "en": "A dark crown and eye-stripe, on a paler face"
+        },
+        {
+          "en": "A blue **speculum** edged in white, on both sides"
+        }
+      ],
+      "where_when": {
+        "en": "All ten countries. UK, IE, NL, BE, DE, FR, DK, SE, FI, NO: abundant to common all year, in any water. Breeding from March; ducklings in April to July. The female is the one that says “quack”."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "SE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "FI": {
+          "frequency": "common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "The loud, descending, laughing quack of the female: “quaak-quak-quak-quak-quak”."
+        },
+        "chosen": [
+          {
+            "media_id": 1194968,
+            "xeno_canto": "XC774434",
+            "type": "nocturnal flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 41,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1194961,
+            "xeno_canto": "XC1029063",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 81,
+            "background_species": 0,
+            "recordist": "Xavier Riera"
+          },
+          {
+            "media_id": 1194970,
+            "xeno_canto": "XC705240",
+            "type": "call, take-off call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 35,
+            "background_species": 0,
+            "recordist": "Dominique Guillerme"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A big, bulky duck with a flat head. All other females are compared with this one, and they are often smaller."
+      },
+      "dont_confuse": {
+        "en": "Gadwall (this week): smaller, a steeper forehead, a more orange side to the bill and a white wing patch."
+      },
+      "media": {
+        "card": [
+          130414,
+          130455,
+          130418
+        ],
+        "quiz": [
+          1345988,
+          1345978,
+          1345995,
+          1345983,
+          1345994,
+          130434,
+          1345996,
+          130433
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 1,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 150,
+      "latin": "Mareca strepera",
+      "name": {
+        "en": "Gadwall"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "Looks like a small Mallard with a neat, steeper forehead"
+        },
+        {
+          "en": "An orange-sided bill with a dark grey centre: the **bill pattern** is two-tone"
+        },
+        {
+          "en": "A white **speculum** that shows as a white square in flight or on the water"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK: fairly common on lakes and gravel pits, all year, with more in winter. NO, SE, FI: uncommon, scarce. It dabbles with the head under water and the tail up."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, quiet quack, flat and nasal: “kak-kak”."
+        },
+        "chosen": [
+          {
+            "media_id": 1194748,
+            "xeno_canto": "XC323621",
+            "type": "alarm call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 33,
+            "background_species": 0,
+            "recordist": "Ashley Fisher"
+          },
+          {
+            "media_id": 1194731,
+            "xeno_canto": "XC995001",
+            "type": "alarm call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 37,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1194744,
+            "xeno_canto": "XC459626",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 149,
+            "background_species": 0,
+            "recordist": "Jérémy Simar"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Grey-brown, rather neat, and she prefers Coots' company, as she steals the food they bring up from the bottom."
+      },
+      "dont_confuse": {
+        "en": "Mallard (this week): bigger, with a flat head, a bolder face and no white speculum."
+      },
+      "media": {
+        "card": [
+          128295,
+          128247,
+          128273
+        ],
+        "quiz": [
+          128272,
+          128354,
+          128319,
+          128231,
+          128379,
+          128258,
+          128254,
+          128323
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 1,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 152,
+      "latin": "Mareca penelope",
+      "name": {
+        "en": "Eurasian Wigeon"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "A round head, a short, steep forehead and a small, blue-grey bill with a black tip"
+        },
+        {
+          "en": "Rufous or grey-brown body and a white belly"
+        },
+        {
+          "en": "A **speculum** that is dull grey-green, with no bright patch"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK: common to abundant in winter, from October to March, on coastal marshes and fields. NO, SE, FI: breeds in the north. A grazing duck in big flocks."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "abundant",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "abundant",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, growling, purring “rrrr” from the female. The male whistles “whee-oo”."
+        },
+        "chosen": [
+          {
+            "media_id": 1194775,
+            "xeno_canto": "XC994796",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "B",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1194782,
+            "xeno_canto": "XC780322",
+            "type": "call, nocturnal flight call, song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 69,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          },
+          {
+            "media_id": 1194784,
+            "xeno_canto": "XC774516",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "B",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Grazes on grass like a goose and sits as a flock on the grass. A small, round-headed, short-billed duck is a Wigeon."
+      },
+      "dont_confuse": {
+        "en": "Gadwall (this week): a pale orange bill and a flatter head. Teal: smaller, with a dark eye-stripe."
+      },
+      "media": {
+        "card": [
+          128607,
+          128610,
+          128624
+        ],
+        "quiz": [
+          128616,
+          128618,
+          128590,
+          128619,
+          128603,
+          128597,
+          128609,
+          128726
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 172,
+      "latin": "Anas acuta",
+      "name": {
+        "en": "Northern Pintail"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "Slim, elegant and long-necked, with a plain pale head"
+        },
+        {
+          "en": "A grey bill with a blue-grey centre and a plain face with no eye-stripe"
+        },
+        {
+          "en": "A pointed tail and a brown **speculum** with a bold white back edge"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK: fairly common in winter. SE, FI, NO: uncommon, breeds in the north. A bird of open, shallow, wet places, and an early migrant in autumn."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "uncommon",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, soft quack and a short, rough “kruk”."
+        },
+        "chosen": [
+          {
+            "media_id": 1195078,
+            "xeno_canto": "XC996805",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 11,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1195081,
+            "xeno_canto": "XC884101",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 13,
+            "background_species": 0,
+            "recordist": "Christian Kerihuel"
+          },
+          {
+            "media_id": 1195084,
+            "xeno_canto": "XC712339",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 21,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "She has the longest neck and the most elegant shape of all the dabbling ducks. The plain, pale head with no stripes is the key."
+      },
+      "dont_confuse": {
+        "en": "Mallard (this week): a heavier body, a short neck and a bold bill pattern."
+      },
+      "media": {
+        "card": [
+          131619,
+          131617,
+          131732
+        ],
+        "quiz": [
+          131610,
+          131592,
+          131625,
+          131634,
+          131576,
+          131636,
+          131635,
+          131659
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 175,
+      "latin": "Anas crecca",
+      "name": {
+        "en": "Eurasian Teal"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "Small and compact, with a dark **eye-stripe** and a pale **loral spot**"
+        },
+        {
+          "en": "A green **speculum** with a buff front edge, seen in flight and when she stretches"
+        },
+        {
+          "en": "A thin, dark grey bill, and a white line along the side of the undertail"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK: common in winter. NO, SE, FI: breeds in the north. The smallest dabbling duck of the region, found on shallow pools and marshes."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "common",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, high, quacking “krrick” from the female, and a clear whistle from the male."
+        },
+        "chosen": [
+          {
+            "media_id": 1195118,
+            "xeno_canto": "XC698774",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 66,
+            "background_species": 0,
+            "recordist": "Jack Berteau"
+          },
+          {
+            "media_id": 1195116,
+            "xeno_canto": "XC723639",
+            "type": "call, wing flutter",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 46,
+            "background_species": 0,
+            "recordist": "Lars Edenius"
+          },
+          {
+            "media_id": 1195120,
+            "xeno_canto": "XC695865",
+            "type": "call, song, escaping sparrohawk at some point",
+            "country": "France",
+            "quality": "A",
+            "seconds": 220,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A very small duck, with a very compact shape. A flock of Teal takes off with a sudden, fast, twisting flight."
+      },
+      "dont_confuse": {
+        "en": "Garganey (this week): a bold white eyebrow and a pale spot on the cheek. Gadwall: bigger, and an orange bill."
+      },
+      "media": {
+        "card": [
+          1346025,
+          132090,
+          132009
+        ],
+        "quiz": [
+          132011,
+          131997,
+          132040,
+          132066,
+          132067,
+          132015,
+          132073,
+          1346037
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 140,
+      "latin": "Spatula querquedula",
+      "name": {
+        "en": "Garganey"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "A bold, pale **supercilium** and a dark **eye-stripe**, with a pale spot at the base of the bill"
+        },
+        {
+          "en": "A pale line below the eye, and a dark cheek stripe"
+        },
+        {
+          "en": "A greyish, plain wing, with no green **speculum**, and a pale belly"
+        }
+      ],
+      "where_when": {
+        "en": "NL, DE, DK, BE, FR, UK: scarce summer visitor, March to August, to flooded grassland. IE, NO, SE, FI: rare. A migrant to West Africa. The only duck of the region that arrives in spring and leaves in autumn."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "DK": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, dry, rattling “krrk”, from the female."
+        },
+        "chosen": [
+          {
+            "media_id": 1194600,
+            "xeno_canto": "XC735748",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 64,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          },
+          {
+            "media_id": 1194609,
+            "xeno_canto": "XC544441",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 75,
+            "background_species": 0,
+            "recordist": "Hans Matheve"
+          },
+          {
+            "media_id": 1194607,
+            "xeno_canto": "XC632957",
+            "type": "call, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Charlie Bodin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A summer duck. If there is a Teal-sized duck with a very bold face pattern in April, it is probably a Garganey."
+      },
+      "dont_confuse": {
+        "en": "Eurasian Teal (this week): a dark stripe on the eye and a green wing patch, but no bold eyebrow."
+      },
+      "media": {
+        "card": [
+          126692,
+          126667,
+          126682
+        ],
+        "quiz": [
+          126647,
+          126676,
+          126677,
+          126680,
+          126679,
+          126648,
+          126745,
+          126760
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 149,
+      "latin": "Spatula clypeata",
+      "name": {
+        "en": "Northern Shoveler"
+      },
+      "plumage": {
+        "en": "adult female"
+      },
+      "plumage_filter": {
+        "sex": "female"
+      },
+      "look_for": [
+        {
+          "en": "A huge, spoon-shaped bill, much wider at the tip"
+        },
+        {
+          "en": "Mottled brown, with an orange edge to the bill, and a large head"
+        },
+        {
+          "en": "A dull **speculum** and pale blue-grey forewing, visible in flight"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, FR, DK: fairly common, all year, with peaks in winter. SE, FI, NO: uncommon, in summer. It swings the bill through the water, filtering food."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "prebreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A low, nasal “kuk-kuk” and a soft quack."
+        },
+        "chosen": [
+          {
+            "media_id": 1194723,
+            "xeno_canto": "XC996367",
+            "type": "nocturnal flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1194729,
+            "xeno_canto": "XC992752",
+            "type": "flight call, nocturnal flight call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 12,
+            "background_species": 0,
+            "recordist": "Joost van Bruggen"
+          },
+          {
+            "media_id": 1194730,
+            "xeno_canto": "XC800553",
+            "type": "flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 9,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A heavy, front-heavy duck, with a bill like a spade. She is always found feeding in a tight group, spinning and sieving."
+      },
+      "dont_confuse": {
+        "en": "Mallard (this week): a smaller bill and a bolder head pattern."
+      },
+      "media": {
+        "card": [
+          128094,
+          128091,
+          128168
+        ],
+        "quiz": [
+          128127,
+          128132,
+          128102,
+          128053,
+          128054,
+          128099,
+          128097,
+          128055
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 1,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 175,
+    "species_ids": [
+      175,
+      140
+    ],
+    "title": {
+      "en": "Teal or Garganey female?"
+    },
+    "text": {
+      "en": "Look at the face. A female Garganey has a bold pale eyebrow above a dark eye-stripe and a pale spot at the base of the bill, which gives her a pale-and-dark face. A female Teal has a much plainer face: a dark eye-stripe and a small pale spot, with a white streak by the tail. In the wing, a Teal has a green speculum and a Garganey does not."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      16,
+      18,
+      19
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 3,
+      "sound": 3
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Visit a lake or a pond with dabbling ducks this month. Pick out only the females and name each one. In March and April look for the Garganey female among the Teal."
+  },
+  "next": {
+    "en": "Next week: female diving ducks."
+  },
+  "flow": [
+    "intro",
+    "bird:165",
+    "bird:150",
+    "bird:152",
+    "bird:172",
+    "bird:175",
+    "bird:140",
+    "bird:149",
+    "quiz",
+    "done"
+  ]
+}

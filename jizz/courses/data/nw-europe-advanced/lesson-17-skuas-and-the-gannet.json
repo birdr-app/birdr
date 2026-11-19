@@ -1,0 +1,858 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 17,
+  "slug": "skuas-and-the-gannet",
+  "part": 4,
+  "kind": "species",
+  "season": "autumn",
+  "minutes": 20,
+  "title": {
+    "en": "Skuas, Gannet and Kittiwake"
+  },
+  "subtitle": {
+    "en": "The four skuas, and the young seabirds that fly with them"
+  },
+  "intro": {
+    "en": "Skuas are the pirates of the sea. They chase gulls, terns and gannets until they drop their catch. Four species pass the coasts of north-west Europe: Great Skua (bonxie), Arctic, Pomarine and Long-tailed. Which one you see depends on the season: Arctic Skuas are the commonest, Pomarines pass in October and the big autumn storms, and Long-tailed Skuas pass in May and September.\n\nIdentification starts with size and flight: a Great Skua is a heavy, bull-necked brown bird with a white flash, an Arctic is like a dark falcon, a Pomarine is a big, broad, barrel-chested bird, and a Long-tailed is slim and tern-like. Colour varies (pale and dark morphs), and the juveniles are barred and hard. Do not be disappointed if you cannot name each one: the pros leave many as \"skua sp.\".\n\nWith them we take two other birds you see at the same time on a sea-watch: a young Gannet, which is dark brown and speckled, and a juvenile Kittiwake, which has a black W across its wings."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "white flash"
+      },
+      "explain": {
+        "en": "A white patch at the base of the primaries, on the upperwing of a flying skua. Big in Great Skua, small in Arctic."
+      }
+    },
+    {
+      "term": {
+        "en": "spoons"
+      },
+      "explain": {
+        "en": "The blunt, twisted ends of the two central tail feathers of a Pomarine Skua."
+      }
+    },
+    {
+      "term": {
+        "en": "morph"
+      },
+      "explain": {
+        "en": "A colour form within one species. Arctic Skuas occur as pale, intermediate and dark morphs."
+      }
+    },
+    {
+      "term": {
+        "en": "central tail feathers"
+      },
+      "explain": {
+        "en": "The two middle tail feathers. They are pointed in Arctic Skua and very long in an adult Long-tailed Skua."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 2198,
+      "latin": "Stercorarius skua",
+      "name": {
+        "en": "Great Skua"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Heavy, dark brown and bull-necked, the size of a big gull"
+        },
+        {
+          "en": "A bold **white flash** at the base of the primaries"
+        },
+        {
+          "en": "A short, wedge-shaped tail, and a determined, powerful flight"
+        }
+      ],
+      "where_when": {
+        "en": "UK (Shetland, Orkney, Hebrides), IE, NO: breeds in colonies, from April to August. NL, BE, DE, DK, FR, SE: scarce on passage in autumn, August to October. FI: almost never. Locally known as the bonxie."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "At colonies a hoarse, repeated “uk-uk-uk”."
+        },
+        "chosen": [
+          {
+            "media_id": 1220429,
+            "xeno_canto": "XC642112",
+            "type": "call, flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 13,
+            "background_species": 0,
+            "recordist": "Andrew Harrop"
+          },
+          {
+            "media_id": 1220436,
+            "xeno_canto": "XC314798",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 7,
+            "background_species": 0,
+            "recordist": "Fraser Simpson"
+          },
+          {
+            "media_id": 1220435,
+            "xeno_canto": "XC319896",
+            "type": "song",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 6,
+            "background_species": 0,
+            "recordist": "Timo Janhonen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A bird that will chase anything, from Gannets to Peregrines. If a gull is forced to drop its fish, look for this bird."
+      },
+      "dont_confuse": {
+        "en": "Great Black-backed Gull (week 1): white head and a pale underwing, no white flash."
+      },
+      "media": {
+        "card": [
+          336831,
+          336784,
+          336763
+        ],
+        "quiz": [
+          336782,
+          336874,
+          336770,
+          336785,
+          336786,
+          336767,
+          336871,
+          336859
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 27,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2196,
+      "latin": "Stercorarius parasiticus",
+      "name": {
+        "en": "Arctic Skua"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Slim and falcon-like, with pointed wings and a fast, agile flight"
+        },
+        {
+          "en": "Occurs in pale, intermediate and dark **morphs**, with a small white flash"
+        },
+        {
+          "en": "Short, pointed **central tail feathers**, sticking out a little"
+        }
+      ],
+      "where_when": {
+        "en": "UK (Scotland), NO, SE, FI, IE: breeds in the north, from May to August. NL, BE, DE, DK, FR: scarce to fairly common on passage, especially from August to October. The skua you are most likely to see from any coast."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "NO": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A short, mewing “ka-aaow” and a nasal wail."
+        },
+        "chosen": [
+          {
+            "media_id": 1220394,
+            "xeno_canto": "XC674548",
+            "type": "alarm call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 43,
+            "background_species": 0,
+            "recordist": "Peter Stronach"
+          },
+          {
+            "media_id": 1220411,
+            "xeno_canto": "XC1019209",
+            "type": "flight call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 16,
+            "background_species": 0,
+            "recordist": "Sven Normant"
+          },
+          {
+            "media_id": 1220396,
+            "xeno_canto": "XC428823",
+            "type": "call, flight call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 0,
+            "recordist": "Stein Ø. Nilsen"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Skuas are best told by the way they hunt: the Arctic Skua chases terns with a fast, twisting pursuit, like a falcon after a swallow."
+      },
+      "dont_confuse": {
+        "en": "Pomarine Skua (this week): bigger and heavier. Long-tailed Skua: slimmer, with a lighter flight."
+      },
+      "media": {
+        "card": [
+          336468,
+          336450,
+          336452
+        ],
+        "quiz": [
+          336445,
+          336444,
+          336447,
+          336446,
+          336443,
+          336448,
+          336514,
+          336473
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 9,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2197,
+      "latin": "Stercorarius pomarinus",
+      "name": {
+        "en": "Pomarine Skua"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Heavy, broad-winged and barrel-chested, with a thick, deep-based bill"
+        },
+        {
+          "en": "Pale morph shows a dark breast band and a dark cap; the tail has twisted **spoons**"
+        },
+        {
+          "en": "A slow, powerful, steady flight and strong wingbeats"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR, NO, SE: scarce to rare on passage, mainly in autumn (October, in gales) and in May. FI: almost never. A bird that breeds on the Siberian tundra."
+      },
+      "where_data": {
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Silent at sea; a harsh “which-yew” on the breeding grounds."
+        },
+        "chosen": [
+          {
+            "media_id": 1220415,
+            "xeno_canto": "XC1010213",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 14,
+            "background_species": 0,
+            "recordist": "Benjamin Drillat"
+          },
+          {
+            "media_id": 1220416,
+            "xeno_canto": "XC184383",
+            "type": "call",
+            "country": "United States",
+            "quality": "A",
+            "seconds": 26,
+            "background_species": 0,
+            "recordist": "Andrew Spencer"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 10
+      },
+      "note": {
+        "en": "A big, heavy skua, often compared with a Herring Gull. The twisted spoons are not always visible, so look at the barrel-chested shape."
+      },
+      "dont_confuse": {
+        "en": "Arctic Skua (this week): smaller and slimmer, and a fast, agile flight."
+      },
+      "media": {
+        "card": [
+          336626,
+          336732,
+          336730
+        ],
+        "quiz": [
+          336734,
+          336627,
+          336601,
+          336731,
+          336634,
+          336703,
+          336647,
+          336609
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 5,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2195,
+      "latin": "Stercorarius longicaudus",
+      "name": {
+        "en": "Long-tailed Skua"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "Slim, tern-like, with a light, buoyant flight"
+        },
+        {
+          "en": "Barred grey-brown, with a pale head and a dark cap in the pale morph"
+        },
+        {
+          "en": "Little or no **white flash**, and short, blunt **central tail feathers**"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DE, DK, FR, NO, SE: rare on passage in September and October (juveniles), and adults in May. FI: breeds on the northern tundra, from June. A bird that breeds in the High Arctic."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Normally silent; a short, hoarse “kreek” at the colony."
+        },
+        "chosen": [
+          {
+            "media_id": 1220390,
+            "xeno_canto": "XC139097",
+            "type": "call, flight call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Fernand DEROUSSEN"
+          },
+          {
+            "media_id": 1220388,
+            "xeno_canto": "XC198125",
+            "type": "alarm call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 41,
+            "background_species": 0,
+            "recordist": "Rob van Bemmelen"
+          },
+          {
+            "media_id": 1220392,
+            "xeno_canto": "XC84034",
+            "type": "alarm call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 0,
+            "recordist": "Patrik Åberg"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A juvenile Long-tailed is a delicate, tern-like bird that flies by gracefully. The grey, barred look and the small size help tell it from the Arctic."
+      },
+      "dont_confuse": {
+        "en": "Arctic Skua (this week): stronger, a falcon-like flight, a more extensive white flash."
+      },
+      "media": {
+        "card": [
+          336270,
+          336269,
+          336271
+        ],
+        "quiz": [
+          336409,
+          336290,
+          336298,
+          336272,
+          336382,
+          336257,
+          336299,
+          336396
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 3,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2527,
+      "latin": "Morus bassanus",
+      "name": {
+        "en": "Northern Gannet"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "Dark brown with white speckles, and very large"
+        },
+        {
+          "en": "Long, pointed wings and a long, wedge-shaped tail"
+        },
+        {
+          "en": "Plunge-dives from a height of 30 metres, folding its wings"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, FR: common at colonies, from February to October. NL, BE, DE, DK, SE: scarce to fairly common offshore, with a peak in autumn. FI: rare. Young birds disperse south as far as West Africa."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "abundant",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "At the colony, a loud, rhythmic “arrrah-arrrah”."
+        },
+        "chosen": [
+          {
+            "media_id": 1223885,
+            "xeno_canto": "XC321464",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 31,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1223890,
+            "xeno_canto": "XC134228",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 96,
+            "background_species": 0,
+            "recordist": "Fernand DEROUSSEN"
+          },
+          {
+            "media_id": 1223877,
+            "xeno_canto": "XC737072",
+            "type": "call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 198,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A gannet takes five years to become white. Juveniles are brown and spangled, then pied, and eventually white with a yellow head."
+      },
+      "dont_confuse": {
+        "en": "Great Skua (this week): a bull-necked, brown bird with a white wing flash, with no speckles."
+      },
+      "media": {
+        "card": [
+          381678,
+          381717,
+          381746
+        ],
+        "quiz": [
+          381744,
+          381724,
+          381738,
+          381745,
+          381761,
+          381729,
+          381741,
+          381751
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 1,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2230,
+      "latin": "Rissa tridactyla",
+      "name": {
+        "en": "Black-legged Kittiwake"
+      },
+      "plumage": {
+        "en": "juvenile"
+      },
+      "plumage_filter": {
+        "stage": "juvenile"
+      },
+      "look_for": [
+        {
+          "en": "A clear black W across the open wing, formed by dark outer primaries and the dark **carpal bar**"
+        },
+        {
+          "en": "A black half-collar on the neck, and a black tip to the tail"
+        },
+        {
+          "en": "A small, tern-like, buoyant flight, and a short black bill"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO, DK, FR: common offshore, mainly from August to March. NL, BE, DE: fairly common. SE, FI: rare. In winter it is the commonest gull far offshore."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "NL": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "postbreeding_migration"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "abundant",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, nasal “kitti-waaake” and a whining begging call."
+        },
+        "chosen": [
+          {
+            "media_id": 1220758,
+            "xeno_canto": "XC929958",
+            "type": "call, flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "Arjun Dutta"
+          },
+          {
+            "media_id": 1220763,
+            "xeno_canto": "XC928148",
+            "type": "call, flight call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "FREDERIC Lionel"
+          },
+          {
+            "media_id": 1220755,
+            "xeno_canto": "XC930790",
+            "type": "song",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 67,
+            "background_species": 0,
+            "recordist": "Paul Lynch"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A juvenile Kittiwake is a high-contrast black-and-white gull. It is one of the first birds you see from a seawatch."
+      },
+      "dont_confuse": {
+        "en": "Little Gull (week 3): smaller, with a black W but a dark cap and a very dark underwing in adults."
+      },
+      "media": {
+        "card": [
+          341320,
+          341343,
+          341340
+        ],
+        "quiz": [
+          341321,
+          341338,
+          341372,
+          341404,
+          341342,
+          341376,
+          341323,
+          341339
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 12,
+        "verified": true,
+        "note": ""
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 2196,
+    "species_ids": [
+      2198,
+      2196
+    ],
+    "title": {
+      "en": "Great Skua or Arctic Skua?"
+    },
+    "text": {
+      "en": "Size, then flight. A Great Skua is as big as a Herring Gull, bull-necked, brown and heavy, and has a very bold white flash. An Arctic Skua is slimmer, falcon-shaped, with pointed wings and a small flash, and flies fast and agile. Only the Arctic comes in pale, intermediate and dark morphs."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      12,
+      14,
+      16
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 6,
+      "photo_sound": 4,
+      "sound": 2
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Seawatch on a windy day in August to October. Watch a flock of gulls or terns: look for a dark bird that turns and chases one of them. Decide if it is heavy (Great Skua) or light (Arctic). Write down what you think and why."
+  },
+  "next": {
+    "en": "Next week the auks and divers: Guillemot, Razorbill, Puffin and the three divers."
+  },
+  "flow": [
+    "intro",
+    "bird:2198",
+    "bird:2196",
+    "bird:2197",
+    "bird:2195",
+    "bird:2527",
+    "bird:2230",
+    "quiz",
+    "done"
+  ]
+}

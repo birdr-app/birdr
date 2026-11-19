@@ -1,0 +1,54 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 35,
+  "slug": "review-strays",
+  "part": 7,
+  "kind": "review",
+  "season": "any",
+  "minutes": 24,
+  "title": {
+    "en": "Review: strays"
+  },
+  "subtitle": {
+    "en": "Pratincoles, Siberian and American vagrants and southern overshoots in one quiz"
+  },
+  "intro": {
+    "en": "Rarities are exciting, but you can't just look for them: you must learn what is common first. This quiz shows the strays and, as wrong answers, the commoner birds they are mistaken for. Twenty questions, with birds from all four lessons of block 7, and waders and field birds from earlier blocks.\n\nRarities are found by people who look at every bird. When you think you have something unusual, take photographs and record the call. Many rarities are identified from a recording or a photograph, long after the bird has gone.\n\nA score of fifteen is good. If you got the American waders wrong, don't worry: these are the hardest birds in the course, and even good birders need a closer look."
+  },
+  "words": [],
+  "birds": [],
+  "compare": null,
+  "quiz": {
+    "questions": 20,
+    "photos_from": "quiz",
+    "answers_from": "review",
+    "review_from": [
+      31,
+      32,
+      33,
+      34,
+      26,
+      27,
+      28,
+      29
+    ],
+    "review_questions": 20,
+    "modes": {
+      "photo": 10,
+      "photo_sound": 6,
+      "sound": 4
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Choose the best wader, bush or coastal site near you, and visit it five times this autumn. Write down every species, and one thing that you did not expect."
+  },
+  "next": {
+    "en": "Next block: pro skills. Calls and night migration, bad photos, a mixed-plumage gauntlet and a round of everything else."
+  },
+  "flow": [
+    "intro",
+    "quiz",
+    "done"
+  ]
+}

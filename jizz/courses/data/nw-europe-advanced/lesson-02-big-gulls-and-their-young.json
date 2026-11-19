@@ -1,0 +1,881 @@
+{
+  "course": "nw-europe-advanced",
+  "week": 2,
+  "slug": "big-gulls-and-their-young",
+  "part": 1,
+  "kind": "species",
+  "season": "winter",
+  "minutes": 20,
+  "title": {
+    "en": "Big gulls and their young"
+  },
+  "subtitle": {
+    "en": "Herring, Yellow-legged, Caspian and the black-backs, with first-winters side by side"
+  },
+  "intro": {
+    "en": "The big gulls are the group that makes birders reach for a coffee. In north-west Europe four look-alikes share the same coast: Herring, Yellow-legged, Caspian and Lesser Black-backed. They hybridise, they vary, and the young are harder than the adults. So today we learn the adults of the two difficult newcomers (Yellow-legged and Caspian) and, for the three you met last week, how their first-winters differ from each other.\n\nThe method is the same every time: size and shape first (head, bill, leg length), then the shade of the mantle, then the colours of the soft parts, and the wing tips last. For young birds, check the tertials and the tail. Do not let a single feature decide: a Yellow-legged Gull is not identified by yellow legs alone.\n\nSeason matters. Yellow-legged Gulls from the Mediterranean and the French Atlantic coast spread north after the breeding season, from July to the autumn, which is why you find them on inland pits in August. Caspian Gulls come from the east, from Poland and Ukraine, and are mainly a winter bird in NL, BE and DE, with a few in the UK."
+  },
+  "words": [
+    {
+      "term": {
+        "en": "primary projection"
+      },
+      "explain": {
+        "en": "How far the wing tip sticks out behind the tertials on a resting gull. Long in Caspian and Lesser Black-backed."
+      }
+    },
+    {
+      "term": {
+        "en": "tertial crescent"
+      },
+      "explain": {
+        "en": "The white edge along the tertials of an adult gull, forming a crescent on a perched bird."
+      }
+    },
+    {
+      "term": {
+        "en": "scapulars"
+      },
+      "explain": {
+        "en": "The feathers that cover the shoulder, between the back and the wing. In young gulls they show the first grey."
+      }
+    },
+    {
+      "term": {
+        "en": "jizz"
+      },
+      "explain": {
+        "en": "The overall impression: shape, posture and movement together. Often right before you can say why."
+      }
+    },
+    {
+      "term": {
+        "en": "mask"
+      },
+      "explain": {
+        "en": "A dark patch around and behind the eye on a pale head."
+      }
+    }
+  ],
+  "birds": [
+    {
+      "species_id": 11038,
+      "latin": "Larus argentatus",
+      "name": {
+        "en": "Herring Gull"
+      },
+      "plumage": {
+        "en": "first-winter"
+      },
+      "plumage_filter": {
+        "stage": "immature"
+      },
+      "look_for": [
+        {
+          "en": "Brown, streaky and mottled overall, with a paler head and underparts"
+        },
+        {
+          "en": "Pale panel in the inner **primaries** of the flying bird, dark tail band and a paler rump"
+        },
+        {
+          "en": "Dark bill with a pale base, pink legs, and **tertials** with pale notches along their edges"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DK and NO: the commonest first-winter big gull from August to March. DE and FR: coastal, with Yellow-legged mixed in. SE and FI: coastal and inland, mostly in autumn."
+      },
+      "where_data": {},
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "Thin, mewing begging calls and the “kee-ow” of the adults."
+        },
+        "chosen": [
+          {
+            "media_id": 1221369,
+            "xeno_canto": "XC1025218",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 38,
+            "background_species": 0,
+            "recordist": "Colm Philpott",
+            "hidden_locally": true
+          },
+          {
+            "media_id": 1221384,
+            "xeno_canto": "XC717834",
+            "type": "flight call",
+            "country": "Ireland",
+            "quality": "A",
+            "seconds": 69,
+            "background_species": 0,
+            "recordist": "Irish Wildlife Sounds",
+            "hidden_locally": true
+          },
+          {
+            "media_id": 1221374,
+            "xeno_canto": "XC928132",
+            "type": "call, duet, song",
+            "country": "France",
+            "quality": "A",
+            "seconds": 44,
+            "background_species": 0,
+            "recordist": "FREDERIC Lionel",
+            "hidden_locally": true
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A first-winter is a lot browner than a first-winter Yellow-legged or Caspian: think of a Herring Gull as a tweed jacket, a Caspian as a white shirt."
+      },
+      "dont_confuse": {
+        "en": "Lesser Black-backed Gull (this week): darker and plainer, with a more solidly dark inner wing."
+      },
+      "media": {
+        "card": [
+          1179600,
+          1179647,
+          1179663
+        ],
+        "quiz": [
+          1179652,
+          1179515,
+          1179601,
+          1179640,
+          1179627,
+          1179583,
+          1179618,
+          1179566
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2273,
+      "latin": "Larus fuscus",
+      "name": {
+        "en": "Lesser Black-backed Gull"
+      },
+      "plumage": {
+        "en": "first-winter"
+      },
+      "plumage_filter": {
+        "stage": "immature"
+      },
+      "look_for": [
+        {
+          "en": "Dark, brown and scaly, with a dusky head and a densely streaked breast"
+        },
+        {
+          "en": "Dark inner **primaries**, a solid dark wing and a broad black tail band"
+        },
+        {
+          "en": "Black bill, dull pink legs and dark, plain **tertials**"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DK and FR: from July to October. Fewer are left in winter, as most move to Iberia and Africa. DE, NO, SE and FI: passage birds."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "postbreeding_migration"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "BE": {
+          "frequency": "fairly_common",
+          "peak": "postbreeding_migration"
+        },
+        "DE": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "FR": {
+          "frequency": "uncommon",
+          "peak": "postbreeding_migration"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "NO": {
+          "frequency": "uncommon",
+          "peak": "prebreeding_migration"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "prebreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A hoarse begging “keeah” and the deeper barking of adults."
+        },
+        "chosen": [
+          {
+            "media_id": 1221469,
+            "xeno_canto": "XC326256",
+            "type": "call, flight call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 43,
+            "background_species": 0,
+            "recordist": "david m"
+          },
+          {
+            "media_id": 1221458,
+            "xeno_canto": "XC1023979",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 73,
+            "background_species": 0,
+            "recordist": "Anthony McGeehan "
+          },
+          {
+            "media_id": 1221471,
+            "xeno_canto": "XC281182",
+            "type": "call",
+            "country": "Belgium",
+            "quality": "A",
+            "seconds": 76,
+            "background_species": 0,
+            "recordist": "Peter Boesman"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "The inner wing is very dark, and only a thin pale window shows in the inner primaries. A first-winter that looks \"too dark\" for a Herring Gull is usually this species."
+      },
+      "dont_confuse": {
+        "en": "Herring Gull (this week): paler head and underparts, and a clear pale window in the inner primaries."
+      },
+      "media": {
+        "card": [
+          348607,
+          348601,
+          348703
+        ],
+        "quiz": [
+          348654,
+          348684,
+          348693,
+          348653,
+          348657,
+          348631,
+          348548,
+          348658
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2271,
+      "latin": "Larus marinus",
+      "name": {
+        "en": "Great Black-backed Gull"
+      },
+      "plumage": {
+        "en": "first-winter"
+      },
+      "plumage_filter": {
+        "stage": "immature"
+      },
+      "look_for": [
+        {
+          "en": "Huge, with a thick bill and a white head, with a dark **mask** behind the eye"
+        },
+        {
+          "en": "Black-and-white chequered upperparts: pale spots on dark **scapulars**"
+        },
+        {
+          "en": "Whitish tail with a thin dark band, and a heavy bill that is mostly dark"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NO and DK: fairly common, on the coast and at fishing ports. NL: uncommon, in winter. DE, SE, FI, FR and BE: scarce."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "fairly_common",
+          "peak": "resident"
+        },
+        "IE": {
+          "frequency": "fairly_common",
+          "peak": "resident"
+        },
+        "NL": {
+          "frequency": "uncommon",
+          "peak": "resident"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "resident"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "DK": {
+          "frequency": "fairly_common",
+          "peak": "resident"
+        },
+        "NO": {
+          "frequency": "fairly_common",
+          "peak": "resident"
+        },
+        "SE": {
+          "frequency": "rare",
+          "peak": "resident"
+        },
+        "FI": {
+          "frequency": "rare",
+          "peak": "resident"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A deep “owk, owk” and a low, hoarse begging cry."
+        },
+        "chosen": [
+          {
+            "media_id": 1221429,
+            "xeno_canto": "XC875426",
+            "type": "alarm call, call",
+            "country": "Norway",
+            "quality": "A",
+            "seconds": 105,
+            "background_species": 0,
+            "recordist": "Stein Ø. Nilsen"
+          },
+          {
+            "media_id": 1221434,
+            "xeno_canto": "XC749451",
+            "type": "call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 82,
+            "background_species": 2,
+            "recordist": "Jack Berteau"
+          },
+          {
+            "media_id": 1221423,
+            "xeno_canto": "XC994659",
+            "type": "call, song",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 56,
+            "background_species": 5,
+            "recordist": "Johan Södercrantz"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "At a distance it is a big chequered gull. Look for the size and the plain white head, not for streaks: first-winter Herring Gulls are brown and streaky, the great black-back is pale and pied."
+      },
+      "dont_confuse": {
+        "en": "Herring Gull (this week): browner and streaky rather than chequered, with a smaller bill."
+      },
+      "media": {
+        "card": [
+          348314,
+          348249,
+          348313
+        ],
+        "quiz": [
+          348292,
+          348300,
+          348254,
+          348260,
+          348320,
+          348262,
+          348288,
+          348206
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2269,
+      "latin": "Larus michahellis",
+      "name": {
+        "en": "Yellow-legged Gull"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "A mid-grey **mantle**, darker than a Herring Gull and paler than a Lesser Black-back"
+        },
+        {
+          "en": "Bright yellow legs and a heavy yellow bill with a large red spot at the **gonys**"
+        },
+        {
+          "en": "A white head even in autumn and a pale eye with a red eye ring"
+        }
+      ],
+      "where_when": {
+        "en": "FR: fairly common, and the usual big gull on the Atlantic and Channel coasts. UK, BE, NL, IE, DK, DE and SE: uncommon to rare, peaking July to October when young and adult birds come north from the Mediterranean. NO and FI: very rare."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A deep, harsh “ow-ow-ow” and a long laughing call, rougher than a Herring Gull."
+        },
+        "chosen": [
+          {
+            "media_id": 1221390,
+            "xeno_canto": "XC1034350",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 58,
+            "background_species": 0,
+            "recordist": "David Darrell-Lambert"
+          },
+          {
+            "media_id": 1221387,
+            "xeno_canto": "XC1068427",
+            "type": "alarm call, call",
+            "country": "France",
+            "quality": "A",
+            "seconds": 37,
+            "background_species": 0,
+            "recordist": "Lionel FREDERIC"
+          },
+          {
+            "media_id": 1221398,
+            "xeno_canto": "XC903131",
+            "type": "flight call, two birds chasing each other",
+            "country": "France",
+            "quality": "A",
+            "seconds": 40,
+            "background_species": 0,
+            "recordist": "Stanislas Wroza"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "A pale-headed gull in late summer, with a clean head while Herring Gulls are still streaked. The shape is the Herring Gull's, but heavier in the bill and the neck."
+      },
+      "dont_confuse": {
+        "en": "Caspian Gull (this week): a longer, thinner bill, dark eye and a smaller head. Lesser Black-backed Gull: darker back."
+      },
+      "media": {
+        "card": [
+          347865,
+          347845,
+          347924
+        ],
+        "quiz": [
+          347974,
+          347973,
+          347841,
+          347843,
+          347840,
+          347917,
+          347983,
+          347957
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 18,
+        "verified": true,
+        "note": ""
+      }
+    },
+    {
+      "species_id": 2266,
+      "latin": "Larus cachinnans",
+      "name": {
+        "en": "Caspian Gull"
+      },
+      "plumage": {
+        "en": "adult"
+      },
+      "plumage_filter": {
+        "stage": "adult"
+      },
+      "look_for": [
+        {
+          "en": "Small flat head, long thin bill with a small red spot, and a dark eye"
+        },
+        {
+          "en": "Long legs and a long **primary projection**, with a sleek, swan-necked **jizz**"
+        },
+        {
+          "en": "Pale grey **mantle**, white head in winter, and a big white **tertial crescent**"
+        }
+      ],
+      "where_when": {
+        "en": "NL, BE, DE and DK: regular in winter, best from October to March. UK: scarce in winter on the east and south-east. FR, SE, NO and FI: very rare or occasional. IE: very rare."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "BE": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "very_rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "very_rare",
+          "peak": "prebreeding_migration"
+        },
+        "NO": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "SE": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        },
+        "FI": {
+          "frequency": "very_rare",
+          "peak": "postbreeding_migration"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A long, nasal “kyow-kyow”, higher and thinner than a Herring Gull."
+        },
+        "chosen": [
+          {
+            "media_id": 1221328,
+            "xeno_canto": "XC1015838",
+            "type": "flight call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 34,
+            "background_species": 0,
+            "recordist": "Romuald Mikusek"
+          },
+          {
+            "media_id": 1221338,
+            "xeno_canto": "XC641572",
+            "type": "alarm call, call, flight call",
+            "country": "Poland",
+            "quality": "A",
+            "seconds": 41,
+            "background_species": 0,
+            "recordist": "Jacek Betleja"
+          },
+          {
+            "media_id": 1221332,
+            "xeno_canto": "XC1001262",
+            "type": "alarm call, duet, flight call",
+            "country": "Russian Federation",
+            "quality": "A",
+            "seconds": 39,
+            "background_species": 0,
+            "recordist": "Albert Lastukhin"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "It is the one to scan flocks for. Look for the pale, small-headed gull with the dark eye, the thin bill and the long wings. The adult is easy once you see its jizz."
+      },
+      "dont_confuse": {
+        "en": "Yellow-legged Gull (this week): bigger head, shorter bill, a pale eye with a red ring, a heavier look."
+      },
+      "media": {
+        "card": [
+          347393,
+          347376,
+          347386
+        ],
+        "quiz": [
+          347356,
+          347359,
+          347313,
+          347327,
+          347367,
+          347368,
+          347335,
+          347372
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 2,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    },
+    {
+      "species_id": 2261,
+      "latin": "Larus canus",
+      "name": {
+        "en": "Common Gull"
+      },
+      "plumage": {
+        "en": "first-winter"
+      },
+      "plumage_filter": {
+        "stage": "immature"
+      },
+      "look_for": [
+        {
+          "en": "The yardstick: small and round-headed, with a thin bill and a gentle face"
+        },
+        {
+          "en": "Pale grey **mantle** and brown wing feathers; dark **tertials** with pale tips"
+        },
+        {
+          "en": "Pink-and-black bill and pink legs; a clean black band on a white tail"
+        }
+      ],
+      "where_when": {
+        "en": "UK, IE, NL, BE, DK, NO, FI: common in winter, with young birds in every flock. DE and SE: fairly common. FR: scarce."
+      },
+      "where_data": {
+        "GB": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "IE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "NL": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "BE": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "DE": {
+          "frequency": "fairly_common",
+          "peak": "nonbreeding"
+        },
+        "FR": {
+          "frequency": "rare",
+          "peak": "nonbreeding"
+        },
+        "DK": {
+          "frequency": "common",
+          "peak": "nonbreeding"
+        },
+        "NO": {
+          "frequency": "common",
+          "peak": "breeding"
+        },
+        "SE": {
+          "frequency": "fairly_common",
+          "peak": "breeding"
+        },
+        "FI": {
+          "frequency": "common",
+          "peak": "breeding"
+        }
+      },
+      "sound": {
+        "type": "call",
+        "describe": {
+          "en": "A high, plaintive begging “keeeya”."
+        },
+        "chosen": [
+          {
+            "media_id": 1221237,
+            "xeno_canto": "XC813832",
+            "type": "call",
+            "country": "United Kingdom",
+            "quality": "A",
+            "seconds": 70,
+            "background_species": 0,
+            "recordist": "Alex Lin-Moore"
+          },
+          {
+            "media_id": 1221241,
+            "xeno_canto": "XC801975",
+            "type": "call",
+            "country": "Netherlands",
+            "quality": "A",
+            "seconds": 42,
+            "background_species": 0,
+            "recordist": "guus van duin"
+          },
+          {
+            "media_id": 1221226,
+            "xeno_canto": "XC1080436",
+            "type": "call",
+            "country": "Sweden",
+            "quality": "A",
+            "seconds": 32,
+            "background_species": 0,
+            "recordist": "Marc Anderson"
+          }
+        ],
+        "status": "chosen on xeno-canto details; listen before use",
+        "available": 20
+      },
+      "note": {
+        "en": "Put it next to a Herring Gull and you will see the size gap. A first-winter Common Gull is easy to recognise by its neat black tail band on an otherwise clean white tail, much cleaner than a Herring Gull's tail."
+      },
+      "dont_confuse": {
+        "en": "Herring Gull (this week): bigger, with a brown, streaky look and a heavier bill."
+      },
+      "media": {
+        "card": [
+          346597,
+          346535,
+          346522
+        ],
+        "quiz": [
+          346582,
+          346511,
+          346539,
+          346565,
+          346492,
+          346488,
+          346602,
+          346549
+        ]
+      },
+      "media_status": {
+        "plumage_labelled_matches": 0,
+        "verified": false,
+        "note": "unlabelled approved photos fill the gap; re-pick after plumage labelling"
+      }
+    }
+  ],
+  "plumage_required": true,
+  "compare": {
+    "after_species_id": 2266,
+    "species_ids": [
+      2269,
+      2266,
+      11038
+    ],
+    "title": {
+      "en": "Herring, Yellow-legged or Caspian?"
+    },
+    "text": {
+      "en": "Start with the head. Caspian: small, flat, with a dark eye and a long thin bill. Yellow-legged: a big square head and a heavy bill, with yellow legs. Herring: round-headed, pale eye, pink legs. Now the back: Herring and Caspian are both pale grey, and Yellow-legged is a shade darker. Only then look at the wing tip."
+    }
+  },
+  "quiz": {
+    "questions": 12,
+    "photos_from": "quiz",
+    "answers_from": "this lesson",
+    "review_from": [
+      1
+    ],
+    "review_questions": 3,
+    "modes": {
+      "photo": 7,
+      "photo_sound": 4,
+      "sound": 1
+    },
+    "position": "last step of the lesson"
+  },
+  "outside": {
+    "en": "Go to a reservoir, a harbour or a rubbish tip in the next two weeks and scan a gull flock for twenty minutes. Look for one bird that is clearly paler-headed and long-billed (a Caspian candidate) and one with yellow legs. Take a photograph and compare it with the lesson. If you cannot decide, say \"big gull\" and move on."
+  },
+  "next": {
+    "en": "Next week the white-wingers and the small gulls: Iceland, Glaucous, Little and Mediterranean-type gulls."
+  },
+  "flow": [
+    "intro",
+    "bird:11038",
+    "bird:2273",
+    "bird:2271",
+    "bird:2269",
+    "bird:2266",
+    "bird:2261",
+    "quiz",
+    "done"
+  ]
+}
