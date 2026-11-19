@@ -273,7 +273,8 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'countries': ['GB', 'IE'],
     },
-    # South-eastern Europe: draft until texts and photos exist (drafts are left out of the country's regions).
+    # South-eastern Europe: the country trip is a draft (unlisted) until its photos are approved; the three packs
+    # are not drafts so they show under Regions on the country's trip home.
     'SEEUROPE': {
         'name': {'en': 'South-eastern Europe', 'nl': 'Zuidoost-Europa'},
         'languages': ('en', 'nl'),
@@ -285,21 +286,18 @@ TRIPS: dict[str, dict] = {
         'languages': ('en', 'nl'),
         'parent': 'SEEUROPE',
         'countries': ['GR', 'AL', 'ME', 'HR', 'SI', 'BA', 'MK'],
-        'draft': True,
     },
     'SEEUROPE-DELTA': {
         'name': {'en': 'Danube Delta and the Black Sea', 'nl': 'Donaudelta en de Zwarte Zee'},
         'languages': ('en', 'nl'),
         'parent': 'SEEUROPE',
         'countries': ['RO', 'BG', 'MD'],
-        'draft': True,
     },
     'SEEUROPE-MOUNTAINS': {
         'name': {'en': 'Alps, Carpathians and Balkan mountains', 'nl': 'Alpen, Karpaten en Balkangebergten'},
         'languages': ('en', 'nl'),
         'parent': 'SEEUROPE',
         'countries': ['SI', 'HR', 'BA', 'ME', 'BG', 'RO', 'RS'],
-        'draft': True,
     },
 }
 
