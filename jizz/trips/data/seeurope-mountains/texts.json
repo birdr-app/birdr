@@ -1,0 +1,80 @@
+{
+  "country": "SEEUROPE-MOUNTAINS",
+  "intro": {
+    "en": "The high ground of the region: the Julian Alps, the Dinaric karst, Rila, Pirin, the Rhodopes and the Carpathians. Old forests hold grouse, owls and woodpeckers, cliffs hold Wallcreeper and choughs, and meadows hold Corncrake. Many are hard to find and some you only hear. This pack adds 29 species.",
+    "nl": "Het hooggebergte van de regio: de Julische Alpen, de Dinarische karst, Rila, Pirin, de Rodopen en de Karpaten. Oude bossen herbergen hoenderachtigen, uilen en spechten, rotsen herbergen rotskruiper en kauwen, en weiden herbergen de kwartelkoning. Veel soorten zijn moeilijk te vinden en sommige hoor je alleen. Dit pakket voegt 29 soorten toe."
+  },
+  "units": {
+    "grouse-quail-and-allies": {
+      "title": {
+        "en": "Grouse and mountain partridges",
+        "nl": "Hoenderachtigen van het gebergte"
+      },
+      "intro": {
+        "en": "Five ground birds of forest and rock: Capercaillie, Hazel Grouse and Black Grouse in woods and bogs, Rock Partridge and Rock Ptarmigan on stony slopes. Hard to find: go early and quietly.",
+        "nl": "Vijf grondvogels van bos en rots: auerhoen, hazelhoen en korhoen in bossen en venen, steenpatrijs en alpensneeuwhoen op stenige hellingen. Moeilijk te vinden: ga vroeg en stil."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "title": {
+        "en": "Golden Eagle, vulture and Corncrake",
+        "nl": "Steenarend, aasgier, kwartelkoning"
+      },
+      "intro": {
+        "en": "Two raptors of mountain slopes and a meadow bird that is nearly always heard. The Corncrake calls from tall grass, mostly at night.",
+        "nl": "Twee roofvogels van berghellingen en een weidevogel die je bijna altijd hoort. De kwartelkoning roept uit hoog gras, vooral 's nachts."
+      }
+    },
+    "owls": {
+      "title": {
+        "en": "Owls of the mountain forests",
+        "nl": "Uilen van de bergbossen"
+      },
+      "intro": {
+        "en": "Four owls. Eagle Owl and Ural Owl live in big woods and cliffs, Pygmy-Owl and Tengmalm's Owl in old conifers. All are found by voice, mostly at dusk or on late winter and spring nights.",
+        "nl": "Vier uilen. Oehoe en oeraluil leven in grote bossen en rotsen, dwerguil en ruigpootuil in oude naaldbossen. Je vindt ze allemaal op de roep, meestal in de schemering of op nachten in late winter en voorjaar."
+      }
+    },
+    "woodpeckers": {
+      "title": {
+        "en": "Woodpeckers, nutcracker and choughs",
+        "nl": "Spechten, notenkraker en alpenkauwen"
+      },
+      "intro": {
+        "en": "Two rare woodpeckers of old woods, the Spotted Nutcracker in conifers and two choughs that follow cliffs and ski lifts.",
+        "nl": "Twee zeldzame spechten van oude bossen, de notenkraker in naaldbos en twee kauwen die rotsen en skiliften volgen."
+      }
+    },
+    "tits-chickadees-and-titmice": {
+      "title": {
+        "en": "Tits, Shore Lark and Wallcreeper",
+        "nl": "Mezen, strandleeuwerik en rotskruiper"
+      },
+      "intro": {
+        "en": "Crested and Willow Tits in conifers, Shore Lark on high stony ground, and Wallcreeper on rock faces and gorges: a crimson-winged bird that flicks its wings open as it climbs.",
+        "nl": "Kuifmees en matkop in naaldbos, strandleeuwerik op hoge, stenige grond, en rotskruiper op rotswanden en in kloven: een vogel met karmozijnrode vleugels die zijn vleugels openklapt terwijl hij klimt."
+      }
+    },
+    "dippers": {
+      "title": {
+        "en": "Dipper, thrushes and flycatcher",
+        "nl": "Waterspreeuw, lijsters en vliegenvanger"
+      },
+      "intro": {
+        "en": "Birds of the heights. Dipper lives by fast streams, Ring Ouzel and Rock Thrush on open slopes, and Semicollared Flycatcher in beech forest.",
+        "nl": "Vogels van de hoogte. De waterspreeuw leeft bij snelle beken, beflijster en rode rotslijster op open hellingen, en de Balkanvliegenvanger in beukenbos."
+      }
+    },
+    "accentors": {
+      "title": {
+        "en": "Accentor, snowfinch, crossbill, bunting",
+        "nl": "Heggenmus, sneeuwvink, kruisbek, gors"
+      },
+      "intro": {
+        "en": "Four birds of rocky slopes and conifers: Alpine Accentor and White-winged Snowfinch above the tree line, Rock Bunting on warm, stony hillsides and Common Crossbill in conifers.",
+        "nl": "Vier vogels van rotsachtige hellingen en naaldbos: alpenheggenmus en sneeuwvink boven de boomgrens, grijze gors op warme, stenige heuvels en kruisbek in naaldbos."
+      }
+    }
+  },
+  "species": {}
+}

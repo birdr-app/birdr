@@ -1,0 +1,22 @@
+{
+  "code": "easwar1",
+  "name": {
+    "en": "Eastern Subalpine Warbler",
+    "nl": "Balkanbaardgrasmus"
+  },
+  "latin": "Curruca cantillans",
+  "look_for": [
+    {
+      "en": "Male: brick-red **throat** and **breast**",
+      "nl": "Mannetje: steenrode **keel** en **borst**"
+    },
+    {
+      "en": "White **moustache** stripe, blue-grey **back**",
+      "nl": "Witte **baardstreep**, blauwgrijze **rug**"
+    },
+    {
+      "en": "Reddish **eye-ring**; female pale and plain",
+      "nl": "Roodachtige **oogring**; vrouwtje licht en effen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "eabwar1",
+  "name": {
+    "en": "Eastern Bonelli's Warbler",
+    "nl": "Balkanbergfluiter"
+  },
+  "latin": "Phylloscopus orientalis",
+  "look_for": [
+    {
+      "en": "Greyish-brown above, silky white below",
+      "nl": "Grijsbruin boven, zijdewit onder"
+    },
+    {
+      "en": "Greenish-yellow **wing** panel and **rump**",
+      "nl": "Groengeel **vleugelpaneel** en **stuit**"
+    },
+    {
+      "en": "Pale **eyebrow**, no yellow on the **throat**",
+      "nl": "Lichte **wenkbrauwstreep**, geen geel op de **keel**"
+    }
+  ]
+}

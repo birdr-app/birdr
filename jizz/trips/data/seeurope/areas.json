@@ -1,0 +1,106 @@
+{
+  "note": "Where a visitor on a normal trip through south-eastern Europe goes (one or two places per country: Slovenia, Croatia, Serbia, Bosnia, Montenegro, Albania, North Macedonia, Bulgaria, Romania, Moldova, Greece), for GeoModel scores (trip_prep_geoscore). `packs` is the route mix of the region packs (Mediterranean, Delta, Mountains): each pack's areas share the weight given, so the first day stays a mixed lowland day. The country cut uses these own areas only. Coordinates typed by hand; edit by hand.",
+  "packs": {
+    "SEEUROPE-MEDITERRANEAN": 4,
+    "SEEUROPE-DELTA": 3,
+    "SEEUROPE-MOUNTAINS": 3
+  },
+  "areas": [
+    {
+      "name": "Ljubljana Marshes (SI)",
+      "lat": 45.98,
+      "lon": 14.47,
+      "weight": 1
+    },
+    {
+      "name": "Zagreb and Lonjsko Polje (HR)",
+      "lat": 45.35,
+      "lon": 16.75,
+      "weight": 1
+    },
+    {
+      "name": "Kopacki Rit (HR)",
+      "lat": 45.6,
+      "lon": 18.8,
+      "weight": 1
+    },
+    {
+      "name": "Carska Bara and Zasavica (RS)",
+      "lat": 45.37,
+      "lon": 20.43,
+      "weight": 1
+    },
+    {
+      "name": "Belgrade, Great War Island (RS)",
+      "lat": 44.82,
+      "lon": 20.45,
+      "weight": 1
+    },
+    {
+      "name": "Sarajevo (BA)",
+      "lat": 43.86,
+      "lon": 18.4,
+      "weight": 1
+    },
+    {
+      "name": "Podgorica (ME)",
+      "lat": 42.45,
+      "lon": 19.26,
+      "weight": 1
+    },
+    {
+      "name": "Tirana (AL)",
+      "lat": 41.33,
+      "lon": 19.82,
+      "weight": 1
+    },
+    {
+      "name": "Skopje, Vardar valley (MK)",
+      "lat": 41.99,
+      "lon": 21.45,
+      "weight": 1
+    },
+    {
+      "name": "Sofia and Lozenets (BG)",
+      "lat": 42.65,
+      "lon": 23.3,
+      "weight": 1
+    },
+    {
+      "name": "Plovdiv, Maritsa valley (BG)",
+      "lat": 42.15,
+      "lon": 24.75,
+      "weight": 1
+    },
+    {
+      "name": "Bucharest, Herastrau (RO)",
+      "lat": 44.48,
+      "lon": 26.08,
+      "weight": 1
+    },
+    {
+      "name": "Sibiu and Transylvanian farmland (RO)",
+      "lat": 45.8,
+      "lon": 24.15,
+      "weight": 1
+    },
+    {
+      "name": "Chisinau (MD)",
+      "lat": 47.0,
+      "lon": 28.85,
+      "weight": 1
+    },
+    {
+      "name": "Thessaloniki and Axios Delta (GR)",
+      "lat": 40.5,
+      "lon": 22.75,
+      "weight": 1
+    },
+    {
+      "name": "Athens and Marathon (GR)",
+      "lat": 38.15,
+      "lon": 23.95,
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "levspa1",
+  "name": {
+    "en": "Levant Sparrowhawk",
+    "nl": "Balkansperwer"
+  },
+  "latin": "Tachyspiza brevipes",
+  "look_for": [
+    {
+      "en": "Male grey above, pale orange-barred below",
+      "nl": "Mannetje grijs boven, onder bleek oranje gebandeerd"
+    },
+    {
+      "en": "Black **wingtips** on an otherwise pale underwing",
+      "nl": "Zwarte **vleugelpunten**, verder lichte vleugelonderkant"
+    },
+    {
+      "en": "Migrates in tight flocks over passes",
+      "nl": "Trekt in compacte groepen over bergpassen"
+    }
+  ]
+}

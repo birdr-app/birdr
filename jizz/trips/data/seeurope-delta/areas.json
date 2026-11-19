@@ -1,0 +1,77 @@
+{
+  "note": "Where a visitor to this region goes, for GeoModel scores: Danube Delta and the Black Sea coast (Romania, Bulgaria, Moldova). Coordinates are place centres typed by hand, not eBird hotspots. Edit by hand.",
+  "areas": [
+    {
+      "name": "Danube Delta, Sulina channel",
+      "lat": 45.15,
+      "lon": 29.65,
+      "weight": 1
+    },
+    {
+      "name": "Danube Delta, Tulcea and Murighiol",
+      "lat": 45.05,
+      "lon": 29.1,
+      "weight": 1
+    },
+    {
+      "name": "Letea Forest",
+      "lat": 45.3,
+      "lon": 29.5,
+      "weight": 1
+    },
+    {
+      "name": "Histria and Lake Sinoe",
+      "lat": 44.55,
+      "lon": 28.77,
+      "weight": 1
+    },
+    {
+      "name": "Babadag Forest",
+      "lat": 44.9,
+      "lon": 28.7,
+      "weight": 1
+    },
+    {
+      "name": "Dobrogea Gorges",
+      "lat": 44.45,
+      "lon": 28.4,
+      "weight": 1
+    },
+    {
+      "name": "Durankulak and Shabla lakes",
+      "lat": 43.65,
+      "lon": 28.55,
+      "weight": 1
+    },
+    {
+      "name": "Kaliakra",
+      "lat": 43.4,
+      "lon": 28.47,
+      "weight": 1
+    },
+    {
+      "name": "Burgas lakes (Atanasovsko and Poda)",
+      "lat": 42.52,
+      "lon": 27.48,
+      "weight": 1
+    },
+    {
+      "name": "Srebarna Lake",
+      "lat": 44.1,
+      "lon": 27.07,
+      "weight": 1
+    },
+    {
+      "name": "Lake Beleu and the lower Prut (MD)",
+      "lat": 45.55,
+      "lon": 28.2,
+      "weight": 1
+    },
+    {
+      "name": "Orheiul Vechi (MD)",
+      "lat": 47.3,
+      "lon": 28.98,
+      "weight": 1
+    }
+  ]
+}

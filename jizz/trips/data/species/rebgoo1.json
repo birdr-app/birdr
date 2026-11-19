@@ -1,0 +1,22 @@
+{
+  "code": "rebgoo1",
+  "name": {
+    "en": "Red-breasted Goose",
+    "nl": "Roodhalsgans"
+  },
+  "latin": "Branta ruficollis",
+  "look_for": [
+    {
+      "en": "Small, boldly black, white and chestnut",
+      "nl": "Klein, opvallend zwart, wit en kastanjebruin"
+    },
+    {
+      "en": "Chestnut **cheek** and **breast** with white edges",
+      "nl": "Kastanjebruine **wang** en **borst** met witte randen"
+    },
+    {
+      "en": "Tiny **bill**; flocks with White-fronted Geese",
+      "nl": "Heel kleine **snavel**; zit tussen kolganzen"
+    }
+  ]
+}

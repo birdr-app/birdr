@@ -1,0 +1,22 @@
+{
+  "code": "oltwar1",
+  "name": {
+    "en": "Olive-tree Warbler",
+    "nl": "Griekse spotvogel"
+  },
+  "latin": "Hippolais olivetorum",
+  "look_for": [
+    {
+      "en": "**Large** and bulky for a warbler",
+      "nl": "**Groot** en stevig voor een zanger"
+    },
+    {
+      "en": "Heavy, dagger-like **bill**",
+      "nl": "Zware, dolkvormige **snavel**"
+    },
+    {
+      "en": "Pale **panel** in the folded wing",
+      "nl": "Lichte **vleugelvlek** in de gevouwen vleugel"
+    }
+  ]
+}

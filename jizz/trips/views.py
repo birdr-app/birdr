@@ -46,8 +46,8 @@ class TripListView(APIView):
         lang = (request.query_params.get('lang') or 'en').lower()[:2]
         trips = []
         for code in TRIPS:
-            if is_region(code):
-                continue
+            if is_region(code) or TRIPS[code].get('draft'):
+                continue  # a pack is listed under its country; a draft trip has no content yet
             counts = cache.get(f'trip-overview:{code}')
             if counts is None:
                 counts = overview_counts(code)

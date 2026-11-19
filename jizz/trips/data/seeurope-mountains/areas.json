@@ -1,0 +1,89 @@
+{
+  "note": "Where a visitor to this region goes, for GeoModel scores: Alps, Carpathians and Balkan mountains. Coordinates are place centres typed by hand, not eBird hotspots. Edit by hand.",
+  "areas": [
+    {
+      "name": "Julian Alps, Triglav and Bohinj (SI)",
+      "lat": 46.3,
+      "lon": 13.85,
+      "weight": 1
+    },
+    {
+      "name": "Velebit and Paklenica (HR)",
+      "lat": 44.3,
+      "lon": 15.5,
+      "weight": 1
+    },
+    {
+      "name": "Sutjeska and Perucica (BA)",
+      "lat": 43.3,
+      "lon": 18.6,
+      "weight": 1
+    },
+    {
+      "name": "Durmitor (ME)",
+      "lat": 43.15,
+      "lon": 19.05,
+      "weight": 1
+    },
+    {
+      "name": "Prokletije and Plav (ME)",
+      "lat": 42.6,
+      "lon": 19.9,
+      "weight": 1
+    },
+    {
+      "name": "Rila Mountains (BG)",
+      "lat": 42.2,
+      "lon": 23.4,
+      "weight": 1
+    },
+    {
+      "name": "Pirin Mountains (BG)",
+      "lat": 41.78,
+      "lon": 23.5,
+      "weight": 1
+    },
+    {
+      "name": "Central Rhodopes (BG)",
+      "lat": 41.65,
+      "lon": 24.35,
+      "weight": 1
+    },
+    {
+      "name": "Eastern Rhodopes, Madzharovo (BG)",
+      "lat": 41.62,
+      "lon": 25.8,
+      "weight": 1
+    },
+    {
+      "name": "Piatra Craiului and Bucegi (RO)",
+      "lat": 45.45,
+      "lon": 25.38,
+      "weight": 1
+    },
+    {
+      "name": "Retezat (RO)",
+      "lat": 45.37,
+      "lon": 22.9,
+      "weight": 1
+    },
+    {
+      "name": "Harghita and Ciuc (RO)",
+      "lat": 46.4,
+      "lon": 25.8,
+      "weight": 1
+    },
+    {
+      "name": "Rodna and Maramures (RO)",
+      "lat": 47.5,
+      "lon": 24.8,
+      "weight": 1
+    },
+    {
+      "name": "Iron Gates gorge (RO, RS)",
+      "lat": 44.65,
+      "lon": 22.3,
+      "weight": 1
+    }
+  ]
+}

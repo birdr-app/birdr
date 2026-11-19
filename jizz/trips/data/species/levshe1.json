@@ -1,0 +1,22 @@
+{
+  "code": "levshe1",
+  "name": {
+    "en": "Yelkouan Shearwater",
+    "nl": "Yelkouanpijlstormvogel"
+  },
+  "latin": "Puffinus yelkouan",
+  "look_for": [
+    {
+      "en": "**Small** shearwater, dark brown above, white below",
+      "nl": "**Kleine** pijlstormvogel, donkerbruin boven, wit onder"
+    },
+    {
+      "en": "Fast, whirring wingbeats low over the waves",
+      "nl": "Snelle, ratelende vleugelslagen laag over de golven"
+    },
+    {
+      "en": "Gathers in rafts close to the coast",
+      "nl": "Verzamelt in groepen vlak bij de kust"
+    }
+  ]
+}

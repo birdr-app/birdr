@@ -1,0 +1,22 @@
+{
+  "code": "syrwoo1",
+  "name": {
+    "en": "Syrian Woodpecker",
+    "nl": "Syrische bonte specht"
+  },
+  "latin": "Dendrocopos syriacus",
+  "look_for": [
+    {
+      "en": "Black **moustache** does not reach the nape",
+      "nl": "Zwarte **baardstreep** reikt niet tot de nek"
+    },
+    {
+      "en": "Pale pinkish red under the **tail**",
+      "nl": "Bleek roze-rood onder de **staart**"
+    },
+    {
+      "en": "Likes villages, orchards and gardens",
+      "nl": "Houdt van dorpen, boomgaarden en tuinen"
+    }
+  ]
+}

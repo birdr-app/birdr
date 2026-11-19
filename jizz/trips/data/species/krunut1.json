@@ -1,0 +1,22 @@
+{
+  "code": "krunut1",
+  "name": {
+    "en": "Krüper's Nuthatch",
+    "nl": "Turkse boomklever"
+  },
+  "latin": "Sitta krueperi",
+  "look_for": [
+    {
+      "en": "Brown **cap**, black **eye** stripe, white eyebrow",
+      "nl": "Bruine **kruin**, zwarte **oogstreep**, witte wenkbrauw"
+    },
+    {
+      "en": "Rusty patch on the grey-white **breast**",
+      "nl": "Roestkleurige vlek op de grijswitte **borst**"
+    },
+    {
+      "en": "Creeps over pine **branches**, smaller than Eurasian Nuthatch",
+      "nl": "Kruipt over **takken** van dennen, kleiner dan boomklever"
+    }
+  ]
+}

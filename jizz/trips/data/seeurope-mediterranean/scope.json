@@ -1,0 +1,67 @@
+{
+  "country": "SEEUROPE-MEDITERRANEAN",
+  "notes": "Greece and the Adriatic coast. Hand-picked specialists and Mediterranean birds that the country trip does not have: the Aegean and scrub birds of Greece (Krüper's Nuthatch, Cinereous Bunting, Rüppell's and Olive-tree Warbler, Masked Shrike, Sombre Tit, Western Rock Nuthatch, Eleonora's Falcon, Lesser Kestrel, Audouin's Gull, Black Vulture), the wheatears and buntings of the Balkan coast, and the sea birds (Scopoli's and Yelkouan Shearwater, European Shag). Widespread birds the country rule already holds (Common Hoopoe, European Roller, Short-toed Eagle) stay there. Many of these score low in the model (Krüper's Nuthatch 0.04, Bonelli's Eagle 0.05, Black Vulture 0.10), and the model has no score at all for Cinereous Bunting and Black-headed Bunting: check them against eBird's lists for Greece before photo work. Photos: 14 species had no or too few approved photos, so their picks are review-agent picks from unreviewed candidates and need approving on /trip-photos. Shaky: Levant Sparrowhawk (ID doubtful, candidates are mixed with Shikra and Chinese Sparrowhawk, only 4 photos: check or drop); Olive-tree Warbler (ID doubtful, no pick shows the pale wing panel); Sombre Tit and Eastern Orphean Warbler (look-alikes, few close shots); Yelkouan Shearwater (all flight or water shots, Balearic and Manx not fully excluded); Scopoli's Shearwater (the 1350xxx quiz photos look like Atlantic birds, maybe Cory's); Eleonora's Falcon (mostly flight shots, one brown streaked bird); Western Rock Nuthatch (Western vs Eastern Rock Nuthatch); Rock Sparrow (streaky, low-contrast shots).",
+  "manual": true,
+  "add": [
+    "audgul1",
+    "cinvul1",
+    "blhbun1",
+    "burthr",
+    "boneag2",
+    "chukar",
+    "cinbun1",
+    "crebun2",
+    "bkewhe2",
+    "eabwar1",
+    "eaowar1",
+    "eaowar2",
+    "easwar1",
+    "elefal1",
+    "eursha1",
+    "grscuc1",
+    "grefla3",
+    "eurgri1",
+    "kenplo1",
+    "krunut1",
+    "leskes1",
+    "levspa1",
+    "masshr1",
+    "oltwar1",
+    "palswi3",
+    "rocpet1",
+    "ruewar1",
+    "sarwar1",
+    "scoshe1",
+    "somtit3",
+    "spwlap1",
+    "eutkne1",
+    "categr1",
+    "rocnut1",
+    "levshe1",
+    "zitcis1"
+  ],
+  "drop": [],
+  "first_day": [],
+  "lookalikes": [
+    {
+      "here": "somtit3",
+      "home": "martit2"
+    },
+    {
+      "here": "leskes1",
+      "home": "eurkes"
+    },
+    {
+      "here": "elefal1",
+      "home": "eurhob"
+    },
+    {
+      "here": "sarwar1",
+      "home": "blackc1"
+    },
+    {
+      "here": "crebun2",
+      "home": "ortbun1"
+    }
+  ]
+}

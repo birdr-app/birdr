@@ -1,0 +1,149 @@
+{
+  "note": "Where a visitor to the Mediterranean side of south-eastern Europe goes, for GeoModel scores: Greece (wetlands of the north, Dadia, Lesbos, Crete, Peloponnese) and the Adriatic coast (Slovenian and Croatian coast and islands, Neretva delta, Kotor Bay, Skadar Lake, Albanian lagoons, Lakes Ohrid and Prespa). Coordinates are place centres typed by hand, not eBird hotspots. Edit by hand.",
+  "areas": [
+    {
+      "name": "Lake Kerkini",
+      "lat": 41.22,
+      "lon": 23.15,
+      "weight": 1
+    },
+    {
+      "name": "Evros Delta",
+      "lat": 40.8,
+      "lon": 26.0,
+      "weight": 1
+    },
+    {
+      "name": "Dadia Forest",
+      "lat": 41.12,
+      "lon": 26.2,
+      "weight": 1
+    },
+    {
+      "name": "Prespa Lakes (GR)",
+      "lat": 40.8,
+      "lon": 21.05,
+      "weight": 1
+    },
+    {
+      "name": "Mount Olympus",
+      "lat": 40.08,
+      "lon": 22.35,
+      "weight": 1
+    },
+    {
+      "name": "Delphi and Mount Parnassos",
+      "lat": 38.5,
+      "lon": 22.55,
+      "weight": 1
+    },
+    {
+      "name": "Messolonghi lagoons",
+      "lat": 38.35,
+      "lon": 21.4,
+      "weight": 1
+    },
+    {
+      "name": "Lesbos, Kalloni salt pans",
+      "lat": 39.2,
+      "lon": 26.2,
+      "weight": 1
+    },
+    {
+      "name": "Lesbos, Eressos and Sigri",
+      "lat": 39.2,
+      "lon": 25.95,
+      "weight": 1
+    },
+    {
+      "name": "Crete, Omalos and the White Mountains",
+      "lat": 35.33,
+      "lon": 23.9,
+      "weight": 1
+    },
+    {
+      "name": "Crete, Aradena and the south coast",
+      "lat": 35.25,
+      "lon": 24.0,
+      "weight": 1
+    },
+    {
+      "name": "Peloponnese, Mystras and Gythio",
+      "lat": 37.07,
+      "lon": 22.37,
+      "weight": 1
+    },
+    {
+      "name": "Secovlje saltpans and Skocjan (SI)",
+      "lat": 45.48,
+      "lon": 13.62,
+      "weight": 1
+    },
+    {
+      "name": "Cres and Krk (HR)",
+      "lat": 44.9,
+      "lon": 14.4,
+      "weight": 1
+    },
+    {
+      "name": "Pag saltpans (HR)",
+      "lat": 44.45,
+      "lon": 15.05,
+      "weight": 1
+    },
+    {
+      "name": "Neretva delta and Hutovo Blato (HR, BA)",
+      "lat": 43.05,
+      "lon": 17.8,
+      "weight": 1
+    },
+    {
+      "name": "Kotor Bay (ME)",
+      "lat": 42.43,
+      "lon": 18.7,
+      "weight": 1
+    },
+    {
+      "name": "Skadar Lake, Virpazar (ME)",
+      "lat": 42.24,
+      "lon": 19.09,
+      "weight": 1
+    },
+    {
+      "name": "Ulcinj saltpans (ME)",
+      "lat": 41.93,
+      "lon": 19.2,
+      "weight": 1
+    },
+    {
+      "name": "Karavasta lagoon and Divjaka (AL)",
+      "lat": 40.98,
+      "lon": 19.5,
+      "weight": 1
+    },
+    {
+      "name": "Narta and Vjosa (AL)",
+      "lat": 40.5,
+      "lon": 19.4,
+      "weight": 1
+    },
+    {
+      "name": "Llogara pass (AL)",
+      "lat": 40.2,
+      "lon": 19.6,
+      "weight": 1
+    },
+    {
+      "name": "Lake Ohrid (MK, AL)",
+      "lat": 41.12,
+      "lon": 20.8,
+      "weight": 1
+    },
+    {
+      "name": "Lake Prespa (MK, AL)",
+      "lat": 41.1,
+      "lon": 21.0,
+      "weight": 1
+    }
+  ]
+}

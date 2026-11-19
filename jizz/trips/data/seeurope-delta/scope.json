@@ -1,0 +1,54 @@
+{
+  "country": "SEEUROPE-DELTA",
+  "notes": "Danube Delta and the Black Sea coast of Romania, Bulgaria and Moldova. Pelicans, terns, gulls, herons and pratincoles, the eagles of the Dobrogea hills, and the steppe and reed birds of Dobrogea and Burgas (Isabelline Wheatear, Calandra Lark, Savi's and Moustached Warbler, Red-footed Falcon, Red-breasted Goose in winter). Picked from the model's scores for the delta and coast places plus hand edits; winter birds of the sea and the far north were dropped. Pygmy Cormorant and Eurasian Spoonbill sit in the country trip.",
+  "manual": true,
+  "add": [
+    "barwar1",
+    "blkter",
+    "blueth",
+    "booeag1",
+    "callar1",
+    "caster1",
+    "colpra",
+    "dalpel1",
+    "grebit1",
+    "gloibi",
+    "grwpel1",
+    "gstlar1",
+    "grseag1",
+    "gubter2",
+    "impeag1",
+    "isawhe1",
+    "leseag1",
+    "litgul",
+    "litter1",
+    "medgul1",
+    "mouwar1",
+    "pieavo1",
+    "rebfly",
+    "rebgoo1",
+    "recpoc",
+    "reffal1",
+    "eurwar2",
+    "rossta2",
+    "rudshe",
+    "santer1",
+    "savwar1",
+    "slbgul1",
+    "squher1",
+    "thrnig1",
+    "whwter"
+  ],
+  "drop": [],
+  "first_day": [],
+  "lookalikes": [
+    {
+      "here": "thrnig1",
+      "home": "comnig1"
+    },
+    {
+      "here": "isawhe1",
+      "home": "norwhe"
+    }
+  ]
+}
