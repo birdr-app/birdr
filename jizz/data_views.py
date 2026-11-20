@@ -14,7 +14,6 @@ from jizz.games_played_stats import (
     parse_date_param,
     parse_granularity,
 )
-from jizz.marketing_website_stats import marketing_website_payload
 from jizz.models import Country, SpeciesGroup, TaxonomicFamily, TaxonomicOrder
 from jizz.quiz_mistake_stats import normalize_country_filter
 from jizz.services.checklist import CHECKLIST_COUNTRY_SPECIES_STATUSES
@@ -257,27 +256,6 @@ def data_games_played_view(request):
 def data_games_played_api_view(request):
     start, end, granularity = _games_played_query_params(request)
     return JsonResponse(games_played_payload(start, end, granularity=granularity))
-
-
-def data_marketing_website_view(request):
-    start, end, granularity = _games_played_query_params(request)
-    payload = marketing_website_payload(start, end, granularity=granularity)
-    return render(
-        request,
-        "jizz/data_marketing_website.html",
-        {
-            "active_section": "marketing-website",
-            "start": payload["start"],
-            "end": payload["end"],
-            "granularity": payload["granularity"],
-            "chart_json": payload,
-        },
-    )
-
-
-def data_marketing_website_api_view(request):
-    start, end, granularity = _games_played_query_params(request)
-    return JsonResponse(marketing_website_payload(start, end, granularity=granularity))
 
 
 def data_country_challenge_leaderboard_view(request):

@@ -50,8 +50,6 @@ from jizz.data_views import (
     data_games_played_api_view,
     data_games_played_view,
     data_index_view,
-    data_marketing_website_api_view,
-    data_marketing_website_view,
     data_most_games_view,
     data_most_reviews_view,
     data_taxon_families_view,
@@ -490,8 +488,6 @@ urlpatterns = [
     path('data/taxons/groups/', data_taxon_groups_view, name='data-taxon-groups'),
     path('data/games-played/', data_games_played_view, name='data-games-played'),
     path('data/games-played/api/', data_games_played_api_view, name='data-games-played-api'),
-    path('data/marketing-website/', data_marketing_website_view, name='data-marketing-website'),
-    path('data/marketing-website/api/', data_marketing_website_api_view, name='data-marketing-website-api'),
     path('data/most-games/', data_most_games_view, name='data-most-games'),
     path('data/most-reviews/', data_most_reviews_view, name='data-most-reviews'),
     path(
