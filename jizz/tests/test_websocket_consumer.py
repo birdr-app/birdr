@@ -584,6 +584,11 @@ class WebSocketConsumerTestCase(TransactionTestCase):
             assert 'answer_checked' in actions, f"Expected answer_checked, got {actions}"
             assert 'update_players' in actions, f"Expected update_players, got {actions}"
 
+            # Clients match the result to its round, so a resent one is not shown on the next question.
+            checked = next(m for m in messages if m.get('action') == 'answer_checked')['answer']
+            assert checked.get('question_id') == question.id, checked
+            assert checked.get('sequence') == question.sequence, checked
+
             # Verify answer was created
             answer = await database_sync_to_async(
                 lambda: Answer.objects.filter(

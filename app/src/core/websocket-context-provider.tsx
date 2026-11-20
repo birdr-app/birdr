@@ -250,11 +250,21 @@ const WebsocketContextProvider: FC<Props> = ({children}) => {
           break
         case 'answer_checked':
           const checked = message.answer as Answer
-          const checkedQuestionId = checked?.question?.id
+          // The payload carries question_id (and sequence); a resent answer for an earlier round
+          // must not show on the current question.
+          const checkedQuestionId = (checked as { question_id?: number })?.question_id ?? checked?.question?.id
           if (
             checkedQuestionId != null &&
             currentQuestionIdRef.current != null &&
-            checkedQuestionId !== currentQuestionIdRef.current
+            Number(checkedQuestionId) !== currentQuestionIdRef.current
+          ) {
+            break
+          }
+          if (
+            checkedQuestionId == null &&
+            checked?.sequence != null &&
+            currentQuestionSeqRef.current != null &&
+            checked.sequence !== currentQuestionSeqRef.current
           ) {
             break
           }

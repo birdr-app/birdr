@@ -14,6 +14,7 @@ import type { Question, Answer, MultiPlayer } from '../types/game';
 import { getWebSocketUrl } from '../api/config';
 import { clientInfoHeaders, clientInfoPayload } from '../api/clientInfo';
 import { isStalePlayQuestion } from '../game/applyIncomingQuestion';
+import { answerMatchesQuestion } from '../game/answerMatchesQuestion';
 import { useGame } from './GameContext';
 import { prefetchQuestionPlayMedia } from '../utils/prefetchPlayMedia';
 
@@ -251,6 +252,8 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
       };
 
       ws.onmessage = (event) => {
+        // A replaced socket can still drain its backlog after closing; its messages are stale.
+        if (currentSocketRef.current !== ws) return;
         try {
           const raw = typeof event.data === 'string' ? event.data : String(event.data);
           const message = JSON.parse(raw);
@@ -302,11 +305,13 @@ export function GameWebSocketProvider({ children }: { children: ReactNode }) {
               break;
             case 'answer_checked': {
               const checked = message.answer as Answer;
-              const checkedQuestionId = checked?.question?.id;
+              // A resync join or reconnect re-sends the answer of an earlier round; drop it
+              // once the next question is current.
               if (
-                checkedQuestionId != null &&
-                currentQuestionIdRef.current != null &&
-                checkedQuestionId !== currentQuestionIdRef.current
+                !answerMatchesQuestion(checked, {
+                  id: currentQuestionIdRef.current,
+                  sequence: currentQuestionSeqRef.current,
+                })
               ) {
                 break;
               }

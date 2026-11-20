@@ -502,7 +502,9 @@ class AnswerSerializer(serializers.ModelSerializer):
     media_link = serializers.SerializerMethodField()
     answer = SpeciesDetailSerializer(read_only=True)
     answer_id = serializers.IntegerField(write_only=True, required=False, allow_null=True)
-    question_id = serializers.IntegerField(write_only=True)
+    # Readable too: clients match an answer to the round it belongs to, so a late or resent
+    # answer_checked for an earlier question is not shown on the next one.
+    question_id = serializers.IntegerField()
     timed_out = serializers.BooleanField(write_only=True, required=False, default=False)
     number = serializers.IntegerField(read_only=True, source='question.number')
     sequence = serializers.IntegerField(source='question.sequence', read_only=True)

@@ -38,6 +38,7 @@ import { colors } from '../theme';
 import { usePulsatingAnimation } from '../hooks/usePulsatingAnimation';
 import { useQuestionSoundPlayback } from '../hooks/useQuestionSoundPlayback';
 import { answersEnabledForMedia } from '../game/mediaAnswerGate';
+import { answerMatchesQuestion } from '../game/answerMatchesQuestion';
 import {
   mediaArrayLengthForQuestion,
   mediaSlotIndexFromQuestion,
@@ -106,7 +107,9 @@ export function GamePlayScreen() {
     isLeagueGame ||
     sharedGameToken != null;
   const { game, player, setGame, setPlayer, loadGame } = useGame();
-  const { question, answer, players, nextQuestion, submitAnswer, joinGame, startGame, connected, endGameSession, refreshGameState, patchQuestionMedia, retryNextQuestion } = useGameWebSocket();
+  const { question, answer: wsAnswer, players, nextQuestion, submitAnswer, joinGame, startGame, connected, endGameSession, refreshGameState, patchQuestionMedia, retryNextQuestion } = useGameWebSocket();
+  // Never show the result of another round on this question (a late or resent answer_checked).
+  const answer = answerMatchesQuestion(wsAnswer, question) ? wsAnswer : undefined;
   const dailyChallengeStartSent = useRef(false);
   const flockCompleteSent = useRef(false);
   const leagueCompleteSent = useRef(false);
