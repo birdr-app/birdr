@@ -198,6 +198,7 @@
       "./plugins/withAndroid16Kb.js",
       "./plugins/withAndroidR8.js",
       "./plugins/withAndroidMemory.js",
+      "./plugins/withAndroidOptionalPortrait.js",
       "expo-dev-client",
       "expo-asset",
       [
