@@ -11,6 +11,7 @@ from django.db.models import Exists, OuterRef, Q
 from django.utils.safestring import mark_safe
 
 from jizz.marketing.i18n import (
+    INDEXED_LOCALES,
     alternate_paths,
     html_lang,
     js_messages,
@@ -763,8 +764,11 @@ def base_context(
         # hreflang names only the languages a page really exists in; the language switcher
         # (locale_alternates) keeps all of them.
         'hreflang_alternates': [
-            row for row in alts if hreflang_codes is None or row['code'] in hreflang_codes
+            row for row in alts
+            if row['code'] in INDEXED_LOCALES and (hreflang_codes is None or row['code'] in hreflang_codes)
         ],
+        # Languages outside INDEXED_LOCALES stay usable but out of Google's index.
+        'noindex': locale not in INDEXED_LOCALES,
         'locale_default_url': origin + localize_path(logical_path if logical_path.startswith('/site/') else SITE_HOME, 'en'),
         'js_i18n': mark_safe(json.dumps(js_messages(locale), ensure_ascii=False)),
         'request_path': request_path,

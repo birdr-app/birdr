@@ -15,6 +15,13 @@ from jizz.app_languages import APP_LANGUAGES, normalize_app_language
 
 DEFAULT_LOCALE = 'en'
 MARKETING_LOCALES = ('en', 'nl', 'es', 'fr', 'de', 'it', 'pt-BR', 'ja')
+# Languages Google may index. The other languages stay available to visitors, but they are
+# noindex and left out of the sitemaps and hreflang: motmot.club is a new domain with
+# ~200K machine-translated URLs, and Google indexed ~25K of them and then stopped showing
+# the site (impressions 7K/day -> ~0 on 12 Nov 2026). Widen this tuple once the English and
+# Dutch pages rank.
+INDEXED_LOCALES = ('en', 'nl')
+assert set(INDEXED_LOCALES) <= set(MARKETING_LOCALES)
 LOCALE_LABELS = {
     'en': 'English',
     'nl': 'Nederlands',

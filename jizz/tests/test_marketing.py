@@ -1397,7 +1397,7 @@ class MarketingPagesTests(TestCase):
         )
         current = SpeciesComparison.objects.get(species_1=self.sparrow, species_2=self.goshawk)
         ComparisonTranslation.objects.create(
-            comparison=current, language='de', source_hash='x', fields={'summary': 'Kurz.'},
+            comparison=current, language='nl', source_hash='x', fields={'summary': 'Kort.'},
         )
         # A failed translation stored no text, so it does not count.
         ComparisonTranslation.objects.create(
@@ -1415,12 +1415,13 @@ class MarketingPagesTests(TestCase):
         current_pair, stale_pair = self._stale_and_translated_pairs()
         body = self.client.get('/sitemap-compare.xml').content.decode()
         self.assertIn(f'<loc>https://motmot.club/site/compare/{current_pair}/</loc>', body)
-        self.assertIn(f'<loc>https://motmot.club/de/site/compare/{current_pair}/</loc>', body)
-        # No translation (or an empty one): not listed, and not named in hreflang either.
-        for language in ('fr', 'es', 'nl', 'ja'):
+        self.assertIn(f'<loc>https://motmot.club/nl/site/compare/{current_pair}/</loc>', body)
+        # No translation (or an empty one), or a language outside INDEXED_LOCALES: not listed,
+        # and not named in hreflang either.
+        for language in ('fr', 'es', 'de', 'ja'):
             self.assertNotIn(f'/{language}/site/compare/{current_pair}/', body)
         self.assertNotIn('hreflang="fr"', body)
-        self.assertIn('hreflang="de"', body)
+        self.assertIn('hreflang="nl"', body)
         self.assertNotIn(stale_pair, body)
 
     def test_a_pair_from_different_families_is_not_listed_or_indexed(self):
@@ -1458,10 +1459,10 @@ class MarketingPagesTests(TestCase):
         english = self.client.get(f'/site/compare/{current_pair}/').content.decode()
         self.assertNotIn(noindex, english)
         # The head names only the languages that exist; the language switcher keeps all.
-        self.assertIn('<link rel="alternate" hreflang="de"', english)
+        self.assertIn('<link rel="alternate" hreflang="nl"', english)
         self.assertNotIn('<link rel="alternate" hreflang="fr"', english)
 
-        self.assertNotIn(noindex, self.client.get(f'/de/site/compare/{current_pair}/').content.decode())
+        self.assertNotIn(noindex, self.client.get(f'/nl/site/compare/{current_pair}/').content.decode())
         # Not translated yet: English text under another language's URL.
         self.assertIn(noindex, self.client.get(f'/fr/site/compare/{current_pair}/').content.decode())
         # Text from an earlier prompt: the page only shows a placeholder.
@@ -1492,8 +1493,9 @@ class MarketingPagesTests(TestCase):
         self.assertIn('lang="en"', html)
         self.assertIn('hreflang="nl"', html)
         self.assertIn('https://motmot.club/nl/site/', html)
-        self.assertIn('hreflang="pt-BR"', html)
-        self.assertIn('https://motmot.club/pt-BR/site/', html)
+        # Only INDEXED_LOCALES are named in hreflang; the switcher below keeps every language.
+        self.assertNotIn('<link rel="alternate" hreflang="pt-BR"', html)
+        self.assertNotIn('<meta name="robots"', html)
         self.assertIn('hreflang="x-default"', html)
         self.assertIn('id="nav-lang"', html)
         self.assertIn('Nederlands', html)
@@ -1512,6 +1514,11 @@ class MarketingPagesTests(TestCase):
         self.assertIn('https://motmot.club/nl/site/', dutch)
         self.assertNotIn('https://motmot.club/nl/nl/site/', dutch)
         self.assertEqual(nl['Content-Language'], 'nl')
+        self.assertNotIn('<meta name="robots"', dutch)
+        # Languages outside INDEXED_LOCALES work for visitors but stay out of Google's index.
+        ja = self.client.get('/ja/site/')
+        self.assertEqual(ja.status_code, 200)
+        self.assertIn('<meta name="robots" content="noindex', ja.content.decode())
 
         how_nl = self.client.get('/nl/site/how-it-works/').content.decode()
         self.assertIn('Begin met een fotoquiz', how_nl)
@@ -1586,7 +1593,9 @@ class MarketingPagesTests(TestCase):
 
         pages = self.client.get('/sitemap-pages.xml').content.decode()
         self.assertIn('https://motmot.club/nl/site/', pages)
-        self.assertIn('hreflang="ja"', pages)
+        self.assertIn('hreflang="nl"', pages)
+        self.assertNotIn('hreflang="ja"', pages)
+        self.assertNotIn('https://motmot.club/ja/site/', pages)
         self.assertIn('xmlns:xhtml', pages)
 
     def test_localized_country_and_species_names(self):

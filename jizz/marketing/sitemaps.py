@@ -17,7 +17,7 @@ from django.urls import reverse
 
 from compare.indexable import indexable_comparisons, translated_languages
 from compare.models import CommunityComparison, SpeciesDescription
-from jizz.marketing.i18n import MARKETING_LOCALES, localize_path
+from jizz.marketing.i18n import INDEXED_LOCALES, localize_path
 from jizz.marketing.pages import INTENT_PAGES, canonical_origin, public_species_qs
 from jizz.marketing.slugs import compare_pair_slug
 from jizz.marketing.views import _indexable_countries, _indexable_regions
@@ -28,7 +28,7 @@ def _urlset(
     paths: list[str],
     origin: str,
     lastmods: dict[str, date] | None = None,
-    locales: tuple[str, ...] = MARKETING_LOCALES,
+    locales: tuple[str, ...] = INDEXED_LOCALES,
     path_locales: dict[str, tuple[str, ...]] | None = None,
 ) -> str:
     lastmods = lastmods or {}
@@ -88,8 +88,8 @@ def _xml(body: str) -> HttpResponse:
 
 
 # Google reads at most 50,000 URLs and 50 MB per sitemap. Each path becomes one <url> per
-# locale with hreflang links to all the others (about 1.3 kB each), so 2,000 paths make
-# 16,000 URLs and roughly 21 MB.
+# indexed locale with hreflang links to all the others; with eight locales 2,000 paths made
+# 16,000 URLs and 21 MB. Only INDEXED_LOCALES are listed now, so the files are far smaller.
 PATHS_PER_SITEMAP = 2_000
 
 
@@ -313,7 +313,7 @@ def _build_indexable_comparisons() -> dict[str, tuple[datetime, frozenset[str]]]
         if not a_slug or not b_slug:
             continue
         path = _compare_path(a_id, a_slug, b_id, b_slug)
-        languages = {DEFAULT_LANGUAGE} | (translated.get(comparison_id, set()) & set(MARKETING_LOCALES))
+        languages = {DEFAULT_LANGUAGE} | (translated.get(comparison_id, set()) & set(INDEXED_LOCALES))
         if path in found:
             updated = max(updated, found[path][0])
             languages |= found[path][1]
@@ -342,7 +342,7 @@ def compare_paths() -> list[str]:
 def compare_path_locales() -> dict[str, tuple[str, ...]]:
     """Languages each listed compare page is available in, in sitemap order."""
     return {
-        path: tuple(locale for locale in MARKETING_LOCALES if locale in languages)
+        path: tuple(locale for locale in INDEXED_LOCALES if locale in languages)
         for path, (_updated, languages) in _indexable_comparisons().items()
     }
 
@@ -380,7 +380,7 @@ SECTION_LOCALES = {
 
 
 def section_locales(section: str) -> tuple[str, ...]:
-    return SECTION_LOCALES.get(section, MARKETING_LOCALES)
+    return SECTION_LOCALES.get(section, INDEXED_LOCALES)
 
 
 # Sections that list each page in its own set of languages: path -> languages.
@@ -418,7 +418,7 @@ def section_lastmods(section: str) -> dict[str, date]:
 def localized_urls(
     paths: list[str],
     origin: str,
-    locales: tuple[str, ...] = MARKETING_LOCALES,
+    locales: tuple[str, ...] = INDEXED_LOCALES,
     path_locales: dict[str, tuple[str, ...]] | None = None,
 ) -> list[str]:
     """Every locale's absolute URL for each path, as the sitemaps list them."""

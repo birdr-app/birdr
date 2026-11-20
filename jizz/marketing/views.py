@@ -47,7 +47,7 @@ from jizz.marketing.pages import (
     site_path,
     species_approved_image_count,
 )
-from jizz.marketing.i18n import MARKETING_LOCALES, locale_from_request, localize_path, translate
+from jizz.marketing.i18n import INDEXED_LOCALES, locale_from_request, localize_path, translate
 from jizz.marketing.local_names import (
     country_display_name,
     localize_country_rows,
@@ -799,7 +799,7 @@ def _compare_page_response(
     # comparison yet, or not translated yet) show a placeholder or English text, so they
     # stay out of the index and the sitemap until the content exists; see compare.indexable.
     index_languages = indexable_languages(
-        comparison, community=bool(community), all_languages=MARKETING_LOCALES,
+        comparison, community=bool(community), all_languages=INDEXED_LOCALES,
         species_pair=(low, high),
     )
     if show_ai and not summary_html and not sections and not detailed_html:
