@@ -30,7 +30,7 @@ class RequestTimingTests(TestCase):
 
     def test_inflight_dump_names_the_request_each_thread_serves(self):
         tid = threading.get_ident()
-        request_timing._inflight[tid] = ('GET', '/site/compare/a-vs-b/', 0.0)
+        request_timing._inflight[tid] = request_timing._InflightRequest('GET', '/site/compare/a-vs-b/', 0.0)
         try:
             with self.assertLogs('jizz.slow', level='ERROR') as logs:
                 request_timing.log_inflight_requests('WORKER TIMEOUT')
@@ -43,7 +43,7 @@ class RequestTimingTests(TestCase):
     def test_watchdog_reports_a_long_request_once(self):
         import time
         tid = threading.get_ident()
-        request_timing._inflight[tid] = ('GET', '/api/slow/', time.time() - 5)
+        request_timing._inflight[tid] = request_timing._InflightRequest('GET', '/api/slow/', time.time() - 5)
         try:
             with self.assertLogs('jizz.slow', level='ERROR') as logs:
                 request_timing.start_long_request_watchdog(1, interval=0.05)

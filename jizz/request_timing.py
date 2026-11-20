@@ -25,7 +25,106 @@ from jizz.request_memo import request_memo
 
 logger = logging.getLogger('jizz.slow')
 
-_inflight: dict[int, tuple[str, str, float]] = {}
+_inflight: dict[int, '_InflightRequest'] = {}
+
+
+class _InflightRequest:
+    """What a thread is serving, kept cheap: it is built for every request.
+
+    The caller (device, IP, who is logged in) is only worked out when a report is
+    written, in ``describe``, because that needs the database.
+    """
+
+    def __init__(self, method: str, path: str, started: float, request=None):
+        self.method = method
+        self.path = path
+        self.started = started
+        self.url = ''
+        self.ip = ''
+        self.user_agent = ''
+        self.device = ''
+        self.app = ''
+        self.authorization = ''
+        if request is not None:
+            meta = request.META
+            self.user_agent = meta.get('HTTP_USER_AGENT', '')
+            self.authorization = meta.get('HTTP_AUTHORIZATION', '')
+            self._request = request
+
+    def describe(self, now: float) -> str:
+        """Header block for the report mail: url, device/agent/IP, user."""
+        lines = [f'url: {self.method} {self.url or self.path}']
+        try:
+            lines.extend(self._caller_lines())
+        except Exception:
+            logger.debug('Could not describe in-flight request', exc_info=True)
+        lines.append(f'running: {now - self.started:.1f}s')
+        return '\n'.join(lines)
+
+    def _caller_lines(self) -> list[str]:
+        request = getattr(self, '_request', None)
+        if request is None:
+            return []
+        from jizz.usage_analytics import (
+            app_identity_from_headers,
+            get_client_ip,
+            headers_from_request,
+            infer_platform_from_request,
+            resolve_device_type,
+        )
+
+        identity = app_identity_from_headers(headers_from_request(request))
+        platform = infer_platform_from_request(request)
+        device = f'{resolve_device_type(self.user_agent, platform)} ({platform})'
+        app = ' '.join(
+            part for part in (
+                f"app {identity['app_version']}" if identity['app_version'] else '',
+                f"build {identity['app_build']}" if identity['app_build'] else '',
+                f"os {identity['os_version']}" if identity['os_version'] else '',
+            ) if part
+        )
+        lines = [f'device: {device}' + (f', {app}' if app else '')]
+        if self.user_agent:
+            lines.append(f'agent: {_one_line(self.user_agent, 300)}')
+        ip = get_client_ip(request)
+        if ip:
+            lines.append(f'ip: {ip}')
+        who = _who(self.authorization)
+        if who:
+            lines.append(f'user: {who}')
+        return lines
+
+
+def _who(authorization: str) -> str:
+    """Player name or user behind a Bearer token, or ''."""
+    scheme, _, token = (authorization or '').partition(' ')
+    token = token.strip()
+    if scheme != 'Bearer' or not token:
+        return ''
+    from django.db import connection as thread_connection
+
+    try:
+        from jizz.models import Player
+
+        player = Player.objects.select_related('user').filter(token=token).first()
+        if player is not None:
+            who = f'{player.name} (player {player.pk}'
+            if player.user_id:
+                who += f', {player.user.get_username()}'
+            return who + ')'
+        from django.contrib.auth import get_user_model
+        from rest_framework_simplejwt.tokens import AccessToken
+
+        user_id = AccessToken(token)['user_id']
+        user = get_user_model().objects.filter(pk=user_id).first()
+        if user is not None:
+            return f'{user.get_username()} (user {user.pk})'
+    except Exception:
+        pass
+    finally:
+        # Called from the watchdog thread: don't leave its connection open.
+        thread_connection.close()
+    return ''
 
 
 class _QueryTimer:
@@ -62,7 +161,9 @@ class RequestTimingMiddleware:
         path = request.get_full_path()
         tid = threading.get_ident()
         start = time.perf_counter()
-        _inflight[tid] = (request.method, path, time.time())
+        inflight = _InflightRequest(request.method, path, time.time(), request)
+        inflight.url = request.build_absolute_uri()
+        _inflight[tid] = inflight
         timer = _QueryTimer()
         status = 500
         try:
@@ -102,8 +203,8 @@ def start_long_request_watchdog(after_seconds: float, interval: float = 2.0) -> 
             try:
                 now = time.time()
                 long_running = {
-                    (tid, started) for tid, (_m, _p, started) in list(_inflight.items())
-                    if now - started >= after_seconds
+                    (tid, req.started) for tid, req in list(_inflight.items())
+                    if now - req.started >= after_seconds
                 }
                 if long_running - reported:
                     log_inflight_requests(f'LONG REQUEST (>{after_seconds:g}s)')
@@ -118,7 +219,11 @@ def start_long_request_watchdog(after_seconds: float, interval: float = 2.0) -> 
 
 
 def log_inflight_requests(reason: str) -> None:
-    """Log the request and Python stack of every thread in this process."""
+    """Log the request and Python stack of every thread in this process.
+
+    The mail for this log record gets the longest-running request in its subject and
+    who/what made each request at the top of its body (see ``ThrottledAdminEmailHandler``).
+    """
     now = time.time()
     frames = sys._current_frames()
     names = {t.ident: t.name for t in threading.enumerate()}
@@ -126,10 +231,20 @@ def log_inflight_requests(reason: str) -> None:
     for tid, frame in frames.items():
         request = _inflight.get(tid)
         if request:
-            method, path, started = request
-            head = f'thread {names.get(tid, tid)} serving {method} {path} for {now - started:.1f}s'
+            head = f'thread {names.get(tid, tid)} serving {request.method} {request.path} for {now - request.started:.1f}s'
         else:
             head = f'thread {names.get(tid, tid)} idle'
         stack = ''.join(traceback.format_stack(frame, limit=25))
         lines.append(f'--- {head}\n{stack}')
-    logger.error('\n'.join(lines))
+
+    serving = sorted(
+        (req for req in (_inflight.get(tid) for tid in frames) if req),
+        key=lambda req: req.started,
+    )
+    extra = {}
+    if serving:
+        longest = serving[0]
+        extra['mail_subject'] = f'{reason} {longest.method} {_one_line(longest.path, 150)}'
+        extra['mail_header'] = '\n\n'.join(req.describe(now) for req in serving)
+        extra['throttle_key'] = f'{reason} {longest.method} {longest.path.split("?", 1)[0]}'
+    logger.error('\n'.join(lines), extra=extra)

@@ -45,3 +45,61 @@ class ErrorMailTests(TestCase):
         logging.getLogger('jizz.slow').warning('SLOW 1500ms status=200 GET /api/x/')
         logging.getLogger('django.request').warning('Not Found: /api/missing/')
         self.assertEqual(len(mail.outbox), 0)
+
+    def test_long_request_mail_has_url_in_subject_and_caller_above_the_dump(self):
+        import threading
+        import time
+
+        from rest_framework.test import APIRequestFactory
+
+        from jizz import request_timing
+        from jizz.models import Player
+
+        player = Player.objects.create(name='Jane Birder')
+        request = APIRequestFactory().post(
+            '/api/compare/request/?language=de',
+            HTTP_USER_AGENT='MotmotApp/1.97 CFNetwork iPhone',
+            HTTP_AUTHORIZATION=f'Bearer {player.token}',
+            HTTP_X_FORWARDED_FOR='203.0.113.9, 10.0.0.1',
+            HTTP_X_APP_VERSION='1.97.0',
+        )
+        tid = threading.get_ident()
+        inflight = request_timing._InflightRequest(
+            'POST', request.get_full_path(), time.time() - 21, request)
+        inflight.url = request.build_absolute_uri()
+        request_timing._inflight[tid] = inflight
+        try:
+            request_timing.log_inflight_requests('LONG REQUEST (>20s)')
+        finally:
+            request_timing._inflight.pop(tid, None)
+
+        self.assertEqual(len(mail.outbox), 1)
+        msg = mail.outbox[0]
+        self.assertEqual(
+            msg.subject, '[Motmot] ERROR: LONG REQUEST (>20s) POST /api/compare/request/?language=de')
+        self.assertTrue(msg.body.startswith('url: POST http'), msg.body[:200])
+        head = msg.body.split('LONG REQUEST (>20s): pid=')[0]
+        self.assertIn('/api/compare/request/?language=de', head)
+        self.assertIn('device: mobile (ios)', head)
+        self.assertIn('MotmotApp/1.97 CFNetwork iPhone', head)
+        self.assertIn('ip: 203.0.113.9', head)
+        self.assertIn('user: Jane Birder (player ', head)
+        self.assertNotIn(player.token, msg.body)
+        self.assertIn('--- thread', msg.body)  # the stack dump is still there
+
+    def test_long_requests_on_different_urls_are_each_mailed(self):
+        import threading
+        import time
+
+        from jizz import request_timing
+
+        tid = threading.get_ident()
+        for path in ('/api/a/', '/api/b/', '/api/a/'):
+            request_timing._inflight[tid] = request_timing._InflightRequest(
+                'GET', path, time.time() - 21)
+            request_timing.log_inflight_requests('LONG REQUEST (>20s)')
+        request_timing._inflight.pop(tid, None)
+        self.assertEqual(
+            [m.subject for m in mail.outbox],
+            ['[Motmot] ERROR: LONG REQUEST (>20s) GET /api/a/',
+             '[Motmot] ERROR: LONG REQUEST (>20s) GET /api/b/'])
