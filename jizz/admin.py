@@ -1478,9 +1478,9 @@ class PlayerAdmin(admin.ModelAdmin):
     inlines = [PlayerScoreInline]
     search_fields = ['name', 'user__username']
     raw_id_fields = ['user']
-    list_display = ['name', 'games', 'playtime']
+    list_display = ['name', 'language', 'games', 'playtime']
     readonly_fields = ['token', 'created',  'games', 'playtime', 'all_games']
-    fields = ['user', 'name'] + readonly_fields
+    fields = ['user', 'name', 'language'] + readonly_fields
 
     def all_games(self, obj):
         if obj is None or not obj.pk:
