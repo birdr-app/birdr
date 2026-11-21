@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useCallback, useRef, useMemo } from 'react';
 import {
   View,
   Text,
@@ -33,6 +33,8 @@ import {
   resolvePlayMediaType,
 } from '../utils/questionMediaIndex';
 import { prefetchQuestionPlayMedia } from '../utils/prefetchPlayMedia';
+import { useResumeResync } from '../hooks/useResumeResync';
+import { PlayReloadButton } from '../components/PlayReloadButton';
 import { playPreviewSrc } from '../utils/playImageUrl';
 import { AnswerFeedback, normalizeSpeciesFrequency, normalizeChecklistAdded, normalizeChecklistMissed } from '../components/AnswerFeedback';
 import { SpeciesViewButton } from '../components/SpeciesViewButton';
@@ -291,6 +293,53 @@ export function ChallengePlayScreen() {
       }
     }
   }, [gameToken, getPlayPlayerToken, loadJourneyGame, navigateJourneyResults, t]);
+
+  const [resyncing, setResyncing] = useState(false);
+  /**
+   * Re-read the server state after the app was away, or when the player taps reload. An answer
+   * request lost in the background leaves the buttons locked on a question the server already
+   * moved past. An answer on screen is left alone: Next question fetches what follows.
+   */
+  const resync = useCallback(async () => {
+    if (!gameToken || resyncing || fetchingNextRef.current || feedback) return;
+    setResyncing(true);
+    const generation = ++questionFetchGenRef.current;
+    try {
+      const token = await getPlayPlayerToken();
+      const q = await getChallengeQuestion(gameToken, token ?? undefined, { cacheBust: true });
+      if (generation !== questionFetchGenRef.current) return;
+      if (!q) {
+        navigateJourneyResults(journeyStepFailedRef.current ? 'failed' : undefined);
+        return;
+      }
+      if (!isStalePlayQuestion(questionRef.current, q) && q.id !== questionRef.current?.id) {
+        setAnswerResult(null);
+        setAnsweredMediaLink(null);
+        setLevelEnded(false);
+        setFeedback(null);
+        setShowFeedback(false);
+        prefetchQuestionPlayMedia(q, q?.media ?? gameMedia);
+        setQuestion(q);
+        void loadJourneyGame();
+      }
+      submittingRef.current = false;
+      setSubmitting(false);
+    } catch {
+      /* keep the current screen; the player can tap reload again */
+    } finally {
+      setResyncing(false);
+    }
+  }, [
+    gameToken,
+    resyncing,
+    feedback,
+    getPlayPlayerToken,
+    gameMedia,
+    loadJourneyGame,
+    navigateJourneyResults,
+  ]);
+
+  useResumeResync(() => void resync(), !!gameToken);
 
   useEffect(() => {
     loadQuestion();
@@ -590,6 +639,20 @@ export function ChallengePlayScreen() {
       : t('country_challenge');
     navigation.setOptions({ title });
   }, [navigation, journeyCountry, locale, t]);
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () =>
+        question ? (
+          <PlayReloadButton
+            onPress={() => void resync()}
+            busy={resyncing}
+            label={t('refresh')}
+            testID="challengePlay.reload"
+          />
+        ) : null,
+    });
+  }, [navigation, question, resync, resyncing, t]);
 
   if (!gameToken || !journeyId) {
     return (

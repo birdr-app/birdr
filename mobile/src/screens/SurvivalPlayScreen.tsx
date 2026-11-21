@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import {
   View,
   Text,
@@ -38,6 +38,8 @@ import { QuestionLoadingFeather } from '../components/QuestionLoadingFeather';
 import { SpeedChallengeTimer } from '../components/SpeedChallengeTimer';
 import { SurvivalMilestone, type SurvivalMilestoneKind } from '../components/SurvivalMilestone';
 import { isStalePlayQuestion } from '../game/applyIncomingQuestion';
+import { useResumeResync } from '../hooks/useResumeResync';
+import { PlayReloadButton } from '../components/PlayReloadButton';
 import { questionMediaBlockHeight, questionMediaStageHeight, widePlayMediaHeight } from '../constants/questionMediaLayout';
 import { useTranslation } from '../i18n/TranslationContext';
 import type { SurvivalPlayParams } from '../hooks/useStartSurvival';
@@ -118,29 +120,62 @@ export function SurvivalPlayScreen() {
     navigation.replace('SurvivalResult', { gameToken, playerToken, countryCode, language: lang });
   }, [navigation, gameToken, playerToken, countryCode, lang]);
 
-  const fetchQuestion = useCallback(async () => {
-    if (!gameToken) return;
+  /** Reads the current question from the server. Resolves false when the request failed. */
+  const fetchQuestion = useCallback(async (): Promise<boolean> => {
+    if (!gameToken) return true;
     setLoadError(null);
     try {
       const q = await getChallengeQuestion(gameToken, playerToken, { cacheBust: true });
       if (!q) {
         // The run already ended server-side.
         goResult();
-        return;
+        return true;
       }
-      if (isStalePlayQuestion(questionRef.current, q)) return;
+      if (isStalePlayQuestion(questionRef.current, q)) return true;
       prefetchQuestionPlayMedia(q, 'images');
       setFeedback(null);
       setShowFeedback(false);
       setAnswerResult(null);
       setQuestion(q);
+      return true;
     } catch (e) {
       setLoadError(e instanceof Error ? e.message : t('error_loading_question'));
+      return false;
     } finally {
       setLoading(false);
       setAdvancing(false);
     }
   }, [gameToken, playerToken, goResult, t]);
+
+  /** After a correct answer: fetch the next question, retrying a couple of times on a flaky connection. */
+  const advance = useCallback(async () => {
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+      if (await fetchQuestion()) return;
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+    }
+  }, [fetchQuestion]);
+
+  const [resyncing, setResyncing] = useState(false);
+  /**
+   * Re-read the server state: after the app was away, or when the player taps reload. A pending
+   * "next question" timer or request may never have finished, leaving a locked answer screen.
+   */
+  const resync = useCallback(async () => {
+    if (resyncing || runOver || navigatedRef.current) return;
+    setResyncing(true);
+    timersRef.current.forEach(clearTimeout);
+    timersRef.current = [];
+    try {
+      await fetchQuestion();
+      // A lost answer request leaves the buttons locked; the server has moved on or is waiting.
+      submittingRef.current = false;
+      setSubmitting(false);
+    } finally {
+      setResyncing(false);
+    }
+  }, [resyncing, runOver, fetchQuestion]);
+
+  useResumeResync(() => void resync(), !!gameToken && !!playerToken);
 
   useEffect(() => {
     void fetchQuestion();
@@ -156,9 +191,20 @@ export function SurvivalPlayScreen() {
     submittingRef.current = false;
   }, [question?.id]);
 
-  useEffect(() => {
-    navigation.setOptions({ title: t('survival') });
-  }, [navigation, t]);
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      title: t('survival'),
+      headerRight: () =>
+        question && !runOver ? (
+          <PlayReloadButton
+            onPress={() => void resync()}
+            busy={resyncing}
+            label={t('refresh')}
+            testID="survivalPlay.reload"
+          />
+        ) : null,
+    });
+  }, [navigation, t, question, runOver, resync, resyncing]);
 
   const celebrate = useCallback((newStreak: number): number => {
     const beatsRecord = countryRecord != null && countryRecord > 0 && newStreak > countryRecord;
@@ -213,7 +259,7 @@ export function SurvivalPlayScreen() {
         const delay = celebrate(next);
         schedule(() => {
           setAdvancing(true);
-          void fetchQuestion();
+          void advance();
         }, delay);
       } else {
         // Stay on the answer so the player can study it; Continue opens the result.
