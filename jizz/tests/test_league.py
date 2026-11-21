@@ -18,6 +18,7 @@ from jizz.models import (
     LeagueMembership,
     LeagueNotificationLog,
     LeagueWeekResult,
+    Player,
     PlayerScore,
     QuestionOption,
     UserProfile,
@@ -171,6 +172,20 @@ class LeagueTestCase(TestCase):
 
         incomplete = self.client.post(f"/api/league/attempts/{first.data['attempt_id']}/complete/")
         self.assertEqual(incomplete.status_code, 400)
+
+    def test_game_language_follows_profile_over_stale_player_language(self):
+        UserProfile.objects.update_or_create(user=self.alice, defaults={'language': 'lt', 'app_language': 'en'})
+        Player.objects.create(user=self.alice, name='Alice', language='en')
+        day = league.get_or_create_league_day(self.country, league.league_today(self.country))
+        attempt, _ = league.start_attempt(day, User.objects.get(pk=self.alice.pk))
+        self.assertEqual(attempt.game.language, 'lt')
+
+    def test_default_en_profile_does_not_override_player_language(self):
+        UserProfile.objects.update_or_create(user=self.bob, defaults={'language': 'en'})
+        Player.objects.create(user=self.bob, name='Bob', language='nl')
+        day = league.get_or_create_league_day(self.country, league.league_today(self.country))
+        attempt, _ = league.start_attempt(day, User.objects.get(pk=self.bob.pk))
+        self.assertEqual(attempt.game.language, 'nl')
 
     def test_league_games_are_timed_and_time_up_records_a_wrong_answer(self):
         from jizz.consumers import timed_out_answer_species_id

@@ -202,6 +202,23 @@ def clone_day_into_game(league_day: LeagueDay, host: Player, language: str = 'en
     return game
 
 
+def game_language_for(user, player: Player) -> str:
+    """Bird-name language for a League game.
+
+    A non-English profile language wins: the user picked it and sees it in the
+    app, while Player.language is a per-device copy that can go stale (an
+    app-language switch to a locale with no bird-name equivalent writes 'en'
+    to it). The profile's 'en' is also its default, so it does not override a
+    different Player language.
+    """
+    profile = getattr(user, 'profile', None)
+    profile_lang = (getattr(profile, 'language', '') or '').strip()
+    player_lang = (player.language or '').strip()
+    if profile_lang and profile_lang != 'en':
+        return profile_lang
+    return player_lang or profile_lang or 'en'
+
+
 def start_attempt(league_day: LeagueDay, user, request=None) -> tuple[LeagueAttempt, bool]:
     """Return (attempt, created). Resumes an in-progress attempt."""
     existing = LeagueAttempt.objects.filter(day=league_day, user=user).select_related('game', 'player').first()
@@ -210,7 +227,7 @@ def start_attempt(league_day: LeagueDay, user, request=None) -> tuple[LeagueAtte
     player = player_for_user(user)
     try:
         with transaction.atomic():
-            game = clone_day_into_game(league_day, player, language=player.language or 'en')
+            game = clone_day_into_game(league_day, player, language=game_language_for(user, player))
             attempt = LeagueAttempt.objects.create(day=league_day, user=user, player=player, game=game)
     except IntegrityError:
         return LeagueAttempt.objects.select_related('game', 'player').get(day=league_day, user=user), False
