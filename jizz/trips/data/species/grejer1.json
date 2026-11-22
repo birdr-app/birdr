@@ -1,0 +1,22 @@
+{
+  "code": "grejer1",
+  "name": {
+    "en": "Green Jery",
+    "nl": "Groene jery"
+  },
+  "latin": "Neomixis viridis",
+  "look_for": [
+    {
+      "en": "Uniform olive-green **head** and **upperparts**",
+      "nl": "Egaal olijfgroene **kop** en **bovenzijde**"
+    },
+    {
+      "en": "Only a faint buff **eyebrow** and dark eye-stripe",
+      "nl": "Slechts een vage buffkleurige **wenkbrauw** en donkere oogstreep"
+    },
+    {
+      "en": "Plainer than Common Jery, no grey **nape**",
+      "nl": "Eenvoudiger dan de grijsnekjery, geen grijze **nek**"
+    }
+  ]
+}

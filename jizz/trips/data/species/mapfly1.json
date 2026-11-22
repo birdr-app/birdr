@@ -1,0 +1,22 @@
+{
+  "code": "mapfly1",
+  "name": {
+    "en": "Malagasy Paradise-Flycatcher",
+    "nl": "Madagaskarparadijsmonarch"
+  },
+  "latin": "Terpsiphone mutata",
+  "look_for": [
+    {
+      "en": "Black crested **head**, blue **eye-ring**",
+      "nl": "Zwarte kuifkop, blauwe **oogring**"
+    },
+    {
+      "en": "Male white with long **tail** streamers, or rufous",
+      "nl": "Mannetje wit met lange **staartpluimen**, of roestrood"
+    },
+    {
+      "en": "Rufous morph has a grey **breast**; female short-tailed",
+      "nl": "Roestrode vorm heeft een grijze **borst**; vrouwtje kortstaartig"
+    }
+  ]
+}

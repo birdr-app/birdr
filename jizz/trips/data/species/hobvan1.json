@@ -1,0 +1,22 @@
+{
+  "code": "hobvan1",
+  "name": {
+    "en": "Hook-billed Vanga",
+    "nl": "Haaksnavelvanga"
+  },
+  "latin": "Vanga curvirostris",
+  "look_for": [
+    {
+      "en": "Big black-backed vanga with a hooked **bill**",
+      "nl": "Grote vanga met zwarte rug en een haakvormige **snavel**"
+    },
+    {
+      "en": "White **head** and **underparts**, black **upperparts**",
+      "nl": "Witte **kop** en **onderzijde**, zwarte **bovenzijde**"
+    },
+    {
+      "en": "Sits motionless, watching for lizards and large insects",
+      "nl": "Zit onbeweeglijk te loeren op hagedissen en grote insecten"
+    }
+  ]
+}

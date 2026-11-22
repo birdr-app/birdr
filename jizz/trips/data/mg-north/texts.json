@@ -1,0 +1,39 @@
+{
+  "country": "MG-NORTH",
+  "intro": {
+    "en": "The far north of Madagascar lies well away from the classic route: the rainforest of Masoala and Marojejy, Amber Mountain near Diego Suarez, and the sea around Nosy Be. This pack adds 16 birds on top of the Madagascar trip. The drier months from April to November are best; the headliners are Helmet Vanga, Nuthatch-Vanga, Bernier's Vanga and Red-breasted Coua in the forest, and frigatebirds, boobies and tropicbirds on the boat trips.",
+    "nl": "Het uiterste noorden van Madagaskar ligt ver van de klassieke route: het regenwoud van Masoala en Marojejy, de Amberberg bij Diego Suarez en de zee rond Nosy Be. Dit pakket voegt 16 vogels toe bovenop de reis naar Madagaskar. De drogere maanden van april tot november zijn het beste; de blikvangers zijn Helmvanga, Boomklevervanga, Zwarte vanga en Vruchtencoua in het bos, en fregatvogels, genten en keerkringvogels op de boottochten."
+  },
+  "units": {
+    "northern-rainforest": {
+      "title": {
+        "en": "Specialities of the northern forests",
+        "nl": "Specialiteiten van de noordelijke bossen"
+      },
+      "intro": {
+        "en": "Most of these live in the lowland and mid-altitude rainforest of Masoala and Marojejy. Helmet Vanga has a huge bill, Nuthatch-Vanga creeps head first up the trunks, and Red-breasted Coua walks on the forest floor. The Red Owl is rare and needs patience and a local guide. Amber Mountain Rock Thrush is the odd one out, a bird of Montagne d'Ambre.",
+        "nl": "De meeste leven in het laaglands- en middelhoogteregenwoud van Masoala en Marojejy. De Helmvanga heeft een enorme snavel, de Boomklevervanga kruipt met de kop omlaag langs de stammen en de Vruchtencoua loopt over de bosbodem. De Madagaskargrasuil is zeldzaam en vraagt geduld en een plaatselijke gids. De Amberrotslijster is de buitenstaander, een vogel van de Montagne d'Ambre."
+      }
+    },
+    "seabirds-islands": {
+      "title": {
+        "en": "Frigatebirds, boobies and tropicbirds",
+        "nl": "Fregatvogels, genten en keerkringvogels"
+      },
+      "intro": {
+        "en": "Seen from boats around Nosy Be and off Diego Suarez, and from islets and sea cliffs. Frigatebirds have long angular wings and a forked tail, and Lesser is the smaller of the two. Red-footed Booby has red feet, Brown Booby is dark with a white belly, and the White-tailed Tropicbird is white with long streamers.",
+        "nl": "Te zien vanaf boten rond Nosy Be en voor Diego Suarez, en bij eilandjes en zeekliffen. Fregatvogels hebben lange, hoekige vleugels en een gevorkte staart, en de Kleine fregatvogel is de kleinste van de twee. De Roodpootgent heeft rode poten, de Bruine gent is donker met een witte buik en de Witstaartkeerkringvogel is wit met lange staartveren."
+      }
+    },
+    "terns-and-mangrove": {
+      "title": {
+        "en": "Terns, noddies and mangrove birds",
+        "nl": "Sterns, noddy's en mangrovevogels"
+      },
+      "intro": {
+        "en": "Three sea birds and two birds of wet places. Sooty Tern is black above and white below, and Bridled Tern is grey-brown above with a white eyebrow. Brown Noddy is dark brown with a pale cap. The Mangrove Little Heron crouches on mud and roots at the edge of the mangroves, and the White-throated Rail walks quietly along wet forest edges and marshes.",
+        "nl": "Drie zeevogels en twee vogels van natte plekken. De Bonte stern is zwart boven en wit onder en de Brilstern is grijsbruin boven met een witte wenkbrauw. De Bruine noddy is donkerbruin met een lichte kruin. De Mangrovereiger zit gehurkt op modder en wortels aan de rand van de mangrove, en de Witkeelral loopt stil langs natte bosranden en moerassen."
+      }
+    }
+  }
+}

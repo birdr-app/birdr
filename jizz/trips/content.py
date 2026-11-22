@@ -298,6 +298,26 @@ TRIPS: dict[str, dict] = {
         'parent': 'SEEUROPE',
         'countries': ['SI', 'HR', 'BA', 'ME', 'BG', 'RO', 'RS'],
     },
+    # Madagascar: country trip over the classic route plus three packs. Photos not yet approved on /trip-photos.
+    'MG': {'name': {'en': 'Madagascar', 'nl': 'Madagaskar'}, 'languages': ('en', 'nl'), 'draft': True},
+    'MG-NORTH': {
+        'name': {'en': 'Far north: Masoala to Ankarana', 'nl': 'Verre noorden: Masoala tot Ankarana'},
+        'languages': ('en', 'nl'),
+        'parent': 'MG',
+        'draft': True,
+    },
+    'MG-WEST': {
+        'name': {'en': 'Dry forests of the west', 'nl': 'Droogbossen van het westen'},
+        'languages': ('en', 'nl'),
+        'parent': 'MG',
+        'draft': True,
+    },
+    'MG-SOUTH': {
+        'name': {'en': 'Spiny forest and the south-west', 'nl': 'Doornbos en het zuidwesten'},
+        'languages': ('en', 'nl'),
+        'parent': 'MG',
+        'draft': True,
+    },
 }
 
 LANGUAGES = ('en', 'nl')

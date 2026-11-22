@@ -1,0 +1,22 @@
+{
+  "code": "madwor1",
+  "name": {
+    "en": "Madagascar Forest Rail",
+    "nl": "Witkinral"
+  },
+  "latin": "Mentocrex kioloides",
+  "look_for": [
+    {
+      "en": "Reddish-brown rail with a grey **head**",
+      "nl": "Roodbruine ral met een grijze **kop**"
+    },
+    {
+      "en": "White **throat** patch and a short **bill**",
+      "nl": "Witte **keel** en een korte **snavel**"
+    },
+    {
+      "en": "Walks quietly in forest, runs rather than flies",
+      "nl": "Loopt stil door het bos, rent liever dan te vliegen"
+    }
+  ]
+}

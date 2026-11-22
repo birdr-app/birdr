@@ -1,0 +1,22 @@
+{
+  "code": "bankes1",
+  "name": {
+    "en": "Banded Kestrel",
+    "nl": "Gebandeerde torenvalk"
+  },
+  "latin": "Falco zoniventris",
+  "look_for": [
+    {
+      "en": "Hawk-like falcon with a grey **head**",
+      "nl": "Havikachtige valk met een grijze **kop**"
+    },
+    {
+      "en": "Whitish **underparts** barred and streaked dark grey",
+      "nl": "Witachtige **onderzijde** met donkergrijze banden en strepen"
+    },
+    {
+      "en": "Yellow **legs**; hunts from a perch in woodland",
+      "nl": "Gele **poten**; jaagt vanaf een zitplek in bos"
+    }
+  ]
+}

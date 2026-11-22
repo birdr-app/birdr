@@ -1,0 +1,22 @@
+{
+  "code": "madcuc1",
+  "name": {
+    "en": "Madagascar Cuckoo",
+    "nl": "Madagaskarkoekoek"
+  },
+  "latin": "Cuculus rochii",
+  "look_for": [
+    {
+      "en": "Slim grey cuckoo, barred white below",
+      "nl": "Slanke grijze koekoek, onder wit met banden"
+    },
+    {
+      "en": "Long **tail** with white spots, pointed **wings**",
+      "nl": "Lange **staart** met witte vlekjes en spitse **vleugels**"
+    },
+    {
+      "en": "Perches upright and calls from treetops",
+      "nl": "Zit rechtop en roept vanuit boomtoppen"
+    }
+  ]
+}

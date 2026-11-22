@@ -1,0 +1,22 @@
+{
+  "code": "reccou2",
+  "name": {
+    "en": "Red-capped Coua",
+    "nl": "Roestkopcoua"
+  },
+  "latin": "Coua ruficeps",
+  "look_for": [
+    {
+      "en": "Chestnut-red **cap**, blue skin round **eye**",
+      "nl": "Kastanjerode **kap**, blauwe huid rond het **oog**"
+    },
+    {
+      "en": "Long **tail**, olive-green **back**",
+      "nl": "Lange **staart**, olijfgroene **rug**"
+    },
+    {
+      "en": "Walks and runs in dry forest, often unseen",
+      "nl": "Loopt en rent door droog bos, vaak ongezien"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "madcou1",
+  "name": {
+    "en": "Malagasy Coucal",
+    "nl": "Toeloespoorkoekoek"
+  },
+  "latin": "Centropus toulou",
+  "look_for": [
+    {
+      "en": "Large, long-tailed bird skulking in tall grass",
+      "nl": "Grote vogel met lange staart die zich in hoog gras verschuilt"
+    },
+    {
+      "en": "Black with chestnut **wings**; young brown, streaked",
+      "nl": "Zwart met kastanjebruine **vleugels**; jong bruin met streepjes"
+    },
+    {
+      "en": "Clambers through reeds, weak flight with trailing **tail**",
+      "nl": "Klautert door riet, zwakke vlucht met slepende **staart**"
+    }
+  ]
+}

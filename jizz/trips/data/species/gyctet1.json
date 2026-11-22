@@ -1,0 +1,22 @@
+{
+  "code": "gyctet1",
+  "name": {
+    "en": "Grey-crowned Tetraka",
+    "nl": "Grijskruintetraka"
+  },
+  "latin": "Xanthomixis cinereiceps",
+  "look_for": [
+    {
+      "en": "Pale grey **crown** and **ear-coverts**",
+      "nl": "Lichtgrijze **kruin** en **oorstreek**"
+    },
+    {
+      "en": "White **throat**, yellow **underparts**, green **back**",
+      "nl": "Witte **keel**, gele **onderzijde**, groene **rug**"
+    },
+    {
+      "en": "Slim pale pink **bill**; forages low on mossy trunks",
+      "nl": "Slanke bleekroze **snavel**; zoekt laag op bemoste stammen"
+    }
+  ]
+}

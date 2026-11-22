@@ -1,0 +1,32 @@
+{
+  "country": "MG-SOUTH",
+  "notes": "Spiny forest and the arid south-west: Ifaty, Mangily and Toliara (Long-tailed Ground-Roller, Subdesert Mesite, Lafresnaye's Vanga, Thamnornis, Running Coua, Verreaux's Coua, Archbold's Newtonia, Subdesert Brush-Warbler, Red-shouldered Vanga), Zombitse (Appert's Tetraka), Tsimanampetsotsa (flamingos) and the coast gulls. Hand-picked, because the model scores these birds near 0; ranges are set from memory and eBird province lists. Left out for lack of usable photos: Madagascar Plover.",
+  "manual": true,
+  "add": [
+    "ltgrol1",
+    "submes1",
+    "lafvan1",
+    "thamno2",
+    "apptet1",
+    "litrot1",
+    "runcou1",
+    "vercou1",
+    "arcnew1",
+    "subbrw1",
+    "resvan1",
+    "madsan1",
+    "grefla3",
+    "lesfla1",
+    "kelgul",
+    "grhgul",
+    "rekcoo1"
+  ],
+  "drop": [],
+  "first_day": [],
+  "lookalikes": [
+    {
+      "here": "kelgul",
+      "home": "gbbgul"
+    }
+  ]
+}

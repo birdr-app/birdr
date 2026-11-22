@@ -1,0 +1,22 @@
+{
+  "code": "madpra1",
+  "name": {
+    "en": "Madagascar Pratincole",
+    "nl": "Madagaskarvorkstaartplevier"
+  },
+  "latin": "Glareola ocularis",
+  "look_for": [
+    {
+      "en": "Slender, long-winged, brown above, paler below",
+      "nl": "Slank, langvleugelig, bruin boven, bleker onder"
+    },
+    {
+      "en": "Swallow-like flight, deeply forked **tail**",
+      "nl": "Zwaluwachtige vlucht, diep gevorkte **staart**"
+    },
+    {
+      "en": "Hunts insects over wet grassland and rivers",
+      "nl": "Jaagt op insecten boven natte graslanden en rivieren"
+    }
+  ]
+}

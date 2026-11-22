@@ -1,0 +1,22 @@
+{
+  "code": "mapkin1",
+  "name": {
+    "en": "Madagascar Pygmy Kingfisher",
+    "nl": "Madagaskardwergijsvogel"
+  },
+  "latin": "Corythornis madagascariensis",
+  "look_for": [
+    {
+      "en": "Tiny forest kingfisher with a red **bill**",
+      "nl": "Piepkleine bosijsvogel met een rode **snavel**"
+    },
+    {
+      "en": "Orange-buff below, darker above",
+      "nl": "Oranjebruin onder, donkerder boven"
+    },
+    {
+      "en": "Often far from water, hunting from low perches",
+      "nl": "Vaak ver van water, jaagt vanaf lage zitplaatsen"
+    }
+  ]
+}

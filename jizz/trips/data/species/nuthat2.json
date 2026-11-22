@@ -1,0 +1,22 @@
+{
+  "code": "nuthat2",
+  "name": {
+    "en": "Nuthatch-Vanga",
+    "nl": "Boomklevervanga"
+  },
+  "latin": "Hypositta corallirostris",
+  "look_for": [
+    {
+      "en": "Male blue with orange-red **bill**",
+      "nl": "Mannetje blauw met oranjerode **snavel**"
+    },
+    {
+      "en": "Female brownish-green **head**, blue **back**",
+      "nl": "Vrouwtje met bruingroene **kop** en blauwe **rug**"
+    },
+    {
+      "en": "Climbs tree trunks like a nuthatch",
+      "nl": "Klimt langs boomstammen als een boomklever"
+    }
+  ]
+}

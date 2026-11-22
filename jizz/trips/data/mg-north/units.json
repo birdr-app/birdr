@@ -1,0 +1,183 @@
+{
+  "country": "MG-NORTH",
+  "groups": [
+    {
+      "slug": "cuckoos",
+      "name": {
+        "en": "Cuckoos",
+        "nl": "Koekoes"
+      },
+      "species": [
+        "rebcou1"
+      ],
+      "endemics": [
+        "rebcou1"
+      ]
+    },
+    {
+      "slug": "rails-gallinules-and-allies",
+      "name": {
+        "en": "Rails, Gallinules, and Allies",
+        "nl": "Rallen, Koeten en aanverwanten"
+      },
+      "species": [
+        "whtrai1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "gulls-terns-and-skimmers",
+      "name": {
+        "en": "Gulls, Terns, and Skimmers",
+        "nl": "Meeuwen, Sterns en Schaarbekken"
+      },
+      "species": [
+        "brnnod",
+        "sooter1",
+        "briter1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "tropicbirds",
+      "name": {
+        "en": "Tropicbirds",
+        "nl": "Keerkringvogels"
+      },
+      "species": [
+        "whttro"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "frigatebirds-boobies-and-gannets",
+      "name": {
+        "en": "Frigatebirds, Boobies, and Gannets",
+        "nl": "Fregatvogels en Genten"
+      },
+      "species": [
+        "grefri",
+        "refboo",
+        "brnboo",
+        "lesfri"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "herons-ibis-and-allies",
+      "name": {
+        "en": "Herons, Ibis, and Allies",
+        "nl": "Reigers, Ibissen en aanverwanten"
+      },
+      "species": [
+        "strher1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "owls",
+      "name": {
+        "en": "Owls",
+        "nl": "Uilen"
+      },
+      "species": [
+        "marowl1"
+      ],
+      "endemics": [
+        "marowl1"
+      ]
+    },
+    {
+      "slug": "vangas-helmetshrikes-and-allies",
+      "name": {
+        "en": "Vangas, Helmetshrikes, and Allies",
+        "nl": "Vanga's"
+      },
+      "species": [
+        "nuthat2",
+        "helvan1",
+        "bervan1"
+      ],
+      "endemics": [
+        "nuthat2",
+        "helvan1",
+        "bervan1"
+      ]
+    },
+    {
+      "slug": "old-world-flycatchers",
+      "name": {
+        "en": "Old World Flycatchers",
+        "nl": "Vliegenvangers van de Oude Wereld"
+      },
+      "species": [
+        "ammrot1"
+      ],
+      "endemics": [
+        "ammrot1"
+      ]
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "northern-rainforest",
+      "title": {
+        "en": "Specialities of the northern forests",
+        "nl": "Specialiteiten van de noordelijke bossen"
+      },
+      "groups": [
+        "vangas-helmetshrikes-and-allies",
+        "cuckoos",
+        "old-world-flycatchers",
+        "owls"
+      ],
+      "species": [
+        "helvan1",
+        "nuthat2",
+        "bervan1",
+        "rebcou1",
+        "ammrot1",
+        "marowl1"
+      ]
+    },
+    {
+      "slug": "seabirds-islands",
+      "title": {
+        "en": "Frigatebirds, boobies and tropicbirds",
+        "nl": "Fregatvogels, genten en keerkringvogels"
+      },
+      "groups": [
+        "frigatebirds-boobies-and-gannets",
+        "tropicbirds"
+      ],
+      "species": [
+        "grefri",
+        "lesfri",
+        "refboo",
+        "brnboo",
+        "whttro"
+      ]
+    },
+    {
+      "slug": "terns-and-mangrove",
+      "title": {
+        "en": "Terns, noddies and mangrove birds",
+        "nl": "Sterns, noddy's en mangrovevogels"
+      },
+      "groups": [
+        "gulls-terns-and-skimmers",
+        "herons-ibis-and-allies",
+        "rails-gallinules-and-allies"
+      ],
+      "species": [
+        "brnnod",
+        "sooter1",
+        "briter1",
+        "strher1",
+        "whtrai1"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

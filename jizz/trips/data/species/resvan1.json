@@ -1,0 +1,22 @@
+{
+  "code": "resvan1",
+  "name": {
+    "en": "Red-shouldered Vanga",
+    "nl": "Roodschoudervanga"
+  },
+  "latin": "Calicalicus rufocarpalis",
+  "look_for": [
+    {
+      "en": "Male pale grey **head**, black **bib**",
+      "nl": "Mannetje met lichtgrijze **kop** en zwarte **bef**"
+    },
+    {
+      "en": "Brick-red **wing** coverts and **tail**",
+      "nl": "Baksteenrode **vleugeldekveren** en **staart**"
+    },
+    {
+      "en": "Whitish underparts, pink wash; female duller",
+      "nl": "Witachtige onderzijde, roze waas; vrouwtje doffer"
+    }
+  ]
+}

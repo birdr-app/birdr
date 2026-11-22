@@ -1,0 +1,22 @@
+{
+  "code": "sacibi3",
+  "name": {
+    "en": "Malagasy Sacred Ibis",
+    "nl": "Madagaskaribis"
+  },
+  "latin": "Threskiornis bernieri",
+  "look_for": [
+    {
+      "en": "White ibis, black **head** and **neck**",
+      "nl": "Witte ibis met zwarte **kop** en **hals**"
+    },
+    {
+      "en": "Long curved black **bill**, pale eye",
+      "nl": "Lange gebogen zwarte **snavel**, lichte ogen"
+    },
+    {
+      "en": "Little or no black on the **wing** tips",
+      "nl": "Weinig of geen zwart op de **vleugel**punten"
+    }
+  ]
+}

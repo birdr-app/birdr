@@ -1,0 +1,26 @@
+{
+  "country": "MG-NORTH",
+  "notes": "Far north: Masoala and Marojejy rainforest (Helmet Vanga, Nuthatch Vanga, Bernier's Vanga, Red-breasted Coua, Madagascar Red Owl), Montagne d'Ambre (Amber Mountain Rock Thrush) and the sea birds of the Nosy Be and Diego Suarez boat trips. Mangrove Little Heron and White-throated Rail sit here too. Hand-picked, because the model scores these birds near 0; ranges are set from memory and eBird province lists. Van Dam's Vanga is in the country trip (it also lives at Ankarafantsika). Left out for lack of usable photos: Madagascar Serpent-Eagle and Roseate Tern.",
+  "manual": true,
+  "add": [
+    "ammrot1",
+    "helvan1",
+    "nuthat2",
+    "bervan1",
+    "rebcou1",
+    "marowl1",
+    "whtrai1",
+    "strher1",
+    "whttro",
+    "brnboo",
+    "refboo",
+    "brnnod",
+    "sooter1",
+    "briter1",
+    "lesfri",
+    "grefri"
+  ],
+  "drop": [],
+  "first_day": [],
+  "lookalikes": []
+}

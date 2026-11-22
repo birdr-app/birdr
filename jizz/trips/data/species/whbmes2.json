@@ -1,0 +1,22 @@
+{
+  "code": "whbmes2",
+  "name": {
+    "en": "White-breasted Mesite",
+    "nl": "Witborststeltral"
+  },
+  "latin": "Mesitornis variegatus",
+  "look_for": [
+    {
+      "en": "Walks in leaf litter, in small groups",
+      "nl": "Loopt in kleine groepjes door het bladstrooisel"
+    },
+    {
+      "en": "Pale **face** with dark cheek stripes",
+      "nl": "Bleek **gezicht** met donkere wangstrepen"
+    },
+    {
+      "en": "Rufous-brown **back**, white **underparts** with tawny chest band",
+      "nl": "Roodbruine **rug**, witte **onderzijde** met oranjebruine borstband"
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "country": "MG-WEST",
+  "groups": [
+    {
+      "slug": "waterfowl",
+      "name": {
+        "en": "Waterfowl",
+        "nl": "Watervogels"
+      },
+      "species": [
+        "comduc2",
+        "afrpyg1",
+        "whbduc1",
+        "fuwduc"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "cuckoos",
+      "name": {
+        "en": "Cuckoos",
+        "nl": "Koekoes"
+      },
+      "species": [
+        "giacou1",
+        "reccou2"
+      ],
+      "endemics": [
+        "giacou1",
+        "reccou2"
+      ]
+    },
+    {
+      "slug": "rails-gallinules-and-allies",
+      "name": {
+        "en": "Rails, Gallinules, and Allies",
+        "nl": "Rallen, Koeten en aanverwanten"
+      },
+      "species": [
+        "allgal1",
+        "sakrai1"
+      ],
+      "endemics": [
+        "sakrai1"
+      ]
+    },
+    {
+      "slug": "shorebirds",
+      "name": {
+        "en": "Shorebirds",
+        "nl": "Steltlopers"
+      },
+      "species": [
+        "bkwsti",
+        "bkbplo",
+        "corplo",
+        "thbplo1",
+        "grsplo",
+        "grpsni1",
+        "madjac1",
+        "tersan",
+        "comsan",
+        "marsan",
+        "woosan",
+        "comgre",
+        "rudtur",
+        "cursan",
+        "sander",
+        "craplo1",
+        "madpra1",
+        "whimbr5"
+      ],
+      "endemics": [
+        "madjac1"
+      ]
+    },
+    {
+      "slug": "gulls-terns-and-skimmers",
+      "name": {
+        "en": "Gulls, Terns, and Skimmers",
+        "nl": "Meeuwen, Sterns en Schaarbekken"
+      },
+      "species": [
+        "sauter2",
+        "caster1",
+        "whiter2",
+        "lecter2",
+        "grcter1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "storks",
+      "name": {
+        "en": "Storks",
+        "nl": "Ooievaars"
+      },
+      "species": [
+        "yebsto1",
+        "afrope1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "cormorants-and-anhingas",
+      "name": {
+        "en": "Cormorants and Anhingas",
+        "nl": "Aalscholvers en Slangehalsvogels"
+      },
+      "species": [
+        "lotcor1",
+        "darter3"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "herons-ibis-and-allies",
+      "name": {
+        "en": "Herons, Ibis, and Allies",
+        "nl": "Reigers, Ibissen en aanverwanten"
+      },
+      "species": [
+        "humher1",
+        "sacibi3",
+        "afrspo1",
+        "gloibi"
+      ],
+      "endemics": [
+        "humher1"
+      ]
+    },
+    {
+      "slug": "vultures-hawks-and-allies",
+      "name": {
+        "en": "Vultures, Hawks, and Allies",
+        "nl": "Gieren, Arenden, Buizerds, Haviken en aanverwanten"
+      },
+      "species": [
+        "mafeag1"
+      ],
+      "endemics": [
+        "mafeag1"
+      ]
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "dry-forest-and-marsh-rails",
+      "title": {
+        "en": "Couas, rails and the jacana",
+        "nl": "Couas, rallen en de jacana"
+      },
+      "groups": [
+        "cuckoos",
+        "rails-gallinules-and-allies",
+        "shorebirds"
+      ],
+      "species": [
+        "giacou1",
+        "reccou2",
+        "sakrai1",
+        "allgal1",
+        "madjac1"
+      ]
+    },
+    {
+      "slug": "west-ducks",
+      "title": {
+        "en": "Ducks of the western lakes",
+        "nl": "Eenden van de westelijke meren"
+      },
+      "groups": [
+        "waterfowl"
+      ],
+      "species": [
+        "afrpyg1",
+        "whbduc1",
+        "comduc2",
+        "fuwduc"
+      ]
+    },
+    {
+      "slug": "storks-and-cormorants",
+      "title": {
+        "en": "Storks, cormorants and the darter",
+        "nl": "Ooievaars en aalscholvers"
+      },
+      "groups": [
+        "storks",
+        "cormorants-and-anhingas"
+      ],
+      "species": [
+        "afrope1",
+        "yebsto1",
+        "lotcor1",
+        "darter3"
+      ]
+    },
+    {
+      "slug": "rare-herons-ibises",
+      "title": {
+        "en": "Rare herons, ibises and the fish-eagle",
+        "nl": "Zeldzame reigers, ibissen en de zeearend"
+      },
+      "groups": [
+        "herons-ibis-and-allies",
+        "vultures-hawks-and-allies"
+      ],
+      "species": [
+        "humher1",
+        "gloibi",
+        "sacibi3",
+        "afrspo1",
+        "mafeag1"
+      ]
+    },
+    {
+      "slug": "plovers",
+      "title": {
+        "en": "Plovers of the coast and mudflats",
+        "nl": "Plevieren van kust en wadden"
+      },
+      "groups": [
+        "shorebirds"
+      ],
+      "species": [
+        "thbplo1",
+        "grsplo",
+        "corplo",
+        "bkbplo"
+      ]
+    },
+    {
+      "slug": "sandpipers-1",
+      "title": {
+        "en": "Sandpipers and the stilt",
+        "nl": "Strandlopers en de steltkluut"
+      },
+      "groups": [
+        "shorebirds"
+      ],
+      "species": [
+        "comgre",
+        "comsan",
+        "tersan",
+        "marsan",
+        "woosan",
+        "bkwsti"
+      ]
+    },
+    {
+      "slug": "sandpipers-2",
+      "title": {
+        "en": "Shorebirds of the delta",
+        "nl": "Steltlopers van de delta"
+      },
+      "groups": [
+        "shorebirds"
+      ],
+      "species": [
+        "cursan",
+        "whimbr5",
+        "rudtur",
+        "sander",
+        "craplo1",
+        "grpsni1",
+        "madpra1"
+      ]
+    },
+    {
+      "slug": "west-terns",
+      "title": {
+        "en": "Terns of the west coast",
+        "nl": "Sternen van de westkust"
+      },
+      "groups": [
+        "gulls-terns-and-skimmers"
+      ],
+      "species": [
+        "grcter1",
+        "lecter2",
+        "caster1",
+        "sauter2",
+        "whiter2"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

@@ -1,0 +1,22 @@
+{
+  "code": "lafvan1",
+  "name": {
+    "en": "Lafresnaye's Vanga",
+    "nl": "Lafresnayevanga"
+  },
+  "latin": "Xenopirostris xenopirostris",
+  "look_for": [
+    {
+      "en": "Heavy blue-grey **bill**, black **head**",
+      "nl": "Zware blauwgrijze **snavel**, zwarte **kop**"
+    },
+    {
+      "en": "White **crown** and underparts, grey **back**",
+      "nl": "Witte **kruin** en onderzijde, grijze **rug**"
+    },
+    {
+      "en": "Probes dead wood and bark in thorn scrub",
+      "nl": "Peutert in dood hout en schors in doornstruweel"
+    }
+  ]
+}

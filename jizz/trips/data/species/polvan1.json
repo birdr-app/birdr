@@ -1,0 +1,22 @@
+{
+  "code": "polvan1",
+  "name": {
+    "en": "Pollen's Vanga",
+    "nl": "Pollenvanga"
+  },
+  "latin": "Xenopirostris polleni",
+  "look_for": [
+    {
+      "en": "Male black **head**, slate-grey **back**, whitish **underparts**",
+      "nl": "Mannetje zwarte **kop**, leigrijze **rug**, witachtige **onderzijde**"
+    },
+    {
+      "en": "Heavy, deep, hooked pale blue-grey **bill**",
+      "nl": "Zware, hoge, gehaakte lichtblauwgrijze **snavel**"
+    },
+    {
+      "en": "Female black only on **throat**, orange-tinged **breast**",
+      "nl": "Vrouwtje alleen zwart op de **keel**, **borst** oranje getint"
+    }
+  ]
+}

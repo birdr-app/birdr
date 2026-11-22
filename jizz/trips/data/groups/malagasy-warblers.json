@@ -1,0 +1,19 @@
+{
+  "slug": "malagasy-warblers",
+  "about": {
+    "en": "Small, slim forest songbirds from a family that evolved on a single island. Most are olive or brown above and yellowish below, and several have a pale eyebrow or eye-ring. They creep along branches and through the undergrowth, often in busy mixed flocks, so song and behaviour help to tell them apart.",
+    "nl": "Kleine, slanke zangvogels van het bos uit een familie die zich op één eiland heeft ontwikkeld. De meeste zijn olijfgroen of bruin van boven en geelachtig van onder, en meerdere hebben een lichte wenkbrauwstreep of oogring. Ze kruipen langs takken en door de ondergroei, vaak in drukke gemengde groepen, dus zang en gedrag helpen om ze uit elkaar te houden."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "leaf-warblers",
+        "reed-warblers-and-allies"
+      ],
+      "text": {
+        "en": "They look and move like leaf warblers or reed warblers, but they are a separate family with no close relatives elsewhere.",
+        "nl": "Ze lijken op boszangers of rietzangers en bewegen ook zo, maar het is een aparte familie zonder naaste verwanten elders."
+      }
+    }
+  ]
+}

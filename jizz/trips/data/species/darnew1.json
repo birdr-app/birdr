@@ -1,0 +1,22 @@
+{
+  "code": "darnew1",
+  "name": {
+    "en": "Dark Newtonia",
+    "nl": "Groene newtonia"
+  },
+  "latin": "Newtonia amphichroa",
+  "look_for": [
+    {
+      "en": "Darker and browner than Common Newtonia",
+      "nl": "Donkerder en bruiner dan de roodbuiknewtonia"
+    },
+    {
+      "en": "Dark olive-brown **upperparts**, deep buff **underparts**",
+      "nl": "Donker olijfbruine **bovenzijde**, diep roomkleurige **onderzijde**"
+    },
+    {
+      "en": "Golden **eye**; skulks in dense forest undergrowth",
+      "nl": "Goudgeel **oog**; schuilt in dicht bosonderhout"
+    }
+  ]
+}

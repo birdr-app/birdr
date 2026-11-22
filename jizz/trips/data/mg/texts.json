@@ -1,0 +1,681 @@
+{
+  "country": "MG",
+  "intro": {
+    "en": "Madagascar is an island of its own, and its birds show it: more than half of the birds on this trip live nowhere else on Earth. The classic route runs from Antananarivo and its rice fields east to the rainforest of Andasibe-Mantadia and Ranomafana, then on to Isalo and the dry forest of Ankarafantsika. This trip covers 117 birds, including 67 found nowhere else. More birds of the far north (Masoala, Marojejy, Montagne d'Ambre, Ankarana and Nosy Be), of the dry west (Kirindy, Bemaraha, Mahajanga, Kinkony and the west coast) and of the spiny south-west (Ifaty, Zombitse and Tsimanampetsotsa) are in three region packs.",
+    "nl": "Madagaskar is een eiland op zich, en de vogels laten dat zien: meer dan de helft van de vogels in deze reis leeft nergens anders ter wereld. De klassieke route gaat van Antananarivo en zijn rijstvelden oostwaarts naar het regenwoud van Andasibe-Mantadia en Ranomafana, en dan verder naar Isalo en het droge bos van Ankarafantsika. Deze reis omvat 117 vogels, waaronder 67 die nergens anders leven. Meer vogels van het uiterste noorden (Masoala, Marojejy, Montagne d'Ambre, Ankarana en Nosy Be), van het droge westen (Kirindy, Bemaraha, Mahajanga, Kinkony en de westkust) en van het doornige zuidwesten (Ifaty, Zombitse en Tsimanampetsotsa) zitten in drie regiopakketten."
+  },
+  "groups": {
+    "waterfowl": {
+      "here": {
+        "en": "Three ducks. White-faced Whistling-Duck, Blue-billed Teal and Red-billed Duck swim on lakes, ponds and flooded rice fields in the highlands and in the west, and the Red-billed Duck is the one you meet first.",
+        "nl": "Drie eenden. De witwangfluiteend, de gouden taling en de roodsnavelpijlstaart zwemmen op meren, vijvers en overstroomde rijstvelden in het hoogland en in het westen, en de roodsnavelpijlstaart zie je als eerste."
+      }
+    },
+    "grouse-quail-and-allies": {
+      "here": {
+        "en": "Two ground birds. The Madagascar Partridge lives in grass and scrub in the highlands, and the Helmeted Guineafowl, brought to the island long ago, walks in flocks along tracks and field edges.",
+        "nl": "Twee grondvogels. De Madagaskarpatrijs leeft in gras en struweel in het hoogland, en het helmparelhoen, dat lang geleden op het eiland is gebracht, loopt in groepen langs paden en akkerranden."
+      }
+    },
+    "pigeons-and-doves": {
+      "here": {
+        "en": "Four pigeons and doves. The Malagasy Turtle Dove is everywhere and the first you meet, the Madagascar Green-Pigeon and the Madagascar Blue-Pigeon feed in fruiting trees in the forest, and the small Namaqua Dove walks on bare ground in dry, open country.",
+        "nl": "Vier duiven. De Madagaskartortel zit overal en is de eerste die je ziet, de Madagaskarpapegaaiduif en de Madagaskarblauwduif eten in vruchtdragende bomen in het bos, en de kleine maskerduif loopt over kale grond in droog, open land."
+      }
+    },
+    "mesites": {
+      "here": {
+        "en": "Two mesites, both found only on the island. The White-breasted Mesite lives in dry forest, and Ankarafantsika is the place to go, while the Brown Mesite is a much harder bird of the eastern rainforest. Both walk on the forest floor and are shy.",
+        "nl": "Twee steltrallen, allebei alleen op het eiland. De witborststeltral leeft in droog bos, en Ankarafantsika is de plek om heen te gaan, terwijl de bruine steltral een veel moeilijker vogel is van het oostelijke regenwoud. Beide lopen over de bosbodem en zijn schuw."
+      }
+    },
+    "cuckoos": {
+      "here": {
+        "en": "Six cuckoos. The Malagasy Coucal is common and one of the first birds you see, and the Madagascar Cuckoo is heard far more than seen. The four couas live only on the island: the Blue Coua in the eastern rainforest, and the Crested and Coquerel's Coua in the dry forest of Ankarafantsika.",
+        "nl": "Zes koekoeken. De toeloespoorkoekoek is algemeen en een van de eerste vogels die je ziet, en de Madagaskarkoekoek hoor je veel vaker dan je hem ziet. De vier coua's leven alleen op het eiland: de blauwe coua in het oostelijke regenwoud, en de kuifcoua en de Coquerelcoua in het droge bos van Ankarafantsika."
+      }
+    },
+    "nightjars": {
+      "here": {
+        "en": "Two nightjars. The Madagascar Nightjar sits on tracks and open ground at night, and the Collared Nightjar roosts on the floor of the eastern rainforest, where a local guide knows the spots.",
+        "nl": "Twee nachtzwaluwen. De Madagaskarnachtzwaluw zit 's nachts op paden en open grond, en de gekraagde nachtzwaluw rust overdag op de bodem van het oostelijke regenwoud, waar een lokale gids de plekken kent."
+      }
+    },
+    "swifts": {
+      "here": {
+        "en": "Four swifts. The Malagasy Palm Swift hangs around palm trees in towns and villages and is a first-day bird, and the others hunt over forest, cliffs and ridges: the Malagasy Swift, the Madagascar Spinetail and the Alpine Swift.",
+        "nl": "Vier gierzwaluwen. De Madagaskarpalmgierzwaluw zit rond palmbomen in steden en dorpen en is een vogel van de eerste dag, en de andere jagen boven bos, kliffen en bergruggen: de Madagaskargierzwaluw, de Grandidiergierzwaluw en de alpengierzwaluw."
+      }
+    },
+    "flufftails": {
+      "here": {
+        "en": "Two secretive birds of damp forest, the Madagascar Forest Rail and the Madagascar Flufftail. Both are found only on the island, and you hear them far more than you see them.",
+        "nl": "Twee verborgen vogels van vochtig bos, de witkinral en de hovaral. Allebei leven ze alleen op het eiland, en je hoort ze veel vaker dan je ze ziet."
+      }
+    },
+    "rails-gallinules-and-allies": {
+      "here": {
+        "en": "Three marsh birds. The African Swamphen and the Common Moorhen walk in plain view in reeds and wet fields, while the Madagascar Rail hides in dense marsh vegetation.",
+        "nl": "Drie moerasvogels. De smaragdpurperkoet en het waterhoen lopen in het zicht in riet en natte velden, terwijl de Madagaskarwaterral zich verstopt in dichte moerasbegroeiing."
+      }
+    },
+    "shorebirds": {
+      "here": {
+        "en": "Two shy ground birds, both found only on the island. The Madagascar Snipe lives in marshes in the highlands and the Madagascar Buttonquail in grassland, and neither is easy to find.",
+        "nl": "Twee schuwe grondvogels, allebei alleen op het eiland. De Madagaskarsnip leeft in moerassen in het hoogland en de Madagaskarvechtkwartel in grasland, en geen van beide is makkelijk te vinden."
+      }
+    },
+    "grebes": {
+      "here": {
+        "en": "One grebe, the Little Grebe. It dives on lakes, ponds and flooded rice fields in the highlands and the west.",
+        "nl": "Eén fuut, de dodaars. Hij duikt op meren, vijvers en overstroomde rijstvelden in het hoogland en het westen."
+      }
+    },
+    "herons-ibis-and-allies": {
+      "here": {
+        "en": "Eight herons and egrets and one ibis. Western Cattle-Egret and Malagasy Pond Heron are common in rice fields and marshes, and Lake Alarobia in Antananarivo is a good place to see herons and egrets together. The Madagascar Ibis is the odd one out, walking on the floor of the forest.",
+        "nl": "Acht reigers en zilverreigers en één ibis. De westelijke koereiger en de Madagaskarralreiger zijn algemeen in rijstvelden en moerassen, en Lake Alarobia in Antananarivo is een goede plek om reigers en zilverreigers samen te zien. De kuifibis is het buitenbeentje en loopt over de bodem van het bos."
+      }
+    },
+    "shoebill-and-hammerkop": {
+      "here": {
+        "en": "One bird, the Hamerkop. It stands at the edge of ponds, marshes and rice fields and builds a huge domed nest in a tree.",
+        "nl": "Eén vogel, de hamerkop. Hij staat aan de rand van vijvers, moerassen en rijstvelden en bouwt een enorm, overkoepeld nest in een boom."
+      }
+    },
+    "vultures-hawks-and-allies": {
+      "here": {
+        "en": "Seven birds of prey. The Black Kite is the one you see every day, over towns, lakes and rice fields, and the Malagasy Harrier glides low over marshes. Four of the seven live only on the island, mostly as hunters of the forest.",
+        "nl": "Zeven roofvogels. De zwarte wouw zie je elke dag, boven steden, meren en rijstvelden, en de Madagaskarkiekendief glijdt laag over moerassen. Vier van de zeven leven alleen op het eiland, meestal als jagers van het bos."
+      }
+    },
+    "owls": {
+      "here": {
+        "en": "Four owls. The Marsh Owl hunts over open ground at dusk, and the Madagascar Scops Owl, the White-browed Owl and the Madagascar Owl are found by their calls or at day roosts, with a local guide.",
+        "nl": "Vier uilen. De Afrikaanse velduil jaagt in de schemering boven open grond, en de Madagaskardwergooruil, de Madagaskarsteenuil en de Madagaskarransuil vind je op hun roep of op een rustplaats overdag, met een lokale gids."
+      }
+    },
+    "cuckoo-roller": {
+      "here": {
+        "en": "One bird, the Cuckoo-roller, the only member of its family. It sits high on bare branches in the forest and swoops over the canopy, and its whistled calls carry far.",
+        "nl": "Eén vogel, de koerol, de enige van zijn familie. Hij zit hoog op kale takken in het bos en zwenkt boven het kronendak, en zijn gefluite roep draagt ver."
+      }
+    },
+    "hoopoes": {
+      "here": {
+        "en": "One hoopoe, the Madagascar Hoopoe, found only on the island. It walks on the ground in dry forest and open woodland in the west and the south and probes the soil.",
+        "nl": "Eén hop, de Madagaskarhop, die alleen op het eiland leeft. Hij loopt over de grond in droog bos en open bosland in het westen en het zuiden en prikt in de bodem."
+      }
+    },
+    "bee-eaters": {
+      "here": {
+        "en": "One bee-eater, the Olive Bee-eater. It sits on wires and bare branches over open country and wetlands and darts out after insects, and it is a bird of the first day.",
+        "nl": "Eén bijeneter, de Madagaskarbijeneter. Hij zit op draden en kale takken boven open land en wetlands en schiet uit naar insecten, en is een vogel van de eerste dag."
+      }
+    },
+    "kingfishers": {
+      "here": {
+        "en": "Two kingfishers. The Malagasy Kingfisher perches over ponds, streams and rice-field ditches, and the tiny Madagascar Pygmy Kingfisher sits low in the forest and takes insects from the ground.",
+        "nl": "Twee ijsvogels. De zwartsnavelijsvogel zit boven vijvers, beken en sloten bij rijstvelden, en de kleine Madagaskardwergijsvogel zit laag in het bos en pakt insecten van de grond."
+      }
+    },
+    "rollers-and-allies": {
+      "here": {
+        "en": "Five rollers. The Broad-billed Roller is a bright bird of open woodland, and the four ground-rollers live only in the eastern rainforest, where they walk the forest floor and freeze. Andasibe-Mantadia and Ranomafana are the places to go.",
+        "nl": "Vijf scharrelaars. De breedbekscharrelaar is een felle vogel van open bos, en de vier grondscharrelaars leven alleen in het oostelijke regenwoud, waar ze over de bosbodem lopen en bevriezen. Andasibe-Mantadia en Ranomafana zijn de plekken om heen te gaan."
+      }
+    },
+    "falcons-and-caracaras": {
+      "here": {
+        "en": "Two kestrels. The Malagasy Kestrel hovers over open country and roadsides all year, and the Banded Kestrel is a scarce hunter of forest and woodland found only on the island.",
+        "nl": "Twee torenvalken. De Madagaskartorenvalk bidt het hele jaar boven open land en wegbermen, en de gebandeerde torenvalk is een schaarse jager van bos en bosland die alleen op het eiland leeft."
+      }
+    },
+    "parrots-parakeets-and-allies": {
+      "here": {
+        "en": "Three parrots. The Greater and Lesser Vasa Parrot are dark, noisy birds that fly over the forest, and the Grey-headed Lovebird is a small green bird of woodland edges and open country.",
+        "nl": "Drie papegaaien. De grote en de kleine vasapapegaai zijn donkere, luidruchtige vogels die boven het bos vliegen, en de grijskopagapornis is een kleine groene vogel van bosranden en open land."
+      }
+    },
+    "asities": {
+      "here": {
+        "en": "Four asities, a family found only on Madagascar. The Velvet Asity and the Common Sunbird-Asity live in the eastern rainforest, the Yellow-bellied Sunbird-Asity higher up, and Schlegel's Asity in the dry forest of Ankarafantsika.",
+        "nl": "Vier asities, een familie die alleen op Madagaskar voorkomt. De fluweelasitie en de langsnavelhoningasitie leven in het oostelijke regenwoud, de kortsnavelhoningasitie hoger op, en de Schlegelasitie in het droge bos van Ankarafantsika."
+      }
+    },
+    "cuckooshrikes": {
+      "here": {
+        "en": "One cuckooshrike, the Madagascar Cuckooshrike. It is a slim bird of the canopy in forest and woodland, and it is easier to hear than to see.",
+        "nl": "Eén rupsvogel, de Madagaskarrupsvogel. Het is een slanke vogel van het kronendak in bos en bosland, en je hoort hem makkelijker dan je hem ziet."
+      }
+    },
+    "vangas-helmetshrikes-and-allies": {
+      "here": {
+        "en": "Fourteen vangas and newtonias, all found only on the island. In the rainforest look for Crossley's, Pollen's and Tylas Vanga, in the dry forest of Ankarafantsika for the Sickle-billed and Van Dam's Vanga, and in forest and woodland for the Madagascar Blue Vanga.",
+        "nl": "Veertien vanga's en newtonia's, allemaal alleen op het eiland. In het regenwoud zoek je de Crossleyvanga, de Pollenvanga en de kinkimavo, in het droge bos van Ankarafantsika de sikkelvanga en de Vandamvanga, en in bos en bosland de blauwe vanga."
+      }
+    },
+    "drongos": {
+      "here": {
+        "en": "One drongo, the Crested Drongo. It is black with a forked tail, and it sits on wires and open branches in towns, farmland and woodland.",
+        "nl": "Eén drongo, de kuifdrongo. Hij is zwart met een gevorkte staart en zit op draden en open takken in steden, akkerland en bosland."
+      }
+    },
+    "monarch-flycatchers": {
+      "here": {
+        "en": "One flycatcher, the Malagasy Paradise-Flycatcher. Males carry long tail streamers, and the bird moves through forest and shady gardens at low and middle height.",
+        "nl": "Eén vliegenvanger, de Madagaskarparadijsmonarch. Mannetjes hebben lange staartveren, en de vogel beweegt door bos en schaduwrijke tuinen op lage en middelhoge hoogte."
+      }
+    },
+    "jays-magpies-crows-and-ravens": {
+      "here": {
+        "en": "One crow, the Pied Crow. Black with a white collar and breast, it walks around towns, markets and fields and is one of the first birds you meet.",
+        "nl": "Eén kraai, de schildraaf. Hij is zwart met een witte kraag en borst, loopt rond in steden, op markten en velden en is een van de eerste vogels die je ziet."
+      }
+    },
+    "larks": {
+      "here": {
+        "en": "One lark, the Madagascar Lark. It is a small streaked bird of bare ground and short dry grass in open country, found only on the island.",
+        "nl": "Eén leeuwerik, de hovaleeuwerik. Het is een kleine gestreepte vogel van kale grond en kort droog gras in open land, die alleen op het eiland leeft."
+      }
+    },
+    "cisticolas-and-allies": {
+      "here": {
+        "en": "Three small birds of scrub, forest and grass. The Common Jery is the one you see in gardens and woodland, the Stripe-throated Jery lives in forest, and the Madagascar Cisticola lives in grass and at the edges of marshes.",
+        "nl": "Drie kleine vogels van struweel, bos en gras. De grijsnekjery zie je in tuinen en bosland, de streepkeeljery leeft in bos, en de Madagaskargraszanger leeft in gras en aan de randen van moerassen."
+      }
+    },
+    "reed-warblers-and-allies": {
+      "here": {
+        "en": "Two warblers. The Tsikirity Brush-Warbler skulks in scrub and gardens and sings from cover, and the Madagascar Swamp Warbler lives in reeds and papyrus.",
+        "nl": "Twee zangers. De tsikirityzanger sluipt door struweel en tuinen en zingt vanuit dekking, en de Madagaskarrietzanger leeft in riet en papyrus."
+      }
+    },
+    "malagasy-warblers": {
+      "here": {
+        "en": "Seven small forest songbirds, the tetrakas and their relatives. They are olive and yellow, easy to overlook, and often in mixed flocks in the rainforest of Andasibe-Mantadia and Ranomafana. The White-throated Oxylabes walks on the forest floor.",
+        "nl": "Zeven kleine zangvogels van het bos, de tetraka's en hun verwanten. Ze zijn olijfgroen en geel, makkelijk te missen en zitten vaak in gemengde groepen in het regenwoud van Andasibe-Mantadia en Ranomafana. De witkeeloxylabes loopt over de bosbodem."
+      }
+    },
+    "martins-and-swallows": {
+      "here": {
+        "en": "Two martins. The Madagascar Martin is a small brown martin of rivers and fields, and the Mascarene Martin hunts over forest, cliffs and rivers.",
+        "nl": "Twee zwaluwen. De Madagaskaroeverzwaluw is een kleine bruine zwaluw van rivieren en velden, en de Mascarenenzwaluw jaagt boven bos, kliffen en rivieren."
+      }
+    },
+    "bulbuls": {
+      "here": {
+        "en": "One bulbul, the Malagasy Bulbul. It is grey-brown with a red bill, noisy and everywhere in gardens, woods and forest edges, and a bird of the first day.",
+        "nl": "Eén buulbuul, de Madagaskarbuulbuul. Hij is grijsbruin met een rode snavel, luidruchtig en overal in tuinen, bossen en bosranden, en een vogel van de eerste dag."
+      }
+    },
+    "white-eyes-yuhinas-and-allies": {
+      "here": {
+        "en": "One white-eye, the Malagasy White-eye. It is small and olive with a white ring around the eye, and it moves in flocks through gardens, scrub and forest.",
+        "nl": "Eén brilvogel, de Madagaskarbrilvogel. Hij is klein en olijfkleurig met een witte ring om het oog, en trekt in groepen door tuinen, struweel en bos."
+      }
+    },
+    "starlings-and-mynas": {
+      "here": {
+        "en": "Two starlings. The Common Myna is an introduced bird of towns and roadsides, and the Madagascar Starling is a bird of forest and woodland, found only on the island, that feeds in fruiting trees.",
+        "nl": "Twee spreeuwen. De treurmaina is een ingevoerde vogel van steden en wegbermen, en de Madagaskarspreeuw is een vogel van bos en bosland, die alleen op het eiland leeft en eet in vruchtdragende bomen."
+      }
+    },
+    "old-world-flycatchers": {
+      "here": {
+        "en": "Three birds of the flycatcher family. The Madagascar Magpie-Robin hops on lawns and forest edges and is a first-day bird, the Forest Rock Thrush lives in the forest, and the African Stonechat perches on bush tops in open country.",
+        "nl": "Drie vogels uit de vliegenvangerfamilie. De Madagaskardayallijster hipt over gazons en bosranden en is een vogel van de eerste dag, de bosrotslijster leeft in het bos, en de Afrikaanse roodborsttapuit zit op struiktoppen in open land."
+      }
+    },
+    "sunbirds-and-spiderhunters": {
+      "here": {
+        "en": "Two sunbirds. The Souimanga Sunbird is common everywhere, in gardens and flowering trees, and the larger Malagasy Sunbird lives in forest and woodland.",
+        "nl": "Twee honingzuigers. De Souimangahoningzuiger is overal algemeen, in tuinen en bloeiende bomen, en de grotere Madagaskarhoningzuiger leeft in bos en bosland."
+      }
+    },
+    "weavers-and-allies": {
+      "here": {
+        "en": "A fody and a weaver, both found only on the island. The Red Fody is common everywhere and the males turn bright red when they breed, and the Sakalava Weaver lives in the dry west.",
+        "nl": "Een fody en een wever, allebei alleen op het eiland. De Madagaskarwever is overal algemeen en de mannetjes worden felrood als ze broeden, en de Sakalavawever leeft in het droge westen."
+      }
+    },
+    "estrildids": {
+      "here": {
+        "en": "One munia, the Madagascar Munia. It is tiny and brown, and it feeds in small flocks on grass seeds along field edges, roadsides and rice fields.",
+        "nl": "Eén prachtvink, het dwergekstertje. Het is klein en bruin en eet in kleine groepen graszaad langs akkerranden, wegbermen en rijstvelden."
+      }
+    },
+    "wagtails-and-pipits": {
+      "here": {
+        "en": "One wagtail, the Madagascar Wagtail. It has a yellow belly and walks on lawns, roadsides and stream edges, wagging its tail, and it is a bird of the first day.",
+        "nl": "Eén kwikstaart, de Madagaskarkwikstaart. Hij heeft een gele buik en loopt over gazons, wegbermen en beekoevers met zijn staart te wippen, en is een vogel van de eerste dag."
+      }
+    }
+  },
+  "units": {
+    "highland-marshes": {
+      "title": {
+        "en": "Ducks and marsh birds of the highlands",
+        "nl": "Eenden en moerasvogels van het hoogland"
+      },
+      "intro": {
+        "en": "Birds of the lakes, ponds and marshes of the central highlands and the west. The ducks and the swamphen are easy on open water, the grebe dives and comes up again, and the Madagascar Rail stays hidden in dense marsh vegetation.",
+        "nl": "Vogels van de meren, vijvers en moerassen van het centrale hoogland en het westen. De eenden en de purperkoet zijn makkelijk op open water, de fuut duikt en komt weer boven, en de Madagaskarwaterral blijft verborgen in dichte moerasbegroeiing."
+      }
+    },
+    "egrets-and-pond-herons": {
+      "title": {
+        "en": "Egrets and pond herons",
+        "nl": "Zilverreigers en ralreigers"
+      },
+      "intro": {
+        "en": "Pale herons of rice fields, marshes and lake edges. Check the colour of bill and legs, and in the Malagasy Pond Heron the plumage, which is white in the breeding season. The Black-crowned Night Heron sits hunched in a tree by day.",
+        "nl": "Lichte reigers van rijstvelden, moerassen en meeroevers. Kijk naar de kleur van snavel en poten, en bij de Madagaskarralreiger naar het verenkleed, dat in het broedseizoen wit is. De kwak zit overdag ineengedoken in een boom."
+      }
+    },
+    "herons-hamerkop-ibis": {
+      "title": {
+        "en": "Herons, Hamerkop and the Madagascar Ibis",
+        "nl": "Reigers, hamerkop en de kuifibis"
+      },
+      "intro": {
+        "en": "Bigger wading birds of marshes and lake edges, and an ibis of the forest. The Black Heron hunts with its wings held over its head like an umbrella, the Hamerkop is brown with a backward crest, and the Madagascar Ibis walks on the forest floor.",
+        "nl": "Grotere waadvogels van moerassen en meeroevers, en een ibis van het bos. De zwarte reiger jaagt met zijn vleugels als een parasol boven zijn kop, de hamerkop is bruin met een kuif naar achteren, en de kuifibis loopt over de bosbodem."
+      }
+    },
+    "raptors-open-country": {
+      "title": {
+        "en": "Raptors of open country",
+        "nl": "Roofvogels van open land"
+      },
+      "intro": {
+        "en": "Birds of prey you see from a car or at a lake shore. The Black Kite and the Malagasy Kestrel are everywhere, the buzzard and the harrier-hawk soar over hills and forest edges, and the Malagasy Harrier glides low over marshes. Check tail shape and how they fly.",
+        "nl": "Roofvogels die je vanuit de auto of aan een meeroever ziet. De zwarte wouw en de Madagaskartorenvalk zitten overal, de buizerd en de holenkiekendief zweven boven heuvels en bosranden, en de Madagaskarkiekendief glijdt laag over moerassen. Let op staartvorm en vliegwijze."
+      }
+    },
+    "forest-hawks": {
+      "title": {
+        "en": "Hawks of the forest",
+        "nl": "Haviken van het bos"
+      },
+      "intro": {
+        "en": "Short-winged hunters that wait on a perch in the forest and dash after prey. The two sparrowhawks are small and look alike, so check size and underparts. The Cuckoo-Hawk is a scarce bird of the forest.",
+        "nl": "Jagers met korte vleugels die in het bos op een zitplaats wachten en achter hun prooi aan schieten. De twee sperwers zijn klein en lijken op elkaar, dus kijk naar grootte en onderzijde. De Madagaskarkoekoekswouw is een schaarse vogel van het bos."
+      }
+    },
+    "owls-and-nightjars": {
+      "title": {
+        "en": "Owls and nightjars",
+        "nl": "Uilen en nachtzwaluwen"
+      },
+      "intro": {
+        "en": "Birds of the night, found by their calls or at day roosts. A local guide knows where to look. The Marsh Owl and the Madagascar Nightjar sit on open ground at dusk, and the others live in the forest.",
+        "nl": "Vogels van de nacht, te vinden op hun roep of op rustplaatsen overdag. Een lokale gids weet waar je moet zoeken. De Afrikaanse velduil en de Madagaskarnachtzwaluw zitten in de schemering op open grond, en de andere leven in het bos."
+      }
+    },
+    "pigeons-and-game-birds": {
+      "title": {
+        "en": "Pigeons, doves and game birds",
+        "nl": "Duiven en hoenderachtigen"
+      },
+      "intro": {
+        "en": "Fruit-eating pigeons of the forest, a dove of open dry country, and ground birds of grass and scrub. Scan roadsides and field edges early in the day for the partridge, the guineafowl and the elusive buttonquail.",
+        "nl": "Fruitetende duiven van het bos, een duif van open droog land, en grondvogels van gras en struweel. Kijk vroeg op de dag langs wegbermen en akkerranden naar de patrijs, het parelhoen en de schuwe vechtkwartel."
+      }
+    },
+    "hidden-birds": {
+      "title": {
+        "en": "Mesites, rails and other hidden birds",
+        "nl": "Steltrallen en andere verborgen vogels"
+      },
+      "intro": {
+        "en": "Shy birds of the ground: two mesites, the forest rail, the flufftail and the snipe. Walk quietly on forest trails, stop often and listen. The first sign is nearly always the call, and a local guide helps a lot.",
+        "nl": "Schuwe vogels van de grond: twee steltrallen, de witkinral, de hovaral en de snip. Loop rustig over bospaden, blijf vaak staan en luister. Het eerste teken is bijna altijd de roep, en een lokale gids helpt enorm."
+      }
+    },
+    "couas-and-cuckoos": {
+      "title": {
+        "en": "Couas, coucal and cuckoo",
+        "nl": "Coua's, spoorkoekoek en koekoek"
+      },
+      "intro": {
+        "en": "Couas are big, long-tailed cuckoos that walk and run through undergrowth and climb through tangles. The Blue Coua lives in the east, and the Crested and Coquerel's Coua in the dry forest. The Malagasy Coucal is easy in open country.",
+        "nl": "Coua's zijn grote koekoeken met een lange staart die door de ondergroei lopen en rennen en door wirwar klimmen. De blauwe coua leeft in het oosten, en de kuifcoua en de Coquerelcoua in het droge bos. De toeloespoorkoekoek is makkelijk in open land."
+      }
+    },
+    "rollers": {
+      "title": {
+        "en": "Rollers and ground-rollers",
+        "nl": "Scharrelaars en grondscharrelaars"
+      },
+      "intro": {
+        "en": "Birds of the forest, from the floor to the canopy. The ground-rollers walk slowly and freeze, so go early with a guide. The Broad-billed Roller perches in the open, and the Cuckoo-roller sits high on bare branches.",
+        "nl": "Vogels van het bos, van de bodem tot het kronendak. De grondscharrelaars lopen langzaam en bevriezen, dus ga vroeg met een gids. De breedbekscharrelaar zit in het open, en de koerol zit hoog op kale takken."
+      }
+    },
+    "kingfishers-and-hoopoe": {
+      "title": {
+        "en": "Kingfishers, bee-eater and hoopoe",
+        "nl": "IJsvogels, bijeneter en hop"
+      },
+      "intro": {
+        "en": "Bright birds of different habitats. The Malagasy Kingfisher sits over water, the pygmy kingfisher in the forest, the Olive Bee-eater on wires and bare branches, and the Madagascar Hoopoe walks on dry ground.",
+        "nl": "Felle vogels van verschillende leefgebieden. De zwartsnavelijsvogel zit boven water, de dwergijsvogel in het bos, de Madagaskarbijeneter op draden en kale takken, en de Madagaskarhop loopt over droge grond."
+      }
+    },
+    "parrots-and-swifts": {
+      "title": {
+        "en": "Parrots and swifts",
+        "nl": "Papegaaien en gierzwaluwen"
+      },
+      "intro": {
+        "en": "Birds you mostly see in the air. The vasa parrots are dark and loud and fly over the forest, the lovebird is small and green, and the swifts hunt over towns, cliffs and ridges. Check size, rump and tail shape.",
+        "nl": "Vogels die je vooral in de lucht ziet. De vasapapegaaien zijn donker en luidruchtig en vliegen boven het bos, de agapornis is klein en groen, en de gierzwaluwen jagen boven steden, kliffen en bergruggen. Let op grootte, stuit en staartvorm."
+      }
+    },
+    "asities-and-sunbirds": {
+      "title": {
+        "en": "Asities and sunbirds",
+        "nl": "Asities en honingzuigers"
+      },
+      "intro": {
+        "en": "Small birds of fruit and flowers. In the rainforest the asities eat fruit in the trees and the sunbird-asities visit flowers like sunbirds. The Souimanga Sunbird is the common sunbird, and the Malagasy Sunbird is the bigger one of the forest.",
+        "nl": "Kleine vogels van vruchten en bloemen. In het regenwoud eten de asities vruchten in de bomen en bezoeken de honingasities bloemen als honingzuigers. De Souimangahoningzuiger is de gewone honingzuiger, en de Madagaskarhoningzuiger is de grotere van het bos."
+      }
+    },
+    "vangas-forest": {
+      "title": {
+        "en": "Vangas of the rainforest",
+        "nl": "Vanga's van het regenwoud"
+      },
+      "intro": {
+        "en": "Six vangas of the eastern rainforest, often with mixed flocks. Check bill shape and colour. Crossley's Vanga walks on the forest floor, and Ward's Vanga hunts from a perch like a flycatcher.",
+        "nl": "Zes vanga's van het oostelijke regenwoud, vaak bij gemengde groepen. Kijk naar vorm en kleur van de snavel. De Crossleyvanga loopt over de bosbodem, en de vliegenvangervanga jaagt vanaf een zitplaats als een vliegenvanger."
+      }
+    },
+    "vangas-open": {
+      "title": {
+        "en": "Vangas of woodland and dry forest",
+        "nl": "Vanga's van bos en droog bos"
+      },
+      "intro": {
+        "en": "Vangas of the dry forest in the west and of woodland elsewhere. The Sickle-billed Vanga has a long curved bill and calls loudly in groups, and the Chabert Vanga has a blue bill and eye-ring. Ankarafantsika is the best place for the dry-forest species.",
+        "nl": "Vanga's van het droge bos in het westen en van bosland elders. De sikkelvanga heeft een lange gebogen snavel en roept luid in groepen, en de brilvanga heeft een blauwe snavel en oogring. Ankarafantsika is de beste plek voor de soorten van het droge bos."
+      }
+    },
+    "crow-and-drongo": {
+      "title": {
+        "en": "Crow, drongo, flycatcher and more",
+        "nl": "Kraai, drongo, vliegenvanger en meer"
+      },
+      "intro": {
+        "en": "Common songbirds of towns, farmland and woods, with a lark of open ground. The Pied Crow and the Crested Drongo are first-day birds, and the paradise-flycatcher shows long tail streamers in the forest.",
+        "nl": "Gewone zangvogels van steden, akkerland en bossen, met een leeuwerik van open grond. De schildraaf en de kuifdrongo zijn vogels van de eerste dag, en de paradijsmonarch laat lange staartveren zien in het bos."
+      }
+    },
+    "newtonias-and-jeries": {
+      "title": {
+        "en": "Newtonias and jeries",
+        "nl": "Newtonia's en jery's"
+      },
+      "intro": {
+        "en": "Small, active birds of forest and gardens in olive, grey and yellow. They are hard to tell apart, so check the underparts, the bill and the habitat, and learn the songs.",
+        "nl": "Kleine, bewegelijke vogels van bos en tuinen in olijfgroen, grijs en geel. Ze zijn lastig uit elkaar te houden, dus kijk naar de onderzijde, de snavel en het leefgebied, en leer de zang."
+      }
+    },
+    "tetrakas": {
+      "title": {
+        "en": "Tetrakas and other rainforest warblers",
+        "nl": "Tetraka's en andere regenwoudzangers"
+      },
+      "intro": {
+        "en": "Small olive and yellow birds of the rainforest undergrowth that join mixed flocks. Look at eyebrow, eye-ring, bill and throat, and note where in the forest the bird is feeding, low or high, on the ground or on branches.",
+        "nl": "Kleine olijfgroene en gele vogels van de ondergroei van het regenwoud die zich bij gemengde groepen voegen. Kijk naar wenkbrauw, oogring, snavel en keel, en let op waar in het bos de vogel foerageert, laag of hoog, op de grond of op takken."
+      }
+    },
+    "grass-and-reed-warblers": {
+      "title": {
+        "en": "Reed warblers, cisticola and stonechat",
+        "nl": "Rietzangers, graszanger en tapuit"
+      },
+      "intro": {
+        "en": "Birds of reeds, grass and dense undergrowth. The brush-warbler skulks and is known by song first, the swamp warbler lives in reeds, the cisticola in grass, and the African Stonechat sits on bush tops in the open.",
+        "nl": "Vogels van riet, gras en dichte ondergroei. De tsikirityzanger sluipt en ken je eerst van de zang, de rietzanger leeft in riet, de graszanger in gras, en de Afrikaanse roodborsttapuit zit op struiktoppen in het open."
+      }
+    },
+    "martins-bulbul-white-eye": {
+      "title": {
+        "en": "Martins, bulbul and white-eye",
+        "nl": "Zwaluwen, buulbuul en brilvogel"
+      },
+      "intro": {
+        "en": "Easy birds of gardens, forest edges and rivers. The Malagasy Bulbul is loud, the Malagasy White-eye moves in flocks, and the martins hunt over water and fields.",
+        "nl": "Makkelijke vogels van tuinen, bosranden en rivieren. De Madagaskarbuulbuul is luid, de Madagaskarbrilvogel trekt in groepen rond, en de zwaluwen jagen boven water en velden."
+      }
+    },
+    "starlings-and-thrushes": {
+      "title": {
+        "en": "Starlings, thrushes and the wagtail",
+        "nl": "Spreeuwen, lijsters en de kwikstaart"
+      },
+      "intro": {
+        "en": "Birds of lawns, roadsides and forest. The Common Myna is the introduced bird of towns, the Madagascar Starling feeds in fruiting trees, the Madagascar Magpie-Robin hops on lawns, and the Madagascar Wagtail walks near water.",
+        "nl": "Vogels van gazons, wegbermen en bos. De treurmaina is de ingevoerde vogel van steden, de Madagaskarspreeuw eet in vruchtdragende bomen, de Madagaskardayallijster hipt over gazons, en de Madagaskarkwikstaart loopt in de buurt van water."
+      }
+    },
+    "weavers-and-fodies": {
+      "title": {
+        "en": "A weaver, a fody and the munia",
+        "nl": "Wever, fody en dwergekstertje"
+      },
+      "intro": {
+        "en": "Seed and insect eaters in flocks. The Red Fody turns bright red as a male in the breeding season and looks like a female the rest of the year, and the Sakalava Weaver has a black face on yellow. The munia is tiny and brown.",
+        "nl": "Zaad- en insecteneters in groepen. De Madagaskarwever wordt als mannetje felrood in het broedseizoen en lijkt de rest van het jaar op een vrouwtje, en de Sakalavawever heeft een zwart gezicht op geel. Het dwergekstertje is klein en bruin."
+      }
+    }
+  },
+  "species": {
+    "mapher1": {
+      "here": {
+        "en": "Breeds on Madagascar in white plumage with a blue bill, from about October to March. Most leave for eastern Africa around May, and then look brownish and streaked.",
+        "nl": "Broedt op Madagaskar in wit kleed met een blauwe snavel, van ongeveer oktober tot maart. De meeste vertrekken rond mei naar Oost-Afrika en zien er dan bruinig en gestreept uit."
+      }
+    },
+    "madkes1": {
+      "here": {
+        "en": "Hovers over roadsides and open country all year, and is one of the birds you see most often from a car.",
+        "nl": "Bidt het hele jaar boven wegbermen en open land en is een van de vogels die je het vaakst vanuit de auto ziet."
+      }
+    }
+  },
+  "first_day": {
+    "title": {
+      "en": "Your first day in Madagascar",
+      "nl": "Je eerste dag op Madagaskar"
+    },
+    "intro": {
+      "en": "Twenty birds you are very likely to meet in your first days: in the gardens, ponds and rice fields of Antananarivo, along the road east and around Andasibe.",
+      "nl": "Twintig vogels die je de eerste dagen vrijwel zeker tegenkomt: in de tuinen, vijvers en rijstvelden van Antananarivo, langs de weg naar het oosten en rond Andasibe."
+    }
+  },
+  "endemics": {
+    "why_here": {
+      "en": "Madagascar broke away from Africa more than 150 million years ago and from India about 88 million years ago, and its birds have evolved alone ever since. Whole families, the vangas, asities, mesites and ground-rollers, exist nowhere else. This trip has 67 birds that live only on the island, from rainforest tetrakas to dry-forest couas.",
+      "nl": "Madagaskar brak meer dan 150 miljoen jaar geleden los van Afrika en ongeveer 88 miljoen jaar geleden van India, en de vogels hebben zich sindsdien alleen ontwikkeld. Hele families, de vanga's, asities, steltrallen en grondscharrelaars, komen nergens anders voor. Deze reis heeft 67 vogels die alleen op het eiland leven, van tetraka's in het regenwoud tot coua's in het droge bos."
+    },
+    "where": [
+      {
+        "title": {
+          "en": "Eastern rainforest",
+          "nl": "Oostelijk regenwoud"
+        },
+        "text": {
+          "en": "The humid forest along the east coast and the escarpment holds most of the island's forest endemics: asities, ground-rollers, tetrakas and the forest vangas. Andasibe-Mantadia, with the Analamazaotra (Perinet) reserve, and Ranomafana National Park are the classic sites. Walk the trails early with a local guide and look for mixed flocks.",
+          "nl": "Het vochtige bos langs de oostkust en de steilrand heeft de meeste endemen van het bos: asities, grondscharrelaars, tetraka's en de vanga's van het bos. Andasibe-Mantadia, met het reservaat Analamazaotra (Perinet), en het nationaal park Ranomafana zijn de klassieke plekken. Loop vroeg de paden met een lokale gids en zoek gemengde groepen."
+        }
+      },
+      {
+        "title": {
+          "en": "Dry western forest",
+          "nl": "Droog westelijk bos"
+        },
+        "text": {
+          "en": "The deciduous forest of the west is open and dry for half the year, and holds a different set of endemics: mesites, couas and vangas. Ankarafantsika National Park, around the Ampijoroa forest station and Lake Ravelobe, is the best place on the classic route, with White-breasted Mesite, Schlegel's Asity, Van Dam's Vanga and Coquerel's Coua. Kirindy and Bemaraha are in the dry west pack.",
+          "nl": "Het bladverliezende bos van het westen is open en droog tijdens de helft van het jaar, en heeft een andere set endemen: steltrallen, coua's en vanga's. Het nationaal park Ankarafantsika, rond het bosstation Ampijoroa en het Ravelobemeer, is de beste plek op de klassieke route, met de witborststeltral, de Schlegelasitie, de Vandamvanga en de Coquerelcoua. Kirindy en Bemaraha zitten in het regiopakket droge westen."
+        }
+      },
+      {
+        "title": {
+          "en": "Highlands and wetlands",
+          "nl": "Hoogland en wetlands"
+        },
+        "text": {
+          "en": "Around Antananarivo the lakes, marshes and rice fields hold waterbirds and a few endemics of open country, such as the Madagascar Wagtail, the Madagascar Munia and the Madagascar Swamp Warbler. Lake Alarobia in the city and the rice fields along the road out are easy places for the first days.",
+          "nl": "Rond Antananarivo hebben de meren, moerassen en rijstvelden watervogels en een paar endemen van open land, zoals de Madagaskarkwikstaart, het dwergekstertje en de Madagaskarrietzanger. Lake Alarobia in de stad en de rijstvelden langs de uitvalsweg zijn makkelijke plekken voor de eerste dagen."
+        }
+      },
+      {
+        "title": {
+          "en": "Isalo and the south",
+          "nl": "Isalo en het zuiden"
+        },
+        "text": {
+          "en": "Isalo National Park lies between the highlands and the dry south-west, with sandstone canyons, grassland and patches of forest along streams. It is a drier world with fewer endemics than the rainforest. The spiny forest birds of Ifaty, Zombitse and Tsimanampetsotsa are in the south-west pack.",
+          "nl": "Het nationaal park Isalo ligt tussen het hoogland en het droge zuidwesten, met zandsteenkloven, grasland en stukjes bos langs beken. Het is een drogere wereld met minder endemen dan het regenwoud. De vogels van het doornbos bij Ifaty, Zombitse en Tsimanampetsotsa zitten in het regiopakket zuidwesten."
+        }
+      }
+    ],
+    "families": [
+      {
+        "title": {
+          "en": "Vangas",
+          "nl": "Vanga's"
+        },
+        "text": {
+          "en": "The vangas are songbirds that spread out on Madagascar into very different shapes. The Hook-billed Vanga has a hooked bill, the Sickle-billed Vanga a long curved one, Pollen's and Van Dam's Vanga have flat, heavy bills, and the small newtonias have thin ones. Fourteen vangas and newtonias are in this trip, in rainforest and dry forest.",
+          "nl": "De vanga's zijn zangvogels die zich op Madagaskar in heel verschillende vormen hebben ontwikkeld. De haaksnavelvanga heeft een gehaakte snavel, de sikkelvanga een lange gebogen, de Pollenvanga en de Vandamvanga hebben platte, zware snavels, en de kleine newtonia's hebben dunne. Veertien vanga's en newtonia's zitten in deze reis, in regenwoud en droog bos."
+        }
+      },
+      {
+        "title": {
+          "en": "Asities",
+          "nl": "Asities"
+        },
+        "text": {
+          "en": "Four small forest birds that live only on Madagascar. The Velvet Asity and Schlegel's Asity eat fruit, and males wear bare coloured patches around the eye in the breeding season. The two sunbird-asities have long curved bills and feed on nectar like sunbirds.",
+          "nl": "Vier kleine bosvogels die alleen op Madagaskar leven. De fluweelasitie en de Schlegelasitie eten vruchten, en mannetjes hebben in het broedseizoen blote gekleurde vlekken rond het oog. De twee honingasities hebben een lange gebogen snavel en eten nectar als honingzuigers."
+        }
+      },
+      {
+        "title": {
+          "en": "Mesites",
+          "nl": "Steltrallen"
+        },
+        "text": {
+          "en": "Mesites are slim ground birds that walk through the forest in small groups and rarely fly. The family has three species, all on Madagascar, and two are in this trip: the White-breasted Mesite of the dry forest and the Brown Mesite of the rainforest.",
+          "nl": "Steltrallen zijn slanke grondvogels die in kleine groepen door het bos lopen en zelden vliegen. De familie heeft drie soorten, allemaal op Madagaskar, en twee zitten in deze reis: de witborststeltral van het droge bos en de bruine steltral van het regenwoud."
+        }
+      },
+      {
+        "title": {
+          "en": "Ground-rollers",
+          "nl": "Grondscharrelaars"
+        },
+        "text": {
+          "en": "Ground-rollers are relatives of the rollers that have taken to the forest floor, where they walk slowly and hunt from the ground. The family has five species, all on Madagascar, and four are in this trip: Scaly, Short-legged, Pitta-like and Rufous-headed Ground-Roller. They are shy, so go early with a guide.",
+          "nl": "Grondscharrelaars zijn verwanten van de scharrelaars die zijn overgestapt op de bosbodem, waar ze langzaam lopen en vanaf de grond jagen. De familie heeft vijf soorten, allemaal op Madagaskar, en vier zitten in deze reis: de geschubde, de gebandeerde, de blauwkop- en de Crossleygrondscharrelaar. Ze zijn schuw, dus ga vroeg met een gids."
+        }
+      },
+      {
+        "title": {
+          "en": "Tetrakas and relatives",
+          "nl": "Tetraka's en verwanten"
+        },
+        "text": {
+          "en": "The tetrakas and their relatives are olive and yellow songbirds of the forest, in a family that exists only on Madagascar. Seven are in this trip, including the White-throated Oxylabes, Spectacled Tetraka and Madagascar Yellowbrow.",
+          "nl": "De tetraka's en hun verwanten zijn olijfgroene en gele zangvogels van het bos, in een familie die alleen op Madagaskar voorkomt. Zeven zitten in deze reis, waaronder de witkeeloxylabes, de kortsnaveltetraka en de geelbrauwtetraka."
+        }
+      }
+    ],
+    "units": {
+      "endemics-1": {
+        "title": {
+          "en": "Partridge, pigeons, mesites and a coua",
+          "nl": "Patrijs, duiven, steltrallen en een coua"
+        }
+      },
+      "endemics-2": {
+        "title": {
+          "en": "Couas, a nightjar and two shy rails",
+          "nl": "Coua's, nachtzwaluw en twee rallen"
+        }
+      },
+      "endemics-3": {
+        "title": {
+          "en": "Rail, snipe, buttonquail and raptors",
+          "nl": "Ral, snip, vechtkwartel en roofvogels"
+        }
+      },
+      "endemics-4": {
+        "title": {
+          "en": "Owl, hoopoe and ground-rollers",
+          "nl": "Uil, hop en grondscharrelaars"
+        }
+      },
+      "endemics-5": {
+        "title": {
+          "en": "A ground-roller, kestrel and asities",
+          "nl": "Grondscharrelaar, valk en asities"
+        }
+      },
+      "endemics-6": {
+        "title": {
+          "en": "A newtonia and five vangas",
+          "nl": "Een newtonia en vijf vanga's"
+        }
+      },
+      "endemics-7": {
+        "title": {
+          "en": "Four vangas, a lark and a jery",
+          "nl": "Vier vanga's, een leeuwerik en een jery"
+        }
+      },
+      "endemics-8": {
+        "title": {
+          "en": "Warblers of reeds and forest",
+          "nl": "Zangers van riet en bos"
+        }
+      },
+      "endemics-9": {
+        "title": {
+          "en": "Tetrakas, a martin and a starling",
+          "nl": "Tetraka's, een zwaluw en een spreeuw"
+        }
+      },
+      "endemics-10": {
+        "title": {
+          "en": "Magpie-robin, weaver, fody and munia",
+          "nl": "Dayallijster, wever, fody en muniavink"
+        }
+      },
+      "endemics-11": {
+        "title": {
+          "en": "Ibis, buzzard, owl, kingfisher, lovebird",
+          "nl": "Ibis, buizerd, uil, ijsvogel, agapornis"
+        }
+      },
+      "endemics-12": {
+        "title": {
+          "en": "Sunbird-asity, cuckooshrike and vangas",
+          "nl": "Honingasitie, rupsvogel en vanga's"
+        }
+      },
+      "endemics-13": {
+        "title": {
+          "en": "Two jeries and a wagtail",
+          "nl": "Twee jery's en een kwikstaart"
+        }
+      }
+    }
+  }
+}

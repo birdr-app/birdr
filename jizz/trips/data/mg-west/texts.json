@@ -1,0 +1,89 @@
+{
+  "country": "MG-WEST",
+  "intro": {
+    "en": "The west of Madagascar is dry deciduous forest, lakes, marshes and river deltas: Kirindy and Bemaraha, the wetlands around Mahajanga, Lake Kinkony and the Betsiboka delta. This pack adds 40 birds on top of the Madagascar trip. The dry season from May to October is the easiest time for forest and water birds, and migrant shorebirds are on the coast from about October to April. Giant Coua, Madagascar Fish-Eagle, Humblot's Heron and Crab-Plover are the highlights.",
+    "nl": "De westkant van Madagaskar is droog loofbos, meren, moerassen en riviermondingen: Kirindy en Bemaraha, de wetlands rond Mahajanga, het meer van Kinkony en de delta van de Betsiboka. Dit pakket voegt 40 vogels toe bovenop de reis naar Madagaskar. Het droge seizoen van mei tot oktober is de makkelijkste tijd voor bos- en watervogels, en trekkende steltlopers zijn van ongeveer oktober tot april aan de kust. De Grote coua, de Madagaskarzeearend, de Madagaskarreiger en de Krabplevier zijn de hoogtepunten."
+  },
+  "units": {
+    "dry-forest-and-marsh-rails": {
+      "title": {
+        "en": "Couas, rails and the jacana",
+        "nl": "Couas, rallen en de jacana"
+      },
+      "intro": {
+        "en": "Two couas live in the dry forest of Kirindy and Bemaraha and run over the leaf litter, so listen for them and scan the ground. Giant Coua is the biggest of the family. The rails and the jacana belong to marshes and lakes, where the jacana walks on floating leaves and the Sakalava Rail stays hidden in the reeds.",
+        "nl": "Twee couas leven in het droge bos van Kirindy en Bemaraha en rennen over het bladstrooisel, dus luister goed en speur de grond af. De Grote coua is de grootste van de familie. De rallen en de jacana horen bij moerassen en meren, waar de jacana over drijvende bladeren loopt en de Olivierwaterhoen verborgen blijft in het riet."
+      }
+    },
+    "west-ducks": {
+      "title": {
+        "en": "Ducks of the western lakes",
+        "nl": "Eenden van de westelijke meren"
+      },
+      "intro": {
+        "en": "Four ducks of lakes and marshes with floating plants, such as Lake Kinkony and the wetlands near Mahajanga. African Pygmy-Goose is tiny, White-backed Duck sits low and dives, Knob-billed Duck is large and black and white, and Fulvous Whistling-Duck stands upright on a long neck.",
+        "nl": "Vier eenden van meren en moerassen met drijvende planten, zoals het meer van Kinkony en de wetlands bij Mahajanga. De Afrikaanse dwergeend is piepklein, de Witrugeend ligt laag in het water en duikt, de Afrikaanse knobbeleend is groot en zwart-wit en de Rosse fluiteend staat rechtop op een lange hals."
+      }
+    },
+    "storks-and-cormorants": {
+      "title": {
+        "en": "Storks, cormorants and the darter",
+        "nl": "Ooievaars en aalscholvers"
+      },
+      "intro": {
+        "en": "Big birds of lake shores and marshes in the west. African Openbill is dark and has a gap between its bill halves, and Yellow-billed Stork is white and pink with a long yellow bill. Reed Cormorant is small and long-tailed, and the African Darter swims with only its thin neck above the water.",
+        "nl": "Grote vogels van meeroevers en moerassen in het westen. De Afrikaanse gaper is donker en heeft een kier tussen de twee snavelhelften, en de Afrikaanse nimmerzat is wit met roze en heeft een lange gele snavel. De Afrikaanse dwergaalscholver is klein met een lange staart, en de Afrikaanse slangenhalsvogel zwemt met alleen de dunne hals boven water."
+      }
+    },
+    "rare-herons-ibises": {
+      "title": {
+        "en": "Rare herons, ibises and the fish-eagle",
+        "nl": "Zeldzame reigers, ibissen en de zeearend"
+      },
+      "intro": {
+        "en": "The prizes of the west, found along lake shores, river mouths and mangroves of the Betsiboka delta and Lake Kinkony. Humblot's Heron and the Madagascar Fish-Eagle are both rare, so watch from a quiet spot and scan the tree tops and mudbanks. Malagasy Sacred Ibis, Glossy Ibis and African Spoonbill are easier to find at the same wetlands.",
+        "nl": "De hoogtepunten van het westen, te vinden langs meeroevers, riviermondingen en mangrove van de Betsiboka-delta en het meer van Kinkony. De Madagaskarreiger en de Madagaskarzeearend zijn allebei zeldzaam, dus kijk vanaf een rustige plek en speur boomtoppen en slikbanken af. De Madagaskaribis, de Zwarte ibis en de Afrikaanse lepelaar zijn makkelijker te vinden bij dezelfde wetlands."
+      }
+    },
+    "plovers": {
+      "title": {
+        "en": "Plovers of the coast and mudflats",
+        "nl": "Plevieren van kust en wadden"
+      },
+      "intro": {
+        "en": "Four plovers of beaches, mudflats and lake shores. Three-banded Plover lives here all year. Common Ringed, Grey and Greater Sand Plovers arrive from the north in the northern winter. Compare size and the pattern of the breast band.",
+        "nl": "Vier plevieren van stranden, wadden en meeroevers. De Driebandplevier leeft hier het hele jaar. De Bontbekplevier, de Zilverplevier en de Woestijnplevier komen in de noordelijke winter uit het noorden. Vergelijk de grootte en de tekening van de borstband."
+      }
+    },
+    "sandpipers-1": {
+      "title": {
+        "en": "Sandpipers and the stilt",
+        "nl": "Strandlopers en de steltkluut"
+      },
+      "intro": {
+        "en": "Mostly migrants from the north, feeding at the edge of lagoons, rice fields and river mouths. Greenshank, Marsh and Wood Sandpipers are long-legged and greenish-grey, and Terek Sandpiper has an upturned bill and orange legs. Common Sandpiper bobs its tail, and Black-winged Stilt stays all year.",
+        "nl": "Vooral trekvogels uit het noorden, die foerageren langs lagunes, rijstvelden en riviermondingen. De Groenpootruiter, de Poelruiter en de Bosruiter hebben lange poten en zijn groengrijs, en de Terekruiter heeft een opwaarts gebogen snavel en oranje poten. De Oeverloper wipt met zijn staart en de Steltkluut blijft het hele jaar."
+      }
+    },
+    "sandpipers-2": {
+      "title": {
+        "en": "Shorebirds of the delta",
+        "nl": "Steltlopers van de delta"
+      },
+      "intro": {
+        "en": "A mixed set from the coast and the river deltas. The Crab-Plover is black and white with a heavy bill and long grey legs, and visits sandbars on the west coast. Whimbrel has a curved bill and a striped head, Turnstone works the shoreline, and Sanderling runs along the surf. The Greater Painted-Snipe hides in marsh, and the Madagascar Pratincole hunts over open ground near water.",
+        "nl": "Een gemengd gezelschap van de kust en de riviermondingen. De Krabplevier is zwart-wit met een zware snavel en lange grijze poten en bezoekt zandbanken aan de westkust. De Regenwulp heeft een gebogen snavel en een gestreepte kop, de Steenloper werkt de waterlijn af en de Drieteenstrandloper rent langs de branding. De Goudsnip verstopt zich in het moeras en de Madagaskarvorkstaartplevier jaagt boven open terrein bij water."
+      }
+    },
+    "west-terns": {
+      "title": {
+        "en": "Terns of the west coast",
+        "nl": "Sternen van de westkust"
+      },
+      "intro": {
+        "en": "Look from beaches, harbours and sandbars near Mahajanga. Caspian Tern is the largest, with a thick red bill. Great Crested Tern has a yellow bill and Lesser Crested Tern an orange one. Saunders's Tern is tiny, and the Whiskered Tern hunts over freshwater marshes.",
+        "nl": "Kijk vanaf stranden, havens en zandbanken bij Mahajanga. De Reuzenstern is de grootste, met een dikke rode snavel. De Grote kuifstern heeft een gele snavel en de Bengaalse stern een oranje snavel. De Saunders' dwergstern is piepklein, en de Witwangstern jaagt boven zoetwatermoerassen."
+      }
+    }
+  }
+}

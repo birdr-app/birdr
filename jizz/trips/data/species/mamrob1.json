@@ -1,0 +1,22 @@
+{
+  "code": "mamrob1",
+  "name": {
+    "en": "Madagascar Magpie-Robin",
+    "nl": "Madagaskardayallijster"
+  },
+  "latin": "Copsychus albospecularis",
+  "look_for": [
+    {
+      "en": "Male black with white wing patch",
+      "nl": "Mannetje zwart met wit vleugelvlak"
+    },
+    {
+      "en": "Female duller, grey-brown with rufous **rump**",
+      "nl": "Vrouwtje doffer, grijsbruin met roestkleurige **stuit**"
+    },
+    {
+      "en": "Bold, hops on the ground, cocks **tail**",
+      "nl": "Brutaal, hipt over de grond, houdt **staart** omhoog"
+    }
+  ]
+}

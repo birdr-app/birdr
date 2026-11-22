@@ -1,0 +1,22 @@
+{
+  "code": "madbuz1",
+  "name": {
+    "en": "Madagascar Buzzard",
+    "nl": "Madagaskarbuizerd"
+  },
+  "latin": "Buteo brachypterus",
+  "look_for": [
+    {
+      "en": "Medium buzzard with broad **wings**, short **tail**",
+      "nl": "Middelgrote buizerd met brede **vleugels** en korte **staart**"
+    },
+    {
+      "en": "Brown above, paler below with dark streaks",
+      "nl": "Boven bruin, onder lichter met donkere strepen"
+    },
+    {
+      "en": "Sits on treetops and poles, watching for prey",
+      "nl": "Zit op boomtoppen en palen en speurt naar prooi"
+    }
+  ]
+}

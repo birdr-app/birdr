@@ -1,0 +1,22 @@
+{
+  "code": "crobab1",
+  "name": {
+    "en": "Crossley's Vanga",
+    "nl": "Crossleyvanga"
+  },
+  "latin": "Mystacornis crossleyi",
+  "look_for": [
+    {
+      "en": "Walks on the forest floor, probing leaf litter",
+      "nl": "Loopt over de bosbodem en wroet in dood blad"
+    },
+    {
+      "en": "Olive **back**, grey **belly**, long olive-grey **bill**",
+      "nl": "Olijfgroene **rug**, grijze **buik**, lange olijfgrijze **snavel**"
+    },
+    {
+      "en": "Male black **face** and **throat**; female white throat",
+      "nl": "Mannetje zwart **gezicht** en **keel**; vrouwtje witte keel"
+    }
+  ]
+}

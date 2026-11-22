@@ -1,0 +1,22 @@
+{
+  "code": "comnew1",
+  "name": {
+    "en": "Common Newtonia",
+    "nl": "Roodbuiknewtonia"
+  },
+  "latin": "Newtonia brunneicauda",
+  "look_for": [
+    {
+      "en": "Small, plain, warbler-like bird with a thin **bill**",
+      "nl": "Kleine, effen, zangerachtige vogel met een dunne **snavel**"
+    },
+    {
+      "en": "Grey-brown **upperparts**, warm buff **underparts**",
+      "nl": "Grijsbruine **bovenzijde**, warm roomkleurige **onderzijde**"
+    },
+    {
+      "en": "Pale yellow **eye**; widespread, from forest to scrub",
+      "nl": "Bleekgeel **oog**; wijdverbreid, van bos tot struweel"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "note": "Where a visitor on the classic 2 to 3 week Madagascar route goes, for GeoModel scores (trip_prep_geoscore): Antananarivo and its lakes, Andasibe-Mantadia, Ranomafana, Isalo and Ankarafantsika. `packs` is the route mix of the region packs (far north, dry west, spiny south-west): each pack's areas share the weight given, so the first day stays a classic-route day. The country cut uses these own areas only. Coordinates typed by hand, not eBird hotspots; edit by hand.",
+  "packs": {
+    "MG-NORTH": 2,
+    "MG-WEST": 2,
+    "MG-SOUTH": 2
+  },
+  "areas": [
+    {
+      "name": "Antananarivo, Lake Alarobia and the Tana rice fields",
+      "lat": -18.88,
+      "lon": 47.53,
+      "weight": 1
+    },
+    {
+      "name": "Andasibe-Mantadia",
+      "lat": -18.94,
+      "lon": 48.42,
+      "weight": 1
+    },
+    {
+      "name": "Ranomafana National Park",
+      "lat": -21.25,
+      "lon": 47.42,
+      "weight": 1
+    },
+    {
+      "name": "Isalo National Park",
+      "lat": -22.55,
+      "lon": 45.37,
+      "weight": 1
+    },
+    {
+      "name": "Ankarafantsika and Lake Ravelobe",
+      "lat": -16.31,
+      "lon": 46.81,
+      "weight": 1
+    }
+  ]
+}

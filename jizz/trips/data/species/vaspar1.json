@@ -1,0 +1,22 @@
+{
+  "code": "vaspar1",
+  "name": {
+    "en": "Greater Vasa Parrot",
+    "nl": "Grote vasapapegaai"
+  },
+  "latin": "Coracopsis vasa",
+  "look_for": [
+    {
+      "en": "Large, bulky parrot, dull grey-black all over",
+      "nl": "Grote, zware papegaai, overal dof grijszwart"
+    },
+    {
+      "en": "Heavy horn-grey **bill**, bigger than Lesser Vasa's",
+      "nl": "Zware hoorngrijze **snavel**, groter dan bij de kleine vasapapegaai"
+    },
+    {
+      "en": "Lower, rougher calls than Lesser Vasa Parrot",
+      "nl": "Lagere, ruwere roep dan de kleine vasapapegaai"
+    }
+  ]
+}
