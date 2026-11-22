@@ -118,4 +118,12 @@ FAQ = [
             'progress stays with your account across devices.'
         ),
     },
+    {
+        'question': 'Was Motmot called Birdr before?',
+        'answer': (
+            'Yes. Motmot used to be called Birdr. It is the same app and the same project; '
+            'birdr.pro now forwards to motmot.club. It is not related to other apps that use '
+            'the name Birdr.'
+        ),
+    },
 ]

@@ -1127,4 +1127,40 @@ EXTRA_ENTRIES: list[tuple[str, tuple[str, ...]]] = [
             'ナショナルリーグ：国中のバーダーと一緒に1日1回のクイズ。',
         ),
     ),
+    (
+        'Was Motmot called Birdr before?',
+        (
+            'Heette Motmot eerst Birdr?',
+            '¿Motmot se llamaba antes Birdr?',
+            'Motmot s’appelait-il Birdr avant ?',
+            'Hieß Motmot früher Birdr?',
+            'Motmot si chiamava prima Birdr?',
+            'O Motmot se chamava Birdr antes?',
+            'Motmotは以前Birdrという名前でしたか？',
+        ),
+    ),
+    (
+        'Yes. Motmot used to be called Birdr. It is the same app and the same project; birdr.pro now forwards to motmot.club. It is not related to other apps that use the name Birdr.',
+        (
+            'Ja. Motmot heette eerder Birdr. Het is dezelfde app en hetzelfde project; birdr.pro stuurt nu door naar motmot.club. Het heeft niets te maken met andere apps die de naam Birdr gebruiken.',
+            'Sí. Motmot se llamaba antes Birdr. Es la misma app y el mismo proyecto; birdr.pro ahora redirige a motmot.club. No tiene relación con otras apps que usan el nombre Birdr.',
+            'Oui. Motmot s’appelait Birdr auparavant. C’est la même app et le même projet ; birdr.pro redirige désormais vers motmot.club. Il n’a aucun lien avec d’autres apps qui utilisent le nom Birdr.',
+            'Ja. Motmot hieß früher Birdr. Es ist dieselbe App und dasselbe Projekt; birdr.pro leitet jetzt auf motmot.club weiter. Es hat keine Verbindung zu anderen Apps, die den Namen Birdr verwenden.',
+            'Sì. Motmot si chiamava Birdr. È la stessa app e lo stesso progetto; birdr.pro ora rimanda a motmot.club. Non ha alcun legame con altre app che usano il nome Birdr.',
+            'Sim. O Motmot se chamava Birdr. É o mesmo app e o mesmo projeto; o birdr.pro agora redireciona para motmot.club. Não tem relação com outros apps que usam o nome Birdr.',
+            'はい。Motmotは以前Birdrという名前でした。同じアプリ、同じプロジェクトです。birdr.proは現在motmot.clubに転送されます。Birdrという名前を使う他のアプリとは関係ありません。',
+        ),
+    ),
+    (
+        'Motmot was formerly called Birdr; birdr.pro now forwards here.',
+        (
+            'Motmot heette eerder Birdr; birdr.pro stuurt nu door naar deze site.',
+            'Motmot se llamaba antes Birdr; birdr.pro ahora redirige aquí.',
+            'Motmot s’appelait auparavant Birdr ; birdr.pro redirige désormais ici.',
+            'Motmot hieß früher Birdr; birdr.pro leitet jetzt hierher weiter.',
+            'Motmot si chiamava prima Birdr; birdr.pro ora rimanda qui.',
+            'O Motmot se chamava antes Birdr; o birdr.pro agora redireciona para cá.',
+            'Motmotは以前Birdrという名前でした。birdr.proは現在こちらに転送されます。',
+        ),
+    ),
 ]

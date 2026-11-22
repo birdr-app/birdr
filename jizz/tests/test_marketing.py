@@ -1148,6 +1148,15 @@ class MarketingPagesTests(TestCase):
         self.assertEqual(self.client.get('/sitemap-nope.xml').status_code, 404)
         self.assertEqual(self.client.get('/sitemap-birds.xml?page=2').status_code, 404)
 
+    def test_old_name_birdr_is_mentioned_on_home_and_faq(self):
+        home = self.client.get('/site/').content.decode()
+        self.assertIn('formerly called Birdr', home)
+        self.assertIn('"alternateName": ["Motmot Bird Quiz", "motmot.club", "Birdr"]', home)
+        faq = self.client.get('/site/faq/').content.decode()
+        self.assertIn('Was Motmot called Birdr before?', faq)
+        nl = self.client.get('/nl/site/faq/').content.decode()
+        self.assertIn('Heette Motmot eerst Birdr?', nl)
+
     def test_birds_sitemap_is_capped_to_the_widest_species(self):
         with patch('jizz.marketing.sitemaps.BIRDS_SITEMAP_LIMIT', 0):
             birds = self.client.get('/sitemap-birds.xml').content.decode()
