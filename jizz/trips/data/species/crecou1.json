@@ -1,0 +1,22 @@
+{
+  "code": "crecou1",
+  "name": {
+    "en": "Crested Coua",
+    "nl": "Kuifcoua"
+  },
+  "latin": "Coua cristata",
+  "look_for": [
+    {
+      "en": "Grey **crest**, blue bare skin round **eye**",
+      "nl": "Grijze **kuif**, blauwe kale huid rond het **oog**"
+    },
+    {
+      "en": "Rufous **breast**, white **belly**, greenish-grey **back**",
+      "nl": "Roestkleurige **borst**, witte **buik**, groengrijze **rug**"
+    },
+    {
+      "en": "Long **tail** with white tips; hops through canopy",
+      "nl": "Lange **staart** met witte punten, hupt door het bladerdak"
+    }
+  ]
+}

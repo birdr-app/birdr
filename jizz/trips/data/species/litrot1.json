@@ -1,0 +1,22 @@
+{
+  "code": "litrot1",
+  "name": {
+    "en": "Littoral Rock Thrush",
+    "nl": "Duinrotslijster"
+  },
+  "latin": "Monticola imerina",
+  "look_for": [
+    {
+      "en": "Male pale grey **head** and **back**",
+      "nl": "Mannetje met lichtgrijze **kop** en **rug**"
+    },
+    {
+      "en": "Dull orange **underparts**; female much duller",
+      "nl": "Doffe oranje **onderzijde**; vrouwtje veel doffer"
+    },
+    {
+      "en": "Perches on coastal scrub and euphorbia, south coast",
+      "nl": "Zit in kuststruweel en wolfsmelk aan de zuidkust"
+    }
+  ]
+}

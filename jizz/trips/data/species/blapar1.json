@@ -1,0 +1,22 @@
+{
+  "code": "blapar1",
+  "name": {
+    "en": "Lesser Vasa Parrot",
+    "nl": "Kleine vasapapegaai"
+  },
+  "latin": "Coracopsis nigra",
+  "look_for": [
+    {
+      "en": "Dull brownish black, with a bare grey **eye-ring**",
+      "nl": "Dof bruinzwart, met een kale grijze **oogring**"
+    },
+    {
+      "en": "Smaller than Greater Vasa, with a slimmer **bill**",
+      "nl": "Kleiner dan de grote vasapapegaai, met een slankere **snavel**"
+    },
+    {
+      "en": "Calls higher-pitched than Greater Vasa Parrot",
+      "nl": "Roep hoger dan die van de grote vasapapegaai"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "madmun1",
+  "name": {
+    "en": "Madagascar Munia",
+    "nl": "Dwergekstertje"
+  },
+  "latin": "Lepidopygia nana",
+  "look_for": [
+    {
+      "en": "Tiny finch, grey **head**, black **chin**",
+      "nl": "Heel klein vinkje met grijze **kop** en zwarte **kin**"
+    },
+    {
+      "en": "Dark brown **back**, silvery **bill**",
+      "nl": "Donkerbruine **rug**, zilverkleurige **snavel**"
+    },
+    {
+      "en": "Gregarious, feeds on grass seeds in flocks",
+      "nl": "Gezellig, eet in groepjes graszaden"
+    }
+  ]
+}

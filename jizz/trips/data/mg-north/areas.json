@@ -1,0 +1,47 @@
+{
+  "note": "Far north: Masoala and Marojejy rainforest, Montagne d'Ambre, Ankarana and Nosy Be. Coordinates typed by hand; edit by hand.",
+  "areas": [
+    {
+      "name": "Maroantsetra and Masoala",
+      "lat": -15.43,
+      "lon": 49.74,
+      "weight": 1
+    },
+    {
+      "name": "Nosy Mangabe",
+      "lat": -15.5,
+      "lon": 49.77,
+      "weight": 1
+    },
+    {
+      "name": "Marojejy, Andapa",
+      "lat": -14.43,
+      "lon": 49.65,
+      "weight": 1
+    },
+    {
+      "name": "Montagne d'Ambre",
+      "lat": -12.52,
+      "lon": 49.17,
+      "weight": 1
+    },
+    {
+      "name": "Ankarana",
+      "lat": -12.93,
+      "lon": 49.1,
+      "weight": 1
+    },
+    {
+      "name": "Nosy Be, Lokobe",
+      "lat": -13.41,
+      "lon": 48.33,
+      "weight": 1
+    },
+    {
+      "name": "Diego Suarez wetlands",
+      "lat": -12.28,
+      "lon": 49.29,
+      "weight": 1
+    }
+  ]
+}

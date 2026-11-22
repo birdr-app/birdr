@@ -1,0 +1,22 @@
+{
+  "code": "madrai1",
+  "name": {
+    "en": "Madagascar Rail",
+    "nl": "Madagaskarwaterral"
+  },
+  "latin": "Rallus madagascariensis",
+  "look_for": [
+    {
+      "en": "Brown, streaked rail with a long red **bill**",
+      "nl": "Bruine, gestreepte ral met een lange rode **snavel**"
+    },
+    {
+      "en": "Greyish **face** and throat, white under the **tail**",
+      "nl": "Grijzig **gezicht** en keel, wit onder de **staart**"
+    },
+    {
+      "en": "Skulks at the edge of reeds and wet forest",
+      "nl": "Sluipt langs de rand van riet en vochtig bos"
+    }
+  ]
+}

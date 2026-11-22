@@ -1,0 +1,22 @@
+{
+  "code": "allgal1",
+  "name": {
+    "en": "Allen's Gallinule",
+    "nl": "Afrikaans purperhoen"
+  },
+  "latin": "Porphyrio alleni",
+  "look_for": [
+    {
+      "en": "Small, dark purple-blue with green **back**",
+      "nl": "Klein, donker paarsblauw met groene **rug**"
+    },
+    {
+      "en": "Red **bill** and **legs**",
+      "nl": "Rode **snavel** en **poten**"
+    },
+    {
+      "en": "Skulks in reeds and papyrus swamps",
+      "nl": "Sluipt door riet en papyrusmoeras"
+    }
+  ]
+}

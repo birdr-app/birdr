@@ -1,0 +1,22 @@
+{
+  "code": "mafeag1",
+  "name": {
+    "en": "Madagascar Fish-Eagle",
+    "nl": "Madagaskarzeearend"
+  },
+  "latin": "Icthyophaga vociferoides",
+  "look_for": [
+    {
+      "en": "Large eagle, dark brown body, pale **head**",
+      "nl": "Grote arend met donkerbruin lijf en lichte **kop**"
+    },
+    {
+      "en": "White **tail** in flight",
+      "nl": "Witte **staart** in vlucht"
+    },
+    {
+      "en": "Perches by rivers and coastal water, hunts fish",
+      "nl": "Zit langs rivieren en kustwater, jaagt op vis"
+    }
+  ]
+}

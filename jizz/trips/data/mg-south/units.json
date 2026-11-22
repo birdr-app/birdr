@@ -1,0 +1,217 @@
+{
+  "country": "MG-SOUTH",
+  "groups": [
+    {
+      "slug": "mesites",
+      "name": {
+        "en": "Mesites",
+        "nl": "Steltrallen"
+      },
+      "species": [
+        "submes1"
+      ],
+      "endemics": [
+        "submes1"
+      ]
+    },
+    {
+      "slug": "sandgrouse",
+      "name": {
+        "en": "Sandgrouse",
+        "nl": "Zandhoenders"
+      },
+      "species": [
+        "madsan1"
+      ],
+      "endemics": [
+        "madsan1"
+      ]
+    },
+    {
+      "slug": "cuckoos",
+      "name": {
+        "en": "Cuckoos",
+        "nl": "Koekoes"
+      },
+      "species": [
+        "vercou1",
+        "runcou1"
+      ],
+      "endemics": [
+        "vercou1",
+        "runcou1"
+      ]
+    },
+    {
+      "slug": "rails-gallinules-and-allies",
+      "name": {
+        "en": "Rails, Gallinules, and Allies",
+        "nl": "Rallen, Koeten en aanverwanten"
+      },
+      "species": [
+        "rekcoo1"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "gulls-terns-and-skimmers",
+      "name": {
+        "en": "Gulls, Terns, and Skimmers",
+        "nl": "Meeuwen, Sterns en Schaarbekken"
+      },
+      "species": [
+        "grhgul",
+        "kelgul"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "flamingos",
+      "name": {
+        "en": "Flamingos",
+        "nl": "Flamingo's"
+      },
+      "species": [
+        "lesfla1",
+        "grefla3"
+      ],
+      "endemics": []
+    },
+    {
+      "slug": "rollers-and-allies",
+      "name": {
+        "en": "Rollers and Allies",
+        "nl": "Scharrelaars en aanverwanten"
+      },
+      "species": [
+        "ltgrol1"
+      ],
+      "endemics": [
+        "ltgrol1"
+      ]
+    },
+    {
+      "slug": "vangas-helmetshrikes-and-allies",
+      "name": {
+        "en": "Vangas, Helmetshrikes, and Allies",
+        "nl": "Vanga's"
+      },
+      "species": [
+        "arcnew1",
+        "resvan1",
+        "lafvan1"
+      ],
+      "endemics": [
+        "arcnew1",
+        "resvan1",
+        "lafvan1"
+      ]
+    },
+    {
+      "slug": "reed-warblers-and-allies",
+      "name": {
+        "en": "Reed Warblers and Allies",
+        "nl": "Karekieten en aanverwanten"
+      },
+      "species": [
+        "subbrw1"
+      ],
+      "endemics": [
+        "subbrw1"
+      ]
+    },
+    {
+      "slug": "malagasy-warblers",
+      "name": {
+        "en": "Malagasy Warblers",
+        "nl": "Malagasy Warblers"
+      },
+      "species": [
+        "thamno2",
+        "apptet1"
+      ],
+      "endemics": [
+        "thamno2",
+        "apptet1"
+      ]
+    },
+    {
+      "slug": "old-world-flycatchers",
+      "name": {
+        "en": "Old World Flycatchers",
+        "nl": "Vliegenvangers van de Oude Wereld"
+      },
+      "species": [
+        "litrot1"
+      ],
+      "endemics": [
+        "litrot1"
+      ]
+    }
+  ],
+  "first_day": [],
+  "units": [
+    {
+      "slug": "spiny-forest-ground-birds",
+      "title": {
+        "en": "Ground birds of the spiny forest",
+        "nl": "Grondvogels van het doornbos"
+      },
+      "groups": [
+        "rollers-and-allies",
+        "mesites",
+        "cuckoos",
+        "sandgrouse"
+      ],
+      "species": [
+        "ltgrol1",
+        "submes1",
+        "runcou1",
+        "vercou1",
+        "madsan1"
+      ]
+    },
+    {
+      "slug": "spiny-forest-songbirds",
+      "title": {
+        "en": "Songbirds of spiny forest and Zombitse",
+        "nl": "Zangvogels van doornbos en Zombitse"
+      },
+      "groups": [
+        "vangas-helmetshrikes-and-allies",
+        "malagasy-warblers",
+        "reed-warblers-and-allies",
+        "old-world-flycatchers"
+      ],
+      "species": [
+        "lafvan1",
+        "resvan1",
+        "thamno2",
+        "arcnew1",
+        "subbrw1",
+        "apptet1",
+        "litrot1"
+      ]
+    },
+    {
+      "slug": "coast-and-lakes",
+      "title": {
+        "en": "Flamingos, a coot and coast gulls",
+        "nl": "Flamingo's, een meerkoet en kustmeeuwen"
+      },
+      "groups": [
+        "flamingos",
+        "rails-gallinules-and-allies",
+        "gulls-terns-and-skimmers"
+      ],
+      "species": [
+        "grefla3",
+        "lesfla1",
+        "rekcoo1",
+        "kelgul",
+        "grhgul"
+      ]
+    }
+  ],
+  "endemic_units": []
+}

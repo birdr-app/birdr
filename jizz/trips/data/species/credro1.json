@@ -1,0 +1,22 @@
+{
+  "code": "credro1",
+  "name": {
+    "en": "Crested Drongo",
+    "nl": "Kuifdrongo"
+  },
+  "latin": "Dicrurus forficatus",
+  "look_for": [
+    {
+      "en": "Glossy black with a long, deeply forked **tail**",
+      "nl": "Glanzend zwart met een lange, diep gevorkte **staart**"
+    },
+    {
+      "en": "Small **crest** above the **bill**, red **eye**",
+      "nl": "Kleine **kuif** boven de **snavel**, rood **oog**"
+    },
+    {
+      "en": "Bold, noisy, perches upright and sallies for insects",
+      "nl": "Brutaal en luidruchtig, zit rechtop en vangt insecten in korte uitvallen"
+    }
+  ]
+}

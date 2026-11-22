@@ -1,0 +1,39 @@
+{
+  "country": "MG-SOUTH",
+  "intro": {
+    "en": "The arid south-west of Madagascar is a land of spiny forest, salt flats and soda lakes around Toliara, Ifaty and Mangily, with Zombitse and Tsimanampetsotsa further out. This pack adds 17 birds on top of the Madagascar trip. The dry season from May to October suits it best. Long-tailed Ground-Roller, Subdesert Mesite, Running Coua and the flamingos are the headliners.",
+    "nl": "Het droge zuidwesten van Madagaskar is een land van doornbos, zoutvlakten en sodameren rond Toliara, Ifaty en Mangily, met Zombitse en Tsimanampetsotsa iets verder weg. Dit pakket voegt 17 vogels toe bovenop de reis naar Madagaskar. Het droge seizoen van mei tot oktober past er het best bij. De Langstaartgrondscharrelaar, de Krombeksteltral, de Rencoua en de flamingo's zijn de blikvangers."
+  },
+  "units": {
+    "spiny-forest-ground-birds": {
+      "title": {
+        "en": "Ground birds of the spiny forest",
+        "nl": "Grondvogels van het doornbos"
+      },
+      "intro": {
+        "en": "Five birds that live on the ground in the spiny forest near Ifaty and Mangily. Go early in the morning, when the Long-tailed Ground-Roller and the Subdesert Mesite are most active, and walk slowly. The couas run through the undergrowth, so look for a long tail disappearing into the bushes. Madagascar Sandgrouse is easiest around dawn on open dry ground.",
+        "nl": "Vijf vogels die op de grond leven in het doornbos bij Ifaty en Mangily. Ga vroeg in de ochtend, als de Langstaartgrondscharrelaar en de Krombeksteltral het actiefst zijn, en loop langzaam. De couas rennen door het kreupelhout, dus let op een lange staart die tussen de struiken verdwijnt. Het Madagaskarzandhoen zie je het makkelijkst rond zonsopgang op open, droge grond."
+      }
+    },
+    "spiny-forest-songbirds": {
+      "title": {
+        "en": "Songbirds of spiny forest and Zombitse",
+        "nl": "Zangvogels van doornbos en Zombitse"
+      },
+      "intro": {
+        "en": "Small birds of thorny scrub near Toliara, found by their calls. Lafresnaye's Vanga has a heavy hooked bill, and the Red-shouldered Vanga, Thamnornis, Archbold's Newtonia and the Subdesert Brush-Warbler stay low in the bushes. Appert's Tetraka lives in the dry forest of Zombitse, and the Littoral Rock Thrush sits on coastal scrub.",
+        "nl": "Kleine vogels van doornig struweel bij Toliara, die je vindt op hun geluid. De Lafresnayevanga heeft een zware, gehaakte snavel, en de Roodschoudervanga, de Kiritikazanger, de Archboldnewtonia en de Lantzzanger blijven laag in de struiken. De Apperttetraka leeft in het droge bos van Zombitse en de Duinrotslijster zit op kuststruweel."
+      }
+    },
+    "coast-and-lakes": {
+      "title": {
+        "en": "Flamingos, a coot and coast gulls",
+        "nl": "Flamingo's, een meerkoet en kustmeeuwen"
+      },
+      "intro": {
+        "en": "Birds of the shallow lakes, salt flats and shore around Toliara and Tsimanampetsotsa. Greater Flamingo is bigger and paler than Lesser, with a pink bill tipped black. The Red-knobbed Coot is black with a white bill. Grey-hooded Gull is small and pale, and Kelp Gull is large and black-backed.",
+        "nl": "Vogels van de ondiepe meren, zoutvlakten en kust rond Toliara en Tsimanampetsotsa. De Flamingo is groter en lichter dan de Kleine flamingo, met een roze snavel met een zwarte punt. De Knobbelmeerkoet is zwart met een witte snavel. De Grijskopmeeuw is klein en licht, en de Kelpmeeuw is groot met een zwarte rug."
+      }
+    }
+  }
+}

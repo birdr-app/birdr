@@ -1,0 +1,22 @@
+{
+  "code": "lobber1",
+  "name": {
+    "en": "Long-billed Bernieria",
+    "nl": "Bernieria"
+  },
+  "latin": "Bernieria madagascariensis",
+  "look_for": [
+    {
+      "en": "Very long, thin, slightly curved **bill**",
+      "nl": "Zeer lange, dunne, licht gebogen **snavel**"
+    },
+    {
+      "en": "Dull olive-brown above, yellowish below",
+      "nl": "Dof olijfbruin boven, geelachtig onder"
+    },
+    {
+      "en": "Large, long-tailed, joins mixed-species flocks",
+      "nl": "Groot en langstaartig, sluit aan bij gemengde groepen"
+    }
+  ]
+}

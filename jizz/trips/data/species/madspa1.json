@@ -1,0 +1,22 @@
+{
+  "code": "madspa1",
+  "name": {
+    "en": "Madagascar Sparrowhawk",
+    "nl": "Madagaskarsperwer"
+  },
+  "latin": "Accipiter madagascariensis",
+  "look_for": [
+    {
+      "en": "Forest hawk with short rounded **wings**, long **tail**",
+      "nl": "Bosroofvogel met korte, ronde **vleugels** en lange **staart**"
+    },
+    {
+      "en": "Dark grey **back**, barred pale **underparts**",
+      "nl": "Donkergrijze **rug**, lichte **onderzijde** met banden"
+    },
+    {
+      "en": "Darts through trees after birds",
+      "nl": "Schiet door de bomen achter vogels aan"
+    }
+  ]
+}

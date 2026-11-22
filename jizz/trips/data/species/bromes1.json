@@ -1,0 +1,22 @@
+{
+  "code": "bromes1",
+  "name": {
+    "en": "Brown Mesite",
+    "nl": "Bruine steltral"
+  },
+  "latin": "Mesitornis unicolor",
+  "look_for": [
+    {
+      "en": "Plain tawny-brown bird of the forest floor",
+      "nl": "Effen roodbruine vogel van de bosbodem"
+    },
+    {
+      "en": "No bold face pattern; short straight **bill**",
+      "nl": "Geen opvallende gezichtstekening; korte rechte **snavel**"
+    },
+    {
+      "en": "Shy, flicks leaves aside, rarely flies",
+      "nl": "Schuw, schopt blaadjes opzij, vliegt zelden"
+    }
+  ]
+}

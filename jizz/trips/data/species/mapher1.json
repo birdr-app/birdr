@@ -1,0 +1,22 @@
+{
+  "code": "mapher1",
+  "name": {
+    "en": "Malagasy Pond Heron",
+    "nl": "Madagaskarralreiger"
+  },
+  "latin": "Ardeola idae",
+  "look_for": [
+    {
+      "en": "Small, stocky heron with a short neck",
+      "nl": "Kleine, gedrongen reiger met een korte nek"
+    },
+    {
+      "en": "Breeding birds white with a blue **bill**",
+      "nl": "Broedvogels wit met een blauwe **snavel**"
+    },
+    {
+      "en": "Otherwise streaked brown; **wings** flash white",
+      "nl": "Anders bruin gestreept; **vleugels** flitsen wit"
+    }
+  ]
+}

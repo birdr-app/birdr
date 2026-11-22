@@ -1,0 +1,22 @@
+{
+  "code": "bluvan3",
+  "name": {
+    "en": "Madagascar Blue Vanga",
+    "nl": "Blauwe vanga"
+  },
+  "latin": "Cyanolanius madagascarinus",
+  "look_for": [
+    {
+      "en": "Male bright blue above, pure white below",
+      "nl": "Mannetje helderblauw boven, zuiver wit onder"
+    },
+    {
+      "en": "Black line from the **bill** through the **eye**",
+      "nl": "Zwarte streep van de **snavel** door het **oog**"
+    },
+    {
+      "en": "Female duller, **breast** sometimes washed orange",
+      "nl": "Vrouwtje doffer, **borst** soms oranje getint"
+    }
+  ]
+}

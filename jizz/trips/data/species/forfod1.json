@@ -1,0 +1,22 @@
+{
+  "code": "forfod1",
+  "name": {
+    "en": "Forest Fody",
+    "nl": "Rode boswever"
+  },
+  "latin": "Foudia omissa",
+  "look_for": [
+    {
+      "en": "Male red **head** and **breast**, olive-brown **back**",
+      "nl": "Mannetje met rode **kop** en **borst**, olijfbruine **rug**"
+    },
+    {
+      "en": "Female plain olive-brown, dull yellowish below",
+      "nl": "Vrouwtje egaal olijfbruin, doffe gele onderzijde"
+    },
+    {
+      "en": "Keeps to rainforest, often in mixed flocks",
+      "nl": "Blijft in regenwoud, vaak in gemengde groepen"
+    }
+  ]
+}

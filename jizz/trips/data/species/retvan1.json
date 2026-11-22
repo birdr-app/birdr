@@ -1,0 +1,22 @@
+{
+  "code": "retvan1",
+  "name": {
+    "en": "Red-tailed Vanga",
+    "nl": "Roodstaartvanga"
+  },
+  "latin": "Calicalicus madagascariensis",
+  "look_for": [
+    {
+      "en": "Tiny, plump vanga with a stout **bill**",
+      "nl": "Klein, gedrongen vanga met een stevige **snavel**"
+    },
+    {
+      "en": "Bright rufous **rump** and **tail**",
+      "nl": "Fel roestrode **stuit** en **staart**"
+    },
+    {
+      "en": "Male black **throat**, white **cheeks**; female white **eye-ring**",
+      "nl": "Mannetje zwarte **keel**, witte **wangen**; vrouwtje witte **oogring**"
+    }
+  ]
+}

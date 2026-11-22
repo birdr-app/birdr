@@ -1,0 +1,22 @@
+{
+  "code": "mabpig1",
+  "name": {
+    "en": "Madagascar Blue-Pigeon",
+    "nl": "Madagaskarblauwduif"
+  },
+  "latin": "Alectroenas madagascariensis",
+  "look_for": [
+    {
+      "en": "Blue pigeon with a deep red **tail**",
+      "nl": "Blauwe duif met een dieprode **staart**"
+    },
+    {
+      "en": "Bare red skin round the yellow **eye**",
+      "nl": "Kale rode huid rond het gele **oog**"
+    },
+    {
+      "en": "Feeds in treetops, often above the canopy",
+      "nl": "Eet in boomtoppen, vaak boven het bladerdak"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "malkin2",
+  "name": {
+    "en": "Malagasy Kingfisher",
+    "nl": "Zwartsnavelijsvogel"
+  },
+  "latin": "Corythornis vintsioides",
+  "look_for": [
+    {
+      "en": "Small kingfisher, orange below, blue above",
+      "nl": "Kleine ijsvogel, oranje onder en blauw boven"
+    },
+    {
+      "en": "Black **bill**, unlike the red-billed pygmy kingfisher",
+      "nl": "Zwarte **snavel**, anders dan de rode van de dwergijsvogel"
+    },
+    {
+      "en": "Perches low over water, dives for fish",
+      "nl": "Zit laag boven water en duikt naar vis"
+    }
+  ]
+}

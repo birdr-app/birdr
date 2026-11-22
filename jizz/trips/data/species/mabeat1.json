@@ -1,0 +1,22 @@
+{
+  "code": "mabeat1",
+  "name": {
+    "en": "Olive Bee-eater",
+    "nl": "Madagaskarbijeneter"
+  },
+  "latin": "Merops superciliosus",
+  "look_for": [
+    {
+      "en": "Slim green bee-eater with a rufous **throat**",
+      "nl": "Slanke groene bijeneter met een roodbruine **keel**"
+    },
+    {
+      "en": "Black **eye-stripe**, pale blue **brow**",
+      "nl": "Zwarte **oogstreep** met lichtblauwe **wenkbrauwstreep**"
+    },
+    {
+      "en": "Sallies from wires after flying insects",
+      "nl": "Vliegt vanaf draden uit achter insecten aan"
+    }
+  ]
+}

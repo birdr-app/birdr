@@ -1,0 +1,22 @@
+{
+  "code": "bretai1",
+  "name": {
+    "en": "Brown Emutail",
+    "nl": "Madagaskarstruikzanger"
+  },
+  "latin": "Bradypterus brunneus",
+  "look_for": [
+    {
+      "en": "Tiny tawny-brown bird, orange-brown **underparts**",
+      "nl": "Klein roodbruin vogeltje met oranjebruine **onderzijde**"
+    },
+    {
+      "en": "Very long, spiky **tail** of bare dark shafts",
+      "nl": "Zeer lange, stekelige **staart** van kale donkere schachten"
+    },
+    {
+      "en": "Skulks in dense forest undergrowth and bamboo",
+      "nl": "Sluipt door dicht bosonderhout en bamboe"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "madwag1",
+  "name": {
+    "en": "Madagascar Wagtail",
+    "nl": "Madagaskarkwikstaart"
+  },
+  "latin": "Motacilla flaviventris",
+  "look_for": [
+    {
+      "en": "Grey above, black band across white **breast**",
+      "nl": "Grijs boven, zwarte band over witte **borst**"
+    },
+    {
+      "en": "Yellow **belly**, short white eyebrow",
+      "nl": "Gele **buik**, korte witte wenkbrauwstreep"
+    },
+    {
+      "en": "Bobs **tail** by water, leaps for insects",
+      "nl": "Wipt met **staart** langs water, springt naar insecten"
+    }
+  ]
+}

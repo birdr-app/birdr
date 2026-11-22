@@ -1,0 +1,19 @@
+{
+  "slug": "cuckoo-roller",
+  "about": {
+    "en": "A medium-sized bird of the forest canopy with a big head, short legs and a long tail. Males are grey and green with a glossy dark back, females brown and streaked. It sits upright and still on high bare branches, swoops over the trees in display and calls with loud, whistled notes.",
+    "nl": "Een middelgrote vogel van het bosdak met een grote kop, korte poten en een lange staart. Mannetjes zijn grijs en groen met een glanzende donkere rug, vrouwtjes bruin en gestreept. Hij zit rechtop en stil op hoge kale takken, zwenkt in baltsvlucht over de bomen en roept met luide, gefluite tonen."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "cuckoos",
+        "rollers-and-allies"
+      ],
+      "text": {
+        "en": "Despite the name it is neither a true cuckoo nor a true roller: it forms a family of its own. Look for the long tail and the habit of sitting still on high bare branches.",
+        "nl": "Ondanks de naam is het geen echte koekoek en geen echte scharrelaar: hij vormt een eigen familie. Let op de lange staart en de gewoonte om stil op hoge kale takken te zitten."
+      }
+    }
+  ]
+}

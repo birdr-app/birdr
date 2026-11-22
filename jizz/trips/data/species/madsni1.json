@@ -1,0 +1,22 @@
+{
+  "code": "madsni1",
+  "name": {
+    "en": "Madagascar Snipe",
+    "nl": "Madagaskarsnip"
+  },
+  "latin": "Gallinago macrodactyla",
+  "look_for": [
+    {
+      "en": "Boldly streaked snipe with golden lines down the **back**",
+      "nl": "Opvallend gestreepte snip met gouden strepen over de **rug**"
+    },
+    {
+      "en": "Long, straight dark **bill** probing soft mud",
+      "nl": "Lange, rechte donkere **snavel** die in zachte modder prikt"
+    },
+    {
+      "en": "Freezes, then flushes in zigzag flight",
+      "nl": "Drukt zich plat en vliegt zigzaggend op"
+    }
+  ]
+}

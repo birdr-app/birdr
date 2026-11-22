@@ -1,0 +1,22 @@
+{
+  "code": "apptet1",
+  "name": {
+    "en": "Appert's Tetraka",
+    "nl": "Apperttetraka"
+  },
+  "latin": "Xanthomixis apperti",
+  "look_for": [
+    {
+      "en": "Grey **head**, white **throat**, green **back**",
+      "nl": "Grijze **kop**, witte **keel**, groene **rug**"
+    },
+    {
+      "en": "Pink **bill**, orange wash on flanks",
+      "nl": "Roze **snavel**, oranje waas op de flanken"
+    },
+    {
+      "en": "Feeds on the ground and in low shrubs",
+      "nl": "Zoekt op de grond en in lage struiken"
+    }
+  ]
+}

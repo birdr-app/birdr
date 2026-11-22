@@ -1,0 +1,22 @@
+{
+  "code": "fragos2",
+  "name": {
+    "en": "Frances's Sparrowhawk",
+    "nl": "Madagaskarshikra"
+  },
+  "latin": "Tachyspiza francesiae",
+  "look_for": [
+    {
+      "en": "Small, slim hawk with long thin yellow **legs**",
+      "nl": "Kleine, slanke havik met lange dunne gele **poten**"
+    },
+    {
+      "en": "Grey **back**, pale **underparts** with fine barring",
+      "nl": "Grijze **rug**, lichte **onderzijde** met fijne banden"
+    },
+    {
+      "en": "Darts after small birds in dry forest",
+      "nl": "Schiet in droog bos achter kleine vogels aan"
+    }
+  ]
+}

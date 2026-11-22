@@ -1,0 +1,22 @@
+{
+  "code": "crywar1",
+  "name": {
+    "en": "Cryptic Warbler",
+    "nl": "Cryptische zanger"
+  },
+  "latin": "Cryptosylvicola randrianasoloi",
+  "look_for": [
+    {
+      "en": "Tiny, dull olive-green warbler of mountain forest",
+      "nl": "Klein, dof olijfgroen zangertje van bergbos"
+    },
+    {
+      "en": "Olive **back**, grey-yellow **underparts**, faint **eyebrow**",
+      "nl": "Olijfgroene **rug**, grijsgele **onderzijde**, vage **wenkbrauw**"
+    },
+    {
+      "en": "Dark upper **bill**, pale pink lower; feeds in canopy",
+      "nl": "Donkere bovensnavel, bleekroze onderste; foerageert in het kronendak"
+    }
+  ]
+}

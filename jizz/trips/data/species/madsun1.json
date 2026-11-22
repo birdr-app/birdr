@@ -1,0 +1,22 @@
+{
+  "code": "madsun1",
+  "name": {
+    "en": "Malagasy Sunbird",
+    "nl": "Madagaskarhoningzuiger"
+  },
+  "latin": "Cinnyris notatus",
+  "look_for": [
+    {
+      "en": "Large sunbird with a very long curved **bill**",
+      "nl": "Grote honingzuiger met een zeer lange gebogen **snavel**"
+    },
+    {
+      "en": "Male glossy dark green, no yellow **belly**",
+      "nl": "Mannetje glanzend donkergroen, geen gele **buik**"
+    },
+    {
+      "en": "Female olive above, paler below",
+      "nl": "Vrouwtje olijfkleurig boven, bleker onder"
+    }
+  ]
+}

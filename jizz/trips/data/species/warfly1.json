@@ -1,0 +1,22 @@
+{
+  "code": "warfly1",
+  "name": {
+    "en": "Ward's Vanga",
+    "nl": "Vliegenvangervanga"
+  },
+  "latin": "Pseudobias wardi",
+  "look_for": [
+    {
+      "en": "Glossy black above, with a white **wing bar**",
+      "nl": "Glanzend zwart boven, met een witte **vleugelstreep**"
+    },
+    {
+      "en": "White below with a black **breast band**",
+      "nl": "Wit onder met een zwarte **borstband**"
+    },
+    {
+      "en": "Flycatcher-like, often at forest edges, blue **eye-ring**",
+      "nl": "Vliegenvangerachtig, vaak aan bosranden, blauwe **oogring**"
+    }
+  ]
+}

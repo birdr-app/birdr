@@ -1,0 +1,22 @@
+{
+  "code": "hengos1",
+  "name": {
+    "en": "Henst's Goshawk",
+    "nl": "Madagaskarhavik"
+  },
+  "latin": "Astur henstii",
+  "look_for": [
+    {
+      "en": "Large, powerful hawk with long barred **tail**",
+      "nl": "Grote, krachtige havik met lange gebande **staart**"
+    },
+    {
+      "en": "Dark grey **back**, finely barred pale **underparts**",
+      "nl": "Donkergrijze **rug**, lichte **onderzijde** met fijne banden"
+    },
+    {
+      "en": "Hunts lemurs and birds in forest",
+      "nl": "Jaagt in het bos op lemuren en vogels"
+    }
+  ]
+}

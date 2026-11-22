@@ -1,0 +1,18 @@
+{
+  "slug": "asities",
+  "about": {
+    "en": "Small, plump forest birds with short tails. The asities themselves eat fruit: males are dark and wear bare, brightly coloured patches around the eye, females are olive. The two sunbird-asities are tiny, with a long curved bill for nectar, and visit flowers much as sunbirds do.",
+    "nl": "Kleine, mollige bosvogels met een korte staart. De echte asities eten vruchten: mannetjes zijn donker en hebben blote, felgekleurde vlekken rond het oog, vrouwtjes zijn olijfkleurig. De twee honingasities zijn klein, met een lange gebogen snavel voor nectar, en bezoeken bloemen net als honingzuigers."
+  },
+  "false_friends": [
+    {
+      "if_known": [
+        "sunbirds-and-spiderhunters"
+      ],
+      "text": {
+        "en": "The sunbird-asities look and feed like sunbirds, with long curved bills, but they are a different family. Look for the shorter tail and the bare coloured patch around the eye.",
+        "nl": "De honingasities lijken op honingzuigers en eten net als zij, met een lange gebogen snavel, maar het is een andere familie. Let op de kortere staart en de blote gekleurde vlek rond het oog."
+      }
+    }
+  ]
+}

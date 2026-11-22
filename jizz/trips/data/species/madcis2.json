@@ -1,0 +1,22 @@
+{
+  "code": "madcis2",
+  "name": {
+    "en": "Madagascar Cisticola",
+    "nl": "Madagaskargraszanger"
+  },
+  "latin": "Cisticola cherina",
+  "look_for": [
+    {
+      "en": "Small and short-tailed, streaked buff-brown above",
+      "nl": "Klein en kortstaartig, boven gestreept buffbruin"
+    },
+    {
+      "en": "Plain unstreaked buff **underparts**",
+      "nl": "Effen ongestreepte roomkleurige **onderzijde**"
+    },
+    {
+      "en": "Lives in grassland, rice fields and marsh edges",
+      "nl": "Leeft in grasland, rijstvelden en moerasranden"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "note": "Dry deciduous forest and wetlands of the west: Kirindy, Bemaraha, Mahajanga and the Betsiboka delta, Lake Kinkony. Ankarafantsika sits in the country trip. Coordinates typed by hand; edit by hand.",
+  "areas": [
+    {
+      "name": "Kirindy Forest",
+      "lat": -20.07,
+      "lon": 44.67,
+      "weight": 1
+    },
+    {
+      "name": "Tsingy de Bemaraha",
+      "lat": -19.12,
+      "lon": 44.8,
+      "weight": 1
+    },
+    {
+      "name": "Betsiboka delta, Mahajanga",
+      "lat": -15.98,
+      "lon": 46.4,
+      "weight": 1
+    },
+    {
+      "name": "Lake Kinkony",
+      "lat": -16.17,
+      "lon": 45.88,
+      "weight": 1
+    },
+    {
+      "name": "Morondava baobabs and coast",
+      "lat": -20.28,
+      "lon": 44.42,
+      "weight": 1
+    }
+  ]
+}

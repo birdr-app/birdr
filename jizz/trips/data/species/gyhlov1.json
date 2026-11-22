@@ -1,0 +1,22 @@
+{
+  "code": "gyhlov1",
+  "name": {
+    "en": "Grey-headed Lovebird",
+    "nl": "Grijskopagapornis"
+  },
+  "latin": "Agapornis canus",
+  "look_for": [
+    {
+      "en": "Tiny green parrot with a short **tail**",
+      "nl": "Klein groen papegaaitje met een korte **staart**"
+    },
+    {
+      "en": "Male: pale grey **head** and **chest**; female all green",
+      "nl": "Mannetje: lichtgrijze **kop** en **borst**; vrouwtje geheel groen"
+    },
+    {
+      "en": "Fast, whirring flight in small flocks",
+      "nl": "Snelle, snorrende vlucht in kleine groepen"
+    }
+  ]
+}

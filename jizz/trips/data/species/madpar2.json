@@ -1,0 +1,22 @@
+{
+  "code": "madpar2",
+  "name": {
+    "en": "Madagascar Partridge",
+    "nl": "Madagaskarpatrijs"
+  },
+  "latin": "Margaroperdix madagarensis",
+  "look_for": [
+    {
+      "en": "Plump, quail-like bird of grass and scrub",
+      "nl": "Ronde, kwartelachtige vogel van gras en struikgewas"
+    },
+    {
+      "en": "Male boldly marked black, white and chestnut",
+      "nl": "Mannetje opvallend zwart, wit en kastanjebruin getekend"
+    },
+    {
+      "en": "Female buff and streaked; whirring **wings** when flushed",
+      "nl": "Vrouwtje bruinbeige met streepjes; snorrende **vleugels** bij opvliegen"
+    }
+  ]
+}

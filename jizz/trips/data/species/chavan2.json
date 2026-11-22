@@ -1,0 +1,22 @@
+{
+  "code": "chavan2",
+  "name": {
+    "en": "Chabert Vanga",
+    "nl": "Brilvanga"
+  },
+  "latin": "Leptopterus chabert",
+  "look_for": [
+    {
+      "en": "Black **head** and **wings**, clean white **underparts**",
+      "nl": "Zwarte **kop** en **vleugels**, smetteloos witte **onderzijde**"
+    },
+    {
+      "en": "Pale blue **bill** and bright blue **eye**",
+      "nl": "Lichtblauwe **snavel** en felblauw **oog**"
+    },
+    {
+      "en": "Restless; flocks at forest edges",
+      "nl": "Onrustig; groepjes aan bosranden"
+    }
+  ]
+}

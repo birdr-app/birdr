@@ -1,0 +1,22 @@
+{
+  "code": "cuckoo1",
+  "name": {
+    "en": "Cuckoo-roller",
+    "nl": "Koerol"
+  },
+  "latin": "Leptosomus discolor",
+  "look_for": [
+    {
+      "en": "Chunky, big-headed bird perched upright in treetops",
+      "nl": "Gedrongen vogel met grote kop die rechtop in boomtoppen zit"
+    },
+    {
+      "en": "Male grey **head** and **underparts**, glossy green **back**",
+      "nl": "Mannetje met grijze **kop** en **onderzijde**, glanzend groene **rug**"
+    },
+    {
+      "en": "Female brown and streaked; calls in display flight",
+      "nl": "Vrouwtje bruin met streepjes; roept tijdens baltsvlucht"
+    }
+  ]
+}

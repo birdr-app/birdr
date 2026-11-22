@@ -1,0 +1,22 @@
+{
+  "code": "thamno2",
+  "name": {
+    "en": "Thamnornis",
+    "nl": "Kiritikazanger"
+  },
+  "latin": "Thamnornis chloropetoides",
+  "look_for": [
+    {
+      "en": "Greyish above, whitish below, pale eyebrow",
+      "nl": "Grijzig boven, witachtig onder, lichte wenkbrauwstreep"
+    },
+    {
+      "en": "Pale tips on outer **tail** feathers",
+      "nl": "Lichte punten aan buitenste **staart**veren"
+    },
+    {
+      "en": "Feeds low in spiny forest, sings from treetops",
+      "nl": "Zoekt laag in doornbos, zingt vanuit boomtoppen"
+    }
+  ]
+}
