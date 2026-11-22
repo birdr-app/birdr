@@ -517,15 +517,23 @@ def _trip_prep_context(code: str, locale: str | None) -> dict:
     }
 
 
+_SEARCH_ABBREVIATIONS = {'GB': 'UK', 'US': 'USA'}
+
+
 def _country_response(request, country, species_count, *, country_name, path, breadcrumbs, **extra):
     """The quiz page of a country, or of a region with parent_name and parent_href."""
     locale = locale_from_request(request)
     is_region = 'parent_href' in extra
-    title = translate('Bird Quiz: {name} – Identify the Birds | Motmot', name=country_name)
+    # People search "bird quiz UK", not "United Kingdom": the short name goes in the title
+    # and description (not the heading) for the two countries known by an abbreviation.
+    seo_name = country_name
+    if not is_region and country.code in _SEARCH_ABBREVIATIONS:
+        seo_name = f'{country_name} ({_SEARCH_ABBREVIATIONS[country.code]})'
+    title = translate('Bird ID Quiz: {name} – Identify the Birds | Motmot', name=seo_name)
     description = translate(
         'Learn to identify the birds of {name} with free photo quizzes and a '
         'Country Challenge. {count} species on the Motmot list.',
-        name=country_name,
+        name=seo_name,
         count=species_count,
     )
     stats = country_page_stats(country, request=request)

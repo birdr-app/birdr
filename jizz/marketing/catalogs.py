@@ -388,7 +388,7 @@ _ENTRIES: list[tuple[str, tuple[str, ...]]] = [
     ('Edit this description', ('Bewerk deze beschrijving', 'Editar esta descripción', 'Modifier cette description', 'Beschreibung bearbeiten', 'Modifica questa descrizione', 'Editar esta descrição', 'この説明を編集')),
     ('Updated {date}', ('Bijgewerkt {date}', 'Actualizado {date}', 'Mis à jour {date}', 'Aktualisiert {date}', 'Aggiornato {date}', 'Atualizado {date}', '{date} 更新')),
     ('{left} vs {right}', ('{left} vs {right}', '{left} vs {right}', '{left} vs {right}', '{left} vs {right}', '{left} vs {right}', '{left} vs {right}', '{left} 対 {right}')),
-    ('Bird Quiz: {name} – Identify the Birds | Motmot', ('Vogelquiz: {name} – Herken de vogels | Motmot', 'Quiz de aves: {name} – Identifica las aves | Motmot', 'Quiz oiseaux : {name} – Identifie les oiseaux | Motmot', 'Vogelquiz: {name} – Vögel bestimmen | Motmot', 'Quiz di uccelli: {name} – Identifica gli uccelli | Motmot', 'Quiz de aves: {name} – Identifique as aves | Motmot', '鳥クイズ: {name} – 鳥を見分けよう | Motmot')),
+    ('Bird ID Quiz: {name} – Identify the Birds | Motmot', ('Vogelquiz: {name} – Herken de vogels | Motmot', 'Quiz de aves: {name} – Identifica las aves | Motmot', 'Quiz oiseaux : {name} – Identifie les oiseaux | Motmot', 'Vogelquiz: {name} – Vögel bestimmen | Motmot', 'Quiz di uccelli: {name} – Identifica gli uccelli | Motmot', 'Quiz de aves: {name} – Identifique as aves | Motmot', '鳥クイズ: {name} – 鳥を見分けよう | Motmot')),
     ('Birds of {name}', ('Vogels van {name}', 'Aves de {name}', 'Oiseaux de {name}', 'Vögel von {name}', 'Uccelli di {name}', 'Aves de {name}', '{name}の鳥')),
     (
         'I gave Motmot a quick spin and immediately found it incredibly useful. Kudos to the developer!',

@@ -242,12 +242,35 @@ def countries_paths() -> list[str]:
     return paths
 
 
-# Both lists are ordered, so each sitemap page keeps the same URLs between fetches.
+# Only the most widespread birds are listed. motmot.club is a young domain and Google
+# indexed ~25K of ~200K URLs, then stopped showing the site; ~10,700 species pages with
+# little unique text each dilute the country and comparison pages that can actually rank
+# ("bird quiz UK", "bird ID quiz Latvia"). The other bird pages stay live, indexable and
+# linked from the country lists; they are just not pushed through the sitemap. Raise this
+# once the country pages are indexed.
+BIRDS_SITEMAP_LIMIT = 1_500
+
+
+# The list is ordered (widest range first, then slug), so each sitemap page keeps the same
+# URLs between fetches.
 def birds_paths() -> list[str]:
-    return [
-        reverse('marketing-bird', kwargs={'slug': slug})
-        for slug in public_species_qs().exclude(slug='').order_by('slug').values_list('slug', flat=True)
-    ]
+    from django.db.models import Count
+
+    from jizz.marketing.pages import indexable_country_codes
+
+    slugs = (
+        public_species_qs()
+        .exclude(slug='')
+        .annotate(
+            country_n=Count(
+                'countryspecies',
+                filter=Q(countryspecies__country_id__in=indexable_country_codes()),
+            )
+        )
+        .order_by('-country_n', 'slug')
+        .values_list('slug', flat=True)[:BIRDS_SITEMAP_LIMIT]
+    )
+    return [reverse('marketing-bird', kwargs={'slug': slug}) for slug in slugs]
 
 
 # The page text comes from the source records; their translations are made in the

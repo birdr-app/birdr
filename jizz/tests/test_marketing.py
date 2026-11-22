@@ -1148,6 +1148,22 @@ class MarketingPagesTests(TestCase):
         self.assertEqual(self.client.get('/sitemap-nope.xml').status_code, 404)
         self.assertEqual(self.client.get('/sitemap-birds.xml?page=2').status_code, 404)
 
+    def test_birds_sitemap_is_capped_to_the_widest_species(self):
+        with patch('jizz.marketing.sitemaps.BIRDS_SITEMAP_LIMIT', 0):
+            birds = self.client.get('/sitemap-birds.xml').content.decode()
+        self.assertNotIn('/site/birds/', birds)
+
+    def test_country_title_uses_search_abbreviation(self):
+        for code, name, slug, short in (('GB', 'United Kingdom', 'united-kingdom', 'UK'),
+                                        ('US', 'United States', 'united-states', 'USA')):
+            row, _ = Country.objects.update_or_create(code=code, defaults={'name': name})
+            CountrySpecies.objects.get_or_create(country=row, species=self.sparrow)
+            html = self.client.get(f'/site/countries/{slug}/').content.decode()
+            self.assertIn(f'<title>Bird ID Quiz: {name} ({short}) – Identify the Birds | Motmot</title>', html)
+            self.assertIn(f'<h1>Birds of {name}</h1>', html)
+        plain = self.client.get('/site/countries/netherlands/').content.decode()
+        self.assertIn('<title>Bird ID Quiz: Netherlands – Identify the Birds | Motmot</title>', plain)
+
     def test_region_pages_world_and_sitemap(self):
         def country(code, name, **fields):
             row, _ = Country.objects.update_or_create(code=code, defaults={'name': name, **fields})
