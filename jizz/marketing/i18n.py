@@ -154,10 +154,9 @@ def alternate_paths(path: str) -> list[dict[str, str]]:
 def store_badge_urls(locale: str | None = None) -> tuple[str, str]:
     loc = locale if is_marketing_locale(locale) else get_locale()
     apple, play_intl, play_code = STORE_BADGE.get(loc, STORE_BADGE['en'])
-    apple_url = (
-        'https://tools.applemediaservices.com/api/badges/download-on-the-app-store/'
-        f'black/{apple}?size=250x83'
-    )
+    # Self-hosted copy (app/public/images/store): Apple's badge API redirects, which
+    # Google's page-resource fetcher reports as a redirect error.
+    apple_url = f'/images/store/app-store-{apple}.svg'
     play_url = (
         'https://play.google.com/intl/'
         f'{play_intl}/badges/static/images/badges/{play_code}_badge_web_generic.png'
