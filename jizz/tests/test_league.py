@@ -281,6 +281,35 @@ class LeagueTestCase(TestCase):
         attempt.save()
         return attempt
 
+    def test_leaderboard_steps_back_through_weeks(self):
+        today = league.league_today(self.country)
+        this_monday = league.week_start_for(today)
+        self._attempt(self.alice, this_monday - timedelta(days=7), 300)
+        self._attempt(self.bob, this_monday - timedelta(days=14), 200)
+        url = '/api/league/NL/leaderboard/?period=last_week'
+        one = self.client.get(url).data
+        self.assertEqual([r['name'] for r in one['rows']], ['alice'])
+        self.assertEqual(one['weeks_back'], 1)
+        self.assertEqual(one['week_start'], (this_monday - timedelta(days=7)).isoformat())
+        self.assertTrue(one['has_previous'])
+        two = self.client.get(url + '&weeks_back=2').data
+        self.assertEqual([r['name'] for r in two['rows']], ['bob'])
+        self.assertFalse(two['has_previous'])
+        self.assertEqual(self.client.get(url + '&weeks_back=junk').data['weeks_back'], 1)
+        self.assertEqual(self.client.get(url + '&weeks_back=0').data['weeks_back'], 1)
+
+    def test_caps_board_shows_top_week_score_and_percent_correct(self):
+        monday = date(2026, 10, 12)
+        for offset, score, correct in ((0, 300, 5), (1, 200, 5), (7, 400, 10)):
+            self._attempt(self.alice, monday + timedelta(days=offset), score, correct=correct)
+        day = LeagueDay.objects.get(country=self.country, date=monday)
+        day.winner = self.alice
+        day.save()
+        row = league.caps_standings(self.country)[0]
+        self.assertEqual(row['top_week_score'], 500)
+        length = sum(LeagueDay.objects.filter(country=self.country).values_list('length', flat=True))
+        self.assertEqual(row['percent_correct'], round(100 * 20 / length))
+
     def test_close_day_crowns_winner_and_finishes_partial_attempts(self):
         friday = date(2026, 10, 16)
         self._attempt(self.alice, friday, 900)

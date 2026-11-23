@@ -63,6 +63,10 @@ export type LeagueCapsRow = {
   name: string;
   week_champion: number;
   daily_wins: number;
+  /** Highest weekly point total (older API versions omit it). */
+  top_week_score?: number;
+  /** Whole-percent share of correct answers; null when nothing was played. */
+  percent_correct?: number | null;
   is_me: boolean;
 };
 
@@ -140,7 +144,14 @@ export type LeaguePeriod = 'today' | 'week' | 'last_week' | 'caps';
 
 export type LeagueLeaderboard =
   | { period: 'caps'; rows: LeagueCapsRow[] }
-  | { period: Exclude<LeaguePeriod, 'caps'>; rows: LeagueRow[] };
+  | {
+      period: 'last_week';
+      rows: LeagueRow[];
+      weeks_back?: number;
+      week_start?: string;
+      has_previous?: boolean;
+    }
+  | { period: 'today' | 'week'; rows: LeagueRow[] };
 
 function leaguePath(code: string, suffix = ''): string {
   return apiUrl(`/api/league/${encodeURIComponent(code.trim().toUpperCase())}/${suffix}`);
@@ -197,6 +208,11 @@ export function completeLeagueAttempt(attemptId: number): Promise<LeagueComplete
   });
 }
 
-export function fetchLeagueLeaderboard(code: string, period: LeaguePeriod): Promise<LeagueLeaderboard> {
-  return leagueRequest<LeagueLeaderboard>(`${leaguePath(code, 'leaderboard/')}?period=${period}`);
+export function fetchLeagueLeaderboard(
+  code: string,
+  period: LeaguePeriod,
+  weeksBack = 1,
+): Promise<LeagueLeaderboard> {
+  const weeks = period === 'last_week' && weeksBack > 1 ? `&weeks_back=${weeksBack}` : '';
+  return leagueRequest<LeagueLeaderboard>(`${leaguePath(code, 'leaderboard/')}?period=${period}${weeks}`);
 }

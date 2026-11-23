@@ -337,8 +337,11 @@ class LeagueCompleteView(APIView):
         })
 
 
+MAX_WEEKS_BACK = 520
+
+
 class LeagueLeaderboardView(APIView):
-    """GET ?period=today|week|last_week|caps."""
+    """GET ?period=today|week|last_week|caps. ``last_week`` takes ``weeks_back`` (default 1) to step further back."""
 
     authentication_classes = [JWTAuthentication]
     permission_classes = [AllowAny]
@@ -359,7 +362,22 @@ class LeagueLeaderboardView(APIView):
             league_day = LeagueDay.objects.filter(country=country, date=today).first()
             standings = league.day_standings(league_day) if league_day else []
         elif period == 'last_week':
-            standings = league.week_standings(country, league.week_start_for(today) - timedelta(days=7))
+            try:
+                weeks_back = max(1, min(int(request.query_params.get('weeks_back', 1)), MAX_WEEKS_BACK))
+            except (TypeError, ValueError):
+                weeks_back = 1
+            week_start = league.week_start_for(today) - timedelta(days=7 * weeks_back)
+            standings = league.week_standings(country, week_start)[:100]
+            caps = league.caps_by_user([r.user_id for r in standings], country)
+            return Response({
+                'period': period,
+                'rows': [_row(r, me_id, caps) for r in standings],
+                'weeks_back': weeks_back,
+                'week_start': week_start.isoformat(),
+                'has_previous': weeks_back < MAX_WEEKS_BACK and LeagueDay.objects.filter(
+                    country=country, date__lt=week_start,
+                ).exists(),
+            })
         else:
             period = 'week'
             standings = league.week_standings(country, league.week_start_for(today))

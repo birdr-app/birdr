@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
-import { Button, Flex, Heading, Spinner, Text } from '@chakra-ui/react';
-import { FormattedMessage } from 'react-intl';
+import { Button, Flex, Heading, IconButton, Spinner, Text } from '@chakra-ui/react';
+import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import {
   getLeague,
@@ -39,8 +39,16 @@ export function LeagueLeaderboardPage() {
   const { appLanguage } = useContext(AppContext);
   const locale = appLanguage || 'en';
   const [searchParams, setSearchParams] = useSearchParams();
+  const intl = useIntl();
   const requested = searchParams.get('period') as LeaguePeriod | null;
   const period: LeaguePeriod = requested && PERIODS.includes(requested) ? requested : 'week';
+  const weeksBackParam = parseInt(searchParams.get('weeks_back') ?? '1', 10);
+  const weeksBack = Number.isFinite(weeksBackParam) && weeksBackParam > 1 ? weeksBackParam : 1;
+
+  const stepWeeks = (to: number) =>
+    setSearchParams(to > 1 ? { period: 'last_week', weeks_back: String(to) } : { period: 'last_week' }, {
+      replace: true,
+    });
 
   const [country, setCountry] = useState<LeagueCountry | null>(null);
   const [board, setBoard] = useState<LeagueLeaderboard | null>(null);
@@ -61,7 +69,7 @@ export function LeagueLeaderboardPage() {
     let cancelled = false;
     setLoading(true);
     setError(null);
-    getLeagueLeaderboard(countryCode, period)
+    getLeagueLeaderboard(countryCode, period, weeksBack)
       .then((d) => {
         if (!cancelled) setBoard(d);
       })
@@ -74,7 +82,7 @@ export function LeagueLeaderboardPage() {
     return () => {
       cancelled = true;
     };
-  }, [countryCode, period]);
+  }, [countryCode, period, weeksBack]);
 
   const countryName = country ? getCountryDisplayName(country, locale) : countryCode;
   const flag = countryCodeToFlag(countryCode);
@@ -106,6 +114,50 @@ export function LeagueLeaderboardPage() {
               </Button>
             ))}
           </Flex>
+
+          {period === 'last_week' ? (
+            <Flex align="center" justify="space-between" gap={2}>
+              <IconButton
+                size="sm"
+                variant="ghost"
+                colorPalette="primary"
+                _disabled={{ bg: 'transparent', opacity: 0.25, cursor: 'default' }}
+                aria-label={intl.formatMessage({ id: 'league_week_previous', defaultMessage: 'Previous week' })}
+                disabled={loading || (board?.period === 'last_week' && !board.has_previous)}
+                onClick={() => stepWeeks(weeksBack + 1)}
+              >
+                ‹
+              </IconButton>
+              <Text fontWeight="semibold" color="gray.700" textAlign="center">
+                {board?.period === 'last_week' ? (
+                  <>
+                    <FormattedDate value={board.week_start} day="numeric" month="short" timeZone="UTC" />
+                    {' – '}
+                    <FormattedDate
+                      value={new Date(new Date(board.week_start).getTime() + 6 * 86400000)}
+                      day="numeric"
+                      month="short"
+                      year="numeric"
+                      timeZone="UTC"
+                    />
+                  </>
+                ) : (
+                  <FormattedMessage id="league_tab_last_week" defaultMessage="Last week" />
+                )}
+              </Text>
+              <IconButton
+                size="sm"
+                variant="ghost"
+                colorPalette="primary"
+                _disabled={{ bg: 'transparent', opacity: 0.25, cursor: 'default' }}
+                aria-label={intl.formatMessage({ id: 'league_week_next', defaultMessage: 'Next week' })}
+                disabled={loading || weeksBack <= 1}
+                onClick={() => stepWeeks(weeksBack - 1)}
+              >
+                ›
+              </IconButton>
+            </Flex>
+          ) : null}
 
           {period === 'caps' ? (
             <Text fontSize="sm" color="gray.600">

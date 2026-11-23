@@ -366,6 +366,7 @@ def caps_standings(country: Country) -> list[dict]:
         user_ids,
         key=lambda uid: (-champs.get(uid, 0), -wins.get(uid, 0), uid),
     )
+    best_week, pct_correct = _caps_stats(country, user_ids)
     out = []
     for i, uid in enumerate(rows, start=1):
         player = players.get(uid)
@@ -375,8 +376,30 @@ def caps_standings(country: Country) -> list[dict]:
             'name': display_name(player.user if player else None, player),
             'week_champion': champs.get(uid, 0),
             'daily_wins': wins.get(uid, 0),
+            'top_week_score': best_week.get(uid, 0),
+            'percent_correct': pct_correct.get(uid),
         })
     return out
+
+
+def _caps_stats(country: Country, user_ids) -> tuple[dict[int, int], dict[int, int]]:
+    """Best week total and overall share of correct answers (whole percent) per user."""
+    week_totals: dict[tuple[int, date], int] = {}
+    correct: dict[int, int] = {}
+    asked: dict[int, int] = {}
+    attempts = LeagueAttempt.objects.filter(
+        day__country=country, user_id__in=user_ids, completed_at__isnull=False,
+    ).values_list('user_id', 'day__date', 'day__length', 'score', 'correct_count')
+    for uid, day, length, score, correct_count in attempts:
+        key = (uid, week_start_for(day))
+        week_totals[key] = week_totals.get(key, 0) + score
+        correct[uid] = correct.get(uid, 0) + correct_count
+        asked[uid] = asked.get(uid, 0) + length
+    best_week: dict[int, int] = {}
+    for (uid, _), total in week_totals.items():
+        best_week[uid] = max(best_week.get(uid, 0), total)
+    pct = {uid: round(100 * correct[uid] / asked[uid]) for uid in asked if asked[uid]}
+    return best_week, pct
 
 
 # --- Closing days and weeks ---------------------------------------------------

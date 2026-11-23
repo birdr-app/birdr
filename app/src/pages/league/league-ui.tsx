@@ -172,9 +172,28 @@ export function LeagueCapsRows({ rows }: { rows: LeagueCapsRow[] }) {
       {rows.map((row) => (
         <RowShell key={`${row.rank}-${row.name}`} isMe={row.is_me}>
           <RankCell rank={row.rank} />
-          <Text flex={1} minW={0} fontWeight={row.is_me ? '800' : '600'} truncate>
-            {row.name}
-          </Text>
+          <Flex direction="column" flex={1} minW={0}>
+            <Text fontWeight={row.is_me ? '800' : '600'} truncate>
+              {row.name}
+            </Text>
+            <Text fontSize="xs" color="gray.500" truncate>
+              <FormattedMessage
+                id="league_caps_top_week"
+                defaultMessage="Top week {score, number} pts"
+                values={{ score: row.top_week_score }}
+              />
+              {row.percent_correct != null ? (
+                <>
+                  {' · '}
+                  <FormattedMessage
+                    id="league_caps_percent_correct"
+                    defaultMessage="{percent}% correct"
+                    values={{ percent: row.percent_correct }}
+                  />
+                </>
+              ) : null}
+            </Text>
+          </Flex>
           <Text fontWeight="800" color="primary.800" flexShrink={0}>
             🏆 {row.week_champion}
           </Text>

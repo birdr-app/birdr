@@ -60,6 +60,10 @@ export type LeagueCapsRow = LeagueCaps & {
   rank: number;
   name: string;
   is_me: boolean;
+  /** Highest weekly point total in this league. */
+  top_week_score: number;
+  /** Share of all answers that were right, in whole percent; null when nothing was played. */
+  percent_correct: number | null;
 };
 
 export type LeagueWeekDay = {
@@ -141,7 +145,14 @@ export type LeagueCompleteResponse = {
 export type LeaguePeriod = 'today' | 'week' | 'last_week' | 'caps';
 
 export type LeagueLeaderboard =
-  | { period: 'today' | 'week' | 'last_week'; rows: LeagueRow[] }
+  | { period: 'today' | 'week'; rows: LeagueRow[] }
+  | {
+      period: 'last_week';
+      rows: LeagueRow[];
+      weeks_back: number;
+      week_start: string;
+      has_previous: boolean;
+    }
   | { period: 'caps'; rows: LeagueCapsRow[] };
 
 const base = (code: string) => `/api/league/${encodeURIComponent(code.toUpperCase())}`;
@@ -186,8 +197,13 @@ export async function completeLeagueAttempt(attemptId: number): Promise<LeagueCo
   return data;
 }
 
-export async function getLeagueLeaderboard(code: string, period: LeaguePeriod): Promise<LeagueLeaderboard> {
-  const { data } = await axios.get<LeagueLeaderboard>(`${base(code)}/leaderboard/`, { params: { period } });
+export async function getLeagueLeaderboard(
+  code: string,
+  period: LeaguePeriod,
+  weeksBack = 1,
+): Promise<LeagueLeaderboard> {
+  const params = period === 'last_week' ? { period, weeks_back: weeksBack } : { period };
+  const { data } = await axios.get<LeagueLeaderboard>(`${base(code)}/leaderboard/`, { params });
   return data;
 }
 
