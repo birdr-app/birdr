@@ -505,6 +505,15 @@ SITE_URL = os.environ.get('SITE_URL', 'https://motmot.club')
 # their consoles, which is birdr.pro until motmot.club is added there. Set it to
 # https://motmot.club once both accept https://motmot.club/auth/complete/<backend>/.
 OAUTH_URL = os.environ.get('OAUTH_URL', 'https://birdr.pro')
+# Per-provider override of OAUTH_URL, so Google can move to motmot.club while Apple stays
+# on birdr.pro until its Services ID accepts https://motmot.club/auth/complete/apple-id/.
+# Register https://motmot.club/auth/complete/google-oauth2/ in Google Cloud Console first,
+# then set OAUTH_URL_GOOGLE=https://motmot.club in production and restart.
+OAUTH_URLS = {
+    backend: url
+    for backend, url in (('google-oauth2', os.environ.get('OAUTH_URL_GOOGLE', '')),)
+    if url
+}
 # Origin of the marketing website, for canonical URLs, sitemaps and Open Graph.
 MARKETING_URL = os.environ.get('MARKETING_URL', 'https://motmot.club')
 # Where `manage.py build_sitemaps` writes the finished sitemap files. nginx serves

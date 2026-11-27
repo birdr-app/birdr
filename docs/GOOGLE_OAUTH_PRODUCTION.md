@@ -374,6 +374,12 @@ If the redirect URI in the console does not match exactly (including trailing sl
 
 Then set `OAUTH_URL=https://motmot.club` in production and restart.
 
+**Google first, Apple later.** To move only Google, register just the Google redirect URI and JavaScript origin above
+(and add `motmot.club` under **OAuth consent screen → Authorized domains**), then set
+`OAUTH_URL_GOOGLE=https://motmot.club` and restart. Apple keeps using `OAUTH_URL` (`birdr.pro`) until its Services ID
+accepts the motmot.club return URL. Check: `curl -sI 'https://motmot.club/auth/login/google-oauth2/'` must no longer
+redirect to `birdr.pro`, and signing in with Google from `https://motmot.club/` must come back logged in.
+
 **Fixing "Error 400: redirect_uri_mismatch"**
 
 1. In [Google Cloud Console](https://console.cloud.google.com/) → APIs & Services → Credentials → your OAuth 2.0 Client ID, open **Authorized redirect URIs**.

@@ -63,8 +63,9 @@ class MarketingHostRedirectMiddleware:
     Everything else stays: older app builds call /api/ there, and old share and invite
     links must keep opening the app.
 
-    On the marketing host, OAuth starts are sent to OAUTH_URL, because Google and Apple
-    only accept callbacks on the hosts registered with them. The redirect_uri back to
+    On the marketing host, OAuth starts are sent to OAUTH_URL (or OAUTH_URLS for one
+    provider), because Google and Apple only accept callbacks on the hosts registered
+    with them. The redirect_uri back to
     the marketing host is kept, so the tokens still land there.
     """
 
@@ -81,7 +82,6 @@ class MarketingHostRedirectMiddleware:
 
     def _redirect_target(self, request):
         marketing_url = (getattr(settings, 'MARKETING_URL', '') or '').rstrip('/')
-        oauth_url = (getattr(settings, 'OAUTH_URL', '') or '').rstrip('/')
         if not marketing_url:
             return None
         host = request.get_host().split(':')[0].lower()
@@ -96,10 +96,19 @@ class MarketingHostRedirectMiddleware:
             legacy = legacy_site_path(path)
             if legacy:
                 return marketing_url + legacy + suffix, True
-        elif host == _host_of(marketing_url) and oauth_url and _host_of(oauth_url) != host:
-            if path.startswith('/auth/login/'):
+        elif host == _host_of(marketing_url) and path.startswith('/auth/login/'):
+            oauth_url = self._oauth_url(path)
+            if oauth_url and _host_of(oauth_url) != host:
                 return oauth_url + path + suffix, False
         return None
+
+    @staticmethod
+    def _oauth_url(path: str) -> str:
+        """Origin that runs the OAuth flow for /auth/login/<backend>/: OAUTH_URLS[backend], else OAUTH_URL."""
+        backend = path[len('/auth/login/'):].split('/')[0]
+        per_backend = getattr(settings, 'OAUTH_URLS', None) or {}
+        url = per_backend.get(backend) or getattr(settings, 'OAUTH_URL', '') or ''
+        return url.rstrip('/')
 
 
 class MarketingLocaleMiddleware:

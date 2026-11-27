@@ -176,6 +176,13 @@ class MarketingHostRedirectMiddlewareTestCase(TestCase):
         response = self.get('/auth/login/google-oauth2/', 'motmot.club')
         self.assertFalse(response.get('Location', '').startswith('https://birdr.pro'))
 
+    @override_settings(OAUTH_URLS={'google-oauth2': 'https://motmot.club'})
+    def test_google_can_move_to_motmot_while_apple_stays_on_birdr(self):
+        google = self.get('/auth/login/google-oauth2/', 'motmot.club')
+        self.assertFalse(google.get('Location', '').startswith('https://birdr.pro'))
+        apple = self.get('/auth/login/apple-id/', 'motmot.club')
+        self.assertRedirectsTo(apple, 'https://birdr.pro/auth/login/apple-id/', status=302)
+
     @override_settings(MARKETING_URL='')
     def test_no_redirect_without_marketing_url(self):
         self.assertNotEqual(self.get('/site/', 'birdr.pro').get('Location', ''), 'https://motmot.club/site/')
