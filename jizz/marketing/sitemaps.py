@@ -287,6 +287,29 @@ def birds_lastmods() -> dict[str, date]:
     }
 
 
+# Only the most searched-for comparisons are listed. Most stored pairs are quiz mistakes
+# between lookalikes nobody searches for, and Google had crawled 51.7K URLs without
+# indexing them (Nov 2026). Pairs outside the cap stay live and indexable and are linked
+# from the bird pages; they are just not pushed through the sitemap. Raise this once the
+# listed pages are indexed.
+COMPARE_SITEMAP_LIMIT = 1_500
+
+
+def _species_reach() -> dict[int, int]:
+    """Species id -> number of indexable countries it is listed in (same measure as birds)."""
+    from django.db.models import Count
+
+    from jizz.marketing.pages import indexable_country_codes
+    from jizz.models import CountrySpecies
+
+    return dict(
+        CountrySpecies.objects.filter(country_id__in=indexable_country_codes())
+        .values('species_id')
+        .annotate(n=Count('pk'))
+        .values_list('species_id', 'n')
+    )
+
+
 def _compare_path(a_id: int, a_slug: str, b_id: int, b_slug: str) -> str:
     low, high = (a_slug, b_slug) if a_id < b_id else (b_slug, a_slug)
     return reverse('marketing-compare', kwargs={'pair': compare_pair_slug(low, high)})
@@ -320,6 +343,8 @@ def _build_indexable_comparisons() -> dict[str, tuple[datetime, frozenset[str]]]
     are left out; see compare.indexable.
     """
     found: dict[str, tuple[datetime, set[str]]] = {}
+    scores: dict[str, int] = {}
+    reach = _species_reach()
     rows = list(
         indexable_comparisons()
         .filter(
@@ -336,6 +361,7 @@ def _build_indexable_comparisons() -> dict[str, tuple[datetime, frozenset[str]]]
         if not a_slug or not b_slug:
             continue
         path = _compare_path(a_id, a_slug, b_id, b_slug)
+        scores[path] = min(reach.get(a_id, 0), reach.get(b_id, 0))
         languages = {DEFAULT_LANGUAGE} | (translated.get(comparison_id, set()) & set(INDEXED_LOCALES))
         if path in found:
             updated = max(updated, found[path][0])
@@ -352,10 +378,14 @@ def _build_indexable_comparisons() -> dict[str, tuple[datetime, frozenset[str]]]
         if not a_slug or not b_slug:
             continue
         path = _compare_path(a_id, a_slug, b_id, b_slug)
+        scores[path] = min(reach.get(a_id, 0), reach.get(b_id, 0))
         if path in found:
             updated = max(updated, found[path][0])
         found[path] = (updated, {DEFAULT_LANGUAGE})
-    return {path: (updated, frozenset(languages)) for path, (updated, languages) in found.items()}
+    # Widest-ranging pair first (the rarer bird of the pair sets the score), then path, so
+    # each sitemap page keeps the same URLs between fetches.
+    ranked = sorted(found, key=lambda path: (-scores[path], path))[:COMPARE_SITEMAP_LIMIT]
+    return {path: (found[path][0], frozenset(found[path][1])) for path in ranked}
 
 
 def compare_paths() -> list[str]:

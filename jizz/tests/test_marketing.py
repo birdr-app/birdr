@@ -1162,6 +1162,17 @@ class MarketingPagesTests(TestCase):
             birds = self.client.get('/sitemap-birds.xml').content.decode()
         self.assertNotIn('/site/birds/', birds)
 
+    def test_compare_sitemap_is_capped(self):
+        cache.clear()
+        current_pair, _stale = self._stale_and_translated_pairs()
+        self.assertIn(f'/site/compare/{current_pair}/', self.client.get('/sitemap-compare.xml').content.decode())
+        with patch('jizz.marketing.sitemaps.COMPARE_SITEMAP_LIMIT', 0):
+            compare = self.client.get('/sitemap-compare.xml').content.decode()
+        self.assertNotIn('/site/compare/', compare)
+        # Pairs outside the cap stay live and indexable.
+        page = self.client.get(f'/site/compare/{current_pair}/').content.decode()
+        self.assertNotIn('<meta name="robots" content="noindex', page)
+
     def test_country_title_uses_search_abbreviation(self):
         for code, name, slug, short in (('GB', 'United Kingdom', 'united-kingdom', 'UK'),
                                         ('US', 'United States', 'united-states', 'USA')):
