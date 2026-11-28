@@ -12,6 +12,8 @@ exam. Ten countries: UK, IE, NL, BE, DE, FR, DK, NO, SE, FI.
 - Registered in `jizz/courses/content.py` (`COURSES`); website `/site/advanced-bird-course/`.
 - Photo picker for admins: `/course-photos?course=nw-europe-advanced`.
 - Content only: no code was changed for this step.
+- **Dutch edition:** course `nw-europe-advanced-nl`, website `/nl/site/gevorderde-vogelcursus/` (practice at
+  `.../oefenen/`). See "Dutch edition" below.
 
 ## Numbers
 
@@ -160,3 +162,22 @@ the same slot of the previous block; of a review lesson the weeks of its block p
    weeks 7, 31-34 have the thinnest choice.
 4. Listen to the recordings (especially the rarities) and trim the long ones.
 5. Have a birder from the region read the texts.
+
+## Dutch edition (`nw-europe-advanced-nl`)
+
+The same forty lessons in Dutch. It is a *translation overlay*, not a copy: `jizz/courses/data/nw-europe-advanced-nl/lesson-NN.json`
+holds only the translated strings, as a flat object `{"birds/3/look_for/0": "...", "title": "...", ...}` (the keys are paths into the
+English lesson file). `jizz/courses/content.py` (`COURSES[...]['translation_of']`) loads the English lessons and puts the Dutch strings
+in place, so species, photos, recordings, quiz settings, look-alike groups and the admin photo picks are shared with the English
+course. A string with no Dutch version falls back to English.
+
+- Pick photos on the English course (`/course-photos?course=nw-europe-advanced`); the Dutch course follows.
+- Spaced repetition and progress are kept apart (`course:nw-europe-advanced-nl:srs`), because the plumage text is part of the key
+  ("adult vrouwtje" is not "adult female").
+- Texts around the lessons (headings, buttons, quiz messages, plumage words) are in `SITES` in `jizz/marketing/course.py`.
+- Bird names come from the Dutch names in `jizz/trips/data/species/*.json`; 17 species without one got the standard Dutch name by hand
+  (e.g. Kleine alk, Dwerggans, Bokje, Koningseider).
+- The translation was written by an AI model and has not been read by a Dutch birder yet. Worth a look: the sound imitations
+  (`sound/describe`), the terms in `words/*/term`, and the Dutch names of rare species.
+- Changing an English text? The Dutch string stays as it was; update both. Tests (`jizz/tests/test_course_advanced_nl.py`) check
+  that every text is translated and that `**bold**` markers and paragraph breaks match the English.

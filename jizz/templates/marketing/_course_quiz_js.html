@@ -80,9 +80,11 @@
     return shuffle(out.slice(0, total));
   }
 
-  function plumageLabel(p) {
+  // words: optional translations of the plumage values (ui.plumage_words), e.g. {female: 'vrouwtje'}.
+  function plumageLabel(p, words) {
     if (!p) return '';
-    return [p.sex, p.stage, p.season ? p.season.replace('_', '-') : ''].filter(Boolean).join(', ');
+    var w = function (v) { return (words && words[v]) || v; };
+    return [p.sex, p.stage, p.season ? p.season.replace('_', '-') : ''].filter(Boolean).map(w).join(', ');
   }
 
   // Same rules as the apps: every new bird at least once, a few from earlier lessons, and wrong
@@ -234,7 +236,7 @@
               else if (x === b) x.classList.add('wrong');
             });
             root.append(el('p', { class: 'quiz-feedback ' + (right ? 'right' : 'wrong') }, f(right ? ui.right : ui.wrong, { name: q.answer })));
-            var label = plumageLabel(q.image && q.image.plumage) || q.plumage;
+            var label = plumageLabel(q.image && q.image.plumage, ui.plumage_words) || q.plumage;
             if (ui.show_plumage && label && q.mode !== 'sound') root.append(el('p', { class: 'quiz-plumage' }, f(ui.photo_shows, { label: label })));
             var next = el('button', { class: 'btn', type: 'button' }, index + 1 < questions.length ? ui.next_question : ui.see_score);
             next.onclick = function () { index++; if (index < questions.length) show(); else done(); };

@@ -1,7 +1,8 @@
 """The beginners bird courses on the website: an overview and one page per lesson.
 
 Each course is written in one language and has its own pages (Dutch: /site/vogelcursus/,
-British English: /site/bird-course/). The texts around the lessons are in ``SITES``.
+British English: /site/bird-course/, advanced: /site/advanced-bird-course/ and its Dutch edition
+/site/gevorderde-vogelcursus/). The texts around the lessons are in ``SITES``.
 """
 
 from __future__ import annotations
@@ -25,6 +26,7 @@ COURSE = 'nl-beginners'
 LOCALE = 'nl'
 UK_COURSE = 'uk-beginners'
 ADVANCED_COURSE = 'nw-europe-advanced'
+ADVANCED_COURSE_NL = 'nw-europe-advanced-nl'
 
 # What the pages say around the lesson texts, per course. "{x}" parts are filled in by the page.
 SITES = {
@@ -284,6 +286,114 @@ SITES = {
             'try_again': 'Practice is done. The birds you got wrong will be back soon.',
             'again': 'Practise again',
             'next_lesson': 'Back to the course',
+        },
+    },
+    ADVANCED_COURSE_NL: {
+        'locale': 'nl',
+        'index_name': 'marketing-course-advanced-nl',
+        'lesson_name': 'marketing-course-advanced-nl-lesson',
+        'practice_name': 'marketing-course-advanced-nl-practice',
+        'srs': True,
+        'ui': {
+            'level': 'Gevorderd',
+            'index_title': 'Gevorderde vogelcursus voor Noordwest-Europa: meeuwen, zangers, steltlopers en dwaalgasten | Motmot',
+            'index_description': (
+                'Gratis gevorderde vogelcursus voor Nederland, België, het Verenigd Koninkrijk, Duitsland, Frankrijk en Scandinavië: '
+                'grote meeuwen, Siberische boszangers, strandlopers, zeevogels vanaf de kust, vrouwtjeseenden en zeldzaamheden, '
+                'met foto’s, geluiden en gespreide herhaling.'
+            ),
+            'crumb_course': 'Gevorderde vogelcursus',
+            'crumb_lesson': 'Les {week}',
+            'syllabus_name': 'Les {week}: {title}',
+            'lesson_title': 'Les {week}: {title} | Gevorderde vogelcursus | Motmot',
+            'lesson_description': '{subtitle}. Les {week} van Motmots gevorderde vogelcursus voor Noordwest-Europa, met foto’s, geluiden en gespreide herhaling.',
+            'h1': 'Gevorderd vogels kijken: Noordwest-Europa',
+            'lead': (
+                'Je kent een Tjiftjaf van een Fitis en een Bonte strandloper van een Kleine strandloper. Nu ga je groep voor groep: '
+                'grote meeuwen, Siberische boszangers, strandlopers en ruiters, zeevogels vanaf de kust bij een najaarsstorm, '
+                'vrouwtjeseenden en de dwaalgasten die opduiken als de wind goed staat. Veertig lessen met foto’s, geluiden en '
+                'veel herhaling, zodat de vogels die je gezien hebt terugkomen vlak voordat je ze vergeet. Gratis, en zonder account.'
+            ),
+            'start': 'Begin met les 1',
+            'practice': 'Oefenen',
+            'how_title': 'Zo werkt een les',
+            'steps': [
+                ('Groep voor groep', 'Eén familie tegelijk: wat de vogels die op elkaar lijken uit elkaar houdt, en de woorden om dat te beschrijven.'),
+                ('Seizoenen en trek', 'Wanneer elke vogel er is, en waar in Noordwest-Europa hij gewoon is of een dwaalgast.'),
+                ('Foto’s en geluiden', 'Vragen met een foto, een opname of allebei, ook van vrouwtjes, jonge vogels en winterkleden.'),
+                ('Herhaling', 'Vogels die je fout hebt komen snel terug, vogels die je kent later. Bij Oefenen vind je de vogels die aan de beurt zijn.'),
+            ],
+            'all_title': 'Alle lessen',
+            'all_lead': 'Elke vijfde les is een herhaling. Je voortgang en de vogels die je moet herhalen worden bewaard in deze browser, en in je account als je bent ingelogd.',
+            'parts': [
+                (1, 'Blok 1: meeuwen'), (6, 'Blok 2: zangers'), (11, 'Blok 3: steltlopers'), (16, 'Blok 4: zeevogels vanaf de kust'),
+                (21, 'Blok 5: eenden en ganzen'), (26, 'Blok 6: vogels van het open veld'), (31, 'Blok 7: dwaalgasten'), (36, 'Blok 8: voor de echte kenner'),
+            ],
+            'birds_count': '{n} vogels',
+            'minutes_short': '{n} min',
+            'kicker': 'Gevorderd vogels kijken · Les {week} · {minutes} minuten',
+            'today': 'Vandaag: {n} vogels',
+            'anchor': 'vogel',
+            'to_quiz': 'Naar de quiz',
+            'photo_by': 'Foto:',
+            'unknown': 'onbekend',
+            'bird_word': 'Vogel',
+            'of_word': 'van',
+            'look_for': 'Zo herken je hem',
+            'where_when': 'Waar en wanneer',
+            'recording': 'Opname:',
+            'dont_confuse': 'Niet verwarren met:',
+            'quiz': 'Quiz',
+            'quiz_questions': '{n} vragen',
+            'quiz_sound_only': ', alleen geluid',
+            'quiz_with_review': ', met vogels die je moet herhalen erdoorheen',
+            'quiz_tail': '. Je antwoorden bepalen wanneer elke vogel terugkomt.',
+            'quiz_start': 'Start de quiz',
+            'outside': 'Deze week buiten',
+            'lessons_nav': 'Lessen',
+            'prev': '← Les {week}',
+            'all_lessons': 'Alle lessen',
+            'next': 'Les {week} →',
+            'sound_label': {'song': 'Zang', 'call': 'Roep', 'other': 'Geluid'},
+            'practice_title': 'Oefenen',
+            'practice_lead': 'Tien vragen over de vogels die aan de beurt zijn om terug te komen. Goede antwoorden schuiven een vogel verder weg, foute antwoorden brengen hem morgen terug.',
+            'practice_start': 'Begin met oefenen',
+            'practice_back': 'Terug naar de cursus',
+        },
+        'js': {
+            'done_line': 'Klaar · {score} van {total} goed',
+            'continue': 'Verder met les {week}',
+            'progress': '{done} van {total} lessen gedaan',
+            'question_n_of': 'Vraag {n} van {total}',
+            'review': ' · herhaling',
+            'which_see': 'Welke vogel is dit?',
+            'which_hear': 'Welke vogel hoor je?',
+            'which_both': 'Welke vogel is dit? Kijk en luister.',
+            'right': 'Goed, {name}.',
+            'wrong': 'Dat was {name}.',
+            'next_question': 'Volgende vraag',
+            'see_score': 'Bekijk je score',
+            'good': 'Goed gedaan! Les {week} is klaar.',
+            'try_again': 'Les {week} is klaar. Kijk nog eens naar de vogels die je fout had en probeer het opnieuw.',
+            'again': 'Quiz opnieuw',
+            'next_lesson': 'Door naar de volgende les',
+            'no_questions': 'Er zijn nog geen quizvragen voor deze les.',
+            'show_plumage': True,
+            'photo_shows': 'Deze foto toont: {label}.',
+            'loading': 'Laden…',
+            'due_count': '{n} vogels om te herhalen',
+            'none_due': 'Er is nu niets aan de beurt. Kom later terug, of bekijk een les nog eens.',
+            'plumage_words': {
+                'male': 'mannetje', 'female': 'vrouwtje',
+                'adult': 'adult', 'immature': 'onvolwassen', 'juvenile': 'juveniel', 'chick': 'kuiken',
+                'breeding': 'zomerkleed', 'non-breeding': 'winterkleed', 'eclipse': 'eclipskleed',
+            },
+        },
+        'practice_js': {
+            'good': 'Goed gedaan! Het oefenen is klaar.',
+            'try_again': 'Het oefenen is klaar. De vogels die je fout had komen snel terug.',
+            'again': 'Nog eens oefenen',
+            'next_lesson': 'Terug naar de cursus',
         },
     },
 }
@@ -554,3 +664,18 @@ def course_lesson_advanced(request, week: int, slug: str):
 @require_GET
 def course_practice_advanced(request):
     return _course_practice(request, ADVANCED_COURSE)
+
+
+@require_GET
+def course_index_advanced_nl(request):
+    return _course_index(request, ADVANCED_COURSE_NL)
+
+
+@require_GET
+def course_lesson_advanced_nl(request, week: int, slug: str):
+    return _course_lesson(request, ADVANCED_COURSE_NL, week, slug)
+
+
+@require_GET
+def course_practice_advanced_nl(request):
+    return _course_practice(request, ADVANCED_COURSE_NL)

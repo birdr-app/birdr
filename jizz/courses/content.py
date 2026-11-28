@@ -36,6 +36,14 @@ COURSES = {
         'subtitle': {'en': 'Gulls, warblers, waders, seabirds, female ducks and strays, with lots of repetition'},
         'languages': ('en',),
     },
+    # The Dutch edition of the advanced course: the same lessons, birds, photos and recordings, with the
+    # texts translated (data/nw-europe-advanced-nl/lesson-NN.json holds only the translated strings).
+    'nw-europe-advanced-nl': {
+        'title': {'nl': 'Gevorderde vogelcursus: Noordwest-Europa'},
+        'subtitle': {'nl': 'Meeuwen, zangers, steltlopers, zeevogels, vrouwtjeseenden en dwaalgasten, met veel herhaling'},
+        'languages': ('nl',),
+        'translation_of': 'nw-europe-advanced',
+    },
 }
 
 
@@ -43,20 +51,60 @@ class LessonNotFound(Exception):
     pass
 
 
+def source_course(slug: str) -> str:
+    """The course whose birds, photos and recordings a course uses: itself, or the one it translates."""
+    return COURSES[slug].get('translation_of', slug)
+
+
+def translated_slugs(slug: str) -> list[str]:
+    """Courses that are translations of this one."""
+    return [other for other, meta in COURSES.items() if meta.get('translation_of') == slug]
+
+
+def _set_translation(lesson: dict, path: str, value: str) -> None:
+    """Put a translated string at a path such as ``birds/3/look_for/0`` of a lesson."""
+    parts = path.split('/')
+    node = lesson
+    for part in parts[:-1]:
+        node = node[int(part)] if isinstance(node, list) else node[part]
+    last = parts[-1]
+    node[int(last) if isinstance(node, list) else last] = {'nl': value}
+
+
+def _translated_lessons(slug: str) -> list[dict]:
+    """The lessons of the source course with the translated strings of ``slug`` in place of the English ones.
+
+    A string without a translation stays English, so a half-translated lesson still works.
+    """
+    lessons = [copy.deepcopy(lesson) for lesson in course_lessons(source_course(slug))]
+    by_week = {lesson['week']: lesson for lesson in lessons}
+    for path in sorted((DATA_DIR / slug).glob('lesson-*.json')):
+        strings = json.loads(path.read_text(encoding='utf-8'))
+        lesson = by_week[int(path.stem.split('-')[1])]
+        for key, value in strings.items():
+            _set_translation(lesson, key, value)
+    for lesson in lessons:
+        lesson['course'] = slug
+    return lessons
+
+
 @lru_cache(maxsize=None)
 def course_lessons(slug: str) -> tuple[dict, ...]:
     """All lessons of a course, ordered by week."""
     if slug not in COURSES:
         raise LessonNotFound(slug)
-    folder = DATA_DIR / slug
-    lessons = [json.loads(p.read_text(encoding='utf-8')) for p in sorted(folder.glob('lesson-*.json'))]
+    if 'translation_of' in COURSES[slug]:
+        lessons = _translated_lessons(slug)
+    else:
+        folder = DATA_DIR / slug
+        lessons = [json.loads(p.read_text(encoding='utf-8')) for p in sorted(folder.glob('lesson-*.json'))]
     return tuple(sorted(lessons, key=lambda lesson: lesson['week']))
 
 
 @lru_cache(maxsize=None)
 def lookalike_groups(slug: str) -> tuple[tuple[int, ...], ...]:
     """Groups of species that beginners mix up (data/<course>/lookalikes.json)."""
-    path = DATA_DIR / slug / 'lookalikes.json'
+    path = DATA_DIR / source_course(slug) / 'lookalikes.json'
     if not path.exists():
         return ()
     groups = json.loads(path.read_text(encoding='utf-8')).get('groups', [])
@@ -71,8 +119,10 @@ def lesson_by_week(slug: str, week: int) -> dict:
 
 
 def photo_picks(slug: str) -> dict[tuple[int, int], dict]:
-    """Photos chosen by admins, keyed by (week, species_id)."""
+    """Photos chosen by admins, keyed by (week, species_id). A translation uses its source course's picks."""
     from jizz.models import CoursePhotoPick
+
+    slug = source_course(slug)
 
     return {
         (p.week, p.species_id): {'card': p.card, 'quiz': p.quiz, 'reject': p.reject, 'done': p.done}
@@ -112,9 +162,10 @@ def clear_cache(slug: str) -> None:
     from django.core.cache import cache
 
     keys = []
-    for lang in COURSES[slug]['languages']:
-        keys.append(f'course:{slug}:{lang}')
-        keys.extend(f'course:{slug}:{lesson["week"]}:{lang}' for lesson in course_lessons(slug))
+    for course in [slug, *translated_slugs(slug)]:
+        for lang in COURSES[course]['languages']:
+            keys.append(f'course:{course}:{lang}')
+            keys.extend(f'course:{course}:{lesson["week"]}:{lang}' for lesson in course_lessons(course))
     cache.delete_many(keys)
 
 
